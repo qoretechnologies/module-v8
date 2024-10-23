@@ -175,7 +175,7 @@ class _PiecesAppCatalogue {
     const description = prop.description || prop.displayName;
 
     // Checking if the prop has allowed get allowed values function
-    if ('options' in prop) {
+    if (typeof prop === 'object' && 'options' in prop) {
       allowed_values = this.mapPieceAllowedValuesToQoreAllowedValues(
         prop.options as DropdownState<any>
       );

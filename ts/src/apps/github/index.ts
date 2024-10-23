@@ -29,6 +29,8 @@ export const GITHUB_ALLOWED_PATHS = [
   '/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers',
   '/repos/{owner}/{repo}/git/refs',
   '/repos/{owner}/{repo}/branches/{branch}',
+  '/repos/{owner}/{repo}/actions/secrets/{secret_name}',
+  '/repos/{owner}/{repo}/actions/secrets/public-key',
 ];
 export const GITHUB_ACTIONS = buildActionsFromSwaggerSchema(github as any, GITHUB_ALLOWED_PATHS);
 

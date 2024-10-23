@@ -8,6 +8,7 @@ describe('Tests Github Actions', () => {
   let pullNumber: number;
   let sha: string;
   let fileSha: string;
+  // let repoPublicKey: { key: string; key_id: string };
   beforeAll(() => {
     connection = testApi.createConnection('github', {
       opts: {
@@ -92,6 +93,37 @@ describe('Tests Github Actions', () => {
     expect(body.total_count).toBeGreaterThan(0);
     expect(body.items.length).toBeGreaterThan(0);
   });
+
+  // it('Should get repository public key', async () => {
+  //   const action = GITHUB_ACTIONS.find((a) => a.action === 'actions-get-repo-public-key');
+
+  //   expect(action).toBeDefined();
+  //   expect(repository).toBeDefined();
+  //   const { body } = await testApi.execAppAction('github', action.action, connection, {
+  //     owner: repository?.owner,
+  //     repo: repository?.name,
+  //   });
+
+  //   expect(body).toBeDefined();
+  //   expect(body.key).toBeDefined();
+  //   repoPublicKey = body;
+  // });
+
+  // it('Should create repository secret', async () => {
+  //   const action = GITHUB_ACTIONS.find((a) => a.action === 'actions-create-or-update-repo-secret');
+  //   expect(action).toBeDefined();
+  //   expect(repository).toBeDefined();
+
+  //   await testApi.execAppAction('github', action.action, connection, {
+  //     owner: repository?.owner,
+  //     repo: repository?.name,
+  //     secret_name: 'TESTING_SECRET',
+  //     body: {
+  //       encrypted_value: 'test',
+  //       key_id: repoPublicKey.key_id,
+  //     },
+  //   });
+  // });
 
   // Contents
   it('Should create a file', async () => {

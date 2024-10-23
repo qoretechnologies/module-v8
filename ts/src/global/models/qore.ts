@@ -136,6 +136,11 @@ export interface IQoreRestConnectionModifiers<
   set_options_post_auth?: (
     context: Omit<TQoreAppActionFunctionContext<ModifierOptions>, 'opts'>
   ) => Promise<Record<keyof ModifierOptions, any>>;
+  /** maps connection options (normally required options) that map to Swagger path options; the key is the request
+      option name, the value is the action option name; the value of the connection option will be used as the value
+      of the given action option in each call where the option is present
+  */
+  conn_option_map?: object;
 }
 
 export type TFirstAppCharacter =

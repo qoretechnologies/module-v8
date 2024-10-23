@@ -54,13 +54,24 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
 
         #! If the request only has a body key
         bool req_only_body;
+
+        #! Connection to Swagger path option map
+        *hash<string, string> conn_opt_map;
+
+        #! Query option set
+        *hash<string, bool> query_set;
     }
 
     #! Creates the object from the arguments
     constructor(string name, SwaggerSchema schema, string swagger_path, *hash<AsyncCallInfo> api,
-            *hash<string, bool> path_vars)
+            *hash<string, bool> path_vars, *hash<string, string> conn_opt_map)
             : TypeScriptActionApiDataProvider(name, api) {
         self.swagger_path = swagger_path;
+        self.conn_opt_map = conn_opt_map;
+        if (conn_opt_map) {
+            query_set = map {$1: True}, conn_opt_map.iterator();
+        }
+
         # set request and response types
         {
             swagger_path =~ s/^\///;
@@ -68,12 +79,14 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
             prov = new SwaggerDataProvider(schema).getChildProviderPath(swagger_path);
         }
         request_type = prov.getRequestType();
-        if (request_type && (*hash<string, AbstractDataField> fields = request_type.getFields())
-            && fields.size() == 1 && fields.body) {
-            *AbstractDataProviderType t = fields.body.getType();
-            if (!path_vars || !t || !t.getFields(){keys path_vars}) {
-                req_only_body = True;
-                request_type = t;
+        if (request_type && (*hash<string, AbstractDataField> fields = request_type.getFields())) {
+            if (fields.size() == 1 && fields.body) {
+                *AbstractDataProviderType t = fields.body.getType();
+                if (!path_vars || !t || !t.getFields(){keys path_vars}) {
+                    req_only_body = True;
+                    request_type = t;
+                    fields = t.getFields();
+                }
             }
         }
         response_type = prov.getResponseType();
@@ -108,7 +121,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                 "name": $1,
                 "type": AbstractDataProviderTypeMap."softstring",
                 "desc": sprintf("URI path variable %y", $1),
-            })), keys path_vars;
+            })), keys path_vars, !query_set{$1};
         }
     }
 
@@ -133,6 +146,11 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
     private auto doRequestImpl(auto req, *hash<auto> request_options) {
         if (path_vars) {
             request_options.path_vars = remove req{keys path_vars};
+            if (conn_opt_map) {
+                *hash<auto> opts = conn.getRealOptions();
+                map request_options.path_vars{$1.value} = opts{$1.key}, conn_opt_map.pairIterator(),
+                    path_vars{$1.value};
+            }
         }
         if (!api) {
             if (!prov.tryGetRestClient()) {

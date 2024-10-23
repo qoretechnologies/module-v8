@@ -109,6 +109,9 @@ public class TypeScriptActionInterface {
         #! Maps from app names to connection post-auth functions
         static hash<string, hash<AsyncCallInfo>> app_post_auth_map;
 
+        #! Maps from app names to connection -> Swagger path option maps
+        static hash<string, hash<string, string>> app_conn_opt_map;
+
         #! Connection map for testing
         static hash<string, TypeScriptAppRestConnection> cmap;
     }
@@ -177,6 +180,7 @@ public class TypeScriptActionInterface {
             }
             *string required_options;
             hash<AsyncCallInfo> post_auth;
+            hash<string, string> conn_opt_map;
             if (*hash<auto> rest_modifiers = remove app0.rest_modifiers) {
                 foreach hash<auto> i in (rest_modifiers.options.pairIterator()) {
                     if (i.value.allowed_values) {
@@ -199,6 +203,9 @@ public class TypeScriptActionInterface {
                         "async_call": rest_modifiers.set_options_post_auth,
                         "to": seconds(remove rest_modifiers.io_timeout_secs ?? DefaultIoTimeoutSecs),
                     };
+                }
+                if (rest_modifiers.conn_option_map) {
+                    conn_opt_map = cast<hash<string, string>>(rest_modifiers.conn_option_map);
                 }
                 if (rest_modifiers.url_template_options) {
                     url_template_options = map {$1: True}, rest_modifiers.url_template_options;
@@ -228,6 +235,9 @@ public class TypeScriptActionInterface {
             }
             if (post_auth) {
                 app_post_auth_map{appname} = post_auth;
+            }
+            if (conn_opt_map) {
+                app_conn_opt_map{appname} = conn_opt_map;
             }
         }
         DataProviderActionCatalog::registerApp(cast<hash<DataProviderAppInfo>>(app0));
@@ -302,7 +312,7 @@ public class TypeScriptActionInterface {
             # check for path vars
             *hash<string, bool> path_vars = map {$1: True}, (swagger_path =~ x/\{([^\}]*)}/g);
             child = new TypeScriptActionApiWithSchemaDataProvider(action.action, schema, swagger_path, api,
-                path_vars);
+                path_vars, app_conn_opt_map{app.name.lwr()});
 
             if ((*AbstractDataProviderType t = child.getRequestType())
                 && (*hash<string, AbstractDataField> fields = t.getFields())) {
@@ -340,7 +350,8 @@ public class TypeScriptActionInterface {
                 remove action.response_type;
             }
 
-            child = new TypeScriptActionApiDataProvider(action.action, api, request_type, response_type, omap, dmap);
+            child = new TypeScriptActionApiDataProvider(action.action, api, request_type, response_type, omap,
+                dmap);
         }
 
         TypeScriptActionAppDataProvider prov = TypeScriptActionInterface::getAppDataProvider(action.app);
@@ -579,7 +590,8 @@ public class TypeScriptActionInterface {
     }
 
     static string processUrl(string url, hash<auto> opts, hash<string, bool> url_template_options) {
-        map url = replace(url, "{{" + $1 + "}}", opts{$1}), keys url_template_options, opts{$1}.val();
+        map url = replace(url, "{{" + $1 + "}}", opts{$1}), keys url_template_options,
+            opts{$1}.typeCode() == NT_STRING && opts{$1}.val();
         return url;
     }
 

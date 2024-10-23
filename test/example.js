@@ -89,6 +89,10 @@ exports.actionsCatalogue = {
                 "url": "tsrest-js-test://www.example.com/api/{{account_id}}",
             },
             /** "rest_modifiers" is an optional object with the following keys:
+                - conn_option_map? object -> maps connection options (normally required options) that map to Swagger
+                  path options; the key is the request option name, the value is the action option name; the value of
+                  the connection option will be used as the value of the given action option in each call where the
+                  option is present
                 - io_timeout_secs?: int -> provides the I/O timeout in seconds (NOTE: not yet implemented)
                 - options?: object -> describes connection options supported by connections for this application; keys
                   are option names; values are converted to option hashes described by the COnnectionOptionInfo
