@@ -133,7 +133,7 @@ class _PiecesAppCatalogue {
         continue;
       }
       // Skip dynamic props - because they are put into get_dependent_options function for "parent" option
-      if (props[key].type === PropertyType.DYNAMIC) {
+      if (props[key].type === PropertyType.DYNAMIC && props[key]?.refreshers?.length) {
         // Dynamic props are handled differently
         continue;
       }
