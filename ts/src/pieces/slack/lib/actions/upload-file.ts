@@ -63,7 +63,7 @@ export const uploadFile = createAction({
   description: 'Upload file without sharing it to a channel or user',
   props: {
     file: Property.File({
-      displayName: 'Attachment',
+      displayName: `Attachment - file url or base64 string (e.g 'data:text/plain;base64,SGVsbG8gV29ybGQh')`,
       required: true,
     }),
     filename: Property.ShortText({
