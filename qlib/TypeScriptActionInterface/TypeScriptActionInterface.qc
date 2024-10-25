@@ -394,7 +394,10 @@ public class TypeScriptActionInterface {
 
     static *string getCachedSchema(reference<bool> store_in_cache, string filename) {
         *string dir;
-        if (!(dir = ENV.QORE_V8_CACHE_DIR).val() || !is_readable(dir) || ENV.QORE_V8_DISABLE_CACHE) {
+        if (!(dir = ENV.QORE_V8_CACHE_DIR).val() || ENV.QORE_V8_DISABLE_CACHE) {
+            return;
+        }
+        if (!is_dir(dir) && mkdir(dir, 0755, True)) {
             return;
         }
         string path = sprintf("%s/%s", dir, filename);
