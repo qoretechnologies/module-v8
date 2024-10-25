@@ -3,7 +3,12 @@ import { mapActionsToApp } from '../../global/helpers';
 import { IQoreAppWithActions } from '../../global/models/qore';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
-import { ESIGNATURE_ACTIONS, ESIGNATURE_APP_NAME, ESIGNATURE_CONN_OPTIONS } from './constants';
+import {
+  ESIGNATURE_ACTIONS,
+  ESIGNATURE_APP_NAME,
+  ESIGNATURE_CONN_OPTIONS,
+  ESIGNATURE_PATHS,
+} from './constants';
 import { actionsCatalogue } from '../../ActionsCatalogue';
 /*
  * Returns the app object with all the actions ready to use, using translations
@@ -33,6 +38,7 @@ export default (locale: Locales) =>
     logo_file_name: 'esignature-logo.svg',
     logo_mime_type: 'image/svg+xml',
     swagger: 'schemas/esignature.swagger.json',
+    swagger_paths: ESIGNATURE_PATHS,
     rest: {
       url: 'https://{{base_uri}}/restapi/v2.1/accounts/{{account_id}}',
       data: 'json',

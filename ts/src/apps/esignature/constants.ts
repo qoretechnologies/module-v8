@@ -20,7 +20,7 @@ export const ESIGNATURE_CONN_OPTIONS = {
   },
 } satisfies IQoreConnectionOptions;
 
-export const ESIGNATURE_ACTIONS = buildActionsFromSwaggerSchema(eSignature as OpenAPIV2.Document, [
+export const ESIGNATURE_PATHS = [
   '/v2.1/accounts/{accountId}/envelopes',
   '/v2.1/accounts/{accountId}/envelopes/{envelopeId}',
   '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients',
@@ -45,4 +45,9 @@ export const ESIGNATURE_ACTIONS = buildActionsFromSwaggerSchema(eSignature as Op
   '/v2.1/accounts/{accountId}/bulk_send',
   '/v2.1/accounts/{accountId}/workflows',
   '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/notary',
-]);
+];
+
+export const ESIGNATURE_ACTIONS = buildActionsFromSwaggerSchema(
+  eSignature as OpenAPIV2.Document,
+  ESIGNATURE_PATHS
+);

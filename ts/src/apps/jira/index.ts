@@ -40,6 +40,7 @@ export default (locale: Locales) =>
     logo_file_name: 'jira-logo.svg',
     logo_mime_type: 'image/svg+xml',
     swagger: 'schemas/jira.swagger.json',
+    swagger_paths: JIRA_ALLOWED_PATHS,
     swagger_options: {
       parse_flags: -1,
     },

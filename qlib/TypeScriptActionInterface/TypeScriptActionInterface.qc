@@ -144,21 +144,22 @@ public class TypeScriptActionInterface {
     }
 
     static registerApp(hash<auto> app, JavaScriptProgramPool pool) {
+        #printf("TypeScriptActionInterface::registerApp() %y %y\n", now_us(), app.name);
         if (app.name =~ / /) {
             throw "APP-ERROR", sprintf("App name %y is invalid; it contains one or more spaces", app.name);
         }
         on_error printf("%s\n", get_exception_string($1));
+        string appname = app.name.lwr();
         SwaggerSchema schema;
         if ((*string swagger_loc = remove app.swagger).val()) {
-            *hash<auto> swagger_opts = remove app.swagger_options;
-            schema = SwaggerLoader::fromString(FileLocationHandler::getTextFileFromLocation(swagger_loc), NOTHING,
-                swagger_opts);
+            on_error rethrow $1.err, sprintf("%s (while loading app %y)", $1.desc, app.name);
+            schema = TypeScriptActionInterface::getSwaggerSchema(appname, swagger_loc, remove app.swagger_options,
+                remove app.swagger_paths);
         }
         hash<auto> app0 += app;
         if (app.logo) {
             app0.logo = parse_base64_string(app.logo);
         }
-        string appname = app.name.lwr();
         hash<string, bool> url_template_options;
         if (*hash<auto> rest = remove app0.rest) {
             string sname = "tsrest-" + app.name.lwr();
@@ -249,6 +250,161 @@ public class TypeScriptActionInterface {
         }
     }
 
+    static SwaggerSchema getSwaggerSchema(string appname, string swagger_loc, *hash<auto> swagger_opts,
+            *list<auto> paths) {
+        # first check cache
+        string path_sha512;
+        if (paths) {
+            path_sha512 = (foldl $1 + "," + $2, paths).toSHA512();
+        } else {
+            path_sha512 = "none";
+        }
+        string filename = sprintf("swagger-%s-%s.yaml", encode_url(swagger_loc, True), path_sha512);
+        bool store_in_cache;
+        *string schema_source = TypeScriptActionInterface::getCachedSchema(\store_in_cache, filename);
+        if (!schema_source) {
+            schema_source = FileLocationHandler::getTextFileFromLocation(swagger_loc);
+            if (paths) {
+                schema_source = TypeScriptActionInterface::getOptimizedSchema(appname, schema_source, paths);
+            }
+        }
+        SwaggerSchema schema = SwaggerLoader::fromString(schema_source, NOTHING, swagger_opts);
+        if (store_in_cache) {
+            TypeScriptActionInterface::cacheSchema(filename, schema_source);
+        }
+        return schema;
+    }
+
+    static string getOptimizedSchema(string app, string schema_source, list<auto> paths) {
+        string ser = SwaggerLoader::detectSourceEncoding(schema_source);
+        hash<auto> h = SwaggerLoader::parseSchemaSource(schema_source, ser);
+        # prepare paths: path -> method -> True
+        hash<string, hash<string, bool>> pmap;
+        foreach string path in (paths) {
+            path =~ s/^\///;
+            list<string> l = path.split(":");
+            string m;
+            if (l.size() == 2) {
+                m = (pop l).upr();
+                if (!SwaggerDataProvider::HttpMethods{m}) {
+                    throw "INVALID-HTTP-METHOD", sprintf("Method %y is unknown; expecting one of: %y", m,
+                        keys SwaggerDataProvider::HttpMethods);
+                }
+            }
+            string p = l.join("/");
+            # normalize variables to {x}
+            if (softlist<string> vars = (p =~ x/(\{[^\}]*\})/g)) {
+                map p = replace(p, $1, "{x}"), vars;
+            }
+            pmap{p}{m ? m.lwr() : "*"} = True;
+        }
+        #printf("pmap: %N\n", pmap);
+
+        # remove unneeded paths
+        foreach hash<auto> i in (h.paths.pairIterator()) {
+            string path = i.key;
+            # remove leading slash
+            path =~ s/^\///;
+            # normalize variables to {x}
+            if (softlist<string> vars = (path =~ x/(\{[^\}]*\})/g)) {
+                map path = replace(path, $1, "{x}"), vars;
+            }
+            *hash<string, bool> mmap = pmap{path};
+            if (!mmap) {
+                remove h.paths{i.key};
+                #printf("Removed path %y\n", i.key);
+                continue;
+            }
+            #printf("Removing %y from path %y; leaving: %y\n", keys (i.value - keys mmap), i.key, keys mmap);
+            if (!mmap."*") {
+                h.paths{i.key} = i.value{keys mmap};
+            }
+        }
+
+        # map all types referenced
+        if (h.definitions) {
+            hash<string, bool> tmap;
+            foreach hash<auto> i in (h.paths.pairIterator()) {
+                foreach hash<auto> j in (i.value.pairIterator()) {
+                    map TypeScriptActionInterface::scanType($1, \tmap, h.definitions), j.value.parameters,
+                        exists ($1.schema."$ref" ?? $1.schema.items."$ref");
+                    map TypeScriptActionInterface::scanType($1, \tmap, h.definitions), j.value.responses.iterator(),
+                        exists ($1.schema."$ref" ?? $1.schema.items."$ref");
+                }
+            }
+
+            #printf("tmap: %N\n", tmap);
+            # remove unreferenced types
+            h.definitions = h.definitions{keys tmap} ?? {};
+        }
+
+        int old_size = schema_source.size();
+        schema_source = ser == "yaml" ? make_yaml(h) : make_json(h);
+        int new_size = schema_source.size();
+
+        #printf("%s: compressed schema; old size: %d bytes new size: %d bytes (%f %% reduction)\n", app, old_size,
+        #    new_size, (new_size - old_size) / old_size.toFloat() * 100.0);
+
+        return schema_source;
+    }
+
+    static scanType(hash<auto> h, reference<hash<string, bool>> tmap, *hash<auto> definitions, *string name) {
+        if (exists (*string ref = ((h."$ref" ?? h.schema."$ref" ?? h.items."$ref" ?? h.additionalProperties."$ref"
+            ?? h.additionalProperties.items."$ref")
+            =~ x/^#\/definitions\/(.*)/)[0])) {
+            if (!tmap{ref}) {
+                TypeScriptActionInterface::addReference(ref, \tmap, definitions);
+            }
+        }
+        map TypeScriptActionInterface::scanType($1, \tmap, definitions), h.allOf;
+        map TypeScriptActionInterface::scanType($1, \tmap, definitions), h.anyOf;
+        map TypeScriptActionInterface::scanType($1, \tmap, definitions), h.properties.iterator();
+    }
+
+    static addReference(string ref, reference<hash<string, bool>> tmap, *hash<auto> definitions) {
+        tmap{ref} = True;
+        *hash<auto> rh = definitions{ref};
+        if (!rh) {
+            throw "REFERENCE-ERROR", sprintf("Cannot find reference to type %y", ref);
+        }
+        foreach string type in ("allOf", "anyOf") {
+            if (rh{type}) {
+                map TypeScriptActionInterface::scanType($1, \tmap, definitions), rh{type};
+            }
+        }
+
+        map TypeScriptActionInterface::scanType($1, \tmap, definitions), rh.properties.iterator();
+    }
+
+    static scanType(*list<auto> l, reference<hash<string, bool>> tmap, *hash<auto> definitions) {
+        map TypeScriptActionInterface::scanType($1, \tmap, definitions), l;
+    }
+
+    static cacheSchema(string filename, *string schema_source) {
+        *string dir;
+        if (!(dir = ENV.QORE_V8_CACHE_DIR).val() || !is_writable(dir)) {
+            return;
+        }
+        string path = sprintf("%s/%s", dir, filename);
+        File f();
+        f.open2(path, O_CREAT | O_TRUNC | O_WRONLY);
+        f.write(schema_source);
+        #printf("Cached schema for %y (%d bytes)\n", filename, schema_source.size());
+    }
+
+    static *string getCachedSchema(reference<bool> store_in_cache, string filename) {
+        *string dir;
+        if (!(dir = ENV.QORE_V8_CACHE_DIR).val() || !is_readable(dir) || ENV.QORE_V8_DISABLE_CACHE) {
+            return;
+        }
+        string path = sprintf("%s/%s", dir, filename);
+        if (is_readable(path) && (*hash<StatInfo> info = hstat(path)).size) {
+            #printf("Returning %y from cache (%d bytes)\n", filename, info.size);
+            return File::readTextFile(path);
+        }
+        store_in_cache = True;
+    }
+
     static registerAction(hash<auto> action, JavaScriptProgramPool pool) {
         on_error printf("%s\n", get_exception_string($1));
 
@@ -309,7 +465,7 @@ public class TypeScriptActionInterface {
                     action.app, action.action, swagger_path);
             }
 
-            # check for path vars
+            # check for path vars0
             *hash<string, bool> path_vars = map {$1: True}, (swagger_path =~ x/\{([^\}]*)}/g);
             child = new TypeScriptActionApiWithSchemaDataProvider(action.action, schema, swagger_path, api,
                 path_vars, app_conn_opt_map{app.name.lwr()});
@@ -356,6 +512,8 @@ public class TypeScriptActionInterface {
 
         TypeScriptActionAppDataProvider prov = TypeScriptActionInterface::getAppDataProvider(action.app);
         prov.registerChild(action.action, child);
+
+        #printf("Registered %s %s (%y)\n", action.app, action.action);
 
         action.path = action.action;
     }

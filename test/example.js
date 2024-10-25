@@ -6,6 +6,7 @@ exports.actionsCatalogue = {
             - swagger_options?: object -> an optional hash of swagger parsing options - the main option is
               - "parse_flags": -1 -> this will turn on all lax parsing options - or you can use 128
                 (LM_ACCEPT_QUERY_OBJECTS = accept "object" as a valid type for query parameters like OpenAPI 3.0)
+            - swagger_paths?: string[] -> a list of swagger paths to build an optimized schema
         */
         api.registerApp({
             "name": "js-test",
