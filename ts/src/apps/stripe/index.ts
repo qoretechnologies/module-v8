@@ -49,6 +49,7 @@ export default (locale: Locales) =>
     swagger_options: {
       parse_flags: -1,
     },
+    swagger_paths: STRIPE_ALLOWED_PATHS,
     rest: {
       url: 'https://api.stripe.com',
       data: 'json',

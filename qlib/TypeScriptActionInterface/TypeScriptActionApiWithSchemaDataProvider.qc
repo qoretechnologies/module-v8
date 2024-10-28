@@ -79,6 +79,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
             prov = new SwaggerDataProvider(schema).getChildProviderPath(swagger_path);
         }
         request_type = prov.getRequestType();
+
         if (request_type && (*hash<string, AbstractDataField> fields = request_type.getFields())) {
             if (fields.size() == 1 && fields.body) {
                 *AbstractDataProviderType t = fields.body.getType();
@@ -89,6 +90,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                 }
             }
         }
+
         response_type = prov.getResponseType();
         if (response_type && (*hash<string, AbstractDataField> fields = response_type.getFields())
             && fields.size() == 1 && fields.body) {

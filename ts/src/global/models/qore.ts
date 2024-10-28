@@ -198,6 +198,7 @@ export interface IQoreApp<
 
   swagger?: string;
   swagger_options?: object;
+  swagger_paths?: string[];
 }
 
 export interface IQoreAppWithActions<

@@ -50,6 +50,7 @@ export default (locale: Locales) =>
     logo_file_name: 'github-logo.svg',
     logo_mime_type: 'image/svg+xml',
     swagger: 'schemas/github.swagger.json',
+    swagger_paths: GITHUB_ALLOWED_PATHS,
     rest: {
       url: 'https://api.github.com/',
       data: 'json',
