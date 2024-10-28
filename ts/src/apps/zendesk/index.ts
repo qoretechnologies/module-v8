@@ -8,7 +8,7 @@ import {
 import { L } from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import ZendeskSchema from '../../schemas/zendesk.swagger.json';
-import { ZENDESK_SWAGGER_API_PATH } from './constants';
+import { ZENDESK_ALLOWED_PATHS } from './constants';
 
 export interface IQoreConnectionOptions {
   [key: string]: GetConnectionOptionDefinitionFromQoreType<TQoreType>;
@@ -27,24 +27,6 @@ export const ZENDESK_CONN_OPTIONS = {
     type: 'string',
   },
 } satisfies IQoreConnectionOptions;
-
-export const ZENDESK_ALLOWED_PATHS = [
-  '/api/v2/account/settings',
-  '/api/v2/tickets',
-  '/api/v2/tickets/{ticket_id}',
-  '/api/v2/users',
-  '/api/v2/users/{user_id}',
-  //'/api/v2/deleted_users/{deleted_user_id}',
-  '/api/v2/organizations',
-  '/api/v2/organizations/{organization_id}',
-  //'/api/v2/macros',
-  //'/api/v2/macros/{macro_id}',
-  '/api/v2/search',
-  //'/api/v2/ticket_fields',
-  //'/api/v2/ticket_fields/{ticket_field_id}',
-  '/api/v2/ticket_metrics',
-  '/api/v2/ticket_metrics/{ticket_metric_id}',
-];
 
 export const ZENDESK_ACTIONS = buildActionsFromSwaggerSchema(
   ZendeskSchema as any,
@@ -84,48 +66,7 @@ export default (locale: Locales) =>
     swagger_options: {
       parse_flags: 128,
     },
-    swagger_paths: [
-        `${ZENDESK_SWAGGER_API_PATH}tickets/{id}:GET`,
-        `${ZENDESK_SWAGGER_API_PATH}tickets:GET`,
-        `${ZENDESK_SWAGGER_API_PATH}tickets:POST`,
-        `${ZENDESK_SWAGGER_API_PATH}tickets/count:GET`,
-        `${ZENDESK_SWAGGER_API_PATH}tickets/{id}:PUT`,
-        `${ZENDESK_SWAGGER_API_PATH}tickets/{id}:DELETE`,
-        `${ZENDESK_SWAGGER_API_PATH}groups/{group_id}:DELETE`,
-        `${ZENDESK_SWAGGER_API_PATH}groups/{group_id}:GET`,
-        `${ZENDESK_SWAGGER_API_PATH}groups:GET`,
-        `${ZENDESK_SWAGGER_API_PATH}groups:POST`,
-        `${ZENDESK_SWAGGER_API_PATH}groups/{group_id}:PUT`,
-        `${ZENDESK_SWAGGER_API_PATH}attachments/{attachment_id}:GET`,
-        `${ZENDESK_SWAGGER_API_PATH}uploads/{token}:DELETE`,
-        `${ZENDESK_SWAGGER_API_PATH}users/{id}:DELETE`,
-        `${ZENDESK_SWAGGER_API_PATH}users/{user_id}:PUT`,
-        `${ZENDESK_SWAGGER_API_PATH}users:POST`,
-        `${ZENDESK_SWAGGER_API_PATH}users/{user_id}:GET`,
-        `${ZENDESK_SWAGGER_API_PATH}users:GET`,
-        `${ZENDESK_SWAGGER_API_PATH}organizations/{organization_id}:DELETE`,
-        `${ZENDESK_SWAGGER_API_PATH}organizations/{organization_id}:GET`,
-        `${ZENDESK_SWAGGER_API_PATH}organizations/{organization_id}:PUT`,
-        `${ZENDESK_SWAGGER_API_PATH}organizations:POST`,
-        `${ZENDESK_SWAGGER_API_PATH}organizations:GET`,
-        `${ZENDESK_SWAGGER_API_PATH}account/settings:GET`,
-        `${ZENDESK_SWAGGER_API_PATH}account/settings:PUT`,
-        //`${ZENDESK_SWAGGER_API_PATH}deleted_users/{deleted_user_id}:DELETE`,
-        //`${ZENDESK_SWAGGER_API_PATH}deleted_users/{deleted_user_id}:GET`,
-        //`${ZENDESK_SWAGGER_API_PATH}macros:GET`,
-        //`${ZENDESK_SWAGGER_API_PATH}macros:POST`,
-        //`${ZENDESK_SWAGGER_API_PATH}macros/{macro_id}:DELETE`,
-        //`${ZENDESK_SWAGGER_API_PATH}macros/{macro_id}:GET`,
-        //`${ZENDESK_SWAGGER_API_PATH}macros/{macro_id}:PUT`,
-        `${ZENDESK_SWAGGER_API_PATH}search:GET`,
-        //`${ZENDESK_SWAGGER_API_PATH}ticket_fields:GET`,
-        //`${ZENDESK_SWAGGER_API_PATH}ticket_fields:POST`,
-        //`${ZENDESK_SWAGGER_API_PATH}ticket_fields/{ticket_field_id}:DELETE`,
-        //`${ZENDESK_SWAGGER_API_PATH}ticket_fields/{ticket_field_id}:GET`,
-        //`${ZENDESK_SWAGGER_API_PATH}ticket_fields/{ticket_field_id}:PUT`,
-        `${ZENDESK_SWAGGER_API_PATH}ticket_metrics:GET`,
-        `${ZENDESK_SWAGGER_API_PATH}ticket_metrics/{ticket_metric_id}:GET`,
-    ],
+    swagger_paths: ZENDESK_ALLOWED_PATHS,
     rest: {
       url: `https://{{subdomain}}.zendesk.com`,
       data: 'json',

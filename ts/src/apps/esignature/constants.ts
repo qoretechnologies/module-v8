@@ -24,27 +24,15 @@ export const ESIGNATURE_PATHS = [
   '/v2.1/accounts/{accountId}/envelopes',
   '/v2.1/accounts/{accountId}/envelopes/{envelopeId}',
   '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients',
-  '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/status',
   '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents',
   '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}',
-  '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/reminders',
-  '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/void',
-  '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/status',
   '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/views/recipient',
-  '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/combined',
-  '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/audit',
   /**
    * Template actions temporary removed
    */
   // '/v2.1/accounts/{accountId}/templates',
   // '/v2.1/accounts/{accountId}/templates/{templateId}',
-  '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/webhooks',
-  '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/notifications',
   '/v2.1/accounts/{accountId}/brands',
-  '/v2.1/accounts/{accountId}/recipients',
-  '/v2.1/accounts/{accountId}/bulk_send',
-  '/v2.1/accounts/{accountId}/workflows',
-  '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/notary',
 ];
 
 export const ESIGNATURE_ACTIONS = buildActionsFromSwaggerSchema(

@@ -43,11 +43,9 @@ export const buildActionsFromSwaggerSchema = (
   });
 
   // We filter the paths to only include the ones that are allowed
-  const filteredPaths = Object.entries(schema.paths).filter(([path]) => {
-    if (!allowedPathsWithMethods.hasOwnProperty(path)) console.log(path);
-
-    return allowedPaths?.length ? allowedPathsWithMethods.hasOwnProperty(path) : true;
-  });
+  const filteredPaths = Object.entries(schema.paths).filter(([path]) =>
+    allowedPaths?.length ? allowedPathsWithMethods.hasOwnProperty(path) : true
+  );
 
   const actions: IQorePartialAppActionWithSwaggerPath[] = [];
 
