@@ -54,20 +54,20 @@ describe('Tests Zendesk Actions', () => {
       ticketCount = body.tickets.length;
     });
 
-    // it('Should update a ticket', () => {
-    //   console.log('Updating ticket', ticketID);
-    //   const { body } = testApi.execAppAction('zendesk', 'UpdateTicket', connection, {
-    //     ticket_id: ticketID,
-    //     body: {
-    //       ticket: {
-    //         status: 'pending',
-    //       },
-    //     },
-    //   });
+    it('Should update a ticket', () => {
+      console.log('Updating ticket', ticketID);
+      const { body } = testApi.execAppAction('zendesk', 'UpdateTicket', connection, {
+        ticket_id: ticketID,
+        body: {
+          ticket: {
+            status: 'pending',
+          },
+        },
+      });
 
-    //   expect(body).toHaveProperty('ticket.id');
-    //   expect(body.ticket.id).toBe(ticketID);
-    // });
+      expect(body).toHaveProperty('ticket.id');
+      expect(body.ticket.id).toBe(ticketID);
+    });
 
     it('Should get a ticket by ID', () => {
       const { body } = testApi.execAppAction('zendesk', 'ShowTicket', connection, {
