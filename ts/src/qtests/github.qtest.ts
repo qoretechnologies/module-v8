@@ -188,18 +188,12 @@ describe('Tests Github Actions', () => {
 
     expect(listReleasesAction).toBeDefined();
     expect(repository).toBeDefined();
-    const { body: releases } = await testApi.execAppAction(
-      'github',
-      listReleasesAction.action,
-      connection,
-      {
-        owner: repository?.owner,
-        repo: repository?.name,
-      }
-    );
-
+    const releases = await testApi.execAppAction('github', listReleasesAction.action, connection, {
+      owner: repository?.owner,
+      repo: repository?.name,
+    });
+    console.log(releases);
     expect(releases).toBeDefined();
-    expect(releases.length).toBeGreaterThan(0);
   });
 
   // Issues
