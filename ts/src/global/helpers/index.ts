@@ -33,17 +33,33 @@ export const buildActionsFromSwaggerSchema = (
     return [];
   }
 
+  const allowedPathsWithMethods: Record<string, string[]> = {};
+  allowedPaths.forEach((path: string) => {
+    const [fullPath, method] = path.split(':');
+    if (!allowedPathsWithMethods[fullPath]) {
+      allowedPathsWithMethods[fullPath] = [];
+    }
+    if (method) allowedPathsWithMethods[fullPath].push(method.toLowerCase());
+  });
+
   // We filter the paths to only include the ones that are allowed
-  const filteredPaths = Object.entries(schema.paths).filter(([path]) =>
-    allowedPaths ? allowedPaths.includes(path) : true
-  );
+  const filteredPaths = Object.entries(schema.paths).filter(([path]) => {
+    if (!allowedPathsWithMethods.hasOwnProperty(path)) console.log(path);
+
+    return allowedPaths?.length ? allowedPathsWithMethods.hasOwnProperty(path) : true;
+  });
 
   const actions: IQorePartialAppActionWithSwaggerPath[] = [];
 
   filteredPaths.forEach(([path, methods]) => {
     Object.entries(methods).forEach(([method, data]) => {
-      // Do not iterate if the method is "parameters"
-      if (method === 'parameters' || typeof data !== 'object') {
+      // Do not iterate if the method is "parameters" or method is not in allowed ones
+      if (
+        method === 'parameters' ||
+        typeof data !== 'object' ||
+        (allowedPathsWithMethods[path].length !== 0 &&
+          !allowedPathsWithMethods[path].includes(method))
+      ) {
         return;
       }
 
