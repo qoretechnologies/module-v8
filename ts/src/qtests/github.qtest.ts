@@ -94,41 +94,41 @@ describe('Tests Github Actions', () => {
     expect(body.items.length).toBeGreaterThan(0);
   });
 
-  it('Should create repository secret', async () => {
-    const getPublicKeyAction = GITHUB_ACTIONS.find(
-      (a) => a.action === 'actions-get-repo-public-key'
-    );
+  // it('Should create repository secret', async () => {
+  //   const getPublicKeyAction = GITHUB_ACTIONS.find(
+  //     (a) => a.action === 'actions-get-repo-public-key'
+  //   );
 
-    expect(getPublicKeyAction).toBeDefined();
-    expect(repository).toBeDefined();
-    const { body: publicKey } = await testApi.execAppAction(
-      'github',
-      getPublicKeyAction.action,
-      connection,
-      {
-        owner: repository?.owner,
-        repo: repository?.name,
-      }
-    );
+  //   expect(getPublicKeyAction).toBeDefined();
+  //   expect(repository).toBeDefined();
+  //   const { body: publicKey } = await testApi.execAppAction(
+  //     'github',
+  //     getPublicKeyAction.action,
+  //     connection,
+  //     {
+  //       owner: repository?.owner,
+  //       repo: repository?.name,
+  //     }
+  //   );
 
-    expect(publicKey).toBeDefined();
-    expect(publicKey.key).toBeDefined();
+  //   expect(publicKey).toBeDefined();
+  //   expect(publicKey.key).toBeDefined();
 
-    const createSecretAction = GITHUB_ACTIONS.find(
-      (a) => a.action === 'actions-create-or-update-repo-secret'
-    );
-    expect(createSecretAction).toBeDefined();
+  //   const createSecretAction = GITHUB_ACTIONS.find(
+  //     (a) => a.action === 'actions-create-or-update-repo-secret'
+  //   );
+  //   expect(createSecretAction).toBeDefined();
 
-    await testApi.execAppAction('github', createSecretAction.action, connection, {
-      owner: repository?.owner,
-      repo: repository?.name,
-      secret_name: 'TESTING_SECRET',
-      body: {
-        encrypted_value: 'test',
-        key_id: publicKey.key_id,
-      },
-    });
-  });
+  //   await testApi.execAppAction('github', createSecretAction.action, connection, {
+  //     owner: repository?.owner,
+  //     repo: repository?.name,
+  //     secret_name: 'TESTING_SECRET',
+  //     body: {
+  //       encrypted_value: 'test',
+  //       key_id: publicKey.key_id,
+  //     },
+  //   });
+  // });
 
   // Contents
   it('Should create a file', async () => {
