@@ -27,6 +27,25 @@ describe('Helpers tests', () => {
     expect(actions[0].short_desc).toBe('Creates new accounts.');
   });
 
+  it.only('Properly parses a swagger schema and creates actions with filtered methods', () => {
+    const actionsWithoutFilter: IQorePartialAppActionWithSwaggerPath[] =
+      buildActionsFromSwaggerSchema(eSignature as OpenAPIV2.Document, [
+        '/v2.1/accounts/{accountId}',
+      ]);
+
+    expect(actionsWithoutFilter).toHaveLength(2);
+    expect(actionsWithoutFilter[0].action).toBe('Accounts_GetAccount');
+    expect(actionsWithoutFilter[1].action).toBe('Accounts_DeleteAccount');
+
+    const actionsWithFilter: IQorePartialAppActionWithSwaggerPath[] = buildActionsFromSwaggerSchema(
+      eSignature as OpenAPIV2.Document,
+      ['/v2.1/accounts/{accountId}:DELETE']
+    );
+
+    expect(actionsWithFilter).toHaveLength(1);
+    expect(actionsWithFilter[0].action).toBe('Accounts_DeleteAccount');
+  });
+
   it('Properly maps actions to a given app', () => {
     const actions = mapActionsToApp('Zendesk', zendeskActions, 'en');
     const createTicket = actions.find(
