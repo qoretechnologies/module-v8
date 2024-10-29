@@ -1,5 +1,5 @@
 import { OpenAPIV2 } from 'openapi-types';
-import { buildActionsFromSwaggerSchema } from '../../global/helpers';
+import { buildActionsFromSwaggerSchema, createAllowedPaths } from '../../global/helpers';
 import { IQoreConnectionOptions } from '../zendesk';
 import eSignature from '../../schemas/esignature.swagger.json';
 
@@ -20,7 +20,7 @@ export const ESIGNATURE_CONN_OPTIONS = {
   },
 } satisfies IQoreConnectionOptions;
 
-export const ESIGNATURE_PATHS = [
+export const ESIGNATURE_PATHS = createAllowedPaths([
   '/v2.1/accounts/{accountId}/envelopes',
   '/v2.1/accounts/{accountId}/envelopes/{envelopeId}',
   '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients',
@@ -33,7 +33,7 @@ export const ESIGNATURE_PATHS = [
   // '/v2.1/accounts/{accountId}/templates',
   // '/v2.1/accounts/{accountId}/templates/{templateId}',
   '/v2.1/accounts/{accountId}/brands',
-];
+]);
 
 export const ESIGNATURE_ACTIONS = buildActionsFromSwaggerSchema(
   eSignature as OpenAPIV2.Document,

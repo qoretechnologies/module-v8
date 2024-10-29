@@ -5,6 +5,7 @@ import {
   IQoreAppActionOption,
   IQorePartialAppActionWithSwaggerPath,
   IQoreTypeObject,
+  TAllowedPath,
   TQoreAppAction,
   TQoreOptions,
   TQorePartialAction,
@@ -12,6 +13,19 @@ import {
   TStringWithFirstUpperCaseCharacter,
 } from '../../global/models/qore';
 import { L } from '../../i18n/i18n-node';
+
+/**
+ * Creates an array of allowed paths.
+ *
+ * @template T - A tuple of strings representing the allowed paths.
+ * @param {...{ [K in keyof T]: TAllowedPath<T[K]> }} paths - The paths to be allowed.
+ * @returns {T} An array of allowed paths.
+ */
+export const createAllowedPaths = <T extends string[]>(paths: {
+  [K in keyof T]: TAllowedPath<T[K]>;
+}): T => {
+  return paths;
+};
 
 // !IMPORTANT
 // These fields need to be ommited from  each action, they are used for internal purposes

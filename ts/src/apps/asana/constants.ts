@@ -1,5 +1,7 @@
+import { createAllowedPaths } from '../../global/helpers';
+
 export const ASANA_APP_NAME = 'Asana';
-export const ASANA_ALLOWED_PATHS = [
+export const ASANA_ALLOWED_PATHS = createAllowedPaths([
   '/tasks',
   '/tasks/{task_gid}',
   '/tasks/{task_gid}/subtasks',
@@ -31,5 +33,5 @@ export const ASANA_ALLOWED_PATHS = [
   // '/portfolio_memberships',
   // '/portfolios',
   // '/portfolios/{portfolio_gid}',
-];
+]);
 export const ASANA_SWAGGER_API_PATH = '';

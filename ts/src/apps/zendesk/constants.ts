@@ -1,6 +1,8 @@
+import { createAllowedPaths } from '../../global/helpers';
+
 export const ZENDESK_SWAGGER_API_PATH = '/api/v2/';
 
-export const ZENDESK_ALLOWED_PATHS = [
+export const ZENDESK_ALLOWED_PATHS = createAllowedPaths([
   `${ZENDESK_SWAGGER_API_PATH}tickets/{ticket_id}:GET`,
   `${ZENDESK_SWAGGER_API_PATH}tickets/{ticket_id}:PUT`,
   `${ZENDESK_SWAGGER_API_PATH}tickets/{ticket_id}:DELETE`,
@@ -29,4 +31,4 @@ export const ZENDESK_ALLOWED_PATHS = [
   `${ZENDESK_SWAGGER_API_PATH}search:GET`,
   `${ZENDESK_SWAGGER_API_PATH}ticket_metrics:GET`,
   `${ZENDESK_SWAGGER_API_PATH}ticket_metrics/{ticket_metric_id}:GET`,
-];
+]);

@@ -7,6 +7,14 @@ export interface IQoreAppShared {
   desc?: string;
 }
 
+export type THttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE';
+
+export type TAllowedPath<T extends string> = T extends `${string}:${infer Method}`
+  ? Method extends THttpMethod
+    ? T
+    : never
+  : T;
+
 type TQoreRestContentEncoding = 'gzip' | 'bzip2' | 'deflate' | 'identity';
 
 type TQoreRestData = 'auto' | 'json' | 'yaml' | 'rawxml' | 'xml' | 'url' | 'text' | 'bin';

@@ -1,5 +1,7 @@
+import { createAllowedPaths } from '../../global/helpers';
+
 export const STRIPE_APP_NAME = 'Stripe';
-export const STRIPE_ALLOWED_PATHS = [
+export const STRIPE_ALLOWED_PATHS = createAllowedPaths([
   '/v1/account',
   '/v1/account_links',
   '/v1/accounts/{account}',
@@ -20,4 +22,4 @@ export const STRIPE_ALLOWED_PATHS = [
   '/v1/invoices/{invoice}',
   '/v1/payment_intents',
   '/v1/refunds',
-];
+]);
