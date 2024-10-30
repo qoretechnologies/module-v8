@@ -154,11 +154,11 @@ export const mapActionsToApp = (
   return Object.entries(actions).map(([_a, action]) => ({
     ...omit(action, OMMITTED_FIELDS),
 
-    display_name:
-      toTitleCase(action.display_name) ||
-      // @ts-expect-error no idea whats going on here, will fix later
-      L[locale].apps[app].actions[action.action as unknown].displayName() ||
-      toTitleCase(action.action.replace(/_/g, ' ').replace(/([a-z])([A-Z])/g, '$1 $2')),
+    display_name: action.display_name
+      ? toTitleCase(action.display_name)
+      : // @ts-expect-error no idea whats going on here, will fix later
+        L[locale].apps[app].actions[action.action as unknown].displayName() ||
+        toTitleCase(action.action.replace(/_/g, ' ').replace(/([a-z])([A-Z])/g, '$1 $2')),
 
     short_desc:
       action.short_desc ||
