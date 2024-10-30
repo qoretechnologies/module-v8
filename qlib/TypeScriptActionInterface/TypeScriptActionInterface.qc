@@ -324,7 +324,7 @@ public class TypeScriptActionInterface {
             }
             #printf("Removing %y from path %y; leaving: %y\n", keys (i.value - keys mmap), i.key, keys mmap);
             if (!mmap."*") {
-                h.paths{i.key} = i.value{keys mmap};
+                h.paths{i.key} = i.value{keys mmap + ("parameters",)};
             }
         }
 
@@ -333,6 +333,11 @@ public class TypeScriptActionInterface {
             hash<string, bool> tmap;
             foreach hash<auto> i in (h.paths.pairIterator()) {
                 foreach hash<auto> j in (i.value.pairIterator()) {
+                    if (j.key == "parameters") {
+                        map TypeScriptActionInterface::scanType($1, \tmap, h.definitions), j.value,
+                            exists ($1.schema."$ref" ?? $1.schema.items."$ref");
+                        continue;
+                    }
                     map TypeScriptActionInterface::scanType($1, \tmap, h.definitions), j.value.parameters,
                         exists ($1.schema."$ref" ?? $1.schema.items."$ref");
                     map TypeScriptActionInterface::scanType($1, \tmap, h.definitions), j.value.responses.iterator(),

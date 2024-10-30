@@ -150,14 +150,6 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         @return the response to the request
     */
     private auto doRequestImpl(auto req, *hash<auto> request_options) {
-        if (path_vars) {
-            request_options.path_vars = remove req{keys path_vars};
-            if (conn_opt_map) {
-                *hash<auto> opts = conn.getRealOptions();
-                map request_options.path_vars{$1.value} = opts{$1.key}, conn_opt_map.pairIterator(),
-                    path_vars{$1.value};
-            }
-        }
         if (!api) {
             if (!prov.tryGetRestClient()) {
                 prov.setRestClient(conn.get());
@@ -176,6 +168,14 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
             }
             auto rv = prov.doRequest(req, request_options);
             return res_only_body ? rv.body : rv;
+        }
+        if (path_vars) {
+            request_options.path_vars = remove req{keys path_vars};
+            if (conn_opt_map) {
+                *hash<auto> opts = conn.getRealOptions();
+                map request_options.path_vars{$1.value} = opts{$1.key}, conn_opt_map.pairIterator(),
+                    path_vars{$1.value};
+            }
         }
         return getAsyncValue(api, req, request_options, getCallContextInfo());
     }
