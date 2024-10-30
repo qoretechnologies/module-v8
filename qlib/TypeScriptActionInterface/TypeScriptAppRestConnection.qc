@@ -156,6 +156,21 @@ public class TypeScriptAppRestConnection inherits RestConnection {
         return logger;
     }
 
+    #! Returns a hash of supported data provider subtypes
+    /** @return a hash of supported data provider subtypes
+    */
+    private *hash<string, *hash<string, hash<DataProviderOptionInfo>>> getDataProviderSubtypesImpl() {
+        return TypeScriptActionInterface::getSubtypesForApp(app);
+    }
+
+    #! Sets child data provider capabilities
+    private setChildCapabilities() {
+        children_can_support_apis = True;
+        if (TypeScriptActionInterface::appSupportsEvents(app)) {
+            children_can_support_observers = True;
+        }
+    }
+
     #! Processes the OAuth2 token response
     private *hash<auto> processOAuth2TokenResponseImpl(hash<auto> resp) {
         *hash<auto> new_opts = RestConnection::processOAuth2TokenResponseImpl(resp);
@@ -204,11 +219,6 @@ public class TypeScriptAppRestConnection inherits RestConnection {
         self.app = app;
         url_template_options = TypeScriptActionInterface::getUrlTemplateOptions(app);
         info = ConnectionSchemeCache::getSchemeEx(scheme);
-    }
-
-    #! Sets child data provider capabilities
-    private setChildCapabilities() {
-        children_can_support_apis = True;
     }
 
     #! returns a @ref TypeScriptAppRestConnection object
