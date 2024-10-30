@@ -106,8 +106,8 @@ describe('Tests Zendesk Actions', () => {
       const { body } = testApi.execAppAction('zendesk', 'CreateUser', connection, {
         body: {
           user: {
-            name: 'John Doe',
-            email: 'john@doe.com',
+            name: 'Testing User',
+            email: 'test@email.com',
           },
         },
       });
@@ -176,7 +176,7 @@ describe('Tests Zendesk Actions', () => {
       const { body } = testApi.execAppAction('zendesk', 'CreateOrganization', connection, {
         body: {
           organization: {
-            name: 'ACME Inc.',
+            name: 'Testing Organization',
           },
         },
       });
