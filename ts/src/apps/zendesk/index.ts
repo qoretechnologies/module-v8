@@ -1,5 +1,9 @@
 import { actionsCatalogue } from '../../ActionsCatalogue';
-import { buildActionsFromSwaggerSchema, mapActionsToApp } from '../../global/helpers';
+import {
+  buildActionsFromSwaggerSchema,
+  createSwaggerPaths,
+  mapActionsToApp,
+} from '../../global/helpers';
 import {
   GetConnectionOptionDefinitionFromQoreType,
   IQoreAppWithActions,
@@ -66,7 +70,7 @@ export default (locale: Locales) =>
     swagger_options: {
       parse_flags: 128,
     },
-    swagger_paths: ZENDESK_ALLOWED_PATHS,
+    swagger_paths: createSwaggerPaths(ZENDESK_ALLOWED_PATHS),
     rest: {
       url: `https://{{subdomain}}.zendesk.com`,
       data: 'json',

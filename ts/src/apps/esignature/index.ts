@@ -1,5 +1,5 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { mapActionsToApp } from '../../global/helpers';
+import { createSwaggerPaths, mapActionsToApp } from '../../global/helpers';
 import { IQoreAppWithActions } from '../../global/models/qore';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
@@ -38,7 +38,7 @@ export default (locale: Locales) =>
     logo_file_name: 'esignature-logo.svg',
     logo_mime_type: 'image/svg+xml',
     swagger: 'schemas/esignature.swagger.json',
-    swagger_paths: ESIGNATURE_PATHS,
+    swagger_paths: createSwaggerPaths(ESIGNATURE_PATHS),
     rest: {
       url: 'https://{{base_uri}}/restapi/v2.1/accounts/{{account_id}}',
       data: 'json',

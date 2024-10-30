@@ -1,19 +1,22 @@
 import { Locales, Translation } from 'i18n/i18n-types';
 import { capitalize, omit, reduce } from 'lodash';
 import { OpenAPIV2 } from 'openapi-types';
+import toTitleCase from 'to-title-case';
 import {
+  IAllowedPathObject,
   IQoreAppActionOption,
   IQorePartialAppActionWithSwaggerPath,
   IQoreTypeObject,
   TAllowedPath,
+  TAllowedPathString,
   TQoreAppAction,
   TQoreOptions,
   TQorePartialAction,
   TQoreResponseType,
   TStringWithFirstUpperCaseCharacter,
+  ValidatedPathElement,
 } from '../../global/models/qore';
 import { L } from '../../i18n/i18n-node';
-import toTitleCase from 'to-title-case';
 
 /**
  * Creates an array of allowed paths.
@@ -22,10 +25,22 @@ import toTitleCase from 'to-title-case';
  * @param {...{ [K in keyof T]: TAllowedPath<T[K]> }} paths - The paths to be allowed.
  * @returns {T} An array of allowed paths.
  */
-export const createAllowedPaths = <T extends string[]>(paths: {
-  [K in keyof T]: TAllowedPath<T[K]>;
+export const createAllowedPaths = <T extends readonly (string | IAllowedPathObject)[]>(paths: {
+  [K in keyof T]: ValidatedPathElement<T[K]>;
 }): T => {
   return paths;
+};
+
+export const createSwaggerPaths = <T extends readonly (string | IAllowedPathObject)[]>(paths: {
+  [K in keyof T]: ValidatedPathElement<T[K]>;
+}): TAllowedPathString[] => {
+  return paths.map((path) => (typeof path === 'string' ? path : path.path));
+};
+
+type TAllowedPathWithData = {
+  methods: Set<string>;
+  actionData?: Omit<IAllowedPathObject, 'path'>;
+  processor?: IAllowedPathObject['processor'];
 };
 
 // !IMPORTANT
@@ -40,7 +55,7 @@ export const OMMITTED_FIELDS = ['_localizationGroup'] as const;
  */
 export const buildActionsFromSwaggerSchema = (
   schema: OpenAPIV2.Document,
-  allowedPaths?: string[]
+  allowedPaths?: (TAllowedPath<string> | IAllowedPathObject)[]
 ): IQorePartialAppActionWithSwaggerPath[] => {
   // Check if the schema was provided, return empty actions if not
   // If the allowedPaths are empty, return empty actions
@@ -48,38 +63,49 @@ export const buildActionsFromSwaggerSchema = (
     return [];
   }
 
-  const allowedPathsWithMethods: Record<string, string[]> = {};
-  allowedPaths.forEach((path: string) => {
-    const [fullPath, method] = path.split(':');
-    if (!allowedPathsWithMethods[fullPath]) {
-      allowedPathsWithMethods[fullPath] = [];
-    }
-    if (method) allowedPathsWithMethods[fullPath].push(method.toLowerCase());
-  });
-
-  // We filter the paths to only include the ones that are allowed
-  const filteredPaths = Object.entries(schema.paths).filter(([path]) =>
-    allowedPaths?.length ? allowedPathsWithMethods.hasOwnProperty(path) : true
-  );
-
   const actions: IQorePartialAppActionWithSwaggerPath[] = [];
 
-  filteredPaths.forEach(([path, methods]) => {
+  const allowedPathsWithMethods = new Map<string, TAllowedPathWithData>();
+  allowedPaths.forEach((allowedPath: TAllowedPath<string> | IAllowedPathObject) => {
+    let fullPath: string;
+    let method: string | undefined;
+    let actionData: Omit<IAllowedPathObject, 'path'> = {};
+    let processor: IAllowedPathObject['processor'] | undefined;
+
+    if (typeof allowedPath === 'object') {
+      ({ path: fullPath, processor, ...actionData } = allowedPath);
+      [fullPath, method] = allowedPath.path.split(':');
+    } else {
+      [fullPath, method] = allowedPath.split(':');
+    }
+
+    if (!allowedPathsWithMethods.has(fullPath)) {
+      allowedPathsWithMethods.set(fullPath, { methods: new Set(), actionData, processor });
+    }
+
+    if (method) {
+      allowedPathsWithMethods.get(fullPath).methods.add(method.toLowerCase());
+    }
+  });
+
+  Object.entries(schema.paths).forEach(([path, methods]) => {
+    if (allowedPathsWithMethods.size > 0 && !allowedPathsWithMethods.has(path)) return;
+    const allowedPath = allowedPathsWithMethods.get(path);
+    const allowedMethods = allowedPath?.methods;
+
     Object.entries(methods).forEach(([method, data]) => {
-      // Do not iterate if the method is "parameters" or method is not in allowed ones
-      if (
-        method === 'parameters' ||
-        typeof data !== 'object' ||
-        (allowedPathsWithMethods[path].length !== 0 &&
-          !allowedPathsWithMethods[path].includes(method))
-      ) {
+      if (method === 'parameters' || typeof data !== 'object') return;
+      if (allowedMethods && allowedMethods.size > 0 && !allowedMethods.has(method.toLowerCase()))
         return;
-      }
-
       // We need to cast the data to an OperationObject to access the properties
-      // Because typescript is not smart enough to know that the data is an OperationObject after the check of `parameters`
+      // Because typescript is not smart enough to know that the data is an OperationObject
+      // after the check of `parameters`
       const dataWithoutParameters = data as OpenAPIV2.OperationObject;
+      let actionData = allowedPath?.actionData;
 
+      if (allowedPath?.processor) {
+        actionData = { ...actionData, ...allowedPath.processor(dataWithoutParameters) };
+      }
       // Create the action object, we get the properties from the schema or use a fallback
       const action: IQorePartialAppActionWithSwaggerPath = {
         action: getPropertyOfSchemaData(
@@ -91,6 +117,7 @@ export const buildActionsFromSwaggerSchema = (
         display_name: getPropertyOfSchemaData(dataWithoutParameters, 'summary', ''),
         short_desc: getPropertyOfSchemaData(dataWithoutParameters, 'summary', ''),
         desc: getPropertyOfSchemaData(dataWithoutParameters, 'description', ''),
+        ...actionData,
       };
 
       actions.push(action);
@@ -128,7 +155,7 @@ export const mapActionsToApp = (
     ...omit(action, OMMITTED_FIELDS),
 
     display_name:
-      action.display_name ||
+      toTitleCase(action.display_name) ||
       // @ts-expect-error no idea whats going on here, will fix later
       L[locale].apps[app].actions[action.action as unknown].displayName() ||
       toTitleCase(action.action.replace(/_/g, ' ').replace(/([a-z])([A-Z])/g, '$1 $2')),

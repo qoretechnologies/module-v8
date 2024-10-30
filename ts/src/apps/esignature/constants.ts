@@ -21,18 +21,61 @@ export const ESIGNATURE_CONN_OPTIONS = {
 } satisfies IQoreConnectionOptions;
 
 export const ESIGNATURE_PATHS = createAllowedPaths([
-  '/v2.1/accounts/{accountId}/envelopes',
-  '/v2.1/accounts/{accountId}/envelopes/{envelopeId}',
-  '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients',
-  '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents',
-  '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}',
-  '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/views/recipient',
+  { path: '/v2.1/accounts/{accountId}/envelopes:GET', display_name: 'Get Envelopes' },
+  { path: '/v2.1/accounts/{accountId}/envelopes:POST', display_name: 'Create Envelopes' },
+  { path: '/v2.1/accounts/{accountId}/envelopes/{envelopeId}:GET', display_name: 'Get Envelope' },
+  {
+    path: '/v2.1/accounts/{accountId}/envelopes/{envelopeId}:PUT',
+    display_name: 'Update Envelope',
+  },
+  {
+    path: '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients:DELETE',
+    display_name: 'Delete Recipients',
+  },
+  {
+    path: '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients:POST',
+    display_name: 'Add Recipients',
+  },
+  {
+    path: '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients:PUT',
+    display_name: 'Update Recipients',
+  },
+  {
+    path: '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients:GET',
+    display_name: 'Get Recipients',
+  },
+  {
+    path: '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents:DELETE',
+    display_name: 'Delete Documents',
+  },
+  {
+    path: '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents:PUT',
+    display_name: 'Update Documents',
+  },
+  {
+    path: '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents:GET',
+    display_name: 'Get Documents',
+  },
+  {
+    path: '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}:PUT',
+    display_name: 'Update Document',
+  },
+  {
+    path: '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}:GET',
+    display_name: 'Get Document',
+  },
+  {
+    path: '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/views/recipient:POST',
+    display_name: 'Create Recipient View',
+  },
+  { path: '/v2.1/accounts/{accountId}/brands:DELETE', display_name: 'Delete Brand' },
+  { path: '/v2.1/accounts/{accountId}/brands:POST', display_name: 'Create Brand' },
+  { path: '/v2.1/accounts/{accountId}/brands:GET', display_name: 'Get Brands' },
   /**
    * Template actions temporary removed
    */
   // '/v2.1/accounts/{accountId}/templates',
   // '/v2.1/accounts/{accountId}/templates/{templateId}',
-  '/v2.1/accounts/{accountId}/brands',
 ]);
 
 export const ESIGNATURE_ACTIONS = buildActionsFromSwaggerSchema(

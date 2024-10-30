@@ -5,6 +5,7 @@ import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import github from '../../schemas/github.swagger.json';
 import { GITHUB_ALLOWED_PATHS, GITHUB_APP_NAME } from './constants';
+import { createSwaggerPaths } from '../../global/helpers/index';
 
 export const GITHUB_ACTIONS = buildActionsFromSwaggerSchema(github as any, GITHUB_ALLOWED_PATHS);
 
@@ -24,7 +25,7 @@ export default (locale: Locales) =>
     logo_file_name: 'github-logo.svg',
     logo_mime_type: 'image/svg+xml',
     swagger: 'schemas/github.swagger.json',
-    swagger_paths: GITHUB_ALLOWED_PATHS,
+    swagger_paths: createSwaggerPaths(GITHUB_ALLOWED_PATHS),
     rest: {
       url: 'https://api.github.com/',
       data: 'json',
