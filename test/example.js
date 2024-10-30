@@ -134,7 +134,7 @@ exports.actionsCatalogue = {
             "display_name": "Test API",
             "short_desc": "Test API",
             "desc": "Test API",
-            "action_code": 2,  // DPAT_API == 2
+            "action_code": 2,  // DPAT_EVENT == 1, DPAT_API == 2
 
             /** "api_function" is required when "action_code" == DPAT_API
                 @param obj: any -> is the main argument used to call the API and must correspond to the request
@@ -441,6 +441,42 @@ exports.actionsCatalogue = {
             "desc": "Get pet",
             "action_code": 2,  // DPAT_API == 2
             "swagger_path": "pet/{id}/GET"
+        });
+
+        api.registerAction({
+            "app": "js-swagger-test",
+            "action": "webhook-event-1",
+            "display_name": "Webhook Event",
+            "short_desc": "Webhook event example action",
+            "desc": "Webhook event example action",
+            "action_code": 1,  // DPAT_EVENT == 1
+            "webhook": true,
+            "webhook_method": "POST",
+            "event_type": {
+                "name": {
+                    "type": "string",
+                    "display_name": "Event Name",
+                    "short_desc": "Event name",
+                    "desc": "Event name",
+                },
+                "code": {
+                    "type": "int",
+                    "display_name": "Event Code",
+                    "short_desc": "Event code",
+                    "desc": "Event code",
+                },
+            },
+        });
+
+        api.registerAction({
+            "app": "js-swagger-test",
+            "action": "js-event-1",
+            "display_name": "JavaScript Event",
+            "short_desc": "JavaScript event example action",
+            "desc": "JavaScript event example action",
+            "action_code": 2,  // DPAT_API == 2
+            "event_function": function(obj, opts, ctx) {
+            },
         });
     }
 };

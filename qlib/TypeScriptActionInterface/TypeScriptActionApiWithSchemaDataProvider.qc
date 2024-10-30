@@ -123,6 +123,10 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                 "name": $1,
                 "type": AbstractDataProviderTypeMap."softstring",
                 "desc": sprintf("URI path variable %y", $1),
+                "attr": {
+                    "preselected": True,
+                    "required": True,
+                },
             })), keys path_vars, !query_set{$1};
         }
     }

@@ -114,6 +114,13 @@ public class TypeScriptActionInterface {
 
         #! Connection map for testing
         static hash<string, TypeScriptAppRestConnection> cmap;
+
+        #! Actions supporting events; app -> action -> True
+        static hash<string, hash<string, bool>> emap;
+
+        #! Options for event-based data providers
+        const EventOptions = {
+        };
     }
 
     static registerApp(JavaScriptObject app) {
@@ -433,10 +440,19 @@ public class TypeScriptActionInterface {
                 break;
             }
 
+            case DPAT_EVENT: {
+                TypeScriptActionInterface::generateEventDataProvider(app, \action, pool, schema);
+                break;
+            }
+
             default:
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y action_code: %y is unsupported",
                     action.app, action.action, action.action_code);
         }
+    }
+
+    static generateEventDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
+            JavaScriptProgramPool pool, *SwaggerSchema schema) {
     }
 
     static generateApiDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
@@ -758,6 +774,14 @@ public class TypeScriptActionInterface {
 
     static *hash<AsyncCallInfo> getPostAuthCall(string app) {
         return app_post_auth_map{app.lwr()};
+    }
+
+    static *hash<string, *hash<string, hash<DataProviderOptionInfo>>> getSubtypesForApp(string app) {
+        return map {$1: EventOptions}, keys emap{app.lwr()};
+    }
+
+    static bool appSupportsEvents(string app) {
+        return exists emap{app.lwr()};
     }
 }
 }
