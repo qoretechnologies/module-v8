@@ -13,6 +13,7 @@ import {
   TStringWithFirstUpperCaseCharacter,
 } from '../../global/models/qore';
 import { L } from '../../i18n/i18n-node';
+import toTitleCase from 'to-title-case';
 
 /**
  * Creates an array of allowed paths.
@@ -130,13 +131,13 @@ export const mapActionsToApp = (
       action.display_name ||
       // @ts-expect-error no idea whats going on here, will fix later
       L[locale].apps[app].actions[action.action as unknown].displayName() ||
-      capitalize(action.action.replace(/_/g, ' ')),
+      toTitleCase(action.action.replace(/_/g, ' ').replace(/([a-z])([A-Z])/g, '$1 $2')),
 
     short_desc:
       action.short_desc ||
       // @ts-expect-error no idea whats going on here, will fix later
       L[locale].apps[app].actions[action.action as unknown].shortDesc() ||
-      capitalize(action.action.replace(/_/g, ' ')),
+      capitalize(action.action.replace(/_/g, ' ').replace(/([a-z])([A-Z])/g, '$1 $2')),
 
     desc:
       action.desc ||
