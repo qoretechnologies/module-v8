@@ -49,8 +49,8 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         #! Path vars
         *hash<string, bool> path_vars;
 
-        #! Info on flattened request types: top-level key -> actual location
-        hash<string, list<string>> reqmap;
+        #! Info on flattenedhash<string, list<string>> request types: top-level key -> actual location
+        *hash<string, list<string>> reqmap;
 
         #! Info on flattened response types: top-level key -> actual location
         #hash<string, list<string>> resmap;
@@ -166,8 +166,13 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
     #! "Normalizes" the request and response for testing if necessary
     auto makeNormalizedRequest(auto req, *hash<auto> request_options) {
         if (reqmap) {
-            map fixNormalizedValue(\req, $1.value, $1.key), reqmap.pairIterator();
+            hash<auto> req0;
+            map req0{$1.key} = $1.value, (
+                map findNormalizedValue(req, $1.value, $1.key), reqmap.pairIterator()
+            ), $1;
             map remove req{$1[0]}, reqmap.iterator();
+            map req0{$1.key} = $1.value, req.pairIterator(), !exists req0{$1.key};
+            req = req0;
         }
         auto rv = doRequest(req, request_options);
         if (res_only_body) {
@@ -177,27 +182,30 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
     }
 
     #! Moves a value in a normalized position to the top of the request hash
-    private static fixNormalizedValue(reference<auto> req, list<string> p, string k, *reference<auto> val,
-            int offset = 0, *reference<bool> found) {
-        if (req.typeCode() == NT_HASH && req.hasKey(p[offset])) {
-            auto nr = req{p[offset]};
-            if (nr.typeCode() == NT_HASH) {
-                if (offset == p.size() - 1) {
-                    if (found = nr.hasKey(k)) {
-                        val = nr{k};
-                    }
-                } else if (offset == p.size() - 2) {
-                    if (found = nr{p{offset + 1}}.hasKey(k)) {
-                        val = nr{p{offset + 1}}{k};
-                    }
-                } else {
-                    TypeScriptActionApiWithSchemaDataProvider::fixNormalizedValue(\req{p[offset]}, \val, p, k,
-                        offset + 1, found);
+    private static *hash<auto> findNormalizedValue(hash<auto> req, list<string> p, string k, int offset = 0) {
+        if (req.typeCode() == NT_HASH && req.hasKey(p[offset]) && (auto nr = req{p[offset]})
+            && (nr.typeCode() == NT_HASH)) {
+            if (offset == p.size() - 1) {
+                if (nr.hasKey(k)) {
+                    return {
+                        "key": k,
+                        "value": nr{k},
+                    };
                 }
+                return;
             }
-        }
-        if (!offset && found) {
-            req{k} = val;
+
+            if (offset == p.size() - 2) {
+                if (nr{p{offset + 1}}.hasKey(k)) {
+                    return {
+                        "key": k,
+                        "value": nr{p{offset + 1}}{k},
+                    };
+                }
+                return;
+            }
+
+            return TypeScriptActionApiWithSchemaDataProvider::findNormalizedValue(nr, p, k, offset + 1);
         }
     }
 
