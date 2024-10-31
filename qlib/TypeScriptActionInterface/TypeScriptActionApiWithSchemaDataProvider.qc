@@ -49,11 +49,14 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         #! Path vars
         *hash<string, bool> path_vars;
 
+        #! Info on flattened request types: top-level key -> actual location
+        hash<string, list<string>> reqmap;
+
+        #! Info on flattened response types: top-level key -> actual location
+        #hash<string, list<string>> resmap;
+
         #! If the response only has a body key
         bool res_only_body;
-
-        #! If the request only has a body key
-        bool req_only_body;
 
         #! Connection to Swagger path option map
         *hash<string, string> conn_opt_map;
@@ -81,13 +84,42 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         request_type = prov.getRequestType();
 
         if (request_type && (*hash<string, AbstractDataField> fields = request_type.getFields())) {
-            if (fields.size() == 1 && fields.body) {
-                *AbstractDataProviderType t = fields.body.getType();
-                if (!path_vars || !t || !t.getFields(){keys path_vars}) {
-                    req_only_body = True;
-                    request_type = t;
-                    fields = t.getFields();
+            HashDataType newreq;
+            code check = sub (hash<string, AbstractDataField> fields, string key) {
+                list<string> l = (key,);
+                while (fields.size() == 1
+                    && (*hash<string, AbstractDataField> f = fields.firstValue().getType().getFields())) {
+                    l += fields.firstKey();
+                    fields = f;
                 }
+                if (!newreq) {
+                    newreq = new HashDataType(request_type.isOrNothingType() ? AutoHashOrNothingType : AutoHashType,
+                        request_type.getName(), fields);
+                } else if (fields) {
+                    map newreq.addField($1), (fields = fields - (keys newreq.getFields())).iterator();
+                }
+                map reqmap{$1} = l, keys fields;
+            };
+            bool stop;
+            # process body args
+            if (fields.body) {
+                if (*hash<string, AbstractDataField> bf = fields.body.getType().getFields()) {
+                    # move args to the top level
+                    check(bf, "body");
+                } else {
+                    stop = True;
+                }
+            }
+            # move query args to
+            if (!stop && fields.query && (*hash<string, AbstractDataField> qf = fields.query.getType().getFields())) {
+                check(qf, "query");
+            }
+            if (!stop && fields.header && (*hash<string, AbstractDataField> hf =
+                fields.header.getType().getFields())) {
+                check(hf, "header");
+            }
+            if (newreq) {
+                request_type = newreq;
             }
         }
 
@@ -133,14 +165,31 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
 
     #! "Normalizes" the request and response for testing if necessary
     auto makeNormalizedRequest(auto req, *hash<auto> request_options) {
-        if (req_only_body && req.hasKey("body")) {
-            req = req.body + (req - "body");
-        }
+        map fixNormalizedValue(\req, $1.value, $1.key), reqmap.pairIterator();
         auto rv = doRequest(req, request_options);
         if (res_only_body) {
             rv.body = remove rv;
         }
         return rv;
+    }
+
+    #! Moves a value in a normalized position to the top of the request hash
+    private static fixNormalizedValue(reference<auto> req, list<string> p, string k, *reference<auto> val,
+            int offset = 0) {
+        if (req.hasKey(p[offset])) {
+            if (offset == p.size() - 1) {
+                val = req{p[offset]};
+            } else {
+                TypeScriptActionApiWithSchemaDataProvider::fixNormalizedValue(\req{p[offset]}, \val, p, k,
+                    offset + 1);
+            }
+        }
+        if (!offset) {
+            remove req{p[0]};
+            if (exists val) {
+                req{k} = val;
+            }
+        }
     }
 
     #! Makes a request and returns the response
@@ -165,14 +214,12 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                 }
                 if (*hash<auto> vars = req{keys path_vars}) {
                     req -= keys path_vars;
-                    request_options.path_vars = vars;
+                    request_options.path_vars += vars;
                 }
             }
-            if (req_only_body) {
-                req = {
-                    "body": req,
-                };
-            }
+            map fixOptimizedValue(\req, $1.value, remove req{$1.key}, $1.key), reqmap.pairIterator(),
+                req.hasKey($1.key);
+
             auto rv = prov.doRequest(req, request_options);
             return res_only_body ? rv.body : rv;
         }
@@ -184,7 +231,25 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                     path_vars{$1.value};
             }
         }
-        return getAsyncValue(api, req, request_options, getCallContextInfo());
+        map fixOptimizedValue(\req, $1.value, remove req{$1.key}, $1.key), reqmap.pairIterator(),
+            req.hasKey($1.key);
+       return getAsyncValue(api, req, request_options, getCallContextInfo());
+    }
+
+    #! Moves a value in an optimized position to the standard position of the request hash
+    private static fixOptimizedValue(reference<auto> req, list<string> p, auto val, string k, int offset = 0) {
+        int pos = p.size() - 1;
+        if (offset == pos) {
+            req{p[offset]}{k} = val;
+        } else if (offset == (pos - 1)) {
+            req{p[offset]}{p[offset + 1]}{k} = val;
+        } else if (offset == (pos - 2)) {
+            req{p[offset]}{p[offset + 1]}{p[offset + 2]}{k} = val;
+        } else if (offset == (pos - 3)) {
+            req{p[offset]}{p[offset + 1]}{p[offset + 2]}{p[offset + 3]}{k} = val;
+        } else {
+            TypeScriptActionApiWithSchemaDataProvider::fixOptimizedValue(\req{p[offset]}, p, val, k, ++offset);
+        }
     }
 
     #! Returns data provider static info
