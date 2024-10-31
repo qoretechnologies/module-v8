@@ -182,10 +182,10 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
     }
 
     #! Moves a value in a normalized position to the top of the request hash
-    private static *hash<auto> findNormalizedValue(hash<auto> req, list<string> p, string k, int offset = 0) {
-        if (req.typeCode() == NT_HASH && req.hasKey(p[offset]) && (auto nr = req{p[offset]})
-            && (nr.typeCode() == NT_HASH)) {
-            if (offset == p.size() - 1) {
+    private static *hash<auto> findNormalizedValue(hash<auto> req, list<string> p, string k) {
+        if (req.typeCode() == NT_HASH && (auto nr = req{p[0]}) && (nr.typeCode() == NT_HASH)) {
+            shift p;
+            if (p.empty()) {
                 if (nr.hasKey(k)) {
                     return {
                         "key": k,
@@ -195,17 +195,27 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                 return;
             }
 
-            if (offset == p.size() - 2) {
-                if (nr{p{offset + 1}}.hasKey(k)) {
+            if (p.size() == 1) {
+                if (nr{p[0]}.hasKey(k)) {
                     return {
                         "key": k,
-                        "value": nr{p{offset + 1}}{k},
+                        "value": nr{p[0]}{k},
                     };
                 }
                 return;
             }
 
-            return TypeScriptActionApiWithSchemaDataProvider::findNormalizedValue(nr, p, k, offset + 1);
+            if (p.size() == 2) {
+                if (nr{p[0]}{p[1]}.hasKey(k)) {
+                    return {
+                        "key": k,
+                        "value": nr{p[0]}{p[1]}{k},
+                    };
+                }
+                return;
+            }
+
+            return TypeScriptActionApiWithSchemaDataProvider::findNormalizedValue(nr, p, k);
         }
     }
 
