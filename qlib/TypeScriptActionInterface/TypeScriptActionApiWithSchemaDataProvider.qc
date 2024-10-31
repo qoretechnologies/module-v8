@@ -165,7 +165,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
 
     #! "Normalizes" the request and response for testing if necessary
     auto makeNormalizedRequest(auto req, *hash<auto> request_options) {
-        if (reqmap) {
+        if (reqmap && req) {
             hash<auto> req0;
             map req0{$1.key} = $1.value, (
                 map findNormalizedValue(req, $1.value, $1.key), reqmap.pairIterator()
