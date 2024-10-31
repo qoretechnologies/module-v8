@@ -157,9 +157,16 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
             if (exists (*string base_path = conn.orig_opts.swagger_base_path)) {
                 request_options.base_path = base_path;
             }
-            if (path_vars && (*hash<auto> vars = req{keys path_vars})) {
-                req -= keys path_vars;
-                request_options.path_vars = vars;
+            if (path_vars) {
+                if (conn_opt_map) {
+                    *hash<auto> opts = conn.getRealOptions();
+                    map request_options.path_vars{$1.value} = opts{$1.key}, conn_opt_map.pairIterator(),
+                        path_vars{$1.value};
+                }
+                if (*hash<auto> vars = req{keys path_vars}) {
+                    req -= keys path_vars;
+                    request_options.path_vars = vars;
+                }
             }
             if (req_only_body) {
                 req = {
