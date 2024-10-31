@@ -182,10 +182,10 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
     }
 
     #! Moves a value in a normalized position to the top of the request hash
-    private static *hash<auto> findNormalizedValue(hash<auto> req, list<string> p, string k) {
+    private static *hash<auto> findNormalizedValue(hash<auto> req, list<string> p, string k, int offset = 0) {
         if (req.typeCode() == NT_HASH && (auto nr = req{p[0]}) && (nr.typeCode() == NT_HASH)) {
-            shift p;
-            if (p.empty()) {
+            int left = p.size() - offset;
+            if (left == 1) {
                 if (nr.hasKey(k)) {
                     return {
                         "key": k,
@@ -195,27 +195,27 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                 return;
             }
 
-            if (p.size() == 1) {
-                if (nr{p[0]}.hasKey(k)) {
+            if (left == 2) {
+                if (nr{p[offset + 1]}.hasKey(k)) {
                     return {
                         "key": k,
-                        "value": nr{p[0]}{k},
+                        "value": nr{p[offset + 1]}{k},
                     };
                 }
                 return;
             }
 
-            if (p.size() == 2) {
-                if (nr{p[0]}{p[1]}.hasKey(k)) {
+            if (left == 3) {
+                if (nr{p[offset + 1]}{p[offset + 2]}.hasKey(k)) {
                     return {
                         "key": k,
-                        "value": nr{p[0]}{p[1]}{k},
+                        "value": nr{p[offset + 1]}{p[offset + 2]}{k},
                     };
                 }
                 return;
             }
 
-            return TypeScriptActionApiWithSchemaDataProvider::findNormalizedValue(nr, p, k);
+            return TypeScriptActionApiWithSchemaDataProvider::findNormalizedValue(nr, p, k, offset + 1);
         }
     }
 
@@ -226,6 +226,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         @return the response to the request
     */
     private auto doRequestImpl(auto req, *hash<auto> request_options) {
+        on_error rethrow $1.err, sprintf("%s (req: %y request_options: %y)", $1.desc, req, request_options);
         if (!api) {
             if (!prov.tryGetRestClient()) {
                 prov.setRestClient(conn.get());
@@ -244,8 +245,12 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                     request_options.path_vars += vars;
                 }
             }
-            map fixOptimizedValue(\req, $1.value, remove req{$1.key}, $1.key), reqmap.pairIterator(),
+
+            hash<auto> req0;
+            map fixOptimizedValue(\req0, $1.value, $1.key, remove req{$1.key}), reqmap.pairIterator(),
                 req.hasKey($1.key);
+            map req0{$1.key} = $1.value, req.pairIterator(), !req0.hasKey($1.key);
+            req = req0;
 
             auto rv = prov.doRequest(req, request_options);
             return res_only_body ? rv.body : rv;
@@ -264,18 +269,18 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
     }
 
     #! Moves a value in an optimized position to the standard position of the request hash
-    private static fixOptimizedValue(reference<auto> req, list<string> p, auto val, string k, int offset = 0) {
-        int pos = p.size() - 1;
-        if (offset == pos) {
+    private static fixOptimizedValue(reference<auto> req, list<string> p, string k, auto val, int offset = 0) {
+        int len = p.size() - offset - 1;
+        if (offset == len) {
             req{p[offset]}{k} = val;
-        } else if (offset == (pos - 1)) {
+        } else if (offset == (len - 1)) {
             req{p[offset]}{p[offset + 1]}{k} = val;
-        } else if (offset == (pos - 2)) {
+        } else if (offset == (len - 2)) {
             req{p[offset]}{p[offset + 1]}{p[offset + 2]}{k} = val;
-        } else if (offset == (pos - 3)) {
+        } else if (offset == (len - 3)) {
             req{p[offset]}{p[offset + 1]}{p[offset + 2]}{p[offset + 3]}{k} = val;
         } else {
-            TypeScriptActionApiWithSchemaDataProvider::fixOptimizedValue(\req{p[offset]}, p, val, k, ++offset);
+            TypeScriptActionApiWithSchemaDataProvider::fixOptimizedValue(\req{p[offset]}, p, k, val, offset + 1);
         }
     }
 
