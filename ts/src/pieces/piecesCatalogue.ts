@@ -97,16 +97,17 @@ class _PiecesAppCatalogue {
       short_desc: action.description,
       desc: action.description,
       action: formattedActionName,
-      api_function: this.mapPieceActionToAppActionFunction(action.run),
+      api_function: this.mapPieceActionToAppActionFunction(action.run, action.props),
       options: fixActionOptions(options, appName, this.locale, appName),
       response_type: fixActionType(action.responseType, appName, this.locale, appName),
     };
   }
 
   private mapPieceActionToAppActionFunction(
-    runFunction: ActionRunner<any, any>
+    runFunction: ActionRunner<any, any>,
+    props: Record<string, InputProperty>
   ): TQoreAppActionFunction {
-    return (
+    return async (
       obj: Record<string, any>,
       _options: Record<string, any>,
       context: TQoreAppActionFunctionContext
@@ -116,6 +117,19 @@ class _PiecesAppCatalogue {
         auth: { access_token: context.conn_opts.token, ...context.opts },
         ...commonActionContext,
       } satisfies ActionContext;
+
+      for (const key in obj) {
+        if (key in props) {
+          const prop = props[key];
+          if (prop.defaultProcessors && prop.defaultProcessors.length > 0) {
+            await Promise.all(
+              prop.defaultProcessors.map(
+                async (processor) => (obj[key] = await processor(prop, obj[key]))
+              )
+            );
+          }
+        }
+      }
 
       return runFunction(actionContext);
     };

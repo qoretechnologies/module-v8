@@ -380,13 +380,10 @@ describe('slackPieceTest', () => {
     expect(channelIds).toBeDefined();
     expect(channelIds.length).toBeGreaterThan(0);
 
-    const fileData = Buffer.from('This is a test file content', 'utf-8');
+    // const fileData = Buffer.from('This is a test file content', 'utf-8');
 
     const props = {
-      file: {
-        data: fileData,
-        filename: 'example.txt',
-      },
+      file: 'data:text/plain;base64,SGVsbG8gV29ybGQh',
       channel: channelIds[0].value,
       title: 'Example Title',
       filename: 'example.txt',

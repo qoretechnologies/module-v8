@@ -100,7 +100,7 @@ export const dropboxUploadFile = createAction({
     }),
     file: Property.File({
       displayName: 'File',
-      description: 'The file URL or base64 to upload',
+      description: `The file URL or base64 to upload (e.g 'data:text/plain;base64,SGVsbG8gV29ybGQh')`,
       required: true,
     }),
     autorename: Property.Checkbox({

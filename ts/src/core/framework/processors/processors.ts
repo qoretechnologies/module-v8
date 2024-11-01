@@ -5,6 +5,7 @@ import isBase64 from 'is-base64';
 import axios from 'axios';
 import { ProcessorFn } from './types';
 import { ApFile } from '../property/input/file-property';
+import mime from 'mime-types';
 import { isNil, isString } from '../../shared/common';
 
 export class Processors {
@@ -72,60 +73,93 @@ export class Processors {
   };
 
   static file: ProcessorFn<unknown, Promise<ApFile | null>> = async (_property, urlOrBase64) => {
-    // convertUrlOrBase64ToFile
     if (isNil(urlOrBase64) || !isString(urlOrBase64)) {
       return null;
     }
-    // Get the file from the URL
     try {
-      // Check if the string is a Base64 string
-      if (isBase64(urlOrBase64, { allowMime: true })) {
-        const matches = urlOrBase64.match(/^data:([A-Za-z-+/]+);base64,(.+)$/);
-        let base64 = urlOrBase64;
-        let contentType: string | null = null;
-
-        if (matches && matches?.length === 3) {
-          contentType = matches[1];
-          base64 = matches[2];
-
-          // You need to provide how you decide filename and extension in case of base64 string
-          const filename = 'unknown';
-          const extension = contentType.split('/')[1];
-
-          return new ApFile(filename + '.' + extension, Buffer.from(base64, 'base64'), extension);
-        }
+      const file = handleBase64File(urlOrBase64);
+      if (!isNil(file)) {
+        return file;
       }
-      const response = await axios.head(urlOrBase64);
-      const contentType = response.headers['content-type'];
 
-      console.info(`Content type: ${contentType}`);
-      // Check if content type is file
-      if (
-        !contentType ||
-        !(
-          contentType.startsWith('application/') ||
-          contentType.startsWith('image') ||
-          contentType.startsWith('audio') ||
-          contentType.startsWith('video') ||
-          contentType === 'application/octet-stream'
-        )
-      ) {
-        return null;
-      }
-      const fileResponse = await axios.get(urlOrBase64, {
-        responseType: 'arraybuffer',
-      });
-
-      // Get filename and extension
-      const filename = urlOrBase64.substring(urlOrBase64.lastIndexOf('/') + 1);
-      const extension = filename.split('.').pop();
-
-      // Return the ApFile object
-      return new ApFile(filename, Buffer.from(fileResponse.data, 'binary'), extension);
+      return await handleUrlFile(urlOrBase64);
     } catch (e) {
       console.error(e);
 
       return null;
     }
   };
+}
+
+function handleBase64File(propertyValue: string): ApFile | null {
+  if (!isBase64(propertyValue, { allowMime: true })) {
+    return null;
+  }
+  // example match: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iA...
+  const matches = propertyValue.match(/^data:([A-Za-z-+/]+);base64,(.+)$/);
+  if (!matches || matches?.length !== 3) {
+    return null;
+  }
+  const base64 = matches[2];
+  const extension = mime.extension(matches[1]) || 'bin';
+
+  return new ApFile(`unknown.${extension}`, Buffer.from(base64, 'base64'), extension);
+}
+
+async function handleUrlFile(path: string): Promise<ApFile | null> {
+  const fileResponse = await axios.get(path, {
+    responseType: 'arraybuffer',
+  });
+
+  const filename =
+    getFileName(
+      path,
+      fileResponse.headers['content-disposition'],
+      fileResponse.headers['content-type']
+    ) ?? 'unknown';
+  const extension = filename.split('.').length > 1 ? filename.split('.').pop() : undefined;
+
+  return new ApFile(filename, Buffer.from(fileResponse.data, 'binary'), extension);
+}
+
+function getFileName(
+  path: string,
+  disposition: string | null,
+  mimeType: string | undefined
+): string | null {
+  const url = new URL(path);
+  if (isNil(disposition)) {
+    const fileNameFromUrl =
+      url.pathname.includes('/') && url.pathname.split('/').pop()?.includes('.')
+        ? url.pathname.split('/').pop()
+        : null;
+    if (!isNil(fileNameFromUrl)) {
+      return fileNameFromUrl;
+    }
+    const resolvedExtension = mimeType ? mime.extension(mimeType) : null;
+
+    return `unknown.${resolvedExtension ?? 'bin'}`;
+  }
+  const utf8FilenameRegex = /filename\*=UTF-8''([\w%\-.]+)(?:; ?|$)/i;
+  if (utf8FilenameRegex.test(disposition)) {
+    const result = utf8FilenameRegex.exec(disposition);
+    if (result && result.length > 1) {
+      return decodeURIComponent(result[1]);
+    }
+  }
+  // prevent ReDos attacks by anchoring the ascii regex to string start and
+  // slicing off everything before 'filename='
+  const filenameStart = disposition.toLowerCase().indexOf('filename=');
+  const asciiFilenameRegex = /^filename=(["']?)(.*?[^\\])\1(?:; ?|$)/i;
+
+  if (filenameStart >= 0) {
+    const partialDisposition = disposition.slice(filenameStart);
+    const matches = asciiFilenameRegex.exec(partialDisposition);
+    // eslint-disable-next-line eqeqeq
+    if (matches != null && matches[2]) {
+      return matches[2];
+    }
+  }
+
+  return null;
 }
