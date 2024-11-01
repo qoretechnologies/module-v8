@@ -1,11 +1,37 @@
 import { Locales } from 'i18n/i18n-types';
 import { StrictRecord } from './utils';
+import { OpenAPIV2 } from 'openapi-types';
 
 export interface IQoreAppShared {
   display_name?: string;
   short_desc?: string;
   desc?: string;
 }
+
+export type THttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE';
+
+export type TAllowedPath<T extends string> = T extends `${string}:${infer Method}`
+  ? Method extends THttpMethod
+    ? T
+    : never
+  : T;
+
+export type TAllowedPathString = `${string}` | `${string}:${THttpMethod}`;
+export interface IAllowedPathObject
+  extends Partial<Omit<IQoreBaseAppAction, 'action_code' | 'app'>> {
+  path: `${string}:${THttpMethod}`;
+  processor?: (
+    data: OpenAPIV2.OperationObject
+  ) => Partial<Omit<IQoreBaseAppAction, 'action_code' | 'app'>>;
+}
+
+export type ValidatedPathElement<T> = T extends string
+  ? TAllowedPath<T>
+  : T extends IAllowedPathObject
+    ? T['path'] extends TAllowedPath<string>
+      ? T
+      : never
+    : never;
 
 type TQoreRestContentEncoding = 'gzip' | 'bzip2' | 'deflate' | 'identity';
 
@@ -198,7 +224,7 @@ export interface IQoreApp<
 
   swagger?: string;
   swagger_options?: object;
-  swagger_paths?: string[];
+  swagger_paths?: TAllowedPathString[];
 }
 
 export interface IQoreAppWithActions<
