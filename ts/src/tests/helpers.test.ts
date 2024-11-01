@@ -14,7 +14,7 @@ import { IActionOptions } from '../global/models/actions';
 import eSignature from '../schemas/esignature.swagger.json';
 
 describe('Helpers tests', () => {
-  it.only('Properly parses a swagger schema and creates actions', () => {
+  it('Properly parses a swagger schema and creates actions', () => {
     const actions: IQorePartialAppActionWithSwaggerPath[] = buildActionsFromSwaggerSchema(
       eSignature as OpenAPIV2.Document,
       ['/v2.1/accounts', '/v2.1/accounts/{accountId}/connect/oauth']
@@ -25,6 +25,59 @@ describe('Helpers tests', () => {
     expect(actions[0].swagger_path).toBe('/v2.1/accounts/POST');
     expect(actions[0].display_name).toBe('Creates new accounts.');
     expect(actions[0].short_desc).toBe('Creates new accounts.');
+  });
+
+  it('Properly parses a swagger schema and creates actions with filtered methods', () => {
+    const actionsWithoutFilter: IQorePartialAppActionWithSwaggerPath[] =
+      buildActionsFromSwaggerSchema(eSignature as OpenAPIV2.Document, [
+        '/v2.1/accounts/{accountId}',
+      ]);
+
+    expect(actionsWithoutFilter).toHaveLength(2);
+    expect(actionsWithoutFilter[0].action).toBe('Accounts_GetAccount');
+    expect(actionsWithoutFilter[1].action).toBe('Accounts_DeleteAccount');
+
+    const actionsWithFilter: IQorePartialAppActionWithSwaggerPath[] = buildActionsFromSwaggerSchema(
+      eSignature as OpenAPIV2.Document,
+      ['/v2.1/accounts/{accountId}:DELETE']
+    );
+
+    expect(actionsWithFilter).toHaveLength(1);
+    expect(actionsWithFilter[0].action).toBe('Accounts_DeleteAccount');
+  });
+
+  it('Properly parses a swagger schema and creates actions with changed action data', () => {
+    const actionsWithFilter: IQorePartialAppActionWithSwaggerPath[] = buildActionsFromSwaggerSchema(
+      eSignature as OpenAPIV2.Document,
+      [{ path: '/v2.1/accounts/{accountId}:DELETE', display_name: 'Testing name' }]
+    );
+
+    expect(actionsWithFilter).toHaveLength(1);
+    expect(actionsWithFilter[0].action).toBe('Accounts_DeleteAccount');
+    expect(actionsWithFilter[0].display_name).toBe('Testing name');
+    expect(actionsWithFilter[0].short_desc).toBeDefined();
+  });
+
+  it('Properly parses a swagger schema and creates actions with changed data using processor', () => {
+    let newDisplayName;
+    const actionsWithFilter: IQorePartialAppActionWithSwaggerPath[] = buildActionsFromSwaggerSchema(
+      eSignature as OpenAPIV2.Document,
+      [
+        {
+          path: '/v2.1/accounts/{accountId}:DELETE',
+          processor: (data) => {
+            newDisplayName = data.summary;
+
+            return { display_name: data.summary };
+          },
+        },
+      ]
+    );
+
+    expect(actionsWithFilter).toHaveLength(1);
+    expect(actionsWithFilter[0].action).toBe('Accounts_DeleteAccount');
+    expect(actionsWithFilter[0].display_name).toBe(newDisplayName);
+    expect(actionsWithFilter[0].short_desc).toBeDefined();
   });
 
   it('Properly maps actions to a given app', () => {

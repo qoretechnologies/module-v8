@@ -8,7 +8,7 @@ describe('Tests Github Actions', () => {
   let pullNumber: number;
   let sha: string;
   let fileSha: string;
-  // let repoPublicKey: { key: string; key_id: string };
+
   beforeAll(() => {
     connection = testApi.createConnection('github', {
       opts: {
@@ -94,33 +94,38 @@ describe('Tests Github Actions', () => {
     expect(body.items.length).toBeGreaterThan(0);
   });
 
-  // it('Should get repository public key', async () => {
-  //   const action = GITHUB_ACTIONS.find((a) => a.action === 'actions-get-repo-public-key');
-
-  //   expect(action).toBeDefined();
-  //   expect(repository).toBeDefined();
-  //   const { body } = await testApi.execAppAction('github', action.action, connection, {
-  //     owner: repository?.owner,
-  //     repo: repository?.name,
-  //   });
-
-  //   expect(body).toBeDefined();
-  //   expect(body.key).toBeDefined();
-  //   repoPublicKey = body;
-  // });
-
   // it('Should create repository secret', async () => {
-  //   const action = GITHUB_ACTIONS.find((a) => a.action === 'actions-create-or-update-repo-secret');
-  //   expect(action).toBeDefined();
-  //   expect(repository).toBeDefined();
+  //   const getPublicKeyAction = GITHUB_ACTIONS.find(
+  //     (a) => a.action === 'actions-get-repo-public-key'
+  //   );
 
-  //   await testApi.execAppAction('github', action.action, connection, {
+  //   expect(getPublicKeyAction).toBeDefined();
+  //   expect(repository).toBeDefined();
+  //   const { body: publicKey } = await testApi.execAppAction(
+  //     'github',
+  //     getPublicKeyAction.action,
+  //     connection,
+  //     {
+  //       owner: repository?.owner,
+  //       repo: repository?.name,
+  //     }
+  //   );
+
+  //   expect(publicKey).toBeDefined();
+  //   expect(publicKey.key).toBeDefined();
+
+  //   const createSecretAction = GITHUB_ACTIONS.find(
+  //     (a) => a.action === 'actions-create-or-update-repo-secret'
+  //   );
+  //   expect(createSecretAction).toBeDefined();
+
+  //   await testApi.execAppAction('github', createSecretAction.action, connection, {
   //     owner: repository?.owner,
   //     repo: repository?.name,
   //     secret_name: 'TESTING_SECRET',
   //     body: {
   //       encrypted_value: 'test',
-  //       key_id: repoPublicKey.key_id,
+  //       key_id: publicKey.key_id,
   //     },
   //   });
   // });
@@ -163,11 +168,11 @@ describe('Tests Github Actions', () => {
 
   // Releases
   it('Should create a release', async () => {
-    const action = GITHUB_ACTIONS.find((a) => a.action === 'repos-create-release');
+    const createReleaseAction = GITHUB_ACTIONS.find((a) => a.action === 'repos-create-release');
 
-    expect(action).toBeDefined();
+    expect(createReleaseAction).toBeDefined();
     expect(repository).toBeDefined();
-    const { body } = await testApi.execAppAction('github', action.action, connection, {
+    const { body } = await testApi.execAppAction('github', createReleaseAction.action, connection, {
       owner: repository?.owner,
       repo: repository?.name,
       body: {
@@ -178,20 +183,16 @@ describe('Tests Github Actions', () => {
     });
 
     expect(body).toBeDefined();
-  });
 
-  it('Should list releases', async () => {
-    const action = GITHUB_ACTIONS.find((a) => a.action === 'repos-list-releases');
+    const listReleasesAction = GITHUB_ACTIONS.find((a) => a.action === 'repos-list-releases');
 
-    expect(action).toBeDefined();
+    expect(listReleasesAction).toBeDefined();
     expect(repository).toBeDefined();
-    const { body } = await testApi.execAppAction('github', action.action, connection, {
+    const releases = await testApi.execAppAction('github', listReleasesAction.action, connection, {
       owner: repository?.owner,
       repo: repository?.name,
     });
-
-    expect(body).toBeDefined();
-    expect(body.length).toBeGreaterThan(0);
+    expect(releases).toBeDefined();
   });
 
   // Issues

@@ -1,6 +1,7 @@
 import { Client } from '@notionhq/client';
 import { notionAuth } from '../..';
-import { createAction, Property } from '../../../../core/framework';
+import { createAction } from '../../../../core/framework';
+import { notionCommon } from '../common';
 
 export const getDatabase = createAction({
   auth: notionAuth,
@@ -8,11 +9,7 @@ export const getDatabase = createAction({
   displayName: 'Get Database',
   description: 'Retrieve a database object using its ID',
   props: {
-    databaseId: Property.ShortText({
-      displayName: 'Database ID',
-      description: 'The ID of the database you want to retrieve',
-      required: true,
-    }),
+    databaseId: notionCommon.database_id,
   },
   async run(context) {
     const { databaseId } = context.propsValue;

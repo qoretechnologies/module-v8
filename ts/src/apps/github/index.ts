@@ -4,34 +4,9 @@ import { IQoreAppWithActions } from '../../global/models/qore';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import github from '../../schemas/github.swagger.json';
+import { GITHUB_ALLOWED_PATHS, GITHUB_APP_NAME } from './constants';
+import { createSwaggerPaths } from '../../global/helpers/index';
 
-export const GITHUB_APP_NAME = 'Github';
-export const GITHUB_ALLOWED_PATHS = [
-  '/repos/{owner}/{repo}/pulls',
-  '/repos/{owner}/{repo}/pulls/{pull_number}',
-  '/repos/{owner}/{repo}/issues',
-  '/repos/{owner}/{repo}/issues/{issue_number}',
-  '/repos/{owner}/{repo}/commits',
-  '/repos/{owner}/{repo}/branches',
-  '/repos/{owner}/{repo}/releases',
-  '/repos/{owner}/{repo}/contributors',
-  '/orgs/{org}/members',
-  '/orgs/{org}/repos',
-  '/repos/{owner}/{repo}',
-  '/repos/{owner}/{repo}/contents/{path}',
-  '/issues',
-  '/user/repos',
-  '/search/repositories',
-  '/search/issues',
-  '/repos/{owner}/{repo}/collaborators',
-  '/repos/{owner}/{repo}/actions/workflows',
-  '/repos/{owner}/{repo}/issues/{issue_number}/assignees',
-  '/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers',
-  '/repos/{owner}/{repo}/git/refs',
-  '/repos/{owner}/{repo}/branches/{branch}',
-  '/repos/{owner}/{repo}/actions/secrets/{secret_name}',
-  '/repos/{owner}/{repo}/actions/secrets/public-key',
-];
 export const GITHUB_ACTIONS = buildActionsFromSwaggerSchema(github as any, GITHUB_ALLOWED_PATHS);
 
 /*
@@ -50,7 +25,7 @@ export default (locale: Locales) =>
     logo_file_name: 'github-logo.svg',
     logo_mime_type: 'image/svg+xml',
     swagger: 'schemas/github.swagger.json',
-    swagger_paths: GITHUB_ALLOWED_PATHS,
+    swagger_paths: createSwaggerPaths(GITHUB_ALLOWED_PATHS),
     rest: {
       url: 'https://api.github.com/',
       data: 'json',

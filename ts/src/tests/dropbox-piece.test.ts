@@ -120,12 +120,13 @@ describe('DropboxPieceTest', () => {
 
     if (actionFunction) {
       try {
-        const fileData = {
-          base64: 'VGhpcyBpcyBhIHRlc3Qgc3RyaW5n',
-        };
-
         const result = await actionFunction(
-          { path: '/uploaded-test-file.txt', autorename: true, mute: true, file: fileData },
+          {
+            path: '/testing',
+            autorename: true,
+            mute: true,
+            file: 'data:text/plain;base64,SGVsbG8gV29ybGQh',
+          },
           {},
           actionContext
         );
