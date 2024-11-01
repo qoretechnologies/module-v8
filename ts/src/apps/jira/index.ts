@@ -6,6 +6,7 @@ import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import jira from '../../schemas/jira.swagger.json';
 import { JIRA_ALLOWED_PATHS, JIRA_APP_NAME, JIRA_CONN_OPTIONS } from './constants';
+import { createSwaggerPaths } from '../../global/helpers/index';
 
 export const JIRA_ACTIONS = buildActionsFromSwaggerSchema(jira as any, JIRA_ALLOWED_PATHS);
 
@@ -40,7 +41,7 @@ export default (locale: Locales) =>
     logo_file_name: 'jira-logo.svg',
     logo_mime_type: 'image/svg+xml',
     swagger: 'schemas/jira.swagger.json',
-    swagger_paths: JIRA_ALLOWED_PATHS,
+    swagger_paths: createSwaggerPaths(JIRA_ALLOWED_PATHS),
     swagger_options: {
       parse_flags: -1,
     },

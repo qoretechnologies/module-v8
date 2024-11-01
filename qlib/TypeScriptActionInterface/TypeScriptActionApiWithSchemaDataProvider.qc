@@ -49,11 +49,14 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         #! Path vars
         *hash<string, bool> path_vars;
 
+        #! Info on flattenedhash<string, list<string>> request types: top-level key -> actual location
+        *hash<string, list<string>> reqmap;
+
+        #! Info on flattened response types: top-level key -> actual location
+        #hash<string, list<string>> resmap;
+
         #! If the response only has a body key
         bool res_only_body;
-
-        #! If the request only has a body key
-        bool req_only_body;
 
         #! Connection to Swagger path option map
         *hash<string, string> conn_opt_map;
@@ -81,13 +84,42 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         request_type = prov.getRequestType();
 
         if (request_type && (*hash<string, AbstractDataField> fields = request_type.getFields())) {
-            if (fields.size() == 1 && fields.body) {
-                *AbstractDataProviderType t = fields.body.getType();
-                if (!path_vars || !t || !t.getFields(){keys path_vars}) {
-                    req_only_body = True;
-                    request_type = t;
-                    fields = t.getFields();
+            HashDataType newreq;
+            code check = sub (hash<string, AbstractDataField> fields, string key) {
+                list<string> l = (key,);
+                while (fields.size() == 1
+                    && (*hash<string, AbstractDataField> f = fields.firstValue().getType().getFields())) {
+                    l += fields.firstKey();
+                    fields = f;
                 }
+                if (!newreq) {
+                    newreq = new HashDataType(request_type.isOrNothingType() ? AutoHashOrNothingType : AutoHashType,
+                        request_type.getName(), fields);
+                } else if (fields) {
+                    map newreq.addField($1), (fields = fields - (keys newreq.getFields())).iterator();
+                }
+                map reqmap{$1} = l, keys fields;
+            };
+            bool stop;
+            # process body args
+            if (fields.body) {
+                if (*hash<string, AbstractDataField> bf = fields.body.getType().getFields()) {
+                    # move args to the top level
+                    check(bf, "body");
+                } else {
+                    stop = True;
+                }
+            }
+            # move query args to
+            if (!stop && fields.query && (*hash<string, AbstractDataField> qf = fields.query.getType().getFields())) {
+                check(qf, "query");
+            }
+            if (!stop && fields.header && (*hash<string, AbstractDataField> hf =
+                fields.header.getType().getFields())) {
+                check(hf, "header");
+            }
+            if (newreq) {
+                request_type = newreq;
             }
         }
 
@@ -123,20 +155,68 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                 "name": $1,
                 "type": AbstractDataProviderTypeMap."softstring",
                 "desc": sprintf("URI path variable %y", $1),
+                "attr": {
+                    "preselected": True,
+                    "required": True,
+                },
             })), keys path_vars, !query_set{$1};
         }
     }
 
     #! "Normalizes" the request and response for testing if necessary
     auto makeNormalizedRequest(auto req, *hash<auto> request_options) {
-        if (req_only_body && req.hasKey("body")) {
-            req = req.body + (req - "body");
+        if (reqmap && req) {
+            hash<auto> req0;
+            map req0{$1.key} = $1.value, (
+                map findNormalizedValue(req, $1.value, $1.key), reqmap.pairIterator()
+            ), $1;
+            map remove req{$1[0]}, reqmap.iterator();
+            map req0{$1.key} = $1.value, req.pairIterator(), !exists req0{$1.key};
+            req = req0;
         }
         auto rv = doRequest(req, request_options);
         if (res_only_body) {
             rv.body = remove rv;
         }
         return rv;
+    }
+
+    #! Moves a value in a normalized position to the top of the request hash
+    private static *hash<auto> findNormalizedValue(hash<auto> req, list<string> p, string k, int offset = 0) {
+        if (req.typeCode() == NT_HASH && (auto nr = req{p[0]}) && (nr.typeCode() == NT_HASH)) {
+            int left = p.size() - offset;
+            if (left == 1) {
+                if (nr.hasKey(k)) {
+                    return {
+                        "key": k,
+                        "value": nr{k},
+                    };
+                }
+                return;
+            }
+
+            if (left == 2) {
+                if (nr{p[offset + 1]}.hasKey(k)) {
+                    return {
+                        "key": k,
+                        "value": nr{p[offset + 1]}{k},
+                    };
+                }
+                return;
+            }
+
+            if (left == 3) {
+                if (nr{p[offset + 1]}{p[offset + 2]}.hasKey(k)) {
+                    return {
+                        "key": k,
+                        "value": nr{p[offset + 1]}{p[offset + 2]}{k},
+                    };
+                }
+                return;
+            }
+
+            return TypeScriptActionApiWithSchemaDataProvider::findNormalizedValue(nr, p, k, offset + 1);
+        }
     }
 
     #! Makes a request and returns the response
@@ -146,6 +226,35 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         @return the response to the request
     */
     private auto doRequestImpl(auto req, *hash<auto> request_options) {
+        on_error rethrow $1.err, sprintf("%s (req: %y request_options: %y)", $1.desc, req, request_options);
+        if (!api) {
+            if (!prov.tryGetRestClient()) {
+                prov.setRestClient(conn.get());
+            }
+            if (exists (*string base_path = conn.orig_opts.swagger_base_path)) {
+                request_options.base_path = base_path;
+            }
+            if (path_vars) {
+                if (conn_opt_map) {
+                    *hash<auto> opts = conn.getRealOptions();
+                    map request_options.path_vars{$1.value} = opts{$1.key}, conn_opt_map.pairIterator(),
+                        path_vars{$1.value};
+                }
+                if (*hash<auto> vars = req{keys path_vars}) {
+                    req -= keys path_vars;
+                    request_options.path_vars += vars;
+                }
+            }
+
+            hash<auto> req0;
+            map fixOptimizedValue(\req0, $1.value, $1.key, remove req{$1.key}), reqmap.pairIterator(),
+                req.hasKey($1.key);
+            map req0{$1.key} = $1.value, req.pairIterator(), !req0.hasKey($1.key);
+            req = req0;
+
+            auto rv = prov.doRequest(req, request_options);
+            return res_only_body ? rv.body : rv;
+        }
         if (path_vars) {
             request_options.path_vars = remove req{keys path_vars};
             if (conn_opt_map) {
@@ -154,26 +263,25 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                     path_vars{$1.value};
             }
         }
-        if (!api) {
-            if (!prov.tryGetRestClient()) {
-                prov.setRestClient(conn.get());
-            }
-            if (exists (*string base_path = conn.orig_opts.swagger_base_path)) {
-                request_options.base_path = base_path;
-            }
-            if (path_vars && (*hash<auto> vars = req{keys path_vars})) {
-                req -= keys path_vars;
-                request_options.path_vars = vars;
-            }
-            if (req_only_body) {
-                req = {
-                    "body": req,
-                };
-            }
-            auto rv = prov.doRequest(req, request_options);
-            return res_only_body ? rv.body : rv;
+        map fixOptimizedValue(\req, $1.value, remove req{$1.key}, $1.key), reqmap.pairIterator(),
+            req.hasKey($1.key);
+       return getAsyncValue(api, req, request_options, getCallContextInfo());
+    }
+
+    #! Moves a value in an optimized position to the standard position of the request hash
+    private static fixOptimizedValue(reference<auto> req, list<string> p, string k, auto val, int offset = 0) {
+        int len = p.size() - offset - 1;
+        if (offset == len) {
+            req{p[offset]}{k} = val;
+        } else if (offset == (len - 1)) {
+            req{p[offset]}{p[offset + 1]}{k} = val;
+        } else if (offset == (len - 2)) {
+            req{p[offset]}{p[offset + 1]}{p[offset + 2]}{k} = val;
+        } else if (offset == (len - 3)) {
+            req{p[offset]}{p[offset + 1]}{p[offset + 2]}{p[offset + 3]}{k} = val;
+        } else {
+            TypeScriptActionApiWithSchemaDataProvider::fixOptimizedValue(\req{p[offset]}, p, k, val, offset + 1);
         }
-        return getAsyncValue(api, req, request_options, getCallContextInfo());
     }
 
     #! Returns data provider static info

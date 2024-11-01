@@ -1,5 +1,9 @@
 import { actionsCatalogue } from '../../ActionsCatalogue';
-import { buildActionsFromSwaggerSchema, mapActionsToApp } from '../../global/helpers';
+import {
+  buildActionsFromSwaggerSchema,
+  createSwaggerPaths,
+  mapActionsToApp,
+} from '../../global/helpers';
 import { IQoreAppWithActions } from '../../global/models/qore';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
@@ -49,7 +53,7 @@ export default (locale: Locales) =>
     swagger_options: {
       parse_flags: -1,
     },
-    swagger_paths: STRIPE_ALLOWED_PATHS,
+    swagger_paths: createSwaggerPaths(STRIPE_ALLOWED_PATHS),
     rest: {
       url: 'https://api.stripe.com',
       data: 'json',
