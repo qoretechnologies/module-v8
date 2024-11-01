@@ -192,7 +192,6 @@ describe('Tests Github Actions', () => {
       owner: repository?.owner,
       repo: repository?.name,
     });
-    console.log(releases);
     expect(releases).toBeDefined();
   });
 
