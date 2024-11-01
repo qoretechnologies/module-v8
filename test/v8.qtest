@@ -449,7 +449,7 @@ async function tp() {
     return doPromise().then((v) => {
         console.log('then:', v);
     }, (e) => {
-        console.log('reject:', e);
+        //console.log('reject:', e);
     }).catch((e) => {
         console.log('catch:', e);
     });

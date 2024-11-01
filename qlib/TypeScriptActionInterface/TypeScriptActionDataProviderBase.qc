@@ -1,6 +1,6 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 
-/*  TypeScriptActionEventDataProvider.qc Copyright (C) 2023 - 2024 Qore Technologies s.r.o.
+/*  TypeScriptActionDataProviderBase.qc Copyright (C) 2023 - 2024 Qore Technologies s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -23,35 +23,33 @@
 
 #! Main module namespace
 public namespace TypeScriptActionInterface {
-public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDataProviderBase {
-    public {
-        #! Provider info
-        const ProviderInfo = <DataProviderInfo>{
-            "type": "TypeScriptActionEventDataProvider",
-            "supports_observable": True,
-        };
-    }
-
+public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
     private {
-        hash<AsyncCallInfo> event;
-        hash<AsyncCallInfo> stop;
+        #! The name of the data provider
+        string name;
+
+        #! The connection for the action
+        AbstractConnection conn;
     }
 
     #! Creates the object from the arguments
-    constructor(string name, hash<string, hash<DataProviderMessageInfo>> events, hash<AsyncCallInfo> event,
-            hash<AsyncCallInfo> stop) : TypeScriptActionEventDataProviderBase(name, events) {
-        self.event = event;
-        self.stop = stop;
+    constructor(string name) {
+        self.name = name;
     }
 
-    #! Called when all observers have been added to the object
-    /** This method is meant to trigger event generation
-    */
-    observersReady() {
+    #! Sets the connection
+    setConnection(AbstractConnection conn) {
+        self.conn = conn;
     }
 
-    private hash<DataProviderInfo> getStaticInfoImpl() {
-        return ProviderInfo;
+    #! Returns the logger interface for logging
+    *LoggerInterface getLogger() {
+        return logger;
+    }
+
+    #! Returns the data provider name
+    string getName() {
+        return name;
     }
 }
 }

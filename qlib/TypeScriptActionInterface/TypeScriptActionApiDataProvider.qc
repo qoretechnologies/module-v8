@@ -40,7 +40,7 @@ public hashdecl RefDataContextInfo {
 }
 
 #! Generic API data provider for TypeScript actions
-class TypeScriptActionApiDataProvider inherits AbstractDataProvider {
+class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProviderBase {
     public {
         #! Provider info
         const ProviderInfo = <DataProviderInfo>{
@@ -55,7 +55,6 @@ class TypeScriptActionApiDataProvider inherits AbstractDataProvider {
     }
 
     private {
-        string name;
         hash<AsyncCallInfo> api;
         *AbstractDataProviderType request_type;
         *AbstractDataProviderType response_type;
@@ -66,15 +65,11 @@ class TypeScriptActionApiDataProvider inherits AbstractDataProvider {
 
         #! type cache for dependent options; opt val key -> type
         hash<string, AbstractDataProviderType> dtcache;
-
-        #! connection for the action
-        AbstractConnection conn;
     }
 
     constructor(string name, hash<AsyncCallInfo> api, *AbstractDataProviderType request_type,
             *AbstractDataProviderType response_type, *hash<string, hash<AsyncCallInfo>> omap,
-            *hash<string, hash<AsyncCallInfo>> dmap) {
-        self.name = name;
+            *hash<string, hash<AsyncCallInfo>> dmap) : TypeScriptActionDataProviderBase(name) {
         self.api = api;
         self.request_type = request_type;
         self.response_type = response_type;
@@ -82,26 +77,10 @@ class TypeScriptActionApiDataProvider inherits AbstractDataProvider {
         self.dmap = dmap;
     }
 
-    private constructor(string name, *hash<AsyncCallInfo> api) {
-        self.name = name;
+    private constructor(string name, *hash<AsyncCallInfo> api) : TypeScriptActionDataProviderBase(name) {
         if (api) {
             self.api = api;
         }
-    }
-
-    #! Sets the connection
-    setConnection(AbstractConnection conn) {
-        self.conn = conn;
-    }
-
-    #! Returns the logger interface for logging
-    *LoggerInterface getLogger() {
-        return logger;
-    }
-
-    #! Returns the data provider name
-    string getName() {
-        return name;
     }
 
     #! Returns information on supported reference data

@@ -458,6 +458,86 @@ public class TypeScriptActionInterface {
 
     static generateEventDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
             JavaScriptProgramPool pool, *SwaggerSchema schema) {
+        # get types
+        hash<string, hash<DataProviderMessageInfo>> events;
+        {
+            auto types = remove action.event_types;
+            if (types.typeCode() != NT_HASH) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"event_types\" "
+                    "attribute; got type %y; expecting \"hash\"", action.app, action.action,
+                    types.fullType());
+            }
+            events = map {
+                $1.key: <DataProviderMessageInfo>{
+                    "desc": $1.value.desc,
+                    "type": TypeScriptActionInterface::getType($1.value.type),
+                },
+            }, types.pairIterator();
+        }
+
+        timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
+
+        TypeScriptActionEventDataProviderBase child;
+
+        if ((auto method = remove action.webhook_method).val()) {
+            if (method.typeCode() != NT_STRING) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"webhook_method\" "
+                    "attribute; got type %y; expecting \"string\"", action.app, action.action,
+                    method.fullType());
+            }
+            auto webhook_register_code = remove action.webhook_register;
+            if (!webhook_register_code.callp()) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"webhook_register\" "
+                    "attribute; got type %y; expecting a callable value", action.app, action.action,
+                    webhook_register_code.fullType());
+            }
+
+            hash<AsyncCallInfo> webhook_register = <AsyncCallInfo>{
+                "label": sprintf("Webhook registration function for app %y action %y", app.name, action.action),
+                "pool": pool,
+                "async_call": webhook_register_code,
+                "to": seconds(io_timeout),
+            };
+
+            child = new TypeScriptActionWebhookEventDataProvider(action.action, events, method, webhook_register);
+        } else {
+            auto callback = remove action.event_function;
+            if (!callback.callp()) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"webhook_register\" "
+                    "attribute; got type %y; expecting a callable value", action.app, action.action,
+                    callback.fullType());
+            }
+
+            hash<AsyncCallInfo> event = <AsyncCallInfo>{
+                "label": sprintf("Webhook event function for app %y action %y", app.name, action.action),
+                "pool": pool,
+                "async_call": callback,
+                "to": seconds(io_timeout),
+            };
+
+            callback = remove action.stop_function;
+            if (!callback.callp()) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"webhook_register\" "
+                    "attribute; got type %y; expecting a callable value", action.app, action.action,
+                    callback.fullType());
+            }
+
+            hash<AsyncCallInfo> stop = <AsyncCallInfo>{
+                "label": sprintf("Webhook event stop function for app %y action %y", app.name, action.action),
+                "pool": pool,
+                "async_call": callback,
+                "to": seconds(io_timeout),
+            };
+
+            child = new TypeScriptActionEventDataProvider(action.action, events, event, stop);
+        }
+
+        TypeScriptActionAppDataProvider prov = TypeScriptActionInterface::getAppDataProvider(action.app);
+        prov.registerChild(action.action, child);
+
+        #printf("Registered %s %s (%y)\n", action.app, action.action);
+
+        action.path = action.action;
     }
 
     static generateApiDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
@@ -476,7 +556,7 @@ public class TypeScriptActionInterface {
                     "label": sprintf("API function for app %y action %y", app.name, action.action),
                     "pool": pool,
                     "async_call": api_function,
-                    "to": seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs),
+                    "to": seconds(io_timeout),
                 };
             }
         }

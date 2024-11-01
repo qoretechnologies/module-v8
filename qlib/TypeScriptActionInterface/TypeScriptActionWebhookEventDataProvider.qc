@@ -1,6 +1,6 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 
-/*  TypeScriptActionEventDataProvider.qc Copyright (C) 2023 - 2024 Qore Technologies s.r.o.
+/*  TypeScriptActionWebhookEventDataProvider.qc Copyright (C) 2023 - 2024 Qore Technologies s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -23,25 +23,27 @@
 
 #! Main module namespace
 public namespace TypeScriptActionInterface {
-public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDataProviderBase {
+#! The action webhook event data provider
+public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionEventDataProviderBase {
     public {
         #! Provider info
         const ProviderInfo = <DataProviderInfo>{
-            "type": "TypeScriptActionEventDataProvider",
+            "type": "TypeScriptActionWebhookEventDataProvider",
             "supports_observable": True,
         };
     }
 
     private {
-        hash<AsyncCallInfo> event;
-        hash<AsyncCallInfo> stop;
+        string method;
+        hash<AsyncCallInfo> webhook_register;
     }
 
     #! Creates the object from the arguments
-    constructor(string name, hash<string, hash<DataProviderMessageInfo>> events, hash<AsyncCallInfo> event,
-            hash<AsyncCallInfo> stop) : TypeScriptActionEventDataProviderBase(name, events) {
-        self.event = event;
-        self.stop = stop;
+    constructor(string name, hash<string, hash<DataProviderMessageInfo>> events, string method,
+            hash<AsyncCallInfo> webhook_register) :
+            TypeScriptActionEventDataProviderBase(name, events) {
+        self.method = method;
+        self.webhook_register = webhook_register;
     }
 
     #! Called when all observers have been added to the object

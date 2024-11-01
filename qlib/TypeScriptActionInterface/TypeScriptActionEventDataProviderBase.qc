@@ -1,6 +1,6 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 
-/*  TypeScriptActionEventDataProvider.qc Copyright (C) 2023 - 2024 Qore Technologies s.r.o.
+/*  TypeScriptActionEventDataProviderBase.qc Copyright (C) 2023 - 2024 Qore Technologies s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -23,35 +23,25 @@
 
 #! Main module namespace
 public namespace TypeScriptActionInterface {
-public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDataProviderBase {
-    public {
-        #! Provider info
-        const ProviderInfo = <DataProviderInfo>{
-            "type": "TypeScriptActionEventDataProvider",
-            "supports_observable": True,
-        };
-    }
-
+public class TypeScriptActionEventDataProviderBase inherits TypeScriptActionDataProviderBase,
+        DataProvider::DelayedObservable {
     private {
-        hash<AsyncCallInfo> event;
-        hash<AsyncCallInfo> stop;
+        hash<string, hash<DataProviderMessageInfo>> events;
     }
 
     #! Creates the object from the arguments
-    constructor(string name, hash<string, hash<DataProviderMessageInfo>> events, hash<AsyncCallInfo> event,
-            hash<AsyncCallInfo> stop) : TypeScriptActionEventDataProviderBase(name, events) {
-        self.event = event;
-        self.stop = stop;
+    constructor(string name, hash<string, hash<DataProviderMessageInfo>> events) :
+            TypeScriptActionDataProviderBase(name) {
+        self.events = events;
     }
 
-    #! Called when all observers have been added to the object
-    /** This method is meant to trigger event generation
+    #! Returns a hash of all supported event types
+    /** @return a hash of all supported event types
+
+        @note only called if the provider supports the observer pattern / event API
     */
-    observersReady() {
-    }
-
-    private hash<DataProviderInfo> getStaticInfoImpl() {
-        return ProviderInfo;
+    private hash<string, hash<DataProviderMessageInfo>> getEventTypesImpl() {
+        return events;
     }
 }
 }
