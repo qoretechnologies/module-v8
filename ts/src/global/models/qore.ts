@@ -10,28 +10,13 @@ export interface IQoreAppShared {
 
 export type THttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE';
 
-export type TAllowedPath<T extends string> = T extends `${string}:${infer Method}`
-  ? Method extends THttpMethod
-    ? T
-    : never
-  : T;
+export type TAllowedPaths = Record<string, Partial<Record<THttpMethod, IAllowedPathData>>>;
 
-export type TAllowedPathString = `${string}` | `${string}:${THttpMethod}`;
-export interface IAllowedPathObject
-  extends Partial<Omit<IQoreBaseAppAction, 'action_code' | 'app'>> {
-  path: `${string}:${THttpMethod}`;
+export interface IAllowedPathData extends Partial<Omit<IQoreBaseAppAction, 'action_code' | 'app'>> {
   processor?: (
     data: OpenAPIV2.OperationObject
   ) => Partial<Omit<IQoreBaseAppAction, 'action_code' | 'app'>>;
 }
-
-export type ValidatedPathElement<T> = T extends string
-  ? TAllowedPath<T>
-  : T extends IAllowedPathObject
-    ? T['path'] extends TAllowedPath<string>
-      ? T
-      : never
-    : never;
 
 type TQoreRestContentEncoding = 'gzip' | 'bzip2' | 'deflate' | 'identity';
 
@@ -224,7 +209,7 @@ export interface IQoreApp<
 
   swagger?: string;
   swagger_options?: object;
-  swagger_paths?: TAllowedPathString[];
+  swagger_paths?: string[];
 }
 
 export interface IQoreAppWithActions<

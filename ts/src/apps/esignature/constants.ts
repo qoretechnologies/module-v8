@@ -1,7 +1,8 @@
 import { OpenAPIV2 } from 'openapi-types';
-import { buildActionsFromSwaggerSchema, createAllowedPaths } from '../../global/helpers';
-import { IQoreConnectionOptions } from '../zendesk';
+import { buildActionsFromSwaggerSchema } from '../../global/helpers';
+import { TAllowedPaths } from '../../global/models/qore';
 import eSignature from '../../schemas/esignature.swagger.json';
+import { IQoreConnectionOptions } from '../zendesk';
 
 export const ESIGNATURE_APP_NAME = 'DocusignESignature';
 
@@ -20,65 +21,42 @@ export const ESIGNATURE_CONN_OPTIONS = {
   },
 } satisfies IQoreConnectionOptions;
 
-export const ESIGNATURE_PATHS = createAllowedPaths([
-  { path: '/v2.1/accounts/{accountId}/envelopes:GET', display_name: 'Get Envelopes' },
-  { path: '/v2.1/accounts/{accountId}/envelopes:POST', display_name: 'Create Envelopes' },
-  { path: '/v2.1/accounts/{accountId}/envelopes/{envelopeId}:GET', display_name: 'Get Envelope' },
-  {
-    path: '/v2.1/accounts/{accountId}/envelopes/{envelopeId}:PUT',
-    display_name: 'Update Envelope',
+export const ESIGNATURE_PATHS: TAllowedPaths = {
+  '/v2.1/accounts/{accountId}/envelopes': {
+    GET: {},
+    POST: {},
   },
-  {
-    path: '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients:DELETE',
-    display_name: 'Delete Recipients',
+  '/v2.1/accounts/{accountId}/envelopes/{envelopeId}': {
+    GET: {},
+    PUT: {},
   },
-  {
-    path: '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients:POST',
-    display_name: 'Add Recipients',
+  '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients': {
+    DELETE: {},
+    POST: {},
+    PUT: {},
+    GET: {},
   },
-  {
-    path: '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients:PUT',
-    display_name: 'Update Recipients',
+  '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents': {
+    DELETE: {},
+    PUT: {},
+    GET: {},
   },
-  {
-    path: '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients:GET',
-    display_name: 'Get Recipients',
+  '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}': {
+    PUT: {},
+    GET: {},
   },
-  {
-    path: '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents:DELETE',
-    display_name: 'Delete Documents',
+  '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/views/recipient': {
+    POST: { display_name: 'Create Recipient View' },
   },
-  {
-    path: '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents:PUT',
-    display_name: 'Update Documents',
+  '/v2.1/accounts/{accountId}/brands': {
+    DELETE: {},
+    POST: {},
+    GET: {},
   },
-  {
-    path: '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents:GET',
-    display_name: 'Get Documents',
-  },
-  {
-    path: '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}:PUT',
-    display_name: 'Update Document',
-  },
-  {
-    path: '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}:GET',
-    display_name: 'Get Document',
-  },
-  {
-    path: '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/views/recipient:POST',
-    display_name: 'Create Recipient View',
-  },
-  { path: '/v2.1/accounts/{accountId}/brands:DELETE', display_name: 'Delete Brand' },
-  { path: '/v2.1/accounts/{accountId}/brands:POST', display_name: 'Create Brand' },
-  { path: '/v2.1/accounts/{accountId}/brands:GET', display_name: 'Get Brands' },
-  /**
-   * Template actions temporary removed
-   */
-  // '/v2.1/accounts/{accountId}/templates',
-  // '/v2.1/accounts/{accountId}/templates/{templateId}',
-]);
+};
 
-export const ESIGNATURE_ACTIONS = buildActionsFromSwaggerSchema(
-  eSignature as OpenAPIV2.Document,
-  ESIGNATURE_PATHS
-);
+export const ESIGNATURE_ACTIONS = buildActionsFromSwaggerSchema({
+  schema: eSignature as OpenAPIV2.Document,
+  allowedPaths: ESIGNATURE_PATHS,
+  app: ESIGNATURE_APP_NAME,
+});

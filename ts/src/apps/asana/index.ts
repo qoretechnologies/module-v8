@@ -6,7 +6,11 @@ import { Locales } from '../../i18n/i18n-types';
 import asana from '../../schemas/asana.swagger.json';
 import { ASANA_ALLOWED_PATHS, ASANA_APP_NAME } from './constants';
 
-export const ASANA_ACTIONS = buildActionsFromSwaggerSchema(asana as any, ASANA_ALLOWED_PATHS);
+export const ASANA_ACTIONS = buildActionsFromSwaggerSchema({
+  schema: asana as any,
+  allowedPaths: ASANA_ALLOWED_PATHS,
+  app: ASANA_APP_NAME,
+});
 
 /*
  * Returns the app object with all the actions ready to use, using translations

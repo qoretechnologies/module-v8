@@ -7,7 +7,11 @@ import github from '../../schemas/github.swagger.json';
 import { GITHUB_ALLOWED_PATHS, GITHUB_APP_NAME } from './constants';
 import { createSwaggerPaths } from '../../global/helpers/index';
 
-export const GITHUB_ACTIONS = buildActionsFromSwaggerSchema(github as any, GITHUB_ALLOWED_PATHS);
+export const GITHUB_ACTIONS = buildActionsFromSwaggerSchema({
+  schema: github as any,
+  allowedPaths: GITHUB_ALLOWED_PATHS,
+  app: GITHUB_APP_NAME,
+});
 
 /*
  * Returns the app object with all the actions ready to use, using translations

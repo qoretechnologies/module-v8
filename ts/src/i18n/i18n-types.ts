@@ -95,6 +95,378 @@ type RootTranslation = {
 			 * C​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​S​t​r​i​p​e​ ​A​P​I
 			 */
 			longDesc: string
+			actions: {
+				GetAccount: {
+					/**
+					 * G​e​t​ ​a​c​c​o​u​n​t​ ​d​e​t​a​i​l​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​t​h​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+				}
+				PostAccountLinks: {
+					/**
+					 * C​r​e​a​t​e​ ​a​c​c​o​u​n​t​ ​l​i​n​k​s
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​u​r​l​ ​t​h​a​t​ ​t​h​e​ ​p​l​a​t​f​o​r​m​ ​c​a​n​ ​r​e​d​i​r​e​c​t​ ​t​h​e​i​r​ ​u​s​e​r​ ​t​o​ ​t​a​k​e​ ​t​h​e​m​ ​t​h​r​o​u​g​h​ ​t​h​e​ ​C​o​n​n​e​c​t​ ​O​n​b​o​a​r​d​i​n​g​ ​f​l​o​w​.
+					 */
+					shortDesc: string
+				}
+				DeleteAccountsAccount: {
+					/**
+					 * D​e​l​e​t​e​ ​a​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+				}
+				GetAccountsAccount: {
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​t​h​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​n​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+				}
+				PostAccountsAccount: {
+					/**
+					 * U​p​d​a​t​e​ ​a​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​a​c​c​o​u​n​t​ ​b​y​ ​s​e​t​t​i​n​g​ ​t​h​e​ ​v​a​l​u​e​s​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r​s​ ​p​a​s​s​e​d​.
+					 */
+					shortDesc: string
+				}
+				GetAccountsAccountExternalAccounts: {
+					/**
+					 * L​i​s​t​ ​e​x​t​e​r​n​a​l​ ​a​c​c​o​u​n​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​e​x​t​e​r​n​a​l​ ​a​c​c​o​u​n​t​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​S​t​r​i​p​e​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+				}
+				PostAccountsAccountExternalAccounts: {
+					/**
+					 * C​r​e​a​t​e​ ​e​x​t​e​r​n​a​l​ ​a​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​n​ ​e​x​t​e​r​n​a​l​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​a​ ​c​o​n​n​e​c​t​e​d​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+				}
+				PostAccountsAccountLoginLinks: {
+					/**
+					 * C​r​e​a​t​e​ ​l​o​g​i​n​ ​l​i​n​k​s
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​s​h​o​r​t​-​l​i​v​e​d​ ​l​i​n​k​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​u​s​e​d​ ​t​o​ ​l​o​g​ ​i​n​ ​t​o​ ​t​h​e​ ​S​t​r​i​p​e​ ​D​a​s​h​b​o​a​r​d​.
+					 */
+					shortDesc: string
+				}
+				GetAccountsAccountPeople: {
+					/**
+					 * L​i​s​t​ ​p​e​o​p​l​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​p​e​o​p​l​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+				}
+				PostAccountsAccountPeople: {
+					/**
+					 * C​r​e​a​t​e​ ​p​e​r​s​o​n
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​p​e​r​s​o​n​.
+					 */
+					shortDesc: string
+				}
+				GetBalance: {
+					/**
+					 * R​e​t​r​i​e​v​e​ ​b​a​l​a​n​c​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​a​c​c​o​u​n​t​ ​b​a​l​a​n​c​e​.
+					 */
+					shortDesc: string
+				}
+				GetBalanceHistory: {
+					/**
+					 * L​i​s​t​ ​b​a​l​a​n​c​e​ ​h​i​s​t​o​r​y
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​t​h​a​t​ ​h​a​v​e​ ​c​o​n​t​r​i​b​u​t​e​d​ ​t​o​ ​t​h​e​ ​S​t​r​i​p​e​ ​a​c​c​o​u​n​t​ ​b​a​l​a​n​c​e​.
+					 */
+					shortDesc: string
+				}
+				GetBalanceHistoryId: {
+					/**
+					 * R​e​t​r​i​e​v​e​ ​b​a​l​a​n​c​e​ ​h​i​s​t​o​r​y
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​t​h​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​b​a​l​a​n​c​e​ ​h​i​s​t​o​r​y​ ​i​t​e​m​.
+					 */
+					shortDesc: string
+				}
+				GetCharges: {
+					/**
+					 * L​i​s​t​ ​c​h​a​r​g​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​c​h​a​r​g​e​s​ ​y​o​u​ ​h​a​v​e​ ​p​r​e​v​i​o​u​s​l​y​ ​c​r​e​a​t​e​d​.
+					 */
+					shortDesc: string
+				}
+				PostCharges: {
+					/**
+					 * C​r​e​a​t​e​ ​c​h​a​r​g​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​c​h​a​r​g​e​ ​o​b​j​e​c​t​.
+					 */
+					shortDesc: string
+				}
+				GetChargesCharge: {
+					/**
+					 * R​e​t​r​i​e​v​e​ ​c​h​a​r​g​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​t​h​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​c​h​a​r​g​e​.
+					 */
+					shortDesc: string
+				}
+				PostChargesCharge: {
+					/**
+					 * U​p​d​a​t​e​ ​c​h​a​r​g​e
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​h​a​r​g​e​ ​b​y​ ​s​e​t​t​i​n​g​ ​t​h​e​ ​v​a​l​u​e​s​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r​s​ ​p​a​s​s​e​d​.
+					 */
+					shortDesc: string
+				}
+				GetCustomers: {
+					/**
+					 * L​i​s​t​ ​c​u​s​t​o​m​e​r​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​y​o​u​r​ ​c​u​s​t​o​m​e​r​s​.
+					 */
+					shortDesc: string
+				}
+				PostCustomers: {
+					/**
+					 * C​r​e​a​t​e​ ​c​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​e​r​ ​o​b​j​e​c​t​.
+					 */
+					shortDesc: string
+				}
+				DeleteCustomersCustomer: {
+					/**
+					 * D​e​l​e​t​e​ ​c​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​u​s​t​o​m​e​r​.
+					 */
+					shortDesc: string
+				}
+				GetCustomersCustomer: {
+					/**
+					 * R​e​t​r​i​e​v​e​ ​c​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​t​h​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​u​s​t​o​m​e​r​.
+					 */
+					shortDesc: string
+				}
+				PostCustomersCustomer: {
+					/**
+					 * U​p​d​a​t​e​ ​c​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​u​s​t​o​m​e​r​ ​b​y​ ​s​e​t​t​i​n​g​ ​t​h​e​ ​v​a​l​u​e​s​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r​s​ ​p​a​s​s​e​d​.
+					 */
+					shortDesc: string
+				}
+				GetCustomersCustomerBalanceTransactions: {
+					/**
+					 * L​i​s​t​ ​b​a​l​a​n​c​e​ ​t​r​a​n​s​a​c​t​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​t​h​a​t​ ​h​a​v​e​ ​c​o​n​t​r​i​b​u​t​e​d​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​s​ ​a​c​c​o​u​n​t​ ​b​a​l​a​n​c​e​.
+					 */
+					shortDesc: string
+				}
+				PostCustomersCustomerBalanceTransactions: {
+					/**
+					 * C​r​e​a​t​e​ ​b​a​l​a​n​c​e​ ​t​r​a​n​s​a​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​b​a​l​a​n​c​e​ ​t​r​a​n​s​a​c​t​i​o​n​.
+					 */
+					shortDesc: string
+				}
+				GetCustomersCustomerSources: {
+					/**
+					 * L​i​s​t​ ​s​o​u​r​c​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​s​o​u​r​c​e​s​ ​f​o​r​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.
+					 */
+					shortDesc: string
+				}
+				PostCustomersCustomerSources: {
+					/**
+					 * C​r​e​a​t​e​ ​s​o​u​r​c​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​s​o​u​r​c​e​ ​o​b​j​e​c​t​.
+					 */
+					shortDesc: string
+				}
+				GetCustomersCustomerSubscriptions: {
+					/**
+					 * L​i​s​t​ ​s​u​b​s​c​r​i​p​t​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​s​u​b​s​c​r​i​p​t​i​o​n​s​ ​f​o​r​ ​a​ ​c​u​s​t​o​m​e​r​.
+					 */
+					shortDesc: string
+				}
+				PostCustomersCustomerSubscriptions: {
+					/**
+					 * C​r​e​a​t​e​ ​s​u​b​s​c​r​i​p​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​o​n​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​u​s​t​o​m​e​r​.
+					 */
+					shortDesc: string
+				}
+				GetInvoices: {
+					/**
+					 * L​i​s​t​ ​i​n​v​o​i​c​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​y​o​u​r​ ​i​n​v​o​i​c​e​s​.
+					 */
+					shortDesc: string
+				}
+				PostInvoices: {
+					/**
+					 * C​r​e​a​t​e​ ​i​n​v​o​i​c​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​d​r​a​f​t​ ​i​n​v​o​i​c​e​ ​f​o​r​ ​a​ ​g​i​v​e​n​ ​c​u​s​t​o​m​e​r​.
+					 */
+					shortDesc: string
+				}
+				DeleteInvoicesInvoice: {
+					/**
+					 * D​e​l​e​t​e​ ​i​n​v​o​i​c​e
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​i​n​v​o​i​c​e​.
+					 */
+					shortDesc: string
+				}
+				GetInvoicesInvoice: {
+					/**
+					 * R​e​t​r​i​e​v​e​ ​i​n​v​o​i​c​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​t​h​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​i​n​v​o​i​c​e​.
+					 */
+					shortDesc: string
+				}
+				PostInvoicesInvoice: {
+					/**
+					 * U​p​d​a​t​e​ ​i​n​v​o​i​c​e
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​i​n​v​o​i​c​e​ ​b​y​ ​s​e​t​t​i​n​g​ ​t​h​e​ ​v​a​l​u​e​s​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r​s​ ​p​a​s​s​e​d​.
+					 */
+					shortDesc: string
+				}
+				GetPaymentIntents: {
+					/**
+					 * L​i​s​t​ ​p​a​y​m​e​n​t​ ​i​n​t​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​p​a​y​m​e​n​t​ ​i​n​t​e​n​t​s​.
+					 */
+					shortDesc: string
+				}
+				PostPaymentIntents: {
+					/**
+					 * C​r​e​a​t​e​ ​p​a​y​m​e​n​t​ ​i​n​t​e​n​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​p​a​y​m​e​n​t​ ​i​n​t​e​n​t​.
+					 */
+					shortDesc: string
+				}
+				GetRefunds: {
+					/**
+					 * L​i​s​t​ ​r​e​f​u​n​d​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​r​e​f​u​n​d​s​ ​y​o​u​’​v​e​ ​p​r​e​v​i​o​u​s​l​y​ ​c​r​e​a​t​e​d​.
+					 */
+					shortDesc: string
+				}
+				PostRefunds: {
+					/**
+					 * C​r​e​a​t​e​ ​r​e​f​u​n​d
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​r​e​f​u​n​d​ ​o​b​j​e​c​t​.
+					 */
+					shortDesc: string
+				}
+			}
 		}
 		Github: {
 			/**
@@ -137,6 +509,110 @@ type RootTranslation = {
 			 * C​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​E​s​i​g​n​a​t​u​r​e​ ​A​P​I
 			 */
 			longDesc: string
+			actions: {
+				Brands_GetBrands: {
+					/**
+					 * G​e​t​ ​B​r​a​n​d​s
+					 */
+					displayName: string
+				}
+				Brands_PostBrands: {
+					/**
+					 * C​r​e​a​t​e​ ​B​r​a​n​d
+					 */
+					displayName: string
+				}
+				Brands_DeleteBrands: {
+					/**
+					 * D​e​l​e​t​e​ ​B​r​a​n​d
+					 */
+					displayName: string
+				}
+				Envelopes_GetEnvelopes: {
+					/**
+					 * G​e​t​ ​E​n​v​e​l​o​p​e​s
+					 */
+					displayName: string
+				}
+				Envelopes_PostEnvelopes: {
+					/**
+					 * C​r​e​a​t​e​ ​E​n​v​e​l​o​p​e​s
+					 */
+					displayName: string
+				}
+				Envelopes_GetEnvelope: {
+					/**
+					 * G​e​t​ ​E​n​v​e​l​o​p​e
+					 */
+					displayName: string
+				}
+				Envelopes_PutEnvelope: {
+					/**
+					 * U​p​d​a​t​e​ ​E​n​v​e​l​o​p​e
+					 */
+					displayName: string
+				}
+				Documents_GetDocuments: {
+					/**
+					 * G​e​t​ ​D​o​c​u​m​e​n​t​s
+					 */
+					displayName: string
+				}
+				Documents_PutDocuments: {
+					/**
+					 * U​p​d​a​t​e​ ​D​o​c​u​m​e​n​t​s
+					 */
+					displayName: string
+				}
+				Documents_DeleteDocuments: {
+					/**
+					 * D​e​l​e​t​e​ ​D​o​c​u​m​e​n​t​s
+					 */
+					displayName: string
+				}
+				Documents_GetDocument: {
+					/**
+					 * G​e​t​ ​D​o​c​u​m​e​n​t
+					 */
+					displayName: string
+				}
+				Documents_PutDocument: {
+					/**
+					 * U​p​d​a​t​e​ ​D​o​c​u​m​e​n​t
+					 */
+					displayName: string
+				}
+				Recipients_GetRecipients: {
+					/**
+					 * G​e​t​ ​R​e​c​i​p​i​e​n​t​s
+					 */
+					displayName: string
+				}
+				Recipients_PutRecipients: {
+					/**
+					 * U​p​d​a​t​e​ ​R​e​c​i​p​i​e​n​t​s
+					 */
+					displayName: string
+				}
+				Recipients_PostRecipients: {
+					/**
+					 * A​d​d​ ​R​e​c​i​p​i​e​n​t​s
+					 */
+					displayName: string
+				}
+				Recipients_DeleteRecipients: {
+					/**
+					 * D​e​l​e​t​e​ ​R​e​c​i​p​i​e​n​t​s
+					 */
+					displayName: string
+				}
+				Views_PostEnvelopeRecipientView: {
+					/**
+					 * C​r​e​a​t​e​ ​R​e​c​i​p​i​e​n​t​ ​V​i​e​w
+					 */
+					displayName: string
+				}
+			}
 		}
 		Zendesk: {
 			/**
@@ -2086,6 +2562,378 @@ export type TranslationFunctions = {
 			 * Collection of actions to interact with Stripe API
 			 */
 			longDesc: () => LocalizedString
+			actions: {
+				GetAccount: {
+					/**
+					 * Get account details
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves the details of the account.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostAccountLinks: {
+					/**
+					 * Create account links
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a url that the platform can redirect their user to take them through the Connect Onboarding flow.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				DeleteAccountsAccount: {
+					/**
+					 * Delete account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Deletes the specified account.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetAccountsAccount: {
+					/**
+					 * Retrieve account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves the details of an account.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostAccountsAccount: {
+					/**
+					 * Update account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates the specified account by setting the values of the parameters passed.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetAccountsAccountExternalAccounts: {
+					/**
+					 * List external accounts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns a list of external accounts associated with the Stripe account.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostAccountsAccountExternalAccounts: {
+					/**
+					 * Create external account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create an external account for a connected account.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostAccountsAccountLoginLinks: {
+					/**
+					 * Create login links
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a short-lived link that can be used to log in to the Stripe Dashboard.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetAccountsAccountPeople: {
+					/**
+					 * List people
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns a list of people associated with the account.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostAccountsAccountPeople: {
+					/**
+					 * Create person
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new person.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetBalance: {
+					/**
+					 * Retrieve balance
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves the current account balance.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetBalanceHistory: {
+					/**
+					 * List balance history
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns a list of transactions that have contributed to the Stripe account balance.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetBalanceHistoryId: {
+					/**
+					 * Retrieve balance history
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves the details of a balance history item.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetCharges: {
+					/**
+					 * List charges
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns a list of charges you have previously created.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostCharges: {
+					/**
+					 * Create charge
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new charge object.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetChargesCharge: {
+					/**
+					 * Retrieve charge
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves the details of a charge.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostChargesCharge: {
+					/**
+					 * Update charge
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates the specified charge by setting the values of the parameters passed.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetCustomers: {
+					/**
+					 * List customers
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns a list of your customers.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostCustomers: {
+					/**
+					 * Create customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new customer object.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				DeleteCustomersCustomer: {
+					/**
+					 * Delete customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Deletes the specified customer.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetCustomersCustomer: {
+					/**
+					 * Retrieve customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves the details of an existing customer.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostCustomersCustomer: {
+					/**
+					 * Update customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates the specified customer by setting the values of the parameters passed.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetCustomersCustomerBalanceTransactions: {
+					/**
+					 * List balance transactions
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns a list of transactions that have contributed to the customers account balance.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostCustomersCustomerBalanceTransactions: {
+					/**
+					 * Create balance transaction
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new balance transaction.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetCustomersCustomerSources: {
+					/**
+					 * List sources
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns a list of sources for the customer.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostCustomersCustomerSources: {
+					/**
+					 * Create source
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new source object.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetCustomersCustomerSubscriptions: {
+					/**
+					 * List subscriptions
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns a list of subscriptions for a customer.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostCustomersCustomerSubscriptions: {
+					/**
+					 * Create subscription
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new subscription on an existing customer.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetInvoices: {
+					/**
+					 * List invoices
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns a list of your invoices.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostInvoices: {
+					/**
+					 * Create invoice
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a draft invoice for a given customer.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				DeleteInvoicesInvoice: {
+					/**
+					 * Delete invoice
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Deletes the specified invoice.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetInvoicesInvoice: {
+					/**
+					 * Retrieve invoice
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves the details of an existing invoice.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostInvoicesInvoice: {
+					/**
+					 * Update invoice
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates the specified invoice by setting the values of the parameters passed.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetPaymentIntents: {
+					/**
+					 * List payment intents
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns a list of payment intents.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostPaymentIntents: {
+					/**
+					 * Create payment intent
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new payment intent.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetRefunds: {
+					/**
+					 * List refunds
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns a list of all refunds you’ve previously created.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostRefunds: {
+					/**
+					 * Create refund
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new refund object.
+					 */
+					shortDesc: () => LocalizedString
+				}
+			}
 		}
 		Github: {
 			/**
@@ -2128,6 +2976,110 @@ export type TranslationFunctions = {
 			 * Collection of actions to interact with Esignature API
 			 */
 			longDesc: () => LocalizedString
+			actions: {
+				Brands_GetBrands: {
+					/**
+					 * Get Brands
+					 */
+					displayName: () => LocalizedString
+				}
+				Brands_PostBrands: {
+					/**
+					 * Create Brand
+					 */
+					displayName: () => LocalizedString
+				}
+				Brands_DeleteBrands: {
+					/**
+					 * Delete Brand
+					 */
+					displayName: () => LocalizedString
+				}
+				Envelopes_GetEnvelopes: {
+					/**
+					 * Get Envelopes
+					 */
+					displayName: () => LocalizedString
+				}
+				Envelopes_PostEnvelopes: {
+					/**
+					 * Create Envelopes
+					 */
+					displayName: () => LocalizedString
+				}
+				Envelopes_GetEnvelope: {
+					/**
+					 * Get Envelope
+					 */
+					displayName: () => LocalizedString
+				}
+				Envelopes_PutEnvelope: {
+					/**
+					 * Update Envelope
+					 */
+					displayName: () => LocalizedString
+				}
+				Documents_GetDocuments: {
+					/**
+					 * Get Documents
+					 */
+					displayName: () => LocalizedString
+				}
+				Documents_PutDocuments: {
+					/**
+					 * Update Documents
+					 */
+					displayName: () => LocalizedString
+				}
+				Documents_DeleteDocuments: {
+					/**
+					 * Delete Documents
+					 */
+					displayName: () => LocalizedString
+				}
+				Documents_GetDocument: {
+					/**
+					 * Get Document
+					 */
+					displayName: () => LocalizedString
+				}
+				Documents_PutDocument: {
+					/**
+					 * Update Document
+					 */
+					displayName: () => LocalizedString
+				}
+				Recipients_GetRecipients: {
+					/**
+					 * Get Recipients
+					 */
+					displayName: () => LocalizedString
+				}
+				Recipients_PutRecipients: {
+					/**
+					 * Update Recipients
+					 */
+					displayName: () => LocalizedString
+				}
+				Recipients_PostRecipients: {
+					/**
+					 * Add Recipients
+					 */
+					displayName: () => LocalizedString
+				}
+				Recipients_DeleteRecipients: {
+					/**
+					 * Delete Recipients
+					 */
+					displayName: () => LocalizedString
+				}
+				Views_PostEnvelopeRecipientView: {
+					/**
+					 * Create Recipient View
+					 */
+					displayName: () => LocalizedString
+				}
+			}
 		}
 		Zendesk: {
 			/**

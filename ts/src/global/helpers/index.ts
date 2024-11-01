@@ -3,44 +3,48 @@ import { capitalize, omit, reduce } from 'lodash';
 import { OpenAPIV2 } from 'openapi-types';
 import toTitleCase from 'to-title-case';
 import {
-  IAllowedPathObject,
+  IAllowedPathData,
   IQoreAppActionOption,
   IQorePartialAppActionWithSwaggerPath,
   IQoreTypeObject,
-  TAllowedPath,
-  TAllowedPathString,
+  TAllowedPaths,
+  THttpMethod,
   TQoreAppAction,
   TQoreOptions,
   TQorePartialAction,
   TQoreResponseType,
   TStringWithFirstUpperCaseCharacter,
-  ValidatedPathElement,
 } from '../../global/models/qore';
 import { L } from '../../i18n/i18n-node';
 
-/**
- * Creates an array of allowed paths.
- *
- * @template T - A tuple of strings representing the allowed paths.
- * @param {...{ [K in keyof T]: TAllowedPath<T[K]> }} paths - The paths to be allowed.
- * @returns {T} An array of allowed paths.
- */
-export const createAllowedPaths = <T extends readonly (string | IAllowedPathObject)[]>(paths: {
-  [K in keyof T]: ValidatedPathElement<T[K]>;
-}): T => {
-  return paths;
-};
+export const createSwaggerPaths = (paths: TAllowedPaths): string[] => {
+  const swaggerPaths: string[] = [];
 
-export const createSwaggerPaths = <T extends readonly (string | IAllowedPathObject)[]>(paths: {
-  [K in keyof T]: ValidatedPathElement<T[K]>;
-}): TAllowedPathString[] => {
-  return paths.map((path) => (typeof path === 'string' ? path : path.path));
+  Object.entries(paths).forEach(([path]) => {
+    const methods = Object.keys(paths[path]);
+    if (methods.length === 0) {
+      swaggerPaths.push(path);
+    } else {
+      methods.forEach((method) => {
+        swaggerPaths.push(`${path}:${method.toUpperCase()}`);
+      });
+    }
+  });
+
+  return swaggerPaths;
 };
 
 type TAllowedPathWithData = {
   methods: Set<string>;
-  actionData?: Omit<IAllowedPathObject, 'path'>;
-  processor?: IAllowedPathObject['processor'];
+  actionData?: IAllowedPathData;
+  processor?: IAllowedPathData['processor'];
+};
+
+type TBuildActionsFromSwaggerSchemaParams = {
+  schema: OpenAPIV2.Document;
+  allowedPaths?: TAllowedPaths;
+  app?: string;
+  locale?: Locales;
 };
 
 // !IMPORTANT
@@ -53,70 +57,76 @@ export const OMMITTED_FIELDS = ['_localizationGroup'] as const;
  * @param allowedPaths - the paths that are allowed
  * @returns IQorePartialAppActionWithSwaggerPath[]
  */
-export const buildActionsFromSwaggerSchema = (
-  schema: OpenAPIV2.Document,
-  allowedPaths?: (TAllowedPath<string> | IAllowedPathObject)[]
-): IQorePartialAppActionWithSwaggerPath[] => {
-  // Check if the schema was provided, return empty actions if not
-  // If the allowedPaths are empty, return empty actions
-  if (!schema || (allowedPaths && !allowedPaths.length)) {
+export const buildActionsFromSwaggerSchema = ({
+  schema,
+  allowedPaths,
+  app,
+  locale = 'en',
+}: TBuildActionsFromSwaggerSchemaParams): IQorePartialAppActionWithSwaggerPath[] => {
+  // Return empty actions if schema or allowedPaths is missing
+  if (!schema || (allowedPaths && Object.keys(allowedPaths).length === 0)) {
     return [];
   }
 
   const actions: IQorePartialAppActionWithSwaggerPath[] = [];
 
   const allowedPathsWithMethods = new Map<string, TAllowedPathWithData>();
-  allowedPaths.forEach((allowedPath: TAllowedPath<string> | IAllowedPathObject) => {
-    let fullPath: string;
-    let method: string | undefined;
-    let actionData: Omit<IAllowedPathObject, 'path'> = {};
-    let processor: IAllowedPathObject['processor'] | undefined;
+  Object.entries(allowedPaths).forEach(([fullPath, methods]) => {
+    if (Object.keys(methods).length === 0) {
+      allowedPathsWithMethods.set(fullPath, { methods: null });
 
-    if (typeof allowedPath === 'object') {
-      ({ path: fullPath, processor, ...actionData } = allowedPath);
-      [fullPath, method] = allowedPath.path.split(':');
-    } else {
-      [fullPath, method] = allowedPath.split(':');
+      return;
     }
 
-    if (!allowedPathsWithMethods.has(fullPath)) {
-      allowedPathsWithMethods.set(fullPath, { methods: new Set(), actionData, processor });
-    }
-
-    if (method) {
-      allowedPathsWithMethods.get(fullPath).methods.add(method.toLowerCase());
-    }
+    const methodSet = new Set<string>();
+    Object.entries(methods).forEach(([method]) => {
+      methodSet.add(method.toLowerCase());
+    });
+    allowedPathsWithMethods.set(fullPath, { methods: methodSet });
   });
 
   Object.entries(schema.paths).forEach(([path, methods]) => {
-    if (allowedPathsWithMethods.size > 0 && !allowedPathsWithMethods.has(path)) return;
     const allowedPath = allowedPathsWithMethods.get(path);
-    const allowedMethods = allowedPath?.methods;
+
+    if (allowedPathsWithMethods.size > 0 && !allowedPath) return;
 
     Object.entries(methods).forEach(([method, data]) => {
       if (method === 'parameters' || typeof data !== 'object') return;
-      if (allowedMethods && allowedMethods.size > 0 && !allowedMethods.has(method.toLowerCase()))
-        return;
-      // We need to cast the data to an OperationObject to access the properties
-      // Because typescript is not smart enough to know that the data is an OperationObject
-      // after the check of `parameters`
-      const dataWithoutParameters = data as OpenAPIV2.OperationObject;
-      let actionData = allowedPath?.actionData;
+      const methodKey = method.toLowerCase();
 
-      if (allowedPath?.processor) {
-        actionData = { ...actionData, ...allowedPath.processor(dataWithoutParameters) };
+      const isMethodAllowed = !allowedPath?.methods || allowedPath.methods.has(methodKey);
+
+      if (!isMethodAllowed) return;
+
+      const pathData = allowedPaths[path][method.toUpperCase() as THttpMethod];
+      const dataWithoutParameters = data as OpenAPIV2.OperationObject;
+      let actionData = allowedPath?.methods?.has(methodKey) ? pathData || {} : {};
+
+      if (pathData?.processor) {
+        actionData = { ...actionData, ...pathData.processor(dataWithoutParameters) };
       }
-      // Create the action object, we get the properties from the schema or use a fallback
+
+      const actionIdentifier = getPropertyOfSchemaData(
+        dataWithoutParameters,
+        'operationId',
+        `${path}/${method}`.replace(/\//g, '_')
+      );
+
       const action: IQorePartialAppActionWithSwaggerPath = {
-        action: getPropertyOfSchemaData(
-          dataWithoutParameters,
-          'operationId',
-          `${path}/${method}`.replace(/\//g, '_')
-        ),
+        action: actionIdentifier,
         swagger_path: `${path}/${method.toUpperCase()}`,
-        display_name: getPropertyOfSchemaData(dataWithoutParameters, 'summary', ''),
-        short_desc: getPropertyOfSchemaData(dataWithoutParameters, 'summary', ''),
-        desc: getPropertyOfSchemaData(dataWithoutParameters, 'description', ''),
+        display_name:
+          // @ts-expect-error no idea whats going on here, will fix later
+          L[locale].apps[app].actions[actionIdentifier as unknown].displayName() ||
+          getPropertyOfSchemaData(dataWithoutParameters, 'summary', ''),
+        short_desc:
+          // @ts-expect-error no idea whats going on here, will fix later
+          L[locale].apps[app].actions[actionIdentifier as unknown].shortDesc() ||
+          getPropertyOfSchemaData(dataWithoutParameters, 'summary', ''),
+        desc:
+          // @ts-expect-error no idea whats going on here, will fix later
+          L[locale].apps[app].actions[actionIdentifier as unknown].longDesc() ||
+          getPropertyOfSchemaData(dataWithoutParameters, 'description', ''),
         ...actionData,
       };
 
