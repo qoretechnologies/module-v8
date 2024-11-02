@@ -36,11 +36,13 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
     private {
         string method;
         hash<AsyncCallInfo> webhook_register;
+        *int webhook_auth;
+        *list<auto> webhook_perms;
     }
 
     #! Creates the object from the arguments
     constructor(string name, hash<string, hash<DataProviderMessageInfo>> events, string method,
-            hash<AsyncCallInfo> webhook_register) :
+            hash<AsyncCallInfo> webhook_register, *int webhook_auth, *list<auto> webhook_perms) :
             TypeScriptActionEventDataProviderBase(name, events) {
         self.method = method;
         self.webhook_register = webhook_register;
@@ -50,6 +52,22 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
     /** This method is meant to trigger event generation
     */
     observersReady() {
+        # register webhook
+        string url = TypeScriptActionInterface::createWebhook({
+            "method": method,
+            "auth": webhook_auth,
+            "perms": webhook_perms,
+            "callback": \callback(),
+        });
+        info("Registered webhook with URL %y", url);
+
+        debug("Registering webhook for data provider %y URL %y", name, url);
+        getAsyncValue(webhook_register, getCallContextInfo(), url);
+        debug("Webhook for data provider %y registered with URL %y", name, url);
+    }
+
+    private callback(*hash<auto> event) {
+        notifyObservers(events.firstKey(), event);
     }
 
     private hash<DataProviderInfo> getStaticInfoImpl() {

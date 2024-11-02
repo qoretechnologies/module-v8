@@ -444,12 +444,19 @@ exports.actionsCatalogue = {
         });
 
         api.registerAction({
+            // app: string
             "app": "js-swagger-test",
+            // action: string
             "action": "webhook-event-1",
+            // display_name: string
             "display_name": "Webhook Event",
+            // short_desc: string
             "short_desc": "Webhook event example action",
+            // desc: string
             "desc": "Webhook event example action",
+            // action_code: int
             "action_code": 1,  // DPAT_EVENT == 1
+            // webbook_method?: string
             /** "webhook_method" is required when action_code is 1 (DPAT_EVENT), and there is no "event_function" and
                 "stop_function"
                 It must be an HTTP method that the remote server will use when posting a value on the webhook
@@ -457,16 +464,31 @@ exports.actionsCatalogue = {
                 In this case, "webhook_register" must also be defined
             */
             "webhook_method": "POST",
+            // webbook_auth?: int
+            /** Webhook authentication required?
+                - QAUTH_NONE = 0 -> no auth required
+                - QAUTH_QORUS = 1 -> authentication required
+            */
+            "webhook_auth": 0, // QAUTH_NONE
+            // webbook_perms?: string[]
+            /** an optional list of string permissions required for authenticated users (when "webhook_auth" == 1  /
+                QAUTH_QORUS)
+            */
+            "webhook_perms": null,
+            // webbook_register?: function(ctx?: object, url: string) {}
             /**
                 @param ctx?: object -> with the following properties:
                 - conn_name?: string -> the connection name, if any is defined
                 - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
                 - opts?: object -> a data object with option values set for the current action
                 @param url: string -> the URL the webhook is reachable on
+
+                @note the function here will be called with no "this" context; "this" cannot be used in this function
             */
             "webhook_register": function(ctx, url) {
                 // this function should register the webhook with the server
             },
+            // event_types: object
             /** The data type descriptions of the events that the action will generate; each key is an event name or
                 code, and each value is an object with two keys:
                 - desc: string -> a description of the event
@@ -506,17 +528,26 @@ exports.actionsCatalogue = {
                 @param ctx?: object with the following properties:
                 - conn_name?: string -> the connection name, if any is defined
                 - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
-                - opts?: object -> a data object with option values set for the current action
-                @param update: function (event_id: string, data: object) -> this function should be called every time
-                an event is received to post the event to the observer
+                @param update: function (event_id: string, event_data: object) -> this function should be called when
+                events are received to post the event to the observer
 
                 @note the function here will be called with no "this" context; "this" cannot be used in this function
             */
             "event_function": function(ctx, update) {
+                update("data", {
+                    "name": "test",
+                    "code": 1,
+                });
             },
             /** "stop_function" is required when "action_code" == DPAT_EVENT and "webhook_method" is not present
                 This function will stop "event_function()" from running; after this function is called,
                 "event_function()" should return
+
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+
+                @note the function here will be called with no "this" context; "this" cannot be used in this function
             */
             "stop_function": function(ctx) {
             },

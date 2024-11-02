@@ -42,7 +42,7 @@ public class TypeScriptAppRestClient inherits RestClient {
     private *hash<auto> getUpdateOptionsAfterLogin(hash<auto> h) {
         *hash<auto> rv = RestClient::getUpdateOptionsAfterLogin(h);
         if (post_auth) {
-            rv += TypeScriptActionApiDataProvider::getAsyncValueArgs(self, post_auth, {
+            rv += TypeScriptActionDataProviderBase::getAsyncValueArgs(self, post_auth, {
                 "conn_name": conn.name,
                 "conn_opts": conn.getRealOptions(),
             });
@@ -156,13 +156,6 @@ public class TypeScriptAppRestConnection inherits RestConnection {
         return logger;
     }
 
-    #! Returns a hash of supported data provider subtypes
-    /** @return a hash of supported data provider subtypes
-    */
-    private *hash<string, *hash<string, hash<DataProviderOptionInfo>>> getDataProviderSubtypesImpl() {
-        return TypeScriptActionInterface::getSubtypesForApp(app);
-    }
-
     #! Sets child data provider capabilities
     private setChildCapabilities() {
         children_can_support_apis = True;
@@ -178,7 +171,7 @@ public class TypeScriptAppRestConnection inherits RestConnection {
         #    new_opts, post_auth);
         if (new_opts && post_auth) {
             on_error rethrow $1.err, sprintf("%s (new_opts: %y)", $1.desc, new_opts);
-            new_opts += TypeScriptActionApiDataProvider::getAsyncValueArgs(self, post_auth, {
+            new_opts += TypeScriptActionDataProviderBase::getAsyncValueArgs(self, post_auth, {
                 "conn_name": name,
                 "conn_opts": real_opts + new_opts,
             });

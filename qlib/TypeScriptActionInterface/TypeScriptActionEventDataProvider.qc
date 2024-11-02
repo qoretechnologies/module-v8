@@ -35,6 +35,11 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
     private {
         hash<AsyncCallInfo> event;
         hash<AsyncCallInfo> stop;
+
+        Mutex m();
+        Condition c();
+        bool running;
+        int waiting;
     }
 
     #! Creates the object from the arguments
@@ -44,10 +49,55 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
         self.stop = stop;
     }
 
+    #! Stops the JavaScript I/O thread and deletes the object
+    destructor() {
+        m.lock();
+        on_exit m.unlock();
+        if (running) {
+            getAsyncValue(stop, getCallContextInfo());
+
+            while (running) {
+                ++waiting;
+                c.wait(m);
+                --waiting;
+            }
+        }
+    }
+
     #! Called when all observers have been added to the object
     /** This method is meant to trigger event generation
     */
     observersReady() {
+        info("Starting event thread for data provider %y for connection %y", name, conn.name);
+        Counter c(1);
+        int tid = background startEventThread(c);
+        c.waitForZero();
+        info("Started event thread in TID %d", tid);
+    }
+
+    private startEventThread(Counter c) {
+        on_exit {
+            m.lock();
+            on_exit m.unlock();
+            running = False;
+            if (waiting) {
+                c.broadcast();
+            }
+            info("Terminated JavaScript I/O event thread");
+        }
+        # signal calling thread that we are running
+        c.dec();
+        getAsyncValue(event, getCallContextInfo(), sub (string event_id, JavaScriptObject o) {
+            if (!events{event_id}) {
+                throw "INVALID-EVENT", sprintf("Cannot raise event %y; known events: %y", event_id, keys events);
+            }
+            auto event = o.toData();
+            if (event.typeCode() != NT_HASH) {
+                throw "INVALID-EVENT-DATA", sprintf("Cannot raise event %y with type %y; must be a hash (JavaScript "
+                    "object)", event_id, event.fullType());
+            }
+            notifyObservers(event_id, event);
+        });
     }
 
     private hash<DataProviderInfo> getStaticInfoImpl() {

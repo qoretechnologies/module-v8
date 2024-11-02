@@ -48,6 +48,8 @@ public class TypeScriptActionInterface {
 
         static TypeScriptActionRootDataProvider root();
 
+        static code WebhookCreate;
+
         const TypeKeys = (
             "name", "display_name", "short_desc", "desc", "type", "example_value",
             "default_value", "allowed_values", "attr", "required"
@@ -88,6 +90,12 @@ public class TypeScriptActionInterface {
 
         #! Default I/O timeout in seconds
         const DefaultIoTimeoutSecs = 30;
+
+        #! JavaScript event subtype for connections
+        const AES_JS_EVENT = "javascript-event";
+
+        #! Webhook event subtype for connections
+        const AES_WH_EVENT = "webhook-event";
     }
 
     private {
@@ -115,12 +123,8 @@ public class TypeScriptActionInterface {
         #! Connection map for testing
         static hash<string, TypeScriptAppRestConnection> cmap;
 
-        #! Actions supporting events; app -> action -> True
-        static hash<string, hash<string, bool>> emap;
-
-        #! Options for event-based data providers
-        const EventOptions = {
-        };
+        #! Actions supporting events; app -> action -> subtype
+        static hash<string, hash<string, string>> emap;
     }
 
     static registerApp(JavaScriptObject app) {
@@ -437,7 +441,8 @@ public class TypeScriptActionInterface {
                 $1.err, $1.desc);
             app = DataProviderActionCatalog::getAppEx(action.app);
         }
-        *SwaggerSchema schema = app_swagger_map{action.app.lwr()};
+        string appname = action.app.lwr();
+        *SwaggerSchema schema = app_swagger_map{appname};
 
         switch (action.action_code) {
             case DPAT_API: {
@@ -446,7 +451,11 @@ public class TypeScriptActionInterface {
             }
 
             case DPAT_EVENT: {
-                TypeScriptActionInterface::generateEventDataProvider(app, \action, pool, schema);
+                string type = TypeScriptActionInterface::generateEventDataProvider(app, \action, pool, schema);
+                string actionname = action.action.lwr();
+                if (!emap{appname}{actionname}) {
+                    emap{appname}{actionname} = type;
+                }
                 break;
             }
 
@@ -456,7 +465,7 @@ public class TypeScriptActionInterface {
         }
     }
 
-    static generateEventDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
+    static string generateEventDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
             JavaScriptProgramPool pool, *SwaggerSchema schema) {
         # get types
         hash<string, hash<DataProviderMessageInfo>> events;
@@ -467,6 +476,8 @@ public class TypeScriptActionInterface {
                     "attribute; got type %y; expecting \"hash\"", action.app, action.action,
                     types.fullType());
             }
+            on_error rethrow "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"event_types\" "
+                "attribute: %s: %s", action.app, action.action, $1.err, $1.desc);
             events = map {
                 $1.key: <DataProviderMessageInfo>{
                     "desc": $1.value.desc,
@@ -474,16 +485,42 @@ public class TypeScriptActionInterface {
                 },
             }, types.pairIterator();
         }
+        if (events.empty()) {
+            throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"event_types\" "
+                "attribute that provides no event definition", action.app, action.action);
+        }
 
         timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
 
         TypeScriptActionEventDataProviderBase child;
 
+        string rv;
         if ((auto method = remove action.webhook_method).val()) {
             if (method.typeCode() != NT_STRING) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"webhook_method\" "
                     "attribute; got type %y; expecting \"string\"", action.app, action.action,
                     method.fullType());
+            }
+            if (events.size() != 1) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"event_types\" "
+                    "attribute that provides more than one event definition; events defined: %y", action.app,
+                    action.action, keys events);
+            }
+            auto webhook_auth = remove action.webhook_auth;
+            if (exists webhook_auth && (webhook_auth.typeCode() != NT_INT)) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"webhook_auth\" "
+                    "attribute; expected \"int\"; got %y", action.app, action.action, webhook_auth.fullType());
+            }
+            auto webhook_perms = remove action.webhook_perms;
+            if (exists webhook_perms) {
+                int t = webhook_perms.typeCode();
+                if (t == NT_STRING) {
+                    webhook_perms = (webhook_perms,);
+                } else if (t != NT_LIST) {
+                    throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"webhook_perms\" "
+                        "attribute; expected \"list\" or \"string\"; got %y", action.app, action.action,
+                        webhook_perms.fullType());
+                }
             }
             auto webhook_register_code = remove action.webhook_register;
             if (!webhook_register_code.callp()) {
@@ -499,7 +536,9 @@ public class TypeScriptActionInterface {
                 "to": seconds(io_timeout),
             };
 
-            child = new TypeScriptActionWebhookEventDataProvider(action.action, events, method, webhook_register);
+            child = new TypeScriptActionWebhookEventDataProvider(action.action, events, method, webhook_register,
+                webhook_auth, webhook_perms);
+            rv = AES_WH_EVENT;
         } else {
             auto callback = remove action.event_function;
             if (!callback.callp()) {
@@ -530,6 +569,7 @@ public class TypeScriptActionInterface {
             };
 
             child = new TypeScriptActionEventDataProvider(action.action, events, event, stop);
+            rv = AES_JS_EVENT;
         }
 
         TypeScriptActionAppDataProvider prov = TypeScriptActionInterface::getAppDataProvider(action.app);
@@ -538,6 +578,7 @@ public class TypeScriptActionInterface {
         #printf("Registered %s %s (%y)\n", action.app, action.action);
 
         action.path = action.action;
+        return rv;
     }
 
     static generateApiDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
@@ -810,7 +851,8 @@ public class TypeScriptActionInterface {
     }
 
     #! Executes the given app action with the given arguments
-    static auto execAppActionIntern(string app, string action, string connection, auto req, *hash<auto> request_options) {
+    static auto execAppActionIntern(string app, string action, string connection, auto req,
+            *hash<auto> request_options) {
         *TypeScriptAppRestConnection conn = cmap{connection};
         if (!conn) {
             throw "TYPESCRIPT-ACTION-ERROR", sprintf("Unknown connection %y; known connections: %y",
@@ -861,12 +903,42 @@ public class TypeScriptActionInterface {
         return app_post_auth_map{app.lwr()};
     }
 
-    static *hash<string, *hash<string, hash<DataProviderOptionInfo>>> getSubtypesForApp(string app) {
-        return map {$1: EventOptions}, keys emap{app.lwr()};
-    }
-
     static bool appSupportsEvents(string app) {
         return exists emap{app.lwr()};
+    }
+
+    #! Registers an API for creating a webhook
+    /** @param a callable value taking a hash argument with the following keys:
+        - method (string): the HTTP method for the webhook
+        - auth (int): one of:
+          - QAUTH_NONE = 0 -> no auth required
+          - QAUTH_QORUS = 1 -> authentication required
+        - perms (*list<string>): an optional list of string permissions when \c auth is 1
+        - callback (code): a callback taking the arguments passed to the webhook to generate events
+    */
+    static registerWebhookCreateApi(code api) {
+        if (WebhookCreate) {
+            throw "WEBHOOK-API-ERROR", "There is already a webhook creation API in place";
+        }
+        WebhookCreate = api;
+    }
+
+    #! Create a webhook and return the public URL for it
+    /** @param a hash with the following keys for the webhook
+        - method (string): the HTTP method for the webhook
+        - auth (int): one of:
+          - QAUTH_NONE = 0 -> no auth required
+          - QAUTH_QORUS = 1 -> authentication required
+        - perms (*list<string>): an optional list of string permissions when \c auth is 1
+        - callback (code): a callback taking the arguments passed to the webhook to generate events
+
+        @return the public URL for the webhook
+    */
+    static string createWebhook(hash<auto> h) {
+        if (!WebhookCreate) {
+            throw "WEBHOOK-API-ERROR", "Cannot create a webhook; there is no webhook creation API in place";
+        }
+        return TypeScriptActionInterface::WebhookCreate();
     }
 }
 }
