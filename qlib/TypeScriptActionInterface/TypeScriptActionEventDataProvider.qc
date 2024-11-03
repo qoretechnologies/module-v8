@@ -43,8 +43,8 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
     }
 
     #! Creates the object from the arguments
-    constructor(string name, hash<string, hash<DataProviderMessageInfo>> events, hash<AsyncCallInfo> event,
-            hash<AsyncCallInfo> stop) : TypeScriptActionEventDataProviderBase(name, events) {
+    constructor(string name, string event_id, hash<DataProviderMessageInfo> event_info, hash<AsyncCallInfo> event,
+            hash<AsyncCallInfo> stop) : TypeScriptActionEventDataProviderBase(name, event_id, event_info) {
         self.event = event;
         self.stop = stop;
     }
@@ -87,10 +87,7 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
         }
         # signal calling thread that we are running
         c.dec();
-        getAsyncValue(event, getCallContextInfo(), sub (string event_id, JavaScriptObject o) {
-            if (!events{event_id}) {
-                throw "INVALID-EVENT", sprintf("Cannot raise event %y; known events: %y", event_id, keys events);
-            }
+        getAsyncValue(event, getCallContextInfo(), sub (JavaScriptObject o) {
             auto event = o.toData();
             if (event.typeCode() != NT_HASH) {
                 throw "INVALID-EVENT-DATA", sprintf("Cannot raise event %y with type %y; must be a hash (JavaScript "

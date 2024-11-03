@@ -109,6 +109,10 @@ public class JavaScriptProgramPool {
         return cache.size();
     }
 
+    registerAppActions(object obj) {
+        obj.registerAppActions(TypeScriptActionInterface::Api);
+    }
+
     static bool isFirst(JavaScriptProgram pgm) {
         return firstmap{pgm.uniqueHash()} ?? False;
     }

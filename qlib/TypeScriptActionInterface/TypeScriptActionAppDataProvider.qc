@@ -105,7 +105,7 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
         @see getChildProviderEx()
     */
     private *AbstractDataProvider getChildProviderImpl(string name) {
-        if (*TypeScriptActionApiDataProvider prov = childMap{name}) {
+        if (*TypeScriptActionDataProviderBase prov = childMap{name}) {
             if (!prov.getLogger() && logger) {
                 prov.setLogger(logger);
             }

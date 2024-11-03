@@ -107,7 +107,7 @@ exports.actionsCatalogue = {
                   - conn_opts: object -> connection options
                 - url_template_options?: string[] -> a list of option names that will be used to substitute values in
                   URLs; the URL should contain strings like '{{option_name}}'
-             */
+            */
             "rest_modifiers": {
                 "options": {
                     "account_id": {
@@ -466,10 +466,10 @@ exports.actionsCatalogue = {
             "webhook_method": "POST",
             // webbook_auth?: int
             /** Webhook authentication required?
-                - QAUTH_NONE = 0 -> no auth required
-                - QAUTH_QORUS = 1 -> authentication required
+                - AUTH_NONE = 0 -> no auth required
+                - AUTH_REQUIRE_AUTH = 1 -> authentication required
             */
-            "webhook_auth": 0, // QAUTH_NONE
+            "webhook_auth": 0, // AUTH_NONE
             // webbook_perms?: string[]
             /** an optional list of string permissions required for authenticated users (when "webhook_auth" == 1  /
                 QAUTH_QORUS)
@@ -488,30 +488,26 @@ exports.actionsCatalogue = {
             "webhook_register": function(ctx, url) {
                 // this function should register the webhook with the server
             },
-            // event_types: object
-            /** The data type descriptions of the events that the action will generate; each key is an event name or
-                code, and each value is an object with two keys:
+            // event_info: object
+            /** The description of the event that the action will generate with the following keys
+                - id: *string -> the event code for the event; if not present will default to "event"
                 - desc: string -> a description of the event
                 - type: object -> type description of that event
-
-                In case "webhook_method" is used, there can be only one event type defined
             */
-            "event_types": {
-                "data": {
-                    "desc": "Data event",
-                    "type": {
-                        "name": {
-                            "type": "string",
-                            "display_name": "Event Name",
-                            "short_desc": "Event name",
-                            "desc": "Event name",
-                        },
-                        "code": {
-                            "type": "int",
-                            "display_name": "Event Code",
-                            "short_desc": "Event code",
-                            "desc": "Event code",
-                        },
+            "event_info": {
+                "desc": "Data event",
+                "type": {
+                    "name": {
+                        "type": "string",
+                        "display_name": "Event Name",
+                        "short_desc": "Event name",
+                        "desc": "Event name",
+                    },
+                    "code": {
+                        "type": "int",
+                        "display_name": "Event Code",
+                        "short_desc": "Event code",
+                        "desc": "Event code",
                     },
                 },
             },
@@ -528,13 +524,13 @@ exports.actionsCatalogue = {
                 @param ctx?: object with the following properties:
                 - conn_name?: string -> the connection name, if any is defined
                 - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
-                @param update: function (event_id: string, event_data: object) -> this function should be called when
-                events are received to post the event to the observer
+                @param update: function (event_data: object) -> this function should be called when events are
+                received to post the event to the observer
 
                 @note the function here will be called with no "this" context; "this" cannot be used in this function
             */
             "event_function": function(ctx, update) {
-                update("data", {
+                update({
                     "name": "test",
                     "code": 1,
                 });
@@ -551,22 +547,20 @@ exports.actionsCatalogue = {
             */
             "stop_function": function(ctx) {
             },
-            "event_types": {
-                "data": {
-                    "desc": "Data event",
-                    "type": {
-                        "name": {
-                            "type": "string",
-                            "display_name": "Event Name",
-                            "short_desc": "Event name",
-                            "desc": "Event name",
-                        },
-                        "code": {
-                            "type": "int",
-                            "display_name": "Event Code",
-                            "short_desc": "Event code",
-                            "desc": "Event code",
-                        },
+            "event_info": {
+                "desc": "Data event",
+                "type": {
+                    "name": {
+                        "type": "string",
+                        "display_name": "Event Name",
+                        "short_desc": "Event name",
+                        "desc": "Event name",
+                    },
+                    "code": {
+                        "type": "int",
+                        "display_name": "Event Code",
+                        "short_desc": "Event code",
+                        "desc": "Event code",
                     },
                 },
             },

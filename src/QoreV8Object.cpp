@@ -57,7 +57,6 @@ AbstractQoreNode* QoreV8Object::toData(QoreV8ProgramHelper& v8h) const {
 
 AbstractQoreNode* QoreV8Object::toData(QoreV8ProgramHelper& v8h, v8::Local<v8::Value> parent,
         v8::Set& objset) const {
-    ExceptionSink* xsink = v8h.getExceptionSink();
     v8::Local<v8::Object> obj = get();
     {
         v8::Maybe<bool> b = objset.Has(v8h.getContext(), obj);

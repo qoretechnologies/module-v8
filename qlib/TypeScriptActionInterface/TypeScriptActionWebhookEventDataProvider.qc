@@ -38,14 +38,23 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         hash<AsyncCallInfo> webhook_register;
         *int webhook_auth;
         *list<auto> webhook_perms;
+
+        #! The URL returned after registering the webhook
+        string url;
     }
 
     #! Creates the object from the arguments
-    constructor(string name, hash<string, hash<DataProviderMessageInfo>> events, string method,
+    constructor(string name, string event_id, hash<DataProviderMessageInfo> event, string method,
             hash<AsyncCallInfo> webhook_register, *int webhook_auth, *list<auto> webhook_perms) :
-            TypeScriptActionEventDataProviderBase(name, events) {
+            TypeScriptActionEventDataProviderBase(name, event_id, event) {
         self.method = method;
         self.webhook_register = webhook_register;
+    }
+
+    destructor() {
+        if (url.val()) {
+            TypeScriptActionInterface::deleteWebhook(url);
+        }
     }
 
     #! Called when all observers have been added to the object
@@ -53,7 +62,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
     */
     observersReady() {
         # register webhook
-        string url = TypeScriptActionInterface::createWebhook({
+        url = TypeScriptActionInterface::createWebhook({
             "method": method,
             "auth": webhook_auth,
             "perms": webhook_perms,
@@ -67,7 +76,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
     }
 
     private callback(*hash<auto> event) {
-        notifyObservers(events.firstKey(), event);
+        notifyObservers(event_id, event);
     }
 
     private hash<DataProviderInfo> getStaticInfoImpl() {

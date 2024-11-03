@@ -26,13 +26,15 @@ public namespace TypeScriptActionInterface {
 public class TypeScriptActionEventDataProviderBase inherits TypeScriptActionDataProviderBase,
         DataProvider::DelayedObservable {
     private {
-        hash<string, hash<DataProviderMessageInfo>> events;
+        string event_id;
+        hash<DataProviderMessageInfo> event_info;
     }
 
     #! Creates the object from the arguments
-    constructor(string name, hash<string, hash<DataProviderMessageInfo>> events) :
+    constructor(string name, string event_id, hash<DataProviderMessageInfo> event_info) :
             TypeScriptActionDataProviderBase(name) {
-        self.events = events;
+        self.event_id = event_id;
+        self.event_info = event_info;
     }
 
     #! Returns a hash of all supported event types
@@ -41,7 +43,9 @@ public class TypeScriptActionEventDataProviderBase inherits TypeScriptActionData
         @note only called if the provider supports the observer pattern / event API
     */
     private hash<string, hash<DataProviderMessageInfo>> getEventTypesImpl() {
-        return events;
+        return {
+            event_id: event_info,
+        };
     }
 }
 }
