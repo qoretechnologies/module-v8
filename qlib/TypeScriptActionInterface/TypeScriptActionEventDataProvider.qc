@@ -34,34 +34,25 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
 
     private {
         hash<AsyncCallInfo> event;
-        hash<AsyncCallInfo> stop;
 
         Mutex m();
-        Condition c();
+        Condition cond();
         bool running;
         int waiting;
+
+        #! stop flag
+        bool stop_flag = False;
     }
 
     #! Creates the object from the arguments
-    constructor(string name, string event_id, hash<DataProviderMessageInfo> event_info, hash<AsyncCallInfo> event,
-            hash<AsyncCallInfo> stop) : TypeScriptActionEventDataProviderBase(name, event_id, event_info) {
+    constructor(string name, string event_id, hash<DataProviderMessageInfo> event_info, hash<AsyncCallInfo> event)
+            : TypeScriptActionEventDataProviderBase(name, event_id, event_info) {
         self.event = event;
-        self.stop = stop;
     }
 
     #! Stops the JavaScript I/O thread and deletes the object
     destructor() {
-        m.lock();
-        on_exit m.unlock();
-        if (running) {
-            getAsyncValue(stop, getCallContextInfo());
-
-            while (running) {
-                ++waiting;
-                c.wait(m);
-                --waiting;
-            }
-        }
+        stop();
     }
 
     #! Called when all observers have been added to the object
@@ -75,18 +66,27 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
         info("Started event thread in TID %d", tid);
     }
 
+    #! Called to stop generating events
+    /** Stops polling for new events
+    */
+    stopEvents() {
+        stop();
+    }
+
     private startEventThread(Counter c) {
         on_exit {
             m.lock();
             on_exit m.unlock();
             running = False;
             if (waiting) {
-                c.broadcast();
+                cond.broadcast();
             }
             info("Terminated JavaScript I/O event thread");
         }
+        running = True;
         # signal calling thread that we are running
         c.dec();
+        # event function signature:
         getAsyncValue(event, getCallContextInfo(), sub (JavaScriptObject o) {
             auto event = o.toData();
             if (event.typeCode() != NT_HASH) {
@@ -94,7 +94,25 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
                     "object)", event_id, event.fullType());
             }
             notifyObservers(event_id, event);
+        }, bool sub () {
+            return stop_flag;
         });
+    }
+
+    stop() {
+        m.lock();
+        on_exit m.unlock();
+
+        if (running) {
+            if (!stop_flag) {
+                stop_flag = True;
+            }
+            while (running) {
+                ++waiting;
+                cond.wait(m);
+                --waiting;
+            }
+        }
     }
 
     private hash<DataProviderInfo> getStaticInfoImpl() {

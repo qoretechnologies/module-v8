@@ -36,6 +36,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
     private {
         string method;
         hash<AsyncCallInfo> webhook_register;
+        hash<AsyncCallInfo> webhook_deregister;
         *int webhook_auth;
         *list<auto> webhook_perms;
 
@@ -45,16 +46,15 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
 
     #! Creates the object from the arguments
     constructor(string name, string event_id, hash<DataProviderMessageInfo> event, string method,
-            hash<AsyncCallInfo> webhook_register, *int webhook_auth, *list<auto> webhook_perms) :
-            TypeScriptActionEventDataProviderBase(name, event_id, event) {
+            hash<AsyncCallInfo> webhook_register, hash<AsyncCallInfo> webhook_deregister, *int webhook_auth,
+            *list<auto> webhook_perms) : TypeScriptActionEventDataProviderBase(name, event_id, event) {
         self.method = method;
         self.webhook_register = webhook_register;
+        self.webhook_deregister = webhook_deregister;
     }
 
     destructor() {
-        if (url.val()) {
-            TypeScriptActionInterface::deleteWebhook(url);
-        }
+        stop();
     }
 
     #! Called when all observers have been added to the object
@@ -73,6 +73,21 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         debug("Registering webhook for data provider %y URL %y", name, url);
         getAsyncValue(webhook_register, getCallContextInfo(), url);
         debug("Webhook for data provider %y registered with URL %y", name, url);
+    }
+
+    #! Called to stop generating events
+    /** Stops polling for new events
+    */
+    stopEvents() {
+        stop();
+    }
+
+    private stop() {
+        if (url.val()) {
+            getAsyncValue(webhook_deregister, getCallContextInfo(), url);
+            TypeScriptActionInterface::deleteWebhook(url);
+            delete url;
+        }
     }
 
     private callback(*hash<auto> event) {
