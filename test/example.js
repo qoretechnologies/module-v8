@@ -461,7 +461,7 @@ exports.actionsCatalogue = {
                 "stop_function"
                 It must be an HTTP method that the remote server will use when posting a value on the webhook
 
-                In this case, "webhook_register" must also be defined
+                In this case, "webhook_register" and "webhook_deregister" must also be defined
             */
             "webhook_method": "POST",
             // webbook_auth?: int
