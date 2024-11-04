@@ -46,7 +46,7 @@ export const ESIGNATURE_PATHS: TAllowedPaths = {
     GET: {},
   },
   '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/views/recipient': {
-    POST: { display_name: 'Create Recipient View' },
+    POST: {},
   },
   '/v2.1/accounts/{accountId}/brands': {
     DELETE: {},
