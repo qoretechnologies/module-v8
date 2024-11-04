@@ -3,6 +3,7 @@ import { capitalize, omit, reduce } from 'lodash';
 import { OpenAPIV2 } from 'openapi-types';
 import toTitleCase from 'to-title-case';
 import {
+  EQoreAppActionCode,
   IAllowedPathObject,
   IQoreAppActionOption,
   IQorePartialAppActionWithSwaggerPath,
@@ -172,7 +173,7 @@ export const mapActionsToApp = (
       L[locale].apps[app].actions[action.action as unknown].longDesc() ||
       capitalize(action.action.replace(/_/g, ' ')),
     app,
-    action_code: 2,
+    action_code: EQoreAppActionCode.ACTION,
 
     options:
       'options' in action

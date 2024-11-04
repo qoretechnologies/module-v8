@@ -12,6 +12,7 @@ import {
 import { DynamicDropdownOptions } from 'core/framework/property/input/dropdown/dropdown-prop';
 import { fixActionType, normalizeAppName, normalizeName } from 'global/helpers';
 import {
+  EQoreAppActionCode,
   IQoreAllowedValue,
   IQoreAppActionOption,
   IQoreAppActionWithFunction,
@@ -92,7 +93,7 @@ class _PiecesAppCatalogue {
 
     return {
       app: appName,
-      action_code: 2,
+      action_code: EQoreAppActionCode.ACTION,
       display_name: action.displayName,
       short_desc: action.description,
       desc: action.description,

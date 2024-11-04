@@ -1,6 +1,6 @@
 import { Locales } from 'i18n/i18n-types';
-import { StrictRecord } from './utils';
 import { OpenAPIV2 } from 'openapi-types';
+import { StrictRecord } from './utils';
 
 export interface IQoreAppShared {
   display_name?: string;
@@ -9,6 +9,7 @@ export interface IQoreAppShared {
 }
 
 export type THttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE';
+export type TWebhookHttpMethod = 'POST' | 'PUT' | 'PATCH' | 'GET';
 
 export type TAllowedPath<T extends string> = T extends `${string}:${infer Method}`
   ? Method extends THttpMethod
@@ -238,10 +239,15 @@ export interface IQoreAppWithActions<
 
 export type TQoreApps = Record<string, IQoreAppWithActions>;
 
+export enum EQoreAppActionCode {
+  EVENT = 1,
+  ACTION = 2,
+}
+
 export interface IQoreBaseAppAction extends IQoreAppShared {
   app: string;
   action: string;
-  action_code: 1 | 2; // What are other possible values?
+  action_code: EQoreAppActionCode;
 }
 
 export type TQoreAppActionFunctionContext<CustomConnOptions extends Record<string, any> = {}> = {
@@ -427,8 +433,50 @@ export interface IQoreAppActionOption<TypeName extends TQoreType = TQoreType, Ty
   sensitive?: boolean;
 }
 
-export interface IQoreAppActionWithoutFunction extends IQoreBaseAppAction {
-  action_code: 1;
+export enum EQoreAppActionWebhookAuthType {
+  AUTH_NONE = 0,
+  AUTH_REQUIRE_AUTH = 1,
+}
+
+export interface IQoreAppActionWithEventOrWebhook extends IQoreBaseAppAction {
+  action_code: EQoreAppActionCode.EVENT;
+  event_info: {
+    id?: string;
+    desc: string;
+    type: Record<string, IQoreTypeObject>;
+  };
+}
+
+export interface IQoreAppActionWithWebhookBase extends IQoreAppActionWithEventOrWebhook {
+  webhook_method: TWebhookHttpMethod;
+  webhook_auth?: EQoreAppActionWebhookAuthType;
+  webhook_register: (context: TQoreAppActionFunctionContext, url: string) => void;
+  event_function?: never;
+}
+
+export interface IQoreAppActionWithWebhookWithoutPerms extends IQoreAppActionWithWebhookBase {
+  webhook_auth?: EQoreAppActionWebhookAuthType.AUTH_NONE;
+  webhook_perms?: never;
+}
+
+export interface IQoreAppActionWithWebhookWithPerms extends IQoreAppActionWithWebhookBase {
+  webhook_auth?: EQoreAppActionWebhookAuthType.AUTH_REQUIRE_AUTH;
+  webhook_perms?: string[];
+}
+
+export type TQoreAppActionWithWebhook =
+  | IQoreAppActionWithWebhookWithoutPerms
+  | IQoreAppActionWithWebhookWithPerms;
+
+export interface IQoreAppActionWithEvent extends IQoreAppActionWithEventOrWebhook {
+  event_function: (
+    context: TQoreAppActionFunctionContext,
+    update: (event_data: Record<string, any>) => void
+  ) => void;
+  webhook_method?: never;
+  webhook_auth?: never;
+  webhook_register?: never;
+  webhook_perms?: never;
 }
 
 export type TQoreOptions = Record<string, IQoreAppActionOption>;
@@ -436,7 +484,7 @@ export type TQoreResponseType = Record<string, IQoreTypeObject>;
 
 export interface IQoreAppActionWithFunction<Options = TQoreOptions, Response = TQoreResponseType>
   extends IQoreBaseAppAction {
-  action_code: 2;
+  action_code: EQoreAppActionCode.ACTION;
   api_function?: TQoreAppActionFunction;
   options?: StrictRecord<keyof Options, Options[keyof Options]>;
   response_type?: StrictRecord<keyof Response, Response[keyof Response]>;
@@ -444,7 +492,7 @@ export interface IQoreAppActionWithFunction<Options = TQoreOptions, Response = T
 }
 
 export interface IQoreAppActionWithSwaggerPath extends IQoreBaseAppAction {
-  action_code: 2;
+  action_code: EQoreAppActionCode.ACTION;
   api_function?: never;
   swagger_path: string;
 }
@@ -457,7 +505,8 @@ export interface IQorePartialAppActionWithSwaggerPath
 
 export type TQoreAppAction<Options = TQoreOptions, Response = TQoreResponseType> =
   | IQoreAppActionWithFunction<Options, Response>
-  | IQoreAppActionWithoutFunction
+  | TQoreAppActionWithWebhook
+  | IQoreAppActionWithEvent
   | IQoreAppActionWithSwaggerPath;
 
 export type TQorePartialAction<
@@ -465,7 +514,8 @@ export type TQorePartialAction<
   Response = Record<string, IQoreTypeObject>,
 > = (
   | Omit<IQoreAppActionWithFunction<Options, Response>, 'action_code' | 'app'>
-  | Omit<IQoreAppActionWithoutFunction, 'action_code' | 'app'>
+  | Omit<TQoreAppActionWithWebhook, 'action_code' | 'app'>
+  | Omit<IQoreAppActionWithEvent, 'action_code' | 'app'>
   | IQorePartialAppActionWithSwaggerPath
 ) & {
   _localizationGroup?: string;
