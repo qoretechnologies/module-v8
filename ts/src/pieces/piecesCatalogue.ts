@@ -238,7 +238,9 @@ class _PiecesAppCatalogue {
           const pieceOption = pieceOptions[key];
           // Mapping the received options to qore options
           const qoreOption: IQoreAppActionOption = this.mapActionPropToAppActionOption(pieceOption);
-          options[key] = qoreOption;
+          if (qoreOption.type) {
+            options[key] = qoreOption;
+          }
         }
       }
 

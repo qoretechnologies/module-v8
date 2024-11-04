@@ -1,34 +1,64 @@
-import { createAllowedPaths } from '../../global/helpers';
+import { TAllowedPaths } from '../../global/models/qore';
 
 export const ZENDESK_SWAGGER_API_PATH = '/api/v2/';
 
-export const ZENDESK_ALLOWED_PATHS = createAllowedPaths([
-  `${ZENDESK_SWAGGER_API_PATH}tickets/{ticket_id}:GET`,
-  `${ZENDESK_SWAGGER_API_PATH}tickets/{ticket_id}:PUT`,
-  `${ZENDESK_SWAGGER_API_PATH}tickets/{ticket_id}:DELETE`,
-  `${ZENDESK_SWAGGER_API_PATH}tickets:GET`,
-  `${ZENDESK_SWAGGER_API_PATH}tickets:POST`,
-  `${ZENDESK_SWAGGER_API_PATH}tickets/count:GET`,
-  `${ZENDESK_SWAGGER_API_PATH}groups/{group_id}:DELETE`,
-  `${ZENDESK_SWAGGER_API_PATH}groups/{group_id}:GET`,
-  `${ZENDESK_SWAGGER_API_PATH}groups:GET`,
-  `${ZENDESK_SWAGGER_API_PATH}groups:POST`,
-  `${ZENDESK_SWAGGER_API_PATH}groups/{group_id}:PUT`,
-  `${ZENDESK_SWAGGER_API_PATH}attachments/{attachment_id}:GET`,
-  `${ZENDESK_SWAGGER_API_PATH}uploads/{token}:DELETE`,
-  `${ZENDESK_SWAGGER_API_PATH}users/{user_id}:DELETE`,
-  `${ZENDESK_SWAGGER_API_PATH}users/{user_id}:PUT`,
-  `${ZENDESK_SWAGGER_API_PATH}users:POST`,
-  `${ZENDESK_SWAGGER_API_PATH}users/{user_id}:GET`,
-  `${ZENDESK_SWAGGER_API_PATH}users:GET`,
-  `${ZENDESK_SWAGGER_API_PATH}organizations/{organization_id}:DELETE`,
-  `${ZENDESK_SWAGGER_API_PATH}organizations/{organization_id}:GET`,
-  `${ZENDESK_SWAGGER_API_PATH}organizations/{organization_id}:PUT`,
-  `${ZENDESK_SWAGGER_API_PATH}organizations:POST`,
-  `${ZENDESK_SWAGGER_API_PATH}organizations:GET`,
-  `${ZENDESK_SWAGGER_API_PATH}account/settings:GET`,
-  `${ZENDESK_SWAGGER_API_PATH}account/settings:PUT`,
-  `${ZENDESK_SWAGGER_API_PATH}search:GET`,
-  `${ZENDESK_SWAGGER_API_PATH}ticket_metrics:GET`,
-  `${ZENDESK_SWAGGER_API_PATH}ticket_metrics/{ticket_metric_id}:GET`,
-]);
+export const ZENDESK_ALLOWED_PATHS: TAllowedPaths = {
+  [`${ZENDESK_SWAGGER_API_PATH}tickets/{ticket_id}`]: {
+    GET: {},
+    PUT: {},
+    DELETE: {},
+  },
+  [`${ZENDESK_SWAGGER_API_PATH}tickets`]: {
+    GET: {},
+    POST: {},
+  },
+  [`${ZENDESK_SWAGGER_API_PATH}tickets/count`]: {
+    GET: {},
+  },
+  [`${ZENDESK_SWAGGER_API_PATH}groups/{group_id}`]: {
+    DELETE: {},
+    GET: {},
+    PUT: {},
+  },
+  [`${ZENDESK_SWAGGER_API_PATH}groups`]: {
+    GET: {},
+    POST: {},
+  },
+  [`${ZENDESK_SWAGGER_API_PATH}attachments/{attachment_id}`]: {
+    GET: {},
+  },
+  [`${ZENDESK_SWAGGER_API_PATH}uploads/{token}`]: {
+    DELETE: {},
+  },
+  [`${ZENDESK_SWAGGER_API_PATH}users/{user_id}`]: {
+    DELETE: {},
+    PUT: {},
+    GET: {},
+  },
+  [`${ZENDESK_SWAGGER_API_PATH}users`]: {
+    POST: {},
+    GET: {},
+  },
+  [`${ZENDESK_SWAGGER_API_PATH}organizations/{organization_id}`]: {
+    DELETE: {},
+    GET: {},
+    PUT: {},
+  },
+  [`${ZENDESK_SWAGGER_API_PATH}organizations`]: {
+    POST: {},
+    GET: {},
+  },
+  [`${ZENDESK_SWAGGER_API_PATH}account/settings`]: {
+    GET: {},
+    PUT: {},
+  },
+  [`${ZENDESK_SWAGGER_API_PATH}search`]: {
+    GET: {},
+  },
+  [`${ZENDESK_SWAGGER_API_PATH}ticket_metrics`]: {
+    GET: {},
+  },
+  [`${ZENDESK_SWAGGER_API_PATH}ticket_metrics/{ticket_metric_id}`]: {
+    GET: {},
+  },
+};
