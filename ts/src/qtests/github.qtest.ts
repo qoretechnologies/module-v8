@@ -52,17 +52,17 @@ describe('Tests Github Actions', () => {
 
     expect(action).toBeDefined();
     expect(repository).toBeDefined();
-    const name = 'new-name';
+    const description = 'Test Repo Description';
     const { body } = await testApi.execAppAction('github', action.action, connection, {
       owner: repository?.owner,
       repo: repository?.name,
       body: {
-        name,
+        description,
       },
     });
 
     expect(body).toBeDefined();
-    expect(body.name).toBe(name);
+    expect(body.description).toBe(description);
   });
 
   it('Should get a repository', async () => {

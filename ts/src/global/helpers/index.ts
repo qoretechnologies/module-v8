@@ -3,15 +3,16 @@ import { capitalize, omit, reduce } from 'lodash';
 import { OpenAPIV2 } from 'openapi-types';
 import toTitleCase from 'to-title-case';
 import {
+  EQoreAppActionCode,
   IAllowedPathData,
   IQoreAppActionOption,
   IQorePartialAppActionWithSwaggerPath,
   IQoreTypeObject,
   TAllowedPaths,
   THttpMethod,
-  TQoreAppAction,
+  TQoreAppNonEventAction,
   TQoreOptions,
-  TQorePartialAction,
+  TQorePartialNonEventAction,
   TQoreResponseType,
   TStringWithFirstUpperCaseCharacter,
 } from '../../global/models/qore';
@@ -114,6 +115,7 @@ export const buildActionsFromSwaggerSchema = ({
 
       const action: IQorePartialAppActionWithSwaggerPath = {
         action: actionIdentifier,
+        action_code: EQoreAppActionCode.ACTION,
         swagger_path: `${path}/${method.toUpperCase()}`,
         display_name:
           // @ts-expect-error no idea whats going on here, will fix later
@@ -158,9 +160,9 @@ export const getPropertyOfSchemaData = (
  */
 export const mapActionsToApp = (
   app: keyof Translation['apps'],
-  actions: Record<string, TQorePartialAction> | TQorePartialAction[],
+  actions: Record<string, TQorePartialNonEventAction> | TQorePartialNonEventAction[],
   locale: Locales
-): TQoreAppAction[] => {
+): TQoreAppNonEventAction[] => {
   return Object.entries(actions).map(([_a, action]) => ({
     ...omit(action, OMMITTED_FIELDS),
 
@@ -182,7 +184,7 @@ export const mapActionsToApp = (
       L[locale].apps[app].actions[action.action as unknown].longDesc() ||
       capitalize(action.action.replace(/_/g, ' ')),
     app,
-    action_code: 2,
+    action_code: EQoreAppActionCode.ACTION,
 
     options:
       'options' in action
