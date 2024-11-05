@@ -546,39 +546,37 @@ public class TypeScriptActionInterface {
                 "to": seconds(io_timeout),
             };
 
-            child = new TypeScriptActionWebhookEventDataProvider(action.action, event_id, event_info, method,
-                webhook_register, webhook_auth, webhook_perms);
-            rv = AES_WH_EVENT;
-        } else {
-            auto callback = remove action.event_function;
-            if (!callback.callp()) {
-                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"webhook_register\" "
+            auto webhook_deregister_code = remove action.webhook_deregister;
+            if (!webhook_deregister_code.callp()) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"webhook_deregister\" "
                     "attribute; got type %y; expecting a callable value", action.app, action.action,
-                    callback.fullType());
+                    webhook_deregister_code.fullType());
             }
 
+            hash<AsyncCallInfo> webhook_deregister = <AsyncCallInfo>{
+                "label": sprintf("Webhook deregistration function for app %y action %y", app.name, action.action),
+                "pool": pool,
+                "async_call": webhook_deregister_code,
+                "to": seconds(io_timeout),
+            };
+
+            child = new TypeScriptActionWebhookEventDataProvider(action.action, event_id, event_info, method,
+                webhook_register, webhook_deregister, webhook_auth, webhook_perms);
+            rv = AES_WH_EVENT;
+        } else {
+            auto event_function = remove action.event_function;
+            if (!event_function.callp()) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"event_function\" "
+                    "attribute; got type %y; expecting a callable value", action.app, action.action,
+                    event_function.fullType());
+            }
             hash<AsyncCallInfo> event = <AsyncCallInfo>{
                 "label": sprintf("Webhook event function for app %y action %y", app.name, action.action),
                 "pool": pool,
-                "async_call": callback,
+                "async_call": event_function,
                 "to": seconds(io_timeout),
             };
-
-            callback = remove action.stop_function;
-            if (!callback.callp()) {
-                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"webhook_register\" "
-                    "attribute; got type %y; expecting a callable value", action.app, action.action,
-                    callback.fullType());
-            }
-
-            hash<AsyncCallInfo> stop = <AsyncCallInfo>{
-                "label": sprintf("Webhook event stop function for app %y action %y", app.name, action.action),
-                "pool": pool,
-                "async_call": callback,
-                "to": seconds(io_timeout),
-            };
-
-            child = new TypeScriptActionEventDataProvider(action.action, event_id, event_info, event, stop);
+            child = new TypeScriptActionEventDataProvider(action.action, event_id, event_info, event);
             rv = AES_JS_EVENT;
         }
 

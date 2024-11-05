@@ -37,6 +37,163 @@ const en = {
       displayName: 'Stripe',
       shortDesc: 'Collection of actions to interact with Stripe API',
       longDesc: 'Collection of actions to interact with Stripe API',
+      actions: {
+        GetAccount: {
+          displayName: 'Get account details',
+          shortDesc: 'Retrieves the details of the account.',
+        },
+        PostAccountLinks: {
+          displayName: 'Create account links',
+          shortDesc:
+            'Creates a url that the platform can redirect their user to take them through the Connect Onboarding flow.',
+        },
+        DeleteAccountsAccount: {
+          displayName: 'Delete account',
+          shortDesc: 'Deletes the specified account.',
+        },
+        GetAccountsAccount: {
+          displayName: 'Retrieve account',
+          shortDesc: 'Retrieves the details of an account.',
+        },
+        PostAccountsAccount: {
+          displayName: 'Update account',
+          shortDesc:
+            'Updates the specified account by setting the values of the parameters passed.',
+        },
+        GetAccountsAccountExternalAccounts: {
+          displayName: 'List external accounts',
+          shortDesc: 'Returns a list of external accounts associated with the Stripe account.',
+        },
+        PostAccountsAccountExternalAccounts: {
+          displayName: 'Create external account',
+          shortDesc: 'Create an external account for a connected account.',
+        },
+        PostAccountsAccountLoginLinks: {
+          displayName: 'Create login links',
+          shortDesc:
+            'Creates a short-lived link that can be used to log in to the Stripe Dashboard.',
+        },
+        GetAccountsAccountPeople: {
+          displayName: 'List people',
+          shortDesc: 'Returns a list of people associated with the account.',
+        },
+        PostAccountsAccountPeople: {
+          displayName: 'Create person',
+          shortDesc: 'Creates a new person.',
+        },
+        GetBalance: {
+          displayName: 'Retrieve balance',
+          shortDesc: 'Retrieves the current account balance.',
+        },
+        GetBalanceHistory: {
+          displayName: 'List balance history',
+          shortDesc:
+            'Returns a list of transactions that have contributed to the Stripe account balance.',
+        },
+        GetBalanceHistoryId: {
+          displayName: 'Retrieve balance history',
+          shortDesc: 'Retrieves the details of a balance history item.',
+        },
+        GetCharges: {
+          displayName: 'List charges',
+          shortDesc: 'Returns a list of charges you have previously created.',
+        },
+        PostCharges: {
+          displayName: 'Create charge',
+          shortDesc: 'Creates a new charge object.',
+        },
+        GetChargesCharge: {
+          displayName: 'Retrieve charge',
+          shortDesc: 'Retrieves the details of a charge.',
+        },
+        PostChargesCharge: {
+          displayName: 'Update charge',
+          shortDesc: 'Updates the specified charge by setting the values of the parameters passed.',
+        },
+        GetCustomers: {
+          displayName: 'List customers',
+          shortDesc: 'Returns a list of your customers.',
+        },
+        PostCustomers: {
+          displayName: 'Create customer',
+          shortDesc: 'Creates a new customer object.',
+        },
+        DeleteCustomersCustomer: {
+          displayName: 'Delete customer',
+          shortDesc: 'Deletes the specified customer.',
+        },
+        GetCustomersCustomer: {
+          displayName: 'Retrieve customer',
+          shortDesc: 'Retrieves the details of an existing customer.',
+        },
+        PostCustomersCustomer: {
+          displayName: 'Update customer',
+          shortDesc:
+            'Updates the specified customer by setting the values of the parameters passed.',
+        },
+        GetCustomersCustomerBalanceTransactions: {
+          displayName: 'List balance transactions',
+          shortDesc:
+            'Returns a list of transactions that have contributed to the customers account balance.',
+        },
+        PostCustomersCustomerBalanceTransactions: {
+          displayName: 'Create balance transaction',
+          shortDesc: 'Creates a new balance transaction.',
+        },
+        GetCustomersCustomerSources: {
+          displayName: 'List sources',
+          shortDesc: 'Returns a list of sources for the customer.',
+        },
+        PostCustomersCustomerSources: {
+          displayName: 'Create source',
+          shortDesc: 'Creates a new source object.',
+        },
+        GetCustomersCustomerSubscriptions: {
+          displayName: 'List subscriptions',
+          shortDesc: 'Returns a list of subscriptions for a customer.',
+        },
+        PostCustomersCustomerSubscriptions: {
+          displayName: 'Create subscription',
+          shortDesc: 'Creates a new subscription on an existing customer.',
+        },
+        GetInvoices: {
+          displayName: 'List invoices',
+          shortDesc: 'Returns a list of your invoices.',
+        },
+        PostInvoices: {
+          displayName: 'Create invoice',
+          shortDesc: 'Creates a draft invoice for a given customer.',
+        },
+        DeleteInvoicesInvoice: {
+          displayName: 'Delete invoice',
+          shortDesc: 'Deletes the specified invoice.',
+        },
+        GetInvoicesInvoice: {
+          displayName: 'Retrieve invoice',
+          shortDesc: 'Retrieves the details of an existing invoice.',
+        },
+        PostInvoicesInvoice: {
+          displayName: 'Update invoice',
+          shortDesc:
+            'Updates the specified invoice by setting the values of the parameters passed.',
+        },
+        GetPaymentIntents: {
+          displayName: 'List payment intents',
+          shortDesc: 'Returns a list of payment intents.',
+        },
+        PostPaymentIntents: {
+          displayName: 'Create payment intent',
+          shortDesc: 'Creates a new payment intent.',
+        },
+        GetRefunds: {
+          displayName: 'List refunds',
+          shortDesc: 'Returns a list of all refunds you’ve previously created.',
+        },
+        PostRefunds: {
+          displayName: 'Create refund',
+          shortDesc: 'Creates a new refund object.',
+        },
+      },
     },
     Github: {
       displayName: 'Github',
@@ -52,6 +209,59 @@ const en = {
       displayName: 'Docusign eSignature',
       shortDesc: 'Collection of actions to interact with Esignature API',
       longDesc: 'Collection of actions to interact with Esignature API',
+      actions: {
+        Brands_GetBrands: {
+          displayName: 'Get Brands',
+        },
+        Brands_PostBrands: {
+          displayName: 'Create Brand',
+        },
+        Brands_DeleteBrands: {
+          displayName: 'Delete Brand',
+        },
+        Envelopes_GetEnvelopes: {
+          displayName: 'Get Envelopes',
+        },
+        Envelopes_PostEnvelopes: {
+          displayName: 'Create Envelopes',
+        },
+        Envelopes_GetEnvelope: {
+          displayName: 'Get Envelope',
+        },
+        Envelopes_PutEnvelope: {
+          displayName: 'Update Envelope',
+        },
+        Documents_GetDocuments: {
+          displayName: 'Get Documents',
+        },
+        Documents_PutDocuments: {
+          displayName: 'Update Documents',
+        },
+        Documents_DeleteDocuments: {
+          displayName: 'Delete Documents',
+        },
+        Documents_GetDocument: {
+          displayName: 'Get Document',
+        },
+        Documents_PutDocument: {
+          displayName: 'Update Document',
+        },
+        Recipients_GetRecipients: {
+          displayName: 'Get Recipients',
+        },
+        Recipients_PutRecipients: {
+          displayName: 'Update Recipients',
+        },
+        Recipients_PostRecipients: {
+          displayName: 'Add Recipients',
+        },
+        Recipients_DeleteRecipients: {
+          displayName: 'Delete Recipients',
+        },
+        Views_PostEnvelopeRecipientView: {
+          displayName: 'Create Recipient View',
+        },
+      },
     },
     Zendesk: {
       displayName: 'Zendesk',

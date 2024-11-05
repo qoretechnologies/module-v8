@@ -461,7 +461,7 @@ exports.actionsCatalogue = {
                 "stop_function"
                 It must be an HTTP method that the remote server will use when posting a value on the webhook
 
-                In this case, "webhook_register" must also be defined
+                In this case, "webhook_register" and "webhook_deregister" must also be defined
             */
             "webhook_method": "POST",
             // webbook_auth?: int
@@ -477,7 +477,7 @@ exports.actionsCatalogue = {
             "webhook_perms": null,
             // webbook_register?: function(ctx?: object, url: string) {}
             /**
-                @param ctx?: object -> with the following properties:
+                @param ctx: object -> with the following properties:
                 - conn_name?: string -> the connection name, if any is defined
                 - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
                 - opts?: object -> a data object with option values set for the current action
@@ -487,6 +487,19 @@ exports.actionsCatalogue = {
             */
             "webhook_register": function(ctx, url) {
                 // this function should register the webhook with the server
+            },
+            // webbook_deregister?: function(ctx?: object, url: string) {}
+            /**
+                @param ctx: object -> with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+                @param url: string -> the URL the webhook is reachable on
+
+                @note the function here will be called with no "this" context; "this" cannot be used in this function
+            */
+            "webhook_deregister": function(ctx, url) {
+                // this function should deregister the webhook with the server
             },
             // event_info: object
             /** The description of the event that the action will generate with the following keys
@@ -526,26 +539,19 @@ exports.actionsCatalogue = {
                 - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
                 @param update: function (event_data: object) -> this function should be called when events are
                 received to post the event to the observer
+                @param should_stop: function (): bool -> this function will return true when event polling should stop
 
                 @note the function here will be called with no "this" context; "this" cannot be used in this function
             */
-            "event_function": function(ctx, update) {
+            "event_function": async function(ctx, update, should_stop) {
                 update({
-                    "name": "test",
-                    "code": 1,
+                    "name": "name-1",
+                    "code": 1234,
                 });
-            },
-            /** "stop_function" is required when "action_code" == DPAT_EVENT and "webhook_method" is not present
-                This function will stop "event_function()" from running; after this function is called,
-                "event_function()" should return
-
-                @param ctx?: object with the following properties:
-                - conn_name?: string -> the connection name, if any is defined
-                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
-
-                @note the function here will be called with no "this" context; "this" cannot be used in this function
-            */
-            "stop_function": function(ctx) {
+                while (!should_stop()) {
+                    // sleep for 100ms
+                    setTimeout(function() {}, 100);
+                }
             },
             "event_info": {
                 "desc": "Data event",

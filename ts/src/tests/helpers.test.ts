@@ -15,10 +15,10 @@ import eSignature from '../schemas/esignature.swagger.json';
 
 describe('Helpers tests', () => {
   it('Properly parses a swagger schema and creates actions', () => {
-    const actions: IQorePartialAppActionWithSwaggerPath[] = buildActionsFromSwaggerSchema(
-      eSignature as OpenAPIV2.Document,
-      ['/v2.1/accounts', '/v2.1/accounts/{accountId}/connect/oauth']
-    );
+    const actions: IQorePartialAppActionWithSwaggerPath[] = buildActionsFromSwaggerSchema({
+      schema: eSignature as OpenAPIV2.Document,
+      allowedPaths: { '/v2.1/accounts': {}, '/v2.1/accounts/{accountId}/connect/oauth': {} },
+    });
 
     expect(actions).toHaveLength(5);
     expect(actions[0].action).toBe('Accounts_PostAccounts');
@@ -29,17 +29,22 @@ describe('Helpers tests', () => {
 
   it('Properly parses a swagger schema and creates actions with filtered methods', () => {
     const actionsWithoutFilter: IQorePartialAppActionWithSwaggerPath[] =
-      buildActionsFromSwaggerSchema(eSignature as OpenAPIV2.Document, [
-        '/v2.1/accounts/{accountId}',
-      ]);
+      buildActionsFromSwaggerSchema({
+        schema: eSignature as OpenAPIV2.Document,
+        allowedPaths: {
+          '/v2.1/accounts/{accountId}': {},
+        },
+      });
 
     expect(actionsWithoutFilter).toHaveLength(2);
     expect(actionsWithoutFilter[0].action).toBe('Accounts_GetAccount');
     expect(actionsWithoutFilter[1].action).toBe('Accounts_DeleteAccount');
 
     const actionsWithFilter: IQorePartialAppActionWithSwaggerPath[] = buildActionsFromSwaggerSchema(
-      eSignature as OpenAPIV2.Document,
-      ['/v2.1/accounts/{accountId}:DELETE']
+      {
+        schema: eSignature as OpenAPIV2.Document,
+        allowedPaths: { '/v2.1/accounts/{accountId}': { DELETE: {} } },
+      }
     );
 
     expect(actionsWithFilter).toHaveLength(1);
@@ -48,8 +53,16 @@ describe('Helpers tests', () => {
 
   it('Properly parses a swagger schema and creates actions with changed action data', () => {
     const actionsWithFilter: IQorePartialAppActionWithSwaggerPath[] = buildActionsFromSwaggerSchema(
-      eSignature as OpenAPIV2.Document,
-      [{ path: '/v2.1/accounts/{accountId}:DELETE', display_name: 'Testing name' }]
+      {
+        schema: eSignature as OpenAPIV2.Document,
+        allowedPaths: {
+          '/v2.1/accounts/{accountId}': {
+            DELETE: {
+              display_name: 'Testing name',
+            },
+          },
+        },
+      }
     );
 
     expect(actionsWithFilter).toHaveLength(1);
@@ -61,17 +74,20 @@ describe('Helpers tests', () => {
   it('Properly parses a swagger schema and creates actions with changed data using processor', () => {
     let newDisplayName;
     const actionsWithFilter: IQorePartialAppActionWithSwaggerPath[] = buildActionsFromSwaggerSchema(
-      eSignature as OpenAPIV2.Document,
-      [
-        {
-          path: '/v2.1/accounts/{accountId}:DELETE',
-          processor: (data) => {
-            newDisplayName = data.summary;
+      {
+        schema: eSignature as OpenAPIV2.Document,
+        allowedPaths: {
+          '/v2.1/accounts/{accountId}': {
+            DELETE: {
+              processor: (data) => {
+                newDisplayName = data.summary;
 
-            return { display_name: data.summary };
+                return { display_name: data.summary };
+              },
+            },
           },
         },
-      ]
+      }
     );
 
     expect(actionsWithFilter).toHaveLength(1);

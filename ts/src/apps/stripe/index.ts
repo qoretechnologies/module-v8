@@ -10,7 +10,11 @@ import { Locales } from '../../i18n/i18n-types';
 import stripe from '../../schemas/stripe.swagger.json';
 import { STRIPE_ALLOWED_PATHS, STRIPE_APP_NAME } from './constants';
 
-export const STRIPE_ACTIONS = buildActionsFromSwaggerSchema(stripe as any, STRIPE_ALLOWED_PATHS);
+export const STRIPE_ACTIONS = buildActionsFromSwaggerSchema({
+  schema: stripe as any,
+  allowedPaths: STRIPE_ALLOWED_PATHS,
+  app: STRIPE_APP_NAME,
+});
 
 /*
  * Returns the app object with all the actions ready to use, using translations

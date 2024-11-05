@@ -32,10 +32,11 @@ export const ZENDESK_CONN_OPTIONS = {
   },
 } satisfies IQoreConnectionOptions;
 
-export const ZENDESK_ACTIONS = buildActionsFromSwaggerSchema(
-  ZendeskSchema as any,
-  ZENDESK_ALLOWED_PATHS
-);
+export const ZENDESK_ACTIONS = buildActionsFromSwaggerSchema({
+  schema: ZendeskSchema as any,
+  allowedPaths: ZENDESK_ALLOWED_PATHS,
+  app: ZENDESK_APP_NAME,
+});
 
 /*
  * Returns the app object with all the actions ready to use, using translations

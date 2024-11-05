@@ -8,7 +8,11 @@ import jira from '../../schemas/jira.swagger.json';
 import { JIRA_ALLOWED_PATHS, JIRA_APP_NAME, JIRA_CONN_OPTIONS } from './constants';
 import { createSwaggerPaths } from '../../global/helpers/index';
 
-export const JIRA_ACTIONS = buildActionsFromSwaggerSchema(jira as any, JIRA_ALLOWED_PATHS);
+export const JIRA_ACTIONS = buildActionsFromSwaggerSchema({
+  schema: jira as any,
+  allowedPaths: JIRA_ALLOWED_PATHS,
+  app: JIRA_APP_NAME,
+});
 
 /*
  * Returns the app object with all the actions ready to use, using translations
