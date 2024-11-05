@@ -235,7 +235,7 @@ exports.actionsCatalogue = {
                     "desc": "A count of something",
                     "required": true,
                     "preselected": true,
-                    "get_allowed_values": function() {
+                    "get_allowed_values": function(ctx) {
                         return [
                             {
                                 "display_name": "1",
@@ -261,7 +261,7 @@ exports.actionsCatalogue = {
                     "required": true,
                     "preselected": true,
                     "depends_on": ["count"],
-                    "get_allowed_values": function() {
+                    "get_allowed_values": function(ctx) {
                         return [
                             {
                                 "display_name": "this",
@@ -447,7 +447,7 @@ exports.actionsCatalogue = {
             */
             "override_options": {
                 'id': {
-                    "get_allowed_values": function() {
+                    "get_allowed_values": function(ctx) {
                         return [
                             {
                                 "display_name": "1",
