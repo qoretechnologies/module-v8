@@ -49,8 +49,11 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         #! Path vars
         *hash<string, bool> path_vars;
 
-        #! Info on flattenedhash<string, list<string>> request types: top-level key -> actual location
+        #! Info on flattened request types: top-level key -> actual location
         *hash<string, list<string>> reqmap;
+
+        #! Reverse map for flattened request types: dotted location -> top-level key
+        *hash<string, string> rreqmap;
 
         #! Info on flattened response types: top-level key -> actual location
         #hash<string, list<string>> resmap;
@@ -99,6 +102,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                     map newreq.addField($1), (fields = fields - (keys newreq.getFields())).iterator();
                 }
                 map reqmap{$1} = l, keys fields;
+                map rreqmap{l.join(".")} = $1, keys fields;
             };
             bool stop;
             # process body args
@@ -160,6 +164,29 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                     "required": True,
                 },
             })), keys path_vars, !query_set{$1};
+        }
+    }
+
+    overrideOptions(reference<hash<auto>> action, hash<auto> opts, JavaScriptProgramPool pool) {
+        foreach hash<auto> i in (opts.pairIterator()) {
+            # find option to update
+            string k = rreqmap{i.key} ?? i.key;
+            *reference<hash<ActionOptionInfo>> opt = \action.options{k};
+            if (!opt) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"override_options\" "
+                    "property; cannot find option %y to override; known top-level options: %y", action.app,
+                    action.action, i.key, keys action.options);
+            }
+            TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, i.key, \i.value, pool);
+            if (exists i.value.ref_data) {
+                opt.ref_data = i.value.ref_data;
+            }
+            if (i.value.type) {
+                opt.type = TypeScriptActionInterface::getType(i.value.type, i.value.required);
+            }
+            if (i.value.allowed_values) {
+                opt.allowed_values = map cast<hash<AllowedValueInfo>>($1), i.value.allowed_values;
+            }
         }
     }
 

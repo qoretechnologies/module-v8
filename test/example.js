@@ -440,7 +440,31 @@ exports.actionsCatalogue = {
             "short_desc": "Get pet",
             "desc": "Get pet",
             "action_code": 2,  // DPAT_API == 2
-            "swagger_path": "pet/{id}/GET"
+            "swagger_path": "pet/{id}/GET",
+            /** override_options?: object -> allows options to be overridden; keys are non-optimized request property
+                paths and must refer to a property that will be presented as an action option after flattening /
+                optimization. The attributes of the object are handled like action option attributes
+            */
+            "override_options": {
+                'id': {
+                    "get_allowed_values": function() {
+                        return [
+                            {
+                                "display_name": "1",
+                                "short_desc": "1",
+                                "desc": "1",
+                                "value": 1,
+                            },
+                            {
+                                "display_name": "2",
+                                "short_desc": "2",
+                                "desc": "2",
+                                "value": 2,
+                            },
+                        ];
+                    },
+                },
+            }
         });
 
         api.registerAction({

@@ -275,8 +275,19 @@ var obj = {
         AbstractDataProviderType t = prov.getRequestType();
         assertEq(6, t.getFields().size());
 
-        #prov = TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("get-pet");
-        #prov.doRequest({"id": 1});
+        prov = TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("get-pet");
+        t = prov.getRequestType();
+        {
+            *hash<string, AbstractDataField> fields = t.getFields();
+            assertEq(1, fields.size());
+            *AbstractDataField f = fields.id;
+            assertTrue(exists f);
+        }
+
+        actioninfo = DataProviderActionCatalog::getAppActionEx("js-swagger-test", "get-pet");
+        assertEq("get-pet", actioninfo.action);
+        assertEq("id", actioninfo.options.id.ref_data);
+        assertEq((1, 2), (map $1.value, prov.getReferenceData("id")));
 
         string cname = TypeScriptActionInterface::createConnection("js-swagger-test", {} + {
             "opts": {
