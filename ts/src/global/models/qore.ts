@@ -436,6 +436,7 @@ export interface IQoreAppActionWithWebhookBase extends IQoreAppActionWithEventOr
   webhook_method: TWebhookHttpMethod;
   webhook_auth?: EQoreAppActionWebhookAuthType;
   webhook_register: (context: TQoreAppActionFunctionContext, url: string) => void;
+  webhook_deregister: (context: TQoreAppActionFunctionContext, url: string) => void;
   event_function?: never;
 }
 
@@ -456,11 +457,13 @@ export type TQoreAppActionWithWebhook =
 export interface IQoreAppActionWithEvent extends IQoreAppActionWithEventOrWebhook {
   event_function: (
     context: TQoreAppActionFunctionContext,
-    update: (event_data: Record<string, any>) => void
+    update: (event_data: Record<string, any>) => void,
+    should_stop: () => boolean
   ) => void;
   webhook_method?: never;
   webhook_auth?: never;
   webhook_register?: never;
+  webhook_deregister?: never;
   webhook_perms?: never;
 }
 
