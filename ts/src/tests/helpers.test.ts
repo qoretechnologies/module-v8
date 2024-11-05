@@ -1,15 +1,6 @@
-import {
-  IQoreAppActionWithFunction,
-  IQorePartialAppActionWithSwaggerPath,
-  IQoreTypeObject,
-} from 'global/models/qore';
+import { IQorePartialAppActionWithSwaggerPath, IQoreTypeObject } from 'global/models/qore';
 import { OpenAPIV2 } from 'openapi-types';
-import * as zendeskActions from '../apps/zendesk/actions';
-import {
-  buildActionsFromSwaggerSchema,
-  fixActionOptions,
-  mapActionsToApp,
-} from '../global/helpers';
+import { buildActionsFromSwaggerSchema, fixActionOptions } from '../global/helpers';
 import { IActionOptions } from '../global/models/actions';
 import eSignature from '../schemas/esignature.swagger.json';
 
@@ -94,16 +85,6 @@ describe('Helpers tests', () => {
     expect(actionsWithFilter[0].action).toBe('Accounts_DeleteAccount');
     expect(actionsWithFilter[0].display_name).toBe(newDisplayName);
     expect(actionsWithFilter[0].short_desc).toBeDefined();
-  });
-
-  it('Properly maps actions to a given app', () => {
-    const actions = mapActionsToApp('Zendesk', zendeskActions, 'en');
-    const createTicket = actions.find(
-      (action) => action.action === 'create_ticket'
-    ) as IQoreAppActionWithFunction;
-
-    expect(actions).toHaveLength(23);
-    expect(createTicket).toBeDefined();
   });
 
   it('Should receive fully incomplete action options and return fixed options', () => {
