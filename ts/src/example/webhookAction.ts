@@ -1,7 +1,7 @@
 import {
   EQoreAppActionCode,
   EQoreAppActionWebhookAuthType,
-  TQoreAppActionWithWebhook,
+  TQoreAppAction,
 } from '../global/models/qore';
 
 export const testActionWithWebhook = {
@@ -29,4 +29,4 @@ export const testActionWithWebhook = {
     },
   },
   webhook_perms: ['test'],
-} satisfies TQoreAppActionWithWebhook;
+} satisfies TQoreAppAction;

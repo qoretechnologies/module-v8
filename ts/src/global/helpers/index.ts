@@ -10,9 +10,9 @@ import {
   IQoreTypeObject,
   TAllowedPaths,
   THttpMethod,
-  TQoreAppAction,
+  TQoreAppNonEventAction,
   TQoreOptions,
-  TQorePartialAction,
+  TQorePartialNonEventAction,
   TQoreResponseType,
   TStringWithFirstUpperCaseCharacter,
 } from '../../global/models/qore';
@@ -115,6 +115,7 @@ export const buildActionsFromSwaggerSchema = ({
 
       const action: IQorePartialAppActionWithSwaggerPath = {
         action: actionIdentifier,
+        action_code: EQoreAppActionCode.ACTION,
         swagger_path: `${path}/${method.toUpperCase()}`,
         display_name:
           // @ts-expect-error no idea whats going on here, will fix later
@@ -159,9 +160,9 @@ export const getPropertyOfSchemaData = (
  */
 export const mapActionsToApp = (
   app: keyof Translation['apps'],
-  actions: Record<string, TQorePartialAction> | TQorePartialAction[],
+  actions: Record<string, TQorePartialNonEventAction> | TQorePartialNonEventAction[],
   locale: Locales
-): TQoreAppAction[] => {
+): TQoreAppNonEventAction[] => {
   return Object.entries(actions).map(([_a, action]) => ({
     ...omit(action, OMMITTED_FIELDS),
 

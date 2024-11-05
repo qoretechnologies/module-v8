@@ -1,11 +1,11 @@
-import { EQoreAppActionCode, TQoreAppAction } from '../global/models/qore';
+import { EQoreAppActionCode, IQoreAppActionWithEvent } from '../global/models/qore';
 
 export const testActionWithEvent = {
   app: 'test',
   action: 'test',
   action_code: EQoreAppActionCode.EVENT,
-  event_function: (context, update) => {
-    console.log('Event:', context, update({ id: 1 }));
+  event_function: (context, update, should_stop) => {
+    console.log('Event function called with:', context, update, should_stop);
   },
   event_info: {
     desc: 'Test',
@@ -19,4 +19,4 @@ export const testActionWithEvent = {
       },
     },
   },
-} satisfies TQoreAppAction;
+} satisfies IQoreAppActionWithEvent;

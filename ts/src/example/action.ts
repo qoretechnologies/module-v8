@@ -4,8 +4,7 @@ import {
   TActionData,
   TActionResponse,
 } from 'global/models/actions';
-import { zendeskRequest } from '../apps/zendesk/client';
-import { TQorePartialAction } from '../global/models/qore';
+import { EQoreAppActionCode, TQorePartialAction } from '../global/models/qore';
 import { L } from '../i18n/i18n-node';
 
 const options = {
@@ -49,19 +48,29 @@ const deleteAttachment = async ({
   token,
 }: TActionData<typeof options>): Promise<TActionResponse<typeof response_type>> => {
   try {
-    const data = await zendeskRequest(`/uploads/${token}`, 'DELETE');
-
-    return data;
+    return {
+      channel: {
+        id: token,
+      },
+    };
   } catch (error) {
-    console.error('Error delete attachment:', error);
+    console.error('Error deleting attachment:', error);
     throw error;
   }
 };
 
 export default {
   action: 'delete-attachment',
+  action_code: EQoreAppActionCode.ACTION,
   api_function: deleteAttachment,
   options,
+
+  override_options: {
+    token: {
+      required: true,
+      short_desc: 'Token of the attachment to delete',
+    },
+  },
   response_type,
   _localizationGroup: 'attachments',
 } satisfies TQorePartialAction<typeof options, typeof response_type>;
