@@ -1,6 +1,6 @@
 import { EQoreAppActionCode, TQoreAppAction } from '../global/models/qore';
 
-const testActionWithEvent = {
+export const testActionWithEvent = {
   app: 'test',
   action: 'test',
   action_code: EQoreAppActionCode.EVENT,
