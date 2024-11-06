@@ -507,6 +507,22 @@ public class TypeScriptActionInterface {
 
         timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
 
+        if (*hash<auto> opts = remove action.options) {
+            *hash<string, hash<AsyncCallInfo>> omap;
+            *hash<string, hash<AsyncCallInfo>> dmap;
+            action.options = TypeScriptActionInterface::getOptions(app, \action, opts, \omap, \dmap, pool);
+            if (omap) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"options\" "
+                    "attribute; webhook actions do not support get_allowed_value() callbacks", action.app,
+                    action.action);
+            }
+            if (dmap) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"options\" "
+                    "attribute; webhook actions do not support get_dependent_options() callbacks", action.app,
+                    action.action);
+            }
+        }
+
         TypeScriptActionEventDataProviderBase child;
 
         string rv;

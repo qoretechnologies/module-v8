@@ -40,6 +40,9 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         *int webhook_auth;
         *list<auto> webhook_perms;
 
+        #! Any value returned by webhook_register()
+        *hash<auto> reginfo;
+
         #! The URL returned after registering the webhook
         string url;
     }
@@ -71,7 +74,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         info("Registered webhook with URL %y", url);
 
         debug("Registering webhook for data provider %y URL %y", name, url);
-        getAsyncValue(webhook_register, getCallContextInfo(), url);
+        reginfo = getAsyncValue(webhook_register, getCallContextInfo(ImpliedArgumentHelper::get()), url);
         debug("Webhook for data provider %y registered with URL %y", name, url);
     }
 
@@ -84,7 +87,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
 
     private stop() {
         if (url.val()) {
-            getAsyncValue(webhook_deregister, getCallContextInfo(), url);
+            getAsyncValue(webhook_deregister, getCallContextInfo(), url, reginfo);
             TypeScriptActionInterface::deleteWebhook(url);
             delete url;
         }

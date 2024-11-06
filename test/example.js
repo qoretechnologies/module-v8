@@ -480,6 +480,17 @@ exports.actionsCatalogue = {
             "desc": "Webhook event example action",
             // action_code: int
             "action_code": 1,  // DPAT_EVENT == 1
+            // event action options as documented above
+            "options": {
+                "bval": {
+                    "type": "bool",
+                    "display_name": "Boolean Value",
+                    "short_desc": "A boolean value",
+                    "desc": "A boolean value",
+                    "required": true,
+                    "preselected": true,
+                }
+            },
             // webbook_method?: string
             /** "webhook_method" is required when action_code is 1 (DPAT_EVENT), and there is no "event_function" and
                 "stop_function"
@@ -499,7 +510,7 @@ exports.actionsCatalogue = {
                 QAUTH_QORUS)
             */
             "webhook_perms": null,
-            // webbook_register?: function(ctx?: object, url: string) {}
+            // webbook_register?: function(ctx?: object, url: string): object | void {}
             /**
                 @param ctx: object -> with the following properties:
                 - conn_name?: string -> the connection name, if any is defined
@@ -507,9 +518,14 @@ exports.actionsCatalogue = {
                 - opts?: object -> a data object with option values set for the current action
                 @param url: string -> the URL the webhook is reachable on
 
+                @return an optional object that will be passed as the third argument to "webhook_deregister"
+
                 @note the function here will be called with no "this" context; "this" cannot be used in this function
             */
             "webhook_register": function(ctx, url) {
+                if (!ctx.opts.bval) {
+                    throw new Error();
+                }
                 // this function should register the webhook with the server
             },
             // webbook_deregister?: function(ctx?: object, url: string) {}
@@ -519,10 +535,11 @@ exports.actionsCatalogue = {
                 - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
                 - opts?: object -> a data object with option values set for the current action
                 @param url: string -> the URL the webhook is reachable on
+                @param reginfo?: object -> any value returned from the "webhook_register()" function
 
                 @note the function here will be called with no "this" context; "this" cannot be used in this function
             */
-            "webhook_deregister": function(ctx, url) {
+            "webhook_deregister": function(ctx, url, reginfo) {
                 // this function should deregister the webhook with the server
             },
             // event_info: object
