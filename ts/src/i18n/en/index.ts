@@ -267,6 +267,530 @@ const en = {
       displayName: 'Zendesk',
       shortDesc: 'Collection of actions to interact with Zendesk API',
       longDesc: 'Collection of actions to interact with Zendesk API',
+      triggers: {
+        new_user: {
+          displayName: 'New User',
+          shortDesc: 'Triggers when a new user is created',
+          desc: 'Triggers when a new user is created',
+          event_info: {
+            desc: 'New User event data',
+            type: {
+              version: {
+                displayName: 'Version',
+                shortDesc: 'Version of the webhook',
+                desc: 'The version of the webhook',
+              },
+              id: {
+                displayName: 'ID',
+                shortDesc: 'Event ID',
+                desc: 'Unique identifier for the event',
+              },
+              'detail-type': {
+                displayName: 'Detail Type',
+                shortDesc: 'Event detail type',
+                desc: 'Type of event detail',
+              },
+              source: {
+                displayName: 'Source',
+                shortDesc: 'Event source',
+                desc: 'Event source identifier',
+              },
+              account: {
+                displayName: 'Account ID',
+                shortDesc: 'Account ID',
+                desc: 'ID of the account associated with the event',
+              },
+              time: {
+                displayName: 'Event Time',
+                shortDesc: 'Event timestamp',
+                desc: 'The timestamp of the event',
+              },
+              region: {
+                displayName: 'Region',
+                shortDesc: 'AWS region',
+                desc: 'The AWS region of the event',
+              },
+              resources: {
+                displayName: 'Resources',
+                shortDesc: 'Event resources',
+                desc: 'Resources associated with the event',
+              },
+              detail: {
+                displayName: 'Detail',
+                shortDesc: 'Event details',
+                desc: 'Detailed information about the event',
+                user_event: {
+                  displayName: 'User Event',
+                  shortDesc: 'User event details',
+                  desc: 'Details of the user event',
+                  meta: {
+                    displayName: 'Meta',
+                    shortDesc: 'Event metadata',
+                    desc: 'Metadata about the event occurrence',
+                    version: {
+                      displayName: 'Meta Version',
+                      shortDesc: 'Metadata version',
+                      desc: 'Version of the event metadata',
+                    },
+                    occurred_at: {
+                      displayName: 'Occurred At',
+                      shortDesc: 'Event occurrence time',
+                      desc: 'Timestamp of event occurrence',
+                    },
+                    ref: {
+                      displayName: 'Reference',
+                      shortDesc: 'Event reference ID',
+                      desc: 'Reference ID for the event',
+                    },
+                    sequence: {
+                      displayName: 'Sequence',
+                      shortDesc: 'Event sequence',
+                      desc: 'Sequence data for the event',
+                      id: {
+                        displayName: 'Sequence ID',
+                        shortDesc: 'Event sequence ID',
+                        desc: 'Sequence ID of the event',
+                      },
+                      position: {
+                        displayName: 'Position',
+                        shortDesc: 'Sequence position',
+                        desc: 'Position of the event in the sequence',
+                      },
+                      total: {
+                        displayName: 'Total',
+                        shortDesc: 'Total sequence events',
+                        desc: 'Total count of events in the sequence',
+                      },
+                    },
+                  },
+                  type: {
+                    displayName: 'Event Type',
+                    shortDesc: 'User event type',
+                    desc: 'Type of user event',
+                  },
+                  user: {
+                    displayName: 'User',
+                    shortDesc: 'User details',
+                    desc: 'Information about the user',
+                    id: {
+                      displayName: 'User ID',
+                      shortDesc: 'User ID',
+                      desc: 'Unique ID of the user',
+                    },
+                    external_id: {
+                      displayName: 'External ID',
+                      shortDesc: 'User external ID',
+                      desc: 'External identifier for the user',
+                    },
+                    role: {
+                      displayName: 'Role',
+                      shortDesc: 'User role',
+                      desc: 'Role of the user in the system',
+                    },
+                    email: {
+                      displayName: 'Email',
+                      shortDesc: 'User email',
+                      desc: 'Email address of the user',
+                    },
+                    created_at: {
+                      displayName: 'Created At',
+                      shortDesc: 'User creation time',
+                      desc: 'Creation timestamp of the user',
+                    },
+                    updated_at: {
+                      displayName: 'Updated At',
+                      shortDesc: 'User last update',
+                      desc: 'Last update timestamp of the user',
+                    },
+                    organization_id: {
+                      displayName: 'Organization ID',
+                      shortDesc: 'Organization ID',
+                      desc: 'ID of the organization associated with the user',
+                    },
+                    default_group_id: {
+                      displayName: 'Default Group ID',
+                      shortDesc: 'User default group ID',
+                      desc: 'Default group ID for the user',
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+        new_ticket: {
+          displayName: 'New Ticket',
+          shortDesc: 'Triggers when a new ticket is created',
+          desc: 'Triggers when a new ticket is created',
+          event_info: {
+            desc: 'New Ticket event data',
+            type: {
+              version: {
+                displayName: 'Version',
+                desc: 'The version of the webhook',
+                shortDesc: 'Version of the webhook',
+              },
+              id: {
+                displayName: 'ID',
+                desc: 'Unique identifier for the event',
+                shortDesc: 'Event ID',
+              },
+              'detail-type': {
+                displayName: 'Detail Type',
+                desc: 'Type of event detail',
+                shortDesc: 'Event detail type',
+              },
+              source: {
+                displayName: 'Source',
+                desc: 'Event source identifier',
+                shortDesc: 'Event source',
+              },
+              account: {
+                displayName: 'Account ID',
+                desc: 'ID of the account associated with the event',
+                shortDesc: 'Account ID',
+              },
+              time: {
+                displayName: 'Event Time',
+                desc: 'The timestamp of the event',
+                shortDesc: 'Event timestamp',
+              },
+              region: {
+                displayName: 'Region',
+                desc: 'The AWS region of the event',
+                shortDesc: 'AWS region',
+              },
+              resources: {
+                displayName: 'Resources',
+                desc: 'Resources associated with the event',
+                shortDesc: 'Event resources',
+              },
+              detail: {
+                displayName: 'Detail',
+                desc: 'Detailed information about the event',
+                shortDesc: 'Event details',
+                type: {
+                  ticket_event: {
+                    displayName: 'Ticket Event',
+                    desc: 'Details of the ticket event',
+                    shortDesc: 'Ticket event details',
+                    type: {
+                      meta: {
+                        displayName: 'Meta',
+                        desc: 'Metadata about the event occurrence',
+                        shortDesc: 'Event metadata',
+                        type: {
+                          version: {
+                            displayName: 'Meta Version',
+                            desc: 'Version of the event metadata',
+                            shortDesc: 'Metadata version',
+                          },
+                          occurred_at: {
+                            displayName: 'Occurred At',
+                            desc: 'Timestamp of event occurrence',
+                            shortDesc: 'Event occurrence time',
+                          },
+                          ref: {
+                            displayName: 'Reference',
+                            desc: 'Reference ID for the event',
+                            shortDesc: 'Event reference ID',
+                          },
+                          sequence: {
+                            displayName: 'Sequence',
+                            desc: 'Sequence data for the event',
+                            shortDesc: 'Event sequence',
+                            type: {
+                              id: {
+                                displayName: 'Sequence ID',
+                                desc: 'Sequence ID of the event',
+                                shortDesc: 'Event sequence ID',
+                              },
+                              position: {
+                                displayName: 'Position',
+                                desc: 'Position of the event in the sequence',
+                                shortDesc: 'Sequence position',
+                              },
+                              total: {
+                                displayName: 'Total',
+                                desc: 'Total count of events in the sequence',
+                                shortDesc: 'Total sequence events',
+                              },
+                            },
+                          },
+                          actor_id: {
+                            displayName: 'Actor ID',
+                            desc: 'ID of the actor triggering the event',
+                            shortDesc: 'Event actor ID',
+                          },
+                        },
+                      },
+                      type: {
+                        displayName: 'Event Type',
+                        desc: 'Type of ticket event',
+                        shortDesc: 'Ticket event type',
+                      },
+                      ticket: {
+                        displayName: 'Ticket',
+                        desc: 'Information about the ticket',
+                        shortDesc: 'Ticket details',
+                        type: {
+                          id: {
+                            displayName: 'Ticket ID',
+                            desc: 'Unique ID of the ticket',
+                            shortDesc: 'Ticket ID',
+                          },
+                          created_at: {
+                            displayName: 'Created At',
+                            desc: 'Creation timestamp of the ticket',
+                            shortDesc: 'Ticket creation time',
+                          },
+                          updated_at: {
+                            displayName: 'Updated At',
+                            desc: 'Last update timestamp of the ticket',
+                            shortDesc: 'Ticket last update',
+                          },
+                          type: {
+                            displayName: 'Ticket Type',
+                            desc: 'Type of the ticket',
+                            shortDesc: 'Ticket type',
+                          },
+                          priority: {
+                            displayName: 'Priority',
+                            desc: 'Priority level of the ticket',
+                            shortDesc: 'Ticket priority',
+                          },
+                          status: {
+                            displayName: 'Status',
+                            desc: 'Current status of the ticket',
+                            shortDesc: 'Ticket status',
+                          },
+                          requester_id: {
+                            displayName: 'Requester ID',
+                            desc: 'ID of the requester',
+                            shortDesc: 'Ticket requester ID',
+                          },
+                          submitter_id: {
+                            displayName: 'Submitter ID',
+                            desc: 'ID of the submitter',
+                            shortDesc: 'Ticket submitter ID',
+                          },
+                          assignee_id: {
+                            displayName: 'Assignee ID',
+                            desc: 'ID of the assignee',
+                            shortDesc: 'Ticket assignee ID',
+                          },
+                          organization_id: {
+                            displayName: 'Organization ID',
+                            desc: 'ID of the organization associated with the ticket',
+                            shortDesc: 'Organization ID',
+                          },
+                          group_id: {
+                            displayName: 'Group ID',
+                            desc: 'ID of the group handling the ticket',
+                            shortDesc: 'Group ID',
+                          },
+                          brand_id: {
+                            displayName: 'Brand ID',
+                            desc: 'ID of the brand associated with the ticket',
+                            shortDesc: 'Brand ID',
+                          },
+                          form_id: {
+                            displayName: 'Form ID',
+                            desc: 'ID of the form used for the ticket',
+                            shortDesc: 'Form ID',
+                          },
+                          external_id: {
+                            displayName: 'External ID',
+                            desc: 'External identifier for the ticket',
+                            shortDesc: 'Ticket external ID',
+                          },
+                          tags: {
+                            displayName: 'Tags',
+                            desc: 'Tags associated with the ticket',
+                            shortDesc: 'Ticket tags',
+                          },
+                          via: {
+                            displayName: 'Via',
+                            desc: 'Method by which the ticket was created',
+                            shortDesc: 'Ticket creation method',
+                            type: {
+                              channel: {
+                                displayName: 'Channel',
+                                desc: 'Channel through which the ticket was submitted',
+                                shortDesc: 'Ticket channel',
+                              },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+        new_organization: {
+          displayName: 'New Organization',
+          shortDesc: 'Triggers when a new organization is created',
+          desc: 'Triggers when a new organization is created',
+          event_info: {
+            desc: 'New Organization event data',
+            type: {
+              version: {
+                displayName: 'Version',
+                desc: 'The version of the webhook',
+                shortDesc: 'Webhook version',
+              },
+              id: {
+                displayName: 'ID',
+                desc: 'Unique identifier for the event',
+                shortDesc: 'Event ID',
+              },
+              'detail-type': {
+                displayName: 'Detail Type',
+                desc: 'Type of event detail',
+                shortDesc: 'Event detail type',
+              },
+              source: {
+                displayName: 'Source',
+                desc: 'Event source identifier',
+                shortDesc: 'Event source',
+              },
+              account: {
+                displayName: 'Account ID',
+                desc: 'ID of the account associated with the event',
+                shortDesc: 'Account ID',
+              },
+              time: {
+                displayName: 'Event Time',
+                desc: 'The timestamp of the event',
+                shortDesc: 'Event timestamp',
+              },
+              region: {
+                displayName: 'Region',
+                desc: 'The AWS region of the event',
+                shortDesc: 'AWS region',
+              },
+              resources: {
+                displayName: 'Resources',
+                desc: 'Resources associated with the event',
+                shortDesc: 'Event resources',
+              },
+              detail: {
+                displayName: 'Detail',
+                desc: 'Detailed information about the event',
+                shortDesc: 'Event details',
+                type: {
+                  organization_event: {
+                    displayName: 'Organization Event',
+                    desc: 'Details of the organization event',
+                    shortDesc: 'Organization event details',
+                    type: {
+                      meta: {
+                        displayName: 'Meta',
+                        desc: 'Metadata about the event occurrence',
+                        shortDesc: 'Event metadata',
+                        type: {
+                          version: {
+                            displayName: 'Meta Version',
+                            desc: 'Version of the event metadata',
+                            shortDesc: 'Metadata version',
+                          },
+                          occurred_at: {
+                            displayName: 'Occurred At',
+                            desc: 'Timestamp of event occurrence',
+                            shortDesc: 'Event occurrence time',
+                          },
+                          ref: {
+                            displayName: 'Reference',
+                            desc: 'Reference ID for the event',
+                            shortDesc: 'Event reference ID',
+                          },
+                          sequence: {
+                            displayName: 'Sequence',
+                            desc: 'Sequence data for the event',
+                            shortDesc: 'Event sequence',
+                            type: {
+                              id: {
+                                displayName: 'Sequence ID',
+                                desc: 'Sequence ID of the event',
+                                shortDesc: 'Event sequence ID',
+                              },
+                              position: {
+                                displayName: 'Position',
+                                desc: 'Position of the event in the sequence',
+                                shortDesc: 'Sequence position',
+                              },
+                              total: {
+                                displayName: 'Total',
+                                desc: 'Total count of events in the sequence',
+                                shortDesc: 'Total sequence events',
+                              },
+                            },
+                          },
+                        },
+                      },
+                      type: {
+                        displayName: 'Event Type',
+                        desc: 'Type of organization event',
+                        shortDesc: 'Organization event type',
+                      },
+                      organization: {
+                        displayName: 'Organization',
+                        desc: 'Information about the organization',
+                        shortDesc: 'Organization details',
+                        type: {
+                          id: {
+                            displayName: 'Organization ID',
+                            desc: 'Unique ID of the organization',
+                            shortDesc: 'Organization ID',
+                          },
+                          external_id: {
+                            displayName: 'External ID',
+                            desc: 'External identifier for the organization',
+                            shortDesc: 'Organization external ID',
+                          },
+                          name: {
+                            displayName: 'Organization Name',
+                            desc: 'Name of the organization',
+                            shortDesc: 'Organization name',
+                          },
+                          created_at: {
+                            displayName: 'Created At',
+                            desc: 'Creation timestamp of the organization',
+                            shortDesc: 'Organization creation time',
+                          },
+                          updated_at: {
+                            displayName: 'Updated At',
+                            desc: 'Last update timestamp of the organization',
+                            shortDesc: 'Organization last update',
+                          },
+                          shared_tickets: {
+                            displayName: 'Shared Tickets',
+                            desc: 'Indicates if tickets are shared with the organization',
+                            shortDesc: 'Shared tickets',
+                          },
+                          shared_comments: {
+                            displayName: 'Shared Comments',
+                            desc: 'Indicates if comments are shared with the organization',
+                            shortDesc: 'Shared comments',
+                          },
+                          group_id: {
+                            displayName: 'Group ID',
+                            desc: 'ID of the group handling the organization',
+                            shortDesc: 'Group ID',
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
       actions: {
         create_ticket: {
           displayName: 'Create Ticket',

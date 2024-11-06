@@ -9,10 +9,10 @@ export const testActionWithWebhook = {
   action: 'test',
   action_code: EQoreAppActionCode.EVENT,
   webhook_method: 'POST',
-  webhook_register: (context, url) => {
+  webhook_register: async (context, url) => {
     console.log('Registering webhook:', url, 'with', context);
   },
-  webhook_deregister: (context, url) => {
+  webhook_deregister: async (context, url) => {
     console.log('De-Registering webhook:', url, 'with', context);
   },
   webhook_auth: EQoreAppActionWebhookAuthType.AUTH_REQUIRE_AUTH,

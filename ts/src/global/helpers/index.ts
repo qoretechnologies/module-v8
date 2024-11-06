@@ -6,12 +6,17 @@ import {
   EQoreAppActionCode,
   IAllowedPathData,
   IQoreAppActionOption,
+  IQoreAppActionWithEvent,
   IQorePartialAppActionWithSwaggerPath,
   IQoreTypeObject,
   TAllowedPaths,
   THttpMethod,
+  TQoreAppActionWithEventOrWebhookEventInfo,
+  TQoreAppActionWithWebhook,
+  TQoreAppEventAction,
   TQoreAppNonEventAction,
   TQoreOptions,
+  TQorePartialEventAction,
   TQorePartialNonEventAction,
   TQoreResponseType,
   TStringWithFirstUpperCaseCharacter,
@@ -195,6 +200,125 @@ export const mapActionsToApp = (
         ? fixActionType(action.response_type, app, locale, action._localizationGroup)
         : undefined,
   }));
+};
+
+export const mapTriggersToApp = (
+  app: keyof Translation['apps'],
+  triggers: Record<string, TQorePartialEventAction> | TQorePartialEventAction[],
+  locale: Locales
+): TQoreAppEventAction[] => {
+  return Object.entries(triggers).map(([_a, trigger]) => {
+    const eventInfo: TQoreAppActionWithEventOrWebhookEventInfo =
+      'event_info' in trigger
+        ? {
+            ...trigger.event_info,
+            type: fixTriggerEventInfoType(trigger.event_info.type, app, locale, trigger.action),
+            desc:
+              trigger.event_info.desc ||
+              // @ts-expect-error no idea whats going on here, will fix later
+              L[locale].apps[app].triggers[trigger.action].event_info.desc(),
+          }
+        : undefined;
+
+    // Base action with common fields
+    const baseAction = {
+      ...omit(trigger, OMMITTED_FIELDS),
+      display_name: trigger.display_name
+        ? toTitleCase(trigger.display_name)
+        : // @ts-expect-error no idea whats going on here, will fix later
+          L[locale].apps[app].triggers[trigger.action].displayName() ||
+          toTitleCase(trigger.action.replace(/_/g, ' ').replace(/([a-z])([A-Z])/g, '$1 $2')),
+      short_desc: trigger.short_desc
+        ? trigger.short_desc
+        : // @ts-expect-error no idea whats going on here, will fix later
+          L[locale].apps[app].triggers[trigger.action].shortDesc() ||
+          capitalize(trigger.action.replace(/_/g, ' ').replace(/([a-z])([A-Z])/g, '$1 $2')),
+      desc: trigger.desc
+        ? trigger.desc
+        : // @ts-expect-error no idea whats going on here, will fix later
+          L[locale].apps[app].triggers[trigger.action].longDesc() ||
+          capitalize(trigger.action.replace(/_/g, ' ')),
+      app,
+      action_code: EQoreAppActionCode.EVENT,
+      // options:
+      //   'options' in trigger
+      //     ? fixActionOptions(trigger.options, app, locale, trigger._localizationGroup)
+      //     : undefined,
+      event_info: eventInfo,
+    };
+
+    if ('event_function' in trigger) {
+      return {
+        ...baseAction,
+        event_function: trigger.event_function,
+      } as IQoreAppActionWithEvent;
+    }
+
+    if ('webhook_method' in trigger) {
+      return {
+        ...baseAction,
+        webhook_method: trigger.webhook_method,
+        webhook_register: trigger.webhook_register,
+        webhook_deregister: trigger.webhook_deregister,
+        webhook_auth: trigger.webhook_auth,
+        webhook_perms: trigger.webhook_perms,
+      } as TQoreAppActionWithWebhook;
+    }
+  });
+};
+
+export const fixTriggerEventInfoType = (
+  collection: TQoreAppActionWithEventOrWebhookEventInfo['type'],
+  appName: string,
+  locale: Locales,
+  triggerName: string
+): TQoreAppActionWithEventOrWebhookEventInfo['type'] => {
+  const getLocalizedField = (field: string, path: string[]): string => {
+    try {
+      const localization = path.reduce(
+        (obj, key) => obj[key],
+        // @ts-expect-error no idea whats going on here, will fix later
+        L[locale].apps[appName].triggers[triggerName].event_info.type
+      );
+
+      return localization[field]();
+    } catch {
+      return '';
+    }
+  };
+
+  const processCollection = (
+    collection: TQoreAppActionWithEventOrWebhookEventInfo['type'],
+    path: string[] = []
+  ): TQoreAppActionWithEventOrWebhookEventInfo['type'] => {
+    return reduce(
+      collection,
+      (
+        newCollection: TQoreAppActionWithEventOrWebhookEventInfo['type'],
+        type: IQoreTypeObject,
+        key: string
+      ): TQoreAppActionWithEventOrWebhookEventInfo['type'] => {
+        const currentPath = [...path, key];
+
+        const updatedType = {
+          ...type,
+          type:
+            typeof type.type === 'object' ? processCollection(type.type, currentPath) : type.type,
+          display_name: type.display_name || getLocalizedField('displayName', currentPath),
+          short_desc: type.short_desc || getLocalizedField('shortDesc', currentPath),
+          desc: type.desc || getLocalizedField('desc', currentPath),
+        };
+
+        return {
+          ...newCollection,
+          [key]: updatedType,
+        };
+      },
+      {}
+    );
+  };
+
+  return processCollection(collection);
 };
 
 export const fixActionType = (

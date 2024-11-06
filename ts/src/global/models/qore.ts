@@ -426,19 +426,28 @@ export enum EQoreAppActionWebhookAuthType {
 
 export interface IQoreAppActionWithEventOrWebhook extends IQoreBaseAppAction {
   action_code: EQoreAppActionCode.EVENT;
-  event_info: {
-    id?: string;
-    desc: string;
-    type: Record<string, IQoreTypeObject>;
-  };
+  event_info: TQoreAppActionWithEventOrWebhookEventInfo;
 }
 
-export interface IQoreAppActionWithWebhookBase extends IQoreAppActionWithEventOrWebhook {
+export type TQoreAppActionWithEventOrWebhookEventInfo = {
+  id?: string;
+  desc: string;
+  type: Record<string, IQoreTypeObject>;
+};
+
+export interface IQoreAppActionWithWebhookBase<
+  CustomConnOptions extends Record<string, any> = unknown,
+> extends IQoreAppActionWithEventOrWebhook {
   webhook_method: TWebhookHttpMethod;
   webhook_auth?: EQoreAppActionWebhookAuthType;
-  webhook_register: (context: TQoreAppActionFunctionContext, url: string) => void;
-  webhook_deregister: (context: TQoreAppActionFunctionContext, url: string) => void;
+  webhook_register: TWebhookRegistryFunction<CustomConnOptions>;
+  webhook_deregister: TWebhookRegistryFunction<CustomConnOptions>;
 }
+
+export type TWebhookRegistryFunction<CustomConnOptions extends Record<string, any> = unknown> = (
+  context: TQoreAppActionFunctionContext<CustomConnOptions>,
+  url: string
+) => Promise<void>;
 
 export interface IQoreAppActionWithWebhookWithoutPerms extends IQoreAppActionWithWebhookBase {
   webhook_auth?: EQoreAppActionWebhookAuthType.AUTH_NONE;

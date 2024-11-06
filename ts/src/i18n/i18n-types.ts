@@ -627,6 +627,1412 @@ type RootTranslation = {
 			 * C​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​Z​e​n​d​e​s​k​ ​A​P​I
 			 */
 			longDesc: string
+			triggers: {
+				new_user: {
+					/**
+					 * N​e​w​ ​U​s​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​u​s​e​r​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​u​s​e​r​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					desc: string
+					event_info: {
+						/**
+						 * N​e​w​ ​U​s​e​r​ ​e​v​e​n​t​ ​d​a​t​a
+						 */
+						desc: string
+						type: {
+							version: {
+								/**
+								 * V​e​r​s​i​o​n
+								 */
+								displayName: string
+								/**
+								 * V​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​w​e​b​h​o​o​k
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​w​e​b​h​o​o​k
+								 */
+								desc: string
+							}
+							id: {
+								/**
+								 * I​D
+								 */
+								displayName: string
+								/**
+								 * E​v​e​n​t​ ​I​D
+								 */
+								shortDesc: string
+								/**
+								 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
+								 */
+								desc: string
+							}
+							'detail-type': {
+								/**
+								 * D​e​t​a​i​l​ ​T​y​p​e
+								 */
+								displayName: string
+								/**
+								 * E​v​e​n​t​ ​d​e​t​a​i​l​ ​t​y​p​e
+								 */
+								shortDesc: string
+								/**
+								 * T​y​p​e​ ​o​f​ ​e​v​e​n​t​ ​d​e​t​a​i​l
+								 */
+								desc: string
+							}
+							source: {
+								/**
+								 * S​o​u​r​c​e
+								 */
+								displayName: string
+								/**
+								 * E​v​e​n​t​ ​s​o​u​r​c​e
+								 */
+								shortDesc: string
+								/**
+								 * E​v​e​n​t​ ​s​o​u​r​c​e​ ​i​d​e​n​t​i​f​i​e​r
+								 */
+								desc: string
+							}
+							account: {
+								/**
+								 * A​c​c​o​u​n​t​ ​I​D
+								 */
+								displayName: string
+								/**
+								 * A​c​c​o​u​n​t​ ​I​D
+								 */
+								shortDesc: string
+								/**
+								 * I​D​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t
+								 */
+								desc: string
+							}
+							time: {
+								/**
+								 * E​v​e​n​t​ ​T​i​m​e
+								 */
+								displayName: string
+								/**
+								 * E​v​e​n​t​ ​t​i​m​e​s​t​a​m​p
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
+								 */
+								desc: string
+							}
+							region: {
+								/**
+								 * R​e​g​i​o​n
+								 */
+								displayName: string
+								/**
+								 * A​W​S​ ​r​e​g​i​o​n
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
+								 */
+								desc: string
+							}
+							resources: {
+								/**
+								 * R​e​s​o​u​r​c​e​s
+								 */
+								displayName: string
+								/**
+								 * E​v​e​n​t​ ​r​e​s​o​u​r​c​e​s
+								 */
+								shortDesc: string
+								/**
+								 * R​e​s​o​u​r​c​e​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t
+								 */
+								desc: string
+							}
+							detail: {
+								/**
+								 * D​e​t​a​i​l
+								 */
+								displayName: string
+								/**
+								 * E​v​e​n​t​ ​d​e​t​a​i​l​s
+								 */
+								shortDesc: string
+								/**
+								 * D​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​e​v​e​n​t
+								 */
+								desc: string
+								user_event: {
+									/**
+									 * U​s​e​r​ ​E​v​e​n​t
+									 */
+									displayName: string
+									/**
+									 * U​s​e​r​ ​e​v​e​n​t​ ​d​e​t​a​i​l​s
+									 */
+									shortDesc: string
+									/**
+									 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​e​v​e​n​t
+									 */
+									desc: string
+									meta: {
+										/**
+										 * M​e​t​a
+										 */
+										displayName: string
+										/**
+										 * E​v​e​n​t​ ​m​e​t​a​d​a​t​a
+										 */
+										shortDesc: string
+										/**
+										 * M​e​t​a​d​a​t​a​ ​a​b​o​u​t​ ​t​h​e​ ​e​v​e​n​t​ ​o​c​c​u​r​r​e​n​c​e
+										 */
+										desc: string
+										version: {
+											/**
+											 * M​e​t​a​ ​V​e​r​s​i​o​n
+											 */
+											displayName: string
+											/**
+											 * M​e​t​a​d​a​t​a​ ​v​e​r​s​i​o​n
+											 */
+											shortDesc: string
+											/**
+											 * V​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​m​e​t​a​d​a​t​a
+											 */
+											desc: string
+										}
+										occurred_at: {
+											/**
+											 * O​c​c​u​r​r​e​d​ ​A​t
+											 */
+											displayName: string
+											/**
+											 * E​v​e​n​t​ ​o​c​c​u​r​r​e​n​c​e​ ​t​i​m​e
+											 */
+											shortDesc: string
+											/**
+											 * T​i​m​e​s​t​a​m​p​ ​o​f​ ​e​v​e​n​t​ ​o​c​c​u​r​r​e​n​c​e
+											 */
+											desc: string
+										}
+										ref: {
+											/**
+											 * R​e​f​e​r​e​n​c​e
+											 */
+											displayName: string
+											/**
+											 * E​v​e​n​t​ ​r​e​f​e​r​e​n​c​e​ ​I​D
+											 */
+											shortDesc: string
+											/**
+											 * R​e​f​e​r​e​n​c​e​ ​I​D​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
+											 */
+											desc: string
+										}
+										sequence: {
+											/**
+											 * S​e​q​u​e​n​c​e
+											 */
+											displayName: string
+											/**
+											 * E​v​e​n​t​ ​s​e​q​u​e​n​c​e
+											 */
+											shortDesc: string
+											/**
+											 * S​e​q​u​e​n​c​e​ ​d​a​t​a​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
+											 */
+											desc: string
+											id: {
+												/**
+												 * S​e​q​u​e​n​c​e​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * E​v​e​n​t​ ​s​e​q​u​e​n​c​e​ ​I​D
+												 */
+												shortDesc: string
+												/**
+												 * S​e​q​u​e​n​c​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
+												 */
+												desc: string
+											}
+											position: {
+												/**
+												 * P​o​s​i​t​i​o​n
+												 */
+												displayName: string
+												/**
+												 * S​e​q​u​e​n​c​e​ ​p​o​s​i​t​i​o​n
+												 */
+												shortDesc: string
+												/**
+												 * P​o​s​i​t​i​o​n​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​i​n​ ​t​h​e​ ​s​e​q​u​e​n​c​e
+												 */
+												desc: string
+											}
+											total: {
+												/**
+												 * T​o​t​a​l
+												 */
+												displayName: string
+												/**
+												 * T​o​t​a​l​ ​s​e​q​u​e​n​c​e​ ​e​v​e​n​t​s
+												 */
+												shortDesc: string
+												/**
+												 * T​o​t​a​l​ ​c​o​u​n​t​ ​o​f​ ​e​v​e​n​t​s​ ​i​n​ ​t​h​e​ ​s​e​q​u​e​n​c​e
+												 */
+												desc: string
+											}
+										}
+									}
+									type: {
+										/**
+										 * E​v​e​n​t​ ​T​y​p​e
+										 */
+										displayName: string
+										/**
+										 * U​s​e​r​ ​e​v​e​n​t​ ​t​y​p​e
+										 */
+										shortDesc: string
+										/**
+										 * T​y​p​e​ ​o​f​ ​u​s​e​r​ ​e​v​e​n​t
+										 */
+										desc: string
+									}
+									user: {
+										/**
+										 * U​s​e​r
+										 */
+										displayName: string
+										/**
+										 * U​s​e​r​ ​d​e​t​a​i​l​s
+										 */
+										shortDesc: string
+										/**
+										 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​u​s​e​r
+										 */
+										desc: string
+										id: {
+											/**
+											 * U​s​e​r​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * U​s​e​r​ ​I​D
+											 */
+											shortDesc: string
+											/**
+											 * U​n​i​q​u​e​ ​I​D​ ​o​f​ ​t​h​e​ ​u​s​e​r
+											 */
+											desc: string
+										}
+										external_id: {
+											/**
+											 * E​x​t​e​r​n​a​l​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * U​s​e​r​ ​e​x​t​e​r​n​a​l​ ​I​D
+											 */
+											shortDesc: string
+											/**
+											 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​u​s​e​r
+											 */
+											desc: string
+										}
+										role: {
+											/**
+											 * R​o​l​e
+											 */
+											displayName: string
+											/**
+											 * U​s​e​r​ ​r​o​l​e
+											 */
+											shortDesc: string
+											/**
+											 * R​o​l​e​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​i​n​ ​t​h​e​ ​s​y​s​t​e​m
+											 */
+											desc: string
+										}
+										email: {
+											/**
+											 * E​m​a​i​l
+											 */
+											displayName: string
+											/**
+											 * U​s​e​r​ ​e​m​a​i​l
+											 */
+											shortDesc: string
+											/**
+											 * E​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​u​s​e​r
+											 */
+											desc: string
+										}
+										created_at: {
+											/**
+											 * C​r​e​a​t​e​d​ ​A​t
+											 */
+											displayName: string
+											/**
+											 * U​s​e​r​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e
+											 */
+											shortDesc: string
+											/**
+											 * C​r​e​a​t​i​o​n​ ​t​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​u​s​e​r
+											 */
+											desc: string
+										}
+										updated_at: {
+											/**
+											 * U​p​d​a​t​e​d​ ​A​t
+											 */
+											displayName: string
+											/**
+											 * U​s​e​r​ ​l​a​s​t​ ​u​p​d​a​t​e
+											 */
+											shortDesc: string
+											/**
+											 * L​a​s​t​ ​u​p​d​a​t​e​ ​t​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​u​s​e​r
+											 */
+											desc: string
+										}
+										organization_id: {
+											/**
+											 * O​r​g​a​n​i​z​a​t​i​o​n​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * O​r​g​a​n​i​z​a​t​i​o​n​ ​I​D
+											 */
+											shortDesc: string
+											/**
+											 * I​D​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​u​s​e​r
+											 */
+											desc: string
+										}
+										default_group_id: {
+											/**
+											 * D​e​f​a​u​l​t​ ​G​r​o​u​p​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * U​s​e​r​ ​d​e​f​a​u​l​t​ ​g​r​o​u​p​ ​I​D
+											 */
+											shortDesc: string
+											/**
+											 * D​e​f​a​u​l​t​ ​g​r​o​u​p​ ​I​D​ ​f​o​r​ ​t​h​e​ ​u​s​e​r
+											 */
+											desc: string
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				new_ticket: {
+					/**
+					 * N​e​w​ ​T​i​c​k​e​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​i​c​k​e​t​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​i​c​k​e​t​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					desc: string
+					event_info: {
+						/**
+						 * N​e​w​ ​T​i​c​k​e​t​ ​e​v​e​n​t​ ​d​a​t​a
+						 */
+						desc: string
+						type: {
+							version: {
+								/**
+								 * V​e​r​s​i​o​n
+								 */
+								display_name: string
+								/**
+								 * T​h​e​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​w​e​b​h​o​o​k
+								 */
+								desc: string
+								/**
+								 * V​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​w​e​b​h​o​o​k
+								 */
+								short_desc: string
+							}
+							id: {
+								/**
+								 * I​D
+								 */
+								display_name: string
+								/**
+								 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
+								 */
+								desc: string
+								/**
+								 * E​v​e​n​t​ ​I​D
+								 */
+								short_desc: string
+							}
+							'detail-type': {
+								/**
+								 * D​e​t​a​i​l​ ​T​y​p​e
+								 */
+								display_name: string
+								/**
+								 * T​y​p​e​ ​o​f​ ​e​v​e​n​t​ ​d​e​t​a​i​l
+								 */
+								desc: string
+								/**
+								 * E​v​e​n​t​ ​d​e​t​a​i​l​ ​t​y​p​e
+								 */
+								short_desc: string
+							}
+							source: {
+								/**
+								 * S​o​u​r​c​e
+								 */
+								display_name: string
+								/**
+								 * E​v​e​n​t​ ​s​o​u​r​c​e​ ​i​d​e​n​t​i​f​i​e​r
+								 */
+								desc: string
+								/**
+								 * E​v​e​n​t​ ​s​o​u​r​c​e
+								 */
+								short_desc: string
+							}
+							account: {
+								/**
+								 * A​c​c​o​u​n​t​ ​I​D
+								 */
+								display_name: string
+								/**
+								 * I​D​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t
+								 */
+								desc: string
+								/**
+								 * A​c​c​o​u​n​t​ ​I​D
+								 */
+								short_desc: string
+							}
+							time: {
+								/**
+								 * E​v​e​n​t​ ​T​i​m​e
+								 */
+								display_name: string
+								/**
+								 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
+								 */
+								desc: string
+								/**
+								 * E​v​e​n​t​ ​t​i​m​e​s​t​a​m​p
+								 */
+								short_desc: string
+							}
+							region: {
+								/**
+								 * R​e​g​i​o​n
+								 */
+								display_name: string
+								/**
+								 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
+								 */
+								desc: string
+								/**
+								 * A​W​S​ ​r​e​g​i​o​n
+								 */
+								short_desc: string
+							}
+							resources: {
+								/**
+								 * R​e​s​o​u​r​c​e​s
+								 */
+								display_name: string
+								/**
+								 * R​e​s​o​u​r​c​e​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t
+								 */
+								desc: string
+								/**
+								 * E​v​e​n​t​ ​r​e​s​o​u​r​c​e​s
+								 */
+								short_desc: string
+							}
+							detail: {
+								/**
+								 * D​e​t​a​i​l
+								 */
+								display_name: string
+								/**
+								 * D​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​e​v​e​n​t
+								 */
+								desc: string
+								/**
+								 * E​v​e​n​t​ ​d​e​t​a​i​l​s
+								 */
+								short_desc: string
+								type: {
+									ticket_event: {
+										/**
+										 * T​i​c​k​e​t​ ​E​v​e​n​t
+										 */
+										display_name: string
+										/**
+										 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​ ​e​v​e​n​t
+										 */
+										desc: string
+										/**
+										 * T​i​c​k​e​t​ ​e​v​e​n​t​ ​d​e​t​a​i​l​s
+										 */
+										short_desc: string
+										type: {
+											meta: {
+												/**
+												 * M​e​t​a
+												 */
+												display_name: string
+												/**
+												 * M​e​t​a​d​a​t​a​ ​a​b​o​u​t​ ​t​h​e​ ​e​v​e​n​t​ ​o​c​c​u​r​r​e​n​c​e
+												 */
+												desc: string
+												/**
+												 * E​v​e​n​t​ ​m​e​t​a​d​a​t​a
+												 */
+												short_desc: string
+												type: {
+													version: {
+														/**
+														 * M​e​t​a​ ​V​e​r​s​i​o​n
+														 */
+														display_name: string
+														/**
+														 * V​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​m​e​t​a​d​a​t​a
+														 */
+														desc: string
+														/**
+														 * M​e​t​a​d​a​t​a​ ​v​e​r​s​i​o​n
+														 */
+														short_desc: string
+													}
+													occurred_at: {
+														/**
+														 * O​c​c​u​r​r​e​d​ ​A​t
+														 */
+														display_name: string
+														/**
+														 * T​i​m​e​s​t​a​m​p​ ​o​f​ ​e​v​e​n​t​ ​o​c​c​u​r​r​e​n​c​e
+														 */
+														desc: string
+														/**
+														 * E​v​e​n​t​ ​o​c​c​u​r​r​e​n​c​e​ ​t​i​m​e
+														 */
+														short_desc: string
+													}
+													ref: {
+														/**
+														 * R​e​f​e​r​e​n​c​e
+														 */
+														display_name: string
+														/**
+														 * R​e​f​e​r​e​n​c​e​ ​I​D​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
+														 */
+														desc: string
+														/**
+														 * E​v​e​n​t​ ​r​e​f​e​r​e​n​c​e​ ​I​D
+														 */
+														short_desc: string
+													}
+													sequence: {
+														/**
+														 * S​e​q​u​e​n​c​e
+														 */
+														display_name: string
+														/**
+														 * S​e​q​u​e​n​c​e​ ​d​a​t​a​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
+														 */
+														desc: string
+														/**
+														 * E​v​e​n​t​ ​s​e​q​u​e​n​c​e
+														 */
+														short_desc: string
+														type: {
+															id: {
+																/**
+																 * S​e​q​u​e​n​c​e​ ​I​D
+																 */
+																display_name: string
+																/**
+																 * S​e​q​u​e​n​c​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
+																 */
+																desc: string
+																/**
+																 * E​v​e​n​t​ ​s​e​q​u​e​n​c​e​ ​I​D
+																 */
+																short_desc: string
+															}
+															position: {
+																/**
+																 * P​o​s​i​t​i​o​n
+																 */
+																display_name: string
+																/**
+																 * P​o​s​i​t​i​o​n​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​i​n​ ​t​h​e​ ​s​e​q​u​e​n​c​e
+																 */
+																desc: string
+																/**
+																 * S​e​q​u​e​n​c​e​ ​p​o​s​i​t​i​o​n
+																 */
+																short_desc: string
+															}
+															total: {
+																/**
+																 * T​o​t​a​l
+																 */
+																display_name: string
+																/**
+																 * T​o​t​a​l​ ​c​o​u​n​t​ ​o​f​ ​e​v​e​n​t​s​ ​i​n​ ​t​h​e​ ​s​e​q​u​e​n​c​e
+																 */
+																desc: string
+																/**
+																 * T​o​t​a​l​ ​s​e​q​u​e​n​c​e​ ​e​v​e​n​t​s
+																 */
+																short_desc: string
+															}
+														}
+													}
+													actor_id: {
+														/**
+														 * A​c​t​o​r​ ​I​D
+														 */
+														display_name: string
+														/**
+														 * I​D​ ​o​f​ ​t​h​e​ ​a​c​t​o​r​ ​t​r​i​g​g​e​r​i​n​g​ ​t​h​e​ ​e​v​e​n​t
+														 */
+														desc: string
+														/**
+														 * E​v​e​n​t​ ​a​c​t​o​r​ ​I​D
+														 */
+														short_desc: string
+													}
+												}
+											}
+											type: {
+												/**
+												 * E​v​e​n​t​ ​T​y​p​e
+												 */
+												display_name: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​t​i​c​k​e​t​ ​e​v​e​n​t
+												 */
+												desc: string
+												/**
+												 * T​i​c​k​e​t​ ​e​v​e​n​t​ ​t​y​p​e
+												 */
+												short_desc: string
+											}
+											ticket: {
+												/**
+												 * T​i​c​k​e​t
+												 */
+												display_name: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​t​i​c​k​e​t
+												 */
+												desc: string
+												/**
+												 * T​i​c​k​e​t​ ​d​e​t​a​i​l​s
+												 */
+												short_desc: string
+												type: {
+													id: {
+														/**
+														 * T​i​c​k​e​t​ ​I​D
+														 */
+														display_name: string
+														/**
+														 * U​n​i​q​u​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
+														 */
+														desc: string
+														/**
+														 * T​i​c​k​e​t​ ​I​D
+														 */
+														short_desc: string
+													}
+													created_at: {
+														/**
+														 * C​r​e​a​t​e​d​ ​A​t
+														 */
+														display_name: string
+														/**
+														 * C​r​e​a​t​i​o​n​ ​t​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
+														 */
+														desc: string
+														/**
+														 * T​i​c​k​e​t​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e
+														 */
+														short_desc: string
+													}
+													updated_at: {
+														/**
+														 * U​p​d​a​t​e​d​ ​A​t
+														 */
+														display_name: string
+														/**
+														 * L​a​s​t​ ​u​p​d​a​t​e​ ​t​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
+														 */
+														desc: string
+														/**
+														 * T​i​c​k​e​t​ ​l​a​s​t​ ​u​p​d​a​t​e
+														 */
+														short_desc: string
+													}
+													type: {
+														/**
+														 * T​i​c​k​e​t​ ​T​y​p​e
+														 */
+														display_name: string
+														/**
+														 * T​y​p​e​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
+														 */
+														desc: string
+														/**
+														 * T​i​c​k​e​t​ ​t​y​p​e
+														 */
+														short_desc: string
+													}
+													priority: {
+														/**
+														 * P​r​i​o​r​i​t​y
+														 */
+														display_name: string
+														/**
+														 * P​r​i​o​r​i​t​y​ ​l​e​v​e​l​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
+														 */
+														desc: string
+														/**
+														 * T​i​c​k​e​t​ ​p​r​i​o​r​i​t​y
+														 */
+														short_desc: string
+													}
+													status: {
+														/**
+														 * S​t​a​t​u​s
+														 */
+														display_name: string
+														/**
+														 * C​u​r​r​e​n​t​ ​s​t​a​t​u​s​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
+														 */
+														desc: string
+														/**
+														 * T​i​c​k​e​t​ ​s​t​a​t​u​s
+														 */
+														short_desc: string
+													}
+													requester_id: {
+														/**
+														 * R​e​q​u​e​s​t​e​r​ ​I​D
+														 */
+														display_name: string
+														/**
+														 * I​D​ ​o​f​ ​t​h​e​ ​r​e​q​u​e​s​t​e​r
+														 */
+														desc: string
+														/**
+														 * T​i​c​k​e​t​ ​r​e​q​u​e​s​t​e​r​ ​I​D
+														 */
+														short_desc: string
+													}
+													submitter_id: {
+														/**
+														 * S​u​b​m​i​t​t​e​r​ ​I​D
+														 */
+														display_name: string
+														/**
+														 * I​D​ ​o​f​ ​t​h​e​ ​s​u​b​m​i​t​t​e​r
+														 */
+														desc: string
+														/**
+														 * T​i​c​k​e​t​ ​s​u​b​m​i​t​t​e​r​ ​I​D
+														 */
+														short_desc: string
+													}
+													assignee_id: {
+														/**
+														 * A​s​s​i​g​n​e​e​ ​I​D
+														 */
+														display_name: string
+														/**
+														 * I​D​ ​o​f​ ​t​h​e​ ​a​s​s​i​g​n​e​e
+														 */
+														desc: string
+														/**
+														 * T​i​c​k​e​t​ ​a​s​s​i​g​n​e​e​ ​I​D
+														 */
+														short_desc: string
+													}
+													organization_id: {
+														/**
+														 * O​r​g​a​n​i​z​a​t​i​o​n​ ​I​D
+														 */
+														display_name: string
+														/**
+														 * I​D​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​t​i​c​k​e​t
+														 */
+														desc: string
+														/**
+														 * O​r​g​a​n​i​z​a​t​i​o​n​ ​I​D
+														 */
+														short_desc: string
+													}
+													group_id: {
+														/**
+														 * G​r​o​u​p​ ​I​D
+														 */
+														display_name: string
+														/**
+														 * I​D​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​h​a​n​d​l​i​n​g​ ​t​h​e​ ​t​i​c​k​e​t
+														 */
+														desc: string
+														/**
+														 * G​r​o​u​p​ ​I​D
+														 */
+														short_desc: string
+													}
+													brand_id: {
+														/**
+														 * B​r​a​n​d​ ​I​D
+														 */
+														display_name: string
+														/**
+														 * I​D​ ​o​f​ ​t​h​e​ ​b​r​a​n​d​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​t​i​c​k​e​t
+														 */
+														desc: string
+														/**
+														 * B​r​a​n​d​ ​I​D
+														 */
+														short_desc: string
+													}
+													form_id: {
+														/**
+														 * F​o​r​m​ ​I​D
+														 */
+														display_name: string
+														/**
+														 * I​D​ ​o​f​ ​t​h​e​ ​f​o​r​m​ ​u​s​e​d​ ​f​o​r​ ​t​h​e​ ​t​i​c​k​e​t
+														 */
+														desc: string
+														/**
+														 * F​o​r​m​ ​I​D
+														 */
+														short_desc: string
+													}
+													external_id: {
+														/**
+														 * E​x​t​e​r​n​a​l​ ​I​D
+														 */
+														display_name: string
+														/**
+														 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​t​i​c​k​e​t
+														 */
+														desc: string
+														/**
+														 * T​i​c​k​e​t​ ​e​x​t​e​r​n​a​l​ ​I​D
+														 */
+														short_desc: string
+													}
+													tags: {
+														/**
+														 * T​a​g​s
+														 */
+														display_name: string
+														/**
+														 * T​a​g​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​t​i​c​k​e​t
+														 */
+														desc: string
+														/**
+														 * T​i​c​k​e​t​ ​t​a​g​s
+														 */
+														short_desc: string
+													}
+													via: {
+														/**
+														 * V​i​a
+														 */
+														display_name: string
+														/**
+														 * M​e​t​h​o​d​ ​b​y​ ​w​h​i​c​h​ ​t​h​e​ ​t​i​c​k​e​t​ ​w​a​s​ ​c​r​e​a​t​e​d
+														 */
+														desc: string
+														/**
+														 * T​i​c​k​e​t​ ​c​r​e​a​t​i​o​n​ ​m​e​t​h​o​d
+														 */
+														short_desc: string
+														type: {
+															channel: {
+																/**
+																 * C​h​a​n​n​e​l
+																 */
+																display_name: string
+																/**
+																 * C​h​a​n​n​e​l​ ​t​h​r​o​u​g​h​ ​w​h​i​c​h​ ​t​h​e​ ​t​i​c​k​e​t​ ​w​a​s​ ​s​u​b​m​i​t​t​e​d
+																 */
+																desc: string
+																/**
+																 * T​i​c​k​e​t​ ​c​h​a​n​n​e​l
+																 */
+																short_desc: string
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				new_organization: {
+					/**
+					 * N​e​w​ ​O​r​g​a​n​i​z​a​t​i​o​n
+					 */
+					display_name: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					short_desc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					desc: string
+					event_info: {
+						/**
+						 * N​e​w​ ​O​r​g​a​n​i​z​a​t​i​o​n​ ​e​v​e​n​t​ ​d​a​t​a
+						 */
+						desc: string
+						type: {
+							version: {
+								/**
+								 * V​e​r​s​i​o​n
+								 */
+								display_name: string
+								/**
+								 * T​h​e​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​w​e​b​h​o​o​k
+								 */
+								desc: string
+								/**
+								 * W​e​b​h​o​o​k​ ​v​e​r​s​i​o​n
+								 */
+								short_desc: string
+							}
+							id: {
+								/**
+								 * I​D
+								 */
+								display_name: string
+								/**
+								 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
+								 */
+								desc: string
+								/**
+								 * E​v​e​n​t​ ​I​D
+								 */
+								short_desc: string
+							}
+							'detail-type': {
+								/**
+								 * D​e​t​a​i​l​ ​T​y​p​e
+								 */
+								display_name: string
+								/**
+								 * T​y​p​e​ ​o​f​ ​e​v​e​n​t​ ​d​e​t​a​i​l
+								 */
+								desc: string
+								/**
+								 * E​v​e​n​t​ ​d​e​t​a​i​l​ ​t​y​p​e
+								 */
+								short_desc: string
+							}
+							source: {
+								/**
+								 * S​o​u​r​c​e
+								 */
+								display_name: string
+								/**
+								 * E​v​e​n​t​ ​s​o​u​r​c​e​ ​i​d​e​n​t​i​f​i​e​r
+								 */
+								desc: string
+								/**
+								 * E​v​e​n​t​ ​s​o​u​r​c​e
+								 */
+								short_desc: string
+							}
+							account: {
+								/**
+								 * A​c​c​o​u​n​t​ ​I​D
+								 */
+								display_name: string
+								/**
+								 * I​D​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t
+								 */
+								desc: string
+								/**
+								 * A​c​c​o​u​n​t​ ​I​D
+								 */
+								short_desc: string
+							}
+							time: {
+								/**
+								 * E​v​e​n​t​ ​T​i​m​e
+								 */
+								display_name: string
+								/**
+								 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
+								 */
+								desc: string
+								/**
+								 * E​v​e​n​t​ ​t​i​m​e​s​t​a​m​p
+								 */
+								short_desc: string
+							}
+							region: {
+								/**
+								 * R​e​g​i​o​n
+								 */
+								display_name: string
+								/**
+								 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
+								 */
+								desc: string
+								/**
+								 * A​W​S​ ​r​e​g​i​o​n
+								 */
+								short_desc: string
+							}
+							resources: {
+								/**
+								 * R​e​s​o​u​r​c​e​s
+								 */
+								display_name: string
+								/**
+								 * R​e​s​o​u​r​c​e​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t
+								 */
+								desc: string
+								/**
+								 * E​v​e​n​t​ ​r​e​s​o​u​r​c​e​s
+								 */
+								short_desc: string
+							}
+							detail: {
+								/**
+								 * D​e​t​a​i​l
+								 */
+								display_name: string
+								/**
+								 * D​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​e​v​e​n​t
+								 */
+								desc: string
+								/**
+								 * E​v​e​n​t​ ​d​e​t​a​i​l​s
+								 */
+								short_desc: string
+								type: {
+									organization_event: {
+										/**
+										 * O​r​g​a​n​i​z​a​t​i​o​n​ ​E​v​e​n​t
+										 */
+										display_name: string
+										/**
+										 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​e​v​e​n​t
+										 */
+										desc: string
+										/**
+										 * O​r​g​a​n​i​z​a​t​i​o​n​ ​e​v​e​n​t​ ​d​e​t​a​i​l​s
+										 */
+										short_desc: string
+										type: {
+											meta: {
+												/**
+												 * M​e​t​a
+												 */
+												display_name: string
+												/**
+												 * M​e​t​a​d​a​t​a​ ​a​b​o​u​t​ ​t​h​e​ ​e​v​e​n​t​ ​o​c​c​u​r​r​e​n​c​e
+												 */
+												desc: string
+												/**
+												 * E​v​e​n​t​ ​m​e​t​a​d​a​t​a
+												 */
+												short_desc: string
+												type: {
+													version: {
+														/**
+														 * M​e​t​a​ ​V​e​r​s​i​o​n
+														 */
+														display_name: string
+														/**
+														 * V​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​m​e​t​a​d​a​t​a
+														 */
+														desc: string
+														/**
+														 * M​e​t​a​d​a​t​a​ ​v​e​r​s​i​o​n
+														 */
+														short_desc: string
+													}
+													occurred_at: {
+														/**
+														 * O​c​c​u​r​r​e​d​ ​A​t
+														 */
+														display_name: string
+														/**
+														 * T​i​m​e​s​t​a​m​p​ ​o​f​ ​e​v​e​n​t​ ​o​c​c​u​r​r​e​n​c​e
+														 */
+														desc: string
+														/**
+														 * E​v​e​n​t​ ​o​c​c​u​r​r​e​n​c​e​ ​t​i​m​e
+														 */
+														short_desc: string
+													}
+													ref: {
+														/**
+														 * R​e​f​e​r​e​n​c​e
+														 */
+														display_name: string
+														/**
+														 * R​e​f​e​r​e​n​c​e​ ​I​D​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
+														 */
+														desc: string
+														/**
+														 * E​v​e​n​t​ ​r​e​f​e​r​e​n​c​e​ ​I​D
+														 */
+														short_desc: string
+													}
+													sequence: {
+														/**
+														 * S​e​q​u​e​n​c​e
+														 */
+														display_name: string
+														/**
+														 * S​e​q​u​e​n​c​e​ ​d​a​t​a​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
+														 */
+														desc: string
+														/**
+														 * E​v​e​n​t​ ​s​e​q​u​e​n​c​e
+														 */
+														short_desc: string
+														type: {
+															id: {
+																/**
+																 * S​e​q​u​e​n​c​e​ ​I​D
+																 */
+																display_name: string
+																/**
+																 * S​e​q​u​e​n​c​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
+																 */
+																desc: string
+																/**
+																 * E​v​e​n​t​ ​s​e​q​u​e​n​c​e​ ​I​D
+																 */
+																short_desc: string
+															}
+															position: {
+																/**
+																 * P​o​s​i​t​i​o​n
+																 */
+																display_name: string
+																/**
+																 * P​o​s​i​t​i​o​n​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​i​n​ ​t​h​e​ ​s​e​q​u​e​n​c​e
+																 */
+																desc: string
+																/**
+																 * S​e​q​u​e​n​c​e​ ​p​o​s​i​t​i​o​n
+																 */
+																short_desc: string
+															}
+															total: {
+																/**
+																 * T​o​t​a​l
+																 */
+																display_name: string
+																/**
+																 * T​o​t​a​l​ ​c​o​u​n​t​ ​o​f​ ​e​v​e​n​t​s​ ​i​n​ ​t​h​e​ ​s​e​q​u​e​n​c​e
+																 */
+																desc: string
+																/**
+																 * T​o​t​a​l​ ​s​e​q​u​e​n​c​e​ ​e​v​e​n​t​s
+																 */
+																short_desc: string
+															}
+														}
+													}
+												}
+											}
+											type: {
+												/**
+												 * E​v​e​n​t​ ​T​y​p​e
+												 */
+												display_name: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​e​v​e​n​t
+												 */
+												desc: string
+												/**
+												 * O​r​g​a​n​i​z​a​t​i​o​n​ ​e​v​e​n​t​ ​t​y​p​e
+												 */
+												short_desc: string
+											}
+											organization: {
+												/**
+												 * O​r​g​a​n​i​z​a​t​i​o​n
+												 */
+												display_name: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
+												 */
+												desc: string
+												/**
+												 * O​r​g​a​n​i​z​a​t​i​o​n​ ​d​e​t​a​i​l​s
+												 */
+												short_desc: string
+												type: {
+													id: {
+														/**
+														 * O​r​g​a​n​i​z​a​t​i​o​n​ ​I​D
+														 */
+														display_name: string
+														/**
+														 * U​n​i​q​u​e​ ​I​D​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
+														 */
+														desc: string
+														/**
+														 * O​r​g​a​n​i​z​a​t​i​o​n​ ​I​D
+														 */
+														short_desc: string
+													}
+													external_id: {
+														/**
+														 * E​x​t​e​r​n​a​l​ ​I​D
+														 */
+														display_name: string
+														/**
+														 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
+														 */
+														desc: string
+														/**
+														 * O​r​g​a​n​i​z​a​t​i​o​n​ ​e​x​t​e​r​n​a​l​ ​I​D
+														 */
+														short_desc: string
+													}
+													name: {
+														/**
+														 * O​r​g​a​n​i​z​a​t​i​o​n​ ​N​a​m​e
+														 */
+														display_name: string
+														/**
+														 * N​a​m​e​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
+														 */
+														desc: string
+														/**
+														 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e
+														 */
+														short_desc: string
+													}
+													created_at: {
+														/**
+														 * C​r​e​a​t​e​d​ ​A​t
+														 */
+														display_name: string
+														/**
+														 * C​r​e​a​t​i​o​n​ ​t​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
+														 */
+														desc: string
+														/**
+														 * O​r​g​a​n​i​z​a​t​i​o​n​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e
+														 */
+														short_desc: string
+													}
+													updated_at: {
+														/**
+														 * U​p​d​a​t​e​d​ ​A​t
+														 */
+														display_name: string
+														/**
+														 * L​a​s​t​ ​u​p​d​a​t​e​ ​t​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
+														 */
+														desc: string
+														/**
+														 * O​r​g​a​n​i​z​a​t​i​o​n​ ​l​a​s​t​ ​u​p​d​a​t​e
+														 */
+														short_desc: string
+													}
+													shared_tickets: {
+														/**
+														 * S​h​a​r​e​d​ ​T​i​c​k​e​t​s
+														 */
+														display_name: string
+														/**
+														 * I​n​d​i​c​a​t​e​s​ ​i​f​ ​t​i​c​k​e​t​s​ ​a​r​e​ ​s​h​a​r​e​d​ ​w​i​t​h​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
+														 */
+														desc: string
+														/**
+														 * S​h​a​r​e​d​ ​t​i​c​k​e​t​s
+														 */
+														short_desc: string
+													}
+													shared_comments: {
+														/**
+														 * S​h​a​r​e​d​ ​C​o​m​m​e​n​t​s
+														 */
+														display_name: string
+														/**
+														 * I​n​d​i​c​a​t​e​s​ ​i​f​ ​c​o​m​m​e​n​t​s​ ​a​r​e​ ​s​h​a​r​e​d​ ​w​i​t​h​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
+														 */
+														desc: string
+														/**
+														 * S​h​a​r​e​d​ ​c​o​m​m​e​n​t​s
+														 */
+														short_desc: string
+													}
+													group_id: {
+														/**
+														 * G​r​o​u​p​ ​I​D
+														 */
+														display_name: string
+														/**
+														 * I​D​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​h​a​n​d​l​i​n​g​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
+														 */
+														desc: string
+														/**
+														 * G​r​o​u​p​ ​I​D
+														 */
+														short_desc: string
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 			actions: {
 				create_ticket: {
 					/**
@@ -3094,6 +4500,1412 @@ export type TranslationFunctions = {
 			 * Collection of actions to interact with Zendesk API
 			 */
 			longDesc: () => LocalizedString
+			triggers: {
+				new_user: {
+					/**
+					 * New User
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new user is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new user is created
+					 */
+					desc: () => LocalizedString
+					event_info: {
+						/**
+						 * New User event data
+						 */
+						desc: () => LocalizedString
+						type: {
+							version: {
+								/**
+								 * Version
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Version of the webhook
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The version of the webhook
+								 */
+								desc: () => LocalizedString
+							}
+							id: {
+								/**
+								 * ID
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Event ID
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Unique identifier for the event
+								 */
+								desc: () => LocalizedString
+							}
+							'detail-type': {
+								/**
+								 * Detail Type
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Event detail type
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Type of event detail
+								 */
+								desc: () => LocalizedString
+							}
+							source: {
+								/**
+								 * Source
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Event source
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Event source identifier
+								 */
+								desc: () => LocalizedString
+							}
+							account: {
+								/**
+								 * Account ID
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Account ID
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * ID of the account associated with the event
+								 */
+								desc: () => LocalizedString
+							}
+							time: {
+								/**
+								 * Event Time
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Event timestamp
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The timestamp of the event
+								 */
+								desc: () => LocalizedString
+							}
+							region: {
+								/**
+								 * Region
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * AWS region
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The AWS region of the event
+								 */
+								desc: () => LocalizedString
+							}
+							resources: {
+								/**
+								 * Resources
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Event resources
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Resources associated with the event
+								 */
+								desc: () => LocalizedString
+							}
+							detail: {
+								/**
+								 * Detail
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Event details
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Detailed information about the event
+								 */
+								desc: () => LocalizedString
+								user_event: {
+									/**
+									 * User Event
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * User event details
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Details of the user event
+									 */
+									desc: () => LocalizedString
+									meta: {
+										/**
+										 * Meta
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Event metadata
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Metadata about the event occurrence
+										 */
+										desc: () => LocalizedString
+										version: {
+											/**
+											 * Meta Version
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Metadata version
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Version of the event metadata
+											 */
+											desc: () => LocalizedString
+										}
+										occurred_at: {
+											/**
+											 * Occurred At
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Event occurrence time
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Timestamp of event occurrence
+											 */
+											desc: () => LocalizedString
+										}
+										ref: {
+											/**
+											 * Reference
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Event reference ID
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Reference ID for the event
+											 */
+											desc: () => LocalizedString
+										}
+										sequence: {
+											/**
+											 * Sequence
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Event sequence
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Sequence data for the event
+											 */
+											desc: () => LocalizedString
+											id: {
+												/**
+												 * Sequence ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Event sequence ID
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Sequence ID of the event
+												 */
+												desc: () => LocalizedString
+											}
+											position: {
+												/**
+												 * Position
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Sequence position
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Position of the event in the sequence
+												 */
+												desc: () => LocalizedString
+											}
+											total: {
+												/**
+												 * Total
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Total sequence events
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Total count of events in the sequence
+												 */
+												desc: () => LocalizedString
+											}
+										}
+									}
+									type: {
+										/**
+										 * Event Type
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * User event type
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Type of user event
+										 */
+										desc: () => LocalizedString
+									}
+									user: {
+										/**
+										 * User
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * User details
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Information about the user
+										 */
+										desc: () => LocalizedString
+										id: {
+											/**
+											 * User ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * User ID
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Unique ID of the user
+											 */
+											desc: () => LocalizedString
+										}
+										external_id: {
+											/**
+											 * External ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * User external ID
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * External identifier for the user
+											 */
+											desc: () => LocalizedString
+										}
+										role: {
+											/**
+											 * Role
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * User role
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Role of the user in the system
+											 */
+											desc: () => LocalizedString
+										}
+										email: {
+											/**
+											 * Email
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * User email
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Email address of the user
+											 */
+											desc: () => LocalizedString
+										}
+										created_at: {
+											/**
+											 * Created At
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * User creation time
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Creation timestamp of the user
+											 */
+											desc: () => LocalizedString
+										}
+										updated_at: {
+											/**
+											 * Updated At
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * User last update
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Last update timestamp of the user
+											 */
+											desc: () => LocalizedString
+										}
+										organization_id: {
+											/**
+											 * Organization ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Organization ID
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * ID of the organization associated with the user
+											 */
+											desc: () => LocalizedString
+										}
+										default_group_id: {
+											/**
+											 * Default Group ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * User default group ID
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Default group ID for the user
+											 */
+											desc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				new_ticket: {
+					/**
+					 * New Ticket
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new ticket is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new ticket is created
+					 */
+					desc: () => LocalizedString
+					event_info: {
+						/**
+						 * New Ticket event data
+						 */
+						desc: () => LocalizedString
+						type: {
+							version: {
+								/**
+								 * Version
+								 */
+								display_name: () => LocalizedString
+								/**
+								 * The version of the webhook
+								 */
+								desc: () => LocalizedString
+								/**
+								 * Version of the webhook
+								 */
+								short_desc: () => LocalizedString
+							}
+							id: {
+								/**
+								 * ID
+								 */
+								display_name: () => LocalizedString
+								/**
+								 * Unique identifier for the event
+								 */
+								desc: () => LocalizedString
+								/**
+								 * Event ID
+								 */
+								short_desc: () => LocalizedString
+							}
+							'detail-type': {
+								/**
+								 * Detail Type
+								 */
+								display_name: () => LocalizedString
+								/**
+								 * Type of event detail
+								 */
+								desc: () => LocalizedString
+								/**
+								 * Event detail type
+								 */
+								short_desc: () => LocalizedString
+							}
+							source: {
+								/**
+								 * Source
+								 */
+								display_name: () => LocalizedString
+								/**
+								 * Event source identifier
+								 */
+								desc: () => LocalizedString
+								/**
+								 * Event source
+								 */
+								short_desc: () => LocalizedString
+							}
+							account: {
+								/**
+								 * Account ID
+								 */
+								display_name: () => LocalizedString
+								/**
+								 * ID of the account associated with the event
+								 */
+								desc: () => LocalizedString
+								/**
+								 * Account ID
+								 */
+								short_desc: () => LocalizedString
+							}
+							time: {
+								/**
+								 * Event Time
+								 */
+								display_name: () => LocalizedString
+								/**
+								 * The timestamp of the event
+								 */
+								desc: () => LocalizedString
+								/**
+								 * Event timestamp
+								 */
+								short_desc: () => LocalizedString
+							}
+							region: {
+								/**
+								 * Region
+								 */
+								display_name: () => LocalizedString
+								/**
+								 * The AWS region of the event
+								 */
+								desc: () => LocalizedString
+								/**
+								 * AWS region
+								 */
+								short_desc: () => LocalizedString
+							}
+							resources: {
+								/**
+								 * Resources
+								 */
+								display_name: () => LocalizedString
+								/**
+								 * Resources associated with the event
+								 */
+								desc: () => LocalizedString
+								/**
+								 * Event resources
+								 */
+								short_desc: () => LocalizedString
+							}
+							detail: {
+								/**
+								 * Detail
+								 */
+								display_name: () => LocalizedString
+								/**
+								 * Detailed information about the event
+								 */
+								desc: () => LocalizedString
+								/**
+								 * Event details
+								 */
+								short_desc: () => LocalizedString
+								type: {
+									ticket_event: {
+										/**
+										 * Ticket Event
+										 */
+										display_name: () => LocalizedString
+										/**
+										 * Details of the ticket event
+										 */
+										desc: () => LocalizedString
+										/**
+										 * Ticket event details
+										 */
+										short_desc: () => LocalizedString
+										type: {
+											meta: {
+												/**
+												 * Meta
+												 */
+												display_name: () => LocalizedString
+												/**
+												 * Metadata about the event occurrence
+												 */
+												desc: () => LocalizedString
+												/**
+												 * Event metadata
+												 */
+												short_desc: () => LocalizedString
+												type: {
+													version: {
+														/**
+														 * Meta Version
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * Version of the event metadata
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Metadata version
+														 */
+														short_desc: () => LocalizedString
+													}
+													occurred_at: {
+														/**
+														 * Occurred At
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * Timestamp of event occurrence
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Event occurrence time
+														 */
+														short_desc: () => LocalizedString
+													}
+													ref: {
+														/**
+														 * Reference
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * Reference ID for the event
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Event reference ID
+														 */
+														short_desc: () => LocalizedString
+													}
+													sequence: {
+														/**
+														 * Sequence
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * Sequence data for the event
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Event sequence
+														 */
+														short_desc: () => LocalizedString
+														type: {
+															id: {
+																/**
+																 * Sequence ID
+																 */
+																display_name: () => LocalizedString
+																/**
+																 * Sequence ID of the event
+																 */
+																desc: () => LocalizedString
+																/**
+																 * Event sequence ID
+																 */
+																short_desc: () => LocalizedString
+															}
+															position: {
+																/**
+																 * Position
+																 */
+																display_name: () => LocalizedString
+																/**
+																 * Position of the event in the sequence
+																 */
+																desc: () => LocalizedString
+																/**
+																 * Sequence position
+																 */
+																short_desc: () => LocalizedString
+															}
+															total: {
+																/**
+																 * Total
+																 */
+																display_name: () => LocalizedString
+																/**
+																 * Total count of events in the sequence
+																 */
+																desc: () => LocalizedString
+																/**
+																 * Total sequence events
+																 */
+																short_desc: () => LocalizedString
+															}
+														}
+													}
+													actor_id: {
+														/**
+														 * Actor ID
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * ID of the actor triggering the event
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Event actor ID
+														 */
+														short_desc: () => LocalizedString
+													}
+												}
+											}
+											type: {
+												/**
+												 * Event Type
+												 */
+												display_name: () => LocalizedString
+												/**
+												 * Type of ticket event
+												 */
+												desc: () => LocalizedString
+												/**
+												 * Ticket event type
+												 */
+												short_desc: () => LocalizedString
+											}
+											ticket: {
+												/**
+												 * Ticket
+												 */
+												display_name: () => LocalizedString
+												/**
+												 * Information about the ticket
+												 */
+												desc: () => LocalizedString
+												/**
+												 * Ticket details
+												 */
+												short_desc: () => LocalizedString
+												type: {
+													id: {
+														/**
+														 * Ticket ID
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * Unique ID of the ticket
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Ticket ID
+														 */
+														short_desc: () => LocalizedString
+													}
+													created_at: {
+														/**
+														 * Created At
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * Creation timestamp of the ticket
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Ticket creation time
+														 */
+														short_desc: () => LocalizedString
+													}
+													updated_at: {
+														/**
+														 * Updated At
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * Last update timestamp of the ticket
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Ticket last update
+														 */
+														short_desc: () => LocalizedString
+													}
+													type: {
+														/**
+														 * Ticket Type
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * Type of the ticket
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Ticket type
+														 */
+														short_desc: () => LocalizedString
+													}
+													priority: {
+														/**
+														 * Priority
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * Priority level of the ticket
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Ticket priority
+														 */
+														short_desc: () => LocalizedString
+													}
+													status: {
+														/**
+														 * Status
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * Current status of the ticket
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Ticket status
+														 */
+														short_desc: () => LocalizedString
+													}
+													requester_id: {
+														/**
+														 * Requester ID
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * ID of the requester
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Ticket requester ID
+														 */
+														short_desc: () => LocalizedString
+													}
+													submitter_id: {
+														/**
+														 * Submitter ID
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * ID of the submitter
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Ticket submitter ID
+														 */
+														short_desc: () => LocalizedString
+													}
+													assignee_id: {
+														/**
+														 * Assignee ID
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * ID of the assignee
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Ticket assignee ID
+														 */
+														short_desc: () => LocalizedString
+													}
+													organization_id: {
+														/**
+														 * Organization ID
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * ID of the organization associated with the ticket
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Organization ID
+														 */
+														short_desc: () => LocalizedString
+													}
+													group_id: {
+														/**
+														 * Group ID
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * ID of the group handling the ticket
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Group ID
+														 */
+														short_desc: () => LocalizedString
+													}
+													brand_id: {
+														/**
+														 * Brand ID
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * ID of the brand associated with the ticket
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Brand ID
+														 */
+														short_desc: () => LocalizedString
+													}
+													form_id: {
+														/**
+														 * Form ID
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * ID of the form used for the ticket
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Form ID
+														 */
+														short_desc: () => LocalizedString
+													}
+													external_id: {
+														/**
+														 * External ID
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * External identifier for the ticket
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Ticket external ID
+														 */
+														short_desc: () => LocalizedString
+													}
+													tags: {
+														/**
+														 * Tags
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * Tags associated with the ticket
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Ticket tags
+														 */
+														short_desc: () => LocalizedString
+													}
+													via: {
+														/**
+														 * Via
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * Method by which the ticket was created
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Ticket creation method
+														 */
+														short_desc: () => LocalizedString
+														type: {
+															channel: {
+																/**
+																 * Channel
+																 */
+																display_name: () => LocalizedString
+																/**
+																 * Channel through which the ticket was submitted
+																 */
+																desc: () => LocalizedString
+																/**
+																 * Ticket channel
+																 */
+																short_desc: () => LocalizedString
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				new_organization: {
+					/**
+					 * New Organization
+					 */
+					display_name: () => LocalizedString
+					/**
+					 * Triggers when a new organization is created
+					 */
+					short_desc: () => LocalizedString
+					/**
+					 * Triggers when a new organization is created
+					 */
+					desc: () => LocalizedString
+					event_info: {
+						/**
+						 * New Organization event data
+						 */
+						desc: () => LocalizedString
+						type: {
+							version: {
+								/**
+								 * Version
+								 */
+								display_name: () => LocalizedString
+								/**
+								 * The version of the webhook
+								 */
+								desc: () => LocalizedString
+								/**
+								 * Webhook version
+								 */
+								short_desc: () => LocalizedString
+							}
+							id: {
+								/**
+								 * ID
+								 */
+								display_name: () => LocalizedString
+								/**
+								 * Unique identifier for the event
+								 */
+								desc: () => LocalizedString
+								/**
+								 * Event ID
+								 */
+								short_desc: () => LocalizedString
+							}
+							'detail-type': {
+								/**
+								 * Detail Type
+								 */
+								display_name: () => LocalizedString
+								/**
+								 * Type of event detail
+								 */
+								desc: () => LocalizedString
+								/**
+								 * Event detail type
+								 */
+								short_desc: () => LocalizedString
+							}
+							source: {
+								/**
+								 * Source
+								 */
+								display_name: () => LocalizedString
+								/**
+								 * Event source identifier
+								 */
+								desc: () => LocalizedString
+								/**
+								 * Event source
+								 */
+								short_desc: () => LocalizedString
+							}
+							account: {
+								/**
+								 * Account ID
+								 */
+								display_name: () => LocalizedString
+								/**
+								 * ID of the account associated with the event
+								 */
+								desc: () => LocalizedString
+								/**
+								 * Account ID
+								 */
+								short_desc: () => LocalizedString
+							}
+							time: {
+								/**
+								 * Event Time
+								 */
+								display_name: () => LocalizedString
+								/**
+								 * The timestamp of the event
+								 */
+								desc: () => LocalizedString
+								/**
+								 * Event timestamp
+								 */
+								short_desc: () => LocalizedString
+							}
+							region: {
+								/**
+								 * Region
+								 */
+								display_name: () => LocalizedString
+								/**
+								 * The AWS region of the event
+								 */
+								desc: () => LocalizedString
+								/**
+								 * AWS region
+								 */
+								short_desc: () => LocalizedString
+							}
+							resources: {
+								/**
+								 * Resources
+								 */
+								display_name: () => LocalizedString
+								/**
+								 * Resources associated with the event
+								 */
+								desc: () => LocalizedString
+								/**
+								 * Event resources
+								 */
+								short_desc: () => LocalizedString
+							}
+							detail: {
+								/**
+								 * Detail
+								 */
+								display_name: () => LocalizedString
+								/**
+								 * Detailed information about the event
+								 */
+								desc: () => LocalizedString
+								/**
+								 * Event details
+								 */
+								short_desc: () => LocalizedString
+								type: {
+									organization_event: {
+										/**
+										 * Organization Event
+										 */
+										display_name: () => LocalizedString
+										/**
+										 * Details of the organization event
+										 */
+										desc: () => LocalizedString
+										/**
+										 * Organization event details
+										 */
+										short_desc: () => LocalizedString
+										type: {
+											meta: {
+												/**
+												 * Meta
+												 */
+												display_name: () => LocalizedString
+												/**
+												 * Metadata about the event occurrence
+												 */
+												desc: () => LocalizedString
+												/**
+												 * Event metadata
+												 */
+												short_desc: () => LocalizedString
+												type: {
+													version: {
+														/**
+														 * Meta Version
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * Version of the event metadata
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Metadata version
+														 */
+														short_desc: () => LocalizedString
+													}
+													occurred_at: {
+														/**
+														 * Occurred At
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * Timestamp of event occurrence
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Event occurrence time
+														 */
+														short_desc: () => LocalizedString
+													}
+													ref: {
+														/**
+														 * Reference
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * Reference ID for the event
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Event reference ID
+														 */
+														short_desc: () => LocalizedString
+													}
+													sequence: {
+														/**
+														 * Sequence
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * Sequence data for the event
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Event sequence
+														 */
+														short_desc: () => LocalizedString
+														type: {
+															id: {
+																/**
+																 * Sequence ID
+																 */
+																display_name: () => LocalizedString
+																/**
+																 * Sequence ID of the event
+																 */
+																desc: () => LocalizedString
+																/**
+																 * Event sequence ID
+																 */
+																short_desc: () => LocalizedString
+															}
+															position: {
+																/**
+																 * Position
+																 */
+																display_name: () => LocalizedString
+																/**
+																 * Position of the event in the sequence
+																 */
+																desc: () => LocalizedString
+																/**
+																 * Sequence position
+																 */
+																short_desc: () => LocalizedString
+															}
+															total: {
+																/**
+																 * Total
+																 */
+																display_name: () => LocalizedString
+																/**
+																 * Total count of events in the sequence
+																 */
+																desc: () => LocalizedString
+																/**
+																 * Total sequence events
+																 */
+																short_desc: () => LocalizedString
+															}
+														}
+													}
+												}
+											}
+											type: {
+												/**
+												 * Event Type
+												 */
+												display_name: () => LocalizedString
+												/**
+												 * Type of organization event
+												 */
+												desc: () => LocalizedString
+												/**
+												 * Organization event type
+												 */
+												short_desc: () => LocalizedString
+											}
+											organization: {
+												/**
+												 * Organization
+												 */
+												display_name: () => LocalizedString
+												/**
+												 * Information about the organization
+												 */
+												desc: () => LocalizedString
+												/**
+												 * Organization details
+												 */
+												short_desc: () => LocalizedString
+												type: {
+													id: {
+														/**
+														 * Organization ID
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * Unique ID of the organization
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Organization ID
+														 */
+														short_desc: () => LocalizedString
+													}
+													external_id: {
+														/**
+														 * External ID
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * External identifier for the organization
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Organization external ID
+														 */
+														short_desc: () => LocalizedString
+													}
+													name: {
+														/**
+														 * Organization Name
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * Name of the organization
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Organization name
+														 */
+														short_desc: () => LocalizedString
+													}
+													created_at: {
+														/**
+														 * Created At
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * Creation timestamp of the organization
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Organization creation time
+														 */
+														short_desc: () => LocalizedString
+													}
+													updated_at: {
+														/**
+														 * Updated At
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * Last update timestamp of the organization
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Organization last update
+														 */
+														short_desc: () => LocalizedString
+													}
+													shared_tickets: {
+														/**
+														 * Shared Tickets
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * Indicates if tickets are shared with the organization
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Shared tickets
+														 */
+														short_desc: () => LocalizedString
+													}
+													shared_comments: {
+														/**
+														 * Shared Comments
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * Indicates if comments are shared with the organization
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Shared comments
+														 */
+														short_desc: () => LocalizedString
+													}
+													group_id: {
+														/**
+														 * Group ID
+														 */
+														display_name: () => LocalizedString
+														/**
+														 * ID of the group handling the organization
+														 */
+														desc: () => LocalizedString
+														/**
+														 * Group ID
+														 */
+														short_desc: () => LocalizedString
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 			actions: {
 				create_ticket: {
 					/**
