@@ -40,14 +40,18 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         *int webhook_auth;
         *list<auto> webhook_perms;
 
+        #! Any value returned by webhook_register()
+        *hash<auto> reginfo;
+
         #! The URL returned after registering the webhook
         string url;
     }
 
     #! Creates the object from the arguments
-    constructor(string name, string event_id, hash<DataProviderMessageInfo> event, string method,
-            hash<AsyncCallInfo> webhook_register, hash<AsyncCallInfo> webhook_deregister, *int webhook_auth,
-            *list<auto> webhook_perms) : TypeScriptActionEventDataProviderBase(name, event_id, event) {
+    constructor(string name, string event_id, hash<DataProviderMessageInfo> event,
+            *hash<string, hash<AsyncCallInfo>> omap, string method, hash<AsyncCallInfo> webhook_register,
+            hash<AsyncCallInfo> webhook_deregister, *int webhook_auth, *list<auto> webhook_perms)
+            : TypeScriptActionEventDataProviderBase(name, event_id, event, omap) {
         self.method = method;
         self.webhook_register = webhook_register;
         self.webhook_deregister = webhook_deregister;
@@ -71,7 +75,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         info("Registered webhook with URL %y", url);
 
         debug("Registering webhook for data provider %y URL %y", name, url);
-        getAsyncValue(webhook_register, getCallContextInfo(), url);
+        reginfo = getAsyncValue(webhook_register, getCallContextInfo(ImpliedArgumentHelper::get()), url);
         debug("Webhook for data provider %y registered with URL %y", name, url);
     }
 
@@ -84,7 +88,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
 
     private stop() {
         if (url.val()) {
-            getAsyncValue(webhook_deregister, getCallContextInfo(), url);
+            getAsyncValue(webhook_deregister, getCallContextInfo(), url, reginfo);
             TypeScriptActionInterface::deleteWebhook(url);
             delete url;
         }

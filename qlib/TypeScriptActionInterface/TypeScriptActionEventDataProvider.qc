@@ -45,8 +45,9 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
     }
 
     #! Creates the object from the arguments
-    constructor(string name, string event_id, hash<DataProviderMessageInfo> event_info, hash<AsyncCallInfo> event)
-            : TypeScriptActionEventDataProviderBase(name, event_id, event_info) {
+    constructor(string name, string event_id, hash<DataProviderMessageInfo> event_info,
+            *hash<string, hash<AsyncCallInfo>> omap, hash<AsyncCallInfo> event)
+            : TypeScriptActionEventDataProviderBase(name, event_id, event_info, omap) {
         self.event = event;
     }
 
@@ -61,7 +62,8 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
     observersReady() {
         info("Starting event thread for data provider %y for connection %y", name, conn.name);
         Counter c(1);
-        int tid = background startEventThread(c);
+        *hash<auto> options = ImpliedArgumentHelper::get();
+        int tid = background startEventThread(c, options);
         c.waitForZero();
         info("Started event thread in TID %d", tid);
     }
@@ -73,7 +75,7 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
         stop();
     }
 
-    private startEventThread(Counter c) {
+    private startEventThread(Counter c, *hash<auto> options) {
         on_exit {
             m.lock();
             on_exit m.unlock();
@@ -86,17 +88,21 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
         running = True;
         # signal calling thread that we are running
         c.dec();
-        # event function signature:
-        getAsyncValue(event, getCallContextInfo(), sub (JavaScriptObject o) {
-            auto event = o.toData();
-            if (event.typeCode() != NT_HASH) {
-                throw "INVALID-EVENT-DATA", sprintf("Cannot raise event %y with type %y; must be a hash (JavaScript "
-                    "object)", event_id, event.fullType());
-            }
-            notifyObservers(event_id, event);
-        }, bool sub () {
-            return stop_flag;
-        });
+        try {
+            # event function signature:
+            getAsyncValue(event, getCallContextInfo(options), sub (JavaScriptObject o) {
+                auto event = o.toData();
+                if (event.typeCode() != NT_HASH) {
+                    throw "INVALID-EVENT-DATA", sprintf("Cannot raise event %y with type %y; must be a hash (JavaScript "
+                        "object)", event_id, event.fullType());
+                }
+                notifyObservers(event_id, event);
+            }, bool sub () {
+                return stop_flag;
+            });
+        } catch (hash<ExceptionInfo> ex) {
+            error("Exception in event thread: %s", get_exception_string(ex));
+        }
     }
 
     stop() {

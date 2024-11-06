@@ -56,6 +56,7 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
         TypeScriptAppRestConnection conn(config);
         assertEq("tsrest-js-swagger-test://test.example.com/api", conn.getUrl());
 
+        ImpliedArgumentHelper iah({"name": "Fred"});
         AbstractDataProvider prov =
             TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("js-event-1");
         AbstractDataProviderType t = prov.getEventTypes().event.type;
@@ -108,6 +109,15 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
         TypeScriptAppRestConnection conn(config);
         assertEq("tsrest-js-swagger-test://test.example.com/api", conn.getUrl());
 
+        {
+            AbstractDataProvider prov =
+                TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("webhook-event-1");
+            MyObserver o();
+            cast<Observable>(prov).registerObserver(o);
+            assertThrows("JAVASCRIPT-ASYNC-ERROR", \cast<DelayedObservable>(prov).observersReady());
+        }
+
+        ImpliedArgumentHelper iah({"name": "Fred"});
         AbstractDataProvider prov =
             TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("webhook-event-1");
         AbstractDataProviderType t = prov.getEventTypes().event.type;
@@ -275,8 +285,19 @@ var obj = {
         AbstractDataProviderType t = prov.getRequestType();
         assertEq(6, t.getFields().size());
 
-        #prov = TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("get-pet");
-        #prov.doRequest({"id": 1});
+        prov = TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("get-pet");
+        t = prov.getRequestType();
+        {
+            *hash<string, AbstractDataField> fields = t.getFields();
+            assertEq(1, fields.size());
+            *AbstractDataField f = fields.id;
+            assertTrue(exists f);
+        }
+
+        actioninfo = DataProviderActionCatalog::getAppActionEx("js-swagger-test", "get-pet");
+        assertEq("get-pet", actioninfo.action);
+        assertEq("id", actioninfo.options.id.ref_data);
+        assertEq((1, 2), (map $1.value, prov.getReferenceData("id")));
 
         string cname = TypeScriptActionInterface::createConnection("js-swagger-test", {} + {
             "opts": {

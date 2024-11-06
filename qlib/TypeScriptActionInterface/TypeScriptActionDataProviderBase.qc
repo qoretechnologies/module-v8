@@ -45,11 +45,15 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
 
         #! The connection for the action
         AbstractConnection conn;
+
+        #! options with functions for reference data
+        *hash<string, hash<AsyncCallInfo>> omap;
     }
 
     #! Creates the object from the arguments
-    constructor(string name) {
+    constructor(string name, *hash<string, hash<AsyncCallInfo>> omap) {
         self.name = name;
+        self.omap = omap;
     }
 
     #! Sets the connection
@@ -65,6 +69,14 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
     #! Returns the data provider name
     string getName() {
         return name;
+    }
+
+    #! Returns information on supported reference data
+    /** @return a hash of supported reference data; keys in the hash returned are supported in calls to
+        @ref getReferenceData()
+    */
+    *hash<string, bool> getSupportedReferenceData() {
+        return map {$1: True}, keys omap;
     }
 
     auto getAsyncValue(hash<AsyncCallInfo> api, ...) {
@@ -192,6 +204,35 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
                 break;
         }
         return v;
+    }
+
+    #! Returns reference data of the given kind if available
+    /** @param type the unique type name of the reference data
+        @param action_opts an optional hash of action options when called when working with an app action
+
+        @return a list of allowed values for this data
+
+        @since DataProvider 3.0
+    */
+    private *list<hash<AllowedValueInfo>> getReferenceDataImpl(string type, *hash<auto> action_opts) {
+        if (*hash<AsyncCallInfo> ref_api = omap{type}) {
+            *hash<DataContextInfo> arg = getCallContextInfo(action_opts);
+            debug("Retrieving reference data for data provider %y type %y arg: %y", getName(), type, arg);
+            *softlist<auto> l = getAsyncValue(ref_api, arg);
+            debug("Reference data for data provider %y type %y: %y", getName(), type, l);
+            if (!l) {
+                return;
+            }
+            if (l[0].typeCode() != NT_HASH) {
+                return map <AllowedValueInfo>{
+                    "display_name": $1.toString(),
+                    "short_desc": $1.toString(),
+                    "desc": $1.toString(),
+                    "value": $1,
+                }, l;
+            }
+            return map cast<hash<AllowedValueInfo>>($1 instanceof JavaScriptObject ? $1.toData() : $1), l;
+        }
     }
 
     #! Returns call context info

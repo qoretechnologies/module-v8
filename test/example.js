@@ -235,7 +235,7 @@ exports.actionsCatalogue = {
                     "desc": "A count of something",
                     "required": true,
                     "preselected": true,
-                    "get_allowed_values": function() {
+                    "get_allowed_values": function(ctx) {
                         return [
                             {
                                 "display_name": "1",
@@ -261,7 +261,7 @@ exports.actionsCatalogue = {
                     "required": true,
                     "preselected": true,
                     "depends_on": ["count"],
-                    "get_allowed_values": function() {
+                    "get_allowed_values": function(ctx) {
                         return [
                             {
                                 "display_name": "this",
@@ -440,7 +440,31 @@ exports.actionsCatalogue = {
             "short_desc": "Get pet",
             "desc": "Get pet",
             "action_code": 2,  // DPAT_API == 2
-            "swagger_path": "pet/{id}/GET"
+            "swagger_path": "pet/{id}/GET",
+            /** override_options?: object -> allows options to be overridden; keys are non-optimized request property
+                paths and must refer to a property that will be presented as an action option after flattening /
+                optimization. The attributes of the object are handled like action option attributes
+            */
+            "override_options": {
+                'id': {
+                    "get_allowed_values": function(ctx) {
+                        return [
+                            {
+                                "display_name": "1",
+                                "short_desc": "1",
+                                "desc": "1",
+                                "value": 1,
+                            },
+                            {
+                                "display_name": "2",
+                                "short_desc": "2",
+                                "desc": "2",
+                                "value": 2,
+                            },
+                        ];
+                    },
+                },
+            }
         });
 
         api.registerAction({
@@ -456,6 +480,33 @@ exports.actionsCatalogue = {
             "desc": "Webhook event example action",
             // action_code: int
             "action_code": 1,  // DPAT_EVENT == 1
+            // event action options as documented above
+            "options": {
+                "name": {
+                    "type": "string",
+                    "display_name": "Name",
+                    "short_desc": "A name",
+                    "desc": "A name",
+                    "required": true,
+                    "preselected": true,
+                    "get_allowed_values": function(ctx) {
+                        return [
+                            {
+                                "display_name": "Fred",
+                                "short_desc": "Fred",
+                                "desc": "Fred",
+                                "value": "Fred",
+                            },
+                            {
+                                "display_name": "Albert",
+                                "short_desc": "Albert",
+                                "desc": "Albert",
+                                "value": "Albert",
+                            },
+                        ];
+                    },
+                }
+            },
             // webbook_method?: string
             /** "webhook_method" is required when action_code is 1 (DPAT_EVENT), and there is no "event_function" and
                 "stop_function"
@@ -475,7 +526,7 @@ exports.actionsCatalogue = {
                 QAUTH_QORUS)
             */
             "webhook_perms": null,
-            // webbook_register?: function(ctx?: object, url: string) {}
+            // webbook_register?: async function(ctx?: object, url: string): object | void {}
             /**
                 @param ctx: object -> with the following properties:
                 - conn_name?: string -> the connection name, if any is defined
@@ -483,22 +534,28 @@ exports.actionsCatalogue = {
                 - opts?: object -> a data object with option values set for the current action
                 @param url: string -> the URL the webhook is reachable on
 
+                @return an optional object that will be passed as the third argument to "webhook_deregister"
+
                 @note the function here will be called with no "this" context; "this" cannot be used in this function
             */
-            "webhook_register": function(ctx, url) {
+            "webhook_register": async function(ctx, url) {
+                if (!ctx.opts.name) {
+                    throw new Error("missing name");
+                }
                 // this function should register the webhook with the server
             },
-            // webbook_deregister?: function(ctx?: object, url: string) {}
+            // webbook_deregister?: async function(ctx?: object, url: string, reginfo?: object) {}
             /**
                 @param ctx: object -> with the following properties:
                 - conn_name?: string -> the connection name, if any is defined
                 - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
                 - opts?: object -> a data object with option values set for the current action
                 @param url: string -> the URL the webhook is reachable on
+                @param reginfo?: object -> any value returned from the "webhook_register()" function
 
                 @note the function here will be called with no "this" context; "this" cannot be used in this function
             */
-            "webhook_deregister": function(ctx, url) {
+            "webhook_deregister": async function(ctx, url, reginfo) {
                 // this function should deregister the webhook with the server
             },
             // event_info: object
@@ -533,10 +590,38 @@ exports.actionsCatalogue = {
             "short_desc": "JavaScript event example action",
             "desc": "JavaScript event example action",
             "action_code": 1,  // DPAT_EVENT == 1
+            // event action options as documented above
+            "options": {
+                "name": {
+                    "type": "string",
+                    "display_name": "Name",
+                    "short_desc": "A name",
+                    "desc": "A name",
+                    "required": true,
+                    "preselected": true,
+                    "get_allowed_values": function(ctx) {
+                        return [
+                            {
+                                "display_name": "Fred",
+                                "short_desc": "Fred",
+                                "desc": "Fred",
+                                "value": "Fred",
+                            },
+                            {
+                                "display_name": "Albert",
+                                "short_desc": "Albert",
+                                "desc": "Albert",
+                                "value": "Albert",
+                            },
+                        ];
+                    },
+                }
+            },
             /** "event_function" is required when "action_code" == DPAT_EVENT and "webhook_method" is not present
                 @param ctx?: object with the following properties:
                 - conn_name?: string -> the connection name, if any is defined
                 - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
                 @param update: function (event_data: object) -> this function should be called when events are
                 received to post the event to the observer
                 @param should_stop: function (): bool -> this function will return true when event polling should stop
@@ -544,6 +629,9 @@ exports.actionsCatalogue = {
                 @note the function here will be called with no "this" context; "this" cannot be used in this function
             */
             "event_function": async function(ctx, update, should_stop) {
+                if (!ctx.opts.name) {
+                    throw new Error("missing name");
+                }
                 update({
                     "name": "name-1",
                     "code": 1234,

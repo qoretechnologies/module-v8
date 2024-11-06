@@ -507,6 +507,17 @@ public class TypeScriptActionInterface {
 
         timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
 
+        *hash<string, hash<AsyncCallInfo>> omap;
+        if (*hash<auto> opts = remove action.options) {
+            *hash<string, hash<AsyncCallInfo>> dmap;
+            action.options = TypeScriptActionInterface::getOptions(app, \action, opts, \omap, \dmap, pool);
+            if (dmap) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"options\" "
+                    "attribute; event actions do not support get_dependent_options() callbacks", action.app,
+                    action.action);
+            }
+        }
+
         TypeScriptActionEventDataProviderBase child;
 
         string rv;
@@ -560,7 +571,7 @@ public class TypeScriptActionInterface {
                 "to": seconds(io_timeout),
             };
 
-            child = new TypeScriptActionWebhookEventDataProvider(action.action, event_id, event_info, method,
+            child = new TypeScriptActionWebhookEventDataProvider(action.action, event_id, event_info, omap, method,
                 webhook_register, webhook_deregister, webhook_auth, webhook_perms);
             rv = AES_WH_EVENT;
         } else {
@@ -576,7 +587,7 @@ public class TypeScriptActionInterface {
                 "async_call": event_function,
                 "to": seconds(io_timeout),
             };
-            child = new TypeScriptActionEventDataProvider(action.action, event_id, event_info, event);
+            child = new TypeScriptActionEventDataProvider(action.action, event_id, event_info, omap, event);
             rv = AES_JS_EVENT;
         }
 
@@ -618,23 +629,28 @@ public class TypeScriptActionInterface {
                     "attribute %y; this attribute can only been used when the application declares a Swagger schema",
                     action.app, action.action, swagger_path);
             }
+            if (remove action.options) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"options\" property; "
+                    "this property cannot be defined when \"swagger_path\" (%y) is also defined for the action",
+                    action.app, action.action, swagger_path);
+            }
 
             # check for path vars0
             *hash<string, bool> path_vars = map {$1: True}, (swagger_path =~ x/\{([^\}]*)}/g);
-            child = new TypeScriptActionApiWithSchemaDataProvider(action.action, schema, swagger_path, api,
-                path_vars, app_conn_opt_map{app.name.lwr()});
+            TypeScriptActionApiWithSchemaDataProvider dp(action.action, schema, swagger_path, api, path_vars,
+                app_conn_opt_map{app.name.lwr()});
+            child = dp;
 
             if ((*AbstractDataProviderType t = child.getRequestType())
                 && (*hash<string, AbstractDataField> fields = t.getFields())) {
                 action.options = DataProviderActionCatalog::getActionOptionFromFields(fields);
             }
-            action.output_type = child.getResponseType();
-            if (remove action.request_type) {
-                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"request_type\" property; "
-                    "this property cannot be defined when \"swagger_path\" (%y) is also defined for the action",
-                    action.app, action.action, swagger_path);
-
+            # allow options to be updated
+            if (*hash<auto> override_options = remove action.override_options) {
+                dp.overrideOptions(\action, override_options, pool);
             }
+
+            action.output_type = child.getResponseType();
             if (remove action.response_type) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"response_type\" "
                     "property; this property cannot be defined when \"swagger_path\" (%y) is also defined for the "
@@ -689,46 +705,52 @@ public class TypeScriptActionInterface {
         return rv;
     }
 
+    static getOptionFunctions(reference<hash<auto>> action, reference<hash<string, hash<AsyncCallInfo>>> omap,
+            reference<hash<string, hash<AsyncCallInfo>>> dmap, string key, reference<hash<auto>> h,
+        JavaScriptProgramPool pool) {
+        on_error rethrow $1.err, sprintf("%s (while processing option %y)", $1.desc, key);
+        date io_timeout = seconds(remove h.io_timeout_secs ?? DefaultIoTimeoutSecs);
+        if (exists (auto get_allowed_values = remove h.get_allowed_values)) {
+            if (!get_allowed_values.callp()) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
+                    "\"get_allowed_values\" attribute; got type %y; expecting a callable value", action.app,
+                    action.action, key, get_allowed_values.fullType());
+            }
+            omap{key} = <AsyncCallInfo>{
+                "label": sprintf("Reference data function for app %y action %y option %y", action.app,
+                    action.action, key),
+                "pool": pool,
+                "async_call": get_allowed_values,
+                "to": io_timeout,
+            };
+            h.ref_data = key;
+        }
+        if (exists (auto get_dependent_options = remove h.get_dependent_options)) {
+            if (!get_dependent_options.callp()) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
+                    "\"get_dependent_options\" attribute; got type %y; expecting a callable value", action.app,
+                    action.action, key, get_dependent_options.fullType());
+            }
+            dmap{key} = <AsyncCallInfo>{
+                "label": sprintf("Dependent option function for app %y action %y option %y", action.app,
+                    action.action, key),
+                "pool": pool,
+                "async_call": get_dependent_options,
+                "to": io_timeout,
+            };
+            action.data_dependent_options = True;
+        }
+        if (h.required && !h.preselected && !exists h.default_value) {
+            h.preselected = True;
+        }
+    }
+
     static *hash<string, hash<ActionOptionInfo>> getOptions(hash<DataProviderAppInfo> app,
             reference<hash<auto>> action, hash<auto> opts, reference<hash<string, hash<AsyncCallInfo>>> omap,
             reference<hash<string, hash<AsyncCallInfo>>> dmap, JavaScriptProgramPool pool) {
         hash<string, hash<ActionOptionInfo>> rv;
         foreach hash<auto> i in (opts.pairIterator()) {
-            on_error rethrow $1.err, sprintf("%s (while processing option %y)", $1.desc, i.key);
-            date io_timeout = seconds(remove i.value.io_timeout_secs ?? DefaultIoTimeoutSecs);
-            if (exists (auto get_allowed_values = remove i.value.get_allowed_values)) {
-                if (!get_allowed_values.callp()) {
-                    throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
-                        "\"get_allowed_values\" attribute; got type %y; expecting a callable value", action.app,
-                        action.action, i.key, get_allowed_values.fullType());
-                }
-                omap{i.key} = <AsyncCallInfo>{
-                    "label": sprintf("Reference data function for app %y action %y option %y", app.name,
-                        action.action, i.key),
-                    "pool": pool,
-                    "async_call": get_allowed_values,
-                    "to": io_timeout,
-                };
-                i.value.ref_data = i.key;
-            }
-            if (exists (auto get_dependent_options = remove i.value.get_dependent_options)) {
-                if (!get_dependent_options.callp()) {
-                    throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
-                        "\"get_dependent_options\" attribute; got type %y; expecting a callable value", action.app,
-                        action.action, i.key, get_dependent_options.fullType());
-                }
-                dmap{i.key} = <AsyncCallInfo>{
-                    "label": sprintf("Dependent option function for app %y action %y option %y", app.name,
-                        action.action, i.key),
-                    "pool": pool,
-                    "async_call": get_dependent_options,
-                    "to": io_timeout,
-                };
-                action.data_dependent_options = True;
-            }
-            if (i.value.required && !i.value.preselected && !exists i.value.default_value) {
-                i.value.preselected = True;
-            }
+            TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, i.key, \i.value, pool);
             rv{i.key} = TypeScriptActionInterface::getOptionInfo(i.value);
             if (dmap{i.key}) {
                 rv{i.key}.structural_determinate = True;

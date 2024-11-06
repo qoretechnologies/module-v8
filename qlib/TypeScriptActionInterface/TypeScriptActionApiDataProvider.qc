@@ -43,8 +43,7 @@ class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProviderBase 
         hash<AsyncCallInfo> api;
         *AbstractDataProviderType request_type;
         *AbstractDataProviderType response_type;
-        #! options with functions for reference data
-        *hash<string, hash<AsyncCallInfo>> omap;
+
         #! options that determine the structure of other options
         *hash<string, hash<AsyncCallInfo>> dmap;
 
@@ -54,11 +53,10 @@ class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProviderBase 
 
     constructor(string name, hash<AsyncCallInfo> api, *AbstractDataProviderType request_type,
             *AbstractDataProviderType response_type, *hash<string, hash<AsyncCallInfo>> omap,
-            *hash<string, hash<AsyncCallInfo>> dmap) : TypeScriptActionDataProviderBase(name) {
+            *hash<string, hash<AsyncCallInfo>> dmap) : TypeScriptActionDataProviderBase(name, omap) {
         self.api = api;
         self.request_type = request_type;
         self.response_type = response_type;
-        self.omap = omap;
         self.dmap = dmap;
     }
 
@@ -66,14 +64,6 @@ class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProviderBase 
         if (api) {
             self.api = api;
         }
-    }
-
-    #! Returns information on supported reference data
-    /** @return a hash of supported reference data; keys in the hash returned are supported in calls to
-        @ref getReferenceData()
-    */
-    *hash<string, bool> getSupportedReferenceData() {
-        return map {$1: True}, keys omap;
     }
 
     #! "Normalizes" the request and response for testing if necessary
@@ -89,35 +79,6 @@ class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProviderBase 
     */
     private auto doRequestImpl(auto req, *hash<auto> request_options) {
         return getAsyncValue(api, req, request_options, getCallContextInfo());
-    }
-
-    #! Returns reference data of the given kind if available
-    /** @param type the unique type name of the reference data
-        @param action_opts an optional hash of action options when called when working with an app action
-
-        @return a list of allowed values for this data
-
-        @since DataProvider 3.0
-    */
-    private *list<hash<AllowedValueInfo>> getReferenceDataImpl(string type, *hash<auto> action_opts) {
-        if (*hash<AsyncCallInfo> ref_api = omap{type}) {
-            *hash<DataContextInfo> arg = getCallContextInfo(action_opts);
-            debug("Retrieving reference data for data provider %y type %y arg: %y", getName(), type, arg);
-            *softlist<auto> l = getAsyncValue(ref_api, arg);
-            debug("Reference data for data provider %y type %y: %y", getName(), type, l);
-            if (!l) {
-                return;
-            }
-            if (l[0].typeCode() != NT_HASH) {
-                return map <AllowedValueInfo>{
-                    "display_name": $1.toString(),
-                    "short_desc": $1.toString(),
-                    "desc": $1.toString(),
-                    "value": $1,
-                }, l;
-            }
-            return map cast<hash<AllowedValueInfo>>($1 instanceof JavaScriptObject ? $1.toData() : $1), l;
-        }
     }
 
     #! Returns the description of a successful request message, if any
