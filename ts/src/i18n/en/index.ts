@@ -199,6 +199,195 @@ const en = {
       displayName: 'Github',
       shortDesc: 'Collection of actions to interact with Github API',
       longDesc: 'Collection of actions to interact with Github API',
+      triggers: {
+        new_repository_issue: {
+          displayName: 'New Repository Issue',
+          shortDesc: 'Triggers when a new issue is created in a repository',
+          desc: 'Triggers when a new issue is created in a repository',
+          options: {
+            repo: {
+              desc: 'Repository name',
+              shortDesc: 'Repository name',
+              displayName: 'Repository name',
+            },
+            owner: {
+              desc: 'Organization name or user login',
+              shortDesc: 'Organization name or user login',
+              displayName: 'Repository owner',
+            },
+          },
+          event_info: {
+            desc: 'GitHub Issue event data',
+            type: {
+              action: {
+                displayName: 'Action',
+                shortDesc: 'Action type',
+                desc: "The action performed on the issue, such as 'assigned' or 'opened'.",
+              },
+              issue: {
+                displayName: 'Issue',
+                shortDesc: 'GitHub issue data',
+                desc: 'Details of the GitHub issue involved in the event',
+                url: {
+                  displayName: 'Issue URL',
+                  shortDesc: 'URL of the issue',
+                  desc: 'The URL of the GitHub issue',
+                },
+                number: {
+                  displayName: 'Issue Number',
+                  shortDesc: 'Issue identifier',
+                  desc: 'Unique number of the GitHub issue',
+                },
+                title: {
+                  displayName: 'Issue Title',
+                  shortDesc: 'Title of the issue',
+                  desc: 'The title of the GitHub issue',
+                },
+                user: {
+                  displayName: 'Issue Creator',
+                  shortDesc: 'User who created the issue',
+                  desc: 'Information about the user who created the GitHub issue',
+                  login: {
+                    displayName: 'User Login',
+                    shortDesc: 'GitHub username',
+                    desc: 'The username of the GitHub user',
+                  },
+                  id: {
+                    displayName: 'User ID',
+                    shortDesc: 'User ID',
+                    desc: 'Unique ID of the GitHub user',
+                  },
+                  avatar_url: {
+                    displayName: 'Avatar URL',
+                    shortDesc: 'User avatar',
+                    desc: "URL to the GitHub user's avatar",
+                  },
+                  html_url: {
+                    displayName: 'Profile URL',
+                    shortDesc: 'User profile',
+                    desc: "URL to the GitHub user's profile",
+                  },
+                },
+                labels: {
+                  displayName: 'Labels',
+                  shortDesc: 'Labels for the issue',
+                  desc: 'Labels assigned to the GitHub issue',
+                  id: {
+                    displayName: 'Label ID',
+                    shortDesc: 'Label identifier',
+                    desc: 'Unique identifier for the label',
+                  },
+                  name: {
+                    displayName: 'Label Name',
+                    shortDesc: 'Name of the label',
+                    desc: 'The name of the label',
+                  },
+                  color: {
+                    displayName: 'Label Color',
+                    shortDesc: 'Color of the label',
+                    desc: 'Color code of the label',
+                  },
+                },
+                state: {
+                  displayName: 'State',
+                  shortDesc: 'State of the issue',
+                  desc: "Current state of the issue, such as 'open' or 'closed'",
+                },
+                assignee: {
+                  displayName: 'Assignee',
+                  shortDesc: 'User assigned to the issue',
+                  desc: 'Details of the user assigned to the issue',
+                  login: {
+                    displayName: 'Assignee Login',
+                    shortDesc: 'Assignee username',
+                    desc: 'The username of the assigned GitHub user',
+                  },
+                  id: {
+                    displayName: 'Assignee ID',
+                    shortDesc: 'Assignee ID',
+                    desc: 'Unique ID of the assignee',
+                  },
+                  avatar_url: {
+                    displayName: 'Assignee Avatar',
+                    shortDesc: 'Avatar of the assignee',
+                    desc: 'URL to the avatar of the assignee',
+                  },
+                  html_url: {
+                    displayName: 'Assignee Profile',
+                    shortDesc: 'Profile of the assignee',
+                    desc: 'URL to the GitHub profile of the assignee',
+                  },
+                },
+                milestone: {
+                  displayName: 'Milestone',
+                  shortDesc: 'Issue milestone',
+                  desc: 'Milestone associated with the GitHub issue',
+                  title: {
+                    displayName: 'Milestone Title',
+                    shortDesc: 'Title of the milestone',
+                    desc: 'Title of the milestone for the issue',
+                  },
+                  due_on: {
+                    displayName: 'Due Date',
+                    shortDesc: 'Milestone due date',
+                    desc: 'Due date of the milestone',
+                  },
+                },
+              },
+              repository: {
+                displayName: 'Repository',
+                shortDesc: 'Repository information',
+                desc: 'Details of the GitHub repository related to the event',
+                name: {
+                  displayName: 'Repository Name',
+                  shortDesc: 'Name of the repository',
+                  desc: 'Name of the repository',
+                },
+                owner: {
+                  displayName: 'Owner',
+                  shortDesc: 'Repository owner',
+                  desc: 'Owner of the repository',
+                  login: {
+                    displayName: 'Owner Login',
+                    shortDesc: 'Owner username',
+                    desc: 'Username of the repository owner',
+                  },
+                  id: {
+                    displayName: 'Owner ID',
+                    shortDesc: 'Owner ID',
+                    desc: 'Unique ID of the repository owner',
+                  },
+                },
+              },
+              sender: {
+                displayName: 'Sender',
+                shortDesc: 'Event sender',
+                desc: 'User who triggered the webhook event',
+                login: {
+                  displayName: 'Sender Login',
+                  shortDesc: 'Sender username',
+                  desc: 'Username of the sender',
+                },
+                id: {
+                  displayName: 'Sender ID',
+                  shortDesc: 'Sender ID',
+                  desc: 'Unique ID of the sender',
+                },
+                avatar_url: {
+                  displayName: 'Sender Avatar',
+                  shortDesc: "Sender's avatar",
+                  desc: "URL to the sender's avatar",
+                },
+                html_url: {
+                  displayName: 'Sender Profile',
+                  shortDesc: "Sender's profile",
+                  desc: "URL to the sender's GitHub profile",
+                },
+              },
+            },
+          },
+        },
+      },
     },
     Asana: {
       displayName: 'Asana',

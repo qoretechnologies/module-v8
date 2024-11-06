@@ -10,9 +10,7 @@ export const createZendeskWebhookRegistrar = (
       conn_opts: { token, subdomain },
     } = context;
 
-    const {
-      data: { webhook },
-    } = await QorusRequest.post<any>(
+    const { data } = await QorusRequest.post<any>(
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -32,18 +30,18 @@ export const createZendeskWebhookRegistrar = (
       { url: `https://${subdomain}.zendesk.com`, endpointId: 'Zendesk' }
     );
 
-    return webhook;
+    return data;
   };
 };
 
 export const createZendeskWebhookDeRegistrar = (): IQoreAppActionWithWebhookBase<
   typeof ZENDESK_CONN_OPTIONS
 >['webhook_deregister'] => {
-  return async (context, _url) => {
+  return async (context, _url, regInfo) => {
     const {
       conn_opts: { token, subdomain },
-      opts: { webhook },
     } = context;
+    const { webhook } = regInfo;
 
     await QorusRequest.deleteReq<any>(
       {

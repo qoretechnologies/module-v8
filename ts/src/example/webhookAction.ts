@@ -12,8 +12,8 @@ export const testActionWithWebhook = {
   webhook_register: async (context, url) => {
     console.log('Registering webhook:', url, 'with', context);
   },
-  webhook_deregister: async (context, url) => {
-    console.log('De-Registering webhook:', url, 'with', context);
+  webhook_deregister: async (context, url, regInfo) => {
+    console.log('De-Registering webhook:', url, 'with', context, 'and', regInfo);
   },
   webhook_auth: EQoreAppActionWebhookAuthType.AUTH_REQUIRE_AUTH,
   event_info: {

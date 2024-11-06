@@ -39,7 +39,6 @@ export const ZENDESK_ACTIONS = buildActionsFromSwaggerSchema({
   app: ZENDESK_APP_NAME,
 });
 
-console.log(Object.values(zendeskTriggers));
 /*
  * Returns the app object with all the actions ready to use, using translations
  * @param locale - the locale
