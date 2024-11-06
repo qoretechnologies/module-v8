@@ -482,13 +482,29 @@ exports.actionsCatalogue = {
             "action_code": 1,  // DPAT_EVENT == 1
             // event action options as documented above
             "options": {
-                "bval": {
-                    "type": "bool",
-                    "display_name": "Boolean Value",
-                    "short_desc": "A boolean value",
-                    "desc": "A boolean value",
+                "name": {
+                    "type": "string",
+                    "display_name": "Name",
+                    "short_desc": "A name",
+                    "desc": "A name",
                     "required": true,
                     "preselected": true,
+                    "get_allowed_values": function(ctx) {
+                        return [
+                            {
+                                "display_name": "Fred",
+                                "short_desc": "Fred",
+                                "desc": "Fred",
+                                "value": "Fred",
+                            },
+                            {
+                                "display_name": "Albert",
+                                "short_desc": "Albert",
+                                "desc": "Albert",
+                                "value": "Albert",
+                            },
+                        ];
+                    },
                 }
             },
             // webbook_method?: string
@@ -510,7 +526,7 @@ exports.actionsCatalogue = {
                 QAUTH_QORUS)
             */
             "webhook_perms": null,
-            // webbook_register?: function(ctx?: object, url: string): object | void {}
+            // webbook_register?: async function(ctx?: object, url: string): object | void {}
             /**
                 @param ctx: object -> with the following properties:
                 - conn_name?: string -> the connection name, if any is defined
@@ -522,13 +538,13 @@ exports.actionsCatalogue = {
 
                 @note the function here will be called with no "this" context; "this" cannot be used in this function
             */
-            "webhook_register": function(ctx, url) {
-                if (!ctx.opts.bval) {
-                    throw new Error();
+            "webhook_register": async function(ctx, url) {
+                if (!ctx.opts.name) {
+                    throw new Error("missing name");
                 }
                 // this function should register the webhook with the server
             },
-            // webbook_deregister?: function(ctx?: object, url: string) {}
+            // webbook_deregister?: async function(ctx?: object, url: string, reginfo?: object) {}
             /**
                 @param ctx: object -> with the following properties:
                 - conn_name?: string -> the connection name, if any is defined
@@ -539,7 +555,7 @@ exports.actionsCatalogue = {
 
                 @note the function here will be called with no "this" context; "this" cannot be used in this function
             */
-            "webhook_deregister": function(ctx, url, reginfo) {
+            "webhook_deregister": async function(ctx, url, reginfo) {
                 // this function should deregister the webhook with the server
             },
             // event_info: object
@@ -574,10 +590,38 @@ exports.actionsCatalogue = {
             "short_desc": "JavaScript event example action",
             "desc": "JavaScript event example action",
             "action_code": 1,  // DPAT_EVENT == 1
+            // event action options as documented above
+            "options": {
+                "name": {
+                    "type": "string",
+                    "display_name": "Name",
+                    "short_desc": "A name",
+                    "desc": "A name",
+                    "required": true,
+                    "preselected": true,
+                    "get_allowed_values": function(ctx) {
+                        return [
+                            {
+                                "display_name": "Fred",
+                                "short_desc": "Fred",
+                                "desc": "Fred",
+                                "value": "Fred",
+                            },
+                            {
+                                "display_name": "Albert",
+                                "short_desc": "Albert",
+                                "desc": "Albert",
+                                "value": "Albert",
+                            },
+                        ];
+                    },
+                }
+            },
             /** "event_function" is required when "action_code" == DPAT_EVENT and "webhook_method" is not present
                 @param ctx?: object with the following properties:
                 - conn_name?: string -> the connection name, if any is defined
                 - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
                 @param update: function (event_data: object) -> this function should be called when events are
                 received to post the event to the observer
                 @param should_stop: function (): bool -> this function will return true when event polling should stop
@@ -585,6 +629,9 @@ exports.actionsCatalogue = {
                 @note the function here will be called with no "this" context; "this" cannot be used in this function
             */
             "event_function": async function(ctx, update, should_stop) {
+                if (!ctx.opts.name) {
+                    throw new Error("missing name");
+                }
                 update({
                     "name": "name-1",
                     "code": 1234,

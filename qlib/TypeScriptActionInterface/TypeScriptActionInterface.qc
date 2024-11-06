@@ -507,18 +507,13 @@ public class TypeScriptActionInterface {
 
         timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
 
+        *hash<string, hash<AsyncCallInfo>> omap;
         if (*hash<auto> opts = remove action.options) {
-            *hash<string, hash<AsyncCallInfo>> omap;
             *hash<string, hash<AsyncCallInfo>> dmap;
             action.options = TypeScriptActionInterface::getOptions(app, \action, opts, \omap, \dmap, pool);
-            if (omap) {
-                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"options\" "
-                    "attribute; webhook actions do not support get_allowed_value() callbacks", action.app,
-                    action.action);
-            }
             if (dmap) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"options\" "
-                    "attribute; webhook actions do not support get_dependent_options() callbacks", action.app,
+                    "attribute; event actions do not support get_dependent_options() callbacks", action.app,
                     action.action);
             }
         }
@@ -576,7 +571,7 @@ public class TypeScriptActionInterface {
                 "to": seconds(io_timeout),
             };
 
-            child = new TypeScriptActionWebhookEventDataProvider(action.action, event_id, event_info, method,
+            child = new TypeScriptActionWebhookEventDataProvider(action.action, event_id, event_info, omap, method,
                 webhook_register, webhook_deregister, webhook_auth, webhook_perms);
             rv = AES_WH_EVENT;
         } else {
@@ -592,7 +587,7 @@ public class TypeScriptActionInterface {
                 "async_call": event_function,
                 "to": seconds(io_timeout),
             };
-            child = new TypeScriptActionEventDataProvider(action.action, event_id, event_info, event);
+            child = new TypeScriptActionEventDataProvider(action.action, event_id, event_info, omap, event);
             rv = AES_JS_EVENT;
         }
 
