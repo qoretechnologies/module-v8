@@ -1,7 +1,12 @@
-import { IQorePartialAppActionWithSwaggerPath, IQoreTypeObject } from 'global/models/qore';
+import {
+  EQoreAppActionCode,
+  IQorePartialAppActionWithSwaggerPath,
+  IQoreTypeObject,
+  TQoreOptions,
+  TQorePartialEventAction,
+} from 'global/models/qore';
 import { OpenAPIV2 } from 'openapi-types';
-import { buildActionsFromSwaggerSchema, fixActionOptions } from '../global/helpers';
-import { IActionOptions } from '../global/models/actions';
+import { buildActionsFromSwaggerSchema, fixOptions, mapTriggersToApp } from '../global/helpers';
 import eSignature from '../schemas/esignature.swagger.json';
 
 describe('Helpers tests', () => {
@@ -87,100 +92,121 @@ describe('Helpers tests', () => {
     expect(actionsWithFilter[0].short_desc).toBeDefined();
   });
 
-  it('Should receive fully incomplete action options and return fixed options', () => {
-    const incompleteOptions = {
-      option1: {
-        type: 'string',
-        example_value: 'example',
-        required: true,
-      },
-    } satisfies IActionOptions;
-
-    const fixedOptions = fixActionOptions(incompleteOptions, '_testing', 'en', 'test');
-
-    expect(fixedOptions.option1.display_name).toBe('Option 1');
-    expect(fixedOptions.option1.short_desc).toBe('Option 1 Short Description');
-    expect(fixedOptions.option1.desc).toBe('Option 1 Long Description');
-  });
-
-  it('Should receive partially incomplete action options and return fixed options', () => {
-    const incompleteOptions = {
-      option1: {
-        type: 'string',
-        example_value: 'example',
-        required: true,
-        short_desc: 'This is my short description and it should not change',
-      },
-    } satisfies IActionOptions;
-
-    const fixedOptions = fixActionOptions(incompleteOptions, '_testing', 'en', 'test');
-
-    expect(fixedOptions.option1.display_name).toBe('Option 1');
-    expect(fixedOptions.option1.short_desc).toBe(
-      'This is my short description and it should not change'
-    );
-    expect(fixedOptions.option1.desc).toBe('Option 1 Long Description');
-  });
-
   it('Should receive partially incomplete deep action options and return fixed deep options', () => {
     const incompleteOptions = {
       option1: {
+        type: {
+          subOption1: {
+            name: 'sub_option1',
+            type: 'string',
+            required: true,
+          },
+          subOption2: {
+            name: 'sub_option2',
+            required: true,
+            type: {
+              subSubOption1: {
+                name: 'sub_sub_option1',
+                desc: 'Deep option',
+                type: 'string',
+                required: true,
+              },
+            },
+          },
+        },
+        example_value: {
+          subOption1: 'example',
+          subOption2: {
+            subSubOption1: 'example',
+          },
+        },
+        required: true,
+      },
+      option2: {
         type: 'string',
         example_value: 'example',
         required: true,
-        short_desc: 'This is my short description and it should not change',
       },
-      option2: {
-        example_value: {
-          sub_option1: 'example',
-        },
-        type: {
-          sub_option1: {
-            name: 'sub_option1',
-            type: {
-              sub_sub_option1: {
-                name: 'sub_sub_option1',
-                display_name: 'This option is so deep',
-                type: 'string',
-                example_value: 'example',
-                required: true,
-                short_desc: 'Very very deep',
-              },
-            },
-            example_value: 'example',
-            required: true,
-            desc: 'A sub description, if you like',
-          },
-        },
-      },
-    } as const;
+    } satisfies TQoreOptions;
 
-    const fixedOptions = fixActionOptions(incompleteOptions, '_testing', 'en', 'test');
+    const fixedOptions = fixOptions(
+      { options: incompleteOptions, action: 'test', action_code: EQoreAppActionCode.ACTION },
+      incompleteOptions,
+      '_testing',
+      'en'
+    );
 
     expect(fixedOptions.option2.display_name).toBe('Second Option');
 
     expect(
-      (fixedOptions.option2.type as Record<string, IQoreTypeObject>).sub_option1.display_name
-    ).toBe('Sub Option 1 of Option 2');
-    expect((fixedOptions.option2.type as Record<string, IQoreTypeObject>).sub_option1.desc).toBe(
-      'A sub description, if you like'
-    );
+      (fixedOptions.option1.type as Record<string, IQoreTypeObject>).subOption1.display_name
+    ).toBe('Sub Option 1 of option 1');
 
-    expect(
-      (
-        (fixedOptions.option2.type as Record<string, IQoreTypeObject>).sub_option1.type as Record<
-          string,
-          IQoreTypeObject
-        >
-      ).sub_sub_option1.display_name
-    ).toBe('This option is so deep');
-    expect(
-      (
-        (fixedOptions.option2.type as Record<string, IQoreTypeObject>).sub_option1.type as Record<
-          string,
-          IQoreTypeObject
-        >
-      ).sub_sub_option1.desc
-    ).toBe('Generated description');
+    const subOption2Type = (fixedOptions.option1.type as Record<string, IQoreTypeObject>).subOption2
+      .type;
+    const subSubOption1 = (subOption2Type as Record<string, IQoreTypeObject>).subSubOption1;
+    expect(subSubOption1.display_name).toBe('Sub Sub Option 1');
+    expect(subSubOption1.desc).toBe('Deep option');
+    expect(subSubOption1.short_desc).toBe('Sub Sub Option 1 Short Description');
+
+    expect((subOption2Type as Record<string, IQoreTypeObject>).subSubOption1.short_desc).toBe(
+      'Sub Sub Option 1 Short Description'
+    );
   });
+});
+
+it('Should map a trigger to app', () => {
+  const trigger = {
+    action: '_testing',
+    action_code: EQoreAppActionCode.EVENT,
+    event_info: {
+      desc: 'Test event',
+      type: {
+        testTriggerInfo: {
+          name: 'test_trigger_info',
+          type: {
+            testTriggerInfo1: {
+              name: 'test_trigger_info1',
+              type: 'string',
+            },
+          },
+        },
+      },
+    },
+    webhook_register: async () => {
+      return await Promise.resolve();
+    },
+    webhook_deregister: async () => {
+      return await Promise.resolve();
+    },
+    webhook_method: 'POST',
+    options: {
+      option1: {
+        type: 'string',
+        example_value: 'example',
+        required: true,
+      },
+      option2: {
+        type: 'string',
+        example_value: 'example',
+        required: true,
+      },
+    },
+  } satisfies TQorePartialEventAction;
+
+  const mappedTriggers = mapTriggersToApp('_testing', [trigger], 'en');
+
+  expect(mappedTriggers).toHaveLength(1);
+  expect(mappedTriggers[0].options.option1.desc).toBe('Option 1 Long Description');
+  expect(mappedTriggers[0].options.option1.short_desc).toBe('Option 1 Short Description');
+  expect(mappedTriggers[0].event_info.desc).toBe('Test event');
+  expect(mappedTriggers[0].event_info.type.testTriggerInfo.short_desc).toBe(
+    'Test Trigger Info Short Description'
+  );
+
+  const subInfo = mappedTriggers[0].event_info.type.testTriggerInfo.type as Record<
+    string,
+    IQoreTypeObject
+  >;
+  expect(subInfo.testTriggerInfo1.display_name).toBe('Test Trigger Info 1');
 });

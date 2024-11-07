@@ -17,39 +17,141 @@ type RootTranslation = {
 	}
 	apps: {
 		_testing: {
+			triggers: {
+				_testing: {
+					options: {
+						option1: {
+							/**
+							 * O​p​t​i​o​n​ ​1
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
+							 */
+							longDesc: string
+						}
+						option2: {
+							/**
+							 * S​e​c​o​n​d​ ​O​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​e​c​o​n​d​ ​O​p​t​i​o​n​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​c​o​n​d​ ​O​p​t​i​o​n​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * E​v​e​n​t​ ​d​a​t​a
+						 */
+						longDesc: string
+						type: {
+							testTriggerInfo: {
+								/**
+								 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o
+								 */
+								displayName: string
+								/**
+								 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
+								 */
+								shortDesc: string
+								/**
+								 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
+								 */
+								longDesc: string
+								testTriggerInfo1: {
+									/**
+									 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​1
+									 */
+									displayName: string
+									/**
+									 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
+									 */
+									shortDesc: string
+									/**
+									 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
+									 */
+									longDesc: string
+								}
+							}
+						}
+					}
+				}
+			}
 			actions: {
 				test: {
-					option1: {
-						/**
-						 * O​p​t​i​o​n​ ​1
-						 */
-						displayName: string
-						/**
-						 * O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
-						 */
-						shortDesc: string
-						/**
-						 * O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
-						 */
-						longDesc: string
-					}
-					option2: {
-						/**
-						 * S​e​c​o​n​d​ ​O​p​t​i​o​n
-						 */
-						displayName: string
-					}
-					sub_option1: {
-						/**
-						 * S​u​b​ ​O​p​t​i​o​n​ ​1​ ​o​f​ ​O​p​t​i​o​n​ ​2
-						 */
-						displayName: string
-					}
-					sub_sub_option1: {
-						/**
-						 * G​e​n​e​r​a​t​e​d​ ​d​e​s​c​r​i​p​t​i​o​n
-						 */
-						longDesc: string
+					options: {
+						option1: {
+							/**
+							 * O​p​t​i​o​n​ ​1
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
+							 */
+							longDesc: string
+							subOption1: {
+								/**
+								 * S​u​b​ ​O​p​t​i​o​n​ ​1​ ​o​f​ ​o​p​t​i​o​n​ ​1
+								 */
+								displayName: string
+								/**
+								 * S​u​b​ ​O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
+								 */
+								shortDesc: string
+								/**
+								 * S​u​b​ ​O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
+								 */
+								longDesc: string
+							}
+							subOption2: {
+								/**
+								 * S​u​b​ ​O​p​t​i​o​n​ ​2
+								 */
+								displayName: string
+								/**
+								 * S​u​b​ ​O​p​t​i​o​n​ ​2​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
+								 */
+								shortDesc: string
+								/**
+								 * S​u​b​ ​O​p​t​i​o​n​ ​2​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
+								 */
+								longDesc: string
+								subSubOption1: {
+									/**
+									 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1
+									 */
+									displayName: string
+									/**
+									 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
+									 */
+									shortDesc: string
+									/**
+									 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
+									 */
+									longDesc: string
+								}
+							}
+						}
+						option2: {
+							/**
+							 * S​e​c​o​n​d​ ​O​p​t​i​o​n
+							 */
+							displayName: string
+						}
 					}
 				}
 			}
@@ -494,42 +596,42 @@ type RootTranslation = {
 					/**
 					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​s​s​u​e​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​ ​r​e​p​o​s​i​t​o​r​y
 					 */
-					desc: string
+					longDesc: string
 					options: {
 						repo: {
 							/**
 							 * R​e​p​o​s​i​t​o​r​y​ ​n​a​m​e
 							 */
-							desc: string
+							longDesc: string
 							/**
 							 * R​e​p​o​s​i​t​o​r​y​ ​n​a​m​e
 							 */
-							short_desc: string
+							shortDesc: string
 							/**
 							 * R​e​p​o​s​i​t​o​r​y​ ​n​a​m​e
 							 */
-							display_name: string
+							displayName: string
 						}
 						owner: {
 							/**
 							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e​ ​o​r​ ​u​s​e​r​ ​l​o​g​i​n
 							 */
-							desc: string
+							longDesc: string
 							/**
 							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e​ ​o​r​ ​u​s​e​r​ ​l​o​g​i​n
 							 */
-							short_desc: string
+							shortDesc: string
 							/**
 							 * R​e​p​o​s​i​t​o​r​y​ ​o​w​n​e​r
 							 */
-							display_name: string
+							displayName: string
 						}
 					}
 					event_info: {
 						/**
 						 * G​i​t​H​u​b​ ​I​s​s​u​e​ ​e​v​e​n​t​ ​d​a​t​a
 						 */
-						desc: string
+						longDesc: string
 						type: {
 							action: {
 								/**
@@ -543,7 +645,7 @@ type RootTranslation = {
 								/**
 								 * T​h​e​ ​a​c​t​i​o​n​ ​p​e​r​f​o​r​m​e​d​ ​o​n​ ​t​h​e​ ​i​s​s​u​e​,​ ​s​u​c​h​ ​a​s​ ​'​a​s​s​i​g​n​e​d​'​ ​o​r​ ​'​o​p​e​n​e​d​'​.
 								 */
-								desc: string
+								longDesc: string
 							}
 							issue: {
 								/**
@@ -557,7 +659,7 @@ type RootTranslation = {
 								/**
 								 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​G​i​t​H​u​b​ ​i​s​s​u​e​ ​i​n​v​o​l​v​e​d​ ​i​n​ ​t​h​e​ ​e​v​e​n​t
 								 */
-								desc: string
+								longDesc: string
 								url: {
 									/**
 									 * I​s​s​u​e​ ​U​R​L
@@ -570,7 +672,7 @@ type RootTranslation = {
 									/**
 									 * T​h​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​G​i​t​H​u​b​ ​i​s​s​u​e
 									 */
-									desc: string
+									longDesc: string
 								}
 								number: {
 									/**
@@ -584,7 +686,7 @@ type RootTranslation = {
 									/**
 									 * U​n​i​q​u​e​ ​n​u​m​b​e​r​ ​o​f​ ​t​h​e​ ​G​i​t​H​u​b​ ​i​s​s​u​e
 									 */
-									desc: string
+									longDesc: string
 								}
 								title: {
 									/**
@@ -598,7 +700,7 @@ type RootTranslation = {
 									/**
 									 * T​h​e​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​G​i​t​H​u​b​ ​i​s​s​u​e
 									 */
-									desc: string
+									longDesc: string
 								}
 								user: {
 									/**
@@ -612,7 +714,7 @@ type RootTranslation = {
 									/**
 									 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​ ​c​r​e​a​t​e​d​ ​t​h​e​ ​G​i​t​H​u​b​ ​i​s​s​u​e
 									 */
-									desc: string
+									longDesc: string
 									login: {
 										/**
 										 * U​s​e​r​ ​L​o​g​i​n
@@ -625,7 +727,7 @@ type RootTranslation = {
 										/**
 										 * T​h​e​ ​u​s​e​r​n​a​m​e​ ​o​f​ ​t​h​e​ ​G​i​t​H​u​b​ ​u​s​e​r
 										 */
-										desc: string
+										longDesc: string
 									}
 									id: {
 										/**
@@ -639,7 +741,7 @@ type RootTranslation = {
 										/**
 										 * U​n​i​q​u​e​ ​I​D​ ​o​f​ ​t​h​e​ ​G​i​t​H​u​b​ ​u​s​e​r
 										 */
-										desc: string
+										longDesc: string
 									}
 									avatar_url: {
 										/**
@@ -653,7 +755,7 @@ type RootTranslation = {
 										/**
 										 * U​R​L​ ​t​o​ ​t​h​e​ ​G​i​t​H​u​b​ ​u​s​e​r​'​s​ ​a​v​a​t​a​r
 										 */
-										desc: string
+										longDesc: string
 									}
 									html_url: {
 										/**
@@ -667,7 +769,7 @@ type RootTranslation = {
 										/**
 										 * U​R​L​ ​t​o​ ​t​h​e​ ​G​i​t​H​u​b​ ​u​s​e​r​'​s​ ​p​r​o​f​i​l​e
 										 */
-										desc: string
+										longDesc: string
 									}
 								}
 								labels: {
@@ -682,7 +784,7 @@ type RootTranslation = {
 									/**
 									 * L​a​b​e​l​s​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​G​i​t​H​u​b​ ​i​s​s​u​e
 									 */
-									desc: string
+									longDesc: string
 									id: {
 										/**
 										 * L​a​b​e​l​ ​I​D
@@ -695,7 +797,7 @@ type RootTranslation = {
 										/**
 										 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​l​a​b​e​l
 										 */
-										desc: string
+										longDesc: string
 									}
 									name: {
 										/**
@@ -709,7 +811,7 @@ type RootTranslation = {
 										/**
 										 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​l​a​b​e​l
 										 */
-										desc: string
+										longDesc: string
 									}
 									color: {
 										/**
@@ -723,7 +825,7 @@ type RootTranslation = {
 										/**
 										 * C​o​l​o​r​ ​c​o​d​e​ ​o​f​ ​t​h​e​ ​l​a​b​e​l
 										 */
-										desc: string
+										longDesc: string
 									}
 								}
 								state: {
@@ -738,7 +840,7 @@ type RootTranslation = {
 									/**
 									 * C​u​r​r​e​n​t​ ​s​t​a​t​e​ ​o​f​ ​t​h​e​ ​i​s​s​u​e​,​ ​s​u​c​h​ ​a​s​ ​'​o​p​e​n​'​ ​o​r​ ​'​c​l​o​s​e​d​'
 									 */
-									desc: string
+									longDesc: string
 								}
 								assignee: {
 									/**
@@ -752,7 +854,7 @@ type RootTranslation = {
 									/**
 									 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​i​s​s​u​e
 									 */
-									desc: string
+									longDesc: string
 									login: {
 										/**
 										 * A​s​s​i​g​n​e​e​ ​L​o​g​i​n
@@ -765,7 +867,7 @@ type RootTranslation = {
 										/**
 										 * T​h​e​ ​u​s​e​r​n​a​m​e​ ​o​f​ ​t​h​e​ ​a​s​s​i​g​n​e​d​ ​G​i​t​H​u​b​ ​u​s​e​r
 										 */
-										desc: string
+										longDesc: string
 									}
 									id: {
 										/**
@@ -779,7 +881,7 @@ type RootTranslation = {
 										/**
 										 * U​n​i​q​u​e​ ​I​D​ ​o​f​ ​t​h​e​ ​a​s​s​i​g​n​e​e
 										 */
-										desc: string
+										longDesc: string
 									}
 									avatar_url: {
 										/**
@@ -793,7 +895,7 @@ type RootTranslation = {
 										/**
 										 * U​R​L​ ​t​o​ ​t​h​e​ ​a​v​a​t​a​r​ ​o​f​ ​t​h​e​ ​a​s​s​i​g​n​e​e
 										 */
-										desc: string
+										longDesc: string
 									}
 									html_url: {
 										/**
@@ -807,7 +909,7 @@ type RootTranslation = {
 										/**
 										 * U​R​L​ ​t​o​ ​t​h​e​ ​G​i​t​H​u​b​ ​p​r​o​f​i​l​e​ ​o​f​ ​t​h​e​ ​a​s​s​i​g​n​e​e
 										 */
-										desc: string
+										longDesc: string
 									}
 								}
 								milestone: {
@@ -822,7 +924,7 @@ type RootTranslation = {
 									/**
 									 * M​i​l​e​s​t​o​n​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​G​i​t​H​u​b​ ​i​s​s​u​e
 									 */
-									desc: string
+									longDesc: string
 									title: {
 										/**
 										 * M​i​l​e​s​t​o​n​e​ ​T​i​t​l​e
@@ -835,7 +937,7 @@ type RootTranslation = {
 										/**
 										 * T​i​t​l​e​ ​o​f​ ​t​h​e​ ​m​i​l​e​s​t​o​n​e​ ​f​o​r​ ​t​h​e​ ​i​s​s​u​e
 										 */
-										desc: string
+										longDesc: string
 									}
 									due_on: {
 										/**
@@ -849,7 +951,7 @@ type RootTranslation = {
 										/**
 										 * D​u​e​ ​d​a​t​e​ ​o​f​ ​t​h​e​ ​m​i​l​e​s​t​o​n​e
 										 */
-										desc: string
+										longDesc: string
 									}
 								}
 							}
@@ -865,7 +967,7 @@ type RootTranslation = {
 								/**
 								 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​G​i​t​H​u​b​ ​r​e​p​o​s​i​t​o​r​y​ ​r​e​l​a​t​e​d​ ​t​o​ ​t​h​e​ ​e​v​e​n​t
 								 */
-								desc: string
+								longDesc: string
 								name: {
 									/**
 									 * R​e​p​o​s​i​t​o​r​y​ ​N​a​m​e
@@ -878,7 +980,7 @@ type RootTranslation = {
 									/**
 									 * N​a​m​e​ ​o​f​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y
 									 */
-									desc: string
+									longDesc: string
 								}
 								owner: {
 									/**
@@ -892,7 +994,7 @@ type RootTranslation = {
 									/**
 									 * O​w​n​e​r​ ​o​f​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y
 									 */
-									desc: string
+									longDesc: string
 									login: {
 										/**
 										 * O​w​n​e​r​ ​L​o​g​i​n
@@ -905,7 +1007,7 @@ type RootTranslation = {
 										/**
 										 * U​s​e​r​n​a​m​e​ ​o​f​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y​ ​o​w​n​e​r
 										 */
-										desc: string
+										longDesc: string
 									}
 									id: {
 										/**
@@ -919,7 +1021,7 @@ type RootTranslation = {
 										/**
 										 * U​n​i​q​u​e​ ​I​D​ ​o​f​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y​ ​o​w​n​e​r
 										 */
-										desc: string
+										longDesc: string
 									}
 								}
 							}
@@ -935,7 +1037,7 @@ type RootTranslation = {
 								/**
 								 * U​s​e​r​ ​w​h​o​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​w​e​b​h​o​o​k​ ​e​v​e​n​t
 								 */
-								desc: string
+								longDesc: string
 								login: {
 									/**
 									 * S​e​n​d​e​r​ ​L​o​g​i​n
@@ -948,7 +1050,7 @@ type RootTranslation = {
 									/**
 									 * U​s​e​r​n​a​m​e​ ​o​f​ ​t​h​e​ ​s​e​n​d​e​r
 									 */
-									desc: string
+									longDesc: string
 								}
 								id: {
 									/**
@@ -962,7 +1064,7 @@ type RootTranslation = {
 									/**
 									 * U​n​i​q​u​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​e​n​d​e​r
 									 */
-									desc: string
+									longDesc: string
 								}
 								avatar_url: {
 									/**
@@ -976,7 +1078,7 @@ type RootTranslation = {
 									/**
 									 * U​R​L​ ​t​o​ ​t​h​e​ ​s​e​n​d​e​r​'​s​ ​a​v​a​t​a​r
 									 */
-									desc: string
+									longDesc: string
 								}
 								html_url: {
 									/**
@@ -990,7 +1092,7 @@ type RootTranslation = {
 									/**
 									 * U​R​L​ ​t​o​ ​t​h​e​ ​s​e​n​d​e​r​'​s​ ​G​i​t​H​u​b​ ​p​r​o​f​i​l​e
 									 */
-									desc: string
+									longDesc: string
 								}
 							}
 						}
@@ -1156,12 +1258,12 @@ type RootTranslation = {
 					/**
 					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​u​s​e​r​ ​i​s​ ​c​r​e​a​t​e​d
 					 */
-					desc: string
+					longDesc: string
 					event_info: {
 						/**
 						 * N​e​w​ ​U​s​e​r​ ​e​v​e​n​t​ ​d​a​t​a
 						 */
-						desc: string
+						longDesc: string
 						type: {
 							version: {
 								/**
@@ -1175,7 +1277,7 @@ type RootTranslation = {
 								/**
 								 * T​h​e​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​w​e​b​h​o​o​k
 								 */
-								desc: string
+								longDesc: string
 							}
 							id: {
 								/**
@@ -1189,7 +1291,7 @@ type RootTranslation = {
 								/**
 								 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
 								 */
-								desc: string
+								longDesc: string
 							}
 							'detail-type': {
 								/**
@@ -1203,7 +1305,7 @@ type RootTranslation = {
 								/**
 								 * T​y​p​e​ ​o​f​ ​e​v​e​n​t​ ​d​e​t​a​i​l
 								 */
-								desc: string
+								longDesc: string
 							}
 							source: {
 								/**
@@ -1217,7 +1319,7 @@ type RootTranslation = {
 								/**
 								 * E​v​e​n​t​ ​s​o​u​r​c​e​ ​i​d​e​n​t​i​f​i​e​r
 								 */
-								desc: string
+								longDesc: string
 							}
 							account: {
 								/**
@@ -1231,7 +1333,7 @@ type RootTranslation = {
 								/**
 								 * I​D​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t
 								 */
-								desc: string
+								longDesc: string
 							}
 							time: {
 								/**
@@ -1245,7 +1347,7 @@ type RootTranslation = {
 								/**
 								 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
 								 */
-								desc: string
+								longDesc: string
 							}
 							region: {
 								/**
@@ -1259,7 +1361,7 @@ type RootTranslation = {
 								/**
 								 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
 								 */
-								desc: string
+								longDesc: string
 							}
 							resources: {
 								/**
@@ -1273,7 +1375,7 @@ type RootTranslation = {
 								/**
 								 * R​e​s​o​u​r​c​e​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t
 								 */
-								desc: string
+								longDesc: string
 							}
 							detail: {
 								/**
@@ -1287,7 +1389,7 @@ type RootTranslation = {
 								/**
 								 * D​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​e​v​e​n​t
 								 */
-								desc: string
+								longDesc: string
 								user_event: {
 									/**
 									 * U​s​e​r​ ​E​v​e​n​t
@@ -1300,7 +1402,7 @@ type RootTranslation = {
 									/**
 									 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​e​v​e​n​t
 									 */
-									desc: string
+									longDesc: string
 									meta: {
 										/**
 										 * M​e​t​a
@@ -1313,7 +1415,7 @@ type RootTranslation = {
 										/**
 										 * M​e​t​a​d​a​t​a​ ​a​b​o​u​t​ ​t​h​e​ ​e​v​e​n​t​ ​o​c​c​u​r​r​e​n​c​e
 										 */
-										desc: string
+										longDesc: string
 										version: {
 											/**
 											 * M​e​t​a​ ​V​e​r​s​i​o​n
@@ -1326,7 +1428,7 @@ type RootTranslation = {
 											/**
 											 * V​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​m​e​t​a​d​a​t​a
 											 */
-											desc: string
+											longDesc: string
 										}
 										occurred_at: {
 											/**
@@ -1340,7 +1442,7 @@ type RootTranslation = {
 											/**
 											 * T​i​m​e​s​t​a​m​p​ ​o​f​ ​e​v​e​n​t​ ​o​c​c​u​r​r​e​n​c​e
 											 */
-											desc: string
+											longDesc: string
 										}
 										ref: {
 											/**
@@ -1354,7 +1456,7 @@ type RootTranslation = {
 											/**
 											 * R​e​f​e​r​e​n​c​e​ ​I​D​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
 											 */
-											desc: string
+											longDesc: string
 										}
 										sequence: {
 											/**
@@ -1368,7 +1470,7 @@ type RootTranslation = {
 											/**
 											 * S​e​q​u​e​n​c​e​ ​d​a​t​a​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
 											 */
-											desc: string
+											longDesc: string
 											id: {
 												/**
 												 * S​e​q​u​e​n​c​e​ ​I​D
@@ -1381,7 +1483,7 @@ type RootTranslation = {
 												/**
 												 * S​e​q​u​e​n​c​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
 												 */
-												desc: string
+												longDesc: string
 											}
 											position: {
 												/**
@@ -1395,7 +1497,7 @@ type RootTranslation = {
 												/**
 												 * P​o​s​i​t​i​o​n​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​i​n​ ​t​h​e​ ​s​e​q​u​e​n​c​e
 												 */
-												desc: string
+												longDesc: string
 											}
 											total: {
 												/**
@@ -1409,7 +1511,7 @@ type RootTranslation = {
 												/**
 												 * T​o​t​a​l​ ​c​o​u​n​t​ ​o​f​ ​e​v​e​n​t​s​ ​i​n​ ​t​h​e​ ​s​e​q​u​e​n​c​e
 												 */
-												desc: string
+												longDesc: string
 											}
 										}
 									}
@@ -1425,7 +1527,7 @@ type RootTranslation = {
 										/**
 										 * T​y​p​e​ ​o​f​ ​u​s​e​r​ ​e​v​e​n​t
 										 */
-										desc: string
+										longDesc: string
 									}
 									user: {
 										/**
@@ -1439,7 +1541,7 @@ type RootTranslation = {
 										/**
 										 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​u​s​e​r
 										 */
-										desc: string
+										longDesc: string
 										id: {
 											/**
 											 * U​s​e​r​ ​I​D
@@ -1452,7 +1554,7 @@ type RootTranslation = {
 											/**
 											 * U​n​i​q​u​e​ ​I​D​ ​o​f​ ​t​h​e​ ​u​s​e​r
 											 */
-											desc: string
+											longDesc: string
 										}
 										external_id: {
 											/**
@@ -1466,7 +1568,7 @@ type RootTranslation = {
 											/**
 											 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​u​s​e​r
 											 */
-											desc: string
+											longDesc: string
 										}
 										role: {
 											/**
@@ -1480,7 +1582,7 @@ type RootTranslation = {
 											/**
 											 * R​o​l​e​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​i​n​ ​t​h​e​ ​s​y​s​t​e​m
 											 */
-											desc: string
+											longDesc: string
 										}
 										email: {
 											/**
@@ -1494,7 +1596,7 @@ type RootTranslation = {
 											/**
 											 * E​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​u​s​e​r
 											 */
-											desc: string
+											longDesc: string
 										}
 										created_at: {
 											/**
@@ -1508,7 +1610,7 @@ type RootTranslation = {
 											/**
 											 * C​r​e​a​t​i​o​n​ ​t​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​u​s​e​r
 											 */
-											desc: string
+											longDesc: string
 										}
 										updated_at: {
 											/**
@@ -1522,7 +1624,7 @@ type RootTranslation = {
 											/**
 											 * L​a​s​t​ ​u​p​d​a​t​e​ ​t​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​u​s​e​r
 											 */
-											desc: string
+											longDesc: string
 										}
 										organization_id: {
 											/**
@@ -1536,7 +1638,7 @@ type RootTranslation = {
 											/**
 											 * I​D​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​u​s​e​r
 											 */
-											desc: string
+											longDesc: string
 										}
 										default_group_id: {
 											/**
@@ -1550,7 +1652,7 @@ type RootTranslation = {
 											/**
 											 * D​e​f​a​u​l​t​ ​g​r​o​u​p​ ​I​D​ ​f​o​r​ ​t​h​e​ ​u​s​e​r
 											 */
-											desc: string
+											longDesc: string
 										}
 									}
 								}
@@ -1570,12 +1672,12 @@ type RootTranslation = {
 					/**
 					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​i​c​k​e​t​ ​i​s​ ​c​r​e​a​t​e​d
 					 */
-					desc: string
+					longDesc: string
 					event_info: {
 						/**
 						 * N​e​w​ ​T​i​c​k​e​t​ ​e​v​e​n​t​ ​d​a​t​a
 						 */
-						desc: string
+						longDesc: string
 						type: {
 							version: {
 								/**
@@ -1585,7 +1687,7 @@ type RootTranslation = {
 								/**
 								 * T​h​e​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​w​e​b​h​o​o​k
 								 */
-								desc: string
+								longDesc: string
 								/**
 								 * V​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​w​e​b​h​o​o​k
 								 */
@@ -1599,7 +1701,7 @@ type RootTranslation = {
 								/**
 								 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
 								 */
-								desc: string
+								longDesc: string
 								/**
 								 * E​v​e​n​t​ ​I​D
 								 */
@@ -1613,7 +1715,7 @@ type RootTranslation = {
 								/**
 								 * T​y​p​e​ ​o​f​ ​e​v​e​n​t​ ​d​e​t​a​i​l
 								 */
-								desc: string
+								longDesc: string
 								/**
 								 * E​v​e​n​t​ ​d​e​t​a​i​l​ ​t​y​p​e
 								 */
@@ -1627,7 +1729,7 @@ type RootTranslation = {
 								/**
 								 * E​v​e​n​t​ ​s​o​u​r​c​e​ ​i​d​e​n​t​i​f​i​e​r
 								 */
-								desc: string
+								longDesc: string
 								/**
 								 * E​v​e​n​t​ ​s​o​u​r​c​e
 								 */
@@ -1641,7 +1743,7 @@ type RootTranslation = {
 								/**
 								 * I​D​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t
 								 */
-								desc: string
+								longDesc: string
 								/**
 								 * A​c​c​o​u​n​t​ ​I​D
 								 */
@@ -1655,7 +1757,7 @@ type RootTranslation = {
 								/**
 								 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
 								 */
-								desc: string
+								longDesc: string
 								/**
 								 * E​v​e​n​t​ ​t​i​m​e​s​t​a​m​p
 								 */
@@ -1669,7 +1771,7 @@ type RootTranslation = {
 								/**
 								 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
 								 */
-								desc: string
+								longDesc: string
 								/**
 								 * A​W​S​ ​r​e​g​i​o​n
 								 */
@@ -1683,7 +1785,7 @@ type RootTranslation = {
 								/**
 								 * R​e​s​o​u​r​c​e​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t
 								 */
-								desc: string
+								longDesc: string
 								/**
 								 * E​v​e​n​t​ ​r​e​s​o​u​r​c​e​s
 								 */
@@ -1697,7 +1799,7 @@ type RootTranslation = {
 								/**
 								 * D​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​e​v​e​n​t
 								 */
-								desc: string
+								longDesc: string
 								/**
 								 * E​v​e​n​t​ ​d​e​t​a​i​l​s
 								 */
@@ -1711,7 +1813,7 @@ type RootTranslation = {
 										/**
 										 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​ ​e​v​e​n​t
 										 */
-										desc: string
+										longDesc: string
 										/**
 										 * T​i​c​k​e​t​ ​e​v​e​n​t​ ​d​e​t​a​i​l​s
 										 */
@@ -1725,7 +1827,7 @@ type RootTranslation = {
 												/**
 												 * M​e​t​a​d​a​t​a​ ​a​b​o​u​t​ ​t​h​e​ ​e​v​e​n​t​ ​o​c​c​u​r​r​e​n​c​e
 												 */
-												desc: string
+												longDesc: string
 												/**
 												 * E​v​e​n​t​ ​m​e​t​a​d​a​t​a
 												 */
@@ -1739,7 +1841,7 @@ type RootTranslation = {
 														/**
 														 * V​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​m​e​t​a​d​a​t​a
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * M​e​t​a​d​a​t​a​ ​v​e​r​s​i​o​n
 														 */
@@ -1753,7 +1855,7 @@ type RootTranslation = {
 														/**
 														 * T​i​m​e​s​t​a​m​p​ ​o​f​ ​e​v​e​n​t​ ​o​c​c​u​r​r​e​n​c​e
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * E​v​e​n​t​ ​o​c​c​u​r​r​e​n​c​e​ ​t​i​m​e
 														 */
@@ -1767,7 +1869,7 @@ type RootTranslation = {
 														/**
 														 * R​e​f​e​r​e​n​c​e​ ​I​D​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * E​v​e​n​t​ ​r​e​f​e​r​e​n​c​e​ ​I​D
 														 */
@@ -1781,7 +1883,7 @@ type RootTranslation = {
 														/**
 														 * S​e​q​u​e​n​c​e​ ​d​a​t​a​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * E​v​e​n​t​ ​s​e​q​u​e​n​c​e
 														 */
@@ -1795,7 +1897,7 @@ type RootTranslation = {
 																/**
 																 * S​e​q​u​e​n​c​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
 																 */
-																desc: string
+																longDesc: string
 																/**
 																 * E​v​e​n​t​ ​s​e​q​u​e​n​c​e​ ​I​D
 																 */
@@ -1809,7 +1911,7 @@ type RootTranslation = {
 																/**
 																 * P​o​s​i​t​i​o​n​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​i​n​ ​t​h​e​ ​s​e​q​u​e​n​c​e
 																 */
-																desc: string
+																longDesc: string
 																/**
 																 * S​e​q​u​e​n​c​e​ ​p​o​s​i​t​i​o​n
 																 */
@@ -1823,7 +1925,7 @@ type RootTranslation = {
 																/**
 																 * T​o​t​a​l​ ​c​o​u​n​t​ ​o​f​ ​e​v​e​n​t​s​ ​i​n​ ​t​h​e​ ​s​e​q​u​e​n​c​e
 																 */
-																desc: string
+																longDesc: string
 																/**
 																 * T​o​t​a​l​ ​s​e​q​u​e​n​c​e​ ​e​v​e​n​t​s
 																 */
@@ -1839,7 +1941,7 @@ type RootTranslation = {
 														/**
 														 * I​D​ ​o​f​ ​t​h​e​ ​a​c​t​o​r​ ​t​r​i​g​g​e​r​i​n​g​ ​t​h​e​ ​e​v​e​n​t
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * E​v​e​n​t​ ​a​c​t​o​r​ ​I​D
 														 */
@@ -1855,7 +1957,7 @@ type RootTranslation = {
 												/**
 												 * T​y​p​e​ ​o​f​ ​t​i​c​k​e​t​ ​e​v​e​n​t
 												 */
-												desc: string
+												longDesc: string
 												/**
 												 * T​i​c​k​e​t​ ​e​v​e​n​t​ ​t​y​p​e
 												 */
@@ -1869,7 +1971,7 @@ type RootTranslation = {
 												/**
 												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​t​i​c​k​e​t
 												 */
-												desc: string
+												longDesc: string
 												/**
 												 * T​i​c​k​e​t​ ​d​e​t​a​i​l​s
 												 */
@@ -1883,7 +1985,7 @@ type RootTranslation = {
 														/**
 														 * U​n​i​q​u​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * T​i​c​k​e​t​ ​I​D
 														 */
@@ -1897,7 +1999,7 @@ type RootTranslation = {
 														/**
 														 * C​r​e​a​t​i​o​n​ ​t​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * T​i​c​k​e​t​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e
 														 */
@@ -1911,7 +2013,7 @@ type RootTranslation = {
 														/**
 														 * L​a​s​t​ ​u​p​d​a​t​e​ ​t​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * T​i​c​k​e​t​ ​l​a​s​t​ ​u​p​d​a​t​e
 														 */
@@ -1925,7 +2027,7 @@ type RootTranslation = {
 														/**
 														 * T​y​p​e​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * T​i​c​k​e​t​ ​t​y​p​e
 														 */
@@ -1939,7 +2041,7 @@ type RootTranslation = {
 														/**
 														 * P​r​i​o​r​i​t​y​ ​l​e​v​e​l​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * T​i​c​k​e​t​ ​p​r​i​o​r​i​t​y
 														 */
@@ -1953,7 +2055,7 @@ type RootTranslation = {
 														/**
 														 * C​u​r​r​e​n​t​ ​s​t​a​t​u​s​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * T​i​c​k​e​t​ ​s​t​a​t​u​s
 														 */
@@ -1967,7 +2069,7 @@ type RootTranslation = {
 														/**
 														 * I​D​ ​o​f​ ​t​h​e​ ​r​e​q​u​e​s​t​e​r
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * T​i​c​k​e​t​ ​r​e​q​u​e​s​t​e​r​ ​I​D
 														 */
@@ -1981,7 +2083,7 @@ type RootTranslation = {
 														/**
 														 * I​D​ ​o​f​ ​t​h​e​ ​s​u​b​m​i​t​t​e​r
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * T​i​c​k​e​t​ ​s​u​b​m​i​t​t​e​r​ ​I​D
 														 */
@@ -1995,7 +2097,7 @@ type RootTranslation = {
 														/**
 														 * I​D​ ​o​f​ ​t​h​e​ ​a​s​s​i​g​n​e​e
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * T​i​c​k​e​t​ ​a​s​s​i​g​n​e​e​ ​I​D
 														 */
@@ -2009,7 +2111,7 @@ type RootTranslation = {
 														/**
 														 * I​D​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​t​i​c​k​e​t
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * O​r​g​a​n​i​z​a​t​i​o​n​ ​I​D
 														 */
@@ -2023,7 +2125,7 @@ type RootTranslation = {
 														/**
 														 * I​D​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​h​a​n​d​l​i​n​g​ ​t​h​e​ ​t​i​c​k​e​t
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * G​r​o​u​p​ ​I​D
 														 */
@@ -2037,7 +2139,7 @@ type RootTranslation = {
 														/**
 														 * I​D​ ​o​f​ ​t​h​e​ ​b​r​a​n​d​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​t​i​c​k​e​t
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * B​r​a​n​d​ ​I​D
 														 */
@@ -2051,7 +2153,7 @@ type RootTranslation = {
 														/**
 														 * I​D​ ​o​f​ ​t​h​e​ ​f​o​r​m​ ​u​s​e​d​ ​f​o​r​ ​t​h​e​ ​t​i​c​k​e​t
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * F​o​r​m​ ​I​D
 														 */
@@ -2065,7 +2167,7 @@ type RootTranslation = {
 														/**
 														 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​t​i​c​k​e​t
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * T​i​c​k​e​t​ ​e​x​t​e​r​n​a​l​ ​I​D
 														 */
@@ -2079,7 +2181,7 @@ type RootTranslation = {
 														/**
 														 * T​a​g​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​t​i​c​k​e​t
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * T​i​c​k​e​t​ ​t​a​g​s
 														 */
@@ -2093,7 +2195,7 @@ type RootTranslation = {
 														/**
 														 * M​e​t​h​o​d​ ​b​y​ ​w​h​i​c​h​ ​t​h​e​ ​t​i​c​k​e​t​ ​w​a​s​ ​c​r​e​a​t​e​d
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * T​i​c​k​e​t​ ​c​r​e​a​t​i​o​n​ ​m​e​t​h​o​d
 														 */
@@ -2107,7 +2209,7 @@ type RootTranslation = {
 																/**
 																 * C​h​a​n​n​e​l​ ​t​h​r​o​u​g​h​ ​w​h​i​c​h​ ​t​h​e​ ​t​i​c​k​e​t​ ​w​a​s​ ​s​u​b​m​i​t​t​e​d
 																 */
-																desc: string
+																longDesc: string
 																/**
 																 * T​i​c​k​e​t​ ​c​h​a​n​n​e​l
 																 */
@@ -2136,12 +2238,12 @@ type RootTranslation = {
 					/**
 					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​i​s​ ​c​r​e​a​t​e​d
 					 */
-					desc: string
+					longDesc: string
 					event_info: {
 						/**
 						 * N​e​w​ ​O​r​g​a​n​i​z​a​t​i​o​n​ ​e​v​e​n​t​ ​d​a​t​a
 						 */
-						desc: string
+						longDesc: string
 						type: {
 							version: {
 								/**
@@ -2151,7 +2253,7 @@ type RootTranslation = {
 								/**
 								 * T​h​e​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​w​e​b​h​o​o​k
 								 */
-								desc: string
+								longDesc: string
 								/**
 								 * W​e​b​h​o​o​k​ ​v​e​r​s​i​o​n
 								 */
@@ -2165,7 +2267,7 @@ type RootTranslation = {
 								/**
 								 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
 								 */
-								desc: string
+								longDesc: string
 								/**
 								 * E​v​e​n​t​ ​I​D
 								 */
@@ -2179,7 +2281,7 @@ type RootTranslation = {
 								/**
 								 * T​y​p​e​ ​o​f​ ​e​v​e​n​t​ ​d​e​t​a​i​l
 								 */
-								desc: string
+								longDesc: string
 								/**
 								 * E​v​e​n​t​ ​d​e​t​a​i​l​ ​t​y​p​e
 								 */
@@ -2193,7 +2295,7 @@ type RootTranslation = {
 								/**
 								 * E​v​e​n​t​ ​s​o​u​r​c​e​ ​i​d​e​n​t​i​f​i​e​r
 								 */
-								desc: string
+								longDesc: string
 								/**
 								 * E​v​e​n​t​ ​s​o​u​r​c​e
 								 */
@@ -2207,7 +2309,7 @@ type RootTranslation = {
 								/**
 								 * I​D​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t
 								 */
-								desc: string
+								longDesc: string
 								/**
 								 * A​c​c​o​u​n​t​ ​I​D
 								 */
@@ -2221,7 +2323,7 @@ type RootTranslation = {
 								/**
 								 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
 								 */
-								desc: string
+								longDesc: string
 								/**
 								 * E​v​e​n​t​ ​t​i​m​e​s​t​a​m​p
 								 */
@@ -2235,7 +2337,7 @@ type RootTranslation = {
 								/**
 								 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
 								 */
-								desc: string
+								longDesc: string
 								/**
 								 * A​W​S​ ​r​e​g​i​o​n
 								 */
@@ -2249,7 +2351,7 @@ type RootTranslation = {
 								/**
 								 * R​e​s​o​u​r​c​e​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t
 								 */
-								desc: string
+								longDesc: string
 								/**
 								 * E​v​e​n​t​ ​r​e​s​o​u​r​c​e​s
 								 */
@@ -2263,7 +2365,7 @@ type RootTranslation = {
 								/**
 								 * D​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​e​v​e​n​t
 								 */
-								desc: string
+								longDesc: string
 								/**
 								 * E​v​e​n​t​ ​d​e​t​a​i​l​s
 								 */
@@ -2277,7 +2379,7 @@ type RootTranslation = {
 										/**
 										 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​e​v​e​n​t
 										 */
-										desc: string
+										longDesc: string
 										/**
 										 * O​r​g​a​n​i​z​a​t​i​o​n​ ​e​v​e​n​t​ ​d​e​t​a​i​l​s
 										 */
@@ -2291,7 +2393,7 @@ type RootTranslation = {
 												/**
 												 * M​e​t​a​d​a​t​a​ ​a​b​o​u​t​ ​t​h​e​ ​e​v​e​n​t​ ​o​c​c​u​r​r​e​n​c​e
 												 */
-												desc: string
+												longDesc: string
 												/**
 												 * E​v​e​n​t​ ​m​e​t​a​d​a​t​a
 												 */
@@ -2305,7 +2407,7 @@ type RootTranslation = {
 														/**
 														 * V​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​m​e​t​a​d​a​t​a
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * M​e​t​a​d​a​t​a​ ​v​e​r​s​i​o​n
 														 */
@@ -2319,7 +2421,7 @@ type RootTranslation = {
 														/**
 														 * T​i​m​e​s​t​a​m​p​ ​o​f​ ​e​v​e​n​t​ ​o​c​c​u​r​r​e​n​c​e
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * E​v​e​n​t​ ​o​c​c​u​r​r​e​n​c​e​ ​t​i​m​e
 														 */
@@ -2333,7 +2435,7 @@ type RootTranslation = {
 														/**
 														 * R​e​f​e​r​e​n​c​e​ ​I​D​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * E​v​e​n​t​ ​r​e​f​e​r​e​n​c​e​ ​I​D
 														 */
@@ -2347,7 +2449,7 @@ type RootTranslation = {
 														/**
 														 * S​e​q​u​e​n​c​e​ ​d​a​t​a​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * E​v​e​n​t​ ​s​e​q​u​e​n​c​e
 														 */
@@ -2361,7 +2463,7 @@ type RootTranslation = {
 																/**
 																 * S​e​q​u​e​n​c​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
 																 */
-																desc: string
+																longDesc: string
 																/**
 																 * E​v​e​n​t​ ​s​e​q​u​e​n​c​e​ ​I​D
 																 */
@@ -2375,7 +2477,7 @@ type RootTranslation = {
 																/**
 																 * P​o​s​i​t​i​o​n​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​i​n​ ​t​h​e​ ​s​e​q​u​e​n​c​e
 																 */
-																desc: string
+																longDesc: string
 																/**
 																 * S​e​q​u​e​n​c​e​ ​p​o​s​i​t​i​o​n
 																 */
@@ -2389,7 +2491,7 @@ type RootTranslation = {
 																/**
 																 * T​o​t​a​l​ ​c​o​u​n​t​ ​o​f​ ​e​v​e​n​t​s​ ​i​n​ ​t​h​e​ ​s​e​q​u​e​n​c​e
 																 */
-																desc: string
+																longDesc: string
 																/**
 																 * T​o​t​a​l​ ​s​e​q​u​e​n​c​e​ ​e​v​e​n​t​s
 																 */
@@ -2407,7 +2509,7 @@ type RootTranslation = {
 												/**
 												 * T​y​p​e​ ​o​f​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​e​v​e​n​t
 												 */
-												desc: string
+												longDesc: string
 												/**
 												 * O​r​g​a​n​i​z​a​t​i​o​n​ ​e​v​e​n​t​ ​t​y​p​e
 												 */
@@ -2421,7 +2523,7 @@ type RootTranslation = {
 												/**
 												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
 												 */
-												desc: string
+												longDesc: string
 												/**
 												 * O​r​g​a​n​i​z​a​t​i​o​n​ ​d​e​t​a​i​l​s
 												 */
@@ -2435,7 +2537,7 @@ type RootTranslation = {
 														/**
 														 * U​n​i​q​u​e​ ​I​D​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * O​r​g​a​n​i​z​a​t​i​o​n​ ​I​D
 														 */
@@ -2449,7 +2551,7 @@ type RootTranslation = {
 														/**
 														 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * O​r​g​a​n​i​z​a​t​i​o​n​ ​e​x​t​e​r​n​a​l​ ​I​D
 														 */
@@ -2463,7 +2565,7 @@ type RootTranslation = {
 														/**
 														 * N​a​m​e​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e
 														 */
@@ -2477,7 +2579,7 @@ type RootTranslation = {
 														/**
 														 * C​r​e​a​t​i​o​n​ ​t​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * O​r​g​a​n​i​z​a​t​i​o​n​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e
 														 */
@@ -2491,7 +2593,7 @@ type RootTranslation = {
 														/**
 														 * L​a​s​t​ ​u​p​d​a​t​e​ ​t​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * O​r​g​a​n​i​z​a​t​i​o​n​ ​l​a​s​t​ ​u​p​d​a​t​e
 														 */
@@ -2505,7 +2607,7 @@ type RootTranslation = {
 														/**
 														 * I​n​d​i​c​a​t​e​s​ ​i​f​ ​t​i​c​k​e​t​s​ ​a​r​e​ ​s​h​a​r​e​d​ ​w​i​t​h​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * S​h​a​r​e​d​ ​t​i​c​k​e​t​s
 														 */
@@ -2519,7 +2621,7 @@ type RootTranslation = {
 														/**
 														 * I​n​d​i​c​a​t​e​s​ ​i​f​ ​c​o​m​m​e​n​t​s​ ​a​r​e​ ​s​h​a​r​e​d​ ​w​i​t​h​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * S​h​a​r​e​d​ ​c​o​m​m​e​n​t​s
 														 */
@@ -2533,7 +2635,7 @@ type RootTranslation = {
 														/**
 														 * I​D​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​h​a​n​d​l​i​n​g​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
 														 */
-														desc: string
+														longDesc: string
 														/**
 														 * G​r​o​u​p​ ​I​D
 														 */
@@ -4406,39 +4508,141 @@ export type TranslationFunctions = {
 	}
 	apps: {
 		_testing: {
+			triggers: {
+				_testing: {
+					options: {
+						option1: {
+							/**
+							 * Option 1
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Option 1 Short Description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Option 1 Long Description
+							 */
+							longDesc: () => LocalizedString
+						}
+						option2: {
+							/**
+							 * Second Option
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Second Option Short Description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Second Option Long Description
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Event data
+						 */
+						longDesc: () => LocalizedString
+						type: {
+							testTriggerInfo: {
+								/**
+								 * Test Trigger Info
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Test Trigger Info Short Description
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Test Trigger Info Long Description
+								 */
+								longDesc: () => LocalizedString
+								testTriggerInfo1: {
+									/**
+									 * Test Trigger Info 1
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Test Trigger Info 1 Short Description
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Test Trigger Info 1 Long Description
+									 */
+									longDesc: () => LocalizedString
+								}
+							}
+						}
+					}
+				}
+			}
 			actions: {
 				test: {
-					option1: {
-						/**
-						 * Option 1
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Option 1 Short Description
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Option 1 Long Description
-						 */
-						longDesc: () => LocalizedString
-					}
-					option2: {
-						/**
-						 * Second Option
-						 */
-						displayName: () => LocalizedString
-					}
-					sub_option1: {
-						/**
-						 * Sub Option 1 of Option 2
-						 */
-						displayName: () => LocalizedString
-					}
-					sub_sub_option1: {
-						/**
-						 * Generated description
-						 */
-						longDesc: () => LocalizedString
+					options: {
+						option1: {
+							/**
+							 * Option 1
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Option 1 Short Description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Option 1 Long Description
+							 */
+							longDesc: () => LocalizedString
+							subOption1: {
+								/**
+								 * Sub Option 1 of option 1
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Sub Option 1 Short Description
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Sub Option 1 Long Description
+								 */
+								longDesc: () => LocalizedString
+							}
+							subOption2: {
+								/**
+								 * Sub Option 2
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Sub Option 2 Short Description
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Sub Option 2 Long Description
+								 */
+								longDesc: () => LocalizedString
+								subSubOption1: {
+									/**
+									 * Sub Sub Option 1
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Sub Sub Option 1 Short Description
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Sub Sub Option 1 Long Description
+									 */
+									longDesc: () => LocalizedString
+								}
+							}
+						}
+						option2: {
+							/**
+							 * Second Option
+							 */
+							displayName: () => LocalizedString
+						}
 					}
 				}
 			}
@@ -4883,42 +5087,42 @@ export type TranslationFunctions = {
 					/**
 					 * Triggers when a new issue is created in a repository
 					 */
-					desc: () => LocalizedString
+					longDesc: () => LocalizedString
 					options: {
 						repo: {
 							/**
 							 * Repository name
 							 */
-							desc: () => LocalizedString
+							longDesc: () => LocalizedString
 							/**
 							 * Repository name
 							 */
-							short_desc: () => LocalizedString
+							shortDesc: () => LocalizedString
 							/**
 							 * Repository name
 							 */
-							display_name: () => LocalizedString
+							displayName: () => LocalizedString
 						}
 						owner: {
 							/**
 							 * Organization name or user login
 							 */
-							desc: () => LocalizedString
+							longDesc: () => LocalizedString
 							/**
 							 * Organization name or user login
 							 */
-							short_desc: () => LocalizedString
+							shortDesc: () => LocalizedString
 							/**
 							 * Repository owner
 							 */
-							display_name: () => LocalizedString
+							displayName: () => LocalizedString
 						}
 					}
 					event_info: {
 						/**
 						 * GitHub Issue event data
 						 */
-						desc: () => LocalizedString
+						longDesc: () => LocalizedString
 						type: {
 							action: {
 								/**
@@ -4932,7 +5136,7 @@ export type TranslationFunctions = {
 								/**
 								 * The action performed on the issue, such as 'assigned' or 'opened'.
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 							}
 							issue: {
 								/**
@@ -4946,7 +5150,7 @@ export type TranslationFunctions = {
 								/**
 								 * Details of the GitHub issue involved in the event
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 								url: {
 									/**
 									 * Issue URL
@@ -4959,7 +5163,7 @@ export type TranslationFunctions = {
 									/**
 									 * The URL of the GitHub issue
 									 */
-									desc: () => LocalizedString
+									longDesc: () => LocalizedString
 								}
 								number: {
 									/**
@@ -4973,7 +5177,7 @@ export type TranslationFunctions = {
 									/**
 									 * Unique number of the GitHub issue
 									 */
-									desc: () => LocalizedString
+									longDesc: () => LocalizedString
 								}
 								title: {
 									/**
@@ -4987,7 +5191,7 @@ export type TranslationFunctions = {
 									/**
 									 * The title of the GitHub issue
 									 */
-									desc: () => LocalizedString
+									longDesc: () => LocalizedString
 								}
 								user: {
 									/**
@@ -5001,7 +5205,7 @@ export type TranslationFunctions = {
 									/**
 									 * Information about the user who created the GitHub issue
 									 */
-									desc: () => LocalizedString
+									longDesc: () => LocalizedString
 									login: {
 										/**
 										 * User Login
@@ -5014,7 +5218,7 @@ export type TranslationFunctions = {
 										/**
 										 * The username of the GitHub user
 										 */
-										desc: () => LocalizedString
+										longDesc: () => LocalizedString
 									}
 									id: {
 										/**
@@ -5028,7 +5232,7 @@ export type TranslationFunctions = {
 										/**
 										 * Unique ID of the GitHub user
 										 */
-										desc: () => LocalizedString
+										longDesc: () => LocalizedString
 									}
 									avatar_url: {
 										/**
@@ -5042,7 +5246,7 @@ export type TranslationFunctions = {
 										/**
 										 * URL to the GitHub user's avatar
 										 */
-										desc: () => LocalizedString
+										longDesc: () => LocalizedString
 									}
 									html_url: {
 										/**
@@ -5056,7 +5260,7 @@ export type TranslationFunctions = {
 										/**
 										 * URL to the GitHub user's profile
 										 */
-										desc: () => LocalizedString
+										longDesc: () => LocalizedString
 									}
 								}
 								labels: {
@@ -5071,7 +5275,7 @@ export type TranslationFunctions = {
 									/**
 									 * Labels assigned to the GitHub issue
 									 */
-									desc: () => LocalizedString
+									longDesc: () => LocalizedString
 									id: {
 										/**
 										 * Label ID
@@ -5084,7 +5288,7 @@ export type TranslationFunctions = {
 										/**
 										 * Unique identifier for the label
 										 */
-										desc: () => LocalizedString
+										longDesc: () => LocalizedString
 									}
 									name: {
 										/**
@@ -5098,7 +5302,7 @@ export type TranslationFunctions = {
 										/**
 										 * The name of the label
 										 */
-										desc: () => LocalizedString
+										longDesc: () => LocalizedString
 									}
 									color: {
 										/**
@@ -5112,7 +5316,7 @@ export type TranslationFunctions = {
 										/**
 										 * Color code of the label
 										 */
-										desc: () => LocalizedString
+										longDesc: () => LocalizedString
 									}
 								}
 								state: {
@@ -5127,7 +5331,7 @@ export type TranslationFunctions = {
 									/**
 									 * Current state of the issue, such as 'open' or 'closed'
 									 */
-									desc: () => LocalizedString
+									longDesc: () => LocalizedString
 								}
 								assignee: {
 									/**
@@ -5141,7 +5345,7 @@ export type TranslationFunctions = {
 									/**
 									 * Details of the user assigned to the issue
 									 */
-									desc: () => LocalizedString
+									longDesc: () => LocalizedString
 									login: {
 										/**
 										 * Assignee Login
@@ -5154,7 +5358,7 @@ export type TranslationFunctions = {
 										/**
 										 * The username of the assigned GitHub user
 										 */
-										desc: () => LocalizedString
+										longDesc: () => LocalizedString
 									}
 									id: {
 										/**
@@ -5168,7 +5372,7 @@ export type TranslationFunctions = {
 										/**
 										 * Unique ID of the assignee
 										 */
-										desc: () => LocalizedString
+										longDesc: () => LocalizedString
 									}
 									avatar_url: {
 										/**
@@ -5182,7 +5386,7 @@ export type TranslationFunctions = {
 										/**
 										 * URL to the avatar of the assignee
 										 */
-										desc: () => LocalizedString
+										longDesc: () => LocalizedString
 									}
 									html_url: {
 										/**
@@ -5196,7 +5400,7 @@ export type TranslationFunctions = {
 										/**
 										 * URL to the GitHub profile of the assignee
 										 */
-										desc: () => LocalizedString
+										longDesc: () => LocalizedString
 									}
 								}
 								milestone: {
@@ -5211,7 +5415,7 @@ export type TranslationFunctions = {
 									/**
 									 * Milestone associated with the GitHub issue
 									 */
-									desc: () => LocalizedString
+									longDesc: () => LocalizedString
 									title: {
 										/**
 										 * Milestone Title
@@ -5224,7 +5428,7 @@ export type TranslationFunctions = {
 										/**
 										 * Title of the milestone for the issue
 										 */
-										desc: () => LocalizedString
+										longDesc: () => LocalizedString
 									}
 									due_on: {
 										/**
@@ -5238,7 +5442,7 @@ export type TranslationFunctions = {
 										/**
 										 * Due date of the milestone
 										 */
-										desc: () => LocalizedString
+										longDesc: () => LocalizedString
 									}
 								}
 							}
@@ -5254,7 +5458,7 @@ export type TranslationFunctions = {
 								/**
 								 * Details of the GitHub repository related to the event
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 								name: {
 									/**
 									 * Repository Name
@@ -5267,7 +5471,7 @@ export type TranslationFunctions = {
 									/**
 									 * Name of the repository
 									 */
-									desc: () => LocalizedString
+									longDesc: () => LocalizedString
 								}
 								owner: {
 									/**
@@ -5281,7 +5485,7 @@ export type TranslationFunctions = {
 									/**
 									 * Owner of the repository
 									 */
-									desc: () => LocalizedString
+									longDesc: () => LocalizedString
 									login: {
 										/**
 										 * Owner Login
@@ -5294,7 +5498,7 @@ export type TranslationFunctions = {
 										/**
 										 * Username of the repository owner
 										 */
-										desc: () => LocalizedString
+										longDesc: () => LocalizedString
 									}
 									id: {
 										/**
@@ -5308,7 +5512,7 @@ export type TranslationFunctions = {
 										/**
 										 * Unique ID of the repository owner
 										 */
-										desc: () => LocalizedString
+										longDesc: () => LocalizedString
 									}
 								}
 							}
@@ -5324,7 +5528,7 @@ export type TranslationFunctions = {
 								/**
 								 * User who triggered the webhook event
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 								login: {
 									/**
 									 * Sender Login
@@ -5337,7 +5541,7 @@ export type TranslationFunctions = {
 									/**
 									 * Username of the sender
 									 */
-									desc: () => LocalizedString
+									longDesc: () => LocalizedString
 								}
 								id: {
 									/**
@@ -5351,7 +5555,7 @@ export type TranslationFunctions = {
 									/**
 									 * Unique ID of the sender
 									 */
-									desc: () => LocalizedString
+									longDesc: () => LocalizedString
 								}
 								avatar_url: {
 									/**
@@ -5365,7 +5569,7 @@ export type TranslationFunctions = {
 									/**
 									 * URL to the sender's avatar
 									 */
-									desc: () => LocalizedString
+									longDesc: () => LocalizedString
 								}
 								html_url: {
 									/**
@@ -5379,7 +5583,7 @@ export type TranslationFunctions = {
 									/**
 									 * URL to the sender's GitHub profile
 									 */
-									desc: () => LocalizedString
+									longDesc: () => LocalizedString
 								}
 							}
 						}
@@ -5545,12 +5749,12 @@ export type TranslationFunctions = {
 					/**
 					 * Triggers when a new user is created
 					 */
-					desc: () => LocalizedString
+					longDesc: () => LocalizedString
 					event_info: {
 						/**
 						 * New User event data
 						 */
-						desc: () => LocalizedString
+						longDesc: () => LocalizedString
 						type: {
 							version: {
 								/**
@@ -5564,7 +5768,7 @@ export type TranslationFunctions = {
 								/**
 								 * The version of the webhook
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 							}
 							id: {
 								/**
@@ -5578,7 +5782,7 @@ export type TranslationFunctions = {
 								/**
 								 * Unique identifier for the event
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 							}
 							'detail-type': {
 								/**
@@ -5592,7 +5796,7 @@ export type TranslationFunctions = {
 								/**
 								 * Type of event detail
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 							}
 							source: {
 								/**
@@ -5606,7 +5810,7 @@ export type TranslationFunctions = {
 								/**
 								 * Event source identifier
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 							}
 							account: {
 								/**
@@ -5620,7 +5824,7 @@ export type TranslationFunctions = {
 								/**
 								 * ID of the account associated with the event
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 							}
 							time: {
 								/**
@@ -5634,7 +5838,7 @@ export type TranslationFunctions = {
 								/**
 								 * The timestamp of the event
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 							}
 							region: {
 								/**
@@ -5648,7 +5852,7 @@ export type TranslationFunctions = {
 								/**
 								 * The AWS region of the event
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 							}
 							resources: {
 								/**
@@ -5662,7 +5866,7 @@ export type TranslationFunctions = {
 								/**
 								 * Resources associated with the event
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 							}
 							detail: {
 								/**
@@ -5676,7 +5880,7 @@ export type TranslationFunctions = {
 								/**
 								 * Detailed information about the event
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 								user_event: {
 									/**
 									 * User Event
@@ -5689,7 +5893,7 @@ export type TranslationFunctions = {
 									/**
 									 * Details of the user event
 									 */
-									desc: () => LocalizedString
+									longDesc: () => LocalizedString
 									meta: {
 										/**
 										 * Meta
@@ -5702,7 +5906,7 @@ export type TranslationFunctions = {
 										/**
 										 * Metadata about the event occurrence
 										 */
-										desc: () => LocalizedString
+										longDesc: () => LocalizedString
 										version: {
 											/**
 											 * Meta Version
@@ -5715,7 +5919,7 @@ export type TranslationFunctions = {
 											/**
 											 * Version of the event metadata
 											 */
-											desc: () => LocalizedString
+											longDesc: () => LocalizedString
 										}
 										occurred_at: {
 											/**
@@ -5729,7 +5933,7 @@ export type TranslationFunctions = {
 											/**
 											 * Timestamp of event occurrence
 											 */
-											desc: () => LocalizedString
+											longDesc: () => LocalizedString
 										}
 										ref: {
 											/**
@@ -5743,7 +5947,7 @@ export type TranslationFunctions = {
 											/**
 											 * Reference ID for the event
 											 */
-											desc: () => LocalizedString
+											longDesc: () => LocalizedString
 										}
 										sequence: {
 											/**
@@ -5757,7 +5961,7 @@ export type TranslationFunctions = {
 											/**
 											 * Sequence data for the event
 											 */
-											desc: () => LocalizedString
+											longDesc: () => LocalizedString
 											id: {
 												/**
 												 * Sequence ID
@@ -5770,7 +5974,7 @@ export type TranslationFunctions = {
 												/**
 												 * Sequence ID of the event
 												 */
-												desc: () => LocalizedString
+												longDesc: () => LocalizedString
 											}
 											position: {
 												/**
@@ -5784,7 +5988,7 @@ export type TranslationFunctions = {
 												/**
 												 * Position of the event in the sequence
 												 */
-												desc: () => LocalizedString
+												longDesc: () => LocalizedString
 											}
 											total: {
 												/**
@@ -5798,7 +6002,7 @@ export type TranslationFunctions = {
 												/**
 												 * Total count of events in the sequence
 												 */
-												desc: () => LocalizedString
+												longDesc: () => LocalizedString
 											}
 										}
 									}
@@ -5814,7 +6018,7 @@ export type TranslationFunctions = {
 										/**
 										 * Type of user event
 										 */
-										desc: () => LocalizedString
+										longDesc: () => LocalizedString
 									}
 									user: {
 										/**
@@ -5828,7 +6032,7 @@ export type TranslationFunctions = {
 										/**
 										 * Information about the user
 										 */
-										desc: () => LocalizedString
+										longDesc: () => LocalizedString
 										id: {
 											/**
 											 * User ID
@@ -5841,7 +6045,7 @@ export type TranslationFunctions = {
 											/**
 											 * Unique ID of the user
 											 */
-											desc: () => LocalizedString
+											longDesc: () => LocalizedString
 										}
 										external_id: {
 											/**
@@ -5855,7 +6059,7 @@ export type TranslationFunctions = {
 											/**
 											 * External identifier for the user
 											 */
-											desc: () => LocalizedString
+											longDesc: () => LocalizedString
 										}
 										role: {
 											/**
@@ -5869,7 +6073,7 @@ export type TranslationFunctions = {
 											/**
 											 * Role of the user in the system
 											 */
-											desc: () => LocalizedString
+											longDesc: () => LocalizedString
 										}
 										email: {
 											/**
@@ -5883,7 +6087,7 @@ export type TranslationFunctions = {
 											/**
 											 * Email address of the user
 											 */
-											desc: () => LocalizedString
+											longDesc: () => LocalizedString
 										}
 										created_at: {
 											/**
@@ -5897,7 +6101,7 @@ export type TranslationFunctions = {
 											/**
 											 * Creation timestamp of the user
 											 */
-											desc: () => LocalizedString
+											longDesc: () => LocalizedString
 										}
 										updated_at: {
 											/**
@@ -5911,7 +6115,7 @@ export type TranslationFunctions = {
 											/**
 											 * Last update timestamp of the user
 											 */
-											desc: () => LocalizedString
+											longDesc: () => LocalizedString
 										}
 										organization_id: {
 											/**
@@ -5925,7 +6129,7 @@ export type TranslationFunctions = {
 											/**
 											 * ID of the organization associated with the user
 											 */
-											desc: () => LocalizedString
+											longDesc: () => LocalizedString
 										}
 										default_group_id: {
 											/**
@@ -5939,7 +6143,7 @@ export type TranslationFunctions = {
 											/**
 											 * Default group ID for the user
 											 */
-											desc: () => LocalizedString
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -5959,12 +6163,12 @@ export type TranslationFunctions = {
 					/**
 					 * Triggers when a new ticket is created
 					 */
-					desc: () => LocalizedString
+					longDesc: () => LocalizedString
 					event_info: {
 						/**
 						 * New Ticket event data
 						 */
-						desc: () => LocalizedString
+						longDesc: () => LocalizedString
 						type: {
 							version: {
 								/**
@@ -5974,7 +6178,7 @@ export type TranslationFunctions = {
 								/**
 								 * The version of the webhook
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 								/**
 								 * Version of the webhook
 								 */
@@ -5988,7 +6192,7 @@ export type TranslationFunctions = {
 								/**
 								 * Unique identifier for the event
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 								/**
 								 * Event ID
 								 */
@@ -6002,7 +6206,7 @@ export type TranslationFunctions = {
 								/**
 								 * Type of event detail
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 								/**
 								 * Event detail type
 								 */
@@ -6016,7 +6220,7 @@ export type TranslationFunctions = {
 								/**
 								 * Event source identifier
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 								/**
 								 * Event source
 								 */
@@ -6030,7 +6234,7 @@ export type TranslationFunctions = {
 								/**
 								 * ID of the account associated with the event
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 								/**
 								 * Account ID
 								 */
@@ -6044,7 +6248,7 @@ export type TranslationFunctions = {
 								/**
 								 * The timestamp of the event
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 								/**
 								 * Event timestamp
 								 */
@@ -6058,7 +6262,7 @@ export type TranslationFunctions = {
 								/**
 								 * The AWS region of the event
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 								/**
 								 * AWS region
 								 */
@@ -6072,7 +6276,7 @@ export type TranslationFunctions = {
 								/**
 								 * Resources associated with the event
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 								/**
 								 * Event resources
 								 */
@@ -6086,7 +6290,7 @@ export type TranslationFunctions = {
 								/**
 								 * Detailed information about the event
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 								/**
 								 * Event details
 								 */
@@ -6100,7 +6304,7 @@ export type TranslationFunctions = {
 										/**
 										 * Details of the ticket event
 										 */
-										desc: () => LocalizedString
+										longDesc: () => LocalizedString
 										/**
 										 * Ticket event details
 										 */
@@ -6114,7 +6318,7 @@ export type TranslationFunctions = {
 												/**
 												 * Metadata about the event occurrence
 												 */
-												desc: () => LocalizedString
+												longDesc: () => LocalizedString
 												/**
 												 * Event metadata
 												 */
@@ -6128,7 +6332,7 @@ export type TranslationFunctions = {
 														/**
 														 * Version of the event metadata
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Metadata version
 														 */
@@ -6142,7 +6346,7 @@ export type TranslationFunctions = {
 														/**
 														 * Timestamp of event occurrence
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Event occurrence time
 														 */
@@ -6156,7 +6360,7 @@ export type TranslationFunctions = {
 														/**
 														 * Reference ID for the event
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Event reference ID
 														 */
@@ -6170,7 +6374,7 @@ export type TranslationFunctions = {
 														/**
 														 * Sequence data for the event
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Event sequence
 														 */
@@ -6184,7 +6388,7 @@ export type TranslationFunctions = {
 																/**
 																 * Sequence ID of the event
 																 */
-																desc: () => LocalizedString
+																longDesc: () => LocalizedString
 																/**
 																 * Event sequence ID
 																 */
@@ -6198,7 +6402,7 @@ export type TranslationFunctions = {
 																/**
 																 * Position of the event in the sequence
 																 */
-																desc: () => LocalizedString
+																longDesc: () => LocalizedString
 																/**
 																 * Sequence position
 																 */
@@ -6212,7 +6416,7 @@ export type TranslationFunctions = {
 																/**
 																 * Total count of events in the sequence
 																 */
-																desc: () => LocalizedString
+																longDesc: () => LocalizedString
 																/**
 																 * Total sequence events
 																 */
@@ -6228,7 +6432,7 @@ export type TranslationFunctions = {
 														/**
 														 * ID of the actor triggering the event
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Event actor ID
 														 */
@@ -6244,7 +6448,7 @@ export type TranslationFunctions = {
 												/**
 												 * Type of ticket event
 												 */
-												desc: () => LocalizedString
+												longDesc: () => LocalizedString
 												/**
 												 * Ticket event type
 												 */
@@ -6258,7 +6462,7 @@ export type TranslationFunctions = {
 												/**
 												 * Information about the ticket
 												 */
-												desc: () => LocalizedString
+												longDesc: () => LocalizedString
 												/**
 												 * Ticket details
 												 */
@@ -6272,7 +6476,7 @@ export type TranslationFunctions = {
 														/**
 														 * Unique ID of the ticket
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Ticket ID
 														 */
@@ -6286,7 +6490,7 @@ export type TranslationFunctions = {
 														/**
 														 * Creation timestamp of the ticket
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Ticket creation time
 														 */
@@ -6300,7 +6504,7 @@ export type TranslationFunctions = {
 														/**
 														 * Last update timestamp of the ticket
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Ticket last update
 														 */
@@ -6314,7 +6518,7 @@ export type TranslationFunctions = {
 														/**
 														 * Type of the ticket
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Ticket type
 														 */
@@ -6328,7 +6532,7 @@ export type TranslationFunctions = {
 														/**
 														 * Priority level of the ticket
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Ticket priority
 														 */
@@ -6342,7 +6546,7 @@ export type TranslationFunctions = {
 														/**
 														 * Current status of the ticket
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Ticket status
 														 */
@@ -6356,7 +6560,7 @@ export type TranslationFunctions = {
 														/**
 														 * ID of the requester
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Ticket requester ID
 														 */
@@ -6370,7 +6574,7 @@ export type TranslationFunctions = {
 														/**
 														 * ID of the submitter
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Ticket submitter ID
 														 */
@@ -6384,7 +6588,7 @@ export type TranslationFunctions = {
 														/**
 														 * ID of the assignee
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Ticket assignee ID
 														 */
@@ -6398,7 +6602,7 @@ export type TranslationFunctions = {
 														/**
 														 * ID of the organization associated with the ticket
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Organization ID
 														 */
@@ -6412,7 +6616,7 @@ export type TranslationFunctions = {
 														/**
 														 * ID of the group handling the ticket
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Group ID
 														 */
@@ -6426,7 +6630,7 @@ export type TranslationFunctions = {
 														/**
 														 * ID of the brand associated with the ticket
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Brand ID
 														 */
@@ -6440,7 +6644,7 @@ export type TranslationFunctions = {
 														/**
 														 * ID of the form used for the ticket
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Form ID
 														 */
@@ -6454,7 +6658,7 @@ export type TranslationFunctions = {
 														/**
 														 * External identifier for the ticket
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Ticket external ID
 														 */
@@ -6468,7 +6672,7 @@ export type TranslationFunctions = {
 														/**
 														 * Tags associated with the ticket
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Ticket tags
 														 */
@@ -6482,7 +6686,7 @@ export type TranslationFunctions = {
 														/**
 														 * Method by which the ticket was created
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Ticket creation method
 														 */
@@ -6496,7 +6700,7 @@ export type TranslationFunctions = {
 																/**
 																 * Channel through which the ticket was submitted
 																 */
-																desc: () => LocalizedString
+																longDesc: () => LocalizedString
 																/**
 																 * Ticket channel
 																 */
@@ -6525,12 +6729,12 @@ export type TranslationFunctions = {
 					/**
 					 * Triggers when a new organization is created
 					 */
-					desc: () => LocalizedString
+					longDesc: () => LocalizedString
 					event_info: {
 						/**
 						 * New Organization event data
 						 */
-						desc: () => LocalizedString
+						longDesc: () => LocalizedString
 						type: {
 							version: {
 								/**
@@ -6540,7 +6744,7 @@ export type TranslationFunctions = {
 								/**
 								 * The version of the webhook
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 								/**
 								 * Webhook version
 								 */
@@ -6554,7 +6758,7 @@ export type TranslationFunctions = {
 								/**
 								 * Unique identifier for the event
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 								/**
 								 * Event ID
 								 */
@@ -6568,7 +6772,7 @@ export type TranslationFunctions = {
 								/**
 								 * Type of event detail
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 								/**
 								 * Event detail type
 								 */
@@ -6582,7 +6786,7 @@ export type TranslationFunctions = {
 								/**
 								 * Event source identifier
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 								/**
 								 * Event source
 								 */
@@ -6596,7 +6800,7 @@ export type TranslationFunctions = {
 								/**
 								 * ID of the account associated with the event
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 								/**
 								 * Account ID
 								 */
@@ -6610,7 +6814,7 @@ export type TranslationFunctions = {
 								/**
 								 * The timestamp of the event
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 								/**
 								 * Event timestamp
 								 */
@@ -6624,7 +6828,7 @@ export type TranslationFunctions = {
 								/**
 								 * The AWS region of the event
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 								/**
 								 * AWS region
 								 */
@@ -6638,7 +6842,7 @@ export type TranslationFunctions = {
 								/**
 								 * Resources associated with the event
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 								/**
 								 * Event resources
 								 */
@@ -6652,7 +6856,7 @@ export type TranslationFunctions = {
 								/**
 								 * Detailed information about the event
 								 */
-								desc: () => LocalizedString
+								longDesc: () => LocalizedString
 								/**
 								 * Event details
 								 */
@@ -6666,7 +6870,7 @@ export type TranslationFunctions = {
 										/**
 										 * Details of the organization event
 										 */
-										desc: () => LocalizedString
+										longDesc: () => LocalizedString
 										/**
 										 * Organization event details
 										 */
@@ -6680,7 +6884,7 @@ export type TranslationFunctions = {
 												/**
 												 * Metadata about the event occurrence
 												 */
-												desc: () => LocalizedString
+												longDesc: () => LocalizedString
 												/**
 												 * Event metadata
 												 */
@@ -6694,7 +6898,7 @@ export type TranslationFunctions = {
 														/**
 														 * Version of the event metadata
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Metadata version
 														 */
@@ -6708,7 +6912,7 @@ export type TranslationFunctions = {
 														/**
 														 * Timestamp of event occurrence
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Event occurrence time
 														 */
@@ -6722,7 +6926,7 @@ export type TranslationFunctions = {
 														/**
 														 * Reference ID for the event
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Event reference ID
 														 */
@@ -6736,7 +6940,7 @@ export type TranslationFunctions = {
 														/**
 														 * Sequence data for the event
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Event sequence
 														 */
@@ -6750,7 +6954,7 @@ export type TranslationFunctions = {
 																/**
 																 * Sequence ID of the event
 																 */
-																desc: () => LocalizedString
+																longDesc: () => LocalizedString
 																/**
 																 * Event sequence ID
 																 */
@@ -6764,7 +6968,7 @@ export type TranslationFunctions = {
 																/**
 																 * Position of the event in the sequence
 																 */
-																desc: () => LocalizedString
+																longDesc: () => LocalizedString
 																/**
 																 * Sequence position
 																 */
@@ -6778,7 +6982,7 @@ export type TranslationFunctions = {
 																/**
 																 * Total count of events in the sequence
 																 */
-																desc: () => LocalizedString
+																longDesc: () => LocalizedString
 																/**
 																 * Total sequence events
 																 */
@@ -6796,7 +7000,7 @@ export type TranslationFunctions = {
 												/**
 												 * Type of organization event
 												 */
-												desc: () => LocalizedString
+												longDesc: () => LocalizedString
 												/**
 												 * Organization event type
 												 */
@@ -6810,7 +7014,7 @@ export type TranslationFunctions = {
 												/**
 												 * Information about the organization
 												 */
-												desc: () => LocalizedString
+												longDesc: () => LocalizedString
 												/**
 												 * Organization details
 												 */
@@ -6824,7 +7028,7 @@ export type TranslationFunctions = {
 														/**
 														 * Unique ID of the organization
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Organization ID
 														 */
@@ -6838,7 +7042,7 @@ export type TranslationFunctions = {
 														/**
 														 * External identifier for the organization
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Organization external ID
 														 */
@@ -6852,7 +7056,7 @@ export type TranslationFunctions = {
 														/**
 														 * Name of the organization
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Organization name
 														 */
@@ -6866,7 +7070,7 @@ export type TranslationFunctions = {
 														/**
 														 * Creation timestamp of the organization
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Organization creation time
 														 */
@@ -6880,7 +7084,7 @@ export type TranslationFunctions = {
 														/**
 														 * Last update timestamp of the organization
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Organization last update
 														 */
@@ -6894,7 +7098,7 @@ export type TranslationFunctions = {
 														/**
 														 * Indicates if tickets are shared with the organization
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Shared tickets
 														 */
@@ -6908,7 +7112,7 @@ export type TranslationFunctions = {
 														/**
 														 * Indicates if comments are shared with the organization
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Shared comments
 														 */
@@ -6922,7 +7126,7 @@ export type TranslationFunctions = {
 														/**
 														 * ID of the group handling the organization
 														 */
-														desc: () => LocalizedString
+														longDesc: () => LocalizedString
 														/**
 														 * Group ID
 														 */

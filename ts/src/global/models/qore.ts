@@ -229,6 +229,13 @@ export enum EQoreAppActionCode {
   ACTION = 2,
 }
 
+export const QoreAppActionCodeToLocale: {
+  [key in EQoreAppActionCode]: string;
+} = {
+  [EQoreAppActionCode.EVENT]: 'triggers',
+  [EQoreAppActionCode.ACTION]: 'actions',
+};
+
 export interface IQoreBaseAppAction extends IQoreAppShared {
   app: string;
   action: string;
