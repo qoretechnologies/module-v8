@@ -3,6 +3,7 @@ import {
   buildActionsFromSwaggerSchema,
   createSwaggerPaths,
   mapActionsToApp,
+  mapTriggersToApp,
 } from '../../global/helpers';
 import {
   GetConnectionOptionDefinitionFromQoreType,
@@ -13,7 +14,7 @@ import { L } from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import ZendeskSchema from '../../schemas/zendesk.swagger.json';
 import { ZENDESK_ALLOWED_PATHS } from './constants';
-
+import * as zendeskTriggers from './triggers';
 export interface IQoreConnectionOptions {
   [key: string]: GetConnectionOptionDefinitionFromQoreType<TQoreType>;
 }
@@ -48,7 +49,10 @@ export default (locale: Locales) =>
     display_name: L[locale].apps[ZENDESK_APP_NAME].displayName(),
     short_desc: L[locale].apps[ZENDESK_APP_NAME].shortDesc(),
     name: ZENDESK_APP_NAME,
-    actions: mapActionsToApp(ZENDESK_APP_NAME, ZENDESK_ACTIONS, locale),
+    actions: [
+      ...mapActionsToApp(ZENDESK_APP_NAME, ZENDESK_ACTIONS, locale),
+      ...mapTriggersToApp(ZENDESK_APP_NAME, zendeskTriggers, locale),
+    ],
     desc: L[locale].apps[ZENDESK_APP_NAME].longDesc(),
     // This is a white Zendesk styled "Z" logo used in accordance with Zendesk's Brand / Logo Guidelines
     // https://web-assets.zendesk.com/pdf/Zendesk-logo-guidelines-legal-04-22-22.pdf

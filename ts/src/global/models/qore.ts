@@ -229,6 +229,13 @@ export enum EQoreAppActionCode {
   ACTION = 2,
 }
 
+export const QoreAppActionCodeToLocale: {
+  [key in EQoreAppActionCode]: string;
+} = {
+  [EQoreAppActionCode.EVENT]: 'triggers',
+  [EQoreAppActionCode.ACTION]: 'actions',
+};
+
 export interface IQoreBaseAppAction extends IQoreAppShared {
   app: string;
   action: string;
@@ -426,19 +433,35 @@ export enum EQoreAppActionWebhookAuthType {
 
 export interface IQoreAppActionWithEventOrWebhook extends IQoreBaseAppAction {
   action_code: EQoreAppActionCode.EVENT;
-  event_info: {
-    id?: string;
-    desc: string;
-    type: Record<string, IQoreTypeObject>;
-  };
+  event_info: TQoreAppActionWithEventOrWebhookEventInfo;
+  options?: TQoreOptions;
 }
 
-export interface IQoreAppActionWithWebhookBase extends IQoreAppActionWithEventOrWebhook {
+export type TQoreAppActionWithEventOrWebhookEventInfo = {
+  id?: string;
+  desc: string;
+  type: Record<string, IQoreTypeObject>;
+};
+
+export interface IQoreAppActionWithWebhookBase<
+  CustomConnOptions extends Record<string, any> = unknown,
+> extends IQoreAppActionWithEventOrWebhook {
   webhook_method: TWebhookHttpMethod;
   webhook_auth?: EQoreAppActionWebhookAuthType;
-  webhook_register: (context: TQoreAppActionFunctionContext, url: string) => void;
-  webhook_deregister: (context: TQoreAppActionFunctionContext, url: string) => void;
+  webhook_register: TWebhookRegisterFunction<CustomConnOptions>;
+  webhook_deregister: TWebhookDeregisterFunction<CustomConnOptions>;
 }
+
+export type TWebhookRegisterFunction<CustomConnOptions extends Record<string, any> = unknown> = (
+  context: TQoreAppActionFunctionContext<CustomConnOptions>,
+  url: string
+) => Promise<Record<string, any> | void>;
+
+export type TWebhookDeregisterFunction<CustomConnOptions extends Record<string, any> = unknown> = (
+  context: TQoreAppActionFunctionContext<CustomConnOptions>,
+  url: string,
+  regInfo: Record<string, any>
+) => Promise<void>;
 
 export interface IQoreAppActionWithWebhookWithoutPerms extends IQoreAppActionWithWebhookBase {
   webhook_auth?: EQoreAppActionWebhookAuthType.AUTH_NONE;
