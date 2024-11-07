@@ -137,10 +137,13 @@ describe('Helpers tests', () => {
     );
 
     expect(fixedOptions.option2.display_name).toBe('Second Option');
-
+    expect(fixedOptions.option1.display_name).toBe('Option 1');
     expect(
       (fixedOptions.option1.type as Record<string, IQoreTypeObject>).subOption1.display_name
     ).toBe('Sub Option 1 of option 1');
+    expect(
+      (fixedOptions.option1.type as Record<string, IQoreTypeObject>).subOption2.display_name
+    ).toBe('Sub Option 2 of option 1');
 
     const subOption2Type = (fixedOptions.option1.type as Record<string, IQoreTypeObject>).subOption2
       .type;

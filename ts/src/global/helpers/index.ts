@@ -389,11 +389,15 @@ export const fixTriggerEventInfoType = (
         key: string
       ): TQoreAppActionWithEventOrWebhookEventInfo['type'] => {
         const currentPath = [...path, key];
+        let fixedType = type.type;
+
+        if (typeof fixedType === 'object') {
+          fixedType = processCollection(fixedType, [...currentPath, 'type']) as TQoreType;
+        }
 
         const updatedType = {
           ...type,
-          type:
-            typeof type.type === 'object' ? processCollection(type.type, currentPath) : type.type,
+          type: fixedType,
           display_name: type.display_name || getLocalizedField('displayName', currentPath),
           short_desc: type.short_desc || getLocalizedField('shortDesc', currentPath),
           desc: type.desc || getLocalizedField('longDesc', currentPath),
@@ -430,13 +434,15 @@ export const fixOptions = (
       collection,
       (fixedOptions: TQoreOptions, option: IQoreTypeObject, key: string): TQoreOptions => {
         const currentPath = [...path, key];
+        let fixedType = option.type;
+
+        if (typeof fixedType === 'object') {
+          fixedType = processCollection(fixedType, [...currentPath, 'type']) as TQoreType;
+        }
 
         const updatedOption: IQoreAppActionOption<TQoreType, unknown> = {
           ...option,
-          type:
-            typeof option.type === 'object'
-              ? (processCollection(option.type, currentPath) as TQoreType)
-              : option.type,
+          type: fixedType,
           display_name: option.display_name || getLocalizedField('displayName', currentPath),
           short_desc: option.short_desc || getLocalizedField('shortDesc', currentPath),
           desc: option.desc || getLocalizedField('longDesc', currentPath),

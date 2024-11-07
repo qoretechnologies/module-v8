@@ -8,122 +8,121 @@ export default {
   webhook_register: createZendeskWebhookRegistrar(['zen:event-type:user.created']),
   webhook_deregister: createZendeskWebhookDeRegistrar(),
   event_info: {
-    desc: 'New User event data',
+    desc: 'Zendesk User Event Data',
     type: {
-      version: {
-        name: 'version',
-        type: 'softstring',
-      },
-      id: {
-        name: 'id',
-        type: 'softstring',
-      },
-      'detail-type': {
-        name: 'detail-type',
-        type: 'softstring',
-      },
-      source: {
-        name: 'source',
-        type: 'softstring',
-      },
-      account: {
-        name: 'account',
-        type: 'string',
-      },
-      time: {
-        name: 'time',
-        type: 'softdate',
-      },
-      region: {
-        name: 'region',
-        type: 'softstring',
-      },
-      resources: {
-        name: 'resources',
-        type: '*list',
-      },
-      detail: {
-        name: 'detail',
+      event: {
+        name: 'event',
         type: {
-          user_event: {
-            name: 'user_event',
+          body: {
+            name: 'body',
             type: {
-              meta: {
-                name: 'meta',
-                type: {
-                  version: {
-                    name: 'version',
-                    type: 'softstring',
-                  },
-                  occurred_at: {
-                    name: 'occurred_at',
-                    type: 'date',
-                  },
-                  ref: {
-                    name: 'ref',
-                    type: 'string',
-                  },
-                  sequence: {
-                    name: 'sequence',
-                    type: {
-                      id: {
-                        name: 'id',
-                        type: 'softstring',
-                      },
-                      position: {
-                        name: 'position',
-                        type: 'int',
-                      },
-                      total: {
-                        name: 'total',
-                        type: 'int',
-                      },
-                    },
-                  },
-                },
+              account_id: {
+                name: 'account_id',
+                type: 'softint',
               },
-              type: {
-                name: 'type',
-                type: 'softstring',
-              },
-              user: {
-                name: 'user',
+              detail: {
+                name: 'detail',
                 type: {
-                  id: {
-                    name: 'id',
-                    type: 'int',
+                  created_at: {
+                    name: 'created_at',
+                    type: 'softdate',
                   },
-                  external_id: {
-                    name: 'external_id',
-                    type: 'softstring',
-                  },
-                  role: {
-                    name: 'role',
+                  default_group_id: {
+                    name: 'default_group_id',
                     type: 'softstring',
                   },
                   email: {
                     name: 'email',
                     type: 'softstring',
                   },
-                  created_at: {
-                    name: 'created_at',
-                    type: 'date',
+                  external_id: {
+                    name: 'external_id',
+                    type: 'softstring',
                   },
-                  updated_at: {
-                    name: 'updated_at',
-                    type: 'date',
+                  id: {
+                    name: 'id',
+                    type: 'softstring',
                   },
                   organization_id: {
                     name: 'organization_id',
-                    type: 'int',
+                    type: 'softstring',
                   },
-                  default_group_id: {
-                    name: 'default_group_id',
-                    type: 'int',
+                  role: {
+                    name: 'role',
+                    type: 'softstring',
+                  },
+                  updated_at: {
+                    name: 'updated_at',
+                    type: 'softdate',
                   },
                 },
               },
+              event: {
+                name: 'event',
+                type: 'hash',
+              },
+              id: {
+                name: 'id',
+                type: 'softstring',
+              },
+              subject: {
+                name: 'subject',
+                type: 'softstring',
+              },
+              time: {
+                name: 'time',
+                type: 'softdate',
+              },
+              type: {
+                name: 'type',
+                type: 'softstring',
+              },
+              zendesk_event_version: {
+                name: 'zendesk_event_version',
+                type: 'softstring',
+              },
             },
+          },
+        },
+      },
+      context: {
+        name: 'context',
+        type: {
+          id: {
+            name: 'id',
+            type: 'softstring',
+          },
+          ts: {
+            name: 'ts',
+            type: 'softdate',
+          },
+          workflow_id: {
+            name: 'workflow_id',
+            type: 'softstring',
+          },
+          source_type: {
+            name: 'source_type',
+            type: 'softstring',
+          },
+          owner_id: {
+            name: 'owner_id',
+            type: 'softstring',
+          },
+          platform_version: {
+            name: 'platform_version',
+            type: 'softstring',
+          },
+          workflow_name: {
+            name: 'workflow_name',
+            type: 'softstring',
+          },
+          emitter_id: {
+            name: 'emitter_id',
+            type: 'softstring',
+          },
+          trace_id: {
+            name: 'trace_id',
+            type: 'softstring',
           },
         },
       },

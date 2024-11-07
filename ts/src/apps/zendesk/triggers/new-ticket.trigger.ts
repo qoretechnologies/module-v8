@@ -1,170 +1,241 @@
-import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
-import { createZendeskWebhookDeRegistrar, createZendeskWebhookRegistrar } from './helpers';
+import { QorusRequest } from '@qoretechnologies/ts-toolkit';
+import { ZENDESK_CONN_OPTIONS } from '..';
+import {
+  EQoreAppActionCode,
+  IQoreAppActionWithWebhookBase,
+  TQorePartialEventAction,
+} from '../../../global/models/qore';
+
+const createZendeskNewTicketWebhookRegistrar = (): IQoreAppActionWithWebhookBase<
+  typeof ZENDESK_CONN_OPTIONS
+>['webhook_register'] => {
+  return async (context, url) => {
+    const {
+      conn_opts: { token, subdomain },
+    } = context;
+    const zendeskUrl = `https://${subdomain}.zendesk.com`;
+
+    const {
+      data: { webhook },
+    } = await QorusRequest.post<any>(
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        data: {
+          webhook: {
+            name: 'New Organization Webhook',
+            status: 'active',
+            endpoint: url,
+            http_method: 'POST',
+            request_format: 'json',
+            subscriptions: ['conditional_ticket_events'],
+          },
+        },
+        path: '/api/v2/webhooks',
+      },
+      { url: zendeskUrl, endpointId: 'Zendesk' }
+    );
+
+    const triggerData = {
+      ticket_id: '{{ticket.id}}',
+      ticket_subject: '{{ticket.title}}',
+      ticket_description: '{{ticket.description}}',
+      ticket_priority: '{{ticket.priority}}',
+      ticket_status: '{{ticket.status}}',
+      ticket_type: '{{ticket.type}}',
+      ticket_url: '{{ticket.url}}',
+      requester_name: '{{ticket.requester.name}}',
+      requester_email: '{{ticket.requester.email}}',
+      assignee_name: '{{ticket.assignee.name}}',
+      assignee_email: '{{ticket.assignee.email}}',
+      group_name: '{{ticket.group.name}}',
+      organization_name: '{{ticket.organization.name}}',
+      tags: '{{ticket.tags}}',
+    };
+
+    const {
+      data: { trigger },
+    } = await QorusRequest.post<any>(
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        data: {
+          trigger: {
+            title: 'Notify Webhook on Ticket Creation',
+            conditions: {
+              all: [
+                {
+                  field: 'update_type',
+                  operator: 'is',
+                  value: 'Create',
+                },
+              ],
+            },
+            actions: [
+              {
+                field: 'notification_webhook',
+                value: [webhook.id, JSON.stringify(triggerData)],
+              },
+            ],
+          },
+        },
+        path: '/api/v2/webhooks',
+      },
+      { url: `https://${subdomain}.zendesk.com`, endpointId: 'Zendesk' }
+    );
+
+    return { webhook, trigger };
+  };
+};
+
+export const createZendeskNewTicketWebhookDeRegistrar = (): IQoreAppActionWithWebhookBase<
+  typeof ZENDESK_CONN_OPTIONS
+>['webhook_deregister'] => {
+  return async (context, _url, regInfo) => {
+    const {
+      conn_opts: { token, subdomain },
+    } = context;
+    const zendeskUrl = `https://${subdomain}.zendesk.com`;
+    const { webhook, trigger } = regInfo;
+
+    await Promise.all([
+      QorusRequest.deleteReq<any>(
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+          path: `/api/v2/webhooks/${webhook.id}`,
+        },
+        { url: zendeskUrl, endpointId: 'Zendesk' }
+      ),
+      QorusRequest.deleteReq<any>(
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+          path: `/api/v2/triggers/${trigger.id}`,
+        },
+        { url: zendeskUrl, endpointId: 'Zendesk' }
+      ),
+    ]);
+  };
+};
 
 export default {
   action: 'new_ticket',
   action_code: EQoreAppActionCode.EVENT,
   webhook_method: 'POST',
-  webhook_register: createZendeskWebhookRegistrar(['zen:event-type:ticket.created']),
-  webhook_deregister: createZendeskWebhookDeRegistrar(),
+  webhook_register: createZendeskNewTicketWebhookRegistrar(),
+  webhook_deregister: createZendeskNewTicketWebhookDeRegistrar(),
   event_info: {
     desc: 'New Ticket event data',
     type: {
-      version: {
-        name: 'version',
-        type: 'softstring',
-      },
-      id: {
-        name: 'id',
-        type: 'softstring',
-      },
-      'detail-type': {
-        name: 'detail-type',
-        type: 'softstring',
-      },
-      source: {
-        name: 'source',
-        type: 'softstring',
-      },
-      account: {
-        name: 'account',
-        type: 'string',
-      },
-      time: {
-        name: 'time',
-        type: 'softdate',
-      },
-      region: {
-        name: 'region',
-        type: 'softstring',
-      },
-      resources: {
-        name: 'resources',
-        type: '*list',
-      },
-      detail: {
-        name: 'detail',
+      event: {
+        name: 'event',
         type: {
-          ticket_event: {
-            name: 'ticket_event',
+          body: {
+            name: 'body',
             type: {
-              meta: {
-                name: 'meta',
-                type: {
-                  version: {
-                    name: 'version',
-                    type: 'softstring',
-                  },
-                  occurred_at: {
-                    name: 'occurred_at',
-                    type: 'date',
-                  },
-                  ref: {
-                    name: 'ref',
-                    type: 'string',
-                  },
-                  sequence: {
-                    name: 'sequence',
-                    type: {
-                      id: {
-                        name: 'id',
-                        type: 'softstring',
-                      },
-                      position: {
-                        name: 'position',
-                        type: 'int',
-                      },
-                      total: {
-                        name: 'total',
-                        type: 'int',
-                      },
-                    },
-                  },
-                  actor_id: {
-                    name: 'actor_id',
-                    type: 'int',
-                  },
-                },
-              },
-              type: {
-                name: 'type',
+              assignee_email: {
+                name: 'assignee_email',
                 type: 'softstring',
               },
-              ticket: {
-                name: 'ticket',
-                type: {
-                  id: {
-                    name: 'id',
-                    type: 'int',
-                  },
-                  created_at: {
-                    name: 'created_at',
-                    type: 'date',
-                  },
-                  updated_at: {
-                    name: 'updated_at',
-                    type: 'date',
-                  },
-                  type: {
-                    name: 'type',
-                    type: 'softstring',
-                  },
-                  priority: {
-                    name: 'priority',
-                    type: 'softstring',
-                  },
-                  status: {
-                    name: 'status',
-                    type: 'softstring',
-                  },
-                  requester_id: {
-                    name: 'requester_id',
-                    type: 'int',
-                  },
-                  submitter_id: {
-                    name: 'submitter_id',
-                    type: 'int',
-                  },
-                  assignee_id: {
-                    name: 'assignee_id',
-                    type: 'int',
-                  },
-                  organization_id: {
-                    name: 'organization_id',
-                    type: 'int',
-                  },
-                  group_id: {
-                    name: 'group_id',
-                    type: 'int',
-                  },
-                  brand_id: {
-                    name: 'brand_id',
-                    type: 'int',
-                  },
-                  form_id: {
-                    name: 'form_id',
-                    type: 'int',
-                  },
-                  external_id: {
-                    name: 'external_id',
-                    type: 'softstring',
-                  },
-                  tags: {
-                    name: 'tags',
-                    type: '*list',
-                  },
-                  via: {
-                    name: 'via',
-                    type: {
-                      channel: {
-                        name: 'channel',
-                        type: 'softstring',
-                      },
-                    },
-                  },
-                },
+              assignee_name: {
+                name: 'assignee_name',
+                type: 'softstring',
+              },
+              group_name: {
+                name: 'group_name',
+                type: 'softstring',
+              },
+              organization_name: {
+                name: 'organization_name',
+                type: 'softstring',
+              },
+              requester_email: {
+                name: 'requester_email',
+                type: 'softstring',
+              },
+              requester_name: {
+                name: 'requester_name',
+                type: 'softstring',
+              },
+              tags: {
+                name: 'tags',
+                type: 'softstring', // adjusted to match format in example
+              },
+              ticket_description: {
+                name: 'ticket_description',
+                type: 'softstring',
+              },
+              ticket_id: {
+                name: 'ticket_id',
+                type: 'softstring', // assuming ticket_id as string due to email body
+              },
+              ticket_priority: {
+                name: 'ticket_priority',
+                type: 'softstring',
+              },
+              ticket_status: {
+                name: 'ticket_status',
+                type: 'softstring',
+              },
+              ticket_subject: {
+                name: 'ticket_subject',
+                type: 'softstring',
+              },
+              ticket_type: {
+                name: 'ticket_type',
+                type: 'softstring',
+              },
+              ticket_url: {
+                name: 'ticket_url',
+                type: 'softstring',
               },
             },
+          },
+        },
+      },
+      context: {
+        name: 'context',
+        type: {
+          id: {
+            name: 'id',
+            type: 'softstring',
+          },
+          ts: {
+            name: 'ts',
+            type: 'softdate',
+          },
+          workflow_id: {
+            name: 'workflow_id',
+            type: 'softstring',
+          },
+          source_type: {
+            name: 'source_type',
+            type: 'softstring',
+          },
+          owner_id: {
+            name: 'owner_id',
+            type: 'softstring',
+          },
+          platform_version: {
+            name: 'platform_version',
+            type: 'softstring',
+          },
+          workflow_name: {
+            name: 'workflow_name',
+            type: 'softstring',
+          },
+          emitter_id: {
+            name: 'emitter_id',
+            type: 'softstring',
+          },
+          trace_id: {
+            name: 'trace_id',
+            type: 'softstring',
           },
         },
       },
