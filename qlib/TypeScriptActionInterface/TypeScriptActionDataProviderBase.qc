@@ -158,6 +158,16 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
                 }
                 throw "JAVASCRIPT-ASYNC-ERROR", desc, arg;
             }
+            if (err.response{"status", "statusText", "headers", "data"}.size() == 4) {
+                string desc;
+                if (errstr.val()) {
+                    desc = sprintf("Error in async request: %s: %y", errstr, err.response."data");
+                } else {
+                    desc = sprintf("Error in async request: %d %s: %y", err.response.status, err.response.statusText,
+                        err.response."data");
+                }
+                throw "JAVASCRIPT-ASYNC-ERROR", desc, err;
+            }
             if (!err && !errstr) {
                 err = sprintf("No JvaScript exception information available: %y (from: %s)", err, errloc);
             }
