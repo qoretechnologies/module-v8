@@ -501,7 +501,7 @@ public class TypeScriptActionInterface {
 
             event_info = <DataProviderMessageInfo>{
                 "desc": event.desc,
-                "type": TypeScriptActionInterface::getType(event.type),
+                "type": TypeScriptActionInterface::getType(event.type, True),
             };
         }
 
@@ -764,6 +764,9 @@ public class TypeScriptActionInterface {
         if (opt.allowed_values) {
             opt.allowed_values = map cast<hash<AllowedValueInfo>>($1), opt.allowed_values;
         }
+        if (opt.required_groups) {
+            opt.required_groups = cast<list<string>>(opt.required_groups);
+        }
         return cast<hash<ActionOptionInfo>>(opt);
     }
 
@@ -814,7 +817,7 @@ public class TypeScriptActionInterface {
         return type;
     }
 
-    static AbstractDataProviderType getType(auto v) {
+    static AbstractDataProviderType getType(auto v, *bool required) {
         throw "TYPE-ERROR", sprintf("Expecting \"string\" or \"hash\" for the option \"type\"; got %y "
             "instead", v.fullType());
     }
