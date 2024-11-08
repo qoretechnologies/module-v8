@@ -98,7 +98,9 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
             } catch (hash<ExceptionInfo> ex) {
                 error("Error in data provider %y deregistering webhook %y: %s", name, url, get_exception_string(ex));
             }
-            TypeScriptActionInterface::deleteWebhook(url);
+        }
+        if (url) {
+            TypeScriptActionInterface::deleteWebhook(remove url);
         }
     }
 
