@@ -69,6 +69,10 @@ export default {
     token: {
       required: true,
       short_desc: 'Token of the attachment to delete',
+      get_allowed_values: (context) => {
+        console.log(context);
+        return [{ value: 123 }];
+      },
     },
   },
   response_type,
