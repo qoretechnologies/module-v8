@@ -178,15 +178,14 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                     action.action, i.key, keys action.options);
             }
             TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, i.key, \i.value, pool);
-            if (exists i.value.ref_data) {
-                opt.ref_data = i.value.ref_data;
-            }
             if (i.value.type) {
                 opt.type = TypeScriptActionInterface::getType(i.value.type, i.value.required);
             }
             if (i.value.allowed_values) {
                 opt.allowed_values = map cast<hash<AllowedValueInfo>>($1), i.value.allowed_values;
             }
+            opt += i.value{"display_name", "short_desc", "desc", "required", "preselected", "default_value",
+                "sensitive", "example_value", "depends_on", "ref_data", "required_groups", "loc"};
         }
     }
 

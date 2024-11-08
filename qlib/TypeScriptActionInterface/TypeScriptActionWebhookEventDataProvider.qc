@@ -43,6 +43,9 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         #! Any value returned by webhook_register()
         *hash<auto> reginfo;
 
+        #! Did the JS webhook registration function succeed?
+        bool js_webhook_registered;
+
         #! The URL returned after registering the webhook
         string url;
     }
@@ -76,7 +79,8 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
 
         debug("Registering webhook for data provider %y URL %y", name, url);
         reginfo = getAsyncValue(webhook_register, getCallContextInfo(ImpliedArgumentHelper::get()), url);
-        debug("Webhook for data provider %y registered with URL %y", name, url);
+        js_webhook_registered = True;
+        debug("Webhook for data provider %y registered with URL %y (reginfo: %y)", name, url, reginfo);
     }
 
     #! Called to stop generating events
@@ -87,10 +91,10 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
     }
 
     private stop() {
-        if (url.val()) {
+        if (js_webhook_registered) {
             getAsyncValue(webhook_deregister, getCallContextInfo(), url, reginfo);
+            js_webhook_registered = False;
             TypeScriptActionInterface::deleteWebhook(url);
-            delete url;
         }
     }
 
