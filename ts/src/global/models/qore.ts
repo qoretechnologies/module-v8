@@ -424,6 +424,7 @@ export interface IQoreAppActionOption<TypeName extends TQoreType = TQoreType, Ty
   loc?: string;
   ref_data?: string;
   sensitive?: boolean;
+  required_groups?: string[];
 }
 
 export enum EQoreAppActionWebhookAuthType {

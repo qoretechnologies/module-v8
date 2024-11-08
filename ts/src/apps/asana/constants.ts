@@ -26,7 +26,24 @@ export const ASANA_ALLOWED_PATHS: TAllowedPaths = {
   '/teams': { GET: {} },
   '/teams/{team_gid}/projects': {},
   '/events': {},
-  '/goals': {},
+  '/goals': {
+    GET: {
+      override_options: {
+        portfolio: {
+          required_groups: ['goals_group'],
+        },
+        project: {
+          required_groups: ['goals_group'],
+        },
+        workspace: {
+          required_groups: ['goals_group'],
+        },
+        team: {
+          required_groups: ['goals_group'],
+        },
+      },
+    },
+  },
   '/goals/{goal_gid}': {},
 };
 
