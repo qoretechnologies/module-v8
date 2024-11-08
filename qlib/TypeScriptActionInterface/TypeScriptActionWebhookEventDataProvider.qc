@@ -92,8 +92,8 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
 
     private stop() {
         if (js_webhook_registered) {
-            getAsyncValue(webhook_deregister, getCallContextInfo(), url, reginfo);
             js_webhook_registered = False;
+            getAsyncValue(webhook_deregister, getCallContextInfo(), url, reginfo);
             TypeScriptActionInterface::deleteWebhook(url);
         }
     }
