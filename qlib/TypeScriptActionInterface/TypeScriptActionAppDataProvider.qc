@@ -115,7 +115,11 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
 
     #! Returns data provider static info
     private hash<DataProviderInfo> getStaticInfoImpl() {
-        return ProviderInfo;
+        hash<DataProviderInfo> rv = ProviderInfo;
+        if (TypeScriptActionInterface::appSupportsEvents(name)) {
+            rv.children_can_support_observers = True;
+        }
+        return rv;
     }
 }
 }
