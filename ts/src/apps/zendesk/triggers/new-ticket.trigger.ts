@@ -9,12 +9,12 @@ import {
 const createZendeskNewTicketWebhookRegistrar = (): IQoreAppActionWithWebhookBase<
   typeof ZENDESK_CONN_OPTIONS
 >['webhook_register'] => {
-  return async (context, url) => {
+    return async (context, url) => {
+    //console.log(`webhook URL: ${url}`);
     const {
       conn_opts: { token, subdomain },
     } = context;
     const zendeskUrl = `https://${subdomain}.zendesk.com`;
-
     const {
       data: { webhook },
     } = await QorusRequest.post<any>(
@@ -36,6 +36,8 @@ const createZendeskNewTicketWebhookRegistrar = (): IQoreAppActionWithWebhookBase
       },
       { url: zendeskUrl, endpointId: 'Zendesk' }
     );
+
+    //console.log(`webhook => ${JSON.stringify(webhook)}`);
 
     const triggerData = {
       ticket_id: '{{ticket.id}}',
@@ -81,7 +83,7 @@ const createZendeskNewTicketWebhookRegistrar = (): IQoreAppActionWithWebhookBase
             ],
           },
         },
-        path: '/api/v2/webhooks',
+        path: '/api/v2/triggers',
       },
       { url: `https://${subdomain}.zendesk.com`, endpointId: 'Zendesk' }
     );

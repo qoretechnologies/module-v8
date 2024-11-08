@@ -96,7 +96,8 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
             try {
                 getAsyncValue(webhook_deregister, getCallContextInfo(), url, reginfo);
             } catch (hash<ExceptionInfo> ex) {
-                error("Error in data provider %y deregistering webhook %y: %s", name, url, get_exception_string(ex));
+                error("WEBHOOK-DEREGISTRATION-ERROR", "Error in data provider %y deregistering webhook %y: %s", name,
+                    url, get_exception_string(ex));
             }
         }
         if (url) {

@@ -109,10 +109,10 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
                 v = v.then(sub (auto val) {
                     rv = val;
                 }, sub (auto e) {
-                    errloc = sprintf("reject");
+                    errloc = sprintf("rejected");
                     err = e;
                 }).doCatch(sub (auto e) {
-                    errloc = "catch";
+                    errloc = "exception caught";
                     err = e;
                 });
                 v.wait();
@@ -126,12 +126,16 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
         }
 
         string errstr;
+        *string stack;
         if (rv instanceof JavaScriptObject) {
             rv = rv.toData();
         } else if (rv.typeCode() == NT_LIST && (rv[0] instanceof JavaScriptObject)) {
             rv = map $1.toData(), rv;
         } else if (err instanceof JavaScriptObject) {
             errstr = err.toString();
+            if (exists (stack = err.stack)) {
+                stack =~ s/\n+/\n/g;
+            }
             err = err.toData();
         } else if (err.typeCode() == NT_LIST && (err[0] instanceof JavaScriptObject)) {
             err = map $1.toData(), err;
@@ -150,6 +154,9 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
                     desc += sprintf("%y: ", err._err.response."data".error_summary);
                 }
                 desc += err._err.message;
+                if (exists stack) {
+                    desc += sprintf(" detail: %s", stack);
+                }
                 hash<auto> arg;
                 if (err._err{"config", "response"}.size() == 2) {
                     arg = err._err{"config", "response"};
@@ -166,14 +173,23 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
                     desc = sprintf("Error in async request: %d %s: %y", err.response.status, err.response.statusText,
                         err.response."data");
                 }
+                if (exists stack) {
+                    desc += sprintf(" detail: %s", stack);
+                }
                 throw "JAVASCRIPT-ASYNC-ERROR", desc, err;
             }
             if (!err && !errstr) {
                 err = sprintf("No JvaScript exception information available: %y (from: %s)", err, errloc);
             }
             string desc = "Error in async request";
+            if (errloc) {
+                desc += sprintf(" (promise %s)", errloc);
+            }
             if (!err && errstr.val()) {
                 desc += ": " + errstr;
+            }
+            if (exists stack) {
+                desc += sprintf(" detail: %s", stack);
             }
             throw "JAVASCRIPT-ASYNC-ERROR", desc, err;
         }
