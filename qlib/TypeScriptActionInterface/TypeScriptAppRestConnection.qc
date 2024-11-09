@@ -41,10 +41,12 @@ public class TypeScriptAppRestClient inherits RestClient {
     #! Returns options to update after an OAuth2 login
     private *hash<auto> getUpdateOptionsAfterLogin(hash<auto> h) {
         *hash<auto> rv = RestClient::getUpdateOptionsAfterLogin(h);
+        LoggerWrapper::debug("Connection %y app %y post-auth resp: %y h: %y rv: %y (post_auth: %y)", conn.name,
+            conn.getAppName(), h, rv, post_auth);
         if (post_auth) {
             rv += TypeScriptActionDataProviderBase::getAsyncValueArgs(self, post_auth, {
                 "conn_name": conn.name,
-                "conn_opts": conn.getRealOptions(),
+                "conn_opts": h + conn.getRealOptions(),
             });
             info("Connection %y app %y post-auth adding options: %y", conn.name, conn.getAppName(), rv);
 
@@ -57,6 +59,7 @@ public class TypeScriptAppRestClient inherits RestClient {
                 setURL(AbstractConnection::getRealUrl(config.url, conn.getConnectionSchemeInfo(), conn.getType()));
             }
         }
+        LoggerWrapper::debug("Connection %y app %y post-auth rv: %y", conn.name, conn.getAppName(), rv);
         return rv;
     }
 }
@@ -167,17 +170,18 @@ public class TypeScriptAppRestConnection inherits RestConnection {
     #! Processes the OAuth2 token response
     private *hash<auto> processOAuth2TokenResponseImpl(hash<auto> resp) {
         *hash<auto> new_opts = RestConnection::processOAuth2TokenResponseImpl(resp);
-        #LoggerWrapper::debug("Connection %y app %y post-auth resp: %y new_opts: %y (post_auth: %y)", name, app, resp,
-        #    new_opts, post_auth);
+        LoggerWrapper::debug("Connection %y app %y post-auth resp: %y new_opts: %y (post_auth: %y)", name, app, resp,
+            new_opts, post_auth);
         if (new_opts && post_auth) {
             on_error rethrow $1.err, sprintf("%s (new_opts: %y)", $1.desc, new_opts);
             new_opts += TypeScriptActionDataProviderBase::getAsyncValueArgs(self, post_auth, {
                 "conn_name": name,
-                "conn_opts": real_opts + new_opts,
+                "conn_opts": real_opts + new_opts + resp,
             });
             LoggerWrapper::info("Connection %y app %y post-auth adding options: %y from %y", name, app, new_opts,
                 resp);
         }
+        LoggerWrapper::debug("Connection %y app %y post-auth rv: %y", name, app, new_opts);
         return new_opts;
     }
 

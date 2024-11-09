@@ -54,6 +54,8 @@ exports.actionsCatalogue = {
                 - oauth2_token_args?: object -> Extra arguments for OAuth2 token requests to \c oauth2_token_url; if
                   this option is set as well as \c oauth2_alt_token_url, then the \c oauth2_token_url value will be
                   added to this as well when the request is made to the \c oauth2_alt_token_url
+                - oauth2_token_auth_secret_only?: bool -> Use basic authorization with the client secret only when
+                  making token requests
                 - oauth2_token_url?: string -> The token URL OAuth2 flows; ignored if the \c token option is set
                 - oauth2_token_use_basic_auth?: bool -> Use basic auth when making token requests with the client_id
                   and client_secret

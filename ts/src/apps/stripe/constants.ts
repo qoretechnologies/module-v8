@@ -1,4 +1,5 @@
 import { TAllowedPaths } from '../../global/models/qore';
+import { IQoreConnectionOptions } from '../zendesk';
 
 export const STRIPE_APP_NAME = 'Stripe';
 export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
@@ -80,3 +81,23 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     POST: {},
   },
 };
+export const STRIPE_CONN_OPTIONS = {
+  account_id: {
+    display_name: 'Account ID',
+    short_desc: 'The account ID',
+    desc: 'The account ID',
+    type: 'string',
+  },
+  user_id: {
+    display_name: 'User ID',
+    short_desc: 'The user ID',
+    desc: 'The user ID',
+    type: 'string',
+  },
+  stripe_user_id: {
+    display_name: 'Stripe User ID',
+    short_desc: 'The Stripe user ID',
+    desc: 'The Stripe user ID',
+    type: 'string',
+  },
+} satisfies IQoreConnectionOptions;

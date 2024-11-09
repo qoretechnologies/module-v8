@@ -8,7 +8,7 @@ import { IQoreAppWithActions } from '../../global/models/qore';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import stripe from '../../schemas/stripe.swagger.json';
-import { STRIPE_ALLOWED_PATHS, STRIPE_APP_NAME } from './constants';
+import { STRIPE_ALLOWED_PATHS, STRIPE_APP_NAME, STRIPE_CONN_OPTIONS } from './constants';
 
 export const STRIPE_ACTIONS = buildActionsFromSwaggerSchema({
   schema: stripe as any,
@@ -64,10 +64,33 @@ export default (locale: Locales) =>
       oauth2_grant_type: 'authorization_code',
       oauth2_client_id: '1208416840087775',
       oauth2_client_secret: actionsCatalogue.getOauth2ClientSecret(STRIPE_APP_NAME),
-      oauth2_auth_url: 'https://connect.stripe.com/oauth/authorize',
-      oauth2_token_url: 'https://connect.stripe.com/oauth/token',
+      // required for testing until app is published
+      oauth2_auth_url:
+        'https://marketplace.stripe.com/oauth/v2/channellink*AZMQ-C4WTgAAAEq2%23EhcKFWFjY3RfMVFKRG1n' +
+        'R3ZtdUZZUzYxag/authorize',
+      //oauth2_auth_url: 'https://connect.stripe.com/oauth/authorize',
+      oauth2_token_url: 'https://api.stripe.com/v1/oauth/token',
+      oauth2_token_auth_secret_only: true,
       oauth2_scopes: ['read_write'],
       ping_method: 'GET',
       ping_path: '/v1/accounts',
     },
-  }) satisfies IQoreAppWithActions;
+    rest_modifiers: {
+      options: STRIPE_CONN_OPTIONS,
+      set_options_post_auth: async (context) => {
+        const rv: any = {};
+        if (context.conn_opts.account_id) {
+          rv.account_id = context.conn_opts.account_id;
+          rv.ping_path = `/v1/accounts/${context.conn_opts.account_id}`;
+        }
+        if (context.conn_opts.user_id) {
+          rv.user_id = context.conn_opts.user_id;
+        }
+        if (context.conn_opts.stripe_user_id) {
+          rv.stripe_user_id = context.conn_opts.stripe_user_id;
+        }
+
+        return rv;
+      },
+    },
+}) satisfies IQoreAppWithActions;

@@ -77,8 +77,14 @@ export interface IQoreRestConnectionConfig {
   // Extra arguments for OAuth2 token requests, which will be serialized as query parameters.
   oauth2_token_args?: Record<string, any>;
 
+  // Use basic authorization with the client secret only when making token requests
+  oauth2_token_auth_secret_only?: boolean;
+
   // The OAuth2 token URL used to obtain access tokens. Ignored if the `token` option is set.
   oauth2_token_url: string;
+
+  // Use basic authorization with the client ID and client secret when making token requests
+  oauth2_token_use_basic_auth?: boolean;
 
   // The password for authentication. Not used in conjunction with OAuth2 configurations.
   password?: string;
@@ -120,8 +126,6 @@ export interface IQoreRestConnectionConfig {
 
   // The username for authentication. Not used in conjunction with OAuth2 configurations.
   username?: string;
-
-  oauth2_token_use_basic_auth?: boolean;
 
   // The base path for the Swagger API.
   swagger_base_path?: string;
