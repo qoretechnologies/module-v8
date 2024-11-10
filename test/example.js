@@ -152,7 +152,7 @@ exports.actionsCatalogue = {
 
                 @note the function here will be called with no "this" context; "this" cannot be used in this function
             */
-            "api_function": function(obj, opts, ctx) {
+            "api_function": async function(obj, opts, ctx) {
                 if (!obj.count) {
                     obj.count = 0;
                 }
@@ -237,7 +237,7 @@ exports.actionsCatalogue = {
                     "desc": "A count of something",
                     "required": true,
                     "preselected": true,
-                    "get_allowed_values": function(ctx) {
+                    "get_allowed_values": async function(ctx) {
                         return [
                             {
                                 "display_name": "1",
@@ -263,7 +263,7 @@ exports.actionsCatalogue = {
                     "required": true,
                     "preselected": true,
                     "depends_on": ["count"],
-                    "get_allowed_values": function(ctx) {
+                    "get_allowed_values": async function(ctx) {
                         return [
                             {
                                 "display_name": "this",
@@ -300,7 +300,7 @@ exports.actionsCatalogue = {
                             "value": "B",
                         },
                     ],
-                    "get_dependent_options": function(ctx) {
+                    "get_dependent_options": async function(ctx) {
                         if (ctx.opts.key == 'A') {
                             return {
                                 "a0": {
@@ -449,7 +449,7 @@ exports.actionsCatalogue = {
             */
             "override_options": {
                 'id': {
-                    "get_allowed_values": function(ctx) {
+                    "get_allowed_values": async function(ctx) {
                         return [
                             {
                                 "display_name": "1",
@@ -491,7 +491,7 @@ exports.actionsCatalogue = {
                     "desc": "A name",
                     "required": true,
                     "preselected": true,
-                    "get_allowed_values": function(ctx) {
+                    "get_allowed_values": async function(ctx) {
                         return [
                             {
                                 "display_name": "Fred",
@@ -601,7 +601,7 @@ exports.actionsCatalogue = {
                     "desc": "A name",
                     "required": true,
                     "preselected": true,
-                    "get_allowed_values": function(ctx) {
+                    "get_allowed_values": async function(ctx) {
                         return [
                             {
                                 "display_name": "Fred",

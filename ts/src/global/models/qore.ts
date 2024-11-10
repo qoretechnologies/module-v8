@@ -10,6 +10,7 @@ export interface IQoreAppShared {
 
 export type THttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE';
 export type TWebhookHttpMethod = 'POST' | 'PUT' | 'PATCH' | 'GET';
+export type TRestGetAllowedValuesMethod = TWebhookHttpMethod;
 
 export type TAllowedPaths = Record<string, Partial<Record<THttpMethod, IAllowedPathData>>>;
 
@@ -134,7 +135,10 @@ export interface IQoreRestConnectionConfig {
 export interface IQoreConnectionOption<
   TypeName extends TQoreSimpleType = TQoreSimpleType,
   TypeValue = unknown,
-> extends Omit<IQoreSharedObject<TypeName, TypeValue>, 'get_allowed_values' | 'required'> {
+> extends Omit<
+    IQoreSharedObject<TypeName, TypeValue>,
+    'get_allowed_values' | 'get_dependent_options' | 'rest_get_allowed_values' | 'required'
+  > {
   freeform?: boolean;
   sensitive?: boolean;
   subset_env_vars?: boolean;
@@ -390,6 +394,23 @@ export type TQoreGetDependentOptionsFunction = (
   context?: TQoreAppActionFunctionContext
 ) => Record<string, IQoreAppActionOption> | Promise<Record<string, IQoreAppActionOption>>;
 
+export interface IQoreRestGetAllowedValues {
+  // The HTTP method for the call
+  method: TWebhookHttpMethod;
+
+  // The REST request path
+  path: string;
+
+  // Any REST body
+  body?: object;
+
+  // Any REST headers
+  headers?: object;
+
+  // Location of the values in the result in dot notation (ex: 'body.envelopes.envelopeId')
+  values: string;
+}
+
 export interface IQoreSharedObject<TypeName extends TQoreType = TQoreType, TypeValue = unknown>
   extends IQoreAppShared {
   // either a string or a data object again
@@ -408,10 +429,17 @@ export interface IQoreSharedObject<TypeName extends TQoreType = TQoreType, TypeV
   allowed_values?: IQoreAllowedValue<TypeValue>[];
 
   // a function that returns the allowed values for the field
+  /** Mutually-exclusive with 'rest_get_allowed_values'
+  */
   get_allowed_values?: TQoreGetAllowedValuesFunction<TypeValue>;
 
   // a function that returns dependent options for the field
   get_dependent_options?: TQoreGetDependentOptionsFunction;
+
+  // an object that describes a REST call to return allowed values
+  /** Mutually-exclusive with 'get_allowed_values'
+  */
+  rest_get_allowed_values?: IQoreRestGetAllowedValues;
 
   // the number of seconds to wait for the action to complete before timing out
   io_timeout_secs?: number;

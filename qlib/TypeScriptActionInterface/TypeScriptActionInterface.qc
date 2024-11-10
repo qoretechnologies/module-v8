@@ -508,9 +508,10 @@ public class TypeScriptActionInterface {
         timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
 
         *hash<string, hash<AsyncCallInfo>> omap;
+        *hash<string, hash<auto>> romap;
         if (*hash<auto> opts = remove action.options) {
             *hash<string, hash<AsyncCallInfo>> dmap;
-            action.options = TypeScriptActionInterface::getOptions(app, \action, opts, \omap, \dmap, pool);
+            action.options = TypeScriptActionInterface::getOptions(app, \action, opts, \omap, \dmap, \romap, pool);
             if (dmap) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"options\" "
                     "attribute; event actions do not support get_dependent_options() callbacks", action.app,
@@ -571,8 +572,8 @@ public class TypeScriptActionInterface {
                 "to": seconds(io_timeout),
             };
 
-            child = new TypeScriptActionWebhookEventDataProvider(action.action, event_id, event_info, omap, method,
-                webhook_register, webhook_deregister, webhook_auth, webhook_perms);
+            child = new TypeScriptActionWebhookEventDataProvider(action.action, event_id, event_info, omap, romap,
+                method, webhook_register, webhook_deregister, webhook_auth, webhook_perms);
             rv = AES_WH_EVENT;
         } else {
             auto event_function = remove action.event_function;
@@ -587,7 +588,7 @@ public class TypeScriptActionInterface {
                 "async_call": event_function,
                 "to": seconds(io_timeout),
             };
-            child = new TypeScriptActionEventDataProvider(action.action, event_id, event_info, omap, event);
+            child = new TypeScriptActionEventDataProvider(action.action, event_id, event_info, omap, romap, event);
             rv = AES_JS_EVENT;
         }
 
@@ -661,11 +662,14 @@ public class TypeScriptActionInterface {
             hash<string, hash<AsyncCallInfo>> omap;
             # maps from options to "get_dependent_options" code for each option
             hash<string, hash<AsyncCallInfo>> dmap;
+            # maps from options to "rest_get_allowed_values" descriptions for each option
+            hash<string, hash<auto>> romap;
             *AbstractDataProviderType request_type;
             if (*hash<auto> opts = remove action.options) {
                 request_type = TypeScriptActionInterface::getType(map {$1.key: $1.value{TypeKeys}},
                     opts.pairIterator());
-                action.options = TypeScriptActionInterface::getOptions(app, \action, opts, \omap, \dmap, pool);
+                action.options = TypeScriptActionInterface::getOptions(app, \action, opts, \omap, \dmap, \romap,
+                    pool);
             }
 
             *AbstractDataProviderType response_type;
@@ -677,7 +681,7 @@ public class TypeScriptActionInterface {
             }
 
             child = new TypeScriptActionApiDataProvider(action.action, api, request_type, response_type, omap,
-                dmap);
+                dmap, romap);
         }
 
         TypeScriptActionAppDataProvider prov = TypeScriptActionInterface::getAppDataProvider(action.app);
@@ -706,7 +710,8 @@ public class TypeScriptActionInterface {
     }
 
     static getOptionFunctions(reference<hash<auto>> action, reference<hash<string, hash<AsyncCallInfo>>> omap,
-            reference<hash<string, hash<AsyncCallInfo>>> dmap, string key, reference<hash<auto>> h,
+            reference<hash<string, hash<AsyncCallInfo>>> dmap, reference<hash<string, hash<auto>>> romap,
+            string key, reference<hash<auto>> h,
         JavaScriptProgramPool pool) {
         on_error rethrow $1.err, sprintf("%s (while processing option %y)", $1.desc, key);
         date io_timeout = seconds(remove h.io_timeout_secs ?? DefaultIoTimeoutSecs);
@@ -723,6 +728,20 @@ public class TypeScriptActionInterface {
                 "async_call": get_allowed_values,
                 "to": io_timeout,
             };
+            h.ref_data = key;
+        }
+        if (exists (auto rest_get_allowed_values = remove h.rest_get_allowed_values)) {
+            if (rest_get_allowed_values.typeCode() != NT_HASH) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
+                    "\"rest_get_allowed_values\" attribute; got type %y; expecting \"hash\"", action.app,
+                    action.action, key, rest_get_allowed_values.fullType());
+            }
+            if (omap{key}) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
+                    "\"rest_get_allowed_values\" attribute; this option already has a \"get_allowed_values\" value; "
+                    "cannot use both attributes for a single option", action.app, action.action, key);
+            }
+            romap{key} = rest_get_allowed_values;
             h.ref_data = key;
         }
         if (exists (auto get_dependent_options = remove h.get_dependent_options)) {
@@ -747,10 +766,11 @@ public class TypeScriptActionInterface {
 
     static *hash<string, hash<ActionOptionInfo>> getOptions(hash<DataProviderAppInfo> app,
             reference<hash<auto>> action, hash<auto> opts, reference<hash<string, hash<AsyncCallInfo>>> omap,
-            reference<hash<string, hash<AsyncCallInfo>>> dmap, JavaScriptProgramPool pool) {
+            reference<hash<string, hash<AsyncCallInfo>>> dmap, reference<hash<string, hash<auto>>> romap,
+            JavaScriptProgramPool pool) {
         hash<string, hash<ActionOptionInfo>> rv;
         foreach hash<auto> i in (opts.pairIterator()) {
-            TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, i.key, \i.value, pool);
+            TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, \romap, i.key, \i.value, pool);
             rv{i.key} = TypeScriptActionInterface::getOptionInfo(i.value);
             if (dmap{i.key}) {
                 rv{i.key}.structural_determinate = True;

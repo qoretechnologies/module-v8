@@ -46,14 +46,21 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
         #! The connection for the action
         AbstractConnection conn;
 
-        #! options with functions for reference data
+        #! Options with functions for reference data
         *hash<string, hash<AsyncCallInfo>> omap;
+
+        #! Options with REST configuration for retrieving reference data
+        *hash<string, hash<auto>> romap;
+
+        #! Any REST client to use for reference data, for example
+        RestClient rest;
     }
 
     #! Creates the object from the arguments
-    constructor(string name, *hash<string, hash<AsyncCallInfo>> omap) {
+    constructor(string name, *hash<string, hash<AsyncCallInfo>> omap, *hash<string, hash<auto>> romap) {
         self.name = name;
         self.omap = omap;
+        self.romap = romap;
     }
 
     #! Sets the connection
@@ -76,7 +83,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
         @ref getReferenceData()
     */
     *hash<string, bool> getSupportedReferenceData() {
-        return map {$1: True}, keys omap;
+        return map {$1: True}, keys (omap + romap);
     }
 
     auto getAsyncValue(hash<AsyncCallInfo> api, ...) {
@@ -243,7 +250,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
     private *list<hash<AllowedValueInfo>> getReferenceDataImpl(string type, *hash<auto> action_opts) {
         if (*hash<AsyncCallInfo> ref_api = omap{type}) {
             *hash<DataContextInfo> arg = getCallContextInfo(action_opts);
-            debug("Retrieving reference data for data provider %y type %y arg: %y", getName(), type, arg);
+            debug("Retrieving reference data with JS for data provider %y type %y arg: %y", getName(), type, arg);
             *softlist<auto> l = getAsyncValue(ref_api, arg);
             debug("Reference data for data provider %y type %y: %y", getName(), type, l);
             if (!l) {
@@ -258,6 +265,49 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
                 }, l;
             }
             return map cast<hash<AllowedValueInfo>>($1 instanceof JavaScriptObject ? $1.toData() : $1), l;
+        } else if (*hash<auto> ref_rest = romap{type}) {
+            if (!rest) {
+                checkRestClient();
+            }
+            string path = ref_rest.path;
+            if (action_opts) {
+                map path = replace(path, "{" + $1.key + "}", $1.value), action_opts.pairIterator(),
+                    $1.value.typeCode() == NT_STRING;
+            }
+            hash<auto> info;
+            debug("Retrieving reference data with REST for data provider %y type %y: %s %s", getName(), type,
+                ref_rest.method, path);
+            on_error rethrow $1.err, sprintf("%s: info: %y", $1.desc, info{"request-uri", "response-uri"});
+            hash<auto> resp = rest.doRequest(ref_rest.method, path, ref_rest.body, \info, NOTHING,
+                ref_rest.headers);
+            debug("Reference data with REST for data provider %y type %y got: %y", getName(), type, resp);
+            hash<auto> v = resp;
+            *softlist<hash<AllowedValueInfo>> rv = getAllowedValues(resp, ref_rest.values.split("."));
+            debug("Reference data with REST for data provider %y type %y allowed values: %y", getName(), type, (map $1.value, rv));
+            return rv;
+        }
+    }
+
+    #! Returns allowed values info from the given location in a hash
+    static private *softlist<hash<AllowedValueInfo>> getAllowedValues(auto v, list<string> kl) {
+        string k = shift kl;
+        auto v0 = v{k};
+        if (!exists v0) {
+            return;
+        }
+        if (!kl) {
+            return map cast<hash<AllowedValueInfo>>({
+                "display_name": $1,
+                "value": $1,
+            }), v0;
+        }
+        return foldl $1 + $2, (map TypeScriptActionDataProviderBase::getAllowedValues($1, kl), v0);
+    }
+
+    #! Check and assign REST client
+    private synchronized checkRestClient() {
+        if (!rest) {
+            rest = conn.get();
         }
     }
 
