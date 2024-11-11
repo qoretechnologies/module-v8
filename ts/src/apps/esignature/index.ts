@@ -1,6 +1,6 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { createSwaggerPaths, mapActionsToApp } from '../../global/helpers';
-import { IQoreAppWithActions, TQoreAppActionFunctionContext } from '../../global/models/qore';
+import { IQoreAppWithActions } from '../../global/models/qore';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import {
@@ -72,19 +72,17 @@ export default (locale: Locales) =>
           );
 
           if ('accounts' in userInfo && userInfo.accounts.length > 0) {
-            return {
-              accounts: userInfo.accounts,
-            };
-            /*
-            const base_uri = userInfo.accounts[0].base_uri.split('//')[1];
-            const account_id = userInfo.accounts[0].account_id;
+            const account = userInfo.accounts.find((account: any) => account.isdefault);
+            if (account) {
+              const base_uri = account.base_uri.split('//')[1];
+              const account_id = account.account_id;
 
-            return {
-              base_uri,
-              account_id,
-              ping_path: `/restapi/v2.1/accounts/${account_id}`,
-            };
-            */
+              return {
+                base_uri,
+                account_id,
+                accounts: userInfo.accounts,
+              };
+            }
           } else {
             throw new Error(`Response missing account info: ${userInfo}`);
           }
@@ -94,8 +92,10 @@ export default (locale: Locales) =>
         }
       },
       connection_update_option: {
+        // the option whose value will be used to return connection values
         option: 'accountId',
-        code: function (context: TQoreAppActionFunctionContext<typeof ESIGNATURE_CONN_OPTIONS>) {
+        // returns data for url_template_options for the given option
+        code: function (context) {
           // find account info in context.conn_opts.accounts
           if (!context.conn_opts.accounts) {
             return;
@@ -111,10 +111,12 @@ export default (locale: Locales) =>
           }
         },
       },
+      /*
       // maps connection options to query options
       conn_option_map: {
         account_id: 'accountId',
       },
+      */
       url_template_options: ['account_id', 'base_uri'],
     },
   }) satisfies IQoreAppWithActions<typeof ESIGNATURE_CONN_OPTIONS>;

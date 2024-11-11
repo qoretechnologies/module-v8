@@ -149,6 +149,9 @@ public class TypeScriptActionInterface {
         #! Maps from app names to connection post-auth functions
         static hash<string, hash<AsyncCallInfo>> app_post_auth_map;
 
+        #! Maps from app names to connection update info
+        static hash<string, hash<auto>> app_conn_update_map;
+
         #! Maps from app names to connection -> Swagger path option maps
         static hash<string, hash<string, string>> app_conn_opt_map;
 
@@ -224,6 +227,7 @@ public class TypeScriptActionInterface {
             }
             *string required_options;
             hash<AsyncCallInfo> post_auth;
+            hash<auto> conn_update;
             hash<string, string> conn_opt_map;
             if (*hash<auto> rest_modifiers = remove app0.rest_modifiers) {
                 foreach hash<auto> i in (rest_modifiers.options.pairIterator()) {
@@ -259,11 +263,14 @@ public class TypeScriptActionInterface {
                             "option must be a callable value; got type %y instead",
                             rest_modifiers.connection_update_option."code".fullType());
                     }
-                    conn_update = <AsyncCallInfo>{
-                        "label": sprintf("REST connection update option function for app %y", app.name),
-                        "pool": pool,
-                        "async_call": rest_modifiers.set_options_post_auth,
-                        "to": seconds(remove rest_modifiers.io_timeout_secs ?? DefaultIoTimeoutSecs),
+                    conn_update = {
+                        "option": rest_modifiers.connection_update_option,
+                        "code": <AsyncCallInfo>{
+                            "label": sprintf("REST connection update option function for app %y", app.name),
+                            "pool": pool,
+                            "async_call": rest_modifiers.connection_update_option."code",
+                            "to": seconds(remove rest_modifiers.io_timeout_secs ?? DefaultIoTimeoutSecs),
+                        },
                     };
                 }
                 if (rest_modifiers.conn_option_map) {
@@ -297,6 +304,9 @@ public class TypeScriptActionInterface {
             }
             if (post_auth) {
                 app_post_auth_map{appname} = post_auth;
+            }
+            if (conn_update) {
+                app_conn_update_map{appname} = conn_update;
             }
             if (conn_opt_map) {
                 app_conn_opt_map{appname} = conn_opt_map;
@@ -1016,6 +1026,10 @@ public class TypeScriptActionInterface {
 
     static bool appSupportsEvents(string app) {
         return exists emap{app.lwr()};
+    }
+
+    static *hash<auto> getConnectionUpdateOptions(string app) {
+        return app_conn_update_map{app.lwr()};
     }
 
     #! Registers an API for creating a webhook

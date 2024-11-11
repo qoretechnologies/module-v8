@@ -44,7 +44,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
         string name;
 
         #! The connection for the action
-        AbstractConnection conn;
+        TypeScriptAppRestConnection conn;
 
         #! Options with functions for reference data
         *hash<string, hash<AsyncCallInfo>> omap;
@@ -65,7 +65,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
     }
 
     #! Sets the connection
-    setConnection(AbstractConnection conn) {
+    setConnection(TypeScriptAppRestConnection conn) {
         self.conn = conn;
     }
 
@@ -268,7 +268,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
             return map cast<hash<AllowedValueInfo>>($1 instanceof JavaScriptObject ? $1.toData() : $1), l;
         } else if (*hash<auto> ref_rest = romap{type}) {
             if (!rest) {
-                checkRestClient();
+                checkRestClient(action_opts);
             }
             string path = ref_rest.path;
             if (action_opts) {
@@ -338,9 +338,33 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
     }
 
     #! Check and assign REST client
-    private synchronized checkRestClient() {
+    private synchronized checkRestClient(*hash<auto> action_opts) {
         if (!rest) {
             rest = conn.get();
+        }
+        # get connection update options
+        if (action_opts) {
+            checkUpdateRestOptions(rest, action_opts);
+        }
+    }
+
+    private checkUpdateRestOptions(RestClient rest, hash<auto> action_opts) {
+        if ((*hash<auto> cuo = TypeScriptActionInterface::getConnectionUpdateOptions(conn.getAppName()))
+            && (exists (auto v = action_opts{cuo.option}))) {
+            *hash<DataContextInfo> arg = getCallContextInfo(action_opts);
+            debug("Retrieving connection update data with JS for data provider %y option: %s = %y arg: %y",
+                getName(), cuo.option, v, arg);
+            *hash<auto> new_opts = getAsyncValue(cuo."code", arg);
+            debug("Connection update data with JS for data provider %y new options: %y", getName(), new_opts);
+            if (new_opts && (*hash<string, bool> url_template_options =
+                TypeScriptActionInterface::getUrlTemplateOptions(conn.getAppName()))) {
+                string url = rest.getURL();
+                string new_url = TypeScriptActionInterface::processUrl(url, new_opts, url_template_options);
+                if (url != new_url) {
+                    debug("Connection update data with JS for data provider %y new URL: %y", getName(), new_url);
+                    rest.setURL(new_url);
+                }
+            }
         }
     }
 

@@ -9,24 +9,22 @@ export const ESIGNATURE_APP_NAME = 'DocusignESignature';
 export const ESIGNATURE_CONN_OPTIONS = {
   accounts: {
     display_name: 'Account Info',
-    short_desc: 'Account info to be filled automatically at login',
-    desc: 'Account info to be filled automatically at login',
+    short_desc: 'Account info set when the connection is authorized',
+    desc: 'Account info set when the connection is authorized',
     type: 'list',
   },
-  /*
   account_id: {
-    display_name: 'Account ID',
-    short_desc: 'The account ID',
-    desc: 'The account ID',
+    display_name: 'Default Account ID',
+    short_desc: 'The default account ID set when the connection is authorized',
+    desc: 'The default account ID set when the connection is authorized',
     type: 'string',
   },
   base_uri: {
-    display_name: 'Base URI',
-    short_desc: 'The base URI',
-    desc: 'The base URI',
+    display_name: 'Default Base URI',
+    short_desc: 'The default base URI set when the connection is authorized',
+    desc: 'The default base URI set when the connection is authorized',
     type: 'string',
   },
-  */
 } satisfies IQoreConnectionOptions;
 
 const GetAccountIdAllowedValues: Partial<IQoreSharedObject<TQoreType, unknown>> = {
