@@ -528,153 +528,87 @@ const en = {
           event_info: {
             longDesc: 'Zendesk User Event Data',
             type: {
-              event: {
-                displayName: 'Event',
-                longDesc: 'Details of the user event',
-                shortDesc: 'Event details',
+              account_id: {
+                displayName: 'Account ID',
+                longDesc: 'ID of the associated account',
+                shortDesc: 'Account ID',
+              },
+              detail: {
+                displayName: 'Detail',
+                longDesc: 'Detailed user information',
+                shortDesc: 'User details',
                 type: {
-                  body: {
-                    displayName: 'Body',
-                    longDesc: 'Body of the event data',
-                    shortDesc: 'Event body',
-                    type: {
-                      account_id: {
-                        displayName: 'Account ID',
-                        longDesc: 'ID of the associated account',
-                        shortDesc: 'Account ID',
-                      },
-                      detail: {
-                        displayName: 'Detail',
-                        longDesc: 'Detailed user information',
-                        shortDesc: 'User details',
-                        type: {
-                          created_at: {
-                            displayName: 'Created At',
-                            longDesc: 'Timestamp of user creation',
-                            shortDesc: 'User creation time',
-                          },
-                          default_group_id: {
-                            displayName: 'Default Group ID',
-                            longDesc: 'ID of the default group for the user',
-                            shortDesc: 'Default group ID',
-                          },
-                          email: {
-                            displayName: 'Email',
-                            longDesc: 'Email address of the user',
-                            shortDesc: 'User email',
-                          },
-                          external_id: {
-                            displayName: 'External ID',
-                            longDesc: 'External identifier for the user',
-                            shortDesc: 'User external ID',
-                          },
-                          id: {
-                            displayName: 'User ID',
-                            longDesc: 'Unique identifier for the user',
-                            shortDesc: 'User ID',
-                          },
-                          organization_id: {
-                            displayName: 'Organization ID',
-                            longDesc: 'ID of the organization associated with the user',
-                            shortDesc: 'Organization ID',
-                          },
-                          role: {
-                            displayName: 'Role',
-                            longDesc: 'Role of the user in the system',
-                            shortDesc: 'User role',
-                          },
-                          updated_at: {
-                            displayName: 'Updated At',
-                            longDesc: 'Last update timestamp for the user',
-                            shortDesc: 'User update time',
-                          },
-                        },
-                      },
-                      event: {
-                        displayName: 'Event',
-                        longDesc: 'Additional event information',
-                        shortDesc: 'Event info',
-                      },
-                      id: {
-                        displayName: 'Event ID',
-                        longDesc: 'Unique identifier for the event',
-                        shortDesc: 'Event ID',
-                      },
-                      subject: {
-                        displayName: 'Subject',
-                        longDesc: 'Subject of the event',
-                        shortDesc: 'Event subject',
-                      },
-                      time: {
-                        displayName: 'Time',
-                        longDesc: 'Timestamp of the event occurrence',
-                        shortDesc: 'Event time',
-                      },
-                      type: {
-                        displayName: 'Event Type',
-                        longDesc: 'Type of the event',
-                        shortDesc: 'Event type',
-                      },
-                      zendesk_event_version: {
-                        displayName: 'Zendesk Event Version',
-                        longDesc: 'Version of the Zendesk event format',
-                        shortDesc: 'Event version',
-                      },
-                    },
+                  created_at: {
+                    displayName: 'Created At',
+                    longDesc: 'Timestamp of user creation',
+                    shortDesc: 'User creation time',
+                  },
+                  default_group_id: {
+                    displayName: 'Default Group ID',
+                    longDesc: 'ID of the default group for the user',
+                    shortDesc: 'Default group ID',
+                  },
+                  email: {
+                    displayName: 'Email',
+                    longDesc: 'Email address of the user',
+                    shortDesc: 'User email',
+                  },
+                  external_id: {
+                    displayName: 'External ID',
+                    longDesc: 'External identifier for the user',
+                    shortDesc: 'User external ID',
+                  },
+                  id: {
+                    displayName: 'User ID',
+                    longDesc: 'Unique identifier for the user',
+                    shortDesc: 'User ID',
+                  },
+                  organization_id: {
+                    displayName: 'Organization ID',
+                    longDesc: 'ID of the organization associated with the user',
+                    shortDesc: 'Organization ID',
+                  },
+                  role: {
+                    displayName: 'Role',
+                    longDesc: 'Role of the user in the system',
+                    shortDesc: 'User role',
+                  },
+                  updated_at: {
+                    displayName: 'Updated At',
+                    longDesc: 'Last update timestamp for the user',
+                    shortDesc: 'User update time',
                   },
                 },
               },
-              context: {
-                displayName: 'Context',
-                longDesc: 'Contextual information about the event',
-                shortDesc: 'Event context',
-                type: {
-                  id: {
-                    displayName: 'Context ID',
-                    longDesc: 'Unique identifier for the context',
-                    shortDesc: 'Context ID',
-                  },
-                  ts: {
-                    displayName: 'Timestamp',
-                    longDesc: 'Timestamp of the event in context',
-                    shortDesc: 'Context timestamp',
-                  },
-                  workflow_id: {
-                    displayName: 'Workflow ID',
-                    longDesc: 'ID of the associated workflow',
-                    shortDesc: 'Workflow ID',
-                  },
-                  source_type: {
-                    displayName: 'Source Type',
-                    longDesc: 'Type of source for the event',
-                    shortDesc: 'Source type',
-                  },
-                  owner_id: {
-                    displayName: 'Owner ID',
-                    longDesc: 'Owner identifier',
-                    shortDesc: 'Owner ID',
-                  },
-                  platform_version: {
-                    displayName: 'Platform Version',
-                    longDesc: 'Version of the platform',
-                    shortDesc: 'Platform version',
-                  },
-                  workflow_name: {
-                    displayName: 'Workflow Name',
-                    longDesc: 'Name of the associated workflow',
-                    shortDesc: 'Workflow name',
-                  },
-                  emitter_id: {
-                    displayName: 'Emitter ID',
-                    longDesc: 'ID of the event emitter',
-                    shortDesc: 'Emitter ID',
-                  },
-                  trace_id: {
-                    displayName: 'Trace ID',
-                    longDesc: 'Unique trace identifier',
-                    shortDesc: 'Trace ID',
-                  },
-                },
+              event: {
+                displayName: 'Event',
+                longDesc: 'Additional event information',
+                shortDesc: 'Event info',
+              },
+              id: {
+                displayName: 'Event ID',
+                longDesc: 'Unique identifier for the event',
+                shortDesc: 'Event ID',
+              },
+              subject: {
+                displayName: 'Subject',
+                longDesc: 'Subject of the event',
+                shortDesc: 'Event subject',
+              },
+              time: {
+                displayName: 'Time',
+                longDesc: 'Timestamp of the event occurrence',
+                shortDesc: 'Event time',
+              },
+              type: {
+                displayName: 'Event Type',
+                longDesc: 'Type of the event',
+                shortDesc: 'Event type',
+              },
+              zendesk_event_version: {
+                displayName: 'Zendesk Event Version',
+                longDesc: 'Version of the Zendesk event format',
+                shortDesc: 'Event version',
               },
             },
           },
@@ -686,141 +620,75 @@ const en = {
           event_info: {
             longDesc: 'New Ticket event data',
             type: {
-              event: {
-                displayName: 'Event',
-                longDesc: 'Event information',
-                shortDesc: 'Event info',
-                type: {
-                  body: {
-                    displayName: 'Body',
-                    longDesc: 'Body of the event',
-                    shortDesc: 'Event body',
-                    type: {
-                      assignee_email: {
-                        displayName: 'Assignee Email',
-                        longDesc: 'Email of the assignee',
-                        shortDesc: 'Assignee email',
-                      },
-                      assignee_name: {
-                        displayName: 'Assignee Name',
-                        longDesc: 'Name of the assignee',
-                        shortDesc: 'Assignee name',
-                      },
-                      group_name: {
-                        displayName: 'Group Name',
-                        longDesc: 'Name of the group handling the ticket',
-                        shortDesc: 'Group name',
-                      },
-                      organization_name: {
-                        displayName: 'Organization Name',
-                        longDesc: 'Name of the associated organization',
-                        shortDesc: 'Organization name',
-                      },
-                      requester_email: {
-                        displayName: 'Requester Email',
-                        longDesc: 'Email of the requester',
-                        shortDesc: 'Requester email',
-                      },
-                      requester_name: {
-                        displayName: 'Requester Name',
-                        longDesc: 'Name of the requester',
-                        shortDesc: 'Requester name',
-                      },
-                      tags: {
-                        displayName: 'Tags',
-                        longDesc: 'Tags associated with the ticket',
-                        shortDesc: 'Ticket tags',
-                      },
-                      ticket_description: {
-                        displayName: 'Ticket Description',
-                        longDesc: 'Description of the ticket',
-                        shortDesc: 'Ticket description',
-                      },
-                      ticket_id: {
-                        displayName: 'Ticket ID',
-                        longDesc: 'Unique identifier for the ticket',
-                        shortDesc: 'Ticket ID',
-                      },
-                      ticket_priority: {
-                        displayName: 'Ticket Priority',
-                        longDesc: 'Priority level of the ticket',
-                        shortDesc: 'Ticket priority',
-                      },
-                      ticket_status: {
-                        displayName: 'Ticket Status',
-                        longDesc: 'Current status of the ticket',
-                        shortDesc: 'Ticket status',
-                      },
-                      ticket_subject: {
-                        displayName: 'Ticket Subject',
-                        longDesc: 'Subject of the ticket',
-                        shortDesc: 'Ticket subject',
-                      },
-                      ticket_type: {
-                        displayName: 'Ticket Type',
-                        longDesc: 'Type of the ticket',
-                        shortDesc: 'Ticket type',
-                      },
-                      ticket_url: {
-                        displayName: 'Ticket URL',
-                        longDesc: 'URL of the ticket in the system',
-                        shortDesc: 'Ticket URL',
-                      },
-                    },
-                  },
-                },
+              assignee_email: {
+                displayName: 'Assignee Email',
+                longDesc: 'Email of the assignee',
+                shortDesc: 'Assignee email',
               },
-              context: {
-                displayName: 'Context',
-                longDesc: 'Contextual information about the event',
-                shortDesc: 'Event context',
-                type: {
-                  id: {
-                    displayName: 'ID',
-                    longDesc: 'Unique identifier for the context',
-                    shortDesc: 'Context ID',
-                  },
-                  ts: {
-                    displayName: 'Timestamp',
-                    longDesc: 'Timestamp of the event',
-                    shortDesc: 'Event timestamp',
-                  },
-                  workflow_id: {
-                    displayName: 'Workflow ID',
-                    longDesc: 'Identifier of the workflow associated with the event',
-                    shortDesc: 'Workflow ID',
-                  },
-                  source_type: {
-                    displayName: 'Source Type',
-                    longDesc: 'Type of the source triggering the event',
-                    shortDesc: 'Source type',
-                  },
-                  owner_id: {
-                    displayName: 'Owner ID',
-                    longDesc: 'Identifier of the owner',
-                    shortDesc: 'Owner ID',
-                  },
-                  platform_version: {
-                    displayName: 'Platform Version',
-                    longDesc: 'Version of the platform processing the event',
-                    shortDesc: 'Platform version',
-                  },
-                  workflow_name: {
-                    displayName: 'Workflow Name',
-                    longDesc: 'Name of the workflow associated with the event',
-                    shortDesc: 'Workflow name',
-                  },
-                  emitter_id: {
-                    displayName: 'Emitter ID',
-                    longDesc: 'Identifier of the emitter of the event',
-                    shortDesc: 'Emitter ID',
-                  },
-                  trace_id: {
-                    displayName: 'Trace ID',
-                    longDesc: 'Unique trace identifier for event tracking',
-                    shortDesc: 'Trace ID',
-                  },
-                },
+              assignee_name: {
+                displayName: 'Assignee Name',
+                longDesc: 'Name of the assignee',
+                shortDesc: 'Assignee name',
+              },
+              group_name: {
+                displayName: 'Group Name',
+                longDesc: 'Name of the group handling the ticket',
+                shortDesc: 'Group name',
+              },
+              organization_name: {
+                displayName: 'Organization Name',
+                longDesc: 'Name of the associated organization',
+                shortDesc: 'Organization name',
+              },
+              requester_email: {
+                displayName: 'Requester Email',
+                longDesc: 'Email of the requester',
+                shortDesc: 'Requester email',
+              },
+              requester_name: {
+                displayName: 'Requester Name',
+                longDesc: 'Name of the requester',
+                shortDesc: 'Requester name',
+              },
+              tags: {
+                displayName: 'Tags',
+                longDesc: 'Tags associated with the ticket',
+                shortDesc: 'Ticket tags',
+              },
+              ticket_description: {
+                displayName: 'Ticket Description',
+                longDesc: 'Description of the ticket',
+                shortDesc: 'Ticket description',
+              },
+              ticket_id: {
+                displayName: 'Ticket ID',
+                longDesc: 'Unique identifier for the ticket',
+                shortDesc: 'Ticket ID',
+              },
+              ticket_priority: {
+                displayName: 'Ticket Priority',
+                longDesc: 'Priority level of the ticket',
+                shortDesc: 'Ticket priority',
+              },
+              ticket_status: {
+                displayName: 'Ticket Status',
+                longDesc: 'Current status of the ticket',
+                shortDesc: 'Ticket status',
+              },
+              ticket_subject: {
+                displayName: 'Ticket Subject',
+                longDesc: 'Subject of the ticket',
+                shortDesc: 'Ticket subject',
+              },
+              ticket_type: {
+                displayName: 'Ticket Type',
+                longDesc: 'Type of the ticket',
+                shortDesc: 'Ticket type',
+              },
+              ticket_url: {
+                displayName: 'Ticket URL',
+                longDesc: 'URL of the ticket in the system',
+                shortDesc: 'Ticket URL',
               },
             },
           },
@@ -832,153 +700,87 @@ const en = {
           event_info: {
             longDesc: 'Zendesk Organization Event Data',
             type: {
-              event: {
-                displayName: 'Event',
-                longDesc: 'Details of the organization event',
-                shortDesc: 'Event details',
+              account_id: {
+                displayName: 'Account ID',
+                longDesc: 'ID of the associated account',
+                shortDesc: 'Account ID',
+              },
+              detail: {
+                displayName: 'Detail',
+                longDesc: 'Detailed organization information',
+                shortDesc: 'Organization details',
                 type: {
-                  body: {
-                    displayName: 'Body',
-                    longDesc: 'Body of the event data',
-                    shortDesc: 'Event body',
-                    type: {
-                      account_id: {
-                        displayName: 'Account ID',
-                        longDesc: 'ID of the associated account',
-                        shortDesc: 'Account ID',
-                      },
-                      detail: {
-                        displayName: 'Detail',
-                        longDesc: 'Detailed organization information',
-                        shortDesc: 'Organization details',
-                        type: {
-                          created_at: {
-                            displayName: 'Created At',
-                            longDesc: 'Timestamp of organization creation',
-                            shortDesc: 'Organization creation time',
-                          },
-                          external_id: {
-                            displayName: 'External ID',
-                            longDesc: 'External identifier for the organization',
-                            shortDesc: 'Organization external ID',
-                          },
-                          group_id: {
-                            displayName: 'Group ID',
-                            longDesc: 'ID of the associated group',
-                            shortDesc: 'Group ID',
-                          },
-                          id: {
-                            displayName: 'Organization ID',
-                            longDesc: 'Unique identifier for the organization',
-                            shortDesc: 'Organization ID',
-                          },
-                          name: {
-                            displayName: 'Name',
-                            longDesc: 'Name of the organization',
-                            shortDesc: 'Organization name',
-                          },
-                          shared_comments: {
-                            displayName: 'Shared Comments',
-                            longDesc: 'Indicates if comments are shared',
-                            shortDesc: 'Shared comments',
-                          },
-                          shared_tickets: {
-                            displayName: 'Shared Tickets',
-                            longDesc: 'Indicates if tickets are shared',
-                            shortDesc: 'Shared tickets',
-                          },
-                          updated_at: {
-                            displayName: 'Updated At',
-                            longDesc: 'Last update timestamp for the organization',
-                            shortDesc: 'Organization update time',
-                          },
-                        },
-                      },
-                      event: {
-                        displayName: 'Event',
-                        longDesc: 'Additional event information',
-                        shortDesc: 'Event info',
-                      },
-                      id: {
-                        displayName: 'Event ID',
-                        longDesc: 'Unique identifier for the event',
-                        shortDesc: 'Event ID',
-                      },
-                      subject: {
-                        displayName: 'Subject',
-                        longDesc: 'Subject of the event',
-                        shortDesc: 'Event subject',
-                      },
-                      time: {
-                        displayName: 'Time',
-                        longDesc: 'Timestamp of the event occurrence',
-                        shortDesc: 'Event time',
-                      },
-                      type: {
-                        displayName: 'Event Type',
-                        longDesc: 'Type of the event',
-                        shortDesc: 'Event type',
-                      },
-                      zendesk_event_version: {
-                        displayName: 'Zendesk Event Version',
-                        longDesc: 'Version of the Zendesk event format',
-                        shortDesc: 'Event version',
-                      },
-                    },
+                  created_at: {
+                    displayName: 'Created At',
+                    longDesc: 'Timestamp of organization creation',
+                    shortDesc: 'Organization creation time',
+                  },
+                  external_id: {
+                    displayName: 'External ID',
+                    longDesc: 'External identifier for the organization',
+                    shortDesc: 'Organization external ID',
+                  },
+                  group_id: {
+                    displayName: 'Group ID',
+                    longDesc: 'ID of the associated group',
+                    shortDesc: 'Group ID',
+                  },
+                  id: {
+                    displayName: 'Organization ID',
+                    longDesc: 'Unique identifier for the organization',
+                    shortDesc: 'Organization ID',
+                  },
+                  name: {
+                    displayName: 'Name',
+                    longDesc: 'Name of the organization',
+                    shortDesc: 'Organization name',
+                  },
+                  shared_comments: {
+                    displayName: 'Shared Comments',
+                    longDesc: 'Indicates if comments are shared',
+                    shortDesc: 'Shared comments',
+                  },
+                  shared_tickets: {
+                    displayName: 'Shared Tickets',
+                    longDesc: 'Indicates if tickets are shared',
+                    shortDesc: 'Shared tickets',
+                  },
+                  updated_at: {
+                    displayName: 'Updated At',
+                    longDesc: 'Last update timestamp for the organization',
+                    shortDesc: 'Organization update time',
                   },
                 },
               },
-              context: {
-                displayName: 'Context',
-                longDesc: 'Contextual information about the event',
-                shortDesc: 'Event context',
-                type: {
-                  id: {
-                    displayName: 'Context ID',
-                    longDesc: 'Unique identifier for the context',
-                    shortDesc: 'Context ID',
-                  },
-                  ts: {
-                    displayName: 'Timestamp',
-                    longDesc: 'Timestamp of the event in context',
-                    shortDesc: 'Context timestamp',
-                  },
-                  workflow_id: {
-                    displayName: 'Workflow ID',
-                    longDesc: 'ID of the associated workflow',
-                    shortDesc: 'Workflow ID',
-                  },
-                  source_type: {
-                    displayName: 'Source Type',
-                    longDesc: 'Type of source for the event',
-                    shortDesc: 'Source type',
-                  },
-                  owner_id: {
-                    displayName: 'Owner ID',
-                    longDesc: 'Owner identifier',
-                    shortDesc: 'Owner ID',
-                  },
-                  platform_version: {
-                    displayName: 'Platform Version',
-                    longDesc: 'Version of the platform',
-                    shortDesc: 'Platform version',
-                  },
-                  workflow_name: {
-                    displayName: 'Workflow Name',
-                    longDesc: 'Name of the associated workflow',
-                    shortDesc: 'Workflow name',
-                  },
-                  emitter_id: {
-                    displayName: 'Emitter ID',
-                    longDesc: 'ID of the event emitter',
-                    shortDesc: 'Emitter ID',
-                  },
-                  trace_id: {
-                    displayName: 'Trace ID',
-                    longDesc: 'Unique trace identifier',
-                    shortDesc: 'Trace ID',
-                  },
-                },
+              event: {
+                displayName: 'Event',
+                longDesc: 'Additional event information',
+                shortDesc: 'Event info',
+              },
+              id: {
+                displayName: 'Event ID',
+                longDesc: 'Unique identifier for the event',
+                shortDesc: 'Event ID',
+              },
+              subject: {
+                displayName: 'Subject',
+                longDesc: 'Subject of the event',
+                shortDesc: 'Event subject',
+              },
+              time: {
+                displayName: 'Time',
+                longDesc: 'Timestamp of the event occurrence',
+                shortDesc: 'Event time',
+              },
+              type: {
+                displayName: 'Event Type',
+                longDesc: 'Type of the event',
+                shortDesc: 'Event type',
+              },
+              zendesk_event_version: {
+                displayName: 'Zendesk Event Version',
+                longDesc: 'Version of the Zendesk event format',
+                shortDesc: 'Event version',
               },
             },
           },
