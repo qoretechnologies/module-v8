@@ -57,7 +57,6 @@ export default (locale: Locales) =>
         // We need to make a call to the docusign user info endpoint to get the base_uri
         // and account_id
         try {
-          //console.log(`docusign token: ${context.conn_opts.token}`);
           const { data: userInfo } = await QorusRequest.get<Record<string, any>>(
             {
               path: '/oauth/userinfo',
@@ -88,7 +87,6 @@ export default (locale: Locales) =>
             throw new Error(`Response missing account info: ${userInfo}`);
           }
         } catch (e) {
-          console.log(e);
           throw e;
         }
       },
