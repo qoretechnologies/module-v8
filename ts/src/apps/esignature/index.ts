@@ -16,6 +16,29 @@ import {
  * @returns IQoreAppWithActions
  */
 
+export interface IEsignatureUserInfoAccount {
+  account_id: string;
+  account_name: string;
+  base_uri: string;
+  is_default: boolean;
+  organization: {
+    organization_id: string;
+    links: {
+      rel: string;
+      href: string;
+    }[];
+  };
+}
+
+export interface IEsignatureUserInfo {
+  sub: string;
+  accounts: IEsignatureUserInfoAccount[];
+  name: string;
+  given_name: string;
+  family_name: string;
+  email: string;
+}
+
 export default (locale: Locales) =>
   ({
     display_name: L[locale].apps[ESIGNATURE_APP_NAME].displayName(),
@@ -56,7 +79,7 @@ export default (locale: Locales) =>
       set_options_post_auth: async (context) => {
         // We need to make a call to the docusign user info endpoint to get the base_uri
         // and account_id
-        const { data: userInfo } = await QorusRequest.get<Record<string, any>>(
+        const { data: userInfo }: { data: IEsignatureUserInfo } = await QorusRequest.get(
           {
             path: '/oauth/userinfo',
             headers: {
@@ -95,9 +118,11 @@ export default (locale: Locales) =>
           if (!context.conn_opts.accounts) {
             return;
           }
-          const info: any = context.conn_opts.accounts.find(
-            (info: any) => info.account_id === context.opts.accountId
-          );
+
+          const info: IEsignatureUserInfoAccount = (
+            context.conn_opts.accounts as IEsignatureUserInfoAccount[]
+          ).find((info) => info.account_id === context.opts.accountId);
+
           if (info) {
             return `https://${info.base_uri}/restapi/v2.1/accounts/${info.account_id}`;
           }
