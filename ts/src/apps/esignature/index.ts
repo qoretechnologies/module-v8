@@ -1,7 +1,7 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { actionsCatalogue } from '../../ActionsCatalogue';
 import { createSwaggerPaths, mapActionsToApp } from '../../global/helpers';
-import { IQoreAppWithActions, TQoreAppActionFunctionContext } from '../../global/models/qore';
+import { IQoreAppWithActions } from '../../global/models/qore';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import {
@@ -63,7 +63,7 @@ export default (locale: Locales) =>
               Authorization: `Bearer ${context.conn_opts.token}`,
             },
           },
-          {TQoreAppActionFunctionContext
+          {
             url: 'https://account-d.docusign.com',
             endpointId: 'Docusign',
           }
