@@ -79,6 +79,7 @@ class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProviderBase 
         if (dvmap) {
             *hash<string, AbstractDataField> fields = request_type.getFields();
             *hash<DataContextInfo> arg = getCallContextInfo();
+            hash<string, bool> vmap;
             foreach hash<auto> i in (dvmap.pairIterator()) {
                 try {
                     debug("Retrieving default value with JS for data provider %y option %y arg: %y", getName(), i.key,
@@ -92,12 +93,24 @@ class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProviderBase 
                                 i.key);
                         }
                         f.setDefaultValue(v);
+                        vmap{i.key} = True;
                     }
                 } catch (hash<ExceptionInfo> ex) {
                     error("ACTION-OPTION-ERROR", "Exception retrieving default value for data provider %y "
                         "option %y: %s", getName(), i.key, get_exception_string(ex));
                     rethrow;
                 }
+            }
+            # make "or-nothing" type if appropriate
+            bool ok = True;
+            foreach hash<auto> i in (fields.pairIterator()) {
+                if (!vmap{i.key} && (!exists i.value.getDefaultValue()) && i.value.isMandatory()) {
+                    ok = False;
+                    break;
+                }
+            }
+            if (ok) {
+                request_type = request_type.getOrNothingType();
             }
         }
     }
