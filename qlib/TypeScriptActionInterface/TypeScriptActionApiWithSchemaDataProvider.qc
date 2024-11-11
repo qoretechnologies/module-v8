@@ -176,7 +176,8 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                     "property; cannot find option %y to override; known top-level options: %y", action.app,
                     action.action, i.key, keys action.options);
             }
-            TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, \romap, i.key, \i.value, pool);
+            TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, \romap, \dvmap, i.key, \i.value,
+                pool);
             if (i.value.type) {
                 opt.type = TypeScriptActionInterface::getType(i.value.type, i.value.required);
             }

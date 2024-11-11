@@ -52,16 +52,21 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
         #! Options with REST configuration for retrieving reference data
         *hash<string, hash<RestGetAllowedValuesInfo>> romap;
 
+        #! Options with functions for the default value
+        *hash<string, hash<AsyncCallInfo>> dvmap;
+
         #! Any REST client to use for reference data, for example
         RestClient rest;
     }
 
     #! Creates the object from the arguments
     constructor(string name, *hash<string, hash<AsyncCallInfo>> omap,
-            *hash<string, hash<RestGetAllowedValuesInfo>> romap) {
+            *hash<string, hash<RestGetAllowedValuesInfo>> romap,
+            *hash<string, hash<AsyncCallInfo>> dvmap) {
         self.name = name;
         self.omap = omap;
         self.romap = romap;
+        self.dvmap = dvmap;
     }
 
     #! Sets the connection

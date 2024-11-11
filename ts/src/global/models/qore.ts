@@ -282,6 +282,12 @@ export type TQoreGetAllowedValuesFunction<
   context?: TQoreAppActionFunctionContext<CustomConnOptions>
 ) => IQoreAllowedValue<TypeValue>[] | Promise<IQoreAllowedValue<TypeValue>[]>;
 
+export type TQoreGetDefaultValueFunction<
+  CustomConnOptions extends Record<string, IQoreAppActionOption> = {},
+> = (
+  context?: TQoreAppActionFunctionContext<CustomConnOptions>
+) => any | Promise<any>;
+
 export type TQoreStringCompatibleType =
   | 'string'
   | '*string'
@@ -483,6 +489,9 @@ export interface IQoreSharedObject<
   /** Mutually-exclusive with 'get_allowed_values'
    */
   rest_get_allowed_values?: IQoreRestGetAllowedValues;
+
+  // a function that returns the default value for the field
+  get_default_value?: TQoreGetDefaultValueFunction<CustomConnOptions>;
 
   // the number of seconds to wait for the action to complete before timing out
   io_timeout_secs?: number;
