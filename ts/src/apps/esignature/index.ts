@@ -1,6 +1,7 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
+import { actionsCatalogue } from '../../ActionsCatalogue';
 import { createSwaggerPaths, mapActionsToApp } from '../../global/helpers';
-import { IQoreAppWithActions, TQoreAppActionFunctionContext } from '../../global/models/qore';
+import { IQoreAppWithActions } from '../../global/models/qore';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import {
@@ -9,7 +10,6 @@ import {
   ESIGNATURE_CONN_OPTIONS,
   ESIGNATURE_PATHS,
 } from './constants';
-import { actionsCatalogue } from '../../ActionsCatalogue';
 /*
  * Returns the app object with all the actions ready to use, using translations
  * @param locale - the locale
@@ -95,7 +95,7 @@ export default (locale: Locales) =>
       },
       connection_update_option: {
         option: 'accountId',
-        code: function (context: TQoreAppActionFunctionContext<typeof ESIGNATURE_CONN_OPTIONS>) {
+        code: function (context) {
           // find account info in context.conn_opts.accounts
           if (!context.conn_opts.accounts) {
             return;
@@ -112,9 +112,9 @@ export default (locale: Locales) =>
         },
       },
       // maps connection options to query options
-      conn_option_map: {
-        account_id: 'accountId',
-      },
+      // conn_option_map: {
+      //   account_id: 'accountId',
+      // },
       url_template_options: ['account_id', 'base_uri'],
     },
   }) satisfies IQoreAppWithActions<typeof ESIGNATURE_CONN_OPTIONS>;
