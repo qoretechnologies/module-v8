@@ -49,6 +49,7 @@ const GetEnvelopeIdAllowedValues: Pick<
     method: 'GET',
     path: 'envelopes?from_date=2010-01-01',
     values: 'body.envelopes.envelopeId',
+    display_names: 'body.envelopes.emailSubject',
   },
 };
 

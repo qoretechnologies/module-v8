@@ -136,26 +136,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
 
         if (path_vars) {
             self.path_vars = path_vars;
-            if (!request_type) {
-                request_type = new HashDataType();
-            } else if (!(request_type instanceof HashDataType)) {
-                HashDataType h();
-                string fname = "data";
-                int i;
-                while (path_vars{fname}) {
-                    fname = sprintf("data-%d", ++i);
-                }
-                h.addField(new QoreDataField({
-                    "name": fname,
-                    "type": request_type,
-                    "desc": "API request type",
-                }));
-                request_type = h;
-            } else {
-                # do not modify the underlying data provider's type
-                request_type = request_type.copy();
-            }
-            map request_type.addField(new QoreDataField({
+            hash<string, AbstractDataField> fields = map {$1: new QoreDataField({
                 "name": $1,
                 "type": AbstractDataProviderTypeMap."softstring",
                 "desc": sprintf("URI path variable %y", $1),
@@ -163,7 +144,25 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                     "preselected": True,
                     "required": True,
                 },
-            })), keys path_vars, !query_set{$1};
+            })}, keys path_vars, !query_set{$1};
+
+            if (request_type) {
+                if (!(request_type instanceof HashDataType)) {
+                    string fname = "data";
+                    int i;
+                    while (path_vars{fname}) {
+                        fname = sprintf("data-%d", ++i);
+                    }
+                    fields{fname} = new QoreDataField({
+                        "name": fname,
+                        "type": request_type,
+                        "desc": "API request type",
+                    });
+                } else {
+                    fields += request_type.getFields();
+                }
+            }
+            request_type = new HashDataType(AutoHashType, "RestRequestType", fields);
         }
     }
 

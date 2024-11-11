@@ -1,7 +1,7 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { actionsCatalogue } from '../../ActionsCatalogue';
 import { createSwaggerPaths, mapActionsToApp } from '../../global/helpers';
-import { IQoreAppWithActions } from '../../global/models/qore';
+import { IQoreAppWithActions, TQoreAppActionFunctionContext } from '../../global/models/qore';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import {
@@ -72,17 +72,18 @@ export default (locale: Locales) =>
           );
 
           if ('accounts' in userInfo && userInfo.accounts.length > 0) {
-            const account = userInfo.accounts.find((account: any) => account.isdefault);
-            if (account) {
-              const base_uri = account.base_uri.split('//')[1];
-              const account_id = account.account_id;
-
-              return {
-                base_uri,
-                account_id,
-                accounts: userInfo.accounts,
-              };
+            const account = userInfo.accounts.find((account: any) => account.is_default);
+            if (!account) {
+              throw new Error(`Response missing default account: ${userInfo.accounts}`);
             }
+            const base_uri: string = account.base_uri.split('//')[1];
+            const account_id: string = account.account_id;
+
+            return {
+              base_uri,
+              account_id,
+              accounts: userInfo.accounts,
+            };
           } else {
             throw new Error(`Response missing account info: ${userInfo}`);
           }
@@ -95,7 +96,7 @@ export default (locale: Locales) =>
         // the option whose value will be used to return connection values
         option: 'accountId',
         // returns data for url_template_options for the given option
-        code: function (context) {
+        code: function (context: TQoreAppActionFunctionContext<any>): string | void {
           // find account info in context.conn_opts.accounts
           if (!context.conn_opts.accounts) {
             return;
@@ -104,19 +105,10 @@ export default (locale: Locales) =>
             (info: any) => info.account_id === context.opts.accountId
           );
           if (info) {
-            return {
-              account_id: info.account_id,
-              base_uri: info.base_uri,
-            };
+            return `https://${info.base_uri}/restapi/v2.1/accounts/${info.account_id}`;
           }
         },
       },
-      /*
-      // maps connection options to query options
-      conn_option_map: {
-        account_id: 'accountId',
-      },
-      */
       url_template_options: ['account_id', 'base_uri'],
     },
   }) satisfies IQoreAppWithActions<typeof ESIGNATURE_CONN_OPTIONS>;

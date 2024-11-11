@@ -153,20 +153,23 @@ export interface IQoreRestConnectionModifiers<
   options?: ModifierOptions;
   required_options?: string;
   url_template_options?: Array<string>;
+  // code that can set additional connection option after the connection has been authorized
   set_options_post_auth?: (
     context: Omit<TQoreAppActionFunctionContext<ModifierOptions>, 'opts'>
   ) => Promise<TQoreMappedOptions<ModifierOptions>>;
-  /** maps connection options (normally required options) that map to Swagger path options; the key is the request
-      option name, the value is the action option name; the value of the connection option will be used as the value
-      of the given action option in each call where the option is present
+  /** allows the REST URL to be changed when an option value is changed
   */
   connection_update_option?: {
     // the option name that the connection update depends on
     option: string;
 
-    // the code called to return new connection options
-    code: (context: TQoreAppActionFunctionContext<ModifierOptions>) => Record<string, any>;
+    // the code called to return new URL
+    code: (context: TQoreAppActionFunctionContext<ModifierOptions>) => string | void;
   };
+  /** maps connection options (normally required options) that map to Swagger path options; the key is the request
+      option name, the value is the action option name; the value of the connection option will be used as the value
+      of the given action option in each call where the option is present
+  */
   conn_option_map?: Record<keyof ModifierOptions, string>;
 }
 

@@ -285,15 +285,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
             hash<auto> v = resp;
             *softlist<hash<AllowedValueInfo>> rv = getAllowedValues(resp, ref_rest.values.split("."));
             if (rv && ref_rest.display_names.val()) {
-                *list<string> dnl = getDisplayNames(type, resp, ref_rest.display_names.split("."));
-                if (dnl.size() != rv.size()) {
-                    throw "REST-ALLOWED-VALUES-ERROR", sprintf("Data provider %y type %y returned %d display_name%s "
-                        "for %d value%s", getName(), type, dnl.size(), dnl.size() == 1 ? "" : "s",
-                        rv.size(), rv.size() == 1 ? "" : "s");
-                }
-                foreach hash<AllowedValueInfo> info in (\rv) {
-                    info.display_name = dnl[$#];
-                }
+                getDisplayNames(type, resp, ref_rest.display_names.split("."), \rv);
             }
             debug("Reference data with REST for data provider %y type %y allowed values: %y", getName(), type, rv);
             return rv;
@@ -317,7 +309,36 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
     }
 
     #! Adds display names to allowed values
-    private *list<string> getDisplayNames(string type, auto v, list<string> dnl) {
+    private getDisplayNames(string type, auto v, list<string> dnl, reference<list<hash<AllowedValueInfo>>> rv) {
+        if (*list<string> l = getDisplayNamesIntern(type, v, dnl)) {
+            if (l.size() != rv.size()) {
+                throw "REST-ALLOWED-VALUES-ERROR", sprintf("Data provider %y type %y returned %d display_name%s "
+                    "for %d value%s", getName(), type, l.size(), l.size() == 1 ? "" : "s",
+                    rv.size(), rv.size() == 1 ? "" : "s");
+            }
+
+            # check for duplicates
+            bool dup;
+            {
+                hash<string, bool> m;
+                foreach string dn in (l) {
+                    if (m{dn}) {
+                        dup = True;
+                        break;
+                    }
+                    m{dn} = True;
+                }
+            }
+            foreach hash<AllowedValueInfo> info in (\rv) {
+                info.display_name = dup
+                    ? sprintf("%s-%s", l[$#], info.value)
+                    : l[$#];
+            }
+        }
+    }
+
+    #! Adds display names to allowed values
+    private *list<string> getDisplayNamesIntern(string type, auto v, list<string> dnl) {
         string k = shift dnl;
         auto v0 = v{k};
         if (!exists v0) {
@@ -334,7 +355,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
             }
             return rv;
         }
-        return foldl $1 + $2, (map TypeScriptActionDataProviderBase::getDisplayNames(type, $1, dnl), v0);
+        return foldl $1 + $2, (map TypeScriptActionDataProviderBase::getDisplayNamesIntern(type, $1, dnl), v0);
     }
 
     #! Check and assign REST client
@@ -354,12 +375,10 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
             *hash<DataContextInfo> arg = getCallContextInfo(action_opts);
             debug("Retrieving connection update data with JS for data provider %y option: %s = %y arg: %y",
                 getName(), cuo.option, v, arg);
-            *hash<auto> new_opts = getAsyncValue(cuo."code", arg);
-            debug("Connection update data with JS for data provider %y new options: %y", getName(), new_opts);
-            if (new_opts && (*hash<string, bool> url_template_options =
-                TypeScriptActionInterface::getUrlTemplateOptions(conn.getAppName()))) {
+            *string new_url = getAsyncValue(cuo."code", arg);
+            debug("Connection update data with JS for data provider %y new URL: %y", getName(), new_url);
+            if (exists new_url) {
                 string url = rest.getURL();
-                string new_url = TypeScriptActionInterface::processUrl(url, new_opts, url_template_options);
                 if (url != new_url) {
                     debug("Connection update data with JS for data provider %y new URL: %y", getName(), new_url);
                     rest.setURL(new_url);
