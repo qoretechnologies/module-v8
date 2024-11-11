@@ -56,38 +56,34 @@ export default (locale: Locales) =>
       set_options_post_auth: async (context) => {
         // We need to make a call to the docusign user info endpoint to get the base_uri
         // and account_id
-        try {
-          const { data: userInfo } = await QorusRequest.get<Record<string, any>>(
-            {
-              path: '/oauth/userinfo',
-              headers: {
-                Authorization: `Bearer ${context.conn_opts.token}`,
-              },
+        const { data: userInfo } = await QorusRequest.get<Record<string, any>>(
+          {
+            path: '/oauth/userinfo',
+            headers: {
+              Authorization: `Bearer ${context.conn_opts.token}`,
             },
-            {
-              url: 'https://account-d.docusign.com',
-              endpointId: 'Docusign',
-            }
-          );
-
-          if ('accounts' in userInfo && userInfo.accounts.length > 0) {
-            const account = userInfo.accounts.find((account: any) => account.is_default);
-            if (!account) {
-              throw new Error(`Response missing default account: ${userInfo.accounts}`);
-            }
-            const base_uri: string = account.base_uri.split('//')[1];
-            const account_id: string = account.account_id;
-
-            return {
-              base_uri,
-              account_id,
-              accounts: userInfo.accounts,
-            };
-          } else {
-            throw new Error(`Response missing account info: ${userInfo}`);
+          },
+          {
+            url: 'https://account-d.docusign.com',
+            endpointId: 'Docusign',
           }
-        } catch (e) {
-          throw e;
+        );
+
+        if ('accounts' in userInfo && userInfo.accounts.length > 0) {
+          const account = userInfo.accounts.find((account: any) => account.is_default);
+          if (!account) {
+            throw new Error(`Response missing default account: ${userInfo.accounts}`);
+          }
+          const base_uri: string = account.base_uri.split('//')[1];
+          const account_id: string = account.account_id;
+
+          return {
+            base_uri,
+            account_id,
+            accounts: userInfo.accounts,
+          };
+        } else {
+          throw new Error(`Response missing account info: ${userInfo}`);
         }
       },
       connection_update_option: {
