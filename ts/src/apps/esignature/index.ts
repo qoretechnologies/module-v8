@@ -63,7 +63,7 @@ export default (locale: Locales) =>
               Authorization: `Bearer ${context.conn_opts.token}`,
             },
           },
-          {
+          {TQoreAppActionFunctionContext
             url: 'https://account-d.docusign.com',
             endpointId: 'Docusign',
           }
@@ -90,7 +90,7 @@ export default (locale: Locales) =>
         // the option whose value will be used to return connection values
         option: 'accountId',
         // returns data for url_template_options for the given option
-        code: function (context: TQoreAppActionFunctionContext<any>): string | void {
+        code: function (context): string | void {
           // find account info in context.conn_opts.accounts
           if (!context.conn_opts.accounts) {
             return;
