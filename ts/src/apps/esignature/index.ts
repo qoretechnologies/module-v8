@@ -1,4 +1,5 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
+import { actionsCatalogue } from '../../ActionsCatalogue';
 import { createSwaggerPaths, mapActionsToApp } from '../../global/helpers';
 import { IQoreAppWithActions } from '../../global/models/qore';
 import L from '../../i18n/i18n-node';
@@ -9,7 +10,6 @@ import {
   ESIGNATURE_CONN_OPTIONS,
   ESIGNATURE_PATHS,
 } from './constants';
-import { actionsCatalogue } from '../../ActionsCatalogue';
 /*
  * Returns the app object with all the actions ready to use, using translations
  * @param locale - the locale

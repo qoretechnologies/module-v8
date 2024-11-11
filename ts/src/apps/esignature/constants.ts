@@ -1,6 +1,6 @@
 import { OpenAPIV2 } from 'openapi-types';
 import { buildActionsFromSwaggerSchema } from '../../global/helpers';
-import { TAllowedPaths, IQoreSharedObject, TQoreType } from '../../global/models/qore';
+import { IQoreSharedObject, TAllowedPaths, TQoreType } from '../../global/models/qore';
 import eSignature from '../../schemas/esignature.swagger.json';
 import { IQoreConnectionOptions } from '../zendesk';
 
@@ -27,7 +27,10 @@ export const ESIGNATURE_CONN_OPTIONS = {
   },
 } satisfies IQoreConnectionOptions;
 
-const GetAccountIdAllowedValues: Partial<IQoreSharedObject<TQoreType, unknown>> = {
+const GetAccountIdAllowedValues: Pick<
+  IQoreSharedObject<TQoreType, unknown, typeof ESIGNATURE_CONN_OPTIONS>,
+  'get_allowed_values'
+> = {
   get_allowed_values: function (ctx) {
     return ctx.conn_opts.accounts.map((info: any) => {
       return {
@@ -38,7 +41,10 @@ const GetAccountIdAllowedValues: Partial<IQoreSharedObject<TQoreType, unknown>> 
   },
 };
 
-const GetEnvelopeIdAllowedValues: Partial<IQoreSharedObject<TQoreType, unknown>> = {
+const GetEnvelopeIdAllowedValues: Pick<
+  IQoreSharedObject<TQoreType, unknown>,
+  'rest_get_allowed_values'
+> = {
   rest_get_allowed_values: {
     method: 'GET',
     path: 'envelopes?from_date=2010-01-01',
