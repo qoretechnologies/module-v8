@@ -152,7 +152,7 @@ export interface IQoreRestConnectionModifiers<
 > {
   options?: ModifierOptions;
   required_options?: string;
-  url_template_options?: Array<keyof ModifierOptions>;
+  url_template_options?: Array<string>;
   set_options_post_auth?: (
     context: Omit<TQoreAppActionFunctionContext<ModifierOptions>, 'opts'>
   ) => Promise<Record<keyof ModifierOptions, any>>;
@@ -160,6 +160,13 @@ export interface IQoreRestConnectionModifiers<
       option name, the value is the action option name; the value of the connection option will be used as the value
       of the given action option in each call where the option is present
   */
+  connection_update_option?: {
+    // the option name that the connection update depends on
+    option: string;
+
+    // the code called to return new connection options
+    code: (context: TQoreAppActionFunctionContext<Record<string, any>>) => Record<string, any>;
+  };
   conn_option_map?: object;
 }
 
@@ -409,6 +416,9 @@ export interface IQoreRestGetAllowedValues {
 
   // Location of the values in the result in dot notation (ex: 'body.envelopes.envelopeId')
   values: string;
+
+  // Location of the display names in the result in dot notation (ex: 'body.envelopes.envelopeName')
+  display_names?: string;
 }
 
 export interface IQoreSharedObject<TypeName extends TQoreType = TQoreType, TypeValue = unknown>

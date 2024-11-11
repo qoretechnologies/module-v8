@@ -7,6 +7,13 @@ import { IQoreConnectionOptions } from '../zendesk';
 export const ESIGNATURE_APP_NAME = 'DocusignESignature';
 
 export const ESIGNATURE_CONN_OPTIONS = {
+  accounts: {
+    display_name: 'Account Info',
+    short_desc: 'Account info to be filled automatically at login',
+    desc: 'Account info to be filled automatically at login',
+    type: 'list',
+  },
+  /*
   account_id: {
     display_name: 'Account ID',
     short_desc: 'The account ID',
@@ -19,7 +26,19 @@ export const ESIGNATURE_CONN_OPTIONS = {
     desc: 'The base URI',
     type: 'string',
   },
+  */
 } satisfies IQoreConnectionOptions;
+
+const GetAccountIdAllowedValues: Partial<IQoreSharedObject<TQoreType, unknown>> = {
+  get_allowed_values: function (ctx) {
+    return ctx.conn_opts.accounts.map((info: any) => {
+      return {
+        display_name: info.account_name,
+        value: info.account_id,
+      };
+    });
+  },
+};
 
 const GetEnvelopeIdAllowedValues: Partial<IQoreSharedObject<TQoreType, unknown>> = {
   rest_get_allowed_values: {
@@ -31,9 +50,14 @@ const GetEnvelopeIdAllowedValues: Partial<IQoreSharedObject<TQoreType, unknown>>
 
 export const ESIGNATURE_PATHS: TAllowedPaths = {
   '/v2.1/accounts/{accountId}/envelopes': {
-    GET: {},
+    GET: {
+      override_options: {
+        accountId: GetAccountIdAllowedValues,
+      },
+    },
     POST: {
       override_options: {
+        accountId: GetAccountIdAllowedValues,
         status: {
           required: true,
           allowed_values: [
@@ -67,11 +91,13 @@ export const ESIGNATURE_PATHS: TAllowedPaths = {
   '/v2.1/accounts/{accountId}/envelopes/{envelopeId}': {
     GET: {
       override_options: {
+        accountId: GetAccountIdAllowedValues,
         envelopeId: GetEnvelopeIdAllowedValues,
       },
     },
     PUT: {
       override_options: {
+        accountId: GetAccountIdAllowedValues,
         envelopeId: GetEnvelopeIdAllowedValues,
       },
     },
@@ -79,21 +105,25 @@ export const ESIGNATURE_PATHS: TAllowedPaths = {
   '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients': {
     DELETE: {
       override_options: {
+        accountId: GetAccountIdAllowedValues,
         envelopeId: GetEnvelopeIdAllowedValues,
       },
     },
     POST: {
       override_options: {
+        accountId: GetAccountIdAllowedValues,
         envelopeId: GetEnvelopeIdAllowedValues,
       },
     },
     PUT: {
       override_options: {
+        accountId: GetAccountIdAllowedValues,
         envelopeId: GetEnvelopeIdAllowedValues,
       },
     },
     GET: {
       override_options: {
+        accountId: GetAccountIdAllowedValues,
         envelopeId: GetEnvelopeIdAllowedValues,
       },
     },
@@ -101,16 +131,19 @@ export const ESIGNATURE_PATHS: TAllowedPaths = {
   '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents': {
     DELETE: {
       override_options: {
+        accountId: GetAccountIdAllowedValues,
         envelopeId: GetEnvelopeIdAllowedValues,
       },
     },
     PUT: {
       override_options: {
+        accountId: GetAccountIdAllowedValues,
         envelopeId: GetEnvelopeIdAllowedValues,
       },
     },
     GET: {
       override_options: {
+        accountId: GetAccountIdAllowedValues,
         envelopeId: GetEnvelopeIdAllowedValues,
       },
     },
@@ -118,11 +151,13 @@ export const ESIGNATURE_PATHS: TAllowedPaths = {
   '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}': {
     PUT: {
       override_options: {
+        accountId: GetAccountIdAllowedValues,
         envelopeId: GetEnvelopeIdAllowedValues,
       },
     },
     GET: {
       override_options: {
+        accountId: GetAccountIdAllowedValues,
         envelopeId: GetEnvelopeIdAllowedValues,
       },
     },
@@ -130,14 +165,27 @@ export const ESIGNATURE_PATHS: TAllowedPaths = {
   '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/views/recipient': {
     POST: {
       override_options: {
+        accountId: GetAccountIdAllowedValues,
         envelopeId: GetEnvelopeIdAllowedValues,
       },
     },
   },
   '/v2.1/accounts/{accountId}/brands': {
-    DELETE: {},
-    POST: {},
-    GET: {},
+    DELETE: {
+      override_options: {
+        accountId: GetAccountIdAllowedValues,
+      },
+    },
+    POST: {
+      override_options: {
+        accountId: GetAccountIdAllowedValues,
+      },
+    },
+    GET: {
+      override_options: {
+        accountId: GetAccountIdAllowedValues,
+      },
+    },
   },
 };
 

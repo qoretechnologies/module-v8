@@ -39,6 +39,34 @@ public hashdecl AsyncCallInfo {
     date to;
 }
 
+#! REST get allowed values config info
+hashdecl RestGetAllowedValuesInfo {
+    #! The HTTP method for the call
+    string method;
+
+    #! The REST request path
+    string path;
+
+    #! Any REST body
+    *hash<auto> body;
+
+    #! Any REST headers
+    *hash<auto> headers;
+
+    #! Location of the values in the result in dot notation (ex: 'body.envelopes.envelopeId')
+    string values;
+
+    #! Location of the display names in the result in dot notation (ex: 'body.envelopes.envelopeName')
+    *string display_names;
+}
+
+#! Required attributes for RestGetAllowedValuesInfo
+const RestGetAllowedValuesRequiredKeys = {
+    "method": True,
+    "path": True,
+    "values": True,
+};
+
 #! Interface class
 public class TypeScriptActionInterface {
     public {
@@ -215,6 +243,24 @@ public class TypeScriptActionInterface {
                     }
                     post_auth = <AsyncCallInfo>{
                         "label": sprintf("REST post-auth option function for app %y", app.name),
+                        "pool": pool,
+                        "async_call": rest_modifiers.set_options_post_auth,
+                        "to": seconds(remove rest_modifiers.io_timeout_secs ?? DefaultIoTimeoutSecs),
+                    };
+                }
+                if (rest_modifiers.connection_update_option.val()) {
+                    if (rest_modifiers.connection_update_option.option.typeCode() != NT_STRING) {
+                        throw "REST-MODIFIER-ERROR", sprintf("The 'connection_update_option.option' REST modifier "
+                            "option must be a string; got type %y instead",
+                            rest_modifiers.connection_update_option.option.fullType());
+                    }
+                    if (!rest_modifiers.connection_update_option."code".callp()) {
+                        throw "REST-MODIFIER-ERROR", sprintf("The 'connection_update_option.code' REST modifier "
+                            "option must be a callable value; got type %y instead",
+                            rest_modifiers.connection_update_option."code".fullType());
+                    }
+                    conn_update = <AsyncCallInfo>{
+                        "label": sprintf("REST connection update option function for app %y", app.name),
                         "pool": pool,
                         "async_call": rest_modifiers.set_options_post_auth,
                         "to": seconds(remove rest_modifiers.io_timeout_secs ?? DefaultIoTimeoutSecs),
@@ -508,7 +554,7 @@ public class TypeScriptActionInterface {
         timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
 
         *hash<string, hash<AsyncCallInfo>> omap;
-        *hash<string, hash<auto>> romap;
+        *hash<string, hash<RestGetAllowedValuesInfo>> romap;
         if (*hash<auto> opts = remove action.options) {
             *hash<string, hash<AsyncCallInfo>> dmap;
             action.options = TypeScriptActionInterface::getOptions(app, \action, opts, \omap, \dmap, \romap, pool);
@@ -663,7 +709,7 @@ public class TypeScriptActionInterface {
             # maps from options to "get_dependent_options" code for each option
             hash<string, hash<AsyncCallInfo>> dmap;
             # maps from options to "rest_get_allowed_values" descriptions for each option
-            hash<string, hash<auto>> romap;
+            hash<string, hash<RestGetAllowedValuesInfo>> romap;
             *AbstractDataProviderType request_type;
             if (*hash<auto> opts = remove action.options) {
                 request_type = TypeScriptActionInterface::getType(map {$1.key: $1.value{TypeKeys}},
@@ -710,8 +756,8 @@ public class TypeScriptActionInterface {
     }
 
     static getOptionFunctions(reference<hash<auto>> action, reference<hash<string, hash<AsyncCallInfo>>> omap,
-            reference<hash<string, hash<AsyncCallInfo>>> dmap, reference<hash<string, hash<auto>>> romap,
-            string key, reference<hash<auto>> h,
+            reference<hash<string, hash<AsyncCallInfo>>> dmap,
+            reference<hash<string, hash<RestGetAllowedValuesInfo>>> romap, string key, reference<hash<auto>> h,
         JavaScriptProgramPool pool) {
         on_error rethrow $1.err, sprintf("%s (while processing option %y)", $1.desc, key);
         date io_timeout = seconds(remove h.io_timeout_secs ?? DefaultIoTimeoutSecs);
@@ -741,7 +787,18 @@ public class TypeScriptActionInterface {
                     "\"rest_get_allowed_values\" attribute; this option already has a \"get_allowed_values\" value; "
                     "cannot use both attributes for a single option", action.app, action.action, key);
             }
-            romap{key} = rest_get_allowed_values;
+            hash<RestGetAllowedValuesInfo> info;
+            {
+                on_error rethrow "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
+                    "\"rest_get_allowed_values\" attribute: %s: %s", action.app, action.action, key, $1.err, $1.desc);
+                info = cast<hash<RestGetAllowedValuesInfo>>(rest_get_allowed_values);
+            }
+            if (*hash<auto> h = (RestGetAllowedValuesRequiredKeys - keys info)) {
+                on_error rethrow "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
+                    "\"rest_get_allowed_values\" attribute; the following required keys are missing: %y", action.app,
+                    action.action, key, keys h);
+            }
+            romap{key} = info;
             h.ref_data = key;
         }
         if (exists (auto get_dependent_options = remove h.get_dependent_options)) {
@@ -766,8 +823,8 @@ public class TypeScriptActionInterface {
 
     static *hash<string, hash<ActionOptionInfo>> getOptions(hash<DataProviderAppInfo> app,
             reference<hash<auto>> action, hash<auto> opts, reference<hash<string, hash<AsyncCallInfo>>> omap,
-            reference<hash<string, hash<AsyncCallInfo>>> dmap, reference<hash<string, hash<auto>>> romap,
-            JavaScriptProgramPool pool) {
+            reference<hash<string, hash<AsyncCallInfo>>> dmap,
+            reference<hash<string, hash<RestGetAllowedValuesInfo>>> romap, JavaScriptProgramPool pool) {
         hash<string, hash<ActionOptionInfo>> rv;
         foreach hash<auto> i in (opts.pairIterator()) {
             TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, \romap, i.key, \i.value, pool);

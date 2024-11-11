@@ -50,14 +50,15 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
         *hash<string, hash<AsyncCallInfo>> omap;
 
         #! Options with REST configuration for retrieving reference data
-        *hash<string, hash<auto>> romap;
+        *hash<string, hash<RestGetAllowedValuesInfo>> romap;
 
         #! Any REST client to use for reference data, for example
         RestClient rest;
     }
 
     #! Creates the object from the arguments
-    constructor(string name, *hash<string, hash<AsyncCallInfo>> omap, *hash<string, hash<auto>> romap) {
+    constructor(string name, *hash<string, hash<AsyncCallInfo>> omap,
+            *hash<string, hash<RestGetAllowedValuesInfo>> romap) {
         self.name = name;
         self.omap = omap;
         self.romap = romap;
@@ -283,7 +284,18 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
             debug("Reference data with REST for data provider %y type %y got: %y", getName(), type, resp);
             hash<auto> v = resp;
             *softlist<hash<AllowedValueInfo>> rv = getAllowedValues(resp, ref_rest.values.split("."));
-            debug("Reference data with REST for data provider %y type %y allowed values: %y", getName(), type, (map $1.value, rv));
+            if (rv && ref_rest.display_names.val()) {
+                *list<string> dnl = getDisplayNames(type, resp, ref_rest.display_names.split("."));
+                if (dnl.size() != rv.size()) {
+                    throw "REST-ALLOWED-VALUES-ERROR", sprintf("Data provider %y type %y returned %d display_name%s "
+                        "for %d value%s", getName(), type, dnl.size(), dnl.size() == 1 ? "" : "s",
+                        rv.size(), rv.size() == 1 ? "" : "s");
+                }
+                foreach hash<AllowedValueInfo> info in (\rv) {
+                    info.display_name = dnl[$#];
+                }
+            }
+            debug("Reference data with REST for data provider %y type %y allowed values: %y", getName(), type, rv);
             return rv;
         }
     }
@@ -302,6 +314,27 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
             }), v0;
         }
         return foldl $1 + $2, (map TypeScriptActionDataProviderBase::getAllowedValues($1, kl), v0);
+    }
+
+    #! Adds display names to allowed values
+    private *list<string> getDisplayNames(string type, auto v, list<string> dnl) {
+        string k = shift dnl;
+        auto v0 = v{k};
+        if (!exists v0) {
+            return;
+        }
+        if (!dnl) {
+            list<string> rv;
+            foreach auto dn in (v0) {
+                if (!dn.strp()) {
+                    throw "REST-ALLOWED-VALUES-ERROR", sprintf("Data provider %y type %y display name has type "
+                        "%y (%y) that cannot be converted to a string", getName(), type, dn.fullType(), dn);
+                }
+                rv += dn.toString();
+            }
+            return rv;
+        }
+        return foldl $1 + $2, (map TypeScriptActionDataProviderBase::getDisplayNames(type, $1, dnl), v0);
     }
 
     #! Check and assign REST client

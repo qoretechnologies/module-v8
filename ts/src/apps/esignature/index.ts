@@ -1,6 +1,6 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { createSwaggerPaths, mapActionsToApp } from '../../global/helpers';
-import { IQoreAppWithActions } from '../../global/models/qore';
+import { IQoreAppWithActions, TQoreAppActionFunctionContext } from '../../global/models/qore';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import {
@@ -57,6 +57,7 @@ export default (locale: Locales) =>
         // We need to make a call to the docusign user info endpoint to get the base_uri
         // and account_id
         try {
+          //console.log(`docusign token: ${context.conn_opts.token}`);
           const { data: userInfo } = await QorusRequest.get<Record<string, any>>(
             {
               path: '/oauth/userinfo',
@@ -71,6 +72,10 @@ export default (locale: Locales) =>
           );
 
           if ('accounts' in userInfo && userInfo.accounts.length > 0) {
+            return {
+              accounts: userInfo.accounts,
+            };
+            /*
             const base_uri = userInfo.accounts[0].base_uri.split('//')[1];
             const account_id = userInfo.accounts[0].account_id;
 
@@ -79,6 +84,7 @@ export default (locale: Locales) =>
               account_id,
               ping_path: `/restapi/v2.1/accounts/${account_id}`,
             };
+            */
           } else {
             throw new Error(`Response missing account info: ${userInfo}`);
           }
@@ -86,6 +92,24 @@ export default (locale: Locales) =>
           console.log(e);
           throw e;
         }
+      },
+      connection_update_option: {
+        option: 'accountId',
+        code: function (context: TQoreAppActionFunctionContext<typeof ESIGNATURE_CONN_OPTIONS>) {
+          // find account info in context.conn_opts.accounts
+          if (!context.conn_opts.accounts) {
+            return;
+          }
+          const info: any = context.conn_opts.accounts.find(
+            (info: any) => info.account_id === context.opts.accountId
+          );
+          if (info) {
+            return {
+              account_id: info.account_id,
+              base_uri: info.base_uri,
+            };
+          }
+        },
       },
       // maps connection options to query options
       conn_option_map: {
