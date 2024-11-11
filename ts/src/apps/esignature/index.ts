@@ -1,7 +1,7 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { actionsCatalogue } from '../../ActionsCatalogue';
 import { createSwaggerPaths, mapActionsToApp } from '../../global/helpers';
-import { IQoreAppWithActions, TQoreAppActionFunctionContext } from '../../global/models/qore';
+import { IQoreAppWithActions } from '../../global/models/qore';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import {
@@ -15,6 +15,29 @@ import {
  * @param locale - the locale
  * @returns IQoreAppWithActions
  */
+
+export interface IEsignatureUserInfoAccount {
+  account_id: string;
+  account_name: string;
+  base_uri: string;
+  is_default: boolean;
+  organization: {
+    organization_id: string;
+    links: {
+      rel: string;
+      href: string;
+    }[];
+  };
+}
+
+export interface IEsignatureUserInfo {
+  sub: string;
+  accounts: IEsignatureUserInfoAccount[];
+  name: string;
+  given_name: string;
+  family_name: string;
+  email: string;
+}
 
 export default (locale: Locales) =>
   ({
@@ -56,54 +79,50 @@ export default (locale: Locales) =>
       set_options_post_auth: async (context) => {
         // We need to make a call to the docusign user info endpoint to get the base_uri
         // and account_id
-        try {
-          //console.log(`docusign token: ${context.conn_opts.token}`);
-          const { data: userInfo } = await QorusRequest.get<Record<string, any>>(
-            {
-              path: '/oauth/userinfo',
-              headers: {
-                Authorization: `Bearer ${context.conn_opts.token}`,
-              },
+        const { data: userInfo }: { data: IEsignatureUserInfo } = await QorusRequest.get(
+          {
+            path: '/oauth/userinfo',
+            headers: {
+              Authorization: `Bearer ${context.conn_opts.token}`,
             },
-            {
-              url: 'https://account-d.docusign.com',
-              endpointId: 'Docusign',
-            }
-          );
-
-          if ('accounts' in userInfo && userInfo.accounts.length > 0) {
-            const account = userInfo.accounts.find((account: any) => account.is_default);
-            if (!account) {
-              throw new Error(`Response missing default account: ${userInfo.accounts}`);
-            }
-            const base_uri: string = account.base_uri.split('//')[1];
-            const account_id: string = account.account_id;
-
-            return {
-              base_uri,
-              account_id,
-              accounts: userInfo.accounts,
-            };
-          } else {
-            throw new Error(`Response missing account info: ${userInfo}`);
+          },
+          {
+            url: 'https://account-d.docusign.com',
+            endpointId: 'Docusign',
           }
-        } catch (e) {
-          console.log(e);
-          throw e;
+        );
+
+        if ('accounts' in userInfo && userInfo.accounts.length > 0) {
+          const account = userInfo.accounts.find((account: any) => account.is_default);
+          if (!account) {
+            throw new Error(`Response missing default account: ${userInfo.accounts}`);
+          }
+          const base_uri: string = account.base_uri.split('//')[1];
+          const account_id: string = account.account_id;
+
+          return {
+            base_uri,
+            account_id,
+            accounts: userInfo.accounts,
+          };
+        } else {
+          throw new Error(`Response missing account info: ${userInfo}`);
         }
       },
       connection_update_option: {
         // the option whose value will be used to return connection values
         option: 'accountId',
         // returns data for url_template_options for the given option
-        code: function (context: TQoreAppActionFunctionContext<any>): string | void {
+        code: function (context): string | void {
           // find account info in context.conn_opts.accounts
           if (!context.conn_opts.accounts) {
             return;
           }
-          const info: any = context.conn_opts.accounts.find(
-            (info: any) => info.account_id === context.opts.accountId
-          );
+
+          const info: IEsignatureUserInfoAccount = (
+            context.conn_opts.accounts as IEsignatureUserInfoAccount[]
+          ).find((info) => info.account_id === context.opts.accountId);
+
           if (info) {
             return `https://${info.base_uri}/restapi/v2.1/accounts/${info.account_id}`;
           }
