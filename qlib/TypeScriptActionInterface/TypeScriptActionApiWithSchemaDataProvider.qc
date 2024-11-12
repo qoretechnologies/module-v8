@@ -172,20 +172,21 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
             string k = rreqmap{i.key} ?? i.key;
             *reference<hash<ActionOptionInfo>> opt = \action.options{k};
             if (!opt) {
-                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"override_options\" "
-                    "property; cannot find option %y to override; known top-level options: %y", action.app,
-                    action.action, i.key, keys action.options);
+                TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, \romap, \dvmap, i.key, \i.value,
+                    pool);
+                opt{k} = TypeScriptActionInterface::getOptionInfo(i.value);
+            } else {
+                TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, \romap, \dvmap, i.key, \i.value,
+                    pool);
+                if (i.value.type) {
+                    opt.type = TypeScriptActionInterface::getType(i.value.type, i.value.required);
+                }
+                if (i.value.allowed_values) {
+                    opt.allowed_values = map cast<hash<AllowedValueInfo>>($1), i.value.allowed_values;
+                }
+                opt += i.value{"display_name", "short_desc", "desc", "required", "preselected", "default_value",
+                    "sensitive", "example_value", "depends_on", "ref_data", "required_groups", "loc"};
             }
-            TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, \romap, \dvmap, i.key, \i.value,
-                pool);
-            if (i.value.type) {
-                opt.type = TypeScriptActionInterface::getType(i.value.type, i.value.required);
-            }
-            if (i.value.allowed_values) {
-                opt.allowed_values = map cast<hash<AllowedValueInfo>>($1), i.value.allowed_values;
-            }
-            opt += i.value{"display_name", "short_desc", "desc", "required", "preselected", "default_value",
-                "sensitive", "example_value", "depends_on", "ref_data", "required_groups", "loc"};
         }
     }
 
