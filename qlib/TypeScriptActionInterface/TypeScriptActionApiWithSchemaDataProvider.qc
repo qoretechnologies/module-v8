@@ -136,26 +136,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
 
         if (path_vars) {
             self.path_vars = path_vars;
-            if (!request_type) {
-                request_type = new HashDataType();
-            } else if (!(request_type instanceof HashDataType)) {
-                HashDataType h();
-                string fname = "data";
-                int i;
-                while (path_vars{fname}) {
-                    fname = sprintf("data-%d", ++i);
-                }
-                h.addField(new QoreDataField({
-                    "name": fname,
-                    "type": request_type,
-                    "desc": "API request type",
-                }));
-                request_type = h;
-            } else {
-                # do not modify the underlying data provider's type
-                request_type = request_type.copy();
-            }
-            map request_type.addField(new QoreDataField({
+            hash<string, AbstractDataField> fields = map {$1: new QoreDataField({
                 "name": $1,
                 "type": AbstractDataProviderTypeMap."softstring",
                 "desc": sprintf("URI path variable %y", $1),
@@ -163,7 +144,25 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                     "preselected": True,
                     "required": True,
                 },
-            })), keys path_vars, !query_set{$1};
+            })}, keys path_vars, !query_set{$1};
+
+            if (request_type) {
+                if (!(request_type instanceof HashDataType)) {
+                    string fname = "data";
+                    int i;
+                    while (path_vars{fname}) {
+                        fname = sprintf("data-%d", ++i);
+                    }
+                    fields{fname} = new QoreDataField({
+                        "name": fname,
+                        "type": request_type,
+                        "desc": "API request type",
+                    });
+                } else {
+                    fields += request_type.getFields();
+                }
+            }
+            request_type = new HashDataType(AutoHashType, "RestRequestType", fields);
         }
     }
 
@@ -177,7 +176,8 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                     "property; cannot find option %y to override; known top-level options: %y", action.app,
                     action.action, i.key, keys action.options);
             }
-            TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, \romap, i.key, \i.value, pool);
+            TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, \romap, \dvmap, i.key, \i.value,
+                pool);
             if (i.value.type) {
                 opt.type = TypeScriptActionInterface::getType(i.value.type, i.value.required);
             }
@@ -254,8 +254,12 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
     private auto doRequestImpl(auto req, *hash<auto> request_options) {
         on_error rethrow $1.err, sprintf("%s (req: %y request_options: %y)", $1.desc, req, request_options);
         if (!api) {
-            if (!prov.tryGetRestClient()) {
-                prov.setRestClient(conn.get());
+            *RestClient rest = prov.tryGetRestClient();
+            if (!rest) {
+                prov.setRestClient(rest = conn.get());
+            }
+            if (req && req.typeCode() == NT_HASH) {
+                checkUpdateRestOptions(rest, req);
             }
             if (exists (*string base_path = conn.orig_opts.swagger_base_path)) {
                 request_options.base_path = base_path;

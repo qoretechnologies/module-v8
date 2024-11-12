@@ -39,6 +39,34 @@ public hashdecl AsyncCallInfo {
     date to;
 }
 
+#! REST get allowed values config info
+hashdecl RestGetAllowedValuesInfo {
+    #! The HTTP method for the call
+    string method;
+
+    #! The REST request path
+    string path;
+
+    #! Any REST body
+    *hash<auto> body;
+
+    #! Any REST headers
+    *hash<auto> headers;
+
+    #! Location of the values in the result in dot notation (ex: 'body.envelopes.envelopeId')
+    string values;
+
+    #! Location of the display names in the result in dot notation (ex: 'body.envelopes.envelopeName')
+    *string display_names;
+}
+
+#! Required attributes for RestGetAllowedValuesInfo
+const RestGetAllowedValuesRequiredKeys = {
+    "method": True,
+    "path": True,
+    "values": True,
+};
+
 #! Interface class
 public class TypeScriptActionInterface {
     public {
@@ -121,6 +149,9 @@ public class TypeScriptActionInterface {
         #! Maps from app names to connection post-auth functions
         static hash<string, hash<AsyncCallInfo>> app_post_auth_map;
 
+        #! Maps from app names to connection update info
+        static hash<string, hash<auto>> app_conn_update_map;
+
         #! Maps from app names to connection -> Swagger path option maps
         static hash<string, hash<string, string>> app_conn_opt_map;
 
@@ -196,6 +227,7 @@ public class TypeScriptActionInterface {
             }
             *string required_options;
             hash<AsyncCallInfo> post_auth;
+            hash<auto> conn_update;
             hash<string, string> conn_opt_map;
             if (*hash<auto> rest_modifiers = remove app0.rest_modifiers) {
                 foreach hash<auto> i in (rest_modifiers.options.pairIterator()) {
@@ -218,6 +250,27 @@ public class TypeScriptActionInterface {
                         "pool": pool,
                         "async_call": rest_modifiers.set_options_post_auth,
                         "to": seconds(remove rest_modifiers.io_timeout_secs ?? DefaultIoTimeoutSecs),
+                    };
+                }
+                if (rest_modifiers.connection_update_option.val()) {
+                    if (rest_modifiers.connection_update_option.option.typeCode() != NT_STRING) {
+                        throw "REST-MODIFIER-ERROR", sprintf("The 'connection_update_option.option' REST modifier "
+                            "option must be a string; got type %y instead",
+                            rest_modifiers.connection_update_option.option.fullType());
+                    }
+                    if (!rest_modifiers.connection_update_option."code".callp()) {
+                        throw "REST-MODIFIER-ERROR", sprintf("The 'connection_update_option.code' REST modifier "
+                            "option must be a callable value; got type %y instead",
+                            rest_modifiers.connection_update_option."code".fullType());
+                    }
+                    conn_update = {
+                        "option": rest_modifiers.connection_update_option,
+                        "code": <AsyncCallInfo>{
+                            "label": sprintf("REST connection update option function for app %y", app.name),
+                            "pool": pool,
+                            "async_call": rest_modifiers.connection_update_option."code",
+                            "to": seconds(remove rest_modifiers.io_timeout_secs ?? DefaultIoTimeoutSecs),
+                        },
                     };
                 }
                 if (rest_modifiers.conn_option_map) {
@@ -251,6 +304,9 @@ public class TypeScriptActionInterface {
             }
             if (post_auth) {
                 app_post_auth_map{appname} = post_auth;
+            }
+            if (conn_update) {
+                app_conn_update_map{appname} = conn_update;
             }
             if (conn_opt_map) {
                 app_conn_opt_map{appname} = conn_opt_map;
@@ -508,10 +564,12 @@ public class TypeScriptActionInterface {
         timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
 
         *hash<string, hash<AsyncCallInfo>> omap;
-        *hash<string, hash<auto>> romap;
+        *hash<string, hash<RestGetAllowedValuesInfo>> romap;
+        *hash<string, hash<AsyncCallInfo>> dvmap;
         if (*hash<auto> opts = remove action.options) {
             *hash<string, hash<AsyncCallInfo>> dmap;
-            action.options = TypeScriptActionInterface::getOptions(app, \action, opts, \omap, \dmap, \romap, pool);
+            action.options = TypeScriptActionInterface::getOptions(app, \action, opts, \omap, \dmap, \romap, \dvmap,
+                pool);
             if (dmap) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"options\" "
                     "attribute; event actions do not support get_dependent_options() callbacks", action.app,
@@ -573,7 +631,7 @@ public class TypeScriptActionInterface {
             };
 
             child = new TypeScriptActionWebhookEventDataProvider(action.action, event_id, event_info, omap, romap,
-                method, webhook_register, webhook_deregister, webhook_auth, webhook_perms);
+                dvmap, method, webhook_register, webhook_deregister, webhook_auth, webhook_perms);
             rv = AES_WH_EVENT;
         } else {
             auto event_function = remove action.event_function;
@@ -588,7 +646,8 @@ public class TypeScriptActionInterface {
                 "async_call": event_function,
                 "to": seconds(io_timeout),
             };
-            child = new TypeScriptActionEventDataProvider(action.action, event_id, event_info, omap, romap, event);
+            child = new TypeScriptActionEventDataProvider(action.action, event_id, event_info, omap, romap, dvmap,
+                event);
             rv = AES_JS_EVENT;
         }
 
@@ -663,13 +722,15 @@ public class TypeScriptActionInterface {
             # maps from options to "get_dependent_options" code for each option
             hash<string, hash<AsyncCallInfo>> dmap;
             # maps from options to "rest_get_allowed_values" descriptions for each option
-            hash<string, hash<auto>> romap;
+            hash<string, hash<RestGetAllowedValuesInfo>> romap;
+            # maps from options to "get_default_value" code for each option
+            hash<string, hash<AsyncCallInfo>> dvmap;
             *AbstractDataProviderType request_type;
             if (*hash<auto> opts = remove action.options) {
                 request_type = TypeScriptActionInterface::getType(map {$1.key: $1.value{TypeKeys}},
                     opts.pairIterator());
                 action.options = TypeScriptActionInterface::getOptions(app, \action, opts, \omap, \dmap, \romap,
-                    pool);
+                    \dvmap, pool);
             }
 
             *AbstractDataProviderType response_type;
@@ -681,7 +742,7 @@ public class TypeScriptActionInterface {
             }
 
             child = new TypeScriptActionApiDataProvider(action.action, api, request_type, response_type, omap,
-                dmap, romap);
+                dmap, romap, dvmap);
         }
 
         TypeScriptActionAppDataProvider prov = TypeScriptActionInterface::getAppDataProvider(action.app);
@@ -710,8 +771,9 @@ public class TypeScriptActionInterface {
     }
 
     static getOptionFunctions(reference<hash<auto>> action, reference<hash<string, hash<AsyncCallInfo>>> omap,
-            reference<hash<string, hash<AsyncCallInfo>>> dmap, reference<hash<string, hash<auto>>> romap,
-            string key, reference<hash<auto>> h,
+            reference<hash<string, hash<AsyncCallInfo>>> dmap,
+            reference<hash<string, hash<RestGetAllowedValuesInfo>>> romap,
+            reference<hash<string, hash<AsyncCallInfo>>> dvmap, string key, reference<hash<auto>> h,
         JavaScriptProgramPool pool) {
         on_error rethrow $1.err, sprintf("%s (while processing option %y)", $1.desc, key);
         date io_timeout = seconds(remove h.io_timeout_secs ?? DefaultIoTimeoutSecs);
@@ -741,7 +803,18 @@ public class TypeScriptActionInterface {
                     "\"rest_get_allowed_values\" attribute; this option already has a \"get_allowed_values\" value; "
                     "cannot use both attributes for a single option", action.app, action.action, key);
             }
-            romap{key} = rest_get_allowed_values;
+            hash<RestGetAllowedValuesInfo> info;
+            {
+                on_error rethrow "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
+                    "\"rest_get_allowed_values\" attribute: %s: %s", action.app, action.action, key, $1.err, $1.desc);
+                info = cast<hash<RestGetAllowedValuesInfo>>(rest_get_allowed_values);
+            }
+            if (*hash<auto> h = (RestGetAllowedValuesRequiredKeys - keys info)) {
+                on_error rethrow "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
+                    "\"rest_get_allowed_values\" attribute; the following required keys are missing: %y", action.app,
+                    action.action, key, keys h);
+            }
+            romap{key} = info;
             h.ref_data = key;
         }
         if (exists (auto get_dependent_options = remove h.get_dependent_options)) {
@@ -759,6 +832,20 @@ public class TypeScriptActionInterface {
             };
             action.data_dependent_options = True;
         }
+        if (exists (auto get_default_value = remove h.get_default_value)) {
+            if (!get_default_value.callp()) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
+                    "\"get_default_value\" attribute; got type %y; expecting a callable value", action.app,
+                    action.action, key, get_default_value.fullType());
+            }
+            dvmap{key} = <AsyncCallInfo>{
+                "label": sprintf("Default value data function for app %y action %y option %y", action.app,
+                    action.action, key),
+                "pool": pool,
+                "async_call": get_default_value,
+                "to": io_timeout,
+            };
+        }
         if (h.required && !h.preselected && !exists h.default_value) {
             h.preselected = True;
         }
@@ -766,11 +853,12 @@ public class TypeScriptActionInterface {
 
     static *hash<string, hash<ActionOptionInfo>> getOptions(hash<DataProviderAppInfo> app,
             reference<hash<auto>> action, hash<auto> opts, reference<hash<string, hash<AsyncCallInfo>>> omap,
-            reference<hash<string, hash<AsyncCallInfo>>> dmap, reference<hash<string, hash<auto>>> romap,
-            JavaScriptProgramPool pool) {
+            reference<hash<string, hash<AsyncCallInfo>>> dmap,
+            reference<hash<string, hash<RestGetAllowedValuesInfo>>> romap,
+            reference<hash<string, hash<AsyncCallInfo>>> dvmap, JavaScriptProgramPool pool) {
         hash<string, hash<ActionOptionInfo>> rv;
         foreach hash<auto> i in (opts.pairIterator()) {
-            TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, \romap, i.key, \i.value, pool);
+            TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, \romap, \dvmap, i.key, \i.value, pool);
             rv{i.key} = TypeScriptActionInterface::getOptionInfo(i.value);
             if (dmap{i.key}) {
                 rv{i.key}.structural_determinate = True;
@@ -959,6 +1047,10 @@ public class TypeScriptActionInterface {
 
     static bool appSupportsEvents(string app) {
         return exists emap{app.lwr()};
+    }
+
+    static *hash<auto> getConnectionUpdateOptions(string app) {
+        return app_conn_update_map{app.lwr()};
     }
 
     #! Registers an API for creating a webhook

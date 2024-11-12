@@ -46,7 +46,7 @@ public class TypeScriptAppRestClient inherits RestClient {
         if (post_auth) {
             rv += TypeScriptActionDataProviderBase::getAsyncValueArgs(self, post_auth, {
                 "conn_name": conn.name,
-                "conn_opts": h + conn.getRealOptions(),
+                "conn_opts": conn.getRealOptions() + h + rv,
             });
             info("Connection %y app %y post-auth adding options: %y", conn.name, conn.getAppName(), rv);
 

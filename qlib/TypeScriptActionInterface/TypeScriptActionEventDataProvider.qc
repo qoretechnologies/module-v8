@@ -46,8 +46,9 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
 
     #! Creates the object from the arguments
     constructor(string name, string event_id, hash<DataProviderMessageInfo> event_info,
-            *hash<string, hash<AsyncCallInfo>> omap, *hash<string, hash<auto>> romap, hash<AsyncCallInfo> event)
-            : TypeScriptActionEventDataProviderBase(name, event_id, event_info, omap, romap) {
+            *hash<string, hash<AsyncCallInfo>> omap, *hash<string, hash<RestGetAllowedValuesInfo>> romap,
+            *hash<string, hash<AsyncCallInfo>> dvmap, hash<AsyncCallInfo> event)
+            : TypeScriptActionEventDataProviderBase(name, event_id, event_info, omap, romap, dvmap) {
         self.event = event;
     }
 
@@ -101,7 +102,7 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
                 return stop_flag;
             });
         } catch (hash<ExceptionInfo> ex) {
-            error("Exception in event thread: %s", get_exception_string(ex));
+            error("EVENT-THREAD-ERROR", "Exception in event thread: %s", get_exception_string(ex));
         }
     }
 

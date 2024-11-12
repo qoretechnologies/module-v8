@@ -53,8 +53,9 @@ class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProviderBase 
 
     constructor(string name, hash<AsyncCallInfo> api, *AbstractDataProviderType request_type,
             *AbstractDataProviderType response_type, *hash<string, hash<AsyncCallInfo>> omap,
-            *hash<string, hash<AsyncCallInfo>> dmap, *hash<string, hash<auto>> romap)
-            : TypeScriptActionDataProviderBase(name, omap, romap) {
+            *hash<string, hash<AsyncCallInfo>> dmap, *hash<string, hash<RestGetAllowedValuesInfo>> romap,
+            *hash<string, hash<AsyncCallInfo>> dvmap)
+            : TypeScriptActionDataProviderBase(name, omap, romap, dvmap) {
         self.api = api;
         self.request_type = request_type;
         self.response_type = response_type;
@@ -70,6 +71,48 @@ class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProviderBase 
     #! "Normalizes" the request and response for testing if necessary
     auto makeNormalizedRequest(auto req, *hash<auto> request_options) {
         return doRequest(req, request_options);
+    }
+
+    #! Sets the connection
+    setConnection(TypeScriptAppRestConnection conn) {
+        TypeScriptActionDataProviderBase::setConnection(conn);
+        if (dvmap) {
+            *hash<string, AbstractDataField> fields = request_type.getFields();
+            *hash<DataContextInfo> arg = getCallContextInfo();
+            hash<string, bool> vmap;
+            foreach hash<auto> i in (dvmap.pairIterator()) {
+                try {
+                    debug("Retrieving default value with JS for data provider %y option %y arg: %y", getName(), i.key,
+                        arg);
+                    auto v = getAsyncValue(i.value, arg);
+                    debug("Retrieved default value with JS for data provider %y option %y: %y", getName(), i.key, v);
+                    if (v) {
+                        *AbstractDataField f = fields{i.key};
+                        if (!f) {
+                            throw "ACTION-CONFIG-ERROR", sprintf("Cannot set default type for unknown option %y",
+                                i.key);
+                        }
+                        f.setDefaultValue(v);
+                        vmap{i.key} = True;
+                    }
+                } catch (hash<ExceptionInfo> ex) {
+                    error("ACTION-OPTION-ERROR", "Exception retrieving default value for data provider %y "
+                        "option %y: %s", getName(), i.key, get_exception_string(ex));
+                    rethrow;
+                }
+            }
+            # make "or-nothing" type if appropriate
+            bool ok = True;
+            foreach hash<auto> i in (fields.pairIterator()) {
+                if (!vmap{i.key} && (!exists i.value.getDefaultValue()) && i.value.isMandatory()) {
+                    ok = False;
+                    break;
+                }
+            }
+            if (ok) {
+                request_type = request_type.getOrNothingType();
+            }
+        }
     }
 
     #! Makes a request and returns the response

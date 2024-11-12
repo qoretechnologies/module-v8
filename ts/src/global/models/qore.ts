@@ -152,15 +152,25 @@ export interface IQoreRestConnectionModifiers<
 > {
   options?: ModifierOptions;
   required_options?: string;
-  url_template_options?: Array<keyof ModifierOptions>;
+  url_template_options?: Array<string>;
+  // code that can set additional connection option after the connection has been authorized
   set_options_post_auth?: (
     context: Omit<TQoreAppActionFunctionContext<ModifierOptions>, 'opts'>
-  ) => Promise<Record<keyof ModifierOptions, any>>;
+  ) => Promise<TQoreMappedOptions<ModifierOptions>>;
+  /** allows the REST URL to be changed when an option value is changed
+  */
+  connection_update_option?: {
+    // the option name that the connection update depends on
+    option: string;
+
+    // the code called to return new URL
+    code: (context: TQoreAppActionFunctionContext<ModifierOptions>) => string | void;
+  };
   /** maps connection options (normally required options) that map to Swagger path options; the key is the request
       option name, the value is the action option name; the value of the connection option will be used as the value
       of the given action option in each call where the option is present
   */
-  conn_option_map?: object;
+  conn_option_map?: Record<keyof ModifierOptions, string>;
 }
 
 export type TFirstAppCharacter =
@@ -251,9 +261,11 @@ export interface IQoreBaseAppAction extends IQoreAppShared {
   override_options?: Record<string, Partial<IQoreAppActionOption>>;
 }
 
-export type TQoreAppActionFunctionContext<CustomConnOptions extends Record<string, any> = {}> = {
+export type TQoreAppActionFunctionContext<
+  CustomConnOptions extends Record<string, IQoreAppActionOption> = {},
+> = {
   conn_name?: string;
-  conn_opts?: Partial<IQoreRestConnectionConfig> & CustomConnOptions;
+  conn_opts?: Partial<IQoreRestConnectionConfig> & TQoreMappedOptions<CustomConnOptions>;
   opts?: Record<string, any>;
 };
 
@@ -263,9 +275,18 @@ export type TQoreAppActionFunction = (
   context?: TQoreAppActionFunctionContext
 ) => any;
 
-export type TQoreGetAllowedValuesFunction<TypeValue = unknown> = (
-  context?: TQoreAppActionFunctionContext
+export type TQoreGetAllowedValuesFunction<
+  TypeValue = unknown,
+  CustomConnOptions extends Record<string, IQoreAppActionOption> = {},
+> = (
+  context?: TQoreAppActionFunctionContext<CustomConnOptions>
 ) => IQoreAllowedValue<TypeValue>[] | Promise<IQoreAllowedValue<TypeValue>[]>;
+
+export type TQoreGetDefaultValueFunction<
+  CustomConnOptions extends Record<string, IQoreAppActionOption> = {},
+> = (
+  context?: TQoreAppActionFunctionContext<CustomConnOptions>
+) => any | Promise<any>;
 
 export type TQoreStringCompatibleType =
   | 'string'
@@ -335,6 +356,28 @@ export type TQoreSimpleType =
 
 export type TQoreType = TQoreSimpleType | Record<string, IQoreTypeObject>;
 
+// Mapping between string literals and their corresponding TypeScript types
+export type TQoreTypeMapping = {
+  string: string;
+  number: number;
+  hash: Record<string, any>;
+  list: unknown[];
+  boolean: boolean;
+  [key: string]: any;
+};
+
+// Type to extract the type of each option using the mapping
+export type TQoreOptionType<Option> = Option extends { type: keyof TQoreTypeMapping }
+  ? TQoreTypeMapping[Option['type']]
+  : never;
+
+// Mapped type to map over the keys of the options object and apply the OptionType type
+export type TQoreOptionsType<Options> = {
+  [OptionKey in keyof Options]: TQoreOptionType<Options[OptionKey]>;
+};
+
+export type TQoreMappedOptions<T extends TQoreOptions> = TQoreOptionsType<T>;
+
 export type GetConnectionOptionDefinitionFromQoreType<T extends TQoreType> =
   T extends TQoreStringCompatibleType
     ? IQoreAppActionOption<T, string>
@@ -402,17 +445,23 @@ export interface IQoreRestGetAllowedValues {
   path: string;
 
   // Any REST body
-  body?: object;
+  body?: Record<string, any>;
 
   // Any REST headers
-  headers?: object;
+  headers?: Record<string, any>;
 
   // Location of the values in the result in dot notation (ex: 'body.envelopes.envelopeId')
   values: string;
+
+  // Location of the display names in the result in dot notation (ex: 'body.envelopes.envelopeName')
+  display_names?: string;
 }
 
-export interface IQoreSharedObject<TypeName extends TQoreType = TQoreType, TypeValue = unknown>
-  extends IQoreAppShared {
+export interface IQoreSharedObject<
+  TypeName extends TQoreType = TQoreType,
+  TypeValue = unknown,
+  CustomConnOptions extends Record<string, IQoreAppActionOption> = {},
+> extends IQoreAppShared {
   // either a string or a data object again
   type: TypeName;
 
@@ -430,16 +479,19 @@ export interface IQoreSharedObject<TypeName extends TQoreType = TQoreType, TypeV
 
   // a function that returns the allowed values for the field
   /** Mutually-exclusive with 'rest_get_allowed_values'
-  */
-  get_allowed_values?: TQoreGetAllowedValuesFunction<TypeValue>;
+   */
+  get_allowed_values?: TQoreGetAllowedValuesFunction<TypeValue, CustomConnOptions>;
 
   // a function that returns dependent options for the field
   get_dependent_options?: TQoreGetDependentOptionsFunction;
 
   // an object that describes a REST call to return allowed values
   /** Mutually-exclusive with 'get_allowed_values'
-  */
+   */
   rest_get_allowed_values?: IQoreRestGetAllowedValues;
+
+  // a function that returns the default value for the field
+  get_default_value?: TQoreGetDefaultValueFunction<CustomConnOptions>;
 
   // the number of seconds to wait for the action to complete before timing out
   io_timeout_secs?: number;
