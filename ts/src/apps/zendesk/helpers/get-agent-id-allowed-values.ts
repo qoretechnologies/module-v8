@@ -1,7 +1,5 @@
-import { IQoreRestGetAllowedValues } from '../../../global/models/qore';
+import { CreateZendeskGetAllowedValuesFunction } from './create-get-allowed-values-function';
 
-export const getAgentIdAllowedValues = {
-  method: 'GET',
-  path: 'users?role=agent',
-  values: 'body.users.id',
-} satisfies IQoreRestGetAllowedValues;
+export const getAgentIdAllowedValues = CreateZendeskGetAllowedValuesFunction('users', 'name', {
+  role: 'agent',
+});

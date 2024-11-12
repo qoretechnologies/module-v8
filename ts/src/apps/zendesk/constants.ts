@@ -14,14 +14,14 @@ export const ZENDESK_ALLOWED_PATHS: TAllowedPaths = {
     GET: {
       override_options: {
         ticket_id: {
-          rest_get_allowed_values: getTicketIdAllowedValues,
+          get_allowed_values: getTicketIdAllowedValues,
         },
       },
     },
     PUT: {
       override_options: {
         ticket_id: {
-          rest_get_allowed_values: getTicketIdAllowedValues,
+          get_allowed_values: getTicketIdAllowedValues,
         },
         comment: {
           required: false,
@@ -44,23 +44,23 @@ export const ZENDESK_ALLOWED_PATHS: TAllowedPaths = {
           },
         },
         group_id: {
-          rest_get_allowed_values: getGroupIdAllowedValues,
+          get_allowed_values: getGroupIdAllowedValues,
         },
         organization_id: {
-          rest_get_allowed_values: getGroupIdAllowedValues,
+          get_allowed_values: getGroupIdAllowedValues,
         },
         assignee_id: {
-          rest_get_allowed_values: getAgentIdAllowedValues,
+          get_allowed_values: getAgentIdAllowedValues,
         },
         requester_id: {
-          rest_get_allowed_values: getUserIdAllowedValues,
+          get_allowed_values: getUserIdAllowedValues,
         },
       },
     },
     DELETE: {
       override_options: {
         ticket_id: {
-          rest_get_allowed_values: getTicketIdAllowedValues,
+          get_allowed_values: getTicketIdAllowedValues,
         },
       },
     },
@@ -89,17 +89,20 @@ export const ZENDESK_ALLOWED_PATHS: TAllowedPaths = {
             },
           },
         },
+        subject: {
+          required: true,
+        },
         group_id: {
-          rest_get_allowed_values: getGroupIdAllowedValues,
+          get_allowed_values: getGroupIdAllowedValues,
         },
         organization_id: {
-          rest_get_allowed_values: getGroupIdAllowedValues,
+          get_allowed_values: getGroupIdAllowedValues,
         },
         assignee_id: {
-          rest_get_allowed_values: getAgentIdAllowedValues,
+          get_allowed_values: getAgentIdAllowedValues,
         },
         requester_id: {
-          rest_get_allowed_values: getUserIdAllowedValues,
+          get_allowed_values: getUserIdAllowedValues,
         },
       },
     },
@@ -111,21 +114,21 @@ export const ZENDESK_ALLOWED_PATHS: TAllowedPaths = {
     DELETE: {
       override_options: {
         group_id: {
-          rest_get_allowed_values: getGroupIdAllowedValues,
+          get_allowed_values: getGroupIdAllowedValues,
         },
       },
     },
     GET: {
       override_options: {
         group_id: {
-          rest_get_allowed_values: getGroupIdAllowedValues,
+          get_allowed_values: getGroupIdAllowedValues,
         },
       },
     },
     PUT: {
       override_options: {
         group_id: {
-          rest_get_allowed_values: getGroupIdAllowedValues,
+          get_allowed_values: getGroupIdAllowedValues,
         },
         group: {
           required: true,
@@ -207,14 +210,14 @@ export const ZENDESK_ALLOWED_PATHS: TAllowedPaths = {
     DELETE: {
       override_options: {
         user_id: {
-          rest_get_allowed_values: getUserIdAllowedValues,
+          get_allowed_values: getUserIdAllowedValues,
         },
       },
     },
     PUT: {
       override_options: {
         user_id: {
-          rest_get_allowed_values: getUserIdAllowedValues,
+          get_allowed_values: getUserIdAllowedValues,
         },
         user: {
           required: true,
@@ -262,7 +265,7 @@ export const ZENDESK_ALLOWED_PATHS: TAllowedPaths = {
     GET: {
       override_options: {
         user_id: {
-          rest_get_allowed_values: getUserIdAllowedValues,
+          get_allowed_values: getUserIdAllowedValues,
         },
       },
     },
@@ -325,21 +328,21 @@ export const ZENDESK_ALLOWED_PATHS: TAllowedPaths = {
     DELETE: {
       override_options: {
         organization_id: {
-          rest_get_allowed_values: getGroupIdAllowedValues,
+          get_allowed_values: getGroupIdAllowedValues,
         },
       },
     },
     GET: {
       override_options: {
         organization_id: {
-          rest_get_allowed_values: getGroupIdAllowedValues,
+          get_allowed_values: getGroupIdAllowedValues,
         },
       },
     },
     PUT: {
       override_options: {
         organization_id: {
-          rest_get_allowed_values: getGroupIdAllowedValues,
+          get_allowed_values: getGroupIdAllowedValues,
         },
         name: {
           type: 'string',
@@ -347,7 +350,7 @@ export const ZENDESK_ALLOWED_PATHS: TAllowedPaths = {
         },
         group_id: {
           type: 'string',
-          rest_get_allowed_values: getGroupIdAllowedValues,
+          get_allowed_values: getGroupIdAllowedValues,
         },
         notes: {
           type: 'string',
@@ -367,7 +370,7 @@ export const ZENDESK_ALLOWED_PATHS: TAllowedPaths = {
           required: true,
         },
         group_id: {
-          rest_get_allowed_values: getGroupIdAllowedValues,
+          get_allowed_values: getGroupIdAllowedValues,
         },
       },
     },
@@ -405,7 +408,7 @@ export const ZENDESK_ALLOWED_PATHS: TAllowedPaths = {
     GET: {
       override_options: {
         ticket_metric_id: {
-          rest_get_allowed_values: getTicketMetricIdAllowedValues,
+          get_allowed_values: getTicketMetricIdAllowedValues,
         },
       },
     },

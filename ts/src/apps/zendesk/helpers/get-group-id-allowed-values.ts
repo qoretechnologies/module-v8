@@ -1,7 +1,3 @@
-import { IQoreRestGetAllowedValues } from '../../../global/models/qore';
+import { CreateZendeskGetAllowedValuesFunction } from './create-get-allowed-values-function';
 
-export const getGroupIdAllowedValues = {
-  method: 'GET',
-  path: 'groups',
-  values: 'body.groups.id',
-} satisfies IQoreRestGetAllowedValues;
+export const getGroupIdAllowedValues = CreateZendeskGetAllowedValuesFunction('groups');

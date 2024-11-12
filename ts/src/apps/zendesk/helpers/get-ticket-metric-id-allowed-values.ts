@@ -1,7 +1,6 @@
-import { IQoreRestGetAllowedValues } from '../../../global/models/qore';
+import { CreateZendeskGetAllowedValuesFunction } from './create-get-allowed-values-function';
 
-export const getTicketMetricIdAllowedValues = {
-  method: 'GET',
-  path: 'ticket_metrics',
-  values: 'body.ticket_metrics.id',
-} satisfies IQoreRestGetAllowedValues;
+export const getTicketMetricIdAllowedValues = CreateZendeskGetAllowedValuesFunction(
+  'ticket_metrics',
+  'url'
+);
