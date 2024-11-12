@@ -44,27 +44,33 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
         string name;
 
         #! The connection for the action
-        AbstractConnection conn;
+        TypeScriptAppRestConnection conn;
 
         #! Options with functions for reference data
         *hash<string, hash<AsyncCallInfo>> omap;
 
         #! Options with REST configuration for retrieving reference data
-        *hash<string, hash<auto>> romap;
+        *hash<string, hash<RestGetAllowedValuesInfo>> romap;
+
+        #! Options with functions for the default value
+        *hash<string, hash<AsyncCallInfo>> dvmap;
 
         #! Any REST client to use for reference data, for example
         RestClient rest;
     }
 
     #! Creates the object from the arguments
-    constructor(string name, *hash<string, hash<AsyncCallInfo>> omap, *hash<string, hash<auto>> romap) {
+    constructor(string name, *hash<string, hash<AsyncCallInfo>> omap,
+            *hash<string, hash<RestGetAllowedValuesInfo>> romap,
+            *hash<string, hash<AsyncCallInfo>> dvmap) {
         self.name = name;
         self.omap = omap;
         self.romap = romap;
+        self.dvmap = dvmap;
     }
 
     #! Sets the connection
-    setConnection(AbstractConnection conn) {
+    setConnection(TypeScriptAppRestConnection conn) {
         self.conn = conn;
     }
 
@@ -267,7 +273,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
             return map cast<hash<AllowedValueInfo>>($1 instanceof JavaScriptObject ? $1.toData() : $1), l;
         } else if (*hash<auto> ref_rest = romap{type}) {
             if (!rest) {
-                checkRestClient();
+                checkRestClient(action_opts);
             }
             string path = ref_rest.path;
             if (action_opts) {
@@ -283,7 +289,10 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
             debug("Reference data with REST for data provider %y type %y got: %y", getName(), type, resp);
             hash<auto> v = resp;
             *softlist<hash<AllowedValueInfo>> rv = getAllowedValues(resp, ref_rest.values.split("."));
-            debug("Reference data with REST for data provider %y type %y allowed values: %y", getName(), type, (map $1.value, rv));
+            if (rv && ref_rest.display_names.val()) {
+                getDisplayNames(type, resp, ref_rest.display_names.split("."), \rv);
+            }
+            debug("Reference data with REST for data provider %y type %y allowed values: %y", getName(), type, rv);
             return rv;
         }
     }
@@ -304,10 +313,82 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
         return foldl $1 + $2, (map TypeScriptActionDataProviderBase::getAllowedValues($1, kl), v0);
     }
 
+    #! Adds display names to allowed values
+    private getDisplayNames(string type, auto v, list<string> dnl, reference<list<hash<AllowedValueInfo>>> rv) {
+        if (*list<string> l = getDisplayNamesIntern(type, v, dnl)) {
+            if (l.size() != rv.size()) {
+                throw "REST-ALLOWED-VALUES-ERROR", sprintf("Data provider %y type %y returned %d display_name%s "
+                    "for %d value%s", getName(), type, l.size(), l.size() == 1 ? "" : "s",
+                    rv.size(), rv.size() == 1 ? "" : "s");
+            }
+
+            # check for duplicates
+            bool dup;
+            {
+                hash<string, bool> m;
+                foreach string dn in (l) {
+                    if (m{dn}) {
+                        dup = True;
+                        break;
+                    }
+                    m{dn} = True;
+                }
+            }
+            foreach hash<AllowedValueInfo> info in (\rv) {
+                info.display_name = dup
+                    ? sprintf("%s-%s", l[$#], info.value)
+                    : l[$#];
+            }
+        }
+    }
+
+    #! Adds display names to allowed values
+    private *list<string> getDisplayNamesIntern(string type, auto v, list<string> dnl) {
+        string k = shift dnl;
+        auto v0 = v{k};
+        if (!exists v0) {
+            return;
+        }
+        if (!dnl) {
+            list<string> rv;
+            foreach auto dn in (v0) {
+                if (!dn.strp()) {
+                    throw "REST-ALLOWED-VALUES-ERROR", sprintf("Data provider %y type %y display name has type "
+                        "%y (%y) that cannot be converted to a string", getName(), type, dn.fullType(), dn);
+                }
+                rv += dn.toString();
+            }
+            return rv;
+        }
+        return foldl $1 + $2, (map TypeScriptActionDataProviderBase::getDisplayNamesIntern(type, $1, dnl), v0);
+    }
+
     #! Check and assign REST client
-    private synchronized checkRestClient() {
+    private synchronized checkRestClient(*hash<auto> action_opts) {
         if (!rest) {
             rest = conn.get();
+        }
+        # get connection update options
+        if (action_opts) {
+            checkUpdateRestOptions(rest, action_opts);
+        }
+    }
+
+    private checkUpdateRestOptions(RestClient rest, hash<auto> action_opts) {
+        if ((*hash<auto> cuo = TypeScriptActionInterface::getConnectionUpdateOptions(conn.getAppName()))
+            && (exists (auto v = action_opts{cuo.option}))) {
+            *hash<DataContextInfo> arg = getCallContextInfo(action_opts);
+            debug("Retrieving connection update data with JS for data provider %y option: %s = %y arg: %y",
+                getName(), cuo.option, v, arg);
+            *string new_url = getAsyncValue(cuo."code", arg);
+            debug("Connection update data with JS for data provider %y new URL: %y", getName(), new_url);
+            if (exists new_url) {
+                string url = rest.getURL();
+                if (url != new_url) {
+                    debug("Connection update data with JS for data provider %y new URL: %y", getName(), new_url);
+                    rest.setURL(new_url);
+                }
+            }
         }
     }
 
