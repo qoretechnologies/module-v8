@@ -214,6 +214,10 @@ export const mapActionsToApp = (
     action_code: EQoreAppActionCode.ACTION,
 
     options: 'options' in action ? fixOptions(action, action.options, app, locale) : undefined,
+    override_options:
+      'override_options' in action
+        ? fixOptions(action, action.override_options, app, locale)
+        : undefined,
     response_type:
       'response_type' in action
         ? fixActionType(action.response_type, app, locale, action._localizationGroup)
@@ -417,7 +421,7 @@ export const fixTriggerEventInfoType = (
 
 export const fixOptions = (
   action: TQorePartialEventAction | TQorePartialNonEventAction,
-  collection: TQoreOptions,
+  collection: TQoreOptions | Record<string, Partial<IQoreAppActionOption>>,
   appName: string,
   locale: Locales
 ): TQoreOptions => {
@@ -429,7 +433,10 @@ export const fixOptions = (
     return localization[field]?.() || '';
   };
 
-  const processCollection = (collection: TQoreOptions, path: string[] = []): TQoreOptions => {
+  const processCollection = (
+    collection: TQoreOptions | Record<string, Partial<IQoreAppActionOption>>,
+    path: string[] = []
+  ): TQoreOptions => {
     return reduce(
       collection,
       (fixedOptions: TQoreOptions, option: IQoreTypeObject, key: string): TQoreOptions => {

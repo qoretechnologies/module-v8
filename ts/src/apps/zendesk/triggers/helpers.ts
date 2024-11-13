@@ -3,6 +3,7 @@ import { IQoreAppActionWithWebhookBase } from '../../../global/models/qore';
 import { ZENDESK_CONN_OPTIONS } from '..';
 
 export const createZendeskWebhookRegistrar = (
+  webhookName: string,
   subscriptions: string[]
 ): IQoreAppActionWithWebhookBase<typeof ZENDESK_CONN_OPTIONS>['webhook_register'] => {
   return async (context, url) => {
@@ -17,7 +18,7 @@ export const createZendeskWebhookRegistrar = (
         },
         data: {
           webhook: {
-            name: 'New Organization Webhook',
+            name: `${webhookName} Webhook created by Qorus`,
             status: 'active',
             endpoint: url,
             http_method: 'POST',
