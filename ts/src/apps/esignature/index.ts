@@ -39,6 +39,78 @@ export interface IEsignatureUserInfo {
   email: string;
 }
 
+const DisplayAllowedValues: {
+  display_name: string;
+  desc: string;
+  value: string;
+}[] = [
+  {
+    display_name: 'modal',
+    desc:
+      'The document is shown as a supplement action strip and can be viewed, downloaded, or printed ' +
+      'in a modal window. This is the recommended value for supplemental documents.',
+    value: 'modal',
+  },
+  {
+    display_name: 'inline',
+    desc:
+      'The document is shown in the normal signing window. This value is not used with supplemental ' +
+      'documents, but is the default value for all other documents.',
+    value: 'inline',
+  },
+];
+
+const HrmlDisplayAllowedValues: {
+  display_name: string;
+  desc: string;
+  value: string;
+}[] = [
+  {
+    display_name: 'inline',
+    desc:
+      'Leaves the HTML where it is in the document. This property lets you add a label or present on a separate ' +
+      'page.',
+    value: 'inline',
+  },
+  {
+    display_name: 'collapsible',
+    desc: 'The HTML in this section may be expanded or collapsed. Initially this section is expanded.',
+    value: 'collapsible',
+  },
+  {
+    display_name: 'collapsed',
+    desc: 'The HTML in this section may be expanded or collapsed. Initially this section is collapsed.',
+    value: 'collapsed',
+  },
+  {
+    display_name: 'continue_button',
+    desc:
+      "Creates a stop point in the document to draw the reader's attention before proceeding to the next " +
+      'section.',
+    value: 'continue_button',
+  },
+  {
+    display_name: 'responsive_table',
+    desc:
+      'Turns this section into a responsive table. Note that this is only used on HTML tables that fall within the ' +
+      'anchor start and end positions.',
+    value: 'responsive_table',
+  },
+  {
+    display_name: 'responsive_table_single_column',
+    desc:
+      'Turns this section into a responsive single-column table. Note this is only used on HTML tables that fall ' +
+      'within the anchor start and end positions. The table will be converted to one single column where each ' +
+      'current column will become a row, then stacked.',
+    value: 'collapsed',
+  },
+  {
+    display_name: 'print_only',
+    desc: 'Do not show this portion of the HTML in the responsive signing view.',
+    value: 'print_only',
+  },
+];
+
 export default (locale: Locales) =>
   ({
     display_name: L[locale].apps[ESIGNATURE_APP_NAME].displayName(),
@@ -62,6 +134,106 @@ export default (locale: Locales) =>
     logo_mime_type: 'image/svg+xml',
     swagger: 'schemas/esignature.swagger.json',
     swagger_paths: createSwaggerPaths(ESIGNATURE_PATHS),
+    swagger_type_overrides: {
+      'agent.email': {
+        required: true,
+      },
+      'agent.name': {
+        required: true,
+      },
+      'agent.routingOrder': {
+        required: true,
+        default_value: '1',
+      },
+      'carbonCopy.email': {
+        required: true,
+      },
+      'carbonCopy.name': {
+        required: true,
+      },
+      'carbonCopy.routingOrder': {
+        required: true,
+        default_value: '1',
+      },
+      'certifiedDelivery.email': {
+        required: true,
+      },
+      'certifiedDelivery.name': {
+        required: true,
+      },
+      'certifiedDelivery.routingOrder': {
+        required: true,
+        default_value: '1',
+      },
+      'document.display': {
+        allowed_values: DisplayAllowedValues,
+      },
+      'document.fileExtension': {
+        default_value: 'pdf',
+      },
+      'envelopeDocument.display': {
+        allowed_values: DisplayAllowedValues,
+      },
+      'documentHtmlDisplaySettings.display': {
+        allowed_values: HrmlDisplayAllowedValues,
+      },
+      'smartSectionDisplaySettings.display': {
+        allowed_values: HrmlDisplayAllowedValues,
+      },
+      'document.documentBase64': {
+        required: true,
+      },
+      'editor.email': {
+        required: true,
+      },
+      'editor.name': {
+        required: true,
+      },
+      'editor.routingOrder': {
+        required: true,
+        default_value: '1',
+      },
+      'inPersonSigner.email': {
+        required: true,
+      },
+      'inPersonSigner.name': {
+        required: true,
+      },
+      'inPersonSigner.routingOrder': {
+        required: true,
+        default_value: '1',
+      },
+      'intermediary.email': {
+        required: true,
+      },
+      'intermediary.name': {
+        required: true,
+      },
+      'intermediary.routingOrder': {
+        required: true,
+        default_value: '1',
+      },
+      'signer.email': {
+        required: true,
+      },
+      'signer.name': {
+        required: true,
+      },
+      'signer.routingOrder': {
+        required: true,
+        default_value: '1',
+      },
+      'witness.email': {
+        required: true,
+      },
+      'witness.name': {
+        required: true,
+      },
+      'witness.routingOrder': {
+        required: true,
+        default_value: '1',
+      },
+    },
     rest: {
       url: 'https://{{base_uri}}/restapi/v2.1/accounts/{{account_id}}',
       data: 'json',

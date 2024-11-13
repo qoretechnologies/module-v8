@@ -229,6 +229,7 @@ export interface IQoreApp<
   swagger?: string;
   swagger_options?: object;
   swagger_paths?: string[];
+  swagger_type_overrides?: object;
 }
 
 export interface IQoreAppWithActions<

@@ -140,6 +140,9 @@ public class TypeScriptActionInterface {
         #! Maps from app names to Swagger schemas
         static hash<string, SwaggerSchema> app_swagger_map;
 
+        #! Maps from app names to SwaggerDataProvider object
+        static hash<string, SwaggerDataProvider> app_swagger_dp;
+
         #! Maps from app names to REST template options; app -> option -> True
         static hash<string, hash<string, bool>> atmap;
 
@@ -200,7 +203,7 @@ public class TypeScriptActionInterface {
         if ((*string swagger_loc = remove app.swagger).val()) {
             on_error rethrow $1.err, sprintf("%s (while loading app %y)", $1.desc, app.name);
             schema = TypeScriptActionInterface::getSwaggerSchema(appname, swagger_loc, remove app.swagger_options,
-                remove app.swagger_paths);
+                remove app.swagger_paths, remove app.swagger_type_overrides);
         }
         hash<auto> app0 += app;
         if (app.logo) {
@@ -322,7 +325,7 @@ public class TypeScriptActionInterface {
     }
 
     static SwaggerSchema getSwaggerSchema(string appname, string swagger_loc, *hash<auto> swagger_opts,
-            *list<auto> paths) {
+            *list<auto> paths, *hash<auto> swagger_type_overrides) {
         # first check cache
         string path_sha512;
         if (paths) {
@@ -342,6 +345,9 @@ public class TypeScriptActionInterface {
         SwaggerSchema schema = SwaggerLoader::fromString(schema_source, NOTHING, swagger_opts);
         if (store_in_cache) {
             TypeScriptActionInterface::cacheSchema(filename, schema_source);
+        }
+        if (swagger_type_overrides) {
+            TypeScriptActionInterface::overrideTypes(appname, schema, swagger_type_overrides);
         }
         return schema;
     }
@@ -697,18 +703,9 @@ public class TypeScriptActionInterface {
 
             # check for path vars0
             *hash<string, bool> path_vars = map {$1: True}, (swagger_path =~ x/\{([^\}]*)}/g);
-            TypeScriptActionApiWithSchemaDataProvider dp(action.action, schema, swagger_path, api, path_vars,
-                app_conn_opt_map{app.name.lwr()});
+            TypeScriptActionApiWithSchemaDataProvider dp(\action, swagger_path, api, path_vars,
+                app_conn_opt_map{app.name.lwr()}, remove action.override_options, pool);
             child = dp;
-
-            if ((*AbstractDataProviderType t = child.getRequestType())
-                && (*hash<string, AbstractDataField> fields = t.getFields())) {
-                action.options = DataProviderActionCatalog::getActionOptionFromFields(fields);
-            }
-            # allow options to be updated
-            if (*hash<auto> override_options = remove action.override_options) {
-                dp.overrideOptions(\action, override_options, pool);
-            }
 
             action.output_type = child.getResponseType();
             if (remove action.response_type) {
@@ -1097,6 +1094,115 @@ public class TypeScriptActionInterface {
             throw "WEBHOOK-API-ERROR", "Cannot delete a webhook; there is no webhook deletion API in place";
         }
         TypeScriptActionInterface::WebhookDelete(url);
+    }
+
+    #! Returns a Swagger data provider for the given app
+    static SwaggerDataProvider getSwaggerDataProvider(string app) {
+        string appname = app.lwr();
+        *SwaggerDataProvider rv = app_swagger_dp{appname};
+        if (!rv) {
+            *SwaggerSchema schema = app_swagger_map{appname};
+            if (!schema) {
+                throw "APP-ERROR", sprintf("App %y has no Swagger schema", app);
+            }
+            app_swagger_dp{appname} = rv = new SwaggerDataProvider(schema);
+        }
+        return rv;
+    }
+
+    static private overrideTypes(string app, SwaggerSchema schema, hash<auto> swagger_type_overrides) {
+        foreach hash<auto> i in (swagger_type_overrides.pairIterator()) {
+            list<string> l = i.key.split(".");
+            string n = shift l;
+            AbstractDataProviderType t = schema.getTypeForReference(n);
+            if (!l) {
+                # override existing type
+                t = TypeScriptActionInterface::getModifiedType(app, n, t, i.value);
+                schema.replaceCachedTypeForReference(n, t);
+            } else {
+                TypeScriptActionApiWithSchemaDataProvider::overrideOptionType({
+                    "app": app,
+                    "action": "<all>",
+                }, t, l, i.value, i.key);
+            }
+        }
+    }
+
+    static AbstractDataProviderType getModifiedType(string app, string opt, AbstractDataProviderType t, hash<auto> h) {
+        if (h.type) {
+            return TypeScriptActionInterface::getType(h.type, h.required);
+        }
+
+        QoreDataType rv;
+        if (!(t instanceof QoreDataType)) {
+            rv = new QoreDataType(new Type((rv ?? t).getBaseTypeName()));
+        } else {
+            rv = t.copy();
+        }
+
+        if (exists (*bool req = remove h.required)) {
+            if (req) {
+                if (!t.isMandatory()) {
+                    TyeScriptTypeEditor::setMandatory(rv);
+                }
+            } else if (t.isMandatory()) {
+                TyeScriptTypeEditor::setOrNothing(rv);
+            }
+        }
+
+        map TyeScriptTypeEditor::setProp(rv, $1.key, $1.value),
+            (remove h{"name", "display_name", "desc", "short_desc", "default_value"}).pairIterator();
+
+        if (h) {
+            throw "APP-ERROR", sprintf("App %y: cannot update the following attributes on Swagger types: %y", app, h);
+        }
+
+        return rv;
+    }
+}
+}
+
+namespace Priv {
+class TyeScriptTypeEditor inherits QoreDataType {
+    static setProp(QoreDataType t, string prop, auto val) {
+        t{prop} = val;
+    }
+
+    static setMandatory(QoreDataType t) {
+        if (t.name && t.name =~ /^\*/) {
+            t.name = t.name[1..];
+        }
+        if (t.display_name && t.display_name =~ /^\*/) {
+            t.display_name = t.display_name[1..];
+        }
+        t.or_nothing_type = False;
+        remove t.accept_type_hash_simple."nothing";
+        remove t.accept_type_hash."nothing";
+        remove t.accept_type_hash_simple."null";
+        remove t.accept_type_hash."null";
+        remove t.return_type_hash_simple."nothing";
+        remove t.return_type_hash."nothing";
+        remove t.return_type_hash_simple."null";
+        remove t.return_type_hash."null";
+        remove t.base_type_hash{NT_NOTHING};
+        remove t.base_type_hash{NT_NULL};
+        t.type = t.type.getMandatoryType();
+    }
+
+    static setOrNothing(QoreDataType t) {
+        if (t.name && t.name !~ /^\*/) {
+            t.name = "*" + t.name;
+        }
+        if (t.display_name && t.display_name !~ /^\*/) {
+            t.display_name = "*" + t.display_name;
+        }
+        t.or_nothing_type = True;
+        t.accept_type_hash_simple."nothing" = t.accept_type_hash."nothing" = True;
+        t.return_type_hash_simple."nothing" = t.return_type_hash."nothing" = True;
+        if (!t.options."qore.no_null") {
+            t.accept_type_hash_simple."null" = t.accept_type_hash."null" = True;
+        }
+        t.type = t.type.getOrNothingType();
     }
 }
 }
