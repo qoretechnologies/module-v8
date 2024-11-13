@@ -30,10 +30,12 @@ export const CreateZendeskGetAllowedValuesFunction = (
         { url: `https://${subdomain}.zendesk.com`, endpointId: 'Zendesk' }
       );
 
-      const additionalValues = data[entity].map((entity: { [x: string]: any; id: any }) => ({
-        value: entity.id,
-        displayName: entity[displayNameField],
-      }));
+      const additionalValues: IQoreAllowedValue[] = data[entity].map(
+        (entity: { [x: string]: string; id: string }): IQoreAllowedValue => ({
+          value: entity.id,
+          display_name: entity[displayNameField],
+        })
+      );
 
       values.push(...additionalValues);
 
