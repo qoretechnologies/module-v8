@@ -174,7 +174,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
             if (!opt) {
                 TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, \romap, \dvmap, i.key, \i.value,
                     pool);
-                opt{k} = TypeScriptActionInterface::getOptionInfo(i.value);
+                opt = TypeScriptActionInterface::getOptionInfo(i.value);
             } else {
                 TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, \romap, \dvmap, i.key, \i.value,
                     pool);
