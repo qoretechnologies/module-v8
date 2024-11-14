@@ -365,6 +365,10 @@ QoreValue QoreV8Program::getQoreValue(ExceptionSink* xsink, v8::Local<v8::Value>
         // returns a double
         double v = n.ToLocalChecked()->Value();
         //printd(5, "QoreV8Program::getQoreValue() Number: %g\n", v);
+        double intpart;
+        if (modf(v, &intpart) == 0.0) {
+            return QoreValue((int64)v);
+        }
         return QoreValue(v);
     }
 
