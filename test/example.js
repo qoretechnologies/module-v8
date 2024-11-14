@@ -334,6 +334,22 @@ exports.actionsCatalogue = {
                         }
                     }
                 },
+                "list": {
+                    "type": {
+                        "type": "softlist",
+                        "element_type": {
+                            "type": "hash",
+                            "fields": {
+                                "a": {
+                                    "type": "string",
+                                },
+                                "b": {
+                                    "type": "int",
+                                },
+                            },
+                        },
+                    },
+                },
             },
 
             /** "response_type" defines the response type when "action_code" == DPAT_API

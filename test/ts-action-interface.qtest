@@ -321,9 +321,17 @@ var obj = {
         conn = new TypeScriptAppRestConnection(config);
         prov = TypeScriptActionInterface::getDataProvider("js-test", conn).getChildProviderEx("test-api");
         t = prov.getRequestTypeWithData({"key": "A"});
-        assertEq(("count", "other", "key", "a0", "a1"), keys t.getFields());
+        assertEq(("count", "other", "key", "list", "a0", "a1"), keys t.getFields());
         t = prov.getRequestTypeWithData({"key": "B"});
-        assertEq(("count", "other", "key", "b0", "b1"), keys t.getFields());
+        assertEq(("count", "other", "key", "list", "b0", "b1"), keys t.getFields());
+        {
+            hash<auto> h = {
+                "count": 1,
+                "other": "a",
+                "list": ({"a": "str", "b": 1},),
+            };
+            assertEq(h, t.acceptsValue(h));
+        }
 
         TypeScriptAppRestClient rest = conn.get(False);
         hash<auto> h = TestRestClient::test0(rest, {});

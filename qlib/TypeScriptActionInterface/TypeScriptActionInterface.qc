@@ -908,8 +908,70 @@ public class TypeScriptActionInterface {
     }
 
     static AbstractDataProviderType getType(hash<auto> h, *bool required) {
+        if (h.type.typeCode() != NT_STRING) {
+            return TypeScriptActionInterface::getHashType(h, required);
+        }
+        hash<auto> orig = h;
+        hash<auto> info;
+        *Type type = DataTypeMap{(!required ? "*" : "") + remove h.type};
+        if (!type) {
+            throw "TYPE-ERROR", sprintf("Cannot match type %y to a known Qore type", orig.type);
+        }
+        hash<NameDescInfo> attr();
+        map attr{$1.key} = $1.value, (remove h{"name", "display_name", "short_desc", "desc"}).pairIterator();
+        auto default_value = remove h.default_value;
+        hash<auto> tags;
+        if (remove h.required) {
+            tags.required = True;
+        }
+        if (remove h.preselected) {
+            tags.preselected = True;
+        }
+        AbstractDataProviderType rv;
+        if (orig.type == "hash") {
+            hash<auto> f = remove h.fields;
+            /*
+            AbstractDataProviderType element_type;
+            if (auto t = remove h.element_type) {
+                element_type = TypeScriptActionInterface::getType(t);
+            }
+            */
+            rv = new HashDataType(type, attr.name, NOTHING, tags, default_value, attr);
+        } else if (orig.type == "list") {
+            AbstractDataProviderType element_type;
+            if (auto t = remove h.element_type) {
+                element_type = TypeScriptActionInterface::getType(t);
+            }
+            rv = new ListDataType(element_type ?? AutoType, !orig.required, NOTHING, tags, default_value, attr);
+        } else if (orig.type == "softlist") {
+            AbstractDataProviderType element_type;
+            if (auto t = remove h.element_type) {
+                element_type = TypeScriptActionInterface::getType(t);
+            }
+            rv = new SoftListDataType(element_type ?? AutoType, !orig.required, NOTHING, tags, default_value, attr);
+        } else {
+            if (*hash<auto> f = remove h.fields) {
+                throw "TYPE-ERROR", sprintf("Type %y cannot support fields; use type \"hash\" with fields",
+                    orig.type);
+            }
+            if (auto t = remove h.element_type) {
+                throw "TYPE-ERROR", sprintf("Type %y cannot support an element type", orig.type);
+            }
+            rv = new QoreDataType(type, NOTHING, tags, default_value, attr);
+        }
+        if (h) {
+            throw "TYPE-ERROR", sprintf("Type description has unknown keys: %y", keys h);
+        }
+        return rv;
+    }
+
+    static HashDataType getHashType(hash<auto> h, *bool required) {
         on_error rethrow $1.err, sprintf("%s (type: %y)", $1.desc, h);
         HashDataType type(required ? AutoHashType : AutoHashOrNothingType);
+        return TypeScriptActionInterface::getHashTypeIntern(type, h, required);
+    }
+
+    static HashDataType getHashTypeIntern(HashDataType type, hash<auto> h, *bool required) {
         list<hash<auto>> dependent_fields;
         if (exists (auto dps = remove h.dependent_fields)) {
             if (dps.typeCode() != NT_LIST) {
