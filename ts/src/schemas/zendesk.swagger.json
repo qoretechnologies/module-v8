@@ -14608,7 +14608,8 @@
         },
         "group_id": {
           "description": "Agent's Group ID",
-          "type": "integer"
+          "type": "integer",
+          "format": "int64"
         },
         "id": {
           "description": "Agent ID",
@@ -17602,7 +17603,8 @@
         },
         "group_id": {
           "description": "The id of a group",
-          "type": "integer"
+          "type": "integer",
+          "format": "int64"
         },
         "id": {
           "description": "Automatically assigned upon creation",
@@ -18389,7 +18391,8 @@
                   "type": "object"
                 },
                 "group_id": {
-                  "type": "integer"
+                  "type": "integer",
+                  "format": "int64"
                 },
                 "id": {
                   "type": "integer"
@@ -19375,6 +19378,7 @@
         "group_id": {
           "description": "New tickets from users in this organization are automatically put in this group",
           "type": "integer",
+          "format": "int64",
           "x-nullable": true
         },
         "id": {
@@ -19974,6 +19978,7 @@
         "group_id": {
           "description": "The id of the assigned group if the field is visible to end users",
           "readOnly": true,
+          "format": "int64",
           "type": "integer"
         },
         "id": {
@@ -20492,6 +20497,7 @@
         "group_id": {
           "description": "The id of group assigned to at the time of rating",
           "readOnly": true,
+          "format": "int64",
           "type": "integer"
         },
         "id": {
@@ -22404,7 +22410,8 @@
         },
         "group_id": {
           "description": "The group this ticket is assigned to",
-          "type": "integer"
+          "type": "integer",
+          "format": "int64"
         },
         "organization_id": {
           "description": "The organization of the requester. You can only specify the ID of an organization associated with the requester. See [Organization Memberships](/api-reference/ticketing/organizations/organization_memberships/)",
@@ -23783,7 +23790,8 @@
         },
         "group_id": {
           "description": "The group this ticket is assigned to",
-          "type": "integer"
+          "type": "integer",
+          "format": "int64"
         },
         "has_incidents": {
           "description": "Is true if a ticket is a problem type and has one or more incidents linked to it. Otherwise, the value is false.",
@@ -24174,7 +24182,8 @@
         },
         "group_id": {
           "description": "The group this ticket is assigned to",
-          "type": "integer"
+          "type": "integer",
+          "format": "int64"
         },
         "organization_id": {
           "description": "The organization of the requester. You can only specify the ID of an organization associated with the requester. See [Organization Memberships](/api-reference/ticketing/organizations/organization_memberships/)",
@@ -25606,7 +25615,8 @@
         },
         "default_group_id": {
           "description": "The id of the user's default group",
-          "type": "integer"
+          "type": "integer",
+          "format": "int64"
         },
         "details": {
           "description": "Any details you want to store about the user, such as an address",
@@ -26967,6 +26977,7 @@
         "name": "group_id",
         "required": true,
         "type": "integer",
+        "format": "int64",
         "x-example": 122
       },
       "GroupMembershipId": {
@@ -27105,6 +27116,7 @@
         "in": "query",
         "name": "group_id",
         "type": "integer",
+        "format": "int64",
         "x-example": 25
       },
       "MacroId": {

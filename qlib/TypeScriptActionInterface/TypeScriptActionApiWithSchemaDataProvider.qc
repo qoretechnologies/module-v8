@@ -44,7 +44,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         string swagger_path;
 
         #! API data provider
-        SwaggerDataProviderCommon prov;
+        SwaggerRequestDataProvider prov;
 
         #! Path vars
         *hash<string, bool> path_vars;
@@ -175,6 +175,10 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                     "request type %y", action.app, action.action, request_type.getName());
             }
             overrideOptions(\action, cast<HashDataType>(request_type), override_options, pool);
+            if (!prov.op.consumes) {
+                prov.op.consumes{MimeTypeJson} = True;
+            }
+            prov.disableRequestTypeCheck();
         }
 
         if (request_type && (*hash<string, AbstractDataField> fields = request_type.getFields())) {
@@ -211,6 +215,13 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                     pool);
 
                 type.addField(new QoreDataField(TypeScriptActionInterface::getField(key, i.value)));
+                if (prov.op.method != "GET") {
+                    reqmap{key} = ("body",);
+                    rreqmap.body = key;
+                } else {
+                    reqmap{key} = ("query",);
+                    rreqmap.query = key;
+                }
             } else {
                 if (l.size() == 1) {
                     TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, \romap, \dvmap, i.key,
@@ -401,6 +412,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
             }
 
             hash<auto> req0;
+            debug("Action options for action %y: %y reqmap: %y", getName(), req, reqmap);
             map fixOptimizedValue(\req0, $1.value, $1.key, remove req{$1.key}), reqmap.pairIterator(),
                 req.hasKey($1.key);
             map req0{$1.key} = $1.value, req.pairIterator(), !req0.hasKey($1.key);
