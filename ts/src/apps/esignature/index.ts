@@ -189,6 +189,9 @@ export default (locale: Locales) =>
       'editor.name': {
         required: true,
       },
+      'editor.recipientId': {
+        required: true,
+      },
       'editor.routingOrder': {
         required: true,
         default_value: '1',
@@ -197,6 +200,9 @@ export default (locale: Locales) =>
         required: true,
       },
       'inPersonSigner.name': {
+        required: true,
+      },
+      'inPersonSigner.recipientId': {
         required: true,
       },
       'inPersonSigner.routingOrder': {
@@ -209,6 +215,9 @@ export default (locale: Locales) =>
       'intermediary.name': {
         required: true,
       },
+      'intermediary.recipientId': {
+        required: true,
+      },
       'intermediary.routingOrder': {
         required: true,
         default_value: '1',
@@ -219,6 +228,9 @@ export default (locale: Locales) =>
       'signer.name': {
         required: true,
       },
+      'signer.recipientId': {
+        required: true,
+      },
       'signer.routingOrder': {
         required: true,
         default_value: '1',
@@ -227,6 +239,9 @@ export default (locale: Locales) =>
         required: true,
       },
       'witness.name': {
+        required: true,
+      },
+      'witness.recipientId': {
         required: true,
       },
       'witness.routingOrder': {

@@ -401,10 +401,12 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
             }
 
             hash<auto> req0;
+            info("Original request for %y: %y\n", getName(), req);
             map fixOptimizedValue(\req0, $1.value, $1.key, remove req{$1.key}), reqmap.pairIterator(),
                 req.hasKey($1.key);
             map req0{$1.key} = $1.value, req.pairIterator(), !req0.hasKey($1.key);
             req = req0;
+            info("Updated request for %y: %y\n", getName(), req);
 
             auto rv = prov.doRequest(req, request_options);
             return res_only_body ? rv.body : rv;
