@@ -76,6 +76,7 @@ public class TypeScriptActionInterface {
 
         static TypeScriptActionRootDataProvider root();
 
+        static LoggerInterface logger;
         static code WebhookCreate;
         static code WebhookDelete;
 
@@ -169,12 +170,19 @@ public class TypeScriptActionInterface {
         JavaScriptProgram pgm = app.getProgram();
         JavaScriptProgramPool pool;
         bool first;
+        on_error if (logger) {
+            logger.error("TypeScriptActionInterface: error registering app %y: %s", app.name,
+                get_exception_string($1));
+        }
         {
             on_error rethrow "APP-ERROR", sprintf("Error registering app %y: %s", app.name, $1.desc);
             pool = JavaScriptProgramPool::getPool(pgm, \first);
         }
         if (first) {
             TypeScriptActionInterface::registerApp(app.toData(), pool);
+            if (logger) {
+                logger.info("TypeScriptActionInterface: registered app %y", app.name);
+            }
         }
     }
 
@@ -182,6 +190,10 @@ public class TypeScriptActionInterface {
         JavaScriptProgram pgm = action.getProgram();
         JavaScriptProgramPool pool;
         bool first;
+        on_error if (logger) {
+            logger.error("TypeScriptActionInterface: error registering app %y action %y: %s", action.app,
+                action.action, get_exception_string($1));
+        }
         {
             on_error rethrow "ACTION-ERROR", sprintf("Error registering app %y action %y: %s",
                 action.app, action.action, $1.desc);
@@ -189,6 +201,10 @@ public class TypeScriptActionInterface {
         }
         if (first) {
             TypeScriptActionInterface::registerAction(action.toData(), pool);
+            if (logger) {
+                logger.debug("TypeScriptActionInterface: registered app %y action %y: %s", action.app,
+                    action.action);
+            }
         }
     }
 
@@ -1048,6 +1064,10 @@ public class TypeScriptActionInterface {
 
     static *hash<auto> getConnectionUpdateOptions(string app) {
         return app_conn_update_map{app.lwr()};
+    }
+
+    static registerLogger(LoggerInterface logger) {
+        TypeScriptActionInterface::logger = logger;
     }
 
     #! Registers an API for creating a webhook
