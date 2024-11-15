@@ -282,8 +282,8 @@ export type TQoreAppActionFunction = (
 ) => any;
 
 export type TQoreGetAllowedValuesFunction<
-  TypeValue = unknown,
   CustomConnOptions extends TCustomConnOptions = TCustomConnOptions,
+  TypeValue = unknown,
 > = (
   context?: TQoreAppActionFunctionContext<CustomConnOptions>
 ) => IQoreAllowedValue<TypeValue>[] | Promise<IQoreAllowedValue<TypeValue>[]>;
@@ -494,7 +494,7 @@ export interface IQoreAppActionOption<
   // a function that returns the allowed values for the field
   /** Mutually-exclusive with 'rest_get_allowed_values'
    */
-  get_allowed_values?: TQoreGetAllowedValuesFunction<TypeValue, CustomConnOptions>;
+  get_allowed_values?: TQoreGetAllowedValuesFunction<CustomConnOptions, TypeValue>;
 
   // a function that returns dependent options for the field
   get_dependent_options?: TQoreGetDependentOptionsFunction;
@@ -536,7 +536,7 @@ export interface IQoreAppActionWithEventOrWebhook extends IQoreBaseAppAction {
 export type TQoreAppActionWithEventOrWebhookEventInfo = {
   id?: string;
   desc: string;
-  type: Record<string, IQoreTypeObject>;
+  type: IQoreTypeObject;
 };
 
 export interface IQoreAppActionWithWebhookBase<
