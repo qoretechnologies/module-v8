@@ -3,23 +3,25 @@ import { httpClient, HttpMethod, AuthenticationType } from 'core/common';
 import { dropboxAuth } from '../../';
 import { IActionResponse } from '../../../../global/models/actions';
 
-const dropboxListAFolderResponseType: IActionResponse = {
-  entries: {
-    name: 'entries',
-    display_name: 'Entries',
-    desc: 'The list of entries in the folder',
-    short_desc: 'The list of entries in the folder',
-    type: 'list',
-    example_value: [
-      {
-        name: 'copied-test-file.txt',
-        path_lower: '/testing/copied-test-file.txt',
-        path_display: '/testing/copied-test-file.txt',
-        id: 'id:PN3VV_MUE2QAAAAAAAAASw',
-      },
-    ],
+const dropboxListAFolderResponseType = {
+  type: 'hash',
+  fields: {
+    entries: {
+      display_name: 'Entries',
+      desc: 'The list of entries in the folder',
+      short_desc: 'The list of entries in the folder',
+      type: 'list',
+      example_value: [
+        {
+          name: 'copied-test-file.txt',
+          path_lower: '/testing/copied-test-file.txt',
+          path_display: '/testing/copied-test-file.txt',
+          id: 'id:PN3VV_MUE2QAAAAAAAAASw',
+        },
+      ],
+    },
   },
-};
+} satisfies IActionResponse;
 
 export const dropboxListAFolder = createAction({
   auth: dropboxAuth,

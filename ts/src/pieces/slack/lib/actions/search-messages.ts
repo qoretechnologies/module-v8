@@ -3,23 +3,25 @@ import { createAction, Property } from 'core/framework';
 import { IActionResponse } from 'global/models/actions';
 import { slackAuth } from '../..';
 
-const searchMessagesResponseType: IActionResponse = {
-  matches: {
-    type: 'list',
-    name: 'matches',
-    display_name: 'Matches',
-    short_desc: 'The messages that matched the query',
-    desc: 'The messages that matched the query',
-    example_value: [
-      {
-        type: 'message',
-        ts: '1234567890.123456',
-        user: 'U1234567890',
-        text: 'Hello, world!',
-      },
-    ],
+const searchMessagesResponseType = {
+  type: 'hash',
+  fields: {
+    matches: {
+      type: 'list',
+      display_name: 'Matches',
+      short_desc: 'The messages that matched the query',
+      desc: 'The messages that matched the query',
+      example_value: [
+        {
+          type: 'message',
+          ts: '1234567890.123456',
+          user: 'U1234567890',
+          text: 'Hello, world!',
+        },
+      ],
+    },
   },
-};
+} satisfies IActionResponse;
 
 export const searchMessages = createAction({
   name: 'searchMessages',

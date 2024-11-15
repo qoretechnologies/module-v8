@@ -3,48 +3,47 @@ import { httpClient, HttpMethod, AuthenticationType } from 'core/common';
 import { dropboxAuth } from '../../';
 import { IActionResponse } from '../../../../global/models/actions';
 
-const copyFileResponseType: IActionResponse = {
-  metadata: {
-    name: 'metadata',
-    display_name: 'Metadata',
-    desc: 'The metadata of the file',
-    short_desc: 'The metadata of the file',
-    type: {
-      name: {
-        name: 'name',
-        display_name: 'Name',
-        desc: 'The name of the file',
-        short_desc: 'The name of the file',
-        type: 'string',
-        example_value: 'test.txt',
-      },
-      path_lower: {
-        name: 'path_lower',
-        display_name: 'Path Lower',
-        desc: 'The path of the file',
-        short_desc: 'The path of the file',
-        type: 'string',
-        example_value: '/test.txt',
-      },
-      path_display: {
-        name: 'path_display',
-        display_name: 'Path Display',
-        desc: 'The path of the file',
-        short_desc: 'The path of the file',
-        type: 'string',
-        example_value: '/test.txt',
-      },
-      id: {
-        name: 'id',
-        display_name: 'Id',
-        desc: 'The id of the file',
-        short_desc: 'The id of the file',
-        type: 'string',
-        example_value: 'id:123',
+const copyFileResponseType = {
+  type: 'hash',
+  fields: {
+    metadata: {
+      display_name: 'Metadata',
+      desc: 'The metadata of the file',
+      short_desc: 'The metadata of the file',
+      type: 'hash',
+      fields: {
+        name: {
+          display_name: 'Name',
+          desc: 'The name of the file',
+          short_desc: 'The name of the file',
+          type: 'string',
+          example_value: 'test.txt',
+        },
+        path_lower: {
+          display_name: 'Path Lower',
+          desc: 'The path of the file',
+          short_desc: 'The path of the file',
+          type: 'string',
+          example_value: '/test.txt',
+        },
+        path_display: {
+          display_name: 'Path Display',
+          desc: 'The path of the file',
+          short_desc: 'The path of the file',
+          type: 'string',
+          example_value: '/test.txt',
+        },
+        id: {
+          display_name: 'Id',
+          desc: 'The id of the file',
+          short_desc: 'The id of the file',
+          type: 'string',
+          example_value: 'id:123',
+        },
       },
     },
   },
-};
+} satisfies IActionResponse;
 
 export const dropboxCopyFolder = createAction({
   auth: dropboxAuth,

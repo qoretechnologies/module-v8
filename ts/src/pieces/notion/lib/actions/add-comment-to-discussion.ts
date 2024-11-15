@@ -3,123 +3,116 @@ import { notionAuth } from '../..';
 import { createAction, Property } from 'core/framework';
 import { IActionResponse } from 'global/models/actions';
 
-export const addCommentResponseType: IActionResponse = {
-  object: {
-    name: 'object',
-    type: 'string',
-    display_name: 'Object',
-    short_desc: 'The type of object returned',
-    desc: 'The type of object returned in this case it will always be comment',
-    example_value: 'comment',
-  },
-  id: {
-    name: 'id',
-    type: 'string',
-    display_name: 'ID',
-    short_desc: 'The ID of the comment',
-    desc: 'The ID of the comment',
-    example_value: '12345678-1234-1234-1234-123456789012',
-  },
-  parent: {
-    required: false,
-    name: 'parent',
-    type: {
-      type: {
-        name: 'type',
-        type: 'string',
-        display_name: 'Type',
-        short_desc: 'The type of parent',
-        desc: 'The type of parent - [discussion, page, ...]',
-        example_value: 'discussion',
+export const addCommentResponseType = {
+  type: 'hash',
+  fields: {
+    object: {
+      type: 'string',
+      display_name: 'Object',
+      short_desc: 'The type of object returned',
+      desc: 'The type of object returned in this case it will always be comment',
+      example_value: 'comment',
+    },
+    id: {
+      type: 'string',
+      display_name: 'ID',
+      short_desc: 'The ID of the comment',
+      desc: 'The ID of the comment',
+      example_value: '12345678-1234-1234-1234-123456789012',
+    },
+    parent: {
+      required: false,
+      type: 'hash',
+      fields: {
+        type: {
+          type: 'string',
+          display_name: 'Type',
+          short_desc: 'The type of parent',
+          desc: 'The type of parent - [discussion, page, ...]',
+          example_value: 'discussion',
+        },
+        page_id: {
+          required: false,
+          type: 'string',
+          display_name: 'ID',
+          short_desc: 'The ID of the parent',
+          desc: 'The ID of the parent',
+          example_value: '12345678-1234-1234-1234-123456789012',
+        },
       },
-      page_id: {
-        required: false,
-        name: 'id',
-        type: 'string',
-        display_name: 'ID',
-        short_desc: 'The ID of the parent',
-        desc: 'The ID of the parent',
-        example_value: '12345678-1234-1234-1234-123456789012',
+      display_name: 'Parent',
+      short_desc: 'The parent of the comment',
+      desc: 'The parent of the comment',
+    },
+    discussion_id: {
+      type: 'string',
+      display_name: 'Discussion ID',
+      short_desc: 'The ID of the discussion',
+      desc: 'The ID of the discussion',
+      example_value: '12345678-1234-1234-1234-123456789012',
+    },
+    created_time: {
+      type: 'string',
+      display_name: 'Created Time',
+      short_desc: 'The time the comment was created',
+      desc: 'The time the comment was created',
+      example_value: '2022-02-22T00:00:00.000Z',
+    },
+    last_edited_time: {
+      type: 'string',
+      display_name: 'Last Edited Time',
+      short_desc: 'The time the comment was last edited',
+      desc: 'The time the comment was last edited',
+      example_value: '2022-02-22T00:00:00.000Z',
+    },
+    created_by: {
+      display_name: 'Created By',
+      short_desc: 'The user who created the comment',
+      desc: 'The user who created the comment',
+      type: 'hash',
+      fields: {
+        id: {
+          type: 'string',
+          display_name: 'ID',
+          short_desc: 'The ID of the user',
+          desc: 'The ID of the user',
+          example_value: '12345678-1234-1234-1234-123456789012',
+        },
+        object: {
+          type: 'string',
+          display_name: 'Object',
+          short_desc: 'The type of object',
+          desc: 'The type of object - [user, bot, ...]',
+          example_value: 'user',
+        },
       },
     },
-    display_name: 'Parent',
-    short_desc: 'The parent of the comment',
-    desc: 'The parent of the comment',
-  },
-  discussion_id: {
-    name: 'discussion_id',
-    type: 'string',
-    display_name: 'Discussion ID',
-    short_desc: 'The ID of the discussion',
-    desc: 'The ID of the discussion',
-    example_value: '12345678-1234-1234-1234-123456789012',
-  },
-  created_time: {
-    name: 'created_time',
-    type: 'string',
-    display_name: 'Created Time',
-    short_desc: 'The time the comment was created',
-    desc: 'The time the comment was created',
-    example_value: '2022-02-22T00:00:00.000Z',
-  },
-  last_edited_time: {
-    name: 'last_edited_time',
-    type: 'string',
-    display_name: 'Last Edited Time',
-    short_desc: 'The time the comment was last edited',
-    desc: 'The time the comment was last edited',
-    example_value: '2022-02-22T00:00:00.000Z',
-  },
-  created_by: {
-    name: 'created_by',
-    display_name: 'Created By',
-    short_desc: 'The user who created the comment',
-    desc: 'The user who created the comment',
-    type: {
-      id: {
-        name: 'id',
-        type: 'string',
-        display_name: 'ID',
-        short_desc: 'The ID of the user',
-        desc: 'The ID of the user',
-        example_value: '12345678-1234-1234-1234-123456789012',
-      },
-      object: {
-        name: 'object',
-        type: 'string',
-        display_name: 'Object',
-        short_desc: 'The type of object',
-        desc: 'The type of object - [user, bot, ...]',
-        example_value: 'user',
-      },
+    rich_text: {
+      type: 'list',
+      display_name: 'Rich Text',
+      short_desc: 'The text of the comment',
+      desc: 'The text of the comment',
+      example_value: [
+        {
+          type: 'text',
+          text: {
+            content: 'This is a test comment',
+            link: 'https://example.com',
+          },
+          annotations: {
+            bold: false,
+            italic: false,
+            strikethrough: false,
+            underline: false,
+            code: false,
+            color: 'default',
+          },
+          plain_text: 'This is a test comment',
+        },
+      ],
     },
   },
-  rich_text: {
-    name: 'rich_text',
-    type: 'list',
-    display_name: 'Rich Text',
-    short_desc: 'The text of the comment',
-    desc: 'The text of the comment',
-    example_value: [
-      {
-        type: 'text',
-        text: {
-          content: 'This is a test comment',
-          link: 'https://example.com',
-        },
-        annotations: {
-          bold: false,
-          italic: false,
-          strikethrough: false,
-          underline: false,
-          code: false,
-          color: 'default',
-        },
-        plain_text: 'This is a test comment',
-      },
-    ],
-  },
-};
+} satisfies IActionResponse;
 
 export const addCommentToDiscussion = createAction({
   auth: notionAuth,

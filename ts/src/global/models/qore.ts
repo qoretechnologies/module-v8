@@ -360,7 +360,7 @@ export type TQoreSimpleType =
   | TQoreNullableType
   | TQoreAnyType;
 
-export type TQoreType = TQoreSimpleType | IQoreTypeObject;
+export type TQoreType = TQoreSimpleType;
 
 // Mapping between string literals and their corresponding TypeScript types
 export type TQoreTypeMapping = {
@@ -487,6 +487,8 @@ export interface IQoreAppActionOption<
 > extends IQoreSharedObject<TypeValue> {
   // either a string or a data object again
   type: TypeName;
+  // an optional object with the fields of the object
+  fields?: Record<string, IQoreAppActionOption>;
   // (values must use the field's type) any example value to use when generating example data etc
   example_value?: TypeValue;
   // an array of objects providing the only values allowed for the field

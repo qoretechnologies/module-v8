@@ -7,51 +7,52 @@ import { markdownToBlocks } from '@tryfabric/martian';
 import { BlockObjectRequest } from '@notionhq/client/build/src/api-endpoints';
 import { IActionResponse } from '../../../../global/models/actions';
 
-const appendToPageResponseType: IActionResponse = {
-  object: {
-    name: 'object',
-    type: 'string',
-    display_name: 'Object',
-    short_desc: 'The type of object returned',
-    desc: 'The type of object returned in this case it will always be block',
-    example_value: 'list',
-  },
-  results: {
-    name: 'results',
-    type: 'list',
-    display_name: 'Results',
-    short_desc: 'The results of the append',
-    desc: 'The results of the append',
-    example_value: [
-      {
-        object: 'block',
-        id: '12345678-1234-1234-1234-123456789012',
-        type: 'paragraph',
-        paragraph: {
-          color: 'default',
-          rich_text: [
-            {
-              type: 'text',
-              text: {
-                content: 'This is a test comment',
-                link: 'https://example.com',
+const appendToPageResponseType = {
+  type: 'hash',
+  fields: {
+    object: {
+      type: 'string',
+      display_name: 'Object',
+      short_desc: 'The type of object returned',
+      desc: 'The type of object returned in this case it will always be block',
+      example_value: 'list',
+    },
+    results: {
+      type: 'list',
+      display_name: 'Results',
+      short_desc: 'The results of the append',
+      desc: 'The results of the append',
+      example_value: [
+        {
+          object: 'block',
+          id: '12345678-1234-1234-1234-123456789012',
+          type: 'paragraph',
+          paragraph: {
+            color: 'default',
+            rich_text: [
+              {
+                type: 'text',
+                text: {
+                  content: 'This is a test comment',
+                  link: 'https://example.com',
+                },
+                annotations: {
+                  bold: false,
+                  italic: false,
+                  strikethrough: false,
+                  underline: false,
+                  code: false,
+                  color: 'default',
+                },
+                plain_text: 'This is a test comment',
               },
-              annotations: {
-                bold: false,
-                italic: false,
-                strikethrough: false,
-                underline: false,
-                code: false,
-                color: 'default',
-              },
-              plain_text: 'This is a test comment',
-            },
-          ],
+            ],
+          },
         },
-      },
-    ],
+      ],
+    },
   },
-};
+} satisfies IActionResponse;
 
 export const appendToPage = createAction({
   auth: notionAuth,

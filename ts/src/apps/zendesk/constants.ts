@@ -25,19 +25,17 @@ export const ZENDESK_ALLOWED_PATHS: TAllowedPaths = {
         },
         comment: {
           required: false,
-          type: {
+          type: 'hash',
+          fields: {
             body: {
-              name: 'body',
               type: 'string',
               required: true,
             },
             html_body: {
-              name: 'html_body',
               type: 'string',
               required: false,
             },
             public: {
-              name: 'public',
               type: 'boolean',
               required: false,
             },
@@ -71,19 +69,17 @@ export const ZENDESK_ALLOWED_PATHS: TAllowedPaths = {
       override_options: {
         comment: {
           required: true,
-          type: {
+          type: 'hash',
+          fields: {
             body: {
-              name: 'body',
               type: 'string',
               required: true,
             },
             html_body: {
-              name: 'html_body',
               type: 'string',
               required: false,
             },
             public: {
-              name: 'public',
               type: 'boolean',
               required: false,
             },
@@ -132,29 +128,25 @@ export const ZENDESK_ALLOWED_PATHS: TAllowedPaths = {
         },
         group: {
           required: true,
-          type: {
+          type: 'hash',
+          fields: {
             name: {
-              name: 'name',
               type: 'string',
               required: true,
             },
             description: {
-              name: 'description',
               type: 'string',
               required: false,
             },
             default: {
-              name: 'default',
               type: 'boolean',
               required: false,
             },
             is_public: {
-              name: 'is_public',
               type: 'boolean',
               required: false,
             },
             user_ids: {
-              name: 'user_ids',
               type: 'list',
               required: false,
             },
@@ -169,29 +161,25 @@ export const ZENDESK_ALLOWED_PATHS: TAllowedPaths = {
       override_options: {
         group: {
           required: true,
-          type: {
+          type: 'hash',
+          fields: {
             name: {
-              name: 'name',
               type: 'string',
               required: true,
             },
             description: {
-              name: 'description',
               type: 'string',
               required: false,
             },
             default: {
-              name: 'default',
               type: 'boolean',
               required: false,
             },
             is_public: {
-              name: 'is_public',
               type: 'boolean',
               required: false,
             },
             user_ids: {
-              name: 'user_ids',
               type: 'list',
               required: false,
             },
@@ -221,40 +209,34 @@ export const ZENDESK_ALLOWED_PATHS: TAllowedPaths = {
         },
         user: {
           required: true,
-          type: {
+          type: 'hash',
+          fields: {
             name: {
-              name: 'name',
               type: 'string',
               required: true,
             },
             email: {
-              name: 'email',
               type: 'string',
               required: false,
             },
             phone: {
-              name: 'phone',
               type: 'string',
               required: false,
             },
             notes: {
-              name: 'notes',
               type: 'string',
               required: false,
             },
             details: {
-              name: 'details',
               type: 'string',
               required: false,
             },
             role: {
-              name: 'role',
               type: 'string',
               required: false,
               allowed_values: UserRoleAllowedValues,
             },
             organization_ids: {
-              name: 'organization_ids',
               type: 'list',
               required: false,
             },
@@ -275,40 +257,34 @@ export const ZENDESK_ALLOWED_PATHS: TAllowedPaths = {
       override_options: {
         user: {
           required: true,
-          type: {
+          type: 'hash',
+          fields: {
             name: {
-              name: 'name',
               type: 'string',
               required: true,
             },
             email: {
-              name: 'email',
               type: 'string',
               required: false,
             },
             phone: {
-              name: 'phone',
               type: 'string',
               required: false,
             },
             notes: {
-              name: 'notes',
               type: 'string',
               required: false,
             },
             details: {
-              name: 'details',
               type: 'string',
               required: false,
             },
             role: {
-              name: 'role',
               type: 'string',
               required: false,
               allowed_values: UserRoleAllowedValues,
             },
             organization_ids: {
-              name: 'organization_ids',
               type: 'list',
               required: false,
             },

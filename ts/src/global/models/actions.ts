@@ -10,9 +10,15 @@ export interface IActionOptions {
 }
 
 export interface IActionResponse {
-  [key: string]: GetResponseDefinitionFromQoreType<TQoreType>;
+  type: TQoreType;
+  fields: {
+    [key: string]: GetResponseDefinitionFromQoreType<TQoreType>;
+  };
 }
 
 export type TActionData<Options extends IActionOptions> = StrictRecord<keyof Options, any>;
 
-export type TActionResponse<Response extends IActionResponse> = StrictRecord<keyof Response, any>;
+export type TActionResponse<Response extends IActionResponse['fields']> = StrictRecord<
+  keyof Response,
+  any
+>;

@@ -134,61 +134,50 @@ export default {
   event_info: {
     desc: 'New Ticket event data',
     type: {
-      assignee_email: {
-        name: 'assignee_email',
-        type: 'softstring',
-      },
-      assignee_name: {
-        name: 'assignee_name',
-        type: 'softstring',
-      },
-      group_name: {
-        name: 'group_name',
-        type: 'softstring',
-      },
-      organization_name: {
-        name: 'organization_name',
-        type: 'softstring',
-      },
-      requester_email: {
-        name: 'requester_email',
-        type: 'softstring',
-      },
-      requester_name: {
-        name: 'requester_name',
-        type: 'softstring',
-      },
-      tags: {
-        name: 'tags',
-        type: 'softstring',
-      },
-      ticket_description: {
-        name: 'ticket_description',
-        type: 'softstring',
-      },
-      ticket_id: {
-        name: 'ticket_id',
-        type: 'softstring',
-      },
-      ticket_priority: {
-        name: 'ticket_priority',
-        type: 'softstring',
-      },
-      ticket_status: {
-        name: 'ticket_status',
-        type: 'softstring',
-      },
-      ticket_subject: {
-        name: 'ticket_subject',
-        type: 'softstring',
-      },
-      ticket_type: {
-        name: 'ticket_type',
-        type: 'softstring',
-      },
-      ticket_url: {
-        name: 'ticket_url',
-        type: 'softstring',
+      type: 'hash',
+      fields: {
+        assignee_email: {
+          type: 'softstring',
+        },
+        assignee_name: {
+          type: 'softstring',
+        },
+        group_name: {
+          type: 'softstring',
+        },
+        organization_name: {
+          type: 'softstring',
+        },
+        requester_email: {
+          type: 'softstring',
+        },
+        requester_name: {
+          type: 'softstring',
+        },
+        tags: {
+          type: 'softstring',
+        },
+        ticket_description: {
+          type: 'softstring',
+        },
+        ticket_id: {
+          type: 'softstring',
+        },
+        ticket_priority: {
+          type: 'softstring',
+        },
+        ticket_status: {
+          type: 'softstring',
+        },
+        ticket_subject: {
+          type: 'softstring',
+        },
+        ticket_type: {
+          type: 'softstring',
+        },
+        ticket_url: {
+          type: 'softstring',
+        },
       },
     },
   },

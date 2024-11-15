@@ -6,19 +6,21 @@ import { hubspotRequest } from '../../client';
 // Defining a function to fetch users
 const options: IActionOptions = null;
 export const response_type: IActionResponse = {
-  results: {
-    type: 'list',
-    name: 'results',
-    display_name: L.en.apps.hubspot.actions.users.results.displayName(),
-    short_desc: L.en.apps.hubspot.actions.users.results.shortDesc(),
-    desc: L.en.apps.hubspot.actions.users.results.longDesc(),
-    example_value: [
-      {
-        id: '3609',
-        properties: {},
-        archived: false,
-      },
-    ],
+  type: 'hash',
+  fields: {
+    results: {
+      type: 'list',
+      display_name: L.en.apps.hubspot.actions.users.results.displayName(),
+      short_desc: L.en.apps.hubspot.actions.users.results.shortDesc(),
+      desc: L.en.apps.hubspot.actions.users.results.longDesc(),
+      example_value: [
+        {
+          id: '3609',
+          properties: {},
+          archived: false,
+        },
+      ],
+    },
   },
 };
 
@@ -39,5 +41,4 @@ export default {
   api_function: getUsers,
   options,
   response_type,
-  _localizationGroup: 'users',
 } satisfies TQorePartialAction<typeof options, typeof response_type>;

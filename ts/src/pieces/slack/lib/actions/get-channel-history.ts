@@ -4,23 +4,25 @@ import { IActionResponse } from 'global/models/actions';
 import { slackAuth } from '../..';
 import { slackChannel, slackInfo } from '../common/props';
 
-const getChannelHistoryResponseType: IActionResponse = {
-  messages: {
-    type: 'list',
-    name: 'messages',
-    display_name: 'Messages',
-    short_desc: 'The messages in the channel',
-    desc: 'The messages in the channel',
-    example_value: [
-      {
-        type: 'message',
-        ts: '1234567890.123456',
-        user: 'U1234567890',
-        text: 'Hello, world!',
-      },
-    ],
+const getChannelHistoryResponseType = {
+  type: 'hash',
+  fields: {
+    messages: {
+      type: 'list',
+      display_name: 'Messages',
+      short_desc: 'The messages in the channel',
+      desc: 'The messages in the channel',
+      example_value: [
+        {
+          type: 'message',
+          ts: '1234567890.123456',
+          user: 'U1234567890',
+          text: 'Hello, world!',
+        },
+      ],
+    },
   },
-};
+} satisfies IActionResponse;
 
 export const getChannelHistory = createAction({
   // auth: check https://www.activepieces.com/docs/developers/piece-reference/authentication,

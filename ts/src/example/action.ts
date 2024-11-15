@@ -19,27 +19,29 @@ const options = {
 } satisfies IActionOptions;
 
 const response_type = {
-  channel: {
-    type: {
-      id: {
-        display_name: 'test',
-        name: 'Channel ID',
-        short_desc: 'test',
-        desc: 'test',
-        type: 'int',
+  type: 'hash',
+  fields: {
+    channel: {
+      type: 'hash',
+      fields: {
+        id: {
+          display_name: 'test',
+          short_desc: 'test',
+          desc: 'test',
+          type: 'int',
+        },
       },
+      display_name: 'dname',
+      short_desc: 'sdesc',
+      desc: 'desc',
     },
-    display_name: 'dname',
-    short_desc: 'sdesc',
-    desc: 'desc',
-    name: 'channel',
   },
 } satisfies IActionResponse;
 
 // Defining a function to delete attachment
 const deleteAttachment = async ({
   option1,
-}: TActionData<typeof options>): Promise<TActionResponse<typeof response_type>> => {
+}: TActionData<typeof options>): Promise<TActionResponse<typeof response_type.fields>> => {
   try {
     return {
       channel: {
@@ -70,5 +72,4 @@ export default {
     },
   },
   response_type,
-  _localizationGroup: 'attachments',
 } satisfies TQorePartialAction<typeof options, typeof response_type>;

@@ -3,41 +3,41 @@ import { httpClient, HttpMethod, AuthenticationType } from 'core/common';
 import { dropboxAuth } from '../..';
 import { IActionResponse } from '../../../../global/models/actions';
 
-const dropboxSearchResponseType: IActionResponse = {
-  has_more: {
-    name: 'has_more',
-    display_name: 'Has More',
-    desc: 'Indicates whether there are more search results.',
-    short_desc: 'Indicates whether there are more search results.',
-    type: 'boolean',
-    example_value: true,
-  },
-  matches: {
-    name: 'matches',
-    display_name: 'Matches',
-    desc: 'The search results.',
-    short_desc: 'The search results.',
-    type: 'list',
-    required: false,
-    example_value: [
-      {
-        highlight_spans: [],
-        match_type: { '.tag': 'filename' },
-        metadata: {
-          '.tag': 'metadata',
+const dropboxSearchResponseType = {
+  type: 'hash',
+  fields: {
+    has_more: {
+      display_name: 'Has More',
+      desc: 'Indicates whether there are more search results.',
+      short_desc: 'Indicates whether there are more search results.',
+      type: 'boolean',
+      example_value: true,
+    },
+    matches: {
+      display_name: 'Matches',
+      desc: 'The search results.',
+      short_desc: 'The search results.',
+      type: 'list',
+      required: false,
+      example_value: [
+        {
+          match_type: { '.tag': 'filename' },
           metadata: {
-            '.tag': 'folder',
-            file_owner_team_encrypted_id: '',
-            id: 'id:PN3VV_MUE2QAAAAAAAAAVg',
-            name: 'testing',
-            path_display: '/testing',
-            path_lower: '/testing',
+            '.tag': 'metadata',
+            metadata: {
+              '.tag': 'folder',
+              file_owner_team_encrypted_id: '',
+              id: 'id:PN3VV_MUE2QAAAAAAAAAVg',
+              name: 'testing',
+              path_display: '/testing',
+              path_lower: '/testing',
+            },
           },
         },
-      },
-    ],
+      ],
+    },
   },
-};
+} satisfies IActionResponse;
 
 export const dropboxSearch = createAction({
   auth: dropboxAuth,
