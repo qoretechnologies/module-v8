@@ -967,7 +967,11 @@ public class TypeScriptActionInterface {
                 element_type = TypeScriptActionInterface::getType(t);
             }
             */
-            rv = new HashDataType(type, attr.name, NOTHING, tags, default_value, attr);
+            HashDataType ht(type, attr.name, NOTHING, tags, default_value, attr);
+            if (f) {
+                TypeScriptActionInterface::getHashTypeIntern(ht, f, h.required);
+            }
+            rv = ht;
         } else if (orig.type == "list") {
             AbstractDataProviderType element_type;
             if (auto t = remove h.element_type) {

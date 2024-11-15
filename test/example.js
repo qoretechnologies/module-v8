@@ -346,34 +346,37 @@ exports.actionsCatalogue = {
                 hash
             */
             "response_type": {
-                "result": {
-                    "type": "int",
-                    "display_name": "Count",
-                    "short_desc": "A count of something",
-                    "desc": "A count of something",
-                    "example_value": 1,
-                    "required": true,
-                },
-                "status": {
-                    "type": "string",
-                    "display_name": "Status",
-                    "short_desc": "The status of the operation",
-                    "desc": "The status of the operation",
-                    "allowed_values": [
-                        {
-                            "display_name": "OK",
-                            "short_desc": "Successful result",
-                            "desc": "Successful result",
-                            "value": "OK",
-                        },
-                        {
-                            "display_name": "Error",
-                            "short_desc": "Error result",
-                            "desc": "Error result",
-                            "value": "Error",
-                        },
-                    ],
-                    "required": true,
+                "type": "hash",
+                "fields": {
+                    "result": {
+                        "type": "int",
+                        "display_name": "Count",
+                        "short_desc": "A count of something",
+                        "desc": "A count of something",
+                        "example_value": 1,
+                        "required": true,
+                    },
+                    "status": {
+                        "type": "string",
+                        "display_name": "Status",
+                        "short_desc": "The status of the operation",
+                        "desc": "The status of the operation",
+                        "allowed_values": [
+                            {
+                                "display_name": "OK",
+                                "short_desc": "Successful result",
+                                "desc": "Successful result",
+                                "value": "OK",
+                            },
+                            {
+                                "display_name": "Error",
+                                "short_desc": "Error result",
+                                "desc": "Error result",
+                                "value": "Error",
+                            },
+                        ],
+                        "required": true,
+                    },
                 },
             },
         });
@@ -573,17 +576,20 @@ exports.actionsCatalogue = {
             "event_info": {
                 "desc": "Data event",
                 "type": {
-                    "name": {
-                        "type": "string",
-                        "display_name": "Event Name",
-                        "short_desc": "Event name",
-                        "desc": "Event name",
-                    },
-                    "code": {
-                        "type": "int",
-                        "display_name": "Event Code",
-                        "short_desc": "Event code",
-                        "desc": "Event code",
+                    "type": "hash",
+                    "fields": {
+                        "name": {
+                            "type": "string",
+                            "display_name": "Event Name",
+                            "short_desc": "Event name",
+                            "desc": "Event name",
+                        },
+                        "code": {
+                            "type": "int",
+                            "display_name": "Event Code",
+                            "short_desc": "Event code",
+                            "desc": "Event code",
+                        },
                     },
                 },
             },
@@ -664,17 +670,20 @@ exports.actionsCatalogue = {
             "event_info": {
                 "desc": "Data event",
                 "type": {
-                    "name": {
-                        "type": "string",
-                        "display_name": "Event Name",
-                        "short_desc": "Event name",
-                        "desc": "Event name",
-                    },
-                    "code": {
-                        "type": "int",
-                        "display_name": "Event Code",
-                        "short_desc": "Event code",
-                        "desc": "Event code",
+                    "type": "hash",
+                    "fields": {
+                        "name": {
+                            "type": "string",
+                            "display_name": "Event Name",
+                            "short_desc": "Event name",
+                            "desc": "Event name",
+                        },
+                        "code": {
+                            "type": "int",
+                            "display_name": "Event Code",
+                            "short_desc": "Event code",
+                            "desc": "Event code",
+                        },
                     },
                 },
             },
