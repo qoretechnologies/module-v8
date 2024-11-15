@@ -12,6 +12,8 @@ export type THttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE';
 export type TWebhookHttpMethod = 'POST' | 'PUT' | 'PATCH' | 'GET';
 export type TRestGetAllowedValuesMethod = TWebhookHttpMethod;
 export type TCustomConnOptions = Record<string, IQoreConnectionOption>;
+export type TCustomFields<CustomConnOptions extends TCustomConnOptions = TCustomConnOptions> =
+  Record<string, IQoreAppActionOption<TQoreType, unknown, CustomConnOptions>>;
 
 export type TAllowedPaths<CustomConnOptions extends TCustomConnOptions = TCustomConnOptions> =
   Record<string, Partial<Record<THttpMethod, IAllowedPathData<CustomConnOptions>>>>;
@@ -461,19 +463,20 @@ export interface IQoreRestGetAllowedValues {
   display_names?: string;
 }
 
-export interface IQoreSharedObject<TypeName extends TQoreType = TQoreType> extends IQoreAppShared {
-  // either a string or a data object again
-  type: TypeName;
+export interface IQoreSharedObject<TypeValue = unknown> extends IQoreAppShared {
   // whether the field is required
   required?: boolean;
+  //if fields of this type should be preselected; will set the corresponding UI flag
+  preselected?: boolean;
+  // (values must be of the correct type) the default value if none is provided by the user
+  default_value?: TypeValue;
 }
 
-export interface IQoreTypeObject<TypeName extends TQoreType = TQoreType>
-  extends Omit<IQoreSharedObject<TypeName>, 'type'> {
-  type: TQoreSimpleType;
-  name: string; // the technical name of the field
-  attr?: Record<string, any>; // an optional data object with any properties
-  element_type?: TQoreSimpleType;
+export interface IQoreTypeObject<TypeValue = unknown>
+  extends Omit<IQoreSharedObject<TypeValue>, 'type'> {
+  type: TQoreSimpleType; // Type has to be a string
+  name?: string; // the technical name of the field
+  element_type?: TQoreSimpleType; // description of a list type; only valid if \c type is "list" or "softlist"
   fields?: Record<string, IQoreAppActionOption>; // an optional object with the fields of the object
 }
 
@@ -481,36 +484,26 @@ export interface IQoreAppActionOption<
   TypeName extends TQoreType = TQoreType,
   TypeValue = unknown,
   CustomConnOptions extends TCustomConnOptions = TCustomConnOptions,
-> extends IQoreSharedObject<TypeName> {
+> extends IQoreSharedObject<TypeValue> {
+  // either a string or a data object again
+  type: TypeName;
   // (values must use the field's type) any example value to use when generating example data etc
   example_value?: TypeValue;
-
-  // (values must use the field's type) the default value if none is provided by the user
-  default_value?: TypeValue;
-
   // an array of objects providing the only values allowed for the field
   allowed_values?: IQoreAllowedValue<TypeValue>[];
-
   // a function that returns the allowed values for the field
   /** Mutually-exclusive with 'rest_get_allowed_values'
    */
   get_allowed_values?: TQoreGetAllowedValuesFunction<CustomConnOptions, TypeValue>;
-
   // a function that returns dependent options for the field
   get_dependent_options?: TQoreGetDependentOptionsFunction;
-
   // an object that describes a REST call to return allowed values
   /** Mutually-exclusive with 'get_allowed_values'
    */
   rest_get_allowed_values?: IQoreRestGetAllowedValues;
-
   // a function that returns the default value for the field
   get_default_value?: TQoreGetDefaultValueFunction<CustomConnOptions>;
-
-  // the number of seconds to wait for the action to complete before timing out
-  io_timeout_secs?: number;
-  loc?: string;
-  ref_data?: string;
+  attr?: Record<string, any>; // an optional data object with any properties
   sensitive?: boolean;
   required_groups?: string[];
 }
@@ -586,14 +579,14 @@ export interface IQoreAppActionWithEvent extends IQoreAppActionWithEventOrWebhoo
 }
 
 export type TQoreOptions = Record<string, IQoreAppActionOption>;
-export type TQoreResponseType = Record<string, IQoreTypeObject>;
+export type TQoreResponseType = string | IQoreTypeObject;
 
 export interface IQoreAppActionWithFunction<Options = TQoreOptions, Response = TQoreResponseType>
   extends IQoreBaseAppAction {
   action_code: EQoreAppActionCode.ACTION;
   api_function?: TQoreAppActionFunction;
   options?: StrictRecord<keyof Options, Options[keyof Options]>;
-  response_type?: StrictRecord<keyof Response, Response[keyof Response]>;
+  response_type?: string | IQoreTypeObject;
   io_timeout_secs?: number;
 }
 
