@@ -176,15 +176,23 @@ exports.actionsCatalogue = {
                 except that "type" is created from either a:
                 - string: giving the name of a simple type - one of:
                     ["int", "integer", "string", "boolean", "bool", "double", "float", "number", "binary", "list",
-                    "hash", "object", "date", "NULL", "nothing", "base64binary", "base64urlbinary", "hexbinary",
-                    "data", "softint", "softstring", "softbool", "softfloat", "softnumber", "softdate", "*softint",
-                    "*softstring", "*softbool", "*softfloat", "*softnumber", "*softdate", "all", "any", "auto",
-                    "*int", "*integer", "*string", "*boolean", "*bool", "*double", "*float", "*number", "*binary",
-                    "*list", "*hash", "*object", "*date", "*data", "*base64binary", "*base64urlbinary", "*hexbinary",
-                    "byte", "*byte", "softbyte", "*softbyte", "ubyte", "*ubyte", "softubyte", "*softubyte"]
+                    "hash", "date", "base64binary", "base64urlbinary", "hexbinary",
+                    "data", "softint", "softstring", "softbool", "softfloat", "softnumber", "softdate", "softlist",
+                    "any", "auto"]
                 or
-                - hash: which describes a data object; each key describes a data property; field objects can have the
-                    following keys (note that they key itself is the technical name for the field):
+                - hash: which describes a type with the following keys:
+                  - type: string -> the data type name
+                  - name?: string -> the name of the type - one of the type names listed above
+                  - display_name?: string -> the display name of the type
+                  - short_desc?: string -> the plain-text description of the type
+                  - desc?: string -> the markdown description of the type (can be long)
+                  - default_value?: any -> (values must be of the correct type) the default value if none is provided
+                    by the user
+                  - required?: bool -> if a value is required for this type; will set the corresponding UI flag
+                  - preselected?: bool -> if fields of this type should be preselected; will set the corresponding UI
+                    flag
+                  - fields?: object -> a hash of field objects; only valid if \c type is "hash"; keys are field
+                    names, values are as follows:
                     - display_name?: string -> the user-friendly display name for the field
                     - short_desc?: string -> a short plain-text description of the field
                     - desc?: string -> a longer description for the field that supports markdown formatting
@@ -198,34 +206,14 @@ exports.actionsCatalogue = {
                     - example_value?: any -> (values must use the field's type) any example value to use when
                       generating example data etc
                     - default_value?: any -> (values must use the field's type) the default value if none is provided
-                      by the user
-                    - allowed_values?: AllowedValues[] -> an array of objects providing the only values allowed for the
-                      field - with the following properties
-                    - display_name?: string -> the user-friendly display name for the field
-                    - short_desc?: string -> a short plain-text description of the field
-                    - value: any -> (must be present and must use the field's type); one of the allowed values
-                    - desc: string -> a description of the value (if unknown just use the value again)
-                    - depends_on?: string[] -> an optional list of other options that must be set before this option
-                      can be set
-                    - get_allowed_values?: function (ctx?: object): AllowedValues[] | undefined -> a function that will
-                      return the allowed values when called; the 'ctx' parameter has the same format as the third
-                      argument to 'api_function' above:
-                      - conn_name?: string -> the connection name, if any is defined
-                      - conn_opts?: object -> connection options; for REST connections, see the 'rest' object
-                        definition
-                      - opts?: object -> a data object with option values set for the current action
-                    - get_dependent_options?: function (ctx?: object): object? -> should return a data object
-                      describing additional fields in this same format where keys are additional field names, and
-                      values describe the fields. The 'ctx' argument is the same as for 'api_function' and
-                      'get_allowed_values':
-                      - conn_name?: string -> the connection name, if any is defined
-                      - conn_opts?: object -> connection options; for REST connections, see the 'rest' object
-                        definition
-                      - opts?: object -> a data object with option values set for the current action
-                    - io_timeout_secs?: int -> an optional I/O timeout in seconds for any 'get_allowed_values'
-                      function; if not present, the timeout is 30 (NOTE: not yet implemented)
+                      by the user; this overrides any default value provided by the type
+                    - allowed_values?: AllowedValues[] -> an array of objects providing the only values allowed for
+                      the field - with the following properties
                     - attr?: Attributes -> an optional data object with any properties
                     - required?: bool -> if the field is required or optional
+                    - preselected?: bool -> if this fields should be preselected; will set the corresponding UI flag
+                  - element_type?: string | object -> description of a list type; only valid if \c type is "list" or
+                    "softlist"
 
                 Note that this data will also be used to create the API request type
             */
