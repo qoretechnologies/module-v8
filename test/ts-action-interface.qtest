@@ -62,6 +62,10 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
         AbstractDataProviderType t = prov.getEventTypes().event.type;
         assertEq(2, t.getFields().size());
         assertTrue(prov.supportsObservable());
+        assertEq({
+            "name": "a name",
+            "code": 1234,
+        }, prov.getExampleEventData("event"));
 
         MyObserver o();
         cast<Observable>(prov).registerObserver(o);
@@ -111,7 +115,8 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
 
         {
             AbstractDataProvider prov =
-                TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("webhook-event-1");
+                TypeScriptActionInterface::getDataProvider("js-swagger-test", conn)
+                    .getChildProviderEx("webhook-event-1");
             MyObserver o();
             cast<Observable>(prov).registerObserver(o);
             assertThrows("JAVASCRIPT-ASYNC-ERROR", \cast<DelayedObservable>(prov).observersReady());
@@ -123,6 +128,10 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
         AbstractDataProviderType t = prov.getEventTypes().event.type;
         assertEq(2, t.getFields().size());
         assertTrue(prov.supportsObservable());
+        assertEq({
+            "name": "a name",
+            "code": 1234,
+        }, prov.getExampleEventData("event"));
 
         MyObserver o();
         cast<Observable>(prov).registerObserver(o);

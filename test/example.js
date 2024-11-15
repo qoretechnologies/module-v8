@@ -599,6 +599,20 @@ exports.actionsCatalogue = {
                     },
                 },
             },
+            // get_example_event_data: function (): object
+            /** Returns an example event
+
+                @param ctx: object -> with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+            */
+            get_example_event_data: async function (ctx) {
+                return {
+                    "name": "a name",
+                    "code": 1234,
+                };
+            },
         });
 
         api.registerAction({
@@ -675,6 +689,20 @@ exports.actionsCatalogue = {
                         "desc": "Event code",
                     },
                 },
+            },
+            // get_example_event_data: function (): object
+            /** Returns an example event
+
+                @param ctx: object -> with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+            */
+            get_example_event_data: async function (ctx) {
+                return {
+                    "name": "a name",
+                    "code": 1234,
+                };
             },
         });
     }

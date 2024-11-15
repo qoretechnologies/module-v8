@@ -28,15 +28,18 @@ public class TypeScriptActionEventDataProviderBase inherits TypeScriptActionData
     private {
         string event_id;
         hash<DataProviderMessageInfo> event_info;
+        *hash<AsyncCallInfo> get_example_event_data;
     }
 
     #! Creates the object from the arguments
     constructor(string name, string event_id, hash<DataProviderMessageInfo> event_info,
-            *hash<string, hash<AsyncCallInfo>> omap, *hash<string, hash<RestGetAllowedValuesInfo>> romap,
+            *hash<AsyncCallInfo> get_example_event_data, *hash<string, hash<AsyncCallInfo>> omap,
+            *hash<string, hash<RestGetAllowedValuesInfo>> romap,
             *hash<string, hash<AsyncCallInfo>> dvmap)
             : TypeScriptActionDataProviderBase(name, omap, romap, dvmap) {
         self.event_id = event_id;
         self.event_info = event_info;
+        self.get_example_event_data = get_example_event_data;
     }
 
     #! Returns a hash of all supported event types
@@ -48,6 +51,25 @@ public class TypeScriptActionEventDataProviderBase inherits TypeScriptActionData
         return {
             event_id: event_info,
         };
+    }
+
+    #! Returns example data for the given observable event
+    /** @param id the event ID of the event
+
+        @return example data for the given observable event
+
+        @throw INVALID-EVENT the event_id is not valid
+    */
+    private auto getExampleEventDataImpl(string id) {
+        if (!get_example_event_data) {
+            return TypeScriptActionDataProviderBase::getExampleEventDataImpl(id);
+        }
+        if (id != event_id) {
+            throw "INVALID-EVENT", sprintf("Event ID %y is unknown; expecting %y", id, event_id);
+        }
+        *hash<auto> options = ImpliedArgumentHelper::get();
+        *hash<DataContextInfo> arg = getCallContextInfo(options);
+        return getAsyncValue(get_example_event_data, arg);
     }
 }
 }

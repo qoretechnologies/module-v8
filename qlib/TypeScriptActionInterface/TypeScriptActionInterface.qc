@@ -598,6 +598,8 @@ public class TypeScriptActionInterface {
                     action.action);
             }
         }
+        *hash<AsyncCallInfo> get_example_event_data = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
+            "get_example_event_data", "example event data", pool, io_timeout, action.app, action.action);
 
         TypeScriptActionEventDataProviderBase child;
 
@@ -652,8 +654,9 @@ public class TypeScriptActionInterface {
                 "to": seconds(io_timeout),
             };
 
-            child = new TypeScriptActionWebhookEventDataProvider(action.action, event_id, event_info, omap, romap,
-                dvmap, method, webhook_register, webhook_deregister, webhook_auth, webhook_perms);
+            child = new TypeScriptActionWebhookEventDataProvider(action.action, event_id, event_info,
+                get_example_event_data, omap, romap, dvmap, method, webhook_register, webhook_deregister,
+                webhook_auth, webhook_perms);
             rv = AES_WH_EVENT;
         } else {
             auto event_function = remove action.event_function;
@@ -668,8 +671,8 @@ public class TypeScriptActionInterface {
                 "async_call": event_function,
                 "to": seconds(io_timeout),
             };
-            child = new TypeScriptActionEventDataProvider(action.action, event_id, event_info, omap, romap, dvmap,
-                event);
+            child = new TypeScriptActionEventDataProvider(action.action, event_id, event_info, get_example_event_data,
+                omap, romap, dvmap, event);
             rv = AES_JS_EVENT;
         }
 
@@ -681,6 +684,34 @@ public class TypeScriptActionInterface {
         action.action_val = event_id;
         action.path = action.action;
         return rv;
+    }
+
+    static *hash<AsyncCallInfo> tryGetAsyncAttribute(reference<hash<auto>> h, string key, string type,
+            JavaScriptProgramPool pool, timeout io_timeout, string app, *string action, *string option) {
+        auto callable = remove h{key};
+        if (!(exists callable)) {
+            return;
+        }
+        code get_desc = string sub () {
+            string desc = sprintf("App %y", app);
+            if (exists action) {
+                desc += sprintf(" action %y", action);
+                if (exists option) {
+                    desc += sprintf(" option %y", option);
+                }
+            }
+            return desc;
+        };
+        if (!callable.callp()) {
+            throw "TYPESCRIPT-ACTION-ERROR", sprintf("%s has an invalid %y attribute; got type %y; expecting a "
+                "callable value", get_desc(), key, callable.fullType());
+        }
+        return <AsyncCallInfo>{
+            "label": sprintf("%s %s function", get_desc(), type),
+            "pool": pool,
+            "async_call": callable,
+            "to": seconds(io_timeout),
+        };
     }
 
     static generateApiDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
