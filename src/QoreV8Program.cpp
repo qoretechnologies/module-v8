@@ -33,6 +33,7 @@
 #include <string>
 #include <memory>
 #include <climits>
+#include <cmath>
 
 QoreThreadLock QoreV8Program::global_lock;
 QoreV8Program::pset_t QoreV8Program::pset;
