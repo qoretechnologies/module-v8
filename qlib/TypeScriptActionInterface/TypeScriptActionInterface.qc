@@ -164,6 +164,21 @@ public class TypeScriptActionInterface {
 
         #! Actions supporting events; app -> action -> subtype
         static hash<string, hash<string, string>> emap;
+
+        #! Actions supporting record search; app -> action -> True
+        static hash<string, hash<string, bool>> smap;
+
+        #! Actions supporting record creation; app -> action -> True
+        static hash<string, hash<string, bool>> crmap;
+
+        #! Actions supporting record updates; app -> action -> True
+        static hash<string, hash<string, bool>> updmap;
+
+        #! Actions supporting record upserts; app -> action -> True
+        static hash<string, hash<string, bool>> upsmap;
+
+        #! Actions supporting record deletes; app -> action -> True
+        static hash<string, hash<string, bool>> dmap;
     }
 
     static registerApp(JavaScriptObject app) {
@@ -541,10 +556,138 @@ public class TypeScriptActionInterface {
                 break;
             }
 
+            case DPAT_FIND: {
+                TypeScriptActionInterface::generateSearchDataProvider(app, \action, pool, schema);
+                string actionname = action.action.lwr();
+                if (!smap{appname}{actionname}) {
+                    smap{appname}{actionname} = True;
+                }
+                break;
+            }
+
+            case DPAT_CREATE: {
+                TypeScriptActionInterface::generateCreateDataProvider(app, \action, pool, schema);
+                string actionname = action.action.lwr();
+                if (!crmap{appname}{actionname}) {
+                    crmap{appname}{actionname} = True;
+                }
+                break;
+            }
+
+            case DPAT_UPDATE: {
+                TypeScriptActionInterface::generateUpdateDataProvider(app, \action, pool, schema);
+                string actionname = action.action.lwr();
+                if (!updmap{appname}{actionname}) {
+                    updmap{appname}{actionname} = True;
+                }
+                break;
+            }
+
+            case DPAT_UPSERT: {
+                TypeScriptActionInterface::generateUpsertDataProvider(app, \action, pool, schema);
+                string actionname = action.action.lwr();
+                if (!upsmap{appname}{actionname}) {
+                    upsmap{appname}{actionname} = True;
+                }
+                break;
+            }
+
+            case DPAT_DELETE: {
+                TypeScriptActionInterface::generateDeleteDataProvider(app, \action, pool, schema);
+                string actionname = action.action.lwr();
+                if (!dmap{appname}{actionname}) {
+                    dmap{appname}{actionname} = True;
+                }
+                break;
+            }
+
             default:
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y action_code: %y is unsupported",
                     action.app, action.action, action.action_code);
         }
+    }
+
+    static string generateSearchDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
+            JavaScriptProgramPool pool, *SwaggerSchema schema) {
+        timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
+
+        *hash<DataProviderMessageInfo> get_record_type = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
+            "get_record_type", "get record type", pool, io_timeout, action.app, action.action);
+        if (!get_record_type) {
+            throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y is missing its \"get_record_type\" "
+                "attribute, but this attribute is required for actions supporting searches", action.app,
+                action.action);
+        }
+
+        *hash<string, hash<AsyncCallInfo>> omap;
+        *hash<string, hash<RestGetAllowedValuesInfo>> romap;
+        *hash<string, hash<AsyncCallInfo>> dvmap;
+        if (*hash<auto> opts = remove action.options) {
+            *hash<string, hash<AsyncCallInfo>> dmap;
+            action.options = TypeScriptActionInterface::getOptions(app, \action, opts, \omap, \dmap, \romap, \dvmap,
+                pool);
+            if (dmap) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"options\" "
+                    "attribute; search actions do not support get_dependent_options() callbacks", action.app,
+                    action.action);
+            }
+        }
+        *hash<AsyncCallInfo> begin_transaction = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
+            "begin_transaction", "begin transaction", pool, io_timeout, action.app, action.action);
+        *hash<AsyncCallInfo> commit = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
+            "commit", "commit", pool, io_timeout, action.app, action.action);
+        *hash<AsyncCallInfo> rollback = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
+            "rollback", "rollback", pool, io_timeout, action.app, action.action);
+
+        *hash<DataProviderMessageInfo> search_records = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
+            "search_records", "search records", pool, io_timeout, action.app, action.action);
+        if (!search_records) {
+            throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y is missing its \"search_records\" "
+                "attribute, but this attribute is required for actions supporting searches", action.app,
+                action.action);
+        }
+
+        bool supports_native_search = remove action.supports_native_search ?? False;
+
+        hash<string, hash<DataProviderOptionInfo>> search_options;
+        if (*hash<auto> opts = remove action.search_options) {
+            throw "UNSUPPORTED", "search options are not yet supported";
+        }
+
+        hash<string, hash<DataProviderExpressionInfo>> expressions;
+        if (*hash<auto> opts = remove action.expressions) {
+            throw "UNSUPPORTED", "custom expressions are not yet supported";
+        }
+
+        TypeScriptActionSearchDataProvider child(action.action, get_record_type, begin_transaction, commit, rollback,
+            search_records, search_options, expressions, supports_native_search, omap, romap, dvmap);
+
+        TypeScriptActionAppDataProvider prov = TypeScriptActionInterface::getAppDataProvider(action.app);
+        prov.registerChild(action.action, child);
+
+        #printf("Registered %s %s (%y)\n", action.app, action.action);
+
+        action.path = action.action;
+    }
+
+    static string generateCreateDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
+            JavaScriptProgramPool pool, *SwaggerSchema schema) {
+        throw "UNSUPPORTED";
+    }
+
+    static string generateUpdateDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
+            JavaScriptProgramPool pool, *SwaggerSchema schema) {
+        throw "UNSUPPORTED";
+    }
+
+    static string generateUpsertDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
+            JavaScriptProgramPool pool, *SwaggerSchema schema) {
+        throw "UNSUPPORTED";
+    }
+
+    static string generateDeleteDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
+            JavaScriptProgramPool pool, *SwaggerSchema schema) {
+        throw "UNSUPPORTED";
     }
 
     static string generateEventDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
@@ -1157,6 +1300,32 @@ public class TypeScriptActionInterface {
 
     static bool appSupportsEvents(string app) {
         return exists emap{app.lwr()};
+    }
+
+    static bool appSupportsRecords(string app) {
+        string appname = app.lwr();
+        return exists smap{appname} || exists crmap{appname} || exists updmap{appname} || exists upsmap{appname}
+            || dmap{appname};
+    }
+
+    static bool appSupportsSearch(string app) {
+        return exists smap{app.lwr()};
+    }
+
+    static bool appSupportsCreate(string app) {
+        return exists crmap{app.lwr()};
+    }
+
+    static bool appSupportsUpdate(string app) {
+        return exists updmap{app.lwr()};
+    }
+
+    static bool appSupportsUpsert(string app) {
+        return exists upsmap{app.lwr()};
+    }
+
+    static bool appSupportsDelete(string app) {
+        return exists dmap{app.lwr()};
     }
 
     static *hash<auto> getConnectionUpdateOptions(string app) {
