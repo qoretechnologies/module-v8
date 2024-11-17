@@ -390,22 +390,17 @@ exports.actionsCatalogue = {
             "desc": "Test search",
             "action_code": 4,  // DPAT_FIND == 4 (record search)
 
-            // This means that there are no native search capabilities
+            // This means that there are no native search capabilities and also generic expressions are supported
             /** all records are fetched and filtered after the fact by the DataProvider infrastructure
 
                 This option is meant for simple data providers providing just a record view of data
+
+                If this option is true, then no "search_options" or "expressions" can be defined
 
                 If this option is false, "search_options" must be defined and the "search_records" function must be
                 able to handle them
             */
             "uses_generic_search": true,
-
-            // Set this to true when "uses_generic_search" is also true
-            /** Setting this to true means that all standard expressions are supported for filtering data.
-
-                If this is false, then "expressions" will determine which expressions are supported by this action
-            */
-            "uses_generic_expressions": true,
 
             // returns the record type for the action
             /**
@@ -432,32 +427,50 @@ exports.actionsCatalogue = {
 
             // executes the search and returns a list of the records matched
             /**
-                @param where_cond?: object -> the optional search expression tree
-                @param search_1opts?: object -> search options
                 @param ctx?: object with the following properties:
                 - conn_name?: string -> the connection name, if any is defined
                 - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
                 - opts?: object -> a data object with option values set for the current action
+                @param where_cond?: object -> the optional search expression tree
+                @param search_1opts?: object -> search options
 
                 @return a list of records (object[] | void) matching the arguments
             */
-            "search_records": async function (where_cond, search_opts, ctx) {
+            "search_records": async function (ctx, where_cond, search_opts) {
                 return [
                     {"id": 1, "name": "a"},
                     {"id": 2, "name": "b"},
                 ];
             },
 
-            "begin_transaction": async function () {
-
+            /**
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+            */
+            "begin_transaction": async function (ctx) {
+                // begin transaction code here
             },
 
-            "commit": async function () {
-
+            /**
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+            */
+            "commit": async function (ctx) {
+                // commit transaction code here
             },
 
-            "rollback": async function () {
-
+            /**
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+            */
+            "rollback": async function (ctx) {
+                // rollback transaction code here
             },
         });
 

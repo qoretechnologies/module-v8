@@ -647,20 +647,32 @@ public class TypeScriptActionInterface {
                 action.action);
         }
 
-        bool supports_native_search = remove action.supports_native_search ?? False;
+        bool uses_generic_search = remove action.uses_generic_search ?? False;
 
         hash<string, hash<DataProviderOptionInfo>> search_options;
         if (*hash<auto> opts = remove action.search_options) {
+            if (uses_generic_search) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y cannot define \"search_options\" when "
+                    "\"uses_generic_search\" is also defined", action.app, action.action);
+            }
             throw "UNSUPPORTED", "search options are not yet supported";
+        } else if (uses_generic_search) {
+            search_options = AbstractDataProvider::GenericRecordSearchOptions;
         }
 
         hash<string, hash<DataProviderExpressionInfo>> expressions;
         if (*hash<auto> opts = remove action.expressions) {
+            if (uses_generic_search) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y cannot define \"expressions\" when "
+                    "\"uses_generic_search\" is also defined", action.app, action.action);
+            }
             throw "UNSUPPORTED", "custom expressions are not yet supported";
+        } else {
+            expressions = AbstractDataProvider::GenericExpressions;
         }
 
         TypeScriptActionSearchDataProvider child(action.action, get_record_type, begin_transaction, commit, rollback,
-            search_records, search_options, expressions, supports_native_search, omap, romap, dvmap);
+            search_records, search_options, expressions, !uses_generic_search, omap, romap, dvmap);
 
         TypeScriptActionAppDataProvider prov = TypeScriptActionInterface::getAppDataProvider(action.app);
         prov.registerChild(action.action, child);
