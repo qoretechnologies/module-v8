@@ -1,5 +1,5 @@
 import { Locales, Translation } from 'i18n/i18n-types';
-import { capitalize, omit, reduce, get } from 'lodash';
+import { capitalize, get, omit, reduce } from 'lodash';
 import { OpenAPIV2 } from 'openapi-types';
 import toTitleCase from 'to-title-case';
 import {
@@ -8,6 +8,7 @@ import {
   IAllowedPathData,
   IQoreAppActionOption,
   IQoreAppActionWithEvent,
+  IQoreAppActionWithEventOrWebhook,
   IQorePartialAppActionWithSwaggerPath,
   IQoreTypeObject,
   QoreAppActionCodeToLocale,
@@ -20,7 +21,6 @@ import {
   TQoreOptions,
   TQorePartialEventAction,
   TQorePartialNonEventAction,
-  TQoreResponseType,
   TQoreType,
   TStringWithFirstUpperCaseCharacter,
 } from '../../global/models/qore';
@@ -206,13 +206,11 @@ export const mapActionsToApp = (
   locale: Locales
 ): TQoreAppNonEventAction[] => {
   return Object.entries(actions).map(([_a, action]) => ({
-    ...omit(action, OMMITTED_FIELDS),
+    ...action,
     display_name: getLocaleField(app, locale, action, 'display_name'),
     short_desc: getLocaleField(app, locale, action, 'short_desc'),
     desc: getLocaleField(app, locale, action, 'desc'),
     app,
-    action_code: EQoreAppActionCode.ACTION,
-
     options: 'options' in action ? fixOptions(action, action.options, app, locale) : undefined,
     override_options:
       'override_options' in action
@@ -220,73 +218,11 @@ export const mapActionsToApp = (
         : undefined,
     response_type:
       'response_type' in action
-        ? fixActionType(action.response_type, app, locale, action._localizationGroup)
+        ? typeof action.response_type === 'string'
+          ? action.response_type
+          : fixResponseOrEventInfo(action.response_type, app, locale, action)
         : undefined,
   }));
-};
-
-export const fixActionType = (
-  collection: TQoreResponseType,
-  appName: string,
-  locale: Locales,
-  localeGroup: string
-): TQoreResponseType => {
-  return reduce(
-    collection,
-    (newCollection: TQoreResponseType, type: IQoreTypeObject, key: string): TQoreResponseType => {
-      return {
-        ...newCollection,
-        [key]: {
-          ...type,
-          type:
-            typeof type.type === 'object'
-              ? fixActionType(type.type, appName, locale, localeGroup)
-              : type.type,
-          display_name:
-            // @ts-expect-error no idea whats going on here, will fix later
-            type.display_name || L[locale].apps[appName].actions[localeGroup][key].displayName(),
-          short_desc:
-            // @ts-expect-error no idea whats going on here, will fix later
-            type.short_desc || L[locale].apps[appName].actions[localeGroup][key].shortDesc(),
-          // @ts-expect-error no idea whats going on here, will fix later
-          desc: type.desc || L[locale].apps[appName].actions[localeGroup][key].longDesc(),
-        },
-      };
-    },
-    {}
-  );
-};
-
-export const fixActionOptions = (
-  collection: TQoreOptions,
-  appName: string,
-  locale: Locales,
-  localeGroup: string
-): TQoreOptions => {
-  return reduce(
-    collection,
-    (newCollection: TQoreOptions, option: IQoreAppActionOption, key: string): TQoreOptions => {
-      return {
-        ...newCollection,
-        [key]: {
-          ...option,
-          type:
-            typeof option.type === 'object'
-              ? fixActionType(option.type, appName, locale, localeGroup)
-              : option.type,
-          display_name:
-            // @ts-expect-error no idea whats going on here, will fix later
-            option.display_name || L[locale].apps[appName].actions[localeGroup][key].displayName(),
-          short_desc:
-            // @ts-expect-error no idea whats going on here, will fix later
-            option.short_desc || L[locale].apps[appName].actions[localeGroup][key].shortDesc(),
-          // @ts-expect-error no idea whats going on here, will fix later
-          desc: option.desc || L[locale].apps[appName].actions[localeGroup][key].longDesc(),
-        },
-      };
-    },
-    {}
-  );
 };
 
 /*
@@ -320,7 +256,7 @@ export const mapTriggersToApp = (
       'event_info' in trigger
         ? {
             ...trigger.event_info,
-            type: fixTriggerEventInfoType(trigger.event_info.type, app, locale, trigger.action),
+            type: fixResponseOrEventInfo(trigger.event_info.type, app, locale, trigger),
             desc:
               trigger.event_info.desc ||
               // @ts-expect-error no idea whats going on here, will fix later
@@ -331,13 +267,15 @@ export const mapTriggersToApp = (
     // Base trigger with common fields
     const baseAction = {
       ...omit(trigger, OMMITTED_FIELDS),
+      action: trigger.action,
+      action_code: EQoreAppActionCode.EVENT,
       display_name: getLocaleField(app, locale, trigger, 'display_name'),
       short_desc: getLocaleField(app, locale, trigger, 'short_desc'),
       desc: getLocaleField(app, locale, trigger, 'desc'),
       app,
       options: 'options' in trigger ? fixOptions(trigger, trigger.options, app, locale) : undefined,
       event_info: eventInfo,
-    };
+    } satisfies IQoreAppActionWithEventOrWebhook;
 
     if ('event_function' in trigger) {
       return {
@@ -349,31 +287,42 @@ export const mapTriggersToApp = (
     if ('webhook_method' in trigger) {
       return {
         ...baseAction,
+        ...(trigger.webhook_auth === EQoreAppActionWebhookAuthType.AUTH_REQUIRE_AUTH
+          ? {
+              webhook_auth: EQoreAppActionWebhookAuthType.AUTH_REQUIRE_AUTH,
+              webhook_perms: trigger.webhook_perms,
+            }
+          : {
+              webhook_auth: EQoreAppActionWebhookAuthType.AUTH_NONE,
+            }),
         webhook_method: trigger.webhook_method,
         webhook_register: trigger.webhook_register,
         webhook_deregister: trigger.webhook_deregister,
-        ...(trigger.webhook_auth === EQoreAppActionWebhookAuthType.AUTH_REQUIRE_AUTH
-          ? { webhook_auth: trigger.webhook_auth, webhook_perms: trigger.webhook_perms }
-          : { webhook_auth: trigger.webhook_auth }),
-      } satisfies TQoreAppActionWithWebhook;
+      } as TQoreAppActionWithWebhook;
     }
   });
 };
 
-export const fixTriggerEventInfoType = (
-  collection: TQoreAppActionWithEventOrWebhookEventInfo['type'],
+export const fixResponseOrEventInfo = (
+  type: IQoreTypeObject,
   appName: string,
   locale: Locales,
-  triggerName: string
-): TQoreAppActionWithEventOrWebhookEventInfo['type'] => {
+  action: TQorePartialEventAction | TQorePartialNonEventAction
+): IQoreTypeObject => {
+  const localeActionType = QoreAppActionCodeToLocale[action.action_code];
+  const infoField =
+    localeActionType === QoreAppActionCodeToLocale[EQoreAppActionCode.ACTION]
+      ? 'response_type'
+      : 'event_info';
   const getLocalizedField = (field: string, path: string[]): string => {
     const localizationPath = [
       'apps',
       appName,
-      'triggers',
-      triggerName,
-      'event_info',
+      localeActionType,
+      action.action,
+      infoField,
       'type',
+      'fields',
       ...path,
     ];
     const localization = get(L[locale], localizationPath);
@@ -382,41 +331,47 @@ export const fixTriggerEventInfoType = (
   };
 
   const processCollection = (
-    collection: TQoreAppActionWithEventOrWebhookEventInfo['type'],
+    collection: Record<string, IQoreAppActionOption>,
     path: string[] = []
-  ): TQoreAppActionWithEventOrWebhookEventInfo['type'] => {
+  ): Record<string, IQoreAppActionOption> => {
     return reduce(
       collection,
       (
-        newCollection: TQoreAppActionWithEventOrWebhookEventInfo['type'],
+        newCollection: Record<string, IQoreAppActionOption>,
         type: IQoreTypeObject,
         key: string
-      ): TQoreAppActionWithEventOrWebhookEventInfo['type'] => {
+      ): Record<string, IQoreAppActionOption> => {
         const currentPath = [...path, key];
-        let fixedType = type.type;
+        let fields = type.fields;
 
-        if (typeof fixedType === 'object') {
-          fixedType = processCollection(fixedType, [...currentPath, 'type']) as TQoreType;
+        if (type.type === 'hash') {
+          fields = processCollection(fields, [...currentPath, 'fields']);
         }
 
-        const updatedType = {
+        const updatedField = {
           ...type,
-          type: fixedType,
+          ...(fields && { fields }),
           display_name: type.display_name || getLocalizedField('displayName', currentPath),
           short_desc: type.short_desc || getLocalizedField('shortDesc', currentPath),
           desc: type.desc || getLocalizedField('longDesc', currentPath),
-        };
+        } satisfies IQoreAppActionOption;
 
         return {
           ...newCollection,
-          [key]: updatedType,
+          [key]: updatedField,
         };
       },
       {}
     );
   };
 
-  return processCollection(collection);
+  if (type?.type !== 'hash') {
+    return type;
+  }
+
+  type.fields = processCollection(type.fields);
+
+  return type;
 };
 
 export const fixOptions = (
@@ -441,15 +396,15 @@ export const fixOptions = (
       collection,
       (fixedOptions: TQoreOptions, option: IQoreTypeObject, key: string): TQoreOptions => {
         const currentPath = [...path, key];
-        let fixedType = option.type;
+        let fields = option.fields;
 
-        if (typeof fixedType === 'object') {
-          fixedType = processCollection(fixedType, [...currentPath, 'type']) as TQoreType;
+        if (option.type === 'hash') {
+          fields = processCollection(fields, [...currentPath, 'fields']);
         }
 
         const updatedOption: IQoreAppActionOption<TQoreType, unknown> = {
           ...option,
-          type: fixedType,
+          ...(fields && { fields }),
           display_name: option.display_name || getLocalizedField('displayName', currentPath),
           short_desc: option.short_desc || getLocalizedField('shortDesc', currentPath),
           desc: option.desc || getLocalizedField('longDesc', currentPath),

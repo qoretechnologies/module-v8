@@ -583,7 +583,7 @@ export interface IQoreAppActionWithEvent extends IQoreAppActionWithEventOrWebhoo
 export type TQoreOptions = Record<string, IQoreAppActionOption>;
 export type TQoreResponseType = string | IQoreTypeObject;
 
-export interface IQoreAppActionWithFunction<Options = TQoreOptions, Response = TQoreResponseType>
+export interface IQoreAppActionWithFunction<Options = TQoreOptions, _Response = TQoreResponseType>
   extends IQoreBaseAppAction {
   action_code: EQoreAppActionCode.ACTION;
   api_function?: TQoreAppActionFunction;

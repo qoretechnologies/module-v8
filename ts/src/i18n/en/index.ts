@@ -21,15 +21,17 @@ const en = {
           event_info: {
             desc: 'Event data',
             type: {
-              testTriggerInfo: {
-                displayName: 'Test Trigger Info',
-                shortDesc: 'Test Trigger Info Short Description',
-                longDesc: 'Test Trigger Info Long Description',
-                type: {
-                  testTriggerInfo1: {
-                    displayName: 'Test Trigger Info 1',
-                    shortDesc: 'Test Trigger Info 1 Short Description',
-                    longDesc: 'Test Trigger Info 1 Long Description',
+              fields: {
+                testTriggerInfo: {
+                  displayName: 'Test Trigger Info',
+                  shortDesc: 'Test Trigger Info Short Description',
+                  longDesc: 'Test Trigger Info Long Description',
+                  fields: {
+                    testTriggerInfo1: {
+                      displayName: 'Test Trigger Info 1',
+                      shortDesc: 'Test Trigger Info 1 Short Description',
+                      longDesc: 'Test Trigger Info 1 Long Description',
+                    },
                   },
                 },
               },
@@ -44,7 +46,7 @@ const en = {
               displayName: 'Option 1',
               shortDesc: 'Option 1 Short Description',
               longDesc: 'Option 1 Long Description',
-              type: {
+              fields: {
                 subOption1: {
                   displayName: 'Sub Option 1 of option 1',
                   shortDesc: 'Sub Option 1 Short Description',
@@ -54,7 +56,7 @@ const en = {
                   displayName: 'Sub Option 2 of option 1',
                   shortDesc: 'Sub Option 2 Short Description',
                   longDesc: 'Sub Option 2 Long Description',
-                  type: {
+                  fields: {
                     subSubOption1: {
                       displayName: 'Sub Sub Option 1',
                       shortDesc: 'Sub Sub Option 1 Short Description',
@@ -265,186 +267,194 @@ const en = {
             },
           },
           event_info: {
-            desc: 'GitHub Issue event data',
+            longDesc: 'GitHub Issue Event Data',
             type: {
-              action: {
-                displayName: 'Action',
-                shortDesc: 'Action type',
-                longDesc: "The action performed on the issue, such as 'assigned' or 'opened'.",
-              },
-              issue: {
-                displayName: 'Issue',
-                shortDesc: 'GitHub issue data',
-                longDesc: 'Details of the GitHub issue involved in the event',
-                type: {
-                  url: {
-                    displayName: 'Issue URL',
-                    shortDesc: 'URL of the issue',
-                    longDesc: 'The URL of the GitHub issue',
-                  },
-                  number: {
-                    displayName: 'Issue Number',
-                    shortDesc: 'Issue identifier',
-                    longDesc: 'Unique number of the GitHub issue',
-                  },
-                  title: {
-                    displayName: 'Issue Title',
-                    shortDesc: 'Title of the issue',
-                    longDesc: 'The title of the GitHub issue',
-                  },
-                  user: {
-                    displayName: 'Issue Creator',
-                    shortDesc: 'User who created the issue',
-                    longDesc: 'Information about the user who created the GitHub issue',
-                    type: {
-                      login: {
-                        displayName: 'User Login',
-                        shortDesc: 'GitHub username',
-                        longDesc: 'The username of the GitHub user',
+              fields: {
+                action: {
+                  displayName: 'Action',
+                  shortDesc: 'Action type',
+                  longDesc: 'Type of action performed on the issue (e.g., opened, closed)',
+                },
+                issue: {
+                  displayName: 'Issue',
+                  shortDesc: 'Issue details',
+                  longDesc: 'Details of the issue related to the event',
+                  fields: {
+                    url: {
+                      displayName: 'Issue URL',
+                      shortDesc: 'URL of the issue',
+                      longDesc: 'The API URL for the specific issue',
+                    },
+                    number: {
+                      displayName: 'Issue Number',
+                      shortDesc: 'Number of the issue',
+                      longDesc: 'Unique number identifier for the issue',
+                    },
+                    title: {
+                      displayName: 'Issue Title',
+                      shortDesc: 'Title of the issue',
+                      longDesc: 'The title or subject of the issue',
+                    },
+                    user: {
+                      displayName: 'User',
+                      shortDesc: 'Issue creator',
+                      longDesc: 'Details of the user who created the issue',
+                      fields: {
+                        login: {
+                          displayName: 'Login',
+                          shortDesc: 'Username',
+                          longDesc: 'GitHub username of the user',
+                        },
+                        id: {
+                          displayName: 'User ID',
+                          shortDesc: 'GitHub user ID',
+                          longDesc: 'Unique identifier for the GitHub user',
+                        },
+                        avatar_url: {
+                          displayName: 'Avatar URL',
+                          shortDesc: 'User avatar URL',
+                          longDesc: "URL of the user's avatar image",
+                        },
+                        html_url: {
+                          displayName: 'Profile URL',
+                          shortDesc: 'User profile URL',
+                          longDesc: 'Link to the GitHub profile of the user',
+                        },
                       },
-                      id: {
-                        displayName: 'User ID',
-                        shortDesc: 'User ID',
-                        longDesc: 'Unique ID of the GitHub user',
+                    },
+                    labels: {
+                      displayName: 'Labels',
+                      shortDesc: 'Issue labels',
+                      longDesc: 'List of labels associated with the issue',
+                    },
+                    state: {
+                      displayName: 'State',
+                      shortDesc: 'Issue state',
+                      longDesc: 'Current state of the issue (e.g., open, closed)',
+                    },
+                    locked: {
+                      displayName: 'Locked',
+                      shortDesc: 'Issue lock status',
+                      longDesc: 'Whether the issue is locked for editing',
+                    },
+                    assignee: {
+                      displayName: 'Assignee',
+                      shortDesc: 'Assigned user',
+                      longDesc: 'Details of the user assigned to the issue',
+                      fields: {
+                        login: {
+                          displayName: 'Login',
+                          shortDesc: 'Username',
+                          longDesc: 'GitHub username of the assignee',
+                        },
+                        id: {
+                          displayName: 'User ID',
+                          shortDesc: 'GitHub user ID',
+                          longDesc: 'Unique identifier for the GitHub user',
+                        },
+                        avatar_url: {
+                          displayName: 'Avatar URL',
+                          shortDesc: 'User avatar URL',
+                          longDesc: "URL of the user's avatar image",
+                        },
+                        html_url: {
+                          displayName: 'Profile URL',
+                          shortDesc: 'User profile URL',
+                          longDesc: 'Link to the GitHub profile of the assignee',
+                        },
                       },
-                      avatar_url: {
-                        displayName: 'Avatar URL',
-                        shortDesc: 'User avatar',
-                        longDesc: "URL to the GitHub user's avatar",
+                    },
+                    milestone: {
+                      displayName: 'Milestone',
+                      shortDesc: 'Milestone details',
+                      longDesc: 'Details of the milestone associated with the issue',
+                      fields: {
+                        title: {
+                          displayName: 'Milestone Title',
+                          shortDesc: 'Title of the milestone',
+                          longDesc: 'The title of the associated milestone',
+                        },
+                        due_on: {
+                          displayName: 'Due Date',
+                          shortDesc: 'Milestone due date',
+                          longDesc: 'Date by which the milestone is expected to be completed',
+                        },
+                        state: {
+                          displayName: 'State',
+                          shortDesc: 'Milestone state',
+                          longDesc: 'Current state of the milestone (e.g., open, closed)',
+                        },
                       },
-                      html_url: {
-                        displayName: 'Profile URL',
-                        shortDesc: 'User profile',
-                        longDesc: "URL to the GitHub user's profile",
-                      },
+                    },
+                    comments: {
+                      displayName: 'Comments Count',
+                      shortDesc: 'Number of comments',
+                      longDesc: 'Total number of comments on the issue',
+                    },
+                    created_at: {
+                      displayName: 'Created At',
+                      shortDesc: 'Issue creation time',
+                      longDesc: 'The timestamp when the issue was created',
+                    },
+                    updated_at: {
+                      displayName: 'Updated At',
+                      shortDesc: 'Issue update time',
+                      longDesc: 'The timestamp when the issue was last updated',
+                    },
+                    closed_at: {
+                      displayName: 'Closed At',
+                      shortDesc: 'Issue closure time',
+                      longDesc: 'The timestamp when the issue was closed (if applicable)',
+                    },
+                    body: {
+                      displayName: 'Body',
+                      shortDesc: 'Issue description',
+                      longDesc: 'The detailed description of the issue',
                     },
                   },
                 },
-                labels: {
-                  displayName: 'Labels',
-                  shortDesc: 'Labels for the issue',
-                  longDesc: 'Labels assigned to the GitHub issue',
-                  type: {
+                repository: {
+                  displayName: 'Repository',
+                  shortDesc: 'Repository details',
+                  longDesc: 'Details of the repository where the issue resides',
+                  fields: {
                     id: {
-                      displayName: 'Label ID',
-                      shortDesc: 'Label identifier',
-                      longDesc: 'Unique identifier for the label',
+                      displayName: 'Repository ID',
+                      shortDesc: 'Unique ID',
+                      longDesc: 'Unique identifier for the repository',
                     },
                     name: {
-                      displayName: 'Label Name',
-                      shortDesc: 'Name of the label',
-                      longDesc: 'The name of the label',
+                      displayName: 'Repository Name',
+                      shortDesc: 'Name of the repository',
+                      longDesc: 'The name of the GitHub repository',
                     },
-                    color: {
-                      displayName: 'Label Color',
-                      shortDesc: 'Color of the label',
-                      longDesc: 'Color code of the label',
+                    private: {
+                      displayName: 'Private',
+                      shortDesc: 'Privacy status',
+                      longDesc: 'Whether the repository is private',
                     },
                   },
                 },
-                state: {
-                  displayName: 'State',
-                  shortDesc: 'State of the issue',
-                  longDesc: "Current state of the issue, such as 'open' or 'closed'",
-                },
-                assignee: {
-                  displayName: 'Assignee',
-                  shortDesc: 'User assigned to the issue',
-                  longDesc: 'Details of the user assigned to the issue',
-                  type: {
+                sender: {
+                  displayName: 'Sender',
+                  shortDesc: 'Event sender',
+                  longDesc: 'Details of the sender who triggered the event',
+                  fields: {
                     login: {
-                      displayName: 'Assignee Login',
-                      shortDesc: 'Assignee username',
-                      longDesc: 'The username of the assigned GitHub user',
+                      displayName: 'Login',
+                      shortDesc: 'Username',
+                      longDesc: 'GitHub username of the sender',
                     },
                     id: {
-                      displayName: 'Assignee ID',
-                      shortDesc: 'Assignee ID',
-                      longDesc: 'Unique ID of the assignee',
-                    },
-                    avatar_url: {
-                      displayName: 'Assignee Avatar',
-                      shortDesc: 'Avatar of the assignee',
-                      longDesc: 'URL to the avatar of the assignee',
+                      displayName: 'Sender ID',
+                      shortDesc: 'Unique ID',
+                      longDesc: 'Unique identifier for the sender',
                     },
                     html_url: {
-                      displayName: 'Assignee Profile',
-                      shortDesc: 'Profile of the assignee',
-                      longDesc: 'URL to the GitHub profile of the assignee',
+                      displayName: 'Profile URL',
+                      shortDesc: 'Profile link',
+                      longDesc: "Link to the sender's GitHub profile",
                     },
-                  },
-                },
-                milestone: {
-                  displayName: 'Milestone',
-                  shortDesc: 'Issue milestone',
-                  longDesc: 'Milestone associated with the GitHub issue',
-                  type: {
-                    title: {
-                      displayName: 'Milestone Title',
-                      shortDesc: 'Title of the milestone',
-                      longDesc: 'Title of the milestone for the issue',
-                    },
-                    due_on: {
-                      displayName: 'Due Date',
-                      shortDesc: 'Milestone due date',
-                      longDesc: 'Due date of the milestone',
-                    },
-                  },
-                },
-              },
-              repository: {
-                displayName: 'Repository',
-                shortDesc: 'Repository information',
-                longDesc: 'Details of the GitHub repository related to the event',
-                type: {
-                  name: {
-                    displayName: 'Repository Name',
-                    shortDesc: 'Name of the repository',
-                    longDesc: 'Name of the repository',
-                  },
-                  owner: {
-                    displayName: 'Owner',
-                    shortDesc: 'Repository owner',
-                    longDesc: 'Owner of the repository',
-                    type: {
-                      login: {
-                        displayName: 'Owner Login',
-                        shortDesc: 'Owner username',
-                        longDesc: 'Username of the repository owner',
-                      },
-                      id: {
-                        displayName: 'Owner ID',
-                        shortDesc: 'Owner ID',
-                        longDesc: 'Unique ID of the repository owner',
-                      },
-                    },
-                  },
-                },
-              },
-              sender: {
-                displayName: 'Sender',
-                shortDesc: 'Event sender',
-                longDesc: 'User who triggered the webhook event',
-                type: {
-                  login: {
-                    displayName: 'Sender Login',
-                    shortDesc: 'Sender username',
-                    longDesc: 'Username of the sender',
-                  },
-                  id: {
-                    displayName: 'Sender ID',
-                    shortDesc: 'Sender ID',
-                    longDesc: 'Unique ID of the sender',
-                  },
-                  avatar_url: {
-                    displayName: 'Sender Avatar',
-                    shortDesc: "Sender's avatar",
-                    longDesc: "URL to the sender's avatar",
-                  },
-                  html_url: {
-                    displayName: 'Sender Profile',
-                    shortDesc: "Sender's profile",
-                    longDesc: "URL to the sender's GitHub profile",
                   },
                 },
               },
@@ -528,87 +538,89 @@ const en = {
           event_info: {
             longDesc: 'Zendesk User Event Data',
             type: {
-              account_id: {
-                displayName: 'Account ID',
-                longDesc: 'ID of the associated account',
-                shortDesc: 'Account ID',
-              },
-              detail: {
-                displayName: 'Detail',
-                longDesc: 'Detailed user information',
-                shortDesc: 'User details',
-                type: {
-                  created_at: {
-                    displayName: 'Created At',
-                    longDesc: 'Timestamp of user creation',
-                    shortDesc: 'User creation time',
-                  },
-                  default_group_id: {
-                    displayName: 'Default Group ID',
-                    longDesc: 'ID of the default group for the user',
-                    shortDesc: 'Default group ID',
-                  },
-                  email: {
-                    displayName: 'Email',
-                    longDesc: 'Email address of the user',
-                    shortDesc: 'User email',
-                  },
-                  external_id: {
-                    displayName: 'External ID',
-                    longDesc: 'External identifier for the user',
-                    shortDesc: 'User external ID',
-                  },
-                  id: {
-                    displayName: 'User ID',
-                    longDesc: 'Unique identifier for the user',
-                    shortDesc: 'User ID',
-                  },
-                  organization_id: {
-                    displayName: 'Organization ID',
-                    longDesc: 'ID of the organization associated with the user',
-                    shortDesc: 'Organization ID',
-                  },
-                  role: {
-                    displayName: 'Role',
-                    longDesc: 'Role of the user in the system',
-                    shortDesc: 'User role',
-                  },
-                  updated_at: {
-                    displayName: 'Updated At',
-                    longDesc: 'Last update timestamp for the user',
-                    shortDesc: 'User update time',
+              fields: {
+                account_id: {
+                  displayName: 'Account ID',
+                  shortDesc: 'Account ID',
+                  longDesc: 'ID of the associated account',
+                },
+                detail: {
+                  displayName: 'Detail',
+                  shortDesc: 'User details',
+                  longDesc: 'Detailed user information',
+                  fields: {
+                    created_at: {
+                      displayName: 'Created At',
+                      shortDesc: 'User creation time',
+                      longDesc: 'Timestamp of user creation',
+                    },
+                    default_group_id: {
+                      displayName: 'Default Group ID',
+                      shortDesc: 'Default group ID',
+                      longDesc: 'ID of the default group for the user',
+                    },
+                    email: {
+                      displayName: 'Email',
+                      shortDesc: 'User email',
+                      longDesc: 'Email address of the user',
+                    },
+                    external_id: {
+                      displayName: 'External ID',
+                      shortDesc: 'User external ID',
+                      longDesc: 'External identifier for the user',
+                    },
+                    id: {
+                      displayName: 'User ID',
+                      shortDesc: 'User ID',
+                      longDesc: 'Unique identifier for the user',
+                    },
+                    organization_id: {
+                      displayName: 'Organization ID',
+                      shortDesc: 'Organization ID',
+                      longDesc: 'ID of the organization associated with the user',
+                    },
+                    role: {
+                      displayName: 'Role',
+                      shortDesc: 'User role',
+                      longDesc: 'Role of the user in the system',
+                    },
+                    updated_at: {
+                      displayName: 'Updated At',
+                      shortDesc: 'User update time',
+                      longDesc: 'Last update timestamp for the user',
+                    },
                   },
                 },
-              },
-              event: {
-                displayName: 'Event',
-                longDesc: 'Additional event information',
-                shortDesc: 'Event info',
-              },
-              id: {
-                displayName: 'Event ID',
-                longDesc: 'Unique identifier for the event',
-                shortDesc: 'Event ID',
-              },
-              subject: {
-                displayName: 'Subject',
-                longDesc: 'Subject of the event',
-                shortDesc: 'Event subject',
-              },
-              time: {
-                displayName: 'Time',
-                longDesc: 'Timestamp of the event occurrence',
-                shortDesc: 'Event time',
-              },
-              type: {
-                displayName: 'Event Type',
-                longDesc: 'Type of the event',
-                shortDesc: 'Event type',
-              },
-              zendesk_event_version: {
-                displayName: 'Zendesk Event Version',
-                longDesc: 'Version of the Zendesk event format',
-                shortDesc: 'Event version',
+                event: {
+                  displayName: 'Event',
+                  shortDesc: 'Event info',
+                  longDesc: 'Additional event information',
+                },
+                id: {
+                  displayName: 'Event ID',
+                  shortDesc: 'Event ID',
+                  longDesc: 'Unique identifier for the event',
+                },
+                subject: {
+                  displayName: 'Subject',
+                  shortDesc: 'Event subject',
+                  longDesc: 'Subject of the event',
+                },
+                time: {
+                  displayName: 'Time',
+                  shortDesc: 'Event time',
+                  longDesc: 'Timestamp of the event occurrence',
+                },
+                type: {
+                  displayName: 'Event Type',
+                  shortDesc: 'Event type',
+                  longDesc: 'Type of the event',
+                },
+                zendesk_event_version: {
+                  displayName: 'Zendesk Event Version',
+                  shortDesc: 'Event version',
+                  longDesc: 'Version of the Zendesk event format',
+                },
               },
             },
           },
@@ -620,75 +632,77 @@ const en = {
           event_info: {
             longDesc: 'New Ticket event data',
             type: {
-              assignee_email: {
-                displayName: 'Assignee Email',
-                longDesc: 'Email of the assignee',
-                shortDesc: 'Assignee email',
-              },
-              assignee_name: {
-                displayName: 'Assignee Name',
-                longDesc: 'Name of the assignee',
-                shortDesc: 'Assignee name',
-              },
-              group_name: {
-                displayName: 'Group Name',
-                longDesc: 'Name of the group handling the ticket',
-                shortDesc: 'Group name',
-              },
-              organization_name: {
-                displayName: 'Organization Name',
-                longDesc: 'Name of the associated organization',
-                shortDesc: 'Organization name',
-              },
-              requester_email: {
-                displayName: 'Requester Email',
-                longDesc: 'Email of the requester',
-                shortDesc: 'Requester email',
-              },
-              requester_name: {
-                displayName: 'Requester Name',
-                longDesc: 'Name of the requester',
-                shortDesc: 'Requester name',
-              },
-              tags: {
-                displayName: 'Tags',
-                longDesc: 'Tags associated with the ticket',
-                shortDesc: 'Ticket tags',
-              },
-              ticket_description: {
-                displayName: 'Ticket Description',
-                longDesc: 'Description of the ticket',
-                shortDesc: 'Ticket description',
-              },
-              ticket_id: {
-                displayName: 'Ticket ID',
-                longDesc: 'Unique identifier for the ticket',
-                shortDesc: 'Ticket ID',
-              },
-              ticket_priority: {
-                displayName: 'Ticket Priority',
-                longDesc: 'Priority level of the ticket',
-                shortDesc: 'Ticket priority',
-              },
-              ticket_status: {
-                displayName: 'Ticket Status',
-                longDesc: 'Current status of the ticket',
-                shortDesc: 'Ticket status',
-              },
-              ticket_subject: {
-                displayName: 'Ticket Subject',
-                longDesc: 'Subject of the ticket',
-                shortDesc: 'Ticket subject',
-              },
-              ticket_type: {
-                displayName: 'Ticket Type',
-                longDesc: 'Type of the ticket',
-                shortDesc: 'Ticket type',
-              },
-              ticket_url: {
-                displayName: 'Ticket URL',
-                longDesc: 'URL of the ticket in the system',
-                shortDesc: 'Ticket URL',
+              fields: {
+                assignee_email: {
+                  displayName: 'Assignee Email',
+                  shortDesc: 'Assignee email',
+                  longDesc: 'Email of the assignee',
+                },
+                assignee_name: {
+                  displayName: 'Assignee Name',
+                  shortDesc: 'Assignee name',
+                  longDesc: 'Name of the assignee',
+                },
+                group_name: {
+                  displayName: 'Group Name',
+                  shortDesc: 'Group name',
+                  longDesc: 'Name of the group handling the ticket',
+                },
+                organization_name: {
+                  displayName: 'Organization Name',
+                  shortDesc: 'Organization name',
+                  longDesc: 'Name of the associated organization',
+                },
+                requester_email: {
+                  displayName: 'Requester Email',
+                  shortDesc: 'Requester email',
+                  longDesc: 'Email of the requester',
+                },
+                requester_name: {
+                  displayName: 'Requester Name',
+                  shortDesc: 'Requester name',
+                  longDesc: 'Name of the requester',
+                },
+                tags: {
+                  displayName: 'Tags',
+                  shortDesc: 'Ticket tags',
+                  longDesc: 'Tags associated with the ticket',
+                },
+                ticket_description: {
+                  displayName: 'Ticket Description',
+                  shortDesc: 'Ticket description',
+                  longDesc: 'Description of the ticket',
+                },
+                ticket_id: {
+                  displayName: 'Ticket ID',
+                  shortDesc: 'Ticket ID',
+                  longDesc: 'Unique identifier for the ticket',
+                },
+                ticket_priority: {
+                  displayName: 'Ticket Priority',
+                  shortDesc: 'Ticket priority',
+                  longDesc: 'Priority level of the ticket',
+                },
+                ticket_status: {
+                  displayName: 'Ticket Status',
+                  shortDesc: 'Ticket status',
+                  longDesc: 'Current status of the ticket',
+                },
+                ticket_subject: {
+                  displayName: 'Ticket Subject',
+                  shortDesc: 'Ticket subject',
+                  longDesc: 'Subject of the ticket',
+                },
+                ticket_type: {
+                  displayName: 'Ticket Type',
+                  shortDesc: 'Ticket type',
+                  longDesc: 'Type of the ticket',
+                },
+                ticket_url: {
+                  displayName: 'Ticket URL',
+                  shortDesc: 'Ticket URL',
+                  longDesc: 'URL of the ticket in the system',
+                },
               },
             },
           },
@@ -700,87 +714,89 @@ const en = {
           event_info: {
             longDesc: 'Zendesk Organization Event Data',
             type: {
-              account_id: {
-                displayName: 'Account ID',
-                longDesc: 'ID of the associated account',
-                shortDesc: 'Account ID',
-              },
-              detail: {
-                displayName: 'Detail',
-                longDesc: 'Detailed organization information',
-                shortDesc: 'Organization details',
-                type: {
-                  created_at: {
-                    displayName: 'Created At',
-                    longDesc: 'Timestamp of organization creation',
-                    shortDesc: 'Organization creation time',
-                  },
-                  external_id: {
-                    displayName: 'External ID',
-                    longDesc: 'External identifier for the organization',
-                    shortDesc: 'Organization external ID',
-                  },
-                  group_id: {
-                    displayName: 'Group ID',
-                    longDesc: 'ID of the associated group',
-                    shortDesc: 'Group ID',
-                  },
-                  id: {
-                    displayName: 'Organization ID',
-                    longDesc: 'Unique identifier for the organization',
-                    shortDesc: 'Organization ID',
-                  },
-                  name: {
-                    displayName: 'Name',
-                    longDesc: 'Name of the organization',
-                    shortDesc: 'Organization name',
-                  },
-                  shared_comments: {
-                    displayName: 'Shared Comments',
-                    longDesc: 'Indicates if comments are shared',
-                    shortDesc: 'Shared comments',
-                  },
-                  shared_tickets: {
-                    displayName: 'Shared Tickets',
-                    longDesc: 'Indicates if tickets are shared',
-                    shortDesc: 'Shared tickets',
-                  },
-                  updated_at: {
-                    displayName: 'Updated At',
-                    longDesc: 'Last update timestamp for the organization',
-                    shortDesc: 'Organization update time',
+              fields: {
+                account_id: {
+                  displayName: 'Account ID',
+                  shortDesc: 'Account ID',
+                  longDesc: 'ID of the associated account',
+                },
+                detail: {
+                  displayName: 'Detail',
+                  shortDesc: 'Organization details',
+                  longDesc: 'Detailed organization information',
+                  fields: {
+                    created_at: {
+                      displayName: 'Created At',
+                      shortDesc: 'Organization creation time',
+                      longDesc: 'Timestamp of organization creation',
+                    },
+                    external_id: {
+                      displayName: 'External ID',
+                      shortDesc: 'Organization external ID',
+                      longDesc: 'External identifier for the organization',
+                    },
+                    group_id: {
+                      displayName: 'Group ID',
+                      shortDesc: 'Group ID',
+                      longDesc: 'ID of the associated group',
+                    },
+                    id: {
+                      displayName: 'Organization ID',
+                      shortDesc: 'Organization ID',
+                      longDesc: 'Unique identifier for the organization',
+                    },
+                    name: {
+                      displayName: 'Name',
+                      shortDesc: 'Organization name',
+                      longDesc: 'Name of the organization',
+                    },
+                    shared_comments: {
+                      displayName: 'Shared Comments',
+                      shortDesc: 'Shared comments',
+                      longDesc: 'Indicates if comments are shared',
+                    },
+                    shared_tickets: {
+                      displayName: 'Shared Tickets',
+                      shortDesc: 'Shared tickets',
+                      longDesc: 'Indicates if tickets are shared',
+                    },
+                    updated_at: {
+                      displayName: 'Updated At',
+                      shortDesc: 'Organization update time',
+                      longDesc: 'Last update timestamp for the organization',
+                    },
                   },
                 },
-              },
-              event: {
-                displayName: 'Event',
-                longDesc: 'Additional event information',
-                shortDesc: 'Event info',
-              },
-              id: {
-                displayName: 'Event ID',
-                longDesc: 'Unique identifier for the event',
-                shortDesc: 'Event ID',
-              },
-              subject: {
-                displayName: 'Subject',
-                longDesc: 'Subject of the event',
-                shortDesc: 'Event subject',
-              },
-              time: {
-                displayName: 'Time',
-                longDesc: 'Timestamp of the event occurrence',
-                shortDesc: 'Event time',
-              },
-              type: {
-                displayName: 'Event Type',
-                longDesc: 'Type of the event',
-                shortDesc: 'Event type',
-              },
-              zendesk_event_version: {
-                displayName: 'Zendesk Event Version',
-                longDesc: 'Version of the Zendesk event format',
-                shortDesc: 'Event version',
+                event: {
+                  displayName: 'Event',
+                  shortDesc: 'Event info',
+                  longDesc: 'Additional event information',
+                },
+                id: {
+                  displayName: 'Event ID',
+                  shortDesc: 'Event ID',
+                  longDesc: 'Unique identifier for the event',
+                },
+                subject: {
+                  displayName: 'Subject',
+                  shortDesc: 'Event subject',
+                  longDesc: 'Subject of the event',
+                },
+                time: {
+                  displayName: 'Time',
+                  shortDesc: 'Event time',
+                  longDesc: 'Timestamp of the event occurrence',
+                },
+                type: {
+                  displayName: 'Event Type',
+                  shortDesc: 'Event type',
+                  longDesc: 'Type of the event',
+                },
+                zendesk_event_version: {
+                  displayName: 'Zendesk Event Version',
+                  shortDesc: 'Event version',
+                  longDesc: 'Version of the Zendesk event format',
+                },
               },
             },
           },
@@ -793,7 +809,7 @@ const en = {
               displayName: 'Group',
               shortDesc: 'Group',
               longDesc: 'Group',
-              type: {
+              fields: {
                 name: {
                   displayName: 'Name',
                   shortDesc: 'Group name',
@@ -831,7 +847,7 @@ const en = {
               displayName: 'Group',
               shortDesc: 'Group',
               longDesc: 'Group',
-              type: {
+              fields: {
                 name: {
                   displayName: 'Name',
                   shortDesc: 'Group name',
@@ -869,7 +885,7 @@ const en = {
               displayName: 'User',
               shortDesc: 'User',
               longDesc: 'User',
-              type: {
+              fields: {
                 name: {
                   displayName: 'Name',
                   shortDesc: 'User name',
@@ -915,7 +931,7 @@ const en = {
               displayName: 'User',
               shortDesc: 'User',
               longDesc: 'User',
-              type: {
+              fields: {
                 name: {
                   displayName: 'Name',
                   shortDesc: 'User name',

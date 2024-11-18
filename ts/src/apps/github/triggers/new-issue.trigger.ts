@@ -27,14 +27,12 @@ export default {
           Authorization: `Bearer ${token}`,
         },
         data: {
-          webhook: {
-            name: 'New Issue Webhook',
-            active: true,
-            events: ['issues'],
-            config: {
-              url,
-              content_type: 'json',
-            },
+          name: 'web',
+          active: true,
+          events: ['issues'],
+          config: {
+            url,
+            content_type: 'json',
           },
         },
         path: `/repos/${owner}/${repo}/hooks`,
@@ -102,9 +100,9 @@ export default {
               type: 'list',
               example_value: [
                 {
-                  id: 208045946,
-                  name: 'bug',
-                  color: 'f29513',
+                  id: 7590030010,
+                  name: 'documentation',
+                  color: '0075ca',
                 },
               ],
             },

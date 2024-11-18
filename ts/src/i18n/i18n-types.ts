@@ -55,33 +55,35 @@ type RootTranslation = {
 						 */
 						desc: string
 						type: {
-							testTriggerInfo: {
-								/**
-								 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o
-								 */
-								displayName: string
-								/**
-								 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
-								 */
-								shortDesc: string
-								/**
-								 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
-								 */
-								longDesc: string
-								type: {
-									testTriggerInfo1: {
-										/**
-										 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​1
-										 */
-										displayName: string
-										/**
-										 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
-										 */
-										shortDesc: string
-										/**
-										 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
-										 */
-										longDesc: string
+							fields: {
+								testTriggerInfo: {
+									/**
+									 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o
+									 */
+									displayName: string
+									/**
+									 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
+									 */
+									shortDesc: string
+									/**
+									 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
+									 */
+									longDesc: string
+									fields: {
+										testTriggerInfo1: {
+											/**
+											 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​1
+											 */
+											displayName: string
+											/**
+											 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
+											 */
+											shortDesc: string
+											/**
+											 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -105,7 +107,7 @@ type RootTranslation = {
 							 * O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
 							 */
 							longDesc: string
-							type: {
+							fields: {
 								subOption1: {
 									/**
 									 * S​u​b​ ​O​p​t​i​o​n​ ​1​ ​o​f​ ​o​p​t​i​o​n​ ​1
@@ -133,7 +135,7 @@ type RootTranslation = {
 									 * S​u​b​ ​O​p​t​i​o​n​ ​2​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
 									 */
 									longDesc: string
-									type: {
+									fields: {
 										subSubOption1: {
 											/**
 											 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1
@@ -635,485 +637,511 @@ type RootTranslation = {
 					}
 					event_info: {
 						/**
-						 * G​i​t​H​u​b​ ​I​s​s​u​e​ ​e​v​e​n​t​ ​d​a​t​a
+						 * G​i​t​H​u​b​ ​I​s​s​u​e​ ​E​v​e​n​t​ ​D​a​t​a
 						 */
-						desc: string
+						longDesc: string
 						type: {
-							action: {
-								/**
-								 * A​c​t​i​o​n
-								 */
-								displayName: string
-								/**
-								 * A​c​t​i​o​n​ ​t​y​p​e
-								 */
-								shortDesc: string
-								/**
-								 * T​h​e​ ​a​c​t​i​o​n​ ​p​e​r​f​o​r​m​e​d​ ​o​n​ ​t​h​e​ ​i​s​s​u​e​,​ ​s​u​c​h​ ​a​s​ ​'​a​s​s​i​g​n​e​d​'​ ​o​r​ ​'​o​p​e​n​e​d​'​.
-								 */
-								longDesc: string
-							}
-							issue: {
-								/**
-								 * I​s​s​u​e
-								 */
-								displayName: string
-								/**
-								 * G​i​t​H​u​b​ ​i​s​s​u​e​ ​d​a​t​a
-								 */
-								shortDesc: string
-								/**
-								 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​G​i​t​H​u​b​ ​i​s​s​u​e​ ​i​n​v​o​l​v​e​d​ ​i​n​ ​t​h​e​ ​e​v​e​n​t
-								 */
-								longDesc: string
-								type: {
-									url: {
-										/**
-										 * I​s​s​u​e​ ​U​R​L
-										 */
-										displayName: string
-										/**
-										 * U​R​L​ ​o​f​ ​t​h​e​ ​i​s​s​u​e
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​G​i​t​H​u​b​ ​i​s​s​u​e
-										 */
-										longDesc: string
-									}
-									number: {
-										/**
-										 * I​s​s​u​e​ ​N​u​m​b​e​r
-										 */
-										displayName: string
-										/**
-										 * I​s​s​u​e​ ​i​d​e​n​t​i​f​i​e​r
-										 */
-										shortDesc: string
-										/**
-										 * U​n​i​q​u​e​ ​n​u​m​b​e​r​ ​o​f​ ​t​h​e​ ​G​i​t​H​u​b​ ​i​s​s​u​e
-										 */
-										longDesc: string
-									}
-									title: {
-										/**
-										 * I​s​s​u​e​ ​T​i​t​l​e
-										 */
-										displayName: string
-										/**
-										 * T​i​t​l​e​ ​o​f​ ​t​h​e​ ​i​s​s​u​e
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​G​i​t​H​u​b​ ​i​s​s​u​e
-										 */
-										longDesc: string
-									}
-									user: {
-										/**
-										 * I​s​s​u​e​ ​C​r​e​a​t​o​r
-										 */
-										displayName: string
-										/**
-										 * U​s​e​r​ ​w​h​o​ ​c​r​e​a​t​e​d​ ​t​h​e​ ​i​s​s​u​e
-										 */
-										shortDesc: string
-										/**
-										 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​ ​c​r​e​a​t​e​d​ ​t​h​e​ ​G​i​t​H​u​b​ ​i​s​s​u​e
-										 */
-										longDesc: string
-										type: {
-											login: {
-												/**
-												 * U​s​e​r​ ​L​o​g​i​n
-												 */
-												displayName: string
-												/**
-												 * G​i​t​H​u​b​ ​u​s​e​r​n​a​m​e
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​u​s​e​r​n​a​m​e​ ​o​f​ ​t​h​e​ ​G​i​t​H​u​b​ ​u​s​e​r
-												 */
-												longDesc: string
-											}
-											id: {
-												/**
-												 * U​s​e​r​ ​I​D
-												 */
-												displayName: string
-												/**
-												 * U​s​e​r​ ​I​D
-												 */
-												shortDesc: string
-												/**
-												 * U​n​i​q​u​e​ ​I​D​ ​o​f​ ​t​h​e​ ​G​i​t​H​u​b​ ​u​s​e​r
-												 */
-												longDesc: string
-											}
-											avatar_url: {
-												/**
-												 * A​v​a​t​a​r​ ​U​R​L
-												 */
-												displayName: string
-												/**
-												 * U​s​e​r​ ​a​v​a​t​a​r
-												 */
-												shortDesc: string
-												/**
-												 * U​R​L​ ​t​o​ ​t​h​e​ ​G​i​t​H​u​b​ ​u​s​e​r​'​s​ ​a​v​a​t​a​r
-												 */
-												longDesc: string
-											}
-											html_url: {
-												/**
-												 * P​r​o​f​i​l​e​ ​U​R​L
-												 */
-												displayName: string
-												/**
-												 * U​s​e​r​ ​p​r​o​f​i​l​e
-												 */
-												shortDesc: string
-												/**
-												 * U​R​L​ ​t​o​ ​t​h​e​ ​G​i​t​H​u​b​ ​u​s​e​r​'​s​ ​p​r​o​f​i​l​e
-												 */
-												longDesc: string
-											}
-										}
-									}
-								}
-								labels: {
+							fields: {
+								action: {
 									/**
-									 * L​a​b​e​l​s
+									 * A​c​t​i​o​n
 									 */
 									displayName: string
 									/**
-									 * L​a​b​e​l​s​ ​f​o​r​ ​t​h​e​ ​i​s​s​u​e
+									 * A​c​t​i​o​n​ ​t​y​p​e
 									 */
 									shortDesc: string
 									/**
-									 * L​a​b​e​l​s​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​G​i​t​H​u​b​ ​i​s​s​u​e
+									 * T​y​p​e​ ​o​f​ ​a​c​t​i​o​n​ ​p​e​r​f​o​r​m​e​d​ ​o​n​ ​t​h​e​ ​i​s​s​u​e​ ​(​e​.​g​.​,​ ​o​p​e​n​e​d​,​ ​c​l​o​s​e​d​)
 									 */
 									longDesc: string
-									type: {
-										id: {
+								}
+								issue: {
+									/**
+									 * I​s​s​u​e
+									 */
+									displayName: string
+									/**
+									 * I​s​s​u​e​ ​d​e​t​a​i​l​s
+									 */
+									shortDesc: string
+									/**
+									 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​i​s​s​u​e​ ​r​e​l​a​t​e​d​ ​t​o​ ​t​h​e​ ​e​v​e​n​t
+									 */
+									longDesc: string
+									fields: {
+										url: {
 											/**
-											 * L​a​b​e​l​ ​I​D
+											 * I​s​s​u​e​ ​U​R​L
 											 */
 											displayName: string
 											/**
-											 * L​a​b​e​l​ ​i​d​e​n​t​i​f​i​e​r
+											 * U​R​L​ ​o​f​ ​t​h​e​ ​i​s​s​u​e
 											 */
 											shortDesc: string
 											/**
-											 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​l​a​b​e​l
+											 * T​h​e​ ​A​P​I​ ​U​R​L​ ​f​o​r​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​i​s​s​u​e
+											 */
+											longDesc: string
+										}
+										number: {
+											/**
+											 * I​s​s​u​e​ ​N​u​m​b​e​r
+											 */
+											displayName: string
+											/**
+											 * N​u​m​b​e​r​ ​o​f​ ​t​h​e​ ​i​s​s​u​e
+											 */
+											shortDesc: string
+											/**
+											 * U​n​i​q​u​e​ ​n​u​m​b​e​r​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​i​s​s​u​e
+											 */
+											longDesc: string
+										}
+										title: {
+											/**
+											 * I​s​s​u​e​ ​T​i​t​l​e
+											 */
+											displayName: string
+											/**
+											 * T​i​t​l​e​ ​o​f​ ​t​h​e​ ​i​s​s​u​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​t​i​t​l​e​ ​o​r​ ​s​u​b​j​e​c​t​ ​o​f​ ​t​h​e​ ​i​s​s​u​e
+											 */
+											longDesc: string
+										}
+										user: {
+											/**
+											 * U​s​e​r
+											 */
+											displayName: string
+											/**
+											 * I​s​s​u​e​ ​c​r​e​a​t​o​r
+											 */
+											shortDesc: string
+											/**
+											 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​ ​c​r​e​a​t​e​d​ ​t​h​e​ ​i​s​s​u​e
+											 */
+											longDesc: string
+											fields: {
+												login: {
+													/**
+													 * L​o​g​i​n
+													 */
+													displayName: string
+													/**
+													 * U​s​e​r​n​a​m​e
+													 */
+													shortDesc: string
+													/**
+													 * G​i​t​H​u​b​ ​u​s​e​r​n​a​m​e​ ​o​f​ ​t​h​e​ ​u​s​e​r
+													 */
+													longDesc: string
+												}
+												id: {
+													/**
+													 * U​s​e​r​ ​I​D
+													 */
+													displayName: string
+													/**
+													 * G​i​t​H​u​b​ ​u​s​e​r​ ​I​D
+													 */
+													shortDesc: string
+													/**
+													 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​G​i​t​H​u​b​ ​u​s​e​r
+													 */
+													longDesc: string
+												}
+												avatar_url: {
+													/**
+													 * A​v​a​t​a​r​ ​U​R​L
+													 */
+													displayName: string
+													/**
+													 * U​s​e​r​ ​a​v​a​t​a​r​ ​U​R​L
+													 */
+													shortDesc: string
+													/**
+													 * U​R​L​ ​o​f​ ​t​h​e​ ​u​s​e​r​'​s​ ​a​v​a​t​a​r​ ​i​m​a​g​e
+													 */
+													longDesc: string
+												}
+												html_url: {
+													/**
+													 * P​r​o​f​i​l​e​ ​U​R​L
+													 */
+													displayName: string
+													/**
+													 * U​s​e​r​ ​p​r​o​f​i​l​e​ ​U​R​L
+													 */
+													shortDesc: string
+													/**
+													 * L​i​n​k​ ​t​o​ ​t​h​e​ ​G​i​t​H​u​b​ ​p​r​o​f​i​l​e​ ​o​f​ ​t​h​e​ ​u​s​e​r
+													 */
+													longDesc: string
+												}
+											}
+										}
+										labels: {
+											/**
+											 * L​a​b​e​l​s
+											 */
+											displayName: string
+											/**
+											 * I​s​s​u​e​ ​l​a​b​e​l​s
+											 */
+											shortDesc: string
+											/**
+											 * L​i​s​t​ ​o​f​ ​l​a​b​e​l​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​i​s​s​u​e
+											 */
+											longDesc: string
+										}
+										state: {
+											/**
+											 * S​t​a​t​e
+											 */
+											displayName: string
+											/**
+											 * I​s​s​u​e​ ​s​t​a​t​e
+											 */
+											shortDesc: string
+											/**
+											 * C​u​r​r​e​n​t​ ​s​t​a​t​e​ ​o​f​ ​t​h​e​ ​i​s​s​u​e​ ​(​e​.​g​.​,​ ​o​p​e​n​,​ ​c​l​o​s​e​d​)
+											 */
+											longDesc: string
+										}
+										locked: {
+											/**
+											 * L​o​c​k​e​d
+											 */
+											displayName: string
+											/**
+											 * I​s​s​u​e​ ​l​o​c​k​ ​s​t​a​t​u​s
+											 */
+											shortDesc: string
+											/**
+											 * W​h​e​t​h​e​r​ ​t​h​e​ ​i​s​s​u​e​ ​i​s​ ​l​o​c​k​e​d​ ​f​o​r​ ​e​d​i​t​i​n​g
+											 */
+											longDesc: string
+										}
+										assignee: {
+											/**
+											 * A​s​s​i​g​n​e​e
+											 */
+											displayName: string
+											/**
+											 * A​s​s​i​g​n​e​d​ ​u​s​e​r
+											 */
+											shortDesc: string
+											/**
+											 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​i​s​s​u​e
+											 */
+											longDesc: string
+											fields: {
+												login: {
+													/**
+													 * L​o​g​i​n
+													 */
+													displayName: string
+													/**
+													 * U​s​e​r​n​a​m​e
+													 */
+													shortDesc: string
+													/**
+													 * G​i​t​H​u​b​ ​u​s​e​r​n​a​m​e​ ​o​f​ ​t​h​e​ ​a​s​s​i​g​n​e​e
+													 */
+													longDesc: string
+												}
+												id: {
+													/**
+													 * U​s​e​r​ ​I​D
+													 */
+													displayName: string
+													/**
+													 * G​i​t​H​u​b​ ​u​s​e​r​ ​I​D
+													 */
+													shortDesc: string
+													/**
+													 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​G​i​t​H​u​b​ ​u​s​e​r
+													 */
+													longDesc: string
+												}
+												avatar_url: {
+													/**
+													 * A​v​a​t​a​r​ ​U​R​L
+													 */
+													displayName: string
+													/**
+													 * U​s​e​r​ ​a​v​a​t​a​r​ ​U​R​L
+													 */
+													shortDesc: string
+													/**
+													 * U​R​L​ ​o​f​ ​t​h​e​ ​u​s​e​r​'​s​ ​a​v​a​t​a​r​ ​i​m​a​g​e
+													 */
+													longDesc: string
+												}
+												html_url: {
+													/**
+													 * P​r​o​f​i​l​e​ ​U​R​L
+													 */
+													displayName: string
+													/**
+													 * U​s​e​r​ ​p​r​o​f​i​l​e​ ​U​R​L
+													 */
+													shortDesc: string
+													/**
+													 * L​i​n​k​ ​t​o​ ​t​h​e​ ​G​i​t​H​u​b​ ​p​r​o​f​i​l​e​ ​o​f​ ​t​h​e​ ​a​s​s​i​g​n​e​e
+													 */
+													longDesc: string
+												}
+											}
+										}
+										milestone: {
+											/**
+											 * M​i​l​e​s​t​o​n​e
+											 */
+											displayName: string
+											/**
+											 * M​i​l​e​s​t​o​n​e​ ​d​e​t​a​i​l​s
+											 */
+											shortDesc: string
+											/**
+											 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​m​i​l​e​s​t​o​n​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​i​s​s​u​e
+											 */
+											longDesc: string
+											fields: {
+												title: {
+													/**
+													 * M​i​l​e​s​t​o​n​e​ ​T​i​t​l​e
+													 */
+													displayName: string
+													/**
+													 * T​i​t​l​e​ ​o​f​ ​t​h​e​ ​m​i​l​e​s​t​o​n​e
+													 */
+													shortDesc: string
+													/**
+													 * T​h​e​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​e​d​ ​m​i​l​e​s​t​o​n​e
+													 */
+													longDesc: string
+												}
+												due_on: {
+													/**
+													 * D​u​e​ ​D​a​t​e
+													 */
+													displayName: string
+													/**
+													 * M​i​l​e​s​t​o​n​e​ ​d​u​e​ ​d​a​t​e
+													 */
+													shortDesc: string
+													/**
+													 * D​a​t​e​ ​b​y​ ​w​h​i​c​h​ ​t​h​e​ ​m​i​l​e​s​t​o​n​e​ ​i​s​ ​e​x​p​e​c​t​e​d​ ​t​o​ ​b​e​ ​c​o​m​p​l​e​t​e​d
+													 */
+													longDesc: string
+												}
+												state: {
+													/**
+													 * S​t​a​t​e
+													 */
+													displayName: string
+													/**
+													 * M​i​l​e​s​t​o​n​e​ ​s​t​a​t​e
+													 */
+													shortDesc: string
+													/**
+													 * C​u​r​r​e​n​t​ ​s​t​a​t​e​ ​o​f​ ​t​h​e​ ​m​i​l​e​s​t​o​n​e​ ​(​e​.​g​.​,​ ​o​p​e​n​,​ ​c​l​o​s​e​d​)
+													 */
+													longDesc: string
+												}
+											}
+										}
+										comments: {
+											/**
+											 * C​o​m​m​e​n​t​s​ ​C​o​u​n​t
+											 */
+											displayName: string
+											/**
+											 * N​u​m​b​e​r​ ​o​f​ ​c​o​m​m​e​n​t​s
+											 */
+											shortDesc: string
+											/**
+											 * T​o​t​a​l​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​m​m​e​n​t​s​ ​o​n​ ​t​h​e​ ​i​s​s​u​e
+											 */
+											longDesc: string
+										}
+										created_at: {
+											/**
+											 * C​r​e​a​t​e​d​ ​A​t
+											 */
+											displayName: string
+											/**
+											 * I​s​s​u​e​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​w​h​e​n​ ​t​h​e​ ​i​s​s​u​e​ ​w​a​s​ ​c​r​e​a​t​e​d
+											 */
+											longDesc: string
+										}
+										updated_at: {
+											/**
+											 * U​p​d​a​t​e​d​ ​A​t
+											 */
+											displayName: string
+											/**
+											 * I​s​s​u​e​ ​u​p​d​a​t​e​ ​t​i​m​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​w​h​e​n​ ​t​h​e​ ​i​s​s​u​e​ ​w​a​s​ ​l​a​s​t​ ​u​p​d​a​t​e​d
+											 */
+											longDesc: string
+										}
+										closed_at: {
+											/**
+											 * C​l​o​s​e​d​ ​A​t
+											 */
+											displayName: string
+											/**
+											 * I​s​s​u​e​ ​c​l​o​s​u​r​e​ ​t​i​m​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​w​h​e​n​ ​t​h​e​ ​i​s​s​u​e​ ​w​a​s​ ​c​l​o​s​e​d​ ​(​i​f​ ​a​p​p​l​i​c​a​b​l​e​)
+											 */
+											longDesc: string
+										}
+										body: {
+											/**
+											 * B​o​d​y
+											 */
+											displayName: string
+											/**
+											 * I​s​s​u​e​ ​d​e​s​c​r​i​p​t​i​o​n
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​i​s​s​u​e
+											 */
+											longDesc: string
+										}
+									}
+								}
+								repository: {
+									/**
+									 * R​e​p​o​s​i​t​o​r​y
+									 */
+									displayName: string
+									/**
+									 * R​e​p​o​s​i​t​o​r​y​ ​d​e​t​a​i​l​s
+									 */
+									shortDesc: string
+									/**
+									 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y​ ​w​h​e​r​e​ ​t​h​e​ ​i​s​s​u​e​ ​r​e​s​i​d​e​s
+									 */
+									longDesc: string
+									fields: {
+										id: {
+											/**
+											 * R​e​p​o​s​i​t​o​r​y​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * U​n​i​q​u​e​ ​I​D
+											 */
+											shortDesc: string
+											/**
+											 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y
 											 */
 											longDesc: string
 										}
 										name: {
 											/**
-											 * L​a​b​e​l​ ​N​a​m​e
+											 * R​e​p​o​s​i​t​o​r​y​ ​N​a​m​e
 											 */
 											displayName: string
 											/**
-											 * N​a​m​e​ ​o​f​ ​t​h​e​ ​l​a​b​e​l
+											 * N​a​m​e​ ​o​f​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y
 											 */
 											shortDesc: string
 											/**
-											 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​l​a​b​e​l
+											 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​G​i​t​H​u​b​ ​r​e​p​o​s​i​t​o​r​y
 											 */
 											longDesc: string
 										}
-										color: {
+										'private': {
 											/**
-											 * L​a​b​e​l​ ​C​o​l​o​r
+											 * P​r​i​v​a​t​e
 											 */
 											displayName: string
 											/**
-											 * C​o​l​o​r​ ​o​f​ ​t​h​e​ ​l​a​b​e​l
+											 * P​r​i​v​a​c​y​ ​s​t​a​t​u​s
 											 */
 											shortDesc: string
 											/**
-											 * C​o​l​o​r​ ​c​o​d​e​ ​o​f​ ​t​h​e​ ​l​a​b​e​l
+											 * W​h​e​t​h​e​r​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y​ ​i​s​ ​p​r​i​v​a​t​e
 											 */
 											longDesc: string
 										}
 									}
 								}
-								state: {
+								sender: {
 									/**
-									 * S​t​a​t​e
+									 * S​e​n​d​e​r
 									 */
 									displayName: string
 									/**
-									 * S​t​a​t​e​ ​o​f​ ​t​h​e​ ​i​s​s​u​e
+									 * E​v​e​n​t​ ​s​e​n​d​e​r
 									 */
 									shortDesc: string
 									/**
-									 * C​u​r​r​e​n​t​ ​s​t​a​t​e​ ​o​f​ ​t​h​e​ ​i​s​s​u​e​,​ ​s​u​c​h​ ​a​s​ ​'​o​p​e​n​'​ ​o​r​ ​'​c​l​o​s​e​d​'
+									 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​s​e​n​d​e​r​ ​w​h​o​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t
 									 */
 									longDesc: string
-								}
-								assignee: {
-									/**
-									 * A​s​s​i​g​n​e​e
-									 */
-									displayName: string
-									/**
-									 * U​s​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​i​s​s​u​e
-									 */
-									shortDesc: string
-									/**
-									 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​i​s​s​u​e
-									 */
-									longDesc: string
-									type: {
+									fields: {
 										login: {
 											/**
-											 * A​s​s​i​g​n​e​e​ ​L​o​g​i​n
+											 * L​o​g​i​n
 											 */
 											displayName: string
 											/**
-											 * A​s​s​i​g​n​e​e​ ​u​s​e​r​n​a​m​e
+											 * U​s​e​r​n​a​m​e
 											 */
 											shortDesc: string
 											/**
-											 * T​h​e​ ​u​s​e​r​n​a​m​e​ ​o​f​ ​t​h​e​ ​a​s​s​i​g​n​e​d​ ​G​i​t​H​u​b​ ​u​s​e​r
+											 * G​i​t​H​u​b​ ​u​s​e​r​n​a​m​e​ ​o​f​ ​t​h​e​ ​s​e​n​d​e​r
 											 */
 											longDesc: string
 										}
 										id: {
 											/**
-											 * A​s​s​i​g​n​e​e​ ​I​D
+											 * S​e​n​d​e​r​ ​I​D
 											 */
 											displayName: string
 											/**
-											 * A​s​s​i​g​n​e​e​ ​I​D
+											 * U​n​i​q​u​e​ ​I​D
 											 */
 											shortDesc: string
 											/**
-											 * U​n​i​q​u​e​ ​I​D​ ​o​f​ ​t​h​e​ ​a​s​s​i​g​n​e​e
-											 */
-											longDesc: string
-										}
-										avatar_url: {
-											/**
-											 * A​s​s​i​g​n​e​e​ ​A​v​a​t​a​r
-											 */
-											displayName: string
-											/**
-											 * A​v​a​t​a​r​ ​o​f​ ​t​h​e​ ​a​s​s​i​g​n​e​e
-											 */
-											shortDesc: string
-											/**
-											 * U​R​L​ ​t​o​ ​t​h​e​ ​a​v​a​t​a​r​ ​o​f​ ​t​h​e​ ​a​s​s​i​g​n​e​e
+											 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​s​e​n​d​e​r
 											 */
 											longDesc: string
 										}
 										html_url: {
 											/**
-											 * A​s​s​i​g​n​e​e​ ​P​r​o​f​i​l​e
+											 * P​r​o​f​i​l​e​ ​U​R​L
 											 */
 											displayName: string
 											/**
-											 * P​r​o​f​i​l​e​ ​o​f​ ​t​h​e​ ​a​s​s​i​g​n​e​e
+											 * P​r​o​f​i​l​e​ ​l​i​n​k
 											 */
 											shortDesc: string
 											/**
-											 * U​R​L​ ​t​o​ ​t​h​e​ ​G​i​t​H​u​b​ ​p​r​o​f​i​l​e​ ​o​f​ ​t​h​e​ ​a​s​s​i​g​n​e​e
+											 * L​i​n​k​ ​t​o​ ​t​h​e​ ​s​e​n​d​e​r​'​s​ ​G​i​t​H​u​b​ ​p​r​o​f​i​l​e
 											 */
 											longDesc: string
 										}
-									}
-								}
-								milestone: {
-									/**
-									 * M​i​l​e​s​t​o​n​e
-									 */
-									displayName: string
-									/**
-									 * I​s​s​u​e​ ​m​i​l​e​s​t​o​n​e
-									 */
-									shortDesc: string
-									/**
-									 * M​i​l​e​s​t​o​n​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​G​i​t​H​u​b​ ​i​s​s​u​e
-									 */
-									longDesc: string
-									type: {
-										title: {
-											/**
-											 * M​i​l​e​s​t​o​n​e​ ​T​i​t​l​e
-											 */
-											displayName: string
-											/**
-											 * T​i​t​l​e​ ​o​f​ ​t​h​e​ ​m​i​l​e​s​t​o​n​e
-											 */
-											shortDesc: string
-											/**
-											 * T​i​t​l​e​ ​o​f​ ​t​h​e​ ​m​i​l​e​s​t​o​n​e​ ​f​o​r​ ​t​h​e​ ​i​s​s​u​e
-											 */
-											longDesc: string
-										}
-										due_on: {
-											/**
-											 * D​u​e​ ​D​a​t​e
-											 */
-											displayName: string
-											/**
-											 * M​i​l​e​s​t​o​n​e​ ​d​u​e​ ​d​a​t​e
-											 */
-											shortDesc: string
-											/**
-											 * D​u​e​ ​d​a​t​e​ ​o​f​ ​t​h​e​ ​m​i​l​e​s​t​o​n​e
-											 */
-											longDesc: string
-										}
-									}
-								}
-							}
-							repository: {
-								/**
-								 * R​e​p​o​s​i​t​o​r​y
-								 */
-								displayName: string
-								/**
-								 * R​e​p​o​s​i​t​o​r​y​ ​i​n​f​o​r​m​a​t​i​o​n
-								 */
-								shortDesc: string
-								/**
-								 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​G​i​t​H​u​b​ ​r​e​p​o​s​i​t​o​r​y​ ​r​e​l​a​t​e​d​ ​t​o​ ​t​h​e​ ​e​v​e​n​t
-								 */
-								longDesc: string
-								type: {
-									name: {
-										/**
-										 * R​e​p​o​s​i​t​o​r​y​ ​N​a​m​e
-										 */
-										displayName: string
-										/**
-										 * N​a​m​e​ ​o​f​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y
-										 */
-										shortDesc: string
-										/**
-										 * N​a​m​e​ ​o​f​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y
-										 */
-										longDesc: string
-									}
-									owner: {
-										/**
-										 * O​w​n​e​r
-										 */
-										displayName: string
-										/**
-										 * R​e​p​o​s​i​t​o​r​y​ ​o​w​n​e​r
-										 */
-										shortDesc: string
-										/**
-										 * O​w​n​e​r​ ​o​f​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y
-										 */
-										longDesc: string
-										type: {
-											login: {
-												/**
-												 * O​w​n​e​r​ ​L​o​g​i​n
-												 */
-												displayName: string
-												/**
-												 * O​w​n​e​r​ ​u​s​e​r​n​a​m​e
-												 */
-												shortDesc: string
-												/**
-												 * U​s​e​r​n​a​m​e​ ​o​f​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y​ ​o​w​n​e​r
-												 */
-												longDesc: string
-											}
-											id: {
-												/**
-												 * O​w​n​e​r​ ​I​D
-												 */
-												displayName: string
-												/**
-												 * O​w​n​e​r​ ​I​D
-												 */
-												shortDesc: string
-												/**
-												 * U​n​i​q​u​e​ ​I​D​ ​o​f​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y​ ​o​w​n​e​r
-												 */
-												longDesc: string
-											}
-										}
-									}
-								}
-							}
-							sender: {
-								/**
-								 * S​e​n​d​e​r
-								 */
-								displayName: string
-								/**
-								 * E​v​e​n​t​ ​s​e​n​d​e​r
-								 */
-								shortDesc: string
-								/**
-								 * U​s​e​r​ ​w​h​o​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​w​e​b​h​o​o​k​ ​e​v​e​n​t
-								 */
-								longDesc: string
-								type: {
-									login: {
-										/**
-										 * S​e​n​d​e​r​ ​L​o​g​i​n
-										 */
-										displayName: string
-										/**
-										 * S​e​n​d​e​r​ ​u​s​e​r​n​a​m​e
-										 */
-										shortDesc: string
-										/**
-										 * U​s​e​r​n​a​m​e​ ​o​f​ ​t​h​e​ ​s​e​n​d​e​r
-										 */
-										longDesc: string
-									}
-									id: {
-										/**
-										 * S​e​n​d​e​r​ ​I​D
-										 */
-										displayName: string
-										/**
-										 * S​e​n​d​e​r​ ​I​D
-										 */
-										shortDesc: string
-										/**
-										 * U​n​i​q​u​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​e​n​d​e​r
-										 */
-										longDesc: string
-									}
-									avatar_url: {
-										/**
-										 * S​e​n​d​e​r​ ​A​v​a​t​a​r
-										 */
-										displayName: string
-										/**
-										 * S​e​n​d​e​r​'​s​ ​a​v​a​t​a​r
-										 */
-										shortDesc: string
-										/**
-										 * U​R​L​ ​t​o​ ​t​h​e​ ​s​e​n​d​e​r​'​s​ ​a​v​a​t​a​r
-										 */
-										longDesc: string
-									}
-									html_url: {
-										/**
-										 * S​e​n​d​e​r​ ​P​r​o​f​i​l​e
-										 */
-										displayName: string
-										/**
-										 * S​e​n​d​e​r​'​s​ ​p​r​o​f​i​l​e
-										 */
-										shortDesc: string
-										/**
-										 * U​R​L​ ​t​o​ ​t​h​e​ ​s​e​n​d​e​r​'​s​ ​G​i​t​H​u​b​ ​p​r​o​f​i​l​e
-										 */
-										longDesc: string
 									}
 								}
 							}
@@ -1287,231 +1315,233 @@ type RootTranslation = {
 						 */
 						longDesc: string
 						type: {
-							account_id: {
-								/**
-								 * A​c​c​o​u​n​t​ ​I​D
-								 */
-								displayName: string
-								/**
-								 * I​D​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​e​d​ ​a​c​c​o​u​n​t
-								 */
-								longDesc: string
-								/**
-								 * A​c​c​o​u​n​t​ ​I​D
-								 */
-								shortDesc: string
-							}
-							detail: {
-								/**
-								 * D​e​t​a​i​l
-								 */
-								displayName: string
-								/**
-								 * D​e​t​a​i​l​e​d​ ​u​s​e​r​ ​i​n​f​o​r​m​a​t​i​o​n
-								 */
-								longDesc: string
-								/**
-								 * U​s​e​r​ ​d​e​t​a​i​l​s
-								 */
-								shortDesc: string
-								type: {
-									created_at: {
-										/**
-										 * C​r​e​a​t​e​d​ ​A​t
-										 */
-										displayName: string
-										/**
-										 * T​i​m​e​s​t​a​m​p​ ​o​f​ ​u​s​e​r​ ​c​r​e​a​t​i​o​n
-										 */
-										longDesc: string
-										/**
-										 * U​s​e​r​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e
-										 */
-										shortDesc: string
-									}
-									default_group_id: {
-										/**
-										 * D​e​f​a​u​l​t​ ​G​r​o​u​p​ ​I​D
-										 */
-										displayName: string
-										/**
-										 * I​D​ ​o​f​ ​t​h​e​ ​d​e​f​a​u​l​t​ ​g​r​o​u​p​ ​f​o​r​ ​t​h​e​ ​u​s​e​r
-										 */
-										longDesc: string
-										/**
-										 * D​e​f​a​u​l​t​ ​g​r​o​u​p​ ​I​D
-										 */
-										shortDesc: string
-									}
-									email: {
-										/**
-										 * E​m​a​i​l
-										 */
-										displayName: string
-										/**
-										 * E​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​u​s​e​r
-										 */
-										longDesc: string
-										/**
-										 * U​s​e​r​ ​e​m​a​i​l
-										 */
-										shortDesc: string
-									}
-									external_id: {
-										/**
-										 * E​x​t​e​r​n​a​l​ ​I​D
-										 */
-										displayName: string
-										/**
-										 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​u​s​e​r
-										 */
-										longDesc: string
-										/**
-										 * U​s​e​r​ ​e​x​t​e​r​n​a​l​ ​I​D
-										 */
-										shortDesc: string
-									}
-									id: {
-										/**
-										 * U​s​e​r​ ​I​D
-										 */
-										displayName: string
-										/**
-										 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​u​s​e​r
-										 */
-										longDesc: string
-										/**
-										 * U​s​e​r​ ​I​D
-										 */
-										shortDesc: string
-									}
-									organization_id: {
-										/**
-										 * O​r​g​a​n​i​z​a​t​i​o​n​ ​I​D
-										 */
-										displayName: string
-										/**
-										 * I​D​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​u​s​e​r
-										 */
-										longDesc: string
-										/**
-										 * O​r​g​a​n​i​z​a​t​i​o​n​ ​I​D
-										 */
-										shortDesc: string
-									}
-									role: {
-										/**
-										 * R​o​l​e
-										 */
-										displayName: string
-										/**
-										 * R​o​l​e​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​i​n​ ​t​h​e​ ​s​y​s​t​e​m
-										 */
-										longDesc: string
-										/**
-										 * U​s​e​r​ ​r​o​l​e
-										 */
-										shortDesc: string
-									}
-									updated_at: {
-										/**
-										 * U​p​d​a​t​e​d​ ​A​t
-										 */
-										displayName: string
-										/**
-										 * L​a​s​t​ ​u​p​d​a​t​e​ ​t​i​m​e​s​t​a​m​p​ ​f​o​r​ ​t​h​e​ ​u​s​e​r
-										 */
-										longDesc: string
-										/**
-										 * U​s​e​r​ ​u​p​d​a​t​e​ ​t​i​m​e
-										 */
-										shortDesc: string
+							fields: {
+								account_id: {
+									/**
+									 * A​c​c​o​u​n​t​ ​I​D
+									 */
+									displayName: string
+									/**
+									 * A​c​c​o​u​n​t​ ​I​D
+									 */
+									shortDesc: string
+									/**
+									 * I​D​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​e​d​ ​a​c​c​o​u​n​t
+									 */
+									longDesc: string
+								}
+								detail: {
+									/**
+									 * D​e​t​a​i​l
+									 */
+									displayName: string
+									/**
+									 * U​s​e​r​ ​d​e​t​a​i​l​s
+									 */
+									shortDesc: string
+									/**
+									 * D​e​t​a​i​l​e​d​ ​u​s​e​r​ ​i​n​f​o​r​m​a​t​i​o​n
+									 */
+									longDesc: string
+									fields: {
+										created_at: {
+											/**
+											 * C​r​e​a​t​e​d​ ​A​t
+											 */
+											displayName: string
+											/**
+											 * U​s​e​r​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e
+											 */
+											shortDesc: string
+											/**
+											 * T​i​m​e​s​t​a​m​p​ ​o​f​ ​u​s​e​r​ ​c​r​e​a​t​i​o​n
+											 */
+											longDesc: string
+										}
+										default_group_id: {
+											/**
+											 * D​e​f​a​u​l​t​ ​G​r​o​u​p​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * D​e​f​a​u​l​t​ ​g​r​o​u​p​ ​I​D
+											 */
+											shortDesc: string
+											/**
+											 * I​D​ ​o​f​ ​t​h​e​ ​d​e​f​a​u​l​t​ ​g​r​o​u​p​ ​f​o​r​ ​t​h​e​ ​u​s​e​r
+											 */
+											longDesc: string
+										}
+										email: {
+											/**
+											 * E​m​a​i​l
+											 */
+											displayName: string
+											/**
+											 * U​s​e​r​ ​e​m​a​i​l
+											 */
+											shortDesc: string
+											/**
+											 * E​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​u​s​e​r
+											 */
+											longDesc: string
+										}
+										external_id: {
+											/**
+											 * E​x​t​e​r​n​a​l​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * U​s​e​r​ ​e​x​t​e​r​n​a​l​ ​I​D
+											 */
+											shortDesc: string
+											/**
+											 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​u​s​e​r
+											 */
+											longDesc: string
+										}
+										id: {
+											/**
+											 * U​s​e​r​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * U​s​e​r​ ​I​D
+											 */
+											shortDesc: string
+											/**
+											 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​u​s​e​r
+											 */
+											longDesc: string
+										}
+										organization_id: {
+											/**
+											 * O​r​g​a​n​i​z​a​t​i​o​n​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * O​r​g​a​n​i​z​a​t​i​o​n​ ​I​D
+											 */
+											shortDesc: string
+											/**
+											 * I​D​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​u​s​e​r
+											 */
+											longDesc: string
+										}
+										role: {
+											/**
+											 * R​o​l​e
+											 */
+											displayName: string
+											/**
+											 * U​s​e​r​ ​r​o​l​e
+											 */
+											shortDesc: string
+											/**
+											 * R​o​l​e​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​i​n​ ​t​h​e​ ​s​y​s​t​e​m
+											 */
+											longDesc: string
+										}
+										updated_at: {
+											/**
+											 * U​p​d​a​t​e​d​ ​A​t
+											 */
+											displayName: string
+											/**
+											 * U​s​e​r​ ​u​p​d​a​t​e​ ​t​i​m​e
+											 */
+											shortDesc: string
+											/**
+											 * L​a​s​t​ ​u​p​d​a​t​e​ ​t​i​m​e​s​t​a​m​p​ ​f​o​r​ ​t​h​e​ ​u​s​e​r
+											 */
+											longDesc: string
+										}
 									}
 								}
-							}
-							event: {
-								/**
-								 * E​v​e​n​t
-								 */
-								displayName: string
-								/**
-								 * A​d​d​i​t​i​o​n​a​l​ ​e​v​e​n​t​ ​i​n​f​o​r​m​a​t​i​o​n
-								 */
-								longDesc: string
-								/**
-								 * E​v​e​n​t​ ​i​n​f​o
-								 */
-								shortDesc: string
-							}
-							id: {
-								/**
-								 * E​v​e​n​t​ ​I​D
-								 */
-								displayName: string
-								/**
-								 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
-								 */
-								longDesc: string
-								/**
-								 * E​v​e​n​t​ ​I​D
-								 */
-								shortDesc: string
-							}
-							subject: {
-								/**
-								 * S​u​b​j​e​c​t
-								 */
-								displayName: string
-								/**
-								 * S​u​b​j​e​c​t​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
-								 */
-								longDesc: string
-								/**
-								 * E​v​e​n​t​ ​s​u​b​j​e​c​t
-								 */
-								shortDesc: string
-							}
-							time: {
-								/**
-								 * T​i​m​e
-								 */
-								displayName: string
-								/**
-								 * T​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​o​c​c​u​r​r​e​n​c​e
-								 */
-								longDesc: string
-								/**
-								 * E​v​e​n​t​ ​t​i​m​e
-								 */
-								shortDesc: string
-							}
-							type: {
-								/**
-								 * E​v​e​n​t​ ​T​y​p​e
-								 */
-								displayName: string
-								/**
-								 * T​y​p​e​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
-								 */
-								longDesc: string
-								/**
-								 * E​v​e​n​t​ ​t​y​p​e
-								 */
-								shortDesc: string
-							}
-							zendesk_event_version: {
-								/**
-								 * Z​e​n​d​e​s​k​ ​E​v​e​n​t​ ​V​e​r​s​i​o​n
-								 */
-								displayName: string
-								/**
-								 * V​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​Z​e​n​d​e​s​k​ ​e​v​e​n​t​ ​f​o​r​m​a​t
-								 */
-								longDesc: string
-								/**
-								 * E​v​e​n​t​ ​v​e​r​s​i​o​n
-								 */
-								shortDesc: string
+								event: {
+									/**
+									 * E​v​e​n​t
+									 */
+									displayName: string
+									/**
+									 * E​v​e​n​t​ ​i​n​f​o
+									 */
+									shortDesc: string
+									/**
+									 * A​d​d​i​t​i​o​n​a​l​ ​e​v​e​n​t​ ​i​n​f​o​r​m​a​t​i​o​n
+									 */
+									longDesc: string
+								}
+								id: {
+									/**
+									 * E​v​e​n​t​ ​I​D
+									 */
+									displayName: string
+									/**
+									 * E​v​e​n​t​ ​I​D
+									 */
+									shortDesc: string
+									/**
+									 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
+									 */
+									longDesc: string
+								}
+								subject: {
+									/**
+									 * S​u​b​j​e​c​t
+									 */
+									displayName: string
+									/**
+									 * E​v​e​n​t​ ​s​u​b​j​e​c​t
+									 */
+									shortDesc: string
+									/**
+									 * S​u​b​j​e​c​t​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
+									 */
+									longDesc: string
+								}
+								time: {
+									/**
+									 * T​i​m​e
+									 */
+									displayName: string
+									/**
+									 * E​v​e​n​t​ ​t​i​m​e
+									 */
+									shortDesc: string
+									/**
+									 * T​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​o​c​c​u​r​r​e​n​c​e
+									 */
+									longDesc: string
+								}
+								type: {
+									/**
+									 * E​v​e​n​t​ ​T​y​p​e
+									 */
+									displayName: string
+									/**
+									 * E​v​e​n​t​ ​t​y​p​e
+									 */
+									shortDesc: string
+									/**
+									 * T​y​p​e​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
+									 */
+									longDesc: string
+								}
+								zendesk_event_version: {
+									/**
+									 * Z​e​n​d​e​s​k​ ​E​v​e​n​t​ ​V​e​r​s​i​o​n
+									 */
+									displayName: string
+									/**
+									 * E​v​e​n​t​ ​v​e​r​s​i​o​n
+									 */
+									shortDesc: string
+									/**
+									 * V​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​Z​e​n​d​e​s​k​ ​e​v​e​n​t​ ​f​o​r​m​a​t
+									 */
+									longDesc: string
+								}
 							}
 						}
 					}
@@ -1535,201 +1565,203 @@ type RootTranslation = {
 						 */
 						longDesc: string
 						type: {
-							assignee_email: {
-								/**
-								 * A​s​s​i​g​n​e​e​ ​E​m​a​i​l
-								 */
-								displayName: string
-								/**
-								 * E​m​a​i​l​ ​o​f​ ​t​h​e​ ​a​s​s​i​g​n​e​e
-								 */
-								longDesc: string
-								/**
-								 * A​s​s​i​g​n​e​e​ ​e​m​a​i​l
-								 */
-								shortDesc: string
-							}
-							assignee_name: {
-								/**
-								 * A​s​s​i​g​n​e​e​ ​N​a​m​e
-								 */
-								displayName: string
-								/**
-								 * N​a​m​e​ ​o​f​ ​t​h​e​ ​a​s​s​i​g​n​e​e
-								 */
-								longDesc: string
-								/**
-								 * A​s​s​i​g​n​e​e​ ​n​a​m​e
-								 */
-								shortDesc: string
-							}
-							group_name: {
-								/**
-								 * G​r​o​u​p​ ​N​a​m​e
-								 */
-								displayName: string
-								/**
-								 * N​a​m​e​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​h​a​n​d​l​i​n​g​ ​t​h​e​ ​t​i​c​k​e​t
-								 */
-								longDesc: string
-								/**
-								 * G​r​o​u​p​ ​n​a​m​e
-								 */
-								shortDesc: string
-							}
-							organization_name: {
-								/**
-								 * O​r​g​a​n​i​z​a​t​i​o​n​ ​N​a​m​e
-								 */
-								displayName: string
-								/**
-								 * N​a​m​e​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​e​d​ ​o​r​g​a​n​i​z​a​t​i​o​n
-								 */
-								longDesc: string
-								/**
-								 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e
-								 */
-								shortDesc: string
-							}
-							requester_email: {
-								/**
-								 * R​e​q​u​e​s​t​e​r​ ​E​m​a​i​l
-								 */
-								displayName: string
-								/**
-								 * E​m​a​i​l​ ​o​f​ ​t​h​e​ ​r​e​q​u​e​s​t​e​r
-								 */
-								longDesc: string
-								/**
-								 * R​e​q​u​e​s​t​e​r​ ​e​m​a​i​l
-								 */
-								shortDesc: string
-							}
-							requester_name: {
-								/**
-								 * R​e​q​u​e​s​t​e​r​ ​N​a​m​e
-								 */
-								displayName: string
-								/**
-								 * N​a​m​e​ ​o​f​ ​t​h​e​ ​r​e​q​u​e​s​t​e​r
-								 */
-								longDesc: string
-								/**
-								 * R​e​q​u​e​s​t​e​r​ ​n​a​m​e
-								 */
-								shortDesc: string
-							}
-							tags: {
-								/**
-								 * T​a​g​s
-								 */
-								displayName: string
-								/**
-								 * T​a​g​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​t​i​c​k​e​t
-								 */
-								longDesc: string
-								/**
-								 * T​i​c​k​e​t​ ​t​a​g​s
-								 */
-								shortDesc: string
-							}
-							ticket_description: {
-								/**
-								 * T​i​c​k​e​t​ ​D​e​s​c​r​i​p​t​i​o​n
-								 */
-								displayName: string
-								/**
-								 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
-								 */
-								longDesc: string
-								/**
-								 * T​i​c​k​e​t​ ​d​e​s​c​r​i​p​t​i​o​n
-								 */
-								shortDesc: string
-							}
-							ticket_id: {
-								/**
-								 * T​i​c​k​e​t​ ​I​D
-								 */
-								displayName: string
-								/**
-								 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​t​i​c​k​e​t
-								 */
-								longDesc: string
-								/**
-								 * T​i​c​k​e​t​ ​I​D
-								 */
-								shortDesc: string
-							}
-							ticket_priority: {
-								/**
-								 * T​i​c​k​e​t​ ​P​r​i​o​r​i​t​y
-								 */
-								displayName: string
-								/**
-								 * P​r​i​o​r​i​t​y​ ​l​e​v​e​l​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
-								 */
-								longDesc: string
-								/**
-								 * T​i​c​k​e​t​ ​p​r​i​o​r​i​t​y
-								 */
-								shortDesc: string
-							}
-							ticket_status: {
-								/**
-								 * T​i​c​k​e​t​ ​S​t​a​t​u​s
-								 */
-								displayName: string
-								/**
-								 * C​u​r​r​e​n​t​ ​s​t​a​t​u​s​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
-								 */
-								longDesc: string
-								/**
-								 * T​i​c​k​e​t​ ​s​t​a​t​u​s
-								 */
-								shortDesc: string
-							}
-							ticket_subject: {
-								/**
-								 * T​i​c​k​e​t​ ​S​u​b​j​e​c​t
-								 */
-								displayName: string
-								/**
-								 * S​u​b​j​e​c​t​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
-								 */
-								longDesc: string
-								/**
-								 * T​i​c​k​e​t​ ​s​u​b​j​e​c​t
-								 */
-								shortDesc: string
-							}
-							ticket_type: {
-								/**
-								 * T​i​c​k​e​t​ ​T​y​p​e
-								 */
-								displayName: string
-								/**
-								 * T​y​p​e​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
-								 */
-								longDesc: string
-								/**
-								 * T​i​c​k​e​t​ ​t​y​p​e
-								 */
-								shortDesc: string
-							}
-							ticket_url: {
-								/**
-								 * T​i​c​k​e​t​ ​U​R​L
-								 */
-								displayName: string
-								/**
-								 * U​R​L​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​ ​i​n​ ​t​h​e​ ​s​y​s​t​e​m
-								 */
-								longDesc: string
-								/**
-								 * T​i​c​k​e​t​ ​U​R​L
-								 */
-								shortDesc: string
+							fields: {
+								assignee_email: {
+									/**
+									 * A​s​s​i​g​n​e​e​ ​E​m​a​i​l
+									 */
+									displayName: string
+									/**
+									 * A​s​s​i​g​n​e​e​ ​e​m​a​i​l
+									 */
+									shortDesc: string
+									/**
+									 * E​m​a​i​l​ ​o​f​ ​t​h​e​ ​a​s​s​i​g​n​e​e
+									 */
+									longDesc: string
+								}
+								assignee_name: {
+									/**
+									 * A​s​s​i​g​n​e​e​ ​N​a​m​e
+									 */
+									displayName: string
+									/**
+									 * A​s​s​i​g​n​e​e​ ​n​a​m​e
+									 */
+									shortDesc: string
+									/**
+									 * N​a​m​e​ ​o​f​ ​t​h​e​ ​a​s​s​i​g​n​e​e
+									 */
+									longDesc: string
+								}
+								group_name: {
+									/**
+									 * G​r​o​u​p​ ​N​a​m​e
+									 */
+									displayName: string
+									/**
+									 * G​r​o​u​p​ ​n​a​m​e
+									 */
+									shortDesc: string
+									/**
+									 * N​a​m​e​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​h​a​n​d​l​i​n​g​ ​t​h​e​ ​t​i​c​k​e​t
+									 */
+									longDesc: string
+								}
+								organization_name: {
+									/**
+									 * O​r​g​a​n​i​z​a​t​i​o​n​ ​N​a​m​e
+									 */
+									displayName: string
+									/**
+									 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e
+									 */
+									shortDesc: string
+									/**
+									 * N​a​m​e​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​e​d​ ​o​r​g​a​n​i​z​a​t​i​o​n
+									 */
+									longDesc: string
+								}
+								requester_email: {
+									/**
+									 * R​e​q​u​e​s​t​e​r​ ​E​m​a​i​l
+									 */
+									displayName: string
+									/**
+									 * R​e​q​u​e​s​t​e​r​ ​e​m​a​i​l
+									 */
+									shortDesc: string
+									/**
+									 * E​m​a​i​l​ ​o​f​ ​t​h​e​ ​r​e​q​u​e​s​t​e​r
+									 */
+									longDesc: string
+								}
+								requester_name: {
+									/**
+									 * R​e​q​u​e​s​t​e​r​ ​N​a​m​e
+									 */
+									displayName: string
+									/**
+									 * R​e​q​u​e​s​t​e​r​ ​n​a​m​e
+									 */
+									shortDesc: string
+									/**
+									 * N​a​m​e​ ​o​f​ ​t​h​e​ ​r​e​q​u​e​s​t​e​r
+									 */
+									longDesc: string
+								}
+								tags: {
+									/**
+									 * T​a​g​s
+									 */
+									displayName: string
+									/**
+									 * T​i​c​k​e​t​ ​t​a​g​s
+									 */
+									shortDesc: string
+									/**
+									 * T​a​g​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​t​i​c​k​e​t
+									 */
+									longDesc: string
+								}
+								ticket_description: {
+									/**
+									 * T​i​c​k​e​t​ ​D​e​s​c​r​i​p​t​i​o​n
+									 */
+									displayName: string
+									/**
+									 * T​i​c​k​e​t​ ​d​e​s​c​r​i​p​t​i​o​n
+									 */
+									shortDesc: string
+									/**
+									 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
+									 */
+									longDesc: string
+								}
+								ticket_id: {
+									/**
+									 * T​i​c​k​e​t​ ​I​D
+									 */
+									displayName: string
+									/**
+									 * T​i​c​k​e​t​ ​I​D
+									 */
+									shortDesc: string
+									/**
+									 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​t​i​c​k​e​t
+									 */
+									longDesc: string
+								}
+								ticket_priority: {
+									/**
+									 * T​i​c​k​e​t​ ​P​r​i​o​r​i​t​y
+									 */
+									displayName: string
+									/**
+									 * T​i​c​k​e​t​ ​p​r​i​o​r​i​t​y
+									 */
+									shortDesc: string
+									/**
+									 * P​r​i​o​r​i​t​y​ ​l​e​v​e​l​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
+									 */
+									longDesc: string
+								}
+								ticket_status: {
+									/**
+									 * T​i​c​k​e​t​ ​S​t​a​t​u​s
+									 */
+									displayName: string
+									/**
+									 * T​i​c​k​e​t​ ​s​t​a​t​u​s
+									 */
+									shortDesc: string
+									/**
+									 * C​u​r​r​e​n​t​ ​s​t​a​t​u​s​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
+									 */
+									longDesc: string
+								}
+								ticket_subject: {
+									/**
+									 * T​i​c​k​e​t​ ​S​u​b​j​e​c​t
+									 */
+									displayName: string
+									/**
+									 * T​i​c​k​e​t​ ​s​u​b​j​e​c​t
+									 */
+									shortDesc: string
+									/**
+									 * S​u​b​j​e​c​t​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
+									 */
+									longDesc: string
+								}
+								ticket_type: {
+									/**
+									 * T​i​c​k​e​t​ ​T​y​p​e
+									 */
+									displayName: string
+									/**
+									 * T​i​c​k​e​t​ ​t​y​p​e
+									 */
+									shortDesc: string
+									/**
+									 * T​y​p​e​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
+									 */
+									longDesc: string
+								}
+								ticket_url: {
+									/**
+									 * T​i​c​k​e​t​ ​U​R​L
+									 */
+									displayName: string
+									/**
+									 * T​i​c​k​e​t​ ​U​R​L
+									 */
+									shortDesc: string
+									/**
+									 * U​R​L​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​ ​i​n​ ​t​h​e​ ​s​y​s​t​e​m
+									 */
+									longDesc: string
+								}
 							}
 						}
 					}
@@ -1753,231 +1785,233 @@ type RootTranslation = {
 						 */
 						longDesc: string
 						type: {
-							account_id: {
-								/**
-								 * A​c​c​o​u​n​t​ ​I​D
-								 */
-								displayName: string
-								/**
-								 * I​D​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​e​d​ ​a​c​c​o​u​n​t
-								 */
-								longDesc: string
-								/**
-								 * A​c​c​o​u​n​t​ ​I​D
-								 */
-								shortDesc: string
-							}
-							detail: {
-								/**
-								 * D​e​t​a​i​l
-								 */
-								displayName: string
-								/**
-								 * D​e​t​a​i​l​e​d​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​i​n​f​o​r​m​a​t​i​o​n
-								 */
-								longDesc: string
-								/**
-								 * O​r​g​a​n​i​z​a​t​i​o​n​ ​d​e​t​a​i​l​s
-								 */
-								shortDesc: string
-								type: {
-									created_at: {
-										/**
-										 * C​r​e​a​t​e​d​ ​A​t
-										 */
-										displayName: string
-										/**
-										 * T​i​m​e​s​t​a​m​p​ ​o​f​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​c​r​e​a​t​i​o​n
-										 */
-										longDesc: string
-										/**
-										 * O​r​g​a​n​i​z​a​t​i​o​n​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e
-										 */
-										shortDesc: string
-									}
-									external_id: {
-										/**
-										 * E​x​t​e​r​n​a​l​ ​I​D
-										 */
-										displayName: string
-										/**
-										 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
-										 */
-										longDesc: string
-										/**
-										 * O​r​g​a​n​i​z​a​t​i​o​n​ ​e​x​t​e​r​n​a​l​ ​I​D
-										 */
-										shortDesc: string
-									}
-									group_id: {
-										/**
-										 * G​r​o​u​p​ ​I​D
-										 */
-										displayName: string
-										/**
-										 * I​D​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​e​d​ ​g​r​o​u​p
-										 */
-										longDesc: string
-										/**
-										 * G​r​o​u​p​ ​I​D
-										 */
-										shortDesc: string
-									}
-									id: {
-										/**
-										 * O​r​g​a​n​i​z​a​t​i​o​n​ ​I​D
-										 */
-										displayName: string
-										/**
-										 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
-										 */
-										longDesc: string
-										/**
-										 * O​r​g​a​n​i​z​a​t​i​o​n​ ​I​D
-										 */
-										shortDesc: string
-									}
-									name: {
-										/**
-										 * N​a​m​e
-										 */
-										displayName: string
-										/**
-										 * N​a​m​e​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
-										 */
-										longDesc: string
-										/**
-										 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e
-										 */
-										shortDesc: string
-									}
-									shared_comments: {
-										/**
-										 * S​h​a​r​e​d​ ​C​o​m​m​e​n​t​s
-										 */
-										displayName: string
-										/**
-										 * I​n​d​i​c​a​t​e​s​ ​i​f​ ​c​o​m​m​e​n​t​s​ ​a​r​e​ ​s​h​a​r​e​d
-										 */
-										longDesc: string
-										/**
-										 * S​h​a​r​e​d​ ​c​o​m​m​e​n​t​s
-										 */
-										shortDesc: string
-									}
-									shared_tickets: {
-										/**
-										 * S​h​a​r​e​d​ ​T​i​c​k​e​t​s
-										 */
-										displayName: string
-										/**
-										 * I​n​d​i​c​a​t​e​s​ ​i​f​ ​t​i​c​k​e​t​s​ ​a​r​e​ ​s​h​a​r​e​d
-										 */
-										longDesc: string
-										/**
-										 * S​h​a​r​e​d​ ​t​i​c​k​e​t​s
-										 */
-										shortDesc: string
-									}
-									updated_at: {
-										/**
-										 * U​p​d​a​t​e​d​ ​A​t
-										 */
-										displayName: string
-										/**
-										 * L​a​s​t​ ​u​p​d​a​t​e​ ​t​i​m​e​s​t​a​m​p​ ​f​o​r​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
-										 */
-										longDesc: string
-										/**
-										 * O​r​g​a​n​i​z​a​t​i​o​n​ ​u​p​d​a​t​e​ ​t​i​m​e
-										 */
-										shortDesc: string
+							fields: {
+								account_id: {
+									/**
+									 * A​c​c​o​u​n​t​ ​I​D
+									 */
+									displayName: string
+									/**
+									 * A​c​c​o​u​n​t​ ​I​D
+									 */
+									shortDesc: string
+									/**
+									 * I​D​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​e​d​ ​a​c​c​o​u​n​t
+									 */
+									longDesc: string
+								}
+								detail: {
+									/**
+									 * D​e​t​a​i​l
+									 */
+									displayName: string
+									/**
+									 * O​r​g​a​n​i​z​a​t​i​o​n​ ​d​e​t​a​i​l​s
+									 */
+									shortDesc: string
+									/**
+									 * D​e​t​a​i​l​e​d​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​i​n​f​o​r​m​a​t​i​o​n
+									 */
+									longDesc: string
+									fields: {
+										created_at: {
+											/**
+											 * C​r​e​a​t​e​d​ ​A​t
+											 */
+											displayName: string
+											/**
+											 * O​r​g​a​n​i​z​a​t​i​o​n​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e
+											 */
+											shortDesc: string
+											/**
+											 * T​i​m​e​s​t​a​m​p​ ​o​f​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​c​r​e​a​t​i​o​n
+											 */
+											longDesc: string
+										}
+										external_id: {
+											/**
+											 * E​x​t​e​r​n​a​l​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * O​r​g​a​n​i​z​a​t​i​o​n​ ​e​x​t​e​r​n​a​l​ ​I​D
+											 */
+											shortDesc: string
+											/**
+											 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
+											 */
+											longDesc: string
+										}
+										group_id: {
+											/**
+											 * G​r​o​u​p​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * G​r​o​u​p​ ​I​D
+											 */
+											shortDesc: string
+											/**
+											 * I​D​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​e​d​ ​g​r​o​u​p
+											 */
+											longDesc: string
+										}
+										id: {
+											/**
+											 * O​r​g​a​n​i​z​a​t​i​o​n​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * O​r​g​a​n​i​z​a​t​i​o​n​ ​I​D
+											 */
+											shortDesc: string
+											/**
+											 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
+											 */
+											longDesc: string
+										}
+										name: {
+											/**
+											 * N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e
+											 */
+											shortDesc: string
+											/**
+											 * N​a​m​e​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
+											 */
+											longDesc: string
+										}
+										shared_comments: {
+											/**
+											 * S​h​a​r​e​d​ ​C​o​m​m​e​n​t​s
+											 */
+											displayName: string
+											/**
+											 * S​h​a​r​e​d​ ​c​o​m​m​e​n​t​s
+											 */
+											shortDesc: string
+											/**
+											 * I​n​d​i​c​a​t​e​s​ ​i​f​ ​c​o​m​m​e​n​t​s​ ​a​r​e​ ​s​h​a​r​e​d
+											 */
+											longDesc: string
+										}
+										shared_tickets: {
+											/**
+											 * S​h​a​r​e​d​ ​T​i​c​k​e​t​s
+											 */
+											displayName: string
+											/**
+											 * S​h​a​r​e​d​ ​t​i​c​k​e​t​s
+											 */
+											shortDesc: string
+											/**
+											 * I​n​d​i​c​a​t​e​s​ ​i​f​ ​t​i​c​k​e​t​s​ ​a​r​e​ ​s​h​a​r​e​d
+											 */
+											longDesc: string
+										}
+										updated_at: {
+											/**
+											 * U​p​d​a​t​e​d​ ​A​t
+											 */
+											displayName: string
+											/**
+											 * O​r​g​a​n​i​z​a​t​i​o​n​ ​u​p​d​a​t​e​ ​t​i​m​e
+											 */
+											shortDesc: string
+											/**
+											 * L​a​s​t​ ​u​p​d​a​t​e​ ​t​i​m​e​s​t​a​m​p​ ​f​o​r​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
+											 */
+											longDesc: string
+										}
 									}
 								}
-							}
-							event: {
-								/**
-								 * E​v​e​n​t
-								 */
-								displayName: string
-								/**
-								 * A​d​d​i​t​i​o​n​a​l​ ​e​v​e​n​t​ ​i​n​f​o​r​m​a​t​i​o​n
-								 */
-								longDesc: string
-								/**
-								 * E​v​e​n​t​ ​i​n​f​o
-								 */
-								shortDesc: string
-							}
-							id: {
-								/**
-								 * E​v​e​n​t​ ​I​D
-								 */
-								displayName: string
-								/**
-								 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
-								 */
-								longDesc: string
-								/**
-								 * E​v​e​n​t​ ​I​D
-								 */
-								shortDesc: string
-							}
-							subject: {
-								/**
-								 * S​u​b​j​e​c​t
-								 */
-								displayName: string
-								/**
-								 * S​u​b​j​e​c​t​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
-								 */
-								longDesc: string
-								/**
-								 * E​v​e​n​t​ ​s​u​b​j​e​c​t
-								 */
-								shortDesc: string
-							}
-							time: {
-								/**
-								 * T​i​m​e
-								 */
-								displayName: string
-								/**
-								 * T​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​o​c​c​u​r​r​e​n​c​e
-								 */
-								longDesc: string
-								/**
-								 * E​v​e​n​t​ ​t​i​m​e
-								 */
-								shortDesc: string
-							}
-							type: {
-								/**
-								 * E​v​e​n​t​ ​T​y​p​e
-								 */
-								displayName: string
-								/**
-								 * T​y​p​e​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
-								 */
-								longDesc: string
-								/**
-								 * E​v​e​n​t​ ​t​y​p​e
-								 */
-								shortDesc: string
-							}
-							zendesk_event_version: {
-								/**
-								 * Z​e​n​d​e​s​k​ ​E​v​e​n​t​ ​V​e​r​s​i​o​n
-								 */
-								displayName: string
-								/**
-								 * V​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​Z​e​n​d​e​s​k​ ​e​v​e​n​t​ ​f​o​r​m​a​t
-								 */
-								longDesc: string
-								/**
-								 * E​v​e​n​t​ ​v​e​r​s​i​o​n
-								 */
-								shortDesc: string
+								event: {
+									/**
+									 * E​v​e​n​t
+									 */
+									displayName: string
+									/**
+									 * E​v​e​n​t​ ​i​n​f​o
+									 */
+									shortDesc: string
+									/**
+									 * A​d​d​i​t​i​o​n​a​l​ ​e​v​e​n​t​ ​i​n​f​o​r​m​a​t​i​o​n
+									 */
+									longDesc: string
+								}
+								id: {
+									/**
+									 * E​v​e​n​t​ ​I​D
+									 */
+									displayName: string
+									/**
+									 * E​v​e​n​t​ ​I​D
+									 */
+									shortDesc: string
+									/**
+									 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
+									 */
+									longDesc: string
+								}
+								subject: {
+									/**
+									 * S​u​b​j​e​c​t
+									 */
+									displayName: string
+									/**
+									 * E​v​e​n​t​ ​s​u​b​j​e​c​t
+									 */
+									shortDesc: string
+									/**
+									 * S​u​b​j​e​c​t​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
+									 */
+									longDesc: string
+								}
+								time: {
+									/**
+									 * T​i​m​e
+									 */
+									displayName: string
+									/**
+									 * E​v​e​n​t​ ​t​i​m​e
+									 */
+									shortDesc: string
+									/**
+									 * T​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​o​c​c​u​r​r​e​n​c​e
+									 */
+									longDesc: string
+								}
+								type: {
+									/**
+									 * E​v​e​n​t​ ​T​y​p​e
+									 */
+									displayName: string
+									/**
+									 * E​v​e​n​t​ ​t​y​p​e
+									 */
+									shortDesc: string
+									/**
+									 * T​y​p​e​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
+									 */
+									longDesc: string
+								}
+								zendesk_event_version: {
+									/**
+									 * Z​e​n​d​e​s​k​ ​E​v​e​n​t​ ​V​e​r​s​i​o​n
+									 */
+									displayName: string
+									/**
+									 * E​v​e​n​t​ ​v​e​r​s​i​o​n
+									 */
+									shortDesc: string
+									/**
+									 * V​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​Z​e​n​d​e​s​k​ ​e​v​e​n​t​ ​f​o​r​m​a​t
+									 */
+									longDesc: string
+								}
 							}
 						}
 					}
@@ -1999,7 +2033,7 @@ type RootTranslation = {
 							 * G​r​o​u​p
 							 */
 							longDesc: string
-							type: {
+							fields: {
 								name: {
 									/**
 									 * N​a​m​e
@@ -2089,7 +2123,7 @@ type RootTranslation = {
 							 * G​r​o​u​p
 							 */
 							longDesc: string
-							type: {
+							fields: {
 								name: {
 									/**
 									 * N​a​m​e
@@ -2179,7 +2213,7 @@ type RootTranslation = {
 							 * U​s​e​r
 							 */
 							longDesc: string
-							type: {
+							fields: {
 								name: {
 									/**
 									 * N​a​m​e
@@ -2297,7 +2331,7 @@ type RootTranslation = {
 							 * U​s​e​r
 							 */
 							longDesc: string
-							type: {
+							fields: {
 								name: {
 									/**
 									 * N​a​m​e
@@ -2624,33 +2658,35 @@ export type TranslationFunctions = {
 						 */
 						desc: () => LocalizedString
 						type: {
-							testTriggerInfo: {
-								/**
-								 * Test Trigger Info
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Test Trigger Info Short Description
-								 */
-								shortDesc: () => LocalizedString
-								/**
-								 * Test Trigger Info Long Description
-								 */
-								longDesc: () => LocalizedString
-								type: {
-									testTriggerInfo1: {
-										/**
-										 * Test Trigger Info 1
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Test Trigger Info 1 Short Description
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * Test Trigger Info 1 Long Description
-										 */
-										longDesc: () => LocalizedString
+							fields: {
+								testTriggerInfo: {
+									/**
+									 * Test Trigger Info
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Test Trigger Info Short Description
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Test Trigger Info Long Description
+									 */
+									longDesc: () => LocalizedString
+									fields: {
+										testTriggerInfo1: {
+											/**
+											 * Test Trigger Info 1
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Test Trigger Info 1 Short Description
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Test Trigger Info 1 Long Description
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -2674,7 +2710,7 @@ export type TranslationFunctions = {
 							 * Option 1 Long Description
 							 */
 							longDesc: () => LocalizedString
-							type: {
+							fields: {
 								subOption1: {
 									/**
 									 * Sub Option 1 of option 1
@@ -2702,7 +2738,7 @@ export type TranslationFunctions = {
 									 * Sub Option 2 Long Description
 									 */
 									longDesc: () => LocalizedString
-									type: {
+									fields: {
 										subSubOption1: {
 											/**
 											 * Sub Sub Option 1
@@ -3204,485 +3240,511 @@ export type TranslationFunctions = {
 					}
 					event_info: {
 						/**
-						 * GitHub Issue event data
+						 * GitHub Issue Event Data
 						 */
-						desc: () => LocalizedString
+						longDesc: () => LocalizedString
 						type: {
-							action: {
-								/**
-								 * Action
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Action type
-								 */
-								shortDesc: () => LocalizedString
-								/**
-								 * The action performed on the issue, such as 'assigned' or 'opened'.
-								 */
-								longDesc: () => LocalizedString
-							}
-							issue: {
-								/**
-								 * Issue
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * GitHub issue data
-								 */
-								shortDesc: () => LocalizedString
-								/**
-								 * Details of the GitHub issue involved in the event
-								 */
-								longDesc: () => LocalizedString
-								type: {
-									url: {
-										/**
-										 * Issue URL
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * URL of the issue
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The URL of the GitHub issue
-										 */
-										longDesc: () => LocalizedString
-									}
-									number: {
-										/**
-										 * Issue Number
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Issue identifier
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * Unique number of the GitHub issue
-										 */
-										longDesc: () => LocalizedString
-									}
-									title: {
-										/**
-										 * Issue Title
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Title of the issue
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The title of the GitHub issue
-										 */
-										longDesc: () => LocalizedString
-									}
-									user: {
-										/**
-										 * Issue Creator
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * User who created the issue
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * Information about the user who created the GitHub issue
-										 */
-										longDesc: () => LocalizedString
-										type: {
-											login: {
-												/**
-												 * User Login
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * GitHub username
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The username of the GitHub user
-												 */
-												longDesc: () => LocalizedString
-											}
-											id: {
-												/**
-												 * User ID
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * User ID
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Unique ID of the GitHub user
-												 */
-												longDesc: () => LocalizedString
-											}
-											avatar_url: {
-												/**
-												 * Avatar URL
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * User avatar
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * URL to the GitHub user's avatar
-												 */
-												longDesc: () => LocalizedString
-											}
-											html_url: {
-												/**
-												 * Profile URL
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * User profile
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * URL to the GitHub user's profile
-												 */
-												longDesc: () => LocalizedString
-											}
-										}
-									}
-								}
-								labels: {
+							fields: {
+								action: {
 									/**
-									 * Labels
+									 * Action
 									 */
 									displayName: () => LocalizedString
 									/**
-									 * Labels for the issue
+									 * Action type
 									 */
 									shortDesc: () => LocalizedString
 									/**
-									 * Labels assigned to the GitHub issue
+									 * Type of action performed on the issue (e.g., opened, closed)
 									 */
 									longDesc: () => LocalizedString
-									type: {
-										id: {
+								}
+								issue: {
+									/**
+									 * Issue
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Issue details
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Details of the issue related to the event
+									 */
+									longDesc: () => LocalizedString
+									fields: {
+										url: {
 											/**
-											 * Label ID
+											 * Issue URL
 											 */
 											displayName: () => LocalizedString
 											/**
-											 * Label identifier
+											 * URL of the issue
 											 */
 											shortDesc: () => LocalizedString
 											/**
-											 * Unique identifier for the label
+											 * The API URL for the specific issue
+											 */
+											longDesc: () => LocalizedString
+										}
+										number: {
+											/**
+											 * Issue Number
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Number of the issue
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Unique number identifier for the issue
+											 */
+											longDesc: () => LocalizedString
+										}
+										title: {
+											/**
+											 * Issue Title
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Title of the issue
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The title or subject of the issue
+											 */
+											longDesc: () => LocalizedString
+										}
+										user: {
+											/**
+											 * User
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Issue creator
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Details of the user who created the issue
+											 */
+											longDesc: () => LocalizedString
+											fields: {
+												login: {
+													/**
+													 * Login
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Username
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * GitHub username of the user
+													 */
+													longDesc: () => LocalizedString
+												}
+												id: {
+													/**
+													 * User ID
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * GitHub user ID
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * Unique identifier for the GitHub user
+													 */
+													longDesc: () => LocalizedString
+												}
+												avatar_url: {
+													/**
+													 * Avatar URL
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * User avatar URL
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * URL of the user's avatar image
+													 */
+													longDesc: () => LocalizedString
+												}
+												html_url: {
+													/**
+													 * Profile URL
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * User profile URL
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * Link to the GitHub profile of the user
+													 */
+													longDesc: () => LocalizedString
+												}
+											}
+										}
+										labels: {
+											/**
+											 * Labels
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Issue labels
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * List of labels associated with the issue
+											 */
+											longDesc: () => LocalizedString
+										}
+										state: {
+											/**
+											 * State
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Issue state
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Current state of the issue (e.g., open, closed)
+											 */
+											longDesc: () => LocalizedString
+										}
+										locked: {
+											/**
+											 * Locked
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Issue lock status
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Whether the issue is locked for editing
+											 */
+											longDesc: () => LocalizedString
+										}
+										assignee: {
+											/**
+											 * Assignee
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Assigned user
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Details of the user assigned to the issue
+											 */
+											longDesc: () => LocalizedString
+											fields: {
+												login: {
+													/**
+													 * Login
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Username
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * GitHub username of the assignee
+													 */
+													longDesc: () => LocalizedString
+												}
+												id: {
+													/**
+													 * User ID
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * GitHub user ID
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * Unique identifier for the GitHub user
+													 */
+													longDesc: () => LocalizedString
+												}
+												avatar_url: {
+													/**
+													 * Avatar URL
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * User avatar URL
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * URL of the user's avatar image
+													 */
+													longDesc: () => LocalizedString
+												}
+												html_url: {
+													/**
+													 * Profile URL
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * User profile URL
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * Link to the GitHub profile of the assignee
+													 */
+													longDesc: () => LocalizedString
+												}
+											}
+										}
+										milestone: {
+											/**
+											 * Milestone
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Milestone details
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Details of the milestone associated with the issue
+											 */
+											longDesc: () => LocalizedString
+											fields: {
+												title: {
+													/**
+													 * Milestone Title
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Title of the milestone
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * The title of the associated milestone
+													 */
+													longDesc: () => LocalizedString
+												}
+												due_on: {
+													/**
+													 * Due Date
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Milestone due date
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * Date by which the milestone is expected to be completed
+													 */
+													longDesc: () => LocalizedString
+												}
+												state: {
+													/**
+													 * State
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Milestone state
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * Current state of the milestone (e.g., open, closed)
+													 */
+													longDesc: () => LocalizedString
+												}
+											}
+										}
+										comments: {
+											/**
+											 * Comments Count
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Number of comments
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Total number of comments on the issue
+											 */
+											longDesc: () => LocalizedString
+										}
+										created_at: {
+											/**
+											 * Created At
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Issue creation time
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The timestamp when the issue was created
+											 */
+											longDesc: () => LocalizedString
+										}
+										updated_at: {
+											/**
+											 * Updated At
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Issue update time
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The timestamp when the issue was last updated
+											 */
+											longDesc: () => LocalizedString
+										}
+										closed_at: {
+											/**
+											 * Closed At
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Issue closure time
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The timestamp when the issue was closed (if applicable)
+											 */
+											longDesc: () => LocalizedString
+										}
+										body: {
+											/**
+											 * Body
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Issue description
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The detailed description of the issue
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+								repository: {
+									/**
+									 * Repository
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Repository details
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Details of the repository where the issue resides
+									 */
+									longDesc: () => LocalizedString
+									fields: {
+										id: {
+											/**
+											 * Repository ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Unique ID
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Unique identifier for the repository
 											 */
 											longDesc: () => LocalizedString
 										}
 										name: {
 											/**
-											 * Label Name
+											 * Repository Name
 											 */
 											displayName: () => LocalizedString
 											/**
-											 * Name of the label
+											 * Name of the repository
 											 */
 											shortDesc: () => LocalizedString
 											/**
-											 * The name of the label
+											 * The name of the GitHub repository
 											 */
 											longDesc: () => LocalizedString
 										}
-										color: {
+										'private': {
 											/**
-											 * Label Color
+											 * Private
 											 */
 											displayName: () => LocalizedString
 											/**
-											 * Color of the label
+											 * Privacy status
 											 */
 											shortDesc: () => LocalizedString
 											/**
-											 * Color code of the label
+											 * Whether the repository is private
 											 */
 											longDesc: () => LocalizedString
 										}
 									}
 								}
-								state: {
+								sender: {
 									/**
-									 * State
+									 * Sender
 									 */
 									displayName: () => LocalizedString
 									/**
-									 * State of the issue
+									 * Event sender
 									 */
 									shortDesc: () => LocalizedString
 									/**
-									 * Current state of the issue, such as 'open' or 'closed'
+									 * Details of the sender who triggered the event
 									 */
 									longDesc: () => LocalizedString
-								}
-								assignee: {
-									/**
-									 * Assignee
-									 */
-									displayName: () => LocalizedString
-									/**
-									 * User assigned to the issue
-									 */
-									shortDesc: () => LocalizedString
-									/**
-									 * Details of the user assigned to the issue
-									 */
-									longDesc: () => LocalizedString
-									type: {
+									fields: {
 										login: {
 											/**
-											 * Assignee Login
+											 * Login
 											 */
 											displayName: () => LocalizedString
 											/**
-											 * Assignee username
+											 * Username
 											 */
 											shortDesc: () => LocalizedString
 											/**
-											 * The username of the assigned GitHub user
+											 * GitHub username of the sender
 											 */
 											longDesc: () => LocalizedString
 										}
 										id: {
 											/**
-											 * Assignee ID
+											 * Sender ID
 											 */
 											displayName: () => LocalizedString
 											/**
-											 * Assignee ID
+											 * Unique ID
 											 */
 											shortDesc: () => LocalizedString
 											/**
-											 * Unique ID of the assignee
-											 */
-											longDesc: () => LocalizedString
-										}
-										avatar_url: {
-											/**
-											 * Assignee Avatar
-											 */
-											displayName: () => LocalizedString
-											/**
-											 * Avatar of the assignee
-											 */
-											shortDesc: () => LocalizedString
-											/**
-											 * URL to the avatar of the assignee
+											 * Unique identifier for the sender
 											 */
 											longDesc: () => LocalizedString
 										}
 										html_url: {
 											/**
-											 * Assignee Profile
+											 * Profile URL
 											 */
 											displayName: () => LocalizedString
 											/**
-											 * Profile of the assignee
+											 * Profile link
 											 */
 											shortDesc: () => LocalizedString
 											/**
-											 * URL to the GitHub profile of the assignee
+											 * Link to the sender's GitHub profile
 											 */
 											longDesc: () => LocalizedString
 										}
-									}
-								}
-								milestone: {
-									/**
-									 * Milestone
-									 */
-									displayName: () => LocalizedString
-									/**
-									 * Issue milestone
-									 */
-									shortDesc: () => LocalizedString
-									/**
-									 * Milestone associated with the GitHub issue
-									 */
-									longDesc: () => LocalizedString
-									type: {
-										title: {
-											/**
-											 * Milestone Title
-											 */
-											displayName: () => LocalizedString
-											/**
-											 * Title of the milestone
-											 */
-											shortDesc: () => LocalizedString
-											/**
-											 * Title of the milestone for the issue
-											 */
-											longDesc: () => LocalizedString
-										}
-										due_on: {
-											/**
-											 * Due Date
-											 */
-											displayName: () => LocalizedString
-											/**
-											 * Milestone due date
-											 */
-											shortDesc: () => LocalizedString
-											/**
-											 * Due date of the milestone
-											 */
-											longDesc: () => LocalizedString
-										}
-									}
-								}
-							}
-							repository: {
-								/**
-								 * Repository
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Repository information
-								 */
-								shortDesc: () => LocalizedString
-								/**
-								 * Details of the GitHub repository related to the event
-								 */
-								longDesc: () => LocalizedString
-								type: {
-									name: {
-										/**
-										 * Repository Name
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Name of the repository
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * Name of the repository
-										 */
-										longDesc: () => LocalizedString
-									}
-									owner: {
-										/**
-										 * Owner
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Repository owner
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * Owner of the repository
-										 */
-										longDesc: () => LocalizedString
-										type: {
-											login: {
-												/**
-												 * Owner Login
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Owner username
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Username of the repository owner
-												 */
-												longDesc: () => LocalizedString
-											}
-											id: {
-												/**
-												 * Owner ID
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Owner ID
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Unique ID of the repository owner
-												 */
-												longDesc: () => LocalizedString
-											}
-										}
-									}
-								}
-							}
-							sender: {
-								/**
-								 * Sender
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Event sender
-								 */
-								shortDesc: () => LocalizedString
-								/**
-								 * User who triggered the webhook event
-								 */
-								longDesc: () => LocalizedString
-								type: {
-									login: {
-										/**
-										 * Sender Login
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Sender username
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * Username of the sender
-										 */
-										longDesc: () => LocalizedString
-									}
-									id: {
-										/**
-										 * Sender ID
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Sender ID
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * Unique ID of the sender
-										 */
-										longDesc: () => LocalizedString
-									}
-									avatar_url: {
-										/**
-										 * Sender Avatar
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Sender's avatar
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * URL to the sender's avatar
-										 */
-										longDesc: () => LocalizedString
-									}
-									html_url: {
-										/**
-										 * Sender Profile
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Sender's profile
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * URL to the sender's GitHub profile
-										 */
-										longDesc: () => LocalizedString
 									}
 								}
 							}
@@ -3856,231 +3918,233 @@ export type TranslationFunctions = {
 						 */
 						longDesc: () => LocalizedString
 						type: {
-							account_id: {
-								/**
-								 * Account ID
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * ID of the associated account
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Account ID
-								 */
-								shortDesc: () => LocalizedString
-							}
-							detail: {
-								/**
-								 * Detail
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Detailed user information
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * User details
-								 */
-								shortDesc: () => LocalizedString
-								type: {
-									created_at: {
-										/**
-										 * Created At
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Timestamp of user creation
-										 */
-										longDesc: () => LocalizedString
-										/**
-										 * User creation time
-										 */
-										shortDesc: () => LocalizedString
-									}
-									default_group_id: {
-										/**
-										 * Default Group ID
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * ID of the default group for the user
-										 */
-										longDesc: () => LocalizedString
-										/**
-										 * Default group ID
-										 */
-										shortDesc: () => LocalizedString
-									}
-									email: {
-										/**
-										 * Email
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Email address of the user
-										 */
-										longDesc: () => LocalizedString
-										/**
-										 * User email
-										 */
-										shortDesc: () => LocalizedString
-									}
-									external_id: {
-										/**
-										 * External ID
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * External identifier for the user
-										 */
-										longDesc: () => LocalizedString
-										/**
-										 * User external ID
-										 */
-										shortDesc: () => LocalizedString
-									}
-									id: {
-										/**
-										 * User ID
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Unique identifier for the user
-										 */
-										longDesc: () => LocalizedString
-										/**
-										 * User ID
-										 */
-										shortDesc: () => LocalizedString
-									}
-									organization_id: {
-										/**
-										 * Organization ID
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * ID of the organization associated with the user
-										 */
-										longDesc: () => LocalizedString
-										/**
-										 * Organization ID
-										 */
-										shortDesc: () => LocalizedString
-									}
-									role: {
-										/**
-										 * Role
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Role of the user in the system
-										 */
-										longDesc: () => LocalizedString
-										/**
-										 * User role
-										 */
-										shortDesc: () => LocalizedString
-									}
-									updated_at: {
-										/**
-										 * Updated At
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Last update timestamp for the user
-										 */
-										longDesc: () => LocalizedString
-										/**
-										 * User update time
-										 */
-										shortDesc: () => LocalizedString
+							fields: {
+								account_id: {
+									/**
+									 * Account ID
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Account ID
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * ID of the associated account
+									 */
+									longDesc: () => LocalizedString
+								}
+								detail: {
+									/**
+									 * Detail
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * User details
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Detailed user information
+									 */
+									longDesc: () => LocalizedString
+									fields: {
+										created_at: {
+											/**
+											 * Created At
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * User creation time
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Timestamp of user creation
+											 */
+											longDesc: () => LocalizedString
+										}
+										default_group_id: {
+											/**
+											 * Default Group ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Default group ID
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * ID of the default group for the user
+											 */
+											longDesc: () => LocalizedString
+										}
+										email: {
+											/**
+											 * Email
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * User email
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Email address of the user
+											 */
+											longDesc: () => LocalizedString
+										}
+										external_id: {
+											/**
+											 * External ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * User external ID
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * External identifier for the user
+											 */
+											longDesc: () => LocalizedString
+										}
+										id: {
+											/**
+											 * User ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * User ID
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Unique identifier for the user
+											 */
+											longDesc: () => LocalizedString
+										}
+										organization_id: {
+											/**
+											 * Organization ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Organization ID
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * ID of the organization associated with the user
+											 */
+											longDesc: () => LocalizedString
+										}
+										role: {
+											/**
+											 * Role
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * User role
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Role of the user in the system
+											 */
+											longDesc: () => LocalizedString
+										}
+										updated_at: {
+											/**
+											 * Updated At
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * User update time
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Last update timestamp for the user
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
-							}
-							event: {
-								/**
-								 * Event
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Additional event information
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Event info
-								 */
-								shortDesc: () => LocalizedString
-							}
-							id: {
-								/**
-								 * Event ID
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Unique identifier for the event
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Event ID
-								 */
-								shortDesc: () => LocalizedString
-							}
-							subject: {
-								/**
-								 * Subject
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Subject of the event
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Event subject
-								 */
-								shortDesc: () => LocalizedString
-							}
-							time: {
-								/**
-								 * Time
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Timestamp of the event occurrence
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Event time
-								 */
-								shortDesc: () => LocalizedString
-							}
-							type: {
-								/**
-								 * Event Type
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Type of the event
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Event type
-								 */
-								shortDesc: () => LocalizedString
-							}
-							zendesk_event_version: {
-								/**
-								 * Zendesk Event Version
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Version of the Zendesk event format
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Event version
-								 */
-								shortDesc: () => LocalizedString
+								event: {
+									/**
+									 * Event
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Event info
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Additional event information
+									 */
+									longDesc: () => LocalizedString
+								}
+								id: {
+									/**
+									 * Event ID
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Event ID
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Unique identifier for the event
+									 */
+									longDesc: () => LocalizedString
+								}
+								subject: {
+									/**
+									 * Subject
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Event subject
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Subject of the event
+									 */
+									longDesc: () => LocalizedString
+								}
+								time: {
+									/**
+									 * Time
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Event time
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Timestamp of the event occurrence
+									 */
+									longDesc: () => LocalizedString
+								}
+								type: {
+									/**
+									 * Event Type
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Event type
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Type of the event
+									 */
+									longDesc: () => LocalizedString
+								}
+								zendesk_event_version: {
+									/**
+									 * Zendesk Event Version
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Event version
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Version of the Zendesk event format
+									 */
+									longDesc: () => LocalizedString
+								}
 							}
 						}
 					}
@@ -4104,201 +4168,203 @@ export type TranslationFunctions = {
 						 */
 						longDesc: () => LocalizedString
 						type: {
-							assignee_email: {
-								/**
-								 * Assignee Email
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Email of the assignee
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Assignee email
-								 */
-								shortDesc: () => LocalizedString
-							}
-							assignee_name: {
-								/**
-								 * Assignee Name
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Name of the assignee
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Assignee name
-								 */
-								shortDesc: () => LocalizedString
-							}
-							group_name: {
-								/**
-								 * Group Name
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Name of the group handling the ticket
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Group name
-								 */
-								shortDesc: () => LocalizedString
-							}
-							organization_name: {
-								/**
-								 * Organization Name
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Name of the associated organization
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Organization name
-								 */
-								shortDesc: () => LocalizedString
-							}
-							requester_email: {
-								/**
-								 * Requester Email
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Email of the requester
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Requester email
-								 */
-								shortDesc: () => LocalizedString
-							}
-							requester_name: {
-								/**
-								 * Requester Name
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Name of the requester
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Requester name
-								 */
-								shortDesc: () => LocalizedString
-							}
-							tags: {
-								/**
-								 * Tags
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Tags associated with the ticket
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Ticket tags
-								 */
-								shortDesc: () => LocalizedString
-							}
-							ticket_description: {
-								/**
-								 * Ticket Description
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Description of the ticket
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Ticket description
-								 */
-								shortDesc: () => LocalizedString
-							}
-							ticket_id: {
-								/**
-								 * Ticket ID
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Unique identifier for the ticket
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Ticket ID
-								 */
-								shortDesc: () => LocalizedString
-							}
-							ticket_priority: {
-								/**
-								 * Ticket Priority
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Priority level of the ticket
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Ticket priority
-								 */
-								shortDesc: () => LocalizedString
-							}
-							ticket_status: {
-								/**
-								 * Ticket Status
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Current status of the ticket
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Ticket status
-								 */
-								shortDesc: () => LocalizedString
-							}
-							ticket_subject: {
-								/**
-								 * Ticket Subject
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Subject of the ticket
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Ticket subject
-								 */
-								shortDesc: () => LocalizedString
-							}
-							ticket_type: {
-								/**
-								 * Ticket Type
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Type of the ticket
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Ticket type
-								 */
-								shortDesc: () => LocalizedString
-							}
-							ticket_url: {
-								/**
-								 * Ticket URL
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * URL of the ticket in the system
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Ticket URL
-								 */
-								shortDesc: () => LocalizedString
+							fields: {
+								assignee_email: {
+									/**
+									 * Assignee Email
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Assignee email
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Email of the assignee
+									 */
+									longDesc: () => LocalizedString
+								}
+								assignee_name: {
+									/**
+									 * Assignee Name
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Assignee name
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Name of the assignee
+									 */
+									longDesc: () => LocalizedString
+								}
+								group_name: {
+									/**
+									 * Group Name
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Group name
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Name of the group handling the ticket
+									 */
+									longDesc: () => LocalizedString
+								}
+								organization_name: {
+									/**
+									 * Organization Name
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Organization name
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Name of the associated organization
+									 */
+									longDesc: () => LocalizedString
+								}
+								requester_email: {
+									/**
+									 * Requester Email
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Requester email
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Email of the requester
+									 */
+									longDesc: () => LocalizedString
+								}
+								requester_name: {
+									/**
+									 * Requester Name
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Requester name
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Name of the requester
+									 */
+									longDesc: () => LocalizedString
+								}
+								tags: {
+									/**
+									 * Tags
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Ticket tags
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Tags associated with the ticket
+									 */
+									longDesc: () => LocalizedString
+								}
+								ticket_description: {
+									/**
+									 * Ticket Description
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Ticket description
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Description of the ticket
+									 */
+									longDesc: () => LocalizedString
+								}
+								ticket_id: {
+									/**
+									 * Ticket ID
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Ticket ID
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Unique identifier for the ticket
+									 */
+									longDesc: () => LocalizedString
+								}
+								ticket_priority: {
+									/**
+									 * Ticket Priority
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Ticket priority
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Priority level of the ticket
+									 */
+									longDesc: () => LocalizedString
+								}
+								ticket_status: {
+									/**
+									 * Ticket Status
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Ticket status
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Current status of the ticket
+									 */
+									longDesc: () => LocalizedString
+								}
+								ticket_subject: {
+									/**
+									 * Ticket Subject
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Ticket subject
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Subject of the ticket
+									 */
+									longDesc: () => LocalizedString
+								}
+								ticket_type: {
+									/**
+									 * Ticket Type
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Ticket type
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Type of the ticket
+									 */
+									longDesc: () => LocalizedString
+								}
+								ticket_url: {
+									/**
+									 * Ticket URL
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Ticket URL
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * URL of the ticket in the system
+									 */
+									longDesc: () => LocalizedString
+								}
 							}
 						}
 					}
@@ -4322,231 +4388,233 @@ export type TranslationFunctions = {
 						 */
 						longDesc: () => LocalizedString
 						type: {
-							account_id: {
-								/**
-								 * Account ID
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * ID of the associated account
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Account ID
-								 */
-								shortDesc: () => LocalizedString
-							}
-							detail: {
-								/**
-								 * Detail
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Detailed organization information
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Organization details
-								 */
-								shortDesc: () => LocalizedString
-								type: {
-									created_at: {
-										/**
-										 * Created At
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Timestamp of organization creation
-										 */
-										longDesc: () => LocalizedString
-										/**
-										 * Organization creation time
-										 */
-										shortDesc: () => LocalizedString
-									}
-									external_id: {
-										/**
-										 * External ID
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * External identifier for the organization
-										 */
-										longDesc: () => LocalizedString
-										/**
-										 * Organization external ID
-										 */
-										shortDesc: () => LocalizedString
-									}
-									group_id: {
-										/**
-										 * Group ID
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * ID of the associated group
-										 */
-										longDesc: () => LocalizedString
-										/**
-										 * Group ID
-										 */
-										shortDesc: () => LocalizedString
-									}
-									id: {
-										/**
-										 * Organization ID
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Unique identifier for the organization
-										 */
-										longDesc: () => LocalizedString
-										/**
-										 * Organization ID
-										 */
-										shortDesc: () => LocalizedString
-									}
-									name: {
-										/**
-										 * Name
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Name of the organization
-										 */
-										longDesc: () => LocalizedString
-										/**
-										 * Organization name
-										 */
-										shortDesc: () => LocalizedString
-									}
-									shared_comments: {
-										/**
-										 * Shared Comments
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Indicates if comments are shared
-										 */
-										longDesc: () => LocalizedString
-										/**
-										 * Shared comments
-										 */
-										shortDesc: () => LocalizedString
-									}
-									shared_tickets: {
-										/**
-										 * Shared Tickets
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Indicates if tickets are shared
-										 */
-										longDesc: () => LocalizedString
-										/**
-										 * Shared tickets
-										 */
-										shortDesc: () => LocalizedString
-									}
-									updated_at: {
-										/**
-										 * Updated At
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Last update timestamp for the organization
-										 */
-										longDesc: () => LocalizedString
-										/**
-										 * Organization update time
-										 */
-										shortDesc: () => LocalizedString
+							fields: {
+								account_id: {
+									/**
+									 * Account ID
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Account ID
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * ID of the associated account
+									 */
+									longDesc: () => LocalizedString
+								}
+								detail: {
+									/**
+									 * Detail
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Organization details
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Detailed organization information
+									 */
+									longDesc: () => LocalizedString
+									fields: {
+										created_at: {
+											/**
+											 * Created At
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Organization creation time
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Timestamp of organization creation
+											 */
+											longDesc: () => LocalizedString
+										}
+										external_id: {
+											/**
+											 * External ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Organization external ID
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * External identifier for the organization
+											 */
+											longDesc: () => LocalizedString
+										}
+										group_id: {
+											/**
+											 * Group ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Group ID
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * ID of the associated group
+											 */
+											longDesc: () => LocalizedString
+										}
+										id: {
+											/**
+											 * Organization ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Organization ID
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Unique identifier for the organization
+											 */
+											longDesc: () => LocalizedString
+										}
+										name: {
+											/**
+											 * Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Organization name
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Name of the organization
+											 */
+											longDesc: () => LocalizedString
+										}
+										shared_comments: {
+											/**
+											 * Shared Comments
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Shared comments
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Indicates if comments are shared
+											 */
+											longDesc: () => LocalizedString
+										}
+										shared_tickets: {
+											/**
+											 * Shared Tickets
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Shared tickets
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Indicates if tickets are shared
+											 */
+											longDesc: () => LocalizedString
+										}
+										updated_at: {
+											/**
+											 * Updated At
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Organization update time
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Last update timestamp for the organization
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
-							}
-							event: {
-								/**
-								 * Event
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Additional event information
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Event info
-								 */
-								shortDesc: () => LocalizedString
-							}
-							id: {
-								/**
-								 * Event ID
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Unique identifier for the event
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Event ID
-								 */
-								shortDesc: () => LocalizedString
-							}
-							subject: {
-								/**
-								 * Subject
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Subject of the event
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Event subject
-								 */
-								shortDesc: () => LocalizedString
-							}
-							time: {
-								/**
-								 * Time
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Timestamp of the event occurrence
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Event time
-								 */
-								shortDesc: () => LocalizedString
-							}
-							type: {
-								/**
-								 * Event Type
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Type of the event
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Event type
-								 */
-								shortDesc: () => LocalizedString
-							}
-							zendesk_event_version: {
-								/**
-								 * Zendesk Event Version
-								 */
-								displayName: () => LocalizedString
-								/**
-								 * Version of the Zendesk event format
-								 */
-								longDesc: () => LocalizedString
-								/**
-								 * Event version
-								 */
-								shortDesc: () => LocalizedString
+								event: {
+									/**
+									 * Event
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Event info
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Additional event information
+									 */
+									longDesc: () => LocalizedString
+								}
+								id: {
+									/**
+									 * Event ID
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Event ID
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Unique identifier for the event
+									 */
+									longDesc: () => LocalizedString
+								}
+								subject: {
+									/**
+									 * Subject
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Event subject
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Subject of the event
+									 */
+									longDesc: () => LocalizedString
+								}
+								time: {
+									/**
+									 * Time
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Event time
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Timestamp of the event occurrence
+									 */
+									longDesc: () => LocalizedString
+								}
+								type: {
+									/**
+									 * Event Type
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Event type
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Type of the event
+									 */
+									longDesc: () => LocalizedString
+								}
+								zendesk_event_version: {
+									/**
+									 * Zendesk Event Version
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Event version
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Version of the Zendesk event format
+									 */
+									longDesc: () => LocalizedString
+								}
 							}
 						}
 					}
@@ -4568,7 +4636,7 @@ export type TranslationFunctions = {
 							 * Group
 							 */
 							longDesc: () => LocalizedString
-							type: {
+							fields: {
 								name: {
 									/**
 									 * Name
@@ -4658,7 +4726,7 @@ export type TranslationFunctions = {
 							 * Group
 							 */
 							longDesc: () => LocalizedString
-							type: {
+							fields: {
 								name: {
 									/**
 									 * Name
@@ -4748,7 +4816,7 @@ export type TranslationFunctions = {
 							 * User
 							 */
 							longDesc: () => LocalizedString
-							type: {
+							fields: {
 								name: {
 									/**
 									 * Name
@@ -4866,7 +4934,7 @@ export type TranslationFunctions = {
 							 * User
 							 */
 							longDesc: () => LocalizedString
-							type: {
+							fields: {
 								name: {
 									/**
 									 * Name
