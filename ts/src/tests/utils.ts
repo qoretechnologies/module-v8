@@ -1,4 +1,5 @@
 import { forEach } from 'lodash';
+import { IQoreTypeObject } from '../global/models/qore';
 
 export const responseHasCorrectStructure = (
   response: Record<string, unknown>,
@@ -16,29 +17,37 @@ export const responseHasCorrectStructure = (
 };
 
 export const validateResponseProperties = (
-  expectedType: Record<string, any>,
+  expectedType: string | IQoreTypeObject,
   actualResponse: Record<string, any>
 ) => {
-  Object.keys(expectedType).forEach((key) => {
-    if (expectedType[key]?.required === false) return;
-    expect(actualResponse).toHaveProperty(key);
+  if (typeof expectedType === 'string') {
+    expect(actualResponse).toBe(expectedType);
 
-    const expectedFieldType = expectedType[key]?.type || expectedType[key];
+    return;
+  }
+  const fields = expectedType?.fields;
+  if (!fields) return;
+
+  forEach(fields, (fieldDefinition, key) => {
+    const expectedFieldType = fieldDefinition.type || fieldDefinition;
     const actualValue = actualResponse[key];
 
+    if (fieldDefinition?.required === false) return;
+
+    expect(actualResponse).toHaveProperty(key);
+
     if (
-      (expectedFieldType === '*list' || expectedFieldType === 'list') &&
+      (expectedFieldType === 'list' || expectedFieldType === '*list') &&
       Array.isArray(actualValue) &&
-      actualValue.length > 0
+      actualValue.length > 0 &&
+      Array.isArray(fieldDefinition.example_value)
     ) {
-      const exampleItem = expectedType[key].example_value[0];
+      const exampleItem = fieldDefinition.example_value?.[0] || {};
       validateResponseProperties(exampleItem, actualValue[0]);
+    } else if (expectedFieldType === 'hash' && fieldDefinition.fields) {
+      validateResponseProperties(fieldDefinition, actualValue);
     } else if (typeof expectedFieldType === 'object') {
-      if (expectedType[key]?.example_value) {
-        validateResponseProperties(expectedType[key].example_value[0], actualValue);
-      } else {
-        validateResponseProperties(expectedFieldType, actualValue);
-      }
+      validateResponseProperties(expectedFieldType, actualValue);
     }
   });
 };
