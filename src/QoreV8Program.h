@@ -186,6 +186,26 @@ public:
     DLLLOCAL void trackFunctionData(QoreV8FunctionData* d) { funcDataRefs.push_back(d); }
     DLLLOCAL void trackMemberHandlerData(QoreV8MemberHandlerData* d) { memberHandlerDataRefs.push_back(d); }
 
+    DLLLOCAL void resetObject(v8::Global<v8::Object>& obj) {
+        {
+            AutoLocker al(m);
+            if (valid) {
+                obj.Reset();
+            } else {
+                // Forget the persistent slot without touching the (possibly
+                // already-disposed) isolate. V8 renamed PersistentBase::Empty()
+                // to IndirectHandleBase::Clear() mid-v8-11.x; v8-handle-base.h
+                // exists only in the new API.
+#if defined(__has_include) && __has_include(<v8-handle-base.h>)
+                obj.Clear();
+#else
+                obj.Empty();
+#endif
+            }
+        }
+        weakDeref();
+    }
+
 protected:
     std::unique_ptr<node::CommonEnvironmentSetup> setup;
     v8::Isolate* isolate = nullptr;

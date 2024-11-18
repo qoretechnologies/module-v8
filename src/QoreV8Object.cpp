@@ -40,8 +40,7 @@ QoreV8Object::QoreV8Object(QoreV8Program* pgm, v8::Local<v8::Object> obj) : pgm(
 }
 
 QoreV8Object::~QoreV8Object() {
-    obj.Reset();
-    pgm->weakDeref();
+    pgm->resetObject(obj);
 }
 
 QoreObject* QoreV8Object::getReferencedProgram() {
