@@ -34,6 +34,7 @@ class TypeScriptActionRootDataProvider inherits AbstractDataProvider {
             "supports_children": True,
             "children_can_support_apis": True,
             "children_can_support_observers": True,
+            #"children_can_support_records": True,
         };
 
         #! Provider summary info

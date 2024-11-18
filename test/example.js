@@ -381,6 +381,99 @@ exports.actionsCatalogue = {
             },
         });
 
+        // NOTE: this action will be executed as a REST call, no code is necessary
+        api.registerAction({
+            "app": "js-test",
+            "action": "test-search",
+            "display_name": "Test Search",
+            "short_desc": "Test search",
+            "desc": "Test search",
+            "action_code": 4,  // DPAT_FIND == 4 (record search)
+
+            // This means that there are no native search capabilities and also generic expressions are supported
+            /** all records are fetched and filtered after the fact by the DataProvider infrastructure
+
+                This option is meant for simple data providers providing just a record view of data
+
+                If this option is true, then no "search_options" or "expressions" can be defined
+
+                If this option is false, "search_options" must be defined and the "search_records" function must be
+                able to handle them
+            */
+            "uses_generic_search": true,
+
+            // returns the record type for the action
+            /**
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+
+                @return the record type for the action; must be a hash (object)
+            */
+            "get_record_type": async function (ctx) {
+                return {
+                    "type": "hash",
+                    "fields": {
+                        "id": {
+                            "type": "int",
+                        },
+                        "name": {
+                            "type": "string",
+                        },
+                    },
+                };
+            },
+
+            // executes the search and returns a list of the records matched
+            /**
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+                @param where_cond?: object -> the optional search expression tree
+                @param search_1opts?: object -> search options
+
+                @return a list of records (object[] | void) matching the arguments
+            */
+            "search_records": async function (ctx, where_cond, search_opts) {
+                return [
+                    {"id": 1, "name": "a"},
+                    {"id": 2, "name": "b"},
+                ];
+            },
+
+            /**
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+            */
+            "begin_transaction": async function (ctx) {
+                // begin transaction code here
+            },
+
+            /**
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+            */
+            "commit": async function (ctx) {
+                // commit transaction code here
+            },
+
+            /**
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+            */
+            "rollback": async function (ctx) {
+                // rollback transaction code here
+            },
+        });
+
         api.registerApp({
             "name": "js-swagger-test",
             "display_name": "JavaScript Swagger Test",

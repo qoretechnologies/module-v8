@@ -165,6 +165,9 @@ public class TypeScriptAppRestConnection inherits RestConnection {
         if (TypeScriptActionInterface::appSupportsEvents(app)) {
             children_can_support_observers = True;
         }
+        if (TypeScriptActionInterface::appSupportsRecords(app)) {
+            children_can_support_records = True;
+        }
     }
 
     #! Processes the OAuth2 token response

@@ -119,6 +119,9 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
         if (TypeScriptActionInterface::appSupportsEvents(name)) {
             rv.children_can_support_observers = True;
         }
+        if (TypeScriptActionInterface::appSupportsRecords(name)) {
+            rv.children_can_support_records = True;
+        }
         return rv;
     }
 }
