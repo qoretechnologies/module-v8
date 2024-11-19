@@ -114,6 +114,16 @@ describe('Tests eSignature Actions', () => {
         sender: {
           userName: 'test',
         },
+        recipients: {
+          signers: [
+            {
+              email: 'recipient@example.com',
+              name: 'Recipient',
+              recipientId: '1234',
+              routingOrder: '1',
+            },
+          ],
+        },
       },
     });
 
