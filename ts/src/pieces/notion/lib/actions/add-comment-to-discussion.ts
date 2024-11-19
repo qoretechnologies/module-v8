@@ -1,7 +1,7 @@
 import { Client } from '@notionhq/client';
 import { notionAuth } from '../..';
 import { createAction, Property } from 'core/framework';
-import { IActionResponse } from 'global/models/actions';
+import { TQoreResponseType } from '../../../../global/models/qore';
 
 export const addCommentResponseType = {
   type: 'hash',
@@ -22,22 +22,24 @@ export const addCommentResponseType = {
     },
     parent: {
       required: false,
-      type: 'hash',
-      fields: {
-        type: {
-          type: 'string',
-          display_name: 'Type',
-          short_desc: 'The type of parent',
-          desc: 'The type of parent - [discussion, page, ...]',
-          example_value: 'discussion',
-        },
-        page_id: {
-          required: false,
-          type: 'string',
-          display_name: 'ID',
-          short_desc: 'The ID of the parent',
-          desc: 'The ID of the parent',
-          example_value: '12345678-1234-1234-1234-123456789012',
+      type: {
+        type: 'hash',
+        fields: {
+          type: {
+            type: 'string',
+            display_name: 'Type',
+            short_desc: 'The type of parent',
+            desc: 'The type of parent - [discussion, page, ...]',
+            example_value: 'discussion',
+          },
+          page_id: {
+            required: false,
+            type: 'string',
+            display_name: 'ID',
+            short_desc: 'The ID of the parent',
+            desc: 'The ID of the parent',
+            example_value: '12345678-1234-1234-1234-123456789012',
+          },
         },
       },
       display_name: 'Parent',
@@ -69,21 +71,23 @@ export const addCommentResponseType = {
       display_name: 'Created By',
       short_desc: 'The user who created the comment',
       desc: 'The user who created the comment',
-      type: 'hash',
-      fields: {
-        id: {
-          type: 'string',
-          display_name: 'ID',
-          short_desc: 'The ID of the user',
-          desc: 'The ID of the user',
-          example_value: '12345678-1234-1234-1234-123456789012',
-        },
-        object: {
-          type: 'string',
-          display_name: 'Object',
-          short_desc: 'The type of object',
-          desc: 'The type of object - [user, bot, ...]',
-          example_value: 'user',
+      type: {
+        type: 'hash',
+        fields: {
+          id: {
+            type: 'string',
+            display_name: 'ID',
+            short_desc: 'The ID of the user',
+            desc: 'The ID of the user',
+            example_value: '12345678-1234-1234-1234-123456789012',
+          },
+          object: {
+            type: 'string',
+            display_name: 'Object',
+            short_desc: 'The type of object',
+            desc: 'The type of object - [user, bot, ...]',
+            example_value: 'user',
+          },
         },
       },
     },
@@ -112,7 +116,7 @@ export const addCommentResponseType = {
       ],
     },
   },
-} satisfies IActionResponse;
+} satisfies TQoreResponseType;
 
 export const addCommentToDiscussion = createAction({
   auth: notionAuth,

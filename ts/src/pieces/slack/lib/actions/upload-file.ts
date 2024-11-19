@@ -1,6 +1,6 @@
 import { WebClient } from '@slack/web-api';
 import { createAction, Property } from 'core/framework';
-import { IActionResponse } from 'global/models/actions';
+import { TQoreResponseType } from '../../../../global/models/qore';
 import { slackAuth } from '../../index';
 import { slackChannel } from '../common/props';
 
@@ -55,7 +55,7 @@ const uploadFileResponseType = {
       ],
     },
   },
-} satisfies IActionResponse;
+} satisfies TQoreResponseType;
 
 export const uploadFile = createAction({
   auth: slackAuth,

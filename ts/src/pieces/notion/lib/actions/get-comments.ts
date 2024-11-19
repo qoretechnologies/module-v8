@@ -1,7 +1,7 @@
 import { Client, collectPaginatedAPI } from '@notionhq/client';
 import { notionAuth } from '../..';
 import { createAction, Property } from '../../../../core/framework';
-import { IActionResponse } from '../../../../global/models/actions';
+import { TQoreResponseType } from '../../../../global/models/qore';
 
 const getCommentsResponseType = {
   type: 'hash',
@@ -52,7 +52,7 @@ const getCommentsResponseType = {
       ],
     },
   },
-} satisfies IActionResponse;
+} satisfies TQoreResponseType;
 
 export const getComments = createAction({
   auth: notionAuth,

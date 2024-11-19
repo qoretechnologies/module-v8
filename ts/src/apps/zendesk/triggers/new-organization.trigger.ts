@@ -18,31 +18,33 @@ export default {
           type: 'softint',
         },
         detail: {
-          type: 'hash',
-          fields: {
-            created_at: {
-              type: 'softdate',
-            },
-            external_id: {
-              type: 'softstring',
-            },
-            group_id: {
-              type: 'softstring',
-            },
-            id: {
-              type: 'softstring',
-            },
-            name: {
-              type: 'softstring',
-            },
-            shared_comments: {
-              type: 'boolean',
-            },
-            shared_tickets: {
-              type: 'boolean',
-            },
-            updated_at: {
-              type: 'softdate',
+          type: {
+            type: 'hash',
+            fields: {
+              created_at: {
+                type: 'softdate',
+              },
+              external_id: {
+                type: 'softstring',
+              },
+              group_id: {
+                type: 'softstring',
+              },
+              id: {
+                type: 'softstring',
+              },
+              name: {
+                type: 'softstring',
+              },
+              shared_comments: {
+                type: 'boolean',
+              },
+              shared_tickets: {
+                type: 'boolean',
+              },
+              updated_at: {
+                type: 'softdate',
+              },
             },
           },
         },

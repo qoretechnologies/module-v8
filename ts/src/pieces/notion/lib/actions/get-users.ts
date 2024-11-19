@@ -1,7 +1,7 @@
 import { Client, collectPaginatedAPI } from '@notionhq/client';
-import { notionAuth } from '../..';
 import { createAction } from 'core/framework';
-import { IActionResponse } from 'global/models/actions';
+import { notionAuth } from '../..';
+import { TQoreResponseType } from '../../../../global/models/qore';
 
 const getUsersResponseType = {
   type: 'hash',
@@ -33,7 +33,7 @@ const getUsersResponseType = {
       ],
     },
   },
-} satisfies IActionResponse;
+} satisfies TQoreResponseType;
 
 export const getUsers = createAction({
   auth: notionAuth,

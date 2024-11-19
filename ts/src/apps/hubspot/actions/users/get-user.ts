@@ -1,5 +1,5 @@
-import { IActionOptions, IActionResponse, TActionData } from 'global/models/actions';
-import { EQoreAppActionCode, TQorePartialAction } from 'global/models/qore';
+import { IActionOptions, TActionData } from 'global/models/actions';
+import { EQoreAppActionCode, TQorePartialAction, TQoreResponseType } from 'global/models/qore';
 import { L } from '../../../../i18n/i18n-node';
 import { hubspotRequest } from '../../client';
 
@@ -47,7 +47,7 @@ export const response_type = {
       example_value: true,
     },
   },
-} satisfies IActionResponse;
+} satisfies TQoreResponseType;
 
 const getUser = async ({ id }: TActionData<typeof options>) => {
   try {

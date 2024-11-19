@@ -1,10 +1,5 @@
-import {
-  IActionOptions,
-  IActionResponse,
-  TActionData,
-  TActionResponse,
-} from 'global/models/actions';
-import { EQoreAppActionCode, TQorePartialAction } from '../global/models/qore';
+import { IActionOptions, TActionData } from 'global/models/actions';
+import { EQoreAppActionCode, TQorePartialAction, TQoreResponseType } from '../global/models/qore';
 import { L } from '../i18n/i18n-node';
 
 const options = {
@@ -22,26 +17,26 @@ const response_type = {
   type: 'hash',
   fields: {
     channel: {
-      type: 'hash',
-      fields: {
-        id: {
-          display_name: 'test',
-          short_desc: 'test',
-          desc: 'test',
-          type: 'int',
+      type: {
+        type: 'hash',
+        fields: {
+          id: {
+            display_name: 'test',
+            short_desc: 'test',
+            desc: 'test',
+            type: 'int',
+          },
         },
+        display_name: 'dname',
+        short_desc: 'sdesc',
+        desc: 'desc',
       },
-      display_name: 'dname',
-      short_desc: 'sdesc',
-      desc: 'desc',
     },
   },
-} satisfies IActionResponse;
+} satisfies TQoreResponseType;
 
 // Defining a function to delete attachment
-const deleteAttachment = async ({
-  option1,
-}: TActionData<typeof options>): Promise<TActionResponse<typeof response_type.fields>> => {
+const deleteAttachment = async ({ option1 }: TActionData<typeof options>) => {
   try {
     return {
       channel: {

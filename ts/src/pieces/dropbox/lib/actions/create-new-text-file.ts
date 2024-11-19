@@ -1,7 +1,7 @@
+import { AuthenticationType, httpClient, HttpMethod, HttpRequest } from 'core/common';
 import { createAction, Property } from 'core/framework';
-import { HttpRequest, HttpMethod, AuthenticationType, httpClient } from 'core/common';
 import { dropboxAuth } from '../../';
-import { IActionResponse } from '../../../../global/models/actions';
+import { TQoreResponseType } from '../../../../global/models/qore';
 
 const createTextFileResponseType = {
   type: 'hash',
@@ -77,7 +77,7 @@ const createTextFileResponseType = {
       example_value: true,
     },
   },
-} satisfies IActionResponse;
+} satisfies TQoreResponseType;
 
 export const dropboxCreateNewTextFile = createAction({
   auth: dropboxAuth,

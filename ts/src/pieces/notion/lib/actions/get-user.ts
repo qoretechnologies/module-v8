@@ -1,7 +1,7 @@
 import { Client } from '@notionhq/client';
-import { notionAuth } from '../..';
 import { createAction, Property } from 'core/framework';
-import { IActionResponse } from 'global/models/actions';
+import { notionAuth } from '../..';
+import { TQoreResponseType } from '../../../../global/models/qore';
 
 export const getUserResponseType = {
   type: 'hash',
@@ -43,14 +43,16 @@ export const getUserResponseType = {
     },
     person: {
       required: false,
-      type: 'hash',
-      fields: {
-        email: {
-          type: 'string',
-          display_name: 'Email',
-          short_desc: 'The email of the person',
-          desc: 'The email of the person',
-          example_value: 'email@example.com',
+      type: {
+        type: 'hash',
+        fields: {
+          email: {
+            type: 'string',
+            display_name: 'Email',
+            short_desc: 'The email of the person',
+            desc: 'The email of the person',
+            example_value: 'email@example.com',
+          },
         },
       },
       display_name: 'Person',
@@ -59,26 +61,28 @@ export const getUserResponseType = {
     },
     bot: {
       required: false,
-      type: 'hash',
-      fields: {
-        workspace_name: {
-          type: 'string',
-          display_name: 'Workspace Name',
-          short_desc: 'The workspace name of the bot',
-          desc: 'The workspace name of the bot',
-          example_value: 'Workspace Name',
-        },
-        owner: {
-          type: 'hash',
-          display_name: 'Owner',
-          short_desc: 'The owner of the bot',
-          desc: 'The owner of the bot',
-          example_value: {
-            id: '12345678-1234-1234-1234-123456789012',
-            name: 'John Doe',
-            type: 'person',
-            person: {
-              email: 'email@example.com',
+      type: {
+        type: 'hash',
+        fields: {
+          workspace_name: {
+            type: 'string',
+            display_name: 'Workspace Name',
+            short_desc: 'The workspace name of the bot',
+            desc: 'The workspace name of the bot',
+            example_value: 'Workspace Name',
+          },
+          owner: {
+            type: 'hash',
+            display_name: 'Owner',
+            short_desc: 'The owner of the bot',
+            desc: 'The owner of the bot',
+            example_value: {
+              id: '12345678-1234-1234-1234-123456789012',
+              name: 'John Doe',
+              type: 'person',
+              person: {
+                email: 'email@example.com',
+              },
             },
           },
         },
@@ -95,7 +99,7 @@ export const getUserResponseType = {
       example_value: '12345678-1234-1234-1234-123456789012',
     },
   },
-} satisfies IActionResponse;
+} satisfies TQoreResponseType;
 
 export const getUser = createAction({
   auth: notionAuth,

@@ -1,8 +1,8 @@
 import { Client } from '@notionhq/client';
-import { notionAuth } from '../..';
 import { createAction, Property } from 'core/framework';
+import { notionAuth } from '../..';
+import { TQoreResponseType } from '../../../../global/models/qore';
 import { notionCommon } from '../common';
-import { IActionResponse } from 'global/models/actions';
 
 const createDatabaseResponseType = {
   type: 'hash',
@@ -39,7 +39,56 @@ const createDatabaseResponseType = {
       },
     },
     title: {
-      type: 'list',
+      type: {
+        type: 'list',
+        element_type: 'hash',
+        // fields: {
+        //   type: {
+        //     type: 'string',
+        //   },
+        //   text: {
+        //     type: {
+        //       type: 'hash',
+        //       fields: {
+        //         content: {
+        //           type: 'string',
+        //         },
+        //         link: {
+        //           type: 'string',
+        //         },
+        //       },
+        //     },
+        //   },
+        //   annotations: {
+        //     type: {
+        //       type: 'hash',
+        //       fields: {
+        //         bold: {
+        //           type: 'boolean',
+        //         },
+        //         italic: {
+        //           type: 'boolean',
+        //         },
+        //         strikethrough: {
+        //           type: 'boolean',
+        //         },
+        //         underline: {
+        //           type: 'boolean',
+        //         },
+        //         code: {
+        //           type: 'boolean',
+        //         },
+        //         color: {
+        //           type: 'string',
+        //         },
+        //       },
+        //     },
+        //   },
+        //   plain_text: {
+        //     type: 'string',
+        //   },
+        // },
+      },
       example_value: [
         {
           type: 'text',
@@ -63,7 +112,7 @@ const createDatabaseResponseType = {
       desc: 'The title of the page',
     },
   },
-} satisfies IActionResponse;
+} satisfies TQoreResponseType;
 
 export const createDatabase = createAction({
   name: 'create_database',

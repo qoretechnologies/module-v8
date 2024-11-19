@@ -1,6 +1,7 @@
 import {
   EQoreAppActionCode,
   IQorePartialAppActionWithSwaggerPath,
+  IQoreTypeObject,
   TQoreOptions,
   TQorePartialEventAction,
 } from 'global/models/qore';
@@ -94,20 +95,24 @@ describe('Helpers tests', () => {
   it('Should receive partially incomplete deep action options and return fixed deep options', () => {
     const incompleteOptions = {
       option1: {
-        type: 'hash',
-        fields: {
-          subOption1: {
-            type: 'string',
-            required: true,
-          },
-          subOption2: {
-            required: true,
-            type: 'hash',
-            fields: {
-              subSubOption1: {
-                desc: 'Deep option',
-                type: 'string',
-                required: true,
+        type: {
+          type: 'hash',
+          fields: {
+            subOption1: {
+              type: 'string',
+              required: true,
+            },
+            subOption2: {
+              required: true,
+              type: {
+                type: 'hash',
+                fields: {
+                  subSubOption1: {
+                    desc: 'Deep option',
+                    type: 'string',
+                    required: true,
+                  },
+                },
               },
             },
           },
@@ -136,10 +141,11 @@ describe('Helpers tests', () => {
 
     expect(fixedOptions.option2.display_name).toBe('Second Option');
     expect(fixedOptions.option1.display_name).toBe('Option 1');
-    expect(fixedOptions.option1.fields.subOption1.display_name).toBe('Sub Option 1 of option 1');
-    expect(fixedOptions.option1.fields.subOption2.display_name).toBe('Sub Option 2 of option 1');
+    const option1Fields = (fixedOptions.option1.type as IQoreTypeObject).fields;
+    expect(option1Fields.subOption1.display_name).toBe('Sub Option 1 of option 1');
+    expect(option1Fields.subOption2.display_name).toBe('Sub Option 2 of option 1');
 
-    const subOption2Fields = fixedOptions.option1.fields.subOption2.fields;
+    const subOption2Fields = (option1Fields.subOption2.type as IQoreTypeObject).fields;
     const subSubOption1 = subOption2Fields.subSubOption1;
     expect(subSubOption1.display_name).toBe('Sub Sub Option 1');
     expect(subSubOption1.desc).toBe('Deep option');
@@ -159,10 +165,12 @@ it('Should map a trigger to app', () => {
         type: 'hash',
         fields: {
           testTriggerInfo: {
-            type: 'hash',
-            fields: {
-              testTriggerInfo1: {
-                type: 'string',
+            type: {
+              type: 'hash',
+              fields: {
+                testTriggerInfo1: {
+                  type: 'string',
+                },
               },
             },
           },
@@ -200,6 +208,7 @@ it('Should map a trigger to app', () => {
     'Test Trigger Info Short Description'
   );
 
-  const subInfo = mappedTriggers[0].event_info.type.fields.testTriggerInfo.fields;
+  const subInfo = (mappedTriggers[0].event_info.type.fields.testTriggerInfo.type as IQoreTypeObject)
+    .fields;
   expect(subInfo.testTriggerInfo1.display_name).toBe('Test Trigger Info 1');
 });

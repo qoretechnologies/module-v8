@@ -1,7 +1,7 @@
+import { AuthenticationType, httpClient, HttpMethod } from 'core/common';
 import { createAction, Property } from 'core/framework';
-import { httpClient, HttpMethod, AuthenticationType } from 'core/common';
 import { dropboxAuth } from '../../';
-import { IActionResponse } from '../../../../global/models/actions';
+import { TQoreResponseType } from '../../../../global/models/qore';
 
 const dropboxListAFolderResponseType = {
   type: 'hash',
@@ -10,7 +10,24 @@ const dropboxListAFolderResponseType = {
       display_name: 'Entries',
       desc: 'The list of entries in the folder',
       short_desc: 'The list of entries in the folder',
-      type: 'list',
+      type: {
+        type: 'list',
+        element_type: 'hash',
+        // fields: {
+        //   name: {
+        //     type: 'string',
+        //   },
+        //   path_lower: {
+        //     type: 'string',
+        //   },
+        //   path_display: {
+        //     type: 'string',
+        //   },
+        //   id: {
+        //     type: 'string',
+        //   },
+        // },
+      },
       example_value: [
         {
           name: 'copied-test-file.txt',
@@ -21,7 +38,7 @@ const dropboxListAFolderResponseType = {
       ],
     },
   },
-} satisfies IActionResponse;
+} satisfies TQoreResponseType;
 
 export const dropboxListAFolder = createAction({
   auth: dropboxAuth,

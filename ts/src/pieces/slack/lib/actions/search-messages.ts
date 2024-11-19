@@ -1,7 +1,7 @@
 import { WebClient } from '@slack/web-api';
 import { createAction, Property } from 'core/framework';
-import { IActionResponse } from 'global/models/actions';
 import { slackAuth } from '../..';
+import { TQoreResponseType } from '../../../../global/models/qore';
 
 const searchMessagesResponseType = {
   type: 'hash',
@@ -21,7 +21,7 @@ const searchMessagesResponseType = {
       ],
     },
   },
-} satisfies IActionResponse;
+} satisfies TQoreResponseType;
 
 export const searchMessages = createAction({
   name: 'searchMessages',

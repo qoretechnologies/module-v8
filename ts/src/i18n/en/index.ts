@@ -26,11 +26,13 @@ const en = {
                   displayName: 'Test Trigger Info',
                   shortDesc: 'Test Trigger Info Short Description',
                   longDesc: 'Test Trigger Info Long Description',
-                  fields: {
-                    testTriggerInfo1: {
-                      displayName: 'Test Trigger Info 1',
-                      shortDesc: 'Test Trigger Info 1 Short Description',
-                      longDesc: 'Test Trigger Info 1 Long Description',
+                  type: {
+                    fields: {
+                      testTriggerInfo1: {
+                        displayName: 'Test Trigger Info 1',
+                        shortDesc: 'Test Trigger Info 1 Short Description',
+                        longDesc: 'Test Trigger Info 1 Long Description',
+                      },
                     },
                   },
                 },
@@ -46,21 +48,25 @@ const en = {
               displayName: 'Option 1',
               shortDesc: 'Option 1 Short Description',
               longDesc: 'Option 1 Long Description',
-              fields: {
-                subOption1: {
-                  displayName: 'Sub Option 1 of option 1',
-                  shortDesc: 'Sub Option 1 Short Description',
-                  longDesc: 'Sub Option 1 Long Description',
-                },
-                subOption2: {
-                  displayName: 'Sub Option 2 of option 1',
-                  shortDesc: 'Sub Option 2 Short Description',
-                  longDesc: 'Sub Option 2 Long Description',
-                  fields: {
-                    subSubOption1: {
-                      displayName: 'Sub Sub Option 1',
-                      shortDesc: 'Sub Sub Option 1 Short Description',
-                      longDesc: 'Sub Sub Option 1 Long Description',
+              type: {
+                fields: {
+                  subOption1: {
+                    displayName: 'Sub Option 1 of option 1',
+                    shortDesc: 'Sub Option 1 Short Description',
+                    longDesc: 'Sub Option 1 Long Description',
+                  },
+                  subOption2: {
+                    displayName: 'Sub Option 2 of option 1',
+                    shortDesc: 'Sub Option 2 Short Description',
+                    longDesc: 'Sub Option 2 Long Description',
+                    type: {
+                      fields: {
+                        subSubOption1: {
+                          displayName: 'Sub Sub Option 1',
+                          shortDesc: 'Sub Sub Option 1 Short Description',
+                          longDesc: 'Sub Sub Option 1 Long Description',
+                        },
+                      },
                     },
                   },
                 },
@@ -267,7 +273,7 @@ const en = {
             },
           },
           event_info: {
-            longDesc: 'GitHub Issue Event Data',
+            desc: 'GitHub Issue Event Data',
             type: {
               fields: {
                 action: {
@@ -278,138 +284,230 @@ const en = {
                 issue: {
                   displayName: 'Issue',
                   shortDesc: 'Issue details',
-                  longDesc: 'Details of the issue related to the event',
-                  fields: {
-                    url: {
-                      displayName: 'Issue URL',
-                      shortDesc: 'URL of the issue',
-                      longDesc: 'The API URL for the specific issue',
-                    },
-                    number: {
-                      displayName: 'Issue Number',
-                      shortDesc: 'Number of the issue',
-                      longDesc: 'Unique number identifier for the issue',
-                    },
-                    title: {
-                      displayName: 'Issue Title',
-                      shortDesc: 'Title of the issue',
-                      longDesc: 'The title or subject of the issue',
-                    },
-                    user: {
-                      displayName: 'User',
-                      shortDesc: 'Issue creator',
-                      longDesc: 'Details of the user who created the issue',
-                      fields: {
-                        login: {
-                          displayName: 'Login',
-                          shortDesc: 'Username',
-                          longDesc: 'GitHub username of the user',
-                        },
-                        id: {
-                          displayName: 'User ID',
-                          shortDesc: 'GitHub user ID',
-                          longDesc: 'Unique identifier for the GitHub user',
-                        },
-                        avatar_url: {
-                          displayName: 'Avatar URL',
-                          shortDesc: 'User avatar URL',
-                          longDesc: "URL of the user's avatar image",
-                        },
-                        html_url: {
-                          displayName: 'Profile URL',
-                          shortDesc: 'User profile URL',
-                          longDesc: 'Link to the GitHub profile of the user',
+                  longDesc: 'Details of the issue created',
+                  type: {
+                    fields: {
+                      url: {
+                        displayName: 'Issue URL',
+                        shortDesc: 'URL of the issue',
+                        longDesc: 'The API URL for the specific issue',
+                      },
+                      number: {
+                        displayName: 'Issue Number',
+                        shortDesc: 'Number of the issue',
+                        longDesc: 'Unique number identifier for the issue',
+                      },
+                      title: {
+                        displayName: 'Issue Title',
+                        shortDesc: 'Title of the issue',
+                        longDesc: 'The title or subject of the issue',
+                      },
+                      user: {
+                        displayName: 'User',
+                        shortDesc: 'Issue creator',
+                        longDesc: 'Details of the user who created the issue',
+                        type: {
+                          fields: {
+                            login: {
+                              displayName: 'Login',
+                              shortDesc: 'Username',
+                              longDesc: 'GitHub username of the user',
+                            },
+                            id: {
+                              displayName: 'User ID',
+                              shortDesc: 'GitHub user ID',
+                              longDesc: 'Unique identifier for the GitHub user',
+                            },
+                            avatar_url: {
+                              displayName: 'Avatar URL',
+                              shortDesc: 'User avatar URL',
+                              longDesc: "URL of the user's avatar image",
+                            },
+                            html_url: {
+                              displayName: 'Profile URL',
+                              shortDesc: 'User profile URL',
+                              longDesc: 'Link to the GitHub profile of the user',
+                            },
+                          },
                         },
                       },
-                    },
-                    labels: {
-                      displayName: 'Labels',
-                      shortDesc: 'Issue labels',
-                      longDesc: 'List of labels associated with the issue',
-                    },
-                    state: {
-                      displayName: 'State',
-                      shortDesc: 'Issue state',
-                      longDesc: 'Current state of the issue (e.g., open, closed)',
-                    },
-                    locked: {
-                      displayName: 'Locked',
-                      shortDesc: 'Issue lock status',
-                      longDesc: 'Whether the issue is locked for editing',
-                    },
-                    assignee: {
-                      displayName: 'Assignee',
-                      shortDesc: 'Assigned user',
-                      longDesc: 'Details of the user assigned to the issue',
-                      fields: {
-                        login: {
-                          displayName: 'Login',
-                          shortDesc: 'Username',
-                          longDesc: 'GitHub username of the assignee',
-                        },
-                        id: {
-                          displayName: 'User ID',
-                          shortDesc: 'GitHub user ID',
-                          longDesc: 'Unique identifier for the GitHub user',
-                        },
-                        avatar_url: {
-                          displayName: 'Avatar URL',
-                          shortDesc: 'User avatar URL',
-                          longDesc: "URL of the user's avatar image",
-                        },
-                        html_url: {
-                          displayName: 'Profile URL',
-                          shortDesc: 'User profile URL',
-                          longDesc: 'Link to the GitHub profile of the assignee',
+                      labels: {
+                        displayName: 'Labels',
+                        shortDesc: 'Issue labels',
+                        longDesc: 'List of labels associated with the issue',
+                      },
+                      state: {
+                        displayName: 'State',
+                        shortDesc: 'Issue state',
+                        longDesc: 'Current state of the issue (e.g., open, closed)',
+                      },
+                      locked: {
+                        displayName: 'Locked',
+                        shortDesc: 'Issue lock status',
+                        longDesc: 'Whether the issue is locked for editing',
+                      },
+                      assignee: {
+                        displayName: 'Assignee',
+                        shortDesc: 'Assigned user',
+                        longDesc: 'Details of the user assigned to the issue',
+                        type: {
+                          fields: {
+                            login: {
+                              displayName: 'Login',
+                              shortDesc: 'Username',
+                              longDesc: 'GitHub username of the assignee',
+                            },
+                            id: {
+                              displayName: 'User ID',
+                              shortDesc: 'GitHub user ID',
+                              longDesc: 'Unique identifier for the GitHub user',
+                            },
+                            avatar_url: {
+                              displayName: 'Avatar URL',
+                              shortDesc: 'User avatar URL',
+                              longDesc: "URL of the user's avatar image",
+                            },
+                            html_url: {
+                              displayName: 'Profile URL',
+                              shortDesc: 'User profile URL',
+                              longDesc: 'Link to the GitHub profile of the assignee',
+                            },
+                          },
                         },
                       },
-                    },
-                    milestone: {
-                      displayName: 'Milestone',
-                      shortDesc: 'Milestone details',
-                      longDesc: 'Details of the milestone associated with the issue',
-                      fields: {
-                        title: {
-                          displayName: 'Milestone Title',
-                          shortDesc: 'Title of the milestone',
-                          longDesc: 'The title of the associated milestone',
-                        },
-                        due_on: {
-                          displayName: 'Due Date',
-                          shortDesc: 'Milestone due date',
-                          longDesc: 'Date by which the milestone is expected to be completed',
-                        },
-                        state: {
-                          displayName: 'State',
-                          shortDesc: 'Milestone state',
-                          longDesc: 'Current state of the milestone (e.g., open, closed)',
+                      milestone: {
+                        displayName: 'Milestone',
+                        shortDesc: 'Milestone details',
+                        longDesc: 'Details of the milestone associated with the issue',
+                        type: {
+                          fields: {
+                            url: {
+                              displayName: 'Milestone URL',
+                              shortDesc: 'Milestone API URL',
+                              longDesc: 'The API URL for the milestone',
+                            },
+                            html_url: {
+                              displayName: 'Milestone HTML URL',
+                              shortDesc: 'Milestone webpage URL',
+                              longDesc: "URL of the milestone's webpage",
+                            },
+                            labels_url: {
+                              displayName: 'Labels URL',
+                              shortDesc: 'Labels API URL',
+                              longDesc: "API URL for milestone's labels",
+                            },
+                            id: {
+                              displayName: 'Milestone ID',
+                              shortDesc: 'Milestone identifier',
+                              longDesc: 'Unique identifier for the milestone',
+                            },
+                            number: {
+                              displayName: 'Milestone Number',
+                              shortDesc: 'Milestone number',
+                              longDesc: 'Unique number for the milestone',
+                            },
+                            title: {
+                              displayName: 'Milestone Title',
+                              shortDesc: 'Title of the milestone',
+                              longDesc: 'The title of the associated milestone',
+                            },
+                            description: {
+                              displayName: 'Milestone Description',
+                              shortDesc: 'Milestone details',
+                              longDesc: 'A description of the milestone',
+                            },
+                            creator: {
+                              displayName: 'Creator',
+                              shortDesc: 'Milestone creator',
+                              longDesc: 'Details of the user who created the milestone',
+                              type: {
+                                fields: {
+                                  login: {
+                                    displayName: 'Login',
+                                    shortDesc: 'Username',
+                                    longDesc: 'GitHub username of the creator',
+                                  },
+                                  id: {
+                                    displayName: 'User ID',
+                                    shortDesc: 'GitHub user ID',
+                                    longDesc: 'Unique identifier for the creator',
+                                  },
+                                  avatar_url: {
+                                    displayName: 'Avatar URL',
+                                    shortDesc: 'User avatar URL',
+                                    longDesc: "URL of the creator's avatar image",
+                                  },
+                                  html_url: {
+                                    displayName: 'Profile URL',
+                                    shortDesc: 'User profile URL',
+                                    longDesc: "Link to the creator's GitHub profile",
+                                  },
+                                },
+                              },
+                            },
+                            open_issues: {
+                              displayName: 'Open Issues',
+                              shortDesc: 'Count of open issues',
+                              longDesc: 'The number of open issues in this milestone',
+                            },
+                            closed_issues: {
+                              displayName: 'Closed Issues',
+                              shortDesc: 'Count of closed issues',
+                              longDesc: 'The number of closed issues in this milestone',
+                            },
+                            state: {
+                              displayName: 'State',
+                              shortDesc: 'Milestone state',
+                              longDesc: 'Current state of the milestone (e.g., open, closed)',
+                            },
+                            created_at: {
+                              displayName: 'Created At',
+                              shortDesc: 'Creation time',
+                              longDesc: 'Timestamp when the milestone was created',
+                            },
+                            updated_at: {
+                              displayName: 'Updated At',
+                              shortDesc: 'Update time',
+                              longDesc: 'Timestamp when the milestone was last updated',
+                            },
+                            due_on: {
+                              displayName: 'Due Date',
+                              shortDesc: 'Milestone due date',
+                              longDesc: 'Date by which the milestone is expected to be completed',
+                            },
+                            closed_at: {
+                              displayName: 'Closed At',
+                              shortDesc: 'Closure time',
+                              longDesc: 'Timestamp when the milestone was closed',
+                            },
+                          },
                         },
                       },
-                    },
-                    comments: {
-                      displayName: 'Comments Count',
-                      shortDesc: 'Number of comments',
-                      longDesc: 'Total number of comments on the issue',
-                    },
-                    created_at: {
-                      displayName: 'Created At',
-                      shortDesc: 'Issue creation time',
-                      longDesc: 'The timestamp when the issue was created',
-                    },
-                    updated_at: {
-                      displayName: 'Updated At',
-                      shortDesc: 'Issue update time',
-                      longDesc: 'The timestamp when the issue was last updated',
-                    },
-                    closed_at: {
-                      displayName: 'Closed At',
-                      shortDesc: 'Issue closure time',
-                      longDesc: 'The timestamp when the issue was closed (if applicable)',
-                    },
-                    body: {
-                      displayName: 'Body',
-                      shortDesc: 'Issue description',
-                      longDesc: 'The detailed description of the issue',
+                      comments: {
+                        displayName: 'Comments Count',
+                        shortDesc: 'Number of comments',
+                        longDesc: 'Total number of comments on the issue',
+                      },
+                      created_at: {
+                        displayName: 'Created At',
+                        shortDesc: 'Issue creation time',
+                        longDesc: 'The timestamp when the issue was created',
+                      },
+                      updated_at: {
+                        displayName: 'Updated At',
+                        shortDesc: 'Issue update time',
+                        longDesc: 'The timestamp when the issue was last updated',
+                      },
+                      closed_at: {
+                        displayName: 'Closed At',
+                        shortDesc: 'Issue closure time',
+                        longDesc: 'The timestamp when the issue was closed (if applicable)',
+                      },
+                      body: {
+                        displayName: 'Body',
+                        shortDesc: 'Issue description',
+                        longDesc: 'The detailed description of the issue',
+                      },
                     },
                   },
                 },
@@ -417,21 +515,52 @@ const en = {
                   displayName: 'Repository',
                   shortDesc: 'Repository details',
                   longDesc: 'Details of the repository where the issue resides',
-                  fields: {
-                    id: {
-                      displayName: 'Repository ID',
-                      shortDesc: 'Unique ID',
-                      longDesc: 'Unique identifier for the repository',
-                    },
-                    name: {
-                      displayName: 'Repository Name',
-                      shortDesc: 'Name of the repository',
-                      longDesc: 'The name of the GitHub repository',
-                    },
-                    private: {
-                      displayName: 'Private',
-                      shortDesc: 'Privacy status',
-                      longDesc: 'Whether the repository is private',
+                  type: {
+                    fields: {
+                      id: {
+                        displayName: 'Repository ID',
+                        shortDesc: 'Unique ID',
+                        longDesc: 'Unique identifier for the repository',
+                      },
+                      name: {
+                        displayName: 'Repository Name',
+                        shortDesc: 'Name of the repository',
+                        longDesc: 'The name of the GitHub repository',
+                      },
+                      private: {
+                        displayName: 'Private',
+                        shortDesc: 'Privacy status',
+                        longDesc: 'Whether the repository is private',
+                      },
+                      owner: {
+                        displayName: 'Owner',
+                        shortDesc: 'Repository owner',
+                        longDesc: 'Details of the user or organization that owns the repository',
+                        type: {
+                          fields: {
+                            login: {
+                              displayName: 'Login',
+                              shortDesc: 'Username',
+                              longDesc: 'GitHub username of the owner',
+                            },
+                            id: {
+                              displayName: 'Owner ID',
+                              shortDesc: 'Unique ID',
+                              longDesc: 'Unique identifier for the repository owner',
+                            },
+                            avatar_url: {
+                              displayName: 'Avatar URL',
+                              shortDesc: 'Avatar link',
+                              longDesc: "URL of the owner's avatar image",
+                            },
+                            html_url: {
+                              displayName: 'Profile URL',
+                              shortDesc: 'Profile link',
+                              longDesc: "Link to the owner's GitHub profile",
+                            },
+                          },
+                        },
+                      },
                     },
                   },
                 },
@@ -439,21 +568,28 @@ const en = {
                   displayName: 'Sender',
                   shortDesc: 'Event sender',
                   longDesc: 'Details of the sender who triggered the event',
-                  fields: {
-                    login: {
-                      displayName: 'Login',
-                      shortDesc: 'Username',
-                      longDesc: 'GitHub username of the sender',
-                    },
-                    id: {
-                      displayName: 'Sender ID',
-                      shortDesc: 'Unique ID',
-                      longDesc: 'Unique identifier for the sender',
-                    },
-                    html_url: {
-                      displayName: 'Profile URL',
-                      shortDesc: 'Profile link',
-                      longDesc: "Link to the sender's GitHub profile",
+                  type: {
+                    fields: {
+                      login: {
+                        displayName: 'Login',
+                        shortDesc: 'Username',
+                        longDesc: 'GitHub username of the sender',
+                      },
+                      id: {
+                        displayName: 'Sender ID',
+                        shortDesc: 'Unique ID',
+                        longDesc: 'Unique identifier for the sender',
+                      },
+                      html_url: {
+                        displayName: 'Profile URL',
+                        shortDesc: 'Profile link',
+                        longDesc: "Link to the sender's GitHub profile",
+                      },
+                      avatar_url: {
+                        displayName: 'Avatar URL',
+                        shortDesc: 'Avatar link',
+                        longDesc: "URL of the sender's avatar image",
+                      },
                     },
                   },
                 },
@@ -536,7 +672,7 @@ const en = {
           shortDesc: 'Triggers when a new user is created',
           longDesc: 'Triggers when a new user is created',
           event_info: {
-            longDesc: 'Zendesk User Event Data',
+            desc: 'Zendesk User Event Data',
             type: {
               fields: {
                 account_id: {
@@ -548,46 +684,48 @@ const en = {
                   displayName: 'Detail',
                   shortDesc: 'User details',
                   longDesc: 'Detailed user information',
-                  fields: {
-                    created_at: {
-                      displayName: 'Created At',
-                      shortDesc: 'User creation time',
-                      longDesc: 'Timestamp of user creation',
-                    },
-                    default_group_id: {
-                      displayName: 'Default Group ID',
-                      shortDesc: 'Default group ID',
-                      longDesc: 'ID of the default group for the user',
-                    },
-                    email: {
-                      displayName: 'Email',
-                      shortDesc: 'User email',
-                      longDesc: 'Email address of the user',
-                    },
-                    external_id: {
-                      displayName: 'External ID',
-                      shortDesc: 'User external ID',
-                      longDesc: 'External identifier for the user',
-                    },
-                    id: {
-                      displayName: 'User ID',
-                      shortDesc: 'User ID',
-                      longDesc: 'Unique identifier for the user',
-                    },
-                    organization_id: {
-                      displayName: 'Organization ID',
-                      shortDesc: 'Organization ID',
-                      longDesc: 'ID of the organization associated with the user',
-                    },
-                    role: {
-                      displayName: 'Role',
-                      shortDesc: 'User role',
-                      longDesc: 'Role of the user in the system',
-                    },
-                    updated_at: {
-                      displayName: 'Updated At',
-                      shortDesc: 'User update time',
-                      longDesc: 'Last update timestamp for the user',
+                  type: {
+                    fields: {
+                      created_at: {
+                        displayName: 'Created At',
+                        shortDesc: 'User creation time',
+                        longDesc: 'Timestamp of user creation',
+                      },
+                      default_group_id: {
+                        displayName: 'Default Group ID',
+                        shortDesc: 'Default group ID',
+                        longDesc: 'ID of the default group for the user',
+                      },
+                      email: {
+                        displayName: 'Email',
+                        shortDesc: 'User email',
+                        longDesc: 'Email address of the user',
+                      },
+                      external_id: {
+                        displayName: 'External ID',
+                        shortDesc: 'User external ID',
+                        longDesc: 'External identifier for the user',
+                      },
+                      id: {
+                        displayName: 'User ID',
+                        shortDesc: 'User ID',
+                        longDesc: 'Unique identifier for the user',
+                      },
+                      organization_id: {
+                        displayName: 'Organization ID',
+                        shortDesc: 'Organization ID',
+                        longDesc: 'ID of the organization associated with the user',
+                      },
+                      role: {
+                        displayName: 'Role',
+                        shortDesc: 'User role',
+                        longDesc: 'Role of the user in the system',
+                      },
+                      updated_at: {
+                        displayName: 'Updated At',
+                        shortDesc: 'User update time',
+                        longDesc: 'Last update timestamp for the user',
+                      },
                     },
                   },
                 },
@@ -630,7 +768,7 @@ const en = {
           shortDesc: 'Triggers when a new ticket is created',
           longDesc: 'Triggers when a new ticket is created',
           event_info: {
-            longDesc: 'New Ticket event data',
+            desc: 'New Ticket Event Data',
             type: {
               fields: {
                 assignee_email: {
@@ -712,7 +850,7 @@ const en = {
           shortDesc: 'Triggers when a new organization is created',
           longDesc: 'Triggers when a new organization is created',
           event_info: {
-            longDesc: 'Zendesk Organization Event Data',
+            desc: 'Zendesk Organization Event Data',
             type: {
               fields: {
                 account_id: {
@@ -724,46 +862,48 @@ const en = {
                   displayName: 'Detail',
                   shortDesc: 'Organization details',
                   longDesc: 'Detailed organization information',
-                  fields: {
-                    created_at: {
-                      displayName: 'Created At',
-                      shortDesc: 'Organization creation time',
-                      longDesc: 'Timestamp of organization creation',
-                    },
-                    external_id: {
-                      displayName: 'External ID',
-                      shortDesc: 'Organization external ID',
-                      longDesc: 'External identifier for the organization',
-                    },
-                    group_id: {
-                      displayName: 'Group ID',
-                      shortDesc: 'Group ID',
-                      longDesc: 'ID of the associated group',
-                    },
-                    id: {
-                      displayName: 'Organization ID',
-                      shortDesc: 'Organization ID',
-                      longDesc: 'Unique identifier for the organization',
-                    },
-                    name: {
-                      displayName: 'Name',
-                      shortDesc: 'Organization name',
-                      longDesc: 'Name of the organization',
-                    },
-                    shared_comments: {
-                      displayName: 'Shared Comments',
-                      shortDesc: 'Shared comments',
-                      longDesc: 'Indicates if comments are shared',
-                    },
-                    shared_tickets: {
-                      displayName: 'Shared Tickets',
-                      shortDesc: 'Shared tickets',
-                      longDesc: 'Indicates if tickets are shared',
-                    },
-                    updated_at: {
-                      displayName: 'Updated At',
-                      shortDesc: 'Organization update time',
-                      longDesc: 'Last update timestamp for the organization',
+                  type: {
+                    fields: {
+                      created_at: {
+                        displayName: 'Created At',
+                        shortDesc: 'Organization creation time',
+                        longDesc: 'Timestamp of organization creation',
+                      },
+                      external_id: {
+                        displayName: 'External ID',
+                        shortDesc: 'Organization external ID',
+                        longDesc: 'External identifier for the organization',
+                      },
+                      group_id: {
+                        displayName: 'Group ID',
+                        shortDesc: 'Group ID',
+                        longDesc: 'ID of the associated group',
+                      },
+                      id: {
+                        displayName: 'Organization ID',
+                        shortDesc: 'Organization ID',
+                        longDesc: 'Unique identifier for the organization',
+                      },
+                      name: {
+                        displayName: 'Name',
+                        shortDesc: 'Organization name',
+                        longDesc: 'Name of the organization',
+                      },
+                      shared_comments: {
+                        displayName: 'Shared Comments',
+                        shortDesc: 'Shared comments',
+                        longDesc: 'Indicates if comments are shared',
+                      },
+                      shared_tickets: {
+                        displayName: 'Shared Tickets',
+                        shortDesc: 'Shared tickets',
+                        longDesc: 'Indicates if tickets are shared',
+                      },
+                      updated_at: {
+                        displayName: 'Updated At',
+                        shortDesc: 'Organization update time',
+                        longDesc: 'Last update timestamp for the organization',
+                      },
                     },
                   },
                 },
@@ -809,33 +949,34 @@ const en = {
               displayName: 'Group',
               shortDesc: 'Group',
               longDesc: 'Group',
-              fields: {
-                name: {
-                  displayName: 'Name',
-                  shortDesc: 'Group name',
-                  longDesc: 'Group name',
-                },
-                description: {
-                  displayName: 'Description',
-                  shortDesc: 'Group description',
-                  longDesc: 'Group description',
-                },
-                default: {
-                  displayName: 'Default',
-                  shortDesc:
-                    'Team members will automatically be assigned to this group when they’re added to Zendesk. There can only be one default group.',
-                  longDesc:
-                    'Team members will automatically be assigned to this group when they’re added to Zendesk. There can only be one default group.',
-                },
-                is_public: {
-                  displayName: 'Public',
-                  shortDesc: 'If the group should be public. Default is true.',
-                  longDesc: 'Group is public',
-                },
-                user_ids: {
-                  displayName: 'User IDs',
-                  shortDesc: 'Users to add to the group',
-                  longDesc: 'Users to add to the group',
+              type: {
+                fields: {
+                  name: {
+                    displayName: 'Name',
+                    shortDesc: 'Group name',
+                    longDesc: 'Group name',
+                  },
+                  description: {
+                    displayName: 'Description',
+                    shortDesc: 'Group description',
+                    longDesc: 'Group description',
+                  },
+                  default: {
+                    displayName: 'Default',
+                    shortDesc: 'Default group assignment for team members in Zendesk.',
+                    longDesc:
+                      'Team members will automatically be assigned to this group when they’re added to Zendesk. There can only be one default group.',
+                  },
+                  is_public: {
+                    displayName: 'Public',
+                    shortDesc: 'Public group visibility',
+                    longDesc: 'Indicates if the group should be public. Default is true.',
+                  },
+                  user_ids: {
+                    displayName: 'User IDs',
+                    shortDesc: 'Users to add to the group',
+                    longDesc: 'List of user IDs to be added to the group',
+                  },
                 },
               },
             },
@@ -843,37 +984,43 @@ const en = {
         },
         UpdateGroup: {
           options: {
+            group_id: {
+              displayName: 'Group ID',
+              shortDesc: 'Group ID',
+              longDesc: 'Group ID',
+            },
             group: {
               displayName: 'Group',
-              shortDesc: 'Group',
-              longDesc: 'Group',
-              fields: {
-                name: {
-                  displayName: 'Name',
-                  shortDesc: 'Group name',
-                  longDesc: 'Group name',
-                },
-                description: {
-                  displayName: 'Description',
-                  shortDesc: 'Group description',
-                  longDesc: 'Group description',
-                },
-                default: {
-                  displayName: 'Default',
-                  shortDesc:
-                    'Team members will automatically be assigned to this group when they’re added to Zendesk. There can only be one default group.',
-                  longDesc:
-                    'Team members will automatically be assigned to this group when they’re added to Zendesk. There can only be one default group.',
-                },
-                is_public: {
-                  displayName: 'Public',
-                  shortDesc: 'If the group should be public. Default is true.',
-                  longDesc: 'Group is public',
-                },
-                user_ids: {
-                  displayName: 'User IDs',
-                  shortDesc: 'Users to add to the group',
-                  longDesc: 'Users to add to the group',
+              shortDesc: 'Group information',
+              longDesc: 'Details about the group settings in Zendesk',
+              type: {
+                fields: {
+                  name: {
+                    displayName: 'Name',
+                    shortDesc: 'Group name',
+                    longDesc: 'The name of the group',
+                  },
+                  description: {
+                    displayName: 'Description',
+                    shortDesc: 'Group description',
+                    longDesc: 'A description of the group',
+                  },
+                  default: {
+                    displayName: 'Default',
+                    shortDesc: 'Default group assignment',
+                    longDesc:
+                      'Team members will automatically be assigned to this group when they’re added to Zendesk. There can only be one default group.',
+                  },
+                  is_public: {
+                    displayName: 'Public',
+                    shortDesc: 'Public group visibility',
+                    longDesc: 'Indicates whether the group should be public. Default is true.',
+                  },
+                  user_ids: {
+                    displayName: 'User IDs',
+                    shortDesc: 'List of user IDs',
+                    longDesc: 'The IDs of users to be added to the group',
+                  },
                 },
               },
             },
@@ -883,43 +1030,45 @@ const en = {
           options: {
             user: {
               displayName: 'User',
-              shortDesc: 'User',
-              longDesc: 'User',
-              fields: {
-                name: {
-                  displayName: 'Name',
-                  shortDesc: 'User name',
-                  longDesc: 'User name',
-                },
-                email: {
-                  displayName: 'Email',
-                  shortDesc: 'User email',
-                  longDesc: 'User email',
-                },
-                phone: {
-                  displayName: 'Phone',
-                  shortDesc: 'User phone',
-                  longDesc: 'User phone',
-                },
-                notes: {
-                  displayName: 'Notes',
-                  shortDesc: 'Notes about the user',
-                  longDesc: 'Notes about the user',
-                },
-                details: {
-                  displayName: 'Details',
-                  shortDesc: 'Details',
-                  longDesc: 'Details',
-                },
-                role: {
-                  displayName: 'Role',
-                  shortDesc: 'User role',
-                  longDesc: 'User role',
-                },
-                organization_ids: {
-                  displayName: 'Organization IDs',
-                  shortDesc: 'Organization IDs',
-                  longDesc: 'Organization IDs',
+              shortDesc: 'User information',
+              longDesc: 'Details about the user in Zendesk',
+              type: {
+                fields: {
+                  name: {
+                    displayName: 'Name',
+                    shortDesc: "User's name",
+                    longDesc: 'The full name of the user',
+                  },
+                  email: {
+                    displayName: 'Email',
+                    shortDesc: "User's email address",
+                    longDesc: 'The email address associated with the user',
+                  },
+                  phone: {
+                    displayName: 'Phone',
+                    shortDesc: "User's phone number",
+                    longDesc: 'The phone number associated with the user',
+                  },
+                  notes: {
+                    displayName: 'Notes',
+                    shortDesc: 'User notes',
+                    longDesc: 'Additional notes or comments about the user',
+                  },
+                  details: {
+                    displayName: 'Details',
+                    shortDesc: 'Additional details',
+                    longDesc: 'Detailed information about the user',
+                  },
+                  role: {
+                    displayName: 'Role',
+                    shortDesc: 'User role',
+                    longDesc: 'The role assigned to the user in the system',
+                  },
+                  organization_ids: {
+                    displayName: 'Organization IDs',
+                    shortDesc: 'List of organization IDs',
+                    longDesc: 'The IDs of the organizations the user is associated with',
+                  },
                 },
               },
             },
@@ -929,43 +1078,45 @@ const en = {
           options: {
             user: {
               displayName: 'User',
-              shortDesc: 'User',
-              longDesc: 'User',
-              fields: {
-                name: {
-                  displayName: 'Name',
-                  shortDesc: 'User name',
-                  longDesc: 'User name',
-                },
-                email: {
-                  displayName: 'Email',
-                  shortDesc: 'User email',
-                  longDesc: 'User email',
-                },
-                phone: {
-                  displayName: 'Phone',
-                  shortDesc: 'User phone',
-                  longDesc: 'User phone',
-                },
-                notes: {
-                  displayName: 'Notes',
-                  shortDesc: 'Notes about the user',
-                  longDesc: 'Notes about the user',
-                },
-                details: {
-                  displayName: 'Details',
-                  shortDesc: 'Details',
-                  longDesc: 'Details',
-                },
-                role: {
-                  displayName: 'Role',
-                  shortDesc: 'User role',
-                  longDesc: 'User role',
-                },
-                organization_ids: {
-                  displayName: 'Organization IDs',
-                  shortDesc: 'Organization IDs',
-                  longDesc: 'Organization IDs',
+              shortDesc: 'User information',
+              longDesc: 'Details about the user in the Zendesk system',
+              type: {
+                fields: {
+                  name: {
+                    displayName: 'Name',
+                    shortDesc: "User's name",
+                    longDesc: 'The full name of the user',
+                  },
+                  email: {
+                    displayName: 'Email',
+                    shortDesc: "User's email address",
+                    longDesc: 'The email address associated with the user',
+                  },
+                  phone: {
+                    displayName: 'Phone',
+                    shortDesc: "User's phone number",
+                    longDesc: 'The phone number associated with the user',
+                  },
+                  notes: {
+                    displayName: 'Notes',
+                    shortDesc: 'User notes',
+                    longDesc: 'Additional notes or comments about the user',
+                  },
+                  details: {
+                    displayName: 'Details',
+                    shortDesc: 'Additional details',
+                    longDesc: 'Additional detailed information about the user',
+                  },
+                  role: {
+                    displayName: 'Role',
+                    shortDesc: 'User role',
+                    longDesc: 'The role assigned to the user within the system',
+                  },
+                  organization_ids: {
+                    displayName: 'Organization IDs',
+                    shortDesc: 'List of organization IDs',
+                    longDesc: 'The IDs of the organizations the user is associated with',
+                  },
                 },
               },
             },

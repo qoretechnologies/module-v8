@@ -1,9 +1,9 @@
 import { Block, WebClient } from '@slack/web-api';
 import { createAction, Property } from 'core/framework';
 import { slackAuth } from '../..';
+import { TQoreResponseType } from '../../../../global/models/qore';
 import { blocks, slackChannel, slackInfo } from '../common/props';
 import { processMessageTimestamp } from '../common/utils';
-import { IActionResponse } from 'global/models/actions';
 
 const updateMessageResponseType = {
   type: 'hash',
@@ -37,7 +37,7 @@ const updateMessageResponseType = {
       example_value: 'Hello, world!',
     },
   },
-} satisfies IActionResponse;
+} satisfies TQoreResponseType;
 
 export const updateMessage = createAction({
   // auth: check https://www.activepieces.com/docs/developers/piece-reference/authentication,

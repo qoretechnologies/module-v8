@@ -109,7 +109,10 @@ class _PiecesAppCatalogue {
       ...baseAction,
       app: appName,
       options: fixOptions(baseAction, options, appName, this.locale),
-      response_type: fixResponseOrEventInfo(action.responseType, appName, this.locale, baseAction),
+      response_type:
+        typeof action.responseType === 'string'
+          ? action.responseType
+          : fixResponseOrEventInfo(action.responseType, appName, this.locale, baseAction),
     };
   }
 

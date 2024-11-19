@@ -44,10 +44,8 @@ export const validateResponseProperties = (
     ) {
       const exampleItem = fieldDefinition.example_value?.[0] || {};
       validateResponseProperties(exampleItem, actualValue[0]);
-    } else if (expectedFieldType === 'hash' && fieldDefinition.fields) {
-      validateResponseProperties(fieldDefinition, actualValue);
-    } else if (typeof expectedFieldType === 'object') {
-      validateResponseProperties(expectedFieldType, actualValue);
+    } else if (typeof expectedFieldType === 'object' && expectedFieldType.type === 'hash') {
+      validateResponseProperties(fieldDefinition.type, actualValue);
     }
   });
 };

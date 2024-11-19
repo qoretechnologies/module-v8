@@ -16,31 +16,33 @@ export default {
           type: 'softint',
         },
         detail: {
-          type: 'hash',
-          fields: {
-            created_at: {
-              type: 'softdate',
-            },
-            default_group_id: {
-              type: 'softstring',
-            },
-            email: {
-              type: 'softstring',
-            },
-            external_id: {
-              type: 'softstring',
-            },
-            id: {
-              type: 'softstring',
-            },
-            organization_id: {
-              type: 'softstring',
-            },
-            role: {
-              type: 'softstring',
-            },
-            updated_at: {
-              type: 'softdate',
+          type: {
+            type: 'hash',
+            fields: {
+              created_at: {
+                type: 'softdate',
+              },
+              default_group_id: {
+                type: 'softstring',
+              },
+              email: {
+                type: 'softstring',
+              },
+              external_id: {
+                type: 'softstring',
+              },
+              id: {
+                type: 'softstring',
+              },
+              organization_id: {
+                type: 'softstring',
+              },
+              role: {
+                type: 'softstring',
+              },
+              updated_at: {
+                type: 'softdate',
+              },
             },
           },
         },

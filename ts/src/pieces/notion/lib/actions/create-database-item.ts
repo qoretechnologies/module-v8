@@ -1,9 +1,9 @@
-import { createAction, DynamicPropsValue, OAuth2PropertyValue, Property } from 'core/framework';
 import { Client } from '@notionhq/client';
-import { NotionFieldMapping } from '../common/models';
+import { createAction, DynamicPropsValue, OAuth2PropertyValue, Property } from 'core/framework';
 import { notionAuth } from '../..';
+import { TQoreResponseType } from '../../../../global/models/qore';
 import { notionCommon } from '../common';
-import { IActionResponse } from '../../../../global/models/actions';
+import { NotionFieldMapping } from '../common/models';
 
 const createDatabaseItemResponseType = {
   type: 'hash',
@@ -40,7 +40,7 @@ const createDatabaseItemResponseType = {
       },
     },
   },
-} satisfies IActionResponse;
+} satisfies TQoreResponseType;
 
 export const createDatabaseItem = createAction({
   auth: notionAuth,

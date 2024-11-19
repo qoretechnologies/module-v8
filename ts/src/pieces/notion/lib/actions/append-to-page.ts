@@ -5,7 +5,7 @@ import { notionAuth } from '../..';
 import { notionCommon } from '../common';
 import { markdownToBlocks } from '@tryfabric/martian';
 import { BlockObjectRequest } from '@notionhq/client/build/src/api-endpoints';
-import { IActionResponse } from '../../../../global/models/actions';
+import { TQoreResponseType } from '../../../../global/models/qore';
 
 const appendToPageResponseType = {
   type: 'hash',
@@ -18,7 +18,80 @@ const appendToPageResponseType = {
       example_value: 'list',
     },
     results: {
-      type: 'list',
+      type: {
+        type: 'list',
+        element_type: 'hash',
+        // fields: {
+        //   object: {
+        //     type: 'string',
+        //   },
+        //   id: {
+        //     type: 'string',
+        //   },
+        //   paragraph: {
+        //     type: {
+        //       type: 'hash',
+        //       fields: {
+        //         color: {
+        //           type: 'string',
+        //         },
+        //         rich_text: {
+        //           type: {
+        //             type: 'list',
+        //             element_type: 'hash',
+        //             fields: {
+        //               type: {
+        //                 type: 'string',
+        //               },
+        //               text: {
+        //                 type: {
+        //                   type: 'hash',
+        //                   fields: {
+        //                     content: {
+        //                       type: 'string',
+        //                     },
+        //                     link: {
+        //                       type: 'string',
+        //                     },
+        //                   },
+        //                 },
+        //               },
+        //               annotations: {
+        //                 type: {
+        //                   type: 'hash',
+        //                   fields: {
+        //                     bold: {
+        //                       type: 'boolean',
+        //                     },
+        //                     italic: {
+        //                       type: 'boolean',
+        //                     },
+        //                     strikethrough: {
+        //                       type: 'boolean',
+        //                     },
+        //                     underline: {
+        //                       type: 'boolean',
+        //                     },
+        //                     code: {
+        //                       type: 'boolean',
+        //                     },
+        //                     color: {
+        //                       type: 'string',
+        //                     },
+        //                   },
+        //                 },
+        //               },
+        //               plain_text: {
+        //                 type: 'string',
+        //               },
+        //             },
+        //           },
+        //         },
+        //       },
+        //     },
+        //   },
+        // },
+      },
       display_name: 'Results',
       short_desc: 'The results of the append',
       desc: 'The results of the append',
@@ -52,7 +125,7 @@ const appendToPageResponseType = {
       ],
     },
   },
-} satisfies IActionResponse;
+} satisfies TQoreResponseType;
 
 export const appendToPage = createAction({
   auth: notionAuth,

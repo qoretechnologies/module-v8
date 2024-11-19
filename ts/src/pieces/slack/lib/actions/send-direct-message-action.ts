@@ -1,7 +1,7 @@
 import { createAction } from 'core/framework';
 import { assertNotNullOrUndefined } from 'core/shared';
-import { IActionResponse } from 'global/models/actions';
 import { slackAuth } from '../../';
+import { TQoreResponseType } from '../../../../global/models/qore';
 import { blocks, profilePicture, text, userId, username } from '../common/props';
 import { slackSendMessage } from '../common/utils';
 
@@ -33,33 +33,35 @@ const slackSendDirectMessageResponseType = {
       display_name: 'Message',
       short_desc: 'The message that was sent',
       desc: 'The message that was sent',
-      type: 'hash',
-      fields: {
-        user: {
-          type: 'string',
-          display_name: 'User',
-          short_desc: 'The user who sent the message',
-          desc: 'The user who sent the message',
-          example_value: 'U1234567890',
-        },
-        type: {
-          type: 'string',
-          display_name: 'Type',
-          short_desc: 'The type of message',
-          desc: 'The type of message',
-          example_value: 'message',
-        },
-        ts: {
-          type: 'string',
-          display_name: 'Timestamp',
-          short_desc: 'The timestamp of the message',
-          desc: 'The timestamp of the message',
-          example_value: '1234567890.123456',
+      type: {
+        type: 'hash',
+        fields: {
+          user: {
+            type: 'string',
+            display_name: 'User',
+            short_desc: 'The user who sent the message',
+            desc: 'The user who sent the message',
+            example_value: 'U1234567890',
+          },
+          type: {
+            type: 'string',
+            display_name: 'Type',
+            short_desc: 'The type of message',
+            desc: 'The type of message',
+            example_value: 'message',
+          },
+          ts: {
+            type: 'string',
+            display_name: 'Timestamp',
+            short_desc: 'The timestamp of the message',
+            desc: 'The timestamp of the message',
+            example_value: '1234567890.123456',
+          },
         },
       },
     },
   },
-} satisfies IActionResponse;
+} satisfies TQoreResponseType;
 
 export const slackSendDirectMessageAction = createAction({
   auth: slackAuth,

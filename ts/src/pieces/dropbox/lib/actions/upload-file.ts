@@ -1,7 +1,7 @@
 import { createAction, Property } from 'core/framework';
 import { httpClient, HttpMethod, AuthenticationType } from 'core/common';
 import { dropboxAuth } from '../../';
-import { IActionResponse } from '../../../../global/models/actions';
+import { TQoreResponseType } from '../../../../global/models/qore';
 
 const dropBoxUploadFileResponseType = {
   type: 'hash',
@@ -77,7 +77,7 @@ const dropBoxUploadFileResponseType = {
       example_value: true,
     },
   },
-} satisfies IActionResponse;
+} satisfies TQoreResponseType;
 
 export const dropboxUploadFile = createAction({
   auth: dropboxAuth,

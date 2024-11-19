@@ -1,7 +1,7 @@
 import { ConversationsHistoryResponse, WebClient } from '@slack/web-api';
 import { createAction, Property } from 'core/framework';
-import { IActionResponse } from 'global/models/actions';
 import { slackAuth } from '../..';
+import { TQoreResponseType } from '../../../../global/models/qore';
 import { slackChannel, slackInfo } from '../common/props';
 
 const getChannelHistoryResponseType = {
@@ -22,7 +22,7 @@ const getChannelHistoryResponseType = {
       ],
     },
   },
-} satisfies IActionResponse;
+} satisfies TQoreResponseType;
 
 export const getChannelHistory = createAction({
   // auth: check https://www.activepieces.com/docs/developers/piece-reference/authentication,

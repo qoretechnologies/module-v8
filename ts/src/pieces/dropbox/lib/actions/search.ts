@@ -1,7 +1,7 @@
+import { AuthenticationType, httpClient, HttpMethod } from 'core/common';
 import { createAction, Property } from 'core/framework';
-import { httpClient, HttpMethod, AuthenticationType } from 'core/common';
 import { dropboxAuth } from '../..';
-import { IActionResponse } from '../../../../global/models/actions';
+import { TQoreResponseType } from '../../../../global/models/qore';
 
 const dropboxSearchResponseType = {
   type: 'hash',
@@ -37,7 +37,7 @@ const dropboxSearchResponseType = {
       ],
     },
   },
-} satisfies IActionResponse;
+} satisfies TQoreResponseType;
 
 export const dropboxSearch = createAction({
   auth: dropboxAuth,

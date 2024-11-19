@@ -314,17 +314,10 @@ export const fixResponseOrEventInfo = (
     localeActionType === QoreAppActionCodeToLocale[EQoreAppActionCode.ACTION]
       ? 'response_type'
       : 'event_info';
+
+  // Adjusted for new path structure
   const getLocalizedField = (field: string, path: string[]): string => {
-    const localizationPath = [
-      'apps',
-      appName,
-      localeActionType,
-      action.action,
-      infoField,
-      'type',
-      'fields',
-      ...path,
-    ];
+    const localizationPath = ['apps', appName, localeActionType, action.action, infoField, ...path];
     const localization = get(L[locale], localizationPath);
 
     return localization[field]?.() || '';
@@ -338,22 +331,26 @@ export const fixResponseOrEventInfo = (
       collection,
       (
         newCollection: Record<string, IQoreAppActionOption>,
-        type: IQoreTypeObject,
+        field: IQoreAppActionOption,
         key: string
       ): Record<string, IQoreAppActionOption> => {
-        const currentPath = [...path, key];
-        let fields = type.fields;
+        const currentPath = [...path, 'type', 'fields', key];
+        let fieldType = undefined;
 
-        if (type.type === 'hash') {
-          fields = processCollection(fields, [...currentPath, 'fields']);
+        if (typeof field.type === 'object' && field.type.type === 'hash') {
+          const fields = processCollection(field.type.fields, [...currentPath]);
+          fieldType = {
+            ...field.type,
+            fields,
+          };
         }
 
         const updatedField = {
-          ...type,
-          ...(fields && { fields }),
-          display_name: type.display_name || getLocalizedField('displayName', currentPath),
-          short_desc: type.short_desc || getLocalizedField('shortDesc', currentPath),
-          desc: type.desc || getLocalizedField('longDesc', currentPath),
+          ...field,
+          ...(fieldType && { type: fieldType }),
+          display_name: field.display_name || getLocalizedField('displayName', currentPath),
+          short_desc: field.short_desc || getLocalizedField('shortDesc', currentPath),
+          desc: field.desc || getLocalizedField('longDesc', currentPath),
         } satisfies IQoreAppActionOption;
 
         return {
@@ -394,17 +391,21 @@ export const fixOptions = (
   ): TQoreOptions => {
     return reduce(
       collection,
-      (fixedOptions: TQoreOptions, option: IQoreTypeObject, key: string): TQoreOptions => {
+      (fixedOptions: TQoreOptions, option: IQoreAppActionOption, key: string): TQoreOptions => {
         const currentPath = [...path, key];
-        let fields = option.fields;
+        let optionType = undefined;
 
-        if (option.type === 'hash') {
-          fields = processCollection(fields, [...currentPath, 'fields']);
+        if (typeof option.type === 'object' && option.type.type === 'hash') {
+          const fields = processCollection(option.type.fields, [...currentPath, 'type', 'fields']);
+          optionType = {
+            ...option.type,
+            fields,
+          };
         }
 
         const updatedOption: IQoreAppActionOption<TQoreType, unknown> = {
           ...option,
-          ...(fields && { fields }),
+          ...(optionType && { type: optionType }),
           display_name: option.display_name || getLocalizedField('displayName', currentPath),
           short_desc: option.short_desc || getLocalizedField('shortDesc', currentPath),
           desc: option.desc || getLocalizedField('longDesc', currentPath),

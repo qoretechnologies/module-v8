@@ -1,11 +1,15 @@
-import { IActionOptions, IActionResponse, TActionData } from 'global/models/actions';
-import { EQoreAppActionCode, TQorePartialAction } from '../../../../global/models/qore';
+import { IActionOptions, TActionData } from 'global/models/actions';
+import {
+  EQoreAppActionCode,
+  TQorePartialAction,
+  TQoreResponseType,
+} from '../../../../global/models/qore';
 import { L } from '../../../../i18n/i18n-node';
 import { hubspotRequest } from '../../client';
 
 // Defining a function to fetch users
 const options: IActionOptions = null;
-export const response_type: IActionResponse = {
+export const response_type = {
   type: 'hash',
   fields: {
     results: {
@@ -22,7 +26,7 @@ export const response_type: IActionResponse = {
       ],
     },
   },
-};
+} satisfies TQoreResponseType;
 
 const getUsers = async () => {
   try {

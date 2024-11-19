@@ -3,7 +3,7 @@ import { slackChannel, slackInfo } from '../common/props';
 
 import { WebClient } from '@slack/web-api';
 import { createAction, Property } from 'core/framework';
-import { IActionResponse } from 'global/models/actions';
+import { TQoreResponseType } from '../../../../global/models/qore';
 import { processMessageTimestamp } from '../common/utils';
 
 const addReactionToMessageResponseType = {
@@ -17,7 +17,7 @@ const addReactionToMessageResponseType = {
       example_value: true,
     },
   },
-} satisfies IActionResponse;
+} satisfies TQoreResponseType;
 
 export const addReactionToMessageAction = createAction({
   auth: slackAuth,

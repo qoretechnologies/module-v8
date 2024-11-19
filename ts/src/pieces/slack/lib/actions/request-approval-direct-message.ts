@@ -1,7 +1,7 @@
 import { createAction } from 'core/framework';
 import { assertNotNullOrUndefined, ExecutionType, PauseType } from 'core/shared';
-import { IActionResponse } from 'global/models/actions';
 import { slackAuth } from '../..';
+import { TQoreResponseType } from '../../../../global/models/qore';
 import { profilePicture, text, userId, username } from '../common/props';
 import { slackSendMessage } from '../common/utils';
 
@@ -16,7 +16,7 @@ const requestApprovalDirectMessageResponseType = {
       example_value: true,
     },
   },
-} satisfies IActionResponse;
+} satisfies TQoreResponseType;
 
 export const requestApprovalDirectMessageAction = createAction({
   auth: slackAuth,
