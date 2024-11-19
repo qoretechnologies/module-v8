@@ -228,7 +228,7 @@ export const ZENDESK_ALLOWED_PATHS = {
             fields: {
               name: {
                 type: 'string',
-                required: true,
+                required: false,
               },
               email: {
                 type: 'string',
