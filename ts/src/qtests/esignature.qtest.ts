@@ -9,8 +9,8 @@ describe('Tests eSignature Actions', () => {
   let brandId: string;
   let envelopeId: string;
   // let templateId: string;
-  const documentId = Math.floor(Math.random() * 100) + 1;
-  const recipientId = Math.floor(Math.random() * 100) + 1;
+  const documentId = String(Math.floor(Math.random() * 100) + 1);
+  const recipientId = String(Math.floor(Math.random() * 100) + 1);
 
   beforeAll(async () => {
     const refreshToken = process.env.DOCUSIGN_REFRESH_TOKEN;
