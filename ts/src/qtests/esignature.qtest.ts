@@ -249,6 +249,7 @@ describe('Tests eSignature Actions', () => {
         signers: [
           {
             name: 'First Test',
+            email: 'recipient@example.com',
             recipientId,
           },
         ],
@@ -270,7 +271,7 @@ describe('Tests eSignature Actions', () => {
         signers: [
           {
             name: 'Test',
-            recipientId: '2',
+            recipientId,
           },
         ],
       },

@@ -111,6 +111,28 @@ export const ESIGNATURE_PATHS = {
       override_options: {
         accountId: GetAccountIdConfig,
         envelopeId: GetEnvelopeIdAllowedValues,
+        signers: {
+          type: {
+            type: 'list',
+            element_type: {
+              type: 'hash',
+              fields: {
+                name: {
+                  type: 'string',
+                  required: false,
+                },
+                email: {
+                  type: 'string',
+                  required: false,
+                },
+                recipientId: {
+                  type: 'string',
+                  required: true,
+                },
+              },
+            },
+          },
+        },
       },
     },
     POST: {
@@ -123,6 +145,28 @@ export const ESIGNATURE_PATHS = {
       override_options: {
         accountId: GetAccountIdConfig,
         envelopeId: GetEnvelopeIdAllowedValues,
+        signers: {
+          type: {
+            type: 'list',
+            element_type: {
+              type: 'hash',
+              fields: {
+                name: {
+                  type: 'string',
+                  required: false,
+                },
+                email: {
+                  type: 'string',
+                  required: false,
+                },
+                recipientId: {
+                  type: 'string',
+                  required: true,
+                },
+              },
+            },
+          },
+        },
       },
     },
     GET: {
@@ -137,6 +181,19 @@ export const ESIGNATURE_PATHS = {
       override_options: {
         accountId: GetAccountIdConfig,
         envelopeId: GetEnvelopeIdAllowedValues,
+        documents: {
+          type: {
+            type: 'list',
+            element_type: {
+              type: 'hash',
+              fields: {
+                documentId: {
+                  type: 'string',
+                },
+              },
+            },
+          },
+        },
       },
     },
     PUT: {
