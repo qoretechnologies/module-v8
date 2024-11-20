@@ -41,53 +41,55 @@ const createDatabaseResponseType = {
     title: {
       type: {
         type: 'list',
-        element_type: 'hash',
-        // fields: {
-        //   type: {
-        //     type: 'string',
-        //   },
-        //   text: {
-        //     type: {
-        //       type: 'hash',
-        //       fields: {
-        //         content: {
-        //           type: 'string',
-        //         },
-        //         link: {
-        //           type: 'string',
-        //         },
-        //       },
-        //     },
-        //   },
-        //   annotations: {
-        //     type: {
-        //       type: 'hash',
-        //       fields: {
-        //         bold: {
-        //           type: 'boolean',
-        //         },
-        //         italic: {
-        //           type: 'boolean',
-        //         },
-        //         strikethrough: {
-        //           type: 'boolean',
-        //         },
-        //         underline: {
-        //           type: 'boolean',
-        //         },
-        //         code: {
-        //           type: 'boolean',
-        //         },
-        //         color: {
-        //           type: 'string',
-        //         },
-        //       },
-        //     },
-        //   },
-        //   plain_text: {
-        //     type: 'string',
-        //   },
-        // },
+        element_type: {
+          type: 'hash',
+          fields: {
+            type: {
+              type: 'string',
+            },
+            text: {
+              type: {
+                type: 'hash',
+                fields: {
+                  content: {
+                    type: 'string',
+                  },
+                  link: {
+                    type: 'string',
+                  },
+                },
+              },
+            },
+            annotations: {
+              type: {
+                type: 'hash',
+                fields: {
+                  bold: {
+                    type: 'boolean',
+                  },
+                  italic: {
+                    type: 'boolean',
+                  },
+                  strikethrough: {
+                    type: 'boolean',
+                  },
+                  underline: {
+                    type: 'boolean',
+                  },
+                  code: {
+                    type: 'boolean',
+                  },
+                  color: {
+                    type: 'string',
+                  },
+                },
+              },
+            },
+            plain_text: {
+              type: 'string',
+            },
+          },
+        },
       },
       example_value: [
         {

@@ -15,82 +15,89 @@ const appendToPageResponseType = {
       display_name: 'Object',
       short_desc: 'The type of object returned',
       desc: 'The type of object returned in this case it will always be block',
-      example_value: 'list',
+      example_value: 'block',
     },
     results: {
       type: {
         type: 'list',
-        element_type: 'hash',
-        // fields: {
-        //   object: {
-        //     type: 'string',
-        //   },
-        //   id: {
-        //     type: 'string',
-        //   },
-        //   paragraph: {
-        //     type: {
-        //       type: 'hash',
-        //       fields: {
-        //         color: {
-        //           type: 'string',
-        //         },
-        //         rich_text: {
-        //           type: {
-        //             type: 'list',
-        //             element_type: 'hash',
-        //             fields: {
-        //               type: {
-        //                 type: 'string',
-        //               },
-        //               text: {
-        //                 type: {
-        //                   type: 'hash',
-        //                   fields: {
-        //                     content: {
-        //                       type: 'string',
-        //                     },
-        //                     link: {
-        //                       type: 'string',
-        //                     },
-        //                   },
-        //                 },
-        //               },
-        //               annotations: {
-        //                 type: {
-        //                   type: 'hash',
-        //                   fields: {
-        //                     bold: {
-        //                       type: 'boolean',
-        //                     },
-        //                     italic: {
-        //                       type: 'boolean',
-        //                     },
-        //                     strikethrough: {
-        //                       type: 'boolean',
-        //                     },
-        //                     underline: {
-        //                       type: 'boolean',
-        //                     },
-        //                     code: {
-        //                       type: 'boolean',
-        //                     },
-        //                     color: {
-        //                       type: 'string',
-        //                     },
-        //                   },
-        //                 },
-        //               },
-        //               plain_text: {
-        //                 type: 'string',
-        //               },
-        //             },
-        //           },
-        //         },
-        //       },
-        //     },
-        //   },
-        // },
+        element_type: {
+          type: 'hash',
+          fields: {
+            object: {
+              type: 'string',
+            },
+            id: {
+              type: 'string',
+            },
+            type: {
+              type: 'string',
+            },
+            paragraph: {
+              type: {
+                type: 'hash',
+                fields: {
+                  color: {
+                    type: 'string',
+                  },
+                  rich_text: {
+                    type: {
+                      type: 'list',
+                      element_type: {
+                        type: 'hash',
+                        fields: {
+                          plain_text: {
+                            type: 'string',
+                          },
+                          type: {
+                            type: 'string',
+                          },
+                          text: {
+                            type: {
+                              type: 'hash',
+                              fields: {
+                                content: {
+                                  type: 'string',
+                                },
+                                link: {
+                                  type: 'string',
+                                },
+                              },
+                            },
+                          },
+                          annotations: {
+                            type: {
+                              type: 'hash',
+                              fields: {
+                                bold: {
+                                  type: 'boolean',
+                                },
+                                italic: {
+                                  type: 'boolean',
+                                },
+                                strikethrough: {
+                                  type: 'boolean',
+                                },
+                                underline: {
+                                  type: 'boolean',
+                                },
+                                code: {
+                                  type: 'boolean',
+                                },
+                                color: {
+                                  type: 'string',
+                                },
+                              },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
       },
       display_name: 'Results',
       short_desc: 'The results of the append',

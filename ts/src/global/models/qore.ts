@@ -474,10 +474,14 @@ export interface IQoreSharedObject<TypeValue = unknown> extends IQoreAppShared {
 
 export interface IQoreTypeObject<TypeValue = unknown>
   extends Omit<IQoreSharedObject<TypeValue>, 'type'> {
-  type: TQoreSimpleType; // Type has to be a string
-  name?: string; // the technical name of the field
-  element_type?: TQoreSimpleType; // description of a list type; only valid if \c type is "list" or "softlist"
-  fields?: Record<string, IQoreAppActionOption>; // an optional object with the fields of the object
+  // Type has to be a string
+  type: TQoreSimpleType;
+  // the technical name of the field
+  name?: string;
+  // description of a list type; only valid if \c type is "list" or "softlist"
+  element_type?: IQoreTypeObject | TQoreSimpleType;
+  // an optional object with the fields of the object
+  fields?: Record<string, IQoreAppActionOption>;
 }
 
 export interface IQoreAppActionOption<

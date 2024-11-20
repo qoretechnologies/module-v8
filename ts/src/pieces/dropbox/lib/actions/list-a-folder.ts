@@ -12,21 +12,23 @@ const dropboxListAFolderResponseType = {
       short_desc: 'The list of entries in the folder',
       type: {
         type: 'list',
-        element_type: 'hash',
-        // fields: {
-        //   name: {
-        //     type: 'string',
-        //   },
-        //   path_lower: {
-        //     type: 'string',
-        //   },
-        //   path_display: {
-        //     type: 'string',
-        //   },
-        //   id: {
-        //     type: 'string',
-        //   },
-        // },
+        element_type: {
+          type: 'hash',
+          fields: {
+            name: {
+              type: 'string',
+            },
+            path_lower: {
+              type: 'string',
+            },
+            path_display: {
+              type: 'string',
+            },
+            id: {
+              type: 'string',
+            },
+          },
+        },
       },
       example_value: [
         {

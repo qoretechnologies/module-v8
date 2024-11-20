@@ -18,7 +18,115 @@ const uploadFileResponseType = {
       display_name: 'files',
       short_desc: 'The uploaded files',
       desc: 'The uploaded files',
-      type: 'list',
+      type: {
+        type: 'list',
+        element_type: {
+          type: 'hash',
+          fields: {
+            ok: {
+              type: 'boolean',
+            },
+            files: {
+              type: {
+                type: 'list',
+                element_type: {
+                  type: 'hash',
+                  fields: {
+                    id: {
+                      type: 'string',
+                      example_value: 'F1234567890',
+                    },
+                    created: {
+                      type: 'integer',
+                      example_value: 1234567890,
+                    },
+                    timestamp: {
+                      type: 'integer',
+                      example_value: 1234567890,
+                    },
+                    name: {
+                      type: 'string',
+                      example_value: 'example.txt',
+                    },
+                    title: {
+                      type: 'string',
+                      example_value: 'Example',
+                    },
+                    mimetype: {
+                      type: 'string',
+                      example_value: 'text/plain',
+                    },
+                    filetype: {
+                      type: 'string',
+                      example_value: 'text',
+                    },
+                    pretty_type: {
+                      type: 'string',
+                      example_value: 'Text',
+                    },
+                    user: {
+                      type: 'string',
+                      example_value: 'U1234567890',
+                    },
+                    editable: {
+                      type: 'boolean',
+                    },
+                    size: {
+                      type: 'integer',
+                      example_value: 12345,
+                    },
+                    mode: {
+                      type: 'string',
+                      example_value: 'snippet',
+                    },
+                    is_external: {
+                      type: 'boolean',
+                    },
+                    external_type: {
+                      type: 'string',
+                    },
+                    is_public: {
+                      type: 'boolean',
+                    },
+                    public_url_shared: {
+                      type: 'boolean',
+                    },
+                    display_as_bot: {
+                      type: 'boolean',
+                    },
+                    username: {
+                      type: 'string',
+                    },
+                    url_private: {
+                      type: 'string',
+                      example_value:
+                        'https://files.slack.com/files-pri/T12345678-F12345678/example.txt',
+                    },
+                    url_private_download: {
+                      type: 'string',
+                      example_value:
+                        'https://files.slack.com/files-pri/T12345678-F12345678/download/example.txt',
+                    },
+                    permalink: {
+                      type: 'string',
+                      example_value:
+                        'https://your-workspace.slack.com/files/U12345678/F12345678/example.txt',
+                    },
+                    permalink_public: {
+                      type: 'string',
+                      example_value:
+                        'https://your-workspace.slack.com/files-pri/T12345678-F12345678/example.txt',
+                    },
+                    is_starred: {
+                      type: 'boolean',
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
       example_value: [
         {
           ok: true,

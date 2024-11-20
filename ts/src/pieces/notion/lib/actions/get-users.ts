@@ -7,7 +7,50 @@ const getUsersResponseType = {
   type: 'hash',
   fields: {
     results: {
-      type: 'list',
+      type: {
+        type: 'list',
+        element_type: {
+          type: 'hash',
+          fields: {
+            object: {
+              type: 'string',
+              example_value: 'user',
+            },
+            id: {
+              type: 'string',
+              example_value: '12345678-1234-1234-1234-123456789012',
+            },
+            name: {
+              type: 'string',
+              example_value: 'John Doe',
+            },
+            type: {
+              type: 'string',
+              example_value: 'person',
+            },
+            person: {
+              type: {
+                type: 'hash',
+                fields: {
+                  email: {
+                    type: 'string',
+                  },
+                },
+              },
+            },
+            bot: {
+              type: {
+                type: 'hash',
+                fields: {
+                  workspace_name: {
+                    type: 'string',
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
       display_name: 'Results',
       short_desc: 'The list of users in the workspace',
       desc: 'The list of users in the workspace',

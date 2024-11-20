@@ -8,7 +8,30 @@ const getChannelHistoryResponseType = {
   type: 'hash',
   fields: {
     messages: {
-      type: 'list',
+      type: {
+        type: 'list',
+        element_type: {
+          type: 'hash',
+          fields: {
+            type: {
+              type: 'string',
+              example_value: 'message',
+            },
+            ts: {
+              type: 'string',
+              example_value: '1234567890.123456',
+            },
+            user: {
+              type: 'string',
+              example_value: 'U1234567890',
+            },
+            text: {
+              type: 'string',
+              example_value: 'Hello, world!',
+            },
+          },
+        },
+      },
       display_name: 'Messages',
       short_desc: 'The messages in the channel',
       desc: 'The messages in the channel',

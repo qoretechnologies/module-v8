@@ -17,7 +17,65 @@ const dropboxSearchResponseType = {
       display_name: 'Matches',
       desc: 'The search results.',
       short_desc: 'The search results.',
-      type: 'list',
+      type: {
+        type: 'list',
+        element_type: {
+          type: 'hash',
+          fields: {
+            match_type: {
+              display_name: 'Match Type',
+              desc: 'The type of match.',
+              short_desc: 'The type of match.',
+              type: {
+                type: 'hash',
+                fields: {
+                  '.tag': {
+                    type: 'softstring',
+                  },
+                },
+              },
+            },
+            metadata: {
+              display_name: 'Metadata',
+              desc: 'The metadata of the match.',
+              short_desc: 'The metadata of the match.',
+              type: {
+                type: 'hash',
+                fields: {
+                  '.tag': {
+                    type: 'softstring',
+                  },
+                  metadata: {
+                    type: {
+                      type: 'hash',
+                      fields: {
+                        '.tag': {
+                          type: 'softstring',
+                        },
+                        file_owner_team_encrypted_id: {
+                          type: 'softstring',
+                        },
+                        id: {
+                          type: 'softstring',
+                        },
+                        name: {
+                          type: 'softstring',
+                        },
+                        path_display: {
+                          type: 'softstring',
+                        },
+                        path_lower: {
+                          type: 'softstring',
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
       required: false,
       example_value: [
         {

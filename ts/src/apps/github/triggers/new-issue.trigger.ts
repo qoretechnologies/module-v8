@@ -100,7 +100,23 @@ export default {
                 },
               },
               labels: {
-                type: 'list',
+                type: {
+                  type: 'list',
+                  element_type: {
+                    type: 'hash',
+                    fields: {
+                      id: {
+                        type: 'softstring',
+                      },
+                      name: {
+                        type: 'softstring',
+                      },
+                      color: {
+                        type: 'softstring',
+                      },
+                    },
+                  },
+                },
                 example_value: [
                   {
                     id: 7590030010,

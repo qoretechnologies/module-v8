@@ -92,7 +92,58 @@ export const addCommentResponseType = {
       },
     },
     rich_text: {
-      type: 'list',
+      type: {
+        type: 'list',
+        element_type: {
+          type: 'hash',
+          fields: {
+            type: {
+              type: 'string',
+            },
+            text: {
+              type: {
+                type: 'hash',
+                fields: {
+                  content: {
+                    type: 'string',
+                  },
+                  link: {
+                    type: 'string',
+                  },
+                },
+              },
+            },
+            annotations: {
+              type: {
+                type: 'hash',
+                fields: {
+                  bold: {
+                    type: 'boolean',
+                  },
+                  italic: {
+                    type: 'boolean',
+                  },
+                  strikethrough: {
+                    type: 'boolean',
+                  },
+                  underline: {
+                    type: 'boolean',
+                  },
+                  code: {
+                    type: 'boolean',
+                  },
+                  color: {
+                    type: 'string',
+                  },
+                },
+              },
+            },
+            plain_text: {
+              type: 'string',
+            },
+          },
+        },
+      },
       display_name: 'Rich Text',
       short_desc: 'The text of the comment',
       desc: 'The text of the comment',
