@@ -339,7 +339,7 @@ export type TQoreNumberCompatibleType =
   | '*softnumber'
   | '*int';
 export type TQoreHashCompatibleType = 'hash' | '*hash' | '*data' | 'data';
-export type TQoreListCompatibleType = 'list' | '*list';
+export type TQoreListCompatibleType = 'list' | '*list' | 'softlist' | '*softlist';
 export type TQoreBooleanCompatibleType =
   | 'boolean'
   | '*boolean'
@@ -351,16 +351,17 @@ export type TQoreBooleanCompatibleType =
 export type TQoreNullableType = 'NULL' | 'nothing';
 export type TQoreAnyType = 'all' | 'any' | 'auto';
 
-export type TQoreSimpleType =
+export type TQoreSimpleType = TQoreSimpleTypeNonList | TQoreListCompatibleType;
+
+export type TQoreSimpleTypeNonList =
   | TQoreStringCompatibleType
   | TQoreNumberCompatibleType
   | TQoreHashCompatibleType
-  | TQoreListCompatibleType
   | TQoreBooleanCompatibleType
   | TQoreNullableType
   | TQoreAnyType;
 
-export type TQoreType = TQoreSimpleType | IQoreTypeObject;
+export type TQoreType = TQoreSimpleType | TQoreTypeObject;
 
 // Mapping between string literals and their corresponding TypeScript types
 export type TQoreTypeMapping = {
@@ -472,10 +473,24 @@ export interface IQoreSharedObject<TypeValue = unknown> extends IQoreAppShared {
   default_value?: TypeValue;
 }
 
-export interface IQoreTypeObject<TypeValue = unknown>
+export interface IQoreTypeObjectNonList<TypeValue = unknown>
   extends Omit<IQoreSharedObject<TypeValue>, 'type'> {
   // Type has to be a string
-  type: TQoreSimpleType;
+  type: TQoreSimpleTypeNonList;
+  // the technical name of the field
+  name?: string;
+  // an optional object with the fields of the object
+  fields?: Record<string, IQoreAppActionOption>;
+}
+
+export type TQoreTypeObject<TypeValue = unknown> =
+  | IQoreTypeObjectNonList<TypeValue>
+  | IQoreTypeObjectList<TypeValue>;
+
+export interface IQoreTypeObjectList<TypeValue = unknown>
+  extends Omit<IQoreSharedObject<TypeValue>, 'type'> {
+  // Type has to be a string
+  type: TQoreListCompatibleType;
   // the technical name of the field
   name?: string;
   // description of a list type; only valid if \c type is "list" or "softlist"
@@ -533,7 +548,7 @@ export interface IQoreAppActionWithEventOrWebhook extends IQoreBaseAppAction {
 export type TQoreAppActionWithEventOrWebhookEventInfo = {
   id?: string;
   desc: string;
-  type: IQoreTypeObject;
+  type: TQoreTypeObject;
 };
 
 export interface IQoreAppActionWithWebhookBase<
@@ -583,7 +598,7 @@ export interface IQoreAppActionWithEvent extends IQoreAppActionWithEventOrWebhoo
 }
 
 export type TQoreOptions = Record<string, IQoreAppActionOption>;
-export type TQoreResponseType = string | IQoreTypeObject;
+export type TQoreResponseType = string | TQoreTypeObject;
 
 export interface IQoreAppActionWithFunction<Options = TQoreOptions, _Response = TQoreResponseType>
   extends IQoreBaseAppAction {
@@ -616,7 +631,7 @@ export type TQoreAppAction<Options = TQoreOptions, Response = TQoreResponseType>
 
 export type TQorePartialNonEventAction<
   Options = Record<string, IQoreAppActionOption>,
-  Response = Record<string, IQoreTypeObject>,
+  Response = Record<string, TQoreTypeObject>,
 > =
   | Omit<IQoreAppActionWithFunction<Options, Response>, 'app'>
   | IQorePartialAppActionWithSwaggerPath;
@@ -627,7 +642,7 @@ export type TQorePartialEventAction =
 
 export type TQorePartialAction<
   Options = Record<string, IQoreAppActionOption>,
-  Response = Record<string, IQoreTypeObject>,
+  Response = Record<string, TQoreTypeObject>,
 > = TQorePartialNonEventAction<Options, Response> | TQorePartialEventAction;
 
 export interface IActionInitializationProps {

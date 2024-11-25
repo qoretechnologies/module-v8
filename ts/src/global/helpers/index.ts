@@ -10,7 +10,7 @@ import {
   IQoreAppActionWithEvent,
   IQoreAppActionWithEventOrWebhook,
   IQorePartialAppActionWithSwaggerPath,
-  IQoreTypeObject,
+  TQoreTypeObject,
   QoreAppActionCodeToLocale,
   TAllowedPaths,
   THttpMethod,
@@ -304,11 +304,11 @@ export const mapTriggersToApp = (
 };
 
 export const fixResponseOrEventInfo = (
-  type: IQoreTypeObject,
+  type: TQoreTypeObject,
   appName: string,
   locale: Locales,
   action: TQorePartialEventAction | TQorePartialNonEventAction
-): IQoreTypeObject => {
+): TQoreTypeObject => {
   const localeActionType = QoreAppActionCodeToLocale[action.action_code];
   const infoField =
     localeActionType === QoreAppActionCodeToLocale[EQoreAppActionCode.ACTION]

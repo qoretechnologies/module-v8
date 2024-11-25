@@ -1,5 +1,5 @@
 import { forEach } from 'lodash';
-import { IQoreTypeObject } from '../global/models/qore';
+import { TQoreTypeObject } from '../global/models/qore';
 
 export const responseHasCorrectStructure = (
   response: Record<string, unknown>,
@@ -17,7 +17,7 @@ export const responseHasCorrectStructure = (
 };
 
 export const validateResponseProperties = (
-  expectedType: string | IQoreTypeObject,
+  expectedType: string | TQoreTypeObject,
   actualResponse: Record<string, any>
 ) => {
   if (typeof expectedType === 'string') {
