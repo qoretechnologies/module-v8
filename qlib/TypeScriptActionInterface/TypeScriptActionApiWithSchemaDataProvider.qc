@@ -102,7 +102,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                     map newreq.addField($1), (fields = fields - (keys newreq.getFields())).iterator();
                 }
                 map reqmap{$1} = l, keys fields;
-                map rreqmap{l.join(".")} = $1, keys fields;
+                map rreqmap{l.join(".") + ("." + $1)} = $1, keys fields;
             };
             bool stop;
             # process body args
@@ -201,7 +201,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
             list<string> l = k.split(".");
             string key = l[0];
 
-            on_error rethrow $1.err, sprintf("%s (while processing option %y in %y)", $1.desc, key, k);
+            on_error rethrow $1.err, sprintf("%s (while processing option %y in %y)", $1.desc, key, i.key);
 
             *AbstractDataField f = fields{key};
             hash<auto> opt;
@@ -209,7 +209,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                 if (l.size() > 1) {
                     throw "OPTION-OVERRIDE-ERROR", sprintf("App %y action %y cannot override unknown top-level "
                         "option %y; known top-level options: %y", action.app, action.action, key,
-                        keys action.options);
+                        keys fields);
                 }
                 TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, \romap, \dvmap, i.key, \i.value,
                     pool);
@@ -217,22 +217,24 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                 type.addField(new QoreDataField(TypeScriptActionInterface::getField(key, i.value)));
                 if (prov.op.method != "GET") {
                     reqmap{key} = ("body",);
-                    rreqmap.body = key;
+                    rreqmap{"body." + key} = key;
                 } else {
                     reqmap{key} = ("query",);
-                    rreqmap.query = key;
+                    rreqmap{"query." + key} = key;
                 }
             } else {
+                if (!(f instanceof QoreDataField)) {
+                    throw "OPTION-OVERRIDE-ERROR", sprintf("App %y action %y option %y: cannot override %s; "
+                        "expecting \"QoreDataField\"", action.app, action.action, key, f.className());
+                }
                 if (l.size() == 1) {
                     TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, \romap, \dvmap, i.key,
                         \i.value, pool);
                 }
-                if (!(f instanceof QoreDataField)) {
-                    throw "OPTION-OVERRIDE-ERROR", sprintf("App %y action %y option %y: cannot override %s; expecting "
-                        "\"QoreDataField\"", action.app, action.action, key, f.className());
+                if (i.value) {
+                    type.replaceField(cast<QoreDataField>(f = f.copy()).updateFieldType(f.getType().copy()));
+                    overrideOptionType(action, type, l, i.value, k);
                 }
-                type.replaceField(cast<QoreDataField>(f = f.copy()).updateFieldType(f.getType().copy()));
-                overrideOptionType(action, type, l, i.value, k);
             }
         }
     }
@@ -271,8 +273,11 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
 
         hash<auto> info += qdf.getConfigInfo();
         info.type = qdf.getType();
-        if ((remove type_hash.preselected)) {
+        if (remove type_hash.preselected) {
             info.attr.preselected = True;
+        }
+        if (remove type_hash.sensitive) {
+            info.attr.sensitive = True;
         }
         if ((*string str = remove type_hash.display_name).val()) {
             info.display_name = str;
@@ -305,6 +310,9 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         }
         if (*list<auto> l = remove type_hash.required_groups) {
             info.attr.required_groups = l;
+        }
+        if (*softlist<auto> l = remove type_hash.depends_on) {
+            info.attr.depends_on = l;
         }
         *bool req = remove type_hash.required;
         if (exists (auto tdesc = remove type_hash.type)) {

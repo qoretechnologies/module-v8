@@ -607,11 +607,11 @@ public class TypeScriptActionInterface {
         }
     }
 
-    static string generateSearchDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
+    static generateSearchDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
             JavaScriptProgramPool pool, *SwaggerSchema schema) {
         timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
 
-        *hash<DataProviderMessageInfo> get_record_type = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
+        *hash<AsyncCallInfo> get_record_type = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
             "get_record_type", "get record type", pool, io_timeout, action.app, action.action);
         if (!get_record_type) {
             throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y is missing its \"get_record_type\" "
@@ -639,7 +639,7 @@ public class TypeScriptActionInterface {
         *hash<AsyncCallInfo> rollback = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
             "rollback", "rollback", pool, io_timeout, action.app, action.action);
 
-        *hash<DataProviderMessageInfo> search_records = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
+        *hash<AsyncCallInfo> search_records = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
             "search_records", "search records", pool, io_timeout, action.app, action.action);
         if (!search_records) {
             throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y is missing its \"search_records\" "
@@ -682,22 +682,22 @@ public class TypeScriptActionInterface {
         action.path = action.action;
     }
 
-    static string generateCreateDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
+    static generateCreateDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
             JavaScriptProgramPool pool, *SwaggerSchema schema) {
         throw "UNSUPPORTED";
     }
 
-    static string generateUpdateDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
+    static generateUpdateDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
             JavaScriptProgramPool pool, *SwaggerSchema schema) {
         throw "UNSUPPORTED";
     }
 
-    static string generateUpsertDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
+    static generateUpsertDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
             JavaScriptProgramPool pool, *SwaggerSchema schema) {
         throw "UNSUPPORTED";
     }
 
-    static string generateDeleteDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
+    static generateDeleteDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
             JavaScriptProgramPool pool, *SwaggerSchema schema) {
         throw "UNSUPPORTED";
     }

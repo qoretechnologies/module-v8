@@ -531,7 +531,31 @@ exports.actionsCatalogue = {
             "short_desc": "Create pet",
             "desc": "Create pet",
             "action_code": 2,  // DPAT_API == 2
-            "swagger_path": "pet/POST"
+            "swagger_path": "pet/POST",
+            /** override_options?: object -> allows options to be overridden; keys are non-optimized request property
+                paths and must refer to a property that will be presented as an action option after flattening /
+                optimization. The attributes of the object are handled like action option attributes
+            */
+            "override_options": {
+                "body.name": {
+                    "get_allowed_values": async function(ctx) {
+                        return [
+                            {
+                                "display_name": "Fido",
+                                "short_desc": "Fido",
+                                "desc": "Fido",
+                                "value": "Fido",
+                            },
+                            {
+                                "display_name": "Spot",
+                                "short_desc": "Spot",
+                                "desc": "Spot",
+                                "value": "Spot",
+                            },
+                        ];
+                    },
+                },
+            },
         });
 
         // NOTE: this action will be executed as a REST call, no code is necessary
@@ -566,7 +590,7 @@ exports.actionsCatalogue = {
                         ];
                     },
                 },
-            }
+            },
         });
 
         api.registerAction({
