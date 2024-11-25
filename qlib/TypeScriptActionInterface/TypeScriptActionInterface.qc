@@ -1356,9 +1356,9 @@ public class TypeScriptActionInterface {
           - QAUTH_QORUS = 1 -> authentication required
         - perms (*list<string>): an optional list of string permissions when \c auth is 1
         - callback (code): a callback taking the arguments passed to the webhook to generate events
-        This callback must return a URL string for the URL used for the webhook
-        @param destroy a callable value taking a single URL string as an argument; this must be the URL string
-        returned by the \a create argument
+        This callback must return a hash with \c url and \c ctx keys providing a URL string for the URL used for the
+        webhook, and a context object for destroying the webhook, respectively
+        @param destroy a callable value taking the hash returned by the \a create callback
     */
     static registerWebhookCreateDestroyApis(code create, code destroy) {
         if (WebhookCreate) {
@@ -1377,9 +1377,9 @@ public class TypeScriptActionInterface {
         - perms (*list<string>): an optional list of string permissions when \c auth is 1
         - callback (code): a callback taking the arguments passed to the webhook to generate events
 
-        @return the public URL for the webhook
+        @return the hash returned by the create callback with \c url and \c ctx keys
     */
-    static string createWebhook(hash<auto> h) {
+    static hash<auto> createWebhook(hash<auto> h) {
         if (!WebhookCreate) {
             throw "WEBHOOK-API-ERROR", "Cannot create a webhook; there is no webhook creation API in place";
         }
@@ -1387,11 +1387,11 @@ public class TypeScriptActionInterface {
     }
 
     #! Destroy a webhook identified by the URL given as an argument
-    static deleteWebhook(string url) {
+    static deleteWebhook(hash<auto> info) {
         if (!WebhookDelete) {
             throw "WEBHOOK-API-ERROR", "Cannot delete a webhook; there is no webhook deletion API in place";
         }
-        TypeScriptActionInterface::WebhookDelete(url);
+        TypeScriptActionInterface::WebhookDelete(info);
     }
 
     #! Returns a Swagger data provider for the given app
