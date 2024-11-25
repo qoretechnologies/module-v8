@@ -1,50 +1,51 @@
+import { AuthenticationType, httpClient, HttpMethod } from 'core/common';
 import { createAction, Property } from 'core/framework';
-import { httpClient, HttpMethod, AuthenticationType } from 'core/common';
 import { dropboxAuth } from '../../';
-import { IActionResponse } from 'global/models/actions';
+import { TQoreResponseType } from '../../../../global/models/qore';
 
-const deleteFolderResponseTime: IActionResponse = {
-  metadata: {
-    name: 'metadata',
-    display_name: 'Metadata',
-    desc: 'The metadata of the folder',
-    short_desc: 'The metadata of the folder',
-    type: {
-      name: {
-        name: 'name',
-        display_name: 'Name',
-        desc: 'The name of the folder',
-        short_desc: 'The name of the folder',
-        type: 'string',
-        example_value: 'test',
-      },
-      path_lower: {
-        name: 'path_lower',
-        display_name: 'Path Lower',
-        desc: 'The path of the folder',
-        short_desc: 'The path of the folder',
-        type: 'string',
-        example_value: '/test',
-      },
-      path_display: {
-        name: 'path_display',
-        display_name: 'Path Display',
-        desc: 'The path of the folder',
-        short_desc: 'The path of the folder',
-        type: 'string',
-        example_value: '/test',
-      },
-      id: {
-        name: 'id',
-        display_name: 'Id',
-        desc: 'The id of the folder',
-        short_desc: 'The id of the folder',
-        type: 'string',
-        example_value: 'id:123',
+const deleteFolderResponseTime = {
+  type: 'hash',
+  fields: {
+    metadata: {
+      display_name: 'Metadata',
+      desc: 'The metadata of the folder',
+      short_desc: 'The metadata of the folder',
+      type: {
+        type: 'hash',
+        fields: {
+          name: {
+            display_name: 'Name',
+            desc: 'The name of the folder',
+            short_desc: 'The name of the folder',
+            type: 'string',
+            example_value: 'test',
+          },
+          path_lower: {
+            display_name: 'Path Lower',
+            desc: 'The path of the folder',
+            short_desc: 'The path of the folder',
+            type: 'string',
+            example_value: '/test',
+          },
+          path_display: {
+            display_name: 'Path Display',
+            desc: 'The path of the folder',
+            short_desc: 'The path of the folder',
+            type: 'string',
+            example_value: '/test',
+          },
+          id: {
+            display_name: 'Id',
+            desc: 'The id of the folder',
+            short_desc: 'The id of the folder',
+            type: 'string',
+            example_value: 'id:123',
+          },
+        },
       },
     },
   },
-};
+} satisfies TQoreResponseType;
 
 export const dropboxDeleteFolder = createAction({
   auth: dropboxAuth,

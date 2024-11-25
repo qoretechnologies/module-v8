@@ -1,26 +1,51 @@
 import { ConversationsHistoryResponse, WebClient } from '@slack/web-api';
 import { createAction, Property } from 'core/framework';
-import { IActionResponse } from 'global/models/actions';
 import { slackAuth } from '../..';
+import { TQoreResponseType } from '../../../../global/models/qore';
 import { slackChannel, slackInfo } from '../common/props';
 
-const getChannelHistoryResponseType: IActionResponse = {
-  messages: {
-    type: 'list',
-    name: 'messages',
-    display_name: 'Messages',
-    short_desc: 'The messages in the channel',
-    desc: 'The messages in the channel',
-    example_value: [
-      {
-        type: 'message',
-        ts: '1234567890.123456',
-        user: 'U1234567890',
-        text: 'Hello, world!',
+const getChannelHistoryResponseType = {
+  type: 'hash',
+  fields: {
+    messages: {
+      type: {
+        type: 'list',
+        element_type: {
+          type: 'hash',
+          fields: {
+            type: {
+              type: 'string',
+              example_value: 'message',
+            },
+            ts: {
+              type: 'string',
+              example_value: '1234567890.123456',
+            },
+            user: {
+              type: 'string',
+              example_value: 'U1234567890',
+            },
+            text: {
+              type: 'string',
+              example_value: 'Hello, world!',
+            },
+          },
+        },
       },
-    ],
+      display_name: 'Messages',
+      short_desc: 'The messages in the channel',
+      desc: 'The messages in the channel',
+      example_value: [
+        {
+          type: 'message',
+          ts: '1234567890.123456',
+          user: 'U1234567890',
+          text: 'Hello, world!',
+        },
+      ],
+    },
   },
-};
+} satisfies TQoreResponseType;
 
 export const getChannelHistory = createAction({
   // auth: check https://www.activepieces.com/docs/developers/piece-reference/authentication,

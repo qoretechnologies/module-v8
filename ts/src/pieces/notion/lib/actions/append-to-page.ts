@@ -5,53 +5,134 @@ import { notionAuth } from '../..';
 import { notionCommon } from '../common';
 import { markdownToBlocks } from '@tryfabric/martian';
 import { BlockObjectRequest } from '@notionhq/client/build/src/api-endpoints';
-import { IActionResponse } from '../../../../global/models/actions';
+import { TQoreResponseType } from '../../../../global/models/qore';
 
-const appendToPageResponseType: IActionResponse = {
-  object: {
-    name: 'object',
-    type: 'string',
-    display_name: 'Object',
-    short_desc: 'The type of object returned',
-    desc: 'The type of object returned in this case it will always be block',
-    example_value: 'list',
-  },
-  results: {
-    name: 'results',
-    type: 'list',
-    display_name: 'Results',
-    short_desc: 'The results of the append',
-    desc: 'The results of the append',
-    example_value: [
-      {
-        object: 'block',
-        id: '12345678-1234-1234-1234-123456789012',
-        type: 'paragraph',
-        paragraph: {
-          color: 'default',
-          rich_text: [
-            {
-              type: 'text',
-              text: {
-                content: 'This is a test comment',
-                link: 'https://example.com',
-              },
-              annotations: {
-                bold: false,
-                italic: false,
-                strikethrough: false,
-                underline: false,
-                code: false,
-                color: 'default',
-              },
-              plain_text: 'This is a test comment',
+const appendToPageResponseType = {
+  type: 'hash',
+  fields: {
+    object: {
+      type: 'string',
+      display_name: 'Object',
+      short_desc: 'The type of object returned',
+      desc: 'The type of object returned in this case it will always be block',
+      example_value: 'block',
+    },
+    results: {
+      type: {
+        type: 'list',
+        element_type: {
+          type: 'hash',
+          fields: {
+            object: {
+              type: 'string',
             },
-          ],
+            id: {
+              type: 'string',
+            },
+            type: {
+              type: 'string',
+            },
+            paragraph: {
+              type: {
+                type: 'hash',
+                fields: {
+                  color: {
+                    type: 'string',
+                  },
+                  rich_text: {
+                    type: {
+                      type: 'list',
+                      element_type: {
+                        type: 'hash',
+                        fields: {
+                          plain_text: {
+                            type: 'string',
+                          },
+                          type: {
+                            type: 'string',
+                          },
+                          text: {
+                            type: {
+                              type: 'hash',
+                              fields: {
+                                content: {
+                                  type: 'string',
+                                },
+                                link: {
+                                  type: 'string',
+                                },
+                              },
+                            },
+                          },
+                          annotations: {
+                            type: {
+                              type: 'hash',
+                              fields: {
+                                bold: {
+                                  type: 'boolean',
+                                },
+                                italic: {
+                                  type: 'boolean',
+                                },
+                                strikethrough: {
+                                  type: 'boolean',
+                                },
+                                underline: {
+                                  type: 'boolean',
+                                },
+                                code: {
+                                  type: 'boolean',
+                                },
+                                color: {
+                                  type: 'string',
+                                },
+                              },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
         },
       },
-    ],
+      display_name: 'Results',
+      short_desc: 'The results of the append',
+      desc: 'The results of the append',
+      example_value: [
+        {
+          object: 'block',
+          id: '12345678-1234-1234-1234-123456789012',
+          type: 'paragraph',
+          paragraph: {
+            color: 'default',
+            rich_text: [
+              {
+                type: 'text',
+                text: {
+                  content: 'This is a test comment',
+                  link: 'https://example.com',
+                },
+                annotations: {
+                  bold: false,
+                  italic: false,
+                  strikethrough: false,
+                  underline: false,
+                  code: false,
+                  color: 'default',
+                },
+                plain_text: 'This is a test comment',
+              },
+            ],
+          },
+        },
+      ],
+    },
   },
-};
+} satisfies TQoreResponseType;
 
 export const appendToPage = createAction({
   auth: notionAuth,

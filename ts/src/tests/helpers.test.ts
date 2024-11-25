@@ -1,7 +1,7 @@
 import {
   EQoreAppActionCode,
   IQorePartialAppActionWithSwaggerPath,
-  IQoreTypeObject,
+  TQoreTypeObject,
   TQoreOptions,
   TQorePartialEventAction,
 } from 'global/models/qore';
@@ -96,20 +96,23 @@ describe('Helpers tests', () => {
     const incompleteOptions = {
       option1: {
         type: {
-          subOption1: {
-            name: 'sub_option1',
-            type: 'string',
-            required: true,
-          },
-          subOption2: {
-            name: 'sub_option2',
-            required: true,
-            type: {
-              subSubOption1: {
-                name: 'sub_sub_option1',
-                desc: 'Deep option',
-                type: 'string',
-                required: true,
+          type: 'hash',
+          fields: {
+            subOption1: {
+              type: 'string',
+              required: true,
+            },
+            subOption2: {
+              required: true,
+              type: {
+                type: 'hash',
+                fields: {
+                  subSubOption1: {
+                    desc: 'Deep option',
+                    type: 'string',
+                    required: true,
+                  },
+                },
               },
             },
           },
@@ -138,23 +141,17 @@ describe('Helpers tests', () => {
 
     expect(fixedOptions.option2.display_name).toBe('Second Option');
     expect(fixedOptions.option1.display_name).toBe('Option 1');
-    expect(
-      (fixedOptions.option1.type as Record<string, IQoreTypeObject>).subOption1.display_name
-    ).toBe('Sub Option 1 of option 1');
-    expect(
-      (fixedOptions.option1.type as Record<string, IQoreTypeObject>).subOption2.display_name
-    ).toBe('Sub Option 2 of option 1');
+    const option1Fields = (fixedOptions.option1.type as TQoreTypeObject).fields;
+    expect(option1Fields.subOption1.display_name).toBe('Sub Option 1 of option 1');
+    expect(option1Fields.subOption2.display_name).toBe('Sub Option 2 of option 1');
 
-    const subOption2Type = (fixedOptions.option1.type as Record<string, IQoreTypeObject>).subOption2
-      .type;
-    const subSubOption1 = (subOption2Type as Record<string, IQoreTypeObject>).subSubOption1;
+    const subOption2Fields = (option1Fields.subOption2.type as TQoreTypeObject).fields;
+    const subSubOption1 = subOption2Fields.subSubOption1;
     expect(subSubOption1.display_name).toBe('Sub Sub Option 1');
     expect(subSubOption1.desc).toBe('Deep option');
     expect(subSubOption1.short_desc).toBe('Sub Sub Option 1 Short Description');
 
-    expect((subOption2Type as Record<string, IQoreTypeObject>).subSubOption1.short_desc).toBe(
-      'Sub Sub Option 1 Short Description'
-    );
+    expect(subOption2Fields.subSubOption1.short_desc).toBe('Sub Sub Option 1 Short Description');
   });
 });
 
@@ -165,12 +162,16 @@ it('Should map a trigger to app', () => {
     event_info: {
       desc: 'Test event',
       type: {
-        testTriggerInfo: {
-          name: 'test_trigger_info',
-          type: {
-            testTriggerInfo1: {
-              name: 'test_trigger_info1',
-              type: 'string',
+        type: 'hash',
+        fields: {
+          testTriggerInfo: {
+            type: {
+              type: 'hash',
+              fields: {
+                testTriggerInfo1: {
+                  type: 'string',
+                },
+              },
             },
           },
         },
@@ -203,13 +204,11 @@ it('Should map a trigger to app', () => {
   expect(mappedTriggers[0].options.option1.desc).toBe('Option 1 Long Description');
   expect(mappedTriggers[0].options.option1.short_desc).toBe('Option 1 Short Description');
   expect(mappedTriggers[0].event_info.desc).toBe('Test event');
-  expect(mappedTriggers[0].event_info.type.testTriggerInfo.short_desc).toBe(
+  expect(mappedTriggers[0].event_info.type.fields.testTriggerInfo.short_desc).toBe(
     'Test Trigger Info Short Description'
   );
 
-  const subInfo = mappedTriggers[0].event_info.type.testTriggerInfo.type as Record<
-    string,
-    IQoreTypeObject
-  >;
+  const subInfo = (mappedTriggers[0].event_info.type.fields.testTriggerInfo.type as TQoreTypeObject)
+    .fields;
   expect(subInfo.testTriggerInfo1.display_name).toBe('Test Trigger Info 1');
 });

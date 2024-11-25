@@ -1,20 +1,22 @@
 import { createAction } from 'core/framework';
 import { assertNotNullOrUndefined, ExecutionType, PauseType } from 'core/shared';
-import { IActionResponse } from 'global/models/actions';
 import { slackAuth } from '../..';
+import { TQoreResponseType } from '../../../../global/models/qore';
 import { profilePicture, slackChannel, slackInfo, text, username } from '../common/props';
 import { slackSendMessage } from '../common/utils';
 
-const requestApprovalChannelMessageResponseType: IActionResponse = {
-  approved: {
-    type: 'boolean',
-    name: 'approved',
-    display_name: 'Approved',
-    short_desc: 'Indicates if the message was approved',
-    desc: 'Indicates if the message was approved',
-    example_value: true,
+const requestApprovalChannelMessageResponseType = {
+  type: 'hash',
+  fields: {
+    approved: {
+      type: 'boolean',
+      display_name: 'Approved',
+      short_desc: 'Indicates if the message was approved',
+      desc: 'Indicates if the message was approved',
+      example_value: true,
+    },
   },
-};
+} satisfies TQoreResponseType;
 
 export const requestSendApprovalMessageAction = createAction({
   auth: slackAuth,

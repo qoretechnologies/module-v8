@@ -10,7 +10,12 @@ import {
   StaticPropsValue,
 } from 'core/framework';
 import { DynamicDropdownOptions } from 'core/framework/property/input/dropdown/dropdown-prop';
-import { fixActionType, normalizeAppName, normalizeName } from 'global/helpers';
+import {
+  fixOptions,
+  fixResponseOrEventInfo,
+  normalizeAppName,
+  normalizeName,
+} from 'global/helpers';
 import {
   EQoreAppActionCode,
   IQoreAllowedValue,
@@ -23,10 +28,10 @@ import {
   TQoreApps,
   TQoreGetAllowedValuesFunction,
   TQoreGetDependentOptionsFunction,
+  TQorePartialNonEventAction,
 } from 'global/models/qore';
 import { InputProperty } from '../core/framework/property/input';
 import { DEFAULT_LOGO } from '../global/constants';
-import { fixActionOptions } from '../global/helpers/index';
 import { Locales } from '../i18n/i18n-types';
 import { commonActionContext, piecePropTypeToQoreOptionTypeIndex } from './common/constants';
 import { TMapPieceActionToAppActionOptions } from './common/models/pieces-catalogue';
@@ -91,16 +96,23 @@ class _PiecesAppCatalogue {
     const formattedActionName = normalizeName(actionName);
     const options = this.mapActionPropsToAppActionOptions(action.props);
 
-    return {
-      app: appName,
+    const baseAction = {
       action_code: EQoreAppActionCode.ACTION,
       display_name: action.displayName,
       short_desc: action.description,
       desc: action.description,
       action: formattedActionName,
       api_function: this.mapPieceActionToAppActionFunction(action.run, action.props),
-      options: fixActionOptions(options, appName, this.locale, appName),
-      response_type: fixActionType(action.responseType, appName, this.locale, appName),
+    } satisfies TQorePartialNonEventAction;
+
+    return {
+      ...baseAction,
+      app: appName,
+      options: fixOptions(baseAction, options, appName, this.locale),
+      response_type:
+        typeof action.responseType === 'string'
+          ? action.responseType
+          : fixResponseOrEventInfo(action.responseType, appName, this.locale, baseAction),
     };
   }
 

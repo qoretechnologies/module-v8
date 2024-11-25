@@ -10,12 +10,14 @@ export const testActionWithEvent = {
   event_info: {
     desc: 'Test',
     type: {
-      id: {
-        name: 'id',
-        display_name: 'ID',
-        short_desc: 'ID',
-        desc: 'ID',
-        type: 'int',
+      type: 'hash',
+      fields: {
+        id: {
+          display_name: 'ID',
+          short_desc: 'ID',
+          desc: 'ID',
+          type: 'int',
+        },
       },
     },
   },

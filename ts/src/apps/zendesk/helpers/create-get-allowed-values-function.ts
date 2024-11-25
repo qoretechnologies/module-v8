@@ -1,12 +1,12 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { ZENDESK_CONN_OPTIONS } from '..';
-import { IQoreAllowedValue, IQoreSharedObject, TQoreType } from '../../../global/models/qore';
+import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
 
 export const CreateZendeskGetAllowedValuesFunction = (
   entity: string,
   displayNameField = 'name',
   additionalParams: Record<string, string> = {}
-): IQoreSharedObject<TQoreType, unknown, typeof ZENDESK_CONN_OPTIONS>['get_allowed_values'] => {
+): TQoreGetAllowedValuesFunction<typeof ZENDESK_CONN_OPTIONS> => {
   return async (context): Promise<IQoreAllowedValue[]> => {
     const {
       conn_opts: { token, subdomain },

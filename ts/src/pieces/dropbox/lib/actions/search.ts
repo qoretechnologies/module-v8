@@ -1,43 +1,101 @@
+import { AuthenticationType, httpClient, HttpMethod } from 'core/common';
 import { createAction, Property } from 'core/framework';
-import { httpClient, HttpMethod, AuthenticationType } from 'core/common';
 import { dropboxAuth } from '../..';
-import { IActionResponse } from '../../../../global/models/actions';
+import { TQoreResponseType } from '../../../../global/models/qore';
 
-const dropboxSearchResponseType: IActionResponse = {
-  has_more: {
-    name: 'has_more',
-    display_name: 'Has More',
-    desc: 'Indicates whether there are more search results.',
-    short_desc: 'Indicates whether there are more search results.',
-    type: 'boolean',
-    example_value: true,
-  },
-  matches: {
-    name: 'matches',
-    display_name: 'Matches',
-    desc: 'The search results.',
-    short_desc: 'The search results.',
-    type: 'list',
-    required: false,
-    example_value: [
-      {
-        highlight_spans: [],
-        match_type: { '.tag': 'filename' },
-        metadata: {
-          '.tag': 'metadata',
-          metadata: {
-            '.tag': 'folder',
-            file_owner_team_encrypted_id: '',
-            id: 'id:PN3VV_MUE2QAAAAAAAAAVg',
-            name: 'testing',
-            path_display: '/testing',
-            path_lower: '/testing',
+const dropboxSearchResponseType = {
+  type: 'hash',
+  fields: {
+    has_more: {
+      display_name: 'Has More',
+      desc: 'Indicates whether there are more search results.',
+      short_desc: 'Indicates whether there are more search results.',
+      type: 'boolean',
+      example_value: true,
+    },
+    matches: {
+      display_name: 'Matches',
+      desc: 'The search results.',
+      short_desc: 'The search results.',
+      type: {
+        type: 'list',
+        element_type: {
+          type: 'hash',
+          fields: {
+            match_type: {
+              display_name: 'Match Type',
+              desc: 'The type of match.',
+              short_desc: 'The type of match.',
+              type: {
+                type: 'hash',
+                fields: {
+                  '.tag': {
+                    type: 'softstring',
+                  },
+                },
+              },
+            },
+            metadata: {
+              display_name: 'Metadata',
+              desc: 'The metadata of the match.',
+              short_desc: 'The metadata of the match.',
+              type: {
+                type: 'hash',
+                fields: {
+                  '.tag': {
+                    type: 'softstring',
+                  },
+                  metadata: {
+                    type: {
+                      type: 'hash',
+                      fields: {
+                        '.tag': {
+                          type: 'softstring',
+                        },
+                        file_owner_team_encrypted_id: {
+                          type: 'softstring',
+                        },
+                        id: {
+                          type: 'softstring',
+                        },
+                        name: {
+                          type: 'softstring',
+                        },
+                        path_display: {
+                          type: 'softstring',
+                        },
+                        path_lower: {
+                          type: 'softstring',
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
           },
         },
       },
-    ],
+      required: false,
+      example_value: [
+        {
+          match_type: { '.tag': 'filename' },
+          metadata: {
+            '.tag': 'metadata',
+            metadata: {
+              '.tag': 'folder',
+              file_owner_team_encrypted_id: '',
+              id: 'id:PN3VV_MUE2QAAAAAAAAAVg',
+              name: 'testing',
+              path_display: '/testing',
+              path_lower: '/testing',
+            },
+          },
+        },
+      ],
+    },
   },
-};
+} satisfies TQoreResponseType;
 
 export const dropboxSearch = createAction({
   auth: dropboxAuth,

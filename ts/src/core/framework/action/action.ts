@@ -1,9 +1,9 @@
 import { Static, Type } from '@sinclair/typebox';
-import { IActionResponse } from '../../../global/models/actions';
 import { ActionContext } from '../context';
 import { ActionBase } from '../piece-metadata';
 import { InputPropertyMap } from '../property';
 import { PieceAuthProperty } from '../property/authentication';
+import { TQoreResponseType } from '../../../global/models/qore';
 
 export type ActionRunner<
   PieceAuth extends PieceAuthProperty,
@@ -38,7 +38,7 @@ type CreateActionParams<
   test?: ActionRunner<PieceAuth, ActionProps>;
   requireAuth?: boolean;
   errorHandlingOptions?: ErrorHandlingOptionsParam;
-  responseType?: IActionResponse;
+  responseType?: TQoreResponseType;
 };
 
 export class IAction<PieceAuth extends PieceAuthProperty, ActionProps extends InputPropertyMap>
@@ -53,7 +53,7 @@ export class IAction<PieceAuth extends PieceAuthProperty, ActionProps extends In
     public readonly test: ActionRunner<PieceAuth, ActionProps>,
     public readonly requireAuth: boolean,
     public readonly errorHandlingOptions: ErrorHandlingOptionsParam,
-    public readonly responseType: IActionResponse
+    public readonly responseType: TQoreResponseType
   ) {}
 }
 

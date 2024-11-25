@@ -10,70 +10,60 @@ export default {
   event_info: {
     desc: 'Zendesk User Event Data',
     type: {
-      account_id: {
-        name: 'account_id',
-        type: 'softint',
-      },
-      detail: {
-        name: 'detail',
-        type: {
-          created_at: {
-            name: 'created_at',
-            type: 'softdate',
-          },
-          default_group_id: {
-            name: 'default_group_id',
-            type: 'softstring',
-          },
-          email: {
-            name: 'email',
-            type: 'softstring',
-          },
-          external_id: {
-            name: 'external_id',
-            type: 'softstring',
-          },
-          id: {
-            name: 'id',
-            type: 'softstring',
-          },
-          organization_id: {
-            name: 'organization_id',
-            type: 'softstring',
-          },
-          role: {
-            name: 'role',
-            type: 'softstring',
-          },
-          updated_at: {
-            name: 'updated_at',
-            type: 'softdate',
+      type: 'hash',
+      fields: {
+        account_id: {
+          type: 'softint',
+        },
+        detail: {
+          type: {
+            type: 'hash',
+            fields: {
+              created_at: {
+                type: 'softdate',
+              },
+              default_group_id: {
+                type: 'softstring',
+              },
+              email: {
+                type: 'softstring',
+              },
+              external_id: {
+                type: 'softstring',
+              },
+              id: {
+                type: 'softstring',
+              },
+              organization_id: {
+                type: 'softstring',
+              },
+              role: {
+                type: 'softstring',
+              },
+              updated_at: {
+                type: 'softdate',
+              },
+            },
           },
         },
-      },
-      event: {
-        name: 'event',
-        type: 'hash',
-      },
-      id: {
-        name: 'id',
-        type: 'softstring',
-      },
-      subject: {
-        name: 'subject',
-        type: 'softstring',
-      },
-      time: {
-        name: 'time',
-        type: 'softdate',
-      },
-      type: {
-        name: 'type',
-        type: 'softstring',
-      },
-      zendesk_event_version: {
-        name: 'zendesk_event_version',
-        type: 'softstring',
+        event: {
+          type: 'hash',
+        },
+        id: {
+          type: 'softstring',
+        },
+        subject: {
+          type: 'softstring',
+        },
+        time: {
+          type: 'softdate',
+        },
+        type: {
+          type: 'softstring',
+        },
+        zendesk_event_version: {
+          type: 'softstring',
+        },
       },
     },
   },

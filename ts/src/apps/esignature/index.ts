@@ -1,7 +1,7 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { actionsCatalogue } from '../../ActionsCatalogue';
 import { createSwaggerPaths, mapActionsToApp } from '../../global/helpers';
-import { IQoreAppWithActions } from '../../global/models/qore';
+import { IQoreAllowedValue, IQoreAppWithActions } from '../../global/models/qore';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import {
@@ -39,11 +39,7 @@ export interface IEsignatureUserInfo {
   email: string;
 }
 
-const DisplayAllowedValues: {
-  display_name: string;
-  desc: string;
-  value: string;
-}[] = [
+const DisplayAllowedValues = [
   {
     display_name: 'modal',
     desc:
@@ -58,13 +54,9 @@ const DisplayAllowedValues: {
       'documents, but is the default value for all other documents.',
     value: 'inline',
   },
-];
+] satisfies IQoreAllowedValue[];
 
-const HrmlDisplayAllowedValues: {
-  display_name: string;
-  desc: string;
-  value: string;
-}[] = [
+const HrmlDisplayAllowedValues = [
   {
     display_name: 'inline',
     desc:
@@ -109,7 +101,7 @@ const HrmlDisplayAllowedValues: {
     desc: 'Do not show this portion of the HTML in the responsive signing view.',
     value: 'print_only',
   },
-];
+] satisfies IQoreAllowedValue[];
 
 export default (locale: Locales) =>
   ({

@@ -1,6 +1,6 @@
 import { OpenAPIV2 } from 'openapi-types';
 import { buildActionsFromSwaggerSchema } from '../../global/helpers';
-import { IQoreSharedObject, TAllowedPaths, TQoreType } from '../../global/models/qore';
+import { TAllowedPaths, TQoreAppActionOverrideOption } from '../../global/models/qore';
 import eSignature from '../../schemas/esignature.swagger.json';
 import { IQoreConnectionOptions } from '../zendesk';
 
@@ -27,10 +27,7 @@ export const ESIGNATURE_CONN_OPTIONS = {
   },
 } satisfies IQoreConnectionOptions;
 
-const GetAccountIdConfig: Pick<
-  IQoreSharedObject<TQoreType, unknown, typeof ESIGNATURE_CONN_OPTIONS>,
-  'get_allowed_values' | 'get_default_value'
-> = {
+const GetAccountIdConfig = {
   get_allowed_values: function (ctx) {
     return ctx.conn_opts.accounts.map((info: any) => {
       return {
@@ -44,21 +41,18 @@ const GetAccountIdConfig: Pick<
       return ctx.conn_opts.account_id;
     }
   },
-};
+} satisfies TQoreAppActionOverrideOption<typeof ESIGNATURE_CONN_OPTIONS>;
 
-const GetEnvelopeIdAllowedValues: Pick<
-  IQoreSharedObject<TQoreType, unknown>,
-  'rest_get_allowed_values'
-> = {
+const GetEnvelopeIdAllowedValues = {
   rest_get_allowed_values: {
     method: 'GET',
     path: 'envelopes?from_date=2010-01-01',
     values: 'body.envelopes.envelopeId',
     display_names: 'body.envelopes.emailSubject',
   },
-};
+} satisfies TQoreAppActionOverrideOption<typeof ESIGNATURE_CONN_OPTIONS>;
 
-export const ESIGNATURE_PATHS: TAllowedPaths = {
+export const ESIGNATURE_PATHS = {
   '/v2.1/accounts/{accountId}/envelopes': {
     GET: {
       override_options: {
@@ -117,6 +111,28 @@ export const ESIGNATURE_PATHS: TAllowedPaths = {
       override_options: {
         accountId: GetAccountIdConfig,
         envelopeId: GetEnvelopeIdAllowedValues,
+        signers: {
+          type: {
+            type: 'list',
+            element_type: {
+              type: 'hash',
+              fields: {
+                name: {
+                  type: 'string',
+                  required: false,
+                },
+                email: {
+                  type: 'string',
+                  required: false,
+                },
+                recipientId: {
+                  type: 'string',
+                  required: true,
+                },
+              },
+            },
+          },
+        },
       },
     },
     POST: {
@@ -129,6 +145,28 @@ export const ESIGNATURE_PATHS: TAllowedPaths = {
       override_options: {
         accountId: GetAccountIdConfig,
         envelopeId: GetEnvelopeIdAllowedValues,
+        signers: {
+          type: {
+            type: 'list',
+            element_type: {
+              type: 'hash',
+              fields: {
+                name: {
+                  type: 'string',
+                  required: false,
+                },
+                email: {
+                  type: 'string',
+                  required: false,
+                },
+                recipientId: {
+                  type: 'string',
+                  required: true,
+                },
+              },
+            },
+          },
+        },
       },
     },
     GET: {
@@ -143,6 +181,19 @@ export const ESIGNATURE_PATHS: TAllowedPaths = {
       override_options: {
         accountId: GetAccountIdConfig,
         envelopeId: GetEnvelopeIdAllowedValues,
+        documents: {
+          type: {
+            type: 'list',
+            element_type: {
+              type: 'hash',
+              fields: {
+                documentId: {
+                  type: 'string',
+                },
+              },
+            },
+          },
+        },
       },
     },
     PUT: {
@@ -197,7 +248,7 @@ export const ESIGNATURE_PATHS: TAllowedPaths = {
       },
     },
   },
-};
+} satisfies TAllowedPaths<typeof ESIGNATURE_CONN_OPTIONS>;
 
 export const ESIGNATURE_ACTIONS = buildActionsFromSwaggerSchema({
   schema: eSignature as OpenAPIV2.Document,

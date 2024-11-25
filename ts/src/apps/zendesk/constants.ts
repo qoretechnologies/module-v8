@@ -9,7 +9,7 @@ export const ZENDESK_SWAGGER_API_PATH = '/api/v2/';
 
 const UserRoleAllowedValues = [{ value: 'end-user' }, { value: 'agent' }, { value: 'admin' }];
 
-export const ZENDESK_ALLOWED_PATHS: TAllowedPaths = {
+export const ZENDESK_ALLOWED_PATHS = {
   [`${ZENDESK_SWAGGER_API_PATH}tickets/{ticket_id}`]: {
     GET: {
       override_options: {
@@ -26,20 +26,20 @@ export const ZENDESK_ALLOWED_PATHS: TAllowedPaths = {
         comment: {
           required: false,
           type: {
-            body: {
-              name: 'body',
-              type: 'string',
-              required: true,
-            },
-            html_body: {
-              name: 'html_body',
-              type: 'string',
-              required: false,
-            },
-            public: {
-              name: 'public',
-              type: 'boolean',
-              required: false,
+            type: 'hash',
+            fields: {
+              body: {
+                type: 'string',
+                required: true,
+              },
+              html_body: {
+                type: 'string',
+                required: false,
+              },
+              public: {
+                type: 'boolean',
+                required: false,
+              },
             },
           },
         },
@@ -72,20 +72,20 @@ export const ZENDESK_ALLOWED_PATHS: TAllowedPaths = {
         comment: {
           required: true,
           type: {
-            body: {
-              name: 'body',
-              type: 'string',
-              required: true,
-            },
-            html_body: {
-              name: 'html_body',
-              type: 'string',
-              required: false,
-            },
-            public: {
-              name: 'public',
-              type: 'boolean',
-              required: false,
+            type: 'hash',
+            fields: {
+              body: {
+                type: 'string',
+                required: true,
+              },
+              html_body: {
+                type: 'string',
+                required: false,
+              },
+              public: {
+                type: 'boolean',
+                required: false,
+              },
             },
           },
         },
@@ -133,30 +133,31 @@ export const ZENDESK_ALLOWED_PATHS: TAllowedPaths = {
         group: {
           required: true,
           type: {
-            name: {
-              name: 'name',
-              type: 'string',
-              required: true,
-            },
-            description: {
-              name: 'description',
-              type: 'string',
-              required: false,
-            },
-            default: {
-              name: 'default',
-              type: 'boolean',
-              required: false,
-            },
-            is_public: {
-              name: 'is_public',
-              type: 'boolean',
-              required: false,
-            },
-            user_ids: {
-              name: 'user_ids',
-              type: 'list',
-              required: false,
+            type: 'hash',
+            fields: {
+              name: {
+                type: 'string',
+                required: true,
+              },
+              description: {
+                type: 'string',
+                required: false,
+              },
+              default: {
+                type: 'boolean',
+                required: false,
+              },
+              is_public: {
+                type: 'boolean',
+                required: false,
+              },
+              user_ids: {
+                type: {
+                  type: 'list',
+                  element_type: 'string',
+                },
+                required: false,
+              },
             },
           },
         },
@@ -170,30 +171,31 @@ export const ZENDESK_ALLOWED_PATHS: TAllowedPaths = {
         group: {
           required: true,
           type: {
-            name: {
-              name: 'name',
-              type: 'string',
-              required: true,
-            },
-            description: {
-              name: 'description',
-              type: 'string',
-              required: false,
-            },
-            default: {
-              name: 'default',
-              type: 'boolean',
-              required: false,
-            },
-            is_public: {
-              name: 'is_public',
-              type: 'boolean',
-              required: false,
-            },
-            user_ids: {
-              name: 'user_ids',
-              type: 'list',
-              required: false,
+            type: 'hash',
+            fields: {
+              name: {
+                type: 'string',
+                required: true,
+              },
+              description: {
+                type: 'string',
+                required: false,
+              },
+              default: {
+                type: 'boolean',
+                required: false,
+              },
+              is_public: {
+                type: 'boolean',
+                required: false,
+              },
+              user_ids: {
+                type: {
+                  type: 'list',
+                  element_type: 'string',
+                },
+                required: false,
+              },
             },
           },
         },
@@ -222,41 +224,40 @@ export const ZENDESK_ALLOWED_PATHS: TAllowedPaths = {
         user: {
           required: true,
           type: {
-            name: {
-              name: 'name',
-              type: 'string',
-              required: true,
-            },
-            email: {
-              name: 'email',
-              type: 'string',
-              required: false,
-            },
-            phone: {
-              name: 'phone',
-              type: 'string',
-              required: false,
-            },
-            notes: {
-              name: 'notes',
-              type: 'string',
-              required: false,
-            },
-            details: {
-              name: 'details',
-              type: 'string',
-              required: false,
-            },
-            role: {
-              name: 'role',
-              type: 'string',
-              required: false,
-              allowed_values: UserRoleAllowedValues,
-            },
-            organization_ids: {
-              name: 'organization_ids',
-              type: 'list',
-              required: false,
+            type: 'hash',
+            fields: {
+              name: {
+                type: 'string',
+                required: false,
+              },
+              email: {
+                type: 'string',
+                required: false,
+              },
+              phone: {
+                type: 'string',
+                required: false,
+              },
+              notes: {
+                type: 'string',
+                required: false,
+              },
+              details: {
+                type: 'string',
+                required: false,
+              },
+              role: {
+                type: 'string',
+                required: false,
+                allowed_values: UserRoleAllowedValues,
+              },
+              organization_ids: {
+                type: {
+                  type: 'list',
+                  element_type: 'string',
+                },
+                required: false,
+              },
             },
           },
         },
@@ -276,41 +277,40 @@ export const ZENDESK_ALLOWED_PATHS: TAllowedPaths = {
         user: {
           required: true,
           type: {
-            name: {
-              name: 'name',
-              type: 'string',
-              required: true,
-            },
-            email: {
-              name: 'email',
-              type: 'string',
-              required: false,
-            },
-            phone: {
-              name: 'phone',
-              type: 'string',
-              required: false,
-            },
-            notes: {
-              name: 'notes',
-              type: 'string',
-              required: false,
-            },
-            details: {
-              name: 'details',
-              type: 'string',
-              required: false,
-            },
-            role: {
-              name: 'role',
-              type: 'string',
-              required: false,
-              allowed_values: UserRoleAllowedValues,
-            },
-            organization_ids: {
-              name: 'organization_ids',
-              type: 'list',
-              required: false,
+            type: 'hash',
+            fields: {
+              name: {
+                type: 'string',
+                required: true,
+              },
+              email: {
+                type: 'string',
+                required: false,
+              },
+              phone: {
+                type: 'string',
+                required: false,
+              },
+              notes: {
+                type: 'string',
+                required: false,
+              },
+              details: {
+                type: 'string',
+                required: false,
+              },
+              role: {
+                type: 'string',
+                required: false,
+                allowed_values: UserRoleAllowedValues,
+              },
+              organization_ids: {
+                type: {
+                  type: 'list',
+                  element_type: 'string',
+                },
+                required: false,
+              },
             },
           },
         },
@@ -413,4 +413,4 @@ export const ZENDESK_ALLOWED_PATHS: TAllowedPaths = {
       },
     },
   },
-};
+} satisfies TAllowedPaths;

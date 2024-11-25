@@ -11,13 +11,18 @@ export interface IQoreAppShared {
 export type THttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE';
 export type TWebhookHttpMethod = 'POST' | 'PUT' | 'PATCH' | 'GET';
 export type TRestGetAllowedValuesMethod = TWebhookHttpMethod;
+export type TCustomConnOptions = Record<string, IQoreConnectionOption>;
+export type TCustomFields<CustomConnOptions extends TCustomConnOptions = TCustomConnOptions> =
+  Record<string, IQoreAppActionOption<TQoreType, unknown, CustomConnOptions>>;
 
-export type TAllowedPaths = Record<string, Partial<Record<THttpMethod, IAllowedPathData>>>;
+export type TAllowedPaths<CustomConnOptions extends TCustomConnOptions = TCustomConnOptions> =
+  Record<string, Partial<Record<THttpMethod, IAllowedPathData<CustomConnOptions>>>>;
 
-export interface IAllowedPathData extends Partial<Omit<IQoreBaseAppAction, 'action_code' | 'app'>> {
+export interface IAllowedPathData<CustomConnOptions extends TCustomConnOptions = TCustomConnOptions>
+  extends Partial<Omit<IQoreBaseAppAction, 'action_code' | 'app'>> {
   processor?: (
     data: OpenAPIV2.OperationObject
-  ) => Partial<Omit<IQoreBaseAppAction, 'action_code' | 'app'>>;
+  ) => Partial<Omit<IQoreBaseAppAction<CustomConnOptions>, 'action_code' | 'app'>>;
 }
 
 type TQoreRestContentEncoding = 'gzip' | 'bzip2' | 'deflate' | 'identity';
@@ -136,7 +141,7 @@ export interface IQoreConnectionOption<
   TypeName extends TQoreSimpleType = TQoreSimpleType,
   TypeValue = unknown,
 > extends Omit<
-    IQoreSharedObject<TypeName, TypeValue>,
+    IQoreAppActionOption<TypeName, TypeValue>,
     'get_allowed_values' | 'get_dependent_options' | 'rest_get_allowed_values' | 'required'
   > {
   freeform?: boolean;
@@ -158,7 +163,7 @@ export interface IQoreRestConnectionModifiers<
     context: Omit<TQoreAppActionFunctionContext<ModifierOptions>, 'opts'>
   ) => Promise<TQoreMappedOptions<ModifierOptions>>;
   /** allows the REST URL to be changed when an option value is changed
-  */
+   */
   connection_update_option?: {
     // the option name that the connection update depends on
     option: string;
@@ -255,15 +260,17 @@ export const QoreAppActionCodeToLocale: {
   [EQoreAppActionCode.ACTION]: 'actions',
 };
 
-export interface IQoreBaseAppAction extends IQoreAppShared {
+export interface IQoreBaseAppAction<
+  CustomConnOptions extends TCustomConnOptions = TCustomConnOptions,
+> extends IQoreAppShared {
   app: string;
   action: string;
   action_code: EQoreAppActionCode;
-  override_options?: Record<string, Partial<IQoreAppActionOption>>;
+  override_options?: Record<string, TQoreAppActionOverrideOption<CustomConnOptions>>;
 }
 
 export type TQoreAppActionFunctionContext<
-  CustomConnOptions extends Record<string, IQoreAppActionOption> = {},
+  CustomConnOptions extends TCustomConnOptions = TCustomConnOptions,
 > = {
   conn_name?: string;
   conn_opts?: Partial<IQoreRestConnectionConfig> & TQoreMappedOptions<CustomConnOptions>;
@@ -277,17 +284,15 @@ export type TQoreAppActionFunction = (
 ) => any;
 
 export type TQoreGetAllowedValuesFunction<
+  CustomConnOptions extends TCustomConnOptions = TCustomConnOptions,
   TypeValue = unknown,
-  CustomConnOptions extends Record<string, IQoreAppActionOption> = {},
 > = (
   context?: TQoreAppActionFunctionContext<CustomConnOptions>
 ) => IQoreAllowedValue<TypeValue>[] | Promise<IQoreAllowedValue<TypeValue>[]>;
 
 export type TQoreGetDefaultValueFunction<
-  CustomConnOptions extends Record<string, IQoreAppActionOption> = {},
-> = (
-  context?: TQoreAppActionFunctionContext<CustomConnOptions>
-) => any | Promise<any>;
+  CustomConnOptions extends TCustomConnOptions = TCustomConnOptions,
+> = (context?: TQoreAppActionFunctionContext<CustomConnOptions>) => any | Promise<any>;
 
 export type TQoreStringCompatibleType =
   | 'string'
@@ -334,7 +339,7 @@ export type TQoreNumberCompatibleType =
   | '*softnumber'
   | '*int';
 export type TQoreHashCompatibleType = 'hash' | '*hash' | '*data' | 'data';
-export type TQoreListCompatibleType = 'list' | '*list';
+export type TQoreListCompatibleType = 'list' | '*list' | 'softlist' | '*softlist';
 export type TQoreBooleanCompatibleType =
   | 'boolean'
   | '*boolean'
@@ -346,16 +351,17 @@ export type TQoreBooleanCompatibleType =
 export type TQoreNullableType = 'NULL' | 'nothing';
 export type TQoreAnyType = 'all' | 'any' | 'auto';
 
-export type TQoreSimpleType =
+export type TQoreSimpleType = TQoreSimpleTypeNonList | TQoreListCompatibleType;
+
+export type TQoreSimpleTypeNonList =
   | TQoreStringCompatibleType
   | TQoreNumberCompatibleType
   | TQoreHashCompatibleType
-  | TQoreListCompatibleType
   | TQoreBooleanCompatibleType
   | TQoreNullableType
   | TQoreAnyType;
 
-export type TQoreType = TQoreSimpleType | Record<string, IQoreTypeObject>;
+export type TQoreType = TQoreSimpleType | TQoreTypeObject;
 
 // Mapping between string literals and their corresponding TypeScript types
 export type TQoreTypeMapping = {
@@ -381,19 +387,19 @@ export type TQoreMappedOptions<T extends TQoreOptions> = TQoreOptionsType<T>;
 
 export type GetConnectionOptionDefinitionFromQoreType<T extends TQoreType> =
   T extends TQoreStringCompatibleType
-    ? IQoreAppActionOption<T, string>
+    ? IQoreConnectionOption<T, string>
     : T extends TQoreNumberCompatibleType
-      ? IQoreAppActionOption<T, number>
+      ? IQoreConnectionOption<T, number>
       : T extends TQoreHashCompatibleType
-        ? IQoreAppActionOption<T, Record<string, any>>
+        ? IQoreConnectionOption<T, Record<string, any>>
         : T extends TQoreBooleanCompatibleType
-          ? IQoreAppActionOption<T, boolean>
+          ? IQoreConnectionOption<T, boolean>
           : T extends TQoreListCompatibleType
-            ? IQoreAppActionOption<T, unknown[]>
+            ? IQoreConnectionOption<T, unknown[]>
             : T extends TQoreNullableType
-              ? IQoreAppActionOption<T, null>
-              : T extends Record<string, IQoreTypeObject>
-                ? IQoreAppActionOption<T, Record<string, any>>
+              ? IQoreConnectionOption<T, null>
+              : T extends object
+                ? IQoreConnectionOption
                 : never;
 
 export type GetOptionDefinitionFromQoreType<T extends TQoreType> =
@@ -409,25 +415,25 @@ export type GetOptionDefinitionFromQoreType<T extends TQoreType> =
             ? IQoreAppActionOption<T, unknown[]>
             : T extends TQoreNullableType
               ? IQoreAppActionOption<T, null>
-              : T extends Record<string, IQoreTypeObject>
-                ? IQoreAppActionOption<T, Record<string, any>>
+              : T extends object
+                ? IQoreAppActionOption
                 : never;
 
 export type GetResponseDefinitionFromQoreType<T extends TQoreType> =
   T extends TQoreStringCompatibleType
-    ? IQoreTypeObject<T, string>
+    ? IQoreAppActionOption<T, string>
     : T extends TQoreNumberCompatibleType
-      ? IQoreTypeObject<T, number>
+      ? IQoreAppActionOption<T, number>
       : T extends TQoreHashCompatibleType
-        ? IQoreTypeObject<T, Record<string, any>>
+        ? IQoreAppActionOption<T, Record<string, any>>
         : T extends TQoreBooleanCompatibleType
-          ? IQoreTypeObject<T, boolean>
+          ? IQoreAppActionOption<T, boolean>
           : T extends TQoreListCompatibleType
-            ? IQoreTypeObject<T, unknown[]>
+            ? IQoreAppActionOption<T, unknown[]>
             : T extends TQoreNullableType
-              ? IQoreTypeObject<T, null>
-              : T extends Record<string, IQoreTypeObject>
-                ? IQoreAppActionOption<T, Record<string, any>> & { name: string }
+              ? IQoreAppActionOption<T, null>
+              : T extends object
+                ? IQoreAppActionOption
                 : never;
 
 export interface IQoreAllowedValue<TypeValue = unknown> extends IQoreAppShared {
@@ -458,59 +464,74 @@ export interface IQoreRestGetAllowedValues {
   display_names?: string;
 }
 
-export interface IQoreSharedObject<
-  TypeName extends TQoreType = TQoreType,
-  TypeValue = unknown,
-  CustomConnOptions extends Record<string, IQoreAppActionOption> = {},
-> extends IQoreAppShared {
-  // either a string or a data object again
-  type: TypeName;
-
+export interface IQoreSharedObject<TypeValue = unknown> extends IQoreAppShared {
   // whether the field is required
   required?: boolean;
+  //if fields of this type should be preselected; will set the corresponding UI flag
+  preselected?: boolean;
+  // (values must be of the correct type) the default value if none is provided by the user
+  default_value?: TypeValue;
+}
 
+export interface IQoreTypeObjectNonList<TypeValue = unknown>
+  extends Omit<IQoreSharedObject<TypeValue>, 'type'> {
+  // Type has to be a string
+  type: TQoreSimpleTypeNonList;
+  // the technical name of the field
+  name?: string;
+  // an optional object with the fields of the object
+  fields?: Record<string, IQoreAppActionOption>;
+}
+
+export type TQoreTypeObject<TypeValue = unknown> =
+  | IQoreTypeObjectNonList<TypeValue>
+  | IQoreTypeObjectList<TypeValue>;
+
+export interface IQoreTypeObjectList<TypeValue = unknown>
+  extends Omit<IQoreSharedObject<TypeValue>, 'type'> {
+  // Type has to be a string
+  type: TQoreListCompatibleType;
+  // the technical name of the field
+  name?: string;
+  // description of a list type; only valid if \c type is "list" or "softlist"
+  element_type?: TQoreType;
+  // an optional object with the fields of the object
+  fields?: Record<string, IQoreAppActionOption>;
+}
+
+export interface IQoreAppActionOption<
+  TypeName extends TQoreType = TQoreType,
+  TypeValue = unknown,
+  CustomConnOptions extends TCustomConnOptions = TCustomConnOptions,
+> extends IQoreSharedObject<TypeValue> {
+  // either a string or a data object again
+  type: TypeName;
   // (values must use the field's type) any example value to use when generating example data etc
   example_value?: TypeValue;
-
-  // (values must use the field's type) the default value if none is provided by the user
-  default_value?: TypeValue;
-
   // an array of objects providing the only values allowed for the field
   allowed_values?: IQoreAllowedValue<TypeValue>[];
-
   // a function that returns the allowed values for the field
   /** Mutually-exclusive with 'rest_get_allowed_values'
    */
-  get_allowed_values?: TQoreGetAllowedValuesFunction<TypeValue, CustomConnOptions>;
-
+  get_allowed_values?: TQoreGetAllowedValuesFunction<CustomConnOptions, TypeValue>;
   // a function that returns dependent options for the field
   get_dependent_options?: TQoreGetDependentOptionsFunction;
-
   // an object that describes a REST call to return allowed values
   /** Mutually-exclusive with 'get_allowed_values'
    */
   rest_get_allowed_values?: IQoreRestGetAllowedValues;
-
   // a function that returns the default value for the field
   get_default_value?: TQoreGetDefaultValueFunction<CustomConnOptions>;
-
-  // the number of seconds to wait for the action to complete before timing out
-  io_timeout_secs?: number;
-}
-
-export interface IQoreTypeObject<TypeName extends TQoreType = TQoreType, TypeValue = unknown>
-  extends IQoreSharedObject<TypeName, TypeValue> {
-  name: string; // the technical name of the field
   attr?: Record<string, any>; // an optional data object with any properties
-}
-
-export interface IQoreAppActionOption<TypeName extends TQoreType = TQoreType, TypeValue = unknown>
-  extends IQoreSharedObject<TypeName, TypeValue> {
-  loc?: string;
-  ref_data?: string;
   sensitive?: boolean;
   required_groups?: string[];
 }
+
+export type TQoreAppActionOverrideOption<
+  CustomConnOptions extends TCustomConnOptions = TCustomConnOptions,
+  TypeName extends TQoreType = TQoreType,
+  TypeValue = unknown,
+> = Partial<IQoreAppActionOption<TypeName, TypeValue, CustomConnOptions>>;
 
 export enum EQoreAppActionWebhookAuthType {
   AUTH_NONE = 0,
@@ -527,11 +548,11 @@ export interface IQoreAppActionWithEventOrWebhook extends IQoreBaseAppAction {
 export type TQoreAppActionWithEventOrWebhookEventInfo = {
   id?: string;
   desc: string;
-  type: Record<string, IQoreTypeObject>;
+  type: TQoreTypeObject;
 };
 
 export interface IQoreAppActionWithWebhookBase<
-  CustomConnOptions extends Record<string, any> = unknown,
+  CustomConnOptions extends TCustomConnOptions = TCustomConnOptions,
 > extends IQoreAppActionWithEventOrWebhook {
   webhook_method: TWebhookHttpMethod;
   webhook_auth?: EQoreAppActionWebhookAuthType;
@@ -539,12 +560,16 @@ export interface IQoreAppActionWithWebhookBase<
   webhook_deregister: TWebhookDeregisterFunction<CustomConnOptions>;
 }
 
-export type TWebhookRegisterFunction<CustomConnOptions extends Record<string, any> = unknown> = (
+export type TWebhookRegisterFunction<
+  CustomConnOptions extends TCustomConnOptions = TCustomConnOptions,
+> = (
   context: TQoreAppActionFunctionContext<CustomConnOptions>,
   url: string
 ) => Promise<Record<string, any> | void>;
 
-export type TWebhookDeregisterFunction<CustomConnOptions extends Record<string, any> = unknown> = (
+export type TWebhookDeregisterFunction<
+  CustomConnOptions extends TCustomConnOptions = TCustomConnOptions,
+> = (
   context: TQoreAppActionFunctionContext<CustomConnOptions>,
   url: string,
   regInfo: Record<string, any>
@@ -573,14 +598,14 @@ export interface IQoreAppActionWithEvent extends IQoreAppActionWithEventOrWebhoo
 }
 
 export type TQoreOptions = Record<string, IQoreAppActionOption>;
-export type TQoreResponseType = Record<string, IQoreTypeObject>;
+export type TQoreResponseType = string | TQoreTypeObject;
 
-export interface IQoreAppActionWithFunction<Options = TQoreOptions, Response = TQoreResponseType>
+export interface IQoreAppActionWithFunction<Options = TQoreOptions, _Response = TQoreResponseType>
   extends IQoreBaseAppAction {
   action_code: EQoreAppActionCode.ACTION;
   api_function?: TQoreAppActionFunction;
   options?: StrictRecord<keyof Options, Options[keyof Options]>;
-  response_type?: StrictRecord<keyof Response, Response[keyof Response]>;
+  response_type?: TQoreResponseType;
   io_timeout_secs?: number;
 }
 
@@ -606,27 +631,19 @@ export type TQoreAppAction<Options = TQoreOptions, Response = TQoreResponseType>
 
 export type TQorePartialNonEventAction<
   Options = Record<string, IQoreAppActionOption>,
-  Response = Record<string, IQoreTypeObject>,
-> = (
+  Response = Record<string, TQoreTypeObject>,
+> =
   | Omit<IQoreAppActionWithFunction<Options, Response>, 'app'>
-  | IQorePartialAppActionWithSwaggerPath
-) & {
-  _localizationGroup?: string;
-};
+  | IQorePartialAppActionWithSwaggerPath;
 
-export type TQorePartialEventAction = (
+export type TQorePartialEventAction =
   | Omit<TQoreAppActionWithWebhook, 'app'>
-  | Omit<IQoreAppActionWithEvent, 'app'>
-) & {
-  _localizationGroup?: string;
-};
+  | Omit<IQoreAppActionWithEvent, 'app'>;
 
 export type TQorePartialAction<
   Options = Record<string, IQoreAppActionOption>,
-  Response = Record<string, IQoreTypeObject>,
-> = (TQorePartialNonEventAction<Options, Response> | TQorePartialEventAction) & {
-  _localizationGroup?: string;
-};
+  Response = Record<string, TQoreTypeObject>,
+> = TQorePartialNonEventAction<Options, Response> | TQorePartialEventAction;
 
 export interface IActionInitializationProps {
   locale: Locales;
