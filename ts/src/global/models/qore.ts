@@ -479,7 +479,7 @@ export interface IQoreTypeObject<TypeValue = unknown>
   // the technical name of the field
   name?: string;
   // description of a list type; only valid if \c type is "list" or "softlist"
-  element_type?: IQoreTypeObject | TQoreSimpleType;
+  element_type?: TQoreType;
   // an optional object with the fields of the object
   fields?: Record<string, IQoreAppActionOption>;
 }
