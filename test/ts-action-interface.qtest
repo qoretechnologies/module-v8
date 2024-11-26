@@ -338,7 +338,7 @@ var obj = {
         {
             hash<auto> h = {
                 "count": 1,
-                "other": "a",
+                "other": ("a",),
                 "list": ({"a": "str", "b": 1},),
             };
             assertEq(h, t.acceptsValue(h));

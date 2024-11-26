@@ -191,6 +191,10 @@ exports.actionsCatalogue = {
                   - required?: bool -> if a value is required for this type; will set the corresponding UI flag
                   - preselected?: bool -> if fields of this type should be preselected; will set the corresponding UI
                     flag
+                  - multiselect?: bool -> can be true if the field has a list type and allowed_values are the allowed
+                    values for the list
+                  - allowed_values?: AllowedValues[] -> an array of objects providing the only values allowed for
+                    the option
                   - fields?: object -> a hash of field objects; only valid if \c type is "hash"; keys are field
                     names, values are as follows:
                     - display_name?: string -> the user-friendly display name for the field
@@ -207,6 +211,8 @@ exports.actionsCatalogue = {
                       generating example data etc
                     - default_value?: any -> (values must use the field's type) the default value if none is provided
                       by the user; this overrides any default value provided by the type
+                    - multiselect?: bool -> can be true if the field has a list type and allowed_values are the
+                      allowed values for the list
                     - allowed_values?: AllowedValues[] -> an array of objects providing the only values allowed for
                       the field - with the following properties
                     - attr?: Attributes -> an optional data object with any properties
@@ -244,13 +250,15 @@ exports.actionsCatalogue = {
                     "example_value": 1,
                 },
                 "other": {
-                    "type": "string",
+                    "type": "list",
+                    "element_type": "string",
                     "display_name": "Other",
                     "short_desc": "another value",
                     "desc": "another value",
                     "required": true,
                     "preselected": true,
                     "depends_on": ["count"],
+                    "multiselect": true,
                     "get_allowed_values": async function(ctx) {
                         return [
                             {
