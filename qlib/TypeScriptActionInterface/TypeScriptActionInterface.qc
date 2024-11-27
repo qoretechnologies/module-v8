@@ -82,7 +82,7 @@ public class TypeScriptActionInterface {
 
         const TypeKeys = (
             "name", "display_name", "short_desc", "desc", "type", "example_value",
-            "default_value", "allowed_values", "attr", "required"
+            "default_value", "multiselect", "allowed_values", "attr", "required"
         );
 
         const TypeScriptAppRestConnectionOptions = RestConnection::ConnectionScheme.options;
@@ -1067,7 +1067,7 @@ public class TypeScriptActionInterface {
     }
 
     static hash<ActionOptionInfo> getOptionInfo(hash<auto> opt) {
-        opt.type = TypeScriptActionInterface::getType(opt.type, opt.required);
+        opt.type = TypeScriptActionInterface::getType(opt.type, opt.required. remove opt.element_type);
         if (opt.allowed_values) {
             opt.allowed_values = map cast<hash<AllowedValueInfo>>($1), opt.allowed_values;
         }
@@ -1077,7 +1077,7 @@ public class TypeScriptActionInterface {
         return cast<hash<ActionOptionInfo>>(opt);
     }
 
-    static AbstractDataProviderType getType(string name, *bool required) {
+    static AbstractDataProviderType getType(string name, *bool required, auto element_type) {
         if (!required) {
             if (name !~ /^\*/) {
                 name = "*" + name;
@@ -1086,6 +1086,18 @@ public class TypeScriptActionInterface {
             throw "TYPE-ERROR", sprintf("Cannot use an \"or-nothing\" type like %y when \"required\" is set; use "
                 "type %y instead", name, name[1..]);
         }
+        if (exists element_type) {
+            AbstractDataProviderType element_type = TypeScriptActionInterface::getType(element_type);
+            if (name =~ /^\*?list$/) {
+                return new ListDataType(element_type, !required);
+            } else if (name =~ /^\*?hash$/) {
+                HashDataType rv(required ? AutoHashType : AutoHashOrNothingType);
+                rv.setDefaultOtherFieldType(element_type);
+                return rv;
+            } else {
+                throw "TYPE-ERROR", sprintf("Cannot use an element type with type %y", name);
+            }
+        }
         *AbstractDataProviderType type = AbstractDataProviderTypeMap{name};
         if (!type) {
             throw "TYPE-ERROR", sprintf("Cannot match type %y to a known Qore type", name);
@@ -1093,7 +1105,7 @@ public class TypeScriptActionInterface {
         return type;
     }
 
-    static AbstractDataProviderType getType(hash<auto> h, *bool required) {
+    static AbstractDataProviderType getType(hash<auto> h, *bool required, auto element_type) {
         if (h.type.typeCode() != NT_STRING) {
             return TypeScriptActionInterface::getHashType(h, required);
         }
@@ -1125,17 +1137,20 @@ public class TypeScriptActionInterface {
             HashDataType ht(type, attr.name, NOTHING, tags, default_value, attr);
             if (f) {
                 TypeScriptActionInterface::getHashTypeIntern(ht, f, h.required);
+            } else if (exists element_type) {
+                AbstractDataProviderType element_type = TypeScriptActionInterface::getType(element_type);
+                ht.setDefaultOtherFieldType(element_type);
             }
             rv = ht;
         } else if (orig.type == "list") {
             AbstractDataProviderType element_type;
-            if (auto t = remove h.element_type) {
+            if (auto t = (remove h.element_type ?? element_type)) {
                 element_type = TypeScriptActionInterface::getType(t);
             }
             rv = new ListDataType(element_type ?? AutoType, !orig.required, NOTHING, tags, default_value, attr);
         } else if (orig.type == "softlist") {
             AbstractDataProviderType element_type;
-            if (auto t = remove h.element_type) {
+            if (auto t = (remove h.element_type ?? element_type)) {
                 element_type = TypeScriptActionInterface::getType(t);
             }
             rv = new SoftListDataType(element_type ?? AutoType, !orig.required, NOTHING, tags, default_value, attr);
@@ -1144,7 +1159,7 @@ public class TypeScriptActionInterface {
                 throw "TYPE-ERROR", sprintf("Type %y cannot support fields; use type \"hash\" with fields",
                     orig.type);
             }
-            if (auto t = remove h.element_type) {
+            if (auto t = (remove h.element_type ?? element_type)) {
                 throw "TYPE-ERROR", sprintf("Type %y cannot support an element type", orig.type);
             }
             rv = new QoreDataType(type, NOTHING, tags, default_value, attr);
@@ -1356,9 +1371,9 @@ public class TypeScriptActionInterface {
           - QAUTH_QORUS = 1 -> authentication required
         - perms (*list<string>): an optional list of string permissions when \c auth is 1
         - callback (code): a callback taking the arguments passed to the webhook to generate events
-        This callback must return a URL string for the URL used for the webhook
-        @param destroy a callable value taking a single URL string as an argument; this must be the URL string
-        returned by the \a create argument
+        This callback must return a hash with \c url and \c ctx keys providing a URL string for the URL used for the
+        webhook, and a context object for destroying the webhook, respectively
+        @param destroy a callable value taking the hash returned by the \a create callback
     */
     static registerWebhookCreateDestroyApis(code create, code destroy) {
         if (WebhookCreate) {
@@ -1377,9 +1392,9 @@ public class TypeScriptActionInterface {
         - perms (*list<string>): an optional list of string permissions when \c auth is 1
         - callback (code): a callback taking the arguments passed to the webhook to generate events
 
-        @return the public URL for the webhook
+        @return the hash returned by the create callback with \c url and \c ctx keys
     */
-    static string createWebhook(hash<auto> h) {
+    static hash<auto> createWebhook(hash<auto> h) {
         if (!WebhookCreate) {
             throw "WEBHOOK-API-ERROR", "Cannot create a webhook; there is no webhook creation API in place";
         }
@@ -1387,11 +1402,11 @@ public class TypeScriptActionInterface {
     }
 
     #! Destroy a webhook identified by the URL given as an argument
-    static deleteWebhook(string url) {
+    static deleteWebhook(hash<auto> info) {
         if (!WebhookDelete) {
             throw "WEBHOOK-API-ERROR", "Cannot delete a webhook; there is no webhook deletion API in place";
         }
-        TypeScriptActionInterface::WebhookDelete(url);
+        TypeScriptActionInterface::WebhookDelete(info);
     }
 
     #! Returns a Swagger data provider for the given app

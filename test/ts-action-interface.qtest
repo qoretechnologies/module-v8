@@ -85,12 +85,14 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
 
     private webhookEventTest() {
         code webhook_callback;
-        code get_webhook = string sub (hash<auto> h) {
+        code get_webhook = hash<auto> sub (hash<auto> h) {
             #printf("get_webhook() %y\n", h);
             webhook_callback = h.callback;
-            return "https://localhost:8011/webhooks/abc";
+            return {
+                "url": "https://localhost:8011/webhooks/abc",
+            };
         };
-        code delete_webhook = sub (string url) {
+        code delete_webhook = sub (hash<auto> info) {
         };
 
         TypeScriptActionInterface::registerWebhookCreateDestroyApis(get_webhook, delete_webhook);
@@ -336,7 +338,7 @@ var obj = {
         {
             hash<auto> h = {
                 "count": 1,
-                "other": "a",
+                "other": ("a",),
                 "list": ({"a": "str", "b": 1},),
             };
             assertEq(h, t.acceptsValue(h));
