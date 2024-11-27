@@ -1,10 +1,15 @@
 import { actionsCatalogue } from '../../ActionsCatalogue';
-import { buildActionsFromSwaggerSchema, mapActionsToApp } from '../../global/helpers';
+import {
+  buildActionsFromSwaggerSchema,
+  mapActionsToApp,
+  mapTriggersToApp,
+} from '../../global/helpers';
 import { IQoreAppWithActions } from '../../global/models/qore';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import asana from '../../schemas/asana.swagger.json';
 import { ASANA_ALLOWED_PATHS, ASANA_APP_NAME } from './constants';
+import * as asanaTriggers from './triggers';
 
 export const ASANA_ACTIONS = buildActionsFromSwaggerSchema({
   schema: asana as any,
@@ -22,7 +27,10 @@ export default (locale: Locales) =>
     display_name: L[locale].apps[ASANA_APP_NAME].displayName(),
     short_desc: L[locale].apps[ASANA_APP_NAME].shortDesc(),
     name: ASANA_APP_NAME,
-    actions: mapActionsToApp(ASANA_APP_NAME, ASANA_ACTIONS, locale),
+    actions: [
+      ...mapActionsToApp(ASANA_APP_NAME, ASANA_ACTIONS, locale),
+      ...mapTriggersToApp(ASANA_APP_NAME, asanaTriggers, locale),
+    ],
     desc: L[locale].apps.Asana.longDesc(),
     logo:
       'PHN2ZyBpZD0ibG9nb3NhbmR0eXBlc19jb20iIGRhdGEtbmFtZT0ibG9nb3NhbmR0eXBlcyBjb20iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy' +
