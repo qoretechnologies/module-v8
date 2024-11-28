@@ -58,13 +58,13 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
                 },
                 required: false,
               },
-              issueType: {
+              issuetype: {
                 required: true,
                 type: {
                   type: 'hash',
                   fields: {
                     id: {
-                      type: 'string',
+                      type: 'softstring',
                       required_groups: ['issue_type_group'],
                       rest_get_allowed_values: getJiraIssueTypeIdAllowedValuesRest,
                     },
@@ -82,7 +82,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
                   type: 'hash',
                   fields: {
                     id: {
-                      type: 'string',
+                      type: 'softstring',
                       required: true,
                       rest_get_allowed_values: getJiraProjectIdAllowedValuesRest,
                     },
@@ -191,13 +191,13 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
                 },
                 required: false,
               },
-              issueType: {
+              issuetype: {
                 required: false,
                 type: {
                   type: 'hash',
                   fields: {
                     id: {
-                      type: 'string',
+                      type: 'softstring',
                       required_groups: ['issue_type_group'],
                       rest_get_allowed_values: getJiraIssueTypeIdAllowedValuesRest,
                     },
@@ -215,7 +215,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
                   type: 'hash',
                   fields: {
                     id: {
-                      type: 'string',
+                      type: 'softstring',
                       required: true,
                       rest_get_allowed_values: getJiraProjectIdAllowedValuesRest,
                     },
@@ -236,6 +236,13 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     },
   },
   '/rest/api/3/issue/{issueIdOrKey}/comment': {
+    GET: {
+      override_options: {
+        issueIdOrKey: {
+          get_allowed_values: getJiraIssueIdAllowedValues,
+        },
+      },
+    },
     POST: {
       override_options: {
         issueIdOrKey: {
