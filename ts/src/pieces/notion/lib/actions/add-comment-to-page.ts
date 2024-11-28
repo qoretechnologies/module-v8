@@ -2,6 +2,7 @@ import { Client } from '@notionhq/client';
 import { notionAuth } from '../..';
 import { createAction, Property } from '../../../../core/framework';
 import { addCommentResponseType } from './add-comment-to-discussion';
+import { notionCommon } from '../common';
 
 export const addCommentToPage = createAction({
   auth: notionAuth,
@@ -10,11 +11,7 @@ export const addCommentToPage = createAction({
   description: 'Create a comment in a page',
   responseType: addCommentResponseType,
   props: {
-    pageId: Property.ShortText({
-      displayName: 'Page ID',
-      description: 'The ID of the page you want to add a comment to',
-      required: true,
-    }),
+    pageId: notionCommon.page,
     text: Property.LongText({
       displayName: 'Text',
       description: 'The text of the comment you want to add',

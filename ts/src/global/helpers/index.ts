@@ -10,7 +10,6 @@ import {
   IQoreAppActionWithEvent,
   IQoreAppActionWithEventOrWebhook,
   IQorePartialAppActionWithSwaggerPath,
-  TQoreTypeObject,
   QoreAppActionCodeToLocale,
   TAllowedPaths,
   THttpMethod,
@@ -22,6 +21,7 @@ import {
   TQorePartialEventAction,
   TQorePartialNonEventAction,
   TQoreType,
+  TQoreTypeObject,
   TStringWithFirstUpperCaseCharacter,
 } from '../../global/models/qore';
 import { L } from '../../i18n/i18n-node';

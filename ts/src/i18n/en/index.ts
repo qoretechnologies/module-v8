@@ -1,4 +1,5 @@
 import type { BaseTranslation } from '../i18n-types';
+import { AsanaEventInfo } from './asana/event-info';
 
 const en = {
   common: {},
@@ -603,6 +604,247 @@ const en = {
       displayName: 'Asana',
       shortDesc: 'Collection of actions to interact with Asana API',
       longDesc: 'Collection of actions to interact with Asana API',
+      triggers: {
+        task_completed: {
+          displayName: 'Task Completed',
+          shortDesc: 'Triggered when a task within a project is marked as completed.',
+          longDesc: 'Triggered when a task within a project is marked as completed.',
+          options: {
+            project: {
+              displayName: 'Project ID',
+              shortDesc: 'The project to look for tasks in',
+              longDesc: 'The project to look for tasks in',
+            },
+            workspace: {
+              displayName: 'Workspace ID',
+              shortDesc: 'The workspace to get projects from',
+              longDesc: 'The workspace to get projects from',
+            },
+          },
+          event_info: AsanaEventInfo,
+        },
+        attachment_added: {
+          displayName: 'Attachment Added',
+          shortDesc: 'Triggered when an attachment is added to any task within a project.',
+          longDesc: 'Triggered when an attachment is added to any task within a project.',
+          options: {
+            project: {
+              displayName: 'Project ID',
+              shortDesc: 'The project to look for tasks in',
+              longDesc: 'The project to look for tasks in',
+            },
+            workspace: {
+              displayName: 'Workspace ID',
+              shortDesc: 'The workspace to get projects from',
+              longDesc: 'The workspace to get projects from',
+            },
+          },
+          event_info: AsanaEventInfo,
+        },
+        subtask_completed: {
+          displayName: 'Subtask Completed',
+          shortDesc: 'Triggered when a subtask is marked as completed.',
+          longDesc: 'Triggered when a subtask is marked as completed.',
+          options: {
+            project: {
+              displayName: 'Project ID',
+              shortDesc: 'The project to look for tasks in',
+              longDesc: 'The project to look for tasks in',
+            },
+            workspace: {
+              displayName: 'Workspace ID',
+              shortDesc: 'The workspace to get projects from',
+              longDesc: 'The workspace to get projects from',
+            },
+            task: {
+              displayName: 'Task ID',
+              shortDesc: 'The task to look for subtasks in',
+              longDesc: 'The task to look for subtasks in',
+            },
+          },
+          event_info: AsanaEventInfo,
+        },
+        project_task_added: {
+          displayName: 'Project Task Added',
+          shortDesc: 'Triggered when a new task is added to a project.',
+          longDesc: 'Triggered when a new task is added to a project.',
+          options: {
+            project: {
+              displayName: 'Project ID',
+              shortDesc: 'The project to look for tasks in',
+              longDesc: 'The project to look for tasks in',
+            },
+            workspace: {
+              displayName: 'Workspace ID',
+              shortDesc: 'The workspace to get projects from',
+              longDesc: 'The workspace to get projects from',
+            },
+          },
+          event_info: AsanaEventInfo,
+        },
+        project_added: {
+          displayName: 'Project Added',
+          shortDesc: 'Triggered when a new project is added to a workspace.',
+          longDesc: 'Triggered when a new project is added to a workspace.',
+          options: {
+            workspace: {
+              displayName: 'Workspace ID',
+              shortDesc: 'The workspace to get projects from',
+              longDesc: 'The workspace to get projects from',
+            },
+          },
+          event_info: AsanaEventInfo,
+        },
+        task_comment_added: {
+          displayName: 'Task Comment Added',
+          shortDesc: 'Triggered when a new comment is added to a specific task.',
+          longDesc: 'Triggered when a new comment is added to a specific task.',
+          options: {
+            project: {
+              displayName: 'Project ID',
+              shortDesc: 'The project to look for tasks in',
+              longDesc: 'The project to look for tasks in',
+            },
+            workspace: {
+              displayName: 'Workspace ID',
+              shortDesc: 'The workspace to get projects from',
+              longDesc: 'The workspace to get projects from',
+            },
+            task: {
+              displayName: 'Task ID',
+              shortDesc: 'The task to look for comments in',
+              longDesc: 'The task to look for comments in',
+            },
+          },
+          event_info: AsanaEventInfo,
+        },
+        task_story_added: {
+          displayName: 'Task Story Added',
+          shortDesc: 'Triggered when a new story (e.g., a comment or update) is added to a task.',
+          longDesc: 'Triggered when a new story (e.g., a comment or update) is added to a task.',
+          options: {
+            project: {
+              displayName: 'Project ID',
+              shortDesc: 'The project to look for tasks in',
+              longDesc: 'The project to look for tasks in',
+            },
+            workspace: {
+              displayName: 'Workspace ID',
+              shortDesc: 'The workspace to get projects from',
+              longDesc: 'The workspace to get projects from',
+            },
+            task: {
+              displayName: 'Task ID',
+              shortDesc: 'The task to look for stories in',
+              longDesc: 'The task to look for stories in',
+            },
+          },
+          event_info: AsanaEventInfo,
+        },
+        task_subtask_added: {
+          displayName: 'Task Subtask Added',
+          shortDesc: 'Triggered when a new subtask is added to a specific task.',
+          longDesc: 'Triggered when a new subtask is added to a specific task.',
+          options: {
+            project: {
+              displayName: 'Project ID',
+              shortDesc: 'The project to look for tasks in',
+              longDesc: 'The project to look for tasks in',
+            },
+            workspace: {
+              displayName: 'Workspace ID',
+              shortDesc: 'The workspace to get projects from',
+              longDesc: 'The workspace to get projects from',
+            },
+            task: {
+              displayName: 'Task ID',
+              shortDesc: 'The task to look for subtasks in',
+              longDesc: 'The task to look for subtasks in',
+            },
+          },
+          event_info: AsanaEventInfo,
+        },
+        task_tag_added: {
+          displayName: 'Task Tag Added',
+          shortDesc: 'Triggered when a tag is added to a specific task.',
+          longDesc: 'Triggered when a tag is added to a specific task.',
+          options: {
+            project: {
+              displayName: 'Project ID',
+              shortDesc: 'The project to look for tasks in',
+              longDesc: 'The project to look for tasks in',
+            },
+            workspace: {
+              displayName: 'Workspace ID',
+              shortDesc: 'The workspace to get projects from',
+              longDesc: 'The workspace to get projects from',
+            },
+            task: {
+              displayName: 'Task ID',
+              shortDesc: 'The task to look for tags in',
+              longDesc: 'The task to look for tags in',
+            },
+          },
+          event_info: AsanaEventInfo,
+        },
+        team_added: {
+          displayName: 'Team Added',
+          shortDesc: 'Triggered when a new team is created in a workspace.',
+          longDesc: 'Triggered when a new team is created in a workspace.',
+          options: {
+            workspace: {
+              displayName: 'Workspace ID',
+              shortDesc: 'The workspace to get teams from',
+              longDesc: 'The workspace to get teams from',
+            },
+          },
+          event_info: AsanaEventInfo,
+        },
+        user_added: {
+          displayName: 'User Added',
+          shortDesc: 'Triggered when a new user joins a workspace.',
+          longDesc: 'Triggered when a new user joins a workspace.',
+          options: {
+            workspace: {
+              displayName: 'Workspace ID',
+              shortDesc: 'The workspace to get users from',
+              longDesc: 'The workspace to get users from',
+            },
+          },
+          event_info: AsanaEventInfo,
+        },
+        tag_created: {
+          displayName: 'Tag Created',
+          shortDesc: 'Triggered when a new tag is created in a workspace.',
+          longDesc: 'Triggered when a new tag is created in a workspace.',
+          options: {
+            workspace: {
+              displayName: 'Workspace ID',
+              shortDesc: 'The workspace to get tags from',
+              longDesc: 'The workspace to get tags from',
+            },
+          },
+          event_info: AsanaEventInfo,
+        },
+        task_moved_to_section: {
+          displayName: 'Task Moved to Section',
+          shortDesc: 'Triggered when a task is moved to a different section within a project.',
+          longDesc: 'Triggered when a task is moved to a different section within a project.',
+          options: {
+            project: {
+              displayName: 'Project ID',
+              shortDesc: 'The project to look for tasks in',
+              longDesc: 'The project to look for tasks in',
+            },
+            workspace: {
+              displayName: 'Workspace ID',
+              shortDesc: 'The workspace to get projects from',
+              longDesc: 'The workspace to get projects from',
+            },
+          },
+          event_info: AsanaEventInfo,
+        },
+      },
     },
     DocusignESignature: {
       displayName: 'Docusign eSignature',
