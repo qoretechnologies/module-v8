@@ -6,12 +6,10 @@ export const jiraDocumentFormatOption = {
     type: 'hash',
     fields: {
       version: {
-        default_value: 1,
         required: true,
         type: 'number',
       },
       type: {
-        default_value: 'doc',
         required: true,
         type: 'string',
       },
