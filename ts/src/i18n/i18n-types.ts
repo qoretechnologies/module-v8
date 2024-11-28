@@ -2260,20 +2260,20 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
-					}
-					task: {
-						/**
-						 * T​a​s​k​ ​I​D
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​t​a​s​k​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​s​u​b​t​a​s​k​s​ ​i​n
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​t​a​s​k​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​s​u​b​t​a​s​k​s​ ​i​n
-						 */
-						longDesc: string
+						task: {
+							/**
+							 * T​a​s​k​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​s​u​b​t​a​s​k​s​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​s​u​b​t​a​s​k​s​ ​i​n
+							 */
+							longDesc: string
+						}
 					}
 					event_info: {
 						/**
@@ -9919,20 +9919,20 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
-					}
-					task: {
-						/**
-						 * Task ID
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The task to look for subtasks in
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The task to look for subtasks in
-						 */
-						longDesc: () => LocalizedString
+						task: {
+							/**
+							 * Task ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task to look for subtasks in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The task to look for subtasks in
+							 */
+							longDesc: () => LocalizedString
+						}
 					}
 					event_info: {
 						/**

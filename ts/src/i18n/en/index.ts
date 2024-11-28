@@ -656,11 +656,11 @@ const en = {
               shortDesc: 'The workspace to get projects from',
               longDesc: 'The workspace to get projects from',
             },
-          },
-          task: {
-            displayName: 'Task ID',
-            shortDesc: 'The task to look for subtasks in',
-            longDesc: 'The task to look for subtasks in',
+            task: {
+              displayName: 'Task ID',
+              shortDesc: 'The task to look for subtasks in',
+              longDesc: 'The task to look for subtasks in',
+            },
           },
           event_info: AsanaEventInfo,
         },
