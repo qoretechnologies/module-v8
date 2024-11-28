@@ -279,6 +279,9 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         if (remove type_hash.sensitive) {
             info.attr.sensitive = True;
         }
+        if (remove type_hash.multiselect) {
+            info.multiselect = True;
+        }
         if ((*string str = remove type_hash.display_name).val()) {
             info.display_name = str;
         } else if (!info.display_name) {
