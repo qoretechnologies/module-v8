@@ -56,7 +56,17 @@ JavaScriptPromise JavaScriptPromise::then(code then_code, *code reject_code) {
     if (*xsink) {
         return QoreValue();
     }
-    return !p->then(v8h, then_code, reject_code) ? self->objectRefSelf() : QoreValue();
+    v8::EscapableHandleScope handle_scope(v8h.getIsolate());
+    v8::MaybeLocal<v8::Promise> rv = p->then(v8h, then_code, reject_code);
+    if (*xsink) {
+        return QoreValue();
+    }
+    v8::Local<v8::Promise> np = rv.ToLocalChecked();
+    ReferenceHolder<QoreV8Promise> pd(new QoreV8Promise(xsink, p->getProgram(), np), xsink);
+    if (*xsink) {
+        return QoreValue();
+    }
+    return new QoreObject(QC_JAVASCRIPTPROMISE, getProgram(), pd.release());
 }
 
 //! Runs the given code asynchronously if the Promise throws an asynchronous error
@@ -67,7 +77,17 @@ JavaScriptPromise JavaScriptPromise::doCatch(code catch_code) {
     if (*xsink) {
         return QoreValue();
     }
-    return !p->doCatch(v8h, catch_code) ? self->objectRefSelf() : QoreValue();
+    v8::EscapableHandleScope handle_scope(v8h.getIsolate());
+    v8::MaybeLocal<v8::Promise> rv = p->doCatch(v8h, catch_code);
+    if (*xsink) {
+        return QoreValue();
+    }
+    v8::Local<v8::Promise> np = rv.ToLocalChecked();
+    ReferenceHolder<QoreV8Promise> pd(new QoreV8Promise(xsink, p->getProgram(), np), xsink);
+    if (*xsink) {
+        return QoreValue();
+    }
+    return new QoreObject(QC_JAVASCRIPTPROMISE, getProgram(), pd.release());
 }
 
 //! Returns @ref True if the Promise has a handler

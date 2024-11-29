@@ -1,18 +1,103 @@
+import { TAllowedPaths } from '../../global/models/qore';
+import { IQoreConnectionOptions } from '../zendesk';
+
 export const STRIPE_APP_NAME = 'Stripe';
-export const STRIPE_ALLOWED_PATHS = [
-  '/v1/account',
-  '/v1/balance',
-  '/v1/balance/history',
-  '/v1/balance/history/{id}',
-  '/v1/charges',
-  '/v1/charges/{charge}',
-  '/v1/customers',
-  '/v1/customers/{customer}',
-  '/v1/customers/{customer}/balance_transactions',
-  '/v1/customers/{customer}/sources',
-  '/v1/customers/{customer}/subscriptions',
-  '/v1/invoices',
-  '/v1/invoices/{invoice}',
-  '/v1/payment_intents',
-  '/v1/refunds',
-];
+export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
+  '/v1/account': {
+    GET: {},
+  },
+  '/v1/account_links': {
+    POST: {},
+  },
+  '/v1/accounts/{account}': {
+    DELETE: {},
+    GET: {},
+    POST: {},
+  },
+  '/v1/accounts/{account}/external_accounts': {
+    GET: {},
+    POST: {},
+  },
+  '/v1/accounts/{account}/login_links': {
+    POST: {},
+  },
+  '/v1/accounts/{account}/people': {
+    GET: {},
+    POST: {},
+  },
+  '/v1/balance': {
+    GET: {},
+  },
+  '/v1/balance/history': {
+    GET: {},
+  },
+  '/v1/balance/history/{id}': {
+    GET: {},
+  },
+  '/v1/charges': {
+    GET: {},
+    POST: {},
+  },
+  '/v1/charges/{charge}': {
+    GET: {},
+    POST: {},
+  },
+  '/v1/customers': {
+    GET: {},
+    POST: {},
+  },
+  '/v1/customers/{customer}': {
+    DELETE: {},
+    GET: {},
+    POST: {},
+  },
+  '/v1/customers/{customer}/balance_transactions': {
+    GET: {},
+    POST: {},
+  },
+  '/v1/customers/{customer}/sources': {
+    GET: {},
+    POST: {},
+  },
+  '/v1/customers/{customer}/subscriptions': {
+    GET: {},
+    POST: {},
+  },
+  '/v1/invoices': {
+    GET: {},
+    POST: {},
+  },
+  '/v1/invoices/{invoice}': {
+    DELETE: {},
+    GET: {},
+    POST: {},
+  },
+  '/v1/payment_intents': {
+    GET: {},
+    POST: {},
+  },
+  '/v1/refunds': {
+    GET: {},
+    POST: {},
+  },
+};
+export const STRIPE_CONN_OPTIONS = {
+  account_id: {
+    display_name: 'Account ID',
+    short_desc: 'The account ID',
+    desc: 'The account ID',
+    type: 'string',
+  },
+  user_id: {
+    display_name: 'User ID',
+    short_desc: 'The user ID',
+    desc: 'The user ID',
+    type: 'string',
+  },
+  stripe_user_id: {
+    display_name: 'Stripe User ID',
+    short_desc: 'The Stripe user ID',
+    desc: 'The Stripe user ID',
+    type: 'string',
+  },
+} satisfies IQoreConnectionOptions;

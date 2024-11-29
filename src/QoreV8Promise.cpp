@@ -45,11 +45,9 @@ v8::Local<v8::Promise> QoreV8Promise::get() const {
 int QoreV8Promise::wait(QoreV8ProgramHelper& v8h) {
     v8::Isolate* isolate = v8h.getIsolate();
     v8::Local<v8::Promise> p = get();
-    if (p->HasHandler()) {
-        while (p->State() == v8::Promise::kPending) {
-            v8h.getProgram()->spinOnce();
-            isolate->PerformMicrotaskCheckpoint();
-        }
+    while (p->State() == v8::Promise::kPending) {
+        v8h.getProgram()->spinOnce();
+        isolate->PerformMicrotaskCheckpoint();
     }
     return 0;
 }
@@ -65,6 +63,8 @@ QoreValue QoreV8Promise::getResult(QoreV8ProgramHelper& v8h) {
 }
 
 static void resolve_promise(const v8::FunctionCallbackInfo<v8::Value>& info) {
+    //printd(5, "resolve_promise() len: %d\n", info.Length());
+
     // NOTE: we ignore arguments in info in these callbacks
     v8::Local<v8::Value> v = info.Data();
     assert(v->IsExternal());
@@ -83,10 +83,20 @@ static void resolve_promise(const v8::FunctionCallbackInfo<v8::Value>& info) {
         return;
     }
 
+    ValueHolder arg(&xsink);
+
     // resolve Promise
     v8::Local<v8::Promise> p = cbinfo->promise.Get(isolate);
 
-    ValueHolder arg(cbinfo->pgm->getQoreValue(&xsink, p->Result()), &xsink);
+    v8::Local<v8::Value> result = p->Result();
+    if (!result.IsEmpty()) {
+        //printd(5, "resolve_promise() setting result\n");
+        arg = cbinfo->pgm->getQoreValue(&xsink, p->Result());
+    } else if (info.Length()) {
+        //printd(5, "resolve_promise() setting info[0]\n");
+        arg = cbinfo->pgm->getQoreValue(&xsink, info[0]);
+    }
+
     if (xsink) {
         QoreV8Program::raiseV8Exception(xsink, isolate);
         return;
@@ -95,7 +105,7 @@ static void resolve_promise(const v8::FunctionCallbackInfo<v8::Value>& info) {
     /*
     {
         QoreNodeAsStringHelper str(*arg, FMT_NORMAL, &xsink);
-        printd(5, "Promise result: %s\n", str->c_str());
+        printd(5, "Promise callback arg: %s\n", str->c_str());
     }
     */
 
@@ -117,14 +127,14 @@ static void resolve_promise(const v8::FunctionCallbackInfo<v8::Value>& info) {
     info.GetReturnValue().Set(v8rv);
 }
 
-int QoreV8Promise::then(QoreV8ProgramHelper& v8h, const ResolvedCallReferenceNode* code,
+v8::MaybeLocal<v8::Promise> QoreV8Promise::then(QoreV8ProgramHelper& v8h, const ResolvedCallReferenceNode* code,
         const ResolvedCallReferenceNode* rejected) {
     ExceptionSink* xsink = v8h.getExceptionSink();
 
     v8::MaybeLocal<v8::Function> func = getPromiseFunction(v8h, resolve_promise, code);
     if (func.IsEmpty()) {
         assert(*xsink);
-        return -1;
+        return v8::MaybeLocal<v8::Promise>();
     }
 
     v8::MaybeLocal<v8::Function> reject_func;
@@ -132,10 +142,11 @@ int QoreV8Promise::then(QoreV8ProgramHelper& v8h, const ResolvedCallReferenceNod
         reject_func = getPromiseFunction(v8h, resolve_promise, rejected);
         if (reject_func.IsEmpty()) {
             assert(*xsink);
-            return -1;
+            return v8::MaybeLocal<v8::Promise>();
         }
     }
 
+    v8::EscapableHandleScope handle_scope(v8h.getIsolate());
     v8::Local<v8::Promise> p = get();
     v8::MaybeLocal<v8::Promise> rv = reject_func.IsEmpty()
         ? p->Then(v8h.getContext(), func.ToLocalChecked())
@@ -144,29 +155,28 @@ int QoreV8Promise::then(QoreV8ProgramHelper& v8h, const ResolvedCallReferenceNod
         if (!v8h.checkException()) {
             xsink->raiseException("PROMISE-THEN-ERROR", "Unknown error running Promise.then()");
         }
-        return -1;
     }
-    return 0;
+    return handle_scope.EscapeMaybe(rv);
 }
 
-int QoreV8Promise::doCatch(QoreV8ProgramHelper& v8h, const ResolvedCallReferenceNode* code) {
+v8::MaybeLocal<v8::Promise> QoreV8Promise::doCatch(QoreV8ProgramHelper& v8h, const ResolvedCallReferenceNode* code) {
     ExceptionSink* xsink = v8h.getExceptionSink();
 
     v8::MaybeLocal<v8::Function> func = getPromiseFunction(v8h, resolve_promise, code);
     if (func.IsEmpty()) {
         assert(*xsink);
-        return -1;
+        return v8::MaybeLocal<v8::Promise>();
     }
 
+    v8::EscapableHandleScope handle_scope(v8h.getIsolate());
     v8::Local<v8::Promise> p = get();
     v8::MaybeLocal<v8::Promise> rv = p->Catch(v8h.getContext(), func.ToLocalChecked());
     if (rv.IsEmpty()) {
         if (!v8h.checkException()) {
             xsink->raiseException("PROMISE-CATCH-ERROR", "Unknown error running Promise.catch()");
         }
-        return -1;
     }
-    return 0;
+    return handle_scope.EscapeMaybe(rv);
 }
 
 bool QoreV8Promise::hasHandler(QoreV8ProgramHelper& v8h) const {

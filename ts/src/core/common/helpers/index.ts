@@ -35,20 +35,27 @@ export function createCustomApiCallAction({
     auth: auth ? auth : undefined,
     requireAuth: auth ? true : false,
     props: {
-      url: Property.DynamicProperties({
+      // Changed the url option type to a string for better UX, check if it will be alright for future apps and actions
+      // url: Property.DynamicProperties({
+      //   displayName: 'URL',
+      //   required: true,
+      //   refreshers: [],
+      //   defaultValue: baseUrl.length ? undefined : baseUrl(),
+      //   props: async ({ auth }) => {
+      //     return {
+      //       url: Property.ShortText({
+      //         displayName: 'URL',
+      //         description: 'The full URL to use, including the base URL',
+      //         required: true,
+      //         defaultValue: baseUrl(auth),
+      //       }),
+      //     };
+      //   },
+      // }),
+      url: Property.ShortText({
         displayName: 'URL',
         required: true,
-        refreshers: [],
-        props: async ({ auth }) => {
-          return {
-            url: Property.ShortText({
-              displayName: 'URL',
-              description: 'The full URL to use, including the base URL',
-              required: true,
-              defaultValue: baseUrl(auth),
-            }),
-          };
-        },
+        defaultValue: baseUrl.length ? undefined : baseUrl(),
       }),
       method: Property.StaticDropdown({
         displayName: 'Method',
@@ -65,11 +72,11 @@ export function createCustomApiCallAction({
       headers: Property.Object({
         displayName: 'Headers',
         description: 'Authorization headers are injected automatically from your connection.',
-        required: true,
+        required: false,
       }),
       queryParams: Property.Object({
         displayName: 'Query Parameters',
-        required: true,
+        required: false,
       }),
       body: Property.Json({
         displayName: 'Body',
@@ -87,7 +94,6 @@ export function createCustomApiCallAction({
 
     run: async (context) => {
       const { method, url, headers, queryParams, body, failsafe, timeout } = context.propsValue;
-
       assertNotNullOrUndefined(method, 'Method');
       assertNotNullOrUndefined(url, 'URL');
 
@@ -104,7 +110,7 @@ export function createCustomApiCallAction({
 
       const request: HttpRequest<Record<string, unknown>> = {
         method,
-        url: url['url'],
+        url,
         headers: headersValue,
         queryParams: queryParams as QueryParams,
         timeout: timeout ? timeout * 1000 : 0,

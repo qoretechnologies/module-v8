@@ -1,25 +1,62 @@
 import { WebClient } from '@slack/web-api';
 import { createAction, Property } from 'core/framework';
-import { IActionResponse } from 'global/models/actions';
 import { slackAuth } from '../..';
+import { TQoreResponseType } from '../../../../global/models/qore';
 
-const searchMessagesResponseType: IActionResponse = {
-  matches: {
-    type: 'list',
-    name: 'matches',
-    display_name: 'Matches',
-    short_desc: 'The messages that matched the query',
-    desc: 'The messages that matched the query',
-    example_value: [
-      {
-        type: 'message',
-        ts: '1234567890.123456',
-        user: 'U1234567890',
-        text: 'Hello, world!',
+const searchMessagesResponseType = {
+  type: 'hash',
+  fields: {
+    matches: {
+      type: {
+        type: 'list',
+        element_type: {
+          type: 'hash',
+          fields: {
+            type: {
+              type: 'string',
+              display_name: 'Type',
+              short_desc: 'The type of object returned',
+              desc: 'The type of object returned',
+              example_value: 'message',
+            },
+            ts: {
+              type: 'string',
+              display_name: 'Timestamp',
+              short_desc: 'The timestamp of the message',
+              desc: 'The timestamp of the message',
+              example_value: '1234567890.123456',
+            },
+            user: {
+              type: 'string',
+              display_name: 'User ID',
+              short_desc: 'The user ID of the sender',
+              desc: 'The user ID of the sender',
+              example_value: 'U1234567890',
+            },
+            text: {
+              type: 'string',
+              display_name: 'Text',
+              short_desc: 'The text of the message',
+              desc: 'The text of the message',
+              example_value: 'Hello, world!',
+            },
+          },
+        },
       },
-    ],
+      display_name: 'Matches',
+      short_desc: 'The messages that matched the query',
+      desc: 'The messages that matched the query',
+      example_value: [
+        {
+          type: 'message',
+          ts: '1234567890.123456',
+          user: 'U1234567890',
+          text: 'Hello, world!',
+        },
+      ],
+    },
   },
-};
+} satisfies TQoreResponseType;
 
 export const searchMessages = createAction({
   name: 'searchMessages',

@@ -57,7 +57,6 @@ AbstractQoreNode* QoreV8Object::toData(QoreV8ProgramHelper& v8h) const {
 
 AbstractQoreNode* QoreV8Object::toData(QoreV8ProgramHelper& v8h, v8::Local<v8::Value> parent,
         v8::Set& objset) const {
-    ExceptionSink* xsink = v8h.getExceptionSink();
     v8::Local<v8::Object> obj = get();
     {
         v8::Maybe<bool> b = objset.Has(v8h.getContext(), obj);
@@ -104,6 +103,20 @@ AbstractQoreNode* QoreV8Object::toData(QoreV8ProgramHelper& v8h, v8::Local<v8::V
         return toList(v8h, parent, objset, handle_scope.Escape(props), len);
     }
     return toHash(v8h, parent, objset, handle_scope.Escape(props), len);
+}
+
+QoreStringNode* QoreV8Object::toString(QoreV8ProgramHelper& v8h) const {
+    v8::Local<v8::Object> obj = get();
+    v8::MaybeLocal<v8::String> s = obj->ToString(v8h.getContext());
+    if (s.IsEmpty()) {
+        if (!v8h.checkException()) {
+            v8h.getExceptionSink()->raiseException("OBJECT-TOSTRING-ERROR", "Unknown error retrieving string value "
+                "of object");
+        }
+        return nullptr;
+    }
+    v8::String::Utf8Value str(v8h.getIsolate(), s.ToLocalChecked());
+    return new QoreStringNode(*str, QCS_UTF8);
 }
 
 QoreListNode* QoreV8Object::getPropertyList(QoreV8ProgramHelper& v8h) {

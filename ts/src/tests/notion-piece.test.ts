@@ -408,4 +408,43 @@ describe('notionPieceTest', () => {
       throw new Error('Action function not found');
     }
   });
+
+  it('Should make a custom API call', async () => {
+    const action = notionApp.actions.find(
+      (action) => action.action === 'custom_api_call'
+    ) as IQoreAppActionWithFunction;
+    const actionFunction = action?.api_function;
+
+    if (actionFunction) {
+      try {
+        const result = await actionFunction(
+          {
+            url: 'https://api.notion.com/v1/search',
+            method: 'POST',
+            headers: {
+              'Notion-Version': '2022-02-22',
+            },
+            body: {
+              filter: {
+                value: 'page',
+                property: 'object',
+              },
+            },
+          },
+          {},
+          actionContext
+        );
+        expect(result).toBeDefined();
+        const expectedResponseType = action.response_type;
+        if (expectedResponseType) {
+          validateResponseProperties(expectedResponseType, result);
+        }
+      } catch (error) {
+        console.error('Error making a custom API call', error);
+        throw error;
+      }
+    } else {
+      throw new Error('Action function not found');
+    }
+  });
 });

@@ -1,44 +1,43 @@
 import { Block, WebClient } from '@slack/web-api';
 import { createAction, Property } from 'core/framework';
 import { slackAuth } from '../..';
+import { TQoreResponseType } from '../../../../global/models/qore';
 import { blocks, slackChannel, slackInfo } from '../common/props';
 import { processMessageTimestamp } from '../common/utils';
-import { IActionResponse } from 'global/models/actions';
 
-const updateMessageResponseType: IActionResponse = {
-  ok: {
-    type: 'boolean',
-    name: 'ok',
-    display_name: 'Success',
-    short_desc: 'Indicates if the message was updated successfully',
-    desc: 'Indicates if the message was updated successfully',
-    example_value: true,
+const updateMessageResponseType = {
+  type: 'hash',
+  fields: {
+    ok: {
+      type: 'boolean',
+      display_name: 'Success',
+      short_desc: 'Indicates if the message was updated successfully',
+      desc: 'Indicates if the message was updated successfully',
+      example_value: true,
+    },
+    channel: {
+      type: 'string',
+      display_name: 'Channel',
+      short_desc: 'The channel where the message was updated',
+      desc: 'The channel where the message was updated',
+      example_value: 'C1234567890',
+    },
+    ts: {
+      type: 'string',
+      display_name: 'Timestamp',
+      short_desc: 'The timestamp of the message',
+      desc: 'The timestamp of the message',
+      example_value: '1234567890.123456',
+    },
+    text: {
+      type: 'string',
+      display_name: 'Text',
+      short_desc: 'The updated text of the message',
+      desc: 'The updated text of the message',
+      example_value: 'Hello, world!',
+    },
   },
-  channel: {
-    type: 'string',
-    name: 'channel',
-    display_name: 'Channel',
-    short_desc: 'The channel where the message was updated',
-    desc: 'The channel where the message was updated',
-    example_value: 'C1234567890',
-  },
-  ts: {
-    type: 'string',
-    name: 'ts',
-    display_name: 'Timestamp',
-    short_desc: 'The timestamp of the message',
-    desc: 'The timestamp of the message',
-    example_value: '1234567890.123456',
-  },
-  text: {
-    type: 'string',
-    name: 'text',
-    display_name: 'Text',
-    short_desc: 'The updated text of the message',
-    desc: 'The updated text of the message',
-    example_value: 'Hello, world!',
-  },
-};
+} satisfies TQoreResponseType;
 
 export const updateMessage = createAction({
   // auth: check https://www.activepieces.com/docs/developers/piece-reference/authentication,

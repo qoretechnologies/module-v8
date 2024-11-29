@@ -6,8 +6,13 @@ import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import jira from '../../schemas/jira.swagger.json';
 import { JIRA_ALLOWED_PATHS, JIRA_APP_NAME, JIRA_CONN_OPTIONS } from './constants';
+import { createSwaggerPaths } from '../../global/helpers/index';
 
-export const JIRA_ACTIONS = buildActionsFromSwaggerSchema(jira as any, JIRA_ALLOWED_PATHS);
+export const JIRA_ACTIONS = buildActionsFromSwaggerSchema({
+  schema: jira as any,
+  allowedPaths: JIRA_ALLOWED_PATHS,
+  app: JIRA_APP_NAME,
+});
 
 /*
  * Returns the app object with all the actions ready to use, using translations
@@ -40,11 +45,12 @@ export default (locale: Locales) =>
     logo_file_name: 'jira-logo.svg',
     logo_mime_type: 'image/svg+xml',
     swagger: 'schemas/jira.swagger.json',
+    swagger_paths: createSwaggerPaths(JIRA_ALLOWED_PATHS),
     swagger_options: {
       parse_flags: -1,
     },
     rest: {
-      url: 'https://api.atlassian.com/ex/jira/{cloud_id}',
+      url: 'https://api.atlassian.com',
       data: 'json',
       oauth2_grant_type: 'authorization_code',
       oauth2_client_id: 'kmvUW6HHUljPnUfYqeRfy1c1AWcE3IqY',
@@ -68,6 +74,7 @@ export default (locale: Locales) =>
         'manage:servicedesk-customer',
         'write:servicedesk-request',
         'read:servicemanagement-insight-objects',
+        'offline_access',
       ],
       ping_method: 'GET',
       ping_path: '/rest/api/3/myself',
@@ -75,24 +82,32 @@ export default (locale: Locales) =>
     rest_modifiers: {
       options: JIRA_CONN_OPTIONS,
       set_options_post_auth: async (context) => {
-        const userAccounts = await QorusRequest.get<Record<string, any>>(
-          {
-            path: '/oauth/token/accessible-resources',
-            headers: {
-              Authorization: `Bearer ${context.conn_opts.token}`,
+        try {
+          const userAccounts = await QorusRequest.get<Record<string, any>>(
+            {
+              path: '/oauth/token/accessible-resources',
+              headers: {
+                Authorization: `Bearer ${context.conn_opts.token}`,
+              },
             },
-          },
-          {
-            url: 'https://api.atlassian.com',
-            endpointId: 'Atlassian',
-          }
-        );
-        const userInfo = userAccounts[0];
+            {
+              url: 'https://api.atlassian.com',
+              endpointId: 'Atlassian',
+            }
+          );
+          const userInfo = userAccounts.data[0];
+          if ('id' in userInfo) {
+            const cloud_id = userInfo.id;
 
-        if ('id' in userInfo) {
-          return {
-            cloud_id: userInfo.id,
-          };
+            return {
+              cloud_id,
+              ping_path: `/ex/jira/${cloud_id}/rest/api/3/myself`,
+              swagger_base_path: `/ex/jira/${cloud_id}`,
+            };
+          }
+        } catch (error) {
+          console.error(error);
+          throw error;
         }
       },
       url_template_options: ['cloud_id'],

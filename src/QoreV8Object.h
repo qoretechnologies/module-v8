@@ -58,6 +58,8 @@ public:
 
     DLLLOCAL AbstractQoreNode* toData(QoreV8ProgramHelper& v8h) const;
 
+    DLLLOCAL QoreStringNode* toString(QoreV8ProgramHelper& v8h) const;
+
     DLLLOCAL bool isCallable(QoreV8ProgramHelper& v8h) const;
 
     DLLLOCAL bool isConstructor(QoreV8ProgramHelper& v8h) const;

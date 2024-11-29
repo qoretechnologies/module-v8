@@ -46,9 +46,9 @@ public:
 
     DLLLOCAL int wait(QoreV8ProgramHelper& v8h);
 
-    DLLLOCAL int then(QoreV8ProgramHelper& v8h, const ResolvedCallReferenceNode* code,
+    DLLLOCAL v8::MaybeLocal<v8::Promise> then(QoreV8ProgramHelper& v8h, const ResolvedCallReferenceNode* code,
             const ResolvedCallReferenceNode* rejected);
-    DLLLOCAL int doCatch(QoreV8ProgramHelper& v8h, const ResolvedCallReferenceNode* code);
+    DLLLOCAL v8::MaybeLocal<v8::Promise> doCatch(QoreV8ProgramHelper& v8h, const ResolvedCallReferenceNode* code);
 
     DLLLOCAL bool hasHandler(QoreV8ProgramHelper& v8h) const;
 

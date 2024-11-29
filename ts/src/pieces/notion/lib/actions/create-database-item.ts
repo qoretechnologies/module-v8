@@ -1,47 +1,46 @@
-import { createAction, DynamicPropsValue, OAuth2PropertyValue, Property } from 'core/framework';
 import { Client } from '@notionhq/client';
-import { NotionFieldMapping } from '../common/models';
+import { createAction, DynamicPropsValue, OAuth2PropertyValue, Property } from 'core/framework';
 import { notionAuth } from '../..';
+import { TQoreResponseType } from '../../../../global/models/qore';
 import { notionCommon } from '../common';
-import { IActionResponse } from '../../../../global/models/actions';
+import { NotionFieldMapping } from '../common/models';
 
-const createDatabaseItemResponseType: IActionResponse = {
-  object: {
-    name: 'object',
-    type: 'string',
-    display_name: 'Object',
-    short_desc: 'The type of object returned',
-    desc: 'The type of object returned in this case it will always be page',
-    example_value: 'page',
-  },
-  id: {
-    name: 'id',
-    type: 'string',
-    display_name: 'ID',
-    short_desc: 'The ID of the page',
-    desc: 'The ID of the page',
-    example_value: '12345678-1234-1234-1234-123456789012',
-  },
-  url: {
-    name: 'url',
-    type: 'string',
-    display_name: 'URL',
-    short_desc: 'The URL of the page',
-    desc: 'The URL of the page',
-    example_value: 'https://example.com/page',
-  },
-  properties: {
-    name: 'properties',
-    type: 'hash',
-    display_name: 'Properties',
-    short_desc: 'The properties of the page',
-    desc: 'The properties of the page',
-    example_value: {
-      Price: { id: 'gwzR', type: 'number', number: 1 },
-      'Grocery item': { id: 'title', type: 'title' },
+const createDatabaseItemResponseType = {
+  type: 'hash',
+  fields: {
+    object: {
+      type: 'string',
+      display_name: 'Object',
+      short_desc: 'The type of object returned',
+      desc: 'The type of object returned in this case it will always be page',
+      example_value: 'page',
+    },
+    id: {
+      type: 'string',
+      display_name: 'ID',
+      short_desc: 'The ID of the page',
+      desc: 'The ID of the page',
+      example_value: '12345678-1234-1234-1234-123456789012',
+    },
+    url: {
+      type: 'string',
+      display_name: 'URL',
+      short_desc: 'The URL of the page',
+      desc: 'The URL of the page',
+      example_value: 'https://example.com/page',
+    },
+    properties: {
+      type: 'hash',
+      display_name: 'Properties',
+      short_desc: 'The properties of the page',
+      desc: 'The properties of the page',
+      example_value: {
+        Price: { id: 'gwzR', type: 'number', number: 1 },
+        'Grocery item': { id: 'title', type: 'title' },
+      },
     },
   },
-};
+} satisfies TQoreResponseType;
 
 export const createDatabaseItem = createAction({
   auth: notionAuth,

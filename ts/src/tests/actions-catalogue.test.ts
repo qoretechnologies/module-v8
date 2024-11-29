@@ -41,12 +41,19 @@ describe('Qorus Apps Catalogue tests', () => {
         }
 
         if ('response_type' in action) {
-          forEach(action.response_type, (responseType) => {
-            expect(responseType.display_name).not.toBeFalsy();
-            expect(responseType.short_desc).not.toBeFalsy();
-            expect(responseType.desc).not.toBeFalsy();
-            expect(responseType.type).not.toBeFalsy();
-          });
+          if (typeof action.response_type === 'string') {
+            expect(action.response_type).not.toBeFalsy();
+          } else {
+            const responseTypeFields = action.response_type?.fields;
+            if (responseTypeFields) {
+              forEach(action.response_type.fields, (responseType) => {
+                expect(responseType.display_name).not.toBeFalsy();
+                expect(responseType.short_desc).not.toBeFalsy();
+                expect(responseType.desc).not.toBeFalsy();
+                expect(responseType.type).not.toBeFalsy();
+              });
+            }
+          }
         }
 
         if ('swagger_path' in action) {

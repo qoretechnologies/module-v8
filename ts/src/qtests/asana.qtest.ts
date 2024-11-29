@@ -29,21 +29,21 @@ describe('Tests Asana Actions', () => {
     const action = ASANA_ACTIONS.find((a) => a.action === 'getWorkspaces');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('asana', action.action, connection);
-    expect(response.data).toBeDefined();
-    expect(response.data.length).toBeGreaterThan(0);
+    const { body } = await testApi.execAppAction('asana', action.action, connection);
+    expect(body.data).toBeDefined();
+    expect(body.data.length).toBeGreaterThan(0);
   });
 
   it('Should get a workspace', async () => {
     const action = ASANA_ACTIONS.find((a) => a.action === 'getWorkspace');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('asana', action.action, connection, {
+    const { body } = await testApi.execAppAction('asana', action.action, connection, {
       workspace_gid: workspaceId,
     });
 
-    expect(response.data).toBeDefined();
-    expect(response.data.gid).toBe(workspaceId);
+    expect(body.data).toBeDefined();
+    expect(body.data.gid).toBe(workspaceId);
   });
 
   it('should update a workspace', async () => {
@@ -51,7 +51,7 @@ describe('Tests Asana Actions', () => {
     expect(action).toBeDefined();
 
     const workspaceName = `Updated Workspace Name ${Date.now()}`;
-    const response = await testApi.execAppAction('asana', action.action, connection, {
+    const { body } = await testApi.execAppAction('asana', action.action, connection, {
       workspace_gid: workspaceId,
       body: {
         data: {
@@ -60,8 +60,8 @@ describe('Tests Asana Actions', () => {
       },
     });
 
-    expect(response.data).toBeDefined();
-    expect(response.data.name).toBe(workspaceName);
+    expect(body.data).toBeDefined();
+    expect(body.data.name).toBe(workspaceName);
   });
 
   // Projects
@@ -69,7 +69,7 @@ describe('Tests Asana Actions', () => {
     const action = ASANA_ACTIONS.find((a) => a.action === 'createProject');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('asana', action.action, connection, {
+    const { body } = await testApi.execAppAction('asana', action.action, connection, {
       body: {
         data: {
           name: 'Test Project',
@@ -78,8 +78,8 @@ describe('Tests Asana Actions', () => {
       },
     });
 
-    expect(response.data).toBeDefined();
-    projectId = response.data.gid;
+    expect(body.data).toBeDefined();
+    projectId = body.data.gid;
   });
 
   it('Should update a project', async () => {
@@ -87,7 +87,7 @@ describe('Tests Asana Actions', () => {
     expect(action).toBeDefined();
 
     const projectName = `Updated Project Name ${Date.now()}`;
-    const response = await testApi.execAppAction('asana', action.action, connection, {
+    const { body } = await testApi.execAppAction('asana', action.action, connection, {
       project_gid: projectId,
       body: {
         data: {
@@ -96,34 +96,34 @@ describe('Tests Asana Actions', () => {
       },
     });
 
-    expect(response.data).toBeDefined();
-    expect(response.data.name).toBe(projectName);
+    expect(body.data).toBeDefined();
+    expect(body.data.name).toBe(projectName);
   });
 
   it('Should get all projects', async () => {
     const action = ASANA_ACTIONS.find((a) => a.action === 'getProjects');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('asana', action.action, connection, {
+    const { body } = await testApi.execAppAction('asana', action.action, connection, {
       query: {
         workspace: workspaceId,
       },
     });
 
-    expect(response.data).toBeDefined();
-    expect(response.data.length).toBeGreaterThan(0);
+    expect(body.data).toBeDefined();
+    expect(body.data.length).toBeGreaterThan(0);
   });
 
   it('Should get the project details', async () => {
     const action = ASANA_ACTIONS.find((a) => a.action === 'getProject');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('asana', action.action, connection, {
+    const { body } = await testApi.execAppAction('asana', action.action, connection, {
       project_gid: projectId,
     });
 
-    expect(response.data).toBeDefined();
-    expect(response.data.gid).toBe(projectId);
+    expect(body.data).toBeDefined();
+    expect(body.data.gid).toBe(projectId);
   });
 
   // Tasks
@@ -131,7 +131,7 @@ describe('Tests Asana Actions', () => {
     const action = ASANA_ACTIONS.find((a) => a.action === 'createTask');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('asana', action.action, connection, {
+    const { body } = await testApi.execAppAction('asana', action.action, connection, {
       body: {
         data: {
           name: 'Test Task',
@@ -140,46 +140,46 @@ describe('Tests Asana Actions', () => {
       },
     });
 
-    expect(response.data).toBeDefined();
-    taskId = response.data.gid;
+    expect(body.data).toBeDefined();
+    taskId = body.data.gid;
   });
 
   it('Should get the task details', async () => {
     const action = ASANA_ACTIONS.find((a) => a.action === 'getTask');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('asana', action.action, connection, {
+    const { body } = await testApi.execAppAction('asana', action.action, connection, {
       task_gid: taskId,
     });
 
-    expect(response.data).toBeDefined();
-    expect(response.data.gid).toBe(taskId);
+    expect(body.data).toBeDefined();
+    expect(body.data.gid).toBe(taskId);
   });
 
   it('Should get all tasks', async () => {
     const action = ASANA_ACTIONS.find((a) => a.action === 'getTasks');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('asana', action.action, connection, {
+    const { body } = await testApi.execAppAction('asana', action.action, connection, {
       query: {
         project: projectId,
       },
     });
 
-    expect(response.data).toBeDefined();
-    expect(response.data.length).toBeGreaterThan(0);
+    expect(body.data).toBeDefined();
+    expect(body.data.length).toBeGreaterThan(0);
   });
 
   it('Should get tasks for a project', async () => {
     const action = ASANA_ACTIONS.find((a) => a.action === 'getTasksForProject');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('asana', action.action, connection, {
+    const { body } = await testApi.execAppAction('asana', action.action, connection, {
       project_gid: projectId,
     });
 
-    expect(response.data).toBeDefined();
-    expect(response.data.length).toBeGreaterThan(0);
+    expect(body.data).toBeDefined();
+    expect(body.data.length).toBeGreaterThan(0);
   });
 
   // Tags
@@ -187,7 +187,7 @@ describe('Tests Asana Actions', () => {
     const action = ASANA_ACTIONS.find((a) => a.action === 'createTag');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('asana', action.action, connection, {
+    const { body } = await testApi.execAppAction('asana', action.action, connection, {
       body: {
         data: {
           name: 'Stuff to buy',
@@ -198,41 +198,41 @@ describe('Tests Asana Actions', () => {
       },
     });
 
-    expect(response.data).toBeDefined();
-    tagId = response.data.gid;
+    expect(body.data).toBeDefined();
+    tagId = body.data.gid;
   });
 
   it('Should get tag details', async () => {
     const action = ASANA_ACTIONS.find((a) => a.action === 'getTag');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('asana', action.action, connection, {
+    const { body } = await testApi.execAppAction('asana', action.action, connection, {
       tag_gid: tagId,
     });
 
-    expect(response.data).toBeDefined();
-    expect(response.data.gid).toBe(tagId);
+    expect(body.data).toBeDefined();
+    expect(body.data.gid).toBe(tagId);
   });
 
   it('Should get all tags', async () => {
     const action = ASANA_ACTIONS.find((a) => a.action === 'getTags');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('asana', action.action, connection, {
+    const { body } = await testApi.execAppAction('asana', action.action, connection, {
       query: {
         workspace: workspaceId,
       },
     });
 
-    expect(response.data).toBeDefined();
-    expect(response.data.length).toBeGreaterThan(0);
+    expect(body.data).toBeDefined();
+    expect(body.data.length).toBeGreaterThan(0);
   });
 
   it('Should create a section in project', async () => {
     const action = ASANA_ACTIONS.find((a) => a.action === 'createSectionForProject');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('asana', action.action, connection, {
+    const { body } = await testApi.execAppAction('asana', action.action, connection, {
       project_gid: projectId,
       body: {
         data: {
@@ -241,31 +241,31 @@ describe('Tests Asana Actions', () => {
       },
     });
 
-    expect(response.data).toBeDefined();
-    sectionId = response.data.gid;
+    expect(body.data).toBeDefined();
+    sectionId = body.data.gid;
   });
 
   it('Should get all sections for a project', async () => {
     const action = ASANA_ACTIONS.find((a) => a.action === 'getSectionsForProject');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('asana', action.action, connection, {
+    const { body } = await testApi.execAppAction('asana', action.action, connection, {
       project_gid: projectId,
     });
 
-    expect(response.data).toBeDefined();
-    expect(response.data.length).toBeGreaterThan(0);
+    expect(body.data).toBeDefined();
+    expect(body.data.length).toBeGreaterThan(0);
   });
 
   it('Should get section details', async () => {
     const action = ASANA_ACTIONS.find((a) => a.action === 'getSection');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('asana', action.action, connection, {
+    const { body } = await testApi.execAppAction('asana', action.action, connection, {
       section_gid: sectionId,
     });
 
-    expect(response.data).toBeDefined();
+    expect(body.data).toBeDefined();
   });
 
   it('Should update a section', async () => {
@@ -273,7 +273,7 @@ describe('Tests Asana Actions', () => {
     expect(action).toBeDefined();
 
     const updatedName = `Updated Section Name ${Date.now()}`;
-    const response = await testApi.execAppAction('asana', action.action, connection, {
+    const { body } = await testApi.execAppAction('asana', action.action, connection, {
       section_gid: sectionId,
       body: {
         data: {
@@ -282,19 +282,19 @@ describe('Tests Asana Actions', () => {
       },
     });
 
-    expect(response.data).toBeDefined();
-    expect(response.data.name).toBe(updatedName);
+    expect(body.data).toBeDefined();
+    expect(body.data.name).toBe(updatedName);
   });
 
   it('Should get time periods', async () => {
     const action = ASANA_ACTIONS.find((a) => a.action === 'getTimePeriods');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('asana', action.action, connection, {
+    const { body } = await testApi.execAppAction('asana', action.action, connection, {
       query: { workspace: workspaceId },
     });
-    expect(response.data).toBeDefined();
-    expect(response.data.length).toBeGreaterThan(0);
+    expect(body.data).toBeDefined();
+    expect(body.data.length).toBeGreaterThan(0);
 
     // timePeriodId = response.data[0].gid;
   });
@@ -511,43 +511,43 @@ describe('Tests Asana Actions', () => {
     const action = ASANA_ACTIONS.find((a) => a.action === 'deleteSection');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('asana', action.action, connection, {
+    const { body } = await testApi.execAppAction('asana', action.action, connection, {
       section_gid: sectionId,
     });
 
-    expect(response.data).toBeDefined();
+    expect(body.data).toBeDefined();
   });
 
   it('Should delete the project', async () => {
     const action = ASANA_ACTIONS.find((a) => a.action === 'deleteProject');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('asana', action.action, connection, {
+    const { body } = await testApi.execAppAction('asana', action.action, connection, {
       project_gid: projectId,
     });
 
-    expect(response.data).toBeDefined();
+    expect(body.data).toBeDefined();
   });
 
   it('Should delete the task', async () => {
     const action = ASANA_ACTIONS.find((a) => a.action === 'deleteTask');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('asana', action.action, connection, {
+    const { body } = await testApi.execAppAction('asana', action.action, connection, {
       task_gid: taskId,
     });
 
-    expect(response.data).toBeDefined();
+    expect(body.data).toBeDefined();
   });
 
   it('Should delete the tag', async () => {
     const action = ASANA_ACTIONS.find((a) => a.action === 'deleteTag');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('asana', action.action, connection, {
+    const { body } = await testApi.execAppAction('asana', action.action, connection, {
       tag_gid: tagId,
     });
 
-    expect(response.data).toBeDefined();
+    expect(body.data).toBeDefined();
   });
 });

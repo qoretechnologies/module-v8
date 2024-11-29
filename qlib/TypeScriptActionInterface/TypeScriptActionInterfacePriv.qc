@@ -93,7 +93,8 @@ class TypeScriptActionInterfacePriv {
                     );
                     pstore{pool.uniqueHash()} = pool;
                 } catch (hash<ExceptionInfo> ex) {
-                    stderr.printf("Error loading TypeScript action test script %y: %s\n", path, get_exception_string(ex));
+                    stderr.printf("Error loading TypeScript action test script %y: %s\n", path,
+                        get_exception_string(ex));
                 }
             }
         }

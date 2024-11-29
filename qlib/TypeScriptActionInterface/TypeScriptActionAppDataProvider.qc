@@ -105,7 +105,7 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
         @see getChildProviderEx()
     */
     private *AbstractDataProvider getChildProviderImpl(string name) {
-        if (*TypeScriptActionApiDataProvider prov = childMap{name}) {
+        if (*TypeScriptActionDataProviderBase prov = childMap{name}) {
             if (!prov.getLogger() && logger) {
                 prov.setLogger(logger);
             }
@@ -115,7 +115,14 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
 
     #! Returns data provider static info
     private hash<DataProviderInfo> getStaticInfoImpl() {
-        return ProviderInfo;
+        hash<DataProviderInfo> rv = ProviderInfo;
+        if (TypeScriptActionInterface::appSupportsEvents(name)) {
+            rv.children_can_support_observers = True;
+        }
+        if (TypeScriptActionInterface::appSupportsRecords(name)) {
+            rv.children_can_support_records = True;
+        }
+        return rv;
     }
 }
 }

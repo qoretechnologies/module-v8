@@ -3,19 +3,21 @@ import { slackChannel, slackInfo } from '../common/props';
 
 import { WebClient } from '@slack/web-api';
 import { createAction, Property } from 'core/framework';
-import { IActionResponse } from 'global/models/actions';
+import { TQoreResponseType } from '../../../../global/models/qore';
 import { processMessageTimestamp } from '../common/utils';
 
-const addReactionToMessageResponseType: IActionResponse = {
-  ok: {
-    type: 'boolean',
-    name: 'ok',
-    display_name: 'Success',
-    short_desc: 'Indicates if the reaction was successfully added',
-    desc: 'Indicates if the reaction was successfully added',
-    example_value: true,
+const addReactionToMessageResponseType = {
+  type: 'hash',
+  fields: {
+    ok: {
+      type: 'boolean',
+      display_name: 'Success',
+      short_desc: 'Indicates if the reaction was successfully added',
+      desc: 'Indicates if the reaction was successfully added',
+      example_value: true,
+    },
   },
-};
+} satisfies TQoreResponseType;
 
 export const addReactionToMessageAction = createAction({
   auth: slackAuth,

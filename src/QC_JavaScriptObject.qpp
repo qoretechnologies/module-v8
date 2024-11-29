@@ -106,6 +106,17 @@ bool JavaScriptObject::isConstructor() {
     return o->isConstructor(v8h);
 }
 
+//! Returns the string representation of the object
+/** @return the string representation of the object
+*/
+string JavaScriptObject::toString() {
+    QoreV8ProgramHelper v8h(xsink, o->getProgram());
+    if (*xsink) {
+        return QoreValue();
+    }
+    return o->toString(v8h);
+}
+
 //! Returns the object as data; a hash, list, or call reference
 /** @return converts the object to Qore data; a hash, list, or call reference
 

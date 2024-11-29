@@ -1,17 +1,60 @@
 import { Locales, Translation } from 'i18n/i18n-types';
-import { capitalize, omit, reduce } from 'lodash';
+import { capitalize, get, omit, reduce } from 'lodash';
 import { OpenAPIV2 } from 'openapi-types';
+import toTitleCase from 'to-title-case';
 import {
+  EQoreAppActionCode,
+  EQoreAppActionWebhookAuthType,
+  IAllowedPathData,
   IQoreAppActionOption,
+  IQoreAppActionWithEvent,
+  IQoreAppActionWithEventOrWebhook,
   IQorePartialAppActionWithSwaggerPath,
-  IQoreTypeObject,
-  TQoreAppAction,
+  QoreAppActionCodeToLocale,
+  TAllowedPaths,
+  THttpMethod,
+  TQoreAppActionWithEventOrWebhookEventInfo,
+  TQoreAppActionWithWebhook,
+  TQoreAppEventAction,
+  TQoreAppNonEventAction,
   TQoreOptions,
-  TQorePartialAction,
-  TQoreResponseType,
+  TQorePartialEventAction,
+  TQorePartialNonEventAction,
+  TQoreType,
+  TQoreTypeObject,
   TStringWithFirstUpperCaseCharacter,
 } from '../../global/models/qore';
 import { L } from '../../i18n/i18n-node';
+
+export const createSwaggerPaths = (paths: TAllowedPaths): string[] => {
+  const swaggerPaths: string[] = [];
+
+  Object.entries(paths).forEach(([path]) => {
+    const methods = Object.keys(paths[path]);
+    if (methods.length === 0) {
+      swaggerPaths.push(path);
+    } else {
+      methods.forEach((method) => {
+        swaggerPaths.push(`${path}:${method.toUpperCase()}`);
+      });
+    }
+  });
+
+  return swaggerPaths;
+};
+
+type TAllowedPathWithData = {
+  methods: Set<string>;
+  actionData?: IAllowedPathData;
+  processor?: IAllowedPathData['processor'];
+};
+
+type TBuildActionsFromSwaggerSchemaParams = {
+  schema: OpenAPIV2.Document;
+  allowedPaths?: TAllowedPaths;
+  app?: string;
+  locale?: Locales;
+};
 
 // !IMPORTANT
 // These fields need to be ommited from  each action, they are used for internal purposes
@@ -23,45 +66,78 @@ export const OMMITTED_FIELDS = ['_localizationGroup'] as const;
  * @param allowedPaths - the paths that are allowed
  * @returns IQorePartialAppActionWithSwaggerPath[]
  */
-export const buildActionsFromSwaggerSchema = (
-  schema: OpenAPIV2.Document,
-  allowedPaths?: string[]
-): IQorePartialAppActionWithSwaggerPath[] => {
-  // Check if the schema was provided, return empty actions if not
-  // If the allowedPaths are empty, return empty actions
-  if (!schema || (allowedPaths && !allowedPaths.length)) {
+export const buildActionsFromSwaggerSchema = ({
+  schema,
+  allowedPaths,
+  app,
+  locale = 'en',
+}: TBuildActionsFromSwaggerSchemaParams): IQorePartialAppActionWithSwaggerPath[] => {
+  // Return empty actions if schema or allowedPaths is missing
+  if (!schema || (allowedPaths && Object.keys(allowedPaths).length === 0)) {
     return [];
   }
 
-  // We filter the paths to only include the ones that are allowed
-  const filteredPaths = Object.entries(schema.paths).filter(([path]) =>
-    allowedPaths ? allowedPaths.includes(path) : true
-  );
-
   const actions: IQorePartialAppActionWithSwaggerPath[] = [];
 
-  filteredPaths.forEach(([path, methods]) => {
+  const allowedPathsWithMethods = new Map<string, TAllowedPathWithData>();
+  Object.entries(allowedPaths).forEach(([fullPath, methods]) => {
+    if (Object.keys(methods).length === 0) {
+      allowedPathsWithMethods.set(fullPath, { methods: null });
+
+      return;
+    }
+
+    const methodSet = new Set<string>();
+    Object.entries(methods).forEach(([method]) => {
+      methodSet.add(method.toLowerCase());
+    });
+    allowedPathsWithMethods.set(fullPath, { methods: methodSet });
+  });
+
+  Object.entries(schema.paths).forEach(([path, methods]) => {
+    const allowedPath = allowedPathsWithMethods.get(path);
+
+    if (allowedPathsWithMethods.size > 0 && !allowedPath) return;
+
     Object.entries(methods).forEach(([method, data]) => {
-      // Do not iterate if the method is "parameters"
-      if (method === 'parameters' || typeof data !== 'object') {
-        return;
+      if (method === 'parameters' || typeof data !== 'object') return;
+      const methodKey = method.toLowerCase();
+
+      const isMethodAllowed = !allowedPath?.methods || allowedPath.methods.has(methodKey);
+
+      if (!isMethodAllowed) return;
+
+      const pathData = allowedPaths[path][method.toUpperCase() as THttpMethod];
+      const dataWithoutParameters = data as OpenAPIV2.OperationObject;
+      let actionData = allowedPath?.methods?.has(methodKey) ? pathData || {} : {};
+
+      if (pathData?.processor) {
+        actionData = { ...actionData, ...pathData.processor(dataWithoutParameters) };
       }
 
-      // We need to cast the data to an OperationObject to access the properties
-      // Because typescript is not smart enough to know that the data is an OperationObject after the check of `parameters`
-      const dataWithoutParameters = data as OpenAPIV2.OperationObject;
+      const actionIdentifier = getPropertyOfSchemaData(
+        dataWithoutParameters,
+        'operationId',
+        `${path}/${method}`.replace(/\//g, '_')
+      );
 
-      // Create the action object, we get the properties from the schema or use a fallback
       const action: IQorePartialAppActionWithSwaggerPath = {
-        action: getPropertyOfSchemaData(
-          dataWithoutParameters,
-          'operationId',
-          `${path}/${method}`.replace(/\//g, '_')
-        ),
+        action: actionIdentifier,
+        action_code: EQoreAppActionCode.ACTION,
         swagger_path: `${path}/${method.toUpperCase()}`,
-        display_name: getPropertyOfSchemaData(dataWithoutParameters, 'summary', ''),
-        short_desc: getPropertyOfSchemaData(dataWithoutParameters, 'summary', ''),
-        desc: getPropertyOfSchemaData(dataWithoutParameters, 'description', ''),
+        display_name:
+          // @ts-expect-error no idea whats going on here, will fix later
+          L[locale].apps[app].actions[actionIdentifier as unknown].displayName() ||
+          getPropertyOfSchemaData(dataWithoutParameters, 'summary', ''),
+        short_desc:
+          // @ts-expect-error no idea whats going on here, will fix later
+          L[locale].apps[app].actions[actionIdentifier as unknown].shortDesc() ||
+          getPropertyOfSchemaData(dataWithoutParameters, 'summary', ''),
+        desc:
+          // @ts-expect-error no idea whats going on here, will fix later
+          L[locale].apps[app].actions[actionIdentifier as unknown].longDesc() ||
+          getPropertyOfSchemaData(dataWithoutParameters, 'description', ''),
+        ...actionData,
       };
 
       actions.push(action);
@@ -77,10 +153,44 @@ export const getPropertyOfSchemaData = (
   fallback?: string
 ) => {
   if (typeof data === 'object' && key in data) {
-    return data[key] as string;
+    return String(data[key]).replace(/\//g, '-');
   }
 
   return fallback || '';
+};
+
+export const getLocaleField = (
+  app: string,
+  locale: Locales,
+  action: TQorePartialEventAction | TQorePartialNonEventAction,
+  fieldName: 'display_name' | 'short_desc' | 'desc'
+) => {
+  const fieldValue = action[fieldName];
+  if (fieldValue) {
+    return fieldName === 'display_name' ? toTitleCase(fieldValue) : fieldValue;
+  }
+
+  const fieldNameToLocaleName = {
+    display_name: 'displayName',
+    short_desc: 'shortDesc',
+    desc: 'longDesc',
+  };
+
+  const localeField = get(L[locale], [
+    'apps',
+    app,
+    QoreAppActionCodeToLocale[action.action_code],
+    action.action,
+    fieldNameToLocaleName[fieldName],
+  ])();
+
+  if (localeField) {
+    return localeField;
+  }
+
+  const fallbackValue = action.action.replace(/_/g, ' ').replace(/([a-z])([A-Z])/g, '$1 $2');
+
+  return fieldName === 'display_name' ? toTitleCase(fallbackValue) : capitalize(fallbackValue);
 };
 
 /*
@@ -92,105 +202,27 @@ export const getPropertyOfSchemaData = (
  */
 export const mapActionsToApp = (
   app: keyof Translation['apps'],
-  actions: Record<string, TQorePartialAction> | TQorePartialAction[],
+  actions: Record<string, TQorePartialNonEventAction> | TQorePartialNonEventAction[],
   locale: Locales
-): TQoreAppAction[] => {
+): TQoreAppNonEventAction[] => {
   return Object.entries(actions).map(([_a, action]) => ({
-    ...omit(action, OMMITTED_FIELDS),
-
-    display_name:
-      action.display_name ||
-      // @ts-expect-error no idea whats going on here, will fix later
-      L[locale].apps[app].actions[action.action as unknown].displayName() ||
-      capitalize(action.action.replace(/_/g, ' ')),
-
-    short_desc:
-      action.short_desc ||
-      // @ts-expect-error no idea whats going on here, will fix later
-      L[locale].apps[app].actions[action.action as unknown].shortDesc() ||
-      capitalize(action.action.replace(/_/g, ' ')),
-
-    desc:
-      action.desc ||
-      // @ts-expect-error no idea whats going on here, will fix later
-      L[locale].apps[app].actions[action.action as unknown].longDesc() ||
-      capitalize(action.action.replace(/_/g, ' ')),
+    ...action,
+    display_name: getLocaleField(app, locale, action, 'display_name'),
+    short_desc: getLocaleField(app, locale, action, 'short_desc'),
+    desc: getLocaleField(app, locale, action, 'desc'),
     app,
-    action_code: 2,
-
-    options:
-      'options' in action
-        ? fixActionOptions(action.options, app, locale, action._localizationGroup)
+    options: 'options' in action ? fixOptions(action, action.options, app, locale) : undefined,
+    override_options:
+      'override_options' in action
+        ? fixOptions(action, action.override_options, app, locale)
         : undefined,
     response_type:
       'response_type' in action
-        ? fixActionType(action.response_type, app, locale, action._localizationGroup)
+        ? typeof action.response_type === 'string'
+          ? action.response_type
+          : fixResponseOrEventInfo(action.response_type, app, locale, action)
         : undefined,
   }));
-};
-
-export const fixActionType = (
-  collection: TQoreResponseType,
-  appName: string,
-  locale: Locales,
-  localeGroup: string
-): TQoreResponseType => {
-  return reduce(
-    collection,
-    (newCollection: TQoreResponseType, type: IQoreTypeObject, key: string): TQoreResponseType => {
-      return {
-        ...newCollection,
-        [key]: {
-          ...type,
-          type:
-            typeof type.type === 'object'
-              ? fixActionType(type.type, appName, locale, localeGroup)
-              : type.type,
-          display_name:
-            // @ts-expect-error no idea whats going on here, will fix later
-            type.display_name || L[locale].apps[appName].actions[localeGroup][key].displayName(),
-          short_desc:
-            // @ts-expect-error no idea whats going on here, will fix later
-            type.short_desc || L[locale].apps[appName].actions[localeGroup][key].shortDesc(),
-          // @ts-expect-error no idea whats going on here, will fix later
-          desc: type.desc || L[locale].apps[appName].actions[localeGroup][key].longDesc(),
-        },
-      };
-    },
-    {}
-  );
-};
-
-export const fixActionOptions = (
-  collection: TQoreOptions,
-  appName: string,
-  locale: Locales,
-  localeGroup: string
-): TQoreOptions => {
-  return reduce(
-    collection,
-    (newCollection: TQoreOptions, option: IQoreAppActionOption, key: string): TQoreOptions => {
-      return {
-        ...newCollection,
-        [key]: {
-          ...option,
-          type:
-            typeof option.type === 'object'
-              ? fixActionType(option.type, appName, locale, localeGroup)
-              : option.type,
-          display_name:
-            // @ts-expect-error no idea whats going on here, will fix later
-            option.display_name || L[locale].apps[appName].actions[localeGroup][key].displayName(),
-          short_desc:
-            // @ts-expect-error no idea whats going on here, will fix later
-            option.short_desc || L[locale].apps[appName].actions[localeGroup][key].shortDesc(),
-          // @ts-expect-error no idea whats going on here, will fix later
-          desc: option.desc || L[locale].apps[appName].actions[localeGroup][key].longDesc(),
-        },
-      };
-    },
-    {}
-  );
 };
 
 /*
@@ -212,4 +244,181 @@ export const normalizeName = (appName: string): string => {
 
 export const normalizeAppName = (appName: string): TStringWithFirstUpperCaseCharacter => {
   return capitalize(normalizeName(appName)) as TStringWithFirstUpperCaseCharacter;
+};
+
+export const mapTriggersToApp = (
+  app: keyof Translation['apps'],
+  triggers: Record<string, TQorePartialEventAction> | TQorePartialEventAction[],
+  locale: Locales
+): TQoreAppEventAction[] => {
+  return Object.entries(triggers).map(([_a, trigger]) => {
+    const eventInfo: TQoreAppActionWithEventOrWebhookEventInfo =
+      'event_info' in trigger
+        ? {
+            ...trigger.event_info,
+            type: fixResponseOrEventInfo(trigger.event_info.type, app, locale, trigger),
+            desc:
+              trigger.event_info.desc ||
+              // @ts-expect-error no idea whats going on here, will fix later
+              L[locale].apps[app].triggers[trigger.action].event_info.desc(),
+          }
+        : undefined;
+
+    // Base trigger with common fields
+    const baseAction = {
+      ...omit(trigger, OMMITTED_FIELDS),
+      action: trigger.action,
+      action_code: EQoreAppActionCode.EVENT,
+      display_name: getLocaleField(app, locale, trigger, 'display_name'),
+      short_desc: getLocaleField(app, locale, trigger, 'short_desc'),
+      desc: getLocaleField(app, locale, trigger, 'desc'),
+      app,
+      options: 'options' in trigger ? fixOptions(trigger, trigger.options, app, locale) : undefined,
+      event_info: eventInfo,
+    } satisfies IQoreAppActionWithEventOrWebhook;
+
+    if ('event_function' in trigger) {
+      return {
+        ...baseAction,
+        event_function: trigger.event_function,
+      } satisfies IQoreAppActionWithEvent;
+    }
+
+    if ('webhook_method' in trigger) {
+      return {
+        ...baseAction,
+        ...(trigger.webhook_auth === EQoreAppActionWebhookAuthType.AUTH_REQUIRE_AUTH
+          ? {
+              webhook_auth: EQoreAppActionWebhookAuthType.AUTH_REQUIRE_AUTH,
+              webhook_perms: trigger.webhook_perms,
+            }
+          : {
+              webhook_auth: EQoreAppActionWebhookAuthType.AUTH_NONE,
+            }),
+        webhook_method: trigger.webhook_method,
+        webhook_register: trigger.webhook_register,
+        webhook_deregister: trigger.webhook_deregister,
+      } as TQoreAppActionWithWebhook;
+    }
+  });
+};
+
+export const fixResponseOrEventInfo = (
+  type: TQoreTypeObject,
+  appName: string,
+  locale: Locales,
+  action: TQorePartialEventAction | TQorePartialNonEventAction
+): TQoreTypeObject => {
+  const localeActionType = QoreAppActionCodeToLocale[action.action_code];
+  const infoField =
+    localeActionType === QoreAppActionCodeToLocale[EQoreAppActionCode.ACTION]
+      ? 'response_type'
+      : 'event_info';
+
+  // Adjusted for new path structure
+  const getLocalizedField = (field: string, path: string[]): string => {
+    const localizationPath = ['apps', appName, localeActionType, action.action, infoField, ...path];
+    const localization = get(L[locale], localizationPath);
+
+    return localization[field]?.() || '';
+  };
+
+  const processCollection = (
+    collection: Record<string, IQoreAppActionOption>,
+    path: string[] = []
+  ): Record<string, IQoreAppActionOption> => {
+    return reduce(
+      collection,
+      (
+        newCollection: Record<string, IQoreAppActionOption>,
+        field: IQoreAppActionOption,
+        key: string
+      ): Record<string, IQoreAppActionOption> => {
+        const currentPath = [...path, 'type', 'fields', key];
+        let fieldType = undefined;
+
+        if (typeof field.type === 'object' && field.type.type === 'hash') {
+          const fields = processCollection(field.type.fields, [...currentPath]);
+          fieldType = {
+            ...field.type,
+            fields,
+          };
+        }
+
+        const updatedField = {
+          ...field,
+          ...(fieldType && { type: fieldType }),
+          display_name: field.display_name || getLocalizedField('displayName', currentPath),
+          short_desc: field.short_desc || getLocalizedField('shortDesc', currentPath),
+          desc: field.desc || getLocalizedField('longDesc', currentPath),
+        } satisfies IQoreAppActionOption;
+
+        return {
+          ...newCollection,
+          [key]: updatedField,
+        };
+      },
+      {}
+    );
+  };
+
+  if (type?.type !== 'hash') {
+    return type;
+  }
+
+  type.fields = processCollection(type.fields);
+
+  return type;
+};
+
+export const fixOptions = (
+  action: TQorePartialEventAction | TQorePartialNonEventAction,
+  collection: TQoreOptions | Record<string, Partial<IQoreAppActionOption>>,
+  appName: string,
+  locale: Locales
+): TQoreOptions => {
+  const actionType = QoreAppActionCodeToLocale[action.action_code];
+  const getLocalizedField = (field: string, path: string[]): string => {
+    const localizationPath = ['apps', appName, actionType, action.action, 'options', ...path];
+    const localization = get(L[locale], localizationPath);
+
+    return localization[field]?.() || '';
+  };
+
+  const processCollection = (
+    collection: TQoreOptions | Record<string, Partial<IQoreAppActionOption>>,
+    path: string[] = []
+  ): TQoreOptions => {
+    return reduce(
+      collection,
+      (fixedOptions: TQoreOptions, option: IQoreAppActionOption, key: string): TQoreOptions => {
+        const currentPath = [...path, key];
+        let optionType = undefined;
+
+        if (typeof option.type === 'object' && option.type.type === 'hash') {
+          const fields = processCollection(option.type.fields, [...currentPath, 'type', 'fields']);
+          optionType = {
+            ...option.type,
+            fields,
+          };
+        }
+
+        const updatedOption: IQoreAppActionOption<TQoreType, unknown> = {
+          ...option,
+          ...(optionType && { type: optionType }),
+          display_name: option.display_name || getLocalizedField('displayName', currentPath),
+          short_desc: option.short_desc || getLocalizedField('shortDesc', currentPath),
+          desc: option.desc || getLocalizedField('longDesc', currentPath),
+        };
+
+        return {
+          ...fixedOptions,
+          [key]: updatedOption,
+        };
+      },
+      {}
+    );
+  };
+
+  return processCollection(collection);
 };

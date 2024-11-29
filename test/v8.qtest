@@ -437,6 +437,62 @@ async function runAsync(a, b) {
             assertEq("Test error", h.error.message);
             assertEq(Type::String, h.error.stack.type());
         }
+
+        {
+            JavaScriptProgram js("
+async function doPromise() {
+    setTimeout(function() {}, 1);
+    throw new Error('Test error');
+}
+
+async function tp() {
+    return doPromise().then((v) => {
+        console.log('then:', v);
+    }, (e) => {
+        //console.log('reject:', e);
+    }).catch((e) => {
+        console.log('catch:', e);
+    });
+}
+", "test.js");
+            code f = js.getGlobal().getProperty("tp").toData();
+            JavaScriptPromise p = f();
+            p.wait();
+            assertEq(Fulfilled, p.getState());
+        }
+
+        {
+            JavaScriptProgram js("
+async function doPromise() {
+    setTimeout(function() {}, 1);
+    throw new Error('Test error');
+}
+", "test.js");
+            code f = js.getGlobal().getProperty("doPromise").toData();
+            JavaScriptPromise p = f();
+            hash<auto> h;
+            p = p.then(sub (auto v) {
+                h = {
+                    "loc": "then",
+                    "val": v,
+                };
+            }, sub (auto e) {
+                h = {
+                    "loc": "reject",
+                    "val": e,
+                };
+            }).doCatch(sub (auto e) {
+                h = {
+                    "loc": "catch",
+                    "val": e,
+                };
+            });
+            assertEq(Pending, p.getState());
+            p.wait();
+            assertEq(Fulfilled, p.getState());
+            assertEq("reject", h.loc);
+            assertEq("Error: Test error", h.val.toString());
+        }
     }
 
     JavaScriptProgram getEventProgram() {

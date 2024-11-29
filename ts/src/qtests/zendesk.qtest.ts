@@ -83,9 +83,9 @@ describe('Tests Zendesk Actions', () => {
     it('Should delete a ticket', () => {
       testApi.execAppAction('zendesk', 'DeleteTicket', connection, { ticket_id: ticketID });
 
-      const tickets = testApi.execAppAction('zendesk', 'ListTickets', connection);
+      const { body } = testApi.execAppAction('zendesk', 'ListTickets', connection);
 
-      expect(tickets.tickets.length).toBe(ticketCount - 1);
+      expect(body.tickets.length).toBe(ticketCount - 1);
     });
   });
 
@@ -106,8 +106,8 @@ describe('Tests Zendesk Actions', () => {
       const { body } = testApi.execAppAction('zendesk', 'CreateUser', connection, {
         body: {
           user: {
-            name: 'John Doe',
-            email: 'john@doe.com',
+            name: 'Testing 312',
+            email: 'email123@email.com',
           },
         },
       });
@@ -116,11 +116,11 @@ describe('Tests Zendesk Actions', () => {
 
       userID = body.user.id;
 
-      const users = testApi.execAppAction('zendesk', 'ListUsers', connection);
+      const { body: listUsersBody } = testApi.execAppAction('zendesk', 'ListUsers', connection);
 
-      expect(users.users.length).toBe(usersCount + 1);
+      expect(listUsersBody.users.length).toBe(usersCount + 1);
 
-      usersCount = users.users.length;
+      usersCount = listUsersBody.users.length;
     });
 
     it('Should get a user by ID', () => {
@@ -149,13 +149,158 @@ describe('Tests Zendesk Actions', () => {
 
     it('Should delete a user', () => {
       testApi.execAppAction('zendesk', 'DeleteUser', connection, { user_id: userID });
-      testApi.execAppAction('zendesk', 'PermanentlyDeleteUser', connection, {
-        deleted_user_id: userID,
+      // testApi.execAppAction('zendesk', 'PermanentlyDeleteUser', connection, {
+      //   deleted_user_id: userID,
+      // });
+
+      const { body } = testApi.execAppAction('zendesk', 'ListUsers', connection);
+
+      expect(body.users.length).toBe(usersCount - 1);
+    });
+  });
+
+  describe('Should test Organization Actions', () => {
+    let orgID: number;
+    let orgCount: number;
+
+    it('Should get all organizations', () => {
+      const { body } = testApi.execAppAction('zendesk', 'ListOrganizations', connection);
+
+      expect(body).toHaveProperty('organizations');
+      expect(body.organizations.length).toBeGreaterThan(0);
+
+      orgCount = body.organizations.length;
+    });
+
+    it(`Should create a new organization`, () => {
+      const { body } = testApi.execAppAction('zendesk', 'CreateOrganization', connection, {
+        body: {
+          organization: {
+            name: 'TestingOrg2',
+          },
+        },
       });
 
-      const users = testApi.execAppAction('zendesk', 'ListUsers', connection);
+      expect(body).toHaveProperty('organization.id');
 
-      expect(users.users.length).toBe(usersCount - 1);
+      orgID = body.organization.id;
+
+      const { body: listOrgsBody } = testApi.execAppAction(
+        'zendesk',
+        'ListOrganizations',
+        connection
+      );
+
+      expect(listOrgsBody.organizations.length).toBe(orgCount + 1);
+
+      orgCount = listOrgsBody.organizations.length;
+    });
+
+    it('Should get an organization by ID', () => {
+      const { body } = testApi.execAppAction('zendesk', 'ShowOrganization', connection, {
+        organization_id: orgID,
+      });
+
+      expect(body).toHaveProperty('organization');
+      expect(body.organization.id).toBe(orgID);
+    });
+
+    it('Should delete an organization', () => {
+      testApi.execAppAction('zendesk', 'DeleteOrganization', connection, {
+        organization_id: orgID,
+      });
+
+      const { body } = testApi.execAppAction('zendesk', 'ListOrganizations', connection);
+
+      expect(body.organizations.length).toBe(orgCount - 1);
+    });
+  });
+
+  // describe('Should test Macro Actions', () => {
+  //   let macroID: number;
+  //   let macroCount: number;
+
+  //   it('Should get all macros', () => {
+  //     const { body } = testApi.execAppAction('zendesk', 'ListMacros', connection);
+
+  //     expect(body).toHaveProperty('macros');
+  //     expect(body.macros.length).toBeGreaterThan(0);
+
+  //     macroCount = body.macros.length;
+  //   });
+
+  //   it(`Should create a new macro`, () => {
+  //     const { body } = testApi.execAppAction('zendesk', 'CreateMacro', connection, {
+  //       body: {
+  //         macro: {
+  //           title: 'Test Macro',
+  //           actions: [
+  //             {
+  //               field: 'status',
+  //               value: 'open',
+  //             },
+  //           ],
+  //         },
+  //       },
+  //     });
+
+  //     expect(body).toHaveProperty('macro.id');
+
+  //     macroID = body.macro.id;
+
+  //     const { body: listMacrosBody } = testApi.execAppAction('zendesk', 'ListMacros', connection);
+
+  //     expect(listMacrosBody.macros.length).toBe(macroCount + 1);
+
+  //     macroCount = listMacrosBody.macros.length;
+  //   });
+
+  //   it('Should get a macro by ID', () => {
+  //     const { body } = testApi.execAppAction('zendesk', 'ShowMacro', connection, {
+  //       macro_id: macroID,
+  //     });
+
+  //     expect(body).toHaveProperty('macro');
+  //     expect(body.macro.id).toBe(macroID);
+  //   });
+
+  //   it('Should delete a macro', () => {
+  //     testApi.execAppAction('zendesk', 'DeleteMacro', connection, { macro_id: macroID });
+
+  //     const { body } = testApi.execAppAction('zendesk', 'ListMacros', connection);
+
+  //     expect(body.macros.length).toBe(macroCount - 1);
+  //   });
+  // });
+
+  describe('Should test Search Actions', () => {
+    it('Should search for tickets', () => {
+      const { body } = testApi.execAppAction('zendesk', 'ListSearchResults', connection, {
+        query: {
+          query: 'status:open',
+        },
+      });
+
+      expect(body).toHaveProperty('results');
+      expect(body.results.length).toBeGreaterThan(0);
+    });
+  });
+
+  // describe('Should test Ticket Fields Actions', () => {
+  //   it('Should get all ticket fields', () => {
+  //     const { body } = testApi.execAppAction('zendesk', 'ListTicketFields', connection);
+
+  //     expect(body).toHaveProperty('ticket_fields');
+  //     expect(body.ticket_fields.length).toBeGreaterThan(0);
+  //   });
+  // });
+
+  describe('Should test Ticket Metrics Actions', () => {
+    it('Should get all ticket metrics', () => {
+      const { body } = testApi.execAppAction('zendesk', 'ListTicketMetrics', connection);
+
+      expect(body).toHaveProperty('ticket_metrics');
+      expect(body.ticket_metrics.length).toBeGreaterThan(0);
     });
   });
 });

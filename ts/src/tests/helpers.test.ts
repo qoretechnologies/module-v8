@@ -1,24 +1,20 @@
 import {
-  IQoreAppActionWithFunction,
+  EQoreAppActionCode,
   IQorePartialAppActionWithSwaggerPath,
-  IQoreTypeObject,
+  TQoreTypeObject,
+  TQoreOptions,
+  TQorePartialEventAction,
 } from 'global/models/qore';
 import { OpenAPIV2 } from 'openapi-types';
-import * as zendeskActions from '../apps/zendesk/actions';
-import {
-  buildActionsFromSwaggerSchema,
-  fixActionOptions,
-  mapActionsToApp,
-} from '../global/helpers';
-import { IActionOptions } from '../global/models/actions';
+import { buildActionsFromSwaggerSchema, fixOptions, mapTriggersToApp } from '../global/helpers';
 import eSignature from '../schemas/esignature.swagger.json';
 
 describe('Helpers tests', () => {
-  it.only('Properly parses a swagger schema and creates actions', () => {
-    const actions: IQorePartialAppActionWithSwaggerPath[] = buildActionsFromSwaggerSchema(
-      eSignature as OpenAPIV2.Document,
-      ['/v2.1/accounts', '/v2.1/accounts/{accountId}/connect/oauth']
-    );
+  it('Properly parses a swagger schema and creates actions', () => {
+    const actions: IQorePartialAppActionWithSwaggerPath[] = buildActionsFromSwaggerSchema({
+      schema: eSignature as OpenAPIV2.Document,
+      allowedPaths: { '/v2.1/accounts': {}, '/v2.1/accounts/{accountId}/connect/oauth': {} },
+    });
 
     expect(actions).toHaveLength(5);
     expect(actions[0].action).toBe('Accounts_PostAccounts');
@@ -27,110 +23,192 @@ describe('Helpers tests', () => {
     expect(actions[0].short_desc).toBe('Creates new accounts.');
   });
 
-  it('Properly maps actions to a given app', () => {
-    const actions = mapActionsToApp('Zendesk', zendeskActions, 'en');
-    const createTicket = actions.find(
-      (action) => action.action === 'create_ticket'
-    ) as IQoreAppActionWithFunction;
+  it('Properly parses a swagger schema and creates actions with filtered methods', () => {
+    const actionsWithoutFilter: IQorePartialAppActionWithSwaggerPath[] =
+      buildActionsFromSwaggerSchema({
+        schema: eSignature as OpenAPIV2.Document,
+        allowedPaths: {
+          '/v2.1/accounts/{accountId}': {},
+        },
+      });
 
-    expect(actions).toHaveLength(23);
-    expect(createTicket).toBeDefined();
-  });
+    expect(actionsWithoutFilter).toHaveLength(2);
+    expect(actionsWithoutFilter[0].action).toBe('Accounts_GetAccount');
+    expect(actionsWithoutFilter[1].action).toBe('Accounts_DeleteAccount');
 
-  it('Should receive fully incomplete action options and return fixed options', () => {
-    const incompleteOptions = {
-      option1: {
-        type: 'string',
-        example_value: 'example',
-        required: true,
-      },
-    } satisfies IActionOptions;
-
-    const fixedOptions = fixActionOptions(incompleteOptions, '_testing', 'en', 'test');
-
-    expect(fixedOptions.option1.display_name).toBe('Option 1');
-    expect(fixedOptions.option1.short_desc).toBe('Option 1 Short Description');
-    expect(fixedOptions.option1.desc).toBe('Option 1 Long Description');
-  });
-
-  it('Should receive partially incomplete action options and return fixed options', () => {
-    const incompleteOptions = {
-      option1: {
-        type: 'string',
-        example_value: 'example',
-        required: true,
-        short_desc: 'This is my short description and it should not change',
-      },
-    } satisfies IActionOptions;
-
-    const fixedOptions = fixActionOptions(incompleteOptions, '_testing', 'en', 'test');
-
-    expect(fixedOptions.option1.display_name).toBe('Option 1');
-    expect(fixedOptions.option1.short_desc).toBe(
-      'This is my short description and it should not change'
+    const actionsWithFilter: IQorePartialAppActionWithSwaggerPath[] = buildActionsFromSwaggerSchema(
+      {
+        schema: eSignature as OpenAPIV2.Document,
+        allowedPaths: { '/v2.1/accounts/{accountId}': { DELETE: {} } },
+      }
     );
-    expect(fixedOptions.option1.desc).toBe('Option 1 Long Description');
+
+    expect(actionsWithFilter).toHaveLength(1);
+    expect(actionsWithFilter[0].action).toBe('Accounts_DeleteAccount');
+  });
+
+  it('Properly parses a swagger schema and creates actions with changed action data', () => {
+    const actionsWithFilter: IQorePartialAppActionWithSwaggerPath[] = buildActionsFromSwaggerSchema(
+      {
+        schema: eSignature as OpenAPIV2.Document,
+        allowedPaths: {
+          '/v2.1/accounts/{accountId}': {
+            DELETE: {
+              display_name: 'Testing name',
+            },
+          },
+        },
+      }
+    );
+
+    expect(actionsWithFilter).toHaveLength(1);
+    expect(actionsWithFilter[0].action).toBe('Accounts_DeleteAccount');
+    expect(actionsWithFilter[0].display_name).toBe('Testing name');
+    expect(actionsWithFilter[0].short_desc).toBeDefined();
+  });
+
+  it('Properly parses a swagger schema and creates actions with changed data using processor', () => {
+    let newDisplayName;
+    const actionsWithFilter: IQorePartialAppActionWithSwaggerPath[] = buildActionsFromSwaggerSchema(
+      {
+        schema: eSignature as OpenAPIV2.Document,
+        allowedPaths: {
+          '/v2.1/accounts/{accountId}': {
+            DELETE: {
+              processor: (data) => {
+                newDisplayName = data.summary;
+
+                return { display_name: data.summary };
+              },
+            },
+          },
+        },
+      }
+    );
+
+    expect(actionsWithFilter).toHaveLength(1);
+    expect(actionsWithFilter[0].action).toBe('Accounts_DeleteAccount');
+    expect(actionsWithFilter[0].display_name).toBe(newDisplayName);
+    expect(actionsWithFilter[0].short_desc).toBeDefined();
   });
 
   it('Should receive partially incomplete deep action options and return fixed deep options', () => {
     const incompleteOptions = {
       option1: {
+        type: {
+          type: 'hash',
+          fields: {
+            subOption1: {
+              type: 'string',
+              required: true,
+            },
+            subOption2: {
+              required: true,
+              type: {
+                type: 'hash',
+                fields: {
+                  subSubOption1: {
+                    desc: 'Deep option',
+                    type: 'string',
+                    required: true,
+                  },
+                },
+              },
+            },
+          },
+        },
+        example_value: {
+          subOption1: 'example',
+          subOption2: {
+            subSubOption1: 'example',
+          },
+        },
+        required: true,
+      },
+      option2: {
         type: 'string',
         example_value: 'example',
         required: true,
-        short_desc: 'This is my short description and it should not change',
       },
-      option2: {
-        example_value: {
-          sub_option1: 'example',
-        },
-        type: {
-          sub_option1: {
-            name: 'sub_option1',
+    } satisfies TQoreOptions;
+
+    const fixedOptions = fixOptions(
+      { options: incompleteOptions, action: 'test', action_code: EQoreAppActionCode.ACTION },
+      incompleteOptions,
+      '_testing',
+      'en'
+    );
+
+    expect(fixedOptions.option2.display_name).toBe('Second Option');
+    expect(fixedOptions.option1.display_name).toBe('Option 1');
+    const option1Fields = (fixedOptions.option1.type as TQoreTypeObject).fields;
+    expect(option1Fields.subOption1.display_name).toBe('Sub Option 1 of option 1');
+    expect(option1Fields.subOption2.display_name).toBe('Sub Option 2 of option 1');
+
+    const subOption2Fields = (option1Fields.subOption2.type as TQoreTypeObject).fields;
+    const subSubOption1 = subOption2Fields.subSubOption1;
+    expect(subSubOption1.display_name).toBe('Sub Sub Option 1');
+    expect(subSubOption1.desc).toBe('Deep option');
+    expect(subSubOption1.short_desc).toBe('Sub Sub Option 1 Short Description');
+
+    expect(subOption2Fields.subSubOption1.short_desc).toBe('Sub Sub Option 1 Short Description');
+  });
+});
+
+it('Should map a trigger to app', () => {
+  const trigger = {
+    action: '_testing',
+    action_code: EQoreAppActionCode.EVENT,
+    event_info: {
+      desc: 'Test event',
+      type: {
+        type: 'hash',
+        fields: {
+          testTriggerInfo: {
             type: {
-              sub_sub_option1: {
-                name: 'sub_sub_option1',
-                display_name: 'This option is so deep',
-                type: 'string',
-                example_value: 'example',
-                required: true,
-                short_desc: 'Very very deep',
+              type: 'hash',
+              fields: {
+                testTriggerInfo1: {
+                  type: 'string',
+                },
               },
             },
-            example_value: 'example',
-            required: true,
-            desc: 'A sub description, if you like',
           },
         },
       },
-    } as const;
+    },
+    webhook_register: async () => {
+      return await Promise.resolve();
+    },
+    webhook_deregister: async () => {
+      return await Promise.resolve();
+    },
+    webhook_method: 'POST',
+    options: {
+      option1: {
+        type: 'string',
+        example_value: 'example',
+        required: true,
+      },
+      option2: {
+        type: 'string',
+        example_value: 'example',
+        required: true,
+      },
+    },
+  } satisfies TQorePartialEventAction;
 
-    const fixedOptions = fixActionOptions(incompleteOptions, '_testing', 'en', 'test');
+  const mappedTriggers = mapTriggersToApp('_testing', [trigger], 'en');
 
-    expect(fixedOptions.option2.display_name).toBe('Second Option');
+  expect(mappedTriggers).toHaveLength(1);
+  expect(mappedTriggers[0].options.option1.desc).toBe('Option 1 Long Description');
+  expect(mappedTriggers[0].options.option1.short_desc).toBe('Option 1 Short Description');
+  expect(mappedTriggers[0].event_info.desc).toBe('Test event');
+  expect(mappedTriggers[0].event_info.type.fields.testTriggerInfo.short_desc).toBe(
+    'Test Trigger Info Short Description'
+  );
 
-    expect(
-      (fixedOptions.option2.type as Record<string, IQoreTypeObject>).sub_option1.display_name
-    ).toBe('Sub Option 1 of Option 2');
-    expect((fixedOptions.option2.type as Record<string, IQoreTypeObject>).sub_option1.desc).toBe(
-      'A sub description, if you like'
-    );
-
-    expect(
-      (
-        (fixedOptions.option2.type as Record<string, IQoreTypeObject>).sub_option1.type as Record<
-          string,
-          IQoreTypeObject
-        >
-      ).sub_sub_option1.display_name
-    ).toBe('This option is so deep');
-    expect(
-      (
-        (fixedOptions.option2.type as Record<string, IQoreTypeObject>).sub_option1.type as Record<
-          string,
-          IQoreTypeObject
-        >
-      ).sub_sub_option1.desc
-    ).toBe('Generated description');
-  });
+  const subInfo = (mappedTriggers[0].event_info.type.fields.testTriggerInfo.type as TQoreTypeObject)
+    .fields;
+  expect(subInfo.testTriggerInfo1.display_name).toBe('Test Trigger Info 1');
 });

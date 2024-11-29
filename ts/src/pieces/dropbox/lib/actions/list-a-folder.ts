@@ -1,25 +1,46 @@
+import { AuthenticationType, httpClient, HttpMethod } from 'core/common';
 import { createAction, Property } from 'core/framework';
-import { httpClient, HttpMethod, AuthenticationType } from 'core/common';
 import { dropboxAuth } from '../../';
-import { IActionResponse } from '../../../../global/models/actions';
+import { TQoreResponseType } from '../../../../global/models/qore';
 
-const dropboxListAFolderResponseType: IActionResponse = {
-  entries: {
-    name: 'entries',
-    display_name: 'Entries',
-    desc: 'The list of entries in the folder',
-    short_desc: 'The list of entries in the folder',
-    type: 'list',
-    example_value: [
-      {
-        name: 'copied-test-file.txt',
-        path_lower: '/testing/copied-test-file.txt',
-        path_display: '/testing/copied-test-file.txt',
-        id: 'id:PN3VV_MUE2QAAAAAAAAASw',
+const dropboxListAFolderResponseType = {
+  type: 'hash',
+  fields: {
+    entries: {
+      display_name: 'Entries',
+      desc: 'The list of entries in the folder',
+      short_desc: 'The list of entries in the folder',
+      type: {
+        type: 'list',
+        element_type: {
+          type: 'hash',
+          fields: {
+            name: {
+              type: 'string',
+            },
+            path_lower: {
+              type: 'string',
+            },
+            path_display: {
+              type: 'string',
+            },
+            id: {
+              type: 'string',
+            },
+          },
+        },
       },
-    ],
+      example_value: [
+        {
+          name: 'copied-test-file.txt',
+          path_lower: '/testing/copied-test-file.txt',
+          path_display: '/testing/copied-test-file.txt',
+          id: 'id:PN3VV_MUE2QAAAAAAAAASw',
+        },
+      ],
+    },
   },
-};
+} satisfies TQoreResponseType;
 
 export const dropboxListAFolder = createAction({
   auth: dropboxAuth,

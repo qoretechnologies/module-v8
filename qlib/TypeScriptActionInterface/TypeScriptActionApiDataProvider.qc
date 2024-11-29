@@ -24,23 +24,8 @@
 
 #! Main namespace for the TypeScriptActionInterface module
 public namespace TypeScriptActionInterface {
-#! Data provider reference data context info
-public hashdecl RefDataContextInfo {
-    #! Connection name
-    *string conn_name;
-
-    #! Connection option info
-    *hash<auto> conn_opts;
-
-    #! Action options with known values
-    *hash<auto> opts;
-
-    #! User-defined information
-    *hash<auto> info;
-}
-
 #! Generic API data provider for TypeScript actions
-class TypeScriptActionApiDataProvider inherits AbstractDataProvider {
+class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProviderBase {
     public {
         #! Provider info
         const ProviderInfo = <DataProviderInfo>{
@@ -55,66 +40,79 @@ class TypeScriptActionApiDataProvider inherits AbstractDataProvider {
     }
 
     private {
-        string name;
         hash<AsyncCallInfo> api;
         *AbstractDataProviderType request_type;
         *AbstractDataProviderType response_type;
-        #! options with functions for reference data
-        *hash<string, hash<AsyncCallInfo>> omap;
+
         #! options that determine the structure of other options
         *hash<string, hash<AsyncCallInfo>> dmap;
 
         #! type cache for dependent options; opt val key -> type
         hash<string, AbstractDataProviderType> dtcache;
-
-        #! connection for the action
-        AbstractConnection conn;
     }
 
     constructor(string name, hash<AsyncCallInfo> api, *AbstractDataProviderType request_type,
             *AbstractDataProviderType response_type, *hash<string, hash<AsyncCallInfo>> omap,
-            *hash<string, hash<AsyncCallInfo>> dmap) {
-        self.name = name;
+            *hash<string, hash<AsyncCallInfo>> dmap, *hash<string, hash<RestGetAllowedValuesInfo>> romap,
+            *hash<string, hash<AsyncCallInfo>> dvmap, *hash<string, hash<string, bool>> depmap)
+            : TypeScriptActionDataProviderBase(name, omap, romap, dvmap, depmap) {
         self.api = api;
         self.request_type = request_type;
         self.response_type = response_type;
-        self.omap = omap;
         self.dmap = dmap;
     }
 
-    private constructor(string name, *hash<AsyncCallInfo> api) {
-        self.name = name;
+    private constructor(string name, *hash<AsyncCallInfo> api) : TypeScriptActionDataProviderBase(name) {
         if (api) {
             self.api = api;
         }
     }
 
-    #! Sets the connection
-    setConnection(AbstractConnection conn) {
-        self.conn = conn;
-    }
-
-    #! Returns the logger interface for logging
-    *LoggerInterface getLogger() {
-        return logger;
-    }
-
-    #! Returns the data provider name
-    string getName() {
-        return name;
-    }
-
-    #! Returns information on supported reference data
-    /** @return a hash of supported reference data; keys in the hash returned are supported in calls to
-        @ref getReferenceData()
-    */
-    *hash<string, bool> getSupportedReferenceData() {
-        return map {$1: True}, keys omap;
-    }
-
     #! "Normalizes" the request and response for testing if necessary
     auto makeNormalizedRequest(auto req, *hash<auto> request_options) {
         return doRequest(req, request_options);
+    }
+
+    #! Sets the connection
+    setConnection(TypeScriptAppRestConnection conn) {
+        TypeScriptActionDataProviderBase::setConnection(conn);
+        if (dvmap) {
+            *hash<string, AbstractDataField> fields = request_type.getFields();
+            *hash<DataContextInfo> arg = getCallContextInfo();
+            hash<string, bool> vmap;
+            foreach hash<auto> i in (dvmap.pairIterator()) {
+                try {
+                    debug("Retrieving default value with JS for data provider %y option %y arg: %y", getName(), i.key,
+                        arg);
+                    auto v = getAsyncValue(i.value, arg);
+                    debug("Retrieved default value with JS for data provider %y option %y: %y", getName(), i.key, v);
+                    if (v) {
+                        *AbstractDataField f = fields{i.key};
+                        if (!f) {
+                            throw "ACTION-CONFIG-ERROR", sprintf("Cannot set default type for unknown option %y",
+                                i.key);
+                        }
+                        f.setDefaultValue(v);
+                        vmap{i.key} = True;
+                    }
+                } catch (hash<ExceptionInfo> ex) {
+                    error("ACTION-OPTION-ERROR", "Exception retrieving default value for data provider %y "
+                        "option %y: %s", getName(), i.key, get_exception_string(ex));
+                    rethrow;
+                }
+            }
+            # make "or-nothing" type if appropriate
+            bool ok = True;
+            foreach hash<auto> i in (fields.pairIterator()) {
+                if (!vmap{i.key} && (!exists i.value.getDefaultValue()) && i.value.isMandatory()) {
+                    ok = False;
+                    break;
+                }
+            }
+            if (ok) {
+                request_type = request_type.getOrNothingType();
+            }
+        }
     }
 
     #! Makes a request and returns the response
@@ -125,35 +123,6 @@ class TypeScriptActionApiDataProvider inherits AbstractDataProvider {
     */
     private auto doRequestImpl(auto req, *hash<auto> request_options) {
         return getAsyncValue(api, req, request_options, getCallContextInfo());
-    }
-
-    #! Returns reference data of the given kind if available
-    /** @param type the unique type name of the reference data
-        @param action_opts an optional hash of action options when called when working with an app action
-
-        @return a list of allowed values for this data
-
-        @since DataProvider 3.0
-    */
-    private *list<hash<AllowedValueInfo>> getReferenceDataImpl(string type, *hash<auto> action_opts) {
-        if (*hash<AsyncCallInfo> ref_api = omap{type}) {
-            *hash<RefDataContextInfo> arg = getCallContextInfo(action_opts);
-            debug("Retrieving reference data for data provider %y type %y arg: %y", getName(), type, arg);
-            *softlist<auto> l = getAsyncValue(ref_api, arg);
-            debug("Reference data for data provider %y type %y: %y", getName(), type, l);
-            if (!l) {
-                return;
-            }
-            if (l[0].typeCode() != NT_HASH) {
-                return map <AllowedValueInfo>{
-                    "display_name": $1.toString(),
-                    "short_desc": $1.toString(),
-                    "desc": $1.toString(),
-                    "value": $1,
-                }, l;
-            }
-            return map cast<hash<AllowedValueInfo>>($1 instanceof JavaScriptObject ? $1.toData() : $1), l;
-        }
     }
 
     #! Returns the description of a successful request message, if any
@@ -251,132 +220,6 @@ class TypeScriptActionApiDataProvider inherits AbstractDataProvider {
     #! Returns data provider static info
     private hash<DataProviderInfo> getStaticInfoImpl() {
         return ProviderInfo;
-    }
-
-    #! Returns call context info
-    private *hash<RefDataContextInfo> getCallContextInfo(*hash<auto> action_opts) {
-        if (conn) {
-            return <RefDataContextInfo>{
-                "conn_name": conn.name,
-                "conn_opts": conn.getRealOptions(),
-                "opts": action_opts,
-            };
-        }
-    }
-
-    auto getAsyncValue(hash<AsyncCallInfo> api, ...) {
-        return getAsyncValueArgs(self, api, argv);
-    }
-
-    static auto getAsyncValueArgs(LoggerInterface logger, hash<AsyncCallInfo> api, *softlist<auto> args) {
-        on_error rethrow $1.err, sprintf("%s (context: %s)", $1.desc, api.label);
-
-        JavaScriptProgram pgm = api.pool.get();
-        on_exit {
-            api.pool.release(pgm);
-            #logger.info("TypeScriptActionApiDataProvider::getAsyncValue() released pgm %y", pgm.uniqueHash());
-        }
-        #logger.info("TypeScriptActionApiDataProvider::getAsyncValue() acquired pgm %y", pgm.uniqueHash());
-
-        auto v;
-        try {
-            v = call_function_args(api.async_call, args);
-        } catch (hash<ExceptionInfo> ex) {
-            logger.error("JAVASCRIPT-ASYNC-ERROR", "Error making async JavaScript request %y: %s", api.label,
-                get_exception_string(ex));
-            rethrow;
-        }
-        auto rv;
-        auto err;
-        if (v instanceof JavaScriptPromise) {
-            try {
-                v.then(sub (auto val) {
-                    rv = val;
-                }, sub (auto e) {
-                    err = e;
-                }).doCatch(sub (auto e) {
-                    err = e;
-                });
-                v.wait();
-            } catch (hash<ExceptionInfo> ex) {
-                logger.error("JAVASCRIPT-ASYNC-ERROR", "Error waiting for async JavaScript request %y: %s", api.label,
-                    get_exception_string(ex));
-                rethrow;
-            }
-        } else {
-            rv = v;
-        }
-
-        if (rv instanceof JavaScriptObject) {
-            rv = rv.toData();
-        } else if (rv.typeCode() == NT_LIST && (rv[0] instanceof JavaScriptObject)) {
-            rv = map $1.toData(), rv;
-        } else if (err instanceof JavaScriptObject) {
-            err = err.toData();
-        } else if (err.typeCode() == NT_LIST && (err[0] instanceof JavaScriptObject)) {
-            err = map $1.toData(), err;
-        }
-
-        if (exists err) {
-            # strip non-serializable data from err
-            err = TypeScriptActionApiDataProvider::stripNonSerializableData(err);
-
-            if (err._err{"message", "name", "code"}.size() == 3) {
-                string desc = sprintf("Error in async request: %s: %s: ", err._err.name, err._err."code");
-                if (err._err.response{"status", "statusText"}.size() == 2) {
-                    desc += sprintf("%s %s: ", err._err.response.status, err._err.response.statusText);
-                }
-                if (err._err.response."data".error_summary.val()) {
-                    desc += sprintf("%y: ", err._err.response."data".error_summary);
-                }
-                desc += err._err.message;
-                hash<auto> arg;
-                if (err._err{"config", "response"}.size() == 2) {
-                    arg = err._err{"config", "response"};
-                } else {
-                    arg = err;
-                }
-                throw "JAVASCRIPT-ASYNC-ERROR", desc, arg;
-            }
-            throw "JAVASCRIPT-ASYNC-ERROR", "Error in async request", err;
-        }
-
-        return rv;
-    }
-
-    static auto stripNonSerializableData(auto v) {
-        switch (v.typeCode()) {
-            case NT_HASH:
-                v = map {$1.key: TypeScriptActionApiDataProvider::stripNonSerializableData($1.value)},
-                    v.pairIterator();
-                break;
-
-            case NT_LIST:
-                v = map TypeScriptActionApiDataProvider::stripNonSerializableData($1), v;
-                break;
-
-            case NT_STRING:
-            case NT_INT:
-            case NT_BOOLEAN:
-            case NT_FLOAT:
-            case NT_NUMBER:
-            case NT_DATE:
-            case NT_BINARY:
-            case NT_NOTHING:
-            case NT_NULL:
-                break;
-
-            case NT_OBJECT:
-                if (v instanceof JavaScriptObject) {
-                    return v.toData();
-                }
-                # fall down to next case
-
-            default:
-                remove v;
-                break;
-        }
-        return v;
     }
 }
 }

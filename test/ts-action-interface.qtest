@@ -15,6 +15,8 @@
 
 public class TypeScriptActionInterfaceTest inherits QUnit::Test {
     constructor() : Test("TypeScriptActionInterfaceTest", "1.0") {
+        addTestCase("js events", \jsEventTest());
+        addTestCase("webhook events", \webhookEventTest());
         addTestCase("pool", \poolTest());
         addTestCase("sanity", \sanityTest());
         addTestCase("js", \jsTest());
@@ -22,6 +24,131 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
 
         # Return for compatibility with test harnesses that check the script's return value
         set_return_value(main());
+    }
+
+    globalSetUp() {
+        chdir(get_script_dir());
+        JavaScriptProgramPool pool("var exports = {};\n" + File::readTextFile("example.js"), "example.js",
+            sub (JavaScriptProgram pgm) {});
+        JavaScriptProgram pgm = pool.get();
+        on_exit pool.release(pgm);
+        JavaScriptObject obj = pgm.getGlobal().exports;
+
+        obj.actionsCatalogue.registerAppActions(TypeScriptActionInterface::Api);
+    }
+
+    private jsEventTest() {
+        hash<DataProviderAppInfo> appinfo = DataProviderActionCatalog::getAppEx("js-swagger-test");
+        assertEq("js-swagger-test", appinfo.name);
+
+        hash<DataProviderActionInfo> actioninfo = DataProviderActionCatalog::getAppActionEx("js-swagger-test",
+            "js-event-1");
+        assertEq("js-event-1", actioninfo.action);
+
+        hash<auto> config = {
+            "name": "test",
+            "url": "tsrest-js-swagger-test://",
+            "opts": {
+                "subdomain": "test",
+                "token": "x",
+            },
+        };
+        TypeScriptAppRestConnection conn(config);
+        assertEq("tsrest-js-swagger-test://test.example.com/api", conn.getUrl());
+
+        ImpliedArgumentHelper iah({"name": "Fred"});
+        AbstractDataProvider prov =
+            TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("js-event-1");
+        AbstractDataProviderType t = prov.getEventTypes().event.type;
+        assertEq(2, t.getFields().size());
+        assertTrue(prov.supportsObservable());
+        assertEq({
+            "name": "a name",
+            "code": 1234,
+        }, prov.getExampleEventData("event"));
+
+        MyObserver o();
+        cast<Observable>(prov).registerObserver(o);
+        cast<DelayedObservable>(prov).observersReady();
+        on_exit cast<DelayedObservable>(prov).stopEvents();
+
+        # wait for a single event
+        hash<auto> event = o.waitForEvent();
+        assertEq({
+            "event_id": "event",
+            "data": {
+                "name": "name-1",
+                "code": 1234,
+            },
+        }, event);
+    }
+
+    private webhookEventTest() {
+        code webhook_callback;
+        code get_webhook = hash<auto> sub (hash<auto> h) {
+            #printf("get_webhook() %y\n", h);
+            webhook_callback = h.callback;
+            return {
+                "url": "https://localhost:8011/webhooks/abc",
+            };
+        };
+        code delete_webhook = sub (hash<auto> info) {
+        };
+
+        TypeScriptActionInterface::registerWebhookCreateDestroyApis(get_webhook, delete_webhook);
+
+        hash<DataProviderAppInfo> appinfo = DataProviderActionCatalog::getAppEx("js-swagger-test");
+        assertEq("js-swagger-test", appinfo.name);
+
+        hash<DataProviderActionInfo> actioninfo = DataProviderActionCatalog::getAppActionEx("js-swagger-test",
+            "webhook-event-1");
+        assertEq("webhook-event-1", actioninfo.action);
+
+        hash<auto> config = {
+            "name": "test",
+            "url": "tsrest-js-swagger-test://",
+            "opts": {
+                "subdomain": "test",
+                "token": "x",
+            },
+        };
+        TypeScriptAppRestConnection conn(config);
+        assertEq("tsrest-js-swagger-test://test.example.com/api", conn.getUrl());
+
+        {
+            AbstractDataProvider prov =
+                TypeScriptActionInterface::getDataProvider("js-swagger-test", conn)
+                    .getChildProviderEx("webhook-event-1");
+            MyObserver o();
+            cast<Observable>(prov).registerObserver(o);
+            assertThrows("JAVASCRIPT-ASYNC-ERROR", \cast<DelayedObservable>(prov).observersReady());
+        }
+
+        ImpliedArgumentHelper iah({"name": "Fred"});
+        AbstractDataProvider prov =
+            TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("webhook-event-1");
+        AbstractDataProviderType t = prov.getEventTypes().event.type;
+        assertEq(2, t.getFields().size());
+        assertTrue(prov.supportsObservable());
+        assertEq({
+            "name": "a name",
+            "code": 1234,
+        }, prov.getExampleEventData("event"));
+
+        MyObserver o();
+        cast<Observable>(prov).registerObserver(o);
+        cast<DelayedObservable>(prov).observersReady();
+        on_exit cast<DelayedObservable>(prov).stopEvents();
+
+        assertTrue(exists webhook_callback);
+        hash<auto> event = {
+            "name": get_random_string(),
+            "code": rand() % 10000,
+        };
+        webhook_callback(event);
+
+        assertEq(1, o.l.size());
+        assertEq({"event_id": "event", "data": event}, o.l[0]);
     }
 
     private testApi() {
@@ -117,15 +244,6 @@ var obj = {
     }
 
     private jsTest() {
-        chdir(get_script_dir());
-        JavaScriptProgramPool pool("var exports = {};\n" + File::readTextFile("example.js"), "example.js",
-            sub (JavaScriptProgram pgm) {});
-        JavaScriptProgram pgm = pool.get();
-        on_exit pool.release(pgm);
-        JavaScriptObject obj = pgm.getGlobal().exports;
-
-        obj.actionsCatalogue.registerAppActions(TypeScriptActionInterface::Api);
-
         hash<DataProviderAppInfo> appinfo = DataProviderActionCatalog::getAppEx("js-test");
         assertEq("js-test", appinfo.name);
 
@@ -178,8 +296,19 @@ var obj = {
         AbstractDataProviderType t = prov.getRequestType();
         assertEq(6, t.getFields().size());
 
-        #prov = TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("get-pet");
-        #prov.doRequest({"id": 1});
+        prov = TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("get-pet");
+        t = prov.getRequestType();
+        {
+            *hash<string, AbstractDataField> fields = t.getFields();
+            assertEq(1, fields.size());
+            *AbstractDataField f = fields.id;
+            assertTrue(exists f);
+        }
+
+        actioninfo = DataProviderActionCatalog::getAppActionEx("js-swagger-test", "get-pet");
+        assertEq("get-pet", actioninfo.action);
+        assertEq("id", actioninfo.options.id.ref_data);
+        assertEq((1, 2), (map $1.value, prov.getReferenceData("id")));
 
         string cname = TypeScriptActionInterface::createConnection("js-swagger-test", {} + {
             "opts": {
@@ -203,9 +332,17 @@ var obj = {
         conn = new TypeScriptAppRestConnection(config);
         prov = TypeScriptActionInterface::getDataProvider("js-test", conn).getChildProviderEx("test-api");
         t = prov.getRequestTypeWithData({"key": "A"});
-        assertEq(("count", "other", "key", "a0", "a1"), keys t.getFields());
+        assertEq(("count", "other", "key", "list", "a0", "a1"), keys t.getFields());
         t = prov.getRequestTypeWithData({"key": "B"});
-        assertEq(("count", "other", "key", "b0", "b1"), keys t.getFields());
+        assertEq(("count", "other", "key", "list", "b0", "b1"), keys t.getFields());
+        {
+            hash<auto> h = {
+                "count": 1,
+                "other": ("a",),
+                "list": ({"a": "str", "b": 1},),
+            };
+            assertEq(h, t.acceptsValue(h));
+        }
 
         TypeScriptAppRestClient rest = conn.get(False);
         hash<auto> h = TestRestClient::test0(rest, {});
@@ -217,5 +354,35 @@ var obj = {
 class TestRestClient inherits TypeScriptAppRestClient {
     static *hash<auto> test0(TypeScriptAppRestClient client, hash<auto> h) {
         return client.getUpdateOptionsAfterLogin(h);
+    }
+}
+
+class MyObserver inherits Observer {
+    public {
+        list<hash<auto>> l;
+
+        const PollInterval = 100ms;
+    }
+
+    update(string event_id, hash<auto> data_) {
+        l += {
+            "event_id": event_id,
+            "data": data_,
+        };
+    }
+
+    hash<auto> waitForEvent(timeout to = 5s) {
+        date start = now_us();
+        while (True) {
+            if (l) {
+                break;
+            }
+            usleep(PollInterval);
+            date d = now_us() - start;
+            if (d > to) {
+                throw "TIMEOUT-ERROR", sprintf("Polling for an event took %y (limit: %y)", d, to);
+            }
+        }
+        return l[0];
     }
 }

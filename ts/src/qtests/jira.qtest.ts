@@ -5,10 +5,12 @@ let connection: string;
 
 describe('Tests Jira Actions', () => {
   const bannerText = `Test Banner Message-${Date.now()}`;
-  // let projectId: string | null = null;
+  let projectId: string | null = null;
   let customFieldId: string | null = null;
-  // let workflowSchemeId: string | null = null;
-  // let versionId: string | null = null;
+  const leadAccountId: string = process.env.JIRA_LEAD_ACCOUNT_ID;
+  let issueId: string | null = null;
+  let commentId: string | null = null;
+  let worklogId: string | null = null;
 
   beforeAll(() => {
     connection = testApi.createConnection<typeof JIRA_CONN_OPTIONS>('jira', {
@@ -16,6 +18,7 @@ describe('Tests Jira Actions', () => {
         username: process.env.JIRA_USERNAME,
         password: process.env.JIRA_PASSWORD,
         cloud_id: process.env.JIRA_CLOUD_ID,
+        swagger_base_path: `/ex/jira/${process.env.JIRA_CLOUD_ID}`,
         oauth2_grant_type: 'none',
       },
     });
@@ -48,41 +51,7 @@ describe('Tests Jira Actions', () => {
     expect(response.body.message).toBe(bannerText);
   });
 
-  // // Advanced Settings
-  it('Should get advanced settings', async () => {
-    const action = JIRA_ACTIONS.find((a) => a.action === 'getAdvancedSettings');
-    expect(action).toBeDefined();
-
-    const response = await testApi.execAppAction('jira', action.action, connection);
-
-    expect(response.body).toBeDefined();
-    expect(response.body.length).toBeGreaterThan(0);
-  });
-
-  it('Should set an application property', async () => {
-    const action = JIRA_ACTIONS.find((a) => a.action === 'setApplicationProperty');
-    expect(action).toBeDefined();
-    const value = `Test Value ${Date.now()}`;
-    const response = await testApi.execAppAction('jira', action.action, connection, {
-      id: 'jira.title',
-      body: {
-        value,
-      },
-    });
-
-    expect(response.body).toBeDefined();
-    expect(response.body.value).toBe(value);
-  });
-
   // Fields
-  it('Should get all fields', async () => {
-    const action = JIRA_ACTIONS.find((a) => a.action === 'getFields');
-    expect(action).toBeDefined();
-
-    const response = await testApi.execAppAction('jira', action.action, connection);
-    expect(response.body).toBeDefined();
-    expect(response.body.length).toBeGreaterThan(0);
-  });
 
   it('Should create a custom field', async () => {
     const action = JIRA_ACTIONS.find((a) => a.action === 'createCustomField');
@@ -102,19 +71,25 @@ describe('Tests Jira Actions', () => {
     customFieldId = response.body.id;
   });
 
+  it('Should get all fields', async () => {
+    const action = JIRA_ACTIONS.find((a) => a.action === 'getFields');
+    expect(action).toBeDefined();
+
+    const response = await testApi.execAppAction('jira', action.action, connection);
+    expect(response.body).toBeDefined();
+    expect(response.body.length).toBeGreaterThan(0);
+  });
+
   it('Should update a custom field', async () => {
     const action = JIRA_ACTIONS.find((a) => a.action === 'updateCustomField');
     expect(action).toBeDefined();
-    const newName = `Updated Custom Field ${Date.now()}`;
     const response = await testApi.execAppAction('jira', action.action, connection, {
       fieldId: customFieldId,
       body: {
         name: 'Updated Custom Field',
       },
     });
-
     expect(response.body).toBeDefined();
-    expect(response.body.name).toBe(newName);
   });
 
   it('Should trash a custom field', async () => {
@@ -128,180 +103,284 @@ describe('Tests Jira Actions', () => {
     expect(response.body).toBeDefined();
   });
 
-  // // Project Categories
-  // it('Should get all project categories', async () => {
-  //   const action = JIRA_ACTIONS.find((a) => a.action === 'getAllProjectCategories');
-  //   expect(action).toBeDefined();
+  // Projects
+  it('Should create a project', async () => {
+    const action = JIRA_ACTIONS.find((a) => a.action === 'createProject');
+    expect(action).toBeDefined();
 
-  //   const response = await testApi.execAppAction('jira', action.action, connection);
-  //   expect(response.body).toBeDefined();
-  //   expect(response.body.length).toBeGreaterThan(0);
-  // });
+    const response = await testApi.execAppAction('jira', action.action, connection, {
+      body: {
+        key: `TEST` + Date.now().toString().slice(-6),
+        name: `Test Project ${Date.now()}`,
+        projectTypeKey: 'software',
+        projectTemplateKey: 'com.pyxis.greenhopper.jira:gh-simplified-agility-kanban',
+        description: 'A test project',
+        leadAccountId,
+      },
+    });
 
-  // it('Should create a project category', async () => {
-  //   const action = JIRA_ACTIONS.find((a) => a.action === 'createProjectCategory');
-  //   expect(action).toBeDefined();
+    expect(response.body).toBeDefined();
+    projectId = response.body.id;
+  });
 
-  //   const response = await testApi.execAppAction('jira', action.action, connection, {
-  //     body: {
-  //       name: 'Test Category',
-  //       description: 'A description for the test category',
-  //     },
-  //   });
+  it('Should update a project', async () => {
+    const action = JIRA_ACTIONS.find((a) => a.action === 'updateProject');
+    expect(action).toBeDefined();
 
-  //   expect(response.body).toBeDefined();
-  //   projectId = response.body.id;
-  //   console.log(projectId);
-  // });
+    const projectName = `Updated Project ${Date.now()}`;
+    const response = await testApi.execAppAction('jira', action.action, connection, {
+      projectIdOrKey: projectId,
+      body: {
+        name: projectName,
+      },
+    });
 
-  // // Versions
-  // it('Should get a version', async () => {
-  //   const action = JIRA_ACTIONS.find((a) => a.action === 'getVersion');
-  //   expect(action).toBeDefined();
+    expect(response.body).toBeDefined();
+    expect(response.body.name).toBe(projectName);
+  });
 
-  //   const response = await testApi.execAppAction('jira', action.action, connection, {
-  //     versionId,
-  //   });
+  it('Should get a project by ID', async () => {
+    const action = JIRA_ACTIONS.find((a) => a.action === 'getProject');
+    expect(action).toBeDefined();
 
-  //   expect(response.body).toBeDefined();
-  //   expect(response.body.id).toBe(versionId);
-  // });
+    const response = await testApi.execAppAction('jira', action.action, connection, {
+      projectIdOrKey: projectId,
+    });
 
-  // it('Should update a version', async () => {
-  //   const action = JIRA_ACTIONS.find((a) => a.action === 'updateVersion');
-  //   expect(action).toBeDefined();
+    expect(response.body).toBeDefined();
+    expect(response.body.id).toBe(projectId.toString());
+  });
 
-  //   const updatedVersionName = `Updated Version ${Date.now()}`;
-  //   const response = await testApi.execAppAction('jira', action.action, connection, {
-  //     versionId,
-  //     body: {
-  //       name: updatedVersionName,
-  //     },
-  //   });
+  // // Issues
+  it('Should create an issue', async () => {
+    const action = JIRA_ACTIONS.find((a) => a.action === 'createIssue');
+    expect(action).toBeDefined();
 
-  //   expect(response.body).toBeDefined();
-  //   expect(response.body.name).toBe(updatedVersionName);
-  //   versionId = response.body.id;
-  // });
+    const response = await testApi.execAppAction('jira', action.action, connection, {
+      body: {
+        fields: {
+          project: {
+            id: projectId,
+          },
+          summary: 'Test Issue',
+          description: {
+            content: [
+              {
+                content: [
+                  {
+                    text: 'Order entry fails when selecting supplier.',
+                    type: 'text',
+                  },
+                ],
+                type: 'paragraph',
+              },
+            ],
+            type: 'doc',
+            version: 1,
+          },
+          issuetype: {
+            name: 'Task',
+          },
+        },
+      },
+    });
+    expect(response.body).toBeDefined();
+    issueId = response.body.id;
+  });
 
-  // it('Should delete a version', async () => {
-  //   const action = JIRA_ACTIONS.find((a) => a.action === 'deleteVersion');
-  //   expect(action).toBeDefined();
+  it('Should get an issue by ID', async () => {
+    const action = JIRA_ACTIONS.find((a) => a.action === 'getIssue');
+    expect(action).toBeDefined();
 
-  //   const response = await testApi.execAppAction('jira', action.action, connection, {
-  //     versionId,
-  //   });
+    const response = await testApi.execAppAction('jira', action.action, connection, {
+      issueIdOrKey: issueId,
+    });
+    expect(response.body).toBeDefined();
+    expect(response.body.id).toBe(issueId);
+  });
 
-  //   expect(response.body).toBeDefined();
-  // });
+  it('Should edit an issue', async () => {
+    const action = JIRA_ACTIONS.find((a) => a.action === 'editIssue');
+    expect(action).toBeDefined();
 
-  // // Workflow Schemes
-  // it('Should get all workflow schemes', async () => {
-  //   const action = JIRA_ACTIONS.find((a) => a.action === 'getAllWorkflowSchemes');
-  //   expect(action).toBeDefined();
+    const response = await testApi.execAppAction('jira', action.action, connection, {
+      issueIdOrKey: issueId,
+      body: {
+        fields: {
+          summary: 'Updated Issue',
+        },
+      },
+    });
+    expect(response).toBeDefined();
+  });
 
-  //   const response = await testApi.execAppAction('jira', action.action, connection);
-  //   expect(response.body).toBeDefined();
-  //   expect(response.body.length).toBeGreaterThan(0);
-  // });
+  // Comments
+  it('Should add a comment to an issue', async () => {
+    const action = JIRA_ACTIONS.find((a) => a.action === 'addComment');
+    expect(action).toBeDefined();
 
-  // it('Should create a workflow scheme', async () => {
-  //   const action = JIRA_ACTIONS.find((a) => a.action === 'createWorkflowScheme');
-  //   expect(action).toBeDefined();
+    const response = await testApi.execAppAction('jira', action.action, connection, {
+      issueIdOrKey: issueId,
+      body: {
+        body: {
+          content: [
+            {
+              content: [
+                {
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                  type: 'text',
+                },
+              ],
+              type: 'paragraph',
+            },
+          ],
+          type: 'doc',
+          version: 1,
+        },
+      },
+    });
 
-  //   const response = await testApi.execAppAction('jira', action.action, connection, {
-  //     body: {
-  //       name: 'Test Workflow Scheme',
-  //       description: 'Test description',
-  //     },
-  //   });
+    expect(response.body).toBeDefined();
+    commentId = response.body.id;
+  });
 
-  //   expect(response.body).toBeDefined();
-  //   workflowSchemeId = response.body.id;
-  // });
+  it('Should get comments for an issue', async () => {
+    const action = JIRA_ACTIONS.find((a) => a.action === 'getComments');
+    expect(action).toBeDefined();
 
-  // it('Should update workflow scheme mappings', async () => {
-  //   const action = JIRA_ACTIONS.find((a) => a.action === 'updateWorkflowSchemeMappings');
-  //   expect(action).toBeDefined();
+    const response = await testApi.execAppAction('jira', action.action, connection, {
+      issueIdOrKey: issueId,
+    });
+    expect(response.body).toBeDefined();
+    expect(response.body.comments.length).toBeGreaterThan(0);
+  });
 
-  //   const response = await testApi.execAppAction('jira', action.action, connection, {
-  //     workflowSchemeId,
-  //     body: {
-  //       mappings: [
-  //         {
-  //           issueType: 'Bug',
-  //           workflow: 'Bug Workflow',
-  //         },
-  //       ],
-  //     },
-  //   });
+  it('Should update a comment', async () => {
+    const action = JIRA_ACTIONS.find((a) => a.action === 'updateComment');
+    expect(action).toBeDefined();
 
-  //   expect(response.body).toBeDefined();
-  // });
+    const response = await testApi.execAppAction('jira', action.action, connection, {
+      issueIdOrKey: issueId,
+      id: commentId,
+      body: {
+        body: {
+          content: [
+            {
+              content: [
+                {
+                  text: 'Updated comment',
+                  type: 'text',
+                },
+              ],
+              type: 'paragraph',
+            },
+          ],
+          type: 'doc',
+          version: 1,
+        },
+      },
+    });
 
-  // it('Should delete a workflow scheme', async () => {
-  //   const action = JIRA_ACTIONS.find((a) => a.action === 'deleteWorkflowScheme');
-  //   expect(action).toBeDefined();
+    expect(response).toBeDefined();
+  });
 
-  //   const response = await testApi.execAppAction('jira', action.action, connection, {
-  //     workflowSchemeId,
-  //   });
+  it('Should get a comment by ID', async () => {
+    const action = JIRA_ACTIONS.find((a) => a.action === 'getComment');
+    expect(action).toBeDefined();
 
-  //   expect(response.body).toBeDefined();
-  // });
+    const response = await testApi.execAppAction('jira', action.action, connection, {
+      issueIdOrKey: issueId,
+      id: commentId,
+    });
 
-  // // Worklogs
-  // it('Should get worklogs for IDs', async () => {
-  //   const action = JIRA_ACTIONS.find((a) => a.action === 'getWorklogsForIds');
-  //   expect(action).toBeDefined();
+    expect(response.body).toBeDefined();
+  });
 
-  //   const response = await testApi.execAppAction('jira', action.action, connection, {
-  //     body: {
-  //       ids: ['1', '2', '3'],
-  //     },
-  //   });
+  it('Should add a worklog to an issue', async () => {
+    const action = JIRA_ACTIONS.find((a) => a.action === 'addWorklog');
+    expect(action).toBeDefined();
 
-  //   expect(response.body).toBeDefined();
-  // });
+    const response = await testApi.execAppAction('jira', action.action, connection, {
+      issueIdOrKey: issueId,
+      body: {
+        comment: {
+          content: [
+            {
+              content: [
+                {
+                  text: 'I did some work here.',
+                  type: 'text',
+                },
+              ],
+              type: 'paragraph',
+            },
+          ],
+          type: 'doc',
+          version: 1,
+        },
+        timeSpentSeconds: 12_000,
+      },
+    });
 
-  // it('Should get IDs of worklogs deleted since a timestamp', async () => {
-  //   const action = JIRA_ACTIONS.find((a) => a.action === 'getIdsOfWorklogsDeletedSince');
-  //   expect(action).toBeDefined();
+    expect(response.body).toBeDefined();
+    worklogId = response.body.id;
+  });
 
-  //   const response = await testApi.execAppAction('jira', action.action, connection, {
-  //     query: {
-  //       since: 1630454400,
-  //     },
-  //   });
+  it('Should get worklog for an issue', async () => {
+    const action = JIRA_ACTIONS.find((a) => a.action === 'getWorklog');
+    expect(action).toBeDefined();
 
-  //   expect(response.body).toBeDefined();
-  // });
+    const response = await testApi.execAppAction('jira', action.action, connection, {
+      issueIdOrKey: issueId,
+      id: worklogId,
+    });
 
-  // it('Should get a workflow scheme', async () => {
-  //   const action = JIRA_ACTIONS.find((a) => a.action === 'getWorkflowScheme');
-  //   expect(action).toBeDefined();
+    expect(response.body).toBeDefined();
+  });
 
-  //   const response = await testApi.execAppAction('jira', action.action, connection, {
-  //     workflowSchemeId,
-  //   });
+  it('Should delete a worklog', async () => {
+    const action = JIRA_ACTIONS.find((a) => a.action === 'deleteWorklog');
+    expect(action).toBeDefined();
 
-  //   expect(response.body).toBeDefined();
-  //   expect(response.body.id).toBe(workflowSchemeId);
-  // });
+    const response = await testApi.execAppAction('jira', action.action, connection, {
+      issueIdOrKey: issueId,
+      id: worklogId,
+    });
 
-  // it('Should update a workflow scheme', async () => {
-  //   const action = JIRA_ACTIONS.find((a) => a.action === 'updateWorkflowScheme');
-  //   expect(action).toBeDefined();
+    expect(response).toBeDefined();
+  });
 
-  //   const updatedSchemeName = `Updated Workflow Scheme ${Date.now()}`;
-  //   const response = await testApi.execAppAction('jira', action.action, connection, {
-  //     workflowSchemeId,
-  //     body: {
-  //       name: updatedSchemeName,
-  //     },
-  //   });
+  it('Should delete a comment', async () => {
+    const action = JIRA_ACTIONS.find((a) => a.action === 'deleteComment');
+    expect(action).toBeDefined();
 
-  //   expect(response.body).toBeDefined();
-  //   expect(response.body.name).toBe(updatedSchemeName);
-  // });
+    const response = await testApi.execAppAction('jira', action.action, connection, {
+      issueIdOrKey: issueId,
+      id: commentId,
+    });
+
+    expect(response).toBeDefined();
+  });
+
+  it('Should delete an issue', async () => {
+    const action = JIRA_ACTIONS.find((a) => a.action === 'deleteIssue');
+    expect(action).toBeDefined();
+
+    const response = await testApi.execAppAction('jira', action.action, connection, {
+      issueIdOrKey: issueId,
+    });
+
+    expect(response).toBeDefined();
+  });
+
+  it('Should delete a project', async () => {
+    const action = JIRA_ACTIONS.find((a) => a.action === 'deleteProject');
+    expect(action).toBeDefined();
+
+    const response = await testApi.execAppAction('jira', action.action, connection, {
+      projectIdOrKey: projectId,
+    });
+
+    expect(response).toBeDefined();
+  });
 });

@@ -39,15 +39,16 @@ public class TypeScriptAppRestClient inherits RestClient {
     }
 
     #! Returns options to update after an OAuth2 login
-    /** @since %RestClient 2.0
-    */
     private *hash<auto> getUpdateOptionsAfterLogin(hash<auto> h) {
         *hash<auto> rv = RestClient::getUpdateOptionsAfterLogin(h);
+        LoggerWrapper::debug("Connection %y app %y post-auth resp: %y h: %y rv: %y (post_auth: %y)", conn.name,
+            conn.getAppName(), h, rv, post_auth);
         if (post_auth) {
-            rv += TypeScriptActionApiDataProvider::getAsyncValueArgs(self, post_auth, {
+            rv += TypeScriptActionDataProviderBase::getAsyncValueArgs(self, post_auth, {
                 "conn_name": conn.name,
-                "conn_opts": conn.getRealOptions(),
+                "conn_opts": conn.getRealOptions() + h + rv,
             });
+            info("Connection %y app %y post-auth adding options: %y", conn.name, conn.getAppName(), rv);
 
             hash<auto> config = {
                 "url": getURL(),
@@ -58,6 +59,7 @@ public class TypeScriptAppRestClient inherits RestClient {
                 setURL(AbstractConnection::getRealUrl(config.url, conn.getConnectionSchemeInfo(), conn.getType()));
             }
         }
+        LoggerWrapper::debug("Connection %y app %y post-auth rv: %y", conn.name, conn.getAppName(), rv);
         return rv;
     }
 }
@@ -69,6 +71,7 @@ public class TypeScriptAppRestConnection inherits RestConnection {
         string app;
         hash<ConnectionSchemeInfo> info;
         *hash<string, bool> url_template_options;
+        *hash<AsyncCallInfo> post_auth;
     }
 
     #! Creates the object
@@ -90,6 +93,7 @@ public class TypeScriptAppRestConnection inherits RestConnection {
                 "url": url,
                 "opts": options,
             }), attributes) {
+        post_auth = TypeScriptActionInterface::getPostAuthCall(app);
     }
 
     #! creates the TypeScriptAppRestConnection object
@@ -112,6 +116,7 @@ public class TypeScriptAppRestConnection inherits RestConnection {
     */
     constructor(hash<auto> config, *hash<auto> attr)
             : RestConnection(TypeScriptAppRestConnection::getConfig(config), attr) {
+        post_auth = TypeScriptActionInterface::getPostAuthCall(app);
     }
 
     #! Returns the app name
@@ -135,8 +140,6 @@ public class TypeScriptAppRestConnection inherits RestConnection {
 
     #! Return OAuth2 options
     /** @return a hash of OAuth2 options
-
-        @since RestClient 2.2
     */
     hash<auto> getOAuth2Options() {
         hash<auto> rv = RestConnection::getOAuth2Options();
@@ -154,6 +157,35 @@ public class TypeScriptAppRestConnection inherits RestConnection {
     #! Returns the logger interface for logging
     *LoggerInterface getLogger() {
         return logger;
+    }
+
+    #! Sets child data provider capabilities
+    private setChildCapabilities() {
+        children_can_support_apis = True;
+        if (TypeScriptActionInterface::appSupportsEvents(app)) {
+            children_can_support_observers = True;
+        }
+        if (TypeScriptActionInterface::appSupportsRecords(app)) {
+            children_can_support_records = True;
+        }
+    }
+
+    #! Processes the OAuth2 token response
+    private *hash<auto> processOAuth2TokenResponseImpl(hash<auto> resp) {
+        *hash<auto> new_opts = RestConnection::processOAuth2TokenResponseImpl(resp);
+        LoggerWrapper::debug("Connection %y app %y post-auth resp: %y new_opts: %y (post_auth: %y)", name, app, resp,
+            new_opts, post_auth);
+        if (new_opts && post_auth) {
+            on_error rethrow $1.err, sprintf("%s (new_opts: %y)", $1.desc, new_opts);
+            new_opts += TypeScriptActionDataProviderBase::getAsyncValueArgs(self, post_auth, {
+                "conn_name": name,
+                "conn_opts": real_opts + new_opts + resp,
+            });
+            LoggerWrapper::info("Connection %y app %y post-auth adding options: %y from %y", name, app, new_opts,
+                resp);
+        }
+        LoggerWrapper::debug("Connection %y app %y post-auth rv: %y", name, app, new_opts);
+        return new_opts;
     }
 
     #! performs options validation in the constructor
@@ -187,11 +219,6 @@ public class TypeScriptAppRestConnection inherits RestConnection {
         self.app = app;
         url_template_options = TypeScriptActionInterface::getUrlTemplateOptions(app);
         info = ConnectionSchemeCache::getSchemeEx(scheme);
-    }
-
-    #! Sets child data provider capabilities
-    private setChildCapabilities() {
-        children_can_support_apis = True;
     }
 
     #! returns a @ref TypeScriptAppRestConnection object

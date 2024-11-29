@@ -17,39 +17,155 @@ type RootTranslation = {
 	}
 	apps: {
 		_testing: {
+			triggers: {
+				_testing: {
+					options: {
+						option1: {
+							/**
+							 * O​p​t​i​o​n​ ​1
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
+							 */
+							longDesc: string
+						}
+						option2: {
+							/**
+							 * S​e​c​o​n​d​ ​O​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​e​c​o​n​d​ ​O​p​t​i​o​n​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​c​o​n​d​ ​O​p​t​i​o​n​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * E​v​e​n​t​ ​d​a​t​a
+						 */
+						desc: string
+						type: {
+							fields: {
+								testTriggerInfo: {
+									/**
+									 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o
+									 */
+									displayName: string
+									/**
+									 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
+									 */
+									shortDesc: string
+									/**
+									 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
+									 */
+									longDesc: string
+									type: {
+										fields: {
+											testTriggerInfo1: {
+												/**
+												 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​1
+												 */
+												displayName: string
+												/**
+												 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
+												 */
+												shortDesc: string
+												/**
+												 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 			actions: {
 				test: {
-					option1: {
-						/**
-						 * O​p​t​i​o​n​ ​1
-						 */
-						displayName: string
-						/**
-						 * O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
-						 */
-						shortDesc: string
-						/**
-						 * O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
-						 */
-						longDesc: string
-					}
-					option2: {
-						/**
-						 * S​e​c​o​n​d​ ​O​p​t​i​o​n
-						 */
-						displayName: string
-					}
-					sub_option1: {
-						/**
-						 * S​u​b​ ​O​p​t​i​o​n​ ​1​ ​o​f​ ​O​p​t​i​o​n​ ​2
-						 */
-						displayName: string
-					}
-					sub_sub_option1: {
-						/**
-						 * G​e​n​e​r​a​t​e​d​ ​d​e​s​c​r​i​p​t​i​o​n
-						 */
-						longDesc: string
+					options: {
+						option1: {
+							/**
+							 * O​p​t​i​o​n​ ​1
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									subOption1: {
+										/**
+										 * S​u​b​ ​O​p​t​i​o​n​ ​1​ ​o​f​ ​o​p​t​i​o​n​ ​1
+										 */
+										displayName: string
+										/**
+										 * S​u​b​ ​O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * S​u​b​ ​O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
+										 */
+										longDesc: string
+									}
+									subOption2: {
+										/**
+										 * S​u​b​ ​O​p​t​i​o​n​ ​2​ ​o​f​ ​o​p​t​i​o​n​ ​1
+										 */
+										displayName: string
+										/**
+										 * S​u​b​ ​O​p​t​i​o​n​ ​2​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * S​u​b​ ​O​p​t​i​o​n​ ​2​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
+										 */
+										longDesc: string
+										type: {
+											fields: {
+												subSubOption1: {
+													/**
+													 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1
+													 */
+													displayName: string
+													/**
+													 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
+													 */
+													shortDesc: string
+													/**
+													 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
+													 */
+													longDesc: string
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						option2: {
+							/**
+							 * S​e​c​o​n​d​ ​O​p​t​i​o​n
+							 */
+							displayName: string
+						}
 					}
 				}
 			}
@@ -95,6 +211,378 @@ type RootTranslation = {
 			 * C​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​S​t​r​i​p​e​ ​A​P​I
 			 */
 			longDesc: string
+			actions: {
+				GetAccount: {
+					/**
+					 * G​e​t​ ​a​c​c​o​u​n​t​ ​d​e​t​a​i​l​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​t​h​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+				}
+				PostAccountLinks: {
+					/**
+					 * C​r​e​a​t​e​ ​a​c​c​o​u​n​t​ ​l​i​n​k​s
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​u​r​l​ ​t​h​a​t​ ​t​h​e​ ​p​l​a​t​f​o​r​m​ ​c​a​n​ ​r​e​d​i​r​e​c​t​ ​t​h​e​i​r​ ​u​s​e​r​ ​t​o​ ​t​a​k​e​ ​t​h​e​m​ ​t​h​r​o​u​g​h​ ​t​h​e​ ​C​o​n​n​e​c​t​ ​O​n​b​o​a​r​d​i​n​g​ ​f​l​o​w​.
+					 */
+					shortDesc: string
+				}
+				DeleteAccountsAccount: {
+					/**
+					 * D​e​l​e​t​e​ ​a​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+				}
+				GetAccountsAccount: {
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​t​h​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​n​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+				}
+				PostAccountsAccount: {
+					/**
+					 * U​p​d​a​t​e​ ​a​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​a​c​c​o​u​n​t​ ​b​y​ ​s​e​t​t​i​n​g​ ​t​h​e​ ​v​a​l​u​e​s​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r​s​ ​p​a​s​s​e​d​.
+					 */
+					shortDesc: string
+				}
+				GetAccountsAccountExternalAccounts: {
+					/**
+					 * L​i​s​t​ ​e​x​t​e​r​n​a​l​ ​a​c​c​o​u​n​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​e​x​t​e​r​n​a​l​ ​a​c​c​o​u​n​t​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​S​t​r​i​p​e​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+				}
+				PostAccountsAccountExternalAccounts: {
+					/**
+					 * C​r​e​a​t​e​ ​e​x​t​e​r​n​a​l​ ​a​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​n​ ​e​x​t​e​r​n​a​l​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​a​ ​c​o​n​n​e​c​t​e​d​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+				}
+				PostAccountsAccountLoginLinks: {
+					/**
+					 * C​r​e​a​t​e​ ​l​o​g​i​n​ ​l​i​n​k​s
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​s​h​o​r​t​-​l​i​v​e​d​ ​l​i​n​k​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​u​s​e​d​ ​t​o​ ​l​o​g​ ​i​n​ ​t​o​ ​t​h​e​ ​S​t​r​i​p​e​ ​D​a​s​h​b​o​a​r​d​.
+					 */
+					shortDesc: string
+				}
+				GetAccountsAccountPeople: {
+					/**
+					 * L​i​s​t​ ​p​e​o​p​l​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​p​e​o​p​l​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+				}
+				PostAccountsAccountPeople: {
+					/**
+					 * C​r​e​a​t​e​ ​p​e​r​s​o​n
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​p​e​r​s​o​n​.
+					 */
+					shortDesc: string
+				}
+				GetBalance: {
+					/**
+					 * R​e​t​r​i​e​v​e​ ​b​a​l​a​n​c​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​a​c​c​o​u​n​t​ ​b​a​l​a​n​c​e​.
+					 */
+					shortDesc: string
+				}
+				GetBalanceHistory: {
+					/**
+					 * L​i​s​t​ ​b​a​l​a​n​c​e​ ​h​i​s​t​o​r​y
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​t​h​a​t​ ​h​a​v​e​ ​c​o​n​t​r​i​b​u​t​e​d​ ​t​o​ ​t​h​e​ ​S​t​r​i​p​e​ ​a​c​c​o​u​n​t​ ​b​a​l​a​n​c​e​.
+					 */
+					shortDesc: string
+				}
+				GetBalanceHistoryId: {
+					/**
+					 * R​e​t​r​i​e​v​e​ ​b​a​l​a​n​c​e​ ​h​i​s​t​o​r​y
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​t​h​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​b​a​l​a​n​c​e​ ​h​i​s​t​o​r​y​ ​i​t​e​m​.
+					 */
+					shortDesc: string
+				}
+				GetCharges: {
+					/**
+					 * L​i​s​t​ ​c​h​a​r​g​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​c​h​a​r​g​e​s​ ​y​o​u​ ​h​a​v​e​ ​p​r​e​v​i​o​u​s​l​y​ ​c​r​e​a​t​e​d​.
+					 */
+					shortDesc: string
+				}
+				PostCharges: {
+					/**
+					 * C​r​e​a​t​e​ ​c​h​a​r​g​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​c​h​a​r​g​e​ ​o​b​j​e​c​t​.
+					 */
+					shortDesc: string
+				}
+				GetChargesCharge: {
+					/**
+					 * R​e​t​r​i​e​v​e​ ​c​h​a​r​g​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​t​h​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​c​h​a​r​g​e​.
+					 */
+					shortDesc: string
+				}
+				PostChargesCharge: {
+					/**
+					 * U​p​d​a​t​e​ ​c​h​a​r​g​e
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​h​a​r​g​e​ ​b​y​ ​s​e​t​t​i​n​g​ ​t​h​e​ ​v​a​l​u​e​s​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r​s​ ​p​a​s​s​e​d​.
+					 */
+					shortDesc: string
+				}
+				GetCustomers: {
+					/**
+					 * L​i​s​t​ ​c​u​s​t​o​m​e​r​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​y​o​u​r​ ​c​u​s​t​o​m​e​r​s​.
+					 */
+					shortDesc: string
+				}
+				PostCustomers: {
+					/**
+					 * C​r​e​a​t​e​ ​c​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​e​r​ ​o​b​j​e​c​t​.
+					 */
+					shortDesc: string
+				}
+				DeleteCustomersCustomer: {
+					/**
+					 * D​e​l​e​t​e​ ​c​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​u​s​t​o​m​e​r​.
+					 */
+					shortDesc: string
+				}
+				GetCustomersCustomer: {
+					/**
+					 * R​e​t​r​i​e​v​e​ ​c​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​t​h​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​u​s​t​o​m​e​r​.
+					 */
+					shortDesc: string
+				}
+				PostCustomersCustomer: {
+					/**
+					 * U​p​d​a​t​e​ ​c​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​u​s​t​o​m​e​r​ ​b​y​ ​s​e​t​t​i​n​g​ ​t​h​e​ ​v​a​l​u​e​s​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r​s​ ​p​a​s​s​e​d​.
+					 */
+					shortDesc: string
+				}
+				GetCustomersCustomerBalanceTransactions: {
+					/**
+					 * L​i​s​t​ ​b​a​l​a​n​c​e​ ​t​r​a​n​s​a​c​t​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​t​h​a​t​ ​h​a​v​e​ ​c​o​n​t​r​i​b​u​t​e​d​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​s​ ​a​c​c​o​u​n​t​ ​b​a​l​a​n​c​e​.
+					 */
+					shortDesc: string
+				}
+				PostCustomersCustomerBalanceTransactions: {
+					/**
+					 * C​r​e​a​t​e​ ​b​a​l​a​n​c​e​ ​t​r​a​n​s​a​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​b​a​l​a​n​c​e​ ​t​r​a​n​s​a​c​t​i​o​n​.
+					 */
+					shortDesc: string
+				}
+				GetCustomersCustomerSources: {
+					/**
+					 * L​i​s​t​ ​s​o​u​r​c​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​s​o​u​r​c​e​s​ ​f​o​r​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.
+					 */
+					shortDesc: string
+				}
+				PostCustomersCustomerSources: {
+					/**
+					 * C​r​e​a​t​e​ ​s​o​u​r​c​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​s​o​u​r​c​e​ ​o​b​j​e​c​t​.
+					 */
+					shortDesc: string
+				}
+				GetCustomersCustomerSubscriptions: {
+					/**
+					 * L​i​s​t​ ​s​u​b​s​c​r​i​p​t​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​s​u​b​s​c​r​i​p​t​i​o​n​s​ ​f​o​r​ ​a​ ​c​u​s​t​o​m​e​r​.
+					 */
+					shortDesc: string
+				}
+				PostCustomersCustomerSubscriptions: {
+					/**
+					 * C​r​e​a​t​e​ ​s​u​b​s​c​r​i​p​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​o​n​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​u​s​t​o​m​e​r​.
+					 */
+					shortDesc: string
+				}
+				GetInvoices: {
+					/**
+					 * L​i​s​t​ ​i​n​v​o​i​c​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​y​o​u​r​ ​i​n​v​o​i​c​e​s​.
+					 */
+					shortDesc: string
+				}
+				PostInvoices: {
+					/**
+					 * C​r​e​a​t​e​ ​i​n​v​o​i​c​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​d​r​a​f​t​ ​i​n​v​o​i​c​e​ ​f​o​r​ ​a​ ​g​i​v​e​n​ ​c​u​s​t​o​m​e​r​.
+					 */
+					shortDesc: string
+				}
+				DeleteInvoicesInvoice: {
+					/**
+					 * D​e​l​e​t​e​ ​i​n​v​o​i​c​e
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​i​n​v​o​i​c​e​.
+					 */
+					shortDesc: string
+				}
+				GetInvoicesInvoice: {
+					/**
+					 * R​e​t​r​i​e​v​e​ ​i​n​v​o​i​c​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​t​h​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​i​n​v​o​i​c​e​.
+					 */
+					shortDesc: string
+				}
+				PostInvoicesInvoice: {
+					/**
+					 * U​p​d​a​t​e​ ​i​n​v​o​i​c​e
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​i​n​v​o​i​c​e​ ​b​y​ ​s​e​t​t​i​n​g​ ​t​h​e​ ​v​a​l​u​e​s​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r​s​ ​p​a​s​s​e​d​.
+					 */
+					shortDesc: string
+				}
+				GetPaymentIntents: {
+					/**
+					 * L​i​s​t​ ​p​a​y​m​e​n​t​ ​i​n​t​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​p​a​y​m​e​n​t​ ​i​n​t​e​n​t​s​.
+					 */
+					shortDesc: string
+				}
+				PostPaymentIntents: {
+					/**
+					 * C​r​e​a​t​e​ ​p​a​y​m​e​n​t​ ​i​n​t​e​n​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​p​a​y​m​e​n​t​ ​i​n​t​e​n​t​.
+					 */
+					shortDesc: string
+				}
+				GetRefunds: {
+					/**
+					 * L​i​s​t​ ​r​e​f​u​n​d​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​r​e​f​u​n​d​s​ ​y​o​u​’​v​e​ ​p​r​e​v​i​o​u​s​l​y​ ​c​r​e​a​t​e​d​.
+					 */
+					shortDesc: string
+				}
+				PostRefunds: {
+					/**
+					 * C​r​e​a​t​e​ ​r​e​f​u​n​d
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​r​e​f​u​n​d​ ​o​b​j​e​c​t​.
+					 */
+					shortDesc: string
+				}
+			}
 		}
 		Github: {
 			/**
@@ -109,6 +597,892 @@ type RootTranslation = {
 			 * C​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​G​i​t​h​u​b​ ​A​P​I
 			 */
 			longDesc: string
+			triggers: {
+				new_repository_issue: {
+					/**
+					 * N​e​w​ ​R​e​p​o​s​i​t​o​r​y​ ​I​s​s​u​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​s​s​u​e​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​ ​r​e​p​o​s​i​t​o​r​y
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​s​s​u​e​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​ ​r​e​p​o​s​i​t​o​r​y
+					 */
+					longDesc: string
+					options: {
+						repo: {
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​n​a​m​e
+							 */
+							longDesc: string
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​n​a​m​e
+							 */
+							displayName: string
+						}
+						owner: {
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e​ ​o​r​ ​u​s​e​r​ ​l​o​g​i​n
+							 */
+							longDesc: string
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e​ ​o​r​ ​u​s​e​r​ ​l​o​g​i​n
+							 */
+							shortDesc: string
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​o​w​n​e​r
+							 */
+							displayName: string
+						}
+					}
+					event_info: {
+						/**
+						 * G​i​t​H​u​b​ ​I​s​s​u​e​ ​E​v​e​n​t​ ​D​a​t​a
+						 */
+						desc: string
+						type: {
+							fields: {
+								action: {
+									/**
+									 * A​c​t​i​o​n
+									 */
+									displayName: string
+									/**
+									 * A​c​t​i​o​n​ ​t​y​p​e
+									 */
+									shortDesc: string
+									/**
+									 * T​y​p​e​ ​o​f​ ​a​c​t​i​o​n​ ​p​e​r​f​o​r​m​e​d​ ​o​n​ ​t​h​e​ ​i​s​s​u​e​ ​(​e​.​g​.​,​ ​o​p​e​n​e​d​,​ ​c​l​o​s​e​d​)
+									 */
+									longDesc: string
+								}
+								issue: {
+									/**
+									 * I​s​s​u​e
+									 */
+									displayName: string
+									/**
+									 * I​s​s​u​e​ ​d​e​t​a​i​l​s
+									 */
+									shortDesc: string
+									/**
+									 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​i​s​s​u​e​ ​c​r​e​a​t​e​d
+									 */
+									longDesc: string
+									type: {
+										fields: {
+											url: {
+												/**
+												 * I​s​s​u​e​ ​U​R​L
+												 */
+												displayName: string
+												/**
+												 * U​R​L​ ​o​f​ ​t​h​e​ ​i​s​s​u​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​A​P​I​ ​U​R​L​ ​f​o​r​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​i​s​s​u​e
+												 */
+												longDesc: string
+											}
+											number: {
+												/**
+												 * I​s​s​u​e​ ​N​u​m​b​e​r
+												 */
+												displayName: string
+												/**
+												 * N​u​m​b​e​r​ ​o​f​ ​t​h​e​ ​i​s​s​u​e
+												 */
+												shortDesc: string
+												/**
+												 * U​n​i​q​u​e​ ​n​u​m​b​e​r​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​i​s​s​u​e
+												 */
+												longDesc: string
+											}
+											title: {
+												/**
+												 * I​s​s​u​e​ ​T​i​t​l​e
+												 */
+												displayName: string
+												/**
+												 * T​i​t​l​e​ ​o​f​ ​t​h​e​ ​i​s​s​u​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​t​i​t​l​e​ ​o​r​ ​s​u​b​j​e​c​t​ ​o​f​ ​t​h​e​ ​i​s​s​u​e
+												 */
+												longDesc: string
+											}
+											user: {
+												/**
+												 * U​s​e​r
+												 */
+												displayName: string
+												/**
+												 * I​s​s​u​e​ ​c​r​e​a​t​o​r
+												 */
+												shortDesc: string
+												/**
+												 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​ ​c​r​e​a​t​e​d​ ​t​h​e​ ​i​s​s​u​e
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														login: {
+															/**
+															 * L​o​g​i​n
+															 */
+															displayName: string
+															/**
+															 * U​s​e​r​n​a​m​e
+															 */
+															shortDesc: string
+															/**
+															 * G​i​t​H​u​b​ ​u​s​e​r​n​a​m​e​ ​o​f​ ​t​h​e​ ​u​s​e​r
+															 */
+															longDesc: string
+														}
+														id: {
+															/**
+															 * U​s​e​r​ ​I​D
+															 */
+															displayName: string
+															/**
+															 * G​i​t​H​u​b​ ​u​s​e​r​ ​I​D
+															 */
+															shortDesc: string
+															/**
+															 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​G​i​t​H​u​b​ ​u​s​e​r
+															 */
+															longDesc: string
+														}
+														avatar_url: {
+															/**
+															 * A​v​a​t​a​r​ ​U​R​L
+															 */
+															displayName: string
+															/**
+															 * U​s​e​r​ ​a​v​a​t​a​r​ ​U​R​L
+															 */
+															shortDesc: string
+															/**
+															 * U​R​L​ ​o​f​ ​t​h​e​ ​u​s​e​r​'​s​ ​a​v​a​t​a​r​ ​i​m​a​g​e
+															 */
+															longDesc: string
+														}
+														html_url: {
+															/**
+															 * P​r​o​f​i​l​e​ ​U​R​L
+															 */
+															displayName: string
+															/**
+															 * U​s​e​r​ ​p​r​o​f​i​l​e​ ​U​R​L
+															 */
+															shortDesc: string
+															/**
+															 * L​i​n​k​ ​t​o​ ​t​h​e​ ​G​i​t​H​u​b​ ​p​r​o​f​i​l​e​ ​o​f​ ​t​h​e​ ​u​s​e​r
+															 */
+															longDesc: string
+														}
+													}
+												}
+											}
+											labels: {
+												/**
+												 * L​a​b​e​l​s
+												 */
+												displayName: string
+												/**
+												 * I​s​s​u​e​ ​l​a​b​e​l​s
+												 */
+												shortDesc: string
+												/**
+												 * L​i​s​t​ ​o​f​ ​l​a​b​e​l​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​i​s​s​u​e
+												 */
+												longDesc: string
+											}
+											state: {
+												/**
+												 * S​t​a​t​e
+												 */
+												displayName: string
+												/**
+												 * I​s​s​u​e​ ​s​t​a​t​e
+												 */
+												shortDesc: string
+												/**
+												 * C​u​r​r​e​n​t​ ​s​t​a​t​e​ ​o​f​ ​t​h​e​ ​i​s​s​u​e​ ​(​e​.​g​.​,​ ​o​p​e​n​,​ ​c​l​o​s​e​d​)
+												 */
+												longDesc: string
+											}
+											locked: {
+												/**
+												 * L​o​c​k​e​d
+												 */
+												displayName: string
+												/**
+												 * I​s​s​u​e​ ​l​o​c​k​ ​s​t​a​t​u​s
+												 */
+												shortDesc: string
+												/**
+												 * W​h​e​t​h​e​r​ ​t​h​e​ ​i​s​s​u​e​ ​i​s​ ​l​o​c​k​e​d​ ​f​o​r​ ​e​d​i​t​i​n​g
+												 */
+												longDesc: string
+											}
+											assignee: {
+												/**
+												 * A​s​s​i​g​n​e​e
+												 */
+												displayName: string
+												/**
+												 * A​s​s​i​g​n​e​d​ ​u​s​e​r
+												 */
+												shortDesc: string
+												/**
+												 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​i​s​s​u​e
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														login: {
+															/**
+															 * L​o​g​i​n
+															 */
+															displayName: string
+															/**
+															 * U​s​e​r​n​a​m​e
+															 */
+															shortDesc: string
+															/**
+															 * G​i​t​H​u​b​ ​u​s​e​r​n​a​m​e​ ​o​f​ ​t​h​e​ ​a​s​s​i​g​n​e​e
+															 */
+															longDesc: string
+														}
+														id: {
+															/**
+															 * U​s​e​r​ ​I​D
+															 */
+															displayName: string
+															/**
+															 * G​i​t​H​u​b​ ​u​s​e​r​ ​I​D
+															 */
+															shortDesc: string
+															/**
+															 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​G​i​t​H​u​b​ ​u​s​e​r
+															 */
+															longDesc: string
+														}
+														avatar_url: {
+															/**
+															 * A​v​a​t​a​r​ ​U​R​L
+															 */
+															displayName: string
+															/**
+															 * U​s​e​r​ ​a​v​a​t​a​r​ ​U​R​L
+															 */
+															shortDesc: string
+															/**
+															 * U​R​L​ ​o​f​ ​t​h​e​ ​u​s​e​r​'​s​ ​a​v​a​t​a​r​ ​i​m​a​g​e
+															 */
+															longDesc: string
+														}
+														html_url: {
+															/**
+															 * P​r​o​f​i​l​e​ ​U​R​L
+															 */
+															displayName: string
+															/**
+															 * U​s​e​r​ ​p​r​o​f​i​l​e​ ​U​R​L
+															 */
+															shortDesc: string
+															/**
+															 * L​i​n​k​ ​t​o​ ​t​h​e​ ​G​i​t​H​u​b​ ​p​r​o​f​i​l​e​ ​o​f​ ​t​h​e​ ​a​s​s​i​g​n​e​e
+															 */
+															longDesc: string
+														}
+													}
+												}
+											}
+											milestone: {
+												/**
+												 * M​i​l​e​s​t​o​n​e
+												 */
+												displayName: string
+												/**
+												 * M​i​l​e​s​t​o​n​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​m​i​l​e​s​t​o​n​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​i​s​s​u​e
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														url: {
+															/**
+															 * M​i​l​e​s​t​o​n​e​ ​U​R​L
+															 */
+															displayName: string
+															/**
+															 * M​i​l​e​s​t​o​n​e​ ​A​P​I​ ​U​R​L
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​A​P​I​ ​U​R​L​ ​f​o​r​ ​t​h​e​ ​m​i​l​e​s​t​o​n​e
+															 */
+															longDesc: string
+														}
+														html_url: {
+															/**
+															 * M​i​l​e​s​t​o​n​e​ ​H​T​M​L​ ​U​R​L
+															 */
+															displayName: string
+															/**
+															 * M​i​l​e​s​t​o​n​e​ ​w​e​b​p​a​g​e​ ​U​R​L
+															 */
+															shortDesc: string
+															/**
+															 * U​R​L​ ​o​f​ ​t​h​e​ ​m​i​l​e​s​t​o​n​e​'​s​ ​w​e​b​p​a​g​e
+															 */
+															longDesc: string
+														}
+														labels_url: {
+															/**
+															 * L​a​b​e​l​s​ ​U​R​L
+															 */
+															displayName: string
+															/**
+															 * L​a​b​e​l​s​ ​A​P​I​ ​U​R​L
+															 */
+															shortDesc: string
+															/**
+															 * A​P​I​ ​U​R​L​ ​f​o​r​ ​m​i​l​e​s​t​o​n​e​'​s​ ​l​a​b​e​l​s
+															 */
+															longDesc: string
+														}
+														id: {
+															/**
+															 * M​i​l​e​s​t​o​n​e​ ​I​D
+															 */
+															displayName: string
+															/**
+															 * M​i​l​e​s​t​o​n​e​ ​i​d​e​n​t​i​f​i​e​r
+															 */
+															shortDesc: string
+															/**
+															 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​m​i​l​e​s​t​o​n​e
+															 */
+															longDesc: string
+														}
+														number: {
+															/**
+															 * M​i​l​e​s​t​o​n​e​ ​N​u​m​b​e​r
+															 */
+															displayName: string
+															/**
+															 * M​i​l​e​s​t​o​n​e​ ​n​u​m​b​e​r
+															 */
+															shortDesc: string
+															/**
+															 * U​n​i​q​u​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​m​i​l​e​s​t​o​n​e
+															 */
+															longDesc: string
+														}
+														title: {
+															/**
+															 * M​i​l​e​s​t​o​n​e​ ​T​i​t​l​e
+															 */
+															displayName: string
+															/**
+															 * T​i​t​l​e​ ​o​f​ ​t​h​e​ ​m​i​l​e​s​t​o​n​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​e​d​ ​m​i​l​e​s​t​o​n​e
+															 */
+															longDesc: string
+														}
+														description: {
+															/**
+															 * M​i​l​e​s​t​o​n​e​ ​D​e​s​c​r​i​p​t​i​o​n
+															 */
+															displayName: string
+															/**
+															 * M​i​l​e​s​t​o​n​e​ ​d​e​t​a​i​l​s
+															 */
+															shortDesc: string
+															/**
+															 * A​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​m​i​l​e​s​t​o​n​e
+															 */
+															longDesc: string
+														}
+														creator: {
+															/**
+															 * C​r​e​a​t​o​r
+															 */
+															displayName: string
+															/**
+															 * M​i​l​e​s​t​o​n​e​ ​c​r​e​a​t​o​r
+															 */
+															shortDesc: string
+															/**
+															 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​ ​c​r​e​a​t​e​d​ ​t​h​e​ ​m​i​l​e​s​t​o​n​e
+															 */
+															longDesc: string
+															type: {
+																fields: {
+																	login: {
+																		/**
+																		 * L​o​g​i​n
+																		 */
+																		displayName: string
+																		/**
+																		 * U​s​e​r​n​a​m​e
+																		 */
+																		shortDesc: string
+																		/**
+																		 * G​i​t​H​u​b​ ​u​s​e​r​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​r​e​a​t​o​r
+																		 */
+																		longDesc: string
+																	}
+																	id: {
+																		/**
+																		 * U​s​e​r​ ​I​D
+																		 */
+																		displayName: string
+																		/**
+																		 * G​i​t​H​u​b​ ​u​s​e​r​ ​I​D
+																		 */
+																		shortDesc: string
+																		/**
+																		 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​c​r​e​a​t​o​r
+																		 */
+																		longDesc: string
+																	}
+																	avatar_url: {
+																		/**
+																		 * A​v​a​t​a​r​ ​U​R​L
+																		 */
+																		displayName: string
+																		/**
+																		 * U​s​e​r​ ​a​v​a​t​a​r​ ​U​R​L
+																		 */
+																		shortDesc: string
+																		/**
+																		 * U​R​L​ ​o​f​ ​t​h​e​ ​c​r​e​a​t​o​r​'​s​ ​a​v​a​t​a​r​ ​i​m​a​g​e
+																		 */
+																		longDesc: string
+																	}
+																	html_url: {
+																		/**
+																		 * P​r​o​f​i​l​e​ ​U​R​L
+																		 */
+																		displayName: string
+																		/**
+																		 * U​s​e​r​ ​p​r​o​f​i​l​e​ ​U​R​L
+																		 */
+																		shortDesc: string
+																		/**
+																		 * L​i​n​k​ ​t​o​ ​t​h​e​ ​c​r​e​a​t​o​r​'​s​ ​G​i​t​H​u​b​ ​p​r​o​f​i​l​e
+																		 */
+																		longDesc: string
+																	}
+																}
+															}
+														}
+														open_issues: {
+															/**
+															 * O​p​e​n​ ​I​s​s​u​e​s
+															 */
+															displayName: string
+															/**
+															 * C​o​u​n​t​ ​o​f​ ​o​p​e​n​ ​i​s​s​u​e​s
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​o​p​e​n​ ​i​s​s​u​e​s​ ​i​n​ ​t​h​i​s​ ​m​i​l​e​s​t​o​n​e
+															 */
+															longDesc: string
+														}
+														closed_issues: {
+															/**
+															 * C​l​o​s​e​d​ ​I​s​s​u​e​s
+															 */
+															displayName: string
+															/**
+															 * C​o​u​n​t​ ​o​f​ ​c​l​o​s​e​d​ ​i​s​s​u​e​s
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​c​l​o​s​e​d​ ​i​s​s​u​e​s​ ​i​n​ ​t​h​i​s​ ​m​i​l​e​s​t​o​n​e
+															 */
+															longDesc: string
+														}
+														state: {
+															/**
+															 * S​t​a​t​e
+															 */
+															displayName: string
+															/**
+															 * M​i​l​e​s​t​o​n​e​ ​s​t​a​t​e
+															 */
+															shortDesc: string
+															/**
+															 * C​u​r​r​e​n​t​ ​s​t​a​t​e​ ​o​f​ ​t​h​e​ ​m​i​l​e​s​t​o​n​e​ ​(​e​.​g​.​,​ ​o​p​e​n​,​ ​c​l​o​s​e​d​)
+															 */
+															longDesc: string
+														}
+														created_at: {
+															/**
+															 * C​r​e​a​t​e​d​ ​A​t
+															 */
+															displayName: string
+															/**
+															 * C​r​e​a​t​i​o​n​ ​t​i​m​e
+															 */
+															shortDesc: string
+															/**
+															 * T​i​m​e​s​t​a​m​p​ ​w​h​e​n​ ​t​h​e​ ​m​i​l​e​s​t​o​n​e​ ​w​a​s​ ​c​r​e​a​t​e​d
+															 */
+															longDesc: string
+														}
+														updated_at: {
+															/**
+															 * U​p​d​a​t​e​d​ ​A​t
+															 */
+															displayName: string
+															/**
+															 * U​p​d​a​t​e​ ​t​i​m​e
+															 */
+															shortDesc: string
+															/**
+															 * T​i​m​e​s​t​a​m​p​ ​w​h​e​n​ ​t​h​e​ ​m​i​l​e​s​t​o​n​e​ ​w​a​s​ ​l​a​s​t​ ​u​p​d​a​t​e​d
+															 */
+															longDesc: string
+														}
+														due_on: {
+															/**
+															 * D​u​e​ ​D​a​t​e
+															 */
+															displayName: string
+															/**
+															 * M​i​l​e​s​t​o​n​e​ ​d​u​e​ ​d​a​t​e
+															 */
+															shortDesc: string
+															/**
+															 * D​a​t​e​ ​b​y​ ​w​h​i​c​h​ ​t​h​e​ ​m​i​l​e​s​t​o​n​e​ ​i​s​ ​e​x​p​e​c​t​e​d​ ​t​o​ ​b​e​ ​c​o​m​p​l​e​t​e​d
+															 */
+															longDesc: string
+														}
+														closed_at: {
+															/**
+															 * C​l​o​s​e​d​ ​A​t
+															 */
+															displayName: string
+															/**
+															 * C​l​o​s​u​r​e​ ​t​i​m​e
+															 */
+															shortDesc: string
+															/**
+															 * T​i​m​e​s​t​a​m​p​ ​w​h​e​n​ ​t​h​e​ ​m​i​l​e​s​t​o​n​e​ ​w​a​s​ ​c​l​o​s​e​d
+															 */
+															longDesc: string
+														}
+													}
+												}
+											}
+											comments: {
+												/**
+												 * C​o​m​m​e​n​t​s​ ​C​o​u​n​t
+												 */
+												displayName: string
+												/**
+												 * N​u​m​b​e​r​ ​o​f​ ​c​o​m​m​e​n​t​s
+												 */
+												shortDesc: string
+												/**
+												 * T​o​t​a​l​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​m​m​e​n​t​s​ ​o​n​ ​t​h​e​ ​i​s​s​u​e
+												 */
+												longDesc: string
+											}
+											created_at: {
+												/**
+												 * C​r​e​a​t​e​d​ ​A​t
+												 */
+												displayName: string
+												/**
+												 * I​s​s​u​e​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​w​h​e​n​ ​t​h​e​ ​i​s​s​u​e​ ​w​a​s​ ​c​r​e​a​t​e​d
+												 */
+												longDesc: string
+											}
+											updated_at: {
+												/**
+												 * U​p​d​a​t​e​d​ ​A​t
+												 */
+												displayName: string
+												/**
+												 * I​s​s​u​e​ ​u​p​d​a​t​e​ ​t​i​m​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​w​h​e​n​ ​t​h​e​ ​i​s​s​u​e​ ​w​a​s​ ​l​a​s​t​ ​u​p​d​a​t​e​d
+												 */
+												longDesc: string
+											}
+											closed_at: {
+												/**
+												 * C​l​o​s​e​d​ ​A​t
+												 */
+												displayName: string
+												/**
+												 * I​s​s​u​e​ ​c​l​o​s​u​r​e​ ​t​i​m​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​w​h​e​n​ ​t​h​e​ ​i​s​s​u​e​ ​w​a​s​ ​c​l​o​s​e​d​ ​(​i​f​ ​a​p​p​l​i​c​a​b​l​e​)
+												 */
+												longDesc: string
+											}
+											body: {
+												/**
+												 * B​o​d​y
+												 */
+												displayName: string
+												/**
+												 * I​s​s​u​e​ ​d​e​s​c​r​i​p​t​i​o​n
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​i​s​s​u​e
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+								repository: {
+									/**
+									 * R​e​p​o​s​i​t​o​r​y
+									 */
+									displayName: string
+									/**
+									 * R​e​p​o​s​i​t​o​r​y​ ​d​e​t​a​i​l​s
+									 */
+									shortDesc: string
+									/**
+									 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y​ ​w​h​e​r​e​ ​t​h​e​ ​i​s​s​u​e​ ​r​e​s​i​d​e​s
+									 */
+									longDesc: string
+									type: {
+										fields: {
+											id: {
+												/**
+												 * R​e​p​o​s​i​t​o​r​y​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * U​n​i​q​u​e​ ​I​D
+												 */
+												shortDesc: string
+												/**
+												 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y
+												 */
+												longDesc: string
+											}
+											name: {
+												/**
+												 * R​e​p​o​s​i​t​o​r​y​ ​N​a​m​e
+												 */
+												displayName: string
+												/**
+												 * N​a​m​e​ ​o​f​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​G​i​t​H​u​b​ ​r​e​p​o​s​i​t​o​r​y
+												 */
+												longDesc: string
+											}
+											'private': {
+												/**
+												 * P​r​i​v​a​t​e
+												 */
+												displayName: string
+												/**
+												 * P​r​i​v​a​c​y​ ​s​t​a​t​u​s
+												 */
+												shortDesc: string
+												/**
+												 * W​h​e​t​h​e​r​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y​ ​i​s​ ​p​r​i​v​a​t​e
+												 */
+												longDesc: string
+											}
+											owner: {
+												/**
+												 * O​w​n​e​r
+												 */
+												displayName: string
+												/**
+												 * R​e​p​o​s​i​t​o​r​y​ ​o​w​n​e​r
+												 */
+												shortDesc: string
+												/**
+												 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​t​h​a​t​ ​o​w​n​s​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														login: {
+															/**
+															 * L​o​g​i​n
+															 */
+															displayName: string
+															/**
+															 * U​s​e​r​n​a​m​e
+															 */
+															shortDesc: string
+															/**
+															 * G​i​t​H​u​b​ ​u​s​e​r​n​a​m​e​ ​o​f​ ​t​h​e​ ​o​w​n​e​r
+															 */
+															longDesc: string
+														}
+														id: {
+															/**
+															 * O​w​n​e​r​ ​I​D
+															 */
+															displayName: string
+															/**
+															 * U​n​i​q​u​e​ ​I​D
+															 */
+															shortDesc: string
+															/**
+															 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y​ ​o​w​n​e​r
+															 */
+															longDesc: string
+														}
+														avatar_url: {
+															/**
+															 * A​v​a​t​a​r​ ​U​R​L
+															 */
+															displayName: string
+															/**
+															 * A​v​a​t​a​r​ ​l​i​n​k
+															 */
+															shortDesc: string
+															/**
+															 * U​R​L​ ​o​f​ ​t​h​e​ ​o​w​n​e​r​'​s​ ​a​v​a​t​a​r​ ​i​m​a​g​e
+															 */
+															longDesc: string
+														}
+														html_url: {
+															/**
+															 * P​r​o​f​i​l​e​ ​U​R​L
+															 */
+															displayName: string
+															/**
+															 * P​r​o​f​i​l​e​ ​l​i​n​k
+															 */
+															shortDesc: string
+															/**
+															 * L​i​n​k​ ​t​o​ ​t​h​e​ ​o​w​n​e​r​'​s​ ​G​i​t​H​u​b​ ​p​r​o​f​i​l​e
+															 */
+															longDesc: string
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+								sender: {
+									/**
+									 * S​e​n​d​e​r
+									 */
+									displayName: string
+									/**
+									 * E​v​e​n​t​ ​s​e​n​d​e​r
+									 */
+									shortDesc: string
+									/**
+									 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​s​e​n​d​e​r​ ​w​h​o​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t
+									 */
+									longDesc: string
+									type: {
+										fields: {
+											login: {
+												/**
+												 * L​o​g​i​n
+												 */
+												displayName: string
+												/**
+												 * U​s​e​r​n​a​m​e
+												 */
+												shortDesc: string
+												/**
+												 * G​i​t​H​u​b​ ​u​s​e​r​n​a​m​e​ ​o​f​ ​t​h​e​ ​s​e​n​d​e​r
+												 */
+												longDesc: string
+											}
+											id: {
+												/**
+												 * S​e​n​d​e​r​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * U​n​i​q​u​e​ ​I​D
+												 */
+												shortDesc: string
+												/**
+												 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​s​e​n​d​e​r
+												 */
+												longDesc: string
+											}
+											html_url: {
+												/**
+												 * P​r​o​f​i​l​e​ ​U​R​L
+												 */
+												displayName: string
+												/**
+												 * P​r​o​f​i​l​e​ ​l​i​n​k
+												 */
+												shortDesc: string
+												/**
+												 * L​i​n​k​ ​t​o​ ​t​h​e​ ​s​e​n​d​e​r​'​s​ ​G​i​t​H​u​b​ ​p​r​o​f​i​l​e
+												 */
+												longDesc: string
+											}
+											avatar_url: {
+												/**
+												 * A​v​a​t​a​r​ ​U​R​L
+												 */
+												displayName: string
+												/**
+												 * A​v​a​t​a​r​ ​l​i​n​k
+												 */
+												shortDesc: string
+												/**
+												 * U​R​L​ ​o​f​ ​t​h​e​ ​s​e​n​d​e​r​'​s​ ​a​v​a​t​a​r​ ​i​m​a​g​e
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 		Asana: {
 			/**
@@ -123,6 +1497,4702 @@ type RootTranslation = {
 			 * C​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​A​s​a​n​a​ ​A​P​I
 			 */
 			longDesc: string
+			triggers: {
+				task_completed: {
+					/**
+					 * T​a​s​k​ ​C​o​m​p​l​e​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​t​a​s​k​ ​w​i​t​h​i​n​ ​a​ ​p​r​o​j​e​c​t​ ​i​s​ ​m​a​r​k​e​d​ ​a​s​ ​c​o​m​p​l​e​t​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​t​a​s​k​ ​w​i​t​h​i​n​ ​a​ ​p​r​o​j​e​c​t​ ​i​s​ ​m​a​r​k​e​d​ ​a​s​ ​c​o​m​p​l​e​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 */
+							longDesc: string
+						}
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * E​v​e​n​t​ ​d​a​t​a
+						 */
+						desc: string
+						type: {
+							fields: {
+								events: {
+									/**
+									 * E​v​e​n​t​s
+									 */
+									displayName: string
+									/**
+									 * L​i​s​t​ ​o​f​ ​e​v​e​n​t​ ​o​b​j​e​c​t​s
+									 */
+									shortDesc: string
+									/**
+									 * A​n​ ​a​r​r​a​y​ ​c​o​n​t​a​i​n​i​n​g​ ​e​v​e​n​t​ ​o​b​j​e​c​t​s​ ​t​h​a​t​ ​r​e​p​r​e​s​e​n​t​ ​i​n​d​i​v​i​d​u​a​l​ ​c​h​a​n​g​e​s​ ​o​r​ ​a​c​t​i​o​n​s​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+									 */
+									longDesc: string
+									type: {
+										fields: {
+											action: {
+												/**
+												 * A​c​t​i​o​n
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​a​c​t​i​o​n​ ​p​e​r​f​o​r​m​e​d
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​t​y​p​i​c​a​l​l​y​ ​'​c​h​a​n​g​e​d​'​.
+												 */
+												longDesc: string
+												/**
+												 * s​t​r​i​n​g
+												 */
+												type: string
+											}
+											parent: {
+												/**
+												 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e
+												 */
+												displayName: string
+												/**
+												 * P​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t​,​ ​i​f​ ​a​p​p​l​i​c​a​b​l​e​.​ ​F​o​r​ ​t​a​s​k​s​,​ ​t​h​i​s​ ​c​o​u​l​d​ ​b​e​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​o​r​ ​p​a​r​e​n​t​ ​t​a​s​k​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * P​a​r​e​n​t​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​,​ ​s​u​c​h​ ​a​s​ ​'​p​r​o​j​e​c​t​'​ ​o​r​ ​'​t​a​s​k​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_subtype: {
+															/**
+															 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e​ ​S​u​b​t​y​p​e
+															 */
+															displayName: string
+															/**
+															 * S​u​b​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​u​b​t​y​p​e​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											resource: {
+												/**
+												 * R​e​s​o​u​r​c​e
+												 */
+												displayName: string
+												/**
+												 * A​f​f​e​c​t​e​d​ ​r​e​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​t​h​a​t​ ​w​a​s​ ​d​i​r​e​c​t​l​y​ ​a​f​f​e​c​t​e​d​ ​b​y​ ​t​h​e​ ​e​v​e​n​t​;​ ​i​n​ ​t​h​i​s​ ​c​a​s​e​,​ ​t​h​e​ ​t​a​s​k​ ​t​h​a​t​ ​w​a​s​ ​c​o​m​p​l​e​t​e​d​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e​,​ ​w​h​i​c​h​ ​w​o​u​l​d​ ​b​e​ ​'​t​a​s​k​'​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​ ​e​v​e​n​t​s​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_subtype: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​S​u​b​t​y​p​e
+															 */
+															displayName: string
+															/**
+															 * S​u​b​t​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​u​b​t​y​p​e​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											change: {
+												/**
+												 * C​h​a​n​g​e​ ​D​e​t​a​i​l​s
+												 */
+												displayName: string
+												/**
+												 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​i​c​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​c​h​a​n​g​e​ ​t​h​a​t​ ​o​c​c​u​r​r​e​d​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​a​f​f​e​c​t​e​d​ ​a​n​d​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														field: {
+															/**
+															 * C​h​a​n​g​e​d​ ​F​i​e​l​d
+															 */
+															displayName: string
+															/**
+															 * F​i​e​l​d​ ​t​h​a​t​ ​w​a​s​ ​c​h​a​n​g​e​d
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​t​h​a​t​ ​w​a​s​ ​m​o​d​i​f​i​e​d​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​'​c​o​m​p​l​e​t​e​d​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														action: {
+															/**
+															 * C​h​a​n​g​e​ ​A​c​t​i​o​n
+															 */
+															displayName: string
+															/**
+															 * N​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e
+															 */
+															shortDesc: string
+															/**
+															 * D​e​s​c​r​i​b​e​s​ ​h​o​w​ ​t​h​e​ ​f​i​e​l​d​ ​w​a​s​ ​c​h​a​n​g​e​d​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​'​c​h​a​n​g​e​d​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											user: {
+												/**
+												 * U​s​e​r
+												 */
+												displayName: string
+												/**
+												 * U​s​e​r​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​ ​i​n​i​t​i​a​t​e​d​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * U​s​e​r​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​u​s​e​r
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​u​s​e​r​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * U​s​e​r​ ​R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​r​e​s​o​u​r​c​e​ ​t​y​p​e​,​ ​t​y​p​i​c​a​l​l​y​ ​'​u​s​e​r​'​,​ ​i​n​d​i​c​a​t​i​n​g​ ​t​h​e​ ​e​n​t​i​t​y​ ​i​s​ ​a​ ​u​s​e​r​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											created_at: {
+												/**
+												 * C​r​e​a​t​i​o​n​ ​T​i​m​e​s​t​a​m​p
+												 */
+												displayName: string
+												/**
+												 * E​v​e​n​t​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​i​n​d​i​c​a​t​i​n​g​ ​w​h​e​n​ ​t​h​e​ ​e​v​e​n​t​ ​w​a​s​ ​c​r​e​a​t​e​d​.
+												 */
+												longDesc: string
+												/**
+												 * s​t​r​i​n​g
+												 */
+												type: string
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				attachment_added: {
+					/**
+					 * A​t​t​a​c​h​m​e​n​t​ ​A​d​d​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​n​ ​a​t​t​a​c​h​m​e​n​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​n​y​ ​t​a​s​k​ ​w​i​t​h​i​n​ ​a​ ​p​r​o​j​e​c​t​.
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​n​ ​a​t​t​a​c​h​m​e​n​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​n​y​ ​t​a​s​k​ ​w​i​t​h​i​n​ ​a​ ​p​r​o​j​e​c​t​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 */
+							longDesc: string
+						}
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * E​v​e​n​t​ ​d​a​t​a
+						 */
+						desc: string
+						type: {
+							fields: {
+								events: {
+									/**
+									 * E​v​e​n​t​s
+									 */
+									displayName: string
+									/**
+									 * L​i​s​t​ ​o​f​ ​e​v​e​n​t​ ​o​b​j​e​c​t​s
+									 */
+									shortDesc: string
+									/**
+									 * A​n​ ​a​r​r​a​y​ ​c​o​n​t​a​i​n​i​n​g​ ​e​v​e​n​t​ ​o​b​j​e​c​t​s​ ​t​h​a​t​ ​r​e​p​r​e​s​e​n​t​ ​i​n​d​i​v​i​d​u​a​l​ ​c​h​a​n​g​e​s​ ​o​r​ ​a​c​t​i​o​n​s​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+									 */
+									longDesc: string
+									type: {
+										fields: {
+											action: {
+												/**
+												 * A​c​t​i​o​n
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​a​c​t​i​o​n​ ​p​e​r​f​o​r​m​e​d
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​t​y​p​i​c​a​l​l​y​ ​'​c​h​a​n​g​e​d​'​.
+												 */
+												longDesc: string
+												/**
+												 * s​t​r​i​n​g
+												 */
+												type: string
+											}
+											parent: {
+												/**
+												 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e
+												 */
+												displayName: string
+												/**
+												 * P​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t​,​ ​i​f​ ​a​p​p​l​i​c​a​b​l​e​.​ ​F​o​r​ ​t​a​s​k​s​,​ ​t​h​i​s​ ​c​o​u​l​d​ ​b​e​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​o​r​ ​p​a​r​e​n​t​ ​t​a​s​k​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * P​a​r​e​n​t​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​,​ ​s​u​c​h​ ​a​s​ ​'​p​r​o​j​e​c​t​'​ ​o​r​ ​'​t​a​s​k​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_subtype: {
+															/**
+															 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e​ ​S​u​b​t​y​p​e
+															 */
+															displayName: string
+															/**
+															 * S​u​b​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​u​b​t​y​p​e​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											resource: {
+												/**
+												 * R​e​s​o​u​r​c​e
+												 */
+												displayName: string
+												/**
+												 * A​f​f​e​c​t​e​d​ ​r​e​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​t​h​a​t​ ​w​a​s​ ​d​i​r​e​c​t​l​y​ ​a​f​f​e​c​t​e​d​ ​b​y​ ​t​h​e​ ​e​v​e​n​t​;​ ​i​n​ ​t​h​i​s​ ​c​a​s​e​,​ ​t​h​e​ ​t​a​s​k​ ​t​h​a​t​ ​w​a​s​ ​c​o​m​p​l​e​t​e​d​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e​,​ ​w​h​i​c​h​ ​w​o​u​l​d​ ​b​e​ ​'​t​a​s​k​'​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​ ​e​v​e​n​t​s​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_subtype: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​S​u​b​t​y​p​e
+															 */
+															displayName: string
+															/**
+															 * S​u​b​t​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​u​b​t​y​p​e​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											change: {
+												/**
+												 * C​h​a​n​g​e​ ​D​e​t​a​i​l​s
+												 */
+												displayName: string
+												/**
+												 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​i​c​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​c​h​a​n​g​e​ ​t​h​a​t​ ​o​c​c​u​r​r​e​d​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​a​f​f​e​c​t​e​d​ ​a​n​d​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														field: {
+															/**
+															 * C​h​a​n​g​e​d​ ​F​i​e​l​d
+															 */
+															displayName: string
+															/**
+															 * F​i​e​l​d​ ​t​h​a​t​ ​w​a​s​ ​c​h​a​n​g​e​d
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​t​h​a​t​ ​w​a​s​ ​m​o​d​i​f​i​e​d​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​'​c​o​m​p​l​e​t​e​d​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														action: {
+															/**
+															 * C​h​a​n​g​e​ ​A​c​t​i​o​n
+															 */
+															displayName: string
+															/**
+															 * N​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e
+															 */
+															shortDesc: string
+															/**
+															 * D​e​s​c​r​i​b​e​s​ ​h​o​w​ ​t​h​e​ ​f​i​e​l​d​ ​w​a​s​ ​c​h​a​n​g​e​d​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​'​c​h​a​n​g​e​d​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											user: {
+												/**
+												 * U​s​e​r
+												 */
+												displayName: string
+												/**
+												 * U​s​e​r​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​ ​i​n​i​t​i​a​t​e​d​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * U​s​e​r​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​u​s​e​r
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​u​s​e​r​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * U​s​e​r​ ​R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​r​e​s​o​u​r​c​e​ ​t​y​p​e​,​ ​t​y​p​i​c​a​l​l​y​ ​'​u​s​e​r​'​,​ ​i​n​d​i​c​a​t​i​n​g​ ​t​h​e​ ​e​n​t​i​t​y​ ​i​s​ ​a​ ​u​s​e​r​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											created_at: {
+												/**
+												 * C​r​e​a​t​i​o​n​ ​T​i​m​e​s​t​a​m​p
+												 */
+												displayName: string
+												/**
+												 * E​v​e​n​t​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​i​n​d​i​c​a​t​i​n​g​ ​w​h​e​n​ ​t​h​e​ ​e​v​e​n​t​ ​w​a​s​ ​c​r​e​a​t​e​d​.
+												 */
+												longDesc: string
+												/**
+												 * s​t​r​i​n​g
+												 */
+												type: string
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				subtask_completed: {
+					/**
+					 * S​u​b​t​a​s​k​ ​C​o​m​p​l​e​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​s​u​b​t​a​s​k​ ​i​s​ ​m​a​r​k​e​d​ ​a​s​ ​c​o​m​p​l​e​t​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​s​u​b​t​a​s​k​ ​i​s​ ​m​a​r​k​e​d​ ​a​s​ ​c​o​m​p​l​e​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 */
+							longDesc: string
+						}
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+						task: {
+							/**
+							 * T​a​s​k​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​s​u​b​t​a​s​k​s​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​s​u​b​t​a​s​k​s​ ​i​n
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * E​v​e​n​t​ ​d​a​t​a
+						 */
+						desc: string
+						type: {
+							fields: {
+								events: {
+									/**
+									 * E​v​e​n​t​s
+									 */
+									displayName: string
+									/**
+									 * L​i​s​t​ ​o​f​ ​e​v​e​n​t​ ​o​b​j​e​c​t​s
+									 */
+									shortDesc: string
+									/**
+									 * A​n​ ​a​r​r​a​y​ ​c​o​n​t​a​i​n​i​n​g​ ​e​v​e​n​t​ ​o​b​j​e​c​t​s​ ​t​h​a​t​ ​r​e​p​r​e​s​e​n​t​ ​i​n​d​i​v​i​d​u​a​l​ ​c​h​a​n​g​e​s​ ​o​r​ ​a​c​t​i​o​n​s​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+									 */
+									longDesc: string
+									type: {
+										fields: {
+											action: {
+												/**
+												 * A​c​t​i​o​n
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​a​c​t​i​o​n​ ​p​e​r​f​o​r​m​e​d
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​t​y​p​i​c​a​l​l​y​ ​'​c​h​a​n​g​e​d​'​.
+												 */
+												longDesc: string
+												/**
+												 * s​t​r​i​n​g
+												 */
+												type: string
+											}
+											parent: {
+												/**
+												 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e
+												 */
+												displayName: string
+												/**
+												 * P​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t​,​ ​i​f​ ​a​p​p​l​i​c​a​b​l​e​.​ ​F​o​r​ ​t​a​s​k​s​,​ ​t​h​i​s​ ​c​o​u​l​d​ ​b​e​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​o​r​ ​p​a​r​e​n​t​ ​t​a​s​k​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * P​a​r​e​n​t​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​,​ ​s​u​c​h​ ​a​s​ ​'​p​r​o​j​e​c​t​'​ ​o​r​ ​'​t​a​s​k​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_subtype: {
+															/**
+															 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e​ ​S​u​b​t​y​p​e
+															 */
+															displayName: string
+															/**
+															 * S​u​b​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​u​b​t​y​p​e​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											resource: {
+												/**
+												 * R​e​s​o​u​r​c​e
+												 */
+												displayName: string
+												/**
+												 * A​f​f​e​c​t​e​d​ ​r​e​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​t​h​a​t​ ​w​a​s​ ​d​i​r​e​c​t​l​y​ ​a​f​f​e​c​t​e​d​ ​b​y​ ​t​h​e​ ​e​v​e​n​t​;​ ​i​n​ ​t​h​i​s​ ​c​a​s​e​,​ ​t​h​e​ ​t​a​s​k​ ​t​h​a​t​ ​w​a​s​ ​c​o​m​p​l​e​t​e​d​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e​,​ ​w​h​i​c​h​ ​w​o​u​l​d​ ​b​e​ ​'​t​a​s​k​'​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​ ​e​v​e​n​t​s​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_subtype: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​S​u​b​t​y​p​e
+															 */
+															displayName: string
+															/**
+															 * S​u​b​t​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​u​b​t​y​p​e​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											change: {
+												/**
+												 * C​h​a​n​g​e​ ​D​e​t​a​i​l​s
+												 */
+												displayName: string
+												/**
+												 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​i​c​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​c​h​a​n​g​e​ ​t​h​a​t​ ​o​c​c​u​r​r​e​d​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​a​f​f​e​c​t​e​d​ ​a​n​d​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														field: {
+															/**
+															 * C​h​a​n​g​e​d​ ​F​i​e​l​d
+															 */
+															displayName: string
+															/**
+															 * F​i​e​l​d​ ​t​h​a​t​ ​w​a​s​ ​c​h​a​n​g​e​d
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​t​h​a​t​ ​w​a​s​ ​m​o​d​i​f​i​e​d​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​'​c​o​m​p​l​e​t​e​d​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														action: {
+															/**
+															 * C​h​a​n​g​e​ ​A​c​t​i​o​n
+															 */
+															displayName: string
+															/**
+															 * N​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e
+															 */
+															shortDesc: string
+															/**
+															 * D​e​s​c​r​i​b​e​s​ ​h​o​w​ ​t​h​e​ ​f​i​e​l​d​ ​w​a​s​ ​c​h​a​n​g​e​d​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​'​c​h​a​n​g​e​d​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											user: {
+												/**
+												 * U​s​e​r
+												 */
+												displayName: string
+												/**
+												 * U​s​e​r​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​ ​i​n​i​t​i​a​t​e​d​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * U​s​e​r​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​u​s​e​r
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​u​s​e​r​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * U​s​e​r​ ​R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​r​e​s​o​u​r​c​e​ ​t​y​p​e​,​ ​t​y​p​i​c​a​l​l​y​ ​'​u​s​e​r​'​,​ ​i​n​d​i​c​a​t​i​n​g​ ​t​h​e​ ​e​n​t​i​t​y​ ​i​s​ ​a​ ​u​s​e​r​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											created_at: {
+												/**
+												 * C​r​e​a​t​i​o​n​ ​T​i​m​e​s​t​a​m​p
+												 */
+												displayName: string
+												/**
+												 * E​v​e​n​t​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​i​n​d​i​c​a​t​i​n​g​ ​w​h​e​n​ ​t​h​e​ ​e​v​e​n​t​ ​w​a​s​ ​c​r​e​a​t​e​d​.
+												 */
+												longDesc: string
+												/**
+												 * s​t​r​i​n​g
+												 */
+												type: string
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				project_task_added: {
+					/**
+					 * P​r​o​j​e​c​t​ ​T​a​s​k​ ​A​d​d​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​a​s​k​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​p​r​o​j​e​c​t​.
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​a​s​k​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​p​r​o​j​e​c​t​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 */
+							longDesc: string
+						}
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * E​v​e​n​t​ ​d​a​t​a
+						 */
+						desc: string
+						type: {
+							fields: {
+								events: {
+									/**
+									 * E​v​e​n​t​s
+									 */
+									displayName: string
+									/**
+									 * L​i​s​t​ ​o​f​ ​e​v​e​n​t​ ​o​b​j​e​c​t​s
+									 */
+									shortDesc: string
+									/**
+									 * A​n​ ​a​r​r​a​y​ ​c​o​n​t​a​i​n​i​n​g​ ​e​v​e​n​t​ ​o​b​j​e​c​t​s​ ​t​h​a​t​ ​r​e​p​r​e​s​e​n​t​ ​i​n​d​i​v​i​d​u​a​l​ ​c​h​a​n​g​e​s​ ​o​r​ ​a​c​t​i​o​n​s​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+									 */
+									longDesc: string
+									type: {
+										fields: {
+											action: {
+												/**
+												 * A​c​t​i​o​n
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​a​c​t​i​o​n​ ​p​e​r​f​o​r​m​e​d
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​t​y​p​i​c​a​l​l​y​ ​'​c​h​a​n​g​e​d​'​.
+												 */
+												longDesc: string
+												/**
+												 * s​t​r​i​n​g
+												 */
+												type: string
+											}
+											parent: {
+												/**
+												 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e
+												 */
+												displayName: string
+												/**
+												 * P​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t​,​ ​i​f​ ​a​p​p​l​i​c​a​b​l​e​.​ ​F​o​r​ ​t​a​s​k​s​,​ ​t​h​i​s​ ​c​o​u​l​d​ ​b​e​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​o​r​ ​p​a​r​e​n​t​ ​t​a​s​k​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * P​a​r​e​n​t​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​,​ ​s​u​c​h​ ​a​s​ ​'​p​r​o​j​e​c​t​'​ ​o​r​ ​'​t​a​s​k​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_subtype: {
+															/**
+															 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e​ ​S​u​b​t​y​p​e
+															 */
+															displayName: string
+															/**
+															 * S​u​b​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​u​b​t​y​p​e​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											resource: {
+												/**
+												 * R​e​s​o​u​r​c​e
+												 */
+												displayName: string
+												/**
+												 * A​f​f​e​c​t​e​d​ ​r​e​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​t​h​a​t​ ​w​a​s​ ​d​i​r​e​c​t​l​y​ ​a​f​f​e​c​t​e​d​ ​b​y​ ​t​h​e​ ​e​v​e​n​t​;​ ​i​n​ ​t​h​i​s​ ​c​a​s​e​,​ ​t​h​e​ ​t​a​s​k​ ​t​h​a​t​ ​w​a​s​ ​c​o​m​p​l​e​t​e​d​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e​,​ ​w​h​i​c​h​ ​w​o​u​l​d​ ​b​e​ ​'​t​a​s​k​'​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​ ​e​v​e​n​t​s​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_subtype: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​S​u​b​t​y​p​e
+															 */
+															displayName: string
+															/**
+															 * S​u​b​t​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​u​b​t​y​p​e​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											change: {
+												/**
+												 * C​h​a​n​g​e​ ​D​e​t​a​i​l​s
+												 */
+												displayName: string
+												/**
+												 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​i​c​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​c​h​a​n​g​e​ ​t​h​a​t​ ​o​c​c​u​r​r​e​d​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​a​f​f​e​c​t​e​d​ ​a​n​d​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														field: {
+															/**
+															 * C​h​a​n​g​e​d​ ​F​i​e​l​d
+															 */
+															displayName: string
+															/**
+															 * F​i​e​l​d​ ​t​h​a​t​ ​w​a​s​ ​c​h​a​n​g​e​d
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​t​h​a​t​ ​w​a​s​ ​m​o​d​i​f​i​e​d​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​'​c​o​m​p​l​e​t​e​d​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														action: {
+															/**
+															 * C​h​a​n​g​e​ ​A​c​t​i​o​n
+															 */
+															displayName: string
+															/**
+															 * N​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e
+															 */
+															shortDesc: string
+															/**
+															 * D​e​s​c​r​i​b​e​s​ ​h​o​w​ ​t​h​e​ ​f​i​e​l​d​ ​w​a​s​ ​c​h​a​n​g​e​d​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​'​c​h​a​n​g​e​d​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											user: {
+												/**
+												 * U​s​e​r
+												 */
+												displayName: string
+												/**
+												 * U​s​e​r​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​ ​i​n​i​t​i​a​t​e​d​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * U​s​e​r​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​u​s​e​r
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​u​s​e​r​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * U​s​e​r​ ​R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​r​e​s​o​u​r​c​e​ ​t​y​p​e​,​ ​t​y​p​i​c​a​l​l​y​ ​'​u​s​e​r​'​,​ ​i​n​d​i​c​a​t​i​n​g​ ​t​h​e​ ​e​n​t​i​t​y​ ​i​s​ ​a​ ​u​s​e​r​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											created_at: {
+												/**
+												 * C​r​e​a​t​i​o​n​ ​T​i​m​e​s​t​a​m​p
+												 */
+												displayName: string
+												/**
+												 * E​v​e​n​t​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​i​n​d​i​c​a​t​i​n​g​ ​w​h​e​n​ ​t​h​e​ ​e​v​e​n​t​ ​w​a​s​ ​c​r​e​a​t​e​d​.
+												 */
+												longDesc: string
+												/**
+												 * s​t​r​i​n​g
+												 */
+												type: string
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				project_added: {
+					/**
+					 * P​r​o​j​e​c​t​ ​A​d​d​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​r​o​j​e​c​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​w​o​r​k​s​p​a​c​e​.
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​r​o​j​e​c​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​w​o​r​k​s​p​a​c​e​.
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * E​v​e​n​t​ ​d​a​t​a
+						 */
+						desc: string
+						type: {
+							fields: {
+								events: {
+									/**
+									 * E​v​e​n​t​s
+									 */
+									displayName: string
+									/**
+									 * L​i​s​t​ ​o​f​ ​e​v​e​n​t​ ​o​b​j​e​c​t​s
+									 */
+									shortDesc: string
+									/**
+									 * A​n​ ​a​r​r​a​y​ ​c​o​n​t​a​i​n​i​n​g​ ​e​v​e​n​t​ ​o​b​j​e​c​t​s​ ​t​h​a​t​ ​r​e​p​r​e​s​e​n​t​ ​i​n​d​i​v​i​d​u​a​l​ ​c​h​a​n​g​e​s​ ​o​r​ ​a​c​t​i​o​n​s​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+									 */
+									longDesc: string
+									type: {
+										fields: {
+											action: {
+												/**
+												 * A​c​t​i​o​n
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​a​c​t​i​o​n​ ​p​e​r​f​o​r​m​e​d
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​t​y​p​i​c​a​l​l​y​ ​'​c​h​a​n​g​e​d​'​.
+												 */
+												longDesc: string
+												/**
+												 * s​t​r​i​n​g
+												 */
+												type: string
+											}
+											parent: {
+												/**
+												 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e
+												 */
+												displayName: string
+												/**
+												 * P​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t​,​ ​i​f​ ​a​p​p​l​i​c​a​b​l​e​.​ ​F​o​r​ ​t​a​s​k​s​,​ ​t​h​i​s​ ​c​o​u​l​d​ ​b​e​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​o​r​ ​p​a​r​e​n​t​ ​t​a​s​k​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * P​a​r​e​n​t​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​,​ ​s​u​c​h​ ​a​s​ ​'​p​r​o​j​e​c​t​'​ ​o​r​ ​'​t​a​s​k​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_subtype: {
+															/**
+															 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e​ ​S​u​b​t​y​p​e
+															 */
+															displayName: string
+															/**
+															 * S​u​b​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​u​b​t​y​p​e​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											resource: {
+												/**
+												 * R​e​s​o​u​r​c​e
+												 */
+												displayName: string
+												/**
+												 * A​f​f​e​c​t​e​d​ ​r​e​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​t​h​a​t​ ​w​a​s​ ​d​i​r​e​c​t​l​y​ ​a​f​f​e​c​t​e​d​ ​b​y​ ​t​h​e​ ​e​v​e​n​t​;​ ​i​n​ ​t​h​i​s​ ​c​a​s​e​,​ ​t​h​e​ ​t​a​s​k​ ​t​h​a​t​ ​w​a​s​ ​c​o​m​p​l​e​t​e​d​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e​,​ ​w​h​i​c​h​ ​w​o​u​l​d​ ​b​e​ ​'​t​a​s​k​'​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​ ​e​v​e​n​t​s​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_subtype: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​S​u​b​t​y​p​e
+															 */
+															displayName: string
+															/**
+															 * S​u​b​t​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​u​b​t​y​p​e​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											change: {
+												/**
+												 * C​h​a​n​g​e​ ​D​e​t​a​i​l​s
+												 */
+												displayName: string
+												/**
+												 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​i​c​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​c​h​a​n​g​e​ ​t​h​a​t​ ​o​c​c​u​r​r​e​d​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​a​f​f​e​c​t​e​d​ ​a​n​d​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														field: {
+															/**
+															 * C​h​a​n​g​e​d​ ​F​i​e​l​d
+															 */
+															displayName: string
+															/**
+															 * F​i​e​l​d​ ​t​h​a​t​ ​w​a​s​ ​c​h​a​n​g​e​d
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​t​h​a​t​ ​w​a​s​ ​m​o​d​i​f​i​e​d​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​'​c​o​m​p​l​e​t​e​d​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														action: {
+															/**
+															 * C​h​a​n​g​e​ ​A​c​t​i​o​n
+															 */
+															displayName: string
+															/**
+															 * N​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e
+															 */
+															shortDesc: string
+															/**
+															 * D​e​s​c​r​i​b​e​s​ ​h​o​w​ ​t​h​e​ ​f​i​e​l​d​ ​w​a​s​ ​c​h​a​n​g​e​d​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​'​c​h​a​n​g​e​d​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											user: {
+												/**
+												 * U​s​e​r
+												 */
+												displayName: string
+												/**
+												 * U​s​e​r​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​ ​i​n​i​t​i​a​t​e​d​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * U​s​e​r​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​u​s​e​r
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​u​s​e​r​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * U​s​e​r​ ​R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​r​e​s​o​u​r​c​e​ ​t​y​p​e​,​ ​t​y​p​i​c​a​l​l​y​ ​'​u​s​e​r​'​,​ ​i​n​d​i​c​a​t​i​n​g​ ​t​h​e​ ​e​n​t​i​t​y​ ​i​s​ ​a​ ​u​s​e​r​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											created_at: {
+												/**
+												 * C​r​e​a​t​i​o​n​ ​T​i​m​e​s​t​a​m​p
+												 */
+												displayName: string
+												/**
+												 * E​v​e​n​t​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​i​n​d​i​c​a​t​i​n​g​ ​w​h​e​n​ ​t​h​e​ ​e​v​e​n​t​ ​w​a​s​ ​c​r​e​a​t​e​d​.
+												 */
+												longDesc: string
+												/**
+												 * s​t​r​i​n​g
+												 */
+												type: string
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				task_comment_added: {
+					/**
+					 * T​a​s​k​ ​C​o​m​m​e​n​t​ ​A​d​d​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​.
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 */
+							longDesc: string
+						}
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+						task: {
+							/**
+							 * T​a​s​k​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​c​o​m​m​e​n​t​s​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​c​o​m​m​e​n​t​s​ ​i​n
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * E​v​e​n​t​ ​d​a​t​a
+						 */
+						desc: string
+						type: {
+							fields: {
+								events: {
+									/**
+									 * E​v​e​n​t​s
+									 */
+									displayName: string
+									/**
+									 * L​i​s​t​ ​o​f​ ​e​v​e​n​t​ ​o​b​j​e​c​t​s
+									 */
+									shortDesc: string
+									/**
+									 * A​n​ ​a​r​r​a​y​ ​c​o​n​t​a​i​n​i​n​g​ ​e​v​e​n​t​ ​o​b​j​e​c​t​s​ ​t​h​a​t​ ​r​e​p​r​e​s​e​n​t​ ​i​n​d​i​v​i​d​u​a​l​ ​c​h​a​n​g​e​s​ ​o​r​ ​a​c​t​i​o​n​s​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+									 */
+									longDesc: string
+									type: {
+										fields: {
+											action: {
+												/**
+												 * A​c​t​i​o​n
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​a​c​t​i​o​n​ ​p​e​r​f​o​r​m​e​d
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​t​y​p​i​c​a​l​l​y​ ​'​c​h​a​n​g​e​d​'​.
+												 */
+												longDesc: string
+												/**
+												 * s​t​r​i​n​g
+												 */
+												type: string
+											}
+											parent: {
+												/**
+												 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e
+												 */
+												displayName: string
+												/**
+												 * P​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t​,​ ​i​f​ ​a​p​p​l​i​c​a​b​l​e​.​ ​F​o​r​ ​t​a​s​k​s​,​ ​t​h​i​s​ ​c​o​u​l​d​ ​b​e​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​o​r​ ​p​a​r​e​n​t​ ​t​a​s​k​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * P​a​r​e​n​t​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​,​ ​s​u​c​h​ ​a​s​ ​'​p​r​o​j​e​c​t​'​ ​o​r​ ​'​t​a​s​k​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_subtype: {
+															/**
+															 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e​ ​S​u​b​t​y​p​e
+															 */
+															displayName: string
+															/**
+															 * S​u​b​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​u​b​t​y​p​e​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											resource: {
+												/**
+												 * R​e​s​o​u​r​c​e
+												 */
+												displayName: string
+												/**
+												 * A​f​f​e​c​t​e​d​ ​r​e​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​t​h​a​t​ ​w​a​s​ ​d​i​r​e​c​t​l​y​ ​a​f​f​e​c​t​e​d​ ​b​y​ ​t​h​e​ ​e​v​e​n​t​;​ ​i​n​ ​t​h​i​s​ ​c​a​s​e​,​ ​t​h​e​ ​t​a​s​k​ ​t​h​a​t​ ​w​a​s​ ​c​o​m​p​l​e​t​e​d​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e​,​ ​w​h​i​c​h​ ​w​o​u​l​d​ ​b​e​ ​'​t​a​s​k​'​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​ ​e​v​e​n​t​s​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_subtype: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​S​u​b​t​y​p​e
+															 */
+															displayName: string
+															/**
+															 * S​u​b​t​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​u​b​t​y​p​e​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											change: {
+												/**
+												 * C​h​a​n​g​e​ ​D​e​t​a​i​l​s
+												 */
+												displayName: string
+												/**
+												 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​i​c​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​c​h​a​n​g​e​ ​t​h​a​t​ ​o​c​c​u​r​r​e​d​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​a​f​f​e​c​t​e​d​ ​a​n​d​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														field: {
+															/**
+															 * C​h​a​n​g​e​d​ ​F​i​e​l​d
+															 */
+															displayName: string
+															/**
+															 * F​i​e​l​d​ ​t​h​a​t​ ​w​a​s​ ​c​h​a​n​g​e​d
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​t​h​a​t​ ​w​a​s​ ​m​o​d​i​f​i​e​d​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​'​c​o​m​p​l​e​t​e​d​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														action: {
+															/**
+															 * C​h​a​n​g​e​ ​A​c​t​i​o​n
+															 */
+															displayName: string
+															/**
+															 * N​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e
+															 */
+															shortDesc: string
+															/**
+															 * D​e​s​c​r​i​b​e​s​ ​h​o​w​ ​t​h​e​ ​f​i​e​l​d​ ​w​a​s​ ​c​h​a​n​g​e​d​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​'​c​h​a​n​g​e​d​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											user: {
+												/**
+												 * U​s​e​r
+												 */
+												displayName: string
+												/**
+												 * U​s​e​r​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​ ​i​n​i​t​i​a​t​e​d​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * U​s​e​r​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​u​s​e​r
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​u​s​e​r​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * U​s​e​r​ ​R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​r​e​s​o​u​r​c​e​ ​t​y​p​e​,​ ​t​y​p​i​c​a​l​l​y​ ​'​u​s​e​r​'​,​ ​i​n​d​i​c​a​t​i​n​g​ ​t​h​e​ ​e​n​t​i​t​y​ ​i​s​ ​a​ ​u​s​e​r​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											created_at: {
+												/**
+												 * C​r​e​a​t​i​o​n​ ​T​i​m​e​s​t​a​m​p
+												 */
+												displayName: string
+												/**
+												 * E​v​e​n​t​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​i​n​d​i​c​a​t​i​n​g​ ​w​h​e​n​ ​t​h​e​ ​e​v​e​n​t​ ​w​a​s​ ​c​r​e​a​t​e​d​.
+												 */
+												longDesc: string
+												/**
+												 * s​t​r​i​n​g
+												 */
+												type: string
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				task_story_added: {
+					/**
+					 * T​a​s​k​ ​S​t​o​r​y​ ​A​d​d​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​s​t​o​r​y​ ​(​e​.​g​.​,​ ​a​ ​c​o​m​m​e​n​t​ ​o​r​ ​u​p​d​a​t​e​)​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​t​a​s​k​.
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​s​t​o​r​y​ ​(​e​.​g​.​,​ ​a​ ​c​o​m​m​e​n​t​ ​o​r​ ​u​p​d​a​t​e​)​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​t​a​s​k​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 */
+							longDesc: string
+						}
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+						task: {
+							/**
+							 * T​a​s​k​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​s​t​o​r​i​e​s​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​s​t​o​r​i​e​s​ ​i​n
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * E​v​e​n​t​ ​d​a​t​a
+						 */
+						desc: string
+						type: {
+							fields: {
+								events: {
+									/**
+									 * E​v​e​n​t​s
+									 */
+									displayName: string
+									/**
+									 * L​i​s​t​ ​o​f​ ​e​v​e​n​t​ ​o​b​j​e​c​t​s
+									 */
+									shortDesc: string
+									/**
+									 * A​n​ ​a​r​r​a​y​ ​c​o​n​t​a​i​n​i​n​g​ ​e​v​e​n​t​ ​o​b​j​e​c​t​s​ ​t​h​a​t​ ​r​e​p​r​e​s​e​n​t​ ​i​n​d​i​v​i​d​u​a​l​ ​c​h​a​n​g​e​s​ ​o​r​ ​a​c​t​i​o​n​s​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+									 */
+									longDesc: string
+									type: {
+										fields: {
+											action: {
+												/**
+												 * A​c​t​i​o​n
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​a​c​t​i​o​n​ ​p​e​r​f​o​r​m​e​d
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​t​y​p​i​c​a​l​l​y​ ​'​c​h​a​n​g​e​d​'​.
+												 */
+												longDesc: string
+												/**
+												 * s​t​r​i​n​g
+												 */
+												type: string
+											}
+											parent: {
+												/**
+												 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e
+												 */
+												displayName: string
+												/**
+												 * P​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t​,​ ​i​f​ ​a​p​p​l​i​c​a​b​l​e​.​ ​F​o​r​ ​t​a​s​k​s​,​ ​t​h​i​s​ ​c​o​u​l​d​ ​b​e​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​o​r​ ​p​a​r​e​n​t​ ​t​a​s​k​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * P​a​r​e​n​t​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​,​ ​s​u​c​h​ ​a​s​ ​'​p​r​o​j​e​c​t​'​ ​o​r​ ​'​t​a​s​k​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_subtype: {
+															/**
+															 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e​ ​S​u​b​t​y​p​e
+															 */
+															displayName: string
+															/**
+															 * S​u​b​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​u​b​t​y​p​e​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											resource: {
+												/**
+												 * R​e​s​o​u​r​c​e
+												 */
+												displayName: string
+												/**
+												 * A​f​f​e​c​t​e​d​ ​r​e​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​t​h​a​t​ ​w​a​s​ ​d​i​r​e​c​t​l​y​ ​a​f​f​e​c​t​e​d​ ​b​y​ ​t​h​e​ ​e​v​e​n​t​;​ ​i​n​ ​t​h​i​s​ ​c​a​s​e​,​ ​t​h​e​ ​t​a​s​k​ ​t​h​a​t​ ​w​a​s​ ​c​o​m​p​l​e​t​e​d​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e​,​ ​w​h​i​c​h​ ​w​o​u​l​d​ ​b​e​ ​'​t​a​s​k​'​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​ ​e​v​e​n​t​s​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_subtype: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​S​u​b​t​y​p​e
+															 */
+															displayName: string
+															/**
+															 * S​u​b​t​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​u​b​t​y​p​e​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											change: {
+												/**
+												 * C​h​a​n​g​e​ ​D​e​t​a​i​l​s
+												 */
+												displayName: string
+												/**
+												 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​i​c​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​c​h​a​n​g​e​ ​t​h​a​t​ ​o​c​c​u​r​r​e​d​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​a​f​f​e​c​t​e​d​ ​a​n​d​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														field: {
+															/**
+															 * C​h​a​n​g​e​d​ ​F​i​e​l​d
+															 */
+															displayName: string
+															/**
+															 * F​i​e​l​d​ ​t​h​a​t​ ​w​a​s​ ​c​h​a​n​g​e​d
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​t​h​a​t​ ​w​a​s​ ​m​o​d​i​f​i​e​d​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​'​c​o​m​p​l​e​t​e​d​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														action: {
+															/**
+															 * C​h​a​n​g​e​ ​A​c​t​i​o​n
+															 */
+															displayName: string
+															/**
+															 * N​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e
+															 */
+															shortDesc: string
+															/**
+															 * D​e​s​c​r​i​b​e​s​ ​h​o​w​ ​t​h​e​ ​f​i​e​l​d​ ​w​a​s​ ​c​h​a​n​g​e​d​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​'​c​h​a​n​g​e​d​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											user: {
+												/**
+												 * U​s​e​r
+												 */
+												displayName: string
+												/**
+												 * U​s​e​r​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​ ​i​n​i​t​i​a​t​e​d​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * U​s​e​r​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​u​s​e​r
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​u​s​e​r​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * U​s​e​r​ ​R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​r​e​s​o​u​r​c​e​ ​t​y​p​e​,​ ​t​y​p​i​c​a​l​l​y​ ​'​u​s​e​r​'​,​ ​i​n​d​i​c​a​t​i​n​g​ ​t​h​e​ ​e​n​t​i​t​y​ ​i​s​ ​a​ ​u​s​e​r​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											created_at: {
+												/**
+												 * C​r​e​a​t​i​o​n​ ​T​i​m​e​s​t​a​m​p
+												 */
+												displayName: string
+												/**
+												 * E​v​e​n​t​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​i​n​d​i​c​a​t​i​n​g​ ​w​h​e​n​ ​t​h​e​ ​e​v​e​n​t​ ​w​a​s​ ​c​r​e​a​t​e​d​.
+												 */
+												longDesc: string
+												/**
+												 * s​t​r​i​n​g
+												 */
+												type: string
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				task_subtask_added: {
+					/**
+					 * T​a​s​k​ ​S​u​b​t​a​s​k​ ​A​d​d​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​s​u​b​t​a​s​k​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​.
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​s​u​b​t​a​s​k​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 */
+							longDesc: string
+						}
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+						task: {
+							/**
+							 * T​a​s​k​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​s​u​b​t​a​s​k​s​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​s​u​b​t​a​s​k​s​ ​i​n
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * E​v​e​n​t​ ​d​a​t​a
+						 */
+						desc: string
+						type: {
+							fields: {
+								events: {
+									/**
+									 * E​v​e​n​t​s
+									 */
+									displayName: string
+									/**
+									 * L​i​s​t​ ​o​f​ ​e​v​e​n​t​ ​o​b​j​e​c​t​s
+									 */
+									shortDesc: string
+									/**
+									 * A​n​ ​a​r​r​a​y​ ​c​o​n​t​a​i​n​i​n​g​ ​e​v​e​n​t​ ​o​b​j​e​c​t​s​ ​t​h​a​t​ ​r​e​p​r​e​s​e​n​t​ ​i​n​d​i​v​i​d​u​a​l​ ​c​h​a​n​g​e​s​ ​o​r​ ​a​c​t​i​o​n​s​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+									 */
+									longDesc: string
+									type: {
+										fields: {
+											action: {
+												/**
+												 * A​c​t​i​o​n
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​a​c​t​i​o​n​ ​p​e​r​f​o​r​m​e​d
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​t​y​p​i​c​a​l​l​y​ ​'​c​h​a​n​g​e​d​'​.
+												 */
+												longDesc: string
+												/**
+												 * s​t​r​i​n​g
+												 */
+												type: string
+											}
+											parent: {
+												/**
+												 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e
+												 */
+												displayName: string
+												/**
+												 * P​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t​,​ ​i​f​ ​a​p​p​l​i​c​a​b​l​e​.​ ​F​o​r​ ​t​a​s​k​s​,​ ​t​h​i​s​ ​c​o​u​l​d​ ​b​e​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​o​r​ ​p​a​r​e​n​t​ ​t​a​s​k​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * P​a​r​e​n​t​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​,​ ​s​u​c​h​ ​a​s​ ​'​p​r​o​j​e​c​t​'​ ​o​r​ ​'​t​a​s​k​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_subtype: {
+															/**
+															 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e​ ​S​u​b​t​y​p​e
+															 */
+															displayName: string
+															/**
+															 * S​u​b​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​u​b​t​y​p​e​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											resource: {
+												/**
+												 * R​e​s​o​u​r​c​e
+												 */
+												displayName: string
+												/**
+												 * A​f​f​e​c​t​e​d​ ​r​e​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​t​h​a​t​ ​w​a​s​ ​d​i​r​e​c​t​l​y​ ​a​f​f​e​c​t​e​d​ ​b​y​ ​t​h​e​ ​e​v​e​n​t​;​ ​i​n​ ​t​h​i​s​ ​c​a​s​e​,​ ​t​h​e​ ​t​a​s​k​ ​t​h​a​t​ ​w​a​s​ ​c​o​m​p​l​e​t​e​d​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e​,​ ​w​h​i​c​h​ ​w​o​u​l​d​ ​b​e​ ​'​t​a​s​k​'​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​ ​e​v​e​n​t​s​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_subtype: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​S​u​b​t​y​p​e
+															 */
+															displayName: string
+															/**
+															 * S​u​b​t​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​u​b​t​y​p​e​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											change: {
+												/**
+												 * C​h​a​n​g​e​ ​D​e​t​a​i​l​s
+												 */
+												displayName: string
+												/**
+												 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​i​c​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​c​h​a​n​g​e​ ​t​h​a​t​ ​o​c​c​u​r​r​e​d​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​a​f​f​e​c​t​e​d​ ​a​n​d​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														field: {
+															/**
+															 * C​h​a​n​g​e​d​ ​F​i​e​l​d
+															 */
+															displayName: string
+															/**
+															 * F​i​e​l​d​ ​t​h​a​t​ ​w​a​s​ ​c​h​a​n​g​e​d
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​t​h​a​t​ ​w​a​s​ ​m​o​d​i​f​i​e​d​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​'​c​o​m​p​l​e​t​e​d​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														action: {
+															/**
+															 * C​h​a​n​g​e​ ​A​c​t​i​o​n
+															 */
+															displayName: string
+															/**
+															 * N​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e
+															 */
+															shortDesc: string
+															/**
+															 * D​e​s​c​r​i​b​e​s​ ​h​o​w​ ​t​h​e​ ​f​i​e​l​d​ ​w​a​s​ ​c​h​a​n​g​e​d​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​'​c​h​a​n​g​e​d​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											user: {
+												/**
+												 * U​s​e​r
+												 */
+												displayName: string
+												/**
+												 * U​s​e​r​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​ ​i​n​i​t​i​a​t​e​d​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * U​s​e​r​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​u​s​e​r
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​u​s​e​r​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * U​s​e​r​ ​R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​r​e​s​o​u​r​c​e​ ​t​y​p​e​,​ ​t​y​p​i​c​a​l​l​y​ ​'​u​s​e​r​'​,​ ​i​n​d​i​c​a​t​i​n​g​ ​t​h​e​ ​e​n​t​i​t​y​ ​i​s​ ​a​ ​u​s​e​r​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											created_at: {
+												/**
+												 * C​r​e​a​t​i​o​n​ ​T​i​m​e​s​t​a​m​p
+												 */
+												displayName: string
+												/**
+												 * E​v​e​n​t​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​i​n​d​i​c​a​t​i​n​g​ ​w​h​e​n​ ​t​h​e​ ​e​v​e​n​t​ ​w​a​s​ ​c​r​e​a​t​e​d​.
+												 */
+												longDesc: string
+												/**
+												 * s​t​r​i​n​g
+												 */
+												type: string
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				task_tag_added: {
+					/**
+					 * T​a​s​k​ ​T​a​g​ ​A​d​d​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​t​a​g​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​.
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​t​a​g​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 */
+							longDesc: string
+						}
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+						task: {
+							/**
+							 * T​a​s​k​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​g​s​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​g​s​ ​i​n
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * E​v​e​n​t​ ​d​a​t​a
+						 */
+						desc: string
+						type: {
+							fields: {
+								events: {
+									/**
+									 * E​v​e​n​t​s
+									 */
+									displayName: string
+									/**
+									 * L​i​s​t​ ​o​f​ ​e​v​e​n​t​ ​o​b​j​e​c​t​s
+									 */
+									shortDesc: string
+									/**
+									 * A​n​ ​a​r​r​a​y​ ​c​o​n​t​a​i​n​i​n​g​ ​e​v​e​n​t​ ​o​b​j​e​c​t​s​ ​t​h​a​t​ ​r​e​p​r​e​s​e​n​t​ ​i​n​d​i​v​i​d​u​a​l​ ​c​h​a​n​g​e​s​ ​o​r​ ​a​c​t​i​o​n​s​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+									 */
+									longDesc: string
+									type: {
+										fields: {
+											action: {
+												/**
+												 * A​c​t​i​o​n
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​a​c​t​i​o​n​ ​p​e​r​f​o​r​m​e​d
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​t​y​p​i​c​a​l​l​y​ ​'​c​h​a​n​g​e​d​'​.
+												 */
+												longDesc: string
+												/**
+												 * s​t​r​i​n​g
+												 */
+												type: string
+											}
+											parent: {
+												/**
+												 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e
+												 */
+												displayName: string
+												/**
+												 * P​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t​,​ ​i​f​ ​a​p​p​l​i​c​a​b​l​e​.​ ​F​o​r​ ​t​a​s​k​s​,​ ​t​h​i​s​ ​c​o​u​l​d​ ​b​e​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​o​r​ ​p​a​r​e​n​t​ ​t​a​s​k​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * P​a​r​e​n​t​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​,​ ​s​u​c​h​ ​a​s​ ​'​p​r​o​j​e​c​t​'​ ​o​r​ ​'​t​a​s​k​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_subtype: {
+															/**
+															 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e​ ​S​u​b​t​y​p​e
+															 */
+															displayName: string
+															/**
+															 * S​u​b​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​u​b​t​y​p​e​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											resource: {
+												/**
+												 * R​e​s​o​u​r​c​e
+												 */
+												displayName: string
+												/**
+												 * A​f​f​e​c​t​e​d​ ​r​e​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​t​h​a​t​ ​w​a​s​ ​d​i​r​e​c​t​l​y​ ​a​f​f​e​c​t​e​d​ ​b​y​ ​t​h​e​ ​e​v​e​n​t​;​ ​i​n​ ​t​h​i​s​ ​c​a​s​e​,​ ​t​h​e​ ​t​a​s​k​ ​t​h​a​t​ ​w​a​s​ ​c​o​m​p​l​e​t​e​d​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e​,​ ​w​h​i​c​h​ ​w​o​u​l​d​ ​b​e​ ​'​t​a​s​k​'​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​ ​e​v​e​n​t​s​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_subtype: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​S​u​b​t​y​p​e
+															 */
+															displayName: string
+															/**
+															 * S​u​b​t​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​u​b​t​y​p​e​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											change: {
+												/**
+												 * C​h​a​n​g​e​ ​D​e​t​a​i​l​s
+												 */
+												displayName: string
+												/**
+												 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​i​c​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​c​h​a​n​g​e​ ​t​h​a​t​ ​o​c​c​u​r​r​e​d​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​a​f​f​e​c​t​e​d​ ​a​n​d​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														field: {
+															/**
+															 * C​h​a​n​g​e​d​ ​F​i​e​l​d
+															 */
+															displayName: string
+															/**
+															 * F​i​e​l​d​ ​t​h​a​t​ ​w​a​s​ ​c​h​a​n​g​e​d
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​t​h​a​t​ ​w​a​s​ ​m​o​d​i​f​i​e​d​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​'​c​o​m​p​l​e​t​e​d​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														action: {
+															/**
+															 * C​h​a​n​g​e​ ​A​c​t​i​o​n
+															 */
+															displayName: string
+															/**
+															 * N​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e
+															 */
+															shortDesc: string
+															/**
+															 * D​e​s​c​r​i​b​e​s​ ​h​o​w​ ​t​h​e​ ​f​i​e​l​d​ ​w​a​s​ ​c​h​a​n​g​e​d​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​'​c​h​a​n​g​e​d​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											user: {
+												/**
+												 * U​s​e​r
+												 */
+												displayName: string
+												/**
+												 * U​s​e​r​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​ ​i​n​i​t​i​a​t​e​d​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * U​s​e​r​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​u​s​e​r
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​u​s​e​r​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * U​s​e​r​ ​R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​r​e​s​o​u​r​c​e​ ​t​y​p​e​,​ ​t​y​p​i​c​a​l​l​y​ ​'​u​s​e​r​'​,​ ​i​n​d​i​c​a​t​i​n​g​ ​t​h​e​ ​e​n​t​i​t​y​ ​i​s​ ​a​ ​u​s​e​r​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											created_at: {
+												/**
+												 * C​r​e​a​t​i​o​n​ ​T​i​m​e​s​t​a​m​p
+												 */
+												displayName: string
+												/**
+												 * E​v​e​n​t​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​i​n​d​i​c​a​t​i​n​g​ ​w​h​e​n​ ​t​h​e​ ​e​v​e​n​t​ ​w​a​s​ ​c​r​e​a​t​e​d​.
+												 */
+												longDesc: string
+												/**
+												 * s​t​r​i​n​g
+												 */
+												type: string
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				team_added: {
+					/**
+					 * T​e​a​m​ ​A​d​d​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​e​a​m​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​ ​w​o​r​k​s​p​a​c​e​.
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​e​a​m​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​ ​w​o​r​k​s​p​a​c​e​.
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​t​e​a​m​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​t​e​a​m​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * E​v​e​n​t​ ​d​a​t​a
+						 */
+						desc: string
+						type: {
+							fields: {
+								events: {
+									/**
+									 * E​v​e​n​t​s
+									 */
+									displayName: string
+									/**
+									 * L​i​s​t​ ​o​f​ ​e​v​e​n​t​ ​o​b​j​e​c​t​s
+									 */
+									shortDesc: string
+									/**
+									 * A​n​ ​a​r​r​a​y​ ​c​o​n​t​a​i​n​i​n​g​ ​e​v​e​n​t​ ​o​b​j​e​c​t​s​ ​t​h​a​t​ ​r​e​p​r​e​s​e​n​t​ ​i​n​d​i​v​i​d​u​a​l​ ​c​h​a​n​g​e​s​ ​o​r​ ​a​c​t​i​o​n​s​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+									 */
+									longDesc: string
+									type: {
+										fields: {
+											action: {
+												/**
+												 * A​c​t​i​o​n
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​a​c​t​i​o​n​ ​p​e​r​f​o​r​m​e​d
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​t​y​p​i​c​a​l​l​y​ ​'​c​h​a​n​g​e​d​'​.
+												 */
+												longDesc: string
+												/**
+												 * s​t​r​i​n​g
+												 */
+												type: string
+											}
+											parent: {
+												/**
+												 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e
+												 */
+												displayName: string
+												/**
+												 * P​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t​,​ ​i​f​ ​a​p​p​l​i​c​a​b​l​e​.​ ​F​o​r​ ​t​a​s​k​s​,​ ​t​h​i​s​ ​c​o​u​l​d​ ​b​e​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​o​r​ ​p​a​r​e​n​t​ ​t​a​s​k​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * P​a​r​e​n​t​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​,​ ​s​u​c​h​ ​a​s​ ​'​p​r​o​j​e​c​t​'​ ​o​r​ ​'​t​a​s​k​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_subtype: {
+															/**
+															 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e​ ​S​u​b​t​y​p​e
+															 */
+															displayName: string
+															/**
+															 * S​u​b​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​u​b​t​y​p​e​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											resource: {
+												/**
+												 * R​e​s​o​u​r​c​e
+												 */
+												displayName: string
+												/**
+												 * A​f​f​e​c​t​e​d​ ​r​e​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​t​h​a​t​ ​w​a​s​ ​d​i​r​e​c​t​l​y​ ​a​f​f​e​c​t​e​d​ ​b​y​ ​t​h​e​ ​e​v​e​n​t​;​ ​i​n​ ​t​h​i​s​ ​c​a​s​e​,​ ​t​h​e​ ​t​a​s​k​ ​t​h​a​t​ ​w​a​s​ ​c​o​m​p​l​e​t​e​d​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e​,​ ​w​h​i​c​h​ ​w​o​u​l​d​ ​b​e​ ​'​t​a​s​k​'​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​ ​e​v​e​n​t​s​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_subtype: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​S​u​b​t​y​p​e
+															 */
+															displayName: string
+															/**
+															 * S​u​b​t​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​u​b​t​y​p​e​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											change: {
+												/**
+												 * C​h​a​n​g​e​ ​D​e​t​a​i​l​s
+												 */
+												displayName: string
+												/**
+												 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​i​c​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​c​h​a​n​g​e​ ​t​h​a​t​ ​o​c​c​u​r​r​e​d​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​a​f​f​e​c​t​e​d​ ​a​n​d​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														field: {
+															/**
+															 * C​h​a​n​g​e​d​ ​F​i​e​l​d
+															 */
+															displayName: string
+															/**
+															 * F​i​e​l​d​ ​t​h​a​t​ ​w​a​s​ ​c​h​a​n​g​e​d
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​t​h​a​t​ ​w​a​s​ ​m​o​d​i​f​i​e​d​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​'​c​o​m​p​l​e​t​e​d​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														action: {
+															/**
+															 * C​h​a​n​g​e​ ​A​c​t​i​o​n
+															 */
+															displayName: string
+															/**
+															 * N​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e
+															 */
+															shortDesc: string
+															/**
+															 * D​e​s​c​r​i​b​e​s​ ​h​o​w​ ​t​h​e​ ​f​i​e​l​d​ ​w​a​s​ ​c​h​a​n​g​e​d​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​'​c​h​a​n​g​e​d​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											user: {
+												/**
+												 * U​s​e​r
+												 */
+												displayName: string
+												/**
+												 * U​s​e​r​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​ ​i​n​i​t​i​a​t​e​d​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * U​s​e​r​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​u​s​e​r
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​u​s​e​r​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * U​s​e​r​ ​R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​r​e​s​o​u​r​c​e​ ​t​y​p​e​,​ ​t​y​p​i​c​a​l​l​y​ ​'​u​s​e​r​'​,​ ​i​n​d​i​c​a​t​i​n​g​ ​t​h​e​ ​e​n​t​i​t​y​ ​i​s​ ​a​ ​u​s​e​r​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											created_at: {
+												/**
+												 * C​r​e​a​t​i​o​n​ ​T​i​m​e​s​t​a​m​p
+												 */
+												displayName: string
+												/**
+												 * E​v​e​n​t​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​i​n​d​i​c​a​t​i​n​g​ ​w​h​e​n​ ​t​h​e​ ​e​v​e​n​t​ ​w​a​s​ ​c​r​e​a​t​e​d​.
+												 */
+												longDesc: string
+												/**
+												 * s​t​r​i​n​g
+												 */
+												type: string
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				user_added: {
+					/**
+					 * U​s​e​r​ ​A​d​d​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​u​s​e​r​ ​j​o​i​n​s​ ​a​ ​w​o​r​k​s​p​a​c​e​.
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​u​s​e​r​ ​j​o​i​n​s​ ​a​ ​w​o​r​k​s​p​a​c​e​.
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​u​s​e​r​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​u​s​e​r​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * E​v​e​n​t​ ​d​a​t​a
+						 */
+						desc: string
+						type: {
+							fields: {
+								events: {
+									/**
+									 * E​v​e​n​t​s
+									 */
+									displayName: string
+									/**
+									 * L​i​s​t​ ​o​f​ ​e​v​e​n​t​ ​o​b​j​e​c​t​s
+									 */
+									shortDesc: string
+									/**
+									 * A​n​ ​a​r​r​a​y​ ​c​o​n​t​a​i​n​i​n​g​ ​e​v​e​n​t​ ​o​b​j​e​c​t​s​ ​t​h​a​t​ ​r​e​p​r​e​s​e​n​t​ ​i​n​d​i​v​i​d​u​a​l​ ​c​h​a​n​g​e​s​ ​o​r​ ​a​c​t​i​o​n​s​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+									 */
+									longDesc: string
+									type: {
+										fields: {
+											action: {
+												/**
+												 * A​c​t​i​o​n
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​a​c​t​i​o​n​ ​p​e​r​f​o​r​m​e​d
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​t​y​p​i​c​a​l​l​y​ ​'​c​h​a​n​g​e​d​'​.
+												 */
+												longDesc: string
+												/**
+												 * s​t​r​i​n​g
+												 */
+												type: string
+											}
+											parent: {
+												/**
+												 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e
+												 */
+												displayName: string
+												/**
+												 * P​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t​,​ ​i​f​ ​a​p​p​l​i​c​a​b​l​e​.​ ​F​o​r​ ​t​a​s​k​s​,​ ​t​h​i​s​ ​c​o​u​l​d​ ​b​e​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​o​r​ ​p​a​r​e​n​t​ ​t​a​s​k​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * P​a​r​e​n​t​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​,​ ​s​u​c​h​ ​a​s​ ​'​p​r​o​j​e​c​t​'​ ​o​r​ ​'​t​a​s​k​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_subtype: {
+															/**
+															 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e​ ​S​u​b​t​y​p​e
+															 */
+															displayName: string
+															/**
+															 * S​u​b​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​u​b​t​y​p​e​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											resource: {
+												/**
+												 * R​e​s​o​u​r​c​e
+												 */
+												displayName: string
+												/**
+												 * A​f​f​e​c​t​e​d​ ​r​e​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​t​h​a​t​ ​w​a​s​ ​d​i​r​e​c​t​l​y​ ​a​f​f​e​c​t​e​d​ ​b​y​ ​t​h​e​ ​e​v​e​n​t​;​ ​i​n​ ​t​h​i​s​ ​c​a​s​e​,​ ​t​h​e​ ​t​a​s​k​ ​t​h​a​t​ ​w​a​s​ ​c​o​m​p​l​e​t​e​d​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e​,​ ​w​h​i​c​h​ ​w​o​u​l​d​ ​b​e​ ​'​t​a​s​k​'​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​ ​e​v​e​n​t​s​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_subtype: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​S​u​b​t​y​p​e
+															 */
+															displayName: string
+															/**
+															 * S​u​b​t​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​u​b​t​y​p​e​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											change: {
+												/**
+												 * C​h​a​n​g​e​ ​D​e​t​a​i​l​s
+												 */
+												displayName: string
+												/**
+												 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​i​c​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​c​h​a​n​g​e​ ​t​h​a​t​ ​o​c​c​u​r​r​e​d​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​a​f​f​e​c​t​e​d​ ​a​n​d​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														field: {
+															/**
+															 * C​h​a​n​g​e​d​ ​F​i​e​l​d
+															 */
+															displayName: string
+															/**
+															 * F​i​e​l​d​ ​t​h​a​t​ ​w​a​s​ ​c​h​a​n​g​e​d
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​t​h​a​t​ ​w​a​s​ ​m​o​d​i​f​i​e​d​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​'​c​o​m​p​l​e​t​e​d​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														action: {
+															/**
+															 * C​h​a​n​g​e​ ​A​c​t​i​o​n
+															 */
+															displayName: string
+															/**
+															 * N​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e
+															 */
+															shortDesc: string
+															/**
+															 * D​e​s​c​r​i​b​e​s​ ​h​o​w​ ​t​h​e​ ​f​i​e​l​d​ ​w​a​s​ ​c​h​a​n​g​e​d​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​'​c​h​a​n​g​e​d​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											user: {
+												/**
+												 * U​s​e​r
+												 */
+												displayName: string
+												/**
+												 * U​s​e​r​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​ ​i​n​i​t​i​a​t​e​d​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * U​s​e​r​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​u​s​e​r
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​u​s​e​r​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * U​s​e​r​ ​R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​r​e​s​o​u​r​c​e​ ​t​y​p​e​,​ ​t​y​p​i​c​a​l​l​y​ ​'​u​s​e​r​'​,​ ​i​n​d​i​c​a​t​i​n​g​ ​t​h​e​ ​e​n​t​i​t​y​ ​i​s​ ​a​ ​u​s​e​r​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											created_at: {
+												/**
+												 * C​r​e​a​t​i​o​n​ ​T​i​m​e​s​t​a​m​p
+												 */
+												displayName: string
+												/**
+												 * E​v​e​n​t​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​i​n​d​i​c​a​t​i​n​g​ ​w​h​e​n​ ​t​h​e​ ​e​v​e​n​t​ ​w​a​s​ ​c​r​e​a​t​e​d​.
+												 */
+												longDesc: string
+												/**
+												 * s​t​r​i​n​g
+												 */
+												type: string
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				tag_created: {
+					/**
+					 * T​a​g​ ​C​r​e​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​a​g​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​ ​w​o​r​k​s​p​a​c​e​.
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​a​g​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​ ​w​o​r​k​s​p​a​c​e​.
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​t​a​g​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​t​a​g​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * E​v​e​n​t​ ​d​a​t​a
+						 */
+						desc: string
+						type: {
+							fields: {
+								events: {
+									/**
+									 * E​v​e​n​t​s
+									 */
+									displayName: string
+									/**
+									 * L​i​s​t​ ​o​f​ ​e​v​e​n​t​ ​o​b​j​e​c​t​s
+									 */
+									shortDesc: string
+									/**
+									 * A​n​ ​a​r​r​a​y​ ​c​o​n​t​a​i​n​i​n​g​ ​e​v​e​n​t​ ​o​b​j​e​c​t​s​ ​t​h​a​t​ ​r​e​p​r​e​s​e​n​t​ ​i​n​d​i​v​i​d​u​a​l​ ​c​h​a​n​g​e​s​ ​o​r​ ​a​c​t​i​o​n​s​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+									 */
+									longDesc: string
+									type: {
+										fields: {
+											action: {
+												/**
+												 * A​c​t​i​o​n
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​a​c​t​i​o​n​ ​p​e​r​f​o​r​m​e​d
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​t​y​p​i​c​a​l​l​y​ ​'​c​h​a​n​g​e​d​'​.
+												 */
+												longDesc: string
+												/**
+												 * s​t​r​i​n​g
+												 */
+												type: string
+											}
+											parent: {
+												/**
+												 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e
+												 */
+												displayName: string
+												/**
+												 * P​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t​,​ ​i​f​ ​a​p​p​l​i​c​a​b​l​e​.​ ​F​o​r​ ​t​a​s​k​s​,​ ​t​h​i​s​ ​c​o​u​l​d​ ​b​e​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​o​r​ ​p​a​r​e​n​t​ ​t​a​s​k​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * P​a​r​e​n​t​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​,​ ​s​u​c​h​ ​a​s​ ​'​p​r​o​j​e​c​t​'​ ​o​r​ ​'​t​a​s​k​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_subtype: {
+															/**
+															 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e​ ​S​u​b​t​y​p​e
+															 */
+															displayName: string
+															/**
+															 * S​u​b​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​u​b​t​y​p​e​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											resource: {
+												/**
+												 * R​e​s​o​u​r​c​e
+												 */
+												displayName: string
+												/**
+												 * A​f​f​e​c​t​e​d​ ​r​e​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​t​h​a​t​ ​w​a​s​ ​d​i​r​e​c​t​l​y​ ​a​f​f​e​c​t​e​d​ ​b​y​ ​t​h​e​ ​e​v​e​n​t​;​ ​i​n​ ​t​h​i​s​ ​c​a​s​e​,​ ​t​h​e​ ​t​a​s​k​ ​t​h​a​t​ ​w​a​s​ ​c​o​m​p​l​e​t​e​d​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e​,​ ​w​h​i​c​h​ ​w​o​u​l​d​ ​b​e​ ​'​t​a​s​k​'​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​ ​e​v​e​n​t​s​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_subtype: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​S​u​b​t​y​p​e
+															 */
+															displayName: string
+															/**
+															 * S​u​b​t​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​u​b​t​y​p​e​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											change: {
+												/**
+												 * C​h​a​n​g​e​ ​D​e​t​a​i​l​s
+												 */
+												displayName: string
+												/**
+												 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​i​c​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​c​h​a​n​g​e​ ​t​h​a​t​ ​o​c​c​u​r​r​e​d​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​a​f​f​e​c​t​e​d​ ​a​n​d​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														field: {
+															/**
+															 * C​h​a​n​g​e​d​ ​F​i​e​l​d
+															 */
+															displayName: string
+															/**
+															 * F​i​e​l​d​ ​t​h​a​t​ ​w​a​s​ ​c​h​a​n​g​e​d
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​t​h​a​t​ ​w​a​s​ ​m​o​d​i​f​i​e​d​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​'​c​o​m​p​l​e​t​e​d​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														action: {
+															/**
+															 * C​h​a​n​g​e​ ​A​c​t​i​o​n
+															 */
+															displayName: string
+															/**
+															 * N​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e
+															 */
+															shortDesc: string
+															/**
+															 * D​e​s​c​r​i​b​e​s​ ​h​o​w​ ​t​h​e​ ​f​i​e​l​d​ ​w​a​s​ ​c​h​a​n​g​e​d​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​'​c​h​a​n​g​e​d​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											user: {
+												/**
+												 * U​s​e​r
+												 */
+												displayName: string
+												/**
+												 * U​s​e​r​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​ ​i​n​i​t​i​a​t​e​d​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * U​s​e​r​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​u​s​e​r
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​u​s​e​r​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * U​s​e​r​ ​R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​r​e​s​o​u​r​c​e​ ​t​y​p​e​,​ ​t​y​p​i​c​a​l​l​y​ ​'​u​s​e​r​'​,​ ​i​n​d​i​c​a​t​i​n​g​ ​t​h​e​ ​e​n​t​i​t​y​ ​i​s​ ​a​ ​u​s​e​r​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											created_at: {
+												/**
+												 * C​r​e​a​t​i​o​n​ ​T​i​m​e​s​t​a​m​p
+												 */
+												displayName: string
+												/**
+												 * E​v​e​n​t​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​i​n​d​i​c​a​t​i​n​g​ ​w​h​e​n​ ​t​h​e​ ​e​v​e​n​t​ ​w​a​s​ ​c​r​e​a​t​e​d​.
+												 */
+												longDesc: string
+												/**
+												 * s​t​r​i​n​g
+												 */
+												type: string
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				task_moved_to_section: {
+					/**
+					 * T​a​s​k​ ​M​o​v​e​d​ ​t​o​ ​S​e​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​t​a​s​k​ ​i​s​ ​m​o​v​e​d​ ​t​o​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​s​e​c​t​i​o​n​ ​w​i​t​h​i​n​ ​a​ ​p​r​o​j​e​c​t​.
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​t​a​s​k​ ​i​s​ ​m​o​v​e​d​ ​t​o​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​s​e​c​t​i​o​n​ ​w​i​t​h​i​n​ ​a​ ​p​r​o​j​e​c​t​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 */
+							longDesc: string
+						}
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * E​v​e​n​t​ ​d​a​t​a
+						 */
+						desc: string
+						type: {
+							fields: {
+								events: {
+									/**
+									 * E​v​e​n​t​s
+									 */
+									displayName: string
+									/**
+									 * L​i​s​t​ ​o​f​ ​e​v​e​n​t​ ​o​b​j​e​c​t​s
+									 */
+									shortDesc: string
+									/**
+									 * A​n​ ​a​r​r​a​y​ ​c​o​n​t​a​i​n​i​n​g​ ​e​v​e​n​t​ ​o​b​j​e​c​t​s​ ​t​h​a​t​ ​r​e​p​r​e​s​e​n​t​ ​i​n​d​i​v​i​d​u​a​l​ ​c​h​a​n​g​e​s​ ​o​r​ ​a​c​t​i​o​n​s​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+									 */
+									longDesc: string
+									type: {
+										fields: {
+											action: {
+												/**
+												 * A​c​t​i​o​n
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​a​c​t​i​o​n​ ​p​e​r​f​o​r​m​e​d
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​t​y​p​i​c​a​l​l​y​ ​'​c​h​a​n​g​e​d​'​.
+												 */
+												longDesc: string
+												/**
+												 * s​t​r​i​n​g
+												 */
+												type: string
+											}
+											parent: {
+												/**
+												 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e
+												 */
+												displayName: string
+												/**
+												 * P​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t​,​ ​i​f​ ​a​p​p​l​i​c​a​b​l​e​.​ ​F​o​r​ ​t​a​s​k​s​,​ ​t​h​i​s​ ​c​o​u​l​d​ ​b​e​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​o​r​ ​p​a​r​e​n​t​ ​t​a​s​k​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * P​a​r​e​n​t​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​,​ ​s​u​c​h​ ​a​s​ ​'​p​r​o​j​e​c​t​'​ ​o​r​ ​'​t​a​s​k​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_subtype: {
+															/**
+															 * P​a​r​e​n​t​ ​R​e​s​o​u​r​c​e​ ​S​u​b​t​y​p​e
+															 */
+															displayName: string
+															/**
+															 * S​u​b​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​u​b​t​y​p​e​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​s​o​u​r​c​e​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											resource: {
+												/**
+												 * R​e​s​o​u​r​c​e
+												 */
+												displayName: string
+												/**
+												 * A​f​f​e​c​t​e​d​ ​r​e​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​t​h​a​t​ ​w​a​s​ ​d​i​r​e​c​t​l​y​ ​a​f​f​e​c​t​e​d​ ​b​y​ ​t​h​e​ ​e​v​e​n​t​;​ ​i​n​ ​t​h​i​s​ ​c​a​s​e​,​ ​t​h​e​ ​t​a​s​k​ ​t​h​a​t​ ​w​a​s​ ​c​o​m​p​l​e​t​e​d​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e​,​ ​w​h​i​c​h​ ​w​o​u​l​d​ ​b​e​ ​'​t​a​s​k​'​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​ ​e​v​e​n​t​s​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_subtype: {
+															/**
+															 * R​e​s​o​u​r​c​e​ ​S​u​b​t​y​p​e
+															 */
+															displayName: string
+															/**
+															 * S​u​b​t​y​p​e​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​u​b​t​y​p​e​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​s​o​u​r​c​e​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											change: {
+												/**
+												 * C​h​a​n​g​e​ ​D​e​t​a​i​l​s
+												 */
+												displayName: string
+												/**
+												 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​i​c​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​c​h​a​n​g​e​ ​t​h​a​t​ ​o​c​c​u​r​r​e​d​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​a​f​f​e​c​t​e​d​ ​a​n​d​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														field: {
+															/**
+															 * C​h​a​n​g​e​d​ ​F​i​e​l​d
+															 */
+															displayName: string
+															/**
+															 * F​i​e​l​d​ ​t​h​a​t​ ​w​a​s​ ​c​h​a​n​g​e​d
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​r​e​s​o​u​r​c​e​ ​t​h​a​t​ ​w​a​s​ ​m​o​d​i​f​i​e​d​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​'​c​o​m​p​l​e​t​e​d​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														action: {
+															/**
+															 * C​h​a​n​g​e​ ​A​c​t​i​o​n
+															 */
+															displayName: string
+															/**
+															 * N​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​c​h​a​n​g​e
+															 */
+															shortDesc: string
+															/**
+															 * D​e​s​c​r​i​b​e​s​ ​h​o​w​ ​t​h​e​ ​f​i​e​l​d​ ​w​a​s​ ​c​h​a​n​g​e​d​;​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​t​h​i​s​ ​i​s​ ​'​c​h​a​n​g​e​d​'​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											user: {
+												/**
+												 * U​s​e​r
+												 */
+												displayName: string
+												/**
+												 * U​s​e​r​ ​d​e​t​a​i​l​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​ ​i​n​i​t​i​a​t​e​d​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​e​d​ ​t​h​e​ ​e​v​e​n​t​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * U​s​e​r​ ​G​I​D
+															 */
+															displayName: string
+															/**
+															 * G​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​u​s​e​r
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​u​s​e​r​ ​w​i​t​h​i​n​ ​A​s​a​n​a​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+														resource_type: {
+															/**
+															 * U​s​e​r​ ​R​e​s​o​u​r​c​e​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​r​e​s​o​u​r​c​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​r​e​s​o​u​r​c​e​ ​t​y​p​e​,​ ​t​y​p​i​c​a​l​l​y​ ​'​u​s​e​r​'​,​ ​i​n​d​i​c​a​t​i​n​g​ ​t​h​e​ ​e​n​t​i​t​y​ ​i​s​ ​a​ ​u​s​e​r​.
+															 */
+															longDesc: string
+															/**
+															 * s​t​r​i​n​g
+															 */
+															type: string
+														}
+													}
+												}
+											}
+											created_at: {
+												/**
+												 * C​r​e​a​t​i​o​n​ ​T​i​m​e​s​t​a​m​p
+												 */
+												displayName: string
+												/**
+												 * E​v​e​n​t​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​i​n​d​i​c​a​t​i​n​g​ ​w​h​e​n​ ​t​h​e​ ​e​v​e​n​t​ ​w​a​s​ ​c​r​e​a​t​e​d​.
+												 */
+												longDesc: string
+												/**
+												 * s​t​r​i​n​g
+												 */
+												type: string
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 		DocusignESignature: {
 			/**
@@ -137,6 +6207,110 @@ type RootTranslation = {
 			 * C​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​E​s​i​g​n​a​t​u​r​e​ ​A​P​I
 			 */
 			longDesc: string
+			actions: {
+				Brands_GetBrands: {
+					/**
+					 * G​e​t​ ​B​r​a​n​d​s
+					 */
+					displayName: string
+				}
+				Brands_PostBrands: {
+					/**
+					 * C​r​e​a​t​e​ ​B​r​a​n​d
+					 */
+					displayName: string
+				}
+				Brands_DeleteBrands: {
+					/**
+					 * D​e​l​e​t​e​ ​B​r​a​n​d
+					 */
+					displayName: string
+				}
+				Envelopes_GetEnvelopes: {
+					/**
+					 * G​e​t​ ​E​n​v​e​l​o​p​e​s
+					 */
+					displayName: string
+				}
+				Envelopes_PostEnvelopes: {
+					/**
+					 * C​r​e​a​t​e​ ​E​n​v​e​l​o​p​e​s
+					 */
+					displayName: string
+				}
+				Envelopes_GetEnvelope: {
+					/**
+					 * G​e​t​ ​E​n​v​e​l​o​p​e
+					 */
+					displayName: string
+				}
+				Envelopes_PutEnvelope: {
+					/**
+					 * U​p​d​a​t​e​ ​E​n​v​e​l​o​p​e
+					 */
+					displayName: string
+				}
+				Documents_GetDocuments: {
+					/**
+					 * G​e​t​ ​D​o​c​u​m​e​n​t​s
+					 */
+					displayName: string
+				}
+				Documents_PutDocuments: {
+					/**
+					 * U​p​d​a​t​e​ ​D​o​c​u​m​e​n​t​s
+					 */
+					displayName: string
+				}
+				Documents_DeleteDocuments: {
+					/**
+					 * D​e​l​e​t​e​ ​D​o​c​u​m​e​n​t​s
+					 */
+					displayName: string
+				}
+				Documents_GetDocument: {
+					/**
+					 * G​e​t​ ​D​o​c​u​m​e​n​t
+					 */
+					displayName: string
+				}
+				Documents_PutDocument: {
+					/**
+					 * U​p​d​a​t​e​ ​D​o​c​u​m​e​n​t
+					 */
+					displayName: string
+				}
+				Recipients_GetRecipients: {
+					/**
+					 * G​e​t​ ​R​e​c​i​p​i​e​n​t​s
+					 */
+					displayName: string
+				}
+				Recipients_PutRecipients: {
+					/**
+					 * U​p​d​a​t​e​ ​R​e​c​i​p​i​e​n​t​s
+					 */
+					displayName: string
+				}
+				Recipients_PostRecipients: {
+					/**
+					 * A​d​d​ ​R​e​c​i​p​i​e​n​t​s
+					 */
+					displayName: string
+				}
+				Recipients_DeleteRecipients: {
+					/**
+					 * D​e​l​e​t​e​ ​R​e​c​i​p​i​e​n​t​s
+					 */
+					displayName: string
+				}
+				Views_PostEnvelopeRecipientView: {
+					/**
+					 * C​r​e​a​t​e​ ​R​e​c​i​p​i​e​n​t​ ​V​i​e​w
+					 */
+					displayName: string
+				}
+			}
 		}
 		Zendesk: {
 			/**
@@ -151,1735 +6325,1229 @@ type RootTranslation = {
 			 * C​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​Z​e​n​d​e​s​k​ ​A​P​I
 			 */
 			longDesc: string
-			actions: {
-				create_ticket: {
+			triggers: {
+				new_user: {
 					/**
-					 * C​r​e​a​t​e​ ​T​i​c​k​e​t
+					 * N​e​w​ ​U​s​e​r
 					 */
 					displayName: string
 					/**
-					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​t​i​c​k​e​t
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​u​s​e​r​ ​i​s​ ​c​r​e​a​t​e​d
 					 */
 					shortDesc: string
 					/**
-					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​t​i​c​k​e​t
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​u​s​e​r​ ​i​s​ ​c​r​e​a​t​e​d
 					 */
 					longDesc: string
+					event_info: {
+						/**
+						 * Z​e​n​d​e​s​k​ ​U​s​e​r​ ​E​v​e​n​t​ ​D​a​t​a
+						 */
+						desc: string
+						type: {
+							fields: {
+								account_id: {
+									/**
+									 * A​c​c​o​u​n​t​ ​I​D
+									 */
+									displayName: string
+									/**
+									 * A​c​c​o​u​n​t​ ​I​D
+									 */
+									shortDesc: string
+									/**
+									 * I​D​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​e​d​ ​a​c​c​o​u​n​t
+									 */
+									longDesc: string
+								}
+								detail: {
+									/**
+									 * D​e​t​a​i​l
+									 */
+									displayName: string
+									/**
+									 * U​s​e​r​ ​d​e​t​a​i​l​s
+									 */
+									shortDesc: string
+									/**
+									 * D​e​t​a​i​l​e​d​ ​u​s​e​r​ ​i​n​f​o​r​m​a​t​i​o​n
+									 */
+									longDesc: string
+									type: {
+										fields: {
+											created_at: {
+												/**
+												 * C​r​e​a​t​e​d​ ​A​t
+												 */
+												displayName: string
+												/**
+												 * U​s​e​r​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e
+												 */
+												shortDesc: string
+												/**
+												 * T​i​m​e​s​t​a​m​p​ ​o​f​ ​u​s​e​r​ ​c​r​e​a​t​i​o​n
+												 */
+												longDesc: string
+											}
+											default_group_id: {
+												/**
+												 * D​e​f​a​u​l​t​ ​G​r​o​u​p​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * D​e​f​a​u​l​t​ ​g​r​o​u​p​ ​I​D
+												 */
+												shortDesc: string
+												/**
+												 * I​D​ ​o​f​ ​t​h​e​ ​d​e​f​a​u​l​t​ ​g​r​o​u​p​ ​f​o​r​ ​t​h​e​ ​u​s​e​r
+												 */
+												longDesc: string
+											}
+											email: {
+												/**
+												 * E​m​a​i​l
+												 */
+												displayName: string
+												/**
+												 * U​s​e​r​ ​e​m​a​i​l
+												 */
+												shortDesc: string
+												/**
+												 * E​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​u​s​e​r
+												 */
+												longDesc: string
+											}
+											external_id: {
+												/**
+												 * E​x​t​e​r​n​a​l​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * U​s​e​r​ ​e​x​t​e​r​n​a​l​ ​I​D
+												 */
+												shortDesc: string
+												/**
+												 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​u​s​e​r
+												 */
+												longDesc: string
+											}
+											id: {
+												/**
+												 * U​s​e​r​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * U​s​e​r​ ​I​D
+												 */
+												shortDesc: string
+												/**
+												 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​u​s​e​r
+												 */
+												longDesc: string
+											}
+											organization_id: {
+												/**
+												 * O​r​g​a​n​i​z​a​t​i​o​n​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * O​r​g​a​n​i​z​a​t​i​o​n​ ​I​D
+												 */
+												shortDesc: string
+												/**
+												 * I​D​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​u​s​e​r
+												 */
+												longDesc: string
+											}
+											role: {
+												/**
+												 * R​o​l​e
+												 */
+												displayName: string
+												/**
+												 * U​s​e​r​ ​r​o​l​e
+												 */
+												shortDesc: string
+												/**
+												 * R​o​l​e​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​i​n​ ​t​h​e​ ​s​y​s​t​e​m
+												 */
+												longDesc: string
+											}
+											updated_at: {
+												/**
+												 * U​p​d​a​t​e​d​ ​A​t
+												 */
+												displayName: string
+												/**
+												 * U​s​e​r​ ​u​p​d​a​t​e​ ​t​i​m​e
+												 */
+												shortDesc: string
+												/**
+												 * L​a​s​t​ ​u​p​d​a​t​e​ ​t​i​m​e​s​t​a​m​p​ ​f​o​r​ ​t​h​e​ ​u​s​e​r
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+								event: {
+									/**
+									 * E​v​e​n​t
+									 */
+									displayName: string
+									/**
+									 * E​v​e​n​t​ ​i​n​f​o
+									 */
+									shortDesc: string
+									/**
+									 * A​d​d​i​t​i​o​n​a​l​ ​e​v​e​n​t​ ​i​n​f​o​r​m​a​t​i​o​n
+									 */
+									longDesc: string
+								}
+								id: {
+									/**
+									 * E​v​e​n​t​ ​I​D
+									 */
+									displayName: string
+									/**
+									 * E​v​e​n​t​ ​I​D
+									 */
+									shortDesc: string
+									/**
+									 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
+									 */
+									longDesc: string
+								}
+								subject: {
+									/**
+									 * S​u​b​j​e​c​t
+									 */
+									displayName: string
+									/**
+									 * E​v​e​n​t​ ​s​u​b​j​e​c​t
+									 */
+									shortDesc: string
+									/**
+									 * S​u​b​j​e​c​t​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
+									 */
+									longDesc: string
+								}
+								time: {
+									/**
+									 * T​i​m​e
+									 */
+									displayName: string
+									/**
+									 * E​v​e​n​t​ ​t​i​m​e
+									 */
+									shortDesc: string
+									/**
+									 * T​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​o​c​c​u​r​r​e​n​c​e
+									 */
+									longDesc: string
+								}
+								type: {
+									/**
+									 * E​v​e​n​t​ ​T​y​p​e
+									 */
+									displayName: string
+									/**
+									 * E​v​e​n​t​ ​t​y​p​e
+									 */
+									shortDesc: string
+									/**
+									 * T​y​p​e​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
+									 */
+									longDesc: string
+								}
+								zendesk_event_version: {
+									/**
+									 * Z​e​n​d​e​s​k​ ​E​v​e​n​t​ ​V​e​r​s​i​o​n
+									 */
+									displayName: string
+									/**
+									 * E​v​e​n​t​ ​v​e​r​s​i​o​n
+									 */
+									shortDesc: string
+									/**
+									 * V​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​Z​e​n​d​e​s​k​ ​e​v​e​n​t​ ​f​o​r​m​a​t
+									 */
+									longDesc: string
+								}
+							}
+						}
+					}
 				}
-				users: {
-					get_user: {
+				new_ticket: {
+					/**
+					 * N​e​w​ ​T​i​c​k​e​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​i​c​k​e​t​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​i​c​k​e​t​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					longDesc: string
+					event_info: {
 						/**
-						 * G​e​t​ ​U​s​e​r
+						 * N​e​w​ ​T​i​c​k​e​t​ ​E​v​e​n​t​ ​D​a​t​a
 						 */
-						displayName: string
-						/**
-						 * G​e​t​ ​u​s​e​r​ ​b​y​ ​I​D
-						 */
-						shortDesc: string
-						/**
-						 * G​e​t​ ​u​s​e​r​ ​b​y​ ​I​D
-						 */
-						longDesc: string
+						desc: string
+						type: {
+							fields: {
+								assignee_email: {
+									/**
+									 * A​s​s​i​g​n​e​e​ ​E​m​a​i​l
+									 */
+									displayName: string
+									/**
+									 * A​s​s​i​g​n​e​e​ ​e​m​a​i​l
+									 */
+									shortDesc: string
+									/**
+									 * E​m​a​i​l​ ​o​f​ ​t​h​e​ ​a​s​s​i​g​n​e​e
+									 */
+									longDesc: string
+								}
+								assignee_name: {
+									/**
+									 * A​s​s​i​g​n​e​e​ ​N​a​m​e
+									 */
+									displayName: string
+									/**
+									 * A​s​s​i​g​n​e​e​ ​n​a​m​e
+									 */
+									shortDesc: string
+									/**
+									 * N​a​m​e​ ​o​f​ ​t​h​e​ ​a​s​s​i​g​n​e​e
+									 */
+									longDesc: string
+								}
+								group_name: {
+									/**
+									 * G​r​o​u​p​ ​N​a​m​e
+									 */
+									displayName: string
+									/**
+									 * G​r​o​u​p​ ​n​a​m​e
+									 */
+									shortDesc: string
+									/**
+									 * N​a​m​e​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​h​a​n​d​l​i​n​g​ ​t​h​e​ ​t​i​c​k​e​t
+									 */
+									longDesc: string
+								}
+								organization_name: {
+									/**
+									 * O​r​g​a​n​i​z​a​t​i​o​n​ ​N​a​m​e
+									 */
+									displayName: string
+									/**
+									 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e
+									 */
+									shortDesc: string
+									/**
+									 * N​a​m​e​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​e​d​ ​o​r​g​a​n​i​z​a​t​i​o​n
+									 */
+									longDesc: string
+								}
+								requester_email: {
+									/**
+									 * R​e​q​u​e​s​t​e​r​ ​E​m​a​i​l
+									 */
+									displayName: string
+									/**
+									 * R​e​q​u​e​s​t​e​r​ ​e​m​a​i​l
+									 */
+									shortDesc: string
+									/**
+									 * E​m​a​i​l​ ​o​f​ ​t​h​e​ ​r​e​q​u​e​s​t​e​r
+									 */
+									longDesc: string
+								}
+								requester_name: {
+									/**
+									 * R​e​q​u​e​s​t​e​r​ ​N​a​m​e
+									 */
+									displayName: string
+									/**
+									 * R​e​q​u​e​s​t​e​r​ ​n​a​m​e
+									 */
+									shortDesc: string
+									/**
+									 * N​a​m​e​ ​o​f​ ​t​h​e​ ​r​e​q​u​e​s​t​e​r
+									 */
+									longDesc: string
+								}
+								tags: {
+									/**
+									 * T​a​g​s
+									 */
+									displayName: string
+									/**
+									 * T​i​c​k​e​t​ ​t​a​g​s
+									 */
+									shortDesc: string
+									/**
+									 * T​a​g​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​t​i​c​k​e​t
+									 */
+									longDesc: string
+								}
+								ticket_description: {
+									/**
+									 * T​i​c​k​e​t​ ​D​e​s​c​r​i​p​t​i​o​n
+									 */
+									displayName: string
+									/**
+									 * T​i​c​k​e​t​ ​d​e​s​c​r​i​p​t​i​o​n
+									 */
+									shortDesc: string
+									/**
+									 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
+									 */
+									longDesc: string
+								}
+								ticket_id: {
+									/**
+									 * T​i​c​k​e​t​ ​I​D
+									 */
+									displayName: string
+									/**
+									 * T​i​c​k​e​t​ ​I​D
+									 */
+									shortDesc: string
+									/**
+									 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​t​i​c​k​e​t
+									 */
+									longDesc: string
+								}
+								ticket_priority: {
+									/**
+									 * T​i​c​k​e​t​ ​P​r​i​o​r​i​t​y
+									 */
+									displayName: string
+									/**
+									 * T​i​c​k​e​t​ ​p​r​i​o​r​i​t​y
+									 */
+									shortDesc: string
+									/**
+									 * P​r​i​o​r​i​t​y​ ​l​e​v​e​l​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
+									 */
+									longDesc: string
+								}
+								ticket_status: {
+									/**
+									 * T​i​c​k​e​t​ ​S​t​a​t​u​s
+									 */
+									displayName: string
+									/**
+									 * T​i​c​k​e​t​ ​s​t​a​t​u​s
+									 */
+									shortDesc: string
+									/**
+									 * C​u​r​r​e​n​t​ ​s​t​a​t​u​s​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
+									 */
+									longDesc: string
+								}
+								ticket_subject: {
+									/**
+									 * T​i​c​k​e​t​ ​S​u​b​j​e​c​t
+									 */
+									displayName: string
+									/**
+									 * T​i​c​k​e​t​ ​s​u​b​j​e​c​t
+									 */
+									shortDesc: string
+									/**
+									 * S​u​b​j​e​c​t​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
+									 */
+									longDesc: string
+								}
+								ticket_type: {
+									/**
+									 * T​i​c​k​e​t​ ​T​y​p​e
+									 */
+									displayName: string
+									/**
+									 * T​i​c​k​e​t​ ​t​y​p​e
+									 */
+									shortDesc: string
+									/**
+									 * T​y​p​e​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
+									 */
+									longDesc: string
+								}
+								ticket_url: {
+									/**
+									 * T​i​c​k​e​t​ ​U​R​L
+									 */
+									displayName: string
+									/**
+									 * T​i​c​k​e​t​ ​U​R​L
+									 */
+									shortDesc: string
+									/**
+									 * U​R​L​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​ ​i​n​ ​t​h​e​ ​s​y​s​t​e​m
+									 */
+									longDesc: string
+								}
+							}
+						}
 					}
-					user_id: {
+				}
+				new_organization: {
+					/**
+					 * N​e​w​ ​O​r​g​a​n​i​z​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					longDesc: string
+					event_info: {
 						/**
-						 * U​s​e​r​ ​I​D
+						 * Z​e​n​d​e​s​k​ ​O​r​g​a​n​i​z​a​t​i​o​n​ ​E​v​e​n​t​ ​D​a​t​a
 						 */
-						displayName: string
-						/**
-						 * U​s​e​r​ ​I​D
-						 */
-						shortDesc: string
-						/**
-						 * U​s​e​r​ ​I​D
-						 */
-						longDesc: string
+						desc: string
+						type: {
+							fields: {
+								account_id: {
+									/**
+									 * A​c​c​o​u​n​t​ ​I​D
+									 */
+									displayName: string
+									/**
+									 * A​c​c​o​u​n​t​ ​I​D
+									 */
+									shortDesc: string
+									/**
+									 * I​D​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​e​d​ ​a​c​c​o​u​n​t
+									 */
+									longDesc: string
+								}
+								detail: {
+									/**
+									 * D​e​t​a​i​l
+									 */
+									displayName: string
+									/**
+									 * O​r​g​a​n​i​z​a​t​i​o​n​ ​d​e​t​a​i​l​s
+									 */
+									shortDesc: string
+									/**
+									 * D​e​t​a​i​l​e​d​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​i​n​f​o​r​m​a​t​i​o​n
+									 */
+									longDesc: string
+									type: {
+										fields: {
+											created_at: {
+												/**
+												 * C​r​e​a​t​e​d​ ​A​t
+												 */
+												displayName: string
+												/**
+												 * O​r​g​a​n​i​z​a​t​i​o​n​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e
+												 */
+												shortDesc: string
+												/**
+												 * T​i​m​e​s​t​a​m​p​ ​o​f​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​c​r​e​a​t​i​o​n
+												 */
+												longDesc: string
+											}
+											external_id: {
+												/**
+												 * E​x​t​e​r​n​a​l​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * O​r​g​a​n​i​z​a​t​i​o​n​ ​e​x​t​e​r​n​a​l​ ​I​D
+												 */
+												shortDesc: string
+												/**
+												 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
+												 */
+												longDesc: string
+											}
+											group_id: {
+												/**
+												 * G​r​o​u​p​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * G​r​o​u​p​ ​I​D
+												 */
+												shortDesc: string
+												/**
+												 * I​D​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​e​d​ ​g​r​o​u​p
+												 */
+												longDesc: string
+											}
+											id: {
+												/**
+												 * O​r​g​a​n​i​z​a​t​i​o​n​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * O​r​g​a​n​i​z​a​t​i​o​n​ ​I​D
+												 */
+												shortDesc: string
+												/**
+												 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
+												 */
+												longDesc: string
+											}
+											name: {
+												/**
+												 * N​a​m​e
+												 */
+												displayName: string
+												/**
+												 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e
+												 */
+												shortDesc: string
+												/**
+												 * N​a​m​e​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
+												 */
+												longDesc: string
+											}
+											shared_comments: {
+												/**
+												 * S​h​a​r​e​d​ ​C​o​m​m​e​n​t​s
+												 */
+												displayName: string
+												/**
+												 * S​h​a​r​e​d​ ​c​o​m​m​e​n​t​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​d​i​c​a​t​e​s​ ​i​f​ ​c​o​m​m​e​n​t​s​ ​a​r​e​ ​s​h​a​r​e​d
+												 */
+												longDesc: string
+											}
+											shared_tickets: {
+												/**
+												 * S​h​a​r​e​d​ ​T​i​c​k​e​t​s
+												 */
+												displayName: string
+												/**
+												 * S​h​a​r​e​d​ ​t​i​c​k​e​t​s
+												 */
+												shortDesc: string
+												/**
+												 * I​n​d​i​c​a​t​e​s​ ​i​f​ ​t​i​c​k​e​t​s​ ​a​r​e​ ​s​h​a​r​e​d
+												 */
+												longDesc: string
+											}
+											updated_at: {
+												/**
+												 * U​p​d​a​t​e​d​ ​A​t
+												 */
+												displayName: string
+												/**
+												 * O​r​g​a​n​i​z​a​t​i​o​n​ ​u​p​d​a​t​e​ ​t​i​m​e
+												 */
+												shortDesc: string
+												/**
+												 * L​a​s​t​ ​u​p​d​a​t​e​ ​t​i​m​e​s​t​a​m​p​ ​f​o​r​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+								event: {
+									/**
+									 * E​v​e​n​t
+									 */
+									displayName: string
+									/**
+									 * E​v​e​n​t​ ​i​n​f​o
+									 */
+									shortDesc: string
+									/**
+									 * A​d​d​i​t​i​o​n​a​l​ ​e​v​e​n​t​ ​i​n​f​o​r​m​a​t​i​o​n
+									 */
+									longDesc: string
+								}
+								id: {
+									/**
+									 * E​v​e​n​t​ ​I​D
+									 */
+									displayName: string
+									/**
+									 * E​v​e​n​t​ ​I​D
+									 */
+									shortDesc: string
+									/**
+									 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
+									 */
+									longDesc: string
+								}
+								subject: {
+									/**
+									 * S​u​b​j​e​c​t
+									 */
+									displayName: string
+									/**
+									 * E​v​e​n​t​ ​s​u​b​j​e​c​t
+									 */
+									shortDesc: string
+									/**
+									 * S​u​b​j​e​c​t​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
+									 */
+									longDesc: string
+								}
+								time: {
+									/**
+									 * T​i​m​e
+									 */
+									displayName: string
+									/**
+									 * E​v​e​n​t​ ​t​i​m​e
+									 */
+									shortDesc: string
+									/**
+									 * T​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​o​c​c​u​r​r​e​n​c​e
+									 */
+									longDesc: string
+								}
+								type: {
+									/**
+									 * E​v​e​n​t​ ​T​y​p​e
+									 */
+									displayName: string
+									/**
+									 * E​v​e​n​t​ ​t​y​p​e
+									 */
+									shortDesc: string
+									/**
+									 * T​y​p​e​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
+									 */
+									longDesc: string
+								}
+								zendesk_event_version: {
+									/**
+									 * Z​e​n​d​e​s​k​ ​E​v​e​n​t​ ​V​e​r​s​i​o​n
+									 */
+									displayName: string
+									/**
+									 * E​v​e​n​t​ ​v​e​r​s​i​o​n
+									 */
+									shortDesc: string
+									/**
+									 * V​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​Z​e​n​d​e​s​k​ ​e​v​e​n​t​ ​f​o​r​m​a​t
+									 */
+									longDesc: string
+								}
+							}
+						}
 					}
-					items: {
-						/**
-						 * I​t​e​m​s
-						 */
-						displayName: string
-						/**
-						 * I​t​e​m​s
-						 */
-						shortDesc: string
-						/**
-						 * I​t​e​m​s
-						 */
-						longDesc: string
-					}
-					users: {
-						/**
-						 * U​s​e​r​s
-						 */
-						displayName: string
-						/**
-						 * U​s​e​r​s
-						 */
-						shortDesc: string
-						/**
-						 * U​s​e​r​s
-						 */
-						longDesc: string
-						id: {
+				}
+			}
+			actions: {
+				CreateGroup: {
+					options: {
+						group: {
 							/**
-							 * I​D
+							 * G​r​o​u​p
 							 */
 							displayName: string
 							/**
-							 * I​D
+							 * G​r​o​u​p
 							 */
 							shortDesc: string
 							/**
-							 * I​D
+							 * G​r​o​u​p
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									name: {
+										/**
+										 * N​a​m​e
+										 */
+										displayName: string
+										/**
+										 * G​r​o​u​p​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * G​r​o​u​p​ ​n​a​m​e
+										 */
+										longDesc: string
+									}
+									description: {
+										/**
+										 * D​e​s​c​r​i​p​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * G​r​o​u​p​ ​d​e​s​c​r​i​p​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * G​r​o​u​p​ ​d​e​s​c​r​i​p​t​i​o​n
+										 */
+										longDesc: string
+									}
+									'default': {
+										/**
+										 * D​e​f​a​u​l​t
+										 */
+										displayName: string
+										/**
+										 * D​e​f​a​u​l​t​ ​g​r​o​u​p​ ​a​s​s​i​g​n​m​e​n​t​ ​f​o​r​ ​t​e​a​m​ ​m​e​m​b​e​r​s​ ​i​n​ ​Z​e​n​d​e​s​k​.
+										 */
+										shortDesc: string
+										/**
+										 * T​e​a​m​ ​m​e​m​b​e​r​s​ ​w​i​l​l​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​b​e​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​i​s​ ​g​r​o​u​p​ ​w​h​e​n​ ​t​h​e​y​’​r​e​ ​a​d​d​e​d​ ​t​o​ ​Z​e​n​d​e​s​k​.​ ​T​h​e​r​e​ ​c​a​n​ ​o​n​l​y​ ​b​e​ ​o​n​e​ ​d​e​f​a​u​l​t​ ​g​r​o​u​p​.
+										 */
+										longDesc: string
+									}
+									is_public: {
+										/**
+										 * P​u​b​l​i​c
+										 */
+										displayName: string
+										/**
+										 * P​u​b​l​i​c​ ​g​r​o​u​p​ ​v​i​s​i​b​i​l​i​t​y
+										 */
+										shortDesc: string
+										/**
+										 * I​n​d​i​c​a​t​e​s​ ​i​f​ ​t​h​e​ ​g​r​o​u​p​ ​s​h​o​u​l​d​ ​b​e​ ​p​u​b​l​i​c​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​t​r​u​e​.
+										 */
+										longDesc: string
+									}
+									user_ids: {
+										/**
+										 * U​s​e​r​ ​I​D​s
+										 */
+										displayName: string
+										/**
+										 * U​s​e​r​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​g​r​o​u​p
+										 */
+										shortDesc: string
+										/**
+										 * L​i​s​t​ ​o​f​ ​u​s​e​r​ ​I​D​s​ ​t​o​ ​b​e​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​g​r​o​u​p
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				UpdateGroup: {
+					options: {
+						group_id: {
+							/**
+							 * G​r​o​u​p​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * G​r​o​u​p​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * G​r​o​u​p​ ​I​D
 							 */
 							longDesc: string
 						}
+						group: {
+							/**
+							 * G​r​o​u​p
+							 */
+							displayName: string
+							/**
+							 * G​r​o​u​p​ ​i​n​f​o​r​m​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * D​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​g​r​o​u​p​ ​s​e​t​t​i​n​g​s​ ​i​n​ ​Z​e​n​d​e​s​k
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									name: {
+										/**
+										 * N​a​m​e
+										 */
+										displayName: string
+										/**
+										 * G​r​o​u​p​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​g​r​o​u​p
+										 */
+										longDesc: string
+									}
+									description: {
+										/**
+										 * D​e​s​c​r​i​p​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * G​r​o​u​p​ ​d​e​s​c​r​i​p​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * A​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​g​r​o​u​p
+										 */
+										longDesc: string
+									}
+									'default': {
+										/**
+										 * D​e​f​a​u​l​t
+										 */
+										displayName: string
+										/**
+										 * D​e​f​a​u​l​t​ ​g​r​o​u​p​ ​a​s​s​i​g​n​m​e​n​t
+										 */
+										shortDesc: string
+										/**
+										 * T​e​a​m​ ​m​e​m​b​e​r​s​ ​w​i​l​l​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​b​e​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​i​s​ ​g​r​o​u​p​ ​w​h​e​n​ ​t​h​e​y​’​r​e​ ​a​d​d​e​d​ ​t​o​ ​Z​e​n​d​e​s​k​.​ ​T​h​e​r​e​ ​c​a​n​ ​o​n​l​y​ ​b​e​ ​o​n​e​ ​d​e​f​a​u​l​t​ ​g​r​o​u​p​.
+										 */
+										longDesc: string
+									}
+									is_public: {
+										/**
+										 * P​u​b​l​i​c
+										 */
+										displayName: string
+										/**
+										 * P​u​b​l​i​c​ ​g​r​o​u​p​ ​v​i​s​i​b​i​l​i​t​y
+										 */
+										shortDesc: string
+										/**
+										 * I​n​d​i​c​a​t​e​s​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​g​r​o​u​p​ ​s​h​o​u​l​d​ ​b​e​ ​p​u​b​l​i​c​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​t​r​u​e​.
+										 */
+										longDesc: string
+									}
+									user_ids: {
+										/**
+										 * U​s​e​r​ ​I​D​s
+										 */
+										displayName: string
+										/**
+										 * L​i​s​t​ ​o​f​ ​u​s​e​r​ ​I​D​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​I​D​s​ ​o​f​ ​u​s​e​r​s​ ​t​o​ ​b​e​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​g​r​o​u​p
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				CreateUser: {
+					options: {
+						user: {
+							/**
+							 * U​s​e​r
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​ ​i​n​f​o​r​m​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * D​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​u​s​e​r​ ​i​n​ ​Z​e​n​d​e​s​k
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									name: {
+										/**
+										 * N​a​m​e
+										 */
+										displayName: string
+										/**
+										 * U​s​e​r​'​s​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​u​l​l​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​u​s​e​r
+										 */
+										longDesc: string
+									}
+									email: {
+										/**
+										 * E​m​a​i​l
+										 */
+										displayName: string
+										/**
+										 * U​s​e​r​'​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​u​s​e​r
+										 */
+										longDesc: string
+									}
+									phone: {
+										/**
+										 * P​h​o​n​e
+										 */
+										displayName: string
+										/**
+										 * U​s​e​r​'​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​u​s​e​r
+										 */
+										longDesc: string
+									}
+									notes: {
+										/**
+										 * N​o​t​e​s
+										 */
+										displayName: string
+										/**
+										 * U​s​e​r​ ​n​o​t​e​s
+										 */
+										shortDesc: string
+										/**
+										 * A​d​d​i​t​i​o​n​a​l​ ​n​o​t​e​s​ ​o​r​ ​c​o​m​m​e​n​t​s​ ​a​b​o​u​t​ ​t​h​e​ ​u​s​e​r
+										 */
+										longDesc: string
+									}
+									details: {
+										/**
+										 * D​e​t​a​i​l​s
+										 */
+										displayName: string
+										/**
+										 * A​d​d​i​t​i​o​n​a​l​ ​d​e​t​a​i​l​s
+										 */
+										shortDesc: string
+										/**
+										 * D​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​u​s​e​r
+										 */
+										longDesc: string
+									}
+									role: {
+										/**
+										 * R​o​l​e
+										 */
+										displayName: string
+										/**
+										 * U​s​e​r​ ​r​o​l​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​r​o​l​e​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​u​s​e​r​ ​i​n​ ​t​h​e​ ​s​y​s​t​e​m
+										 */
+										longDesc: string
+									}
+									organization_ids: {
+										/**
+										 * O​r​g​a​n​i​z​a​t​i​o​n​ ​I​D​s
+										 */
+										displayName: string
+										/**
+										 * L​i​s​t​ ​o​f​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​I​D​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​I​D​s​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​s​ ​t​h​e​ ​u​s​e​r​ ​i​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				UpdateUser: {
+					options: {
+						user: {
+							/**
+							 * U​s​e​r
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​ ​i​n​f​o​r​m​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * D​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​u​s​e​r​ ​i​n​ ​t​h​e​ ​Z​e​n​d​e​s​k​ ​s​y​s​t​e​m
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									name: {
+										/**
+										 * N​a​m​e
+										 */
+										displayName: string
+										/**
+										 * U​s​e​r​'​s​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​u​l​l​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​u​s​e​r
+										 */
+										longDesc: string
+									}
+									email: {
+										/**
+										 * E​m​a​i​l
+										 */
+										displayName: string
+										/**
+										 * U​s​e​r​'​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​u​s​e​r
+										 */
+										longDesc: string
+									}
+									phone: {
+										/**
+										 * P​h​o​n​e
+										 */
+										displayName: string
+										/**
+										 * U​s​e​r​'​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​u​s​e​r
+										 */
+										longDesc: string
+									}
+									notes: {
+										/**
+										 * N​o​t​e​s
+										 */
+										displayName: string
+										/**
+										 * U​s​e​r​ ​n​o​t​e​s
+										 */
+										shortDesc: string
+										/**
+										 * A​d​d​i​t​i​o​n​a​l​ ​n​o​t​e​s​ ​o​r​ ​c​o​m​m​e​n​t​s​ ​a​b​o​u​t​ ​t​h​e​ ​u​s​e​r
+										 */
+										longDesc: string
+									}
+									details: {
+										/**
+										 * D​e​t​a​i​l​s
+										 */
+										displayName: string
+										/**
+										 * A​d​d​i​t​i​o​n​a​l​ ​d​e​t​a​i​l​s
+										 */
+										shortDesc: string
+										/**
+										 * A​d​d​i​t​i​o​n​a​l​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​u​s​e​r
+										 */
+										longDesc: string
+									}
+									role: {
+										/**
+										 * R​o​l​e
+										 */
+										displayName: string
+										/**
+										 * U​s​e​r​ ​r​o​l​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​r​o​l​e​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​u​s​e​r​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​y​s​t​e​m
+										 */
+										longDesc: string
+									}
+									organization_ids: {
+										/**
+										 * O​r​g​a​n​i​z​a​t​i​o​n​ ​I​D​s
+										 */
+										displayName: string
+										/**
+										 * L​i​s​t​ ​o​f​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​I​D​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​I​D​s​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​s​ ​t​h​e​ ​u​s​e​r​ ​i​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				UpdateOrganization: {
+					options: {
 						name: {
 							/**
 							 * N​a​m​e
 							 */
 							displayName: string
 							/**
-							 * N​a​m​e
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e
 							 */
 							shortDesc: string
 							/**
-							 * N​a​m​e
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e
 							 */
 							longDesc: string
 						}
-					}
-					active: {
-						/**
-						 * A​c​t​i​v​e
-						 */
-						displayName: string
-						/**
-						 * A​c​t​i​v​e
-						 */
-						shortDesc: string
-						/**
-						 * A​c​t​i​v​e
-						 */
-						longDesc: string
-					}
-					name: {
-						/**
-						 * N​a​m​e
-						 */
-						displayName: string
-						/**
-						 * N​a​m​e
-						 */
-						shortDesc: string
-						/**
-						 * N​a​m​e
-						 */
-						longDesc: string
-					}
-					custom_role_id: {
-						/**
-						 * C​u​s​t​o​m​ ​R​o​l​e​ ​I​D
-						 */
-						displayName: string
-						/**
-						 * C​u​s​t​o​m​ ​R​o​l​e​ ​I​D
-						 */
-						shortDesc: string
-						/**
-						 * C​u​s​t​o​m​ ​R​o​l​e​ ​I​D
-						 */
-						longDesc: string
-					}
-					email: {
-						/**
-						 * E​m​a​i​l
-						 */
-						displayName: string
-						/**
-						 * E​m​a​i​l
-						 */
-						shortDesc: string
-						/**
-						 * E​m​a​i​l
-						 */
-						longDesc: string
-					}
-					organization: {
-						/**
-						 * O​r​g​a​n​i​z​a​t​i​o​n
-						 */
-						displayName: string
-						/**
-						 * O​r​g​a​n​i​z​a​t​i​o​n
-						 */
-						shortDesc: string
-						/**
-						 * O​r​g​a​n​i​z​a​t​i​o​n
-						 */
-						longDesc: string
-					}
-					role: {
-						/**
-						 * R​o​l​e
-						 */
-						displayName: string
-						/**
-						 * R​o​l​e
-						 */
-						shortDesc: string
-						/**
-						 * R​o​l​e
-						 */
-						longDesc: string
-					}
-					role_type: {
-						/**
-						 * R​o​l​e​ ​T​y​p​e
-						 */
-						displayName: string
-						/**
-						 * R​o​l​e​ ​T​y​p​e
-						 */
-						shortDesc: string
-						/**
-						 * R​o​l​e​ ​T​y​p​e
-						 */
-						longDesc: string
-					}
-					organization_id: {
-						/**
-						 * O​r​g​a​n​i​z​a​t​i​o​n​ ​I​D
-						 */
-						displayName: string
-						/**
-						 * O​r​g​a​n​i​z​a​t​i​o​n​ ​I​D
-						 */
-						shortDesc: string
-						/**
-						 * O​r​g​a​n​i​z​a​t​i​o​n​ ​I​D
-						 */
-						longDesc: string
-					}
-				}
-				attachments: {
-					content_type: {
-						/**
-						 * C​o​n​t​e​n​t​ ​T​y​p​e
-						 */
-						displayName: string
-						/**
-						 * C​o​n​t​e​n​t​ ​T​y​p​e
-						 */
-						shortDesc: string
-						/**
-						 * C​o​n​t​e​n​t​ ​T​y​p​e
-						 */
-						longDesc: string
-					}
-					content_url: {
-						/**
-						 * C​o​n​t​e​n​t​ ​U​R​L
-						 */
-						displayName: string
-						/**
-						 * C​o​n​t​e​n​t​ ​U​R​L
-						 */
-						shortDesc: string
-						/**
-						 * C​o​n​t​e​n​t​ ​U​R​L
-						 */
-						longDesc: string
-					}
-					deleted: {
-						/**
-						 * D​e​l​e​t​e​d
-						 */
-						displayName: string
-						/**
-						 * D​e​l​e​t​e​d
-						 */
-						shortDesc: string
-						/**
-						 * D​e​l​e​t​e​d
-						 */
-						longDesc: string
-					}
-					file_name: {
-						/**
-						 * F​i​l​e​ ​N​a​m​e
-						 */
-						displayName: string
-						/**
-						 * F​i​l​e​ ​N​a​m​e
-						 */
-						shortDesc: string
-						/**
-						 * F​i​l​e​ ​N​a​m​e
-						 */
-						longDesc: string
-					}
-					height: {
-						/**
-						 * H​e​i​g​h​t
-						 */
-						displayName: string
-						/**
-						 * H​e​i​g​h​t
-						 */
-						shortDesc: string
-						/**
-						 * H​e​i​g​h​t
-						 */
-						longDesc: string
-					}
-					id: {
-						/**
-						 * I​D
-						 */
-						displayName: string
-						/**
-						 * I​D
-						 */
-						shortDesc: string
-						/**
-						 * I​D
-						 */
-						longDesc: string
-					}
-					inline: {
-						/**
-						 * I​n​l​i​n​e
-						 */
-						displayName: string
-						/**
-						 * I​n​l​i​n​e
-						 */
-						shortDesc: string
-						/**
-						 * I​n​l​i​n​e
-						 */
-						longDesc: string
-					}
-					size: {
-						/**
-						 * S​i​z​e
-						 */
-						displayName: string
-						/**
-						 * S​i​z​e
-						 */
-						shortDesc: string
-						/**
-						 * S​i​z​e
-						 */
-						longDesc: string
-					}
-					thumbnails: {
-						/**
-						 * T​h​u​m​b​n​a​i​l​s
-						 */
-						displayName: string
-						/**
-						 * T​h​u​m​b​n​a​i​l​s
-						 */
-						shortDesc: string
-						/**
-						 * T​h​u​m​b​n​a​i​l​s
-						 */
-						longDesc: string
-					}
-					url: {
-						/**
-						 * U​R​L
-						 */
-						displayName: string
-						/**
-						 * U​R​L
-						 */
-						shortDesc: string
-						/**
-						 * U​R​L
-						 */
-						longDesc: string
-					}
-					width: {
-						/**
-						 * W​i​d​t​h
-						 */
-						displayName: string
-						/**
-						 * W​i​d​t​h
-						 */
-						shortDesc: string
-						/**
-						 * W​i​d​t​h
-						 */
-						longDesc: string
-					}
-					mapped_content_url: {
-						/**
-						 * M​a​p​p​e​d​ ​C​o​n​t​e​n​t​ ​U​R​L
-						 */
-						displayName: string
-						/**
-						 * M​a​p​p​e​d​ ​C​o​n​t​e​n​t​ ​U​R​L
-						 */
-						shortDesc: string
-						/**
-						 * M​a​p​p​e​d​ ​C​o​n​t​e​n​t​ ​U​R​L
-						 */
-						longDesc: string
-					}
-					upload: {
-						/**
-						 * U​p​l​o​a​d
-						 */
-						displayName: string
-						/**
-						 * U​p​l​o​a​d​ ​a​n​ ​a​t​t​a​c​h​m​e​n​t
-						 */
-						shortDesc: string
-						/**
-						 * U​p​l​o​a​d​ ​a​n​ ​a​t​t​a​c​h​m​e​n​t
-						 */
-						longDesc: string
-					}
-					token: {
-						/**
-						 * Z​e​n​d​e​s​k​ ​T​o​k​e​n
-						 */
-						displayName: string
-						/**
-						 * Z​e​n​d​e​s​k​ ​A​P​I​ ​t​o​k​e​n
-						 */
-						shortDesc: string
-						/**
-						 * Z​e​n​d​e​s​k​ ​A​P​I​ ​t​o​k​e​n
-						 */
-						longDesc: string
-					}
-				}
-				tickets: {
-					ticket: {
-						/**
-						 * T​i​c​k​e​t​ ​O​b​j​e​c​t
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​o​f​ ​a​ ​t​i​c​k​e​t
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​o​f​ ​a​ ​t​i​c​k​e​t
-						 */
-						longDesc: string
-					}
-					comment: {
-						/**
-						 * C​o​m​m​e​n​t
-						 */
-						displayName: string
-						/**
-						 * C​o​m​m​e​n​t​ ​o​n​ ​a​ ​t​i​c​k​e​t
-						 */
-						shortDesc: string
-						/**
-						 * C​o​m​m​e​n​t​ ​o​n​ ​a​ ​t​i​c​k​e​t
-						 */
-						longDesc: string
-					}
-					body: {
-						/**
-						 * T​i​c​k​e​t​ ​B​o​d​y
-						 */
-						displayName: string
-						/**
-						 * B​o​d​y​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
-						 */
-						shortDesc: string
-						/**
-						 * B​o​d​y​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
-						 */
-						longDesc: string
-					}
-					subject: {
-						/**
-						 * S​u​b​j​e​c​t
-						 */
-						displayName: string
-						/**
-						 * S​u​b​j​e​c​t​ ​o​f​ ​a​ ​t​i​c​k​e​t
-						 */
-						shortDesc: string
-						/**
-						 * S​u​b​j​e​c​t​ ​o​f​ ​a​ ​t​i​c​k​e​t
-						 */
-						longDesc: string
-					}
-					priority: {
-						/**
-						 * P​r​i​o​r​i​t​y
-						 */
-						displayName: string
-						/**
-						 * P​r​i​o​r​i​t​y​ ​o​f​ ​a​ ​t​i​c​k​e​t
-						 */
-						shortDesc: string
-						/**
-						 * P​r​i​o​r​i​t​y​ ​o​f​ ​a​ ​t​i​c​k​e​t
-						 */
-						longDesc: string
-					}
-					create_ticket: {
-						/**
-						 * C​r​e​a​t​e​ ​T​i​c​k​e​t
-						 */
-						displayName: string
-						/**
-						 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​t​i​c​k​e​t
-						 */
-						shortDesc: string
-						/**
-						 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​t​i​c​k​e​t
-						 */
-						longDesc: string
-					}
-					update_ticket: {
-						/**
-						 * U​p​d​a​t​e​ ​T​i​c​k​e​t
-						 */
-						displayName: string
-						/**
-						 * U​p​d​a​t​e​ ​a​ ​t​i​c​k​e​t
-						 */
-						shortDesc: string
-						/**
-						 * U​p​d​a​t​e​ ​a​ ​t​i​c​k​e​t
-						 */
-						longDesc: string
-					}
-					get_ticket: {
-						/**
-						 * G​e​t​ ​T​i​c​k​e​t
-						 */
-						displayName: string
-						/**
-						 * G​e​t​ ​a​ ​t​i​c​k​e​t
-						 */
-						shortDesc: string
-						/**
-						 * G​e​t​ ​a​ ​t​i​c​k​e​t
-						 */
-						longDesc: string
-					}
-					ticket_id: {
-						/**
-						 * T​i​c​k​e​t​ ​I​D
-						 */
-						displayName: string
-						/**
-						 * T​i​c​k​e​t​ ​I​D
-						 */
-						shortDesc: string
-						/**
-						 * T​i​c​k​e​t​ ​I​D
-						 */
-						longDesc: string
-					}
-					created_at: {
-						/**
-						 * C​r​e​a​t​e​d​ ​A​t
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​h​e​ ​t​i​c​k​e​t​ ​w​a​s​ ​c​r​e​a​t​e​d
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​h​e​ ​t​i​c​k​e​t​ ​w​a​s​ ​c​r​e​a​t​e​d
-						 */
-						longDesc: string
-					}
-					name: {
-						/**
-						 * N​a​m​e
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​t​i​c​k​e​t​’​s​ ​n​a​m​e
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​t​i​c​k​e​t​’​s​ ​n​a​m​e
-						 */
-						longDesc: string
-					}
-					collaborator_ids: {
-						/**
-						 * C​o​l​l​a​b​o​r​a​t​o​r​ ​I​D​s
-						 */
-						displayName: string
-						/**
-						 * I​D​s​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​c​o​l​l​a​b​o​r​a​t​o​r​s
-						 */
-						shortDesc: string
-						/**
-						 * I​D​s​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​c​o​l​l​a​b​o​r​a​t​o​r​s
-						 */
-						longDesc: string
-					}
-					assignee_id: {
-						/**
-						 * A​s​s​i​g​n​e​e​ ​I​D
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​a​s​s​i​g​n​e​e
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​a​s​s​i​g​n​e​e
-						 */
-						longDesc: string
-					}
-					custom_fields: {
-						/**
-						 * C​u​s​t​o​m​ ​F​i​e​l​d​s
-						 */
-						displayName: string
-						/**
-						 * C​u​s​t​o​m​ ​f​i​e​l​d​s​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
-						 */
-						shortDesc: string
-						/**
-						 * C​u​s​t​o​m​ ​f​i​e​l​d​s​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
-						 */
-						longDesc: string
-					}
-					fields: {
-						/**
-						 * F​i​e​l​d​s
-						 */
-						displayName: string
-						/**
-						 * F​i​e​l​d​s​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
-						 */
-						shortDesc: string
-						/**
-						 * F​i​e​l​d​s​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
-						 */
-						longDesc: string
-					}
-					custom_status_id: {
-						/**
-						 * C​u​s​t​o​m​ ​S​t​a​t​u​s​ ​I​D
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​c​u​s​t​o​m​ ​s​t​a​t​u​s
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​c​u​s​t​o​m​ ​s​t​a​t​u​s
-						 */
-						longDesc: string
-					}
-					description: {
-						/**
-						 * D​e​s​c​r​i​p​t​i​o​n
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​t​i​c​k​e​t​’​s​ ​d​e​s​c​r​i​p​t​i​o​n
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​t​i​c​k​e​t​’​s​ ​d​e​s​c​r​i​p​t​i​o​n
-						 */
-						longDesc: string
-					}
-					url: {
-						/**
-						 * U​R​L
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​t​i​c​k​e​t​’​s​ ​U​R​L
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​t​i​c​k​e​t​’​s​ ​U​R​L
-						 */
-						longDesc: string
-					}
-					due_at: {
-						/**
-						 * D​u​e​ ​A​t
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​h​e​ ​t​i​c​k​e​t​ ​i​s​ ​d​u​e
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​h​e​ ​t​i​c​k​e​t​ ​i​s​ ​d​u​e
-						 */
-						longDesc: string
-					}
-					email_cc_ids: {
-						/**
-						 * E​m​a​i​l​ ​C​C​ ​I​D​s
-						 */
-						displayName: string
-						/**
-						 * I​D​s​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​e​m​a​i​l​ ​C​C​s
-						 */
-						shortDesc: string
-						/**
-						 * I​D​s​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​e​m​a​i​l​ ​C​C​s
-						 */
-						longDesc: string
-					}
-					forum_topic_id: {
-						/**
-						 * F​o​r​u​m​ ​T​o​p​i​c​ ​I​D
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​f​o​r​u​m​ ​t​o​p​i​c
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​f​o​r​u​m​ ​t​o​p​i​c
-						 */
-						longDesc: string
-					}
-					ticket_form_id: {
-						/**
-						 * T​i​c​k​e​t​ ​F​o​r​m​ ​I​D
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​f​o​r​m
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​f​o​r​m
-						 */
-						longDesc: string
-					}
-					brand_id: {
-						/**
-						 * B​r​a​n​d​ ​I​D
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​b​r​a​n​d
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​b​r​a​n​d
-						 */
-						longDesc: string
-					}
-					allow_channelback: {
-						/**
-						 * A​l​l​o​w​ ​C​h​a​n​n​e​l​b​a​c​k
-						 */
-						displayName: string
-						/**
-						 * W​h​e​t​h​e​r​ ​t​h​e​ ​t​i​c​k​e​t​ ​a​l​l​o​w​s​ ​c​h​a​n​n​e​l​b​a​c​k
-						 */
-						shortDesc: string
-						/**
-						 * W​h​e​t​h​e​r​ ​t​h​e​ ​t​i​c​k​e​t​ ​a​l​l​o​w​s​ ​c​h​a​n​n​e​l​b​a​c​k
-						 */
-						longDesc: string
-					}
-					allow_attachments: {
-						/**
-						 * A​l​l​o​w​ ​A​t​t​a​c​h​m​e​n​t​s
-						 */
-						displayName: string
-						/**
-						 * W​h​e​t​h​e​r​ ​t​h​e​ ​t​i​c​k​e​t​ ​a​l​l​o​w​s​ ​a​t​t​a​c​h​m​e​n​t​s
-						 */
-						shortDesc: string
-						/**
-						 * W​h​e​t​h​e​r​ ​t​h​e​ ​t​i​c​k​e​t​ ​a​l​l​o​w​s​ ​a​t​t​a​c​h​m​e​n​t​s
-						 */
-						longDesc: string
-					}
-					external_id: {
-						/**
-						 * E​x​t​e​r​n​a​l​ ​I​D
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​t​i​c​k​e​t​’​s​ ​e​x​t​e​r​n​a​l​ ​I​D
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​t​i​c​k​e​t​’​s​ ​e​x​t​e​r​n​a​l​ ​I​D
-						 */
-						longDesc: string
-					}
-					follower_ids: {
-						/**
-						 * F​o​l​l​o​w​e​r​ ​I​D​s
-						 */
-						displayName: string
-						/**
-						 * I​D​s​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​f​o​l​l​o​w​e​r​s
-						 */
-						shortDesc: string
-						/**
-						 * I​D​s​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​f​o​l​l​o​w​e​r​s
-						 */
-						longDesc: string
-					}
-					followup_ids: {
-						/**
-						 * F​o​l​l​o​w​u​p​ ​I​D​s
-						 */
-						displayName: string
-						/**
-						 * I​D​s​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​f​o​l​l​o​w​u​p​s
-						 */
-						shortDesc: string
-						/**
-						 * I​D​s​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​f​o​l​l​o​w​u​p​s
-						 */
-						longDesc: string
-					}
-					from_messaging_channel: {
-						/**
-						 * F​r​o​m​ ​M​e​s​s​a​g​i​n​g​ ​C​h​a​n​n​e​l
-						 */
-						displayName: string
-						/**
-						 * W​h​e​t​h​e​r​ ​t​h​e​ ​t​i​c​k​e​t​ ​w​a​s​ ​c​r​e​a​t​e​d​ ​f​r​o​m​ ​a​ ​m​e​s​s​a​g​i​n​g​ ​c​h​a​n​n​e​l
-						 */
-						shortDesc: string
-						/**
-						 * W​h​e​t​h​e​r​ ​t​h​e​ ​t​i​c​k​e​t​ ​w​a​s​ ​c​r​e​a​t​e​d​ ​f​r​o​m​ ​a​ ​m​e​s​s​a​g​i​n​g​ ​c​h​a​n​n​e​l
-						 */
-						longDesc: string
-					}
-					group_id: {
-						/**
-						 * G​r​o​u​p​ ​I​D
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​g​r​o​u​p
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​g​r​o​u​p
-						 */
-						longDesc: string
-					}
-					generated_timestamp: {
-						/**
-						 * G​e​n​e​r​a​t​e​d​ ​T​i​m​e​s​t​a​m​p
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​ ​g​e​n​e​r​a​t​i​o​n
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​ ​g​e​n​e​r​a​t​i​o​n
-						 */
-						longDesc: string
-					}
-					has_incidents: {
-						/**
-						 * G​r​o​u​p​ ​I​D
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​g​r​o​u​p
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​g​r​o​u​p
-						 */
-						longDesc: string
-					}
-					id: {
-						/**
-						 * I​D
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​t​i​c​k​e​t​’​s​ ​I​D
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​t​i​c​k​e​t​’​s​ ​I​D
-						 */
-						longDesc: string
-					}
-					is_public: {
-						/**
-						 * I​s​ ​P​u​b​l​i​c
-						 */
-						displayName: string
-						/**
-						 * W​h​e​t​h​e​r​ ​t​h​e​ ​t​i​c​k​e​t​ ​i​s​ ​p​u​b​l​i​c
-						 */
-						shortDesc: string
-						/**
-						 * W​h​e​t​h​e​r​ ​t​h​e​ ​t​i​c​k​e​t​ ​i​s​ ​p​u​b​l​i​c
-						 */
-						longDesc: string
-					}
-					organization_id: {
-						/**
-						 * O​r​g​a​n​i​z​a​t​i​o​n​ ​I​D
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​o​r​g​a​n​i​z​a​t​i​o​n
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​o​r​g​a​n​i​z​a​t​i​o​n
-						 */
-						longDesc: string
-					}
-					portal_id: {
-						/**
-						 * P​o​r​t​a​l​ ​I​D
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​p​o​r​t​a​l
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​p​o​r​t​a​l
-						 */
-						longDesc: string
-					}
-					problem_id: {
-						/**
-						 * P​r​o​b​l​e​m​ ​I​D
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​p​r​o​b​l​e​m
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​p​r​o​b​l​e​m
-						 */
-						longDesc: string
-					}
-					raw_subject: {
-						/**
-						 * R​a​w​ ​S​u​b​j​e​c​t
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​r​a​w​ ​s​u​b​j​e​c​t​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​r​a​w​ ​s​u​b​j​e​c​t​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
-						 */
-						longDesc: string
-					}
-					recipient: {
-						/**
-						 * R​e​c​i​p​i​e​n​t
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​t​i​c​k​e​t​’​s​ ​r​e​c​i​p​i​e​n​t
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​t​i​c​k​e​t​’​s​ ​r​e​c​i​p​i​e​n​t
-						 */
-						longDesc: string
-					}
-					requester_id: {
-						/**
-						 * R​e​q​u​e​s​t​e​r​ ​I​D
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​r​e​q​u​e​s​t​e​r
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​r​e​q​u​e​s​t​e​r
-						 */
-						longDesc: string
-					}
-					sharing_agreement_ids: {
-						/**
-						 * S​h​a​r​i​n​g​ ​A​g​r​e​e​m​e​n​t​ ​I​D​s
-						 */
-						displayName: string
-						/**
-						 * I​D​s​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​s​h​a​r​i​n​g​ ​a​g​r​e​e​m​e​n​t​s
-						 */
-						shortDesc: string
-						/**
-						 * I​D​s​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​s​h​a​r​i​n​g​ ​a​g​r​e​e​m​e​n​t​s
-						 */
-						longDesc: string
-					}
-					status: {
-						/**
-						 * S​t​a​t​u​s
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​t​i​c​k​e​t​’​s​ ​s​t​a​t​u​s
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​t​i​c​k​e​t​’​s​ ​s​t​a​t​u​s
-						 */
-						longDesc: string
-					}
-					submitter_id: {
-						/**
-						 * S​u​b​m​i​t​t​e​r​ ​I​D
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​s​u​b​m​i​t​t​e​r
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t​’​s​ ​s​u​b​m​i​t​t​e​r
-						 */
-						longDesc: string
-					}
-					tags: {
-						/**
-						 * T​a​g​s
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​t​i​c​k​e​t​’​s​ ​t​a​g​s
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​t​i​c​k​e​t​’​s​ ​t​a​g​s
-						 */
-						longDesc: string
-					}
-					type: {
-						/**
-						 * T​y​p​e
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​t​i​c​k​e​t​’​s​ ​t​y​p​e
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​t​i​c​k​e​t​’​s​ ​t​y​p​e
-						 */
-						longDesc: string
-					}
-					updated_at: {
-						/**
-						 * U​p​d​a​t​e​d​ ​A​t
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​h​e​ ​t​i​c​k​e​t​ ​w​a​s​ ​l​a​s​t​ ​u​p​d​a​t​e​d
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​h​e​ ​t​i​c​k​e​t​ ​w​a​s​ ​l​a​s​t​ ​u​p​d​a​t​e​d
-						 */
-						longDesc: string
-					}
-					satisfaction_rating: {
-						/**
-						 * S​a​t​i​s​f​a​c​t​i​o​n​ ​R​a​t​i​n​g
-						 */
-						displayName: string
-						/**
-						 * S​a​t​i​s​f​a​c​t​i​o​n​ ​r​a​t​i​n​g​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
-						 */
-						shortDesc: string
-						/**
-						 * S​a​t​i​s​f​a​c​t​i​o​n​ ​r​a​t​i​n​g​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
-						 */
-						longDesc: string
-						score: {
+						group_id: {
 							/**
-							 * S​c​o​r​e
+							 * G​r​o​u​p​ ​I​D
 							 */
 							displayName: string
 							/**
-							 * S​c​o​r​e​ ​o​f​ ​t​h​e​ ​s​a​t​i​s​f​a​c​t​i​o​n​ ​r​a​t​i​n​g
+							 * G​r​o​u​p​ ​I​D
 							 */
 							shortDesc: string
 							/**
-							 * S​c​o​r​e​ ​o​f​ ​t​h​e​ ​s​a​t​i​s​f​a​c​t​i​o​n​ ​r​a​t​i​n​g
+							 * G​r​o​u​p​ ​I​D
 							 */
 							longDesc: string
 						}
-						comment: {
+						notes: {
 							/**
-							 * C​o​m​m​e​n​t
+							 * N​o​t​e​s
 							 */
 							displayName: string
 							/**
-							 * C​o​m​m​e​n​t​ ​o​f​ ​t​h​e​ ​s​a​t​i​s​f​a​c​t​i​o​n​ ​r​a​t​i​n​g
+							 * N​o​t​e​s​ ​a​b​o​u​t​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
 							 */
 							shortDesc: string
 							/**
-							 * C​o​m​m​e​n​t​ ​o​f​ ​t​h​e​ ​s​a​t​i​s​f​a​c​t​i​o​n​ ​r​a​t​i​n​g
+							 * N​o​t​e​s​ ​a​b​o​u​t​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
 							 */
 							longDesc: string
 						}
-						id: {
+						details: {
 							/**
-							 * I​D
+							 * D​e​t​a​i​l​s
 							 */
 							displayName: string
 							/**
-							 * I​D​ ​o​f​ ​t​h​e​ ​s​a​t​i​s​f​a​c​t​i​o​n​ ​r​a​t​i​n​g
+							 * D​e​t​a​i​l​s
 							 */
 							shortDesc: string
 							/**
-							 * I​D​ ​o​f​ ​t​h​e​ ​s​a​t​i​s​f​a​c​t​i​o​n​ ​r​a​t​i​n​g
+							 * D​e​t​a​i​l​s
 							 */
 							longDesc: string
 						}
-						created_at: {
-							/**
-							 * C​r​e​a​t​e​d​ ​A​t
-							 */
-							displayName: string
-							/**
-							 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​h​e​ ​s​a​t​i​s​f​a​c​t​i​o​n​ ​r​a​t​i​n​g​ ​w​a​s​ ​c​r​e​a​t​e​d
-							 */
-							shortDesc: string
-							/**
-							 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​h​e​ ​s​a​t​i​s​f​a​c​t​i​o​n​ ​r​a​t​i​n​g​ ​w​a​s​ ​c​r​e​a​t​e​d
-							 */
-							longDesc: string
-						}
-						updated_at: {
-							/**
-							 * U​p​d​a​t​e​d​ ​A​t
-							 */
-							displayName: string
-							/**
-							 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​h​e​ ​s​a​t​i​s​f​a​c​t​i​o​n​ ​r​a​t​i​n​g​ ​w​a​s​ ​l​a​s​t​ ​u​p​d​a​t​e​d
-							 */
-							shortDesc: string
-							/**
-							 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​h​e​ ​s​a​t​i​s​f​a​c​t​i​o​n​ ​r​a​t​i​n​g​ ​w​a​s​ ​l​a​s​t​ ​u​p​d​a​t​e​d
-							 */
-							longDesc: string
-						}
-					}
-					via: {
-						/**
-						 * V​i​a
-						 */
-						displayName: string
-						/**
-						 * C​h​a​n​n​e​l​ ​t​h​r​o​u​g​h​ ​w​h​i​c​h​ ​t​h​e​ ​t​i​c​k​e​t​ ​w​a​s​ ​c​r​e​a​t​e​d
-						 */
-						shortDesc: string
-						/**
-						 * C​h​a​n​n​e​l​ ​t​h​r​o​u​g​h​ ​w​h​i​c​h​ ​t​h​e​ ​t​i​c​k​e​t​ ​w​a​s​ ​c​r​e​a​t​e​d
-						 */
-						longDesc: string
-						channel: {
-							/**
-							 * C​h​a​n​n​e​l
-							 */
-							displayName: string
-							/**
-							 * C​h​a​n​n​e​l​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
-							 */
-							shortDesc: string
-							/**
-							 * C​h​a​n​n​e​l​ ​o​f​ ​t​h​e​ ​t​i​c​k​e​t
-							 */
-							longDesc: string
-						}
-					}
-					count: {
-						/**
-						 * C​o​u​n​t
-						 */
-						displayName: string
-						/**
-						 * C​o​u​n​t​ ​o​f​ ​t​i​c​k​e​t​s
-						 */
-						shortDesc: string
-						/**
-						 * C​o​u​n​t​ ​o​f​ ​t​i​c​k​e​t​s
-						 */
-						longDesc: string
-					}
-					audit: {
-						/**
-						 * A​u​d​i​t
-						 */
-						displayName: string
-						/**
-						 * A​u​d​i​t​ ​o​f​ ​t​i​c​k​e​t​s
-						 */
-						shortDesc: string
-						/**
-						 * A​u​d​i​t​ ​o​f​ ​t​i​c​k​e​t​s
-						 */
-						longDesc: string
-					}
-					events: {
-						/**
-						 * E​v​e​n​t​s
-						 */
-						displayName: string
-						/**
-						 * E​v​e​n​t​s​ ​o​f​ ​t​i​c​k​e​t​s
-						 */
-						shortDesc: string
-						/**
-						 * E​v​e​n​t​s​ ​o​f​ ​t​i​c​k​e​t​s
-						 */
-						longDesc: string
-					}
-					tickets: {
-						/**
-						 * T​i​c​k​e​t​s
-						 */
-						displayName: string
-						/**
-						 * T​i​c​k​e​t​s
-						 */
-						shortDesc: string
-						/**
-						 * T​i​c​k​e​t​s
-						 */
-						longDesc: string
-					}
-					next_page: {
-						/**
-						 * N​e​x​t​ ​P​a​g​e
-						 */
-						displayName: string
-						/**
-						 * N​e​x​t​ ​p​a​g​e​ ​o​f​ ​t​i​c​k​e​t​s
-						 */
-						shortDesc: string
-						/**
-						 * N​e​x​t​ ​p​a​g​e​ ​o​f​ ​t​i​c​k​e​t​s
-						 */
-						longDesc: string
-					}
-					previous_page: {
-						/**
-						 * P​r​e​v​i​o​u​s​ ​P​a​g​e
-						 */
-						displayName: string
-						/**
-						 * P​r​e​v​i​o​u​s​ ​p​a​g​e​ ​o​f​ ​t​i​c​k​e​t​s
-						 */
-						shortDesc: string
-						/**
-						 * P​r​e​v​i​o​u​s​ ​p​a​g​e​ ​o​f​ ​t​i​c​k​e​t​s
-						 */
-						longDesc: string
-					}
-				}
-				groups: {
-					created_at: {
-						/**
-						 * C​r​e​a​t​e​d​ ​A​t
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​h​e​ ​g​r​o​u​p​ ​w​a​s​ ​c​r​e​a​t​e​d
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​h​e​ ​g​r​o​u​p​ ​w​a​s​ ​c​r​e​a​t​e​d
-						 */
-						longDesc: string
-					}
-					'default': {
-						/**
-						 * D​e​f​a​u​l​t
-						 */
-						displayName: string
-						/**
-						 * W​h​e​t​h​e​r​ ​t​h​e​ ​g​r​o​u​p​ ​i​s​ ​d​e​f​a​u​l​t
-						 */
-						shortDesc: string
-						/**
-						 * W​h​e​t​h​e​r​ ​t​h​e​ ​g​r​o​u​p​ ​i​s​ ​d​e​f​a​u​l​t
-						 */
-						longDesc: string
-					}
-					description: {
-						/**
-						 * D​e​s​c​r​i​p​t​i​o​n
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​g​r​o​u​p​’​s​ ​d​e​s​c​r​i​p​t​i​o​n
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​g​r​o​u​p​’​s​ ​d​e​s​c​r​i​p​t​i​o​n
-						 */
-						longDesc: string
-					}
-					id: {
-						/**
-						 * I​D
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​g​r​o​u​p​’​s​ ​I​D
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​g​r​o​u​p​’​s​ ​I​D
-						 */
-						longDesc: string
-					}
-					name: {
-						/**
-						 * N​a​m​e
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​g​r​o​u​p​’​s​ ​n​a​m​e
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​g​r​o​u​p​’​s​ ​n​a​m​e
-						 */
-						longDesc: string
-					}
-					updated_at: {
-						/**
-						 * U​p​d​a​t​e​d​ ​A​t
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​h​e​ ​g​r​o​u​p​ ​w​a​s​ ​l​a​s​t​ ​u​p​d​a​t​e​d
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​h​e​ ​g​r​o​u​p​ ​w​a​s​ ​l​a​s​t​ ​u​p​d​a​t​e​d
-						 */
-						longDesc: string
-					}
-					count: {
-						/**
-						 * C​o​u​n​t
-						 */
-						displayName: string
-						/**
-						 * C​o​u​n​t​ ​o​f​ ​g​r​o​u​p​s
-						 */
-						shortDesc: string
-						/**
-						 * C​o​u​n​t​ ​o​f​ ​g​r​o​u​p​s
-						 */
-						longDesc: string
-					}
-					deleted: {
-						/**
-						 * D​e​l​e​t​e​d
-						 */
-						displayName: string
-						/**
-						 * W​h​e​t​h​e​r​ ​t​h​e​ ​g​r​o​u​p​ ​i​s​ ​d​e​l​e​t​e​d
-						 */
-						shortDesc: string
-						/**
-						 * W​h​e​t​h​e​r​ ​t​h​e​ ​g​r​o​u​p​ ​i​s​ ​d​e​l​e​t​e​d
-						 */
-						longDesc: string
-					}
-					is_public: {
-						/**
-						 * I​s​ ​P​u​b​l​i​c
-						 */
-						displayName: string
-						/**
-						 * W​h​e​t​h​e​r​ ​t​h​e​ ​g​r​o​u​p​ ​i​s​ ​p​u​b​l​i​c
-						 */
-						shortDesc: string
-						/**
-						 * W​h​e​t​h​e​r​ ​t​h​e​ ​g​r​o​u​p​ ​i​s​ ​p​u​b​l​i​c
-						 */
-						longDesc: string
-					}
-					url: {
-						/**
-						 * U​R​L
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​g​r​o​u​p​’​s​ ​U​R​L
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​g​r​o​u​p​’​s​ ​U​R​L
-						 */
-						longDesc: string
-					}
-					groups: {
-						/**
-						 * G​r​o​u​p​s
-						 */
-						displayName: string
-						/**
-						 * G​r​o​u​p​s
-						 */
-						shortDesc: string
-						/**
-						 * G​r​o​u​p​s
-						 */
-						longDesc: string
-					}
-					users: {
-						/**
-						 * U​s​e​r​s
-						 */
-						displayName: string
-						/**
-						 * U​s​e​r​s
-						 */
-						shortDesc: string
-						/**
-						 * U​s​e​r​s
-						 */
-						longDesc: string
-					}
-					next_page: {
-						/**
-						 * N​e​x​t​ ​P​a​g​e
-						 */
-						displayName: string
-						/**
-						 * N​e​x​t​ ​p​a​g​e​ ​o​f​ ​g​r​o​u​p​s
-						 */
-						shortDesc: string
-						/**
-						 * N​e​x​t​ ​p​a​g​e​ ​o​f​ ​g​r​o​u​p​s
-						 */
-						longDesc: string
-					}
-					previoud_page: {
-						/**
-						 * P​r​e​v​i​o​u​s​ ​P​a​g​e
-						 */
-						displayName: string
-						/**
-						 * P​r​e​v​i​o​u​s​ ​p​a​g​e​ ​o​f​ ​g​r​o​u​p​s
-						 */
-						shortDesc: string
-						/**
-						 * P​r​e​v​i​o​u​s​ ​p​a​g​e​ ​o​f​ ​g​r​o​u​p​s
-						 */
-						longDesc: string
-					}
-				}
-				organizations: {
-					/**
-					 * O​r​g​a​n​i​z​a​t​i​o​n​s
-					 */
-					displayName: string
-					/**
-					 * O​r​g​a​n​i​z​a​t​i​o​n​s
-					 */
-					shortDesc: string
-					/**
-					 * O​r​g​a​n​i​z​a​t​i​o​n​s
-					 */
-					longDesc: string
-					count: {
-						/**
-						 * C​o​u​n​t
-						 */
-						displayName: string
-						/**
-						 * C​o​u​n​t​ ​o​f​ ​o​r​g​a​n​i​z​a​t​i​o​n​s
-						 */
-						shortDesc: string
-						/**
-						 * C​o​u​n​t​ ​o​f​ ​o​r​g​a​n​i​z​a​t​i​o​n​s
-						 */
-						longDesc: string
-					}
-					next_page: {
-						/**
-						 * N​e​x​t​ ​P​a​g​e
-						 */
-						displayName: string
-						/**
-						 * N​e​x​t​ ​p​a​g​e​ ​o​f​ ​o​r​g​a​n​i​z​a​t​i​o​n​s
-						 */
-						shortDesc: string
-						/**
-						 * N​e​x​t​ ​p​a​g​e​ ​o​f​ ​o​r​g​a​n​i​z​a​t​i​o​n​s
-						 */
-						longDesc: string
-					}
-					created_at: {
-						/**
-						 * C​r​e​a​t​e​d​ ​A​t
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​w​a​s​ ​c​r​e​a​t​e​d
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​w​a​s​ ​c​r​e​a​t​e​d
-						 */
-						longDesc: string
-					}
-					details: {
-						/**
-						 * D​e​t​a​i​l​s
-						 */
-						displayName: string
-						/**
-						 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
-						 */
-						shortDesc: string
-						/**
-						 * D​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
-						 */
-						longDesc: string
-					}
-					domain_names: {
-						/**
-						 * D​o​m​a​i​n​ ​N​a​m​e​s
-						 */
-						displayName: string
-						/**
-						 * D​o​m​a​i​n​ ​n​a​m​e​s​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
-						 */
-						shortDesc: string
-						/**
-						 * D​o​m​a​i​n​ ​n​a​m​e​s​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
-						 */
-						longDesc: string
-					}
-					external_id: {
-						/**
-						 * E​x​t​e​r​n​a​l​ ​I​D
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​’​s​ ​e​x​t​e​r​n​a​l​ ​I​D
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​’​s​ ​e​x​t​e​r​n​a​l​ ​I​D
-						 */
-						longDesc: string
-					}
-					group_id: {
-						/**
-						 * G​r​o​u​p​ ​I​D
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​’​s​ ​g​r​o​u​p
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​’​s​ ​g​r​o​u​p
-						 */
-						longDesc: string
-					}
-					id: {
-						/**
-						 * I​D
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​’​s​ ​I​D
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​’​s​ ​I​D
-						 */
-						longDesc: string
-					}
-					name: {
-						/**
-						 * N​a​m​e
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​’​s​ ​n​a​m​e
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​’​s​ ​n​a​m​e
-						 */
-						longDesc: string
-					}
-					notes: {
-						/**
-						 * N​o​t​e​s
-						 */
-						displayName: string
-						/**
-						 * N​o​t​e​s​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
-						 */
-						shortDesc: string
-						/**
-						 * N​o​t​e​s​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
-						 */
-						longDesc: string
-					}
-					organization_fields: {
-						/**
-						 * O​r​g​a​n​i​z​a​t​i​o​n​ ​F​i​e​l​d​s
-						 */
-						displayName: string
-						/**
-						 * O​r​g​a​n​i​z​a​t​i​o​n​ ​f​i​e​l​d​s
-						 */
-						shortDesc: string
-						/**
-						 * O​r​g​a​n​i​z​a​t​i​o​n​ ​f​i​e​l​d​s
-						 */
-						longDesc: string
-						datepudding: {
-							/**
-							 * D​a​t​e​P​u​d​d​i​n​g
-							 */
-							displayName: string
-							/**
-							 * D​a​t​e​P​u​d​d​i​n​g​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
-							 */
-							shortDesc: string
-							/**
-							 * D​a​t​e​P​u​d​d​i​n​g​ ​o​f​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
-							 */
-							longDesc: string
-						}
-						org_field_1: {
-							/**
-							 * O​r​g​ ​F​i​e​l​d​ ​1
-							 */
-							displayName: string
-							/**
-							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​f​i​e​l​d​ ​1
-							 */
-							shortDesc: string
-							/**
-							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​f​i​e​l​d​ ​1
-							 */
-							longDesc: string
-						}
-						org_field_2: {
-							/**
-							 * O​r​g​ ​F​i​e​l​d​ ​2
-							 */
-							displayName: string
-							/**
-							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​f​i​e​l​d​ ​2
-							 */
-							shortDesc: string
-							/**
-							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​f​i​e​l​d​ ​2
-							 */
-							longDesc: string
-						}
-					}
-					shared_comments: {
-						/**
-						 * S​h​a​r​e​d​ ​C​o​m​m​e​n​t​s
-						 */
-						displayName: string
-						/**
-						 * W​h​e​t​h​e​r​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​h​a​s​ ​s​h​a​r​e​d​ ​c​o​m​m​e​n​t​s
-						 */
-						shortDesc: string
-						/**
-						 * W​h​e​t​h​e​r​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​h​a​s​ ​s​h​a​r​e​d​ ​c​o​m​m​e​n​t​s
-						 */
-						longDesc: string
-					}
-					shared_tickets: {
-						/**
-						 * S​h​a​r​e​d​ ​T​i​c​k​e​t​s
-						 */
-						displayName: string
-						/**
-						 * W​h​e​t​h​e​r​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​h​a​s​ ​s​h​a​r​e​d​ ​t​i​c​k​e​t​s
-						 */
-						shortDesc: string
-						/**
-						 * W​h​e​t​h​e​r​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​h​a​s​ ​s​h​a​r​e​d​ ​t​i​c​k​e​t​s
-						 */
-						longDesc: string
-					}
-					tags: {
-						/**
-						 * T​a​g​s
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​’​s​ ​t​a​g​s
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​’​s​ ​t​a​g​s
-						 */
-						longDesc: string
-					}
-					updated_at: {
-						/**
-						 * U​p​d​a​t​e​d​ ​A​t
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​w​a​s​ ​l​a​s​t​ ​u​p​d​a​t​e​d
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​w​a​s​ ​l​a​s​t​ ​u​p​d​a​t​e​d
-						 */
-						longDesc: string
-					}
-					url: {
-						/**
-						 * U​R​L
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​’​s​ ​U​R​L
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​’​s​ ​U​R​L
-						 */
-						longDesc: string
 					}
 				}
 			}
@@ -2008,39 +7676,155 @@ export type TranslationFunctions = {
 	}
 	apps: {
 		_testing: {
+			triggers: {
+				_testing: {
+					options: {
+						option1: {
+							/**
+							 * Option 1
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Option 1 Short Description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Option 1 Long Description
+							 */
+							longDesc: () => LocalizedString
+						}
+						option2: {
+							/**
+							 * Second Option
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Second Option Short Description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Second Option Long Description
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Event data
+						 */
+						desc: () => LocalizedString
+						type: {
+							fields: {
+								testTriggerInfo: {
+									/**
+									 * Test Trigger Info
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Test Trigger Info Short Description
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Test Trigger Info Long Description
+									 */
+									longDesc: () => LocalizedString
+									type: {
+										fields: {
+											testTriggerInfo1: {
+												/**
+												 * Test Trigger Info 1
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Test Trigger Info 1 Short Description
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Test Trigger Info 1 Long Description
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 			actions: {
 				test: {
-					option1: {
-						/**
-						 * Option 1
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Option 1 Short Description
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Option 1 Long Description
-						 */
-						longDesc: () => LocalizedString
-					}
-					option2: {
-						/**
-						 * Second Option
-						 */
-						displayName: () => LocalizedString
-					}
-					sub_option1: {
-						/**
-						 * Sub Option 1 of Option 2
-						 */
-						displayName: () => LocalizedString
-					}
-					sub_sub_option1: {
-						/**
-						 * Generated description
-						 */
-						longDesc: () => LocalizedString
+					options: {
+						option1: {
+							/**
+							 * Option 1
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Option 1 Short Description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Option 1 Long Description
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									subOption1: {
+										/**
+										 * Sub Option 1 of option 1
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sub Option 1 Short Description
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Sub Option 1 Long Description
+										 */
+										longDesc: () => LocalizedString
+									}
+									subOption2: {
+										/**
+										 * Sub Option 2 of option 1
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sub Option 2 Short Description
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Sub Option 2 Long Description
+										 */
+										longDesc: () => LocalizedString
+										type: {
+											fields: {
+												subSubOption1: {
+													/**
+													 * Sub Sub Option 1
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Sub Sub Option 1 Short Description
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * Sub Sub Option 1 Long Description
+													 */
+													longDesc: () => LocalizedString
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						option2: {
+							/**
+							 * Second Option
+							 */
+							displayName: () => LocalizedString
+						}
 					}
 				}
 			}
@@ -2086,6 +7870,378 @@ export type TranslationFunctions = {
 			 * Collection of actions to interact with Stripe API
 			 */
 			longDesc: () => LocalizedString
+			actions: {
+				GetAccount: {
+					/**
+					 * Get account details
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves the details of the account.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostAccountLinks: {
+					/**
+					 * Create account links
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a url that the platform can redirect their user to take them through the Connect Onboarding flow.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				DeleteAccountsAccount: {
+					/**
+					 * Delete account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Deletes the specified account.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetAccountsAccount: {
+					/**
+					 * Retrieve account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves the details of an account.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostAccountsAccount: {
+					/**
+					 * Update account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates the specified account by setting the values of the parameters passed.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetAccountsAccountExternalAccounts: {
+					/**
+					 * List external accounts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns a list of external accounts associated with the Stripe account.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostAccountsAccountExternalAccounts: {
+					/**
+					 * Create external account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create an external account for a connected account.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostAccountsAccountLoginLinks: {
+					/**
+					 * Create login links
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a short-lived link that can be used to log in to the Stripe Dashboard.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetAccountsAccountPeople: {
+					/**
+					 * List people
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns a list of people associated with the account.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostAccountsAccountPeople: {
+					/**
+					 * Create person
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new person.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetBalance: {
+					/**
+					 * Retrieve balance
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves the current account balance.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetBalanceHistory: {
+					/**
+					 * List balance history
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns a list of transactions that have contributed to the Stripe account balance.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetBalanceHistoryId: {
+					/**
+					 * Retrieve balance history
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves the details of a balance history item.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetCharges: {
+					/**
+					 * List charges
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns a list of charges you have previously created.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostCharges: {
+					/**
+					 * Create charge
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new charge object.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetChargesCharge: {
+					/**
+					 * Retrieve charge
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves the details of a charge.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostChargesCharge: {
+					/**
+					 * Update charge
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates the specified charge by setting the values of the parameters passed.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetCustomers: {
+					/**
+					 * List customers
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns a list of your customers.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostCustomers: {
+					/**
+					 * Create customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new customer object.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				DeleteCustomersCustomer: {
+					/**
+					 * Delete customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Deletes the specified customer.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetCustomersCustomer: {
+					/**
+					 * Retrieve customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves the details of an existing customer.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostCustomersCustomer: {
+					/**
+					 * Update customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates the specified customer by setting the values of the parameters passed.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetCustomersCustomerBalanceTransactions: {
+					/**
+					 * List balance transactions
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns a list of transactions that have contributed to the customers account balance.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostCustomersCustomerBalanceTransactions: {
+					/**
+					 * Create balance transaction
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new balance transaction.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetCustomersCustomerSources: {
+					/**
+					 * List sources
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns a list of sources for the customer.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostCustomersCustomerSources: {
+					/**
+					 * Create source
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new source object.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetCustomersCustomerSubscriptions: {
+					/**
+					 * List subscriptions
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns a list of subscriptions for a customer.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostCustomersCustomerSubscriptions: {
+					/**
+					 * Create subscription
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new subscription on an existing customer.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetInvoices: {
+					/**
+					 * List invoices
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns a list of your invoices.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostInvoices: {
+					/**
+					 * Create invoice
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a draft invoice for a given customer.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				DeleteInvoicesInvoice: {
+					/**
+					 * Delete invoice
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Deletes the specified invoice.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetInvoicesInvoice: {
+					/**
+					 * Retrieve invoice
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves the details of an existing invoice.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostInvoicesInvoice: {
+					/**
+					 * Update invoice
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates the specified invoice by setting the values of the parameters passed.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetPaymentIntents: {
+					/**
+					 * List payment intents
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns a list of payment intents.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostPaymentIntents: {
+					/**
+					 * Create payment intent
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new payment intent.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				GetRefunds: {
+					/**
+					 * List refunds
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns a list of all refunds you’ve previously created.
+					 */
+					shortDesc: () => LocalizedString
+				}
+				PostRefunds: {
+					/**
+					 * Create refund
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new refund object.
+					 */
+					shortDesc: () => LocalizedString
+				}
+			}
 		}
 		Github: {
 			/**
@@ -2100,6 +8256,892 @@ export type TranslationFunctions = {
 			 * Collection of actions to interact with Github API
 			 */
 			longDesc: () => LocalizedString
+			triggers: {
+				new_repository_issue: {
+					/**
+					 * New Repository Issue
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new issue is created in a repository
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new issue is created in a repository
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						repo: {
+							/**
+							 * Repository name
+							 */
+							longDesc: () => LocalizedString
+							/**
+							 * Repository name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Repository name
+							 */
+							displayName: () => LocalizedString
+						}
+						owner: {
+							/**
+							 * Organization name or user login
+							 */
+							longDesc: () => LocalizedString
+							/**
+							 * Organization name or user login
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Repository owner
+							 */
+							displayName: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * GitHub Issue Event Data
+						 */
+						desc: () => LocalizedString
+						type: {
+							fields: {
+								action: {
+									/**
+									 * Action
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Action type
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Type of action performed on the issue (e.g., opened, closed)
+									 */
+									longDesc: () => LocalizedString
+								}
+								issue: {
+									/**
+									 * Issue
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Issue details
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Details of the issue created
+									 */
+									longDesc: () => LocalizedString
+									type: {
+										fields: {
+											url: {
+												/**
+												 * Issue URL
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * URL of the issue
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The API URL for the specific issue
+												 */
+												longDesc: () => LocalizedString
+											}
+											number: {
+												/**
+												 * Issue Number
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Number of the issue
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Unique number identifier for the issue
+												 */
+												longDesc: () => LocalizedString
+											}
+											title: {
+												/**
+												 * Issue Title
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Title of the issue
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The title or subject of the issue
+												 */
+												longDesc: () => LocalizedString
+											}
+											user: {
+												/**
+												 * User
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Issue creator
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Details of the user who created the issue
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														login: {
+															/**
+															 * Login
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Username
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * GitHub username of the user
+															 */
+															longDesc: () => LocalizedString
+														}
+														id: {
+															/**
+															 * User ID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * GitHub user ID
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Unique identifier for the GitHub user
+															 */
+															longDesc: () => LocalizedString
+														}
+														avatar_url: {
+															/**
+															 * Avatar URL
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * User avatar URL
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * URL of the user's avatar image
+															 */
+															longDesc: () => LocalizedString
+														}
+														html_url: {
+															/**
+															 * Profile URL
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * User profile URL
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Link to the GitHub profile of the user
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+											labels: {
+												/**
+												 * Labels
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Issue labels
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * List of labels associated with the issue
+												 */
+												longDesc: () => LocalizedString
+											}
+											state: {
+												/**
+												 * State
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Issue state
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Current state of the issue (e.g., open, closed)
+												 */
+												longDesc: () => LocalizedString
+											}
+											locked: {
+												/**
+												 * Locked
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Issue lock status
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Whether the issue is locked for editing
+												 */
+												longDesc: () => LocalizedString
+											}
+											assignee: {
+												/**
+												 * Assignee
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Assigned user
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Details of the user assigned to the issue
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														login: {
+															/**
+															 * Login
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Username
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * GitHub username of the assignee
+															 */
+															longDesc: () => LocalizedString
+														}
+														id: {
+															/**
+															 * User ID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * GitHub user ID
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Unique identifier for the GitHub user
+															 */
+															longDesc: () => LocalizedString
+														}
+														avatar_url: {
+															/**
+															 * Avatar URL
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * User avatar URL
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * URL of the user's avatar image
+															 */
+															longDesc: () => LocalizedString
+														}
+														html_url: {
+															/**
+															 * Profile URL
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * User profile URL
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Link to the GitHub profile of the assignee
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+											milestone: {
+												/**
+												 * Milestone
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Milestone details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Details of the milestone associated with the issue
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														url: {
+															/**
+															 * Milestone URL
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Milestone API URL
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The API URL for the milestone
+															 */
+															longDesc: () => LocalizedString
+														}
+														html_url: {
+															/**
+															 * Milestone HTML URL
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Milestone webpage URL
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * URL of the milestone's webpage
+															 */
+															longDesc: () => LocalizedString
+														}
+														labels_url: {
+															/**
+															 * Labels URL
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Labels API URL
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * API URL for milestone's labels
+															 */
+															longDesc: () => LocalizedString
+														}
+														id: {
+															/**
+															 * Milestone ID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Milestone identifier
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Unique identifier for the milestone
+															 */
+															longDesc: () => LocalizedString
+														}
+														number: {
+															/**
+															 * Milestone Number
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Milestone number
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Unique number for the milestone
+															 */
+															longDesc: () => LocalizedString
+														}
+														title: {
+															/**
+															 * Milestone Title
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Title of the milestone
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The title of the associated milestone
+															 */
+															longDesc: () => LocalizedString
+														}
+														description: {
+															/**
+															 * Milestone Description
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Milestone details
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * A description of the milestone
+															 */
+															longDesc: () => LocalizedString
+														}
+														creator: {
+															/**
+															 * Creator
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Milestone creator
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Details of the user who created the milestone
+															 */
+															longDesc: () => LocalizedString
+															type: {
+																fields: {
+																	login: {
+																		/**
+																		 * Login
+																		 */
+																		displayName: () => LocalizedString
+																		/**
+																		 * Username
+																		 */
+																		shortDesc: () => LocalizedString
+																		/**
+																		 * GitHub username of the creator
+																		 */
+																		longDesc: () => LocalizedString
+																	}
+																	id: {
+																		/**
+																		 * User ID
+																		 */
+																		displayName: () => LocalizedString
+																		/**
+																		 * GitHub user ID
+																		 */
+																		shortDesc: () => LocalizedString
+																		/**
+																		 * Unique identifier for the creator
+																		 */
+																		longDesc: () => LocalizedString
+																	}
+																	avatar_url: {
+																		/**
+																		 * Avatar URL
+																		 */
+																		displayName: () => LocalizedString
+																		/**
+																		 * User avatar URL
+																		 */
+																		shortDesc: () => LocalizedString
+																		/**
+																		 * URL of the creator's avatar image
+																		 */
+																		longDesc: () => LocalizedString
+																	}
+																	html_url: {
+																		/**
+																		 * Profile URL
+																		 */
+																		displayName: () => LocalizedString
+																		/**
+																		 * User profile URL
+																		 */
+																		shortDesc: () => LocalizedString
+																		/**
+																		 * Link to the creator's GitHub profile
+																		 */
+																		longDesc: () => LocalizedString
+																	}
+																}
+															}
+														}
+														open_issues: {
+															/**
+															 * Open Issues
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Count of open issues
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The number of open issues in this milestone
+															 */
+															longDesc: () => LocalizedString
+														}
+														closed_issues: {
+															/**
+															 * Closed Issues
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Count of closed issues
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The number of closed issues in this milestone
+															 */
+															longDesc: () => LocalizedString
+														}
+														state: {
+															/**
+															 * State
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Milestone state
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Current state of the milestone (e.g., open, closed)
+															 */
+															longDesc: () => LocalizedString
+														}
+														created_at: {
+															/**
+															 * Created At
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Creation time
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Timestamp when the milestone was created
+															 */
+															longDesc: () => LocalizedString
+														}
+														updated_at: {
+															/**
+															 * Updated At
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Update time
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Timestamp when the milestone was last updated
+															 */
+															longDesc: () => LocalizedString
+														}
+														due_on: {
+															/**
+															 * Due Date
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Milestone due date
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Date by which the milestone is expected to be completed
+															 */
+															longDesc: () => LocalizedString
+														}
+														closed_at: {
+															/**
+															 * Closed At
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Closure time
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Timestamp when the milestone was closed
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+											comments: {
+												/**
+												 * Comments Count
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Number of comments
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Total number of comments on the issue
+												 */
+												longDesc: () => LocalizedString
+											}
+											created_at: {
+												/**
+												 * Created At
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Issue creation time
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The timestamp when the issue was created
+												 */
+												longDesc: () => LocalizedString
+											}
+											updated_at: {
+												/**
+												 * Updated At
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Issue update time
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The timestamp when the issue was last updated
+												 */
+												longDesc: () => LocalizedString
+											}
+											closed_at: {
+												/**
+												 * Closed At
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Issue closure time
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The timestamp when the issue was closed (if applicable)
+												 */
+												longDesc: () => LocalizedString
+											}
+											body: {
+												/**
+												 * Body
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Issue description
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The detailed description of the issue
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+								repository: {
+									/**
+									 * Repository
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Repository details
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Details of the repository where the issue resides
+									 */
+									longDesc: () => LocalizedString
+									type: {
+										fields: {
+											id: {
+												/**
+												 * Repository ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Unique ID
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Unique identifier for the repository
+												 */
+												longDesc: () => LocalizedString
+											}
+											name: {
+												/**
+												 * Repository Name
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Name of the repository
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The name of the GitHub repository
+												 */
+												longDesc: () => LocalizedString
+											}
+											'private': {
+												/**
+												 * Private
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Privacy status
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Whether the repository is private
+												 */
+												longDesc: () => LocalizedString
+											}
+											owner: {
+												/**
+												 * Owner
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Repository owner
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Details of the user or organization that owns the repository
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														login: {
+															/**
+															 * Login
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Username
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * GitHub username of the owner
+															 */
+															longDesc: () => LocalizedString
+														}
+														id: {
+															/**
+															 * Owner ID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Unique ID
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Unique identifier for the repository owner
+															 */
+															longDesc: () => LocalizedString
+														}
+														avatar_url: {
+															/**
+															 * Avatar URL
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Avatar link
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * URL of the owner's avatar image
+															 */
+															longDesc: () => LocalizedString
+														}
+														html_url: {
+															/**
+															 * Profile URL
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Profile link
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Link to the owner's GitHub profile
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+								sender: {
+									/**
+									 * Sender
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Event sender
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Details of the sender who triggered the event
+									 */
+									longDesc: () => LocalizedString
+									type: {
+										fields: {
+											login: {
+												/**
+												 * Login
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Username
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * GitHub username of the sender
+												 */
+												longDesc: () => LocalizedString
+											}
+											id: {
+												/**
+												 * Sender ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Unique ID
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Unique identifier for the sender
+												 */
+												longDesc: () => LocalizedString
+											}
+											html_url: {
+												/**
+												 * Profile URL
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Profile link
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Link to the sender's GitHub profile
+												 */
+												longDesc: () => LocalizedString
+											}
+											avatar_url: {
+												/**
+												 * Avatar URL
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Avatar link
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * URL of the sender's avatar image
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 		Asana: {
 			/**
@@ -2114,6 +9156,4702 @@ export type TranslationFunctions = {
 			 * Collection of actions to interact with Asana API
 			 */
 			longDesc: () => LocalizedString
+			triggers: {
+				task_completed: {
+					/**
+					 * Task Completed
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a task within a project is marked as completed.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggered when a task within a project is marked as completed.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project to look for tasks in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The project to look for tasks in
+							 */
+							longDesc: () => LocalizedString
+						}
+						workspace: {
+							/**
+							 * Workspace ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The workspace to get projects from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The workspace to get projects from
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Event data
+						 */
+						desc: () => LocalizedString
+						type: {
+							fields: {
+								events: {
+									/**
+									 * Events
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * List of event objects
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * An array containing event objects that represent individual changes or actions within Asana.
+									 */
+									longDesc: () => LocalizedString
+									type: {
+										fields: {
+											action: {
+												/**
+												 * Action
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of action performed
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specifies the nature of the action that triggered the event; for task completion, this is typically 'changed'.
+												 */
+												longDesc: () => LocalizedString
+												/**
+												 * string
+												 */
+												type: () => LocalizedString
+											}
+											parent: {
+												/**
+												 * Parent Resource
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Parent resource details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the parent resource associated with the event, if applicable. For tasks, this could be the project or parent task.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * Parent GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the parent resource within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * Parent Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific type of the parent resource, such as 'project' or 'task'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_subtype: {
+															/**
+															 * Parent Resource Subtype
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Subtype of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The subtype classification of the parent resource, providing more specific categorization.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											resource: {
+												/**
+												 * Resource
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Affected resource details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the resource that was directly affected by the event; in this case, the task that was completed.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * Resource GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the resource within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific type of the resource, which would be 'task' for task completion events.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_subtype: {
+															/**
+															 * Resource Subtype
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Subtype of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The subtype classification of the resource, providing more specific categorization.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											change: {
+												/**
+												 * Change Details
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Details of the change
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specific information about the change that occurred, including the field affected and the nature of the change.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														field: {
+															/**
+															 * Changed Field
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Field that was changed
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific field within the resource that was modified; for task completion, this is 'completed'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														action: {
+															/**
+															 * Change Action
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Nature of the change
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Describes how the field was changed; for task completion, this is 'changed'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											user: {
+												/**
+												 * User
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * User details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the user who initiated the action that triggered the event.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * User GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the user
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the user within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * User Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the user resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The resource type, typically 'user', indicating the entity is a user.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											created_at: {
+												/**
+												 * Creation Timestamp
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Event creation time
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The timestamp indicating when the event was created.
+												 */
+												longDesc: () => LocalizedString
+												/**
+												 * string
+												 */
+												type: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				attachment_added: {
+					/**
+					 * Attachment Added
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when an attachment is added to any task within a project.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggered when an attachment is added to any task within a project.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project to look for tasks in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The project to look for tasks in
+							 */
+							longDesc: () => LocalizedString
+						}
+						workspace: {
+							/**
+							 * Workspace ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The workspace to get projects from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The workspace to get projects from
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Event data
+						 */
+						desc: () => LocalizedString
+						type: {
+							fields: {
+								events: {
+									/**
+									 * Events
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * List of event objects
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * An array containing event objects that represent individual changes or actions within Asana.
+									 */
+									longDesc: () => LocalizedString
+									type: {
+										fields: {
+											action: {
+												/**
+												 * Action
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of action performed
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specifies the nature of the action that triggered the event; for task completion, this is typically 'changed'.
+												 */
+												longDesc: () => LocalizedString
+												/**
+												 * string
+												 */
+												type: () => LocalizedString
+											}
+											parent: {
+												/**
+												 * Parent Resource
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Parent resource details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the parent resource associated with the event, if applicable. For tasks, this could be the project or parent task.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * Parent GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the parent resource within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * Parent Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific type of the parent resource, such as 'project' or 'task'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_subtype: {
+															/**
+															 * Parent Resource Subtype
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Subtype of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The subtype classification of the parent resource, providing more specific categorization.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											resource: {
+												/**
+												 * Resource
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Affected resource details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the resource that was directly affected by the event; in this case, the task that was completed.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * Resource GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the resource within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific type of the resource, which would be 'task' for task completion events.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_subtype: {
+															/**
+															 * Resource Subtype
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Subtype of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The subtype classification of the resource, providing more specific categorization.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											change: {
+												/**
+												 * Change Details
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Details of the change
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specific information about the change that occurred, including the field affected and the nature of the change.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														field: {
+															/**
+															 * Changed Field
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Field that was changed
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific field within the resource that was modified; for task completion, this is 'completed'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														action: {
+															/**
+															 * Change Action
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Nature of the change
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Describes how the field was changed; for task completion, this is 'changed'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											user: {
+												/**
+												 * User
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * User details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the user who initiated the action that triggered the event.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * User GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the user
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the user within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * User Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the user resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The resource type, typically 'user', indicating the entity is a user.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											created_at: {
+												/**
+												 * Creation Timestamp
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Event creation time
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The timestamp indicating when the event was created.
+												 */
+												longDesc: () => LocalizedString
+												/**
+												 * string
+												 */
+												type: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				subtask_completed: {
+					/**
+					 * Subtask Completed
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a subtask is marked as completed.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggered when a subtask is marked as completed.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project to look for tasks in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The project to look for tasks in
+							 */
+							longDesc: () => LocalizedString
+						}
+						workspace: {
+							/**
+							 * Workspace ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The workspace to get projects from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The workspace to get projects from
+							 */
+							longDesc: () => LocalizedString
+						}
+						task: {
+							/**
+							 * Task ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task to look for subtasks in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The task to look for subtasks in
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Event data
+						 */
+						desc: () => LocalizedString
+						type: {
+							fields: {
+								events: {
+									/**
+									 * Events
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * List of event objects
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * An array containing event objects that represent individual changes or actions within Asana.
+									 */
+									longDesc: () => LocalizedString
+									type: {
+										fields: {
+											action: {
+												/**
+												 * Action
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of action performed
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specifies the nature of the action that triggered the event; for task completion, this is typically 'changed'.
+												 */
+												longDesc: () => LocalizedString
+												/**
+												 * string
+												 */
+												type: () => LocalizedString
+											}
+											parent: {
+												/**
+												 * Parent Resource
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Parent resource details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the parent resource associated with the event, if applicable. For tasks, this could be the project or parent task.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * Parent GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the parent resource within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * Parent Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific type of the parent resource, such as 'project' or 'task'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_subtype: {
+															/**
+															 * Parent Resource Subtype
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Subtype of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The subtype classification of the parent resource, providing more specific categorization.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											resource: {
+												/**
+												 * Resource
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Affected resource details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the resource that was directly affected by the event; in this case, the task that was completed.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * Resource GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the resource within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific type of the resource, which would be 'task' for task completion events.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_subtype: {
+															/**
+															 * Resource Subtype
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Subtype of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The subtype classification of the resource, providing more specific categorization.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											change: {
+												/**
+												 * Change Details
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Details of the change
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specific information about the change that occurred, including the field affected and the nature of the change.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														field: {
+															/**
+															 * Changed Field
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Field that was changed
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific field within the resource that was modified; for task completion, this is 'completed'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														action: {
+															/**
+															 * Change Action
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Nature of the change
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Describes how the field was changed; for task completion, this is 'changed'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											user: {
+												/**
+												 * User
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * User details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the user who initiated the action that triggered the event.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * User GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the user
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the user within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * User Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the user resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The resource type, typically 'user', indicating the entity is a user.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											created_at: {
+												/**
+												 * Creation Timestamp
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Event creation time
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The timestamp indicating when the event was created.
+												 */
+												longDesc: () => LocalizedString
+												/**
+												 * string
+												 */
+												type: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				project_task_added: {
+					/**
+					 * Project Task Added
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a new task is added to a project.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggered when a new task is added to a project.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project to look for tasks in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The project to look for tasks in
+							 */
+							longDesc: () => LocalizedString
+						}
+						workspace: {
+							/**
+							 * Workspace ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The workspace to get projects from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The workspace to get projects from
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Event data
+						 */
+						desc: () => LocalizedString
+						type: {
+							fields: {
+								events: {
+									/**
+									 * Events
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * List of event objects
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * An array containing event objects that represent individual changes or actions within Asana.
+									 */
+									longDesc: () => LocalizedString
+									type: {
+										fields: {
+											action: {
+												/**
+												 * Action
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of action performed
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specifies the nature of the action that triggered the event; for task completion, this is typically 'changed'.
+												 */
+												longDesc: () => LocalizedString
+												/**
+												 * string
+												 */
+												type: () => LocalizedString
+											}
+											parent: {
+												/**
+												 * Parent Resource
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Parent resource details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the parent resource associated with the event, if applicable. For tasks, this could be the project or parent task.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * Parent GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the parent resource within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * Parent Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific type of the parent resource, such as 'project' or 'task'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_subtype: {
+															/**
+															 * Parent Resource Subtype
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Subtype of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The subtype classification of the parent resource, providing more specific categorization.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											resource: {
+												/**
+												 * Resource
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Affected resource details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the resource that was directly affected by the event; in this case, the task that was completed.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * Resource GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the resource within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific type of the resource, which would be 'task' for task completion events.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_subtype: {
+															/**
+															 * Resource Subtype
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Subtype of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The subtype classification of the resource, providing more specific categorization.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											change: {
+												/**
+												 * Change Details
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Details of the change
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specific information about the change that occurred, including the field affected and the nature of the change.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														field: {
+															/**
+															 * Changed Field
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Field that was changed
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific field within the resource that was modified; for task completion, this is 'completed'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														action: {
+															/**
+															 * Change Action
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Nature of the change
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Describes how the field was changed; for task completion, this is 'changed'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											user: {
+												/**
+												 * User
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * User details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the user who initiated the action that triggered the event.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * User GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the user
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the user within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * User Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the user resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The resource type, typically 'user', indicating the entity is a user.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											created_at: {
+												/**
+												 * Creation Timestamp
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Event creation time
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The timestamp indicating when the event was created.
+												 */
+												longDesc: () => LocalizedString
+												/**
+												 * string
+												 */
+												type: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				project_added: {
+					/**
+					 * Project Added
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a new project is added to a workspace.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggered when a new project is added to a workspace.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The workspace to get projects from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The workspace to get projects from
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Event data
+						 */
+						desc: () => LocalizedString
+						type: {
+							fields: {
+								events: {
+									/**
+									 * Events
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * List of event objects
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * An array containing event objects that represent individual changes or actions within Asana.
+									 */
+									longDesc: () => LocalizedString
+									type: {
+										fields: {
+											action: {
+												/**
+												 * Action
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of action performed
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specifies the nature of the action that triggered the event; for task completion, this is typically 'changed'.
+												 */
+												longDesc: () => LocalizedString
+												/**
+												 * string
+												 */
+												type: () => LocalizedString
+											}
+											parent: {
+												/**
+												 * Parent Resource
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Parent resource details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the parent resource associated with the event, if applicable. For tasks, this could be the project or parent task.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * Parent GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the parent resource within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * Parent Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific type of the parent resource, such as 'project' or 'task'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_subtype: {
+															/**
+															 * Parent Resource Subtype
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Subtype of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The subtype classification of the parent resource, providing more specific categorization.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											resource: {
+												/**
+												 * Resource
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Affected resource details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the resource that was directly affected by the event; in this case, the task that was completed.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * Resource GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the resource within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific type of the resource, which would be 'task' for task completion events.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_subtype: {
+															/**
+															 * Resource Subtype
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Subtype of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The subtype classification of the resource, providing more specific categorization.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											change: {
+												/**
+												 * Change Details
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Details of the change
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specific information about the change that occurred, including the field affected and the nature of the change.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														field: {
+															/**
+															 * Changed Field
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Field that was changed
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific field within the resource that was modified; for task completion, this is 'completed'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														action: {
+															/**
+															 * Change Action
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Nature of the change
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Describes how the field was changed; for task completion, this is 'changed'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											user: {
+												/**
+												 * User
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * User details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the user who initiated the action that triggered the event.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * User GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the user
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the user within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * User Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the user resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The resource type, typically 'user', indicating the entity is a user.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											created_at: {
+												/**
+												 * Creation Timestamp
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Event creation time
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The timestamp indicating when the event was created.
+												 */
+												longDesc: () => LocalizedString
+												/**
+												 * string
+												 */
+												type: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				task_comment_added: {
+					/**
+					 * Task Comment Added
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a new comment is added to a specific task.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggered when a new comment is added to a specific task.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project to look for tasks in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The project to look for tasks in
+							 */
+							longDesc: () => LocalizedString
+						}
+						workspace: {
+							/**
+							 * Workspace ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The workspace to get projects from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The workspace to get projects from
+							 */
+							longDesc: () => LocalizedString
+						}
+						task: {
+							/**
+							 * Task ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task to look for comments in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The task to look for comments in
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Event data
+						 */
+						desc: () => LocalizedString
+						type: {
+							fields: {
+								events: {
+									/**
+									 * Events
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * List of event objects
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * An array containing event objects that represent individual changes or actions within Asana.
+									 */
+									longDesc: () => LocalizedString
+									type: {
+										fields: {
+											action: {
+												/**
+												 * Action
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of action performed
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specifies the nature of the action that triggered the event; for task completion, this is typically 'changed'.
+												 */
+												longDesc: () => LocalizedString
+												/**
+												 * string
+												 */
+												type: () => LocalizedString
+											}
+											parent: {
+												/**
+												 * Parent Resource
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Parent resource details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the parent resource associated with the event, if applicable. For tasks, this could be the project or parent task.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * Parent GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the parent resource within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * Parent Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific type of the parent resource, such as 'project' or 'task'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_subtype: {
+															/**
+															 * Parent Resource Subtype
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Subtype of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The subtype classification of the parent resource, providing more specific categorization.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											resource: {
+												/**
+												 * Resource
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Affected resource details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the resource that was directly affected by the event; in this case, the task that was completed.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * Resource GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the resource within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific type of the resource, which would be 'task' for task completion events.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_subtype: {
+															/**
+															 * Resource Subtype
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Subtype of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The subtype classification of the resource, providing more specific categorization.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											change: {
+												/**
+												 * Change Details
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Details of the change
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specific information about the change that occurred, including the field affected and the nature of the change.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														field: {
+															/**
+															 * Changed Field
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Field that was changed
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific field within the resource that was modified; for task completion, this is 'completed'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														action: {
+															/**
+															 * Change Action
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Nature of the change
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Describes how the field was changed; for task completion, this is 'changed'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											user: {
+												/**
+												 * User
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * User details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the user who initiated the action that triggered the event.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * User GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the user
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the user within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * User Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the user resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The resource type, typically 'user', indicating the entity is a user.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											created_at: {
+												/**
+												 * Creation Timestamp
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Event creation time
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The timestamp indicating when the event was created.
+												 */
+												longDesc: () => LocalizedString
+												/**
+												 * string
+												 */
+												type: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				task_story_added: {
+					/**
+					 * Task Story Added
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a new story (e.g., a comment or update) is added to a task.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggered when a new story (e.g., a comment or update) is added to a task.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project to look for tasks in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The project to look for tasks in
+							 */
+							longDesc: () => LocalizedString
+						}
+						workspace: {
+							/**
+							 * Workspace ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The workspace to get projects from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The workspace to get projects from
+							 */
+							longDesc: () => LocalizedString
+						}
+						task: {
+							/**
+							 * Task ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task to look for stories in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The task to look for stories in
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Event data
+						 */
+						desc: () => LocalizedString
+						type: {
+							fields: {
+								events: {
+									/**
+									 * Events
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * List of event objects
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * An array containing event objects that represent individual changes or actions within Asana.
+									 */
+									longDesc: () => LocalizedString
+									type: {
+										fields: {
+											action: {
+												/**
+												 * Action
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of action performed
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specifies the nature of the action that triggered the event; for task completion, this is typically 'changed'.
+												 */
+												longDesc: () => LocalizedString
+												/**
+												 * string
+												 */
+												type: () => LocalizedString
+											}
+											parent: {
+												/**
+												 * Parent Resource
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Parent resource details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the parent resource associated with the event, if applicable. For tasks, this could be the project or parent task.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * Parent GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the parent resource within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * Parent Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific type of the parent resource, such as 'project' or 'task'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_subtype: {
+															/**
+															 * Parent Resource Subtype
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Subtype of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The subtype classification of the parent resource, providing more specific categorization.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											resource: {
+												/**
+												 * Resource
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Affected resource details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the resource that was directly affected by the event; in this case, the task that was completed.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * Resource GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the resource within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific type of the resource, which would be 'task' for task completion events.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_subtype: {
+															/**
+															 * Resource Subtype
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Subtype of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The subtype classification of the resource, providing more specific categorization.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											change: {
+												/**
+												 * Change Details
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Details of the change
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specific information about the change that occurred, including the field affected and the nature of the change.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														field: {
+															/**
+															 * Changed Field
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Field that was changed
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific field within the resource that was modified; for task completion, this is 'completed'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														action: {
+															/**
+															 * Change Action
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Nature of the change
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Describes how the field was changed; for task completion, this is 'changed'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											user: {
+												/**
+												 * User
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * User details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the user who initiated the action that triggered the event.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * User GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the user
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the user within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * User Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the user resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The resource type, typically 'user', indicating the entity is a user.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											created_at: {
+												/**
+												 * Creation Timestamp
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Event creation time
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The timestamp indicating when the event was created.
+												 */
+												longDesc: () => LocalizedString
+												/**
+												 * string
+												 */
+												type: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				task_subtask_added: {
+					/**
+					 * Task Subtask Added
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a new subtask is added to a specific task.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggered when a new subtask is added to a specific task.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project to look for tasks in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The project to look for tasks in
+							 */
+							longDesc: () => LocalizedString
+						}
+						workspace: {
+							/**
+							 * Workspace ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The workspace to get projects from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The workspace to get projects from
+							 */
+							longDesc: () => LocalizedString
+						}
+						task: {
+							/**
+							 * Task ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task to look for subtasks in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The task to look for subtasks in
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Event data
+						 */
+						desc: () => LocalizedString
+						type: {
+							fields: {
+								events: {
+									/**
+									 * Events
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * List of event objects
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * An array containing event objects that represent individual changes or actions within Asana.
+									 */
+									longDesc: () => LocalizedString
+									type: {
+										fields: {
+											action: {
+												/**
+												 * Action
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of action performed
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specifies the nature of the action that triggered the event; for task completion, this is typically 'changed'.
+												 */
+												longDesc: () => LocalizedString
+												/**
+												 * string
+												 */
+												type: () => LocalizedString
+											}
+											parent: {
+												/**
+												 * Parent Resource
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Parent resource details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the parent resource associated with the event, if applicable. For tasks, this could be the project or parent task.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * Parent GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the parent resource within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * Parent Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific type of the parent resource, such as 'project' or 'task'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_subtype: {
+															/**
+															 * Parent Resource Subtype
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Subtype of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The subtype classification of the parent resource, providing more specific categorization.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											resource: {
+												/**
+												 * Resource
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Affected resource details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the resource that was directly affected by the event; in this case, the task that was completed.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * Resource GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the resource within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific type of the resource, which would be 'task' for task completion events.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_subtype: {
+															/**
+															 * Resource Subtype
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Subtype of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The subtype classification of the resource, providing more specific categorization.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											change: {
+												/**
+												 * Change Details
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Details of the change
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specific information about the change that occurred, including the field affected and the nature of the change.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														field: {
+															/**
+															 * Changed Field
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Field that was changed
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific field within the resource that was modified; for task completion, this is 'completed'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														action: {
+															/**
+															 * Change Action
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Nature of the change
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Describes how the field was changed; for task completion, this is 'changed'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											user: {
+												/**
+												 * User
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * User details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the user who initiated the action that triggered the event.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * User GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the user
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the user within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * User Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the user resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The resource type, typically 'user', indicating the entity is a user.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											created_at: {
+												/**
+												 * Creation Timestamp
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Event creation time
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The timestamp indicating when the event was created.
+												 */
+												longDesc: () => LocalizedString
+												/**
+												 * string
+												 */
+												type: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				task_tag_added: {
+					/**
+					 * Task Tag Added
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a tag is added to a specific task.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggered when a tag is added to a specific task.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project to look for tasks in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The project to look for tasks in
+							 */
+							longDesc: () => LocalizedString
+						}
+						workspace: {
+							/**
+							 * Workspace ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The workspace to get projects from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The workspace to get projects from
+							 */
+							longDesc: () => LocalizedString
+						}
+						task: {
+							/**
+							 * Task ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task to look for tags in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The task to look for tags in
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Event data
+						 */
+						desc: () => LocalizedString
+						type: {
+							fields: {
+								events: {
+									/**
+									 * Events
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * List of event objects
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * An array containing event objects that represent individual changes or actions within Asana.
+									 */
+									longDesc: () => LocalizedString
+									type: {
+										fields: {
+											action: {
+												/**
+												 * Action
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of action performed
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specifies the nature of the action that triggered the event; for task completion, this is typically 'changed'.
+												 */
+												longDesc: () => LocalizedString
+												/**
+												 * string
+												 */
+												type: () => LocalizedString
+											}
+											parent: {
+												/**
+												 * Parent Resource
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Parent resource details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the parent resource associated with the event, if applicable. For tasks, this could be the project or parent task.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * Parent GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the parent resource within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * Parent Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific type of the parent resource, such as 'project' or 'task'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_subtype: {
+															/**
+															 * Parent Resource Subtype
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Subtype of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The subtype classification of the parent resource, providing more specific categorization.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											resource: {
+												/**
+												 * Resource
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Affected resource details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the resource that was directly affected by the event; in this case, the task that was completed.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * Resource GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the resource within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific type of the resource, which would be 'task' for task completion events.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_subtype: {
+															/**
+															 * Resource Subtype
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Subtype of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The subtype classification of the resource, providing more specific categorization.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											change: {
+												/**
+												 * Change Details
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Details of the change
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specific information about the change that occurred, including the field affected and the nature of the change.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														field: {
+															/**
+															 * Changed Field
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Field that was changed
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific field within the resource that was modified; for task completion, this is 'completed'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														action: {
+															/**
+															 * Change Action
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Nature of the change
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Describes how the field was changed; for task completion, this is 'changed'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											user: {
+												/**
+												 * User
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * User details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the user who initiated the action that triggered the event.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * User GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the user
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the user within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * User Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the user resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The resource type, typically 'user', indicating the entity is a user.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											created_at: {
+												/**
+												 * Creation Timestamp
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Event creation time
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The timestamp indicating when the event was created.
+												 */
+												longDesc: () => LocalizedString
+												/**
+												 * string
+												 */
+												type: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				team_added: {
+					/**
+					 * Team Added
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a new team is created in a workspace.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggered when a new team is created in a workspace.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The workspace to get teams from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The workspace to get teams from
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Event data
+						 */
+						desc: () => LocalizedString
+						type: {
+							fields: {
+								events: {
+									/**
+									 * Events
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * List of event objects
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * An array containing event objects that represent individual changes or actions within Asana.
+									 */
+									longDesc: () => LocalizedString
+									type: {
+										fields: {
+											action: {
+												/**
+												 * Action
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of action performed
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specifies the nature of the action that triggered the event; for task completion, this is typically 'changed'.
+												 */
+												longDesc: () => LocalizedString
+												/**
+												 * string
+												 */
+												type: () => LocalizedString
+											}
+											parent: {
+												/**
+												 * Parent Resource
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Parent resource details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the parent resource associated with the event, if applicable. For tasks, this could be the project or parent task.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * Parent GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the parent resource within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * Parent Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific type of the parent resource, such as 'project' or 'task'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_subtype: {
+															/**
+															 * Parent Resource Subtype
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Subtype of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The subtype classification of the parent resource, providing more specific categorization.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											resource: {
+												/**
+												 * Resource
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Affected resource details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the resource that was directly affected by the event; in this case, the task that was completed.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * Resource GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the resource within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific type of the resource, which would be 'task' for task completion events.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_subtype: {
+															/**
+															 * Resource Subtype
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Subtype of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The subtype classification of the resource, providing more specific categorization.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											change: {
+												/**
+												 * Change Details
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Details of the change
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specific information about the change that occurred, including the field affected and the nature of the change.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														field: {
+															/**
+															 * Changed Field
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Field that was changed
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific field within the resource that was modified; for task completion, this is 'completed'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														action: {
+															/**
+															 * Change Action
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Nature of the change
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Describes how the field was changed; for task completion, this is 'changed'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											user: {
+												/**
+												 * User
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * User details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the user who initiated the action that triggered the event.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * User GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the user
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the user within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * User Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the user resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The resource type, typically 'user', indicating the entity is a user.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											created_at: {
+												/**
+												 * Creation Timestamp
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Event creation time
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The timestamp indicating when the event was created.
+												 */
+												longDesc: () => LocalizedString
+												/**
+												 * string
+												 */
+												type: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				user_added: {
+					/**
+					 * User Added
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a new user joins a workspace.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggered when a new user joins a workspace.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The workspace to get users from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The workspace to get users from
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Event data
+						 */
+						desc: () => LocalizedString
+						type: {
+							fields: {
+								events: {
+									/**
+									 * Events
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * List of event objects
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * An array containing event objects that represent individual changes or actions within Asana.
+									 */
+									longDesc: () => LocalizedString
+									type: {
+										fields: {
+											action: {
+												/**
+												 * Action
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of action performed
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specifies the nature of the action that triggered the event; for task completion, this is typically 'changed'.
+												 */
+												longDesc: () => LocalizedString
+												/**
+												 * string
+												 */
+												type: () => LocalizedString
+											}
+											parent: {
+												/**
+												 * Parent Resource
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Parent resource details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the parent resource associated with the event, if applicable. For tasks, this could be the project or parent task.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * Parent GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the parent resource within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * Parent Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific type of the parent resource, such as 'project' or 'task'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_subtype: {
+															/**
+															 * Parent Resource Subtype
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Subtype of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The subtype classification of the parent resource, providing more specific categorization.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											resource: {
+												/**
+												 * Resource
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Affected resource details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the resource that was directly affected by the event; in this case, the task that was completed.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * Resource GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the resource within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific type of the resource, which would be 'task' for task completion events.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_subtype: {
+															/**
+															 * Resource Subtype
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Subtype of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The subtype classification of the resource, providing more specific categorization.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											change: {
+												/**
+												 * Change Details
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Details of the change
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specific information about the change that occurred, including the field affected and the nature of the change.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														field: {
+															/**
+															 * Changed Field
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Field that was changed
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific field within the resource that was modified; for task completion, this is 'completed'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														action: {
+															/**
+															 * Change Action
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Nature of the change
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Describes how the field was changed; for task completion, this is 'changed'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											user: {
+												/**
+												 * User
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * User details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the user who initiated the action that triggered the event.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * User GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the user
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the user within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * User Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the user resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The resource type, typically 'user', indicating the entity is a user.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											created_at: {
+												/**
+												 * Creation Timestamp
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Event creation time
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The timestamp indicating when the event was created.
+												 */
+												longDesc: () => LocalizedString
+												/**
+												 * string
+												 */
+												type: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				tag_created: {
+					/**
+					 * Tag Created
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a new tag is created in a workspace.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggered when a new tag is created in a workspace.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The workspace to get tags from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The workspace to get tags from
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Event data
+						 */
+						desc: () => LocalizedString
+						type: {
+							fields: {
+								events: {
+									/**
+									 * Events
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * List of event objects
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * An array containing event objects that represent individual changes or actions within Asana.
+									 */
+									longDesc: () => LocalizedString
+									type: {
+										fields: {
+											action: {
+												/**
+												 * Action
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of action performed
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specifies the nature of the action that triggered the event; for task completion, this is typically 'changed'.
+												 */
+												longDesc: () => LocalizedString
+												/**
+												 * string
+												 */
+												type: () => LocalizedString
+											}
+											parent: {
+												/**
+												 * Parent Resource
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Parent resource details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the parent resource associated with the event, if applicable. For tasks, this could be the project or parent task.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * Parent GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the parent resource within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * Parent Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific type of the parent resource, such as 'project' or 'task'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_subtype: {
+															/**
+															 * Parent Resource Subtype
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Subtype of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The subtype classification of the parent resource, providing more specific categorization.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											resource: {
+												/**
+												 * Resource
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Affected resource details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the resource that was directly affected by the event; in this case, the task that was completed.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * Resource GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the resource within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific type of the resource, which would be 'task' for task completion events.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_subtype: {
+															/**
+															 * Resource Subtype
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Subtype of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The subtype classification of the resource, providing more specific categorization.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											change: {
+												/**
+												 * Change Details
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Details of the change
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specific information about the change that occurred, including the field affected and the nature of the change.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														field: {
+															/**
+															 * Changed Field
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Field that was changed
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific field within the resource that was modified; for task completion, this is 'completed'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														action: {
+															/**
+															 * Change Action
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Nature of the change
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Describes how the field was changed; for task completion, this is 'changed'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											user: {
+												/**
+												 * User
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * User details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the user who initiated the action that triggered the event.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * User GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the user
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the user within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * User Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the user resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The resource type, typically 'user', indicating the entity is a user.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											created_at: {
+												/**
+												 * Creation Timestamp
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Event creation time
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The timestamp indicating when the event was created.
+												 */
+												longDesc: () => LocalizedString
+												/**
+												 * string
+												 */
+												type: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				task_moved_to_section: {
+					/**
+					 * Task Moved to Section
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a task is moved to a different section within a project.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggered when a task is moved to a different section within a project.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project to look for tasks in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The project to look for tasks in
+							 */
+							longDesc: () => LocalizedString
+						}
+						workspace: {
+							/**
+							 * Workspace ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The workspace to get projects from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The workspace to get projects from
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Event data
+						 */
+						desc: () => LocalizedString
+						type: {
+							fields: {
+								events: {
+									/**
+									 * Events
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * List of event objects
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * An array containing event objects that represent individual changes or actions within Asana.
+									 */
+									longDesc: () => LocalizedString
+									type: {
+										fields: {
+											action: {
+												/**
+												 * Action
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of action performed
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specifies the nature of the action that triggered the event; for task completion, this is typically 'changed'.
+												 */
+												longDesc: () => LocalizedString
+												/**
+												 * string
+												 */
+												type: () => LocalizedString
+											}
+											parent: {
+												/**
+												 * Parent Resource
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Parent resource details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the parent resource associated with the event, if applicable. For tasks, this could be the project or parent task.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * Parent GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the parent resource within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * Parent Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific type of the parent resource, such as 'project' or 'task'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_subtype: {
+															/**
+															 * Parent Resource Subtype
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Subtype of the parent resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The subtype classification of the parent resource, providing more specific categorization.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											resource: {
+												/**
+												 * Resource
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Affected resource details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the resource that was directly affected by the event; in this case, the task that was completed.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * Resource GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the resource within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific type of the resource, which would be 'task' for task completion events.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_subtype: {
+															/**
+															 * Resource Subtype
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Subtype of the resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The subtype classification of the resource, providing more specific categorization.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											change: {
+												/**
+												 * Change Details
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Details of the change
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specific information about the change that occurred, including the field affected and the nature of the change.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														field: {
+															/**
+															 * Changed Field
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Field that was changed
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The specific field within the resource that was modified; for task completion, this is 'completed'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														action: {
+															/**
+															 * Change Action
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Nature of the change
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Describes how the field was changed; for task completion, this is 'changed'.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											user: {
+												/**
+												 * User
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * User details
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Information about the user who initiated the action that triggered the event.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														gid: {
+															/**
+															 * User GID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Globally unique identifier of the user
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier assigned to the user within Asana.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+														resource_type: {
+															/**
+															 * User Resource Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of the user resource
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The resource type, typically 'user', indicating the entity is a user.
+															 */
+															longDesc: () => LocalizedString
+															/**
+															 * string
+															 */
+															type: () => LocalizedString
+														}
+													}
+												}
+											}
+											created_at: {
+												/**
+												 * Creation Timestamp
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Event creation time
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The timestamp indicating when the event was created.
+												 */
+												longDesc: () => LocalizedString
+												/**
+												 * string
+												 */
+												type: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 		DocusignESignature: {
 			/**
@@ -2128,6 +13866,110 @@ export type TranslationFunctions = {
 			 * Collection of actions to interact with Esignature API
 			 */
 			longDesc: () => LocalizedString
+			actions: {
+				Brands_GetBrands: {
+					/**
+					 * Get Brands
+					 */
+					displayName: () => LocalizedString
+				}
+				Brands_PostBrands: {
+					/**
+					 * Create Brand
+					 */
+					displayName: () => LocalizedString
+				}
+				Brands_DeleteBrands: {
+					/**
+					 * Delete Brand
+					 */
+					displayName: () => LocalizedString
+				}
+				Envelopes_GetEnvelopes: {
+					/**
+					 * Get Envelopes
+					 */
+					displayName: () => LocalizedString
+				}
+				Envelopes_PostEnvelopes: {
+					/**
+					 * Create Envelopes
+					 */
+					displayName: () => LocalizedString
+				}
+				Envelopes_GetEnvelope: {
+					/**
+					 * Get Envelope
+					 */
+					displayName: () => LocalizedString
+				}
+				Envelopes_PutEnvelope: {
+					/**
+					 * Update Envelope
+					 */
+					displayName: () => LocalizedString
+				}
+				Documents_GetDocuments: {
+					/**
+					 * Get Documents
+					 */
+					displayName: () => LocalizedString
+				}
+				Documents_PutDocuments: {
+					/**
+					 * Update Documents
+					 */
+					displayName: () => LocalizedString
+				}
+				Documents_DeleteDocuments: {
+					/**
+					 * Delete Documents
+					 */
+					displayName: () => LocalizedString
+				}
+				Documents_GetDocument: {
+					/**
+					 * Get Document
+					 */
+					displayName: () => LocalizedString
+				}
+				Documents_PutDocument: {
+					/**
+					 * Update Document
+					 */
+					displayName: () => LocalizedString
+				}
+				Recipients_GetRecipients: {
+					/**
+					 * Get Recipients
+					 */
+					displayName: () => LocalizedString
+				}
+				Recipients_PutRecipients: {
+					/**
+					 * Update Recipients
+					 */
+					displayName: () => LocalizedString
+				}
+				Recipients_PostRecipients: {
+					/**
+					 * Add Recipients
+					 */
+					displayName: () => LocalizedString
+				}
+				Recipients_DeleteRecipients: {
+					/**
+					 * Delete Recipients
+					 */
+					displayName: () => LocalizedString
+				}
+				Views_PostEnvelopeRecipientView: {
+					/**
+					 * Create Recipient View
+					 */
+					displayName: () => LocalizedString
+				}
+			}
 		}
 		Zendesk: {
 			/**
@@ -2142,1735 +13984,1229 @@ export type TranslationFunctions = {
 			 * Collection of actions to interact with Zendesk API
 			 */
 			longDesc: () => LocalizedString
-			actions: {
-				create_ticket: {
+			triggers: {
+				new_user: {
 					/**
-					 * Create Ticket
+					 * New User
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Create a new ticket
+					 * Triggers when a new user is created
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Create a new ticket
+					 * Triggers when a new user is created
 					 */
 					longDesc: () => LocalizedString
+					event_info: {
+						/**
+						 * Zendesk User Event Data
+						 */
+						desc: () => LocalizedString
+						type: {
+							fields: {
+								account_id: {
+									/**
+									 * Account ID
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Account ID
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * ID of the associated account
+									 */
+									longDesc: () => LocalizedString
+								}
+								detail: {
+									/**
+									 * Detail
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * User details
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Detailed user information
+									 */
+									longDesc: () => LocalizedString
+									type: {
+										fields: {
+											created_at: {
+												/**
+												 * Created At
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * User creation time
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Timestamp of user creation
+												 */
+												longDesc: () => LocalizedString
+											}
+											default_group_id: {
+												/**
+												 * Default Group ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Default group ID
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * ID of the default group for the user
+												 */
+												longDesc: () => LocalizedString
+											}
+											email: {
+												/**
+												 * Email
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * User email
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Email address of the user
+												 */
+												longDesc: () => LocalizedString
+											}
+											external_id: {
+												/**
+												 * External ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * User external ID
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * External identifier for the user
+												 */
+												longDesc: () => LocalizedString
+											}
+											id: {
+												/**
+												 * User ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * User ID
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Unique identifier for the user
+												 */
+												longDesc: () => LocalizedString
+											}
+											organization_id: {
+												/**
+												 * Organization ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Organization ID
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * ID of the organization associated with the user
+												 */
+												longDesc: () => LocalizedString
+											}
+											role: {
+												/**
+												 * Role
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * User role
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Role of the user in the system
+												 */
+												longDesc: () => LocalizedString
+											}
+											updated_at: {
+												/**
+												 * Updated At
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * User update time
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Last update timestamp for the user
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+								event: {
+									/**
+									 * Event
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Event info
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Additional event information
+									 */
+									longDesc: () => LocalizedString
+								}
+								id: {
+									/**
+									 * Event ID
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Event ID
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Unique identifier for the event
+									 */
+									longDesc: () => LocalizedString
+								}
+								subject: {
+									/**
+									 * Subject
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Event subject
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Subject of the event
+									 */
+									longDesc: () => LocalizedString
+								}
+								time: {
+									/**
+									 * Time
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Event time
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Timestamp of the event occurrence
+									 */
+									longDesc: () => LocalizedString
+								}
+								type: {
+									/**
+									 * Event Type
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Event type
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Type of the event
+									 */
+									longDesc: () => LocalizedString
+								}
+								zendesk_event_version: {
+									/**
+									 * Zendesk Event Version
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Event version
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Version of the Zendesk event format
+									 */
+									longDesc: () => LocalizedString
+								}
+							}
+						}
+					}
 				}
-				users: {
-					get_user: {
+				new_ticket: {
+					/**
+					 * New Ticket
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new ticket is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new ticket is created
+					 */
+					longDesc: () => LocalizedString
+					event_info: {
 						/**
-						 * Get User
+						 * New Ticket Event Data
 						 */
-						displayName: () => LocalizedString
-						/**
-						 * Get user by ID
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Get user by ID
-						 */
-						longDesc: () => LocalizedString
+						desc: () => LocalizedString
+						type: {
+							fields: {
+								assignee_email: {
+									/**
+									 * Assignee Email
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Assignee email
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Email of the assignee
+									 */
+									longDesc: () => LocalizedString
+								}
+								assignee_name: {
+									/**
+									 * Assignee Name
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Assignee name
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Name of the assignee
+									 */
+									longDesc: () => LocalizedString
+								}
+								group_name: {
+									/**
+									 * Group Name
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Group name
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Name of the group handling the ticket
+									 */
+									longDesc: () => LocalizedString
+								}
+								organization_name: {
+									/**
+									 * Organization Name
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Organization name
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Name of the associated organization
+									 */
+									longDesc: () => LocalizedString
+								}
+								requester_email: {
+									/**
+									 * Requester Email
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Requester email
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Email of the requester
+									 */
+									longDesc: () => LocalizedString
+								}
+								requester_name: {
+									/**
+									 * Requester Name
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Requester name
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Name of the requester
+									 */
+									longDesc: () => LocalizedString
+								}
+								tags: {
+									/**
+									 * Tags
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Ticket tags
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Tags associated with the ticket
+									 */
+									longDesc: () => LocalizedString
+								}
+								ticket_description: {
+									/**
+									 * Ticket Description
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Ticket description
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Description of the ticket
+									 */
+									longDesc: () => LocalizedString
+								}
+								ticket_id: {
+									/**
+									 * Ticket ID
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Ticket ID
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Unique identifier for the ticket
+									 */
+									longDesc: () => LocalizedString
+								}
+								ticket_priority: {
+									/**
+									 * Ticket Priority
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Ticket priority
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Priority level of the ticket
+									 */
+									longDesc: () => LocalizedString
+								}
+								ticket_status: {
+									/**
+									 * Ticket Status
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Ticket status
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Current status of the ticket
+									 */
+									longDesc: () => LocalizedString
+								}
+								ticket_subject: {
+									/**
+									 * Ticket Subject
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Ticket subject
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Subject of the ticket
+									 */
+									longDesc: () => LocalizedString
+								}
+								ticket_type: {
+									/**
+									 * Ticket Type
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Ticket type
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Type of the ticket
+									 */
+									longDesc: () => LocalizedString
+								}
+								ticket_url: {
+									/**
+									 * Ticket URL
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Ticket URL
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * URL of the ticket in the system
+									 */
+									longDesc: () => LocalizedString
+								}
+							}
+						}
 					}
-					user_id: {
+				}
+				new_organization: {
+					/**
+					 * New Organization
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new organization is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new organization is created
+					 */
+					longDesc: () => LocalizedString
+					event_info: {
 						/**
-						 * User ID
+						 * Zendesk Organization Event Data
 						 */
-						displayName: () => LocalizedString
-						/**
-						 * User ID
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * User ID
-						 */
-						longDesc: () => LocalizedString
+						desc: () => LocalizedString
+						type: {
+							fields: {
+								account_id: {
+									/**
+									 * Account ID
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Account ID
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * ID of the associated account
+									 */
+									longDesc: () => LocalizedString
+								}
+								detail: {
+									/**
+									 * Detail
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Organization details
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Detailed organization information
+									 */
+									longDesc: () => LocalizedString
+									type: {
+										fields: {
+											created_at: {
+												/**
+												 * Created At
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Organization creation time
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Timestamp of organization creation
+												 */
+												longDesc: () => LocalizedString
+											}
+											external_id: {
+												/**
+												 * External ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Organization external ID
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * External identifier for the organization
+												 */
+												longDesc: () => LocalizedString
+											}
+											group_id: {
+												/**
+												 * Group ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Group ID
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * ID of the associated group
+												 */
+												longDesc: () => LocalizedString
+											}
+											id: {
+												/**
+												 * Organization ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Organization ID
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Unique identifier for the organization
+												 */
+												longDesc: () => LocalizedString
+											}
+											name: {
+												/**
+												 * Name
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Organization name
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Name of the organization
+												 */
+												longDesc: () => LocalizedString
+											}
+											shared_comments: {
+												/**
+												 * Shared Comments
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Shared comments
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Indicates if comments are shared
+												 */
+												longDesc: () => LocalizedString
+											}
+											shared_tickets: {
+												/**
+												 * Shared Tickets
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Shared tickets
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Indicates if tickets are shared
+												 */
+												longDesc: () => LocalizedString
+											}
+											updated_at: {
+												/**
+												 * Updated At
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Organization update time
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Last update timestamp for the organization
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+								event: {
+									/**
+									 * Event
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Event info
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Additional event information
+									 */
+									longDesc: () => LocalizedString
+								}
+								id: {
+									/**
+									 * Event ID
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Event ID
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Unique identifier for the event
+									 */
+									longDesc: () => LocalizedString
+								}
+								subject: {
+									/**
+									 * Subject
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Event subject
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Subject of the event
+									 */
+									longDesc: () => LocalizedString
+								}
+								time: {
+									/**
+									 * Time
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Event time
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Timestamp of the event occurrence
+									 */
+									longDesc: () => LocalizedString
+								}
+								type: {
+									/**
+									 * Event Type
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Event type
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Type of the event
+									 */
+									longDesc: () => LocalizedString
+								}
+								zendesk_event_version: {
+									/**
+									 * Zendesk Event Version
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Event version
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Version of the Zendesk event format
+									 */
+									longDesc: () => LocalizedString
+								}
+							}
+						}
 					}
-					items: {
-						/**
-						 * Items
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Items
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Items
-						 */
-						longDesc: () => LocalizedString
-					}
-					users: {
-						/**
-						 * Users
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Users
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Users
-						 */
-						longDesc: () => LocalizedString
-						id: {
+				}
+			}
+			actions: {
+				CreateGroup: {
+					options: {
+						group: {
 							/**
-							 * ID
+							 * Group
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * ID
+							 * Group
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * ID
+							 * Group
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									name: {
+										/**
+										 * Name
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Group name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Group name
+										 */
+										longDesc: () => LocalizedString
+									}
+									description: {
+										/**
+										 * Description
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Group description
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Group description
+										 */
+										longDesc: () => LocalizedString
+									}
+									'default': {
+										/**
+										 * Default
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Default group assignment for team members in Zendesk.
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Team members will automatically be assigned to this group when they’re added to Zendesk. There can only be one default group.
+										 */
+										longDesc: () => LocalizedString
+									}
+									is_public: {
+										/**
+										 * Public
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Public group visibility
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Indicates if the group should be public. Default is true.
+										 */
+										longDesc: () => LocalizedString
+									}
+									user_ids: {
+										/**
+										 * User IDs
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Users to add to the group
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * List of user IDs to be added to the group
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				UpdateGroup: {
+					options: {
+						group_id: {
+							/**
+							 * Group ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Group ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Group ID
 							 */
 							longDesc: () => LocalizedString
 						}
+						group: {
+							/**
+							 * Group
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Group information
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Details about the group settings in Zendesk
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									name: {
+										/**
+										 * Name
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Group name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The name of the group
+										 */
+										longDesc: () => LocalizedString
+									}
+									description: {
+										/**
+										 * Description
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Group description
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * A description of the group
+										 */
+										longDesc: () => LocalizedString
+									}
+									'default': {
+										/**
+										 * Default
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Default group assignment
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Team members will automatically be assigned to this group when they’re added to Zendesk. There can only be one default group.
+										 */
+										longDesc: () => LocalizedString
+									}
+									is_public: {
+										/**
+										 * Public
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Public group visibility
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Indicates whether the group should be public. Default is true.
+										 */
+										longDesc: () => LocalizedString
+									}
+									user_ids: {
+										/**
+										 * User IDs
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * List of user IDs
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The IDs of users to be added to the group
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				CreateUser: {
+					options: {
+						user: {
+							/**
+							 * User
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * User information
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Details about the user in Zendesk
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									name: {
+										/**
+										 * Name
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * User's name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The full name of the user
+										 */
+										longDesc: () => LocalizedString
+									}
+									email: {
+										/**
+										 * Email
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * User's email address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The email address associated with the user
+										 */
+										longDesc: () => LocalizedString
+									}
+									phone: {
+										/**
+										 * Phone
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * User's phone number
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The phone number associated with the user
+										 */
+										longDesc: () => LocalizedString
+									}
+									notes: {
+										/**
+										 * Notes
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * User notes
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Additional notes or comments about the user
+										 */
+										longDesc: () => LocalizedString
+									}
+									details: {
+										/**
+										 * Details
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Additional details
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Detailed information about the user
+										 */
+										longDesc: () => LocalizedString
+									}
+									role: {
+										/**
+										 * Role
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * User role
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The role assigned to the user in the system
+										 */
+										longDesc: () => LocalizedString
+									}
+									organization_ids: {
+										/**
+										 * Organization IDs
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * List of organization IDs
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The IDs of the organizations the user is associated with
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				UpdateUser: {
+					options: {
+						user: {
+							/**
+							 * User
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * User information
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Details about the user in the Zendesk system
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									name: {
+										/**
+										 * Name
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * User's name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The full name of the user
+										 */
+										longDesc: () => LocalizedString
+									}
+									email: {
+										/**
+										 * Email
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * User's email address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The email address associated with the user
+										 */
+										longDesc: () => LocalizedString
+									}
+									phone: {
+										/**
+										 * Phone
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * User's phone number
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The phone number associated with the user
+										 */
+										longDesc: () => LocalizedString
+									}
+									notes: {
+										/**
+										 * Notes
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * User notes
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Additional notes or comments about the user
+										 */
+										longDesc: () => LocalizedString
+									}
+									details: {
+										/**
+										 * Details
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Additional details
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Additional detailed information about the user
+										 */
+										longDesc: () => LocalizedString
+									}
+									role: {
+										/**
+										 * Role
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * User role
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The role assigned to the user within the system
+										 */
+										longDesc: () => LocalizedString
+									}
+									organization_ids: {
+										/**
+										 * Organization IDs
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * List of organization IDs
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The IDs of the organizations the user is associated with
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				UpdateOrganization: {
+					options: {
 						name: {
 							/**
 							 * Name
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * Name
+							 * Organization name
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * Name
+							 * Organization name
 							 */
 							longDesc: () => LocalizedString
 						}
-					}
-					active: {
-						/**
-						 * Active
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Active
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Active
-						 */
-						longDesc: () => LocalizedString
-					}
-					name: {
-						/**
-						 * Name
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Name
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Name
-						 */
-						longDesc: () => LocalizedString
-					}
-					custom_role_id: {
-						/**
-						 * Custom Role ID
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Custom Role ID
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Custom Role ID
-						 */
-						longDesc: () => LocalizedString
-					}
-					email: {
-						/**
-						 * Email
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Email
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Email
-						 */
-						longDesc: () => LocalizedString
-					}
-					organization: {
-						/**
-						 * Organization
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Organization
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Organization
-						 */
-						longDesc: () => LocalizedString
-					}
-					role: {
-						/**
-						 * Role
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Role
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Role
-						 */
-						longDesc: () => LocalizedString
-					}
-					role_type: {
-						/**
-						 * Role Type
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Role Type
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Role Type
-						 */
-						longDesc: () => LocalizedString
-					}
-					organization_id: {
-						/**
-						 * Organization ID
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Organization ID
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Organization ID
-						 */
-						longDesc: () => LocalizedString
-					}
-				}
-				attachments: {
-					content_type: {
-						/**
-						 * Content Type
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Content Type
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Content Type
-						 */
-						longDesc: () => LocalizedString
-					}
-					content_url: {
-						/**
-						 * Content URL
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Content URL
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Content URL
-						 */
-						longDesc: () => LocalizedString
-					}
-					deleted: {
-						/**
-						 * Deleted
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Deleted
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Deleted
-						 */
-						longDesc: () => LocalizedString
-					}
-					file_name: {
-						/**
-						 * File Name
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * File Name
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * File Name
-						 */
-						longDesc: () => LocalizedString
-					}
-					height: {
-						/**
-						 * Height
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Height
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Height
-						 */
-						longDesc: () => LocalizedString
-					}
-					id: {
-						/**
-						 * ID
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * ID
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * ID
-						 */
-						longDesc: () => LocalizedString
-					}
-					inline: {
-						/**
-						 * Inline
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Inline
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Inline
-						 */
-						longDesc: () => LocalizedString
-					}
-					size: {
-						/**
-						 * Size
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Size
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Size
-						 */
-						longDesc: () => LocalizedString
-					}
-					thumbnails: {
-						/**
-						 * Thumbnails
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Thumbnails
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Thumbnails
-						 */
-						longDesc: () => LocalizedString
-					}
-					url: {
-						/**
-						 * URL
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * URL
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * URL
-						 */
-						longDesc: () => LocalizedString
-					}
-					width: {
-						/**
-						 * Width
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Width
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Width
-						 */
-						longDesc: () => LocalizedString
-					}
-					mapped_content_url: {
-						/**
-						 * Mapped Content URL
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Mapped Content URL
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Mapped Content URL
-						 */
-						longDesc: () => LocalizedString
-					}
-					upload: {
-						/**
-						 * Upload
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Upload an attachment
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Upload an attachment
-						 */
-						longDesc: () => LocalizedString
-					}
-					token: {
-						/**
-						 * Zendesk Token
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Zendesk API token
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Zendesk API token
-						 */
-						longDesc: () => LocalizedString
-					}
-				}
-				tickets: {
-					ticket: {
-						/**
-						 * Ticket Object
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The information of a ticket
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The information of a ticket
-						 */
-						longDesc: () => LocalizedString
-					}
-					comment: {
-						/**
-						 * Comment
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Comment on a ticket
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Comment on a ticket
-						 */
-						longDesc: () => LocalizedString
-					}
-					body: {
-						/**
-						 * Ticket Body
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Body of the ticket
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Body of the ticket
-						 */
-						longDesc: () => LocalizedString
-					}
-					subject: {
-						/**
-						 * Subject
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Subject of a ticket
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Subject of a ticket
-						 */
-						longDesc: () => LocalizedString
-					}
-					priority: {
-						/**
-						 * Priority
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Priority of a ticket
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Priority of a ticket
-						 */
-						longDesc: () => LocalizedString
-					}
-					create_ticket: {
-						/**
-						 * Create Ticket
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Create a new ticket
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Create a new ticket
-						 */
-						longDesc: () => LocalizedString
-					}
-					update_ticket: {
-						/**
-						 * Update Ticket
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Update a ticket
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Update a ticket
-						 */
-						longDesc: () => LocalizedString
-					}
-					get_ticket: {
-						/**
-						 * Get Ticket
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Get a ticket
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Get a ticket
-						 */
-						longDesc: () => LocalizedString
-					}
-					ticket_id: {
-						/**
-						 * Ticket ID
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Ticket ID
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Ticket ID
-						 */
-						longDesc: () => LocalizedString
-					}
-					created_at: {
-						/**
-						 * Created At
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The date and time the ticket was created
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The date and time the ticket was created
-						 */
-						longDesc: () => LocalizedString
-					}
-					name: {
-						/**
-						 * Name
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The ticket’s name
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The ticket’s name
-						 */
-						longDesc: () => LocalizedString
-					}
-					collaborator_ids: {
-						/**
-						 * Collaborator IDs
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * IDs of the ticket’s collaborators
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * IDs of the ticket’s collaborators
-						 */
-						longDesc: () => LocalizedString
-					}
-					assignee_id: {
-						/**
-						 * Assignee ID
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The ID of the ticket’s assignee
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The ID of the ticket’s assignee
-						 */
-						longDesc: () => LocalizedString
-					}
-					custom_fields: {
-						/**
-						 * Custom Fields
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Custom fields of the ticket
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Custom fields of the ticket
-						 */
-						longDesc: () => LocalizedString
-					}
-					fields: {
-						/**
-						 * Fields
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Fields of the ticket
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Fields of the ticket
-						 */
-						longDesc: () => LocalizedString
-					}
-					custom_status_id: {
-						/**
-						 * Custom Status ID
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The ID of the ticket’s custom status
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The ID of the ticket’s custom status
-						 */
-						longDesc: () => LocalizedString
-					}
-					description: {
-						/**
-						 * Description
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The ticket’s description
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The ticket’s description
-						 */
-						longDesc: () => LocalizedString
-					}
-					url: {
-						/**
-						 * URL
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The ticket’s URL
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The ticket’s URL
-						 */
-						longDesc: () => LocalizedString
-					}
-					due_at: {
-						/**
-						 * Due At
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The date and time the ticket is due
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The date and time the ticket is due
-						 */
-						longDesc: () => LocalizedString
-					}
-					email_cc_ids: {
-						/**
-						 * Email CC IDs
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * IDs of the ticket’s email CCs
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * IDs of the ticket’s email CCs
-						 */
-						longDesc: () => LocalizedString
-					}
-					forum_topic_id: {
-						/**
-						 * Forum Topic ID
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The ID of the ticket’s forum topic
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The ID of the ticket’s forum topic
-						 */
-						longDesc: () => LocalizedString
-					}
-					ticket_form_id: {
-						/**
-						 * Ticket Form ID
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The ID of the ticket’s form
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The ID of the ticket’s form
-						 */
-						longDesc: () => LocalizedString
-					}
-					brand_id: {
-						/**
-						 * Brand ID
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The ID of the ticket’s brand
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The ID of the ticket’s brand
-						 */
-						longDesc: () => LocalizedString
-					}
-					allow_channelback: {
-						/**
-						 * Allow Channelback
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Whether the ticket allows channelback
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Whether the ticket allows channelback
-						 */
-						longDesc: () => LocalizedString
-					}
-					allow_attachments: {
-						/**
-						 * Allow Attachments
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Whether the ticket allows attachments
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Whether the ticket allows attachments
-						 */
-						longDesc: () => LocalizedString
-					}
-					external_id: {
-						/**
-						 * External ID
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The ticket’s external ID
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The ticket’s external ID
-						 */
-						longDesc: () => LocalizedString
-					}
-					follower_ids: {
-						/**
-						 * Follower IDs
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * IDs of the ticket’s followers
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * IDs of the ticket’s followers
-						 */
-						longDesc: () => LocalizedString
-					}
-					followup_ids: {
-						/**
-						 * Followup IDs
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * IDs of the ticket’s followups
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * IDs of the ticket’s followups
-						 */
-						longDesc: () => LocalizedString
-					}
-					from_messaging_channel: {
-						/**
-						 * From Messaging Channel
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Whether the ticket was created from a messaging channel
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Whether the ticket was created from a messaging channel
-						 */
-						longDesc: () => LocalizedString
-					}
-					group_id: {
-						/**
-						 * Group ID
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The ID of the ticket’s group
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The ID of the ticket’s group
-						 */
-						longDesc: () => LocalizedString
-					}
-					generated_timestamp: {
-						/**
-						 * Generated Timestamp
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The timestamp of the ticket generation
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The timestamp of the ticket generation
-						 */
-						longDesc: () => LocalizedString
-					}
-					has_incidents: {
-						/**
-						 * Group ID
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The ID of the ticket’s group
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The ID of the ticket’s group
-						 */
-						longDesc: () => LocalizedString
-					}
-					id: {
-						/**
-						 * ID
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The ticket’s ID
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The ticket’s ID
-						 */
-						longDesc: () => LocalizedString
-					}
-					is_public: {
-						/**
-						 * Is Public
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Whether the ticket is public
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Whether the ticket is public
-						 */
-						longDesc: () => LocalizedString
-					}
-					organization_id: {
-						/**
-						 * Organization ID
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The ID of the ticket’s organization
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The ID of the ticket’s organization
-						 */
-						longDesc: () => LocalizedString
-					}
-					portal_id: {
-						/**
-						 * Portal ID
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The ID of the ticket’s portal
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The ID of the ticket’s portal
-						 */
-						longDesc: () => LocalizedString
-					}
-					problem_id: {
-						/**
-						 * Problem ID
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The ID of the ticket’s problem
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The ID of the ticket’s problem
-						 */
-						longDesc: () => LocalizedString
-					}
-					raw_subject: {
-						/**
-						 * Raw Subject
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The raw subject of the ticket
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The raw subject of the ticket
-						 */
-						longDesc: () => LocalizedString
-					}
-					recipient: {
-						/**
-						 * Recipient
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The ticket’s recipient
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The ticket’s recipient
-						 */
-						longDesc: () => LocalizedString
-					}
-					requester_id: {
-						/**
-						 * Requester ID
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The ID of the ticket’s requester
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The ID of the ticket’s requester
-						 */
-						longDesc: () => LocalizedString
-					}
-					sharing_agreement_ids: {
-						/**
-						 * Sharing Agreement IDs
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * IDs of the ticket’s sharing agreements
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * IDs of the ticket’s sharing agreements
-						 */
-						longDesc: () => LocalizedString
-					}
-					status: {
-						/**
-						 * Status
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The ticket’s status
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The ticket’s status
-						 */
-						longDesc: () => LocalizedString
-					}
-					submitter_id: {
-						/**
-						 * Submitter ID
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The ID of the ticket’s submitter
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The ID of the ticket’s submitter
-						 */
-						longDesc: () => LocalizedString
-					}
-					tags: {
-						/**
-						 * Tags
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The ticket’s tags
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The ticket’s tags
-						 */
-						longDesc: () => LocalizedString
-					}
-					type: {
-						/**
-						 * Type
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The ticket’s type
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The ticket’s type
-						 */
-						longDesc: () => LocalizedString
-					}
-					updated_at: {
-						/**
-						 * Updated At
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The date and time the ticket was last updated
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The date and time the ticket was last updated
-						 */
-						longDesc: () => LocalizedString
-					}
-					satisfaction_rating: {
-						/**
-						 * Satisfaction Rating
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Satisfaction rating of the ticket
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Satisfaction rating of the ticket
-						 */
-						longDesc: () => LocalizedString
-						score: {
+						group_id: {
 							/**
-							 * Score
+							 * Group ID
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * Score of the satisfaction rating
+							 * Group ID
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * Score of the satisfaction rating
+							 * Group ID
 							 */
 							longDesc: () => LocalizedString
 						}
-						comment: {
+						notes: {
 							/**
-							 * Comment
+							 * Notes
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * Comment of the satisfaction rating
+							 * Notes about the organization
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * Comment of the satisfaction rating
+							 * Notes about the organization
 							 */
 							longDesc: () => LocalizedString
 						}
-						id: {
+						details: {
 							/**
-							 * ID
+							 * Details
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * ID of the satisfaction rating
+							 * Details
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * ID of the satisfaction rating
+							 * Details
 							 */
 							longDesc: () => LocalizedString
 						}
-						created_at: {
-							/**
-							 * Created At
-							 */
-							displayName: () => LocalizedString
-							/**
-							 * The date and time the satisfaction rating was created
-							 */
-							shortDesc: () => LocalizedString
-							/**
-							 * The date and time the satisfaction rating was created
-							 */
-							longDesc: () => LocalizedString
-						}
-						updated_at: {
-							/**
-							 * Updated At
-							 */
-							displayName: () => LocalizedString
-							/**
-							 * The date and time the satisfaction rating was last updated
-							 */
-							shortDesc: () => LocalizedString
-							/**
-							 * The date and time the satisfaction rating was last updated
-							 */
-							longDesc: () => LocalizedString
-						}
-					}
-					via: {
-						/**
-						 * Via
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Channel through which the ticket was created
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Channel through which the ticket was created
-						 */
-						longDesc: () => LocalizedString
-						channel: {
-							/**
-							 * Channel
-							 */
-							displayName: () => LocalizedString
-							/**
-							 * Channel of the ticket
-							 */
-							shortDesc: () => LocalizedString
-							/**
-							 * Channel of the ticket
-							 */
-							longDesc: () => LocalizedString
-						}
-					}
-					count: {
-						/**
-						 * Count
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Count of tickets
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Count of tickets
-						 */
-						longDesc: () => LocalizedString
-					}
-					audit: {
-						/**
-						 * Audit
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Audit of tickets
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Audit of tickets
-						 */
-						longDesc: () => LocalizedString
-					}
-					events: {
-						/**
-						 * Events
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Events of tickets
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Events of tickets
-						 */
-						longDesc: () => LocalizedString
-					}
-					tickets: {
-						/**
-						 * Tickets
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Tickets
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Tickets
-						 */
-						longDesc: () => LocalizedString
-					}
-					next_page: {
-						/**
-						 * Next Page
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Next page of tickets
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Next page of tickets
-						 */
-						longDesc: () => LocalizedString
-					}
-					previous_page: {
-						/**
-						 * Previous Page
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Previous page of tickets
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Previous page of tickets
-						 */
-						longDesc: () => LocalizedString
-					}
-				}
-				groups: {
-					created_at: {
-						/**
-						 * Created At
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The date and time the group was created
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The date and time the group was created
-						 */
-						longDesc: () => LocalizedString
-					}
-					'default': {
-						/**
-						 * Default
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Whether the group is default
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Whether the group is default
-						 */
-						longDesc: () => LocalizedString
-					}
-					description: {
-						/**
-						 * Description
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The group’s description
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The group’s description
-						 */
-						longDesc: () => LocalizedString
-					}
-					id: {
-						/**
-						 * ID
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The group’s ID
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The group’s ID
-						 */
-						longDesc: () => LocalizedString
-					}
-					name: {
-						/**
-						 * Name
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The group’s name
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The group’s name
-						 */
-						longDesc: () => LocalizedString
-					}
-					updated_at: {
-						/**
-						 * Updated At
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The date and time the group was last updated
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The date and time the group was last updated
-						 */
-						longDesc: () => LocalizedString
-					}
-					count: {
-						/**
-						 * Count
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Count of groups
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Count of groups
-						 */
-						longDesc: () => LocalizedString
-					}
-					deleted: {
-						/**
-						 * Deleted
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Whether the group is deleted
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Whether the group is deleted
-						 */
-						longDesc: () => LocalizedString
-					}
-					is_public: {
-						/**
-						 * Is Public
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Whether the group is public
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Whether the group is public
-						 */
-						longDesc: () => LocalizedString
-					}
-					url: {
-						/**
-						 * URL
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The group’s URL
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The group’s URL
-						 */
-						longDesc: () => LocalizedString
-					}
-					groups: {
-						/**
-						 * Groups
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Groups
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Groups
-						 */
-						longDesc: () => LocalizedString
-					}
-					users: {
-						/**
-						 * Users
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Users
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Users
-						 */
-						longDesc: () => LocalizedString
-					}
-					next_page: {
-						/**
-						 * Next Page
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Next page of groups
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Next page of groups
-						 */
-						longDesc: () => LocalizedString
-					}
-					previoud_page: {
-						/**
-						 * Previous Page
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Previous page of groups
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Previous page of groups
-						 */
-						longDesc: () => LocalizedString
-					}
-				}
-				organizations: {
-					/**
-					 * Organizations
-					 */
-					displayName: () => LocalizedString
-					/**
-					 * Organizations
-					 */
-					shortDesc: () => LocalizedString
-					/**
-					 * Organizations
-					 */
-					longDesc: () => LocalizedString
-					count: {
-						/**
-						 * Count
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Count of organizations
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Count of organizations
-						 */
-						longDesc: () => LocalizedString
-					}
-					next_page: {
-						/**
-						 * Next Page
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Next page of organizations
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Next page of organizations
-						 */
-						longDesc: () => LocalizedString
-					}
-					created_at: {
-						/**
-						 * Created At
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The date and time the organization was created
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The date and time the organization was created
-						 */
-						longDesc: () => LocalizedString
-					}
-					details: {
-						/**
-						 * Details
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Details of the organization
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Details of the organization
-						 */
-						longDesc: () => LocalizedString
-					}
-					domain_names: {
-						/**
-						 * Domain Names
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Domain names of the organization
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Domain names of the organization
-						 */
-						longDesc: () => LocalizedString
-					}
-					external_id: {
-						/**
-						 * External ID
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The organization’s external ID
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The organization’s external ID
-						 */
-						longDesc: () => LocalizedString
-					}
-					group_id: {
-						/**
-						 * Group ID
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The ID of the organization’s group
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The ID of the organization’s group
-						 */
-						longDesc: () => LocalizedString
-					}
-					id: {
-						/**
-						 * ID
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The organization’s ID
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The organization’s ID
-						 */
-						longDesc: () => LocalizedString
-					}
-					name: {
-						/**
-						 * Name
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The organization’s name
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The organization’s name
-						 */
-						longDesc: () => LocalizedString
-					}
-					notes: {
-						/**
-						 * Notes
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Notes of the organization
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Notes of the organization
-						 */
-						longDesc: () => LocalizedString
-					}
-					organization_fields: {
-						/**
-						 * Organization Fields
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Organization fields
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Organization fields
-						 */
-						longDesc: () => LocalizedString
-						datepudding: {
-							/**
-							 * DatePudding
-							 */
-							displayName: () => LocalizedString
-							/**
-							 * DatePudding of the organization
-							 */
-							shortDesc: () => LocalizedString
-							/**
-							 * DatePudding of the organization
-							 */
-							longDesc: () => LocalizedString
-						}
-						org_field_1: {
-							/**
-							 * Org Field 1
-							 */
-							displayName: () => LocalizedString
-							/**
-							 * Organization field 1
-							 */
-							shortDesc: () => LocalizedString
-							/**
-							 * Organization field 1
-							 */
-							longDesc: () => LocalizedString
-						}
-						org_field_2: {
-							/**
-							 * Org Field 2
-							 */
-							displayName: () => LocalizedString
-							/**
-							 * Organization field 2
-							 */
-							shortDesc: () => LocalizedString
-							/**
-							 * Organization field 2
-							 */
-							longDesc: () => LocalizedString
-						}
-					}
-					shared_comments: {
-						/**
-						 * Shared Comments
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Whether the organization has shared comments
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Whether the organization has shared comments
-						 */
-						longDesc: () => LocalizedString
-					}
-					shared_tickets: {
-						/**
-						 * Shared Tickets
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Whether the organization has shared tickets
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Whether the organization has shared tickets
-						 */
-						longDesc: () => LocalizedString
-					}
-					tags: {
-						/**
-						 * Tags
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The organization’s tags
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The organization’s tags
-						 */
-						longDesc: () => LocalizedString
-					}
-					updated_at: {
-						/**
-						 * Updated At
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The date and time the organization was last updated
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The date and time the organization was last updated
-						 */
-						longDesc: () => LocalizedString
-					}
-					url: {
-						/**
-						 * URL
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The organization’s URL
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The organization’s URL
-						 */
-						longDesc: () => LocalizedString
 					}
 				}
 			}

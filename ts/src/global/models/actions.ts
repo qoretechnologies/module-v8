@@ -15,4 +15,7 @@ export interface IActionResponse {
 
 export type TActionData<Options extends IActionOptions> = StrictRecord<keyof Options, any>;
 
-export type TActionResponse<Response extends IActionResponse> = StrictRecord<keyof Response, any>;
+export type TActionResponse<Response extends IActionResponse['fields']> = StrictRecord<
+  keyof Response,
+  any
+>;

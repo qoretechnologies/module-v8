@@ -10,8 +10,14 @@ import {
   StaticPropsValue,
 } from 'core/framework';
 import { DynamicDropdownOptions } from 'core/framework/property/input/dropdown/dropdown-prop';
-import { fixActionType, normalizeAppName, normalizeName } from 'global/helpers';
 import {
+  fixOptions,
+  fixResponseOrEventInfo,
+  normalizeAppName,
+  normalizeName,
+} from 'global/helpers';
+import {
+  EQoreAppActionCode,
   IQoreAllowedValue,
   IQoreAppActionOption,
   IQoreAppActionWithFunction,
@@ -22,10 +28,10 @@ import {
   TQoreApps,
   TQoreGetAllowedValuesFunction,
   TQoreGetDependentOptionsFunction,
+  TQorePartialNonEventAction,
 } from 'global/models/qore';
 import { InputProperty } from '../core/framework/property/input';
 import { DEFAULT_LOGO } from '../global/constants';
-import { fixActionOptions } from '../global/helpers/index';
 import { Locales } from '../i18n/i18n-types';
 import { commonActionContext, piecePropTypeToQoreOptionTypeIndex } from './common/constants';
 import { TMapPieceActionToAppActionOptions } from './common/models/pieces-catalogue';
@@ -90,23 +96,31 @@ class _PiecesAppCatalogue {
     const formattedActionName = normalizeName(actionName);
     const options = this.mapActionPropsToAppActionOptions(action.props);
 
-    return {
-      app: appName,
-      action_code: 2,
+    const baseAction = {
+      action_code: EQoreAppActionCode.ACTION,
       display_name: action.displayName,
       short_desc: action.description,
       desc: action.description,
       action: formattedActionName,
-      api_function: this.mapPieceActionToAppActionFunction(action.run),
-      options: fixActionOptions(options, appName, this.locale, appName),
-      response_type: fixActionType(action.responseType, appName, this.locale, appName),
+      api_function: this.mapPieceActionToAppActionFunction(action.run, action.props),
+    } satisfies TQorePartialNonEventAction;
+
+    return {
+      ...baseAction,
+      app: appName,
+      options: fixOptions(baseAction, options, appName, this.locale),
+      response_type:
+        typeof action.responseType === 'string'
+          ? action.responseType
+          : fixResponseOrEventInfo(action.responseType, appName, this.locale, baseAction),
     };
   }
 
   private mapPieceActionToAppActionFunction(
-    runFunction: ActionRunner<any, any>
+    runFunction: ActionRunner<any, any>,
+    props: Record<string, InputProperty>
   ): TQoreAppActionFunction {
-    return (
+    return async (
       obj: Record<string, any>,
       _options: Record<string, any>,
       context: TQoreAppActionFunctionContext
@@ -116,6 +130,19 @@ class _PiecesAppCatalogue {
         auth: { access_token: context.conn_opts.token, ...context.opts },
         ...commonActionContext,
       } satisfies ActionContext;
+
+      for (const key in obj) {
+        if (key in props) {
+          const prop = props[key];
+          if (prop.defaultProcessors && prop.defaultProcessors.length > 0) {
+            await Promise.all(
+              prop.defaultProcessors.map(
+                async (processor) => (obj[key] = await processor(prop, obj[key]))
+              )
+            );
+          }
+        }
+      }
 
       return runFunction(actionContext);
     };
@@ -133,7 +160,7 @@ class _PiecesAppCatalogue {
         continue;
       }
       // Skip dynamic props - because they are put into get_dependent_options function for "parent" option
-      if (props[key].type === PropertyType.DYNAMIC) {
+      if (props[key].type === PropertyType.DYNAMIC && props[key]?.refreshers?.length) {
         // Dynamic props are handled differently
         continue;
       }
@@ -175,7 +202,7 @@ class _PiecesAppCatalogue {
     const description = prop.description || prop.displayName;
 
     // Checking if the prop has allowed get allowed values function
-    if ('options' in prop) {
+    if (typeof prop === 'object' && 'options' in prop) {
       allowed_values = this.mapPieceAllowedValuesToQoreAllowedValues(
         prop.options as DropdownState<any>
       );
@@ -224,7 +251,9 @@ class _PiecesAppCatalogue {
           const pieceOption = pieceOptions[key];
           // Mapping the received options to qore options
           const qoreOption: IQoreAppActionOption = this.mapActionPropToAppActionOption(pieceOption);
-          options[key] = qoreOption;
+          if (qoreOption.type) {
+            options[key] = qoreOption;
+          }
         }
       }
 

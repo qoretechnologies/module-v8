@@ -27,7 +27,7 @@ exports.qtester = {
                 'name': 'Rex',
                 'photoUrls': [],
             },
-        });
+        }, null, true);
         if (res != true) {
             throw new Error('Err');
         } else {

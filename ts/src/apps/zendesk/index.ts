@@ -1,5 +1,10 @@
 import { actionsCatalogue } from '../../ActionsCatalogue';
-import { buildActionsFromSwaggerSchema, mapActionsToApp } from '../../global/helpers';
+import {
+  buildActionsFromSwaggerSchema,
+  createSwaggerPaths,
+  mapActionsToApp,
+  mapTriggersToApp,
+} from '../../global/helpers';
 import {
   GetConnectionOptionDefinitionFromQoreType,
   IQoreAppWithActions,
@@ -8,7 +13,8 @@ import {
 import { L } from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import ZendeskSchema from '../../schemas/zendesk.swagger.json';
-
+import { ZENDESK_ALLOWED_PATHS } from './constants';
+import * as zendeskTriggers from './triggers';
 export interface IQoreConnectionOptions {
   [key: string]: GetConnectionOptionDefinitionFromQoreType<TQoreType>;
 }
@@ -27,35 +33,11 @@ export const ZENDESK_CONN_OPTIONS = {
   },
 } satisfies IQoreConnectionOptions;
 
-export const ZENDESK_ALLOWED_PATHS = [
-  '/api/v2/account/settings',
-  '/api/v2/tickets',
-  '/api/v2/tickets/{ticket_id}',
-  '/api/v2/users',
-  '/api/v2/users/{user_id}',
-  '/api/v2/deleted_users/{deleted_user_id}',
-  '/api/v2/organizations',
-  '/api/v2/organizations/{organization_id}',
-  '/api/v2/groups',
-  '/api/v2/groups/{group_id}',
-  '/api/v2/views',
-  '/api/v2/views/{view_id}',
-  '/api/v2/requests',
-  '/api/v2/requests/{request_id}',
-  '/api/v2/macros',
-  '/api/v2/macros/{macro_id}',
-  '/api/v2/search',
-  '/api/v2/ticket_fields',
-  '/api/v2/ticket_fields/{field_id}',
-  '/api/v2/satisfaction_ratings',
-  '/api/v2/ticket_metrics',
-  '/api/v2/targets',
-];
-
-export const ZENDESK_ACTIONS = buildActionsFromSwaggerSchema(
-  ZendeskSchema as any,
-  ZENDESK_ALLOWED_PATHS
-);
+export const ZENDESK_ACTIONS = buildActionsFromSwaggerSchema({
+  schema: ZendeskSchema as any,
+  allowedPaths: ZENDESK_ALLOWED_PATHS,
+  app: ZENDESK_APP_NAME,
+});
 
 /*
  * Returns the app object with all the actions ready to use, using translations
@@ -67,7 +49,10 @@ export default (locale: Locales) =>
     display_name: L[locale].apps[ZENDESK_APP_NAME].displayName(),
     short_desc: L[locale].apps[ZENDESK_APP_NAME].shortDesc(),
     name: ZENDESK_APP_NAME,
-    actions: mapActionsToApp(ZENDESK_APP_NAME, ZENDESK_ACTIONS, locale),
+    actions: [
+      ...mapActionsToApp(ZENDESK_APP_NAME, ZENDESK_ACTIONS, locale),
+      ...mapTriggersToApp(ZENDESK_APP_NAME, zendeskTriggers, locale),
+    ],
     desc: L[locale].apps[ZENDESK_APP_NAME].longDesc(),
     // This is a white Zendesk styled "Z" logo used in accordance with Zendesk's Brand / Logo Guidelines
     // https://web-assets.zendesk.com/pdf/Zendesk-logo-guidelines-legal-04-22-22.pdf
@@ -90,6 +75,7 @@ export default (locale: Locales) =>
     swagger_options: {
       parse_flags: 128,
     },
+    swagger_paths: createSwaggerPaths(ZENDESK_ALLOWED_PATHS),
     rest: {
       url: `https://{{subdomain}}.zendesk.com`,
       data: 'json',

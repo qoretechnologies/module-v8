@@ -6,6 +6,7 @@ exports.actionsCatalogue = {
             - swagger_options?: object -> an optional hash of swagger parsing options - the main option is
               - "parse_flags": -1 -> this will turn on all lax parsing options - or you can use 128
                 (LM_ACCEPT_QUERY_OBJECTS = accept "object" as a valid type for query parameters like OpenAPI 3.0)
+            - swagger_paths?: string[] -> a list of swagger paths to build an optimized schema
         */
         api.registerApp({
             "name": "js-test",
@@ -53,6 +54,8 @@ exports.actionsCatalogue = {
                 - oauth2_token_args?: object -> Extra arguments for OAuth2 token requests to \c oauth2_token_url; if
                   this option is set as well as \c oauth2_alt_token_url, then the \c oauth2_token_url value will be
                   added to this as well when the request is made to the \c oauth2_alt_token_url
+                - oauth2_token_auth_secret_only?: bool -> Use basic authorization with the client secret only when
+                  making token requests
                 - oauth2_token_url?: string -> The token URL OAuth2 flows; ignored if the \c token option is set
                 - oauth2_token_use_basic_auth?: bool -> Use basic auth when making token requests with the client_id
                   and client_secret
@@ -89,6 +92,10 @@ exports.actionsCatalogue = {
                 "url": "tsrest-js-test://www.example.com/api/{{account_id}}",
             },
             /** "rest_modifiers" is an optional object with the following keys:
+                - conn_option_map? object -> maps connection options (normally required options) that map to Swagger
+                  path options; the key is the request option name, the value is the action option name; the value of
+                  the connection option will be used as the value of the given action option in each call where the
+                  option is present
                 - io_timeout_secs?: int -> provides the I/O timeout in seconds (NOTE: not yet implemented)
                 - options?: object -> describes connection options supported by connections for this application; keys
                   are option names; values are converted to option hashes described by the COnnectionOptionInfo
@@ -102,7 +109,7 @@ exports.actionsCatalogue = {
                   - conn_opts: object -> connection options
                 - url_template_options?: string[] -> a list of option names that will be used to substitute values in
                   URLs; the URL should contain strings like '{{option_name}}'
-             */
+            */
             "rest_modifiers": {
                 "options": {
                     "account_id": {
@@ -129,7 +136,7 @@ exports.actionsCatalogue = {
             "display_name": "Test API",
             "short_desc": "Test API",
             "desc": "Test API",
-            "action_code": 2,  // DPAT_API == 2
+            "action_code": 2,  // DPAT_EVENT == 1, DPAT_API == 2
 
             /** "api_function" is required when "action_code" == DPAT_API
                 @param obj: any -> is the main argument used to call the API and must correspond to the request
@@ -145,7 +152,7 @@ exports.actionsCatalogue = {
 
                 @note the function here will be called with no "this" context; "this" cannot be used in this function
             */
-            "api_function": function(obj, opts, ctx) {
+            "api_function": async function(obj, opts, ctx) {
                 if (!obj.count) {
                     obj.count = 0;
                 }
@@ -169,15 +176,27 @@ exports.actionsCatalogue = {
                 except that "type" is created from either a:
                 - string: giving the name of a simple type - one of:
                     ["int", "integer", "string", "boolean", "bool", "double", "float", "number", "binary", "list",
-                    "hash", "object", "date", "NULL", "nothing", "base64binary", "base64urlbinary", "hexbinary",
-                    "data", "softint", "softstring", "softbool", "softfloat", "softnumber", "softdate", "*softint",
-                    "*softstring", "*softbool", "*softfloat", "*softnumber", "*softdate", "all", "any", "auto",
-                    "*int", "*integer", "*string", "*boolean", "*bool", "*double", "*float", "*number", "*binary",
-                    "*list", "*hash", "*object", "*date", "*data", "*base64binary", "*base64urlbinary", "*hexbinary",
-                    "byte", "*byte", "softbyte", "*softbyte", "ubyte", "*ubyte", "softubyte", "*softubyte"]
+                    "hash", "date", "base64binary", "base64urlbinary", "hexbinary",
+                    "data", "softint", "softstring", "softbool", "softfloat", "softnumber", "softdate", "softlist",
+                    "any", "auto"]
                 or
-                - hash: which describes a data object; each key describes a data property; field objects can have the
-                    following keys (note that they key itself is the technical name for the field):
+                - hash: which describes a type with the following keys:
+                  - type: string -> the data type name
+                  - name?: string -> the name of the type - one of the type names listed above
+                  - display_name?: string -> the display name of the type
+                  - short_desc?: string -> the plain-text description of the type
+                  - desc?: string -> the markdown description of the type (can be long)
+                  - default_value?: any -> (values must be of the correct type) the default value if none is provided
+                    by the user
+                  - required?: bool -> if a value is required for this type; will set the corresponding UI flag
+                  - preselected?: bool -> if fields of this type should be preselected; will set the corresponding UI
+                    flag
+                  - multiselect?: bool -> can be true if the field has a list type and allowed_values are the allowed
+                    values for the list
+                  - allowed_values?: AllowedValues[] -> an array of objects providing the only values allowed for
+                    the option
+                  - fields?: object -> a hash of field objects; only valid if \c type is "hash"; keys are field
+                    names, values are as follows:
                     - display_name?: string -> the user-friendly display name for the field
                     - short_desc?: string -> a short plain-text description of the field
                     - desc?: string -> a longer description for the field that supports markdown formatting
@@ -191,34 +210,16 @@ exports.actionsCatalogue = {
                     - example_value?: any -> (values must use the field's type) any example value to use when
                       generating example data etc
                     - default_value?: any -> (values must use the field's type) the default value if none is provided
-                      by the user
-                    - allowed_values?: AllowedValues[] -> an array of objects providing the only values allowed for the
-                      field - with the following properties
-                    - display_name?: string -> the user-friendly display name for the field
-                    - short_desc?: string -> a short plain-text description of the field
-                    - value: any -> (must be present and must use the field's type); one of the allowed values
-                    - desc: string -> a description of the value (if unknown just use the value again)
-                    - depends_on?: string[] -> an optional list of other options that must be set before this option
-                      can be set
-                    - get_allowed_values?: function (ctx?: object): AllowedValues[] | undefined -> a function that will
-                      return the allowed values when called; the 'ctx' parameter has the same format as the third
-                      argument to 'api_function' above:
-                      - conn_name?: string -> the connection name, if any is defined
-                      - conn_opts?: object -> connection options; for REST connections, see the 'rest' object
-                        definition
-                      - opts?: object -> a data object with option values set for the current action
-                    - get_dependent_options?: function (ctx?: object): object? -> should return a data object
-                      describing additional fields in this same format where keys are additional field names, and
-                      values describe the fields. The 'ctx' argument is the same as for 'api_function' and
-                      'get_allowed_values':
-                      - conn_name?: string -> the connection name, if any is defined
-                      - conn_opts?: object -> connection options; for REST connections, see the 'rest' object
-                        definition
-                      - opts?: object -> a data object with option values set for the current action
-                    - io_timeout_secs?: int -> an optional I/O timeout in seconds for any 'get_allowed_values'
-                      function; if not present, the timeout is 30 (NOTE: not yet implemented)
+                      by the user; this overrides any default value provided by the type
+                    - multiselect?: bool -> can be true if the field has a list type and allowed_values are the
+                      allowed values for the list
+                    - allowed_values?: AllowedValues[] -> an array of objects providing the only values allowed for
+                      the field - with the following properties
                     - attr?: Attributes -> an optional data object with any properties
                     - required?: bool -> if the field is required or optional
+                    - preselected?: bool -> if this fields should be preselected; will set the corresponding UI flag
+                  - element_type?: string | object -> description of a list type; only valid if \c type is "list" or
+                    "softlist"
 
                 Note that this data will also be used to create the API request type
             */
@@ -230,7 +231,7 @@ exports.actionsCatalogue = {
                     "desc": "A count of something",
                     "required": true,
                     "preselected": true,
-                    "get_allowed_values": function() {
+                    "get_allowed_values": async function(ctx) {
                         return [
                             {
                                 "display_name": "1",
@@ -249,14 +250,16 @@ exports.actionsCatalogue = {
                     "example_value": 1,
                 },
                 "other": {
-                    "type": "string",
+                    "type": "list",
+                    "element_type": "string",
                     "display_name": "Other",
                     "short_desc": "another value",
                     "desc": "another value",
                     "required": true,
                     "preselected": true,
                     "depends_on": ["count"],
-                    "get_allowed_values": function() {
+                    "multiselect": true,
+                    "get_allowed_values": async function(ctx) {
                         return [
                             {
                                 "display_name": "this",
@@ -293,7 +296,7 @@ exports.actionsCatalogue = {
                             "value": "B",
                         },
                     ],
-                    "get_dependent_options": function(ctx) {
+                    "get_dependent_options": async function(ctx) {
                         if (ctx.opts.key == 'A') {
                             return {
                                 "a0": {
@@ -327,6 +330,22 @@ exports.actionsCatalogue = {
                         }
                     }
                 },
+                "list": {
+                    "type": {
+                        "type": "softlist",
+                        "element_type": {
+                            "type": "hash",
+                            "fields": {
+                                "a": {
+                                    "type": "string",
+                                },
+                                "b": {
+                                    "type": "int",
+                                },
+                            },
+                        },
+                    },
+                },
             },
 
             /** "response_type" defines the response type when "action_code" == DPAT_API
@@ -335,35 +354,131 @@ exports.actionsCatalogue = {
                 hash
             */
             "response_type": {
-                "result": {
-                    "type": "int",
-                    "display_name": "Count",
-                    "short_desc": "A count of something",
-                    "desc": "A count of something",
-                    "example_value": 1,
-                    "required": true,
+                "type": "hash",
+                "fields": {
+                    "result": {
+                        "type": "int",
+                        "display_name": "Count",
+                        "short_desc": "A count of something",
+                        "desc": "A count of something",
+                        "example_value": 1,
+                        "required": true,
+                    },
+                    "status": {
+                        "type": "string",
+                        "display_name": "Status",
+                        "short_desc": "The status of the operation",
+                        "desc": "The status of the operation",
+                        "allowed_values": [
+                            {
+                                "display_name": "OK",
+                                "short_desc": "Successful result",
+                                "desc": "Successful result",
+                                "value": "OK",
+                            },
+                            {
+                                "display_name": "Error",
+                                "short_desc": "Error result",
+                                "desc": "Error result",
+                                "value": "Error",
+                            },
+                        ],
+                        "required": true,
+                    },
                 },
-                "status": {
-                    "type": "string",
-                    "display_name": "Status",
-                    "short_desc": "The status of the operation",
-                    "desc": "The status of the operation",
-                    "allowed_values": [
-                        {
-                            "display_name": "OK",
-                            "short_desc": "Successful result",
-                            "desc": "Successful result",
-                            "value": "OK",
+            },
+        });
+
+        // NOTE: this action will be executed as a REST call, no code is necessary
+        api.registerAction({
+            "app": "js-test",
+            "action": "test-search",
+            "display_name": "Test Search",
+            "short_desc": "Test search",
+            "desc": "Test search",
+            "action_code": 4,  // DPAT_FIND == 4 (record search)
+
+            // This means that there are no native search capabilities and also generic expressions are supported
+            /** all records are fetched and filtered after the fact by the DataProvider infrastructure
+
+                This option is meant for simple data providers providing just a record view of data
+
+                If this option is true, then no "search_options" or "expressions" can be defined
+
+                If this option is false, "search_options" must be defined and the "search_records" function must be
+                able to handle them
+            */
+            "uses_generic_search": true,
+
+            // returns the record type for the action
+            /**
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+
+                @return the record type for the action; must be a hash (object)
+            */
+            "get_record_type": async function (ctx) {
+                return {
+                    "type": "hash",
+                    "fields": {
+                        "id": {
+                            "type": "int",
                         },
-                        {
-                            "display_name": "Error",
-                            "short_desc": "Error result",
-                            "desc": "Error result",
-                            "value": "Error",
+                        "name": {
+                            "type": "string",
                         },
-                    ],
-                    "required": true,
-                },
+                    },
+                };
+            },
+
+            // executes the search and returns a list of the records matched
+            /**
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+                @param where_cond?: object -> the optional search expression tree
+                @param search_1opts?: object -> search options
+
+                @return a list of records (object[] | void) matching the arguments
+            */
+            "search_records": async function (ctx, where_cond, search_opts) {
+                return [
+                    {"id": 1, "name": "a"},
+                    {"id": 2, "name": "b"},
+                ];
+            },
+
+            /**
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+            */
+            "begin_transaction": async function (ctx) {
+                // begin transaction code here
+            },
+
+            /**
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+            */
+            "commit": async function (ctx) {
+                // commit transaction code here
+            },
+
+            /**
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+            */
+            "rollback": async function (ctx) {
+                // rollback transaction code here
             },
         });
 
@@ -424,7 +539,31 @@ exports.actionsCatalogue = {
             "short_desc": "Create pet",
             "desc": "Create pet",
             "action_code": 2,  // DPAT_API == 2
-            "swagger_path": "pet/POST"
+            "swagger_path": "pet/POST",
+            /** override_options?: object -> allows options to be overridden; keys are non-optimized request property
+                paths and must refer to a property that will be presented as an action option after flattening /
+                optimization. The attributes of the object are handled like action option attributes
+            */
+            "override_options": {
+                "body.name": {
+                    "get_allowed_values": async function(ctx) {
+                        return [
+                            {
+                                "display_name": "Fido",
+                                "short_desc": "Fido",
+                                "desc": "Fido",
+                                "value": "Fido",
+                            },
+                            {
+                                "display_name": "Spot",
+                                "short_desc": "Spot",
+                                "desc": "Spot",
+                                "value": "Spot",
+                            },
+                        ];
+                    },
+                },
+            },
         });
 
         // NOTE: this action will be executed as a REST call, no code is necessary
@@ -435,7 +574,258 @@ exports.actionsCatalogue = {
             "short_desc": "Get pet",
             "desc": "Get pet",
             "action_code": 2,  // DPAT_API == 2
-            "swagger_path": "pet/{id}/GET"
+            "swagger_path": "pet/{id}/GET",
+            /** override_options?: object -> allows options to be overridden; keys are non-optimized request property
+                paths and must refer to a property that will be presented as an action option after flattening /
+                optimization. The attributes of the object are handled like action option attributes
+            */
+            "override_options": {
+                'id': {
+                    "get_allowed_values": async function(ctx) {
+                        return [
+                            {
+                                "display_name": "1",
+                                "short_desc": "1",
+                                "desc": "1",
+                                "value": 1,
+                            },
+                            {
+                                "display_name": "2",
+                                "short_desc": "2",
+                                "desc": "2",
+                                "value": 2,
+                            },
+                        ];
+                    },
+                },
+            },
+        });
+
+        api.registerAction({
+            // app: string
+            "app": "js-swagger-test",
+            // action: string
+            "action": "webhook-event-1",
+            // display_name: string
+            "display_name": "Webhook Event",
+            // short_desc: string
+            "short_desc": "Webhook event example action",
+            // desc: string
+            "desc": "Webhook event example action",
+            // action_code: int
+            "action_code": 1,  // DPAT_EVENT == 1
+            // event action options as documented above
+            "options": {
+                "name": {
+                    "type": "string",
+                    "display_name": "Name",
+                    "short_desc": "A name",
+                    "desc": "A name",
+                    "required": true,
+                    "preselected": true,
+                    "get_allowed_values": async function(ctx) {
+                        return [
+                            {
+                                "display_name": "Fred",
+                                "short_desc": "Fred",
+                                "desc": "Fred",
+                                "value": "Fred",
+                            },
+                            {
+                                "display_name": "Albert",
+                                "short_desc": "Albert",
+                                "desc": "Albert",
+                                "value": "Albert",
+                            },
+                        ];
+                    },
+                }
+            },
+            // webbook_method?: string
+            /** "webhook_method" is required when action_code is 1 (DPAT_EVENT), and there is no "event_function" and
+                "stop_function"
+                It must be an HTTP method that the remote server will use when posting a value on the webhook
+
+                In this case, "webhook_register" and "webhook_deregister" must also be defined
+            */
+            "webhook_method": "POST",
+            // webbook_auth?: int
+            /** Webhook authentication required?
+                - AUTH_NONE = 0 -> no auth required
+                - AUTH_REQUIRE_AUTH = 1 -> authentication required
+            */
+            "webhook_auth": 0, // AUTH_NONE
+            // webbook_perms?: string[]
+            /** an optional list of string permissions required for authenticated users (when "webhook_auth" == 1  /
+                QAUTH_QORUS)
+            */
+            "webhook_perms": null,
+            // webbook_register?: async function(ctx?: object, url: string): object | void {}
+            /**
+                @param ctx: object -> with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+                @param url: string -> the URL the webhook is reachable on
+
+                @return an optional object that will be passed as the third argument to "webhook_deregister"
+
+                @note the function here will be called with no "this" context; "this" cannot be used in this function
+            */
+            "webhook_register": async function(ctx, url) {
+                if (!ctx.opts.name) {
+                    throw new Error("missing name");
+                }
+                // this function should register the webhook with the server
+            },
+            // webbook_deregister?: async function(ctx?: object, url: string, reginfo?: object) {}
+            /**
+                @param ctx: object -> with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+                @param url: string -> the URL the webhook is reachable on
+                @param reginfo?: object -> any value returned from the "webhook_register()" function
+
+                @note the function here will be called with no "this" context; "this" cannot be used in this function
+            */
+            "webhook_deregister": async function(ctx, url, reginfo) {
+                // this function should deregister the webhook with the server
+            },
+            // event_info: object
+            /** The description of the event that the action will generate with the following keys
+                - id: *string -> the event code for the event; if not present will default to "event"
+                - desc: string -> a description of the event
+                - type: object -> type description of that event
+            */
+            "event_info": {
+                "desc": "Data event",
+                "type": {
+                    "type": "hash",
+                    "fields": {
+                        "name": {
+                            "type": "string",
+                            "display_name": "Event Name",
+                            "short_desc": "Event name",
+                            "desc": "Event name",
+                        },
+                        "code": {
+                            "type": "int",
+                            "display_name": "Event Code",
+                            "short_desc": "Event code",
+                            "desc": "Event code",
+                        },
+                    },
+                },
+            },
+            // get_example_event_data: function (): object
+            /** Returns an example event
+
+                @param ctx: object -> with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+            */
+            get_example_event_data: async function (ctx) {
+                return {
+                    "name": "a name",
+                    "code": 1234,
+                };
+            },
+        });
+
+        api.registerAction({
+            "app": "js-swagger-test",
+            "action": "js-event-1",
+            "display_name": "JavaScript Event",
+            "short_desc": "JavaScript event example action",
+            "desc": "JavaScript event example action",
+            "action_code": 1,  // DPAT_EVENT == 1
+            // event action options as documented above
+            "options": {
+                "name": {
+                    "type": "string",
+                    "display_name": "Name",
+                    "short_desc": "A name",
+                    "desc": "A name",
+                    "required": true,
+                    "preselected": true,
+                    "get_allowed_values": async function(ctx) {
+                        return [
+                            {
+                                "display_name": "Fred",
+                                "short_desc": "Fred",
+                                "desc": "Fred",
+                                "value": "Fred",
+                            },
+                            {
+                                "display_name": "Albert",
+                                "short_desc": "Albert",
+                                "desc": "Albert",
+                                "value": "Albert",
+                            },
+                        ];
+                    },
+                }
+            },
+            /** "event_function" is required when "action_code" == DPAT_EVENT and "webhook_method" is not present
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+                @param update: function (event_data: object) -> this function should be called when events are
+                received to post the event to the observer
+                @param should_stop: function (): bool -> this function will return true when event polling should stop
+
+                @note the function here will be called with no "this" context; "this" cannot be used in this function
+            */
+            "event_function": async function(ctx, update, should_stop) {
+                if (!ctx.opts.name) {
+                    throw new Error("missing name");
+                }
+                update({
+                    "name": "name-1",
+                    "code": 1234,
+                });
+                while (!should_stop()) {
+                    // sleep for 100ms
+                    setTimeout(function() {}, 100);
+                }
+            },
+            "event_info": {
+                "desc": "Data event",
+                "type": {
+                    "type": "hash",
+                    "fields": {
+                        "name": {
+                            "type": "string",
+                            "display_name": "Event Name",
+                            "short_desc": "Event name",
+                            "desc": "Event name",
+                        },
+                        "code": {
+                            "type": "int",
+                            "display_name": "Event Code",
+                            "short_desc": "Event code",
+                            "desc": "Event code",
+                        },
+                    },
+                },
+            },
+            // get_example_event_data: function (): object
+            /** Returns an example event
+
+                @param ctx: object -> with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+            */
+            get_example_event_data: async function (ctx) {
+                return {
+                    "name": "a name",
+                    "code": 1234,
+                };
+            },
         });
     }
 };
