@@ -598,6 +598,108 @@ const en = {
             },
           },
         },
+        new_repository_branch: {
+          displayName: 'New Repository Branch',
+          shortDesc: 'Triggers when a new branch is created in a repository',
+          longDesc: 'Triggers when a new branch is created in a repository',
+          options: {
+            repo: {
+              longDesc: 'Repository name',
+              shortDesc: 'Repository name',
+              displayName: 'Repository name',
+            },
+            owner: {
+              longDesc: 'Organization name or user login',
+              shortDesc: 'Organization name or user login',
+              displayName: 'Repository owner',
+            },
+          },
+        },
+        new_commit_comment: {
+          displayName: 'New Commit Comment',
+          shortDesc: 'Triggers when a new comment is added to a commit',
+          longDesc: 'Triggers when a new comment is added to a commit',
+          options: {
+            repo: {
+              longDesc: 'Repository name',
+              shortDesc: 'Repository name',
+              displayName: 'Repository name',
+            },
+            owner: {
+              longDesc: 'Organization name or user login',
+              shortDesc: 'Organization name or user login',
+              displayName: 'Repository owner',
+            },
+          },
+        },
+        new_commit: {
+          displayName: 'New Commit',
+          shortDesc: 'Triggers when a new commit is pushed to a repository',
+          longDesc: 'Triggers when a new commit is pushed to a repository',
+          options: {
+            repo: {
+              longDesc: 'Repository name',
+              shortDesc: 'Repository name',
+              displayName: 'Repository name',
+            },
+            owner: {
+              longDesc: 'Organization name or user login',
+              shortDesc: 'Organization name or user login',
+              displayName: 'Repository owner',
+            },
+          },
+        },
+        new_pull_request: {
+          displayName: 'New Pull Request',
+          shortDesc: 'Triggers when a new pull request is opened',
+          longDesc: 'Triggers when a new pull request is opened',
+          options: {
+            repo: {
+              longDesc: 'Repository name',
+              shortDesc: 'Repository name',
+              displayName: 'Repository name',
+            },
+            owner: {
+              longDesc: 'Organization name or user login',
+              shortDesc: 'Organization name or user login',
+              displayName: 'Repository owner',
+            },
+          },
+        },
+        new_release: {
+          displayName: 'New Release',
+          shortDesc: 'Triggers when a new release is published',
+          longDesc: 'Triggers when a new release is published',
+          options: {
+            repo: {
+              longDesc: 'Repository name',
+              shortDesc: 'Repository name',
+              displayName: 'Repository name',
+            },
+            owner: {
+              longDesc: 'Organization name or user login',
+              shortDesc: 'Organization name or user login',
+              displayName: 'Repository owner',
+            },
+          },
+        },
+        new_review_request: {
+          displayName: 'New Review Request',
+          shortDesc: 'Triggers when a new review is requested',
+          longDesc: 'Triggers when a new review is requested',
+          options: {
+            repo: {
+              longDesc: 'Repository name',
+              shortDesc: 'Repository name',
+              displayName: 'Repository name',
+            },
+            owner: {
+              longDesc: 'Organization name or user login',
+              shortDesc: 'Organization name or user login',
+              displayName: 'Repository owner',
+            },
+          },
+        },
       },
     },
     Asana: {

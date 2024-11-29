@@ -1482,6 +1482,270 @@ type RootTranslation = {
 						}
 					}
 				}
+				new_repository_branch: {
+					/**
+					 * N​e​w​ ​R​e​p​o​s​i​t​o​r​y​ ​B​r​a​n​c​h
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​b​r​a​n​c​h​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​ ​r​e​p​o​s​i​t​o​r​y
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​b​r​a​n​c​h​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​ ​r​e​p​o​s​i​t​o​r​y
+					 */
+					longDesc: string
+					options: {
+						repo: {
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​n​a​m​e
+							 */
+							longDesc: string
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​n​a​m​e
+							 */
+							displayName: string
+						}
+						owner: {
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e​ ​o​r​ ​u​s​e​r​ ​l​o​g​i​n
+							 */
+							longDesc: string
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e​ ​o​r​ ​u​s​e​r​ ​l​o​g​i​n
+							 */
+							shortDesc: string
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​o​w​n​e​r
+							 */
+							displayName: string
+						}
+					}
+				}
+				new_commit_comment: {
+					/**
+					 * N​e​w​ ​C​o​m​m​i​t​ ​C​o​m​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​c​o​m​m​i​t
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​c​o​m​m​i​t
+					 */
+					longDesc: string
+					options: {
+						repo: {
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​n​a​m​e
+							 */
+							longDesc: string
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​n​a​m​e
+							 */
+							displayName: string
+						}
+						owner: {
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e​ ​o​r​ ​u​s​e​r​ ​l​o​g​i​n
+							 */
+							longDesc: string
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e​ ​o​r​ ​u​s​e​r​ ​l​o​g​i​n
+							 */
+							shortDesc: string
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​o​w​n​e​r
+							 */
+							displayName: string
+						}
+					}
+				}
+				new_commit: {
+					/**
+					 * N​e​w​ ​C​o​m​m​i​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​m​m​i​t​ ​i​s​ ​p​u​s​h​e​d​ ​t​o​ ​a​ ​r​e​p​o​s​i​t​o​r​y
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​m​m​i​t​ ​i​s​ ​p​u​s​h​e​d​ ​t​o​ ​a​ ​r​e​p​o​s​i​t​o​r​y
+					 */
+					longDesc: string
+					options: {
+						repo: {
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​n​a​m​e
+							 */
+							longDesc: string
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​n​a​m​e
+							 */
+							displayName: string
+						}
+						owner: {
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e​ ​o​r​ ​u​s​e​r​ ​l​o​g​i​n
+							 */
+							longDesc: string
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e​ ​o​r​ ​u​s​e​r​ ​l​o​g​i​n
+							 */
+							shortDesc: string
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​o​w​n​e​r
+							 */
+							displayName: string
+						}
+					}
+				}
+				new_pull_request: {
+					/**
+					 * N​e​w​ ​P​u​l​l​ ​R​e​q​u​e​s​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​u​l​l​ ​r​e​q​u​e​s​t​ ​i​s​ ​o​p​e​n​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​u​l​l​ ​r​e​q​u​e​s​t​ ​i​s​ ​o​p​e​n​e​d
+					 */
+					longDesc: string
+					options: {
+						repo: {
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​n​a​m​e
+							 */
+							longDesc: string
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​n​a​m​e
+							 */
+							displayName: string
+						}
+						owner: {
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e​ ​o​r​ ​u​s​e​r​ ​l​o​g​i​n
+							 */
+							longDesc: string
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e​ ​o​r​ ​u​s​e​r​ ​l​o​g​i​n
+							 */
+							shortDesc: string
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​o​w​n​e​r
+							 */
+							displayName: string
+						}
+					}
+				}
+				new_release: {
+					/**
+					 * N​e​w​ ​R​e​l​e​a​s​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​e​l​e​a​s​e​ ​i​s​ ​p​u​b​l​i​s​h​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​e​l​e​a​s​e​ ​i​s​ ​p​u​b​l​i​s​h​e​d
+					 */
+					longDesc: string
+					options: {
+						repo: {
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​n​a​m​e
+							 */
+							longDesc: string
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​n​a​m​e
+							 */
+							displayName: string
+						}
+						owner: {
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e​ ​o​r​ ​u​s​e​r​ ​l​o​g​i​n
+							 */
+							longDesc: string
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e​ ​o​r​ ​u​s​e​r​ ​l​o​g​i​n
+							 */
+							shortDesc: string
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​o​w​n​e​r
+							 */
+							displayName: string
+						}
+					}
+				}
+				new_review_request: {
+					/**
+					 * N​e​w​ ​R​e​v​i​e​w​ ​R​e​q​u​e​s​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​e​v​i​e​w​ ​i​s​ ​r​e​q​u​e​s​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​e​v​i​e​w​ ​i​s​ ​r​e​q​u​e​s​t​e​d
+					 */
+					longDesc: string
+					options: {
+						repo: {
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​n​a​m​e
+							 */
+							longDesc: string
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​n​a​m​e
+							 */
+							displayName: string
+						}
+						owner: {
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e​ ​o​r​ ​u​s​e​r​ ​l​o​g​i​n
+							 */
+							longDesc: string
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e​ ​o​r​ ​u​s​e​r​ ​l​o​g​i​n
+							 */
+							shortDesc: string
+							/**
+							 * R​e​p​o​s​i​t​o​r​y​ ​o​w​n​e​r
+							 */
+							displayName: string
+						}
+					}
+				}
 			}
 		}
 		Asana: {
@@ -9138,6 +9402,270 @@ export type TranslationFunctions = {
 									}
 								}
 							}
+						}
+					}
+				}
+				new_repository_branch: {
+					/**
+					 * New Repository Branch
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new branch is created in a repository
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new branch is created in a repository
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						repo: {
+							/**
+							 * Repository name
+							 */
+							longDesc: () => LocalizedString
+							/**
+							 * Repository name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Repository name
+							 */
+							displayName: () => LocalizedString
+						}
+						owner: {
+							/**
+							 * Organization name or user login
+							 */
+							longDesc: () => LocalizedString
+							/**
+							 * Organization name or user login
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Repository owner
+							 */
+							displayName: () => LocalizedString
+						}
+					}
+				}
+				new_commit_comment: {
+					/**
+					 * New Commit Comment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new comment is added to a commit
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new comment is added to a commit
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						repo: {
+							/**
+							 * Repository name
+							 */
+							longDesc: () => LocalizedString
+							/**
+							 * Repository name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Repository name
+							 */
+							displayName: () => LocalizedString
+						}
+						owner: {
+							/**
+							 * Organization name or user login
+							 */
+							longDesc: () => LocalizedString
+							/**
+							 * Organization name or user login
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Repository owner
+							 */
+							displayName: () => LocalizedString
+						}
+					}
+				}
+				new_commit: {
+					/**
+					 * New Commit
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new commit is pushed to a repository
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new commit is pushed to a repository
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						repo: {
+							/**
+							 * Repository name
+							 */
+							longDesc: () => LocalizedString
+							/**
+							 * Repository name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Repository name
+							 */
+							displayName: () => LocalizedString
+						}
+						owner: {
+							/**
+							 * Organization name or user login
+							 */
+							longDesc: () => LocalizedString
+							/**
+							 * Organization name or user login
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Repository owner
+							 */
+							displayName: () => LocalizedString
+						}
+					}
+				}
+				new_pull_request: {
+					/**
+					 * New Pull Request
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new pull request is opened
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new pull request is opened
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						repo: {
+							/**
+							 * Repository name
+							 */
+							longDesc: () => LocalizedString
+							/**
+							 * Repository name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Repository name
+							 */
+							displayName: () => LocalizedString
+						}
+						owner: {
+							/**
+							 * Organization name or user login
+							 */
+							longDesc: () => LocalizedString
+							/**
+							 * Organization name or user login
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Repository owner
+							 */
+							displayName: () => LocalizedString
+						}
+					}
+				}
+				new_release: {
+					/**
+					 * New Release
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new release is published
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new release is published
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						repo: {
+							/**
+							 * Repository name
+							 */
+							longDesc: () => LocalizedString
+							/**
+							 * Repository name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Repository name
+							 */
+							displayName: () => LocalizedString
+						}
+						owner: {
+							/**
+							 * Organization name or user login
+							 */
+							longDesc: () => LocalizedString
+							/**
+							 * Organization name or user login
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Repository owner
+							 */
+							displayName: () => LocalizedString
+						}
+					}
+				}
+				new_review_request: {
+					/**
+					 * New Review Request
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new review is requested
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new review is requested
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						repo: {
+							/**
+							 * Repository name
+							 */
+							longDesc: () => LocalizedString
+							/**
+							 * Repository name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Repository name
+							 */
+							displayName: () => LocalizedString
+						}
+						owner: {
+							/**
+							 * Organization name or user login
+							 */
+							longDesc: () => LocalizedString
+							/**
+							 * Organization name or user login
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Repository owner
+							 */
+							displayName: () => LocalizedString
 						}
 					}
 				}
