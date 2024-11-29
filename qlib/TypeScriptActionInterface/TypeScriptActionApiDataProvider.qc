@@ -54,8 +54,8 @@ class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProviderBase 
     constructor(string name, hash<AsyncCallInfo> api, *AbstractDataProviderType request_type,
             *AbstractDataProviderType response_type, *hash<string, hash<AsyncCallInfo>> omap,
             *hash<string, hash<AsyncCallInfo>> dmap, *hash<string, hash<RestGetAllowedValuesInfo>> romap,
-            *hash<string, hash<AsyncCallInfo>> dvmap)
-            : TypeScriptActionDataProviderBase(name, omap, romap, dvmap) {
+            *hash<string, hash<AsyncCallInfo>> dvmap, *hash<string, hash<string, bool>> depmap)
+            : TypeScriptActionDataProviderBase(name, omap, romap, dvmap, depmap) {
         self.api = api;
         self.request_type = request_type;
         self.response_type = response_type;

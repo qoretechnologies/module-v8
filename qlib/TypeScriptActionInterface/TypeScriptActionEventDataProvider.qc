@@ -48,9 +48,10 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
     constructor(string name, string event_id, hash<DataProviderMessageInfo> event_info,
             *hash<AsyncCallInfo> get_example_event_data, *hash<string, hash<AsyncCallInfo>> omap,
             *hash<string, hash<RestGetAllowedValuesInfo>> romap,
-            *hash<string, hash<AsyncCallInfo>> dvmap, hash<AsyncCallInfo> event)
+            *hash<string, hash<AsyncCallInfo>> dvmap, *hash<string, hash<string, bool>> depmap,
+            hash<AsyncCallInfo> event)
             : TypeScriptActionEventDataProviderBase(name, event_id, event_info, get_example_event_data, omap, romap,
-                dvmap) {
+                dvmap, depmap) {
         self.event = event;
     }
 

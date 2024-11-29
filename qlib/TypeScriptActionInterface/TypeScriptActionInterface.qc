@@ -622,10 +622,11 @@ public class TypeScriptActionInterface {
         *hash<string, hash<AsyncCallInfo>> omap;
         *hash<string, hash<RestGetAllowedValuesInfo>> romap;
         *hash<string, hash<AsyncCallInfo>> dvmap;
+        *hash<string, hash<string, bool>> depmap;
         if (*hash<auto> opts = remove action.options) {
             *hash<string, hash<AsyncCallInfo>> dmap;
             action.options = TypeScriptActionInterface::getOptions(app, \action, opts, \omap, \dmap, \romap, \dvmap,
-                pool);
+                \depmap, pool);
             if (dmap) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"options\" "
                     "attribute; search actions do not support get_dependent_options() callbacks", action.app,
@@ -672,7 +673,7 @@ public class TypeScriptActionInterface {
         }
 
         TypeScriptActionSearchDataProvider child(action.action, get_record_type, begin_transaction, commit, rollback,
-            search_records, search_options, expressions, !uses_generic_search, omap, romap, dvmap);
+            search_records, search_options, expressions, !uses_generic_search, omap, romap, dvmap, depmap);
 
         TypeScriptActionAppDataProvider prov = TypeScriptActionInterface::getAppDataProvider(action.app);
         prov.registerChild(action.action, child);
@@ -743,10 +744,11 @@ public class TypeScriptActionInterface {
         *hash<string, hash<AsyncCallInfo>> omap;
         *hash<string, hash<RestGetAllowedValuesInfo>> romap;
         *hash<string, hash<AsyncCallInfo>> dvmap;
+        *hash<string, hash<string, bool>> depmap;
         if (*hash<auto> opts = remove action.options) {
             *hash<string, hash<AsyncCallInfo>> dmap;
             action.options = TypeScriptActionInterface::getOptions(app, \action, opts, \omap, \dmap, \romap, \dvmap,
-                pool);
+                \depmap, pool);
             if (dmap) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"options\" "
                     "attribute; event actions do not support get_dependent_options() callbacks", action.app,
@@ -810,7 +812,7 @@ public class TypeScriptActionInterface {
             };
 
             child = new TypeScriptActionWebhookEventDataProvider(action.action, event_id, event_info,
-                get_example_event_data, omap, romap, dvmap, method, webhook_register, webhook_deregister,
+                get_example_event_data, omap, romap, dvmap, depmap, method, webhook_register, webhook_deregister,
                 webhook_auth, webhook_perms);
             rv = AES_WH_EVENT;
         } else {
@@ -827,7 +829,7 @@ public class TypeScriptActionInterface {
                 "to": seconds(io_timeout),
             };
             child = new TypeScriptActionEventDataProvider(action.action, event_id, event_info, get_example_event_data,
-                omap, romap, dvmap, event);
+                omap, romap, dvmap, depmap, event);
             rv = AES_JS_EVENT;
         }
 
@@ -924,12 +926,14 @@ public class TypeScriptActionInterface {
             hash<string, hash<RestGetAllowedValuesInfo>> romap;
             # maps from options to "get_default_value" code for each option
             hash<string, hash<AsyncCallInfo>> dvmap;
+            # maps from dependent options -> option -> True
+            *hash<string, hash<string, bool>> depmap;
             *AbstractDataProviderType request_type;
             if (*hash<auto> opts = remove action.options) {
                 request_type = TypeScriptActionInterface::getType(map {$1.key: $1.value{TypeKeys}},
                     opts.pairIterator());
                 action.options = TypeScriptActionInterface::getOptions(app, \action, opts, \omap, \dmap, \romap,
-                    \dvmap, pool);
+                    \dvmap, \depmap, pool);
             }
 
             *AbstractDataProviderType response_type;
@@ -1054,7 +1058,8 @@ public class TypeScriptActionInterface {
             reference<hash<auto>> action, hash<auto> opts, reference<hash<string, hash<AsyncCallInfo>>> omap,
             reference<hash<string, hash<AsyncCallInfo>>> dmap,
             reference<hash<string, hash<RestGetAllowedValuesInfo>>> romap,
-            reference<hash<string, hash<AsyncCallInfo>>> dvmap, JavaScriptProgramPool pool) {
+            reference<hash<string, hash<AsyncCallInfo>>> dvmap, reference<hash<string, hash<string, bool>>> depmap,
+            JavaScriptProgramPool pool) {
         hash<string, hash<ActionOptionInfo>> rv;
         foreach hash<auto> i in (opts.pairIterator()) {
             TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, \romap, \dvmap, i.key, \i.value, pool);
@@ -1062,6 +1067,7 @@ public class TypeScriptActionInterface {
             if (dmap{i.key}) {
                 rv{i.key}.structural_determinate = True;
             }
+            map depmap{i.key}{$1} = True, i.value.depends_on;
         }
         return rv;
     }
@@ -1214,6 +1220,9 @@ public class TypeScriptActionInterface {
         on_error rethrow $1.err, sprintf("%s (field: %y)", $1.desc, h);
         h.name = name;
         h.type = TypeScriptActionInterface::getType(h.type, h.required);
+        if (h.depends_on) {
+            h.attr.depends_on = h.depends_on;
+        }
         return h;
     }
 

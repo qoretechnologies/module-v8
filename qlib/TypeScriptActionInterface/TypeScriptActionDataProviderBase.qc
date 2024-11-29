@@ -55,6 +55,9 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
         #! Options with functions for the default value
         *hash<string, hash<AsyncCallInfo>> dvmap;
 
+        #! Maps from dependent options -> option -> True
+        *hash<string, hash<string, bool>> depmap;
+
         #! Any REST client to use for reference data, for example
         RestClient rest;
     }
@@ -62,11 +65,13 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
     #! Creates the object from the arguments
     constructor(string name, *hash<string, hash<AsyncCallInfo>> omap,
             *hash<string, hash<RestGetAllowedValuesInfo>> romap,
-            *hash<string, hash<AsyncCallInfo>> dvmap) {
+            *hash<string, hash<AsyncCallInfo>> dvmap,
+            *hash<string, hash<string, bool>> depmap) {
         self.name = name;
         self.omap = omap;
         self.romap = romap;
         self.dvmap = dvmap;
+        self.depmap = depmap;
     }
 
     #! Sets the connection
@@ -254,9 +259,11 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
         @since DataProvider 3.0
     */
     private *list<hash<AllowedValueInfo>> getReferenceDataImpl(string type, *hash<auto> action_opts) {
-        if (*hash<AsyncCallInfo> ref_api = omap{type}) {
+        if ((*hash<AsyncCallInfo> ref_api = omap{type}) && (!(*hash<auto> deps = depmap{type})
+            || (action_opts{keys deps}.size() == deps.size()))) {
             *hash<DataContextInfo> arg = getCallContextInfo(action_opts);
-            debug("Retrieving reference data with JS for data provider %y type %y arg: %y", getName(), type, arg);
+            debug("Retrieving reference data with JS for data provider %y type %y arg: %y (deps: %y)", getName(),
+                type, arg, depmap);
             *softlist<auto> l = getAsyncValue(ref_api, arg);
             debug("Reference data for data provider %y type %y: %y", getName(), type, l);
             if (!l) {

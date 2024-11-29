@@ -140,6 +140,21 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                 },
             })}, keys path_vars, !query_set{$1};
 
+            hash<string, bool> dm;
+            list<string> paths;
+            string lastpath;
+            foreach string path in (keys path_vars) {
+                if (lastpath.val()) {
+                    depmap{lastpath} = dm;
+                }
+                lastpath = path;
+                dm{path} = True;
+                paths += path;
+            }
+            if (lastpath.val()) {
+                depmap{lastpath} = dm;
+            }
+
             if (request_type) {
                 if (!(request_type instanceof HashDataType)) {
                     string fname = "data";
@@ -183,6 +198,17 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
 
         if (request_type && (*hash<string, AbstractDataField> fields = request_type.getFields())) {
             action.options = DataProviderActionCatalog::getActionOptionFromFields(fields);
+            if (depmap) {
+                foreach hash<auto> i in (action.options.pairIterator()) {
+                    if (path_vars{i.key}) {
+                        if (*hash<auto> deps = depmap{i.key}) {
+                            action.options{i.key}.depends_on = keys deps;
+                        }
+                    } else {
+                        action.options{i.key}.depends_on += keys path_vars;
+                    }
+                }
+            }
         }
 
         response_type = prov.getResponseType();
@@ -211,10 +237,13 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                         "option %y; known top-level options: %y", action.app, action.action, key,
                         keys fields);
                 }
-                TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, \romap, \dvmap, i.key, \i.value,
-                    pool);
+                TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, \romap, \dvmap, i.key,
+                    \i.value, pool);
 
                 type.addField(new QoreDataField(TypeScriptActionInterface::getField(key, i.value)));
+                if (i.value_depends_on) {
+                    depmap{key} = map {$1: True}, i.value.depends_on;
+                }
                 if (prov.op.method != "GET") {
                     reqmap{key} = ("body",);
                     rreqmap{"body." + key} = key;
@@ -234,13 +263,16 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                 if (i.value) {
                     type.replaceField(cast<QoreDataField>(f = f.copy()).updateFieldType(f.getType().copy()));
                     overrideOptionType(action, type, l, i.value, k);
+                    if (l.size() == 1 && (*list<auto> dl = i.value.depends_on)) {
+                        depmap{l[0]} = map {$1: True}, dl;
+                    }
                 }
             }
         }
     }
 
-    static overrideOptionType(hash<auto> action, AbstractDataProviderType type, list<string> l, hash<auto> type_hash,
-            string k) {
+    static overrideOptionType(hash<auto> action, AbstractDataProviderType type, list<string> l,
+            hash<auto> type_hash, string k) {
         string key = shift l;
         HashDataType t;
         *hash<string, AbstractDataField> fields;
@@ -331,7 +363,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         on_error printf("%y info: %N\n", key, info + {"type": info.type.getName()});
         t.replaceField(new QoreDataField(info));
 
-        #printf("edited %y => %y mandatory: %y attr: %y av: %y (parent %y)\n", key, fields{key}.getType().className(),
+        #printf("Edited %y => %y mandatory: %y attr: %y av: %y (parent %y)\n", key, fields{key}.getType().className(),
         #    fields{key}.isMandatory(), info.attr, fields{key}.getAllowedValues(), type.className());
     }
 
