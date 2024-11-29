@@ -74,6 +74,7 @@ export default (locale: Locales) =>
         'manage:servicedesk-customer',
         'write:servicedesk-request',
         'read:servicemanagement-insight-objects',
+        'offline_access',
       ],
       ping_method: 'GET',
       ping_path: '/rest/api/3/myself',
