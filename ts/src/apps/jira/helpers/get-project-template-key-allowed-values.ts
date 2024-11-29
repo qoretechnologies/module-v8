@@ -213,5 +213,8 @@ export const getJiraProjectTemplateKeyAllowedValues: TQoreGetAllowedValuesFuncti
         },
       ];
     }
+    default: {
+      return [];
+    }
   }
 };

@@ -1,16 +1,16 @@
 import { TAllowedPaths } from '../../global/models/qore';
 import { IQoreConnectionOptions } from '../zendesk';
 import { getJiraCommentIdAllowedValues } from './helpers/get-comment-id-allowed-values';
-import { getJiraFieldIdAllowedValuesRest } from './helpers/get-field-id-allowed-values';
+import { getJiraFieldIdAllowedValues } from './helpers/get-field-id-allowed-values';
 import { getJiraIssueIdAllowedValues } from './helpers/get-issue-id-allowed-values';
 import {
-  getJiraIssueTypeIdAllowedValuesRest,
-  getJiraIssueTypeNameAllowedValuesRest,
+  getJiraIssueTypeIdAllowedValues,
+  getJiraIssueTypeNameAllowedValues,
 } from './helpers/get-issue-type-allowed-values';
-import { getJiraProjectCategoryIdAllowedValuesRest } from './helpers/get-project-category-id-allowed-values';
-import { getJiraProjectIdAllowedValuesRest } from './helpers/get-project-id-allowed-values';
+import { getJiraProjectCategoryIdAllowedValues } from './helpers/get-project-category-id-allowed-values';
+import { getJiraProjectIdAllowedValues } from './helpers/get-project-id-allowed-values';
 import { getJiraProjectTemplateKeyAllowedValues } from './helpers/get-project-template-key-allowed-values';
-import { getJiraUserIdAllowedValuesRest } from './helpers/get-user-id-allowed-values';
+import { getJiraUserIdAllowedValues } from './helpers/get-user-id-allowed-values';
 import { getJiraWorklogIdAllowedValues } from './helpers/get-worklog-id-allowed-values';
 import { jiraDocumentFormatOption } from './options/jira-document.option';
 
@@ -66,12 +66,12 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
                     id: {
                       type: 'softstring',
                       required_groups: ['issue_type_group'],
-                      rest_get_allowed_values: getJiraIssueTypeIdAllowedValuesRest,
+                      get_allowed_values: getJiraIssueTypeIdAllowedValues,
                     },
                     name: {
                       type: 'string',
                       required_groups: ['issue_type_group'],
-                      rest_get_allowed_values: getJiraIssueTypeNameAllowedValuesRest,
+                      get_allowed_values: getJiraIssueTypeNameAllowedValues,
                     },
                   },
                 },
@@ -84,7 +84,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
                     id: {
                       type: 'softstring',
                       required: true,
-                      rest_get_allowed_values: getJiraProjectIdAllowedValuesRest,
+                      get_allowed_values: getJiraProjectIdAllowedValues,
                     },
                   },
                 },
@@ -101,7 +101,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
       override_options: {
         categoryId: {
           required: false,
-          rest_get_allowed_values: getJiraProjectCategoryIdAllowedValuesRest,
+          get_allowed_values: getJiraProjectCategoryIdAllowedValues,
         },
         key: {
           required: true,
@@ -127,7 +127,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
         },
         leadAccountId: {
           required: true,
-          rest_get_allowed_values: getJiraUserIdAllowedValuesRest,
+          get_allowed_values: getJiraUserIdAllowedValues,
         },
       },
     },
@@ -136,28 +136,28 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     DELETE: {
       override_options: {
         projectIdOrKey: {
-          rest_get_allowed_values: getJiraProjectIdAllowedValuesRest,
+          get_allowed_values: getJiraProjectIdAllowedValues,
         },
       },
     },
     GET: {
       override_options: {
         projectIdOrKey: {
-          rest_get_allowed_values: getJiraProjectIdAllowedValuesRest,
+          get_allowed_values: getJiraProjectIdAllowedValues,
         },
       },
     },
     PUT: {
       override_options: {
         projectIdOrKey: {
-          rest_get_allowed_values: getJiraProjectIdAllowedValuesRest,
+          get_allowed_values: getJiraProjectIdAllowedValues,
         },
         leadAccountId: {
-          rest_get_allowed_values: getJiraUserIdAllowedValuesRest,
+          get_allowed_values: getJiraUserIdAllowedValues,
         },
         categoryId: {
           required: false,
-          rest_get_allowed_values: getJiraProjectCategoryIdAllowedValuesRest,
+          get_allowed_values: getJiraProjectCategoryIdAllowedValues,
         },
       },
     },
@@ -199,12 +199,12 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
                     id: {
                       type: 'softstring',
                       required_groups: ['issue_type_group'],
-                      rest_get_allowed_values: getJiraIssueTypeIdAllowedValuesRest,
+                      get_allowed_values: getJiraIssueTypeIdAllowedValues,
                     },
                     name: {
                       type: 'string',
                       required_groups: ['issue_type_group'],
-                      rest_get_allowed_values: getJiraIssueTypeNameAllowedValuesRest,
+                      get_allowed_values: getJiraIssueTypeNameAllowedValues,
                     },
                   },
                 },
@@ -217,7 +217,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
                     id: {
                       type: 'softstring',
                       required: true,
-                      rest_get_allowed_values: getJiraProjectIdAllowedValuesRest,
+                      get_allowed_values: getJiraProjectIdAllowedValues,
                     },
                   },
                 },
@@ -372,7 +372,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     PUT: {
       override_options: {
         fieldId: {
-          rest_get_allowed_values: getJiraFieldIdAllowedValuesRest,
+          get_allowed_values: getJiraFieldIdAllowedValues,
         },
       },
     },
@@ -381,7 +381,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     POST: {
       override_options: {
         id: {
-          rest_get_allowed_values: getJiraFieldIdAllowedValuesRest,
+          get_allowed_values: getJiraFieldIdAllowedValues,
         },
       },
     },
