@@ -141,18 +141,11 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
             })}, keys path_vars, !query_set{$1};
 
             hash<string, bool> dm;
-            list<string> paths;
-            string lastpath;
             foreach string path in (keys path_vars) {
-                if (lastpath.val()) {
-                    depmap{lastpath} = dm;
+                if (dm) {
+                    depmap{path} = dm;
                 }
-                lastpath = path;
                 dm{path} = True;
-                paths += path;
-            }
-            if (lastpath.val()) {
-                depmap{lastpath} = dm;
             }
 
             if (request_type) {
@@ -205,7 +198,11 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                             action.options{i.key}.depends_on = keys deps;
                         }
                     } else {
-                        action.options{i.key}.depends_on += keys path_vars;
+                        *hash<string, bool> dp = map {$1: True}, keys path_vars;
+                        map dp{$1} = True, action.options{i.key}.depends_on;
+                        if (dp) {
+                            action.options{i.key}.depends_on = keys dp;
+                        }
                     }
                 }
             }
