@@ -1,5 +1,9 @@
 import { TAllowedPaths } from '../../global/models/qore';
 import { IQoreConnectionOptions } from '../zendesk';
+import { getStripeAccountIdAllowedValues } from './helpers/get-account-id-allowed-values';
+import { getStripeBalanceHistoryIdAllowedValues } from './helpers/get-balance-history-id-allowed-values';
+import { getStripeChargeIdAllowedValues } from './helpers/get-charge-id-allowed-values';
+import { getStripeCustomerIdAllowedValues } from './helpers/get-customer-id-allovwed-values';
 
 export const STRIPE_APP_NAME = 'Stripe';
 export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
@@ -10,20 +14,68 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     POST: {},
   },
   '/v1/accounts/{account}': {
-    DELETE: {},
-    GET: {},
-    POST: {},
+    DELETE: {
+      override_options: {
+        account: {
+          get_allowed_values: getStripeAccountIdAllowedValues,
+        },
+      },
+    },
+    GET: {
+      override_options: {
+        account: {
+          get_allowed_values: getStripeAccountIdAllowedValues,
+        },
+      },
+    },
+    POST: {
+      override_options: {
+        account: {
+          get_allowed_values: getStripeAccountIdAllowedValues,
+        },
+      },
+    },
   },
   '/v1/accounts/{account}/external_accounts': {
-    GET: {},
-    POST: {},
+    GET: {
+      override_options: {
+        account: {
+          get_allowed_values: getStripeAccountIdAllowedValues,
+        },
+      },
+    },
+    POST: {
+      override_options: {
+        account: {
+          get_allowed_values: getStripeAccountIdAllowedValues,
+        },
+      },
+    },
   },
   '/v1/accounts/{account}/login_links': {
-    POST: {},
+    POST: {
+      override_options: {
+        account: {
+          get_allowed_values: getStripeAccountIdAllowedValues,
+        },
+      },
+    },
   },
   '/v1/accounts/{account}/people': {
-    GET: {},
-    POST: {},
+    GET: {
+      override_options: {
+        account: {
+          get_allowed_values: getStripeAccountIdAllowedValues,
+        },
+      },
+    },
+    POST: {
+      override_options: {
+        account: {
+          get_allowed_values: getStripeAccountIdAllowedValues,
+        },
+      },
+    },
   },
   '/v1/balance': {
     GET: {},
@@ -32,36 +84,135 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     GET: {},
   },
   '/v1/balance/history/{id}': {
-    GET: {},
+    GET: {
+      override_options: {
+        id: {
+          get_allowed_values: getStripeBalanceHistoryIdAllowedValues,
+        },
+      },
+    },
   },
   '/v1/charges': {
     GET: {},
-    POST: {},
+    POST: {
+      override_options: {
+        amount: {
+          required: true,
+        },
+        currency: {
+          required: true,
+        },
+        source: {
+          required: true,
+        },
+      },
+    },
   },
   '/v1/charges/{charge}': {
-    GET: {},
-    POST: {},
+    GET: {
+      override_options: {
+        charge: {
+          get_allowed_values: getStripeChargeIdAllowedValues,
+        },
+      },
+    },
+    POST: {
+      override_options: {
+        charge: {
+          get_allowed_values: getStripeChargeIdAllowedValues,
+        },
+      },
+    },
   },
   '/v1/customers': {
     GET: {},
-    POST: {},
+    POST: {
+      override_options: {
+        email: {
+          required: true,
+        },
+      },
+    },
   },
   '/v1/customers/{customer}': {
-    DELETE: {},
-    GET: {},
-    POST: {},
+    DELETE: {
+      override_options: {
+        customer: {
+          get_allowed_values: getStripeCustomerIdAllowedValues,
+        },
+      },
+    },
+    GET: {
+      override_options: {
+        customer: {
+          get_allowed_values: getStripeCustomerIdAllowedValues,
+        },
+      },
+    },
+    POST: {
+      override_options: {
+        customer: {
+          get_allowed_values: getStripeCustomerIdAllowedValues,
+        },
+      },
+    },
   },
   '/v1/customers/{customer}/balance_transactions': {
-    GET: {},
-    POST: {},
+    GET: {
+      override_options: {
+        customer: {
+          get_allowed_values: getStripeCustomerIdAllowedValues,
+        },
+      },
+    },
+    POST: {
+      override_options: {
+        amount: {
+          required: true,
+        },
+        currency: {
+          required: true,
+        },
+        customer: {
+          get_allowed_values: getStripeCustomerIdAllowedValues,
+        },
+      },
+    },
   },
   '/v1/customers/{customer}/sources': {
-    GET: {},
-    POST: {},
+    GET: {
+      override_options: {
+        customer: {
+          get_allowed_values: getStripeCustomerIdAllowedValues,
+        },
+      },
+    },
+    POST: {
+      override_options: {
+        source: {
+          required: true,
+        },
+        customer: {
+          get_allowed_values: getStripeCustomerIdAllowedValues,
+        },
+      },
+    },
   },
   '/v1/customers/{customer}/subscriptions': {
-    GET: {},
-    POST: {},
+    GET: {
+      override_options: {
+        customer: {
+          get_allowed_values: getStripeCustomerIdAllowedValues,
+        },
+      },
+    },
+    POST: {
+      override_options: {
+        customer: {
+          get_allowed_values: getStripeCustomerIdAllowedValues,
+        },
+      },
+    },
   },
   '/v1/invoices': {
     GET: {},
@@ -74,11 +225,32 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
   },
   '/v1/payment_intents': {
     GET: {},
-    POST: {},
+    POST: {
+      override_options: {
+        amount: {
+          required: true,
+        },
+        currency: {
+          required: true,
+        },
+        payment_method: {
+          required: true,
+        },
+      },
+    },
   },
   '/v1/refunds': {
     GET: {},
-    POST: {},
+    POST: {
+      override_options: {
+        charge: {
+          required_groups: ['refund-group'],
+        },
+        payment_intent: {
+          required_groups: ['refund-group'],
+        },
+      },
+    },
   },
 };
 export const STRIPE_CONN_OPTIONS = {

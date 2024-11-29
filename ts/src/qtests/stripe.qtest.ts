@@ -10,7 +10,8 @@ describe('Tests Stripe Actions', () => {
   beforeAll(() => {
     connection = testApi.createConnection('stripe', {
       opts: {
-        token: process.env.STRIPE_API_KEY,
+        token:
+          'sk_test_51Q5mY202gU5cv8l2YfWs1MqoWJgzpNWtQLz6ej0x92n2FpouXgMwpnBNcrah5QJtbUjgGs2Z3himoEmYmMSYDgDe00LYE7VkEb',
       },
     });
 
@@ -73,9 +74,11 @@ describe('Tests Stripe Actions', () => {
     expect(action).toBeDefined();
 
     const response = await testApi.execAppAction('stripe', action.action, connection, {
-      amount: 500,
-      currency: 'usd',
-      source: 'tok_visa',
+      body: {
+        amount: 500,
+        currency: 'usd',
+        source: 'tok_visa',
+      },
     });
     expect(response.body).toBeDefined();
     chargeId = response.body.id;
@@ -99,7 +102,9 @@ describe('Tests Stripe Actions', () => {
     const description = 'Updated charge description';
     const response = await testApi.execAppAction('stripe', action.action, connection, {
       charge: chargeId,
-      description,
+      body: {
+        description,
+      },
     });
 
     expect(response.body).toBeDefined();
