@@ -73,7 +73,7 @@ export default (locale: Locales) =>
       oauth2_token_auth_secret_only: true,
       oauth2_scopes: ['read_write'],
       ping_method: 'GET',
-      ping_path: '/v1/accounts',
+      ping_path: '/v1/account',
     },
     rest_modifiers: {
       options: STRIPE_CONN_OPTIONS,
