@@ -199,6 +199,8 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
 
         if (request_type && (*hash<string, AbstractDataField> fields = request_type.getFields())) {
             action.options = DataProviderActionCatalog::getActionOptionFromFields(fields);
+            TypeScriptActionInterface::sortOptions({"name": action.app}, action, \action.options);
+
             if (depmap) {
                 foreach hash<auto> i in (action.options.pairIterator()) {
                     if (path_vars{i.key}) {

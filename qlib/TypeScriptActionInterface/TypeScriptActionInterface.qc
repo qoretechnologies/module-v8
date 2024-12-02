@@ -994,6 +994,8 @@ public class TypeScriptActionInterface {
                 "to": io_timeout,
             };
             h.ref_data = key;
+            # remove any manual allowed values
+            remove h.allowed_values;
         }
         if (exists (auto rest_get_allowed_values = remove h.rest_get_allowed_values)) {
             if (rest_get_allowed_values.typeCode() != NT_HASH) {
@@ -1019,6 +1021,8 @@ public class TypeScriptActionInterface {
             }
             romap{key} = info;
             h.ref_data = key;
+            # remove any manual allowed values
+            remove h.allowed_values;
         }
         if (exists (auto get_dependent_options = remove h.get_dependent_options)) {
             if (!get_dependent_options.callp()) {
@@ -1060,6 +1064,7 @@ public class TypeScriptActionInterface {
             reference<hash<string, hash<RestGetAllowedValuesInfo>>> romap,
             reference<hash<string, hash<AsyncCallInfo>>> dvmap, reference<hash<string, hash<string, bool>>> depmap,
             JavaScriptProgramPool pool) {
+        TypeScriptActionInterface::sortOptions(app, action, \opts);
         hash<string, hash<ActionOptionInfo>> rv;
         foreach hash<auto> i in (opts.pairIterator()) {
             TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, \romap, \dvmap, i.key, \i.value, pool);
@@ -1076,6 +1081,31 @@ public class TypeScriptActionInterface {
             map depmap{i.key}{$1} = True, i.value.depends_on;
         }
         return rv;
+    }
+
+    #! Sort options based on depends_on
+    static sortOptions(hash<auto> app, hash<auto> action, reference<hash<auto>> opts) {
+        hash<auto> new_opts;
+        code check_dep = sub (string opt, string dep) {
+            if (new_opts{dep}) {
+                return;
+            }
+            *hash<auto> depval = opts{dep};
+            if (!exists depval) {
+                throw "ACTION-ERROR", sprintf("App %y action %y option %y claims a dependency on %y which is not "
+                    "in the option set", app.name, action.action, opt, dep);
+            }
+            map check_dep(dep, $1), depval.depends_on;
+            new_opts{dep} = depval;
+        };
+        foreach hash<auto> i in (opts.pairIterator()) {
+            if (new_opts{i.key}) {
+                continue;
+            }
+            map check_dep(i.key, $1), i.value.depends_on;
+            new_opts{i.key} = i.value;
+        }
+        opts = new_opts;
     }
 
     static hash<ActionOptionInfo> getOptionInfo(hash<auto> opt) {
