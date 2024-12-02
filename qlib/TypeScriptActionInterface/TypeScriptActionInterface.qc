@@ -1067,6 +1067,12 @@ public class TypeScriptActionInterface {
             if (dmap{i.key}) {
                 rv{i.key}.structural_determinate = True;
             }
+            if ((*list<auto> deps = i.value.depends_on)
+                && (hash<auto> dh = map {$1: True}, deps)
+                && (*hash<auto> missing = (dh - keys opts))) {
+                throw "ACTION-ERROR", sprintf("App %y action %y option %y depends on unknown options: %y",
+                    action.app, action.action, i.key, keys missing);
+            }
             map depmap{i.key}{$1} = True, i.value.depends_on;
         }
         return rv;
