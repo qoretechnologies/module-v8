@@ -114,6 +114,14 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                     stop = True;
                 }
             }
+            if (!stop && fields.formData) {
+                if (*hash<string, AbstractDataField> bf = fields.formData.getType().getFields()) {
+                    # move args to the top level
+                    check(bf, "formData");
+                } else {
+                    stop = True;
+                }
+            }
             # move query args to
             if (!stop && fields.query && (*hash<string, AbstractDataField> qf = fields.query.getType().getFields())) {
                 check(qf, "query");
