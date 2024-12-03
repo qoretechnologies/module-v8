@@ -113,6 +113,12 @@ public class JavaScriptProgramPool {
         obj.registerAppActions(TypeScriptActionInterface::Api);
     }
 
+    info(string fmt, ...) {
+        if (*LoggerInterface logger = TypeScriptActionInterface::logger) {
+            logger.logArgs(Qore::Logger::LoggerLevel::LevelInfo, fmt, argv);
+        }
+    }
+
     static bool isFirst(JavaScriptProgram pgm) {
         return firstmap{pgm.uniqueHash()} ?? False;
     }
@@ -131,6 +137,9 @@ public class JavaScriptProgramPool {
         string olddir = getcwd();
         chdir(cwd);
         on_exit chdir(olddir);
+
+        date start = now_us();
+        on_exit info("perf: JavaScriptProgramPool new pool for %y: %y", path, now_us() - start);
 
         JavaScriptProgram pgm(source, path);
         string h0 = pgm.uniqueHash();

@@ -174,7 +174,7 @@ class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProviderBase 
             auto val = req{i.key};
             debug("Retrieving options dependent on option %y, value %y for data provider %y type %y", i.key, val,
                 getName(), type);
-            auto res = getAsyncValue(i.value, getCallContextInfo(req));
+            auto res = getAsyncValueWithCache(i.value, req, getCallContextInfo(req));
             if (!exists res) {
                 continue;
             }

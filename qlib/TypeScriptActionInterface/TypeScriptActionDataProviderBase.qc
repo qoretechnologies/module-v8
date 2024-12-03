@@ -38,6 +38,7 @@ public hashdecl DataContextInfo {
     *hash<auto> info;
 }
 
+#! Base class for TypeScript action data provider classes
 public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
     private {
         #! The name of the data provider
@@ -60,6 +61,9 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
 
         #! Any REST client to use for reference data, for example
         RestClient rest;
+
+        #! Data cache for retrieving allowed values
+        static TypeScriptDataCache cache();
     }
 
     #! Creates the object from the arguments
@@ -101,15 +105,80 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
         return getAsyncValueArgs(self, api, argv);
     }
 
-    static auto getAsyncValueArgs(LoggerInterface logger, hash<AsyncCallInfo> api, *softlist<auto> args) {
+    auto getAsyncValueWithCache(hash<AsyncCallInfo> api, *hash<auto> cache_opts, ...) {
+        return getAsyncValueArgs(self, api, argv, cache_opts, True);
+    }
+
+    static auto getAsyncValueArgs(LoggerInterface logger, hash<AsyncCallInfo> api, *softlist<auto> args,
+            *hash<auto> cache_opts, *bool use_cache) {
         on_error rethrow $1.err, sprintf("%s (context: %s)", $1.desc, api.label);
 
+        if (!cache_opts && !use_cache) {
+            return TypeScriptActionDataProviderBase::getAsyncValueArgsIntern(logger, api, args);
+        }
+
+        string key = TypeScriptActionDataProviderBase::getKey(api.label, cache_opts);
+
+        bool new_entry;
+        CacheEntry entry = cache.get(key, \new_entry);
+        if (new_entry) {
+            on_error entry.cancel($1);
+            entry.setValue(TypeScriptActionDataProviderBase::getAsyncValueArgsIntern(logger, api, args));
+        }
+        return entry.getValue();
+    }
+
+    static private string getKey(string label, *hash<auto> cache_opts) {
+        string key = label;
+        if (cache_opts) {
+            key += sprintf("-%s", TypeScriptActionDataProviderBase::getKeyValue(cache_opts));
+        }
+        return key.toSHA512();
+    }
+
+    static private string getKeyValue(auto arg) {
+        switch (arg.typeCode()) {
+            case NT_STRING:
+                return sprintf("(%s):%y", arg.fullType(), arg.toSHA512());
+            case NT_INT:
+            case NT_FLOAT:
+            case NT_NUMBER:
+            case NT_DATE:
+            case NT_BOOLEAN:
+                return sprintf("(%s):%y", arg.fullType(), arg.toString().toSHA512());
+            case NT_BINARY:
+                return sprintf("(%s):%y", arg.fullType(), arg.toSHA512());
+            case NT_CALLREF:
+            case NT_CLOSURE:
+            case NT_OBJECT:
+                return sprintf("%s", arg.uniqueHash());
+            case NT_LIST:
+                return sprintf("[%s]", (foldl $1 + "," + $2, (
+                    map TypeScriptActionDataProviderBase::getKeyValue($1), arg
+                )));
+            case NT_HASH:
+                return sprintf("(%s):{%s}", arg.fullType(), (foldl $1 + "," + $2, (
+                    map sprintf("%s: %s", $1.key, TypeScriptActionDataProviderBase::getKeyValue($1.value)),
+                        arg.pairIterator()
+                )));
+            case NT_NOTHING:
+                return "N";
+            case NT_NULL:
+                return "n";
+        }
+        throw "ARG-ERROR", sprintf("Cannot calculate key value for type %y", arg.fullType());
+    }
+
+    static private auto getAsyncValueArgsIntern(LoggerInterface logger, hash<AsyncCallInfo> api, *softlist<auto> args) {
         JavaScriptProgram pgm = api.pool.get();
         on_exit {
             api.pool.release(pgm);
             #logger.info("TypeScriptActionApiDataProvider::getAsyncValue() released pgm %y", pgm.uniqueHash());
         }
         #logger.info("TypeScriptActionApiDataProvider::getAsyncValue() acquired pgm %y", pgm.uniqueHash());
+
+        date start = now_us();
+        on_exit logger.info("perf: %y get async value: %y", api.label, now_us() - start);
 
         auto v;
         try {
@@ -259,15 +328,19 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
         @since DataProvider 3.0
     */
     private *list<hash<AllowedValueInfo>> getReferenceDataImpl(string type, *hash<auto> action_opts) {
-        if ((*hash<AsyncCallInfo> ref_api = omap{type}) && (!(*hash<auto> deps = depmap{type})
-            || (action_opts{keys deps}.size() == deps.size()))) {
+        if (((*hash<auto> deps = depmap{type})
+            && (action_opts{keys deps}.size() != deps.size()))) {
+            return;
+        }
+
+        if (*hash<AsyncCallInfo> ref_api = omap{type}) {
             *hash<DataContextInfo> arg = getCallContextInfo(action_opts);
             debug("Retrieving reference data with JS for data provider %y type %y arg: %y (deps: %y)", getName(),
                 type, arg, depmap);
-            *softlist<auto> l = getAsyncValue(ref_api, arg);
+            *softlist<auto> l = getAsyncValueWithCache(ref_api, action_opts, arg);
             debug("Reference data for data provider %y type %y: %y", getName(), type, l);
             if (!l) {
-                return;
+                return ();
             }
             if (l[0].typeCode() != NT_HASH) {
                 return map <AllowedValueInfo>{
@@ -287,15 +360,25 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
                 map path = replace(path, "{" + $1.key + "}", $1.value), action_opts.pairIterator(),
                     $1.value.typeCode() == NT_STRING;
             }
-            hash<auto> info;
-            debug("Retrieving reference data with REST for data provider %y type %y: %s %s", getName(), type,
-                ref_rest.method, path);
-            on_error rethrow $1.err, sprintf("%s: info: %y", $1.desc, info{"request-uri", "response-uri"});
-            hash<auto> resp = rest.doRequest(ref_rest.method, path, ref_rest.body, \info, NOTHING,
-                ref_rest.headers);
+
+            string key = TypeScriptActionDataProviderBase::getKey("rest-" + type, action_opts);
+
+            bool new_entry;
+            CacheEntry entry = cache.get(key, \new_entry);
+            if (new_entry) {
+                on_error entry.cancel($1);
+
+                hash<auto> info;
+                debug("Retrieving reference data with REST for data provider %y type %y: %s %s", getName(), type,
+                    ref_rest.method, path);
+                on_error rethrow $1.err, sprintf("%s: info: %y", $1.desc, info{"request-uri", "response-uri"});
+                entry.setValue(rest.doRequest(ref_rest.method, path, ref_rest.body, \info, NOTHING,
+                    ref_rest.headers));
+            }
+            hash<auto> resp = entry.getValue();
+
             debug("Reference data with REST for data provider %y type %y got: %y", getName(), type, resp);
-            hash<auto> v = resp;
-            *softlist<hash<AllowedValueInfo>> rv = getAllowedValues(resp, ref_rest.values.split("."));
+            *softlist<hash<AllowedValueInfo>> rv = getAllowedValues(resp, ref_rest.values.split(".")) ?? ();
             if (rv && ref_rest.display_names.val()) {
                 getDisplayNames(type, resp, ref_rest.display_names.split("."), \rv);
             }
