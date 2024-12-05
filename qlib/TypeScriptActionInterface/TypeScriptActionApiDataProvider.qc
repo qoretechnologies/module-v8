@@ -76,6 +76,7 @@ class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProviderBase 
     #! Sets the connection
     setConnection(TypeScriptAppRestConnection conn) {
         TypeScriptActionDataProviderBase::setConnection(conn);
+        debug("Connection %y retrieving default values: %y", conn.name, keys dvmap);
         if (dvmap) {
             *hash<string, AbstractDataField> fields = request_type.getFields();
             *hash<DataContextInfo> arg = getCallContextInfo();

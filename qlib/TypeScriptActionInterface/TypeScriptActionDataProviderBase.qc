@@ -81,6 +81,9 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
     #! Sets the connection
     setConnection(TypeScriptAppRestConnection conn) {
         self.conn = conn;
+        if (!logger && (*LoggerInterface clogger = conn.getLogger())) {
+            setLogger(clogger);
+        }
     }
 
     #! Returns the logger interface for logging
@@ -106,6 +109,9 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
     }
 
     auto getAsyncValueWithCache(hash<AsyncCallInfo> api, *hash<auto> cache_opts, ...) {
+        cache_opts += {
+            "conn_opts": conn.getRealOptions(),
+        };
         return getAsyncValueArgs(self, api, argv, cache_opts, True);
     }
 
