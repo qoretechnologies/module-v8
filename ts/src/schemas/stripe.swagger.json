@@ -6700,7 +6700,8 @@
             "description": "Shipping information for the charge. Helps prevent fraud on charges for physical goods.",
             "in": "formData",
             "name": "shipping",
-            "type": "object"
+            "type": "object",
+            "required": false
           },
           {
             "description": "A payment source to be charged. This can be the ID of a [card](https://stripe.com/docs/api#cards) (i.e., credit or debit card), a [bank account](https://stripe.com/docs/api#bank_accounts), a [source](https://stripe.com/docs/api#sources), a [token](https://stripe.com/docs/api#tokens), or a [connected account](https://stripe.com/docs/connect/account-debits#charging-a-connected-account). For certain sources---namely, [cards](https://stripe.com/docs/api#cards), [bank accounts](https://stripe.com/docs/api#bank_accounts), and attached [sources](https://stripe.com/docs/api#sources)---you must also pass the ID of the associated customer.",
