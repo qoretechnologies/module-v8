@@ -7,6 +7,8 @@ type TStripeBalanceHistoryData = {
     object: string;
     amount: number;
     created: number;
+    currency: string;
+    description: string;
   }[];
   hasMore: boolean;
 };
@@ -38,7 +40,11 @@ export const getStripeBalanceHistoryIdAllowedValues: TQoreGetAllowedValuesFuncti
       ...fetchedItems.map(
         (item): IQoreAllowedValue => ({
           value: item.id,
-          display_name: `${item.object} - ${item.amount} - ${new Date(item.created * 1000).toDateString()}`,
+          display_name: `${item.object} - ${item.amount}`,
+          desc:
+            `id: ${item.id}\nObject:${item.object}\nAmount:${item.amount}\n` +
+            `Currency:${item.currency}\nDescription:${item.description}` +
+            `Date:${new Date(item.created * 1000).toString()}`,
         })
       )
     );

@@ -4,6 +4,8 @@ import { getStripeAccountIdAllowedValues } from './helpers/get-account-id-allowe
 import { getStripeBalanceHistoryIdAllowedValues } from './helpers/get-balance-history-id-allowed-values';
 import { getStripeChargeIdAllowedValues } from './helpers/get-charge-id-allowed-values';
 import { getStripeCustomerIdAllowedValues } from './helpers/get-customer-id-allovwed-values';
+import { getStripeInvoiceIdAllowedValues } from './helpers/get-invoice-id-allowed-values';
+import { getStripePaymentIntentIdAllowedValues } from './helpers/get-payment-intent-id-allowed-values';
 
 export const STRIPE_APP_NAME = 'Stripe';
 export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
@@ -216,12 +218,37 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
   },
   '/v1/invoices': {
     GET: {},
-    POST: {},
+    POST: {
+      override_options: {
+        customer: {
+          get_allowed_values: getStripeCustomerIdAllowedValues,
+          required: true,
+        },
+      },
+    },
   },
   '/v1/invoices/{invoice}': {
-    DELETE: {},
-    GET: {},
-    POST: {},
+    DELETE: {
+      override_options: {
+        invoice: {
+          get_allowed_values: getStripeInvoiceIdAllowedValues,
+        },
+      },
+    },
+    GET: {
+      override_options: {
+        invoice: {
+          get_allowed_values: getStripeInvoiceIdAllowedValues,
+        },
+      },
+    },
+    POST: {
+      override_options: {
+        invoice: {
+          get_allowed_values: getStripeInvoiceIdAllowedValues,
+        },
+      },
+    },
   },
   '/v1/payment_intents': {
     GET: {},
@@ -244,9 +271,11 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     POST: {
       override_options: {
         charge: {
+          get_allowed_values: getStripeChargeIdAllowedValues,
           required_groups: ['refund-group'],
         },
         payment_intent: {
+          get_allowed_values: getStripePaymentIntentIdAllowedValues,
           required_groups: ['refund-group'],
         },
       },

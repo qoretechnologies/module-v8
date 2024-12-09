@@ -45,40 +45,35 @@ describe('Tests Stripe Actions', () => {
     const response = await testApi.execAppAction('stripe', action.action, connection);
 
     expect(response.body).toBeDefined();
+
+    if (response.body.data.length > 0) {
+      const getBalanceHistoryItem = STRIPE_ACTIONS.find((a) => a.action === 'GetBalanceHistoryId');
+      expect(getBalanceHistoryItem).toBeDefined();
+
+      const balanceHistoryItemResponse = await testApi.execAppAction(
+        'stripe',
+        getBalanceHistoryItem.action,
+        connection,
+        {
+          id: response.body.data[0].id,
+        }
+      );
+
+      expect(balanceHistoryItemResponse.body.id).toBeDefined();
+      expect(balanceHistoryItemResponse.body.id).toBe(response.body.data[0].id);
+    }
   });
 
-  /**
-   * Enable this test when there is something in balance history
-   * don't forget to update the id
-   */
-
-  // it('Should retrieve specific balance history entry', async () => {
-  //   const action = STRIPE_ACTIONS.find((a) => a.action === 'GetBalanceHistoryId');
-  //   expect(action).toBeDefined();
-
-  //   const response = await testApi.execAppAction('stripe', action.action, connection, {
-  //     id: 'txn_12345',
-  //   });
-
-  //   expect(response.body).toBeDefined();
-  // });
-
   // Charges
-
-  /**
-   * Enable these tests when qore is fixed with required values for formDataType
-   */
 
   it('Should create a charge', async () => {
     const action = STRIPE_ACTIONS.find((a) => a.action === 'PostCharges');
     expect(action).toBeDefined();
 
     const response = await testApi.execAppAction('stripe', action.action, connection, {
-      body: {
-        amount: 500,
-        currency: 'usd',
-        source: 'tok_visa',
-      },
+      amount: 500,
+      currency: 'usd',
+      source: 'tok_visa',
     });
     expect(response.body).toBeDefined();
     chargeId = response.body.id;
@@ -102,9 +97,7 @@ describe('Tests Stripe Actions', () => {
     const description = 'Updated charge description';
     const response = await testApi.execAppAction('stripe', action.action, connection, {
       charge: chargeId,
-      body: {
-        description,
-      },
+      description,
     });
 
     expect(response.body).toBeDefined();
@@ -248,18 +241,6 @@ describe('Tests Stripe Actions', () => {
     expect(response.body.data.length).toBeGreaterThan(0);
   });
 
-  it('Should delete a customer', async () => {
-    const action = STRIPE_ACTIONS.find((a) => a.action === 'DeleteCustomersCustomer');
-    expect(action).toBeDefined();
-
-    const response = await testApi.execAppAction('stripe', action.action, connection, {
-      customer: customerId,
-    });
-
-    expect(response.body).toBeDefined();
-    expect(response.body.deleted).toBe(true);
-  });
-
   // Invoices
   it('Should create an invoice', async () => {
     const action = STRIPE_ACTIONS.find((a) => a.action === 'PostInvoices');
@@ -347,5 +328,17 @@ describe('Tests Stripe Actions', () => {
     expect(response.body).toBeDefined();
     expect(response.body.data).toBeDefined();
     expect(response.body.data.length).toBeGreaterThan(0);
+  });
+
+  it('Should delete a customer', async () => {
+    const action = STRIPE_ACTIONS.find((a) => a.action === 'DeleteCustomersCustomer');
+    expect(action).toBeDefined();
+
+    const response = await testApi.execAppAction('stripe', action.action, connection, {
+      customer: customerId,
+    });
+
+    expect(response.body).toBeDefined();
+    expect(response.body.deleted).toBe(true);
   });
 });
