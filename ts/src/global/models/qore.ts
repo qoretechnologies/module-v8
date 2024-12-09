@@ -8,7 +8,7 @@ export interface IQoreAppShared {
   desc?: string;
 }
 
-export type THttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE';
+export type THttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
 export type TWebhookHttpMethod = 'POST' | 'PUT' | 'PATCH' | 'GET';
 export type TRestGetAllowedValuesMethod = TWebhookHttpMethod;
 export type TCustomConnOptions = Record<string, IQoreConnectionOption>;
