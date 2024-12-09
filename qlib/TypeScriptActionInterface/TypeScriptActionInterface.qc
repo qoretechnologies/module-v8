@@ -58,6 +58,12 @@ hashdecl RestGetAllowedValuesInfo {
 
     #! Location of the display names in the result in dot notation (ex: 'body.envelopes.envelopeName')
     *string display_names;
+
+    #! Location of "desc" in the result in dot notation (ex: 'body.envelopes.desc')
+    *string descriptions;
+
+    #! Location of "short_desc" in the result in dot notation (ex: 'body.envelopes.shortDesc')
+    *string short_descs;
 }
 
 #! Required attributes for RestGetAllowedValuesInfo

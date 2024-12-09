@@ -462,6 +462,16 @@ export interface IQoreRestGetAllowedValues {
 
   // Location of the display names in the result in dot notation (ex: 'body.envelopes.envelopeName')
   display_names?: string;
+
+  // Location of descriptions in the result in dot notation (ex: 'body.envelopes.description')
+  /** Descriptions are long, markdown-formatted string descriptions
+   */
+  descriptions?: string;
+
+  // Location of the short descriptions in the result in dot notation (ex: 'body.envelopes.shortDesc')
+  /** Short descs are short, plain-text string descriptions
+   */
+  short_descs?: string;
 }
 
 export interface IQoreSharedObject<TypeValue = unknown> extends IQoreAppShared {

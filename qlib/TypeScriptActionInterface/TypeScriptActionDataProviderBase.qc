@@ -109,10 +109,9 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
     }
 
     auto getAsyncValueWithCache(hash<AsyncCallInfo> api, *hash<auto> cache_opts, ...) {
-        cache_opts += {
+        return getAsyncValueArgs(self, api, argv, cache_opts + {
             "conn_opts": conn.getRealOptions(),
-        };
-        return getAsyncValueArgs(self, api, argv, cache_opts, True);
+        }, True);
     }
 
     static auto getAsyncValueArgs(LoggerInterface logger, hash<AsyncCallInfo> api, *softlist<auto> args,
@@ -357,7 +356,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
                 }, l;
             }
             return map cast<hash<AllowedValueInfo>>($1 instanceof JavaScriptObject ? $1.toData() : $1), l;
-        } else if (*hash<auto> ref_rest = romap{type}) {
+        } else if (*hash<RestGetAllowedValuesInfo> ref_rest = romap{type}) {
             if (!rest) {
                 checkRestClient(action_opts);
             }
@@ -386,7 +385,13 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
             debug("Reference data with REST for data provider %y type %y got: %y", getName(), type, resp);
             *softlist<hash<AllowedValueInfo>> rv = getAllowedValues(resp, ref_rest.values.split(".")) ?? ();
             if (rv && ref_rest.display_names.val()) {
-                getDisplayNames(type, resp, ref_rest.display_names.split("."), \rv);
+                getAttributes("display_name", type, resp, ref_rest.display_names.split("."), \rv);
+            }
+            if (rv && ref_rest.descriptions.val()) {
+                getAttributes("desc", type, resp, ref_rest.descriptions.split("."), \rv);
+            }
+            if (rv && ref_rest.short_descs.val()) {
+                getAttributes("short_desc", type, resp, ref_rest.short_descs.split("."), \rv);
             }
             debug("Reference data with REST for data provider %y type %y allowed values: %y", getName(), type, rv);
             return rv;
@@ -409,12 +414,12 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
         return foldl $1 + $2, (map TypeScriptActionDataProviderBase::getAllowedValues($1, kl), v0);
     }
 
-    #! Adds display names to allowed values
-    private getDisplayNames(string type, auto v, list<string> dnl, reference<list<hash<AllowedValueInfo>>> rv) {
-        if (*list<string> l = getDisplayNamesIntern(type, v, dnl)) {
+    #! Adds attributes to allowed values
+    private getAttributes(string attr, string type, auto v, list<string> attrl, reference<list<hash<AllowedValueInfo>>> rv) {
+        if (*list<string> l = getAttributeIntern(attr, type, v, attrl)) {
             if (l.size() != rv.size()) {
-                throw "REST-ALLOWED-VALUES-ERROR", sprintf("Data provider %y type %y returned %d display_name%s "
-                    "for %d value%s", getName(), type, l.size(), l.size() == 1 ? "" : "s",
+                throw "REST-ALLOWED-VALUES-ERROR", sprintf("Data provider %y type %y returned %d %s%s "
+                    "for %d value%s", getName(), type, l.size(), attr, l.size() == 1 ? "" : "s",
                     rv.size(), rv.size() == 1 ? "" : "s");
             }
 
@@ -422,16 +427,16 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
             bool dup;
             {
                 hash<string, bool> m;
-                foreach string dn in (l) {
-                    if (m{dn}) {
+                foreach string attrstr in (l) {
+                    if (m{attrstr}) {
                         dup = True;
                         break;
                     }
-                    m{dn} = True;
+                    m{attrstr} = True;
                 }
             }
             foreach hash<AllowedValueInfo> info in (\rv) {
-                info.display_name = dup
+                info{attr} = dup
                     ? sprintf("%s-%s", l[$#], info.value)
                     : l[$#];
             }
@@ -439,24 +444,24 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
     }
 
     #! Adds display names to allowed values
-    private *list<string> getDisplayNamesIntern(string type, auto v, list<string> dnl) {
-        string k = shift dnl;
+    private *list<string> getAttributeIntern(string attr, string type, auto v, list<string> attrl) {
+        string k = shift attrl;
         auto v0 = v{k};
         if (!exists v0) {
             return;
         }
-        if (!dnl) {
+        if (!attrl) {
             list<string> rv;
-            foreach auto dn in (v0) {
-                if (!dn.strp()) {
-                    throw "REST-ALLOWED-VALUES-ERROR", sprintf("Data provider %y type %y display name has type "
-                        "%y (%y) that cannot be converted to a string", getName(), type, dn.fullType(), dn);
+            foreach auto attrstr in (v0) {
+                if (!attrstr.strp()) {
+                    throw "REST-ALLOWED-VALUES-ERROR", sprintf("Data provider %y type %y %s has type %y (%y) that "
+                        "cannot be converted to a string", getName(), type, attr, attrstr.fullType(), attrstr);
                 }
-                rv += dn.toString();
+                rv += attrstr.toString();
             }
             return rv;
         }
-        return foldl $1 + $2, (map TypeScriptActionDataProviderBase::getDisplayNamesIntern(type, $1, dnl), v0);
+        return foldl $1 + $2, (map TypeScriptActionDataProviderBase::getAttributeIntern(attr, type, $1, attrl), v0);
     }
 
     #! Check and assign REST client
