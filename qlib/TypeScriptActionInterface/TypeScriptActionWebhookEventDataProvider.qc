@@ -84,7 +84,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         *hash<auto> event_opts = ImpliedArgumentHelper::get();
         debug("Registering webhook for data provider %y URL %y opts %y", name, wf_info.url, event_opts);
         on_error rethrow $1.err, sprintf("%s (while registering webhook URL %y with the server; options: %y)",
-            wf_info.url, event_opts);
+            $1.desc, wf_info.url, event_opts);
         reginfo = getAsyncValue(webhook_register, getCallContextInfo(event_opts), wf_info.url);
         js_webhook_registered = True;
         debug("Webhook for data provider %y registered with URL %y (reginfo: %y)", name, wf_info.url, reginfo);
