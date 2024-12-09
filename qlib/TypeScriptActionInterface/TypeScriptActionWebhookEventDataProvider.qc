@@ -43,6 +43,9 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         #! Any value returned by webhook_register()
         *hash<auto> reginfo;
 
+        #! Event options for the webhook register and deregister calls
+        *hash<auto> event_opts;
+
         #! Did the JS webhook registration function succeed?
         bool js_webhook_registered;
 
@@ -81,7 +84,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         });
         info("Registered webhook with URL %y", wf_info.url);
 
-        *hash<auto> event_opts = ImpliedArgumentHelper::get();
+        event_opts = ImpliedArgumentHelper::get();
         debug("Registering webhook for data provider %y URL %y opts %y", name, wf_info.url, event_opts);
         on_error rethrow $1.err, sprintf("%s (while registering webhook URL %y with the server; options: %y)",
             $1.desc, wf_info.url, event_opts);
@@ -101,7 +104,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         if (js_webhook_registered) {
             js_webhook_registered = False;
             try {
-                getAsyncValue(webhook_deregister, getCallContextInfo(), wf_info.url, reginfo);
+                getAsyncValue(webhook_deregister, getCallContextInfo(), wf_info.url, event_opts + reginfo);
             } catch (hash<ExceptionInfo> ex) {
                 error("WEBHOOK-DEREGISTRATION-ERROR", "Error in data provider %y deregistering webhook %y: %s", name,
                     wf_info.url, get_exception_string(ex));
