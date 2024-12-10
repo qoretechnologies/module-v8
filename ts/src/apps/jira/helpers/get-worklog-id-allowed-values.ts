@@ -37,8 +37,10 @@ export const getJiraWorklogIdAllowedValues: TQoreGetAllowedValuesFunction<
       ...fetchedWorklogs.map(
         (worklog: any): IQoreAllowedValue => ({
           value: worklog.id,
-          // eslint-disable-next-line max-len
-          display_name: `${worklog?.author?.displayName} - ${new Date(worklog?.started).toUTCString()} - ${worklog?.timeSpent}`,
+          display_name: `${worklog?.id} - ${worklog?.timeSpent}`,
+          desc:
+            `Id: ${worklog?.id}\n\nAuthor: ${worklog?.author?.displayName}\n\n` +
+            `Started: ${new Date(worklog?.started).toUTCString()}\n\nTime spent: ${worklog?.timeSpent}\n\n`,
         })
       )
     );

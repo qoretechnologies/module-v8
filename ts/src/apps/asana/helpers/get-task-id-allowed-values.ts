@@ -25,9 +25,10 @@ export const getAsanaTaskIdAllowedValues: TQoreGetAllowedValuesFunction = async 
 
   tasks.push(
     ...fetchedTasks.map(
-      (project: any): IQoreAllowedValue => ({
-        value: project.gid,
-        display_name: project.name,
+      (item: any): IQoreAllowedValue => ({
+        value: item.gid,
+        display_name: item.name,
+        short_desc: item.gid,
       })
     )
   );

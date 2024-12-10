@@ -25,9 +25,10 @@ export const getAsanaAssigneeIdAllowedValues: TQoreGetAllowedValuesFunction = as
 
   assignees.push(
     ...fetchedAssignees.map(
-      (team: any): IQoreAllowedValue => ({
-        value: team.gid,
-        display_name: team.name,
+      (item: any): IQoreAllowedValue => ({
+        value: item.gid,
+        display_name: item.name,
+        desc: `gid:${item.gid}\n\nAssignee: ${item.name}\n\nResource Type: ${item.resource_type}`,
       })
     )
   );

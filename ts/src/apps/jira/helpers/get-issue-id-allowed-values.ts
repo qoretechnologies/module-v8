@@ -37,6 +37,10 @@ export const getJiraIssueIdAllowedValues: TQoreGetAllowedValuesFunction<
         (issue: any): IQoreAllowedValue => ({
           value: issue.id,
           display_name: issue?.fields?.summary,
+          desc:
+            `Key: ${issue.key}\n\nId: ${issue.id}\n\nType: ${issue?.fields?.issuetype?.name}\n\n` +
+            `Project: ${issue?.fields?.project?.name}\n\nStatus: ${issue?.fields?.status?.name}\n\n` +
+            `Priority: ${issue?.fields?.priority?.name}\n\nAssignee: ${issue?.fields?.assignee?.displayName}\n\n`,
         })
       )
     );

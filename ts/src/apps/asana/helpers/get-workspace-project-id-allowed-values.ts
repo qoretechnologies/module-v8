@@ -28,6 +28,7 @@ export const getAsanaWorkspaceProjectIdAllowedValues: TQoreGetAllowedValuesFunct
       (project: any): IQoreAllowedValue => ({
         value: project.gid,
         display_name: project.name,
+        short_desc: project.gid,
       })
     )
   );

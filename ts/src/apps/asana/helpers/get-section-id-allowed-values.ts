@@ -28,6 +28,7 @@ export const getAsanaSectionIdAllowedValues: TQoreGetAllowedValuesFunction = asy
       (section: any): IQoreAllowedValue => ({
         value: section.gid,
         display_name: section.name,
+        short_desc: section.gid,
       })
     )
   );

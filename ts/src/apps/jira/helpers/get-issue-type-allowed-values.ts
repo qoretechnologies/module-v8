@@ -56,7 +56,8 @@ export const getJiraIssueTypeNameAllowedValues: TQoreGetAllowedValuesFunction<
     ...fetchedIssueTypes.map(
       (issueType: any): IQoreAllowedValue => ({
         value: issueType.name,
-        display_name: issueType.description,
+        display_name: issueType.name,
+        desc: issueType.description,
       })
     )
   );

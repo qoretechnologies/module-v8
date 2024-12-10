@@ -38,7 +38,10 @@ export const getJiraCommentIdAllowedValues: TQoreGetAllowedValuesFunction<
         (comment: any): IQoreAllowedValue => ({
           value: comment.id,
           // eslint-disable-next-line max-len
-          display_name: `${comment?.author?.displayName} - ${new Date(comment?.created).toUTCString()}`,
+          display_name: `${comment?.author?.displayName}`,
+          desc:
+            `Id: ${comment.id}\n\nAuthor: ${comment?.author?.displayName}\n\nCreated: ${comment.created}\n\n` +
+            `Link: [View comment] (${comment.self})`,
         })
       )
     );

@@ -28,6 +28,10 @@ export const getAsanaTimePeriodIdAllowedValues: TQoreGetAllowedValuesFunction = 
       (timePeriod: any): IQoreAllowedValue => ({
         value: timePeriod.gid,
         display_name: `${timePeriod.start_on} - ${timePeriod.end_on} (${timePeriod.display_name})`,
+        desc:
+          `gid:${timePeriod.gid}\n\nStart On: ${timePeriod.start_on}\n\n` +
+          `End On: ${timePeriod.end_on}\n\nDisplay Name: ${timePeriod.display_name}\n\n` +
+          `Period: ${timePeriod.period}`,
       })
     )
   );

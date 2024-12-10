@@ -32,6 +32,7 @@ const GetAccountIdConfig = {
     return ctx.conn_opts.accounts.map((info: any) => {
       return {
         display_name: info.account_name,
+        short_desc: info.account_id,
         value: info.account_id,
       };
     });
@@ -49,6 +50,7 @@ const GetEnvelopeIdAllowedValues = {
     path: 'envelopes?from_date=2010-01-01',
     values: 'body.envelopes.envelopeId',
     display_names: 'body.envelopes.emailSubject',
+    short_descs: 'body.envelopes.envelopeId',
   },
 } satisfies TQoreAppActionOverrideOption<typeof ESIGNATURE_CONN_OPTIONS>;
 

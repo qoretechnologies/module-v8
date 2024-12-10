@@ -26,6 +26,7 @@ export const getJiraProjectCategoryIdAllowedValues: TQoreGetAllowedValuesFunctio
       (projectCategory: any): IQoreAllowedValue => ({
         value: projectCategory.id,
         display_name: projectCategory.name,
+        desc: projectCategory.description,
       })
     )
   );
