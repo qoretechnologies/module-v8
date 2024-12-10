@@ -247,6 +247,7 @@ exports.actionsCatalogue = {
                             },
                         ];
                     },
+                    "allowed_values_creatable": true,
                     "example_value": 1,
                 },
                 "other": {

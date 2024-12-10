@@ -88,7 +88,7 @@ public class TypeScriptActionInterface {
 
         const TypeKeys = (
             "name", "display_name", "short_desc", "desc", "type", "example_value",
-            "default_value", "multiselect", "allowed_values", "attr", "required"
+            "default_value", "multiselect", "allowed_values", "allowed_values_creatable", "attr", "required"
         );
 
         const TypeScriptAppRestConnectionOptions = RestConnection::ConnectionScheme.options;

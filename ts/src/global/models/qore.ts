@@ -530,6 +530,9 @@ export interface IQoreAppActionOption<
   /** Mutually-exclusive with 'get_allowed_values'
    */
   rest_get_allowed_values?: IQoreRestGetAllowedValues;
+  // if true, then allowed_values can be extended with any user-provided value
+  allowed_values_creatable?: boolean;
+  // options that this option depends on
   depends_on?: string[];
   // a function that returns the default value for the field
   get_default_value?: TQoreGetDefaultValueFunction<CustomConnOptions>;
