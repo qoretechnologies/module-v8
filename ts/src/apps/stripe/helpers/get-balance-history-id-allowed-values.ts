@@ -42,8 +42,8 @@ export const getStripeBalanceHistoryIdAllowedValues: TQoreGetAllowedValuesFuncti
           value: item.id,
           display_name: `${item.object} - ${item.amount}`,
           desc:
-            `id: ${item.id}\nObject:${item.object}\nAmount:${item.amount}\n` +
-            `Currency:${item.currency}\nDescription:${item.description}` +
+            `id: ${item.id}\n\nObject:${item.object}\n\nAmount:${item.amount}\n\n` +
+            `Currency:${item.currency}\n\nDescription:${item.description}\n\n` +
             `Date:${new Date(item.created * 1000).toString()}`,
         })
       )

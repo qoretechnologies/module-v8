@@ -5,7 +5,8 @@ import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../globa
 export const CreateZendeskGetAllowedValuesFunction = (
   entity: string,
   displayNameField = 'name',
-  additionalParams: Record<string, string> = {}
+  additionalParams: Record<string, string> = {},
+  composeDescription?: (entity: any) => string
 ): TQoreGetAllowedValuesFunction<typeof ZENDESK_CONN_OPTIONS> => {
   return async (context): Promise<IQoreAllowedValue[]> => {
     const {
@@ -34,6 +35,7 @@ export const CreateZendeskGetAllowedValuesFunction = (
         (entity: { [x: string]: string; id: string }): IQoreAllowedValue => ({
           value: entity.id,
           display_name: entity[displayNameField],
+          ...(composeDescription && { desc: composeDescription(entity) }),
         })
       );
 

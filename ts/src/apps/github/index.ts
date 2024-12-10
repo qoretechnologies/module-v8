@@ -49,7 +49,7 @@ export default (locale: Locales) =>
       oauth2_client_secret: actionsCatalogue.getOauth2ClientSecret(GITHUB_APP_NAME),
       oauth2_auth_url: 'https://github.com/login/oauth/authorize',
       oauth2_token_url: 'https://github.com/login/oauth/access_token',
-      oauth2_scopes: ['repo', 'user'],
+      oauth2_scopes: ['repo', 'user', 'public_repo'],
       ping_method: 'GET',
       ping_path: '',
     },

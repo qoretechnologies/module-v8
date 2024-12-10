@@ -28,6 +28,7 @@ export const getAsanaTeamIdAllowedValues: TQoreGetAllowedValuesFunction = async 
       (team: any): IQoreAllowedValue => ({
         value: team.gid,
         display_name: team.name,
+        short_desc: team.gid,
       })
     )
   );
