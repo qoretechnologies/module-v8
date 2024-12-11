@@ -2,6 +2,7 @@ import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
 import { commonEventFieldsType } from './constants';
 import { getGitHubRepositoryIdAllowedValues } from '../helpers/get-repository-id-allowed-values';
+import { getGitHubOwnerAllowedValues } from '../helpers/get-owner-allowed-values';
 
 export default {
   action: 'new_review_request',
@@ -15,6 +16,8 @@ export default {
       required: true,
     },
     owner: {
+      get_allowed_values: getGitHubOwnerAllowedValues,
+      allowed_values_creatable: true,
       type: 'string',
       required: true,
     },

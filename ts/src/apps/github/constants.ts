@@ -1,26 +1,33 @@
-import { TAllowedPaths } from '../../global/models/qore';
+import { TAllowedPaths, TQoreAppActionOverrideOption } from '../../global/models/qore';
 import { getGitHubBranchIdAllowedValues } from './helpers/get-branch-id-allowed-values';
 import { getGitHubIssueIdAllowedValues } from './helpers/get-issue-id-allowed-values';
+import { getGitHubOwnerAllowedValues } from './helpers/get-owner-allowed-values';
 import { getGitHubPullIdAllowedValues } from './helpers/get-pull-id-allowed-values';
 import { getGitHubRepositoryIdAllowedValues } from './helpers/get-repository-id-allowed-values';
 
 export const GITHUB_APP_NAME = 'Github';
+
+const repoOwnerCommonOptions = {
+  repo: {
+    get_allowed_values: getGitHubRepositoryIdAllowedValues,
+    allowed_values_creatable: true,
+  },
+  owner: {
+    get_allowed_values: getGitHubOwnerAllowedValues,
+    allowed_values_creatable: true,
+  },
+} satisfies Record<string, TQoreAppActionOverrideOption>;
+
 export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
   '/repos/{owner}/{repo}/pulls': {
     GET: {
       override_options: {
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
       },
     },
     POST: {
       override_options: {
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
         title: { required: true },
         head: { required: true },
         base: { required: true },
@@ -31,48 +38,33 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
   '/repos/{owner}/{repo}/pulls/{pull_number}': {
     GET: {
       override_options: {
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
       },
     },
     PATCH: {
       override_options: {
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
       },
     },
   },
   '/repos/{owner}/{repo}/issues': {
     GET: {
       override_options: {
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
       },
     },
     POST: {
       override_options: {
         title: { required: true },
         body: { required: true },
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
       },
     },
   },
   '/repos/{owner}/{repo}/issues/{issue_number}': {
     GET: {
       override_options: {
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
         issue_number: {
           get_allowed_values: getGitHubIssueIdAllowedValues,
           allowed_values_creatable: true,
@@ -82,10 +74,7 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
     },
     PATCH: {
       override_options: {
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
         issue_number: {
           get_allowed_values: getGitHubIssueIdAllowedValues,
           allowed_values_creatable: true,
@@ -97,30 +86,21 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
   '/repos/{owner}/{repo}/commits': {
     GET: {
       override_options: {
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
       },
     },
   },
   '/repos/{owner}/{repo}/branches': {
     GET: {
       override_options: {
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
       },
     },
   },
   '/repos/{owner}/{repo}/releases': {
     GET: {
       override_options: {
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
       },
     },
     POST: {
@@ -128,20 +108,14 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
         tag_name: { required: true },
         name: { required: true },
         body: { required: true },
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
       },
     },
   },
   '/repos/{owner}/{repo}/contributors': {
     GET: {
       override_options: {
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
       },
     },
   },
@@ -159,52 +133,34 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
   '/repos/{owner}/{repo}': {
     GET: {
       override_options: {
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
       },
     },
     PATCH: {
       override_options: {
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
       },
     },
     DELETE: {
       override_options: {
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
       },
     },
   },
   '/repos/{owner}/{repo}/contents/{path}': {
     GET: {
       override_options: {
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
       },
     },
     PUT: {
       override_options: {
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
       },
     },
     DELETE: {
       override_options: {
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
       },
     },
   },
@@ -228,20 +184,14 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
   '/repos/{owner}/{repo}/collaborators': {
     GET: {
       override_options: {
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
       },
     },
   },
   '/repos/{owner}/{repo}/actions/workflows': {
     GET: {
       override_options: {
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
       },
     },
   },
@@ -249,10 +199,7 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
     POST: {
       override_options: {
         assignees: { required: true },
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
         issue_number: {
           get_allowed_values: getGitHubIssueIdAllowedValues,
           allowed_values_creatable: true,
@@ -263,10 +210,7 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
     DELETE: {
       override_options: {
         assignees: { required: true },
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
         issue_number: {
           get_allowed_values: getGitHubIssueIdAllowedValues,
           allowed_values_creatable: true,
@@ -278,10 +222,7 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
   '/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers': {
     POST: {
       override_options: {
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
         pull_number: {
           get_allowed_values: getGitHubPullIdAllowedValues,
           depends_on: ['owner', 'repo'],
@@ -292,10 +233,7 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
     },
     DELETE: {
       override_options: {
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
         pull_number: {
           get_allowed_values: getGitHubPullIdAllowedValues,
           depends_on: ['owner', 'repo'],
@@ -304,10 +242,7 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
     },
     GET: {
       override_options: {
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
         pull_number: {
           get_allowed_values: getGitHubPullIdAllowedValues,
           depends_on: ['owner', 'repo'],
@@ -318,10 +253,7 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
   '/repos/{owner}/{repo}/git/refs': {
     POST: {
       override_options: {
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
         ref: { required: true },
         sha: { required: true },
       },
@@ -330,10 +262,7 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
   '/repos/{owner}/{repo}/branches/{branch}': {
     GET: {
       override_options: {
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
         branch: {
           get_allowed_values: getGitHubBranchIdAllowedValues,
           depends_on: ['owner', 'repo'],
@@ -348,26 +277,17 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
         secret_name: { required: true },
         encrypted_value: { required: true },
         key_id: { required: true },
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
       },
     },
     DELETE: {
       override_options: {
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
       },
     },
     GET: {
       override_options: {
-        repo: {
-          get_allowed_values: getGitHubRepositoryIdAllowedValues,
-          allowed_values_creatable: true,
-        },
+        ...repoOwnerCommonOptions,
       },
     },
   },

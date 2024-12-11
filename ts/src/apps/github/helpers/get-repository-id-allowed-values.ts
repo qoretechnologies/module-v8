@@ -1,35 +1,43 @@
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
 
-type TGithubRepo = {
-  id: number;
-  name: string;
-  full_name: string;
-  description: string;
-};
+const PER_PAGE = 100;
 
 export const getGitHubRepositoryIdAllowedValues: TQoreGetAllowedValuesFunction = async (
   context
 ): Promise<IQoreAllowedValue[]> => {
   const { Octokit } = await import('@octokit/rest');
-  const octokit = new Octokit({});
 
   const {
     conn_opts: { token },
+    opts: { owner },
   } = context;
-
-  const repos = await octokit.paginate(`GET https://api.github.com/user/repos`, {
-    per_page: 100,
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
+  const octokit = new Octokit({
+    auth: token,
   });
 
-  return repos.map(
-    (repo: TGithubRepo): IQoreAllowedValue => ({
-      value: repo.id.toString(),
-      display_name: repo.name,
-      short_desc: repo.full_name,
-      desc: repo.description,
-    })
-  );
+  try {
+    let repos = [];
+
+    if (owner) {
+      repos = await octokit.paginate(`GET /search/repositories`, {
+        q: `user:${owner}`,
+        per_page: PER_PAGE,
+      });
+    } else {
+      repos = await octokit.paginate(`GET /user/repos`, {
+        per_page: PER_PAGE,
+      });
+    }
+
+    return repos.map(
+      (repo): IQoreAllowedValue => ({
+        value: repo.id.toString(),
+        display_name: repo.name,
+        short_desc: repo.full_name,
+        desc: repo.description,
+      })
+    );
+  } catch (err) {
+    return [];
+  }
 };
