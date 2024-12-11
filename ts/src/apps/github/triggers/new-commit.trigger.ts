@@ -1,6 +1,8 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
 import { commonEventFieldsType } from './constants';
+import { getGitHubRepositoryIdAllowedValues } from '../helpers/get-repository-id-allowed-values';
+import { getGitHubOwnerAllowedValues } from '../helpers/get-owner-allowed-values';
 
 export default {
   action: 'new_commit',
@@ -9,9 +11,13 @@ export default {
   options: {
     repo: {
       type: 'string',
+      get_allowed_values: getGitHubRepositoryIdAllowedValues,
+      allowed_values_creatable: true,
       required: true,
     },
     owner: {
+      get_allowed_values: getGitHubOwnerAllowedValues,
+      allowed_values_creatable: true,
       type: 'string',
       required: true,
     },
@@ -55,7 +61,7 @@ export default {
         headers: {
           Authorization: `Bearer ${token}`,
         },
-        path: `repos/${owner}/${repo}/hooks/${webhook.id}`,
+        path: `/repos/${owner}/${repo}/hooks/${webhook.id}`,
       },
       { url: `https://api.github.com`, endpointId: 'Github' }
     );
