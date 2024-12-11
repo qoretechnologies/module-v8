@@ -1,4 +1,5 @@
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
+import { Octokit } from '@octokit/rest';
 
 const PER_PAGE = 100;
 const MAX_ITEMS = 300;
@@ -6,8 +7,6 @@ const MAX_ITEMS = 300;
 export const getGitHubOwnerAllowedValues: TQoreGetAllowedValuesFunction = async (
   context
 ): Promise<IQoreAllowedValue[]> => {
-  const { Octokit } = await import('@octokit/rest');
-
   const {
     conn_opts: { token },
     opts: { repo },
