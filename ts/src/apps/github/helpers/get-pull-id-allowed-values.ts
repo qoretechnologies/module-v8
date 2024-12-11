@@ -1,9 +1,9 @@
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
+import { Octokit } from '@octokit/rest';
 
 export const getGitHubPullIdAllowedValues: TQoreGetAllowedValuesFunction = async (
   context
 ): Promise<IQoreAllowedValue[]> => {
-  const { Octokit } = await import('@octokit/rest');
   const {
     conn_opts: { token },
     opts: { owner, repo },
