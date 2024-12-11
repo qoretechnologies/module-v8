@@ -1,4 +1,6 @@
 import { GITHUB_ACTIONS } from '../apps/github';
+import { TQoreAppActionWithWebhook } from '../global/models/qore';
+import * as GITHUB_TRIGGERS from '../apps/github/triggers';
 
 let connection: string;
 
@@ -8,11 +10,12 @@ describe('Tests Github Actions', () => {
   let pullNumber: number;
   let sha: string;
   let fileSha: string;
+  const token = process.env.GH_PAT;
 
   beforeAll(() => {
     connection = testApi.createConnection('github', {
       opts: {
-        token: process.env.GH_PAT,
+        token,
       },
     });
 
@@ -34,6 +37,211 @@ describe('Tests Github Actions', () => {
     expect(body).toBeDefined();
     expect(body.name).toBe(repoName);
     repository = { name: body.name, owner: body.owner.login };
+  });
+
+  describe('Should test webhook creation for repository', () => {
+    it('Should create new branch webhook', async () => {
+      const trigger: Partial<TQoreAppActionWithWebhook> = GITHUB_TRIGGERS['newBranch'];
+
+      expect(trigger).toBeDefined();
+      expect(repository?.name).toBeDefined();
+      expect(repository?.owner).toBeDefined();
+
+      const response = await trigger.webhook_register(
+        {
+          conn_opts: { token },
+          opts: { owner: repository.owner, repo: repository.name },
+        },
+        'https://webhook.site/'
+      );
+
+      expect(response).toBeDefined();
+
+      if (response) {
+        await trigger.webhook_deregister(
+          {
+            conn_opts: { token },
+            opts: { owner: repository.owner, repo: repository.name },
+          },
+          '',
+          response
+        );
+      }
+    });
+
+    it('Should create new commit comment webhook', async () => {
+      const trigger: Partial<TQoreAppActionWithWebhook> = GITHUB_TRIGGERS['newCommitComment'];
+
+      expect(trigger).toBeDefined();
+      expect(repository?.name).toBeDefined();
+      expect(repository?.owner).toBeDefined();
+
+      const response = await trigger.webhook_register(
+        {
+          conn_opts: { token },
+          opts: { owner: repository.owner, repo: repository.name },
+        },
+        'https://webhook.site/'
+      );
+
+      expect(response).toBeDefined();
+
+      if (response) {
+        await trigger.webhook_deregister(
+          {
+            conn_opts: { token },
+            opts: { owner: repository.owner, repo: repository.name },
+          },
+          '',
+          response
+        );
+      }
+    });
+
+    it('Should create new commit webhook', async () => {
+      const trigger: Partial<TQoreAppActionWithWebhook> = GITHUB_TRIGGERS['newCommit'];
+
+      expect(trigger).toBeDefined();
+      expect(repository?.name).toBeDefined();
+      expect(repository?.owner).toBeDefined();
+
+      const response = await trigger.webhook_register(
+        {
+          conn_opts: { token },
+          opts: { owner: repository.owner, repo: repository.name },
+        },
+        'https://webhook.site/'
+      );
+
+      expect(response).toBeDefined();
+
+      if (response) {
+        await trigger.webhook_deregister(
+          {
+            conn_opts: { token },
+            opts: { owner: repository.owner, repo: repository.name },
+          },
+          '',
+          response
+        );
+      }
+    });
+
+    it('Should create new issue webhook', async () => {
+      const trigger: Partial<TQoreAppActionWithWebhook> = GITHUB_TRIGGERS['newRepositoryIssue'];
+
+      expect(trigger).toBeDefined();
+      expect(repository?.name).toBeDefined();
+      expect(repository?.owner).toBeDefined();
+
+      const response = await trigger.webhook_register(
+        {
+          conn_opts: { token },
+          opts: { owner: repository.owner, repo: repository.name },
+        },
+        'https://webhook.site/'
+      );
+
+      expect(response).toBeDefined();
+
+      if (response) {
+        await trigger.webhook_deregister(
+          {
+            conn_opts: { token },
+            opts: { owner: repository.owner, repo: repository.name },
+          },
+          '',
+          response
+        );
+      }
+    });
+
+    it('Should create new pull request webhook', async () => {
+      const trigger: Partial<TQoreAppActionWithWebhook> = GITHUB_TRIGGERS['newPullRequest'];
+
+      expect(trigger).toBeDefined();
+      expect(repository?.name).toBeDefined();
+      expect(repository?.owner).toBeDefined();
+
+      const response = await trigger.webhook_register(
+        {
+          conn_opts: { token },
+          opts: { owner: repository.owner, repo: repository.name },
+        },
+        'https://webhook.site/'
+      );
+
+      expect(response).toBeDefined();
+
+      if (response) {
+        await trigger.webhook_deregister(
+          {
+            conn_opts: { token },
+            opts: { owner: repository.owner, repo: repository.name },
+          },
+          '',
+          response
+        );
+      }
+    });
+
+    it('Should create new release webhook', async () => {
+      const trigger: Partial<TQoreAppActionWithWebhook> = GITHUB_TRIGGERS['newRelease'];
+
+      expect(trigger).toBeDefined();
+      expect(repository?.name).toBeDefined();
+      expect(repository?.owner).toBeDefined();
+
+      const response = await trigger.webhook_register(
+        {
+          conn_opts: { token },
+          opts: { owner: repository.owner, repo: repository.name },
+        },
+        'https://webhook.site/'
+      );
+
+      expect(response).toBeDefined();
+
+      if (response) {
+        await trigger.webhook_deregister(
+          {
+            conn_opts: { token },
+            opts: { owner: repository.owner, repo: repository.name },
+          },
+          '',
+          response
+        );
+      }
+    });
+
+    it('Should create new review request webhook', async () => {
+      const trigger: Partial<TQoreAppActionWithWebhook> = GITHUB_TRIGGERS['newReviewRequest'];
+
+      expect(trigger).toBeDefined();
+      expect(repository?.name).toBeDefined();
+      expect(repository?.owner).toBeDefined();
+
+      const response = await trigger.webhook_register(
+        {
+          conn_opts: { token },
+          opts: { owner: repository.owner, repo: repository.name },
+        },
+        'https://webhook.site/'
+      );
+
+      expect(response).toBeDefined();
+
+      if (response) {
+        await trigger.webhook_deregister(
+          {
+            conn_opts: { token },
+            opts: { owner: repository.owner, repo: repository.name },
+          },
+          '',
+          response
+        );
+      }
+    });
   });
 
   it('Should list repositories for user', async () => {
