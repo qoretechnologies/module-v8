@@ -321,6 +321,9 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         if (remove type_hash.multiselect) {
             info.multiselect = True;
         }
+        if (remove type_hash.allowed_values_creatable) {
+            info.allowed_values_creatable = True;
+        }
         if ((*string str = remove type_hash.display_name).val()) {
             info.display_name = str;
         } else if (!info.display_name) {
