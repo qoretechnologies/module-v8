@@ -21,9 +21,7 @@ const repoOwnerCommonOptions = {
 export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
   '/repos/{owner}/{repo}/pulls': {
     GET: {
-      override_options: {
-        ...repoOwnerCommonOptions,
-      },
+      override_options: repoOwnerCommonOptions,
     },
     POST: {
       override_options: {
@@ -37,21 +35,15 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
   },
   '/repos/{owner}/{repo}/pulls/{pull_number}': {
     GET: {
-      override_options: {
-        ...repoOwnerCommonOptions,
-      },
+      override_options: repoOwnerCommonOptions,
     },
     PATCH: {
-      override_options: {
-        ...repoOwnerCommonOptions,
-      },
+      override_options: repoOwnerCommonOptions,
     },
   },
   '/repos/{owner}/{repo}/issues': {
     GET: {
-      override_options: {
-        ...repoOwnerCommonOptions,
-      },
+      override_options: repoOwnerCommonOptions,
     },
     POST: {
       override_options: {
@@ -85,23 +77,17 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
   },
   '/repos/{owner}/{repo}/commits': {
     GET: {
-      override_options: {
-        ...repoOwnerCommonOptions,
-      },
+      override_options: repoOwnerCommonOptions,
     },
   },
   '/repos/{owner}/{repo}/branches': {
     GET: {
-      override_options: {
-        ...repoOwnerCommonOptions,
-      },
+      override_options: repoOwnerCommonOptions,
     },
   },
   '/repos/{owner}/{repo}/releases': {
     GET: {
-      override_options: {
-        ...repoOwnerCommonOptions,
-      },
+      override_options: repoOwnerCommonOptions,
     },
     POST: {
       override_options: {
@@ -114,9 +100,7 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
   },
   '/repos/{owner}/{repo}/contributors': {
     GET: {
-      override_options: {
-        ...repoOwnerCommonOptions,
-      },
+      override_options: repoOwnerCommonOptions,
     },
   },
   '/orgs/{org}/members': {
@@ -132,36 +116,24 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
   },
   '/repos/{owner}/{repo}': {
     GET: {
-      override_options: {
-        ...repoOwnerCommonOptions,
-      },
+      override_options: repoOwnerCommonOptions,
     },
     PATCH: {
-      override_options: {
-        ...repoOwnerCommonOptions,
-      },
+      override_options: repoOwnerCommonOptions,
     },
     DELETE: {
-      override_options: {
-        ...repoOwnerCommonOptions,
-      },
+      override_options: repoOwnerCommonOptions,
     },
   },
   '/repos/{owner}/{repo}/contents/{path}': {
     GET: {
-      override_options: {
-        ...repoOwnerCommonOptions,
-      },
+      override_options: repoOwnerCommonOptions,
     },
     PUT: {
-      override_options: {
-        ...repoOwnerCommonOptions,
-      },
+      override_options: repoOwnerCommonOptions,
     },
     DELETE: {
-      override_options: {
-        ...repoOwnerCommonOptions,
-      },
+      override_options: repoOwnerCommonOptions,
     },
   },
   '/issues': {
@@ -183,16 +155,12 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
   },
   '/repos/{owner}/{repo}/collaborators': {
     GET: {
-      override_options: {
-        ...repoOwnerCommonOptions,
-      },
+      override_options: repoOwnerCommonOptions,
     },
   },
   '/repos/{owner}/{repo}/actions/workflows': {
     GET: {
-      override_options: {
-        ...repoOwnerCommonOptions,
-      },
+      override_options: repoOwnerCommonOptions,
     },
   },
   '/repos/{owner}/{repo}/issues/{issue_number}/assignees': {
@@ -281,14 +249,10 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
       },
     },
     DELETE: {
-      override_options: {
-        ...repoOwnerCommonOptions,
-      },
+      override_options: repoOwnerCommonOptions,
     },
     GET: {
-      override_options: {
-        ...repoOwnerCommonOptions,
-      },
+      override_options: repoOwnerCommonOptions,
     },
   },
   '/repos/{owner}/{repo}/actions/secrets/public-key': { GET: {} },
