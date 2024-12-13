@@ -1,5 +1,6 @@
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
 import { Octokit } from '@octokit/rest';
+import { Debugger } from '../../../utils/Debugger';
 
 const PER_PAGE = 100;
 
@@ -12,6 +13,11 @@ export const getGitHubRepositoryIdAllowedValues: TQoreGetAllowedValuesFunction =
   } = context;
   const octokit = new Octokit({
     auth: token,
+  });
+
+  Debugger.log('Github Repo allowed values opts', {
+    opts: context.opts,
+    isTokenPresent: !!token,
   });
 
   try {
@@ -34,9 +40,12 @@ export const getGitHubRepositoryIdAllowedValues: TQoreGetAllowedValuesFunction =
         display_name: repo.name,
         short_desc: repo.full_name,
         desc: repo.description,
+        image: repo.owner?.avatar_url,
       })
     );
   } catch (err) {
+    Debugger.log('Github Repo allowed values error', err);
+
     return [];
   }
 };

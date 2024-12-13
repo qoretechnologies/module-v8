@@ -1,5 +1,6 @@
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
 import { Octokit } from '@octokit/rest';
+import { Debugger } from '../../../utils/Debugger';
 
 export const getGitHubIssueIdAllowedValues: TQoreGetAllowedValuesFunction = async (
   context
@@ -10,6 +11,11 @@ export const getGitHubIssueIdAllowedValues: TQoreGetAllowedValuesFunction = asyn
   } = context;
   const octokit = new Octokit({
     auth: token,
+  });
+
+  Debugger.log('Github Issue allowed values opts', {
+    opts: context.opts,
+    isTokenPresent: !!token,
   });
 
   const issues = await octokit.paginate(`GET /repos/{owner}/{repo}/issues`, {
@@ -26,6 +32,7 @@ export const getGitHubIssueIdAllowedValues: TQoreGetAllowedValuesFunction = asyn
         `Title:${issue.title}\n\n` +
         `Labels: [${issue.labels.map((label) => (typeof label === 'string' ? label : label.name)).join(', ')}]`,
       desc: issue.body,
+      image: issue.user?.avatar_url,
     })
   );
 };

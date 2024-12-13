@@ -19,7 +19,10 @@ export const getGitHubOwnerAllowedValues: TQoreGetAllowedValuesFunction = async 
   try {
     let repos = [];
 
-    Debugger.log('What is the repo', repo);
+    Debugger.log('Github Owner allowed values opts', {
+      opts: context.opts,
+      isTokenPresent: !!token,
+    });
 
     if (repo) {
       let itemCount = 0;
@@ -41,9 +44,13 @@ export const getGitHubOwnerAllowedValues: TQoreGetAllowedValuesFunction = async 
 
       repos = foundRepos.filter((repository) => repository.name === repo);
     } else {
-      repos = await octokit.paginate(`GET /user/repos`, {
+      const userRepos = await octokit.paginate(`GET /user/repos`, {
         per_page: PER_PAGE,
       });
+
+      repos = Array.from(
+        new Map(userRepos.map((repository) => [repository.owner.login, repository])).values()
+      );
     }
 
     return repos.map(
@@ -51,9 +58,12 @@ export const getGitHubOwnerAllowedValues: TQoreGetAllowedValuesFunction = async 
         value: repo?.owner?.login,
         display_name: repo?.owner?.login,
         desc: `Type: ${repo.owner.type}\n\n Link: [View on GitHub](${repo.owner.url})`,
+        image: repo?.owner?.avatar_url,
       })
     );
   } catch (err) {
+    Debugger.log('Github Owner allowed values error', err);
+
     return [];
   }
 };
