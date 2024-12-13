@@ -18,7 +18,8 @@
     "test:ci": "dotenv -e .env -- jest --config src/jest.config.ts",
     "test": "clear && yarn test:ci",
     "qtest": "clear && jest --config src/jest.config.ts --testMatch '**/?(*.)+(qtest).[tj]s?(x)'",
-    "precheck": "yarn build:test && yarn test"
+    "precheck": "yarn build:test && yarn test",
+    "update-reqore": "yarn add -D @qoretechnologies/reqore@beta"
   },
   "author": "Qore Technologies s.r.o.",
   "license": "MIT",
@@ -49,7 +50,7 @@
     "whatwg-url": "^14.0.0"
   },
   "devDependencies": {
-    "@qoretechnologies/reqore": "^0.48.3",
+    "@qoretechnologies/reqore": "^0.48.20",
     "@types/is-base64": "^1.1.3",
     "@types/jest": "^29.5.12",
     "@types/libsodium-wrappers": "^0.7.14",

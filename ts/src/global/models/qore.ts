@@ -1,3 +1,4 @@
+import { IReqoreIconName } from '@qoretechnologies/reqore/dist/types/icons';
 import { Locales } from 'i18n/i18n-types';
 import { OpenAPIV2 } from 'openapi-types';
 import { StrictRecord } from './utils';
@@ -14,6 +15,7 @@ export type TRestGetAllowedValuesMethod = TWebhookHttpMethod;
 export type TCustomConnOptions = Record<string, IQoreConnectionOption>;
 export type TCustomFields<CustomConnOptions extends TCustomConnOptions = TCustomConnOptions> =
   Record<string, IQoreAppActionOption<TQoreType, unknown, CustomConnOptions>>;
+export type TQoreOptionOnChangeEvents = 'refetch';
 
 export type TAllowedPaths<CustomConnOptions extends TCustomConnOptions = TCustomConnOptions> =
   Record<string, Partial<Record<THttpMethod, IAllowedPathData<CustomConnOptions>>>>;
@@ -438,6 +440,8 @@ export type GetResponseDefinitionFromQoreType<T extends TQoreType> =
 
 export interface IQoreAllowedValue<TypeValue = unknown> extends IQoreAppShared {
   value: TypeValue;
+  icon?: IReqoreIconName;
+  image?: string;
 }
 
 export type TQoreGetDependentOptionsFunction = (
@@ -539,6 +543,8 @@ export interface IQoreAppActionOption<
   attr?: Record<string, any>; // an optional data object with any properties
   sensitive?: boolean;
   required_groups?: string[];
+  // A list of events (strings) that represent what should happen when the option values changes
+  on_change?: TQoreOptionOnChangeEvents[];
 }
 
 export type TQoreAppActionOverrideOption<
