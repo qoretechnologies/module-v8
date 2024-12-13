@@ -1,5 +1,6 @@
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
 import { Octokit } from '@octokit/rest';
+import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
+import { Debugger } from '../../../utils/Debugger';
 
 const PER_PAGE = 100;
 const MAX_ITEMS = 300;
@@ -17,6 +18,8 @@ export const getGitHubOwnerAllowedValues: TQoreGetAllowedValuesFunction = async 
   });
   try {
     let repos = [];
+
+    Debugger.log('What is the repo', repo);
 
     if (repo) {
       let itemCount = 0;
