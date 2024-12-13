@@ -910,11 +910,13 @@ public class TypeScriptActionInterface {
                     "this property cannot be defined when \"swagger_path\" (%y) is also defined for the action",
                     action.app, action.action, swagger_path);
             }
+            *softlist<string> independent_path_vars = remove action.independent_path_vars;
 
             # check for path vars0
             *hash<string, bool> path_vars = map {$1: True}, (swagger_path =~ x/\{([^\}]*)}/g);
             TypeScriptActionApiWithSchemaDataProvider dp(\action, swagger_path, api, path_vars,
-                app_conn_opt_map{app.name.lwr()}, remove action.override_options, pool);
+                (map {$1: True}, independent_path_vars), app_conn_opt_map{app.name.lwr()},
+                remove action.override_options, pool);
             child = dp;
 
             action.output_type = child.getResponseType();
