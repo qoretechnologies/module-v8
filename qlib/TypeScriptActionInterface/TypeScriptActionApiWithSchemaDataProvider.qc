@@ -49,6 +49,9 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         #! Path vars
         *hash<string, bool> path_vars;
 
+        #! Independent path vars
+        *hash<string, bool> independent_path_vars;
+
         #! Info on flattened request types: top-level key -> actual location
         *hash<string, list<string>> reqmap;
 
@@ -70,7 +73,8 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
 
     #! Creates the object from the arguments
     constructor(reference<hash<auto>> action, string swagger_path, *hash<AsyncCallInfo> api,
-            *hash<string, bool> path_vars, *hash<string, string> conn_opt_map, *hash<auto> override_options,
+            *hash<string, bool> path_vars, *hash<string, bool> independent_path_vars,
+            *hash<string, string> conn_opt_map, *hash<auto> override_options,
             JavaScriptProgramPool pool) : TypeScriptActionApiDataProvider(action.action, api) {
         self.swagger_path = swagger_path;
         self.conn_opt_map = conn_opt_map;
@@ -150,10 +154,12 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
 
             hash<string, bool> dm;
             foreach string path in (keys path_vars) {
-                if (dm) {
-                    depmap{path} = dm;
+                if (!independent_path_vars{path}) {
+                    if (dm) {
+                        depmap{path} = dm;
+                    }
+                    dm{path} = True;
                 }
-                dm{path} = True;
             }
 
             if (request_type) {
