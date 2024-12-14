@@ -1,5 +1,6 @@
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
 import { Octokit } from '@octokit/rest';
+import { Debugger } from '../../../utils/Debugger';
 
 export const getGitHubPullIdAllowedValues: TQoreGetAllowedValuesFunction = async (
   context
@@ -10,6 +11,11 @@ export const getGitHubPullIdAllowedValues: TQoreGetAllowedValuesFunction = async
   } = context;
   const octokit = new Octokit({
     auth: token,
+  });
+
+  Debugger.log('Github Pull allowed values opts', {
+    opts: context.opts,
+    isTokenPresent: !!token,
   });
 
   const pulls = await octokit.paginate(`GET /repos/{owner}/{repo}/pulls`, {
@@ -23,6 +29,7 @@ export const getGitHubPullIdAllowedValues: TQoreGetAllowedValuesFunction = async
       value: pull.number.toString(),
       display_name: pull.title,
       desc: pull.body,
+      image: pull.user?.avatar_url,
     })
   );
 };

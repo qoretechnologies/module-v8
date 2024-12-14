@@ -14,7 +14,7 @@ export function Log(
     const originalMethod = descriptor.value;
 
     descriptor.value = function (...args: any[]) {
-      Debugger.log(message, level, args);
+      Debugger.log(message, args, level);
 
       return originalMethod.apply(this, args);
     };

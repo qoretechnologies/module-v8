@@ -9,7 +9,11 @@ import { Log } from '../decorators/Logger';
 import { IQoreApp, IQoreAppWithActions, TQoreAppAction, TQoreApps } from '../global/models/qore';
 import { Locales } from '../i18n/i18n-types';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
-import { DebugLevels } from '../utils/Debugger';
+import { Debugger, DebugLevels } from '../utils/Debugger';
+
+if (process.env.TS_DEBUG) {
+  Debugger.level = DebugLevels.Verbose;
+}
 
 PiecesAppCatalogue.registerApps();
 
@@ -23,7 +27,7 @@ class ActionsCatalogue {
 
   constructor(public locale: Locales = 'en') {}
 
-  @Log('Initializing the Actions Catalogue', DebugLevels.Info)
+  @Log('Initializing the Actions Catalogue')
   registerAppActions(api: IQoreApi) {
     // Initialize the Qorus Apps Catalogue, this will load all the apps
     this.initializeCatalogue();
