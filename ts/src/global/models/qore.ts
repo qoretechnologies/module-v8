@@ -294,7 +294,8 @@ export type TQoreGetAllowedValuesFunction<
 
 export type TQoreGetDefaultValueFunction<
   CustomConnOptions extends TCustomConnOptions = TCustomConnOptions,
-> = (context?: TQoreAppActionFunctionContext<CustomConnOptions>) => any | Promise<any>;
+  TypeValue = unknown,
+> = (context?: TQoreAppActionFunctionContext<CustomConnOptions>) => TypeValue | Promise<TypeValue>;
 
 export type TQoreStringCompatibleType =
   | 'string'
@@ -537,9 +538,10 @@ export interface IQoreAppActionOption<
   // if true, then allowed_values can be extended with any user-provided value
   allowed_values_creatable?: boolean;
   // options that this option depends on
-  depends_on?: string[];
+  // if the element is a list of strings, it means that the option depends on either of the listed options
+  depends_on?: string[] | string[][];
   // a function that returns the default value for the field
-  get_default_value?: TQoreGetDefaultValueFunction<CustomConnOptions>;
+  get_default_value?: TQoreGetDefaultValueFunction<CustomConnOptions, TypeValue>;
   attr?: Record<string, any>; // an optional data object with any properties
   sensitive?: boolean;
   required_groups?: string[];
