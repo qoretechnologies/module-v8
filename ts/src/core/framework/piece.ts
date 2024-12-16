@@ -4,6 +4,7 @@ import { PieceBase, PieceMetadata } from './piece-metadata';
 import { PieceAuthProperty } from './property/authentication';
 import { PieceCategory } from '../shared/pieces';
 import { EventPayload, ParseEventResponse } from '../shared/engine';
+import { TQorePartialEventAction } from '../../global/models/qore';
 
 export class Piece<PieceAuth extends PieceAuthProperty = PieceAuthProperty>
   implements Omit<PieceBase, 'version' | 'name'>
@@ -23,7 +24,8 @@ export class Piece<PieceAuth extends PieceAuthProperty = PieceAuthProperty>
     public readonly minimumSupportedRelease?: string,
     public readonly maximumSupportedRelease?: string,
     public readonly description = '',
-    public readonly logo: string = ''
+    public readonly logo: string = '',
+    public readonly qoreTriggers: TQorePartialEventAction[] = []
   ) {
     actions.forEach((action) => (this._actions[action.name] = action));
     triggers.forEach((trigger) => (this._triggers[trigger.name] = trigger));
@@ -42,6 +44,7 @@ export class Piece<PieceAuth extends PieceAuthProperty = PieceAuthProperty>
       minimumSupportedRelease: this.minimumSupportedRelease,
       maximumSupportedRelease: this.maximumSupportedRelease,
       logo: this.logo,
+      qoreTriggers: this.qoreTriggers,
     };
   }
 
@@ -77,7 +80,8 @@ export const createPiece = <PieceAuth extends PieceAuthProperty>(
     params.minimumSupportedRelease,
     params.maximumSupportedRelease,
     params.description,
-    params.logo
+    params.logo,
+    params.qoreTriggers ?? []
   );
 };
 
@@ -94,6 +98,7 @@ type CreatePieceParams<PieceAuth extends PieceAuthProperty = PieceAuthProperty> 
   actions: Action<PieceAuth>[];
   triggers: Trigger<PieceAuth>[];
   categories?: PieceCategory[];
+  qoreTriggers?: TQorePartialEventAction[];
 };
 
 type PieceEventProcessors = {

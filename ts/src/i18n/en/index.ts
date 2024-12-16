@@ -84,6 +84,38 @@ const en = {
       displayName: 'Notion',
       shortDesc: 'Collection of actions to interact with Notion API',
       longDesc: 'Collection of actions to interact with Notion API',
+      triggers: {
+        new_database_item: {
+          displayName: 'New Database Item',
+          shortDesc: 'Triggers when a new item is added to a database',
+          longDesc: 'Triggers when a new item is added to a database',
+          options: {
+            databaseId: {
+              displayName: 'Database ID',
+              shortDesc: 'The ID of the database to watch for new items',
+              longDesc: 'The ID of the database to watch for new items',
+            },
+          },
+          event_info: {
+            desc: 'Notion New Database Item Event Info',
+          },
+        },
+        updated_database_item: {
+          displayName: 'Updated Database Item',
+          shortDesc: 'Triggers when an item in a database is updated',
+          longDesc: 'Triggers when an item in a database is updated',
+          options: {
+            databaseId: {
+              displayName: 'Database ID',
+              shortDesc: 'The ID of the database to watch for updates',
+              longDesc: 'The ID of the database to watch for updates',
+            },
+          },
+          event_info: {
+            desc: 'Notion Updated Database Item Event Info',
+          },
+        },
+      },
     },
     Jira: {
       displayName: 'Jira',

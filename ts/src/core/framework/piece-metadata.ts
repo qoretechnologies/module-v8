@@ -10,6 +10,7 @@ import { Static, Type } from '@sinclair/typebox';
 import { PackageType, PieceCategory, PieceType } from '../shared/pieces';
 import { ProjectId } from '../shared/project';
 import { TriggerTestStrategy } from '../shared/flows';
+import { TQorePartialEventAction } from '../../global/models/qore';
 
 export const PieceBase = Type.Object({
   id: Type.Optional(Type.String()),
@@ -94,6 +95,7 @@ export const PieceMetadata = Type.Composite([
 export type PieceMetadata = PieceBase & {
   actions: Record<string, ActionBase>;
   triggers: Record<string, TriggerBase>;
+  qoreTriggers: TQorePartialEventAction[];
 };
 
 export const PieceMetadataSummary = Type.Composite([

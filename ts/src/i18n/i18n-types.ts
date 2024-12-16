@@ -183,6 +183,80 @@ type RootTranslation = {
 			 * C​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​N​o​t​i​o​n​ ​A​P​I
 			 */
 			longDesc: string
+			triggers: {
+				new_database_item: {
+					/**
+					 * N​e​w​ ​D​a​t​a​b​a​s​e​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​t​e​m​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​d​a​t​a​b​a​s​e
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​t​e​m​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​d​a​t​a​b​a​s​e
+					 */
+					longDesc: string
+					options: {
+						databaseId: {
+							/**
+							 * D​a​t​a​b​a​s​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​d​a​t​a​b​a​s​e​ ​t​o​ ​w​a​t​c​h​ ​f​o​r​ ​n​e​w​ ​i​t​e​m​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​d​a​t​a​b​a​s​e​ ​t​o​ ​w​a​t​c​h​ ​f​o​r​ ​n​e​w​ ​i​t​e​m​s
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * N​o​t​i​o​n​ ​N​e​w​ ​D​a​t​a​b​a​s​e​ ​I​t​e​m​ ​E​v​e​n​t​ ​I​n​f​o
+						 */
+						desc: string
+					}
+				}
+				updated_database_item: {
+					/**
+					 * U​p​d​a​t​e​d​ ​D​a​t​a​b​a​s​e​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​i​t​e​m​ ​i​n​ ​a​ ​d​a​t​a​b​a​s​e​ ​i​s​ ​u​p​d​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​i​t​e​m​ ​i​n​ ​a​ ​d​a​t​a​b​a​s​e​ ​i​s​ ​u​p​d​a​t​e​d
+					 */
+					longDesc: string
+					options: {
+						databaseId: {
+							/**
+							 * D​a​t​a​b​a​s​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​d​a​t​a​b​a​s​e​ ​t​o​ ​w​a​t​c​h​ ​f​o​r​ ​u​p​d​a​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​d​a​t​a​b​a​s​e​ ​t​o​ ​w​a​t​c​h​ ​f​o​r​ ​u​p​d​a​t​e​s
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * N​o​t​i​o​n​ ​U​p​d​a​t​e​d​ ​D​a​t​a​b​a​s​e​ ​I​t​e​m​ ​E​v​e​n​t​ ​I​n​f​o
+						 */
+						desc: string
+					}
+				}
+			}
 		}
 		Jira: {
 			/**
@@ -8176,6 +8250,80 @@ export type TranslationFunctions = {
 			 * Collection of actions to interact with Notion API
 			 */
 			longDesc: () => LocalizedString
+			triggers: {
+				new_database_item: {
+					/**
+					 * New Database Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new item is added to a database
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new item is added to a database
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						databaseId: {
+							/**
+							 * Database ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the database to watch for new items
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the database to watch for new items
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Notion New Database Item Event Info
+						 */
+						desc: () => LocalizedString
+					}
+				}
+				updated_database_item: {
+					/**
+					 * Updated Database Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an item in a database is updated
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when an item in a database is updated
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						databaseId: {
+							/**
+							 * Database ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the database to watch for updates
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the database to watch for updates
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Notion Updated Database Item Event Info
+						 */
+						desc: () => LocalizedString
+					}
+				}
+			}
 		}
 		Jira: {
 			/**
