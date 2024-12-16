@@ -2,18 +2,26 @@ import { TAllowedPaths, TQoreAppActionOverrideOption } from '../../global/models
 import { getGitHubBranchIdAllowedValues } from './helpers/get-branch-id-allowed-values';
 import { getGitHubIssueIdAllowedValues } from './helpers/get-issue-id-allowed-values';
 import { getGitHubOwnerAllowedValues } from './helpers/get-owner-allowed-values';
+import { getGitHubOwnerDefaultValue } from './helpers/get-owner-default-value';
 import { getGitHubPullIdAllowedValues } from './helpers/get-pull-id-allowed-values';
 import { getGitHubRepositoryIdAllowedValues } from './helpers/get-repository-id-allowed-values';
 
 export const GITHUB_APP_NAME = 'Github';
 
-const repoOwnerCommonOptions = {
+export const repoOwnerCommonOptions = {
   repo: {
     get_allowed_values: getGitHubRepositoryIdAllowedValues,
+    required: true,
+    type: 'string',
+    on_change: ['refetch'],
     allowed_values_creatable: true,
   },
   owner: {
     get_allowed_values: getGitHubOwnerAllowedValues,
+    get_default_value: getGitHubOwnerDefaultValue,
+    required: true,
+    type: 'string',
+    on_change: ['refetch'],
     allowed_values_creatable: true,
   },
 } satisfies Record<string, TQoreAppActionOverrideOption>;
@@ -22,8 +30,10 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
   '/repos/{owner}/{repo}/pulls': {
     GET: {
       override_options: repoOwnerCommonOptions,
+      independent_path_vars: ['repo'],
     },
     POST: {
+      independent_path_vars: ['repo'],
       override_options: {
         ...repoOwnerCommonOptions,
         title: { required: true },
@@ -35,17 +45,21 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
   },
   '/repos/{owner}/{repo}/pulls/{pull_number}': {
     GET: {
+      independent_path_vars: ['repo'],
       override_options: repoOwnerCommonOptions,
     },
     PATCH: {
+      independent_path_vars: ['repo'],
       override_options: repoOwnerCommonOptions,
     },
   },
   '/repos/{owner}/{repo}/issues': {
     GET: {
+      independent_path_vars: ['repo'],
       override_options: repoOwnerCommonOptions,
     },
     POST: {
+      independent_path_vars: ['repo'],
       override_options: {
         title: { required: true },
         body: { required: true },
@@ -55,6 +69,7 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
   },
   '/repos/{owner}/{repo}/issues/{issue_number}': {
     GET: {
+      independent_path_vars: ['repo'],
       override_options: {
         ...repoOwnerCommonOptions,
         issue_number: {
@@ -65,6 +80,7 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
       },
     },
     PATCH: {
+      independent_path_vars: ['repo'],
       override_options: {
         ...repoOwnerCommonOptions,
         issue_number: {
@@ -77,19 +93,23 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
   },
   '/repos/{owner}/{repo}/commits': {
     GET: {
+      independent_path_vars: ['repo'],
       override_options: repoOwnerCommonOptions,
     },
   },
   '/repos/{owner}/{repo}/branches': {
     GET: {
+      independent_path_vars: ['repo'],
       override_options: repoOwnerCommonOptions,
     },
   },
   '/repos/{owner}/{repo}/releases': {
     GET: {
+      independent_path_vars: ['repo'],
       override_options: repoOwnerCommonOptions,
     },
     POST: {
+      independent_path_vars: ['repo'],
       override_options: {
         tag_name: { required: true },
         name: { required: true },
@@ -100,6 +120,7 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
   },
   '/repos/{owner}/{repo}/contributors': {
     GET: {
+      independent_path_vars: ['repo'],
       override_options: repoOwnerCommonOptions,
     },
   },
@@ -116,23 +137,29 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
   },
   '/repos/{owner}/{repo}': {
     GET: {
+      independent_path_vars: ['repo'],
       override_options: repoOwnerCommonOptions,
     },
     PATCH: {
+      independent_path_vars: ['repo'],
       override_options: repoOwnerCommonOptions,
     },
     DELETE: {
+      independent_path_vars: ['repo'],
       override_options: repoOwnerCommonOptions,
     },
   },
   '/repos/{owner}/{repo}/contents/{path}': {
     GET: {
+      independent_path_vars: ['repo'],
       override_options: repoOwnerCommonOptions,
     },
     PUT: {
+      independent_path_vars: ['repo'],
       override_options: repoOwnerCommonOptions,
     },
     DELETE: {
+      independent_path_vars: ['repo'],
       override_options: repoOwnerCommonOptions,
     },
   },
@@ -155,16 +182,19 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
   },
   '/repos/{owner}/{repo}/collaborators': {
     GET: {
+      independent_path_vars: ['repo'],
       override_options: repoOwnerCommonOptions,
     },
   },
   '/repos/{owner}/{repo}/actions/workflows': {
     GET: {
+      independent_path_vars: ['repo'],
       override_options: repoOwnerCommonOptions,
     },
   },
   '/repos/{owner}/{repo}/issues/{issue_number}/assignees': {
     POST: {
+      independent_path_vars: ['repo'],
       override_options: {
         assignees: { required: true },
         ...repoOwnerCommonOptions,
@@ -176,6 +206,7 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
       },
     },
     DELETE: {
+      independent_path_vars: ['repo'],
       override_options: {
         assignees: { required: true },
         ...repoOwnerCommonOptions,
@@ -189,6 +220,7 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
   },
   '/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers': {
     POST: {
+      independent_path_vars: ['repo'],
       override_options: {
         ...repoOwnerCommonOptions,
         pull_number: {
@@ -200,6 +232,7 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
       },
     },
     DELETE: {
+      independent_path_vars: ['repo'],
       override_options: {
         ...repoOwnerCommonOptions,
         pull_number: {
@@ -209,6 +242,7 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
       },
     },
     GET: {
+      independent_path_vars: ['repo'],
       override_options: {
         ...repoOwnerCommonOptions,
         pull_number: {
@@ -220,6 +254,7 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
   },
   '/repos/{owner}/{repo}/git/refs': {
     POST: {
+      independent_path_vars: ['repo'],
       override_options: {
         ...repoOwnerCommonOptions,
         ref: { required: true },
@@ -229,6 +264,7 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
   },
   '/repos/{owner}/{repo}/branches/{branch}': {
     GET: {
+      independent_path_vars: ['repo'],
       override_options: {
         ...repoOwnerCommonOptions,
         branch: {
@@ -241,6 +277,7 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
   },
   '/repos/{owner}/{repo}/actions/secrets/{secret_name}': {
     PUT: {
+      independent_path_vars: ['repo'],
       override_options: {
         secret_name: { required: true },
         encrypted_value: { required: true },
@@ -249,11 +286,17 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
       },
     },
     DELETE: {
+      independent_path_vars: ['repo'],
       override_options: repoOwnerCommonOptions,
     },
     GET: {
+      independent_path_vars: ['repo'],
       override_options: repoOwnerCommonOptions,
     },
   },
-  '/repos/{owner}/{repo}/actions/secrets/public-key': { GET: {} },
+  '/repos/{owner}/{repo}/actions/secrets/public-key': {
+    GET: {
+      independent_path_vars: ['repo'],
+    },
+  },
 };

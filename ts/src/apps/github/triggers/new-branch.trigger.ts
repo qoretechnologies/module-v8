@@ -1,27 +1,13 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
+import { repoOwnerCommonOptions } from '../constants';
 import { commonEventFieldsType } from './constants';
-import { getGitHubRepositoryIdAllowedValues } from '../helpers/get-repository-id-allowed-values';
-import { getGitHubOwnerAllowedValues } from '../helpers/get-owner-allowed-values';
 
 export default {
   action: 'new_repository_branch',
   action_code: EQoreAppActionCode.EVENT,
   webhook_method: 'POST',
-  options: {
-    repo: {
-      type: 'string',
-      get_allowed_values: getGitHubRepositoryIdAllowedValues,
-      allowed_values_creatable: true,
-      required: true,
-    },
-    owner: {
-      get_allowed_values: getGitHubOwnerAllowedValues,
-      allowed_values_creatable: true,
-      type: 'string',
-      required: true,
-    },
-  },
+  options: repoOwnerCommonOptions,
   webhook_register: async (context, url) => {
     const {
       conn_opts: { token },

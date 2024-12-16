@@ -139,7 +139,7 @@ export const buildActionsFromSwaggerSchema = ({
           getPropertyOfSchemaData(dataWithoutParameters, 'description', ''),
         ...actionData,
       };
-
+      console.dir(action, { depth: null });
       actions.push(action);
     });
   });

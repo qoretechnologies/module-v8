@@ -25,6 +25,9 @@ export interface IAllowedPathData<CustomConnOptions extends TCustomConnOptions =
   processor?: (
     data: OpenAPIV2.OperationObject
   ) => Partial<Omit<IQoreBaseAppAction<CustomConnOptions>, 'action_code' | 'app'>>;
+
+  // optional list of vars in swagger_path (ex: '/{id}/{key}') that should not have option dependencies created
+  independent_path_vars?: string[];
 }
 
 type TQoreRestContentEncoding = 'gzip' | 'bzip2' | 'deflate' | 'identity';
@@ -643,6 +646,8 @@ export interface IQoreAppActionWithSwaggerPath extends IQoreBaseAppAction {
 export interface IQorePartialAppActionWithSwaggerPath extends Omit<IQoreBaseAppAction, 'app'> {
   swagger_path: string;
   action_code: EQoreAppActionCode.ACTION;
+  // optional list of vars in swagger_path (ex: '/{id}/{key}') that should not have option dependencies created
+  independent_path_vars?: string[];
 }
 
 export type TQoreAppNonEventAction<Options = TQoreOptions, Response = TQoreResponseType> =

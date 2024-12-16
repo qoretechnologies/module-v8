@@ -1,13 +1,14 @@
 import { Octokit } from '@octokit/rest';
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
+import { TQoreGetDefaultValueFunction } from '../../../global/models/qore';
 import { Debugger } from '../../../utils/Debugger';
 
 const PER_PAGE = 100;
 const MAX_ITEMS = 600;
 
-export const getGitHubOwnerAllowedValues: TQoreGetAllowedValuesFunction = async (
-  context
-): Promise<IQoreAllowedValue[]> => {
+export const getGitHubOwnerDefaultValue: TQoreGetDefaultValueFunction<
+  any,
+  Promise<string>
+> = async (context) => {
   const {
     conn_opts: { token },
     opts: { repo },
@@ -53,17 +54,16 @@ export const getGitHubOwnerAllowedValues: TQoreGetAllowedValuesFunction = async 
       );
     }
 
-    return repos.map(
-      (repo): IQoreAllowedValue => ({
-        value: repo?.owner?.login,
-        display_name: repo?.owner?.login,
-        desc: `Type: ${repo.owner.type}\n\n Link: [View on GitHub](${repo.owner.html_url})`,
-        image: repo?.owner?.avatar_url,
-      })
-    );
+    if (repos[0]) {
+      return repos[0].owner.login;
+    }
   } catch (err) {
     Debugger.log('Github Owner allowed values error', err);
 
-    return [];
+    if (!repo) {
+      const user = await octokit.users.getAuthenticated();
+
+      return user.data.login;
+    }
   }
 };
