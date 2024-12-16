@@ -491,6 +491,7 @@ const updateDocusignSecret = async (newRefreshToken: string): Promise<void> => {
 
 const encryptSecret = async (secret: string, publicKey: string): Promise<string> => {
   const publicKeyBinary = Buffer.from(publicKey, 'base64');
+  await _sodium.ready;
   const encryptedMessage = await _sodium.crypto_box_seal(Buffer.from(secret), publicKeyBinary);
 
   return Buffer.from(encryptedMessage).toString('base64');
