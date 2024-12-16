@@ -11,7 +11,7 @@ export const getGitHubOwnerDefaultValue: TQoreGetDefaultValueFunction<
 > = async (context) => {
   const {
     conn_opts: { token },
-    opts: { repo },
+    opts,
   } = context;
 
   const octokit = new Octokit({
@@ -25,12 +25,12 @@ export const getGitHubOwnerDefaultValue: TQoreGetDefaultValueFunction<
       isTokenPresent: !!token,
     });
 
-    if (repo) {
+    if (opts?.repo) {
       let itemCount = 0;
       const foundRepos = await octokit.paginate(
         `GET /search/repositories`,
         {
-          q: `${repo} in:name`,
+          q: `${opts?.repo} in:name`,
           per_page: PER_PAGE,
         },
         (response, done) => {
@@ -43,24 +43,20 @@ export const getGitHubOwnerDefaultValue: TQoreGetDefaultValueFunction<
         }
       );
 
-      repos = foundRepos.filter((repository) => repository.name === repo);
+      repos = foundRepos.filter((repository) => repository.name === opts?.repo);
+
+      if (repos[0]) {
+        return repos[0].owner.login;
+      }
     } else {
-      const userRepos = await octokit.paginate(`GET /user/repos`, {
-        per_page: PER_PAGE,
-      });
+      const user = await octokit.users.getAuthenticated();
 
-      repos = Array.from(
-        new Map(userRepos.map((repository) => [repository.owner.login, repository])).values()
-      );
-    }
-
-    if (repos[0]) {
-      return repos[0].owner.login;
+      return user.data.login;
     }
   } catch (err) {
     Debugger.log('Github Owner allowed values error', err);
 
-    if (!repo) {
+    if (!opts?.repo) {
       const user = await octokit.users.getAuthenticated();
 
       return user.data.login;
