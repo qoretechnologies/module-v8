@@ -11,6 +11,7 @@ describe('Tests eSignature Actions', () => {
   let token: string;
   let brandId: string;
   let envelopeId: string;
+  let baseUri: string;
   // let templateId: string;
   const documentId = String(Math.floor(Math.random() * 100) + 1);
   const recipientId = String(Math.floor(Math.random() * 100) + 1);
@@ -54,6 +55,7 @@ describe('Tests eSignature Actions', () => {
     );
 
     const base_uri = userInfo.accounts[0].base_uri.split('//')[1];
+    baseUri = base_uri;
     accountId = userInfo.accounts[0].account_id;
     connection = testApi.createConnection('docusignesignature', {
       opts: {
@@ -74,6 +76,7 @@ describe('Tests eSignature Actions', () => {
         {
           conn_opts: {
             token,
+            base_uri: baseUri,
           },
           opts: {
             accountId,
@@ -89,6 +92,7 @@ describe('Tests eSignature Actions', () => {
           {
             conn_opts: {
               token,
+              base_uri: baseUri,
             },
             opts: {
               accountId,
@@ -108,6 +112,7 @@ describe('Tests eSignature Actions', () => {
         {
           conn_opts: {
             token,
+            base_uri: baseUri,
           },
           opts: {
             accountId,
@@ -123,6 +128,7 @@ describe('Tests eSignature Actions', () => {
           {
             conn_opts: {
               token,
+              base_uri: baseUri,
             },
             opts: {
               accountId,

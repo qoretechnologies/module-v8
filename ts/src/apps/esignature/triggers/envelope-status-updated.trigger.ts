@@ -11,7 +11,7 @@ export default {
   },
   webhook_register: async (context, url) => {
     const {
-      conn_opts: { token, base_url },
+      conn_opts: { token, base_uri },
       opts: { accountId },
     } = context;
 
@@ -48,7 +48,7 @@ export default {
         path: `/restapi/v2.1/accounts/${accountId}/connect`,
       },
       {
-        url: base_url,
+        url: `https://${base_uri}`,
         endpointId: 'Docusign',
       }
     );
@@ -57,7 +57,7 @@ export default {
   },
   webhook_deregister: async (context, _url, regInfo) => {
     const {
-      conn_opts: { token, base_url },
+      conn_opts: { token, base_uri },
       opts: { accountId },
     } = context;
     const { webhook } = regInfo;
@@ -70,7 +70,7 @@ export default {
         path: `/restapi/v2.1/accounts/${accountId}/connect/${webhook.connectId}`,
       },
       {
-        url: base_url,
+        url: `https://${base_uri}`,
         endpointId: 'Docusign',
       }
     );
