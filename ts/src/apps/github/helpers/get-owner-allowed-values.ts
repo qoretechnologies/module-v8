@@ -38,9 +38,13 @@ export const getGitHubOwnerAllowedValues: TQoreGetAllowedValuesFunction = async 
 
       repos = foundRepos.filter((repository) => repository.name === repo);
     } else {
-      repos = await octokit.paginate(`GET /user/repos`, {
+      const userRepos = await octokit.paginate(`GET /user/repos`, {
         per_page: PER_PAGE,
       });
+
+      repos = Array.from(
+        new Map(userRepos.map((repository) => [repository.owner.login, repository])).values()
+      );
     }
 
     return repos.map(

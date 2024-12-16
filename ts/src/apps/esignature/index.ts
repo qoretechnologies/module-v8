@@ -1,6 +1,6 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { actionsCatalogue } from '../../ActionsCatalogue';
-import { createSwaggerPaths, mapActionsToApp } from '../../global/helpers';
+import { createSwaggerPaths, mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import { IQoreAllowedValue, IQoreAppWithActions } from '../../global/models/qore';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
@@ -10,6 +10,9 @@ import {
   ESIGNATURE_CONN_OPTIONS,
   ESIGNATURE_PATHS,
 } from './constants';
+
+import * as ESIGNATURE_TRIGGERS from './triggers';
+
 /*
  * Returns the app object with all the actions ready to use, using translations
  * @param locale - the locale
@@ -109,7 +112,10 @@ export default (locale: Locales) =>
     short_desc: L[locale].apps[ESIGNATURE_APP_NAME].shortDesc(),
     name: ESIGNATURE_APP_NAME,
     desc: L[locale].apps[ESIGNATURE_APP_NAME].longDesc(),
-    actions: mapActionsToApp(ESIGNATURE_APP_NAME, ESIGNATURE_ACTIONS, locale),
+    actions: [
+      ...mapTriggersToApp(ESIGNATURE_APP_NAME, ESIGNATURE_TRIGGERS, locale),
+      ...mapActionsToApp(ESIGNATURE_APP_NAME, ESIGNATURE_ACTIONS, locale),
+    ],
     logo:
       'PHN2ZyB2ZXJzaW9uPSIxLjIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDE1NDcgMTU0OSIg' +
       'd2lkdGg9IjE1NDciIGhlaWdodD0iMTU0OSI+Cgk8dGl0bGU+ZG9jdS1zdmc8L3RpdGxlPgoJPHN0eWxlPgoJCS5zMCB7IGZpbGw6ICM0YzAw' +

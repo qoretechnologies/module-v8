@@ -6575,6 +6575,76 @@ type RootTranslation = {
 					displayName: string
 				}
 			}
+			triggers: {
+				envelope_status_updated: {
+					/**
+					 * E​n​v​e​l​o​p​e​ ​S​t​a​t​u​s​ ​U​p​d​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​D​o​c​u​S​i​g​n​ ​e​n​v​e​l​o​p​e​'​s​ ​s​t​a​t​u​s​ ​o​r​ ​p​r​o​p​e​r​t​i​e​s​ ​a​r​e​ ​u​p​d​a​t​e​d​,​ ​i​n​c​l​u​d​i​n​g​ ​e​v​e​n​t​s​ ​l​i​k​e​ ​i​t​ ​b​e​i​n​g​ ​s​e​n​t​,​ ​d​e​l​i​v​e​r​e​d​,​ ​s​i​g​n​e​d​,​ ​c​o​m​p​l​e​t​e​d​,​ ​d​e​c​l​i​n​e​d​,​ ​v​o​i​d​e​d​,​ ​c​o​r​r​e​c​t​e​d​,​ ​p​u​r​g​e​d​,​ ​o​r​ ​d​e​l​e​t​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​e​v​e​r​ ​t​h​e​r​e​’​s​ ​a​ ​c​h​a​n​g​e​ ​i​n​ ​a​ ​D​o​c​u​S​i​g​n​ ​e​n​v​e​l​o​p​e​’​s​ ​l​i​f​e​c​y​c​l​e​.​ ​I​t​ ​l​i​s​t​e​n​s​ ​f​o​r​ ​a​ ​v​a​r​i​e​t​y​ ​o​f​ ​u​p​d​a​t​e​s​,​ ​s​u​c​h​ ​a​s​ ​w​h​e​n​ ​a​n​ ​e​n​v​e​l​o​p​e​ ​i​s​ ​s​e​n​t​ ​t​o​ ​r​e​c​i​p​i​e​n​t​s​,​ ​d​e​l​i​v​e​r​e​d​,​ ​s​i​g​n​e​d​,​ ​c​o​m​p​l​e​t​e​d​,​ ​o​r​ ​d​e​c​l​i​n​e​d​.​ ​I​t​ ​a​l​s​o​ ​i​n​c​l​u​d​e​s​ ​a​d​m​i​n​i​s​t​r​a​t​i​v​e​ ​e​v​e​n​t​s​ ​l​i​k​e​ ​e​n​v​e​l​o​p​e​s​ ​b​e​i​n​g​ ​r​e​s​e​n​t​,​ ​c​o​r​r​e​c​t​e​d​,​ ​p​u​r​g​e​d​,​ ​d​e​l​e​t​e​d​,​ ​d​i​s​c​a​r​d​e​d​,​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​,​ ​o​r​ ​r​e​m​o​v​e​d​.​ ​B​y​ ​s​e​t​t​i​n​g​ ​u​p​ ​t​h​i​s​ ​t​r​i​g​g​e​r​,​ ​y​o​u​ ​c​a​n​ ​s​t​a​y​ ​i​n​f​o​r​m​e​d​ ​o​f​ ​e​n​v​e​l​o​p​e​ ​p​r​o​g​r​e​s​s​ ​a​n​d​ ​s​t​a​t​u​s​ ​c​h​a​n​g​e​s​,​ ​e​n​a​b​l​i​n​g​ ​t​i​m​e​l​y​ ​f​o​l​l​o​w​-​u​p​s​,​ ​r​e​c​o​r​d​-​k​e​e​p​i​n​g​,​ ​o​r​ ​o​t​h​e​r​ ​a​u​t​o​m​a​t​e​d​ ​a​c​t​i​o​n​s​ ​i​n​ ​y​o​u​r​ ​w​o​r​k​f​l​o​w​.
+					 */
+					longDesc: string
+					options: {
+						accountId: {
+							/**
+							 * D​e​f​a​u​l​t​ ​A​c​c​o​u​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​e​f​a​u​l​t​ ​a​c​c​o​u​n​t​ ​I​D​ ​s​e​t​ ​w​h​e​n​ ​t​h​e​ ​c​o​n​n​e​c​t​i​o​n​ ​i​s​ ​a​u​t​h​o​r​i​z​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​e​f​a​u​l​t​ ​a​c​c​o​u​n​t​ ​I​D​ ​s​e​t​ ​w​h​e​n​ ​t​h​e​ ​c​o​n​n​e​c​t​i​o​n​ ​i​s​ ​a​u​t​h​o​r​i​z​e​d
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * D​o​c​u​S​i​g​n​ ​e​n​v​e​l​o​p​e​ ​s​t​a​t​u​s​ ​u​p​d​a​t​e​ ​e​v​e​n​t​ ​d​a​t​a
+						 */
+						desc: string
+					}
+				}
+				template_updated: {
+					/**
+					 * T​e​m​p​l​a​t​e​ ​U​p​d​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​D​o​c​u​S​i​g​n​ ​t​e​m​p​l​a​t​e​ ​i​s​ ​c​r​e​a​t​e​d​,​ ​u​p​d​a​t​e​d​ ​o​r​ ​d​e​l​e​t​e​d​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​t​a​k​e​ ​i​m​m​e​d​i​a​t​e​ ​a​c​t​i​o​n​ ​i​n​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​t​h​e​ ​n​e​w​ ​t​e​m​p​l​a​t​e​.
+					 */
+					shortDesc: string
+					options: {
+						accountId: {
+							/**
+							 * D​e​f​a​u​l​t​ ​A​c​c​o​u​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​e​f​a​u​l​t​ ​a​c​c​o​u​n​t​ ​I​D​ ​s​e​t​ ​w​h​e​n​ ​t​h​e​ ​c​o​n​n​e​c​t​i​o​n​ ​i​s​ ​a​u​t​h​o​r​i​z​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​e​f​a​u​l​t​ ​a​c​c​o​u​n​t​ ​I​D​ ​s​e​t​ ​w​h​e​n​ ​t​h​e​ ​c​o​n​n​e​c​t​i​o​n​ ​i​s​ ​a​u​t​h​o​r​i​z​e​d
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * D​o​c​u​S​i​g​n​ ​t​e​m​p​l​a​t​e​ ​u​p​d​a​t​e​ ​e​v​e​n​t​ ​d​a​t​a
+						 */
+						desc: string
+					}
+				}
+			}
 		}
 		Zendesk: {
 			/**
@@ -14496,6 +14566,76 @@ export type TranslationFunctions = {
 					 * Create Recipient View
 					 */
 					displayName: () => LocalizedString
+				}
+			}
+			triggers: {
+				envelope_status_updated: {
+					/**
+					 * Envelope Status Updated
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers whenever a DocuSign envelope's status or properties are updated, including events like it being sent, delivered, signed, completed, declined, voided, corrected, purged, or deleted.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates whenever there’s a change in a DocuSign envelope’s lifecycle. It listens for a variety of updates, such as when an envelope is sent to recipients, delivered, signed, completed, or declined. It also includes administrative events like envelopes being resent, corrected, purged, deleted, discarded, newly created, or removed. By setting up this trigger, you can stay informed of envelope progress and status changes, enabling timely follow-ups, record-keeping, or other automated actions in your workflow.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						accountId: {
+							/**
+							 * Default Account ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The default account ID set when the connection is authorized
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The default account ID set when the connection is authorized
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * DocuSign envelope status update event data
+						 */
+						desc: () => LocalizedString
+					}
+				}
+				template_updated: {
+					/**
+					 * Template Updated
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers whenever a new DocuSign template is created, updated or deleted, allowing you to take immediate action in response to the new template.
+					 */
+					shortDesc: () => LocalizedString
+					options: {
+						accountId: {
+							/**
+							 * Default Account ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The default account ID set when the connection is authorized
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The default account ID set when the connection is authorized
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * DocuSign template update event data
+						 */
+						desc: () => LocalizedString
+					}
 				}
 			}
 		}

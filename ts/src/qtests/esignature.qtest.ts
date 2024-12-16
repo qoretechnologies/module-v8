@@ -1,11 +1,14 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { ESIGNATURE_ACTIONS } from '../apps/esignature/constants';
 import _sodium from 'libsodium-wrappers';
+import { TQoreAppActionWithWebhook } from '../global/models/qore';
+import * as ESIGNATURE_TRIGGERS from '../apps/esignature/triggers';
 
 let connection: string;
 
 describe('Tests eSignature Actions', () => {
   let accountId: string;
+  let token: string;
   let brandId: string;
   let envelopeId: string;
   // let templateId: string;
@@ -32,6 +35,7 @@ describe('Tests eSignature Actions', () => {
     );
 
     const accessToken = refreshTokenData?.access_token;
+    token = accessToken;
     const newRefreshToken = refreshTokenData?.refresh_token;
 
     await updateDocusignSecret(newRefreshToken);
@@ -57,6 +61,77 @@ describe('Tests eSignature Actions', () => {
         base_uri,
         account_id: accountId,
       },
+    });
+  });
+
+  describe('Should test trigger creation', () => {
+    it('Should create an envelope status update trigger', async () => {
+      const trigger: Partial<TQoreAppActionWithWebhook> =
+        ESIGNATURE_TRIGGERS['envelopeStatusUpdated'];
+
+      expect(trigger).toBeDefined();
+      const response = await trigger.webhook_register(
+        {
+          conn_opts: {
+            token,
+          },
+          opts: {
+            accountId,
+          },
+        },
+        'https://webhook.site/'
+      );
+
+      expect(response).toBeDefined();
+
+      if (response) {
+        await trigger.webhook_deregister(
+          {
+            conn_opts: {
+              token,
+            },
+            opts: {
+              accountId,
+            },
+          },
+          '',
+          response
+        );
+      }
+    });
+
+    it('Should create a template status update trigger', async () => {
+      const trigger: Partial<TQoreAppActionWithWebhook> = ESIGNATURE_TRIGGERS['templateUpdated'];
+
+      expect(trigger).toBeDefined();
+      const response = await trigger.webhook_register(
+        {
+          conn_opts: {
+            token,
+          },
+          opts: {
+            accountId,
+          },
+        },
+        'https://webhook.site/'
+      );
+
+      expect(response).toBeDefined();
+
+      if (response) {
+        await trigger.webhook_deregister(
+          {
+            conn_opts: {
+              token,
+            },
+            opts: {
+              accountId,
+            },
+          },
+          '',
+          response
+        );
+      }
     });
   });
 
