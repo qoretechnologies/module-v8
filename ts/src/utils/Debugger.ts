@@ -36,7 +36,7 @@ class _Debugger {
    * @param {string} message - The message to log.
    * @param {DebugLevels} level - The minimum level of the message to be logged.
    */
-  log(message: string, level: DebugLevels, args?: any): void {
+  log(message: string, args?: any, level: DebugLevels = DebugLevels.Info): void {
     if (level <= this.#level) {
       console.log(message);
       console.log(args);

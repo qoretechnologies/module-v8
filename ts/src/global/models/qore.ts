@@ -1,3 +1,4 @@
+import { IReqoreIconName } from '@qoretechnologies/reqore/dist/types/icons';
 import { Locales } from 'i18n/i18n-types';
 import { OpenAPIV2 } from 'openapi-types';
 import { StrictRecord } from './utils';
@@ -14,6 +15,7 @@ export type TRestGetAllowedValuesMethod = TWebhookHttpMethod;
 export type TCustomConnOptions = Record<string, IQoreConnectionOption>;
 export type TCustomFields<CustomConnOptions extends TCustomConnOptions = TCustomConnOptions> =
   Record<string, IQoreAppActionOption<TQoreType, unknown, CustomConnOptions>>;
+export type TQoreOptionOnChangeEvents = 'refetch';
 
 export type TAllowedPaths<CustomConnOptions extends TCustomConnOptions = TCustomConnOptions> =
   Record<string, Partial<Record<THttpMethod, IAllowedPathData<CustomConnOptions>>>>;
@@ -292,7 +294,8 @@ export type TQoreGetAllowedValuesFunction<
 
 export type TQoreGetDefaultValueFunction<
   CustomConnOptions extends TCustomConnOptions = TCustomConnOptions,
-> = (context?: TQoreAppActionFunctionContext<CustomConnOptions>) => any | Promise<any>;
+  TypeValue = unknown,
+> = (context?: TQoreAppActionFunctionContext<CustomConnOptions>) => TypeValue | Promise<TypeValue>;
 
 export type TQoreStringCompatibleType =
   | 'string'
@@ -438,6 +441,8 @@ export type GetResponseDefinitionFromQoreType<T extends TQoreType> =
 
 export interface IQoreAllowedValue<TypeValue = unknown> extends IQoreAppShared {
   value: TypeValue;
+  icon?: IReqoreIconName;
+  image?: string;
 }
 
 export type TQoreGetDependentOptionsFunction = (
@@ -533,12 +538,15 @@ export interface IQoreAppActionOption<
   // if true, then allowed_values can be extended with any user-provided value
   allowed_values_creatable?: boolean;
   // options that this option depends on
-  depends_on?: string[];
+  // if the element is a list of strings, it means that the option depends on either of the listed options
+  depends_on?: string[] | string[][];
   // a function that returns the default value for the field
-  get_default_value?: TQoreGetDefaultValueFunction<CustomConnOptions>;
+  get_default_value?: TQoreGetDefaultValueFunction<CustomConnOptions, TypeValue>;
   attr?: Record<string, any>; // an optional data object with any properties
   sensitive?: boolean;
   required_groups?: string[];
+  // A list of events (strings) that represent what should happen when the option values changes
+  on_change?: TQoreOptionOnChangeEvents[];
 }
 
 export type TQoreAppActionOverrideOption<
@@ -627,6 +635,9 @@ export interface IQoreAppActionWithSwaggerPath extends IQoreBaseAppAction {
   action_code: EQoreAppActionCode.ACTION;
 
   swagger_path: string;
+
+  // optional list of vars in swagger_path (ex: '/{id}/{key}') that should not have option dependencies created
+  independent_path_vars?: string[];
 }
 
 export interface IQorePartialAppActionWithSwaggerPath extends Omit<IQoreBaseAppAction, 'app'> {

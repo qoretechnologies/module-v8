@@ -1,5 +1,6 @@
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
 import { Octokit } from '@octokit/rest';
+import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
+import { Debugger } from '../../../utils/Debugger';
 
 const PER_PAGE = 100;
 const MAX_ITEMS = 300;
@@ -17,6 +18,11 @@ export const getGitHubOwnerAllowedValues: TQoreGetAllowedValuesFunction = async 
   });
   try {
     let repos = [];
+
+    Debugger.log('Github Owner allowed values opts', {
+      opts: context.opts,
+      isTokenPresent: !!token,
+    });
 
     if (repo) {
       let itemCount = 0;
@@ -52,9 +58,12 @@ export const getGitHubOwnerAllowedValues: TQoreGetAllowedValuesFunction = async 
         value: repo?.owner?.login,
         display_name: repo?.owner?.login,
         desc: `Type: ${repo.owner.type}\n\n Link: [View on GitHub](${repo.owner.url})`,
+        image: repo?.owner?.avatar_url,
       })
     );
   } catch (err) {
+    Debugger.log('Github Owner allowed values error', err);
+
     return [];
   }
 };

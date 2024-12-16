@@ -1,5 +1,6 @@
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
 import { Octokit } from '@octokit/rest';
+import { Debugger } from '../../../utils/Debugger';
 
 export const getGitHubBranchIdAllowedValues: TQoreGetAllowedValuesFunction = async (
   context
@@ -8,6 +9,11 @@ export const getGitHubBranchIdAllowedValues: TQoreGetAllowedValuesFunction = asy
     conn_opts: { token },
     opts: { owner, repo },
   } = context;
+
+  Debugger.log('Github Branch allowed values opts', {
+    opts: context.opts,
+    isTokenPresent: !!token,
+  });
 
   const octokit = new Octokit({
     auth: token,
