@@ -1,6 +1,6 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
-import { GetAccountIdConfig } from '../constants';
+import { ESIGNATURE_APP_NAME, GetAccountIdConfig } from '../constants';
 
 export default {
   action: 'envelope_status_updated',
@@ -49,7 +49,7 @@ export default {
       },
       {
         url: base_url,
-        endpointId: 'ESignature',
+        endpointId: ESIGNATURE_APP_NAME,
       }
     );
 
@@ -71,7 +71,7 @@ export default {
       },
       {
         url: base_url,
-        endpointId: 'ESignature',
+        endpointId: ESIGNATURE_APP_NAME,
       }
     );
   },
