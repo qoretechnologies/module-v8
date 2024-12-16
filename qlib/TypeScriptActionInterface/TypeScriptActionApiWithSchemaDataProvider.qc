@@ -365,6 +365,9 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         if (*softlist<auto> l = remove type_hash.depends_on) {
             info.attr.depends_on = l;
         }
+        if (exists (auto v = remove type_hash.on_change)) {
+            info.on_change = v;
+        }
         *bool req = remove type_hash.required;
         if (exists (auto tdesc = remove type_hash.type)) {
             info.type = TypeScriptActionInterface::getType(tdesc, req ?? info.attr.required ?? qdf.isMandatory());
