@@ -139,7 +139,6 @@ export const buildActionsFromSwaggerSchema = ({
           getPropertyOfSchemaData(dataWithoutParameters, 'description', ''),
         ...actionData,
       };
-
       actions.push(action);
     });
   });

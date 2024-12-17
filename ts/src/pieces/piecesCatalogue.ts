@@ -13,6 +13,7 @@ import { DynamicDropdownOptions } from 'core/framework/property/input/dropdown/d
 import {
   fixOptions,
   fixResponseOrEventInfo,
+  mapTriggersToApp,
   normalizeAppName,
   normalizeName,
 } from 'global/helpers';
@@ -55,10 +56,12 @@ class _PiecesAppCatalogue {
     const actions = Object.entries(piece.actions()).map(([actionName, action]) =>
       this.mapPieceActionToAppAction({ appName, actionName, action })
     );
+    // @ts-expect-error - dynamically defined names are not recognized
+    const qoreTriggers = mapTriggersToApp(appName, piece.qoreTriggers || [], this.locale);
 
     return {
       name: appName,
-      actions: actions,
+      actions: [...actions, ...qoreTriggers],
       rest: this.mapPieceAuthToAppRest(piece.auth),
       display_name: piece.displayName,
       short_desc: piece.description,

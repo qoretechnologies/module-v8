@@ -27,7 +27,7 @@ export const ESIGNATURE_CONN_OPTIONS = {
   },
 } satisfies IQoreConnectionOptions;
 
-const GetAccountIdConfig = {
+export const GetAccountIdConfig = {
   get_allowed_values: function (ctx) {
     return ctx.conn_opts.accounts.map((info: any) => {
       return {

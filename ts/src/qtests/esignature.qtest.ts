@@ -1,13 +1,17 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { ESIGNATURE_ACTIONS } from '../apps/esignature/constants';
 import _sodium from 'libsodium-wrappers';
+import { TQoreAppActionWithWebhook } from '../global/models/qore';
+import * as ESIGNATURE_TRIGGERS from '../apps/esignature/triggers';
 
 let connection: string;
 
 describe('Tests eSignature Actions', () => {
   let accountId: string;
+  let token: string;
   let brandId: string;
   let envelopeId: string;
+  let baseUri: string;
   // let templateId: string;
   const documentId = String(Math.floor(Math.random() * 100) + 1);
   const recipientId = String(Math.floor(Math.random() * 100) + 1);
@@ -32,6 +36,7 @@ describe('Tests eSignature Actions', () => {
     );
 
     const accessToken = refreshTokenData?.access_token;
+    token = accessToken;
     const newRefreshToken = refreshTokenData?.refresh_token;
 
     await updateDocusignSecret(newRefreshToken);
@@ -50,6 +55,7 @@ describe('Tests eSignature Actions', () => {
     );
 
     const base_uri = userInfo.accounts[0].base_uri.split('//')[1];
+    baseUri = base_uri;
     accountId = userInfo.accounts[0].account_id;
     connection = testApi.createConnection('docusignesignature', {
       opts: {
@@ -57,6 +63,81 @@ describe('Tests eSignature Actions', () => {
         base_uri,
         account_id: accountId,
       },
+    });
+  });
+
+  describe('Should test trigger creation', () => {
+    it('Should create an envelope status update trigger', async () => {
+      const trigger: Partial<TQoreAppActionWithWebhook> =
+        ESIGNATURE_TRIGGERS['envelopeStatusUpdated'];
+
+      expect(trigger).toBeDefined();
+      const response = await trigger.webhook_register(
+        {
+          conn_opts: {
+            token,
+            base_uri: baseUri,
+          },
+          opts: {
+            accountId,
+          },
+        },
+        'https://webhook.site/'
+      );
+
+      expect(response).toBeDefined();
+
+      if (response) {
+        await trigger.webhook_deregister(
+          {
+            conn_opts: {
+              token,
+              base_uri: baseUri,
+            },
+            opts: {
+              accountId,
+            },
+          },
+          '',
+          response
+        );
+      }
+    });
+
+    it('Should create a template status update trigger', async () => {
+      const trigger: Partial<TQoreAppActionWithWebhook> = ESIGNATURE_TRIGGERS['templateUpdated'];
+
+      expect(trigger).toBeDefined();
+      const response = await trigger.webhook_register(
+        {
+          conn_opts: {
+            token,
+            base_uri: baseUri,
+          },
+          opts: {
+            accountId,
+          },
+        },
+        'https://webhook.site/'
+      );
+
+      expect(response).toBeDefined();
+
+      if (response) {
+        await trigger.webhook_deregister(
+          {
+            conn_opts: {
+              token,
+              base_uri: baseUri,
+            },
+            opts: {
+              accountId,
+            },
+          },
+          '',
+          response
+        );
+      }
     });
   });
 
@@ -416,6 +497,7 @@ const updateDocusignSecret = async (newRefreshToken: string): Promise<void> => {
 
 const encryptSecret = async (secret: string, publicKey: string): Promise<string> => {
   const publicKeyBinary = Buffer.from(publicKey, 'base64');
+  await _sodium.ready;
   const encryptedMessage = await _sodium.crypto_box_seal(Buffer.from(secret), publicKeyBinary);
 
   return Buffer.from(encryptedMessage).toString('base64');

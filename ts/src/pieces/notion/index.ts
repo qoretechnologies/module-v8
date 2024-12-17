@@ -10,8 +10,6 @@ import { appendToPage } from './lib/actions/append-to-page';
 import { createDatabaseItem } from './lib/actions/create-database-item';
 import { createPage } from './lib/actions/create-page';
 import { updateDatabaseItem } from './lib/actions/update-database-item';
-import { newDatabaseItem } from './lib/triggers/new-database-item';
-import { updatedDatabaseItem } from './lib/triggers/updated-database-item';
 import { findDatabaseItem } from './lib/actions/find-item';
 import { getPageOrBlockChildren } from './lib/actions/get-page-or-block-children';
 import { addCommentToDiscussion } from './lib/actions/add-comment-to-discussion';
@@ -23,6 +21,7 @@ import { getUser } from './lib/actions/get-user';
 import { getUsers } from './lib/actions/get-users';
 import { removePage } from './lib/actions/remove-page';
 import { createDatabase } from './lib/actions/create-database';
+import { newDatabaseItem, updatedDatabaseItem } from './lib/triggers';
 
 export const notionAuth = PieceAuth.OAuth2({
   authUrl: 'https://api.notion.com/v1/oauth/authorize',
@@ -95,5 +94,6 @@ export const notion = createPiece({
       }),
     }),
   ],
-  triggers: [newDatabaseItem, updatedDatabaseItem],
+  triggers: [],
+  qoreTriggers: [newDatabaseItem, updatedDatabaseItem],
 });

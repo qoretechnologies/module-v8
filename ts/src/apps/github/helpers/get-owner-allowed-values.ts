@@ -3,7 +3,7 @@ import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../globa
 import { Debugger } from '../../../utils/Debugger';
 
 const PER_PAGE = 100;
-const MAX_ITEMS = 300;
+const MAX_ITEMS = 600;
 
 export const getGitHubOwnerAllowedValues: TQoreGetAllowedValuesFunction = async (
   context
@@ -55,10 +55,10 @@ export const getGitHubOwnerAllowedValues: TQoreGetAllowedValuesFunction = async 
 
     return repos.map(
       (repo): IQoreAllowedValue => ({
-        value: repo?.owner?.login,
-        display_name: repo?.owner?.login,
-        desc: `Type: ${repo.owner.type}\n\n Link: [View on GitHub](${repo.owner.url})`,
-        image: repo?.owner?.avatar_url,
+        value: repo.owner.login,
+        display_name: repo.owner.login,
+        desc: `Type: ${repo.owner.type}\n\n Link: [View on GitHub](${repo.owner.html_url})`,
+        image: repo.owner.avatar_url,
       })
     );
   } catch (err) {
