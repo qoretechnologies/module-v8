@@ -161,6 +161,7 @@ protected:
     unsigned opcount = 0;
     bool to_destroy = false;
     bool valid = true;
+    bool heap_limit = false;
 
     static QoreThreadLock global_lock;
     typedef std::set<QoreV8Program*> pset_t;
@@ -178,6 +179,9 @@ protected:
     DLLLOCAL int saveQoreReferenceDefault(const QoreValue& rv, ExceptionSink& xsink);
 
     DLLLOCAL static void escapeSingle(QoreString& str);
+
+    DLLLOCAL static size_t heapLimitCallback(void* ptr, size_t current_heap_limit,
+            size_t initial_heap_limit);
 };
 
 class QoreV8CallStack : public QoreCallStack {
@@ -231,6 +235,13 @@ public:
             if (!silent) {
                 xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "The given JavaScriptProgram has been destroyed "
                     "and can no longer be accessed");
+            }
+            return;
+        }
+        if (pgm->heap_limit) {
+            if (!silent) {
+                xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "The given JavaScriptProgram has exceeded its heap "
+                    "memory limit and can no longer be accessed");
             }
             return;
         }

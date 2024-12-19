@@ -79,6 +79,11 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
         stop();
     }
 
+    #! Is this object still generating events
+    bool isActive() {
+        return running;
+    }
+
     private startEventThread(Counter c, *hash<auto> options) {
         on_exit {
             m.lock();

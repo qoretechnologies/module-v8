@@ -54,6 +54,7 @@ QoreV8Program::QoreV8Program() : save_ref_callback(nullptr) {
     }
 
     isolate = setup->isolate();
+    isolate->AddNearHeapLimitCallback(heapLimitCallback, this);
     //isolate->SetMicrotasksPolicy(v8::MicrotasksPolicy::kAuto);
     assert(isolate);
     env = setup->env();
@@ -95,6 +96,21 @@ QoreV8Program::~QoreV8Program() {
     if (i != pset.end()) {
         pset.erase(i);
     }
+}
+
+static void js_oom(v8::Isolate* isolate, void* data) {
+    size_t current_heap_limit = reinterpret_cast<size_t>(data);
+    ExceptionSink xsink;
+    xsink.raiseException("JAVASCRIPT-OUT-OF-MEMORY", "JavaScript heap limit (" QLLD ") exceeded", current_heap_limit);
+    QoreV8Program::raiseV8Exception(xsink, isolate);
+}
+
+size_t QoreV8Program::heapLimitCallback(void* ptr, size_t current_heap_limit, size_t initial_heap_limit) {
+    QoreV8Program* pgm = reinterpret_cast<QoreV8Program*>(ptr);
+    pgm->heap_limit = true;
+    // throw an OOM exception ASAP in the program
+    pgm->isolate->RequestInterrupt(js_oom, reinterpret_cast<void*>(current_heap_limit));
+    return current_heap_limit + 1024 * 1024 * 50;
 }
 
 int QoreV8Program::init(ExceptionSink* xsink) {
