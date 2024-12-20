@@ -256,6 +256,42 @@ type RootTranslation = {
 						desc: string
 					}
 				}
+				updated_page: {
+					/**
+					 * U​p​d​a​t​e​d​ ​P​a​g​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​p​a​g​e​ ​i​s​ ​u​p​d​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​p​a​g​e​ ​i​s​ ​u​p​d​a​t​e​d
+					 */
+					longDesc: string
+					options: {
+						pageId: {
+							/**
+							 * P​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​p​a​g​e​ ​t​o​ ​w​a​t​c​h​ ​f​o​r​ ​u​p​d​a​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​p​a​g​e​ ​t​o​ ​w​a​t​c​h​ ​f​o​r​ ​u​p​d​a​t​e​s
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * N​o​t​i​o​n​ ​P​a​g​e​ ​U​p​d​a​t​e​d​ ​E​v​e​n​t​ ​I​n​f​o
+						 */
+						desc: string
+					}
+				}
 			}
 		}
 		Jira: {
@@ -8581,6 +8617,42 @@ export type TranslationFunctions = {
 					event_info: {
 						/**
 						 * Notion Updated Database Item Event Info
+						 */
+						desc: () => LocalizedString
+					}
+				}
+				updated_page: {
+					/**
+					 * Updated Page
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a page is updated
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a page is updated
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						pageId: {
+							/**
+							 * Page ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the page to watch for updates
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the page to watch for updates
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Notion Page Updated Event Info
 						 */
 						desc: () => LocalizedString
 					}

@@ -115,6 +115,21 @@ const en = {
             desc: 'Notion Updated Database Item Event Info',
           },
         },
+        updated_page: {
+          displayName: 'Updated Page',
+          shortDesc: 'Triggers when a page is updated',
+          longDesc: 'Triggers when a page is updated',
+          options: {
+            pageId: {
+              displayName: 'Page ID',
+              shortDesc: 'The ID of the page to watch for updates',
+              longDesc: 'The ID of the page to watch for updates',
+            },
+          },
+          event_info: {
+            desc: 'Notion Page Updated Event Info',
+          },
+        },
       },
     },
     Jira: {

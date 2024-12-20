@@ -46,3 +46,51 @@ export const databaseItemQoreType = {
     },
   },
 } satisfies TQoreTypeObject;
+
+export const pageItemQoreType = {
+  type: 'hash',
+  fields: {
+    object: { type: 'string' },
+    id: { type: 'string' },
+    created_time: { type: 'string' },
+    last_edited_time: { type: 'string' },
+    created_by: {
+      type: {
+        type: 'hash',
+        fields: {
+          object: { type: 'string' },
+          id: { type: 'string' },
+        },
+      },
+    },
+    last_edited_by: {
+      type: {
+        type: 'hash',
+        fields: {
+          object: { type: 'string' },
+          id: { type: 'string' },
+        },
+      },
+    },
+    cover: { type: 'hash' },
+    icon: { type: 'hash' },
+    parent: {
+      type: {
+        type: 'hash',
+        fields: {
+          type: { type: 'string' },
+          database_id: { type: 'string' },
+        },
+      },
+    },
+    archived: { type: 'boolean' },
+    in_trash: { type: 'boolean' },
+    properties: {
+      type: 'hash',
+    },
+    url: { type: 'string' },
+    public_url: { type: 'hash' },
+    developer_survey: { type: 'string' },
+    request_id: { type: 'string' },
+  },
+} satisfies TQoreTypeObject;
