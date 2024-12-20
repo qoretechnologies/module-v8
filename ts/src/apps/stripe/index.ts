@@ -3,12 +3,14 @@ import {
   buildActionsFromSwaggerSchema,
   createSwaggerPaths,
   mapActionsToApp,
+  mapTriggersToApp,
 } from '../../global/helpers';
 import { IQoreAppWithActions } from '../../global/models/qore';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import stripe from '../../schemas/stripe.swagger.json';
 import { STRIPE_ALLOWED_PATHS, STRIPE_APP_NAME, STRIPE_CONN_OPTIONS } from './constants';
+import * as STRIPE_TRIGGERS from './triggers';
 
 export const STRIPE_ACTIONS = buildActionsFromSwaggerSchema({
   schema: stripe as any,
@@ -26,7 +28,10 @@ export default (locale: Locales) =>
     display_name: L[locale].apps[STRIPE_APP_NAME].displayName(),
     short_desc: L[locale].apps[STRIPE_APP_NAME].shortDesc(),
     name: STRIPE_APP_NAME,
-    actions: mapActionsToApp(STRIPE_APP_NAME, STRIPE_ACTIONS, locale),
+    actions: [
+      ...mapActionsToApp(STRIPE_APP_NAME, STRIPE_ACTIONS, locale),
+      ...mapTriggersToApp(STRIPE_APP_NAME, STRIPE_TRIGGERS, locale),
+    ],
     desc: L[locale].apps[STRIPE_APP_NAME].longDesc(),
     logo:
       'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IS0tIFVwbG9hZGVkIHRvOiBTVkcgUmVwbywgd3d3LnN2Z3' +
@@ -93,4 +98,4 @@ export default (locale: Locales) =>
         return rv;
       },
     },
-}) satisfies IQoreAppWithActions;
+  }) satisfies IQoreAppWithActions;
