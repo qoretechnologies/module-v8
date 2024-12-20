@@ -14,27 +14,26 @@ export default {
       type: 'string',
     },
   },
-  event_function(context, update, should_stop) {
+  event_function: async (context, update, should_stop) => {
     const {
       conn_opts: { token },
       opts: { databaseId },
     } = context;
 
-    let previousItem: { id: string } = null;
+    let previousItem = null;
 
     while (!should_stop()) {
-      setTimeout(async () => {
-        try {
-          const latestItem = await getLastCreatedDatabaseItem(token, databaseId);
-
-          if (previousItem?.id !== latestItem.id) {
-            update(latestItem);
-          }
-          previousItem = latestItem;
-        } catch (error) {
-          Debugger.log('Error in updated_database_item event_function', error);
+      try {
+        const latestItem = await getLastCreatedDatabaseItem(token, databaseId);
+        if (previousItem?.id !== latestItem.id) {
+          update(latestItem);
         }
-      }, 30_000);
+        previousItem = latestItem;
+      } catch (error) {
+        Debugger.log('Error in updated_database_item event_function', error);
+      }
+
+      await new Promise((resolve) => setTimeout(resolve, 30_000));
     }
   },
   event_info: {
