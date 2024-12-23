@@ -1,11 +1,16 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { actionsCatalogue } from '../../ActionsCatalogue';
-import { buildActionsFromSwaggerSchema, mapActionsToApp } from '../../global/helpers';
+import {
+  buildActionsFromSwaggerSchema,
+  mapActionsToApp,
+  mapTriggersToApp,
+} from '../../global/helpers';
 import { IQoreAppWithActions } from '../../global/models/qore';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import jira from '../../schemas/jira.swagger.json';
 import { JIRA_ALLOWED_PATHS, JIRA_APP_NAME, JIRA_CONN_OPTIONS } from './constants';
+import * as JIRA_TRIGGERS from './triggers';
 import { createSwaggerPaths } from '../../global/helpers/index';
 
 export const JIRA_ACTIONS = buildActionsFromSwaggerSchema({
@@ -24,7 +29,10 @@ export default (locale: Locales) =>
     display_name: L[locale].apps[JIRA_APP_NAME].displayName(),
     short_desc: L[locale].apps[JIRA_APP_NAME].shortDesc(),
     name: JIRA_APP_NAME,
-    actions: mapActionsToApp(JIRA_APP_NAME, JIRA_ACTIONS, locale),
+    actions: [
+      ...mapActionsToApp(JIRA_APP_NAME, JIRA_ACTIONS, locale),
+      ...mapTriggersToApp(JIRA_APP_NAME, JIRA_TRIGGERS, locale),
+    ],
     desc: L[locale].apps[JIRA_APP_NAME].longDesc(),
     logo:
       'PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCIgd2lkdGg9IjEyNyIgaGVpZ2h0PSIxMjciIHhtbG5zPSJodHRwO' +

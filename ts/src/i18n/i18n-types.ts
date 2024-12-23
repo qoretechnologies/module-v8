@@ -256,6 +256,42 @@ type RootTranslation = {
 						desc: string
 					}
 				}
+				updated_page: {
+					/**
+					 * U​p​d​a​t​e​d​ ​P​a​g​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​p​a​g​e​ ​i​s​ ​u​p​d​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​p​a​g​e​ ​i​s​ ​u​p​d​a​t​e​d
+					 */
+					longDesc: string
+					options: {
+						pageId: {
+							/**
+							 * P​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​p​a​g​e​ ​t​o​ ​w​a​t​c​h​ ​f​o​r​ ​u​p​d​a​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​p​a​g​e​ ​t​o​ ​w​a​t​c​h​ ​f​o​r​ ​u​p​d​a​t​e​s
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * N​o​t​i​o​n​ ​P​a​g​e​ ​U​p​d​a​t​e​d​ ​E​v​e​n​t​ ​I​n​f​o
+						 */
+						desc: string
+					}
+				}
 			}
 		}
 		Jira: {
@@ -271,6 +307,82 @@ type RootTranslation = {
 			 * C​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​J​i​r​a​ ​A​P​I
 			 */
 			longDesc: string
+			triggers: {
+				issue_created: {
+					/**
+					 * N​e​w​ ​I​s​s​u​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​s​s​u​e​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​s​s​u​e​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​w​a​t​c​h​ ​f​o​r​ ​n​e​w​ ​i​s​s​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​w​a​t​c​h​ ​f​o​r​ ​n​e​w​ ​i​s​s​u​e​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				issue_updated: {
+					/**
+					 * U​p​d​a​t​e​d​ ​I​s​s​u​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​i​s​s​u​e​ ​i​s​ ​u​p​d​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​i​s​s​u​e​ ​i​s​ ​u​p​d​a​t​e​d
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​w​a​t​c​h​ ​f​o​r​ ​u​p​d​a​t​e​d​ ​i​s​s​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​w​a​t​c​h​ ​f​o​r​ ​u​p​d​a​t​e​d​ ​i​s​s​u​e​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				project_created: {
+					/**
+					 * N​e​w​ ​P​r​o​j​e​c​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​r​o​j​e​c​t​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​r​o​j​e​c​t​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					longDesc: string
+				}
+			}
 		}
 		Stripe: {
 			/**
@@ -285,6 +397,268 @@ type RootTranslation = {
 			 * C​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​S​t​r​i​p​e​ ​A​P​I
 			 */
 			longDesc: string
+			triggers: {
+				charge_dispute_created: {
+					/**
+					 * N​e​w​ ​C​h​a​r​g​e​ ​D​i​s​p​u​t​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​d​i​s​p​u​t​e​ ​i​s​ ​c​r​e​a​t​e​d​ ​f​o​r​ ​a​ ​p​r​e​v​i​o​u​s​l​y​ ​m​a​d​e​ ​c​h​a​r​g​e​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​c​u​s​t​o​m​e​r​ ​i​n​i​t​i​a​t​e​s​ ​a​ ​d​i​s​p​u​t​e​ ​(​a​l​s​o​ ​k​n​o​w​n​ ​a​s​ ​a​ ​c​h​a​r​g​e​b​a​c​k​)​ ​a​g​a​i​n​s​t​ ​a​ ​c​o​m​p​l​e​t​e​d​ ​c​h​a​r​g​e​.​ ​Y​o​u​ ​c​a​n​ ​u​s​e​ ​t​h​i​s​ ​t​o​ ​r​e​s​p​o​n​d​ ​p​r​o​m​p​t​l​y​,​ ​p​r​o​v​i​d​e​ ​e​v​i​d​e​n​c​e​,​ ​o​r​ ​c​o​m​m​u​n​i​c​a​t​e​ ​w​i​t​h​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​r​e​g​a​r​d​i​n​g​ ​t​h​e​ ​d​i​s​p​u​t​e​d​ ​c​h​a​r​g​e​.
+					 */
+					longDesc: string
+					event_info: {
+						/**
+						 * P​r​o​v​i​d​e​s​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​d​i​s​p​u​t​e​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​r​e​a​s​o​n​,​ ​a​m​o​u​n​t​,​ ​a​n​d​ ​a​n​y​ ​r​e​l​e​v​a​n​t​ ​m​e​t​a​d​a​t​a​.
+						 */
+						desc: string
+					}
+				}
+				charge_refunded: {
+					/**
+					 * C​h​a​r​g​e​ ​R​e​f​u​n​d​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​h​a​r​g​e​ ​i​s​ ​f​u​l​l​y​ ​o​r​ ​p​a​r​t​i​a​l​l​y​ ​r​e​f​u​n​d​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​y​o​u​ ​i​s​s​u​e​ ​a​ ​r​e​f​u​n​d​ ​t​o​ ​a​ ​c​u​s​t​o​m​e​r​ ​f​o​r​ ​a​ ​p​r​e​v​i​o​u​s​l​y​ ​s​u​c​c​e​s​s​f​u​l​ ​c​h​a​r​g​e​.​ ​I​t​ ​i​n​c​l​u​d​e​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​r​e​f​u​n​d​e​d​ ​a​m​o​u​n​t​,​ ​t​h​e​ ​o​r​i​g​i​n​a​l​ ​c​h​a​r​g​e​ ​d​e​t​a​i​l​s​,​ ​a​n​d​ ​t​h​e​ ​r​e​f​u​n​d​ ​r​e​a​s​o​n​.
+					 */
+					longDesc: string
+					event_info: {
+						/**
+						 * C​o​n​t​a​i​n​s​ ​r​e​f​u​n​d​ ​d​e​t​a​i​l​s​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​r​e​f​u​n​d​e​d​ ​a​m​o​u​n​t​,​ ​t​h​e​ ​s​o​u​r​c​e​ ​c​h​a​r​g​e​,​ ​a​n​d​ ​t​h​e​ ​t​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​r​e​f​u​n​d​.
+						 */
+						desc: string
+					}
+				}
+				charge_succeeded: {
+					/**
+					 * C​h​a​r​g​e​ ​S​u​c​c​e​e​d​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​h​a​r​g​e​ ​i​s​ ​s​u​c​c​e​s​s​f​u​l​l​y​ ​c​o​m​p​l​e​t​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​p​a​y​m​e​n​t​ ​c​h​a​r​g​e​ ​i​s​ ​s​u​c​c​e​s​s​f​u​l​l​y​ ​p​r​o​c​e​s​s​e​d​,​ ​t​y​p​i​c​a​l​l​y​ ​f​o​l​l​o​w​i​n​g​ ​a​ ​c​a​r​d​ ​p​a​y​m​e​n​t​ ​o​r​ ​a​n​o​t​h​e​r​ ​s​u​p​p​o​r​t​e​d​ ​p​a​y​m​e​n​t​ ​m​e​t​h​o​d​.​ ​U​s​e​ ​t​h​i​s​ ​e​v​e​n​t​ ​t​o​ ​f​u​l​f​i​l​l​ ​o​r​d​e​r​s​,​ ​s​e​n​d​ ​c​o​n​f​i​r​m​a​t​i​o​n​s​,​ ​o​r​ ​u​p​d​a​t​e​ ​y​o​u​r​ ​i​n​t​e​r​n​a​l​ ​r​e​c​o​r​d​s​.
+					 */
+					longDesc: string
+					event_info: {
+						/**
+						 * I​n​c​l​u​d​e​s​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​s​u​c​c​e​s​s​f​u​l​ ​c​h​a​r​g​e​,​ ​s​u​c​h​ ​a​s​ ​t​h​e​ ​a​m​o​u​n​t​,​ ​p​a​y​m​e​n​t​ ​m​e​t​h​o​d​,​ ​a​n​d​ ​a​s​s​o​c​i​a​t​e​d​ ​c​u​s​t​o​m​e​r​ ​o​r​ ​o​r​d​e​r​ ​d​a​t​a​.
+						 */
+						desc: string
+					}
+				}
+				checkout_session_completed: {
+					/**
+					 * C​h​e​c​k​o​u​t​ ​S​e​s​s​i​o​n​ ​C​o​m​p​l​e​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​S​t​r​i​p​e​ ​C​h​e​c​k​o​u​t​ ​s​e​s​s​i​o​n​ ​i​s​ ​f​i​n​a​l​i​z​e​d​ ​a​n​d​ ​t​h​e​ ​p​a​y​m​e​n​t​ ​i​s​ ​s​u​c​c​e​s​s​f​u​l​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​a​f​t​e​r​ ​a​ ​c​u​s​t​o​m​e​r​ ​c​o​m​p​l​e​t​e​s​ ​t​h​e​ ​e​n​t​i​r​e​ ​S​t​r​i​p​e​ ​C​h​e​c​k​o​u​t​ ​f​l​o​w​,​ ​i​n​c​l​u​d​i​n​g​ ​a​n​y​ ​r​e​q​u​i​r​e​d​ ​p​a​y​m​e​n​t​ ​s​t​e​p​s​.​ ​I​t​'​s​ ​i​d​e​a​l​ ​f​o​r​ ​f​i​n​a​l​i​z​i​n​g​ ​o​r​d​e​r​s​,​ ​s​e​n​d​i​n​g​ ​r​e​c​e​i​p​t​s​,​ ​a​n​d​ ​g​r​a​n​t​i​n​g​ ​a​c​c​e​s​s​ ​t​o​ ​p​u​r​c​h​a​s​e​d​ ​p​r​o​d​u​c​t​s​ ​o​r​ ​s​e​r​v​i​c​e​s​.
+					 */
+					longDesc: string
+					event_info: {
+						/**
+						 * P​r​o​v​i​d​e​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​c​o​m​p​l​e​t​e​d​ ​c​h​e​c​k​o​u​t​ ​s​e​s​s​i​o​n​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​p​u​r​c​h​a​s​e​d​ ​i​t​e​m​s​,​ ​t​o​t​a​l​ ​a​m​o​u​n​t​,​ ​a​n​d​ ​c​u​s​t​o​m​e​r​ ​d​e​t​a​i​l​s​.
+						 */
+						desc: string
+					}
+				}
+				customer_created: {
+					/**
+					 * C​u​s​t​o​m​e​r​ ​C​r​e​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​e​r​ ​r​e​c​o​r​d​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​e​r​ ​i​s​ ​c​r​e​a​t​e​d​,​ ​e​i​t​h​e​r​ ​t​h​r​o​u​g​h​ ​y​o​u​r​ ​w​e​b​s​i​t​e​,​ ​t​h​e​ ​S​t​r​i​p​e​ ​d​a​s​h​b​o​a​r​d​,​ ​o​r​ ​v​i​a​ ​t​h​e​ ​A​P​I​.​ ​Y​o​u​ ​c​a​n​ ​u​s​e​ ​t​h​i​s​ ​e​v​e​n​t​ ​t​o​ ​s​t​a​r​t​ ​o​n​b​o​a​r​d​i​n​g​ ​p​r​o​c​e​s​s​e​s​,​ ​w​e​l​c​o​m​e​ ​e​m​a​i​l​s​,​ ​o​r​ ​c​u​s​t​o​m​ ​C​R​M​ ​i​n​t​e​g​r​a​t​i​o​n​s​.
+					 */
+					longDesc: string
+					event_info: {
+						/**
+						 * C​o​n​t​a​i​n​s​ ​d​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​c​u​s​t​o​m​e​r​,​ ​s​u​c​h​ ​a​s​ ​t​h​e​i​r​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​,​ ​b​i​l​l​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​n​d​ ​a​s​s​o​c​i​a​t​e​d​ ​m​e​t​a​d​a​t​a​.
+						 */
+						desc: string
+					}
+				}
+				invoice_created: {
+					/**
+					 * I​n​v​o​i​c​e​ ​C​r​e​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​n​v​o​i​c​e​ ​i​s​ ​g​e​n​e​r​a​t​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​n​ ​i​n​v​o​i​c​e​ ​i​s​ ​c​r​e​a​t​e​d​,​ ​e​i​t​h​e​r​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​a​s​ ​p​a​r​t​ ​o​f​ ​a​ ​r​e​c​u​r​r​i​n​g​ ​b​i​l​l​i​n​g​ ​c​y​c​l​e​ ​o​r​ ​m​a​n​u​a​l​l​y​.​ ​I​t​'​s​ ​u​s​e​f​u​l​ ​f​o​r​ ​s​e​n​d​i​n​g​ ​i​n​v​o​i​c​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​,​ ​u​p​d​a​t​i​n​g​ ​f​i​n​a​n​c​i​a​l​ ​s​y​s​t​e​m​s​,​ ​o​r​ ​a​u​t​o​m​a​t​i​n​g​ ​p​a​y​m​e​n​t​ ​r​e​m​i​n​d​e​r​s​.
+					 */
+					longDesc: string
+					event_info: {
+						/**
+						 * P​r​o​v​i​d​e​s​ ​t​h​e​ ​f​u​l​l​ ​i​n​v​o​i​c​e​ ​o​b​j​e​c​t​,​ ​i​n​c​l​u​d​i​n​g​ ​l​i​n​e​ ​i​t​e​m​s​,​ ​a​m​o​u​n​t​s​ ​d​u​e​,​ ​c​u​r​r​e​n​c​y​,​ ​a​n​d​ ​r​e​l​a​t​e​d​ ​c​u​s​t​o​m​e​r​ ​i​n​f​o​r​m​a​t​i​o​n​.
+						 */
+						desc: string
+					}
+				}
+				invoice_payment_failed: {
+					/**
+					 * I​n​v​o​i​c​e​ ​P​a​y​m​e​n​t​ ​F​a​i​l​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​a​t​t​e​m​p​t​ ​t​o​ ​p​a​y​ ​a​n​ ​i​n​v​o​i​c​e​ ​f​a​i​l​s​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​S​t​r​i​p​e​ ​a​t​t​e​m​p​t​s​ ​t​o​ ​c​h​a​r​g​e​ ​a​ ​c​u​s​t​o​m​e​r​ ​f​o​r​ ​a​n​ ​i​n​v​o​i​c​e​ ​a​n​d​ ​t​h​e​ ​p​a​y​m​e​n​t​ ​i​s​ ​d​e​c​l​i​n​e​d​ ​o​r​ ​o​t​h​e​r​w​i​s​e​ ​f​a​i​l​s​.​ ​U​s​e​ ​i​t​ ​t​o​ ​s​e​n​d​ ​p​a​y​m​e​n​t​ ​f​a​i​l​u​r​e​ ​n​o​t​i​c​e​s​,​ ​p​r​o​m​p​t​ ​c​u​s​t​o​m​e​r​s​ ​t​o​ ​u​p​d​a​t​e​ ​t​h​e​i​r​ ​p​a​y​m​e​n​t​ ​m​e​t​h​o​d​s​,​ ​o​r​ ​p​a​u​s​e​ ​s​e​r​v​i​c​e​s​ ​u​n​t​i​l​ ​p​a​y​m​e​n​t​ ​i​s​ ​r​e​s​o​l​v​e​d​.
+					 */
+					longDesc: string
+					event_info: {
+						/**
+						 * I​n​c​l​u​d​e​s​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​f​a​i​l​e​d​ ​p​a​y​m​e​n​t​ ​a​t​t​e​m​p​t​,​ ​s​u​c​h​ ​a​s​ ​t​h​e​ ​i​n​v​o​i​c​e​ ​a​m​o​u​n​t​,​ ​p​a​y​m​e​n​t​ ​m​e​t​h​o​d​,​ ​a​n​d​ ​t​h​e​ ​r​e​a​s​o​n​ ​f​o​r​ ​f​a​i​l​u​r​e​.
+						 */
+						desc: string
+					}
+				}
+				payment_intent_failed: {
+					/**
+					 * P​a​y​m​e​n​t​ ​I​n​t​e​n​t​ ​F​a​i​l​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​P​a​y​m​e​n​t​ ​I​n​t​e​n​t​ ​c​a​n​n​o​t​ ​b​e​ ​c​o​m​p​l​e​t​e​d​ ​s​u​c​c​e​s​s​f​u​l​l​y​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​e​v​e​n​t​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​P​a​y​m​e​n​t​ ​I​n​t​e​n​t​—​c​r​e​a​t​e​d​ ​t​o​ ​h​a​n​d​l​e​ ​d​y​n​a​m​i​c​ ​p​a​y​m​e​n​t​ ​f​l​o​w​s​—​u​l​t​i​m​a​t​e​l​y​ ​f​a​i​l​s​,​ ​f​o​r​ ​e​x​a​m​p​l​e​,​ ​d​u​e​ ​t​o​ ​i​n​s​u​f​f​i​c​i​e​n​t​ ​f​u​n​d​s​,​ ​a​u​t​h​e​n​t​i​c​a​t​i​o​n​ ​f​a​i​l​u​r​e​s​,​ ​o​r​ ​t​i​m​e​o​u​t​s​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​n​o​t​i​f​y​ ​c​u​s​t​o​m​e​r​s​ ​o​f​ ​p​a​y​m​e​n​t​ ​i​s​s​u​e​s​ ​o​r​ ​p​r​o​m​p​t​ ​t​h​e​m​ ​t​o​ ​t​r​y​ ​a​n​o​t​h​e​r​ ​p​a​y​m​e​n​t​ ​m​e​t​h​o​d​.
+					 */
+					longDesc: string
+					event_info: {
+						/**
+						 * I​n​c​l​u​d​e​s​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​f​a​i​l​e​d​ ​P​a​y​m​e​n​t​ ​I​n​t​e​n​t​,​ ​s​u​c​h​ ​a​s​ ​t​h​e​ ​a​m​o​u​n​t​,​ ​c​u​r​r​e​n​c​y​,​ ​p​a​y​m​e​n​t​ ​m​e​t​h​o​d​ ​a​t​t​e​m​p​t​s​,​ ​a​n​d​ ​t​h​e​ ​r​e​a​s​o​n​ ​f​o​r​ ​f​a​i​l​u​r​e​.
+						 */
+						desc: string
+					}
+				}
+				payment_intent_succeeded: {
+					/**
+					 * P​a​y​m​e​n​t​ ​I​n​t​e​n​t​ ​S​u​c​c​e​e​d​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​P​a​y​m​e​n​t​ ​I​n​t​e​n​t​ ​s​u​c​c​e​s​s​f​u​l​l​y​ ​c​o​m​p​l​e​t​e​s​,​ ​c​o​n​f​i​r​m​i​n​g​ ​p​a​y​m​e​n​t​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​P​a​y​m​e​n​t​ ​I​n​t​e​n​t​ ​t​r​a​n​s​i​t​i​o​n​s​ ​t​o​ ​a​ ​s​u​c​c​e​s​s​f​u​l​ ​s​t​a​t​e​,​ ​i​n​d​i​c​a​t​i​n​g​ ​t​h​a​t​ ​f​u​n​d​s​ ​a​r​e​ ​c​a​p​t​u​r​e​d​ ​o​r​ ​c​o​n​f​i​r​m​e​d​.​ ​U​s​e​ ​i​t​ ​t​o​ ​f​u​l​f​i​l​l​ ​o​r​d​e​r​s​,​ ​u​p​d​a​t​e​ ​y​o​u​r​ ​i​n​t​e​r​n​a​l​ ​s​y​s​t​e​m​s​,​ ​o​r​ ​s​e​n​d​ ​c​u​s​t​o​m​e​r​s​ ​c​o​n​f​i​r​m​a​t​i​o​n​ ​m​e​s​s​a​g​e​s​.
+					 */
+					longDesc: string
+					event_info: {
+						/**
+						 * P​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​s​u​c​c​e​s​s​f​u​l​ ​P​a​y​m​e​n​t​ ​I​n​t​e​n​t​,​ ​i​n​c​l​u​d​i​n​g​ ​p​a​y​m​e​n​t​ ​a​m​o​u​n​t​,​ ​m​e​t​h​o​d​,​ ​c​u​s​t​o​m​e​r​ ​d​e​t​a​i​l​s​,​ ​a​n​d​ ​a​s​s​o​c​i​a​t​e​d​ ​m​e​t​a​d​a​t​a​.
+						 */
+						desc: string
+					}
+				}
+				payment_link_created: {
+					/**
+					 * P​a​y​m​e​n​t​ ​L​i​n​k​ ​C​r​e​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​P​a​y​m​e​n​t​ ​L​i​n​k​ ​i​s​ ​c​r​e​a​t​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​y​o​u​ ​c​r​e​a​t​e​ ​a​ ​P​a​y​m​e​n​t​ ​L​i​n​k​,​ ​w​h​i​c​h​ ​p​r​o​v​i​d​e​s​ ​a​ ​h​o​s​t​e​d​ ​p​a​y​m​e​n​t​ ​p​a​g​e​ ​t​h​a​t​ ​c​u​s​t​o​m​e​r​s​ ​c​a​n​ ​u​s​e​ ​t​o​ ​p​a​y​ ​f​o​r​ ​a​ ​p​r​o​d​u​c​t​ ​o​r​ ​s​e​r​v​i​c​e​.​ ​Y​o​u​ ​c​a​n​ ​u​s​e​ ​t​h​i​s​ ​e​v​e​n​t​ ​t​o​ ​t​r​a​c​k​ ​l​i​n​k​ ​c​r​e​a​t​i​o​n​,​ ​a​u​t​o​m​a​t​e​ ​s​h​a​r​i​n​g​,​ ​o​r​ ​l​o​g​ ​l​i​n​k​ ​d​e​t​a​i​l​s​ ​i​n​ ​y​o​u​r​ ​C​R​M​.
+					 */
+					longDesc: string
+					event_info: {
+						/**
+						 * C​o​n​t​a​i​n​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​n​e​w​ ​P​a​y​m​e​n​t​ ​L​i​n​k​,​ ​i​n​c​l​u​d​i​n​g​ ​U​R​L​,​ ​p​r​o​d​u​c​t​ ​d​e​t​a​i​l​s​,​ ​a​n​d​ ​a​s​s​o​c​i​a​t​e​d​ ​p​r​i​c​i​n​g​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​s​.
+						 */
+						desc: string
+					}
+				}
+				subscription_canceled: {
+					/**
+					 * S​u​b​s​c​r​i​p​t​i​o​n​ ​C​a​n​c​e​l​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​a​c​t​i​v​e​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​i​s​ ​c​a​n​c​e​l​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​e​v​e​n​t​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​i​s​ ​c​a​n​c​e​l​e​d​,​ ​w​h​e​t​h​e​r​ ​b​y​ ​t​h​e​ ​c​u​s​t​o​m​e​r​,​ ​v​i​a​ ​A​P​I​,​ ​o​r​ ​d​u​e​ ​t​o​ ​a​n​ ​a​u​t​o​m​a​t​i​c​ ​c​a​n​c​e​l​l​a​t​i​o​n​ ​(​e​.​g​.​,​ ​p​a​y​m​e​n​t​ ​f​a​i​l​u​r​e​s​)​.​ ​U​s​e​ ​i​t​ ​t​o​ ​a​d​j​u​s​t​ ​s​e​r​v​i​c​e​ ​a​c​c​e​s​s​,​ ​s​e​n​d​ ​a​c​c​o​u​n​t​ ​c​l​o​s​u​r​e​ ​n​o​t​i​c​e​s​,​ ​o​r​ ​o​f​f​e​r​ ​r​e​-​s​u​b​s​c​r​i​p​t​i​o​n​ ​i​n​c​e​n​t​i​v​e​s​.
+					 */
+					longDesc: string
+					event_info: {
+						/**
+						 * P​r​o​v​i​d​e​s​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​c​a​n​c​e​l​e​d​ ​s​u​b​s​c​r​i​p​t​i​o​n​,​ ​s​u​c​h​ ​a​s​ ​t​h​e​ ​c​a​n​c​e​l​l​a​t​i​o​n​ ​r​e​a​s​o​n​,​ ​e​f​f​e​c​t​i​v​e​ ​e​n​d​ ​d​a​t​e​,​ ​a​n​d​ ​a​n​y​ ​p​r​o​r​a​t​e​d​ ​r​e​f​u​n​d​s​.
+						 */
+						desc: string
+					}
+				}
+				subscription_created: {
+					/**
+					 * S​u​b​s​c​r​i​p​t​i​o​n​ ​C​r​e​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​i​s​ ​s​u​c​c​e​s​s​f​u​l​l​y​ ​c​r​e​a​t​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​e​v​e​n​t​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​c​u​s​t​o​m​e​r​ ​s​t​a​r​t​s​ ​a​ ​n​e​w​ ​s​u​b​s​c​r​i​p​t​i​o​n​,​ ​e​i​t​h​e​r​ ​b​y​ ​s​i​g​n​i​n​g​ ​u​p​ ​f​o​r​ ​a​ ​p​l​a​n​ ​o​r​ ​a​d​d​i​n​g​ ​a​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​p​r​o​d​u​c​t​.​ ​U​s​e​ ​i​t​ ​t​o​ ​o​n​b​o​a​r​d​ ​n​e​w​ ​s​u​b​s​c​r​i​b​e​r​s​,​ ​g​r​a​n​t​ ​a​c​c​e​s​s​ ​t​o​ ​s​e​r​v​i​c​e​s​,​ ​o​r​ ​s​e​n​d​ ​a​ ​w​e​l​c​o​m​e​ ​m​e​s​s​a​g​e​.
+					 */
+					longDesc: string
+					event_info: {
+						/**
+						 * I​n​c​l​u​d​e​s​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​s​u​b​s​c​r​i​p​t​i​o​n​,​ ​i​n​c​l​u​d​i​n​g​ ​p​l​a​n​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​s​t​a​r​t​ ​d​a​t​e​,​ ​a​n​d​ ​b​i​l​l​i​n​g​ ​c​y​c​l​e​ ​d​e​t​a​i​l​s​.
+						 */
+						desc: string
+					}
+				}
+				subscription_updated: {
+					/**
+					 * S​u​b​s​c​r​i​p​t​i​o​n​ ​U​p​d​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​s​u​b​s​c​r​i​p​t​i​o​n​’​s​ ​d​e​t​a​i​l​s​ ​c​h​a​n​g​e​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​e​v​e​n​t​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​s​u​b​s​c​r​i​p​t​i​o​n​’​s​ ​p​a​r​a​m​e​t​e​r​s​ ​a​r​e​ ​u​p​d​a​t​e​d​.​ ​F​o​r​ ​e​x​a​m​p​l​e​,​ ​a​ ​c​h​a​n​g​e​ ​i​n​ ​t​h​e​ ​b​i​l​l​i​n​g​ ​c​y​c​l​e​,​ ​s​w​a​p​p​i​n​g​ ​a​ ​p​l​a​n​,​ ​a​d​d​i​n​g​ ​o​r​ ​r​e​m​o​v​i​n​g​ ​p​r​o​d​u​c​t​s​,​ ​o​r​ ​m​o​d​i​f​y​i​n​g​ ​p​a​y​m​e​n​t​ ​s​e​t​t​i​n​g​s​.​ ​U​s​e​ ​i​t​ ​t​o​ ​k​e​e​p​ ​y​o​u​r​ ​i​n​t​e​r​n​a​l​ ​r​e​c​o​r​d​s​ ​a​c​c​u​r​a​t​e​,​ ​s​e​n​d​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​a​b​o​u​t​ ​p​l​a​n​ ​c​h​a​n​g​e​s​,​ ​o​r​ ​a​d​j​u​s​t​ ​s​e​r​v​i​c​e​ ​a​c​c​e​s​s​ ​l​e​v​e​l​s​.
+					 */
+					longDesc: string
+					event_info: {
+						/**
+						 * P​r​o​v​i​d​e​s​ ​t​h​e​ ​u​p​d​a​t​e​d​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​o​b​j​e​c​t​,​ ​h​i​g​h​l​i​g​h​t​i​n​g​ ​c​h​a​n​g​e​s​ ​s​u​c​h​ ​a​s​ ​p​l​a​n​ ​m​o​d​i​f​i​c​a​t​i​o​n​s​,​ ​t​r​i​a​l​ ​a​d​j​u​s​t​m​e​n​t​s​,​ ​o​r​ ​u​p​d​a​t​e​d​ ​b​i​l​l​i​n​g​ ​d​e​t​a​i​l​s​.
+						 */
+						desc: string
+					}
+				}
+			}
 			actions: {
 				GetAccount: {
 					/**
@@ -8323,6 +8697,42 @@ export type TranslationFunctions = {
 						desc: () => LocalizedString
 					}
 				}
+				updated_page: {
+					/**
+					 * Updated Page
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a page is updated
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a page is updated
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						pageId: {
+							/**
+							 * Page ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the page to watch for updates
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the page to watch for updates
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Notion Page Updated Event Info
+						 */
+						desc: () => LocalizedString
+					}
+				}
 			}
 		}
 		Jira: {
@@ -8338,6 +8748,82 @@ export type TranslationFunctions = {
 			 * Collection of actions to interact with Jira API
 			 */
 			longDesc: () => LocalizedString
+			triggers: {
+				issue_created: {
+					/**
+					 * New Issue
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new issue is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new issue is created
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project to watch for new issues
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The project to watch for new issues
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				issue_updated: {
+					/**
+					 * Updated Issue
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an issue is updated
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when an issue is updated
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project to watch for updated issues
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The project to watch for updated issues
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				project_created: {
+					/**
+					 * New Project
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new project is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new project is created
+					 */
+					longDesc: () => LocalizedString
+				}
+			}
 		}
 		Stripe: {
 			/**
@@ -8352,6 +8838,268 @@ export type TranslationFunctions = {
 			 * Collection of actions to interact with Stripe API
 			 */
 			longDesc: () => LocalizedString
+			triggers: {
+				charge_dispute_created: {
+					/**
+					 * New Charge Dispute
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a dispute is created for a previously made charge.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a customer initiates a dispute (also known as a chargeback) against a completed charge. You can use this to respond promptly, provide evidence, or communicate with the customer regarding the disputed charge.
+					 */
+					longDesc: () => LocalizedString
+					event_info: {
+						/**
+						 * Provides details about the newly created dispute, including the reason, amount, and any relevant metadata.
+						 */
+						desc: () => LocalizedString
+					}
+				}
+				charge_refunded: {
+					/**
+					 * Charge Refunded
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an existing charge is fully or partially refunded.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever you issue a refund to a customer for a previously successful charge. It includes information about the refunded amount, the original charge details, and the refund reason.
+					 */
+					longDesc: () => LocalizedString
+					event_info: {
+						/**
+						 * Contains refund details, including the refunded amount, the source charge, and the timestamp of the refund.
+						 */
+						desc: () => LocalizedString
+					}
+				}
+				charge_succeeded: {
+					/**
+					 * Charge Succeeded
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new charge is successfully completed.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a payment charge is successfully processed, typically following a card payment or another supported payment method. Use this event to fulfill orders, send confirmations, or update your internal records.
+					 */
+					longDesc: () => LocalizedString
+					event_info: {
+						/**
+						 * Includes details about the successful charge, such as the amount, payment method, and associated customer or order data.
+						 */
+						desc: () => LocalizedString
+					}
+				}
+				checkout_session_completed: {
+					/**
+					 * Checkout Session Completed
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a Stripe Checkout session is finalized and the payment is successful.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires after a customer completes the entire Stripe Checkout flow, including any required payment steps. It's ideal for finalizing orders, sending receipts, and granting access to purchased products or services.
+					 */
+					longDesc: () => LocalizedString
+					event_info: {
+						/**
+						 * Provides information about the completed checkout session, including the purchased items, total amount, and customer details.
+						 */
+						desc: () => LocalizedString
+					}
+				}
+				customer_created: {
+					/**
+					 * Customer Created
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new customer record is added to your Stripe account.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a new customer is created, either through your website, the Stripe dashboard, or via the API. You can use this event to start onboarding processes, welcome emails, or custom CRM integrations.
+					 */
+					longDesc: () => LocalizedString
+					event_info: {
+						/**
+						 * Contains details of the newly created customer, such as their email address, billing information, and associated metadata.
+						 */
+						desc: () => LocalizedString
+					}
+				}
+				invoice_created: {
+					/**
+					 * Invoice Created
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new invoice is generated.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever an invoice is created, either automatically as part of a recurring billing cycle or manually. It's useful for sending invoice notifications, updating financial systems, or automating payment reminders.
+					 */
+					longDesc: () => LocalizedString
+					event_info: {
+						/**
+						 * Provides the full invoice object, including line items, amounts due, currency, and related customer information.
+						 */
+						desc: () => LocalizedString
+					}
+				}
+				invoice_payment_failed: {
+					/**
+					 * Invoice Payment Failed
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an attempt to pay an invoice fails.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever Stripe attempts to charge a customer for an invoice and the payment is declined or otherwise fails. Use it to send payment failure notices, prompt customers to update their payment methods, or pause services until payment is resolved.
+					 */
+					longDesc: () => LocalizedString
+					event_info: {
+						/**
+						 * Includes details about the failed payment attempt, such as the invoice amount, payment method, and the reason for failure.
+						 */
+						desc: () => LocalizedString
+					}
+				}
+				payment_intent_failed: {
+					/**
+					 * Payment Intent Failed
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a Payment Intent cannot be completed successfully.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This event fires when a Payment Intent—created to handle dynamic payment flows—ultimately fails, for example, due to insufficient funds, authentication failures, or timeouts. Use this to notify customers of payment issues or prompt them to try another payment method.
+					 */
+					longDesc: () => LocalizedString
+					event_info: {
+						/**
+						 * Includes details about the failed Payment Intent, such as the amount, currency, payment method attempts, and the reason for failure.
+						 */
+						desc: () => LocalizedString
+					}
+				}
+				payment_intent_succeeded: {
+					/**
+					 * Payment Intent Succeeded
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a Payment Intent successfully completes, confirming payment.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when a Payment Intent transitions to a successful state, indicating that funds are captured or confirmed. Use it to fulfill orders, update your internal systems, or send customers confirmation messages.
+					 */
+					longDesc: () => LocalizedString
+					event_info: {
+						/**
+						 * Provides comprehensive details about the successful Payment Intent, including payment amount, method, customer details, and associated metadata.
+						 */
+						desc: () => LocalizedString
+					}
+				}
+				payment_link_created: {
+					/**
+					 * Payment Link Created
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new Payment Link is created.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever you create a Payment Link, which provides a hosted payment page that customers can use to pay for a product or service. You can use this event to track link creation, automate sharing, or log link details in your CRM.
+					 */
+					longDesc: () => LocalizedString
+					event_info: {
+						/**
+						 * Contains information about the new Payment Link, including URL, product details, and associated pricing configurations.
+						 */
+						desc: () => LocalizedString
+					}
+				}
+				subscription_canceled: {
+					/**
+					 * Subscription Canceled
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an active subscription is canceled.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This event fires whenever a subscription is canceled, whether by the customer, via API, or due to an automatic cancellation (e.g., payment failures). Use it to adjust service access, send account closure notices, or offer re-subscription incentives.
+					 */
+					longDesc: () => LocalizedString
+					event_info: {
+						/**
+						 * Provides details about the canceled subscription, such as the cancellation reason, effective end date, and any prorated refunds.
+						 */
+						desc: () => LocalizedString
+					}
+				}
+				subscription_created: {
+					/**
+					 * Subscription Created
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new subscription is successfully created.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This event fires whenever a customer starts a new subscription, either by signing up for a plan or adding a subscription product. Use it to onboard new subscribers, grant access to services, or send a welcome message.
+					 */
+					longDesc: () => LocalizedString
+					event_info: {
+						/**
+						 * Includes details about the newly created subscription, including plan information, start date, and billing cycle details.
+						 */
+						desc: () => LocalizedString
+					}
+				}
+				subscription_updated: {
+					/**
+					 * Subscription Updated
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a subscription’s details change.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This event fires whenever a subscription’s parameters are updated. For example, a change in the billing cycle, swapping a plan, adding or removing products, or modifying payment settings. Use it to keep your internal records accurate, send notifications about plan changes, or adjust service access levels.
+					 */
+					longDesc: () => LocalizedString
+					event_info: {
+						/**
+						 * Provides the updated subscription object, highlighting changes such as plan modifications, trial adjustments, or updated billing details.
+						 */
+						desc: () => LocalizedString
+					}
+				}
+			}
 			actions: {
 				GetAccount: {
 					/**

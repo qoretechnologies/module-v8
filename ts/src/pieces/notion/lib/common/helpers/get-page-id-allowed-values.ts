@@ -5,7 +5,7 @@ import {
   TQoreGetAllowedValuesFunction,
 } from '../../../../../global/models/qore';
 
-export const getNotionDatabaseIdAllowedValues: TQoreGetAllowedValuesFunction = async (
+export const getNotionPageIdAllowedValues: TQoreGetAllowedValuesFunction = async (
   context
 ): Promise<IQoreAllowedValue[]> => {
   const {
@@ -17,33 +17,38 @@ export const getNotionDatabaseIdAllowedValues: TQoreGetAllowedValuesFunction = a
     notionVersion: '2022-02-22',
   });
 
-  const databases: IQoreAllowedValue[] = [];
+  const pages: IQoreAllowedValue[] = [];
 
-  const notionDatabases: SearchResponse['results'] = [];
+  const notionPages: SearchResponse['results'] = [];
   let cursor = undefined;
 
   do {
     const response = await notion.search({
       filter: {
         property: 'object',
-        value: 'database',
+        value: 'page',
       },
       start_cursor: cursor,
       page_size: 100,
     });
 
-    notionDatabases.push(...response.results);
+    notionPages.push(...response.results);
     cursor = response.next_cursor;
   } while (cursor);
 
-  notionDatabases.forEach((database) => {
-    const title = 'title' in database ? database.title?.[0]?.plain_text : 'Untitled';
+  notionPages.forEach((page) => {
+    const title =
+      // @ts-expect-error Not all pages have a Name property
+      page.properties.Name?.title[0]?.plain_text ??
+      // @ts-expect-error Not all pages have a Name property
+      page.properties.title?.title[0]?.text?.content ??
+      'No Title';
 
-    databases.push({
-      value: database.id,
+    pages.push({
+      value: page.id,
       display_name: title,
     });
   });
 
-  return databases;
+  return pages;
 };

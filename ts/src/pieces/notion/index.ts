@@ -22,6 +22,7 @@ import { getUsers } from './lib/actions/get-users';
 import { removePage } from './lib/actions/remove-page';
 import { createDatabase } from './lib/actions/create-database';
 import { newDatabaseItem, updatedDatabaseItem } from './lib/triggers';
+import { getAllDatabases } from './lib/actions/get-databases';
 
 export const notionAuth = PieceAuth.OAuth2({
   authUrl: 'https://api.notion.com/v1/oauth/authorize',
@@ -86,6 +87,7 @@ export const notion = createPiece({
     getUsers,
     removePage,
     createDatabase,
+    getAllDatabases,
     createCustomApiCallAction({
       baseUrl: () => 'https://api.notion.com/v1',
       auth: notionAuth,
