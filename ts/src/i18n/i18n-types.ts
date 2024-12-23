@@ -307,6 +307,82 @@ type RootTranslation = {
 			 * C​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​J​i​r​a​ ​A​P​I
 			 */
 			longDesc: string
+			triggers: {
+				issue_created: {
+					/**
+					 * N​e​w​ ​I​s​s​u​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​s​s​u​e​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​s​s​u​e​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​w​a​t​c​h​ ​f​o​r​ ​n​e​w​ ​i​s​s​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​w​a​t​c​h​ ​f​o​r​ ​n​e​w​ ​i​s​s​u​e​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				issue_updated: {
+					/**
+					 * U​p​d​a​t​e​d​ ​I​s​s​u​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​i​s​s​u​e​ ​i​s​ ​u​p​d​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​i​s​s​u​e​ ​i​s​ ​u​p​d​a​t​e​d
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​w​a​t​c​h​ ​f​o​r​ ​u​p​d​a​t​e​d​ ​i​s​s​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​w​a​t​c​h​ ​f​o​r​ ​u​p​d​a​t​e​d​ ​i​s​s​u​e​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				project_created: {
+					/**
+					 * N​e​w​ ​P​r​o​j​e​c​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​r​o​j​e​c​t​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​r​o​j​e​c​t​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					longDesc: string
+				}
+			}
 		}
 		Stripe: {
 			/**
@@ -8672,6 +8748,82 @@ export type TranslationFunctions = {
 			 * Collection of actions to interact with Jira API
 			 */
 			longDesc: () => LocalizedString
+			triggers: {
+				issue_created: {
+					/**
+					 * New Issue
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new issue is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new issue is created
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project to watch for new issues
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The project to watch for new issues
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				issue_updated: {
+					/**
+					 * Updated Issue
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an issue is updated
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when an issue is updated
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project to watch for updated issues
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The project to watch for updated issues
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				project_created: {
+					/**
+					 * New Project
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new project is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new project is created
+					 */
+					longDesc: () => LocalizedString
+				}
+			}
 		}
 		Stripe: {
 			/**
