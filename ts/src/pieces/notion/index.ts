@@ -21,7 +21,7 @@ import { getUser } from './lib/actions/get-user';
 import { getUsers } from './lib/actions/get-users';
 import { removePage } from './lib/actions/remove-page';
 import { createDatabase } from './lib/actions/create-database';
-import { newDatabaseItem, updatedDatabaseItem } from './lib/triggers';
+import { newDatabaseItem, updatedDatabaseItem, updatedPage } from './lib/triggers';
 import { getAllDatabases } from './lib/actions/get-databases';
 
 export const notionAuth = PieceAuth.OAuth2({
@@ -97,5 +97,5 @@ export const notion = createPiece({
     }),
   ],
   triggers: [],
-  qoreTriggers: [newDatabaseItem, updatedDatabaseItem],
+  qoreTriggers: [newDatabaseItem, updatedDatabaseItem, updatedPage],
 });

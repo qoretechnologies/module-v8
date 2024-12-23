@@ -1,17 +1,17 @@
 import { STRIPE_ACTIONS } from '../apps/stripe';
-
+import * as STRIPE_TRIGGERS from '../apps/stripe/triggers';
 let connection: string;
 
 describe('Tests Stripe Actions', () => {
   let customerId: string | null = null;
   let chargeId: string | null = null;
   let invoiceId: string | null = null;
+  const token = process.env.STRIPE_API_KEY;
 
   beforeAll(() => {
     connection = testApi.createConnection('stripe', {
       opts: {
-        token:
-          'sk_test_51Q5mY202gU5cv8l2YfWs1MqoWJgzpNWtQLz6ej0x92n2FpouXgMwpnBNcrah5QJtbUjgGs2Z3himoEmYmMSYDgDe00LYE7VkEb',
+        token,
       },
     });
 
@@ -340,5 +340,45 @@ describe('Tests Stripe Actions', () => {
 
     expect(response.body).toBeDefined();
     expect(response.body.deleted).toBe(true);
+  });
+
+  describe(`Should test Stripe Triggers`, () => {
+    let webhook: Record<string, any> = null;
+    it('Should register stripe webhook', async () => {
+      const result = await STRIPE_TRIGGERS['chargeSucceeded'].webhook_register(
+        {
+          conn_opts: {
+            token,
+          },
+        },
+        'https://example1.com'
+      );
+
+      expect(result).toBeDefined();
+      if (result) webhook = result;
+    });
+    it('Should deregister stripe webhook', async () => {
+      expect(webhook).toBeDefined();
+      if (webhook) {
+        await STRIPE_TRIGGERS['chargeSucceeded'].webhook_deregister(
+          {
+            conn_opts: {
+              token,
+            },
+          },
+          '',
+          webhook
+        );
+      }
+    });
+    it('Should get example stripe webhook data', async () => {
+      const exampleData = await STRIPE_TRIGGERS['chargeSucceeded'].get_example_event_data({
+        conn_opts: {
+          token,
+        },
+      });
+
+      expect(exampleData).toBeDefined();
+    });
   });
 });
