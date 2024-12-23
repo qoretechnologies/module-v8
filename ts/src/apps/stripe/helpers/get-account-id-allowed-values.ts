@@ -4,7 +4,12 @@ import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../globa
 type TStripeAccountData = {
   data: {
     id: string;
-    business_profile: { name: string };
+    business_profile: {
+      name: string;
+      product_description: string;
+      url: string;
+      support_url: string;
+    };
   }[];
   hasMore: boolean;
 };
@@ -25,7 +30,7 @@ export const getStripeAccountIdAllowedValues: TQoreGetAllowedValuesFunction = as
         headers: {
           Authorization: `Bearer ${token}`,
         },
-        path: `/v1/charges` + (lastItemId ? `?starting_after=${lastItemId}` : ''),
+        path: `/v1/accounts` + (lastItemId ? `?starting_after=${lastItemId}` : ''),
       },
       { url: `https://api.stripe.com`, endpointId: 'Stripe' }
     );
@@ -37,6 +42,9 @@ export const getStripeAccountIdAllowedValues: TQoreGetAllowedValuesFunction = as
         (item): IQoreAllowedValue => ({
           value: item.id,
           display_name: item.business_profile?.name,
+          desc:
+            `id: ${item.id}\n\nProduct: ${item.business_profile?.product_description}\n\n` +
+            `URL: ${item.business_profile?.url}\n\nSupport URL: ${item.business_profile?.support_url}`,
         })
       )
     );

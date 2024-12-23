@@ -19,7 +19,7 @@ export const deregisterStripeWebhook: IQoreAppActionWithWebhookBase['webhook_der
       headers: {
         Authorization: `Bearer ${token}`,
       },
-      path: `/v1/webhook_endpoints/${webhook.gid}`,
+      path: `/v1/webhook_endpoints/${webhook.id}`,
     },
     {
       url: 'https://api.stripe.com',
@@ -56,8 +56,8 @@ export const createRegisterStripeWebhookFunction = (
 
       return { webhook: data };
     } catch (error) {
-      console.log(error);
       Debugger.log('Error in webhook_register for stripe', error);
+      throw error;
     }
   };
 };
