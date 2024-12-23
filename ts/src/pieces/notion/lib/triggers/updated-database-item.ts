@@ -20,20 +20,20 @@ export default {
       opts: { databaseId },
     } = context;
 
-    let previousItem = null;
+    try {
+      let previousItem = await getLastUpdatedDatabaseItem(token, databaseId);
 
-    while (!should_stop()) {
-      try {
+      while (!should_stop()) {
         const latestItem = await getLastUpdatedDatabaseItem(token, databaseId);
         if (previousItem?.id !== latestItem.id) {
           update(latestItem);
         }
         previousItem = latestItem;
-      } catch (error) {
-        Debugger.log('Error in updated_database_item event_function', error);
-      }
 
-      await new Promise((resolve) => setTimeout(resolve, 30_000));
+        await new Promise((resolve) => setTimeout(resolve, 30_000));
+      }
+    } catch (error) {
+      Debugger.log('Error in updated_database_item event_function', error);
     }
   },
   event_info: {
