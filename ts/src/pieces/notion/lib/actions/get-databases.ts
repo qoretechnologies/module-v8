@@ -1,6 +1,9 @@
 import { Client } from '@notionhq/client';
 import { notionAuth } from '../..';
 import { createAction } from '../../../../core/framework';
+import { Debugger } from '../../../../utils/Debugger';
+import { delay } from '../../../../global/helpers';
+import { NOTION_FETCH_DELAY } from '../common/constants';
 
 export const getAllDatabases = createAction({
   auth: notionAuth,
@@ -17,19 +20,28 @@ export const getAllDatabases = createAction({
     const databases = [];
     let cursor = undefined;
 
-    do {
-      const response = await notion.search({
-        filter: {
-          property: 'object',
-          value: 'database',
-        },
-        start_cursor: cursor,
-        page_size: 100,
-      });
+    try {
+      do {
+        const response = await notion.search({
+          filter: {
+            property: 'object',
+            value: 'database',
+          },
+          start_cursor: cursor,
+          page_size: 100,
+        });
 
-      databases.push(...response.results);
-      cursor = response.next_cursor;
-    } while (cursor);
+        databases.push(...response.results);
+        cursor = response.next_cursor ? response.next_cursor : undefined;
+        if (cursor) {
+          await delay(NOTION_FETCH_DELAY);
+        }
+      } while (cursor);
+    } catch (error) {
+      Debugger.log(`Error fetching Notion databases: ${error}`);
+
+      return databases;
+    }
 
     return databases;
   },
