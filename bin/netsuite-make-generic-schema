@@ -1,0 +1,85 @@
+#!/usr/bin/env qore
+
+/* This script will remove customizations from a NetSuite Swagger schema and leave only generic definitions
+*/
+
+%new-style
+%require-types
+%strict-args
+%enable-all-warnings
+
+%requires json
+%requires yaml
+%requires Util
+
+%exec-class NetsuiteMakeGenericSchema
+
+class NetsuiteMakeGenericSchema {
+    public {
+        #! program options
+        const Opts = {
+            "help": "h,help",
+        };
+    }
+
+    private {
+        hash<auto> opts;
+    }
+
+    constructor() {
+        opts = GetOpt::parseExit(Opts, \ARGV);
+        *string input = shift ARGV;
+        *string output = shift ARGV;
+        if (opts.help || !exists input || !exists output) {
+            usage();
+        }
+
+        string json = File::readTextFile(input);
+        hash<auto> h = parse_json(json);
+
+        h.info.description =~ s/ for account .*//;
+        h.host = "{{account_id}}.suitetalk.api.netsuite.com";
+
+        removeCustom(\h);
+
+        File f();
+        f.open2(output, O_CREAT | O_TRUNC | O_WRONLY);
+        string yaml = make_yaml(h, BlockStyle);
+        f.write(yaml);
+        printf("%y: %s -> %y: %s\n", input, get_byte_size(json.size()), output, get_byte_size(yaml.size()));
+    }
+
+    static bool match(string str) {
+        return str =~ /cust[a-z0-9]*_/i || str =~ /_jml_/;
+    }
+
+    static removeCustom(reference<hash<auto>> h) {
+        foreach hash<auto> i in (h.pairIterator()) {
+            if (i.key == "x-ns-filterable") {
+                NetsuiteMakeGenericSchema::removeCustomList(\h."x-ns-filterable");
+            } else if (NetsuiteMakeGenericSchema::match(i.key)) {
+                remove h{i.key};
+            } else if (exists i.value."$ref" && NetsuiteMakeGenericSchema::match(i.value."$ref")) {
+                remove h{i.key};
+            } else if (i.value.typeCode() == NT_HASH) {
+                NetsuiteMakeGenericSchema::removeCustom(\h{i.key});
+            }
+        }
+    }
+
+    static removeCustomList(reference<list<auto>> l) {
+        int offset = 0;
+        foreach auto v in (l) {
+            if (v.typeCode() == NT_STRING && NetsuiteMakeGenericSchema::match(v)) {
+                splice l, $# - offset, 1;
+                ++offset;
+            }
+        }
+    }
+
+    static usage() {
+        printf("usage: %s [options] <input-file> <output-file>
+ -h,--help           this help text
+", get_script_name());
+    }
+}
