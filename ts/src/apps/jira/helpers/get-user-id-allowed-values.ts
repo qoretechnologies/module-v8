@@ -28,7 +28,7 @@ export const getJiraUserIdAllowedValues: TQoreGetAllowedValuesFunction<
         display_name: user.displayName,
         desc:
           `Type: ${user.accountType}\n\nEmail: ${user.emailAddress}\n\n` +
-          `Id: ${user.accountId}\n\nLink: [View user] (${user.self})`,
+          `Id: ${user.accountId}\n\nLink: [View user](${user.self})`,
       })
     )
   );

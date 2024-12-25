@@ -47,10 +47,9 @@ const mapStripeInvoice = (item: TStripeInvoiceItem): IQoreAllowedValue => ({
   value: item.id,
   display_name: `${item.object} - ${item.id}`,
   desc:
-    `id: ${item.id}\nAccount name: ${item.account_name}\nAccount country: ${item.account_country}` +
-    `Object:${item.object}\nAmount due:${item.amount_due}\nAmount paid:${item.amount_paid}\n` +
-    `Amount remaining:${item.amount_remaining}\n` +
-    `Date:${new Date(item.created * 1000).toString()}`,
+    `id: ${item.id}\n\nAccount name: ${item.account_name}\n\nAccount country: ${item.account_country}\n\n` +
+    `Object:${item.object}\n\nAmount due:${item.amount_due}\n\nAmount paid:${item.amount_paid}\n\n` +
+    `Amount remaining:${item.amount_remaining}\n\nDate:${new Date(item.created * 1000).toString()}`,
 });
 
 export const getStripeInvoiceIdAllowedValues: TQoreGetAllowedValuesFunction = async (context) => {

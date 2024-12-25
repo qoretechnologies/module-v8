@@ -100,6 +100,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     POST: {
       override_options: {
         categoryId: {
+          type: 'softstring',
           required: false,
           get_allowed_values: getJiraProjectCategoryIdAllowedValues,
         },
@@ -156,6 +157,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
           get_allowed_values: getJiraUserIdAllowedValues,
         },
         categoryId: {
+          type: 'softstring',
           required: false,
           get_allowed_values: getJiraProjectCategoryIdAllowedValues,
         },

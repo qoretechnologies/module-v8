@@ -26,7 +26,7 @@ export const getJiraProjectIdAllowedValues: TQoreGetAllowedValuesFunction<
       (project: any): IQoreAllowedValue => ({
         value: project.id,
         display_name: project.name,
-        desc: `Link: [View project] (${project.self})`,
+        desc: `Link: [View project](${project.self})`,
       })
     )
   );

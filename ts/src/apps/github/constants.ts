@@ -2,7 +2,6 @@ import { TAllowedPaths, TQoreAppActionOverrideOption } from '../../global/models
 import { getGitHubBranchIdAllowedValues } from './helpers/get-branch-id-allowed-values';
 import { getGitHubIssueIdAllowedValues } from './helpers/get-issue-id-allowed-values';
 import { getGitHubOwnerAllowedValues } from './helpers/get-owner-allowed-values';
-import { getGitHubOwnerDefaultValue } from './helpers/get-owner-default-value';
 import { getGitHubPullIdAllowedValues } from './helpers/get-pull-id-allowed-values';
 import { getGitHubRepositoryIdAllowedValues } from './helpers/get-repository-id-allowed-values';
 
@@ -18,7 +17,6 @@ export const repoOwnerCommonOptions = {
   },
   owner: {
     get_allowed_values: getGitHubOwnerAllowedValues,
-    get_default_value: getGitHubOwnerDefaultValue,
     required: true,
     type: 'string',
     on_change: ['refetch'],

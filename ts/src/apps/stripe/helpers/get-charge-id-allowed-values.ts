@@ -44,7 +44,7 @@ const mapStripeCharge = (item: TStripeChargeItem): IQoreAllowedValue => ({
   value: item.id,
   display_name: `${item.object} - ${item.amount} - ${new Date(item.created * 1000).toDateString()}`,
   desc:
-    `id: ${item.id}\nObject: ${item.object}\nAmount: ${item.amount}\n` +
+    `id: ${item.id}\n\nObject: ${item.object}\n\nAmount: ${item.amount}\n\n` +
     `Date: ${new Date(item.created * 1000).toString()}`,
 });
 
