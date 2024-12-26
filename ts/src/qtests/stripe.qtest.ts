@@ -110,7 +110,7 @@ describe('Tests Stripe Actions', () => {
     expect(action).toBeDefined();
 
     const response = await testApi.execAppAction('stripe', action.action, connection);
-    console.log('GetCharges', response);
+
     expect(response.body).toBeDefined();
   });
 
@@ -373,8 +373,8 @@ describe('Tests Stripe Actions', () => {
     });
     it('Should get example stripe webhook data', async () => {
       const exampleData = await STRIPE_TRIGGERS['chargeSucceeded'].get_example_event_data({
-        conn_opts: {
-          token,
+        opts: {
+          secretKey: token,
         },
       });
 

@@ -10,14 +10,14 @@ export const deregisterStripeWebhook: IQoreAppActionWithWebhookBase['webhook_der
   regInfo
 ) => {
   const {
-    conn_opts: { token },
+    opts: { secretKey },
   } = context;
   const { webhook } = regInfo;
 
   await QorusRequest.deleteReq<any>(
     {
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${secretKey}`,
       },
       path: `/v1/webhook_endpoints/${webhook.id}`,
     },
