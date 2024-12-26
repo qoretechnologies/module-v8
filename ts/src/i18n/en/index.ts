@@ -1,5 +1,6 @@
 import type { BaseTranslation } from '../i18n-types';
 import { AsanaEventInfo } from './asana/event-info';
+import { StripeTriggerOptionsEn } from './stripe/trigger-options';
 
 const en = {
   common: {},
@@ -174,6 +175,7 @@ const en = {
       longDesc: 'Collection of actions to interact with Stripe API',
       triggers: {
         charge_dispute_created: {
+          options: StripeTriggerOptionsEn,
           displayName: 'New Charge Dispute',
           shortDesc: 'Triggers when a dispute is created for a previously made charge.',
           longDesc:
@@ -183,6 +185,7 @@ const en = {
           },
         },
         charge_refunded: {
+          options: StripeTriggerOptionsEn,
           displayName: 'Charge Refunded',
           shortDesc: 'Triggers when an existing charge is fully or partially refunded.',
           longDesc:
@@ -192,6 +195,7 @@ const en = {
           },
         },
         charge_succeeded: {
+          options: StripeTriggerOptionsEn,
           displayName: 'Charge Succeeded',
           shortDesc: 'Triggers when a new charge is successfully completed.',
           longDesc:
@@ -201,6 +205,7 @@ const en = {
           },
         },
         checkout_session_completed: {
+          options: StripeTriggerOptionsEn,
           displayName: 'Checkout Session Completed',
           shortDesc:
             'Triggers when a Stripe Checkout session is finalized and the payment is successful.',
@@ -211,6 +216,7 @@ const en = {
           },
         },
         customer_created: {
+          options: StripeTriggerOptionsEn,
           displayName: 'Customer Created',
           shortDesc: 'Triggers when a new customer record is added to your Stripe account.',
           longDesc:
@@ -220,6 +226,7 @@ const en = {
           },
         },
         invoice_created: {
+          options: StripeTriggerOptionsEn,
           displayName: 'Invoice Created',
           shortDesc: 'Triggers when a new invoice is generated.',
           longDesc:
@@ -229,6 +236,7 @@ const en = {
           },
         },
         invoice_payment_failed: {
+          options: StripeTriggerOptionsEn,
           displayName: 'Invoice Payment Failed',
           shortDesc: 'Triggers when an attempt to pay an invoice fails.',
           longDesc:
@@ -239,6 +247,7 @@ const en = {
         },
 
         payment_intent_failed: {
+          options: StripeTriggerOptionsEn,
           displayName: 'Payment Intent Failed',
           shortDesc: 'Triggers when a Payment Intent cannot be completed successfully.',
           longDesc:
@@ -248,6 +257,7 @@ const en = {
           },
         },
         payment_intent_succeeded: {
+          options: StripeTriggerOptionsEn,
           displayName: 'Payment Intent Succeeded',
           shortDesc: 'Triggers when a Payment Intent successfully completes, confirming payment.',
           longDesc:
@@ -257,6 +267,7 @@ const en = {
           },
         },
         payment_link_created: {
+          options: StripeTriggerOptionsEn,
           displayName: 'Payment Link Created',
           shortDesc: 'Triggers when a new Payment Link is created.',
           longDesc:
@@ -266,6 +277,7 @@ const en = {
           },
         },
         subscription_canceled: {
+          options: StripeTriggerOptionsEn,
           displayName: 'Subscription Canceled',
           shortDesc: 'Triggers when an active subscription is canceled.',
           longDesc:
@@ -275,6 +287,7 @@ const en = {
           },
         },
         subscription_created: {
+          options: StripeTriggerOptionsEn,
           displayName: 'Subscription Created',
           shortDesc: 'Triggers when a new subscription is successfully created.',
           longDesc:
@@ -284,6 +297,7 @@ const en = {
           },
         },
         subscription_updated: {
+          options: StripeTriggerOptionsEn,
           displayName: 'Subscription Updated',
           shortDesc: 'Triggers when a subscription’s details change.',
           longDesc:

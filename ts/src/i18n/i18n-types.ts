@@ -399,6 +399,22 @@ type RootTranslation = {
 			longDesc: string
 			triggers: {
 				charge_dispute_created: {
+					options: {
+						secretKey: {
+							/**
+							 * S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * E​n​t​e​r​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y​ ​t​o​ ​e​n​a​b​l​e​ ​w​e​b​h​o​o​k​ ​c​r​e​a​t​i​o​n​.
+							 */
+							shortDesc: string
+							/**
+							 * P​l​e​a​s​e​ ​p​r​o​v​i​d​e​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y​,​ ​w​h​i​c​h​ ​a​l​l​o​w​s​ ​o​u​r​ ​a​p​p​l​i​c​a​t​i​o​n​ ​t​o​ ​a​u​t​h​e​n​t​i​c​a​t​e​ ​A​P​I​ ​r​e​q​u​e​s​t​s​ ​f​o​r​ ​c​r​e​a​t​i​n​g​ ​w​e​b​h​o​o​k​s​ ​o​n​ ​y​o​u​r​ ​b​e​h​a​l​f​.​ ​Y​o​u​ ​c​a​n​ ​f​i​n​d​ ​t​h​i​s​ ​k​e​y​ ​i​n​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​D​a​s​h​b​o​a​r​d​ ​u​n​d​e​r​ ​D​e​v​e​l​o​p​e​r​s​ ​>​ ​A​P​I​ ​k​e​y​s​.​ ​E​n​s​u​r​e​ ​y​o​u​ ​u​s​e​ ​t​h​e​ ​a​p​p​r​o​p​r​i​a​t​e​ ​k​e​y​ ​c​o​r​r​e​s​p​o​n​d​i​n​g​ ​t​o​ ​y​o​u​r​ ​d​e​s​i​r​e​d​ ​m​o​d​e​ ​(​t​e​s​t​ ​o​r​ ​l​i​v​e​)​.​ ​K​e​e​p​ ​t​h​i​s​ ​k​e​y​ ​c​o​n​f​i​d​e​n​t​i​a​l​ ​a​n​d​ ​d​o​ ​n​o​t​ ​s​h​a​r​e​ ​i​t​ ​p​u​b​l​i​c​l​y​.
+							 */
+							longDesc: string
+						}
+					}
 					/**
 					 * N​e​w​ ​C​h​a​r​g​e​ ​D​i​s​p​u​t​e
 					 */
@@ -419,6 +435,22 @@ type RootTranslation = {
 					}
 				}
 				charge_refunded: {
+					options: {
+						secretKey: {
+							/**
+							 * S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * E​n​t​e​r​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y​ ​t​o​ ​e​n​a​b​l​e​ ​w​e​b​h​o​o​k​ ​c​r​e​a​t​i​o​n​.
+							 */
+							shortDesc: string
+							/**
+							 * P​l​e​a​s​e​ ​p​r​o​v​i​d​e​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y​,​ ​w​h​i​c​h​ ​a​l​l​o​w​s​ ​o​u​r​ ​a​p​p​l​i​c​a​t​i​o​n​ ​t​o​ ​a​u​t​h​e​n​t​i​c​a​t​e​ ​A​P​I​ ​r​e​q​u​e​s​t​s​ ​f​o​r​ ​c​r​e​a​t​i​n​g​ ​w​e​b​h​o​o​k​s​ ​o​n​ ​y​o​u​r​ ​b​e​h​a​l​f​.​ ​Y​o​u​ ​c​a​n​ ​f​i​n​d​ ​t​h​i​s​ ​k​e​y​ ​i​n​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​D​a​s​h​b​o​a​r​d​ ​u​n​d​e​r​ ​D​e​v​e​l​o​p​e​r​s​ ​>​ ​A​P​I​ ​k​e​y​s​.​ ​E​n​s​u​r​e​ ​y​o​u​ ​u​s​e​ ​t​h​e​ ​a​p​p​r​o​p​r​i​a​t​e​ ​k​e​y​ ​c​o​r​r​e​s​p​o​n​d​i​n​g​ ​t​o​ ​y​o​u​r​ ​d​e​s​i​r​e​d​ ​m​o​d​e​ ​(​t​e​s​t​ ​o​r​ ​l​i​v​e​)​.​ ​K​e​e​p​ ​t​h​i​s​ ​k​e​y​ ​c​o​n​f​i​d​e​n​t​i​a​l​ ​a​n​d​ ​d​o​ ​n​o​t​ ​s​h​a​r​e​ ​i​t​ ​p​u​b​l​i​c​l​y​.
+							 */
+							longDesc: string
+						}
+					}
 					/**
 					 * C​h​a​r​g​e​ ​R​e​f​u​n​d​e​d
 					 */
@@ -439,6 +471,22 @@ type RootTranslation = {
 					}
 				}
 				charge_succeeded: {
+					options: {
+						secretKey: {
+							/**
+							 * S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * E​n​t​e​r​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y​ ​t​o​ ​e​n​a​b​l​e​ ​w​e​b​h​o​o​k​ ​c​r​e​a​t​i​o​n​.
+							 */
+							shortDesc: string
+							/**
+							 * P​l​e​a​s​e​ ​p​r​o​v​i​d​e​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y​,​ ​w​h​i​c​h​ ​a​l​l​o​w​s​ ​o​u​r​ ​a​p​p​l​i​c​a​t​i​o​n​ ​t​o​ ​a​u​t​h​e​n​t​i​c​a​t​e​ ​A​P​I​ ​r​e​q​u​e​s​t​s​ ​f​o​r​ ​c​r​e​a​t​i​n​g​ ​w​e​b​h​o​o​k​s​ ​o​n​ ​y​o​u​r​ ​b​e​h​a​l​f​.​ ​Y​o​u​ ​c​a​n​ ​f​i​n​d​ ​t​h​i​s​ ​k​e​y​ ​i​n​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​D​a​s​h​b​o​a​r​d​ ​u​n​d​e​r​ ​D​e​v​e​l​o​p​e​r​s​ ​>​ ​A​P​I​ ​k​e​y​s​.​ ​E​n​s​u​r​e​ ​y​o​u​ ​u​s​e​ ​t​h​e​ ​a​p​p​r​o​p​r​i​a​t​e​ ​k​e​y​ ​c​o​r​r​e​s​p​o​n​d​i​n​g​ ​t​o​ ​y​o​u​r​ ​d​e​s​i​r​e​d​ ​m​o​d​e​ ​(​t​e​s​t​ ​o​r​ ​l​i​v​e​)​.​ ​K​e​e​p​ ​t​h​i​s​ ​k​e​y​ ​c​o​n​f​i​d​e​n​t​i​a​l​ ​a​n​d​ ​d​o​ ​n​o​t​ ​s​h​a​r​e​ ​i​t​ ​p​u​b​l​i​c​l​y​.
+							 */
+							longDesc: string
+						}
+					}
 					/**
 					 * C​h​a​r​g​e​ ​S​u​c​c​e​e​d​e​d
 					 */
@@ -459,6 +507,22 @@ type RootTranslation = {
 					}
 				}
 				checkout_session_completed: {
+					options: {
+						secretKey: {
+							/**
+							 * S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * E​n​t​e​r​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y​ ​t​o​ ​e​n​a​b​l​e​ ​w​e​b​h​o​o​k​ ​c​r​e​a​t​i​o​n​.
+							 */
+							shortDesc: string
+							/**
+							 * P​l​e​a​s​e​ ​p​r​o​v​i​d​e​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y​,​ ​w​h​i​c​h​ ​a​l​l​o​w​s​ ​o​u​r​ ​a​p​p​l​i​c​a​t​i​o​n​ ​t​o​ ​a​u​t​h​e​n​t​i​c​a​t​e​ ​A​P​I​ ​r​e​q​u​e​s​t​s​ ​f​o​r​ ​c​r​e​a​t​i​n​g​ ​w​e​b​h​o​o​k​s​ ​o​n​ ​y​o​u​r​ ​b​e​h​a​l​f​.​ ​Y​o​u​ ​c​a​n​ ​f​i​n​d​ ​t​h​i​s​ ​k​e​y​ ​i​n​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​D​a​s​h​b​o​a​r​d​ ​u​n​d​e​r​ ​D​e​v​e​l​o​p​e​r​s​ ​>​ ​A​P​I​ ​k​e​y​s​.​ ​E​n​s​u​r​e​ ​y​o​u​ ​u​s​e​ ​t​h​e​ ​a​p​p​r​o​p​r​i​a​t​e​ ​k​e​y​ ​c​o​r​r​e​s​p​o​n​d​i​n​g​ ​t​o​ ​y​o​u​r​ ​d​e​s​i​r​e​d​ ​m​o​d​e​ ​(​t​e​s​t​ ​o​r​ ​l​i​v​e​)​.​ ​K​e​e​p​ ​t​h​i​s​ ​k​e​y​ ​c​o​n​f​i​d​e​n​t​i​a​l​ ​a​n​d​ ​d​o​ ​n​o​t​ ​s​h​a​r​e​ ​i​t​ ​p​u​b​l​i​c​l​y​.
+							 */
+							longDesc: string
+						}
+					}
 					/**
 					 * C​h​e​c​k​o​u​t​ ​S​e​s​s​i​o​n​ ​C​o​m​p​l​e​t​e​d
 					 */
@@ -479,6 +543,22 @@ type RootTranslation = {
 					}
 				}
 				customer_created: {
+					options: {
+						secretKey: {
+							/**
+							 * S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * E​n​t​e​r​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y​ ​t​o​ ​e​n​a​b​l​e​ ​w​e​b​h​o​o​k​ ​c​r​e​a​t​i​o​n​.
+							 */
+							shortDesc: string
+							/**
+							 * P​l​e​a​s​e​ ​p​r​o​v​i​d​e​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y​,​ ​w​h​i​c​h​ ​a​l​l​o​w​s​ ​o​u​r​ ​a​p​p​l​i​c​a​t​i​o​n​ ​t​o​ ​a​u​t​h​e​n​t​i​c​a​t​e​ ​A​P​I​ ​r​e​q​u​e​s​t​s​ ​f​o​r​ ​c​r​e​a​t​i​n​g​ ​w​e​b​h​o​o​k​s​ ​o​n​ ​y​o​u​r​ ​b​e​h​a​l​f​.​ ​Y​o​u​ ​c​a​n​ ​f​i​n​d​ ​t​h​i​s​ ​k​e​y​ ​i​n​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​D​a​s​h​b​o​a​r​d​ ​u​n​d​e​r​ ​D​e​v​e​l​o​p​e​r​s​ ​>​ ​A​P​I​ ​k​e​y​s​.​ ​E​n​s​u​r​e​ ​y​o​u​ ​u​s​e​ ​t​h​e​ ​a​p​p​r​o​p​r​i​a​t​e​ ​k​e​y​ ​c​o​r​r​e​s​p​o​n​d​i​n​g​ ​t​o​ ​y​o​u​r​ ​d​e​s​i​r​e​d​ ​m​o​d​e​ ​(​t​e​s​t​ ​o​r​ ​l​i​v​e​)​.​ ​K​e​e​p​ ​t​h​i​s​ ​k​e​y​ ​c​o​n​f​i​d​e​n​t​i​a​l​ ​a​n​d​ ​d​o​ ​n​o​t​ ​s​h​a​r​e​ ​i​t​ ​p​u​b​l​i​c​l​y​.
+							 */
+							longDesc: string
+						}
+					}
 					/**
 					 * C​u​s​t​o​m​e​r​ ​C​r​e​a​t​e​d
 					 */
@@ -499,6 +579,22 @@ type RootTranslation = {
 					}
 				}
 				invoice_created: {
+					options: {
+						secretKey: {
+							/**
+							 * S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * E​n​t​e​r​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y​ ​t​o​ ​e​n​a​b​l​e​ ​w​e​b​h​o​o​k​ ​c​r​e​a​t​i​o​n​.
+							 */
+							shortDesc: string
+							/**
+							 * P​l​e​a​s​e​ ​p​r​o​v​i​d​e​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y​,​ ​w​h​i​c​h​ ​a​l​l​o​w​s​ ​o​u​r​ ​a​p​p​l​i​c​a​t​i​o​n​ ​t​o​ ​a​u​t​h​e​n​t​i​c​a​t​e​ ​A​P​I​ ​r​e​q​u​e​s​t​s​ ​f​o​r​ ​c​r​e​a​t​i​n​g​ ​w​e​b​h​o​o​k​s​ ​o​n​ ​y​o​u​r​ ​b​e​h​a​l​f​.​ ​Y​o​u​ ​c​a​n​ ​f​i​n​d​ ​t​h​i​s​ ​k​e​y​ ​i​n​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​D​a​s​h​b​o​a​r​d​ ​u​n​d​e​r​ ​D​e​v​e​l​o​p​e​r​s​ ​>​ ​A​P​I​ ​k​e​y​s​.​ ​E​n​s​u​r​e​ ​y​o​u​ ​u​s​e​ ​t​h​e​ ​a​p​p​r​o​p​r​i​a​t​e​ ​k​e​y​ ​c​o​r​r​e​s​p​o​n​d​i​n​g​ ​t​o​ ​y​o​u​r​ ​d​e​s​i​r​e​d​ ​m​o​d​e​ ​(​t​e​s​t​ ​o​r​ ​l​i​v​e​)​.​ ​K​e​e​p​ ​t​h​i​s​ ​k​e​y​ ​c​o​n​f​i​d​e​n​t​i​a​l​ ​a​n​d​ ​d​o​ ​n​o​t​ ​s​h​a​r​e​ ​i​t​ ​p​u​b​l​i​c​l​y​.
+							 */
+							longDesc: string
+						}
+					}
 					/**
 					 * I​n​v​o​i​c​e​ ​C​r​e​a​t​e​d
 					 */
@@ -519,6 +615,22 @@ type RootTranslation = {
 					}
 				}
 				invoice_payment_failed: {
+					options: {
+						secretKey: {
+							/**
+							 * S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * E​n​t​e​r​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y​ ​t​o​ ​e​n​a​b​l​e​ ​w​e​b​h​o​o​k​ ​c​r​e​a​t​i​o​n​.
+							 */
+							shortDesc: string
+							/**
+							 * P​l​e​a​s​e​ ​p​r​o​v​i​d​e​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y​,​ ​w​h​i​c​h​ ​a​l​l​o​w​s​ ​o​u​r​ ​a​p​p​l​i​c​a​t​i​o​n​ ​t​o​ ​a​u​t​h​e​n​t​i​c​a​t​e​ ​A​P​I​ ​r​e​q​u​e​s​t​s​ ​f​o​r​ ​c​r​e​a​t​i​n​g​ ​w​e​b​h​o​o​k​s​ ​o​n​ ​y​o​u​r​ ​b​e​h​a​l​f​.​ ​Y​o​u​ ​c​a​n​ ​f​i​n​d​ ​t​h​i​s​ ​k​e​y​ ​i​n​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​D​a​s​h​b​o​a​r​d​ ​u​n​d​e​r​ ​D​e​v​e​l​o​p​e​r​s​ ​>​ ​A​P​I​ ​k​e​y​s​.​ ​E​n​s​u​r​e​ ​y​o​u​ ​u​s​e​ ​t​h​e​ ​a​p​p​r​o​p​r​i​a​t​e​ ​k​e​y​ ​c​o​r​r​e​s​p​o​n​d​i​n​g​ ​t​o​ ​y​o​u​r​ ​d​e​s​i​r​e​d​ ​m​o​d​e​ ​(​t​e​s​t​ ​o​r​ ​l​i​v​e​)​.​ ​K​e​e​p​ ​t​h​i​s​ ​k​e​y​ ​c​o​n​f​i​d​e​n​t​i​a​l​ ​a​n​d​ ​d​o​ ​n​o​t​ ​s​h​a​r​e​ ​i​t​ ​p​u​b​l​i​c​l​y​.
+							 */
+							longDesc: string
+						}
+					}
 					/**
 					 * I​n​v​o​i​c​e​ ​P​a​y​m​e​n​t​ ​F​a​i​l​e​d
 					 */
@@ -539,6 +651,22 @@ type RootTranslation = {
 					}
 				}
 				payment_intent_failed: {
+					options: {
+						secretKey: {
+							/**
+							 * S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * E​n​t​e​r​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y​ ​t​o​ ​e​n​a​b​l​e​ ​w​e​b​h​o​o​k​ ​c​r​e​a​t​i​o​n​.
+							 */
+							shortDesc: string
+							/**
+							 * P​l​e​a​s​e​ ​p​r​o​v​i​d​e​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y​,​ ​w​h​i​c​h​ ​a​l​l​o​w​s​ ​o​u​r​ ​a​p​p​l​i​c​a​t​i​o​n​ ​t​o​ ​a​u​t​h​e​n​t​i​c​a​t​e​ ​A​P​I​ ​r​e​q​u​e​s​t​s​ ​f​o​r​ ​c​r​e​a​t​i​n​g​ ​w​e​b​h​o​o​k​s​ ​o​n​ ​y​o​u​r​ ​b​e​h​a​l​f​.​ ​Y​o​u​ ​c​a​n​ ​f​i​n​d​ ​t​h​i​s​ ​k​e​y​ ​i​n​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​D​a​s​h​b​o​a​r​d​ ​u​n​d​e​r​ ​D​e​v​e​l​o​p​e​r​s​ ​>​ ​A​P​I​ ​k​e​y​s​.​ ​E​n​s​u​r​e​ ​y​o​u​ ​u​s​e​ ​t​h​e​ ​a​p​p​r​o​p​r​i​a​t​e​ ​k​e​y​ ​c​o​r​r​e​s​p​o​n​d​i​n​g​ ​t​o​ ​y​o​u​r​ ​d​e​s​i​r​e​d​ ​m​o​d​e​ ​(​t​e​s​t​ ​o​r​ ​l​i​v​e​)​.​ ​K​e​e​p​ ​t​h​i​s​ ​k​e​y​ ​c​o​n​f​i​d​e​n​t​i​a​l​ ​a​n​d​ ​d​o​ ​n​o​t​ ​s​h​a​r​e​ ​i​t​ ​p​u​b​l​i​c​l​y​.
+							 */
+							longDesc: string
+						}
+					}
 					/**
 					 * P​a​y​m​e​n​t​ ​I​n​t​e​n​t​ ​F​a​i​l​e​d
 					 */
@@ -559,6 +687,22 @@ type RootTranslation = {
 					}
 				}
 				payment_intent_succeeded: {
+					options: {
+						secretKey: {
+							/**
+							 * S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * E​n​t​e​r​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y​ ​t​o​ ​e​n​a​b​l​e​ ​w​e​b​h​o​o​k​ ​c​r​e​a​t​i​o​n​.
+							 */
+							shortDesc: string
+							/**
+							 * P​l​e​a​s​e​ ​p​r​o​v​i​d​e​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y​,​ ​w​h​i​c​h​ ​a​l​l​o​w​s​ ​o​u​r​ ​a​p​p​l​i​c​a​t​i​o​n​ ​t​o​ ​a​u​t​h​e​n​t​i​c​a​t​e​ ​A​P​I​ ​r​e​q​u​e​s​t​s​ ​f​o​r​ ​c​r​e​a​t​i​n​g​ ​w​e​b​h​o​o​k​s​ ​o​n​ ​y​o​u​r​ ​b​e​h​a​l​f​.​ ​Y​o​u​ ​c​a​n​ ​f​i​n​d​ ​t​h​i​s​ ​k​e​y​ ​i​n​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​D​a​s​h​b​o​a​r​d​ ​u​n​d​e​r​ ​D​e​v​e​l​o​p​e​r​s​ ​>​ ​A​P​I​ ​k​e​y​s​.​ ​E​n​s​u​r​e​ ​y​o​u​ ​u​s​e​ ​t​h​e​ ​a​p​p​r​o​p​r​i​a​t​e​ ​k​e​y​ ​c​o​r​r​e​s​p​o​n​d​i​n​g​ ​t​o​ ​y​o​u​r​ ​d​e​s​i​r​e​d​ ​m​o​d​e​ ​(​t​e​s​t​ ​o​r​ ​l​i​v​e​)​.​ ​K​e​e​p​ ​t​h​i​s​ ​k​e​y​ ​c​o​n​f​i​d​e​n​t​i​a​l​ ​a​n​d​ ​d​o​ ​n​o​t​ ​s​h​a​r​e​ ​i​t​ ​p​u​b​l​i​c​l​y​.
+							 */
+							longDesc: string
+						}
+					}
 					/**
 					 * P​a​y​m​e​n​t​ ​I​n​t​e​n​t​ ​S​u​c​c​e​e​d​e​d
 					 */
@@ -579,6 +723,22 @@ type RootTranslation = {
 					}
 				}
 				payment_link_created: {
+					options: {
+						secretKey: {
+							/**
+							 * S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * E​n​t​e​r​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y​ ​t​o​ ​e​n​a​b​l​e​ ​w​e​b​h​o​o​k​ ​c​r​e​a​t​i​o​n​.
+							 */
+							shortDesc: string
+							/**
+							 * P​l​e​a​s​e​ ​p​r​o​v​i​d​e​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y​,​ ​w​h​i​c​h​ ​a​l​l​o​w​s​ ​o​u​r​ ​a​p​p​l​i​c​a​t​i​o​n​ ​t​o​ ​a​u​t​h​e​n​t​i​c​a​t​e​ ​A​P​I​ ​r​e​q​u​e​s​t​s​ ​f​o​r​ ​c​r​e​a​t​i​n​g​ ​w​e​b​h​o​o​k​s​ ​o​n​ ​y​o​u​r​ ​b​e​h​a​l​f​.​ ​Y​o​u​ ​c​a​n​ ​f​i​n​d​ ​t​h​i​s​ ​k​e​y​ ​i​n​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​D​a​s​h​b​o​a​r​d​ ​u​n​d​e​r​ ​D​e​v​e​l​o​p​e​r​s​ ​>​ ​A​P​I​ ​k​e​y​s​.​ ​E​n​s​u​r​e​ ​y​o​u​ ​u​s​e​ ​t​h​e​ ​a​p​p​r​o​p​r​i​a​t​e​ ​k​e​y​ ​c​o​r​r​e​s​p​o​n​d​i​n​g​ ​t​o​ ​y​o​u​r​ ​d​e​s​i​r​e​d​ ​m​o​d​e​ ​(​t​e​s​t​ ​o​r​ ​l​i​v​e​)​.​ ​K​e​e​p​ ​t​h​i​s​ ​k​e​y​ ​c​o​n​f​i​d​e​n​t​i​a​l​ ​a​n​d​ ​d​o​ ​n​o​t​ ​s​h​a​r​e​ ​i​t​ ​p​u​b​l​i​c​l​y​.
+							 */
+							longDesc: string
+						}
+					}
 					/**
 					 * P​a​y​m​e​n​t​ ​L​i​n​k​ ​C​r​e​a​t​e​d
 					 */
@@ -599,6 +759,22 @@ type RootTranslation = {
 					}
 				}
 				subscription_canceled: {
+					options: {
+						secretKey: {
+							/**
+							 * S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * E​n​t​e​r​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y​ ​t​o​ ​e​n​a​b​l​e​ ​w​e​b​h​o​o​k​ ​c​r​e​a​t​i​o​n​.
+							 */
+							shortDesc: string
+							/**
+							 * P​l​e​a​s​e​ ​p​r​o​v​i​d​e​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y​,​ ​w​h​i​c​h​ ​a​l​l​o​w​s​ ​o​u​r​ ​a​p​p​l​i​c​a​t​i​o​n​ ​t​o​ ​a​u​t​h​e​n​t​i​c​a​t​e​ ​A​P​I​ ​r​e​q​u​e​s​t​s​ ​f​o​r​ ​c​r​e​a​t​i​n​g​ ​w​e​b​h​o​o​k​s​ ​o​n​ ​y​o​u​r​ ​b​e​h​a​l​f​.​ ​Y​o​u​ ​c​a​n​ ​f​i​n​d​ ​t​h​i​s​ ​k​e​y​ ​i​n​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​D​a​s​h​b​o​a​r​d​ ​u​n​d​e​r​ ​D​e​v​e​l​o​p​e​r​s​ ​>​ ​A​P​I​ ​k​e​y​s​.​ ​E​n​s​u​r​e​ ​y​o​u​ ​u​s​e​ ​t​h​e​ ​a​p​p​r​o​p​r​i​a​t​e​ ​k​e​y​ ​c​o​r​r​e​s​p​o​n​d​i​n​g​ ​t​o​ ​y​o​u​r​ ​d​e​s​i​r​e​d​ ​m​o​d​e​ ​(​t​e​s​t​ ​o​r​ ​l​i​v​e​)​.​ ​K​e​e​p​ ​t​h​i​s​ ​k​e​y​ ​c​o​n​f​i​d​e​n​t​i​a​l​ ​a​n​d​ ​d​o​ ​n​o​t​ ​s​h​a​r​e​ ​i​t​ ​p​u​b​l​i​c​l​y​.
+							 */
+							longDesc: string
+						}
+					}
 					/**
 					 * S​u​b​s​c​r​i​p​t​i​o​n​ ​C​a​n​c​e​l​e​d
 					 */
@@ -619,6 +795,22 @@ type RootTranslation = {
 					}
 				}
 				subscription_created: {
+					options: {
+						secretKey: {
+							/**
+							 * S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * E​n​t​e​r​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y​ ​t​o​ ​e​n​a​b​l​e​ ​w​e​b​h​o​o​k​ ​c​r​e​a​t​i​o​n​.
+							 */
+							shortDesc: string
+							/**
+							 * P​l​e​a​s​e​ ​p​r​o​v​i​d​e​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y​,​ ​w​h​i​c​h​ ​a​l​l​o​w​s​ ​o​u​r​ ​a​p​p​l​i​c​a​t​i​o​n​ ​t​o​ ​a​u​t​h​e​n​t​i​c​a​t​e​ ​A​P​I​ ​r​e​q​u​e​s​t​s​ ​f​o​r​ ​c​r​e​a​t​i​n​g​ ​w​e​b​h​o​o​k​s​ ​o​n​ ​y​o​u​r​ ​b​e​h​a​l​f​.​ ​Y​o​u​ ​c​a​n​ ​f​i​n​d​ ​t​h​i​s​ ​k​e​y​ ​i​n​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​D​a​s​h​b​o​a​r​d​ ​u​n​d​e​r​ ​D​e​v​e​l​o​p​e​r​s​ ​>​ ​A​P​I​ ​k​e​y​s​.​ ​E​n​s​u​r​e​ ​y​o​u​ ​u​s​e​ ​t​h​e​ ​a​p​p​r​o​p​r​i​a​t​e​ ​k​e​y​ ​c​o​r​r​e​s​p​o​n​d​i​n​g​ ​t​o​ ​y​o​u​r​ ​d​e​s​i​r​e​d​ ​m​o​d​e​ ​(​t​e​s​t​ ​o​r​ ​l​i​v​e​)​.​ ​K​e​e​p​ ​t​h​i​s​ ​k​e​y​ ​c​o​n​f​i​d​e​n​t​i​a​l​ ​a​n​d​ ​d​o​ ​n​o​t​ ​s​h​a​r​e​ ​i​t​ ​p​u​b​l​i​c​l​y​.
+							 */
+							longDesc: string
+						}
+					}
 					/**
 					 * S​u​b​s​c​r​i​p​t​i​o​n​ ​C​r​e​a​t​e​d
 					 */
@@ -639,6 +831,22 @@ type RootTranslation = {
 					}
 				}
 				subscription_updated: {
+					options: {
+						secretKey: {
+							/**
+							 * S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * E​n​t​e​r​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y​ ​t​o​ ​e​n​a​b​l​e​ ​w​e​b​h​o​o​k​ ​c​r​e​a​t​i​o​n​.
+							 */
+							shortDesc: string
+							/**
+							 * P​l​e​a​s​e​ ​p​r​o​v​i​d​e​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​S​e​c​r​e​t​ ​A​P​I​ ​K​e​y​,​ ​w​h​i​c​h​ ​a​l​l​o​w​s​ ​o​u​r​ ​a​p​p​l​i​c​a​t​i​o​n​ ​t​o​ ​a​u​t​h​e​n​t​i​c​a​t​e​ ​A​P​I​ ​r​e​q​u​e​s​t​s​ ​f​o​r​ ​c​r​e​a​t​i​n​g​ ​w​e​b​h​o​o​k​s​ ​o​n​ ​y​o​u​r​ ​b​e​h​a​l​f​.​ ​Y​o​u​ ​c​a​n​ ​f​i​n​d​ ​t​h​i​s​ ​k​e​y​ ​i​n​ ​y​o​u​r​ ​S​t​r​i​p​e​ ​D​a​s​h​b​o​a​r​d​ ​u​n​d​e​r​ ​D​e​v​e​l​o​p​e​r​s​ ​>​ ​A​P​I​ ​k​e​y​s​.​ ​E​n​s​u​r​e​ ​y​o​u​ ​u​s​e​ ​t​h​e​ ​a​p​p​r​o​p​r​i​a​t​e​ ​k​e​y​ ​c​o​r​r​e​s​p​o​n​d​i​n​g​ ​t​o​ ​y​o​u​r​ ​d​e​s​i​r​e​d​ ​m​o​d​e​ ​(​t​e​s​t​ ​o​r​ ​l​i​v​e​)​.​ ​K​e​e​p​ ​t​h​i​s​ ​k​e​y​ ​c​o​n​f​i​d​e​n​t​i​a​l​ ​a​n​d​ ​d​o​ ​n​o​t​ ​s​h​a​r​e​ ​i​t​ ​p​u​b​l​i​c​l​y​.
+							 */
+							longDesc: string
+						}
+					}
 					/**
 					 * S​u​b​s​c​r​i​p​t​i​o​n​ ​U​p​d​a​t​e​d
 					 */
@@ -8840,6 +9048,22 @@ export type TranslationFunctions = {
 			longDesc: () => LocalizedString
 			triggers: {
 				charge_dispute_created: {
+					options: {
+						secretKey: {
+							/**
+							 * Stripe Secret API Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enter your Stripe Secret API Key to enable webhook creation.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Please provide your Stripe Secret API Key, which allows our application to authenticate API requests for creating webhooks on your behalf. You can find this key in your Stripe Dashboard under Developers > API keys. Ensure you use the appropriate key corresponding to your desired mode (test or live). Keep this key confidential and do not share it publicly.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 					/**
 					 * New Charge Dispute
 					 */
@@ -8860,6 +9084,22 @@ export type TranslationFunctions = {
 					}
 				}
 				charge_refunded: {
+					options: {
+						secretKey: {
+							/**
+							 * Stripe Secret API Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enter your Stripe Secret API Key to enable webhook creation.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Please provide your Stripe Secret API Key, which allows our application to authenticate API requests for creating webhooks on your behalf. You can find this key in your Stripe Dashboard under Developers > API keys. Ensure you use the appropriate key corresponding to your desired mode (test or live). Keep this key confidential and do not share it publicly.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 					/**
 					 * Charge Refunded
 					 */
@@ -8880,6 +9120,22 @@ export type TranslationFunctions = {
 					}
 				}
 				charge_succeeded: {
+					options: {
+						secretKey: {
+							/**
+							 * Stripe Secret API Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enter your Stripe Secret API Key to enable webhook creation.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Please provide your Stripe Secret API Key, which allows our application to authenticate API requests for creating webhooks on your behalf. You can find this key in your Stripe Dashboard under Developers > API keys. Ensure you use the appropriate key corresponding to your desired mode (test or live). Keep this key confidential and do not share it publicly.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 					/**
 					 * Charge Succeeded
 					 */
@@ -8900,6 +9156,22 @@ export type TranslationFunctions = {
 					}
 				}
 				checkout_session_completed: {
+					options: {
+						secretKey: {
+							/**
+							 * Stripe Secret API Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enter your Stripe Secret API Key to enable webhook creation.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Please provide your Stripe Secret API Key, which allows our application to authenticate API requests for creating webhooks on your behalf. You can find this key in your Stripe Dashboard under Developers > API keys. Ensure you use the appropriate key corresponding to your desired mode (test or live). Keep this key confidential and do not share it publicly.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 					/**
 					 * Checkout Session Completed
 					 */
@@ -8920,6 +9192,22 @@ export type TranslationFunctions = {
 					}
 				}
 				customer_created: {
+					options: {
+						secretKey: {
+							/**
+							 * Stripe Secret API Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enter your Stripe Secret API Key to enable webhook creation.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Please provide your Stripe Secret API Key, which allows our application to authenticate API requests for creating webhooks on your behalf. You can find this key in your Stripe Dashboard under Developers > API keys. Ensure you use the appropriate key corresponding to your desired mode (test or live). Keep this key confidential and do not share it publicly.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 					/**
 					 * Customer Created
 					 */
@@ -8940,6 +9228,22 @@ export type TranslationFunctions = {
 					}
 				}
 				invoice_created: {
+					options: {
+						secretKey: {
+							/**
+							 * Stripe Secret API Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enter your Stripe Secret API Key to enable webhook creation.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Please provide your Stripe Secret API Key, which allows our application to authenticate API requests for creating webhooks on your behalf. You can find this key in your Stripe Dashboard under Developers > API keys. Ensure you use the appropriate key corresponding to your desired mode (test or live). Keep this key confidential and do not share it publicly.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 					/**
 					 * Invoice Created
 					 */
@@ -8960,6 +9264,22 @@ export type TranslationFunctions = {
 					}
 				}
 				invoice_payment_failed: {
+					options: {
+						secretKey: {
+							/**
+							 * Stripe Secret API Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enter your Stripe Secret API Key to enable webhook creation.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Please provide your Stripe Secret API Key, which allows our application to authenticate API requests for creating webhooks on your behalf. You can find this key in your Stripe Dashboard under Developers > API keys. Ensure you use the appropriate key corresponding to your desired mode (test or live). Keep this key confidential and do not share it publicly.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 					/**
 					 * Invoice Payment Failed
 					 */
@@ -8980,6 +9300,22 @@ export type TranslationFunctions = {
 					}
 				}
 				payment_intent_failed: {
+					options: {
+						secretKey: {
+							/**
+							 * Stripe Secret API Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enter your Stripe Secret API Key to enable webhook creation.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Please provide your Stripe Secret API Key, which allows our application to authenticate API requests for creating webhooks on your behalf. You can find this key in your Stripe Dashboard under Developers > API keys. Ensure you use the appropriate key corresponding to your desired mode (test or live). Keep this key confidential and do not share it publicly.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 					/**
 					 * Payment Intent Failed
 					 */
@@ -9000,6 +9336,22 @@ export type TranslationFunctions = {
 					}
 				}
 				payment_intent_succeeded: {
+					options: {
+						secretKey: {
+							/**
+							 * Stripe Secret API Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enter your Stripe Secret API Key to enable webhook creation.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Please provide your Stripe Secret API Key, which allows our application to authenticate API requests for creating webhooks on your behalf. You can find this key in your Stripe Dashboard under Developers > API keys. Ensure you use the appropriate key corresponding to your desired mode (test or live). Keep this key confidential and do not share it publicly.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 					/**
 					 * Payment Intent Succeeded
 					 */
@@ -9020,6 +9372,22 @@ export type TranslationFunctions = {
 					}
 				}
 				payment_link_created: {
+					options: {
+						secretKey: {
+							/**
+							 * Stripe Secret API Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enter your Stripe Secret API Key to enable webhook creation.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Please provide your Stripe Secret API Key, which allows our application to authenticate API requests for creating webhooks on your behalf. You can find this key in your Stripe Dashboard under Developers > API keys. Ensure you use the appropriate key corresponding to your desired mode (test or live). Keep this key confidential and do not share it publicly.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 					/**
 					 * Payment Link Created
 					 */
@@ -9040,6 +9408,22 @@ export type TranslationFunctions = {
 					}
 				}
 				subscription_canceled: {
+					options: {
+						secretKey: {
+							/**
+							 * Stripe Secret API Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enter your Stripe Secret API Key to enable webhook creation.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Please provide your Stripe Secret API Key, which allows our application to authenticate API requests for creating webhooks on your behalf. You can find this key in your Stripe Dashboard under Developers > API keys. Ensure you use the appropriate key corresponding to your desired mode (test or live). Keep this key confidential and do not share it publicly.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 					/**
 					 * Subscription Canceled
 					 */
@@ -9060,6 +9444,22 @@ export type TranslationFunctions = {
 					}
 				}
 				subscription_created: {
+					options: {
+						secretKey: {
+							/**
+							 * Stripe Secret API Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enter your Stripe Secret API Key to enable webhook creation.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Please provide your Stripe Secret API Key, which allows our application to authenticate API requests for creating webhooks on your behalf. You can find this key in your Stripe Dashboard under Developers > API keys. Ensure you use the appropriate key corresponding to your desired mode (test or live). Keep this key confidential and do not share it publicly.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 					/**
 					 * Subscription Created
 					 */
@@ -9080,6 +9480,22 @@ export type TranslationFunctions = {
 					}
 				}
 				subscription_updated: {
+					options: {
+						secretKey: {
+							/**
+							 * Stripe Secret API Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enter your Stripe Secret API Key to enable webhook creation.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Please provide your Stripe Secret API Key, which allows our application to authenticate API requests for creating webhooks on your behalf. You can find this key in your Stripe Dashboard under Developers > API keys. Ensure you use the appropriate key corresponding to your desired mode (test or live). Keep this key confidential and do not share it publicly.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 					/**
 					 * Subscription Updated
 					 */

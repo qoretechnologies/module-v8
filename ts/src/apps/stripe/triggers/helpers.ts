@@ -33,7 +33,7 @@ export const createRegisterStripeWebhookFunction = (
 ): IQoreAppActionWithWebhookBase['webhook_register'] => {
   return async (context, url) => {
     const {
-      conn_opts: { token },
+      opts: { secretKey },
     } = context;
 
     try {
@@ -48,7 +48,7 @@ export const createRegisterStripeWebhookFunction = (
         webhookData,
         {
           headers: {
-            Authorization: `Bearer ${token}`,
+            Authorization: `Bearer ${secretKey}`,
             'Content-Type': 'application/x-www-form-urlencoded',
           },
         }
@@ -67,7 +67,7 @@ export const createGetStripeExampleEventDataFunction: (
 ) => IQoreAppActionWithWebhookBase['get_example_event_data'] = (eventTypes: TStripeEventType[]) => {
   return async (context) => {
     const {
-      conn_opts: { token },
+      opts: { secretKey },
     } = context;
 
     try {
@@ -78,7 +78,7 @@ export const createGetStripeExampleEventDataFunction: (
 
       const { data } = await axios.get('https://api.stripe.com/v1/events', {
         headers: {
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${secretKey}`,
         },
         params,
       });
