@@ -315,66 +315,15 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
 
         # update field
         QoreDataField qdf = cast<QoreDataField>(f);
-
         hash<auto> info += qdf.getConfigInfo();
-        info.type = qdf.getType();
-        if (remove type_hash.preselected) {
-            info.attr.preselected = True;
-        }
-        if (remove type_hash.sensitive) {
-            info.attr.sensitive = True;
-        }
-        if (remove type_hash.multiselect) {
-            info.multiselect = True;
-        }
-        if (remove type_hash.allowed_values_creatable) {
-            info.allowed_values_creatable = True;
-        }
-        if ((*string str = remove type_hash.display_name).val()) {
-            info.display_name = str;
-        } else if (!info.display_name) {
-            info.display_name = info.type.getDisplayName();
-        }
-        if ((*string str = remove type_hash.short_desc).val()) {
-            info.short_desc = str;
-        } else if (!info.short_desc) {
-            info.short_desc = info.type.getShortDescription();
-        }
-        if ((*string str = remove type_hash.desc).val()) {
-            info.desc = str;
-        } else if (!info.desc) {
-            info.desc = info.type.getDesc();
-        }
-        if ((*string str = remove type_hash.ref_data).val()) {
-            info.attr.ref_data = str;
-        }
-        if (auto v = remove type_hash.allowed_values) {
-            info.allowed_values = v;
-        }
-        if (exists (auto v = remove type_hash.default_value)) {
-            info.default_value = v;
-        } else if (!info.default_value) {
-            info.default_value = info.type.getDefaultValue();
-        }
-        if (exists (auto v = remove type_hash.example_value)) {
-            info.example_value = v;
-        }
-        if (*list<auto> l = remove type_hash.required_groups) {
-            info.attr.required_groups = l;
-        }
-        if (*softlist<auto> l = remove type_hash.depends_on) {
-            info.attr.depends_on = l;
-        }
-        if (exists (auto v = remove type_hash.on_change)) {
-            info.on_change = v;
-        }
+
+        AbstractDataProviderType type;
+
         *bool req = remove type_hash.required;
         if (exists (auto tdesc = remove type_hash.type)) {
-            info.type = TypeScriptActionInterface::getType(tdesc, req ?? info.attr.required ?? qdf.isMandatory());
-        } else if (req && !info.type.isMandatory()) {
-            info.type = info.type.getMandatoryType();
-            info.attr.required = True;
+            type = TypeScriptActionInterface::getType(tdesc, req ?? info.attr.required ?? qdf.isMandatory());
         }
+        info += TypeScriptActionInterface::getFieldHash(info.name, qdf.getType(), \type_hash, req);
         if (type_hash) {
             throw "OPTION-OVERRIDE-ERROR", sprintf("App %y action %y cannot override field %y in %y with unknown "
                 "keys: %y", action.app, action.action, key, k, keys type_hash);
