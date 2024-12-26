@@ -1,0 +1,1 @@
+export const GITHUB_ALLOWED_VALUES_TIMEOUT = 30_000;

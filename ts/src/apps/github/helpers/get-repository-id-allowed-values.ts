@@ -1,8 +1,23 @@
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
 import { Octokit } from '@octokit/rest';
 import { Debugger } from '../../../utils/Debugger';
+import { GITHUB_ALLOWED_VALUES_TIMEOUT } from './constants';
 
 const PER_PAGE = 100;
+
+const mapGithubRepo = (repo: {
+  id: number;
+  name: string;
+  full_name: string;
+  description: string;
+  owner: { avatar_url: string };
+}): IQoreAllowedValue => ({
+  value: repo.name,
+  display_name: repo.name,
+  short_desc: repo.full_name,
+  desc: repo.description,
+  image: repo.owner?.avatar_url,
+});
 
 export const getGitHubRepositoryIdAllowedValues: TQoreGetAllowedValuesFunction = async (
   context
@@ -20,32 +35,36 @@ export const getGitHubRepositoryIdAllowedValues: TQoreGetAllowedValuesFunction =
     isTokenPresent: !!token,
   });
 
+  const repos: IQoreAllowedValue[] = [];
+  const startTime = Date.now();
   try {
-    let repos = [];
-
     if (opts?.owner) {
-      repos = await octokit.paginate(`GET /search/repositories`, {
+      for await (const response of octokit.paginate.iterator(`GET /search/repositories`, {
         q: `user:${opts.owner}`,
         per_page: PER_PAGE,
-      });
+      })) {
+        repos.push(...response.data.map(mapGithubRepo));
+
+        if (Date.now() - startTime > GITHUB_ALLOWED_VALUES_TIMEOUT) {
+          break;
+        }
+      }
     } else {
-      repos = await octokit.paginate(`GET /user/repos`, {
+      for await (const response of octokit.paginate.iterator(`GET /user/repos`, {
         per_page: PER_PAGE,
-      });
+      })) {
+        repos.push(...response.data.map(mapGithubRepo));
+
+        if (Date.now() - startTime > GITHUB_ALLOWED_VALUES_TIMEOUT) {
+          break;
+        }
+      }
     }
 
-    return repos.map(
-      (repo): IQoreAllowedValue => ({
-        value: repo.id.toString(),
-        display_name: repo.name,
-        short_desc: repo.full_name,
-        desc: repo.description,
-        image: repo.owner?.avatar_url,
-      })
-    );
+    return repos;
   } catch (err) {
     Debugger.log('Github Repo allowed values error', err);
 
-    return [];
+    return repos;
   }
 };

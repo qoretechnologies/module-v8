@@ -1,9 +1,19 @@
 import { Octokit } from '@octokit/rest';
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
 import { Debugger } from '../../../utils/Debugger';
+import { GITHUB_ALLOWED_VALUES_TIMEOUT } from './constants';
 
 const PER_PAGE = 100;
 const MAX_ITEMS = 600;
+
+const mapGithubRepoToOwner = (repo: {
+  owner: { login: string; type: string; html_url: string; avatar_url: string };
+}): IQoreAllowedValue => ({
+  value: repo.owner.login,
+  display_name: repo.owner.login,
+  desc: `Type: ${repo.owner.type}\n\n Link: [View on GitHub](${repo.owner.html_url})`,
+  image: repo.owner.avatar_url,
+});
 
 export const getGitHubOwnerAllowedValues: TQoreGetAllowedValuesFunction = async (
   context
@@ -16,54 +26,52 @@ export const getGitHubOwnerAllowedValues: TQoreGetAllowedValuesFunction = async 
   const octokit = new Octokit({
     auth: token,
   });
+
+  const owners: IQoreAllowedValue[] = [];
+  const startTime = Date.now();
+
+  Debugger.log('Github Owner allowed values opts', {
+    opts: context.opts,
+    isTokenPresent: !!token,
+  });
+
   try {
-    let repos = [];
-
-    Debugger.log('Github Owner allowed values opts', {
-      opts: context.opts,
-      isTokenPresent: !!token,
-    });
-
     if (opts?.repo) {
       let itemCount = 0;
-      const foundRepos = await octokit.paginate(
-        `GET /search/repositories`,
-        {
-          q: `${opts.repo} in:name`,
-          per_page: PER_PAGE,
-        },
-        (response, done) => {
-          itemCount += response.data.length;
-          if (itemCount >= MAX_ITEMS) {
-            done();
-          }
 
-          return response.data;
-        }
-      );
-
-      repos = foundRepos.filter((repository) => repository.name === opts.repo);
-    } else {
-      const userRepos = await octokit.paginate(`GET /user/repos`, {
+      for await (const response of octokit.paginate.iterator('GET /search/repositories', {
+        q: `${opts.repo} in:name`,
         per_page: PER_PAGE,
-      });
+      })) {
+        itemCount += response.data.length;
 
-      repos = Array.from(
-        new Map(userRepos.map((repository) => [repository.owner.login, repository])).values()
-      );
+        const repos = response.data.filter((repository) => repository.name === opts.repo);
+        owners.push(...repos.map(mapGithubRepoToOwner));
+
+        if (itemCount >= MAX_ITEMS || Date.now() - startTime > GITHUB_ALLOWED_VALUES_TIMEOUT) {
+          break;
+        }
+      }
+    } else {
+      for await (const response of octokit.paginate.iterator('GET /user/repos', {
+        per_page: PER_PAGE,
+      })) {
+        const repos = Array.from(
+          new Map(response.data.map((repository) => [repository.owner.login, repository])).values()
+        );
+
+        owners.push(...repos.map(mapGithubRepoToOwner));
+
+        if (Date.now() - startTime > GITHUB_ALLOWED_VALUES_TIMEOUT) {
+          break;
+        }
+      }
     }
 
-    return repos.map(
-      (repo): IQoreAllowedValue => ({
-        value: repo.owner.login,
-        display_name: repo.owner.login,
-        desc: `Type: ${repo.owner.type}\n\n Link: [View on GitHub](${repo.owner.html_url})`,
-        image: repo.owner.avatar_url,
-      })
-    );
+    return owners;
   } catch (err) {
     Debugger.log('Github Owner allowed values error', err);
 
-    return [];
+    return owners;
   }
 };
