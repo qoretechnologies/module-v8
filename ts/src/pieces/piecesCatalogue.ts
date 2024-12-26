@@ -30,6 +30,7 @@ import {
   TQoreGetAllowedValuesFunction,
   TQoreGetDependentOptionsFunction,
   TQorePartialNonEventAction,
+  TQoreType,
 } from 'global/models/qore';
 import { InputProperty } from '../core/framework/property/input';
 import { DEFAULT_LOGO } from '../global/constants';
@@ -221,11 +222,21 @@ class _PiecesAppCatalogue {
       );
     }
 
+    let type = piecePropTypeToQoreOptionTypeIndex[prop.type];
+
+    if (type === 'list') {
+      type = {
+        type: 'list',
+        // TODO: Add element type
+        element_type: 'softstring',
+      } satisfies TQoreType;
+    }
+
     return {
       display_name: prop.displayName,
       short_desc: description || prop.displayName,
       desc: description || prop.displayName,
-      type: piecePropTypeToQoreOptionTypeIndex[prop.type],
+      type,
       get_allowed_values,
       get_dependent_options,
       allowed_values,
