@@ -76,17 +76,18 @@ class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProviderBase 
     #! Sets the connection
     setConnection(TypeScriptAppRestConnection conn) {
         TypeScriptActionDataProviderBase::setConnection(conn);
-        debug("Connection %y retrieving default values: %y", conn.name, keys dvmap);
-        if (dvmap) {
+        if (*hash<string, hash<AsyncCallInfo>> dvmap = remove self.dvmap) {
             *hash<string, AbstractDataField> fields = request_type.getFields();
             *hash<DataContextInfo> arg = getCallContextInfo();
             hash<string, bool> vmap;
             foreach hash<auto> i in (dvmap.pairIterator()) {
                 try {
-                    debug("Retrieving default value with JS for data provider %y option %y arg: %y", getName(), i.key,
-                        arg);
-                    auto v = getAsyncValue(i.value, arg);
-                    debug("Retrieved default value with JS for data provider %y option %y: %y", getName(), i.key, v);
+                    auto v = conn.getSetCacheValue(i.key, auto sub () {
+                        debug("Connection %y retrieving default value for %y", conn.name, i.key);
+                        auto rv = getAsyncValue(i.value, arg);
+                        debug("Connection %y retrieved default value %y = %y", conn.name, i.key, rv);
+                        return rv;
+                    });
                     if (v) {
                         *AbstractDataField f = fields{i.key};
                         if (!f) {

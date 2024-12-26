@@ -72,6 +72,12 @@ public class TypeScriptAppRestConnection inherits RestConnection {
         hash<ConnectionSchemeInfo> info;
         *hash<string, bool> url_template_options;
         *hash<AsyncCallInfo> post_auth;
+
+        Mutex m();
+        hash<string, Condition> cmap;
+        hash<string, int> wmap;
+        hash<string, bool> pmap;
+        hash<auto> cache;
     }
 
     #! Creates the object
@@ -117,6 +123,28 @@ public class TypeScriptAppRestConnection inherits RestConnection {
     constructor(hash<auto> config, *hash<auto> attr)
             : RestConnection(TypeScriptAppRestConnection::getConfig(config), attr) {
         post_auth = TypeScriptActionInterface::getPostAuthCall(app);
+    }
+
+    #! Gets or sets a cached value
+    auto getSetCacheValue(string key, code get, ...) {
+        AutoLock al(m);
+        if (exists (auto v = cache{key})) {
+            return v;
+        }
+        while (pmap{key}) {
+            if (!cmap{key}) {
+                cmap{key} = new Condition();
+            }
+            ++wmap{key};
+            cmap{key}.wait(m);
+            --wmap{key};
+        }
+        on_exit {
+            if (wmap{key}) {
+                (remove cmap{key}).broadcast();
+            }
+        }
+        cache{key} = call_function_args(get, argv);
     }
 
     #! Returns the app name
