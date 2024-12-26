@@ -40,11 +40,11 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         *int webhook_auth;
         *list<auto> webhook_perms;
 
-        #! Any value returned by webhook_register()
-        *hash<auto> reginfo;
-
         #! Event options for the webhook register and deregister calls
         *hash<auto> event_opts;
+
+        #! Any value returned by the webhook registration function
+        *hash<auto> reginfo;
 
         #! Did the JS webhook registration function succeed?
         bool js_webhook_registered;
@@ -84,13 +84,14 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         });
         info("Registered webhook with URL %y", wf_info.url);
 
-        event_opts = ImpliedArgumentHelper::get();
+        event_opts += ImpliedArgumentHelper::get();
         debug("Registering webhook for data provider %y URL %y opts %y", name, wf_info.url, event_opts);
         on_error rethrow $1.err, sprintf("%s (while registering webhook URL %y with the server; options: %y)",
             $1.desc, wf_info.url, event_opts);
         reginfo = getAsyncValue(webhook_register, getCallContextInfo(event_opts), wf_info.url);
         js_webhook_registered = True;
-        debug("Webhook for data provider %y registered with URL %y (reginfo: %y)", name, wf_info.url, reginfo);
+        debug("Webhook for data provider %y registered with URL %y (opts: %y, reginfo: %y)", name, wf_info.url,
+            event_opts, reginfo);
     }
 
     #! Called to stop generating events
@@ -104,7 +105,9 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         if (js_webhook_registered) {
             js_webhook_registered = False;
             try {
-                getAsyncValue(webhook_deregister, getCallContextInfo(), wf_info.url, event_opts + reginfo);
+                debug("Deregistering webhook for data provider %y on URL %y (opts: %y, reginfo: %y)", name,
+                    wf_info.url, event_opts, reginfo);
+                getAsyncValue(webhook_deregister, getCallContextInfo(event_opts), wf_info.url, reginfo);
             } catch (hash<ExceptionInfo> ex) {
                 error("WEBHOOK-DEREGISTRATION-ERROR", "Error in data provider %y deregistering webhook %y: %s", name,
                     wf_info.url, get_exception_string(ex));
