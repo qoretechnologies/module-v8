@@ -48,10 +48,6 @@ export const getGitHubOwnerDefaultValue: TQoreGetDefaultValueFunction<
       if (repos[0]) {
         return repos[0].owner.login;
       }
-    } else {
-      const user = await octokit.users.getAuthenticated();
-
-      return user.data.login;
     }
   } catch (err) {
     Debugger.log('Github Owner allowed values error', err);

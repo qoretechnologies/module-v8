@@ -10,7 +10,7 @@ export const getGitHubOwnerAllowedValues: TQoreGetAllowedValuesFunction = async 
 ): Promise<IQoreAllowedValue[]> => {
   const {
     conn_opts: { token },
-    opts: { repo },
+    opts,
   } = context;
 
   const octokit = new Octokit({
@@ -24,12 +24,12 @@ export const getGitHubOwnerAllowedValues: TQoreGetAllowedValuesFunction = async 
       isTokenPresent: !!token,
     });
 
-    if (repo) {
+    if (opts?.repo) {
       let itemCount = 0;
       const foundRepos = await octokit.paginate(
         `GET /search/repositories`,
         {
-          q: `${repo} in:name`,
+          q: `${opts.repo} in:name`,
           per_page: PER_PAGE,
         },
         (response, done) => {
@@ -42,7 +42,7 @@ export const getGitHubOwnerAllowedValues: TQoreGetAllowedValuesFunction = async 
         }
       );
 
-      repos = foundRepos.filter((repository) => repository.name === repo);
+      repos = foundRepos.filter((repository) => repository.name === opts.repo);
     } else {
       const userRepos = await octokit.paginate(`GET /user/repos`, {
         per_page: PER_PAGE,

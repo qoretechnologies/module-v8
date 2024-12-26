@@ -9,7 +9,7 @@ export const getGitHubRepositoryIdAllowedValues: TQoreGetAllowedValuesFunction =
 ): Promise<IQoreAllowedValue[]> => {
   const {
     conn_opts: { token },
-    opts: { owner },
+    opts,
   } = context;
   const octokit = new Octokit({
     auth: token,
@@ -23,9 +23,9 @@ export const getGitHubRepositoryIdAllowedValues: TQoreGetAllowedValuesFunction =
   try {
     let repos = [];
 
-    if (owner) {
+    if (opts?.owner) {
       repos = await octokit.paginate(`GET /search/repositories`, {
-        q: `user:${owner}`,
+        q: `user:${opts.owner}`,
         per_page: PER_PAGE,
       });
     } else {
