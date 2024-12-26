@@ -87,8 +87,8 @@ public class TypeScriptActionInterface {
         static code WebhookDelete;
 
         const TypeKeys = (
-            "name", "display_name", "short_desc", "desc", "type", "example_value",
-            "default_value", "multiselect", "allowed_values", "allowed_values_creatable", "attr", "required"
+            "name", "display_name", "short_desc", "desc", "type", "example_value", "default_value", "multiselect",
+            "allowed_values", "allowed_values_creatable", "attr", "required", "on_change",
         );
 
         const TypeScriptAppRestConnectionOptions = RestConnection::ConnectionScheme.options;
@@ -1262,12 +1262,84 @@ public class TypeScriptActionInterface {
 
     static hash<auto> getField(string name, hash<auto> h) {
         on_error rethrow $1.err, sprintf("%s (field: %y)", $1.desc, h);
-        h.name = name;
+        *bool req = remove h.required;
+        AbstractDataProviderType type = TypeScriptActionInterface::getType(remove h.type, req);
+        return TypeScriptActionInterface::getFieldHash(name, type, \h, req);
+    }
+
+    /*
         h.type = TypeScriptActionInterface::getType(h.type, h.required);
         if (h.depends_on) {
             h.attr.depends_on = h.depends_on;
         }
+        if (h.on_change) {
+            h.attr.on_change = h.on_change;
+        }
         return h;
+    */
+    static hash<auto> getFieldHash(*string name, AbstractDataProviderType type, reference<hash<auto>> type_hash, *bool req) {
+        hash<auto> info += {
+            "name": name,
+            "type": type,
+        };
+
+        if (req && !type.isMandatory()) {
+            info.type = type.getMandatoryType();
+            info.attr.required = True;
+        }
+
+        if (remove type_hash.preselected) {
+            info.attr.preselected = True;
+        }
+        if (remove type_hash.sensitive) {
+            info.attr.sensitive = True;
+        }
+        if ((*string str = remove type_hash.ref_data).val()) {
+            info.attr.ref_data = str;
+        }
+        if (*list<auto> l = remove type_hash.required_groups) {
+            info.attr.required_groups = l;
+        }
+        if (*softlist<auto> l = remove type_hash.depends_on) {
+            info.attr.depends_on = l;
+        }
+        if (exists (auto v = remove type_hash.on_change)) {
+            info.attr.on_change = v;
+        }
+        if (remove type_hash.multiselect) {
+            info.multiselect = True;
+        }
+        if (auto v = remove type_hash.allowed_values) {
+            info.allowed_values = v;
+        }
+        if (remove type_hash.allowed_values_creatable) {
+            info.allowed_values_creatable = True;
+        }
+        if ((*string str = remove type_hash.display_name).val()) {
+            info.display_name = str;
+        } else if (!info.display_name) {
+            info.display_name = info.type.getDisplayName();
+        }
+        if ((*string str = remove type_hash.short_desc).val()) {
+            info.short_desc = str;
+        } else if (!info.short_desc) {
+            info.short_desc = info.type.getShortDescription();
+        }
+        if ((*string str = remove type_hash.desc).val()) {
+            info.desc = str;
+        } else if (!info.desc) {
+            info.desc = info.type.getDesc();
+        }
+        if (exists (auto v = remove type_hash.default_value)) {
+            info.default_value = v;
+        } else if (!info.default_value) {
+            info.default_value = info.type.getDefaultValue();
+        }
+        if (exists (auto v = remove type_hash.example_value)) {
+            info.example_value = v;
+        }
+
+        return info;
     }
 
     #! Returns a hash that can be used to access these methods in JavaScript
