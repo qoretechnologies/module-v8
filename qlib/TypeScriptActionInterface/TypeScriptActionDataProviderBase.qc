@@ -347,6 +347,9 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
             if (!l) {
                 return ();
             }
+            if (l[0] instanceof JavaScriptObject) {
+                l = map $1.toData(), l;
+            }
             if (l[0].typeCode() != NT_HASH) {
                 return map <AllowedValueInfo>{
                     "display_name": $1.toString(),
@@ -355,7 +358,14 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
                     "value": $1,
                 }, l;
             }
-            return map cast<hash<AllowedValueInfo>>($1 instanceof JavaScriptObject ? $1.toData() : $1), l;
+            # ensure "desc" is set
+            foreach hash<auto> h in (\l) {
+                if (!h.desc.val()) {
+                    h.desc = h.short_desc.val() ? h.short_desc : (h.display_name ?? h.value.toString());
+                }
+            }
+            on_error rethrow $1.err, sprintf("%s (l: %y)", $1.desc, l);
+            return map cast<hash<AllowedValueInfo>>($1), l;
         } else if (*hash<RestGetAllowedValuesInfo> ref_rest = romap{type}) {
             if (!rest) {
                 checkRestClient(action_opts);

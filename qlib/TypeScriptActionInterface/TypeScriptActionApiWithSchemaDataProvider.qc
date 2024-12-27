@@ -323,16 +323,17 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         if (exists (auto tdesc = remove type_hash.type)) {
             type = TypeScriptActionInterface::getType(tdesc, req ?? info.attr.required ?? qdf.isMandatory());
         }
-        info += TypeScriptActionInterface::getFieldHash(info.name, qdf.getType(), \type_hash, req);
+        info += TypeScriptActionInterface::getFieldHash(info.name, type ?? qdf.getType(), \type_hash, req);
+
         if (type_hash) {
             throw "OPTION-OVERRIDE-ERROR", sprintf("App %y action %y cannot override field %y in %y with unknown "
                 "keys: %y", action.app, action.action, key, k, keys type_hash);
         }
         on_error printf("%y info: %N\n", key, info + {"type": info.type.getName()});
         t.replaceField(new QoreDataField(info));
-
-        #printf("Edited %y => %y mandatory: %y attr: %y av: %y (parent %y)\n", key, fields{key}.getType().className(),
-        #    fields{key}.isMandatory(), info.attr, fields{key}.getAllowedValues(), type.className());
+        #printf("Edited %y (%s) => %y mandatory: %y av: %y (parent %y)\n", k, t.getFields(){k}.uniqueHash(),
+        #    t.getFields(){k}.getType().className(), t.getFields(){k}.isMandatory(),
+        #    t.getFields(){k}.getAllowedValues(), type.className());
     }
 
     #! "Normalizes" the request and response for testing if necessary

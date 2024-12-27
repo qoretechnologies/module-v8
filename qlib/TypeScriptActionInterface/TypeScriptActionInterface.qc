@@ -1156,6 +1156,9 @@ public class TypeScriptActionInterface {
     }
 
     static AbstractDataProviderType getType(hash<auto> h, *bool required, auto element_type) {
+        if (h.required.typeCode() == NT_BOOLEAN) {
+            required = h.required;
+        }
         if (h.type.typeCode() != NT_STRING) {
             return TypeScriptActionInterface::getHashType(h, required);
         }
@@ -1169,8 +1172,8 @@ public class TypeScriptActionInterface {
         map attr{$1.key} = $1.value, (remove h{"name", "display_name", "short_desc", "desc"}).pairIterator();
         auto default_value = remove h.default_value;
         hash<auto> tags;
-        if (remove h.required) {
-            tags.required = True;
+        if (exists h.required) {
+            tags.required = remove h.required;
         }
         if (remove h.preselected) {
             tags.preselected = True;
@@ -1179,9 +1182,9 @@ public class TypeScriptActionInterface {
         if (orig.type == "hash") {
             hash<auto> f = remove h.fields;
             /*
-            AbstractDataProviderType element_type;
+            AbstractDataProviderType et;
             if (auto t = remove h.element_type) {
-                element_type = TypeScriptActionInterface::getType(t);
+                et = TypeScriptActionInterface::getType(t);
             }
             */
             HashDataType ht(type, attr.name, NOTHING, tags, default_value, attr);
@@ -1193,17 +1196,17 @@ public class TypeScriptActionInterface {
             }
             rv = ht;
         } else if (orig.type == "list") {
-            AbstractDataProviderType element_type;
+            AbstractDataProviderType et;
             if (auto t = (remove h.element_type ?? element_type)) {
-                element_type = TypeScriptActionInterface::getType(t);
+                et = TypeScriptActionInterface::getType(t);
             }
-            rv = new ListDataType(element_type ?? AutoType, !orig.required, NOTHING, tags, default_value, attr);
+            rv = new ListDataType(et ?? AutoType, !orig.required, NOTHING, tags, default_value, attr);
         } else if (orig.type == "softlist") {
-            AbstractDataProviderType element_type;
+            AbstractDataProviderType et;
             if (auto t = (remove h.element_type ?? element_type)) {
-                element_type = TypeScriptActionInterface::getType(t);
+                et = TypeScriptActionInterface::getType(t);
             }
-            rv = new SoftListDataType(element_type ?? AutoType, !orig.required, NOTHING, tags, default_value, attr);
+            rv = new SoftListDataType(et ?? AutoType, !orig.required, NOTHING, tags, default_value, attr);
         } else {
             if (*hash<auto> f = remove h.fields) {
                 throw "TYPE-ERROR", sprintf("Type %y cannot support fields; use type \"hash\" with fields",
@@ -1267,24 +1270,16 @@ public class TypeScriptActionInterface {
         return TypeScriptActionInterface::getFieldHash(name, type, \h, req);
     }
 
-    /*
-        h.type = TypeScriptActionInterface::getType(h.type, h.required);
-        if (h.depends_on) {
-            h.attr.depends_on = h.depends_on;
-        }
-        if (h.on_change) {
-            h.attr.on_change = h.on_change;
-        }
-        return h;
-    */
     static hash<auto> getFieldHash(*string name, AbstractDataProviderType type, reference<hash<auto>> type_hash, *bool req) {
         hash<auto> info += {
             "name": name,
             "type": type,
         };
 
-        if (req && !type.isMandatory()) {
-            info.type = type.getMandatoryType();
+        if (req) {
+            if (!type.isMandatory()) {
+                info.type = type.getMandatoryType();
+            }
             info.attr.required = True;
         }
 
@@ -1317,18 +1312,12 @@ public class TypeScriptActionInterface {
         }
         if ((*string str = remove type_hash.display_name).val()) {
             info.display_name = str;
-        } else if (!info.display_name) {
-            info.display_name = info.type.getDisplayName();
         }
         if ((*string str = remove type_hash.short_desc).val()) {
             info.short_desc = str;
-        } else if (!info.short_desc) {
-            info.short_desc = info.type.getShortDescription();
         }
         if ((*string str = remove type_hash.desc).val()) {
             info.desc = str;
-        } else if (!info.desc) {
-            info.desc = info.type.getDesc();
         }
         if (exists (auto v = remove type_hash.default_value)) {
             info.default_value = v;
