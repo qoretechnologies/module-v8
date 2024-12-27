@@ -192,6 +192,10 @@ export const ESIGNATURE_PATHS = {
                 documentId: {
                   type: 'string',
                 },
+                documentBase64: {
+                  type: 'string',
+                  required: false,
+                },
               },
             },
           },
