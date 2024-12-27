@@ -113,27 +113,17 @@ export const ESIGNATURE_PATHS = {
       override_options: {
         accountId: GetAccountIdConfig,
         envelopeId: GetEnvelopeIdAllowedValues,
-        signers: {
-          type: {
-            type: 'list',
-            element_type: {
-              type: 'hash',
-              fields: {
-                name: {
-                  type: 'string',
-                  required: false,
-                },
-                email: {
-                  type: 'string',
-                  required: false,
-                },
-                recipientId: {
-                  type: 'string',
-                  required: true,
-                },
-              },
-            },
-          },
+        'signers.name': {
+          type: 'string',
+          required: false,
+        },
+        'signers.email': {
+          type: 'string',
+          required: false,
+        },
+        'signers.recipientId': {
+          type: 'string',
+          required: true,
         },
       },
     },
@@ -147,27 +137,17 @@ export const ESIGNATURE_PATHS = {
       override_options: {
         accountId: GetAccountIdConfig,
         envelopeId: GetEnvelopeIdAllowedValues,
-        signers: {
-          type: {
-            type: 'list',
-            element_type: {
-              type: 'hash',
-              fields: {
-                name: {
-                  type: 'string',
-                  required: false,
-                },
-                email: {
-                  type: 'string',
-                  required: false,
-                },
-                recipientId: {
-                  type: 'string',
-                  required: true,
-                },
-              },
-            },
-          },
+        'signers.name': {
+          type: 'string',
+          required: false,
+        },
+        'signers.email': {
+          type: 'string',
+          required: false,
+        },
+        'signers.recipientId': {
+          type: 'string',
+          required: true,
         },
       },
     },
@@ -183,18 +163,12 @@ export const ESIGNATURE_PATHS = {
       override_options: {
         accountId: GetAccountIdConfig,
         envelopeId: GetEnvelopeIdAllowedValues,
-        documents: {
-          type: {
-            type: 'list',
-            element_type: {
-              type: 'hash',
-              fields: {
-                documentId: {
-                  type: 'string',
-                },
-              },
-            },
-          },
+        'documents.documentId': {
+          type: 'string',
+        },
+        'documents.documentBase64': {
+          type: 'string',
+          required: false,
         },
       },
     },

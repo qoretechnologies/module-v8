@@ -567,7 +567,9 @@ export interface IQoreAppActionWithEventOrWebhook extends IQoreBaseAppAction {
   action_code: EQoreAppActionCode.EVENT;
   event_info: TQoreAppActionWithEventOrWebhookEventInfo;
   options?: TQoreOptions;
-  get_example_event_data?: (context: TQoreAppActionFunctionContext) => object;
+  get_example_event_data?: (
+    context: TQoreAppActionFunctionContext
+  ) => Record<string, any> | Promise<Record<string, any>>;
 }
 
 export type TQoreAppActionWithEventOrWebhookEventInfo = {

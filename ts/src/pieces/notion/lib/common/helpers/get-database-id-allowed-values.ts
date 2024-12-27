@@ -4,6 +4,9 @@ import {
   IQoreAllowedValue,
   TQoreGetAllowedValuesFunction,
 } from '../../../../../global/models/qore';
+import { Debugger } from '../../../../../utils/Debugger';
+import { delay } from '../../../../../global/helpers';
+import { NOTION_ALLOWED_VALUES_TIMEOUT, NOTION_FETCH_DELAY } from '../constants';
 
 export const getNotionDatabaseIdAllowedValues: TQoreGetAllowedValuesFunction = async (
   context
@@ -21,20 +24,36 @@ export const getNotionDatabaseIdAllowedValues: TQoreGetAllowedValuesFunction = a
 
   const notionDatabases: SearchResponse['results'] = [];
   let cursor = undefined;
+  const startTime = Date.now();
 
-  do {
-    const response = await notion.search({
-      filter: {
-        property: 'object',
-        value: 'database',
-      },
-      start_cursor: cursor,
-      page_size: 100,
-    });
+  try {
+    do {
+      if (Date.now() - startTime > NOTION_ALLOWED_VALUES_TIMEOUT) {
+        Debugger.log(`Timeout fetching Notion databases`);
+        break;
+      }
 
-    notionDatabases.push(...response.results);
-    cursor = response.next_cursor;
-  } while (cursor);
+      const response = await notion.search({
+        filter: {
+          property: 'object',
+          value: 'database',
+        },
+        start_cursor: cursor,
+        page_size: 100,
+      });
+
+      notionDatabases.push(...response.results);
+      cursor = response.next_cursor ? response.next_cursor : undefined;
+
+      if (cursor) {
+        await delay(NOTION_FETCH_DELAY);
+      }
+    } while (cursor);
+  } catch (error) {
+    Debugger.log(`Error fetching Notion databases: ${error}`);
+
+    return databases;
+  }
 
   notionDatabases.forEach((database) => {
     const title = 'title' in database ? database.title?.[0]?.plain_text : 'Untitled';

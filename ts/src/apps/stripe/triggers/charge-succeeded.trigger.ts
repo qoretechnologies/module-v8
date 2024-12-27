@@ -13,6 +13,13 @@ export default {
   action: 'charge_succeeded',
   action_code: EQoreAppActionCode.EVENT,
   webhook_method: 'POST',
+  options: {
+    secretKey: {
+      required: true,
+      type: 'string',
+      sensitive: true,
+    },
+  },
   webhook_register: createRegisterStripeWebhookFunction(triggerEvents),
   webhook_deregister: deregisterStripeWebhook,
   get_example_event_data: createGetStripeExampleEventDataFunction(triggerEvents),

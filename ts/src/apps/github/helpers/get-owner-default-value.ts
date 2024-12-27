@@ -1,6 +1,7 @@
 import { Octokit } from '@octokit/rest';
 import { TQoreGetDefaultValueFunction } from '../../../global/models/qore';
 import { Debugger } from '../../../utils/Debugger';
+import { GITHUB_ALLOWED_VALUES_TIMEOUT } from './constants';
 
 const PER_PAGE = 100;
 const MAX_ITEMS = 600;
@@ -18,7 +19,8 @@ export const getGitHubOwnerDefaultValue: TQoreGetDefaultValueFunction<
     auth: token,
   });
   try {
-    let repos = [];
+    const repos: { owner: { login: string } }[] = [];
+    const startTime = Date.now();
 
     Debugger.log('Github Owner allowed values opts', {
       opts: context.opts,
@@ -27,24 +29,18 @@ export const getGitHubOwnerDefaultValue: TQoreGetDefaultValueFunction<
 
     if (opts?.repo) {
       let itemCount = 0;
-      const foundRepos = await octokit.paginate(
-        `GET /search/repositories`,
-        {
-          q: `${opts?.repo} in:name`,
-          per_page: PER_PAGE,
-        },
-        (response, done) => {
-          itemCount += response.data.length;
-          if (itemCount >= MAX_ITEMS) {
-            done();
-          }
+      for await (const response of octokit.paginate.iterator('GET /search/repositories', {
+        q: `${opts.repo} in:name`,
+        per_page: PER_PAGE,
+      })) {
+        itemCount += response.data.length;
 
-          return response.data;
+        repos.push(...response.data.filter((repository) => repository.name === opts.repo));
+
+        if (itemCount >= MAX_ITEMS || Date.now() - startTime > GITHUB_ALLOWED_VALUES_TIMEOUT) {
+          break;
         }
-      );
-
-      repos = foundRepos.filter((repository) => repository.name === opts?.repo);
-
+      }
       if (repos[0]) {
         return repos[0].owner.login;
       }

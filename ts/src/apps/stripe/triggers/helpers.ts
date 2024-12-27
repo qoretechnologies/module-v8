@@ -10,16 +10,16 @@ export const deregisterStripeWebhook: IQoreAppActionWithWebhookBase['webhook_der
   regInfo
 ) => {
   const {
-    conn_opts: { token },
+    opts: { secretKey },
   } = context;
   const { webhook } = regInfo;
 
   await QorusRequest.deleteReq<any>(
     {
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${secretKey}`,
       },
-      path: `/v1/webhook_endpoints/${webhook.gid}`,
+      path: `/v1/webhook_endpoints/${webhook.id}`,
     },
     {
       url: 'https://api.stripe.com',
@@ -33,7 +33,7 @@ export const createRegisterStripeWebhookFunction = (
 ): IQoreAppActionWithWebhookBase['webhook_register'] => {
   return async (context, url) => {
     const {
-      conn_opts: { token },
+      opts: { secretKey },
     } = context;
 
     try {
@@ -48,7 +48,7 @@ export const createRegisterStripeWebhookFunction = (
         webhookData,
         {
           headers: {
-            Authorization: `Bearer ${token}`,
+            Authorization: `Bearer ${secretKey}`,
             'Content-Type': 'application/x-www-form-urlencoded',
           },
         }
@@ -56,8 +56,8 @@ export const createRegisterStripeWebhookFunction = (
 
       return { webhook: data };
     } catch (error) {
-      console.log(error);
       Debugger.log('Error in webhook_register for stripe', error);
+      throw error;
     }
   };
 };
@@ -67,7 +67,7 @@ export const createGetStripeExampleEventDataFunction: (
 ) => IQoreAppActionWithWebhookBase['get_example_event_data'] = (eventTypes: TStripeEventType[]) => {
   return async (context) => {
     const {
-      conn_opts: { token },
+      opts: { secretKey },
     } = context;
 
     try {
@@ -78,7 +78,7 @@ export const createGetStripeExampleEventDataFunction: (
 
       const { data } = await axios.get('https://api.stripe.com/v1/events', {
         headers: {
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${secretKey}`,
         },
         params,
       });

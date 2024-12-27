@@ -100,6 +100,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     POST: {
       override_options: {
         categoryId: {
+          type: 'softstring',
           required: false,
           get_allowed_values: getJiraProjectCategoryIdAllowedValues,
         },
@@ -136,6 +137,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     DELETE: {
       override_options: {
         projectIdOrKey: {
+          allowed_values_creatable: true,
           get_allowed_values: getJiraProjectIdAllowedValues,
         },
       },
@@ -143,6 +145,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     GET: {
       override_options: {
         projectIdOrKey: {
+          allowed_values_creatable: true,
           get_allowed_values: getJiraProjectIdAllowedValues,
         },
       },
@@ -150,12 +153,14 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     PUT: {
       override_options: {
         projectIdOrKey: {
+          allowed_values_creatable: true,
           get_allowed_values: getJiraProjectIdAllowedValues,
         },
         leadAccountId: {
           get_allowed_values: getJiraUserIdAllowedValues,
         },
         categoryId: {
+          type: 'softstring',
           required: false,
           get_allowed_values: getJiraProjectCategoryIdAllowedValues,
         },
@@ -166,6 +171,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     GET: {
       override_options: {
         issueIdOrKey: {
+          allowed_values_creatable: true,
           get_allowed_values: getJiraIssueIdAllowedValues,
         },
       },
@@ -173,6 +179,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     PUT: {
       override_options: {
         issueIdOrKey: {
+          allowed_values_creatable: true,
           get_allowed_values: getJiraIssueIdAllowedValues,
         },
         fields: {
@@ -230,6 +237,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     DELETE: {
       override_options: {
         issueIdOrKey: {
+          allowed_values_creatable: true,
           get_allowed_values: getJiraIssueIdAllowedValues,
         },
       },
@@ -239,6 +247,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     GET: {
       override_options: {
         issueIdOrKey: {
+          allowed_values_creatable: true,
           get_allowed_values: getJiraIssueIdAllowedValues,
         },
       },
@@ -246,6 +255,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     POST: {
       override_options: {
         issueIdOrKey: {
+          allowed_values_creatable: true,
           get_allowed_values: getJiraIssueIdAllowedValues,
         },
         body: jiraDocumentFormatOption,
@@ -256,6 +266,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     GET: {
       override_options: {
         issueIdOrKey: {
+          allowed_values_creatable: true,
           get_allowed_values: getJiraIssueIdAllowedValues,
         },
         id: {
@@ -295,6 +306,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     POST: {
       override_options: {
         issueIdOrKey: {
+          allowed_values_creatable: true,
           get_allowed_values: getJiraIssueIdAllowedValues,
         },
         comment: jiraDocumentFormatOption,
@@ -309,6 +321,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     GET: {
       override_options: {
         issueIdOrKey: {
+          allowed_values_creatable: true,
           get_allowed_values: getJiraIssueIdAllowedValues,
         },
       },
@@ -318,6 +331,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     DELETE: {
       override_options: {
         issueIdOrKey: {
+          allowed_values_creatable: true,
           get_allowed_values: getJiraIssueIdAllowedValues,
         },
         id: {
@@ -329,6 +343,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     GET: {
       override_options: {
         issueIdOrKey: {
+          allowed_values_creatable: true,
           get_allowed_values: getJiraIssueIdAllowedValues,
         },
         id: {
@@ -340,6 +355,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     PUT: {
       override_options: {
         issueIdOrKey: {
+          allowed_values_creatable: true,
           get_allowed_values: getJiraIssueIdAllowedValues,
         },
         id: {
