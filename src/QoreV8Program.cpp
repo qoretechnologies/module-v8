@@ -98,6 +98,52 @@ QoreV8Program::~QoreV8Program() {
     }
 }
 
+class ScopedIsolate {
+public:
+    DLLLOCAL ScopedIsolate() : isolate(v8::Isolate::Allocate()) {
+    }
+
+    DLLLOCAL ~ScopedIsolate() {
+        isolate->Dispose();
+    }
+
+    DLLLOCAL v8::Isolate* operator*() {
+        return isolate;
+    }
+
+    DLLLOCAL v8::Isolate* operator->() {
+        return isolate;
+    }
+
+private:
+    v8::Isolate* isolate;
+};
+
+#if 0
+BinaryNode* QoreV8Program::createSnapshot(ExceptionSink* xsink, const QoreString& source_code,
+        const QoreString& source_label) {
+
+    ScopedIsolate isolate;
+    v8::Isolate::CreateParams params;
+    std::unique_ptr<v8::ArrayBuffer::Allocator> array_buffer_allocator(
+        v8::ArrayBuffer::Allocator::NewDefaultAllocator());
+    v8::Isolate::CreateParams create_params;
+    params.array_buffer_allocator = array_buffer_allocator.get();
+    v8::SnapshotCreator creator(*isolate, params);
+
+    QoreString source = source_code;
+    QoreString label = source_label;
+    escapeSingle(source);
+    escapeSingle(label);
+
+    //creator.SetDefaultContext(setup->context());
+    v8::StartupData data = creator.CreateBlob(v8::SnapshotCreator::FunctionCodeHandling::kKeep);
+    SimpleRefHolder<BinaryNode> rv(new BinaryNode);
+    rv->append(data.data, data.raw_size);
+    return rv.release();
+}
+#endif
+
 static void js_oom(v8::Isolate* isolate, void* data) {
     size_t current_heap_limit = reinterpret_cast<size_t>(data);
     ExceptionSink xsink;

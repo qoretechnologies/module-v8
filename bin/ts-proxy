@@ -1,0 +1,240 @@
+#!/usr/bin/env qore
+
+%new-style
+%require-types
+%strict-args
+%enable-all-warnings
+
+%requires TypeScriptActionInterface
+%requires Logger
+%requires yaml
+%requires v8
+
+%exec-class TsProxy
+
+hashdecl EventInfo {
+    hash<AsyncCallInfo> event;
+    int tid;
+    Condition cond();
+    bool running;
+    int waiting;
+    #! stop flag
+    bool stop_flag = False;
+}
+
+class TsProxy inherits TypeScriptProxy {
+    public {
+        hash<auto> opts;
+
+        const Opts = {
+            "socket": "s,socket=s",
+            "verbose": "v,verbose:i+",
+            "help": "h,help",
+        };
+    }
+
+    private {
+        Mutex m();
+
+        Logger logger;
+
+        # event map
+        hash<string, hash<EventInfo>> emap;
+    }
+
+    constructor() : TypeScriptProxy(False) {
+        opts = GetOpt::parseExit(Opts, \ARGV);
+        if (opts.help || !opts.socket) {
+            usage();
+        }
+        setupLogger();
+        DataProvider::setGlobalLogger(logger);
+
+        # we have to make sure that no further servers are started by the TypeScriptActionInterface module
+        TypeScriptActionInterface::disableServerOnDemand();
+
+        info("Connecting to server at %y", opts.socket);
+        s.connectUNIX(opts.socket);
+        s.sendi8(getpid(), 5s);
+        info("Connected to server: %y", s.getPeerInfo());
+        commandLoop();
+    }
+
+   private setupLogger(string name = "console") {
+        LoggerLevel level;
+        if (opts.verbose > 1) {
+            level = LoggerLevel::getLevelDebug();
+        } else if (opts.verbose) {
+            level = LoggerLevel::getLevelInfo();
+        } else {
+            level = LoggerLevel::getLevelError();
+        }
+        logger = new Logger(name, level);
+        logger.addAppender(new StdoutAppender());
+    }
+
+    #! This runs in the child
+    private commandLoop() {
+        while (True) {
+            hash<auto> h;
+            try {
+                h = getCommand();
+                if (!ValidCommands{h.cmd}) {
+                    throw "CMD-ERROR", sprintf("Unknown parent command %y; valid send commands: %y", h.cmd,
+                        keys ValidCommands);
+                }
+            } catch (hash<ExceptionInfo> ex) {
+                error("Error processing command from parent: %s", get_exception_string(ex));
+                break;
+            }
+
+            if (h.cmd == PC_EXIT) {
+                info("Child process PID %d exiting on parent's request", getpid());
+                break;
+            }
+
+            try {
+                switch (h.cmd) {
+                    case PC_CALL:
+                        doAsyncCall(h.args[0], h.args[1], h.args[2], h.args[3]);
+                        break;
+
+                    case PC_SETUP_EVENT:
+                        setupEvent(h.args[0], h.args[1], h.args[2], h.args[3]);
+                        break;
+
+                    case PC_RELEASE_EVENT:
+                        releaseEvent(h.args[0]);
+                        break;
+                }
+            } catch (hash<ExceptionInfo> ex) {
+                error("Error executing %y: %s", h.cmd, get_exception_string(ex));
+                string yaml = makeSend(CC_ERR, {
+                    "ex": {
+                        "err": ex.err,
+                        "desc": get_exception_string(ex),
+                    }
+                });
+                sendString(yaml);
+            }
+        }
+
+        info("Child process PID %d terminating", getpid());
+        exit(0);
+    }
+
+    private setupEvent(string app, string action, string key, *hash<auto> arg0) {
+        TypeScriptActionInterface::initApp(app);
+        TypeScriptActionInterface::initAppAction(app, action);
+        if (emap{key}) {
+            throw "EVENT-ERROR", sprintf("Event key %y is already running", key);
+        }
+
+        emap{key} = <EventInfo>{
+            "event": TypeScriptActionInterface::getCall(key),
+        };
+        *hash<DataContextInfo> arg;
+        if (arg0) {
+            arg = cast<hash<DataContextInfo>>(arg0);
+        }
+        Counter cnt(1);
+        background eventThread(cnt, key, arg);
+        cnt.waitForZero();
+    }
+
+    private eventThread(Counter cnt, string key, *hash<DataContextInfo> arg) {
+        emap{key}.tid = gettid();
+        on_exit {
+            m.lock();
+            on_exit m.unlock();
+            emap{key}.running = False;
+            if (emap{key}.waiting) {
+                emap{key}.cond.broadcast();
+            }
+            info("Terminated JavaScript I/O event thread");
+        }
+        emap{key}.running = True;
+        # signal calling thread that we are running
+        cnt.dec();
+        try {
+            TypeScriptActionDataProviderBase::getAsyncValueArgs(logger, emap{key}.event, (arg,
+                sub (JavaScriptObject o) {
+                    auto event = o.toData();
+                    if (event.typeCode() != NT_HASH) {
+                        throw "INVALID-EVENT-DATA", sprintf("Cannot raise event for key with type %y; must be a hash "
+                            "(JavaScript object)", key, event.fullType());
+                    }
+
+                    string yaml = makeSend(CC_EVENT, {
+                        "key": key,
+                        "event": event,
+                    });
+                    sendString(yaml);
+                },
+                bool sub () {
+                    return emap{key}.stop_flag;
+                })
+            );
+        } catch (hash<ExceptionInfo> ex) {
+            error("EVENT-THREAD-ERROR", "Exception in event thread: %s", get_exception_string(ex));
+        }
+    }
+
+    private releaseEvent(string key) {
+        m.lock();
+        on_exit m.unlock();
+
+        if (emap{key}.running) {
+            if (!emap{key}.stop_flag) {
+                emap{key}.stop_flag = True;
+            }
+            while (emap{key}.running) {
+                ++emap{key}.waiting;
+                emap{key}.cond.wait(m);
+                --emap{key}.waiting;
+            }
+        }
+    }
+
+    private doAsyncCall(string app, *string action, string key, auto args) {
+        TypeScriptActionInterface::initApp(app);
+        if (action) {
+            TypeScriptActionInterface::initAppAction(app, action);
+        }
+        hash<AsyncCallInfo> api = TypeScriptActionInterface::getCall(key);
+        auto rv = TypeScriptActionDataProviderBase::getAsyncValueArgs(logger, api, args);
+        string yaml = makeSend(CC_OK, {
+            "rv": rv,
+        });
+        sendString(yaml);
+    }
+
+    private *bool retry(hash<ExceptionInfo> ex) {
+        fatal("Fatal error communicating with the server: %s; terminating the process", get_exception_string(ex));
+        exit(1);
+    }
+
+    private info(string fmt, ...) {
+        fmt = "ts-proxy: " + fmt;
+        logger.logArgs(LoggerLevel::LevelInfo, fmt, argv);
+    }
+
+    private error(string fmt, ...) {
+        fmt = "ts-proxy: " + fmt;
+        logger.logArgs(LoggerLevel::LevelError, fmt, argv);
+    }
+
+    private fatal(string fmt, ...) {
+        fmt = "ts-proxy: " + fmt;
+        logger.logArgs(LoggerLevel::LevelFatal, fmt, argv);
+    }
+
+    static usage() {
+        printf("usage: %s [options]
+ -s,--socket=ARG     the UNIX socket file for listening to server commands
+ -v,--verbose[=ARG]  the verbosity level of the program
+ -h,--help           this help text
+", get_script_name());
+        exit(0);
+    }
+}

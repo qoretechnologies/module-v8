@@ -1,7 +1,7 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 #! Qore TypeScriptActionInterface module definition
 
-/*  TypeScriptActionInterface.qc Copyright 2024 Qore Technologies, s.r.o.
+/*  JavaScriptProgramPool.qc Copyright 2024 Qore Technologies, s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -26,8 +26,7 @@
 public namespace TypeScriptActionInterface {
 #! JavaScript program pool class
 public class JavaScriptProgramPool {
-    public {
-    }
+    public {}
 
     private {
         # JavaScript source
@@ -114,7 +113,7 @@ public class JavaScriptProgramPool {
     }
 
     info(string fmt, ...) {
-        if (*LoggerInterface logger = TypeScriptActionInterface::logger) {
+        if (*LoggerInterface logger = DataProvider::getGlobalLogger()) {
             logger.logArgs(Qore::Logger::LoggerLevel::LevelInfo, fmt, argv);
         }
     }

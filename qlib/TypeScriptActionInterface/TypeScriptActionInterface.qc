@@ -26,6 +26,18 @@
 public namespace TypeScriptActionInterface {
 #! Async call info
 public hashdecl AsyncCallInfo {
+    #! Unique key for the call
+    string key;
+
+    #! App name
+    string app;
+
+    #! Action name; only set for calls associated with an app action
+    *string action;
+
+    #! Type of call
+    string type;
+
     #! Label for the call
     string label;
 
@@ -80,11 +92,13 @@ public class TypeScriptActionInterface {
 
         static hash<string, code> TestApi = TypeScriptActionInterface::getTestInterface();
 
-        static TypeScriptActionRootDataProvider root();
+        static TypeScriptActionRootDataProvider root;
 
-        static LoggerInterface logger;
         static code WebhookCreate;
         static code WebhookDelete;
+
+        #! Set if server mode is active
+        static JavaScriptThreadProcessPool server;
 
         const TypeKeys = (
             "name", "display_name", "short_desc", "desc", "type", "example_value", "default_value", "multiselect",
@@ -138,6 +152,15 @@ public class TypeScriptActionInterface {
     }
 
     private {
+        #! App map for delayed initialization: app -> info
+        static hash<string, hash<AppInfo>> appmap;
+
+        #! Init map for apps already initialized
+        static hash<string, bool> initmap;
+
+        #! Action map for delayed initialization: app -> action -> info
+        static hash<string, hash<string, hash<ActionInfo>>> actionmap;
+
         #! Maps from scheme names to apps
         static hash<string, string> samap;
 
@@ -185,25 +208,148 @@ public class TypeScriptActionInterface {
 
         #! Actions supporting record deletes; app -> action -> True
         static hash<string, hash<string, bool>> dmap;
+
+        #! Global async call map
+        static hash<string, hash<AsyncCallInfo>> acmap;
+
+        #! Maps lower-case app names to camel case names
+        static hash<string, string> appcasemap;
+
+        #! Server lock
+        static Mutex sm();
+
+        #! On-demand server flag
+        static bool on_demand;
+    }
+
+    #! Performs static initialization of the module
+    static init() {
+        TypeScriptActionInterface::checkRoot();
+
+        int opts = DataProvider::getOptions();
+        if (opts & DPO_EnableServers) {
+            on_demand = True;
+        }
+        if (opts & DPO_DisableOnDemandInitialization) {
+            map TypeScriptActionInterface::initApp($1, True), keys appmap;
+        }
+    }
+
+    #! Sets the server to start on demand
+    static startServerOnDemand() {
+        sm.lock();
+        on_exit sm.unlock();
+
+        on_demand = True;
+    }
+
+    #! Sets the server to start on demand
+    static disableServerOnDemand() {
+        sm.lock();
+        on_exit sm.unlock();
+
+        on_demand = False;
+    }
+
+    #! Starts the server if it has not been started
+    static bool checkServer() {
+        if (server) {
+            return True;
+        }
+        if (!on_demand) {
+            return False;
+        }
+
+        # lock and check everything again in case of contention
+        sm.lock();
+        on_exit sm.unlock();
+        if (server) {
+            return True;
+        }
+        if (on_demand) {
+            TypeScriptActionInterface::startServerIntern();
+            return True;
+        }
+
+        return False;
+    }
+
+    #! Start the process server to run JavaScript code in dedicated processes
+    /** @return True if the server was started
+    */
+    static bool startServer() {
+        sm.lock();
+        on_exit sm.unlock();
+
+        if (server) {
+            return False;
+        }
+        TypeScriptActionInterface::startServerIntern();
+        return True;
+    }
+
+    #! Starts the server
+    private static startServerIntern() {
+        server = new JavaScriptThreadProcessPool();
+        set_signal_handler(SIGTERM, \TypeScriptActionInterface::shutdownServer());
+        set_signal_handler(SIGINT, \TypeScriptActionInterface::shutdownServer());
+        set_signal_handler(SIGHUP, \TypeScriptActionInterface::shutdownServer());
+        set_signal_handler(SIGUSR2, \TypeScriptActionInterface::shutdownServer());
+
+        DataProvider::registerShutdownHandler(server.uniqueHash(), \TypeScriptActionInterface::shutdownServer());
+    }
+
+    #! Shuts the server down if it's running
+    static shutdownServer() {
+        sm.lock();
+        on_exit sm.unlock();
+
+        if (!server) {
+            return;
+        }
+
+        DataProvider::deregisterShutdownHandler(server.uniqueHash());
+        delete server;
+    }
+
+    static string getCamelCaseAppName(string lc) {
+        *string name = appcasemap{lc};
+        if (!exists name) {
+            throw "APP-ERROR", sprintf("No lower-case app %y has been registered; known strings: %y", lc,
+                keys appcasemap);
+        }
+        return name;
+    }
+
+    static registerAsyncCall(reference<hash<AsyncCallInfo>> call, ...) {
+        string key = (foldl $1 + "-" + $2, argv) + sprintf("-%s", call.type);
+        if (acmap{key}) {
+            throw "ASYNC-CALL-ERROR", sprintf("Call %s is already registered", key);
+        }
+        call.key = key;
+        acmap{key} = call;
+    }
+
+    static hash<AsyncCallInfo> getCall(string key) {
+        *hash<AsyncCallInfo> rv = acmap{key};
+        if (!rv) {
+            throw "ASYNC-CALL-ERROR", sprintf("Unknown call %y; known calls: %y", key, keys acmap);
+        }
+        return rv;
     }
 
     static registerApp(JavaScriptObject app) {
         JavaScriptProgram pgm = app.getProgram();
         JavaScriptProgramPool pool;
         bool first;
-        on_error if (logger) {
-            logger.error("TypeScriptActionInterface: error registering app %y: %s", app.name,
-                get_exception_string($1));
-        }
+        on_error TSAI::error("TypeScriptActionInterface: error registering app %y: %s", app.name,
+            get_exception_string($1));
         {
             on_error rethrow "APP-ERROR", sprintf("Error registering app %y: %s", app.name, $1.desc);
             pool = JavaScriptProgramPool::getPool(pgm, \first);
         }
         if (first) {
             TypeScriptActionInterface::registerApp(app.toData(), pool);
-            if (logger) {
-                logger.info("TypeScriptActionInterface: registered app %y", app.name);
-            }
         }
     }
 
@@ -211,10 +357,8 @@ public class TypeScriptActionInterface {
         JavaScriptProgram pgm = action.getProgram();
         JavaScriptProgramPool pool;
         bool first;
-        on_error if (logger) {
-            logger.error("TypeScriptActionInterface: error registering app %y action %y: %s", action.app,
-                action.action, get_exception_string($1));
-        }
+        on_error TSAI::error("TypeScriptActionInterface: error registering app %y action %y: %s", action.app,
+            action.action, get_exception_string($1));
         {
             on_error rethrow "ACTION-ERROR", sprintf("Error registering app %y action %y: %s",
                 action.app, action.action, $1.desc);
@@ -222,20 +366,93 @@ public class TypeScriptActionInterface {
         }
         if (first) {
             TypeScriptActionInterface::registerAction(action.toData(), pool);
-            if (logger) {
-                logger.debug("TypeScriptActionInterface: registered app %y action %y: %s", action.app,
-                    action.action);
-            }
+            TSAI::debug("Registered TypeScript app %y action %y: %s", action.app, action.action);
         }
     }
 
     static registerApp(hash<auto> app, JavaScriptProgramPool pool) {
+        if (app.name =~ / /) {
+            throw "APP-ERROR", sprintf("App name %y is invalid; it contains one or more spaces", app.name);
+        }
+        appmap{app.name} = <AppInfo>{
+            "app": app,
+            "pool": pool,
+        };
+        if (app.rest) {
+            string sname = "tsrest-" + app.name.lwr();
+            ConnectionSchemeCache::registerPendingScheme(sname, sub () {
+                TypeScriptActionInterface::initApp(app.name);
+            });
+        }
+        DataProviderActionCatalog::registerPendingApp(app.name, sub () {
+            TypeScriptActionInterface::initApp(app.name);
+        });
+        #TSAI::debug("Registered TypeScript app %y", app.name);
+    }
+
+    static bool initAppAction(string app, string action) {
+        TypeScriptActionInterface::initApp(app);
+        if (*hash<ActionInfo> info = remove actionmap{app}{action}) {
+            if (!actionmap{app}) {
+                remove actionmap{app};
+            }
+            TypeScriptActionInterface::registerActionIntern(info.action, info.pool);
+            return True;
+        }
+        return False;
+    }
+
+    static bool initApp(string app, *bool do_actions) {
+        if (initmap{app}) {
+            return False;
+        }
+        return TypeScriptActionInterface::initAppIntern(app, do_actions);
+    }
+
+    static private synchronized bool initAppIntern(string app, *bool do_actions) {
+        if (initmap{app}) {
+            return False;
+        }
+        if (*hash<AppInfo> info = remove appmap{app}) {
+            return TypeScriptActionInterface::initAppIntern(info, do_actions);
+        }
+        throw "APP-ERROR", sprintf("No app %y has been registered for deferred initialization by the "
+            "TypeScriptActionInterface module", app);
+    }
+
+    static private bool initAppIntern(hash<AppInfo> info, *bool do_actions) {
+        initmap{info.app.name} = True;
+        # change the cwd to process relative paths and restore on exit
+        string cwd = getcwd();
+        on_exit chdir(cwd);
+        chdir(info.cwd);
+        TypeScriptActionInterface::registerAppIntern(info.app, info.pool);
+
+        if (do_actions) {
+            TypeScriptActionInterface::checkAppActions(info.app.name);
+        }
+        return True;
+    }
+
+    #! Initialize all actions for the given app
+    static checkAppActions(string app) {
+        if (exists (*string rn = appcasemap{app})) {
+            app = rn;
+        }
+        if (*hash<string, hash<ActionInfo>> actions = remove actionmap{app}) {
+            map TypeScriptActionInterface::registerActionIntern($1.action, $1.pool), actions.iterator();
+        }
+    }
+
+    static private registerAppIntern(hash<auto> app, JavaScriptProgramPool pool) {
         #printf("TypeScriptActionInterface::registerApp() %y %y\n", now_us(), app.name);
         if (app.name =~ / /) {
             throw "APP-ERROR", sprintf("App name %y is invalid; it contains one or more spaces", app.name);
         }
-        on_error printf("%s\n", get_exception_string($1));
+        on_success TSAI::debug("TypeScriptActionInterface: registered app %y", app.name);
+        on_error TSAI::error("%s", get_exception_string($1));
         string appname = app.name.lwr();
+        appcasemap{appname} = app.name;
         SwaggerSchema schema;
         if ((*string swagger_loc = remove app.swagger).val()) {
             on_error rethrow $1.err, sprintf("%s (while loading app %y)", $1.desc, app.name);
@@ -286,11 +503,14 @@ public class TypeScriptActionInterface {
                             rest_modifiers.set_options_post_auth.fullType());
                     }
                     post_auth = <AsyncCallInfo>{
+                        "app": app.name,
+                        "type": "post_auth",
                         "label": sprintf("REST post-auth option function for app %y", app.name),
                         "pool": pool,
                         "async_call": rest_modifiers.set_options_post_auth,
                         "to": seconds(remove rest_modifiers.io_timeout_secs ?? DefaultIoTimeoutSecs),
                     };
+                    TypeScriptActionInterface::registerAsyncCall(\post_auth, "app", app.name);
                 }
                 if (rest_modifiers.connection_update_option.val()) {
                     if (rest_modifiers.connection_update_option.option.typeCode() != NT_STRING) {
@@ -306,12 +526,15 @@ public class TypeScriptActionInterface {
                     conn_update = {
                         "option": rest_modifiers.connection_update_option,
                         "code": <AsyncCallInfo>{
+                            "app": app.name,
+                            "type": "conn_update",
                             "label": sprintf("REST connection update option function for app %y", app.name),
                             "pool": pool,
                             "async_call": rest_modifiers.connection_update_option."code",
                             "to": seconds(remove rest_modifiers.io_timeout_secs ?? DefaultIoTimeoutSecs),
                         },
                     };
+                    TypeScriptActionInterface::registerAsyncCall(\conn_update."code", "app", app.name);
                 }
                 if (rest_modifiers.conn_option_map) {
                     conn_opt_map = cast<hash<string, string>>(rest_modifiers.conn_option_map);
@@ -353,6 +576,11 @@ public class TypeScriptActionInterface {
             }
         }
         DataProviderActionCatalog::registerApp(cast<hash<DataProviderAppInfo>>(app0));
+
+        TypeScriptActionAppDataProvider prov(appname);
+        TypeScriptActionInterface::checkRoot();
+        root.registerChild(appname, prov);
+
         if (schema) {
             app_swagger_map{appname} = schema;
         }
@@ -528,6 +756,13 @@ public class TypeScriptActionInterface {
     }
 
     static registerAction(hash<auto> action, JavaScriptProgramPool pool) {
+        actionmap{action.app}{action.action} = <ActionInfo>{
+            "action": action,
+            "pool": pool,
+        };
+    }
+
+    private static registerActionIntern(hash<auto> action, JavaScriptProgramPool pool) {
         on_error printf("%s\n", get_exception_string($1));
 
         on_error rethrow $1.err, sprintf("%s (while registering action %y for app %y)", $1.desc, action.action,
@@ -797,6 +1032,9 @@ public class TypeScriptActionInterface {
             }
 
             hash<AsyncCallInfo> webhook_register = <AsyncCallInfo>{
+                "app": app.name,
+                "action": action.action,
+                "type": "webhook_register",
                 "label": sprintf("Webhook registration function for app %y action %y", app.name, action.action),
                 "pool": pool,
                 "async_call": webhook_register_code,
@@ -811,11 +1049,17 @@ public class TypeScriptActionInterface {
             }
 
             hash<AsyncCallInfo> webhook_deregister = <AsyncCallInfo>{
+                "app": app.name,
+                "action": action.action,
+                "type": "webhook_deregister",
                 "label": sprintf("Webhook deregistration function for app %y action %y", app.name, action.action),
                 "pool": pool,
                 "async_call": webhook_deregister_code,
                 "to": seconds(io_timeout),
             };
+
+            TypeScriptActionInterface::registerAsyncCall(\webhook_register, "app", app.name, action.action);
+            TypeScriptActionInterface::registerAsyncCall(\webhook_deregister, "app", app.name, action.action);
 
             child = new TypeScriptActionWebhookEventDataProvider(action.action, event_id, event_info,
                 get_example_event_data, omap, romap, dvmap, depmap, method, webhook_register, webhook_deregister,
@@ -829,11 +1073,15 @@ public class TypeScriptActionInterface {
                     event_function.fullType());
             }
             hash<AsyncCallInfo> event = <AsyncCallInfo>{
+                "app": app.name,
+                "action": action.action,
+                "type": "event_function",
                 "label": sprintf("Webhook event function for app %y action %y", app.name, action.action),
                 "pool": pool,
                 "async_call": event_function,
                 "to": seconds(io_timeout),
             };
+            TypeScriptActionInterface::registerAsyncCall(\event, "app", app.name, action.action);
             child = new TypeScriptActionEventDataProvider(action.action, event_id, event_info, get_example_event_data,
                 omap, romap, dvmap, depmap, event);
             rv = AES_JS_EVENT;
@@ -869,12 +1117,21 @@ public class TypeScriptActionInterface {
             throw "TYPESCRIPT-ACTION-ERROR", sprintf("%s has an invalid %y attribute; got type %y; expecting a "
                 "callable value", get_desc(), key, callable.fullType());
         }
-        return <AsyncCallInfo>{
+        hash<AsyncCallInfo> rv = <AsyncCallInfo>{
+            "app": app,
+            "type": key,
             "label": sprintf("%s %s function", get_desc(), type),
             "pool": pool,
             "async_call": callable,
             "to": seconds(io_timeout),
         };
+        if (action) {
+            rv.action = action;
+            TypeScriptActionInterface::registerAsyncCall(\rv, "app", app, action);
+        } else {
+            TypeScriptActionInterface::registerAsyncCall(\rv, "app", app);
+        }
+        return rv;
     }
 
     static generateApiDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
@@ -890,11 +1147,15 @@ public class TypeScriptActionInterface {
             timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
             if (api_function) {
                 api = <AsyncCallInfo>{
+                    "app": app.name,
+                    "action": action.action,
+                    "type": "api_function",
                     "label": sprintf("API function for app %y action %y", app.name, action.action),
                     "pool": pool,
                     "async_call": api_function,
                     "to": seconds(io_timeout),
                 };
+                TypeScriptActionInterface::registerAsyncCall(\api, "app", app.name, action.action);
             }
         }
 
@@ -959,26 +1220,38 @@ public class TypeScriptActionInterface {
         TypeScriptActionAppDataProvider prov = TypeScriptActionInterface::getAppDataProvider(action.app);
         prov.registerChild(action.action, child);
 
-        #printf("Registered %s %s (%y)\n", action.app, action.action);
+        TSAI::debug("Registered provider/action %s/%s", prov.getName(), action.action);
 
         action.path = action.action;
     }
 
     static TypeScriptActionAppDataProvider getAppDataProvider(string app) {
         string appname = app.lwr();
-        if (*AbstractDataProvider app_prov = root.getChildProvider(appname)) {
-            return cast<TypeScriptActionAppDataProvider>(app_prov);
-        }
-        TypeScriptActionAppDataProvider prov(appname);
-        root.registerChild(appname, prov);
-        return prov;
+        return root.getChildProvider(appname);
     }
 
     static TypeScriptActionAppDataProvider getDataProvider(string app, TypeScriptAppRestConnection conn) {
-        TypeScriptActionAppDataProvider rv = cast<TypeScriptActionAppDataProvider>(root.getChildProviderEx(app));
-        rv = rv.copy();
+        TypeScriptActionInterface::checkRoot();
+        TypeScriptActionAppDataProvider parent = cast<TypeScriptActionAppDataProvider>(root.getChildProviderEx(app));
+        TypeScriptActionAppDataProvider rv = parent.copy();
+        rv.setParent(parent);
         rv.setConnection(conn);
         return rv;
+    }
+
+    static checkRoot() {
+        if (root) {
+            return;
+        }
+        TypeScriptActionInterface::checkRootIntern();
+    }
+
+    static private synchronized checkRootIntern() {
+        if (root) {
+            return;
+        }
+        root = new TypeScriptActionRootDataProvider();
+        root.setLogger(DataProvider::getGlobalLogger());
     }
 
     static getOptionFunctions(reference<hash<auto>> action, reference<hash<string, hash<AsyncCallInfo>>> omap,
@@ -995,12 +1268,17 @@ public class TypeScriptActionInterface {
                     action.action, key, get_allowed_values.fullType());
             }
             omap{key} = <AsyncCallInfo>{
+                "app": action.app,
+                "action": action.action,
+                "type": "get_allowed_values",
                 "label": sprintf("Reference data function for app %y action %y option %y", action.app,
                     action.action, key),
                 "pool": pool,
                 "async_call": get_allowed_values,
                 "to": io_timeout,
             };
+            TypeScriptActionInterface::registerAsyncCall(\omap{key}, "app", action.app, action.action, key);
+
             h.ref_data = key;
             # remove any manual allowed values
             remove h.allowed_values;
@@ -1039,12 +1317,16 @@ public class TypeScriptActionInterface {
                     action.action, key, get_dependent_options.fullType());
             }
             dmap{key} = <AsyncCallInfo>{
+                "app": action.app,
+                "action": action.action,
+                "type": "get_dependent_options",
                 "label": sprintf("Dependent option function for app %y action %y option %y", action.app,
                     action.action, key),
                 "pool": pool,
                 "async_call": get_dependent_options,
                 "to": io_timeout,
             };
+            TypeScriptActionInterface::registerAsyncCall(\dmap{key}, "app", action.app, action.action, key);
             action.data_dependent_options = True;
         }
         if (exists (auto get_default_value = remove h.get_default_value)) {
@@ -1054,12 +1336,16 @@ public class TypeScriptActionInterface {
                     action.action, key, get_default_value.fullType());
             }
             dvmap{key} = <AsyncCallInfo>{
+                "app": action.app,
+                "action": action.action,
+                "type": "get_default_value",
                 "label": sprintf("Default value data function for app %y action %y option %y", action.app,
                     action.action, key),
                 "pool": pool,
                 "async_call": get_default_value,
                 "to": io_timeout,
             };
+            TypeScriptActionInterface::registerAsyncCall(\dvmap{key}, "app", action.app, action.action, key);
         }
         if (h.required && !h.preselected && !exists h.default_value) {
             h.preselected = True;
@@ -1473,8 +1759,14 @@ public class TypeScriptActionInterface {
         return app_conn_update_map{app.lwr()};
     }
 
+    static setupConsoleLogger(LoggerLevel level = LoggerLevel::LevelInfo) {
+        Logger logger("qore-ts-api-console", level);
+        logger.addAppender(new StdoutAppender());
+        DataProvider::setGlobalLogger(logger);
+    }
+
     static registerLogger(LoggerInterface logger) {
-        TypeScriptActionInterface::logger = logger;
+        DataProvider::setGlobalLogger(logger);
     }
 
     #! Registers an API for creating a webhook
@@ -1630,6 +1922,81 @@ class TyeScriptTypeEditor inherits QoreDataType {
             t.accept_type_hash_simple."null" = t.accept_type_hash."null" = True;
         }
         t.type = t.type.getOrNothingType();
+    }
+}
+
+# For delayed app initialization
+hashdecl AppInfo {
+    #! The app info from JavaScript
+    hash<auto> app;
+
+    #! The current working directory
+    string cwd = getcwd();
+
+    # The program pool info
+    JavaScriptProgramPool pool;
+}
+
+# For delayed action initialization
+hashdecl ActionInfo {
+    # The action info from JavaScript
+    hash<auto> action;
+
+    # The program pool info
+    JavaScriptProgramPool pool;
+}
+}
+
+# private namespace
+namespace TSAI {
+# private class with convenience methods
+class TSAI inherits TypeScriptActionInterface {
+    static debug(string fmt, ...) {
+        if (*LoggerInterface logger = DataProvider::getGlobalLogger()) {
+            logger.logArgs(LoggerLevel::LevelDebug, fmt, argv);
+        } else {
+            stdout.vprintf(fmt + "\n", argv);
+        }
+    }
+
+    static info(string fmt, ...) {
+        if (*LoggerInterface logger = DataProvider::getGlobalLogger()) {
+            logger.logArgs(LoggerLevel::LevelInfo, fmt, argv);
+        } else {
+            stdout.vprintf(fmt + "\n", argv);
+        }
+    }
+
+    static warn(string fmt, ...) {
+        if (*LoggerInterface logger = DataProvider::getGlobalLogger()) {
+            logger.logArgs(LoggerLevel::LevelWarn, fmt, argv);
+        } else {
+            stderr.vprintf(fmt + "\n", argv);
+        }
+    }
+
+    static error(string fmt, ...) {
+        if (*LoggerInterface logger = DataProvider::getGlobalLogger()) {
+            logger.logArgs(LoggerLevel::LevelError, fmt, argv);
+        } else {
+            stderr.vprintf(fmt + "\n", argv);
+        }
+    }
+
+    static fatal(string fmt, ...) {
+        if (*LoggerInterface logger = DataProvider::getGlobalLogger()) {
+            logger.logArgs(LoggerLevel::LevelFatal, fmt, argv);
+        } else {
+            stderr.vprintf(fmt + "\n", argv);
+        }
+    }
+
+    static logArgs(Logger::LoggerLevel level, string fmt, *list<auto> args) {
+        if (*LoggerInterface logger = DataProvider::getGlobalLogger()) {
+            logger.logArgs(level, fmt, args);
+        } else {
+            stderr.vprintf(fmt + "\n", args);
+        }
     }
 }
 }

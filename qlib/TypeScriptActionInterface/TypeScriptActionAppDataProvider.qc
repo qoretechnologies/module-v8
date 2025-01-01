@@ -47,8 +47,11 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
         #! connection for the action
         AbstractConnection conn;
 
-        #! Dynamic child data providers
+        #! Dynamic child data providers; only maintained in the parent
         hash<string, DataProvider::AbstractDataProvider> childMap;
+
+        #! Original data provider object
+        TypeScriptActionAppDataProvider parent;
     }
 
     #! Creates the object
@@ -58,15 +61,18 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
 
     #! Copies the object
     copy() {
-        if (*hash<string, DataProvider::AbstractDataProvider> cmap = remove childMap) {
-            map childMap{$1.key} = $1.value.copy(), cmap.pairIterator();
-        }
+        # the parent's childMap is the only one with data
+        remove childMap;
+    }
+
+    #! Sets the parent data provider
+    setParent(TypeScriptActionAppDataProvider parent) {
+        self.parent = parent;
     }
 
     #! Sets the connection
     setConnection(TypeScriptAppRestConnection conn) {
         self.conn = conn;
-        map $1.setConnection(conn), childMap.iterator();
         if (!getLogger() && (*LoggerInterface logger = conn.getLogger())) {
             setLogger(logger);
         }
@@ -88,6 +94,8 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
 
     #! Return data provider summary info
     *list<hash<DataProviderSummaryInfo>> getChildProviderSummaryInfo() {
+        TypeScriptActionInterface::checkAppActions(name);
+        hash<string, DataProvider::AbstractDataProvider> childMap = self.childMap ?? parent.childMap;
         return map cast<hash<DataProviderSummaryInfo>>($1.getInfo(){DataProviderSummaryInfoKeys}),
             childMap.iterator();
     }
@@ -96,6 +104,8 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
     /** @return a list of child data provider names, if any
     */
     private *list<string> getChildProviderNamesImpl() {
+        TypeScriptActionInterface::checkAppActions(name);
+        hash<string, DataProvider::AbstractDataProvider> childMap = self.childMap ?? parent.childMap;
         return keys childMap;
     }
 
@@ -105,7 +115,15 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
         @see getChildProviderEx()
     */
     private *AbstractDataProvider getChildProviderImpl(string name) {
+        TypeScriptActionInterface::checkAppActions(self.name);
+        *hash<string, DataProvider::AbstractDataProvider> childMap = self.childMap ?? parent.childMap;
         if (*TypeScriptActionDataProviderBase prov = childMap{name}) {
+            if (!self.childMap) {
+                prov = prov.copy();
+                if (conn) {
+                    prov.setConnection(conn);
+                }
+            }
             if (!prov.getLogger() && logger) {
                 prov.setLogger(logger);
             }

@@ -1,7 +1,7 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
-#! Qore TypeScriptActionInterface module definition
+#! Qore TypeScriptProxy module definition
 
-/*  TypeScriptActionInterface.qm Copyright 2024 Qore Technologies, s.r.o.
+/*  TypeScriptProxy.qm Copyright 2024 Qore Technologies, s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -32,53 +32,27 @@
 %strict-args
 # enable all warnings
 %enable-all-warnings
-# allow the weak reference operator (:=)
-%allow-weak-references
 
-%requires(reexport) DataProvider
-%requires(reexport) TypeScriptProxy
-%requires ConnectionProvider
-%requires RestClient
-%requires Swagger
-%requires SwaggerDataProvider
-%requires FileLocationHandler
-%requires Util
-%requires Logger
-
-%requires json
-%requires process
-%requires v8
 %requires yaml
 
-module TypeScriptActionInterface {
+module TypeScriptProxy {
     version = "1.0";
-    desc = "User module providing an API for Qore DataProvider app actions in TypeScript";
+    desc = "User module providing definitions for a TypeScript proxy API";
     author = "David Nichols <david@qore.org>";
     url = "http://qore.org";
     license = "MIT";
-    init = sub () {
-        # Register the module's initializer
-        DataProvider::registerStaticInitializer(\TypeScriptActionInterface::init());
-
-        # Register the data provider factory
-        DataProvider::registerFactory(new TypeScriptActionDataProviderFactory());
-
-        # initialize apps with deferred action initialization
-        TypeScriptActionInterfacePriv::init();
-    };
 }
 
-/** @mainpage TypeScriptActionInterface Module
+/** @mainpage TypeScriptProxy Module
 
     @tableofcontents
 
-    @section TypeScriptActionInterfaceintro Introduction to the TypeScriptActionInterface Module
+    @section TypeScriptProxyintro Introduction to the TypeScriptProxy Module
 
-    The %TypeScriptActionInterface module provides a @ref dataproviderintro "data provider" and app action API for
-    TypeScript code.
+    The %TypeScriptProxy module provides support for server and client programs providing TypeScript APIs.
 
-    @section TypeScriptActionInterface_relnotes Release Notes
+    @section TypeScriptProxy_relnotes Release Notes
 
-    @subsection TypeScriptActionInterface_v1_0 TypeScriptActionInterface v1.0
+    @subsection TypeScriptProxy_v1_0 TypeScriptProxy v1.0
     - initial release of the module
 */

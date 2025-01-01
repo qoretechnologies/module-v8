@@ -72,7 +72,18 @@ set(CPP_SRC
 )
 
 set(QMOD
+    qlib/TypeScriptProxy
     qlib/TypeScriptActionInterface
+)
+
+# binaries to install
+set (JS_BIN_FILES
+    bin/ts-proxy
+    bin/netsuite-make-generic-schema
+)
+
+install(PROGRAMS ${JS_BIN_FILES}
+    TYPE BIN
 )
 
 qore_wrap_qpp_value(QPP_SOURCES ${QPP_SRC})
@@ -111,7 +122,8 @@ set(MODULE_DOX_INPUT ${CMAKE_BINARY_DIR})
 qore_external_binary_module(${module_name} ${PROJECT_VERSION} ${LIBNODE})
 
 qore_user_modules("${QMOD}")
-qore_external_user_module("qlib/TypeScriptActionInterface" "")
+qore_external_user_module("qlib/TypeScriptProxy" "")
+qore_external_user_module("qlib/TypeScriptActionInterface" "TypeScriptProxy")
 
 qore_dist(${PROJECT_VERSION})
 

@@ -114,8 +114,8 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
         }, True);
     }
 
-    static auto getAsyncValueArgs(LoggerInterface logger, hash<AsyncCallInfo> api, *softlist<auto> args,
-            *hash<auto> cache_opts, *bool use_cache) {
+    static auto getAsyncValueArgs(*LoggerInterface logger = DataProvider::getGlobalLogger(), hash<AsyncCallInfo> api,
+            *softlist<auto> args, *hash<auto> cache_opts, *bool use_cache) {
         on_error rethrow $1.err, sprintf("%s (context: %s)", $1.desc, api.label);
 
         if (!cache_opts && !use_cache) {
@@ -174,22 +174,25 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
         throw "ARG-ERROR", sprintf("Cannot calculate key value for type %y", arg.fullType());
     }
 
-    static private auto getAsyncValueArgsIntern(LoggerInterface logger, hash<AsyncCallInfo> api, *softlist<auto> args) {
-        JavaScriptProgram pgm = api.pool.get();
-        on_exit {
-            api.pool.release(pgm);
-            #logger.info("TypeScriptActionApiDataProvider::getAsyncValue() released pgm %y", pgm.uniqueHash());
-        }
-        #logger.info("TypeScriptActionApiDataProvider::getAsyncValue() acquired pgm %y", pgm.uniqueHash());
-
+    static private auto getAsyncValueArgsIntern(*LoggerInterface logger, hash<AsyncCallInfo> api, *softlist<auto> args) {
         date start = now_us();
-        on_exit logger.info("perf: %y get async value: %y", api.label, now_us() - start);
+        on_exit TSAI::debug("perf: %y get async value: %y", api.label, now_us() - start);
+        on_error TSAI::error("%s", get_exception_string($1));
+
+        # handle the call with a remote process
+        if (TSAI::checkServer()) {
+            TSAI::debug("Starting proxy for %y: %y", api.key, args);
+            JavaScriptProgramProxy proxy = TypeScriptActionInterface::server.get();
+            TSAI::debug("Proxy started for %y: %y", api.key, args);
+            on_exit TypeScriptActionInterface::server.release(proxy);
+            return proxy.getAsyncValue(api.app, api.action, api.key, args);
+        }
 
         auto v;
         try {
             v = call_function_args(api.async_call, args);
         } catch (hash<ExceptionInfo> ex) {
-            logger.error("JAVASCRIPT-ASYNC-ERROR", "Error making async JavaScript request %y: %s", api.label,
+            TSAI::error("JAVASCRIPT-ASYNC-ERROR", "Error making async JavaScript request %y: %s", api.label,
                 get_exception_string(ex));
             rethrow;
         }
@@ -209,8 +212,8 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
                 });
                 v.wait();
             } catch (hash<ExceptionInfo> ex) {
-                logger.error("JAVASCRIPT-ASYNC-ERROR", "Error waiting for async JavaScript request %y: %s", api.label,
-                    get_exception_string(ex));
+                TSAI::error("JAVASCRIPT-ASYNC-ERROR", "Error waiting for async JavaScript request %y: %s",
+                    api.label, get_exception_string(ex));
                 rethrow;
             }
         } else {

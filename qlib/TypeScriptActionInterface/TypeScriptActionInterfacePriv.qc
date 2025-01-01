@@ -32,6 +32,19 @@ class TypeScriptActionInterfacePriv {
     }
 
     static init() {
+        if (!DataProvider::getGlobalLogger()) {
+            LoggerLevel ll;
+            if (ENV.QORE_TYPESCRIPT_ACTION_VERBOSE) {
+                #ll = LoggerLevel::LevelInfo;
+                ll = LoggerLevel::LevelDebug;
+            } else {
+                ll = LoggerLevel::LevelWarn;
+            }
+            Logger logger("console", ll);
+            logger.addAppender(new StdoutAppender());
+            DataProvider::setGlobalLogger(logger);
+        }
+
         *string scripts = ENV.QORE_TYPESCRIPT_ACTION_SCRIPTS;
         if (scripts.val()) {
             string cwd = getcwd();
@@ -53,7 +66,7 @@ class TypeScriptActionInterfacePriv {
                     );
                     pstore{pool.uniqueHash()} = pool;
                 } catch (hash<ExceptionInfo> ex) {
-                    stderr.printf("Error loading TypeScript action script %y: %s\n", path, get_exception_string(ex));
+                    TSAI::error("Error loading TypeScript action script %y: %s", path, get_exception_string(ex));
                 }
             }
         }
@@ -75,7 +88,6 @@ class TypeScriptActionInterfacePriv {
                             auto v = pgm.getGlobal().exports.qtester.run(
                                 TypeScriptActionInterface::TestApi
                             );
-                            #printf("qtester.run() returned: %y\n", v);
                             auto rv;
                             if (v instanceof JavaScriptPromise) {
                                 v.then(sub (auto val) {
@@ -83,8 +95,6 @@ class TypeScriptActionInterfacePriv {
                                 }, sub (auto e) {
                                     rv.error = e;
                                 });
-                                # waiting on Promise and waiting on I/O
-                                #printf("qtester.run() waiting on Promise\n");
                                 v.wait();
                             } else {
                                 rv = v;
@@ -93,7 +103,7 @@ class TypeScriptActionInterfacePriv {
                     );
                     pstore{pool.uniqueHash()} = pool;
                 } catch (hash<ExceptionInfo> ex) {
-                    stderr.printf("Error loading TypeScript action test script %y: %s\n", path,
+                    TSAI::error("Error loading TypeScript action test script %y: %s", path,
                         get_exception_string(ex));
                 }
             }

@@ -106,7 +106,7 @@ exports.actionsCatalogue = {
                   object with serializable values that are connection options; the options will be stored on the
                   connection itself; 'ctx' is an object with the following keys:
                   - conn_name: string -> the connection name, if any is defined
-                  - conn_opts: object -> connection options
+                  - conn_opts: object -> connection options + processed options from the auth response + the auth response itself
                 - url_template_options?: string[] -> a list of option names that will be used to substitute values in
                   URLs; the URL should contain strings like '{{option_name}}'
             */

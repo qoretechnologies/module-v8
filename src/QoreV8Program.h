@@ -87,7 +87,7 @@ public:
     DLLLOCAL QoreObject* getGlobal(ExceptionSink* xsink);
 
     //! Returns the pointer to the isolate
-    v8::Isolate* getIsolate() const {
+    DLLLOCAL v8::Isolate* getIsolate() const {
         return isolate;
     }
 
@@ -132,6 +132,12 @@ public:
         }
         return false;
     }
+
+#if 0
+    //! Returns a binary snapshot of the program
+    DLLLOCAL static BinaryNode* createSnapshot(ExceptionSink* xsink, const QoreString& source_code,
+            const QoreString& source_label);
+#endif
 
     //! Raises an exception in the given isolate from the Qore exception
     DLLLOCAL static void raiseV8Exception(ExceptionSink& xsink, v8::Isolate* isolate);

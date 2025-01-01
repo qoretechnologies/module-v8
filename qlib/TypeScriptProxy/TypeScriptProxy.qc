@@ -1,0 +1,146 @@
+# -*- mode: qore; indent-tabs-mode: nil -*-
+#! Qore TypeScriptProxy module definition
+
+/*  TypeScriptProxy.qc Copyright 2024 Qore Technologies, s.r.o.
+
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this software and associated documentation files (the "Software"),
+    to deal in the Software without restriction, including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, sublicense,
+    and/or sell copies of the Software, and to permit persons to whom the
+    Software is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+    DEALINGS IN THE SOFTWARE.
+*/
+
+#! Main namespace for the TypeScriptProxy module
+public namespace TypeScriptProxy {
+#! Proxy command "CALL": make an async call and return the response
+public const PC_CALL = "CALL";
+
+#! Proxy command "SETUP-EVENT": setup the process with the given event source
+public const PC_SETUP_EVENT = "SETUP-EVENT";
+
+#! Proxy comment "RELEASE-EVENT": stop processing the given event source
+public const PC_RELEASE_EVENT = "RELEASE-EVENT";
+
+#! Proxy command "EXIT": exit the process
+public const PC_EXIT = "EXIT";
+
+#! Valid commands
+public const ValidCommands = {
+    PC_CALL: True,
+    PC_EXIT: True,
+};
+
+#! Child response "OK"
+public const CC_OK = "OK";
+
+#! Child response "ERR" when an exception occurs
+public const CC_ERR = "ERR";
+
+#! Child command: "EVENT"
+public const CC_EVENT = "EVENT";
+
+#! Valid responses
+public const ValidResponses = {
+    CC_OK: True,
+    CC_ERR: True,
+};
+
+#! Class with proxy API methods to support clients and servers
+public class TypeScriptProxy {
+    public {
+        const DefaultIoTimeout = 15s;
+    }
+
+    private {
+        #! Socket connection to the other process
+        Socket s();
+
+        #! Is this a server?
+        bool server;
+    }
+
+    #! Creates the object
+    constructor(bool server) {
+        self.server = server;
+    }
+
+    #! Sends a string to the remote end
+    private sendString(string str) {
+        # first send the size as an 8-byte integer in network byte order
+        s.sendi8(str.size(), DefaultIoTimeout);
+        # now send the UTF-8 string
+        s.send(str, DefaultIoTimeout);
+    }
+
+    #! Creates a hash for sending
+    private string makeSend(string cmd, *hash<auto> info) {
+        return make_yaml({
+            "cmd": cmd,
+        } + info);
+    }
+
+    #! Sends a command from the parent to the child without a response
+    private sendCommandOneWay(string cmd, *list<auto> args) {
+        string yaml = makeSend(cmd, {"args": args});
+        while (True) {
+            try {
+                sendString(yaml);
+            } catch (hash<ExceptionInfo> ex) {
+                if (retry(ex)) {
+                    continue;
+                }
+                rethrow;
+            }
+            break;
+        }
+    }
+
+    #! Reads a string and returns the corresponding hash
+    private hash<auto> getCommand() {
+        # first read message size
+        int i = recvi8(DefaultIoTimeout);
+        string yaml = recv(i, DefaultIoTimeout);
+        auto v = parse_yaml(yaml);
+        if (v.typeCode() != NT_HASH) {
+            throw "CMD-ERROR", sprintf("Expecting type \"hash\"; got %y", v.fullType());
+        }
+        if (v.cmd.typeCode() != NT_STRING) {
+            throw "CMD-ERROR", sprintf("Expecting \"cmd\" as a string; got %y", v.cmd.fullType());
+        }
+        return v;
+    }
+
+    #! Reads an 8-byte integer in network byte order from the socket
+    private int recvi8(*timeout to) {
+        return s.recvi8(to);
+    }
+
+    private string recv(int size, *timeout to) {
+        return s.recv(size, to);
+    }
+
+    #! Log info messages
+    private abstract info(string fmt, ...);
+
+    #! Log error messages
+    private abstract error(string fmt, ...);
+
+    #! Log fatal messages
+    private abstract fatal(string fmt, ...);
+
+    #! Returns True if the operation should be retried, False if not
+    private abstract *bool retry(hash<ExceptionInfo> ex);
+}
+}

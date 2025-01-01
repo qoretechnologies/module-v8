@@ -66,7 +66,6 @@ class TypeScriptActionRootDataProvider inherits AbstractDataProvider {
         if (childMap{pathname}) {
             throw "TYPESCRIPT-CHILD-ERROR", sprintf("child %y already registered", pathname);
         }
-
         childMap{pathname} = prov;
     }
 

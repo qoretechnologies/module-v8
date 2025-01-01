@@ -42,6 +42,9 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
 
         #! stop flag
         bool stop_flag = False;
+
+        #! For external processes
+        JavaScriptProgramProxy proxy;
     }
 
     #! Creates the object from the arguments
@@ -64,12 +67,20 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
     /** This method is meant to trigger event generation
     */
     observersReady() {
-        info("Starting event thread for data provider %y for connection %y", name, conn.name);
-        Counter c(1);
+        if (proxy || running) {
+            throw "OBSERVABLE-ERROR", "observersReady() can only be called once";
+        }
         *hash<auto> options = ImpliedArgumentHelper::get();
-        int tid = background startEventThread(c, options);
-        c.waitForZero();
-        info("Started event thread in TID %d", tid);
+        if (TSAI::checkServer()) {
+            info("Starting external process for data provider %y for connection %y", name, conn.name);
+            proxy = TSAI::server.setupEventSource(self, event.app, event.action, event.key);
+        } else {
+            info("Starting event thread for data provider %y for connection %y", name, conn.name);
+            Counter c(1);
+            int tid = background startEventThread(c, getCallContextInfo(options));
+            c.waitForZero();
+            info("Started event thread in TID %d", tid);
+        }
     }
 
     #! Called to stop generating events
@@ -82,6 +93,11 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
     #! Is this object still generating events
     bool isActive() {
         return running;
+    }
+
+    #! to notify observers
+    notify(hash<auto> event) {
+        notifyObservers(event_id, event);
     }
 
     private startEventThread(Counter c, *hash<auto> options) {
@@ -117,6 +133,11 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
     stop() {
         m.lock();
         on_exit m.unlock();
+
+        if (*JavaScriptProgramProxy proxy = remove self.proxy) {
+            TSAI::server.releaseEventSource(proxy, self, event.key);
+            return;
+        }
 
         if (running) {
             if (!stop_flag) {
