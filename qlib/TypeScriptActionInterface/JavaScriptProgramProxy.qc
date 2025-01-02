@@ -131,7 +131,15 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
     static init(Mutex m) {
         JavaScriptProgramProxy::global_lock = m;
-        master_path = sprintf("%s/ts-proxy-%s-%d.sock", tmp_location(), gethostname(), getpid());
+
+        # must keep socket paths less than ~ 104 chars
+        string host = gethostname();
+        host =~ s/\..*//;
+        master_path = sprintf("%s/ts-proxy-%s-%d.sock", tmp_location(), host, getpid());
+        if (master_path.size() >= 104) {
+            master_path = sprintf("/tmp/ts-proxy-%d.sock", tmp_location(), getpid());
+        }
+
         master.bindUNIX(master_path);
         master.listen();
         TSAI::info("Started master listener on %y", master_path);
