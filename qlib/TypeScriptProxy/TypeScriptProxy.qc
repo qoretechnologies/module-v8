@@ -108,10 +108,10 @@ public class TypeScriptProxy {
     }
 
     #! Reads a string and returns the corresponding hash
-    private hash<auto> getCommand() {
+    private hash<auto> getCommand(*timeout to) {
         # first read message size
-        int i = recvi8(DefaultIoTimeout);
-        string yaml = recv(i, DefaultIoTimeout);
+        int i = recvi8(to);
+        string yaml = recv(i, to);
         auto v = parse_yaml(yaml);
         if (v.typeCode() != NT_HASH) {
             throw "CMD-ERROR", sprintf("Expecting type \"hash\"; got %y", v.fullType());
