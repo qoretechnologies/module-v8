@@ -468,8 +468,13 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             try {
                 return s.recvi8(250ms);
             } catch (hash<ExceptionInfo> ex) {
-                if ((!listener_tid || listener_stop) && (ex.err == "SOCKET-CLOSED")) {
-                    return 0;
+                if (ex.err == "SOCKET-CLOSED") {
+                    if (!listener_tid || listener_stop) {
+                        return 0;
+                    }
+                    if (checkRestart()) {
+                        continue;
+                    }
                 }
                 if (ex.err != "SOCKET-TIMEOUT") {
                     rethrow;
@@ -502,8 +507,13 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                     return str;
                 }
             } catch (hash<ExceptionInfo> ex) {
-                if ((!listener_tid || listener_stop) && (ex.err == "SOCKET-CLOSED")) {
-                    return "";
+                if (ex.err == "SOCKET-CLOSED") {
+                    if (!listener_tid || listener_stop) {
+                        return "";
+                    }
+                    if (checkRestart()) {
+                        continue;
+                    }
                 }
                 if (ex.err != "SOCKET-TIMEOUT") {
                     rethrow;
