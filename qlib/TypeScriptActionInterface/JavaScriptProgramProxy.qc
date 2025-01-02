@@ -419,6 +419,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     private auto sendCommandArgs(string cmd, *softlist<auto> args) {
         string yaml = makeSend(cmd, {"args": args});
         hash<auto> h;
+        RestartCounter rc();
         while (True) {
             try {
                 debug("sending command %y", yaml);
@@ -430,7 +431,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                         keys ValidResponses);
                 }
             } catch (hash<ExceptionInfo> ex) {
-                if (retry(ex)) {
+                if (retryIntern(ex, rc)) {
                     info("Restarting command due to error");
                     continue;
                 }
@@ -533,12 +534,16 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     private *bool retry(hash<ExceptionInfo> ex) {
+        return retryIntern(ex);
+    }
+
+    private *bool retryIntern(hash<ExceptionInfo> ex, *RestartCounter rc) {
         bool aborted = (ex.err == "CHILD-ABORTED");
         if (aborted) {
             error("Error encountered communicating with child PID %d (running: %y): %s", proc.id(), proc.running(),
                 get_exception_string(ex));
         }
-        if (checkRestart()) {
+        if (checkRestart(rc)) {
             return True;
         }
         if (aborted && proc.running()) {
@@ -546,7 +551,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
     }
 
-    private *bool checkRestart() {
+    private *bool checkRestart(*RestartCounter rc) {
         bool restart;
         {
             AutoLock al(m);
@@ -563,6 +568,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 return;
             }
             if (!proc.running()) {
+                if (rc) {
+                    rc.restart();
+                }
                 restarting = True;
                 delete al;
                 restartProcessIntern();
@@ -658,5 +666,21 @@ hashdecl EventSourceInfo {
     string key;
     *hash<auto> options;
     hash<string, TypeScriptActionEventDataProvider> omap;
+}
+class RestartCounter {
+    public {
+        const MaxRestarts = 3;
+    }
+
+    private {
+        int restarts;
+    }
+
+    restart() {
+        if (++restarts == MaxRestarts) {
+            throw "RESTART-ERROR", sprintf("Cannot restart the same operation more than %d times; failing",
+                MaxRestarts);
+        }
+    }
 }
 }
