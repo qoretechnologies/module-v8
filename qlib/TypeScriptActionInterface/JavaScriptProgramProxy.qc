@@ -431,6 +431,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 }
             } catch (hash<ExceptionInfo> ex) {
                 if (retry(ex)) {
+                    info("Restarting command due to error");
                     continue;
                 }
                 rethrow;
@@ -532,12 +533,17 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     private *bool retry(hash<ExceptionInfo> ex) {
-        if (ex.err != "CHILD-ABORTED") {
+        bool aborted = (ex.err == "CHILD-ABORTED");
+        if (aborted) {
             error("Error encountered communicating with child PID %d (running: %y): %s", proc.id(), proc.running(),
                 get_exception_string(ex));
         }
-        checkRestart();
-        return True;
+        if (checkRestart()) {
+            return True;
+        }
+        if (aborted && proc.running()) {
+            return True;
+        }
     }
 
     private *bool checkRestart() {
@@ -563,7 +569,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 return True;
             }
         }
-        return False;
+        return;
     }
 
     # Called with no locks held
