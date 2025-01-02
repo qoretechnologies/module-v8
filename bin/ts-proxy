@@ -92,7 +92,6 @@ class TsProxy inherits TypeScriptProxy {
                 info("Child process PID %d exiting on parent's request", getpid());
                 break;
             }
-
             try {
                 switch (h.cmd) {
                     case PC_CALL:

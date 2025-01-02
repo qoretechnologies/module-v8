@@ -310,9 +310,6 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 }
                 continue;
             }
-            if (v.cmd != CC_OK) {
-                throw "CMD-ERROR", sprintf("Unexpected command %y; expected %y", v.cmd, CC_OK);
-            }
             # push command on queue
             cmdq.push(v);
         }
@@ -455,8 +452,8 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         command_in_progress = True;
         on_exit remove command_in_progress;
         hash<auto> v = cmdq.get();
-        if (v.err) {
-            throw v.err, v.desc;
+        if (v.cmd == CC_ERR) {
+            throw v.ex.err, v.ex.desc;
         }
         return v;
     }
@@ -585,8 +582,11 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
         if (command_in_progress) {
             cmdq.push({
-                "err": "CHILD-ABORTED",
-                "desc": "Restarted child process",
+                "cmd": CC_ERR,
+                "ex": {
+                    "err": "CHILD-ABORTED",
+                    "desc": "Restarted child process",
+                },
             });
         }
 
