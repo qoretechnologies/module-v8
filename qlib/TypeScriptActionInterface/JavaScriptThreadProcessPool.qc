@@ -117,7 +117,8 @@ public class JavaScriptThreadProcessPool {
     }
 
     #! Sets up a proxy as an event data source
-    JavaScriptProgramProxy setupEventSource(Observable observable, string app, string action, string key) {
+    JavaScriptProgramProxy setupEventSource(Observable observable, string app, string action, string key,
+            *hash<auto> options) {
         AutoLock al(m);
 
         reference<hash<ProxyCacheInfo>> info;
@@ -146,7 +147,7 @@ public class JavaScriptThreadProcessPool {
         }
 
         on_success ++info.ecount;
-        info.p.setupEventSourceLocked(observable, app, action, key);
+        info.p.setupEventSourceLocked(observable, app, action, key, options);
         return info.p;
     }
 

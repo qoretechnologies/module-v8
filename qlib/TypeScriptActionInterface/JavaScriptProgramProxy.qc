@@ -161,7 +161,8 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     # Called with the global lock held
-    setupEventSourceLocked(TypeScriptActionEventDataProvider observable, string app, string action, string key) {
+    setupEventSourceLocked(TypeScriptActionEventDataProvider observable, string app, string action, string key,
+            *hash<auto> options) {
         if (emap{key}) {
             throw "EVENT-ERROR", sprintf("Event key %y is already registered", key);
         }
@@ -169,7 +170,6 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         if (emap{key}.omap{ekey}) {
             throw "EVENT-ERROR", sprintf("Event key %y for observable %y is already registered", key, ekey);
         }
-        *hash<auto> options = ImpliedArgumentHelper::get();
         emap{key} = <EventSourceInfo>{
             "app": app,
             "action": action,

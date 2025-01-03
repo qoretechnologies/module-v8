@@ -14,7 +14,13 @@
 %exec-class TypeScriptActionInterfaceTest
 
 public class TypeScriptActionInterfaceTest inherits QUnit::Test {
+    private {
+        Logger logger;
+    }
+
     constructor() : Test("TypeScriptActionInterfaceTest", "1.0") {
+        setupLogger();
+
         addTestCase("js events", \jsEventTest());
         addTestCase("webhook events", \webhookEventTest());
         addTestCase("pool", \poolTest());
@@ -24,6 +30,20 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
 
         # Return for compatibility with test harnesses that check the script's return value
         set_return_value(main());
+    }
+
+    setupLogger() {
+        LoggerLevel level;
+        if (m_options.verbose > 3) {
+            level = LoggerLevel::getLevelDebug();
+        } else if (m_options.verbose > 2) {
+            level = LoggerLevel::getLevelInfo();
+        } else {
+            level = LoggerLevel::getLevelError();
+        }
+        logger = new Logger("console", level);
+        logger.addAppender(new StdoutAppender());
+        DataProvider::setGlobalLogger(logger);
     }
 
     globalSetUp() {
@@ -121,6 +141,10 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
                     .getChildProviderEx("webhook-event-1");
             MyObserver o();
             cast<Observable>(prov).registerObserver(o);
+            # temporarily disable data provider error logging, as the error from the negative test below will
+            # otherwise be logged to the console
+            logger.removeAllAppenders();
+            on_exit logger.addAppender(new StdoutAppender());
             assertThrows("JAVASCRIPT-ASYNC-ERROR", \cast<DelayedObservable>(prov).observersReady());
         }
 

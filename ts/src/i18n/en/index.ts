@@ -83,8 +83,8 @@ const en = {
     },
     Notion: {
       displayName: 'Notion',
-      shortDesc: 'Collection of actions to interact with Notion API',
-      longDesc: 'Collection of actions to interact with Notion API',
+      shortDesc: 'Collection of actions to interact with the Notion API',
+      longDesc: 'Collection of actions to interact with the Notion API',
       triggers: {
         new_database_item: {
           displayName: 'New Database Item',
@@ -135,8 +135,8 @@ const en = {
     },
     Jira: {
       displayName: 'Jira',
-      shortDesc: 'Collection of actions to interact with Jira API',
-      longDesc: 'Collection of actions to interact with Jira API',
+      shortDesc: 'Collection of actions to interact with the Jira API',
+      longDesc: 'Collection of actions to interact with the Jira API',
       triggers: {
         issue_created: {
           displayName: 'New Issue',
@@ -171,8 +171,8 @@ const en = {
     },
     Stripe: {
       displayName: 'Stripe',
-      shortDesc: 'Collection of actions to interact with Stripe API',
-      longDesc: 'Collection of actions to interact with Stripe API',
+      shortDesc: 'Collection of actions to interact with the Stripe API',
+      longDesc: 'Collection of actions to interact with the Stripe API',
       triggers: {
         charge_dispute_created: {
           options: StripeTriggerOptionsEn,
@@ -467,8 +467,8 @@ const en = {
     },
     Github: {
       displayName: 'Github',
-      shortDesc: 'Collection of actions to interact with Github API',
-      longDesc: 'Collection of actions to interact with Github API',
+      shortDesc: 'Collection of actions to interact with the Github API',
+      longDesc: 'Collection of actions to interact with the Github API',
       triggers: {
         new_repository_issue: {
           displayName: 'New Repository Issue',
@@ -917,8 +917,8 @@ const en = {
     },
     Asana: {
       displayName: 'Asana',
-      shortDesc: 'Collection of actions to interact with Asana API',
-      longDesc: 'Collection of actions to interact with Asana API',
+      shortDesc: 'Collection of actions to interact with the Asana API',
+      longDesc: 'Collection of actions to interact with the Asana API',
       triggers: {
         task_completed: {
           displayName: 'Task Completed',
@@ -1163,8 +1163,8 @@ const en = {
     },
     DocusignESignature: {
       displayName: 'Docusign eSignature',
-      shortDesc: 'Collection of actions to interact with Esignature API',
-      longDesc: 'Collection of actions to interact with Esignature API',
+      shortDesc: 'Collection of actions to interact with the Docusign eSignature API',
+      longDesc: 'Collection of actions to interact with the Docusign eSignature API',
       actions: {
         Brands_GetBrands: {
           displayName: 'Get Brands',
@@ -1253,8 +1253,8 @@ const en = {
     },
     Zendesk: {
       displayName: 'Zendesk',
-      shortDesc: 'Collection of actions to interact with Zendesk API',
-      longDesc: 'Collection of actions to interact with Zendesk API',
+      shortDesc: 'Collection of actions to interact with the Zendesk API',
+      longDesc: 'Collection of actions to interact with the Zendesk API',
       triggers: {
         new_user: {
           displayName: 'New User',
@@ -1739,8 +1739,8 @@ const en = {
     },
     hubspot: {
       displayName: 'hubspot',
-      shortDesc: 'Collection of actions to interact with hubspot API',
-      longDesc: 'Collection of actions to interact with hubspot API',
+      shortDesc: 'Collection of actions to interact with the Hubspot API',
+      longDesc: 'Collection of actions to interact with the Hubspot API',
       actions: {
         users: {
           results: {

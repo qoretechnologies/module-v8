@@ -72,12 +72,13 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
         }
         *hash<auto> options = ImpliedArgumentHelper::get();
         if (TSAI::checkServer()) {
-            info("Starting external process for data provider %y for connection %y", name, conn.name);
-            proxy = TSAI::server.setupEventSource(self, event.app, event.action, event.key);
+            info("Starting external process for data provider %y for connection %y options %y", name, conn.name,
+                options);
+            proxy = TSAI::server.setupEventSource(self, event.app, event.action, event.key, options);
         } else {
-            info("Starting event thread for data provider %y for connection %y", name, conn.name);
+            info("Starting event thread for data provider %y for connection %y options %y", name, conn.name, options);
             Counter c(1);
-            int tid = background startEventThread(c, getCallContextInfo(options));
+            int tid = background startEventThread(c, options);
             c.waitForZero();
             info("Started event thread in TID %d", tid);
         }

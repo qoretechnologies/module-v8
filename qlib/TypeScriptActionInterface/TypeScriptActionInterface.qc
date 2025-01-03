@@ -760,6 +760,9 @@ public class TypeScriptActionInterface {
             "action": action,
             "pool": pool,
         };
+        DataProviderActionCatalog::registerPendingAppAction(action.app, action.action, sub () {
+            TypeScriptActionInterface::initAppAction(action.app, action.action);
+        });
     }
 
     private static registerActionIntern(hash<auto> action, JavaScriptProgramPool pool) {
@@ -1226,8 +1229,11 @@ public class TypeScriptActionInterface {
     }
 
     static TypeScriptActionAppDataProvider getAppDataProvider(string app) {
+        if (*hash<AppInfo> info = remove appmap{app}) {
+            TypeScriptActionInterface::initAppIntern(info);
+        }
         string appname = app.lwr();
-        return root.getChildProvider(appname);
+        return root.getChildProviderEx(appname);
     }
 
     static TypeScriptActionAppDataProvider getDataProvider(string app, TypeScriptAppRestConnection conn) {
