@@ -248,6 +248,13 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         return rv;
     }
 
+    *HashDataType getRequestType(string app, string action, *string conn_name, *hash<auto> conn_opts, auto req) {
+        *binary bin = sendCommandArgs(PC_GET_REQUEST_TYPE, (app, action, conn_name, conn_opts, req));
+        *HashDataType rv = bin ? Serializable::deserialize(bin) : NOTHING;
+        debug("getRequestType(app %y action %y req %y): %y", app, action, req, rv);
+        return rv;
+    }
+
     # called with the global lock held
     private startListener() {
         if (listener_tid) {

@@ -105,6 +105,13 @@ class TsProxy inherits TypeScriptProxy {
                     case PC_RELEASE_EVENT:
                         releaseEvent(h.args[0]);
                         break;
+
+                    case PC_GET_REQUEST_TYPE:
+                        getRequestType(h.args[0], h.args[1], h.args[2], h.args[3], h.args[4]);
+                        break;
+
+                    default:
+                        throw "UNKNOWN-COMMAND", sprintf("Unknown command %y", h.cmd);
                 }
             } catch (hash<ExceptionInfo> ex) {
                 error("Error executing %y: %s", h.cmd, get_exception_string(ex));
@@ -204,6 +211,19 @@ class TsProxy inherits TypeScriptProxy {
         auto rv = TypeScriptActionDataProviderBase::getAsyncValueArgs(logger, api, args);
         string yaml = makeSend(CC_OK, {
             "rv": rv,
+        });
+        sendString(yaml);
+    }
+
+    private getRequestType(string app, string action, *string conn_name, *hash<auto> conn_opts, auto req) {
+        #debug("get request type app: %y action: %y conn_opts: %y req: %y", app, action, conn_opts, req);
+        TypeScriptActionInterface::initApp(app);
+        TypeScriptActionInterface::initAppAction(app, action);
+        TypeScriptActionApiDataProvider prov = TypeScriptActionInterface::getAppDataProvider(app)
+            .getChildProviderEx(action);
+        *HashDataType type = prov.getRequestTypeExtern(conn_name, conn_opts, req);
+        string yaml = makeSend(CC_OK, {
+            "rv": type ? type.serialize() : NOTHING,
         });
         sendString(yaml);
     }
