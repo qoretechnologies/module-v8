@@ -18,6 +18,7 @@ export const TPropertyValue = <T extends TSchema, U extends PropertyType>(
   Type.Object({
     type: Type.Literal(propertyType),
     required: Type.Boolean(),
+    requiredGroups: Type.Optional(Type.Array(Type.String())),
     defaultValue: Type.Optional(Type.Any()),
   });
 
@@ -30,6 +31,7 @@ export type TPropertyValue<
   valueSchema: T;
   type: U;
   required: REQUIRED;
+  requiredGroups?: string[];
   defaultProcessors?: ProcessorFn[];
   processors?: ProcessorFn[];
   validators?: TypedValidatorFn<VALIDATION_INPUT>[];
