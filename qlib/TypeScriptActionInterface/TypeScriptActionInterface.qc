@@ -227,6 +227,10 @@ public class TypeScriptActionInterface {
         TypeScriptActionInterface::checkRoot();
 
         int opts = DataProvider::getOptions();
+        # initialize all apps in advance when running tests
+        if (exists ENV.QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS) {
+            opts |= DPO_DisableOnDemandInitialization;
+        }
         if (opts & DPO_EnableServers) {
             on_demand = True;
         }
