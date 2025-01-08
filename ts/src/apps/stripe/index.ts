@@ -69,11 +69,9 @@ export default (locale: Locales) =>
       oauth2_grant_type: 'authorization_code',
       oauth2_client_id: '1208416840087775',
       oauth2_client_secret: actionsCatalogue.getOauth2ClientSecret(STRIPE_APP_NAME),
-      // required for testing until app is published
-      oauth2_auth_url:
-        'https://marketplace.stripe.com/oauth/v2/channellink*AZMQ-C4WTgAAAEq2%23EhcKFWFjY3RfMVFKRG1n' +
-        'R3ZtdUZZUzYxag/authorize',
-      //oauth2_auth_url: 'https://connect.stripe.com/oauth/authorize',
+      oauth2_auth_url: 'https://marketplace.stripe.com/oauth/v2/authorize',
+      //'https://marketplace.stripe.com/oauth/v2/channellink*AZMQ-C4WTgAAAEq2%23EhcKFWFjY3RfMVFKRG1n' +
+      //'R3ZtdUZZUzYxag/authorize',
       oauth2_token_url: 'https://api.stripe.com/v1/oauth/token',
       oauth2_token_auth_secret_only: true,
       oauth2_scopes: ['read_write'],
