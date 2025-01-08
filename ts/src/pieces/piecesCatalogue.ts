@@ -242,6 +242,7 @@ class _PiecesAppCatalogue {
       allowed_values,
       required: prop.required,
       required_groups: prop.requiredGroups,
+      on_change: prop.onChange,
       default_value: prop.defaultValue,
       example_value: prop.defaultValue,
     };
