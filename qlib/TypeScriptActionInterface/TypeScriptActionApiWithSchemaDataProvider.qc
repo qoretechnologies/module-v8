@@ -316,6 +316,8 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         # update field
         QoreDataField qdf = cast<QoreDataField>(f);
         hash<auto> info += qdf.getConfigInfo();
+        # make sure and save "attr"
+        *hash<auto> attr = info.attr;
 
         AbstractDataProviderType type;
 
@@ -324,6 +326,9 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
             type = TypeScriptActionInterface::getType(tdesc, req ?? info.attr.required ?? qdf.isMandatory());
         }
         info += TypeScriptActionInterface::getFieldHash(info.name, type ?? qdf.getType(), \type_hash, req);
+        if (attr) {
+            info.attr += attr;
+        }
 
         if (type_hash) {
             throw "OPTION-OVERRIDE-ERROR", sprintf("App %y action %y cannot override field %y in %y with unknown "

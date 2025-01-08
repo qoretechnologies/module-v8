@@ -86,6 +86,7 @@ public class TypeScriptProxy {
 
     #! Creates a hash for sending
     private string makeSend(string cmd, *hash<auto> info) {
+        on_error rethrow $1.err, sprintf("%s (cannot serialize: cmd: %y info: %y)", $1.desc, cmd, info);
         return make_yaml({
             "cmd": cmd,
         } + info);
