@@ -144,6 +144,16 @@ jobs:
           cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
           make && sudo make install
 
+      # Clone and build process-module
+      - name: Clone and build process-module
+        run: |
+          git clone https://github.com/qorelanguage/module-process.git
+          cd module-process
+          mkdir build
+          cd build
+          cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
+          make && sudo make install
+
       # Build V8-module
       - name: Build V8-module
         run: |
