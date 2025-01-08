@@ -71,12 +71,14 @@ export const createDatabaseItem = createAction({
       database_id: database_id as unknown as string,
     });
 
-    Object.keys(databaseFields).forEach((key) => {
-      if (databaseFields[key] !== '') {
-        const fieldType: string = properties[key].type;
-        notionFields[key] = NotionFieldMapping[fieldType].buildNotionType(databaseFields[key]);
-      }
-    });
+    if (databaseFields) {
+      Object.keys(databaseFields).forEach((key) => {
+        if (databaseFields[key] !== '') {
+          const fieldType: string = properties[key].type;
+          notionFields[key] = NotionFieldMapping[fieldType].buildNotionType(databaseFields[key]);
+        }
+      });
+    }
 
     const children: any[] = [];
     // Add content to page
