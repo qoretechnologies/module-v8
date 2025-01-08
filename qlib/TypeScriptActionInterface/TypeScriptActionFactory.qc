@@ -27,12 +27,13 @@ public namespace TypeScriptActionInterface {
 public class TypeScriptActionFactory inherits AbstractDataProviderFactory {
     private {
         #! Data provider type info
-        static Class cls = new Class("TypeScriptActionEventDataProvider");
+        static Class cls = new Class("TypeScriptActionRootDataProvider");
 
         #! Factory info
         const FactoryInfo = <DataProviderFactoryInfo>{
-            "name": "tsrest-events",
-            "desc": "TypeScript action event data provider factory",
+            "name": "ts-actions",
+            "desc": "TypeScript action data provider factory",
+            "children_can_support_apis": True,
             "children_can_support_observers": True,
         };
     }

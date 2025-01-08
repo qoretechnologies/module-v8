@@ -231,8 +231,18 @@ public class TypeScriptActionInterface {
             on_demand = True;
         }
         if (opts & DPO_DisableOnDemandInitialization) {
-            map TypeScriptActionInterface::initApp($1, True), keys appmap;
+            TypeScriptActionInterface::initAllApps();
         }
+    }
+
+    #! Initialize all pending apps
+    static initAllApps() {
+        map TypeScriptActionInterface::initApp($1, True), keys appmap;
+    }
+
+    #! Returns a list of all pending apps
+    static *list<string> getPendingApps() {
+        return map $1.lwr(), keys appmap;
     }
 
     #! Sets the server to start on demand
@@ -378,8 +388,12 @@ public class TypeScriptActionInterface {
             "app": app,
             "pool": pool,
         };
+
+        string appname = app.name.lwr();
+        appcasemap{appname} = app.name;
+
         if (app.rest) {
-            string sname = "tsrest-" + app.name.lwr();
+            string sname = "tsrest-" + appname;
             ConnectionSchemeCache::registerPendingScheme(sname, sub () {
                 TypeScriptActionInterface::initApp(app.name);
             });
@@ -403,6 +417,9 @@ public class TypeScriptActionInterface {
     }
 
     static bool initApp(string app, *bool do_actions) {
+        if (exists (*string rn = appcasemap{app})) {
+            app = rn;
+        }
         if (initmap{app}) {
             return False;
         }
@@ -452,7 +469,6 @@ public class TypeScriptActionInterface {
         on_success TSAI::debug("TypeScriptActionInterface: registered app %y", app.name);
         on_error TSAI::error("%s", get_exception_string($1));
         string appname = app.name.lwr();
-        appcasemap{appname} = app.name;
         SwaggerSchema schema;
         if ((*string swagger_loc = remove app.swagger).val()) {
             on_error rethrow $1.err, sprintf("%s (while loading app %y)", $1.desc, app.name);
@@ -1567,6 +1583,11 @@ public class TypeScriptActionInterface {
             "name": name,
             "type": type,
         };
+
+        # turn on multiselect for all list types
+        if (type.getBaseTypeCode() == NT_LIST) {
+            info.multiselect = True;
+        }
 
         if (req) {
             if (!type.isMandatory()) {

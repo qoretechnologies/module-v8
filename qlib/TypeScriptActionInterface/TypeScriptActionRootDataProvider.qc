@@ -71,6 +71,7 @@ class TypeScriptActionRootDataProvider inherits AbstractDataProvider {
 
     #! Return data provider summary info
     *list<hash<DataProviderSummaryInfo>> getChildProviderSummaryInfo() {
+        TypeScriptActionInterface::initAllApps();
         return map cast<hash<DataProviderSummaryInfo>>($1.getInfo(){DataProviderSummaryInfoKeys}),
             childMap.iterator();
     }
@@ -79,7 +80,9 @@ class TypeScriptActionRootDataProvider inherits AbstractDataProvider {
     /** @return a list of child data provider names, if any
     */
     private *list<string> getChildProviderNamesImpl() {
-        return keys childMap;
+        *list<string> rv = keys childMap;
+        rv += TypeScriptActionInterface::getPendingApps();
+        return rv;
     }
 
     #! Returns the given child provider or @ref nothing if the given child is unknown
@@ -88,6 +91,7 @@ class TypeScriptActionRootDataProvider inherits AbstractDataProvider {
         @see getChildProviderEx()
     */
     private *TypeScriptActionAppDataProvider getChildProviderImpl(string name) {
+        TypeScriptActionInterface::initApp(name);
         return childMap{name};
     }
 
