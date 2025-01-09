@@ -146,6 +146,7 @@ describe('Tests eSignature Actions', () => {
 
     expect(action).toBeDefined();
     const { body } = await testApi.execAppAction('docusignesignature', action.action, connection, {
+      accountId,
       body: {
         brandName: 'TestBrand',
       },
