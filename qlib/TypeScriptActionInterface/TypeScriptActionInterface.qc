@@ -879,15 +879,10 @@ public class TypeScriptActionInterface {
                 action.action);
         }
 
-        *hash<string, hash<AsyncCallInfo>> omap;
-        *hash<string, hash<RestGetAllowedValuesInfo>> romap;
-        *hash<string, hash<AsyncCallInfo>> dvmap;
-        *hash<string, hash<string, bool>> depmap;
+        ActionFunctionContext fctx(app.name, action.action, pool);
         if (*hash<auto> opts = remove action.options) {
-            *hash<string, hash<AsyncCallInfo>> dmap;
-            action.options = TypeScriptActionInterface::getOptions(app, \action, opts, \omap, \dmap, \romap, \dvmap,
-                \depmap, pool);
-            if (dmap) {
+            action.options = TypeScriptActionInterface::getOptions(app, \action, opts, fctx);
+            if (fctx.dmap) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"options\" "
                     "attribute; search actions do not support get_dependent_options() callbacks", action.app,
                     action.action);
@@ -933,7 +928,7 @@ public class TypeScriptActionInterface {
         }
 
         TypeScriptActionSearchDataProvider child(action.action, get_record_type, begin_transaction, commit, rollback,
-            search_records, search_options, expressions, !uses_generic_search, omap, romap, dvmap, depmap);
+            search_records, search_options, expressions, !uses_generic_search, fctx);
 
         TypeScriptActionAppDataProvider prov = TypeScriptActionInterface::getAppDataProvider(action.app);
         prov.registerChild(action.action, child);
@@ -995,21 +990,16 @@ public class TypeScriptActionInterface {
 
             event_info = <DataProviderMessageInfo>{
                 "desc": event.desc,
-                "type": TypeScriptActionInterface::getType(event.type, True),
+                "type": TypeScriptActionInterface::getType("event", event.type, True),
             };
         }
 
         timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
 
-        *hash<string, hash<AsyncCallInfo>> omap;
-        *hash<string, hash<RestGetAllowedValuesInfo>> romap;
-        *hash<string, hash<AsyncCallInfo>> dvmap;
-        *hash<string, hash<string, bool>> depmap;
+        ActionFunctionContext fctx(app.name, action.action, pool);
         if (*hash<auto> opts = remove action.options) {
-            *hash<string, hash<AsyncCallInfo>> dmap;
-            action.options = TypeScriptActionInterface::getOptions(app, \action, opts, \omap, \dmap, \romap, \dvmap,
-                \depmap, pool);
-            if (dmap) {
+            action.options = TypeScriptActionInterface::getOptions(app, \action, opts, fctx);
+            if (fctx.dmap) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"options\" "
                     "attribute; event actions do not support get_dependent_options() callbacks", action.app,
                     action.action);
@@ -1088,8 +1078,8 @@ public class TypeScriptActionInterface {
             TypeScriptActionInterface::registerAsyncCall(\webhook_deregister, "app", app.name, action.action);
 
             child = new TypeScriptActionWebhookEventDataProvider(action.action, event_id, event_info,
-                get_example_event_data, omap, romap, dvmap, depmap, method, webhook_register, webhook_deregister,
-                webhook_auth, webhook_perms, webhook_event_loc);
+                get_example_event_data, fctx, method, webhook_register, webhook_deregister, webhook_auth,
+                webhook_perms, webhook_event_loc);
             rv = AES_WH_EVENT;
         } else {
             auto event_function = remove action.event_function;
@@ -1109,7 +1099,7 @@ public class TypeScriptActionInterface {
             };
             TypeScriptActionInterface::registerAsyncCall(\event, "app", app.name, action.action);
             child = new TypeScriptActionEventDataProvider(action.action, event_id, event_info, get_example_event_data,
-                omap, romap, dvmap, depmap, event);
+                fctx, event);
             rv = AES_JS_EVENT;
         }
 
@@ -1199,11 +1189,13 @@ public class TypeScriptActionInterface {
             }
             *softlist<string> independent_path_vars = remove action.independent_path_vars;
 
+            ActionFunctionContext fctx(action.app, action.action, pool);
+
             # check for path vars0
             *hash<string, bool> path_vars = map {$1: True}, (swagger_path =~ x/\{([^\}]*)}/g);
             TypeScriptActionApiWithSchemaDataProvider dp(\action, swagger_path, api, path_vars,
                 (map {$1: True}, independent_path_vars), app_conn_opt_map{app.name.lwr()},
-                remove action.override_options, pool);
+                remove action.override_options, fctx);
             child = dp;
 
             action.output_type = child.getResponseType();
@@ -1213,34 +1205,25 @@ public class TypeScriptActionInterface {
                     "action", action.app, action.action, swagger_path);
             }
         } else {
-            # maps from options to "get_allowed_values" code for each option
-            hash<string, hash<AsyncCallInfo>> omap;
-            # maps from options to "get_dependent_options" code for each option
-            hash<string, hash<AsyncCallInfo>> dmap;
-            # maps from options to "rest_get_allowed_values" descriptions for each option
-            hash<string, hash<RestGetAllowedValuesInfo>> romap;
-            # maps from options to "get_default_value" code for each option
-            hash<string, hash<AsyncCallInfo>> dvmap;
-            # maps from dependent options -> option -> True
-            *hash<string, hash<string, bool>> depmap;
             *AbstractDataProviderType request_type;
+
+            ActionFunctionContext fctx(app.name, action.action, pool);
             if (*hash<auto> opts = remove action.options) {
-                request_type = TypeScriptActionInterface::getType(map {$1.key: $1.value{TypeKeys}},
-                    opts.pairIterator());
-                action.options = TypeScriptActionInterface::getOptions(app, \action, opts, \omap, \dmap, \romap,
-                    \dvmap, \depmap, pool);
+                request_type = TypeScriptActionInterface::getType("request", (map {$1.key: $1.value{TypeKeys}},
+                    opts.pairIterator()), NOTHING, NOTHING, fctx);
+                action.options = TypeScriptActionInterface::getOptions(app, \action, opts, fctx);
             }
 
             *AbstractDataProviderType response_type;
             if (action.response_type.val()) {
-                response_type = TypeScriptActionInterface::getType(remove action.response_type);
+                response_type = TypeScriptActionInterface::getType("response", remove action.response_type, NOTHING,
+                    NOTHING, fctx);
                 action.output_type = response_type;
             } else if (action.hasKey("response_type")) {
                 remove action.response_type;
             }
 
-            child = new TypeScriptActionApiDataProvider(action.action, api, request_type, response_type, omap,
-                dmap, romap, dvmap);
+            child = new TypeScriptActionApiDataProvider(action.action, api, request_type, response_type, fctx);
         }
 
         TypeScriptActionAppDataProvider prov = TypeScriptActionInterface::getAppDataProvider(action.app);
@@ -1283,11 +1266,8 @@ public class TypeScriptActionInterface {
         root.setLogger(DataProvider::getGlobalLogger());
     }
 
-    static getOptionFunctions(reference<hash<auto>> action, reference<hash<string, hash<AsyncCallInfo>>> omap,
-            reference<hash<string, hash<AsyncCallInfo>>> dmap,
-            reference<hash<string, hash<RestGetAllowedValuesInfo>>> romap,
-            reference<hash<string, hash<AsyncCallInfo>>> dvmap, string key, reference<hash<auto>> h,
-        JavaScriptProgramPool pool) {
+    static getOptionFunctions(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
+            reference<hash<auto>> h) {
         on_error rethrow $1.err, sprintf("%s (while processing option %y)", $1.desc, key);
         date io_timeout = seconds(remove h.io_timeout_secs ?? DefaultIoTimeoutSecs);
         if (exists (auto get_allowed_values = remove h.get_allowed_values)) {
@@ -1296,17 +1276,17 @@ public class TypeScriptActionInterface {
                     "\"get_allowed_values\" attribute; got type %y; expecting a callable value", action.app,
                     action.action, key, get_allowed_values.fullType());
             }
-            omap{key} = <AsyncCallInfo>{
+            fctx.omap{key} = <AsyncCallInfo>{
                 "app": action.app,
                 "action": action.action,
                 "type": "get_allowed_values",
                 "label": sprintf("Reference data function for app %y action %y option %y", action.app,
                     action.action, key),
-                "pool": pool,
+                "pool": fctx.pool,
                 "async_call": get_allowed_values,
                 "to": io_timeout,
             };
-            TypeScriptActionInterface::registerAsyncCall(\omap{key}, "app", action.app, action.action, key);
+            TypeScriptActionInterface::registerAsyncCall(\fctx.omap{key}, "app", action.app, action.action, key);
 
             h.ref_data = key;
             # remove any manual allowed values
@@ -1318,7 +1298,7 @@ public class TypeScriptActionInterface {
                     "\"rest_get_allowed_values\" attribute; got type %y; expecting \"hash\"", action.app,
                     action.action, key, rest_get_allowed_values.fullType());
             }
-            if (omap{key}) {
+            if (fctx.omap{key}) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
                     "\"rest_get_allowed_values\" attribute; this option already has a \"get_allowed_values\" value; "
                     "cannot use both attributes for a single option", action.app, action.action, key);
@@ -1334,7 +1314,7 @@ public class TypeScriptActionInterface {
                     "\"rest_get_allowed_values\" attribute; the following required keys are missing: %y", action.app,
                     action.action, key, keys h);
             }
-            romap{key} = info;
+            fctx.romap{key} = info;
             h.ref_data = key;
             # remove any manual allowed values
             remove h.allowed_values;
@@ -1345,17 +1325,17 @@ public class TypeScriptActionInterface {
                     "\"get_dependent_options\" attribute; got type %y; expecting a callable value", action.app,
                     action.action, key, get_dependent_options.fullType());
             }
-            dmap{key} = <AsyncCallInfo>{
+            fctx.dmap{key} = <AsyncCallInfo>{
                 "app": action.app,
                 "action": action.action,
                 "type": "get_dependent_options",
                 "label": sprintf("Dependent option function for app %y action %y option %y", action.app,
                     action.action, key),
-                "pool": pool,
+                "pool": fctx.pool,
                 "async_call": get_dependent_options,
                 "to": io_timeout,
             };
-            TypeScriptActionInterface::registerAsyncCall(\dmap{key}, "app", action.app, action.action, key);
+            TypeScriptActionInterface::registerAsyncCall(\fctx.dmap{key}, "app", action.app, action.action, key);
             action.data_dependent_options = True;
         }
         if (exists (auto get_default_value = remove h.get_default_value)) {
@@ -1364,17 +1344,17 @@ public class TypeScriptActionInterface {
                     "\"get_default_value\" attribute; got type %y; expecting a callable value", action.app,
                     action.action, key, get_default_value.fullType());
             }
-            dvmap{key} = <AsyncCallInfo>{
+            fctx.dvmap{key} = <AsyncCallInfo>{
                 "app": action.app,
                 "action": action.action,
                 "type": "get_default_value",
                 "label": sprintf("Default value data function for app %y action %y option %y", action.app,
                     action.action, key),
-                "pool": pool,
+                "pool": fctx.pool,
                 "async_call": get_default_value,
                 "to": io_timeout,
             };
-            TypeScriptActionInterface::registerAsyncCall(\dvmap{key}, "app", action.app, action.action, key);
+            TypeScriptActionInterface::registerAsyncCall(\fctx.dvmap{key}, "app", action.app, action.action, key);
         }
         if (h.required && !h.preselected && !exists h.default_value) {
             h.preselected = True;
@@ -1382,16 +1362,12 @@ public class TypeScriptActionInterface {
     }
 
     static *hash<string, hash<ActionOptionInfo>> getOptions(hash<DataProviderAppInfo> app,
-            reference<hash<auto>> action, hash<auto> opts, reference<hash<string, hash<AsyncCallInfo>>> omap,
-            reference<hash<string, hash<AsyncCallInfo>>> dmap,
-            reference<hash<string, hash<RestGetAllowedValuesInfo>>> romap,
-            reference<hash<string, hash<AsyncCallInfo>>> dvmap, reference<hash<string, hash<string, bool>>> depmap,
-            JavaScriptProgramPool pool) {
+            reference<hash<auto>> action, hash<auto> opts, ActionFunctionContext fctx) {
         TypeScriptActionInterface::sortOptions(app, action, \opts);
         hash<string, hash<ActionOptionInfo>> rv;
         foreach hash<auto> i in (opts.pairIterator()) {
-            TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, \romap, \dvmap, i.key, \i.value, pool);
-            rv{i.key} = TypeScriptActionInterface::getOptionInfo(i.value);
+            TypeScriptActionInterface::getOptionFunctions(\action, fctx, i.key, \i.value);
+            rv{i.key} = TypeScriptActionInterface::getOptionInfo("option", i.value);
             if (dmap{i.key}) {
                 rv{i.key}.structural_determinate = True;
             }
@@ -1401,7 +1377,7 @@ public class TypeScriptActionInterface {
                 throw "ACTION-ERROR", sprintf("App %y action %y option %y depends on unknown options: %y",
                     action.app, action.action, i.key, keys missing);
             }
-            map depmap{i.key}{$1} = True, i.value.depends_on;
+            map fctx.depmap{i.key}{$1} = True, i.value.depends_on;
         }
         return rv;
     }
@@ -1431,8 +1407,8 @@ public class TypeScriptActionInterface {
         opts = new_opts;
     }
 
-    static hash<ActionOptionInfo> getOptionInfo(hash<auto> opt) {
-        opt.type = TypeScriptActionInterface::getType(opt.type, opt.required. remove opt.element_type);
+    static hash<ActionOptionInfo> getOptionInfo(string path, hash<auto> opt) {
+        opt.type = TypeScriptActionInterface::getType(path, opt.type, opt.required, remove opt.element_type);
         if (opt.allowed_values) {
             opt.allowed_values = map cast<hash<AllowedValueInfo>>($1), opt.allowed_values;
         }
@@ -1442,7 +1418,8 @@ public class TypeScriptActionInterface {
         return cast<hash<ActionOptionInfo>>(opt);
     }
 
-    static AbstractDataProviderType getType(string name, *bool required, auto element_type) {
+    static AbstractDataProviderType getType(string path, string name, *bool required, auto element_type,
+            *ActionFunctionContext fctx) {
         if (!required) {
             if (name !~ /^\*/) {
                 name = "*" + name;
@@ -1451,8 +1428,10 @@ public class TypeScriptActionInterface {
             throw "TYPE-ERROR", sprintf("Cannot use an \"or-nothing\" type like %y when \"required\" is set; use "
                 "type %y instead", name, name[1..]);
         }
+        path += "-" + name;
         if (exists element_type) {
-            AbstractDataProviderType element_type = TypeScriptActionInterface::getType(element_type);
+            AbstractDataProviderType element_type = TypeScriptActionInterface::getType(path + "-element",
+                element_type);
             if (name =~ /^\*?list$/) {
                 return new ListDataType(element_type, !required);
             } else if (name =~ /^\*?hash$/) {
@@ -1470,13 +1449,15 @@ public class TypeScriptActionInterface {
         return type;
     }
 
-    static AbstractDataProviderType getType(hash<auto> h, *bool required, auto element_type) {
+    static AbstractDataProviderType getType(string path, hash<auto> h, *bool required, auto element_type,
+            *ActionFunctionContext fctx) {
         if (h.required.typeCode() == NT_BOOLEAN) {
             required = h.required;
         }
         if (h.type.typeCode() != NT_STRING) {
-            return TypeScriptActionInterface::getHashType(h, required);
+            return TypeScriptActionInterface::getHashType(path, h, required);
         }
+
         hash<auto> orig = h;
         hash<auto> info;
         *Type type = DataTypeMap{(!required ? "*" : "") + remove h.type};
@@ -1504,22 +1485,23 @@ public class TypeScriptActionInterface {
             */
             HashDataType ht(type, attr.name, NOTHING, tags, default_value, attr);
             if (f) {
-                TypeScriptActionInterface::getHashTypeIntern(ht, f, h.required);
+                TypeScriptActionInterface::getHashTypeIntern(path, ht, f, h.required, fctx);
             } else if (exists element_type) {
-                AbstractDataProviderType element_type = TypeScriptActionInterface::getType(element_type);
+                AbstractDataProviderType element_type = TypeScriptActionInterface::getType(path + "-element",
+                    element_type);
                 ht.setDefaultOtherFieldType(element_type);
             }
             rv = ht;
         } else if (orig.type == "list") {
             AbstractDataProviderType et;
             if (auto t = (remove h.element_type ?? element_type)) {
-                et = TypeScriptActionInterface::getType(t);
+                et = TypeScriptActionInterface::getType(path, t);
             }
             rv = new ListDataType(et ?? AutoType, !orig.required, NOTHING, tags, default_value, attr);
         } else if (orig.type == "softlist") {
             AbstractDataProviderType et;
             if (auto t = (remove h.element_type ?? element_type)) {
-                et = TypeScriptActionInterface::getType(t);
+                et = TypeScriptActionInterface::getType(path + "-element", t);
             }
             rv = new SoftListDataType(et ?? AutoType, !orig.required, NOTHING, tags, default_value, attr);
         } else {
@@ -1538,13 +1520,14 @@ public class TypeScriptActionInterface {
         return rv;
     }
 
-    static HashDataType getHashType(hash<auto> h, *bool required) {
+    static HashDataType getHashType(string path, hash<auto> h, *bool required) {
         on_error rethrow $1.err, sprintf("%s (type: %y)", $1.desc, h);
         HashDataType type(required ? AutoHashType : AutoHashOrNothingType);
-        return TypeScriptActionInterface::getHashTypeIntern(type, h, required);
+        return TypeScriptActionInterface::getHashTypeIntern(path, type, h, required);
     }
 
-    static HashDataType getHashTypeIntern(HashDataType type, hash<auto> h, *bool required) {
+    static HashDataType getHashTypeIntern(string path, HashDataType type, hash<auto> h, *bool required,
+            *ActionFunctionContext fctx) {
         list<hash<auto>> dependent_fields;
         if (exists (auto dps = remove h.dependent_fields)) {
             if (dps.typeCode() != NT_LIST) {
@@ -1553,7 +1536,8 @@ public class TypeScriptActionInterface {
             }
             dependent_fields = dps;
         }
-        type.addQoreFields(map {$1.key: TypeScriptActionInterface::getField($1.key, $1.value)}, h.pairIterator());
+        type.addQoreFields(map {$1.key: TypeScriptActionInterface::getField(path, $1.key, $1.value, fctx)},
+            h.pairIterator());
 
         # add dependent fields
         foreach auto dp in (dependent_fields) {
@@ -1573,19 +1557,25 @@ public class TypeScriptActionInterface {
         return type;
     }
 
-    static AbstractDataProviderType getType(auto v, *bool required) {
+    static AbstractDataProviderType getType(string path, auto v, *bool required) {
         throw "TYPE-ERROR", sprintf("Expecting \"string\" or \"hash\" for the option \"type\"; got %y "
             "instead", v.fullType());
     }
 
-    static hash<auto> getField(string name, hash<auto> h) {
+    static hash<auto> getField(string path, string name, hash<auto> h, *ActionFunctionContext fctx) {
         on_error rethrow $1.err, sprintf("%s (field: %y)", $1.desc, h);
         *bool req = remove h.required;
-        AbstractDataProviderType type = TypeScriptActionInterface::getType(remove h.type, req);
-        return TypeScriptActionInterface::getFieldHash(name, type, \h, req);
+        path += "-" + name;
+        AbstractDataProviderType type = TypeScriptActionInterface::getType(path, remove h.type, req, NOTHING, fctx);
+        hash<auto> rv = TypeScriptActionInterface::getFieldHash(path, name, type, \h, req, fctx);
+        if (h) {
+            throw "FIELD-ERROR", sprintf("Field description has unknown keys: %y", keys h);
+        }
+        return rv;
     }
 
-    static hash<auto> getFieldHash(*string name, AbstractDataProviderType type, reference<hash<auto>> type_hash, *bool req) {
+    static hash<auto> getFieldHash(string path, string name, AbstractDataProviderType type,
+            reference<hash<auto>> type_hash, *bool req, *ActionFunctionContext fctx) {
         hash<auto> info += {
             "name": name,
             "type": type,
@@ -1646,6 +1636,27 @@ public class TypeScriptActionInterface {
         }
         if (exists (auto v = remove type_hash.example_value)) {
             info.example_value = v;
+        }
+        if (fctx) {
+            if (exists (*code c = remove type_hash.get_allowed_values)) {
+                string key = sprintf("%s-%s", path, name);
+                fctx.omap{key} = <AsyncCallInfo>{
+                    "key": key,
+                    "app": fctx.app,
+                    "action": fctx.action,
+                    "type": "get_allowed_values",
+                    "label": sprintf("Reference data function for app %y action %y option %y", fctx.app, fctx.action,
+                        key),
+                    "pool": fctx.pool,
+                    "async_call": c,
+                    "to": fctx.io_timeout,
+                };
+                TypeScriptActionInterface::registerAsyncCall(\fctx.omap{key}, "app", fctx.app, fctx.action, key);
+
+                info.attr.ref_data = key;
+                # remove any manual allowed values
+                remove info.allowed_values;
+            }
         }
 
         return info;
@@ -1874,7 +1885,7 @@ public class TypeScriptActionInterface {
                 t = TypeScriptActionInterface::getModifiedType(app, n, t, i.value);
                 schema.replaceCachedTypeForReference(n, t);
             } else {
-                TypeScriptActionApiWithSchemaDataProvider::overrideOptionType({
+                TypeScriptActionApiWithSchemaDataProvider::overrideOptionType("swagger-" + i.key, {
                     "app": app,
                     "action": "<all>",
                 }, t, l, i.value, i.key);
@@ -1884,7 +1895,7 @@ public class TypeScriptActionInterface {
 
     static AbstractDataProviderType getModifiedType(string app, string opt, AbstractDataProviderType t, hash<auto> h) {
         if (h.type) {
-            return TypeScriptActionInterface::getType(h.type, h.required);
+            return TypeScriptActionInterface::getType("type", h.type, h.required);
         }
 
         QoreDataType rv;
@@ -2032,6 +2043,48 @@ class TSAI inherits TypeScriptActionInterface {
         } else {
             stderr.vprintf(fmt + "\n", args);
         }
+    }
+}
+
+class ActionFunctionContext {
+    public {
+        string app;
+        string action;
+
+        # the program pool for JS execution
+        JavaScriptProgramPool pool;
+
+        # maps from options to "get_allowed_values" code
+        *hash<string, hash<AsyncCallInfo>> omap;
+        # maps from options to "get_dependent_options" code
+        *hash<string, hash<AsyncCallInfo>> dmap;
+        # maps from options to "rest_get_allowed_values" descriptions
+        *hash<string, hash<RestGetAllowedValuesInfo>> romap;
+        # maps from options to "get_default_value" code
+        *hash<string, hash<AsyncCallInfo>> dvmap;
+        # maps from dependent options -> option -> True
+        *hash<string, hash<string, bool>> depmap;
+
+        date io_timeout;
+    }
+
+    constructor(string app, string action, JavaScriptProgramPool pool,
+            date io_timeout = seconds(TypeScriptActionInterface::DefaultIoTimeoutSecs)) {
+        self.app = app;
+        self.action = action;
+        self.pool = pool;
+        self.io_timeout = io_timeout;
+   }
+
+    constructor(ActionFunctionContext fctx) {
+        app = fctx.app;
+        action = fctx.action;
+        pool = fctx.pool;
+        omap = fctx.omap;
+        romap = fctx.romap;
+        dvmap = fctx.dvmap;
+        depmap = fctx.depmap;
+        io_timeout = fctx.io_timeout;
     }
 }
 }

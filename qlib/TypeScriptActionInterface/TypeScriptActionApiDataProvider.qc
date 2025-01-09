@@ -44,25 +44,20 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
         *AbstractDataProviderType request_type;
         *AbstractDataProviderType response_type;
 
-        #! options that determine the structure of other options
-        *hash<string, hash<AsyncCallInfo>> dmap;
-
         #! type cache for dependent options; opt val key -> type
         hash<string, AbstractDataProviderType> dtcache;
     }
 
     constructor(string name, hash<AsyncCallInfo> api, *AbstractDataProviderType request_type,
-            *AbstractDataProviderType response_type, *hash<string, hash<AsyncCallInfo>> omap,
-            *hash<string, hash<AsyncCallInfo>> dmap, *hash<string, hash<RestGetAllowedValuesInfo>> romap,
-            *hash<string, hash<AsyncCallInfo>> dvmap, *hash<string, hash<string, bool>> depmap)
-            : TypeScriptActionDataProviderBase(name, omap, romap, dvmap, depmap) {
+            *AbstractDataProviderType response_type, ActionFunctionContext fctx)
+            : TypeScriptActionDataProviderBase(name, fctx) {
         self.api = api;
         self.request_type = request_type;
         self.response_type = response_type;
-        self.dmap = dmap;
     }
 
-    private constructor(string name, *hash<AsyncCallInfo> api) : TypeScriptActionDataProviderBase(name) {
+    private constructor(string name, *hash<AsyncCallInfo> api, ActionFunctionContext fctx)
+            : TypeScriptActionDataProviderBase(name, fctx) {
         if (api) {
             self.api = api;
         }
