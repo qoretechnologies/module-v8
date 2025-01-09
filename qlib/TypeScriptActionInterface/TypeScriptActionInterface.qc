@@ -227,10 +227,6 @@ public class TypeScriptActionInterface {
         TypeScriptActionInterface::checkRoot();
 
         int opts = DataProvider::getOptions();
-        # initialize all apps in advance when running tests
-        if (exists ENV.QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS) {
-            opts |= DPO_DisableOnDemandInitialization;
-        }
         if (opts & DPO_EnableServers) {
             on_demand = True;
         }
@@ -405,7 +401,7 @@ public class TypeScriptActionInterface {
         DataProviderActionCatalog::registerPendingApp(app.name, sub () {
             TypeScriptActionInterface::initApp(app.name);
         });
-        #TSAI::debug("Registered TypeScript app %y", app.name);
+        TSAI::debug("Registered TypeScript app %y", app.name);
     }
 
     static bool initAppAction(string app, string action) {
@@ -1081,12 +1077,19 @@ public class TypeScriptActionInterface {
                 "to": seconds(io_timeout),
             };
 
+            auto webhook_event_loc = remove action.webhook_event_loc;
+            if (exists webhook_event_loc && (webhook_event_loc.typeCode() != NT_STRING)) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"webhook_event_loc\" "
+                    "attribute; got type %y; expecting \"string\"", action.app, action.action,
+                    webhook_event_loc.fullType());
+            }
+
             TypeScriptActionInterface::registerAsyncCall(\webhook_register, "app", app.name, action.action);
             TypeScriptActionInterface::registerAsyncCall(\webhook_deregister, "app", app.name, action.action);
 
             child = new TypeScriptActionWebhookEventDataProvider(action.action, event_id, event_info,
                 get_example_event_data, omap, romap, dvmap, depmap, method, webhook_register, webhook_deregister,
-                webhook_auth, webhook_perms);
+                webhook_auth, webhook_perms, webhook_event_loc);
             rv = AES_WH_EVENT;
         } else {
             auto event_function = remove action.event_function;
@@ -1735,7 +1738,8 @@ public class TypeScriptActionInterface {
         }
         *hash<auto> opts = armap{appname};
         if (!opts) {
-            throw "TYPESCRIPT-APP-ERROR", sprintf("Cannot find any REST options for app %y", app);
+            throw "TYPESCRIPT-APP-ERROR", sprintf("Cannot find any REST options for app %y (apps with REST options "
+                "registered: %y)", app, keys armap);
         }
         config.opts = (map {$1.key: $1.value}, opts.pairIterator(), exists $1.value) + config.opts;
         if (*hash<string, bool> url_template_options = atmap{appname}) {
