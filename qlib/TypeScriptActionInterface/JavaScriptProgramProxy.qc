@@ -275,7 +275,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             int i;
             try {
                 # first read message size
-                i = recvi8(250ms);
+                i = recvi8(5s);
                 if (!i) {
                     continue;
                 }
