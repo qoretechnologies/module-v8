@@ -8,10 +8,12 @@ export const jiraDocumentFormatOption = {
       version: {
         required: true,
         type: 'number',
+        default_value: 1,
       },
       type: {
         required: true,
         type: 'string',
+        default_value: 'doc',
       },
       content: {
         required: true,
@@ -23,6 +25,7 @@ export const jiraDocumentFormatOption = {
               type: {
                 required: true,
                 type: 'string',
+                default_value: 'paragraph',
               },
               content: {
                 required: true,
@@ -33,6 +36,7 @@ export const jiraDocumentFormatOption = {
                     fields: {
                       type: {
                         type: 'string',
+                        default_value: 'text',
                       },
                       text: {
                         type: 'string',
