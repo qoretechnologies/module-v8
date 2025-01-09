@@ -693,6 +693,7 @@ exports.actionsCatalogue = {
             "webhook_deregister": async function(ctx, url, reginfo) {
                 // this function should deregister the webhook with the server
             },
+            // webhook_event_loc?: string -> the location of the webhook event data in dot notation
             // event_info: object
             /** The description of the event that the action will generate with the following keys
                 - id: *string -> the event code for the event; if not present will default to "event"

@@ -1081,12 +1081,19 @@ public class TypeScriptActionInterface {
                 "to": seconds(io_timeout),
             };
 
+            auto webhook_event_loc = remove action.webhook_event_loc;
+            if (exists webhook_event_loc && (webhook_event_loc.typeCode() != NT_STRING)) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"webhook_event_loc\" "
+                    "attribute; got type %y; expecting \"string\"", action.app, action.action,
+                    webhook_event_loc.fullType());
+            }
+
             TypeScriptActionInterface::registerAsyncCall(\webhook_register, "app", app.name, action.action);
             TypeScriptActionInterface::registerAsyncCall(\webhook_deregister, "app", app.name, action.action);
 
             child = new TypeScriptActionWebhookEventDataProvider(action.action, event_id, event_info,
                 get_example_event_data, omap, romap, dvmap, depmap, method, webhook_register, webhook_deregister,
-                webhook_auth, webhook_perms);
+                webhook_auth, webhook_perms, webhook_event_loc);
             rv = AES_WH_EVENT;
         } else {
             auto event_function = remove action.event_function;

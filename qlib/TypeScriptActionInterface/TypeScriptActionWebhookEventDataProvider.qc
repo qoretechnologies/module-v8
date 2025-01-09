@@ -59,7 +59,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
             *hash<string, hash<RestGetAllowedValuesInfo>> romap,
             *hash<string, hash<AsyncCallInfo>> dvmap, *hash<string, hash<string, bool>> depmap, string method,
             hash<AsyncCallInfo> webhook_register, hash<AsyncCallInfo> webhook_deregister, *int webhook_auth,
-            *list<auto> webhook_perms)
+            *list<auto> webhook_perms, *string event_loc)
             : TypeScriptActionEventDataProviderBase(name, event_id, event, get_example_event_data, omap, romap,
                 dvmap, depmap) {
         self.method = method;
