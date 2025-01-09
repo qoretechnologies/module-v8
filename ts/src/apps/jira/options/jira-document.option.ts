@@ -4,16 +4,38 @@ export const jiraDocumentFormatOption = {
   required: true,
   type: {
     type: 'hash',
+    default_value: {
+      version: 1,
+      type: 'doc',
+      content: [
+        {
+          type: 'paragraph',
+          content: [
+            {
+              type: 'text',
+              text: 'Hello ',
+            },
+            {
+              type: 'text',
+              text: 'world',
+              marks: [
+                {
+                  type: 'strong',
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
     fields: {
       version: {
         required: true,
         type: 'number',
-        default_value: 1,
       },
       type: {
         required: true,
         type: 'string',
-        default_value: 'doc',
       },
       content: {
         required: true,
