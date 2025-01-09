@@ -73,6 +73,10 @@ class TypeScriptActionInterfacePriv {
 
         scripts = ENV.QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS;
         if (scripts.val()) {
+            # initialize all apps in advance when running tests
+            DataProvider::addOptions(DPO_DisableOnDemandInitialization);
+            DataProvider::checkStaticInit();
+
             string cwd = getcwd();
             foreach string path in (scripts.split(":")) {
                 try {

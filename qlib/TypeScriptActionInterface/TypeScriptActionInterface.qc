@@ -227,10 +227,6 @@ public class TypeScriptActionInterface {
         TypeScriptActionInterface::checkRoot();
 
         int opts = DataProvider::getOptions();
-        # initialize all apps in advance when running tests
-        if (exists ENV.QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS) {
-            opts |= DPO_DisableOnDemandInitialization;
-        }
         if (opts & DPO_EnableServers) {
             on_demand = True;
         }
@@ -405,7 +401,7 @@ public class TypeScriptActionInterface {
         DataProviderActionCatalog::registerPendingApp(app.name, sub () {
             TypeScriptActionInterface::initApp(app.name);
         });
-        #TSAI::debug("Registered TypeScript app %y", app.name);
+        TSAI::debug("Registered TypeScript app %y", app.name);
     }
 
     static bool initAppAction(string app, string action) {
@@ -1742,7 +1738,8 @@ public class TypeScriptActionInterface {
         }
         *hash<auto> opts = armap{appname};
         if (!opts) {
-            throw "TYPESCRIPT-APP-ERROR", sprintf("Cannot find any REST options for app %y", app);
+            throw "TYPESCRIPT-APP-ERROR", sprintf("Cannot find any REST options for app %y (apps with REST options "
+                "registered: %y)", app, keys armap);
         }
         config.opts = (map {$1.key: $1.value}, opts.pairIterator(), exists $1.value) + config.opts;
         if (*hash<string, bool> url_template_options = atmap{appname}) {
