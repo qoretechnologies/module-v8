@@ -46,9 +46,8 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
             *hash<AsyncCallInfo> begin_transaction,
             *hash<AsyncCallInfo> commit,
             *hash<AsyncCallInfo> rollback,
-            *hash<string, hash<AsyncCallInfo>> omap,
-            *hash<string, hash<RestGetAllowedValuesInfo>> romap, *hash<string, hash<AsyncCallInfo>> dvmap)
-            : TypeScriptActionDataProviderBase(name, omap, romap, dvmap) {
+            ActionFunctionContext fctx)
+            : TypeScriptActionDataProviderBase(name, fctx) {
         self.get_record_type = get_record_type;
         self.begin_transaction = begin_transaction;
         self.commit = commit;

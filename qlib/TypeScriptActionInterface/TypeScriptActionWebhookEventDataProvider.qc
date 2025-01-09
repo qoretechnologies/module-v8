@@ -56,13 +56,10 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
 
     #! Creates the object from the arguments
     constructor(string name, string event_id, hash<DataProviderMessageInfo> event,
-            *hash<AsyncCallInfo> get_example_event_data, *hash<string, hash<AsyncCallInfo>> omap,
-            *hash<string, hash<RestGetAllowedValuesInfo>> romap,
-            *hash<string, hash<AsyncCallInfo>> dvmap, *hash<string, hash<string, bool>> depmap, string method,
+            *hash<AsyncCallInfo> get_example_event_data, ActionFunctionContext fctx, string method,
             hash<AsyncCallInfo> webhook_register, hash<AsyncCallInfo> webhook_deregister, *int webhook_auth,
             *list<auto> webhook_perms, *string webhook_event_loc)
-            : TypeScriptActionEventDataProviderBase(name, event_id, event, get_example_event_data, omap, romap,
-                dvmap, depmap) {
+            : TypeScriptActionEventDataProviderBase(name, event_id, event, get_example_event_data, fctx) {
         self.method = method;
         self.webhook_register = webhook_register;
         self.webhook_deregister = webhook_deregister;
