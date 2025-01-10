@@ -1430,13 +1430,13 @@ public class TypeScriptActionInterface {
         }
         path += "-" + name;
         if (exists element_type) {
-            AbstractDataProviderType element_type = TypeScriptActionInterface::getType(path + "-element",
+            AbstractDataProviderType et = TypeScriptActionInterface::getType(path + "-element",
                 element_type);
             if (name =~ /^\*?list$/) {
-                return new ListDataType(element_type, !required);
+                return new ListDataType(et, !required);
             } else if (name =~ /^\*?hash$/) {
                 HashDataType rv(required ? AutoHashType : AutoHashOrNothingType);
-                rv.setDefaultOtherFieldType(element_type);
+                rv.setDefaultOtherFieldType(et);
                 return rv;
             } else {
                 throw "TYPE-ERROR", sprintf("Cannot use an element type with type %y", name);
