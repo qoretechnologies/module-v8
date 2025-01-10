@@ -5,6 +5,7 @@ import github from '../apps/github';
 import jira from '../apps/jira';
 import stripe from '../apps/stripe';
 import zendesk from '../apps/zendesk';
+import netsuite from '../apps/netsuite';
 import { Log } from '../decorators/Logger';
 import { IQoreApp, IQoreAppWithActions, TQoreAppAction, TQoreApps } from '../global/models/qore';
 import { Locales } from '../i18n/i18n-types';
@@ -58,6 +59,7 @@ class ActionsCatalogue {
     this.apps['github'] = github(this.locale);
     this.apps['jira'] = jira(this.locale);
     this.apps['stripe'] = stripe(this.locale);
+    this.apps['netsuite'] = netsuite(this.locale);
   }
 
   public getOauth2ClientSecret(appName: string): string {

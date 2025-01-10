@@ -122,7 +122,7 @@ export const buildActionsFromSwaggerSchema = ({
       );
 
       const action: IQorePartialAppActionWithSwaggerPath = {
-        action: actionIdentifier,
+        action: normalizeName(actionIdentifier),
         action_code: EQoreAppActionCode.ACTION,
         swagger_path: `${path}/${method.toUpperCase()}`,
         display_name:
@@ -238,7 +238,8 @@ export const normalizeName = (appName: string): string => {
     .replace(/([a-z])([A-Z])/g, '$1_$2')
     .toLowerCase()
     .replace(/[-\s]+/g, '_')
-    .replace(/[^a-z0-9_]/g, '');
+    .replace(/[^a-z0-9_]/g, '')
+    .replace(/^_/, '');
 };
 
 export const normalizeAppName = (appName: string): TStringWithFirstUpperCaseCharacter => {

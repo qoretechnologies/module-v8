@@ -166,7 +166,7 @@ export interface IQoreRestConnectionModifiers<
   // code that can set additional connection option after the connection has been authorized
   set_options_post_auth?: (
     context: Omit<TQoreAppActionFunctionContext<ModifierOptions>, 'opts'>
-  ) => Promise<TQoreMappedOptions<ModifierOptions>>;
+  ) => Promise<TQoreMappedOptions<ModifierOptions>> | TQoreMappedOptions<ModifierOptions>;
   /** allows the REST URL to be changed when an option value is changed
    */
   connection_update_option?: {
