@@ -39,25 +39,13 @@ public hashdecl DataContextInfo {
 }
 
 #! Base class for TypeScript action data provider classes
-public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
+public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, ActionFunctionContext {
     private {
         #! The name of the data provider
         string name;
 
         #! The connection for the action
         TypeScriptAppRestConnection conn;
-
-        #! Options with functions for reference data
-        *hash<string, hash<AsyncCallInfo>> omap;
-
-        #! Options with REST configuration for retrieving reference data
-        *hash<string, hash<RestGetAllowedValuesInfo>> romap;
-
-        #! Options with functions for the default value
-        *hash<string, hash<AsyncCallInfo>> dvmap;
-
-        #! Maps from dependent options -> option -> True
-        *hash<string, hash<string, bool>> depmap;
 
         #! Any REST client to use for reference data, for example
         RestClient rest;
@@ -67,15 +55,8 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider {
     }
 
     #! Creates the object from the arguments
-    constructor(string name, *hash<string, hash<AsyncCallInfo>> omap,
-            *hash<string, hash<RestGetAllowedValuesInfo>> romap,
-            *hash<string, hash<AsyncCallInfo>> dvmap,
-            *hash<string, hash<string, bool>> depmap) {
+    constructor(string name, ActionFunctionContext fctx) : ActionFunctionContext(fctx) {
         self.name = name;
-        self.omap = omap;
-        self.romap = romap;
-        self.dvmap = dvmap;
-        self.depmap = depmap;
     }
 
     #! Sets the connection

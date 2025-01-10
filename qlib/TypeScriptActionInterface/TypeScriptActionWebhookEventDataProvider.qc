@@ -39,6 +39,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         hash<AsyncCallInfo> webhook_deregister;
         *int webhook_auth;
         *list<auto> webhook_perms;
+        *string webhook_event_loc;
 
         #! Event options for the webhook register and deregister calls
         *hash<auto> event_opts;
@@ -55,16 +56,14 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
 
     #! Creates the object from the arguments
     constructor(string name, string event_id, hash<DataProviderMessageInfo> event,
-            *hash<AsyncCallInfo> get_example_event_data, *hash<string, hash<AsyncCallInfo>> omap,
-            *hash<string, hash<RestGetAllowedValuesInfo>> romap,
-            *hash<string, hash<AsyncCallInfo>> dvmap, *hash<string, hash<string, bool>> depmap, string method,
+            *hash<AsyncCallInfo> get_example_event_data, ActionFunctionContext fctx, string method,
             hash<AsyncCallInfo> webhook_register, hash<AsyncCallInfo> webhook_deregister, *int webhook_auth,
-            *list<auto> webhook_perms)
-            : TypeScriptActionEventDataProviderBase(name, event_id, event, get_example_event_data, omap, romap,
-                dvmap, depmap) {
+            *list<auto> webhook_perms, *string webhook_event_loc)
+            : TypeScriptActionEventDataProviderBase(name, event_id, event, get_example_event_data, fctx) {
         self.method = method;
         self.webhook_register = webhook_register;
         self.webhook_deregister = webhook_deregister;
+        self.webhook_event_loc = webhook_event_loc;
     }
 
     destructor() {
@@ -80,6 +79,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
             "method": method,
             "auth": webhook_auth,
             "perms": webhook_perms,
+            "event_loc": webhook_event_loc,
             "callback": \callback(),
         });
         info("Registered webhook with URL %y", wf_info.url);

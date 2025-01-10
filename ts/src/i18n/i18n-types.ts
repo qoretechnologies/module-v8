@@ -8658,6 +8658,52 @@ type RootTranslation = {
 				}
 			}
 		}
+		Dropbox: {
+			/**
+			 * D​r​o​p​b​o​x
+			 */
+			displayName: string
+			/**
+			 * A​ ​c​l​o​u​d​ ​s​t​o​r​a​g​e​ ​s​e​r​v​i​c​e​ ​t​h​a​t​ ​l​e​t​s​ ​y​o​u​ ​s​a​v​e​ ​f​i​l​e​s​ ​o​n​l​i​n​e​ ​a​n​d​ ​s​y​n​c​ ​t​h​e​m​ ​t​o​ ​y​o​u​r​ ​d​e​v​i​c​e​s​.
+			 */
+			shortDesc: string
+			/**
+			 * D​r​o​p​b​o​x​ ​i​s​ ​a​ ​c​l​o​u​d​-​b​a​s​e​d​ ​f​i​l​e​ ​s​t​o​r​a​g​e​ ​s​o​l​u​t​i​o​n​ ​t​h​a​t​ ​a​l​l​o​w​s​ ​u​s​e​r​s​ ​t​o​ ​s​t​o​r​e​ ​a​n​d​ ​s​h​a​r​e​ ​f​i​l​e​s​ ​a​n​d​ ​f​o​l​d​e​r​s​ ​w​i​t​h​ ​o​t​h​e​r​s​ ​a​c​r​o​s​s​ ​t​h​e​ ​i​n​t​e​r​n​e​t​ ​u​s​i​n​g​ ​f​i​l​e​ ​s​y​n​c​h​r​o​n​i​z​a​t​i​o​n​.​ ​I​t​ ​o​f​f​e​r​s​ ​f​e​a​t​u​r​e​s​ ​l​i​k​e​ ​f​i​l​e​ ​s​h​a​r​i​n​g​,​ ​c​o​l​l​a​b​o​r​a​t​i​o​n​,​ ​a​n​d​ ​a​c​c​e​s​s​ ​f​r​o​m​ ​m​u​l​t​i​p​l​e​ ​d​e​v​i​c​e​s​.
+			 */
+			longDesc: string
+			triggers: {
+				new_file_in_folder: {
+					/**
+					 * N​e​w​ ​F​i​l​e​ ​i​n​ ​F​o​l​d​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​f​i​l​e​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​f​o​l​d​e​r​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​e​v​e​r​y​ ​t​i​m​e​ ​a​ ​n​e​w​ ​f​i​l​e​ ​i​s​ ​s​a​v​e​d​ ​i​n​ ​t​h​e​ ​f​o​l​d​e​r​ ​y​o​u​ ​s​p​e​c​i​f​y​.
+					 */
+					longDesc: string
+					options: {
+						folder: {
+							/**
+							 * F​o​l​d​e​r​ ​P​a​t​h
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​f​o​l​d​e​r​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​f​i​l​e​s​.
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​f​o​l​d​e​r​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​f​i​l​e​s​.​ 
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		NetSuite: {
 			/**
 			 * N​e​t​S​u​i​t​e
@@ -17809,6 +17855,52 @@ export type TranslationFunctions = {
 						 * Whether the user is archived
 						 */
 						longDesc: () => LocalizedString
+					}
+				}
+			}
+		}
+		Dropbox: {
+			/**
+			 * Dropbox
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * A cloud storage service that lets you save files online and sync them to your devices.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Dropbox is a cloud-based file storage solution that allows users to store and share files and folders with others across the internet using file synchronization. It offers features like file sharing, collaboration, and access from multiple devices.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				new_file_in_folder: {
+					/**
+					 * New File in Folder
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new file is added to a specified folder.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires every time a new file is saved in the folder you specify.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						folder: {
+							/**
+							 * Folder Path
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The path to the folder to monitor for new files.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the path to the folder you want to monitor for new files. 
+							 */
+							longDesc: () => LocalizedString
+						}
 					}
 				}
 			}

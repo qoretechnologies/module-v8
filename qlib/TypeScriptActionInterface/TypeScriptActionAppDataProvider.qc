@@ -95,7 +95,7 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
     #! Return data provider summary info
     *list<hash<DataProviderSummaryInfo>> getChildProviderSummaryInfo() {
         TypeScriptActionInterface::checkAppActions(name);
-        hash<string, DataProvider::AbstractDataProvider> childMap = self.childMap ?? parent.childMap;
+        *hash<string, DataProvider::AbstractDataProvider> childMap = self.childMap ?? parent.childMap;
         return map cast<hash<DataProviderSummaryInfo>>($1.getInfo(){DataProviderSummaryInfoKeys}),
             childMap.iterator();
     }
@@ -105,7 +105,7 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
     */
     private *list<string> getChildProviderNamesImpl() {
         TypeScriptActionInterface::checkAppActions(name);
-        hash<string, DataProvider::AbstractDataProvider> childMap = self.childMap ?? parent.childMap;
+        *hash<string, DataProvider::AbstractDataProvider> childMap = self.childMap ?? parent.childMap;
         return keys childMap;
     }
 

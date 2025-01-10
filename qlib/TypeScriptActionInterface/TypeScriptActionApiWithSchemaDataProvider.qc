@@ -74,8 +74,8 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
     #! Creates the object from the arguments
     constructor(reference<hash<auto>> action, string swagger_path, *hash<AsyncCallInfo> api,
             *hash<string, bool> path_vars, *hash<string, bool> independent_path_vars,
-            *hash<string, string> conn_opt_map, *hash<auto> override_options,
-            JavaScriptProgramPool pool) : TypeScriptActionApiDataProvider(action.action, api) {
+            *hash<string, string> conn_opt_map, *hash<auto> override_options, ActionFunctionContext fctx)
+            : TypeScriptActionApiDataProvider(action.action, api, fctx) {
         self.swagger_path = swagger_path;
         self.conn_opt_map = conn_opt_map;
         if (conn_opt_map) {
@@ -196,7 +196,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                 throw "ACTION-ERROR", sprintf("Cannot override options of app %y action %y with non-hash "
                     "request type %y", action.app, action.action, request_type.getName());
             }
-            overrideOptions(\action, cast<HashDataType>(request_type), override_options, pool);
+            overrideOptions(\action, cast<HashDataType>(request_type), override_options);
             if (!prov.op.consumes) {
                 prov.op.consumes{MimeTypeJson} = True;
             }
@@ -232,7 +232,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         }
     }
 
-    overrideOptions(reference<hash<auto>> action, HashDataType type, hash<auto> opts, JavaScriptProgramPool pool) {
+    overrideOptions(reference<hash<auto>> action, HashDataType type, hash<auto> opts) {
         *hash<string, AbstractDataField> fields = type.getFields();
         foreach hash<auto> i in (opts.pairIterator()) {
             # find option to update
@@ -250,10 +250,9 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                         "option %y; known top-level options: %y", action.app, action.action, key,
                         keys fields);
                 }
-                TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, \romap, \dvmap, i.key,
-                    \i.value, pool);
+                TypeScriptActionInterface::getOptionFunctions(\action, self, i.key, \i.value);
 
-                type.addField(new QoreDataField(TypeScriptActionInterface::getField(key, i.value)));
+                type.addField(new QoreDataField(TypeScriptActionInterface::getField("option", key, i.value)));
                 if (i.value_depends_on) {
                     depmap{key} = map {$1: True}, i.value.depends_on;
                 }
@@ -270,12 +269,11 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                         "expecting \"QoreDataField\"", action.app, action.action, key, f.className());
                 }
                 if (l.size() == 1) {
-                    TypeScriptActionInterface::getOptionFunctions(\action, \omap, \dmap, \romap, \dvmap, i.key,
-                        \i.value, pool);
+                    TypeScriptActionInterface::getOptionFunctions(\action, self, i.key, \i.value);
                 }
                 if (i.value) {
                     type.replaceField(cast<QoreDataField>(f = f.copy()).updateFieldType(f.getType().copy()));
-                    overrideOptionType(action, type, l, i.value, k);
+                    overrideOptionType("option", action, type, l, i.value, k);
                     if (l.size() == 1 && (*list<auto> dl = i.value.depends_on)) {
                         depmap{l[0]} = map {$1: True}, dl;
                     }
@@ -284,8 +282,13 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         }
     }
 
-    static overrideOptionType(hash<auto> action, AbstractDataProviderType type, list<string> l,
+    overrideOptionType(string path, hash<auto> action, AbstractDataProviderType type, list<string> l,
             hash<auto> type_hash, string k) {
+        TypeScriptActionApiWithSchemaDataProvider::overrideOptionType(path, action, type, l, type_hash, k, self);
+    }
+
+    static overrideOptionType(string path, hash<auto> action, AbstractDataProviderType type, list<string> l,
+            hash<auto> type_hash, string k, *ActionFunctionContext fctx) {
         string key = shift l;
         HashDataType t;
         *hash<string, AbstractDataField> fields;
@@ -309,7 +312,8 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                 "expecting \"QoreDataField\"", action.app, action.action, key, k, f.className());
         }
         if (l) {
-            TypeScriptActionApiWithSchemaDataProvider::overrideOptionType(action, f.getType(), l, type_hash, k);
+            TypeScriptActionApiWithSchemaDataProvider::overrideOptionType(path, action, f.getType(), l, type_hash, k,
+                fctx);
             return;
         }
 
@@ -323,9 +327,10 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
 
         *bool req = remove type_hash.required;
         if (exists (auto tdesc = remove type_hash.type)) {
-            type = TypeScriptActionInterface::getType(tdesc, req ?? info.attr.required ?? qdf.isMandatory());
+            type = TypeScriptActionInterface::getType(path, tdesc, req ?? info.attr.required ?? qdf.isMandatory(), NOTHING,
+                fctx);
         }
-        info += TypeScriptActionInterface::getFieldHash(info.name, type ?? qdf.getType(), \type_hash, req);
+        info += TypeScriptActionInterface::getFieldHash(path, info.name, type ?? qdf.getType(), \type_hash, req);
         if (attr) {
             info.attr += attr;
         }

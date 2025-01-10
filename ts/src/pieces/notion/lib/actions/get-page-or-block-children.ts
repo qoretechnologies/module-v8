@@ -17,6 +17,7 @@ export const getPageOrBlockChildren = createAction({
     markdown: Property.Checkbox({
       displayName: 'Markdown',
       description: 'Convert Notion JSON blocks to Markdown',
+      onChange: ['refetch'],
       required: true,
       defaultValue: false,
     }),

@@ -47,10 +47,9 @@ public class TypeScriptActionSearchDataProvider inherits TypeScriptActionRecordB
             *hash<string, hash<DataProviderOptionInfo>> search_options,
             *hash<string, hash<DataProviderExpressionInfo>> expressions,
             bool supports_native_search,
-            *hash<string, hash<AsyncCallInfo>> omap,
-            *hash<string, hash<RestGetAllowedValuesInfo>> romap, *hash<string, hash<AsyncCallInfo>> dvmap)
+            ActionFunctionContext fctx)
             : TypeScriptActionRecordBasedDataProvider(name, get_record_type, begin_transaction, commit, rollback,
-                omap, romap, dvmap) {
+                fctx) {
         self.search_records = search_records;
         self.search_options = search_options;
         self.expressions = expressions;

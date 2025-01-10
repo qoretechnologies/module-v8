@@ -33,12 +33,18 @@ public const PC_SETUP_EVENT = "SETUP-EVENT";
 #! Proxy comment "RELEASE-EVENT": stop processing the given event source
 public const PC_RELEASE_EVENT = "RELEASE-EVENT";
 
+#! Proxy command "GET-REQUEST-TYPE": retrieve a dynamic type based on JS calls
+public const PC_GET_REQUEST_TYPE = "GET-REQUEST-TYPE";
+
 #! Proxy command "EXIT": exit the process
 public const PC_EXIT = "EXIT";
 
 #! Valid commands
 public const ValidCommands = {
     PC_CALL: True,
+    PC_SETUP_EVENT: True,
+    PC_RELEASE_EVENT: True,
+    PC_GET_REQUEST_TYPE: True,
     PC_EXIT: True,
 };
 

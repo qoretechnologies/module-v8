@@ -182,8 +182,12 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
           allowed_values_creatable: true,
           get_allowed_values: getJiraIssueIdAllowedValues,
         },
+        update: {
+          required_groups: ['issue_update_group'],
+        },
         fields: {
           required: false,
+          required_groups: ['issue_update_group'],
           type: {
             type: 'hash',
             fields: {
