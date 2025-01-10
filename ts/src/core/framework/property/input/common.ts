@@ -3,6 +3,7 @@ import { PropertyType } from './property-type';
 import { ProcessorFn } from '../../processors/types';
 import { TypedValidatorFn, ValidationInputType } from '../../validators/types';
 import { ApFile } from './file-property';
+import { TQoreOptionOnChangeEvents } from '../../../../global/models/qore';
 
 export const BasePropertySchema = Type.Object({
   displayName: Type.String(),
@@ -18,6 +19,8 @@ export const TPropertyValue = <T extends TSchema, U extends PropertyType>(
   Type.Object({
     type: Type.Literal(propertyType),
     required: Type.Boolean(),
+    requiredGroups: Type.Optional(Type.Array(Type.String())),
+    onChange: Type.Optional(Type.Array(Type.String())),
     defaultValue: Type.Optional(Type.Any()),
   });
 
@@ -30,6 +33,8 @@ export type TPropertyValue<
   valueSchema: T;
   type: U;
   required: REQUIRED;
+  requiredGroups?: string[];
+  onChange?: TQoreOptionOnChangeEvents[];
   defaultProcessors?: ProcessorFn[];
   processors?: ProcessorFn[];
   validators?: TypedValidatorFn<VALIDATION_INPUT>[];

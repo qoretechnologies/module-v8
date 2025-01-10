@@ -9,6 +9,7 @@ export const notionCommon = {
     required: true,
     description: 'Select the database you want to use',
     refreshers: [],
+    onChange: ['refetch'],
     options: async ({ auth }) => {
       if (!auth) {
         return {

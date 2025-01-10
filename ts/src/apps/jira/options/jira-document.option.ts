@@ -4,6 +4,30 @@ export const jiraDocumentFormatOption = {
   required: true,
   type: {
     type: 'hash',
+    default_value: {
+      version: 1,
+      type: 'doc',
+      content: [
+        {
+          type: 'paragraph',
+          content: [
+            {
+              type: 'text',
+              text: 'Hello ',
+            },
+            {
+              type: 'text',
+              text: 'world',
+              marks: [
+                {
+                  type: 'strong',
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
     fields: {
       version: {
         required: true,
@@ -23,6 +47,7 @@ export const jiraDocumentFormatOption = {
               type: {
                 required: true,
                 type: 'string',
+                default_value: 'paragraph',
               },
               content: {
                 required: true,
@@ -33,6 +58,7 @@ export const jiraDocumentFormatOption = {
                     fields: {
                       type: {
                         type: 'string',
+                        default_value: 'text',
                       },
                       text: {
                         type: 'string',

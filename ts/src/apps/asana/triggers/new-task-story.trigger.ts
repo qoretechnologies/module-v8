@@ -2,7 +2,7 @@ import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
 import { getAsanaWorkspaceIdAllowedValuesRest } from '../helpers/get-workspace-id-allowed-values';
 import { getAsanaWorkspaceProjectIdAllowedValues } from '../helpers/get-workspace-project-id-allowed-values';
-import { asanaEventInfoType } from './constants';
+import { asanaEventInfoType, asanaWebhookInfoLocation } from './constants';
 import { getAsanaTaskIdAllowedValues } from '../helpers/get-task-id-allowed-values';
 import { deregisterAsanaWebhook } from './helpers';
 
@@ -63,6 +63,7 @@ export default {
     return { webhook: data.data };
   },
   webhook_deregister: deregisterAsanaWebhook,
+  webhook_event_loc: asanaWebhookInfoLocation,
   event_info: {
     desc: 'New task story event data',
     type: asanaEventInfoType,

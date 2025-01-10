@@ -123,8 +123,12 @@ export const createDatabase = createAction({
   auth: notionAuth,
   responseType: createDatabaseResponseType,
   props: {
-    databaseId: { ...notionCommon.database_id, required: false },
-    pageId: { ...notionCommon.page, required: false },
+    databaseId: {
+      ...notionCommon.database_id,
+      required: false,
+      requiredGroups: ['createDatabaseGroup'],
+    },
+    pageId: { ...notionCommon.page, required: false, requiredGroups: ['createDatabaseGroup'] },
     title: Property.ShortText({
       displayName: 'Title',
       description: 'The title of the database',
