@@ -328,6 +328,8 @@ exports.actionsCatalogue = {
                                     "desc": "B1 key",
                                 },
                             };
+                        } else {
+                            throw new Error('unknown key ' + ctx.opts.key);
                         }
                     }
                 },
@@ -674,7 +676,7 @@ exports.actionsCatalogue = {
                 @note the function here will be called with no "this" context; "this" cannot be used in this function
             */
             "webhook_register": async function(ctx, url) {
-                if (!ctx.opts.name) {
+                if (!ctx || !ctx.opts || !ctx.opts.name) {
                     throw new Error("missing name");
                 }
                 // this function should register the webhook with the server

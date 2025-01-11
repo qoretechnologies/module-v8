@@ -68,8 +68,8 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         #! Local lock
         Mutex m();
 
-        #! Is a command in progress while the event listener is active?
-        bool command_in_progress;
+        #! Current command in progress
+        hash<auto> command_in_progress;
 
         #! Master UNIX socket file path
         static string master_path;
@@ -183,7 +183,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         on_exit global_lock.lock();
 
         on_error removeEventSource(key, ekey);
-        sendCommandArgs(PC_SETUP_EVENT, (app, action, key, options));
+        sendCommandArgs(NOTHING, PC_SETUP_EVENT, (app, action, key, options));
     }
 
     private removeEventSource(string key, string ekey) {
@@ -231,7 +231,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             m.unlock();
             on_exit m.lock();
             if (emap{key}{ekey}.size() == 1) {
-                sendCommandArgs(PC_RELEASE_EVENT, key);
+                sendCommandArgs(NOTHING, PC_RELEASE_EVENT, key);
             }
         }
         if (!emap{key}) {
@@ -242,14 +242,18 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
     }
 
-    auto getAsyncValue(...) {
-        auto rv = sendCommandArgs(PC_CALL, argv);
+    auto getAsyncValue(hash<AsyncCallInfo> api, ...) {
+        list<auto> args += (api.app, api.action, api.key);
+        if (argv) {
+            args += argv;
+        }
+        auto rv = sendCommandArgs(api.to, PC_CALL, args);
         debug("getAsyncValue(%y): %y", argv, rv);
         return rv;
     }
 
     *HashDataType getRequestType(string app, string action, *string conn_name, *hash<auto> conn_opts, auto req) {
-        *binary bin = sendCommandArgs(PC_GET_REQUEST_TYPE, (app, action, conn_name, conn_opts, req));
+        *binary bin = sendCommandArgs(NOTHING, PC_GET_REQUEST_TYPE, (app, action, conn_name, conn_opts, req));
         *HashDataType rv = bin ? Serializable::deserialize(bin) : NOTHING;
         debug("getRequestType(app %y action %y req %y): %y", app, action, req, rv);
         return rv;
@@ -273,13 +277,32 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
         while (!listener_stop) {
             int i;
+            if (command_in_progress."timeout") {
+                date d = now_us() - command_in_progress.start;
+                if (d > (command_in_progress."timeout" + 10s)) {
+                    int pid = proc.id();
+                    killChild();
+                    string desc = checkRestart()
+                        ? sprintf("The async call timed out; terminated and restarted child process with PID %d; new "
+                            "child PID %d", pid, proc.id())
+                        : sprintf("The async call timed out; terminated child process PID %d", pid);
+                    cmdq.push({
+                        "cmd": CC_ERR,
+                        "ex": {
+                            "err": "ASYNC-CALL-TIMEOUT",
+                            "desc": sprintf("The async call timed out; terminated and restarted child process with "
+                                "PID %d; new child PID %d", pid, proc.id()),
+                            "arg": command_in_progress,
+                        },
+                    });
+                }
+            }
             try {
                 # first read message size
                 i = recvi8(5s);
                 if (!i) {
                     continue;
                 }
-
             } catch (hash<ExceptionInfo> ex) {
                 if (ex.err == "SOCKET-TIMEOUT") {
                     continue;
@@ -410,9 +433,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             proc.terminate();
             info("Forced child PID %d to terminate", proc.id());
         } catch (hash<ExceptionInfo> ex) {
-            logChildOutput();
             # ignore error
         }
+        logChildOutput();
     }
 
     #! Starts the child process
@@ -431,12 +454,19 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     #! Sends a command from the parent to the child with a response
-    private auto sendCommandArgs(string cmd, *softlist<auto> args) {
+    private auto sendCommandArgs(*date io_timeout, string cmd, *softlist<auto> args) {
         string yaml = makeSend(cmd, {"args": args});
         hash<auto> h;
-        RestartCounter rc();
+        RetryCounter rc();
         while (True) {
             try {
+                command_in_progress = {
+                    "cmd": cmd,
+                    "args": args,
+                    "timeout": io_timeout,
+                    "start": now_us(),
+                };
+                on_exit remove command_in_progress;
                 debug("sending command %y", yaml);
                 sendString(yaml);
                 h = waitForCommand();
@@ -456,7 +486,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
         if (h.cmd == CC_ERR) {
             logChildOutput();
-            throw h.ex.err, sprintf("Remote JavaScript error: %s", h.ex.desc);
+            throw h.ex.err, sprintf("Remote JavaScript error: %s", h.ex.desc), h.ex.arg;
         }
         if (h.cmd != CC_OK) {
             throw "CMD-ERROR", sprintf("Unexpected command %y; expected %y", h.cmd, CC_OK);
@@ -466,11 +496,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
     #! Wait for a command when the listener is active
     hash<auto> waitForCommand() {
-        command_in_progress = True;
-        on_exit remove command_in_progress;
         hash<auto> v = cmdq.get();
         if (v.cmd == CC_ERR) {
-            throw v.ex.err, v.ex.desc;
+            throw v.ex.err, v.ex.desc, v.ex.arg;
         }
         return v;
     }
@@ -522,22 +550,16 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 }
             } catch (hash<ExceptionInfo> ex) {
                 if (ex.err == "SOCKET-CLOSED") {
-                    if (!listener_tid || listener_stop) {
+                    if (!listener_tid || listener_stop || checkRestart()) {
                         return "";
-                    }
-                    if (checkRestart()) {
-                        continue;
                     }
                 }
                 if (ex.err != "SOCKET-TIMEOUT") {
                     rethrow;
                 }
             }
-            if (listener_stop || !listener_tid) {
+            if (listener_stop || !listener_tid || checkRestart()) {
                 return "";
-            }
-            if (checkRestart()) {
-                continue;
             }
             if (to) {
                 date d = now_us() - start;
@@ -552,21 +574,18 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         return retryIntern(ex);
     }
 
-    private *bool retryIntern(hash<ExceptionInfo> ex, *RestartCounter rc) {
+    private *bool retryIntern(hash<ExceptionInfo> ex, *RetryCounter rc) {
         bool aborted = (ex.err == "CHILD-ABORTED");
         if (aborted) {
-            error("Error encountered communicating with child PID %d (running: %y): %s", proc.id(), proc.running(),
-                get_exception_string(ex));
-        }
-        if (checkRestart(rc)) {
+            # at this point the process has been restarted
+            error("Error communicating with child: %s (restarted: %y)", get_exception_string(ex), proc.running());
+        } else if (checkRestart(rc)) {
             return True;
         }
-        if (aborted && proc.running()) {
-            return True;
-        }
+        return rc ? rc.retry(ex, command_in_progress) : True;
     }
 
-    private *bool checkRestart(*RestartCounter rc) {
+    private *bool checkRestart(*RetryCounter rc) {
         bool restart;
         {
             AutoLock al(m);
@@ -583,6 +602,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 return;
             }
             if (!proc.running()) {
+                error("Child process %d aborted; restarting", proc.id());
                 if (rc) {
                     rc.restart();
                 }
@@ -614,7 +634,8 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 "cmd": CC_ERR,
                 "ex": {
                     "err": "CHILD-ABORTED",
-                    "desc": "Restarted child process",
+                    "desc": sprintf("Restarted child process with PID %d; new child PID %d", pid, proc.id()),
+                    "arg": command_in_progress,
                 },
             });
         }
@@ -628,7 +649,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
 
         if (emap) {
-            map sendCommandArgs(PC_SETUP_EVENT, ($1.value.app, $1.value.action, $1.key, $1.value.options)),
+            map sendCommandArgs(NOTHING, PC_SETUP_EVENT, ($1.value.app, $1.value.action, $1.key, $1.value.options)),
                 emap.pairIterator();
         }
 
@@ -682,20 +703,36 @@ hashdecl EventSourceInfo {
     *hash<auto> options;
     hash<string, TypeScriptActionEventDataProvider> omap;
 }
-class RestartCounter {
+class RetryCounter {
     public {
-        const MaxRestarts = 3;
+        const MaxRetries = 3;
     }
 
     private {
         int restarts;
+        # error map: err hash -> count
+        hash<string, int> emap;
     }
 
     restart() {
-        if (++restarts == MaxRestarts) {
-            throw "RESTART-ERROR", sprintf("Cannot restart the same operation more than %d times; failing",
-                MaxRestarts);
+        ++restarts;
+    }
+
+    # if this returns True, the operation will be retried
+    *bool retry(hash<ExceptionInfo> ex, *hash<auto> command_in_progress) {
+        if (!command_in_progress) {
+            return True;
         }
+        string k = command_in_progress.cmd;
+        if (exists command_in_progress.args) {
+            k += sprintf("-%s", TypeScriptActionDataProviderBase::getKeyValue(command_in_progress.args));
+        }
+        k = k.toSHA512();
+        if (++emap{k} < MaxRetries) {
+            return True;
+        }
+        TSAI::error("Not retrying cmd: %y args: %y that has failed %d times", command_in_progress.cmd,
+            command_in_progress.args, MaxRetries);
     }
 }
 }

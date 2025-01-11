@@ -48,7 +48,43 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
 
     globalSetUp() {
         chdir(get_script_dir());
-        JavaScriptProgramPool pool("var exports = {};\n" + File::readTextFile("example.js"), "example.js",
+        JavaScriptProgramPool pool("var exports = {};
+// Returns a Promise that resolves immediately with the state of 'promise'
+function promiseState(promise) {
+  const pendingState = { status: 'pending' };
+  return Promise.race([promise, pendingState]).then(
+    (value) =>
+      value === pendingState ? value : { status: 'fulfilled', value },
+    (reason) => ({ status: 'rejected', reason }),
+  );
+}
+
+async function runWithTimeout(promise, delay) {
+  if (typeof promise === 'function') {
+    promise = promise();
+  }
+  if (!(promise instanceof Promise)) {
+    return promise;
+  }
+
+  // this inspects the state of the promise and returns immediately
+  // without this call, there is an 8-second delay when 'promise' rejects
+  await promiseState(promise);
+
+  // timeout variable to cancel the timeout in case the async function is faster
+  let timeout;
+  // get a promise to a cancelable timeout
+  let top = new Promise((_, reject) => (timeout = setTimeout(() => reject(new Error('Request timed out')), delay)));
+  // run the promise and cancel the timeout
+  return Promise.race([
+    promise,
+    top
+  ]).finally(() => {
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+  });
+}\n" + File::readTextFile("example.js"), "example.js",
             sub (JavaScriptProgram pgm) {});
         JavaScriptProgram pgm = pool.get();
         on_exit pool.release(pgm);
@@ -106,7 +142,6 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
     private webhookEventTest() {
         code webhook_callback;
         code get_webhook = hash<auto> sub (hash<auto> h) {
-            #printf("get_webhook() %y\n", h);
             webhook_callback = h.callback;
             return {
                 "url": "https://localhost:8011/webhooks/abc",
@@ -143,8 +178,10 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
             cast<Observable>(prov).registerObserver(o);
             # temporarily disable data provider error logging, as the error from the negative test below will
             # otherwise be logged to the console
-            logger.removeAllAppenders();
-            on_exit logger.addAppender(new StdoutAppender());
+
+            #logger.removeAllAppenders();
+            #on_exit logger.addAppender(new StdoutAppender());
+
             assertThrows("JAVASCRIPT-ASYNC-ERROR", \cast<DelayedObservable>(prov).observersReady());
         }
 
@@ -177,7 +214,26 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
 
     private testApi() {
         chdir(get_script_dir());
-        JavaScriptProgramPool pool("var exports = {};\n" + File::readTextFile("test.js"), "test.js",
+        JavaScriptProgramPool pool("var exports = {};
+async function runWithTimeout(promise, delay) {
+  if (typeof promise === 'function') {
+    promise = promise();
+  }
+  if (!(promise instanceof Promise)) {
+    return promise;
+  }
+  // timeout variable to cancel the timeout in case the async function is faster
+  let timeout;
+  // get a promise to a cancelable timeout
+  let top = new Promise((_, reject) => (timeout = setTimeout(() => reject(new Error('Request timed out')), delay)));
+  // run the promise and cancel the timeout
+  return await Promise.race([
+    promise,
+    top
+  ]).finally(() => {
+    if (timeout) clearTimeout(timeout);
+  });
+}\n" + File::readTextFile("test.js"), "test.js",
             sub (JavaScriptProgram pgm) {});
         JavaScriptProgram pgm = pool.get();
         on_exit pool.release(pgm);
@@ -186,8 +242,26 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
     }
 
     private poolTest() {
-        JavaScriptProgramPool pool("
-var exports = {};
+        JavaScriptProgramPool pool("var exports = {};
+async function runWithTimeout(promise, delay) {
+  if (typeof promise === 'function') {
+    promise = promise();
+  }
+  if (!(promise instanceof Promise)) {
+    return promise;
+  }
+  // timeout variable to cancel the timeout in case the async function is faster
+  let timeout;
+  // get a promise to a cancelable timeout
+  let top = new Promise((_, reject) => (timeout = setTimeout(() => reject(new Error('Request timed out')), delay)));
+  // run the promise and cancel the timeout
+  return await Promise.race([
+    promise,
+    top
+  ]).finally(() => {
+    if (timeout) clearTimeout(timeout);
+  });
+}
 
 var obj = {
     'actionsCatalogue': {

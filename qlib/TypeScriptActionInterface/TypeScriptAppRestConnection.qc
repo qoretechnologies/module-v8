@@ -44,11 +44,16 @@ public class TypeScriptAppRestClient inherits RestClient {
         LoggerWrapper::debug("Connection %y app %y post-auth resp: %y h: %y rv: %y (post_auth: %y)", conn.name,
             conn.getAppName(), h, rv, post_auth);
         if (post_auth) {
-            rv += TypeScriptActionDataProviderBase::getAsyncValueArgs(self, post_auth, {
-                "conn_name": conn.name,
-                "conn_opts": conn.getRealOptions() + h + rv,
-            });
-            info("Connection %y app %y post-auth adding options: %y", conn.name, conn.getAppName(), rv);
+            try {
+                rv += TypeScriptActionDataProviderBase::getAsyncValueArgs(self, post_auth, {
+                    "conn_name": conn.name,
+                    "conn_opts": conn.getRealOptions() + h + rv,
+                });
+                info("Connection %y app %y post-auth adding options: %y", conn.name, conn.getAppName(), rv);
+            } catch (hash<ExceptionInfo> ex) {
+                LoggerWrapper::error("Error executing post-auth for connection %y: %s: %s (rv: %y)", conn.name,
+                    ex.err, ex.desc, rv);
+            }
 
             hash<auto> config = {
                 "url": getURL(),
@@ -203,14 +208,19 @@ public class TypeScriptAppRestConnection inherits RestConnection {
         *hash<auto> new_opts = RestConnection::processOAuth2TokenResponseImpl(resp);
         LoggerWrapper::debug("Connection %y app %y post-auth resp: %y new_opts: %y (post_auth: %y)", name, app, resp,
             new_opts, post_auth);
-        if (new_opts && post_auth) {
-            on_error rethrow $1.err, sprintf("%s (new_opts: %y)", $1.desc, new_opts);
-            new_opts += TypeScriptActionDataProviderBase::getAsyncValueArgs(self, post_auth, {
-                "conn_name": name,
-                "conn_opts": real_opts + new_opts + resp,
-            });
-            LoggerWrapper::info("Connection %y app %y post-auth adding options: %y from %y", name, app, new_opts,
-                resp);
+        # only execute post_auth when the token changes
+        if (new_opts && (new_opts.token != real_opts.token) && post_auth) {
+            try {
+                new_opts += TypeScriptActionDataProviderBase::getAsyncValueArgs(self, post_auth, {
+                    "conn_name": name,
+                    "conn_opts": real_opts + new_opts + resp,
+                });
+                LoggerWrapper::info("Connection %y app %y post-auth adding options: %y from %y", name, app, new_opts,
+                    resp);
+            } catch (hash<ExceptionInfo> ex) {
+                LoggerWrapper::error("Error executing post-auth for connection %y: %s: %s (new_opts: %y)", name,
+                    ex.err, ex.desc, new_opts);
+            }
         }
         LoggerWrapper::debug("Connection %y app %y post-auth rv: %y", name, app, new_opts);
         return new_opts;

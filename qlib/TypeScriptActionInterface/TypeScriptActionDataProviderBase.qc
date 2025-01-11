@@ -122,7 +122,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         return key.toSHA512();
     }
 
-    static private string getKeyValue(auto arg) {
+    static string getKeyValue(auto arg) {
         switch (arg.typeCode()) {
             case NT_STRING:
                 return sprintf("(%s):%y", arg.fullType(), arg.toSHA512());
@@ -166,7 +166,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             JavaScriptProgramProxy proxy = TypeScriptActionInterface::server.get();
             TSAI::debug("Proxy started for %y: %y", api.key, args);
             on_exit TypeScriptActionInterface::server.release(proxy);
-            return proxy.getAsyncValue(api.app, api.action, api.key, args);
+            return proxy.getAsyncValue(api, args);
         }
 
         auto v;
@@ -181,96 +181,161 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         auto err;
         string errloc;
         if (v instanceof JavaScriptPromise) {
+            JavaScriptProgram js = v.getProgram();
+            code run = js.getGlobal().runWithTimeout.toData();
+            int ms = api.to.durationMilliseconds();
+            TSAI::debug("Running Promise with async timeout: %dms", ms);
+            v = run(v, ms);
+            Queue q();
+            code push_val = sub (string w, auto v) {
+                if (v.name && v.message && v.stack) {
+                    q.push({
+                        "where": w,
+                        "err": {
+                            'name': v.name,
+                            'message': v.message,
+                            'stack': v.stack,
+                            'errstr': v.toString(),
+                            'err': v,
+                        },
+                    });
+                } else {
+                    q.push({
+                        "where": w,
+                        "val": v,
+                    });
+                }
+            };
+            # wait for any I/O in the background in case it did not complete
+            on_exit js.spinOnce();
+
             try {
                 v = v.then(sub (auto val) {
-                    rv = val;
+                    push_val("then", val);
                 }, sub (auto e) {
-                    errloc = sprintf("rejected");
-                    err = e;
+                    push_val("rejected", e);
                 }).doCatch(sub (auto e) {
-                    errloc = "exception caught";
-                    err = e;
+                    push_val("exception caught", e);
                 });
-                v.wait();
+                # wait for the IO in the background - this will only complete when the I/O is complete
+                background sub () {
+                    v.wait();
+                }();
+                TSAI::debug("Waiting for result");
+                # this will return a value as soon as the first value is ready
+                rv = q.get();
+                TSAI::debug("Async result: %y", rv);
+                if (rv."where" == "then") {
+                    rv = rv.val;
+                } else {
+                    errloc = rv."where";
+                    err = rv.err;
+                }
             } catch (hash<ExceptionInfo> ex) {
                 TSAI::error("JAVASCRIPT-ASYNC-ERROR", "Error waiting for async JavaScript request %y: %s",
                     api.label, get_exception_string(ex));
                 rethrow;
             }
+
+            if (exists err) {
+                string desc;
+                hash<auto> arg;
+                TypeScriptActionDataProviderBase::processError(\desc, \arg, errloc, err);
+                TSAI::error("JAVASCRIPT-ASYNC-ERROR: Async JavaScript request returned an error %y: %s (%y)",
+                    api.label, desc, arg);
+                throw "JAVASCRIPT-ASYNC-ERROR", desc, arg;
+            }
         } else {
             rv = v;
         }
 
-        string errstr;
-        *string stack;
         if (rv instanceof JavaScriptObject) {
             rv = rv.toData();
         } else if (rv.typeCode() == NT_LIST && (rv[0] instanceof JavaScriptObject)) {
             rv = map $1.toData(), rv;
-        } else if (err instanceof JavaScriptObject) {
-            errstr = err.toString();
-            if (exists (stack = err.stack)) {
-                stack =~ s/\n+/\n/g;
+        }
+
+        return rv;
+    }
+
+    static processError(reference<string> desc, reference<hash<auto>> arg, *string errloc, auto err) {
+        *string name;
+        *string message;
+        *string errstr;
+        *string stack;
+        if (err.typeCode() == NT_HASH && err.size() == 5 && err.name && err.message && err.stack && err.errstr
+            && err.err) {
+            name = err.name;
+            message = err.message;
+            stack = err.stack;
+            errstr = err.errstr;
+            err = err.err;
+            if (err instanceof JavaScriptObject) {
+                err = err.toData();
             }
+        }
+        else if (err instanceof JavaScriptObject) {
+            name = err.name;
+            message = err.message;
+            stack = err.stack;
+            errstr = err.toString();
             err = err.toData();
         } else if (err.typeCode() == NT_LIST && (err[0] instanceof JavaScriptObject)) {
             err = map $1.toData(), err;
         }
 
-        if (exists err) {
-            # strip non-serializable data from err
-            err = TypeScriptActionEventDataProviderBase::stripNonSerializableData(err);
+        if (exists stack) {
+            stack =~ s/\n+/\n/g;
+        }
 
-            if (err._err{"message", "name", "code"}.size() == 3) {
-                string desc = sprintf("Error in async request: %s: %s: ", err._err.name, err._err."code");
-                if (err._err.response{"status", "statusText"}.size() == 2) {
-                    desc += sprintf("%s %s: ", err._err.response.status, err._err.response.statusText);
-                }
-                if (err._err.response."data".error_summary.val()) {
-                    desc += sprintf("%y: ", err._err.response."data".error_summary);
-                }
-                desc += err._err.message;
-                if (exists stack) {
-                    desc += sprintf(" detail: %s", stack);
-                }
-                hash<auto> arg;
-                if (err._err{"config", "response"}.size() == 2) {
-                    arg = err._err{"config", "response"};
-                } else {
-                    arg = err;
-                }
-                throw "JAVASCRIPT-ASYNC-ERROR", desc, arg;
+        # strip non-serializable data from err
+        err = TypeScriptActionEventDataProviderBase::stripNonSerializableData(err);
+
+        if (err._err{"message", "name", "code"}.size() == 3) {
+            desc = sprintf("Error in async request: %s: %s: ", err._err.name, err._err."code");
+            if (err._err.response{"status", "statusText"}.size() == 2) {
+                desc += sprintf("%s %s: ", err._err.response.status, err._err.response.statusText);
             }
-            if (err.response{"status", "statusText", "headers", "data"}.size() == 4) {
-                string desc;
-                if (errstr.val()) {
-                    desc = sprintf("Error in async request: %s: %y", errstr, err.response."data");
-                } else {
-                    desc = sprintf("Error in async request: %d %s: %y", err.response.status, err.response.statusText,
-                        err.response."data");
-                }
-                if (exists stack) {
-                    desc += sprintf(" detail: %s", stack);
-                }
-                throw "JAVASCRIPT-ASYNC-ERROR", desc, err;
+            if (err._err.response."data".error_summary.val()) {
+                desc += sprintf("%y: ", err._err.response."data".error_summary);
             }
-            if (!err && !errstr) {
-                err = sprintf("No JvaScript exception information available: %y (from: %s)", err, errloc);
+            desc += err._err.message;
+            if (exists stack) {
+                desc += sprintf(" detail: %s", stack);
             }
-            string desc = "Error in async request";
-            if (errloc) {
-                desc += sprintf(" (promise %s)", errloc);
+            if (err._err{"config", "response"}.size() == 2) {
+                arg = err._err{"config", "response"};
+            } else {
+                arg = err;
             }
-            if (!err && errstr.val()) {
-                desc += ": " + errstr;
+            return;
+        }
+        if (err.response{"status", "statusText", "headers", "data"}.size() == 4) {
+            if (errstr.val()) {
+                desc = sprintf("Error in async request: %s: %y", errstr, err.response."data");
+            } else {
+                desc = sprintf("Error in async request: %d %s: %y", err.response.status, err.response.statusText,
+                    err.response."data");
             }
             if (exists stack) {
                 desc += sprintf(" detail: %s", stack);
             }
-            throw "JAVASCRIPT-ASYNC-ERROR", desc, err;
+            return;
         }
-
-        return rv;
+        if (!err && !errstr) {
+            err = sprintf("No JavaScript exception information available: %y (from: %s)", err, errloc);
+        }
+        desc = "Error in async request";
+        if (exists errloc) {
+            desc += sprintf(" (promise %s)", errloc);
+        }
+        if (exists stack) {
+            desc += sprintf(" detail: %s", stack);
+        } else if (exists errstr) {
+            desc += sprintf(" detail: %s", errstr);
+        } else if (exists name) {
+            desc += sprintf(" %s", name);
+        }
     }
 
     static auto stripNonSerializableData(auto v) {

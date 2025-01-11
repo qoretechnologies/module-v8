@@ -29,6 +29,47 @@ class TypeScriptActionInterfacePriv {
     private {
         #! Static storage for JavaScriptProgramPool objects for app / actions, to ensure they do not go out of scope
         static hash<string, JavaScriptProgramPool> pstore;
+
+        #! Default code in each JavaScriptProgram object
+        const DefaultCode = "var exports = {};
+// Returns a Promise that resolves immediately with the state of 'promise'
+function promiseState(promise) {
+  const pendingState = { status: 'pending' };
+  return Promise.race([promise, pendingState]).then(
+    (value) =>
+      value === pendingState ? value : { status: 'fulfilled', value },
+    (reason) => ({ status: 'rejected', reason }),
+  );
+}
+
+// calls an async function with a timeout
+/* @param promise any value; a function will be called, and then any promise will be called with a timeout
+   @param delay a timeout in milliseconds
+*/
+async function runWithTimeout(promise, delay) {
+  if (typeof promise === 'function') {
+    promise = promise();
+  }
+  if (!(promise instanceof Promise)) {
+    return promise;
+  }
+
+  // inspects the state of the promise and returns immediately
+  // without this call, there is an 8-second delay when 'promise' rejects
+  await promiseState(promise);
+
+  // timeout variable to cancel the timeout in case the async function is faster
+  let timeout;
+  // get a promise to a cancelable timeout
+  let top = new Promise((_, reject) => (timeout = setTimeout(() => reject(new Error('Request timed out')), delay)));
+  // run the promise and cancel the timeout
+  return Promise.race([
+    promise,
+    top
+  ]).finally(() => {
+    if (timeout) clearTimeout(timeout);
+  });
+}\n";
     }
 
     static init() {
@@ -57,7 +98,7 @@ class TypeScriptActionInterfacePriv {
                     on_exit if (dir.val()) {
                         chdir(cwd);
                     }
-                    JavaScriptProgramPool pool("var exports = {};\n" + File::readTextFile(basename(path)), path,
+                    JavaScriptProgramPool pool(DefaultCode + File::readTextFile(basename(path)), path,
                         sub (JavaScriptProgram pgm) {
                             pgm.getGlobal().exports.actionsCatalogue.registerAppActions(
                                 TypeScriptActionInterface::Api
@@ -87,7 +128,7 @@ class TypeScriptActionInterfacePriv {
                     on_exit if (dir.val()) {
                         chdir(cwd);
                     }
-                    JavaScriptProgramPool pool("var exports = {};\n" + File::readTextFile(basename(path)), path,
+                    JavaScriptProgramPool pool(DefaultCode + File::readTextFile(basename(path)), path,
                         sub (JavaScriptProgram pgm) {
                             auto v = pgm.getGlobal().exports.qtester.run(
                                 TypeScriptActionInterface::TestApi

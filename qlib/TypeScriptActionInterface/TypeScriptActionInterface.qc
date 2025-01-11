@@ -141,6 +141,9 @@ public class TypeScriptActionInterface {
         #! Default I/O timeout in seconds
         const DefaultIoTimeoutSecs = 30;
 
+        #! Default post_auth I/O timeout in seconds
+        const DefaultPostAuthIoTimeoutSecs = 5;
+
         #! JavaScript event subtype for connections
         const AES_JS_EVENT = "javascript-event";
 
@@ -524,7 +527,7 @@ public class TypeScriptActionInterface {
                         "label": sprintf("REST post-auth option function for app %y", app.name),
                         "pool": pool,
                         "async_call": rest_modifiers.set_options_post_auth,
-                        "to": seconds(remove rest_modifiers.io_timeout_secs ?? DefaultIoTimeoutSecs),
+                        "to": seconds(remove rest_modifiers.io_timeout_secs ?? DefaultPostAuthIoTimeoutSecs),
                     };
                     TypeScriptActionInterface::registerAsyncCall(\post_auth, "app", app.name);
                 }
@@ -1368,7 +1371,7 @@ public class TypeScriptActionInterface {
         foreach hash<auto> i in (opts.pairIterator()) {
             TypeScriptActionInterface::getOptionFunctions(\action, fctx, i.key, \i.value);
             rv{i.key} = TypeScriptActionInterface::getOptionInfo("option", i.value);
-            if (dmap{i.key}) {
+            if (fctx.dmap{i.key}) {
                 rv{i.key}.structural_determinate = True;
             }
             if ((*list<auto> deps = i.value.depends_on)
@@ -2081,6 +2084,7 @@ class ActionFunctionContext {
         action = fctx.action;
         pool = fctx.pool;
         omap = fctx.omap;
+        dmap = fctx.dmap;
         romap = fctx.romap;
         dvmap = fctx.dvmap;
         depmap = fctx.depmap;
