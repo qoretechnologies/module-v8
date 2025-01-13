@@ -1077,12 +1077,19 @@ public class TypeScriptActionInterface {
                     webhook_event_loc.fullType());
             }
 
+            auto webhook_echo_header = remove action.webhook_echo_header;
+            if (exists webhook_echo_header && (webhook_echo_header.typeCode() != NT_STRING)) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"webhook_echo_header\" "
+                    "attribute; got type %y; expecting \"string\"", action.app, action.action,
+                    webhook_echo_header.fullType());
+            }
+
             TypeScriptActionInterface::registerAsyncCall(\webhook_register, "app", app.name, action.action);
             TypeScriptActionInterface::registerAsyncCall(\webhook_deregister, "app", app.name, action.action);
 
             child = new TypeScriptActionWebhookEventDataProvider(action.action, event_id, event_info,
                 get_example_event_data, fctx, method, webhook_register, webhook_deregister, webhook_auth,
-                webhook_perms, webhook_event_loc);
+                webhook_perms, webhook_event_loc, webhook_echo_header);
             rv = AES_WH_EVENT;
         } else {
             auto event_function = remove action.event_function;
