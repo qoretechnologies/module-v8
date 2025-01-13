@@ -587,6 +587,7 @@ export interface IQoreAppActionWithWebhookBase<
   webhook_deregister: TWebhookDeregisterFunction<CustomConnOptions>;
   // webhook event location in dot notation (ex: 'data.account.events')
   webhook_event_loc?: string;
+  webhook_echo_header?: string;
 }
 
 export type TWebhookRegisterFunction<
