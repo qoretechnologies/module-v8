@@ -173,8 +173,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         try {
             v = call_function_args(api.async_call, args);
         } catch (hash<ExceptionInfo> ex) {
-            TSAI::error("JAVASCRIPT-ASYNC-ERROR", "Error making async JavaScript request %y: %s", api.label,
-                get_exception_string(ex));
+            TSAI::error("Error making async JavaScript request %y: %s", api.label, get_exception_string(ex));
             rethrow;
         }
         auto rv;
@@ -232,8 +231,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                     err = rv.err;
                 }
             } catch (hash<ExceptionInfo> ex) {
-                TSAI::error("JAVASCRIPT-ASYNC-ERROR", "Error waiting for async JavaScript request %y: %s",
-                    api.label, get_exception_string(ex));
+                TSAI::error("Error waiting for async JavaScript request %y: %s", api.label, get_exception_string(ex));
                 rethrow;
             }
 

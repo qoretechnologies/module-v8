@@ -705,13 +705,17 @@ hashdecl EventSourceInfo {
 }
 class RetryCounter {
     public {
+%ifdef RestartLogic
         const MaxRetries = 3;
+%endif
     }
 
     private {
         int restarts;
+%ifdef RestartLogic
         # error map: err hash -> count
         hash<string, int> emap;
+%endif
     }
 
     restart() {
@@ -720,8 +724,9 @@ class RetryCounter {
 
     # if this returns True, the operation will be retried
     *bool retry(hash<ExceptionInfo> ex, *hash<auto> command_in_progress) {
+%ifdef RestartLogic
         if (!command_in_progress) {
-            return True;
+            return False;
         }
         string k = command_in_progress.cmd;
         if (exists command_in_progress.args) {
@@ -733,6 +738,9 @@ class RetryCounter {
         }
         TSAI::error("Not retrying cmd: %y args: %y that has failed %d times", command_in_progress.cmd,
             command_in_progress.args, MaxRetries);
+%else
+        return False;
+%endif
     }
 }
 }
