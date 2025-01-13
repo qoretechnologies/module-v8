@@ -252,7 +252,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                 }
                 TypeScriptActionInterface::getOptionFunctions(\action, self, i.key, \i.value);
 
-                type.addField(new QoreDataField(TypeScriptActionInterface::getField("option", key, i.value)));
+                type.addField(new QoreDataField(TypeScriptActionInterface::getField("option", key, i.value, self)));
                 if (i.value_depends_on) {
                     depmap{key} = map {$1: True}, i.value.depends_on;
                 }
