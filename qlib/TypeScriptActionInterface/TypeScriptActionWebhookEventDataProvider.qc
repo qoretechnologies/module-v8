@@ -119,7 +119,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
     }
 
     private callback(*hash<auto> event) {
-        notifyObservers(event_id, event);
+        notifyObservers(event_id, event ?? {});
     }
 
     private hash<DataProviderInfo> getStaticInfoImpl() {
