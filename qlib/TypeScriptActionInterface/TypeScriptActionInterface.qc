@@ -1668,6 +1668,21 @@ public class TypeScriptActionInterface {
                 # remove any manual allowed values
                 remove info.allowed_values;
             }
+            if (exists (*code c = remove type_hash.get_dependent_options)) {
+                string key = sprintf("%s-%s", path, name);
+                fctx.dmap{key} = <AsyncCallInfo>{
+                    "key": key,
+                    "app": fctx.app,
+                    "action": fctx.action,
+                    "type": "get_dependent_options",
+                    "label": sprintf("Dependent option function for app %y action %y option %y", fctx.app,
+                        fctx.action, key),
+                    "pool": fctx.pool,
+                    "async_call": c,
+                    "to": fctx.io_timeout,
+                };
+                TypeScriptActionInterface::registerAsyncCall(\fctx.dmap{key}, "app", fctx.app, fctx.action, key);
+            }
         }
 
         return info;
