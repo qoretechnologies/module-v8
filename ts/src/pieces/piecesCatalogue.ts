@@ -40,6 +40,10 @@ import { TMapPieceActionToAppActionOptions } from './common/models/pieces-catalo
 import * as pieces from './index';
 pieces satisfies Record<string, Piece>;
 
+type TDependentOptionsFunction = (
+  context: TQoreAppActionFunctionContext
+) => Promise<Record<string, IQoreAppActionOption>>;
+
 class _PiecesAppCatalogue {
   public readonly apps: TQoreApps = {};
 
@@ -163,6 +167,7 @@ class _PiecesAppCatalogue {
         // Add info prop to a different field in action
         continue;
       }
+
       // Skip dynamic props - because they are put into get_dependent_options function for "parent" option
       if (props[key].type === PropertyType.DYNAMIC && props[key]?.refreshers?.length) {
         // Dynamic props are handled differently
@@ -181,28 +186,66 @@ class _PiecesAppCatalogue {
   private getDynamicOptionsFunctions(
     key: string,
     props: Record<string, InputProperty>
-  ): DynamicProperties<true>['props'][] | undefined {
-    const functions: DynamicProperties<true>['props'][] = [];
+  ): TDependentOptionsFunction[] {
+    const functions = [];
     for (const propKey in props) {
       const prop = props[propKey];
 
       // Getting the dynamic props and checking if they are dependent on the current prop
       // In case they are dependent, we collect them
       if (prop.type === PropertyType.DYNAMIC && prop.refreshers?.includes(key) && 'props' in prop) {
-        functions.push(prop.props);
+        functions.push(this.mapPropsFunctionToDependentOptionsFunction(prop, propKey, prop.props));
       }
     }
 
     return functions.length ? functions : undefined;
   }
 
+  private mapPropsFunctionToDependentOptionsFunction(
+    prop: InputProperty,
+    propKey: string,
+    func: DynamicProperties<true>['props']
+  ): TDependentOptionsFunction {
+    return async (
+      context: TQoreAppActionFunctionContext
+    ): Promise<Record<string, IQoreAppActionOption>> => {
+      const pieceContext = {
+        auth: { access_token: context.conn_opts.token, ...context.opts },
+        ...context.opts,
+      };
+      const options: Record<string, IQoreAppActionOption> = {};
+      const pieceOptions = await func(pieceContext, commonActionContext);
+      for (const key in pieceOptions) {
+        const pieceOption = pieceOptions[key];
+        // Mapping the received options to qore options
+        const qoreOption: IQoreAppActionOption = this.mapActionPropToAppActionOption(pieceOption);
+        if (qoreOption.type) {
+          options[key] = qoreOption;
+        }
+      }
+
+      const mainProp = this.mapActionPropToAppActionOption(prop);
+
+      return {
+        [propKey]: {
+          ...mainProp,
+          type: {
+            type: 'hash',
+            fields: options,
+          },
+        },
+      };
+    };
+  }
+
   private mapActionPropToAppActionOption(
     prop: InputProperty,
-    getDependentOptionsFunctions?: DynamicProperties<true>['props'][]
+    getDependentOptionsFunctions?: TDependentOptionsFunction[]
   ): IQoreAppActionOption {
     let allowed_values: IQoreAllowedValue[] | undefined = undefined;
     let get_allowed_values: TQoreGetAllowedValuesFunction | undefined = undefined;
     let get_dependent_options: TQoreGetDependentOptionsFunction | undefined = undefined;
+    let depends_on: string[] | undefined = undefined;
     const description = prop.description || prop.displayName;
 
     // Checking if the prop has allowed get allowed values function
@@ -232,6 +275,10 @@ class _PiecesAppCatalogue {
       } satisfies TQoreType;
     }
 
+    if (prop.type === PropertyType.DYNAMIC && prop?.refreshers?.length) {
+      depends_on = prop.refreshers;
+    }
+
     return {
       display_name: prop.displayName,
       short_desc: description || prop.displayName,
@@ -245,31 +292,23 @@ class _PiecesAppCatalogue {
       on_change: prop.onChange,
       default_value: prop.defaultValue,
       example_value: prop.defaultValue,
+      ...(depends_on && { depends_on }),
     };
   }
 
   private mapDynamicOptionsFunctionsToQoreGetDependentOptions(
-    functions: DynamicProperties<true>['props'][]
+    functions: TDependentOptionsFunction[]
   ): TQoreGetDependentOptionsFunction {
     return async (
       context: TQoreAppActionFunctionContext
     ): Promise<Record<string, IQoreAppActionOption>> => {
-      const pieceContext = {
-        auth: { access_token: context.conn_opts.token, ...context.opts },
-        ...context.opts,
-      };
       const options: Record<string, IQoreAppActionOption> = {};
 
       // Going through all the dynamic options functions and getting the options
       for (const func of functions) {
-        const pieceOptions = await func(pieceContext, commonActionContext);
+        const pieceOptions = await func(context);
         for (const key in pieceOptions) {
-          const pieceOption = pieceOptions[key];
-          // Mapping the received options to qore options
-          const qoreOption: IQoreAppActionOption = this.mapActionPropToAppActionOption(pieceOption);
-          if (qoreOption.type) {
-            options[key] = qoreOption;
-          }
+          options[key] = pieceOptions[key];
         }
       }
 
