@@ -1,56 +1,47 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { delay } from '../../../global/helpers';
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
 import { Debugger } from '../../../utils/Debugger';
 import { NETSUITE_CONN_OPTIONS } from '../constants';
-import { NETSUITE_ALLOWED_VALUES_FETCH_DELAY, NETSUITE_ALLOWED_VALUES_TIMEOUT } from './constants';
-
-const DEFAULT_LIMIT = 1000;
+import {
+  fetchSuiteQlData,
+  NETSUITE_ALLOWED_VALUES_FETCH_DELAY,
+  NETSUITE_ALLOWED_VALUES_TIMEOUT,
+} from './constants';
 
 type TNetsuitePurchaseOrderData = {
   id: string;
-  tranId: string;
-  tranDate: string;
-  total: number;
+  foreigntotal: string;
+  createddate: string;
+  status: string;
+  tranid: string;
+  transactionnumber: string;
   memo: string;
+  trandisplayname: string;
 };
 
-const fetchNetsuitePurchaseOrders = async ({
-  accountId,
-  token,
-  offset,
-}: {
-  accountId: string;
-  token: string;
-  offset: number;
-}): Promise<{ purchaseOrders: TNetsuitePurchaseOrderData[]; count: number; hasMore: boolean }> => {
-  const { data } = await QorusRequest.get<any>(
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-      path: `/services/rest/record/v1/purchaseOrder`,
-      params: {
-        offset: offset.toString(),
-        limit: DEFAULT_LIMIT.toString(),
-      },
-    },
-    { endpointId: 'NetSuite', url: `https://${accountId}.suitetalk.api.netsuite.com` }
-  );
+const TOTAL_LIMIT = 500;
 
-  const { items: purchaseOrders, count, hasMore } = data;
-
-  return { purchaseOrders, count, hasMore };
-};
+const fieldsToFetch = [
+  'id',
+  'foreigntotal',
+  'createddate',
+  'status',
+  'tranid',
+  'transactionnumber',
+  'memo',
+  'trandisplayname',
+];
 
 const mapNetSuitePurchaseOrder = (
   purchaseOrder: TNetsuitePurchaseOrderData
 ): IQoreAllowedValue => ({
   value: purchaseOrder.id,
-  display_name: `${purchaseOrder.tranId}  - ${purchaseOrder.tranDate}`,
+  display_name: purchaseOrder.trandisplayname,
   desc:
-    `ID: ${purchaseOrder.id}\n\nTransaction ID: ${purchaseOrder.tranId}\n\n` +
-    `Transaction Date: ${purchaseOrder.tranDate}\n\nMemo: ${purchaseOrder.memo}`,
+    `ID: ${purchaseOrder.id}\n\nForeign Total: ${purchaseOrder.foreigntotal}\n\n` +
+    `Created Date: ${purchaseOrder.createddate}\n\nStatus: ${purchaseOrder.status}\n\n` +
+    `Transaction ID: ${purchaseOrder.tranid}\n\nTransaction Number: ${purchaseOrder.transactionnumber}\n\n` +
+    `Memo: ${purchaseOrder.memo}`,
 });
 
 export const getNetsuitePurchaseOrderIdAllowedValues: TQoreGetAllowedValuesFunction<
@@ -67,19 +58,19 @@ export const getNetsuitePurchaseOrderIdAllowedValues: TQoreGetAllowedValuesFunct
   try {
     let hasMore = true;
 
-    while (hasMore) {
+    while (hasMore && purchaseOrders.length < TOTAL_LIMIT) {
       if (Date.now() - startTime > NETSUITE_ALLOWED_VALUES_TIMEOUT) {
         Debugger.log('NetSuite journal entries fetching timeout');
 
         break;
       }
 
-      const { purchaseOrders: fetchedPurchaseOrders, hasMore: more } =
-        await fetchNetsuitePurchaseOrders({
-          accountId: account_id,
-          token,
-          offset,
-        });
+      const { items: fetchedPurchaseOrders, hasMore: more } = await fetchSuiteQlData({
+        accountId: account_id,
+        token,
+        offset,
+        q: `SELECT ${fieldsToFetch.join(',')} FROM transaction WHERE type = 'PurchOrd' ORDER BY createddate DESC`,
+      });
 
       purchaseOrders.push(...fetchedPurchaseOrders.map(mapNetSuitePurchaseOrder));
 
@@ -90,6 +81,8 @@ export const getNetsuitePurchaseOrderIdAllowedValues: TQoreGetAllowedValuesFunct
         await delay(NETSUITE_ALLOWED_VALUES_FETCH_DELAY);
       }
     }
+
+    return purchaseOrders;
   } catch (error) {
     Debugger.log('Error fetching Netsuite journal entries:', error);
 

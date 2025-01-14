@@ -1,55 +1,27 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { delay } from '../../../global/helpers';
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
 import { Debugger } from '../../../utils/Debugger';
 import { NETSUITE_CONN_OPTIONS } from '../constants';
-import { NETSUITE_ALLOWED_VALUES_FETCH_DELAY, NETSUITE_ALLOWED_VALUES_TIMEOUT } from './constants';
-
-const DEFAULT_LIMIT = 1000;
+import {
+  fetchSuiteQlData,
+  NETSUITE_ALLOWED_VALUES_FETCH_DELAY,
+  NETSUITE_ALLOWED_VALUES_TIMEOUT,
+} from './constants';
 
 type TNetsuitevendorData = {
   id: string;
-  email: string;
-  phone: string;
-  balance: number;
-  image: string;
-  firstName: string;
-  lastName: string;
+  companyname: string;
+  balance: string;
 };
 
-const fetchNetsuitevendors = async ({
-  accountId,
-  token,
-  offset,
-}: {
-  accountId: string;
-  token: string;
-  offset: number;
-}): Promise<{ vendors: TNetsuitevendorData[]; count: number; hasMore: boolean }> => {
-  const { data } = await QorusRequest.get<any>(
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-      path: `/services/rest/record/v1/vendor`,
-      params: {
-        offset: offset.toString(),
-        limit: DEFAULT_LIMIT.toString(),
-      },
-    },
-    { endpointId: 'NetSuite', url: `https://${accountId}.suitetalk.api.netsuite.com` }
-  );
+const TOTAL_LIMIT = 500;
 
-  const { items: vendors, count, hasMore } = data;
-
-  return { vendors, count, hasMore };
-};
+const fieldsToFetch = ['id', 'companyname', 'balance'];
 
 const mapNetSuitevendor = (vendor: TNetsuitevendorData): IQoreAllowedValue => ({
   value: vendor.id,
-  display_name: `${vendor.firstName} - ${vendor.lastName}`,
-  ...(vendor.image && { image: vendor.image }),
-  desc: `ID: ${vendor.id}\n\nEmail: ${vendor.email}\n\nPhone: ${vendor.phone}\n\nBalance: ${vendor.balance}`,
+  display_name: vendor.companyname,
+  desc: `ID: ${vendor.id}\n\nCompany Name: ${vendor.companyname}\n\nBalance: ${vendor.balance}`,
 });
 
 export const getNetsuitevendorIdAllowedValues: TQoreGetAllowedValuesFunction<
@@ -66,28 +38,31 @@ export const getNetsuitevendorIdAllowedValues: TQoreGetAllowedValuesFunction<
   try {
     let hasMore = true;
 
-    while (hasMore) {
+    while (hasMore && vendors.length < TOTAL_LIMIT) {
       if (Date.now() - startTime > NETSUITE_ALLOWED_VALUES_TIMEOUT) {
         Debugger.log('NetSuite vendor fetching timeout');
 
         break;
       }
 
-      const { vendors: fetchedvendors, hasMore: more } = await fetchNetsuitevendors({
+      const { items: fetchedVendors, hasMore: more } = await fetchSuiteQlData({
         accountId: account_id,
         token,
         offset,
+        q: `SELECT ${fieldsToFetch.join(',')} FROM vendor ORDER BY vendor.datecreated DESC`,
       });
 
-      vendors.push(...fetchedvendors.map(mapNetSuitevendor));
+      vendors.push(...fetchedVendors.map(mapNetSuitevendor));
 
       hasMore = more;
-      offset += fetchedvendors.length;
+      offset += fetchedVendors.length;
 
       if (hasMore) {
         await delay(NETSUITE_ALLOWED_VALUES_FETCH_DELAY);
       }
     }
+
+    return vendors;
   } catch (error) {
     Debugger.log('Error fetching Netsuite vendor:', error);
 

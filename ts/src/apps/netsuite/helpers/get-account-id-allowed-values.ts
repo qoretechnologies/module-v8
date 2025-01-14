@@ -1,50 +1,38 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
-import { NETSUITE_CONN_OPTIONS } from '../constants';
-import { Debugger } from '../../../utils/Debugger';
-import { NETSUITE_ALLOWED_VALUES_FETCH_DELAY, NETSUITE_ALLOWED_VALUES_TIMEOUT } from './constants';
 import { delay } from '../../../global/helpers';
-
-const DEFAULT_LIMIT = 1000;
+import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
+import { Debugger } from '../../../utils/Debugger';
+import { NETSUITE_CONN_OPTIONS } from '../constants';
+import {
+  fetchSuiteQlData,
+  NETSUITE_ALLOWED_VALUES_FETCH_DELAY,
+  NETSUITE_ALLOWED_VALUES_TIMEOUT,
+} from './constants';
 
 type TNetsuiteAccountData = {
   id: string;
-  accountSearchDisplayName: string;
-  description: string;
+  displaynamewithhierarchy: string;
+  accountsearchdisplayname: string;
+  accttype: string;
+  cashflowrate: string;
 };
 
-const fetchNetsuiteAccounts = async ({
-  accountId,
-  token,
-  offset,
-}: {
-  accountId: string;
-  token: string;
-  offset: number;
-}): Promise<{ accounts: TNetsuiteAccountData[]; count: number; hasMore: boolean }> => {
-  const { data } = await QorusRequest.get<any>(
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-      path: `/services/rest/record/v1/account`,
-      params: {
-        offset: offset.toString(),
-        limit: DEFAULT_LIMIT.toString(),
-      },
-    },
-    { endpointId: 'NetSuite', url: `https://${accountId}.suitetalk.api.netsuite.com` }
-  );
+const fieldsToFetch = [
+  'id',
+  'displaynamewithhierarchy',
+  'accountsearchdisplayname',
+  'accttype',
+  'cashflowrate',
+  'lastmodifieddate',
+];
 
-  const { items: accounts, count, hasMore } = data;
-
-  return { accounts, count, hasMore };
-};
+const TOTAL_LIMIT = 500;
 
 const mapNetSuiteAccount = (account: TNetsuiteAccountData): IQoreAllowedValue => ({
   value: account.id,
-  display_name: account.accountSearchDisplayName,
-  desc: account.description,
+  display_name: account.accountsearchdisplayname,
+  desc:
+    `ID: ${account.id}\n\nDisplay Name: ${account.displaynamewithhierarchy}\n\n` +
+    `Type: ${account.accttype}\n\nCash Flow Rate: ${account.cashflowrate}`,
 });
 
 export const getNetsuiteAccountIdAllowedValues: TQoreGetAllowedValuesFunction<
@@ -61,17 +49,18 @@ export const getNetsuiteAccountIdAllowedValues: TQoreGetAllowedValuesFunction<
   try {
     let hasMore = true;
 
-    while (hasMore) {
+    while (hasMore && accounts.length < TOTAL_LIMIT) {
       if (Date.now() - startTime > NETSUITE_ALLOWED_VALUES_TIMEOUT) {
         Debugger.log('NetSuite accounts fetching timeout');
 
         break;
       }
 
-      const { accounts: fetchedAccounts, hasMore: more } = await fetchNetsuiteAccounts({
+      const { items: fetchedAccounts, hasMore: more } = await fetchSuiteQlData({
         accountId: account_id,
         token,
         offset,
+        q: `SELECT ${fieldsToFetch.join(',')} FROM account ORDER BY account.lastmodifieddate DESC`,
       });
 
       accounts.push(...fetchedAccounts.map(mapNetSuiteAccount));
@@ -83,6 +72,8 @@ export const getNetsuiteAccountIdAllowedValues: TQoreGetAllowedValuesFunction<
         await delay(NETSUITE_ALLOWED_VALUES_FETCH_DELAY);
       }
     }
+
+    return accounts;
   } catch (error) {
     Debugger.log('Error fetching Netsuite accounts:', error);
 

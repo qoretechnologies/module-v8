@@ -1,53 +1,45 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { delay } from '../../../global/helpers';
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
 import { Debugger } from '../../../utils/Debugger';
 import { NETSUITE_CONN_OPTIONS } from '../constants';
-import { NETSUITE_ALLOWED_VALUES_FETCH_DELAY, NETSUITE_ALLOWED_VALUES_TIMEOUT } from './constants';
-
-const DEFAULT_LIMIT = 1000;
+import {
+  fetchSuiteQlData,
+  NETSUITE_ALLOWED_VALUES_FETCH_DELAY,
+  NETSUITE_ALLOWED_VALUES_TIMEOUT,
+} from './constants';
 
 type TNetsuiteJournalEntryData = {
   id: string;
-  tranId: string;
-  tranDate: string;
+  foreigntotal: string;
+  createddate: string;
+  status: string;
+  tranid: string;
+  transactionnumber: string;
   memo: string;
+  trandisplayname: string;
 };
 
-const fetchNetsuiteJournalEntries = async ({
-  accountId,
-  token,
-  offset,
-}: {
-  accountId: string;
-  token: string;
-  offset: number;
-}): Promise<{ journalEntries: TNetsuiteJournalEntryData[]; count: number; hasMore: boolean }> => {
-  const { data } = await QorusRequest.get<any>(
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-      path: `/services/rest/record/v1/journalEntry`,
-      params: {
-        offset: offset.toString(),
-        limit: DEFAULT_LIMIT.toString(),
-      },
-    },
-    { endpointId: 'NetSuite', url: `https://${accountId}.suitetalk.api.netsuite.com` }
-  );
+const TOTAL_LIMIT = 500;
 
-  const { items: journalEntries, count, hasMore } = data;
-
-  return { journalEntries, count, hasMore };
-};
+const fieldsToFetch = [
+  'id',
+  'foreigntotal',
+  'createddate',
+  'status',
+  'tranid',
+  'transactionnumber',
+  'memo',
+  'trandisplayname',
+];
 
 const mapNetSuiteJournalEntry = (journalEntry: TNetsuiteJournalEntryData): IQoreAllowedValue => ({
   value: journalEntry.id,
-  display_name: `${journalEntry.tranId}  - ${journalEntry.tranDate}`,
+  display_name: journalEntry.trandisplayname,
   desc:
-    `ID: ${journalEntry.id}\n\nTransaction ID: ${journalEntry.tranId}\n\n` +
-    `Transaction Date: ${journalEntry.tranDate}\n\nMemo: ${journalEntry.memo}`,
+    `ID: ${journalEntry.id}\n\nForeign Total: ${journalEntry.foreigntotal}\n\n` +
+    `Created Date: ${journalEntry.createddate}\n\nStatus: ${journalEntry.status}\n\n` +
+    `Transaction ID: ${journalEntry.tranid}\n\nTransaction Number: ${journalEntry.transactionnumber}\n\n` +
+    `Memo: ${journalEntry.memo}`,
 });
 
 export const getNetsuiteJournalEntryIdAllowedValues: TQoreGetAllowedValuesFunction<
@@ -64,19 +56,19 @@ export const getNetsuiteJournalEntryIdAllowedValues: TQoreGetAllowedValuesFuncti
   try {
     let hasMore = true;
 
-    while (hasMore) {
+    while (hasMore && journalEntries.length < TOTAL_LIMIT) {
       if (Date.now() - startTime > NETSUITE_ALLOWED_VALUES_TIMEOUT) {
         Debugger.log('NetSuite journal entries fetching timeout');
 
         break;
       }
 
-      const { journalEntries: fetchedJournalEntries, hasMore: more } =
-        await fetchNetsuiteJournalEntries({
-          accountId: account_id,
-          token,
-          offset,
-        });
+      const { items: fetchedJournalEntries, hasMore: more } = await fetchSuiteQlData({
+        accountId: account_id,
+        token,
+        offset,
+        q: `SELECT ${fieldsToFetch.join(',')} FROM transaction WHERE type = 'Journal' ORDER BY createddate DESC`,
+      });
 
       journalEntries.push(...fetchedJournalEntries.map(mapNetSuiteJournalEntry));
 
@@ -87,6 +79,8 @@ export const getNetsuiteJournalEntryIdAllowedValues: TQoreGetAllowedValuesFuncti
         await delay(NETSUITE_ALLOWED_VALUES_FETCH_DELAY);
       }
     }
+
+    return journalEntries;
   } catch (error) {
     Debugger.log('Error fetching Netsuite journal entries:', error);
 

@@ -1,59 +1,27 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { delay } from '../../../global/helpers';
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
 import { Debugger } from '../../../utils/Debugger';
 import { NETSUITE_CONN_OPTIONS } from '../constants';
-import { NETSUITE_ALLOWED_VALUES_FETCH_DELAY, NETSUITE_ALLOWED_VALUES_TIMEOUT } from './constants';
-
-const DEFAULT_LIMIT = 1000;
+import {
+  fetchSuiteQlData,
+  NETSUITE_ALLOWED_VALUES_FETCH_DELAY,
+  NETSUITE_ALLOWED_VALUES_TIMEOUT,
+} from './constants';
 
 type TNetsuiteCustomerData = {
   id: string;
-  image: string;
-  url: string;
-  email: string;
-  phone: string;
-  firstName: string;
-  lastName: string;
-  title: string;
-  accountNumber: string;
+  fullname: string;
+  datecreated: string;
 };
 
-const fetchNetsuiteCustomers = async ({
-  accountId,
-  token,
-  offset,
-}: {
-  accountId: string;
-  token: string;
-  offset: number;
-}): Promise<{ customers: TNetsuiteCustomerData[]; count: number; hasMore: boolean }> => {
-  const { data } = await QorusRequest.get<any>(
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-      path: `/services/rest/record/v1/customer`,
-      params: {
-        offset: offset.toString(),
-        limit: DEFAULT_LIMIT.toString(),
-      },
-    },
-    { endpointId: 'NetSuite', url: `https://${accountId}.suitetalk.api.netsuite.com` }
-  );
+const fieldsToFetch = ['id', 'fullname', 'datecreated'];
 
-  const { items: customers, count, hasMore } = data;
-
-  return { customers, count, hasMore };
-};
+const TOTAL_LIMIT = 500;
 
 const mapNetSuiteCustomer = (customer: TNetsuiteCustomerData): IQoreAllowedValue => ({
   value: customer.id,
-  display_name: `${customer.firstName} ${customer.lastName}`,
-  ...(customer.image && { image: customer.image }),
-  desc:
-    `ID: ${customer.id}\n\nEmail: ${customer.email}\n\nPhone: ${customer.phone}\n\n` +
-    `Title: ${customer.title}\n\nAccount number: ${customer.accountNumber}`,
+  display_name: customer.fullname,
+  desc: `ID: ${customer.id}\n\nFull Name: ${customer.fullname}\n\nDate Created: ${customer.datecreated}`,
 });
 
 export const getNetsuiteCustomerIdAllowedValues: TQoreGetAllowedValuesFunction<
@@ -70,17 +38,18 @@ export const getNetsuiteCustomerIdAllowedValues: TQoreGetAllowedValuesFunction<
   try {
     let hasMore = true;
 
-    while (hasMore) {
+    while (hasMore && customers.length < TOTAL_LIMIT) {
       if (Date.now() - startTime > NETSUITE_ALLOWED_VALUES_TIMEOUT) {
         Debugger.log('NetSuite customer fetching timeout');
 
         break;
       }
 
-      const { customers: fetchedCustomers, hasMore: more } = await fetchNetsuiteCustomers({
+      const { items: fetchedCustomers, hasMore: more } = await fetchSuiteQlData({
         accountId: account_id,
         token,
         offset,
+        q: `SELECT ${fieldsToFetch.join(',')} FROM customer ORDER BY customer.datecreated DESC`,
       });
 
       customers.push(...fetchedCustomers.map(mapNetSuiteCustomer));
@@ -92,6 +61,8 @@ export const getNetsuiteCustomerIdAllowedValues: TQoreGetAllowedValuesFunction<
         await delay(NETSUITE_ALLOWED_VALUES_FETCH_DELAY);
       }
     }
+
+    return customers;
   } catch (error) {
     Debugger.log('Error fetching Netsuite customers:', error);
 
