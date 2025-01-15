@@ -30,6 +30,7 @@ export const NETSUITE_ALLOWED_PATHS = {
     GET: {
       override_options: {
         id: {
+          allowed_values_creatable: true,
           get_allowed_values: getNetsuiteAccountIdAllowedValues,
         },
       },
@@ -37,6 +38,7 @@ export const NETSUITE_ALLOWED_PATHS = {
     PATCH: {
       override_options: {
         id: {
+          allowed_values_creatable: true,
           get_allowed_values: getNetsuiteAccountIdAllowedValues,
         },
       },
@@ -44,6 +46,7 @@ export const NETSUITE_ALLOWED_PATHS = {
     DELETE: {
       override_options: {
         id: {
+          allowed_values_creatable: true,
           get_allowed_values: getNetsuiteAccountIdAllowedValues,
         },
       },
@@ -57,6 +60,7 @@ export const NETSUITE_ALLOWED_PATHS = {
     GET: {
       override_options: {
         id: {
+          allowed_values_creatable: true,
           get_allowed_values: getNetsuiteCustomerIdAllowedValues,
         },
       },
@@ -64,6 +68,7 @@ export const NETSUITE_ALLOWED_PATHS = {
     PATCH: {
       override_options: {
         id: {
+          allowed_values_creatable: true,
           get_allowed_values: getNetsuiteCustomerIdAllowedValues,
         },
       },
@@ -71,6 +76,7 @@ export const NETSUITE_ALLOWED_PATHS = {
     DELETE: {
       override_options: {
         id: {
+          allowed_values_creatable: true,
           get_allowed_values: getNetsuiteCustomerIdAllowedValues,
         },
       },
@@ -84,6 +90,7 @@ export const NETSUITE_ALLOWED_PATHS = {
     GET: {
       override_options: {
         id: {
+          allowed_values_creatable: true,
           get_allowed_values: getNetsuiteSalesOrderIdAllowedValues,
         },
       },
@@ -91,6 +98,7 @@ export const NETSUITE_ALLOWED_PATHS = {
     PATCH: {
       override_options: {
         id: {
+          allowed_values_creatable: true,
           get_allowed_values: getNetsuiteSalesOrderIdAllowedValues,
         },
       },
@@ -98,6 +106,7 @@ export const NETSUITE_ALLOWED_PATHS = {
     DELETE: {
       override_options: {
         id: {
+          allowed_values_creatable: true,
           get_allowed_values: getNetsuiteSalesOrderIdAllowedValues,
         },
       },
@@ -111,6 +120,7 @@ export const NETSUITE_ALLOWED_PATHS = {
     GET: {
       override_options: {
         id: {
+          allowed_values_creatable: true,
           get_allowed_values: getNetsuiteInvoiceIdAllowedValues,
         },
       },
@@ -118,6 +128,7 @@ export const NETSUITE_ALLOWED_PATHS = {
     PATCH: {
       override_options: {
         id: {
+          allowed_values_creatable: true,
           get_allowed_values: getNetsuiteInvoiceIdAllowedValues,
         },
       },
@@ -125,6 +136,7 @@ export const NETSUITE_ALLOWED_PATHS = {
     DELETE: {
       override_options: {
         id: {
+          allowed_values_creatable: true,
           get_allowed_values: getNetsuiteInvoiceIdAllowedValues,
         },
       },
@@ -138,6 +150,7 @@ export const NETSUITE_ALLOWED_PATHS = {
     GET: {
       override_options: {
         id: {
+          allowed_values_creatable: true,
           get_allowed_values: getNetsuitevendorIdAllowedValues,
         },
       },
@@ -145,6 +158,7 @@ export const NETSUITE_ALLOWED_PATHS = {
     PATCH: {
       override_options: {
         id: {
+          allowed_values_creatable: true,
           get_allowed_values: getNetsuitevendorIdAllowedValues,
         },
       },
@@ -152,6 +166,7 @@ export const NETSUITE_ALLOWED_PATHS = {
     DELETE: {
       override_options: {
         id: {
+          allowed_values_creatable: true,
           get_allowed_values: getNetsuitevendorIdAllowedValues,
         },
       },
@@ -165,6 +180,7 @@ export const NETSUITE_ALLOWED_PATHS = {
     GET: {
       override_options: {
         id: {
+          allowed_values_creatable: true,
           get_allowed_values: getNetsuitePurchaseOrderIdAllowedValues,
         },
       },
@@ -172,6 +188,7 @@ export const NETSUITE_ALLOWED_PATHS = {
     PATCH: {
       override_options: {
         id: {
+          allowed_values_creatable: true,
           get_allowed_values: getNetsuitePurchaseOrderIdAllowedValues,
         },
       },
@@ -179,6 +196,7 @@ export const NETSUITE_ALLOWED_PATHS = {
     DELETE: {
       override_options: {
         id: {
+          allowed_values_creatable: true,
           get_allowed_values: getNetsuitePurchaseOrderIdAllowedValues,
         },
       },
@@ -192,6 +210,7 @@ export const NETSUITE_ALLOWED_PATHS = {
     GET: {
       override_options: {
         id: {
+          allowed_values_creatable: true,
           get_allowed_values: getNetsuiteJournalEntryIdAllowedValues,
         },
       },
@@ -199,6 +218,7 @@ export const NETSUITE_ALLOWED_PATHS = {
     PATCH: {
       override_options: {
         id: {
+          allowed_values_creatable: true,
           get_allowed_values: getNetsuiteJournalEntryIdAllowedValues,
         },
       },
@@ -206,6 +226,7 @@ export const NETSUITE_ALLOWED_PATHS = {
     DELETE: {
       override_options: {
         id: {
+          allowed_values_creatable: true,
           get_allowed_values: getNetsuiteJournalEntryIdAllowedValues,
         },
       },
