@@ -118,11 +118,11 @@ export const buildActionsFromSwaggerSchema = ({
       const actionIdentifier = getPropertyOfSchemaData(
         dataWithoutParameters,
         'operationId',
-        `${path}/${method}`.replace(/\//g, '_')
+        `${path}/${method}`.replace(/\//g, '_').replace(/^_/, '').replace(/[{}]/g, '')
       );
 
       const action: IQorePartialAppActionWithSwaggerPath = {
-        action: normalizeName(actionIdentifier),
+        action: actionIdentifier,
         action_code: EQoreAppActionCode.ACTION,
         swagger_path: `${path}/${method.toUpperCase()}`,
         display_name:
