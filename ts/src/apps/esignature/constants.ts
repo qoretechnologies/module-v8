@@ -45,6 +45,7 @@ export const GetAccountIdConfig = {
 } satisfies TQoreAppActionOverrideOption<typeof ESIGNATURE_CONN_OPTIONS>;
 
 const GetEnvelopeIdAllowedValues = {
+  allowed_values_creatable: true,
   rest_get_allowed_values: {
     method: 'GET',
     path: 'envelopes?from_date=2010-01-01',

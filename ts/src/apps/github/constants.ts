@@ -5,6 +5,7 @@ import { getGitHubOwnerAllowedValues } from './helpers/get-owner-allowed-values'
 import { getGitHubOwnerDefaultValue } from './helpers/get-owner-default-value';
 import { getGitHubPullIdAllowedValues } from './helpers/get-pull-id-allowed-values';
 import { getGitHubRepositoryIdAllowedValues } from './helpers/get-repository-id-allowed-values';
+import { getGitHubOrgAllowedValues } from './helpers/get-user-org-allowed-values';
 
 export const GITHUB_APP_NAME = 'Github';
 
@@ -46,11 +47,25 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
   '/repos/{owner}/{repo}/pulls/{pull_number}': {
     GET: {
       independent_path_vars: ['repo'],
-      override_options: repoOwnerCommonOptions,
+      override_options: {
+        ...repoOwnerCommonOptions,
+        pull_number: {
+          get_allowed_values: getGitHubPullIdAllowedValues,
+          allowed_values_creatable: true,
+          depends_on: ['owner', 'repo'],
+        },
+      },
     },
     PATCH: {
       independent_path_vars: ['repo'],
-      override_options: repoOwnerCommonOptions,
+      override_options: {
+        ...repoOwnerCommonOptions,
+        pull_number: {
+          get_allowed_values: getGitHubPullIdAllowedValues,
+          allowed_values_creatable: true,
+          depends_on: ['owner', 'repo'],
+        },
+      },
     },
   },
   '/repos/{owner}/{repo}/issues': {
@@ -125,13 +140,34 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
     },
   },
   '/orgs/{org}/members': {
-    GET: {},
+    GET: {
+      override_options: {
+        org: {
+          get_allowed_values: getGitHubOrgAllowedValues,
+          required: true,
+          allowed_values_creatable: true,
+        },
+      },
+    },
   },
   '/orgs/{org}/repos': {
-    GET: {},
+    GET: {
+      override_options: {
+        org: {
+          get_allowed_values: getGitHubOrgAllowedValues,
+          required: true,
+          allowed_values_creatable: true,
+        },
+      },
+    },
     POST: {
       override_options: {
         name: { required: true },
+        org: {
+          get_allowed_values: getGitHubOrgAllowedValues,
+          required: true,
+          allowed_values_creatable: true,
+        },
       },
     },
   },

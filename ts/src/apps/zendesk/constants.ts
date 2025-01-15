@@ -1,6 +1,7 @@
 import { TAllowedPaths } from '../../global/models/qore';
 import { getAgentIdAllowedValues } from './helpers/get-agent-id-allowed-values';
 import { getGroupIdAllowedValues } from './helpers/get-group-id-allowed-values';
+import { getOrganizationIdAllowedValues } from './helpers/get-organization-id-allowed-values';
 import { getTicketIdAllowedValues } from './helpers/get-ticket-id-allowed-values';
 import { getTicketMetricIdAllowedValues } from './helpers/get-ticket-metric-id-allowed-values';
 import { getUserIdAllowedValues } from './helpers/get-user-id-allowed-values';
@@ -14,6 +15,7 @@ export const ZENDESK_ALLOWED_PATHS = {
     GET: {
       override_options: {
         ticket_id: {
+          allowed_values_creatable: true,
           get_allowed_values: getTicketIdAllowedValues,
         },
       },
@@ -21,6 +23,7 @@ export const ZENDESK_ALLOWED_PATHS = {
     PUT: {
       override_options: {
         ticket_id: {
+          allowed_values_creatable: true,
           get_allowed_values: getTicketIdAllowedValues,
         },
         comment: {
@@ -60,6 +63,7 @@ export const ZENDESK_ALLOWED_PATHS = {
     DELETE: {
       override_options: {
         ticket_id: {
+          allowed_values_creatable: true,
           get_allowed_values: getTicketIdAllowedValues,
         },
       },
@@ -328,21 +332,21 @@ export const ZENDESK_ALLOWED_PATHS = {
     DELETE: {
       override_options: {
         organization_id: {
-          get_allowed_values: getGroupIdAllowedValues,
+          get_allowed_values: getOrganizationIdAllowedValues,
         },
       },
     },
     GET: {
       override_options: {
         organization_id: {
-          get_allowed_values: getGroupIdAllowedValues,
+          get_allowed_values: getOrganizationIdAllowedValues,
         },
       },
     },
     PUT: {
       override_options: {
         organization_id: {
-          get_allowed_values: getGroupIdAllowedValues,
+          get_allowed_values: getOrganizationIdAllowedValues,
         },
         name: {
           type: 'string',
