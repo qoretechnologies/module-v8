@@ -16,6 +16,9 @@ export const getJiraProjectIdAllowedValues: TQoreGetAllowedValuesFunction<
       headers: {
         Authorization: `Bearer ${token}`,
       },
+      params: {
+        expand: 'description',
+      },
       path: `/ex/jira/${cloud_id}/rest/api/3/project`,
     },
     { url: `https://api.atlassian.com`, endpointId: 'Jira' }
@@ -25,8 +28,9 @@ export const getJiraProjectIdAllowedValues: TQoreGetAllowedValuesFunction<
     ...fetchedProjects.map(
       (project: any): IQoreAllowedValue => ({
         value: project.id,
-        display_name: project.name,
-        desc: `Link: [View project](${project.self})`,
+        display_name: `[${project.key}] ${project.name}`,
+        ...(project?.avatarUrls?.['48x48'] && { image: project.avatarUrls['48x48'] }),
+        ...(project?.description && { desc: project.description }),
       })
     )
   );
