@@ -1883,17 +1883,17 @@ const en = {
           shortDesc: 'Deletes a specific invoice.',
           longDesc: 'Removes an invoice record from NetSuite based on its ID.',
         },
-        journal_entry_get: {
+        journalEntry_get: {
           displayName: 'Get List of Journal Entries',
           shortDesc: 'Retrieve a list of journal entries.',
           longDesc: 'Fetches a list of journal entries based on specified filters.',
         },
-        journal_entry_post: {
+        journalEntry_post: {
           displayName: 'Create Journal Entry',
           shortDesc: 'Creates a new journal entry.',
           longDesc: 'Allows the user to create a new journal entry record in NetSuite.',
         },
-        journal_entry_id_get: {
+        journalEntry_id_get: {
           displayName: 'Get Journal Entry',
           shortDesc: 'Retrieve details of a specific journal entry.',
           longDesc: 'Fetches detailed information of a single journal entry by its ID.',
@@ -1903,12 +1903,12 @@ const en = {
           shortDesc: 'Updates an existing journal entry.',
           longDesc: 'Allows the user to update details of a specific journal entry by its ID.',
         },
-        journal_entry_id_delete: {
+        journalEntry_id_delete: {
           displayName: 'Delete Journal Entry',
           shortDesc: 'Deletes a specific journal entry.',
           longDesc: 'Removes a journal entry record from NetSuite based on its ID.',
         },
-        purchase_order_get: {
+        purchaseOrder_get: {
           displayName: 'Get List of Purchase Orders',
           shortDesc: 'Retrieve a list of purchase orders.',
           longDesc: 'Fetches a list of purchase orders based on specified filters.',
@@ -1918,42 +1918,42 @@ const en = {
           shortDesc: 'Creates a new purchase order.',
           longDesc: 'Allows the user to create a new purchase order record in NetSuite.',
         },
-        purchase_order_id_get: {
+        purchaseOrder_id_get: {
           displayName: 'Get Purchase Order',
           shortDesc: 'Retrieve details of a specific purchase order.',
           longDesc: 'Fetches detailed information of a single purchase order by its ID.',
         },
-        purchase_order_id_patch: {
+        purchaseOrder_id_patch: {
           displayName: 'Update Purchase Order',
           shortDesc: 'Updates an existing purchase order.',
           longDesc: 'Allows the user to update details of a specific purchase order by its ID.',
         },
-        purchase_order_id_delete: {
+        purchaseOrder_id_delete: {
           displayName: 'Delete Purchase Order',
           shortDesc: 'Deletes a specific purchase order.',
           longDesc: 'Removes a purchase order record from NetSuite based on its ID.',
         },
-        sales_order_get: {
+        salesOrder_get: {
           displayName: 'Get List of Sales Orders',
           shortDesc: 'Retrieve a list of sales orders.',
           longDesc: 'Fetches a list of sales orders based on specified filters.',
         },
-        sales_order_post: {
+        salesOrder_post: {
           displayName: 'Create Sales Order',
           shortDesc: 'Creates a new sales order.',
           longDesc: 'Allows the user to create a new sales order record in NetSuite.',
         },
-        sales_order_id_get: {
+        salesOrder_id_get: {
           displayName: 'Get Sales Order',
           shortDesc: 'Retrieve details of a specific sales order.',
           longDesc: 'Fetches detailed information of a single sales order by its ID.',
         },
-        sales_order_id_patch: {
+        salesOrder_id_patch: {
           displayName: 'Update Sales Order',
           shortDesc: 'Updates an existing sales order.',
           longDesc: 'Allows the user to update details of a specific sales order by its ID.',
         },
-        sales_order_id_delete: {
+        salesOrder_id_delete: {
           displayName: 'Delete Sales Order',
           shortDesc: 'Deletes a specific sales order.',
           longDesc: 'Removes a sales order record from NetSuite based on its ID.',

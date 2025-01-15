@@ -8928,7 +8928,7 @@ type RootTranslation = {
 					 */
 					longDesc: string
 				}
-				journal_entry_get: {
+				journalEntry_get: {
 					/**
 					 * G​e​t​ ​L​i​s​t​ ​o​f​ ​J​o​u​r​n​a​l​ ​E​n​t​r​i​e​s
 					 */
@@ -8942,7 +8942,7 @@ type RootTranslation = {
 					 */
 					longDesc: string
 				}
-				journal_entry_post: {
+				journalEntry_post: {
 					/**
 					 * C​r​e​a​t​e​ ​J​o​u​r​n​a​l​ ​E​n​t​r​y
 					 */
@@ -8956,7 +8956,7 @@ type RootTranslation = {
 					 */
 					longDesc: string
 				}
-				journal_entry_id_get: {
+				journalEntry_id_get: {
 					/**
 					 * G​e​t​ ​J​o​u​r​n​a​l​ ​E​n​t​r​y
 					 */
@@ -8984,7 +8984,7 @@ type RootTranslation = {
 					 */
 					longDesc: string
 				}
-				journal_entry_id_delete: {
+				journalEntry_id_delete: {
 					/**
 					 * D​e​l​e​t​e​ ​J​o​u​r​n​a​l​ ​E​n​t​r​y
 					 */
@@ -8998,7 +8998,7 @@ type RootTranslation = {
 					 */
 					longDesc: string
 				}
-				purchase_order_get: {
+				purchaseOrder_get: {
 					/**
 					 * G​e​t​ ​L​i​s​t​ ​o​f​ ​P​u​r​c​h​a​s​e​ ​O​r​d​e​r​s
 					 */
@@ -9026,7 +9026,7 @@ type RootTranslation = {
 					 */
 					longDesc: string
 				}
-				purchase_order_id_get: {
+				purchaseOrder_id_get: {
 					/**
 					 * G​e​t​ ​P​u​r​c​h​a​s​e​ ​O​r​d​e​r
 					 */
@@ -9040,7 +9040,7 @@ type RootTranslation = {
 					 */
 					longDesc: string
 				}
-				purchase_order_id_patch: {
+				purchaseOrder_id_patch: {
 					/**
 					 * U​p​d​a​t​e​ ​P​u​r​c​h​a​s​e​ ​O​r​d​e​r
 					 */
@@ -9054,7 +9054,7 @@ type RootTranslation = {
 					 */
 					longDesc: string
 				}
-				purchase_order_id_delete: {
+				purchaseOrder_id_delete: {
 					/**
 					 * D​e​l​e​t​e​ ​P​u​r​c​h​a​s​e​ ​O​r​d​e​r
 					 */
@@ -9068,7 +9068,7 @@ type RootTranslation = {
 					 */
 					longDesc: string
 				}
-				sales_order_get: {
+				salesOrder_get: {
 					/**
 					 * G​e​t​ ​L​i​s​t​ ​o​f​ ​S​a​l​e​s​ ​O​r​d​e​r​s
 					 */
@@ -9082,7 +9082,7 @@ type RootTranslation = {
 					 */
 					longDesc: string
 				}
-				sales_order_post: {
+				salesOrder_post: {
 					/**
 					 * C​r​e​a​t​e​ ​S​a​l​e​s​ ​O​r​d​e​r
 					 */
@@ -9096,7 +9096,7 @@ type RootTranslation = {
 					 */
 					longDesc: string
 				}
-				sales_order_id_get: {
+				salesOrder_id_get: {
 					/**
 					 * G​e​t​ ​S​a​l​e​s​ ​O​r​d​e​r
 					 */
@@ -9110,7 +9110,7 @@ type RootTranslation = {
 					 */
 					longDesc: string
 				}
-				sales_order_id_patch: {
+				salesOrder_id_patch: {
 					/**
 					 * U​p​d​a​t​e​ ​S​a​l​e​s​ ​O​r​d​e​r
 					 */
@@ -9124,7 +9124,7 @@ type RootTranslation = {
 					 */
 					longDesc: string
 				}
-				sales_order_id_delete: {
+				salesOrder_id_delete: {
 					/**
 					 * D​e​l​e​t​e​ ​S​a​l​e​s​ ​O​r​d​e​r
 					 */
@@ -18129,7 +18129,7 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 				}
-				journal_entry_get: {
+				journalEntry_get: {
 					/**
 					 * Get List of Journal Entries
 					 */
@@ -18143,7 +18143,7 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 				}
-				journal_entry_post: {
+				journalEntry_post: {
 					/**
 					 * Create Journal Entry
 					 */
@@ -18157,7 +18157,7 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 				}
-				journal_entry_id_get: {
+				journalEntry_id_get: {
 					/**
 					 * Get Journal Entry
 					 */
@@ -18185,7 +18185,7 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 				}
-				journal_entry_id_delete: {
+				journalEntry_id_delete: {
 					/**
 					 * Delete Journal Entry
 					 */
@@ -18199,7 +18199,7 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 				}
-				purchase_order_get: {
+				purchaseOrder_get: {
 					/**
 					 * Get List of Purchase Orders
 					 */
@@ -18227,7 +18227,7 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 				}
-				purchase_order_id_get: {
+				purchaseOrder_id_get: {
 					/**
 					 * Get Purchase Order
 					 */
@@ -18241,7 +18241,7 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 				}
-				purchase_order_id_patch: {
+				purchaseOrder_id_patch: {
 					/**
 					 * Update Purchase Order
 					 */
@@ -18255,7 +18255,7 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 				}
-				purchase_order_id_delete: {
+				purchaseOrder_id_delete: {
 					/**
 					 * Delete Purchase Order
 					 */
@@ -18269,7 +18269,7 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 				}
-				sales_order_get: {
+				salesOrder_get: {
 					/**
 					 * Get List of Sales Orders
 					 */
@@ -18283,7 +18283,7 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 				}
-				sales_order_post: {
+				salesOrder_post: {
 					/**
 					 * Create Sales Order
 					 */
@@ -18297,7 +18297,7 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 				}
-				sales_order_id_get: {
+				salesOrder_id_get: {
 					/**
 					 * Get Sales Order
 					 */
@@ -18311,7 +18311,7 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 				}
-				sales_order_id_patch: {
+				salesOrder_id_patch: {
 					/**
 					 * Update Sales Order
 					 */
@@ -18325,7 +18325,7 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 				}
-				sales_order_id_delete: {
+				salesOrder_id_delete: {
 					/**
 					 * Delete Sales Order
 					 */
