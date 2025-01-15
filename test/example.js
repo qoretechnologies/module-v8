@@ -328,6 +328,8 @@ exports.actionsCatalogue = {
                                     "desc": "B1 key",
                                 },
                             };
+                        } else {
+                            throw new Error('unknown key ' + ctx.opts.key);
                         }
                     }
                 },
@@ -674,7 +676,7 @@ exports.actionsCatalogue = {
                 @note the function here will be called with no "this" context; "this" cannot be used in this function
             */
             "webhook_register": async function(ctx, url) {
-                if (!ctx.opts.name) {
+                if (!ctx || !ctx.opts || !ctx.opts.name) {
                     throw new Error("missing name");
                 }
                 // this function should register the webhook with the server
@@ -694,6 +696,8 @@ exports.actionsCatalogue = {
                 // this function should deregister the webhook with the server
             },
             // webhook_event_loc?: string -> the location of the webhook event data in dot notation
+            // webhook_echo_header?: string -> the name of any header in the input request that should be echoed in
+            // the response
             // event_info: object
             /** The description of the event that the action will generate with the following keys
                 - id: *string -> the event code for the event; if not present will default to "event"

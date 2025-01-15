@@ -102,12 +102,12 @@ static void resolve_promise(const v8::FunctionCallbackInfo<v8::Value>& info) {
         return;
     }
 
-    /*
+#if 0
     {
         QoreNodeAsStringHelper str(*arg, FMT_NORMAL, &xsink);
         printd(5, "Promise callback arg: %s\n", str->c_str());
     }
-    */
+#endif
 
     ReferenceHolder<QoreListNode> args(new QoreListNode(autoTypeInfo), &xsink);
     args->push(arg.release(), &xsink);

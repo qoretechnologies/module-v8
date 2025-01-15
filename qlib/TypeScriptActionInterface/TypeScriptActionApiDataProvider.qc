@@ -209,8 +209,8 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
             if (!type) {
                 type = cast<HashDataType>(rt.copy());
             }
-            type.addQoreFields(map {$1.key: TypeScriptActionInterface::getField($1.key, $1.value)},
-                res.pairIterator());
+            type.addQoreFields(map {$1.key: TypeScriptActionInterface::getField("request-type", $1.key, $1.value,
+                self)}, res.pairIterator());
         }
         return type;
     }
@@ -232,8 +232,8 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
             if (!type) {
                 type = cast<HashDataType>(rt.copy());
             }
-            type.addQoreFields(map {$1.key: TypeScriptActionInterface::getField($1.key, $1.value)},
-                res.pairIterator());
+            type.addQoreFields(map {$1.key: TypeScriptActionInterface::getField("request-type", $1.key, $1.value,
+                self)}, res.pairIterator());
         }
         return type;
     }

@@ -141,6 +141,9 @@ public class TypeScriptActionInterface {
         #! Default I/O timeout in seconds
         const DefaultIoTimeoutSecs = 30;
 
+        #! Default post_auth I/O timeout in seconds
+        const DefaultPostAuthIoTimeoutSecs = 5;
+
         #! JavaScript event subtype for connections
         const AES_JS_EVENT = "javascript-event";
 
@@ -524,7 +527,7 @@ public class TypeScriptActionInterface {
                         "label": sprintf("REST post-auth option function for app %y", app.name),
                         "pool": pool,
                         "async_call": rest_modifiers.set_options_post_auth,
-                        "to": seconds(remove rest_modifiers.io_timeout_secs ?? DefaultIoTimeoutSecs),
+                        "to": seconds(remove rest_modifiers.io_timeout_secs ?? DefaultPostAuthIoTimeoutSecs),
                     };
                     TypeScriptActionInterface::registerAsyncCall(\post_auth, "app", app.name);
                 }
@@ -960,6 +963,7 @@ public class TypeScriptActionInterface {
 
     static string generateEventDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
             JavaScriptProgramPool pool, *SwaggerSchema schema) {
+        ActionFunctionContext fctx(app.name, action.action, pool);
         # get event info
         string event_id;
         hash<DataProviderMessageInfo> event_info;
@@ -990,13 +994,12 @@ public class TypeScriptActionInterface {
 
             event_info = <DataProviderMessageInfo>{
                 "desc": event.desc,
-                "type": TypeScriptActionInterface::getType("event", event.type, True),
+                "type": TypeScriptActionInterface::getType("event", event.type, True, NOTHING, fctx),
             };
         }
 
         timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
 
-        ActionFunctionContext fctx(app.name, action.action, pool);
         if (*hash<auto> opts = remove action.options) {
             action.options = TypeScriptActionInterface::getOptions(app, \action, opts, fctx);
             if (fctx.dmap) {
@@ -1074,12 +1077,19 @@ public class TypeScriptActionInterface {
                     webhook_event_loc.fullType());
             }
 
+            auto webhook_echo_header = remove action.webhook_echo_header;
+            if (exists webhook_echo_header && (webhook_echo_header.typeCode() != NT_STRING)) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"webhook_echo_header\" "
+                    "attribute; got type %y; expecting \"string\"", action.app, action.action,
+                    webhook_echo_header.fullType());
+            }
+
             TypeScriptActionInterface::registerAsyncCall(\webhook_register, "app", app.name, action.action);
             TypeScriptActionInterface::registerAsyncCall(\webhook_deregister, "app", app.name, action.action);
 
             child = new TypeScriptActionWebhookEventDataProvider(action.action, event_id, event_info,
                 get_example_event_data, fctx, method, webhook_register, webhook_deregister, webhook_auth,
-                webhook_perms, webhook_event_loc);
+                webhook_perms, webhook_event_loc, webhook_echo_header);
             rv = AES_WH_EVENT;
         } else {
             auto event_function = remove action.event_function;
@@ -1368,7 +1378,7 @@ public class TypeScriptActionInterface {
         foreach hash<auto> i in (opts.pairIterator()) {
             TypeScriptActionInterface::getOptionFunctions(\action, fctx, i.key, \i.value);
             rv{i.key} = TypeScriptActionInterface::getOptionInfo("option", i.value);
-            if (dmap{i.key}) {
+            if (fctx.dmap{i.key}) {
                 rv{i.key}.structural_determinate = True;
             }
             if ((*list<auto> deps = i.value.depends_on)
@@ -1407,8 +1417,8 @@ public class TypeScriptActionInterface {
         opts = new_opts;
     }
 
-    static hash<ActionOptionInfo> getOptionInfo(string path, hash<auto> opt) {
-        opt.type = TypeScriptActionInterface::getType(path, opt.type, opt.required, remove opt.element_type);
+    static hash<ActionOptionInfo> getOptionInfo(string path, hash<auto> opt, *ActionFunctionContext fctx) {
+        opt.type = TypeScriptActionInterface::getType(path, opt.type, opt.required, remove opt.element_type, fctx);
         if (opt.allowed_values) {
             opt.allowed_values = map cast<hash<AllowedValueInfo>>($1), opt.allowed_values;
         }
@@ -1431,7 +1441,7 @@ public class TypeScriptActionInterface {
         path += "-" + name;
         if (exists element_type) {
             AbstractDataProviderType et = TypeScriptActionInterface::getType(path + "-element",
-                element_type);
+                element_type, NOTHING, NOTHING, fctx);
             if (name =~ /^\*?list$/) {
                 return new ListDataType(et, !required);
             } else if (name =~ /^\*?hash$/) {
@@ -1455,7 +1465,7 @@ public class TypeScriptActionInterface {
             required = h.required;
         }
         if (h.type.typeCode() != NT_STRING) {
-            return TypeScriptActionInterface::getHashType(path, h, required);
+            return TypeScriptActionInterface::getHashType(path, h, required, fctx);
         }
 
         hash<auto> orig = h;
@@ -1488,20 +1498,20 @@ public class TypeScriptActionInterface {
                 TypeScriptActionInterface::getHashTypeIntern(path, ht, f, h.required, fctx);
             } else if (exists element_type) {
                 AbstractDataProviderType element_type = TypeScriptActionInterface::getType(path + "-element",
-                    element_type);
+                    element_type, NOTHING, NOTHING, fctx);
                 ht.setDefaultOtherFieldType(element_type);
             }
             rv = ht;
         } else if (orig.type == "list") {
             AbstractDataProviderType et;
             if (auto t = (remove h.element_type ?? element_type)) {
-                et = TypeScriptActionInterface::getType(path, t);
+                et = TypeScriptActionInterface::getType(path, t, NOTHING, NOTHING, fctx);
             }
             rv = new ListDataType(et ?? AutoType, !orig.required, NOTHING, tags, default_value, attr);
         } else if (orig.type == "softlist") {
             AbstractDataProviderType et;
             if (auto t = (remove h.element_type ?? element_type)) {
-                et = TypeScriptActionInterface::getType(path + "-element", t);
+                et = TypeScriptActionInterface::getType(path + "-element", t, NOTHING, NOTHING, fctx);
             }
             rv = new SoftListDataType(et ?? AutoType, !orig.required, NOTHING, tags, default_value, attr);
         } else {
@@ -1520,10 +1530,10 @@ public class TypeScriptActionInterface {
         return rv;
     }
 
-    static HashDataType getHashType(string path, hash<auto> h, *bool required) {
+    static HashDataType getHashType(string path, hash<auto> h, *bool required, *ActionFunctionContext fctx) {
         on_error rethrow $1.err, sprintf("%s (type: %y)", $1.desc, h);
         HashDataType type(required ? AutoHashType : AutoHashOrNothingType);
-        return TypeScriptActionInterface::getHashTypeIntern(path, type, h, required);
+        return TypeScriptActionInterface::getHashTypeIntern(path, type, h, required, fctx);
     }
 
     static HashDataType getHashTypeIntern(string path, HashDataType type, hash<auto> h, *bool required,
@@ -1557,7 +1567,8 @@ public class TypeScriptActionInterface {
         return type;
     }
 
-    static AbstractDataProviderType getType(string path, auto v, *bool required) {
+    static AbstractDataProviderType getType(string path, auto v, *bool required, auto element_type,
+            *ActionFunctionContext fctx) {
         throw "TYPE-ERROR", sprintf("Expecting \"string\" or \"hash\" for the option \"type\"; got %y "
             "instead", v.fullType());
     }
@@ -1893,9 +1904,10 @@ public class TypeScriptActionInterface {
         }
     }
 
-    static AbstractDataProviderType getModifiedType(string app, string opt, AbstractDataProviderType t, hash<auto> h) {
+    static AbstractDataProviderType getModifiedType(string app, string opt, AbstractDataProviderType t,
+            hash<auto> h, *ActionFunctionContext fctx) {
         if (h.type) {
-            return TypeScriptActionInterface::getType("type", h.type, h.required);
+            return TypeScriptActionInterface::getType("type", h.type, h.required, NOTHING, fctx);
         }
 
         QoreDataType rv;
@@ -2081,6 +2093,7 @@ class ActionFunctionContext {
         action = fctx.action;
         pool = fctx.pool;
         omap = fctx.omap;
+        dmap = fctx.dmap;
         romap = fctx.romap;
         dvmap = fctx.dvmap;
         depmap = fctx.depmap;

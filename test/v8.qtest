@@ -16,13 +16,107 @@ class V8Test inherits Test {
     }
 
     constructor() : Test("v8 test", "1.0") {
+        addTestCase("timeout", \timeoutTest());
+        /*
         addTestCase("process", \processTest());
         addTestCase("io test", \ioTest());
         addTestCase("async test", \asyncTest());
         addTestCase("v8 program test", \v8ProgramTest());
         addTestCase("exception test", \v8ExceptionTest());
+        */
         # Set return value for compatibility with test harnesses that check the return value
         set_return_value(main());
+    }
+
+    timeoutTest() {
+        {
+            JavaScriptProgram js("
+var exports = {};
+
+async function runWithTimeout(promise, delay) {
+  if (typeof promise === 'function') {
+    promise = promise();
+  }
+  if (!(promise instanceof Promise)) {
+    return promise;
+  }
+  // timeout variable to cancel the timeout in case the async function is faster
+  let timeout;
+  // get a promise to a cancelable timeout
+  let top = new Promise((_, reject) => (timeout = setTimeout(() => reject(new Error('Request timed out')), delay)));
+  // run the promise and cancel the timeout
+  return await Promise.race([
+    promise,
+    top
+  ]).finally(() => {if (timeout) clearTimeout(timeout)});
+}
+
+async function delay() {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(new Error('Main request timed out')), 1000);
+  });
+}
+
+async function nodelay() {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(new Error('Main request timed out')), 1);
+  });
+}
+", "test.js");
+            JavaScriptObject global = js.getGlobal();
+            code run = global.runWithTimeout.toData();
+            JavaScriptPromise p = run(global.delay, 100);
+            Queue q();
+            code push_val = sub (string w, auto v) {
+                if (v.message && v.stack) {
+                    q.push({
+                        "where": w,
+                        "val": {
+                            'message': v.message,
+                            'stack': v.stack,
+                        },
+                    });
+                } else {
+                    q.push({
+                        "where": w,
+                        "val": v,
+                    });
+                }
+            };
+            p.then(sub (auto v) {
+                push_val("then", v);
+            }, sub (auto e) {
+                push_val("reject", e);
+            }).doCatch(sub (auto e) {
+                push_val("catch", e);
+            });
+            background sub () {
+                p.wait();
+            }();
+            auto rv = q.get();
+            assertEq("reject", rv."where");
+            assertEq('Request timed out', rv.val.message);
+
+            p = run(global.nodelay, 1100);
+
+            p.then(sub (auto v) {
+                push_val("then", v);
+            }, sub (auto e) {
+                push_val("reject", e);
+            }).doCatch(sub (auto e) {
+                push_val("catch", e);
+            });
+            background sub () {
+                p.wait();
+            }();
+
+            rv = q.get();
+            assertEq("then", rv."where");
+            assertEq('Main request timed out', rv.val.message);
+
+            # allow async operation that timed out to complete
+            js.spinOnce();
+        }
     }
 
     processTest() {

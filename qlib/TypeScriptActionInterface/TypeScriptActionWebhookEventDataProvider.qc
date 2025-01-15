@@ -40,6 +40,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         *int webhook_auth;
         *list<auto> webhook_perms;
         *string webhook_event_loc;
+        *string webhook_echo_header;
 
         #! Event options for the webhook register and deregister calls
         *hash<auto> event_opts;
@@ -58,12 +59,13 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
     constructor(string name, string event_id, hash<DataProviderMessageInfo> event,
             *hash<AsyncCallInfo> get_example_event_data, ActionFunctionContext fctx, string method,
             hash<AsyncCallInfo> webhook_register, hash<AsyncCallInfo> webhook_deregister, *int webhook_auth,
-            *list<auto> webhook_perms, *string webhook_event_loc)
+            *list<auto> webhook_perms, *string webhook_event_loc, *string webhook_echo_header)
             : TypeScriptActionEventDataProviderBase(name, event_id, event, get_example_event_data, fctx) {
         self.method = method;
         self.webhook_register = webhook_register;
         self.webhook_deregister = webhook_deregister;
         self.webhook_event_loc = webhook_event_loc;
+        self.webhook_echo_header = webhook_echo_header;
     }
 
     destructor() {
@@ -80,6 +82,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
             "auth": webhook_auth,
             "perms": webhook_perms,
             "event_loc": webhook_event_loc,
+            "echo_header": webhook_echo_header,
             "callback": \callback(),
         });
         info("Registered webhook with URL %y", wf_info.url);
@@ -119,7 +122,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
     }
 
     private callback(*hash<auto> event) {
-        notifyObservers(event_id, event);
+        notifyObservers(event_id, event ?? {});
     }
 
     private hash<DataProviderInfo> getStaticInfoImpl() {

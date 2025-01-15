@@ -252,7 +252,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                 }
                 TypeScriptActionInterface::getOptionFunctions(\action, self, i.key, \i.value);
 
-                type.addField(new QoreDataField(TypeScriptActionInterface::getField("option", key, i.value)));
+                type.addField(new QoreDataField(TypeScriptActionInterface::getField("option", key, i.value, self)));
                 if (i.value_depends_on) {
                     depmap{key} = map {$1: True}, i.value.depends_on;
                 }
@@ -327,10 +327,11 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
 
         *bool req = remove type_hash.required;
         if (exists (auto tdesc = remove type_hash.type)) {
-            type = TypeScriptActionInterface::getType(path, tdesc, req ?? info.attr.required ?? qdf.isMandatory(), NOTHING,
-                fctx);
+            type = TypeScriptActionInterface::getType(path, tdesc, req ?? info.attr.required ?? qdf.isMandatory(),
+                NOTHING, fctx);
         }
-        info += TypeScriptActionInterface::getFieldHash(path, info.name, type ?? qdf.getType(), \type_hash, req);
+        info += TypeScriptActionInterface::getFieldHash(path, info.name, type ?? qdf.getType(), \type_hash, req,
+            fctx);
         if (attr) {
             info.attr += attr;
         }
