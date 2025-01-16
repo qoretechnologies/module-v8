@@ -259,6 +259,7 @@ export const ASANA_ALLOWED_PATHS: TAllowedPaths = {
       override_options: {
         project_gid: {
           required: true,
+          on_change: ['refetch'],
           allowed_values_creatable: true,
           rest_get_allowed_values: getAsanaProjectIdAllowedValuesRest,
         },
@@ -284,7 +285,6 @@ export const ASANA_ALLOWED_PATHS: TAllowedPaths = {
         },
         team: {
           required_groups: ['projects_group'],
-          depends_on: ['workspace'],
           get_allowed_values: getAsanaTeamIdAllowedValues,
         },
       },
@@ -369,17 +369,6 @@ export const ASANA_ALLOWED_PATHS: TAllowedPaths = {
         },
         workspace: {
           rest_get_allowed_values: getAsanaWorkspaceIdAllowedValuesRest,
-        },
-        projects: {
-          type: {
-            type: 'list',
-            element_type: 'string',
-          },
-          allowed_values_creatable: true,
-          rest_get_allowed_values: getAsanaProjectIdAllowedValuesRest,
-        },
-        created_by: {
-          rest_get_allowed_values: getAsanaUserIdAllowedValuesRest,
         },
         followers: {
           type: {
