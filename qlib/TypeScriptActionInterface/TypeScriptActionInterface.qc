@@ -1538,32 +1538,8 @@ public class TypeScriptActionInterface {
 
     static HashDataType getHashTypeIntern(string path, HashDataType type, hash<auto> h, *bool required,
             *ActionFunctionContext fctx) {
-        list<hash<auto>> dependent_fields;
-        if (exists (auto dps = remove h.dependent_fields)) {
-            if (dps.typeCode() != NT_LIST) {
-                throw "TYPE-ERROR", sprintf("\"dependent_fields\" must be a list; got type %y instead",
-                    dps.fullType());
-            }
-            dependent_fields = dps;
-        }
         type.addQoreFields(map {$1.key: TypeScriptActionInterface::getField(path, $1.key, $1.value, fctx)},
             h.pairIterator());
-
-        # add dependent fields
-        foreach auto dp in (dependent_fields) {
-            if (dp.typeCode() != NT_HASH) {
-                throw "TYPE-ERROR", sprintf("Each element of \"dependent_fields\" must be a hash; got type %y "
-                    "instead", dp.fullType());
-            }
-            if (dp.fields.typeCode() != NT_HASH) {
-                throw "TYPE-ERROR", sprintf("Each element of \"dependent_fields\" have a \"fields\" key with type "
-                    "\"hash\"; element %d has type %y", $# + 1, dp.fields.fullType());
-            }
-            hash<string, QoreDataField> fields = map {$1.key: new QoreDataField({"name": $1.key} + $1.value)},
-                dp.fields.pairIterator();
-            type.addDependentFields(dp.value, fields);
-        }
-
         return type;
     }
 
@@ -1664,9 +1640,10 @@ public class TypeScriptActionInterface {
                 };
                 TypeScriptActionInterface::registerAsyncCall(\fctx.omap{key}, "app", fctx.app, fctx.action, key);
 
-                info.attr.ref_data = key;
                 # remove any manual allowed values
                 remove info.allowed_values;
+                info.attr.ref_data = key;
+                info.attr.dynamic = True;
             }
             if (exists (*code c = remove type_hash.get_dependent_options)) {
                 string key = sprintf("%s-%s", path, name);
@@ -1682,6 +1659,8 @@ public class TypeScriptActionInterface {
                     "to": fctx.io_timeout,
                 };
                 TypeScriptActionInterface::registerAsyncCall(\fctx.dmap{key}, "app", fctx.app, fctx.action, key);
+                info.attr.data_dependent_options = True;
+                info.attr.dynamic = True;
             }
         }
 

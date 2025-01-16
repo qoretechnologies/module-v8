@@ -201,12 +201,6 @@ exports.actionsCatalogue = {
                     - short_desc?: string -> a short plain-text description of the field
                     - desc?: string -> a longer description for the field that supports markdown formatting
                     - type -> same as this - either a string or a data object again
-                    - dependent_fields?: object[] -> a list of data objects describing dependent fields of the last
-                      field in this type; each object must have the following keys
-                      - value: any -> of the same value type as the last field in under 'type'; must be unique, and
-                        must be a value corresponding to the parent field's type
-                      - fields: object -> a data object giving descriptions for each additional field, keys are field
-                        names, values have the format of this hash
                     - example_value?: any -> (values must use the field's type) any example value to use when
                       generating example data etc
                     - default_value?: any -> (values must use the field's type) the default value if none is provided
