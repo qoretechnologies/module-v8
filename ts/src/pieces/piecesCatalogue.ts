@@ -30,7 +30,7 @@ import {
   TQoreGetAllowedValuesFunction,
   TQoreGetDependentOptionsFunction,
   TQorePartialNonEventAction,
-  TQoreType,
+  TQoreTypeObject,
 } from 'global/models/qore';
 import { InputProperty } from '../core/framework/property/input';
 import { DEFAULT_LOGO } from '../global/constants';
@@ -268,11 +268,25 @@ class _PiecesAppCatalogue {
     let type = piecePropTypeToQoreOptionTypeIndex[prop.type];
 
     if (type === 'list') {
+      const fields: Record<string, IQoreAppActionOption> = {};
+
+      if ('properties' in prop) {
+        for (const [key, element] of Object.entries(prop.properties)) {
+          fields[key] = this.mapActionPropToAppActionOption(element);
+        }
+      }
+
       type = {
         type: 'list',
-        // TODO: Add element type
-        element_type: 'softstring',
-      } satisfies TQoreType;
+        ...(Object.keys(fields).length > 0
+          ? {
+              element_type: 'hash',
+              fields,
+            }
+          : {
+              element_type: 'softstring',
+            }),
+      } satisfies TQoreTypeObject;
     }
 
     if (prop.type === PropertyType.DYNAMIC && prop?.refreshers?.length) {
