@@ -48,7 +48,7 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
         AbstractConnection conn;
 
         #! Dynamic child data providers; only maintained in the parent
-        hash<string, DataProvider::AbstractDataProvider> childMap;
+        hash<string, TypeScriptActionDataProviderBase> childMap;
 
         #! Original data provider object
         TypeScriptActionAppDataProvider parent;
@@ -65,6 +65,14 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
         remove childMap;
     }
 
+    TypeScriptActionAppDataProvider copyWithParent(TypeScriptActionAppDataProvider parent,
+            TypeScriptAppRestConnection conn) {
+        TypeScriptActionAppDataProvider rv = copy();
+        rv.parent = parent;
+        rv.setConnection(conn);
+        return rv;
+    }
+
     #! Sets the parent data provider
     setParent(TypeScriptActionAppDataProvider parent) {
         self.parent = parent;
@@ -73,8 +81,8 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
     #! Sets the connection
     setConnection(TypeScriptAppRestConnection conn) {
         self.conn = conn;
-        if (!getLogger() && (*LoggerInterface logger = conn.getLogger())) {
-            setLogger(logger);
+        if (!getLogger() && (*LoggerInterface clogger = conn.getLogger())) {
+            setLogger(clogger);
         }
     }
 
@@ -83,7 +91,7 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
         return name;
     }
 
-    #! Register a new child data provider for Discord guilds
+    #! Register a new child (action) data provider
     registerChild(string pathname, DataProvider::AbstractDataProvider prov) {
         if (childMap{pathname}) {
             throw "TYPESCRIPT-CHILD-ERROR", sprintf("child %y already registered", pathname);
@@ -120,9 +128,7 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
         if (*TypeScriptActionDataProviderBase prov = childMap{name}) {
             if (!self.childMap) {
                 prov = prov.copy();
-                if (conn) {
-                    prov.setConnection(conn);
-                }
+                prov.setConnection(conn);
             }
             if (!prov.getLogger() && logger) {
                 prov.setLogger(logger);

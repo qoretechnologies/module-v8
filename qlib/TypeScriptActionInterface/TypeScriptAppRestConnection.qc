@@ -39,11 +39,12 @@ public class TypeScriptAppRestClient inherits RestClient {
     }
 
     #! Returns options to update after an OAuth2 login
-    private *hash<auto> getUpdateOptionsAfterLogin(hash<auto> h) {
-        *hash<auto> rv = RestClient::getUpdateOptionsAfterLogin(h);
-        LoggerWrapper::debug("Connection %y app %y post-auth resp: %y h: %y rv: %y (post_auth: %y)", conn.name,
-            conn.getAppName(), h, rv, post_auth);
-        if (post_auth) {
+    private *hash<auto> getUpdateOptionsAfterLogin(hash<auto> h, *bool refresh) {
+        *hash<auto> rv = RestClient::getUpdateOptionsAfterLogin(h, refresh);
+        LoggerWrapper::debug("Connection %y app %y post-auth resp: %y h: %y rv: %y (post_auth: %y) refresh: %y",
+            conn.name, conn.getAppName(), h, rv, post_auth, refresh);
+        # do not call post_auth when refreshing
+        if (post_auth && !refresh) {
             try {
                 rv += TypeScriptActionDataProviderBase::getAsyncValueArgs(self, post_auth, {
                     "conn_name": conn.name,

@@ -142,7 +142,7 @@ public class TypeScriptActionInterface {
         const DefaultIoTimeoutSecs = 30;
 
         #! Default post_auth I/O timeout in seconds
-        const DefaultPostAuthIoTimeoutSecs = 5;
+        const DefaultPostAuthIoTimeoutSecs = 30;
 
         #! JavaScript event subtype for connections
         const AES_JS_EVENT = "javascript-event";
@@ -1255,10 +1255,7 @@ public class TypeScriptActionInterface {
     static TypeScriptActionAppDataProvider getDataProvider(string app, TypeScriptAppRestConnection conn) {
         TypeScriptActionInterface::checkRoot();
         TypeScriptActionAppDataProvider parent = cast<TypeScriptActionAppDataProvider>(root.getChildProviderEx(app));
-        TypeScriptActionAppDataProvider rv = parent.copy();
-        rv.setParent(parent);
-        rv.setConnection(conn);
-        return rv;
+        return parent.copyWithParent(parent, conn);
     }
 
     static checkRoot() {
