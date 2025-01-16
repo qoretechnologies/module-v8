@@ -412,10 +412,8 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
     private auto doRequestImpl(auto req, *hash<auto> request_options) {
         on_error rethrow $1.err, sprintf("%s (req: %y request_options: %y)", $1.desc, req, request_options);
         if (!api) {
-            *RestClient rest = prov.tryGetRestClient();
-            if (!rest) {
-                prov.setRestClient(rest = conn.get());
-            }
+            # *always* replace the RestClient with each call; it can have outdated auth info
+            prov.setRestClient(rest = conn.get());
             if (req && req.typeCode() == NT_HASH) {
                 checkUpdateRestOptions(rest, req);
             }
