@@ -16,7 +16,7 @@ export const getAsanaSectionIdAllowedValues: TQoreGetAllowedValuesFunction = asy
       headers: {
         Authorization: `Bearer ${token}`,
       },
-      path: `/api/1.0/project/${project}/sections`,
+      path: `/api/1.0/projects/${project}/sections`,
     },
     { url: `https://app.asana.com`, endpointId: 'Asana' }
   );

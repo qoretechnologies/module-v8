@@ -123,12 +123,7 @@ export const createDatabase = createAction({
   auth: notionAuth,
   responseType: createDatabaseResponseType,
   props: {
-    databaseId: {
-      ...notionCommon.database_id,
-      required: false,
-      requiredGroups: ['createDatabaseGroup'],
-    },
-    pageId: { ...notionCommon.page, required: false, requiredGroups: ['createDatabaseGroup'] },
+    pageId: { ...notionCommon.page, required: true },
     title: Property.ShortText({
       displayName: 'Title',
       description: 'The title of the database',
@@ -164,9 +159,7 @@ export const createDatabase = createAction({
       notionVersion: '2022-02-22',
     });
 
-    const parent = context.propsValue.databaseId
-      ? { database_id: context.propsValue.databaseId }
-      : { page_id: context.propsValue.pageId };
+    const parent = { page_id: context.propsValue.pageId };
 
     return await notion.databases.create({
       parent,

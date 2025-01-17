@@ -276,6 +276,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
         id: {
           required: true,
           depends_on: ['issueIdOrKey'],
+          allowed_values_creatable: true,
           get_allowed_values: getJiraCommentIdAllowedValues,
         },
       },
@@ -283,11 +284,13 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     DELETE: {
       override_options: {
         issueIdOrKey: {
+          allowed_values_creatable: true,
           get_allowed_values: getJiraIssueIdAllowedValues,
         },
         id: {
           required: true,
           depends_on: ['issueIdOrKey'],
+          allowed_values_creatable: true,
           get_allowed_values: getJiraCommentIdAllowedValues,
         },
       },
@@ -295,11 +298,13 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     PUT: {
       override_options: {
         issueIdOrKey: {
+          allowed_values_creatable: true,
           get_allowed_values: getJiraIssueIdAllowedValues,
         },
         id: {
           required: true,
           depends_on: ['issueIdOrKey'],
+          allowed_values_creatable: true,
           get_allowed_values: getJiraCommentIdAllowedValues,
         },
         body: { ...jiraDocumentFormatOption, required: false },
@@ -340,6 +345,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
         },
         id: {
           depends_on: ['issueIdOrKey'],
+          allowed_values_creatable: true,
           get_allowed_values: getJiraWorklogIdAllowedValues,
         },
       },
@@ -352,6 +358,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
         },
         id: {
           depends_on: ['issueIdOrKey'],
+          allowed_values_creatable: true,
           get_allowed_values: getJiraWorklogIdAllowedValues,
         },
       },
@@ -364,6 +371,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
         },
         id: {
           depends_on: ['issueIdOrKey'],
+          allowed_values_creatable: true,
           get_allowed_values: getJiraWorklogIdAllowedValues,
         },
       },
@@ -392,6 +400,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     PUT: {
       override_options: {
         fieldId: {
+          allowed_values_creatable: true,
           get_allowed_values: getJiraFieldIdAllowedValues,
         },
       },
@@ -401,6 +410,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     POST: {
       override_options: {
         id: {
+          allowed_values_creatable: true,
           get_allowed_values: getJiraFieldIdAllowedValues,
         },
       },

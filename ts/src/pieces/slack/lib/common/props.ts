@@ -124,4 +124,16 @@ export const text = Property.LongText({
 export const actions = Property.Array({
   displayName: 'Action Buttons',
   required: true,
+  properties: {
+    title: Property.ShortText({
+      displayName: 'Title',
+      description: 'The title of the button',
+      required: true,
+    }),
+    url: Property.ShortText({
+      displayName: 'URL',
+      description: 'The URL to open when the button is clicked',
+      required: true,
+    }),
+  },
 });

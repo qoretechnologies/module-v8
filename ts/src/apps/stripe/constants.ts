@@ -89,6 +89,7 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     GET: {
       override_options: {
         id: {
+          allowed_values_creatable: true,
           get_allowed_values: getStripeBalanceHistoryIdAllowedValues,
         },
       },
@@ -114,6 +115,7 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     GET: {
       override_options: {
         charge: {
+          allowed_values_creatable: true,
           get_allowed_values: getStripeChargeIdAllowedValues,
         },
       },
@@ -121,6 +123,7 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     POST: {
       override_options: {
         charge: {
+          allowed_values_creatable: true,
           get_allowed_values: getStripeChargeIdAllowedValues,
         },
       },
@@ -140,6 +143,7 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     DELETE: {
       override_options: {
         customer: {
+          allowed_values_creatable: true,
           get_allowed_values: getStripeCustomerIdAllowedValues,
         },
       },
@@ -147,6 +151,7 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     GET: {
       override_options: {
         customer: {
+          allowed_values_creatable: true,
           get_allowed_values: getStripeCustomerIdAllowedValues,
         },
       },
@@ -154,6 +159,7 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     POST: {
       override_options: {
         customer: {
+          allowed_values_creatable: true,
           get_allowed_values: getStripeCustomerIdAllowedValues,
         },
       },
@@ -163,6 +169,7 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     GET: {
       override_options: {
         customer: {
+          allowed_values_creatable: true,
           get_allowed_values: getStripeCustomerIdAllowedValues,
         },
       },
@@ -176,6 +183,7 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
           required: true,
         },
         customer: {
+          allowed_values_creatable: true,
           get_allowed_values: getStripeCustomerIdAllowedValues,
         },
       },
@@ -185,6 +193,7 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     GET: {
       override_options: {
         customer: {
+          allowed_values_creatable: true,
           get_allowed_values: getStripeCustomerIdAllowedValues,
         },
       },
@@ -195,6 +204,7 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
           required: true,
         },
         customer: {
+          allowed_values_creatable: true,
           get_allowed_values: getStripeCustomerIdAllowedValues,
         },
       },
@@ -204,6 +214,7 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     GET: {
       override_options: {
         customer: {
+          allowed_values_creatable: true,
           get_allowed_values: getStripeCustomerIdAllowedValues,
         },
       },
@@ -211,6 +222,7 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     POST: {
       override_options: {
         customer: {
+          allowed_values_creatable: true,
           get_allowed_values: getStripeCustomerIdAllowedValues,
         },
       },
@@ -221,6 +233,7 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     POST: {
       override_options: {
         customer: {
+          allowed_values_creatable: true,
           get_allowed_values: getStripeCustomerIdAllowedValues,
           required: true,
         },
@@ -231,6 +244,7 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     DELETE: {
       override_options: {
         invoice: {
+          allowed_values_creatable: true,
           get_allowed_values: getStripeInvoiceIdAllowedValues,
         },
       },
@@ -238,6 +252,7 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     GET: {
       override_options: {
         invoice: {
+          allowed_values_creatable: true,
           get_allowed_values: getStripeInvoiceIdAllowedValues,
         },
       },
@@ -245,6 +260,7 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     POST: {
       override_options: {
         invoice: {
+          allowed_values_creatable: true,
           get_allowed_values: getStripeInvoiceIdAllowedValues,
         },
       },
@@ -271,10 +287,12 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     POST: {
       override_options: {
         charge: {
+          allowed_values_creatable: true,
           get_allowed_values: getStripeChargeIdAllowedValues,
           required_groups: ['refund-group'],
         },
         payment_intent: {
+          allowed_values_creatable: true,
           get_allowed_values: getStripePaymentIntentIdAllowedValues,
           required_groups: ['refund-group'],
         },

@@ -189,7 +189,27 @@ export const notionCommon = {
           ) {
             continue;
           }
-          fields[property.name] = NotionFieldMapping[property.type].buildActivepieceType(property);
+          if (property.type === 'people') {
+            const { results } = await notion.users.list({ page_size: 100 });
+            fields[property.name] = Property.StaticMultiSelectDropdown({
+              displayName: property.name,
+              required: false,
+              options: {
+                disabled: false,
+                options: results
+                  .filter((user) => user.type === 'person' && user.name !== null)
+                  .map((option: { id: string; name: any }) => {
+                    return {
+                      label: option.name,
+                      value: option.id,
+                    };
+                  }),
+              },
+            });
+          } else {
+            fields[property.name] =
+              NotionFieldMapping[property.type].buildActivepieceType(property);
+          }
         }
       } catch (e) {
         console.debug(e);

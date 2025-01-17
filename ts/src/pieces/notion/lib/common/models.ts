@@ -464,7 +464,8 @@ export const NotionFieldMapping: Record<string, any> = {
     }),
   },
   people: {
-    buildActivepieceType: undefined,
+    buildActivepieceType: (property: PeopleDatabaseProperty) =>
+      Property.ShortText({ displayName: property.name, required: false }),
     buildNotionType: (property: DynamicPropsValue) => ({
       people: property.map((id: any) => ({ id: id })),
     }),

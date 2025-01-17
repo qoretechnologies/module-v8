@@ -26,9 +26,10 @@ export const getJiraUserIdAllowedValues: TQoreGetAllowedValuesFunction<
       (user: any): IQoreAllowedValue => ({
         value: user.accountId,
         display_name: user.displayName,
+        ...(user.avatarUrls?.['48x48'] && { image: user.avatarUrls['48x48'] }),
         desc:
           `Type: ${user.accountType}\n\nEmail: ${user.emailAddress}\n\n` +
-          `Id: ${user.accountId}\n\nLink: [View user](${user.self})`,
+          `Id: ${user.accountId}\n`,
       })
     )
   );
