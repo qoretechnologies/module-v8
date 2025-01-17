@@ -101,12 +101,21 @@ exports.actionsCatalogue = {
                   are option names; values are converted to option hashes described by the COnnectionOptionInfo
                   hashdecl: https://qoretechnologies.com/manual/qorus/gitlab-docs/develop/qore/modules/ConnectionProvider/html/struct_connection_provider_1_1_connection_option_info.html
                 - required_options?: string[] -> a list of required options for connections for this app
-                - set_options_post_auth?: function (ctx? : object) : object? -> A function that is called after
+                - set_options_post_auth?: async function (ctx? : object) : object? -> A function that is called after
                   authenticating to retrieve additional options to set on the connection; the return value must be an
                   object with serializable values that are connection options; the options will be stored on the
                   connection itself; 'ctx' is an object with the following keys:
                   - conn_name: string -> the connection name, if any is defined
-                  - conn_opts: object -> connection options + processed options from the auth response + the auth response itself
+                  - conn_opts: object -> connection options + processed options from the auth response + the auth
+                    response itself
+                - set_options_post_auth_code?: function (ctx? : object) : object? -> A function that is called after
+                  authenticating to retrieve additional options to set on the connection; the return value must be an
+                  object with serializable values that are connection options; no I/O should be performed in this
+                  function, as it will be called from the async connection poller object; options returned will be
+                  stored on the connection itself; 'ctx' is an object with the following keys:
+                  - conn_name: string -> the connection name, if any is defined
+                  - conn_opts: object -> connection options + processed options from the auth response + the auth
+                    response itself
                 - url_template_options?: string[] -> a list of option names that will be used to substitute values in
                   URLs; the URL should contain strings like '{{option_name}}'
             */
@@ -119,7 +128,7 @@ exports.actionsCatalogue = {
                         "type": "string",
                     },
                 },
-                "set_options_post_auth": function (ctx) {
+                "set_options_post_auth": async function (ctx) {
                     return {
                         "account_id": "abc123",
                     };
