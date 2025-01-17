@@ -248,14 +248,17 @@ class _PiecesAppCatalogue {
     let depends_on: string[] | undefined = undefined;
     const description = prop.description || prop.displayName;
 
-    // Checking if the prop has allowed get allowed values function
+    // Checking if the prop has allowed values or get allowed values function
     if (typeof prop === 'object' && 'options' in prop) {
-      allowed_values = this.mapPieceAllowedValuesToQoreAllowedValues(
-        prop.options as DropdownState<any>
-      );
-      get_allowed_values = this.mapPieceGetOptionsToQoreGetAllowedValues(
-        prop.options as DynamicDropdownOptions<any>
-      );
+      if (typeof prop.options === 'object') {
+        allowed_values = this.mapPieceAllowedValuesToQoreAllowedValues(
+          prop.options as DropdownState<any>
+        );
+      } else if (typeof prop.options === 'function') {
+        get_allowed_values = this.mapPieceGetOptionsToQoreGetAllowedValues(
+          prop.options as DynamicDropdownOptions<any>
+        );
+      }
     }
 
     // Checking if the prop has dependent or dynamic options
