@@ -280,8 +280,10 @@ class _PiecesAppCatalogue {
         type: 'list',
         ...(Object.keys(fields).length > 0
           ? {
-              element_type: 'hash',
-              fields,
+              element_type: {
+                type: 'hash',
+                fields,
+              },
             }
           : {
               element_type: 'softstring',
