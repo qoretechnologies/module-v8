@@ -337,8 +337,22 @@ public class TypeScriptActionInterface {
         return name;
     }
 
+    static registerAsyncCall(*bool ignore_dup, reference<hash<AsyncCallInfo>> call, ...) {
+        try {
+            TypeScriptActionInterface::registerAsyncCallArgs(\call, argv);
+        } catch (hash<ExceptionInfo> ex) {
+            if (!ignore_dup || (ex.err != "ASYNC-CALL-ERROR")) {
+                rethrow;
+            }
+        }
+    }
+
     static registerAsyncCall(reference<hash<AsyncCallInfo>> call, ...) {
-        string key = (foldl $1 + "-" + $2, argv) + sprintf("-%s", call.type);
+        TypeScriptActionInterface::registerAsyncCallArgs(\call, argv);
+    }
+
+    static registerAsyncCallArgs(reference<hash<AsyncCallInfo>> call, list<auto> args) {
+        string key = (foldl $1 + "-" + $2, args) + sprintf("-%s", call.type);
         if (acmap{key}) {
             throw "ASYNC-CALL-ERROR", sprintf("Call %s is already registered", key);
         }
@@ -1449,7 +1463,7 @@ public class TypeScriptActionInterface {
     }
 
     static AbstractDataProviderType getType(string path, string name, *bool required, auto element_type,
-            *ActionFunctionContext fctx) {
+            *ActionFunctionContext fctx, *bool ignore_dup) {
         if (!required) {
             if (name !~ /^\*/) {
                 name = "*" + name;
@@ -1461,7 +1475,7 @@ public class TypeScriptActionInterface {
         path += "-" + name;
         if (exists element_type) {
             AbstractDataProviderType et = TypeScriptActionInterface::getType(path + "-element",
-                element_type, NOTHING, NOTHING, fctx);
+                element_type, NOTHING, NOTHING, fctx, ignore_dup);
             if (name =~ /^\*?list$/) {
                 return new ListDataType(et, !required);
             } else if (name =~ /^\*?hash$/) {
@@ -1480,12 +1494,12 @@ public class TypeScriptActionInterface {
     }
 
     static AbstractDataProviderType getType(string path, hash<auto> h, *bool required, auto element_type,
-            *ActionFunctionContext fctx) {
+            *ActionFunctionContext fctx, *bool ignore_dup) {
         if (h.required.typeCode() == NT_BOOLEAN) {
             required = h.required;
         }
         if (h.type.typeCode() != NT_STRING) {
-            return TypeScriptActionInterface::getHashType(path, h, required, fctx);
+            return TypeScriptActionInterface::getHashType(path, h, required, fctx, ignore_dup);
         }
 
         hash<auto> orig = h;
@@ -1515,7 +1529,7 @@ public class TypeScriptActionInterface {
             */
             HashDataType ht(type, attr.name, NOTHING, tags, default_value, attr);
             if (f) {
-                TypeScriptActionInterface::getHashTypeIntern(path, ht, f, h.required, fctx);
+                TypeScriptActionInterface::getHashTypeIntern(path, ht, f, h.required, fctx, ignore_dup);
             } else if (exists element_type) {
                 AbstractDataProviderType element_type = TypeScriptActionInterface::getType(path + "-element",
                     element_type, NOTHING, NOTHING, fctx);
@@ -1550,31 +1564,34 @@ public class TypeScriptActionInterface {
         return rv;
     }
 
-    static HashDataType getHashType(string path, hash<auto> h, *bool required, *ActionFunctionContext fctx) {
+    static HashDataType getHashType(string path, hash<auto> h, *bool required, *ActionFunctionContext fctx,
+            *bool ignore_dup) {
         on_error rethrow $1.err, sprintf("%s (type: %y)", $1.desc, h);
         HashDataType type(required ? AutoHashType : AutoHashOrNothingType);
-        return TypeScriptActionInterface::getHashTypeIntern(path, type, h, required, fctx);
+        return TypeScriptActionInterface::getHashTypeIntern(path, type, h, required, fctx, ignore_dup);
     }
 
     static HashDataType getHashTypeIntern(string path, HashDataType type, hash<auto> h, *bool required,
-            *ActionFunctionContext fctx) {
-        type.addQoreFields(map {$1.key: TypeScriptActionInterface::getField(path, $1.key, $1.value, fctx)},
-            h.pairIterator());
+            *ActionFunctionContext fctx, *bool ignore_dup) {
+        type.addQoreFields(map {$1.key: TypeScriptActionInterface::getField(path, $1.key, $1.value, fctx,
+            ignore_dup)}, h.pairIterator());
         return type;
     }
 
     static AbstractDataProviderType getType(string path, auto v, *bool required, auto element_type,
-            *ActionFunctionContext fctx) {
+            *ActionFunctionContext fctx, *bool ignore_dup) {
         throw "TYPE-ERROR", sprintf("Expecting \"string\" or \"hash\" for the option \"type\"; got %y "
             "instead", v.fullType());
     }
 
-    static hash<auto> getField(string path, string name, hash<auto> h, *ActionFunctionContext fctx) {
+    static hash<auto> getField(string path, string name, hash<auto> h, *ActionFunctionContext fctx,
+            *bool ignore_dup) {
         on_error rethrow $1.err, sprintf("%s (field: %y)", $1.desc, h);
         *bool req = remove h.required;
         path += "-" + name;
-        AbstractDataProviderType type = TypeScriptActionInterface::getType(path, remove h.type, req, NOTHING, fctx);
-        hash<auto> rv = TypeScriptActionInterface::getFieldHash(path, name, type, \h, req, fctx);
+        AbstractDataProviderType type = TypeScriptActionInterface::getType(path, remove h.type, req, NOTHING, fctx,
+            ignore_dup);
+        hash<auto> rv = TypeScriptActionInterface::getFieldHash(path, name, type, \h, req, fctx, ignore_dup);
         if (h) {
             throw "FIELD-ERROR", sprintf("Field description has unknown keys: %y", keys h);
         }
@@ -1582,7 +1599,7 @@ public class TypeScriptActionInterface {
     }
 
     static hash<auto> getFieldHash(string path, string name, AbstractDataProviderType type,
-            reference<hash<auto>> type_hash, *bool req, *ActionFunctionContext fctx) {
+            reference<hash<auto>> type_hash, *bool req, *ActionFunctionContext fctx, *bool ignore_dup) {
         hash<auto> info += {
             "name": name,
             "type": type,
@@ -1658,7 +1675,8 @@ public class TypeScriptActionInterface {
                     "async_call": c,
                     "to": fctx.io_timeout,
                 };
-                TypeScriptActionInterface::registerAsyncCall(\fctx.omap{key}, "app", fctx.app, fctx.action, key);
+                TypeScriptActionInterface::registerAsyncCall(ignore_dup, \fctx.omap{key}, "app", fctx.app,
+                    fctx.action, key);
 
                 # remove any manual allowed values
                 remove info.allowed_values;
@@ -1678,7 +1696,8 @@ public class TypeScriptActionInterface {
                     "async_call": c,
                     "to": fctx.io_timeout,
                 };
-                TypeScriptActionInterface::registerAsyncCall(\fctx.dmap{key}, "app", fctx.app, fctx.action, key);
+                TypeScriptActionInterface::registerAsyncCall(ignore_dup, \fctx.dmap{key}, "app", fctx.app,
+                    fctx.action, key, ignore_dup);
                 info.attr.data_dependent_options = True;
                 info.attr.dynamic = True;
             }
