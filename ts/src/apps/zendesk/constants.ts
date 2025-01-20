@@ -47,9 +47,11 @@ export const ZENDESK_ALLOWED_PATHS = {
           },
         },
         group_id: {
+          allowed_values_creatable: true,
           get_allowed_values: getGroupIdAllowedValues,
         },
         organization_id: {
+          allowed_values_creatable: true,
           get_allowed_values: getGroupIdAllowedValues,
         },
         assignee_id: {
@@ -97,9 +99,11 @@ export const ZENDESK_ALLOWED_PATHS = {
           required: true,
         },
         group_id: {
+          allowed_values_creatable: true,
           get_allowed_values: getGroupIdAllowedValues,
         },
         organization_id: {
+          allowed_values_creatable: true,
           get_allowed_values: getGroupIdAllowedValues,
         },
         assignee_id: {
@@ -118,6 +122,7 @@ export const ZENDESK_ALLOWED_PATHS = {
     DELETE: {
       override_options: {
         group_id: {
+          allowed_values_creatable: true,
           get_allowed_values: getGroupIdAllowedValues,
         },
       },
@@ -125,6 +130,7 @@ export const ZENDESK_ALLOWED_PATHS = {
     GET: {
       override_options: {
         group_id: {
+          allowed_values_creatable: true,
           get_allowed_values: getGroupIdAllowedValues,
         },
       },
@@ -132,6 +138,7 @@ export const ZENDESK_ALLOWED_PATHS = {
     PUT: {
       override_options: {
         group_id: {
+          allowed_values_creatable: true,
           get_allowed_values: getGroupIdAllowedValues,
         },
         group: {
@@ -160,6 +167,8 @@ export const ZENDESK_ALLOWED_PATHS = {
                   type: 'list',
                   element_type: 'string',
                 },
+                allowed_values_creatable: true,
+                get_allowed_values: getUserIdAllowedValues,
                 required: false,
               },
             },
@@ -198,6 +207,8 @@ export const ZENDESK_ALLOWED_PATHS = {
                   type: 'list',
                   element_type: 'string',
                 },
+                allowed_values_creatable: true,
+                get_allowed_values: getUserIdAllowedValues,
                 required: false,
               },
             },
@@ -354,6 +365,7 @@ export const ZENDESK_ALLOWED_PATHS = {
         },
         group_id: {
           type: 'string',
+          allowed_values_creatable: true,
           get_allowed_values: getGroupIdAllowedValues,
         },
         notes: {
@@ -374,6 +386,7 @@ export const ZENDESK_ALLOWED_PATHS = {
           required: true,
         },
         group_id: {
+          allowed_values_creatable: true,
           get_allowed_values: getGroupIdAllowedValues,
         },
       },
