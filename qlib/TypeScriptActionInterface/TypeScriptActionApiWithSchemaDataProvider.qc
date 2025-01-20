@@ -142,7 +142,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
 
         if (path_vars) {
             self.path_vars = path_vars;
-            hash<string, AbstractDataField> fields = map {$1: new QoreDataField({
+            hash<string, AbstractDataField> fields = map {$1: new TypeScriptDataField({
                 "name": $1,
                 "type": AbstractDataProviderTypeMap."softstring",
                 "desc": sprintf("URI path variable %y", $1),
@@ -169,7 +169,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                     while (path_vars{fname}) {
                         fname = sprintf("data-%d", ++i);
                     }
-                    fields{fname} = new QoreDataField({
+                    fields{fname} = new TypeScriptDataField({
                         "name": fname,
                         "type": request_type,
                         "desc": "API request type",
@@ -252,7 +252,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                 }
                 TypeScriptActionInterface::getOptionFunctions(\action, self, i.key, \i.value);
 
-                type.addField(new QoreDataField(TypeScriptActionInterface::getField("option", key, i.value, self)));
+                type.addField(TypeScriptActionInterface::getField("option", key, i.value, self));
                 if (i.value_depends_on) {
                     depmap{key} = map {$1: True}, i.value.depends_on;
                 }
@@ -312,8 +312,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                 "expecting \"QoreDataField\"", action.app, action.action, key, k, f.className());
         }
         if (l) {
-            TypeScriptActionApiWithSchemaDataProvider::overrideOptionType(path, action, f.getType(), l, type_hash, k,
-                fctx);
+            overrideOptionType(path, action, f.getType(), l, type_hash, k, fctx);
             return;
         }
 
@@ -341,7 +340,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                 "keys: %y", action.app, action.action, key, k, keys type_hash);
         }
         on_error printf("%y info: %N\n", key, info + {"type": info.type.getName()});
-        t.replaceField(new QoreDataField(info));
+        t.replaceField(new TypeScriptDataField(info));
         #printf("Edited %y (%s) => %y mandatory: %y av: %y (parent %y)\n", k, t.getFields(){k}.uniqueHash(),
         #    t.getFields(){k}.getType().className(), t.getFields(){k}.isMandatory(),
         #    t.getFields(){k}.getAllowedValues(), type.className());
@@ -399,7 +398,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                 return;
             }
 
-            return TypeScriptActionApiWithSchemaDataProvider::findNormalizedValue(nr, p, k, offset + 1);
+            return findNormalizedValue(nr, p, k, offset + 1);
         }
     }
 
@@ -468,7 +467,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         } else if (offset == (len - 3)) {
             req{p[offset]}{p[offset + 1]}{p[offset + 2]}{p[offset + 3]}{k} = val;
         } else {
-            TypeScriptActionApiWithSchemaDataProvider::fixOptimizedValue(\req{p[offset]}, p, k, val, offset + 1);
+            fixOptimizedValue(\req{p[offset]}, p, k, val, offset + 1);
         }
     }
 

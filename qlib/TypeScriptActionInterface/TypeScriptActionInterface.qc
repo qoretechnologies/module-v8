@@ -337,27 +337,35 @@ public class TypeScriptActionInterface {
         return name;
     }
 
-    static registerAsyncCall(*bool ignore_dup, reference<hash<AsyncCallInfo>> call, ...) {
+    static string registerAsyncCall(*bool ignore_dup, reference<hash<AsyncCallInfo>> call, ...) {
+        string key;
         try {
-            TypeScriptActionInterface::registerAsyncCallArgs(\call, argv);
+            key = (foldl $1 + "-" + $2, argv) + sprintf("-%s", call.type);
+            if (acmap{key}) {
+                throw "ASYNC-CALL-ERROR", sprintf("Call %s is already registered", key);
+            }
+            call.key = key;
+            acmap{key} = call;
         } catch (hash<ExceptionInfo> ex) {
             if (!ignore_dup || (ex.err != "ASYNC-CALL-ERROR")) {
                 rethrow;
             }
         }
+        return key;
     }
 
-    static registerAsyncCall(reference<hash<AsyncCallInfo>> call, ...) {
-        TypeScriptActionInterface::registerAsyncCallArgs(\call, argv);
+    static string registerAsyncCall(reference<hash<AsyncCallInfo>> call, ...) {
+        return TypeScriptActionInterface::registerAsyncCallArgs(\call, argv);
     }
 
-    static registerAsyncCallArgs(reference<hash<AsyncCallInfo>> call, list<auto> args) {
+    static string registerAsyncCallArgs(reference<hash<AsyncCallInfo>> call, list<auto> args) {
         string key = (foldl $1 + "-" + $2, args) + sprintf("-%s", call.type);
         if (acmap{key}) {
             throw "ASYNC-CALL-ERROR", sprintf("Call %s is already registered", key);
         }
         call.key = key;
         acmap{key} = call;
+        return key;
     }
 
     static hash<AsyncCallInfo> getCall(string key) {
@@ -1411,7 +1419,7 @@ public class TypeScriptActionInterface {
         hash<string, hash<ActionOptionInfo>> rv;
         foreach hash<auto> i in (opts.pairIterator()) {
             TypeScriptActionInterface::getOptionFunctions(\action, fctx, i.key, \i.value);
-            rv{i.key} = TypeScriptActionInterface::getOptionInfo("option", i.value);
+            rv{i.key} = TypeScriptActionInterface::getOptionInfo("option", i.value, fctx);
             if (fctx.dmap{i.key}) {
                 rv{i.key}.structural_determinate = True;
             }
@@ -1573,8 +1581,8 @@ public class TypeScriptActionInterface {
 
     static HashDataType getHashTypeIntern(string path, HashDataType type, hash<auto> h, *bool required,
             *ActionFunctionContext fctx, *bool ignore_dup) {
-        type.addQoreFields(map {$1.key: TypeScriptActionInterface::getField(path, $1.key, $1.value, fctx,
-            ignore_dup)}, h.pairIterator());
+        map type.addField(TypeScriptActionInterface::getField(path, $1.key, $1.value, fctx, ignore_dup)),
+            h.pairIterator();
         return type;
     }
 
@@ -1584,7 +1592,7 @@ public class TypeScriptActionInterface {
             "instead", v.fullType());
     }
 
-    static hash<auto> getField(string path, string name, hash<auto> h, *ActionFunctionContext fctx,
+    static TypeScriptDataField getField(string path, string name, hash<auto> h, *ActionFunctionContext fctx,
             *bool ignore_dup) {
         on_error rethrow $1.err, sprintf("%s (field: %y)", $1.desc, h);
         *bool req = remove h.required;
@@ -1595,7 +1603,7 @@ public class TypeScriptActionInterface {
         if (h) {
             throw "FIELD-ERROR", sprintf("Field description has unknown keys: %y", keys h);
         }
-        return rv;
+        return new TypeScriptDataField(rv);
     }
 
     static hash<auto> getFieldHash(string path, string name, AbstractDataProviderType type,
@@ -1697,8 +1705,26 @@ public class TypeScriptActionInterface {
                     "to": fctx.io_timeout,
                 };
                 TypeScriptActionInterface::registerAsyncCall(ignore_dup, \fctx.dmap{key}, "app", fctx.app,
-                    fctx.action, key, ignore_dup);
+                    fctx.action, key);
                 info.attr.data_dependent_options = True;
+                info.attr.dynamic = True;
+            }
+            if (exists (*code c = remove type_hash.get_default_value)) {
+                string key = sprintf("%s-%s", path, name);
+                fctx.dvmap{key} = <AsyncCallInfo>{
+                    "key": key,
+                    "app": fctx.app,
+                    "action": fctx.action,
+                    "type": "get_default_value",
+                    "label": sprintf("Default value data function for app %y action %y option %y", fctx.app,
+                        fctx.action, key),
+                    "pool": fctx.pool,
+                    "async_call": c,
+                    "to": fctx.io_timeout,
+                };
+                string ix = TypeScriptActionInterface::registerAsyncCall(ignore_dup, \fctx.dvmap{key}, "app",
+                    fctx.app, fctx.action, key);
+                info.attr.get_default_value = ix;
                 info.attr.dynamic = True;
             }
         }

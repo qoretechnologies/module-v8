@@ -48,6 +48,10 @@ export default (locale: Locales) =>
     logo_file_name: 'asana-logo.svg',
     logo_mime_type: 'image/svg+xml',
     swagger: 'schemas/asana.swagger.json',
+    swagger_options: {
+      utc_dates: true,
+      query_date_format: 'YYYY-MM-DDTHH:mm:SS.uu@',
+    },
     rest: {
       url: 'https://app.asana.com',
       data: 'json',

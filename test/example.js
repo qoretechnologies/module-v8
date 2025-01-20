@@ -7,6 +7,8 @@ exports.actionsCatalogue = {
               - "parse_flags": -1 -> this will turn on all lax parsing options - or you can use 128
                 (LM_ACCEPT_QUERY_OBJECTS = accept "object" as a valid type for query parameters like OpenAPI 3.0)
             - swagger_paths?: string[] -> a list of swagger paths to build an optimized schema
+            - swagger_utc_dates?: boolean -> if date/time values should be serialized in UTC as Swagger query args
+            - swagger_query_date_format?: string -> the date format to use when serializing Swagger query date args
         */
         api.registerApp({
             "name": "js-test",
@@ -347,6 +349,9 @@ exports.actionsCatalogue = {
                                 },
                                 "b": {
                                     "type": "int",
+                                    "get_default_value": function (ctx) {
+                                        return 100;
+                                    },
                                 },
                             },
                         },
