@@ -2,9 +2,9 @@ import { CreateZendeskGetAllowedValuesFunction } from './create-get-allowed-valu
 
 export const getTicketMetricIdAllowedValues = CreateZendeskGetAllowedValuesFunction(
   'ticket_metrics',
-  'url',
+  'id',
   {},
-  (entity: { id: number; url: string; ticket_id: string }) => {
-    return `Id: ${entity.id}\n\nLink: [View in Zendesk]${entity.url}\n\nTicket Id: ${entity.ticket_id}`;
+  (entity: { id: number; created_at: string; ticket_id: string }) => {
+    return `Id: ${entity.id}\n\nTicket Id: ${entity.ticket_id}\n\nCreated At: ${entity.created_at}`;
   }
 );

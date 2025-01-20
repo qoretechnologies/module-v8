@@ -5,6 +5,6 @@ export const getOrganizationIdAllowedValues = CreateZendeskGetAllowedValuesFunct
   'name',
   {},
   (entity: { id: number; name: string; url: string }) => {
-    return `Id: ${entity.id}\n\nName: ${entity.name}\n\nLink: [View in Zendesk]${entity.url}`;
+    return `Id: ${entity.id}\n\nName: ${entity.name}`;
   }
 );
