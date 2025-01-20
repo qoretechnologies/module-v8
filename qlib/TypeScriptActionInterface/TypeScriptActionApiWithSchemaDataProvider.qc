@@ -312,8 +312,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                 "expecting \"QoreDataField\"", action.app, action.action, key, k, f.className());
         }
         if (l) {
-            TypeScriptActionApiWithSchemaDataProvider::overrideOptionType(path, action, f.getType(), l, type_hash, k,
-                fctx);
+            overrideOptionType(path, action, f.getType(), l, type_hash, k, fctx);
             return;
         }
 
@@ -399,7 +398,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                 return;
             }
 
-            return TypeScriptActionApiWithSchemaDataProvider::findNormalizedValue(nr, p, k, offset + 1);
+            return findNormalizedValue(nr, p, k, offset + 1);
         }
     }
 
@@ -468,7 +467,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         } else if (offset == (len - 3)) {
             req{p[offset]}{p[offset + 1]}{p[offset + 2]}{p[offset + 3]}{k} = val;
         } else {
-            TypeScriptActionApiWithSchemaDataProvider::fixOptimizedValue(\req{p[offset]}, p, k, val, offset + 1);
+            fixOptimizedValue(\req{p[offset]}, p, k, val, offset + 1);
         }
     }
 
