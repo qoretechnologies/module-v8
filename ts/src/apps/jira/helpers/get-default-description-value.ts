@@ -11,7 +11,7 @@ export const getJiraIssueDescriptionDefaultValue: TQoreGetDefaultValueFunction<
     opts,
   } = context;
 
-  if (opts.issueIdOrKey) {
+  if (opts?.issueIdOrKey) {
     const { data } = await QorusRequest.get<any>(
       {
         headers: {
