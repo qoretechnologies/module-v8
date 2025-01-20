@@ -349,6 +349,9 @@ exports.actionsCatalogue = {
                                 },
                                 "b": {
                                     "type": "int",
+                                    "get_default_value": function (ctx) {
+                                        return 100;
+                                    },
                                 },
                             },
                         },
