@@ -239,6 +239,9 @@ export const ESIGNATURE_PATHS = {
       override_options: {
         accountId: GetAccountIdConfig,
         envelopeId: GetEnvelopeIdAllowedValues,
+        documents: {
+          required: true,
+        },
         'documents.documentId': {
           type: 'string',
           required: true,
@@ -250,6 +253,7 @@ export const ESIGNATURE_PATHS = {
           required: false,
         },
         'documents.fileExtension': {
+          type: 'string',
           required: false,
         },
       },
