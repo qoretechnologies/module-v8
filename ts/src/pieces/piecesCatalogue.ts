@@ -68,6 +68,7 @@ class _PiecesAppCatalogue {
       name: appName,
       actions: [...actions, ...qoreTriggers],
       rest: this.mapPieceAuthToAppRest(piece.auth),
+      ...(piece.qoreConnectionModifiers && { rest_modifiers: piece.qoreConnectionModifiers }),
       display_name: piece.displayName,
       short_desc: piece.description,
       desc: piece.description,
@@ -135,7 +136,7 @@ class _PiecesAppCatalogue {
     ): Promise<any> => {
       const actionContext = {
         propsValue: obj satisfies StaticPropsValue<InputPropertyMap>,
-        auth: { access_token: context.conn_opts.token, ...context.opts },
+        auth: { access_token: context.conn_opts.token, ...context.opts, ...context.conn_opts },
         ...commonActionContext,
       } satisfies ActionContext;
 
@@ -248,14 +249,17 @@ class _PiecesAppCatalogue {
     let depends_on: string[] | undefined = undefined;
     const description = prop.description || prop.displayName;
 
-    // Checking if the prop has allowed get allowed values function
+    // Checking if the prop has allowed values or get allowed values function
     if (typeof prop === 'object' && 'options' in prop) {
-      allowed_values = this.mapPieceAllowedValuesToQoreAllowedValues(
-        prop.options as DropdownState<any>
-      );
-      get_allowed_values = this.mapPieceGetOptionsToQoreGetAllowedValues(
-        prop.options as DynamicDropdownOptions<any>
-      );
+      if (typeof prop.options === 'object') {
+        allowed_values = this.mapPieceAllowedValuesToQoreAllowedValues(
+          prop.options as DropdownState<any>
+        );
+      } else if (typeof prop.options === 'function') {
+        get_allowed_values = this.mapPieceGetOptionsToQoreGetAllowedValues(
+          prop.options as DynamicDropdownOptions<any>
+        );
+      }
     }
 
     // Checking if the prop has dependent or dynamic options
@@ -280,8 +284,10 @@ class _PiecesAppCatalogue {
         type: 'list',
         ...(Object.keys(fields).length > 0
           ? {
-              element_type: 'hash',
-              fields,
+              element_type: {
+                type: 'hash',
+                fields,
+              },
             }
           : {
               element_type: 'softstring',

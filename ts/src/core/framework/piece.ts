@@ -4,10 +4,19 @@ import { PieceBase, PieceMetadata } from './piece-metadata';
 import { PieceAuthProperty } from './property/authentication';
 import { PieceCategory } from '../shared/pieces';
 import { EventPayload, ParseEventResponse } from '../shared/engine';
-import { TQorePartialEventAction } from '../../global/models/qore';
+import {
+  IQoreConnectionOption,
+  IQoreRestConnectionModifiers,
+  TQorePartialEventAction,
+} from '../../global/models/qore';
 
-export class Piece<PieceAuth extends PieceAuthProperty = PieceAuthProperty>
-  implements Omit<PieceBase, 'version' | 'name'>
+export class Piece<
+  PieceAuth extends PieceAuthProperty = PieceAuthProperty,
+  ModifierOptions extends Record<string, IQoreConnectionOption> = Record<
+    string,
+    IQoreConnectionOption
+  >,
+> implements Omit<PieceBase, 'version' | 'name'>
 {
   private readonly _actions: Record<string, Action> = {};
   private readonly _triggers: Record<string, Trigger> = {};
@@ -25,7 +34,8 @@ export class Piece<PieceAuth extends PieceAuthProperty = PieceAuthProperty>
     public readonly maximumSupportedRelease?: string,
     public readonly description = '',
     public readonly logo: string = '',
-    public readonly qoreTriggers: TQorePartialEventAction[] = []
+    public readonly qoreTriggers: TQorePartialEventAction[] = [],
+    public readonly qoreConnectionModifiers: IQoreRestConnectionModifiers<ModifierOptions> = undefined
   ) {
     actions.forEach((action) => (this._actions[action.name] = action));
     triggers.forEach((trigger) => (this._triggers[trigger.name] = trigger));
@@ -45,6 +55,7 @@ export class Piece<PieceAuth extends PieceAuthProperty = PieceAuthProperty>
       maximumSupportedRelease: this.maximumSupportedRelease,
       logo: this.logo,
       qoreTriggers: this.qoreTriggers,
+      qoreConnectionModifiers: this.qoreConnectionModifiers,
     };
   }
 
@@ -65,8 +76,14 @@ export class Piece<PieceAuth extends PieceAuthProperty = PieceAuthProperty>
   }
 }
 
-export const createPiece = <PieceAuth extends PieceAuthProperty>(
-  params: CreatePieceParams<PieceAuth>
+export const createPiece = <
+  PieceAuth extends PieceAuthProperty,
+  ModifierOptions extends Record<string, IQoreConnectionOption> = Record<
+    string,
+    IQoreConnectionOption
+  >,
+>(
+  params: CreatePieceParams<PieceAuth, ModifierOptions>
 ) => {
   return new Piece(
     params.displayName,
@@ -81,11 +98,18 @@ export const createPiece = <PieceAuth extends PieceAuthProperty>(
     params.maximumSupportedRelease,
     params.description,
     params.logo,
-    params.qoreTriggers ?? []
+    params.qoreTriggers ?? [],
+    params.qoreConnectionModifiers ?? undefined
   );
 };
 
-type CreatePieceParams<PieceAuth extends PieceAuthProperty = PieceAuthProperty> = {
+type CreatePieceParams<
+  PieceAuth extends PieceAuthProperty = PieceAuthProperty,
+  ModifierOptions extends Record<string, IQoreConnectionOption> = Record<
+    string,
+    IQoreConnectionOption
+  >,
+> = {
   displayName: string;
   logoUrl: string;
   authors: string[];
@@ -99,6 +123,7 @@ type CreatePieceParams<PieceAuth extends PieceAuthProperty = PieceAuthProperty> 
   triggers: Trigger<PieceAuth>[];
   categories?: PieceCategory[];
   qoreTriggers?: TQorePartialEventAction[];
+  qoreConnectionModifiers?: IQoreRestConnectionModifiers<ModifierOptions>;
 };
 
 type PieceEventProcessors = {

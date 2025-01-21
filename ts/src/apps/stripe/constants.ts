@@ -83,7 +83,14 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     GET: {},
   },
   '/v1/balance/history': {
-    GET: {},
+    GET: {
+      override_options: {
+        created: {
+          required: false,
+          type: 'unixtsms',
+        },
+      },
+    },
   },
   '/v1/balance/history/{id}': {
     GET: {
@@ -96,7 +103,14 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     },
   },
   '/v1/charges': {
-    GET: {},
+    GET: {
+      override_options: {
+        created: {
+          required: false,
+          type: 'unixtsms',
+        },
+      },
+    },
     POST: {
       override_options: {
         amount: {
@@ -130,7 +144,14 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     },
   },
   '/v1/customers': {
-    GET: {},
+    GET: {
+      override_options: {
+        created: {
+          required: false,
+          type: 'unixtsms',
+        },
+      },
+    },
     POST: {
       override_options: {
         email: {
@@ -221,6 +242,14 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     },
     POST: {
       override_options: {
+        billing_cycle_anchor: {
+          required: false,
+          type: 'unixtsms',
+        },
+        cancel_at: {
+          required: false,
+          type: 'unixtsms',
+        },
         customer: {
           allowed_values_creatable: true,
           get_allowed_values: getStripeCustomerIdAllowedValues,
@@ -229,9 +258,28 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     },
   },
   '/v1/invoices': {
-    GET: {},
+    GET: {
+      override_options: {
+        due_date: {
+          required: false,
+          type: 'unixtsms',
+        },
+        created: {
+          required: false,
+          type: 'unixtsms',
+        },
+      },
+    },
     POST: {
       override_options: {
+        effective_at: {
+          required: false,
+          type: 'unixtsms',
+        },
+        due_date: {
+          required: false,
+          type: 'unixtsms',
+        },
         customer: {
           allowed_values_creatable: true,
           get_allowed_values: getStripeCustomerIdAllowedValues,
@@ -259,6 +307,14 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     },
     POST: {
       override_options: {
+        effective_at: {
+          required: false,
+          type: 'unixtsms',
+        },
+        due_date: {
+          required: false,
+          type: 'unixtsms',
+        },
         invoice: {
           allowed_values_creatable: true,
           get_allowed_values: getStripeInvoiceIdAllowedValues,
@@ -267,7 +323,14 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     },
   },
   '/v1/payment_intents': {
-    GET: {},
+    GET: {
+      override_options: {
+        created: {
+          required: false,
+          type: 'unixtsms',
+        },
+      },
+    },
     POST: {
       override_options: {
         amount: {
@@ -283,7 +346,14 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     },
   },
   '/v1/refunds': {
-    GET: {},
+    GET: {
+      override_options: {
+        created: {
+          required: false,
+          type: 'unixtsms',
+        },
+      },
+    },
     POST: {
       override_options: {
         charge: {

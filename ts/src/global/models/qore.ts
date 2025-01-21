@@ -167,6 +167,9 @@ export interface IQoreRestConnectionModifiers<
   set_options_post_auth?: (
     context: Omit<TQoreAppActionFunctionContext<ModifierOptions>, 'opts'>
   ) => Promise<TQoreMappedOptions<ModifierOptions>>;
+  set_options_post_auth_code?: (
+    context: Omit<TQoreAppActionFunctionContext<ModifierOptions>, 'opts'>
+  ) => TQoreMappedOptions<ModifierOptions>;
   /** allows the REST URL to be changed when an option value is changed
    */
   connection_update_option?: {
@@ -343,7 +346,11 @@ export type TQoreNumberCompatibleType =
   | '*softint'
   | '*softfloat'
   | '*softnumber'
-  | '*int';
+  | '*int'
+  | 'unixts'
+  | '*unixts'
+  | 'unixtsms'
+  | '*unixtsms';
 export type TQoreHashCompatibleType = 'hash' | '*hash' | '*data' | 'data';
 export type TQoreListCompatibleType = 'list' | '*list' | 'softlist' | '*softlist';
 export type TQoreBooleanCompatibleType =

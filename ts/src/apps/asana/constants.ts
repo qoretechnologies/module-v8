@@ -425,11 +425,7 @@ export const ASANA_ALLOWED_PATHS: TAllowedPaths = {
         name: {
           required: true,
         },
-        workspace: {
-          rest_get_allowed_values: getAsanaWorkspaceIdAllowedValuesRest,
-        },
         team_gid: {
-          depends_on: ['workspace'],
           allowed_values_creatable: true,
           get_allowed_values: getAsanaTeamIdAllowedValues,
         },
