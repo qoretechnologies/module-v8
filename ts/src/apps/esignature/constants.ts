@@ -252,6 +252,10 @@ export const ESIGNATURE_PATHS = {
           type: 'string',
           required: false,
         },
+        'documents.name': {
+          type: 'string',
+          required: false,
+        },
         'documents.fileExtension': {
           type: 'string',
           required: false,
