@@ -86,6 +86,7 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     GET: {
       override_options: {
         created: {
+          required: false,
           type: 'unixtsms',
         },
       },
@@ -105,6 +106,7 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     GET: {
       override_options: {
         created: {
+          required: false,
           type: 'unixtsms',
         },
       },
@@ -145,6 +147,7 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     GET: {
       override_options: {
         created: {
+          required: false,
           type: 'unixtsms',
         },
       },
@@ -240,9 +243,11 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     POST: {
       override_options: {
         billing_cycle_anchor: {
+          required: false,
           type: 'unixtsms',
         },
         cancel_at: {
+          required: false,
           type: 'unixtsms',
         },
         customer: {
@@ -256,9 +261,11 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     GET: {
       override_options: {
         due_date: {
+          required: false,
           type: 'unixtsms',
         },
         created: {
+          required: false,
           type: 'unixtsms',
         },
       },
@@ -266,9 +273,11 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     POST: {
       override_options: {
         effective_at: {
+          required: false,
           type: 'unixtsms',
         },
         due_date: {
+          required: false,
           type: 'unixtsms',
         },
         customer: {
@@ -299,9 +308,11 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     POST: {
       override_options: {
         effective_at: {
+          required: false,
           type: 'unixtsms',
         },
         due_date: {
+          required: false,
           type: 'unixtsms',
         },
         invoice: {
@@ -315,6 +326,7 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     GET: {
       override_options: {
         created: {
+          required: false,
           type: 'unixtsms',
         },
       },
@@ -337,6 +349,7 @@ export const STRIPE_ALLOWED_PATHS: TAllowedPaths = {
     GET: {
       override_options: {
         created: {
+          required: false,
           type: 'unixtsms',
         },
       },
