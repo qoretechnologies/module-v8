@@ -336,6 +336,12 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
           allowed_values_creatable: true,
           get_allowed_values: getJiraIssueIdAllowedValues,
         },
+        startedAfter: {
+          type: 'unixtsms',
+        },
+        startedBefore: {
+          type: 'unixtsms',
+        },
       },
     },
   },

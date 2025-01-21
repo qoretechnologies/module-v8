@@ -346,7 +346,11 @@ export type TQoreNumberCompatibleType =
   | '*softint'
   | '*softfloat'
   | '*softnumber'
-  | '*int';
+  | '*int'
+  | 'unixts'
+  | '*unixts'
+  | 'unixtsms'
+  | '*unixtsms';
 export type TQoreHashCompatibleType = 'hash' | '*hash' | '*data' | 'data';
 export type TQoreListCompatibleType = 'list' | '*list' | 'softlist' | '*softlist';
 export type TQoreBooleanCompatibleType =
