@@ -5,12 +5,7 @@ import eSignature from '../../schemas/esignature.swagger.json';
 import { IQoreConnectionOptions } from '../zendesk';
 import { getEsignatureEnvelopeIdAllowedValues } from './helpers/get-envelope-id-allowed-values';
 import { getEsignatureFolderIdAllowedValues } from './helpers/get-folder-id-allowed-values';
-import {
-  getEsignatureAgentIdAllowedValues,
-  getEsignatureEditorIdAllowedValues,
-  getEsignatureNotaryIdAllowedValues,
-  getEsignatureSignerIdAllowedValues,
-} from './helpers/get-recipient-id-allowed-values';
+import { getEsignatureRecipientIdAllowedValues } from './helpers/get-recipient-id-allowed-values';
 import { getEsignatureDocumentIdAllowedValues } from './helpers/get-document-id-allowed-values';
 
 export const ESIGNATURE_APP_NAME = 'DocusignESignature';
@@ -157,28 +152,28 @@ export const ESIGNATURE_PATHS = {
         'signers.recipientId': {
           type: 'string',
           allowed_values_creatable: true,
-          get_allowed_values: getEsignatureSignerIdAllowedValues,
+          get_allowed_values: getEsignatureRecipientIdAllowedValues,
           depends_on: ['envelopeId'],
           required: true,
         },
         'agents.recipientId': {
           type: 'string',
           allowed_values_creatable: true,
-          get_allowed_values: getEsignatureAgentIdAllowedValues,
+          get_allowed_values: getEsignatureRecipientIdAllowedValues,
           depends_on: ['envelopeId'],
           required: true,
         },
         'editors.recipientId': {
           type: 'string',
           allowed_values_creatable: true,
-          get_allowed_values: getEsignatureEditorIdAllowedValues,
+          get_allowed_values: getEsignatureRecipientIdAllowedValues,
           depends_on: ['envelopeId'],
           required: true,
         },
         'notaries.recipientId': {
           type: 'string',
           allowed_values_creatable: true,
-          get_allowed_values: getEsignatureNotaryIdAllowedValues,
+          get_allowed_values: getEsignatureRecipientIdAllowedValues,
           depends_on: ['envelopeId'],
           required: true,
         },
@@ -205,28 +200,28 @@ export const ESIGNATURE_PATHS = {
         'signers.recipientId': {
           type: 'string',
           allowed_values_creatable: true,
-          get_allowed_values: getEsignatureSignerIdAllowedValues,
+          get_allowed_values: getEsignatureRecipientIdAllowedValues,
           depends_on: ['envelopeId'],
           required: true,
         },
         'agents.recipientId': {
           type: 'string',
           allowed_values_creatable: true,
-          get_allowed_values: getEsignatureAgentIdAllowedValues,
+          get_allowed_values: getEsignatureRecipientIdAllowedValues,
           depends_on: ['envelopeId'],
           required: true,
         },
         'editors.recipientId': {
           type: 'string',
           allowed_values_creatable: true,
-          get_allowed_values: getEsignatureEditorIdAllowedValues,
+          get_allowed_values: getEsignatureRecipientIdAllowedValues,
           depends_on: ['envelopeId'],
           required: true,
         },
         'notaries.recipientId': {
           type: 'string',
           allowed_values_creatable: true,
-          get_allowed_values: getEsignatureNotaryIdAllowedValues,
+          get_allowed_values: getEsignatureRecipientIdAllowedValues,
           depends_on: ['envelopeId'],
           required: true,
         },
@@ -252,6 +247,9 @@ export const ESIGNATURE_PATHS = {
         },
         'documents.documentBase64': {
           type: 'string',
+          required: false,
+        },
+        'documents.fileExtension': {
           required: false,
         },
       },

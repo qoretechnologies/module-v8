@@ -3,61 +3,51 @@ import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../globa
 import { ESIGNATURE_CONN_OPTIONS } from '../constants';
 import { Debugger } from '../../../utils/Debugger';
 
-export const createEsignatureRecipientIdAllowedValues = (
-  entity: string
-): TQoreGetAllowedValuesFunction<typeof ESIGNATURE_CONN_OPTIONS> => {
-  return async (context): Promise<IQoreAllowedValue[]> => {
-    const {
-      conn_opts: { token, base_uri },
-      opts: { accountId, envelopeId },
-    } = context;
+export const getEsignatureRecipientIdAllowedValues: TQoreGetAllowedValuesFunction<
+  typeof ESIGNATURE_CONN_OPTIONS
+> = async (context): Promise<IQoreAllowedValue[]> => {
+  const {
+    conn_opts: { token, base_uri },
+    opts: { accountId, envelopeId },
+  } = context;
 
-    const items: IQoreAllowedValue[] = [];
+  const items: IQoreAllowedValue[] = [];
 
-    try {
-      const { data } = await QorusRequest.get<any>(
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-          path: `/restapi/v2.1/accounts/${accountId}/envelopes/${envelopeId}/recipients`,
+  try {
+    const { data } = await QorusRequest.get<any>(
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
         },
-        { url: `https://${base_uri}`, endpointId: 'Esignature' }
-      );
+        path: `/restapi/v2.1/accounts/${accountId}/envelopes/${envelopeId}/recipients`,
+      },
+      { url: `https://${base_uri}`, endpointId: 'Esignature' }
+    );
 
-      const { [entity]: fetchedItems } = data;
-
-      items.push(
-        ...fetchedItems.map(
-          (item: any): IQoreAllowedValue => ({
-            value: item.recipientId,
-            display_name: item.name,
-            desc:
-              `Signer ID: ${item.userId}\n\nFirst Name: ${item.firstName}\n\n` +
-              `Last Name: ${item.lastName}\n\nEmail: ${item.email}`,
-          })
-        )
-      );
-
-      return items;
-    } catch (error) {
-      Debugger.log(`Error fetching ${entity} for envelope ${envelopeId}:`, error);
-
-      return [];
+    for (const [key, fetchedItems] of Object.entries(data)) {
+      if (Array.isArray(fetchedItems)) {
+        items.push(
+          ...fetchedItems.map(
+            (item: any): IQoreAllowedValue => ({
+              value: item.recipientId,
+              display_name: item.name || 'Unnamed Recipient',
+              desc: [
+                `Recipient Type: ${key}`,
+                `ID: ${item.userId || 'N/A'}`,
+                `First Name: ${item.firstName || 'N/A'}`,
+                `Last Name: ${item.lastName || 'N/A'}`,
+                `Email: ${item.email || 'N/A'}`,
+              ].join('\n\n'),
+            })
+          )
+        );
+      }
     }
-  };
+
+    return items;
+  } catch (error) {
+    Debugger.log(`Error fetching recipients for envelope ${envelopeId}:`, error);
+
+    return [];
+  }
 };
-
-export const getEsignatureSignerIdAllowedValues =
-  createEsignatureRecipientIdAllowedValues('signers');
-
-export const getEsignatureAgentIdAllowedValues = createEsignatureRecipientIdAllowedValues('agents');
-
-export const getEsignatureEditorIdAllowedValues =
-  createEsignatureRecipientIdAllowedValues('editors');
-
-export const getEsignatureWitnessIdAllowedValues =
-  createEsignatureRecipientIdAllowedValues('witnesses');
-
-export const getEsignatureNotaryIdAllowedValues =
-  createEsignatureRecipientIdAllowedValues('notaries');
