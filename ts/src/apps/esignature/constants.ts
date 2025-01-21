@@ -3,6 +3,15 @@ import { buildActionsFromSwaggerSchema } from '../../global/helpers';
 import { TAllowedPaths, TQoreAppActionOverrideOption } from '../../global/models/qore';
 import eSignature from '../../schemas/esignature.swagger.json';
 import { IQoreConnectionOptions } from '../zendesk';
+import { getEsignatureEnvelopeIdAllowedValues } from './helpers/get-envelope-id-allowed-values';
+import { getEsignatureFolderIdAllowedValues } from './helpers/get-folder-id-allowed-values';
+import {
+  getEsignatureAgentIdAllowedValues,
+  getEsignatureEditorIdAllowedValues,
+  getEsignatureNotaryIdAllowedValues,
+  getEsignatureSignerIdAllowedValues,
+} from './helpers/get-recipient-id-allowed-values';
+import { getEsignatureDocumentIdAllowedValues } from './helpers/get-document-id-allowed-values';
 
 export const ESIGNATURE_APP_NAME = 'DocusignESignature';
 
@@ -45,14 +54,9 @@ export const GetAccountIdConfig = {
 } satisfies TQoreAppActionOverrideOption<typeof ESIGNATURE_CONN_OPTIONS>;
 
 const GetEnvelopeIdAllowedValues = {
+  required: true,
   allowed_values_creatable: true,
-  rest_get_allowed_values: {
-    method: 'GET',
-    path: 'envelopes?from_date=2010-01-01',
-    values: 'body.envelopes.envelopeId',
-    display_names: 'body.envelopes.emailSubject',
-    short_descs: 'body.envelopes.envelopeId',
-  },
+  rest_get_allowed_values: getEsignatureEnvelopeIdAllowedValues,
 } satisfies TQoreAppActionOverrideOption<typeof ESIGNATURE_CONN_OPTIONS>;
 
 export const ESIGNATURE_PATHS = {
@@ -60,6 +64,22 @@ export const ESIGNATURE_PATHS = {
     GET: {
       override_options: {
         accountId: GetAccountIdConfig,
+        from_date: {
+          required_groups: ['get_envelopes'],
+        },
+        transaction_ids: {
+          required_groups: ['get_envelopes'],
+        },
+        folder_ids: {
+          allowed_values_creatable: true,
+          required_groups: ['get_envelopes'],
+          rest_get_allowed_values: getEsignatureFolderIdAllowedValues,
+        },
+        envelope_ids: {
+          allowed_values_creatable: true,
+          required_groups: ['get_envelopes'],
+          rest_get_allowed_values: getEsignatureEnvelopeIdAllowedValues,
+        },
       },
     },
     POST: {
@@ -87,6 +107,18 @@ export const ESIGNATURE_PATHS = {
           required: true,
         },
         documents: {
+          required: true,
+        },
+        'documents.documentId': {
+          required: true,
+        },
+        'documents.documentBase64': {
+          required: true,
+        },
+        'documents.name': {
+          required: true,
+        },
+        'documents.fileExtension': {
           required: true,
         },
         recipients: {
@@ -124,6 +156,30 @@ export const ESIGNATURE_PATHS = {
         },
         'signers.recipientId': {
           type: 'string',
+          allowed_values_creatable: true,
+          get_allowed_values: getEsignatureSignerIdAllowedValues,
+          depends_on: ['envelopeId'],
+          required: true,
+        },
+        'agents.recipientId': {
+          type: 'string',
+          allowed_values_creatable: true,
+          get_allowed_values: getEsignatureAgentIdAllowedValues,
+          depends_on: ['envelopeId'],
+          required: true,
+        },
+        'editors.recipientId': {
+          type: 'string',
+          allowed_values_creatable: true,
+          get_allowed_values: getEsignatureEditorIdAllowedValues,
+          depends_on: ['envelopeId'],
+          required: true,
+        },
+        'notaries.recipientId': {
+          type: 'string',
+          allowed_values_creatable: true,
+          get_allowed_values: getEsignatureNotaryIdAllowedValues,
+          depends_on: ['envelopeId'],
           required: true,
         },
       },
@@ -148,6 +204,30 @@ export const ESIGNATURE_PATHS = {
         },
         'signers.recipientId': {
           type: 'string',
+          allowed_values_creatable: true,
+          get_allowed_values: getEsignatureSignerIdAllowedValues,
+          depends_on: ['envelopeId'],
+          required: true,
+        },
+        'agents.recipientId': {
+          type: 'string',
+          allowed_values_creatable: true,
+          get_allowed_values: getEsignatureAgentIdAllowedValues,
+          depends_on: ['envelopeId'],
+          required: true,
+        },
+        'editors.recipientId': {
+          type: 'string',
+          allowed_values_creatable: true,
+          get_allowed_values: getEsignatureEditorIdAllowedValues,
+          depends_on: ['envelopeId'],
+          required: true,
+        },
+        'notaries.recipientId': {
+          type: 'string',
+          allowed_values_creatable: true,
+          get_allowed_values: getEsignatureNotaryIdAllowedValues,
+          depends_on: ['envelopeId'],
           required: true,
         },
       },
@@ -166,6 +246,9 @@ export const ESIGNATURE_PATHS = {
         envelopeId: GetEnvelopeIdAllowedValues,
         'documents.documentId': {
           type: 'string',
+          required: true,
+          allowed_values_creatable: true,
+          get_allowed_values: getEsignatureDocumentIdAllowedValues,
         },
         'documents.documentBase64': {
           type: 'string',
@@ -191,12 +274,24 @@ export const ESIGNATURE_PATHS = {
       override_options: {
         accountId: GetAccountIdConfig,
         envelopeId: GetEnvelopeIdAllowedValues,
+        documentId: {
+          type: 'string',
+          required: true,
+          allowed_values_creatable: true,
+          get_allowed_values: getEsignatureDocumentIdAllowedValues,
+        },
       },
     },
     GET: {
       override_options: {
         accountId: GetAccountIdConfig,
         envelopeId: GetEnvelopeIdAllowedValues,
+        documentId: {
+          type: 'string',
+          required: true,
+          allowed_values_creatable: true,
+          get_allowed_values: getEsignatureDocumentIdAllowedValues,
+        },
       },
     },
   },
