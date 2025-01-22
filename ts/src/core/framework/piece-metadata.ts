@@ -10,7 +10,7 @@ import { Static, Type } from '@sinclair/typebox';
 import { PackageType, PieceCategory, PieceType } from '../shared/pieces';
 import { ProjectId } from '../shared/project';
 import { TriggerTestStrategy } from '../shared/flows';
-import { TQorePartialEventAction } from '../../global/models/qore';
+import { IQoreRestConnectionModifiers, TQorePartialEventAction } from '../../global/models/qore';
 
 export const PieceBase = Type.Object({
   id: Type.Optional(Type.String()),
@@ -46,6 +46,7 @@ export type PieceBase = {
   categories?: PieceCategory[];
   minimumSupportedRelease?: string;
   maximumSupportedRelease?: string;
+  qoreConnectionModifiers?: IQoreRestConnectionModifiers;
 };
 
 export const ActionBase = Type.Object({

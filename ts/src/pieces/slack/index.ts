@@ -4,8 +4,6 @@ import { createCustomApiCallAction } from 'core/common';
 import crypto from 'node:crypto';
 import { requestActionDirectMessageAction } from './lib/actions/request-action-direct-message';
 import { requestActionMessageAction } from './lib/actions/request-action-message';
-import { requestApprovalDirectMessageAction } from './lib/actions/request-approval-direct-message';
-import { requestSendApprovalMessageAction } from './lib/actions/request-approval-message';
 import { slackSendDirectMessageAction } from './lib/actions/send-direct-message-action';
 import { slackSendMessageAction } from './lib/actions/send-message-action';
 import { newMessage } from './lib/triggers/new-message';
@@ -24,7 +22,7 @@ export const slackAuth = PieceAuth.OAuth2({
   description: '',
   authUrl:
     'https://slack.com/oauth/v2/authorize?user_scope=channels:read,channels:write,chat:write,users:read,' +
-        'users:read.email',
+    'users:read.email',
   tokenUrl: 'https://slack.com/api/oauth.v2.access',
   required: true,
   url: 'https://slack.com/api',
@@ -123,8 +121,6 @@ export const slack = createPiece({
     addReactionToMessageAction,
     slackSendDirectMessageAction,
     slackSendMessageAction,
-    requestApprovalDirectMessageAction,
-    requestSendApprovalMessageAction,
     requestActionDirectMessageAction,
     requestActionMessageAction,
     uploadFile,
@@ -147,6 +143,18 @@ export const slack = createPiece({
     }),
   ],
   triggers: [newMessage, newReactionAdded, channelCreated],
+  qoreConnectionModifiers: {
+    options: {
+      authed_user: {
+        type: 'hash',
+      },
+    },
+    set_options_post_auth_code: (context) => {
+      return {
+        authed_user: context.conn_opts.authed_user,
+      };
+    },
+  },
 });
 
 type PayloadBody = {

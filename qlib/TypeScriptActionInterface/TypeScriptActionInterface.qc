@@ -142,7 +142,7 @@ public class TypeScriptActionInterface {
         const DefaultIoTimeoutSecs = 30;
 
         #! Default post_auth I/O timeout in seconds
-        const DefaultPostAuthIoTimeoutSecs = 5;
+        const DefaultPostAuthIoTimeoutSecs = 30;
 
         #! JavaScript event subtype for connections
         const AES_JS_EVENT = "javascript-event";
@@ -184,6 +184,9 @@ public class TypeScriptActionInterface {
 
         #! Maps from app names to connection post-auth functions
         static hash<string, hash<AsyncCallInfo>> app_post_auth_map;
+
+        #! Maps from app names to connection post-auth-code functions
+        static hash<string, hash<AsyncCallInfo>> app_post_auth_code_map;
 
         #! Maps from app names to connection update info
         static hash<string, hash<auto>> app_conn_update_map;
@@ -334,13 +337,35 @@ public class TypeScriptActionInterface {
         return name;
     }
 
-    static registerAsyncCall(reference<hash<AsyncCallInfo>> call, ...) {
-        string key = (foldl $1 + "-" + $2, argv) + sprintf("-%s", call.type);
+    static string registerAsyncCall(*bool ignore_dup, reference<hash<AsyncCallInfo>> call, ...) {
+        string key;
+        try {
+            key = (foldl $1 + "-" + $2, argv) + sprintf("-%s", call.type);
+            if (acmap{key}) {
+                throw "ASYNC-CALL-ERROR", sprintf("Call %s is already registered", key);
+            }
+            call.key = key;
+            acmap{key} = call;
+        } catch (hash<ExceptionInfo> ex) {
+            if (!ignore_dup || (ex.err != "ASYNC-CALL-ERROR")) {
+                rethrow;
+            }
+        }
+        return key;
+    }
+
+    static string registerAsyncCall(reference<hash<AsyncCallInfo>> call, ...) {
+        return TypeScriptActionInterface::registerAsyncCallArgs(\call, argv);
+    }
+
+    static string registerAsyncCallArgs(reference<hash<AsyncCallInfo>> call, list<auto> args) {
+        string key = (foldl $1 + "-" + $2, args) + sprintf("-%s", call.type);
         if (acmap{key}) {
             throw "ASYNC-CALL-ERROR", sprintf("Call %s is already registered", key);
         }
         call.key = key;
         acmap{key} = call;
+        return key;
     }
 
     static hash<AsyncCallInfo> getCall(string key) {
@@ -503,6 +528,7 @@ public class TypeScriptActionInterface {
             }
             *string required_options;
             hash<AsyncCallInfo> post_auth;
+            hash<AsyncCallInfo> post_auth_code;
             hash<auto> conn_update;
             hash<string, string> conn_opt_map;
             if (*hash<auto> rest_modifiers = remove app0.rest_modifiers) {
@@ -530,6 +556,22 @@ public class TypeScriptActionInterface {
                         "to": seconds(remove rest_modifiers.io_timeout_secs ?? DefaultPostAuthIoTimeoutSecs),
                     };
                     TypeScriptActionInterface::registerAsyncCall(\post_auth, "app", app.name);
+                }
+                if (rest_modifiers.set_options_post_auth_code.val()) {
+                    if (!rest_modifiers.set_options_post_auth_code.callp()) {
+                        throw "REST-MODIFIER-ERROR", sprintf("The 'set_options_post_auth' REST modifier option must "
+                            "be a callable value; got type %y instead",
+                            rest_modifiers.set_options_post_auth.fullType());
+                    }
+                    post_auth_code = <AsyncCallInfo>{
+                        "app": app.name,
+                        "type": "post_auth_code",
+                        "label": sprintf("REST post-auth-code option function for app %y", app.name),
+                        "pool": pool,
+                        "async_call": rest_modifiers.set_options_post_auth_code,
+                        "to": seconds(remove rest_modifiers.io_timeout_secs ?? DefaultPostAuthIoTimeoutSecs),
+                    };
+                    TypeScriptActionInterface::registerAsyncCall(\post_auth_code, "app", app.name);
                 }
                 if (rest_modifiers.connection_update_option.val()) {
                     if (rest_modifiers.connection_update_option.option.typeCode() != NT_STRING) {
@@ -586,6 +628,9 @@ public class TypeScriptActionInterface {
             }
             if (post_auth) {
                 app_post_auth_map{appname} = post_auth;
+            }
+            if (post_auth_code) {
+                app_post_auth_code_map{appname} = post_auth_code;
             }
             if (conn_update) {
                 app_conn_update_map{appname} = conn_update;
@@ -1255,10 +1300,7 @@ public class TypeScriptActionInterface {
     static TypeScriptActionAppDataProvider getDataProvider(string app, TypeScriptAppRestConnection conn) {
         TypeScriptActionInterface::checkRoot();
         TypeScriptActionAppDataProvider parent = cast<TypeScriptActionAppDataProvider>(root.getChildProviderEx(app));
-        TypeScriptActionAppDataProvider rv = parent.copy();
-        rv.setParent(parent);
-        rv.setConnection(conn);
-        return rv;
+        return parent.copyWithParent(parent, conn);
     }
 
     static checkRoot() {
@@ -1377,7 +1419,7 @@ public class TypeScriptActionInterface {
         hash<string, hash<ActionOptionInfo>> rv;
         foreach hash<auto> i in (opts.pairIterator()) {
             TypeScriptActionInterface::getOptionFunctions(\action, fctx, i.key, \i.value);
-            rv{i.key} = TypeScriptActionInterface::getOptionInfo("option", i.value);
+            rv{i.key} = TypeScriptActionInterface::getOptionInfo("option", i.value, fctx);
             if (fctx.dmap{i.key}) {
                 rv{i.key}.structural_determinate = True;
             }
@@ -1429,7 +1471,7 @@ public class TypeScriptActionInterface {
     }
 
     static AbstractDataProviderType getType(string path, string name, *bool required, auto element_type,
-            *ActionFunctionContext fctx) {
+            *ActionFunctionContext fctx, *bool ignore_dup) {
         if (!required) {
             if (name !~ /^\*/) {
                 name = "*" + name;
@@ -1441,7 +1483,7 @@ public class TypeScriptActionInterface {
         path += "-" + name;
         if (exists element_type) {
             AbstractDataProviderType et = TypeScriptActionInterface::getType(path + "-element",
-                element_type, NOTHING, NOTHING, fctx);
+                element_type, NOTHING, NOTHING, fctx, ignore_dup);
             if (name =~ /^\*?list$/) {
                 return new ListDataType(et, !required);
             } else if (name =~ /^\*?hash$/) {
@@ -1460,12 +1502,12 @@ public class TypeScriptActionInterface {
     }
 
     static AbstractDataProviderType getType(string path, hash<auto> h, *bool required, auto element_type,
-            *ActionFunctionContext fctx) {
+            *ActionFunctionContext fctx, *bool ignore_dup) {
         if (h.required.typeCode() == NT_BOOLEAN) {
             required = h.required;
         }
         if (h.type.typeCode() != NT_STRING) {
-            return TypeScriptActionInterface::getHashType(path, h, required, fctx);
+            return TypeScriptActionInterface::getHashType(path, h, required, fctx, ignore_dup);
         }
 
         hash<auto> orig = h;
@@ -1495,7 +1537,7 @@ public class TypeScriptActionInterface {
             */
             HashDataType ht(type, attr.name, NOTHING, tags, default_value, attr);
             if (f) {
-                TypeScriptActionInterface::getHashTypeIntern(path, ht, f, h.required, fctx);
+                TypeScriptActionInterface::getHashTypeIntern(path, ht, f, h.required, fctx, ignore_dup);
             } else if (exists element_type) {
                 AbstractDataProviderType element_type = TypeScriptActionInterface::getType(path + "-element",
                     element_type, NOTHING, NOTHING, fctx);
@@ -1530,63 +1572,42 @@ public class TypeScriptActionInterface {
         return rv;
     }
 
-    static HashDataType getHashType(string path, hash<auto> h, *bool required, *ActionFunctionContext fctx) {
+    static HashDataType getHashType(string path, hash<auto> h, *bool required, *ActionFunctionContext fctx,
+            *bool ignore_dup) {
         on_error rethrow $1.err, sprintf("%s (type: %y)", $1.desc, h);
         HashDataType type(required ? AutoHashType : AutoHashOrNothingType);
-        return TypeScriptActionInterface::getHashTypeIntern(path, type, h, required, fctx);
+        return TypeScriptActionInterface::getHashTypeIntern(path, type, h, required, fctx, ignore_dup);
     }
 
     static HashDataType getHashTypeIntern(string path, HashDataType type, hash<auto> h, *bool required,
-            *ActionFunctionContext fctx) {
-        list<hash<auto>> dependent_fields;
-        if (exists (auto dps = remove h.dependent_fields)) {
-            if (dps.typeCode() != NT_LIST) {
-                throw "TYPE-ERROR", sprintf("\"dependent_fields\" must be a list; got type %y instead",
-                    dps.fullType());
-            }
-            dependent_fields = dps;
-        }
-        type.addQoreFields(map {$1.key: TypeScriptActionInterface::getField(path, $1.key, $1.value, fctx)},
-            h.pairIterator());
-
-        # add dependent fields
-        foreach auto dp in (dependent_fields) {
-            if (dp.typeCode() != NT_HASH) {
-                throw "TYPE-ERROR", sprintf("Each element of \"dependent_fields\" must be a hash; got type %y "
-                    "instead", dp.fullType());
-            }
-            if (dp.fields.typeCode() != NT_HASH) {
-                throw "TYPE-ERROR", sprintf("Each element of \"dependent_fields\" have a \"fields\" key with type "
-                    "\"hash\"; element %d has type %y", $# + 1, dp.fields.fullType());
-            }
-            hash<string, QoreDataField> fields = map {$1.key: new QoreDataField({"name": $1.key} + $1.value)},
-                dp.fields.pairIterator();
-            type.addDependentFields(dp.value, fields);
-        }
-
+            *ActionFunctionContext fctx, *bool ignore_dup) {
+        map type.addField(TypeScriptActionInterface::getField(path, $1.key, $1.value, fctx, ignore_dup)),
+            h.pairIterator();
         return type;
     }
 
     static AbstractDataProviderType getType(string path, auto v, *bool required, auto element_type,
-            *ActionFunctionContext fctx) {
+            *ActionFunctionContext fctx, *bool ignore_dup) {
         throw "TYPE-ERROR", sprintf("Expecting \"string\" or \"hash\" for the option \"type\"; got %y "
             "instead", v.fullType());
     }
 
-    static hash<auto> getField(string path, string name, hash<auto> h, *ActionFunctionContext fctx) {
+    static TypeScriptDataField getField(string path, string name, hash<auto> h, *ActionFunctionContext fctx,
+            *bool ignore_dup) {
         on_error rethrow $1.err, sprintf("%s (field: %y)", $1.desc, h);
         *bool req = remove h.required;
         path += "-" + name;
-        AbstractDataProviderType type = TypeScriptActionInterface::getType(path, remove h.type, req, NOTHING, fctx);
-        hash<auto> rv = TypeScriptActionInterface::getFieldHash(path, name, type, \h, req, fctx);
+        AbstractDataProviderType type = TypeScriptActionInterface::getType(path, remove h.type, req, NOTHING, fctx,
+            ignore_dup);
+        hash<auto> rv = TypeScriptActionInterface::getFieldHash(path, name, type, \h, req, fctx, ignore_dup);
         if (h) {
             throw "FIELD-ERROR", sprintf("Field description has unknown keys: %y", keys h);
         }
-        return rv;
+        return new TypeScriptDataField(rv);
     }
 
     static hash<auto> getFieldHash(string path, string name, AbstractDataProviderType type,
-            reference<hash<auto>> type_hash, *bool req, *ActionFunctionContext fctx) {
+            reference<hash<auto>> type_hash, *bool req, *ActionFunctionContext fctx, *bool ignore_dup) {
         hash<auto> info += {
             "name": name,
             "type": type,
@@ -1662,11 +1683,49 @@ public class TypeScriptActionInterface {
                     "async_call": c,
                     "to": fctx.io_timeout,
                 };
-                TypeScriptActionInterface::registerAsyncCall(\fctx.omap{key}, "app", fctx.app, fctx.action, key);
+                TypeScriptActionInterface::registerAsyncCall(ignore_dup, \fctx.omap{key}, "app", fctx.app,
+                    fctx.action, key);
 
-                info.attr.ref_data = key;
                 # remove any manual allowed values
                 remove info.allowed_values;
+                info.attr.ref_data = key;
+                info.attr.dynamic = True;
+            }
+            if (exists (*code c = remove type_hash.get_dependent_options)) {
+                string key = sprintf("%s-%s", path, name);
+                fctx.dmap{key} = <AsyncCallInfo>{
+                    "key": key,
+                    "app": fctx.app,
+                    "action": fctx.action,
+                    "type": "get_dependent_options",
+                    "label": sprintf("Dependent option function for app %y action %y option %y", fctx.app,
+                        fctx.action, key),
+                    "pool": fctx.pool,
+                    "async_call": c,
+                    "to": fctx.io_timeout,
+                };
+                TypeScriptActionInterface::registerAsyncCall(ignore_dup, \fctx.dmap{key}, "app", fctx.app,
+                    fctx.action, key);
+                info.attr.data_dependent_options = True;
+                info.attr.dynamic = True;
+            }
+            if (exists (*code c = remove type_hash.get_default_value)) {
+                string key = sprintf("%s-%s", path, name);
+                fctx.dvmap{key} = <AsyncCallInfo>{
+                    "key": key,
+                    "app": fctx.app,
+                    "action": fctx.action,
+                    "type": "get_default_value",
+                    "label": sprintf("Default value data function for app %y action %y option %y", fctx.app,
+                        fctx.action, key),
+                    "pool": fctx.pool,
+                    "async_call": c,
+                    "to": fctx.io_timeout,
+                };
+                string ix = TypeScriptActionInterface::registerAsyncCall(ignore_dup, \fctx.dvmap{key}, "app",
+                    fctx.app, fctx.action, key);
+                info.attr.get_default_value = ix;
+                info.attr.dynamic = True;
             }
         }
 
@@ -1780,6 +1839,10 @@ public class TypeScriptActionInterface {
 
     static *hash<AsyncCallInfo> getPostAuthCall(string app) {
         return app_post_auth_map{app.lwr()};
+    }
+
+    static *hash<AsyncCallInfo> getPostAuthCodeCall(string app) {
+        return app_post_auth_code_map{app.lwr()};
     }
 
     static bool appSupportsEvents(string app) {

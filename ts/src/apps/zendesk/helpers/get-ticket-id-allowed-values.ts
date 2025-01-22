@@ -8,7 +8,7 @@ export const getTicketIdAllowedValues = CreateZendeskGetAllowedValuesFunction(
     return (
       `Id: ${entity.id}\n\nSubject: ${entity.subject}\n\n` +
       `Priority: ${entity.priority}\n\n` +
-      `Description: ${entity.description}\n\nLink: [View in Zendesk]${entity.url}`
+      `Description: ${entity.description}`
     );
   }
 );

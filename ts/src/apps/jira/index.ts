@@ -55,6 +55,8 @@ export default (locale: Locales) =>
     swagger: 'schemas/jira.swagger.json',
     swagger_paths: createSwaggerPaths(JIRA_ALLOWED_PATHS),
     swagger_options: {
+      utc_dates: true,
+      query_date_format: 'YYYY-MM-DDTHH:mm:SS.uu@',
       parse_flags: -1,
     },
     rest: {

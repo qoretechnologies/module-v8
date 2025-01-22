@@ -2,7 +2,7 @@ import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
 import { getAsanaWorkspaceIdAllowedValuesRest } from '../helpers/get-workspace-id-allowed-values';
 import { getAsanaWorkspaceProjectIdAllowedValues } from '../helpers/get-workspace-project-id-allowed-values';
-import { asanaEventInfoType, asanaWebhookInfoLocation } from './constants';
+import { asanaEventInfoType, asanaWebhookEchoHeader, asanaWebhookInfoLocation } from './constants';
 import { deregisterAsanaWebhook } from './helpers';
 
 export default {
@@ -56,6 +56,7 @@ export default {
     return { webhook: data.data };
   },
   webhook_event_loc: asanaWebhookInfoLocation,
+  webhook_echo_header: asanaWebhookEchoHeader,
   webhook_deregister: deregisterAsanaWebhook,
   event_info: {
     desc: 'New attachment event data',

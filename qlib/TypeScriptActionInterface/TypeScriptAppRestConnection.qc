@@ -29,6 +29,7 @@ public class TypeScriptAppRestClient inherits RestClient {
     private {
         TypeScriptAppRestConnection conn;
         *hash<AsyncCallInfo> post_auth;
+        *hash<AsyncCallInfo> post_auth_code;
     }
 
     #! calls the base class HTTPClient constructor and optionally connects to the REST server
@@ -36,35 +37,47 @@ public class TypeScriptAppRestClient inherits RestClient {
             : RestClient(opts, do_not_connect) {
         self.conn := conn;
         post_auth = TypeScriptActionInterface::getPostAuthCall(conn.getAppName());
+        post_auth_code = TypeScriptActionInterface::getPostAuthCodeCall(conn.getAppName());
     }
 
     #! Returns options to update after an OAuth2 login
-    private *hash<auto> getUpdateOptionsAfterLogin(hash<auto> h) {
-        *hash<auto> rv = RestClient::getUpdateOptionsAfterLogin(h);
-        LoggerWrapper::debug("Connection %y app %y post-auth resp: %y h: %y rv: %y (post_auth: %y)", conn.name,
-            conn.getAppName(), h, rv, post_auth);
-        if (post_auth) {
-            try {
-                rv += TypeScriptActionDataProviderBase::getAsyncValueArgs(self, post_auth, {
-                    "conn_name": conn.name,
-                    "conn_opts": conn.getRealOptions() + h + rv,
-                });
-                info("Connection %y app %y post-auth adding options: %y", conn.name, conn.getAppName(), rv);
-            } catch (hash<ExceptionInfo> ex) {
-                LoggerWrapper::error("Error executing post-auth for connection %y: %s: %s (rv: %y)", conn.name,
-                    ex.err, ex.desc, rv);
-            }
-
-            hash<auto> config = {
-                "url": getURL(),
-                "opts": conn.getRealOptions() + rv,
-            };
-            config = TypeScriptActionInterface::getRestConfig(conn.getAppName(), config);
-            if (config.url.val()) {
-                setURL(AbstractConnection::getRealUrl(config.url, conn.getConnectionSchemeInfo(), conn.getType()));
-            }
+    private *hash<auto> getUpdateOptionsAfterLogin(hash<auto> h, *bool refresh) {
+        *hash<auto> rv = RestClient::getUpdateOptionsAfterLogin(h, refresh);
+        LoggerWrapper::debug("Connection %y app %y post-auth resp: %y h: %y rv: %y (post_auth: %y) refresh: %y",
+            conn.name, conn.getAppName(), h, rv, post_auth, refresh);
+        # do not call "post_auth" when refreshing
+        if (post_auth && !refresh) {
+            rv += makePostAuthCall(post_auth, h, rv);
+        }
+        # always call "post_auth_code" if it exists
+        if (post_auth_code) {
+            rv += makePostAuthCall(post_auth_code, h, rv);
         }
         LoggerWrapper::debug("Connection %y app %y post-auth rv: %y", conn.name, conn.getAppName(), rv);
+        return rv;
+    }
+
+    private *hash<auto> makePostAuthCall(hash<AsyncCallInfo> call, hash<auto> h, *hash<auto> new_opts) {
+        *hash<auto> rv;
+        try {
+            rv = TypeScriptActionDataProviderBase::getAsyncValueArgs(self, call, {
+                "conn_name": conn.name,
+                "conn_opts": conn.getRealOptions() + h + new_opts,
+            });
+            info("Connection %y app %y post-auth adding options: %y", conn.name, conn.getAppName(), rv);
+        } catch (hash<ExceptionInfo> ex) {
+            LoggerWrapper::error("Error executing %s for connection %y: %s: %s (new_opts: %y)", call.label, conn.name,
+                ex.err, ex.desc, new_opts);
+        }
+
+        hash<auto> config = {
+            "url": getURL(),
+            "opts": conn.getRealOptions() + new_opts + rv,
+        };
+        config = TypeScriptActionInterface::getRestConfig(conn.getAppName(), config);
+        if (config.url.val()) {
+            setURL(AbstractConnection::getRealUrl(config.url, conn.getConnectionSchemeInfo(), conn.getType()));
+        }
         return rv;
     }
 }
@@ -77,6 +90,7 @@ public class TypeScriptAppRestConnection inherits RestConnection {
         hash<ConnectionSchemeInfo> info;
         *hash<string, bool> url_template_options;
         *hash<AsyncCallInfo> post_auth;
+        *hash<AsyncCallInfo> post_auth_code;
 
         Mutex m();
         hash<string, Condition> cmap;
@@ -105,6 +119,7 @@ public class TypeScriptAppRestConnection inherits RestConnection {
                 "opts": options,
             }), attributes) {
         post_auth = TypeScriptActionInterface::getPostAuthCall(app);
+        post_auth_code = TypeScriptActionInterface::getPostAuthCodeCall(app);
     }
 
     #! creates the TypeScriptAppRestConnection object
@@ -128,6 +143,7 @@ public class TypeScriptAppRestConnection inherits RestConnection {
     constructor(hash<auto> config, *hash<auto> attr)
             : RestConnection(TypeScriptAppRestConnection::getConfig(config), attr) {
         post_auth = TypeScriptActionInterface::getPostAuthCall(app);
+        post_auth_code = TypeScriptActionInterface::getPostAuthCodeCall(app);
     }
 
     #! Gets or sets a cached value
@@ -209,21 +225,31 @@ public class TypeScriptAppRestConnection inherits RestConnection {
         LoggerWrapper::debug("Connection %y app %y post-auth resp: %y new_opts: %y (post_auth: %y)", name, app, resp,
             new_opts, post_auth);
         # only execute post_auth when the token changes
-        if (new_opts && (new_opts.token != real_opts.token) && post_auth) {
-            try {
-                new_opts += TypeScriptActionDataProviderBase::getAsyncValueArgs(self, post_auth, {
-                    "conn_name": name,
-                    "conn_opts": real_opts + new_opts + resp,
-                });
-                LoggerWrapper::info("Connection %y app %y post-auth adding options: %y from %y", name, app, new_opts,
-                    resp);
-            } catch (hash<ExceptionInfo> ex) {
-                LoggerWrapper::error("Error executing post-auth for connection %y: %s: %s (new_opts: %y)", name,
-                    ex.err, ex.desc, new_opts);
+        if (new_opts && (new_opts.token != real_opts.token)) {
+            if (post_auth) {
+                new_opts += makePostAuthCall(post_auth, new_opts, resp);
+            }
+            if (post_auth_code) {
+                new_opts += makePostAuthCall(post_auth_code, new_opts, resp);
             }
         }
         LoggerWrapper::debug("Connection %y app %y post-auth rv: %y", name, app, new_opts);
         return new_opts;
+    }
+
+    private *hash<auto> makePostAuthCall(hash<AsyncCallInfo> call, *hash<auto> new_opts, hash<auto> resp) {
+        try {
+            *hash<auto> rv = TypeScriptActionDataProviderBase::getAsyncValueArgs(self, call, {
+                "conn_name": name,
+                "conn_opts": real_opts + new_opts + resp,
+            });
+            LoggerWrapper::info("Connection %y app %y %s adding options: %y from %y", name, app, call.label,
+                new_opts + rv, resp);
+            return rv;
+        } catch (hash<ExceptionInfo> ex) {
+            LoggerWrapper::error("Error executing %s for connection %y: %s: %s (new_opts: %y)", call.label, name,
+                ex.err, ex.desc, new_opts);
+        }
     }
 
     #! performs options validation in the constructor

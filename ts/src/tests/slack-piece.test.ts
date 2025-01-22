@@ -198,7 +198,11 @@ describe('slackPieceTest', () => {
     expect(userIds).toBeDefined();
     expect(userIds.length).toBeGreaterThan(0);
 
-    const props = { userId: userIds[0].value, text: 'test message from Jest', actions: ['test'] };
+    const props = {
+      userId: userIds[0].value,
+      text: 'test message from Jest',
+      actions: [{ title: 'Test', url: 'https://example.com' }],
+    };
 
     if (action.api_function) {
       try {
@@ -220,7 +224,7 @@ describe('slackPieceTest', () => {
 
   it('should request action in channel', async () => {
     const action = slackApp.actions.find(
-      (action) => action.action === 'request_approval_message'
+      (action) => action.action === 'request_action_message'
     ) as IQoreAppActionWithFunction;
 
     const channelIds = await action.options.channel.get_allowed_values(actionContext);
@@ -230,7 +234,7 @@ describe('slackPieceTest', () => {
     const props = {
       channel: channelIds[0].value,
       text: 'test message from Jest',
-      actions: ['test'],
+      actions: [{ title: 'Test', url: 'https://example.com' }],
     };
 
     if (action.api_function) {
@@ -243,66 +247,6 @@ describe('slackPieceTest', () => {
         }
       } catch (error) {
         console.error('Error sending message:', error);
-        throw error;
-      }
-    } else {
-      throw new Error('Action function not found');
-    }
-  });
-
-  it('should request approval direct message', async () => {
-    const action = slackApp.actions.find(
-      (action) => action.action === 'request_approval_direct_message'
-    ) as IQoreAppActionWithFunction;
-
-    const userIds = await action.options.userId.get_allowed_values(actionContext);
-
-    expect(userIds).toBeDefined();
-    expect(userIds.length).toBeGreaterThan(0);
-
-    const props = { userId: userIds[0].value, text: 'test message from Jest' };
-
-    if (action.api_function) {
-      try {
-        const result = await action.api_function(props, {}, actionContext);
-        expect(result).toBeDefined();
-        const expectedResponseType = action.response_type;
-        if (expectedResponseType) {
-          validateResponseProperties(expectedResponseType, result);
-        }
-      } catch (error) {
-        console.error('Error asking approval:', error);
-        throw error;
-      }
-    } else {
-      throw new Error('Action function not found');
-    }
-  });
-
-  it('should request approval in channel', async () => {
-    const action = slackApp.actions.find(
-      (action) => action.action === 'request_approval_message'
-    ) as IQoreAppActionWithFunction;
-
-    const channelIds = await action.options.channel.get_allowed_values(actionContext);
-    expect(channelIds).toBeDefined();
-    expect(channelIds.length).toBeGreaterThan(0);
-
-    const props = {
-      channel: channelIds[0].value,
-      text: 'test message from Jest',
-    };
-
-    if (action.api_function) {
-      try {
-        const result = await action.api_function(props, {}, actionContext);
-        expect(result).toBeDefined();
-        const expectedResponseType = action.response_type;
-        if (expectedResponseType) {
-          validateResponseProperties(expectedResponseType, result);
-        }
-      } catch (error) {
-        console.error('Error asking approval:', error);
         throw error;
       }
     } else {

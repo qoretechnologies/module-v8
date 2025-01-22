@@ -16,6 +16,7 @@ export const ASANA_ALLOWED_PATHS: TAllowedPaths = {
       override_options: {
         project: {
           required_groups: ['tasks_group'],
+          allowed_values_creatable: true,
           rest_get_allowed_values: getAsanaProjectIdAllowedValuesRest,
         },
         workspace: {
@@ -25,11 +26,13 @@ export const ASANA_ALLOWED_PATHS: TAllowedPaths = {
         section: {
           required_groups: ['tasks_group'],
           depends_on: ['project'],
+          allowed_values_creatable: true,
           get_allowed_values: getAsanaSectionIdAllowedValues,
         },
         assignee: {
           required_groups: ['tasks_group'],
           depends_on: ['workspace'],
+          allowed_values_creatable: true,
           get_allowed_values: getAsanaAssigneeIdAllowedValues,
         },
       },
@@ -47,12 +50,21 @@ export const ASANA_ALLOWED_PATHS: TAllowedPaths = {
           depends_on: ['workspace'],
           get_allowed_values: getAsanaAssigneeIdAllowedValues,
         },
+        tags: {
+          type: {
+            type: 'list',
+            element_type: 'string',
+          },
+          allowed_values_creatable: true,
+          rest_get_allowed_values: getAsanaTagIdAllowedValuesRest,
+        },
         projects: {
           required_groups: ['tasks_group'],
           type: {
             type: 'list',
             element_type: 'string',
           },
+          allowed_values_creatable: true,
           rest_get_allowed_values: getAsanaProjectIdAllowedValuesRest,
         },
       },
@@ -70,11 +82,37 @@ export const ASANA_ALLOWED_PATHS: TAllowedPaths = {
           get_allowed_values: getAsanaAssigneeIdAllowedValues,
           depends_on: ['workspace'],
         },
+        tags: {
+          type: {
+            type: 'list',
+            element_type: 'string',
+          },
+          allowed_values_creatable: true,
+          rest_get_allowed_values: getAsanaTagIdAllowedValuesRest,
+        },
+        completed_by: {
+          rest_get_allowed_values: getAsanaUserIdAllowedValuesRest,
+          allowed_values_creatable: true,
+        },
+        created_by: {
+          rest_get_allowed_values: getAsanaUserIdAllowedValuesRest,
+          allowed_values_creatable: true,
+        },
+        followers: {
+          type: {
+            type: 'list',
+            element_type: 'string',
+          },
+          allowed_values_creatable: true,
+          rest_get_allowed_values: getAsanaUserIdAllowedValuesRest,
+        },
         projects: {
           type: {
             type: 'list',
             element_type: 'string',
           },
+          allowed_values_creatable: true,
+          rest_get_allowed_values: getAsanaProjectIdAllowedValuesRest,
         },
       },
     },
@@ -167,11 +205,33 @@ export const ASANA_ALLOWED_PATHS: TAllowedPaths = {
           required: true,
         },
         workspace: {
+          required_groups: ['projects_group'],
           rest_get_allowed_values: getAsanaWorkspaceIdAllowedValuesRest,
         },
         team: {
+          required_groups: ['projects_group'],
           depends_on: ['workspace'],
           get_allowed_values: getAsanaTeamIdAllowedValues,
+        },
+        followers: {
+          type: {
+            type: 'list',
+            element_type: 'string',
+          },
+          allowed_values_creatable: true,
+          rest_get_allowed_values: getAsanaUserIdAllowedValuesRest,
+        },
+        members: {
+          type: {
+            type: 'list',
+            element_type: 'string',
+          },
+          allowed_values_creatable: true,
+          rest_get_allowed_values: getAsanaUserIdAllowedValuesRest,
+        },
+        owner: {
+          allowed_values_creatable: true,
+          rest_get_allowed_values: getAsanaUserIdAllowedValuesRest,
         },
       },
     },
@@ -181,6 +241,7 @@ export const ASANA_ALLOWED_PATHS: TAllowedPaths = {
       override_options: {
         project_gid: {
           required: true,
+          allowed_values_creatable: true,
           rest_get_allowed_values: getAsanaProjectIdAllowedValuesRest,
         },
       },
@@ -189,6 +250,7 @@ export const ASANA_ALLOWED_PATHS: TAllowedPaths = {
       override_options: {
         project_gid: {
           required: true,
+          allowed_values_creatable: true,
           rest_get_allowed_values: getAsanaProjectIdAllowedValuesRest,
         },
       },
@@ -197,7 +259,33 @@ export const ASANA_ALLOWED_PATHS: TAllowedPaths = {
       override_options: {
         project_gid: {
           required: true,
+          on_change: ['refetch'],
+          allowed_values_creatable: true,
           rest_get_allowed_values: getAsanaProjectIdAllowedValuesRest,
+        },
+        followers: {
+          type: {
+            type: 'list',
+            element_type: 'string',
+          },
+          allowed_values_creatable: true,
+          rest_get_allowed_values: getAsanaUserIdAllowedValuesRest,
+        },
+        members: {
+          type: {
+            type: 'list',
+            element_type: 'string',
+          },
+          allowed_values_creatable: true,
+          rest_get_allowed_values: getAsanaUserIdAllowedValuesRest,
+        },
+        owner: {
+          allowed_values_creatable: true,
+          rest_get_allowed_values: getAsanaUserIdAllowedValuesRest,
+        },
+        team: {
+          required_groups: ['projects_group'],
+          get_allowed_values: getAsanaTeamIdAllowedValues,
         },
       },
     },
@@ -207,6 +295,7 @@ export const ASANA_ALLOWED_PATHS: TAllowedPaths = {
       override_options: {
         project_gid: {
           required: true,
+          allowed_values_creatable: true,
           rest_get_allowed_values: getAsanaProjectIdAllowedValuesRest,
         },
       },
@@ -217,6 +306,7 @@ export const ASANA_ALLOWED_PATHS: TAllowedPaths = {
       override_options: {
         project_gid: {
           required: true,
+          allowed_values_creatable: true,
           rest_get_allowed_values: getAsanaProjectIdAllowedValuesRest,
         },
       },
@@ -228,7 +318,14 @@ export const ASANA_ALLOWED_PATHS: TAllowedPaths = {
         },
         project_gid: {
           required: true,
+          allowed_values_creatable: true,
           rest_get_allowed_values: getAsanaProjectIdAllowedValuesRest,
+        },
+        insert_before: {
+          get_allowed_values: getAsanaSectionIdAllowedValues,
+        },
+        insert_after: {
+          get_allowed_values: getAsanaSectionIdAllowedValues,
         },
       },
     },
@@ -251,6 +348,12 @@ export const ASANA_ALLOWED_PATHS: TAllowedPaths = {
         name: {
           required: true,
         },
+        insert_before: {
+          get_allowed_values: getAsanaSectionIdAllowedValues,
+        },
+        insert_after: {
+          get_allowed_values: getAsanaSectionIdAllowedValues,
+        },
       },
     },
   },
@@ -266,6 +369,14 @@ export const ASANA_ALLOWED_PATHS: TAllowedPaths = {
         },
         workspace: {
           rest_get_allowed_values: getAsanaWorkspaceIdAllowedValuesRest,
+        },
+        followers: {
+          type: {
+            type: 'list',
+            element_type: 'string',
+          },
+          allowed_values_creatable: true,
+          rest_get_allowed_values: getAsanaUserIdAllowedValuesRest,
         },
       },
     },
@@ -314,11 +425,8 @@ export const ASANA_ALLOWED_PATHS: TAllowedPaths = {
         name: {
           required: true,
         },
-        workspace: {
-          rest_get_allowed_values: getAsanaWorkspaceIdAllowedValuesRest,
-        },
-        team: {
-          depends_on: ['workspace'],
+        team_gid: {
+          allowed_values_creatable: true,
           get_allowed_values: getAsanaTeamIdAllowedValues,
         },
       },
@@ -357,6 +465,7 @@ export const ASANA_ALLOWED_PATHS: TAllowedPaths = {
         },
         project: {
           required_groups: ['goals_group'],
+          allowed_values_creatable: true,
           rest_get_allowed_values: getAsanaProjectIdAllowedValuesRest,
         },
         workspace: {
@@ -384,6 +493,7 @@ export const ASANA_ALLOWED_PATHS: TAllowedPaths = {
           get_allowed_values: getAsanaTeamIdAllowedValues,
         },
         owner: {
+          allowed_values_creatable: true,
           rest_get_allowed_values: getAsanaUserIdAllowedValuesRest,
         },
         time_period: {

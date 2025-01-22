@@ -6,10 +6,28 @@ export const getAsanaTeamIdAllowedValues: TQoreGetAllowedValuesFunction = async 
 ): Promise<IQoreAllowedValue[]> => {
   const {
     conn_opts: { token },
-    opts: { workspace },
+    opts,
   } = context;
 
   const teams: IQoreAllowedValue[] = [];
+  let workspace = opts.workspace;
+
+  if (opts.project && !opts.workspace) {
+    const { data: project } = await QorusRequest.get<any>(
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        path: `/api/1.0/projects/${opts.project}`,
+      },
+      { url: `https://app.asana.com`, endpointId: 'Asana' }
+    );
+
+    workspace = project?.data?.workspace?.gid;
+    if (!workspace) {
+      throw new Error('Workspace option is required');
+    }
+  }
 
   const { data } = await QorusRequest.get<any>(
     {

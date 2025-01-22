@@ -7,6 +7,8 @@ exports.actionsCatalogue = {
               - "parse_flags": -1 -> this will turn on all lax parsing options - or you can use 128
                 (LM_ACCEPT_QUERY_OBJECTS = accept "object" as a valid type for query parameters like OpenAPI 3.0)
             - swagger_paths?: string[] -> a list of swagger paths to build an optimized schema
+            - swagger_utc_dates?: boolean -> if date/time values should be serialized in UTC as Swagger query args
+            - swagger_query_date_format?: string -> the date format to use when serializing Swagger query date args
         */
         api.registerApp({
             "name": "js-test",
@@ -101,12 +103,21 @@ exports.actionsCatalogue = {
                   are option names; values are converted to option hashes described by the COnnectionOptionInfo
                   hashdecl: https://qoretechnologies.com/manual/qorus/gitlab-docs/develop/qore/modules/ConnectionProvider/html/struct_connection_provider_1_1_connection_option_info.html
                 - required_options?: string[] -> a list of required options for connections for this app
-                - set_options_post_auth?: function (ctx? : object) : object? -> A function that is called after
+                - set_options_post_auth?: async function (ctx? : object) : object? -> A function that is called after
                   authenticating to retrieve additional options to set on the connection; the return value must be an
                   object with serializable values that are connection options; the options will be stored on the
                   connection itself; 'ctx' is an object with the following keys:
                   - conn_name: string -> the connection name, if any is defined
-                  - conn_opts: object -> connection options + processed options from the auth response + the auth response itself
+                  - conn_opts: object -> connection options + processed options from the auth response + the auth
+                    response itself
+                - set_options_post_auth_code?: function (ctx? : object) : object? -> A function that is called after
+                  authenticating to retrieve additional options to set on the connection; the return value must be an
+                  object with serializable values that are connection options; no I/O should be performed in this
+                  function, as it will be called from the async connection poller object; options returned will be
+                  stored on the connection itself; 'ctx' is an object with the following keys:
+                  - conn_name: string -> the connection name, if any is defined
+                  - conn_opts: object -> connection options + processed options from the auth response + the auth
+                    response itself
                 - url_template_options?: string[] -> a list of option names that will be used to substitute values in
                   URLs; the URL should contain strings like '{{option_name}}'
             */
@@ -119,7 +130,7 @@ exports.actionsCatalogue = {
                         "type": "string",
                     },
                 },
-                "set_options_post_auth": function (ctx) {
+                "set_options_post_auth": async function (ctx) {
                     return {
                         "account_id": "abc123",
                     };
@@ -201,12 +212,6 @@ exports.actionsCatalogue = {
                     - short_desc?: string -> a short plain-text description of the field
                     - desc?: string -> a longer description for the field that supports markdown formatting
                     - type -> same as this - either a string or a data object again
-                    - dependent_fields?: object[] -> a list of data objects describing dependent fields of the last
-                      field in this type; each object must have the following keys
-                      - value: any -> of the same value type as the last field in under 'type'; must be unique, and
-                        must be a value corresponding to the parent field's type
-                      - fields: object -> a data object giving descriptions for each additional field, keys are field
-                        names, values have the format of this hash
                     - example_value?: any -> (values must use the field's type) any example value to use when
                       generating example data etc
                     - default_value?: any -> (values must use the field's type) the default value if none is provided
@@ -344,6 +349,9 @@ exports.actionsCatalogue = {
                                 },
                                 "b": {
                                     "type": "int",
+                                    "get_default_value": function (ctx) {
+                                        return 100;
+                                    },
                                 },
                             },
                         },

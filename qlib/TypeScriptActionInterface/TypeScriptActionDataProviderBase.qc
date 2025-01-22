@@ -223,12 +223,12 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                 TSAI::debug("Waiting for result");
                 # this will return a value as soon as the first value is ready
                 rv = q.get();
-                TSAI::debug("Async result: %y", rv);
                 if (rv."where" == "then") {
                     rv = rv.val;
                 } else {
                     errloc = rv."where";
                     err = rv.err;
+                    TSAI::debug("Async error result: %y", rv);
                 }
             } catch (hash<ExceptionInfo> ex) {
                 TSAI::error("Error waiting for async JavaScript request %y: %s", api.label, get_exception_string(ex));
@@ -252,6 +252,8 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         } else if (rv.typeCode() == NT_LIST && (rv[0] instanceof JavaScriptObject)) {
             rv = map $1.toData(), rv;
         }
+
+        TSAI::debug("Async result: %y", rv);
 
         return rv;
     }

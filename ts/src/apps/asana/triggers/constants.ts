@@ -1,6 +1,7 @@
 import { TQoreTypeObject } from '../../../global/models/qore';
 
 export const asanaWebhookInfoLocation = 'events';
+export const asanaWebhookEchoHeader = 'x-hook-secret';
 
 export const asanaEventInfoType = {
   type: 'hash',

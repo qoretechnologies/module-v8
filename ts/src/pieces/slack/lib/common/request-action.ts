@@ -1,5 +1,5 @@
+import { assertNotNullOrUndefined } from 'core/shared';
 import { slackSendMessage } from './utils';
-import { assertNotNullOrUndefined, ExecutionType, PauseType } from 'core/shared';
 
 export const requestAction = async (conversationId: string, context: any) => {
   const { actions } = context.propsValue;
@@ -9,73 +9,61 @@ export const requestAction = async (conversationId: string, context: any) => {
     throw new Error(`Must have at least one button action`);
   }
 
-  const actionTextToIds = actions.map((actionText: string) => {
-    if (!actionText) {
+  const actionTextToIds = actions.map((action: { title: string; url: string }) => {
+    if (!action.title) {
       throw new Error(`Button text for the action cannot be empty`);
     }
 
+    if (!action.url) {
+      throw new Error(`Button URL for the action cannot be empty`);
+    }
+
     return {
-      actionText,
-      actionId: encodeURI(actionText as string),
+      actionId: encodeURI(action.title as string),
+      actionText: action.title,
+      url: action.url,
     };
   });
 
-  if (context.executionType === ExecutionType.BEGIN) {
-    context.run.pause({
-      pauseMetadata: {
-        type: PauseType.WEBHOOK,
-        actions: actionTextToIds.map((action: any) => action.actionId),
-      },
-    });
+  const token = context.auth.access_token;
+  const { text, username, profilePicture } = context.propsValue;
 
-    const token = context.auth.access_token;
-    const { text, username, profilePicture } = context.propsValue;
+  assertNotNullOrUndefined(token, 'token');
+  assertNotNullOrUndefined(text, 'text');
 
-    assertNotNullOrUndefined(token, 'token');
-    assertNotNullOrUndefined(text, 'text');
-
-    const actionElements = actionTextToIds.map((action: any) => {
-      const actionLink = context.generateResumeUrl({
-        queryParams: { action: action.actionId },
-      });
-
-      return {
-        type: 'button',
-        text: {
-          type: 'plain_text',
-          text: action.actionText,
-        },
-        style: 'primary',
-        url: actionLink,
-      };
-    });
-
-    return await slackSendMessage({
-      token,
-      text: `${context.propsValue.text}`,
-      username,
-      profilePicture,
-      blocks: [
-        {
-          type: 'section',
-          text: {
-            type: 'mrkdwn',
-            text: `${context.propsValue.text}`,
-          },
-        },
-        {
-          type: 'actions',
-          block_id: 'actions',
-          elements: actionElements,
-        },
-      ],
-      conversationId: conversationId,
-    });
-  } else {
-    const payload = context.resumePayload as { action: string };
+  const actionElements = actionTextToIds.map((action: any) => {
+    const actionLink = action.url;
 
     return {
-      action: decodeURI(payload.action),
+      type: 'button',
+      text: {
+        type: 'plain_text',
+        text: action.actionText,
+      },
+      style: 'primary',
+      url: actionLink,
     };
-  }
+  });
+
+  return await slackSendMessage({
+    token,
+    text: `${context.propsValue.text}`,
+    username,
+    profilePicture,
+    blocks: [
+      {
+        type: 'section',
+        text: {
+          type: 'mrkdwn',
+          text: `${context.propsValue.text}`,
+        },
+      },
+      {
+        type: 'actions',
+        block_id: 'actions',
+        elements: actionElements,
+      },
+    ],
+    conversationId: conversationId,
+  });
 };

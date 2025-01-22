@@ -1,6 +1,7 @@
 import { TAllowedPaths } from '../../global/models/qore';
 import { IQoreConnectionOptions } from '../zendesk';
 import { getJiraCommentIdAllowedValues } from './helpers/get-comment-id-allowed-values';
+import { getJiraIssueDescriptionDefaultValue } from './helpers/get-default-description-value';
 import { getJiraFieldIdAllowedValues } from './helpers/get-field-id-allowed-values';
 import { getJiraIssueIdAllowedValues } from './helpers/get-issue-id-allowed-values';
 import {
@@ -180,6 +181,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
       override_options: {
         issueIdOrKey: {
           allowed_values_creatable: true,
+          on_change: ['refetch'],
           get_allowed_values: getJiraIssueIdAllowedValues,
         },
         update: {
@@ -200,6 +202,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
                   type: 'hash',
                   fields: jiraDocumentFormatOption.type.fields,
                 },
+                get_default_value: getJiraIssueDescriptionDefaultValue,
                 required: false,
               },
               issuetype: {
@@ -276,6 +279,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
         id: {
           required: true,
           depends_on: ['issueIdOrKey'],
+          allowed_values_creatable: true,
           get_allowed_values: getJiraCommentIdAllowedValues,
         },
       },
@@ -283,11 +287,13 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     DELETE: {
       override_options: {
         issueIdOrKey: {
+          allowed_values_creatable: true,
           get_allowed_values: getJiraIssueIdAllowedValues,
         },
         id: {
           required: true,
           depends_on: ['issueIdOrKey'],
+          allowed_values_creatable: true,
           get_allowed_values: getJiraCommentIdAllowedValues,
         },
       },
@@ -295,11 +301,13 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     PUT: {
       override_options: {
         issueIdOrKey: {
+          allowed_values_creatable: true,
           get_allowed_values: getJiraIssueIdAllowedValues,
         },
         id: {
           required: true,
           depends_on: ['issueIdOrKey'],
+          allowed_values_creatable: true,
           get_allowed_values: getJiraCommentIdAllowedValues,
         },
         body: { ...jiraDocumentFormatOption, required: false },
@@ -328,6 +336,14 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
           allowed_values_creatable: true,
           get_allowed_values: getJiraIssueIdAllowedValues,
         },
+        startedAfter: {
+          required: false,
+          type: 'unixtsms',
+        },
+        startedBefore: {
+          required: false,
+          type: 'unixtsms',
+        },
       },
     },
   },
@@ -340,6 +356,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
         },
         id: {
           depends_on: ['issueIdOrKey'],
+          allowed_values_creatable: true,
           get_allowed_values: getJiraWorklogIdAllowedValues,
         },
       },
@@ -352,6 +369,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
         },
         id: {
           depends_on: ['issueIdOrKey'],
+          allowed_values_creatable: true,
           get_allowed_values: getJiraWorklogIdAllowedValues,
         },
       },
@@ -364,6 +382,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
         },
         id: {
           depends_on: ['issueIdOrKey'],
+          allowed_values_creatable: true,
           get_allowed_values: getJiraWorklogIdAllowedValues,
         },
       },
@@ -392,6 +411,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     PUT: {
       override_options: {
         fieldId: {
+          allowed_values_creatable: true,
           get_allowed_values: getJiraFieldIdAllowedValues,
         },
       },
@@ -401,6 +421,7 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
     POST: {
       override_options: {
         id: {
+          allowed_values_creatable: true,
           get_allowed_values: getJiraFieldIdAllowedValues,
         },
       },
