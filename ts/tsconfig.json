@@ -9,7 +9,6 @@
     "target": "ES2021",
     "sourceMap": true,
     "outDir": "./dist",
-    "allowJs": true,
     "baseUrl": "./src",
     "paths": {
       "src/*": ["src/*"],
@@ -21,9 +20,6 @@
       "i18n/*": ["i18n/*"]
     },
     "plugins": [
-      {
-        "transform": "typescript-transform-paths"
-      },
       {
         "transform": "typescript-transform-paths",
         "afterDeclarations": true
