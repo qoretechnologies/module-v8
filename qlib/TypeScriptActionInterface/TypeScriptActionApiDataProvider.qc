@@ -76,6 +76,9 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
             *hash<DataContextInfo> arg = getCallContextInfo();
             hash<string, bool> vmap;
             foreach hash<auto> i in (dvmap.pairIterator()) {
+                if (i.value.info.subtype) {
+                    continue;
+                }
                 try {
                     auto v = conn.getSetCacheValue(i.key, auto sub () {
                         debug("Connection %y retrieving default value for %y", conn.name, i.key);
@@ -86,8 +89,8 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
                     if (v) {
                         *AbstractDataField f = fields{i.key};
                         if (!f) {
-                            throw "ACTION-CONFIG-ERROR", sprintf("Cannot set default type for unknown option %y",
-                                i.key);
+                            throw "ACTION-CONFIG-ERROR", sprintf("Cannot set default type for unknown option %y; "
+                                "known options: %y", i.key, keys fields);
                         }
                         f.setDefaultValue(v);
                         vmap{i.key} = True;
