@@ -53,7 +53,6 @@ export const NETSUITE_ALLOWED_PATHS = {
     },
   },
   '/customer': {
-    GET: {},
     POST: {},
   },
   '/customer/{id}': {
@@ -83,7 +82,6 @@ export const NETSUITE_ALLOWED_PATHS = {
     },
   },
   '/salesOrder': {
-    GET: {},
     POST: {},
   },
   '/salesOrder/{id}': {
@@ -113,7 +111,6 @@ export const NETSUITE_ALLOWED_PATHS = {
     },
   },
   '/invoice': {
-    GET: {},
     POST: {},
   },
   '/invoice/{id}': {
@@ -143,7 +140,6 @@ export const NETSUITE_ALLOWED_PATHS = {
     },
   },
   '/vendor': {
-    GET: {},
     POST: {},
   },
   '/vendor/{id}': {
@@ -173,7 +169,6 @@ export const NETSUITE_ALLOWED_PATHS = {
     },
   },
   '/purchaseOrder': {
-    GET: {},
     POST: {},
   },
   '/purchaseOrder/{id}': {
@@ -203,7 +198,6 @@ export const NETSUITE_ALLOWED_PATHS = {
     },
   },
   '/journalEntry': {
-    GET: {},
     POST: {},
   },
   '/journalEntry/{id}': {

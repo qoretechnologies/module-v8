@@ -1807,7 +1807,43 @@ const en = {
       shortDesc: 'A comprehensive suite of cloud-based business management solutions.',
       longDesc:
         'NetSuite offers a unified platform for ERP, CRM, e-commerce, and more, enabling businesses to manage all key operations in a single system.',
+      triggers: {
+        new_record: {
+          displayName: 'New Record',
+          shortDesc: 'Triggers when a new record is created',
+          longDesc: 'Triggers when a new record is created',
+          options: {
+            record_type: {
+              displayName: 'Record Type',
+              shortDesc: 'The type of record to monitor',
+              longDesc: 'The type of record to monitor',
+            },
+          },
+        },
+      },
       actions: {
+        suite_ql: {
+          displayName: 'SuiteQL',
+          shortDesc: 'Run a SuiteQL query',
+          longDesc: 'Run a SuiteQL query',
+          options: {
+            query: {
+              displayName: 'Query',
+              shortDesc: 'The SuiteQL query to run',
+              longDesc: 'The SuiteQL query to run',
+            },
+            limit: {
+              displayName: 'Limit',
+              shortDesc: 'The maximum number of records to return',
+              longDesc: 'The maximum number of records to return',
+            },
+            offset: {
+              displayName: 'Offset',
+              shortDesc: 'The number of records to skip',
+              longDesc: 'The number of records to skip',
+            },
+          },
+        },
         account_get: {
           displayName: 'Get List of Accounts',
           shortDesc: 'Retrieve a list of accounts.',

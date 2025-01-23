@@ -8717,7 +8717,97 @@ type RootTranslation = {
 			 * N​e​t​S​u​i​t​e​ ​o​f​f​e​r​s​ ​a​ ​u​n​i​f​i​e​d​ ​p​l​a​t​f​o​r​m​ ​f​o​r​ ​E​R​P​,​ ​C​R​M​,​ ​e​-​c​o​m​m​e​r​c​e​,​ ​a​n​d​ ​m​o​r​e​,​ ​e​n​a​b​l​i​n​g​ ​b​u​s​i​n​e​s​s​e​s​ ​t​o​ ​m​a​n​a​g​e​ ​a​l​l​ ​k​e​y​ ​o​p​e​r​a​t​i​o​n​s​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​s​y​s​t​e​m​.
 			 */
 			longDesc: string
+			triggers: {
+				new_record: {
+					/**
+					 * N​e​w​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					longDesc: string
+					options: {
+						record_type: {
+							/**
+							 * R​e​c​o​r​d​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​r​e​c​o​r​d​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​r​e​c​o​r​d​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
 			actions: {
+				suite_ql: {
+					/**
+					 * S​u​i​t​e​Q​L
+					 */
+					displayName: string
+					/**
+					 * R​u​n​ ​a​ ​S​u​i​t​e​Q​L​ ​q​u​e​r​y
+					 */
+					shortDesc: string
+					/**
+					 * R​u​n​ ​a​ ​S​u​i​t​e​Q​L​ ​q​u​e​r​y
+					 */
+					longDesc: string
+					options: {
+						query: {
+							/**
+							 * Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​S​u​i​t​e​Q​L​ ​q​u​e​r​y​ ​t​o​ ​r​u​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​S​u​i​t​e​Q​L​ ​q​u​e​r​y​ ​t​o​ ​r​u​n
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​s​k​i​p
+							 */
+							longDesc: string
+						}
+					}
+				}
 				account_get: {
 					/**
 					 * G​e​t​ ​L​i​s​t​ ​o​f​ ​A​c​c​o​u​n​t​s
@@ -17918,7 +18008,97 @@ export type TranslationFunctions = {
 			 * NetSuite offers a unified platform for ERP, CRM, e-commerce, and more, enabling businesses to manage all key operations in a single system.
 			 */
 			longDesc: () => LocalizedString
+			triggers: {
+				new_record: {
+					/**
+					 * New Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new record is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new record is created
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						record_type: {
+							/**
+							 * Record Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The type of record to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The type of record to monitor
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
 			actions: {
+				suite_ql: {
+					/**
+					 * SuiteQL
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Run a SuiteQL query
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Run a SuiteQL query
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						query: {
+							/**
+							 * Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The SuiteQL query to run
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The SuiteQL query to run
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The maximum number of records to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of records to return
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The number of records to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of records to skip
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
 				account_get: {
 					/**
 					 * Get List of Accounts

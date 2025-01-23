@@ -211,10 +211,9 @@ export const mapActionsToApp = (
     desc: getLocaleField(app, locale, action, 'desc'),
     app,
     options: 'options' in action ? fixOptions(action, action.options, app, locale) : undefined,
-    override_options:
-      'override_options' in action
-        ? fixOptions(action, action.override_options, app, locale)
-        : undefined,
+    ...('override_options' in action && {
+      override_options: fixOptions(action, action.override_options, app, locale),
+    }),
     response_type:
       'response_type' in action
         ? typeof action.response_type === 'string'

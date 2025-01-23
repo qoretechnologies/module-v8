@@ -1,14 +1,16 @@
 import { actionsCatalogue } from '../../ActionsCatalogue';
-import { createSwaggerPaths, mapActionsToApp } from '../../global/helpers';
+import { createSwaggerPaths, mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import { IQoreAppWithActions } from '../../global/models/qore';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
+import { NetsuiteSuiteQlAction } from './actions/squite-ql.action';
 import {
   NETSUITE_ACTIONS,
   NETSUITE_ALLOWED_PATHS,
   NETSUITE_APP_NAME,
   NETSUITE_CONN_OPTIONS,
 } from './constants';
+import * as NETSUITE_TRIGGERS from './triggers';
 
 export default (locale: Locales) =>
   ({
@@ -16,7 +18,10 @@ export default (locale: Locales) =>
     short_desc: L[locale].apps[NETSUITE_APP_NAME].shortDesc(),
     name: NETSUITE_APP_NAME,
     desc: L[locale].apps[NETSUITE_APP_NAME].longDesc(),
-    actions: [...mapActionsToApp(NETSUITE_APP_NAME, NETSUITE_ACTIONS, locale)],
+    actions: [
+      ...mapActionsToApp(NETSUITE_APP_NAME, [...NETSUITE_ACTIONS, NetsuiteSuiteQlAction], locale),
+      ...mapTriggersToApp(NETSUITE_APP_NAME, NETSUITE_TRIGGERS, locale),
+    ],
     logo:
       'PHN2ZyB2aWV3Qm94PSIwIDAuMiAxNTAgMTUwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmc' +
       'iIHdpZHRoPSIyNTAwIiBoZWlnaHQ9IjI0OTciPjxwYXRoIGQ9Ik0wIC4yaDE1MHYxNTBIMHoiIGZpbGw9Im' +
