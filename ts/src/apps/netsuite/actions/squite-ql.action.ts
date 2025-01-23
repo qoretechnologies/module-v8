@@ -32,6 +32,9 @@ export const NetsuiteSuiteQlResponseType = {
   type: 'hash',
   fields: {
     links: {
+      display_name: 'Links',
+      short_desc: 'Links',
+      desc: 'Links',
       type: {
         type: 'list',
         element_type: {
@@ -48,12 +51,21 @@ export const NetsuiteSuiteQlResponseType = {
       },
     },
     count: {
+      display_name: 'Count',
+      short_desc: 'The number of results',
+      desc: 'The number of results',
       type: 'number',
     },
     hasMore: {
+      display_name: 'Has More',
+      short_desc: 'Whether there are more results',
+      desc: 'Whether there are more results',
       type: 'boolean',
     },
     items: {
+      display_name: 'Items',
+      short_desc: 'The items',
+      desc: 'The items',
       type: {
         type: 'list',
         element_type: 'hash',

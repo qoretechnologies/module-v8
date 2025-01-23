@@ -8732,7 +8732,7 @@ type RootTranslation = {
 					 */
 					longDesc: string
 					options: {
-						record_type: {
+						recordType: {
 							/**
 							 * R​e​c​o​r​d​ ​T​y​p​e
 							 */
@@ -8805,6 +8805,66 @@ type RootTranslation = {
 							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​s​k​i​p
 							 */
 							longDesc: string
+						}
+						response_type: {
+							fields: {
+								links: {
+									/**
+									 * L​i​n​k​s
+									 */
+									display_name: string
+									/**
+									 * L​i​n​k​s
+									 */
+									short_desc: string
+									/**
+									 * L​i​n​k​s
+									 */
+									desc: string
+								}
+								count: {
+									/**
+									 * C​o​u​n​t
+									 */
+									display_name: string
+									/**
+									 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s
+									 */
+									short_desc: string
+									/**
+									 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s
+									 */
+									desc: string
+								}
+								hasMore: {
+									/**
+									 * H​a​s​ ​M​o​r​e
+									 */
+									display_name: string
+									/**
+									 * W​h​e​t​h​e​r​ ​t​h​e​r​e​ ​a​r​e​ ​m​o​r​e​ ​r​e​s​u​l​t​s
+									 */
+									short_desc: string
+									/**
+									 * W​h​e​t​h​e​r​ ​t​h​e​r​e​ ​a​r​e​ ​m​o​r​e​ ​r​e​s​u​l​t​s
+									 */
+									desc: string
+								}
+								items: {
+									/**
+									 * I​t​e​m​s
+									 */
+									display_name: string
+									/**
+									 * T​h​e​ ​i​t​e​m​s
+									 */
+									short_desc: string
+									/**
+									 * T​h​e​ ​i​t​e​m​s
+									 */
+									desc: string
+								}
+							}
 						}
 					}
 				}
@@ -18023,7 +18083,7 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 					options: {
-						record_type: {
+						recordType: {
 							/**
 							 * Record Type
 							 */
@@ -18096,6 +18156,66 @@ export type TranslationFunctions = {
 							 * The number of records to skip
 							 */
 							longDesc: () => LocalizedString
+						}
+						response_type: {
+							fields: {
+								links: {
+									/**
+									 * Links
+									 */
+									display_name: () => LocalizedString
+									/**
+									 * Links
+									 */
+									short_desc: () => LocalizedString
+									/**
+									 * Links
+									 */
+									desc: () => LocalizedString
+								}
+								count: {
+									/**
+									 * Count
+									 */
+									display_name: () => LocalizedString
+									/**
+									 * The number of results
+									 */
+									short_desc: () => LocalizedString
+									/**
+									 * The number of results
+									 */
+									desc: () => LocalizedString
+								}
+								hasMore: {
+									/**
+									 * Has More
+									 */
+									display_name: () => LocalizedString
+									/**
+									 * Whether there are more results
+									 */
+									short_desc: () => LocalizedString
+									/**
+									 * Whether there are more results
+									 */
+									desc: () => LocalizedString
+								}
+								items: {
+									/**
+									 * Items
+									 */
+									display_name: () => LocalizedString
+									/**
+									 * The items
+									 */
+									short_desc: () => LocalizedString
+									/**
+									 * The items
+									 */
+									desc: () => LocalizedString
+								}
+							}
 						}
 					}
 				}

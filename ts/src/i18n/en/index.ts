@@ -1813,7 +1813,7 @@ const en = {
           shortDesc: 'Triggers when a new record is created',
           longDesc: 'Triggers when a new record is created',
           options: {
-            record_type: {
+            recordType: {
               displayName: 'Record Type',
               shortDesc: 'The type of record to monitor',
               longDesc: 'The type of record to monitor',
@@ -1841,6 +1841,30 @@ const en = {
               displayName: 'Offset',
               shortDesc: 'The number of records to skip',
               longDesc: 'The number of records to skip',
+            },
+            response_type: {
+              fields: {
+                links: {
+                  display_name: 'Links',
+                  short_desc: 'Links',
+                  desc: 'Links',
+                },
+                count: {
+                  display_name: 'Count',
+                  short_desc: 'The number of results',
+                  desc: 'The number of results',
+                },
+                hasMore: {
+                  display_name: 'Has More',
+                  short_desc: 'Whether there are more results',
+                  desc: 'Whether there are more results',
+                },
+                items: {
+                  display_name: 'Items',
+                  short_desc: 'The items',
+                  desc: 'The items',
+                },
+              },
             },
           },
         },
