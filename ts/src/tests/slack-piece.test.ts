@@ -14,12 +14,8 @@ describe('slackPieceTest', () => {
     conn_name: 'slack',
     conn_opts: {
       token: process.env.SLACK_ACCESS_TOKEN,
-    },
-    opts: {
-      data: {
-        authed_user: {
-          access_token: process.env.SLACK_USER_ACCESS_TOKEN,
-        },
+      authed_user: {
+        access_token: process.env.SLACK_USER_ACCESS_TOKEN,
       },
     },
   } satisfies TQoreAppActionFunctionContext;
