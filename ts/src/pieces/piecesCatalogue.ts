@@ -67,7 +67,7 @@ class _PiecesAppCatalogue {
     return {
       name: appName,
       actions: [...actions, ...qoreTriggers],
-      rest: this.mapPieceAuthToAppRest(piece.auth),
+      rest: { ...this.mapPieceAuthToAppRest(piece.auth), ...piece.qoreRest },
       ...(piece.qoreConnectionModifiers && { rest_modifiers: piece.qoreConnectionModifiers }),
       display_name: piece.displayName,
       short_desc: piece.description,
