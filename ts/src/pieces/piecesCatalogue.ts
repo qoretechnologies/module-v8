@@ -137,6 +137,8 @@ class _PiecesAppCatalogue {
       const actionContext = {
         propsValue: obj satisfies StaticPropsValue<InputPropertyMap>,
         auth: {
+          ...context.opts,
+          ...context.conn_opts,
           access_token: context.conn_opts.token,
           data: { ...context.opts, ...context.conn_opts },
         },
