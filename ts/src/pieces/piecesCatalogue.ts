@@ -136,7 +136,10 @@ class _PiecesAppCatalogue {
     ): Promise<any> => {
       const actionContext = {
         propsValue: obj satisfies StaticPropsValue<InputPropertyMap>,
-        auth: { access_token: context.conn_opts.token, ...context.opts, ...context.conn_opts },
+        auth: {
+          access_token: context.conn_opts.token,
+          data: { ...context.opts, ...context.conn_opts },
+        },
         ...commonActionContext,
       } satisfies ActionContext;
 
