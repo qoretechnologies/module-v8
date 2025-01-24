@@ -102,7 +102,7 @@ export const createPiece = <
     params.description,
     params.logo,
     params.qoreTriggers ?? [],
-    params.qoreConnectionModifiers ?? undefined
+    params.qoreConnectionModifiers ?? undefined,
     params.qoreRest ?? undefined
   );
 };
