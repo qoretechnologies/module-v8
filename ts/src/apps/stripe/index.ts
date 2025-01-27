@@ -67,7 +67,7 @@ export default (locale: Locales) =>
       url: 'https://api.stripe.com',
       data: 'json',
       oauth2_grant_type: 'authorization_code',
-      oauth2_client_id: '1208416840087775',
+      oauth2_client_id: 'ca_RBbHjT1Rfnd1id8ccxMtAvq1N0VnXtmu',
       oauth2_client_secret: actionsCatalogue.getOauth2ClientSecret(STRIPE_APP_NAME),
       oauth2_auth_url: 'https://marketplace.stripe.com/oauth/v2/authorize',
       oauth2_token_url: 'https://api.stripe.com/v1/oauth/token',
