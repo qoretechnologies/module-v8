@@ -347,8 +347,8 @@ describe('Tests Stripe Actions', () => {
     it('Should register stripe webhook', async () => {
       const result = await STRIPE_TRIGGERS['chargeSucceeded'].webhook_register(
         {
-          opts: {
-            secretKey: token,
+          conn_opts: {
+            token,
           },
         },
         'https://example1.com'
@@ -362,8 +362,8 @@ describe('Tests Stripe Actions', () => {
       if (webhook) {
         await STRIPE_TRIGGERS['chargeSucceeded'].webhook_deregister(
           {
-            opts: {
-              secretKey: token,
+            conn_opts: {
+              token,
             },
           },
           '',
@@ -373,8 +373,8 @@ describe('Tests Stripe Actions', () => {
     });
     it('Should get example stripe webhook data', async () => {
       const exampleData = await STRIPE_TRIGGERS['chargeSucceeded'].get_example_event_data({
-        opts: {
-          secretKey: token,
+        conn_opts: {
+          token,
         },
       });
 
