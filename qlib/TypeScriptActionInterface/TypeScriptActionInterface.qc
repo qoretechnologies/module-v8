@@ -49,6 +49,9 @@ public hashdecl AsyncCallInfo {
 
     #! Timeout
     date to;
+
+    #! Free-foirm extra info
+    *hash<auto> info;
 }
 
 #! REST get allowed values config info
@@ -1721,6 +1724,9 @@ public class TypeScriptActionInterface {
                     "pool": fctx.pool,
                     "async_call": c,
                     "to": fctx.io_timeout,
+                    "info": {
+                        "subtype": True,
+                    },
                 };
                 string ix = TypeScriptActionInterface::registerAsyncCall(ignore_dup, \fctx.dvmap{key}, "app",
                     fctx.app, fctx.action, key);
