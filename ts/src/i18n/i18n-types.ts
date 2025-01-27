@@ -8704,6 +8704,122 @@ type RootTranslation = {
 				}
 			}
 		}
+		Salesforce: {
+			triggers: {
+				new_record_trigger: {
+					/**
+					 * N​e​w​ ​R​e​c​o​r​d​ ​T​r​i​g​g​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​o​b​j​e​c​t​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​S​a​l​e​s​f​o​r​c​e​ ​o​b​j​e​c​t​.​ ​Y​o​u​ ​c​a​n​ ​c​o​n​f​i​g​u​r​e​ ​t​h​e​ ​o​b​j​e​c​t​ ​t​y​p​e​ ​t​o​ ​t​a​r​g​e​t​ ​s​p​e​c​i​f​i​c​ ​r​e​c​o​r​d​ ​t​y​p​e​s​,​ ​s​u​c​h​ ​a​s​ ​L​e​a​d​s​,​ ​C​o​n​t​a​c​t​s​,​ ​o​r​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​s​.​ ​I​t​ ​i​s​ ​u​s​e​f​u​l​ ​f​o​r​ ​a​u​t​o​m​a​t​i​n​g​ ​w​o​r​k​f​l​o​w​s​ ​t​r​i​g​g​e​r​e​d​ ​b​y​ ​r​e​c​o​r​d​ ​c​r​e​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						object: {
+							/**
+							 * O​b​j​e​c​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​S​a​l​e​s​f​o​r​c​e​ ​o​b​j​e​c​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​r​e​c​o​r​d​s​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​S​a​l​e​s​f​o​r​c​e​ ​o​b​j​e​c​t​ ​(​e​.​g​.​,​ ​L​e​a​d​,​ ​A​c​c​o​u​n​t​,​ ​C​o​n​t​a​c​t​)​ ​w​h​e​r​e​ ​t​h​i​s​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​r​e​c​o​r​d​s​.
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * F​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​S​a​l​e​s​f​o​r​c​e​ ​o​b​j​e​c​t​.
+						 */
+						desc: string
+					}
+				}
+				new_contact_trigger: {
+					/**
+					 * N​e​w​ ​C​o​n​t​a​c​t​ ​T​r​i​g​g​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​C​o​n​t​a​c​t​ ​r​e​c​o​r​d​ ​i​s​ ​c​r​e​a​t​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​C​o​n​t​a​c​t​ ​r​e​c​o​r​d​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​S​a​l​e​s​f​o​r​c​e​.​ ​I​t​ ​i​s​ ​i​d​e​a​l​ ​f​o​r​ ​a​u​t​o​m​a​t​i​n​g​ ​w​o​r​k​f​l​o​w​s​ ​s​u​c​h​ ​a​s​ ​c​o​n​t​a​c​t​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​,​ ​i​n​t​e​g​r​a​t​i​o​n​s​,​ ​o​r​ ​C​R​M​ ​u​p​d​a​t​e​s​.
+					 */
+					longDesc: string
+					event_info: {
+						/**
+						 * F​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​C​o​n​t​a​c​t​ ​r​e​c​o​r​d​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​S​a​l​e​s​f​o​r​c​e​.
+						 */
+						desc: string
+					}
+				}
+				new_lead_trigger: {
+					/**
+					 * N​e​w​ ​L​e​a​d​ ​T​r​i​g​g​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​L​e​a​d​ ​r​e​c​o​r​d​ ​i​s​ ​c​r​e​a​t​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​L​e​a​d​ ​r​e​c​o​r​d​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​S​a​l​e​s​f​o​r​c​e​.​ ​I​t​ ​i​s​ ​c​o​m​m​o​n​l​y​ ​u​s​e​d​ ​f​o​r​ ​w​o​r​k​f​l​o​w​s​ ​r​e​l​a​t​e​d​ ​t​o​ ​l​e​a​d​ ​g​e​n​e​r​a​t​i​o​n​,​ ​q​u​a​l​i​f​i​c​a​t​i​o​n​,​ ​o​r​ ​a​s​s​i​g​n​m​e​n​t​.
+					 */
+					longDesc: string
+					event_info: {
+						/**
+						 * F​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​L​e​a​d​ ​r​e​c​o​r​d​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​S​a​l​e​s​f​o​r​c​e​.
+						 */
+						desc: string
+					}
+				}
+				updated_record_trigger: {
+					/**
+					 * U​p​d​a​t​e​d​ ​R​e​c​o​r​d​ ​T​r​i​g​g​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​r​e​c​o​r​d​ ​i​s​ ​u​p​d​a​t​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​r​e​c​o​r​d​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​S​a​l​e​s​f​o​r​c​e​ ​o​b​j​e​c​t​ ​i​s​ ​u​p​d​a​t​e​d​.​ ​I​t​ ​i​s​ ​u​s​e​f​u​l​ ​f​o​r​ ​w​o​r​k​f​l​o​w​s​ ​t​h​a​t​ ​d​e​p​e​n​d​ ​o​n​ ​c​h​a​n​g​e​s​ ​t​o​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​s​ ​o​r​ ​r​e​c​o​r​d​s​,​ ​s​u​c​h​ ​a​s​ ​u​p​d​a​t​i​n​g​ ​d​o​w​n​s​t​r​e​a​m​ ​s​y​s​t​e​m​s​ ​o​r​ ​n​o​t​i​f​y​i​n​g​ ​u​s​e​r​s​ ​o​f​ ​r​e​c​o​r​d​ ​c​h​a​n​g​e​s​.
+					 */
+					longDesc: string
+					options: {
+						object: {
+							/**
+							 * O​b​j​e​c​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​S​a​l​e​s​f​o​r​c​e​ ​o​b​j​e​c​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​u​p​d​a​t​e​s​.
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​S​a​l​e​s​f​o​r​c​e​ ​o​b​j​e​c​t​ ​(​e​.​g​.​,​ ​O​p​p​o​r​t​u​n​i​t​y​,​ ​C​o​n​t​a​c​t​,​ ​o​r​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​s​)​ ​w​h​e​r​e​ ​t​h​i​s​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​r​e​c​o​r​d​ ​u​p​d​a​t​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * F​i​r​e​s​ ​w​h​e​n​ ​a​ ​r​e​c​o​r​d​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​S​a​l​e​s​f​o​r​c​e​ ​o​b​j​e​c​t​ ​i​s​ ​u​p​d​a​t​e​d​.
+						 */
+						desc: string
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -17395,6 +17511,122 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
+					}
+				}
+			}
+		}
+		Salesforce: {
+			triggers: {
+				new_record_trigger: {
+					/**
+					 * New Record Trigger
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new record is created in the specified object.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a new record is created in a specified Salesforce object. You can configure the object type to target specific record types, such as Leads, Contacts, or custom objects. It is useful for automating workflows triggered by record creation.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						object: {
+							/**
+							 * Object Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Salesforce object to monitor for new records.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Salesforce object (e.g., Lead, Account, Contact) where this trigger will monitor for newly created records.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Fires when a new record is created in the specified Salesforce object.
+						 */
+						desc: () => LocalizedString
+					}
+				}
+				new_contact_trigger: {
+					/**
+					 * New Contact Trigger
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new Contact record is created.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a new Contact record is created in Salesforce. It is ideal for automating workflows such as contact notifications, integrations, or CRM updates.
+					 */
+					longDesc: () => LocalizedString
+					event_info: {
+						/**
+						 * Fires when a new Contact record is created in Salesforce.
+						 */
+						desc: () => LocalizedString
+					}
+				}
+				new_lead_trigger: {
+					/**
+					 * New Lead Trigger
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new Lead record is created.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates whenever a new Lead record is created in Salesforce. It is commonly used for workflows related to lead generation, qualification, or assignment.
+					 */
+					longDesc: () => LocalizedString
+					event_info: {
+						/**
+						 * Fires when a new Lead record is created in Salesforce.
+						 */
+						desc: () => LocalizedString
+					}
+				}
+				updated_record_trigger: {
+					/**
+					 * Updated Record Trigger
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an existing record is updated.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever an existing record in a specified Salesforce object is updated. It is useful for workflows that depend on changes to specific fields or records, such as updating downstream systems or notifying users of record changes.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						object: {
+							/**
+							 * Object Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Salesforce object to monitor for updates.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the Salesforce object (e.g., Opportunity, Contact, or custom objects) where this trigger will monitor for record updates.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Fires when a record in the specified Salesforce object is updated.
+						 */
+						desc: () => LocalizedString
 					}
 				}
 			}

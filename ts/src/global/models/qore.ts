@@ -154,6 +154,13 @@ export interface IQoreConnectionOption<
   subset_env_vars?: boolean;
 }
 
+export interface IQoreConnectionOptions<
+  TypeName extends TQoreSimpleType = TQoreSimpleType,
+  TypeValue = unknown,
+> {
+  [key: string]: IQoreConnectionOption<TypeName, TypeValue>;
+}
+
 export interface IQoreRestConnectionModifiers<
   ModifierOptions extends Record<string, IQoreConnectionOption> = Record<
     string,

@@ -2,7 +2,7 @@ import { OpenAPIV2 } from 'openapi-types';
 import { buildActionsFromSwaggerSchema } from '../../global/helpers';
 import { TAllowedPaths, TQoreAppActionOverrideOption } from '../../global/models/qore';
 import eSignature from '../../schemas/esignature.swagger.json';
-import { IQoreConnectionOptions } from '../zendesk';
+import { IQoreConnectionOptions } from '../../global/models/qore';
 import { getEsignatureEnvelopeIdAllowedValues } from './helpers/get-envelope-id-allowed-values';
 import { getEsignatureFolderIdAllowedValues } from './helpers/get-folder-id-allowed-values';
 import { getEsignatureRecipientIdAllowedValues } from './helpers/get-recipient-id-allowed-values';
