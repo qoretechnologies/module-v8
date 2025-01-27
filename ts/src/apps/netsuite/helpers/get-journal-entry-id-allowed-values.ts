@@ -1,12 +1,6 @@
-import { delay } from '../../../global/helpers';
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
-import { Debugger } from '../../../utils/Debugger';
 import { NETSUITE_CONN_OPTIONS } from '../constants';
-import {
-  fetchSuiteQlData,
-  NETSUITE_ALLOWED_VALUES_FETCH_DELAY,
-  NETSUITE_ALLOWED_VALUES_TIMEOUT,
-} from './constants';
+import { fetchNetsuiteAllowedValues } from './constants';
 
 type TNetsuiteJournalEntryData = {
   id: string;
@@ -18,8 +12,6 @@ type TNetsuiteJournalEntryData = {
   memo: string;
   trandisplayname: string;
 };
-
-const TOTAL_LIMIT = 500;
 
 const fieldsToFetch = [
   'id',
@@ -49,41 +41,12 @@ export const getNetsuiteJournalEntryIdAllowedValues: TQoreGetAllowedValuesFuncti
     conn_opts: { token, account_id },
   } = context;
 
-  const journalEntries: IQoreAllowedValue[] = [];
-  const startTime = Date.now();
-  let offset = 0;
+  const journalEntries = await fetchNetsuiteAllowedValues({
+    account_id,
+    token,
+    mapItemToAllowedValue: mapNetSuiteJournalEntry,
+    query: `SELECT ${fieldsToFetch.join(',')} FROM transaction WHERE type = 'Journal' ORDER BY createddate DESC`,
+  });
 
-  try {
-    let hasMore = true;
-
-    while (hasMore && journalEntries.length < TOTAL_LIMIT) {
-      if (Date.now() - startTime > NETSUITE_ALLOWED_VALUES_TIMEOUT) {
-        Debugger.log('NetSuite journal entries fetching timeout');
-
-        break;
-      }
-
-      const { items: fetchedJournalEntries, hasMore: more } = await fetchSuiteQlData({
-        accountId: account_id,
-        token,
-        offset,
-        q: `SELECT ${fieldsToFetch.join(',')} FROM transaction WHERE type = 'Journal' ORDER BY createddate DESC`,
-      });
-
-      journalEntries.push(...fetchedJournalEntries.map(mapNetSuiteJournalEntry));
-
-      hasMore = more;
-      offset += fetchedJournalEntries.length;
-
-      if (hasMore) {
-        await delay(NETSUITE_ALLOWED_VALUES_FETCH_DELAY);
-      }
-    }
-
-    return journalEntries;
-  } catch (error) {
-    Debugger.log('Error fetching Netsuite journal entries:', error);
-
-    return journalEntries;
-  }
+  return journalEntries;
 };

@@ -1,4 +1,7 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
+import { IQoreAllowedValue } from '../../../global/models/qore';
+import { Debugger } from '../../../utils/Debugger';
+import { delay } from '../../../global/helpers';
 
 export const NETSUITE_ALLOWED_VALUES_FETCH_DELAY = 300;
 export const NETSUITE_ALLOWED_VALUES_TIMEOUT = 30_000;
@@ -41,4 +44,55 @@ export const fetchSuiteQlData = async (
   );
 
   return { items: data.items, count: data.count, hasMore: data.hasMore };
+};
+
+export const fetchNetsuiteAllowedValues = async ({
+  account_id,
+  token,
+  mapItemToAllowedValue,
+  query,
+}: {
+  account_id: string;
+  token: string;
+  mapItemToAllowedValue: (item: unknown) => IQoreAllowedValue;
+  query: string;
+}): Promise<IQoreAllowedValue[]> => {
+  const allowedValues: IQoreAllowedValue[] = [];
+  const startTime = Date.now();
+  let offset = 0;
+  const limit = 500;
+
+  try {
+    let hasMore = true;
+
+    while (hasMore && allowedValues.length < limit) {
+      if (Date.now() - startTime > NETSUITE_ALLOWED_VALUES_TIMEOUT) {
+        Debugger.log('NetSuite records fetching timeout');
+
+        break;
+      }
+
+      const { items, hasMore: more } = await fetchSuiteQlData({
+        accountId: account_id,
+        token,
+        offset,
+        q: query,
+      });
+
+      allowedValues.push(...items.map(mapItemToAllowedValue));
+
+      hasMore = more;
+      offset += items.length;
+
+      if (hasMore) {
+        await delay(NETSUITE_ALLOWED_VALUES_FETCH_DELAY);
+      }
+    }
+
+    return allowedValues;
+  } catch (error) {
+    Debugger.log('Error fetching Netsuite records:', error);
+
+    return allowedValues;
+  }
 };

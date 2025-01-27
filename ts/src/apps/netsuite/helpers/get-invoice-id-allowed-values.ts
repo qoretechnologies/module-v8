@@ -1,12 +1,6 @@
-import { delay } from '../../../global/helpers';
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
-import { Debugger } from '../../../utils/Debugger';
 import { NETSUITE_CONN_OPTIONS } from '../constants';
-import {
-  fetchSuiteQlData,
-  NETSUITE_ALLOWED_VALUES_FETCH_DELAY,
-  NETSUITE_ALLOWED_VALUES_TIMEOUT,
-} from './constants';
+import { fetchNetsuiteAllowedValues } from './constants';
 
 type TNetsuiteInvoiceData = {
   id: string;
@@ -30,8 +24,6 @@ const fieldsToFetch = [
   'trandisplayname',
 ];
 
-const TOTAL_LIMIT = 500;
-
 const mapNetSuiteInvoice = (invoice: TNetsuiteInvoiceData): IQoreAllowedValue => ({
   value: invoice.id,
   display_name: invoice.trandisplayname,
@@ -49,43 +41,14 @@ export const getNetsuiteInvoiceIdAllowedValues: TQoreGetAllowedValuesFunction<
     conn_opts: { token, account_id },
   } = context;
 
-  const invoices: IQoreAllowedValue[] = [];
-  const startTime = Date.now();
-  let offset = 0;
+  const invoices = await fetchNetsuiteAllowedValues({
+    account_id,
+    token,
+    mapItemToAllowedValue: mapNetSuiteInvoice,
+    query:
+      `SELECT ${fieldsToFetch.join(',')} FROM transaction WHERE type = 'CustInvc'` +
+      ` ORDER BY transaction.createddate DESC`,
+  });
 
-  try {
-    let hasMore = true;
-
-    while (hasMore && invoices.length < TOTAL_LIMIT) {
-      if (Date.now() - startTime > NETSUITE_ALLOWED_VALUES_TIMEOUT) {
-        Debugger.log('NetSuite invoice fetching timeout');
-
-        break;
-      }
-
-      const { items: fetchedInvoices, hasMore: more } = await fetchSuiteQlData({
-        accountId: account_id,
-        token,
-        offset,
-        q:
-          `SELECT ${fieldsToFetch.join(',')} FROM transaction WHERE type = 'CustInvc'` +
-          ` ORDER BY transaction.createddate DESC`,
-      });
-
-      invoices.push(...fetchedInvoices.map(mapNetSuiteInvoice));
-
-      hasMore = more;
-      offset += fetchedInvoices.length;
-
-      if (hasMore) {
-        await delay(NETSUITE_ALLOWED_VALUES_FETCH_DELAY);
-      }
-    }
-
-    return invoices;
-  } catch (error) {
-    Debugger.log('Error fetching Netsuite invoice:', error);
-
-    return invoices;
-  }
+  return invoices;
 };

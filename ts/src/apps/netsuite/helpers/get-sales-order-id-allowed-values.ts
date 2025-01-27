@@ -1,12 +1,6 @@
-import { delay } from '../../../global/helpers';
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
-import { Debugger } from '../../../utils/Debugger';
 import { NETSUITE_CONN_OPTIONS } from '../constants';
-import {
-  fetchSuiteQlData,
-  NETSUITE_ALLOWED_VALUES_FETCH_DELAY,
-  NETSUITE_ALLOWED_VALUES_TIMEOUT,
-} from './constants';
+import { fetchNetsuiteAllowedValues } from './constants';
 
 type TNetsuiteSalesOrderData = {
   id: string;
@@ -18,8 +12,6 @@ type TNetsuiteSalesOrderData = {
   memo: string;
   trandisplayname: string;
 };
-
-const TOTAL_LIMIT = 500;
 
 const fieldsToFetch = [
   'id',
@@ -49,41 +41,12 @@ export const getNetsuiteSalesOrderIdAllowedValues: TQoreGetAllowedValuesFunction
     conn_opts: { token, account_id },
   } = context;
 
-  const salesOrders: IQoreAllowedValue[] = [];
-  const startTime = Date.now();
-  let offset = 0;
+  const salesOrders = await fetchNetsuiteAllowedValues({
+    account_id,
+    token,
+    mapItemToAllowedValue: mapNetSuiteSalesOrder,
+    query: `SELECT ${fieldsToFetch.join(',')} FROM transaction  WHERE type = 'SalesOrd' ORDER BY createddate DESC`,
+  });
 
-  try {
-    let hasMore = true;
-
-    while (hasMore && salesOrders.length < TOTAL_LIMIT) {
-      if (Date.now() - startTime > NETSUITE_ALLOWED_VALUES_TIMEOUT) {
-        Debugger.log('NetSuite sales order fetching timeout');
-
-        break;
-      }
-
-      const { items: fetchedSalesOrders, hasMore: more } = await fetchSuiteQlData({
-        accountId: account_id,
-        token,
-        offset,
-        q: `SELECT ${fieldsToFetch.join(',')} FROM transaction  WHERE type = 'SalesOrd' ORDER BY createddate DESC`,
-      });
-
-      salesOrders.push(...fetchedSalesOrders.map(mapNetSuiteSalesOrder));
-
-      hasMore = more;
-      offset += fetchedSalesOrders.length;
-
-      if (hasMore) {
-        await delay(NETSUITE_ALLOWED_VALUES_FETCH_DELAY);
-      }
-    }
-
-    return salesOrders;
-  } catch (error) {
-    Debugger.log('Error fetching Netsuite sales orders:', error);
-
-    return salesOrders;
-  }
+  return salesOrders;
 };
