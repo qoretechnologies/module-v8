@@ -7,12 +7,11 @@ import { Debugger } from '../../../utils/Debugger';
 export const getJiraIssueDescriptionDefaultValue: TQoreGetDefaultValueFunction<
   typeof JIRA_CONN_OPTIONS
 > = async (context) => {
-  const {
-    conn_opts: { token, cloud_id },
-    opts,
-  } = context;
-
   try {
+    const {
+      conn_opts: { token, cloud_id },
+      opts,
+    } = context;
     if (opts?.issueIdOrKey) {
       const { data } = await QorusRequest.get<any>(
         {
