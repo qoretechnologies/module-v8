@@ -67,7 +67,7 @@ class _PiecesAppCatalogue {
     return {
       name: appName,
       actions: [...actions, ...qoreTriggers],
-      rest: this.mapPieceAuthToAppRest(piece.auth),
+      rest: { ...this.mapPieceAuthToAppRest(piece.auth), ...piece.qoreRest },
       ...(piece.qoreConnectionModifiers && { rest_modifiers: piece.qoreConnectionModifiers }),
       display_name: piece.displayName,
       short_desc: piece.description,
@@ -136,7 +136,12 @@ class _PiecesAppCatalogue {
     ): Promise<any> => {
       const actionContext = {
         propsValue: obj satisfies StaticPropsValue<InputPropertyMap>,
-        auth: { access_token: context.conn_opts.token, ...context.opts, ...context.conn_opts },
+        auth: {
+          ...context.opts,
+          ...context.conn_opts,
+          access_token: context.conn_opts.token,
+          data: { ...context.opts, ...context.conn_opts },
+        },
         ...commonActionContext,
       } satisfies ActionContext;
 
