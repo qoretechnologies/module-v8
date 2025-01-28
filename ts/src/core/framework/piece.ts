@@ -6,6 +6,7 @@ import { PieceCategory } from '../shared/pieces';
 import { EventPayload, ParseEventResponse } from '../shared/engine';
 import {
   IQoreConnectionOption,
+  IQoreRestConnectionConfig,
   IQoreRestConnectionModifiers,
   TQorePartialEventAction,
 } from '../../global/models/qore';
@@ -35,7 +36,8 @@ export class Piece<
     public readonly description = '',
     public readonly logo: string = '',
     public readonly qoreTriggers: TQorePartialEventAction[] = [],
-    public readonly qoreConnectionModifiers: IQoreRestConnectionModifiers<ModifierOptions> = undefined
+    public readonly qoreConnectionModifiers: IQoreRestConnectionModifiers<ModifierOptions> = undefined,
+    public readonly qoreRest: Partial<IQoreRestConnectionConfig> = undefined
   ) {
     actions.forEach((action) => (this._actions[action.name] = action));
     triggers.forEach((trigger) => (this._triggers[trigger.name] = trigger));
@@ -56,6 +58,7 @@ export class Piece<
       logo: this.logo,
       qoreTriggers: this.qoreTriggers,
       qoreConnectionModifiers: this.qoreConnectionModifiers,
+      qoreRest: this.qoreRest,
     };
   }
 
@@ -99,7 +102,8 @@ export const createPiece = <
     params.description,
     params.logo,
     params.qoreTriggers ?? [],
-    params.qoreConnectionModifiers ?? undefined
+    params.qoreConnectionModifiers ?? undefined,
+    params.qoreRest ?? undefined
   );
 };
 
@@ -124,6 +128,7 @@ type CreatePieceParams<
   categories?: PieceCategory[];
   qoreTriggers?: TQorePartialEventAction[];
   qoreConnectionModifiers?: IQoreRestConnectionModifiers<ModifierOptions>;
+  qoreRest?: Partial<IQoreRestConnectionConfig>;
 };
 
 type PieceEventProcessors = {

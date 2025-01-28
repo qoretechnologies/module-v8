@@ -66,6 +66,7 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
         if (proxy || running) {
             throw "OBSERVABLE-ERROR", "observersReady() can only be called once";
         }
+
         *hash<auto> options = ImpliedArgumentHelper::get();
         if (TSAI::checkServer()) {
             info("Starting external process for data provider %y for connection %y options %y", name, conn.name,

@@ -19,6 +19,7 @@ import {
 } from '../global/models/qore';
 import { Log } from '../decorators/Logger';
 import { Debugger, DebugLevels } from '../utils/Debugger';
+import netsuite from '../apps/netsuite';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -33,6 +34,7 @@ export interface IQoreApi {
 }
 
 const NEW_APPS = {
+  netsuite,
   zendesk,
   asana,
   esignature,

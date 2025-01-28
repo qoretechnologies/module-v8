@@ -155,6 +155,18 @@ export const slack = createPiece({
       };
     },
   },
+  qoreRest: {
+    oauth2_auth_args: {
+      user_scope: [
+        'channels:read',
+        'channels:write',
+        'chat:write',
+        'users:read',
+        'users:read.email',
+        'users.profile:write',
+      ],
+    },
+  },
 });
 
 type PayloadBody = {

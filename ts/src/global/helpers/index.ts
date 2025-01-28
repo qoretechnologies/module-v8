@@ -118,7 +118,7 @@ export const buildActionsFromSwaggerSchema = ({
       const actionIdentifier = getPropertyOfSchemaData(
         dataWithoutParameters,
         'operationId',
-        `${path}/${method}`.replace(/\//g, '_')
+        `${path}/${method}`.replace(/\//g, '_').replace(/^_/, '').replace(/[{}]/g, '')
       );
 
       const action: IQorePartialAppActionWithSwaggerPath = {
@@ -211,10 +211,9 @@ export const mapActionsToApp = (
     desc: getLocaleField(app, locale, action, 'desc'),
     app,
     options: 'options' in action ? fixOptions(action, action.options, app, locale) : undefined,
-    override_options:
-      'override_options' in action
-        ? fixOptions(action, action.override_options, app, locale)
-        : undefined,
+    ...('override_options' in action && {
+      override_options: fixOptions(action, action.override_options, app, locale),
+    }),
     response_type:
       'response_type' in action
         ? typeof action.response_type === 'string'
@@ -238,7 +237,8 @@ export const normalizeName = (appName: string): string => {
     .replace(/([a-z])([A-Z])/g, '$1_$2')
     .toLowerCase()
     .replace(/[-\s]+/g, '_')
-    .replace(/[^a-z0-9_]/g, '');
+    .replace(/[^a-z0-9_]/g, '')
+    .replace(/^_/, '');
 };
 
 export const normalizeAppName = (appName: string): TStringWithFirstUpperCaseCharacter => {

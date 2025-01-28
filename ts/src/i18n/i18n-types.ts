@@ -8704,6 +8704,662 @@ type RootTranslation = {
 				}
 			}
 		}
+		NetSuite: {
+			/**
+			 * N​e​t​S​u​i​t​e
+			 */
+			displayName: string
+			/**
+			 * A​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​s​u​i​t​e​ ​o​f​ ​c​l​o​u​d​-​b​a​s​e​d​ ​b​u​s​i​n​e​s​s​ ​m​a​n​a​g​e​m​e​n​t​ ​s​o​l​u​t​i​o​n​s​.
+			 */
+			shortDesc: string
+			/**
+			 * N​e​t​S​u​i​t​e​ ​o​f​f​e​r​s​ ​a​ ​u​n​i​f​i​e​d​ ​p​l​a​t​f​o​r​m​ ​f​o​r​ ​E​R​P​,​ ​C​R​M​,​ ​e​-​c​o​m​m​e​r​c​e​,​ ​a​n​d​ ​m​o​r​e​,​ ​e​n​a​b​l​i​n​g​ ​b​u​s​i​n​e​s​s​e​s​ ​t​o​ ​m​a​n​a​g​e​ ​a​l​l​ ​k​e​y​ ​o​p​e​r​a​t​i​o​n​s​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​s​y​s​t​e​m​.
+			 */
+			longDesc: string
+			triggers: {
+				new_record: {
+					/**
+					 * N​e​w​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					longDesc: string
+					options: {
+						recordType: {
+							/**
+							 * R​e​c​o​r​d​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​r​e​c​o​r​d​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​r​e​c​o​r​d​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			actions: {
+				suite_ql: {
+					/**
+					 * S​u​i​t​e​Q​L
+					 */
+					displayName: string
+					/**
+					 * R​u​n​ ​a​ ​S​u​i​t​e​Q​L​ ​q​u​e​r​y
+					 */
+					shortDesc: string
+					/**
+					 * R​u​n​ ​a​ ​S​u​i​t​e​Q​L​ ​q​u​e​r​y
+					 */
+					longDesc: string
+					options: {
+						query: {
+							/**
+							 * Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​S​u​i​t​e​Q​L​ ​q​u​e​r​y​ ​t​o​ ​r​u​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​S​u​i​t​e​Q​L​ ​q​u​e​r​y​ ​t​o​ ​r​u​n
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​s​k​i​p
+							 */
+							longDesc: string
+						}
+						response_type: {
+							fields: {
+								links: {
+									/**
+									 * L​i​n​k​s
+									 */
+									display_name: string
+									/**
+									 * L​i​n​k​s
+									 */
+									short_desc: string
+									/**
+									 * L​i​n​k​s
+									 */
+									desc: string
+								}
+								count: {
+									/**
+									 * C​o​u​n​t
+									 */
+									display_name: string
+									/**
+									 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s
+									 */
+									short_desc: string
+									/**
+									 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s
+									 */
+									desc: string
+								}
+								hasMore: {
+									/**
+									 * H​a​s​ ​M​o​r​e
+									 */
+									display_name: string
+									/**
+									 * W​h​e​t​h​e​r​ ​t​h​e​r​e​ ​a​r​e​ ​m​o​r​e​ ​r​e​s​u​l​t​s
+									 */
+									short_desc: string
+									/**
+									 * W​h​e​t​h​e​r​ ​t​h​e​r​e​ ​a​r​e​ ​m​o​r​e​ ​r​e​s​u​l​t​s
+									 */
+									desc: string
+								}
+								items: {
+									/**
+									 * I​t​e​m​s
+									 */
+									display_name: string
+									/**
+									 * T​h​e​ ​i​t​e​m​s
+									 */
+									short_desc: string
+									/**
+									 * T​h​e​ ​i​t​e​m​s
+									 */
+									desc: string
+								}
+							}
+						}
+					}
+				}
+				account_get: {
+					/**
+					 * G​e​t​ ​L​i​s​t​ ​o​f​ ​A​c​c​o​u​n​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​c​c​o​u​n​t​s​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​a​c​c​o​u​n​t​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​e​d​ ​f​i​l​t​e​r​s​.
+					 */
+					longDesc: string
+				}
+				account_post: {
+					/**
+					 * C​r​e​a​t​e​ ​A​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+					/**
+					 * A​l​l​o​w​s​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​n​e​w​ ​a​c​c​o​u​n​t​ ​r​e​c​o​r​d​ ​i​n​ ​N​e​t​S​u​i​t​e​.
+					 */
+					longDesc: string
+				}
+				account_id_get: {
+					/**
+					 * G​e​t​ ​A​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​o​f​ ​a​ ​s​i​n​g​l​e​ ​a​c​c​o​u​n​t​ ​b​y​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				account_id_patch: {
+					/**
+					 * U​p​d​a​t​e​ ​A​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+					/**
+					 * A​l​l​o​w​s​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​u​p​d​a​t​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​a​c​c​o​u​n​t​ ​b​y​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				account_id_delete: {
+					/**
+					 * D​e​l​e​t​e​ ​A​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​n​ ​a​c​c​o​u​n​t​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​N​e​t​S​u​i​t​e​ ​b​a​s​e​d​ ​o​n​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				customer_get: {
+					/**
+					 * G​e​t​ ​L​i​s​t​ ​o​f​ ​C​u​s​t​o​m​e​r​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​u​s​t​o​m​e​r​s​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​c​u​s​t​o​m​e​r​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​e​d​ ​f​i​l​t​e​r​s​.
+					 */
+					longDesc: string
+				}
+				customer_post: {
+					/**
+					 * C​r​e​a​t​e​ ​C​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​e​r​.
+					 */
+					shortDesc: string
+					/**
+					 * A​l​l​o​w​s​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​e​r​ ​r​e​c​o​r​d​ ​i​n​ ​N​e​t​S​u​i​t​e​.
+					 */
+					longDesc: string
+				}
+				customer_id_get: {
+					/**
+					 * G​e​t​ ​C​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​u​s​t​o​m​e​r​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​o​f​ ​a​ ​s​i​n​g​l​e​ ​c​u​s​t​o​m​e​r​ ​b​y​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				customer_id_patch: {
+					/**
+					 * U​p​d​a​t​e​ ​C​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​u​s​t​o​m​e​r​.
+					 */
+					shortDesc: string
+					/**
+					 * A​l​l​o​w​s​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​u​p​d​a​t​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​u​s​t​o​m​e​r​ ​b​y​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				customer_id_delete: {
+					/**
+					 * D​e​l​e​t​e​ ​C​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​u​s​t​o​m​e​r​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​ ​c​u​s​t​o​m​e​r​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​N​e​t​S​u​i​t​e​ ​b​a​s​e​d​ ​o​n​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				invoice_get: {
+					/**
+					 * G​e​t​ ​L​i​s​t​ ​o​f​ ​I​n​v​o​i​c​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​i​n​v​o​i​c​e​s​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​i​n​v​o​i​c​e​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​e​d​ ​f​i​l​t​e​r​s​.
+					 */
+					longDesc: string
+				}
+				invoice_post: {
+					/**
+					 * C​r​e​a​t​e​ ​I​n​v​o​i​c​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​i​n​v​o​i​c​e​.
+					 */
+					shortDesc: string
+					/**
+					 * A​l​l​o​w​s​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​n​e​w​ ​i​n​v​o​i​c​e​ ​r​e​c​o​r​d​ ​i​n​ ​N​e​t​S​u​i​t​e​.
+					 */
+					longDesc: string
+				}
+				invoice_id_get: {
+					/**
+					 * G​e​t​ ​I​n​v​o​i​c​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​i​n​v​o​i​c​e​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​o​f​ ​a​ ​s​i​n​g​l​e​ ​i​n​v​o​i​c​e​ ​b​y​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				invoice_id_patch: {
+					/**
+					 * U​p​d​a​t​e​ ​I​n​v​o​i​c​e
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​i​n​v​o​i​c​e​.
+					 */
+					shortDesc: string
+					/**
+					 * A​l​l​o​w​s​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​u​p​d​a​t​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​i​n​v​o​i​c​e​ ​b​y​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				invoice_id_delete: {
+					/**
+					 * D​e​l​e​t​e​ ​I​n​v​o​i​c​e
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​i​n​v​o​i​c​e​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​n​ ​i​n​v​o​i​c​e​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​N​e​t​S​u​i​t​e​ ​b​a​s​e​d​ ​o​n​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				journalEntry_get: {
+					/**
+					 * G​e​t​ ​L​i​s​t​ ​o​f​ ​J​o​u​r​n​a​l​ ​E​n​t​r​i​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​j​o​u​r​n​a​l​ ​e​n​t​r​i​e​s​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​j​o​u​r​n​a​l​ ​e​n​t​r​i​e​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​e​d​ ​f​i​l​t​e​r​s​.
+					 */
+					longDesc: string
+				}
+				journalEntry_post: {
+					/**
+					 * C​r​e​a​t​e​ ​J​o​u​r​n​a​l​ ​E​n​t​r​y
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​j​o​u​r​n​a​l​ ​e​n​t​r​y​.
+					 */
+					shortDesc: string
+					/**
+					 * A​l​l​o​w​s​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​n​e​w​ ​j​o​u​r​n​a​l​ ​e​n​t​r​y​ ​r​e​c​o​r​d​ ​i​n​ ​N​e​t​S​u​i​t​e​.
+					 */
+					longDesc: string
+				}
+				journalEntry_id_get: {
+					/**
+					 * G​e​t​ ​J​o​u​r​n​a​l​ ​E​n​t​r​y
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​j​o​u​r​n​a​l​ ​e​n​t​r​y​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​o​f​ ​a​ ​s​i​n​g​l​e​ ​j​o​u​r​n​a​l​ ​e​n​t​r​y​ ​b​y​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				journal_entry_id_patch: {
+					/**
+					 * U​p​d​a​t​e​ ​J​o​u​r​n​a​l​ ​E​n​t​r​y
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​j​o​u​r​n​a​l​ ​e​n​t​r​y​.
+					 */
+					shortDesc: string
+					/**
+					 * A​l​l​o​w​s​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​u​p​d​a​t​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​j​o​u​r​n​a​l​ ​e​n​t​r​y​ ​b​y​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				journalEntry_id_delete: {
+					/**
+					 * D​e​l​e​t​e​ ​J​o​u​r​n​a​l​ ​E​n​t​r​y
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​j​o​u​r​n​a​l​ ​e​n​t​r​y​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​ ​j​o​u​r​n​a​l​ ​e​n​t​r​y​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​N​e​t​S​u​i​t​e​ ​b​a​s​e​d​ ​o​n​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				purchaseOrder_get: {
+					/**
+					 * G​e​t​ ​L​i​s​t​ ​o​f​ ​P​u​r​c​h​a​s​e​ ​O​r​d​e​r​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​s​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​e​d​ ​f​i​l​t​e​r​s​.
+					 */
+					longDesc: string
+				}
+				purchase_order_post: {
+					/**
+					 * C​r​e​a​t​e​ ​P​u​r​c​h​a​s​e​ ​O​r​d​e​r
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​.
+					 */
+					shortDesc: string
+					/**
+					 * A​l​l​o​w​s​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​n​e​w​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​ ​r​e​c​o​r​d​ ​i​n​ ​N​e​t​S​u​i​t​e​.
+					 */
+					longDesc: string
+				}
+				purchaseOrder_id_get: {
+					/**
+					 * G​e​t​ ​P​u​r​c​h​a​s​e​ ​O​r​d​e​r
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​o​f​ ​a​ ​s​i​n​g​l​e​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​ ​b​y​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				purchaseOrder_id_patch: {
+					/**
+					 * U​p​d​a​t​e​ ​P​u​r​c​h​a​s​e​ ​O​r​d​e​r
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​.
+					 */
+					shortDesc: string
+					/**
+					 * A​l​l​o​w​s​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​u​p​d​a​t​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​ ​b​y​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				purchaseOrder_id_delete: {
+					/**
+					 * D​e​l​e​t​e​ ​P​u​r​c​h​a​s​e​ ​O​r​d​e​r
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​N​e​t​S​u​i​t​e​ ​b​a​s​e​d​ ​o​n​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				salesOrder_get: {
+					/**
+					 * G​e​t​ ​L​i​s​t​ ​o​f​ ​S​a​l​e​s​ ​O​r​d​e​r​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​s​a​l​e​s​ ​o​r​d​e​r​s​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​s​a​l​e​s​ ​o​r​d​e​r​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​e​d​ ​f​i​l​t​e​r​s​.
+					 */
+					longDesc: string
+				}
+				salesOrder_post: {
+					/**
+					 * C​r​e​a​t​e​ ​S​a​l​e​s​ ​O​r​d​e​r
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​s​a​l​e​s​ ​o​r​d​e​r​.
+					 */
+					shortDesc: string
+					/**
+					 * A​l​l​o​w​s​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​n​e​w​ ​s​a​l​e​s​ ​o​r​d​e​r​ ​r​e​c​o​r​d​ ​i​n​ ​N​e​t​S​u​i​t​e​.
+					 */
+					longDesc: string
+				}
+				salesOrder_id_get: {
+					/**
+					 * G​e​t​ ​S​a​l​e​s​ ​O​r​d​e​r
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​a​l​e​s​ ​o​r​d​e​r​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​o​f​ ​a​ ​s​i​n​g​l​e​ ​s​a​l​e​s​ ​o​r​d​e​r​ ​b​y​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				salesOrder_id_patch: {
+					/**
+					 * U​p​d​a​t​e​ ​S​a​l​e​s​ ​O​r​d​e​r
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​s​a​l​e​s​ ​o​r​d​e​r​.
+					 */
+					shortDesc: string
+					/**
+					 * A​l​l​o​w​s​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​u​p​d​a​t​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​a​l​e​s​ ​o​r​d​e​r​ ​b​y​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				salesOrder_id_delete: {
+					/**
+					 * D​e​l​e​t​e​ ​S​a​l​e​s​ ​O​r​d​e​r
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​a​l​e​s​ ​o​r​d​e​r​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​ ​s​a​l​e​s​ ​o​r​d​e​r​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​N​e​t​S​u​i​t​e​ ​b​a​s​e​d​ ​o​n​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				vendor_get: {
+					/**
+					 * G​e​t​ ​L​i​s​t​ ​o​f​ ​V​e​n​d​o​r​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​v​e​n​d​o​r​s​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​v​e​n​d​o​r​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​e​d​ ​f​i​l​t​e​r​s​.
+					 */
+					longDesc: string
+				}
+				vendor_post: {
+					/**
+					 * C​r​e​a​t​e​ ​V​e​n​d​o​r
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​v​e​n​d​o​r​.
+					 */
+					shortDesc: string
+					/**
+					 * A​l​l​o​w​s​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​n​e​w​ ​v​e​n​d​o​r​ ​r​e​c​o​r​d​ ​i​n​ ​N​e​t​S​u​i​t​e​.
+					 */
+					longDesc: string
+				}
+				vendor_id_get: {
+					/**
+					 * G​e​t​ ​V​e​n​d​o​r
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​e​n​d​o​r​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​o​f​ ​a​ ​s​i​n​g​l​e​ ​v​e​n​d​o​r​ ​b​y​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				vendor_id_patch: {
+					/**
+					 * U​p​d​a​t​e​ ​V​e​n​d​o​r
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​v​e​n​d​o​r​.
+					 */
+					shortDesc: string
+					/**
+					 * A​l​l​o​w​s​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​u​p​d​a​t​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​e​n​d​o​r​ ​b​y​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				vendor_id_delete: {
+					/**
+					 * D​e​l​e​t​e​ ​V​e​n​d​o​r
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​e​n​d​o​r​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​ ​v​e​n​d​o​r​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​N​e​t​S​u​i​t​e​ ​b​a​s​e​d​ ​o​n​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+			}
+		}
 		Salesforce: {
 			triggers: {
 				new_record_trigger: {
@@ -17512,6 +18168,662 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 						}
 					}
+				}
+			}
+		}
+		NetSuite: {
+			/**
+			 * NetSuite
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * A comprehensive suite of cloud-based business management solutions.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * NetSuite offers a unified platform for ERP, CRM, e-commerce, and more, enabling businesses to manage all key operations in a single system.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				new_record: {
+					/**
+					 * New Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new record is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new record is created
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						recordType: {
+							/**
+							 * Record Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The type of record to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The type of record to monitor
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			actions: {
+				suite_ql: {
+					/**
+					 * SuiteQL
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Run a SuiteQL query
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Run a SuiteQL query
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						query: {
+							/**
+							 * Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The SuiteQL query to run
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The SuiteQL query to run
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The maximum number of records to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of records to return
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The number of records to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of records to skip
+							 */
+							longDesc: () => LocalizedString
+						}
+						response_type: {
+							fields: {
+								links: {
+									/**
+									 * Links
+									 */
+									display_name: () => LocalizedString
+									/**
+									 * Links
+									 */
+									short_desc: () => LocalizedString
+									/**
+									 * Links
+									 */
+									desc: () => LocalizedString
+								}
+								count: {
+									/**
+									 * Count
+									 */
+									display_name: () => LocalizedString
+									/**
+									 * The number of results
+									 */
+									short_desc: () => LocalizedString
+									/**
+									 * The number of results
+									 */
+									desc: () => LocalizedString
+								}
+								hasMore: {
+									/**
+									 * Has More
+									 */
+									display_name: () => LocalizedString
+									/**
+									 * Whether there are more results
+									 */
+									short_desc: () => LocalizedString
+									/**
+									 * Whether there are more results
+									 */
+									desc: () => LocalizedString
+								}
+								items: {
+									/**
+									 * Items
+									 */
+									display_name: () => LocalizedString
+									/**
+									 * The items
+									 */
+									short_desc: () => LocalizedString
+									/**
+									 * The items
+									 */
+									desc: () => LocalizedString
+								}
+							}
+						}
+					}
+				}
+				account_get: {
+					/**
+					 * Get List of Accounts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of accounts.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a list of accounts based on specified filters.
+					 */
+					longDesc: () => LocalizedString
+				}
+				account_post: {
+					/**
+					 * Create Account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new account.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Allows the user to create a new account record in NetSuite.
+					 */
+					longDesc: () => LocalizedString
+				}
+				account_id_get: {
+					/**
+					 * Get Account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific account.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches detailed information of a single account by its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				account_id_patch: {
+					/**
+					 * Update Account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates an existing account.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Allows the user to update details of a specific account by its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				account_id_delete: {
+					/**
+					 * Delete Account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Deletes a specific account.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes an account record from NetSuite based on its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				customer_get: {
+					/**
+					 * Get List of Customers
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of customers.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a list of customers based on specified filters.
+					 */
+					longDesc: () => LocalizedString
+				}
+				customer_post: {
+					/**
+					 * Create Customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new customer.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Allows the user to create a new customer record in NetSuite.
+					 */
+					longDesc: () => LocalizedString
+				}
+				customer_id_get: {
+					/**
+					 * Get Customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific customer.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches detailed information of a single customer by its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				customer_id_patch: {
+					/**
+					 * Update Customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates an existing customer.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Allows the user to update details of a specific customer by its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				customer_id_delete: {
+					/**
+					 * Delete Customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Deletes a specific customer.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes a customer record from NetSuite based on its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				invoice_get: {
+					/**
+					 * Get List of Invoices
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of invoices.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a list of invoices based on specified filters.
+					 */
+					longDesc: () => LocalizedString
+				}
+				invoice_post: {
+					/**
+					 * Create Invoice
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new invoice.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Allows the user to create a new invoice record in NetSuite.
+					 */
+					longDesc: () => LocalizedString
+				}
+				invoice_id_get: {
+					/**
+					 * Get Invoice
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific invoice.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches detailed information of a single invoice by its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				invoice_id_patch: {
+					/**
+					 * Update Invoice
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates an existing invoice.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Allows the user to update details of a specific invoice by its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				invoice_id_delete: {
+					/**
+					 * Delete Invoice
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Deletes a specific invoice.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes an invoice record from NetSuite based on its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				journalEntry_get: {
+					/**
+					 * Get List of Journal Entries
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of journal entries.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a list of journal entries based on specified filters.
+					 */
+					longDesc: () => LocalizedString
+				}
+				journalEntry_post: {
+					/**
+					 * Create Journal Entry
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new journal entry.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Allows the user to create a new journal entry record in NetSuite.
+					 */
+					longDesc: () => LocalizedString
+				}
+				journalEntry_id_get: {
+					/**
+					 * Get Journal Entry
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific journal entry.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches detailed information of a single journal entry by its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				journal_entry_id_patch: {
+					/**
+					 * Update Journal Entry
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates an existing journal entry.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Allows the user to update details of a specific journal entry by its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				journalEntry_id_delete: {
+					/**
+					 * Delete Journal Entry
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Deletes a specific journal entry.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes a journal entry record from NetSuite based on its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				purchaseOrder_get: {
+					/**
+					 * Get List of Purchase Orders
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of purchase orders.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a list of purchase orders based on specified filters.
+					 */
+					longDesc: () => LocalizedString
+				}
+				purchase_order_post: {
+					/**
+					 * Create Purchase Order
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new purchase order.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Allows the user to create a new purchase order record in NetSuite.
+					 */
+					longDesc: () => LocalizedString
+				}
+				purchaseOrder_id_get: {
+					/**
+					 * Get Purchase Order
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific purchase order.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches detailed information of a single purchase order by its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				purchaseOrder_id_patch: {
+					/**
+					 * Update Purchase Order
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates an existing purchase order.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Allows the user to update details of a specific purchase order by its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				purchaseOrder_id_delete: {
+					/**
+					 * Delete Purchase Order
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Deletes a specific purchase order.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes a purchase order record from NetSuite based on its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				salesOrder_get: {
+					/**
+					 * Get List of Sales Orders
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of sales orders.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a list of sales orders based on specified filters.
+					 */
+					longDesc: () => LocalizedString
+				}
+				salesOrder_post: {
+					/**
+					 * Create Sales Order
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new sales order.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Allows the user to create a new sales order record in NetSuite.
+					 */
+					longDesc: () => LocalizedString
+				}
+				salesOrder_id_get: {
+					/**
+					 * Get Sales Order
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific sales order.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches detailed information of a single sales order by its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				salesOrder_id_patch: {
+					/**
+					 * Update Sales Order
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates an existing sales order.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Allows the user to update details of a specific sales order by its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				salesOrder_id_delete: {
+					/**
+					 * Delete Sales Order
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Deletes a specific sales order.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes a sales order record from NetSuite based on its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				vendor_get: {
+					/**
+					 * Get List of Vendors
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of vendors.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a list of vendors based on specified filters.
+					 */
+					longDesc: () => LocalizedString
+				}
+				vendor_post: {
+					/**
+					 * Create Vendor
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new vendor.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Allows the user to create a new vendor record in NetSuite.
+					 */
+					longDesc: () => LocalizedString
+				}
+				vendor_id_get: {
+					/**
+					 * Get Vendor
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific vendor.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches detailed information of a single vendor by its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				vendor_id_patch: {
+					/**
+					 * Update Vendor
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates an existing vendor.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Allows the user to update details of a specific vendor by its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				vendor_id_delete: {
+					/**
+					 * Delete Vendor
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Deletes a specific vendor.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes a vendor record from NetSuite based on its ID.
+					 */
+					longDesc: () => LocalizedString
 				}
 			}
 		}

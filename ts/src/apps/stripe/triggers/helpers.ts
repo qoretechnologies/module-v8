@@ -10,14 +10,14 @@ export const deregisterStripeWebhook: IQoreAppActionWithWebhookBase['webhook_der
   regInfo
 ) => {
   const {
-    opts: { secretKey },
+    conn_opts: { token },
   } = context;
   const { webhook } = regInfo;
 
   await QorusRequest.deleteReq<any>(
     {
       headers: {
-        Authorization: `Bearer ${secretKey}`,
+        Authorization: `Bearer ${token}`,
       },
       path: `/v1/webhook_endpoints/${webhook.id}`,
     },
@@ -33,7 +33,7 @@ export const createRegisterStripeWebhookFunction = (
 ): IQoreAppActionWithWebhookBase['webhook_register'] => {
   return async (context, url) => {
     const {
-      opts: { secretKey },
+      conn_opts: { token },
     } = context;
 
     try {
@@ -47,8 +47,11 @@ export const createRegisterStripeWebhookFunction = (
         'https://api.stripe.com/v1/webhook_endpoints',
         webhookData,
         {
+          params: {
+            api_version: '2024-12-18.acacia',
+          },
           headers: {
-            Authorization: `Bearer ${secretKey}`,
+            Authorization: `Bearer ${token}`,
             'Content-Type': 'application/x-www-form-urlencoded',
           },
         }
@@ -67,7 +70,7 @@ export const createGetStripeExampleEventDataFunction: (
 ) => IQoreAppActionWithWebhookBase['get_example_event_data'] = (eventTypes: TStripeEventType[]) => {
   return async (context) => {
     const {
-      opts: { secretKey },
+      conn_opts: { token },
     } = context;
 
     try {
@@ -78,7 +81,7 @@ export const createGetStripeExampleEventDataFunction: (
 
       const { data } = await axios.get('https://api.stripe.com/v1/events', {
         headers: {
-          Authorization: `Bearer ${secretKey}`,
+          Authorization: `Bearer ${token}`,
         },
         params,
       });

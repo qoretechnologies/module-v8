@@ -8,6 +8,7 @@
 
 %requires QUnit
 %requires RestClient
+%requires DiscordRestClient
 %requires ../qlib/TypeScriptActionInterface
 %requires v8
 
@@ -21,6 +22,7 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
     constructor() : Test("TypeScriptActionInterfaceTest", "1.0") {
         setupLogger();
 
+        addTestCase("js event extension", \jsEventExtensionTest());
         addTestCase("js events", \jsEventTest());
         addTestCase("webhook events", \webhookEventTest());
         addTestCase("pool", \poolTest());
@@ -91,6 +93,50 @@ async function runWithTimeout(promise, delay) {
         JavaScriptObject obj = pgm.getGlobal().exports;
 
         obj.actionsCatalogue.registerAppActions(TypeScriptActionInterface::Api);
+    }
+
+    private jsEventExtensionTest() {
+        hash<DataProviderAppInfo> appinfo = DataProviderActionCatalog::getAppEx("Discord");
+        assertEq("Discord", appinfo.name);
+
+        hash<DataProviderActionInfo> actioninfo = DataProviderActionCatalog::getAppActionEx("Discord", "js-event-1");
+        assertEq("js-event-1", actioninfo.action);
+
+        hash<auto> config = {
+            "name": "test",
+            "url": "discord://x",
+            "opts": {
+                "token": "x",
+            },
+        };
+        DiscordRestConnection conn(config);
+        assertEq("discord://x", conn.getUrl());
+
+        ImpliedArgumentHelper iah({"name": "Fred"});
+        AbstractDataProvider prov =
+            TypeScriptActionInterface::getDataProvider("discord", conn).getChildProviderEx("js-event-1");
+        AbstractDataProviderType t = prov.getEventTypes().event.type;
+        assertEq(2, t.getFields().size());
+        assertTrue(prov.supportsObservable());
+        assertEq({
+            "name": "a name",
+            "code": 1234,
+        }, prov.getExampleEventData("event"));
+
+        MyObserver o();
+        cast<Observable>(prov).registerObserver(o);
+        cast<DelayedObservable>(prov).observersReady();
+        on_exit cast<DelayedObservable>(prov).stopEvents();
+
+        # wait for a single event
+        hash<auto> event = o.waitForEvent();
+        assertEq({
+            "event_id": "event",
+            "data": {
+                "name": "name-1",
+                "code": 1234,
+            },
+        }, event);
     }
 
     private jsEventTest() {
