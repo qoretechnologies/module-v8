@@ -8,3 +8,4 @@ export const SALESFORCE_CONN_OPTIONS = {
 
 export const SALESFORCE_API_VERSION = 'v62.0';
 export const SALESFORCE_APP_NAME = 'Salesforce';
+export const SALESFORCE_APP_MODULE = 'SalesforceRestDataProvider';
