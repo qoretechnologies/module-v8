@@ -45,7 +45,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         string name;
 
         #! The connection for the action
-        TypeScriptAppRestConnection conn;
+        RestConnection conn;
 
         #! Any REST client to use for reference data, for example
         RestClient rest;
@@ -60,7 +60,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
     }
 
     #! Sets the connection
-    setConnection(TypeScriptAppRestConnection conn) {
+    setConnection(RestConnection conn) {
         self.conn = conn;
         if (!logger && (*LoggerInterface clogger = conn.getLogger())) {
             setLogger(clogger);

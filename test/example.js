@@ -841,5 +841,105 @@ exports.actionsCatalogue = {
                 };
             },
         });
+
+        // this will add actions to discord
+        api.registerExistingApp({
+            "name": "Discord",
+            "module": "DiscordDataProvider",
+        });
+
+        api.registerAction({
+            "app": "Discord",
+            "action": "js-event-1",
+            "display_name": "JavaScript Event",
+            "short_desc": "JavaScript event example action",
+            "desc": "JavaScript event example action",
+            "action_code": 1,  // DPAT_EVENT == 1
+            // event action options as documented above
+            "options": {
+                "name": {
+                    "type": "string",
+                    "display_name": "Name",
+                    "short_desc": "A name",
+                    "desc": "A name",
+                    "required": true,
+                    "preselected": true,
+                    "get_allowed_values": async function(ctx) {
+                        return [
+                            {
+                                "display_name": "Fred",
+                                "short_desc": "Fred",
+                                "desc": "Fred",
+                                "value": "Fred",
+                            },
+                            {
+                                "display_name": "Albert",
+                                "short_desc": "Albert",
+                                "desc": "Albert",
+                                "value": "Albert",
+                            },
+                        ];
+                    },
+                }
+            },
+            /** "event_function" is required when "action_code" == DPAT_EVENT and "webhook_method" is not present
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+                @param update: function (event_data: object) -> this function should be called when events are
+                received to post the event to the observer
+                @param should_stop: function (): bool -> this function will return true when event polling should stop
+
+                @note the function here will be called with no "this" context; "this" cannot be used in this function
+            */
+            "event_function": async function(ctx, update, should_stop) {
+                if (!ctx.opts.name) {
+                    throw new Error("missing name");
+                }
+                update({
+                    "name": "name-1",
+                    "code": 1234,
+                });
+                while (!should_stop()) {
+                    // sleep for 100ms
+                    setTimeout(function() {}, 100);
+                }
+            },
+            "event_info": {
+                "desc": "Data event",
+                "type": {
+                    "type": "hash",
+                    "fields": {
+                        "name": {
+                            "type": "string",
+                            "display_name": "Event Name",
+                            "short_desc": "Event name",
+                            "desc": "Event name",
+                        },
+                        "code": {
+                            "type": "int",
+                            "display_name": "Event Code",
+                            "short_desc": "Event code",
+                            "desc": "Event code",
+                        },
+                    },
+                },
+            },
+            // get_example_event_data: function (): object
+            /** Returns an example event
+
+                @param ctx: object -> with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+            */
+            get_example_event_data: async function (ctx) {
+                return {
+                    "name": "a name",
+                    "code": 1234,
+                };
+            },
+        });
     }
 };

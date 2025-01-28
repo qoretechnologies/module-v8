@@ -65,8 +65,7 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
         remove childMap;
     }
 
-    TypeScriptActionAppDataProvider copyWithParent(TypeScriptActionAppDataProvider parent,
-            TypeScriptAppRestConnection conn) {
+    TypeScriptActionAppDataProvider copyWithParent(TypeScriptActionAppDataProvider parent, RestConnection conn) {
         TypeScriptActionAppDataProvider rv = copy();
         rv.parent = parent;
         rv.setConnection(conn);
@@ -79,7 +78,7 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
     }
 
     #! Sets the connection
-    setConnection(TypeScriptAppRestConnection conn) {
+    setConnection(RestConnection conn) {
         self.conn = conn;
         if (!getLogger() && (*LoggerInterface clogger = conn.getLogger())) {
             setLogger(clogger);

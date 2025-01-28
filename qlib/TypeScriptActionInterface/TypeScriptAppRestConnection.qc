@@ -169,7 +169,7 @@ public class TypeScriptAppRestConnection inherits RestConnection {
     }
 
     #! Returns the app name
-    string getAppName() {
+    *string getAppName() {
         return app;
     }
 
@@ -201,11 +201,6 @@ public class TypeScriptAppRestConnection inherits RestConnection {
             }
         }
         return rv;
-    }
-
-    #! Returns the logger interface for logging
-    *LoggerInterface getLogger() {
-        return logger;
     }
 
     #! Sets child data provider capabilities
