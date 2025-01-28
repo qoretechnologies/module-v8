@@ -161,9 +161,6 @@ public class TypeScriptActionInterface {
         #! App map for delayed initialization: app -> info
         static hash<string, hash<AppInfo>> appmap;
 
-        #! App map for delayed initialization of existing apps: app -> info
-        static hash<string, hash<AppInfo>> existing_appmap;
-
         #! Init map for apps already initialized
         static hash<string, bool> initmap;
 
@@ -250,12 +247,11 @@ public class TypeScriptActionInterface {
     #! Initialize all pending apps
     static initAllApps() {
         map TypeScriptActionInterface::initApp($1, True), keys appmap;
-        map TypeScriptActionInterface::initApp($1, True), keys existing_appmap;
     }
 
     #! Returns a list of all pending apps
     static *list<string> getPendingApps() {
-        return map $1.lwr(), (keys appmap ?? ()) + (keys existing_appmap ?? ());
+        return map $1.lwr(), keys appmap;
     }
 
     #! Sets the server to start on demand
@@ -462,6 +458,9 @@ public class TypeScriptActionInterface {
             throw "APP-ERROR", sprintf("App module %y is invalid; must be a non-empty string", app."module");
         }
 
+        # load the referenced module immediately
+        load_module(app."module");
+
         hash<AppInfo> info = <AppInfo>{
             "app": app,
             "pool": pool,
@@ -470,11 +469,8 @@ public class TypeScriptActionInterface {
         string appname = app.name.lwr();
         appcasemap{appname} = app.name;
 
-        existing_appmap{app.name} = info;
-
-        DataProviderActionCatalog::registerPendingApp(app.name, sub () {
-            TypeScriptActionInterface::initApp(app.name);
-        });
+        # must register the app immediately
+        TypeScriptActionInterface::initExistingAppIntern(info);
         TSAI::debug("Registered existing app %y", app.name);
     }
 
@@ -506,9 +502,6 @@ public class TypeScriptActionInterface {
         }
         if (*hash<AppInfo> info = remove appmap{app}) {
             return TypeScriptActionInterface::initAppIntern(info, do_actions);
-        }
-        if (*hash<AppInfo> info = remove existing_appmap{app}) {
-            return TypeScriptActionInterface::initExistingAppIntern(info, do_actions);
         }
         throw "APP-ERROR", sprintf("No app %y has been registered for deferred initialization by the "
             "TypeScriptActionInterface module", app);
@@ -720,10 +713,8 @@ public class TypeScriptActionInterface {
         on_success TSAI::debug("TypeScriptActionInterface: registered app %y", app.name);
         on_error TSAI::error("%s", get_exception_string($1));
 
-        load_module(app."module");
-
         string appname = app.name.lwr();
-        TypeScriptActionAppDataProvider prov(appname);
+        TypeScriptActionAppDataProvider prov(appname, app."root_provider" ?? app."module");
         TypeScriptActionInterface::checkRoot();
         root.registerChild(appname, prov);
     }
@@ -1227,7 +1218,7 @@ public class TypeScriptActionInterface {
                 "app": app.name,
                 "action": action.action,
                 "type": "event_function",
-                "label": sprintf("Webhook event function for app %y action %y", app.name, action.action),
+                "label": sprintf("Async event function for app %y action %y", app.name, action.action),
                 "pool": pool,
                 "async_call": event_function,
                 "to": seconds(io_timeout),
@@ -1371,8 +1362,6 @@ public class TypeScriptActionInterface {
 
     static TypeScriptActionAppDataProvider getAppDataProvider(string app) {
         if (*hash<AppInfo> info = remove appmap{app}) {
-            TypeScriptActionInterface::initAppIntern(info);
-        } else if (*hash<AppInfo> info = remove existing_appmap{app}) {
             TypeScriptActionInterface::initAppIntern(info);
         }
         string appname = app.lwr();

@@ -52,11 +52,17 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
 
         #! Original data provider object
         TypeScriptActionAppDataProvider parent;
+
+        #! The name of the root data provider class for chilren if this an extension of an existing app
+        *StaticMethod registerChildMethod;
     }
 
     #! Creates the object
-    constructor(string name) {
+    constructor(string name, *string root_data_provider) {
         self.name = name;
+        if (root_data_provider) {
+            registerChildMethod = Class::forName(root_data_provider).getStaticMethod("registerChild");
+        }
     }
 
     #! Copies the object
@@ -97,6 +103,18 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
         }
 
         childMap{pathname} = prov;
+
+        # add children to the root data provider
+        if (registerChildMethod) {
+            registerChildMethod.call(pathname, AbstractDataProvider sub (string name, RestConnection conn) {
+                TypeScriptActionDataProviderBase prov = childMap{name}.copy();
+                prov.setConnection(conn);
+                if (!prov.getLogger() && logger) {
+                    prov.setLogger(logger);
+                }
+                return prov;
+            });
+        }
     }
 
     #! Return data provider summary info

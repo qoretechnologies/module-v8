@@ -67,6 +67,11 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         }
     }
 
+    #! Retrieves the current connection
+    *RestConnection getConnection() {
+        return conn;
+    }
+
     #! Returns the logger interface for logging
     *LoggerInterface getLogger() {
         return logger;
@@ -558,6 +563,10 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             return <DataContextInfo>{
                 "conn_name": conn.name,
                 "conn_opts": conn.getRealOptions(),
+                "opts": action_opts,
+            };
+        } else if (action_opts) {
+            return <DataContextInfo>{
                 "opts": action_opts,
             };
         }
