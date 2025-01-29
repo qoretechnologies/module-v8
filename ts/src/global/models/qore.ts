@@ -157,11 +157,8 @@ export interface IQoreConnectionOption<
   subset_env_vars?: boolean;
 }
 
-export interface IQoreConnectionOptions<
-  TypeName extends TQoreSimpleType = TQoreSimpleType,
-  TypeValue = unknown,
-> {
-  [key: string]: IQoreConnectionOption<TypeName, TypeValue>;
+export interface IQoreConnectionOptions {
+  [key: string]: GetConnectionOptionDefinitionFromQoreType<TQoreType>;
 }
 
 export interface IQoreRestConnectionModifiers<
