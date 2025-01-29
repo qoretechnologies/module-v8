@@ -88,6 +88,10 @@ async function runWithTimeout(promise, delay) {
 
         *string scripts = ENV.QORE_TYPESCRIPT_ACTION_SCRIPTS;
         if (scripts.val()) {
+            # make sure that any calls to create data providers do not result in static initialization
+            DataProvider::deferStaticInitialization();
+            on_exit DataProvider::restoreStaticInitialization();
+
             string cwd = getcwd();
             foreach string path in (scripts.split(":")) {
                 try {
