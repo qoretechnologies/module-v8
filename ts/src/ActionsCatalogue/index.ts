@@ -1,11 +1,5 @@
 // This will be replaced by the real implementation
-import asana from '../apps/asana';
-import esignature from '../apps/esignature';
-import github from '../apps/github';
-import jira from '../apps/jira';
-import stripe from '../apps/stripe';
-import zendesk from '../apps/zendesk';
-import netsuite from '../apps/netsuite';
+import freshdesk from '../apps/freshdesk';
 import { Log } from '../decorators/Logger';
 import { IQoreApp, IQoreAppWithActions, TQoreAppAction, TQoreApps } from '../global/models/qore';
 import { Locales } from '../i18n/i18n-types';
@@ -42,6 +36,7 @@ class ActionsCatalogue {
 
       // Register the actions
       actions.forEach((action) => {
+        console.dir(action, { depth: null });
         api.registerAction(action);
       });
     });
@@ -53,13 +48,14 @@ class ActionsCatalogue {
       this.apps[appName] = PiecesAppCatalogue.apps[appName];
     });
 
-    this.apps['zendesk'] = zendesk(this.locale);
-    this.apps['asana'] = asana(this.locale);
-    this.apps['esignature'] = esignature(this.locale);
-    this.apps['github'] = github(this.locale);
-    this.apps['jira'] = jira(this.locale);
-    this.apps['stripe'] = stripe(this.locale);
-    this.apps['netsuite'] = netsuite(this.locale);
+    // this.apps['zendesk'] = zendesk(this.locale);
+    // this.apps['asana'] = asana(this.locale);
+    // this.apps['esignature'] = esignature(this.locale);
+    // this.apps['github'] = github(this.locale);
+    // this.apps['jira'] = jira(this.locale);
+    // this.apps['stripe'] = stripe(this.locale);
+    // this.apps['netsuite'] = netsuite(this.locale);
+    this.apps['freshdesk'] = freshdesk(this.locale);
   }
 
   public getOauth2ClientSecret(appName: string): string {

@@ -9360,6 +9360,20 @@ type RootTranslation = {
 				}
 			}
 		}
+		Freshdesk: {
+			/**
+			 * F​r​e​s​h​d​e​s​k
+			 */
+			displayName: string
+			/**
+			 * C​l​o​u​d​-​b​a​s​e​d​ ​c​u​s​t​o​m​e​r​ ​s​u​p​p​o​r​t​ ​s​o​f​t​w​a​r​e
+			 */
+			shortDesc: string
+			/**
+			 * F​r​e​s​h​d​e​s​k​ ​i​s​ ​a​ ​c​l​o​u​d​-​b​a​s​e​d​ ​c​u​s​t​o​m​e​r​ ​s​u​p​p​o​r​t​ ​p​l​a​t​f​o​r​m​ ​t​h​a​t​ ​w​a​s​ ​f​o​u​n​d​e​d​ ​w​i​t​h​ ​t​h​e​ ​m​i​s​s​i​o​n​ ​o​f​ ​e​n​a​b​l​i​n​g​ ​c​o​m​p​a​n​i​e​s​ ​o​f​ ​a​l​l​ ​s​i​z​e​s​ ​t​o​ ​p​r​o​v​i​d​e​ ​g​r​e​a​t​ ​c​u​s​t​o​m​e​r​ ​s​e​r​v​i​c​e​.​ ​O​u​r​ ​g​o​a​l​ ​i​s​ ​s​i​m​p​l​e​:​ ​m​a​k​e​ ​i​t​ ​e​a​s​y​ ​f​o​r​ ​b​r​a​n​d​s​ ​t​o​ ​t​a​l​k​ ​t​o​ ​t​h​e​i​r​ ​c​u​s​t​o​m​e​r​s​ ​a​n​d​ ​m​a​k​e​ ​i​t​ ​e​a​s​y​ ​f​o​r​ ​u​s​e​r​s​ ​t​o​ ​g​e​t​ ​i​n​ ​t​o​u​c​h​ ​w​i​t​h​ ​b​u​s​i​n​e​s​s​e​s​.
+			 */
+			longDesc: string
+		}
 	}
 }
 
@@ -18710,6 +18724,20 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 			}
+		}
+		Freshdesk: {
+			/**
+			 * Freshdesk
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Cloud-based customer support software
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Freshdesk is a cloud-based customer support platform that was founded with the mission of enabling companies of all sizes to provide great customer service. Our goal is simple: make it easy for brands to talk to their customers and make it easy for users to get in touch with businesses.
+			 */
+			longDesc: () => LocalizedString
 		}
 	}
 }

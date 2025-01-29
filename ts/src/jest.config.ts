@@ -14,7 +14,7 @@ const config: Config = {
     '^i18n/(.*)$': '<rootDir>/i18n/$1',
   },
   transform: {
-    '^.+\\.(ts|js)$': 'ts-jest',
+    '^.+\\.ts$': 'ts-jest',
   },
   testMatch: ['<rootDir>/**/*.(spec|test).ts'],
   transformIgnorePatterns: ['<rootDir>/../node_modules/(?!@octokit)'],

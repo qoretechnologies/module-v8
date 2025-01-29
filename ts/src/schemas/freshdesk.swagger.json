@@ -1,0 +1,3911 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "contact": {
+      "email": "guillaume.darmoy@turnk.co",
+      "name": "Guillaume Darmoy",
+      "url": "https://mingle-ionapi.eu1.inforcloudsuite.com/FOCAL_TST/CustomerApi/Freshdesk/freshdesk"
+    },
+    "description": "Freshdesk is a cloud-based customer support platform that was founded with the mission of enabling companies of all sizes to provide great customer service. Our goal is simple: make it easy for brands to talk to their customers and make it easy for users to get in touch with businesses.\n\nFreshdesk's APIs belong to the Representational State Transfer (REST) category. They allow you to perform 'RESTful' operations such as reading, modifying, adding or deleting data from your helpdesk. The APIs also support Cross-Origin Resource Sharing (CORS).",
+    "title": "Freshdesk API v2",
+    "version": "2.0-oas3"
+  },
+  "basePath": "/",
+  "paths": {
+    "/api/v2/agents": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "Filter agents by email address.",
+            "in": "query",
+            "name": "email",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "Filter agents by mobile number.",
+            "in": "query",
+            "name": "mobile",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "Filter agents by phone number.",
+            "in": "query",
+            "name": "phone",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "Filter agents by state (fulltime/occasional).",
+            "enum": [
+              "fulltime",
+              "occasional"
+            ],
+            "in": "query",
+            "name": "state",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns a list of agents based on the applied filters.",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/inline_response_200"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "tags": [
+          "Agents"
+        ],
+        "description": "Use filters to view only specific agents. The filters can be combined and the query string must be URL encoded.",
+        "summary": "List All Agents"
+      },
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/v2_agents_body"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the details of the newly created agent.",
+            "schema": {
+              "$ref": "#/definitions/inline_response_200_1"
+            }
+          }
+        },
+        "tags": [
+          "Agents"
+        ],
+        "description": "Create a new agent.",
+        "summary": "Create an Agent"
+      }
+    },
+    "/api/v2/agents/autocomplete": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "Keyword to search for an agent using their name or email.",
+            "in": "query",
+            "name": "term",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the list of agents matching the search term.",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/inline_response_200_2"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "tags": [
+          "Agents"
+        ],
+        "description": "Search for an agent using their name or email. The search is case insensitive.",
+        "summary": "Search Agents"
+      }
+    },
+    "/api/v2/agents/bulk": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/agents_bulk_body"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Multiple agents created successfully.",
+            "schema": {
+              "$ref": "#/definitions/inline_response_200_3"
+            }
+          }
+        },
+        "tags": [
+          "Agents"
+        ],
+        "description": "Create multiple agents at once.",
+        "summary": "Create Multiple Agents"
+      }
+    },
+    "/api/v2/agents/me": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Returns the details of the currently authenticated agent.",
+            "schema": {
+              "$ref": "#/definitions/inline_response_200_1"
+            }
+          }
+        },
+        "tags": [
+          "Agents"
+        ],
+        "description": "Retrieve the details of the currently authenticated agent.",
+        "summary": "Currently Authenticated Agent"
+      }
+    },
+    "/api/v2/agents/{id}": {
+      "delete": {
+        "parameters": [
+          {
+            "description": "Unique ID of the agent.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Agent deleted successfully. No content."
+          }
+        },
+        "tags": [
+          "Agents"
+        ],
+        "description": "Delete an existing agent. Note: Deleting an agent will downgrade the agent into a contact.",
+        "summary": "Delete an Agent"
+      },
+      "put": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "Unique ID of the agent.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/agents_id_body"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the details of the updated agent.",
+            "schema": {
+              "$ref": "#/definitions/inline_response_200_1"
+            }
+          }
+        },
+        "tags": [
+          "Agents"
+        ],
+        "description": "Update an existing agent. Note: Agent's name, phone, mobile number, and job title can't be updated using the API. They can be updated from the Neo Admin Center.",
+        "summary": "Update an Agent"
+      }
+    },
+    "/api/v2/companies": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "Number of results per page. The default value is 30 and the maximum value is 100.",
+            "in": "query",
+            "name": "per_page",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "description": "Page number to fetch the results.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/CompanyResponse"
+              },
+              "type": "array"
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "Companies"
+        ],
+        "description": "Use this API to fetch a list of all companies.",
+        "summary": "List All Companies"
+      },
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v2_companies_body"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Company created successfully.",
+            "schema": {
+              "$ref": "#/definitions/CompanyResponse"
+            }
+          }
+        },
+        "tags": [
+          "Companies"
+        ],
+        "description": "Create a new company.",
+        "summary": "Create a Company"
+      }
+    },
+    "/api/v2/companies/autocomplete": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "Keyword to search for companies by name.",
+            "in": "query",
+            "name": "name",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Companies matching the search keyword.",
+            "schema": {
+              "$ref": "#/definitions/CompanySearchResponse"
+            }
+          }
+        },
+        "tags": [
+          "Companies"
+        ],
+        "description": "Search for a company using its name.",
+        "summary": "Search Companies"
+      }
+    },
+    "/api/v2/companies/export/{id}": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "Export ID of the company.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Exported company data.",
+            "schema": {
+              "$ref": "#/definitions/ExportResponse"
+            }
+          }
+        },
+        "tags": [
+          "Companies"
+        ],
+        "description": "This endpoint will return a valid URL to the CSV when the export is done completely.",
+        "summary": "Get Exported Company by ID"
+      }
+    },
+    "/api/v2/companies/imports": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List of company imports.",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/Import"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "tags": [
+          "Companies"
+        ],
+        "description": "Fetch a list of up to 5 most recent company imports.",
+        "summary": "List Company Imports"
+      },
+      "post": {
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "Fields to be imported along with the index of the field in the import file.",
+            "in": "formData",
+            "name": "fields",
+            "type": "object"
+          },
+          {
+            "description": "CSV file to be imported.",
+            "format": "binary",
+            "in": "formData",
+            "name": "file",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Company import triggered.",
+            "schema": {
+              "$ref": "#/definitions/Import"
+            }
+          }
+        },
+        "tags": [
+          "Companies"
+        ],
+        "description": "Import companies in bulk to a Freshdesk account.",
+        "summary": "Trigger a Company Import"
+      }
+    },
+    "/api/v2/companies/imports/{id}": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "Import ID of the company.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Company import data.",
+            "schema": {
+              "$ref": "#/definitions/Import"
+            }
+          }
+        },
+        "tags": [
+          "Companies"
+        ],
+        "description": "Look up information about a specific import.",
+        "summary": "View a Company Import by ID"
+      }
+    },
+    "/api/v2/companies/imports/{id}/cancel": {
+      "put": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "Import ID of the company.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Company import cancelled.",
+            "schema": {
+              "$ref": "#/definitions/Import"
+            }
+          }
+        },
+        "tags": [
+          "Companies"
+        ],
+        "description": "Cancel an import job that is currently in progress.",
+        "summary": "Cancel a Company Import"
+      }
+    },
+    "/api/v2/companies/{id}": {
+      "delete": {
+        "parameters": [
+          {
+            "description": "Unique ID of the company to delete.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content (Company successfully deleted)."
+          }
+        },
+        "tags": [
+          "Companies"
+        ],
+        "description": "Delete a specific company. \nNote: \n1. Deleting a company does not delete the contacts that are associated with it. However the association will be removed.\n2. Once deleted, a company cannot be restored.\n",
+        "summary": "Delete a Company"
+      },
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "ID of the company.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Company details retrieved successfully.",
+            "schema": {
+              "$ref": "#/definitions/CompanyResponse"
+            }
+          }
+        },
+        "tags": [
+          "Companies"
+        ],
+        "description": "View details of a specific company.",
+        "summary": "View a Company"
+      },
+      "put": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "Company ID.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/companies_id_body"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Company updated successfully.",
+            "schema": {
+              "$ref": "#/definitions/inline_response_200_4"
+            }
+          }
+        },
+        "tags": [
+          "Companies"
+        ],
+        "description": "Update details of a specific company.",
+        "summary": "Update a Company"
+      }
+    },
+    "/api/v2/contacts": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "Filter contacts by email address.",
+            "in": "query",
+            "name": "email",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "Filter contacts by ID.",
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "Filter contacts by mobile number.",
+            "in": "query",
+            "name": "mobile",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "Filter contacts by phone number.",
+            "in": "query",
+            "name": "phone",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "Filter contacts by company ID.",
+            "in": "query",
+            "name": "company_id",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "description": "Filter contacts by state (blocked, deleted, unverified, verified).",
+            "in": "query",
+            "name": "state",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "Filter contacts by updated timestamp.",
+            "in": "query",
+            "name": "_updated_since",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Contacts retrieved successfully.",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/ContactDetails"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Retrieve a list of contacts based on specified filters.",
+        "summary": "List All Contacts"
+      },
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v2_contacts_body"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Contact created successfully.",
+            "schema": {
+              "$ref": "#/definitions/CreateContact"
+            }
+          }
+        },
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Create a new contact in Freshdesk.",
+        "summary": "Create a Contact"
+      }
+    },
+    "/api/v2/contacts/autocomplete": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "Keyword to search for contacts by name.",
+            "in": "query",
+            "name": "term",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Contacts matching the search term retrieved successfully.",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/ContactSearchResult"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Search for contacts using their name.",
+        "summary": "Search Contacts"
+      }
+    },
+    "/api/v2/contacts/{id}": {
+      "delete": {
+        "parameters": [
+          {
+            "description": "ID of the contact to be soft deleted.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Contact soft deleted successfully."
+          }
+        },
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Soft delete a contact. The contact will be marked as deleted.",
+        "summary": "Soft Delete a Contact"
+      },
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "ID of the contact to be viewed",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Contacts retrieved successfully.",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/ContactDetails"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Retrieve a list of contacts based on specified filters.",
+        "summary": "View Contact"
+      },
+      "put": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "Unique identifier of the contact.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/contacts_id_body"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Contact updated successfully.",
+            "schema": {
+              "$ref": "#/definitions/UpdateContactResponse"
+            }
+          }
+        },
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Update an existing contact in Freshdesk.",
+        "summary": "Update a Contact"
+      }
+    },
+    "/api/v2/contacts/{id}/hard_delete": {
+      "delete": {
+        "parameters": [
+          {
+            "description": "ID of the contact to be permanently deleted.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "description": "Set to true to force hard delete of a contact that is not already soft deleted.",
+            "in": "query",
+            "name": "force",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Contact permanently deleted successfully."
+          },
+          "400": {
+            "description": "Invalid user (not soft deleted) or missing required parameter."
+          },
+          "404": {
+            "description": "User not found."
+          }
+        },
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Hard delete a contact to completely remove it from the portal. Can be used for GDPR compliance.",
+        "summary": "Permanently Delete a Contact"
+      }
+    },
+    "/api/v2/custom_objects/schemas": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/CustomObject"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "tags": [
+          "Custom Objects"
+        ],
+        "summary": "Get all custom object schemas"
+      },
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CustomObject"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Custom object schema created",
+            "schema": {
+              "$ref": "#/definitions/CustomObject"
+            }
+          }
+        },
+        "tags": [
+          "Custom Objects"
+        ],
+        "summary": "Create a Custom Object Schema"
+      }
+    },
+    "/api/v2/custom_objects/schemas/{id}": {
+      "delete": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Custom object schema deleted"
+          }
+        },
+        "tags": [
+          "Custom Objects"
+        ],
+        "summary": "Delete a Custom Object Schema"
+      },
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/CustomObject"
+            }
+          }
+        },
+        "tags": [
+          "Custom Objects"
+        ],
+        "summary": "Get a custom object schema"
+      },
+      "put": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CustomObject"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Custom object schema updated",
+            "schema": {
+              "$ref": "#/definitions/CustomObject"
+            }
+          }
+        },
+        "tags": [
+          "Custom Objects"
+        ],
+        "summary": "Update a Custom Object Schema"
+      }
+    },
+    "/api/v2/custom_objects/schemas/{id}/fields": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/Field"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "tags": [
+          "Custom Objects"
+        ],
+        "summary": "List custom object fields"
+      }
+    },
+    "/api/v2/custom_objects/schemas/{schemaId}/records": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "schemaId",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/schemaid_records_body"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "examples": {
+              "application/json": {
+                "created_time": 1615529200004,
+                "data": {
+                  "age": 35,
+                  "customer_id": "C1234",
+                  "customer_name": "Alan Turing"
+                },
+                "display_id": "BKG-1",
+                "updated_time": 1615529200004
+              }
+            }
+          }
+        },
+        "tags": [
+          "Custom Objects"
+        ],
+        "description": "Create a new record in the custom object. The field names and their attributes to construct the request body can be obtained using the Retrieve Custom Object API. While creating a record with a Lookup field value, the ID of the Object should be specified as the Lookup field value.",
+        "summary": "Create A Record"
+      },
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "schemaId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Filtered records",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/Record"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "tags": [
+          "Custom Objects"
+        ],
+        "summary": "Filter records"
+      }
+    },
+    "/api/v2/custom_objects/schemas/{schemaId}/records/{id}": {
+      "delete": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "schemaId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "Custom Objects"
+        ],
+        "summary": "Delete a record"
+      },
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "schemaId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Record"
+            }
+          }
+        },
+        "tags": [
+          "Custom Objects"
+        ],
+        "summary": "Get a record"
+      },
+      "put": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "schemaId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Record"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Record"
+            }
+          }
+        },
+        "tags": [
+          "Custom Objects"
+        ],
+        "summary": "Update a record"
+      }
+    },
+    "/api/v2/search/companies": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "The query string using the specified format. Examples: - &quot;created_at:&gt;&#39;2017-10-01&#39; AND created_at:&lt;&#39;2017-10-07&#39;&quot; - &quot;sector:8 AND private:true&quot;\n",
+            "in": "query",
+            "name": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The page number for pagination, starting with 1 and not exceeding 10.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Companies matching the search criteria.",
+            "schema": {
+              "$ref": "#/definitions/inline_response_200_5"
+            }
+          }
+        },
+        "tags": [
+          "Companies"
+        ],
+        "description": "Use custom company fields that you have created in your account to filter through the companies and get a list of companies matching the specified company fields.\n",
+        "summary": "Search Companies using specific query format"
+      }
+    },
+    "/api/v2/search/contacts": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "Query to filter contacts based on custom contact fields. The query must be URL-encoded and enclosed in double quotes.",
+            "in": "query",
+            "name": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Contacts matching the query retrieved successfully.",
+            "schema": {
+              "$ref": "#/definitions/inline_response_200_6"
+            }
+          }
+        },
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Use custom contact fields to filter contacts and retrieve a list of contacts matching the specified fields.",
+        "summary": "Filter ContactsBETA"
+      }
+    },
+    "/api/v2/tickets": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "Tickets that match the given filter.",
+            "in": "query",
+            "name": "filter",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "Tickets submitted by given requester ID.",
+            "in": "query",
+            "name": "requester_id",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "description": "Tickets submitted by given email address.",
+            "in": "query",
+            "name": "email",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "Tickets that belong to the given company ID.",
+            "in": "query",
+            "name": "company_id",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "description": "Sort the results.",
+            "in": "query",
+            "name": "order_by",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "Sort order.",
+            "in": "query",
+            "name": "order_type",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "Embed additional details in the response.",
+            "in": "query",
+            "name": "include",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "The page number of results to return.",
+            "in": "query",
+            "maximum": 500,
+            "minimum": 1,
+            "name": "page",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "description": "The number of objects returned per page.",
+            "in": "query",
+            "maximum": 100,
+            "minimum": 1,
+            "name": "per_page",
+            "required": false,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An array of Ticket objects",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/Ticket"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "tags": [
+          "Tickets"
+        ],
+        "description": "List all tickets.\nUse filters to view only specific tickets (those which match the criteria that you choose). By default, only tickets that have not been deleted or marked as spam will be returned, unless you use the 'deleted' filter.\nNote:\n  1. By default, only tickets that have been created within the past 30 days will be returned. For older tickets, use the updated_since filter.\n  2. A maximum of 300 pages (9000 tickets) will be returned.\n  3. When using filters, the query string must be URL encoded.\n  4. Use 'include' to embed additional details in the response.\n  5. For accounts created after 2018-11-30, you will have to use include to get description.\n",
+        "summary": "List All Tickets"
+      },
+      "post": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/v2_ticket_body"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Ticket created successfully.",
+            "schema": {
+              "$ref": "#/definitions/Ticket"
+            }
+          }
+        },
+        "tags": [
+          "Tickets"
+        ],
+        "description": "Create a new ticket.",
+        "summary": "Create a Ticket"
+      }
+    },
+    "/api/v2/tickets/{id}": {
+      "delete": {
+        "parameters": [
+          {
+            "description": "ID of the ticket to be deleted.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successfully deleted."
+          },
+          "400": {
+            "description": "Bad request."
+          },
+          "401": {
+            "description": "Authorization error."
+          },
+          "403": {
+            "description": "Forbidden."
+          },
+          "404": {
+            "description": "Not found."
+          },
+          "429": {
+            "description": "Too many requests."
+          },
+          "500": {
+            "description": "Internal server error."
+          }
+        },
+        "tags": [
+          "Tickets"
+        ],
+        "description": "Deletes the ticket specified by the ticket ID. Note that this action is irreversible.",
+        "summary": "Delete a Ticket"
+      },
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "Unique ID of the ticket.",
+            "format": "int64",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "description": "Embed additional details in the response.",
+            "in": "query",
+            "name": "include",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the details of the ticket with the given ID.",
+            "schema": {
+              "$ref": "#/definitions/Ticket"
+            }
+          },
+          "404": {
+            "description": "The requested ticket was not found."
+          }
+        },
+        "tags": [
+          "Tickets"
+        ],
+        "description": "Fetches the ticket for the given ID.\nNote:\n  1. The maximum number of API requests per hour is 1000. Once this limit is reached, any further requests will be denied with a 429 response.\n  2. Deleted tickets will not be returned.\n  3. To view a deleted ticket, use the `deleted` filter.\n",
+        "summary": "View a Ticket"
+      },
+      "put": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "ID of ticket to update",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tickets_id_body"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "$ref": "#/definitions/Ticket"
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Authentication failed"
+          },
+          "403": {
+            "description": "Insufficient permissions"
+          },
+          "404": {
+            "description": "Resource not found"
+          },
+          "429": {
+            "description": "Too many requests"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "tags": [
+          "Tickets"
+        ],
+        "description": "Update specific attributes of a ticket. Note: Unlike normal tickets, the subject and description of outbound tickets cannot be updated.",
+        "summary": "Update a Ticket"
+      }
+    },
+    "/api/v2/tickets/{id}/summary": {
+      "delete": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "Tickets"
+        ],
+        "description": "Delete the summary of a ticket.",
+        "summary": "Delete Summary"
+      },
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "examples": {
+              "application/json": {
+                "attachments": [],
+                "body": "<div dir=\"ltr\">Test summary</div>",
+                "body_text": "Test summary",
+                "cloud_files": [],
+                "created_at": "2020-12-16T07:15:03Z",
+                "id": 82007772826,
+                "ticket_id": 20,
+                "updated_at": "2020-12-16T07:15:03Z",
+                "user_id": 82002117631
+              }
+            }
+          }
+        },
+        "tags": [
+          "Tickets"
+        ],
+        "description": "Retrieve the summary of a ticket.",
+        "summary": "View Summary"
+      },
+      "put": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "ID of the ticket whose summary is being updated.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/id_summary_body"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "examples": {
+              "application/json": {
+                "attachments": [],
+                "body": "<div dir=\"ltr\">Updated summary</div>",
+                "body_text": "Updated summary",
+                "cloud_files": [],
+                "created_at": "2020-12-16T07:15:03Z",
+                "id": 82007772826,
+                "last_edited_at": "2020-12-16T07:25:00Z",
+                "last_edited_user_id": 82002117631,
+                "ticket_id": 20,
+                "updated_at": "2020-12-16T07:25:00Z",
+                "user_id": 82002117631
+              }
+            }
+          }
+        },
+        "tags": [
+          "Tickets"
+        ],
+        "description": "Update the summary of a ticket.",
+        "summary": "Update Summary"
+      }
+    },
+    "/api/v2/tickets/{ticket_id}/conversations": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "ID of the ticket",
+            "in": "path",
+            "name": "ticket_id",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "description": "Retrieve conversations updated since the specified timestamp.",
+            "format": "date-time",
+            "in": "query",
+            "name": "updated_since",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An array of Conversation objects",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/Conversation"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "tags": [
+          "Conversations"
+        ],
+        "description": "Retrieve all conversations related to a specified ticket. Conversations include all interactions related to the ticket such as replies, notes, and status changes.\n",
+        "summary": "List all conversations"
+      },
+      "post": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "ID of the ticket",
+            "in": "path",
+            "name": "ticket_id",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "description": "Content of the note in HTML format",
+            "in": "query",
+            "name": "body",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The email address from which the reply is sent. By default the global support email will be used.",
+            "in": "query",
+            "name": "from_email",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "ID of the agent who is adding the note",
+            "in": "query",
+            "name": "user_id",
+            "required": false,
+            "type": "number"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Email address added in the 'cc' field of the outgoing ticket email.",
+            "in": "query",
+            "items": {
+              "type": "string"
+            },
+            "name": "cc_emails",
+            "required": false,
+            "type": "array"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Email address added in the 'bcc' field of the outgoing ticket email.",
+            "in": "query",
+            "items": {
+              "type": "string"
+            },
+            "name": "bcc_emails",
+            "required": false,
+            "type": "array"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Successful operation, conversation created",
+            "schema": {
+              "$ref": "#/definitions/Conversation"
+            }
+          }
+        },
+        "tags": [
+          "Conversations"
+        ],
+        "description": "Create a new conversation in a specified ticket. This can be a reply to the ticket from an agent, a note added to the ticket, or a status change.\n",
+        "summary": "Create a conversation"
+      }
+    },
+    "/api/v2/tickets/{ticket_id}/notes": {
+      "post": {
+        "consumes": [
+          "application/json",
+          "multipart/form-data"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "ID of the ticket for which the note is being created.",
+            "in": "path",
+            "name": "ticket_id",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ticket_id_notes_body"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "examples": {
+              "application/json": {
+                "attachments": [],
+                "body": "<div>Hi tom, Still Angry</div>",
+                "body_text": "Hi tom, Still Angry",
+                "created_at": "2015-08-24T13:49:37Z",
+                "id": 5,
+                "incoming": false,
+                "notified_to": [
+                  "tom@yourcompany.com"
+                ],
+                "private": false,
+                "ticket_id": 3,
+                "updated_at": "2015-08-24T13:49:37Z",
+                "user_id": 1
+              }
+            }
+          }
+        },
+        "tags": [
+          "Tickets"
+        ],
+        "description": "Create a new note for a ticket. By default, any note that you add will be private. If you wish to add a public note, set the parameter to false.",
+        "summary": "Create a Note"
+      }
+    }
+  },
+  "definitions": {
+    "AdditionalCompany": {
+      "properties": {
+        "company_id": {
+          "type": "integer"
+        },
+        "view_all_tickets": {
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "Agent": {
+      "properties": {
+        "available": {
+          "description": "Availability status of the agent",
+          "type": "boolean"
+        },
+        "available_since": {
+          "description": "Timestamp since the agent became available",
+          "format": "date-time",
+          "type": "string"
+        },
+        "contact": {
+          "$ref": "#/definitions/ContactDetails"
+        },
+        "created_at": {
+          "description": "Agent creation timestamp",
+          "format": "date-time",
+          "type": "string"
+        },
+        "group_ids": {
+          "description": "Group IDs associated with the agent",
+          "items": {
+            "type": "integer"
+          },
+          "type": "array"
+        },
+        "id": {
+          "description": "Unique ID of the agent",
+          "type": "integer"
+        },
+        "occasional": {
+          "description": "Whether the agent is occasional or full-time",
+          "type": "boolean"
+        },
+        "role_ids": {
+          "description": "Role IDs associated with the agent",
+          "items": {
+            "type": "integer"
+          },
+          "type": "array"
+        },
+        "signature": {
+          "description": "Signature of the agent in HTML format",
+          "type": "string"
+        },
+        "skill_ids": {
+          "description": "Skill ids associated with the agent",
+          "items": {
+            "type": "integer"
+          },
+          "type": "array"
+        },
+        "ticket_scope": {
+          "description": "Ticket permission of the agent",
+          "enum": [
+            1,
+            2,
+            3
+          ],
+          "type": "integer"
+        },
+        "type": {
+          "description": "Type of agent",
+          "enum": [
+            "support_agent",
+            "field_agent",
+            "collaborator"
+          ],
+          "type": "string"
+        },
+        "updated_at": {
+          "description": "Agent updated timestamp",
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "AgentSearchResult": {
+      "properties": {
+        "avatar": {
+          "description": "Avatar link of the agent",
+          "type": "string"
+        },
+        "email": {
+          "description": "Email address of the agent",
+          "type": "string"
+        },
+        "id": {
+          "description": "Unique ID of the agent",
+          "type": "integer"
+        },
+        "name": {
+          "description": "Name of the agent",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Attachment": {
+      "properties": {
+        "content_type": {
+          "description": "MIME type of the attached file",
+          "type": "string"
+        },
+        "file_name": {
+          "description": "Name of the attached file",
+          "type": "string"
+        },
+        "file_size": {
+          "description": "Size of the attached file in bytes",
+          "type": "number"
+        },
+        "id": {
+          "description": "Attachment ID",
+          "type": "number"
+        },
+        "url": {
+          "description": "URL to download the attached file",
+          "type": "string"
+        }
+      },
+      "required": [
+        "content_type",
+        "file_name",
+        "file_size",
+        "id",
+        "url"
+      ],
+      "type": "object"
+    },
+    "Choice": {
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Company": {
+      "properties": {
+        "account_tier": {
+          "description": "Classification based on the company's value.",
+          "type": "string"
+        },
+        "created_at": {
+          "description": "Company creation date.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "custom_fields": {
+          "description": "Custom fields associated with the company.",
+          "type": "object"
+        },
+        "description": {
+          "description": "Description of the company.",
+          "type": "string"
+        },
+        "domains": {
+          "description": "Domains associated with the company.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "health_score": {
+          "description": "The strength of the relationship with the company.",
+          "type": "string"
+        },
+        "id": {
+          "description": "Unique ID of the company.",
+          "type": "integer"
+        },
+        "industry": {
+          "description": "The industry the company operates in.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the company.",
+          "type": "string"
+        },
+        "note": {
+          "description": "Specific note about the company.",
+          "type": "string"
+        },
+        "renewal_date": {
+          "description": "Date of contract or relationship renewal with the company.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "updated_at": {
+          "description": "Date when the company was last updated.",
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "CompanyResponse": {
+      "properties": {
+        "account_tier": {
+          "description": "Classification based on how much value the company brings to your business.",
+          "type": "string"
+        },
+        "created_at": {
+          "description": "Timestamp when the company was created.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "custom_fields": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Key value pairs containing the names and values of custom fields.",
+          "type": "object"
+        },
+        "description": {
+          "description": "Description of the company.",
+          "type": "string"
+        },
+        "domains": {
+          "description": "An array of domains associated with the company.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "health_score": {
+          "description": "The strength of your relationship with the company.",
+          "type": "string"
+        },
+        "id": {
+          "description": "Unique ID of the company.",
+          "type": "integer"
+        },
+        "industry": {
+          "description": "The industry the company serves in.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the company.",
+          "type": "string"
+        },
+        "note": {
+          "description": "A note about the company.",
+          "type": "string"
+        },
+        "renewal_date": {
+          "description": "Date when your contract or relationship with the company is due for renewal.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "updated_at": {
+          "description": "Timestamp when the company was last updated.",
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "CompanySearchResponse": {
+      "properties": {
+        "completed_records": {
+          "description": "Number of completed records.",
+          "type": "integer"
+        },
+        "created_at": {
+          "description": "Timestamp of creation.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "failures": {
+          "$ref": "#/definitions/CompanySearchResponse_failures"
+        },
+        "id": {
+          "description": "Unique ID of the company.",
+          "type": "integer"
+        },
+        "status": {
+          "description": "Status of the company.",
+          "type": "string"
+        },
+        "total_records": {
+          "description": "Total number of records.",
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "CompanySearchResponse_failures": {
+      "description": "Details about failures.",
+      "properties": {
+        "count": {
+          "description": "Count of failures.",
+          "type": "integer"
+        },
+        "report": {
+          "description": "URL for the report.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ContactDetails": {
+      "properties": {
+        "active": {
+          "description": "Active status of the contact",
+          "type": "boolean"
+        },
+        "created_at": {
+          "description": "Contact creation timestamp",
+          "format": "date-time",
+          "type": "string"
+        },
+        "email": {
+          "description": "Email address of the agent",
+          "type": "string"
+        },
+        "job_title": {
+          "description": "Job title of the agent",
+          "type": "string"
+        },
+        "language": {
+          "description": "Language of the agent",
+          "type": "string"
+        },
+        "last_login_at": {
+          "description": "Last login timestamp of the agent",
+          "format": "date-time",
+          "type": "string"
+        },
+        "mobile": {
+          "description": "Mobile number of the agent",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the agent",
+          "type": "string"
+        },
+        "phone": {
+          "description": "Phone number of the agent",
+          "type": "string"
+        },
+        "time_zone": {
+          "description": "Time zone of the agent",
+          "type": "string"
+        },
+        "updated_at": {
+          "description": "Contact updated timestamp",
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ContactSearchResult": {
+      "properties": {
+        "id": {
+          "description": "ID of the contact.",
+          "type": "integer"
+        },
+        "name": {
+          "description": "Name of the contact.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Conversation": {
+      "properties": {
+        "attachments": {
+          "items": {
+            "$ref": "#/definitions/Attachment"
+          },
+          "type": "array"
+        },
+        "body": {
+          "description": "Content of the conversation in HTML",
+          "type": "string"
+        },
+        "body_text": {
+          "description": "Content of the conversation in plain text",
+          "type": "string"
+        },
+        "created_at": {
+          "description": "Conversation creation timestamp",
+          "format": "date-time",
+          "type": "string"
+        },
+        "id": {
+          "description": "ID of the conversation",
+          "type": "number"
+        },
+        "incoming": {
+          "description": "Set to true if a particular conversation should appear as being created from outside (i.e., not through web portal)",
+          "type": "boolean"
+        },
+        "last_edited_at": {
+          "description": "Timestamp when the conversation last edited",
+          "format": "date-time",
+          "type": "string"
+        },
+        "last_edited_user_id": {
+          "description": "ID of the agent who has last edited the conversation",
+          "type": "number"
+        },
+        "private": {
+          "description": "Set to true if the note is private",
+          "type": "boolean"
+        },
+        "source": {
+          "description": "Source type as an integer value",
+          "type": "integer"
+        },
+        "support_email": {
+          "description": "Email address from which the reply is sent. For notes, this value will be null",
+          "type": "string"
+        },
+        "ticket_id": {
+          "description": "ID of the ticket to which this conversation is being added",
+          "type": "number"
+        },
+        "to_emails": {
+          "description": "Email addresses of agents/users who need to be notified about this conversation",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "updated_at": {
+          "description": "Conversation updated timestamp",
+          "format": "date-time",
+          "type": "string"
+        },
+        "user_id": {
+          "description": "ID of the agent/user who is adding the conversation",
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "CreateCompanyRequest": {
+      "properties": {
+        "account_tier": {
+          "description": "Classification based on how much value the company brings to your business.",
+          "type": "string"
+        },
+        "custom_fields": {
+          "description": "Key value pairs containing the names and values of custom fields.",
+          "type": "object"
+        },
+        "description": {
+          "description": "Description of the company.",
+          "type": "string"
+        },
+        "domains": {
+          "description": "Domains associated with the company. Email addresses of contacts that contain this domain will be associated with the company.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "health_score": {
+          "description": "The strength of your relationship with the company.",
+          "type": "string"
+        },
+        "industry": {
+          "description": "The industry the company serves in.",
+          "type": "string"
+        },
+        "lookup_parameter": {
+          "description": "This attribute for companies can only be set if the Custom Objects feature is enabled. The value can either be in the form of the display_id (record ID) or primary_field_value (user-defined record value). The default value is display_id.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the company. (Mandatory and unique)",
+          "type": "string"
+        },
+        "note": {
+          "description": "Any specific note about the company.",
+          "type": "string"
+        },
+        "renewal_date": {
+          "description": "Date when your contract or relationship with the company is due for renewal.",
+          "format": "date",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "CreateContact": {
+      "properties": {
+        "tags": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "address": {
+          "type": "string"
+        },
+        "avatar": {
+          "type": "string"
+        },
+        "company_id": {
+          "type": "integer"
+        },
+        "created_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "custom_fields": {
+          "type": "object"
+        },
+        "deleted": {
+          "type": "boolean"
+        },
+        "description": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "job_title": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        },
+        "lookup_parameter": {
+          "type": "string"
+        },
+        "mobile": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "other_companies": {
+          "items": {
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "other_emails": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "time_zone": {
+          "type": "string"
+        },
+        "twitter_id": {
+          "type": "string"
+        },
+        "unique_external_id": {
+          "type": "string"
+        },
+        "updated_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "view_all_tickets": {
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "CustomObject": {
+      "properties": {
+        "fields": {
+          "items": {
+            "$ref": "#/definitions/Field"
+          },
+          "type": "array"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ExportResponse": {
+      "properties": {
+        "download_url": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Field": {
+      "properties": {
+        "choices": {
+          "items": {
+            "$ref": "#/definitions/Choice"
+          },
+          "type": "array"
+        },
+        "id": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "FilteredContact": {
+      "properties": {
+        "active": {
+          "description": "Set to true if the contact has been verified.",
+          "type": "boolean"
+        },
+        "address": {
+          "description": "Address of the contact.",
+          "type": "string"
+        },
+        "company_id": {
+          "description": "ID of the primary company to which this contact belongs.",
+          "type": "number"
+        },
+        "created_at": {
+          "description": "Contact creation timestamp.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "custom_fields": {
+          "description": "Key-value pairs containing the name and value of custom contact fields.",
+          "type": "object"
+        },
+        "description": {
+          "description": "A small description of the contact.",
+          "type": "string"
+        },
+        "email": {
+          "description": "Primary email address associated with the contact.",
+          "type": "string"
+        },
+        "job_title": {
+          "description": "Job title of the contact.",
+          "type": "string"
+        },
+        "language": {
+          "description": "Language of the contact.",
+          "type": "string"
+        },
+        "mobile": {
+          "description": "Mobile number of the contact.",
+          "type": "string"
+        },
+        "phone": {
+          "description": "Telephone number of the contact.",
+          "type": "string"
+        },
+        "tag": {
+          "description": "Tag associated with the contact.",
+          "type": "string"
+        },
+        "time_zone": {
+          "description": "Time zone in which the contact resides.",
+          "type": "string"
+        },
+        "twitter_id": {
+          "description": "Twitter handle of the contact.",
+          "type": "string"
+        },
+        "updated_at": {
+          "description": "Contact updated timestamp.",
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Import": {
+      "properties": {
+        "completed_records": {
+          "type": "integer"
+        },
+        "created_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "failures": {
+          "$ref": "#/definitions/Import_failures"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "status": {
+          "type": "string"
+        },
+        "total_records": {
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "Import_failures": {
+      "properties": {
+        "count": {
+          "type": "integer"
+        },
+        "report": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "JobResponse": {
+      "properties": {
+        "href": {
+          "description": "Link to the job",
+          "type": "string"
+        },
+        "job_id": {
+          "description": "Unique ID of the job",
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "Record": {
+      "properties": {
+        "data": {
+          "type": "object"
+        },
+        "version": {
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "Ticket": {
+      "properties": {
+        "tags": {
+          "description": "Tags associated with the ticket",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "attachments": {
+          "description": "Ticket attachments",
+          "items": {
+            "format": "binary",
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "company_id": {
+          "description": "Company ID of the requester",
+          "type": "integer"
+        },
+        "custom_fields": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Key value pairs of custom fields",
+          "type": "object"
+        },
+        "description": {
+          "description": "HTML content of the ticket",
+          "type": "string"
+        },
+        "due_by": {
+          "description": "Timestamp of when the ticket is due to be resolved",
+          "format": "date-time",
+          "type": "string"
+        },
+        "email": {
+          "description": "Email address of the requester",
+          "type": "string"
+        },
+        "email_config_id": {
+          "description": "ID of email config for the ticket",
+          "type": "integer"
+        },
+        "facebook_id": {
+          "description": "Facebook ID of the requester",
+          "type": "string"
+        },
+        "fr_due_by": {
+          "description": "Timestamp of when the first response is due",
+          "format": "date-time",
+          "type": "string"
+        },
+        "group_id": {
+          "description": "ID of the group to which the ticket has been assigned",
+          "type": "integer"
+        },
+        "id": {
+          "description": "Unique ID of the ticket",
+          "type": "integer"
+        },
+        "internal_agent_id": {
+          "description": "ID of the internal agent for the ticket",
+          "type": "integer"
+        },
+        "internal_group_id": {
+          "description": "ID of the internal group for the ticket",
+          "type": "integer"
+        },
+        "lookup_parameter": {
+          "description": "Lookup parameter for tickets",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the requester",
+          "type": "string"
+        },
+        "parent_id": {
+          "description": "ID of the parent ticket",
+          "type": "integer"
+        },
+        "phone": {
+          "description": "Phone number of the requester",
+          "type": "string"
+        },
+        "priority": {
+          "description": "Priority of the ticket",
+          "type": "integer"
+        },
+        "product_id": {
+          "description": "ID of the product to which the ticket is associated",
+          "type": "integer"
+        },
+        "requester_id": {
+          "description": "User ID of the requester",
+          "type": "integer"
+        },
+        "responder_id": {
+          "description": "ID of the agent to whom the ticket has been assigned",
+          "type": "integer"
+        },
+        "source": {
+          "description": "The channel through which the ticket was created",
+          "type": "integer"
+        },
+        "status": {
+          "description": "Status of the ticket",
+          "type": "integer"
+        },
+        "subject": {
+          "description": "Subject of the ticket",
+          "type": "string"
+        },
+        "twitter_id": {
+          "description": "Twitter handle of the requester",
+          "type": "string"
+        },
+        "type": {
+          "description": "Type of the ticket",
+          "type": "string"
+        },
+        "unique_external_id": {
+          "description": "External ID of the requester",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "UpdateContactResponse": {
+      "properties": {
+        "tags": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "address": {
+          "type": "string"
+        },
+        "company_id": {
+          "type": "integer"
+        },
+        "custom_fields": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        },
+        "description": {
+          "type": "string"
+        },
+        "email": {
+          "format": "email",
+          "type": "string"
+        },
+        "job_title": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        },
+        "lookup_parameter": {
+          "type": "string"
+        },
+        "mobile": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "other_companies": {
+          "items": {
+            "$ref": "#/definitions/UpdateContact_other_companies"
+          },
+          "type": "array"
+        },
+        "other_emails": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "time_zone": {
+          "type": "string"
+        },
+        "twitter_id": {
+          "type": "string"
+        },
+        "unique_external_id": {
+          "type": "string"
+        },
+        "view_all_tickets": {
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "UpdateContact_other_companies": {
+      "properties": {
+        "company_id": {
+          "type": "integer"
+        },
+        "view_all_tickets": {
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "agents_bulk_body": {
+      "properties": {
+        "agents": {
+          "items": {
+            "$ref": "#/definitions/apiv2agentsbulk_agents"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "agents_id_body": {
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "group_ids": {
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "language": {
+          "type": "string"
+        },
+        "occasional": {
+          "type": "boolean"
+        },
+        "role_ids": {
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "signature": {
+          "type": "string",
+          "x-nullable": true
+        },
+        "skill_ids": {
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "ticket_scope": {
+          "enum": [
+            1,
+            2,
+            3
+          ],
+          "type": "number"
+        },
+        "time_zone": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "ticket_scope"
+      ],
+      "type": "object"
+    },
+    "apiv2agents_contact": {
+      "properties": {
+        "active": {
+          "type": "boolean"
+        },
+        "created_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "job_title": {
+          "type": "string",
+          "x-nullable": true
+        },
+        "language": {
+          "type": "string"
+        },
+        "last_login_at": {
+          "format": "date-time",
+          "type": "string",
+          "x-nullable": true
+        },
+        "mobile": {
+          "type": "string",
+          "x-nullable": true
+        },
+        "name": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string",
+          "x-nullable": true
+        },
+        "time_zone": {
+          "type": "string"
+        },
+        "updated_at": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "apiv2agentsbulk_agents": {
+      "properties": {
+        "email": {
+          "description": "Email address of the Agent.",
+          "type": "string"
+        },
+        "group_ids": {
+          "description": "Group IDs associated with the agent",
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "job_title": {
+          "description": "Job title of the Agent.",
+          "type": "string"
+        },
+        "language": {
+          "description": "Language of the Agent. Default language is 'en'.",
+          "type": "string"
+        },
+        "mobile": {
+          "description": "Mobile number of the Agent.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the Agent",
+          "type": "string"
+        },
+        "occasional": {
+          "description": "Set to true if this is an occasional agent (true => occasional, false => full-time)",
+          "type": "boolean"
+        },
+        "phone": {
+          "description": "Telephone number of the Agent.",
+          "type": "string"
+        },
+        "role_ids": {
+          "description": "Role IDs associated with the agent. At least one role should be associated with the agent. Current logged in agent can't update his/her role_ids",
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "signature": {
+          "description": "Signature of the agent in HTML format",
+          "type": "string"
+        },
+        "skill_ids": {
+          "description": "Skill ids associated with the agent",
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "ticket_scope": {
+          "description": "Ticket permission of the agent (1 -> Global Access, 2 -> Group Access, 3 -> Restricted Access). Current logged in agent can't update his/her ticket_scope",
+          "type": "number"
+        },
+        "time_zone": {
+          "description": "Time zone of the Agent. Default value is time zone of the domain.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "email",
+        "ticket_scope"
+      ],
+      "type": "object"
+    },
+    "companies_id_body": {
+      "properties": {
+        "account_tier": {
+          "description": "Classification based on how much value the company brings to your business.",
+          "type": "string"
+        },
+        "custom_fields": {
+          "description": "Key value pairs containing the names and values of custom fields. Only dates in the format YYYY-MM-DD are accepted as input for custom date fields.",
+          "type": "object"
+        },
+        "description": {
+          "description": "Description of the company.",
+          "type": "string"
+        },
+        "domains": {
+          "description": "Domains of the company.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "health_score": {
+          "description": "The strength of your relationship with the company.",
+          "type": "string"
+        },
+        "industry": {
+          "description": "The industry the company serves in.",
+          "type": "string"
+        },
+        "lookup_parameter": {
+          "description": "This attribute for companies can only be set if Custom Objects feature is enabled.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the company.",
+          "type": "string"
+        },
+        "note": {
+          "description": "Any specific note about the company.",
+          "type": "string"
+        },
+        "renewal_date": {
+          "description": "Date when your contract or relationship with the company is due for renewal.",
+          "format": "date",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "companies_imports_body": {
+      "properties": {
+        "fields": {
+          "description": "Fields to be imported along with the index of the field in the import file.",
+          "type": "object"
+        },
+        "file": {
+          "description": "CSV file to be imported.",
+          "format": "binary",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "contacts_id_body": {
+      "properties": {
+        "tags": {
+          "description": "Tags associated with this contact.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "address": {
+          "description": "Address of the contact.",
+          "type": "string"
+        },
+        "avatar": {
+          "description": "Avatar image of the contact. The maximum file size is 5MB.",
+          "format": "binary",
+          "type": "string"
+        },
+        "company_id": {
+          "description": "ID of the primary company to which this contact belongs.",
+          "type": "integer"
+        },
+        "custom_fields": {
+          "additionalProperties": true,
+          "description": "Key value pairs containing the name and value of the custom field.",
+          "type": "object"
+        },
+        "description": {
+          "description": "A small description of the contact.",
+          "type": "string"
+        },
+        "email": {
+          "description": "Primary email address of the contact.",
+          "type": "string"
+        },
+        "job_title": {
+          "description": "Job title of the contact.",
+          "type": "string"
+        },
+        "language": {
+          "description": "Language of the contact.",
+          "type": "string"
+        },
+        "lookup_parameter": {
+          "description": "This attribute for contacts can only be set if the Custom Objects feature is enabled.",
+          "type": "string"
+        },
+        "mobile": {
+          "description": "Mobile number of the contact.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the contact.",
+          "type": "string"
+        },
+        "other_companies": {
+          "description": "Additional companies associated with the contact.",
+          "items": {
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "other_emails": {
+          "description": "Additional emails associated with the contact.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "phone": {
+          "description": "Telephone number of the contact.",
+          "type": "string"
+        },
+        "time_zone": {
+          "description": "Time zone of the contact.",
+          "type": "string"
+        },
+        "twitter_id": {
+          "description": "Twitter handle of the contact.",
+          "type": "string"
+        },
+        "unique_external_id": {
+          "description": "External ID of the contact.",
+          "type": "string"
+        },
+        "view_all_tickets": {
+          "description": "Set to true if the contact can see all the tickets associated with the company to which he belongs.",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "id_summary_body": {
+      "properties": {
+        "attachments": {
+          "description": "Attachments to be added to the summary note",
+          "items": {
+            "$ref": "#/definitions/Attachment"
+          },
+          "type": "array"
+        },
+        "body": {
+          "description": "Content of the summary note in HTML",
+          "type": "string"
+        },
+        "user_id": {
+          "description": "Id of the user who creates the summary note",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "body"
+      ],
+      "type": "object"
+    },
+    "inline_response_200": {
+      "properties": {
+        "available": {
+          "type": "boolean"
+        },
+        "available_since": {
+          "format": "date-time",
+          "type": "string",
+          "x-nullable": true
+        },
+        "contact": {
+          "$ref": "#/definitions/apiv2agents_contact"
+        },
+        "created_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "occasional": {
+          "type": "boolean"
+        },
+        "signature": {
+          "type": "string",
+          "x-nullable": true
+        },
+        "ticket_scope": {
+          "type": "integer"
+        },
+        "type": {
+          "type": "string"
+        },
+        "updated_at": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "inline_response_200_1": {
+      "properties": {
+        "available": {
+          "type": "boolean"
+        },
+        "available_since": {
+          "format": "date-time",
+          "type": "string",
+          "x-nullable": true
+        },
+        "contact": {
+          "$ref": "#/definitions/apiv2agents_contact"
+        },
+        "created_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "group_ids": {
+          "items": {
+            "type": "integer"
+          },
+          "type": "array"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "occasional": {
+          "type": "boolean"
+        },
+        "role_ids": {
+          "items": {
+            "type": "integer"
+          },
+          "type": "array"
+        },
+        "signature": {
+          "type": "string",
+          "x-nullable": true
+        },
+        "skill_ids": {
+          "items": {
+            "type": "integer"
+          },
+          "type": "array"
+        },
+        "ticket_scope": {
+          "type": "integer"
+        },
+        "type": {
+          "type": "string"
+        },
+        "updated_at": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "inline_response_200_2": {
+      "properties": {
+        "avatar": {
+          "description": "Avatar URL of the agent.",
+          "type": "string",
+          "x-nullable": true
+        },
+        "email": {
+          "description": "Email address of the agent.",
+          "type": "string"
+        },
+        "id": {
+          "description": "Unique ID of the agent.",
+          "type": "integer"
+        },
+        "name": {
+          "description": "Name of the agent.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "inline_response_200_3": {
+      "properties": {
+        "href": {
+          "description": "Link to the job status.",
+          "type": "string"
+        },
+        "job_id": {
+          "description": "Job ID for the bulk agent creation.",
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "inline_response_200_4": {
+      "properties": {
+        "account_tier": {
+          "type": "string"
+        },
+        "created_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "custom_fields": {
+          "type": "object"
+        },
+        "description": {
+          "type": "string"
+        },
+        "domains": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "health_score": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "industry": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "renewal_date": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updated_at": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "inline_response_200_5": {
+      "properties": {
+        "results": {
+          "items": {
+            "$ref": "#/definitions/Company"
+          },
+          "type": "array"
+        },
+        "total": {
+          "description": "Total number of matching results.",
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "inline_response_200_6": {
+      "properties": {
+        "results": {
+          "items": {
+            "$ref": "#/definitions/FilteredContact"
+          },
+          "type": "array"
+        },
+        "total": {
+          "description": "Total count of contacts matching the query.",
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "other_companies": {
+      "items": {
+        "$ref": "#/definitions/other_companies"
+      },
+      "type": "array"
+    },
+    "schemaid_records_body": {
+      "properties": {
+        "data": {
+          "description": "Data for the new record",
+          "example": {
+            "age": 35,
+            "customer_id": "C1234",
+            "customer_name": "Alan Turing"
+          },
+          "type": "object"
+        }
+      },
+      "required": [
+        "data"
+      ],
+      "type": "object"
+    },
+    "ticket_id_notes_body": {
+      "properties": {
+        "attachments": {
+          "description": "Attachments associated with the note.",
+          "items": {
+            "$ref": "#/definitions/Attachment"
+          },
+          "type": "array"
+        },
+        "body": {
+          "description": "Content of the note in HTML",
+          "type": "string"
+        },
+        "incoming": {
+          "default": false,
+          "description": "Set to true if a particular note should appear as being created from outside.",
+          "type": "boolean"
+        },
+        "notify_emails": {
+          "description": "Email addresses of agents/users who need to be notified about this note.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "private": {
+          "default": true,
+          "description": "Set to true if the note is private.",
+          "type": "boolean"
+        },
+        "user_id": {
+          "description": "ID of the agent/user who is adding the note.",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "body"
+      ],
+      "type": "object"
+    },
+    "ticket_id_notes_body_1": {
+      "properties": {
+        "attachments": {
+          "description": "Attachments associated with the note.",
+          "items": {
+            "format": "binary",
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "body": {
+          "description": "Content of the note in HTML",
+          "type": "string"
+        },
+        "notify_emails": {
+          "description": "Email addresses of agents/users who need to be notified about this note.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "body"
+      ],
+      "type": "object"
+    },
+    "tickets_id_body": {
+      "properties": {
+        "tags": {
+          "description": "Tags that have been associated with the ticket",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "attachments": {
+          "description": "Ticket attachments. The total size of these attachments cannot exceed 20MB.",
+          "items": {
+            "format": "binary",
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "company_id": {
+          "description": "Company ID of the requester. This attribute can only be updated if the Multiple Companies feature is enabled (Estate plan and above)",
+          "type": "integer"
+        },
+        "custom_fields": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Key value pairs containing the names and values of custom fields.",
+          "type": "object"
+        },
+        "description": {
+          "description": "HTML content of the ticket.",
+          "type": "string"
+        },
+        "due_by": {
+          "description": "Timestamp that denotes when the ticket is due to be resolved",
+          "format": "date-time",
+          "type": "string"
+        },
+        "email": {
+          "description": "Email address of the requester. If no contact exists with this email address in Freshdesk, it will be added as a new contact.",
+          "type": "string"
+        },
+        "email_config_id": {
+          "description": "ID of email config which is used for this ticket. If the product_id is changed and the current email_config_id doesn't belong to that product, then this value will be automatically updated to the selected product's primary email_config_id",
+          "type": "integer"
+        },
+        "facebook_id": {
+          "description": "Facebook ID of the requester. A contact should exist with this facebook_id in Freshdesk.",
+          "type": "string"
+        },
+        "fr_due_by": {
+          "description": "Timestamp that denotes when the first response is due",
+          "format": "date-time",
+          "type": "string"
+        },
+        "group_id": {
+          "description": "ID of the group to which the ticket has been assigned. The default value is the ID of the group that is associated with the given email_config_id",
+          "type": "integer"
+        },
+        "internal_agent_id": {
+          "description": "ID of the internal agent which the ticket should be assigned with",
+          "type": "integer"
+        },
+        "internal_group_id": {
+          "description": "ID of the internal group to which the ticket should be assigned with",
+          "type": "integer"
+        },
+        "lookup_parameter": {
+          "description": "This attribute for tickets can only be set if Custom Objects is enabled and a lookup field has been added under ticket fields. The value can either be in the form of the display_id (record id) or primary_field_value (user defined record value). The default value is display_id.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the requester",
+          "type": "string"
+        },
+        "parent_id": {
+          "description": "ID of the parent ticket that this ticket should be linked to. When passing this field, the current ticket actioned upon will be converted to a child ticket.",
+          "type": "integer"
+        },
+        "phone": {
+          "description": "Phone number of the requester. If no contact exists with this phone number in Freshdesk, it will be added as a new contact. If the phone number is set and the email address is not, then the name attribute is mandatory.",
+          "type": "string"
+        },
+        "priority": {
+          "description": "Priority of the ticket. The default value is 1.",
+          "type": "integer"
+        },
+        "product_id": {
+          "description": "ID of the product to which the ticket is associated.",
+          "type": "integer"
+        },
+        "requester_id": {
+          "description": "User ID of the requester. For existing contacts, the requester_id can be passed instead of the requester's email.",
+          "type": "integer"
+        },
+        "responder_id": {
+          "description": "ID of the agent to whom the ticket has been assigned",
+          "type": "integer"
+        },
+        "source": {
+          "description": "The channel through which the ticket was created. The default value is 2.",
+          "type": "integer"
+        },
+        "status": {
+          "description": "Status of the ticket. The default Value is 2.",
+          "type": "integer"
+        },
+        "subject": {
+          "description": "Subject of the ticket. The default Value is null.",
+          "type": "string"
+        },
+        "twitter_id": {
+          "description": "Twitter handle of the requester. If no contact exists with this handle in Freshdesk, it will be added as a new contact.",
+          "type": "string"
+        },
+        "type": {
+          "description": "Helps categorize the ticket according to the different kinds of issues your support team deals with. The default Value is null.",
+          "type": "string"
+        },
+        "unique_external_id": {
+          "description": "External ID of the requester. If no contact exists with this external ID in Freshdesk, they will be added as a new contact.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "v2_ticket_body": {
+      "properties": {
+        "cc_emails": {
+          "type": "array",
+          "description": "Array of email addresses.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "custom_fields": {
+          "type": "object",
+          "description": "Object with key-value pairs."
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the ticket. (Mandatory)",
+          "nullable": false
+        },
+        "description_text": {
+          "type": "string",
+          "description": "Description text."
+        },
+        "due_by": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp that denotes when the ticket is due to be resolved."
+        },
+        "email": {
+          "type": "string",
+          "description": "Email address of the requester. (Mandatory)",
+          "nullable": false
+        },
+        "email_config_id": {
+          "type": "integer",
+          "description": "ID of email config."
+        },
+        "facebook_id": {
+          "type": "string",
+          "description": "Facebook ID of the requester."
+        },
+        "fr_due_by": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp that denotes when the first response is due."
+        },
+        "group_id": {
+          "type": "integer",
+          "description": "ID of the group to which the ticket has been assigned."
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the requester (Mandatory if phone is set and email is not)."
+        },
+        "phone": {
+          "type": "string",
+          "description": "Phone number of the requester (Mandatory if email is not set)."
+        },
+        "priority": {
+          "type": "integer",
+          "description": "Priority of the ticket."
+        },
+        "product_id": {
+          "type": "integer",
+          "description": "ID of the product to which the ticket is associated."
+        },
+        "responder_id": {
+          "type": "integer",
+          "description": "ID of the agent to whom the ticket has been assigned."
+        },
+        "source": {
+          "type": "integer",
+          "description": "The channel through which the ticket was created."
+        },
+        "spam": {
+          "type": "boolean",
+          "description": "Set to true if the ticket has been marked as spam."
+        },
+        "status": {
+          "type": "integer",
+          "description": "Status of the ticket."
+        },
+        "subject": {
+          "type": "string",
+          "description": "Subject of the ticket. (Mandatory)",
+          "nullable": false
+        },
+        "tags": {
+          "type": "array",
+          "description": "Tags that have been associated with the ticket.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "to_emails": {
+          "type": "array",
+          "description": "Email addresses to which the ticket was originally sent.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "twitter_id": {
+          "type": "string",
+          "description": "Twitter handle of the requester."
+        },
+        "type": {
+          "type": "string",
+          "description": "Type of the ticket."
+        },
+        "attachments": {
+          "type": "array",
+          "description": "Attachments associated with the ticket.",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "description",
+        "email",
+        "subject",
+        "status",
+        "priority"
+      ],
+      "type": "object"
+    },
+    "v2_agents_body": {
+      "properties": {
+        "agent_type": {
+          "description": "Type of Agent (1 -> Support Agent, 2 -> Field Agent, 3 -> Collaborator). By default, support agent is created",
+          "enum": [
+            1,
+            2,
+            3
+          ],
+          "type": "number"
+        },
+        "email": {
+          "description": "Email address of the Agent.",
+          "type": "string"
+        },
+        "group_ids": {
+          "description": "Group IDs associated with the agent",
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "language": {
+          "default": "en",
+          "description": "Language of the Agent. Default language is \"en\"",
+          "type": "string"
+        },
+        "occasional": {
+          "description": "Set to true if this is an occasional agent (true => occasional, false => full-time)",
+          "type": "boolean"
+        },
+        "role_ids": {
+          "description": "Role IDs associated with the agent. At least one role should be associated with the agent. Current logged in agent can't update his/her role_ids",
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "signature": {
+          "description": "Signature of the agent in HTML format",
+          "type": "string",
+          "x-nullable": true
+        },
+        "skill_ids": {
+          "description": "Skill ids associated with the agent",
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "ticket_scope": {
+          "description": "Ticket permission of the agent (1 -> Global Access, 2 -> Group Access, 3 -> Restricted Access). Current logged in agent can't update his/her ticket_scope",
+          "enum": [
+            1,
+            2,
+            3
+          ],
+          "type": "number"
+        },
+        "time_zone": {
+          "description": "Time zone of the Agent. Default value is time zone of the domain",
+          "type": "string"
+        }
+      },
+      "required": [
+        "email",
+        "ticket_scope"
+      ],
+      "type": "object"
+    },
+    "v2_companies_body": {
+      "properties": {
+        "account_tier": {
+          "description": "Classification based on how much value the company brings to your business.",
+          "type": "string"
+        },
+        "custom_fields": {
+          "description": "Key value pairs containing the names and values of custom fields.",
+          "type": "object"
+        },
+        "description": {
+          "description": "Description of the company.",
+          "type": "string"
+        },
+        "domains": {
+          "description": "Domains associated with the company.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "health_score": {
+          "description": "The strength of your relationship with the company.",
+          "type": "string"
+        },
+        "industry": {
+          "description": "The industry the company serves in.",
+          "type": "string"
+        },
+        "lookup_parameter": {
+          "description": "This attribute for companies can only be set if the Custom Objects feature is enabled.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the company. (Mandatory and unique)",
+          "type": "string"
+        },
+        "note": {
+          "description": "Any specific note about the company.",
+          "type": "string"
+        },
+        "renewal_date": {
+          "description": "Renewal date for the company.",
+          "format": "date",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "v2_contacts_body": {
+      "properties": {
+        "tags": {
+          "description": "Tags associated with this contact.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "address": {
+          "description": "Address of the contact.",
+          "type": "string"
+        },
+        "company_id": {
+          "description": "ID of the primary company to which this contact belongs.",
+          "type": "integer"
+        },
+        "custom_fields": {
+          "additionalProperties": true,
+          "description": "Key value pairs containing the name and value of the custom field.",
+          "type": "object"
+        },
+        "description": {
+          "description": "A small description of the contact.",
+          "type": "string"
+        },
+        "email": {
+          "description": "Primary email address of the contact.",
+          "type": "string"
+        },
+        "job_title": {
+          "description": "Job title of the contact.",
+          "type": "string"
+        },
+        "language": {
+          "description": "Language of the contact.",
+          "type": "string"
+        },
+        "lookup_parameter": {
+          "description": "This attribute for contacts can only be set if the Custom Objects feature is enabled.",
+          "type": "string"
+        },
+        "mobile": {
+          "description": "Mobile number of the contact.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the contact.",
+          "type": "string"
+        },
+        "other_companies": {
+          "description": "Additional companies associated with the contact.",
+          "items": {
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "other_emails": {
+          "description": "Additional emails associated with the contact.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "phone": {
+          "description": "Telephone number of the contact.",
+          "type": "string"
+        },
+        "time_zone": {
+          "description": "Time zone of the contact.",
+          "type": "string"
+        },
+        "twitter_id": {
+          "description": "Twitter handle of the contact.",
+          "type": "string"
+        },
+        "unique_external_id": {
+          "description": "External ID of the contact.",
+          "type": "string"
+        },
+        "view_all_tickets": {
+          "description": "Set to true if the contact can see all the tickets that are associated with the company to which he belongs.",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "variables": {
+      "type": "object"
+    }
+  },
+  "tags": [
+    {
+      "name": "Tickets"
+    },
+    {
+      "name": "Contacts"
+    },
+    {
+      "name": "Companies"
+    },
+    {
+      "name": "Agents"
+    },
+    {
+      "name": "Custom Objects"
+    },
+    {
+      "name": "Conversations"
+    }
+  ],
+  "externalDocs": {
+    "url": "https://mingle-ionapi.eu1.inforcloudsuite.com/FOCAL_TST/CustomerApi/Freshdesk/freshdesk"
+  },
+  "x-components": {}
+}
