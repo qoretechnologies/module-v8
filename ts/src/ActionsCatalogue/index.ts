@@ -20,6 +20,7 @@ import {
 import { Log } from '../decorators/Logger';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import netsuite from '../apps/netsuite';
+import freshdesk from '../apps/freshdesk';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -41,6 +42,7 @@ const NEW_APPS = {
   github,
   jira,
   stripe,
+  freshdesk,
 } as const;
 
 const EXISTING_APPS = {

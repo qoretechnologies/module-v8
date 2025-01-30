@@ -9476,6 +9476,132 @@ type RootTranslation = {
 				}
 			}
 		}
+		Freshdesk: {
+			/**
+			 * F​r​e​s​h​d​e​s​k
+			 */
+			displayName: string
+			/**
+			 * C​l​o​u​d​-​b​a​s​e​d​ ​c​u​s​t​o​m​e​r​ ​s​u​p​p​o​r​t​ ​s​o​f​t​w​a​r​e
+			 */
+			shortDesc: string
+			/**
+			 * F​r​e​s​h​d​e​s​k​ ​i​s​ ​a​ ​c​l​o​u​d​-​b​a​s​e​d​ ​c​u​s​t​o​m​e​r​ ​s​u​p​p​o​r​t​ ​p​l​a​t​f​o​r​m​ ​t​h​a​t​ ​w​a​s​ ​f​o​u​n​d​e​d​ ​w​i​t​h​ ​t​h​e​ ​m​i​s​s​i​o​n​ ​o​f​ ​e​n​a​b​l​i​n​g​ ​c​o​m​p​a​n​i​e​s​ ​o​f​ ​a​l​l​ ​s​i​z​e​s​ ​t​o​ ​p​r​o​v​i​d​e​ ​g​r​e​a​t​ ​c​u​s​t​o​m​e​r​ ​s​e​r​v​i​c​e​.​ ​O​u​r​ ​g​o​a​l​ ​i​s​ ​s​i​m​p​l​e​:​ ​m​a​k​e​ ​i​t​ ​e​a​s​y​ ​f​o​r​ ​b​r​a​n​d​s​ ​t​o​ ​t​a​l​k​ ​t​o​ ​t​h​e​i​r​ ​c​u​s​t​o​m​e​r​s​ ​a​n​d​ ​m​a​k​e​ ​i​t​ ​e​a​s​y​ ​f​o​r​ ​u​s​e​r​s​ ​t​o​ ​g​e​t​ ​i​n​ ​t​o​u​c​h​ ​w​i​t​h​ ​b​u​s​i​n​e​s​s​e​s​.
+			 */
+			longDesc: string
+			triggers: {
+				new_ticket_trigger: {
+					/**
+					 * N​e​w​ ​T​i​c​k​e​t​ ​T​r​i​g​g​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​i​c​k​e​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​F​r​e​s​h​d​e​s​k​.
+					 */
+					shortDesc: string
+					/**
+					 * F​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​t​i​c​k​e​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​y​o​u​r​ ​F​r​e​s​h​d​e​s​k​ ​i​n​s​t​a​n​c​e​.​ ​Y​o​u​ ​c​a​n​ ​c​a​p​t​u​r​e​ ​d​e​t​a​i​l​s​ ​s​u​c​h​ ​a​s​ ​s​u​b​j​e​c​t​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​p​r​i​o​r​i​t​y​,​ ​a​n​d​ ​m​o​r​e​,​ ​a​n​d​ ​u​s​e​ ​t​h​i​s​ ​d​a​t​a​ ​i​n​ ​s​u​b​s​e​q​u​e​n​t​ ​a​c​t​i​o​n​s​ ​o​r​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						ticketStatus: {
+							/**
+							 * T​i​c​k​e​t​ ​S​t​a​t​u​s​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​s​ ​b​y​ ​t​i​c​k​e​t​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * R​e​s​t​r​i​c​t​ ​o​r​ ​f​i​l​t​e​r​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​t​o​ ​o​n​l​y​ ​f​i​r​e​ ​f​o​r​ ​t​i​c​k​e​t​s​ ​m​a​t​c​h​i​n​g​ ​a​ ​c​e​r​t​a​i​n​ ​s​t​a​t​u​s​ ​(​e​.​g​.​ ​O​p​e​n​,​ ​P​e​n​d​i​n​g​,​ ​R​e​s​o​l​v​e​d​,​ ​e​t​c​.​)​.
+							 */
+							longDesc: string
+						}
+						ticketPriority: {
+							/**
+							 * T​i​c​k​e​t​ ​P​r​i​o​r​i​t​y​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​s​ ​b​y​ ​t​i​c​k​e​t​ ​p​r​i​o​r​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * R​e​s​t​r​i​c​t​ ​o​r​ ​f​i​l​t​e​r​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​t​o​ ​o​n​l​y​ ​f​i​r​e​ ​f​o​r​ ​t​i​c​k​e​t​s​ ​m​a​t​c​h​i​n​g​ ​a​ ​c​e​r​t​a​i​n​ ​p​r​i​o​r​i​t​y​ ​(​e​.​g​.​ ​L​o​w​,​ ​M​e​d​i​u​m​,​ ​H​i​g​h​)​.
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * S​t​r​u​c​t​u​r​e​ ​a​n​d​ ​t​y​p​e​s​ ​f​o​r​ ​F​r​e​s​h​d​e​s​k​’​s​ ​n​e​w​ ​t​i​c​k​e​t​ ​d​a​t​a​ ​p​a​y​l​o​a​d​.
+						 */
+						desc: string
+					}
+				}
+				new_contact_trigger: {
+					/**
+					 * N​e​w​ ​C​o​n​t​a​c​t​ ​T​r​i​g​g​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​F​r​e​s​h​d​e​s​k​.
+					 */
+					shortDesc: string
+					/**
+					 * F​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​y​o​u​r​ ​F​r​e​s​h​d​e​s​k​ ​i​n​s​t​a​n​c​e​.​ ​C​a​p​t​u​r​e​ ​d​e​t​a​i​l​s​ ​s​u​c​h​ ​a​s​ ​n​a​m​e​,​ ​e​m​a​i​l​,​ ​p​h​o​n​e​,​ ​a​n​d​ ​a​n​y​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+					 */
+					longDesc: string
+					event_info: {
+						/**
+						 * S​t​r​u​c​t​u​r​e​ ​a​n​d​ ​t​y​p​e​s​ ​f​o​r​ ​F​r​e​s​h​d​e​s​k​’​s​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​d​a​t​a​ ​p​a​y​l​o​a​d​.
+						 */
+						desc: string
+					}
+				}
+				updated_ticket_trigger: {
+					/**
+					 * U​p​d​a​t​e​d​ ​T​i​c​k​e​t​ ​T​r​i​g​g​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​t​i​c​k​e​t​ ​i​s​ ​u​p​d​a​t​e​d​ ​i​n​ ​F​r​e​s​h​d​e​s​k​.
+					 */
+					shortDesc: string
+					/**
+					 * F​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​t​i​c​k​e​t​ ​i​s​ ​u​p​d​a​t​e​d​ ​w​i​t​h​ ​n​e​w​ ​d​e​t​a​i​l​s​ ​i​n​ ​y​o​u​r​ ​F​r​e​s​h​d​e​s​k​ ​i​n​s​t​a​n​c​e​.​ ​F​o​r​ ​e​x​a​m​p​l​e​,​ ​c​h​a​n​g​e​s​ ​t​o​ ​s​u​b​j​e​c​t​,​ ​p​r​i​o​r​i​t​y​,​ ​s​t​a​t​u​s​,​ ​o​r​ ​a​s​s​i​g​n​e​d​ ​a​g​e​n​t​.
+					 */
+					longDesc: string
+					event_info: {
+						/**
+						 * S​t​r​u​c​t​u​r​e​ ​a​n​d​ ​t​y​p​e​s​ ​f​o​r​ ​F​r​e​s​h​d​e​s​k​’​s​ ​u​p​d​a​t​e​d​ ​t​i​c​k​e​t​ ​d​a​t​a​ ​p​a​y​l​o​a​d​.
+						 */
+						desc: string
+					}
+				}
+				updated_contact_trigger: {
+					/**
+					 * U​p​d​a​t​e​d​ ​C​o​n​t​a​c​t​ ​T​r​i​g​g​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​ ​i​s​ ​u​p​d​a​t​e​d​ ​i​n​ ​F​r​e​s​h​d​e​s​k​.
+					 */
+					shortDesc: string
+					/**
+					 * F​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​’​s​ ​d​e​t​a​i​l​s​ ​a​r​e​ ​u​p​d​a​t​e​d​ ​i​n​ ​y​o​u​r​ ​F​r​e​s​h​d​e​s​k​ ​i​n​s​t​a​n​c​e​.​ ​F​o​r​ ​e​x​a​m​p​l​e​,​ ​c​h​a​n​g​e​s​ ​t​o​ ​n​a​m​e​,​ ​p​h​o​n​e​ ​n​u​m​b​e​r​,​ ​e​m​a​i​l​,​ ​o​r​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.
+					 */
+					longDesc: string
+					event_info: {
+						/**
+						 * S​t​r​u​c​t​u​r​e​ ​a​n​d​ ​t​y​p​e​s​ ​f​o​r​ ​F​r​e​s​h​d​e​s​k​’​s​ ​u​p​d​a​t​e​d​ ​c​o​n​t​a​c​t​ ​d​a​t​a​ ​p​a​y​l​o​a​d​.
+						 */
+						desc: string
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -18937,6 +19063,132 @@ export type TranslationFunctions = {
 					event_info: {
 						/**
 						 * Fires when a record in the specified Salesforce object is updated.
+						 */
+						desc: () => LocalizedString
+					}
+				}
+			}
+		}
+		Freshdesk: {
+			/**
+			 * Freshdesk
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Cloud-based customer support software
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Freshdesk is a cloud-based customer support platform that was founded with the mission of enabling companies of all sizes to provide great customer service. Our goal is simple: make it easy for brands to talk to their customers and make it easy for users to get in touch with businesses.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				new_ticket_trigger: {
+					/**
+					 * New Ticket Trigger
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new ticket is created in Freshdesk.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fires whenever a new ticket is created in your Freshdesk instance. You can capture details such as subject, description, priority, and more, and use this data in subsequent actions or notifications.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						ticketStatus: {
+							/**
+							 * Ticket Status Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filters by ticket status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Restrict or filter the trigger to only fire for tickets matching a certain status (e.g. Open, Pending, Resolved, etc.).
+							 */
+							longDesc: () => LocalizedString
+						}
+						ticketPriority: {
+							/**
+							 * Ticket Priority Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filters by ticket priority
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Restrict or filter the trigger to only fire for tickets matching a certain priority (e.g. Low, Medium, High).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Structure and types for Freshdesk’s new ticket data payload.
+						 */
+						desc: () => LocalizedString
+					}
+				}
+				new_contact_trigger: {
+					/**
+					 * New Contact Trigger
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new contact is created in Freshdesk.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fires whenever a new contact is added to your Freshdesk instance. Capture details such as name, email, phone, and any custom fields associated with the contact.
+					 */
+					longDesc: () => LocalizedString
+					event_info: {
+						/**
+						 * Structure and types for Freshdesk’s new contact data payload.
+						 */
+						desc: () => LocalizedString
+					}
+				}
+				updated_ticket_trigger: {
+					/**
+					 * Updated Ticket Trigger
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an existing ticket is updated in Freshdesk.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fires whenever an existing ticket is updated with new details in your Freshdesk instance. For example, changes to subject, priority, status, or assigned agent.
+					 */
+					longDesc: () => LocalizedString
+					event_info: {
+						/**
+						 * Structure and types for Freshdesk’s updated ticket data payload.
+						 */
+						desc: () => LocalizedString
+					}
+				}
+				updated_contact_trigger: {
+					/**
+					 * Updated Contact Trigger
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an existing contact is updated in Freshdesk.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fires whenever an existing contact’s details are updated in your Freshdesk instance. For example, changes to name, phone number, email, or custom fields.
+					 */
+					longDesc: () => LocalizedString
+					event_info: {
+						/**
+						 * Structure and types for Freshdesk’s updated contact data payload.
 						 */
 						desc: () => LocalizedString
 					}
