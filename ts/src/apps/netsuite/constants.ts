@@ -1,7 +1,6 @@
 import { buildActionsFromSwaggerSchema } from '../../global/helpers';
-import { TAllowedPaths } from '../../global/models/qore';
+import { IQoreConnectionOptions, TAllowedPaths } from '../../global/models/qore';
 import netsuite from '../../schemas/netsuite.swagger.json';
-import { IQoreConnectionOptions } from '../zendesk';
 import { getNetsuiteAccountIdAllowedValues } from './helpers/get-account-id-allowed-values';
 import { getNetsuiteCustomerIdAllowedValues } from './helpers/get-customer-id-allowed-values';
 import { getNetsuiteInvoiceIdAllowedValues } from './helpers/get-invoice-id-allowed-values';

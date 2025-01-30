@@ -157,6 +157,10 @@ export interface IQoreConnectionOption<
   subset_env_vars?: boolean;
 }
 
+export interface IQoreConnectionOptions {
+  [key: string]: GetConnectionOptionDefinitionFromQoreType<TQoreType>;
+}
+
 export interface IQoreRestConnectionModifiers<
   ModifierOptions extends Record<string, IQoreConnectionOption> = Record<
     string,
@@ -248,6 +252,16 @@ export interface IQoreApp<
   swagger_type_overrides?: object;
 }
 
+export interface IQoreExistingApp {
+  name: TStringWithFirstUpperCaseCharacter;
+  module: string;
+  root_provider?: string;
+}
+
+export interface IQoreExistingAppWithActions extends IQoreExistingApp {
+  actions: TQoreAppAction[];
+}
+
 export interface IQoreAppWithActions<
   RestModifierOptions extends Record<string, IQoreConnectionOption> = Record<
     string,
@@ -258,6 +272,7 @@ export interface IQoreAppWithActions<
 }
 
 export type TQoreApps = Record<string, IQoreAppWithActions>;
+export type TQoreExistingApps = Record<string, IQoreExistingAppWithActions>;
 
 export enum EQoreAppActionCode {
   EVENT = 1,
