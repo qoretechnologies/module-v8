@@ -394,6 +394,21 @@ public class TypeScriptActionInterface {
         }
     }
 
+    static registerExistingApp(JavaScriptObject app) {
+        JavaScriptProgram pgm = app.getProgram();
+        JavaScriptProgramPool pool;
+        bool first;
+        on_error TSAI::error("TypeScriptActionInterface: error registering existing app %y: %s", app.name,
+            get_exception_string($1));
+        {
+            on_error rethrow "APP-ERROR", sprintf("Error registering existing app %y: %s", app.name, $1.desc);
+            pool = JavaScriptProgramPool::getPool(pgm, \first);
+        }
+        if (first) {
+            TypeScriptActionInterface::registerExistingApp(app.toData(), pool);
+        }
+    }
+
     static registerAction(JavaScriptObject action) {
         JavaScriptProgram pgm = action.getProgram();
         JavaScriptProgramPool pool;
@@ -433,6 +448,30 @@ public class TypeScriptActionInterface {
             TypeScriptActionInterface::initApp(app.name);
         });
         TSAI::debug("Registered TypeScript app %y", app.name);
+    }
+
+    static registerExistingApp(hash<auto> app, JavaScriptProgramPool pool) {
+        if (app.name.typeCode() != NT_STRING || !app.name.val()) {
+            throw "APP-ERROR", sprintf("App name %y is invalid; must be a non-empty string", app.name);
+        }
+        if (app."module".typeCode() != NT_STRING || !app."module".val()) {
+            throw "APP-ERROR", sprintf("App module %y is invalid; must be a non-empty string", app."module");
+        }
+
+        # load the referenced module immediately
+        load_module(app."module");
+
+        hash<AppInfo> info = <AppInfo>{
+            "app": app,
+            "pool": pool,
+        };
+
+        string appname = app.name.lwr();
+        appcasemap{appname} = app.name;
+
+        # must register the app immediately
+        TypeScriptActionInterface::initExistingAppIntern(info);
+        TSAI::debug("Registered existing app %y", app.name);
     }
 
     static bool initAppAction(string app, string action) {
@@ -475,6 +514,20 @@ public class TypeScriptActionInterface {
         on_exit chdir(cwd);
         chdir(info.cwd);
         TypeScriptActionInterface::registerAppIntern(info.app, info.pool);
+
+        if (do_actions) {
+            TypeScriptActionInterface::checkAppActions(info.app.name);
+        }
+        return True;
+    }
+
+    static private bool initExistingAppIntern(hash<AppInfo> info, *bool do_actions) {
+        initmap{info.app.name} = True;
+        # change the cwd to process relative paths and restore on exit
+        string cwd = getcwd();
+        on_exit chdir(cwd);
+        chdir(info.cwd);
+        TypeScriptActionInterface::registerExistingAppIntern(info.app, info.pool);
 
         if (do_actions) {
             TypeScriptActionInterface::checkAppActions(info.app.name);
@@ -656,6 +709,16 @@ public class TypeScriptActionInterface {
         }
     }
 
+    static private registerExistingAppIntern(hash<auto> app, JavaScriptProgramPool pool) {
+        on_success TSAI::debug("TypeScriptActionInterface: registered app %y", app.name);
+        on_error TSAI::error("%s", get_exception_string($1));
+
+        string appname = app.name.lwr();
+        TypeScriptActionAppDataProvider prov(appname, app."root_provider" ?? app."module");
+        TypeScriptActionInterface::checkRoot();
+        root.registerChild(appname, prov);
+    }
+
     static SwaggerSchema getSwaggerSchema(string appname, string swagger_loc, *hash<auto> swagger_opts,
             *list<auto> paths, *hash<auto> swagger_type_overrides) {
         # first check cache
@@ -823,6 +886,11 @@ public class TypeScriptActionInterface {
     }
 
     static registerAction(hash<auto> action, JavaScriptProgramPool pool) {
+        # register the action immediately if the app has already been registered
+        if (initmap{action.app}) {
+            TypeScriptActionInterface::registerActionIntern(action, pool);
+            return;
+        }
         actionmap{action.app}{action.action} = <ActionInfo>{
             "action": action,
             "pool": pool,
@@ -1150,7 +1218,7 @@ public class TypeScriptActionInterface {
                 "app": app.name,
                 "action": action.action,
                 "type": "event_function",
-                "label": sprintf("Webhook event function for app %y action %y", app.name, action.action),
+                "label": sprintf("Async event function for app %y action %y", app.name, action.action),
                 "pool": pool,
                 "async_call": event_function,
                 "to": seconds(io_timeout),
@@ -1301,6 +1369,12 @@ public class TypeScriptActionInterface {
     }
 
     static TypeScriptActionAppDataProvider getDataProvider(string app, TypeScriptAppRestConnection conn) {
+        TypeScriptActionInterface::checkRoot();
+        TypeScriptActionAppDataProvider parent = cast<TypeScriptActionAppDataProvider>(root.getChildProviderEx(app));
+        return parent.copyWithParent(parent, conn);
+    }
+
+    static TypeScriptActionAppDataProvider getDataProvider(string app, RestConnection conn) {
         TypeScriptActionInterface::checkRoot();
         TypeScriptActionAppDataProvider parent = cast<TypeScriptActionAppDataProvider>(root.getChildProviderEx(app));
         return parent.copyWithParent(parent, conn);
@@ -1742,6 +1816,7 @@ public class TypeScriptActionInterface {
     static hash<string, code> getInterface() {
         return {
             "registerApp": \TypeScriptActionInterface::registerApp(),
+            "registerExistingApp": \TypeScriptActionInterface::registerExistingApp(),
             "registerAction": \TypeScriptActionInterface::registerAction(),
         };
     }

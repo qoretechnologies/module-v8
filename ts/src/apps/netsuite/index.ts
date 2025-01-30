@@ -42,16 +42,24 @@ export default (locale: Locales) =>
       oauth2_auth_url: 'https://system.netsuite.com/app/login/oauth2/authorize.nl',
       oauth2_token_url:
         'https://{{account_id}}.suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token',
+      oauth2_alt_url_subst: {
+        account_id: 'company=s/_sb([0-9]+)/-sb$1/i',
+      },
       oauth2_scopes: ['rest_webservices'],
       ping_method: 'GET',
       ping_path: 'v1/vendor?limit=1',
     },
     rest_modifiers: {
       options: NETSUITE_CONN_OPTIONS,
+      url_template_options: ['account_id'],
       set_options_post_auth: (context) => {
         if (context.conn_opts.company) {
+          const company: string = context.conn_opts.company.replace(/_SB([0-9]+)/, '-sb$1');
+
           return {
-            account_id: context.conn_opts.company,
+            account_id: company,
+            oauth2_token_url:
+              `https://${company}.suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token`,
           };
         }
       },

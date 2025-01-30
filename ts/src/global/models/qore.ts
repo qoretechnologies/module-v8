@@ -56,6 +56,9 @@ export interface IQoreRestConnectionConfig {
   // values represent the corresponding header values.
   headers?: Record<string, string>;
 
+  // Optional URL substitution info for token requests to the alternate server
+  oauth2_alt_url_subst?: Record<string, any>;
+
   // An optional object with arguments to be serialized as query parameters in the request to the OAuth2
   // authorization URL when using the "authorization_code" grant type.
   oauth2_auth_args?: Record<string, any>;
@@ -154,6 +157,10 @@ export interface IQoreConnectionOption<
   subset_env_vars?: boolean;
 }
 
+export interface IQoreConnectionOptions {
+  [key: string]: GetConnectionOptionDefinitionFromQoreType<TQoreType>;
+}
+
 export interface IQoreRestConnectionModifiers<
   ModifierOptions extends Record<string, IQoreConnectionOption> = Record<
     string,
@@ -245,6 +252,16 @@ export interface IQoreApp<
   swagger_type_overrides?: object;
 }
 
+export interface IQoreExistingApp {
+  name: TStringWithFirstUpperCaseCharacter;
+  module: string;
+  root_provider?: string;
+}
+
+export interface IQoreExistingAppWithActions extends IQoreExistingApp {
+  actions: TQoreAppAction[];
+}
+
 export interface IQoreAppWithActions<
   RestModifierOptions extends Record<string, IQoreConnectionOption> = Record<
     string,
@@ -255,6 +272,7 @@ export interface IQoreAppWithActions<
 }
 
 export type TQoreApps = Record<string, IQoreAppWithActions>;
+export type TQoreExistingApps = Record<string, IQoreExistingAppWithActions>;
 
 export enum EQoreAppActionCode {
   EVENT = 1,

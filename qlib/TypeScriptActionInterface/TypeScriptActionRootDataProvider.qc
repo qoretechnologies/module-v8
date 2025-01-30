@@ -43,7 +43,7 @@ class TypeScriptActionRootDataProvider inherits AbstractDataProvider {
         });
 
         #! Root of the typescript action data providers
-        const Root = "ts-actions";
+        const Root = "ts-root";
     }
 
     private {

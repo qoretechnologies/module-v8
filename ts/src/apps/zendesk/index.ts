@@ -5,23 +5,12 @@ import {
   mapActionsToApp,
   mapTriggersToApp,
 } from '../../global/helpers';
-import {
-  GetConnectionOptionDefinitionFromQoreType,
-  IQoreAppWithActions,
-  TQoreType,
-} from '../../global/models/qore';
+import { IQoreAppWithActions, IQoreConnectionOptions } from '../../global/models/qore';
 import { L } from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import ZendeskSchema from '../../schemas/zendesk.swagger.json';
 import { ZENDESK_ALLOWED_PATHS } from './constants';
 import * as zendeskTriggers from './triggers';
-export interface IQoreConnectionOptions {
-  [key: string]: GetConnectionOptionDefinitionFromQoreType<TQoreType>;
-}
-
-export interface IQoreConnectionOptionsValues {
-  [key: string]: any;
-}
 
 export const ZENDESK_APP_NAME = 'Zendesk';
 export const ZENDESK_CONN_OPTIONS = {

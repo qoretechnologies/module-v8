@@ -1,10 +1,26 @@
-// This will be replaced by the real implementation
-import freshdesk from '../apps/freshdesk';
-import { Log } from '../decorators/Logger';
-import { IQoreApp, IQoreAppWithActions, TQoreAppAction, TQoreApps } from '../global/models/qore';
-import { Locales } from '../i18n/i18n-types';
+// appsCatalogue.ts
+import asana from '../apps/asana';
+import esignature from '../apps/esignature';
+import github from '../apps/github';
+import jira from '../apps/jira';
+import salesforce from '../apps/salesforce';
+import stripe from '../apps/stripe';
+import zendesk from '../apps/zendesk';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
+import { Locales } from '../i18n/i18n-types';
+import {
+  IQoreApp,
+  IQoreAppWithActions,
+  IQoreExistingApp,
+  IQoreExistingAppWithActions,
+  TQoreAppAction,
+  TQoreApps,
+  TQoreExistingApps,
+} from '../global/models/qore';
+import { Log } from '../decorators/Logger';
 import { Debugger, DebugLevels } from '../utils/Debugger';
+import netsuite from '../apps/netsuite';
+import freshdesk from '../apps/freshdesk';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -14,48 +30,74 @@ PiecesAppCatalogue.registerApps();
 
 export interface IQoreApi {
   registerApp: (app: IQoreApp) => void;
+  registerExistingApp: (app: IQoreExistingApp) => void;
   registerAction: (action: TQoreAppAction) => void;
 }
 
-class ActionsCatalogue {
+const NEW_APPS = {
+  netsuite,
+  zendesk,
+  asana,
+  esignature,
+  github,
+  jira,
+  stripe,
+  freshdesk,
+} as const;
+
+const EXISTING_APPS = {
+  salesforce,
+} as const;
+
+export class ActionsCatalogue {
   public readonly apps: TQoreApps = {};
+  public readonly existingApps: TQoreExistingApps = {};
 
   constructor(public locale: Locales = 'en') {}
 
   @Log('Initializing the Actions Catalogue')
   registerAppActions(api: IQoreApi) {
-    // Initialize the Qorus Apps Catalogue, this will load all the apps
     this.initializeCatalogue();
 
-    // Go through all the apps and register them
-    Object.keys(this.apps).forEach((appName) => {
-      const { actions, ...app }: IQoreAppWithActions = this.apps[appName];
+    // Register new apps
+    this.registerAppCollection(
+      this.apps,
+      (app) => api.registerApp(app),
+      (action) => api.registerAction(action)
+    );
 
-      // Register the app
-      api.registerApp(app);
+    // Register existing apps
+    this.registerAppCollection(
+      this.existingApps,
+      (app) => api.registerExistingApp(app),
+      (action) => api.registerAction(action)
+    );
+  }
 
-      // Register the actions
-      actions.forEach((action) => {
-        console.dir(action, { depth: null });
-        api.registerAction(action);
-      });
+  private registerAppCollection<T extends IQoreAppWithActions | IQoreExistingAppWithActions>(
+    collection: Record<string, T>,
+    registerAppFn: (app: Omit<T, 'actions'>) => void,
+    registerActionFn: (action: TQoreAppAction) => void
+  ) {
+    Object.keys(collection).forEach((appName) => {
+      const { actions, ...app } = collection[appName] as T;
+      registerAppFn(app);
+      actions.forEach(registerActionFn);
     });
   }
 
-  // Register all the apps here
   public initializeCatalogue() {
-    Object.keys(PiecesAppCatalogue.apps).forEach((appName) => {
-      this.apps[appName] = PiecesAppCatalogue.apps[appName];
+    Object.entries(PiecesAppCatalogue.apps).forEach(([appName, appDef]) => {
+      this.apps[appName] = appDef;
     });
 
-    // this.apps['zendesk'] = zendesk(this.locale);
-    // this.apps['asana'] = asana(this.locale);
-    // this.apps['esignature'] = esignature(this.locale);
-    // this.apps['github'] = github(this.locale);
-    // this.apps['jira'] = jira(this.locale);
-    // this.apps['stripe'] = stripe(this.locale);
-    // this.apps['netsuite'] = netsuite(this.locale);
-    this.apps['freshdesk'] = freshdesk(this.locale);
+    Object.entries(NEW_APPS).forEach(([appName, getApp]) => {
+      this.apps[appName] = getApp(this.locale);
+    });
+
+    Object.entries(EXISTING_APPS).forEach(([appName, getApp]) => {
+      this.existingApps[appName] = getApp(this.locale);
+    });
   }
 
   public getOauth2ClientSecret(appName: string): string {
