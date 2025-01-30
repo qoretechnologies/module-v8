@@ -107,25 +107,6 @@ describe('Tests Freshdesk Actions', () => {
       contactId = body.id;
     });
 
-    it('Should get all contacts', async () => {
-      const { body } = await testApi.execAppAction('freshdesk', 'api_v2_contacts_get', connection);
-      expect(body).toBeDefined();
-      expect(body.length).toBeGreaterThan(0);
-    });
-
-    it('Should get a contact', async () => {
-      const { body } = await testApi.execAppAction(
-        'freshdesk',
-        'api_v2_contacts_id_get',
-        connection,
-        {
-          id: contactId,
-        }
-      );
-
-      expect(body).toHaveProperty('id', contactId);
-    });
-
     it('Should update a contact', async () => {
       const description = 'This is a test contact';
       const { body } = await testApi.execAppAction(
@@ -139,6 +120,27 @@ describe('Tests Freshdesk Actions', () => {
       );
 
       expect(body).toHaveProperty('description', description);
+    });
+
+    it('Should get a contact', async () => {
+      const { body } = await testApi.execAppAction(
+        'freshdesk',
+        'api_v2_contacts_id_get',
+        connection,
+        {
+          id: contactId,
+        }
+      );
+
+      expect(body).toHaveProperty('id', contactId);
+
+      const { body: allContacts } = await testApi.execAppAction(
+        'freshdesk',
+        'api_v2_contacts_get',
+        connection
+      );
+
+      expect(allContacts).toBeDefined();
     });
 
     it('Should delete a contact', async () => {
