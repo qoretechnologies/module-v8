@@ -3,7 +3,7 @@ import { createSwaggerPaths, mapActionsToApp, mapTriggersToApp } from '../../glo
 import { IQoreAppWithActions } from '../../global/models/qore';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
-import { NetsuiteSuiteQlAction } from './actions/squite-ql.action';
+import { NetsuiteSuiteQlAction } from './actions/suite-ql.action';
 import {
   NETSUITE_ACTIONS,
   NETSUITE_ALLOWED_PATHS,
@@ -58,8 +58,7 @@ export default (locale: Locales) =>
 
           return {
             account_id: company,
-            oauth2_token_url:
-              `https://${company}.suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token`,
+            oauth2_token_url: `https://${company}.suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token`,
           };
         }
       },

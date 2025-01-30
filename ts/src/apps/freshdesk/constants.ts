@@ -1,5 +1,5 @@
 import { buildActionsFromSwaggerSchema } from '../../global/helpers';
-import { IQoreConnectionOption, TAllowedPaths } from '../../global/models/qore';
+import { IQoreConnectionOptions, TAllowedPaths } from '../../global/models/qore';
 import freshDeskSchema from '../../schemas/freshdesk.swagger.json';
 import { FreshdeskAgentTicketScopeAllowedValues } from './helpers/agent-ticket-scope-allowed-values';
 import { getFreshdeskAgentIdAllowedValues } from './helpers/get-agent-id-allowed-values';
@@ -25,7 +25,7 @@ export const FRESHDESK_CONN_OPTIONS = {
   subdomain: {
     type: 'string',
   },
-} satisfies Record<string, IQoreConnectionOption>;
+} satisfies IQoreConnectionOptions;
 
 export const FRESHDESK_ALLOWED_PATHS = {
   '/api/v2/tickets': {
