@@ -1,45 +1,43 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 const ts_toolkit_1 = require('@qoretechnologies/ts-toolkit');
-const CustomActionOptions = {
-  message: {
-    type: 'string',
-    required: true,
-    short_desc: 'Message to be displayed',
-    display_name: 'Test Message',
-  },
-};
-const CustomActionResponse = {
-  type: 'hash',
-  fields: {
+const CustomAction = ts_toolkit_1.QoreAppCreator.createAction({
+  action: 'custom-action',
+  app: 'External-app',
+  desc: 'This is a custom external action',
+  action_code: ts_toolkit_1.EQoreAppActionCode.ACTION,
+  options: {
     message: {
       type: 'string',
       required: true,
-      display_name: 'Server Response',
-      short_desc: 'Response from the server',
-      example_value: 'Server response message',
+      short_desc: 'Message to be displayed',
+      display_name: 'Test Message',
     },
   },
-};
-const CustomAction = {
-  action: 'custom-action',
-  app: 'Custom-app',
-  action_code: ts_toolkit_1.EQoreAppActionCode.ACTION,
-  display_name: 'Custom App Action',
-  options: CustomActionOptions,
   short_desc: 'Custom App Action',
   api_function: (data) => {
     return {
       message: `Server received message: ${data?.message}`,
     };
   },
-  response_type: CustomActionResponse,
-};
-const CustomApp = {
-  name: 'Custom-app',
-  display_name: 'Custom Test App',
-  desc: 'This is a custom testing app',
-  short_desc: 'Custom testing app',
+  response_type: {
+    type: 'hash',
+    fields: {
+      message: {
+        type: 'string',
+        required: true,
+        display_name: 'Server Response',
+        short_desc: 'Response from the server',
+        example_value: 'Server response message',
+      },
+    },
+  },
+});
+const CustomApp = ts_toolkit_1.QoreAppCreator.createApp({
+  name: 'External-app',
+  display_name: 'Testing External App',
+  desc: 'This is a custom testing external app',
+  short_desc: 'External testing app',
   logo:
     'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUF' +
     'VCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2' +
@@ -72,6 +70,6 @@ const CustomApp = {
     url: 'tsrest-qorus-js-test://www.example.com/api',
   },
   actions: [CustomAction],
-};
+});
 exports.default = CustomApp;
 //# sourceMappingURL=index.js.map
