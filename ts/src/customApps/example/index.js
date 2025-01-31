@@ -31,6 +31,7 @@ const CustomAction = ts_toolkit_1.QoreAppCreator.createAction({
         display_name: 'Server Response',
         short_desc: 'Response from the server',
         example_value: 'Server response message',
+        desc: 'This is a response message from the server',
       },
     },
   },
