@@ -10,6 +10,7 @@ describe('Qorus Apps Catalogue tests', () => {
     expect(actionsCatalogue.apps).toHaveProperty('zendesk');
     expect(actionsCatalogue.apps).toHaveProperty('asana');
     expect(actionsCatalogue.apps).toHaveProperty('esignature');
+    expect(actionsCatalogue.apps).toHaveProperty('example');
 
     forEach(actionsCatalogue.apps, (app) => {
       expect(app.display_name).not.toBeFalsy();

@@ -9,10 +9,11 @@
     "test": "test"
   },
   "scripts": {
-    "build": "rm -rf dist/ && npx tsc --p tsconfig.build.json && tsc-alias && yarn copy-schemas",
-    "build:debug": "TS_DEBUG=true rm -rf dist/ && npx tsc --p tsconfig.build.json && tsc-alias && yarn copy-schemas",
-    "test-build": "rm -rf dist/ && npx tsc --p tsconfig.tests.json && tsc-alias && yarn copy-schemas",
+    "build": "rm -rf dist/ && npx tsc --p tsconfig.build.json && tsc-alias && yarn copy-schemas && yarn copy-custom-apps",
+    "build:debug": "TS_DEBUG=true rm -rf dist/ && npx tsc --p tsconfig.build.json && tsc-alias && yarn copy-schemas && yarn copy-custom-apps",
+    "test-build": "rm -rf dist/ && npx tsc --p tsconfig.tests.json && tsc-alias && yarn copy-schemas && yarn copy-custom-apps",
     "copy-schemas": "copyfiles -u 2 src/schemas/* dist/schemas",
+    "copy-custom-apps": "copyfiles -u 2 src/customApps/**/* dist/customApps",
     "build:test": "npx tsc --noEmit --p tsconfig.build.json && tsc-alias",
     "lint": "eslint \"{src,apps,libs}/**/*.ts\" --fix",
     "typesafe-i18n": "typesafe-i18n",
