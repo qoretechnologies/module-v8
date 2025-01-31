@@ -1,8 +1,8 @@
-import { IActionOptions, TActionData } from 'global/models/actions';
-import { EQoreAppActionCode, TQorePartialAction, TQoreResponseType } from '../global/models/qore';
+import { QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode } from '../global/models/qore';
 import { L } from '../i18n/i18n-node';
 
-const options = {
+const options: TQoreOptions = {
   option1: {
     display_name: L.en.apps._testing.actions.test.options.option1.displayName(),
     short_desc: L.en.apps._testing.actions.test.options.option1.shortDesc(),
@@ -11,50 +11,25 @@ const options = {
     required: true,
     example_value: '123',
   },
-} satisfies IActionOptions;
-
-const response_type = {
-  type: 'hash',
-  fields: {
-    channel: {
-      type: {
-        type: 'hash',
-        fields: {
-          id: {
-            display_name: 'test',
-            short_desc: 'test',
-            desc: 'test',
-            type: 'int',
-          },
-        },
-        display_name: 'dname',
-        short_desc: 'sdesc',
-        desc: 'desc',
-      },
-    },
-  },
-} satisfies TQoreResponseType;
-
-// Defining a function to delete attachment
-const deleteAttachment = async ({ option1 }: TActionData<typeof options>) => {
-  try {
-    return {
-      channel: {
-        id: option1,
-      },
-    };
-  } catch (error) {
-    console.error('Error deleting attachment:', error);
-    throw error;
-  }
 };
 
-export default {
+export default QoreAppCreator.createLocalizedAction({
   action: 'delete-attachment',
+  app: 'test',
   action_code: EQoreAppActionCode.ACTION,
-  api_function: deleteAttachment,
-  options,
-
+  api_function: async ({ option1 }) => {
+    try {
+      return {
+        channel: {
+          id: option1,
+        },
+      };
+    } catch (error) {
+      console.error('Error deleting attachment:', error);
+      throw error;
+    }
+  },
+  options: options,
   override_options: {
     token: {
       required: true,
@@ -66,5 +41,25 @@ export default {
       },
     },
   },
-  response_type,
-} satisfies TQorePartialAction<typeof options, typeof response_type>;
+  response_type: {
+    type: 'hash',
+    fields: {
+      channel: {
+        type: {
+          type: 'hash',
+          fields: {
+            id: {
+              display_name: 'test',
+              short_desc: 'test',
+              desc: 'test',
+              type: 'int',
+            },
+          },
+          display_name: 'dname',
+          short_desc: 'sdesc',
+          desc: 'desc',
+        },
+      },
+    },
+  },
+});

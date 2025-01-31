@@ -20,14 +20,15 @@
     "test": "clear && yarn test:ci",
     "qtest": "clear && jest --config src/jest.config.ts --testMatch '**/?(*.)+(qtest).[tj]s?(x)'",
     "precheck": "yarn build:test && yarn test",
-    "update-reqore": "yarn add -D @qoretechnologies/reqore@beta"
+    "update-reqore": "yarn add -D @qoretechnologies/reqore@beta",
+    "update-toolkit": "yarn add -D @qoretechnologies/ts-toolkit@beta"
   },
   "author": "Qore Technologies s.r.o.",
   "license": "MIT",
   "dependencies": {
     "@notionhq/client": "^2.2.15",
     "@octokit/rest": "18.12.0",
-    "@qoretechnologies/ts-toolkit": "0.4.11",
+    "@qoretechnologies/ts-toolkit": "^0.5.4",
     "@sinclair/typebox": "^0.33.0",
     "@slack/web-api": "^7.3.2",
     "@tryfabric/martian": "^1.2.4",

@@ -1,13 +1,15 @@
 // appsCatalogue.ts
 import asana from '../apps/asana';
 import esignature from '../apps/esignature';
+import freshdesk from '../apps/freshdesk';
 import github from '../apps/github';
 import jira from '../apps/jira';
+import netsuite from '../apps/netsuite';
 import salesforce from '../apps/salesforce';
 import stripe from '../apps/stripe';
 import zendesk from '../apps/zendesk';
-import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
-import { Locales } from '../i18n/i18n-types';
+import CUSTOM_APPS from '../customApps/index';
+import { Log } from '../decorators/Logger';
 import {
   IQoreApp,
   IQoreAppWithActions,
@@ -17,10 +19,9 @@ import {
   TQoreApps,
   TQoreExistingApps,
 } from '../global/models/qore';
-import { Log } from '../decorators/Logger';
+import { Locales } from '../i18n/i18n-types';
+import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
-import netsuite from '../apps/netsuite';
-import freshdesk from '../apps/freshdesk';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -93,6 +94,10 @@ export class ActionsCatalogue {
 
     Object.entries(NEW_APPS).forEach(([appName, getApp]) => {
       this.apps[appName] = getApp(this.locale);
+    });
+
+    Object.entries(CUSTOM_APPS).forEach(([appName, customApp]) => {
+      this.apps[appName] = customApp;
     });
 
     Object.entries(EXISTING_APPS).forEach(([appName, getApp]) => {
