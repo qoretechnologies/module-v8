@@ -4,6 +4,7 @@ const ts_toolkit_1 = require('@qoretechnologies/ts-toolkit');
 const CustomAction = ts_toolkit_1.QoreAppCreator.createAction({
   action: 'custom-action',
   app: 'External-app',
+  display_name: 'Custom App Action',
   desc: 'This is a custom external action',
   action_code: ts_toolkit_1.EQoreAppActionCode.ACTION,
   options: {

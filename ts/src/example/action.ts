@@ -13,11 +13,9 @@ const options: TQoreOptions = {
   },
 };
 
-export default QoreAppCreator.createAction({
+export default QoreAppCreator.createLocalizedAction({
   action: 'delete-attachment',
   app: 'test',
-  short_desc: 'Test',
-  desc: 'Test',
   action_code: EQoreAppActionCode.ACTION,
   api_function: async ({ option1 }) => {
     try {
