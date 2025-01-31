@@ -1,4 +1,6 @@
 // appsCatalogue.ts
+import fs from 'fs';
+import path from 'path';
 import asana from '../apps/asana';
 import esignature from '../apps/esignature';
 import freshdesk from '../apps/freshdesk';
@@ -8,7 +10,6 @@ import netsuite from '../apps/netsuite';
 import salesforce from '../apps/salesforce';
 import stripe from '../apps/stripe';
 import zendesk from '../apps/zendesk';
-import CUSTOM_APPS from '../customApps/index';
 import { Log } from '../decorators/Logger';
 import {
   IQoreApp,
@@ -49,6 +50,24 @@ const NEW_APPS = {
 const EXISTING_APPS = {
   salesforce,
 } as const;
+
+const CUSTOM_APPS: Record<string, IQoreAppWithActions> = {};
+
+/* Get all the default exports from the folders inside this folder */
+const appsDir = path.resolve(path.join(__dirname, '..', 'customApps'));
+
+function importIndexFilesFromDir(dir: string) {
+  fs.readdirSync(dir).forEach((subDir) => {
+    const fullPath = path.join(dir, subDir);
+    const indexPath = path.join(fullPath, 'index.js');
+
+    if (fs.statSync(fullPath).isDirectory() && fs.existsSync(indexPath)) {
+      CUSTOM_APPS[subDir] = require(indexPath).default;
+    }
+  });
+}
+
+importIndexFilesFromDir(appsDir);
 
 export class ActionsCatalogue {
   public readonly apps: TQoreApps = {};
