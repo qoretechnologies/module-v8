@@ -59,19 +59,6 @@ const CustomApp = ts_toolkit_1.QoreAppCreator.createApp({
     'bC1ydWxlOm5vbnplcm87Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=',
   logo_file_name: 'test.svg',
   logo_mime_type: 'image/svg+xml',
-  rest: {
-    data: 'json',
-    oauth2_auth_args: {
-      access_type: 'offline',
-      prompt: 'consent',
-    },
-    oauth2_auth_url: 'https://example.com/oauth2/auth',
-    oauth2_client_id: 'x',
-    oauth2_client_secret: 'y',
-    oauth2_grant_type: 'authorization_code',
-    oauth2_token_url: 'https://example.com/token',
-    url: 'tsrest-qorus-js-test://www.example.com/api',
-  },
   actions: [CustomAction],
 });
 exports.default = CustomApp;
