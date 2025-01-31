@@ -156,7 +156,6 @@ exports.actionsCatalogue = {
                 @param ctx?: object with the following properties:
                 - conn_name?: string -> the connection name, if any is defined
                 - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
-                - opts?: object -> a data object with option values set for the current action
 
                 @return the return value for the API; can be of any serializable data type that the API returns
                 (including no value)
