@@ -16,7 +16,7 @@
     "build:test": "npx tsc --noEmit --p tsconfig.build.json && tsc-alias",
     "lint": "eslint \"{src,apps,libs}/**/*.ts\" --fix",
     "typesafe-i18n": "typesafe-i18n",
-    "test:ci": "dotenv -e .env -- jest --config src/jest.config.ts",
+    "test:ci": "npx dotenv -e .env -- jest --config src/jest.config.ts",
     "test": "clear && yarn test:ci",
     "qtest": "clear && jest --config src/jest.config.ts --testMatch '**/?(*.)+(qtest).[tj]s?(x)'",
     "precheck": "yarn build:test && yarn test",
