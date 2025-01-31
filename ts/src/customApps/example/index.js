@@ -13,6 +13,7 @@ const CustomAction = ts_toolkit_1.QoreAppCreator.createAction({
       required: true,
       short_desc: 'Message to be displayed',
       display_name: 'Test Message',
+      desc: 'This is a test message',
     },
   },
   short_desc: 'Custom App Action',
