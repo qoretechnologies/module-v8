@@ -165,6 +165,7 @@ export const slack = createPiece({
         'users.profile:write',
       ],
     },
+    oauth2_scope_separator_char: ',',
     rest_body_auth_error_check: {
       ok: false,
       error: 'invalid_auth',

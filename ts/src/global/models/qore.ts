@@ -88,6 +88,9 @@ export interface IQoreRestConnectionConfig {
   // A list of OAuth2 scopes to request during authorization. Ignored if the `token` option is set.
   oauth2_scopes?: string[];
 
+  // A separator character for OAuth2 scopes in URI arguments
+  oauth2_scope_separator_char?: string;
+
   // Extra arguments for OAuth2 token requests, which will be serialized as query parameters.
   oauth2_token_args?: Record<string, any>;
 
