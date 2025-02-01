@@ -164,6 +164,10 @@ export const slack = createPiece({
         'users.profile:write',
       ],
     },
+    rest_body_auth_error_check: {
+      ok: false,
+      error: 'invalid_auth',
+    },
   },
 });
 

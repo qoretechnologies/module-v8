@@ -119,6 +119,9 @@ export interface IQoreRestConnectionConfig {
   // The proxy URL for connecting through a proxy server.
   proxy?: string;
 
+  // An object to check all deserialized bodies in 200 OK server responses for authentication errors
+  rest_body_auth_error_check?: Record<string, any>;
+
   // A PEM-encoded string representing an X.509 client certificate.
   ssl_cert_data?: string;
 
