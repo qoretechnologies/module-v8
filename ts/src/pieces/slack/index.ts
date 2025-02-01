@@ -44,6 +44,7 @@ export const slackAuth = PieceAuth.OAuth2({
     'users:read.email',
     'files:write',
     'files:read',
+    'users.profile:read',
   ],
 });
 
