@@ -20,9 +20,7 @@ import { getChannelHistory } from './lib/actions/get-channel-history';
 
 export const slackAuth = PieceAuth.OAuth2({
   description: '',
-  authUrl:
-    'https://slack.com/oauth/v2/authorize?user_scope=channels:read,channels:write,chat:write,users:read,' +
-    'users:read.email',
+  authUrl: 'https://slack.com/oauth/v2/authorize',
   tokenUrl: 'https://slack.com/api/oauth.v2.access',
   required: true,
   url: 'https://slack.com/api',
