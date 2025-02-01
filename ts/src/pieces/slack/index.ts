@@ -44,7 +44,6 @@ export const slackAuth = PieceAuth.OAuth2({
     'users:read.email',
     'files:write',
     'files:read',
-    'users.profile:read',
   ],
 });
 
@@ -162,6 +161,7 @@ export const slack = createPiece({
         'chat:write',
         'users:read',
         'users:read.email',
+        'users.profile:read',
         'users.profile:write',
       ],
     },
