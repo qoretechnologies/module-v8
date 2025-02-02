@@ -1057,6 +1057,17 @@ public class TypeScriptActionInterface {
         action.path = action.action;
     }
 
+    static registerAppChildDataProvider(string app, AbstractDataProvider prov) {
+        initApp(app);
+        TypeScriptActionAppDataProvider parent = TypeScriptActionInterface::getAppDataProvider(app);
+        parent.registerChild(prov.getName(), prov);
+    }
+
+    static AbstractDataProvider deregisterAppChildDataProvider(string app, string child) {
+        TypeScriptActionAppDataProvider parent = TypeScriptActionInterface::getAppDataProvider(app);
+        return parent.deregisterChild(child);
+    }
+
     static generateCreateDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
             JavaScriptProgramPool pool, *SwaggerSchema schema) {
         throw "UNSUPPORTED";
@@ -2223,6 +2234,11 @@ class ActionFunctionContext {
         *hash<string, hash<string, bool>> depmap;
 
         date io_timeout;
+    }
+
+    constructor(string app) {
+        self.app = app;
+        action = "none";
     }
 
     constructor(string app, string action, JavaScriptProgramPool pool,

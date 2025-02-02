@@ -101,6 +101,10 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
         if (childMap{pathname}) {
             throw "TYPESCRIPT-CHILD-ERROR", sprintf("child %y already registered", pathname);
         }
+        if (!(prov instanceof TypeScriptActionDataProviderBase)) {
+            throw "TYPESCRIPT-CHILD-ERROR", sprintf("Child must be an instance of "
+                "\"TypeScriptActionDataProviderBase\"; class provider: %y", prov.className());
+        }
 
         childMap{pathname} = prov;
 
@@ -115,6 +119,11 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
                 return prov;
             });
         }
+    }
+
+    #! Deregister child data provider
+    AbstractDataProvider deregisterChild(string child) {
+        return remove childMap{child};
     }
 
     #! Return data provider summary info

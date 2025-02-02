@@ -55,6 +55,17 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
     }
 
     #! Creates the object from the arguments
+    constructor(string name, string app) : ActionFunctionContext(app) {
+        self.name = name;
+    }
+
+    #! Creates the object from the arguments
+    constructor(RestConnection conn, string name) : ActionFunctionContext(conn.getAppName()) {
+        self.name = name;
+        self.conn = conn;
+    }
+
+    #! Creates the object from the arguments
     constructor(string name, ActionFunctionContext fctx) : ActionFunctionContext(fctx) {
         self.name = name;
     }
