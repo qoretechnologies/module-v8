@@ -156,9 +156,12 @@ export const slack = createPiece({
   qoreRest: {
     oauth2_auth_args: {
       user_scope: [
+        'channels:history',
         'channels:read',
         'channels:write',
         'chat:write',
+        'groups:history',
+        'im:history',
         'users:read',
         'users:read.email',
         'users.profile:read',
