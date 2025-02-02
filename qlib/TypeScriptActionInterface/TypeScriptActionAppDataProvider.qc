@@ -122,7 +122,7 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
     }
 
     #! Deregister child data provider
-    AbstractDataProvider deregisterChild(string child) {
+    *AbstractDataProvider deregisterChild(string child) {
         return remove childMap{child};
     }
 

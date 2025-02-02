@@ -1063,7 +1063,17 @@ public class TypeScriptActionInterface {
         parent.registerChild(prov.getName(), prov);
     }
 
-    static AbstractDataProvider deregisterAppChildDataProvider(string app, string child) {
+    static bool tryRegisterAppChildDataProvider(string app, AbstractDataProvider prov) {
+        try {
+            registerAppChildDataProvider(app, prov);
+            return True;
+        } catch (hash<ExceptionInfo> ex) {
+            TSAI::warn("Failed to register child provider of app %y: %s: %s", app, ex.err, ex.desc);
+        }
+        return False;
+    }
+
+    static *AbstractDataProvider deregisterAppChildDataProvider(string app, string child) {
         TypeScriptActionAppDataProvider parent = TypeScriptActionInterface::getAppDataProvider(app);
         return parent.deregisterChild(child);
     }
