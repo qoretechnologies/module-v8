@@ -68,53 +68,6 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
         return doRequest(req, request_options);
     }
 
-    #! Sets the connection
-    setConnection(TypeScriptAppRestConnection conn) {
-        TypeScriptActionDataProviderBase::setConnection(conn);
-        if (*hash<string, hash<AsyncCallInfo>> dvmap = remove self.dvmap) {
-            *hash<string, AbstractDataField> fields = request_type.getFields();
-            *hash<DataContextInfo> arg = getCallContextInfo();
-            hash<string, bool> vmap;
-            foreach hash<auto> i in (dvmap.pairIterator()) {
-                if (i.value.info.subtype) {
-                    continue;
-                }
-                try {
-                    auto v = conn.getSetCacheValue(i.key, auto sub () {
-                        debug("Connection %y retrieving default value for %y", conn.name, i.key);
-                        auto rv = getAsyncValue(i.value, arg);
-                        debug("Connection %y retrieved default value %y = %y", conn.name, i.key, rv);
-                        return rv;
-                    });
-                    if (v) {
-                        *AbstractDataField f = fields{i.key};
-                        if (!f) {
-                            throw "ACTION-CONFIG-ERROR", sprintf("Cannot set default type for unknown option %y; "
-                                "known options: %y", i.key, keys fields);
-                        }
-                        f.setDefaultValue(v);
-                        vmap{i.key} = True;
-                    }
-                } catch (hash<ExceptionInfo> ex) {
-                    error("ACTION-OPTION-ERROR", "Exception retrieving default value for data provider %y "
-                        "option %y: %s", getName(), i.key, get_exception_string(ex));
-                    rethrow;
-                }
-            }
-            # make "or-nothing" type if appropriate
-            bool ok = True;
-            foreach hash<auto> i in (fields.pairIterator()) {
-                if (!vmap{i.key} && (!exists i.value.getDefaultValue()) && i.value.isMandatory()) {
-                    ok = False;
-                    break;
-                }
-            }
-            if (ok) {
-                request_type = request_type.getOrNothingType();
-            }
-        }
-    }
-
     #! Makes a request and returns the response
     /** @param req the request to serialize and make according to the request type
         @param request_options the request options; will be processed by validateRequestOptions()

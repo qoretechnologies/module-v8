@@ -1484,6 +1484,7 @@ public class TypeScriptActionInterface {
                 "to": io_timeout,
             };
             TypeScriptActionInterface::registerAsyncCall(\fctx.dvmap{key}, "app", action.app, action.action, key);
+            action.data_dependent_options = True;
         }
         if (h.required && !h.preselected && !exists h.default_value) {
             h.preselected = True;

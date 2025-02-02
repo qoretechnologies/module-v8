@@ -90,6 +90,14 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         return map {$1: True}, keys (omap + romap);
     }
 
+    #! Returns information on supported reference data values
+    /** @return a hash of supported reference data values; keys in the hash returned are supported in calls to
+        @ref getReferenceDataValues()
+    */
+    *hash<string, bool> getSupportedReferenceDataValues() {
+        return map {$1: True}, keys dvmap;
+    }
+
     auto getAsyncValue(hash<AsyncCallInfo> api, ...) {
         return getAsyncValueArgs(self, api, argv);
     }
@@ -383,8 +391,6 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         @param action_opts an optional hash of action options when called when working with an app action
 
         @return a list of allowed values for this data
-
-        @since DataProvider 3.0
     */
     private *list<hash<AllowedValueInfo>> getReferenceDataImpl(string type, *hash<auto> action_opts) {
         if (((*hash<auto> deps = depmap{type})
@@ -458,6 +464,31 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                 getAttributes("short_desc", type, resp, ref_rest.short_descs.split("."), \rv);
             }
             debug("Reference data with REST for data provider %y type %y allowed values: %y", getName(), type, rv);
+            return rv;
+        }
+    }
+
+    #! Returns a reference data value of the given kind if available
+    /** @param type the unique type name of the reference data
+        @param action_opts an optional hash of action options when called when working with an app action
+
+        @return the value of the reference data
+    */
+    private auto getReferenceDataValueImpl(string type, *hash<auto> action_opts) {
+        if (((*hash<auto> deps = depmap{type})
+            && (action_opts{keys deps}.size() != deps.size()))) {
+            return;
+        }
+
+        if (*hash<AsyncCallInfo> ref_api = dvmap{type}) {
+            *hash<DataContextInfo> arg = getCallContextInfo(action_opts);
+            debug("Retrieving a reference data value with JS for data provider %y type %y arg: %y (deps: %y)",
+                getName(), type, arg, depmap);
+            auto rv = getAsyncValueWithCache(ref_api, action_opts, arg);
+            debug("Reference data value for data provider %y type %y: %y", getName(), type, rv);
+            if (rv.typeCode() == NT_LIST && (rv[0] instanceof JavaScriptObject)) {
+                rv = map $1.toData(), rv;
+            }
             return rv;
         }
     }
