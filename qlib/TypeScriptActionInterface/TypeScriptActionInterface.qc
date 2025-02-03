@@ -245,8 +245,8 @@ public class TypeScriptActionInterface {
     }
 
     #! Initialize all pending apps
-    static initAllApps() {
-        map TypeScriptActionInterface::initApp($1, True), keys appmap;
+    static initAllApps(bool do_actions = True) {
+        map TypeScriptActionInterface::initApp($1, do_actions), keys appmap;
     }
 
     #! Returns a list of all pending apps

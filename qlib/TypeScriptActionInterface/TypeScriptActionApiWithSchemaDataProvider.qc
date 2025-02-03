@@ -90,6 +90,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
             query_set = map {$1: True}, conn_opt_map.iterator();
         }
         if (override_options) {
+            NoIoHelper nih();
             createRequestType(override_options, \action);
         }
     }

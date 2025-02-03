@@ -33,8 +33,8 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         #! Child connect timeout
         const ChildConnectTimeout = 30s;
 
-        #! Event source tracker: event key -> info
-        hash<string, hash<EventSourceInfo>> emap;
+        #! Event source info
+        hash<EventSourceInfo> event;
     }
 
     private {
@@ -157,20 +157,18 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     bool supportsEvent(string key) {
-        return exists emap{key};
+        return event ? True : False;
     }
 
     # Called with the global lock held
     setupEventSourceLocked(TypeScriptActionEventDataProvider observable, string app, string action, string key,
-            *hash<auto> options) {
-        if (emap{key}) {
-            throw "EVENT-ERROR", sprintf("Event key %y is already registered", key);
+            *hash<DataContextInfo> options) {
+        if (event) {
+            throw "EVENT-ERROR", sprintf("Event key %y is already registered", event.key);
         }
         string ekey = observable.uniqueHash();
-        if (emap{key}.omap{ekey}) {
-            throw "EVENT-ERROR", sprintf("Event key %y for observable %y is already registered", key, ekey);
-        }
-        emap{key} = <EventSourceInfo>{
+        event = <EventSourceInfo>{
+            "key": key,
             "app": app,
             "action": action,
             "options": options,
@@ -182,22 +180,20 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         global_lock.unlock();
         on_exit global_lock.lock();
 
-        on_error removeEventSource(key, ekey);
+        on_error removeEventSource(ekey);
         sendCommandArgs(NOTHING, PC_SETUP_EVENT, (app, action, key, options));
     }
 
-    private removeEventSource(string key, string ekey) {
+    private removeEventSource(string ekey) {
         bool stop;
         {
             global_lock.lock();
             on_exit global_lock.unlock();
 
-            remove emap{key}.omap{ekey};
-            if (!emap{key}.omap) {
-                remove emap{key};
-                if (!emap) {
-                    stop = True;
-                }
+            remove event.omap{ekey};
+            if (!event.omap) {
+                remove event;
+                stop = True;
             }
         }
         if (stop) {
@@ -207,38 +203,43 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
     #! Add an additional observable to the event source; called with the global lock held
     addEventSourceLocked(TypeScriptActionEventDataProvider observable, string key) {
-        if (!emap{key}) {
+        if (!event) {
             throw "EVENT-ERROR", sprintf("Event key %y is not registered", key);
         }
+        if (event.key != key) {
+            throw "EVENT-ERROR", sprintf("Event key %y is already registered; cannot add event %y to the same proxy",
+                event.key, key);
+        }
         string ekey = observable.uniqueHash();
-        if (emap{key}.omap{ekey}) {
+        if (event.omap{ekey}) {
             throw "EVENT-ERROR", sprintf("Event key %y for observable %y is already registered", key, ekey);
         }
-        emap{key}.omap{ekey} = observable;
+        event.omap{ekey} = observable;
     }
 
     #! Called with the global lock held
     releaseEventSourceLocked(Mutex m, TypeScriptActionEventDataProvider observable, string key) {
-        if (!emap{key}) {
+        if (!event) {
             throw "EVENT-ERROR", sprintf("Event key %y is not registered", key);
         }
+        if (event.key != key) {
+            throw "EVENT-ERROR", sprintf("Event key %y is registered; cannot remove objservable from unregistered "
+                "event %y in this proxy", event.key, key);
+        }
         string ekey = observable.uniqueHash();
-        if (!emap{key}{ekey}) {
+        if (!event.omap{ekey}) {
             throw "EVENT-ERROR", sprintf("Observable %y is not registered under event key %y", ekey, key);
         }
         {
-            on_success remove emap{key}{ekey};
+            on_success remove event.omap{ekey};
             m.unlock();
             on_exit m.lock();
-            if (emap{key}{ekey}.size() == 1) {
+            if (event.omap.size() == 1) {
                 sendCommandArgs(NOTHING, PC_RELEASE_EVENT, key);
             }
         }
-        if (!emap{key}) {
-            remove emap{key};
-            if (!emap) {
-                stopListener();
-            }
+        if (!event.omap) {
+            stopListener();
         }
     }
 
@@ -266,21 +267,23 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
         listener_cnt.inc();
         on_error listener_cnt.dec();
-        listener_tid = background listenerThread();
+        listener_tid = background listenerThread(proc.id());
     }
 
-    private listenerThread() {
+    private listenerThread(int pid) {
+        info("Started listener thread for PID %d", pid);
         on_exit {
             remove listener_stop;
             remove listener_tid;
             listener_cnt.dec();
+            info("Stopped listener thread for PID %d", pid);
         }
+        on_error error("Error in listener thread for PID %d: %s", pid, get_exception_string($1));
         while (!listener_stop) {
             int i;
             if (command_in_progress."timeout") {
                 date d = now_us() - command_in_progress.start;
                 if (d > (command_in_progress."timeout" + 10s)) {
-                    int pid = proc.id();
                     killChild();
                     string desc = checkRestart()
                         ? sprintf("The async call timed out; terminated and restarted child process with PID %d; new "
@@ -335,11 +338,10 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             }
 
             if (v.cmd == CC_EVENT) {
-                *hash<string, TypeScriptActionEventDataProvider> omap = emap{v.key}.omap;
-                if (!omap) {
+                if (!event.omap) {
                     error("No observers for event for key %y; ignoring", v.key);
                 }
-                foreach hash<auto> i in (omap.pairIterator()) {
+                foreach hash<auto> i in (event.omap.pairIterator()) {
                     try {
                         i.value.notify(v.event);
                     } catch (hash<ExceptionInfo> ex) {
@@ -467,7 +469,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                     "start": now_us(),
                 };
                 on_exit remove command_in_progress;
-                debug("sending command %y", yaml);
+                debug("Sending command %y", yaml);
                 sendString(yaml);
                 h = waitForCommand();
                 #logChildOutput();
@@ -623,6 +625,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
 
         error("Restarting child process %d after an error", pid);
+        logChildOutput();
 
         ++restart_count;
 
@@ -640,17 +643,16 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             });
         }
 
-        *hash<string, hash<EventSourceInfo>> emap;
+        *hash<EventSourceInfo> event;
         {
             global_lock.lock();
             on_exit global_lock.unlock();
 
-            emap = self.emap;
+            event = self.event;
         }
 
-        if (emap) {
-            map sendCommandArgs(NOTHING, PC_SETUP_EVENT, ($1.value.app, $1.value.action, $1.key, $1.value.options)),
-                emap.pairIterator();
+        if (event) {
+            sendCommandArgs(NOTHING, PC_SETUP_EVENT, (event.app, event.action, event.key, event.options));
         }
 
         AutoLock al(m);

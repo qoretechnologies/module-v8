@@ -72,7 +72,7 @@ public class JavaScriptThreadProcessPool {
     }
 
     #! Acquires a proxy for an API call
-    JavaScriptProgramProxy get() {
+    JavaScriptProgramProxy get(*code setup) {
         int tid = gettid();
         # the unique proxy key
         *string pkey;
@@ -118,35 +118,39 @@ public class JavaScriptThreadProcessPool {
 
     #! Sets up a proxy as an event data source
     JavaScriptProgramProxy setupEventSource(Observable observable, string app, string action, string key,
-            *hash<auto> options) {
+            *hash<DataContextInfo> options) {
         AutoLock al(m);
 
-        reference<hash<ProxyCacheInfo>> info;
-        bool exact;
-        code check = *bool sub (reference<hash<ProxyCacheInfo>> i0) {
-            if (i0.p.supportsEvent(key)) {
-                on_success ++i0.ecount;
-                i0.p.addEventSourceLocked(observable, key);
-                return True;
-            }
-            if (!exists info || (info.low > i0.ecount)) {
-                info = \i0;
-            }
-        };
-
-        # find an exact match or the lowest count
-        foreach string key in (keys imap) {
-            if (check(\imap{key})) {
-                return imap{key}.p;
-            }
-        }
-        foreach string key in (keys amap) {
-            if (check(\amap{key})) {
-                return amap{key}.p;
+        # look for a proxy already handling this exact event
+        foreach string pkey in (keys amap) {
+            if (amap{pkey}.p.supportsEvent(key)) {
+                on_success ++amap{pkey}.ecount;
+                amap{pkey}.p.addEventSourceLocked(observable, key);
+                return amap{pkey}.p;
             }
         }
 
-        on_success ++info.ecount;
+        # unique proxy key
+        string pkey;
+        hash<ProxyCacheInfo> info;
+        # take a proxy from the idle map, if any
+        if (imap) {
+            # get proxy key
+            pkey = imap.firstKey();
+            # remove from inactive map
+            info = remove imap{pkey};
+            remove info.atime;
+        } else {
+            # do not create the proxy object with the lock locked; each event / API call will need its own object in
+            # any case
+            info = getProxyIntern(gettid(), \pkey);
+            # this proxy is not dedicated to any TID; it's only for events
+            remove info.tid;
+            pkey = info.p.uniqueHash();
+        }
+        # add to active map
+        amap{pkey} = info;
+        on_success ++amap{pkey}.ecount;
         info.p.setupEventSourceLocked(observable, app, action, key, options);
         return info.p;
     }
@@ -157,10 +161,10 @@ public class JavaScriptThreadProcessPool {
 
         on_exit {
             string pkey = proxy.uniqueHash();
-            if (imap{pkey}) {
-                --imap{pkey}.ecount;
-            } else {
-                --amap{pkey}.ecount;
+            if (!--amap{pkey}.ecount) {
+                hash<ProxyCacheInfo> info = remove amap{pkey};
+                info.atime = now_us();
+                imap{pkey} = info;
             }
         }
         proxy.releaseEventSourceLocked(m, observable, key);
