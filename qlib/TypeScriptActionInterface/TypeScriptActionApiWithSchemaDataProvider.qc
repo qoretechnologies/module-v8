@@ -69,6 +69,12 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
 
         #! Query option set
         *hash<string, bool> query_set;
+
+        #! Request type created?
+        bool request_type_done;
+
+        #! Response type created?
+        bool response_type_done;
     }
 
     #! Creates the object from the arguments
@@ -76,159 +82,15 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
             *hash<string, bool> path_vars, *hash<string, bool> independent_path_vars,
             *hash<string, string> conn_opt_map, *hash<auto> override_options, ActionFunctionContext fctx)
             : TypeScriptActionApiDataProvider(action.action, api, fctx) {
+        swagger_path =~ s/^\///;
         self.swagger_path = swagger_path;
+        self.path_vars = path_vars;
         self.conn_opt_map = conn_opt_map;
         if (conn_opt_map) {
             query_set = map {$1: True}, conn_opt_map.iterator();
         }
-
-        # set request and response types
-        {
-            swagger_path =~ s/^\///;
-            on_error rethrow $1.err, sprintf("%s (Swagger path: %y)", $1.desc, swagger_path);
-            prov = TypeScriptActionInterface::getSwaggerDataProvider(action.app).getChildProviderPath(swagger_path);
-        }
-        request_type = prov.getRequestType();
-
-        if (request_type && (*hash<string, AbstractDataField> fields = request_type.getFields())) {
-            HashDataType newreq;
-            code check = sub (hash<string, AbstractDataField> fields, string key) {
-                list<string> l = (key,);
-                while (fields.size() == 1
-                    && (*hash<string, AbstractDataField> f = fields.firstValue().getType().getFields())) {
-                    l += fields.firstKey();
-                    fields = f;
-                }
-                if (!newreq) {
-                    newreq = new HashDataType(request_type.isOrNothingType() ? AutoHashOrNothingType : AutoHashType,
-                        request_type.getName(), fields);
-                } else if (fields) {
-                    map newreq.addField($1), (fields = fields - (keys newreq.getFields())).iterator();
-                }
-                map reqmap{$1} = l, keys fields;
-                map rreqmap{l.join(".") + ("." + $1)} = $1, keys fields;
-            };
-            bool stop;
-            # process body args
-            if (fields.body) {
-                if (*hash<string, AbstractDataField> bf = fields.body.getType().getFields()) {
-                    # move args to the top level
-                    check(bf, "body");
-                } else {
-                    stop = True;
-                }
-            }
-            if (!stop && fields.formData) {
-                if (*hash<string, AbstractDataField> bf = fields.formData.getType().getFields()) {
-                    # move args to the top level
-                    check(bf, "formData");
-                } else {
-                    stop = True;
-                }
-            }
-            # move query args to
-            if (!stop && fields.query && (*hash<string, AbstractDataField> qf = fields.query.getType().getFields())) {
-                check(qf, "query");
-            }
-            if (!stop && fields.header && (*hash<string, AbstractDataField> hf =
-                fields.header.getType().getFields())) {
-                check(hf, "header");
-            }
-            if (newreq) {
-                request_type = newreq;
-                fields = request_type.getFields();
-            }
-        }
-
-        if (path_vars) {
-            self.path_vars = path_vars;
-            hash<string, AbstractDataField> fields = map {$1: new TypeScriptDataField({
-                "name": $1,
-                "type": AbstractDataProviderTypeMap."softstring",
-                "desc": sprintf("URI path variable %y", $1),
-                "attr": {
-                    "preselected": True,
-                    "required": True,
-                },
-            })}, keys path_vars, !query_set{$1};
-
-            hash<string, bool> dm;
-            foreach string path in (keys path_vars) {
-                if (!independent_path_vars{path}) {
-                    if (dm) {
-                        depmap{path} = dm;
-                    }
-                    dm{path} = True;
-                }
-            }
-
-            if (request_type) {
-                if (!(request_type instanceof HashDataType)) {
-                    string fname = "data";
-                    int i;
-                    while (path_vars{fname}) {
-                        fname = sprintf("data-%d", ++i);
-                    }
-                    fields{fname} = new TypeScriptDataField({
-                        "name": fname,
-                        "type": request_type,
-                        "desc": "API request type",
-                    });
-                } else {
-                    fields += request_type.getFields();
-                }
-            }
-            request_type = new HashDataType(AutoHashType, "RestRequestType", fields);
-        }
-
-        # allow options to be updated
         if (override_options) {
-            if (!request_type) {
-                bool required = True;
-                foreach hash<auto> v in (override_options.iterator()) {
-                    if (!v.required) {
-                        required = False;
-                        break;
-                    }
-                }
-                request_type = new HashDataType(required ? AutoHashType : AutoHashOrNothingType);
-            } else if (!(request_type instanceof HashDataType)) {
-                throw "ACTION-ERROR", sprintf("Cannot override options of app %y action %y with non-hash "
-                    "request type %y", action.app, action.action, request_type.getName());
-            }
-            overrideOptions(\action, cast<HashDataType>(request_type), override_options);
-            if (!prov.op.consumes) {
-                prov.op.consumes{MimeTypeJson} = True;
-            }
-            prov.disableRequestTypeCheck();
-        }
-
-        if (request_type && (*hash<string, AbstractDataField> fields = request_type.getFields())) {
-            action.options = DataProviderActionCatalog::getActionOptionFromFields(fields);
-            TypeScriptActionInterface::sortOptions({"name": action.app}, action, \action.options);
-
-            if (depmap) {
-                foreach hash<auto> i in (action.options.pairIterator()) {
-                    if (path_vars{i.key}) {
-                        if (*hash<auto> deps = depmap{i.key}) {
-                            action.options{i.key}.depends_on = keys deps;
-                        }
-                    } else {
-                        *hash<string, bool> dp = map {$1: True}, keys path_vars;
-                        map dp{$1} = True, action.options{i.key}.depends_on;
-                        if (dp) {
-                            action.options{i.key}.depends_on = keys dp;
-                        }
-                    }
-                }
-            }
-        }
-
-        response_type = prov.getResponseType();
-        if (response_type && (*hash<string, AbstractDataField> fields = response_type.getFields())
-            && fields.size() == 1 && fields.body) {
-            res_only_body = True;
-            response_type = fields.body.getType();
+            createRequestType(override_options, \action);
         }
     }
 
@@ -364,6 +226,187 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         return rv;
     }
 
+    #! Returns the request type for this API
+    /** @return the request type for this API
+    */
+    private *DataProvider::AbstractDataProviderType getRequestTypeImpl() {
+        if (request_type_done) {
+            createRequestType();
+            request_type_done = True;
+        }
+        return request_type;
+    }
+
+    #! Returns the response type for this API
+    /** @return the response type for this API
+    */
+    private *DataProvider::AbstractDataProviderType getResponseTypeImpl() {
+        if (response_type_done) {
+            createResponseType();
+            response_type_done = True;
+        }
+        return response_type;
+    }
+
+    #! Creates the request type for this API
+    private createRequestType(*hash<auto> override_options, *reference<hash<auto>> action) {
+        checkDataProvider();
+        request_type = prov.getRequestType();
+
+        if (request_type && (*hash<string, AbstractDataField> fields = request_type.getFields())) {
+            HashDataType newreq;
+            code check = sub (hash<string, AbstractDataField> fields, string key) {
+                list<string> l = (key,);
+                while (fields.size() == 1
+                    && (*hash<string, AbstractDataField> f = fields.firstValue().getType().getFields())) {
+                    l += fields.firstKey();
+                    fields = f;
+                }
+                if (!newreq) {
+                    newreq = new HashDataType(request_type.isOrNothingType() ? AutoHashOrNothingType : AutoHashType,
+                        request_type.getName(), fields);
+                } else if (fields) {
+                    map newreq.addField($1), (fields = fields - (keys newreq.getFields())).iterator();
+                }
+                map reqmap{$1} = l, keys fields;
+                map rreqmap{l.join(".") + ("." + $1)} = $1, keys fields;
+            };
+            bool stop;
+            # process body args
+            if (fields.body) {
+                if (*hash<string, AbstractDataField> bf = fields.body.getType().getFields()) {
+                    # move args to the top level
+                    check(bf, "body");
+                } else {
+                    stop = True;
+                }
+            }
+            if (!stop && fields.formData) {
+                if (*hash<string, AbstractDataField> bf = fields.formData.getType().getFields()) {
+                    # move args to the top level
+                    check(bf, "formData");
+                } else {
+                    stop = True;
+                }
+            }
+            # move query args to
+            if (!stop && fields.query && (*hash<string, AbstractDataField> qf = fields.query.getType().getFields())) {
+                check(qf, "query");
+            }
+            if (!stop && fields.header && (*hash<string, AbstractDataField> hf =
+                fields.header.getType().getFields())) {
+                check(hf, "header");
+            }
+            if (newreq) {
+                request_type = newreq;
+                fields = request_type.getFields();
+            }
+        }
+
+        if (path_vars) {
+            hash<string, AbstractDataField> fields = map {$1: new TypeScriptDataField({
+                "name": $1,
+                "type": AbstractDataProviderTypeMap."softstring",
+                "desc": sprintf("URI path variable %y", $1),
+                "attr": {
+                    "preselected": True,
+                    "required": True,
+                },
+            })}, keys path_vars, !query_set{$1};
+
+            hash<string, bool> dm;
+            foreach string path in (keys path_vars) {
+                if (!independent_path_vars{path}) {
+                    if (dm) {
+                        depmap{path} = dm;
+                    }
+                    dm{path} = True;
+                }
+            }
+
+            if (request_type) {
+                if (!(request_type instanceof HashDataType)) {
+                    string fname = "data";
+                    int i;
+                    while (path_vars{fname}) {
+                        fname = sprintf("data-%d", ++i);
+                    }
+                    fields{fname} = new TypeScriptDataField({
+                        "name": fname,
+                        "type": request_type,
+                        "desc": "API request type",
+                    });
+                } else {
+                    fields += request_type.getFields();
+                }
+            }
+            request_type = new HashDataType(AutoHashType, "RestRequestType", fields);
+        }
+
+        # allow options to be updated
+        if (override_options) {
+            if (!request_type) {
+                bool required = True;
+                foreach hash<auto> v in (override_options.iterator()) {
+                    if (!v.required) {
+                        required = False;
+                        break;
+                    }
+                }
+                request_type = new HashDataType(required ? AutoHashType : AutoHashOrNothingType);
+            } else if (!(request_type instanceof HashDataType)) {
+                throw "ACTION-ERROR", sprintf("Cannot override options of app %y action %y with non-hash "
+                    "request type %y", action.app, action.action, request_type.getName());
+            }
+            overrideOptions(\action, cast<HashDataType>(request_type), override_options);
+            if (!prov.op.consumes) {
+                prov.op.consumes{MimeTypeJson} = True;
+            }
+            prov.disableRequestTypeCheck();
+        }
+
+        if (request_type && (*hash<string, AbstractDataField> fields = request_type.getFields())) {
+            action.options = DataProviderActionCatalog::getActionOptionFromFields(fields);
+            TypeScriptActionInterface::sortOptions({"name": action.app}, action, \action.options);
+
+            if (depmap) {
+                foreach hash<auto> i in (action.options.pairIterator()) {
+                    if (path_vars{i.key}) {
+                        if (*hash<auto> deps = depmap{i.key}) {
+                            action.options{i.key}.depends_on = keys deps;
+                        }
+                    } else {
+                        *hash<string, bool> dp = map {$1: True}, keys path_vars;
+                        map dp{$1} = True, action.options{i.key}.depends_on;
+                        if (dp) {
+                            action.options{i.key}.depends_on = keys dp;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #! Creates the response type for this API
+    private createResponseType() {
+        checkDataProvider();
+        response_type = prov.getResponseType();
+        if (response_type && (*hash<string, AbstractDataField> fields = response_type.getFields())
+            && fields.size() == 1 && fields.body) {
+            res_only_body = True;
+            response_type = fields.body.getType();
+        }
+    }
+
+    AbstractDataProvider checkDataProvider() {
+        if (!prov) {
+            on_error rethrow $1.err, sprintf("Error setting data provider from appp %y action %y: %s (Swagger "
+                "path: %y)", app, action, $1.desc, swagger_path);
+            prov = TypeScriptActionInterface::getSwaggerDataProvider(app).getChildProviderPath(swagger_path);
+        }
+        return prov;
+    }
+
     #! Moves a value in a normalized position to the top of the request hash
     private static *hash<auto> findNormalizedValue(hash<auto> req, list<string> p, string k, int offset = 0) {
         if (req.typeCode() == NT_HASH && (auto nr = req{p[0]}) && (nr.typeCode() == NT_HASH)) {
@@ -411,6 +454,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
     private auto doRequestImpl(auto req, *hash<auto> request_options) {
         on_error rethrow $1.err, sprintf("%s (req: %y request_options: %y)", $1.desc, req, request_options);
         if (!api) {
+            checkDataProvider();
             # *always* replace the RestClient with each call; it can have outdated auth info
             prov.setRestClient(rest = conn.get());
             if (req && req.typeCode() == NT_HASH) {
