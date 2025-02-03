@@ -513,6 +513,11 @@ public class TypeScriptActionInterface {
         string cwd = getcwd();
         on_exit chdir(cwd);
         chdir(info.cwd);
+        if (!do_actions) {
+            # mark the app with action capabilities before registering
+            map info.app{ActionCodeFlagMap{$1.action.action_code}} = True, actionmap{info.app.name}.iterator();
+        }
+
         TypeScriptActionInterface::registerAppIntern(info.app, info.pool);
 
         if (do_actions) {

@@ -620,7 +620,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
 }
 
 namespace Priv {
-thread_local bool no_io;
+thread_local *bool no_io;
 class NoIoHelper {
     private {
         *bool old_no_io;
