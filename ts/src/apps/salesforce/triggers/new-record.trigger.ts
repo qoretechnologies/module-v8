@@ -1,4 +1,4 @@
-import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
+import { EQoreAppActionCode, TQorePartialEventAction } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
 import { fetchSalesforceObjectRecord } from '../helpers/constants';
 import { getSalesforceObjectAllowedValues } from '../helpers/get-object-allowed-values';
@@ -14,10 +14,15 @@ export default {
     },
   },
   event_function: async (context, update, should_stop) => {
-    const {
-      conn_opts: { token, instance_url },
-      opts: { object },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const instance_url = context?.conn_opts?.instance_url;
+    const object = context?.opts?.object;
+
+    if (!token || !instance_url || !object) {
+      throw new Error(
+        'The token, instance_url, and object are required to register Salesforce webhook'
+      );
+    }
 
     try {
       let previousItem = await getLastCreatedRecord(token, instance_url, object);
@@ -45,10 +50,15 @@ export default {
     },
   },
   get_example_event_data: async (context) => {
-    const {
-      conn_opts: { token, instance_url },
-      opts: { object },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const instance_url = context?.conn_opts?.instance_url;
+    const object = context?.opts?.object;
+
+    if (!token || !instance_url || !object) {
+      throw new Error(
+        'The token, instance_url, and object are required to get Salesforce new record example data'
+      );
+    }
 
     const data = await getLastCreatedRecord(token, instance_url, object);
 

@@ -4,7 +4,7 @@ import {
   TQoreTypeObject,
   TQoreOptions,
   TQorePartialEventAction,
-} from 'global/models/qore';
+} from '@qoretechnologies/ts-toolkit';
 import { OpenAPIV2 } from 'openapi-types';
 import { buildActionsFromSwaggerSchema, fixOptions, mapTriggersToApp } from '../global/helpers';
 import eSignature from '../schemas/esignature.swagger.json';

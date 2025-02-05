@@ -1,14 +1,14 @@
 import {
   IQoreAppActionWithFunction,
-  IQoreAppWithActions,
+  TQoreAppWithActions,
   TQoreAppActionFunctionContext,
-} from '../global/models/qore';
+} from '@qoretechnologies/ts-toolkit';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { validateResponseProperties } from './utils';
 
 describe('slackPieceTest', () => {
   let newMessageTimestamp: string = '';
-  let slackApp: IQoreAppWithActions | null = null;
+  let slackApp: TQoreAppWithActions | null = null;
 
   const actionContext = {
     conn_name: 'slack',

@@ -1,9 +1,6 @@
 import { Client } from '@notionhq/client';
 import { SearchResponse } from '@notionhq/client/build/src/api-endpoints';
-import {
-  IQoreAllowedValue,
-  TQoreGetAllowedValuesFunction,
-} from '../../../../../global/models/qore';
+import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../../../utils/Debugger';
 import { delay } from '../../../../../global/helpers';
 import { NOTION_ALLOWED_VALUES_TIMEOUT, NOTION_FETCH_DELAY } from '../constants';
@@ -11,9 +8,11 @@ import { NOTION_ALLOWED_VALUES_TIMEOUT, NOTION_FETCH_DELAY } from '../constants'
 export const getNotionDatabaseIdAllowedValues: TQoreGetAllowedValuesFunction = async (
   context
 ): Promise<IQoreAllowedValue[]> => {
-  const {
-    conn_opts: { token },
-  } = context;
+  const token = context?.conn_opts?.token;
+
+  if (!token) {
+    throw new Error('Notion token is required for databaseId allowed values');
+  }
 
   const notion = new Client({
     auth: token,

@@ -1,8 +1,8 @@
 import { OpenAPIV2 } from 'openapi-types';
 import { buildActionsFromSwaggerSchema } from '../../global/helpers';
-import { TAllowedPaths, TQoreAppActionOverrideOption } from '../../global/models/qore';
+import { TAllowedPaths, TQoreAppActionOverrideOption } from '@qoretechnologies/ts-toolkit';
 import eSignature from '../../schemas/esignature.swagger.json';
-import { IQoreConnectionOptions } from '../../global/models/qore';
+import { IQoreConnectionOptions } from '@qoretechnologies/ts-toolkit';
 import { getEsignatureEnvelopeIdAllowedValues } from './helpers/get-envelope-id-allowed-values';
 import { getEsignatureFolderIdAllowedValues } from './helpers/get-folder-id-allowed-values';
 import { getEsignatureRecipientIdAllowedValues } from './helpers/get-recipient-id-allowed-values';
@@ -33,6 +33,10 @@ export const ESIGNATURE_CONN_OPTIONS = {
 
 export const GetAccountIdConfig = {
   get_allowed_values: function (ctx) {
+    if (!ctx?.conn_opts?.accounts) {
+      throw new Error('No accounts found in the connection options for eSignature');
+    }
+
     return ctx.conn_opts.accounts.map((info: any) => {
       return {
         display_name: info.account_name,
@@ -42,7 +46,7 @@ export const GetAccountIdConfig = {
     });
   },
   get_default_value: function (ctx) {
-    if (ctx.conn_opts.account_id) {
+    if (ctx?.conn_opts?.account_id) {
       return ctx.conn_opts.account_id;
     }
   },

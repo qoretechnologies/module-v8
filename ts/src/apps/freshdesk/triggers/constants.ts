@@ -1,5 +1,7 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { TQoreAppActionWithEventOrWebhookEventInfo } from '../../../global/models/qore';
+import {
+  QorusRequest,
+  TQoreAppActionWithEventOrWebhookEventInfo,
+} from '@qoretechnologies/ts-toolkit';
 
 export const FreshdeskContactEventInfo = {
   desc: 'Contact event data',
@@ -231,7 +233,7 @@ export const fetchFreshdeskEventItem = async (options: {
 }) => {
   const { token, subdomain, path, order_by } = options;
 
-  const { data } = await QorusRequest.get<{
+  const response = await QorusRequest.get<{
     data: unknown[];
   }>(
     {
@@ -248,9 +250,11 @@ export const fetchFreshdeskEventItem = async (options: {
     { url: `https://${subdomain}.freshdesk.com`, endpointId: 'Freshdesk' }
   );
 
-  if (!data.length) {
+  const responseData = response?.data;
+
+  if (!responseData?.length) {
     return;
   }
 
-  return data[0];
+  return responseData[0];
 };

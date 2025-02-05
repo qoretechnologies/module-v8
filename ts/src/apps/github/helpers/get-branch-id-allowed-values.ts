@@ -1,15 +1,18 @@
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
 import { Octokit } from '@octokit/rest';
+import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
 import { GITHUB_ALLOWED_VALUES_TIMEOUT } from './constants';
 
 export const getGitHubBranchIdAllowedValues: TQoreGetAllowedValuesFunction = async (
   context
 ): Promise<IQoreAllowedValue[]> => {
-  const {
-    conn_opts: { token },
-    opts: { owner, repo },
-  } = context;
+  const token = context?.conn_opts?.token;
+  const owner = context?.opts?.owner;
+  const repo = context?.opts?.repo;
+
+  if (!token || !owner || !repo) {
+    throw new Error('The token, owner and repo are required to get Github branch allowed values');
+  }
 
   Debugger.log('Github Branch allowed values opts', {
     opts: context.opts,

@@ -1,8 +1,11 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
-import { JIRA_CONN_OPTIONS } from '../constants';
-import { Debugger } from '../../../utils/Debugger';
+import {
+  IQoreAllowedValue,
+  QorusRequest,
+  TQoreGetAllowedValuesFunction,
+} from '@qoretechnologies/ts-toolkit';
 import { delay } from '../../../global/helpers';
+import { Debugger } from '../../../utils/Debugger';
+import { JIRA_CONN_OPTIONS } from '../constants';
 import { JIRA_ALLOWED_VALUES_FETCH_DELAY, JIRA_ALLOWED_VALUES_TIMEOUT } from './constants';
 
 const fetchJiraIssues = async ({
@@ -57,9 +60,12 @@ const mapJiraIssue = (issue: {
 export const getJiraIssueIdAllowedValues: TQoreGetAllowedValuesFunction<
   typeof JIRA_CONN_OPTIONS
 > = async (context): Promise<IQoreAllowedValue[]> => {
-  const {
-    conn_opts: { token, cloud_id },
-  } = context;
+  const token = context?.conn_opts?.token;
+  const cloud_id = context?.conn_opts?.cloud_id;
+
+  if (!token || !cloud_id) {
+    throw new Error('The token and cloud_id are required to get Jira issue allowed values');
+  }
 
   const issues: IQoreAllowedValue[] = [];
   const startTime = Date.now();

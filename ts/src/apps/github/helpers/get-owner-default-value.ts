@@ -1,5 +1,5 @@
 import { Octokit } from '@octokit/rest';
-import { TQoreGetDefaultValueFunction } from '../../../global/models/qore';
+import { TQoreGetDefaultValueFunction } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
 import { GITHUB_ALLOWED_VALUES_TIMEOUT } from './constants';
 
@@ -8,12 +8,14 @@ const MAX_ITEMS = 600;
 
 export const getGitHubOwnerDefaultValue: TQoreGetDefaultValueFunction<
   any,
-  Promise<string>
+  Promise<string | undefined>
 > = async (context) => {
-  const {
-    conn_opts: { token },
-    opts,
-  } = context;
+  const token = context?.conn_opts?.token;
+  const opts = context?.opts;
+
+  if (!token) {
+    throw new Error('The token is required to get Github owner allowed values');
+  }
 
   const octokit = new Octokit({
     auth: token,
@@ -35,7 +37,11 @@ export const getGitHubOwnerDefaultValue: TQoreGetDefaultValueFunction<
       })) {
         itemCount += response.data.length;
 
-        repos.push(...response.data.filter((repository) => repository.name === opts.repo));
+        const reposWithOwner = response.data.filter(
+          (repository) => repository.name === opts.repo && repository.owner
+        ) as { owner: { login: string } }[];
+
+        repos.push(...reposWithOwner);
 
         if (itemCount >= MAX_ITEMS || Date.now() - startTime > GITHUB_ALLOWED_VALUES_TIMEOUT) {
           break;

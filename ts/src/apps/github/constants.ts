@@ -1,4 +1,4 @@
-import { TAllowedPaths, TQoreAppActionOverrideOption } from '../../global/models/qore';
+import { TAllowedPaths, TQoreAppActionOverrideOption } from '@qoretechnologies/ts-toolkit';
 import { getGitHubBranchIdAllowedValues } from './helpers/get-branch-id-allowed-values';
 import { getGitHubIssueIdAllowedValues } from './helpers/get-issue-id-allowed-values';
 import { getGitHubOwnerAllowedValues } from './helpers/get-owner-allowed-values';

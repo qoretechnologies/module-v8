@@ -1,5 +1,5 @@
 import { buildActionsFromSwaggerSchema } from '../../global/helpers';
-import { IQoreConnectionOptions, TAllowedPaths } from '../../global/models/qore';
+import { IQoreConnectionOptions, TAllowedPaths } from '@qoretechnologies/ts-toolkit';
 import netsuite from '../../schemas/netsuite.swagger.json';
 import { getNetsuiteAccountIdAllowedValues } from './helpers/get-account-id-allowed-values';
 import { getNetsuiteCustomerIdAllowedValues } from './helpers/get-customer-id-allowed-values';

@@ -1,5 +1,5 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
+import { EQoreAppActionCode, TQorePartialEventAction } from '@qoretechnologies/ts-toolkit';
 import { repoOwnerCommonOptions } from '../constants';
 import { commonEventFieldsType } from './constants';
 
@@ -9,10 +9,15 @@ export default {
   webhook_method: 'POST',
   options: repoOwnerCommonOptions,
   webhook_register: async (context, url) => {
-    const {
-      conn_opts: { token },
-      opts: { owner, repo },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const owner = context?.opts?.owner;
+    const repo = context?.opts?.repo;
+
+    if (!token || !owner || !repo) {
+      throw new Error(
+        'The following options are required to register new commit comment event: token, owner, repo'
+      );
+    }
 
     const { data } = await QorusRequest.post<any>(
       {
@@ -36,10 +41,15 @@ export default {
     return { webhook: data };
   },
   webhook_deregister: async (context, _url, regInfo) => {
-    const {
-      conn_opts: { token },
-      opts: { owner, repo },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const owner = context?.opts?.owner;
+    const repo = context?.opts?.repo;
+
+    if (!token || !owner || !repo) {
+      throw new Error(
+        'The following options are required to deregister new commit comment event: token, owner, repo'
+      );
+    }
     const { webhook } = regInfo;
 
     await QorusRequest.deleteReq<any>(

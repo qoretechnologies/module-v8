@@ -1,9 +1,12 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
+import {
+  EQoreAppActionCode,
+  QorusRequest,
+  TQorePartialEventAction,
+} from '@qoretechnologies/ts-toolkit';
+import { getAsanaTaskIdAllowedValues } from '../helpers/get-task-id-allowed-values';
 import { getAsanaWorkspaceIdAllowedValuesRest } from '../helpers/get-workspace-id-allowed-values';
 import { getAsanaWorkspaceProjectIdAllowedValues } from '../helpers/get-workspace-project-id-allowed-values';
 import { asanaEventInfoType, asanaWebhookEchoHeader, asanaWebhookInfoLocation } from './constants';
-import { getAsanaTaskIdAllowedValues } from '../helpers/get-task-id-allowed-values';
 import { deregisterAsanaWebhook } from './helpers';
 
 export default {
@@ -30,10 +33,16 @@ export default {
     },
   },
   webhook_register: async (context, url) => {
-    const {
-      conn_opts: { token },
-      opts: { task },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const task = context?.opts?.task;
+
+    if (!token) {
+      throw new Error('Token is required to register New Completed Subtask Asana webhook');
+    }
+
+    if (!task) {
+      throw new Error('Task is required to register New Completed Subtask Asana webhook');
+    }
 
     const { data } = await QorusRequest.post<any>(
       {

@@ -1,7 +1,7 @@
 import { Client } from '@notionhq/client';
 import { createAction, DynamicPropsValue, OAuth2PropertyValue, Property } from 'core/framework';
 import { notionAuth } from '../..';
-import { TQoreResponseType } from '../../../../global/models/qore';
+import { TQoreResponseType } from '@qoretechnologies/ts-toolkit';
 import { notionCommon } from '../common';
 import { NotionFieldMapping } from '../common/models';
 

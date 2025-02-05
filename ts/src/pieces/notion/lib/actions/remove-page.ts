@@ -12,7 +12,11 @@ export const removePage = createAction({
     pageId: notionCommon.page,
   },
   async run(context) {
-    const { pageId } = context.propsValue;
+    const pageId = context.propsValue?.pageId;
+
+    if (!pageId) {
+      throw new Error('Page ID is required for remove_page action');
+    }
 
     const notion = new Client({
       auth: context.auth.access_token,

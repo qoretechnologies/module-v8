@@ -1,7 +1,6 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
+import { IQoreAllowedValue, QorusRequest, TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
 import { actionsCatalogue } from '../../ActionsCatalogue';
 import { createSwaggerPaths, mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
-import { IQoreAllowedValue, IQoreAppWithActions } from '../../global/models/qore';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import {
@@ -16,7 +15,7 @@ import * as ESIGNATURE_TRIGGERS from './triggers';
 /*
  * Returns the app object with all the actions ready to use, using translations
  * @param locale - the locale
- * @returns IQoreAppWithActions
+ * @returns TQoreAppWithActions
  */
 
 export interface IEsignatureUserInfoAccount {
@@ -268,11 +267,17 @@ export default (locale: Locales) =>
       set_options_post_auth: async (context) => {
         // We need to make a call to the docusign user info endpoint to get the base_uri
         // and account_id
-        const { data: userInfo }: { data: IEsignatureUserInfo } = await QorusRequest.get(
+        const token = context?.conn_opts?.token;
+
+        if (!token) throw new Error('Token is missing for docusign set_options_post_auth');
+
+        const response: { data: IEsignatureUserInfo } | undefined = await QorusRequest.get<{
+          data: IEsignatureUserInfo;
+        }>(
           {
             path: '/oauth/userinfo',
             headers: {
-              Authorization: `Bearer ${context.conn_opts.token}`,
+              Authorization: `Bearer ${token}`,
             },
           },
           {
@@ -280,6 +285,14 @@ export default (locale: Locales) =>
             endpointId: 'Docusign',
           }
         );
+
+        const userInfo = response?.data;
+
+        if (!userInfo) {
+          throw new Error(
+            'Docusign user info response is empty for docusign set_options_post_auth'
+          );
+        }
 
         if ('accounts' in userInfo && userInfo.accounts.length > 0) {
           const account = userInfo.accounts.find((account: any) => account.is_default);
@@ -304,13 +317,15 @@ export default (locale: Locales) =>
         // returns data for url_template_options for the given option
         code: function (context): string | void {
           // find account info in context.conn_opts.accounts
-          if (!context.conn_opts.accounts) {
+          const accounts = context?.conn_opts?.accounts as IEsignatureUserInfoAccount[];
+          const accountId = context?.opts?.accountId;
+          if (!accounts || !accountId) {
             return;
           }
 
-          const info: IEsignatureUserInfoAccount = (
-            context.conn_opts.accounts as IEsignatureUserInfoAccount[]
-          ).find((info) => info.account_id === context.opts.accountId);
+          const info: IEsignatureUserInfoAccount | undefined = accounts.find(
+            (info) => info.account_id === accountId
+          );
 
           if (info) {
             return `https://${info.base_uri}/restapi/v2.1/accounts/${info.account_id}`;
@@ -319,4 +334,4 @@ export default (locale: Locales) =>
       },
       url_template_options: ['account_id', 'base_uri'],
     },
-  }) satisfies IQoreAppWithActions<typeof ESIGNATURE_CONN_OPTIONS>;
+  }) satisfies TQoreAppWithActions;

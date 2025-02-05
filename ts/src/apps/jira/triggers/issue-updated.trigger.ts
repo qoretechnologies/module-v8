@@ -1,10 +1,13 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
+import {
+  EQoreAppActionCode,
+  QorusRequest,
+  TQorePartialEventAction,
+} from '@qoretechnologies/ts-toolkit';
+import { Debugger } from '../../../utils/Debugger';
 import { getJiraIssueExampleData } from '../helpers/get-issue-example-data';
 import { getJiraProjectIdAllowedValues } from '../helpers/get-project-id-allowed-values';
 import { issueEventInfoType } from './event-info/issue.event-info';
 import { deregisterJiraWebhook } from './helpers';
-import { Debugger } from '../../../utils/Debugger';
 
 export default {
   action: 'issue_updated',
@@ -18,10 +21,13 @@ export default {
     },
   },
   webhook_register: async (context, url) => {
-    const {
-      conn_opts: { token, cloud_id },
-      opts: { project },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const cloud_id = context?.conn_opts?.cloud_id;
+    const project = context?.opts?.project;
+
+    if (!token || !cloud_id || !project) {
+      throw new Error('The token, cloud_id, and project are required to register Jira webhook');
+    }
 
     const { data } = await QorusRequest.post<any>(
       {

@@ -1,4 +1,4 @@
-import { IQoreAppActionOption, TQoreTypeObject } from '../../../global/models/qore';
+import { IQoreAppActionOption, TQoreTypeObject } from '@qoretechnologies/ts-toolkit';
 
 export const eventRepositoryType = {
   type: 'hash',

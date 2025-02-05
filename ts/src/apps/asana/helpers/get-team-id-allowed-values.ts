@@ -1,18 +1,23 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
+import {
+  IQoreAllowedValue,
+  TQoreGetAllowedValuesFunction,
+  QorusRequest,
+} from '@qoretechnologies/ts-toolkit';
 
 export const getAsanaTeamIdAllowedValues: TQoreGetAllowedValuesFunction = async (
   context
 ): Promise<IQoreAllowedValue[]> => {
-  const {
-    conn_opts: { token },
-    opts,
-  } = context;
+  const token = context?.conn_opts?.token;
+
+  if (!token) {
+    throw new Error('Token is required to get Asana teams allowed values');
+  }
 
   const teams: IQoreAllowedValue[] = [];
-  let workspace = opts.workspace;
+  const opts = context?.opts;
+  let workspace = opts?.workspace;
 
-  if (opts.project && !opts.workspace) {
+  if (opts?.project && opts?.workspace) {
     const { data: project } = await QorusRequest.get<any>(
       {
         headers: {

@@ -1,5 +1,8 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
+import {
+  EQoreAppActionCode,
+  QorusRequest,
+  TQorePartialEventAction,
+} from '@qoretechnologies/ts-toolkit';
 import { getAsanaWorkspaceIdAllowedValuesRest } from '../helpers/get-workspace-id-allowed-values';
 import { getAsanaWorkspaceProjectIdAllowedValues } from '../helpers/get-workspace-project-id-allowed-values';
 import { asanaEventInfoType, asanaWebhookEchoHeader, asanaWebhookInfoLocation } from './constants';
@@ -23,10 +26,16 @@ export default {
     },
   },
   webhook_register: async (context, url) => {
-    const {
-      conn_opts: { token },
-      opts: { project },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const project = context?.opts?.project;
+
+    if (!token) {
+      throw new Error('Token is required to register New Project Task Asana webhook');
+    }
+
+    if (!project) {
+      throw new Error('Project is required to register New Project Task Asana webhook');
+    }
 
     const { data } = await QorusRequest.post<any>(
       {

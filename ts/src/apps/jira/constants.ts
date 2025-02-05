@@ -1,5 +1,5 @@
-import { TAllowedPaths } from '../../global/models/qore';
-import { IQoreConnectionOptions } from '../../global/models/qore';
+import { TAllowedPaths } from '@qoretechnologies/ts-toolkit';
+import { IQoreConnectionOptions } from '@qoretechnologies/ts-toolkit';
 import { getJiraCommentIdAllowedValues } from './helpers/get-comment-id-allowed-values';
 import { getJiraIssueDescriptionDefaultValue } from './helpers/get-default-description-value';
 import { getJiraFieldIdAllowedValues } from './helpers/get-field-id-allowed-values';

@@ -1,9 +1,25 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
+import {
+  IQoreAllowedValue,
+  QorusRequest,
+  TQoreGetAllowedValuesFunction,
+} from '@qoretechnologies/ts-toolkit';
 import { ZENDESK_CONN_OPTIONS } from '..';
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
-import { Debugger } from '../../../utils/Debugger';
 import { delay } from '../../../global/helpers';
+import { Debugger } from '../../../utils/Debugger';
 import { ZENDESK_ALLOWED_VALUES_FETCH_DELAY, ZENDESK_ALLOWED_VALUES_TIMEOUT } from './constants';
+
+interface IEntityData {
+  [displayNameField: string]: string;
+  id: string;
+}
+
+interface IZendeskResponseBase {
+  next_page: string;
+}
+
+type IZendeskResponseData = IZendeskResponseBase & {
+  [entity: string]: IEntityData[];
+};
 
 export const CreateZendeskGetAllowedValuesFunction = (
   entity: string,
@@ -12,9 +28,12 @@ export const CreateZendeskGetAllowedValuesFunction = (
   composeDescription?: (entity: any) => string
 ): TQoreGetAllowedValuesFunction<typeof ZENDESK_CONN_OPTIONS> => {
   return async (context): Promise<IQoreAllowedValue[]> => {
-    const {
-      conn_opts: { token, subdomain },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const subdomain = context?.conn_opts?.subdomain;
+
+    if (!token || !subdomain) {
+      throw new Error('The token and subdomain are required to get Zendesk allowed values');
+    }
 
     const values: IQoreAllowedValue[] = [];
     const startTime = Date.now();
@@ -27,21 +46,32 @@ export const CreateZendeskGetAllowedValuesFunction = (
           break;
         }
 
-        const { data } = await QorusRequest.get<any>(
+        const params: Record<string, string> = {
+          ...additionalParams,
+          ...(page && { page }),
+        };
+
+        const response: { data: IZendeskResponseData } | undefined = await QorusRequest.get<{
+          data: IZendeskResponseData;
+        }>(
           {
             headers: {
               Authorization: `Bearer ${token}`,
             },
             path: `/api/v2/${entity}`,
-            params: {
-              ...additionalParams,
-              ...(page && { page }),
-            },
+            params,
           },
           { url: `https://${subdomain}.zendesk.com`, endpointId: 'Zendesk' }
         );
 
-        const additionalValues: IQoreAllowedValue[] = data[entity].map(
+        const responseData: IZendeskResponseData | undefined = response?.data;
+
+        if (!responseData) {
+          Debugger.log(`No data found for ${entity}`);
+          break;
+        }
+
+        const additionalValues: IQoreAllowedValue[] = responseData[entity].map(
           (entity: { [x: string]: string; id: string }): IQoreAllowedValue => ({
             value: entity.id.toString(),
             display_name: entity[displayNameField],
@@ -51,7 +81,9 @@ export const CreateZendeskGetAllowedValuesFunction = (
 
         values.push(...additionalValues);
 
-        page = data.next_page ? new URL(data.next_page).searchParams.get('page') : null;
+        page = responseData.next_page
+          ? new URL(responseData.next_page).searchParams.get('page')
+          : null;
 
         if (page) {
           await delay(ZENDESK_ALLOWED_VALUES_FETCH_DELAY);

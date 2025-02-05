@@ -1,4 +1,4 @@
-import { IQoreConnectionOptions } from '../../global/models/qore';
+import { IQoreConnectionOptions } from '@qoretechnologies/ts-toolkit';
 
 export const SALESFORCE_CONN_OPTIONS = {
   instance_url: {

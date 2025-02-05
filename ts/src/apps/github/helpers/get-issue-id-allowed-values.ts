@@ -1,15 +1,19 @@
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
 import { Octokit } from '@octokit/rest';
+import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
 import { GITHUB_ALLOWED_VALUES_TIMEOUT } from './constants';
 
 export const getGitHubIssueIdAllowedValues: TQoreGetAllowedValuesFunction = async (
   context
 ): Promise<IQoreAllowedValue[]> => {
-  const {
-    conn_opts: { token },
-    opts: { owner, repo },
-  } = context;
+  const token = context?.conn_opts?.token;
+  const owner = context?.opts?.owner;
+  const repo = context?.opts?.repo;
+
+  if (!token || !owner || !repo) {
+    throw new Error('The token, owner and repo are required to get Github issue allowed values');
+  }
+
   const octokit = new Octokit({
     auth: token,
   });
@@ -36,7 +40,7 @@ export const getGitHubIssueIdAllowedValues: TQoreGetAllowedValuesFunction = asyn
             short_desc:
               `Title:${issue.title}\n\n` +
               `Labels: [${issue.labels.map((label) => (typeof label === 'string' ? label : label.name)).join(', ')}]`,
-            desc: issue.body,
+            desc: issue.body || undefined,
             image: issue.user?.avatar_url,
           })
         )

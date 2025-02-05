@@ -1,5 +1,5 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
+import { EQoreAppActionCode, QoreAppCreator, QorusRequest } from '@qoretechnologies/ts-toolkit';
+import { FRESHDESK_APP_NAME } from '../constants';
 import {
   FreshdeskTicketPriorityAllowedValues,
   FreshdeskTicketStatusAllowedValues,
@@ -34,7 +34,8 @@ const mapTicketToEventTicket = (ticket: TTicket, subdomain: string) => {
   };
 };
 
-export default {
+const FreshdeskNewTicketTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: FRESHDESK_APP_NAME,
   action: 'new_ticket_trigger',
   action_code: EQoreAppActionCode.EVENT,
   options: {
@@ -54,12 +55,18 @@ export default {
   },
   webhook_method: 'POST',
   webhook_register: async (context, url) => {
-    const {
-      conn_opts: { token, subdomain },
-      opts,
-    } = context;
+    const token = context?.conn_opts?.token;
+    const subdomain = context?.conn_opts?.subdomain;
+    const ticketStatus = context?.opts?.ticketStatus;
+    const ticketPriority = context?.opts?.ticketPriority || [];
 
-    const { data } = await QorusRequest.post<{ data: { name: string; id: number } }>(
+    if (!token || !subdomain || !ticketStatus) {
+      throw new Error(
+        'Token, subdomain and ticket status are required to register a webhook for Freshdesk new ticket trigger'
+      );
+    }
+
+    const response = await QorusRequest.post<{ data: { name: string; id: number } }>(
       {
         path: '/api/v2/automations/1/rules',
         headers: {
@@ -77,16 +84,15 @@ export default {
                   field_name: 'status',
                   resource_type: 'ticket',
                   operator: 'in',
-                  // If the ticket has status open
-                  value: opts.ticketStatus,
+                  value: ticketStatus,
                 },
-                ...(opts?.ticketPriority?.length
+                ...(ticketPriority.length
                   ? [
                       {
                         field_name: 'priority',
                         resource_type: 'ticket',
                         operator: 'in',
-                        value: opts.ticketPriority,
+                        value: ticketPriority,
                       },
                     ]
                   : []),
@@ -118,12 +124,22 @@ export default {
       { url: `https://${subdomain}.freshdesk.com`, endpointId: 'Freshdesk' }
     );
 
-    return { webhook: data };
+    const responseData = response?.data;
+
+    if (!responseData) return;
+
+    return { webhook: responseData };
   },
   webhook_deregister: async (context, _url, regInfo) => {
-    const {
-      conn_opts: { token, subdomain },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const subdomain = context?.conn_opts?.subdomain;
+
+    if (!token || !subdomain) {
+      throw new Error(
+        'Token and subdomain are required to deregister a webhook for Freshdesk new ticket trigger'
+      );
+    }
+
     const { webhook } = regInfo;
 
     await QorusRequest.deleteReq<any>(
@@ -138,11 +154,16 @@ export default {
   },
 
   get_example_event_data: async (context) => {
-    const {
-      conn_opts: { token, subdomain },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const subdomain = context?.conn_opts?.subdomain;
 
-    const { data } = await QorusRequest.get<{
+    if (!token || !subdomain) {
+      throw new Error(
+        'Failed to get example data for Freshdesk new ticket trigger. Token or subdomain are missing'
+      );
+    }
+
+    const response = await QorusRequest.get<{
       data: TTicket[];
     }>(
       {
@@ -159,11 +180,13 @@ export default {
       { url: `https://${subdomain}.freshdesk.com`, endpointId: 'Freshdesk' }
     );
 
-    if (!data.length) {
+    const responseData = response?.data;
+
+    if (!responseData?.length) {
       return;
     }
 
-    return mapTicketToEventTicket(data[0], subdomain);
+    return mapTicketToEventTicket(responseData[0], subdomain);
   },
 
   event_info: {
@@ -183,4 +206,6 @@ export default {
       },
     },
   },
-} satisfies TQorePartialEventAction;
+});
+
+export default FreshdeskNewTicketTrigger;

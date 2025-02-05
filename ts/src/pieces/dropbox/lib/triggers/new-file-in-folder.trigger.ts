@@ -1,5 +1,8 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { EQoreAppActionCode, TQorePartialEventAction } from '../../../../global/models/qore';
+import {
+  EQoreAppActionCode,
+  QorusRequest,
+  TQorePartialEventAction,
+} from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../../utils/Debugger';
 import { getDropboxFolderAllowedValues } from '../common/helpers/get-folder-allowed-values';
 
@@ -111,10 +114,14 @@ export default {
     },
   },
   event_function: async (context, update, should_stop) => {
-    const {
-      conn_opts: { token },
-      opts: { folder },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const folder = context?.opts?.folder;
+
+    if (!token || !folder) {
+      throw new Error(
+        'The token and folder options are required to start the new_file_in_folder event_function'
+      );
+    }
 
     try {
       let previousItem = await getLastModifiedFile(token, folder);
@@ -175,10 +182,14 @@ export default {
     },
   },
   get_example_event_data: async (context) => {
-    const {
-      conn_opts: { token },
-      opts: { folder },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const folder = context?.opts?.folder;
+
+    if (!token || !folder) {
+      throw new Error(
+        'The token and folder options are required to get the example event data for Dropbox new file in folder trigger'
+      );
+    }
 
     const latestItem = await getLastModifiedFile(token, folder);
 

@@ -5,7 +5,7 @@ import {
   mapActionsToApp,
   mapTriggersToApp,
 } from '../../global/helpers';
-import { IQoreAppWithActions, IQoreConnectionOptions } from '../../global/models/qore';
+import { TQoreAppWithActions, IQoreConnectionOptions } from '@qoretechnologies/ts-toolkit';
 import { L } from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import ZendeskSchema from '../../schemas/zendesk.swagger.json';
@@ -31,7 +31,7 @@ export const ZENDESK_ACTIONS = buildActionsFromSwaggerSchema({
 /*
  * Returns the app object with all the actions ready to use, using translations
  * @param locale - the locale
- * @returns IQoreAppWithActions
+ * @returns TQoreAppWithActions
  */
 export default (locale: Locales) =>
   ({
@@ -82,4 +82,4 @@ export default (locale: Locales) =>
       required_options: 'subdomain',
       url_template_options: ['subdomain'],
     },
-  }) satisfies IQoreAppWithActions<typeof ZENDESK_CONN_OPTIONS>;
+  }) satisfies TQoreAppWithActions;

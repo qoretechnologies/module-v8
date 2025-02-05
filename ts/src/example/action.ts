@@ -1,8 +1,7 @@
-import { QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
-import { EQoreAppActionCode } from '../global/models/qore';
+import { QoreAppCreator, TQoreOptions, EQoreAppActionCode } from '@qoretechnologies/ts-toolkit';
 import { L } from '../i18n/i18n-node';
 
-const options: TQoreOptions = {
+const options = {
   option1: {
     display_name: L.en.apps._testing.actions.test.options.option1.displayName(),
     short_desc: L.en.apps._testing.actions.test.options.option1.shortDesc(),
@@ -11,17 +10,17 @@ const options: TQoreOptions = {
     required: true,
     example_value: '123',
   },
-};
+} satisfies TQoreOptions;
 
 export default QoreAppCreator.createLocalizedAction({
   action: 'delete-attachment',
   app: 'test',
   action_code: EQoreAppActionCode.ACTION,
-  api_function: async ({ option1 }) => {
+  api_function: (data) => {
     try {
       return {
         channel: {
-          id: option1,
+          id: data?.option1,
         },
       };
     } catch (error) {

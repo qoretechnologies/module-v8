@@ -1,17 +1,14 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { IQoreAppActionWithWebhookBase } from '../../../global/models/qore';
+import { IQoreAppActionWithWebhookBase, QorusRequest } from '@qoretechnologies/ts-toolkit';
+import axios from 'axios';
 import { Debugger } from '../../../utils/Debugger';
 import { TStripeEventType } from './constants';
-import axios from 'axios';
 
 export const deregisterStripeWebhook: IQoreAppActionWithWebhookBase['webhook_deregister'] = async (
   context,
   _url,
   regInfo
 ) => {
-  const {
-    conn_opts: { token },
-  } = context;
+  const token = context?.conn_opts?.token;
   const { webhook } = regInfo;
 
   await QorusRequest.deleteReq<any>(
@@ -32,9 +29,7 @@ export const createRegisterStripeWebhookFunction = (
   enabledEvents: TStripeEventType[]
 ): IQoreAppActionWithWebhookBase['webhook_register'] => {
   return async (context, url) => {
-    const {
-      conn_opts: { token },
-    } = context;
+    const token = context?.conn_opts?.token;
 
     try {
       const webhookData = new URLSearchParams();
@@ -69,9 +64,7 @@ export const createGetStripeExampleEventDataFunction: (
   eventTypes: TStripeEventType[]
 ) => IQoreAppActionWithWebhookBase['get_example_event_data'] = (eventTypes: TStripeEventType[]) => {
   return async (context) => {
-    const {
-      conn_opts: { token },
-    } = context;
+    const token = context?.conn_opts?.token;
 
     try {
       const params = new URLSearchParams();

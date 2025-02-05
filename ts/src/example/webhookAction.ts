@@ -2,7 +2,7 @@ import {
   EQoreAppActionCode,
   EQoreAppActionWebhookAuthType,
   TQoreAppAction,
-} from '../global/models/qore';
+} from '@qoretechnologies/ts-toolkit';
 
 export const testActionWithWebhook = {
   app: 'test',

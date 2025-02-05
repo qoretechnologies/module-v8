@@ -1,4 +1,4 @@
-import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
+import { EQoreAppActionCode, TQorePartialEventAction } from '@qoretechnologies/ts-toolkit';
 import { TStripeEventType } from './constants';
 import { stripeSubscriptionEventInfoType } from './event-info/subscription.event-info';
 import {

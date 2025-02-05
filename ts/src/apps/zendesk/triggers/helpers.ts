@@ -1,5 +1,4 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { IQoreAppActionWithWebhookBase } from '../../../global/models/qore';
+import { IQoreAppActionWithWebhookBase, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { ZENDESK_CONN_OPTIONS } from '..';
 
 export const createZendeskWebhookRegistrar = (
@@ -7,9 +6,12 @@ export const createZendeskWebhookRegistrar = (
   subscriptions: string[]
 ): IQoreAppActionWithWebhookBase<typeof ZENDESK_CONN_OPTIONS>['webhook_register'] => {
   return async (context, url) => {
-    const {
-      conn_opts: { token, subdomain },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const subdomain = context?.conn_opts?.subdomain;
+
+    if (!token || !subdomain) {
+      throw new Error('The token and subdomain are required to register a Zendesk webhook');
+    }
 
     const { data } = await QorusRequest.post<any>(
       {
@@ -39,9 +41,12 @@ export const createZendeskWebhookDeRegistrar = (): IQoreAppActionWithWebhookBase
   typeof ZENDESK_CONN_OPTIONS
 >['webhook_deregister'] => {
   return async (context, _url, regInfo) => {
-    const {
-      conn_opts: { token, subdomain },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const subdomain = context?.conn_opts?.subdomain;
+
+    if (!token || !subdomain) {
+      throw new Error('The token and subdomain are required to deregister a Zendesk webhook');
+    }
     const { webhook } = regInfo;
 
     await QorusRequest.deleteReq<any>(

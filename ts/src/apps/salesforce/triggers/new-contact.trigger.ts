@@ -1,4 +1,4 @@
-import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
+import { EQoreAppActionCode, TQorePartialEventAction } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
 import { fetchSalesforceObjectRecord } from '../helpers/constants';
 
@@ -6,9 +6,12 @@ export default {
   action: 'new_contact_trigger',
   action_code: EQoreAppActionCode.EVENT,
   event_function: async (context, update, should_stop) => {
-    const {
-      conn_opts: { token, instance_url },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const instance_url = context?.conn_opts?.instance_url;
+
+    if (!token || !instance_url) {
+      throw new Error('The token and instance_url are required to register Salesforce webhook');
+    }
 
     try {
       let previousContact = await getLastCreatedContact(token, instance_url);
@@ -36,9 +39,14 @@ export default {
     },
   },
   get_example_event_data: async (context) => {
-    const {
-      conn_opts: { token, instance_url },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const instance_url = context?.conn_opts?.instance_url;
+
+    if (!token || !instance_url) {
+      throw new Error(
+        'The token and instance_url are required to get Salesforce new contact example data'
+      );
+    }
 
     const data = await getLastCreatedContact(token, instance_url);
 

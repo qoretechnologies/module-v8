@@ -14,7 +14,7 @@ import {
   IQoreRestConnectionConfig,
   IQoreRestConnectionModifiers,
   TQorePartialEventAction,
-} from '../../global/models/qore';
+} from '@qoretechnologies/ts-toolkit';
 
 export const PieceBase = Type.Object({
   id: Type.Optional(Type.String()),

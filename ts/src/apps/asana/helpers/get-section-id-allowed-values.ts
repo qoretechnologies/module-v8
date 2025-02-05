@@ -1,13 +1,23 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
+import {
+  IQoreAllowedValue,
+  QorusRequest,
+  TQoreGetAllowedValuesFunction,
+} from '@qoretechnologies/ts-toolkit';
 
 export const getAsanaSectionIdAllowedValues: TQoreGetAllowedValuesFunction = async (
   context
 ): Promise<IQoreAllowedValue[]> => {
-  const {
-    conn_opts: { token },
-    opts: { project },
-  } = context;
+  const token = context?.conn_opts?.token;
+
+  if (!token) {
+    throw new Error('Token is required to get section id allowed values');
+  }
+
+  const project = context?.opts?.project;
+
+  if (!project) {
+    throw new Error('Project is required to get section id allowed values');
+  }
 
   const sections: IQoreAllowedValue[] = [];
 

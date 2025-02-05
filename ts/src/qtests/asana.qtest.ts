@@ -20,7 +20,7 @@ describe('Tests Asana Actions', () => {
       },
     });
 
-    workspaceId = process.env.ASANA_WORKSPACE_ID;
+    workspaceId = process.env.ASANA_WORKSPACE_ID || null;
     expect(connection).toBeDefined();
   });
 

@@ -1,4 +1,4 @@
-import { TAllowedPaths } from '../../global/models/qore';
+import { TAllowedPaths } from '@qoretechnologies/ts-toolkit';
 import { getAsanaAssigneeIdAllowedValues } from './helpers/get-assignee-id-allowed-values';
 import { getAsanaProjectIdAllowedValuesRest } from './helpers/get-project-id-allowed-values';
 import { getAsanaSectionIdAllowedValues } from './helpers/get-section-id-allowed-values';
@@ -10,7 +10,7 @@ import { getAsanaWorkspaceIdAllowedValuesRest } from './helpers/get-workspace-id
 
 export const ASANA_APP_NAME = 'Asana';
 
-export const ASANA_ALLOWED_PATHS: TAllowedPaths = {
+export const ASANA_ALLOWED_PATHS = {
   '/tasks': {
     GET: {
       override_options: {
@@ -503,6 +503,6 @@ export const ASANA_ALLOWED_PATHS: TAllowedPaths = {
       },
     },
   },
-};
+} satisfies TAllowedPaths;
 
 export const ASANA_SWAGGER_API_PATH = '';

@@ -1,5 +1,5 @@
 import { mapTriggersToApp } from '../../global/helpers';
-import { IQoreExistingAppWithActions } from '../../global/models/qore';
+import { IQoreExistingAppWithActions } from '@qoretechnologies/ts-toolkit';
 import { Locales } from '../../i18n/i18n-types';
 import { SALESFORCE_APP_MODULE, SALESFORCE_APP_NAME } from './constants';
 import * as SALESFORCE_TRIGGERS from './triggers';

@@ -1,15 +1,17 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { IQoreAppActionWithWebhookBase } from '../../../global/models/qore';
+import { IQoreAppActionWithWebhookBase } from '@qoretechnologies/ts-toolkit';
 
 export const deregisterAsanaWebhook: IQoreAppActionWithWebhookBase['webhook_deregister'] = async (
   context,
   _url,
   regInfo
 ) => {
-  const {
-    conn_opts: { token },
-  } = context;
   const { webhook } = regInfo;
+  const token = context?.conn_opts?.token;
+
+  if (!token) {
+    throw new Error('Token is required to deregister Asana webhook');
+  }
 
   await QorusRequest.deleteReq<any>(
     {

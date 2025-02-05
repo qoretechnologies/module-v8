@@ -1,8 +1,11 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
-import { JIRA_CONN_OPTIONS } from '../constants';
-import { Debugger } from '../../../utils/Debugger';
+import {
+  IQoreAllowedValue,
+  QorusRequest,
+  TQoreGetAllowedValuesFunction,
+} from '@qoretechnologies/ts-toolkit';
 import { delay } from '../../../global/helpers';
+import { Debugger } from '../../../utils/Debugger';
+import { JIRA_CONN_OPTIONS } from '../constants';
 import { JIRA_ALLOWED_VALUES_FETCH_DELAY, JIRA_ALLOWED_VALUES_TIMEOUT } from './constants';
 
 const fetchJiraWorklogs = async ({
@@ -47,10 +50,15 @@ const mapJiraWorklog = (worklog: any): IQoreAllowedValue => ({
 export const getJiraWorklogIdAllowedValues: TQoreGetAllowedValuesFunction<
   typeof JIRA_CONN_OPTIONS
 > = async (context): Promise<IQoreAllowedValue[]> => {
-  const {
-    conn_opts: { token, cloud_id },
-    opts: { issueIdOrKey },
-  } = context;
+  const token = context?.conn_opts?.token;
+  const cloud_id = context?.conn_opts?.cloud_id;
+  const issueIdOrKey = context?.opts?.issueIdOrKey;
+
+  if (!token || !cloud_id || !issueIdOrKey) {
+    throw new Error(
+      'The token, cloud_id, and issueIdOrKey are required to get Jira worklog allowed values'
+    );
+  }
 
   const worklogs: IQoreAllowedValue[] = [];
   const startTime = Date.now();

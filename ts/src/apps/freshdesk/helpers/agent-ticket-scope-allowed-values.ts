@@ -1,4 +1,4 @@
-import { IQoreAllowedValue } from '../../../global/models/qore';
+import { IQoreAllowedValue } from '@qoretechnologies/ts-toolkit';
 
 export const FreshdeskAgentTicketScopeAllowedValues = [
   {

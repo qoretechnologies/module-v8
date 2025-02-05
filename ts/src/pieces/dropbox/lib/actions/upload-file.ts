@@ -1,7 +1,7 @@
 import { createAction, Property } from 'core/framework';
 import { httpClient, HttpMethod, AuthenticationType } from 'core/common';
 import { dropboxAuth } from '../../';
-import { TQoreResponseType } from '../../../../global/models/qore';
+import { TQoreResponseType } from '@qoretechnologies/ts-toolkit';
 
 const dropBoxUploadFileResponseType = {
   type: 'hash',

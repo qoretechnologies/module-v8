@@ -1,14 +1,17 @@
 import { Octokit } from '@octokit/rest';
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
+import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
 import { GITHUB_ALLOWED_VALUES_TIMEOUT } from './constants';
 
 export const getGitHubOrgAllowedValues: TQoreGetAllowedValuesFunction = async (
   context
 ): Promise<IQoreAllowedValue[]> => {
-  const {
-    conn_opts: { token },
-  } = context;
+  const token = context?.conn_opts?.token;
+
+  if (!token) {
+    throw new Error('The token is required to get Github org allowed values');
+  }
+
   const octokit = new Octokit({
     auth: token,
   });
@@ -25,7 +28,7 @@ export const getGitHubOrgAllowedValues: TQoreGetAllowedValuesFunction = async (
           (org): IQoreAllowedValue => ({
             value: org.login,
             display_name: org.login,
-            desc: org.description,
+            desc: org.description || undefined,
             image: org?.avatar_url,
           })
         )

@@ -1,6 +1,6 @@
 import { createAction, Property } from 'core/framework';
 import { slackAuth } from '../../';
-import { TQoreResponseType } from '../../../../global/models/qore';
+import { TQoreResponseType } from '@qoretechnologies/ts-toolkit';
 import { blocks, profilePicture, slackChannel, slackInfo, username } from '../common/props';
 import { processMessageTimestamp, slackSendMessage } from '../common/utils';
 

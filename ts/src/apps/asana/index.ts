@@ -1,15 +1,15 @@
+import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
 import { actionsCatalogue } from '../../ActionsCatalogue';
 import {
   buildActionsFromSwaggerSchema,
   mapActionsToApp,
   mapTriggersToApp,
 } from '../../global/helpers';
-import { IQoreAppWithActions } from '../../global/models/qore';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import asana from '../../schemas/asana.swagger.json';
 import { ASANA_ALLOWED_PATHS, ASANA_APP_NAME } from './constants';
-import * as asanaTriggers from './triggers';
+import * as ASANA_TRIGGERS from './triggers';
 
 export const ASANA_ACTIONS = buildActionsFromSwaggerSchema({
   schema: asana as any,
@@ -20,7 +20,7 @@ export const ASANA_ACTIONS = buildActionsFromSwaggerSchema({
 /*
  * Returns the app object with all the actions ready to use, using translations
  * @param locale - the locale
- * @returns IQoreAppWithActions
+ * @returns TQoreAppWithActions
  */
 export default (locale: Locales) =>
   ({
@@ -29,7 +29,7 @@ export default (locale: Locales) =>
     name: ASANA_APP_NAME,
     actions: [
       ...mapActionsToApp(ASANA_APP_NAME, ASANA_ACTIONS, locale),
-      ...mapTriggersToApp(ASANA_APP_NAME, asanaTriggers, locale),
+      ...mapTriggersToApp(ASANA_APP_NAME, ASANA_TRIGGERS, locale),
     ],
     desc: L[locale].apps.Asana.longDesc(),
     logo:
@@ -64,4 +64,4 @@ export default (locale: Locales) =>
       ping_method: 'GET',
       ping_path: '/api/1.0/users/me',
     },
-  }) satisfies IQoreAppWithActions;
+  }) satisfies TQoreAppWithActions;

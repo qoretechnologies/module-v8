@@ -1,5 +1,4 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { IQoreAllowedValue } from '../../../global/models/qore';
+import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
 
 export type TFetchFreshdeskAllowedValuesOptions<ItemType = unknown> = {
   token: string;
@@ -13,7 +12,7 @@ export const fetchFreshdeskAllowedValues = async <ItemType = unknown>(
 ): Promise<IQoreAllowedValue[]> => {
   const { path, subdomain, token } = options;
 
-  const { data } = await QorusRequest.get<{
+  const response = await QorusRequest.get<{
     data: ItemType[];
   }>(
     {
@@ -32,6 +31,12 @@ export const fetchFreshdeskAllowedValues = async <ItemType = unknown>(
       endpointId: 'Freshdesk',
     }
   );
+
+  const data = response?.data;
+
+  if (!data) {
+    return [];
+  }
 
   return data.map(options.mapItemToAllowedValue);
 };

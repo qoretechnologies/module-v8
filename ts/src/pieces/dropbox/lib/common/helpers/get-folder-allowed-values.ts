@@ -1,8 +1,5 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import {
-  IQoreAllowedValue,
-  TQoreGetAllowedValuesFunction,
-} from '../../../../../global/models/qore';
+import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../../../utils/Debugger';
 import { DROPBOX_ALLOWED_VALUES_TIMEOUT } from '../constants';
 
@@ -72,9 +69,11 @@ const mapDropboxFolder = (folder: TDropboxItem): IQoreAllowedValue => ({
 export const getDropboxFolderAllowedValues: TQoreGetAllowedValuesFunction = async (
   context
 ): Promise<IQoreAllowedValue[]> => {
-  const {
-    conn_opts: { token },
-  } = context;
+  const token = context?.conn_opts?.token;
+
+  if (!token) {
+    throw new Error('The token is required to get Dropbox folder allowed values');
+  }
 
   const folders: IQoreAllowedValue[] = [{ value: '', display_name: 'Root', short_desc: '/' }];
   const startTime = Date.now();

@@ -1,7 +1,7 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { ESIGNATURE_ACTIONS } from '../apps/esignature/constants';
 import _sodium from 'libsodium-wrappers';
-import { TQoreAppActionWithWebhook } from '../global/models/qore';
+import { TQoreAppActionWithWebhook } from '@qoretechnologies/ts-toolkit';
 import * as ESIGNATURE_TRIGGERS from '../apps/esignature/triggers';
 
 let connection: string;

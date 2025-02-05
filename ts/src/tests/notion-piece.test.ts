@@ -1,15 +1,15 @@
 import {
   IQoreAppActionWithFunction,
-  IQoreAppWithActions,
+  TQoreAppWithActions,
   TQoreAppActionFunctionContext,
-} from '../global/models/qore';
+} from '@qoretechnologies/ts-toolkit';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { retry, validateResponseProperties } from './utils';
 
 const TEST_PAGE_NAME = 'Test Page';
 
 describe('notionPieceTest', () => {
-  let notionApp: IQoreAppWithActions | null = null;
+  let notionApp: TQoreAppWithActions | null = null;
   let user: any | null = null;
   let page: any | null = null;
   let comment: any | null = null;

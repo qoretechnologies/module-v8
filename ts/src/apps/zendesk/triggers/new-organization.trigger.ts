@@ -1,4 +1,4 @@
-import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
+import { EQoreAppActionCode, TQorePartialEventAction } from '@qoretechnologies/ts-toolkit';
 import { createZendeskWebhookDeRegistrar, createZendeskWebhookRegistrar } from './helpers';
 
 export default {

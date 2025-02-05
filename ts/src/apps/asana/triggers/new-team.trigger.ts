@@ -1,5 +1,8 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
+import {
+  EQoreAppActionCode,
+  QorusRequest,
+  TQorePartialEventAction,
+} from '@qoretechnologies/ts-toolkit';
 import { getAsanaWorkspaceIdAllowedValuesRest } from '../helpers/get-workspace-id-allowed-values';
 import { asanaEventInfoType, asanaWebhookEchoHeader, asanaWebhookInfoLocation } from './constants';
 import { deregisterAsanaWebhook } from './helpers';
@@ -16,10 +19,16 @@ export default {
     },
   },
   webhook_register: async (context, url) => {
-    const {
-      conn_opts: { token },
-      opts: { workspace },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const workspace = context?.opts?.workspace;
+
+    if (!token) {
+      throw new Error('Token is required to register New Team Asana webhook');
+    }
+
+    if (!workspace) {
+      throw new Error('Workspace is required to register New Team Asana webhook');
+    }
 
     const { data } = await QorusRequest.post<any>(
       {

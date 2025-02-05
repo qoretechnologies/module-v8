@@ -1,5 +1,5 @@
 import { forEach } from 'lodash';
-import { TQoreTypeObject } from '../global/models/qore';
+import { TQoreTypeObject } from '@qoretechnologies/ts-toolkit';
 
 export const responseHasCorrectStructure = (
   response: Record<string, unknown>,

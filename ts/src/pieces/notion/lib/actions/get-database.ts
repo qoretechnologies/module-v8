@@ -14,6 +14,10 @@ export const getDatabase = createAction({
   async run(context) {
     const { databaseId } = context.propsValue;
 
+    if (!databaseId) {
+      throw new Error('The databaseId is required to retrieve a notion database');
+    }
+
     const notion = new Client({
       auth: context.auth.access_token,
       notionVersion: '2022-02-22',

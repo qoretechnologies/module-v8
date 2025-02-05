@@ -1,4 +1,4 @@
-import { IQoreRestGetAllowedValues } from '../../../global/models/qore';
+import { IQoreRestGetAllowedValues } from '@qoretechnologies/ts-toolkit';
 
 export const getEsignatureEnvelopeIdAllowedValues = {
   method: 'GET',

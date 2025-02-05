@@ -1,4 +1,4 @@
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
+import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 import { Octokit } from '@octokit/rest';
 import { Debugger } from '../../../utils/Debugger';
 import { GITHUB_ALLOWED_VALUES_TIMEOUT } from './constants';
@@ -8,24 +8,27 @@ const PER_PAGE = 100;
 const mapGithubRepo = (repo: {
   id: number;
   name: string;
-  full_name: string;
-  description: string;
-  owner: { avatar_url: string };
+  full_name: string | null;
+  description: string | null;
+  owner: { avatar_url: string } | null;
 }): IQoreAllowedValue => ({
   value: repo.name,
   display_name: repo.name,
-  short_desc: repo.full_name,
-  desc: repo.description,
-  image: repo.owner?.avatar_url,
+  short_desc: repo.full_name || undefined,
+  desc: repo.description || undefined,
+  ...(repo?.owner?.avatar_url && { image: repo.owner.avatar_url }),
 });
 
 export const getGitHubRepositoryIdAllowedValues: TQoreGetAllowedValuesFunction = async (
   context
 ): Promise<IQoreAllowedValue[]> => {
-  const {
-    conn_opts: { token },
-    opts,
-  } = context;
+  const token = context?.conn_opts?.token;
+  const opts = context?.opts;
+
+  if (!token) {
+    throw new Error('The token is required to get Github repository allowed values');
+  }
+
   const octokit = new Octokit({
     auth: token,
   });

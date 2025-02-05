@@ -1,5 +1,5 @@
 import { buildActionsFromSwaggerSchema } from '../../global/helpers';
-import { IQoreConnectionOptions, TAllowedPaths } from '../../global/models/qore';
+import { IQoreConnectionOptions, TAllowedPaths } from '@qoretechnologies/ts-toolkit';
 import freshDeskSchema from '../../schemas/freshdesk.swagger.json';
 import { FreshdeskAgentTicketScopeAllowedValues } from './helpers/agent-ticket-scope-allowed-values';
 import { getFreshdeskAgentIdAllowedValues } from './helpers/get-agent-id-allowed-values';

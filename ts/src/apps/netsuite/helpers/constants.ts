@@ -1,5 +1,5 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { IQoreAllowedValue } from '../../../global/models/qore';
+import { IQoreAllowedValue } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
 import { delay } from '../../../global/helpers';
 

@@ -1,7 +1,7 @@
 import { Client, collectPaginatedAPI } from '@notionhq/client';
 import { createAction } from 'core/framework';
 import { notionAuth } from '../..';
-import { TQoreResponseType } from '../../../../global/models/qore';
+import { TQoreResponseType } from '@qoretechnologies/ts-toolkit';
 
 const getUsersResponseType = {
   type: 'hash',

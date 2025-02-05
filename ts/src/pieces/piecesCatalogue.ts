@@ -1,13 +1,27 @@
 import {
+  EQoreAppActionCode,
+  IQoreAllowedValue,
+  IQoreAppActionOption,
+  IQoreAppActionWithFunction,
+  IQoreRestConnectionConfig,
+  TQoreAppActionFunction,
+  TQoreAppActionFunctionContext,
+  TQoreApps,
+  TQoreAppWithActions,
+  TQoreGetAllowedValuesFunction,
+  TQoreGetDependentOptionsFunction,
+  TQoreOptions,
+  TQorePartialNonEventAction,
+  TQoreTypeObject,
+} from '@qoretechnologies/ts-toolkit';
+import {
   ActionContext,
   ActionRunner,
   DropdownState,
   DynamicProperties,
-  InputPropertyMap,
   Piece,
   PieceAuthProperty,
   PropertyType,
-  StaticPropsValue,
 } from 'core/framework';
 import { DynamicDropdownOptions } from 'core/framework/property/input/dropdown/dropdown-prop';
 import {
@@ -17,21 +31,6 @@ import {
   normalizeAppName,
   normalizeName,
 } from 'global/helpers';
-import {
-  EQoreAppActionCode,
-  IQoreAllowedValue,
-  IQoreAppActionOption,
-  IQoreAppActionWithFunction,
-  IQoreAppWithActions,
-  IQoreRestConnectionConfig,
-  TQoreAppActionFunction,
-  TQoreAppActionFunctionContext,
-  TQoreApps,
-  TQoreGetAllowedValuesFunction,
-  TQoreGetDependentOptionsFunction,
-  TQorePartialNonEventAction,
-  TQoreTypeObject,
-} from 'global/models/qore';
 import { InputProperty } from '../core/framework/property/input';
 import { DEFAULT_LOGO } from '../global/constants';
 import { Locales } from '../i18n/i18n-types';
@@ -56,18 +55,25 @@ class _PiecesAppCatalogue {
     qoreApps.forEach((app) => (this.apps[app.name] = app));
   }
 
-  private mapPieceToApp(pieceName: string, piece: Piece): IQoreAppWithActions {
+  private mapPieceToApp(pieceName: string, piece: Piece): TQoreAppWithActions {
     const appName = normalizeAppName(pieceName);
     const actions = Object.entries(piece.actions()).map(([actionName, action]) =>
       this.mapPieceActionToAppAction({ appName, actionName, action })
     );
+
     // @ts-expect-error - dynamically defined names are not recognized
     const qoreTriggers = mapTriggersToApp(appName, piece.qoreTriggers || [], this.locale);
+    const appRest = piece.auth ? this.mapPieceAuthToAppRest(piece.auth) : undefined;
+    const qoreRestConfig = {
+      data: 'auto',
+      ...appRest,
+      ...piece.qoreRest,
+    } as IQoreRestConnectionConfig;
 
     return {
       name: appName,
       actions: [...actions, ...qoreTriggers],
-      rest: { ...this.mapPieceAuthToAppRest(piece.auth), ...piece.qoreRest },
+      rest: qoreRestConfig,
       ...(piece.qoreConnectionModifiers && { rest_modifiers: piece.qoreConnectionModifiers }),
       display_name: piece.displayName,
       short_desc: piece.description,
@@ -79,12 +85,12 @@ class _PiecesAppCatalogue {
   }
 
   // Mapping pieces auth options to qore rest connection config
-  private mapPieceAuthToAppRest(auth: PieceAuthProperty): IQoreRestConnectionConfig {
+  private mapPieceAuthToAppRest(auth: PieceAuthProperty): IQoreRestConnectionConfig | undefined {
     if (auth.type === PropertyType.OAUTH2) {
       return {
         data: 'auto',
         oauth2_grant_type: 'authorization_code',
-        url: auth.url,
+        url: auth.url!,
         ping_method: auth.pingMethod,
         ping_path: auth.pingPath,
         ping_headers: auth.pingHeaders,
@@ -114,14 +120,19 @@ class _PiecesAppCatalogue {
       api_function: this.mapPieceActionToAppActionFunction(action.run, action.props),
     } satisfies TQorePartialNonEventAction;
 
+    let responseType = undefined;
+
+    if (typeof action.responseType === 'string') {
+      responseType = action.responseType;
+    } else if (action.responseType) {
+      responseType = fixResponseOrEventInfo(action.responseType, appName, this.locale, baseAction);
+    }
+
     return {
       ...baseAction,
       app: appName,
       options: fixOptions(baseAction, options, appName, this.locale),
-      response_type:
-        typeof action.responseType === 'string'
-          ? action.responseType
-          : fixResponseOrEventInfo(action.responseType, appName, this.locale, baseAction),
+      response_type: responseType,
     };
   }
 
@@ -130,16 +141,16 @@ class _PiecesAppCatalogue {
     props: Record<string, InputProperty>
   ): TQoreAppActionFunction {
     return async (
-      obj: Record<string, any>,
-      _options: Record<string, any>,
+      obj: TQoreOptions | undefined,
+      _options: TQoreOptions | undefined,
       context: TQoreAppActionFunctionContext
     ): Promise<any> => {
       const actionContext = {
-        propsValue: obj satisfies StaticPropsValue<InputPropertyMap>,
+        propsValue: obj || {},
         auth: {
           ...context.opts,
           ...context.conn_opts,
-          access_token: context.conn_opts.token,
+          access_token: context?.conn_opts?.token,
           data: { ...context.opts, ...context.conn_opts },
         },
         ...commonActionContext,
@@ -192,7 +203,7 @@ class _PiecesAppCatalogue {
   private getDynamicOptionsFunctions(
     key: string,
     props: Record<string, InputProperty>
-  ): TDependentOptionsFunction[] {
+  ): TDependentOptionsFunction[] | undefined {
     const functions = [];
     for (const propKey in props) {
       const prop = props[propKey];
@@ -216,7 +227,7 @@ class _PiecesAppCatalogue {
       context: TQoreAppActionFunctionContext
     ): Promise<Record<string, IQoreAppActionOption>> => {
       const pieceContext = {
-        auth: { access_token: context.conn_opts.token, ...context.opts },
+        auth: { access_token: context?.conn_opts?.token, ...context.opts },
         ...context.opts,
       };
       const options: Record<string, IQoreAppActionOption> = {};
@@ -279,7 +290,7 @@ class _PiecesAppCatalogue {
     if (type === 'list') {
       const fields: Record<string, IQoreAppActionOption> = {};
 
-      if ('properties' in prop) {
+      if ('properties' in prop && typeof prop.properties === 'object') {
         for (const [key, element] of Object.entries(prop.properties)) {
           fields[key] = this.mapActionPropToAppActionOption(element);
         }
@@ -343,7 +354,7 @@ class _PiecesAppCatalogue {
 
   private mapPieceAllowedValuesToQoreAllowedValues(
     options: DropdownState<any>
-  ): IQoreAllowedValue[] {
+  ): IQoreAllowedValue[] | undefined {
     if ('options' in options) {
       return options.options.map((option) => ({
         value: option.value,
@@ -358,7 +369,7 @@ class _PiecesAppCatalogue {
     getOptions: DynamicDropdownOptions<any>
   ): TQoreGetAllowedValuesFunction {
     return async (context: TQoreAppActionFunctionContext): Promise<IQoreAllowedValue[]> => {
-      const auth = { access_token: context.conn_opts.token };
+      const auth = { access_token: context?.conn_opts?.token };
       const options = await getOptions({ auth });
 
       return options.options.map((option) => ({

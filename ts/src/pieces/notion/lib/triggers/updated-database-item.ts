@@ -1,5 +1,5 @@
 import { Client } from '@notionhq/client';
-import { EQoreAppActionCode, TQorePartialEventAction } from '../../../../global/models/qore';
+import { EQoreAppActionCode, TQorePartialEventAction } from '@qoretechnologies/ts-toolkit';
 import { databaseItemQoreType } from './constants';
 import { getNotionDatabaseIdAllowedValues } from '../common/helpers/get-database-id-allowed-values';
 import { Debugger } from '../../../../utils/Debugger';
@@ -15,10 +15,16 @@ export default {
     },
   },
   event_function: async (context, update, should_stop) => {
-    const {
-      conn_opts: { token },
-      opts: { databaseId },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const databaseId = context?.opts?.databaseId;
+
+    if (!token) {
+      throw new Error('Notion token is required for updated_database_item event');
+    }
+
+    if (!databaseId) {
+      throw new Error('Notion Database Id is required for updated_database_item event');
+    }
 
     try {
       let previousItem = await getLastUpdatedDatabaseItem(token, databaseId);
@@ -41,10 +47,10 @@ export default {
     type: databaseItemQoreType,
   },
   get_example_event_data: async (context) => {
-    const {
-      conn_opts: { token },
-      opts: { databaseId },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const databaseId = context?.opts?.databaseId;
+
+    if (!token || !databaseId) return;
 
     const latestItem = await getLastUpdatedDatabaseItem(token, databaseId);
 

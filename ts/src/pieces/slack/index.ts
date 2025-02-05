@@ -148,6 +148,8 @@ export const slack = createPiece({
       },
     },
     set_options_post_auth_code: (context) => {
+      if (!context?.conn_opts?.authed_user) return { authed_user: {} };
+
       return {
         authed_user: context.conn_opts.authed_user,
       };
@@ -168,11 +170,13 @@ export const slack = createPiece({
         'users.profile:write',
       ],
     },
-    oauth2_scope_separator_char: ',',
-    rest_body_auth_error_check: {
-      ok: false,
-      error: 'invalid_auth',
-    },
+
+    // TODO: Uncomment when the following fields are added to the td-toolkit types:
+    // oauth2_scope_separator_char: ',',
+    // rest_body_auth_error_check: {
+    //   ok: false,
+    //   error: 'invalid_auth',
+    // },
   },
 });
 

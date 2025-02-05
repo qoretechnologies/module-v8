@@ -1,4 +1,4 @@
-import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
+import { EQoreAppActionCode, TQorePartialEventAction } from '@qoretechnologies/ts-toolkit';
 import { fetchFreshdeskEventItem, FreshdeskContactEventInfo } from './constants';
 
 export default {
@@ -6,9 +6,18 @@ export default {
   action_code: EQoreAppActionCode.EVENT,
 
   event_function: async (context, update, should_stop) => {
-    const {
-      conn_opts: { token, subdomain },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const subdomain = context?.conn_opts?.subdomain;
+
+    if (!token) {
+      throw new Error('The token is required to start the new_contact_trigger event_function');
+    }
+
+    if (!subdomain) {
+      throw new Error(
+        'The subdomain option is required to start the new_contact_trigger event_function'
+      );
+    }
 
     try {
       let previousContact = await getLastCreatedContact(token, subdomain);
@@ -28,9 +37,20 @@ export default {
   },
 
   get_example_event_data: async (context) => {
-    const {
-      conn_opts: { token, subdomain },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const subdomain = context?.conn_opts?.subdomain;
+
+    if (!token) {
+      throw new Error(
+        'The token is required to get the example event data for Freshdesk new contact trigger'
+      );
+    }
+
+    if (!subdomain) {
+      throw new Error(
+        'The subdomain option is required to get the example event data for Freshdesk new contact trigger'
+      );
+    }
 
     const data = await getLastCreatedContact(token, subdomain);
 

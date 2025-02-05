@@ -1,17 +1,16 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
+import { QorusRequest, TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
 import { actionsCatalogue } from '../../ActionsCatalogue';
 import {
   buildActionsFromSwaggerSchema,
   mapActionsToApp,
   mapTriggersToApp,
 } from '../../global/helpers';
-import { IQoreAppWithActions } from '../../global/models/qore';
+import { createSwaggerPaths } from '../../global/helpers/index';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import jira from '../../schemas/jira.swagger.json';
 import { JIRA_ALLOWED_PATHS, JIRA_APP_NAME, JIRA_CONN_OPTIONS } from './constants';
 import * as JIRA_TRIGGERS from './triggers';
-import { createSwaggerPaths } from '../../global/helpers/index';
 
 export const JIRA_ACTIONS = buildActionsFromSwaggerSchema({
   schema: jira as any,
@@ -22,7 +21,7 @@ export const JIRA_ACTIONS = buildActionsFromSwaggerSchema({
 /*
  * Returns the app object with all the actions ready to use, using translations
  * @param locale - the locale
- * @returns IQoreAppWithActions
+ * @returns TQoreAppWithActions
  */
 export default (locale: Locales) =>
   ({
@@ -92,12 +91,18 @@ export default (locale: Locales) =>
     rest_modifiers: {
       options: JIRA_CONN_OPTIONS,
       set_options_post_auth: async (context) => {
+        const token = context?.conn_opts?.token;
+
+        if (!token) {
+          throw new Error('The token is required to set jira options post auth');
+        }
+
         try {
           const userAccounts = await QorusRequest.get<Record<string, any>>(
             {
               path: '/oauth/token/accessible-resources',
               headers: {
-                Authorization: `Bearer ${context.conn_opts.token}`,
+                Authorization: `Bearer ${token}`,
               },
             },
             {
@@ -105,7 +110,7 @@ export default (locale: Locales) =>
               endpointId: 'Atlassian',
             }
           );
-          const userInfo = userAccounts.data[0];
+          const userInfo = userAccounts?.data[0];
           if ('id' in userInfo) {
             const cloud_id = userInfo.id;
 
@@ -122,4 +127,4 @@ export default (locale: Locales) =>
       },
       url_template_options: ['cloud_id'],
     },
-  }) satisfies IQoreAppWithActions;
+  }) satisfies TQoreAppWithActions;

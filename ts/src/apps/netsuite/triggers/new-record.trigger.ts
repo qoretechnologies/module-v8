@@ -1,5 +1,8 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
+import {
+  EQoreAppActionCode,
+  QorusRequest,
+  TQorePartialEventAction,
+} from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
 
 export default {
@@ -12,10 +15,15 @@ export default {
     },
   },
   event_function: async (context, update, should_stop) => {
-    const {
-      conn_opts: { token, account_id },
-      opts: { recordType },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const account_id = context?.conn_opts?.account_id;
+    const recordType = context?.opts?.recordType;
+
+    if (!token || !account_id || !recordType) {
+      throw new Error(
+        'The token, account_id, and recordType are required to register NetSuite webhook'
+      );
+    }
 
     try {
       let previousItem = await getLastCreatedRecordItem(recordType, account_id, token);
@@ -41,10 +49,15 @@ export default {
     },
   },
   get_example_event_data: async (context) => {
-    const {
-      conn_opts: { token, account_id },
-      opts: { recordType },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const account_id = context?.conn_opts?.account_id;
+    const recordType = context?.opts?.recordType;
+
+    if (!token || !account_id || !recordType) {
+      throw new Error(
+        'The token, account_id, and recordType are required to get NetSuite new record example data'
+      );
+    }
 
     return await getLastCreatedRecordItem(recordType, account_id, token);
   },

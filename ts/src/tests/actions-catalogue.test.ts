@@ -47,7 +47,7 @@ describe('Qorus Apps Catalogue tests', () => {
           } else {
             const responseTypeFields = action.response_type?.fields;
             if (responseTypeFields) {
-              forEach(action.response_type.fields, (responseType) => {
+              forEach(action?.response_type?.fields, (responseType) => {
                 expect(responseType.type).not.toBeFalsy();
               });
             }

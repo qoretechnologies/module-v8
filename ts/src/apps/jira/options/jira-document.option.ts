@@ -1,4 +1,4 @@
-import { IQoreAppActionOption } from '../../../global/models/qore';
+import { IQoreAppActionOption } from '@qoretechnologies/ts-toolkit';
 
 export const jiraDocumentFormatOption = {
   required: true,

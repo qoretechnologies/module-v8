@@ -2,7 +2,7 @@
 /* eslint-disable require-await */
 import { ActionContext, PropertyType } from 'core/framework';
 import { ExecutionType } from 'core/shared';
-import { TQoreType } from 'global/models/qore';
+import { TQoreType } from '@qoretechnologies/ts-toolkit';
 
 export const piecePropTypeToQoreOptionTypeIndex: {
   [key in PropertyType]: TQoreType;

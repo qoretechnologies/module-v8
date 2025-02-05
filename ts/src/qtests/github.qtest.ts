@@ -1,5 +1,5 @@
 import { GITHUB_ACTIONS } from '../apps/github';
-import { TQoreAppActionWithWebhook } from '../global/models/qore';
+import { TQoreAppActionWithWebhook } from '@qoretechnologies/ts-toolkit';
 import * as GITHUB_TRIGGERS from '../apps/github/triggers';
 
 let connection: string;

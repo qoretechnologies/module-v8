@@ -1,4 +1,4 @@
-import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
+import { EQoreAppActionCode, TQorePartialEventAction } from '@qoretechnologies/ts-toolkit';
 import { fetchFreshdeskEventItem, FreshdeskTicketEventInfo } from './constants';
 
 export default {
@@ -6,9 +6,14 @@ export default {
   action_code: EQoreAppActionCode.EVENT,
 
   event_function: async (context, update, should_stop) => {
-    const {
-      conn_opts: { token, subdomain },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const subdomain = context?.conn_opts?.subdomain;
+
+    if (!token || !subdomain) {
+      throw new Error(
+        'Both token and subdomain are required to start the updated_ticket_trigger event_function'
+      );
+    }
 
     try {
       let previousTicket = await getLastUpdatedTicket(token, subdomain);
@@ -28,9 +33,14 @@ export default {
   },
 
   get_example_event_data: async (context) => {
-    const {
-      conn_opts: { token, subdomain },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const subdomain = context?.conn_opts?.subdomain;
+
+    if (!token || !subdomain) {
+      throw new Error(
+        'Both token and subdomain are required to get the example event data for Freshdesk updated ticket trigger'
+      );
+    }
 
     const data = await getLastUpdatedTicket(token, subdomain);
 

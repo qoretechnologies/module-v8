@@ -1,5 +1,5 @@
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
-import { IQoreAppWithActions } from '../../global/models/qore';
+import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import { FRESHDESK_ACTIONS, FRESHDESK_APP_NAME, FRESHDESK_CONN_OPTIONS } from './constants';
@@ -46,4 +46,4 @@ export default (locale: Locales) =>
       required_options: 'subdomain',
       url_template_options: ['subdomain'],
     },
-  }) satisfies IQoreAppWithActions;
+  }) satisfies TQoreAppWithActions;

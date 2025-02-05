@@ -1,4 +1,4 @@
-import { TQoreAppActionOverrideOption } from '../../../global/models/qore';
+import { TQoreAppActionOverrideOption } from '@qoretechnologies/ts-toolkit';
 
 export const getAsanaUserIdAllowedValuesRest = {
   method: 'GET',

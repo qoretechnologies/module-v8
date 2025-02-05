@@ -1,6 +1,6 @@
 import { runCLI } from 'jest';
 import * as path from 'path';
-import { IQoreRestConnectionConfig } from '../global/models/qore';
+import { IQoreRestConnectionConfig } from '@qoretechnologies/ts-toolkit';
 import { StrictRecord } from '../global/models/utils';
 
 export interface IQoreTestApi {
