@@ -7,7 +7,7 @@ export type TFetchSalesforceObjectRecord = {
   query: string;
 };
 
-export const fetchSalesforceObjectRecord = async (options: TFetchSalesforceObjectRecord) => {
+export const fetchSalesforceObjectRecords = async (options: TFetchSalesforceObjectRecord) => {
   const { instanceUrl, token, query } = options;
 
   const { data } = await QorusRequest.get<{ data: { records: unknown[] } }>(
@@ -23,5 +23,5 @@ export const fetchSalesforceObjectRecord = async (options: TFetchSalesforceObjec
     { url: instanceUrl, endpointId: 'Salesforce' }
   );
 
-  return data.records[0];
+  return data.records;
 };

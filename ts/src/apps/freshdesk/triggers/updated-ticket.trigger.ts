@@ -1,3 +1,5 @@
+import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
+import { pollUpdatedItemsForTrigger } from '../../../global/helpers/event-triggers';
 import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
 import { fetchFreshdeskEventItem, FreshdeskTicketEventInfo } from './constants';
 
@@ -10,21 +12,18 @@ export default {
       conn_opts: { token, subdomain },
     } = context;
 
-    try {
-      let previousTicket = await getLastUpdatedTicket(token, subdomain);
+    const getTickets = () => {
+      return getLastUpdatedTickets(token, subdomain);
+    };
 
-      while (!should_stop()) {
-        const latestTicket = await getLastUpdatedTicket(token, subdomain);
-        if (previousTicket?.id !== latestTicket.id) {
-          update(latestTicket);
-        }
-        previousTicket = latestTicket;
-
-        await new Promise((resolve) => setTimeout(resolve, 30_000));
-      }
-    } catch (error) {
-      console.error('Error in updated_ticket_trigger event_function', error);
-    }
+    await pollUpdatedItemsForTrigger({
+      trigger_name: 'updated_ticket_trigger',
+      uniqueField: 'id',
+      updatedDateField: 'updated_at',
+      getItems: getTickets,
+      update,
+      should_stop,
+    });
   },
 
   get_example_event_data: async (context) => {
@@ -32,19 +31,20 @@ export default {
       conn_opts: { token, subdomain },
     } = context;
 
-    const data = await getLastUpdatedTicket(token, subdomain);
+    const data = await getLastUpdatedTickets(token, subdomain);
 
-    return data;
+    return data?.length > 0 ? data[0] : null;
   },
   event_info: FreshdeskTicketEventInfo,
 } satisfies TQorePartialEventAction;
 
-const getLastUpdatedTicket = async (token: string, subdomain: string): Promise<any> => {
-  const data = await fetchFreshdeskEventItem({
+const getLastUpdatedTickets = async (token: string, subdomain: string): Promise<any> => {
+  const data = await fetchFreshdeskEventItem<{ id: number; updated_at: string }>({
     token,
     subdomain,
     path: '/api/v2/tickets',
     order_by: 'updated_at',
+    limit: DEFAULT_TRIGGER_POLL_ITEM_LIMIT,
   });
 
   return data;

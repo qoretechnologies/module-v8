@@ -1,6 +1,7 @@
+import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
+import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
 import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
-import { Debugger } from '../../../utils/Debugger';
-import { fetchSalesforceObjectRecord } from '../helpers/constants';
+import { fetchSalesforceObjectRecords } from '../helpers/constants';
 import { getSalesforceObjectAllowedValues } from '../helpers/get-object-allowed-values';
 
 export default {
@@ -19,21 +20,17 @@ export default {
       opts: { object },
     } = context;
 
-    try {
-      let previousItem = await getLastCreatedRecord(token, instance_url, object);
+    const getRecords = () => {
+      return getLastCreatedRecords(token, instance_url, object);
+    };
 
-      while (!should_stop()) {
-        const latestItem = await getLastCreatedRecord(token, instance_url, object);
-        if (previousItem?.Id !== latestItem.Id) {
-          update(latestItem);
-        }
-        previousItem = latestItem;
-
-        await new Promise((resolve) => setTimeout(resolve, 30_000));
-      }
-    } catch (error) {
-      Debugger.log('Error in new_record_trigger event_function', error);
-    }
+    await pollCreatedItemsForTrigger({
+      trigger_name: 'salesforce_new_record_trigger',
+      uniqueField: 'Id',
+      getItems: getRecords,
+      update,
+      should_stop,
+    });
   },
   event_info: {
     desc: 'Salesforce New Record Trigger Event Info',
@@ -50,21 +47,21 @@ export default {
       opts: { object },
     } = context;
 
-    const data = await getLastCreatedRecord(token, instance_url, object);
+    const data = await getLastCreatedRecords(token, instance_url, object);
 
-    return data;
+    return data?.length > 0 ? data[0] : null;
   },
 } satisfies TQorePartialEventAction;
 
-export const getLastCreatedRecord = async (
+export const getLastCreatedRecords = async (
   token: string,
   url: string,
   object: string
 ): Promise<any> => {
-  const record = await fetchSalesforceObjectRecord({
+  const record = await fetchSalesforceObjectRecords({
     token,
     instanceUrl: url,
-    query: `SELECT FIELDS(ALL) FROM ${object} ORDER BY CreatedDate DESC LIMIT 1`,
+    query: `SELECT FIELDS(ALL) FROM ${object} ORDER BY CreatedDate DESC LIMIT ${DEFAULT_TRIGGER_POLL_ITEM_LIMIT}`,
   });
 
   return record;

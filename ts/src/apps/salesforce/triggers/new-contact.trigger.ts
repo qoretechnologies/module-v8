@@ -1,6 +1,7 @@
+import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
+import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
 import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
-import { Debugger } from '../../../utils/Debugger';
-import { fetchSalesforceObjectRecord } from '../helpers/constants';
+import { fetchSalesforceObjectRecords } from '../helpers/constants';
 
 export default {
   action: 'new_contact_trigger',
@@ -10,21 +11,17 @@ export default {
       conn_opts: { token, instance_url },
     } = context;
 
-    try {
-      let previousContact = await getLastCreatedContact(token, instance_url);
+    const getContacts = () => {
+      return getLastCreatedContacts(token, instance_url);
+    };
 
-      while (!should_stop()) {
-        const latestContact = await getLastCreatedContact(token, instance_url);
-        if (previousContact?.id !== latestContact.id) {
-          update(latestContact);
-        }
-        previousContact = latestContact;
-
-        await new Promise((resolve) => setTimeout(resolve, 30_000));
-      }
-    } catch (error) {
-      Debugger.log('Error in new_contact_trigger event_function', error);
-    }
+    await pollCreatedItemsForTrigger({
+      trigger_name: 'salesforce_new_contact_trigger',
+      uniqueField: 'Id',
+      getItems: getContacts,
+      update,
+      should_stop,
+    });
   },
   event_info: {
     desc: 'Salesforce New Contact Trigger Event Info',
@@ -40,18 +37,18 @@ export default {
       conn_opts: { token, instance_url },
     } = context;
 
-    const data = await getLastCreatedContact(token, instance_url);
+    const data = await getLastCreatedContacts(token, instance_url);
 
-    return data;
+    return data?.length > 0 ? data[0] : null;
   },
 } satisfies TQorePartialEventAction;
 
-const getLastCreatedContact = async (token: string, url: string): Promise<any> => {
-  const lead = await fetchSalesforceObjectRecord({
+const getLastCreatedContacts = async (token: string, url: string): Promise<any> => {
+  const contacts = await fetchSalesforceObjectRecords({
     instanceUrl: url,
     token,
-    query: `SELECT FIELDS(ALL) FROM Contact ORDER BY CreatedDate DESC LIMIT 1`,
+    query: `SELECT FIELDS(ALL) FROM Contact ORDER BY CreatedDate DESC LIMIT ${DEFAULT_TRIGGER_POLL_ITEM_LIMIT}`,
   });
 
-  return lead;
+  return contacts;
 };
