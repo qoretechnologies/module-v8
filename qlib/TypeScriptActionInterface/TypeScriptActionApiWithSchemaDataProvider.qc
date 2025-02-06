@@ -231,7 +231,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
     /** @return the request type for this API
     */
     private *DataProvider::AbstractDataProviderType getRequestTypeImpl() {
-        if (request_type_done) {
+        if (!request_type_done) {
             createRequestType();
             request_type_done = True;
         }
@@ -242,7 +242,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
     /** @return the response type for this API
     */
     private *DataProvider::AbstractDataProviderType getResponseTypeImpl() {
-        if (response_type_done) {
+        if (!response_type_done) {
             createResponseType();
             response_type_done = True;
         }
