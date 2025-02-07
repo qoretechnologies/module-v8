@@ -254,9 +254,9 @@ export const fetchFreshdeskEventItem = async <ItemType = any>(options: {
 
   const responseData = response?.data;
 
-  if (!responseData?.length) {
-    return;
+  if (!responseData) {
+    return [];
   }
 
-  return data;
+  return responseData;
 };
