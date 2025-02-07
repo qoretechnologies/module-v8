@@ -71,7 +71,7 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
         if (TSAI::checkServer()) {
             info("Starting external process for data provider %y for connection %y options %y", name, conn.name,
                 options);
-            proxy = TSAI::server.setupEventSource(self, event.app, event.action, event.key, options);
+            proxy = TSAI::server.setupEventSource(self, event.app, event.action, event.key, getCallContextInfo(options));
         } else {
             info("Starting event thread for data provider %y for connection %y options %y", name, conn.name, options);
             Counter c(1);

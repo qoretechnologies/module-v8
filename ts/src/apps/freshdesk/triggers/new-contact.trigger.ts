@@ -1,3 +1,5 @@
+import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
+import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
 import { EQoreAppActionCode, TQorePartialEventAction } from '@qoretechnologies/ts-toolkit';
 import { fetchFreshdeskEventItem, FreshdeskContactEventInfo } from './constants';
 
@@ -19,21 +21,17 @@ export default {
       );
     }
 
-    try {
-      let previousContact = await getLastCreatedContact(token, subdomain);
+    const getContacts = () => {
+      return getLastCreatedContacts(token, subdomain);
+    };
 
-      while (!should_stop()) {
-        const latestContact = await getLastCreatedContact(token, subdomain);
-        if (previousContact?.id !== latestContact.id) {
-          update(latestContact);
-        }
-        previousContact = latestContact;
-
-        await new Promise((resolve) => setTimeout(resolve, 30_000));
-      }
-    } catch (error) {
-      console.error('Error in new_contact_trigger event_function', error);
-    }
+    await pollCreatedItemsForTrigger({
+      trigger_name: 'new_contact_trigger',
+      uniqueField: 'id',
+      getItems: getContacts,
+      update,
+      should_stop,
+    });
   },
 
   get_example_event_data: async (context) => {
@@ -52,19 +50,20 @@ export default {
       );
     }
 
-    const data = await getLastCreatedContact(token, subdomain);
+    const data = await getLastCreatedContacts(token, subdomain);
 
-    return data;
+    return data?.length > 0 ? data[0] : null;
   },
   event_info: FreshdeskContactEventInfo,
 } satisfies TQorePartialEventAction;
 
-const getLastCreatedContact = async (token: string, subdomain: string): Promise<any> => {
-  const data = await fetchFreshdeskEventItem({
+const getLastCreatedContacts = async (token: string, subdomain: string) => {
+  const data = await fetchFreshdeskEventItem<{ id: number }>({
     token,
     subdomain,
     path: '/api/v2/contacts',
     order_by: 'created_at',
+    limit: DEFAULT_TRIGGER_POLL_ITEM_LIMIT,
   });
 
   return data;

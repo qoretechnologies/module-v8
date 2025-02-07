@@ -9364,7 +9364,7 @@ type RootTranslation = {
 			triggers: {
 				new_record_trigger: {
 					/**
-					 * N​e​w​ ​R​e​c​o​r​d​ ​T​r​i​g​g​e​r
+					 * N​e​w​ ​R​e​c​o​r​d
 					 */
 					displayName: string
 					/**
@@ -9400,7 +9400,7 @@ type RootTranslation = {
 				}
 				new_contact_trigger: {
 					/**
-					 * N​e​w​ ​C​o​n​t​a​c​t​ ​T​r​i​g​g​e​r
+					 * N​e​w​ ​C​o​n​t​a​c​t
 					 */
 					displayName: string
 					/**
@@ -9420,7 +9420,7 @@ type RootTranslation = {
 				}
 				new_lead_trigger: {
 					/**
-					 * N​e​w​ ​L​e​a​d​ ​T​r​i​g​g​e​r
+					 * N​e​w​ ​L​e​a​d
 					 */
 					displayName: string
 					/**
@@ -9440,7 +9440,7 @@ type RootTranslation = {
 				}
 				updated_record_trigger: {
 					/**
-					 * U​p​d​a​t​e​d​ ​R​e​c​o​r​d​ ​T​r​i​g​g​e​r
+					 * U​p​d​a​t​e​d​ ​R​e​c​o​r​d
 					 */
 					displayName: string
 					/**
@@ -9492,7 +9492,7 @@ type RootTranslation = {
 			triggers: {
 				new_ticket_trigger: {
 					/**
-					 * N​e​w​ ​T​i​c​k​e​t​ ​T​r​i​g​g​e​r
+					 * N​e​w​ ​T​i​c​k​e​t
 					 */
 					displayName: string
 					/**
@@ -9542,7 +9542,7 @@ type RootTranslation = {
 				}
 				new_contact_trigger: {
 					/**
-					 * N​e​w​ ​C​o​n​t​a​c​t​ ​T​r​i​g​g​e​r
+					 * N​e​w​ ​C​o​n​t​a​c​t
 					 */
 					displayName: string
 					/**
@@ -9562,7 +9562,7 @@ type RootTranslation = {
 				}
 				updated_ticket_trigger: {
 					/**
-					 * U​p​d​a​t​e​d​ ​T​i​c​k​e​t​ ​T​r​i​g​g​e​r
+					 * U​p​d​a​t​e​d​ ​T​i​c​k​e​t
 					 */
 					displayName: string
 					/**
@@ -9582,7 +9582,7 @@ type RootTranslation = {
 				}
 				updated_contact_trigger: {
 					/**
-					 * U​p​d​a​t​e​d​ ​C​o​n​t​a​c​t​ ​T​r​i​g​g​e​r
+					 * U​p​d​a​t​e​d​ ​C​o​n​t​a​c​t
 					 */
 					displayName: string
 					/**
@@ -18957,7 +18957,7 @@ export type TranslationFunctions = {
 			triggers: {
 				new_record_trigger: {
 					/**
-					 * New Record Trigger
+					 * New Record
 					 */
 					displayName: () => LocalizedString
 					/**
@@ -18993,7 +18993,7 @@ export type TranslationFunctions = {
 				}
 				new_contact_trigger: {
 					/**
-					 * New Contact Trigger
+					 * New Contact
 					 */
 					displayName: () => LocalizedString
 					/**
@@ -19013,7 +19013,7 @@ export type TranslationFunctions = {
 				}
 				new_lead_trigger: {
 					/**
-					 * New Lead Trigger
+					 * New Lead
 					 */
 					displayName: () => LocalizedString
 					/**
@@ -19033,7 +19033,7 @@ export type TranslationFunctions = {
 				}
 				updated_record_trigger: {
 					/**
-					 * Updated Record Trigger
+					 * Updated Record
 					 */
 					displayName: () => LocalizedString
 					/**
@@ -19085,7 +19085,7 @@ export type TranslationFunctions = {
 			triggers: {
 				new_ticket_trigger: {
 					/**
-					 * New Ticket Trigger
+					 * New Ticket
 					 */
 					displayName: () => LocalizedString
 					/**
@@ -19135,7 +19135,7 @@ export type TranslationFunctions = {
 				}
 				new_contact_trigger: {
 					/**
-					 * New Contact Trigger
+					 * New Contact
 					 */
 					displayName: () => LocalizedString
 					/**
@@ -19155,7 +19155,7 @@ export type TranslationFunctions = {
 				}
 				updated_ticket_trigger: {
 					/**
-					 * Updated Ticket Trigger
+					 * Updated Ticket
 					 */
 					displayName: () => LocalizedString
 					/**
@@ -19175,7 +19175,7 @@ export type TranslationFunctions = {
 				}
 				updated_contact_trigger: {
 					/**
-					 * Updated Contact Trigger
+					 * Updated Contact
 					 */
 					displayName: () => LocalizedString
 					/**

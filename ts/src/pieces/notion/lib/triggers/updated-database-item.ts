@@ -1,8 +1,10 @@
 import { Client } from '@notionhq/client';
+import { DatabaseObjectResponse } from '@notionhq/client/build/src/api-endpoints';
+import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../../global/constants';
+import { pollUpdatedItemsForTrigger } from '../../../../global/helpers/event-triggers';
 import { EQoreAppActionCode, TQorePartialEventAction } from '@qoretechnologies/ts-toolkit';
-import { databaseItemQoreType } from './constants';
 import { getNotionDatabaseIdAllowedValues } from '../common/helpers/get-database-id-allowed-values';
-import { Debugger } from '../../../../utils/Debugger';
+import { databaseItemQoreType } from './constants';
 
 export default {
   action: 'updated_database_item',
@@ -15,8 +17,8 @@ export default {
     },
   },
   event_function: async (context, update, should_stop) => {
-    const token = context?.conn_opts?.token;
-    const databaseId = context?.opts?.databaseId;
+    const token = context.conn_opts?.token;
+    const databaseId = context.opts?.databaseId;
 
     if (!token) {
       throw new Error('Notion token is required for updated_database_item event');
@@ -26,21 +28,18 @@ export default {
       throw new Error('Notion Database Id is required for updated_database_item event');
     }
 
-    try {
-      let previousItem = await getLastUpdatedDatabaseItem(token, databaseId);
+    const getDatabaseItems = () => {
+      return getLastUpdatedDatabaseItems(token, databaseId);
+    };
 
-      while (!should_stop()) {
-        const latestItem = await getLastUpdatedDatabaseItem(token, databaseId);
-        if (previousItem?.id !== latestItem.id) {
-          update(latestItem);
-        }
-        previousItem = latestItem;
-
-        await new Promise((resolve) => setTimeout(resolve, 30_000));
-      }
-    } catch (error) {
-      Debugger.log('Error in updated_database_item event_function', error);
-    }
+    await pollUpdatedItemsForTrigger({
+      trigger_name: 'notion_updated_database_item',
+      uniqueField: 'id',
+      updatedDateField: 'last_edited_time',
+      getItems: getDatabaseItems,
+      update,
+      should_stop,
+    });
   },
   event_info: {
     desc: 'Notion Database Item Updated Event Info',
@@ -52,13 +51,17 @@ export default {
 
     if (!token || !databaseId) return;
 
-    const latestItem = await getLastUpdatedDatabaseItem(token, databaseId);
+    const latestItems = await getLastUpdatedDatabaseItems(token, databaseId);
 
-    return latestItem;
+    return latestItems.length > 0 ? latestItems[0] : null;
   },
 } satisfies TQorePartialEventAction;
 
-export const getLastUpdatedDatabaseItem = async (token: string, databaseId: string) => {
+export const getLastUpdatedDatabaseItems = async (
+  token: string,
+  databaseId: string,
+  limit = DEFAULT_TRIGGER_POLL_ITEM_LIMIT
+) => {
   const notion = new Client({
     auth: token,
     notionVersion: '2022-02-22',
@@ -72,8 +75,8 @@ export const getLastUpdatedDatabaseItem = async (token: string, databaseId: stri
         direction: 'descending',
       },
     ],
-    page_size: 1,
+    page_size: limit,
   });
 
-  return response.results[0];
+  return response.results as DatabaseObjectResponse[];
 };

@@ -4,6 +4,8 @@ import {
   TQorePartialEventAction,
 } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
+import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
+import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
 
 export default {
   action: 'new_record',
@@ -11,6 +13,7 @@ export default {
   options: {
     recordType: {
       type: 'string',
+      required: true,
       required_groups: ['new_record_trigger'],
     },
   },
@@ -25,22 +28,17 @@ export default {
       );
     }
 
-    try {
-      let previousItem = await getLastCreatedRecordItem(recordType, account_id, token);
+    const getRecords = () => {
+      return getLastCreatedRecordItems(recordType, account_id, token);
+    };
 
-      while (!should_stop()) {
-        const latestItem = await getLastCreatedRecordItem(recordType, account_id, token);
-
-        if (previousItem?.id !== latestItem.id) {
-          update(latestItem);
-        }
-        previousItem = latestItem;
-
-        await new Promise((resolve) => setTimeout(resolve, 30_000));
-      }
-    } catch (error) {
-      Debugger.log('Error in netsuite new_record event_function', error);
-    }
+    await pollCreatedItemsForTrigger({
+      trigger_name: 'netsuite_new_record',
+      uniqueField: 'id',
+      getItems: getRecords,
+      update,
+      should_stop,
+    });
   },
   event_info: {
     desc: 'NetSuite New Record Event Info',
@@ -59,11 +57,13 @@ export default {
       );
     }
 
-    return await getLastCreatedRecordItem(recordType, account_id, token);
+    const data = await getLastCreatedRecordItems(recordType, account_id, token);
+
+    return data?.length > 0 ? data[0] : null;
   },
 } satisfies TQorePartialEventAction;
 
-const getLastCreatedRecordItem = async (recordType: string, accountId: string, token: string) => {
+const getLastCreatedRecordItems = async (recordType: string, accountId: string, token: string) => {
   try {
     const result = await fetchSuiteQlData({
       token,
@@ -102,7 +102,7 @@ const fetchSuiteQlData = async ({
       },
       path: `/services/rest/query/v1/suiteql`,
       params: {
-        limit: '1',
+        limit: DEFAULT_TRIGGER_POLL_ITEM_LIMIT.toString(),
       },
       data: {
         q: query,

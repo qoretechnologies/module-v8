@@ -5,6 +5,8 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../../utils/Debugger';
 import { getDropboxFolderAllowedValues } from '../common/helpers/get-folder-allowed-values';
+import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../../global/constants';
+import { pollCreatedItemsForTrigger } from '../../../../global/helpers/event-triggers';
 
 type TDropboxFile = {
   '.tag': 'file';
@@ -69,7 +71,7 @@ const getFilesContinue = async (
   };
 };
 
-const getLastModifiedFile = async (token: string, folder: string): Promise<TDropboxFile> => {
+const getLastModifiedFiles = async (token: string, folder: string): Promise<TDropboxFile[]> => {
   const files: TDropboxFile[] = [];
 
   try {
@@ -86,21 +88,15 @@ const getLastModifiedFile = async (token: string, folder: string): Promise<TDrop
 
       files.push(...continueFolders.files);
     }
-
-    files.sort(
-      (a, b) => new Date(b.server_modified).getTime() - new Date(a.server_modified).getTime()
-    );
-
-    return files[0];
   } catch (error) {
     Debugger.log(`Error fetching Dropbox folders: ${error}`);
-
-    files.sort(
-      (a, b) => new Date(b.server_modified).getTime() - new Date(a.server_modified).getTime()
-    );
-
-    return files[0];
   }
+
+  files.sort(
+    (a, b) => new Date(b.server_modified).getTime() - new Date(a.server_modified).getTime()
+  );
+
+  return files.slice(0, DEFAULT_TRIGGER_POLL_ITEM_LIMIT);
 };
 
 export default {
@@ -123,22 +119,17 @@ export default {
       );
     }
 
-    try {
-      let previousItem = await getLastModifiedFile(token, folder);
+    const getFiles = () => {
+      return getLastModifiedFiles(token, folder);
+    };
 
-      while (!should_stop()) {
-        const latestItem = await getLastModifiedFile(token, folder);
-        if (previousItem?.id !== latestItem.id) {
-          update(latestItem);
-        }
-
-        previousItem = latestItem;
-
-        await new Promise((resolve) => setTimeout(resolve, 5_000));
-      }
-    } catch (error) {
-      Debugger.log('Error in updated_database_item event_function', error);
-    }
+    await pollCreatedItemsForTrigger({
+      trigger_name: 'dropbox_new_file_in_folder',
+      uniqueField: 'id',
+      getItems: getFiles,
+      update,
+      should_stop,
+    });
   },
   event_info: {
     desc: 'Notion New Database Item Event Info',
@@ -191,8 +182,8 @@ export default {
       );
     }
 
-    const latestItem = await getLastModifiedFile(token, folder);
+    const latestItems = await getLastModifiedFiles(token, folder);
 
-    return latestItem;
+    return latestItems?.length > 0 ? latestItems[0] : null;
   },
 } satisfies TQorePartialEventAction;

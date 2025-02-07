@@ -1,8 +1,9 @@
 import { Client } from '@notionhq/client';
+import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../../global/constants';
+import { pollCreatedItemsForTrigger } from '../../../../global/helpers/event-triggers';
 import { EQoreAppActionCode, TQorePartialEventAction } from '@qoretechnologies/ts-toolkit';
-import { databaseItemQoreType } from './constants';
 import { getNotionDatabaseIdAllowedValues } from '../common/helpers/get-database-id-allowed-values';
-import { Debugger } from '../../../../utils/Debugger';
+import { databaseItemQoreType } from './constants';
 
 export default {
   action: 'new_database_item',
@@ -15,8 +16,8 @@ export default {
     },
   },
   event_function: async (context, update, should_stop) => {
-    const token = context?.conn_opts?.token;
-    const databaseId = context?.opts?.databaseId;
+    const token = context.conn_opts?.token;
+    const databaseId = context.opts?.databaseId;
 
     if (!token) {
       throw new Error('Notion token is required for updated_database_item event');
@@ -26,21 +27,17 @@ export default {
       throw new Error('Notion Database Id is required for updated_database_item event');
     }
 
-    try {
-      let previousItem = await getLastCreatedDatabaseItem(token, databaseId);
+    const getDatabaseItems = () => {
+      return getLastCreatedDatabaseItems(token, databaseId, DEFAULT_TRIGGER_POLL_ITEM_LIMIT);
+    };
 
-      while (!should_stop()) {
-        const latestItem = await getLastCreatedDatabaseItem(token, databaseId);
-        if (previousItem?.id !== latestItem.id) {
-          update(latestItem);
-        }
-        previousItem = latestItem;
-
-        await new Promise((resolve) => setTimeout(resolve, 30_000));
-      }
-    } catch (error) {
-      Debugger.log('Error in updated_database_item event_function', error);
-    }
+    await pollCreatedItemsForTrigger({
+      trigger_name: 'notion_new_database_item',
+      uniqueField: 'id',
+      getItems: getDatabaseItems,
+      update,
+      should_stop,
+    });
   },
   event_info: {
     desc: 'Notion New Database Item Event Info',
@@ -52,13 +49,17 @@ export default {
 
     if (!token || !databaseId) return;
 
-    const latestItem = await getLastCreatedDatabaseItem(token, databaseId);
+    const latestItems = await getLastCreatedDatabaseItems(token, databaseId, 1);
 
-    return latestItem;
+    return latestItems?.length > 0 ? latestItems[0] : null;
   },
 } satisfies TQorePartialEventAction;
 
-export const getLastCreatedDatabaseItem = async (token: string, databaseId: string) => {
+export const getLastCreatedDatabaseItems = async (
+  token: string,
+  databaseId: string,
+  limit = DEFAULT_TRIGGER_POLL_ITEM_LIMIT
+) => {
   const notion = new Client({
     auth: token,
     notionVersion: '2022-02-22',
@@ -72,8 +73,8 @@ export const getLastCreatedDatabaseItem = async (token: string, databaseId: stri
         direction: 'descending',
       },
     ],
-    page_size: 1,
+    page_size: limit,
   });
 
-  return response.results[0];
+  return response.results;
 };

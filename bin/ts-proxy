@@ -216,7 +216,7 @@ class TsProxy inherits TypeScriptProxy {
     }
 
     private getRequestType(string app, string action, *string conn_name, *hash<auto> conn_opts, auto req) {
-        #debug("get request type app: %y action: %y conn_opts: %y req: %y", app, action, conn_opts, req);
+        info("Get request type app: %y action: %y conn_opts: %y req: %y", app, action, conn_opts, req);
         TypeScriptActionInterface::initApp(app);
         TypeScriptActionInterface::initAppAction(app, action);
         TypeScriptActionApiDataProvider prov = TypeScriptActionInterface::getAppDataProvider(app)

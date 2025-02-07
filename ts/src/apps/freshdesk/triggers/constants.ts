@@ -2,6 +2,7 @@ import {
   QorusRequest,
   TQoreAppActionWithEventOrWebhookEventInfo,
 } from '@qoretechnologies/ts-toolkit';
+import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
 
 export const FreshdeskContactEventInfo = {
   desc: 'Contact event data',
@@ -225,16 +226,17 @@ export const FreshdeskTicketEventInfo = {
   },
 } satisfies TQoreAppActionWithEventOrWebhookEventInfo;
 
-export const fetchFreshdeskEventItem = async (options: {
+export const fetchFreshdeskEventItem = async <ItemType = any>(options: {
   token: string;
   subdomain: string;
   path: string;
   order_by: 'created_at' | 'updated_at';
-}) => {
-  const { token, subdomain, path, order_by } = options;
+  limit?: number;
+}): Promise<ItemType[]> => {
+  const { token, subdomain, path, order_by, limit = DEFAULT_TRIGGER_POLL_ITEM_LIMIT } = options;
 
   const response = await QorusRequest.get<{
-    data: unknown[];
+    data: ItemType[];
   }>(
     {
       headers: {
@@ -242,7 +244,7 @@ export const fetchFreshdeskEventItem = async (options: {
       },
       path,
       params: {
-        per_page: '1',
+        per_page: limit.toString(),
         order_by,
         order_type: 'desc',
       },
@@ -256,5 +258,5 @@ export const fetchFreshdeskEventItem = async (options: {
     return;
   }
 
-  return responseData[0];
+  return data;
 };

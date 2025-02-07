@@ -2048,7 +2048,7 @@ const en = {
     Salesforce: {
       triggers: {
         new_record_trigger: {
-          displayName: 'New Record Trigger',
+          displayName: 'New Record',
           shortDesc: 'Triggers when a new record is created in the specified object.',
           longDesc:
             'This trigger fires whenever a new record is created in a specified Salesforce object. You can configure the object type to target specific record types, such as Leads, Contacts, or custom objects. It is useful for automating workflows triggered by record creation.',
@@ -2065,7 +2065,7 @@ const en = {
           },
         },
         new_contact_trigger: {
-          displayName: 'New Contact Trigger',
+          displayName: 'New Contact',
           shortDesc: 'Triggers when a new Contact record is created.',
           longDesc:
             'This trigger fires whenever a new Contact record is created in Salesforce. It is ideal for automating workflows such as contact notifications, integrations, or CRM updates.',
@@ -2074,7 +2074,7 @@ const en = {
           },
         },
         new_lead_trigger: {
-          displayName: 'New Lead Trigger',
+          displayName: 'New Lead',
           shortDesc: 'Triggers when a new Lead record is created.',
           longDesc:
             'This trigger activates whenever a new Lead record is created in Salesforce. It is commonly used for workflows related to lead generation, qualification, or assignment.',
@@ -2083,7 +2083,7 @@ const en = {
           },
         },
         updated_record_trigger: {
-          displayName: 'Updated Record Trigger',
+          displayName: 'Updated Record',
           shortDesc: 'Triggers when an existing record is updated.',
           longDesc:
             'This trigger fires whenever an existing record in a specified Salesforce object is updated. It is useful for workflows that depend on changes to specific fields or records, such as updating downstream systems or notifying users of record changes.',
@@ -2108,7 +2108,7 @@ const en = {
         'Freshdesk is a cloud-based customer support platform that was founded with the mission of enabling companies of all sizes to provide great customer service. Our goal is simple: make it easy for brands to talk to their customers and make it easy for users to get in touch with businesses.',
       triggers: {
         new_ticket_trigger: {
-          displayName: 'New Ticket Trigger',
+          displayName: 'New Ticket',
           shortDesc: 'Triggers when a new ticket is created in Freshdesk.',
           longDesc:
             'Fires whenever a new ticket is created in your Freshdesk instance. You can capture details such as subject, description, priority, and more, and use this data in subsequent actions or notifications.',
@@ -2132,7 +2132,7 @@ const en = {
         },
 
         new_contact_trigger: {
-          displayName: 'New Contact Trigger',
+          displayName: 'New Contact',
           shortDesc: 'Triggers when a new contact is created in Freshdesk.',
           longDesc:
             'Fires whenever a new contact is added to your Freshdesk instance. Capture details such as name, email, phone, and any custom fields associated with the contact.',
@@ -2142,7 +2142,7 @@ const en = {
         },
 
         updated_ticket_trigger: {
-          displayName: 'Updated Ticket Trigger',
+          displayName: 'Updated Ticket',
           shortDesc: 'Triggers when an existing ticket is updated in Freshdesk.',
           longDesc:
             'Fires whenever an existing ticket is updated with new details in your Freshdesk instance. For example, changes to subject, priority, status, or assigned agent.',
@@ -2152,7 +2152,7 @@ const en = {
         },
 
         updated_contact_trigger: {
-          displayName: 'Updated Contact Trigger',
+          displayName: 'Updated Contact',
           shortDesc: 'Triggers when an existing contact is updated in Freshdesk.',
           longDesc:
             'Fires whenever an existing contact’s details are updated in your Freshdesk instance. For example, changes to name, phone number, email, or custom fields.',

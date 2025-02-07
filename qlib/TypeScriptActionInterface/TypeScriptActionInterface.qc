@@ -1,7 +1,7 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 #! Qore TypeScriptActionInterface module definition
 
-/*  TypeScriptActionInterface.qc Copyright 2024 Qore Technologies, s.r.o.
+/*  TypeScriptActionInterface.qc Copyright 2024 - 2025 Qore Technologies, s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -176,8 +176,14 @@ public class TypeScriptActionInterface {
         #! Maps from app names to Swagger schemas
         static hash<string, SwaggerSchema> app_swagger_map;
 
-        #! Maps from app names to SwaggerDataProvider object
+        #! Maps from app names to SwaggerDataProvider objects
         static hash<string, SwaggerDataProvider> app_swagger_dp;
+
+        #! Maps from app and schema names to Swagger schemas
+        static hash<string, hash<string, SwaggerSchema>> app_swagger_schema_map;
+
+        #! Maps from app and schema names names to SwaggerDataProvider objects
+        static hash<string, hash<string, SwaggerDataProvider>> app_swagger_schema_dp;
 
         #! Maps from app names to REST template options; app -> option -> True
         static hash<string, hash<string, bool>> atmap;
@@ -245,8 +251,8 @@ public class TypeScriptActionInterface {
     }
 
     #! Initialize all pending apps
-    static initAllApps() {
-        map TypeScriptActionInterface::initApp($1, True), keys appmap;
+    static initAllApps(bool do_actions = True) {
+        map TypeScriptActionInterface::initApp($1, do_actions), keys appmap;
     }
 
     #! Returns a list of all pending apps
@@ -513,6 +519,11 @@ public class TypeScriptActionInterface {
         string cwd = getcwd();
         on_exit chdir(cwd);
         chdir(info.cwd);
+        if (!do_actions) {
+            # mark the app with action capabilities before registering
+            map info.app{ActionCodeFlagMap{$1.action.action_code}} = True, actionmap{info.app.name}.iterator();
+        }
+
         TypeScriptActionInterface::registerAppIntern(info.app, info.pool);
 
         if (do_actions) {
@@ -554,10 +565,18 @@ public class TypeScriptActionInterface {
         on_error TSAI::error("%s", get_exception_string($1));
         string appname = app.name.lwr();
         SwaggerSchema schema;
+        hash<string, SwaggerSchema> swagger_schema_map;
         if ((*string swagger_loc = remove app.swagger).val()) {
             on_error rethrow $1.err, sprintf("%s (while loading app %y)", $1.desc, app.name);
             schema = TypeScriptActionInterface::getSwaggerSchema(appname, swagger_loc, remove app.swagger_options,
                 remove app.swagger_paths, remove app.swagger_type_overrides);
+        } else if (*hash<auto> schema_map = app.swagger_schema_map) {
+            foreach hash<auto> i in (schema_map) {
+                on_error rethrow $1.err, sprintf("%s (while creating schema for app %y schema %y)", $1.desc, app.name, i.key);
+                swagger_schema_map{i.key} = TypeScriptActionInterface::getSwaggerSchema(appname, i.value.swagger,
+                    remove i.value.swagger_options,
+                    remove i.value.swagger_paths, remove i.value.swagger_type_overrides);
+            }
         }
         hash<auto> app0 += app;
         if (app.logo) {
@@ -703,6 +722,9 @@ public class TypeScriptActionInterface {
 
         if (schema) {
             app_swagger_map{appname} = schema;
+        }
+        if (swagger_schema_map) {
+            app_swagger_schema_map{appname} = swagger_schema_map;
         }
         if (url_template_options) {
             atmap{appname} = url_template_options;
@@ -918,7 +940,22 @@ public class TypeScriptActionInterface {
             app = DataProviderActionCatalog::getAppEx(action.app);
         }
         string appname = action.app.lwr();
-        *SwaggerSchema schema = app_swagger_map{appname};
+        *SwaggerSchema schema;
+        if (exists (*string swagger_schema = action.swagger_schema)) {
+            schema = app_swagger_schema_map{appname}{swagger_schema};
+            if (!schema) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y refers to unknown Swagger schema %y; "
+                    "known schemas for this app: %y", app.name, action.action, swagger_schema,
+                    keys app_swagger_schema_map{appname});
+            }
+        } else {
+            if (app_swagger_schema_map{appname}) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y is missing the \"swagger_schema\" "
+                    "attribute; known schemas for this app: %y", app.name, action.action,
+                    keys app_swagger_schema_map{appname});
+            }
+            schema = app_swagger_map{appname};
+        }
 
         switch (action.action_code) {
             case DPAT_API: {
@@ -2039,15 +2076,27 @@ public class TypeScriptActionInterface {
     }
 
     #! Returns a Swagger data provider for the given app
-    static SwaggerDataProvider getSwaggerDataProvider(string app) {
+    static SwaggerDataProvider getSwaggerDataProvider(string app, *string swagger_schema) {
         string appname = app.lwr();
-        *SwaggerDataProvider rv = app_swagger_dp{appname};
+        *SwaggerDataProvider rv = exists swagger_schema
+            ? app_swagger_schema_dp{appname}{swagger_schema}
+            : app_swagger_dp{appname};
         if (!rv) {
-            *SwaggerSchema schema = app_swagger_map{appname};
+            *SwaggerSchema schema = exists swagger_schema
+                ? app_swagger_schema_map{appname}{swagger_schema}
+                : app_swagger_map{appname};
             if (!schema) {
-                throw "APP-ERROR", sprintf("App %y has no Swagger schema", app);
+                if (exists swagger_schema) {
+                    throw "APP-ERROR", sprintf("App %y has no Swagger schema %y", app, swagger_schema);
+                } else {
+                    throw "APP-ERROR", sprintf("App %y has no Swagger schema", app);
+                }
             }
-            app_swagger_dp{appname} = rv = new SwaggerDataProvider(schema);
+            if (exists swagger_schema) {
+                app_swagger_schema_dp{appname}{swagger_schema} = rv = new SwaggerDataProvider(schema);
+            } else {
+                app_swagger_dp{appname} = rv = new SwaggerDataProvider(schema);
+            }
         }
         return rv;
     }

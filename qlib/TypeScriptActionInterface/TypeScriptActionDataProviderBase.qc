@@ -180,15 +180,18 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
     }
 
     static private auto getAsyncValueArgsIntern(*LoggerInterface logger, hash<AsyncCallInfo> api, *softlist<auto> args) {
+        if (no_io) {
+            return;
+        }
         date start = now_us();
         on_exit TSAI::debug("perf: %y get async value: %y", api.label, now_us() - start);
         on_error TSAI::error("%s", get_exception_string($1));
 
         # handle the call with a remote process
         if (TSAI::checkServer()) {
-            TSAI::debug("Starting proxy for %y: %y", api.key, args);
+            TSAI::info("Starting proxy for %y: %y", api.key, args);
             JavaScriptProgramProxy proxy = TypeScriptActionInterface::server.get();
-            TSAI::debug("Proxy started for %y: %y", api.key, args);
+            TSAI::info("Proxy started for %y: %y", api.key, args);
             on_exit TypeScriptActionInterface::server.release(proxy);
             return proxy.getAsyncValue(api, args);
         }
@@ -612,6 +615,24 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                 "opts": action_opts,
             };
         }
+    }
+}
+}
+
+namespace Priv {
+thread_local *bool no_io;
+class NoIoHelper {
+    private {
+        *bool old_no_io;
+    }
+
+    constructor() {
+        old_no_io = no_io;
+        no_io = True;
+    }
+
+    destructor() {
+        no_io = old_no_io;
     }
 }
 }
