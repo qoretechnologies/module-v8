@@ -1,13 +1,11 @@
-import {
-  EQoreAppActionCode,
-  QorusRequest,
-  TQorePartialEventAction,
-} from '@qoretechnologies/ts-toolkit';
-import { Debugger } from '../../../utils/Debugger';
+import { EQoreAppActionCode, QoreAppCreator, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
+import { Debugger } from '../../../utils/Debugger';
+import { NETSUITE_APP_NAME } from '../constants';
 
-export default {
+const netsuiteNewRecordTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: NETSUITE_APP_NAME,
   action: 'new_record',
   action_code: EQoreAppActionCode.EVENT,
   options: {
@@ -61,7 +59,7 @@ export default {
 
     return data?.length > 0 ? data[0] : null;
   },
-} satisfies TQorePartialEventAction;
+});
 
 const getLastCreatedRecordItems = async (recordType: string, accountId: string, token: string) => {
   try {
@@ -116,3 +114,5 @@ const fetchSuiteQlData = async ({
 
   return data;
 };
+
+export default netsuiteNewRecordTrigger;

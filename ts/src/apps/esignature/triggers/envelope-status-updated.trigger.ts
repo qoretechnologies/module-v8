@@ -1,11 +1,8 @@
-import {
-  EQoreAppActionCode,
-  QorusRequest,
-  TQorePartialEventAction,
-} from '@qoretechnologies/ts-toolkit';
-import { GetAccountIdConfig } from '../constants';
+import { EQoreAppActionCode, QoreAppCreator, QorusRequest } from '@qoretechnologies/ts-toolkit';
+import { ESIGNATURE_APP_NAME, GetAccountIdConfig } from '../constants';
 
-export default {
+export const eSignatureEnvelopeStatusUpdatedTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: ESIGNATURE_APP_NAME,
   action: 'envelope_status_updated',
   action_code: EQoreAppActionCode.EVENT,
   webhook_method: 'POST',
@@ -261,4 +258,6 @@ export default {
       },
     },
   },
-} satisfies TQorePartialEventAction;
+});
+
+export default eSignatureEnvelopeStatusUpdatedTrigger;

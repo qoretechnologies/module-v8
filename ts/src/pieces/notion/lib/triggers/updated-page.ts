@@ -1,11 +1,12 @@
 import { Client } from '@notionhq/client';
 import { PageObjectResponse } from '@notionhq/client/build/src/api-endpoints';
-import { EQoreAppActionCode, TQorePartialEventAction } from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../../utils/Debugger';
 import { getNotionPageIdAllowedValues } from '../common/helpers/get-page-id-allowed-values';
 import { pageItemQoreType } from './constants';
 
-export default {
+const notionUpdatedPageEvent = QoreAppCreator.createLocalizedTrigger({
+  app: 'Notion',
   action: 'updated_page',
   action_code: EQoreAppActionCode.EVENT,
   options: {
@@ -59,7 +60,7 @@ export default {
 
     return page;
   },
-} satisfies TQorePartialEventAction;
+});
 
 const getPageById = async (token: string, pageId: string) => {
   const notion = new Client({
@@ -73,3 +74,5 @@ const getPageById = async (token: string, pageId: string) => {
 
   return response;
 };
+
+export default notionUpdatedPageEvent;

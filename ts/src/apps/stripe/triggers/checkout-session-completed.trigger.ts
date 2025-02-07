@@ -1,4 +1,5 @@
-import { EQoreAppActionCode, TQorePartialEventAction } from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
+import { STRIPE_APP_NAME } from '../constants';
 import { TStripeEventType } from './constants';
 import {
   createGetStripeExampleEventDataFunction,
@@ -8,7 +9,8 @@ import {
 
 const triggerEvents = ['checkout.session.completed'] satisfies TStripeEventType[];
 
-export default {
+const stripeCheckoutSessionCompletedTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: STRIPE_APP_NAME,
   action: 'checkout_session_completed',
   action_code: EQoreAppActionCode.EVENT,
   webhook_method: 'POST',
@@ -228,4 +230,6 @@ export default {
       },
     },
   },
-} satisfies TQorePartialEventAction;
+});
+
+export default stripeCheckoutSessionCompletedTrigger;

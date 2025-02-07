@@ -1,9 +1,11 @@
-import { EQoreAppActionCode, TQorePartialEventAction } from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
-import { fetchFreshdeskEventItem, FreshdeskContactEventInfo } from './constants';
 import { pollUpdatedItemsForTrigger } from '../../../global/helpers/event-triggers';
+import { FRESHDESK_APP_NAME } from '../constants';
+import { fetchFreshdeskEventItem, FreshdeskContactEventInfo } from './constants';
 
-export default {
+const freshDeskUpdateContactTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: FRESHDESK_APP_NAME,
   action: 'updated_contact_trigger',
   action_code: EQoreAppActionCode.EVENT,
 
@@ -50,7 +52,7 @@ export default {
     return data?.length > 0 ? data[0] : null;
   },
   event_info: FreshdeskContactEventInfo,
-} satisfies TQorePartialEventAction;
+});
 
 const getLastUpdatedContacts = async (token: string, subdomain: string): Promise<any> => {
   const data = await fetchFreshdeskEventItem<{ id: number; updated_at: string }>({
@@ -63,3 +65,5 @@ const getLastUpdatedContacts = async (token: string, subdomain: string): Promise
 
   return data;
 };
+
+export default freshDeskUpdateContactTrigger;

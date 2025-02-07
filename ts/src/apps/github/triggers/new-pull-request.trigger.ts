@@ -1,9 +1,9 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { EQoreAppActionCode, TQorePartialEventAction } from '@qoretechnologies/ts-toolkit';
-import { repoOwnerCommonOptions } from '../constants';
+import { EQoreAppActionCode, QoreAppCreator, QorusRequest } from '@qoretechnologies/ts-toolkit';
+import { GITHUB_APP_NAME, repoOwnerCommonOptions } from '../constants';
 import { commonEventFieldsType } from './constants';
 
-export default {
+const githubNewPullRequestTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: GITHUB_APP_NAME,
   action: 'new_pull_request',
   action_code: EQoreAppActionCode.EVENT,
   webhook_method: 'POST',
@@ -208,4 +208,6 @@ export default {
       },
     },
   },
-} satisfies TQorePartialEventAction;
+});
+
+export default githubNewPullRequestTrigger;

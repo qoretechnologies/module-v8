@@ -1,15 +1,13 @@
-import {
-  EQoreAppActionCode,
-  QorusRequest,
-  TQorePartialEventAction,
-} from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode, QoreAppCreator, QorusRequest } from '@qoretechnologies/ts-toolkit';
+import { ASANA_APP_NAME } from '../constants';
 import { getAsanaTaskIdAllowedValues } from '../helpers/get-task-id-allowed-values';
 import { getAsanaWorkspaceIdAllowedValuesRest } from '../helpers/get-workspace-id-allowed-values';
 import { getAsanaWorkspaceProjectIdAllowedValues } from '../helpers/get-workspace-project-id-allowed-values';
 import { asanaEventInfoType, asanaWebhookEchoHeader, asanaWebhookInfoLocation } from './constants';
 import { deregisterAsanaWebhook } from './helpers';
 
-export default {
+const asanaNewTaskTagTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: ASANA_APP_NAME,
   action: 'task_tag_added',
   action_code: EQoreAppActionCode.EVENT,
   webhook_method: 'POST',
@@ -78,4 +76,6 @@ export default {
     desc: 'New task tag event data',
     type: asanaEventInfoType,
   },
-} satisfies TQorePartialEventAction;
+});
+
+export default asanaNewTaskTagTrigger;

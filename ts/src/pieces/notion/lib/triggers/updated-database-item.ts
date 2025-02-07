@@ -1,12 +1,13 @@
 import { Client } from '@notionhq/client';
 import { DatabaseObjectResponse } from '@notionhq/client/build/src/api-endpoints';
+import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../../global/constants';
 import { pollUpdatedItemsForTrigger } from '../../../../global/helpers/event-triggers';
-import { EQoreAppActionCode, TQorePartialEventAction } from '@qoretechnologies/ts-toolkit';
 import { getNotionDatabaseIdAllowedValues } from '../common/helpers/get-database-id-allowed-values';
 import { databaseItemQoreType } from './constants';
 
-export default {
+const notionUpdatedDatabaseItemTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: 'Notion',
   action: 'updated_database_item',
   action_code: EQoreAppActionCode.EVENT,
   options: {
@@ -55,7 +56,7 @@ export default {
 
     return latestItems.length > 0 ? latestItems[0] : null;
   },
-} satisfies TQorePartialEventAction;
+});
 
 export const getLastUpdatedDatabaseItems = async (
   token: string,
@@ -80,3 +81,5 @@ export const getLastUpdatedDatabaseItems = async (
 
   return response.results as DatabaseObjectResponse[];
 };
+
+export default notionUpdatedDatabaseItemTrigger;

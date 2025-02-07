@@ -1,13 +1,11 @@
-import {
-  EQoreAppActionCode,
-  QorusRequest,
-  TQorePartialEventAction,
-} from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode, QoreAppCreator, QorusRequest } from '@qoretechnologies/ts-toolkit';
+import { ASANA_APP_NAME } from '../constants';
 import { getAsanaWorkspaceIdAllowedValuesRest } from '../helpers/get-workspace-id-allowed-values';
 import { asanaEventInfoType, asanaWebhookEchoHeader, asanaWebhookInfoLocation } from './constants';
 import { deregisterAsanaWebhook } from './helpers';
 
-export default {
+const asanaNewTeamTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: ASANA_APP_NAME,
   action: 'team_added',
   action_code: EQoreAppActionCode.EVENT,
   webhook_method: 'POST',
@@ -64,4 +62,6 @@ export default {
     desc: 'New team event data',
     type: asanaEventInfoType,
   },
-} satisfies TQorePartialEventAction;
+});
+
+export default asanaNewTeamTrigger;

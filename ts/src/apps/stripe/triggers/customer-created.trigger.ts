@@ -1,4 +1,5 @@
-import { EQoreAppActionCode, TQorePartialEventAction } from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
+import { STRIPE_APP_NAME } from '../constants';
 import { TStripeEventType } from './constants';
 import {
   createGetStripeExampleEventDataFunction,
@@ -8,7 +9,8 @@ import {
 
 const triggerEvents = ['customer.created'] satisfies TStripeEventType[];
 
-export default {
+const stripeCustomerCreatedTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: STRIPE_APP_NAME,
   action: 'customer_created',
   action_code: EQoreAppActionCode.EVENT,
   webhook_method: 'POST',
@@ -70,4 +72,6 @@ export default {
       },
     },
   },
-} satisfies TQorePartialEventAction;
+});
+
+export default stripeCustomerCreatedTrigger;

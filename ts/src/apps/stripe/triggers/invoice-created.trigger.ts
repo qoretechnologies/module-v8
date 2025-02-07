@@ -1,4 +1,5 @@
-import { EQoreAppActionCode, TQorePartialEventAction } from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
+import { STRIPE_APP_NAME } from '../constants';
 import { TStripeEventType } from './constants';
 import { stripeInvoiceEventInfoType } from './event-info/invoice.event-info';
 import {
@@ -9,7 +10,8 @@ import {
 
 const triggerEvents = ['invoice.created'] satisfies TStripeEventType[];
 
-export default {
+const stripeInvoiceCreatedTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: STRIPE_APP_NAME,
   action: 'invoice_created',
   action_code: EQoreAppActionCode.EVENT,
   webhook_method: 'POST',
@@ -20,4 +22,6 @@ export default {
     desc: 'Invoice created event data',
     type: stripeInvoiceEventInfoType,
   },
-} satisfies TQorePartialEventAction;
+});
+
+export default stripeInvoiceCreatedTrigger;

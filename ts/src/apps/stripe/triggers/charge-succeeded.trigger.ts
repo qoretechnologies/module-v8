@@ -1,4 +1,5 @@
-import { EQoreAppActionCode, TQorePartialEventAction } from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
+import { STRIPE_APP_NAME } from '../constants';
 import { TStripeEventType } from './constants';
 import { chargeEventInfoType } from './event-info/charge.event-info';
 import {
@@ -9,7 +10,8 @@ import {
 
 const triggerEvents = ['charge.succeeded'] satisfies TStripeEventType[];
 
-export default {
+const stripeChargeRefundedTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: STRIPE_APP_NAME,
   action: 'charge_succeeded',
   action_code: EQoreAppActionCode.EVENT,
   webhook_method: 'POST',
@@ -20,4 +22,6 @@ export default {
     desc: 'Charge succeeded event data',
     type: chargeEventInfoType,
   },
-} satisfies TQorePartialEventAction;
+});
+
+export default stripeChargeRefundedTrigger;

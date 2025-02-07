@@ -1,10 +1,10 @@
 import {
   EQoreAppActionCode,
   IQoreAppActionWithWebhookBase,
+  QoreAppCreator,
   QorusRequest,
-  TQorePartialEventAction,
 } from '@qoretechnologies/ts-toolkit';
-import { ZENDESK_CONN_OPTIONS } from '..';
+import { ZENDESK_APP_NAME, ZENDESK_CONN_OPTIONS } from '..';
 
 const createZendeskNewTicketWebhookRegistrar = (): IQoreAppActionWithWebhookBase<
   typeof ZENDESK_CONN_OPTIONS
@@ -134,7 +134,8 @@ export const createZendeskNewTicketWebhookDeRegistrar = (): IQoreAppActionWithWe
   };
 };
 
-export default {
+const zendeskNewTicketTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: ZENDESK_APP_NAME,
   action: 'new_ticket',
   action_code: EQoreAppActionCode.EVENT,
   webhook_method: 'POST',
@@ -190,4 +191,6 @@ export default {
       },
     },
   },
-} satisfies TQorePartialEventAction;
+});
+
+export default zendeskNewTicketTrigger;

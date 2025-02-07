@@ -1,7 +1,9 @@
-import { EQoreAppActionCode, TQorePartialEventAction } from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
+import { ZENDESK_APP_NAME } from '..';
 import { createZendeskWebhookDeRegistrar, createZendeskWebhookRegistrar } from './helpers';
 
-export default {
+const zendeskNewOrganizationTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: ZENDESK_APP_NAME,
   action: 'new_organization',
   action_code: EQoreAppActionCode.EVENT,
   webhook_method: 'POST',
@@ -69,4 +71,6 @@ export default {
       },
     },
   },
-} satisfies TQorePartialEventAction;
+});
+
+export default zendeskNewOrganizationTrigger;

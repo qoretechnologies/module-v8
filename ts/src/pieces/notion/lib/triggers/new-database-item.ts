@@ -1,11 +1,12 @@
 import { Client } from '@notionhq/client';
+import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../../global/constants';
 import { pollCreatedItemsForTrigger } from '../../../../global/helpers/event-triggers';
-import { EQoreAppActionCode, TQorePartialEventAction } from '@qoretechnologies/ts-toolkit';
 import { getNotionDatabaseIdAllowedValues } from '../common/helpers/get-database-id-allowed-values';
 import { databaseItemQoreType } from './constants';
 
-export default {
+const notionNewDatabaseItemTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: 'Notion',
   action: 'new_database_item',
   action_code: EQoreAppActionCode.EVENT,
   options: {
@@ -53,7 +54,7 @@ export default {
 
     return latestItems?.length > 0 ? latestItems[0] : null;
   },
-} satisfies TQorePartialEventAction;
+});
 
 export const getLastCreatedDatabaseItems = async (
   token: string,
@@ -78,3 +79,5 @@ export const getLastCreatedDatabaseItems = async (
 
   return response.results;
 };
+
+export default notionNewDatabaseItemTrigger;

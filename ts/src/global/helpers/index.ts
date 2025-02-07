@@ -100,7 +100,7 @@ export const buildActionsFromSwaggerSchema = ({
   Object.entries(schema.paths).forEach(([path, methods]) => {
     const allowedPath = allowedPathsWithMethods.get(path);
 
-    if (allowedPathsWithMethods.size > 0 && !allowedPath) return;
+    if (allowedPathsWithMethods.size > 0 && allowedPath === undefined) return;
 
     Object.entries(methods).forEach(([method, data]) => {
       if (method === 'parameters' || typeof data !== 'object') return;
@@ -110,9 +110,9 @@ export const buildActionsFromSwaggerSchema = ({
 
       if (!isMethodAllowed) return;
 
-      const pathData = allowedPaths
-        ? allowedPaths[path][method.toUpperCase() as THttpMethod]
-        : null;
+      console.log(allowedPath);
+
+      const pathData = allowedPaths?.[path]?.[method.toUpperCase() as THttpMethod];
       const dataWithoutParameters = data as OpenAPIV2.OperationObject;
       let actionData = allowedPath?.methods?.has(methodKey) ? pathData || {} : {};
 

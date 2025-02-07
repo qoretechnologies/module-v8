@@ -1,10 +1,12 @@
+import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
-import { EQoreAppActionCode, TQorePartialEventAction } from '@qoretechnologies/ts-toolkit';
+import { SALESFORCE_APP_NAME } from '../constants';
 import { fetchSalesforceObjectRecords } from '../helpers/constants';
 import { getSalesforceObjectAllowedValues } from '../helpers/get-object-allowed-values';
 
-export default {
+const salesforceNewRecordTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: SALESFORCE_APP_NAME,
   action: 'new_record_trigger',
   action_code: EQoreAppActionCode.EVENT,
   options: {
@@ -61,7 +63,7 @@ export default {
 
     return data?.length > 0 ? data[0] : null;
   },
-} satisfies TQorePartialEventAction;
+});
 
 export const getLastCreatedRecords = async (
   token: string,
@@ -76,3 +78,5 @@ export const getLastCreatedRecords = async (
 
   return record;
 };
+
+export default salesforceNewRecordTrigger;

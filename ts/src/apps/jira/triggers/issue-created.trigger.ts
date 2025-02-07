@@ -1,15 +1,13 @@
-import {
-  EQoreAppActionCode,
-  QorusRequest,
-  TQorePartialEventAction,
-} from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode, QoreAppCreator, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
+import { JIRA_APP_NAME } from '../constants';
 import { getJiraIssueExampleData } from '../helpers/get-issue-example-data';
 import { getJiraProjectIdAllowedValues } from '../helpers/get-project-id-allowed-values';
 import { issueEventInfoType } from './event-info/issue.event-info';
 import { deregisterJiraWebhook } from './helpers';
 
-export default {
+const jiraIssueCreatedTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: JIRA_APP_NAME,
   action: 'issue_created',
   action_code: EQoreAppActionCode.EVENT,
   webhook_method: 'POST',
@@ -70,4 +68,6 @@ export default {
     desc: 'Issue created event data',
     type: issueEventInfoType,
   },
-} satisfies TQorePartialEventAction;
+});
+
+export default jiraIssueCreatedTrigger;

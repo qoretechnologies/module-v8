@@ -1,12 +1,13 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { EQoreAppActionCode, TQorePartialEventAction } from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode, QoreAppCreator, QorusRequest } from '@qoretechnologies/ts-toolkit';
+import { ASANA_APP_NAME } from '../constants';
 import { getAsanaWorkspaceIdAllowedValuesRest } from '../helpers/get-workspace-id-allowed-values';
 import { getAsanaWorkspaceProjectIdAllowedValues } from '../helpers/get-workspace-project-id-allowed-values';
 import { asanaEventInfoType, asanaWebhookEchoHeader, asanaWebhookInfoLocation } from './constants';
 import { deregisterAsanaWebhook } from './helpers';
 
-export default {
+const asanaNewAttachmentTrigger = QoreAppCreator.createLocalizedTrigger({
   action: 'attachment_added',
+  app: ASANA_APP_NAME,
   action_code: EQoreAppActionCode.EVENT,
   webhook_method: 'POST',
   options: {
@@ -68,4 +69,6 @@ export default {
     desc: 'New attachment event data',
     type: asanaEventInfoType,
   },
-} satisfies TQorePartialEventAction;
+});
+
+export default asanaNewAttachmentTrigger;

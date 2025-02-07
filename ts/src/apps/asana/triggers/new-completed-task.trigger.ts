@@ -1,14 +1,12 @@
-import {
-  EQoreAppActionCode,
-  QorusRequest,
-  TQorePartialEventAction,
-} from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode, QoreAppCreator, QorusRequest } from '@qoretechnologies/ts-toolkit';
+import { ASANA_APP_NAME } from '../constants';
 import { getAsanaWorkspaceIdAllowedValuesRest } from '../helpers/get-workspace-id-allowed-values';
 import { getAsanaWorkspaceProjectIdAllowedValues } from '../helpers/get-workspace-project-id-allowed-values';
 import { asanaEventInfoType, asanaWebhookEchoHeader, asanaWebhookInfoLocation } from './constants';
 import { deregisterAsanaWebhook } from './helpers';
 
-export default {
+const asanaTaskCompletedTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: ASANA_APP_NAME,
   action: 'task_completed',
   action_code: EQoreAppActionCode.EVENT,
   webhook_method: 'POST',
@@ -72,4 +70,6 @@ export default {
     desc: 'New completed task event data',
     type: asanaEventInfoType,
   },
-} satisfies TQorePartialEventAction;
+});
+
+export default asanaTaskCompletedTrigger;

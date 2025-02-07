@@ -1,9 +1,11 @@
+import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
-import { EQoreAppActionCode, TQorePartialEventAction } from '@qoretechnologies/ts-toolkit';
+import { SALESFORCE_APP_NAME } from '../constants';
 import { fetchSalesforceObjectRecords } from '../helpers/constants';
 
-export default {
+const salesforceNewContactTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: SALESFORCE_APP_NAME,
   action: 'new_contact_trigger',
   action_code: EQoreAppActionCode.EVENT,
   event_function: async (context, update, should_stop) => {
@@ -49,7 +51,7 @@ export default {
 
     return data?.length > 0 ? data[0] : null;
   },
-} satisfies TQorePartialEventAction;
+});
 
 const getLastCreatedContacts = async (token: string, url: string): Promise<any> => {
   const contacts = await fetchSalesforceObjectRecords({
@@ -60,3 +62,5 @@ const getLastCreatedContacts = async (token: string, url: string): Promise<any> 
 
   return contacts;
 };
+
+export default salesforceNewContactTrigger;

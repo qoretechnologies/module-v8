@@ -1,12 +1,13 @@
+import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
-import { EQoreAppActionCode, TQorePartialEventAction } from '@qoretechnologies/ts-toolkit';
+import { FRESHDESK_APP_NAME } from '../constants';
 import { fetchFreshdeskEventItem, FreshdeskContactEventInfo } from './constants';
 
-export default {
+const freshDeskNewContactTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: FRESHDESK_APP_NAME,
   action: 'new_contact_trigger',
   action_code: EQoreAppActionCode.EVENT,
-
   event_function: async (context, update, should_stop) => {
     const token = context?.conn_opts?.token;
     const subdomain = context?.conn_opts?.subdomain;
@@ -55,7 +56,7 @@ export default {
     return data?.length > 0 ? data[0] : null;
   },
   event_info: FreshdeskContactEventInfo,
-} satisfies TQorePartialEventAction;
+});
 
 const getLastCreatedContacts = async (token: string, subdomain: string) => {
   const data = await fetchFreshdeskEventItem<{ id: number }>({
@@ -68,3 +69,5 @@ const getLastCreatedContacts = async (token: string, subdomain: string) => {
 
   return data;
 };
+
+export default freshDeskNewContactTrigger;

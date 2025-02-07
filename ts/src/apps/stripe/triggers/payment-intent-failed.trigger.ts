@@ -1,4 +1,5 @@
-import { EQoreAppActionCode, TQorePartialEventAction } from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
+import { STRIPE_APP_NAME } from '../constants';
 import { TStripeEventType } from './constants';
 import { stripePaymentIntentEventInfoType } from './event-info/payment-infent.event-info';
 import {
@@ -9,7 +10,8 @@ import {
 
 const triggerEvents = ['payment_intent.payment_failed'] satisfies TStripeEventType[];
 
-export default {
+const stripePaymentIntentFailedTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: STRIPE_APP_NAME,
   action: 'payment_intent_failed',
   action_code: EQoreAppActionCode.EVENT,
   webhook_method: 'POST',
@@ -20,4 +22,6 @@ export default {
     desc: 'Payment failed event data',
     type: stripePaymentIntentEventInfoType,
   },
-} satisfies TQorePartialEventAction;
+});
+
+export default stripePaymentIntentFailedTrigger;
