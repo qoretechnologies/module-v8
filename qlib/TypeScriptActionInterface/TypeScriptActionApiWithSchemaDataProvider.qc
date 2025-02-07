@@ -40,6 +40,9 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
     }
 
     private {
+        #! Optional Swagger schema label
+        *string swagger_schema;
+
         #! Swagger path
         string swagger_path;
 
@@ -82,6 +85,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
             *hash<string, bool> path_vars, *hash<string, bool> independent_path_vars,
             *hash<string, string> conn_opt_map, *hash<auto> override_options, ActionFunctionContext fctx)
             : TypeScriptActionApiDataProvider(action.action, api, fctx) {
+        self.swagger_schema = remove action.swagger_schema;
         swagger_path =~ s/^\///;
         self.swagger_path = swagger_path;
         self.path_vars = path_vars;
@@ -403,7 +407,8 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         if (!prov) {
             on_error rethrow $1.err, sprintf("Error setting data provider from appp %y action %y: %s (Swagger "
                 "path: %y)", app, action, $1.desc, swagger_path);
-            prov = TypeScriptActionInterface::getSwaggerDataProvider(app).getChildProviderPath(swagger_path);
+            prov = TypeScriptActionInterface::getSwaggerDataProvider(app, swagger_schema)
+                .getChildProviderPath(swagger_path);
         }
         return prov;
     }
