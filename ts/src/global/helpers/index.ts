@@ -110,8 +110,6 @@ export const buildActionsFromSwaggerSchema = ({
 
       if (!isMethodAllowed) return;
 
-      console.log(allowedPath);
-
       const pathData = allowedPaths?.[path]?.[method.toUpperCase() as THttpMethod];
       const dataWithoutParameters = data as OpenAPIV2.OperationObject;
       let actionData = allowedPath?.methods?.has(methodKey) ? pathData || {} : {};
