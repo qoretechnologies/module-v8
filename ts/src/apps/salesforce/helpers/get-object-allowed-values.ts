@@ -6,8 +6,9 @@ import {
 import { SALESFORCE_API_VERSION, SALESFORCE_CONN_OPTIONS } from '../constants';
 
 export const getSalesforceObjectAllowedValues: TQoreGetAllowedValuesFunction<
-  typeof SALESFORCE_CONN_OPTIONS
-> = async (context): Promise<IQoreAllowedValue[]> => {
+  typeof SALESFORCE_CONN_OPTIONS,
+  string
+> = async (context): Promise<IQoreAllowedValue<string>[]> => {
   const token = context?.conn_opts?.token;
   const instance_url = context?.conn_opts?.instance_url;
 
@@ -17,7 +18,7 @@ export const getSalesforceObjectAllowedValues: TQoreGetAllowedValuesFunction<
     );
   }
 
-  const objectTypes: IQoreAllowedValue[] = [];
+  const objectTypes: IQoreAllowedValue<string>[] = [];
 
   const response = await QorusRequest.get<{
     data: { sobjects: { name: string; label: string }[] };
@@ -40,7 +41,7 @@ export const getSalesforceObjectAllowedValues: TQoreGetAllowedValuesFunction<
 
   objectTypes.push(
     ...responseData.sobjects.map(
-      (object): IQoreAllowedValue => ({
+      (object): IQoreAllowedValue<string> => ({
         value: object.name,
         display_name: object.label,
       })

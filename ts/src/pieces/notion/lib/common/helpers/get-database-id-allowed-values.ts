@@ -1,13 +1,18 @@
 import { Client } from '@notionhq/client';
 import { SearchResponse } from '@notionhq/client/build/src/api-endpoints';
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
+import {
+  IQoreAllowedValue,
+  TCustomConnOptions,
+  TQoreGetAllowedValuesFunction,
+} from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../../../utils/Debugger';
 import { delay } from '../../../../../global/helpers';
 import { NOTION_ALLOWED_VALUES_TIMEOUT, NOTION_FETCH_DELAY } from '../constants';
 
-export const getNotionDatabaseIdAllowedValues: TQoreGetAllowedValuesFunction = async (
-  context
-): Promise<IQoreAllowedValue[]> => {
+export const getNotionDatabaseIdAllowedValues: TQoreGetAllowedValuesFunction<
+  TCustomConnOptions,
+  string
+> = async (context): Promise<IQoreAllowedValue<string>[]> => {
   const token = context?.conn_opts?.token;
 
   if (!token) {
@@ -19,7 +24,7 @@ export const getNotionDatabaseIdAllowedValues: TQoreGetAllowedValuesFunction = a
     notionVersion: '2022-02-22',
   });
 
-  const databases: IQoreAllowedValue[] = [];
+  const databases: IQoreAllowedValue<string>[] = [];
 
   const notionDatabases: SearchResponse['results'] = [];
   let cursor = undefined;

@@ -1,4 +1,8 @@
-import { QorusRequest, TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
+import {
+  QorusRequest,
+  TQoreAppWithActions,
+  TQoreMappedOptions,
+} from '@qoretechnologies/ts-toolkit';
 import { actionsCatalogue } from '../../ActionsCatalogue';
 import {
   buildActionsFromSwaggerSchema,
@@ -53,9 +57,9 @@ export default (locale: Locales) =>
     logo_mime_type: 'image/svg+xml',
     swagger: 'schemas/jira.swagger.json',
     swagger_paths: createSwaggerPaths(JIRA_ALLOWED_PATHS),
+    swagger_utc_dates: true,
+    swagger_query_date_format: 'YYYY-MM-DDTHH:mm:SS.uu@',
     swagger_options: {
-      utc_dates: true,
-      query_date_format: 'YYYY-MM-DDTHH:mm:SS.uu@',
       parse_flags: -1,
     },
     rest: {
@@ -90,7 +94,9 @@ export default (locale: Locales) =>
     },
     rest_modifiers: {
       options: JIRA_CONN_OPTIONS,
-      set_options_post_auth: async (context) => {
+      set_options_post_auth: async (
+        context
+      ): Promise<TQoreMappedOptions<typeof JIRA_CONN_OPTIONS>> => {
         const token = context?.conn_opts?.token;
 
         if (!token) {
@@ -111,15 +117,18 @@ export default (locale: Locales) =>
             }
           );
           const userInfo = userAccounts?.data[0];
-          if ('id' in userInfo) {
-            const cloud_id = userInfo.id;
 
-            return {
-              cloud_id,
-              ping_path: `/ex/jira/${cloud_id}/rest/api/3/myself`,
-              swagger_base_path: `/ex/jira/${cloud_id}`,
-            };
+          if (!userInfo?.id) {
+            throw new Error('The user account id was not found');
           }
+
+          const cloud_id = userInfo.id;
+
+          return {
+            cloud_id,
+            ping_path: `/ex/jira/${cloud_id}/rest/api/3/myself`,
+            swagger_base_path: `/ex/jira/${cloud_id}`,
+          };
         } catch (error) {
           console.error(error);
           throw error;

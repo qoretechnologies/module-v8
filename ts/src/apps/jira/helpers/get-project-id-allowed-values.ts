@@ -6,8 +6,9 @@ import {
 import { JIRA_CONN_OPTIONS } from '../constants';
 
 export const getJiraProjectIdAllowedValues: TQoreGetAllowedValuesFunction<
-  typeof JIRA_CONN_OPTIONS
-> = async (context): Promise<IQoreAllowedValue[]> => {
+  typeof JIRA_CONN_OPTIONS,
+  string
+> = async (context): Promise<IQoreAllowedValue<string>[]> => {
   const token = context?.conn_opts?.token;
   const cloud_id = context?.conn_opts?.cloud_id;
 
@@ -15,7 +16,7 @@ export const getJiraProjectIdAllowedValues: TQoreGetAllowedValuesFunction<
     throw new Error('The token and cloud_id are required to get Jira project allowed values');
   }
 
-  const projectIds: IQoreAllowedValue[] = [];
+  const projectIds: IQoreAllowedValue<string>[] = [];
 
   const { data: fetchedProjects } = await QorusRequest.get<any>(
     {
@@ -32,7 +33,7 @@ export const getJiraProjectIdAllowedValues: TQoreGetAllowedValuesFunction<
 
   projectIds.push(
     ...fetchedProjects.map(
-      (project: any): IQoreAllowedValue => ({
+      (project: any): IQoreAllowedValue<string> => ({
         value: project.id,
         display_name: `[${project.key}] ${project.name}`,
         ...(project?.avatarUrls?.['48x48'] && { image: project.avatarUrls['48x48'] }),

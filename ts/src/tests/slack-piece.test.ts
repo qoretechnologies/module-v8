@@ -8,7 +8,7 @@ import { validateResponseProperties } from './utils';
 
 describe('slackPieceTest', () => {
   let newMessageTimestamp: string = '';
-  let slackApp: TQoreAppWithActions | null = null;
+  let slackApp: TQoreAppWithActions;
 
   const actionContext = {
     conn_name: 'slack',
@@ -23,6 +23,10 @@ describe('slackPieceTest', () => {
   beforeAll(() => {
     PiecesAppCatalogue.registerApps();
     slackApp = PiecesAppCatalogue.apps['Slack'];
+
+    if (!slackApp) {
+      throw new Error('Slack app not found');
+    }
   });
 
   it('should register slack', () => {
@@ -34,14 +38,14 @@ describe('slackPieceTest', () => {
   it('should find a Slack user by email', async () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'slack_find_user_by_email'
-    ) as IQoreAppActionWithFunction;
+    ) as IQoreAppActionWithFunction<any>;
     const actionFunction = action?.api_function;
 
     const props = { email: process.env.SLACK_USER_EMAIL };
 
     if (actionFunction) {
       try {
-        const result = await actionFunction(props, {}, actionContext);
+        const result = await actionFunction(props, undefined, actionContext);
         expect(result).toBeDefined();
         expect(result.user).toBeDefined();
         expect(result.user.profile.email).toBe(process.env.SLACK_USER_EMAIL);
@@ -61,7 +65,7 @@ describe('slackPieceTest', () => {
   it('should send a Slack message and receive a positive response', async () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'send_channel_message'
-    ) as IQoreAppActionWithFunction;
+    ) as IQoreAppActionWithFunction<any>;
     const actionFunction = action?.api_function;
 
     const channelIds = await action.options.channel.get_allowed_values(actionContext);
@@ -72,7 +76,7 @@ describe('slackPieceTest', () => {
 
     if (actionFunction) {
       try {
-        const result = await actionFunction(props, {}, actionContext);
+        const result = await actionFunction(props, undefined, actionContext);
 
         expect(result).toBeDefined();
         expect(result.ok).toBeTruthy();
@@ -93,7 +97,7 @@ describe('slackPieceTest', () => {
   it('should get channel history', async () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'get_channel_history'
-    ) as IQoreAppActionWithFunction;
+    ) as IQoreAppActionWithFunction<any>;
     const actionFunction = action?.api_function;
 
     const channelIds = await action.options.channel.get_allowed_values(actionContext);
@@ -104,7 +108,7 @@ describe('slackPieceTest', () => {
 
     if (actionFunction) {
       try {
-        const result = await actionFunction(props, {}, actionContext);
+        const result = await actionFunction(props, undefined, actionContext);
         expect(result).toBeDefined();
         expect(result.messages).toBeDefined();
         const expectedResponseType = action.response_type;
@@ -123,7 +127,7 @@ describe('slackPieceTest', () => {
   it('should add reaction to message', async () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'slack_add_reaction_to_message'
-    ) as IQoreAppActionWithFunction;
+    ) as IQoreAppActionWithFunction<any>;
     const actionFunction = action?.api_function;
 
     const channelIds = await action.options.channel.get_allowed_values(actionContext);
@@ -138,7 +142,7 @@ describe('slackPieceTest', () => {
 
     if (actionFunction) {
       try {
-        const result = await actionFunction(props, {}, actionContext);
+        const result = await actionFunction(props, undefined, actionContext);
         expect(result).toBeDefined();
         expect(result.ok).toBeTruthy();
         const expectedResponseType = action.response_type;
@@ -157,7 +161,7 @@ describe('slackPieceTest', () => {
   it('should create a channel', async () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'slack_create_channel'
-    ) as IQoreAppActionWithFunction;
+    ) as IQoreAppActionWithFunction<any>;
     const actionFunction = action?.api_function;
 
     const props = {
@@ -167,7 +171,7 @@ describe('slackPieceTest', () => {
 
     if (actionFunction) {
       try {
-        const result = await actionFunction(props, {}, actionContext);
+        const result = await actionFunction(props, undefined, actionContext);
         expect(result).toBeDefined();
         const expectedResponseType = action.response_type;
         if (expectedResponseType) {
@@ -187,7 +191,7 @@ describe('slackPieceTest', () => {
   it('should request action direct message', async () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'request_action_direct_message'
-    ) as IQoreAppActionWithFunction;
+    ) as IQoreAppActionWithFunction<any>;
 
     const userIds = await action.options.userId.get_allowed_values(actionContext);
 
@@ -202,7 +206,7 @@ describe('slackPieceTest', () => {
 
     if (action.api_function) {
       try {
-        const result = await action.api_function(props, {}, actionContext);
+        const result = await action.api_function(props, undefined, actionContext);
         expect(result).toBeDefined();
         expect(result.ok).toBeTruthy();
         const expectedResponseType = action.response_type;
@@ -221,7 +225,7 @@ describe('slackPieceTest', () => {
   it('should request action in channel', async () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'request_action_message'
-    ) as IQoreAppActionWithFunction;
+    ) as IQoreAppActionWithFunction<any>;
 
     const channelIds = await action.options.channel.get_allowed_values(actionContext);
     expect(channelIds).toBeDefined();
@@ -235,7 +239,7 @@ describe('slackPieceTest', () => {
 
     if (action.api_function) {
       try {
-        const result = await action.api_function(props, {}, actionContext);
+        const result = await action.api_function(props, undefined, actionContext);
         expect(result).toBeDefined();
         const expectedResponseType = action.response_type;
         if (expectedResponseType) {
@@ -253,14 +257,14 @@ describe('slackPieceTest', () => {
   it('should search for messages', async () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'search_messages'
-    ) as IQoreAppActionWithFunction;
+    ) as IQoreAppActionWithFunction<any>;
     const actionFunction = action?.api_function;
 
     const props = { query: 'test' };
 
     if (actionFunction) {
       try {
-        const result = await actionFunction(props, {}, actionContext);
+        const result = await actionFunction(props, undefined, actionContext);
         expect(result).toBeDefined();
         expect(result.matches).toBeDefined();
         const expectedResponseType = action.response_type;
@@ -279,7 +283,7 @@ describe('slackPieceTest', () => {
   it('should update a message', async () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'update_message'
-    ) as IQoreAppActionWithFunction;
+    ) as IQoreAppActionWithFunction<any>;
     const actionFunction = action?.api_function;
 
     const channelIds = await action.options.channel.get_allowed_values(actionContext);
@@ -294,7 +298,7 @@ describe('slackPieceTest', () => {
 
     if (actionFunction) {
       try {
-        const result = await actionFunction(props, {}, actionContext);
+        const result = await actionFunction(props, undefined, actionContext);
         expect(result).toBeDefined();
         expect(result.ok).toBeTruthy();
         const expectedResponseType = action.response_type;
@@ -313,7 +317,7 @@ describe('slackPieceTest', () => {
   it('should upload a file', async () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'upload_file'
-    ) as IQoreAppActionWithFunction;
+    ) as IQoreAppActionWithFunction<any>;
     const actionFunction = action?.api_function;
 
     const channelIds = await action.options.channel.get_allowed_values(actionContext);
@@ -331,7 +335,7 @@ describe('slackPieceTest', () => {
 
     if (actionFunction) {
       try {
-        const result = await actionFunction(props, {}, actionContext);
+        const result = await actionFunction(props, undefined, actionContext);
         expect(result).toBeDefined();
         expect(result.ok).toBeTruthy();
         const expectedResponseType = action.response_type;
@@ -352,11 +356,14 @@ describe('slackPieceTest', () => {
     const findUserActionFunction = (
       slackApp.actions.find(
         (action) => action.action === 'slack_find_user_by_email'
-      ) as IQoreAppActionWithFunction
+      ) as IQoreAppActionWithFunction<any>
     )?.api_function;
+
+    expect(findUserActionFunction).toBeDefined();
+
     const action = slackApp.actions.find(
       (action) => action.action === 'slack_update_profile'
-    ) as IQoreAppActionWithFunction;
+    ) as IQoreAppActionWithFunction<any>;
 
     const actionFunction = action?.api_function;
 
@@ -364,14 +371,18 @@ describe('slackPieceTest', () => {
 
     if (actionFunction) {
       try {
-        const findUserResult = await findUserActionFunction(findUserProps, {}, actionContext);
+        const findUserResult = await findUserActionFunction!(
+          findUserProps,
+          undefined,
+          actionContext
+        );
 
         expect(findUserResult).toBeDefined();
         expect(findUserResult.user).toBeDefined();
         expect(findUserResult.user.id).toBeDefined();
 
         const props = { firstName: testName, lastName: testName, userId: findUserResult.user.id };
-        const result = await actionFunction(props, {}, actionContext);
+        const result = await actionFunction(props, undefined, actionContext);
 
         expect(result).toBeDefined();
         expect(result.profile.first_name).toBe(testName);

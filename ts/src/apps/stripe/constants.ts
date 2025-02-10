@@ -1,5 +1,4 @@
-import { TAllowedPaths } from '@qoretechnologies/ts-toolkit';
-import { IQoreConnectionOptions } from '@qoretechnologies/ts-toolkit';
+import { TAllowedPaths, TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
 import { getStripeAccountIdAllowedValues } from './helpers/get-account-id-allowed-values';
 import { getStripeBalanceHistoryIdAllowedValues } from './helpers/get-balance-history-id-allowed-values';
 import { getStripeChargeIdAllowedValues } from './helpers/get-charge-id-allowed-values';
@@ -389,4 +388,10 @@ export const STRIPE_CONN_OPTIONS = {
     desc: 'The Stripe user ID',
     type: 'string',
   },
-} satisfies IQoreConnectionOptions;
+  ping_path: {
+    display_name: 'Ping Path',
+    short_desc: 'The custom ping path for oauth',
+    desc: 'The path to ping',
+    type: 'string',
+  },
+} satisfies TCustomConnOptions;

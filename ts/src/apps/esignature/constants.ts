@@ -1,12 +1,15 @@
+import {
+  TAllowedPaths,
+  TCustomConnOptions,
+  TQoreAppActionOverrideOption,
+} from '@qoretechnologies/ts-toolkit';
 import { OpenAPIV2 } from 'openapi-types';
 import { buildActionsFromSwaggerSchema } from '../../global/helpers';
-import { TAllowedPaths, TQoreAppActionOverrideOption } from '@qoretechnologies/ts-toolkit';
 import eSignature from '../../schemas/esignature.swagger.json';
-import { IQoreConnectionOptions } from '@qoretechnologies/ts-toolkit';
+import { getEsignatureDocumentIdAllowedValues } from './helpers/get-document-id-allowed-values';
 import { getEsignatureEnvelopeIdAllowedValues } from './helpers/get-envelope-id-allowed-values';
 import { getEsignatureFolderIdAllowedValues } from './helpers/get-folder-id-allowed-values';
 import { getEsignatureRecipientIdAllowedValues } from './helpers/get-recipient-id-allowed-values';
-import { getEsignatureDocumentIdAllowedValues } from './helpers/get-document-id-allowed-values';
 
 export const ESIGNATURE_APP_NAME = 'DocusignESignature';
 
@@ -29,7 +32,7 @@ export const ESIGNATURE_CONN_OPTIONS = {
     desc: 'The default base URI set when the connection is authorized',
     type: 'string',
   },
-} satisfies IQoreConnectionOptions;
+} satisfies TCustomConnOptions;
 
 export const GetAccountIdConfig = {
   get_allowed_values: function (ctx) {
@@ -46,9 +49,12 @@ export const GetAccountIdConfig = {
     });
   },
   get_default_value: function (ctx) {
-    if (ctx?.conn_opts?.account_id) {
-      return ctx.conn_opts.account_id;
+    const accountId = ctx?.conn_opts?.account_id;
+    if (!accountId) {
+      throw new Error('No account ID found in the connection options for eSignature');
     }
+
+    return accountId;
   },
 } satisfies TQoreAppActionOverrideOption<typeof ESIGNATURE_CONN_OPTIONS>;
 

@@ -6,8 +6,9 @@ import {
 import { JIRA_CONN_OPTIONS } from '../constants';
 
 export const getJiraProjectCategoryIdAllowedValues: TQoreGetAllowedValuesFunction<
-  typeof JIRA_CONN_OPTIONS
-> = async (context): Promise<IQoreAllowedValue[]> => {
+  typeof JIRA_CONN_OPTIONS,
+  string
+> = async (context): Promise<IQoreAllowedValue<string>[]> => {
   const token = context?.conn_opts?.token;
   const cloud_id = context?.conn_opts?.cloud_id;
 
@@ -17,7 +18,7 @@ export const getJiraProjectCategoryIdAllowedValues: TQoreGetAllowedValuesFunctio
     );
   }
 
-  const projectCategoryIds: IQoreAllowedValue[] = [];
+  const projectCategoryIds: IQoreAllowedValue<string>[] = [];
 
   const { data: fetchedProjectCategories } = await QorusRequest.get<any>(
     {
@@ -31,7 +32,7 @@ export const getJiraProjectCategoryIdAllowedValues: TQoreGetAllowedValuesFunctio
 
   projectCategoryIds.push(
     ...fetchedProjectCategories.map(
-      (projectCategory: any): IQoreAllowedValue => ({
+      (projectCategory: any): IQoreAllowedValue<string> => ({
         value: projectCategory.id,
         display_name: projectCategory.name,
         desc: projectCategory.description,

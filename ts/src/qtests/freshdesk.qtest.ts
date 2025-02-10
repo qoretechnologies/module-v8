@@ -318,8 +318,11 @@ describe('Tests Freshdesk Actions', () => {
           force: true,
         }
       );
-
-      const agentIds = await awaitJobCompletion(jobId!, username, password, subdomain);
+      expect(username).toBeDefined();
+      expect(password).toBeDefined();
+      expect(jobId).toBeDefined();
+      expect(subdomain).toBeDefined();
+      const agentIds = await awaitJobCompletion(jobId!, username!, password, subdomain!);
 
       await Promise.all(
         agentIds.map((id) => {
@@ -363,7 +366,7 @@ const awaitJobCompletion = async (
   const startTime = Date.now();
 
   while (!completed) {
-    const { data } = await QorusRequest.get<{
+    const response = await QorusRequest.get<{
       data: {
         status: string;
         data: {
@@ -386,10 +389,14 @@ const awaitJobCompletion = async (
       throw new Error('Job completion timeout');
     }
 
-    if (data.status === 'SUCCESS') {
+    const responseData = response?.data;
+
+    if (responseData?.status === 'SUCCESS') {
       completed = true;
 
-      return data.data.map(({ id }) => id);
+      return responseData.data.map(({ id }) => id);
     }
   }
+
+  return [];
 };

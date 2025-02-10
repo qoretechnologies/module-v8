@@ -25,9 +25,9 @@ export const CreateZendeskGetAllowedValuesFunction = (
   entity: string,
   displayNameField = 'name',
   additionalParams: Record<string, string> = {},
-  composeDescription?: (entity: any) => string
-): TQoreGetAllowedValuesFunction<typeof ZENDESK_CONN_OPTIONS> => {
-  return async (context): Promise<IQoreAllowedValue[]> => {
+  composeDescription?: (entity: unknown) => string
+): TQoreGetAllowedValuesFunction<typeof ZENDESK_CONN_OPTIONS, string> => {
+  return async (context): Promise<IQoreAllowedValue<string>[]> => {
     const token = context?.conn_opts?.token;
     const subdomain = context?.conn_opts?.subdomain;
 
@@ -35,7 +35,7 @@ export const CreateZendeskGetAllowedValuesFunction = (
       throw new Error('The token and subdomain are required to get Zendesk allowed values');
     }
 
-    const values: IQoreAllowedValue[] = [];
+    const values: IQoreAllowedValue<string>[] = [];
     const startTime = Date.now();
     let page: string | null = null;
 
@@ -71,8 +71,8 @@ export const CreateZendeskGetAllowedValuesFunction = (
           break;
         }
 
-        const additionalValues: IQoreAllowedValue[] = responseData[entity].map(
-          (entity: { [x: string]: string; id: string }): IQoreAllowedValue => ({
+        const additionalValues: IQoreAllowedValue<string>[] = responseData[entity].map(
+          (entity: { [x: string]: string; id: string }): IQoreAllowedValue<string> => ({
             value: entity.id.toString(),
             display_name: entity[displayNameField],
             ...(composeDescription && { desc: composeDescription(entity) }),

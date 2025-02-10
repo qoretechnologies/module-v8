@@ -1,5 +1,9 @@
 import { Octokit } from '@octokit/rest';
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
+import {
+  IQoreAllowedValue,
+  TCustomConnOptions,
+  TQoreGetAllowedValuesFunction,
+} from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
 import { GITHUB_ALLOWED_VALUES_TIMEOUT } from './constants';
 
@@ -8,7 +12,7 @@ const MAX_ITEMS = 600;
 
 const mapGithubRepoToOwner = (repo: {
   owner: { login: string; type: string; html_url: string; avatar_url: string };
-}): IQoreAllowedValue => {
+}): IQoreAllowedValue<string> => {
   return {
     value: repo.owner.login,
     display_name: repo.owner.login,
@@ -17,9 +21,10 @@ const mapGithubRepoToOwner = (repo: {
   };
 };
 
-export const getGitHubOwnerAllowedValues: TQoreGetAllowedValuesFunction = async (
-  context
-): Promise<IQoreAllowedValue[]> => {
+export const getGitHubOwnerAllowedValues: TQoreGetAllowedValuesFunction<
+  TCustomConnOptions,
+  string
+> = async (context): Promise<IQoreAllowedValue<string>[]> => {
   const token = context?.conn_opts?.token;
   const opts = context?.opts;
 
@@ -31,7 +36,7 @@ export const getGitHubOwnerAllowedValues: TQoreGetAllowedValuesFunction = async 
     auth: token,
   });
 
-  const owners: IQoreAllowedValue[] = [];
+  const owners: IQoreAllowedValue<string>[] = [];
   const startTime = Date.now();
 
   Debugger.log('Github Owner allowed values opts', {

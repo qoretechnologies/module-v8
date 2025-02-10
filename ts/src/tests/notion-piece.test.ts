@@ -1,7 +1,8 @@
 import {
+  IQoreAllowedValue,
   IQoreAppActionWithFunction,
-  TQoreAppWithActions,
   TQoreAppActionFunctionContext,
+  TQoreAppWithActions,
 } from '@qoretechnologies/ts-toolkit';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { retry, validateResponseProperties } from './utils';
@@ -9,7 +10,7 @@ import { retry, validateResponseProperties } from './utils';
 const TEST_PAGE_NAME = 'Test Page';
 
 describe('notionPieceTest', () => {
-  let notionApp: TQoreAppWithActions | null = null;
+  let notionApp: TQoreAppWithActions;
   let user: any | null = null;
   let page: any | null = null;
   let comment: any | null = null;
@@ -20,12 +21,16 @@ describe('notionPieceTest', () => {
     conn_opts: {
       token: process.env.NOTION_ACCESS_TOKEN,
     },
-    opts: {},
+    opts: undefined,
   } satisfies TQoreAppActionFunctionContext;
 
   beforeAll(() => {
     PiecesAppCatalogue.registerApps();
     notionApp = PiecesAppCatalogue.apps['Notion'];
+
+    if (!notionApp) {
+      throw new Error('Notion app not found');
+    }
   });
 
   it('should register Notion app', () => {
@@ -37,12 +42,12 @@ describe('notionPieceTest', () => {
   it('should find users', async () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'get_users'
-    ) as IQoreAppActionWithFunction;
+    ) as IQoreAppActionWithFunction<any>;
     const actionFunction = action?.api_function;
 
     if (actionFunction) {
       try {
-        const users = await actionFunction({}, {}, actionContext);
+        const users = await actionFunction(undefined, undefined, actionContext);
         expect(users).toBeDefined();
         expect(users.results).toBeDefined();
         expect(users.results.length).toBeGreaterThan(0);
@@ -63,12 +68,12 @@ describe('notionPieceTest', () => {
   it('should get user', async () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'get_user'
-    ) as IQoreAppActionWithFunction;
+    ) as IQoreAppActionWithFunction<any>;
     const actionFunction = action?.api_function;
 
     if (actionFunction && user) {
       try {
-        const result = await actionFunction({ userId: user.id }, {}, actionContext);
+        const result = await actionFunction({ userId: user.id }, undefined, actionContext);
         expect(result).toBeDefined();
         expect(result.id).toEqual(user.id);
         const expectedResponseType = action.response_type;
@@ -87,12 +92,12 @@ describe('notionPieceTest', () => {
   it('should get token user', async () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'get_current_user'
-    ) as IQoreAppActionWithFunction;
+    ) as IQoreAppActionWithFunction<any>;
     const actionFunction = action?.api_function;
 
     if (actionFunction) {
       try {
-        const result = await actionFunction({}, {}, actionContext);
+        const result = await actionFunction(undefined, undefined, actionContext);
         expect(result).toBeDefined();
         const expectedResponseType = action.response_type;
         if (expectedResponseType) {
@@ -110,7 +115,7 @@ describe('notionPieceTest', () => {
   it('should create a page', async () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'create_page'
-    ) as IQoreAppActionWithFunction;
+    ) as IQoreAppActionWithFunction<any>;
     const actionFunction = action?.api_function;
 
     if (actionFunction) {
@@ -122,7 +127,7 @@ describe('notionPieceTest', () => {
             title: TEST_PAGE_NAME,
             content: 'This is a test page content',
           },
-          {},
+          undefined,
           actionContext
         );
         page = result;
@@ -143,7 +148,7 @@ describe('notionPieceTest', () => {
   it('should add a comment to a page', async () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'add_comment_to_page'
-    ) as IQoreAppActionWithFunction;
+    ) as IQoreAppActionWithFunction<any>;
     const actionFunction = action?.api_function;
 
     if (actionFunction && page) {
@@ -153,7 +158,7 @@ describe('notionPieceTest', () => {
             pageId: page.id,
             text: 'This is a test comment',
           },
-          {},
+          undefined,
           actionContext
         );
         expect(result).toBeDefined();
@@ -174,7 +179,7 @@ describe('notionPieceTest', () => {
   it('should add comment to discussion', async () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'add_comment_to_discussion'
-    ) as IQoreAppActionWithFunction;
+    ) as IQoreAppActionWithFunction<any>;
     const actionFunction = action?.api_function;
 
     if (actionFunction) {
@@ -184,7 +189,7 @@ describe('notionPieceTest', () => {
             discussionId: comment.discussion_id,
             text: 'This is a test comment',
           },
-          {},
+          undefined,
           actionContext
         );
         expect(result).toBeDefined();
@@ -205,7 +210,7 @@ describe('notionPieceTest', () => {
   it('should create a database', async () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'create_database'
-    ) as IQoreAppActionWithFunction;
+    ) as IQoreAppActionWithFunction<any>;
     const actionFunction = action?.api_function;
 
     if (actionFunction) {
@@ -217,7 +222,7 @@ describe('notionPieceTest', () => {
             properties: {
               'Grocery item': {
                 type: 'title',
-                title: {},
+                title: undefined,
               },
               Price: {
                 type: 'number',
@@ -227,11 +232,11 @@ describe('notionPieceTest', () => {
               },
               'Last ordered': {
                 type: 'date',
-                date: {},
+                date: undefined,
               },
             },
           },
-          {},
+          undefined,
           actionContext
         );
         expect(result).toBeDefined();
@@ -253,7 +258,7 @@ describe('notionPieceTest', () => {
   it('should create an item in a database', async () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'create_database_item'
-    ) as IQoreAppActionWithFunction;
+    ) as IQoreAppActionWithFunction<any>;
     const actionFunction = action?.api_function;
 
     if (actionFunction && database) {
@@ -268,7 +273,7 @@ describe('notionPieceTest', () => {
             },
             content: 'This is a test item',
           },
-          {},
+          undefined,
           actionContext
         );
         expect(result).toBeDefined();
@@ -288,7 +293,7 @@ describe('notionPieceTest', () => {
   it('should append to a page', async () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'append_to_page'
-    ) as IQoreAppActionWithFunction;
+    ) as IQoreAppActionWithFunction<any>;
     const actionFunction = action?.api_function;
 
     if (actionFunction && page) {
@@ -298,7 +303,7 @@ describe('notionPieceTest', () => {
             pageId: page.id,
             content: 'This is a test content',
           },
-          {},
+          undefined,
           actionContext
         );
         expect(result).toBeDefined();
@@ -318,7 +323,7 @@ describe('notionPieceTest', () => {
   it('should get comments from a page', async () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'get_comments'
-    ) as IQoreAppActionWithFunction;
+    ) as IQoreAppActionWithFunction<any>;
     const actionFunction = action?.api_function;
 
     if (actionFunction && page) {
@@ -327,7 +332,7 @@ describe('notionPieceTest', () => {
           {
             blockId: page.id,
           },
-          {},
+          undefined,
           actionContext
         );
         expect(result).toBeDefined();
@@ -349,7 +354,7 @@ describe('notionPieceTest', () => {
   it('should test dependent options', async () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'notion_find_database_item'
-    ) as IQoreAppActionWithFunction;
+    ) as IQoreAppActionWithFunction<any>;
     const actionFunction = action?.api_function;
 
     if (actionFunction && database) {
@@ -373,12 +378,13 @@ describe('notionPieceTest', () => {
   it('should remove the page', async () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'remove_page'
-    ) as IQoreAppActionWithFunction;
+    ) as IQoreAppActionWithFunction<any>;
     const actionFunction = action?.api_function;
 
     const pages = await action.options.pageId.get_allowed_values(actionContext);
     const pageId = pages.find(
-      (foundPage) => foundPage.display_name === TEST_PAGE_NAME || foundPage.value === page.id
+      (foundPage: IQoreAllowedValue) =>
+        foundPage.display_name === TEST_PAGE_NAME || foundPage.value === page.id
     );
 
     if (actionFunction && page) {
@@ -389,7 +395,7 @@ describe('notionPieceTest', () => {
               {
                 pageId: pageId?.value || page.id,
               },
-              {},
+              undefined,
               actionContext
             ),
           3,
@@ -398,7 +404,7 @@ describe('notionPieceTest', () => {
         expect(result).toBeDefined();
         const expectedResponseType = action.response_type;
         if (expectedResponseType) {
-          validateResponseProperties(expectedResponseType, result);
+          validateResponseProperties(expectedResponseType, result!);
         }
       } catch (error) {
         console.error('Error removing the page', error);
@@ -412,7 +418,7 @@ describe('notionPieceTest', () => {
   it('Should make a custom API call', async () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'custom_api_call'
-    ) as IQoreAppActionWithFunction;
+    ) as IQoreAppActionWithFunction<any>;
     const actionFunction = action?.api_function;
 
     if (actionFunction) {
@@ -431,7 +437,7 @@ describe('notionPieceTest', () => {
               },
             },
           },
-          {},
+          undefined,
           actionContext
         );
         expect(result).toBeDefined();

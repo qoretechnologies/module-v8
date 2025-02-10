@@ -4,7 +4,8 @@ import { JIRA_CONN_OPTIONS } from '../constants';
 import { jiraDocumentFormatOption } from '../options/jira-document.option';
 
 export const getJiraIssueDescriptionDefaultValue: TQoreGetDefaultValueFunction<
-  typeof JIRA_CONN_OPTIONS
+  typeof JIRA_CONN_OPTIONS,
+  Record<string, unknown>
 > = async (context) => {
   try {
     const token = context?.conn_opts?.token;

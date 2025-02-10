@@ -1,5 +1,5 @@
 import { Octokit } from '@octokit/rest';
-import { TQoreGetDefaultValueFunction } from '@qoretechnologies/ts-toolkit';
+import { TCustomConnOptions, TQoreGetDefaultValueFunction } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
 import { GITHUB_ALLOWED_VALUES_TIMEOUT } from './constants';
 
@@ -7,8 +7,8 @@ const PER_PAGE = 100;
 const MAX_ITEMS = 600;
 
 export const getGitHubOwnerDefaultValue: TQoreGetDefaultValueFunction<
-  any,
-  Promise<string | undefined>
+  TCustomConnOptions,
+  string
 > = async (context) => {
   const token = context?.conn_opts?.token;
   const opts = context?.opts;
@@ -20,8 +20,10 @@ export const getGitHubOwnerDefaultValue: TQoreGetDefaultValueFunction<
   const octokit = new Octokit({
     auth: token,
   });
+
   try {
     const repos: { owner: { login: string } }[] = [];
+    const user = await octokit.users.getAuthenticated();
     const startTime = Date.now();
 
     Debugger.log('Github Owner allowed values opts', {
@@ -50,11 +52,9 @@ export const getGitHubOwnerDefaultValue: TQoreGetDefaultValueFunction<
       if (repos[0]) {
         return repos[0].owner.login;
       }
-    } else {
-      const user = await octokit.users.getAuthenticated();
-
-      return user.data.login;
     }
+
+    return user.data.login;
   } catch (err) {
     Debugger.log('Github Owner allowed values error', err);
 
@@ -63,5 +63,7 @@ export const getGitHubOwnerDefaultValue: TQoreGetDefaultValueFunction<
 
       return user.data.login;
     }
+
+    return '';
   }
 };

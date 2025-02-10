@@ -7,13 +7,13 @@ import {
   EQoreAppActionCode,
   EQoreAppActionWebhookAuthType,
   IAllowedPathData,
-  IQoreAppActionOption,
   IQoreAppActionWithEvent,
   IQoreAppActionWithEventOrWebhook,
   IQorePartialAppActionWithSwaggerPath,
   QoreAppActionCodeToLocale,
   TAllowedPaths,
   THttpMethod,
+  TQoreAppActionOption,
   TQoreAppActionWithEventOrWebhookEventInfo,
   TQoreAppActionWithWebhook,
   TQoreAppEventAction,
@@ -21,7 +21,6 @@ import {
   TQoreOptions,
   TQorePartialEventAction,
   TQorePartialNonEventAction,
-  TQoreType,
   TQoreTypeObject,
   TStringWithFirstUpperCaseCharacter,
 } from '@qoretechnologies/ts-toolkit';
@@ -330,16 +329,16 @@ export const fixResponseOrEventInfo = (
   };
 
   const processCollection = (
-    collection: Record<string, IQoreAppActionOption>,
+    collection: Record<string, TQoreAppActionOption>,
     path: string[] = []
-  ): Record<string, IQoreAppActionOption> => {
+  ): Record<string, TQoreAppActionOption> => {
     return reduce(
       collection,
       (
-        newCollection: Record<string, IQoreAppActionOption>,
-        field: IQoreAppActionOption,
+        newCollection: Record<string, TQoreAppActionOption>,
+        field: TQoreAppActionOption,
         key: string
-      ): Record<string, IQoreAppActionOption> => {
+      ): Record<string, TQoreAppActionOption> => {
         const currentPath = [...path, 'type', 'fields', key];
         let fieldType = undefined;
 
@@ -357,7 +356,7 @@ export const fixResponseOrEventInfo = (
           display_name: field.display_name || getLocalizedField('displayName', currentPath),
           short_desc: field.short_desc || getLocalizedField('shortDesc', currentPath),
           desc: field.desc || getLocalizedField('longDesc', currentPath),
-        } satisfies IQoreAppActionOption;
+        } as TQoreAppActionOption;
 
         return {
           ...newCollection,
@@ -379,7 +378,7 @@ export const fixResponseOrEventInfo = (
 
 export const fixOptions = (
   action: TQorePartialEventAction | TQorePartialNonEventAction,
-  collection: TQoreOptions | Record<string, Partial<IQoreAppActionOption>>,
+  collection: TQoreOptions | Record<string, Partial<TQoreAppActionOption>>,
   appName: string,
   locale: Locales
 ): TQoreOptions => {
@@ -392,12 +391,12 @@ export const fixOptions = (
   };
 
   const processCollection = (
-    collection: TQoreOptions | Record<string, Partial<IQoreAppActionOption>>,
+    collection: TQoreOptions | Record<string, Partial<TQoreAppActionOption>>,
     path: string[] = []
   ): TQoreOptions => {
     return reduce(
       collection,
-      (fixedOptions: TQoreOptions, option: IQoreAppActionOption, key: string): TQoreOptions => {
+      (fixedOptions: TQoreOptions, option: TQoreAppActionOption, key: string): TQoreOptions => {
         const currentPath = [...path, key];
         let optionType = undefined;
 
@@ -409,13 +408,13 @@ export const fixOptions = (
           };
         }
 
-        const updatedOption: IQoreAppActionOption<TQoreType, unknown> = {
+        const updatedOption = {
           ...option,
           ...(optionType && { type: optionType }),
           display_name: option.display_name || getLocalizedField('displayName', currentPath),
           short_desc: option.short_desc || getLocalizedField('shortDesc', currentPath),
           desc: option.desc || getLocalizedField('longDesc', currentPath),
-        };
+        } as TQoreAppActionOption;
 
         return {
           ...fixedOptions,

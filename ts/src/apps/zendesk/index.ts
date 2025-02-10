@@ -5,7 +5,7 @@ import {
   mapActionsToApp,
   mapTriggersToApp,
 } from '../../global/helpers';
-import { TQoreAppWithActions, IQoreConnectionOptions } from '@qoretechnologies/ts-toolkit';
+import { TQoreAppWithActions, TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
 import { L } from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import ZendeskSchema from '../../schemas/zendesk.swagger.json';
@@ -20,7 +20,7 @@ export const ZENDESK_CONN_OPTIONS = {
     desc: 'The subdomain for the URL',
     type: 'string',
   },
-} satisfies IQoreConnectionOptions;
+} satisfies TCustomConnOptions;
 
 export const ZENDESK_ACTIONS = buildActionsFromSwaggerSchema({
   schema: ZendeskSchema as any,

@@ -1,4 +1,8 @@
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
+import {
+  IQoreAllowedValue,
+  TCustomConnOptions,
+  TQoreGetAllowedValuesFunction,
+} from '@qoretechnologies/ts-toolkit';
 import { Octokit } from '@octokit/rest';
 import { Debugger } from '../../../utils/Debugger';
 import { GITHUB_ALLOWED_VALUES_TIMEOUT } from './constants';
@@ -11,7 +15,7 @@ const mapGithubRepo = (repo: {
   full_name: string | null;
   description: string | null;
   owner: { avatar_url: string } | null;
-}): IQoreAllowedValue => ({
+}): IQoreAllowedValue<string> => ({
   value: repo.name,
   display_name: repo.name,
   short_desc: repo.full_name || undefined,
@@ -19,9 +23,10 @@ const mapGithubRepo = (repo: {
   ...(repo?.owner?.avatar_url && { image: repo.owner.avatar_url }),
 });
 
-export const getGitHubRepositoryIdAllowedValues: TQoreGetAllowedValuesFunction = async (
-  context
-): Promise<IQoreAllowedValue[]> => {
+export const getGitHubRepositoryIdAllowedValues: TQoreGetAllowedValuesFunction<
+  TCustomConnOptions,
+  string
+> = async (context): Promise<IQoreAllowedValue<string>[]> => {
   const token = context?.conn_opts?.token;
   const opts = context?.opts;
 
@@ -38,7 +43,7 @@ export const getGitHubRepositoryIdAllowedValues: TQoreGetAllowedValuesFunction =
     isTokenPresent: !!token,
   });
 
-  const repos: IQoreAllowedValue[] = [];
+  const repos: IQoreAllowedValue<string>[] = [];
   const startTime = Date.now();
   try {
     if (opts?.owner) {

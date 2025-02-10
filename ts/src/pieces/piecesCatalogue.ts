@@ -1,14 +1,17 @@
 import {
   EQoreAppActionCode,
   IQoreAllowedValue,
-  IQoreAppActionOption,
   IQoreAppActionWithFunction,
   IQoreRestConnectionConfig,
+  TCustomConnOptions,
+  TQoreAnyType,
   TQoreAppActionFunction,
   TQoreAppActionFunctionContext,
+  TQoreAppActionOption,
   TQoreApps,
   TQoreAppWithActions,
   TQoreGetAllowedValuesFunction,
+  TQoreGetDefaultValueFunction,
   TQoreGetDependentOptionsFunction,
   TQoreOptions,
   TQorePartialNonEventAction,
@@ -41,7 +44,7 @@ pieces satisfies Record<string, Piece>;
 
 type TDependentOptionsFunction = (
   context: TQoreAppActionFunctionContext
-) => Promise<Record<string, IQoreAppActionOption>>;
+) => Promise<Record<string, TQoreAppActionOption>>;
 
 class _PiecesAppCatalogue {
   public readonly apps: TQoreApps = {};
@@ -175,8 +178,8 @@ class _PiecesAppCatalogue {
 
   private mapActionPropsToAppActionOptions(
     props: Record<string, InputProperty>
-  ): Record<string, IQoreAppActionOption> {
-    const options: Record<string, IQoreAppActionOption> = {};
+  ): Record<string, TQoreAppActionOption> {
+    const options: Record<string, TQoreAppActionOption> = {};
 
     for (const key in props) {
       // Skip info props - these property shouldn't contain a value and used in pieces as info block
@@ -225,17 +228,17 @@ class _PiecesAppCatalogue {
   ): TDependentOptionsFunction {
     return async (
       context: TQoreAppActionFunctionContext
-    ): Promise<Record<string, IQoreAppActionOption>> => {
+    ): Promise<Record<string, TQoreAppActionOption>> => {
       const pieceContext = {
         auth: { access_token: context?.conn_opts?.token, ...context.opts },
         ...context.opts,
       };
-      const options: Record<string, IQoreAppActionOption> = {};
+      const options: Record<string, TQoreAppActionOption> = {};
       const pieceOptions = await func(pieceContext, commonActionContext);
       for (const key in pieceOptions) {
         const pieceOption = pieceOptions[key];
         // Mapping the received options to qore options
-        const qoreOption: IQoreAppActionOption = this.mapActionPropToAppActionOption(pieceOption);
+        const qoreOption: TQoreAppActionOption = this.mapActionPropToAppActionOption(pieceOption);
         if (qoreOption.type) {
           options[key] = qoreOption;
         }
@@ -246,6 +249,27 @@ class _PiecesAppCatalogue {
       return {
         [propKey]: {
           ...mainProp,
+          ...(typeof mainProp.example_value === 'object' && {
+            example_value: mainProp.example_value,
+          }),
+          ...(typeof mainProp.default_value === 'object' && {
+            default_value: mainProp.default_value,
+          }),
+          ...(mainProp?.get_allowed_values && {
+            get_allowed_values: mainProp.get_allowed_values as TQoreGetAllowedValuesFunction<
+              TCustomConnOptions,
+              any
+            >,
+          }),
+          ...(mainProp?.get_default_value && {
+            get_default_value: mainProp.get_default_value as TQoreGetDefaultValueFunction<
+              TCustomConnOptions,
+              any
+            >,
+          }),
+          ...(mainProp?.allowed_values && {
+            allowed_values: mainProp.allowed_values as IQoreAllowedValue<any>[],
+          }),
           type: {
             type: 'hash',
             fields: options,
@@ -258,7 +282,7 @@ class _PiecesAppCatalogue {
   private mapActionPropToAppActionOption(
     prop: InputProperty,
     getDependentOptionsFunctions?: TDependentOptionsFunction[]
-  ): IQoreAppActionOption {
+  ): TQoreAppActionOption {
     let allowed_values: IQoreAllowedValue[] | undefined = undefined;
     let get_allowed_values: TQoreGetAllowedValuesFunction | undefined = undefined;
     let get_dependent_options: TQoreGetDependentOptionsFunction | undefined = undefined;
@@ -288,7 +312,7 @@ class _PiecesAppCatalogue {
     let type = piecePropTypeToQoreOptionTypeIndex[prop.type];
 
     if (type === 'list') {
-      const fields: Record<string, IQoreAppActionOption> = {};
+      const fields: Record<string, TQoreAppActionOption> = {};
 
       if ('properties' in prop && typeof prop.properties === 'object') {
         for (const [key, element] of Object.entries(prop.properties)) {
@@ -319,7 +343,7 @@ class _PiecesAppCatalogue {
       display_name: prop.displayName,
       short_desc: description || prop.displayName,
       desc: description || prop.displayName,
-      type,
+      type: type as TQoreAnyType,
       get_allowed_values,
       get_dependent_options,
       allowed_values,
@@ -337,8 +361,8 @@ class _PiecesAppCatalogue {
   ): TQoreGetDependentOptionsFunction {
     return async (
       context: TQoreAppActionFunctionContext
-    ): Promise<Record<string, IQoreAppActionOption>> => {
-      const options: Record<string, IQoreAppActionOption> = {};
+    ): Promise<Record<string, TQoreAppActionOption>> => {
+      const options: Record<string, TQoreAppActionOption> = {};
 
       // Going through all the dynamic options functions and getting the options
       for (const func of functions) {

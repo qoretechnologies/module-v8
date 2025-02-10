@@ -228,11 +228,11 @@ const githubNewReviewRequestTrigger = QoreAppCreator.createLocalizedTrigger({
               },
               closed_at: {
                 type: 'string',
-                example_value: null,
+                example_value: '2024-01-01T12:34:56Z',
               },
               merged_at: {
                 type: 'string',
-                example_value: null,
+                example_value: '2024-01-01T12:34:56Z',
               },
             },
           },

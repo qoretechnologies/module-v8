@@ -1,12 +1,14 @@
 import {
   IQoreAllowedValue,
   QorusRequest,
+  TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 
-export const getAsanaAssigneeIdAllowedValues: TQoreGetAllowedValuesFunction = async (
-  context
-): Promise<IQoreAllowedValue[]> => {
+export const getAsanaAssigneeIdAllowedValues: TQoreGetAllowedValuesFunction<
+  TCustomConnOptions,
+  string
+> = async (context): Promise<IQoreAllowedValue<string>[]> => {
   const token = context?.conn_opts?.token;
 
   if (!token) {
@@ -19,7 +21,7 @@ export const getAsanaAssigneeIdAllowedValues: TQoreGetAllowedValuesFunction = as
     throw new Error('Workspace is required to get assignee id allowed values');
   }
 
-  const assignees: IQoreAllowedValue[] = [];
+  const assignees: IQoreAllowedValue<string>[] = [];
 
   const { data } = await QorusRequest.get<any>(
     {

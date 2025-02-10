@@ -1,4 +1,4 @@
-import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
+import { TQoreAppWithActions, TQoreMappedOptions } from '@qoretechnologies/ts-toolkit';
 import { actionsCatalogue } from '../../ActionsCatalogue';
 import {
   buildActionsFromSwaggerSchema,
@@ -78,8 +78,18 @@ export default (locale: Locales) =>
     },
     rest_modifiers: {
       options: STRIPE_CONN_OPTIONS,
-      set_options_post_auth: (context) => {
-        const rv: any = {};
+      set_options_post_auth: (context): TQoreMappedOptions<typeof STRIPE_CONN_OPTIONS> => {
+        const rv: {
+          account_id: string;
+          ping_path: string;
+          user_id: string;
+          stripe_user_id: string;
+        } = {
+          account_id: '',
+          ping_path: '/v1/account',
+          user_id: '',
+          stripe_user_id: '',
+        };
         if (context?.conn_opts?.account_id) {
           rv.account_id = context.conn_opts.account_id;
           rv.ping_path = `/v1/accounts/${context.conn_opts.account_id}`;

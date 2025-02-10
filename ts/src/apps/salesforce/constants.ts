@@ -1,10 +1,10 @@
-import { IQoreConnectionOptions } from '@qoretechnologies/ts-toolkit';
+import { TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
 
 export const SALESFORCE_CONN_OPTIONS = {
   instance_url: {
     type: 'string',
   },
-} satisfies IQoreConnectionOptions;
+} satisfies TCustomConnOptions;
 
 export const SALESFORCE_API_VERSION = 'v62.0';
 export const SALESFORCE_APP_NAME = 'Salesforce';

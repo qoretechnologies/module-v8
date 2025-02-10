@@ -7,8 +7,9 @@ import { Debugger } from '../../../utils/Debugger';
 import { ESIGNATURE_CONN_OPTIONS } from '../constants';
 
 export const getEsignatureRecipientIdAllowedValues: TQoreGetAllowedValuesFunction<
-  typeof ESIGNATURE_CONN_OPTIONS
-> = async (context): Promise<IQoreAllowedValue[]> => {
+  typeof ESIGNATURE_CONN_OPTIONS,
+  string
+> = async (context): Promise<IQoreAllowedValue<string>[]> => {
   const token = context?.conn_opts?.token;
   const base_uri = context?.conn_opts?.base_uri;
   const accountId = context?.opts?.accountId;
@@ -27,7 +28,7 @@ export const getEsignatureRecipientIdAllowedValues: TQoreGetAllowedValuesFunctio
     );
   }
 
-  const items: IQoreAllowedValue[] = [];
+  const items: IQoreAllowedValue<string>[] = [];
 
   try {
     const { data } = await QorusRequest.get<any>(
@@ -44,7 +45,7 @@ export const getEsignatureRecipientIdAllowedValues: TQoreGetAllowedValuesFunctio
       if (Array.isArray(fetchedItems)) {
         items.push(
           ...fetchedItems.map(
-            (item: any): IQoreAllowedValue => ({
+            (item: any): IQoreAllowedValue<string> => ({
               value: item.recipientId,
               display_name: item.name || 'Unnamed Recipient',
               desc: [

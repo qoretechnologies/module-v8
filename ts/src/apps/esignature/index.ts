@@ -1,4 +1,10 @@
-import { IQoreAllowedValue, QorusRequest, TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
+import {
+  IQoreAllowedValue,
+  QorusRequest,
+  TQoreAppActionFunctionContext,
+  TQoreAppWithActions,
+  TQoreMappedOptions,
+} from '@qoretechnologies/ts-toolkit';
 import { actionsCatalogue } from '../../ActionsCatalogue';
 import { createSwaggerPaths, mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
@@ -130,10 +136,8 @@ export default (locale: Locales) =>
     logo_file_name: 'esignature-logo.svg',
     logo_mime_type: 'image/svg+xml',
     swagger: 'schemas/esignature.swagger.json',
-    swagger_options: {
-      utc_dates: true,
-      query_date_format: 'YYYY-MM-DDTHH:mm:SS.uu@',
-    },
+    swagger_utc_dates: true,
+    swagger_query_date_format: 'YYYY-MM-DDTHH:mm:SS.uu@',
     swagger_paths: createSwaggerPaths(ESIGNATURE_PATHS),
     swagger_type_overrides: {
       'agent.email': {
@@ -264,7 +268,9 @@ export default (locale: Locales) =>
     },
     rest_modifiers: {
       options: ESIGNATURE_CONN_OPTIONS,
-      set_options_post_auth: async (context) => {
+      set_options_post_auth: async (
+        context: Omit<TQoreAppActionFunctionContext<typeof ESIGNATURE_CONN_OPTIONS>, 'opts'>
+      ): Promise<TQoreMappedOptions<typeof ESIGNATURE_CONN_OPTIONS>> => {
         // We need to make a call to the docusign user info endpoint to get the base_uri
         // and account_id
         const token = context?.conn_opts?.token;
@@ -294,38 +300,38 @@ export default (locale: Locales) =>
           );
         }
 
-        if ('accounts' in userInfo && userInfo.accounts.length > 0) {
-          const account = userInfo.accounts.find((account: any) => account.is_default);
-          if (!account) {
-            throw new Error(`Response missing default account: ${userInfo.accounts}`);
-          }
-          const base_uri: string = account.base_uri.split('//')[1];
-          const account_id: string = account.account_id;
-
-          return {
-            base_uri,
-            account_id,
-            accounts: userInfo.accounts,
-          };
-        } else {
-          throw new Error(`Response missing account info: ${userInfo}`);
+        if (!('accounts' in userInfo) || userInfo.accounts.length === 0) {
+          throw new Error(`Response missing account info`);
         }
+
+        const account = userInfo.accounts.find((account: any) => account.is_default);
+        if (!account) {
+          throw new Error(`Response missing default account: ${userInfo.accounts}`);
+        }
+        const base_uri: string = account.base_uri.split('//')[1];
+        const account_id: string = account.account_id;
+
+        return {
+          base_uri,
+          account_id,
+          accounts: userInfo.accounts,
+        };
       },
       connection_update_option: {
         // the option whose value will be used to return connection values
         option: 'accountId',
         // returns data for url_template_options for the given option
-        code: function (context): string | void {
+        code: (context): string | void => {
           // find account info in context.conn_opts.accounts
-          const accounts = context?.conn_opts?.accounts as IEsignatureUserInfoAccount[];
+          const accounts: IEsignatureUserInfoAccount[] | undefined = context.conn_opts?.accounts;
           const accountId = context?.opts?.accountId;
           if (!accounts || !accountId) {
             return;
           }
 
-          const info: IEsignatureUserInfoAccount | undefined = accounts.find(
-            (info) => info.account_id === accountId
-          );
+          const info: IEsignatureUserInfoAccount | undefined = (
+            accounts as IEsignatureUserInfoAccount[]
+          ).find((info) => info.account_id === accountId);
 
           if (info) {
             return `https://${info.base_uri}/restapi/v2.1/accounts/${info.account_id}`;

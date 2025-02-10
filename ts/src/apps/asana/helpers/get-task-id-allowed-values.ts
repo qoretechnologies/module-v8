@@ -1,9 +1,10 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
+import { QorusRequest, TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 
-export const getAsanaTaskIdAllowedValues: TQoreGetAllowedValuesFunction = async (
-  context
-): Promise<IQoreAllowedValue[]> => {
+export const getAsanaTaskIdAllowedValues: TQoreGetAllowedValuesFunction<
+  TCustomConnOptions,
+  string
+> = async (context): Promise<IQoreAllowedValue<string>[]> => {
   const token = context?.conn_opts?.token;
 
   if (!token) {
@@ -16,7 +17,7 @@ export const getAsanaTaskIdAllowedValues: TQoreGetAllowedValuesFunction = async 
     throw new Error('Project is required to get Asana tasks allowed values');
   }
 
-  const tasks: IQoreAllowedValue[] = [];
+  const tasks: IQoreAllowedValue<string>[] = [];
 
   const { data } = await QorusRequest.get<any>(
     {

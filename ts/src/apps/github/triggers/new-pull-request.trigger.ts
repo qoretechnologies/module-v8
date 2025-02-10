@@ -157,11 +157,11 @@ const githubNewPullRequestTrigger = QoreAppCreator.createLocalizedTrigger({
               },
               closed_at: {
                 type: 'string',
-                example_value: null,
+                example_value: '2024-01-01T00:00:00Z',
               },
               merged_at: {
                 type: 'string',
-                example_value: null,
+                example_value: '2024-01-01T00:00:00Z',
               },
               merge_commit_sha: {
                 type: 'string',
