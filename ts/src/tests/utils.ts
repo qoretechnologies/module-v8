@@ -25,8 +25,8 @@ export const validateResponseProperties = (
 
     return;
   }
+  if (expectedType.type !== 'hash') return;
   const fields = expectedType?.fields;
-  if (!fields) return;
 
   forEach(fields, (fieldDefinition, key) => {
     const expectedFieldType = fieldDefinition.type || fieldDefinition;
