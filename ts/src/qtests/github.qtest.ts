@@ -1,5 +1,5 @@
+import { IQoreAppActionWithWebhookBase } from '@qoretechnologies/ts-toolkit';
 import { GITHUB_ACTIONS } from '../apps/github';
-import { TQoreAppActionWithWebhook } from '@qoretechnologies/ts-toolkit';
 import * as GITHUB_TRIGGERS from '../apps/github/triggers';
 
 let connection: string;
@@ -41,7 +41,7 @@ describe('Tests Github Actions', () => {
 
   describe('Should test webhook creation for repository', () => {
     it('Should create new branch webhook', async () => {
-      const trigger: Partial<TQoreAppActionWithWebhook> = GITHUB_TRIGGERS['newBranch'];
+      const trigger = GITHUB_TRIGGERS['newBranch'] as IQoreAppActionWithWebhookBase<any>;
 
       expect(trigger).toBeDefined();
       expect(trigger.webhook_register).toBeDefined();
@@ -72,7 +72,7 @@ describe('Tests Github Actions', () => {
     });
 
     it('Should create new commit comment webhook', async () => {
-      const trigger: Partial<TQoreAppActionWithWebhook> = GITHUB_TRIGGERS['newCommitComment'];
+      const trigger = GITHUB_TRIGGERS['newCommitComment'] as IQoreAppActionWithWebhookBase<any>;
 
       expect(trigger).toBeDefined();
       expect(trigger.webhook_register).toBeDefined();
@@ -103,7 +103,7 @@ describe('Tests Github Actions', () => {
     });
 
     it('Should create new commit webhook', async () => {
-      const trigger: Partial<TQoreAppActionWithWebhook> = GITHUB_TRIGGERS['newCommit'];
+      const trigger = GITHUB_TRIGGERS['newCommit'] as IQoreAppActionWithWebhookBase<any>;
 
       expect(trigger).toBeDefined();
       expect(trigger.webhook_register).toBeDefined();
@@ -134,7 +134,7 @@ describe('Tests Github Actions', () => {
     });
 
     it('Should create new issue webhook', async () => {
-      const trigger: Partial<TQoreAppActionWithWebhook> = GITHUB_TRIGGERS['newRepositoryIssue'];
+      const trigger = GITHUB_TRIGGERS['newRepositoryIssue'] as IQoreAppActionWithWebhookBase<any>;
 
       expect(trigger).toBeDefined();
       expect(trigger.webhook_register).toBeDefined();
@@ -165,7 +165,7 @@ describe('Tests Github Actions', () => {
     });
 
     it('Should create new pull request webhook', async () => {
-      const trigger: Partial<TQoreAppActionWithWebhook> = GITHUB_TRIGGERS['newPullRequest'];
+      const trigger = GITHUB_TRIGGERS['newPullRequest'] as IQoreAppActionWithWebhookBase<any>;
 
       expect(trigger).toBeDefined();
       expect(trigger.webhook_register).toBeDefined();
@@ -196,7 +196,7 @@ describe('Tests Github Actions', () => {
     });
 
     it('Should create new release webhook', async () => {
-      const trigger: Partial<TQoreAppActionWithWebhook> = GITHUB_TRIGGERS['newRelease'];
+      const trigger = GITHUB_TRIGGERS['newRelease'] as IQoreAppActionWithWebhookBase<any>;
 
       expect(trigger).toBeDefined();
       expect(trigger.webhook_register).toBeDefined();
@@ -227,7 +227,7 @@ describe('Tests Github Actions', () => {
     });
 
     it('Should create new review request webhook', async () => {
-      const trigger: Partial<TQoreAppActionWithWebhook> = GITHUB_TRIGGERS['newReviewRequest'];
+      const trigger = GITHUB_TRIGGERS['newReviewRequest'] as IQoreAppActionWithWebhookBase<any>;
 
       expect(trigger).toBeDefined();
       expect(trigger.webhook_register).toBeDefined();

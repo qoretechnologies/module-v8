@@ -24,7 +24,7 @@ describe('notionPieceTest', () => {
   let comment: any | null = null;
   let database: any | null = null;
 
-  const token = 'secret_GsRDLW2mNEFMj4QpaWSiujZ8FZqhvOyTFUBEm0Nkz5a';
+  const token = process.env.NOTION_ACCESS_TOKEN!;
 
   expect(token).toBeDefined();
 

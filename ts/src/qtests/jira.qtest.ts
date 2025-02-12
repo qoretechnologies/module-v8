@@ -25,6 +25,7 @@ describe('Tests Jira Actions', () => {
         cloud_id: process.env.JIRA_CLOUD_ID,
         swagger_base_path: `/ex/jira/${process.env.JIRA_CLOUD_ID}`,
         oauth2_grant_type: 'none',
+        ping_path: '',
       },
     });
 

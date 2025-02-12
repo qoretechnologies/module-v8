@@ -1,7 +1,6 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { ESIGNATURE_ACTIONS } from '../apps/esignature/constants';
+import { IQoreAppActionWithWebhookBase, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import _sodium from 'libsodium-wrappers';
-import { TQoreAppActionWithWebhook } from '@qoretechnologies/ts-toolkit';
+import { ESIGNATURE_ACTIONS, ESIGNATURE_CONN_OPTIONS } from '../apps/esignature/constants';
 import * as ESIGNATURE_TRIGGERS from '../apps/esignature/triggers';
 
 let connection: string;
@@ -72,19 +71,21 @@ describe('Tests eSignature Actions', () => {
 
   describe('Should test trigger creation', () => {
     it('Should create an envelope status update trigger', async () => {
-      const trigger = ESIGNATURE_TRIGGERS[
-        'envelopeStatusUpdated'
-      ] as TQoreAppActionWithWebhook<any>;
+      const trigger = ESIGNATURE_TRIGGERS['envelopeStatusUpdated'] as IQoreAppActionWithWebhookBase<
+        typeof ESIGNATURE_CONN_OPTIONS
+      >;
 
       expect(trigger).toBeDefined();
       expect(trigger.webhook_register).toBeDefined();
       expect(trigger.webhook_deregister).toBeDefined();
 
-      const response = await trigger.webhook_register!(
+      const response = await trigger.webhook_register(
         {
           conn_opts: {
             token,
             base_uri: baseUri,
+            accounts: [],
+            account_id: accountId,
           },
           opts: {
             accountId,
@@ -101,6 +102,8 @@ describe('Tests eSignature Actions', () => {
             conn_opts: {
               token,
               base_uri: baseUri,
+              accounts: [],
+              account_id: accountId,
             },
             opts: {
               accountId,
@@ -113,7 +116,9 @@ describe('Tests eSignature Actions', () => {
     });
 
     it('Should create a template status update trigger', async () => {
-      const trigger: Partial<TQoreAppActionWithWebhook> = ESIGNATURE_TRIGGERS['templateUpdated'];
+      const trigger = ESIGNATURE_TRIGGERS['templateUpdated'] as IQoreAppActionWithWebhookBase<
+        typeof ESIGNATURE_CONN_OPTIONS
+      >;
 
       expect(trigger).toBeDefined();
       expect(trigger.webhook_register).toBeDefined();
@@ -124,6 +129,8 @@ describe('Tests eSignature Actions', () => {
           conn_opts: {
             token,
             base_uri: baseUri,
+            accounts: [],
+            account_id: accountId,
           },
           opts: {
             accountId,
@@ -140,6 +147,8 @@ describe('Tests eSignature Actions', () => {
             conn_opts: {
               token,
               base_uri: baseUri,
+              accounts: [],
+              account_id: accountId,
             },
             opts: {
               accountId,
