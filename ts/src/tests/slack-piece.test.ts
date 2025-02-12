@@ -1,24 +1,39 @@
 import {
   IQoreAppActionWithFunction,
-  TQoreAppWithActions,
+  TCustomConnOptions,
   TQoreAppActionFunctionContext,
+  TQoreAppWithActions,
+  TQoreMappedOptions,
 } from '@qoretechnologies/ts-toolkit';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { validateResponseProperties } from './utils';
+
+const slackCustomConnOpts = {
+  authed_user: {
+    type: 'hash',
+  },
+} satisfies TCustomConnOptions;
 
 describe('slackPieceTest', () => {
   let newMessageTimestamp: string = '';
   let slackApp: TQoreAppWithActions;
 
+  const token = process.env.SLACK_ACCESS_TOKEN!;
+  const userToken = process.env.SLACK_USER_ACCESS_TOKEN!;
+
+  if (!token || !userToken) {
+    throw new Error('Slack access token or user access token not found');
+  }
+
   const actionContext = {
     conn_name: 'slack',
     conn_opts: {
-      token: process.env.SLACK_ACCESS_TOKEN,
+      token,
       authed_user: {
-        access_token: process.env.SLACK_USER_ACCESS_TOKEN,
+        access_token: userToken,
       },
     },
-  } satisfies TQoreAppActionFunctionContext;
+  } satisfies TQoreAppActionFunctionContext<typeof slackCustomConnOpts>;
 
   beforeAll(() => {
     PiecesAppCatalogue.registerApps();
@@ -39,9 +54,17 @@ describe('slackPieceTest', () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'slack_find_user_by_email'
     ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function;
 
-    const props = { email: process.env.SLACK_USER_EMAIL };
+    const actionFunction = action?.api_function as (
+      obj?: TQoreMappedOptions<any>,
+      options?: never,
+      context?: TQoreAppActionFunctionContext<typeof slackCustomConnOpts, any>
+    ) => any;
+    expect(actionFunction).toBeDefined();
+
+    const props = { email: process.env.SLACK_USER_EMAIL! };
+
+    expect(props.email).toBeDefined();
 
     if (actionFunction) {
       try {
@@ -66,7 +89,11 @@ describe('slackPieceTest', () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'send_channel_message'
     ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function;
+    const actionFunction = action?.api_function as (
+      obj?: TQoreMappedOptions<any>,
+      options?: never,
+      context?: TQoreAppActionFunctionContext<typeof slackCustomConnOpts, any>
+    ) => any;
 
     const channelIds = await action.options.channel.get_allowed_values(actionContext);
     expect(channelIds).toBeDefined();
@@ -98,7 +125,11 @@ describe('slackPieceTest', () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'get_channel_history'
     ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function;
+    const actionFunction = action?.api_function as (
+      obj?: TQoreMappedOptions<any>,
+      options?: never,
+      context?: TQoreAppActionFunctionContext<typeof slackCustomConnOpts, any>
+    ) => any;
 
     const channelIds = await action.options.channel.get_allowed_values(actionContext);
     expect(channelIds).toBeDefined();
@@ -128,7 +159,11 @@ describe('slackPieceTest', () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'slack_add_reaction_to_message'
     ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function;
+    const actionFunction = action?.api_function as (
+      obj?: TQoreMappedOptions<any>,
+      options?: never,
+      context?: TQoreAppActionFunctionContext<typeof slackCustomConnOpts, any>
+    ) => any;
 
     const channelIds = await action.options.channel.get_allowed_values(actionContext);
     expect(channelIds).toBeDefined();
@@ -162,7 +197,11 @@ describe('slackPieceTest', () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'slack_create_channel'
     ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function;
+    const actionFunction = action?.api_function as (
+      obj?: TQoreMappedOptions<any>,
+      options?: never,
+      context?: TQoreAppActionFunctionContext<typeof slackCustomConnOpts, any>
+    ) => any;
 
     const props = {
       channelName: 'test-channel',
@@ -204,21 +243,20 @@ describe('slackPieceTest', () => {
       actions: [{ title: 'Test', url: 'https://example.com' }],
     };
 
-    if (action.api_function) {
-      try {
-        const result = await action.api_function(props, undefined, actionContext);
-        expect(result).toBeDefined();
-        expect(result.ok).toBeTruthy();
-        const expectedResponseType = action.response_type;
-        if (expectedResponseType) {
-          validateResponseProperties(expectedResponseType, result);
-        }
-      } catch (error) {
-        console.error('Error sending message:', error);
-        throw error;
-      }
-    } else {
-      throw new Error('Action function not found');
+    const actionFunction = action?.api_function as (
+      obj?: TQoreMappedOptions<any>,
+      options?: never,
+      context?: TQoreAppActionFunctionContext<typeof slackCustomConnOpts, any>
+    ) => any;
+
+    expect(actionFunction).toBeDefined();
+
+    const result = await actionFunction(props, undefined, actionContext);
+    expect(result).toBeDefined();
+    expect(result.ok).toBeTruthy();
+    const expectedResponseType = action.response_type;
+    if (expectedResponseType) {
+      validateResponseProperties(expectedResponseType, result);
     }
   });
 
@@ -237,20 +275,19 @@ describe('slackPieceTest', () => {
       actions: [{ title: 'Test', url: 'https://example.com' }],
     };
 
-    if (action.api_function) {
-      try {
-        const result = await action.api_function(props, undefined, actionContext);
-        expect(result).toBeDefined();
-        const expectedResponseType = action.response_type;
-        if (expectedResponseType) {
-          validateResponseProperties(expectedResponseType, result);
-        }
-      } catch (error) {
-        console.error('Error sending message:', error);
-        throw error;
-      }
-    } else {
-      throw new Error('Action function not found');
+    const actionFunction = action?.api_function as (
+      obj?: TQoreMappedOptions<any>,
+      options?: never,
+      context?: TQoreAppActionFunctionContext<typeof slackCustomConnOpts, any>
+    ) => any;
+
+    expect(actionFunction).toBeDefined();
+
+    const result = await actionFunction(props, undefined, actionContext);
+    expect(result).toBeDefined();
+    const expectedResponseType = action.response_type;
+    if (expectedResponseType) {
+      validateResponseProperties(expectedResponseType, result);
     }
   });
 
@@ -258,7 +295,11 @@ describe('slackPieceTest', () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'search_messages'
     ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function;
+    const actionFunction = action?.api_function as (
+      obj?: TQoreMappedOptions<any>,
+      options?: never,
+      context?: TQoreAppActionFunctionContext<typeof slackCustomConnOpts, any>
+    ) => any;
 
     const props = { query: 'test' };
 
@@ -284,7 +325,11 @@ describe('slackPieceTest', () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'update_message'
     ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function;
+    const actionFunction = action?.api_function as (
+      obj?: TQoreMappedOptions<any>,
+      options?: never,
+      context?: TQoreAppActionFunctionContext<typeof slackCustomConnOpts, any>
+    ) => any;
 
     const channelIds = await action.options.channel.get_allowed_values(actionContext);
     expect(channelIds).toBeDefined();
@@ -318,7 +363,11 @@ describe('slackPieceTest', () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'upload_file'
     ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function;
+    const actionFunction = action?.api_function as (
+      obj?: TQoreMappedOptions<any>,
+      options?: never,
+      context?: TQoreAppActionFunctionContext<typeof slackCustomConnOpts, any>
+    ) => any;
 
     const channelIds = await action.options.channel.get_allowed_values(actionContext);
     expect(channelIds).toBeDefined();
@@ -353,50 +402,46 @@ describe('slackPieceTest', () => {
 
   it('should update a user profile first name', async () => {
     const testName = 'test';
-    const findUserActionFunction = (
-      slackApp.actions.find(
-        (action) => action.action === 'slack_find_user_by_email'
-      ) as IQoreAppActionWithFunction<any>
-    )?.api_function;
+    const findUserAction = slackApp.actions.find(
+      (action) => action.action === 'slack_find_user_by_email'
+    ) as IQoreAppActionWithFunction<any>;
 
-    expect(findUserActionFunction).toBeDefined();
+    const findUserActionFunction = findUserAction?.api_function as (
+      obj?: TQoreMappedOptions<any>,
+      options?: never,
+      context?: TQoreAppActionFunctionContext<typeof slackCustomConnOpts, any>
+    ) => any;
 
     const action = slackApp.actions.find(
       (action) => action.action === 'slack_update_profile'
     ) as IQoreAppActionWithFunction<any>;
 
-    const actionFunction = action?.api_function;
+    const actionFunction = action?.api_function as (
+      obj?: TQoreMappedOptions<any>,
+      options?: never,
+      context?: TQoreAppActionFunctionContext<typeof slackCustomConnOpts, any>
+    ) => any;
+
+    expect(actionFunction).toBeDefined();
+    expect(findUserActionFunction).toBeDefined();
 
     const findUserProps = { email: process.env.SLACK_USER_EMAIL };
 
-    if (actionFunction) {
-      try {
-        const findUserResult = await findUserActionFunction!(
-          findUserProps,
-          undefined,
-          actionContext
-        );
+    const findUserResult = await findUserActionFunction!(findUserProps, undefined, actionContext);
 
-        expect(findUserResult).toBeDefined();
-        expect(findUserResult.user).toBeDefined();
-        expect(findUserResult.user.id).toBeDefined();
+    expect(findUserResult).toBeDefined();
+    expect(findUserResult.user).toBeDefined();
+    expect(findUserResult.user.id).toBeDefined();
 
-        const props = { firstName: testName, lastName: testName, userId: findUserResult.user.id };
-        const result = await actionFunction(props, undefined, actionContext);
+    const props = { firstName: testName, lastName: testName, userId: findUserResult.user.id };
+    const result = await actionFunction(props, undefined, actionContext);
 
-        expect(result).toBeDefined();
-        expect(result.profile.first_name).toBe(testName);
-        expect(result.profile.last_name).toBe(testName);
-        const expectedResponseType = action.response_type;
-        if (expectedResponseType) {
-          validateResponseProperties(expectedResponseType, result);
-        }
-      } catch (error) {
-        console.error('Error finding user:', error);
-        throw error;
-      }
-    } else {
-      throw new Error('Action function not found');
+    expect(result).toBeDefined();
+    expect(result.profile.first_name).toBe(testName);
+    expect(result.profile.last_name).toBe(testName);
+    const expectedResponseType = action.response_type;
+    if (expectedResponseType) {
+      validateResponseProperties(expectedResponseType, result);
     }
   });
 });
