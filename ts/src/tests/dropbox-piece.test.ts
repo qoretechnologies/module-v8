@@ -57,7 +57,7 @@ describe('DropboxPieceTest', () => {
   });
 
   it('should register Dropbox app', () => {
-    expect(dropboxApp).not.toBeDefined();
+    expect(dropboxApp).toBeDefined();
     expect(dropboxApp!.actions).toBeDefined();
     expect(dropboxApp!.actions.length).toBeGreaterThan(0);
   });

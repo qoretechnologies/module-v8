@@ -24,7 +24,7 @@ describe('notionPieceTest', () => {
   let comment: any | null = null;
   let database: any | null = null;
 
-  const token = process.env.NOTION_ACCESS_TOKEN!;
+  const token = 'secret_GsRDLW2mNEFMj4QpaWSiujZ8FZqhvOyTFUBEm0Nkz5a';
 
   expect(token).toBeDefined();
 
@@ -262,7 +262,7 @@ describe('notionPieceTest', () => {
             properties: {
               'Grocery item': {
                 type: 'title',
-                title: undefined,
+                title: {},
               },
               Price: {
                 type: 'number',
@@ -272,7 +272,7 @@ describe('notionPieceTest', () => {
               },
               'Last ordered': {
                 type: 'date',
-                date: undefined,
+                date: {},
               },
             },
           },
