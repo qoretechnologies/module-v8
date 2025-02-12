@@ -136,8 +136,10 @@ export default (locale: Locales) =>
     logo_file_name: 'esignature-logo.svg',
     logo_mime_type: 'image/svg+xml',
     swagger: 'schemas/esignature.swagger.json',
-    swagger_utc_dates: true,
-    swagger_query_date_format: 'YYYY-MM-DDTHH:mm:SS.uu@',
+    swagger_options: {
+      utc_dates: true,
+      query_date_format: 'YYYY-MM-DDTHH:mm:SS.uu@',
+    },
     swagger_paths: createSwaggerPaths(ESIGNATURE_PATHS),
     swagger_type_overrides: {
       'agent.email': {
