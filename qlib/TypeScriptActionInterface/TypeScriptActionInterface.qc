@@ -573,6 +573,9 @@ public class TypeScriptActionInterface {
         } else if (*hash<auto> schema_map = app.swagger_schema_map) {
             foreach hash<auto> i in (schema_map) {
                 on_error rethrow $1.err, sprintf("%s (while creating schema for app %y schema %y)", $1.desc, app.name, i.key);
+                if (i.value.swagger.typeCode() != NT_STRING) {
+                    throw "APP-ERROR", "Missing 'swagger' property giving the location of the Swagger schema";
+                }
                 swagger_schema_map{i.key} = TypeScriptActionInterface::getSwaggerSchema(appname, i.value.swagger,
                     remove i.value.swagger_options,
                     remove i.value.swagger_paths, remove i.value.swagger_type_overrides);
