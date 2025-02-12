@@ -9,18 +9,17 @@ exports.actionsCatalogue = {
             - swagger_paths?: string[] -> a list of swagger paths to build an optimized schema
             - swagger_type_overrides?: object -> an object keyed by Swagger type (in dot notation), values are applied
               to override the given types
-            - swagger_utc_dates?: boolean -> if date/time values should be serialized in UTC as Swagger query args
-            - swagger_query_date_format?: string -> the date format to use when serializing Swagger query date args
             - swagger_schema_map?: object -> keyed by swagger scheme label, values are:
               - swagger?: string -> a location to a Swagger 2.0 schema = OpenAPI 2.0
               - swagger_options?: object -> an optional hash of swagger parsing options - the main option is
-                - "parse_flags": -1 -> this will turn on all lax parsing options - or you can use 128
+                - "parse_flags"?: int -1 -> this will turn on all lax parsing options - or you can use 128
                   (LM_ACCEPT_QUERY_OBJECTS = accept "object" as a valid type for query parameters like OpenAPI 3.0)
+                - utc_dates?: boolean -> if date/time values should be serialized in UTC as Swagger query args
+                - query_date_format?: string -> the date format to use when serializing Swagger query date args
               - swagger_paths?: string[] -> a list of swagger paths to build an optimized schema
               - swagger_type_overrides?: object -> an object keyed by Swagger type (in dot notation), values are
                 applied to override the given types
-              - swagger_utc_dates?: boolean -> if date/time values should be serialized in UTC as Swagger query args
-              - swagger_query_date_format?: string -> the date format to use when serializing Swagger query date args        */
+        */
         api.registerApp({
             "name": "js-test",
             "display_name": "JavaScript Test",
