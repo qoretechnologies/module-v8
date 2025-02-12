@@ -154,7 +154,11 @@ export const getPropertyOfSchemaData = (
   fallback?: string
 ) => {
   if (typeof data === 'object' && key in data) {
-    return String(data[key]).replace(/\//g, '-');
+    return String(data[key])
+      .replace(/\//g, '-')
+      .replace(/[{}]/g, '')
+      .replace(/__+/g, '_')
+      .replace(/--+/g, '-');
   }
 
   return fallback || '';

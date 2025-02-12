@@ -8542,7 +8542,7 @@ type RootTranslation = {
 				}
 			}
 		}
-		hubspot: {
+		Hubspot: {
 			/**
 			 * h​u​b​s​p​o​t
 			 */
@@ -8556,106 +8556,6 @@ type RootTranslation = {
 			 */
 			longDesc: string
 			actions: {
-				users: {
-					results: {
-						/**
-						 * R​e​s​u​l​t​s
-						 */
-						displayName: string
-						/**
-						 * R​e​s​u​l​t​s​ ​o​f​ ​t​h​e​ ​a​c​t​i​o​n
-						 */
-						shortDesc: string
-						/**
-						 * R​e​s​u​l​t​s​ ​o​f​ ​t​h​e​ ​a​c​t​i​o​n
-						 */
-						longDesc: string
-					}
-					name: {
-						/**
-						 * N​a​m​e
-						 */
-						displayName: string
-						/**
-						 * N​a​m​e​ ​o​f​ ​t​h​e​ ​u​s​e​r
-						 */
-						shortDesc: string
-						/**
-						 * N​a​m​e​ ​o​f​ ​t​h​e​ ​u​s​e​r
-						 */
-						longDesc: string
-					}
-					id: {
-						/**
-						 * I​D
-						 */
-						displayName: string
-						/**
-						 * I​D​ ​o​f​ ​t​h​e​ ​u​s​e​r
-						 */
-						shortDesc: string
-						/**
-						 * I​D​ ​o​f​ ​t​h​e​ ​u​s​e​r
-						 */
-						longDesc: string
-					}
-					email: {
-						/**
-						 * E​m​a​i​l
-						 */
-						displayName: string
-						/**
-						 * E​m​a​i​l​ ​o​f​ ​t​h​e​ ​u​s​e​r
-						 */
-						shortDesc: string
-						/**
-						 * E​m​a​i​l​ ​o​f​ ​t​h​e​ ​u​s​e​r
-						 */
-						longDesc: string
-					}
-					created_at: {
-						/**
-						 * C​r​e​a​t​e​d​ ​A​t
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​h​e​ ​u​s​e​r​ ​w​a​s​ ​c​r​e​a​t​e​d
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​h​e​ ​u​s​e​r​ ​w​a​s​ ​c​r​e​a​t​e​d
-						 */
-						longDesc: string
-					}
-					updated_at: {
-						/**
-						 * U​p​d​a​t​e​d​ ​A​t
-						 */
-						displayName: string
-						/**
-						 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​h​e​ ​u​s​e​r​ ​w​a​s​ ​l​a​s​t​ ​u​p​d​a​t​e​d
-						 */
-						shortDesc: string
-						/**
-						 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​h​e​ ​u​s​e​r​ ​w​a​s​ ​l​a​s​t​ ​u​p​d​a​t​e​d
-						 */
-						longDesc: string
-					}
-					archived: {
-						/**
-						 * A​r​c​h​i​v​e​d
-						 */
-						displayName: string
-						/**
-						 * W​h​e​t​h​e​r​ ​t​h​e​ ​u​s​e​r​ ​i​s​ ​a​r​c​h​i​v​e​d
-						 */
-						shortDesc: string
-						/**
-						 * W​h​e​t​h​e​r​ ​t​h​e​ ​u​s​e​r​ ​i​s​ ​a​r​c​h​i​v​e​d
-						 */
-						longDesc: string
-					}
-				}
 			}
 		}
 		Dropbox: {
@@ -18135,7 +18035,7 @@ export type TranslationFunctions = {
 				}
 			}
 		}
-		hubspot: {
+		Hubspot: {
 			/**
 			 * hubspot
 			 */
@@ -18149,106 +18049,6 @@ export type TranslationFunctions = {
 			 */
 			longDesc: () => LocalizedString
 			actions: {
-				users: {
-					results: {
-						/**
-						 * Results
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Results of the action
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Results of the action
-						 */
-						longDesc: () => LocalizedString
-					}
-					name: {
-						/**
-						 * Name
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Name of the user
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Name of the user
-						 */
-						longDesc: () => LocalizedString
-					}
-					id: {
-						/**
-						 * ID
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * ID of the user
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * ID of the user
-						 */
-						longDesc: () => LocalizedString
-					}
-					email: {
-						/**
-						 * Email
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Email of the user
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Email of the user
-						 */
-						longDesc: () => LocalizedString
-					}
-					created_at: {
-						/**
-						 * Created At
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The date and time the user was created
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The date and time the user was created
-						 */
-						longDesc: () => LocalizedString
-					}
-					updated_at: {
-						/**
-						 * Updated At
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * The date and time the user was last updated
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * The date and time the user was last updated
-						 */
-						longDesc: () => LocalizedString
-					}
-					archived: {
-						/**
-						 * Archived
-						 */
-						displayName: () => LocalizedString
-						/**
-						 * Whether the user is archived
-						 */
-						shortDesc: () => LocalizedString
-						/**
-						 * Whether the user is archived
-						 */
-						longDesc: () => LocalizedString
-					}
-				}
 			}
 		}
 		Dropbox: {

@@ -18,6 +18,7 @@ import jira from '../apps/jira';
 import netsuite from '../apps/netsuite';
 import salesforce from '../apps/salesforce';
 import stripe from '../apps/stripe';
+import hubspot from '../apps/hubspot';
 import zendesk from '../apps/zendesk';
 import { Log } from '../decorators/Logger';
 import { Locales } from '../i18n/i18n-types';
@@ -45,6 +46,7 @@ const NEW_APPS = {
   jira,
   stripe,
   freshdesk,
+  hubspot,
 } as const;
 
 const EXISTING_APPS = {

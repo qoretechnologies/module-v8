@@ -1737,49 +1737,11 @@ const en = {
         },
       },
     },
-    hubspot: {
+    Hubspot: {
       displayName: 'hubspot',
       shortDesc: 'Collection of actions to interact with the Hubspot API',
       longDesc: 'Collection of actions to interact with the Hubspot API',
-      actions: {
-        users: {
-          results: {
-            displayName: 'Results',
-            shortDesc: 'Results of the action',
-            longDesc: 'Results of the action',
-          },
-          name: {
-            displayName: 'Name',
-            shortDesc: 'Name of the user',
-            longDesc: 'Name of the user',
-          },
-          id: {
-            displayName: 'ID',
-            shortDesc: 'ID of the user',
-            longDesc: 'ID of the user',
-          },
-          email: {
-            displayName: 'Email',
-            shortDesc: 'Email of the user',
-            longDesc: 'Email of the user',
-          },
-          created_at: {
-            displayName: 'Created At',
-            shortDesc: 'The date and time the user was created',
-            longDesc: 'The date and time the user was created',
-          },
-          updated_at: {
-            displayName: 'Updated At',
-            shortDesc: 'The date and time the user was last updated',
-            longDesc: 'The date and time the user was last updated',
-          },
-          archived: {
-            displayName: 'Archived',
-            shortDesc: 'Whether the user is archived',
-            longDesc: 'Whether the user is archived',
-          },
-        },
-      },
+      actions: {},
     },
     Dropbox: {
       displayName: 'Dropbox',
