@@ -23,7 +23,7 @@ type THubspotDeal = {
 
 const mapHubspotDeal = (deal: THubspotDeal): IQoreAllowedValue<string> => ({
   value: deal.id,
-  display_name: deal.properties.dealname,
+  display_name: deal.properties.dealname || deal.id,
   short_desc:
     `Amount: ${deal.properties.amount}\n\nDeal stage: ${deal.properties.dealstage}\n\n` +
     `Archived: ${deal.archived}\n\nCreated at: ${deal.createdAt}\n\nUpdated at: ${deal.updatedAt}`,

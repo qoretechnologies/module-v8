@@ -1,9 +1,10 @@
 import { TAllowedPaths, TQoreAppActionOverrideOption } from '@qoretechnologies/ts-toolkit';
-import hubspotUsers from '../../../schemas/hubspot/users.swagger.json';
-import { getHubspotUserAllowedValues } from '../helpers/get-user-allowed-values';
-import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
 import { OpenAPIV2 } from 'openapi-types';
+import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
+import hubspotUsers from '../../../schemas/hubspot/users.swagger.json';
 import { HUBSPOT_APP_NAME } from '../constants';
+import { getHubspotUserAllowedValues } from '../helpers/get-user-allowed-values';
+import { getHubspotUserPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
 
 const userId = {
   type: 'softstring',
@@ -20,7 +21,18 @@ export const HUBSPOT_USERS_ALLOWED_PATHS = {
     POST: {},
   },
   '/crm/v3/objects/users/search': {
-    POST: {},
+    POST: {
+      override_options: {
+        properties: {
+          type: {
+            type: 'list',
+            element_type: 'string',
+            required: false,
+          },
+          get_allowed_values: getHubspotUserPropertiesAllowedValues,
+        },
+      },
+    },
   },
   '/crm/v3/objects/users/{userId}': {
     GET: {

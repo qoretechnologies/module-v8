@@ -1,6 +1,6 @@
 import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
 import { actionsCatalogue } from '../../ActionsCatalogue';
-import { mapActionsToApp } from '../../global/helpers';
+import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import { HUBSPOT_APP_NAME } from './constants';
@@ -12,6 +12,7 @@ import { HUBSPOT_LEADS_ACTIONS } from './allowed-paths/leads';
 import { HUBSPOT_PRODUCTS_ACTIONS } from './allowed-paths/products';
 import { HUBSPOT_TICKETS_ACTIONS } from './allowed-paths/tickets';
 import { HUBSPOT_USERS_ACTIONS } from './allowed-paths/users';
+import * as HUBSPOT_TRIGGERS from './triggers';
 
 export default (locale: Locales) =>
   ({
@@ -49,6 +50,7 @@ export default (locale: Locales) =>
       ...mapActionsToApp(HUBSPOT_APP_NAME, HUBSPOT_PRODUCTS_ACTIONS, locale),
       ...mapActionsToApp(HUBSPOT_APP_NAME, HUBSPOT_TICKETS_ACTIONS, locale),
       ...mapActionsToApp(HUBSPOT_APP_NAME, HUBSPOT_USERS_ACTIONS, locale),
+      ...mapTriggersToApp(HUBSPOT_APP_NAME, HUBSPOT_TRIGGERS, locale),
     ],
     rest: {
       url: 'https://api.hubapi.com',
@@ -58,7 +60,6 @@ export default (locale: Locales) =>
       oauth2_client_secret: actionsCatalogue.getOauth2ClientSecret(HUBSPOT_APP_NAME),
       oauth2_auth_url: 'https://app.hubspot.com/oauth/authorize',
       oauth2_token_url: 'https://api.hubapi.com/oauth/v1/token',
-      // TODO complete scopes
       oauth2_scopes: [
         'media_bridge.read',
         'oauth',
@@ -69,6 +70,17 @@ export default (locale: Locales) =>
         'crm.objects.goals.read',
         'crm.schemas.contacts.read',
         'crm.objects.contacts.read',
+        'crm.objects.contacts.write',
+        'crm.objects.deals.read',
+        'crm.objects.deals.write',
+        'crm.objects.companies.read',
+        'crm.objects.companies.write',
+        'crm.objects.leads.read',
+        'crm.objects.leads.write',
+        'crm.objects.users.read',
+        'crm.objects.users.write',
+        'crm.objects.products.read',
+        'crm.objects.products.write',
       ],
       ping_method: 'GET',
       ping_path: '/integrations/v1/me',
@@ -76,7 +88,6 @@ export default (locale: Locales) =>
     swagger_options: {
       parse_flags: 128,
     },
-    // swagger: 'schemas/hubspot/companies.swagger.json',
     swagger_schema_map: {
       companies: {
         swagger: 'schemas/hubspot/companies.swagger.json',

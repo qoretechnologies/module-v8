@@ -4,6 +4,7 @@ import { getHubspotProductAllowedValues } from '../helpers/get-product.allowe-va
 import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
 import { OpenAPIV2 } from 'openapi-types';
 import { HUBSPOT_APP_NAME } from '../constants';
+import { getHubspotProductPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
 
 const productId = {
   type: 'softstring',
@@ -20,7 +21,18 @@ export const HUBSPOT_PRODUCTS_ALLOWED_PATHS = {
     POST: {},
   },
   '/crm/v3/objects/products/search': {
-    POST: {},
+    POST: {
+      override_options: {
+        properties: {
+          type: {
+            type: 'list',
+            element_type: 'string',
+            required: false,
+          },
+          get_allowed_values: getHubspotProductPropertiesAllowedValues,
+        },
+      },
+    },
   },
   '/crm/v3/objects/products/{productId}': {
     GET: {

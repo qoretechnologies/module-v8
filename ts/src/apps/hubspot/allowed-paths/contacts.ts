@@ -4,6 +4,7 @@ import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
 import { HUBSPOT_APP_NAME } from '../constants';
 import hubspotContacts from '../../../schemas/hubspot/contacts.swagger.json';
 import { OpenAPIV2 } from 'openapi-types';
+import { getHubspotContactPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
 
 const contactId = {
   type: 'softstring',
@@ -17,7 +18,18 @@ export const HUBSPOT_CONTACTS_ALLOWED_PATHS = {
     POST: {},
   },
   '/crm/v3/objects/contacts/search': {
-    POST: {},
+    POST: {
+      override_options: {
+        properties: {
+          type: {
+            type: 'list',
+            element_type: 'string',
+            required: false,
+          },
+          get_allowed_values: getHubspotContactPropertiesAllowedValues,
+        },
+      },
+    },
   },
   '/crm/v3/objects/contacts/{contactId}': {
     GET: {

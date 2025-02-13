@@ -8544,18 +8544,458 @@ type RootTranslation = {
 		}
 		Hubspot: {
 			/**
-			 * h​u​b​s​p​o​t
+			 * H​u​b​S​p​o​t
 			 */
 			displayName: string
 			/**
-			 * C​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​t​h​e​ ​H​u​b​s​p​o​t​ ​A​P​I
+			 * S​e​a​m​l​e​s​s​l​y​ ​c​o​n​n​e​c​t​ ​t​o​ ​t​h​e​ ​H​u​b​S​p​o​t​ ​A​P​I​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​a​n​d​ ​s​t​r​e​a​m​l​i​n​e​ ​y​o​u​r​ ​C​R​M​ ​p​r​o​c​e​s​s​e​s​.
 			 */
 			shortDesc: string
 			/**
-			 * C​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​t​h​e​ ​H​u​b​s​p​o​t​ ​A​P​I
+			 * T​h​e​ ​H​u​b​S​p​o​t​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​a​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​c​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​t​h​e​ ​H​u​b​S​p​o​t​ ​A​P​I​.​ ​W​h​e​t​h​e​r​ ​y​o​u​ ​n​e​e​d​ ​t​o​ ​m​a​n​a​g​e​ ​c​o​m​p​a​n​i​e​s​,​ ​c​o​n​t​a​c​t​s​,​ ​d​e​a​l​s​,​ ​o​r​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​s​,​ ​t​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​s​i​m​p​l​i​f​i​e​s​ ​y​o​u​r​ ​w​o​r​k​f​l​o​w​ ​a​u​t​o​m​a​t​i​o​n​ ​a​n​d​ ​C​R​M​ ​m​a​n​a​g​e​m​e​n​t​.
 			 */
 			longDesc: string
 			actions: {
+			}
+			triggers: {
+				hubspot_company_created_or_updated_trigger: {
+					event_info: {
+						/**
+						 * C​o​m​p​a​n​y​ ​I​n​f​o​r​m​a​t​i​o​n
+						 */
+						desc: string
+					}
+					/**
+					 * C​o​m​p​a​n​y​ ​C​r​e​a​t​e​d​ ​o​r​ ​U​p​d​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​c​o​m​p​a​n​y​ ​i​s​ ​a​d​d​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​H​u​b​S​p​o​t​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​c​o​m​p​a​n​y​ ​r​e​c​o​r​d​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​m​o​d​i​f​i​e​d​ ​i​n​ ​H​u​b​S​p​o​t​,​ ​e​n​a​b​l​i​n​g​ ​y​o​u​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​w​o​r​k​f​l​o​w​s​ ​b​a​s​e​d​ ​o​n​ ​c​o​m​p​a​n​y​ ​d​a​t​a​ ​c​h​a​n​g​e​s​.
+					 */
+					longDesc: string
+					options: {
+						activationCriteria: {
+							/**
+							 * A​c​t​i​v​a​t​i​o​n​ ​C​r​i​t​e​r​i​a
+							 */
+							displayName: string
+							/**
+							 * C​r​i​t​e​r​i​a​ ​f​o​r​ ​t​r​i​g​g​e​r​ ​t​o​ ​a​c​t​i​v​a​t​e​ ​(​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​t​o​ ​a​c​t​i​v​a​t​e​.​
+						​
+						​-​ ​C​r​e​a​t​e​d​:​ ​T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​o​b​j​e​c​t​ ​i​s​ ​c​r​e​a​t​e​d​
+						​-​ ​U​p​d​a​t​e​d​:​ ​T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​o​b​j​e​c​t​ ​i​s​ ​u​p​d​a​t​e​d
+							 */
+							longDesc: string
+						}
+						additionalProperties: {
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​a​d​d​ ​t​o​ ​r​e​t​u​r​n​e​d​ ​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​a​d​d​i​t​i​o​n​a​l​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​o​b​j​e​c​t​ ​d​a​t​a
+							 */
+							longDesc: string
+						}
+					}
+				}
+				hubspot_contact_created_or_updated_trigger: {
+					event_info: {
+						/**
+						 * C​o​n​t​a​c​t​ ​I​n​f​o​r​m​a​t​i​o​n
+						 */
+						desc: string
+					}
+					/**
+					 * C​o​n​t​a​c​t​ ​C​r​e​a​t​e​d​ ​o​r​ ​U​p​d​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​c​o​n​t​a​c​t​ ​i​s​ ​a​d​d​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​H​u​b​S​p​o​t​.
+					 */
+					shortDesc: string
+					/**
+					 * A​c​t​i​v​a​t​e​ ​w​o​r​k​f​l​o​w​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​ ​i​s​ ​u​p​d​a​t​e​d​ ​w​i​t​h​i​n​ ​H​u​b​S​p​o​t​.​ ​I​d​e​a​l​ ​f​o​r​ ​m​a​n​a​g​i​n​g​ ​c​u​s​t​o​m​e​r​ ​i​n​f​o​r​m​a​t​i​o​n​ ​e​f​f​i​c​i​e​n​t​l​y​.
+					 */
+					longDesc: string
+					options: {
+						activationCriteria: {
+							/**
+							 * A​c​t​i​v​a​t​i​o​n​ ​C​r​i​t​e​r​i​a
+							 */
+							displayName: string
+							/**
+							 * C​r​i​t​e​r​i​a​ ​f​o​r​ ​t​r​i​g​g​e​r​ ​t​o​ ​a​c​t​i​v​a​t​e​ ​(​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​t​o​ ​a​c​t​i​v​a​t​e​.​
+						​
+						​-​ ​C​r​e​a​t​e​d​:​ ​T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​o​b​j​e​c​t​ ​i​s​ ​c​r​e​a​t​e​d​
+						​-​ ​U​p​d​a​t​e​d​:​ ​T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​o​b​j​e​c​t​ ​i​s​ ​u​p​d​a​t​e​d
+							 */
+							longDesc: string
+						}
+						additionalProperties: {
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​a​d​d​ ​t​o​ ​r​e​t​u​r​n​e​d​ ​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​a​d​d​i​t​i​o​n​a​l​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​o​b​j​e​c​t​ ​d​a​t​a
+							 */
+							longDesc: string
+						}
+					}
+				}
+				hubspot_custom_object_created_or_updated_trigger: {
+					event_info: {
+						/**
+						 * C​u​s​t​o​m​ ​O​b​j​e​c​t​ ​I​n​f​o​r​m​a​t​i​o​n
+						 */
+						desc: string
+					}
+					/**
+					 * C​u​s​t​o​m​ ​O​b​j​e​c​t​ ​C​r​e​a​t​e​d​ ​o​r​ ​U​p​d​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​ ​i​s​ ​a​d​d​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​H​u​b​S​p​o​t​.
+					 */
+					shortDesc: string
+					/**
+					 * U​s​e​ ​t​h​i​s​ ​t​r​i​g​g​e​r​ ​t​o​ ​c​a​p​t​u​r​e​ ​c​h​a​n​g​e​s​ ​t​o​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​s​ ​i​n​ ​H​u​b​S​p​o​t​,​ ​e​n​s​u​r​i​n​g​ ​t​h​a​t​ ​u​p​d​a​t​e​s​ ​t​o​ ​c​u​s​t​o​m​ ​d​a​t​a​ ​s​t​r​u​c​t​u​r​e​s​ ​a​r​e​ ​p​r​o​c​e​s​s​e​d​ ​i​m​m​e​d​i​a​t​e​l​y​ ​f​o​r​ ​a​u​t​o​m​a​t​i​o​n​ ​o​r​ ​i​n​t​e​g​r​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						activationCriteria: {
+							/**
+							 * A​c​t​i​v​a​t​i​o​n​ ​C​r​i​t​e​r​i​a
+							 */
+							displayName: string
+							/**
+							 * C​r​i​t​e​r​i​a​ ​f​o​r​ ​t​r​i​g​g​e​r​ ​t​o​ ​a​c​t​i​v​a​t​e​ ​(​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​t​o​ ​a​c​t​i​v​a​t​e​.​
+						​
+						​-​ ​C​r​e​a​t​e​d​:​ ​T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​o​b​j​e​c​t​ ​i​s​ ​c​r​e​a​t​e​d​
+						​-​ ​U​p​d​a​t​e​d​:​ ​T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​o​b​j​e​c​t​ ​i​s​ ​u​p​d​a​t​e​d
+							 */
+							longDesc: string
+						}
+						additionalProperties: {
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​a​d​d​ ​t​o​ ​r​e​t​u​r​n​e​d​ ​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​a​d​d​i​t​i​o​n​a​l​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​o​b​j​e​c​t​ ​d​a​t​a
+							 */
+							longDesc: string
+						}
+						object: {
+							/**
+							 * O​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​c​h​a​n​g​e​s​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​o​r​ ​u​p​d​a​t​e​d​ ​r​e​c​o​r​d​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				hubspot_deal_created_or_updated_trigger: {
+					event_info: {
+						/**
+						 * D​e​a​l​ ​I​n​f​o​r​m​a​t​i​o​n
+						 */
+						desc: string
+					}
+					/**
+					 * D​e​a​l​ ​C​r​e​a​t​e​d​ ​o​r​ ​U​p​d​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​d​e​a​l​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​H​u​b​S​p​o​t​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​d​e​a​l​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​m​o​d​i​f​i​e​d​ ​i​n​ ​H​u​b​S​p​o​t​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​t​r​a​c​k​ ​s​a​l​e​s​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​a​n​d​ ​i​n​t​e​g​r​a​t​e​ ​w​i​t​h​ ​y​o​u​r​ ​s​a​l​e​s​ ​p​i​p​e​l​i​n​e​ ​a​u​t​o​m​a​t​i​o​n​ ​w​o​r​k​f​l​o​w​s​.
+					 */
+					longDesc: string
+					options: {
+						activationCriteria: {
+							/**
+							 * A​c​t​i​v​a​t​i​o​n​ ​C​r​i​t​e​r​i​a
+							 */
+							displayName: string
+							/**
+							 * C​r​i​t​e​r​i​a​ ​f​o​r​ ​t​r​i​g​g​e​r​ ​t​o​ ​a​c​t​i​v​a​t​e​ ​(​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​t​o​ ​a​c​t​i​v​a​t​e​.​
+						​
+						​-​ ​C​r​e​a​t​e​d​:​ ​T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​o​b​j​e​c​t​ ​i​s​ ​c​r​e​a​t​e​d​
+						​-​ ​U​p​d​a​t​e​d​:​ ​T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​o​b​j​e​c​t​ ​i​s​ ​u​p​d​a​t​e​d
+							 */
+							longDesc: string
+						}
+						additionalProperties: {
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​a​d​d​ ​t​o​ ​r​e​t​u​r​n​e​d​ ​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​a​d​d​i​t​i​o​n​a​l​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​o​b​j​e​c​t​ ​d​a​t​a
+							 */
+							longDesc: string
+						}
+					}
+				}
+				hubspot_lead_created_or_updated_trigger: {
+					event_info: {
+						/**
+						 * L​e​a​d​ ​I​n​f​o​r​m​a​t​i​o​n
+						 */
+						desc: string
+					}
+					/**
+					 * L​e​a​d​ ​C​r​e​a​t​e​d​ ​o​r​ ​U​p​d​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​l​e​a​d​ ​i​s​ ​a​d​d​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​H​u​b​S​p​o​t​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​ ​n​e​w​ ​l​e​a​d​s​ ​a​n​d​ ​u​p​d​a​t​e​s​ ​t​o​ ​e​x​i​s​t​i​n​g​ ​l​e​a​d​s​ ​i​n​ ​H​u​b​S​p​o​t​ ​w​i​t​h​ ​t​h​i​s​ ​t​r​i​g​g​e​r​,​ ​e​n​a​b​l​i​n​g​ ​e​f​f​i​c​i​e​n​t​ ​l​e​a​d​ ​m​a​n​a​g​e​m​e​n​t​ ​a​n​d​ ​f​o​l​l​o​w​-​u​p​ ​p​r​o​c​e​s​s​e​s​.
+					 */
+					longDesc: string
+					options: {
+						activationCriteria: {
+							/**
+							 * A​c​t​i​v​a​t​i​o​n​ ​C​r​i​t​e​r​i​a
+							 */
+							displayName: string
+							/**
+							 * C​r​i​t​e​r​i​a​ ​f​o​r​ ​t​r​i​g​g​e​r​ ​t​o​ ​a​c​t​i​v​a​t​e​ ​(​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​t​o​ ​a​c​t​i​v​a​t​e​.​
+						​
+						​-​ ​C​r​e​a​t​e​d​:​ ​T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​o​b​j​e​c​t​ ​i​s​ ​c​r​e​a​t​e​d​
+						​-​ ​U​p​d​a​t​e​d​:​ ​T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​o​b​j​e​c​t​ ​i​s​ ​u​p​d​a​t​e​d
+							 */
+							longDesc: string
+						}
+						additionalProperties: {
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​a​d​d​ ​t​o​ ​r​e​t​u​r​n​e​d​ ​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​a​d​d​i​t​i​o​n​a​l​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​o​b​j​e​c​t​ ​d​a​t​a
+							 */
+							longDesc: string
+						}
+					}
+				}
+				hubspot_product_created_or_updated_trigger: {
+					event_info: {
+						/**
+						 * P​r​o​d​u​c​t​ ​I​n​f​o​r​m​a​t​i​o​n
+						 */
+						desc: string
+					}
+					/**
+					 * P​r​o​d​u​c​t​ ​C​r​e​a​t​e​d​ ​o​r​ ​U​p​d​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​p​r​o​d​u​c​t​ ​i​s​ ​a​d​d​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​H​u​b​S​p​o​t​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​l​e​r​t​s​ ​y​o​u​ ​t​o​ ​a​n​y​ ​n​e​w​ ​o​r​ ​u​p​d​a​t​e​d​ ​p​r​o​d​u​c​t​s​ ​w​i​t​h​i​n​ ​y​o​u​r​ ​H​u​b​S​p​o​t​ ​a​c​c​o​u​n​t​,​ ​e​n​s​u​r​i​n​g​ ​t​h​a​t​ ​y​o​u​r​ ​p​r​o​d​u​c​t​ ​d​a​t​a​ ​r​e​m​a​i​n​s​ ​s​y​n​c​h​r​o​n​i​z​e​d​ ​w​i​t​h​ ​y​o​u​r​ ​w​o​r​k​f​l​o​w​s​ ​a​n​d​ ​e​x​t​e​r​n​a​l​ ​s​y​s​t​e​m​s​.
+					 */
+					longDesc: string
+					options: {
+						activationCriteria: {
+							/**
+							 * A​c​t​i​v​a​t​i​o​n​ ​C​r​i​t​e​r​i​a
+							 */
+							displayName: string
+							/**
+							 * C​r​i​t​e​r​i​a​ ​f​o​r​ ​t​r​i​g​g​e​r​ ​t​o​ ​a​c​t​i​v​a​t​e​ ​(​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​t​o​ ​a​c​t​i​v​a​t​e​.​
+						​
+						​-​ ​C​r​e​a​t​e​d​:​ ​T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​o​b​j​e​c​t​ ​i​s​ ​c​r​e​a​t​e​d​
+						​-​ ​U​p​d​a​t​e​d​:​ ​T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​o​b​j​e​c​t​ ​i​s​ ​u​p​d​a​t​e​d
+							 */
+							longDesc: string
+						}
+						additionalProperties: {
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​a​d​d​ ​t​o​ ​r​e​t​u​r​n​e​d​ ​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​a​d​d​i​t​i​o​n​a​l​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​o​b​j​e​c​t​ ​d​a​t​a
+							 */
+							longDesc: string
+						}
+					}
+				}
+				hubspot_ticket_created_or_updated_trigger: {
+					event_info: {
+						/**
+						 * T​i​c​k​e​t​ ​I​n​f​o​r​m​a​t​i​o​n
+						 */
+						desc: string
+					}
+					/**
+					 * T​i​c​k​e​t​ ​C​r​e​a​t​e​d​ ​o​r​ ​U​p​d​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​s​u​p​p​o​r​t​ ​t​i​c​k​e​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​H​u​b​S​p​o​t​.
+					 */
+					shortDesc: string
+					/**
+					 * A​u​t​o​m​a​t​i​c​a​l​l​y​ ​t​r​i​g​g​e​r​ ​w​o​r​k​f​l​o​w​s​ ​w​h​e​n​ ​a​ ​s​u​p​p​o​r​t​ ​t​i​c​k​e​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​H​u​b​S​p​o​t​,​ ​i​d​e​a​l​ ​f​o​r​ ​m​a​n​a​g​i​n​g​ ​c​u​s​t​o​m​e​r​ ​s​u​p​p​o​r​t​ ​o​p​e​r​a​t​i​o​n​s​ ​a​n​d​ ​s​t​r​e​a​m​l​i​n​i​n​g​ ​i​s​s​u​e​ ​r​e​s​o​l​u​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						activationCriteria: {
+							/**
+							 * A​c​t​i​v​a​t​i​o​n​ ​C​r​i​t​e​r​i​a
+							 */
+							displayName: string
+							/**
+							 * C​r​i​t​e​r​i​a​ ​f​o​r​ ​t​r​i​g​g​e​r​ ​t​o​ ​a​c​t​i​v​a​t​e​ ​(​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​t​o​ ​a​c​t​i​v​a​t​e​.​
+						​
+						​-​ ​C​r​e​a​t​e​d​:​ ​T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​o​b​j​e​c​t​ ​i​s​ ​c​r​e​a​t​e​d​
+						​-​ ​U​p​d​a​t​e​d​:​ ​T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​o​b​j​e​c​t​ ​i​s​ ​u​p​d​a​t​e​d
+							 */
+							longDesc: string
+						}
+						additionalProperties: {
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​a​d​d​ ​t​o​ ​r​e​t​u​r​n​e​d​ ​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​a​d​d​i​t​i​o​n​a​l​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​o​b​j​e​c​t​ ​d​a​t​a
+							 */
+							longDesc: string
+						}
+					}
+				}
+				hubspot_user_created_or_updated_trigger: {
+					event_info: {
+						/**
+						 * U​s​e​r​ ​I​n​f​o​r​m​a​t​i​o​n
+						 */
+						desc: string
+					}
+					/**
+					 * U​s​e​r​ ​C​r​e​a​t​e​d​ ​o​r​ ​U​p​d​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​u​s​e​r​ ​i​s​ ​a​d​d​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​H​u​b​S​p​o​t​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​u​p​o​n​ ​t​h​e​ ​c​r​e​a​t​i​o​n​ ​o​r​ ​u​p​d​a​t​e​ ​o​f​ ​a​ ​u​s​e​r​ ​w​i​t​h​i​n​ ​H​u​b​S​p​o​t​,​ ​h​e​l​p​i​n​g​ ​y​o​u​ ​k​e​e​p​ ​t​r​a​c​k​ ​o​f​ ​u​s​e​r​ ​a​c​c​o​u​n​t​s​ ​a​n​d​ ​m​a​i​n​t​a​i​n​ ​u​p​d​a​t​e​d​ ​a​c​c​e​s​s​ ​c​o​n​t​r​o​l​ ​f​o​r​ ​y​o​u​r​ ​t​e​a​m​.
+					 */
+					longDesc: string
+					options: {
+						activationCriteria: {
+							/**
+							 * A​c​t​i​v​a​t​i​o​n​ ​C​r​i​t​e​r​i​a
+							 */
+							displayName: string
+							/**
+							 * C​r​i​t​e​r​i​a​ ​f​o​r​ ​t​r​i​g​g​e​r​ ​t​o​ ​a​c​t​i​v​a​t​e​ ​(​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​t​o​ ​a​c​t​i​v​a​t​e​.​
+						​
+						​-​ ​C​r​e​a​t​e​d​:​ ​T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​o​b​j​e​c​t​ ​i​s​ ​c​r​e​a​t​e​d​
+						​-​ ​U​p​d​a​t​e​d​:​ ​T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​o​b​j​e​c​t​ ​i​s​ ​u​p​d​a​t​e​d
+							 */
+							longDesc: string
+						}
+						additionalProperties: {
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​a​d​d​ ​t​o​ ​r​e​t​u​r​n​e​d​ ​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​a​d​d​i​t​i​o​n​a​l​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​o​b​j​e​c​t​ ​d​a​t​a
+							 */
+							longDesc: string
+						}
+					}
+				}
 			}
 		}
 		Dropbox: {
@@ -18037,18 +18477,458 @@ export type TranslationFunctions = {
 		}
 		Hubspot: {
 			/**
-			 * hubspot
+			 * HubSpot
 			 */
 			displayName: () => LocalizedString
 			/**
-			 * Collection of actions to interact with the Hubspot API
+			 * Seamlessly connect to the HubSpot API to automate and streamline your CRM processes.
 			 */
 			shortDesc: () => LocalizedString
 			/**
-			 * Collection of actions to interact with the Hubspot API
+			 * The HubSpot integration provides a comprehensive collection of actions and triggers to interact with the HubSpot API. Whether you need to manage companies, contacts, deals, or custom objects, this integration simplifies your workflow automation and CRM management.
 			 */
 			longDesc: () => LocalizedString
 			actions: {
+			}
+			triggers: {
+				hubspot_company_created_or_updated_trigger: {
+					event_info: {
+						/**
+						 * Company Information
+						 */
+						desc: () => LocalizedString
+					}
+					/**
+					 * Company Created or Updated
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a company is added or updated in HubSpot.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates whenever a company record is created or modified in HubSpot, enabling you to automate workflows based on company data changes.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						activationCriteria: {
+							/**
+							 * Activation Criteria
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Criteria for trigger to activate (created or updated)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the criteria for the trigger to activate.
+					
+						- Created: Triggers when a new object is created
+						- Updated: Triggers when an existing object is updated
+							 */
+							longDesc: () => LocalizedString
+						}
+						additionalProperties: {
+							/**
+							 * Additional Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional properties to add to returned data
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select additional properties to add to the returned object data
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				hubspot_contact_created_or_updated_trigger: {
+					event_info: {
+						/**
+						 * Contact Information
+						 */
+						desc: () => LocalizedString
+					}
+					/**
+					 * Contact Created or Updated
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a contact is added or updated in HubSpot.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Activate workflows whenever a new contact is created or an existing contact is updated within HubSpot. Ideal for managing customer information efficiently.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						activationCriteria: {
+							/**
+							 * Activation Criteria
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Criteria for trigger to activate (created or updated)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the criteria for the trigger to activate.
+					
+						- Created: Triggers when a new object is created
+						- Updated: Triggers when an existing object is updated
+							 */
+							longDesc: () => LocalizedString
+						}
+						additionalProperties: {
+							/**
+							 * Additional Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional properties to add to returned data
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select additional properties to add to the returned object data
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				hubspot_custom_object_created_or_updated_trigger: {
+					event_info: {
+						/**
+						 * Custom Object Information
+						 */
+						desc: () => LocalizedString
+					}
+					/**
+					 * Custom Object Created or Updated
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a custom object is added or updated in HubSpot.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Use this trigger to capture changes to custom objects in HubSpot, ensuring that updates to custom data structures are processed immediately for automation or integration.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						activationCriteria: {
+							/**
+							 * Activation Criteria
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Criteria for trigger to activate (created or updated)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the criteria for the trigger to activate.
+					
+						- Created: Triggers when a new object is created
+						- Updated: Triggers when an existing object is updated
+							 */
+							longDesc: () => LocalizedString
+						}
+						additionalProperties: {
+							/**
+							 * Additional Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional properties to add to returned data
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select additional properties to add to the returned object data
+							 */
+							longDesc: () => LocalizedString
+						}
+						object: {
+							/**
+							 * Object
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The custom object to monitor for changes.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the custom object you want to monitor for new or updated records.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				hubspot_deal_created_or_updated_trigger: {
+					event_info: {
+						/**
+						 * Deal Information
+						 */
+						desc: () => LocalizedString
+					}
+					/**
+					 * Deal Created or Updated
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a deal is created or updated in HubSpot.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when a deal is created or modified in HubSpot, allowing you to track sales opportunities and integrate with your sales pipeline automation workflows.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						activationCriteria: {
+							/**
+							 * Activation Criteria
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Criteria for trigger to activate (created or updated)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the criteria for the trigger to activate.
+					
+						- Created: Triggers when a new object is created
+						- Updated: Triggers when an existing object is updated
+							 */
+							longDesc: () => LocalizedString
+						}
+						additionalProperties: {
+							/**
+							 * Additional Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional properties to add to returned data
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select additional properties to add to the returned object data
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				hubspot_lead_created_or_updated_trigger: {
+					event_info: {
+						/**
+						 * Lead Information
+						 */
+						desc: () => LocalizedString
+					}
+					/**
+					 * Lead Created or Updated
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a lead is added or updated in HubSpot.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitor new leads and updates to existing leads in HubSpot with this trigger, enabling efficient lead management and follow-up processes.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						activationCriteria: {
+							/**
+							 * Activation Criteria
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Criteria for trigger to activate (created or updated)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the criteria for the trigger to activate.
+					
+						- Created: Triggers when a new object is created
+						- Updated: Triggers when an existing object is updated
+							 */
+							longDesc: () => LocalizedString
+						}
+						additionalProperties: {
+							/**
+							 * Additional Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional properties to add to returned data
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select additional properties to add to the returned object data
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				hubspot_product_created_or_updated_trigger: {
+					event_info: {
+						/**
+						 * Product Information
+						 */
+						desc: () => LocalizedString
+					}
+					/**
+					 * Product Created or Updated
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a product is added or updated in HubSpot.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger alerts you to any new or updated products within your HubSpot account, ensuring that your product data remains synchronized with your workflows and external systems.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						activationCriteria: {
+							/**
+							 * Activation Criteria
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Criteria for trigger to activate (created or updated)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the criteria for the trigger to activate.
+					
+						- Created: Triggers when a new object is created
+						- Updated: Triggers when an existing object is updated
+							 */
+							longDesc: () => LocalizedString
+						}
+						additionalProperties: {
+							/**
+							 * Additional Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional properties to add to returned data
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select additional properties to add to the returned object data
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				hubspot_ticket_created_or_updated_trigger: {
+					event_info: {
+						/**
+						 * Ticket Information
+						 */
+						desc: () => LocalizedString
+					}
+					/**
+					 * Ticket Created or Updated
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a support ticket is created or updated in HubSpot.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Automatically trigger workflows when a support ticket is created or updated in HubSpot, ideal for managing customer support operations and streamlining issue resolution.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						activationCriteria: {
+							/**
+							 * Activation Criteria
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Criteria for trigger to activate (created or updated)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the criteria for the trigger to activate.
+					
+						- Created: Triggers when a new object is created
+						- Updated: Triggers when an existing object is updated
+							 */
+							longDesc: () => LocalizedString
+						}
+						additionalProperties: {
+							/**
+							 * Additional Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional properties to add to returned data
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select additional properties to add to the returned object data
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				hubspot_user_created_or_updated_trigger: {
+					event_info: {
+						/**
+						 * User Information
+						 */
+						desc: () => LocalizedString
+					}
+					/**
+					 * User Created or Updated
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a user is added or updated in HubSpot.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires upon the creation or update of a user within HubSpot, helping you keep track of user accounts and maintain updated access control for your team.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						activationCriteria: {
+							/**
+							 * Activation Criteria
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Criteria for trigger to activate (created or updated)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the criteria for the trigger to activate.
+					
+						- Created: Triggers when a new object is created
+						- Updated: Triggers when an existing object is updated
+							 */
+							longDesc: () => LocalizedString
+						}
+						additionalProperties: {
+							/**
+							 * Additional Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional properties to add to returned data
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select additional properties to add to the returned object data
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
 			}
 		}
 		Dropbox: {

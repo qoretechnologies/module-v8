@@ -4,6 +4,7 @@ import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
 import hubspotTickets from '../../../schemas/hubspot/tickets.swagger.json';
 import { HUBSPOT_APP_NAME } from '../constants';
 import { getHubspotTicketAllowedValues } from '../helpers/get-ticket-allowed-value';
+import { getHubspotTicketPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
 
 const ticketId = {
   type: 'softstring',
@@ -20,7 +21,18 @@ export const HUBSPOT_TICKETS_ALLOWED_PATHS = {
     POST: {},
   },
   '/crm/v3/objects/tickets/search': {
-    POST: {},
+    POST: {
+      override_options: {
+        properties: {
+          type: {
+            type: 'list',
+            element_type: 'string',
+            required: false,
+          },
+          get_allowed_values: getHubspotTicketPropertiesAllowedValues,
+        },
+      },
+    },
   },
   '/crm/v3/objects/tickets/{ticketId}': {
     GET: {

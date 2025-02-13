@@ -8,11 +8,9 @@ import { fetchHubspotAllowedValues } from './constants';
 type THubspotLead = {
   id: string;
   properties: {
-    email: string;
-    phone: string;
-    company: string;
-    lead_status: string;
-    source: string;
+    hs_lead_label: string;
+    hs_lead_name: string;
+    hs_lead_type: string;
   };
   createdAt: string;
   updatedAt: string;
@@ -21,11 +19,10 @@ type THubspotLead = {
 
 const mapHubspotLead = (lead: THubspotLead): IQoreAllowedValue<string> => ({
   value: lead.id,
-  display_name: lead.properties.email || lead.id,
+  display_name: lead.properties.hs_lead_name || lead.id,
   short_desc:
-    `Phone: ${lead.properties.phone}\n\nCompany: ${lead.properties.company}\n\n` +
-    `Lead status: ${lead.properties.lead_status}\n\nSource: ${lead.properties.source}\n\n` +
-    `Archived: ${lead.archived}\n\nCreated at: ${lead.createdAt}\n\nUpdated at: ${lead.updatedAt}`,
+    `Label: ${lead.properties.hs_lead_label}\n\n Type:${lead.properties.hs_lead_type}\n\n` +
+    `Created at: ${lead.createdAt}\n\n Updated at: ${lead.updatedAt}`,
 });
 
 export const getHubspotLeadAllowedValues: TQoreGetAllowedValuesFunction<
@@ -41,6 +38,7 @@ export const getHubspotLeadAllowedValues: TQoreGetAllowedValuesFunction<
   const leads = await fetchHubspotAllowedValues<THubspotLead>({
     token,
     object: 'leads',
+    properties: ['hs_lead_label', 'hs_lead_name', 'hs_lead_type'],
     mapItemToAllowedValue: mapHubspotLead,
   });
 

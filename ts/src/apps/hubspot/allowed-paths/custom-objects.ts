@@ -3,8 +3,9 @@ import { OpenAPIV2 } from 'openapi-types';
 import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
 import hubspotCustomObjects from '../../../schemas/hubspot/custom-objects.swagger.json';
 import { HUBSPOT_APP_NAME } from '../constants';
-import { getHubspotCustomObjectTypeAllowedValues } from '../helpers/get-custom-object-type-allwed-values';
+import { getHubspotCustomObjectTypeAllowedValues } from '../helpers/get-custom-object-type-allowed-values';
 import { getHubspotCustomObjectIdAllowedValues } from '../helpers/get-cusom-object-id-allowed-values';
+import { getHubspotCustomObjectPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
 
 const objectType = {
   type: 'softstring',
@@ -43,6 +44,15 @@ export const HUBSPOT_CUSTOM_OBJECTS_ALLOWED_PATHS = {
     POST: {
       override_options: {
         objectType,
+        properties: {
+          depends_on: ['objectType'],
+          type: {
+            type: 'list',
+            element_type: 'string',
+            required: false,
+          },
+          get_allowed_values: getHubspotCustomObjectPropertiesAllowedValues,
+        },
       },
     },
   },

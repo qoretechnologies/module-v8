@@ -4,6 +4,7 @@ import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
 import hubspotDeals from '../../../schemas/hubspot/deals.swagger.json';
 import { HUBSPOT_APP_NAME } from '../constants';
 import { getHubspotDealAllowedValues } from '../helpers/get-deal-allowed-values';
+import { getHubspotDealPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
 
 const dealId = {
   type: 'softstring',
@@ -37,7 +38,18 @@ export const HUBSPOT_DEALS_ALLOWED_PATHS = {
     },
   },
   '/crm/v3/objects/deals/search': {
-    POST: {},
+    POST: {
+      override_options: {
+        properties: {
+          type: {
+            type: 'list',
+            element_type: 'string',
+            required: false,
+          },
+          get_allowed_values: getHubspotDealPropertiesAllowedValues,
+        },
+      },
+    },
   },
 } satisfies TAllowedPaths;
 

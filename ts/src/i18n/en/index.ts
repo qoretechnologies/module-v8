@@ -1,5 +1,6 @@
 import type { BaseTranslation } from '../i18n-types';
 import { AsanaEventInfo } from './asana/event-info';
+import { HubspotTriggerOptionsEn } from './hubspot/trigger-options';
 import { StripeTriggerOptionsEn } from './stripe/trigger-options';
 
 const en = {
@@ -1738,10 +1739,101 @@ const en = {
       },
     },
     Hubspot: {
-      displayName: 'hubspot',
-      shortDesc: 'Collection of actions to interact with the Hubspot API',
-      longDesc: 'Collection of actions to interact with the Hubspot API',
+      displayName: 'HubSpot',
+      shortDesc:
+        'Seamlessly connect to the HubSpot API to automate and streamline your CRM processes.',
+      longDesc:
+        'The HubSpot integration provides a comprehensive collection of actions and triggers to interact with the HubSpot API. Whether you need to manage companies, contacts, deals, or custom objects, this integration simplifies your workflow automation and CRM management.',
       actions: {},
+      triggers: {
+        hubspot_company_created_or_updated_trigger: {
+          event_info: {
+            desc: 'Company Information',
+          },
+          displayName: 'Company Created or Updated',
+          shortDesc: 'Triggers when a company is added or updated in HubSpot.',
+          longDesc:
+            'This trigger activates whenever a company record is created or modified in HubSpot, enabling you to automate workflows based on company data changes.',
+          options: HubspotTriggerOptionsEn,
+        },
+        hubspot_contact_created_or_updated_trigger: {
+          event_info: {
+            desc: 'Contact Information',
+          },
+          displayName: 'Contact Created or Updated',
+          shortDesc: 'Triggers when a contact is added or updated in HubSpot.',
+          longDesc:
+            'Activate workflows whenever a new contact is created or an existing contact is updated within HubSpot. Ideal for managing customer information efficiently.',
+          options: HubspotTriggerOptionsEn,
+        },
+        hubspot_custom_object_created_or_updated_trigger: {
+          event_info: {
+            desc: 'Custom Object Information',
+          },
+          displayName: 'Custom Object Created or Updated',
+          shortDesc: 'Triggers when a custom object is added or updated in HubSpot.',
+          longDesc:
+            'Use this trigger to capture changes to custom objects in HubSpot, ensuring that updates to custom data structures are processed immediately for automation or integration.',
+          options: {
+            ...HubspotTriggerOptionsEn,
+            object: {
+              displayName: 'Object',
+              shortDesc: 'The custom object to monitor for changes.',
+              longDesc: 'Select the custom object you want to monitor for new or updated records.',
+            },
+          },
+        },
+        hubspot_deal_created_or_updated_trigger: {
+          event_info: {
+            desc: 'Deal Information',
+          },
+          displayName: 'Deal Created or Updated',
+          shortDesc: 'Triggers when a deal is created or updated in HubSpot.',
+          longDesc:
+            'This trigger fires when a deal is created or modified in HubSpot, allowing you to track sales opportunities and integrate with your sales pipeline automation workflows.',
+          options: HubspotTriggerOptionsEn,
+        },
+        hubspot_lead_created_or_updated_trigger: {
+          event_info: {
+            desc: 'Lead Information',
+          },
+          displayName: 'Lead Created or Updated',
+          shortDesc: 'Triggers when a lead is added or updated in HubSpot.',
+          longDesc:
+            'Monitor new leads and updates to existing leads in HubSpot with this trigger, enabling efficient lead management and follow-up processes.',
+          options: HubspotTriggerOptionsEn,
+        },
+        hubspot_product_created_or_updated_trigger: {
+          event_info: {
+            desc: 'Product Information',
+          },
+          displayName: 'Product Created or Updated',
+          shortDesc: 'Triggers when a product is added or updated in HubSpot.',
+          longDesc:
+            'This trigger alerts you to any new or updated products within your HubSpot account, ensuring that your product data remains synchronized with your workflows and external systems.',
+          options: HubspotTriggerOptionsEn,
+        },
+        hubspot_ticket_created_or_updated_trigger: {
+          event_info: {
+            desc: 'Ticket Information',
+          },
+          displayName: 'Ticket Created or Updated',
+          shortDesc: 'Triggers when a support ticket is created or updated in HubSpot.',
+          longDesc:
+            'Automatically trigger workflows when a support ticket is created or updated in HubSpot, ideal for managing customer support operations and streamlining issue resolution.',
+          options: HubspotTriggerOptionsEn,
+        },
+        hubspot_user_created_or_updated_trigger: {
+          event_info: {
+            desc: 'User Information',
+          },
+          displayName: 'User Created or Updated',
+          shortDesc: 'Triggers when a user is added or updated in HubSpot.',
+          longDesc:
+            'This trigger fires upon the creation or update of a user within HubSpot, helping you keep track of user accounts and maintain updated access control for your team.',
+          options: HubspotTriggerOptionsEn,
+        },
+      },
     },
     Dropbox: {
       displayName: 'Dropbox',

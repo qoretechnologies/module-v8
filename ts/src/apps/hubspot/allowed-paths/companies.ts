@@ -4,6 +4,7 @@ import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
 import hubspotCompanies from '../../../schemas/hubspot/companies.swagger.json';
 import { HUBSPOT_APP_NAME } from '../constants';
 import { getHubspotCompanyAllowedValues } from '../helpers/get-company-allowed-values';
+import { getHubspotCompanyPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
 
 const companyId = {
   type: 'softstring',
@@ -37,7 +38,18 @@ export const HUBSPOT_COMPANIES_ALLOWED_PATHS = {
     POST: {},
   },
   '/crm/v3/objects/companies/search': {
-    POST: {},
+    POST: {
+      override_options: {
+        properties: {
+          type: {
+            type: 'list',
+            element_type: 'string',
+            required: false,
+          },
+          get_allowed_values: getHubspotCompanyPropertiesAllowedValues,
+        },
+      },
+    },
   },
 } satisfies TAllowedPaths;
 

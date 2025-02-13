@@ -4,6 +4,7 @@ import { getHubspotLeadAllowedValues } from '../helpers/get-lead-allowed-values'
 import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
 import { OpenAPIV2 } from 'openapi-types';
 import { HUBSPOT_APP_NAME } from '../constants';
+import { getHubspotLeadPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
 
 const leadsId = {
   type: 'softstring',
@@ -12,7 +13,7 @@ const leadsId = {
 } satisfies TQoreAppActionOverrideOption;
 
 export const HUBSPOT_LEADS_ALLOWED_PATHS = {
-  '/crm/v3/objects/leads/': {
+  '/crm/v3/objects/leads': {
     GET: {},
     POST: {},
   },
@@ -20,7 +21,18 @@ export const HUBSPOT_LEADS_ALLOWED_PATHS = {
     POST: {},
   },
   '/crm/v3/objects/leads/search': {
-    POST: {},
+    POST: {
+      override_options: {
+        properties: {
+          type: {
+            type: 'list',
+            element_type: 'string',
+            required: false,
+          },
+          get_allowed_values: getHubspotLeadPropertiesAllowedValues,
+        },
+      },
+    },
   },
   '/crm/v3/objects/leads/{leadsId}': {
     GET: {
