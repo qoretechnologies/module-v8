@@ -34,13 +34,16 @@ public class TypeScriptDataField inherits DataProvider::QoreDataField {
         if (attr.get_default_value.val()) {
             hash<AsyncCallInfo> call = TypeScriptActionInterface::getCall(attr.get_default_value);
             try {
-                return TypeScriptActionDataProviderBase::getAsyncValueArgs(NOTHING, call);
+                if (ts_prov_ctx) {
+                    return ts_prov_ctx.getAsyncValue(call, ts_prov_ctx.getCallContextInfo());
+                } else {
+                    return TypeScriptActionDataProviderBase::getAsyncValueArgs(NOTHING, call);
+                }
             } catch (hash<ExceptionInfo> ex) {
                 TSAI::error("Failed to retrieve default value for %y: %s", call.label, get_exception_string(ex));
             }
         }
         return QoreDataField::getDefaultValue();
     }
-
 }
 }

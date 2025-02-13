@@ -400,6 +400,21 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         return v;
     }
 
+    #! Returns call context info
+    *hash<DataContextInfo> getCallContextInfo(*hash<auto> action_opts) {
+        if (conn) {
+            return <DataContextInfo>{
+                "conn_name": conn.name,
+                "conn_opts": conn.getRealOptions(),
+                "opts": action_opts,
+            };
+        } else if (action_opts) {
+            return <DataContextInfo>{
+                "opts": action_opts,
+            };
+        }
+    }
+
     #! Returns reference data of the given kind if available
     /** @param type the unique type name of the reference data
         @param action_opts an optional hash of action options when called when working with an app action
@@ -599,21 +614,6 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                     rest.setURL(new_url);
                 }
             }
-        }
-    }
-
-    #! Returns call context info
-    private *hash<DataContextInfo> getCallContextInfo(*hash<auto> action_opts) {
-        if (conn) {
-            return <DataContextInfo>{
-                "conn_name": conn.name,
-                "conn_opts": conn.getRealOptions(),
-                "opts": action_opts,
-            };
-        } else if (action_opts) {
-            return <DataContextInfo>{
-                "opts": action_opts,
-            };
         }
     }
 }
