@@ -568,17 +568,19 @@ public class TypeScriptActionInterface {
         hash<string, SwaggerSchema> swagger_schema_map;
         if ((*string swagger_loc = remove app.swagger).val()) {
             on_error rethrow $1.err, sprintf("%s (while loading app %y)", $1.desc, app.name);
+            if (app.swagger_schema_map) {
+                throw "APP-ERROR", "Invalid 'swagger_schema_map' property; this property cannot be given if "
+                    "`swagger` is provided";
+            }
             schema = TypeScriptActionInterface::getSwaggerSchema(appname, swagger_loc, remove app.swagger_options,
                 remove app.swagger_paths, remove app.swagger_type_overrides);
-        } else if (*hash<auto> schema_map = app.swagger_schema_map) {
-            foreach hash<auto> i in (schema_map) {
-                on_error rethrow $1.err, sprintf("%s (while creating schema for app %y schema %y)", $1.desc, app.name, i.key);
-                if (i.value.swagger.typeCode() != NT_STRING) {
-                    throw "APP-ERROR", "Duplicate 'swagger' property giving the location of the Swagger schema; this "
-                        "property cannot be given if `swagger_schema_map` is provided";
-                }
+        } else if (*hash<auto> schema_map = remove app.swagger_schema_map) {
+            *hash<auto> swagger_options = remove app.swagger_options;
+            foreach hash<auto> i in (schema_map.pairIterator()) {
+                on_error rethrow $1.err, sprintf("%s (while creating schema for app %y schema %y): %y", $1.desc,
+                    app.name, i.key, i.value);
                 swagger_schema_map{i.key} = TypeScriptActionInterface::getSwaggerSchema(appname, i.value.swagger,
-                    remove i.value.swagger_options,
+                    remove i.value.swagger_options ?? swagger_options,
                     remove i.value.swagger_paths, remove i.value.swagger_type_overrides);
             }
         }
