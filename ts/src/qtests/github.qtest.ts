@@ -310,6 +310,7 @@ describe('Tests Github Actions', () => {
     expect(action).toBeDefined();
     expect(repository?.name).toBeDefined();
     const { body } = await testApi.execAppAction('github', action!.action, connection, {
+      q: repository?.name,
       query: {
         q: repository?.name,
       },

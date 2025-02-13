@@ -90,9 +90,9 @@ describe('Tests Zendesk Actions', () => {
     it('Should delete a ticket', () => {
       testApi.execAppAction('zendesk', 'DeleteTicket', connection, { ticket_id: ticketID });
 
-      const { body } = testApi.execAppAction('zendesk', 'ListTickets', connection);
+      const { body } = testApi.execAppAction('zendesk', 'CountTickets', connection);
 
-      expect(body.tickets.length).toBe(ticketCount - 1);
+      expect(body.count.value).toBe(ticketCount - 1);
     });
   });
 
