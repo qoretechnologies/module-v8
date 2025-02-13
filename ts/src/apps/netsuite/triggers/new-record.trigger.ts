@@ -42,6 +42,11 @@ const netsuiteNewRecordTrigger = QoreAppCreator.createLocalizedTrigger({
     desc: 'NetSuite New Record Event Info',
     type: {
       type: 'hash',
+      fields: {
+        id: {
+          type: 'string',
+        },
+      },
     },
   },
   get_example_event_data: async (context) => {

@@ -50,8 +50,15 @@ describe('Tests Zendesk Actions', () => {
 
       expect(body).toHaveProperty('tickets');
       expect(body.tickets.length).toBeGreaterThan(0);
+    });
 
-      ticketCount = body.tickets.length;
+    it('Should count tickets', () => {
+      const { body } = testApi.execAppAction('zendesk', 'CountTickets', connection);
+
+      expect(body).toHaveProperty('count');
+      expect(body.count.value).toBeGreaterThan(0);
+
+      ticketCount = body.count.value;
     });
 
     it('Should update a ticket', () => {
