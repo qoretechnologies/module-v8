@@ -574,7 +574,8 @@ public class TypeScriptActionInterface {
             foreach hash<auto> i in (schema_map) {
                 on_error rethrow $1.err, sprintf("%s (while creating schema for app %y schema %y)", $1.desc, app.name, i.key);
                 if (i.value.swagger.typeCode() != NT_STRING) {
-                    throw "APP-ERROR", "Missing 'swagger' property giving the location of the Swagger schema";
+                    throw "APP-ERROR", "Duplicate 'swagger' property giving the location of the Swagger schema; this "
+                        "property cannot be given if `swagger_schema_map` is provided";
                 }
                 swagger_schema_map{i.key} = TypeScriptActionInterface::getSwaggerSchema(appname, i.value.swagger,
                     remove i.value.swagger_options,
@@ -1457,7 +1458,7 @@ public class TypeScriptActionInterface {
     }
 
     static getOptionFunctions(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
-            reference<hash<auto>> h) {
+            reference<hash<auto>> h, *bool keep_get_default_value) {
         on_error rethrow $1.err, sprintf("%s (while processing option %y)", $1.desc, key);
         date io_timeout = seconds(remove h.io_timeout_secs ?? DefaultIoTimeoutSecs);
         if (exists (auto get_allowed_values = remove h.get_allowed_values)) {
@@ -1528,7 +1529,7 @@ public class TypeScriptActionInterface {
             TypeScriptActionInterface::registerAsyncCall(\fctx.dmap{key}, "app", action.app, action.action, key);
             action.data_dependent_options = True;
         }
-        if (exists (auto get_default_value = remove h.get_default_value)) {
+        if (exists (auto get_default_value = h.get_default_value)) {
             if (!get_default_value.callp()) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
                     "\"get_default_value\" attribute; got type %y; expecting a callable value", action.app,
@@ -1545,7 +1546,11 @@ public class TypeScriptActionInterface {
                 "to": io_timeout,
             };
             TypeScriptActionInterface::registerAsyncCall(\fctx.dvmap{key}, "app", action.app, action.action, key);
+            h.default_ref_data = key;
             action.data_dependent_options = True;
+            if (!keep_get_default_value) {
+                remove h.get_default_value;
+            }
         }
         if (h.required && !h.preselected && !exists h.default_value) {
             h.preselected = True;
@@ -1772,6 +1777,9 @@ public class TypeScriptActionInterface {
         }
         if ((*string str = remove type_hash.ref_data).val()) {
             info.attr.ref_data = str;
+        }
+        if ((*string str = remove type_hash.default_ref_data).val()) {
+            info.attr.default_ref_data = str;
         }
         if (*list<auto> l = remove type_hash.required_groups) {
             info.attr.required_groups = l;

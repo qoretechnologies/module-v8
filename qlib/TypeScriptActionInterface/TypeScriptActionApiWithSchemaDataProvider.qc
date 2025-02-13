@@ -96,6 +96,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         if (override_options) {
             NoIoHelper nih();
             createRequestType(override_options, \action);
+            request_type_done = True;
         }
     }
 
@@ -117,7 +118,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                         "option %y; known top-level options: %y", action.app, action.action, key,
                         keys fields);
                 }
-                TypeScriptActionInterface::getOptionFunctions(\action, self, i.key, \i.value);
+                TypeScriptActionInterface::getOptionFunctions(\action, self, i.key, \i.value, True);
 
                 type.addField(TypeScriptActionInterface::getField("option", key, i.value, self));
                 if (i.value_depends_on) {
@@ -136,10 +137,15 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                         "expecting \"QoreDataField\"", action.app, action.action, key, f.className());
                 }
                 if (l.size() == 1) {
-                    TypeScriptActionInterface::getOptionFunctions(\action, self, i.key, \i.value);
+                    TypeScriptActionInterface::getOptionFunctions(\action, self, i.key, \i.value, True);
                 }
                 if (i.value) {
-                    type.replaceField(cast<QoreDataField>(f = f.copy()).updateFieldType(f.getType().copy()));
+                    /*
+                    f = f.copy();
+                    AbstractDataProviderType ftype = f.getType().copy();
+                    cast<QoreDataField>(f).updateFieldType(ftype);
+                    type.replaceField(f);
+                    */
                     overrideOptionType("option", action, type, l, i.value, k);
                     if (l.size() == 1 && (*list<auto> dl = i.value.depends_on)) {
                         depmap{l[0]} = map {$1: True}, dl;
@@ -229,6 +235,32 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
             rv.body = remove rv;
         }
         return rv;
+    }
+
+    #! Makes a request and returns the response
+    /** @param req the request to serialize and make according to the request type
+        @param request_options the request options; will be processed by validateRequestOptions()
+
+        @return the response to the request
+
+        @throw INVALID-OPERATION the data provider does not support the request API
+        @throw INVALID-REQUEST the request argument provided do not match the expected request type
+    */
+    auto doRequest(auto req, *hash<auto> request_options) {
+        ActionProviderContextHelper apch(self);
+        return TypeScriptActionApiDataProvider::doRequest(req, request_options);
+    }
+
+    #! Returns action options corresponding to the request type with the given request data, if possible
+    /** @param req sample request data that can be used to determine the final type
+
+        @return action options corresponding to the request type
+
+        @note This API is meant to provide information about request data types that can depend on the call data
+    */
+    *hash<string, hash<ActionOptionInfo>> tryGetActionOptionsFromRequestTypeWithData(auto req) {
+        ActionProviderContextHelper apch(self);
+        return TypeScriptActionApiDataProvider::tryGetActionOptionsFromRequestTypeWithData(req);
     }
 
     #! Returns the request type for this API
@@ -524,6 +556,24 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
     #! Returns data provider static info
     private hash<DataProviderInfo> getStaticInfoImpl() {
         return ProviderInfo;
+    }
+}
+}
+
+namespace Priv {
+thread_local *TypeScriptActionApiWithSchemaDataProvider ts_prov_ctx;
+class ActionProviderContextHelper {
+    private {
+        *TypeScriptActionApiWithSchemaDataProvider old_ts_prov_ctx;
+    }
+
+    constructor(TypeScriptActionApiWithSchemaDataProvider prov) {
+        old_ts_prov_ctx = ts_prov_ctx;
+        ts_prov_ctx = prov;
+    }
+
+    destructor() {
+        ts_prov_ctx = old_ts_prov_ctx;
     }
 }
 }
