@@ -955,10 +955,10 @@ public class TypeScriptActionInterface {
                     keys app_swagger_schema_map{appname});
             }
         } else {
-            if (app_swagger_schema_map{appname}) {
-                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y is missing the \"swagger_schema\" "
-                    "attribute; known schemas for this app: %y", app.name, action.action,
-                    keys app_swagger_schema_map{appname});
+            if ((action.action_code == DPAT_API) && !action.api_function && app_swagger_schema_map{appname}) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y API action %y has no 'api_function' attribute and "
+                    "is missing the \"swagger_schema\" attribute; known schemas for this app: %y", app.name,
+                    action.action, keys app_swagger_schema_map{appname});
             }
             schema = app_swagger_map{appname};
         }
@@ -1346,9 +1346,9 @@ public class TypeScriptActionInterface {
         {
             auto api_function = remove action.api_function;
             if (!api_function.callp() && !schema) {
-                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"api_function\" "
-                    "attribute; got type %y; expecting a callable value", action.app, action.action,
-                    api_function.fullType());
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has no REST schema and has a missing or "
+                    "invalid \"api_function\" attribute; got type %y; expecting a callable value", action.app,
+                    action.action, api_function.fullType());
             }
             timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
             if (api_function) {
