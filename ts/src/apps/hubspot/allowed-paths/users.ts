@@ -2,7 +2,7 @@ import { TAllowedPaths, TQoreAppActionOverrideOption } from '@qoretechnologies/t
 import { OpenAPIV2 } from 'openapi-types';
 import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
 import hubspotUsers from '../../../schemas/hubspot/users.swagger.json';
-import { HUBSPOT_APP_NAME } from '../constants';
+import { HUBSPOT_APP_NAME, hubspotSearchSortsOption } from '../constants';
 import { getHubspotUserAllowedValues } from '../helpers/get-user-allowed-values';
 import { getHubspotUserPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
 
@@ -12,10 +12,18 @@ const userId = {
   get_allowed_values: getHubspotUserAllowedValues,
 } satisfies TQoreAppActionOverrideOption;
 
+const propertiesQuery = {
+  allowed_values_creatable: true,
+  get_allowed_values: getHubspotUserPropertiesAllowedValues,
+} satisfies TQoreAppActionOverrideOption;
+
 export const HUBSPOT_USERS_ALLOWED_PATHS = {
   '/crm/v3/objects/users': {
-    GET: {},
-    POST: {},
+    GET: {
+      override_options: {
+        properties: propertiesQuery,
+      },
+    },
   },
   '/crm/v3/objects/users/batch/upsert': {
     POST: {},
@@ -23,6 +31,7 @@ export const HUBSPOT_USERS_ALLOWED_PATHS = {
   '/crm/v3/objects/users/search': {
     POST: {
       override_options: {
+        sorts: hubspotSearchSortsOption,
         properties: {
           type: {
             type: 'list',
@@ -38,14 +47,10 @@ export const HUBSPOT_USERS_ALLOWED_PATHS = {
     GET: {
       override_options: {
         userId,
+        properties: propertiesQuery,
       },
     },
     PATCH: {
-      override_options: {
-        userId,
-      },
-    },
-    DELETE: {
       override_options: {
         userId,
       },
@@ -55,6 +60,7 @@ export const HUBSPOT_USERS_ALLOWED_PATHS = {
 
 export const HUBSPOT_USERS_ACTIONS = buildActionsFromSwaggerSchema({
   schema: hubspotUsers as unknown as OpenAPIV2.Document,
+  schemaPath: 'users',
   allowedPaths: HUBSPOT_USERS_ALLOWED_PATHS,
   app: HUBSPOT_APP_NAME,
 });

@@ -2,7 +2,7 @@ import { TAllowedPaths, TQoreAppActionOverrideOption } from '@qoretechnologies/t
 import { OpenAPIV2 } from 'openapi-types';
 import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
 import hubspotCustomObjects from '../../../schemas/hubspot/custom-objects.swagger.json';
-import { HUBSPOT_APP_NAME } from '../constants';
+import { HUBSPOT_APP_NAME, hubspotSearchSortsOption } from '../constants';
 import { getHubspotCustomObjectTypeAllowedValues } from '../helpers/get-custom-object-type-allowed-values';
 import { getHubspotCustomObjectIdAllowedValues } from '../helpers/get-cusom-object-id-allowed-values';
 import { getHubspotCustomObjectPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
@@ -20,16 +20,26 @@ const objectId = {
   depends_on: ['objectType'],
 } satisfies TQoreAppActionOverrideOption;
 
+const propertiesQuery = {
+  allowed_values_creatable: true,
+  depends_on: ['objectType'],
+  get_allowed_values: getHubspotCustomObjectPropertiesAllowedValues,
+} satisfies TQoreAppActionOverrideOption;
+
 export const HUBSPOT_CUSTOM_OBJECTS_ALLOWED_PATHS = {
   '/crm/v3/objects/{objectType}': {
     GET: {
       override_options: {
         objectType,
+        properties: propertiesQuery,
       },
     },
     POST: {
       override_options: {
         objectType,
+        associations: {
+          required: false,
+        },
       },
     },
   },
@@ -44,6 +54,7 @@ export const HUBSPOT_CUSTOM_OBJECTS_ALLOWED_PATHS = {
     POST: {
       override_options: {
         objectType,
+        sorts: hubspotSearchSortsOption,
         properties: {
           depends_on: ['objectType'],
           type: {
@@ -61,6 +72,7 @@ export const HUBSPOT_CUSTOM_OBJECTS_ALLOWED_PATHS = {
       override_options: {
         objectType,
         objectId,
+        properties: propertiesQuery,
       },
     },
     PATCH: {
@@ -80,6 +92,7 @@ export const HUBSPOT_CUSTOM_OBJECTS_ALLOWED_PATHS = {
 
 export const HUBSPOT_CUSTOM_OBJECTS_ACTIONS = buildActionsFromSwaggerSchema({
   schema: hubspotCustomObjects as unknown as OpenAPIV2.Document,
+  schemaPath: 'custom-objects',
   allowedPaths: HUBSPOT_CUSTOM_OBJECTS_ALLOWED_PATHS,
   app: HUBSPOT_APP_NAME,
 });

@@ -3,7 +3,7 @@ import hubspotProducts from '../../../schemas/hubspot/products.swagger.json';
 import { getHubspotProductAllowedValues } from '../helpers/get-product.allowe-values';
 import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
 import { OpenAPIV2 } from 'openapi-types';
-import { HUBSPOT_APP_NAME } from '../constants';
+import { HUBSPOT_APP_NAME, hubspotSearchSortsOption } from '../constants';
 import { getHubspotProductPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
 
 const productId = {
@@ -12,10 +12,25 @@ const productId = {
   get_allowed_values: getHubspotProductAllowedValues,
 } satisfies TQoreAppActionOverrideOption;
 
+const propertiesQuery = {
+  allowed_values_creatable: true,
+  get_allowed_values: getHubspotProductPropertiesAllowedValues,
+} satisfies TQoreAppActionOverrideOption;
+
 export const HUBSPOT_PRODUCTS_ALLOWED_PATHS = {
   '/crm/v3/objects/products': {
-    GET: {},
-    POST: {},
+    GET: {
+      override_options: {
+        properties: propertiesQuery,
+      },
+    },
+    POST: {
+      override_options: {
+        associations: {
+          required: false,
+        },
+      },
+    },
   },
   '/crm/v3/objects/products/batch/upsert': {
     POST: {},
@@ -23,6 +38,7 @@ export const HUBSPOT_PRODUCTS_ALLOWED_PATHS = {
   '/crm/v3/objects/products/search': {
     POST: {
       override_options: {
+        sorts: hubspotSearchSortsOption,
         properties: {
           type: {
             type: 'list',
@@ -38,6 +54,7 @@ export const HUBSPOT_PRODUCTS_ALLOWED_PATHS = {
     GET: {
       override_options: {
         productId,
+        properties: propertiesQuery,
       },
     },
     PATCH: {
@@ -55,6 +72,7 @@ export const HUBSPOT_PRODUCTS_ALLOWED_PATHS = {
 
 export const HUBSPOT_PRODUCTS_ACTIONS = buildActionsFromSwaggerSchema({
   schema: hubspotProducts as unknown as OpenAPIV2.Document,
+  schemaPath: 'products',
   allowedPaths: HUBSPOT_PRODUCTS_ALLOWED_PATHS,
   app: HUBSPOT_APP_NAME,
 });

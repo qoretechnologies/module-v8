@@ -54,6 +54,7 @@ type TBuildActionsFromSwaggerSchemaParams = {
   allowedPaths?: TAllowedPaths;
   app?: string;
   locale?: Locales;
+  schemaPath?: string;
 };
 
 // !IMPORTANT
@@ -69,6 +70,7 @@ export const OMMITTED_FIELDS = ['_localizationGroup'] as const;
 export const buildActionsFromSwaggerSchema = ({
   schema,
   allowedPaths,
+  schemaPath,
   app,
   locale = 'en',
 }: TBuildActionsFromSwaggerSchemaParams): IQorePartialAppActionWithSwaggerPath[] => {
@@ -139,6 +141,7 @@ export const buildActionsFromSwaggerSchema = ({
           // @ts-expect-error no idea whats going on here, will fix later
           L[locale].apps[app].actions[actionIdentifier as unknown].longDesc() ||
           getPropertyOfSchemaData(dataWithoutParameters, 'description', ''),
+        ...(schemaPath && { swagger_schema: schemaPath }),
         ...actionData,
       };
       actions.push(action);

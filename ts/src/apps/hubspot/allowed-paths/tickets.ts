@@ -2,7 +2,7 @@ import { TAllowedPaths, TQoreAppActionOverrideOption } from '@qoretechnologies/t
 import { OpenAPIV2 } from 'openapi-types';
 import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
 import hubspotTickets from '../../../schemas/hubspot/tickets.swagger.json';
-import { HUBSPOT_APP_NAME } from '../constants';
+import { HUBSPOT_APP_NAME, hubspotSearchSortsOption } from '../constants';
 import { getHubspotTicketAllowedValues } from '../helpers/get-ticket-allowed-value';
 import { getHubspotTicketPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
 
@@ -12,10 +12,25 @@ const ticketId = {
   get_allowed_values: getHubspotTicketAllowedValues,
 } satisfies TQoreAppActionOverrideOption;
 
+const propertiesQuery = {
+  allowed_values_creatable: true,
+  get_allowed_values: getHubspotTicketPropertiesAllowedValues,
+} satisfies TQoreAppActionOverrideOption;
+
 export const HUBSPOT_TICKETS_ALLOWED_PATHS = {
   '/crm/v3/objects/tickets': {
-    GET: {},
-    POST: {},
+    GET: {
+      override_options: {
+        properties: propertiesQuery,
+      },
+    },
+    POST: {
+      override_options: {
+        associations: {
+          required: false,
+        },
+      },
+    },
   },
   '/crm/v3/objects/tickets/batch/upsert': {
     POST: {},
@@ -23,6 +38,7 @@ export const HUBSPOT_TICKETS_ALLOWED_PATHS = {
   '/crm/v3/objects/tickets/search': {
     POST: {
       override_options: {
+        sorts: hubspotSearchSortsOption,
         properties: {
           type: {
             type: 'list',
@@ -38,6 +54,7 @@ export const HUBSPOT_TICKETS_ALLOWED_PATHS = {
     GET: {
       override_options: {
         ticketId,
+        properties: propertiesQuery,
       },
     },
     PATCH: {
@@ -55,6 +72,7 @@ export const HUBSPOT_TICKETS_ALLOWED_PATHS = {
 
 export const HUBSPOT_TICKETS_ACTIONS = buildActionsFromSwaggerSchema({
   schema: hubspotTickets as unknown as OpenAPIV2.Document,
+  schemaPath: 'tickets',
   allowedPaths: HUBSPOT_TICKETS_ALLOWED_PATHS,
   app: HUBSPOT_APP_NAME,
 });
