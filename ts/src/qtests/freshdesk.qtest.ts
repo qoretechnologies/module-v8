@@ -21,6 +21,11 @@ describe('Tests Freshdesk Actions', () => {
     expect(connection).toBeDefined();
   });
 
+  it('Should check if the connection was created', () => {
+    expect(connection).toBeDefined();
+    expect(connection).not.toBeFalsy();
+  });
+
   // let agentId: number | undefined;
   // let jobId: number | undefined;
   // let ticketRequesterId: number | undefined;
