@@ -1738,6 +1738,11 @@ const en = {
         },
       },
     },
+    Workday: {
+      displayName: 'Workday',
+      shortDesc: 'Collection of actions to interact with the Workday API',
+      longDesc: 'Collection of actions to interact with the Workday API',
+    },
     Hubspot: {
       displayName: 'HubSpot',
       shortDesc:

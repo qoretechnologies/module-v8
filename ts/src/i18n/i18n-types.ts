@@ -8542,6 +8542,20 @@ type RootTranslation = {
 				}
 			}
 		}
+		Workday: {
+			/**
+			 * W​o​r​k​d​a​y
+			 */
+			displayName: string
+			/**
+			 * C​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​t​h​e​ ​W​o​r​k​d​a​y​ ​A​P​I
+			 */
+			shortDesc: string
+			/**
+			 * C​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​t​h​e​ ​W​o​r​k​d​a​y​ ​A​P​I
+			 */
+			longDesc: string
+		}
 		Hubspot: {
 			/**
 			 * H​u​b​S​p​o​t
@@ -18474,6 +18488,20 @@ export type TranslationFunctions = {
 					}
 				}
 			}
+		}
+		Workday: {
+			/**
+			 * Workday
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Collection of actions to interact with the Workday API
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Collection of actions to interact with the Workday API
+			 */
+			longDesc: () => LocalizedString
 		}
 		Hubspot: {
 			/**

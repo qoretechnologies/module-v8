@@ -1,0 +1,1891 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "<span id=\"section/Authentication/api_key\" data-section-id=\"section/Authentication/api_key\"></span>\n<span id=\"section/Authentication/user_token\" data-section-id=\"section/Authentication/user_token\"></span>\n<span id=\"section/Authentication/user_email\" data-section-id=\"section/Authentication/user_email\"></span>\n",
+    "title": "Workday Strategic Sourcing Fields API",
+    "version": "1.0"
+  },
+  "host": "api.us.workdayspend.com",
+  "basePath": "/services/fields/v1",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/field_groups": {
+      "get": {
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "items": {
+                    "$ref": "#/definitions/FieldGroup"
+                  },
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "field_groups"
+        ],
+        "description": "Returns a list of field groups.",
+        "operationId": "List Field Groups",
+        "summary": "List Field Groups",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     \"https://api.us.workdayspend.com/services/fields/v1/field_groups\"\n"
+          }
+        ]
+      },
+      "post": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/FieldGroupCreate"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/FieldGroup"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "field_groups"
+        ],
+        "description": "Create a field group with given parameters.\n",
+        "operationId": "Create a Field Group",
+        "summary": "Create a Field Group",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X POST \\\n     -d '{\"data\":{\"type\":\"fields\",\"attributes\":{\"name\":\"custom_field\"}}' \\\n     \"https://api.us.workdayspend.com/services/fields/v1/field_groups\"\n"
+          }
+        ]
+      }
+    },
+    "/field_groups/{id}": {
+      "delete": {
+        "parameters": [
+          {
+            "description": "Unique Field Group identifier.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "field_groups"
+        ],
+        "description": "Deletes a field group. You need to supply the unique field group\nidentifier that was returned upon field group creation.\n",
+        "operationId": "Delete a Field Group",
+        "summary": "Delete a Field Group",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X DELETE \\\n     \"https://api.us.workdayspend.com/services/fields/v1/field_groups/1\"\n"
+          }
+        ]
+      },
+      "get": {
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Unique Field identifier.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/FieldGroup"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "field_groups"
+        ],
+        "description": "Retrieves the details of an existing field group. You need to supply the unique\nfield group identifier that was returned upon group creation.\n",
+        "operationId": "Get a Field Group",
+        "summary": "Get a Field Group",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     \"https://api.us.workdayspend.com/services/fields/v1/field_groups/1\"\n"
+          }
+        ]
+      },
+      "patch": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Unique Field Group identifier.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/FieldGroupUpdate"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/FieldGroup"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "409": {
+            "description": "Conflict",
+            "schema": {
+              "$ref": "#/definitions/Errors"
+            }
+          }
+        },
+        "tags": [
+          "field_groups"
+        ],
+        "description": "Updates the details of an existing field group. You need to supply the unique\nidentifier that was returned upon field group creation.\n\nPlease note, that request body must include an `id` attribute with the value of your field\nunique identifier (the same one you passed in the URL).\n",
+        "operationId": "Update a Field Group",
+        "summary": "Update a Field Group",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X PATCH \\\n     -d '{\"data\":{\"type\":\"field_groups\",\"id\":\"2\",\"attributes\":{\"name\":\"Updated Field Group Name\"}}}' \\\n     \"https://api.us.workdayspend.com/services/fields/v1/field_groups/2\"\n"
+          }
+        ]
+      }
+    },
+    "/field_options": {
+      "post": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/FieldOptionCreate"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/FieldOption"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "field_options"
+        ],
+        "description": "Create a field options with given parameters.\n",
+        "operationId": "Create a Field Option",
+        "summary": "Create a Field Option",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X POST \\\n     -d '{\"data\":{\"type\":\"fields\",\"attributes\":{\"name\":\"custom_field\"}}' \\\n     \"https://api.us.workdayspend.com/services/fields/v1/field_options\"\n"
+          }
+        ]
+      }
+    },
+    "/field_options/{id}": {
+      "delete": {
+        "parameters": [
+          {
+            "description": "Unique Field Option identifier.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "field_options"
+        ],
+        "description": "Deletes a field option. You need to supply the unique field option\nidentifier that was returned upon field creation.\n",
+        "operationId": "Delete a Field Option",
+        "summary": "Delete a Field Option",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X DELETE \\\n     \"https://api.us.workdayspend.com/services/fields/v1/field_options/1\"\n"
+          }
+        ]
+      },
+      "patch": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Unique Field Option identifier.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/FieldOptionUpdate"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/FieldOption"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "field_options"
+        ],
+        "description": "Update a field options with given parameters.\n",
+        "operationId": "Update a Field Option",
+        "summary": "Update a Field Option",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X PATCH \\\n     -d '{\"data\":{\"type\":\"fields\",\"id\":\"1\",\"attributes\":{\"label\":\"custom_field\"}}' \\\n     \"https://api.us.workdayspend.com/services/fields/v1/field_options/1\"\n"
+          }
+        ]
+      }
+    },
+    "/fields": {
+      "get": {
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Filter custom fields by multiple criteria. Only one filter per attribute is supported.\nFor best performance, we recommend 5 or less filters.\n",
+            "in": "query",
+            "name": "filter",
+            "type": "object"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "items": {
+                    "$ref": "#/definitions/Field"
+                  },
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "fields"
+        ],
+        "description": "Returns a list of custom fields for the specified criteria.",
+        "operationId": "List Fields",
+        "summary": "List Fields",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     \"https://api.us.workdayspend.com/services/fields/v1/fields\"\n"
+          }
+        ]
+      },
+      "post": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/FieldCreate"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/Field"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "fields"
+        ],
+        "description": "Create a field with given parameters.\n\nFor fields with `target_object` set to `RFP`, `group` relationship should be omitted. It is\nrequired to specify the relationship for all other target objects.\n",
+        "operationId": "Create a Field",
+        "summary": "Create a Field",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X POST \\\n     -d '{\"data\":{\"type\":\"fields\",\"attributes\":{\"name\":\"custom_field\"}}' \\\n     \"https://api.us.workdayspend.com/services/fields/v1/fields\"\n"
+          }
+        ]
+      }
+    },
+    "/fields/{field_id}/field_options": {
+      "get": {
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Field identifier.",
+            "in": "path",
+            "name": "field_id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "items": {
+                    "$ref": "#/definitions/FieldOption"
+                  },
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "field_options"
+        ],
+        "description": "Returns a list of field options for the specified field.",
+        "operationId": "List Field Options",
+        "summary": "List Field Options",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     \"https://api.us.workdayspend.com/services/fields/v1/fields/1/field_options\"\n"
+          }
+        ]
+      }
+    },
+    "/fields/{id}": {
+      "delete": {
+        "parameters": [
+          {
+            "description": "Unique Field identifier.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "fields"
+        ],
+        "description": "Deletes a field. You need to supply the unique field\nidentifier that was returned upon field creation.\n",
+        "operationId": "Delete a Field",
+        "summary": "Delete a Field",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X DELETE \\\n     \"https://api.us.workdayspend.com/services/fields/v1/fields/1\"\n"
+          }
+        ]
+      },
+      "get": {
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Unique Field identifier.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/Field"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "fields"
+        ],
+        "description": "Retrieves the details of an existing field. You need to supply the unique field\nidentifier that was returned upon field creation.\n",
+        "operationId": "Get a Field",
+        "summary": "Get a Field",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     \"https://api.us.workdayspend.com/services/fields/v1/fields/1\"\n"
+          }
+        ]
+      },
+      "patch": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Unique Field identifier.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/FieldUpdate"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/Field"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "409": {
+            "description": "Conflict",
+            "schema": {
+              "$ref": "#/definitions/Errors"
+            }
+          }
+        },
+        "tags": [
+          "fields"
+        ],
+        "description": "Updates the details of an existing field. You need to supply the unique\nidentifier that was returned upon field creation.\n\nFor fields with `target_object` set to `RFP`, `group` relationship should be omitted.\n\nPlease note, that request body must include an `id` attribute with the value of your field\nunique identifier (the same one you passed in the URL).\n",
+        "operationId": "Update a Field",
+        "summary": "Update a Field",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X PATCH \\\n     -d '{\"data\":{\"type\":\"fields\",\"id\":\"2\",\"attributes\":{\"name\":\"Updated Field Name\"}}}' \\\n     \"https://api.us.workdayspend.com/services/fields/v1/fields/2\"\n"
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "CustomField": {},
+    "CustomFieldBase": {
+      "properties": {
+        "name": {
+          "description": "Custom field name.",
+          "example": "My Custom Field",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "CustomFieldCheckbox": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/CustomFieldBase"
+        },
+        {
+          "properties": {
+            "value": {
+              "example": true,
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "title": "Checkbox"
+    },
+    "CustomFieldCurrency": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/CustomFieldBase"
+        },
+        {
+          "properties": {
+            "value": {
+              "description": "A currency value represented as an integer. The maximum value is 9,007,199,254,740,991.",
+              "format": "integer"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "title": "Currency"
+    },
+    "CustomFieldDate": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/CustomFieldBase"
+        },
+        {
+          "properties": {
+            "value": {
+              "description": "A date value.",
+              "format": "date",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "title": "Date"
+    },
+    "CustomFieldDecimal": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/CustomFieldBase"
+        },
+        {
+          "properties": {
+            "value": {
+              "description": "A decimal value represented as a number with floating point.",
+              "format": "decimal",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "title": "Decimal"
+    },
+    "CustomFieldEnum": {
+      "description": "Internal name and meaning of each field.",
+      "enum": [
+        "Checkbox",
+        "File",
+        "Short Text",
+        "Paragraph",
+        "Date",
+        "Integer",
+        "Currency",
+        "Decimal",
+        "Single Select",
+        "Multiple Select",
+        "URL",
+        "Lookup",
+        "Related"
+      ],
+      "example": "Short Text",
+      "type": "string"
+    },
+    "CustomFieldFile": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/CustomFieldBase"
+        },
+        {
+          "properties": {
+            "value": {
+              "description": "List of file attachments.",
+              "items": {
+                "properties": {
+                  "created_at": {
+                    "description": "Identifies when the file was uploaded.",
+                    "example": "2019-01-01",
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "file_type": {
+                    "description": "File type.",
+                    "enum": [
+                      "doc",
+                      "xls",
+                      "pdf",
+                      "img",
+                      "other"
+                    ],
+                    "example": "doc",
+                    "type": "string"
+                  },
+                  "id": {
+                    "description": "Unique attachment identifier.",
+                    "example": "1",
+                    "type": "string"
+                  },
+                  "title": {
+                    "description": "Attachment title.",
+                    "example": "My File",
+                    "type": "string"
+                  },
+                  "url": {
+                    "description": "File download URL.",
+                    "example": "https://example.com/contract.doc",
+                    "format": "url",
+                    "type": "string"
+                  },
+                  "user_name": {
+                    "description": "Name of the user who uploaded the file.",
+                    "example": "Boris",
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "title": "File"
+    },
+    "CustomFieldInteger": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/CustomFieldBase"
+        },
+        {
+          "properties": {
+            "value": {
+              "description": "An integer value. The maximum value is 9,007,199,254,740,991.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "title": "Integer"
+    },
+    "CustomFieldLookup": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/CustomFieldBase"
+        },
+        {
+          "properties": {
+            "value": {
+              "description": "A value from a customer-provided lookup data source.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "title": "Lookup"
+    },
+    "CustomFieldMultipleSelect": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/CustomFieldBase"
+        },
+        {
+          "properties": {
+            "value": {
+              "description": "A list of values from a predefined list of possible options.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "title": "Multiple Select"
+    },
+    "CustomFieldParagraph": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/CustomFieldBase"
+        },
+        {
+          "properties": {
+            "value": {
+              "description": "A longer text paragraph.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "title": "Paragraph"
+    },
+    "CustomFieldRelated": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/CustomFieldBase"
+        },
+        {
+          "properties": {
+            "value": {
+              "description": "A value related to the lookup custom field value, retrieved from the same data source object.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "title": "Related"
+    },
+    "CustomFieldShortText": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/CustomFieldBase"
+        },
+        {
+          "properties": {
+            "value": {
+              "description": "A short text (usually under 255 characters).",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "title": "Short Text"
+    },
+    "CustomFieldSingleSelect": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/CustomFieldBase"
+        },
+        {
+          "properties": {
+            "value": {
+              "description": "A single value from a predefined list of possible options.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "title": "Single Select"
+    },
+    "CustomFieldURL": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/CustomFieldBase"
+        },
+        {
+          "properties": {
+            "value": {
+              "description": "URL string.",
+              "format": "url",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "title": "URL"
+    },
+    "Error": {
+      "properties": {
+        "detail": {
+          "description": "A human-readable explanation specific to this occurrence of the problem.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Errors": {
+      "properties": {
+        "errors": {
+          "items": {
+            "$ref": "#/definitions/Error"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "Field": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/FieldBase"
+        },
+        {
+          "properties": {
+            "attributes": {
+              "$ref": "#/definitions/FieldAttributes"
+            },
+            "links": {
+              "$ref": "#/definitions/ResourceLinks"
+            },
+            "relationships": {
+              "$ref": "#/definitions/FieldRelationship"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "FieldAttributes": {
+      "description": "Field attributes.",
+      "properties": {
+        "data_type": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/OpenApiEnum"
+            },
+            {
+              "readOnly": true
+            }
+          ]
+        },
+        "name": {
+          "description": "Field name.",
+          "maxLength": 255,
+          "type": "string"
+        },
+        "position": {
+          "description": "Field order position on the UI.",
+          "readOnly": true,
+          "type": "integer"
+        },
+        "required": {
+          "description": "Identifies whether the field is required in order to create the object successfully.\n",
+          "type": "boolean"
+        },
+        "target_object": {
+          "description": "Field object type string.",
+          "enum": [
+            "PROJECT",
+            "RFP",
+            "SUPPLIER_COMPANY"
+          ],
+          "type": "string"
+        },
+        "type_description": {
+          "$ref": "#/definitions/CustomFieldEnum"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "FieldBase": {
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/FieldId"
+        },
+        "type": {
+          "$ref": "#/definitions/FieldType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "title": "Field",
+      "type": "object"
+    },
+    "FieldCreate": {
+      "properties": {
+        "attributes": {
+          "$ref": "#/definitions/FieldAttributes"
+        },
+        "relationships": {
+          "$ref": "#/definitions/FieldRelationship"
+        },
+        "type": {
+          "$ref": "#/definitions/FieldType"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "type": "object"
+    },
+    "FieldGroup": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/FieldGroupBase"
+        },
+        {
+          "properties": {
+            "attributes": {
+              "$ref": "#/definitions/FieldGroupAttributes"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "FieldGroupAttributes": {
+      "description": "Field group attributes.",
+      "properties": {
+        "name": {
+          "description": "Field group name.",
+          "maxLength": 255,
+          "type": "string"
+        },
+        "position": {
+          "description": "Field group position on the UI.",
+          "readOnly": true,
+          "type": "integer"
+        },
+        "target_object": {
+          "description": "Field group object type string.",
+          "enum": [
+            "PROJECT",
+            "SUPPLIER_COMPANY",
+            "RFP"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "FieldGroupBase": {
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/FieldGroupId"
+        },
+        "type": {
+          "$ref": "#/definitions/FieldGroupType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "title": "Field",
+      "type": "object"
+    },
+    "FieldGroupCreate": {
+      "properties": {
+        "attributes": {
+          "$ref": "#/definitions/FieldGroupAttributes"
+        },
+        "type": {
+          "$ref": "#/definitions/FieldGroupType"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "type": "object"
+    },
+    "FieldGroupId": {
+      "description": "Field group identifier string.",
+      "example": 1,
+      "type": "integer"
+    },
+    "FieldGroupType": {
+      "description": "Object type, should always be `field_groups`.",
+      "example": "field_groups",
+      "type": "string"
+    },
+    "FieldGroupUpdate": {
+      "properties": {
+        "attributes": {
+          "$ref": "#/definitions/FieldGroupAttributes"
+        },
+        "id": {
+          "$ref": "#/definitions/FieldGroupId"
+        },
+        "type": {
+          "$ref": "#/definitions/FieldGroupType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "type": "object"
+    },
+    "FieldId": {
+      "description": "Field identifier string.",
+      "example": 1,
+      "type": "integer"
+    },
+    "FieldInputFilter": {
+      "properties": {
+        "group_id_equals": {
+          "description": "ID of the group for which fields should be selected.",
+          "example": 1,
+          "type": "string"
+        },
+        "target_object_equals": {
+          "description": "Find custom fields by target class name.",
+          "example": "RFP",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "FieldOption": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/FieldOptionBase"
+        },
+        {
+          "properties": {
+            "attributes": {
+              "$ref": "#/definitions/FieldOptionAttributes"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "FieldOptionAttributes": {
+      "description": "Field attributes.",
+      "properties": {
+        "label": {
+          "description": "Field name.",
+          "maxLength": 255,
+          "type": "string"
+        },
+        "position": {
+          "description": "Field order position on the UI.",
+          "readOnly": true,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "FieldOptionBase": {
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/FieldOptionId"
+        },
+        "type": {
+          "$ref": "#/definitions/FieldOptionType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "title": "Field",
+      "type": "object"
+    },
+    "FieldOptionCreate": {
+      "properties": {
+        "attributes": {
+          "$ref": "#/definitions/FieldOptionAttributes"
+        },
+        "relationships": {
+          "$ref": "#/definitions/FieldOptionRelationship"
+        },
+        "type": {
+          "$ref": "#/definitions/FieldOptionType"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "type": "object"
+    },
+    "FieldOptionId": {
+      "description": "Field identifier string.",
+      "example": 1,
+      "type": "integer"
+    },
+    "FieldOptionRelationship": {
+      "description": "Field option relationship.",
+      "properties": {
+        "field": {
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/FieldBase"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "required": [
+        "field"
+      ],
+      "type": "object"
+    },
+    "FieldOptionType": {
+      "description": "Object type, should always be `fields`.",
+      "example": "fields",
+      "type": "string"
+    },
+    "FieldOptionUpdate": {
+      "properties": {
+        "attributes": {
+          "$ref": "#/definitions/FieldOptionAttributes"
+        },
+        "id": {
+          "$ref": "#/definitions/FieldOptionId"
+        },
+        "type": {
+          "$ref": "#/definitions/FieldOptionType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "type": "object"
+    },
+    "FieldRelationship": {
+      "description": "Field relationship.",
+      "properties": {
+        "group": {
+          "description": "Reference to the field group where the field belongs to. It is always `null` for fields\nwith `target_object` set to RFP, and required for all other fields.\n",
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/FieldGroupBase"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "FieldType": {
+      "description": "Object type, should always be `fields`.",
+      "example": "fields",
+      "type": "string"
+    },
+    "FieldUpdate": {
+      "properties": {
+        "attributes": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/FieldAttributes"
+            },
+            {
+              "properties": {
+                "target_object": {
+                  "readOnly": true
+                }
+              },
+              "type": "object"
+            }
+          ]
+        },
+        "id": {
+          "$ref": "#/definitions/FieldId"
+        },
+        "relationships": {
+          "$ref": "#/definitions/FieldRelationship"
+        },
+        "type": {
+          "$ref": "#/definitions/FieldType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "type": "object"
+    },
+    "OpenApiEnum": {
+      "description": "OpenAPI data type.",
+      "enum": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "array",
+        "object"
+      ],
+      "example": "string",
+      "type": "string"
+    },
+    "ResourceLinks": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/SelfLink"
+        }
+      ],
+      "description": "List of related links.",
+      "type": "object"
+    },
+    "SelfLink": {
+      "properties": {
+        "self": {
+          "description": "Normalized link to the resource.",
+          "format": "url",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "securityDefinitions": {
+    "api_key": {
+      "description": "Company API key.",
+      "in": "header",
+      "name": "X-Api-Key",
+      "type": "apiKey"
+    },
+    "user_email": {
+      "description": "User email.",
+      "in": "header",
+      "name": "X-User-Email",
+      "type": "apiKey"
+    },
+    "user_token": {
+      "description": "User token.",
+      "in": "header",
+      "name": "X-User-Token",
+      "type": "apiKey"
+    }
+  },
+  "security": [
+    {
+      "api_key": []
+    }
+  ],
+  "tags": [
+    {
+      "description": "Workday Strategic Sourcing API Support: Please have a Named Support Contact from your company submit a support case in Workday's Customer Center.\n",
+      "name": "support",
+      "x-displayName": "Customer Support"
+    },
+    {
+      "description": "### US Region\n| Environment       | US region Base URI                                         |\n|-------------------|------------------------------------------------------------|\n| **Production**    | https://api.us.workdayspend.com/services/fields/v1         |\n| **Sandbox**       | https://api.sandbox.us.workdayspend.com/services/fields/v1 |\n\n### EU Region\n| Environment       | EU region Base URI                                                |\n|-------------------|-------------------------------------------------------------------|\n| **Production**    | https://api.eu.workdayspend.com/services/fields/v1          |\n| **Sandbox**       | https://api.sandbox.eu.workdayspend.com/services/fields/v1  |\n\n### CA Region\n| Environment       | CA region Base URI                                                |\n|-------------------|-------------------------------------------------------------------|\n| **Production**    | https://api.ca.workdayspend.com/services/fields/v1          |\n| **Sandbox**       | https://api.sandbox.ca.workdayspend.com/services/fields/v1  |\n",
+      "name": "servers",
+      "x-displayName": "Servers"
+    },
+    {
+      "description": "The API conforms to the [JSON API Specification](https://jsonapi.org).\n\nThe current version of this service is indicated by the `X-Api-Version` header.\n\nSample version header: `X-Api-Version: 1.0`.\n",
+      "name": "api_specification",
+      "x-displayName": "API Specification"
+    },
+    {
+      "description": "Our API adheres to the ISO 8601 standard when accepting and formatting Date and Time fields. All Date and Time fields returned by this API will be in the **UTC** timezone.\n\nDate and Time fields sent to this API can be in any timezone, provided they adhere to the ISO 8601 standard.\n",
+      "name": "date_and_time_fields",
+      "x-displayName": "Date and Time Fields"
+    },
+    {
+      "description": "The Workday Strategic Sourcing API uses API keys to authenticate requests. Every request\nwill require all 3 HTTP headers:\n\n| HTTP Header       | Description               |\n|-------------------|---------------------------|\n| **X-Api-Key**     | a company-wide API key    |\n| **X-User-Token**  | a user-specific API token |\n| **X-User-Email**  | user email                |\n\nYou can generate all of those from the _API tokens_ section of your _Profile_ page.\n\nYour API keys carry many privileges, so be sure to keep them secure! Do not share your secret API\nkeys in publicly accessible areas such as GitHub, client-side code, and so forth.\n\nAll API requests must be made over [HTTPS](http://en.wikipedia.org/wiki/HTTP_Secure). Calls made\nover plain HTTP will fail. API requests without authentication will also fail.\n",
+      "name": "authentication",
+      "x-displayName": "Authentication"
+    },
+    {
+      "description": "Rate limit windows are per second and are shared by all API Keys for a company.\n\nThe rate limit is 5 requests per second.\n\nWhen request submissions exceed the limits, the limit-exceeding requests return `429 Too Many Requests` error responses to the client.\n\nUpon receiving a `429` response, it is recommended to retry the request in compliance with the rate limit. One example would be to add a sleep function for 1 second and retry.\n",
+      "name": "rate_limiting",
+      "x-displayName": "Rate Limiting"
+    },
+    {
+      "description": "Use the fields API to create, update, and query the custom fields in Workday Strategic Sourcing.\n\n## Field Object\n\n<SchemaDefinition schemaRef=\"#/components/schemas/Field\" showReadOnly={true} showWriteOnly={true} />\n",
+      "name": "fields",
+      "x-displayName": "Fields"
+    },
+    {
+      "description": "Use the fields API to create, update, and query the custom fields options in Workday Strategic Sourcing.\nCustom field options exist for single select and multiple select field types.\n\n## Field Option Object\n\n<SchemaDefinition schemaRef=\"#/components/schemas/FieldOption\" showReadOnly={true} showWriteOnly={true} />\n",
+      "name": "field_options",
+      "x-displayName": "Field Options"
+    },
+    {
+      "description": "Use the fields API to create, update, and query the custom fields groups in Workday Strategic Sourcing.\nCustom field groups act as a collection of custom fields. Every newly made custom field\nwith requires a custom field group (except for the fields with `target_object` set to `RFP`).\n\n## Field Group Object\n\n<SchemaDefinition schemaRef=\"#/components/schemas/FieldGroup\" showReadOnly={true} showWriteOnly={true} />\n",
+      "name": "field_groups",
+      "x-displayName": "Field Groups"
+    }
+  ],
+  "x-components": {
+    "examples": {
+      "create_request": {
+        "value": {
+          "data": {
+            "attributes": {
+              "name": "Custom Field",
+              "required": false,
+              "target_object": "PROJECT",
+              "type_description": "Short Text"
+            },
+            "relationships": {
+              "group": {
+                "data": {
+                  "id": "1",
+                  "type": "field_groups"
+                }
+              }
+            },
+            "type": "fields"
+          }
+        }
+      },
+      "create_request-2": {
+        "value": {
+          "data": {
+            "attributes": {
+              "label": "Field Option One"
+            },
+            "relationships": {
+              "field": {
+                "data": {
+                  "id": "1",
+                  "type": "fields"
+                }
+              }
+            },
+            "type": "field_options"
+          }
+        }
+      },
+      "create_request-3": {
+        "value": {
+          "data": {
+            "attributes": {
+              "name": "Custom Group",
+              "target_object": "PROJECT"
+            },
+            "type": "field_groups"
+          }
+        }
+      },
+      "create_response": {
+        "value": {
+          "data": {
+            "attributes": {
+              "data_type": "string",
+              "name": "Custom Field",
+              "position": null,
+              "required": false,
+              "target_object": "PROJECT",
+              "type_description": "Short Text"
+            },
+            "id": "1",
+            "links": {
+              "self": "https://api.us.workdayspend.com/services/fields/v1/fields/1"
+            },
+            "relationships": {
+              "group": {
+                "data": {
+                  "id": "1",
+                  "type": "field_groups"
+                }
+              }
+            },
+            "type": "fields"
+          }
+        }
+      },
+      "create_response-2": {
+        "value": {
+          "data": {
+            "attributes": {
+              "label": "Field Option One",
+              "position": null
+            },
+            "id": "1",
+            "type": "field_options"
+          }
+        }
+      },
+      "create_response-3": {
+        "value": {
+          "data": {
+            "attributes": {
+              "name": "Custom Group",
+              "position": null,
+              "target_object": "PROJECT"
+            },
+            "id": "1",
+            "links": {
+              "self": "https://api.us.workdayspend.com/services/fields/v1/field_groups/1"
+            },
+            "type": "field_groups"
+          }
+        }
+      },
+      "index_response": {
+        "value": {
+          "data": [
+            {
+              "attributes": {
+                "data_type": "string",
+                "name": "Field One",
+                "position": null,
+                "required": false,
+                "target_object": "PROJECT",
+                "type_description": "Short Text"
+              },
+              "id": "1",
+              "links": {
+                "self": "https://api.us.workdayspend.com/services/fields/v1/fields/1"
+              },
+              "relationships": {
+                "group": {
+                  "data": {
+                    "id": "1",
+                    "type": "field_groups"
+                  }
+                }
+              },
+              "type": "fields"
+            },
+            {
+              "attributes": {
+                "data_type": "string",
+                "name": "Field Two",
+                "position": null,
+                "required": false,
+                "target_object": "PROJECT",
+                "type_description": "Single Select"
+              },
+              "id": "2",
+              "links": {
+                "self": "https://api.us.workdayspend.com/services/fields/v1/fields/2"
+              },
+              "relationships": {
+                "group": {
+                  "data": {
+                    "id": "1",
+                    "type": "field_groups"
+                  }
+                }
+              },
+              "type": "fields"
+            }
+          ],
+          "links": {
+            "self": "https://api.us.workdayspend.com/services/fields/v1/fields"
+          }
+        }
+      },
+      "index_response-2": {
+        "value": {
+          "data": [
+            {
+              "attributes": {
+                "label": "Option One",
+                "position": 1
+              },
+              "id": "1",
+              "type": "field_options"
+            },
+            {
+              "attributes": {
+                "label": "Option Two",
+                "position": 2
+              },
+              "id": "2",
+              "type": "field_options"
+            }
+          ],
+          "links": {}
+        }
+      },
+      "index_response-3": {
+        "value": {
+          "data": [
+            {
+              "attributes": {
+                "name": "Group One",
+                "position": 1,
+                "target_object": "PROJECT"
+              },
+              "id": "1",
+              "links": {
+                "self": "https://api.us.workdayspend.com/services/fields/v1/field_groups/1"
+              },
+              "type": "field_groups"
+            },
+            {
+              "attributes": {
+                "name": "Group Two",
+                "position": 2,
+                "target_object": "SUPPLIER_COMPANY"
+              },
+              "id": "2",
+              "links": {
+                "self": "https://api.us.workdayspend.com/services/fields/v1/field_groups/2"
+              },
+              "type": "field_groups"
+            }
+          ],
+          "links": {
+            "self": "https://api.us.workdayspend.com/services/fields/v1/field_groups"
+          }
+        }
+      },
+      "show_response": {
+        "value": {
+          "data": {
+            "attributes": {
+              "data_type": "string",
+              "name": "Field One",
+              "position": null,
+              "required": false,
+              "target_object": "PROJECT",
+              "type_description": "Short Text"
+            },
+            "id": "1",
+            "links": {
+              "self": "https://api.us.workdayspend.com/services/fields/v1/fields/1"
+            },
+            "relationships": {
+              "group": {
+                "data": {
+                  "id": "1",
+                  "type": "field_groups"
+                }
+              }
+            },
+            "type": "fields"
+          }
+        }
+      },
+      "show_response-2": {
+        "value": {
+          "data": {
+            "attributes": {
+              "name": "My Field Group",
+              "position": null,
+              "target_object": "PROJECT"
+            },
+            "id": "1",
+            "links": {
+              "self": "https://api.us.workdayspend.com/services/fields/v1/field_groups/1"
+            },
+            "type": "field_groups"
+          }
+        }
+      },
+      "update_request": {
+        "value": {
+          "data": {
+            "attributes": {
+              "name": "Updated Custom Field",
+              "required": true,
+              "type_description": "Short Text"
+            },
+            "id": "1",
+            "relationships": {
+              "group": {
+                "data": {
+                  "id": "2",
+                  "type": "field_groups"
+                }
+              }
+            },
+            "type": "fields"
+          }
+        }
+      },
+      "update_request-2": {
+        "value": {
+          "data": {
+            "attributes": {
+              "label": "Updated Field Option"
+            },
+            "id": "1",
+            "type": "field_options"
+          }
+        }
+      },
+      "update_request-3": {
+        "value": {
+          "data": {
+            "attributes": {
+              "name": "Updated Field Group"
+            },
+            "id": "1",
+            "type": "field_groups"
+          }
+        }
+      },
+      "update_response": {
+        "value": {
+          "data": {
+            "attributes": {
+              "data_type": "string",
+              "name": "Updated Custom Field",
+              "position": null,
+              "required": true,
+              "target_object": "PROJECT",
+              "type_description": "Short Text"
+            },
+            "id": "1",
+            "links": {
+              "self": "https://api.us.workdayspend.com/services/fields/v1/fields/1"
+            },
+            "relationships": {
+              "group": {
+                "data": {
+                  "id": "2",
+                  "type": "field_groups"
+                }
+              }
+            },
+            "type": "fields"
+          }
+        }
+      },
+      "update_response-2": {
+        "value": {
+          "data": {
+            "attributes": {
+              "label": "Updated Field Option",
+              "position": 1
+            },
+            "id": "1",
+            "type": "field_options"
+          }
+        }
+      },
+      "update_response-3": {
+        "value": {
+          "data": {
+            "attributes": {
+              "name": "Updated Field Group",
+              "position": null,
+              "target_object": "PROJECT"
+            },
+            "id": "1",
+            "links": {
+              "self": "https://api.us.workdayspend.com/services/fields/v1/field_groups/1"
+            },
+            "type": "field_groups"
+          }
+        }
+      }
+    }
+  },
+  "x-tagGroups": [
+    {
+      "tags": [
+        "support",
+        "servers",
+        "api_specification",
+        "date_and_time_fields",
+        "authentication",
+        "rate_limiting",
+        "external_ids"
+      ],
+      "name": "Getting Started"
+    },
+    {
+      "tags": [
+        "field_groups",
+        "fields",
+        "field_options"
+      ],
+      "name": "Fields"
+    }
+  ]
+}

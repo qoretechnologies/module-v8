@@ -1,0 +1,5999 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "<span id=\"section/Authentication/api_key\" data-section-id=\"section/Authentication/api_key\"></span>\n<span id=\"section/Authentication/user_token\" data-section-id=\"section/Authentication/user_token\"></span>\n<span id=\"section/Authentication/user_email\" data-section-id=\"section/Authentication/user_email\"></span>\n",
+    "title": "Workday Strategic Sourcing Events API",
+    "version": "1.2"
+  },
+  "host": "api.us.workdayspend.com",
+  "basePath": "/services/events/v1",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/bid_line_items": {
+      "get": {
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Filter bid line items by multiple criteria. Only one filter per attribute is supported.\nFor best performance, we recommend 5 or less filters.\n",
+            "in": "query",
+            "name": "filter",
+            "type": "object"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "allOf": [
+                {
+                  "properties": {
+                    "data": {
+                      "items": {
+                        "$ref": "#/definitions/BidLineItem"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                },
+                {
+                  "$ref": "#/definitions/Pagination"
+                }
+              ],
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "bid_line_items"
+        ],
+        "description": "Returns a list of all bid line items.",
+        "operationId": "List All Bid Line Items",
+        "summary": "List All Bid Line Items",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     \"https://api.us.workdayspend.com/services/events/v1/bid_line_items\"\n"
+          }
+        ]
+      }
+    },
+    "/bid_line_items/describe": {
+      "get": {
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "allOf": [
+                {
+                  "properties": {
+                    "data": {
+                      "items": {
+                        "$ref": "#/definitions/BidLineItemFieldModel"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                }
+              ],
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "bid_line_items"
+        ],
+        "description": "Returns a list of fields for bid line item object.",
+        "operationId": "Describe Bid Line Item Object",
+        "summary": "Describe Bid Line Item Object",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     \"https://api.us.workdayspend.com/services/events/v1/bid_line_items/describe\"\n"
+          }
+        ]
+      }
+    },
+    "/bid_line_items/{id}": {
+      "get": {
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Unique bid line item identifier.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/BidLineItem"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "bid_line_items"
+        ],
+        "description": "Retrieves the details of an existing bid line item.\n",
+        "operationId": "Get a Bid Line Item",
+        "summary": "Get a Bid Line Item",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     \"https://api.us.workdayspend.com/services/events/v1/bid_line_items/1\"\n"
+          }
+        ]
+      }
+    },
+    "/bids/describe": {
+      "get": {
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "allOf": [
+                {
+                  "properties": {
+                    "data": {
+                      "items": {
+                        "$ref": "#/definitions/BidFieldModel"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                }
+              ],
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "bids"
+        ],
+        "description": "Returns a list of fields for the bid object.",
+        "operationId": "Describe Bid object",
+        "summary": "Describe Bid object",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     \"https://api.us.workdayspend.com/services/events/v1/bids/describe\"\n"
+          }
+        ]
+      }
+    },
+    "/bids/{bid_id}/bid_line_items": {
+      "get": {
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Bid identifier.",
+            "in": "path",
+            "name": "bid_id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "allOf": [
+                {
+                  "properties": {
+                    "data": {
+                      "items": {
+                        "$ref": "#/definitions/BidLineItem"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                },
+                {
+                  "$ref": "#/definitions/Pagination"
+                }
+              ],
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "bid_line_items"
+        ],
+        "description": "Returns a list of line items for a specific bid.",
+        "operationId": "List Bid Line Items",
+        "summary": "List Bid Line Items",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     \"https://api.us.workdayspend.com/services/events/v1/bids/1/bid_line_items\"\n"
+          }
+        ]
+      }
+    },
+    "/bids/{id}": {
+      "get": {
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Unique Bid identifier.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "description": "Use the `include` parameter to request related resources along with the primary resource.\n",
+            "enum": [
+              "event",
+              "supplier_company"
+            ],
+            "in": "query",
+            "name": "include",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/BidModel"
+                },
+                "included": {
+                  "$ref": "#/definitions/BidIncludedResources"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "bids"
+        ],
+        "description": "Retrieves the details of an existing bid. You need to supply the unique bid\nidentifier that was returned upon bid creation.\n",
+        "operationId": "Get a Bid",
+        "summary": "Get a Bid",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     \"https://api.us.workdayspend.com/services/events/v1/bids/1\"\n"
+          }
+        ]
+      }
+    },
+    "/event_templates": {
+      "get": {
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "allOf": [
+                {
+                  "properties": {
+                    "data": {
+                      "items": {
+                        "$ref": "#/definitions/EventTemplateModel"
+                      },
+                      "type": "array"
+                    },
+                    "links": {
+                      "$ref": "#/definitions/SelfLink"
+                    },
+                    "meta": {
+                      "description": "Result set metadata.",
+                      "properties": {
+                        "count": {
+                          "description": "Number of pages in the result set.",
+                          "type": "integer"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  },
+                  "type": "object"
+                }
+              ]
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "event_templates"
+        ],
+        "description": "Returns a list of all event templates.",
+        "operationId": "List Event Templates",
+        "summary": "List Event Templates",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     \"https://api.us.workdayspend.com/services/events/v1/event_templates\"\n"
+          }
+        ]
+      }
+    },
+    "/event_templates/{id}": {
+      "get": {
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Unique event template identifier.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/EventTemplateModel"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "event_templates"
+        ],
+        "description": "Retrieves the details of an existing event template.\n",
+        "operationId": "Get an Event Template",
+        "summary": "Get an Event Template",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     \"https://api.us.workdayspend.com/services/events/v1/event_templates/1\"\n"
+          }
+        ]
+      }
+    },
+    "/events": {
+      "get": {
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Filter events by multiple criteria. Only one filter per attribute is supported.\nFor best performance, we recommend 5 or less filters.\n",
+            "in": "query",
+            "name": "filter",
+            "type": "object"
+          },
+          {
+            "description": "Customize pagination results with `size`.\n",
+            "in": "query",
+            "name": "page",
+            "type": "object"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "allOf": [
+                {
+                  "properties": {
+                    "data": {
+                      "items": {
+                        "$ref": "#/definitions/Event"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                },
+                {
+                  "$ref": "#/definitions/Pagination"
+                }
+              ],
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "events"
+        ],
+        "description": "Returns a list of events for the specified criteria.",
+        "operationId": "List Events",
+        "summary": "List Events",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     \"https://api.us.workdayspend.com/services/events/v1/events\"\n"
+          }
+        ]
+      },
+      "post": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/EventCreate"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/Event"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/Errors"
+            }
+          }
+        },
+        "tags": [
+          "events"
+        ],
+        "description": "Events can only be created from a template. When a creation request is issued, the base event\nobject will be created from the template and returned with the response. Child records\nsuch as attachments, price sheets and custom values, will be scheduled for copy asynchronously.\nCurrent duplication status can be retrieved from the `duplication_state` attribute, which will have\none of following values:\n\n* `scheduled` - duplication is scheduled, but not yet started;\n* `started` - duplication started, but not yet finished;\n* `finished` - duplication completed;\n* `failed` - there was an error duplicating relationships.\n\nAn event should always have an associated project. Please make sure to specify it as a\nrelationship object.\n\nA new event will automatically inherit its spend category from the event template.\n\nPlease note, this endpoint does not support auction creation/duplication.\n",
+        "operationId": "Create an Event",
+        "summary": "Create an Event",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X POST \\\n     -d '{\"data\":{\"type\":\"events\",\"attributes\":{\"duplicate_bids\":true},\"relationships\":{\"event_template\":{\"data\":{\"id\":\"1\",\"type\":\"event_templates\"}}}}}' \\\n     \"https://api.us.workdayspend.com/services/events/v1/events\"\n"
+          }
+        ]
+      }
+    },
+    "/events/describe": {
+      "get": {
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "items": {
+                    "$ref": "#/definitions/EventFieldModel"
+                  },
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "events"
+        ],
+        "description": "Returns the list of fields for the event object.",
+        "operationId": "Describe Event Object",
+        "summary": "Describe Event Object",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     \"https://api.us.workdayspend.com/services/events/v1/events/describe\"\n"
+          }
+        ]
+      }
+    },
+    "/events/{event_external_id}/relationships/supplier_companies/external_id": {
+      "delete": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Event external identifier.",
+            "in": "path",
+            "name": "event_external_id",
+            "required": true,
+            "type": "string",
+            "x-example": "EVENT1"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "items": {
+                    "$ref": "#/definitions/ExternalSupplierCompanyBase"
+                  },
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "event_supplier_companies"
+        ],
+        "description": "Remove suppliers from an event. Only events of type `RFP` are supported.\n\nYou must supply the unique event external identifier (the one you used when created the event).\n\nYou must supply the external identifiers of the supplier companies too.\n\nThe operation will be rolled back upon any failure, and invitations won't be removed.\n\nFor best performance, we recommend removing 10 or less suppliers in a single request.\n",
+        "operationId": "Remove Suppliers using External IDs",
+        "summary": "Remove Suppliers using External IDs",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X DELETE \\\n     -d '{\"data\":[{ \"type\": \"supplier_companies\", \"id\": \"SUP5\" },{ \"type\": \"supplier_companies\", \"id\": \"SUP11\" }]}' \\\n     \"https://api.us.workdayspend.com/services/events/v1/events/EVENT1/relationships/supplier_companies/external_id\"\n"
+          }
+        ]
+      },
+      "post": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Event external identifier.",
+            "in": "path",
+            "name": "event_external_id",
+            "required": true,
+            "type": "string",
+            "x-example": "EVENT1"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "items": {
+                    "$ref": "#/definitions/ExternalSupplierCompanyBase"
+                  },
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "event_supplier_companies"
+        ],
+        "description": "Add suppliers to an event. Only events of type `RFP` are supported.\n\nYou must supply the unique event external identifier (the one you used when created the event).\n\nYou must supply the external identifiers of the supplier companies too.\n\nThe operation will be rolled back upon any failure, and invitations won't be sent.\n\nFor best performance, we recommend inviting 10 or less suppliers in a single request.\n",
+        "operationId": "Add Suppliers using External IDs",
+        "summary": "Add Suppliers using External IDs",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X POST \\\n     -d '{\"data\":[{ \"type\": \"supplier_companies\", \"id\": \"SUP5\" },{ \"type\": \"supplier_companies\", \"id\": \"SUP11\" }]}' \\\n     \"https://api.us.workdayspend.com/services/events/v1/events/EVENT1/relationships/supplier_companies/external_id\"\n"
+          }
+        ]
+      }
+    },
+    "/events/{event_external_id}/relationships/supplier_contacts/external_id": {
+      "delete": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Event external identifier.",
+            "in": "path",
+            "name": "event_external_id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "items": {
+                    "$ref": "#/definitions/ExternalSupplierContactBase"
+                  },
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "event_supplier_contacts"
+        ],
+        "description": "Remove suppliers from an event using supplier contacts. Only events of type `RFP` are supported.\n\nYou must supply the unique event external identifier (the one you used when created the event).\n\nYou must supply the external identifiers of the supplier contacts too.\n\nThe operation will be rolled back upon any failure, and invitations won't be removed.\n\nFor best performance, we recommend removing 10 or less supplier contacts in a single request.\n",
+        "operationId": "Remove Suppliers using Contacts External IDs",
+        "summary": "Remove Suppliers using Contacts External IDs",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X DELETE \\\n     -d '{\"data\":[{ \"type\": \"supplier_contacts\", \"id\": \"5\" },{ \"type\": \"supplier_contacts\", \"id\": \"11\" }]}' \\\n     \"https://api.us.workdayspend.com/services/events/v1/events/1/relationships/supplier_contacts/external_id\"\n"
+          }
+        ]
+      },
+      "post": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Event external identifier.",
+            "in": "path",
+            "name": "event_external_id",
+            "required": true,
+            "type": "string",
+            "x-example": "EVENT1"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "items": {
+                    "$ref": "#/definitions/ExternalSupplierContactBase"
+                  },
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "event_supplier_contacts"
+        ],
+        "description": "Add suppliers to an event using supplier contacts. Only events of type `RFP` are supported.\n\nYou must supply the unique event external identifier (the one you used when created the event).\n\nYou must supply the external identifiers of the supplier contacts too.\n\nThe operation will be rolled back upon any failure, and invitations won't be sent.\n\nFor best performance, we recommend inviting 10 or less supplier contacts in a single request.\n",
+        "operationId": "Add Suppliers using Contacts External IDs",
+        "summary": "Add Suppliers using Contacts External IDs",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X POST \\\n     -d '{\"data\":[{ \"type\": \"supplier_contacts\", \"id\": \"SUP5\" },{ \"type\": \"supplier_contacts\", \"id\": \"SUP11\" }]}' \\\n     \"https://api.us.workdayspend.com/services/events/v1/events/EVENT1/relationships/supplier_contacts/external_id\"\n"
+          }
+        ]
+      }
+    },
+    "/events/{event_id}/bids": {
+      "get": {
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Event identifier.",
+            "in": "path",
+            "name": "event_id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "description": "Filter bids by multiple criteria. Only one filter per attribute is supported.\nFor best performance, we recommend 5 or less filters.\n",
+            "in": "query",
+            "name": "filter",
+            "type": "object"
+          },
+          {
+            "description": "Use the `include` parameter to request related resources along with the primary resource.\n",
+            "enum": [
+              "event",
+              "supplier_company"
+            ],
+            "in": "query",
+            "name": "include",
+            "type": "string"
+          },
+          {
+            "description": "Customize pagination results with `size`.\n",
+            "in": "query",
+            "name": "page",
+            "type": "object"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "allOf": [
+                {
+                  "properties": {
+                    "data": {
+                      "items": {
+                        "$ref": "#/definitions/BidModel"
+                      },
+                      "type": "array"
+                    },
+                    "included": {
+                      "$ref": "#/definitions/BidIncludedResources"
+                    }
+                  },
+                  "type": "object"
+                },
+                {
+                  "$ref": "#/definitions/Pagination"
+                }
+              ],
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "bids"
+        ],
+        "description": "Returns a list of all bids.\nOnly bids for events of type `RFP` are returned.\n",
+        "operationId": "List Bids",
+        "summary": "List Bids",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     \"https://api.us.workdayspend.com/services/events/v1/events/1/bids\"\n"
+          }
+        ]
+      }
+    },
+    "/events/{event_id}/relationships/supplier_companies": {
+      "delete": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Event identifier.",
+            "in": "path",
+            "name": "event_id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/SupplierCompanyBase",
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "event_supplier_companies"
+        ],
+        "description": "Remove suppliers from an event. Only events of type `RFP` are supported.\n\nThe operation will be rolled back upon any failure, and invitations won't be removed.\n\nFor best performance, we recommend removing 10 or less suppliers in a single request.\n",
+        "operationId": "Remove Suppliers",
+        "summary": "Remove Suppliers",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X DELETE \\\n     -d '{\"data\":[{ \"type\": \"supplier_companies\", \"id\": \"5\" },{ \"type\": \"supplier_companies\", \"id\": \"11\" }]}' \\\n     \"https://api.us.workdayspend.com/services/events/v1/events/1/relationships/supplier_companies\"\n"
+          }
+        ]
+      },
+      "post": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Event identifier.",
+            "in": "path",
+            "name": "event_id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "items": {
+                    "$ref": "#/definitions/SupplierCompanyBase"
+                  },
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "event_supplier_companies"
+        ],
+        "description": "Add suppliers to an event. Only events of type `RFP` are supported.\n\nThe operation will be rolled back upon any failure, and invitations won't be sent.\n\nFor best performance, we recommend inviting 10 or less suppliers in a single request.\n",
+        "operationId": "Add Suppliers",
+        "summary": "Add Suppliers",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X POST \\\n     -d '{\"data\":[{ \"type\": \"supplier_companies\", \"id\": \"5\" },{ \"type\": \"supplier_companies\", \"id\": \"11\" }]}' \\\n     \"https://api.us.workdayspend.com/services/events/v1/events/1/relationships/supplier_companies\"\n"
+          }
+        ]
+      }
+    },
+    "/events/{event_id}/relationships/supplier_contacts": {
+      "delete": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Event identifier.",
+            "in": "path",
+            "name": "event_id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "items": {
+                    "$ref": "#/definitions/SupplierContactBase"
+                  },
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "event_supplier_contacts"
+        ],
+        "description": "Remove suppliers from an event using supplier contacts. Only events of type `RFP` are supported.\n\nFor best performance, we recommend removing 10 or less supplier contacts in a single request.\n",
+        "operationId": "Remove Suppliers using Contacts",
+        "summary": "Remove Suppliers using Contacts",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X DELETE \\\n     -d '{\"data\":[{ \"type\": \"supplier_contacts\", \"id\": \"5\" },{ \"type\": \"supplier_contacts\", \"id\": \"11\" }]}' \\\n     \"https://api.us.workdayspend.com/services/events/v1/events/1/relationships/supplier_contacts\"\n"
+          }
+        ]
+      },
+      "post": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Event identifier.",
+            "in": "path",
+            "name": "event_id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "items": {
+                    "$ref": "#/definitions/SupplierContactBase"
+                  },
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "event_supplier_contacts"
+        ],
+        "description": "Add suppliers to an event using supplier contacts. Only events of type `RFP` are supported.\n\nFor best performance, we recommend inviting 10 or less supplier contacts in a single request.\n",
+        "operationId": "Add Suppliers using Contacts",
+        "summary": "Add Suppliers using Contacts",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X POST \\\n     -d '{\"data\":[{ \"type\": \"supplier_contacts\", \"id\": \"5\" },{ \"type\": \"supplier_contacts\", \"id\": \"11\" }]}' \\\n     \"https://api.us.workdayspend.com/services/events/v1/events/1/relationships/supplier_contacts\"\n"
+          }
+        ]
+      }
+    },
+    "/events/{event_id}/worksheets": {
+      "get": {
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Event identifier.",
+            "in": "path",
+            "name": "event_id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "allOf": [
+                {
+                  "properties": {
+                    "data": {
+                      "items": {
+                        "$ref": "#/definitions/WorksheetModel"
+                      },
+                      "type": "array"
+                    },
+                    "links": {
+                      "$ref": "#/definitions/SelfLink"
+                    },
+                    "meta": {
+                      "description": "Result set metadata.",
+                      "properties": {
+                        "count": {
+                          "description": "Number of pages in the result set.",
+                          "type": "integer"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  },
+                  "type": "object"
+                }
+              ]
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "worksheets"
+        ],
+        "description": "Returns a list of all worksheets.",
+        "operationId": "List Worksheets",
+        "summary": "List Worksheets",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     \"https://api.us.workdayspend.com/services/events/v1/events/1/worksheets\"\n"
+          }
+        ]
+      }
+    },
+    "/events/{event_id}/worksheets/{id}": {
+      "get": {
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Event identifier.",
+            "in": "path",
+            "name": "event_id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "description": "Unique Worksheet identifier.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/WorksheetModel"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "worksheets"
+        ],
+        "description": "Retrieves the details of an existing worksheet. You need to supply the unique worksheet\nidentifier that was returned upon worksheet creation.\n",
+        "operationId": "Get a Worksheet",
+        "summary": "Get a Worksheet",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     \"https://api.us.workdayspend.com/services/events/v1/events/1/worksheets/1\"\n"
+          }
+        ]
+      }
+    },
+    "/events/{event_id}/worksheets/{worksheet_id}/line_items": {
+      "get": {
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Event identifier.",
+            "in": "path",
+            "name": "event_id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "description": "Worksheet identifier.",
+            "in": "path",
+            "name": "worksheet_id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "allOf": [
+                {
+                  "properties": {
+                    "data": {
+                      "items": {
+                        "$ref": "#/definitions/LineItem"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                },
+                {
+                  "$ref": "#/definitions/Pagination"
+                }
+              ],
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "line_items"
+        ],
+        "description": "Returns a list of line items for the specified criteria.",
+        "operationId": "List Line Items",
+        "summary": "List Line Items",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     \"https://api.us.workdayspend.com/services/events/v1/events/1/worksheets/1/line_items\"\n"
+          }
+        ]
+      },
+      "post": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Event identifier.",
+            "in": "path",
+            "name": "event_id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "description": "Worksheet identifier.",
+            "in": "path",
+            "name": "worksheet_id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/LineItemCreate"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/LineItem"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "line_items"
+        ],
+        "description": "Create a line item with given cell values.\n",
+        "operationId": "Create a Line Item",
+        "summary": "Create a Line Item",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X POST \\\n     -d '{\"data\":{\"type\":\"line_items\",\"attributes\":{\"data\":{\"c1\":\"Product One\",\"c2\":\"items\",\"c3\":14}}}}' \\\n     \"https://api.us.workdayspend.com/services/events/v1/events/1/worksheets/1/line_items\"\n"
+          }
+        ]
+      }
+    },
+    "/events/{event_id}/worksheets/{worksheet_id}/line_items/bulk": {
+      "post": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Event identifier.",
+            "in": "path",
+            "name": "event_id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "description": "Worksheet identifier.",
+            "in": "path",
+            "name": "worksheet_id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "items": {
+                    "properties": {
+                      "attributes": {
+                        "$ref": "#/definitions/LineItemAttributes"
+                      },
+                      "type": {
+                        "$ref": "#/definitions/LineItemType"
+                      }
+                    },
+                    "required": [
+                      "type",
+                      "attributes"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/LineItem"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "line_items"
+        ],
+        "description": "Create multiple line items in a given worksheet. You can create up to 200 line items in\na single request.\n",
+        "operationId": "Bulk Create Line Items",
+        "summary": "Bulk Create Line Items",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X POST \\\n     -d '{\"data\":[{\"type\":\"line_items\",\"attributes\":{\"data\":{\"c1\":\"Product One\",\"c2\":\"items\",\"c3\":14}}}]}' \\\n     \"https://api.us.workdayspend.com/services/events/v1/events/1/worksheets/1/line_items/bulk\"\n"
+          }
+        ]
+      }
+    },
+    "/events/{event_id}/worksheets/{worksheet_id}/line_items/{id}": {
+      "delete": {
+        "parameters": [
+          {
+            "description": "Event identifier.",
+            "in": "path",
+            "name": "event_id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "description": "Worksheet identifier.",
+            "in": "path",
+            "name": "worksheet_id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "description": "Unique line item identifier.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "line_items"
+        ],
+        "description": "Deletes a line item. You need to supply the unique line item\nidentifier that was returned upon line item creation.\n",
+        "operationId": "Delete a Line Item",
+        "summary": "Delete a Line Item",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X DELETE \\\n     \"https://api.us.workdayspend.com/services/events/v1/events/1/worksheets/1/line_items/1\"\n"
+          }
+        ]
+      },
+      "get": {
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Event identifier.",
+            "in": "path",
+            "name": "event_id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "description": "Worksheet identifier.",
+            "in": "path",
+            "name": "worksheet_id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "description": "Unique line item identifier.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/LineItem"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "line_items"
+        ],
+        "description": "Retrieves the details of an existing line item. You need to supply the unique line item\nidentifier that was returned upon line item creation.\n",
+        "operationId": "Get a Line Item",
+        "summary": "Get a Line Item",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     \"https://api.us.workdayspend.com/services/events/v1/events/1/worksheets/1/line_items/1\"\n"
+          }
+        ]
+      },
+      "patch": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Event identifier.",
+            "in": "path",
+            "name": "event_id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "description": "Worksheet identifier.",
+            "in": "path",
+            "name": "worksheet_id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "description": "Unique line item identifier.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/LineItemUpdate"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/LineItem"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "409": {
+            "description": "Conflict",
+            "schema": {
+              "$ref": "#/definitions/Errors"
+            }
+          }
+        },
+        "tags": [
+          "line_items"
+        ],
+        "description": "Updates the details of an existing line item. You need to supply the unique\nline item that was returned upon line item creation.\n\nPlease note, that request body must include the `id` attribute with the value of your\nline item unique identifier (the same one you passed in the URL).\n",
+        "operationId": "Update a Line Item",
+        "summary": "Update a Line Item",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X PATCH \\\n     -d '{\"data\":{\"type\":\"line_items\",\"attributes\":{\"data\":{\"c1\":\"Product One\",\"c2\":\"items\",\"c3\": 14}}}}' \\\n     \"https://api.us.workdayspend.com/services/events/v1/events/1/worksheets/1/line_items/2\"\n"
+          }
+        ]
+      }
+    },
+    "/events/{id}": {
+      "delete": {
+        "parameters": [
+          {
+            "description": "Unique Event identifier.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "events"
+        ],
+        "description": "Deletes an event. You need to supply the unique event\nidentifier that was returned upon event creation.\n",
+        "operationId": "Delete an Event",
+        "summary": "Delete an Event",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X DELETE \\\n     \"https://api.us.workdayspend.com/services/events/v1/events/1\"\n"
+          }
+        ]
+      },
+      "get": {
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Unique Event identifier.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/Event"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "events"
+        ],
+        "description": "Retrieves the details of an existing event. You need to supply the unique event\nidentifier that was returned upon event creation.\n",
+        "operationId": "Get an Event",
+        "summary": "Get an Event",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     \"https://api.us.workdayspend.com/services/events/v1/events/1\"\n"
+          }
+        ]
+      },
+      "patch": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Unique Event identifier.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/EventUpdate"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/Event"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "409": {
+            "description": "Conflict",
+            "schema": {
+              "$ref": "#/definitions/Errors"
+            }
+          }
+        },
+        "tags": [
+          "events"
+        ],
+        "description": "Updates the details of an existing event. You need to supply the unique\nidentifier that was returned upon event creation.\n\nPlease note, that request body must include an `id` attribute with the value of your event\nunique identifier (the same one you passed in the URL).\n",
+        "operationId": "Update an Event",
+        "summary": "Update an Event",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X PATCH \\\n     -d '{\"data\":{\"type\":\"events\",\"id\":\"2\",\"attributes\":{\"title\":\"Event title updated\"}}}' \\\n     \"https://api.us.workdayspend.com/services/events/v1/events/2\"\n"
+          }
+        ]
+      }
+    },
+    "/worksheets/describe": {
+      "get": {
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "allOf": [
+                {
+                  "properties": {
+                    "data": {
+                      "items": {
+                        "$ref": "#/definitions/WorksheetFieldModel"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                }
+              ],
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "worksheets"
+        ],
+        "description": "Returns a list of fields for the worksheet object.",
+        "operationId": "Describe Worksheet object",
+        "summary": "Describe Worksheet object",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     \"https://api.us.workdayspend.com/services/events/v1/worksheets/describe\"\n"
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "Attachment": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/AttachmentBase"
+        }
+      ]
+    },
+    "AttachmentBase": {
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/AttachmentId"
+        },
+        "type": {
+          "$ref": "#/definitions/AttachmentType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "title": "Attachment",
+      "type": "object"
+    },
+    "AttachmentId": {
+      "description": "Attachment identifier string.",
+      "example": 1,
+      "type": "integer"
+    },
+    "AttachmentType": {
+      "description": "Object type, should always be `attachments`.",
+      "example": "attachments",
+      "type": "string"
+    },
+    "Bid": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BidBase"
+        },
+        {
+          "properties": {
+            "attributes": {
+              "$ref": "#/definitions/BidAttributes"
+            },
+            "links": {
+              "$ref": "#/definitions/ResourceLinks"
+            },
+            "relationships": {
+              "$ref": "#/definitions/BidRelationship"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "BidAttributes": {
+      "description": "Bid attributes.",
+      "properties": {
+        "intend_to_bid": {
+          "description": "Identifies whether the supplier intends to bid on the event",
+          "example": true,
+          "readOnly": true,
+          "type": "boolean"
+        },
+        "intend_to_bid_answered_at": {
+          "description": "Identifies the most recent time the supplier updated `intend_to_bid`.",
+          "example": "2021-02-24T09:12:31.000Z",
+          "format": "date-time",
+          "readOnly": true,
+          "type": "string"
+        },
+        "resubmitted_at": {
+          "description": "Identifies the most recent time the supplier submitted their bid.",
+          "example": "2021-02-26T09:12:31.000Z",
+          "format": "date-time",
+          "readOnly": true,
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/BidStatusEnum"
+        },
+        "submitted_at": {
+          "description": "Identifies the first time the supplier submitted their bid.",
+          "example": "2021-02-25T09:12:31.000Z",
+          "format": "date-time",
+          "readOnly": true,
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "BidBase": {
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/BidId"
+        },
+        "type": {
+          "$ref": "#/definitions/BidType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "title": "Bid",
+      "type": "object"
+    },
+    "BidFieldModel": {
+      "allOf": [
+        {
+          "properties": {
+            "type": {
+              "description": "Object type, should always be `bid_fields`.",
+              "example": "bid_fields",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        {
+          "$ref": "#/definitions/DescribeFieldModel"
+        }
+      ]
+    },
+    "BidId": {
+      "description": "Bid identifier string.",
+      "example": 1,
+      "type": "integer"
+    },
+    "BidIncludedResources": {
+      "items": {},
+      "type": "array"
+    },
+    "BidInputFilter": {
+      "properties": {
+        "id_equals": {
+          "description": "Find bids by specific IDs.",
+          "example": [
+            1,
+            2
+          ],
+          "type": "integer"
+        },
+        "intend_to_bid_answered_at_from": {
+          "description": "Return bids with `intend_to_bid` updated on or after the specified timestamp.",
+          "example": "2019-10-29T21:28:46.790Z",
+          "format": "date-time",
+          "type": "string"
+        },
+        "intend_to_bid_answered_at_to": {
+          "description": "Return bids with `intend_to_bid` updated on or before the specified timestamp.",
+          "example": "2019-10-29T21:28:46.790Z",
+          "format": "date-time",
+          "type": "string"
+        },
+        "intend_to_bid_equals": {
+          "description": "Return bids with the specified \"intent to bid\" status.",
+          "type": "boolean"
+        },
+        "intend_to_bid_not_equals": {
+          "description": "Return bids with the specified \"intent to bid\" status not equal to the specified one.",
+          "type": "boolean"
+        },
+        "resubmitted_at_from": {
+          "description": "Return bids with `resubmitted_at` updated on or after the specified timestamp.",
+          "example": "2019-10-29T21:28:46.790Z",
+          "format": "date-time",
+          "type": "string"
+        },
+        "resubmitted_at_to": {
+          "description": "Return bids with `resubmitted_at` updated on or before the specified timestamp.",
+          "example": "2019-10-29T21:28:46.790Z",
+          "format": "date-time",
+          "type": "string"
+        },
+        "status_equals": {
+          "description": "Find bids with specified statuses.",
+          "example": [
+            "awarded",
+            "award_retracted"
+          ],
+          "items": {
+            "$ref": "#/definitions/BidStatusEnum"
+          },
+          "type": "array"
+        },
+        "submitted_at_from": {
+          "description": "Return bids with `submitted_at` updated on or after the specified timestamp.",
+          "example": "2019-10-29T21:28:46.790Z",
+          "format": "date-time",
+          "type": "string"
+        },
+        "submitted_at_to": {
+          "description": "Return bids with `submitted_at` updated on or before the specified timestamp.",
+          "example": "2019-10-29T21:28:46.790Z",
+          "format": "date-time",
+          "type": "string"
+        },
+        "supplier_company_external_id_equals": {
+          "description": "Find bids by specific Supplier Company External IDs.",
+          "example": "SUP-123",
+          "type": "string"
+        },
+        "supplier_company_id_equals": {
+          "description": "Find bids by specific Supplier Company IDs.",
+          "example": 1,
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "BidLineItem": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BidLineItemBase"
+        },
+        {
+          "properties": {
+            "attributes": {
+              "$ref": "#/definitions/BidLineItemAttributes"
+            },
+            "relationships": {
+              "$ref": "#/definitions/BidLineItemRelationship"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "BidLineItemAttributes": {
+      "description": "BidLineItem attributes.",
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "description": "Bid line item cell value.",
+            "x-additionalPropertiesName": "value"
+          },
+          "description": "A hashmap where keys are data identifier strings for the columns in the worksheet,\nand values are cell values. The list of columns only includes supplier mutable columns.\nColumns like title, description can be retrieved using the Line Items API.\n",
+          "properties": {
+            "data_identifier": {
+              "description": "Worksheet column identifier string.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "updated_at": {
+          "description": "Last modification date.",
+          "example": "2019-10-29T21:28:46.790Z",
+          "format": "date-time",
+          "readOnly": true,
+          "type": "string"
+        }
+      },
+      "required": [
+        "data"
+      ],
+      "type": "object"
+    },
+    "BidLineItemBase": {
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/BidLineItemId"
+        },
+        "type": {
+          "$ref": "#/definitions/BidLineItemType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "title": "BidLineItem",
+      "type": "object"
+    },
+    "BidLineItemFieldModel": {
+      "allOf": [
+        {
+          "properties": {
+            "type": {
+              "description": "Object type, should always be `bid_line_item_fields`.",
+              "example": "bid_line_item_fields",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        {
+          "$ref": "#/definitions/DescribeFieldModel"
+        }
+      ]
+    },
+    "BidLineItemId": {
+      "description": "BidLineItem identifier string.",
+      "example": 1,
+      "type": "integer"
+    },
+    "BidLineItemInputFilter": {
+      "properties": {
+        "bid_id_equals": {
+          "description": "Return bid line items of a specific bid.",
+          "example": 1,
+          "type": "integer"
+        },
+        "event_id_equals": {
+          "description": "Return bid line items of a specific event.",
+          "example": 1,
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "BidLineItemRelationship": {
+      "description": "Bid line item relationship.",
+      "properties": {
+        "bid": {
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/BidBase"
+            }
+          },
+          "type": "object"
+        },
+        "event": {
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/EventBase"
+            }
+          },
+          "type": "object"
+        },
+        "line_item": {
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/LineItemBase"
+            }
+          },
+          "type": "object"
+        },
+        "worksheets": {
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/WorksheetBase"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "BidLineItemType": {
+      "description": "Object type, should always be `bid_line_items`.",
+      "example": "bid_line_items",
+      "type": "string"
+    },
+    "BidModel": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BidBase"
+        },
+        {
+          "properties": {
+            "attributes": {
+              "$ref": "#/definitions/BidAttributes"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "BidRelatedResources": {
+      "enum": [
+        "event",
+        "supplier_company"
+      ],
+      "type": "string"
+    },
+    "BidRelationship": {
+      "description": "Bid relationships.",
+      "properties": {
+        "event": {
+          "description": "Event associated with this bid.",
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/EventBase"
+            }
+          },
+          "type": "object"
+        },
+        "supplier_company": {
+          "description": "Supplier Company associated with this bid.",
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/SupplierCompanyBase"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "BidStatusEnum": {
+      "description": "Current bid status.",
+      "enum": [
+        "award_retracted",
+        "awarded",
+        "draft",
+        "rejected",
+        "rejection_retracted",
+        "resubmitted",
+        "revising",
+        "submitted",
+        "unclaimed",
+        "update_requested"
+      ],
+      "example": "unclaimed",
+      "type": "string"
+    },
+    "BidType": {
+      "description": "Object type, should always be `bids`.",
+      "example": "bids",
+      "type": "string"
+    },
+    "CommodityCodeBase": {
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/CommodityCodeId"
+        },
+        "type": {
+          "$ref": "#/definitions/CommodityCodeType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "title": "CommodityCode",
+      "type": "object"
+    },
+    "CommodityCodeId": {
+      "description": "Commodity code identifier string.",
+      "example": 1,
+      "type": "integer"
+    },
+    "CommodityCodeType": {
+      "description": "Object type, should always be `commodity_codes`.",
+      "example": "commodity_codes",
+      "type": "string"
+    },
+    "CustomField": {},
+    "CustomFieldBase": {
+      "properties": {
+        "name": {
+          "description": "Custom field name.",
+          "example": "My Custom Field",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "CustomFieldCheckbox": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/CustomFieldBase"
+        },
+        {
+          "properties": {
+            "value": {
+              "example": true,
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "title": "Checkbox"
+    },
+    "CustomFieldCurrency": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/CustomFieldBase"
+        },
+        {
+          "properties": {
+            "value": {
+              "description": "A currency value represented as an integer. The maximum value is 9,007,199,254,740,991.",
+              "format": "integer"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "title": "Currency"
+    },
+    "CustomFieldDate": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/CustomFieldBase"
+        },
+        {
+          "properties": {
+            "value": {
+              "description": "A date value.",
+              "format": "date",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "title": "Date"
+    },
+    "CustomFieldDecimal": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/CustomFieldBase"
+        },
+        {
+          "properties": {
+            "value": {
+              "description": "A decimal value represented as a number with floating point.",
+              "format": "decimal",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "title": "Decimal"
+    },
+    "CustomFieldEnum": {
+      "description": "Internal name and meaning of each field.",
+      "enum": [
+        "Checkbox",
+        "File",
+        "Short Text",
+        "Paragraph",
+        "Date",
+        "Integer",
+        "Currency",
+        "Decimal",
+        "Single Select",
+        "Multiple Select",
+        "URL",
+        "Lookup",
+        "Related"
+      ],
+      "example": "Short Text",
+      "type": "string"
+    },
+    "CustomFieldEnumExtended": {
+      "description": "Internal name and meaning of each field.",
+      "enum": [
+        "Checkbox",
+        "File",
+        "Short Text",
+        "Paragraph",
+        "Date",
+        "Integer",
+        "Currency",
+        "Decimal",
+        "Single Select",
+        "Multiple Select",
+        "URL",
+        "Lookup",
+        "Related",
+        "Single Relationship",
+        "Multiple Relationship"
+      ],
+      "example": "Short Text",
+      "type": "string"
+    },
+    "CustomFieldInteger": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/CustomFieldBase"
+        },
+        {
+          "properties": {
+            "value": {
+              "description": "An integer value. The maximum value is 9,007,199,254,740,991.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "title": "Integer"
+    },
+    "CustomFieldLookup": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/CustomFieldBase"
+        },
+        {
+          "properties": {
+            "value": {
+              "description": "A value from a customer-provided lookup data source.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "title": "Lookup"
+    },
+    "CustomFieldMultipleSelect": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/CustomFieldBase"
+        },
+        {
+          "properties": {
+            "value": {
+              "description": "A list of values from a predefined list of possible options.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "title": "Multiple Select"
+    },
+    "CustomFieldParagraph": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/CustomFieldBase"
+        },
+        {
+          "properties": {
+            "value": {
+              "description": "A longer text paragraph.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "title": "Paragraph"
+    },
+    "CustomFieldRelated": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/CustomFieldBase"
+        },
+        {
+          "properties": {
+            "value": {
+              "description": "A value related to the lookup custom field value, retrieved from the same data source object.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "title": "Related"
+    },
+    "CustomFieldShortText": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/CustomFieldBase"
+        },
+        {
+          "properties": {
+            "value": {
+              "description": "A short text (usually under 255 characters).",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "title": "Short Text"
+    },
+    "CustomFieldSingleSelect": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/CustomFieldBase"
+        },
+        {
+          "properties": {
+            "value": {
+              "description": "A single value from a predefined list of possible options.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "title": "Single Select"
+    },
+    "CustomFieldURL": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/CustomFieldBase"
+        },
+        {
+          "properties": {
+            "value": {
+              "description": "URL string.",
+              "format": "url",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "title": "URL"
+    },
+    "DescribeFieldAttributes": {
+      "description": "Describe field attributes.",
+      "properties": {
+        "custom_field": {
+          "description": "Flag for determining if this is a user created custom field or an internal system field.",
+          "example": false,
+          "type": "boolean"
+        },
+        "data_type": {
+          "$ref": "#/definitions/OpenApiEnum"
+        },
+        "name": {
+          "description": "Describe field name.",
+          "example": "field_name",
+          "maxLength": 255,
+          "type": "string"
+        },
+        "type_description": {
+          "$ref": "#/definitions/CustomFieldEnum"
+        }
+      },
+      "type": "object"
+    },
+    "DescribeFieldBase": {
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/DescribeFieldId"
+        },
+        "type": {
+          "$ref": "#/definitions/DescribeFieldType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "title": "DescribeFieldModel",
+      "type": "object"
+    },
+    "DescribeFieldId": {
+      "description": "Field identifier string.",
+      "example": "field_name",
+      "type": "string"
+    },
+    "DescribeFieldModel": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/DescribeFieldBase"
+        },
+        {
+          "properties": {
+            "attributes": {
+              "$ref": "#/definitions/DescribeFieldAttributes"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "DescribeFieldType": {
+      "description": "Object type, should always be `describe_fields`.",
+      "example": "describe_fields",
+      "type": "string"
+    },
+    "Error": {
+      "properties": {
+        "detail": {
+          "description": "A human-readable explanation specific to this occurrence of the problem.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Errors": {
+      "properties": {
+        "errors": {
+          "items": {
+            "$ref": "#/definitions/Error"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "Event": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/EventBase"
+        },
+        {
+          "properties": {
+            "attributes": {
+              "$ref": "#/definitions/EventAttributes"
+            },
+            "links": {
+              "$ref": "#/definitions/ResourceLinks"
+            },
+            "relationships": {
+              "$ref": "#/definitions/EventRelationship"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "EventAttributes": {
+      "description": "Event attributes.",
+      "properties": {
+        "bid_submission_deadline": {
+          "description": "Identifies the last point in time when suppliers are allowed to make bids.",
+          "example": "2019-09-13T11:12:31.000Z",
+          "format": "date-time",
+          "readOnly": true,
+          "type": "string"
+        },
+        "closed_at": {
+          "description": "Date and time when event was closed.",
+          "example": "2019-09-23T11:12:31.000Z",
+          "format": "date-time",
+          "readOnly": true,
+          "type": "string"
+        },
+        "created_at": {
+          "description": "Date and time when event was created.",
+          "example": "2019-09-23T11:12:31.000Z",
+          "format": "date-time",
+          "readOnly": true,
+          "type": "string"
+        },
+        "custom_fields": {
+          "description": "Custom field values. Note: custom fields of type File can only be accessed through the user interface, they will be only exposed as `null` in the public API.",
+          "items": {
+            "$ref": "#/definitions/CustomField"
+          },
+          "type": "array"
+        },
+        "duplication_state": {
+          "$ref": "#/definitions/EventDuplicationStateEnum"
+        },
+        "event_type": {
+          "$ref": "#/definitions/EventTypeEnum"
+        },
+        "external_id": {
+          "description": "Event ID in your internal database.",
+          "example": "1234-5678-abcd-efgh",
+          "type": "string"
+        },
+        "instant_notifications": {
+          "description": "When set to true, notification emails will be sent immediately;\nwhen false - notifications will be deliverd once every 3 hours in a digest form.\n",
+          "type": "boolean"
+        },
+        "is_public": {
+          "description": "Identifies whether event is accessible for suppliers by self-registration.",
+          "example": false,
+          "readOnly": true,
+          "type": "boolean"
+        },
+        "late_bids": {
+          "description": "Identifies whether late bid submissions are allowed.",
+          "example": true,
+          "type": "boolean"
+        },
+        "published_at": {
+          "description": "Date and time when event was published.",
+          "example": "2019-09-23T11:12:31.000Z",
+          "format": "date-time",
+          "readOnly": true,
+          "type": "string"
+        },
+        "request_type": {
+          "description": "Request type.",
+          "example": "RFP",
+          "readOnly": true,
+          "type": "string"
+        },
+        "restricted": {
+          "description": "Restricted events are invitation only even when posted on the public site.",
+          "example": false,
+          "readOnly": false,
+          "type": "boolean"
+        },
+        "revise_bids": {
+          "description": "Identifies whether suppliers are allowed to re-submit bids.",
+          "example": false,
+          "type": "boolean"
+        },
+        "spend_amount": {
+          "description": "Actual spend amount used to calculate savings and keep reporting up to date.",
+          "example": 12113,
+          "format": "double",
+          "type": "number"
+        },
+        "state": {
+          "$ref": "#/definitions/EventStateEnum"
+        },
+        "supplier_question_deadline": {
+          "description": "Questions from suppliers will no longer be accepted after this point in time.",
+          "example": "2019-09-12T05:12:31.000Z",
+          "format": "date-time",
+          "readOnly": true,
+          "type": "string"
+        },
+        "supplier_rsvp_deadline": {
+          "description": "RSVPs will no longer be accepted after this point in time.",
+          "example": "2019-09-11T09:12:31.000Z",
+          "format": "date-time",
+          "readOnly": true,
+          "type": "string"
+        },
+        "title": {
+          "description": "An event title.",
+          "example": "New Event",
+          "type": "string"
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "type": "object"
+    },
+    "EventBase": {
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/EventId"
+        },
+        "type": {
+          "$ref": "#/definitions/EventType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "title": "Event",
+      "type": "object"
+    },
+    "EventCreate": {
+      "properties": {
+        "attributes": {
+          "description": "Event creation attributes.",
+          "properties": {
+            "duplicate_bids": {
+              "description": "Identifies whether bids should be duplicated.",
+              "type": "boolean"
+            },
+            "external_id": {
+              "description": "Event ID in your internal database.",
+              "type": "string"
+            },
+            "is_public": {
+              "description": "Identifies whether event should be created as public or private.",
+              "type": "boolean"
+            },
+            "restricted": {
+              "description": "Restricted events are invitation only even when posted on the public site.",
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        },
+        "relationships": {
+          "description": "Event relationships.",
+          "properties": {
+            "event_template": {
+              "description": "An event template used to create this event.",
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/EventTemplateBase"
+                }
+              },
+              "type": "object"
+            },
+            "project": {
+              "description": "Project associated with this event.",
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/ProjectBase"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "required": [
+            "event_template",
+            "project"
+          ],
+          "type": "object"
+        },
+        "type": {
+          "$ref": "#/definitions/EventType"
+        }
+      },
+      "required": [
+        "type",
+        "relationships"
+      ],
+      "type": "object"
+    },
+    "EventDuplicationStateEnum": {
+      "description": "Event duplication state:\n  * `scheduled` - duplication is scheduled, but not yet started;\n  * `started` - duplication started, but not yet finished;\n  * `finished` - duplication completed;\n  * `failed` - there was an error duplicating relationships.\n",
+      "enum": [
+        "scheduled",
+        "started",
+        "finished",
+        "failed"
+      ],
+      "example": "finished",
+      "readOnly": true,
+      "type": "string"
+    },
+    "EventExternal": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/EventBase"
+        },
+        {
+          "properties": {
+            "attributes": {
+              "$ref": "#/definitions/EventExternalAttributes"
+            },
+            "links": {
+              "$ref": "#/definitions/ResourceLinks"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "EventExternalAttributes": {
+      "description": "Event attributes.",
+      "properties": {
+        "external_id": {
+          "description": "Event ID in your internal database.",
+          "example": "1234-5678-abcd-efgh",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "EventFieldModel": {
+      "allOf": [
+        {
+          "properties": {
+            "type": {
+              "description": "Object type, should always be `event_fields`.",
+              "example": "event_fields",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        {
+          "$ref": "#/definitions/DescribeFieldModel"
+        }
+      ]
+    },
+    "EventId": {
+      "description": "Event identifier string.",
+      "example": 1,
+      "type": "integer"
+    },
+    "EventInputFilter": {
+      "properties": {
+        "bid_submission_deadline_empty": {
+          "description": "Return events with bid submission deadline not set.",
+          "example": true,
+          "type": "boolean"
+        },
+        "bid_submission_deadline_from": {
+          "description": "Return events with bid submission deadline on or after the specified date.",
+          "format": "date",
+          "type": "string"
+        },
+        "bid_submission_deadline_not_empty": {
+          "description": "Return events with bid submission deadline set to a non-empty value.",
+          "example": false,
+          "type": "boolean"
+        },
+        "bid_submission_deadline_to": {
+          "description": "Return events with bid submission deadline on or before the specified date.",
+          "format": "date",
+          "type": "string"
+        },
+        "closed_at_empty": {
+          "description": "Return events without closed timestamp.",
+          "example": true,
+          "type": "boolean"
+        },
+        "closed_at_from": {
+          "description": "Return events closed on or after the specified timestamp.",
+          "example": "2019-10-29T21:28:46.790Z",
+          "format": "date",
+          "type": "string"
+        },
+        "closed_at_not_empty": {
+          "description": "Return events with closed timestamp.",
+          "example": false,
+          "type": "boolean"
+        },
+        "closed_at_to": {
+          "description": "Return events closed on or before the specified timestamp.",
+          "example": "2019-10-29T21:28:46.790Z",
+          "format": "date",
+          "type": "string"
+        },
+        "created_at_from": {
+          "description": "Return events created on or after the specified timestamp.",
+          "example": "2019-10-29T21:28:46.790Z",
+          "format": "date",
+          "type": "string"
+        },
+        "created_at_to": {
+          "description": "Return events created on or before the specified timestamp.",
+          "example": "2019-10-29T21:28:46.790Z",
+          "format": "date",
+          "type": "string"
+        },
+        "event_type_equals": {
+          "description": "Find events with specified types.",
+          "example": [
+            "RFP",
+            "AUCTION"
+          ],
+          "items": {
+            "$ref": "#/definitions/EventTypeEnum"
+          },
+          "type": "array"
+        },
+        "external_id_empty": {
+          "description": "Return contracts with `external_id` blank.",
+          "example": true,
+          "type": "boolean"
+        },
+        "external_id_equals": {
+          "description": "Find contracts by a specific external ID.",
+          "example": "SUP-123",
+          "type": "string"
+        },
+        "external_id_not_empty": {
+          "description": "Return contracts with non-blank `external_id`.",
+          "example": false,
+          "type": "boolean"
+        },
+        "external_id_not_equals": {
+          "description": "Find contracts excluding the one with the specified external ID.",
+          "example": "SUP-123",
+          "type": "string"
+        },
+        "published_at_empty": {
+          "description": "Return events without published timestamp.",
+          "example": true,
+          "type": "boolean"
+        },
+        "published_at_from": {
+          "description": "Return events published on or after the specified timestamp.",
+          "example": "2019-10-29T21:28:46.790Z",
+          "format": "date",
+          "type": "string"
+        },
+        "published_at_not_empty": {
+          "description": "Return events with published timestamp.",
+          "example": false,
+          "type": "boolean"
+        },
+        "published_at_to": {
+          "description": "Return events published on or before the specified timestamp.",
+          "example": "2019-10-29T21:28:46.790Z",
+          "format": "date",
+          "type": "string"
+        },
+        "request_type_equals": {
+          "description": "Find events with specified request types.",
+          "example": [
+            "Rfp",
+            "RFQ"
+          ],
+          "items": {
+            "description": "Event request type.",
+            "example": "RFQ",
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "spend_amount_empty": {
+          "description": "Return events with spend amount not set.",
+          "example": true,
+          "type": "boolean"
+        },
+        "spend_amount_from": {
+          "description": "Return events with spend amount equal or greater than the specified amount.",
+          "format": "double",
+          "type": "number"
+        },
+        "spend_amount_not_empty": {
+          "description": "Return events with spend amount set to a non-empty value.",
+          "example": false,
+          "type": "boolean"
+        },
+        "spend_amount_to": {
+          "description": "Return events with spend amount equal or less than the specified amount.",
+          "format": "double",
+          "type": "number"
+        },
+        "spend_category_id_equals": {
+          "description": "Find events using the specified Spend Category IDs",
+          "example": [
+            1,
+            2
+          ],
+          "items": {
+            "type": "integer"
+          },
+          "type": "array"
+        },
+        "state_equals": {
+          "description": "Find events with specified states.",
+          "example": [
+            "draft",
+            "scheduled"
+          ],
+          "items": {
+            "$ref": "#/definitions/EventStateEnum"
+          },
+          "type": "array"
+        },
+        "supplier_question_deadline_empty": {
+          "description": "Return events with supplier questions deadline not set.",
+          "example": true,
+          "type": "boolean"
+        },
+        "supplier_question_deadline_from": {
+          "description": "Return events with supplier questions deadline on or after the specified date.",
+          "format": "date",
+          "type": "string"
+        },
+        "supplier_question_deadline_not_empty": {
+          "description": "Return events with supplier questions deadline set to a non-empty value.",
+          "example": false,
+          "type": "boolean"
+        },
+        "supplier_question_deadline_to": {
+          "description": "Return events with supplier questions deadline on or before the specified date.",
+          "format": "date",
+          "type": "string"
+        },
+        "supplier_rsvp_deadline_empty": {
+          "description": "Return events with supplier RSVP deadline not set.",
+          "example": true,
+          "type": "boolean"
+        },
+        "supplier_rsvp_deadline_from": {
+          "description": "Return events with supplier RSVP deadline on or after the specified date.",
+          "format": "date",
+          "type": "string"
+        },
+        "supplier_rsvp_deadline_not_empty": {
+          "description": "Return events with supplier RSVP deadline set to a non-empty value.",
+          "example": false,
+          "type": "boolean"
+        },
+        "supplier_rsvp_deadline_to": {
+          "description": "Return events with supplier RSVP deadline on or before the specified date.",
+          "format": "date",
+          "type": "string"
+        },
+        "title_contains": {
+          "description": "Return events with title containing the specified string.",
+          "type": "string"
+        },
+        "title_not_contains": {
+          "description": "Return events with title not containing the specified string.",
+          "type": "string"
+        },
+        "updated_at_from": {
+          "description": "Return events updated on or after the specified timestamp.",
+          "example": "2019-10-29T21:28:46.790Z",
+          "format": "date-time",
+          "type": "string"
+        },
+        "updated_at_to": {
+          "description": "Return events updated on or before the specified timestamp.",
+          "example": "2019-10-29T21:28:46.790Z",
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "EventRelationship": {
+      "description": "Event relationships.",
+      "properties": {
+        "attachments": {
+          "description": "A list of attachments attached to this event.",
+          "items": {
+            "$ref": "#/definitions/AttachmentBase"
+          },
+          "type": "array"
+        },
+        "commodity_codes": {
+          "description": "A list of commodity codes added to this event.",
+          "items": {
+            "$ref": "#/definitions/CommodityCodeBase"
+          },
+          "type": "array"
+        },
+        "event_template": {
+          "description": "An event template used to create this event.",
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/EventTemplateBase"
+            }
+          },
+          "type": "object"
+        },
+        "project": {
+          "description": "Project associated with this event.",
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/ProjectBase"
+            }
+          },
+          "type": "object"
+        },
+        "spend_category": {
+          "description": "Spend category associated with this event.",
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/SpendCategoryBase"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "EventStateEnum": {
+      "description": "Current event state.",
+      "enum": [
+        "draft",
+        "scheduled",
+        "published",
+        "live_editing",
+        "closed",
+        "canceled"
+      ],
+      "example": "draft",
+      "readOnly": true,
+      "type": "string"
+    },
+    "EventTemplateAttributes": {
+      "description": "Event template attributes.",
+      "properties": {
+        "event_type": {
+          "$ref": "#/definitions/EventTypeEnum"
+        },
+        "title": {
+          "description": "Event template title.",
+          "example": "My Event Template",
+          "maxLength": 255,
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "shortcode"
+      ],
+      "type": "object"
+    },
+    "EventTemplateBase": {
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/EventTemplateId"
+        },
+        "type": {
+          "$ref": "#/definitions/EventTemplateType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "title": "EventTemplate",
+      "type": "object"
+    },
+    "EventTemplateId": {
+      "description": "Event template identifier string.",
+      "example": 1,
+      "type": "integer"
+    },
+    "EventTemplateModel": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/EventTemplateBase"
+        },
+        {
+          "properties": {
+            "attributes": {
+              "$ref": "#/definitions/EventTemplateAttributes"
+            },
+            "links": {
+              "$ref": "#/definitions/ResourceLinks"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "EventTemplateType": {
+      "description": "Object type, should always be `event_templates`.",
+      "example": "event_templates",
+      "type": "string"
+    },
+    "EventType": {
+      "description": "Object type, should always be `events`.",
+      "example": "events",
+      "type": "string"
+    },
+    "EventTypeEnum": {
+      "description": "Event type.",
+      "enum": [
+        "RFP",
+        "AUCTION",
+        "AUCTION_WITH_LOTS",
+        "AUCTION_LOT",
+        "PERFORMANCE_REVIEW_EVENT",
+        "PERFORMANCE_REVIEW_SCORE_CARD_ONLY_EVENT",
+        "SUPPLIER_REVIEW_EVENT",
+        "SUPPLIER_REVIEW_MASTER_EVENT"
+      ],
+      "example": "RFP",
+      "type": "string"
+    },
+    "EventUpdate": {
+      "properties": {
+        "attributes": {
+          "$ref": "#/definitions/EventAttributes"
+        },
+        "id": {
+          "$ref": "#/definitions/EventId"
+        },
+        "type": {
+          "$ref": "#/definitions/EventType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "type": "object"
+    },
+    "ExternalSupplierCompanyBase": {
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/ExternalSupplierCompanyId"
+        },
+        "type": {
+          "$ref": "#/definitions/ExternalSupplierCompanyType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "title": "ExternalSupplierCompany",
+      "type": "object"
+    },
+    "ExternalSupplierCompanyId": {
+      "description": "Supplier company external identifier string.",
+      "example": 1,
+      "type": "integer"
+    },
+    "ExternalSupplierCompanyType": {
+      "description": "Object type, should always be `supplier_companies`.",
+      "example": "supplier_companies",
+      "type": "string"
+    },
+    "ExternalSupplierContactBase": {
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/SupplierContactExternalId"
+        },
+        "type": {
+          "$ref": "#/definitions/SupplierContactType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "title": "ExternalSupplierContact",
+      "type": "object"
+    },
+    "LineItem": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/LineItemBase"
+        },
+        {
+          "properties": {
+            "attributes": {
+              "$ref": "#/definitions/LineItemAttributes"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "LineItemAttributes": {
+      "description": "LineItem attributes.",
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "description": "Worksheet line item cell value.",
+            "x-additionalPropertiesName": "value"
+          },
+          "description": "A hashmap where keys are data identifier strings for the columns in the worksheet,\nand values are cell values.\n",
+          "properties": {
+            "data_identifier": {
+              "description": "Worksheet column identifier string.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "required": [
+        "data"
+      ],
+      "type": "object"
+    },
+    "LineItemBase": {
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/LineItemId"
+        },
+        "type": {
+          "$ref": "#/definitions/LineItemType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "title": "LineItem",
+      "type": "object"
+    },
+    "LineItemCreate": {
+      "properties": {
+        "attributes": {
+          "$ref": "#/definitions/LineItemAttributes"
+        },
+        "relationships": {
+          "$ref": "#/definitions/LineItemRelationship"
+        },
+        "type": {
+          "$ref": "#/definitions/LineItemType"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "type": "object"
+    },
+    "LineItemId": {
+      "description": "LineItem identifier string.",
+      "example": 1,
+      "type": "integer"
+    },
+    "LineItemRelationship": {
+      "description": "Line item relationship.",
+      "properties": {
+        "worksheet": {
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/WorksheetBase"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "LineItemType": {
+      "description": "Object type, should always be `line_items`.",
+      "example": "line_items",
+      "type": "string"
+    },
+    "LineItemUpdate": {
+      "properties": {
+        "attributes": {
+          "$ref": "#/definitions/LineItemAttributes"
+        },
+        "id": {
+          "$ref": "#/definitions/LineItemId"
+        },
+        "relationships": {
+          "$ref": "#/definitions/LineItemRelationship"
+        },
+        "type": {
+          "$ref": "#/definitions/LineItemType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "type": "object"
+    },
+    "NextPageLink": {
+      "properties": {
+        "next": {
+          "description": "Link to the next results page.",
+          "format": "url",
+          "type": "string",
+          "x-nullable": true
+        }
+      },
+      "type": "object"
+    },
+    "OpenApiEnum": {
+      "description": "OpenAPI data type.",
+      "enum": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "array",
+        "object"
+      ],
+      "example": "string",
+      "type": "string"
+    },
+    "PageInput": {
+      "properties": {
+        "size": {
+          "description": "The number of results returned per page. Default is `10` and max is `100`.",
+          "example": "25",
+          "format": "integer",
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "Pagination": {
+      "properties": {
+        "links": {
+          "$ref": "#/definitions/PaginationLinks"
+        },
+        "meta": {
+          "description": "Result set metadata.",
+          "properties": {
+            "count": {
+              "description": "Number of pages in the result set.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "PaginationLinks": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/SelfLink"
+        },
+        {
+          "$ref": "#/definitions/NextPageLink"
+        },
+        {
+          "$ref": "#/definitions/PrevPageLink"
+        }
+      ],
+      "description": "List of related links.",
+      "type": "object"
+    },
+    "PrevPageLink": {
+      "properties": {
+        "prev": {
+          "description": "Link to the previous results page.",
+          "format": "url",
+          "type": "string",
+          "x-deprecated": true,
+          "x-nullable": true
+        }
+      },
+      "type": "object"
+    },
+    "Project": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ProjectBase"
+        }
+      ]
+    },
+    "ProjectBase": {
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/ProjectId"
+        },
+        "type": {
+          "$ref": "#/definitions/ProjectType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "title": "Project",
+      "type": "object"
+    },
+    "ProjectId": {
+      "description": "Project identifier string.",
+      "example": 1,
+      "type": "integer"
+    },
+    "ProjectType": {
+      "description": "Object type, should always be `projects`.",
+      "example": "projects",
+      "type": "string"
+    },
+    "ResourceLinks": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/SelfLink"
+        }
+      ],
+      "description": "List of related links.",
+      "type": "object"
+    },
+    "SelfLink": {
+      "properties": {
+        "self": {
+          "description": "Normalized link to the resource.",
+          "format": "url",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "SpendCategory": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/SpendCategoryBase"
+        },
+        {
+          "properties": {
+            "attributes": {
+              "$ref": "#/definitions/SpendCategoryAttributes"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "SpendCategoryAttributes": {
+      "description": "Spend category attributes.",
+      "properties": {
+        "external_id": {
+          "$ref": "#/definitions/SpendCategoryExternalId"
+        },
+        "name": {
+          "$ref": "#/definitions/SpendCategoryName"
+        },
+        "usages": {
+          "$ref": "#/definitions/SpendCategoryUsages"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "SpendCategoryBase": {
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/SpendCategoryId"
+        },
+        "type": {
+          "$ref": "#/definitions/SpendCategoryType"
+        }
+      },
+      "required": [
+        "name",
+        "id"
+      ],
+      "title": "SpendCategory",
+      "type": "object"
+    },
+    "SpendCategoryExternalId": {
+      "description": "Spend category external identifier string.",
+      "maxLength": 255,
+      "type": "string"
+    },
+    "SpendCategoryId": {
+      "description": "Spend category identifier string.",
+      "example": 1,
+      "type": "integer"
+    },
+    "SpendCategoryName": {
+      "description": "Spend category name.",
+      "maxLength": 255,
+      "type": "string"
+    },
+    "SpendCategoryType": {
+      "description": "Object type, should always be `spend_categories`.",
+      "example": "spend_categories",
+      "type": "string"
+    },
+    "SpendCategoryUsages": {
+      "description": "Spend category usages. Only spend categories with `procurement` usage can be used for requisitions.",
+      "items": {
+        "enum": [
+          "procurement",
+          "expense",
+          "ad_hoc_payment",
+          "supplier_invoice"
+        ],
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "SupplierCompany": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/SupplierCompanyBase"
+        }
+      ]
+    },
+    "SupplierCompanyBase": {
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/SupplierCompanyId"
+        },
+        "type": {
+          "$ref": "#/definitions/SupplierCompanyType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "title": "SupplierCompany",
+      "type": "object"
+    },
+    "SupplierCompanyExternal": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/SupplierCompanyBase"
+        },
+        {
+          "properties": {
+            "attributes": {
+              "$ref": "#/definitions/SupplierCompanyExternalAttributes"
+            },
+            "links": {
+              "$ref": "#/definitions/ResourceLinks"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "SupplierCompanyExternalAttributes": {
+      "description": "Supplier company attributes.",
+      "properties": {
+        "external_id": {
+          "description": "Supplier ID in your internal database.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "SupplierCompanyExternalId": {
+      "description": "Supplier company external identifier.",
+      "example": "1234-5678-abcd-efgh",
+      "type": "integer"
+    },
+    "SupplierCompanyId": {
+      "description": "Supplier company identifier string.",
+      "example": 1,
+      "type": "integer"
+    },
+    "SupplierCompanyType": {
+      "description": "Object type, should always be `supplier_companies`.",
+      "example": "supplier_companies",
+      "type": "string"
+    },
+    "SupplierContact": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/SupplierContactBase"
+        }
+      ]
+    },
+    "SupplierContactBase": {
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/SupplierContactId"
+        },
+        "type": {
+          "$ref": "#/definitions/SupplierContactType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "title": "SupplierContact",
+      "type": "object"
+    },
+    "SupplierContactExternalId": {
+      "description": "Supplier contact external identifier.",
+      "example": "1234-5678-abcd-efgh",
+      "type": "string"
+    },
+    "SupplierContactId": {
+      "description": "Supplier contact identifier string.",
+      "example": 1,
+      "type": "integer"
+    },
+    "SupplierContactType": {
+      "description": "Object type, should always be `supplier_contacts`.",
+      "example": "supplier_contacts",
+      "type": "string"
+    },
+    "WorksheetAttributes": {
+      "description": "Worksheet attributes.",
+      "properties": {
+        "budget": {
+          "description": "Budget for worksheet.",
+          "example": 11.11,
+          "format": "double",
+          "type": "number"
+        },
+        "columns": {
+          "description": "Column field values.",
+          "items": {
+            "$ref": "#/definitions/WorksheetColumnModel"
+          },
+          "type": "array"
+        },
+        "notes": {
+          "description": "Notes specific to worksheet.",
+          "type": "string"
+        },
+        "title": {
+          "description": "Worksheet title.",
+          "maxLength": 255,
+          "type": "string"
+        },
+        "updated_at": {
+          "description": "Last modification date.",
+          "example": "2019-10-29T21:28:46.790Z",
+          "format": "date-time",
+          "readOnly": true,
+          "type": "string"
+        },
+        "worksheet_type": {
+          "description": "Worksheet type.",
+          "enum": [
+            "standard",
+            "goods",
+            "services"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "type": "object"
+    },
+    "WorksheetBase": {
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/WorksheetId"
+        },
+        "type": {
+          "$ref": "#/definitions/WorksheetType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "title": "Worksheet",
+      "type": "object"
+    },
+    "WorksheetColumnId": {
+      "description": "Column identifier string.",
+      "example": 1,
+      "type": "string"
+    },
+    "WorksheetColumnModel": {
+      "properties": {
+        "data_identifier": {
+          "description": "Data identifier to be used when operating on line items.",
+          "example": "c1234",
+          "type": "string"
+        },
+        "id": {
+          "$ref": "#/definitions/WorksheetColumnId"
+        },
+        "mapping_key": {
+          "description": "Column field mapping key.",
+          "example": "TITLE",
+          "type": "string"
+        },
+        "name": {
+          "description": "Column field name.",
+          "example": "My Worksheet Column Field",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "WorksheetFieldModel": {
+      "allOf": [
+        {
+          "properties": {
+            "type": {
+              "description": "Object type, should always be `worksheet_fields`.",
+              "example": "worksheet_fields",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        {
+          "$ref": "#/definitions/DescribeFieldModel"
+        }
+      ]
+    },
+    "WorksheetId": {
+      "description": "Worksheet identifier string.",
+      "example": 1,
+      "type": "integer"
+    },
+    "WorksheetModel": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/WorksheetBase"
+        },
+        {
+          "properties": {
+            "attributes": {
+              "$ref": "#/definitions/WorksheetAttributes"
+            },
+            "links": {
+              "$ref": "#/definitions/ResourceLinks"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "WorksheetType": {
+      "description": "Object type, should always be `worksheets`.",
+      "example": "worksheets",
+      "type": "string"
+    }
+  },
+  "securityDefinitions": {
+    "api_key": {
+      "description": "Company API key.",
+      "in": "header",
+      "name": "X-Api-Key",
+      "type": "apiKey"
+    },
+    "user_email": {
+      "description": "User email.",
+      "in": "header",
+      "name": "X-User-Email",
+      "type": "apiKey"
+    },
+    "user_token": {
+      "description": "User token.",
+      "in": "header",
+      "name": "X-User-Token",
+      "type": "apiKey"
+    }
+  },
+  "security": [
+    {
+      "api_key": []
+    }
+  ],
+  "tags": [
+    {
+      "description": "Workday Strategic Sourcing API Support: Please have a Named Support Contact from your company submit a support case in Workday's Customer Center.\n",
+      "name": "support",
+      "x-displayName": "Customer Support"
+    },
+    {
+      "description": "### US Region\n| Environment       | US region Base URI                                         |\n|-------------------|------------------------------------------------------------|\n| **Production**    | https://api.us.workdayspend.com/services/events/v1         |\n| **Sandbox**       | https://api.sandbox.us.workdayspend.com/services/events/v1 |\n\n### EU Region\n| Environment       | EU region Base URI                                                |\n|-------------------|-------------------------------------------------------------------|\n| **Production**    | https://api.eu.workdayspend.com/services/events/v1          |\n| **Sandbox**       | https://api.sandbox.eu.workdayspend.com/services/events/v1  |\n\n### CA Region\n| Environment       | CA region Base URI                                                |\n|-------------------|-------------------------------------------------------------------|\n| **Production**    | https://api.ca.workdayspend.com/services/events/v1          |\n| **Sandbox**       | https://api.sandbox.ca.workdayspend.com/services/events/v1  |\n",
+      "name": "servers",
+      "x-displayName": "Servers"
+    },
+    {
+      "description": "The API conforms to the [JSON API Specification](https://jsonapi.org).\n\nThe current version of this service is indicated by the `X-Api-Version` header.\n\nSample version header: `X-Api-Version: 1.2`.\n",
+      "name": "api_specification",
+      "x-displayName": "API Specification"
+    },
+    {
+      "description": "Our API adheres to the ISO 8601 standard when accepting and formatting Date and Time fields. All Date and Time fields returned by this API will be in the **UTC** timezone.\n\nDate and Time fields sent to this API can be in any timezone, provided they adhere to the ISO 8601 standard.\n",
+      "name": "date_and_time_fields",
+      "x-displayName": "Date and Time Fields"
+    },
+    {
+      "description": "The Workday Strategic Sourcing API uses API keys to authenticate requests. Every request\nwill require all 3 HTTP headers:\n\n| HTTP Header       | Description               |\n|-------------------|---------------------------|\n| **X-Api-Key**     | a company-wide API key    |\n| **X-User-Token**  | a user-specific API token |\n| **X-User-Email**  | user email                |\n\nYou can generate all of those from the _API tokens_ section of your _Profile_ page.\n\nYour API keys carry many privileges, so be sure to keep them secure! Do not share your secret API\nkeys in publicly accessible areas such as GitHub, client-side code, and so forth.\n\nAll API requests must be made over [HTTPS](http://en.wikipedia.org/wiki/HTTP_Secure). Calls made\nover plain HTTP will fail. API requests without authentication will also fail.\n",
+      "name": "authentication",
+      "x-displayName": "Authentication"
+    },
+    {
+      "description": "Rate limit windows are per second and are shared by all API Keys for a company.\n\nThe rate limit is 5 requests per second.\n\nWhen request submissions exceed the limits, the limit-exceeding requests return `429 Too Many Requests` error responses to the client.\n\nUpon receiving a `429` response, it is recommended to retry the request in compliance with the rate limit. One example would be to add a sleep function for 1 second and retry.\n",
+      "name": "rate_limiting",
+      "x-displayName": "Rate Limiting"
+    },
+    {
+      "description": "The results can be filtered to a subset of the total set of results using `filter` query parameters.\n\nEndpoints that support filtering will include usage details in the Query Parameters section for the resource.\n\nMost filters that end in `equals` support a Query Parameter array format to filter by multiple values.\n\nExample:\n```\n?filter[status_equals][]=submitted&filter[status_equals][]=resubmitted\n```\n",
+      "name": "filters",
+      "x-displayName": "Filters"
+    },
+    {
+      "description": "Paginated endpoints may return a subset of the total results for a `GET` request that returns multiple resources. Endpoints that support pagination will include usage details in the Query Parameters section for the resource.\n\nThe paginated results can be configured using the `page` query parameter to configure the number of returned results. The default pagination size is 10 results and the maximum pagination size is 100 results per request.\n\nEndpoints that support pagination may return \"self\" and \"next\" sections within the \"links\" section that navigate to the current and next pages respectively.\n\n\n### Example Paginated Request\n\n#### Request Query Parameter Format\n```\n/projects?page[size]=25\n```\n\n#### Response Schema\nThe paginated response will also include the following schema\n\n<SchemaDefinition schemaRef=\"#/components/schemas/Pagination\" exampleRef=\"#/components/examples/Pagination\" />\n",
+      "name": "pagination",
+      "x-displayName": "Pagination"
+    },
+    {
+      "description": "The `external_id` field exists on many of the Workday Strategic Sourcing resources. This optional and mutable extension is intended to store foreign keys of the corresponding resource from a third party system. **These IDs are not considered Sourcing Data and may be logged in external systems. Do not include any sensitive or personal data in IDs.**\n\nThe purpose of external IDs is to:\n\n* Prevent duplicate record creation\n* Allow resources in Workday Strategic Sourcing and a third party system to share the same identifier\n* Allow for records to be queried or updated without requiring knowledge of the Workday Strategic Sourcing generated IDs\n",
+      "name": "external_ids",
+      "x-displayName": "External Identifiers (IDs)"
+    },
+    {
+      "description": "Use the events API to create, update, and query the events in Workday Strategic Sourcing.\n\n## Event Object\n\n<SchemaDefinition schemaRef=\"#/components/schemas/Event\" exampleRef=\"#/components/examples/Event\" showReadOnly={true} showWriteOnly={true} />\n",
+      "name": "events",
+      "x-displayName": "Events"
+    },
+    {
+      "description": "Use the event supplier companies API to manage event suppliers.\n",
+      "name": "event_supplier_companies",
+      "x-displayName": "Event Supplier Companies"
+    },
+    {
+      "description": "Use the event supplier contacts API to manage event suppliers. This API provides 2 advantages over the event supplier companies APIs:\n- It allows specifying the supplier contact to be associated/removed from an event.\n- It allows specifying multiple contacts for a given supplier.\n",
+      "name": "event_supplier_contacts",
+      "x-displayName": "Event Supplier Contacts"
+    },
+    {
+      "description": "Use the contract types API to query the event templates in Workday Strategic Sourcing.\n\nEvent Templates are used as a blueprint for newly created events.\n\n## Event Template Object\n\n<SchemaDefinition schemaRef=\"#/components/schemas/EventTemplateModel\" showReadOnly={true} showWriteOnly={true} />\n",
+      "name": "event_templates",
+      "x-displayName": "Event Templates"
+    },
+    {
+      "description": "Use the worksheets API to create, update, and query the worksheets in Workday Strategic Sourcing.\n\n## Worksheet Object\n\n<SchemaDefinition schemaRef=\"#/components/schemas/WorksheetModel\" showReadOnly={true} showWriteOnly={true} />\n",
+      "name": "worksheets",
+      "x-displayName": "Worksheets"
+    },
+    {
+      "description": "Use the line items API to create, update, and query the worksheet line items in Workday Strategic Sourcing.\n\n## Line Item Object\n\n<SchemaDefinition schemaRef=\"#/components/schemas/LineItem\" showReadOnly={true} showWriteOnly={true} />\n",
+      "name": "line_items",
+      "x-displayName": "Line Items"
+    },
+    {
+      "description": "Use the bids API to query the bids in Workday Strategic Sourcing.\nOnly bids for events of type `RFP` are supported.\n\n## Bid Object\n\n<SchemaDefinition schemaRef=\"#/components/schemas/Bid\" exampleRef=\"#/components/examples/Bid\" showReadOnly={true} showWriteOnly={true} />\n",
+      "name": "bids",
+      "x-displayName": "Bids"
+    },
+    {
+      "description": "Use the bid line items API to query the bid line items in Workday Strategic Sourcing.\n\n## Bid Line Item Object\n\n<SchemaDefinition schemaRef=\"#/components/schemas/BidLineItem\" exampleRef=\"#/components/examples/BidLineItem\" showReadOnly={true} showWriteOnly={true} />\n",
+      "name": "bid_line_items",
+      "x-displayName": "Bid Line Items"
+    }
+  ],
+  "x-components": {
+    "examples": {
+      "Bid": {
+        "$ref": "#/x-components/examples/bid"
+      },
+      "BidLineItem": {
+        "$ref": "#/x-components/examples/bid_line_item"
+      },
+      "Event": {
+        "$ref": "#/x-components/examples/event"
+      },
+      "bid": {
+        "value": {
+          "attributes": {
+            "intend_to_bid": true,
+            "intend_to_bid_answered_at": "2020-01-02T03:04:05.000Z",
+            "resubmitted_at": "2020-01-02T03:04:05.000Z",
+            "status": "resubmitted",
+            "submitted_at": "2020-01-02T03:04:05.000Z"
+          },
+          "id": "1",
+          "links": {
+            "self": "https://api.us.workdayspend.com/services/events/v1/bids/1"
+          },
+          "relationships": {
+            "event": {
+              "data": {
+                "id": "1",
+                "type": "events"
+              }
+            },
+            "supplier_company": {
+              "data": {
+                "id": "1",
+                "type": "supplier_companies"
+              }
+            }
+          },
+          "type": "bids"
+        }
+      },
+      "bid_line_item": {
+        "value": {
+          "attributes": {
+            "data": {
+              "c4": 10,
+              "c5": 10
+            },
+            "updated_at": "2021-02-24T21:36:51.982Z"
+          },
+          "id": "1",
+          "relationships": {
+            "bid": {
+              "data": {
+                "id": "1",
+                "type": "bids"
+              }
+            },
+            "event": {
+              "data": {
+                "id": "1",
+                "type": "events"
+              }
+            },
+            "line_item": {
+              "data": {
+                "id": "1",
+                "type": "line_items"
+              }
+            },
+            "worksheet": {
+              "data": {
+                "id": "1",
+                "type": "worksheets"
+              }
+            }
+          },
+          "type": "bid_line_items"
+        }
+      },
+      "bulk_create_request": {
+        "value": {
+          "data": [
+            {
+              "attributes": {
+                "data": {
+                  "c1": "Product One",
+                  "c2": "items",
+                  "c3": 14
+                }
+              },
+              "type": "line_items"
+            },
+            {
+              "attributes": {
+                "data": {
+                  "c1": "Product Two",
+                  "c2": "items",
+                  "c3": 1
+                }
+              },
+              "type": "line_items"
+            }
+          ]
+        }
+      },
+      "bulk_create_response": {
+        "value": {
+          "data": [
+            {
+              "attributes": {
+                "data": {
+                  "c1": "Product One",
+                  "c2": "items",
+                  "c3": 14,
+                  "c4": 0
+                }
+              },
+              "id": "1",
+              "type": "line_items"
+            },
+            {
+              "attributes": {
+                "data": {
+                  "c1": "Product Two",
+                  "c2": "items",
+                  "c3": 1,
+                  "c4": 0
+                }
+              },
+              "id": "2",
+              "type": "line_items"
+            }
+          ]
+        }
+      },
+      "create_422_response": {
+        "value": {
+          "errors": [
+            {
+              "detail": "event_template_id Expected id to be for a duplicable record",
+              "source": {
+                "pointer": "/data/attributes/event_template_id"
+              },
+              "title": "Validation Error"
+            }
+          ]
+        }
+      },
+      "create_request": {
+        "value": {
+          "data": {
+            "attributes": {
+              "duplicate_bids": true,
+              "external_id": "EVENT1",
+              "is_public": false
+            },
+            "relationships": {
+              "event_template": {
+                "data": {
+                  "id": "1",
+                  "type": "event_templates"
+                }
+              },
+              "project": {
+                "data": {
+                  "id": "1",
+                  "type": "projects"
+                }
+              }
+            },
+            "type": "events"
+          }
+        }
+      },
+      "create_request-2": {
+        "value": {
+          "data": {
+            "attributes": {
+              "data": {
+                "c1": "Amazing Product",
+                "c2": "items",
+                "c3": 14
+              }
+            },
+            "relationships": {
+              "worksheet": {
+                "data": {
+                  "id": "1",
+                  "type": "worksheets"
+                }
+              }
+            },
+            "type": "line_items"
+          }
+        }
+      },
+      "create_request-3": {
+        "value": {
+          "data": [
+            {
+              "id": "5",
+              "type": "supplier_companies"
+            },
+            {
+              "id": "11",
+              "type": "supplier_companies"
+            }
+          ]
+        }
+      },
+      "create_request-4": {
+        "value": {
+          "data": [
+            {
+              "id": "10",
+              "type": "supplier_contacts"
+            },
+            {
+              "id": "17",
+              "type": "supplier_contacts"
+            }
+          ]
+        }
+      },
+      "create_response": {
+        "value": {
+          "data": {
+            "attributes": {
+              "bid_submission_deadline": "2020-05-30T19:00:00.000Z",
+              "closed_at": null,
+              "created_at": "2020-03-16T02:36:31.276Z",
+              "custom_fields": [],
+              "duplication_state": "scheduled",
+              "event_type": "RFP",
+              "external_id": "EVENT1",
+              "instant_notifications": true,
+              "is_public": false,
+              "late_bids": true,
+              "published_at": "2020-03-17T02:36:31.276Z",
+              "request_type": "RFP",
+              "restricted": true,
+              "revise_bids": true,
+              "spend_amount": 500.5,
+              "state": "draft",
+              "supplier_question_deadline": "2020-04-30T19:00:00.000Z",
+              "supplier_rsvp_deadline": "2020-03-30T19:00:00.000Z",
+              "title": "Copy of Event Title",
+              "updated_at": "2020-03-17T02:36:31.276Z"
+            },
+            "id": "2",
+            "links": {
+              "self": "https://api.us.workdayspend.com/services/events/v1/events/2"
+            },
+            "relationships": {
+              "attachments": {
+                "data": []
+              },
+              "commodity_codes": {
+                "data": []
+              },
+              "event_template": {
+                "data": {
+                  "id": "1",
+                  "type": "event_templates"
+                }
+              },
+              "project": {
+                "data": {
+                  "id": "1",
+                  "type": "projects"
+                }
+              },
+              "spend_category": {
+                "data": {
+                  "id": "1",
+                  "type": "spend_categories"
+                }
+              }
+            },
+            "type": "events"
+          }
+        }
+      },
+      "create_response-2": {
+        "value": {
+          "data": {
+            "attributes": {
+              "data": {
+                "c1": "Amazing Product",
+                "c2": "items",
+                "c3": 14,
+                "c4": 0
+              }
+            },
+            "id": "1",
+            "type": "line_items"
+          }
+        }
+      },
+      "delete_request": {
+        "value": {
+          "data": [
+            {
+              "id": "5",
+              "type": "supplier_companies"
+            },
+            {
+              "id": "11",
+              "type": "supplier_companies"
+            }
+          ]
+        }
+      },
+      "delete_request-2": {
+        "value": {
+          "data": [
+            {
+              "id": "10",
+              "type": "supplier_contacts"
+            },
+            {
+              "id": "17",
+              "type": "supplier_contacts"
+            }
+          ]
+        }
+      },
+      "describe_response": {
+        "value": {
+          "data": [
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "string",
+                "name": "title",
+                "type_description": "Short Text"
+              },
+              "id": "title",
+              "type": "event_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "string",
+                "name": "external_id",
+                "type_description": "Short Text"
+              },
+              "id": "external_id",
+              "type": "event_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "string",
+                "name": "state",
+                "type_description": "Single Select"
+              },
+              "id": "state",
+              "type": "event_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "number",
+                "name": "spend_amount",
+                "type_description": "Currency"
+              },
+              "id": "spend_amount",
+              "type": "event_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "string",
+                "name": "request_type",
+                "type_description": "Single Select"
+              },
+              "id": "request_type",
+              "type": "event_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "boolean",
+                "name": "late_bids",
+                "type_description": "Checkbox"
+              },
+              "id": "late_bids",
+              "type": "event_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "boolean",
+                "name": "revise_bids",
+                "type_description": "Checkbox"
+              },
+              "id": "revise_bids",
+              "type": "event_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "string",
+                "name": "department",
+                "type_description": "Short Text"
+              },
+              "id": "department",
+              "type": "event_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "boolean",
+                "name": "instant_notifications",
+                "type_description": "Checkbox"
+              },
+              "id": "instant_notifications",
+              "type": "event_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "string",
+                "name": "supplier_rsvp_deadline",
+                "type_description": "Date"
+              },
+              "id": "supplier_rsvp_deadline",
+              "type": "event_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "string",
+                "name": "supplier_question_deadline",
+                "type_description": "Date"
+              },
+              "id": "supplier_question_deadline",
+              "type": "event_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "string",
+                "name": "bid_submission_deadline",
+                "type_description": "Date"
+              },
+              "id": "bid_submission_deadline",
+              "type": "event_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "string",
+                "name": "updated_at",
+                "type_description": "Date"
+              },
+              "id": "updated_at",
+              "type": "event_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "string",
+                "name": "closed_at",
+                "type_description": "Date"
+              },
+              "id": "closed_at",
+              "type": "event_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "boolean",
+                "name": "is_public",
+                "type_description": "Checkbox"
+              },
+              "id": "is_public",
+              "type": "event_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "boolean",
+                "name": "restricted",
+                "type_description": "Checkbox"
+              },
+              "id": "restricted",
+              "type": "event_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "string",
+                "name": "created_at",
+                "type_description": "Date"
+              },
+              "id": "created_at",
+              "type": "event_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "string",
+                "name": "published_at",
+                "type_description": "Date"
+              },
+              "id": "published_at",
+              "type": "event_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": true,
+                "data_type": "string",
+                "name": "Custom field #1",
+                "type_description": "Short Text"
+              },
+              "id": "custom_field_1",
+              "type": "event_fields"
+            }
+          ],
+          "links": {},
+          "meta": {
+            "count": 19
+          }
+        }
+      },
+      "describe_response-2": {
+        "value": {
+          "data": [
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "string",
+                "name": "title",
+                "type_description": "Short Text"
+              },
+              "id": "title",
+              "type": "worksheet_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "number",
+                "name": "budget",
+                "type_description": "Decimal"
+              },
+              "id": "budget",
+              "type": "worksheet_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "string",
+                "name": "notes",
+                "type_description": "Paragraph"
+              },
+              "id": "notes",
+              "type": "worksheet_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "string",
+                "name": "updated_at",
+                "type_description": "Date"
+              },
+              "id": "updated_at",
+              "type": "worksheet_fields"
+            }
+          ],
+          "links": {},
+          "meta": {
+            "count": 4
+          }
+        }
+      },
+      "describe_response-3": {
+        "value": {
+          "data": [
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "boolean",
+                "name": "intend_to_bid",
+                "type_description": "Checkbox"
+              },
+              "id": "intend_to_bid",
+              "type": "bid_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "string",
+                "name": "intend_to_bid_answered_at",
+                "type_description": "Date"
+              },
+              "id": "intend_to_bid_answered_at",
+              "type": "bid_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "string",
+                "name": "status",
+                "type_description": "Single Select"
+              },
+              "id": "status",
+              "type": "bid_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "string",
+                "name": "submitted_at",
+                "type_description": "Date"
+              },
+              "id": "submitted_at",
+              "type": "bid_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "string",
+                "name": "resubmitted_at",
+                "type_description": "Date"
+              },
+              "id": "resubmitted_at",
+              "type": "bid_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "object",
+                "name": "event",
+                "type_description": "Single Relationship"
+              },
+              "id": "event",
+              "type": "bid_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "object",
+                "name": "supplier_company",
+                "type_description": "Single Relationship"
+              },
+              "id": "supplier_company",
+              "type": "bid_fields"
+            }
+          ],
+          "links": {},
+          "meta": {
+            "count": 7
+          }
+        }
+      },
+      "describe_response-4": {
+        "value": {
+          "data": [
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "string",
+                "name": "data",
+                "type_description": "Lookup"
+              },
+              "id": "data",
+              "type": "bid_line_item_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "string",
+                "name": "updated_at",
+                "type_description": "Date"
+              },
+              "id": "updated_at",
+              "type": "bid_line_item_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "object",
+                "name": "event",
+                "type_description": "Single Relationship"
+              },
+              "id": "event",
+              "type": "bid_line_item_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "object",
+                "name": "bid",
+                "type_description": "Single Relationship"
+              },
+              "id": "bid",
+              "type": "bid_line_item_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "object",
+                "name": "worksheet",
+                "type_description": "Single Relationship"
+              },
+              "id": "worksheet",
+              "type": "bid_line_item_fields"
+            },
+            {
+              "attributes": {
+                "custom_field": false,
+                "data_type": "object",
+                "name": "line_item",
+                "type_description": "Single Relationship"
+              },
+              "id": "line_item",
+              "type": "bid_line_item_fields"
+            }
+          ],
+          "links": {},
+          "meta": {
+            "count": 6
+          }
+        }
+      },
+      "event": {
+        "value": {
+          "attributes": {
+            "bid_submission_deadline": "2020-05-30T19:00:00.000Z",
+            "closed_at": "2020-03-16T02:36:31.276Z",
+            "created_at": "2020-03-16T02:36:31.276Z",
+            "custom_fields": [
+              {
+                "name": "Field #0",
+                "value": "Field value"
+              }
+            ],
+            "duplication_state": "finished",
+            "event_type": "RFP",
+            "external_id": "EVENT1",
+            "instant_notifications": false,
+            "is_public": false,
+            "late_bids": true,
+            "published_at": "2020-03-17T02:36:31.276Z",
+            "request_type": "RFP",
+            "restricted": true,
+            "revise_bids": false,
+            "spend_amount": 500,
+            "state": "closed",
+            "supplier_question_deadline": "2020-04-30T19:00:00.000Z",
+            "supplier_rsvp_deadline": "2020-03-30T19:00:00.000Z",
+            "title": "Event Title",
+            "updated_at": "2020-03-17T02:36:31.276Z"
+          },
+          "id": "1",
+          "links": {
+            "self": "https://api.us.workdayspend.com/services/events/v1/events/1"
+          },
+          "relationships": {
+            "attachments": {
+              "data": [
+                {
+                  "id": "1",
+                  "type": "attachments"
+                },
+                {
+                  "id": "2",
+                  "type": "attachments"
+                }
+              ]
+            },
+            "commodity_codes": {
+              "data": [
+                {
+                  "id": "1",
+                  "type": "commodity_codes"
+                },
+                {
+                  "id": "2",
+                  "type": "commodity_codes"
+                }
+              ]
+            },
+            "event_template": {
+              "data": {
+                "id": "1",
+                "type": "event_templates"
+              }
+            },
+            "project": {
+              "data": {
+                "id": "1",
+                "type": "projects"
+              }
+            },
+            "spend_category": {
+              "data": {
+                "id": "1",
+                "type": "spend_categories"
+              }
+            }
+          },
+          "type": "events"
+        }
+      },
+      "external_create_request": {
+        "value": {
+          "data": [
+            {
+              "id": "SUP5",
+              "type": "supplier_companies"
+            },
+            {
+              "id": "SUP11",
+              "type": "supplier_companies"
+            }
+          ]
+        }
+      },
+      "external_create_request-2": {
+        "value": {
+          "data": [
+            {
+              "id": "SUPC10",
+              "type": "supplier_contacts"
+            },
+            {
+              "id": "SUPC17",
+              "type": "supplier_contacts"
+            }
+          ]
+        }
+      },
+      "external_delete_request": {
+        "value": {
+          "data": [
+            {
+              "id": "SUP5",
+              "type": "supplier_companies"
+            },
+            {
+              "id": "SUP11",
+              "type": "supplier_companies"
+            }
+          ]
+        }
+      },
+      "external_delete_request-2": {
+        "value": {
+          "data": [
+            {
+              "id": "SUPC10",
+              "type": "supplier_contacts"
+            },
+            {
+              "id": "SUPC17",
+              "type": "supplier_contacts"
+            }
+          ]
+        }
+      },
+      "index_all_response": {
+        "value": {
+          "data": [
+            {
+              "attributes": {
+                "data": {
+                  "c4": 300.1,
+                  "c5": 60.02
+                },
+                "updated_at": "2021-02-24T21:42:17.783Z"
+              },
+              "id": "1",
+              "relationships": {
+                "bid": {
+                  "data": {
+                    "id": "1",
+                    "type": "bids"
+                  }
+                },
+                "event": {
+                  "data": {
+                    "id": "1",
+                    "type": "events"
+                  }
+                },
+                "line_item": {
+                  "data": {
+                    "id": "1",
+                    "type": "line_items"
+                  }
+                },
+                "worksheet": {
+                  "data": {
+                    "id": "1",
+                    "type": "worksheets"
+                  }
+                }
+              },
+              "type": "bid_line_items"
+            },
+            {
+              "attributes": {
+                "data": {
+                  "c4": 200.44,
+                  "c5": 50.11
+                },
+                "updated_at": "2021-02-24T21:42:17.783Z"
+              },
+              "id": "2",
+              "relationships": {
+                "bid": {
+                  "data": {
+                    "id": "1",
+                    "type": "bids"
+                  }
+                },
+                "event": {
+                  "data": {
+                    "id": "1",
+                    "type": "events"
+                  }
+                },
+                "line_item": {
+                  "data": {
+                    "id": "2",
+                    "type": "line_items"
+                  }
+                },
+                "worksheet": {
+                  "data": {
+                    "id": "1",
+                    "type": "worksheets"
+                  }
+                }
+              },
+              "type": "bid_line_items"
+            }
+          ],
+          "links": {
+            "next": "https://api.us.workdayspend.com/services/events/v1/bid_line_items?page%5Bcursor%5D=WzIxXQ&page%5Bdirection%5D=next&page%5Bsize%5D=20",
+            "prev": "https://api.us.workdayspend.com/services/events/v1/bid_line_items?page%5Bcursor%5D=WzJd&page%5Bdirection%5D=prev&page%5Bsize%5D=20",
+            "self": "https://api.us.workdayspend.com/services/events/v1/bid_line_items?page%5Bsize%5D=20"
+          },
+          "meta": {
+            "count": 2
+          }
+        }
+      },
+      "index_compound_response": {
+        "value": {
+          "data": [
+            {
+              "attributes": {
+                "intend_to_bid": true,
+                "intend_to_bid_answered_at": "2020-01-02T03:04:05.000Z",
+                "resubmitted_at": "2020-01-02T03:04:05.000Z",
+                "status": "resubmitted",
+                "submitted_at": "2020-01-02T03:04:05.000Z"
+              },
+              "id": "1",
+              "links": {
+                "self": "https://api.us.workdayspend.com/services/events/v1/bids/1"
+              },
+              "relationships": {
+                "event": {
+                  "data": {
+                    "id": "1",
+                    "type": "events"
+                  }
+                },
+                "supplier_company": {
+                  "data": {
+                    "id": "1",
+                    "type": "supplier_companies"
+                  }
+                }
+              },
+              "type": "bids"
+            },
+            {
+              "attributes": {
+                "intend_to_bid": false,
+                "intend_to_bid_answered_at": "2020-01-02T03:04:05.000Z",
+                "resubmitted_at": "2020-01-02T03:04:05.000Z",
+                "status": "award_retracted",
+                "submitted_at": "2020-01-02T03:04:05.000Z"
+              },
+              "id": "2",
+              "links": {
+                "self": "https://api.us.workdayspend.com/services/events/v1/bids/1"
+              },
+              "relationships": {
+                "event": {
+                  "data": {
+                    "id": "1",
+                    "type": "events"
+                  }
+                },
+                "supplier_company": {
+                  "data": {
+                    "id": "2",
+                    "type": "supplier_companies"
+                  }
+                }
+              },
+              "type": "bids"
+            }
+          ],
+          "included": [
+            {
+              "attributes": {
+                "external_id": "EVENT1"
+              },
+              "id": "1",
+              "links": {
+                "self": " https://api.us.workdayspend.com/services/events/v1/events/1"
+              },
+              "type": "events"
+            },
+            {
+              "attributes": {
+                "external_id": "SUPPLIER1"
+              },
+              "id": "1",
+              "links": {
+                "self": " https://api.us.workdayspend.com/services/suppliers/v1/supplier_companies/1"
+              },
+              "type": "supplier_companies"
+            },
+            {
+              "attributes": {
+                "external_id": "SUPPLIER2"
+              },
+              "id": "2",
+              "links": {
+                "self": " https://api.us.workdayspend.com/services/suppliers/v1/supplier_companies/2"
+              },
+              "type": "supplier_companies"
+            }
+          ],
+          "links": {
+            "next": "https://api.us.workdayspend.com/services/events/v1/events/1/bids?page%5Bcursor%5D=WzRd&page%5Bdirection%5D=next&page%5Bsize%5D=10",
+            "prev": "https://api.us.workdayspend.com/services/events/v1/events/1/bids?page%5Bcursor%5D=WzFd&page%5Bdirection%5D=prev&page%5Bsize%5D=10",
+            "self": "https://api.us.workdayspend.com/services/events/v1/events/1/bids?page%5Bsize%5D=10"
+          },
+          "meta": {
+            "count": 2
+          }
+        }
+      },
+      "index_response": {
+        "value": {
+          "data": [
+            {
+              "attributes": {
+                "event_type": "RFP",
+                "title": "Event Template #1"
+              },
+              "id": "1",
+              "links": {
+                "self": "https://api.us.workdayspend.com/services/events/v1/event_templates/1"
+              },
+              "type": "event_templates"
+            },
+            {
+              "attributes": {
+                "event_type": "PERFORMANCE_REVIEW_EVENT",
+                "title": "Event Template #2"
+              },
+              "id": "2",
+              "links": {
+                "self": "https://api.us.workdayspend.com/services/events/v1/event_templates/2"
+              },
+              "type": "event_templates"
+            }
+          ],
+          "links": {
+            "self": "https://api.us.workdayspend.com/services/events/v1/event_templates"
+          },
+          "meta": {
+            "count": 2
+          }
+        }
+      },
+      "index_response-2": {
+        "value": {
+          "data": [
+            {
+              "attributes": {
+                "bid_submission_deadline": "2020-05-30T19:00:00.000Z",
+                "closed_at": null,
+                "created_at": "2020-03-16T02:36:31.276Z",
+                "custom_fields": [
+                  {
+                    "name": "Field #0",
+                    "value": null
+                  }
+                ],
+                "duplication_state": null,
+                "event_type": "RFP",
+                "external_id": "EVENT1",
+                "instant_notifications": false,
+                "is_public": false,
+                "late_bids": true,
+                "published_at": "2020-03-17T02:36:31.276Z",
+                "request_type": "RFP",
+                "restricted": true,
+                "revise_bids": false,
+                "spend_amount": 500.5,
+                "state": "draft",
+                "supplier_question_deadline": "2020-04-30T19:00:00.000Z",
+                "supplier_rsvp_deadline": "2020-03-30T19:00:00.000Z",
+                "title": "Event #1",
+                "updated_at": "2020-03-17T02:36:31.276Z"
+              },
+              "id": "1",
+              "links": {
+                "self": "https://api.us.workdayspend.com/services/events/v1/events/1"
+              },
+              "relationships": {
+                "attachments": {
+                  "data": []
+                },
+                "commodity_codes": {
+                  "data": []
+                },
+                "event_template": {
+                  "data": null
+                },
+                "project": {
+                  "data": null
+                },
+                "spend_category": {
+                  "data": {
+                    "id": "1",
+                    "type": "spend_categories"
+                  }
+                }
+              },
+              "type": "events"
+            },
+            {
+              "attributes": {
+                "bid_submission_deadline": null,
+                "closed_at": null,
+                "custom_fields": [
+                  {
+                    "name": "Field #0",
+                    "value": "Field value"
+                  }
+                ],
+                "duplication_state": null,
+                "event_type": "RFP",
+                "external_id": "EVENT2",
+                "instant_notifications": false,
+                "is_public": false,
+                "late_bids": true,
+                "request_type": "RFP",
+                "restricted": true,
+                "revise_bids": true,
+                "spend_amount": 231.5,
+                "state": "draft",
+                "supplier_question_deadline": null,
+                "supplier_rsvp_deadline": null,
+                "title": "Event #2",
+                "updated_at": "2020-03-17T03:01:45.616Z"
+              },
+              "id": "2",
+              "links": {
+                "self": "https://api.us.workdayspend.com/services/events/v1/events/2"
+              },
+              "relationships": {
+                "attachments": {
+                  "data": [
+                    {
+                      "id": "1",
+                      "type": "attachments"
+                    },
+                    {
+                      "id": "2",
+                      "type": "attachments"
+                    }
+                  ]
+                },
+                "commodity_codes": {
+                  "data": [
+                    {
+                      "id": "1",
+                      "type": "commodity_codes"
+                    },
+                    {
+                      "id": "2",
+                      "type": "commodity_codes"
+                    }
+                  ]
+                },
+                "event_template": {
+                  "data": {
+                    "id": "1",
+                    "type": "event_templates"
+                  }
+                },
+                "project": {
+                  "data": {
+                    "id": "1",
+                    "type": "projects"
+                  }
+                },
+                "spend_category": {
+                  "data": {
+                    "id": "1",
+                    "type": "spend_categories"
+                  }
+                }
+              },
+              "type": "events"
+            }
+          ],
+          "links": {
+            "next": "https://api.us.workdayspend.com/services/events/v1/events?page%5Bcursor%5D=WzRd&page%5Bdirection%5D=next&page%5Bsize%5D=10",
+            "prev": "https://api.us.workdayspend.com/services/events/v1/events?page%5Bcursor%5D=WzFd&page%5Bdirection%5D=prev&page%5Bsize%5D=10",
+            "self": "https://api.us.workdayspend.com/services/events/v1/events?page%5Bsize%5D=10"
+          },
+          "meta": {
+            "count": 2
+          }
+        }
+      },
+      "index_response-3": {
+        "value": {
+          "data": [
+            {
+              "attributes": {
+                "budget": 120.32,
+                "columns": [
+                  {
+                    "data_identifier": "c1",
+                    "id": "141",
+                    "mapping_key": "TITLE",
+                    "name": "Title"
+                  },
+                  {
+                    "data_identifier": "c3",
+                    "id": "143",
+                    "mapping_key": "UNIT_OF_MEASURE",
+                    "name": "Unit of Measure"
+                  },
+                  {
+                    "data_identifier": "c2",
+                    "id": "142",
+                    "mapping_key": "QUANTITY",
+                    "name": "Quantity"
+                  },
+                  {
+                    "data_identifier": "c5",
+                    "id": "145",
+                    "mapping_key": "PRICE",
+                    "name": "Price"
+                  },
+                  {
+                    "data_identifier": "c4",
+                    "id": "144",
+                    "mapping_key": "EXTENDED_PRICE",
+                    "name": "Extended Price"
+                  }
+                ],
+                "notes": "Worksheet related notes",
+                "title": "Worksheet title #1",
+                "updated_at": "2019-10-29T21:28:46.790Z",
+                "worksheet_type": "standard"
+              },
+              "id": "1",
+              "links": {
+                "self": "https://api.us.workdayspend.com/services/events/v1/events/1/worksheets/1"
+              },
+              "type": "worksheets"
+            },
+            {
+              "attributes": {
+                "budget": null,
+                "columns": [
+                  {
+                    "data_identifier": "c6",
+                    "id": "146",
+                    "mapping_key": "TITLE",
+                    "name": "Title"
+                  },
+                  {
+                    "data_identifier": "c8",
+                    "id": "148",
+                    "mapping_key": "UNIT_OF_MEASURE",
+                    "name": "Unit of Measure"
+                  },
+                  {
+                    "data_identifier": "c7",
+                    "id": "147",
+                    "mapping_key": "QUANTITY",
+                    "name": "Quantity"
+                  },
+                  {
+                    "data_identifier": "c10",
+                    "id": "150",
+                    "mapping_key": "PRICE",
+                    "name": "Price"
+                  },
+                  {
+                    "data_identifier": "c9",
+                    "id": "149",
+                    "mapping_key": "EXTENDED_PRICE",
+                    "name": "Extended Price"
+                  }
+                ],
+                "notes": null,
+                "title": "Worksheet title #2",
+                "updated_at": "2019-10-29T21:28:46.790Z",
+                "worksheet_type": "standard"
+              },
+              "id": "2",
+              "links": {
+                "self": "https://api.us.workdayspend.com/services/events/v1/events/1/worksheets/2"
+              },
+              "type": "worksheets"
+            }
+          ],
+          "links": {
+            "self": "https://api.us.workdayspend.com/services/events/v1/events/1/worksheets"
+          },
+          "meta": {
+            "count": 2
+          }
+        }
+      },
+      "index_response-4": {
+        "value": {
+          "data": [
+            {
+              "attributes": {
+                "data": {
+                  "c1": "Product One",
+                  "c2": 11,
+                  "c3": "items"
+                }
+              },
+              "id": "1",
+              "type": "line_items"
+            },
+            {
+              "attributes": {
+                "data": {
+                  "c1": "Product Two",
+                  "c2": 1,
+                  "c3": "items"
+                }
+              },
+              "id": "2",
+              "type": "line_items"
+            }
+          ],
+          "links": {
+            "self": "https://api.us.workdayspend.com/services/events/v1/events/8/worksheets/1/line_items"
+          }
+        }
+      },
+      "index_response-5": {
+        "value": {
+          "data": [
+            {
+              "attributes": {
+                "intend_to_bid": true,
+                "intend_to_bid_answered_at": "2020-01-02T03:04:05.000Z",
+                "resubmitted_at": "2020-01-02T03:04:05.000Z",
+                "status": "resubmitted",
+                "submitted_at": "2020-01-02T03:04:05.000Z"
+              },
+              "id": "1",
+              "links": {
+                "self": "https://api.us.workdayspend.com/services/events/v1/bids/1"
+              },
+              "relationships": {
+                "event": {
+                  "data": {
+                    "id": "1",
+                    "type": "events"
+                  }
+                },
+                "supplier_company": {
+                  "data": {
+                    "id": "1",
+                    "type": "supplier_companies"
+                  }
+                }
+              },
+              "type": "bids"
+            },
+            {
+              "attributes": {
+                "intend_to_bid": false,
+                "intend_to_bid_answered_at": "2020-01-02T03:04:05.000Z",
+                "resubmitted_at": "2020-01-02T03:04:05.000Z",
+                "status": "awarded",
+                "submitted_at": "2020-01-02T03:04:05.000Z"
+              },
+              "id": "2",
+              "links": {
+                "self": "https://api.us.workdayspend.com/services/events/v1/bids/2"
+              },
+              "relationships": {
+                "event": {
+                  "data": {
+                    "id": "1",
+                    "type": "events"
+                  }
+                },
+                "supplier_company": {
+                  "data": {
+                    "id": "1",
+                    "type": "supplier_companies"
+                  }
+                }
+              },
+              "type": "bids"
+            }
+          ],
+          "links": {
+            "next": "https://api.us.workdayspend.com/services/events/v1/events/1/bids?page%5Bcursor%5D=WzRd&page%5Bdirection%5D=next&page%5Bsize%5D=10",
+            "prev": "https://api.us.workdayspend.com/services/events/v1/events/1/bids?page%5Bcursor%5D=WzFd&page%5Bdirection%5D=prev&page%5Bsize%5D=10",
+            "self": "https://api.us.workdayspend.com/services/events/v1/events/1/bids?page%5Bsize%5D=10"
+          },
+          "meta": {
+            "count": 2
+          }
+        }
+      },
+      "index_response-6": {
+        "value": {
+          "data": [
+            {
+              "attributes": {
+                "data": {
+                  "c4": 300.1,
+                  "c5": 60.02
+                },
+                "updated_at": "2021-02-24T21:42:17.783Z"
+              },
+              "id": "1",
+              "relationships": {
+                "bid": {
+                  "data": {
+                    "id": "1",
+                    "type": "bids"
+                  }
+                },
+                "event": {
+                  "data": {
+                    "id": "1",
+                    "type": "events"
+                  }
+                },
+                "line_item": {
+                  "data": {
+                    "id": "1",
+                    "type": "line_items"
+                  }
+                },
+                "worksheet": {
+                  "data": {
+                    "id": "1",
+                    "type": "worksheets"
+                  }
+                }
+              },
+              "type": "bid_line_items"
+            },
+            {
+              "attributes": {
+                "data": {
+                  "c4": 200.44,
+                  "c5": 50.11
+                },
+                "updated_at": "2021-02-24T21:42:17.783Z"
+              },
+              "id": "2",
+              "relationships": {
+                "bid": {
+                  "data": {
+                    "id": "1",
+                    "type": "bids"
+                  }
+                },
+                "event": {
+                  "data": {
+                    "id": "1",
+                    "type": "events"
+                  }
+                },
+                "line_item": {
+                  "data": {
+                    "id": "2",
+                    "type": "line_items"
+                  }
+                },
+                "worksheet": {
+                  "data": {
+                    "id": "1",
+                    "type": "worksheets"
+                  }
+                }
+              },
+              "type": "bid_line_items"
+            }
+          ],
+          "links": {
+            "next": "https://api.us.workdayspend.com/services/events/v1/bids/1/bid_line_items?page%5Bcursor%5D=WzIxXQ&page%5Bdirection%5D=next&page%5Bsize%5D=20",
+            "prev": "https://api.us.workdayspend.com/services/events/v1/bids/1/bid_line_items?page%5Bcursor%5D=WzJd&page%5Bdirection%5D=prev&page%5Bsize%5D=20",
+            "self": "https://api.us.workdayspend.com/services/events/v1/bids/1/bid_line_items?page%5Bsize%5D=20"
+          },
+          "meta": {
+            "count": 2
+          }
+        }
+      },
+      "show_compound_response": {
+        "value": {
+          "data": {
+            "attributes": {
+              "intend_to_bid": true,
+              "intend_to_bid_answered_at": "2019-10-29T21:28:46.790Z",
+              "resubmitted_at": "2019-10-29T21:28:46.790Z",
+              "status": "resubmitted",
+              "submitted_at": "2019-10-29T21:28:46.790Z"
+            },
+            "id": "1",
+            "included": [
+              {
+                "attributes": {
+                  "external_id": "EVENT1"
+                },
+                "id": "1",
+                "links": {
+                  "self": " https://api.us.workdayspend.com/services/events/v1/events/1"
+                },
+                "type": "events"
+              },
+              {
+                "attributes": {
+                  "external_id": "SUPPLIER1"
+                },
+                "id": "1",
+                "links": {
+                  "self": " https://api.us.workdayspend.com/services/events/v1/supplier_companies/1"
+                },
+                "type": "supplier_companies"
+              }
+            ],
+            "relationships": {
+              "event": {
+                "data": {
+                  "id": "1",
+                  "type": "events"
+                }
+              },
+              "supplier_company": {
+                "data": {
+                  "id": "1",
+                  "type": "supplier_companies"
+                }
+              }
+            },
+            "type": "bids"
+          }
+        }
+      },
+      "show_response": {
+        "value": {
+          "data": {
+            "attributes": {
+              "event_type": "RFP",
+              "title": "The Event Template"
+            },
+            "id": "1",
+            "links": {
+              "self": "https://api.us.workdayspend.com/services/events/v1/event_templates/1"
+            },
+            "type": "event_templates"
+          }
+        }
+      },
+      "show_response-2": {
+        "value": {
+          "data": {
+            "attributes": {
+              "bid_submission_deadline": "2020-05-30T19:00:00.000Z",
+              "closed_at": null,
+              "created_at": "2020-03-16T02:36:31.276Z",
+              "custom_fields": [
+                {
+                  "name": "Field #1",
+                  "value": "Field value"
+                }
+              ],
+              "duplication_state": "finished",
+              "event_type": "RFP",
+              "external_id": "EVENT1",
+              "instant_notifications": false,
+              "is_public": false,
+              "late_bids": true,
+              "published_at": "2020-03-17T02:36:31.276Z",
+              "request_type": "RFP",
+              "restricted": true,
+              "revise_bids": false,
+              "spend_amount": 500.5,
+              "state": "draft",
+              "supplier_question_deadline": "2020-04-30T19:00:00.000Z",
+              "supplier_rsvp_deadline": "2020-03-30T19:00:00.000Z",
+              "title": "Event Title",
+              "updated_at": "2020-03-17T02:36:31.276Z"
+            },
+            "id": "1",
+            "links": {
+              "self": "https://api.us.workdayspend.com/services/events/v1/events/2"
+            },
+            "relationships": {
+              "attachments": {
+                "data": [
+                  {
+                    "id": "1",
+                    "type": "attachments"
+                  },
+                  {
+                    "id": "2",
+                    "type": "attachments"
+                  }
+                ]
+              },
+              "commodity_codes": {
+                "data": [
+                  {
+                    "id": "1",
+                    "type": "commodity_codes"
+                  },
+                  {
+                    "id": "2",
+                    "type": "commodity_codes"
+                  }
+                ]
+              },
+              "event_template": {
+                "data": {
+                  "id": "1",
+                  "type": "event_templates"
+                }
+              },
+              "project": {
+                "data": {
+                  "id": "1",
+                  "type": "projects"
+                }
+              },
+              "spend_category": {
+                "data": {
+                  "id": "1",
+                  "type": "spend_categories"
+                }
+              }
+            },
+            "type": "events"
+          }
+        }
+      },
+      "show_response-3": {
+        "value": {
+          "data": {
+            "attributes": {
+              "budget": null,
+              "columns": [
+                {
+                  "data_identifier": "c11",
+                  "id": "111",
+                  "mapping_key": "TITLE",
+                  "name": "Title"
+                },
+                {
+                  "data_identifier": "c13",
+                  "id": "113",
+                  "mapping_key": "UNIT_OF_MEASURE",
+                  "name": "Unit of Measure"
+                },
+                {
+                  "data_identifier": "c12",
+                  "id": "112",
+                  "mapping_key": "QUANTITY",
+                  "name": "Quantity"
+                },
+                {
+                  "data_identifier": "c15",
+                  "id": "115",
+                  "mapping_key": "PRICE",
+                  "name": "Price"
+                },
+                {
+                  "data_identifier": "c14",
+                  "id": "114",
+                  "mapping_key": "EXTENDED_PRICE",
+                  "name": "Extended Price"
+                }
+              ],
+              "notes": null,
+              "title": "Worksheet title #1",
+              "updated_at": "2019-10-29T21:28:46.790Z",
+              "worksheet_type": "standard"
+            },
+            "id": "1",
+            "links": {
+              "self": "https://api.us.workdayspend.com/services/events/v1/events/3/worksheets/1"
+            },
+            "type": "worksheets"
+          }
+        }
+      },
+      "show_response-4": {
+        "value": {
+          "data": {
+            "attributes": {
+              "data": {
+                "c1": "Amazing Product",
+                "c2": 10,
+                "c3": "items"
+              }
+            },
+            "id": "1",
+            "type": "line_items"
+          }
+        }
+      },
+      "show_response-5": {
+        "value": {
+          "data": {
+            "attributes": {
+              "intend_to_bid": true,
+              "intend_to_bid_answered_at": "2020-01-02T03:04:05.000Z",
+              "resubmitted_at": "2020-01-02T03:04:05.000Z",
+              "status": "resubmitted",
+              "submitted_at": "2020-01-02T03:04:05.000Z"
+            },
+            "id": "1",
+            "links": {
+              "self": "https://api.us.workdayspend.com/services/events/v1/bids/1"
+            },
+            "relationships": {
+              "event": {
+                "data": {
+                  "id": "1",
+                  "type": "events"
+                }
+              },
+              "supplier_company": {
+                "data": {
+                  "id": "1",
+                  "type": "supplier_companies"
+                }
+              }
+            },
+            "type": "bids"
+          }
+        }
+      },
+      "show_response-6": {
+        "value": {
+          "data": {
+            "attributes": {
+              "data": {
+                "c4": 300.1,
+                "c5": 60.02
+              },
+              "updated_at": "2021-02-24T21:42:17.783Z"
+            },
+            "id": "1",
+            "relationships": {
+              "bid": {
+                "data": {
+                  "id": "1",
+                  "type": "bids"
+                }
+              },
+              "event": {
+                "data": {
+                  "id": "1",
+                  "type": "events"
+                }
+              },
+              "line_item": {
+                "data": {
+                  "id": "1",
+                  "type": "line_items"
+                }
+              },
+              "worksheet": {
+                "data": {
+                  "id": "1",
+                  "type": "worksheets"
+                }
+              }
+            },
+            "type": "bid_line_items"
+          }
+        }
+      },
+      "update_request": {
+        "value": {
+          "data": {
+            "attributes": {
+              "bid_submission_deadline": "2033-12-30T00:00:00.000Z",
+              "custom_fields": [
+                {
+                  "name": "Custom field name",
+                  "value": "Updated custom field value"
+                }
+              ],
+              "external_id": "UEVENT1",
+              "instant_notifications": false,
+              "late_bids": true,
+              "revise_bids": false,
+              "spend_amount": 244.44,
+              "supplier_question_deadline": "2032-12-30T00:00:00.000Z",
+              "supplier_rsvp_deadline": "2031-12-30T00:00:00.000Z",
+              "title": "Event Title Updated"
+            },
+            "id": "2",
+            "relationships": {
+              "department": {
+                "data": {
+                  "id": "5",
+                  "type": "departments"
+                }
+              },
+              "project": {
+                "data": {
+                  "id": "3",
+                  "type": "projects"
+                }
+              },
+              "spend_category": {
+                "data": {
+                  "id": "4",
+                  "type": "spend_categories"
+                }
+              }
+            },
+            "type": "events"
+          }
+        }
+      },
+      "update_request-2": {
+        "value": {
+          "data": {
+            "attributes": {
+              "data": {
+                "c1": "Painfully Amazing Product",
+                "c2": 24,
+                "c3": "items"
+              }
+            },
+            "id": "1",
+            "relationships": {
+              "worksheet": {
+                "data": {
+                  "id": "1",
+                  "type": "worksheets"
+                }
+              }
+            },
+            "type": "line_items"
+          }
+        }
+      },
+      "update_response": {
+        "value": {
+          "data": {
+            "attributes": {
+              "bid_submission_deadline": "2033-12-30T00:00:00.000Z",
+              "closed_at": null,
+              "custom_fields": [
+                {
+                  "name": "Custom field name",
+                  "value": "Updated custom field value"
+                }
+              ],
+              "duplication_state": null,
+              "event_type": "RFP",
+              "external_id": "UEVENT1",
+              "instant_notifications": false,
+              "is_public": false,
+              "late_bids": true,
+              "request_type": "RFP",
+              "restricted": true,
+              "revise_bids": false,
+              "spend_amount": 244.44,
+              "state": "draft",
+              "supplier_question_deadline": "2032-12-30T00:00:00.000Z",
+              "supplier_rsvp_deadline": "2031-12-30T00:00:00.000Z",
+              "title": "Event Title Updated"
+            },
+            "id": "2",
+            "links": {
+              "self": "https://api.us.workdayspend.com/services/events/v1/events/2"
+            },
+            "relationships": {
+              "attachments": {
+                "data": []
+              },
+              "commodity_codes": {
+                "data": []
+              },
+              "event_template": {
+                "data": {
+                  "id": "1",
+                  "type": "event_templates"
+                }
+              },
+              "project": {
+                "data": {
+                  "id": "3",
+                  "type": "projects"
+                }
+              },
+              "spend_category": {
+                "data": {
+                  "id": "4",
+                  "type": "spend_categories"
+                }
+              }
+            },
+            "type": "events"
+          }
+        }
+      },
+      "update_response-2": {
+        "value": {
+          "data": {
+            "attributes": {
+              "data": {
+                "c1": "Painfully Amazing Product",
+                "c2": 24,
+                "c3": "items",
+                "c4": 0
+              }
+            },
+            "id": "1",
+            "type": "line_items"
+          }
+        }
+      }
+    }
+  },
+  "x-tagGroups": [
+    {
+      "tags": [
+        "support",
+        "servers",
+        "api_specification",
+        "date_and_time_fields",
+        "authentication",
+        "rate_limiting",
+        "external_ids",
+        "pagination",
+        "filters"
+      ],
+      "name": "Getting Started"
+    },
+    {
+      "tags": [
+        "events",
+        "event_supplier_companies",
+        "event_supplier_contacts",
+        "event_templates"
+      ],
+      "name": "Events"
+    },
+    {
+      "tags": [
+        "worksheets",
+        "line_items"
+      ],
+      "name": "Worksheets"
+    },
+    {
+      "tags": [
+        "bids",
+        "bid_line_items"
+      ],
+      "name": "Bids"
+    }
+  ]
+}

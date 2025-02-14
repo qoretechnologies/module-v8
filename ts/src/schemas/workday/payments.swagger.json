@@ -1,0 +1,1677 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "<span id=\"section/Authentication/api_key\" data-section-id=\"section/Authentication/api_key\"></span>\n<span id=\"section/Authentication/user_token\" data-section-id=\"section/Authentication/user_token\"></span>\n<span id=\"section/Authentication/user_email\" data-section-id=\"section/Authentication/user_email\"></span>\n",
+    "title": "Workday Strategic Sourcing Payments API",
+    "version": "1.0"
+  },
+  "host": "api.us.workdayspend.com",
+  "basePath": "/services/payments/v1",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/payment_currencies": {
+      "get": {
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "items": {
+                    "$ref": "#/definitions/PaymentCurrency"
+                  },
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "payment_currencies"
+        ],
+        "description": "Returns a list of payment currencies.",
+        "operationId": "List Payment Currencies",
+        "summary": "List Payment Currencies",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     \"https://api.us.workdayspend.com/services/payments/v1/payment_currencies\"\n"
+          }
+        ]
+      },
+      "post": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/PaymentCurrencyCreate"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/PaymentCurrency"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "payment_currencies"
+        ],
+        "description": "Create a payment currency with given parameters.\n",
+        "operationId": "Create a Payment Currency",
+        "summary": "Create a Payment Currency",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X POST \\\n     -d '{\"data\":{\"type\":\"payment_currencies\",\"attributes\":{\"alpha\":\"EUR\",\"numeric\":\"978\"}}' \\\n     \"https://api.us.workdayspend.com/services/payments/v1/payment_currencies\"\n"
+          }
+        ]
+      }
+    },
+    "/payment_currencies/{external_id}/external_id": {
+      "delete": {
+        "parameters": [
+          {
+            "description": "Unique payment currency external identifier.",
+            "in": "path",
+            "name": "external_id",
+            "required": true,
+            "type": "string",
+            "x-example": "PAYCUR"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "payment_currencies"
+        ],
+        "description": "Deletes a payment currency. You need to supply the unique payment currency\nexternal identifier assigned to the payment currency on creation.\n",
+        "operationId": "Delete a Payment Currency by External ID",
+        "summary": "Delete a Payment Currency by External ID",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X DELETE \\\n     \"https://api.us.workdayspend.com/services/payments/v1/payment_currencies/PAYCUR/external_id\"\n"
+          }
+        ]
+      },
+      "patch": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Unique payment currency external identifier.",
+            "in": "path",
+            "name": "external_id",
+            "required": true,
+            "type": "string",
+            "x-example": "PAYCUR"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/PaymentCurrencyUpdate"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/PaymentCurrency"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "payment_currencies"
+        ],
+        "description": "Updates the details of an existing payment currency. You need to supply the unique\nexternal identifier assigned to the payment currency on creation.\n\nPlease note, that request body must include an `id` attribute with the value of your payment currency\nunique identifier (the same one you passed in the URL).\n",
+        "operationId": "Update a Payment Currency by External ID",
+        "summary": "Update a Payment Currency by External ID",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X PATCH \\\n     -d '{\"data\":{\"type\":\"payment_currencies\",\"id\":\"PAYCUR\",\"attributes\":{\"alpha\":\"UAH\",\"numeric\":\"980\"}}}' \\\n     \"https://api.us.workdayspend.com/services/payments/v1/payment_currencies/PAYCUR/external_id\"\n"
+          }
+        ]
+      }
+    },
+    "/payment_currencies/{id}": {
+      "delete": {
+        "parameters": [
+          {
+            "description": "Unique payment currency identifier.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "payment_currencies"
+        ],
+        "description": "Deletes a payment currency. You need to supply the unique payment currency\nidentifier that was returned upon payment currency creation.\n",
+        "operationId": "Delete a Payment Currency",
+        "summary": "Delete a Payment Currency",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X DELETE \\\n     \"https://api.us.workdayspend.com/services/payments/v1/payment_currencies/1\"\n"
+          }
+        ]
+      },
+      "patch": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Unique payment currency identifier.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/PaymentCurrencyUpdate"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/PaymentCurrency"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "409": {
+            "description": "Conflict",
+            "schema": {
+              "$ref": "#/definitions/Errors"
+            }
+          }
+        },
+        "tags": [
+          "payment_currencies"
+        ],
+        "description": "Updates the details of an existing payment currency. You need to supply the unique\nidentifier that was returned upon payment currency creation.\n\nPlease note, that request body must include an `id` attribute with the value of your payment currency\nunique identifier (the same one you passed in the URL).\n",
+        "operationId": "Update a Payment Currency",
+        "summary": "Update a Payment Currency",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X PATCH \\\n     -d '{\"data\":{\"type\":\"payment_currencies\",\"id\":\"2\",\"attributes\":{\"alpha\":\"UAH\",\"numeric\":\"980\"}}}' \\\n     \"https://api.us.workdayspend.com/services/payments/v1/payment_currencies/2\"\n"
+          }
+        ]
+      }
+    },
+    "/payment_terms": {
+      "get": {
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "items": {
+                    "$ref": "#/definitions/PaymentTerm"
+                  },
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "payment_terms"
+        ],
+        "description": "Returns a list of payment terms.",
+        "operationId": "List Payment Terms",
+        "summary": "List Payment Terms",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     \"https://api.us.workdayspend.com/services/payments/v1/payment_terms\"\n"
+          }
+        ]
+      },
+      "post": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/PaymentTermCreate"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/PaymentTerm"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "payment_terms"
+        ],
+        "description": "Create a payment term with given parameters.\n",
+        "operationId": "Create a Payment Term",
+        "summary": "Create a Payment Term",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X POST \\\n     -d '{\"data\":{\"type\":\"payment_terms\",\"attributes\":{\"name\":\"Payment Term\"}}' \\\n     \"https://api.us.workdayspend.com/services/payments/v1/payment_terms\"\n"
+          }
+        ]
+      }
+    },
+    "/payment_terms/{external_id}/external_id": {
+      "delete": {
+        "parameters": [
+          {
+            "description": "Unique payment term external identifier.",
+            "in": "path",
+            "name": "external_id",
+            "required": true,
+            "type": "integer",
+            "x-example": "PAYTERM"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "payment_terms"
+        ],
+        "description": "Deletes a payment term. You need to supply the unique payment term\nexternal identifier assigned to the payment term on creation.\n",
+        "operationId": "Delete a Payment Term by External ID",
+        "summary": "Delete a Payment Term by External ID",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X DELETE \\\n     \"https://api.us.workdayspend.com/services/payments/v1/payment_terms/PAYTERM/external_id\"\n"
+          }
+        ]
+      },
+      "patch": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Unique payment term external identifier.",
+            "in": "path",
+            "name": "external_id",
+            "required": true,
+            "type": "integer",
+            "x-example": "PAYTERM"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/PaymentTermUpdate"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/PaymentTerm"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "payment_terms"
+        ],
+        "description": "Updates the details of an existing payment term. You need to supply the unique\nexternal identifier assigned to the payment term on creation.\n\nPlease note, that request body must include an `id` attribute with the value of your payment term\nunique identifier (the same one you passed in the URL).\n",
+        "operationId": "Update a Payment Term by External ID",
+        "summary": "Update a Payment Term by External ID",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X PATCH \\\n     -d '{\"data\":{\"type\":\"payment_terms\",\"id\":\"PAYTERM\",\"attributes\":{\"name\":\"Updated Field Payment Term\"}}}' \\\n     \"https://api.us.workdayspend.com/services/payments/v1/payment_terms/PAYTERM/external_id\"\n"
+          }
+        ]
+      }
+    },
+    "/payment_terms/{id}": {
+      "delete": {
+        "parameters": [
+          {
+            "description": "Unique payment term identifier.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "payment_terms"
+        ],
+        "description": "Deletes a payment term. You need to supply the unique payment term\nidentifier that was returned upon payment term creation.\n",
+        "operationId": "Delete a Payment Term",
+        "summary": "Delete a Payment Term",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X DELETE \\\n     \"https://api.us.workdayspend.com/services/payments/v1/payment_terms/1\"\n"
+          }
+        ]
+      },
+      "patch": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Unique payment term identifier.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/PaymentTermUpdate"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/PaymentTerm"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "409": {
+            "description": "Conflict",
+            "schema": {
+              "$ref": "#/definitions/Errors"
+            }
+          }
+        },
+        "tags": [
+          "payment_terms"
+        ],
+        "description": "Updates the details of an existing payment term. You need to supply the unique\nidentifier that was returned upon payment term creation.\n\nPlease note, that request body must include an `id` attribute with the value of your payment term\nunique identifier (the same one you passed in the URL).\n",
+        "operationId": "Update a Payment Term",
+        "summary": "Update a Payment Term",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X PATCH \\\n     -d '{\"data\":{\"type\":\"payment_terms\",\"id\":\"2\",\"attributes\":{\"name\":\"Updated Field Payment Term\"}}}' \\\n     \"https://api.us.workdayspend.com/services/payments/v1/payment_terms/2\"\n"
+          }
+        ]
+      }
+    },
+    "/payment_types": {
+      "get": {
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "items": {
+                    "$ref": "#/definitions/PaymentType"
+                  },
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "payment_types"
+        ],
+        "description": "Returns a list of payment types.",
+        "operationId": "List Payment Types",
+        "summary": "List Payment Types",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     \"https://api.us.workdayspend.com/services/payments/v1/payment_types\"\n"
+          }
+        ]
+      },
+      "post": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/PaymentTypeCreate"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/PaymentType"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "tags": [
+          "payment_types"
+        ],
+        "description": "Create a payment type with given parameters.\n",
+        "operationId": "Create a Payment Type",
+        "summary": "Create a Payment Type",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X POST \\\n     -d '{\"data\":{\"type\":\"payment_types\",\"attributes\":{\"name\":\"Payment Type\"}}' \\\n     \"https://api.us.workdayspend.com/services/payments/v1/payment_types\"\n"
+          }
+        ]
+      }
+    },
+    "/payment_types/{external_id}/external_id": {
+      "delete": {
+        "parameters": [
+          {
+            "description": "Unique payment type external identifier.",
+            "in": "path",
+            "name": "external_id",
+            "required": true,
+            "type": "integer",
+            "x-example": "PAYTYPE"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "payment_types"
+        ],
+        "description": "Deletes a payment type. You need to supply the unique payment type\nexternal identifier assigned to the payment type on creation.\n",
+        "operationId": "Delete a Payment Type by External ID",
+        "summary": "Delete a Payment Type by External ID",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X DELETE \\\n     \"https://api.us.workdayspend.com/services/payments/v1/payment_types/PAYTYPE/external_id\"\n"
+          }
+        ]
+      },
+      "patch": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Unique payment type external identifier.",
+            "in": "path",
+            "name": "external_id",
+            "required": true,
+            "type": "integer",
+            "x-example": "PAYTYPE"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/PaymentTypeUpdate"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/PaymentType"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "payment_types"
+        ],
+        "description": "Updates the details of an existing payment type. You need to supply the unique\nexternal identifier assigned to the payment type on creation.\n\nPlease note, that request body must include an `id` attribute with the value of your payment type\nunique identifier (the same one you passed in the URL).\n",
+        "operationId": "Update a Payment Type by External ID",
+        "summary": "Update a Payment Type by External ID",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X PATCH \\\n     -d '{\"data\":{\"type\":\"payment_types\",\"id\":\"PAYTYPE\",\"attributes\":{\"name\":\"Updated Field Payment Type\"}}}' \\\n     \"https://api.us.workdayspend.com/services/payments/v1/payment_types/PAYTYPE/external_id\"\n"
+          }
+        ]
+      }
+    },
+    "/payment_types/{id}": {
+      "delete": {
+        "parameters": [
+          {
+            "description": "Unique payment type identifier.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "payment_types"
+        ],
+        "description": "Deletes a payment type. You need to supply the unique payment type\nidentifier that was returned upon payment type creation.\n",
+        "operationId": "Delete a Payment Type",
+        "summary": "Delete a Payment Type",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X DELETE \\\n     \"https://api.us.workdayspend.com/services/payments/v1/payment_types/1\"\n"
+          }
+        ]
+      },
+      "patch": {
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "description": "Unique payment type identifier.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 1
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/PaymentTypeUpdate"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "#/definitions/PaymentType"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "409": {
+            "description": "Conflict",
+            "schema": {
+              "$ref": "#/definitions/Errors"
+            }
+          }
+        },
+        "tags": [
+          "payment_types"
+        ],
+        "description": "Updates the details of an existing payment type. You need to supply the unique\nidentifier that was returned upon payment type creation.\n\nPlease note, that request body must include an `id` attribute with the value of your payment type\nunique identifier (the same one you passed in the URL).\n",
+        "operationId": "Update a Payment Type",
+        "summary": "Update a Payment Type",
+        "x-codeSamples": [
+          {
+            "label": "Curl",
+            "source": "curl -H \"X-Api-Key: ${COMPANY_KEY}\" \\\n     -H \"X-User-Token: ${USER_TOKEN}\" \\\n     -H \"X-User-Email: ${USER_EMAIL}\" \\\n     -H \"Content-Type: application/vnd.api+json\" \\\n     -X PATCH \\\n     -d '{\"data\":{\"type\":\"payment_types\",\"id\":\"2\",\"attributes\":{\"name\":\"Updated Field Payment Type\"}}}' \\\n     \"https://api.us.workdayspend.com/services/payments/v1/payment_types/2\"\n"
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "Error": {
+      "properties": {
+        "detail": {
+          "description": "A human-readable explanation specific to this occurrence of the problem.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Errors": {
+      "properties": {
+        "errors": {
+          "items": {
+            "$ref": "#/definitions/Error"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "PaymentCurrency": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PaymentCurrencyBase"
+        },
+        {
+          "properties": {
+            "attributes": {
+              "$ref": "#/definitions/PaymentCurrencyAttributes"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "PaymentCurrencyAttributes": {
+      "description": "Payment currency attributes.",
+      "properties": {
+        "alpha": {
+          "description": "Payment currency three-letter alphabetic code.",
+          "maxLength": 3,
+          "minLength": 3,
+          "type": "string"
+        },
+        "external_id": {
+          "description": "Payment currency external identifier.",
+          "maxLength": 255,
+          "type": "string"
+        },
+        "numeric": {
+          "description": "Payment currency three-digit numeric code representation.",
+          "format": "integer",
+          "maxLength": 3,
+          "minLength": 3,
+          "type": "string"
+        }
+      },
+      "required": [
+        "alpha",
+        "numeric"
+      ],
+      "type": "object"
+    },
+    "PaymentCurrencyBase": {
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/PaymentCurrencyId"
+        },
+        "type": {
+          "$ref": "#/definitions/PaymentCurrencyType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "title": "Field",
+      "type": "object"
+    },
+    "PaymentCurrencyCreate": {
+      "properties": {
+        "attributes": {
+          "$ref": "#/definitions/PaymentCurrencyAttributes"
+        },
+        "type": {
+          "$ref": "#/definitions/PaymentCurrencyType"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "type": "object"
+    },
+    "PaymentCurrencyId": {
+      "description": "Payment currency identifier string.",
+      "example": 1,
+      "type": "integer"
+    },
+    "PaymentCurrencyType": {
+      "description": "Object type, should always be `payment_currencies`.",
+      "example": "payment_currencies",
+      "type": "string"
+    },
+    "PaymentCurrencyUpdate": {
+      "properties": {
+        "attributes": {
+          "$ref": "#/definitions/PaymentCurrencyAttributes"
+        },
+        "id": {
+          "$ref": "#/definitions/PaymentCurrencyId"
+        },
+        "type": {
+          "$ref": "#/definitions/PaymentCurrencyType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "type": "object"
+    },
+    "PaymentTerm": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PaymentTermBase"
+        },
+        {
+          "properties": {
+            "attributes": {
+              "$ref": "#/definitions/PaymentTermAttributes"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "PaymentTermAttributes": {
+      "description": "Payment term attributes.",
+      "properties": {
+        "external_id": {
+          "description": "Payment term external identifier.",
+          "maxLength": 255,
+          "type": "string"
+        },
+        "name": {
+          "description": "Payment term name.",
+          "maxLength": 255,
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "PaymentTermBase": {
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/PaymentTermId"
+        },
+        "type": {
+          "$ref": "#/definitions/PaymentTermType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "title": "Field",
+      "type": "object"
+    },
+    "PaymentTermCreate": {
+      "properties": {
+        "attributes": {
+          "$ref": "#/definitions/PaymentTermAttributes"
+        },
+        "type": {
+          "$ref": "#/definitions/PaymentTermType"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "type": "object"
+    },
+    "PaymentTermId": {
+      "description": "Payment term identifier string.",
+      "example": 1,
+      "type": "integer"
+    },
+    "PaymentTermType": {
+      "description": "Object type, should always be `payment_terms`.",
+      "example": "payment_terms",
+      "type": "string"
+    },
+    "PaymentTermUpdate": {
+      "properties": {
+        "attributes": {
+          "$ref": "#/definitions/PaymentTermAttributes"
+        },
+        "id": {
+          "$ref": "#/definitions/PaymentTermId"
+        },
+        "type": {
+          "$ref": "#/definitions/PaymentTermType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "type": "object"
+    },
+    "PaymentType": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PaymentTypeBase"
+        },
+        {
+          "properties": {
+            "attributes": {
+              "$ref": "#/definitions/PaymentTypeAttributes"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "PaymentTypeAttributes": {
+      "description": "Payment type attributes.",
+      "properties": {
+        "external_id": {
+          "description": "Payment type external identifier.",
+          "maxLength": 255,
+          "type": "string"
+        },
+        "name": {
+          "description": "Payment type name.",
+          "maxLength": 255,
+          "type": "string"
+        },
+        "payment_method": {
+          "description": "Payment method.",
+          "enum": [
+            "Direct Deposit",
+            "Check",
+            "EFT",
+            "Cash",
+            "Credit Card",
+            "Wire",
+            "Manual",
+            "Direct Debit",
+            "PayPal",
+            "EFT with Reference"
+          ],
+          "example": "Cash",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "PaymentTypeBase": {
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/PaymentTypeId"
+        },
+        "type": {
+          "$ref": "#/definitions/PaymentTypeType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "title": "Field",
+      "type": "object"
+    },
+    "PaymentTypeCreate": {
+      "properties": {
+        "attributes": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/PaymentTypeAttributes"
+            },
+            {
+              "required": [
+                "payment_method"
+              ],
+              "type": "object"
+            }
+          ]
+        },
+        "type": {
+          "$ref": "#/definitions/PaymentTypeType"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "type": "object"
+    },
+    "PaymentTypeId": {
+      "description": "Payment type identifier string.",
+      "example": 1,
+      "type": "integer"
+    },
+    "PaymentTypeType": {
+      "description": "Object type, should always be `payment_types`.",
+      "example": "payment_types",
+      "type": "string"
+    },
+    "PaymentTypeUpdate": {
+      "properties": {
+        "attributes": {
+          "$ref": "#/definitions/PaymentTypeAttributes"
+        },
+        "id": {
+          "$ref": "#/definitions/PaymentTypeId"
+        },
+        "type": {
+          "$ref": "#/definitions/PaymentTypeType"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "type": "object"
+    }
+  },
+  "securityDefinitions": {
+    "api_key": {
+      "description": "Company API key.",
+      "in": "header",
+      "name": "X-Api-Key",
+      "type": "apiKey"
+    },
+    "user_email": {
+      "description": "User email.",
+      "in": "header",
+      "name": "X-User-Email",
+      "type": "apiKey"
+    },
+    "user_token": {
+      "description": "User token.",
+      "in": "header",
+      "name": "X-User-Token",
+      "type": "apiKey"
+    }
+  },
+  "security": [
+    {
+      "api_key": []
+    }
+  ],
+  "tags": [
+    {
+      "description": "Workday Strategic Sourcing API Support: Please have a Named Support Contact from your company submit a support case in Workday's Customer Center.\n",
+      "name": "support",
+      "x-displayName": "Customer Support"
+    },
+    {
+      "description": "### US Region\n| Environment       | US region Base URI                                               |\n|-------------------|------------------------------------------------------------------|\n| **Production**    | https://api.us.workdayspend.com/services/payments/v1         |\n| **Sandbox**       | https://api.sandbox.us.workdayspend.com/services/payments/v1 |\n\n### EU Region\n| Environment       | EU region Base URI                                                |\n|-------------------|-------------------------------------------------------------------|\n| **Production**    | https://api.eu.workdayspend.com/services/payments/v1          |\n| **Sandbox**       | https://api.sandbox.eu.workdayspend.com/services/payments/v1  |\n\n### CA Region\n| Environment       | CA region Base URI                                                |\n|-------------------|-------------------------------------------------------------------|\n| **Production**    | https://api.ca.workdayspend.com/services/payments/v1          |\n| **Sandbox**       | https://api.sandbox.ca.workdayspend.com/services/payments/v1  |\n",
+      "name": "servers",
+      "x-displayName": "Servers"
+    },
+    {
+      "description": "The API conforms to the [JSON API Specification](https://jsonapi.org).\n\nThe current version of this service is indicated by the `X-Api-Version` header.\n\nSample version header: `X-Api-Version: 1.0`.\n",
+      "name": "api_specification",
+      "x-displayName": "API Specification"
+    },
+    {
+      "description": "Our API adheres to the ISO 8601 standard when accepting and formatting Date and Time fields. All Date and Time fields returned by this API will be in the **UTC** timezone.\n\nDate and Time fields sent to this API can be in any timezone, provided they adhere to the ISO 8601 standard.\n",
+      "name": "date_and_time_fields",
+      "x-displayName": "Date and Time Fields"
+    },
+    {
+      "description": "The Workday Strategic Sourcing API uses API keys to authenticate requests. Every request\nwill require all 3 HTTP headers:\n\n| HTTP Header       | Description               |\n|-------------------|---------------------------|\n| **X-Api-Key**     | a company-wide API key    |\n| **X-User-Token**  | a user-specific API token |\n| **X-User-Email**  | user email                |\n\nYou can generate all of those from the _API tokens_ section of your _Profile_ page.\n\nYour API keys carry many privileges, so be sure to keep them secure! Do not share your secret API\nkeys in publicly accessible areas such as GitHub, client-side code, and so forth.\n\nAll API requests must be made over [HTTPS](http://en.wikipedia.org/wiki/HTTP_Secure). Calls made\nover plain HTTP will fail. API requests without authentication will also fail.\n",
+      "name": "authentication",
+      "x-displayName": "Authentication"
+    },
+    {
+      "description": "Rate limit windows are per second and are shared by all API Keys for a company.\n\nThe rate limit is 5 requests per second.\n\nWhen request submissions exceed the limits, the limit-exceeding requests return `429 Too Many Requests` error responses to the client.\n\nUpon receiving a `429` response, it is recommended to retry the request in compliance with the rate limit. One example would be to add a sleep function for 1 second and retry.\n",
+      "name": "rate_limiting",
+      "x-displayName": "Rate Limiting"
+    },
+    {
+      "description": "The results can be filtered to a subset of the total set of results using `filter` query parameters.\n\nEndpoints that support filtering will include usage details in the Query Parameters section for the resource.\n\nMost filters that end in `equals` support a Query Parameter array format to filter by multiple values.\n\nExample:\n```\n?filter[status_equals][]=submitted&filter[status_equals][]=resubmitted\n",
+      "name": "filters",
+      "x-displayName": "Filters"
+    },
+    {
+      "description": "The `external_id` field exists on many of the Workday Strategic Sourcing resources. This optional and mutable extension is intended to store foreign keys of the corresponding resource from a third party system. **These IDs are not considered Sourcing Data and may be logged in external systems. Do not include any sensitive or personal data in IDs.**\n\nThe purpose of external IDs is to:\n\n* Prevent duplicate record creation\n* Allow resources in Workday Strategic Sourcing and a third party system to share the same identifier\n* Allow for records to be queried or updated without requiring knowledge of the Workday Strategic Sourcing generated IDs\n",
+      "name": "external_ids",
+      "x-displayName": "External Identifiers (IDs)"
+    },
+    {
+      "description": "Use the payment currencies API to create, update, and query the payment currencies in Workday Strategic Sourcing.\n\n## Payment Currency Object\n\n<SchemaDefinition schemaRef=\"#/components/schemas/PaymentCurrency\" showReadOnly={true} showWriteOnly={true} />\n",
+      "name": "payment_currencies",
+      "x-displayName": "Payment Currencies"
+    },
+    {
+      "description": "Use the payment terms API to create, update, and query the payment terms in Workday Strategic Sourcing.\n\n## Payment Term Object\n\n<SchemaDefinition schemaRef=\"#/components/schemas/PaymentTerm\" showReadOnly={true} showWriteOnly={true} />\n",
+      "name": "payment_terms",
+      "x-displayName": "Payment Terms"
+    },
+    {
+      "description": "Use the payment types API to create, update, and query the payment types in Workday Strategic Sourcing.\n\n## Payment Type Object\n\n<SchemaDefinition schemaRef=\"#/components/schemas/PaymentType\" showReadOnly={true} showWriteOnly={true} />      ```\n",
+      "name": "payment_types",
+      "x-displayName": "Payment Types"
+    }
+  ],
+  "x-components": {
+    "examples": {
+      "create_request": {
+        "value": {
+          "data": {
+            "attributes": {
+              "external_id": "PAYTERM-1",
+              "name": "Payment Term #1"
+            },
+            "type": "payment_terms"
+          }
+        }
+      },
+      "create_request-2": {
+        "value": {
+          "data": {
+            "attributes": {
+              "external_id": "PAYTYPE-1",
+              "name": "Payment Type #1",
+              "payment_method": "Cash"
+            },
+            "type": "payment_types"
+          }
+        }
+      },
+      "create_request-3": {
+        "value": {
+          "data": {
+            "attributes": {
+              "alpha": "EUR",
+              "external_id": "PAYCUR-1",
+              "numeric": "978"
+            },
+            "type": "payment_currencies"
+          }
+        }
+      },
+      "create_response": {
+        "value": {
+          "data": {
+            "attributes": {
+              "external_id": "PAYTERM-1",
+              "name": "Payment Term #1"
+            },
+            "id": "1",
+            "links": {
+              "self": "https://api.us.workdayspend.com/services/payments/v1/payment_terms/1"
+            },
+            "type": "payment_terms"
+          }
+        }
+      },
+      "create_response-2": {
+        "value": {
+          "data": {
+            "attributes": {
+              "external_id": "PAYTYPE-1",
+              "name": "Payment Type #1",
+              "payment_method": "Cash"
+            },
+            "id": "1",
+            "links": {
+              "self": "https://api.us.workdayspend.com/services/payments/v1/payment_types/1"
+            },
+            "type": "payment_types"
+          }
+        }
+      },
+      "create_response-3": {
+        "value": {
+          "data": {
+            "attributes": {
+              "alpha": "EUR",
+              "external_id": "PAYCUR-1",
+              "numeric": "978"
+            },
+            "id": "1",
+            "links": {
+              "self": "https://api.us.workdayspend.com/services/payments/v1/payment_currencies/1"
+            },
+            "type": "payment_currencies"
+          }
+        }
+      },
+      "external_update_request": {
+        "value": {
+          "data": {
+            "attributes": {
+              "name": "Payment Term Updated"
+            },
+            "id": "PAYTERM",
+            "type": "payment_terms"
+          }
+        }
+      },
+      "external_update_request-2": {
+        "value": {
+          "data": {
+            "attributes": {
+              "name": "Payment Type Updated",
+              "payment_method": "Cash"
+            },
+            "id": "PAYTYPE",
+            "type": "payment_types"
+          }
+        }
+      },
+      "external_update_request-3": {
+        "value": {
+          "data": {
+            "attributes": {
+              "alpha": "UAH",
+              "numeric": "980"
+            },
+            "id": "PAYCUR",
+            "type": "payment_currencies"
+          }
+        }
+      },
+      "external_update_response": {
+        "value": {
+          "data": {
+            "attributes": {
+              "external_id": "PAYTERM",
+              "name": "Payment Term Updated"
+            },
+            "id": "1",
+            "links": {
+              "self": "https://api.us.workdayspend.com/services/payments/v1/payment_terms/1"
+            },
+            "type": "payment_terms"
+          }
+        }
+      },
+      "external_update_response-2": {
+        "value": {
+          "data": {
+            "attributes": {
+              "external_id": "PAYTYPE",
+              "name": "Payment Type Updated",
+              "payment_method": "Cash"
+            },
+            "id": "1",
+            "links": {
+              "self": "https://api.us.workdayspend.com/services/payments/v1/payment_types/1"
+            },
+            "type": "payment_types"
+          }
+        }
+      },
+      "external_update_response-3": {
+        "value": {
+          "data": {
+            "attributes": {
+              "alpha": "UAH",
+              "external_id": "PAYCUR",
+              "numeric": "980"
+            },
+            "id": "1",
+            "links": {
+              "self": "https://api.us.workdayspend.com/services/payments/v1/payment_currencies/1"
+            },
+            "type": "payment_currencies"
+          }
+        }
+      },
+      "index_response": {
+        "value": {
+          "data": [
+            {
+              "attributes": {
+                "external_id": "PAYTERM-1",
+                "name": "Payment Term #1"
+              },
+              "id": "1",
+              "links": {
+                "self": "https://api.us.workdayspend.com/services/payments/v1/payment_terms/1"
+              },
+              "type": "payment_terms"
+            },
+            {
+              "attributes": {
+                "external_id": "PAYTERM-2",
+                "name": "Payment Term #2"
+              },
+              "id": "2",
+              "links": {
+                "self": "https://api.us.workdayspend.com/services/payments/v1/payment_terms/2"
+              },
+              "type": "payment_terms"
+            }
+          ],
+          "links": {
+            "self": "https://api.us.workdayspend.com/services/payments/v1/payment_terms"
+          }
+        }
+      },
+      "index_response-2": {
+        "value": {
+          "data": [
+            {
+              "attributes": {
+                "external_id": "PAYTYPE-1",
+                "name": "Payment Type #1",
+                "payment_method": "Cash"
+              },
+              "id": "1",
+              "links": {
+                "self": "https://api.us.workdayspend.com/services/payments/v1/payment_types/1"
+              },
+              "type": "payment_types"
+            },
+            {
+              "attributes": {
+                "external_id": "PAYTYPE-2",
+                "name": "Payment Type #2",
+                "payment_method": "Check"
+              },
+              "id": "2",
+              "links": {
+                "self": "https://api.us.workdayspend.com/services/payments/v1/payment_types/2"
+              },
+              "type": "payment_types"
+            }
+          ],
+          "links": {
+            "self": "https://api.us.workdayspend.com/services/payments/v1/payment_types"
+          }
+        }
+      },
+      "index_response-3": {
+        "value": {
+          "data": [
+            {
+              "attributes": {
+                "alpha": "EUR",
+                "external_id": "PAYCUR-1",
+                "numeric": "978"
+              },
+              "id": "1",
+              "links": {
+                "self": "https://api.us.workdayspend.com/services/payments/v1/payment_currencies/1"
+              },
+              "type": "payment_currencies"
+            },
+            {
+              "attributes": {
+                "alpha": "UAH",
+                "external_id": "PAYCUR-2",
+                "numeric": "980"
+              },
+              "id": "2",
+              "links": {
+                "self": "https://api.us.workdayspend.com/services/payments/v1/payment_currencies/2"
+              },
+              "type": "payment_currencies"
+            }
+          ],
+          "links": {
+            "self": "https://api.us.workdayspend.com/services/payments/v1/payment_currencies"
+          }
+        }
+      },
+      "update_request": {
+        "value": {
+          "data": {
+            "attributes": {
+              "external_id": "PAYTERM-UPD",
+              "name": "Payment Term Updated"
+            },
+            "id": "1",
+            "type": "payment_terms"
+          }
+        }
+      },
+      "update_request-2": {
+        "value": {
+          "data": {
+            "attributes": {
+              "external_id": "PAYTYPE-UPD",
+              "name": "Payment Type Updated",
+              "payment_method": "Cash"
+            },
+            "id": "1",
+            "type": "payment_types"
+          }
+        }
+      },
+      "update_request-3": {
+        "value": {
+          "data": {
+            "attributes": {
+              "alpha": "UAH",
+              "external_id": "PAYCUR-UPD",
+              "numeric": "980"
+            },
+            "id": "1",
+            "type": "payment_currencies"
+          }
+        }
+      },
+      "update_response": {
+        "value": {
+          "data": {
+            "attributes": {
+              "external_id": "PAYTERM-UPD",
+              "name": "Payment Term Updated"
+            },
+            "id": "1",
+            "links": {
+              "self": "https://api.us.workdayspend.com/services/payments/v1/payment_terms/1"
+            },
+            "type": "payment_terms"
+          }
+        }
+      },
+      "update_response-2": {
+        "value": {
+          "data": {
+            "attributes": {
+              "external_id": "PAYTYPE-UPD",
+              "name": "Payment Type Updated",
+              "payment_method": "Cash"
+            },
+            "id": "1",
+            "links": {
+              "self": "https://api.us.workdayspend.com/services/payments/v1/payment_types/1"
+            },
+            "type": "payment_types"
+          }
+        }
+      },
+      "update_response-3": {
+        "value": {
+          "data": {
+            "attributes": {
+              "alpha": "UAH",
+              "external_id": "PAYCUR-UPD",
+              "numeric": "980"
+            },
+            "id": "1",
+            "links": {
+              "self": "https://api.us.workdayspend.com/services/payments/v1/payment_currencies/1"
+            },
+            "type": "payment_currencies"
+          }
+        }
+      }
+    }
+  },
+  "x-tagGroups": [
+    {
+      "tags": [
+        "support",
+        "servers",
+        "api_specification",
+        "date_and_time_fields",
+        "authentication",
+        "rate_limiting",
+        "external_ids",
+        "filters"
+      ],
+      "name": "Getting Started"
+    },
+    {
+      "tags": [
+        "payment_currencies",
+        "payment_types",
+        "payment_terms"
+      ],
+      "name": "Payments"
+    }
+  ]
+}
