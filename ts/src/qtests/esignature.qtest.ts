@@ -60,6 +60,10 @@ describe('Tests eSignature Actions', () => {
     const base_uri = userInfo.accounts[0].base_uri.split('//')[1];
     baseUri = base_uri;
     accountId = userInfo.accounts[0].account_id;
+
+    console.log('DEBUG accountId:');
+    console.dir(userInfo, { depth: null });
+    console.log('Account ID: ' + accountId);
     connection = testApi.createConnection('docusignesignature', {
       opts: {
         token: accessToken,

@@ -37,6 +37,8 @@ describe('Tests Github Actions', () => {
     expect(body).toBeDefined();
     expect(body.name).toBe(repoName);
     repository = { name: body.name, owner: body.owner.login };
+
+    console.log(repository);
   });
 
   describe('Should test webhook creation for repository', () => {
@@ -273,7 +275,8 @@ describe('Tests Github Actions', () => {
     const action = GITHUB_ACTIONS.find((a) => a.action === 'repos-update');
 
     expect(action).toBeDefined();
-    expect(repository).toBeDefined();
+    expect(repository?.owner).toBeDefined();
+    expect(repository?.name).toBeDefined();
     const description = 'Test Repo Description';
     const { body } = await testApi.execAppAction('github', action!.action, connection, {
       owner: repository?.owner,
@@ -291,7 +294,8 @@ describe('Tests Github Actions', () => {
     const action = GITHUB_ACTIONS.find((a) => a.action === 'repos-get');
 
     expect(action).toBeDefined();
-    expect(repository).toBeDefined();
+    expect(repository?.owner).toBeDefined();
+    expect(repository?.name).toBeDefined();
     const { body } = await testApi.execAppAction('github', action!.action, connection, {
       owner: repository?.owner,
       repo: repository?.name,
@@ -304,8 +308,9 @@ describe('Tests Github Actions', () => {
     const action = GITHUB_ACTIONS.find((a) => a.action === 'search-repos');
 
     expect(action).toBeDefined();
-    expect(repository).toBeDefined();
+    expect(repository?.name).toBeDefined();
     const { body } = await testApi.execAppAction('github', action!.action, connection, {
+      q: repository?.name,
       query: {
         q: repository?.name,
       },
