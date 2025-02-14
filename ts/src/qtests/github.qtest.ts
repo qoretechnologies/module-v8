@@ -37,8 +37,6 @@ describe('Tests Github Actions', () => {
     expect(body).toBeDefined();
     expect(body.name).toBe(repoName);
     repository = { name: body.name, owner: body.owner.login };
-
-    console.log(repository);
   });
 
   describe('Should test webhook creation for repository', () => {

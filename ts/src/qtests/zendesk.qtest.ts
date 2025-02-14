@@ -62,7 +62,6 @@ describe('Tests Zendesk Actions', () => {
     });
 
     it('Should update a ticket', () => {
-      console.log('Updating ticket', ticketID);
       const { body } = testApi.execAppAction('zendesk', 'UpdateTicket', connection, {
         ticket_id: ticketID,
         body: {
