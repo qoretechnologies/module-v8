@@ -157,7 +157,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     bool supportsEvent(string key) {
-        return event ? True : False;
+        return event.key == key ? True : False;
     }
 
     # Called with the global lock held
