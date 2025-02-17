@@ -1,8 +1,8 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
-import { GetAccountIdConfig } from '../constants';
+import { EQoreAppActionCode, QoreAppCreator, QorusRequest } from '@qoretechnologies/ts-toolkit';
+import { ESIGNATURE_APP_NAME, GetAccountIdConfig } from '../constants';
 
-export default {
+const eSignatureTemplateUpdatedTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: ESIGNATURE_APP_NAME,
   action: 'template_updated',
   action_code: EQoreAppActionCode.EVENT,
   webhook_method: 'POST',
@@ -10,10 +10,22 @@ export default {
     accountId: { ...GetAccountIdConfig, required: true, type: 'softstring' },
   },
   webhook_register: async (context, url) => {
-    const {
-      conn_opts: { token, base_uri },
-      opts: { accountId },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const base_uri = context?.conn_opts?.base_uri;
+    const accountId = context?.opts?.accountId;
+
+    const missingOptions = [];
+
+    if (!token) missingOptions.push('token');
+    if (!base_uri) missingOptions.push('base_uri');
+    if (!accountId) missingOptions.push('accountId');
+
+    if (missingOptions.length > 0) {
+      throw new Error(
+        `The following options are required to register Esignature ` +
+          `template update webhook: ${missingOptions.join(', ')}`
+      );
+    }
 
     const { data } = await QorusRequest.post<any>(
       {
@@ -47,10 +59,23 @@ export default {
     return { webhook: data };
   },
   webhook_deregister: async (context, _url, regInfo) => {
-    const {
-      conn_opts: { token, base_uri },
-      opts: { accountId },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const base_uri = context?.conn_opts?.base_uri;
+    const accountId = context?.opts?.accountId;
+
+    const missingOptions = [];
+
+    if (!token) missingOptions.push('token');
+    if (!base_uri) missingOptions.push('base_uri');
+    if (!accountId) missingOptions.push('accountId');
+
+    if (missingOptions.length > 0) {
+      throw new Error(
+        `The following options are required to de-register Esignature ` +
+          `template update webhook: ${missingOptions.join(', ')}`
+      );
+    }
+
     const { webhook } = regInfo;
 
     await QorusRequest.deleteReq<any>(
@@ -107,4 +132,6 @@ export default {
       },
     },
   },
-} satisfies TQorePartialEventAction;
+});
+
+export default eSignatureTemplateUpdatedTrigger;

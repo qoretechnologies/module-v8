@@ -1,5 +1,5 @@
+import { IQoreAppActionWithWebhookBase } from '@qoretechnologies/ts-toolkit';
 import { GITHUB_ACTIONS } from '../apps/github';
-import { TQoreAppActionWithWebhook } from '../global/models/qore';
 import * as GITHUB_TRIGGERS from '../apps/github/triggers';
 
 let connection: string;
@@ -27,7 +27,7 @@ describe('Tests Github Actions', () => {
 
     expect(action).toBeDefined();
     const repoName = `test-repo`;
-    const { body } = await testApi.execAppAction('github', action.action, connection, {
+    const { body } = await testApi.execAppAction('github', action!.action, connection, {
       body: {
         name: repoName,
         private: true,
@@ -41,13 +41,15 @@ describe('Tests Github Actions', () => {
 
   describe('Should test webhook creation for repository', () => {
     it('Should create new branch webhook', async () => {
-      const trigger: Partial<TQoreAppActionWithWebhook> = GITHUB_TRIGGERS['newBranch'];
+      const trigger = GITHUB_TRIGGERS['newBranch'] as IQoreAppActionWithWebhookBase<any>;
 
       expect(trigger).toBeDefined();
+      expect(trigger.webhook_register).toBeDefined();
+      expect(trigger.webhook_deregister).toBeDefined();
       expect(repository?.name).toBeDefined();
       expect(repository?.owner).toBeDefined();
 
-      const response = await trigger.webhook_register(
+      const response = await trigger.webhook_register!(
         {
           conn_opts: { token },
           opts: { owner: repository.owner, repo: repository.name },
@@ -58,7 +60,7 @@ describe('Tests Github Actions', () => {
       expect(response).toBeDefined();
 
       if (response) {
-        await trigger.webhook_deregister(
+        await trigger.webhook_deregister!(
           {
             conn_opts: { token },
             opts: { owner: repository.owner, repo: repository.name },
@@ -70,13 +72,15 @@ describe('Tests Github Actions', () => {
     });
 
     it('Should create new commit comment webhook', async () => {
-      const trigger: Partial<TQoreAppActionWithWebhook> = GITHUB_TRIGGERS['newCommitComment'];
+      const trigger = GITHUB_TRIGGERS['newCommitComment'] as IQoreAppActionWithWebhookBase<any>;
 
       expect(trigger).toBeDefined();
+      expect(trigger.webhook_register).toBeDefined();
+      expect(trigger.webhook_deregister).toBeDefined();
       expect(repository?.name).toBeDefined();
       expect(repository?.owner).toBeDefined();
 
-      const response = await trigger.webhook_register(
+      const response = await trigger.webhook_register!(
         {
           conn_opts: { token },
           opts: { owner: repository.owner, repo: repository.name },
@@ -87,7 +91,7 @@ describe('Tests Github Actions', () => {
       expect(response).toBeDefined();
 
       if (response) {
-        await trigger.webhook_deregister(
+        await trigger.webhook_deregister!(
           {
             conn_opts: { token },
             opts: { owner: repository.owner, repo: repository.name },
@@ -99,13 +103,15 @@ describe('Tests Github Actions', () => {
     });
 
     it('Should create new commit webhook', async () => {
-      const trigger: Partial<TQoreAppActionWithWebhook> = GITHUB_TRIGGERS['newCommit'];
+      const trigger = GITHUB_TRIGGERS['newCommit'] as IQoreAppActionWithWebhookBase<any>;
 
       expect(trigger).toBeDefined();
+      expect(trigger.webhook_register).toBeDefined();
+      expect(trigger.webhook_deregister).toBeDefined();
       expect(repository?.name).toBeDefined();
       expect(repository?.owner).toBeDefined();
 
-      const response = await trigger.webhook_register(
+      const response = await trigger.webhook_register!(
         {
           conn_opts: { token },
           opts: { owner: repository.owner, repo: repository.name },
@@ -116,7 +122,7 @@ describe('Tests Github Actions', () => {
       expect(response).toBeDefined();
 
       if (response) {
-        await trigger.webhook_deregister(
+        await trigger.webhook_deregister!(
           {
             conn_opts: { token },
             opts: { owner: repository.owner, repo: repository.name },
@@ -128,13 +134,15 @@ describe('Tests Github Actions', () => {
     });
 
     it('Should create new issue webhook', async () => {
-      const trigger: Partial<TQoreAppActionWithWebhook> = GITHUB_TRIGGERS['newRepositoryIssue'];
+      const trigger = GITHUB_TRIGGERS['newRepositoryIssue'] as IQoreAppActionWithWebhookBase<any>;
 
       expect(trigger).toBeDefined();
+      expect(trigger.webhook_register).toBeDefined();
+      expect(trigger.webhook_deregister).toBeDefined();
       expect(repository?.name).toBeDefined();
       expect(repository?.owner).toBeDefined();
 
-      const response = await trigger.webhook_register(
+      const response = await trigger.webhook_register!(
         {
           conn_opts: { token },
           opts: { owner: repository.owner, repo: repository.name },
@@ -145,7 +153,7 @@ describe('Tests Github Actions', () => {
       expect(response).toBeDefined();
 
       if (response) {
-        await trigger.webhook_deregister(
+        await trigger.webhook_deregister!(
           {
             conn_opts: { token },
             opts: { owner: repository.owner, repo: repository.name },
@@ -157,13 +165,15 @@ describe('Tests Github Actions', () => {
     });
 
     it('Should create new pull request webhook', async () => {
-      const trigger: Partial<TQoreAppActionWithWebhook> = GITHUB_TRIGGERS['newPullRequest'];
+      const trigger = GITHUB_TRIGGERS['newPullRequest'] as IQoreAppActionWithWebhookBase<any>;
 
       expect(trigger).toBeDefined();
+      expect(trigger.webhook_register).toBeDefined();
+      expect(trigger.webhook_deregister).toBeDefined();
       expect(repository?.name).toBeDefined();
       expect(repository?.owner).toBeDefined();
 
-      const response = await trigger.webhook_register(
+      const response = await trigger.webhook_register!(
         {
           conn_opts: { token },
           opts: { owner: repository.owner, repo: repository.name },
@@ -174,7 +184,7 @@ describe('Tests Github Actions', () => {
       expect(response).toBeDefined();
 
       if (response) {
-        await trigger.webhook_deregister(
+        await trigger.webhook_deregister!(
           {
             conn_opts: { token },
             opts: { owner: repository.owner, repo: repository.name },
@@ -186,13 +196,15 @@ describe('Tests Github Actions', () => {
     });
 
     it('Should create new release webhook', async () => {
-      const trigger: Partial<TQoreAppActionWithWebhook> = GITHUB_TRIGGERS['newRelease'];
+      const trigger = GITHUB_TRIGGERS['newRelease'] as IQoreAppActionWithWebhookBase<any>;
 
       expect(trigger).toBeDefined();
+      expect(trigger.webhook_register).toBeDefined();
+      expect(trigger.webhook_deregister).toBeDefined();
       expect(repository?.name).toBeDefined();
       expect(repository?.owner).toBeDefined();
 
-      const response = await trigger.webhook_register(
+      const response = await trigger.webhook_register!(
         {
           conn_opts: { token },
           opts: { owner: repository.owner, repo: repository.name },
@@ -203,7 +215,7 @@ describe('Tests Github Actions', () => {
       expect(response).toBeDefined();
 
       if (response) {
-        await trigger.webhook_deregister(
+        await trigger.webhook_deregister!(
           {
             conn_opts: { token },
             opts: { owner: repository.owner, repo: repository.name },
@@ -215,13 +227,15 @@ describe('Tests Github Actions', () => {
     });
 
     it('Should create new review request webhook', async () => {
-      const trigger: Partial<TQoreAppActionWithWebhook> = GITHUB_TRIGGERS['newReviewRequest'];
+      const trigger = GITHUB_TRIGGERS['newReviewRequest'] as IQoreAppActionWithWebhookBase<any>;
 
       expect(trigger).toBeDefined();
+      expect(trigger.webhook_register).toBeDefined();
+      expect(trigger.webhook_deregister).toBeDefined();
       expect(repository?.name).toBeDefined();
       expect(repository?.owner).toBeDefined();
 
-      const response = await trigger.webhook_register(
+      const response = await trigger.webhook_register!(
         {
           conn_opts: { token },
           opts: { owner: repository.owner, repo: repository.name },
@@ -232,7 +246,7 @@ describe('Tests Github Actions', () => {
       expect(response).toBeDefined();
 
       if (response) {
-        await trigger.webhook_deregister(
+        await trigger.webhook_deregister!(
           {
             conn_opts: { token },
             opts: { owner: repository.owner, repo: repository.name },
@@ -249,7 +263,7 @@ describe('Tests Github Actions', () => {
 
     expect(action).toBeDefined();
 
-    const { body } = await testApi.execAppAction('github', action.action, connection);
+    const { body } = await testApi.execAppAction('github', action!.action, connection);
 
     expect(body).toBeDefined();
     expect(body.length).toBeGreaterThan(0);
@@ -259,9 +273,10 @@ describe('Tests Github Actions', () => {
     const action = GITHUB_ACTIONS.find((a) => a.action === 'repos-update');
 
     expect(action).toBeDefined();
-    expect(repository).toBeDefined();
+    expect(repository?.owner).toBeDefined();
+    expect(repository?.name).toBeDefined();
     const description = 'Test Repo Description';
-    const { body } = await testApi.execAppAction('github', action.action, connection, {
+    const { body } = await testApi.execAppAction('github', action!.action, connection, {
       owner: repository?.owner,
       repo: repository?.name,
       body: {
@@ -277,8 +292,9 @@ describe('Tests Github Actions', () => {
     const action = GITHUB_ACTIONS.find((a) => a.action === 'repos-get');
 
     expect(action).toBeDefined();
-    expect(repository).toBeDefined();
-    const { body } = await testApi.execAppAction('github', action.action, connection, {
+    expect(repository?.owner).toBeDefined();
+    expect(repository?.name).toBeDefined();
+    const { body } = await testApi.execAppAction('github', action!.action, connection, {
       owner: repository?.owner,
       repo: repository?.name,
     });
@@ -290,8 +306,9 @@ describe('Tests Github Actions', () => {
     const action = GITHUB_ACTIONS.find((a) => a.action === 'search-repos');
 
     expect(action).toBeDefined();
-    expect(repository).toBeDefined();
-    const { body } = await testApi.execAppAction('github', action.action, connection, {
+    expect(repository?.name).toBeDefined();
+    const { body } = await testApi.execAppAction('github', action!.action, connection, {
+      q: repository?.name,
       query: {
         q: repository?.name,
       },
@@ -311,7 +328,7 @@ describe('Tests Github Actions', () => {
   //   expect(repository).toBeDefined();
   //   const { body: publicKey } = await testApi.execAppAction(
   //     'github',
-  //     getPublicKeyAction.action,
+  //     getPublicKeyaction!.action,
   //     connection,
   //     {
   //       owner: repository?.owner,
@@ -327,7 +344,7 @@ describe('Tests Github Actions', () => {
   //   );
   //   expect(createSecretAction).toBeDefined();
 
-  //   await testApi.execAppAction('github', createSecretAction.action, connection, {
+  //   await testApi.execAppAction('github', createSecretaction!.action, connection, {
   //     owner: repository?.owner,
   //     repo: repository?.name,
   //     secret_name: 'TESTING_SECRET',
@@ -344,7 +361,7 @@ describe('Tests Github Actions', () => {
 
     expect(action).toBeDefined();
     expect(repository).toBeDefined();
-    const { body } = await testApi.execAppAction('github', action.action, connection, {
+    const { body } = await testApi.execAppAction('github', action!.action, connection, {
       owner: repository?.owner,
       repo: repository?.name,
       path: 'TEST.md',
@@ -364,7 +381,7 @@ describe('Tests Github Actions', () => {
 
     expect(action).toBeDefined();
     expect(repository).toBeDefined();
-    const { body } = await testApi.execAppAction('github', action.action, connection, {
+    const { body } = await testApi.execAppAction('github', action!.action, connection, {
       owner: repository?.owner,
       repo: repository?.name,
       path: 'TEST.md',
@@ -380,15 +397,20 @@ describe('Tests Github Actions', () => {
 
     expect(createReleaseAction).toBeDefined();
     expect(repository).toBeDefined();
-    const { body } = await testApi.execAppAction('github', createReleaseAction.action, connection, {
-      owner: repository?.owner,
-      repo: repository?.name,
-      body: {
-        tag_name: 'v1.0.0',
-        name: 'v1.0.0',
-        body: 'Release v1.0.0',
-      },
-    });
+    const { body } = await testApi.execAppAction(
+      'github',
+      createReleaseAction!.action,
+      connection,
+      {
+        owner: repository?.owner,
+        repo: repository?.name,
+        body: {
+          tag_name: 'v1.0.0',
+          name: 'v1.0.0',
+          body: 'Release v1.0.0',
+        },
+      }
+    );
 
     expect(body).toBeDefined();
 
@@ -396,7 +418,7 @@ describe('Tests Github Actions', () => {
 
     expect(listReleasesAction).toBeDefined();
     expect(repository).toBeDefined();
-    const releases = await testApi.execAppAction('github', listReleasesAction.action, connection, {
+    const releases = await testApi.execAppAction('github', listReleasesAction!.action, connection, {
       owner: repository?.owner,
       repo: repository?.name,
     });
@@ -409,7 +431,7 @@ describe('Tests Github Actions', () => {
 
     expect(action).toBeDefined();
     expect(repository).toBeDefined();
-    const { body } = await testApi.execAppAction('github', action.action, connection, {
+    const { body } = await testApi.execAppAction('github', action!.action, connection, {
       owner: repository?.owner,
       repo: repository?.name,
       body: {
@@ -428,7 +450,7 @@ describe('Tests Github Actions', () => {
     expect(action).toBeDefined();
     expect(repository).toBeDefined();
     const issueBody = "I'm having a problem with this. Edited";
-    const { body } = await testApi.execAppAction('github', action.action, connection, {
+    const { body } = await testApi.execAppAction('github', action!.action, connection, {
       owner: repository?.owner,
       repo: repository?.name,
       issue_number: issueNumber,
@@ -448,7 +470,7 @@ describe('Tests Github Actions', () => {
 
     expect(action).toBeDefined();
     expect(repository).toBeDefined();
-    const { body } = await testApi.execAppAction('github', action.action, connection, {
+    const { body } = await testApi.execAppAction('github', action!.action, connection, {
       owner: repository?.owner,
       repo: repository?.name,
       issue_number: issueNumber,
@@ -474,7 +496,7 @@ describe('Tests Github Actions', () => {
 
     expect(action).toBeDefined();
     expect(repository).toBeDefined();
-    const { body } = await testApi.execAppAction('github', action.action, connection, {
+    const { body } = await testApi.execAppAction('github', action!.action, connection, {
       owner: repository?.owner,
       repo: repository?.name,
     });
@@ -489,7 +511,7 @@ describe('Tests Github Actions', () => {
 
     expect(action).toBeDefined();
     expect(repository).toBeDefined();
-    const { body } = await testApi.execAppAction('github', action.action, connection, {
+    const { body } = await testApi.execAppAction('github', action!.action, connection, {
       owner: repository?.owner,
       repo: repository?.name,
       branch: 'main',
@@ -504,7 +526,7 @@ describe('Tests Github Actions', () => {
 
     expect(action).toBeDefined();
     expect(repository).toBeDefined();
-    const { body } = await testApi.execAppAction('github', action.action, connection, {
+    const { body } = await testApi.execAppAction('github', action!.action, connection, {
       owner: repository?.owner,
       repo: repository?.name,
       body: {
@@ -521,9 +543,12 @@ describe('Tests Github Actions', () => {
     const createFileAction = GITHUB_ACTIONS.find(
       (a) => a.action === 'repos-create-or-update-file-contents'
     );
+
+    expect(createFileAction).toBeDefined();
+
     const { body: updatedFileBody } = await testApi.execAppAction(
       'github',
-      createFileAction.action,
+      createFileAction!.action,
       connection,
       {
         owner: repository?.owner,
@@ -544,7 +569,7 @@ describe('Tests Github Actions', () => {
 
     expect(action).toBeDefined();
     expect(repository).toBeDefined();
-    const { body } = await testApi.execAppAction('github', action.action, connection, {
+    const { body } = await testApi.execAppAction('github', action!.action, connection, {
       owner: repository?.owner,
       repo: repository?.name,
       body: {
@@ -566,7 +591,7 @@ describe('Tests Github Actions', () => {
 
     expect(action).toBeDefined();
     expect(repository).toBeDefined();
-    const { body } = await testApi.execAppAction('github', action.action, connection, {
+    const { body } = await testApi.execAppAction('github', action!.action, connection, {
       owner: repository?.owner,
       repo: repository?.name,
     });
@@ -581,7 +606,7 @@ describe('Tests Github Actions', () => {
     expect(action).toBeDefined();
     expect(repository).toBeDefined();
     const updatedTitle = 'Updated pull request title';
-    const { body } = await testApi.execAppAction('github', action.action, connection, {
+    const { body } = await testApi.execAppAction('github', action!.action, connection, {
       owner: repository?.owner,
       repo: repository?.name,
       pull_number: pullNumber,
@@ -599,7 +624,7 @@ describe('Tests Github Actions', () => {
 
     expect(action).toBeDefined();
     expect(repository).toBeDefined();
-    const { body } = await testApi.execAppAction('github', action.action, connection, {
+    const { body } = await testApi.execAppAction('github', action!.action, connection, {
       owner: repository?.owner,
       repo: repository?.name,
       pull_number: pullNumber,
@@ -614,7 +639,7 @@ describe('Tests Github Actions', () => {
 
     expect(action).toBeDefined();
     expect(repository).toBeDefined();
-    const { body } = await testApi.execAppAction('github', action.action, connection, {
+    const { body } = await testApi.execAppAction('github', action!.action, connection, {
       owner: repository?.owner,
       repo: repository?.name,
     });
@@ -628,7 +653,7 @@ describe('Tests Github Actions', () => {
 
     expect(action).toBeDefined();
     expect(repository).toBeDefined();
-    const { body } = await testApi.execAppAction('github', action.action, connection, {
+    const { body } = await testApi.execAppAction('github', action!.action, connection, {
       owner: repository?.owner,
       repo: repository?.name,
     });
@@ -642,7 +667,7 @@ describe('Tests Github Actions', () => {
 
     expect(action).toBeDefined();
     expect(repository).toBeDefined();
-    const { body } = await testApi.execAppAction('github', action.action, connection, {
+    const { body } = await testApi.execAppAction('github', action!.action, connection, {
       owner: repository?.owner,
       repo: repository?.name,
     });
@@ -656,7 +681,7 @@ describe('Tests Github Actions', () => {
 
     expect(action).toBeDefined();
     expect(repository).toBeDefined();
-    const { body } = await testApi.execAppAction('github', action.action, connection, {
+    const { body } = await testApi.execAppAction('github', action!.action, connection, {
       owner: repository?.owner,
       repo: repository?.name,
     });
@@ -670,7 +695,7 @@ describe('Tests Github Actions', () => {
 
     expect(action).toBeDefined();
     expect(repository).toBeDefined();
-    const response = await testApi.execAppAction('github', action.action, connection, {
+    const response = await testApi.execAppAction('github', action!.action, connection, {
       owner: repository?.owner,
       repo: repository?.name,
     });

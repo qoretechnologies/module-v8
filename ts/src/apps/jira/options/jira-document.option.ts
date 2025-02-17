@@ -1,4 +1,4 @@
-import { IQoreAppActionOption } from '../../../global/models/qore';
+import { TQoreAppActionOption } from '@qoretechnologies/ts-toolkit';
 
 export const jiraDocumentFormatOption = {
   required: true,
@@ -107,4 +107,4 @@ export const jiraDocumentFormatOption = {
       },
     },
   },
-} satisfies IQoreAppActionOption;
+} satisfies TQoreAppActionOption;

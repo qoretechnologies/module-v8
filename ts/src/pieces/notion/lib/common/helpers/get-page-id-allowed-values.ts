@@ -2,25 +2,29 @@ import { Client } from '@notionhq/client';
 import { SearchResponse } from '@notionhq/client/build/src/api-endpoints';
 import {
   IQoreAllowedValue,
+  TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
-} from '../../../../../global/models/qore';
+} from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../../../utils/Debugger';
 import { delay } from '../../../../../global/helpers';
 import { NOTION_ALLOWED_VALUES_TIMEOUT, NOTION_FETCH_DELAY } from '../constants';
 
-export const getNotionPageIdAllowedValues: TQoreGetAllowedValuesFunction = async (
-  context
-): Promise<IQoreAllowedValue[]> => {
-  const {
-    conn_opts: { token },
-  } = context;
+export const getNotionPageIdAllowedValues: TQoreGetAllowedValuesFunction<
+  TCustomConnOptions,
+  string
+> = async (context): Promise<IQoreAllowedValue<string>[]> => {
+  const token = context?.conn_opts?.token;
+
+  if (!token) {
+    throw new Error('Notion token is required for pageId allowed values');
+  }
 
   const notion = new Client({
     auth: token,
     notionVersion: '2022-02-22',
   });
 
-  const pages: IQoreAllowedValue[] = [];
+  const pages: IQoreAllowedValue<string>[] = [];
 
   const notionPages: SearchResponse['results'] = [];
   let cursor = undefined;

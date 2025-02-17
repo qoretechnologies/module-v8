@@ -1,14 +1,17 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { IQoreAppActionWithWebhookBase } from '../../../global/models/qore';
+import { IQoreAppActionWithWebhookBase, QorusRequest } from '@qoretechnologies/ts-toolkit';
 
 export const deregisterJiraWebhook: IQoreAppActionWithWebhookBase['webhook_deregister'] = async (
   context,
   _url,
   regInfo
 ) => {
-  const {
-    conn_opts: { token, cloud_id },
-  } = context;
+  const token = context?.conn_opts?.token;
+  const cloud_id = context?.conn_opts?.cloud_id;
+
+  if (!token || !cloud_id) {
+    throw new Error('The token and cloud_id are required to deregister Jira webhook');
+  }
+
   const { webhook } = regInfo;
 
   await QorusRequest.deleteReq<any>(

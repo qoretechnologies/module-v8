@@ -1,17 +1,34 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
-import { ESIGNATURE_CONN_OPTIONS } from '../constants';
+import {
+  IQoreAllowedValue,
+  QorusRequest,
+  TQoreGetAllowedValuesFunction,
+} from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
+import { ESIGNATURE_CONN_OPTIONS } from '../constants';
 
 export const getEsignatureRecipientIdAllowedValues: TQoreGetAllowedValuesFunction<
-  typeof ESIGNATURE_CONN_OPTIONS
-> = async (context): Promise<IQoreAllowedValue[]> => {
-  const {
-    conn_opts: { token, base_uri },
-    opts: { accountId, envelopeId },
-  } = context;
+  typeof ESIGNATURE_CONN_OPTIONS,
+  string
+> = async (context): Promise<IQoreAllowedValue<string>[]> => {
+  const token = context?.conn_opts?.token;
+  const base_uri = context?.conn_opts?.base_uri;
+  const accountId = context?.opts?.accountId;
+  const envelopeId = context?.opts?.envelopeId;
 
-  const items: IQoreAllowedValue[] = [];
+  const missingOptions = [];
+
+  if (!token) missingOptions.push('token');
+  if (!base_uri) missingOptions.push('base_uri');
+  if (!accountId) missingOptions.push('accountId');
+  if (!envelopeId) missingOptions.push('envelopeId');
+
+  if (missingOptions.length > 0) {
+    throw new Error(
+      `The following options are required to get Esignature recipient allowed values: ${missingOptions.join(', ')}`
+    );
+  }
+
+  const items: IQoreAllowedValue<string>[] = [];
 
   try {
     const { data } = await QorusRequest.get<any>(
@@ -28,7 +45,7 @@ export const getEsignatureRecipientIdAllowedValues: TQoreGetAllowedValuesFunctio
       if (Array.isArray(fetchedItems)) {
         items.push(
           ...fetchedItems.map(
-            (item: any): IQoreAllowedValue => ({
+            (item: any): IQoreAllowedValue<string> => ({
               value: item.recipientId,
               display_name: item.name || 'Unnamed Recipient',
               desc: [

@@ -1,4 +1,4 @@
-import { EQoreAppActionCode, IQoreAppActionWithEvent } from '../global/models/qore';
+import { EQoreAppActionCode, IQoreAppActionWithEvent } from '@qoretechnologies/ts-toolkit';
 
 export const testActionWithEvent = {
   app: 'test',

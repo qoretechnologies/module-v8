@@ -1,4 +1,5 @@
-import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
+import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
+import { STRIPE_APP_NAME } from '../constants';
 import { TStripeEventType } from './constants';
 import { stripeSubscriptionEventInfoType } from './event-info/subscription.event-info';
 import {
@@ -9,7 +10,8 @@ import {
 
 const triggerEvents = ['customer.subscription.deleted'] satisfies TStripeEventType[];
 
-export default {
+const stripeSubscriptionCanceledTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: STRIPE_APP_NAME,
   action: 'subscription_canceled',
   action_code: EQoreAppActionCode.EVENT,
   webhook_method: 'POST',
@@ -20,4 +22,6 @@ export default {
     desc: 'Subscription canceled event data',
     type: stripeSubscriptionEventInfoType,
   },
-} satisfies TQorePartialEventAction;
+});
+
+export default stripeSubscriptionCanceledTrigger;

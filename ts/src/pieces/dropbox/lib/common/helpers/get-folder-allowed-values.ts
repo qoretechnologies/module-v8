@@ -1,8 +1,5 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import {
-  IQoreAllowedValue,
-  TQoreGetAllowedValuesFunction,
-} from '../../../../../global/models/qore';
+import { QorusRequest, TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
+import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../../../utils/Debugger';
 import { DROPBOX_ALLOWED_VALUES_TIMEOUT } from '../constants';
 
@@ -63,20 +60,25 @@ const getFoldersContinue = async (
   };
 };
 
-const mapDropboxFolder = (folder: TDropboxItem): IQoreAllowedValue => ({
+const mapDropboxFolder = (folder: TDropboxItem): IQoreAllowedValue<string> => ({
   value: folder.path_lower,
   display_name: folder.name,
   short_desc: folder.path_display,
 });
 
-export const getDropboxFolderAllowedValues: TQoreGetAllowedValuesFunction = async (
-  context
-): Promise<IQoreAllowedValue[]> => {
-  const {
-    conn_opts: { token },
-  } = context;
+export const getDropboxFolderAllowedValues: TQoreGetAllowedValuesFunction<
+  TCustomConnOptions,
+  string
+> = async (context): Promise<IQoreAllowedValue<string>[]> => {
+  const token = context?.conn_opts?.token;
 
-  const folders: IQoreAllowedValue[] = [{ value: '', display_name: 'Root', short_desc: '/' }];
+  if (!token) {
+    throw new Error('The token is required to get Dropbox folder allowed values');
+  }
+
+  const folders: IQoreAllowedValue<string>[] = [
+    { value: '', display_name: 'Root', short_desc: '/' },
+  ];
   const startTime = Date.now();
 
   try {

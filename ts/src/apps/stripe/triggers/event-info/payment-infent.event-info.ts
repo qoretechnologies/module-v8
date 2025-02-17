@@ -1,4 +1,4 @@
-import { TQoreTypeObject } from '../../../../global/models/qore';
+import { TQoreTypeObject } from '@qoretechnologies/ts-toolkit';
 
 export const stripePaymentIntentEventInfoType = {
   type: 'hash',

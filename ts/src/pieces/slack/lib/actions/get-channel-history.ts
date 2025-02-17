@@ -1,7 +1,7 @@
 import { ConversationsHistoryResponse, WebClient } from '@slack/web-api';
 import { createAction, Property } from 'core/framework';
 import { slackAuth } from '../..';
-import { TQoreResponseType } from '../../../../global/models/qore';
+import { TQoreResponseType } from '@qoretechnologies/ts-toolkit';
 import { slackChannel, slackInfo } from '../common/props';
 
 const getChannelHistoryResponseType = {

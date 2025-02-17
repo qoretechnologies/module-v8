@@ -1,18 +1,23 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
-import { repoOwnerCommonOptions } from '../constants';
+import { EQoreAppActionCode, QoreAppCreator, QorusRequest } from '@qoretechnologies/ts-toolkit';
+import { GITHUB_APP_NAME, repoOwnerCommonOptions } from '../constants';
 import { commonEventFieldsType } from './constants';
 
-export default {
+const githubNewRepositoryIssueTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: GITHUB_APP_NAME,
   action: 'new_repository_issue',
   action_code: EQoreAppActionCode.EVENT,
   webhook_method: 'POST',
   options: repoOwnerCommonOptions,
   webhook_register: async (context, url) => {
-    const {
-      conn_opts: { token },
-      opts: { owner, repo },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const owner = context?.opts?.owner;
+    const repo = context?.opts?.repo;
+
+    if (!token || !owner || !repo) {
+      throw new Error(
+        'The following options are required to register new repository issue event: token, owner, repo'
+      );
+    }
 
     const { data } = await QorusRequest.post<any>(
       {
@@ -36,10 +41,15 @@ export default {
     return { webhook: data };
   },
   webhook_deregister: async (context, _url, regInfo) => {
-    const {
-      conn_opts: { token },
-      opts: { owner, repo },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const owner = context?.opts?.owner;
+    const repo = context?.opts?.repo;
+
+    if (!token || !owner || !repo) {
+      throw new Error(
+        'The following options are required to deregister new repository issue event: token, owner, repo'
+      );
+    }
     const { webhook } = regInfo;
 
     await QorusRequest.deleteReq<any>(
@@ -230,4 +240,6 @@ export default {
       },
     },
   },
-} satisfies TQorePartialEventAction;
+});
+
+export default githubNewRepositoryIssueTrigger;

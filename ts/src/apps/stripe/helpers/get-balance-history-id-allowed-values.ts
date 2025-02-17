@@ -1,7 +1,10 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
-import { Debugger } from '../../../utils/Debugger';
+import {
+  IQoreAllowedValue,
+  QorusRequest,
+  TQoreGetAllowedValuesFunction,
+} from '@qoretechnologies/ts-toolkit';
 import { delay } from '../../../global/helpers';
+import { Debugger } from '../../../utils/Debugger';
 import { STRIPE_ALLOWED_VALUES_FETCH_DELAY, STRIPE_ALLOWED_VALUES_TIMEOUT } from './constants';
 
 type TStripeBalanceHistoryData = {
@@ -52,13 +55,15 @@ const mapStripeBalanceHistory = (item: TStripeBalanceHistoryItem): IQoreAllowedV
 export const getStripeBalanceHistoryIdAllowedValues: TQoreGetAllowedValuesFunction = async (
   context
 ): Promise<IQoreAllowedValue[]> => {
-  const {
-    conn_opts: { token },
-  } = context;
+  const token = context?.conn_opts?.token;
+
+  if (!token) {
+    throw new Error('The token is required to get Stripe balance history allowed values');
+  }
 
   const balanceHistoryIds: IQoreAllowedValue[] = [];
   const startTime = Date.now();
-  let lastItemId = null;
+  let lastItemId = undefined;
 
   try {
     do {

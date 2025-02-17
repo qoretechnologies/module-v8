@@ -1,5 +1,9 @@
 import { Octokit } from '@octokit/rest';
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
+import {
+  IQoreAllowedValue,
+  TCustomConnOptions,
+  TQoreGetAllowedValuesFunction,
+} from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
 import { GITHUB_ALLOWED_VALUES_TIMEOUT } from './constants';
 
@@ -8,26 +12,31 @@ const MAX_ITEMS = 600;
 
 const mapGithubRepoToOwner = (repo: {
   owner: { login: string; type: string; html_url: string; avatar_url: string };
-}): IQoreAllowedValue => ({
-  value: repo.owner.login,
-  display_name: repo.owner.login,
-  desc: `Type: ${repo.owner.type}\n\n Link: [View on GitHub](${repo.owner.html_url})`,
-  image: repo.owner.avatar_url,
-});
+}): IQoreAllowedValue<string> => {
+  return {
+    value: repo.owner.login,
+    display_name: repo.owner.login,
+    desc: `Type: ${repo.owner.type}\n\n Link: [View on GitHub](${repo.owner.html_url})`,
+    image: repo.owner.avatar_url,
+  };
+};
 
-export const getGitHubOwnerAllowedValues: TQoreGetAllowedValuesFunction = async (
-  context
-): Promise<IQoreAllowedValue[]> => {
-  const {
-    conn_opts: { token },
-    opts,
-  } = context;
+export const getGitHubOwnerAllowedValues: TQoreGetAllowedValuesFunction<
+  TCustomConnOptions,
+  string
+> = async (context): Promise<IQoreAllowedValue<string>[]> => {
+  const token = context?.conn_opts?.token;
+  const opts = context?.opts;
+
+  if (!token) {
+    throw new Error('The token is required to get Github owner allowed values');
+  }
 
   const octokit = new Octokit({
     auth: token,
   });
 
-  const owners: IQoreAllowedValue[] = [];
+  const owners: IQoreAllowedValue<string>[] = [];
   const startTime = Date.now();
 
   Debugger.log('Github Owner allowed values opts', {
@@ -46,7 +55,12 @@ export const getGitHubOwnerAllowedValues: TQoreGetAllowedValuesFunction = async 
         itemCount += response.data.length;
 
         const repos = response.data.filter((repository) => repository.name === opts.repo);
-        owners.push(...repos.map(mapGithubRepoToOwner));
+
+        const reposWithOwner = repos.filter((repository) => repository.owner) as {
+          owner: { login: string; type: string; html_url: string; avatar_url: string };
+        }[];
+
+        owners.push(...reposWithOwner.map(mapGithubRepoToOwner));
 
         if (itemCount >= MAX_ITEMS || Date.now() - startTime > GITHUB_ALLOWED_VALUES_TIMEOUT) {
           break;
@@ -60,7 +74,9 @@ export const getGitHubOwnerAllowedValues: TQoreGetAllowedValuesFunction = async 
           new Map(response.data.map((repository) => [repository.owner.login, repository])).values()
         );
 
-        owners.push(...repos.map(mapGithubRepoToOwner));
+        const reposWithOwner = repos.filter((repository) => repository.owner);
+
+        owners.push(...reposWithOwner.map(mapGithubRepoToOwner));
 
         if (Date.now() - startTime > GITHUB_ALLOWED_VALUES_TIMEOUT) {
           break;

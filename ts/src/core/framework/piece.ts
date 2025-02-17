@@ -9,7 +9,7 @@ import {
   IQoreRestConnectionConfig,
   IQoreRestConnectionModifiers,
   TQorePartialEventAction,
-} from '../../global/models/qore';
+} from '@qoretechnologies/ts-toolkit';
 
 export class Piece<
   PieceAuth extends PieceAuthProperty = PieceAuthProperty,
@@ -36,8 +36,10 @@ export class Piece<
     public readonly description = '',
     public readonly logo: string = '',
     public readonly qoreTriggers: TQorePartialEventAction[] = [],
-    public readonly qoreConnectionModifiers: IQoreRestConnectionModifiers<ModifierOptions> = undefined,
-    public readonly qoreRest: Partial<IQoreRestConnectionConfig> = undefined
+    public readonly qoreConnectionModifiers:
+      | IQoreRestConnectionModifiers<ModifierOptions>
+      | undefined = undefined,
+    public readonly qoreRest: Partial<IQoreRestConnectionConfig> | undefined = undefined
   ) {
     actions.forEach((action) => (this._actions[action.name] = action));
     triggers.forEach((trigger) => (this._triggers[trigger.name] = trigger));

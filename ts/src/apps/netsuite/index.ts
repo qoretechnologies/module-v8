@@ -1,6 +1,10 @@
 import { actionsCatalogue } from '../../ActionsCatalogue';
 import { createSwaggerPaths, mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
-import { IQoreAppWithActions } from '../../global/models/qore';
+import {
+  TQoreAppActionFunctionContext,
+  TQoreAppWithActions,
+  TQoreMappedOptions,
+} from '@qoretechnologies/ts-toolkit';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import { NetsuiteSuiteQlAction } from './actions/suite-ql.action';
@@ -52,15 +56,19 @@ export default (locale: Locales) =>
     rest_modifiers: {
       options: NETSUITE_CONN_OPTIONS,
       url_template_options: ['account_id'],
-      set_options_post_auth: (context) => {
-        if (context.conn_opts.company) {
-          const company: string = context.conn_opts.company.replace(/_SB([0-9]+)/, '-sb$1');
-
-          return {
-            account_id: company,
-            oauth2_token_url: `https://${company}.suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token`,
-          };
+      set_options_post_auth: (
+        context: Omit<TQoreAppActionFunctionContext<typeof NETSUITE_CONN_OPTIONS>, 'opts'>
+      ): TQoreMappedOptions<typeof NETSUITE_CONN_OPTIONS> => {
+        if (!context?.conn_opts?.company) {
+          throw new Error(`Couldn't set netsuite account id: company is not set`);
         }
+        const company: string = context.conn_opts.company.replace(/_SB([0-9]+)/, '-sb$1');
+
+        return {
+          account_id: company,
+          company,
+          oauth2_token_url: `https://${company}.suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token`,
+        };
       },
     },
-  }) satisfies IQoreAppWithActions;
+  }) satisfies TQoreAppWithActions;

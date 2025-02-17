@@ -1,15 +1,20 @@
+import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
-import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
+import { SALESFORCE_APP_NAME } from '../constants';
 import { fetchSalesforceObjectRecords } from '../helpers/constants';
 
-export default {
+const salesforceNewLeadTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: SALESFORCE_APP_NAME,
   action: 'new_lead_trigger',
   action_code: EQoreAppActionCode.EVENT,
   event_function: async (context, update, should_stop) => {
-    const {
-      conn_opts: { token, instance_url },
-    } = context;
+    const token = context.conn_opts?.token;
+    const instance_url = context.conn_opts?.instance_url;
+
+    if (!token || !instance_url) {
+      throw new Error('The token and instance_url are required to register Salesforce webhook');
+    }
 
     const getLeads = () => {
       return getLastCreatedLead(token, instance_url);
@@ -33,15 +38,20 @@ export default {
     },
   },
   get_example_event_data: async (context) => {
-    const {
-      conn_opts: { token, instance_url },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const instance_url = context?.conn_opts?.instance_url;
+
+    if (!token || !instance_url) {
+      throw new Error(
+        'The token and instance_url are required to get Salesforce new lead example data'
+      );
+    }
 
     const data = await getLastCreatedLead(token, instance_url);
 
     return data?.length > 0 ? data[0] : null;
   },
-} satisfies TQorePartialEventAction;
+});
 
 const getLastCreatedLead = async (token: string, url: string): Promise<any> => {
   const lead = await fetchSalesforceObjectRecords({
@@ -52,3 +62,5 @@ const getLastCreatedLead = async (token: string, url: string): Promise<any> => {
 
   return lead;
 };
+
+export default salesforceNewLeadTrigger;

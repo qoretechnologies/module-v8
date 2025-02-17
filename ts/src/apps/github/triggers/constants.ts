@@ -1,4 +1,4 @@
-import { IQoreAppActionOption, TQoreTypeObject } from '../../../global/models/qore';
+import { TQoreAppActionOption, TQoreTypeObject } from '@qoretechnologies/ts-toolkit';
 
 export const eventRepositoryType = {
   type: 'hash',
@@ -137,4 +137,4 @@ export const commonEventFieldsType = {
   sender: {
     type: eventSenderType,
   },
-} satisfies Record<string, IQoreAppActionOption>;
+} satisfies Record<string, TQoreAppActionOption>;

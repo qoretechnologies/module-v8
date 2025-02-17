@@ -1,8 +1,8 @@
 import { Client } from '@notionhq/client';
 import { notionAuth } from '../..';
 import { createAction, Property } from '../../../../core/framework';
-import { addCommentResponseType } from './add-comment-to-discussion';
 import { notionCommon } from '../common';
+import { addCommentResponseType } from './add-comment-to-discussion';
 
 export const addCommentToPage = createAction({
   auth: notionAuth,
@@ -24,6 +24,10 @@ export const addCommentToPage = createAction({
       auth: context.auth.access_token,
       notionVersion: '2022-02-22',
     });
+
+    if (!pageId) {
+      throw new Error('The pageId is required to add a comment to a page');
+    }
 
     return await notion.comments.create({
       parent: {

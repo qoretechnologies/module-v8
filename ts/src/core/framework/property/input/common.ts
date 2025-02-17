@@ -3,7 +3,7 @@ import { PropertyType } from './property-type';
 import { ProcessorFn } from '../../processors/types';
 import { TypedValidatorFn, ValidationInputType } from '../../validators/types';
 import { ApFile } from './file-property';
-import { TQoreOptionOnChangeEvents } from '../../../../global/models/qore';
+import { TQoreOptionOnChangeEvents } from '@qoretechnologies/ts-toolkit';
 
 export const BasePropertySchema = Type.Object({
   displayName: Type.String(),

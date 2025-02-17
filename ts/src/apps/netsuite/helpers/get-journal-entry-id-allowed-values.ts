@@ -1,4 +1,4 @@
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
+import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 import { NETSUITE_CONN_OPTIONS } from '../constants';
 import { fetchNetsuiteAllowedValues } from './constants';
 
@@ -37,9 +37,14 @@ const mapNetSuiteJournalEntry = (journalEntry: TNetsuiteJournalEntryData): IQore
 export const getNetsuiteJournalEntryIdAllowedValues: TQoreGetAllowedValuesFunction<
   typeof NETSUITE_CONN_OPTIONS
 > = async (context): Promise<IQoreAllowedValue[]> => {
-  const {
-    conn_opts: { token, account_id },
-  } = context;
+  const token = context?.conn_opts?.token;
+  const account_id = context?.conn_opts?.account_id;
+
+  if (!token || !account_id) {
+    throw new Error(
+      'The token and account_id is required to get NetSuite journal entry allowed values'
+    );
+  }
 
   const journalEntries = await fetchNetsuiteAllowedValues({
     account_id,

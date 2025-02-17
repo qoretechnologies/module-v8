@@ -1,5 +1,5 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
+import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 import { JIRA_CONN_OPTIONS } from '../constants';
 import { Debugger } from '../../../utils/Debugger';
 import { delay } from '../../../global/helpers';
@@ -51,10 +51,15 @@ const mapJiraComment = (comment: {
 export const getJiraCommentIdAllowedValues: TQoreGetAllowedValuesFunction<
   typeof JIRA_CONN_OPTIONS
 > = async (context): Promise<IQoreAllowedValue[]> => {
-  const {
-    conn_opts: { token, cloud_id },
-    opts: { issueIdOrKey },
-  } = context;
+  const token = context?.conn_opts?.token;
+  const cloud_id = context?.conn_opts?.cloud_id;
+  const issueIdOrKey = context?.opts?.issueIdOrKey;
+
+  if (!token || !cloud_id || !issueIdOrKey) {
+    throw new Error(
+      'The token, cloud_id and issueIdOrKey are required to get Jira comment allowed values'
+    );
+  }
 
   const comments: IQoreAllowedValue[] = [];
   const startTime = Date.now();

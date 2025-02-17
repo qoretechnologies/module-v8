@@ -1,10 +1,11 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
-import { Debugger } from '../../../utils/Debugger';
+import { EQoreAppActionCode, QoreAppCreator, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
+import { Debugger } from '../../../utils/Debugger';
+import { NETSUITE_APP_NAME } from '../constants';
 
-export default {
+const netsuiteNewRecordTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: NETSUITE_APP_NAME,
   action: 'new_record',
   action_code: EQoreAppActionCode.EVENT,
   options: {
@@ -15,10 +16,15 @@ export default {
     },
   },
   event_function: async (context, update, should_stop) => {
-    const {
-      conn_opts: { token, account_id },
-      opts: { recordType },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const account_id = context?.conn_opts?.account_id;
+    const recordType = context?.opts?.recordType;
+
+    if (!token || !account_id || !recordType) {
+      throw new Error(
+        'The token, account_id, and recordType are required to register NetSuite webhook'
+      );
+    }
 
     const getRecords = () => {
       return getLastCreatedRecordItems(recordType, account_id, token);
@@ -36,19 +42,29 @@ export default {
     desc: 'NetSuite New Record Event Info',
     type: {
       type: 'hash',
+      fields: {
+        id: {
+          type: 'string',
+        },
+      },
     },
   },
   get_example_event_data: async (context) => {
-    const {
-      conn_opts: { token, account_id },
-      opts: { recordType },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const account_id = context?.conn_opts?.account_id;
+    const recordType = context?.opts?.recordType;
+
+    if (!token || !account_id || !recordType) {
+      throw new Error(
+        'The token, account_id, and recordType are required to get NetSuite new record example data'
+      );
+    }
 
     const data = await getLastCreatedRecordItems(recordType, account_id, token);
 
     return data?.length > 0 ? data[0] : null;
   },
-} satisfies TQorePartialEventAction;
+});
 
 const getLastCreatedRecordItems = async (recordType: string, accountId: string, token: string) => {
   try {
@@ -103,3 +119,5 @@ const fetchSuiteQlData = async ({
 
   return data;
 };
+
+export default netsuiteNewRecordTrigger;

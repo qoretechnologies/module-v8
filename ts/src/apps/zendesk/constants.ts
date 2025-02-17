@@ -1,4 +1,4 @@
-import { TAllowedPaths } from '../../global/models/qore';
+import { TAllowedPaths } from '@qoretechnologies/ts-toolkit';
 import { getAgentIdAllowedValues } from './helpers/get-agent-id-allowed-values';
 import { getGroupIdAllowedValues } from './helpers/get-group-id-allowed-values';
 import { getOrganizationIdAllowedValues } from './helpers/get-organization-id-allowed-values';

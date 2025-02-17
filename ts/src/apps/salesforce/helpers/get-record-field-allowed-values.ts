@@ -1,20 +1,26 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
+import {
+  IQoreAllowedValue,
+  QorusRequest,
+  TQoreGetAllowedValuesFunction,
+} from '@qoretechnologies/ts-toolkit';
 import { SALESFORCE_API_VERSION, SALESFORCE_CONN_OPTIONS } from '../constants';
 
 export const getSalesforceRecordFieldAllowedValues: TQoreGetAllowedValuesFunction<
   typeof SALESFORCE_CONN_OPTIONS
 > = async (context): Promise<IQoreAllowedValue[]> => {
-  const {
-    conn_opts: { token, instance_url },
-    opts: { object },
-  } = context;
+  const token = context?.conn_opts?.token;
+  const instance_url = context?.conn_opts?.instance_url;
+  const object = context?.opts?.object;
+
+  if (!token || !instance_url || !object) {
+    throw new Error(
+      'The token, instance_url, and object are required to get Salesforce record field allowed values'
+    );
+  }
 
   const objectFields: IQoreAllowedValue[] = [];
 
-  const {
-    data: { fields },
-  } = await QorusRequest.get<{
+  const response = await QorusRequest.get<{
     data: { fields: { name: string; label: string }[] };
   }>(
     {
@@ -29,8 +35,12 @@ export const getSalesforceRecordFieldAllowedValues: TQoreGetAllowedValuesFunctio
     }
   );
 
+  const responseData = response?.data;
+
+  if (!responseData) return objectFields;
+
   objectFields.push(
-    ...fields.map(
+    ...responseData.fields.map(
       (field): IQoreAllowedValue => ({
         value: field.name,
         display_name: field.label,

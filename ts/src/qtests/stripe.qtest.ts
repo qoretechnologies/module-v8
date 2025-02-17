@@ -1,3 +1,8 @@
+import {
+  IQoreAppActionWithWebhookBase,
+  TQoreAppActionFunctionContext,
+  TQoreOptions,
+} from '@qoretechnologies/ts-toolkit';
 import { STRIPE_ACTIONS } from '../apps/stripe';
 import * as STRIPE_TRIGGERS from '../apps/stripe/triggers';
 let connection: string;
@@ -23,7 +28,7 @@ describe('Tests Stripe Actions', () => {
     const action = STRIPE_ACTIONS.find((a) => a.action === 'GetAccount');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('stripe', action.action, connection);
+    const response = await testApi.execAppAction('stripe', action!.action, connection);
     expect(response.body).toBeDefined();
     expect(response.body.id).toBeDefined();
   });
@@ -33,7 +38,7 @@ describe('Tests Stripe Actions', () => {
     const action = STRIPE_ACTIONS.find((a) => a.action === 'GetBalance');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('stripe', action.action, connection);
+    const response = await testApi.execAppAction('stripe', action!.action, connection);
 
     expect(response.body).toBeDefined();
   });
@@ -42,7 +47,7 @@ describe('Tests Stripe Actions', () => {
     const action = STRIPE_ACTIONS.find((a) => a.action === 'GetBalanceHistory');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('stripe', action.action, connection);
+    const response = await testApi.execAppAction('stripe', action!.action, connection);
 
     expect(response.body).toBeDefined();
 
@@ -52,7 +57,7 @@ describe('Tests Stripe Actions', () => {
 
       const balanceHistoryItemResponse = await testApi.execAppAction(
         'stripe',
-        getBalanceHistoryItem.action,
+        getBalanceHistoryItem!.action,
         connection,
         {
           id: response.body.data[0].id,
@@ -70,7 +75,7 @@ describe('Tests Stripe Actions', () => {
     const action = STRIPE_ACTIONS.find((a) => a.action === 'PostCharges');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('stripe', action.action, connection, {
+    const response = await testApi.execAppAction('stripe', action!.action, connection, {
       amount: 500,
       currency: 'usd',
       source: 'tok_visa',
@@ -83,7 +88,7 @@ describe('Tests Stripe Actions', () => {
     const action = STRIPE_ACTIONS.find((a) => a.action === 'GetChargesCharge');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('stripe', action.action, connection, {
+    const response = await testApi.execAppAction('stripe', action!.action, connection, {
       charge: chargeId,
     });
 
@@ -95,7 +100,7 @@ describe('Tests Stripe Actions', () => {
     const action = STRIPE_ACTIONS.find((a) => a.action === 'PostChargesCharge');
     expect(action).toBeDefined();
     const description = 'Updated charge description';
-    const response = await testApi.execAppAction('stripe', action.action, connection, {
+    const response = await testApi.execAppAction('stripe', action!.action, connection, {
       charge: chargeId,
       description,
     });
@@ -109,7 +114,7 @@ describe('Tests Stripe Actions', () => {
     const action = STRIPE_ACTIONS.find((a) => a.action === 'GetCharges');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('stripe', action.action, connection);
+    const response = await testApi.execAppAction('stripe', action!.action, connection);
 
     expect(response.body).toBeDefined();
   });
@@ -119,7 +124,7 @@ describe('Tests Stripe Actions', () => {
     const action = STRIPE_ACTIONS.find((a) => a.action === 'PostRefunds');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('stripe', action.action, connection, {
+    const response = await testApi.execAppAction('stripe', action!.action, connection, {
       charge: chargeId,
     });
 
@@ -131,7 +136,7 @@ describe('Tests Stripe Actions', () => {
     const action = STRIPE_ACTIONS.find((a) => a.action === 'GetRefunds');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('stripe', action.action, connection);
+    const response = await testApi.execAppAction('stripe', action!.action, connection);
 
     expect(response.body).toBeDefined();
   });
@@ -142,7 +147,7 @@ describe('Tests Stripe Actions', () => {
     const action = STRIPE_ACTIONS.find((a) => a.action === 'PostCustomers');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('stripe', action.action, connection, {
+    const response = await testApi.execAppAction('stripe', action!.action, connection, {
       email: 'test@example.com',
     });
 
@@ -154,7 +159,7 @@ describe('Tests Stripe Actions', () => {
     const action = STRIPE_ACTIONS.find((a) => a.action === 'GetCustomers');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('stripe', action.action, connection);
+    const response = await testApi.execAppAction('stripe', action!.action, connection);
     expect(response.body).toBeDefined();
     expect(response.body.data).toBeDefined();
     expect(response.body.data.length).toBeGreaterThan(0);
@@ -164,7 +169,7 @@ describe('Tests Stripe Actions', () => {
     const action = STRIPE_ACTIONS.find((a) => a.action === 'GetCustomersCustomer');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('stripe', action.action, connection, {
+    const response = await testApi.execAppAction('stripe', action!.action, connection, {
       customer: customerId,
     });
 
@@ -176,7 +181,7 @@ describe('Tests Stripe Actions', () => {
     expect(action).toBeDefined();
 
     const email = 'updated@example.com';
-    const response = await testApi.execAppAction('stripe', action.action, connection, {
+    const response = await testApi.execAppAction('stripe', action!.action, connection, {
       customer: customerId,
       email,
     });
@@ -191,7 +196,7 @@ describe('Tests Stripe Actions', () => {
     );
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('stripe', action.action, connection, {
+    const response = await testApi.execAppAction('stripe', action!.action, connection, {
       customer: customerId,
       amount: 100,
       currency: 'usd',
@@ -207,7 +212,7 @@ describe('Tests Stripe Actions', () => {
     );
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('stripe', action.action, connection, {
+    const response = await testApi.execAppAction('stripe', action!.action, connection, {
       customer: customerId,
     });
 
@@ -220,7 +225,7 @@ describe('Tests Stripe Actions', () => {
     const action = STRIPE_ACTIONS.find((a) => a.action === 'PostCustomersCustomerSources');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('stripe', action.action, connection, {
+    const response = await testApi.execAppAction('stripe', action!.action, connection, {
       customer: customerId,
       source: 'tok_visa',
     });
@@ -232,7 +237,7 @@ describe('Tests Stripe Actions', () => {
     const action = STRIPE_ACTIONS.find((a) => a.action === 'GetCustomersCustomerSources');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('stripe', action.action, connection, {
+    const response = await testApi.execAppAction('stripe', action!.action, connection, {
       customer: customerId,
     });
 
@@ -246,7 +251,7 @@ describe('Tests Stripe Actions', () => {
     const action = STRIPE_ACTIONS.find((a) => a.action === 'PostInvoices');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('stripe', action.action, connection, {
+    const response = await testApi.execAppAction('stripe', action!.action, connection, {
       customer: customerId,
     });
 
@@ -258,7 +263,7 @@ describe('Tests Stripe Actions', () => {
     const action = STRIPE_ACTIONS.find((a) => a.action === 'GetInvoicesInvoice');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('stripe', action.action, connection, {
+    const response = await testApi.execAppAction('stripe', action!.action, connection, {
       invoice: invoiceId,
     });
 
@@ -271,7 +276,7 @@ describe('Tests Stripe Actions', () => {
     expect(action).toBeDefined();
 
     const description = 'Updated Invoice Description';
-    const response = await testApi.execAppAction('stripe', action.action, connection, {
+    const response = await testApi.execAppAction('stripe', action!.action, connection, {
       invoice: invoiceId,
       description,
     });
@@ -285,7 +290,7 @@ describe('Tests Stripe Actions', () => {
     const action = STRIPE_ACTIONS.find((a) => a.action === 'GetInvoices');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('stripe', action.action, connection);
+    const response = await testApi.execAppAction('stripe', action!.action, connection);
 
     expect(response.body).toBeDefined();
     expect(response.body.data).toBeDefined();
@@ -296,7 +301,7 @@ describe('Tests Stripe Actions', () => {
     const action = STRIPE_ACTIONS.find((a) => a.action === 'DeleteInvoicesInvoice');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('stripe', action.action, connection, {
+    const response = await testApi.execAppAction('stripe', action!.action, connection, {
       invoice: invoiceId,
     });
 
@@ -309,7 +314,7 @@ describe('Tests Stripe Actions', () => {
     const action = STRIPE_ACTIONS.find((a) => a.action === 'PostPaymentIntents');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('stripe', action.action, connection, {
+    const response = await testApi.execAppAction('stripe', action!.action, connection, {
       amount: 1000,
       currency: 'usd',
       payment_method: 'pm_card_visa',
@@ -323,7 +328,7 @@ describe('Tests Stripe Actions', () => {
     const action = STRIPE_ACTIONS.find((a) => a.action === 'GetPaymentIntents');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('stripe', action.action, connection);
+    const response = await testApi.execAppAction('stripe', action!.action, connection);
 
     expect(response.body).toBeDefined();
     expect(response.body.data).toBeDefined();
@@ -334,7 +339,7 @@ describe('Tests Stripe Actions', () => {
     const action = STRIPE_ACTIONS.find((a) => a.action === 'DeleteCustomersCustomer');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('stripe', action.action, connection, {
+    const response = await testApi.execAppAction('stripe', action!.action, connection, {
       customer: customerId,
     });
 
@@ -343,9 +348,12 @@ describe('Tests Stripe Actions', () => {
   });
 
   describe(`Should test Stripe Triggers`, () => {
-    let webhook: Record<string, any> = null;
+    let webhook: Record<string, any>;
     it('Should register stripe webhook', async () => {
-      const result = await STRIPE_TRIGGERS['chargeSucceeded'].webhook_register(
+      const trigger = STRIPE_TRIGGERS['chargeSucceeded'] as IQoreAppActionWithWebhookBase<any>;
+      expect(trigger).toBeDefined();
+      expect(trigger.webhook_register).toBeDefined();
+      const result = await trigger.webhook_register(
         {
           conn_opts: {
             token,
@@ -359,8 +367,13 @@ describe('Tests Stripe Actions', () => {
     });
     it('Should deregister stripe webhook', async () => {
       expect(webhook).toBeDefined();
+
+      const trigger = STRIPE_TRIGGERS['chargeSucceeded'] as IQoreAppActionWithWebhookBase<any>;
+      expect(trigger).toBeDefined();
+      expect(trigger.webhook_deregister).toBeDefined();
+
       if (webhook) {
-        await STRIPE_TRIGGERS['chargeSucceeded'].webhook_deregister(
+        await trigger.webhook_deregister(
           {
             conn_opts: {
               token,
@@ -372,7 +385,13 @@ describe('Tests Stripe Actions', () => {
       }
     });
     it('Should get example stripe webhook data', async () => {
-      const exampleData = await STRIPE_TRIGGERS['chargeSucceeded'].get_example_event_data({
+      const trigger = STRIPE_TRIGGERS['chargeSucceeded'] as IQoreAppActionWithWebhookBase<any>;
+      expect(trigger).toBeDefined();
+      const getExampleData = trigger.get_example_event_data as (
+        context: TQoreAppActionFunctionContext<any, TQoreOptions>
+      ) => Record<string, any> | Promise<Record<string, any>>;
+      expect(getExampleData).toBeDefined();
+      const exampleData = await getExampleData({
         conn_opts: {
           token,
         },

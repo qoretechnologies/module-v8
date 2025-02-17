@@ -1,10 +1,11 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { EQoreAppActionCode, TQorePartialEventAction } from '../../../global/models/qore';
+import { EQoreAppActionCode, QoreAppCreator, QorusRequest } from '@qoretechnologies/ts-toolkit';
+import { ASANA_APP_NAME } from '../constants';
 import { getAsanaWorkspaceIdAllowedValuesRest } from '../helpers/get-workspace-id-allowed-values';
 import { asanaEventInfoType, asanaWebhookEchoHeader, asanaWebhookInfoLocation } from './constants';
 import { deregisterAsanaWebhook } from './helpers';
 
-export default {
+const asanaNewWorkspaceTagTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: ASANA_APP_NAME,
   action: 'tag_created',
   action_code: EQoreAppActionCode.EVENT,
   webhook_method: 'POST',
@@ -16,10 +17,16 @@ export default {
     },
   },
   webhook_register: async (context, url) => {
-    const {
-      conn_opts: { token },
-      opts: { workspace },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const workspace = context?.opts?.workspace;
+
+    if (!token) {
+      throw new Error('Token is required to register New Workspace Tag Asana webhook');
+    }
+
+    if (!workspace) {
+      throw new Error('Workspace is required to register New Workspace Tag Asana webhook');
+    }
 
     const { data } = await QorusRequest.post<any>(
       {
@@ -55,4 +62,6 @@ export default {
     desc: 'New workspace tag event data',
     type: asanaEventInfoType,
   },
-} satisfies TQorePartialEventAction;
+});
+
+export default asanaNewWorkspaceTagTrigger;

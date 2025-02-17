@@ -1,14 +1,19 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
+import {
+  IQoreAllowedValue,
+  QorusRequest,
+  TQoreGetAllowedValuesFunction,
+} from '@qoretechnologies/ts-toolkit';
 import { JIRA_CONN_OPTIONS } from '../constants';
 
 export const getJiraUserIdAllowedValues: TQoreGetAllowedValuesFunction<
   typeof JIRA_CONN_OPTIONS
 > = async (context): Promise<IQoreAllowedValue[]> => {
-  const {
-    conn_opts: { token, cloud_id },
-  } = context;
+  const token = context?.conn_opts?.token;
+  const cloud_id = context?.conn_opts?.cloud_id;
 
+  if (!token || !cloud_id) {
+    throw new Error('The token and cloud_id are required to get Jira user allowed values');
+  }
   const userIds: IQoreAllowedValue[] = [];
 
   const { data: fetchedUsers } = await QorusRequest.get<any>(

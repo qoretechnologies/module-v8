@@ -1,19 +1,22 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { ZENDESK_CONN_OPTIONS } from '..';
 import {
   EQoreAppActionCode,
   IQoreAppActionWithWebhookBase,
-  TQorePartialEventAction,
-} from '../../../global/models/qore';
+  QoreAppCreator,
+  QorusRequest,
+} from '@qoretechnologies/ts-toolkit';
+import { ZENDESK_APP_NAME, ZENDESK_CONN_OPTIONS } from '..';
 
 const createZendeskNewTicketWebhookRegistrar = (): IQoreAppActionWithWebhookBase<
   typeof ZENDESK_CONN_OPTIONS
 >['webhook_register'] => {
   return async (context, url) => {
-    //console.log(`webhook URL: ${url}`);
-    const {
-      conn_opts: { token, subdomain },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const subdomain = context?.conn_opts?.subdomain;
+
+    if (!token || !subdomain) {
+      throw new Error('The token and subdomain are required to register a Zendesk webhook');
+    }
+
     const zendeskUrl = `https://${subdomain}.zendesk.com`;
     const {
       data: { webhook },
@@ -96,9 +99,15 @@ export const createZendeskNewTicketWebhookDeRegistrar = (): IQoreAppActionWithWe
   typeof ZENDESK_CONN_OPTIONS
 >['webhook_deregister'] => {
   return async (context, _url, regInfo) => {
-    const {
-      conn_opts: { token, subdomain },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const subdomain = context?.conn_opts?.subdomain;
+
+    if (!token || !subdomain) {
+      throw new Error(
+        'Token and subdomain are required to deregister a webhook for Zendesk new ticket trigger'
+      );
+    }
+
     const zendeskUrl = `https://${subdomain}.zendesk.com`;
     const { webhook, trigger } = regInfo;
 
@@ -125,7 +134,8 @@ export const createZendeskNewTicketWebhookDeRegistrar = (): IQoreAppActionWithWe
   };
 };
 
-export default {
+const zendeskNewTicketTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: ZENDESK_APP_NAME,
   action: 'new_ticket',
   action_code: EQoreAppActionCode.EVENT,
   webhook_method: 'POST',
@@ -181,4 +191,6 @@ export default {
       },
     },
   },
-} satisfies TQorePartialEventAction;
+});
+
+export default zendeskNewTicketTrigger;

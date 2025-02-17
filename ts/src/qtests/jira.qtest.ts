@@ -7,12 +7,17 @@ describe('Tests Jira Actions', () => {
   const bannerText = `Test Banner Message-${Date.now()}`;
   let projectId: string | null = null;
   let customFieldId: string | null = null;
-  const leadAccountId: string = process.env.JIRA_LEAD_ACCOUNT_ID;
+  let leadAccountId: string;
   let issueId: string | null = null;
   let commentId: string | null = null;
   let worklogId: string | null = null;
 
   beforeAll(() => {
+    leadAccountId = process.env.JIRA_LEAD_ACCOUNT_ID!;
+
+    if (!leadAccountId) {
+      throw new Error('JIRA_LEAD_ACCOUNT_ID is not set');
+    }
     connection = testApi.createConnection<typeof JIRA_CONN_OPTIONS>('jira', {
       opts: {
         username: process.env.JIRA_USERNAME,
@@ -20,6 +25,7 @@ describe('Tests Jira Actions', () => {
         cloud_id: process.env.JIRA_CLOUD_ID,
         swagger_base_path: `/ex/jira/${process.env.JIRA_CLOUD_ID}`,
         oauth2_grant_type: 'none',
+        ping_path: '',
       },
     });
 
@@ -31,7 +37,7 @@ describe('Tests Jira Actions', () => {
     const action = JIRA_ACTIONS.find((a) => a.action === 'setBanner');
     expect(action).toBeDefined();
 
-    await testApi.execAppAction('jira', action.action, connection, {
+    await testApi.execAppAction('jira', action!.action, connection, {
       body: {
         isDismissible: true,
         isEnabled: true,
@@ -45,7 +51,7 @@ describe('Tests Jira Actions', () => {
     const action = JIRA_ACTIONS.find((a) => a.action === 'getBanner');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('jira', action.action, connection);
+    const response = await testApi.execAppAction('jira', action!.action, connection);
 
     expect(response.body).toBeDefined();
     expect(response.body.message).toBe(bannerText);
@@ -57,7 +63,7 @@ describe('Tests Jira Actions', () => {
     const action = JIRA_ACTIONS.find((a) => a.action === 'createCustomField');
     expect(action).toBeDefined();
     const name = `Test Custom Field ${Date.now()}`;
-    const response = await testApi.execAppAction('jira', action.action, connection, {
+    const response = await testApi.execAppAction('jira', action!.action, connection, {
       body: {
         name,
         type: 'com.atlassian.jira.plugin.system.customfieldtypes:textarea',
@@ -75,7 +81,7 @@ describe('Tests Jira Actions', () => {
     const action = JIRA_ACTIONS.find((a) => a.action === 'getFields');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('jira', action.action, connection);
+    const response = await testApi.execAppAction('jira', action!.action, connection);
     expect(response.body).toBeDefined();
     expect(response.body.length).toBeGreaterThan(0);
   });
@@ -83,7 +89,7 @@ describe('Tests Jira Actions', () => {
   it('Should update a custom field', async () => {
     const action = JIRA_ACTIONS.find((a) => a.action === 'updateCustomField');
     expect(action).toBeDefined();
-    const response = await testApi.execAppAction('jira', action.action, connection, {
+    const response = await testApi.execAppAction('jira', action!.action, connection, {
       fieldId: customFieldId,
       body: {
         name: 'Updated Custom Field',
@@ -96,7 +102,7 @@ describe('Tests Jira Actions', () => {
     const action = JIRA_ACTIONS.find((a) => a.action === 'trashCustomField');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('jira', action.action, connection, {
+    const response = await testApi.execAppAction('jira', action!.action, connection, {
       id: customFieldId,
     });
 
@@ -108,7 +114,7 @@ describe('Tests Jira Actions', () => {
     const action = JIRA_ACTIONS.find((a) => a.action === 'createProject');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('jira', action.action, connection, {
+    const response = await testApi.execAppAction('jira', action!.action, connection, {
       body: {
         key: `TEST` + Date.now().toString().slice(-6),
         name: `Test Project ${Date.now()}`,
@@ -128,7 +134,7 @@ describe('Tests Jira Actions', () => {
     expect(action).toBeDefined();
 
     const projectName = `Updated Project ${Date.now()}`;
-    const response = await testApi.execAppAction('jira', action.action, connection, {
+    const response = await testApi.execAppAction('jira', action!.action, connection, {
       projectIdOrKey: projectId,
       body: {
         name: projectName,
@@ -142,13 +148,14 @@ describe('Tests Jira Actions', () => {
   it('Should get a project by ID', async () => {
     const action = JIRA_ACTIONS.find((a) => a.action === 'getProject');
     expect(action).toBeDefined();
+    expect(projectId).toBeTruthy();
 
-    const response = await testApi.execAppAction('jira', action.action, connection, {
+    const response = await testApi.execAppAction('jira', action!.action, connection, {
       projectIdOrKey: projectId,
     });
 
     expect(response.body).toBeDefined();
-    expect(response.body.id).toBe(projectId.toString());
+    expect(response.body.id).toBe(projectId!.toString());
   });
 
   // // Issues
@@ -156,7 +163,7 @@ describe('Tests Jira Actions', () => {
     const action = JIRA_ACTIONS.find((a) => a.action === 'createIssue');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('jira', action.action, connection, {
+    const response = await testApi.execAppAction('jira', action!.action, connection, {
       body: {
         fields: {
           project: {
@@ -192,7 +199,7 @@ describe('Tests Jira Actions', () => {
     const action = JIRA_ACTIONS.find((a) => a.action === 'getIssue');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('jira', action.action, connection, {
+    const response = await testApi.execAppAction('jira', action!.action, connection, {
       issueIdOrKey: issueId,
     });
     expect(response.body).toBeDefined();
@@ -203,7 +210,7 @@ describe('Tests Jira Actions', () => {
     const action = JIRA_ACTIONS.find((a) => a.action === 'editIssue');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('jira', action.action, connection, {
+    const response = await testApi.execAppAction('jira', action!.action, connection, {
       issueIdOrKey: issueId,
       body: {
         fields: {
@@ -219,7 +226,7 @@ describe('Tests Jira Actions', () => {
     const action = JIRA_ACTIONS.find((a) => a.action === 'addComment');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('jira', action.action, connection, {
+    const response = await testApi.execAppAction('jira', action!.action, connection, {
       issueIdOrKey: issueId,
       body: {
         body: {
@@ -248,7 +255,7 @@ describe('Tests Jira Actions', () => {
     const action = JIRA_ACTIONS.find((a) => a.action === 'getComments');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('jira', action.action, connection, {
+    const response = await testApi.execAppAction('jira', action!.action, connection, {
       issueIdOrKey: issueId,
     });
     expect(response.body).toBeDefined();
@@ -259,7 +266,7 @@ describe('Tests Jira Actions', () => {
     const action = JIRA_ACTIONS.find((a) => a.action === 'updateComment');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('jira', action.action, connection, {
+    const response = await testApi.execAppAction('jira', action!.action, connection, {
       issueIdOrKey: issueId,
       id: commentId,
       body: {
@@ -288,7 +295,7 @@ describe('Tests Jira Actions', () => {
     const action = JIRA_ACTIONS.find((a) => a.action === 'getComment');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('jira', action.action, connection, {
+    const response = await testApi.execAppAction('jira', action!.action, connection, {
       issueIdOrKey: issueId,
       id: commentId,
     });
@@ -300,7 +307,7 @@ describe('Tests Jira Actions', () => {
     const action = JIRA_ACTIONS.find((a) => a.action === 'addWorklog');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('jira', action.action, connection, {
+    const response = await testApi.execAppAction('jira', action!.action, connection, {
       issueIdOrKey: issueId,
       body: {
         comment: {
@@ -330,7 +337,7 @@ describe('Tests Jira Actions', () => {
     const action = JIRA_ACTIONS.find((a) => a.action === 'getWorklog');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('jira', action.action, connection, {
+    const response = await testApi.execAppAction('jira', action!.action, connection, {
       issueIdOrKey: issueId,
       id: worklogId,
     });
@@ -342,7 +349,7 @@ describe('Tests Jira Actions', () => {
     const action = JIRA_ACTIONS.find((a) => a.action === 'deleteWorklog');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('jira', action.action, connection, {
+    const response = await testApi.execAppAction('jira', action!.action, connection, {
       issueIdOrKey: issueId,
       id: worklogId,
     });
@@ -354,7 +361,7 @@ describe('Tests Jira Actions', () => {
     const action = JIRA_ACTIONS.find((a) => a.action === 'deleteComment');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('jira', action.action, connection, {
+    const response = await testApi.execAppAction('jira', action!.action, connection, {
       issueIdOrKey: issueId,
       id: commentId,
     });
@@ -366,7 +373,7 @@ describe('Tests Jira Actions', () => {
     const action = JIRA_ACTIONS.find((a) => a.action === 'deleteIssue');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('jira', action.action, connection, {
+    const response = await testApi.execAppAction('jira', action!.action, connection, {
       issueIdOrKey: issueId,
     });
 
@@ -377,7 +384,7 @@ describe('Tests Jira Actions', () => {
     const action = JIRA_ACTIONS.find((a) => a.action === 'deleteProject');
     expect(action).toBeDefined();
 
-    const response = await testApi.execAppAction('jira', action.action, connection, {
+    const response = await testApi.execAppAction('jira', action!.action, connection, {
       projectIdOrKey: projectId,
     });
 

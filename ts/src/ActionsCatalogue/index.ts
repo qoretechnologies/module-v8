@@ -1,4 +1,13 @@
 // appsCatalogue.ts
+import {
+  IQoreApp,
+  IQoreExistingApp,
+  IQoreExistingAppWithActions,
+  TQoreAppAction,
+  TQoreApps,
+  TQoreAppWithActions,
+  TQoreExistingApps,
+} from '@qoretechnologies/ts-toolkit';
 import fs from 'fs';
 import path from 'path';
 import asana from '../apps/asana';
@@ -9,17 +18,9 @@ import jira from '../apps/jira';
 import netsuite from '../apps/netsuite';
 import salesforce from '../apps/salesforce';
 import stripe from '../apps/stripe';
+import hubspot from '../apps/hubspot';
 import zendesk from '../apps/zendesk';
 import { Log } from '../decorators/Logger';
-import {
-  IQoreApp,
-  IQoreAppWithActions,
-  IQoreExistingApp,
-  IQoreExistingAppWithActions,
-  TQoreAppAction,
-  TQoreApps,
-  TQoreExistingApps,
-} from '../global/models/qore';
 import { Locales } from '../i18n/i18n-types';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
@@ -45,13 +46,14 @@ const NEW_APPS = {
   jira,
   stripe,
   freshdesk,
+  hubspot,
 } as const;
 
 const EXISTING_APPS = {
   salesforce,
 } as const;
 
-const CUSTOM_APPS: Record<string, IQoreAppWithActions> = {};
+const CUSTOM_APPS: Record<string, TQoreAppWithActions> = {};
 
 /* Get all the default exports from the folders inside this folder */
 const appsDir = path.resolve(path.join(__dirname, '..', 'customApps'));
@@ -94,7 +96,7 @@ export class ActionsCatalogue {
     );
   }
 
-  private registerAppCollection<T extends IQoreAppWithActions | IQoreExistingAppWithActions>(
+  private registerAppCollection<T extends TQoreAppWithActions | IQoreExistingAppWithActions>(
     collection: Record<string, T>,
     registerAppFn: (app: Omit<T, 'actions'>) => void,
     registerActionFn: (action: TQoreAppAction) => void

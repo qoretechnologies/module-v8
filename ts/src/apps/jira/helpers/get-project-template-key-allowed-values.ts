@@ -1,12 +1,16 @@
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
+import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 import { JIRA_CONN_OPTIONS } from '../constants';
 
 export const getJiraProjectTemplateKeyAllowedValues: TQoreGetAllowedValuesFunction<
   typeof JIRA_CONN_OPTIONS
 > = (context): IQoreAllowedValue[] => {
-  const {
-    opts: { projectTypeKey },
-  } = context;
+  const projectTypeKey = context?.opts?.projectTypeKey;
+
+  if (!projectTypeKey) {
+    throw new Error(
+      'The projectTypeKey is required to get Jira project template key allowed values'
+    );
+  }
 
   switch (projectTypeKey) {
     case 'software': {

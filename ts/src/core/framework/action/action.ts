@@ -3,7 +3,7 @@ import { ActionContext } from '../context';
 import { ActionBase } from '../piece-metadata';
 import { InputPropertyMap } from '../property';
 import { PieceAuthProperty } from '../property/authentication';
-import { TQoreResponseType } from '../../../global/models/qore';
+import { TQoreResponseType } from '@qoretechnologies/ts-toolkit';
 
 export type ActionRunner<
   PieceAuth extends PieceAuthProperty,
@@ -53,7 +53,7 @@ export class IAction<PieceAuth extends PieceAuthProperty, ActionProps extends In
     public readonly test: ActionRunner<PieceAuth, ActionProps>,
     public readonly requireAuth: boolean,
     public readonly errorHandlingOptions: ErrorHandlingOptionsParam,
-    public readonly responseType: TQoreResponseType
+    public readonly responseType: TQoreResponseType | undefined
   ) {}
 }
 

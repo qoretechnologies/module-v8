@@ -1,5 +1,5 @@
 import { forEach } from 'lodash';
-import { TQoreTypeObject } from '../global/models/qore';
+import { TQoreTypeObject } from '@qoretechnologies/ts-toolkit';
 
 export const responseHasCorrectStructure = (
   response: Record<string, unknown>,
@@ -25,8 +25,8 @@ export const validateResponseProperties = (
 
     return;
   }
+  if (expectedType.type !== 'hash') return;
   const fields = expectedType?.fields;
-  if (!fields) return;
 
   forEach(fields, (fieldDefinition, key) => {
     const expectedFieldType = fieldDefinition.type || fieldDefinition;

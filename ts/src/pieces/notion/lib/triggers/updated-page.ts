@@ -1,11 +1,12 @@
 import { Client } from '@notionhq/client';
 import { PageObjectResponse } from '@notionhq/client/build/src/api-endpoints';
-import { EQoreAppActionCode, TQorePartialEventAction } from '../../../../global/models/qore';
+import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../../utils/Debugger';
 import { getNotionPageIdAllowedValues } from '../common/helpers/get-page-id-allowed-values';
 import { pageItemQoreType } from './constants';
 
-export default {
+const notionUpdatedPageEvent = QoreAppCreator.createLocalizedTrigger({
+  app: 'Notion',
   action: 'updated_page',
   action_code: EQoreAppActionCode.EVENT,
   options: {
@@ -16,10 +17,17 @@ export default {
     },
   },
   event_function: async (context, update, should_stop) => {
-    const {
-      conn_opts: { token },
-      opts: { pageId },
-    } = context;
+    const token = context?.conn_opts?.token;
+
+    if (!token) {
+      throw new Error('Notion token is required for updated_page event');
+    }
+
+    const pageId = context?.opts?.pageId;
+
+    if (!pageId) {
+      throw new Error('Notion Page Id is required for updated_page event');
+    }
 
     try {
       let page = (await getPageById(token, pageId)) as PageObjectResponse;
@@ -43,16 +51,16 @@ export default {
     type: pageItemQoreType,
   },
   get_example_event_data: async (context) => {
-    const {
-      conn_opts: { token },
-      opts: { pageId },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const pageId = context?.opts?.pageId;
+
+    if (!token || !pageId) return;
 
     const page = await getPageById(token, pageId);
 
     return page;
   },
-} satisfies TQorePartialEventAction;
+});
 
 const getPageById = async (token: string, pageId: string) => {
   const notion = new Client({
@@ -66,3 +74,5 @@ const getPageById = async (token: string, pageId: string) => {
 
   return response;
 };
+
+export default notionUpdatedPageEvent;

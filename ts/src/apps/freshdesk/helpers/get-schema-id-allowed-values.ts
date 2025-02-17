@@ -1,4 +1,4 @@
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
+import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 import { FRESHDESK_CONN_OPTIONS } from '../constants';
 import { fetchFreshdeskAllowedValues } from './constants';
 
@@ -17,9 +17,16 @@ const mapFreshdeskSchema = (schema: TFreshdeskSchema): IQoreAllowedValue => ({
 export const getFreshdeskSchemaIdAllowedValues: TQoreGetAllowedValuesFunction<
   typeof FRESHDESK_CONN_OPTIONS
 > = async (context): Promise<IQoreAllowedValue[]> => {
-  const {
-    conn_opts: { token, subdomain },
-  } = context;
+  const token = context?.conn_opts?.token;
+  const subdomain = context?.conn_opts?.subdomain;
+
+  if (!token) {
+    throw new Error('The token is required to get Freshdesk schema allowed values');
+  }
+
+  if (!subdomain) {
+    throw new Error('The subdomain option is required to get Freshdesk schema allowed values');
+  }
 
   const companies = await fetchFreshdeskAllowedValues<TFreshdeskSchema>({
     subdomain,

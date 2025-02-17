@@ -5,7 +5,7 @@ import { notionAuth } from '../..';
 import { notionCommon } from '../common';
 import { markdownToBlocks } from '@tryfabric/martian';
 import { BlockObjectRequest } from '@notionhq/client/build/src/api-endpoints';
-import { TQoreResponseType } from '../../../../global/models/qore';
+import { TQoreResponseType } from '@qoretechnologies/ts-toolkit';
 
 const appendToPageResponseType = {
   type: 'hash',

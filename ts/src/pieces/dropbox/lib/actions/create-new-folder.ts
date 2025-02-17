@@ -1,7 +1,7 @@
 import { AuthenticationType, httpClient, HttpMethod, HttpRequest } from 'core/common';
 import { createAction, Property } from 'core/framework';
 import { dropboxAuth } from '../../';
-import { TQoreResponseType } from '../../../../global/models/qore';
+import { TQoreResponseType } from '@qoretechnologies/ts-toolkit';
 
 const createFolderResponseTime = {
   type: 'hash',

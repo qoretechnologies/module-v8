@@ -1,13 +1,13 @@
 import {
   EQoreAppActionCode,
   IQorePartialAppActionWithSwaggerPath,
-  TQoreTypeObject,
+  IQoreTypeObjectNonList,
   TQoreOptions,
   TQorePartialEventAction,
-} from 'global/models/qore';
-import { OpenAPIV2 } from 'openapi-types';
+} from '@qoretechnologies/ts-toolkit';
 import { buildActionsFromSwaggerSchema, fixOptions, mapTriggersToApp } from '../global/helpers';
 import eSignature from '../schemas/esignature.swagger.json';
+import { OpenAPIV2 } from 'openapi-types';
 
 describe('Helpers tests', () => {
   it('Properly parses a swagger schema and creates actions', () => {
@@ -141,17 +141,19 @@ describe('Helpers tests', () => {
 
     expect(fixedOptions.option2.display_name).toBe('Second Option');
     expect(fixedOptions.option1.display_name).toBe('Option 1');
-    const option1Fields = (fixedOptions.option1.type as TQoreTypeObject).fields;
-    expect(option1Fields.subOption1.display_name).toBe('Sub Option 1 of option 1');
-    expect(option1Fields.subOption2.display_name).toBe('Sub Option 2 of option 1');
+    const option1Fields = (fixedOptions.option1.type as IQoreTypeObjectNonList).fields;
+    expect(option1Fields).toBeDefined();
+    expect(option1Fields!.subOption1.display_name).toBe('Sub Option 1 of option 1');
+    expect(option1Fields!.subOption2.display_name).toBe('Sub Option 2 of option 1');
 
-    const subOption2Fields = (option1Fields.subOption2.type as TQoreTypeObject).fields;
-    const subSubOption1 = subOption2Fields.subSubOption1;
+    const subOption2Fields = (option1Fields!.subOption2.type as IQoreTypeObjectNonList).fields;
+    expect(subOption2Fields).toBeDefined();
+    const subSubOption1 = subOption2Fields!.subSubOption1;
     expect(subSubOption1.display_name).toBe('Sub Sub Option 1');
     expect(subSubOption1.desc).toBe('Deep option');
     expect(subSubOption1.short_desc).toBe('Sub Sub Option 1 Short Description');
 
-    expect(subOption2Fields.subSubOption1.short_desc).toBe('Sub Sub Option 1 Short Description');
+    expect(subOption2Fields!.subSubOption1.short_desc).toBe('Sub Sub Option 1 Short Description');
   });
 });
 
@@ -201,14 +203,15 @@ it('Should map a trigger to app', () => {
   const mappedTriggers = mapTriggersToApp('_testing', [trigger], 'en');
 
   expect(mappedTriggers).toHaveLength(1);
-  expect(mappedTriggers[0].options.option1.desc).toBe('Option 1 Long Description');
-  expect(mappedTriggers[0].options.option1.short_desc).toBe('Option 1 Short Description');
+  expect(mappedTriggers[0].options).toBeDefined();
+  expect(mappedTriggers[0].options!.option1.desc).toBe('Option 1 Long Description');
+  expect(mappedTriggers[0].options!.option1.short_desc).toBe('Option 1 Short Description');
   expect(mappedTriggers[0].event_info.desc).toBe('Test event');
-  expect(mappedTriggers[0].event_info.type.fields.testTriggerInfo.short_desc).toBe(
+  const eventInfoType = mappedTriggers[0].event_info.type as IQoreTypeObjectNonList;
+  expect(eventInfoType.fields?.testTriggerInfo.short_desc).toBe(
     'Test Trigger Info Short Description'
   );
 
-  const subInfo = (mappedTriggers[0].event_info.type.fields.testTriggerInfo.type as TQoreTypeObject)
-    .fields;
-  expect(subInfo.testTriggerInfo1.display_name).toBe('Test Trigger Info 1');
+  const subInfo = (eventInfoType.fields?.testTriggerInfo.type as IQoreTypeObjectNonList).fields;
+  expect(subInfo?.testTriggerInfo1.display_name).toBe('Test Trigger Info 1');
 });

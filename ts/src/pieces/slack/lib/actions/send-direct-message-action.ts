@@ -1,7 +1,7 @@
 import { createAction } from 'core/framework';
 import { assertNotNullOrUndefined } from 'core/shared';
 import { slackAuth } from '../../';
-import { TQoreResponseType } from '../../../../global/models/qore';
+import { TQoreResponseType } from '@qoretechnologies/ts-toolkit';
 import { blocks, profilePicture, text, userId, username } from '../common/props';
 import { slackSendMessage } from '../common/utils';
 

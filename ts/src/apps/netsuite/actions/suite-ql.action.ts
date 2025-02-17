@@ -1,12 +1,11 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { IActionOptions, TActionData } from '../../../global/models/actions';
 import {
   EQoreAppActionCode,
-  TQoreAppActionFunctionContext,
-  TQorePartialAction,
+  QoreAppCreator,
+  QorusRequest,
+  TQoreOptions,
   TQoreResponseType,
-} from '../../../global/models/qore';
-import { NETSUITE_CONN_OPTIONS } from '../constants';
+} from '@qoretechnologies/ts-toolkit';
+import { NETSUITE_APP_NAME } from '../constants';
 import { NetsuiteSuiteQLQueryAllowedValues } from '../helpers/suiteql-query-allowed-values';
 
 export const NetsuiteSuiteQlOptions = {
@@ -14,19 +13,16 @@ export const NetsuiteSuiteQlOptions = {
     type: 'string',
     required: true,
     allowed_values: NetsuiteSuiteQLQueryAllowedValues,
-    desc: 'SuiteQL query',
   },
   limit: {
     type: 'int',
     required: false,
-    desc: 'Limit the number of results',
   },
   offset: {
     type: 'int',
     required: false,
-    desc: 'Offset the results',
   },
-} satisfies IActionOptions;
+} satisfies TQoreOptions;
 
 export const NetsuiteSuiteQlResponseType = {
   type: 'hash',
@@ -74,20 +70,18 @@ export const NetsuiteSuiteQlResponseType = {
   },
 } satisfies TQoreResponseType;
 
-export const NetsuiteSuiteQlAction = {
+export const NetsuiteSuiteQlAction = QoreAppCreator.createLocalizedAction<
+  typeof NetsuiteSuiteQlOptions
+>({
+  app: NETSUITE_APP_NAME,
   options: NetsuiteSuiteQlOptions,
   action: 'suite_ql',
   action_code: EQoreAppActionCode.ACTION,
   response_type: NetsuiteSuiteQlResponseType,
-  api_function: async (
-    obj: TActionData<typeof NetsuiteSuiteQlOptions>,
-    _options,
-    context: TQoreAppActionFunctionContext<typeof NETSUITE_CONN_OPTIONS>
-  ) => {
-    const { query } = obj;
-    const {
-      conn_opts: { account_id, token },
-    } = context;
+  api_function: async (obj, _options, context) => {
+    const query = obj?.query;
+    const account_id = context?.conn_opts?.account_id;
+    const token = context?.conn_opts?.token;
 
     const result = await QorusRequest.post<any>(
       {
@@ -97,8 +91,8 @@ export const NetsuiteSuiteQlAction = {
         },
         path: `/services/rest/query/v1/suiteql`,
         params: {
-          ...(obj.limit && { limit: obj.limit.toString() }),
-          ...(obj.offset && { offset: obj.offset.toString() }),
+          ...(obj?.limit && { limit: obj.limit.toString() }),
+          ...(obj?.offset && { offset: obj.offset.toString() }),
         },
         data: {
           q: query,
@@ -112,4 +106,4 @@ export const NetsuiteSuiteQlAction = {
 
     return result.data;
   },
-} satisfies TQorePartialAction<typeof NetsuiteSuiteQlOptions, typeof NetsuiteSuiteQlResponseType>;
+});

@@ -1,7 +1,6 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { ESIGNATURE_ACTIONS } from '../apps/esignature/constants';
+import { IQoreAppActionWithWebhookBase, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import _sodium from 'libsodium-wrappers';
-import { TQoreAppActionWithWebhook } from '../global/models/qore';
+import { ESIGNATURE_ACTIONS, ESIGNATURE_CONN_OPTIONS } from '../apps/esignature/constants';
 import * as ESIGNATURE_TRIGGERS from '../apps/esignature/triggers';
 
 let connection: string;
@@ -20,6 +19,10 @@ describe('Tests eSignature Actions', () => {
     const refreshToken = process.env.DOCUSIGN_REFRESH_TOKEN;
     const clientId = process.env.DOCUSIGN_CLIENT_ID;
     const clientSecret = process.env.DOCUSIGN_CLIENT_SECRET;
+
+    if (!refreshToken || !clientId || !clientSecret) {
+      throw new Error('Missing Docusign credentials');
+    }
 
     const { data: refreshTokenData } = await QorusRequest.post<any>(
       {
@@ -57,6 +60,7 @@ describe('Tests eSignature Actions', () => {
     const base_uri = userInfo.accounts[0].base_uri.split('//')[1];
     baseUri = base_uri;
     accountId = userInfo.accounts[0].account_id;
+
     connection = testApi.createConnection('docusignesignature', {
       opts: {
         token: accessToken,
@@ -68,15 +72,21 @@ describe('Tests eSignature Actions', () => {
 
   describe('Should test trigger creation', () => {
     it('Should create an envelope status update trigger', async () => {
-      const trigger: Partial<TQoreAppActionWithWebhook> =
-        ESIGNATURE_TRIGGERS['envelopeStatusUpdated'];
+      const trigger = ESIGNATURE_TRIGGERS['envelopeStatusUpdated'] as IQoreAppActionWithWebhookBase<
+        typeof ESIGNATURE_CONN_OPTIONS
+      >;
 
       expect(trigger).toBeDefined();
+      expect(trigger.webhook_register).toBeDefined();
+      expect(trigger.webhook_deregister).toBeDefined();
+
       const response = await trigger.webhook_register(
         {
           conn_opts: {
             token,
             base_uri: baseUri,
+            accounts: [],
+            account_id: accountId,
           },
           opts: {
             accountId,
@@ -93,6 +103,8 @@ describe('Tests eSignature Actions', () => {
             conn_opts: {
               token,
               base_uri: baseUri,
+              accounts: [],
+              account_id: accountId,
             },
             opts: {
               accountId,
@@ -105,14 +117,21 @@ describe('Tests eSignature Actions', () => {
     });
 
     it('Should create a template status update trigger', async () => {
-      const trigger: Partial<TQoreAppActionWithWebhook> = ESIGNATURE_TRIGGERS['templateUpdated'];
+      const trigger = ESIGNATURE_TRIGGERS['templateUpdated'] as IQoreAppActionWithWebhookBase<
+        typeof ESIGNATURE_CONN_OPTIONS
+      >;
 
       expect(trigger).toBeDefined();
-      const response = await trigger.webhook_register(
+      expect(trigger.webhook_register).toBeDefined();
+      expect(trigger.webhook_deregister).toBeDefined();
+
+      const response = await trigger.webhook_register!(
         {
           conn_opts: {
             token,
             base_uri: baseUri,
+            accounts: [],
+            account_id: accountId,
           },
           opts: {
             accountId,
@@ -124,11 +143,13 @@ describe('Tests eSignature Actions', () => {
       expect(response).toBeDefined();
 
       if (response) {
-        await trigger.webhook_deregister(
+        await trigger.webhook_deregister!(
           {
             conn_opts: {
               token,
               base_uri: baseUri,
+              accounts: [],
+              account_id: accountId,
             },
             opts: {
               accountId,
@@ -145,7 +166,7 @@ describe('Tests eSignature Actions', () => {
     const action = ESIGNATURE_ACTIONS.find((a) => a.action === 'Brands_PostBrands');
 
     expect(action).toBeDefined();
-    const { body } = await testApi.execAppAction('docusignesignature', action.action, connection, {
+    const { body } = await testApi.execAppAction('docusignesignature', action!.action, connection, {
       accountId,
       body: {
         brandName: 'TestBrand',
@@ -161,7 +182,7 @@ describe('Tests eSignature Actions', () => {
     const action = ESIGNATURE_ACTIONS.find((a) => a.action === 'Brands_GetBrands');
 
     expect(action).toBeDefined();
-    const { body } = await testApi.execAppAction('docusignesignature', action.action, connection);
+    const { body } = await testApi.execAppAction('docusignesignature', action!.action, connection);
     expect(body).toBeDefined();
   });
 
@@ -169,7 +190,7 @@ describe('Tests eSignature Actions', () => {
     const action = ESIGNATURE_ACTIONS.find((a) => a.action === 'Brands_DeleteBrands');
 
     expect(action).toBeDefined();
-    const { body } = await testApi.execAppAction('docusignesignature', action.action, connection, {
+    const { body } = await testApi.execAppAction('docusignesignature', action!.action, connection, {
       body: {
         brands: [{ brandId }],
       },
@@ -181,7 +202,7 @@ describe('Tests eSignature Actions', () => {
     const action = ESIGNATURE_ACTIONS.find((a) => a.action === 'Envelopes_PostEnvelopes');
 
     expect(action).toBeDefined();
-    const { body } = await testApi.execAppAction('docusignesignature', action.action, connection, {
+    const { body } = await testApi.execAppAction('docusignesignature', action!.action, connection, {
       body: {
         documents: [
           {
@@ -218,7 +239,7 @@ describe('Tests eSignature Actions', () => {
     const action = ESIGNATURE_ACTIONS.find((a) => a.action === 'Envelopes_GetEnvelopes');
 
     expect(action).toBeDefined();
-    const { body } = await testApi.execAppAction('docusignesignature', action.action, connection, {
+    const { body } = await testApi.execAppAction('docusignesignature', action!.action, connection, {
       query: {
         from_date: new Date().toISOString(),
       },
@@ -230,7 +251,7 @@ describe('Tests eSignature Actions', () => {
     const action = ESIGNATURE_ACTIONS.find((a) => a.action === 'Envelopes_PutEnvelope');
 
     expect(action).toBeDefined();
-    const { body } = await testApi.execAppAction('docusignesignature', action.action, connection, {
+    const { body } = await testApi.execAppAction('docusignesignature', action!.action, connection, {
       envelopeId,
       body: {
         emailSubject: 'Updated subject',
@@ -246,7 +267,7 @@ describe('Tests eSignature Actions', () => {
     const action = ESIGNATURE_ACTIONS.find((a) => a.action === 'Envelopes_GetEnvelope');
 
     expect(action).toBeDefined();
-    const { body } = await testApi.execAppAction('docusignesignature', action.action, connection, {
+    const { body } = await testApi.execAppAction('docusignesignature', action!.action, connection, {
       envelopeId,
     });
 
@@ -258,7 +279,7 @@ describe('Tests eSignature Actions', () => {
     const action = ESIGNATURE_ACTIONS.find((a) => a.action === 'Documents_PutDocuments');
 
     expect(action).toBeDefined();
-    const { body } = await testApi.execAppAction('docusignesignature', action.action, connection, {
+    const { body } = await testApi.execAppAction('docusignesignature', action!.action, connection, {
       envelopeId,
       body: {
         documents: [
@@ -285,7 +306,7 @@ describe('Tests eSignature Actions', () => {
   //   const action = ESIGNATURE_ACTIONS.find((a) => a.action === 'Documents_GetDocument');
 
   //   expect(action).toBeDefined();
-  //   const { body } = await testApi.execAppAction('docusignesignature', action.action, connection, {
+  //   const { body } = await testApi.execAppAction('docusignesignature', action!.action, connection, {
   //     envelopeId,
   //     documentId,
   //   });
@@ -296,7 +317,7 @@ describe('Tests eSignature Actions', () => {
     const action = ESIGNATURE_ACTIONS.find((a) => a.action === 'Documents_DeleteDocuments');
 
     expect(action).toBeDefined();
-    const { body } = await testApi.execAppAction('docusignesignature', action.action, connection, {
+    const { body } = await testApi.execAppAction('docusignesignature', action!.action, connection, {
       envelopeId,
       body: {
         documents: [{ documentId }],
@@ -313,7 +334,7 @@ describe('Tests eSignature Actions', () => {
     const action = ESIGNATURE_ACTIONS.find((a) => a.action === 'Documents_GetDocuments');
 
     expect(action).toBeDefined();
-    const { body } = await testApi.execAppAction('docusignesignature', action.action, connection, {
+    const { body } = await testApi.execAppAction('docusignesignature', action!.action, connection, {
       envelopeId,
     });
     expect(body).toBeDefined();
@@ -325,7 +346,7 @@ describe('Tests eSignature Actions', () => {
     const action = ESIGNATURE_ACTIONS.find((a) => a.action === 'Recipients_PostRecipients');
 
     expect(action).toBeDefined();
-    const { body } = await testApi.execAppAction('docusignesignature', action.action, connection, {
+    const { body } = await testApi.execAppAction('docusignesignature', action!.action, connection, {
       envelopeId,
       body: {
         signers: [
@@ -347,7 +368,7 @@ describe('Tests eSignature Actions', () => {
     const action = ESIGNATURE_ACTIONS.find((a) => a.action === 'Recipients_PutRecipients');
 
     expect(action).toBeDefined();
-    const { body } = await testApi.execAppAction('docusignesignature', action.action, connection, {
+    const { body } = await testApi.execAppAction('docusignesignature', action!.action, connection, {
       envelopeId,
       body: {
         signers: [
@@ -368,7 +389,7 @@ describe('Tests eSignature Actions', () => {
     const action = ESIGNATURE_ACTIONS.find((a) => a.action === 'Recipients_DeleteRecipients');
 
     expect(action).toBeDefined();
-    const { body } = await testApi.execAppAction('docusignesignature', action.action, connection, {
+    const { body } = await testApi.execAppAction('docusignesignature', action!.action, connection, {
       envelopeId,
       body: {
         signers: [{ recipientId }],
@@ -382,7 +403,7 @@ describe('Tests eSignature Actions', () => {
     const action = ESIGNATURE_ACTIONS.find((a) => a.action === 'Recipients_GetRecipients');
 
     expect(action).toBeDefined();
-    const { body } = await testApi.execAppAction('docusignesignature', action.action, connection, {
+    const { body } = await testApi.execAppAction('docusignesignature', action!.action, connection, {
       envelopeId,
     });
     expect(body).toBeDefined();
@@ -400,7 +421,7 @@ describe('Tests eSignature Actions', () => {
   //     const userData = {
   //       userName: 'test',
   //     };
-  //     const { body } = await testApi.execAppAction('docusignesignature', action.action, connection, {
+  //     const { body } = await testApi.execAppAction('docusignesignature', action!.action, connection, {
   //       body: {
   //         envelopeTemplateDefinition: {
   //           templateId: Date.now().toString(),
@@ -424,7 +445,7 @@ describe('Tests eSignature Actions', () => {
   //     const userData = {
   //       userName: 'test',
   //     };
-  //     const { body } = await testApi.execAppAction('docusignesignature', action.action, connection, {
+  //     const { body } = await testApi.execAppAction('docusignesignature', action!.action, connection, {
   //       templateId,
   //       body: {
   //         envelopeTemplateDefinition: {
@@ -445,7 +466,7 @@ describe('Tests eSignature Actions', () => {
   //     const action = ESIGNATURE_ACTIONS.find((a) => a.action === 'Templates_GetTemplate');
 
   //     expect(action).toBeDefined();
-  //     const { body } = await testApi.execAppAction('docusignesignature', action.action, connection, {
+  //     const { body } = await testApi.execAppAction('docusignesignature', action!.action, connection, {
   //       templateId,
   //     });
 
@@ -457,7 +478,7 @@ describe('Tests eSignature Actions', () => {
   //     const action = ESIGNATURE_ACTIONS.find((a) => a.action === 'Templates_GetTemplates');
 
   //     expect(action).toBeDefined();
-  //     const { body } = await testApi.execAppAction('docusignesignature', action.action, connection);
+  //     const { body } = await testApi.execAppAction('docusignesignature', action!.action, connection);
   //     expect(body).toBeDefined();
   //   });
 });

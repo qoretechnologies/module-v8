@@ -1,9 +1,8 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { EQoreAppActionCode, TQorePartialEventAction } from '../../../../global/models/qore';
-import { Debugger } from '../../../../utils/Debugger';
-import { getDropboxFolderAllowedValues } from '../common/helpers/get-folder-allowed-values';
+import { EQoreAppActionCode, QoreAppCreator, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../../global/constants';
 import { pollCreatedItemsForTrigger } from '../../../../global/helpers/event-triggers';
+import { Debugger } from '../../../../utils/Debugger';
+import { getDropboxFolderAllowedValues } from '../common/helpers/get-folder-allowed-values';
 
 type TDropboxFile = {
   '.tag': 'file';
@@ -96,7 +95,8 @@ const getLastModifiedFiles = async (token: string, folder: string): Promise<TDro
   return files.slice(0, DEFAULT_TRIGGER_POLL_ITEM_LIMIT);
 };
 
-export default {
+const dropboxNewFileInFolderTrigger = QoreAppCreator.createLocalizedTrigger({
+  app: 'Dropbox',
   action: 'new_file_in_folder',
   action_code: EQoreAppActionCode.EVENT,
   options: {
@@ -107,10 +107,14 @@ export default {
     },
   },
   event_function: async (context, update, should_stop) => {
-    const {
-      conn_opts: { token },
-      opts: { folder },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const folder = context?.opts?.folder;
+
+    if (!token || !folder) {
+      throw new Error(
+        'The token and folder options are required to start the new_file_in_folder event_function'
+      );
+    }
 
     const getFiles = () => {
       return getLastModifiedFiles(token, folder);
@@ -166,13 +170,19 @@ export default {
     },
   },
   get_example_event_data: async (context) => {
-    const {
-      conn_opts: { token },
-      opts: { folder },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const folder = context?.opts?.folder;
+
+    if (!token || !folder) {
+      throw new Error(
+        'The token and folder options are required to get the example event data for Dropbox new file in folder trigger'
+      );
+    }
 
     const latestItems = await getLastModifiedFiles(token, folder);
 
     return latestItems?.length > 0 ? latestItems[0] : null;
   },
-} satisfies TQorePartialEventAction;
+});
+
+export default dropboxNewFileInFolderTrigger;

@@ -1,8 +1,11 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
-import { STRIPE_ALLOWED_VALUES_FETCH_DELAY, STRIPE_ALLOWED_VALUES_TIMEOUT } from './constants';
+import {
+  IQoreAllowedValue,
+  QorusRequest,
+  TQoreGetAllowedValuesFunction,
+} from '@qoretechnologies/ts-toolkit';
 import { delay } from '../../../global/helpers';
 import { Debugger } from '../../../utils/Debugger';
+import { STRIPE_ALLOWED_VALUES_FETCH_DELAY, STRIPE_ALLOWED_VALUES_TIMEOUT } from './constants';
 
 type TStripeAccountData = {
   data: TStripeAccount[];
@@ -52,13 +55,15 @@ const mapStripeAccount = (item: TStripeAccount): IQoreAllowedValue => ({
 export const getStripeAccountIdAllowedValues: TQoreGetAllowedValuesFunction = async (
   context
 ): Promise<IQoreAllowedValue[]> => {
-  const {
-    conn_opts: { token },
-  } = context;
+  const token = context?.conn_opts?.token;
+
+  if (!token) {
+    throw new Error('The token is required to get Stripe account allowed values');
+  }
 
   const accounts: IQoreAllowedValue[] = [];
   const startTime = Date.now();
-  let lastItemId = null;
+  let lastItemId = undefined;
 
   try {
     do {

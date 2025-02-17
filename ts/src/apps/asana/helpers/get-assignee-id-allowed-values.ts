@@ -1,15 +1,27 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
+import {
+  IQoreAllowedValue,
+  QorusRequest,
+  TCustomConnOptions,
+  TQoreGetAllowedValuesFunction,
+} from '@qoretechnologies/ts-toolkit';
 
-export const getAsanaAssigneeIdAllowedValues: TQoreGetAllowedValuesFunction = async (
-  context
-): Promise<IQoreAllowedValue[]> => {
-  const {
-    conn_opts: { token },
-    opts: { workspace },
-  } = context;
+export const getAsanaAssigneeIdAllowedValues: TQoreGetAllowedValuesFunction<
+  TCustomConnOptions,
+  string
+> = async (context): Promise<IQoreAllowedValue<string>[]> => {
+  const token = context?.conn_opts?.token;
 
-  const assignees: IQoreAllowedValue[] = [];
+  if (!token) {
+    throw new Error('Token is required to get assignee id allowed values');
+  }
+
+  const workspace = context?.opts?.workspace;
+
+  if (!workspace) {
+    throw new Error('Workspace is required to get assignee id allowed values');
+  }
+
+  const assignees: IQoreAllowedValue<string>[] = [];
 
   const { data } = await QorusRequest.get<any>(
     {

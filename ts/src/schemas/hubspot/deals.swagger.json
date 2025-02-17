@@ -1,0 +1,1987 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "",
+    "title": "Deals",
+    "version": "v3",
+    "x-hubspot-api-use-case": "When a sales rep starts working with a prospective customer, create a deal record to track the negotiation process. When the customer later makes their purchase, you can update the deal to a closed stage.",
+    "x-hubspot-documentation-banner": "NONE",
+    "x-hubspot-introduction": "Use the deals API to create and manage CRM records that represent transactions with contacts and/or companies. Deals progress through pipeline stages to reflect whether the transaction has been completed, is active, or has otherwise been lost.",
+    "x-hubspot-product-tier-requirements": {
+      "cms": "FREE",
+      "marketing": "FREE",
+      "sales": "FREE",
+      "service": "FREE"
+    },
+    "x-hubspot-related-documentation": [
+      {
+        "name": "Deals Guide",
+        "url": "https://developers.hubspot.com/docs/guides/api/crm/objects/deals"
+      }
+    ]
+  },
+  "host": "api.hubapi.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/crm/v3/objects/deals": {
+      "get": {
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "default": 10,
+            "description": "The maximum number of results to display per page.",
+            "format": "int32",
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "description": "The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.",
+            "in": "query",
+            "name": "after",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.",
+            "in": "query",
+            "items": {
+              "type": "string"
+            },
+            "name": "properties",
+            "required": false,
+            "type": "array"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.",
+            "in": "query",
+            "items": {
+              "type": "string"
+            },
+            "name": "propertiesWithHistory",
+            "required": false,
+            "type": "array"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.",
+            "in": "query",
+            "items": {
+              "type": "string"
+            },
+            "name": "associations",
+            "required": false,
+            "type": "array"
+          },
+          {
+            "default": false,
+            "description": "Whether to return only results that have been archived.",
+            "in": "query",
+            "name": "archived",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/CollectionResponseSimplePublicObjectWithAssociationsForwardPaging"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "crm.objects.deals.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.objects.deals.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Basic"
+        ],
+        "description": "Read a page of deals. Control what is returned via the `properties` query param.",
+        "operationId": "get-/crm/v3/objects/deals_getPage",
+        "summary": "List"
+      },
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SimplePublicObjectInputForCreate"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/SimplePublicObject"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "crm.objects.deals.write"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.objects.deals.write"
+            ]
+          }
+        ],
+        "tags": [
+          "Basic"
+        ],
+        "description": "Create a deal with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard deals is provided.",
+        "operationId": "post-/crm/v3/objects/deals_create",
+        "summary": "Create"
+      }
+    },
+    "/crm/v3/objects/deals/batch/archive": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/BatchInputSimplePublicObjectId"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "crm.objects.deals.write"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.objects.deals.write"
+            ]
+          }
+        ],
+        "tags": [
+          "Batch"
+        ],
+        "operationId": "post-/crm/v3/objects/deals/batch/archive_archive",
+        "summary": "Archive a batch of deals by ID"
+      }
+    },
+    "/crm/v3/objects/deals/batch/create": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/BatchInputSimplePublicObjectInputForCreate"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/BatchResponseSimplePublicObject"
+            }
+          },
+          "207": {
+            "description": "multiple statuses",
+            "schema": {
+              "$ref": "#/definitions/BatchResponseSimplePublicObjectWithErrors"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "crm.objects.deals.write"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.objects.deals.write"
+            ]
+          }
+        ],
+        "tags": [
+          "Batch"
+        ],
+        "operationId": "post-/crm/v3/objects/deals/batch/create_create",
+        "summary": "Create a batch of deals"
+      }
+    },
+    "/crm/v3/objects/deals/batch/read": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "default": false,
+            "description": "Whether to return only results that have been archived.",
+            "in": "query",
+            "name": "archived",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/BatchReadInputSimplePublicObjectId"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/BatchResponseSimplePublicObject"
+            }
+          },
+          "207": {
+            "description": "multiple statuses",
+            "schema": {
+              "$ref": "#/definitions/BatchResponseSimplePublicObjectWithErrors"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "crm.objects.deals.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.objects.deals.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Batch"
+        ],
+        "operationId": "post-/crm/v3/objects/deals/batch/read_read",
+        "summary": "Read a batch of deals by internal ID, or unique property values"
+      }
+    },
+    "/crm/v3/objects/deals/batch/update": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/BatchInputSimplePublicObjectBatchInput"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/BatchResponseSimplePublicObject"
+            }
+          },
+          "207": {
+            "description": "multiple statuses",
+            "schema": {
+              "$ref": "#/definitions/BatchResponseSimplePublicObjectWithErrors"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "crm.objects.deals.write"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.objects.deals.write"
+            ]
+          }
+        ],
+        "tags": [
+          "Batch"
+        ],
+        "operationId": "post-/crm/v3/objects/deals/batch/update_update",
+        "summary": "Update a batch of deals"
+      }
+    },
+    "/crm/v3/objects/deals/batch/upsert": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/BatchInputSimplePublicObjectBatchInputUpsert"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/BatchResponseSimplePublicUpsertObject"
+            }
+          },
+          "207": {
+            "description": "multiple statuses",
+            "schema": {
+              "$ref": "#/definitions/BatchResponseSimplePublicUpsertObjectWithErrors"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "crm.objects.deals.write"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.objects.deals.write"
+            ]
+          }
+        ],
+        "tags": [
+          "Batch"
+        ],
+        "operationId": "post-/crm/v3/objects/deals/batch/upsert_upsert",
+        "summary": "Create or update a batch of deals by unique property values"
+      }
+    },
+    "/crm/v3/objects/deals/merge": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PublicMergeInput"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/SimplePublicObject"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "crm.objects.deals.write"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.objects.deals.write"
+            ]
+          }
+        ],
+        "tags": [
+          "Basic"
+        ],
+        "operationId": "post-/crm/v3/objects/deals/merge_merge",
+        "summary": "Merge two deals with same type"
+      }
+    },
+    "/crm/v3/objects/deals/search": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PublicObjectSearchRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/CollectionResponseWithTotalSimplePublicObjectForwardPaging"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "crm.objects.deals.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.objects.deals.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Search"
+        ],
+        "operationId": "post-/crm/v3/objects/deals/search_doSearch",
+        "x-hubspot-rate-limit-exemptions": [
+          "ten-secondly"
+        ]
+      }
+    },
+    "/crm/v3/objects/deals/{dealId}": {
+      "delete": {
+        "produces": [
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "dealId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "crm.objects.deals.write"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.objects.deals.write"
+            ]
+          }
+        ],
+        "tags": [
+          "Basic"
+        ],
+        "description": "Move an Object identified by `{dealId}` to the recycling bin.",
+        "operationId": "delete-/crm/v3/objects/deals/{dealId}_archive",
+        "summary": "Archive"
+      },
+      "get": {
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "dealId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.",
+            "in": "query",
+            "items": {
+              "type": "string"
+            },
+            "name": "properties",
+            "required": false,
+            "type": "array"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.",
+            "in": "query",
+            "items": {
+              "type": "string"
+            },
+            "name": "propertiesWithHistory",
+            "required": false,
+            "type": "array"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.",
+            "in": "query",
+            "items": {
+              "type": "string"
+            },
+            "name": "associations",
+            "required": false,
+            "type": "array"
+          },
+          {
+            "default": false,
+            "description": "Whether to return only results that have been archived.",
+            "in": "query",
+            "name": "archived",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "description": "The name of a property whose values are unique for this object type",
+            "in": "query",
+            "name": "idProperty",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/SimplePublicObjectWithAssociations"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "crm.objects.deals.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.objects.deals.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Basic"
+        ],
+        "description": "Read an Object identified by `{dealId}`. `{dealId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.",
+        "operationId": "get-/crm/v3/objects/deals/{dealId}_getById",
+        "summary": "Read"
+      },
+      "patch": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "dealId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The name of a property whose values are unique for this object type",
+            "in": "query",
+            "name": "idProperty",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SimplePublicObjectInput"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/SimplePublicObject"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "crm.objects.deals.write"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.objects.deals.write"
+            ]
+          }
+        ],
+        "tags": [
+          "Basic"
+        ],
+        "description": "Perform a partial update of an Object identified by `{dealId}`. `{dealId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string.",
+        "operationId": "patch-/crm/v3/objects/deals/{dealId}_update",
+        "summary": "Update"
+      }
+    }
+  },
+  "definitions": {
+    "AssociatedId": {
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "type"
+      ],
+      "type": "object"
+    },
+    "AssociationSpec": {
+      "properties": {
+        "associationCategory": {
+          "enum": [
+            "HUBSPOT_DEFINED",
+            "USER_DEFINED",
+            "INTEGRATOR_DEFINED"
+          ],
+          "type": "string"
+        },
+        "associationTypeId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "associationCategory",
+        "associationTypeId"
+      ],
+      "type": "object"
+    },
+    "BatchInputSimplePublicObjectBatchInput": {
+      "properties": {
+        "inputs": {
+          "items": {
+            "$ref": "#/definitions/SimplePublicObjectBatchInput"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "inputs"
+      ],
+      "type": "object"
+    },
+    "BatchInputSimplePublicObjectBatchInputUpsert": {
+      "properties": {
+        "inputs": {
+          "items": {
+            "$ref": "#/definitions/SimplePublicObjectBatchInputUpsert"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "inputs"
+      ],
+      "type": "object"
+    },
+    "BatchInputSimplePublicObjectId": {
+      "properties": {
+        "inputs": {
+          "items": {
+            "$ref": "#/definitions/SimplePublicObjectId"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "inputs"
+      ],
+      "type": "object"
+    },
+    "BatchInputSimplePublicObjectInputForCreate": {
+      "properties": {
+        "inputs": {
+          "items": {
+            "$ref": "#/definitions/SimplePublicObjectInputForCreate"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "inputs"
+      ],
+      "type": "object"
+    },
+    "BatchReadInputSimplePublicObjectId": {
+      "properties": {
+        "idProperty": {
+          "type": "string"
+        },
+        "inputs": {
+          "items": {
+            "$ref": "#/definitions/SimplePublicObjectId"
+          },
+          "type": "array"
+        },
+        "properties": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "propertiesWithHistory": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "inputs",
+        "properties",
+        "propertiesWithHistory"
+      ],
+      "type": "object"
+    },
+    "BatchResponseSimplePublicObject": {
+      "properties": {
+        "completedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "links": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        },
+        "requestedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "results": {
+          "items": {
+            "$ref": "#/definitions/SimplePublicObject"
+          },
+          "type": "array"
+        },
+        "startedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "PENDING",
+            "PROCESSING",
+            "CANCELED",
+            "COMPLETE"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "completedAt",
+        "results",
+        "startedAt",
+        "status"
+      ],
+      "type": "object"
+    },
+    "BatchResponseSimplePublicObjectWithErrors": {
+      "properties": {
+        "completedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "errors": {
+          "items": {
+            "$ref": "#/definitions/StandardError"
+          },
+          "type": "array"
+        },
+        "links": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        },
+        "numErrors": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "requestedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "results": {
+          "items": {
+            "$ref": "#/definitions/SimplePublicObject"
+          },
+          "type": "array"
+        },
+        "startedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "PENDING",
+            "PROCESSING",
+            "CANCELED",
+            "COMPLETE"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "completedAt",
+        "results",
+        "startedAt",
+        "status"
+      ],
+      "type": "object"
+    },
+    "BatchResponseSimplePublicUpsertObject": {
+      "properties": {
+        "completedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "links": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        },
+        "requestedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "results": {
+          "items": {
+            "$ref": "#/definitions/SimplePublicUpsertObject"
+          },
+          "type": "array"
+        },
+        "startedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "PENDING",
+            "PROCESSING",
+            "CANCELED",
+            "COMPLETE"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "completedAt",
+        "results",
+        "startedAt",
+        "status"
+      ],
+      "type": "object"
+    },
+    "BatchResponseSimplePublicUpsertObjectWithErrors": {
+      "properties": {
+        "completedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "errors": {
+          "items": {
+            "$ref": "#/definitions/StandardError"
+          },
+          "type": "array"
+        },
+        "links": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        },
+        "numErrors": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "requestedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "results": {
+          "items": {
+            "$ref": "#/definitions/SimplePublicUpsertObject"
+          },
+          "type": "array"
+        },
+        "startedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "PENDING",
+            "PROCESSING",
+            "CANCELED",
+            "COMPLETE"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "completedAt",
+        "results",
+        "startedAt",
+        "status"
+      ],
+      "type": "object"
+    },
+    "CollectionResponseAssociatedId": {
+      "properties": {
+        "paging": {
+          "$ref": "#/definitions/Paging"
+        },
+        "results": {
+          "items": {
+            "$ref": "#/definitions/AssociatedId"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "results"
+      ],
+      "type": "object"
+    },
+    "CollectionResponseSimplePublicObjectWithAssociationsForwardPaging": {
+      "properties": {
+        "paging": {
+          "$ref": "#/definitions/ForwardPaging"
+        },
+        "results": {
+          "items": {
+            "$ref": "#/definitions/SimplePublicObjectWithAssociations"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "results"
+      ],
+      "type": "object"
+    },
+    "CollectionResponseWithTotalSimplePublicObjectForwardPaging": {
+      "properties": {
+        "paging": {
+          "$ref": "#/definitions/ForwardPaging"
+        },
+        "results": {
+          "items": {
+            "$ref": "#/definitions/SimplePublicObject"
+          },
+          "type": "array"
+        },
+        "total": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "results",
+        "total"
+      ],
+      "type": "object"
+    },
+    "Error": {
+      "example": {
+        "category": "VALIDATION_ERROR",
+        "correlationId": "aeb5f871-7f07-4993-9211-075dc63e7cbf",
+        "links": {
+          "knowledge-base": "https://www.hubspot.com/products/service/knowledge-base"
+        },
+        "message": "Invalid input (details will vary based on the error)"
+      },
+      "properties": {
+        "category": {
+          "description": "The error category",
+          "example": "VALIDATION_ERROR",
+          "type": "string"
+        },
+        "context": {
+          "additionalProperties": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "description": "Context about the error condition",
+          "example": {
+            "invalidPropertyName": [
+              "propertyValue"
+            ],
+            "missingScopes": [
+              "scope1",
+              "scope2"
+            ]
+          },
+          "type": "object"
+        },
+        "correlationId": {
+          "description": "A unique identifier for the request. Include this value with any error reports or support tickets",
+          "example": "aeb5f871-7f07-4993-9211-075dc63e7cbf",
+          "format": "uuid",
+          "type": "string"
+        },
+        "errors": {
+          "description": "further information about the error",
+          "items": {
+            "$ref": "#/definitions/ErrorDetail"
+          },
+          "type": "array"
+        },
+        "links": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "A map of link names to associated URIs containing documentation about the error or recommended remediation steps",
+          "example": {
+            "knowledge-base": "https://www.hubspot.com/products/service/knowledge-base"
+          },
+          "type": "object"
+        },
+        "message": {
+          "description": "A human readable message describing the error along with remediation steps where appropriate",
+          "example": "Invalid input (details will vary based on the error)",
+          "type": "string"
+        },
+        "subCategory": {
+          "description": "A specific category that contains more specific detail about the error",
+          "type": "string"
+        }
+      },
+      "required": [
+        "category",
+        "correlationId",
+        "message"
+      ],
+      "type": "object"
+    },
+    "ErrorDetail": {
+      "properties": {
+        "code": {
+          "description": "The status code associated with the error detail",
+          "type": "string"
+        },
+        "context": {
+          "additionalProperties": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "description": "Context about the error condition",
+          "example": {
+            "missingScopes": [
+              "scope1",
+              "scope2"
+            ]
+          },
+          "type": "object"
+        },
+        "in": {
+          "description": "The name of the field or parameter in which the error was found.",
+          "type": "string"
+        },
+        "message": {
+          "description": "A human readable message describing the error along with remediation steps where appropriate",
+          "type": "string"
+        },
+        "subCategory": {
+          "description": "A specific category that contains more specific detail about the error",
+          "type": "string"
+        }
+      },
+      "required": [
+        "message"
+      ],
+      "type": "object"
+    },
+    "Filter": {
+      "properties": {
+        "highValue": {
+          "type": "string"
+        },
+        "operator": {
+          "description": "null",
+          "enum": [
+            "EQ",
+            "NEQ",
+            "LT",
+            "LTE",
+            "GT",
+            "GTE",
+            "BETWEEN",
+            "IN",
+            "NOT_IN",
+            "HAS_PROPERTY",
+            "NOT_HAS_PROPERTY",
+            "CONTAINS_TOKEN",
+            "NOT_CONTAINS_TOKEN"
+          ],
+          "type": "string"
+        },
+        "propertyName": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        },
+        "values": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "operator",
+        "propertyName"
+      ],
+      "type": "object"
+    },
+    "FilterGroup": {
+      "properties": {
+        "filters": {
+          "items": {
+            "$ref": "#/definitions/Filter"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "filters"
+      ],
+      "type": "object"
+    },
+    "ForwardPaging": {
+      "properties": {
+        "next": {
+          "$ref": "#/definitions/NextPage"
+        }
+      },
+      "type": "object"
+    },
+    "NextPage": {
+      "example": {
+        "after": "NTI1Cg%3D%3D",
+        "link": "?after=NTI1Cg%3D%3D"
+      },
+      "properties": {
+        "after": {
+          "example": "NTI1Cg%3D%3D",
+          "type": "string"
+        },
+        "link": {
+          "example": "?after=NTI1Cg%3D%3D",
+          "type": "string"
+        }
+      },
+      "required": [
+        "after"
+      ],
+      "type": "object"
+    },
+    "Paging": {
+      "properties": {
+        "next": {
+          "$ref": "#/definitions/NextPage"
+        },
+        "prev": {
+          "$ref": "#/definitions/PreviousPage"
+        }
+      },
+      "type": "object"
+    },
+    "PreviousPage": {
+      "properties": {
+        "before": {
+          "type": "string"
+        },
+        "link": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "before"
+      ],
+      "type": "object"
+    },
+    "PublicAssociationsForObject": {
+      "properties": {
+        "to": {
+          "$ref": "#/definitions/PublicObjectId"
+        },
+        "types": {
+          "items": {
+            "$ref": "#/definitions/AssociationSpec"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "to",
+        "types"
+      ],
+      "type": "object"
+    },
+    "PublicMergeInput": {
+      "properties": {
+        "objectIdToMerge": {
+          "type": "string"
+        },
+        "primaryObjectId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "objectIdToMerge",
+        "primaryObjectId"
+      ],
+      "type": "object"
+    },
+    "PublicObjectId": {
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "type": "object"
+    },
+    "PublicObjectSearchRequest": {
+      "properties": {
+        "after": {
+          "type": "string"
+        },
+        "filterGroups": {
+          "items": {
+            "$ref": "#/definitions/FilterGroup"
+          },
+          "type": "array"
+        },
+        "limit": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "properties": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "query": {
+          "type": "string"
+        },
+        "sorts": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "SimplePublicObject": {
+      "example": {
+        "archived": false,
+        "createdAt": "2019-10-30T03:30:17.883Z",
+        "id": "512",
+        "properties": {
+          "amount": "1500.00",
+          "closedate": "2019-12-07T16:50:06.678Z",
+          "createdate": "2019-10-30T03:30:17.883Z",
+          "dealname": "Custom data integrations",
+          "dealstage": "presentationscheduled",
+          "hs_lastmodifieddate": "2019-12-07T16:50:06.678Z",
+          "hubspot_owner_id": "910901",
+          "pipeline": "default"
+        },
+        "updatedAt": "2019-12-07T16:50:06.678Z"
+      },
+      "properties": {
+        "archived": {
+          "example": false,
+          "type": "boolean"
+        },
+        "archivedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "id": {
+          "example": "512",
+          "type": "string"
+        },
+        "properties": {
+          "additionalProperties": {
+            "nullable": true,
+            "type": "string"
+          },
+          "example": {
+            "property_checkbox": "false",
+            "property_date": "1572480000000",
+            "property_dropdown": "choice_b",
+            "property_multiple_checkboxes": "chocolate;strawberry",
+            "property_number": "17",
+            "property_radio": "option_1",
+            "property_string": "value"
+          },
+          "type": "object"
+        },
+        "propertiesWithHistory": {
+          "additionalProperties": {
+            "items": {
+              "$ref": "#/definitions/ValueWithTimestamp"
+            },
+            "type": "array"
+          },
+          "type": "object"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "required": [
+        "createdAt",
+        "id",
+        "properties",
+        "updatedAt"
+      ],
+      "type": "object"
+    },
+    "SimplePublicObjectBatchInput": {
+      "example": {
+        "id": "1",
+        "properties": {
+          "amount": "1500.00",
+          "closedate": "2019-12-07T16:50:06.678Z",
+          "dealname": "Custom data integrations",
+          "dealstage": "presentationscheduled",
+          "hubspot_owner_id": "910901",
+          "pipeline": "default"
+        }
+      },
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "idProperty": {
+          "example": "my_unique_property_name",
+          "type": "string"
+        },
+        "objectWriteTraceId": {
+          "type": "string"
+        },
+        "properties": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        }
+      },
+      "required": [
+        "id",
+        "properties"
+      ],
+      "type": "object"
+    },
+    "SimplePublicObjectBatchInputUpsert": {
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "idProperty": {
+          "type": "string"
+        },
+        "objectWriteTraceId": {
+          "type": "string"
+        },
+        "properties": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        }
+      },
+      "required": [
+        "id",
+        "properties"
+      ],
+      "type": "object"
+    },
+    "SimplePublicObjectId": {
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "type": "object"
+    },
+    "SimplePublicObjectInput": {
+      "example": {
+        "associations": [
+          {
+            "to": {
+              "id": "101"
+            },
+            "types": [
+              {
+                "associationCategory": "HUBSPOT_DEFINED",
+                "associationTypeId": 2
+              }
+            ]
+          }
+        ],
+        "properties": {
+          "amount": "1500.00",
+          "closedate": "2019-12-07T16:50:06.678Z",
+          "dealname": "Custom data integrations",
+          "dealstage": "presentationscheduled",
+          "hubspot_owner_id": "910901",
+          "pipeline": "default"
+        }
+      },
+      "properties": {
+        "objectWriteTraceId": {
+          "type": "string"
+        },
+        "properties": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "example": {
+            "property_checkbox": "false",
+            "property_date": "1572480000000",
+            "property_dropdown": "choice_b",
+            "property_multiple_checkboxes": "chocolate;strawberry",
+            "property_number": "17",
+            "property_radio": "option_1",
+            "property_string": "value"
+          },
+          "type": "object"
+        }
+      },
+      "required": [
+        "properties"
+      ],
+      "type": "object"
+    },
+    "SimplePublicObjectInputForCreate": {
+      "example": {
+        "associations": [
+          {
+            "to": {
+              "id": "101"
+            },
+            "types": [
+              {
+                "associationCategory": "HUBSPOT_DEFINED",
+                "associationTypeId": 2
+              }
+            ]
+          }
+        ],
+        "properties": {
+          "amount": "1500.00",
+          "closedate": "2019-12-07T16:50:06.678Z",
+          "dealname": "Custom data integrations",
+          "dealstage": "presentationscheduled",
+          "hubspot_owner_id": "910901",
+          "pipeline": "default"
+        }
+      },
+      "properties": {
+        "associations": {
+          "items": {
+            "$ref": "#/definitions/PublicAssociationsForObject"
+          },
+          "type": "array"
+        },
+        "objectWriteTraceId": {
+          "type": "string"
+        },
+        "properties": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        }
+      },
+      "required": [
+        "associations",
+        "properties"
+      ],
+      "type": "object"
+    },
+    "SimplePublicObjectWithAssociations": {
+      "example": {
+        "properties": {
+          "amount": "1500.00",
+          "closedate": "2019-12-07T16:50:06.678Z",
+          "createdate": "2019-10-30T03:30:17.883Z",
+          "dealname": "Custom data integrations",
+          "dealstage": "presentationscheduled",
+          "hs_lastmodifieddate": "2019-12-07T16:50:06.678Z",
+          "hubspot_owner_id": "910901",
+          "pipeline": "default"
+        }
+      },
+      "properties": {
+        "archived": {
+          "type": "boolean"
+        },
+        "archivedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "associations": {
+          "additionalProperties": {
+            "$ref": "#/definitions/CollectionResponseAssociatedId"
+          },
+          "type": "object"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "properties": {
+          "additionalProperties": {
+            "nullable": true,
+            "type": "string"
+          },
+          "type": "object"
+        },
+        "propertiesWithHistory": {
+          "additionalProperties": {
+            "items": {
+              "$ref": "#/definitions/ValueWithTimestamp"
+            },
+            "type": "array"
+          },
+          "type": "object"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "required": [
+        "createdAt",
+        "id",
+        "properties",
+        "updatedAt"
+      ],
+      "type": "object"
+    },
+    "SimplePublicUpsertObject": {
+      "properties": {
+        "archived": {
+          "type": "boolean"
+        },
+        "archivedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "new": {
+          "type": "boolean"
+        },
+        "properties": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        },
+        "propertiesWithHistory": {
+          "additionalProperties": {
+            "items": {
+              "$ref": "#/definitions/ValueWithTimestamp"
+            },
+            "type": "array"
+          },
+          "type": "object"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "required": [
+        "createdAt",
+        "id",
+        "new",
+        "properties",
+        "updatedAt"
+      ],
+      "type": "object"
+    },
+    "StandardError": {
+      "properties": {
+        "category": {
+          "type": "string"
+        },
+        "context": {
+          "additionalProperties": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "type": "object"
+        },
+        "errors": {
+          "items": {
+            "$ref": "#/definitions/ErrorDetail"
+          },
+          "type": "array"
+        },
+        "id": {
+          "type": "string"
+        },
+        "links": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        },
+        "message": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "subCategory": {
+          "properties": {},
+          "type": "object"
+        }
+      },
+      "required": [
+        "category",
+        "context",
+        "errors",
+        "links",
+        "message",
+        "status"
+      ],
+      "type": "object"
+    },
+    "ValueWithTimestamp": {
+      "properties": {
+        "sourceId": {
+          "type": "string"
+        },
+        "sourceLabel": {
+          "type": "string"
+        },
+        "sourceType": {
+          "type": "string"
+        },
+        "timestamp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedByUserId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "sourceType",
+        "timestamp",
+        "value"
+      ],
+      "type": "object"
+    }
+  },
+  "securityDefinitions": {
+    "oauth2": {
+      "authorizationUrl": "https://app.hubspot.com/oauth/authorize",
+      "flow": "accessCode",
+      "scopes": {
+        "crm.objects.appointments.read": "Read appointments",
+        "crm.objects.appointments.write": "Write appointments",
+        "crm.objects.carts.read": "Read carts",
+        "crm.objects.carts.write": "Write cart",
+        "crm.objects.commercepayments.read": "Read the COMMERCE_PAYMENT object.",
+        "crm.objects.companies.read": " ",
+        "crm.objects.companies.write": " ",
+        "crm.objects.contacts.read": " ",
+        "crm.objects.contacts.write": " ",
+        "crm.objects.courses.read": "Read courses",
+        "crm.objects.courses.write": "Write courses",
+        "crm.objects.deals.read": " ",
+        "crm.objects.deals.write": " ",
+        "crm.objects.invoices.read": "Read invoices objects",
+        "crm.objects.leads.read": "Read lead objects",
+        "crm.objects.leads.write": "Modify lead objects",
+        "crm.objects.line_items.read": "Line Items",
+        "crm.objects.line_items.write": "Line Items",
+        "crm.objects.listings.read": "Read listings",
+        "crm.objects.listings.write": "Write listings",
+        "crm.objects.orders.read": "Read Orders",
+        "crm.objects.orders.write": "Write orders",
+        "crm.objects.partner-clients.read": "View Partner Client CRM objects",
+        "crm.objects.partner-clients.write": "Modify Partner Client CRM objects",
+        "crm.objects.quotes.read": "Quotes",
+        "crm.objects.quotes.write": "Quotes",
+        "crm.objects.services.read": "Read services",
+        "crm.objects.services.write": "Write services",
+        "crm.objects.subscriptions.read": "Read Commerce Subscriptions",
+        "crm.objects.users.read": "Read User CRM objects",
+        "crm.objects.users.write": "Write User CRM objects"
+      },
+      "tokenUrl": "https://api.hubapi.com/oauth/v1/token",
+      "type": "oauth2"
+    },
+    "oauth2_legacy": {
+      "authorizationUrl": "https://app.hubspot.com/oauth/authorize",
+      "flow": "accessCode",
+      "scopes": {
+        "crm.objects.custom.read": "View custom object records",
+        "crm.objects.custom.write": "Change custom object records",
+        "crm.objects.goals.read": "Read goals",
+        "e-commerce": "e-commerce",
+        "media_bridge.read": "Read media and media events",
+        "tickets": "Read and write tickets"
+      },
+      "tokenUrl": "https://api.hubapi.com/oauth/v1/token",
+      "type": "oauth2"
+    },
+    "private_apps": {
+      "in": "header",
+      "name": "private-app",
+      "type": "apiKey"
+    },
+    "private_apps_legacy": {
+      "in": "header",
+      "name": "private-app-legacy",
+      "type": "apiKey"
+    }
+  },
+  "tags": [
+    {
+      "name": "Batch"
+    },
+    {
+      "name": "Basic"
+    },
+    {
+      "name": "Search"
+    }
+  ],
+  "x-components": {
+    "responses": {
+      "Error": {
+        "content": {
+          "*/*": {
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "description": "An error occurred."
+      }
+    }
+  },
+  "x-hubspot-available-client-libraries": [
+    "PHP",
+    "Node",
+    "Ruby",
+    "Python"
+  ],
+  "x-hubspot-documentation-banner": "NONE",
+  "x-hubspot-product-tier-requirements": {
+    "cms": "FREE",
+    "marketing": "FREE",
+    "sales": "FREE",
+    "service": "FREE"
+  }
+}

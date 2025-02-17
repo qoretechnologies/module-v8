@@ -1,17 +1,23 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { TQoreGetDefaultValueFunction } from '../../../global/models/qore';
+import { QorusRequest, TQoreGetDefaultValueFunction } from '@qoretechnologies/ts-toolkit';
+import { Debugger } from '../../../utils/Debugger';
 import { JIRA_CONN_OPTIONS } from '../constants';
 import { jiraDocumentFormatOption } from '../options/jira-document.option';
-import { Debugger } from '../../../utils/Debugger';
 
 export const getJiraIssueDescriptionDefaultValue: TQoreGetDefaultValueFunction<
-  typeof JIRA_CONN_OPTIONS
+  typeof JIRA_CONN_OPTIONS,
+  Record<string, unknown>
 > = async (context) => {
   try {
-    const {
-      conn_opts: { token, cloud_id },
-      opts,
-    } = context;
+    const token = context?.conn_opts?.token;
+    const cloud_id = context?.conn_opts?.cloud_id;
+    const opts = context?.opts;
+
+    if (!token || !cloud_id) {
+      throw new Error(
+        'The token and cloud_id are required to get Jira issue description default value'
+      );
+    }
+
     if (opts?.issueIdOrKey) {
       const { data } = await QorusRequest.get<any>(
         {

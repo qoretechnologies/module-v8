@@ -1,15 +1,22 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '../../../global/models/qore';
+import {
+  IQoreAllowedValue,
+  QorusRequest,
+  TQoreGetAllowedValuesFunction,
+} from '@qoretechnologies/ts-toolkit';
 import { JIRA_CONN_OPTIONS } from '../constants';
 
 export const getJiraIssueTypeIdAllowedValues: TQoreGetAllowedValuesFunction<
-  typeof JIRA_CONN_OPTIONS
-> = async (context): Promise<IQoreAllowedValue[]> => {
-  const {
-    conn_opts: { token, cloud_id },
-  } = context;
+  typeof JIRA_CONN_OPTIONS,
+  string
+> = async (context): Promise<IQoreAllowedValue<string>[]> => {
+  const token = context?.conn_opts?.token;
+  const cloud_id = context?.conn_opts?.cloud_id;
 
-  const issueTypeIds: IQoreAllowedValue[] = [];
+  if (!token || !cloud_id) {
+    throw new Error('The token and cloud_id are required to get Jira issue type allowed values');
+  }
+
+  const issueTypeIds: IQoreAllowedValue<string>[] = [];
 
   const { data: fetchedIssueTypes } = await QorusRequest.get<any>(
     {
@@ -23,7 +30,7 @@ export const getJiraIssueTypeIdAllowedValues: TQoreGetAllowedValuesFunction<
 
   issueTypeIds.push(
     ...fetchedIssueTypes.map(
-      (issueType: any): IQoreAllowedValue => ({
+      (issueType: any): IQoreAllowedValue<string> => ({
         value: issueType.id,
         display_name: issueType.name,
       })
@@ -34,13 +41,17 @@ export const getJiraIssueTypeIdAllowedValues: TQoreGetAllowedValuesFunction<
 };
 
 export const getJiraIssueTypeNameAllowedValues: TQoreGetAllowedValuesFunction<
-  typeof JIRA_CONN_OPTIONS
-> = async (context): Promise<IQoreAllowedValue[]> => {
-  const {
-    conn_opts: { token, cloud_id },
-  } = context;
+  typeof JIRA_CONN_OPTIONS,
+  string
+> = async (context): Promise<IQoreAllowedValue<string>[]> => {
+  const token = context?.conn_opts?.token;
+  const cloud_id = context?.conn_opts?.cloud_id;
 
-  const issueTypeNames: IQoreAllowedValue[] = [];
+  if (!token || !cloud_id) {
+    throw new Error('The token and cloud_id are required to get Jira issue type allowed values');
+  }
+
+  const issueTypeNames: IQoreAllowedValue<string>[] = [];
 
   const { data: fetchedIssueTypes } = await QorusRequest.get<any>(
     {
@@ -54,7 +65,7 @@ export const getJiraIssueTypeNameAllowedValues: TQoreGetAllowedValuesFunction<
 
   issueTypeNames.push(
     ...fetchedIssueTypes.map(
-      (issueType: any): IQoreAllowedValue => ({
+      (issueType: any): IQoreAllowedValue<string> => ({
         value: issueType.name,
         display_name: issueType.name,
         desc: issueType.description,

@@ -1,3 +1,4 @@
+import { TQoreAppWithActions, TQoreMappedOptions } from '@qoretechnologies/ts-toolkit';
 import { actionsCatalogue } from '../../ActionsCatalogue';
 import {
   buildActionsFromSwaggerSchema,
@@ -5,7 +6,6 @@ import {
   mapActionsToApp,
   mapTriggersToApp,
 } from '../../global/helpers';
-import { IQoreAppWithActions } from '../../global/models/qore';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import stripe from '../../schemas/stripe.swagger.json';
@@ -21,7 +21,7 @@ export const STRIPE_ACTIONS = buildActionsFromSwaggerSchema({
 /*
  * Returns the app object with all the actions ready to use, using translations
  * @param locale - the locale
- * @returns IQoreAppWithActions
+ * @returns TQoreAppWithActions
  */
 export default (locale: Locales) =>
   ({
@@ -78,20 +78,30 @@ export default (locale: Locales) =>
     },
     rest_modifiers: {
       options: STRIPE_CONN_OPTIONS,
-      set_options_post_auth: async (context) => {
-        const rv: any = {};
-        if (context.conn_opts.account_id) {
+      set_options_post_auth: (context): TQoreMappedOptions<typeof STRIPE_CONN_OPTIONS> => {
+        const rv: {
+          account_id: string;
+          ping_path: string;
+          user_id: string;
+          stripe_user_id: string;
+        } = {
+          account_id: '',
+          ping_path: '/v1/account',
+          user_id: '',
+          stripe_user_id: '',
+        };
+        if (context?.conn_opts?.account_id) {
           rv.account_id = context.conn_opts.account_id;
           rv.ping_path = `/v1/accounts/${context.conn_opts.account_id}`;
         }
-        if (context.conn_opts.user_id) {
+        if (context?.conn_opts?.user_id) {
           rv.user_id = context.conn_opts.user_id;
         }
-        if (context.conn_opts.stripe_user_id) {
+        if (context?.conn_opts?.stripe_user_id) {
           rv.stripe_user_id = context.conn_opts.stripe_user_id;
         }
 
         return rv;
       },
     },
-  }) satisfies IQoreAppWithActions;
+  }) satisfies TQoreAppWithActions;

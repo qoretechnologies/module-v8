@@ -1,7 +1,7 @@
 import { Client } from '@notionhq/client';
 import { createAction, Property } from 'core/framework';
 import { notionAuth } from '../..';
-import { TQoreResponseType } from '../../../../global/models/qore';
+import { TQoreResponseType } from '@qoretechnologies/ts-toolkit';
 
 export const getUserResponseType = {
   type: 'hash',

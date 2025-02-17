@@ -1,20 +1,36 @@
-import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import {
   IQoreAllowedValue,
+  QorusRequest,
   TQoreGetAllowedValuesFunction,
   TQoreGetDefaultValueFunction,
-} from '../../../global/models/qore';
-import { FRESHDESK_CONN_OPTIONS } from '../constants';
+} from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
+import { FRESHDESK_CONN_OPTIONS } from '../constants';
 export const getFreshdeskRecordCurrentValue: TQoreGetDefaultValueFunction<
   typeof FRESHDESK_CONN_OPTIONS
 > = async (context): Promise<any> => {
-  const {
-    conn_opts: { subdomain, token },
-    opts: { schemaId, id },
-  } = context;
+  const token = context?.conn_opts?.token;
+  const subdomain = context?.conn_opts?.subdomain;
+  const schemaId = context?.opts?.schemaId;
+  const id = context?.opts?.id;
+
+  const missingOptions = [];
+
+  if (!token) missingOptions.push('token');
+  if (!subdomain) missingOptions.push('subdomain');
+  if (!schemaId) missingOptions.push('schemaId');
+  if (!id) missingOptions.push('id');
+
+  if (missingOptions.length > 0) {
+    Debugger.log(
+      `The following options are required to get Freshdesk record current value: ${missingOptions.join(', ')}`
+    );
+
+    return FreshdeskRecordDefaultValue;
+  }
+
   try {
-    const { data } = await QorusRequest.get<{ data: { data: unknown } }>(
+    const response = await QorusRequest.get<{ data: { data: unknown } }>(
       {
         path: `/api/v2/custom_objects/schemas/${schemaId}/records/${id}`,
         headers: {
@@ -24,7 +40,10 @@ export const getFreshdeskRecordCurrentValue: TQoreGetDefaultValueFunction<
       { url: `https://${subdomain}.freshdesk.com`, endpointId: 'Freshdesk' }
     );
 
-    return data.data;
+    const responseData = response?.data;
+    if (!responseData) return FreshdeskRecordDefaultValue;
+
+    return responseData.data;
   } catch (error) {
     Debugger.log('Error while trying to get the current value of record:', error);
 
@@ -35,12 +54,28 @@ export const getFreshdeskRecordCurrentValue: TQoreGetDefaultValueFunction<
 export const getFreshdeskRecordVersion: TQoreGetDefaultValueFunction<
   typeof FRESHDESK_CONN_OPTIONS
 > = async (context): Promise<any> => {
-  const {
-    conn_opts: { subdomain, token },
-    opts: { schemaId, id },
-  } = context;
+  const token = context?.conn_opts?.token;
+  const subdomain = context?.conn_opts?.subdomain;
+  const schemaId = context?.opts?.schemaId;
+  const id = context?.opts?.id;
+
+  const missingOptions = [];
+
+  if (!token) missingOptions.push('token');
+  if (!subdomain) missingOptions.push('subdomain');
+  if (!schemaId) missingOptions.push('schemaId');
+  if (!id) missingOptions.push('id');
+
+  if (missingOptions.length > 0) {
+    Debugger.log(
+      `The following options are required to get Freshdesk record version value: ${missingOptions.join(', ')}`
+    );
+
+    return FreshdeskRecordDefaultValue;
+  }
+
   try {
-    const { data } = await QorusRequest.get<{ data: { data: unknown; version: number } }>(
+    const response = await QorusRequest.get<{ data: { data: unknown; version: number } }>(
       {
         path: `/api/v2/custom_objects/schemas/${schemaId}/records/${id}`,
         headers: {
@@ -50,23 +85,40 @@ export const getFreshdeskRecordVersion: TQoreGetDefaultValueFunction<
       { url: `https://${subdomain}.freshdesk.com`, endpointId: 'Freshdesk' }
     );
 
-    return data.version;
+    const responseData = response?.data;
+    if (!responseData) return FreshdeskRecordDefaultValue.version;
+
+    return responseData.version;
   } catch (error) {
     Debugger.log('Error while trying to get the current value of record:', error);
 
-    return FreshdeskRecordDefaultValue;
+    return FreshdeskRecordDefaultValue.version;
   }
 };
 
 export const getFreshdeskSchemaRecordValue: TQoreGetDefaultValueFunction<
   typeof FRESHDESK_CONN_OPTIONS
 > = async (context): Promise<any> => {
-  const {
-    conn_opts: { subdomain, token },
-    opts: { schemaId },
-  } = context;
+  const token = context?.conn_opts?.token;
+  const subdomain = context?.conn_opts?.subdomain;
+  const schemaId = context?.opts?.schemaId;
+
+  const missingOptions = [];
+
+  if (!token) missingOptions.push('token');
+  if (!subdomain) missingOptions.push('subdomain');
+  if (!schemaId) missingOptions.push('schemaId');
+
+  if (missingOptions.length > 0) {
+    Debugger.log(
+      `The following options are required to get Freshdesk record current value: ${missingOptions.join(', ')}`
+    );
+
+    return FreshdeskRecordDefaultValue;
+  }
+
   try {
-    const { data } = await QorusRequest.get<{ data: { records: unknown[] } }>(
+    const response = await QorusRequest.get<{ data: { records: unknown[] } }>(
       {
         path: `/api/v2/custom_objects/schemas/${schemaId}/records`,
         headers: {
@@ -76,7 +128,10 @@ export const getFreshdeskSchemaRecordValue: TQoreGetDefaultValueFunction<
       { url: `https://${subdomain}.freshdesk.com`, endpointId: 'Freshdesk' }
     );
 
-    return data.records[0] ? data.records[0] : FreshdeskRecordDefaultValue;
+    const responseData = response?.data;
+    if (!responseData) return FreshdeskRecordDefaultValue;
+
+    return responseData.records[0] ? responseData.records[0] : FreshdeskRecordDefaultValue;
   } catch (error) {
     Debugger.log('Error while trying to get the current value of record:', error);
 
@@ -87,11 +142,25 @@ export const getFreshdeskSchemaRecordValue: TQoreGetDefaultValueFunction<
 export const getFreshdeskRecordIdAllowedValues: TQoreGetAllowedValuesFunction<
   typeof FRESHDESK_CONN_OPTIONS
 > = async (context): Promise<IQoreAllowedValue[]> => {
-  const {
-    conn_opts: { subdomain, token },
-    opts: { schemaId },
-  } = context;
-  const { data } = await QorusRequest.get<{ data: { records: { display_id: string }[] } }>(
+  const token = context?.conn_opts?.token;
+  const subdomain = context?.conn_opts?.subdomain;
+  const schemaId = context?.opts?.schemaId;
+
+  const missingOptions = [];
+
+  if (!token) missingOptions.push('token');
+  if (!subdomain) missingOptions.push('subdomain');
+  if (!schemaId) missingOptions.push('schemaId');
+
+  if (missingOptions.length > 0) {
+    Debugger.log(
+      `The following options are required to get Freshdesk record id allowed values: ${missingOptions.join(', ')}`
+    );
+
+    return [];
+  }
+
+  const response = await QorusRequest.get<{ data: { records: { display_id: string }[] } }>(
     {
       path: `/api/v2/custom_objects/schemas/${schemaId}/records`,
       params: {
@@ -104,7 +173,13 @@ export const getFreshdeskRecordIdAllowedValues: TQoreGetAllowedValuesFunction<
     { url: `https://${subdomain}.freshdesk.com`, endpointId: 'Freshdesk' }
   );
 
-  return data.records.map(
+  const responseData = response?.data;
+
+  if (!responseData) {
+    return [];
+  }
+
+  return responseData.records.map(
     (record): IQoreAllowedValue => ({
       value: record.display_id,
       display_name: record.display_id,

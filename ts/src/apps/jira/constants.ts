@@ -1,5 +1,4 @@
-import { TAllowedPaths } from '../../global/models/qore';
-import { IQoreConnectionOptions } from '../../global/models/qore';
+import { TAllowedPaths, TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
 import { getJiraCommentIdAllowedValues } from './helpers/get-comment-id-allowed-values';
 import { getJiraIssueDescriptionDefaultValue } from './helpers/get-default-description-value';
 import { getJiraFieldIdAllowedValues } from './helpers/get-field-id-allowed-values';
@@ -438,4 +437,16 @@ export const JIRA_CONN_OPTIONS = {
     desc: 'The cloud ID',
     type: 'string',
   },
-} satisfies IQoreConnectionOptions;
+  ping_path: {
+    display_name: 'Ping Path',
+    short_desc: 'The custom ping path for oauth',
+    desc: 'The path to ping',
+    type: 'string',
+  },
+  swagger_base_path: {
+    display_name: 'Swagger Base Path',
+    short_desc: 'The custom base path for swagger',
+    desc: 'The base path for swagger',
+    type: 'string',
+  },
+} satisfies TCustomConnOptions;

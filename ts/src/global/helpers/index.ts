@@ -2,17 +2,18 @@ import { Locales, Translation } from 'i18n/i18n-types';
 import { capitalize, get, omit, reduce } from 'lodash';
 import { OpenAPIV2 } from 'openapi-types';
 import toTitleCase from 'to-title-case';
+
 import {
   EQoreAppActionCode,
   EQoreAppActionWebhookAuthType,
   IAllowedPathData,
-  IQoreAppActionOption,
   IQoreAppActionWithEvent,
   IQoreAppActionWithEventOrWebhook,
   IQorePartialAppActionWithSwaggerPath,
   QoreAppActionCodeToLocale,
   TAllowedPaths,
   THttpMethod,
+  TQoreAppActionOption,
   TQoreAppActionWithEventOrWebhookEventInfo,
   TQoreAppActionWithWebhook,
   TQoreAppEventAction,
@@ -20,10 +21,9 @@ import {
   TQoreOptions,
   TQorePartialEventAction,
   TQorePartialNonEventAction,
-  TQoreType,
   TQoreTypeObject,
   TStringWithFirstUpperCaseCharacter,
-} from '../../global/models/qore';
+} from '@qoretechnologies/ts-toolkit';
 import { L } from '../../i18n/i18n-node';
 
 export const createSwaggerPaths = (paths: TAllowedPaths): string[] => {
@@ -54,6 +54,7 @@ type TBuildActionsFromSwaggerSchemaParams = {
   allowedPaths?: TAllowedPaths;
   app?: string;
   locale?: Locales;
+  schemaPath?: string;
 };
 
 // !IMPORTANT
@@ -69,6 +70,7 @@ export const OMMITTED_FIELDS = ['_localizationGroup'] as const;
 export const buildActionsFromSwaggerSchema = ({
   schema,
   allowedPaths,
+  schemaPath,
   app,
   locale = 'en',
 }: TBuildActionsFromSwaggerSchemaParams): IQorePartialAppActionWithSwaggerPath[] => {
@@ -79,25 +81,27 @@ export const buildActionsFromSwaggerSchema = ({
 
   const actions: IQorePartialAppActionWithSwaggerPath[] = [];
 
-  const allowedPathsWithMethods = new Map<string, TAllowedPathWithData>();
-  Object.entries(allowedPaths).forEach(([fullPath, methods]) => {
-    if (Object.keys(methods).length === 0) {
-      allowedPathsWithMethods.set(fullPath, { methods: null });
+  const allowedPathsWithMethods = new Map<string, TAllowedPathWithData | null>();
+  if (allowedPaths) {
+    Object.entries(allowedPaths).forEach(([fullPath, methods]) => {
+      if (Object.keys(methods).length === 0) {
+        allowedPathsWithMethods.set(fullPath, null);
 
-      return;
-    }
+        return;
+      }
 
-    const methodSet = new Set<string>();
-    Object.entries(methods).forEach(([method]) => {
-      methodSet.add(method.toLowerCase());
+      const methodSet = new Set<string>();
+      Object.entries(methods).forEach(([method]) => {
+        methodSet.add(method.toLowerCase());
+      });
+      allowedPathsWithMethods.set(fullPath, { methods: methodSet });
     });
-    allowedPathsWithMethods.set(fullPath, { methods: methodSet });
-  });
+  }
 
   Object.entries(schema.paths).forEach(([path, methods]) => {
     const allowedPath = allowedPathsWithMethods.get(path);
 
-    if (allowedPathsWithMethods.size > 0 && !allowedPath) return;
+    if (allowedPathsWithMethods.size > 0 && allowedPath === undefined) return;
 
     Object.entries(methods).forEach(([method, data]) => {
       if (method === 'parameters' || typeof data !== 'object') return;
@@ -107,7 +111,7 @@ export const buildActionsFromSwaggerSchema = ({
 
       if (!isMethodAllowed) return;
 
-      const pathData = allowedPaths[path][method.toUpperCase() as THttpMethod];
+      const pathData = allowedPaths?.[path]?.[method.toUpperCase() as THttpMethod];
       const dataWithoutParameters = data as OpenAPIV2.OperationObject;
       let actionData = allowedPath?.methods?.has(methodKey) ? pathData || {} : {};
 
@@ -137,6 +141,7 @@ export const buildActionsFromSwaggerSchema = ({
           // @ts-expect-error no idea whats going on here, will fix later
           L[locale].apps[app].actions[actionIdentifier as unknown].longDesc() ||
           getPropertyOfSchemaData(dataWithoutParameters, 'description', ''),
+        ...(schemaPath && { swagger_schema: schemaPath }),
         ...actionData,
       };
       actions.push(action);
@@ -152,7 +157,11 @@ export const getPropertyOfSchemaData = (
   fallback?: string
 ) => {
   if (typeof data === 'object' && key in data) {
-    return String(data[key]).replace(/\//g, '-');
+    return String(data[key])
+      .replace(/\//g, '-')
+      .replace(/[{}]/g, '')
+      .replace(/__+/g, '_')
+      .replace(/--+/g, '-');
   }
 
   return fallback || '';
@@ -210,12 +219,15 @@ export const mapActionsToApp = (
     short_desc: getLocaleField(app, locale, action, 'short_desc'),
     desc: getLocaleField(app, locale, action, 'desc'),
     app,
-    options: 'options' in action ? fixOptions(action, action.options, app, locale) : undefined,
-    ...('override_options' in action && {
+    options:
+      'options' in action && action.options
+        ? fixOptions(action, action.options, app, locale)
+        : undefined,
+    ...(action?.override_options && {
       override_options: fixOptions(action, action.override_options, app, locale),
     }),
     response_type:
-      'response_type' in action
+      'response_type' in action && action.response_type
         ? typeof action.response_type === 'string'
           ? action.response_type
           : fixResponseOrEventInfo(action.response_type, app, locale, action)
@@ -250,18 +262,17 @@ export const mapTriggersToApp = (
   triggers: Record<string, TQorePartialEventAction> | TQorePartialEventAction[],
   locale: Locales
 ): TQoreAppEventAction[] => {
-  return Object.entries(triggers).map(([_a, trigger]) => {
-    const eventInfo: TQoreAppActionWithEventOrWebhookEventInfo =
-      'event_info' in trigger
-        ? {
-            ...trigger.event_info,
-            type: fixResponseOrEventInfo(trigger.event_info.type, app, locale, trigger),
-            desc:
-              trigger.event_info.desc ||
-              // @ts-expect-error no idea whats going on here, will fix later
-              L[locale].apps[app].triggers[trigger.action].event_info.desc(),
-          }
-        : undefined;
+  const mappedTriggers = Object.entries(triggers).map(([_a, trigger]) => {
+    const eventInfo: TQoreAppActionWithEventOrWebhookEventInfo | undefined = trigger?.event_info
+      ? {
+          ...trigger.event_info,
+          type: fixResponseOrEventInfo(trigger.event_info.type, app, locale, trigger),
+          desc:
+            trigger.event_info.desc ||
+            // @ts-expect-error no idea whats going on here, will fix later
+            L[locale].apps[app].triggers[trigger.action].event_info.desc(),
+        }
+      : undefined;
 
     // Base trigger with common fields
     const baseAction = {
@@ -272,8 +283,8 @@ export const mapTriggersToApp = (
       short_desc: getLocaleField(app, locale, trigger, 'short_desc'),
       desc: getLocaleField(app, locale, trigger, 'desc'),
       app,
-      options: 'options' in trigger ? fixOptions(trigger, trigger.options, app, locale) : undefined,
-      event_info: eventInfo,
+      options: trigger?.options ? fixOptions(trigger, trigger.options, app, locale) : undefined,
+      event_info: eventInfo || { desc: '', type: { type: 'hash' } },
     } satisfies IQoreAppActionWithEventOrWebhook;
 
     if ('event_function' in trigger) {
@@ -300,6 +311,8 @@ export const mapTriggersToApp = (
       } as TQoreAppActionWithWebhook;
     }
   });
+
+  return mappedTriggers.filter((trigger) => trigger !== undefined);
 };
 
 export const fixResponseOrEventInfo = (
@@ -323,20 +336,20 @@ export const fixResponseOrEventInfo = (
   };
 
   const processCollection = (
-    collection: Record<string, IQoreAppActionOption>,
+    collection: Record<string, TQoreAppActionOption>,
     path: string[] = []
-  ): Record<string, IQoreAppActionOption> => {
+  ): Record<string, TQoreAppActionOption> => {
     return reduce(
       collection,
       (
-        newCollection: Record<string, IQoreAppActionOption>,
-        field: IQoreAppActionOption,
+        newCollection: Record<string, TQoreAppActionOption>,
+        field: TQoreAppActionOption,
         key: string
-      ): Record<string, IQoreAppActionOption> => {
+      ): Record<string, TQoreAppActionOption> => {
         const currentPath = [...path, 'type', 'fields', key];
         let fieldType = undefined;
 
-        if (typeof field.type === 'object' && field.type.type === 'hash') {
+        if (typeof field.type === 'object' && field.type.type === 'hash' && field.type.fields) {
           const fields = processCollection(field.type.fields, [...currentPath]);
           fieldType = {
             ...field.type,
@@ -350,7 +363,7 @@ export const fixResponseOrEventInfo = (
           display_name: field.display_name || getLocalizedField('displayName', currentPath),
           short_desc: field.short_desc || getLocalizedField('shortDesc', currentPath),
           desc: field.desc || getLocalizedField('longDesc', currentPath),
-        } satisfies IQoreAppActionOption;
+        } as TQoreAppActionOption;
 
         return {
           ...newCollection,
@@ -361,7 +374,7 @@ export const fixResponseOrEventInfo = (
     );
   };
 
-  if (type?.type !== 'hash') {
+  if (type?.type !== 'hash' || !type.fields) {
     return type;
   }
 
@@ -372,7 +385,7 @@ export const fixResponseOrEventInfo = (
 
 export const fixOptions = (
   action: TQorePartialEventAction | TQorePartialNonEventAction,
-  collection: TQoreOptions | Record<string, Partial<IQoreAppActionOption>>,
+  collection: TQoreOptions | Record<string, Partial<TQoreAppActionOption>>,
   appName: string,
   locale: Locales
 ): TQoreOptions => {
@@ -385,16 +398,16 @@ export const fixOptions = (
   };
 
   const processCollection = (
-    collection: TQoreOptions | Record<string, Partial<IQoreAppActionOption>>,
+    collection: TQoreOptions | Record<string, Partial<TQoreAppActionOption>>,
     path: string[] = []
   ): TQoreOptions => {
     return reduce(
       collection,
-      (fixedOptions: TQoreOptions, option: IQoreAppActionOption, key: string): TQoreOptions => {
+      (fixedOptions: TQoreOptions, option: TQoreAppActionOption, key: string): TQoreOptions => {
         const currentPath = [...path, key];
         let optionType = undefined;
 
-        if (typeof option.type === 'object' && option.type.type === 'hash') {
+        if (typeof option.type === 'object' && option.type.type === 'hash' && option.type.fields) {
           const fields = processCollection(option.type.fields, [...currentPath, 'type', 'fields']);
           optionType = {
             ...option.type,
@@ -402,13 +415,13 @@ export const fixOptions = (
           };
         }
 
-        const updatedOption: IQoreAppActionOption<TQoreType, unknown> = {
+        const updatedOption = {
           ...option,
           ...(optionType && { type: optionType }),
           display_name: option.display_name || getLocalizedField('displayName', currentPath),
           short_desc: option.short_desc || getLocalizedField('shortDesc', currentPath),
           desc: option.desc || getLocalizedField('longDesc', currentPath),
-        };
+        } as TQoreAppActionOption;
 
         return {
           ...fixedOptions,

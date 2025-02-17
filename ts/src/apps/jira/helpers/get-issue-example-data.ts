@@ -1,13 +1,18 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { IQoreAppActionWithWebhookBase } from '../../../global/models/qore';
+import { IQoreAppActionWithWebhookBase } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
 
 export const getJiraIssueExampleData: IQoreAppActionWithWebhookBase['get_example_event_data'] =
   async (context) => {
-    const {
-      conn_opts: { token, cloud_id },
-      opts: { project },
-    } = context;
+    const token = context?.conn_opts?.token;
+    const cloud_id = context?.conn_opts?.cloud_id;
+    const project = context?.opts?.project;
+
+    if (!token || !cloud_id || !project) {
+      throw new Error(
+        'The token, cloud_id and project are required to get Jira issue example data'
+      );
+    }
 
     try {
       const {
