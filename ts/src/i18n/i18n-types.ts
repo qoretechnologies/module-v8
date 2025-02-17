@@ -8556,6 +8556,476 @@ type RootTranslation = {
 			 */
 			longDesc: string
 			actions: {
+				'post-crm-v3-objects-companies-batch-upsert_upsert': {
+					/**
+					 * C​r​e​a​t​e​ ​O​r​ ​U​p​d​a​t​e​ ​C​o​m​p​a​n​i​e​s
+					 */
+					displayName: string
+				}
+				'get-crm-v3-objects-contacts': {
+					/**
+					 * L​i​s​t​ ​C​o​n​t​a​c​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​o​n​t​a​c​t​s
+					 */
+					shortDesc: string
+				}
+				'post-crm-v3-objects-contacts': {
+					/**
+					 * C​r​e​a​t​e​ ​C​o​n​t​a​c​t​s
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+				}
+				'post-crm-v3-objects-contacts-search': {
+					/**
+					 * S​e​a​r​c​h​ ​C​o​n​t​a​c​t​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​c​o​n​t​a​c​t​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​c​o​n​t​a​c​t​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a
+					 */
+					longDesc: string
+				}
+				'delete-crm-v3-objects-contacts-contactId': {
+					/**
+					 * D​e​l​e​t​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * S​o​f​t​ ​d​e​l​e​t​e​ ​a​ ​s​e​l​e​c​t​e​d​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+				}
+				'get-crm-v3-objects-contacts-contactId': {
+					/**
+					 * R​e​t​r​i​e​v​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+				}
+				'patch-crm-v3-objects-contacts-contactId': {
+					/**
+					 * U​p​d​a​t​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+				}
+				'get-crm-v3-objects-objectType_getPage': {
+					/**
+					 * L​i​s​t​ ​C​u​s​t​o​m​ ​O​b​j​e​c​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​s​e​l​e​c​t​e​d​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​s
+					 */
+					shortDesc: string
+				}
+				'post-crm-v3-objects-objectType_create': {
+					/**
+					 * C​r​e​a​t​e​ ​C​u​s​t​o​m​ ​O​b​j​e​c​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​ ​o​f​ ​a​ ​s​e​l​e​c​t​e​d​ ​t​y​p​e
+					 */
+					shortDesc: string
+				}
+				'post-crm-v3-objects-objectType-batch-upsert': {
+					/**
+					 * C​r​e​a​t​e​ ​O​r​ ​U​p​d​a​t​e​ ​C​u​s​t​o​m​ ​O​b​j​e​c​t​s
+					 */
+					displayName: string
+				}
+				'post-crm-v3-objects-objectType-search_doSearch': {
+					/**
+					 * S​e​a​r​c​h​ ​C​u​s​t​o​m​ ​O​b​j​e​c​t​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a
+					 */
+					longDesc: string
+				}
+				'delete-crm-v3-objects-objectType-objectId_archive': {
+					/**
+					 * D​e​l​e​t​e​ ​C​u​s​t​o​m​ ​O​b​j​e​c​t
+					 */
+					displayName: string
+					/**
+					 * S​o​f​t​ ​d​e​l​e​t​e​ ​a​ ​s​e​l​e​c​t​e​d​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t
+					 */
+					shortDesc: string
+				}
+				'get-crm-v3-objects-objectType-objectId_getById': {
+					/**
+					 * R​e​t​r​i​e​v​e​ ​C​u​s​t​o​m​ ​O​b​j​e​c​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t
+					 */
+					shortDesc: string
+				}
+				'patch-crm-v3-objects-objectType-objectId_update': {
+					/**
+					 * U​p​d​a​t​e​ ​C​u​s​t​o​m​ ​O​b​j​e​c​t
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t
+					 */
+					shortDesc: string
+				}
+				'get-crm-v3-objects-deals_getPage': {
+					/**
+					 * L​i​s​t​ ​D​e​a​l​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​d​e​a​l​s
+					 */
+					shortDesc: string
+				}
+				'post-crm-v3-objects-deals_create': {
+					/**
+					 * C​r​e​a​t​e​ ​D​e​a​l
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​d​e​a​l
+					 */
+					shortDesc: string
+				}
+				'post-crm-v3-objects-deals-batch-upsert_upsert': {
+					/**
+					 * C​r​e​a​t​e​ ​O​r​ ​U​p​d​a​t​e​ ​D​e​a​l​s
+					 */
+					displayName: string
+				}
+				'post-crm-v3-objects-deals-search_doSearch': {
+					/**
+					 * S​e​a​r​c​h​ ​D​e​a​l​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​d​e​a​l​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​d​e​a​l​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a
+					 */
+					longDesc: string
+				}
+				'delete-crm-v3-objects-deals-dealId_archive': {
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​D​e​a​l
+					 */
+					displayName: string
+					/**
+					 * S​o​f​t​ ​d​e​l​e​t​e​ ​a​ ​s​e​l​e​c​t​e​d​ ​d​e​a​l
+					 */
+					shortDesc: string
+				}
+				'get-crm-v3-objects-deals-dealId_getById': {
+					/**
+					 * R​e​t​r​i​e​v​e​ ​D​e​a​l
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​e​a​l
+					 */
+					shortDesc: string
+				}
+				'patch-crm-v3-objects-deals-dealId_update': {
+					/**
+					 * U​p​d​a​t​e​ ​D​e​a​l
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​d​e​a​l
+					 */
+					shortDesc: string
+				}
+				'get-crm-v3-objects-leads_getPage': {
+					/**
+					 * L​i​s​t​ ​L​e​a​d​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​l​e​a​d​s
+					 */
+					shortDesc: string
+				}
+				'post-crm-v3-objects-leads_create': {
+					/**
+					 * C​r​e​a​t​e​ ​L​e​a​d
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​l​e​a​d
+					 */
+					shortDesc: string
+				}
+				'post-crm-v3-objects-leads-batch-upsert_upsert': {
+					/**
+					 * C​r​e​a​t​e​ ​O​r​ ​U​p​d​a​t​e​ ​L​e​a​d​s
+					 */
+					displayName: string
+				}
+				'post-crm-v3-objects-leads-search_doSearch': {
+					/**
+					 * S​e​a​r​c​h​ ​L​e​a​d​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​l​e​a​d​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​l​e​a​d​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a
+					 */
+					longDesc: string
+				}
+				'delete-crm-v3-objects-leads-leadsId_archive': {
+					/**
+					 * D​e​l​e​t​e​ ​L​e​a​d
+					 */
+					displayName: string
+					/**
+					 * S​o​f​t​ ​d​e​l​e​t​e​ ​a​ ​s​e​l​e​c​t​e​d​ ​l​e​a​d
+					 */
+					shortDesc: string
+				}
+				'get-crm-v3-objects-leads-leadsId_getById': {
+					/**
+					 * R​e​t​r​i​e​v​e​ ​L​e​a​d
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​l​e​a​d
+					 */
+					shortDesc: string
+				}
+				'patch-crm-v3-objects-leads-leadsId_update': {
+					/**
+					 * U​p​d​a​t​e​ ​L​e​a​d
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​l​e​a​d
+					 */
+					shortDesc: string
+				}
+				'get-crm-v3-objects-products_getPage': {
+					/**
+					 * L​i​s​t​ ​P​r​o​d​u​c​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​p​r​o​d​u​c​t​s
+					 */
+					shortDesc: string
+				}
+				'post-crm-v3-objects-products_create': {
+					/**
+					 * C​r​e​a​t​e​ ​P​r​o​d​u​c​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​p​r​o​d​u​c​t
+					 */
+					shortDesc: string
+				}
+				'post-crm-v3-objects-products-batch-upsert_upsert': {
+					/**
+					 * C​r​e​a​t​e​ ​O​r​ ​U​p​d​a​t​e​ ​P​r​o​d​u​c​t​s
+					 */
+					displayName: string
+				}
+				'post-crm-v3-objects-products-search_doSearch': {
+					/**
+					 * S​e​a​r​c​h​ ​P​r​o​d​u​c​t​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​p​r​o​d​u​c​t​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​p​r​o​d​u​c​t​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a
+					 */
+					longDesc: string
+				}
+				'delete-crm-v3-objects-products-productId_archive': {
+					/**
+					 * D​e​l​e​t​e​ ​P​r​o​d​u​c​t
+					 */
+					displayName: string
+					/**
+					 * S​o​f​t​ ​d​e​l​e​t​e​ ​a​ ​s​e​l​e​c​t​e​d​ ​p​r​o​d​u​c​t
+					 */
+					shortDesc: string
+				}
+				'get-crm-v3-objects-products-productId_getById': {
+					/**
+					 * R​e​t​r​i​e​v​e​ ​P​r​o​d​u​c​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​r​o​d​u​c​t
+					 */
+					shortDesc: string
+				}
+				'patch-crm-v3-objects-products-productId_update': {
+					/**
+					 * U​p​d​a​t​e​ ​P​r​o​d​u​c​t
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​r​o​d​u​c​t
+					 */
+					shortDesc: string
+				}
+				'get-crm-v3-objects-tickets_getPage': {
+					/**
+					 * L​i​s​t​ ​T​i​c​k​e​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​t​i​c​k​e​t​s
+					 */
+					shortDesc: string
+				}
+				'post-crm-v3-objects-tickets_create': {
+					/**
+					 * C​r​e​a​t​e​ ​T​i​c​k​e​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​t​i​c​k​e​t
+					 */
+					shortDesc: string
+				}
+				'post-crm-v3-objects-tickets-batch-upsert_upsert': {
+					/**
+					 * C​r​e​a​t​e​ ​O​r​ ​U​p​d​a​t​e​ ​T​i​c​k​e​t​s
+					 */
+					displayName: string
+				}
+				'post-crm-v3-objects-tickets-search_doSearch': {
+					/**
+					 * S​e​a​r​c​h​ ​T​i​c​k​e​t​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​t​i​c​k​e​t​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​t​i​c​k​e​t​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a
+					 */
+					longDesc: string
+				}
+				'delete-crm-v3-objects-tickets-ticketId_archive': {
+					/**
+					 * D​e​l​e​t​e​ ​T​i​c​k​e​t
+					 */
+					displayName: string
+					/**
+					 * S​o​f​t​ ​d​e​l​e​t​e​ ​a​ ​s​e​l​e​c​t​e​d​ ​t​i​c​k​e​t
+					 */
+					shortDesc: string
+				}
+				'get-crm-v3-objects-tickets-ticketId_getById': {
+					/**
+					 * R​e​t​r​i​e​v​e​ ​T​i​c​k​e​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​i​c​k​e​t
+					 */
+					shortDesc: string
+				}
+				'patch-crm-v3-objects-tickets-ticketId_update': {
+					/**
+					 * U​p​d​a​t​e​ ​T​i​c​k​e​t
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​t​i​c​k​e​t
+					 */
+					shortDesc: string
+				}
+				'get-crm-v3-objects-users': {
+					/**
+					 * L​i​s​t​ ​U​s​e​r​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​u​s​e​r​s
+					 */
+					shortDesc: string
+				}
+				'post-crm-v3-objects-users-batch-upsert': {
+					/**
+					 * C​r​e​a​t​e​ ​O​r​ ​U​p​d​a​t​e​ ​U​s​e​r​s
+					 */
+					displayName: string
+				}
+				'post-crm-v3-objects-users-search': {
+					/**
+					 * S​e​a​r​c​h​ ​U​s​e​r​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​u​s​e​r​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​u​s​e​r​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a
+					 */
+					longDesc: string
+				}
+				'get-crm-v3-objects-users-userId': {
+					/**
+					 * R​e​t​r​i​e​v​e​ ​U​s​e​r
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​u​s​e​r
+					 */
+					shortDesc: string
+				}
+				'patch-crm-v3-objects-users-userId': {
+					/**
+					 * U​p​d​a​t​e​ ​U​s​e​r
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​u​s​e​r
+					 */
+					shortDesc: string
+				}
 			}
 			triggers: {
 				hubspot_company_created_or_updated_trigger: {
@@ -18489,6 +18959,476 @@ export type TranslationFunctions = {
 			 */
 			longDesc: () => LocalizedString
 			actions: {
+				'post-crm-v3-objects-companies-batch-upsert_upsert': {
+					/**
+					 * Create Or Update Companies
+					 */
+					displayName: () => LocalizedString
+				}
+				'get-crm-v3-objects-contacts': {
+					/**
+					 * List Contacts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of contacts
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'post-crm-v3-objects-contacts': {
+					/**
+					 * Create Contacts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new contact
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'post-crm-v3-objects-contacts-search': {
+					/**
+					 * Search Contacts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for contacts based on specific criteria
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search for contacts based on specific criteria
+					 */
+					longDesc: () => LocalizedString
+				}
+				'delete-crm-v3-objects-contacts-contactId': {
+					/**
+					 * Delete Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Soft delete a selected contact
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'get-crm-v3-objects-contacts-contactId': {
+					/**
+					 * Retrieve Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific contact
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'patch-crm-v3-objects-contacts-contactId': {
+					/**
+					 * Update Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing contact
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'get-crm-v3-objects-objectType_getPage': {
+					/**
+					 * List Custom Objects
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of selected custom objects
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'post-crm-v3-objects-objectType_create': {
+					/**
+					 * Create Custom Object
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new custom object of a selected type
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'post-crm-v3-objects-objectType-batch-upsert': {
+					/**
+					 * Create Or Update Custom Objects
+					 */
+					displayName: () => LocalizedString
+				}
+				'post-crm-v3-objects-objectType-search_doSearch': {
+					/**
+					 * Search Custom Objects
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for custom objects based on specific criteria
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search for custom objects based on specific criteria
+					 */
+					longDesc: () => LocalizedString
+				}
+				'delete-crm-v3-objects-objectType-objectId_archive': {
+					/**
+					 * Delete Custom Object
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Soft delete a selected custom object
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'get-crm-v3-objects-objectType-objectId_getById': {
+					/**
+					 * Retrieve Custom Object
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific custom object
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'patch-crm-v3-objects-objectType-objectId_update': {
+					/**
+					 * Update Custom Object
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing custom object
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'get-crm-v3-objects-deals_getPage': {
+					/**
+					 * List Deals
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of deals
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'post-crm-v3-objects-deals_create': {
+					/**
+					 * Create Deal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new deal
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'post-crm-v3-objects-deals-batch-upsert_upsert': {
+					/**
+					 * Create Or Update Deals
+					 */
+					displayName: () => LocalizedString
+				}
+				'post-crm-v3-objects-deals-search_doSearch': {
+					/**
+					 * Search Deals
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for deals based on specific criteria
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search for deals based on specific criteria
+					 */
+					longDesc: () => LocalizedString
+				}
+				'delete-crm-v3-objects-deals-dealId_archive': {
+					/**
+					 * Delete a Deal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Soft delete a selected deal
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'get-crm-v3-objects-deals-dealId_getById': {
+					/**
+					 * Retrieve Deal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific deal
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'patch-crm-v3-objects-deals-dealId_update': {
+					/**
+					 * Update Deal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing deal
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'get-crm-v3-objects-leads_getPage': {
+					/**
+					 * List Leads
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of leads
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'post-crm-v3-objects-leads_create': {
+					/**
+					 * Create Lead
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new lead
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'post-crm-v3-objects-leads-batch-upsert_upsert': {
+					/**
+					 * Create Or Update Leads
+					 */
+					displayName: () => LocalizedString
+				}
+				'post-crm-v3-objects-leads-search_doSearch': {
+					/**
+					 * Search Leads
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for leads based on specific criteria
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search for leads based on specific criteria
+					 */
+					longDesc: () => LocalizedString
+				}
+				'delete-crm-v3-objects-leads-leadsId_archive': {
+					/**
+					 * Delete Lead
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Soft delete a selected lead
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'get-crm-v3-objects-leads-leadsId_getById': {
+					/**
+					 * Retrieve Lead
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific lead
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'patch-crm-v3-objects-leads-leadsId_update': {
+					/**
+					 * Update Lead
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing lead
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'get-crm-v3-objects-products_getPage': {
+					/**
+					 * List Products
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of products
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'post-crm-v3-objects-products_create': {
+					/**
+					 * Create Product
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new product
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'post-crm-v3-objects-products-batch-upsert_upsert': {
+					/**
+					 * Create Or Update Products
+					 */
+					displayName: () => LocalizedString
+				}
+				'post-crm-v3-objects-products-search_doSearch': {
+					/**
+					 * Search Products
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for products based on specific criteria
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search for products based on specific criteria
+					 */
+					longDesc: () => LocalizedString
+				}
+				'delete-crm-v3-objects-products-productId_archive': {
+					/**
+					 * Delete Product
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Soft delete a selected product
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'get-crm-v3-objects-products-productId_getById': {
+					/**
+					 * Retrieve Product
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific product
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'patch-crm-v3-objects-products-productId_update': {
+					/**
+					 * Update Product
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing product
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'get-crm-v3-objects-tickets_getPage': {
+					/**
+					 * List Tickets
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of tickets
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'post-crm-v3-objects-tickets_create': {
+					/**
+					 * Create Ticket
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new ticket
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'post-crm-v3-objects-tickets-batch-upsert_upsert': {
+					/**
+					 * Create Or Update Tickets
+					 */
+					displayName: () => LocalizedString
+				}
+				'post-crm-v3-objects-tickets-search_doSearch': {
+					/**
+					 * Search Tickets
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for tickets based on specific criteria
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search for tickets based on specific criteria
+					 */
+					longDesc: () => LocalizedString
+				}
+				'delete-crm-v3-objects-tickets-ticketId_archive': {
+					/**
+					 * Delete Ticket
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Soft delete a selected ticket
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'get-crm-v3-objects-tickets-ticketId_getById': {
+					/**
+					 * Retrieve Ticket
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific ticket
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'patch-crm-v3-objects-tickets-ticketId_update': {
+					/**
+					 * Update Ticket
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing ticket
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'get-crm-v3-objects-users': {
+					/**
+					 * List Users
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of users
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'post-crm-v3-objects-users-batch-upsert': {
+					/**
+					 * Create Or Update Users
+					 */
+					displayName: () => LocalizedString
+				}
+				'post-crm-v3-objects-users-search': {
+					/**
+					 * Search Users
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for users based on specific criteria
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search for users based on specific criteria
+					 */
+					longDesc: () => LocalizedString
+				}
+				'get-crm-v3-objects-users-userId': {
+					/**
+					 * Retrieve User
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific user
+					 */
+					shortDesc: () => LocalizedString
+				}
+				'patch-crm-v3-objects-users-userId': {
+					/**
+					 * Update User
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing user
+					 */
+					shortDesc: () => LocalizedString
+				}
 			}
 			triggers: {
 				hubspot_company_created_or_updated_trigger: {

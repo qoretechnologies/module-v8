@@ -1744,7 +1744,196 @@ const en = {
         'Seamlessly connect to the HubSpot API to automate and streamline your CRM processes.',
       longDesc:
         'The HubSpot integration provides a comprehensive collection of actions and triggers to interact with the HubSpot API. Whether you need to manage companies, contacts, deals, or custom objects, this integration simplifies your workflow automation and CRM management.',
-      actions: {},
+      actions: {
+        'post-crm-v3-objects-companies-batch-upsert_upsert': {
+          displayName: 'Create Or Update Companies',
+        },
+        'get-crm-v3-objects-contacts': {
+          displayName: 'List Contacts',
+          shortDesc: 'Retrieve a list of contacts',
+        },
+        'post-crm-v3-objects-contacts': {
+          displayName: 'Create Contacts',
+          shortDesc: 'Create a new contact',
+        },
+        'post-crm-v3-objects-contacts-search': {
+          displayName: 'Search Contacts',
+          shortDesc: 'Search for contacts based on specific criteria',
+          longDesc: 'Search for contacts based on specific criteria',
+        },
+        'delete-crm-v3-objects-contacts-contactId': {
+          displayName: 'Delete Contact',
+          shortDesc: 'Soft delete a selected contact',
+        },
+        'get-crm-v3-objects-contacts-contactId': {
+          displayName: 'Retrieve Contact',
+          shortDesc: 'Retrieve a specific contact',
+        },
+        'patch-crm-v3-objects-contacts-contactId': {
+          displayName: 'Update Contact',
+          shortDesc: 'Update an existing contact',
+        },
+        'get-crm-v3-objects-objectType_getPage': {
+          displayName: 'List Custom Objects',
+          shortDesc: 'Retrieve a list of selected custom objects',
+        },
+        'post-crm-v3-objects-objectType_create': {
+          displayName: 'Create Custom Object',
+          shortDesc: 'Create a new custom object of a selected type',
+        },
+        'post-crm-v3-objects-objectType-batch-upsert': {
+          displayName: 'Create Or Update Custom Objects',
+        },
+        'post-crm-v3-objects-objectType-search_doSearch': {
+          displayName: 'Search Custom Objects',
+          shortDesc: 'Search for custom objects based on specific criteria',
+          longDesc: 'Search for custom objects based on specific criteria',
+        },
+        'delete-crm-v3-objects-objectType-objectId_archive': {
+          displayName: 'Delete Custom Object',
+          shortDesc: 'Soft delete a selected custom object',
+        },
+        'get-crm-v3-objects-objectType-objectId_getById': {
+          displayName: 'Retrieve Custom Object',
+          shortDesc: 'Retrieve a specific custom object',
+        },
+        'patch-crm-v3-objects-objectType-objectId_update': {
+          displayName: 'Update Custom Object',
+          shortDesc: 'Update an existing custom object',
+        },
+        'get-crm-v3-objects-deals_getPage': {
+          displayName: 'List Deals',
+          shortDesc: 'Retrieve a list of deals',
+        },
+        'post-crm-v3-objects-deals_create': {
+          displayName: 'Create Deal',
+          shortDesc: 'Create a new deal',
+        },
+        'post-crm-v3-objects-deals-batch-upsert_upsert': {
+          displayName: 'Create Or Update Deals',
+        },
+        'post-crm-v3-objects-deals-search_doSearch': {
+          displayName: 'Search Deals',
+          shortDesc: 'Search for deals based on specific criteria',
+          longDesc: 'Search for deals based on specific criteria',
+        },
+        'delete-crm-v3-objects-deals-dealId_archive': {
+          displayName: 'Delete a Deal',
+          shortDesc: 'Soft delete a selected deal',
+        },
+        'get-crm-v3-objects-deals-dealId_getById': {
+          displayName: 'Retrieve Deal',
+          shortDesc: 'Retrieve a specific deal',
+        },
+        'patch-crm-v3-objects-deals-dealId_update': {
+          displayName: 'Update Deal',
+          shortDesc: 'Update an existing deal',
+        },
+        'get-crm-v3-objects-leads_getPage': {
+          displayName: 'List Leads',
+          shortDesc: 'Retrieve a list of leads',
+        },
+        'post-crm-v3-objects-leads_create': {
+          displayName: 'Create Lead',
+          shortDesc: 'Create a new lead',
+        },
+        'post-crm-v3-objects-leads-batch-upsert_upsert': {
+          displayName: 'Create Or Update Leads',
+        },
+        'post-crm-v3-objects-leads-search_doSearch': {
+          displayName: 'Search Leads',
+          shortDesc: 'Search for leads based on specific criteria',
+          longDesc: 'Search for leads based on specific criteria',
+        },
+        'delete-crm-v3-objects-leads-leadsId_archive': {
+          displayName: 'Delete Lead',
+          shortDesc: 'Soft delete a selected lead',
+        },
+        'get-crm-v3-objects-leads-leadsId_getById': {
+          displayName: 'Retrieve Lead',
+          shortDesc: 'Retrieve a specific lead',
+        },
+        'patch-crm-v3-objects-leads-leadsId_update': {
+          displayName: 'Update Lead',
+          shortDesc: 'Update an existing lead',
+        },
+        'get-crm-v3-objects-products_getPage': {
+          displayName: 'List Products',
+          shortDesc: 'Retrieve a list of products',
+        },
+        'post-crm-v3-objects-products_create': {
+          displayName: 'Create Product',
+          shortDesc: 'Create a new product',
+        },
+        'post-crm-v3-objects-products-batch-upsert_upsert': {
+          displayName: 'Create Or Update Products',
+        },
+        'post-crm-v3-objects-products-search_doSearch': {
+          displayName: 'Search Products',
+          shortDesc: 'Search for products based on specific criteria',
+          longDesc: 'Search for products based on specific criteria',
+        },
+        'delete-crm-v3-objects-products-productId_archive': {
+          displayName: 'Delete Product',
+          shortDesc: 'Soft delete a selected product',
+        },
+        'get-crm-v3-objects-products-productId_getById': {
+          displayName: 'Retrieve Product',
+          shortDesc: 'Retrieve a specific product',
+        },
+        'patch-crm-v3-objects-products-productId_update': {
+          displayName: 'Update Product',
+          shortDesc: 'Update an existing product',
+        },
+        'get-crm-v3-objects-tickets_getPage': {
+          displayName: 'List Tickets',
+          shortDesc: 'Retrieve a list of tickets',
+        },
+        'post-crm-v3-objects-tickets_create': {
+          displayName: 'Create Ticket',
+          shortDesc: 'Create a new ticket',
+        },
+        'post-crm-v3-objects-tickets-batch-upsert_upsert': {
+          displayName: 'Create Or Update Tickets',
+        },
+        'post-crm-v3-objects-tickets-search_doSearch': {
+          displayName: 'Search Tickets',
+          shortDesc: 'Search for tickets based on specific criteria',
+          longDesc: 'Search for tickets based on specific criteria',
+        },
+        'delete-crm-v3-objects-tickets-ticketId_archive': {
+          displayName: 'Delete Ticket',
+          shortDesc: 'Soft delete a selected ticket',
+        },
+        'get-crm-v3-objects-tickets-ticketId_getById': {
+          displayName: 'Retrieve Ticket',
+          shortDesc: 'Retrieve a specific ticket',
+        },
+        'patch-crm-v3-objects-tickets-ticketId_update': {
+          displayName: 'Update Ticket',
+          shortDesc: 'Update an existing ticket',
+        },
+        'get-crm-v3-objects-users': {
+          displayName: 'List Users',
+          shortDesc: 'Retrieve a list of users',
+        },
+        'post-crm-v3-objects-users-batch-upsert': {
+          displayName: 'Create Or Update Users',
+        },
+        'post-crm-v3-objects-users-search': {
+          displayName: 'Search Users',
+          shortDesc: 'Search for users based on specific criteria',
+          longDesc: 'Search for users based on specific criteria',
+        },
+        'get-crm-v3-objects-users-userId': {
+          displayName: 'Retrieve User',
+          shortDesc: 'Retrieve a specific user',
+        },
+        'patch-crm-v3-objects-users-userId': {
+          displayName: 'Update User',
+          shortDesc: 'Update an existing user',
+        },
+      },
       triggers: {
         hubspot_company_created_or_updated_trigger: {
           event_info: {
