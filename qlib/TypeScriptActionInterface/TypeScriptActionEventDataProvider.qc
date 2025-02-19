@@ -71,7 +71,10 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
         if (TSAI::checkServer()) {
             info("Starting external process for data provider %y for connection %y options %y", name, conn.name,
                 options);
-            proxy = TSAI::server.setupEventSource(self, event.app, event.action, event.key, getCallContextInfo(options));
+            running = True;
+            on_error running = False;
+            proxy = TSAI::server.setupEventSource(self, event.app, event.action, event.key,
+                getCallContextInfo(options));
         } else {
             info("Starting event thread for data provider %y for connection %y options %y", name, conn.name, options);
             Counter c(1);
@@ -90,7 +93,7 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
 
     #! Is this object still generating events
     bool isActive() {
-        return running;
+        return running ?? False;
     }
 
     #! to notify observers
@@ -112,17 +115,18 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
         # signal calling thread that we are running
         c.dec();
         try {
-            # event function signature:
+            info("Running event function for @%s/%s: %s", event.app, event.action, event.key);
             getAsyncValue(event, getCallContextInfo(options), sub (JavaScriptObject o) {
                 auto event = o.toData();
                 if (event.typeCode() != NT_HASH) {
-                    throw "INVALID-EVENT-DATA", sprintf("Cannot raise event %y with type %y; must be a hash (JavaScript "
-                        "object)", event_id, event.fullType());
+                    throw "INVALID-EVENT-DATA", sprintf("Cannot raise event %y with type %y; must be a hash "
+                        "(JavaScript object)", event_id, event.fullType());
                 }
                 notifyObservers(event_id, event);
             }, bool sub () {
                 return stop_flag;
             });
+            info("Event function for @%s/%s: %s returned", event.app, event.action, event.key);
         } catch (hash<ExceptionInfo> ex) {
             error("EVENT-THREAD-ERROR", "Exception in event thread: %s", get_exception_string(ex));
         }
@@ -134,6 +138,7 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
 
         if (*JavaScriptProgramProxy proxy = remove self.proxy) {
             TSAI::server.releaseEventSource(proxy, self, event.key);
+            running = False;
             return;
         }
 

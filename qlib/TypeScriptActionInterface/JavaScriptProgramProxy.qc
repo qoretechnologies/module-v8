@@ -71,6 +71,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         #! Current command in progress
         hash<auto> command_in_progress;
 
+        #! Event count
+        Counter event_cnt();
+
         #! Master UNIX socket file path
         static string master_path;
 
@@ -78,6 +81,8 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         static Socket master();
 
         #! Global lock
+        /** This is the same as JavaScriptThreadProcessPool::m
+        */
         static Mutex global_lock;
 
         #! New socket map; PID -> queue
@@ -177,6 +182,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             },
         };
 
+        event_cnt.inc();
+        on_error event_cnt.dec();
+
         global_lock.unlock();
         on_exit global_lock.lock();
 
@@ -196,6 +204,8 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 stop = True;
             }
         }
+        #debug("JavaScriptProgramProxy::removeEventSource() ekey: %y remaining: %y stop: %y", ekey, keys event.omap,
+        #    stop);
         if (stop) {
             stopListener();
         }
@@ -218,7 +228,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     #! Called with the global lock held
-    releaseEventSourceLocked(Mutex m, TypeScriptActionEventDataProvider observable, string key) {
+    releaseEventSourceLocked(TypeScriptActionEventDataProvider observable, string key) {
         if (!event) {
             throw "EVENT-ERROR", sprintf("Event key %y is not registered", key);
         }
@@ -232,12 +242,14 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
         {
             on_success remove event.omap{ekey};
-            m.unlock();
-            on_exit m.lock();
+            global_lock.unlock();
+            on_exit global_lock.lock();
             if (event.omap.size() == 1) {
                 sendCommandArgs(NOTHING, PC_RELEASE_EVENT, key);
             }
         }
+        #debug("JavaScriptProgramProxy::releaseEventSourceLocked() key: %y remaining: %y stop: %y", key,
+        #    keys event.omap);
         if (!event.omap) {
             stopListener();
         }
