@@ -1672,6 +1672,12 @@ public class TypeScriptActionInterface {
         if (remove h.preselected) {
             tags.preselected = True;
         }
+        if (remove h.readonly) {
+            tags.readonly = True;
+        }
+        if (remove h.disabled) {
+            tags.disabled = True;
+        }
         AbstractDataProviderType rv;
         if (orig.type == "hash") {
             hash<auto> f = remove h.fields;
@@ -1776,6 +1782,12 @@ public class TypeScriptActionInterface {
         }
         if (remove type_hash.sensitive) {
             info.attr.sensitive = True;
+        }
+        if (remove type_hash.readonly) {
+            info.attr.readonly = True;
+        }
+        if (remove type_hash.disabled) {
+            info.attr.disabled = True;
         }
         if ((*string str = remove type_hash.ref_data).val()) {
             info.attr.ref_data = str;

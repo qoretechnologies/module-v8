@@ -209,6 +209,8 @@ exports.actionsCatalogue = {
                   - default_value?: any -> (values must be of the correct type) the default value if none is provided
                     by the user
                   - required?: bool -> if a value is required for this type; will set the corresponding UI flag
+                  - readonly?: bool -> is the type read-only?
+                  - disabled?: bool -> is the type disabled?
                   - preselected?: bool -> if fields of this type should be preselected; will set the corresponding UI
                     flag
                   - multiselect?: bool -> can be true if the field has a list type and allowed_values are the allowed
@@ -229,6 +231,8 @@ exports.actionsCatalogue = {
                       allowed values for the list
                     - allowed_values?: AllowedValues[] -> an array of objects providing the only values allowed for
                       the field - with the following properties
+                    - readonly?: bool -> is the field read-only?
+                    - disabled?: bool -> is the field disabled?
                     - attr?: Attributes -> an optional data object with any properties
                     - required?: bool -> if the field is required or optional
                     - preselected?: bool -> if this fields should be preselected; will set the corresponding UI flag
