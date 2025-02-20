@@ -45,6 +45,14 @@ describe('Tests Hubspot actions', () => {
       expect(allowedValues[0]?.value).not.toBeFalsy();
     });
 
+    it('Should get Hubspot user allowed values', async () => {
+      const allowedValues = await getHubspotUserAllowedValues(baseContext);
+
+      expect(allowedValues).toBeDefined();
+      expect(allowedValues.length).toBeGreaterThan(0);
+      expect(allowedValues[0]?.value).not.toBeFalsy();
+    });
+
     it('Should get Hubspot company allowed values', async () => {
       const allowedValues = await getHubspotCompanyAllowedValues(baseContext);
 
@@ -103,14 +111,6 @@ describe('Tests Hubspot actions', () => {
 
     it('Should get Hubspot product allowed values', async () => {
       const allowedValues = await getHubspotProductAllowedValues(baseContext);
-
-      expect(allowedValues).toBeDefined();
-      expect(allowedValues.length).toBeGreaterThan(0);
-      expect(allowedValues[0]?.value).not.toBeFalsy();
-    });
-
-    it('Should get Hubspot user allowed values', async () => {
-      const allowedValues = await getHubspotUserAllowedValues(baseContext);
 
       expect(allowedValues).toBeDefined();
       expect(allowedValues.length).toBeGreaterThan(0);
