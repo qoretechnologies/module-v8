@@ -34,13 +34,17 @@ const options = {
     allowed_values_creatable: true,
     get_allowed_values: getMondayRecordIdAllowedValues,
   },
+} satisfies TQoreOptions;
+
+const additionalOptions = {
   column_values: {
     display_name: 'Column Values',
     short_desc: 'The values to set for the record columns.',
-    desc: 'The values to set for the columns of the record you want to update.',
+    desc: 'The values to set for the columns of the record you want to create.',
 
+    depends_on: ['board_id'],
     type: 'hash',
-    required: true,
+    required: false,
   },
 } satisfies TQoreOptions;
 
@@ -67,7 +71,9 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const UpdateRecord = QoreAppCreator.createAction({
+export const UpdateRecord = QoreAppCreator.createAction<
+  Partial<typeof additionalOptions> & typeof options
+>({
   action: 'update-record',
   app: MONDAY_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,

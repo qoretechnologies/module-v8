@@ -1,7 +1,9 @@
 import { QoreAppCreator } from '@qoretechnologies/ts-toolkit';
 import { MONDAY_APP_NAME } from './constants';
 import * as MondayActions from './actions';
+import * as MondayTriggers from './triggers';
 const actions = Object.values(MondayActions);
+const triggers = Object.values(MondayTriggers);
 
 const MondayApp = QoreAppCreator.createApp({
   name: MONDAY_APP_NAME,
@@ -11,7 +13,7 @@ const MondayApp = QoreAppCreator.createApp({
     'Enables teams to build custom workflows and applications to manage' +
     'projects, processes, and everyday tasks efficiently.',
 
-  actions: [...actions],
+  actions: [...actions, ...triggers],
 
   logo:
     `PHN2ZyBoZWlnaHQ9IjE1NDkiIHZpZXdCb3g9Ii0xLjY2IC00LjEwMjA0OTMyID` +
@@ -31,7 +33,7 @@ const MondayApp = QoreAppCreator.createApp({
     `RoIGQ9Im0yMTIuMTMgODUuODJjMTYuMTcuMDggMjkuMjYgMTIuOTMgMjkuMjMg` +
     `MjguNjkgMCAxNi0xMy40NCAyOC45LTI5Ljc2IDI4LjdzLTI5LjE4LTEyLjkxLT` +
     `I5LjE2LTI4Ljc0Yy4wMi0xNi4wNiAxMy4xNi0yOC43NSAyOS42OS0yOC42NXoi` +
-    `IGZpbGw9IiMwMGQ2NDciLz48L3N2Zz4=`,
+    `IGZpbGw9IiMwMGQ2NDciLz48L3N2Zz4`,
   logo_file_name: 'monday.svg',
   logo_mime_type: 'image/svg+xml',
   rest: {

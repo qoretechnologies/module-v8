@@ -1,11 +1,11 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { MONDAY_APP_NAME } from '../constants';
 
-type DynamicOptions = { [key: string]: any };
+export type TMondayApiDynamicOptions = { [key: string]: any };
 
 type TCallMondayApiOptions = {
   query: string;
-  variables?: DynamicOptions;
+  variables?: TMondayApiDynamicOptions;
   token: string;
   url: string;
 };

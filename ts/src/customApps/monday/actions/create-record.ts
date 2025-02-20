@@ -17,7 +17,7 @@ const options = {
     desc: 'The unique identifier of the board where you want to create a new record.',
 
     type: 'string',
-    required: false,
+    required: true,
     preselected: true,
     on_change: ['refetch'],
     allowed_values_creatable: true,
@@ -44,12 +44,15 @@ const options = {
     type: 'string',
     required: true,
   },
+} satisfies TQoreOptions;
 
+const additionalOptions = {
   column_values: {
     display_name: 'Column Values',
     short_desc: 'The values to set for the record columns.',
     desc: 'The values to set for the columns of the record you want to create.',
 
+    depends_on: ['board_id'],
     type: 'hash',
     required: false,
   },
@@ -81,7 +84,9 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const CreateRecord = QoreAppCreator.createAction({
+export const CreateRecord = QoreAppCreator.createAction<
+  Partial<typeof additionalOptions> & typeof options
+>({
   action: 'create-record',
   app: MONDAY_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
