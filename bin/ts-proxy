@@ -197,7 +197,7 @@ class TsProxy inherits TypeScriptProxy {
         m.lock();
         on_exit m.unlock();
 
-        if (!emap{key}.running) {
+        if (!emap{key}) {
             string yaml = makeSend(CC_ERR, {
                 "ex": {
                     "err": "INVALID-EVENT-KEY",
