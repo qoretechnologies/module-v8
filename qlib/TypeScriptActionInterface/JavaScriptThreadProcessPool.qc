@@ -167,7 +167,7 @@ public class JavaScriptThreadProcessPool {
                 imap{pkey} = info;
             }
         }
-        proxy.releaseEventSourceLocked(m, observable, key);
+        proxy.releaseEventSourceLocked(observable, key);
     }
 
     private preallocate(Counter cnt) {

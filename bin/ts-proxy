@@ -43,6 +43,7 @@ class TsProxy inherits TypeScriptProxy {
     }
 
     constructor() : TypeScriptProxy(False) {
+        close_all_fd();
         opts = GetOpt::parseExit(Opts, \ARGV);
         if (opts.help || !opts.socket) {
             usage();
@@ -146,6 +147,9 @@ class TsProxy inherits TypeScriptProxy {
         Counter cnt(1);
         background eventThread(cnt, key, arg);
         cnt.waitForZero();
+        string yaml = makeSend(CC_OK);
+        sendString(yaml);
+        info("Started event thread");
     }
 
     private eventThread(Counter cnt, string key, *hash<DataContextInfo> arg) {
@@ -163,17 +167,19 @@ class TsProxy inherits TypeScriptProxy {
         # signal calling thread that we are running
         cnt.dec();
         try {
-            TypeScriptActionDataProviderBase::getAsyncValueArgs(logger, emap{key}.event, (arg,
+            hash<AsyncCallInfo> event = emap{key}.event;
+            info("Running event function for @%s/%s: %s", event.app, event.action, event.key);
+            TypeScriptActionDataProviderBase::getAsyncValueArgs(logger, event, (arg,
                 sub (JavaScriptObject o) {
-                    auto event = o.toData();
-                    if (event.typeCode() != NT_HASH) {
+                    auto event_data = o.toData();
+                    if (event_data.typeCode() != NT_HASH) {
                         throw "INVALID-EVENT-DATA", sprintf("Cannot raise event for key with type %y; must be a hash "
-                            "(JavaScript object)", key, event.fullType());
+                            "(JavaScript object)", key, event_data.fullType());
                     }
 
                     string yaml = makeSend(CC_EVENT, {
                         "key": key,
-                        "event": event,
+                        "event": event_data,
                     });
                     sendString(yaml);
                 },
@@ -181,6 +187,7 @@ class TsProxy inherits TypeScriptProxy {
                     return emap{key}.stop_flag;
                 })
             );
+            info("Event function for @%s/%s: %s returned", event.app, event.action, event.key);
         } catch (hash<ExceptionInfo> ex) {
             error("EVENT-THREAD-ERROR", "Exception in event thread: %s", get_exception_string(ex));
         }
@@ -190,16 +197,27 @@ class TsProxy inherits TypeScriptProxy {
         m.lock();
         on_exit m.unlock();
 
-        if (emap{key}.running) {
-            if (!emap{key}.stop_flag) {
-                emap{key}.stop_flag = True;
-            }
-            while (emap{key}.running) {
-                ++emap{key}.waiting;
-                emap{key}.cond.wait(m);
-                --emap{key}.waiting;
-            }
+        if (!emap{key}.running) {
+            string yaml = makeSend(CC_ERR, {
+                "ex": {
+                    "err": "INVALID-EVENT-KEY",
+                    "desc": sprintf("Event key %y is unknown; known event keys: %y", key, keys emap),
+                },
+            });
+            sendString(yaml);
         }
+
+        if (!emap{key}.stop_flag) {
+            emap{key}.stop_flag = True;
+        }
+        while (emap{key}.running) {
+            ++emap{key}.waiting;
+            emap{key}.cond.wait(m);
+            --emap{key}.waiting;
+        }
+        string yaml = makeSend(CC_OK);
+        sendString(yaml);
+        info("Released event %y", key);
     }
 
     private doAsyncCall(string app, *string action, string key, auto args) {
