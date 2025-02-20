@@ -133,7 +133,12 @@ describe('Helpers tests', () => {
     } satisfies TQoreOptions;
 
     const fixedOptions = fixOptions(
-      { options: incompleteOptions, action: 'test', action_code: EQoreAppActionCode.ACTION },
+      {
+        options: incompleteOptions,
+        action: 'test',
+        action_code: EQoreAppActionCode.ACTION,
+        api_function: () => {},
+      },
       incompleteOptions,
       '_testing',
       'en'
