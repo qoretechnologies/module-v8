@@ -5,6 +5,30 @@ import {
 } from '../constants';
 
 /**
+ * Waits for a specified amount of time or until a stopping condition is met, whichever comes first.
+ *
+ * @param ms - The number of milliseconds to wait before resolving the promise.
+ * @param shouldStop - A function that returns a boolean indicating whether the waiting should be stopped.
+ * @returns A promise that resolves when either the specified time has passed or the stopping condition is met.
+ */
+export const delayOrCancel = (ms: number, shouldStop: () => boolean): Promise<void> =>
+  Promise.race([
+    new Promise<void>((resolve) => {
+      const timeoutId = setTimeout(() => {
+        clearInterval(checkIntervalId);
+        resolve();
+      }, ms);
+      const checkIntervalId = setInterval(() => {
+        if (shouldStop()) {
+          clearTimeout(timeoutId);
+          clearInterval(checkIntervalId);
+          resolve();
+        }
+      }, 50);
+    }),
+  ]);
+
+/**
  * Polls for newly created items and triggers an update function for each new item.
  *
  * @template ItemType - The type of the items being polled.
@@ -49,7 +73,7 @@ export const pollCreatedItemsForTrigger = async <ItemType extends Record<string,
         );
       }
 
-      await new Promise((resolve) => setTimeout(resolve, DEFAULT_TRIGGER_POLLING_INTERVAL));
+      await delayOrCancel(DEFAULT_TRIGGER_POLLING_INTERVAL, should_stop);
     }
   } catch (error) {
     Debugger.log(`Error during polling data for trigger: ${trigger_name}`, error);
@@ -114,7 +138,7 @@ export const pollUpdatedItemsForTrigger = async <ItemType extends Record<string,
         }
       }
 
-      await new Promise((resolve) => setTimeout(resolve, DEFAULT_TRIGGER_POLLING_INTERVAL));
+      await delayOrCancel(DEFAULT_TRIGGER_POLLING_INTERVAL, should_stop);
     }
   } catch (error) {
     Debugger.log(`Error during polling data for trigger: ${trigger_name}`, error);
