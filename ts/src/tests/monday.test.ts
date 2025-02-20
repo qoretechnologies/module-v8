@@ -1,27 +1,16 @@
-import { TCustomConnOptions, TQoreAppActionFunctionContext } from '@qoretechnologies/ts-toolkit';
 import {
-  ArchiveRecord,
-  ClearColumnValue,
-  CreateRecord,
-  DeleteRecord,
-  GetRecord,
-  MoveRecord,
-  SearchRecords,
-  UpdateRecord,
-} from '../customApps/monday/actions';
-import { getMondayBoardDependentOptions } from '../customApps/monday/actions/helpers/get-board-dependent-options';
-import { getMondayBoardIdAllowedValues } from '../customApps/monday/actions/helpers/get-board-id-allowed-values';
-import { getMondaySingleColumnAllowedValues } from '../customApps/monday/actions/helpers/get-column-allowed-values';
-import { getMondayColumnIdAllowedValues } from '../customApps/monday/actions/helpers/get-column-id-allowed-values';
-import { getMondayGroupIdAllowedValues } from '../customApps/monday/actions/helpers/get-group-id-allowed-values';
-import { getMondayRecordIdAllowedValues } from '../customApps/monday/actions/helpers/get-record-id-allowed-values';
+  TCustomConnOptions,
+  TQoreAppActionFunctionContext,
+  TQoreAppActionOption,
+} from '@qoretechnologies/ts-toolkit';
+import monday from '../customApps/monday/index';
 
 describe('Should test Monday app', () => {
   let token: string;
   let boardId: string;
   let groupId: string;
   let destinationGroupId: string;
-  let baseContext: TQoreAppActionFunctionContext<any, any>;
+  let baseContext: TQoreAppActionFunctionContext<TCustomConnOptions>;
   beforeAll(() => {
     token = process.env.MONDAY_TOKEN!;
     expect(token).toBeDefined();
@@ -35,6 +24,18 @@ describe('Should test Monday app', () => {
 
   describe('Should test Monday app allowed values', () => {
     it('Should get board id allowed values', async () => {
+      const createRecord = monday.actions.find((action) => action.action === 'create-record');
+      if (
+        !createRecord ||
+        !('options' in createRecord) ||
+        !createRecord.options ||
+        !('board_id' in createRecord?.options)
+      ) {
+        throw new Error('CreateRecord action not found or does not have options');
+      }
+
+      const getMondayBoardIdAllowedValues = createRecord.options?.board_id.get_allowed_values;
+
       const allowedValues = await getMondayBoardIdAllowedValues(baseContext);
 
       expect(allowedValues).toBeDefined();
@@ -44,25 +45,27 @@ describe('Should test Monday app', () => {
       boardId = allowedValues[0].value;
       baseContext.opts = { board_id: boardId };
     });
-    it('Should get column id allowed values', async () => {
-      const allowedValues = await getMondayColumnIdAllowedValues(baseContext);
-
-      expect(allowedValues).toBeDefined();
-      expect(allowedValues.length).toBeGreaterThan(0);
-      expect(allowedValues[0].value).not.toBeFalsy();
-    });
-
-    it('Should get column allowed values', async () => {
-      const allowedValues = await getMondaySingleColumnAllowedValues({
-        ...baseContext,
-        opts: { ...baseContext.opts, column_id: 'project_status' },
-      });
-
-      expect(allowedValues).toBeDefined();
-      expect(allowedValues.length).toBeGreaterThan(0);
-      expect(allowedValues[0].value).not.toBeFalsy();
-    });
     it('Should get group id allowed values', async () => {
+      const moveRecord = monday.actions.find((action) => action.action === 'move-record');
+
+      if (
+        !moveRecord ||
+        !('options' in moveRecord) ||
+        !moveRecord.options ||
+        !('destination_group_id' in moveRecord?.options)
+      ) {
+        throw new Error('MoveRecord action not found or does not have options');
+      }
+
+      const destinationGroupIdOption = moveRecord.options
+        ?.destination_group_id as TQoreAppActionOption;
+
+      const getMondayGroupIdAllowedValues = destinationGroupIdOption.get_allowed_values;
+
+      if (!getMondayGroupIdAllowedValues) {
+        throw new Error('getMondayGroupIdAllowedValues is not defined');
+      }
+
       const allowedValues = await getMondayGroupIdAllowedValues(baseContext);
 
       expect(allowedValues).toBeDefined();
@@ -72,7 +75,65 @@ describe('Should test Monday app', () => {
       groupId = allowedValues[0].value;
       destinationGroupId = allowedValues[1].value;
     });
+
+    it('Should get column id allowed values', async () => {
+      const clearColumnValue = monday.actions.find(
+        (action) => action.action === 'clear-column-value'
+      );
+
+      if (
+        !clearColumnValue ||
+        !('options' in clearColumnValue) ||
+        !clearColumnValue.options ||
+        !('column_id' in clearColumnValue?.options)
+      ) {
+        throw new Error('ClearColumnValue action not found or does not have options');
+      }
+      const getMondayColumnIdAllowedValues = clearColumnValue.options?.column_id.get_allowed_values;
+      const allowedValues = await getMondayColumnIdAllowedValues(baseContext);
+
+      expect(allowedValues).toBeDefined();
+      expect(allowedValues.length).toBeGreaterThan(0);
+      expect(allowedValues[0].value).not.toBeFalsy();
+    });
+
+    it('Should get column allowed values', async () => {
+      const searchRecords = monday.actions.find((action) => action.action === 'search-records');
+
+      if (
+        !searchRecords ||
+        !('options' in searchRecords) ||
+        !searchRecords.options ||
+        !('query_text' in searchRecords?.options)
+      ) {
+        throw new Error('SearchRecords action not found or does not have options');
+      }
+
+      const getMondaySingleColumnAllowedValues =
+        searchRecords.options?.query_text.get_allowed_values;
+
+      const allowedValues = await getMondaySingleColumnAllowedValues({
+        ...baseContext,
+        opts: { ...baseContext.opts, column_id: 'project_status' },
+      });
+
+      expect(allowedValues).toBeDefined();
+      expect(allowedValues.length).toBeGreaterThan(0);
+      expect(allowedValues[0].value).not.toBeFalsy();
+    });
     it('Should get record id allowed values', async () => {
+      const getRecord = monday.actions.find((action) => action.action === 'get-record');
+
+      if (
+        !getRecord ||
+        !('options' in getRecord) ||
+        !getRecord.options ||
+        !('record_id' in getRecord?.options)
+      ) {
+        throw new Error('GetRecord action not found or does not have options');
+      }
+
+      const getMondayRecordIdAllowedValues = getRecord.options?.record_id.get_allowed_values;
       const allowedValues = await getMondayRecordIdAllowedValues(baseContext);
 
       expect(allowedValues).toBeDefined();
@@ -81,6 +142,19 @@ describe('Should test Monday app', () => {
     });
 
     it('Should get record fields', async () => {
+      const createRecord = monday.actions.find((action) => action.action === 'create-record');
+
+      if (
+        !createRecord ||
+        !('options' in createRecord) ||
+        !createRecord.options ||
+        !('board_id' in createRecord?.options) ||
+        !('get_dependent_options' in createRecord?.options?.board_id)
+      ) {
+        throw new Error('CreateRecord action not found or does not have options');
+      }
+
+      const getMondayBoardDependentOptions = createRecord.options?.board_id.get_dependent_options;
       const options = await getMondayBoardDependentOptions(baseContext);
 
       expect(options).toBeDefined();
@@ -91,6 +165,12 @@ describe('Should test Monday app', () => {
   describe('Should test Monday app actions', () => {
     let itemId: string;
     it('Should create a new record', async () => {
+      const CreateRecord = monday.actions.find((action) => action.action === 'create-record');
+
+      if (!CreateRecord) {
+        throw new Error('CreateRecord action not found');
+      }
+
       if (!('api_function' in CreateRecord)) {
         throw new Error('CreateRecord action does not have an api_function');
       }
@@ -106,7 +186,7 @@ describe('Should test Monday app', () => {
           column_values: { priority_1: '10' },
         },
         undefined,
-        baseContext
+        baseContext as any
       );
 
       expect(result).toBeDefined();
@@ -117,6 +197,11 @@ describe('Should test Monday app', () => {
     });
 
     it('Should get the created record', async () => {
+      const GetRecord = monday.actions.find((action) => action.action === 'get-record');
+      if (!GetRecord) {
+        throw new Error('GetRecord action not found');
+      }
+
       if (!('api_function' in GetRecord)) {
         throw new Error('CreateRecord action does not have an api_function');
       }
@@ -130,7 +215,7 @@ describe('Should test Monday app', () => {
           record_id: itemId,
         },
         undefined,
-        baseContext
+        baseContext as any
       );
 
       expect(result).toBeDefined();
@@ -138,6 +223,14 @@ describe('Should test Monday app', () => {
     });
 
     it('Should clear the column values of the created record', async () => {
+      const ClearColumnValue = monday.actions.find(
+        (action) => action.action === 'clear-column-value'
+      );
+
+      if (!ClearColumnValue) {
+        throw new Error('ClearColumnValue action not found');
+      }
+
       if (!('api_function' in ClearColumnValue)) {
         throw new Error('CreateRecord action does not have an api_function');
       }
@@ -152,13 +245,19 @@ describe('Should test Monday app', () => {
           column_id: 'priority_1',
         },
         undefined,
-        baseContext
+        baseContext as any
       );
 
       expect(result).toBeDefined();
     });
 
     it('Should move the created record', async () => {
+      const MoveRecord = monday.actions.find((action) => action.action === 'move-record');
+
+      if (!MoveRecord) {
+        throw new Error('MoveRecord action not found');
+      }
+
       if (!('api_function' in MoveRecord)) {
         throw new Error('MoveRecord action does not have an api_function');
       }
@@ -171,15 +270,21 @@ describe('Should test Monday app', () => {
           board_id: boardId,
           record_id: itemId,
           destination_group_id: destinationGroupId,
-        },
+        } as any,
         undefined,
-        baseContext
+        baseContext as any
       );
 
       expect(result).toBeDefined();
     });
 
     it('Should search for the created record', async () => {
+      const SearchRecords = monday.actions.find((action) => action.action === 'search-records');
+
+      if (!SearchRecords) {
+        throw new Error('SearchRecords action not found');
+      }
+
       if (!('api_function' in SearchRecords)) {
         throw new Error('SearchRecords action does not have an api_function');
       }
@@ -193,11 +298,9 @@ describe('Should test Monday app', () => {
           columnId: 'name',
           limit: 10,
           query_text: 'Test Item',
-          // TODO: remove after the required types are fixed
-          cursor: undefined as unknown as string,
         },
         undefined,
-        baseContext
+        baseContext as any
       );
 
       expect(result).toBeDefined();
@@ -206,6 +309,12 @@ describe('Should test Monday app', () => {
     });
 
     it('Should update the created record', async () => {
+      const UpdateRecord = monday.actions.find((action) => action.action === 'update-record');
+
+      if (!UpdateRecord) {
+        throw new Error('UpdateRecord action not found');
+      }
+
       if (!('api_function' in UpdateRecord)) {
         throw new Error('UpdateRecord action does not have an api_function');
       }
@@ -220,7 +329,7 @@ describe('Should test Monday app', () => {
           column_values: { priority_1: '10', name: 'Test Item Updated' },
         },
         undefined,
-        baseContext
+        baseContext as any
       );
 
       expect(result).toBeDefined();
@@ -228,6 +337,12 @@ describe('Should test Monday app', () => {
     });
 
     it('Should archive the created record', async () => {
+      const ArchiveRecord = monday.actions.find((action) => action.action === 'archive-record');
+
+      if (!ArchiveRecord) {
+        throw new Error('ArchiveRecord action not found');
+      }
+
       if (!('api_function' in ArchiveRecord)) {
         throw new Error('ArchiveRecord action does not have an api_function');
       }
@@ -241,13 +356,19 @@ describe('Should test Monday app', () => {
           record_id: itemId,
         },
         undefined,
-        baseContext
+        baseContext as any
       );
 
       expect(result).toBeDefined();
     });
 
     it('Should delete the created record', async () => {
+      const DeleteRecord = monday.actions.find((action) => action.action === 'delete-record');
+
+      if (!DeleteRecord) {
+        throw new Error('DeleteRecord action not found');
+      }
+
       if (!('api_function' in DeleteRecord)) {
         throw new Error('DeleteRecord action does not have an api_function');
       }
@@ -261,7 +382,7 @@ describe('Should test Monday app', () => {
           record_id: itemId,
         },
         undefined,
-        baseContext
+        baseContext as any
       );
 
       expect(result).toBeDefined();
