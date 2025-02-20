@@ -29,6 +29,10 @@ describe('Tests Hubspot actions', () => {
 
   // Allowed values
   describe('Tests Hubspot options allowed values', () => {
+    afterEach(async () => {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+    });
+
     const baseContext = {
       conn_opts: {
         token: token!,
