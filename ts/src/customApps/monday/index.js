@@ -28746,7 +28746,7 @@ const mapMondayColumnToQoreOption = (column) => {
         }))
         : null;
     return {
-        type: 'auto',
+        type: 'any',
         display_name: column.title,
         desc: column.title,
         short_desc: column.title,

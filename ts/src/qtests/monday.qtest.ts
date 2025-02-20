@@ -6,6 +6,7 @@ import {
 import monday from '../customApps/monday/index';
 
 describe('Should test Monday app', () => {
+  let connection: string;
   let token: string;
   let boardId: string;
   let groupId: string;
@@ -20,6 +21,12 @@ describe('Should test Monday app', () => {
         token,
       },
     } as TQoreAppActionFunctionContext<TCustomConnOptions>;
+
+    connection = testApi.createConnection('monday', {
+      opts: {
+        token,
+      },
+    });
   });
 
   describe('Should test Monday app allowed values', () => {
@@ -165,29 +172,12 @@ describe('Should test Monday app', () => {
   describe('Should test Monday app actions', () => {
     let itemId: string;
     it('Should create a new record', async () => {
-      const CreateRecord = monday.actions.find((action) => action.action === 'create-record');
-
-      if (!CreateRecord) {
-        throw new Error('CreateRecord action not found');
-      }
-
-      if (!('api_function' in CreateRecord)) {
-        throw new Error('CreateRecord action does not have an api_function');
-      }
-
-      const actionFunction = CreateRecord.api_function!;
-      expect(actionFunction).toBeDefined();
-
-      const result = await actionFunction(
-        {
-          board_id: boardId,
-          item_name: 'Test Item',
-          group_id: groupId,
-          column_values: { priority_1: '10' },
-        },
-        undefined,
-        baseContext as any
-      );
+      const result = await testApi.execAppAction('monday', 'create-record', connection, {
+        board_id: boardId,
+        item_name: 'Test Item',
+        group_id: groupId,
+        column_values: { priority_1: '10' },
+      });
 
       expect(result).toBeDefined();
       expect(result.data).toBeDefined();
@@ -197,111 +187,42 @@ describe('Should test Monday app', () => {
     });
 
     it('Should get the created record', async () => {
-      const GetRecord = monday.actions.find((action) => action.action === 'get-record');
-      if (!GetRecord) {
-        throw new Error('GetRecord action not found');
-      }
-
-      if (!('api_function' in GetRecord)) {
-        throw new Error('CreateRecord action does not have an api_function');
-      }
-
-      const actionFunction = GetRecord.api_function!;
-      expect(actionFunction).toBeDefined();
-
-      const result = await actionFunction(
-        {
-          board_id: boardId,
-          record_id: itemId,
-        },
-        undefined,
-        baseContext as any
-      );
+      const result = await testApi.execAppAction('monday', 'get-record', connection, {
+        board_id: boardId,
+        record_id: itemId,
+      });
 
       expect(result).toBeDefined();
       expect(result.id).toBe(itemId);
     });
 
     it('Should clear the column values of the created record', async () => {
-      const ClearColumnValue = monday.actions.find(
-        (action) => action.action === 'clear-column-value'
-      );
-
-      if (!ClearColumnValue) {
-        throw new Error('ClearColumnValue action not found');
-      }
-
-      if (!('api_function' in ClearColumnValue)) {
-        throw new Error('CreateRecord action does not have an api_function');
-      }
-
-      const actionFunction = ClearColumnValue.api_function!;
-      expect(actionFunction).toBeDefined();
-
-      const result = await actionFunction(
-        {
-          board_id: boardId,
-          record_id: itemId,
-          column_id: 'priority_1',
-        },
-        undefined,
-        baseContext as any
-      );
+      const result = await testApi.execAppAction('monday', 'clear-column-value', connection, {
+        board_id: boardId,
+        record_id: itemId,
+        column_id: 'priority_1',
+      });
 
       expect(result).toBeDefined();
     });
 
     it('Should move the created record', async () => {
-      const MoveRecord = monday.actions.find((action) => action.action === 'move-record');
-
-      if (!MoveRecord) {
-        throw new Error('MoveRecord action not found');
-      }
-
-      if (!('api_function' in MoveRecord)) {
-        throw new Error('MoveRecord action does not have an api_function');
-      }
-
-      const actionFunction = MoveRecord.api_function!;
-      expect(actionFunction).toBeDefined();
-
-      const result = await actionFunction(
-        {
-          board_id: boardId,
-          record_id: itemId,
-          destination_group_id: destinationGroupId,
-        } as any,
-        undefined,
-        baseContext as any
-      );
+      const result = await testApi.execAppAction('monday', 'move-record', connection, {
+        board_id: boardId,
+        record_id: itemId,
+        destination_group_id: destinationGroupId,
+      });
 
       expect(result).toBeDefined();
     });
 
     it('Should search for the created record', async () => {
-      const SearchRecords = monday.actions.find((action) => action.action === 'search-records');
-
-      if (!SearchRecords) {
-        throw new Error('SearchRecords action not found');
-      }
-
-      if (!('api_function' in SearchRecords)) {
-        throw new Error('SearchRecords action does not have an api_function');
-      }
-
-      const actionFunction = SearchRecords.api_function!;
-      expect(actionFunction).toBeDefined();
-
-      const result = await actionFunction(
-        {
-          board_id: boardId,
-          columnId: 'name',
-          limit: 10,
-          query_text: 'Test Item',
-        },
-        undefined,
-        baseContext as any
-      );
+      const result = await testApi.execAppAction('monday', 'search-records', connection, {
+        board_id: boardId,
+        columnId: 'name',
+        limit: 10,
+        query_text: 'Test Item',
+      });
 
       expect(result).toBeDefined();
       expect(result.items).toBeDefined();
@@ -309,81 +230,30 @@ describe('Should test Monday app', () => {
     });
 
     it('Should update the created record', async () => {
-      const UpdateRecord = monday.actions.find((action) => action.action === 'update-record');
-
-      if (!UpdateRecord) {
-        throw new Error('UpdateRecord action not found');
-      }
-
-      if (!('api_function' in UpdateRecord)) {
-        throw new Error('UpdateRecord action does not have an api_function');
-      }
-
-      const actionFunction = UpdateRecord.api_function!;
-      expect(actionFunction).toBeDefined();
-
-      const result = await actionFunction(
-        {
-          board_id: boardId,
-          record_id: itemId,
-          column_values: { priority_1: '10', name: 'Test Item Updated' },
-        },
-        undefined,
-        baseContext as any
-      );
+      const result = await testApi.execAppAction('monday', 'update-record', connection, {
+        board_id: boardId,
+        record_id: itemId,
+        column_values: { priority_1: '10', name: 'Test Item Updated' },
+      });
 
       expect(result).toBeDefined();
       expect(result.data).toBeDefined();
     });
 
     it('Should archive the created record', async () => {
-      const ArchiveRecord = monday.actions.find((action) => action.action === 'archive-record');
-
-      if (!ArchiveRecord) {
-        throw new Error('ArchiveRecord action not found');
-      }
-
-      if (!('api_function' in ArchiveRecord)) {
-        throw new Error('ArchiveRecord action does not have an api_function');
-      }
-
-      const actionFunction = ArchiveRecord.api_function!;
-      expect(actionFunction).toBeDefined();
-
-      const result = await actionFunction(
-        {
-          board_id: boardId,
-          record_id: itemId,
-        },
-        undefined,
-        baseContext as any
-      );
+      const result = await testApi.execAppAction('monday', 'archive-record', connection, {
+        board_id: boardId,
+        record_id: itemId,
+      });
 
       expect(result).toBeDefined();
     });
 
     it('Should delete the created record', async () => {
-      const DeleteRecord = monday.actions.find((action) => action.action === 'delete-record');
-
-      if (!DeleteRecord) {
-        throw new Error('DeleteRecord action not found');
-      }
-
-      if (!('api_function' in DeleteRecord)) {
-        throw new Error('DeleteRecord action does not have an api_function');
-      }
-
-      const actionFunction = DeleteRecord.api_function!;
-      expect(actionFunction).toBeDefined();
-
-      const result = await actionFunction(
-        {
-          board_id: boardId,
-          record_id: itemId,
-        },
-        undefined,
-        baseContext as any
-      );
+      const result = await testApi.execAppAction('monday', 'delete-record', connection, {
+        board_id: boardId,
+        record_id: itemId,
+      });
 
       expect(result).toBeDefined();
       expect(result.data?.delete_item).toBeDefined();
