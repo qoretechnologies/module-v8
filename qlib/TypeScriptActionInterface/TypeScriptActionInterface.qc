@@ -1619,7 +1619,7 @@ public class TypeScriptActionInterface {
     static AbstractDataProviderType getType(string path, string name, *bool required, auto element_type,
             *ActionFunctionContext fctx, *bool ignore_dup) {
         if (!required) {
-            if (name !~ /^\*/) {
+            if (name !~ /^\*/ && name != "auto" && name != "any") {
                 name = "*" + name;
             }
         } else if (name =~ /^\*/) {

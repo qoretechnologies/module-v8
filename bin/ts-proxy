@@ -43,6 +43,7 @@ class TsProxy inherits TypeScriptProxy {
     }
 
     constructor() : TypeScriptProxy(False) {
+        close_all_fd();
         opts = GetOpt::parseExit(Opts, \ARGV);
         if (opts.help || !opts.socket) {
             usage();
