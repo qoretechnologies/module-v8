@@ -125,7 +125,6 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
 
         startChildProcess();
-        startListener();
     }
 
     destructor() {
@@ -552,6 +551,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         s = h.socket;
         logChildOutput();
         info("Child process with PID %d ready", proc.id());
+        startListener();
     }
 
     static private checkStartMasterListener() {
@@ -762,6 +762,8 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         if (proc.running()) {
             proc.terminate();
         }
+        stopListener();
+        delete s;
 
         error("Restarting child process %d after an error", pid);
         logChildOutput();
@@ -793,7 +795,6 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             sendCommandArgs(NOTHING, PC_SETUP_EVENT, (event.app, event.action, event.key, event.options));
         }
 
-        AutoLock al(m);
         remove restarting;
         if (wait_restart) {
             cond_restart.broadcast();
