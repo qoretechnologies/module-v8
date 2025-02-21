@@ -34,6 +34,8 @@ class TsProxy inherits TypeScriptProxy {
     }
 
     private {
+        string pkey;
+
         Mutex m();
 
         Logger logger;
@@ -47,20 +49,41 @@ class TsProxy inherits TypeScriptProxy {
         if (opts.help || !opts.socket) {
             usage();
         }
+        pkey = ENV.TS_PROXY_PROCESS_KEY;
         setupLogger();
         DataProvider::setGlobalLogger(logger);
 
         # we have to make sure that no further servers are started by the TypeScriptActionInterface module
         TypeScriptActionInterface::disableServerOnDemand();
 
-        info("Connecting to server at %y", opts.socket);
+        info("Connecting to server at %y with key %y", opts.socket, pkey);
         s.connectUNIX(opts.socket);
-        s.sendi8(getpid(), 5s);
+        string yaml = makeSend(CC_STARTED, {
+            "pkey": pkey,
+            "pid": getpid(),
+        });
+        sendString(yaml);
         info("Connected to server: %y", s.getPeerInfo());
+        set_signal_handler(SIGUSR2, \signalHandler());
         commandLoop();
     }
 
-   private setupLogger(string name = "console") {
+    private signalHandler(int signal) {
+        hash<auto> info;
+        foreach hash<auto> i in (get_all_thread_call_stacks().pairIterator()) {
+            splice i.value, 0, 2;
+            info{i.key} = map $1.type != "new-thread"
+                ? sprintf("%s %s()", get_ex_pos($1), $1.function)
+                : "new-thread",
+                i.value;
+        }
+        string yaml = makeSend(CC_STATUS, {
+            "info": sprintf("%N", info),
+        });
+        sendString(yaml);
+    }
+
+    private setupLogger(string name = "console") {
         LoggerLevel level;
         if (opts.verbose > 1) {
             level = LoggerLevel::getLevelDebug();
@@ -78,12 +101,15 @@ class TsProxy inherits TypeScriptProxy {
         while (True) {
             hash<auto> h;
             try {
-                h = getCommand();
+                h = getCommand(250ms);
                 if (!ValidCommands{h.cmd}) {
                     throw "CMD-ERROR", sprintf("Unknown parent command %y; valid send commands: %y", h.cmd,
                         keys ValidCommands);
                 }
             } catch (hash<ExceptionInfo> ex) {
+                if (ex.err == "SOCKET-TIMEOUT") {
+                    continue;
+                }
                 error("Error processing command from parent: %s", get_exception_string(ex));
                 break;
             }

@@ -48,6 +48,13 @@ public const ValidCommands = {
     PC_EXIT: True,
 };
 
+#! Child response "STARTED"
+/** body:
+    - string pkey: the process unique hash key
+    - int pid: the PID of the child process
+*/
+public const CC_STARTED = "STARTED";
+
 #! Child response "OK"
 public const CC_OK = "OK";
 
@@ -56,6 +63,9 @@ public const CC_ERR = "ERR";
 
 #! Child command: "EVENT"
 public const CC_EVENT = "EVENT";
+
+#! Child command: "STATUS"
+public const CC_STATUS = "STATUS";
 
 #! Valid responses
 public const ValidResponses = {
