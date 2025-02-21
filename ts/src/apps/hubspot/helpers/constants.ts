@@ -100,6 +100,7 @@ export const fetchHubspotRecords = async <ItemType = unknown>(
       }
     } while (after);
   } catch (error) {
+    console.error(error);
     Debugger.log(`Error fetching hubspot records for ${object}`, error);
 
     return items;

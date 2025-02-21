@@ -11,7 +11,7 @@
   "scripts": {
     "build": "rm -rf dist/ && npx tsc --p tsconfig.build.json && tsc-alias && yarn copy-schemas && yarn copy-custom-apps",
     "build:debug": "TS_DEBUG=true rm -rf dist/ && npx tsc --p tsconfig.build.json && tsc-alias && yarn copy-schemas && yarn copy-custom-apps",
-    "test-build": "rm -rf dist/ && npx tsc --p tsconfig.tests.json && tsc-alias && yarn copy-schemas && yarn copy-custom-apps",
+    "test-build": "TS_DEBUG=true rm -rf dist/ && npx tsc --p tsconfig.tests.json && tsc-alias && yarn copy-schemas && yarn copy-custom-apps",
     "copy-schemas": "copyfiles -u 2 src/schemas/* dist/schemas",
     "copy-custom-apps": "copyfiles -u 2 src/customApps/**/* dist/customApps",
     "build:test": "npx tsc --noEmit --p tsconfig.build.json && tsc-alias",
@@ -29,7 +29,7 @@
   "dependencies": {
     "@notionhq/client": "^2.2.15",
     "@octokit/rest": "18.12.0",
-    "@qoretechnologies/ts-toolkit": "^0.5.9",
+    "@qoretechnologies/ts-toolkit": "^0.5.10",
     "@sinclair/typebox": "^0.33.0",
     "@slack/web-api": "^7.3.2",
     "@tryfabric/martian": "^1.2.4",
