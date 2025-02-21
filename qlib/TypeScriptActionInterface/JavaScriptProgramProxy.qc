@@ -241,10 +241,12 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             throw "EVENT-ERROR", sprintf("Observable %y is not registered under event key %y", ekey, key);
         }
         {
-            on_success remove event.omap{ekey};
             global_lock.unlock();
             on_exit global_lock.lock();
-            if (event.omap.size() == 1) {
+
+            remove event.omap{ekey};
+            if (!event.omap) {
+                remove event;
                 sendCommandArgs(NOTHING, PC_RELEASE_EVENT, key);
             }
         }
@@ -410,7 +412,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             if (*string stderr = proc.readStderr(64 * 1024)) {
                 desc += sprintf(" stderr: %y", stderr);
             }
-            throw "CHILD-PROCESS-ERRPR", desc;
+            throw "CHILD-PROCESS-ERROR", desc;
         }
         int pid = s0.recvi8(10s);
         TSAI::info("Connected to child with PID: %y", pid, s0.getPeerInfo());
@@ -460,6 +462,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         );
         proc = new Process("ts-proxy", args, {
             "env": ENV,
+            "close_fds": True,
         });
         if (!proc.running()) {
             throw "CHILD-ERROR", sprintf("Failed to start child process");

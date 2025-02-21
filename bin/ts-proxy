@@ -43,7 +43,6 @@ class TsProxy inherits TypeScriptProxy {
     }
 
     constructor() : TypeScriptProxy(False) {
-        close_all_fd();
         opts = GetOpt::parseExit(Opts, \ARGV);
         if (opts.help || !opts.socket) {
             usage();
@@ -205,6 +204,8 @@ class TsProxy inherits TypeScriptProxy {
                 },
             });
             sendString(yaml);
+            info("Cannot release unknown event key %y; known event keys: %y", key, keys emap);
+            return;
         }
 
         if (!emap{key}.stop_flag) {
