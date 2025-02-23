@@ -14,11 +14,12 @@ import asana from '../apps/asana';
 import esignature from '../apps/esignature';
 import freshdesk from '../apps/freshdesk';
 import github from '../apps/github';
+import hubspot from '../apps/hubspot';
 import jira from '../apps/jira';
 import netsuite from '../apps/netsuite';
 import salesforce from '../apps/salesforce';
+import sharepoint from '../apps/sharepoint';
 import stripe from '../apps/stripe';
-import hubspot from '../apps/hubspot';
 import zendesk from '../apps/zendesk';
 import { Log } from '../decorators/Logger';
 import { Locales } from '../i18n/i18n-types';
@@ -47,6 +48,7 @@ const NEW_APPS = {
   stripe,
   freshdesk,
   hubspot,
+  sharepoint,
 } as const;
 
 const EXISTING_APPS = {

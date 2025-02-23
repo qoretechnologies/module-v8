@@ -10412,6 +10412,24 @@ type RootTranslation = {
 				}
 			}
 		}
+		SharePoint: {
+			/**
+			 * M​i​c​r​o​s​o​f​t​ ​S​h​a​r​e​P​o​i​n​t
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​,​ ​a​u​t​o​m​a​t​e​,​ ​a​n​d​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​S​h​a​r​e​P​o​i​n​t​ ​O​n​l​i​n​e​ ​w​o​r​k​f​l​o​w​s​ ​w​i​t​h​ ​e​a​s​e​.
+			 */
+			shortDesc: string
+			/**
+			 * I​n​t​e​g​r​a​t​e​ ​y​o​u​r​ ​M​i​c​r​o​s​o​f​t​ ​3​6​5​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​q​u​i​c​k​l​y​ ​c​r​e​a​t​e​,​ ​u​p​d​a​t​e​,​ ​a​n​d​ ​s​y​n​c​h​r​o​n​i​z​e​ ​d​o​c​u​m​e​n​t​s​,​ ​l​i​s​t​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​a​s​s​e​t​s​—​a​l​l​ ​f​r​o​m​ ​o​n​e​ ​s​e​c​u​r​e​,​ ​u​s​e​r​-​f​r​i​e​n​d​l​y​ ​a​p​p​.
+			 */
+			longDesc: string
+			triggers: {
+			}
+			actions: {
+			}
+		}
 	}
 }
 
@@ -20813,6 +20831,24 @@ export type TranslationFunctions = {
 						desc: () => LocalizedString
 					}
 				}
+			}
+		}
+		SharePoint: {
+			/**
+			 * Microsoft SharePoint
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect, automate, and manage your SharePoint Online workflows with ease.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Integrate your Microsoft 365 environment to quickly create, update, and synchronize documents, lists, and other assets—all from one secure, user-friendly app.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+			}
+			actions: {
 			}
 		}
 	}
