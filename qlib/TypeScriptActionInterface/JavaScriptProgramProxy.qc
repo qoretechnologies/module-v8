@@ -315,7 +315,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     private listenerThread(int pid) {
-        info("Started listener thread for PID %d", pid);
+        info("Started listener thread");
         on_exit {
             remove listener_stop;
             remove listener_tid;
@@ -493,13 +493,14 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                             keys cmap);
                         continue;
                     }
-                    TSAI::debug("Got message: %y for proxy: %y", v, proxy.uniqueHash());
+                    TSAI::debug("Got message from proxy PID %d: %y for proxy: %y", proxy.proc.id(), v,
+                        proxy.uniqueHash());
                     hash<auto> msg = {
                         "cmd": CC_OK,
                         "socket": s0,
                     };
-                    TSAI::info("Received startup confirmation message for %s queue: %y",
-                        proxy.rq ? "restart" : "primary");
+                    TSAI::info("Received startup confirmation message for proxy PID %d on %s queue",
+                        proxy.proc.id(), proxy.rq ? "restart" : "primary");
                     if (proxy.rq) {
                         proxy.rq.push(msg);
                         remove proxy.rq;
@@ -555,6 +556,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             sprintf("-s=%s", master_path),
             "-vvv",
         );
+        if (ENV.TS_PROXY_LOGDIR) {
+            args += sprintf("-l=%s", ENV.TS_PROXY_LOGDIR);
+        }
         string uh = self.uniqueHash();
         hash<auto> env = ENV + {
             "TS_PROXY_PROCESS_KEY": uh,
