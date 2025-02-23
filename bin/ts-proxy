@@ -49,6 +49,7 @@ class TsProxy inherits TypeScriptProxy {
         if (opts.help || !opts.socket) {
             usage();
         }
+        set_signal_handler(SIGUSR1, \signalHandler());
         pkey = ENV.TS_PROXY_PROCESS_KEY;
         setupLogger();
         DataProvider::setGlobalLogger(logger);
@@ -64,7 +65,6 @@ class TsProxy inherits TypeScriptProxy {
         });
         sendString(yaml);
         info("Connected to server: %y", s.getPeerInfo());
-        set_signal_handler(SIGUSR2, \signalHandler());
         commandLoop();
     }
 
@@ -77,6 +77,12 @@ class TsProxy inherits TypeScriptProxy {
                 : "new-thread",
                 i.value;
         }
+        # first add stack traces to log file
+        File f();
+        string fn = sprintf("/tmp/ts-proxy-%d.log", getpid());
+        f.open2(fn, O_CREAT | O_APPEND | O_WRONLY);
+        f.printf("%s: %N\n", now_us().format("IF"), info);
+        # now send status message to parent
         string yaml = makeSend(CC_STATUS, {
             "info": sprintf("%N", info),
         });
