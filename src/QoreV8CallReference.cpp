@@ -61,5 +61,5 @@ bool QoreV8CallReference::derefImpl(ExceptionSink* xsink) {
     parent.Reset();
     callable->deref(xsink);
     callable = nullptr;
-    return false;
+    return ResolvedCallReferenceNode::derefImpl(xsink);
 }
