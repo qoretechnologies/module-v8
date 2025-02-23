@@ -332,15 +332,14 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                     killChild();
                     restarted = checkRestart(NOTHING, True);
                     string desc = restarted
-                        ? sprintf("The async call timed out; terminated and restarted child process with PID %d; new "
-                            "child PID %d", pid, proc.id())
-                        : sprintf("The async call timed out; terminated child process PID %d", pid);
+                        ? sprintf("The async call timed out; terminated and restarted child process with PID %d", pid)
+                        : sprintf("The async call timed out; terminated child process");
                     cmdq.push({
                         "cmd": CC_ERR,
                         "ex": {
                             "err": "ASYNC-CALL-TIMEOUT",
                             "desc": sprintf("The async call timed out; terminated and restarted child process with "
-                                "PID %d; new child PID %d", pid, proc.id()),
+                                "PID %d", pid),
                             "arg": command_in_progress,
                         },
                     });
@@ -499,7 +498,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                         "cmd": CC_OK,
                         "socket": s0,
                     };
-                    TSAI::info("Received startup confirmation message from PID %d -> %s queue: %y", proxy.proc.id(),
+                    TSAI::info("Received startup confirmation message for %s queue: %y",
                         proxy.rq ? "restart" : "primary");
                     if (proxy.rq) {
                         proxy.rq.push(msg);
@@ -535,14 +534,14 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         if (proc.running()) {
             killChild();
         } else {
-            info("Child with PID %d terminated normally", proc.id());
+            info("Child terminated normally");
         }
     }
 
     private killChild() {
         try {
             proc.terminate();
-            info("Forced child PID %d to terminate", proc.id());
+            info("Forced child to terminate");
         } catch (hash<ExceptionInfo> ex) {
             # ignore error
         }
@@ -568,7 +567,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             logChildOutput(True);
             throw "CHILD-ERROR", "Failed to start child process";
         }
-        info("Started child process with PID %d", proc.id());
+        info("Started child process");
         hash<auto> h;
         bool start_listener = !exists rq;
         {
@@ -597,7 +596,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
         s = h.socket;
         logChildOutput();
-        info("Child process with PID %d ready", proc.id());
+        info("Child process ready");
         if (start_listener) {
             startListener();
         }
@@ -811,7 +810,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 return;
             }
             if (!proc.running()) {
-                error("Child process %d aborted; restarting", proc.id());
+                error("Child process aborted; restarting");
                 if (rc) {
                     rc.restart();
                 }
@@ -841,7 +840,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
         delete s;
 
-        error("Restarting child process %d after an error", pid);
+        error("Restarting child process after an error");
         logChildOutput();
 
         ++restart_count;
@@ -853,7 +852,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 "cmd": CC_ERR,
                 "ex": {
                     "err": "CHILD-ABORTED",
-                    "desc": sprintf("Restarted child process with PID %d; new child PID %d", pid, proc.id()),
+                    "desc": sprintf("Restarted child process with PID %d", pid),
                     "arg": command_in_progress,
                 },
             });
@@ -868,8 +867,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
 
         if (event) {
-            info("Restarting event listener for @%s/%s %y in proxy PID %d", event.app, event.action, event.key,
-                proc.id());
+            info("Restarting event listener for @%s/%s %y", event.app, event.action, event.key);
             if (in_listener) {
                 sendCommandArgsIntern(NOTHING, PC_SETUP_EVENT, (event.app, event.action, event.key, event.options));
             } else {
@@ -883,45 +881,45 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         bool out;
         if (str) {
             trim str;
-            string pfx = sprintf(" > stdout PID %d: ", proc.id());
+            string pfx = " > stdout: ";
             str = pfx + str;
             str = replace(str, "\n", "\n" + pfx);
-            info("Child PID %d output follows:\n%s", proc.id(), str);
+            info("Child output follows:\n%s", str);
             out = True;
         }
         str = proc.readStderr(64 * 1024, 0s);
         if (str) {
             trim str;
-            string pfx = sprintf(" > stderr PID %d: ", proc.id());
+            string pfx = " > stderr: ";
             str = pfx + str;
             str = replace(str, "\n", "\n" + pfx);
-            error("Child PID %d error output followg:\n%s", proc.id(), str);
+            error("Child error output followg:\n%s", str);
             if (!out) {
                 out = True;
             }
         }
         if (always_output && !out) {
-            info("Child PID %d: no output", proc.id());
+            info("child has no output");
         }
     }
 
     private debug(string fmt, ...) {
-        fmt = "JavaScriptProgramProxy: " + fmt;
+        fmt = sprintf("JavaScriptProgramProxy%s: ", proc ? (" for PID " + proc.id()) : "") + fmt;
         TSAI::logArgs(LoggerLevel::LevelDebug, fmt, argv);
     }
 
     private info(string fmt, ...) {
-        fmt = "JavaScriptProgramProxy: " + fmt;
+        fmt = sprintf("JavaScriptProgramProxy%s: ", proc ? (" for PID " + proc.id()) : "") + fmt;
         TSAI::logArgs(LoggerLevel::LevelInfo, fmt, argv);
     }
 
     private error(string fmt, ...) {
-        fmt = "JavaScriptProgramProxy: " + fmt;
+        fmt = sprintf("JavaScriptProgramProxy%s: ", proc ? (" for PID " + proc.id()) : "") + fmt;
         TSAI::logArgs(LoggerLevel::LevelError, fmt, argv);
     }
 
     private fatal(string fmt, ...) {
-        fmt = "JavaScriptProgramProxy: " + fmt;
+        fmt = sprintf("JavaScriptProgramProxy%s: ", proc ? (" for PID " + proc.id()) : "") + fmt;
         TSAI::logArgs(LoggerLevel::LevelFatal, fmt, argv);
     }
 }
