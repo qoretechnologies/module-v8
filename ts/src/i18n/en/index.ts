@@ -2410,7 +2410,28 @@ const en = {
       shortDesc: 'Connect, automate, and manage your SharePoint Online workflows with ease.',
       longDesc:
         'Integrate your Microsoft 365 environment to quickly create, update, and synchronize documents, lists, and other assets—all from one secure, user-friendly app.',
-      triggers: {},
+      triggers: {
+        'new-row': {
+          displayName: 'New Row',
+          shortDesc: 'Triggers when a new row is added to a SharePoint list.',
+          longDesc:
+            'This trigger activates whenever a new row is added to a specified SharePoint list.',
+          options: {
+            site_id: {
+              displayName: 'Site ID',
+              shortDesc: 'The unique identifier for the SharePoint site.',
+              longDesc:
+                'Enter the Site ID where the target list resides. This ID ensures that the trigger is activated in the correct SharePoint site.',
+            },
+            list_id: {
+              displayName: 'List ID',
+              shortDesc: 'The unique identifier for the SharePoint list.',
+              longDesc:
+                'Specify the List ID of the SharePoint list where the new row will be added.',
+            },
+          },
+        },
+      },
       actions: {
         'create-folder': {
           displayName: 'Create Folder',

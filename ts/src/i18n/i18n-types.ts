@@ -10426,8 +10426,400 @@ type RootTranslation = {
 			 */
 			longDesc: string
 			triggers: {
+				'new-row': {
+					/**
+					 * N​e​w​ ​R​o​w
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​o​w​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​S​h​a​r​e​P​o​i​n​t​ ​l​i​s​t​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​r​o​w​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​S​h​a​r​e​P​o​i​n​t​ ​l​i​s​t​.
+					 */
+					longDesc: string
+					options: {
+						site_id: {
+							/**
+							 * S​i​t​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​S​h​a​r​e​P​o​i​n​t​ ​s​i​t​e​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​S​i​t​e​ ​I​D​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​r​g​e​t​ ​l​i​s​t​ ​r​e​s​i​d​e​s​.​ ​T​h​i​s​ ​I​D​ ​e​n​s​u​r​e​s​ ​t​h​a​t​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​i​s​ ​a​c​t​i​v​a​t​e​d​ ​i​n​ ​t​h​e​ ​c​o​r​r​e​c​t​ ​S​h​a​r​e​P​o​i​n​t​ ​s​i​t​e​.
+							 */
+							longDesc: string
+						}
+						list_id: {
+							/**
+							 * L​i​s​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​S​h​a​r​e​P​o​i​n​t​ ​l​i​s​t​.
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​L​i​s​t​ ​I​D​ ​o​f​ ​t​h​e​ ​S​h​a​r​e​P​o​i​n​t​ ​l​i​s​t​ ​w​h​e​r​e​ ​t​h​e​ ​n​e​w​ ​r​o​w​ ​w​i​l​l​ ​b​e​ ​a​d​d​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
 			}
 			actions: {
+				'create-folder': {
+					/**
+					 * C​r​e​a​t​e​ ​F​o​l​d​e​r
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​f​o​l​d​e​r​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​S​h​a​r​e​P​o​i​n​t​ ​d​r​i​v​e​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​a​c​t​i​o​n​ ​c​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​f​o​l​d​e​r​ ​w​i​t​h​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​S​h​a​r​e​P​o​i​n​t​ ​d​o​c​u​m​e​n​t​ ​l​i​b​r​a​r​y​.​ ​P​r​o​v​i​d​e​ ​t​h​e​ ​t​a​r​g​e​t​ ​s​i​t​e​,​ ​d​r​i​v​e​,​ ​p​a​r​e​n​t​ ​f​o​l​d​e​r​ ​p​a​t​h​,​ ​a​n​d​ ​t​h​e​ ​d​e​s​i​r​e​d​ ​f​o​l​d​e​r​ ​n​a​m​e​ ​t​o​ ​o​r​g​a​n​i​z​e​ ​y​o​u​r​ ​f​i​l​e​s​ ​e​f​f​e​c​t​i​v​e​l​y​.
+					 */
+					longDesc: string
+					options: {
+						site_id: {
+							/**
+							 * S​i​t​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​S​h​a​r​e​P​o​i​n​t​ ​s​i​t​e​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​u​n​i​q​u​e​ ​S​i​t​e​ ​I​D​ ​w​h​e​r​e​ ​t​h​e​ ​f​o​l​d​e​r​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.​ ​T​h​i​s​ ​I​D​ ​i​s​ ​r​e​q​u​i​r​e​d​ ​t​o​ ​t​a​r​g​e​t​ ​t​h​e​ ​c​o​r​r​e​c​t​ ​S​h​a​r​e​P​o​i​n​t​ ​s​i​t​e​ ​i​n​ ​y​o​u​r​ ​M​i​c​r​o​s​o​f​t​ ​3​6​5​ ​e​n​v​i​r​o​n​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+						drive_id: {
+							/**
+							 * D​r​i​v​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​S​h​a​r​e​P​o​i​n​t​ ​d​r​i​v​e​.
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​D​r​i​v​e​ ​I​D​ ​c​o​r​r​e​s​p​o​n​d​i​n​g​ ​t​o​ ​t​h​e​ ​d​o​c​u​m​e​n​t​ ​l​i​b​r​a​r​y​ ​i​n​ ​w​h​i​c​h​ ​t​h​e​ ​f​o​l​d​e​r​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						parent_folder: {
+							/**
+							 * P​a​r​e​n​t​ ​F​o​l​d​e​r​ ​P​a​t​h
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​a​t​h​ ​o​f​ ​t​h​e​ ​e​x​i​s​t​i​n​g​ ​p​a​r​e​n​t​ ​f​o​l​d​e​r​.
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​t​h​e​ ​p​a​t​h​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​f​o​l​d​e​r​ ​w​h​e​r​e​ ​t​h​e​ ​n​e​w​ ​f​o​l​d​e​r​ ​s​h​o​u​l​d​ ​r​e​s​i​d​e​.​ ​T​h​i​s​ ​h​e​l​p​s​ ​m​a​i​n​t​a​i​n​ ​a​n​ ​o​r​g​a​n​i​z​e​d​ ​f​o​l​d​e​r​ ​s​t​r​u​c​t​u​r​e​ ​w​i​t​h​i​n​ ​y​o​u​r​ ​S​h​a​r​e​P​o​i​n​t​ ​d​r​i​v​e​.
+							 */
+							longDesc: string
+						}
+						folder_name: {
+							/**
+							 * F​o​l​d​e​r​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​f​o​l​d​e​r​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​d​e​s​i​r​e​d​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​f​o​l​d​e​r​.​ ​T​h​i​s​ ​n​a​m​e​ ​w​i​l​l​ ​b​e​ ​u​s​e​d​ ​a​s​ ​t​h​e​ ​f​o​l​d​e​r​ ​t​i​t​l​e​ ​i​n​ ​S​h​a​r​e​P​o​i​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'create-list-item': {
+					/**
+					 * C​r​e​a​t​e​ ​L​i​s​t​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​ ​n​e​w​ ​i​t​e​m​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​S​h​a​r​e​P​o​i​n​t​ ​l​i​s​t​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​a​c​t​i​o​n​ ​c​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​i​t​e​m​ ​w​i​t​h​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​S​h​a​r​e​P​o​i​n​t​ ​l​i​s​t​.​ ​P​r​o​v​i​d​e​ ​t​h​e​ ​S​i​t​e​ ​I​D​ ​a​n​d​ ​L​i​s​t​ ​I​D​ ​t​o​ ​t​a​r​g​e​t​ ​t​h​e​ ​c​o​r​r​e​c​t​ ​l​i​s​t​,​ ​a​n​d​ ​i​n​c​l​u​d​e​ ​t​h​e​ ​n​e​c​e​s​s​a​r​y​ ​f​i​e​l​d​s​ ​t​o​ ​p​o​p​u​l​a​t​e​ ​t​h​e​ ​i​t​e​m​ ​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						site_id: {
+							/**
+							 * S​i​t​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​S​h​a​r​e​P​o​i​n​t​ ​s​i​t​e​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​S​i​t​e​ ​I​D​ ​w​h​e​r​e​ ​y​o​u​r​ ​t​a​r​g​e​t​ ​l​i​s​t​ ​r​e​s​i​d​e​s​.​ ​T​h​i​s​ ​I​D​ ​e​n​s​u​r​e​s​ ​t​h​a​t​ ​t​h​e​ ​a​c​t​i​o​n​ ​i​s​ ​e​x​e​c​u​t​e​d​ ​i​n​ ​t​h​e​ ​c​o​r​r​e​c​t​ ​S​h​a​r​e​P​o​i​n​t​ ​e​n​v​i​r​o​n​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+						list_id: {
+							/**
+							 * L​i​s​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​S​h​a​r​e​P​o​i​n​t​ ​l​i​s​t​.
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​L​i​s​t​ ​I​D​ ​o​f​ ​t​h​e​ ​S​h​a​r​e​P​o​i​n​t​ ​l​i​s​t​ ​t​o​ ​w​h​i​c​h​ ​t​h​e​ ​n​e​w​ ​i​t​e​m​ ​w​i​l​l​ ​b​e​ ​a​d​d​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'create-list': {
+					/**
+					 * C​r​e​a​t​e​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * G​e​n​e​r​a​t​e​ ​a​ ​n​e​w​ ​l​i​s​t​ ​w​i​t​h​i​n​ ​a​ ​S​h​a​r​e​P​o​i​n​t​ ​s​i​t​e​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​a​c​t​i​o​n​ ​c​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​S​h​a​r​e​P​o​i​n​t​ ​l​i​s​t​.​ ​P​r​o​v​i​d​e​ ​t​h​e​ ​S​i​t​e​ ​I​D​,​ ​a​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​l​i​s​t​,​ ​a​n​d​ ​a​ ​d​e​s​c​r​i​p​t​i​o​n​ ​i​f​ ​n​e​e​d​e​d​.​ ​T​h​i​s​ ​i​s​ ​i​d​e​a​l​ ​f​o​r​ ​s​e​t​t​i​n​g​ ​u​p​ ​n​e​w​ ​d​a​t​a​ ​r​e​p​o​s​i​t​o​r​i​e​s​ ​i​n​ ​y​o​u​r​ ​S​h​a​r​e​P​o​i​n​t​ ​s​i​t​e​.
+					 */
+					longDesc: string
+					options: {
+						site_id: {
+							/**
+							 * S​i​t​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​S​h​a​r​e​P​o​i​n​t​ ​s​i​t​e​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​S​i​t​e​ ​I​D​ ​w​h​e​r​e​ ​t​h​e​ ​n​e​w​ ​l​i​s​t​ ​s​h​o​u​l​d​ ​b​e​ ​c​r​e​a​t​e​d​,​ ​e​n​s​u​r​i​n​g​ ​t​h​e​ ​l​i​s​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​c​o​r​r​e​c​t​ ​S​h​a​r​e​P​o​i​n​t​ ​s​i​t​e​.
+							 */
+							longDesc: string
+						}
+						list_name: {
+							/**
+							 * L​i​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​n​e​w​ ​l​i​s​t​.
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​a​ ​n​a​m​e​ ​f​o​r​ ​y​o​u​r​ ​n​e​w​ ​l​i​s​t​.​ ​T​h​i​s​ ​n​a​m​e​ ​w​i​l​l​ ​b​e​ ​v​i​s​i​b​l​e​ ​t​o​ ​u​s​e​r​s​ ​a​n​d​ ​u​s​e​d​ ​t​o​ ​i​d​e​n​t​i​f​y​ ​t​h​e​ ​l​i​s​t​ ​w​i​t​h​i​n​ ​S​h​a​r​e​P​o​i​n​t​.
+							 */
+							longDesc: string
+						}
+						list_description: {
+							/**
+							 * L​i​s​t​ ​D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​ ​b​r​i​e​f​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​l​i​s​t​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​a​ ​d​e​s​c​r​i​p​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​l​i​s​t​ ​t​o​ ​p​r​o​v​i​d​e​ ​c​o​n​t​e​x​t​ ​a​b​o​u​t​ ​i​t​s​ ​p​u​r​p​o​s​e​ ​a​n​d​ ​c​o​n​t​e​n​t​s​.​ ​T​h​i​s​ ​h​e​l​p​s​ ​u​s​e​r​s​ ​u​n​d​e​r​s​t​a​n​d​ ​w​h​a​t​ ​t​h​e​ ​l​i​s​t​ ​i​s​ ​u​s​e​d​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'delete-list-item': {
+					/**
+					 * D​e​l​e​t​e​ ​L​i​s​t​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​a​n​ ​i​t​e​m​ ​f​r​o​m​ ​a​ ​S​h​a​r​e​P​o​i​n​t​ ​l​i​s​t​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​a​c​t​i​o​n​ ​d​e​l​e​t​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​i​t​e​m​ ​f​r​o​m​ ​a​ ​S​h​a​r​e​P​o​i​n​t​ ​l​i​s​t​.​ ​P​r​o​v​i​d​e​ ​t​h​e​ ​S​i​t​e​ ​I​D​,​ ​L​i​s​t​ ​I​D​,​ ​a​n​d​ ​t​h​e​ ​I​t​e​m​ ​I​D​ ​o​f​ ​t​h​e​ ​l​i​s​t​ ​i​t​e​m​ ​t​o​ ​b​e​ ​r​e​m​o​v​e​d​.​ ​U​s​e​ ​t​h​i​s​ ​a​c​t​i​o​n​ ​w​i​t​h​ ​c​a​u​t​i​o​n​,​ ​a​s​ ​d​e​l​e​t​e​d​ ​i​t​e​m​s​ ​c​a​n​n​o​t​ ​b​e​ ​e​a​s​i​l​y​ ​r​e​c​o​v​e​r​e​d​.
+					 */
+					longDesc: string
+					options: {
+						site_id: {
+							/**
+							 * S​i​t​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​S​h​a​r​e​P​o​i​n​t​ ​s​i​t​e​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​S​i​t​e​ ​I​D​ ​w​h​e​r​e​ ​t​h​e​ ​l​i​s​t​ ​i​s​ ​h​o​s​t​e​d​,​ ​e​n​s​u​r​i​n​g​ ​t​h​e​ ​d​e​l​e​t​i​o​n​ ​i​s​ ​p​e​r​f​o​r​m​e​d​ ​i​n​ ​t​h​e​ ​c​o​r​r​e​c​t​ ​S​h​a​r​e​P​o​i​n​t​ ​e​n​v​i​r​o​n​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+						list_id: {
+							/**
+							 * L​i​s​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​S​h​a​r​e​P​o​i​n​t​ ​l​i​s​t​.
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​L​i​s​t​ ​I​D​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​S​h​a​r​e​P​o​i​n​t​ ​l​i​s​t​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​h​e​ ​i​t​e​m​ ​w​i​l​l​ ​b​e​ ​d​e​l​e​t​e​d​.
+							 */
+							longDesc: string
+						}
+						item_id: {
+							/**
+							 * I​t​e​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​l​i​s​t​ ​i​t​e​m​.
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​t​h​e​ ​I​t​e​m​ ​I​D​ ​o​f​ ​t​h​e​ ​l​i​s​t​ ​i​t​e​m​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​.​ ​T​h​i​s​ ​e​n​s​u​r​e​s​ ​t​h​a​t​ ​t​h​e​ ​c​o​r​r​e​c​t​ ​i​t​e​m​ ​i​s​ ​r​e​m​o​v​e​d​ ​f​r​o​m​ ​t​h​e​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'search-list-item': {
+					/**
+					 * S​e​a​r​c​h​ ​L​i​s​t​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​i​t​e​m​s​ ​i​n​ ​a​ ​S​h​a​r​e​P​o​i​n​t​ ​l​i​s​t​ ​b​y​ ​t​i​t​l​e​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​a​c​t​i​o​n​ ​s​e​a​r​c​h​e​s​ ​f​o​r​ ​l​i​s​t​ ​i​t​e​m​s​ ​w​i​t​h​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​S​h​a​r​e​P​o​i​n​t​ ​l​i​s​t​ ​t​h​a​t​ ​m​a​t​c​h​ ​a​ ​p​r​o​v​i​d​e​d​ ​t​i​t​l​e​ ​o​r​ ​s​e​a​r​c​h​ ​t​e​r​m​.​ ​U​s​e​ ​t​h​i​s​ ​a​c​t​i​o​n​ ​t​o​ ​q​u​i​c​k​l​y​ ​l​o​c​a​t​e​ ​s​p​e​c​i​f​i​c​ ​i​t​e​m​s​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​i​r​ ​T​i​t​l​e​ ​f​i​e​l​d​.
+					 */
+					longDesc: string
+					options: {
+						site_id: {
+							/**
+							 * S​i​t​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​S​h​a​r​e​P​o​i​n​t​ ​s​i​t​e​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​S​i​t​e​ ​I​D​ ​w​h​e​r​e​ ​t​h​e​ ​l​i​s​t​ ​i​s​ ​l​o​c​a​t​e​d​,​ ​e​n​s​u​r​i​n​g​ ​t​h​e​ ​s​e​a​r​c​h​ ​i​s​ ​c​o​n​d​u​c​t​e​d​ ​i​n​ ​t​h​e​ ​c​o​r​r​e​c​t​ ​S​h​a​r​e​P​o​i​n​t​ ​s​i​t​e​.
+							 */
+							longDesc: string
+						}
+						list_id: {
+							/**
+							 * L​i​s​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​S​h​a​r​e​P​o​i​n​t​ ​l​i​s​t​.
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​t​h​e​ ​L​i​s​t​ ​I​D​ ​o​f​ ​t​h​e​ ​S​h​a​r​e​P​o​i​n​t​ ​l​i​s​t​ ​t​o​ ​b​e​ ​s​e​a​r​c​h​e​d​.
+							 */
+							longDesc: string
+						}
+						search_value: {
+							/**
+							 * S​e​a​r​c​h​ ​V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​e​a​r​c​h​ ​t​e​r​m​ ​t​o​ ​f​i​l​t​e​r​ ​l​i​s​t​ ​i​t​e​m​s​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​t​e​x​t​ ​v​a​l​u​e​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​w​i​t​h​i​n​ ​t​h​e​ ​l​i​s​t​ ​i​t​e​m​s​,​ ​p​a​r​t​i​c​u​l​a​r​l​y​ ​i​n​ ​t​h​e​ ​T​i​t​l​e​ ​f​i​e​l​d​.​ ​T​h​i​s​ ​v​a​l​u​e​ ​i​s​ ​u​s​e​d​ ​t​o​ ​f​i​l​t​e​r​ ​a​n​d​ ​r​e​t​u​r​n​ ​m​a​t​c​h​i​n​g​ ​i​t​e​m​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'update-list-item': {
+					/**
+					 * U​p​d​a​t​e​ ​L​i​s​t​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * M​o​d​i​f​y​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​i​t​e​m​ ​i​n​ ​a​ ​S​h​a​r​e​P​o​i​n​t​ ​l​i​s​t​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​a​c​t​i​o​n​ ​u​p​d​a​t​e​s​ ​t​h​e​ ​f​i​e​l​d​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​l​i​s​t​ ​i​t​e​m​ ​i​n​ ​a​ ​S​h​a​r​e​P​o​i​n​t​ ​l​i​s​t​.​ ​P​r​o​v​i​d​e​ ​t​h​e​ ​S​i​t​e​ ​I​D​,​ ​L​i​s​t​ ​I​D​,​ ​a​n​d​ ​I​t​e​m​ ​I​D​ ​t​o​ ​l​o​c​a​t​e​ ​t​h​e​ ​i​t​e​m​,​ ​a​l​o​n​g​ ​w​i​t​h​ ​t​h​e​ ​n​e​w​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​b​e​ ​a​p​p​l​i​e​d​.
+					 */
+					longDesc: string
+					options: {
+						site_id: {
+							/**
+							 * S​i​t​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​S​h​a​r​e​P​o​i​n​t​ ​s​i​t​e​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​S​i​t​e​ ​I​D​ ​w​h​e​r​e​ ​t​h​e​ ​l​i​s​t​ ​i​s​ ​h​o​s​t​e​d​.​ ​T​h​i​s​ ​i​d​e​n​t​i​f​i​e​s​ ​t​h​e​ ​c​o​r​r​e​c​t​ ​S​h​a​r​e​P​o​i​n​t​ ​s​i​t​e​ ​i​n​ ​y​o​u​r​ ​M​i​c​r​o​s​o​f​t​ ​3​6​5​ ​e​n​v​i​r​o​n​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+						list_id: {
+							/**
+							 * L​i​s​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​S​h​a​r​e​P​o​i​n​t​ ​l​i​s​t​.
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​t​h​e​ ​L​i​s​t​ ​I​D​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​S​h​a​r​e​P​o​i​n​t​ ​l​i​s​t​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​i​t​e​m​ ​y​o​u​ ​w​i​s​h​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						item_id: {
+							/**
+							 * I​t​e​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​l​i​s​t​ ​i​t​e​m​.
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​I​t​e​m​ ​I​D​ ​o​f​ ​t​h​e​ ​l​i​s​t​ ​i​t​e​m​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​.​ ​T​h​i​s​ ​e​n​s​u​r​e​s​ ​t​h​a​t​ ​t​h​e​ ​c​o​r​r​e​c​t​ ​i​t​e​m​ ​i​s​ ​m​o​d​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
 			}
 		}
 	}
@@ -20847,8 +21239,400 @@ export type TranslationFunctions = {
 			 */
 			longDesc: () => LocalizedString
 			triggers: {
+				'new-row': {
+					/**
+					 * New Row
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new row is added to a SharePoint list.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates whenever a new row is added to a specified SharePoint list.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						site_id: {
+							/**
+							 * Site ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier for the SharePoint site.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the Site ID where the target list resides. This ID ensures that the trigger is activated in the correct SharePoint site.
+							 */
+							longDesc: () => LocalizedString
+						}
+						list_id: {
+							/**
+							 * List ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier for the SharePoint list.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the List ID of the SharePoint list where the new row will be added.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
 			}
 			actions: {
+				'create-folder': {
+					/**
+					 * Create Folder
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new folder in a specified SharePoint drive.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This action creates a new folder within a specified SharePoint document library. Provide the target site, drive, parent folder path, and the desired folder name to organize your files effectively.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						site_id: {
+							/**
+							 * Site ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier for the SharePoint site.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the unique Site ID where the folder will be created. This ID is required to target the correct SharePoint site in your Microsoft 365 environment.
+							 */
+							longDesc: () => LocalizedString
+						}
+						drive_id: {
+							/**
+							 * Drive ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier for the SharePoint drive.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the Drive ID corresponding to the document library in which the folder will be created.
+							 */
+							longDesc: () => LocalizedString
+						}
+						parent_folder: {
+							/**
+							 * Parent Folder Path
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The path of the existing parent folder.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide the path of the parent folder where the new folder should reside. This helps maintain an organized folder structure within your SharePoint drive.
+							 */
+							longDesc: () => LocalizedString
+						}
+						folder_name: {
+							/**
+							 * Folder Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The name for the new folder.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the desired name for the new folder. This name will be used as the folder title in SharePoint.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'create-list-item': {
+					/**
+					 * Create List Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add a new item to an existing SharePoint list.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This action creates a new item within a specified SharePoint list. Provide the Site ID and List ID to target the correct list, and include the necessary fields to populate the item data.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						site_id: {
+							/**
+							 * Site ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier for the SharePoint site.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the Site ID where your target list resides. This ID ensures that the action is executed in the correct SharePoint environment.
+							 */
+							longDesc: () => LocalizedString
+						}
+						list_id: {
+							/**
+							 * List ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier for the SharePoint list.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the List ID of the SharePoint list to which the new item will be added.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'create-list': {
+					/**
+					 * Create List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Generate a new list within a SharePoint site.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This action creates a new SharePoint list. Provide the Site ID, a name for the list, and a description if needed. This is ideal for setting up new data repositories in your SharePoint site.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						site_id: {
+							/**
+							 * Site ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier for the SharePoint site.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the Site ID where the new list should be created, ensuring the list is added to the correct SharePoint site.
+							 */
+							longDesc: () => LocalizedString
+						}
+						list_name: {
+							/**
+							 * List Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The name of the new list.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide a name for your new list. This name will be visible to users and used to identify the list within SharePoint.
+							 */
+							longDesc: () => LocalizedString
+						}
+						list_description: {
+							/**
+							 * List Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * A brief description of the list.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter a description for the new list to provide context about its purpose and contents. This helps users understand what the list is used for.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'delete-list-item': {
+					/**
+					 * Delete List Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove an item from a SharePoint list.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This action deletes a specific item from a SharePoint list. Provide the Site ID, List ID, and the Item ID of the list item to be removed. Use this action with caution, as deleted items cannot be easily recovered.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						site_id: {
+							/**
+							 * Site ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier for the SharePoint site.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the Site ID where the list is hosted, ensuring the deletion is performed in the correct SharePoint environment.
+							 */
+							longDesc: () => LocalizedString
+						}
+						list_id: {
+							/**
+							 * List ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier for the SharePoint list.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the List ID of the target SharePoint list from which the item will be deleted.
+							 */
+							longDesc: () => LocalizedString
+						}
+						item_id: {
+							/**
+							 * Item ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier for the list item.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide the Item ID of the list item that you want to delete. This ensures that the correct item is removed from the list.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'search-list-item': {
+					/**
+					 * Search List Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for items in a SharePoint list by title.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This action searches for list items within a specified SharePoint list that match a provided title or search term. Use this action to quickly locate specific items based on their Title field.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						site_id: {
+							/**
+							 * Site ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier for the SharePoint site.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the Site ID where the list is located, ensuring the search is conducted in the correct SharePoint site.
+							 */
+							longDesc: () => LocalizedString
+						}
+						list_id: {
+							/**
+							 * List ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier for the SharePoint list.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide the List ID of the SharePoint list to be searched.
+							 */
+							longDesc: () => LocalizedString
+						}
+						search_value: {
+							/**
+							 * Search Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The search term to filter list items.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the text value to search for within the list items, particularly in the Title field. This value is used to filter and return matching items.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'update-list-item': {
+					/**
+					 * Update List Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Modify an existing item in a SharePoint list.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This action updates the fields of an existing list item in a SharePoint list. Provide the Site ID, List ID, and Item ID to locate the item, along with the new field values that should be applied.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						site_id: {
+							/**
+							 * Site ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier for the SharePoint site.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the Site ID where the list is hosted. This identifies the correct SharePoint site in your Microsoft 365 environment.
+							 */
+							longDesc: () => LocalizedString
+						}
+						list_id: {
+							/**
+							 * List ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier for the SharePoint list.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide the List ID of the target SharePoint list that contains the item you wish to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						item_id: {
+							/**
+							 * Item ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier for the list item.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the Item ID of the list item that you want to update. This ensures that the correct item is modified.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
 			}
 		}
 	}

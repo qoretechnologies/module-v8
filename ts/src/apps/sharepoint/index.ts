@@ -3,7 +3,8 @@ import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import { SHAREPOINT_APP_NAME } from './constants';
 import * as actions from './actions';
-import { mapActionsToApp } from '../../global/helpers';
+import * as SHAREPOINT_TRIGGERS from './triggers';
+import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 
 const SHAREPOINT_ACTIONS = Object.values(actions);
 
@@ -13,7 +14,10 @@ export default (locale: Locales) =>
     short_desc: L[locale].apps[SHAREPOINT_APP_NAME].shortDesc(),
     desc: L[locale].apps[SHAREPOINT_APP_NAME].longDesc(),
     name: SHAREPOINT_APP_NAME,
-    actions: [...mapActionsToApp(SHAREPOINT_APP_NAME, SHAREPOINT_ACTIONS, locale)],
+    actions: [
+      ...mapActionsToApp(SHAREPOINT_APP_NAME, SHAREPOINT_ACTIONS, locale),
+      ...mapTriggersToApp(SHAREPOINT_APP_NAME, SHAREPOINT_TRIGGERS, locale),
+    ],
     logo:
       'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsb' +
       'HVzdHJhdG9yIDIzLjAuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMC' +
