@@ -5,7 +5,7 @@ import { getHubspotCustomObjectIdAllowedValues } from '../apps/hubspot/helpers/g
 import { getHubspotCustomObjectTypeAllowedValues } from '../apps/hubspot/helpers/get-custom-object-type-allowed-values';
 import { getHubspotDealAllowedValues } from '../apps/hubspot/helpers/get-deal-allowed-values';
 import { getHubspotLeadAllowedValues } from '../apps/hubspot/helpers/get-lead-allowed-values';
-import { getHubspotProductAllowedValues } from '../apps/hubspot/helpers/get-product.allowe-values';
+import { getHubspotProductAllowedValues } from '../apps/hubspot/helpers/get-product.allowed-values';
 import { getHubspotTicketAllowedValues } from '../apps/hubspot/helpers/get-ticket-allowed-value';
 import { getHubspotUserAllowedValues } from '../apps/hubspot/helpers/get-user-allowed-values';
 import { getHubspotCompanyPropertiesAllowedValues } from '../apps/hubspot/helpers/object-properties-allowed-values';
