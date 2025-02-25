@@ -33,6 +33,12 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         #! Child connect timeout
         const ChildConnectTimeout = 30s;
 
+        #! Setup event timeout
+        const SetupEventTimeout = 60s;
+
+        #! Default proxy request timeout
+        const DefaultRequestTimeout = 90s;
+
         #! Event source info
         hash<EventSourceInfo> event;
     }
@@ -217,7 +223,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         on_exit global_lock.lock();
 
         on_error removeEventSource(ekey);
-        sendCommandArgs(NOTHING, PC_SETUP_EVENT, (app, action, key, options));
+        sendCommandArgs(NOTHING, PC_SETUP_EVENT, (app, action, key, options), SetupEventTimeout);
     }
 
     private removeEventSource(string ekey) {
@@ -276,7 +282,16 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             if (!event.omap) {
                 remove event;
                 info("Releasing event %y", key);
-                sendCommandArgs(NOTHING, PC_RELEASE_EVENT, key);
+                try {
+                    sendCommandArgs(NOTHING, PC_RELEASE_EVENT, key, NOTHING, True);
+                } catch (hash<ExceptionInfo> ex) {
+                    if (ex.err == "QUEUE-TIMEOUT") {
+                        error("Event key %y was released by killing the proxy process due to an error: %s: %s", key,
+                            ex.err, ex.desc);
+                    } else {
+                        rethrow;
+                    }
+                }
             }
         }
         #debug("JavaScriptProgramProxy::releaseEventSourceLocked() key: %y remaining: %y stop: %y", key,
@@ -647,7 +662,8 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     #! Sends a command from the parent to the child with a response
-    private auto sendCommandArgs(*date io_timeout, string cmd, *softlist<auto> args) {
+    private auto sendCommandArgs(*date io_timeout, string cmd, *softlist<auto> args,
+            date response_timeout = DefaultRequestTimeout, *bool no_retry) {
         string yaml = makeSend(cmd, {"args": args});
         hash<auto> h;
         RetryCounter rc();
@@ -655,13 +671,17 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             try {
                 sendCommandArgsIntern(io_timeout, cmd, args, yaml);
                 on_exit remove command_in_progress;
-                h = waitForCommand();
+                h = waitForCommand(response_timeout);
                 if (!ValidResponses{h.cmd}) {
                     throw "CMD-ERROR", sprintf("Unknown response %y; valid responses: %y", h.cmd,
                         keys ValidResponses);
                 }
             } catch (hash<ExceptionInfo> ex) {
-                if (retryIntern(ex, rc)) {
+                if (ex.err == "QUEUE-TIMEOUT") {
+                    error("Error waiting for response to proxy command %y; terminating proxy and retrying", cmd);
+                    killChild();
+                }
+                if (retryIntern(ex, rc) && !no_retry) {
                     info("Restarting command due to error");
                     continue;
                 }
@@ -694,8 +714,8 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     #! Wait for a command when the listener is active
-    hash<auto> waitForCommand() {
-        hash<auto> v = cmdq.get();
+    hash<auto> waitForCommand(*date to) {
+        hash<auto> v = cmdq.get(to);
         if (v.cmd == CC_ERR) {
             throw v.ex.err, v.ex.desc, v.ex.arg;
         }
