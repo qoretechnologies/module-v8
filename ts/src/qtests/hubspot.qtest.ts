@@ -29,6 +29,10 @@ describe('Tests Hubspot actions', () => {
 
   // Allowed values
   describe('Tests Hubspot options allowed values', () => {
+    afterEach(async () => {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+    });
+
     const baseContext = {
       conn_opts: {
         token: token!,
@@ -39,6 +43,14 @@ describe('Tests Hubspot actions', () => {
 
     it('Should get Hubspot contact allowed values', async () => {
       const allowedValues = await getHubspotContactAllowedValues(baseContext);
+
+      expect(allowedValues).toBeDefined();
+      expect(allowedValues.length).toBeGreaterThan(0);
+      expect(allowedValues[0]?.value).not.toBeFalsy();
+    });
+
+    it('Should get Hubspot user allowed values', async () => {
+      const allowedValues = await getHubspotUserAllowedValues(baseContext);
 
       expect(allowedValues).toBeDefined();
       expect(allowedValues.length).toBeGreaterThan(0);
@@ -103,14 +115,6 @@ describe('Tests Hubspot actions', () => {
 
     it('Should get Hubspot product allowed values', async () => {
       const allowedValues = await getHubspotProductAllowedValues(baseContext);
-
-      expect(allowedValues).toBeDefined();
-      expect(allowedValues.length).toBeGreaterThan(0);
-      expect(allowedValues[0]?.value).not.toBeFalsy();
-    });
-
-    it('Should get Hubspot user allowed values', async () => {
-      const allowedValues = await getHubspotUserAllowedValues(baseContext);
 
       expect(allowedValues).toBeDefined();
       expect(allowedValues.length).toBeGreaterThan(0);

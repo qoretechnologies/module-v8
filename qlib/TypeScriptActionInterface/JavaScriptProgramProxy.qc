@@ -33,6 +33,12 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         #! Child connect timeout
         const ChildConnectTimeout = 30s;
 
+        #! Setup event timeout
+        const SetupEventTimeout = 60s;
+
+        #! Default proxy request timeout
+        const DefaultRequestTimeout = 90s;
+
         #! Event source info
         hash<EventSourceInfo> event;
     }
@@ -47,7 +53,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         #! Listener counter
         Counter listener_cnt();
 
-        #! Command queue when the listener is active
+        #! Command queue
         Queue cmdq();
 
         #! Listener stop flag
@@ -71,6 +77,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         #! Current command in progress
         hash<auto> command_in_progress;
 
+        #! Set when a proxy restart is made from a proxy listener thread
+        Queue rq;
+
         #! Event count
         Counter event_cnt();
 
@@ -85,24 +94,46 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         */
         static Mutex global_lock;
 
-        #! New socket map; PID -> queue
-        static hash<string, Queue> qmap;
+        #! New socket map; proxy unique hash -> queue
+        #static hash<string, Queue> qmap;
 
-        #! Child map
+        #! Child map; proxy unique hash -> proxy
         static hash<string, JavaScriptProgramProxy> cmap;
+
+        #! Master listener TID
+        static int master_listener_tid;
+
+        #! Master listener counter
+        static Counter master_listener_cnt();
+
+        #! Master listener stop flag
+        static bool master_listener_stop;
+
+        #! File to signal the master listener thread
+        static File sem_write;
+
+        #! File to read in the master listener thread
+        static ReadOnlyFile sem_read;
+
+        #! Semaphore descriptor info
+        static hash<SocketPollInfo> sem_info;
     }
 
     #! Creates the object
     constructor() : TypeScriptProxy(True) {
+        string uh = self.uniqueHash();
+        {
+            global_lock.lock();
+            on_exit global_lock.unlock();
+            cmap{uh} = self;
+        }
+        on_error {
+            global_lock.lock();
+            on_exit global_lock.unlock();
+            cmap{uh} = self;
+        }
+
         startChildProcess();
-        waitForChild();
-        startListener();
-        logChildOutput();
-
-        global_lock.lock();
-        on_exit global_lock.unlock();
-
-        cmap{self.uniqueHash()} = self;
     }
 
     destructor() {
@@ -132,22 +163,27 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
 
         remove cmap{uh};
+        if (!cmap) {
+            stopMasterListener();
+        }
+    }
+
+    static stopMasterListener() {
+        master_listener_stop = True;
+        sem_write.write(".");
+        master_listener_cnt.waitForZero();
+        master.shutdown();
+        delete master;
+        remove master_listener_stop;
+        remove sem_read;
+        remove sem_write;
+        remove sem_info;
+        TSAI::info("Shut down master listener on %y", master_path);
+        remove master_path;
     }
 
     static init(Mutex m) {
         JavaScriptProgramProxy::global_lock = m;
-
-        # must keep socket paths less than ~ 104 chars
-        string host = gethostname();
-        host =~ s/\..*//;
-        master_path = sprintf("%s/ts-proxy-%s-%d.sock", tmp_location(), host, getpid());
-        if (master_path.size() >= 104) {
-            master_path = sprintf("/tmp/ts-proxy-%d.sock", tmp_location(), getpid());
-        }
-
-        master.bindUNIX(master_path);
-        master.listen();
-        TSAI::info("Started master listener on %y", master_path);
     }
 
     static shutdown() {
@@ -156,9 +192,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
         int size = cmap.size();
         map delete cmap{$1}, keys cmap;
-        master.shutdown();
-        delete master;
-        TSAI::info("Shut down %d client%s and master listener on %y", size, size == 1 ? "" : "s", master_path);
+        TSAI::info("Shut down %d client%s", size, size == 1 ? "" : "s");
     }
 
     bool supportsEvent(string key) {
@@ -189,7 +223,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         on_exit global_lock.lock();
 
         on_error removeEventSource(ekey);
-        sendCommandArgs(NOTHING, PC_SETUP_EVENT, (app, action, key, options));
+        sendCommandArgs(NOTHING, PC_SETUP_EVENT, (app, action, key, options), SetupEventTimeout);
     }
 
     private removeEventSource(string ekey) {
@@ -233,7 +267,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             throw "EVENT-ERROR", sprintf("Event key %y is not registered", key);
         }
         if (event.key != key) {
-            throw "EVENT-ERROR", sprintf("Event key %y is registered; cannot remove objservable from unregistered "
+            throw "EVENT-ERROR", sprintf("Event key %y is registered; cannot remove observable from unregistered "
                 "event %y in this proxy", event.key, key);
         }
         string ekey = observable.uniqueHash();
@@ -241,11 +275,23 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             throw "EVENT-ERROR", sprintf("Observable %y is not registered under event key %y", ekey, key);
         }
         {
-            on_success remove event.omap{ekey};
             global_lock.unlock();
             on_exit global_lock.lock();
-            if (event.omap.size() == 1) {
-                sendCommandArgs(NOTHING, PC_RELEASE_EVENT, key);
+
+            remove event.omap{ekey};
+            if (!event.omap) {
+                remove event;
+                info("Releasing event %y", key);
+                try {
+                    sendCommandArgs(NOTHING, PC_RELEASE_EVENT, key, NOTHING, True);
+                } catch (hash<ExceptionInfo> ex) {
+                    if (ex.err == "QUEUE-TIMEOUT") {
+                        error("Event key %y was released by killing the proxy process due to an error: %s: %s", key,
+                            ex.err, ex.desc);
+                    } else {
+                        rethrow;
+                    }
+                }
             }
         }
         #debug("JavaScriptProgramProxy::releaseEventSourceLocked() key: %y remaining: %y stop: %y", key,
@@ -279,11 +325,12 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
         listener_cnt.inc();
         on_error listener_cnt.dec();
-        listener_tid = background listenerThread(proc.id());
+        int pid = proc.id();
+        listener_tid = background listenerThread(pid);
     }
 
     private listenerThread(int pid) {
-        info("Started listener thread for PID %d", pid);
+        info("Started listener thread");
         on_exit {
             remove listener_stop;
             remove listener_tid;
@@ -291,38 +338,55 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             info("Stopped listener thread for PID %d", pid);
         }
         on_error error("Error in listener thread for PID %d: %s", pid, get_exception_string($1));
+        bool restarted;
         while (!listener_stop) {
             int i;
             if (command_in_progress."timeout") {
                 date d = now_us() - command_in_progress.start;
                 if (d > (command_in_progress."timeout" + 10s)) {
                     killChild();
-                    string desc = checkRestart()
-                        ? sprintf("The async call timed out; terminated and restarted child process with PID %d; new "
-                            "child PID %d", pid, proc.id())
-                        : sprintf("The async call timed out; terminated child process PID %d", pid);
+                    restarted = checkRestart(NOTHING, True);
+                    string desc = restarted
+                        ? sprintf("The async call timed out; terminated and restarted child process with PID %d", pid)
+                        : sprintf("The async call timed out; terminated child process");
                     cmdq.push({
                         "cmd": CC_ERR,
                         "ex": {
                             "err": "ASYNC-CALL-TIMEOUT",
                             "desc": sprintf("The async call timed out; terminated and restarted child process with "
-                                "PID %d; new child PID %d", pid, proc.id()),
+                                "PID %d", pid),
                             "arg": command_in_progress,
                         },
                     });
+                    if (restarted) {
+                        pid = proc.id();
+                    }
                 }
             }
+            bool restarted_flag;
+            code handle_restarted = sub () {
+                if (restarted_flag) {
+                    pid = proc.id();
+                    if (!restarted) {
+                        restarted = True;
+                    }
+                    remove restarted_flag;
+                }
+            };
             try {
                 # first read message size
-                i = recvi8(5s);
+                i = recvi8(5s, \restarted_flag);
+                handle_restarted();
                 if (!i) {
                     continue;
                 }
             } catch (hash<ExceptionInfo> ex) {
+                logChildOutput();
                 if (ex.err == "SOCKET-TIMEOUT") {
                     continue;
                 }
-                if (retry(ex)) {
+                if (retry(ex, \restarted_flag)) {
+                    handle_restarted();
                     continue;
                 }
                 error("Error in listener thread: %s; exiting", get_exception_string(ex));
@@ -330,9 +394,10 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             }
             auto v;
             try {
-                string yaml = recv(i, DefaultIoTimeout);
+                string yaml = recv(i, DefaultIoTimeout, \restarted_flag);
+                handle_restarted();
                 if (!yaml.val()) {
-                    continue;
+                    throw "CMD-ERROR", sprintf("Missing response payload of size %d", i);
                 }
                 v = parse_yaml(yaml);
                 if (v.typeCode() != NT_HASH) {
@@ -342,7 +407,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                     throw "CMD-ERROR", sprintf("Expecting \"cmd\" as a string; got %y", v.cmd.fullType());
                 }
             } catch (hash<ExceptionInfo> ex) {
-                if (retry(ex)) {
+                logChildOutput();
+                if (retry(ex, \restarted_flag)) {
+                    handle_restarted();
                     continue;
                 }
                 error("Error in listener thread: %s; exiting", get_exception_string(ex));
@@ -362,8 +429,28 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 }
                 continue;
             }
+            if (v.cmd == CC_STATUS) {
+                info("Status event received: %y", v.info);
+                continue;
+            }
+            debug("Received from PID %d (restarted: %y): %y", pid, restarted, v);
+            # process event setup message if necessary inline
+            if (restarted) {
+                if (event) {
+                    if (v.cmd == CC_OK) {
+                        info("Event listener restarted");
+                    } else if (v.cmd == CC_ERR) {
+                        logChildOutput();
+                        error("Error in proxy PID %d in event restart response: %s; exiting", pid, v.ex.desc);
+                        break;
+                    }
+                }
+                remove restarted;
+                continue;
+            }
             # push command on queue
             cmdq.push(v);
+            #debug("pushed to queue");
         }
     }
 
@@ -374,47 +461,72 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
     }
 
-    private waitForChild() {
-        softstring pid = proc.id();
-        Queue q = qmap{pid} = new Queue();
-        waitForConnection(proc);
-        s = q.get();
-        remove qmap{pid};
-    }
-
-    private static waitForConnection(Process proc) {
-        *Socket s0;
-        date start = now_us();
+    private static masterListenerThread(Counter c) {
+        TSAI::info("Master listener thread started");
+        c.dec();
+        on_exit {
+            TSAI::info("Master listener thread stopped");
+            master_listener_cnt.dec();
+        }
+        softlist<hash<SocketPollInfo>> poll_list = (sem_info, <SocketPollInfo>{
+            "events": SOCK_POLLIN,
+            "socket": master,
+        });
         while (True) {
-            s0 = master.accept(250ms);
+            # setup polling
+            Socket::poll(poll_list, -1);
+            if (master_listener_stop) {
+                break;
+            }
+            timeout to = 1s;
+            *Socket s0 = master.accept(to);
             if (s0) {
-                break;
-            }
-            if (!proc.running()) {
-                break;
-            }
-            date d = now_us() - start;
-            if (d > ChildConnectTimeout) {
-                break;
+                TSAI::debug("Got connection from %y", s0.getPeerInfo());
+                try {
+                    # first read message size
+                    int i = s0.recvi8(to);
+                    string yaml = s0.recv(i, to);
+                    auto v = parse_yaml(yaml);
+                    if (v.typeCode() != NT_HASH) {
+                        TSAI::error("Proxy connection: expecting type \"hash\"; got %y; closing", v.fullType());
+                        continue;
+                    }
+                    if (v.cmd.typeCode() != NT_STRING) {
+                        TSAI::error("Proxy connection: expecting \"cmd\" as a string; got %y; closing",
+                            v.cmd.fullType());
+                        continue;
+                    }
+                    if (v.cmd != CC_STARTED) {
+                        TSAI::error("Proxy connection: expecting \"cmd\" = %y; got %y instead; closing", CC_STARTED,
+                            v.cmd);
+                        continue;
+                    }
+                    # get proxy from key
+                    *JavaScriptProgramProxy proxy = cmap{v.pkey};
+                    if (!proxy) {
+                        TSAI::error("Proxy connection: invalid proxy key %y; known keys: %y; closing", v.pkey,
+                            keys cmap);
+                        continue;
+                    }
+                    TSAI::debug("Got message from proxy PID %d: %y for proxy: %y", proxy.proc.id(), v,
+                        proxy.uniqueHash());
+                    hash<auto> msg = {
+                        "cmd": CC_OK,
+                        "socket": s0,
+                    };
+                    TSAI::info("Received startup confirmation message for proxy PID %d on %s queue",
+                        proxy.proc.id(), proxy.rq ? "restart" : "primary");
+                    if (proxy.rq) {
+                        proxy.rq.push(msg);
+                        remove proxy.rq;
+                    } else {
+                        proxy.cmdq.push(msg);
+                    }
+                } catch (hash<ExceptionInfo> ex) {
+                    TSAI::error("Proxy connection: error processing request: %s", get_exception_string(ex));
+                }
             }
         }
-        if (!s0) {
-            string desc = sprintf("Child PID %d did not connect in the timeout period (%y)", proc.id(),
-                ChildConnectTimeout);
-            if (!proc.running()) {
-                desc += "; child terminated prematurely";
-            }
-            if (*string stdout = proc.readStdout(64 * 1024)) {
-                desc += sprintf(" stdout: %y", stdout);
-            }
-            if (*string stderr = proc.readStderr(64 * 1024)) {
-                desc += sprintf(" stderr: %y", stderr);
-            }
-            throw "CHILD-PROCESS-ERRPR", desc;
-        }
-        int pid = s0.recvi8(10s);
-        TSAI::info("Connected to child with PID: %y", pid, s0.getPeerInfo());
-        qmap{pid}.push(s0);
     }
 
     private stopChildProcess() {
@@ -438,59 +550,138 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         if (proc.running()) {
             killChild();
         } else {
-            info("Child with PID %d terminated normally", proc.id());
+            info("Child terminated normally");
         }
     }
 
     private killChild() {
         try {
             proc.terminate();
-            info("Forced child PID %d to terminate", proc.id());
+            info("Forced child to terminate");
         } catch (hash<ExceptionInfo> ex) {
             # ignore error
         }
-        logChildOutput();
+        logChildOutput(True);
     }
 
     #! Starts the child process
     private startChildProcess() {
+        checkStartMasterListener();
         list<string> args = (
             sprintf("-s=%s", master_path),
             "-vvv",
         );
+        if (ENV.TS_PROXY_LOGDIR) {
+            args += sprintf("-l=%s", ENV.TS_PROXY_LOGDIR);
+        }
+        string uh = self.uniqueHash();
+        hash<auto> env = ENV + {
+            "TS_PROXY_PROCESS_KEY": uh,
+        };
         proc = new Process("ts-proxy", args, {
-            "env": ENV,
+            "env": env,
+            "close_fds": True,
         });
         if (!proc.running()) {
-            throw "CHILD-ERROR", sprintf("Failed to start child process");
+            logChildOutput(True);
+            throw "CHILD-ERROR", "Failed to start child process";
         }
-        info("Started child process with PID %d", proc.id());
+        info("Started child process");
+        hash<auto> h;
+        bool start_listener = !exists rq;
+        {
+            date start = now_us();
+            Queue q = rq ?? cmdq;
+            while (True) {
+                try {
+                    h = q.get(250ms);
+                    break;
+                } catch (hash<ExceptionInfo> ex) {
+                    logChildOutput();
+                    if (ex.err != "QUEUE-TIMEOUT") {
+                        rethrow;
+                    }
+                    date d = now_us() - start;
+                    if (d >= 20s || !proc.running()) {
+                        rethrow "CHILD-ERROR", sprintf("Timeout (%y) waiting for startup message from child "
+                            "process: %s", d, get_exception_string(ex));
+                    }
+                }
+            }
+        }
+        if (h.cmd == CC_ERR) {
+            logChildOutput();
+            throw h.ex.err, sprintf("Error in child process startup response: %s", h.ex.desc), h.ex.arg;
+        }
+        s = h.socket;
+        logChildOutput();
+        info("Child process ready");
+        if (start_listener) {
+            startListener();
+        }
+    }
+
+    static private checkStartMasterListener() {
+        global_lock.lock();
+        on_exit global_lock.unlock();
+
+        if (master_path.val()) {
+            return;
+        }
+
+        # must keep socket paths less than ~ 104 chars
+        string host = gethostname();
+        host =~ s/\..*//;
+        master_path = sprintf("%s/ts-proxy-%s-%d.sock", tmp_location(), host, getpid());
+        if (master_path.size() >= 104) {
+            master_path = sprintf("/tmp/ts-proxy-%d.sock", tmp_location(), getpid());
+        }
+        on_error remove master_path, remove master;
+
+        master.bindUNIX(master_path);
+        master.listen();
+        TSAI::info("Started master listener on %y", master_path);
+
+        # setup semaphor to stop the master listener thread efficiently
+        hash<PipeInfo> info = File::getPipe();
+        sem_read = info.read;
+        sem_write = info.write;
+        sem_info = <SocketPollInfo>{
+            "events": SOCK_POLLIN,
+            "socket": sem_read,
+        };
+
+        master_listener_cnt.inc();
+        Counter c(1);
+        {
+            on_error master_listener_cnt.dec();
+            master_listener_tid = background masterListenerThread(c);
+        }
+        c.waitForZero();
+        TSAI::info("Master listener running in TID %d", master_listener_tid);
     }
 
     #! Sends a command from the parent to the child with a response
-    private auto sendCommandArgs(*date io_timeout, string cmd, *softlist<auto> args) {
+    private auto sendCommandArgs(*date io_timeout, string cmd, *softlist<auto> args,
+            date response_timeout = DefaultRequestTimeout, *bool no_retry) {
         string yaml = makeSend(cmd, {"args": args});
         hash<auto> h;
         RetryCounter rc();
         while (True) {
             try {
-                command_in_progress = {
-                    "cmd": cmd,
-                    "args": args,
-                    "timeout": io_timeout,
-                    "start": now_us(),
-                };
+                sendCommandArgsIntern(io_timeout, cmd, args, yaml);
                 on_exit remove command_in_progress;
-                debug("Sending command %y", yaml);
-                sendString(yaml);
-                h = waitForCommand();
-                #logChildOutput();
+                h = waitForCommand(response_timeout);
                 if (!ValidResponses{h.cmd}) {
                     throw "CMD-ERROR", sprintf("Unknown response %y; valid responses: %y", h.cmd,
                         keys ValidResponses);
                 }
             } catch (hash<ExceptionInfo> ex) {
-                if (retryIntern(ex, rc)) {
+                if (ex.err == "QUEUE-TIMEOUT") {
+                    error("Error waiting for response to proxy command %y; terminating proxy and retrying", cmd);
+                    killChild();
+                }
+                if (retryIntern(ex, rc) && !no_retry) {
                     info("Restarting command due to error");
                     continue;
                 }
@@ -508,9 +699,23 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         return h.rv;
     }
 
+    private sendCommandArgsIntern(*date io_timeout, string cmd, *softlist<auto> args, *string yaml) {
+        command_in_progress = {
+            "cmd": cmd,
+            "args": args,
+            "timeout": io_timeout,
+            "start": now_us(),
+        };
+        if (!yaml.val()) {
+            yaml = makeSend(cmd, {"args": args});
+        }
+        debug("Sending command %y", yaml);
+        sendString(yaml);
+    }
+
     #! Wait for a command when the listener is active
-    hash<auto> waitForCommand() {
-        hash<auto> v = cmdq.get();
+    hash<auto> waitForCommand(*date to) {
+        hash<auto> v = cmdq.get(to);
         if (v.cmd == CC_ERR) {
             throw v.ex.err, v.ex.desc, v.ex.arg;
         }
@@ -518,7 +723,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     #! Reads an 8-byte integer in network byte order from the socket
-    int recvi8(*timeout to) {
+    /** Only called in the per-process listener thread
+    */
+    int recvi8(*date to, *reference<bool> restarted) {
         date start = now_us();
         while (True) {
             try {
@@ -528,7 +735,8 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                     if (!listener_tid || listener_stop) {
                         return 0;
                     }
-                    if (checkRestart()) {
+                    if (checkRestart(NOTHING, True)) {
+                        restarted = True;
                         continue;
                     }
                 }
@@ -539,7 +747,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             if (listener_stop || !listener_tid) {
                 return 0;
             }
-            if (checkRestart()) {
+            if (checkRestart(NOTHING, True)) {
                 continue;
             }
             if (to) {
@@ -551,7 +759,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
     }
 
-    string recv(int size, *timeout to) {
+    string recv(int size, *date to, *reference<bool> restarted) {
         string str;
         date start = now_us();
         while (True) {
@@ -572,7 +780,11 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                     rethrow;
                 }
             }
-            if (listener_stop || !listener_tid || checkRestart()) {
+            if (listener_stop || !listener_tid) {
+                return "";
+            }
+            if (checkRestart()) {
+                restarted = True;
                 return "";
             }
             if (to) {
@@ -585,21 +797,27 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     private *bool retry(hash<ExceptionInfo> ex) {
-        return retryIntern(ex);
+        bool restarted;
+        return retry(ex, \restarted);
     }
 
-    private *bool retryIntern(hash<ExceptionInfo> ex, *RetryCounter rc) {
+    private *bool retry(hash<ExceptionInfo> ex, reference<bool> restarted) {
+        return retryIntern(ex, NOTHING, \restarted);
+    }
+
+    private *bool retryIntern(hash<ExceptionInfo> ex, *RetryCounter rc, *reference<bool> restarted) {
         bool aborted = (ex.err == "CHILD-ABORTED");
         if (aborted) {
             # at this point the process has been restarted
             error("Error communicating with child: %s (restarted: %y)", get_exception_string(ex), proc.running());
         } else if (checkRestart(rc)) {
+            restarted = True;
             return True;
         }
         return rc ? rc.retry(ex, command_in_progress) : True;
     }
 
-    private *bool checkRestart(*RetryCounter rc) {
+    private *bool checkRestart(*RetryCounter rc, *bool in_listener) {
         bool restart;
         {
             AutoLock al(m);
@@ -616,13 +834,18 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 return;
             }
             if (!proc.running()) {
-                error("Child process %d aborted; restarting", proc.id());
+                error("Child process aborted; restarting");
                 if (rc) {
                     rc.restart();
                 }
                 restarting = True;
                 delete al;
+                rq = new Queue();
                 restartProcessIntern();
+                remove restarting;
+                if (wait_restart) {
+                    cond_restart.broadcast();
+                }
                 return True;
             }
         }
@@ -635,21 +858,25 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         if (proc.running()) {
             proc.terminate();
         }
+        bool in_listener = exists rq;
+        if (!in_listener) {
+            stopListener();
+        }
+        delete s;
 
-        error("Restarting child process %d after an error", pid);
+        error("Restarting child process after an error");
         logChildOutput();
 
         ++restart_count;
 
         startChildProcess();
-        waitForChild();
 
         if (command_in_progress) {
             cmdq.push({
                 "cmd": CC_ERR,
                 "ex": {
                     "err": "CHILD-ABORTED",
-                    "desc": sprintf("Restarted child process with PID %d; new child PID %d", pid, proc.id()),
+                    "desc": sprintf("Restarted child process with PID %d", pid),
                     "arg": command_in_progress,
                 },
             });
@@ -664,46 +891,59 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
 
         if (event) {
-            sendCommandArgs(NOTHING, PC_SETUP_EVENT, (event.app, event.action, event.key, event.options));
-        }
-
-        AutoLock al(m);
-        remove restarting;
-        if (wait_restart) {
-            cond_restart.broadcast();
+            info("Restarting event listener for @%s/%s %y", event.app, event.action, event.key);
+            if (in_listener) {
+                sendCommandArgsIntern(NOTHING, PC_SETUP_EVENT, (event.app, event.action, event.key, event.options));
+            } else {
+                sendCommandArgs(NOTHING, PC_SETUP_EVENT, (event.app, event.action, event.key, event.options));
+            }
         }
     }
 
-    private logChildOutput() {
+    private logChildOutput(*bool always_output) {
         *string str = proc.readStdout(64 * 1024, 0s);
+        bool out;
         if (str) {
             trim str;
-            info("Child PID %d output: %s", proc.id(), str);
+            string pfx = " > stdout: ";
+            str = pfx + str;
+            str = replace(str, "\n", "\n" + pfx);
+            info("Child output follows:\n%s", str);
+            out = True;
         }
         str = proc.readStderr(64 * 1024, 0s);
         if (str) {
             trim str;
-            error("Child PID %d error output: %s", proc.id(), str);
+            string pfx = " > stderr: ";
+            str = pfx + str;
+            str = replace(str, "\n", "\n" + pfx);
+            error("Child error output followg:\n%s", str);
+            if (!out) {
+                out = True;
+            }
+        }
+        if (always_output && !out) {
+            info("child has no output");
         }
     }
 
     private debug(string fmt, ...) {
-        fmt = "JavaScriptProgramProxy: " + fmt;
+        fmt = sprintf("JavaScriptProgramProxy%s: ", proc ? (" for PID " + proc.id()) : "") + fmt;
         TSAI::logArgs(LoggerLevel::LevelDebug, fmt, argv);
     }
 
     private info(string fmt, ...) {
-        fmt = "JavaScriptProgramProxy: " + fmt;
+        fmt = sprintf("JavaScriptProgramProxy%s: ", proc ? (" for PID " + proc.id()) : "") + fmt;
         TSAI::logArgs(LoggerLevel::LevelInfo, fmt, argv);
     }
 
     private error(string fmt, ...) {
-        fmt = "JavaScriptProgramProxy: " + fmt;
+        fmt = sprintf("JavaScriptProgramProxy%s: ", proc ? (" for PID " + proc.id()) : "") + fmt;
         TSAI::logArgs(LoggerLevel::LevelError, fmt, argv);
     }
 
     private fatal(string fmt, ...) {
-        fmt = "JavaScriptProgramProxy: " + fmt;
+        fmt = sprintf("JavaScriptProgramProxy%s: ", proc ? (" for PID " + proc.id()) : "") + fmt;
         TSAI::logArgs(LoggerLevel::LevelFatal, fmt, argv);
     }
 }

@@ -91,13 +91,11 @@ public class JavaScriptThreadProcessPool {
             info = remove imap{pkey};
             remove info.atime;
             info.tid = tid;
-            # add to active map
-            amap{pkey} = info;
         } else {
-            # do not create the proxy object with the lock locked; each thread will need its own object in any case
             info = getProxyIntern(tid, \pkey);
-            amap{pkey} = info;
         }
+        # add to active map
+        amap{pkey} = info;
         tmap{tid} = pkey;
         return info.p;
     }
@@ -141,8 +139,6 @@ public class JavaScriptThreadProcessPool {
             info = remove imap{pkey};
             remove info.atime;
         } else {
-            # do not create the proxy object with the lock locked; each event / API call will need its own object in
-            # any case
             info = getProxyIntern(gettid(), \pkey);
             # this proxy is not dedicated to any TID; it's only for events
             remove info.tid;
@@ -182,6 +178,7 @@ public class JavaScriptThreadProcessPool {
     }
 
     private hash<ProxyCacheInfo> getProxyIntern(int tid, reference<string> pkey) {
+        # do not create the proxy object with the lock locked; each thread will need its own object in any case
         m.unlock();
         on_exit m.lock();
 

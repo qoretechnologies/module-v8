@@ -28,12 +28,15 @@ class TsProxy inherits TypeScriptProxy {
 
         const Opts = {
             "socket": "s,socket=s",
+            "logdir": "l,logdir=s",
             "verbose": "v,verbose:i+",
             "help": "h,help",
         };
     }
 
     private {
+        string pkey;
+
         Mutex m();
 
         Logger logger;
@@ -43,25 +46,51 @@ class TsProxy inherits TypeScriptProxy {
     }
 
     constructor() : TypeScriptProxy(False) {
-        close_all_fd();
         opts = GetOpt::parseExit(Opts, \ARGV);
         if (opts.help || !opts.socket) {
             usage();
         }
+        set_signal_handler(SIGUSR1, \signalHandler());
+        pkey = ENV.TS_PROXY_PROCESS_KEY;
         setupLogger();
         DataProvider::setGlobalLogger(logger);
 
         # we have to make sure that no further servers are started by the TypeScriptActionInterface module
         TypeScriptActionInterface::disableServerOnDemand();
 
-        info("Connecting to server at %y", opts.socket);
+        info("Connecting to server at %y with key %y (logdir %y)", opts.socket, pkey, opts.logdir);
         s.connectUNIX(opts.socket);
-        s.sendi8(getpid(), 5s);
+        string yaml = makeSend(CC_STARTED, {
+            "pkey": pkey,
+            "pid": getpid(),
+        });
+        sendString(yaml);
         info("Connected to server: %y", s.getPeerInfo());
         commandLoop();
     }
 
-   private setupLogger(string name = "console") {
+    private signalHandler(int signal) {
+        hash<auto> info;
+        foreach hash<auto> i in (get_all_thread_call_stacks().pairIterator()) {
+            splice i.value, 0, 2;
+            info{i.key} = map $1.type != "new-thread"
+                ? sprintf("%s %s()", get_ex_pos($1), $1.function)
+                : "new-thread",
+                i.value;
+        }
+        # first add stack traces to log file
+        File f();
+        string fn = sprintf("/tmp/ts-proxy-%d.log", getpid());
+        f.open2(fn, O_CREAT | O_APPEND | O_WRONLY);
+        f.printf("%s: %N\n", now_us().format("IF"), info);
+        # now send status message to parent
+        string yaml = makeSend(CC_STATUS, {
+            "info": sprintf("%N", info),
+        });
+        sendString(yaml);
+    }
+
+    private setupLogger(string name = "console") {
         LoggerLevel level;
         if (opts.verbose > 1) {
             level = LoggerLevel::getLevelDebug();
@@ -72,6 +101,14 @@ class TsProxy inherits TypeScriptProxy {
         }
         logger = new Logger(name, level);
         logger.addAppender(new StdoutAppender());
+
+        if (opts.logdir.val()) {
+            string fn = sprintf("%s/ts-proxy-%d.log", opts.logdir, getpid());
+            LoggerAppenderFileRotate lafr("ts-proxy",
+                new LoggerLayoutPattern("%d{YYYY-MM-DD HH:mm:SS.xx} T%t [%p]: %m%n"), fn);
+            lafr.open();
+            logger.addAppender(lafr);
+        }
     }
 
     #! This runs in the child
@@ -79,12 +116,15 @@ class TsProxy inherits TypeScriptProxy {
         while (True) {
             hash<auto> h;
             try {
-                h = getCommand();
+                h = getCommand(250ms);
                 if (!ValidCommands{h.cmd}) {
                     throw "CMD-ERROR", sprintf("Unknown parent command %y; valid send commands: %y", h.cmd,
                         keys ValidCommands);
                 }
             } catch (hash<ExceptionInfo> ex) {
+                if (ex.err == "SOCKET-TIMEOUT") {
+                    continue;
+                }
                 error("Error processing command from parent: %s", get_exception_string(ex));
                 break;
             }
@@ -205,6 +245,8 @@ class TsProxy inherits TypeScriptProxy {
                 },
             });
             sendString(yaml);
+            info("Cannot release unknown event key %y; known event keys: %y", key, keys emap);
+            return;
         }
 
         if (!emap{key}.stop_flag) {
@@ -268,6 +310,7 @@ class TsProxy inherits TypeScriptProxy {
 
     static usage() {
         printf("usage: %s [options]
+ -l,--logdir=ARG     the directory for logs
  -s,--socket=ARG     the UNIX socket file for listening to server commands
  -v,--verbose[=ARG]  the verbosity level of the program
  -h,--help           this help text

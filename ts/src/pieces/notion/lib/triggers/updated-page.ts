@@ -4,6 +4,8 @@ import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit
 import { Debugger } from '../../../../utils/Debugger';
 import { getNotionPageIdAllowedValues } from '../common/helpers/get-page-id-allowed-values';
 import { pageItemQoreType } from './constants';
+import { DEFAULT_TRIGGER_POLLING_INTERVAL } from '../../../../global/constants';
+import { delayOrCancel } from '../../../../global/helpers/event-triggers';
 
 const notionUpdatedPageEvent = QoreAppCreator.createLocalizedTrigger({
   app: 'Notion',
@@ -40,7 +42,7 @@ const notionUpdatedPageEvent = QoreAppCreator.createLocalizedTrigger({
         }
         lastEditedTime = page.last_edited_time;
 
-        await new Promise((resolve) => setTimeout(resolve, 30_000));
+        await delayOrCancel(DEFAULT_TRIGGER_POLLING_INTERVAL, should_stop);
       }
     } catch (error) {
       Debugger.log('Error in updated_page event_function', error);

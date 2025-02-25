@@ -719,6 +719,8 @@ exports.actionsCatalogue = {
             // webhook_event_loc?: string -> the location of the webhook event data in dot notation
             // webhook_echo_header?: string -> the name of any header in the input request that should be echoed in
             // the response
+            // webhook_echo_body_keys?: string[] -> the name of any key in the input request body that should be echoed
+            // in the response
             // event_info: object
             /** The description of the event that the action will generate with the following keys
                 - id: *string -> the event code for the event; if not present will default to "event"
