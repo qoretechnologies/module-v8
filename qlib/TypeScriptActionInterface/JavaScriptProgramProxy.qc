@@ -223,7 +223,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         on_exit global_lock.lock();
 
         on_error removeEventSource(ekey);
+        info("Setting up event source for @%s/%s %y", app, action, key);
         sendCommandArgs(NOTHING, PC_SETUP_EVENT, (app, action, key, options), SetupEventTimeout);
+        info("Event source for @%s/%s %y ready", app, action, key);
     }
 
     private removeEventSource(string ekey) {

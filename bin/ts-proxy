@@ -116,7 +116,7 @@ class TsProxy inherits TypeScriptProxy {
         while (True) {
             hash<auto> h;
             try {
-                h = getCommand(250ms);
+                h = getCommand();
                 if (!ValidCommands{h.cmd}) {
                     throw "CMD-ERROR", sprintf("Unknown parent command %y; valid send commands: %y", h.cmd,
                         keys ValidCommands);
