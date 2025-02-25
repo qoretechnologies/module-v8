@@ -1,6 +1,6 @@
 import { TAllowedPaths, TQoreAppActionOverrideOption } from '@qoretechnologies/ts-toolkit';
 import hubspotProducts from '../../../schemas/hubspot/products.swagger.json';
-import { getHubspotProductAllowedValues } from '../helpers/get-product.allowe-values';
+import { getHubspotProductAllowedValues } from '../helpers/get-product.allowed-values';
 import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
 import { OpenAPIV2 } from 'openapi-types';
 import { HUBSPOT_APP_NAME, hubspotSearchSortsOption } from '../constants';
