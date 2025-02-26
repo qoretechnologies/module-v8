@@ -201,6 +201,18 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         if (exists (auto tdesc = remove type_hash.type)) {
             type = TypeScriptActionInterface::getType(path, tdesc, req ?? info.attr.required ?? qdf.isMandatory(),
                 NOTHING, fctx);
+        } else if (exists req) {
+            type = qdf.getType();
+            if (req) {
+                if (type.isOrNothingType()) {
+                    type = type.getMandatoryType();
+                }
+            } else {
+                if (type.isMandatory()) {
+                    type = type.getOrNothingType();
+                }
+            }
+
         }
         info += TypeScriptActionInterface::getFieldHash(path, info.name, type ?? qdf.getType(), \type_hash, req,
             fctx);
