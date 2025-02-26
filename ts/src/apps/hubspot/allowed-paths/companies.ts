@@ -54,7 +54,7 @@ export const HUBSPOT_COMPANIES_ALLOWED_PATHS = {
   '/crm/v3/objects/companies/batch/upsert': {
     POST: {
       override_options: {
-        'body.inputs.idProperty': {
+        'inputs.idProperty': {
           required: true,
           allowed_values_creatable: true,
           get_allowed_values: getHubspotCompanyIdPropertyAllowedValues,

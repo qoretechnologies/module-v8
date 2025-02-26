@@ -48,7 +48,7 @@ export const HUBSPOT_CUSTOM_OBJECTS_ALLOWED_PATHS = {
     POST: {
       override_options: {
         objectType,
-        'body.inputs.idProperty': {
+        'inputs.idProperty': {
           required: true,
           allowed_values_creatable: true,
           get_allowed_values: getHubspotCustomObjectIdPropertyAllowedValues,

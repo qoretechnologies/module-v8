@@ -36,7 +36,7 @@ export const HUBSPOT_LEADS_ALLOWED_PATHS = {
   '/crm/v3/objects/leads/batch/upsert': {
     POST: {
       override_options: {
-        'body.inputs.idProperty': {
+        'inputs.idProperty': {
           required: true,
           allowed_values_creatable: true,
           get_allowed_values: getHubspotLeadIdPropertyAllowedValues,
