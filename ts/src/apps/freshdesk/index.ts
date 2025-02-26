@@ -45,7 +45,7 @@ export default (locale: Locales) =>
     },
     rest_modifiers: {
       options: FRESHDESK_CONN_OPTIONS,
-      required_options: 'subdomain',
+      required_options: 'subdomain, apiKey',
       url_template_options: ['subdomain'],
       set_options_post_auth: (
         context: Omit<TQoreAppActionFunctionContext<typeof FRESHDESK_CONN_OPTIONS>, 'opts'>

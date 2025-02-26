@@ -41,14 +41,20 @@ const FreshdeskNewTicketTrigger = QoreAppCreator.createLocalizedTrigger({
   options: {
     ticketStatus: {
       required: true,
-      type: 'list',
+      type: {
+        type: 'list',
+        element_type: 'softnumber',
+      },
       allowed_values: FreshdeskTicketStatusAllowedValues,
       allowed_values_creatable: true,
       default_value: [2],
     },
     ticketPriority: {
       required: false,
-      type: 'list',
+      type: {
+        type: 'list',
+        element_type: 'softnumber',
+      },
       allowed_values: FreshdeskTicketPriorityAllowedValues,
       allowed_values_creatable: true,
     },
