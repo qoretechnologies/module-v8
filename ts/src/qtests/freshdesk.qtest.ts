@@ -12,8 +12,9 @@ describe('Tests Freshdesk Actions', () => {
     connection = testApi.createConnection<typeof FRESHDESK_CONN_OPTIONS>('freshdesk', {
       opts: {
         subdomain,
-        username,
-        password,
+        token: btoa(`${username}:${password}`),
+        apiKey: username,
+        url: `https://${subdomain}.freshdesk.com`,
         oauth2_grant_type: 'none',
       },
     });

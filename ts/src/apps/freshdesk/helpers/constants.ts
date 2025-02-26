@@ -19,8 +19,6 @@ export const fetchFreshdeskAllowedValues = async <ItemType = unknown>(
       path,
       params: {
         per_page: '100',
-        order_by: 'created_at',
-        order_type: 'desc',
       },
       headers: {
         Authorization: `Bearer ${token}`,
