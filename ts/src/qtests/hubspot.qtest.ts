@@ -1,7 +1,7 @@
 import { TCustomConnOptions, TQoreAppActionFunctionContext } from '@qoretechnologies/ts-toolkit';
 import { getHubspotCompanyAllowedValues } from '../apps/hubspot/helpers/get-company-allowed-values';
 import { getHubspotContactAllowedValues } from '../apps/hubspot/helpers/get-contact-allowed-values';
-import { getHubspotCustomObjectIdAllowedValues } from '../apps/hubspot/helpers/get-cusom-object-id-allowed-values';
+import { getHubspotCustomObjectIdAllowedValues } from '../apps/hubspot/helpers/get-custom-object-id-allowed-values';
 import { getHubspotCustomObjectTypeAllowedValues } from '../apps/hubspot/helpers/get-custom-object-type-allowed-values';
 import { getHubspotDealAllowedValues } from '../apps/hubspot/helpers/get-deal-allowed-values';
 import { getHubspotLeadAllowedValues } from '../apps/hubspot/helpers/get-lead-allowed-values';
@@ -9,6 +9,7 @@ import { getHubspotProductAllowedValues } from '../apps/hubspot/helpers/get-prod
 import { getHubspotTicketAllowedValues } from '../apps/hubspot/helpers/get-ticket-allowed-value';
 import { getHubspotUserAllowedValues } from '../apps/hubspot/helpers/get-user-allowed-values';
 import { getHubspotCompanyPropertiesAllowedValues } from '../apps/hubspot/helpers/object-properties-allowed-values';
+import { getHubspotCompanyIdPropertyAllowedValues } from '../apps/hubspot/helpers/get-id-property-allowed-values';
 
 let connection: string;
 // TODO: finish tests as soon as the connection is fixed (schema map error)
@@ -123,6 +124,14 @@ describe('Tests Hubspot actions', () => {
 
     it('Should get Hubspot object properties allowed values', async () => {
       const allowedValues = await getHubspotCompanyPropertiesAllowedValues(baseContext);
+
+      expect(allowedValues).toBeDefined();
+      expect(allowedValues.length).toBeGreaterThan(0);
+      expect(allowedValues[0]?.value).not.toBeFalsy();
+    });
+
+    it('Should get Hubspot company id property allowed values', async () => {
+      const allowedValues = await getHubspotCompanyIdPropertyAllowedValues(baseContext);
 
       expect(allowedValues).toBeDefined();
       expect(allowedValues.length).toBeGreaterThan(0);

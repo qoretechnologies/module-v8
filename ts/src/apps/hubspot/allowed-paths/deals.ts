@@ -5,6 +5,7 @@ import hubspotDeals from '../../../schemas/hubspot/deals.swagger.json';
 import { HUBSPOT_APP_NAME, hubspotSearchSortsOption } from '../constants';
 import { getHubspotDealAllowedValues } from '../helpers/get-deal-allowed-values';
 import { getHubspotDealPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
+import { getHubspotDealIdPropertyAllowedValues } from '../helpers/get-id-property-allowed-values';
 
 const dealId = {
   type: 'softstring',
@@ -33,7 +34,15 @@ export const HUBSPOT_DEALS_ALLOWED_PATHS = {
     },
   },
   '/crm/v3/objects/deals/batch/upsert': {
-    POST: {},
+    POST: {
+      override_options: {
+        'body.inputs.idProperty': {
+          required: true,
+          allowed_values_creatable: true,
+          get_allowed_values: getHubspotDealIdPropertyAllowedValues,
+        },
+      },
+    },
   },
   '/crm/v3/objects/deals/{dealId}': {
     GET: {
@@ -57,6 +66,10 @@ export const HUBSPOT_DEALS_ALLOWED_PATHS = {
     POST: {
       override_options: {
         sorts: hubspotSearchSortsOption,
+        limit: {
+          required: true,
+          default_value: 10,
+        },
         properties: {
           type: {
             type: 'list',

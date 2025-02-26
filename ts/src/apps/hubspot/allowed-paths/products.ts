@@ -5,6 +5,7 @@ import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
 import { OpenAPIV2 } from 'openapi-types';
 import { HUBSPOT_APP_NAME, hubspotSearchSortsOption } from '../constants';
 import { getHubspotProductPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
+import { getHubspotProductIdPropertyAllowedValues } from '../helpers/get-id-property-allowed-values';
 
 const productId = {
   type: 'softstring',
@@ -33,12 +34,24 @@ export const HUBSPOT_PRODUCTS_ALLOWED_PATHS = {
     },
   },
   '/crm/v3/objects/products/batch/upsert': {
-    POST: {},
+    POST: {
+      override_options: {
+        'body.inputs.idProperty': {
+          required: true,
+          allowed_values_creatable: true,
+          get_allowed_values: getHubspotProductIdPropertyAllowedValues,
+        },
+      },
+    },
   },
   '/crm/v3/objects/products/search': {
     POST: {
       override_options: {
         sorts: hubspotSearchSortsOption,
+        limit: {
+          required: true,
+          default_value: 10,
+        },
         properties: {
           type: {
             type: 'list',

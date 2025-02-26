@@ -36,6 +36,10 @@ export const HUBSPOT_CONTACTS_ALLOWED_PATHS = {
     POST: {
       override_options: {
         sorts: hubspotSearchSortsOption,
+        limit: {
+          required: true,
+          default_value: 10,
+        },
         properties: {
           type: {
             type: 'list',

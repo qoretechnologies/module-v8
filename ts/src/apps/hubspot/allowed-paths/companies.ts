@@ -5,6 +5,7 @@ import hubspotCompanies from '../../../schemas/hubspot/companies.swagger.json';
 import { HUBSPOT_APP_NAME, hubspotSearchSortsOption } from '../constants';
 import { getHubspotCompanyAllowedValues } from '../helpers/get-company-allowed-values';
 import { getHubspotCompanyPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
+import { getHubspotCompanyIdPropertyAllowedValues } from '../helpers/get-id-property-allowed-values';
 
 const companyId = {
   type: 'softstring',
@@ -51,11 +52,23 @@ export const HUBSPOT_COMPANIES_ALLOWED_PATHS = {
     },
   },
   '/crm/v3/objects/companies/batch/upsert': {
-    POST: {},
+    POST: {
+      override_options: {
+        'body.inputs.idProperty': {
+          required: true,
+          allowed_values_creatable: true,
+          get_allowed_values: getHubspotCompanyIdPropertyAllowedValues,
+        },
+      },
+    },
   },
   '/crm/v3/objects/companies/search': {
     POST: {
       override_options: {
+        limit: {
+          required: true,
+          default_value: 10,
+        },
         sorts: hubspotSearchSortsOption,
         properties: {
           type: {
