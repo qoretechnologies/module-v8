@@ -28,6 +28,7 @@ class TsProxy inherits TypeScriptProxy {
 
         const Opts = {
             "socket": "s,socket=s",
+            "logdir": "l,logdir=s",
             "verbose": "v,verbose:i+",
             "help": "h,help",
         };
@@ -57,7 +58,7 @@ class TsProxy inherits TypeScriptProxy {
         # we have to make sure that no further servers are started by the TypeScriptActionInterface module
         TypeScriptActionInterface::disableServerOnDemand();
 
-        info("Connecting to server at %y with key %y", opts.socket, pkey);
+        info("Connecting to server at %y with key %y (logdir %y)", opts.socket, pkey, opts.logdir);
         s.connectUNIX(opts.socket);
         string yaml = makeSend(CC_STARTED, {
             "pkey": pkey,
@@ -100,6 +101,14 @@ class TsProxy inherits TypeScriptProxy {
         }
         logger = new Logger(name, level);
         logger.addAppender(new StdoutAppender());
+
+        if (opts.logdir.val()) {
+            string fn = sprintf("%s/ts-proxy-%d.log", opts.logdir, getpid());
+            LoggerAppenderFileRotate lafr("ts-proxy",
+                new LoggerLayoutPattern("%d{YYYY-MM-DD HH:mm:SS.xx} T%t [%p]: %m%n"), fn);
+            lafr.open();
+            logger.addAppender(lafr);
+        }
     }
 
     #! This runs in the child
@@ -301,6 +310,7 @@ class TsProxy inherits TypeScriptProxy {
 
     static usage() {
         printf("usage: %s [options]
+ -l,--logdir=ARG     the directory for logs
  -s,--socket=ARG     the UNIX socket file for listening to server commands
  -v,--verbose[=ARG]  the verbosity level of the program
  -h,--help           this help text
