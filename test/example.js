@@ -112,7 +112,10 @@ exports.actionsCatalogue = {
                 - options?: object -> describes connection options supported by connections for this application; keys
                   are option names; values are converted to option hashes described by the COnnectionOptionInfo
                   hashdecl: https://qoretechnologies.com/manual/qorus/gitlab-docs/develop/qore/modules/ConnectionProvider/html/struct_connection_provider_1_1_connection_option_info.html
-                - required_options?: string[] -> a list of required options for connections for this app
+                - required_options?: string -> required options for connections for this app; required option names
+                  are separated by commas (","); if there are multiple possibilities, they should be separated by pipe
+                  chars ("|"); ex: "client_id,client_secret,tenant|token"; all strings must be valid option names in
+                  options
                 - set_options_post_auth?: async function (ctx? : object) : object? -> A function that is called after
                   authenticating to retrieve additional options to set on the connection; the return value must be an
                   object with serializable values that are connection options; the options will be stored on the
