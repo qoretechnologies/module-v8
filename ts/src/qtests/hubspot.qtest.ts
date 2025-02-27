@@ -12,7 +12,6 @@ import { getHubspotCompanyPropertiesAllowedValues } from '../apps/hubspot/helper
 import { getHubspotCompanyIdPropertyAllowedValues } from '../apps/hubspot/helpers/get-id-property-allowed-values';
 
 let connection: string;
-// TODO: finish tests as soon as the connection is fixed (schema map error)
 describe('Tests Hubspot actions', () => {
   const token = process.env.HUBSPOT_TOKEN;
   let customObjectType: string;

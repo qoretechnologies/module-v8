@@ -1,11 +1,15 @@
 import { TAllowedPaths, TQoreAppActionOverrideOption } from '@qoretechnologies/ts-toolkit';
-import hubspotProducts from '../../../schemas/hubspot/products.swagger.json';
-import { getHubspotProductAllowedValues } from '../helpers/get-product.allowed-values';
-import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
 import { OpenAPIV2 } from 'openapi-types';
+import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
+import hubspotProducts from '../../../schemas/hubspot/products.swagger.json';
 import { HUBSPOT_APP_NAME, hubspotSearchSortsOption } from '../constants';
-import { getHubspotProductPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
 import { getHubspotProductIdPropertyAllowedValues } from '../helpers/get-id-property-allowed-values';
+import {
+  getHubspotProductPropertiesType,
+  getHubspotProductPropertiesTypeOptional,
+} from '../helpers/get-object-properties';
+import { getHubspotProductAllowedValues } from '../helpers/get-product.allowed-values';
+import { getHubspotProductPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
 
 const productId = {
   type: 'softstring',
@@ -30,6 +34,10 @@ export const HUBSPOT_PRODUCTS_ALLOWED_PATHS = {
         associations: {
           required: false,
         },
+        properties: {
+          required: true,
+          get_dynamic_type: getHubspotProductPropertiesType,
+        },
       },
     },
   },
@@ -40,6 +48,10 @@ export const HUBSPOT_PRODUCTS_ALLOWED_PATHS = {
           required: true,
           allowed_values_creatable: true,
           get_allowed_values: getHubspotProductIdPropertyAllowedValues,
+        },
+        'inputs.properties': {
+          required: true,
+          get_dynamic_type: getHubspotProductPropertiesTypeOptional,
         },
       },
     },
@@ -73,6 +85,10 @@ export const HUBSPOT_PRODUCTS_ALLOWED_PATHS = {
     PATCH: {
       override_options: {
         productId,
+        properties: {
+          required: true,
+          get_dynamic_type: getHubspotProductPropertiesTypeOptional,
+        },
       },
     },
     DELETE: {

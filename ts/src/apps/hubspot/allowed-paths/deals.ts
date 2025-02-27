@@ -6,6 +6,10 @@ import { HUBSPOT_APP_NAME, hubspotSearchSortsOption } from '../constants';
 import { getHubspotDealAllowedValues } from '../helpers/get-deal-allowed-values';
 import { getHubspotDealPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
 import { getHubspotDealIdPropertyAllowedValues } from '../helpers/get-id-property-allowed-values';
+import {
+  getHubspotDealPropertiesType,
+  getHubspotDealPropertiesTypeOptional,
+} from '../helpers/get-object-properties';
 
 const dealId = {
   type: 'softstring',
@@ -30,6 +34,10 @@ export const HUBSPOT_DEALS_ALLOWED_PATHS = {
         associations: {
           required: false,
         },
+        properties: {
+          required: true,
+          get_dynamic_type: getHubspotDealPropertiesType,
+        },
       },
     },
   },
@@ -40,6 +48,10 @@ export const HUBSPOT_DEALS_ALLOWED_PATHS = {
           required: true,
           allowed_values_creatable: true,
           get_allowed_values: getHubspotDealIdPropertyAllowedValues,
+        },
+        'inputs.properties': {
+          required: true,
+          get_dynamic_type: getHubspotDealPropertiesTypeOptional,
         },
       },
     },
@@ -54,6 +66,10 @@ export const HUBSPOT_DEALS_ALLOWED_PATHS = {
     PATCH: {
       override_options: {
         dealId,
+        properties: {
+          required: true,
+          get_dynamic_type: getHubspotDealPropertiesTypeOptional,
+        },
       },
     },
     DELETE: {

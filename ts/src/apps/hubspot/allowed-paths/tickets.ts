@@ -6,6 +6,10 @@ import { HUBSPOT_APP_NAME, hubspotSearchSortsOption } from '../constants';
 import { getHubspotTicketAllowedValues } from '../helpers/get-ticket-allowed-value';
 import { getHubspotTicketPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
 import { getHubspotTicketIdPropertyAllowedValues } from '../helpers/get-id-property-allowed-values';
+import {
+  getHubspotTicketPropertiesType,
+  getHubspotTicketPropertiesTypeOptional,
+} from '../helpers/get-object-properties';
 
 const ticketId = {
   type: 'softstring',
@@ -30,6 +34,10 @@ export const HUBSPOT_TICKETS_ALLOWED_PATHS = {
         associations: {
           required: false,
         },
+        properties: {
+          required: true,
+          get_dynamic_type: getHubspotTicketPropertiesType,
+        },
       },
     },
   },
@@ -40,6 +48,10 @@ export const HUBSPOT_TICKETS_ALLOWED_PATHS = {
           required: true,
           allowed_values_creatable: true,
           get_allowed_values: getHubspotTicketIdPropertyAllowedValues,
+        },
+        'inputs.properties': {
+          required: true,
+          get_dynamic_type: getHubspotTicketPropertiesTypeOptional,
         },
       },
     },
@@ -73,6 +85,10 @@ export const HUBSPOT_TICKETS_ALLOWED_PATHS = {
     PATCH: {
       override_options: {
         ticketId,
+        properties: {
+          required: true,
+          get_dynamic_type: getHubspotTicketPropertiesTypeOptional,
+        },
       },
     },
     DELETE: {

@@ -7,6 +7,7 @@ import { getHubspotCustomObjectTypeAllowedValues } from '../helpers/get-custom-o
 import { getHubspotCustomObjectIdAllowedValues } from '../helpers/get-custom-object-id-allowed-values';
 import { getHubspotCustomObjectPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
 import { getHubspotCustomObjectIdPropertyAllowedValues } from '../helpers/get-id-property-allowed-values';
+import { getHubspotCustomObjectPropertiesType } from '../helpers/get-object-properties';
 
 const objectType = {
   type: 'softstring',
@@ -38,6 +39,10 @@ export const HUBSPOT_CUSTOM_OBJECTS_ALLOWED_PATHS = {
     POST: {
       override_options: {
         objectType,
+        properties: {
+          required: true,
+          get_dynamic_type: getHubspotCustomObjectPropertiesType,
+        },
         associations: {
           required: false,
         },
@@ -52,6 +57,10 @@ export const HUBSPOT_CUSTOM_OBJECTS_ALLOWED_PATHS = {
           required: true,
           allowed_values_creatable: true,
           get_allowed_values: getHubspotCustomObjectIdPropertyAllowedValues,
+        },
+        'inputs.properties': {
+          required: true,
+          get_dynamic_type: getHubspotCustomObjectPropertiesType,
         },
       },
     },
@@ -85,6 +94,10 @@ export const HUBSPOT_CUSTOM_OBJECTS_ALLOWED_PATHS = {
       override_options: {
         objectType,
         objectId,
+        properties: {
+          required: true,
+          get_dynamic_type: getHubspotCustomObjectPropertiesType,
+        },
       },
     },
     DELETE: {

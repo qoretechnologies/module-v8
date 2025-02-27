@@ -3,8 +3,9 @@ import {
   IQoreTypeObjectNonList,
   QorusRequest,
   TQoreAppActionOption,
-  TQoreGetDependentOptionsFunction,
+  TQoreGetDynamicTypeFunction,
   TQoreSimpleType,
+  TQoreType,
 } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
 import { TFetchHubspotObjectPropertiesOptions } from './object-properties-allowed-values';
@@ -75,8 +76,8 @@ export const getHubspotPropertyOptionFunction = ({
 }: {
   defaultProperties: IQoreTypeObjectNonList['fields'];
   object: string;
-}): TQoreGetDependentOptionsFunction => {
-  return async (context): Promise<Record<string, TQoreAppActionOption>> => {
+}): TQoreGetDynamicTypeFunction => {
+  return async (context): Promise<TQoreType> => {
     const additionalProperties: IQoreTypeObjectNonList['fields'] = {};
     try {
       const token = context?.conn_opts?.token;
@@ -128,24 +129,17 @@ export const getHubspotPropertyOptionFunction = ({
       }
 
       return {
-        properties: {
-          display_name: 'Object Properties',
-          short_desc: 'The properties of the object',
-          required: true,
-          type: {
-            type: 'hash',
-            fields: {
-              ...defaultProperties,
-              ...additionalProperties,
-            },
-          },
+        type: 'hash',
+        fields: {
+          ...defaultProperties,
+          ...additionalProperties,
         },
       };
     }
   };
 };
 
-export const getHubspotContactProperties: TQoreGetDependentOptionsFunction =
+export const getHubspotContactPropertiesType: TQoreGetDynamicTypeFunction =
   getHubspotPropertyOptionFunction({
     defaultProperties: {
       email: {
@@ -170,7 +164,7 @@ export const getHubspotContactProperties: TQoreGetDependentOptionsFunction =
     object: 'contacts',
   });
 
-export const getHubspotCompanyProperties: TQoreGetDependentOptionsFunction =
+export const getHubspotCompanyPropertiesType: TQoreGetDynamicTypeFunction =
   getHubspotPropertyOptionFunction({
     object: 'companies',
     defaultProperties: {
@@ -189,7 +183,7 @@ export const getHubspotCompanyProperties: TQoreGetDependentOptionsFunction =
     },
   });
 
-export const getHubspotDealProperties: TQoreGetDependentOptionsFunction =
+export const getHubspotDealPropertiesType: TQoreGetDynamicTypeFunction =
   getHubspotPropertyOptionFunction({
     object: 'deals',
     defaultProperties: {
@@ -226,7 +220,7 @@ export const getHubspotDealProperties: TQoreGetDependentOptionsFunction =
     },
   });
 
-export const getHubspotLeadProperties: TQoreGetDependentOptionsFunction =
+export const getHubspotLeadPropertiesType: TQoreGetDynamicTypeFunction =
   getHubspotPropertyOptionFunction({
     object: 'leads',
     defaultProperties: {
@@ -263,7 +257,7 @@ export const getHubspotLeadProperties: TQoreGetDependentOptionsFunction =
     },
   });
 
-export const getHubspotProductProperties: TQoreGetDependentOptionsFunction =
+export const getHubspotProductPropertiesType: TQoreGetDynamicTypeFunction =
   getHubspotPropertyOptionFunction({
     object: 'products',
     defaultProperties: {
@@ -288,7 +282,7 @@ export const getHubspotProductProperties: TQoreGetDependentOptionsFunction =
     },
   });
 
-export const getHubspotTicketProperties: TQoreGetDependentOptionsFunction =
+export const getHubspotTicketPropertiesType: TQoreGetDynamicTypeFunction =
   getHubspotPropertyOptionFunction({
     object: 'tickets',
     defaultProperties: {
@@ -331,9 +325,50 @@ export const getHubspotTicketProperties: TQoreGetDependentOptionsFunction =
     },
   });
 
-export const getHubspotCustomObjectProperties: TQoreGetDependentOptionsFunction = async (
+export const getHubspotTicketPropertiesTypeOptional = getHubspotPropertyOptionFunction({
+  object: 'tickets',
+  defaultProperties: {},
+});
+
+export const getHubspotContactPropertiesTypeOptional: TQoreGetDynamicTypeFunction =
+  getHubspotPropertyOptionFunction({
+    defaultProperties: {},
+    object: 'contacts',
+  });
+
+export const getHubspotCompanyPropertiesTypeOptional: TQoreGetDynamicTypeFunction =
+  getHubspotPropertyOptionFunction({
+    object: 'companies',
+    defaultProperties: {},
+  });
+
+export const getHubspotDealPropertiesTypeOptional: TQoreGetDynamicTypeFunction =
+  getHubspotPropertyOptionFunction({
+    object: 'deals',
+    defaultProperties: {},
+  });
+
+export const getHubspotLeadPropertiesTypeOptional: TQoreGetDynamicTypeFunction =
+  getHubspotPropertyOptionFunction({
+    object: 'leads',
+    defaultProperties: {},
+  });
+
+export const getHubspotProductPropertiesTypeOptional: TQoreGetDynamicTypeFunction =
+  getHubspotPropertyOptionFunction({
+    object: 'products',
+    defaultProperties: {},
+  });
+
+export const getHubspotUserPropertiesTypeOptional: TQoreGetDynamicTypeFunction =
+  getHubspotPropertyOptionFunction({
+    object: 'users',
+    defaultProperties: {},
+  });
+
+export const getHubspotCustomObjectPropertiesType: TQoreGetDynamicTypeFunction = async (
   context
-): Promise<Record<string, TQoreAppActionOption>> => {
+): Promise<TQoreType> => {
   const additionalProperties: IQoreTypeObjectNonList['fields'] = {};
   try {
     const token = context?.conn_opts?.token;
@@ -372,22 +407,13 @@ export const getHubspotCustomObjectProperties: TQoreGetDependentOptionsFunction 
   } catch (error) {
     Debugger.log(`Error while getting hubspot custom object properties`, error);
   } finally {
-    return {
-      properties: {
-        display_name: 'Object Properties',
-        short_desc: 'The properties of the object',
-        required: true,
-        ...(Object.keys(additionalProperties).length
-          ? {
-              type: {
-                type: 'hash',
-                fields: additionalProperties,
-              },
-            }
-          : {
-              type: 'hash',
-            }),
-      },
-    };
+    return Object.keys(additionalProperties).length
+      ? {
+          type: 'hash',
+          fields: additionalProperties,
+        }
+      : {
+          type: 'hash',
+        };
   }
 };

@@ -6,6 +6,7 @@ import { HUBSPOT_APP_NAME, hubspotSearchSortsOption } from '../constants';
 import { getHubspotUserAllowedValues } from '../helpers/get-user-allowed-values';
 import { getHubspotUserPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
 import { getHubspotUserIdPropertyAllowedValues } from '../helpers/get-id-property-allowed-values';
+import { getHubspotUserPropertiesTypeOptional } from '../helpers/get-object-properties';
 
 const userId = {
   type: 'softstring',
@@ -33,6 +34,10 @@ export const HUBSPOT_USERS_ALLOWED_PATHS = {
           required: true,
           allowed_values_creatable: true,
           get_allowed_values: getHubspotUserIdPropertyAllowedValues,
+        },
+        'inputs.properties': {
+          required: true,
+          get_dynamic_type: getHubspotUserPropertiesTypeOptional,
         },
       },
     },
@@ -66,6 +71,10 @@ export const HUBSPOT_USERS_ALLOWED_PATHS = {
     PATCH: {
       override_options: {
         userId,
+        properties: {
+          required: true,
+          get_dynamic_type: getHubspotUserPropertiesTypeOptional,
+        },
       },
     },
   },
