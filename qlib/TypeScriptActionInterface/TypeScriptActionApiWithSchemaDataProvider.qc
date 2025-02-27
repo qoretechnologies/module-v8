@@ -83,8 +83,9 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
     #! Creates the object from the arguments
     constructor(reference<hash<auto>> action, string swagger_path, *hash<AsyncCallInfo> api,
             *hash<string, bool> path_vars, *hash<string, bool> independent_path_vars,
-            *hash<string, string> conn_opt_map, *hash<auto> override_options, ActionFunctionContext fctx)
-            : TypeScriptActionApiDataProvider(action.action, api, fctx) {
+            *hash<string, string> conn_opt_map, *hash<auto> override_options, ActionFunctionContext fctx,
+            *hash<AsyncCallInfo> get_dynamic_request_type)
+            : TypeScriptActionApiDataProvider(action.action, api, fctx, get_dynamic_request_type) {
         self.swagger_schema = remove action.swagger_schema;
         swagger_path =~ s/^\///;
         self.swagger_path = swagger_path;
@@ -201,6 +202,18 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         if (exists (auto tdesc = remove type_hash.type)) {
             type = TypeScriptActionInterface::getType(path, tdesc, req ?? info.attr.required ?? qdf.isMandatory(),
                 NOTHING, fctx);
+        } else if (exists req) {
+            type = qdf.getType();
+            if (req) {
+                if (type.isOrNothingType()) {
+                    type = type.getMandatoryType();
+                }
+            } else {
+                if (type.isMandatory()) {
+                    type = type.getOrNothingType();
+                }
+            }
+
         }
         info += TypeScriptActionInterface::getFieldHash(path, info.name, type ?? qdf.getType(), \type_hash, req,
             fctx);

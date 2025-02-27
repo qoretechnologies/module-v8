@@ -474,11 +474,11 @@ var obj = {
         conn = new TypeScriptAppRestConnection(config);
         prov = TypeScriptActionInterface::getDataProvider("js-test", conn).getChildProviderEx("test-api");
         t = prov.getRequestTypeWithData({"key": "A"});
-        assertEq(("count", "other", "key", "list", "a0", "a1"), keys t.getFields());
+        assertEq(("count", "other", "key", "dyn", "list", "ax0", "ax1", "a0", "a1"), keys t.getFields());
         assertEq("TypeScriptDataField", t.getFields()."list".getType().getElementType().getFields().b.className());
         assertEq(100, t.getFields()."list".getType().getElementType().getFields().b.getDefaultValue());
         t = prov.getRequestTypeWithData({"key": "B"});
-        assertEq(("count", "other", "key", "list", "b0", "b1"), keys t.getFields());
+        assertEq(("count", "other", "key", "dyn", "list", "ax0", "ax1", "b0", "b1"), keys t.getFields());
         {
             hash<auto> h = {
                 "count": 1,
