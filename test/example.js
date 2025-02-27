@@ -325,7 +325,7 @@ exports.actionsCatalogue = {
                     },
                 },
                 "key": {
-                    "type": "string",
+                    "type": "hash",
                     "display_name": "Key",
                     "short_desc": "another option",
                     "desc": "another option",
@@ -378,6 +378,31 @@ exports.actionsCatalogue = {
                         } else {
                             throw new Error('unknown key ' + ctx.opts.key);
                         }
+                    },
+                },
+                "dyn": {
+                    "type": "hash",
+                    "display_name": "Dyn",
+                    "short_desc": "Dynamic option",
+                    "desc": "Dynamic option",
+                    "get_dynamic_type": async function(ctx) {
+                        return {
+                            "type": "hash",
+                            "fields": {
+                                "o0": {
+                                    "type": "string",
+                                    "display_name": "O0-Key",
+                                    "short_desc": "O0 key",
+                                    "desc": "O0 key",
+                                },
+                                "o1": {
+                                    "type": "string",
+                                    "display_name": "O1-Key",
+                                    "short_desc": "O1 key",
+                                    "desc": "O1 key",
+                                },
+                            },
+                        };
                     },
                 },
                 "list": {

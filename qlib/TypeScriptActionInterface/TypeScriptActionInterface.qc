@@ -1558,6 +1558,24 @@ public class TypeScriptActionInterface {
             TypeScriptActionInterface::registerAsyncCall(\fctx.dmap{key}, "app", action.app, action.action, key);
             action.data_dependent_options = True;
         }
+        if (exists (auto get_dynamic_type = remove h.get_dynamic_type)) {
+            if (!get_dynamic_type.callp()) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
+                    "\"get_dynamic_type\" attribute; got type %y; expecting a callable value", action.app,
+                    action.action, key, get_dynamic_type.fullType());
+            }
+            fctx.dtmap{key} = <AsyncCallInfo>{
+                "app": action.app,
+                "action": action.action,
+                "type": "get_dynamic_type",
+                "label": sprintf("Dynamic option type function for app %y action %y option %y", action.app,
+                    action.action, key),
+                "pool": fctx.pool,
+                "async_call": get_dynamic_type,
+                "to": io_timeout,
+            };
+            TypeScriptActionInterface::registerAsyncCall(\fctx.dtmap{key}, "app", action.app, action.action, key);
+        }
         if (exists (auto get_default_value = h.get_default_value)) {
             if (!get_default_value.callp()) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
@@ -2337,6 +2355,8 @@ class ActionFunctionContext {
         *hash<string, hash<AsyncCallInfo>> omap;
         # maps from options to "get_dependent_options" code
         *hash<string, hash<AsyncCallInfo>> dmap;
+        # maps from options to "get_dynamic_type" code
+        *hash<string, hash<AsyncCallInfo>> dtmap;
         # maps from options to "rest_get_allowed_values" descriptions
         *hash<string, hash<RestGetAllowedValuesInfo>> romap;
         # maps from options to "get_default_value" code
@@ -2366,6 +2386,7 @@ class ActionFunctionContext {
         pool = fctx.pool;
         omap = fctx.omap;
         dmap = fctx.dmap;
+        dtmap = fctx.dtmap;
         romap = fctx.romap;
         dvmap = fctx.dvmap;
         depmap = fctx.depmap;

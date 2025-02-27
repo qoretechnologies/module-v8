@@ -86,8 +86,8 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
     /** @return the request type for this provider
     */
     private *DataProvider::AbstractDataProviderType getRequestTypeImpl() {
+        bool new_type;
         if (get_dynamic_request_type && !dynamic_request_type_done) {
-
             auto res = getAsyncValueArgs(self, get_dynamic_request_type, {
                 "conn_name": conn.name,
                 "conn_opts": conn.getRealOptions(),
@@ -111,7 +111,38 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
                     # do not modify the original type
                     request_type = request_type.copyWithFields(request_type.getFields() + fields);
                 }
+                new_type = True;
             }
+            dynamic_request_type_done = True;
+        }
+        foreach hash<auto> i in (dtmap.pairIterator()) {
+            debug("Retrieving dynamic type for option %y for data provider %y", i.key, getName());
+            auto res = getAsyncValueArgs(self, i.value, {
+                "conn_name": conn.name,
+                "conn_opts": conn.getRealOptions(),,
+            }, {
+                "conn_opts": conn.getRealOptions(),,
+            }, True);
+            if (!res) {
+                continue;
+            }
+
+            AbstractDataProviderType t = TypeScriptActionInterface::getType("request option " + i.key, res,
+                NOTHING, NOTHING, self);
+
+            TypeScriptDataField field({
+                "name": i.key,
+                "type": t,
+            });
+            if (!new_type) {
+                if (!request_type) {
+                    request_type = new HashDataType(AutoHashType, "RequestType");
+                } else {
+                    request_type = request_type.copy();
+                }
+                new_type = True;
+            }
+            request_type.addField(field);
         }
         return request_type;
     }
