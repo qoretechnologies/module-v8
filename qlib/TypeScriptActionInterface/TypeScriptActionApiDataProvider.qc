@@ -129,7 +129,6 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
 
             AbstractDataProviderType t = TypeScriptActionInterface::getType("request option " + i.key, res,
                 NOTHING, NOTHING, self);
-
             TypeScriptDataField field({
                 "name": i.key,
                 "type": t,
