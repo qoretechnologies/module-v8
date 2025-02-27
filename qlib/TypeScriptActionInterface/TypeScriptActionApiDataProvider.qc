@@ -41,6 +41,8 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
 
     private {
         hash<AsyncCallInfo> api;
+        *hash<AsyncCallInfo> get_dynamic_request_type;
+        bool dynamic_request_type_done;
         *AbstractDataProviderType request_type;
         *AbstractDataProviderType response_type;
 
@@ -49,9 +51,11 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
     }
 
     constructor(string name, hash<AsyncCallInfo> api, *AbstractDataProviderType request_type,
-            *AbstractDataProviderType response_type, ActionFunctionContext fctx)
+            *AbstractDataProviderType response_type, ActionFunctionContext fctx,
+            *hash<AsyncCallInfo> get_dynamic_request_type)
             : TypeScriptActionDataProviderBase(name, fctx) {
         self.api = api;
+        self.get_dynamic_request_type = get_dynamic_request_type;
         self.request_type = request_type;
         self.response_type = response_type;
     }
@@ -82,6 +86,33 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
     /** @return the request type for this provider
     */
     private *DataProvider::AbstractDataProviderType getRequestTypeImpl() {
+        if (get_dynamic_request_type && !dynamic_request_type_done) {
+
+            auto res = getAsyncValueArgs(self, get_dynamic_request_type, {
+                "conn_name": conn.name,
+                "conn_opts": conn.getRealOptions(),
+            }, {
+                "conn_opts": conn.getRealOptions(),
+            }, True);
+            if (res) {
+                AbstractDataProviderType t = TypeScriptActionInterface::getType("get_dynamic_request_type", res,
+                    NOTHING, NOTHING, self);
+                if (!(t instanceof HashDataType)) {
+                    throw "DYNAMIC-TYPE-ERROR", sprintf("Dynamic type for @%s/%s is type %y; expecting \"hash\"",
+                        api.app, api.action, t.getName());
+                }
+                if (!request_type) {
+                    request_type = t;
+                } else if (*hash<string, AbstractDataField> fields = t.getFields()) {
+                    if (!(request_type instanceof HashDataType)) {
+                        throw "DYNAMIC-TYPE-ERROR", sprintf("Cannot add dynamic type for @%s/%s to existing request "
+                            "type %y; must be a hash to extend", api.app, api.action, request_type.getName());
+                    }
+                    # do not modify the original type
+                    request_type = request_type.copyWithFields(request_type.getFields() + fields);
+                }
+            }
+        }
         return request_type;
     }
 

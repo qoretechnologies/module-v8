@@ -1370,6 +1370,26 @@ public class TypeScriptActionInterface {
                 TypeScriptActionInterface::registerAsyncCall(\api, "app", app.name, action.action);
             }
         }
+        hash<AsyncCallInfo> get_dynamic_request_type;
+        if (auto js_api = remove action.get_dynamic_request_type) {
+            if (!js_api.callp()) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has no REST schema and has an invalid "
+                    "\"get_dynamic_request_type\" attribute; got type %y; expecting a callable value", action.app,
+                    action.action, js_api.fullType());
+            }
+            timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
+            get_dynamic_request_type = <AsyncCallInfo>{
+                "app": app.name,
+                "action": action.action,
+                "type": "api_function",
+                "label": sprintf("API function for app %y action %y", app.name, action.action),
+                "pool": pool,
+                "async_call": js_api,
+                "to": seconds(io_timeout),
+            };
+            TypeScriptActionInterface::registerAsyncCall(\get_dynamic_request_type, "app", app.name, action.action,
+                "get_dynamic_request_type");
+        }
 
         TypeScriptActionApiDataProvider child;
         if ((*string swagger_path = remove action.swagger_path).val()) {
@@ -1391,7 +1411,7 @@ public class TypeScriptActionInterface {
             *hash<string, bool> path_vars = map {$1: True}, (swagger_path =~ x/\{([^\}]*)}/g);
             TypeScriptActionApiWithSchemaDataProvider dp(\action, swagger_path, api, path_vars,
                 (map {$1: True}, independent_path_vars), app_conn_opt_map{app.name.lwr()},
-                remove action.override_options, fctx);
+                remove action.override_options, fctx, get_dynamic_request_type);
             child = dp;
 
             action.output_type = child.getResponseType();
@@ -1419,7 +1439,8 @@ public class TypeScriptActionInterface {
                 remove action.response_type;
             }
 
-            child = new TypeScriptActionApiDataProvider(action.action, api, request_type, response_type, fctx);
+            child = new TypeScriptActionApiDataProvider(action.action, api, request_type, response_type, fctx,
+                get_dynamic_request_type);
         }
 
         TypeScriptActionAppDataProvider prov = TypeScriptActionInterface::getAppDataProvider(action.app);

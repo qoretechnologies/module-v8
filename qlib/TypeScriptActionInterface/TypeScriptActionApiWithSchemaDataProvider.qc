@@ -83,8 +83,9 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
     #! Creates the object from the arguments
     constructor(reference<hash<auto>> action, string swagger_path, *hash<AsyncCallInfo> api,
             *hash<string, bool> path_vars, *hash<string, bool> independent_path_vars,
-            *hash<string, string> conn_opt_map, *hash<auto> override_options, ActionFunctionContext fctx)
-            : TypeScriptActionApiDataProvider(action.action, api, fctx) {
+            *hash<string, string> conn_opt_map, *hash<auto> override_options, ActionFunctionContext fctx,
+            *hash<AsyncCallInfo> get_dynamic_request_type)
+            : TypeScriptActionApiDataProvider(action.action, api, fctx, get_dynamic_request_type) {
         self.swagger_schema = remove action.swagger_schema;
         swagger_path =~ s/^\///;
         self.swagger_path = swagger_path;

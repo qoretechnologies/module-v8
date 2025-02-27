@@ -192,6 +192,32 @@ exports.actionsCatalogue = {
             */
             "io_timeout_secs": 30,
 
+            /** "get_dynamic_request_type" can be defined when "action_code" == DPAT_API to describe the request type
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+
+                @return an object describing the request type for the action
+
+                @note the function here will be called with no "this" context; "this" cannot be used in this function
+            */
+            "get_dynamic_request_type": async function(ctx) {
+                return {
+                    "ax0": {
+                        "type": "string",
+                        "display_name": "AX0-Key",
+                        "short_desc": "AX0 key",
+                        "desc": "AX0 key",
+                    },
+                    "ax1": {
+                        "type": "string",
+                        "display_name": "AX1-Key",
+                        "short_desc": "AX1 key",
+                        "desc": "AX1 key",
+                    },
+                };
+            },
+
             /** "options" defines the API request type when "action_code" == DPAT_API
 
                 This is equivalent to "ActionOptionInfo" in Qore:
@@ -352,7 +378,7 @@ exports.actionsCatalogue = {
                         } else {
                             throw new Error('unknown key ' + ctx.opts.key);
                         }
-                    }
+                    },
                 },
                 "list": {
                     "type": {
