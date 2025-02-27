@@ -3,6 +3,8 @@ import { FRESHDESK_APP_NAME } from '../constants';
 import {
   FreshdeskTicketPriorityAllowedValues,
   FreshdeskTicketStatusAllowedValues,
+  getFreshdeskTicketPriorityAllowedValues,
+  getFreshdeskTicketStatusAllowedValues,
 } from '../helpers/get-ticket-allowed-values';
 
 type TTicket = {
@@ -45,8 +47,7 @@ const FreshdeskNewTicketTrigger = QoreAppCreator.createLocalizedTrigger({
         type: 'list',
         element_type: 'softnumber',
       },
-      allowed_values: FreshdeskTicketStatusAllowedValues,
-      allowed_values_creatable: true,
+      get_allowed_values: getFreshdeskTicketStatusAllowedValues,
       default_value: [2],
     },
     ticketPriority: {
@@ -55,8 +56,7 @@ const FreshdeskNewTicketTrigger = QoreAppCreator.createLocalizedTrigger({
         type: 'list',
         element_type: 'softnumber',
       },
-      allowed_values: FreshdeskTicketPriorityAllowedValues,
-      allowed_values_creatable: true,
+      get_allowed_values: getFreshdeskTicketPriorityAllowedValues,
     },
   },
   webhook_method: 'POST',

@@ -1,5 +1,5 @@
+import { TAllowedPaths, TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
 import { buildActionsFromSwaggerSchema } from '../../global/helpers';
-import { TCustomConnOptions, TAllowedPaths } from '@qoretechnologies/ts-toolkit';
 import freshDeskSchema from '../../schemas/freshdesk.swagger.json';
 import { FreshdeskAgentTicketScopeAllowedValues } from './helpers/agent-ticket-scope-allowed-values';
 import { getFreshdeskAgentIdAllowedValues } from './helpers/get-agent-id-allowed-values';
@@ -13,10 +13,10 @@ import {
 } from './helpers/get-record-allowed-values';
 import { getFreshdeskSchemaIdAllowedValues } from './helpers/get-schema-id-allowed-values';
 import {
-  FreshdeskTicketPriorityAllowedValues,
-  FreshdeskTicketSourceAllowedValues,
-  FreshdeskTicketStatusAllowedValues,
   getFreshdeskTicketIdAllowedValues,
+  getFreshdeskTicketPriorityAllowedValues,
+  getFreshdeskTicketSourceAllowedValues,
+  getFreshdeskTicketStatusAllowedValues,
 } from './helpers/get-ticket-allowed-values';
 
 export const FRESHDESK_APP_NAME = 'Freshdesk';
@@ -58,17 +58,17 @@ export const FRESHDESK_ALLOWED_PATHS = {
       override_options: {
         priority: {
           required: true,
-          allowed_values: FreshdeskTicketPriorityAllowedValues,
+          get_allowed_values: getFreshdeskTicketPriorityAllowedValues,
           allowed_values_creatable: true,
         },
         status: {
           required: true,
-          allowed_values: FreshdeskTicketStatusAllowedValues,
+          get_allowed_values: getFreshdeskTicketStatusAllowedValues,
           allowed_values_creatable: true,
         },
         source: {
           required: false,
-          allowed_values: FreshdeskTicketSourceAllowedValues,
+          get_allowed_values: getFreshdeskTicketSourceAllowedValues,
           allowed_values_creatable: true,
         },
       },
@@ -82,7 +82,6 @@ export const FRESHDESK_ALLOWED_PATHS = {
         },
         'agents.ticket_scope': {
           allowed_values: FreshdeskAgentTicketScopeAllowedValues,
-          allowed_values_creatable: true,
         },
       },
     },
@@ -117,7 +116,6 @@ export const FRESHDESK_ALLOWED_PATHS = {
         },
         ticket_scope: {
           allowed_values: FreshdeskAgentTicketScopeAllowedValues,
-          allowed_values_creatable: true,
         },
       },
     },
@@ -358,17 +356,17 @@ export const FRESHDESK_ALLOWED_PATHS = {
         },
         priority: {
           required: false,
-          allowed_values: FreshdeskTicketPriorityAllowedValues,
+          get_allowed_values: getFreshdeskTicketPriorityAllowedValues,
           allowed_values_creatable: true,
         },
         status: {
           required: false,
-          allowed_values: FreshdeskTicketStatusAllowedValues,
+          get_allowed_values: getFreshdeskTicketStatusAllowedValues,
           allowed_values_creatable: true,
         },
         source: {
           required: false,
-          allowed_values: FreshdeskTicketSourceAllowedValues,
+          get_allowed_values: getFreshdeskTicketSourceAllowedValues,
           allowed_values_creatable: true,
         },
       },
