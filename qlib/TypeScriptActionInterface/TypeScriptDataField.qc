@@ -29,6 +29,27 @@ public class TypeScriptDataField inherits DataProvider::QoreDataField {
     constructor(hash<auto> h) : QoreDataField(h) {
     }
 
+    #! returns the type of the field
+    AbstractDataProviderType getType() {
+        if (attr.dynamic_type) {
+            hash<AsyncCallInfo> call = TypeScriptActionInterface::getCall(attr.dynamic_type);
+            try {
+                auto res;
+                if (ts_prov_ctx) {
+                    res = ts_prov_ctx.getAsyncValue(call, ts_prov_ctx.getCallContextInfo());
+                } else {
+                    res = TypeScriptActionDataProviderBase::getAsyncValueArgs(NOTHING, call);
+                }
+                if (res) {
+                    return TypeScriptActionInterface::getType(name, res, attr.required);
+                }
+            } catch (hash<ExceptionInfo> ex) {
+                TSAI::error("Failed to retrieve dynamic type for %y: %s", call.label, get_exception_string(ex));
+            }
+        }
+        return QoreDataField::getType();
+    }
+
     #! get default value, if any
     auto getDefaultValue() {
         if (attr.get_default_value.val()) {

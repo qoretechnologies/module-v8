@@ -623,23 +623,33 @@ exports.actionsCatalogue = {
                 optimization. The attributes of the object are handled like action option attributes
             */
             "override_options": {
-                "body.name": {
-                    "get_allowed_values": async function(ctx) {
-                        return [
-                            {
-                                "display_name": "Fido",
-                                "short_desc": "Fido",
-                                "desc": "Fido",
-                                "value": "Fido",
+                "name": {
+                    "get_allowed_values": async (ctx) => [
+                        {
+                            "display_name": "Fido",
+                            "short_desc": "Fido",
+                            "desc": "Fido",
+                            "value": "Fido",
+                        },
+                        {
+                            "display_name": "Spot",
+                            "short_desc": "Spot",
+                            "desc": "Spot",
+                            "value": "Spot",
+                        },
+                    ],
+                },
+                "new0.new1": {
+                    "get_dynamic_type": async function(ctx) {
+                        return {
+                            "type": "hash",
+                            "fields": {
+                                "a": {
+                                    "type": "string",
+                                },
                             },
-                            {
-                                "display_name": "Spot",
-                                "short_desc": "Spot",
-                                "desc": "Spot",
-                                "value": "Spot",
-                            },
-                        ];
-                    },
+                        };
+                    }
                 },
             },
         });

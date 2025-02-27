@@ -436,12 +436,19 @@ var obj = {
         AbstractDataProvider prov =
             TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("create-pet");
         AbstractDataProviderType t = prov.getRequestType();
-        assertEq(6, t.getFields().size());
+        *hash<string, AbstractDataField> fields = t.getFields();
+        {
+            on_error printf("%y\n", keys fields);
+            assertEq(7, fields.size());
+            fields = fields.new0.getType().getFields();
+            assertEq(("a",), keys fields.new1.getType().getFields());
+        }
 
         prov = TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("get-pet");
         t = prov.getRequestType();
+        fields = t.getFields();
         {
-            *hash<string, AbstractDataField> fields = t.getFields();
+            on_error printf("%y\n", keys fields);
             assertEq(1, fields.size());
             *AbstractDataField f = fields.id;
             assertTrue(exists f);
