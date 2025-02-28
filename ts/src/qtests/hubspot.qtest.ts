@@ -162,16 +162,9 @@ describe('Tests Hubspot actions', () => {
         'post-crm-v3-objects-companies_create',
         connection,
         {
-          associations: [
-            {
-              to: {
-                id: '123',
-              },
-              types: [],
-            },
-          ],
           properties: {
             name: 'Test Company',
+            domain: 'textcompany.com',
             annualrevenue: '500000',
           },
         }
@@ -265,14 +258,6 @@ describe('Tests Hubspot actions', () => {
         'post-crm-v3-objects-contacts',
         connection,
         {
-          associations: [
-            {
-              to: {
-                id: '123',
-              },
-              types: [],
-            },
-          ],
           properties: {
             email: 'test@example.com',
             firstname: 'Test',
@@ -384,15 +369,12 @@ describe('Tests Hubspot actions', () => {
         'post-crm-v3-objects-deals_create',
         connection,
         {
-          associations: [
-            {
-              to: {
-                id: '123',
-              },
-              types: [],
-            },
-          ],
-          properties: { dealname: 'Test Deal', amount: '1000' },
+          properties: {
+            dealname: 'Test Deal',
+            amount: '1000',
+            dealtype: 'newbusiness',
+            hs_priority: 'low',
+          },
         }
       );
 
@@ -480,15 +462,12 @@ describe('Tests Hubspot actions', () => {
         'post-crm-v3-objects-products_create',
         connection,
         {
-          associations: [
-            {
-              to: {
-                id: '123',
-              },
-              types: [],
-            },
-          ],
-          properties: { name: 'Test Product', price: '100' },
+          properties: {
+            name: 'Test Product',
+            price: '100',
+            description: 'Test Product',
+            hs_product_type: 'inventory',
+          },
         }
       );
 
@@ -577,19 +556,12 @@ describe('Tests Hubspot actions', () => {
         'post-crm-v3-objects-tickets_create',
         connection,
         {
-          associations: [
-            {
-              to: {
-                id: '123',
-              },
-              types: [],
-            },
-          ],
           properties: {
             hs_pipeline: '0',
             hs_pipeline_stage: '1',
             hs_ticket_priority: 'HIGH',
             subject: 'troubleshoot report',
+            content: 'troubleshoot report',
           },
         }
       );

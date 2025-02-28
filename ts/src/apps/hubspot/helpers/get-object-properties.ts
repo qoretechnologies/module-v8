@@ -11,14 +11,14 @@ import { Debugger } from '../../../utils/Debugger';
 import { TFetchHubspotObjectPropertiesOptions } from './object-properties-allowed-values';
 
 type THubspotObjectProperty = {
-  name: 'string';
-  label: 'string';
-  description: 'string';
-  type: 'string';
+  name: string;
+  label: string;
+  description: string;
+  type: string;
   formField: boolean;
   options: {
-    label: 'string';
-    value: 'string';
+    label: string;
+    value: string;
   }[];
   modificationMetadata: {
     archivable: boolean;
@@ -100,9 +100,12 @@ export const getHubspotPropertyOptionFunction = ({
             ? {
                 allowed_values_creatable: true,
                 allowed_values: property.options.map(
-                  (option): IQoreAllowedValue<string> => ({
+                  (option): IQoreAllowedValue<any> => ({
                     display_name: option.label,
-                    value: option.value,
+                    value:
+                      hubspotToQoreTypeMap[property.type] === 'boolean'
+                        ? option.value === 'true'
+                        : option.value,
                   })
                 ),
               }
@@ -191,18 +194,6 @@ export const getHubspotDealPropertiesType: TQoreGetDynamicTypeFunction =
         type: 'string',
         display_name: 'Name',
         short_desc: 'The name of the deal',
-        required: true,
-      },
-      dealstage: {
-        type: 'softnumber',
-        display_name: 'Stage',
-        short_desc: 'The stage of the deal',
-        required: true,
-      },
-      pipeline: {
-        type: 'softstring',
-        display_name: 'Pipeline',
-        short_desc: 'The pipeline of the deal',
         required: true,
       },
       dealtype: {
@@ -308,12 +299,6 @@ export const getHubspotTicketPropertiesType: TQoreGetDynamicTypeFunction =
         type: 'string',
         display_name: 'Content',
         short_desc: 'The content of the ticket',
-        required: true,
-      },
-      hs_object_source: {
-        type: 'softstring',
-        display_name: 'Source',
-        short_desc: 'The source of the ticket',
         required: true,
       },
       hs_ticket_priority: {
