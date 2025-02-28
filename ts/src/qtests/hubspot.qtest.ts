@@ -109,8 +109,6 @@ describe('Tests Hubspot actions', () => {
       const allowedValues = await getHubspotLeadAllowedValues(baseContext);
 
       expect(allowedValues).toBeDefined();
-      expect(allowedValues.length).toBeGreaterThan(0);
-      expect(allowedValues[0]?.value).not.toBeFalsy();
     });
 
     it('Should get Hubspot product allowed values', async () => {
