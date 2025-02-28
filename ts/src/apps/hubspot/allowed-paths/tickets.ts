@@ -5,6 +5,11 @@ import hubspotTickets from '../../../schemas/hubspot/tickets.swagger.json';
 import { HUBSPOT_APP_NAME, hubspotSearchSortsOption } from '../constants';
 import { getHubspotTicketAllowedValues } from '../helpers/get-ticket-allowed-value';
 import { getHubspotTicketPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
+import { getHubspotTicketIdPropertyAllowedValues } from '../helpers/get-id-property-allowed-values';
+import {
+  getHubspotTicketPropertiesType,
+  getHubspotTicketPropertiesTypeOptional,
+} from '../helpers/get-object-properties';
 
 const ticketId = {
   type: 'softstring',
@@ -29,16 +34,36 @@ export const HUBSPOT_TICKETS_ALLOWED_PATHS = {
         associations: {
           required: false,
         },
+        properties: {
+          required: true,
+          get_dynamic_type: getHubspotTicketPropertiesType,
+        },
       },
     },
   },
   '/crm/v3/objects/tickets/batch/upsert': {
-    POST: {},
+    POST: {
+      override_options: {
+        'inputs.idProperty': {
+          required: true,
+          allowed_values_creatable: true,
+          get_allowed_values: getHubspotTicketIdPropertyAllowedValues,
+        },
+        'inputs.properties': {
+          required: true,
+          get_dynamic_type: getHubspotTicketPropertiesTypeOptional,
+        },
+      },
+    },
   },
   '/crm/v3/objects/tickets/search': {
     POST: {
       override_options: {
         sorts: hubspotSearchSortsOption,
+        limit: {
+          required: true,
+          default_value: 10,
+        },
         properties: {
           type: {
             type: 'list',
@@ -60,6 +85,10 @@ export const HUBSPOT_TICKETS_ALLOWED_PATHS = {
     PATCH: {
       override_options: {
         ticketId,
+        properties: {
+          required: true,
+          get_dynamic_type: getHubspotTicketPropertiesTypeOptional,
+        },
       },
     },
     DELETE: {

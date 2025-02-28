@@ -436,12 +436,19 @@ var obj = {
         AbstractDataProvider prov =
             TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("create-pet");
         AbstractDataProviderType t = prov.getRequestType();
-        assertEq(6, t.getFields().size());
+        *hash<string, AbstractDataField> fields = t.getFields();
+        {
+            on_error printf("%y\n", keys fields);
+            assertEq(7, fields.size());
+            fields = fields.new0.getType().getFields();
+            assertEq(("a",), keys fields.new1.getType().getFields());
+        }
 
         prov = TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("get-pet");
         t = prov.getRequestType();
+        fields = t.getFields();
         {
-            *hash<string, AbstractDataField> fields = t.getFields();
+            on_error printf("%y\n", keys fields);
             assertEq(1, fields.size());
             *AbstractDataField f = fields.id;
             assertTrue(exists f);
@@ -474,11 +481,11 @@ var obj = {
         conn = new TypeScriptAppRestConnection(config);
         prov = TypeScriptActionInterface::getDataProvider("js-test", conn).getChildProviderEx("test-api");
         t = prov.getRequestTypeWithData({"key": "A"});
-        assertEq(("count", "other", "key", "list", "a0", "a1"), keys t.getFields());
+        assertEq(("count", "other", "key", "dyn", "list", "ax0", "ax1", "a0", "a1"), keys t.getFields());
         assertEq("TypeScriptDataField", t.getFields()."list".getType().getElementType().getFields().b.className());
         assertEq(100, t.getFields()."list".getType().getElementType().getFields().b.getDefaultValue());
         t = prov.getRequestTypeWithData({"key": "B"});
-        assertEq(("count", "other", "key", "list", "b0", "b1"), keys t.getFields());
+        assertEq(("count", "other", "key", "dyn", "list", "ax0", "ax1", "b0", "b1"), keys t.getFields());
         {
             hash<auto> h = {
                 "count": 1,

@@ -1753,7 +1753,7 @@ const en = {
           shortDesc: 'Retrieve a list of contacts',
         },
         'post-crm-v3-objects-contacts': {
-          displayName: 'Create Contacts',
+          displayName: 'Create Contact',
           shortDesc: 'Create a new contact',
         },
         'post-crm-v3-objects-contacts-search': {

@@ -112,7 +112,10 @@ exports.actionsCatalogue = {
                 - options?: object -> describes connection options supported by connections for this application; keys
                   are option names; values are converted to option hashes described by the COnnectionOptionInfo
                   hashdecl: https://qoretechnologies.com/manual/qorus/gitlab-docs/develop/qore/modules/ConnectionProvider/html/struct_connection_provider_1_1_connection_option_info.html
-                - required_options?: string[] -> a list of required options for connections for this app
+                - required_options?: string -> required options for connections for this app; required option names
+                  are separated by commas (","); if there are multiple possibilities, they should be separated by pipe
+                  chars ("|"); ex: "client_id,client_secret,tenant|token"; all strings must be valid option names in
+                  options
                 - set_options_post_auth?: async function (ctx? : object) : object? -> A function that is called after
                   authenticating to retrieve additional options to set on the connection; the return value must be an
                   object with serializable values that are connection options; the options will be stored on the
@@ -188,6 +191,32 @@ exports.actionsCatalogue = {
                 @note not yet implemented
             */
             "io_timeout_secs": 30,
+
+            /** "get_dynamic_request_type" can be defined when "action_code" == DPAT_API to describe the request type
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+
+                @return an object describing the request type for the action
+
+                @note the function here will be called with no "this" context; "this" cannot be used in this function
+            */
+            "get_dynamic_request_type": async function(ctx) {
+                return {
+                    "ax0": {
+                        "type": "string",
+                        "display_name": "AX0-Key",
+                        "short_desc": "AX0 key",
+                        "desc": "AX0 key",
+                    },
+                    "ax1": {
+                        "type": "string",
+                        "display_name": "AX1-Key",
+                        "short_desc": "AX1 key",
+                        "desc": "AX1 key",
+                    },
+                };
+            },
 
             /** "options" defines the API request type when "action_code" == DPAT_API
 
@@ -296,7 +325,7 @@ exports.actionsCatalogue = {
                     },
                 },
                 "key": {
-                    "type": "string",
+                    "type": "hash",
                     "display_name": "Key",
                     "short_desc": "another option",
                     "desc": "another option",
@@ -349,7 +378,32 @@ exports.actionsCatalogue = {
                         } else {
                             throw new Error('unknown key ' + ctx.opts.key);
                         }
-                    }
+                    },
+                },
+                "dyn": {
+                    "type": "hash",
+                    "display_name": "Dyn",
+                    "short_desc": "Dynamic option",
+                    "desc": "Dynamic option",
+                    "get_dynamic_type": async function(ctx) {
+                        return {
+                            "type": "hash",
+                            "fields": {
+                                "o0": {
+                                    "type": "string",
+                                    "display_name": "O0-Key",
+                                    "short_desc": "O0 key",
+                                    "desc": "O0 key",
+                                },
+                                "o1": {
+                                    "type": "string",
+                                    "display_name": "O1-Key",
+                                    "short_desc": "O1 key",
+                                    "desc": "O1 key",
+                                },
+                            },
+                        };
+                    },
                 },
                 "list": {
                     "type": {
@@ -569,23 +623,33 @@ exports.actionsCatalogue = {
                 optimization. The attributes of the object are handled like action option attributes
             */
             "override_options": {
-                "body.name": {
-                    "get_allowed_values": async function(ctx) {
-                        return [
-                            {
-                                "display_name": "Fido",
-                                "short_desc": "Fido",
-                                "desc": "Fido",
-                                "value": "Fido",
+                "name": {
+                    "get_allowed_values": async (ctx) => [
+                        {
+                            "display_name": "Fido",
+                            "short_desc": "Fido",
+                            "desc": "Fido",
+                            "value": "Fido",
+                        },
+                        {
+                            "display_name": "Spot",
+                            "short_desc": "Spot",
+                            "desc": "Spot",
+                            "value": "Spot",
+                        },
+                    ],
+                },
+                "new0.new1": {
+                    "get_dynamic_type": async function(ctx) {
+                        return {
+                            "type": "hash",
+                            "fields": {
+                                "a": {
+                                    "type": "string",
+                                },
                             },
-                            {
-                                "display_name": "Spot",
-                                "short_desc": "Spot",
-                                "desc": "Spot",
-                                "value": "Spot",
-                            },
-                        ];
-                    },
+                        };
+                    }
                 },
             },
         });

@@ -1,9 +1,14 @@
 import { TAllowedPaths, TQoreAppActionOverrideOption } from '@qoretechnologies/ts-toolkit';
-import hubspotProducts from '../../../schemas/hubspot/products.swagger.json';
-import { getHubspotProductAllowedValues } from '../helpers/get-product.allowe-values';
-import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
 import { OpenAPIV2 } from 'openapi-types';
+import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
+import hubspotProducts from '../../../schemas/hubspot/products.swagger.json';
 import { HUBSPOT_APP_NAME, hubspotSearchSortsOption } from '../constants';
+import { getHubspotProductIdPropertyAllowedValues } from '../helpers/get-id-property-allowed-values';
+import {
+  getHubspotProductPropertiesType,
+  getHubspotProductPropertiesTypeOptional,
+} from '../helpers/get-object-properties';
+import { getHubspotProductAllowedValues } from '../helpers/get-product.allowed-values';
 import { getHubspotProductPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
 
 const productId = {
@@ -29,16 +34,36 @@ export const HUBSPOT_PRODUCTS_ALLOWED_PATHS = {
         associations: {
           required: false,
         },
+        properties: {
+          required: true,
+          get_dynamic_type: getHubspotProductPropertiesType,
+        },
       },
     },
   },
   '/crm/v3/objects/products/batch/upsert': {
-    POST: {},
+    POST: {
+      override_options: {
+        'inputs.idProperty': {
+          required: true,
+          allowed_values_creatable: true,
+          get_allowed_values: getHubspotProductIdPropertyAllowedValues,
+        },
+        'inputs.properties': {
+          required: true,
+          get_dynamic_type: getHubspotProductPropertiesTypeOptional,
+        },
+      },
+    },
   },
   '/crm/v3/objects/products/search': {
     POST: {
       override_options: {
         sorts: hubspotSearchSortsOption,
+        limit: {
+          required: true,
+          default_value: 10,
+        },
         properties: {
           type: {
             type: 'list',
@@ -60,6 +85,10 @@ export const HUBSPOT_PRODUCTS_ALLOWED_PATHS = {
     PATCH: {
       override_options: {
         productId,
+        properties: {
+          required: true,
+          get_dynamic_type: getHubspotProductPropertiesTypeOptional,
+        },
       },
     },
     DELETE: {

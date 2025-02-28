@@ -4,7 +4,12 @@ import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
 import hubspotCompanies from '../../../schemas/hubspot/companies.swagger.json';
 import { HUBSPOT_APP_NAME, hubspotSearchSortsOption } from '../constants';
 import { getHubspotCompanyAllowedValues } from '../helpers/get-company-allowed-values';
+import { getHubspotCompanyIdPropertyAllowedValues } from '../helpers/get-id-property-allowed-values';
 import { getHubspotCompanyPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
+import {
+  getHubspotCompanyPropertiesType,
+  getHubspotCompanyPropertiesTypeOptional,
+} from '../helpers/get-object-properties';
 
 const companyId = {
   type: 'softstring',
@@ -26,6 +31,10 @@ export const HUBSPOT_COMPANIES_ALLOWED_PATHS = {
     },
     POST: {
       override_options: {
+        properties: {
+          required: true,
+          get_dynamic_type: getHubspotCompanyPropertiesType,
+        },
         associations: {
           required: false,
         },
@@ -42,6 +51,10 @@ export const HUBSPOT_COMPANIES_ALLOWED_PATHS = {
     PATCH: {
       override_options: {
         companyId,
+        properties: {
+          required: true,
+          get_dynamic_type: getHubspotCompanyPropertiesTypeOptional,
+        },
       },
     },
     DELETE: {
@@ -51,11 +64,27 @@ export const HUBSPOT_COMPANIES_ALLOWED_PATHS = {
     },
   },
   '/crm/v3/objects/companies/batch/upsert': {
-    POST: {},
+    POST: {
+      override_options: {
+        'inputs.idProperty': {
+          required: true,
+          allowed_values_creatable: true,
+          get_allowed_values: getHubspotCompanyIdPropertyAllowedValues,
+        },
+        'inputs.properties': {
+          required: true,
+          get_dynamic_type: getHubspotCompanyPropertiesTypeOptional,
+        },
+      },
+    },
   },
   '/crm/v3/objects/companies/search': {
     POST: {
       override_options: {
+        limit: {
+          required: true,
+          default_value: 10,
+        },
         sorts: hubspotSearchSortsOption,
         properties: {
           type: {

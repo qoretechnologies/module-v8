@@ -8574,7 +8574,7 @@ type RootTranslation = {
 				}
 				'post-crm-v3-objects-contacts': {
 					/**
-					 * C​r​e​a​t​e​ ​C​o​n​t​a​c​t​s
+					 * C​r​e​a​t​e​ ​C​o​n​t​a​c​t
 					 */
 					displayName: string
 					/**
@@ -19387,7 +19387,7 @@ export type TranslationFunctions = {
 				}
 				'post-crm-v3-objects-contacts': {
 					/**
-					 * Create Contacts
+					 * Create Contact
 					 */
 					displayName: () => LocalizedString
 					/**

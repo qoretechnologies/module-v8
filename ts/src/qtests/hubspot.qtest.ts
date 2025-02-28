@@ -1,17 +1,17 @@
 import { TCustomConnOptions, TQoreAppActionFunctionContext } from '@qoretechnologies/ts-toolkit';
 import { getHubspotCompanyAllowedValues } from '../apps/hubspot/helpers/get-company-allowed-values';
 import { getHubspotContactAllowedValues } from '../apps/hubspot/helpers/get-contact-allowed-values';
-import { getHubspotCustomObjectIdAllowedValues } from '../apps/hubspot/helpers/get-cusom-object-id-allowed-values';
+import { getHubspotCustomObjectIdAllowedValues } from '../apps/hubspot/helpers/get-custom-object-id-allowed-values';
 import { getHubspotCustomObjectTypeAllowedValues } from '../apps/hubspot/helpers/get-custom-object-type-allowed-values';
 import { getHubspotDealAllowedValues } from '../apps/hubspot/helpers/get-deal-allowed-values';
 import { getHubspotLeadAllowedValues } from '../apps/hubspot/helpers/get-lead-allowed-values';
-import { getHubspotProductAllowedValues } from '../apps/hubspot/helpers/get-product.allowe-values';
+import { getHubspotProductAllowedValues } from '../apps/hubspot/helpers/get-product.allowed-values';
 import { getHubspotTicketAllowedValues } from '../apps/hubspot/helpers/get-ticket-allowed-value';
 import { getHubspotUserAllowedValues } from '../apps/hubspot/helpers/get-user-allowed-values';
 import { getHubspotCompanyPropertiesAllowedValues } from '../apps/hubspot/helpers/object-properties-allowed-values';
+import { getHubspotCompanyIdPropertyAllowedValues } from '../apps/hubspot/helpers/get-id-property-allowed-values';
 
 let connection: string;
-// TODO: finish tests as soon as the connection is fixed (schema map error)
 describe('Tests Hubspot actions', () => {
   const token = process.env.HUBSPOT_TOKEN;
   let customObjectType: string;
@@ -128,6 +128,14 @@ describe('Tests Hubspot actions', () => {
       expect(allowedValues.length).toBeGreaterThan(0);
       expect(allowedValues[0]?.value).not.toBeFalsy();
     });
+
+    it('Should get Hubspot company id property allowed values', async () => {
+      const allowedValues = await getHubspotCompanyIdPropertyAllowedValues(baseContext);
+
+      expect(allowedValues).toBeDefined();
+      expect(allowedValues.length).toBeGreaterThan(0);
+      expect(allowedValues[0]?.value).not.toBeFalsy();
+    });
   });
 
   // Companies actions tests
@@ -154,16 +162,9 @@ describe('Tests Hubspot actions', () => {
         'post-crm-v3-objects-companies_create',
         connection,
         {
-          associations: [
-            {
-              to: {
-                id: '123',
-              },
-              types: [],
-            },
-          ],
           properties: {
             name: 'Test Company',
+            domain: 'textcompany.com',
             annualrevenue: '500000',
           },
         }
@@ -257,14 +258,6 @@ describe('Tests Hubspot actions', () => {
         'post-crm-v3-objects-contacts',
         connection,
         {
-          associations: [
-            {
-              to: {
-                id: '123',
-              },
-              types: [],
-            },
-          ],
           properties: {
             email: 'test@example.com',
             firstname: 'Test',
@@ -376,15 +369,12 @@ describe('Tests Hubspot actions', () => {
         'post-crm-v3-objects-deals_create',
         connection,
         {
-          associations: [
-            {
-              to: {
-                id: '123',
-              },
-              types: [],
-            },
-          ],
-          properties: { dealname: 'Test Deal', amount: '1000' },
+          properties: {
+            dealname: 'Test Deal',
+            amount: '1000',
+            dealtype: 'newbusiness',
+            hs_priority: 'low',
+          },
         }
       );
 
@@ -472,15 +462,12 @@ describe('Tests Hubspot actions', () => {
         'post-crm-v3-objects-products_create',
         connection,
         {
-          associations: [
-            {
-              to: {
-                id: '123',
-              },
-              types: [],
-            },
-          ],
-          properties: { name: 'Test Product', price: '100' },
+          properties: {
+            name: 'Test Product',
+            price: '100',
+            description: 'Test Product',
+            hs_product_type: 'inventory',
+          },
         }
       );
 
@@ -569,19 +556,12 @@ describe('Tests Hubspot actions', () => {
         'post-crm-v3-objects-tickets_create',
         connection,
         {
-          associations: [
-            {
-              to: {
-                id: '123',
-              },
-              types: [],
-            },
-          ],
           properties: {
             hs_pipeline: '0',
             hs_pipeline_stage: '1',
             hs_ticket_priority: 'HIGH',
             subject: 'troubleshoot report',
+            content: 'troubleshoot report',
           },
         }
       );

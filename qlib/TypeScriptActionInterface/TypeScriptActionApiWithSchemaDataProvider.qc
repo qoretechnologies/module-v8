@@ -83,8 +83,9 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
     #! Creates the object from the arguments
     constructor(reference<hash<auto>> action, string swagger_path, *hash<AsyncCallInfo> api,
             *hash<string, bool> path_vars, *hash<string, bool> independent_path_vars,
-            *hash<string, string> conn_opt_map, *hash<auto> override_options, ActionFunctionContext fctx)
-            : TypeScriptActionApiDataProvider(action.action, api, fctx) {
+            *hash<string, string> conn_opt_map, *hash<auto> override_options, ActionFunctionContext fctx,
+            *hash<AsyncCallInfo> get_dynamic_request_type)
+            : TypeScriptActionApiDataProvider(action.action, api, fctx, get_dynamic_request_type) {
         self.swagger_schema = remove action.swagger_schema;
         swagger_path =~ s/^\///;
         self.swagger_path = swagger_path;
@@ -113,12 +114,11 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
             *AbstractDataField f = fields{key};
             hash<auto> opt;
             if (!f) {
-                if (l.size() > 1) {
-                    throw "OPTION-OVERRIDE-ERROR", sprintf("App %y action %y cannot override unknown top-level "
-                        "option %y; known top-level options: %y", action.app, action.action, key,
-                        keys fields);
-                }
                 TypeScriptActionInterface::getOptionFunctions(\action, self, i.key, \i.value, True);
+                if (l.size() > 1) {
+                    overrideOptionType("option", action, type, l, i.value, k);
+                    continue;
+                }
 
                 type.addField(TypeScriptActionInterface::getField("option", key, i.value, self));
                 if (i.value_depends_on) {
@@ -139,17 +139,9 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                 if (l.size() == 1) {
                     TypeScriptActionInterface::getOptionFunctions(\action, self, i.key, \i.value, True);
                 }
-                if (i.value) {
-                    /*
-                    f = f.copy();
-                    AbstractDataProviderType ftype = f.getType().copy();
-                    cast<QoreDataField>(f).updateFieldType(ftype);
-                    type.replaceField(f);
-                    */
-                    overrideOptionType("option", action, type, l, i.value, k);
-                    if (l.size() == 1 && (*list<auto> dl = i.value.depends_on)) {
-                        depmap{l[0]} = map {$1: True}, dl;
-                    }
+                overrideOptionType("option", action, type, l, i.value, k);
+                if (l.size() == 1 && (*list<auto> dl = i.value.depends_on)) {
+                    depmap{l[0]} = map {$1: True}, dl;
                 }
             }
         }
@@ -161,7 +153,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
     }
 
     static overrideOptionType(string path, hash<auto> action, AbstractDataProviderType type, list<string> l,
-            hash<auto> type_hash, string k, *ActionFunctionContext fctx) {
+            *hash<auto> type_hash, string k, *ActionFunctionContext fctx) {
         string key = shift l;
         HashDataType t;
         *hash<string, AbstractDataField> fields;
@@ -177,10 +169,12 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         }
         *AbstractDataField f = fields{key};
         if (!f) {
-            throw "OPTION-OVERRIDE-ERROR", sprintf("App %y action %y cannot override unknown field %y in %y; known "
-                "fields: %y", action.app, action.action, key, k, keys fields);
-        }
-        if (!(f instanceof QoreDataField)) {
+            f = new QoreDataField({
+                "name": key,
+                "type": new HashDataType(),
+            });
+            t.addField(f);
+        } else if (!(f instanceof QoreDataField)) {
             throw "OPTION-OVERRIDE-ERROR", sprintf("App %y action %y cannot override field %y in %y of class %y; "
                 "expecting \"QoreDataField\"", action.app, action.action, key, k, f.className());
         }
@@ -201,22 +195,35 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         if (exists (auto tdesc = remove type_hash.type)) {
             type = TypeScriptActionInterface::getType(path, tdesc, req ?? info.attr.required ?? qdf.isMandatory(),
                 NOTHING, fctx);
+        } else if (exists req) {
+            type = qdf.getType();
+            if (req) {
+                if (type.isOrNothingType()) {
+                    type = type.getMandatoryType();
+                }
+            } else {
+                if (type.isMandatory()) {
+                    type = type.getOrNothingType();
+                }
+            }
+
         }
         info += TypeScriptActionInterface::getFieldHash(path, info.name, type ?? qdf.getType(), \type_hash, req,
             fctx);
         if (attr) {
             info.attr += attr;
         }
+        #printf("Editing %y -> %y\n", key, info);
 
         if (type_hash) {
             throw "OPTION-OVERRIDE-ERROR", sprintf("App %y action %y cannot override field %y in %y with unknown "
                 "keys: %y", action.app, action.action, key, k, keys type_hash);
         }
         on_error printf("%y info: %N\n", key, info + {"type": info.type.getName()});
-        t.replaceField(new TypeScriptDataField(info));
-        #printf("Edited %y (%s) => %y mandatory: %y av: %y (parent %y)\n", k, t.getFields(){k}.uniqueHash(),
-        #    t.getFields(){k}.getType().className(), t.getFields(){k}.isMandatory(),
-        #    t.getFields(){k}.getAllowedValues(), type.className());
+        t.addOrReplaceField(new TypeScriptDataField(info));
+        #printf("Edited %y (%s) => %y mandatory: %y av: %y (parent %y)\n", key, t.getFields(){key}.uniqueHash(),
+        #    t.getFields(){key}.getType().className(), t.getFields(){key}.isMandatory(),
+        #    t.getFields(){key}.getAllowedValues(), t.className());
     }
 
     #! "Normalizes" the request and response for testing if necessary

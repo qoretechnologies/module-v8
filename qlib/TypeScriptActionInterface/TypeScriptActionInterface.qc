@@ -1370,6 +1370,26 @@ public class TypeScriptActionInterface {
                 TypeScriptActionInterface::registerAsyncCall(\api, "app", app.name, action.action);
             }
         }
+        hash<AsyncCallInfo> get_dynamic_request_type;
+        if (auto js_api = remove action.get_dynamic_request_type) {
+            if (!js_api.callp()) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has no REST schema and has an invalid "
+                    "\"get_dynamic_request_type\" attribute; got type %y; expecting a callable value", action.app,
+                    action.action, js_api.fullType());
+            }
+            timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
+            get_dynamic_request_type = <AsyncCallInfo>{
+                "app": app.name,
+                "action": action.action,
+                "type": "api_function",
+                "label": sprintf("API function for app %y action %y", app.name, action.action),
+                "pool": pool,
+                "async_call": js_api,
+                "to": seconds(io_timeout),
+            };
+            TypeScriptActionInterface::registerAsyncCall(\get_dynamic_request_type, "app", app.name, action.action,
+                "get_dynamic_request_type");
+        }
 
         TypeScriptActionApiDataProvider child;
         if ((*string swagger_path = remove action.swagger_path).val()) {
@@ -1391,7 +1411,7 @@ public class TypeScriptActionInterface {
             *hash<string, bool> path_vars = map {$1: True}, (swagger_path =~ x/\{([^\}]*)}/g);
             TypeScriptActionApiWithSchemaDataProvider dp(\action, swagger_path, api, path_vars,
                 (map {$1: True}, independent_path_vars), app_conn_opt_map{app.name.lwr()},
-                remove action.override_options, fctx);
+                remove action.override_options, fctx, get_dynamic_request_type);
             child = dp;
 
             action.output_type = child.getResponseType();
@@ -1419,7 +1439,8 @@ public class TypeScriptActionInterface {
                 remove action.response_type;
             }
 
-            child = new TypeScriptActionApiDataProvider(action.action, api, request_type, response_type, fctx);
+            child = new TypeScriptActionApiDataProvider(action.action, api, request_type, response_type, fctx,
+                get_dynamic_request_type);
         }
 
         TypeScriptActionAppDataProvider prov = TypeScriptActionInterface::getAppDataProvider(action.app);
@@ -1466,7 +1487,7 @@ public class TypeScriptActionInterface {
     }
 
     static getOptionFunctions(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
-            reference<hash<auto>> h, *bool keep_get_default_value) {
+            reference<hash<auto>> h, *bool keep_field_functions) {
         on_error rethrow $1.err, sprintf("%s (while processing option %y)", $1.desc, key);
         date io_timeout = seconds(remove h.io_timeout_secs ?? DefaultIoTimeoutSecs);
         if (exists (auto get_allowed_values = remove h.get_allowed_values)) {
@@ -1537,6 +1558,29 @@ public class TypeScriptActionInterface {
             TypeScriptActionInterface::registerAsyncCall(\fctx.dmap{key}, "app", action.app, action.action, key);
             action.data_dependent_options = True;
         }
+        if (exists (auto get_dynamic_type = h.get_dynamic_type)) {
+            if (!get_dynamic_type.callp()) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
+                    "\"get_dynamic_type\" attribute; got type %y; expecting a callable value", action.app,
+                    action.action, key, get_dynamic_type.fullType());
+            }
+            fctx.dtmap{key} = <AsyncCallInfo>{
+                "app": action.app,
+                "action": action.action,
+                "type": "get_dynamic_type",
+                "label": sprintf("Dynamic option type function for app %y action %y option %y", action.app,
+                    action.action, key),
+                "pool": fctx.pool,
+                "async_call": get_dynamic_type,
+                "to": io_timeout,
+            };
+            TypeScriptActionInterface::registerAsyncCall(\fctx.dtmap{key}, "app", action.app, action.action, key);
+            h.dynamic_type = fctx.dtmap{key}.key;
+            action.data_dependent_options = True;
+            if (!keep_field_functions) {
+                remove h.get_dynamic_type;
+            }
+        }
         if (exists (auto get_default_value = h.get_default_value)) {
             if (!get_default_value.callp()) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
@@ -1556,7 +1600,7 @@ public class TypeScriptActionInterface {
             TypeScriptActionInterface::registerAsyncCall(\fctx.dvmap{key}, "app", action.app, action.action, key);
             h.default_ref_data = key;
             action.data_dependent_options = True;
-            if (!keep_get_default_value) {
+            if (!keep_field_functions) {
                 remove h.get_default_value;
             }
         }
@@ -1801,6 +1845,9 @@ public class TypeScriptActionInterface {
         if ((*string str = remove type_hash.default_ref_data).val()) {
             info.attr.default_ref_data = str;
         }
+        if ((*string str = remove type_hash.dynamic_type).val()) {
+            info.attr.dynamic_type = str;
+        }
         if (*list<auto> l = remove type_hash.required_groups) {
             info.attr.required_groups = l;
         }
@@ -1855,7 +1902,26 @@ public class TypeScriptActionInterface {
 
                 # remove any manual allowed values
                 remove info.allowed_values;
-                info.attr.ref_data = key;
+                info.attr.ref_data = fctx.dtmap{key}.key;
+                info.attr.dynamic = True;
+            }
+            if (exists (*code c = remove type_hash.get_dynamic_type)) {
+                string key = sprintf("%s-%s", path, name);
+                fctx.dtmap{key} = <AsyncCallInfo>{
+                    "key": key,
+                    "app": fctx.app,
+                    "action": fctx.action,
+                    "type": "get_dynamic_type",
+                    "label": sprintf("Dynamic type function for app %y action %y option %y", fctx.app, fctx.action,
+                        key),
+                    "pool": fctx.pool,
+                    "async_call": c,
+                    "to": fctx.io_timeout,
+                };
+                TypeScriptActionInterface::registerAsyncCall(ignore_dup, \fctx.dtmap{key}, "app", fctx.app,
+                    fctx.action, key);
+
+                info.attr.dynamic_type = fctx.dtmap{key}.key;
                 info.attr.dynamic = True;
             }
             if (exists (*code c = remove type_hash.get_dependent_options)) {
@@ -2316,6 +2382,8 @@ class ActionFunctionContext {
         *hash<string, hash<AsyncCallInfo>> omap;
         # maps from options to "get_dependent_options" code
         *hash<string, hash<AsyncCallInfo>> dmap;
+        # maps from options to "get_dynamic_type" code
+        *hash<string, hash<AsyncCallInfo>> dtmap;
         # maps from options to "rest_get_allowed_values" descriptions
         *hash<string, hash<RestGetAllowedValuesInfo>> romap;
         # maps from options to "get_default_value" code
@@ -2345,6 +2413,7 @@ class ActionFunctionContext {
         pool = fctx.pool;
         omap = fctx.omap;
         dmap = fctx.dmap;
+        dtmap = fctx.dtmap;
         romap = fctx.romap;
         dvmap = fctx.dvmap;
         depmap = fctx.depmap;

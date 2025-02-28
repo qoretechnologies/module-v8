@@ -29756,6 +29756,7 @@ const mondayNewRecordMovedToGroupTrigger = ts_toolkit_1.QoreAppCreator.createTri
         });
     },
     webhook_method: 'POST',
+    webhook_echo_body_keys: ['challenge'],
     webhook_deregister: constants_2.deregisterMondayWebhook,
     event_info: {
         desc: 'Record Data',
@@ -29965,6 +29966,7 @@ const mondayRecordColumnValueUpdatedTrigger = ts_toolkit_1.QoreAppCreator.create
         });
     },
     webhook_method: 'POST',
+    webhook_echo_body_keys: ['challenge'],
     webhook_deregister: constants_2.deregisterMondayWebhook,
     event_info: {
         desc: 'Record Data',

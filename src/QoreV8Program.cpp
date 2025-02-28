@@ -536,7 +536,9 @@ int QoreV8Program::spinEventLoop() {
     return node::SpinEventLoop(env).FromMaybe(1);
 }
 
+// use a simple value to dereference callbacks
 struct QoreV8CallbackInfo {
+public:
     ResolvedCallReferenceNode* ref;
     QoreV8Program* pgm;
 
@@ -546,8 +548,39 @@ struct QoreV8CallbackInfo {
     }
 
     DLLLOCAL ~QoreV8CallbackInfo() {
-        ref->weakDeref();
+        destroy();
     }
+
+    DLLLOCAL void destroy() {
+        if (ref) {
+            ref->weakDeref();
+            ref = nullptr;
+            pgm = nullptr;
+        }
+    }
+};
+
+// use a simple value to dereference callbacks
+class QoreV8CallbackDereferencer : public BinaryNode {
+public:
+    DLLLOCAL QoreV8CallbackDereferencer(QoreV8CallbackInfo* i) : i(i) {
+    }
+
+    DLLLOCAL virtual ~QoreV8CallbackDereferencer() {
+    }
+
+    DLLLOCAL bool derefImpl(ExceptionSink* xsink) {
+        i->destroy();
+        return true;
+    }
+
+    DLLLOCAL virtual int parseInit(QoreValue& val, QoreParseContext& parse_context) {
+        assert(false);
+        return 0;
+    }
+
+private:
+    QoreV8CallbackInfo* i;
 };
 
 static void call_callref(const v8::FunctionCallbackInfo<v8::Value>& info) {
@@ -556,10 +589,15 @@ static void call_callref(const v8::FunctionCallbackInfo<v8::Value>& info) {
 
     v8::Local<v8::External> ext = v8::Local<v8::External>::Cast(v);
     QoreV8CallbackInfo* cbinfo = reinterpret_cast<QoreV8CallbackInfo*>(ext->Value());
-
-    v8::Isolate* isolate = info.GetIsolate();
-
     ExceptionSink xsink;
+    v8::Isolate* isolate = info.GetIsolate();
+    if (!cbinfo || !cbinfo->ref) {
+        xsink.raiseException("CALLBACK-ERROR", "Cannot call a callback that has already gone out of scope");
+        // raise JS exception
+        QoreV8Program::raiseV8Exception(xsink, isolate);
+        return;
+    }
+
     OptionalCallReferenceAccessHelper rh(&xsink, cbinfo->ref);
     if (!rh) {
         assert(xsink);
@@ -768,7 +806,7 @@ v8::MaybeLocal<v8::Function> QoreV8Program::getV8Function(ExceptionSink* xsink, 
         checkException(xsink, tryCatch);
         return v8::MaybeLocal<v8::Function>();
     }
-    if (saveQoreReference(call->refSelf(), *xsink)) {
+    if (saveQoreReference(new QoreV8CallbackDereferencer(cbinfo), *xsink)) {
         //printd(5, "call: %p -> cannot save Qore reference\n", call);
         assert(*xsink);
         return v8::MaybeLocal<v8::Function>();
