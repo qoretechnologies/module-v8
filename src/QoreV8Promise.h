@@ -62,7 +62,7 @@ protected:
             const ResolvedCallReferenceNode* call);
 };
 
-struct QoreV8PromiseCallbackInfo {
+struct QoreV8PromiseCallbackInfo  : public QoreV8Dereferencable {
     ResolvedCallReferenceNode* ref;
     QoreV8Program* pgm;
     v8::Global<v8::Promise> promise;
@@ -70,8 +70,23 @@ struct QoreV8PromiseCallbackInfo {
     DLLLOCAL QoreV8PromiseCallbackInfo(const ResolvedCallReferenceNode* ref, QoreV8Program* pgm,
             v8::Local<v8::Promise> promise);
 
-    DLLLOCAL ~QoreV8PromiseCallbackInfo() {
-        ref->weakDeref();
+    DLLLOCAL virtual ~QoreV8PromiseCallbackInfo() {
+        destroy(true);
+    }
+
+    DLLLOCAL virtual void destroy(bool remove) {
+        //printd(5, "QoreV8PromiseCallbackInfo::destroy(remove: %s) this: %p ref: %p\n", remove ? "true" : "false",
+        //    this, ref);
+        if (ref) {
+            ExceptionSink xsink;
+            ref->deref(&xsink);
+            ref = nullptr;
+            pgm = nullptr;
+            if (remove) {
+                d->remove();
+            }
+        }
+        d = nullptr;
     }
 };
 

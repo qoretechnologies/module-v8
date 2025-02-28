@@ -30,7 +30,6 @@
 */
 
 #include "QoreV8Object.h"
-#include "QoreV8Program.h"
 #include "QoreV8CallReference.h"
 
 #include <climits>

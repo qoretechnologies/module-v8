@@ -224,7 +224,8 @@ v8::MaybeLocal<v8::Function> QoreV8Promise::getPromiseFunction(QoreV8ProgramHelp
         }
         return v8::MaybeLocal<v8::Function>();
     }
-    if (v8h.getProgram()->saveQoreReference(call->refSelf(), *xsink)) {
+    ReferenceHolder<QoreV8Dereferencer> rh(new QoreV8Dereferencer(cbinfo), xsink);
+    if (v8h.getProgram()->saveQoreReference(*rh, *xsink)) {
         //printd(5, "call: %p -> cannot save Qore reference\n", call);
         assert(*xsink);
         return v8::MaybeLocal<v8::Function>();
@@ -236,5 +237,5 @@ v8::MaybeLocal<v8::Function> QoreV8Promise::getPromiseFunction(QoreV8ProgramHelp
 QoreV8PromiseCallbackInfo::QoreV8PromiseCallbackInfo(const ResolvedCallReferenceNode* ref, QoreV8Program* pgm,
         v8::Local<v8::Promise> promise) : ref(const_cast<ResolvedCallReferenceNode*>(ref)), pgm(pgm),
         promise(pgm->getIsolate(), promise) {
-    this->ref->weakRef();
+    this->ref->ref();
 }

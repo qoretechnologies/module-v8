@@ -35,6 +35,8 @@
 
 #include "v8-module.h"
 
+#include "QoreV8Program.h"
+
 #include <set>
 
 // forward references

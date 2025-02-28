@@ -310,4 +310,57 @@ private:
     v8::Context::Scope context_scope;
 };
 
+class QoreV8Dereferencer;
+
+class QoreV8Dereferencable {
+public:
+    DLLLOCAL virtual ~QoreV8Dereferencable() {
+    }
+
+    virtual void destroy(bool remove) = 0;
+
+    DLLLOCAL void setDereferencer(QoreV8Dereferencer* d) {
+        assert(!this->d);
+        this->d = d;
+    }
+
+protected:
+    QoreV8Dereferencer* d = nullptr;
+};
+
+// use a simple value to dereference objects
+class QoreV8Dereferencer : public BinaryNode {
+public:
+    DLLLOCAL QoreV8Dereferencer(QoreV8Dereferencable* i) : i(i) {
+        i->setDereferencer(this);
+    }
+
+    DLLLOCAL virtual ~QoreV8Dereferencer() {
+        if (i) {
+            i->destroy(false);
+            i = nullptr;
+        }
+    }
+
+    DLLLOCAL void remove() {
+        i = nullptr;
+    }
+
+    DLLLOCAL bool derefImpl(ExceptionSink* xsink) {
+        if (i) {
+            i->destroy(false);
+            i = nullptr;
+        }
+        return true;
+    }
+
+    DLLLOCAL virtual int parseInit(QoreValue& val, QoreParseContext& parse_context) {
+        assert(false);
+        return 0;
+    }
+
+private:
+    QoreV8Dereferencable* i;
+};
+
 #endif
