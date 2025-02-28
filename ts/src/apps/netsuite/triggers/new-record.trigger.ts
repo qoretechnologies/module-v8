@@ -12,7 +12,6 @@ const netsuiteNewRecordTrigger = QoreAppCreator.createLocalizedTrigger({
     recordType: {
       type: 'string',
       required: true,
-      required_groups: ['new_record_trigger'],
     },
   },
   event_function: async (context, update, should_stop) => {

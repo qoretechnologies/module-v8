@@ -5,6 +5,11 @@ import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
 import { OpenAPIV2 } from 'openapi-types';
 import { HUBSPOT_APP_NAME, hubspotSearchSortsOption } from '../constants';
 import { getHubspotLeadPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
+import { getHubspotLeadIdPropertyAllowedValues } from '../helpers/get-id-property-allowed-values';
+import {
+  getHubspotLeadPropertiesType,
+  getHubspotLeadPropertiesTypeOptional,
+} from '../helpers/get-object-properties';
 
 const leadsId = {
   type: 'softstring',
@@ -26,6 +31,10 @@ export const HUBSPOT_LEADS_ALLOWED_PATHS = {
     },
     POST: {
       override_options: {
+        properties: {
+          required: true,
+          get_dynamic_type: getHubspotLeadPropertiesType,
+        },
         associations: {
           required: false,
         },
@@ -33,12 +42,28 @@ export const HUBSPOT_LEADS_ALLOWED_PATHS = {
     },
   },
   '/crm/v3/objects/leads/batch/upsert': {
-    POST: {},
+    POST: {
+      override_options: {
+        'inputs.idProperty': {
+          required: true,
+          allowed_values_creatable: true,
+          get_allowed_values: getHubspotLeadIdPropertyAllowedValues,
+        },
+        'inputs.properties': {
+          required: true,
+          get_dynamic_type: getHubspotLeadPropertiesTypeOptional,
+        },
+      },
+    },
   },
   '/crm/v3/objects/leads/search': {
     POST: {
       override_options: {
         sorts: hubspotSearchSortsOption,
+        limit: {
+          required: true,
+          default_value: 10,
+        },
         properties: {
           type: {
             type: 'list',
@@ -60,6 +85,10 @@ export const HUBSPOT_LEADS_ALLOWED_PATHS = {
     PATCH: {
       override_options: {
         leadsId,
+        properties: {
+          required: true,
+          get_dynamic_type: getHubspotLeadPropertiesTypeOptional,
+        },
       },
     },
     DELETE: {

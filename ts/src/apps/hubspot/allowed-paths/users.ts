@@ -5,6 +5,8 @@ import hubspotUsers from '../../../schemas/hubspot/users.swagger.json';
 import { HUBSPOT_APP_NAME, hubspotSearchSortsOption } from '../constants';
 import { getHubspotUserAllowedValues } from '../helpers/get-user-allowed-values';
 import { getHubspotUserPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
+import { getHubspotUserIdPropertyAllowedValues } from '../helpers/get-id-property-allowed-values';
+import { getHubspotUserPropertiesTypeOptional } from '../helpers/get-object-properties';
 
 const userId = {
   type: 'softstring',
@@ -26,12 +28,28 @@ export const HUBSPOT_USERS_ALLOWED_PATHS = {
     },
   },
   '/crm/v3/objects/users/batch/upsert': {
-    POST: {},
+    POST: {
+      override_options: {
+        'inputs.idProperty': {
+          required: true,
+          allowed_values_creatable: true,
+          get_allowed_values: getHubspotUserIdPropertyAllowedValues,
+        },
+        'inputs.properties': {
+          required: true,
+          get_dynamic_type: getHubspotUserPropertiesTypeOptional,
+        },
+      },
+    },
   },
   '/crm/v3/objects/users/search': {
     POST: {
       override_options: {
         sorts: hubspotSearchSortsOption,
+        limit: {
+          required: true,
+          default_value: 10,
+        },
         properties: {
           type: {
             type: 'list',
@@ -53,6 +71,10 @@ export const HUBSPOT_USERS_ALLOWED_PATHS = {
     PATCH: {
       override_options: {
         userId,
+        properties: {
+          required: true,
+          get_dynamic_type: getHubspotUserPropertiesTypeOptional,
+        },
       },
     },
   },

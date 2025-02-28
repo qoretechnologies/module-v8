@@ -1,6 +1,12 @@
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
+import {
+  IQoreAllowedValue,
+  QorusRequest,
+  TQoreAppActionFunctionContext,
+  TQoreGetAllowedValuesFunction,
+} from '@qoretechnologies/ts-toolkit';
 import { FRESHDESK_CONN_OPTIONS } from '../constants';
 import { fetchFreshdeskAllowedValues } from './constants';
+import { Debugger } from '../../../utils/Debugger';
 
 type TFreshdeskTicket = {
   id: number;
@@ -9,6 +15,61 @@ type TFreshdeskTicket = {
   priority: number;
   status: number;
   source: number;
+};
+
+type TFreshdeskTicketField = {
+  id: number;
+  name: string;
+  choices: { id: number; label: string }[];
+};
+
+export const getTicketFields = async (
+  token: string,
+  subdomain: string
+): Promise<{ id: number; name: string }[]> => {
+  const ticketFieldsResponse = await QorusRequest.get<{ data: { id: number; name: string }[] }>(
+    {
+      path: '/api/v2/admin/ticket_fields',
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    },
+    {
+      url: `https://${subdomain}.freshdesk.com`,
+      endpointId: 'Freshdesk',
+    }
+  );
+
+  if (!ticketFieldsResponse?.data) throw new Error('Failed to get freshdesk ticket fields');
+
+  return ticketFieldsResponse.data;
+};
+
+export const getFreshdeskTicketField = async (
+  fieldId: number,
+  token: string,
+  subdomain: string
+): Promise<TFreshdeskTicketField> => {
+  try {
+    const ticketFieldResponse = await QorusRequest.get<{ data: TFreshdeskTicketField }>(
+      {
+        path: `/api/v2/admin/ticket_fields/${fieldId}`,
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      },
+      {
+        url: `https://${subdomain}.freshdesk.com`,
+        endpointId: 'Freshdesk',
+      }
+    );
+
+    if (!ticketFieldResponse?.data) throw new Error('Failed to get freshdesk ticket field');
+
+    return ticketFieldResponse.data;
+  } catch (error) {
+    throw new Error('Failed to get freshdesk ticket field');
+  }
 };
 
 const mapFreshdeskTicket = (ticket: TFreshdeskTicket): IQoreAllowedValue => ({
@@ -65,6 +126,59 @@ const getFreshdeskTicketSourceName = (id: number): string => {
     String(id)
   );
 };
+
+async function getFreshdeskFieldAllowedValues(
+  fieldName: string,
+  context: TQoreAppActionFunctionContext<typeof FRESHDESK_CONN_OPTIONS>,
+  defaultValues: IQoreAllowedValue[]
+): Promise<IQoreAllowedValue[]> {
+  const token = context?.conn_opts?.token;
+  const subdomain = context?.conn_opts?.subdomain;
+
+  if (!token) {
+    throw new Error(`The token is required to get Freshdesk ticket ${fieldName} allowed values`);
+  }
+  if (!subdomain) {
+    throw new Error(
+      `The subdomain option is required to get Freshdesk ticket ${fieldName} allowed values`
+    );
+  }
+
+  try {
+    const ticketFields = await getTicketFields(token, subdomain);
+    const fieldId = ticketFields.find((field) => field.name === fieldName)?.id;
+    if (!fieldId) throw new Error(`Failed to get ${fieldName} field id`);
+
+    const field = await getFreshdeskTicketField(fieldId, token, subdomain);
+    if (!field.choices) throw new Error(`Failed to get ${fieldName} field choices`);
+
+    return field.choices.map(
+      (choice): IQoreAllowedValue<number> => ({
+        value: choice.id,
+        display_name: choice.label,
+      })
+    );
+  } catch (error) {
+    Debugger.log(error);
+
+    return defaultValues;
+  }
+}
+
+export const getFreshdeskTicketStatusAllowedValues: TQoreGetAllowedValuesFunction<
+  typeof FRESHDESK_CONN_OPTIONS
+> = async (context: TQoreAppActionFunctionContext<typeof FRESHDESK_CONN_OPTIONS>) =>
+  await getFreshdeskFieldAllowedValues('status', context, FreshdeskTicketStatusAllowedValues);
+
+export const getFreshdeskTicketPriorityAllowedValues: TQoreGetAllowedValuesFunction<
+  typeof FRESHDESK_CONN_OPTIONS
+> = async (context: TQoreAppActionFunctionContext<typeof FRESHDESK_CONN_OPTIONS>) =>
+  await getFreshdeskFieldAllowedValues('priority', context, FreshdeskTicketPriorityAllowedValues);
+
+export const getFreshdeskTicketSourceAllowedValues: TQoreGetAllowedValuesFunction<
+  typeof FRESHDESK_CONN_OPTIONS
+> = async (context: TQoreAppActionFunctionContext<typeof FRESHDESK_CONN_OPTIONS>) =>
+  await getFreshdeskFieldAllowedValues('source', context, FreshdeskTicketSourceAllowedValues);
 
 export const FreshdeskTicketStatusAllowedValues = [
   {

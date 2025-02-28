@@ -45,7 +45,7 @@ const salesforceUpdatedRecordTrigger = QoreAppCreator.createLocalizedTrigger({
     type: {
       type: 'hash',
       fields: {
-        id: { type: 'string' },
+        Id: { type: 'string' },
       },
     },
   },

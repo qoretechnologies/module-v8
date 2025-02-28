@@ -5,6 +5,10 @@ import { HUBSPOT_APP_NAME, hubspotSearchSortsOption } from '../constants';
 import hubspotContacts from '../../../schemas/hubspot/contacts.swagger.json';
 import { OpenAPIV2 } from 'openapi-types';
 import { getHubspotContactPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
+import {
+  getHubspotContactPropertiesType,
+  getHubspotContactPropertiesTypeOptional,
+} from '../helpers/get-object-properties';
 
 const contactId = {
   type: 'softstring',
@@ -26,6 +30,10 @@ export const HUBSPOT_CONTACTS_ALLOWED_PATHS = {
     },
     POST: {
       override_options: {
+        properties: {
+          required: true,
+          get_dynamic_type: getHubspotContactPropertiesType,
+        },
         associations: {
           required: false,
         },
@@ -36,6 +44,10 @@ export const HUBSPOT_CONTACTS_ALLOWED_PATHS = {
     POST: {
       override_options: {
         sorts: hubspotSearchSortsOption,
+        limit: {
+          required: true,
+          default_value: 10,
+        },
         properties: {
           type: {
             type: 'list',
@@ -57,6 +69,10 @@ export const HUBSPOT_CONTACTS_ALLOWED_PATHS = {
     PATCH: {
       override_options: {
         contactId,
+        properties: {
+          required: true,
+          get_dynamic_type: getHubspotContactPropertiesTypeOptional,
+        },
       },
     },
     DELETE: {

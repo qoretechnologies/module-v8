@@ -9,11 +9,15 @@ type THubspotObjectProperty = {
   name: 'string';
   label: 'string';
   description: 'string';
+  [key: string]: any;
 };
 
 export type TFetchHubspotObjectPropertiesOptions = {
   token?: string;
   object?: string;
+  filter?: {
+    hasUniqueValue?: boolean;
+  };
 };
 
 const mapHubspotObjectProperty = (property: THubspotObjectProperty): IQoreAllowedValue<string> => ({
@@ -53,7 +57,17 @@ export const fetchHubspotObjectProperties = async (
     throw new Error('No data found for hubspot object properties');
   }
 
-  return responseData.results.map(mapHubspotObjectProperty);
+  let results = responseData.results;
+
+  if (options.filter) {
+    const filter = options.filter;
+
+    if (options.filter.hasUniqueValue !== undefined) {
+      results = results.filter((property) => property.hasUniqueValue !== filter.hasUniqueValue);
+    }
+  }
+
+  return results.map(mapHubspotObjectProperty);
 };
 
 export const getHubspotCompanyPropertiesAllowedValues: TQoreGetAllowedValuesFunction<

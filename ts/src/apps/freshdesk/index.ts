@@ -1,5 +1,9 @@
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
-import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
+import {
+  TQoreAppActionFunctionContext,
+  TQoreAppWithActions,
+  TQoreMappedOptions,
+} from '@qoretechnologies/ts-toolkit';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import { FRESHDESK_ACTIONS, FRESHDESK_APP_NAME, FRESHDESK_CONN_OPTIONS } from './constants';
@@ -35,15 +39,30 @@ export default (locale: Locales) =>
     rest: {
       url: 'https://{{subdomain}}.freshdesk.com',
       data: 'json',
-      oauth2_grant_type: 'authorization_code',
-      oauth2_auth_url: 'https://{{subdomain}}.freshdesk.com/oauth/authorize',
-      oauth2_token_url: 'https://{{subdomain}}.freshdesk.com/oauth/token',
+      oauth2_grant_type: 'none',
       ping_method: 'GET',
       ping_path: '/api/v2/agents/me',
     },
     rest_modifiers: {
       options: FRESHDESK_CONN_OPTIONS,
-      required_options: 'subdomain',
+      required_options: 'subdomain,apiKey',
       url_template_options: ['subdomain'],
+      set_options_post_auth: (
+        context: Omit<TQoreAppActionFunctionContext<typeof FRESHDESK_CONN_OPTIONS>, 'opts'>
+      ): TQoreMappedOptions<typeof FRESHDESK_CONN_OPTIONS> => {
+        const subdomain = context.conn_opts?.subdomain;
+        const apiKey = context.conn_opts?.apiKey;
+
+        if (!subdomain || !apiKey) {
+          throw new Error('Subdomain and API Key are required');
+        }
+
+        return {
+          url: `https://${subdomain}.freshdesk.com`,
+          apiKey,
+          subdomain,
+          token: btoa(`${apiKey}:X`),
+        };
+      },
     },
   }) satisfies TQoreAppWithActions;

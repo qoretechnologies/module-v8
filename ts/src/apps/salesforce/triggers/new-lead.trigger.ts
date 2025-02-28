@@ -28,15 +28,6 @@ const salesforceNewLeadTrigger = QoreAppCreator.createLocalizedTrigger({
       should_stop,
     });
   },
-  event_info: {
-    desc: 'Salesforce New Lead Trigger Event Info',
-    type: {
-      type: 'hash',
-      fields: {
-        Id: { type: 'string' },
-      },
-    },
-  },
   get_example_event_data: async (context) => {
     const token = context?.conn_opts?.token;
     const instance_url = context?.conn_opts?.instance_url;
@@ -50,6 +41,204 @@ const salesforceNewLeadTrigger = QoreAppCreator.createLocalizedTrigger({
     const data = await getLastCreatedLead(token, instance_url);
 
     return data?.length > 0 ? data[0] : null;
+  },
+  event_info: {
+    desc: 'Salesforce New Lead Trigger Event Info',
+    type: {
+      type: 'hash',
+      fields: {
+        attributes: {
+          type: {
+            type: 'hash',
+            fields: {
+              type: {
+                type: 'string',
+              },
+              url: {
+                type: 'string',
+              },
+            },
+          },
+        },
+        Id: {
+          type: 'string',
+        },
+        IsDeleted: {
+          type: 'boolean',
+        },
+        MasterRecordId: {
+          type: 'string',
+        },
+        LastName: {
+          type: 'string',
+        },
+        FirstName: {
+          type: 'string',
+        },
+        Salutation: {
+          type: 'string',
+        },
+        Name: {
+          type: 'string',
+        },
+        Title: {
+          type: 'string',
+        },
+        Company: {
+          type: 'string',
+        },
+        Street: {
+          type: 'string',
+        },
+        City: {
+          type: 'string',
+        },
+        State: {
+          type: 'string',
+        },
+        PostalCode: {
+          type: 'string',
+        },
+        Country: {
+          type: 'string',
+        },
+        Latitude: {
+          type: 'number',
+        },
+        Longitude: {
+          type: 'number',
+        },
+        GeocodeAccuracy: {
+          type: 'string',
+        },
+        Address: {
+          type: 'string',
+        },
+        Phone: {
+          type: 'string',
+        },
+        Email: {
+          type: 'string',
+        },
+        Website: {
+          type: 'string',
+        },
+        PhotoUrl: {
+          type: 'string',
+        },
+        Description: {
+          type: 'string',
+        },
+        LeadSource: {
+          type: 'string',
+        },
+        Status: {
+          type: 'string',
+        },
+        Industry: {
+          type: 'string',
+        },
+        Rating: {
+          type: 'string',
+        },
+        AnnualRevenue: {
+          type: 'number',
+        },
+        NumberOfEmployees: {
+          type: 'number',
+        },
+        OwnerId: {
+          type: 'string',
+        },
+        HasOptedOutOfEmail: {
+          type: 'boolean',
+        },
+        IsConverted: {
+          type: 'boolean',
+        },
+        ConvertedDate: {
+          type: 'string',
+        },
+        ConvertedAccountId: {
+          type: 'string',
+        },
+        ConvertedContactId: {
+          type: 'string',
+        },
+        ConvertedOpportunityId: {
+          type: 'string',
+        },
+        IsUnreadByOwner: {
+          type: 'boolean',
+        },
+        CreatedDate: {
+          type: 'string',
+        },
+        CreatedById: {
+          type: 'string',
+        },
+        LastModifiedDate: {
+          type: 'string',
+        },
+        LastModifiedById: {
+          type: 'string',
+        },
+        SystemModstamp: {
+          type: 'string',
+        },
+        LastActivityDate: {
+          type: 'string',
+        },
+        LastViewedDate: {
+          type: 'string',
+        },
+        LastReferencedDate: {
+          type: 'string',
+        },
+        Jigsaw: {
+          type: 'string',
+        },
+        JigsawContactId: {
+          type: 'string',
+        },
+        EmailBouncedReason: {
+          type: 'string',
+        },
+        EmailBouncedDate: {
+          type: 'string',
+        },
+        IndividualId: {
+          type: 'string',
+        },
+        ActionCadenceId: {
+          type: 'string',
+        },
+        ActionCadenceAssigneeId: {
+          type: 'string',
+        },
+        ActionCadenceState: {
+          type: 'string',
+        },
+        ScheduledResumeDateTime: {
+          type: 'string',
+        },
+        ActiveTrackerCount: {
+          type: 'number',
+        },
+        FirstCallDateTime: {
+          type: 'string',
+        },
+        FirstEmailDateTime: {
+          type: 'string',
+        },
+        ActivityMetricId: {
+          type: 'string',
+        },
+        ActivityMetricRollupId: {
+          type: 'string',
+        },
+      },
+    },
   },
 });
 
