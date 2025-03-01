@@ -46,9 +46,10 @@ public:
 
     DLLLOCAL int wait(QoreV8ProgramHelper& v8h);
 
-    DLLLOCAL v8::MaybeLocal<v8::Promise> then(QoreV8ProgramHelper& v8h, const ResolvedCallReferenceNode* code,
-            const ResolvedCallReferenceNode* rejected);
-    DLLLOCAL v8::MaybeLocal<v8::Promise> doCatch(QoreV8ProgramHelper& v8h, const ResolvedCallReferenceNode* code);
+    DLLLOCAL v8::MaybeLocal<v8::Promise> then(QoreV8ProgramHelper& v8h, ReferenceHolder<QoreListNode>& cbh,
+            const ResolvedCallReferenceNode* code, const ResolvedCallReferenceNode* rejected);
+    DLLLOCAL v8::MaybeLocal<v8::Promise> doCatch(QoreV8ProgramHelper& v8h, ReferenceHolder<QoreListNode>& cbh,
+            const ResolvedCallReferenceNode* code);
 
     DLLLOCAL bool hasHandler(QoreV8ProgramHelper& v8h) const;
 
@@ -58,36 +59,45 @@ public:
 
 protected:
     DLLLOCAL v8::MaybeLocal<v8::Function> getPromiseFunction(QoreV8ProgramHelper& v8h,
+            ReferenceHolder<QoreListNode>& cbh,
             void (*call_wrapper)(const v8::FunctionCallbackInfo<v8::Value>& info),
             const ResolvedCallReferenceNode* call);
 };
 
-struct QoreV8PromiseCallbackInfo  : public QoreV8Dereferencable {
+class QoreV8PromiseCallbackInfo : public BinaryNode {
+public:
     ResolvedCallReferenceNode* ref;
     QoreV8Program* pgm;
     v8::Global<v8::Promise> promise;
 
     DLLLOCAL QoreV8PromiseCallbackInfo(const ResolvedCallReferenceNode* ref, QoreV8Program* pgm,
-            v8::Local<v8::Promise> promise);
-
-    DLLLOCAL virtual ~QoreV8PromiseCallbackInfo() {
-        destroy(true);
+            v8::Local<v8::Promise> promise) : ref(const_cast<ResolvedCallReferenceNode*>(ref)), pgm(pgm),
+            promise(pgm->getIsolate(), promise) {
+        this->ref->ref();
     }
 
-    DLLLOCAL virtual void destroy(bool remove) {
-        //printd(5, "QoreV8PromiseCallbackInfo::destroy(remove: %s) this: %p ref: %p\n", remove ? "true" : "false",
+    DLLLOCAL virtual ~QoreV8PromiseCallbackInfo() {
+        //printd(5, "QoreV8PromiseCallbackInfo::~QoreV8PromiseCallbackInfo() this: %p ref: %p\n",
         //    this, ref);
         if (ref) {
             ExceptionSink xsink;
             ref->deref(&xsink);
             ref = nullptr;
-            pgm = nullptr;
-            if (remove) {
-                d->remove();
-            }
         }
-        d = nullptr;
+    }
+
+    DLLLOCAL bool derefImpl(ExceptionSink* xsink) {
+        ref->deref(xsink);
+        ref = nullptr;
+        return true;
+    }
+
+    DLLLOCAL virtual int parseInit(QoreValue& val, QoreParseContext& parse_context) {
+        assert(false);
+        return 0;
     }
 };
+
+extern QoreClass* QC_JAVASCRIPTPROMISE;
 
 #endif

@@ -317,7 +317,7 @@ public:
     DLLLOCAL virtual ~QoreV8Dereferencable() {
     }
 
-    virtual void destroy(bool remove) = 0;
+    virtual void destroy() = 0;
 
     DLLLOCAL void setDereferencer(QoreV8Dereferencer* d) {
         assert(!this->d);
@@ -337,7 +337,7 @@ public:
 
     DLLLOCAL virtual ~QoreV8Dereferencer() {
         if (i) {
-            i->destroy(false);
+            i->destroy();
             i = nullptr;
         }
     }
@@ -348,7 +348,7 @@ public:
 
     DLLLOCAL bool derefImpl(ExceptionSink* xsink) {
         if (i) {
-            i->destroy(false);
+            i->destroy();
             i = nullptr;
         }
         return true;

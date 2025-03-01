@@ -34,6 +34,8 @@
 
 #include <uv.h>
 
+#include <memory>
+
 QoreV8Promise::QoreV8Promise(ExceptionSink* xsink, QoreV8Program* pgm, v8::Local<v8::Promise> obj)
         : QoreV8Object(pgm, obj) {
 }
@@ -71,10 +73,13 @@ static void resolve_promise(const v8::FunctionCallbackInfo<v8::Value>& info) {
 
     v8::Local<v8::External> ext = v8::Local<v8::External>::Cast(v);
     QoreV8PromiseCallbackInfo* cbinfo = reinterpret_cast<QoreV8PromiseCallbackInfo*>(ext->Value());
-
     v8::Isolate* isolate = info.GetIsolate();
-
     ExceptionSink xsink;
+    if (!cbinfo->ref) {
+        xsink.raiseException("CALLBACK-ERROR", "Promise callback has gone out of scope");
+        QoreV8Program::raiseV8Exception(xsink, isolate);
+        return;
+    }
     OptionalCallReferenceAccessHelper rh(&xsink, cbinfo->ref);
     if (!rh) {
         assert(xsink);
@@ -127,11 +132,11 @@ static void resolve_promise(const v8::FunctionCallbackInfo<v8::Value>& info) {
     info.GetReturnValue().Set(v8rv);
 }
 
-v8::MaybeLocal<v8::Promise> QoreV8Promise::then(QoreV8ProgramHelper& v8h, const ResolvedCallReferenceNode* code,
-        const ResolvedCallReferenceNode* rejected) {
+v8::MaybeLocal<v8::Promise> QoreV8Promise::then(QoreV8ProgramHelper& v8h, ReferenceHolder<QoreListNode>& cbh,
+        const ResolvedCallReferenceNode* code, const ResolvedCallReferenceNode* rejected) {
     ExceptionSink* xsink = v8h.getExceptionSink();
 
-    v8::MaybeLocal<v8::Function> func = getPromiseFunction(v8h, resolve_promise, code);
+    v8::MaybeLocal<v8::Function> func = getPromiseFunction(v8h, cbh, resolve_promise, code);
     if (func.IsEmpty()) {
         assert(*xsink);
         return v8::MaybeLocal<v8::Promise>();
@@ -139,7 +144,7 @@ v8::MaybeLocal<v8::Promise> QoreV8Promise::then(QoreV8ProgramHelper& v8h, const 
 
     v8::MaybeLocal<v8::Function> reject_func;
     if (rejected) {
-        reject_func = getPromiseFunction(v8h, resolve_promise, rejected);
+        reject_func = getPromiseFunction(v8h, cbh, resolve_promise, rejected);
         if (reject_func.IsEmpty()) {
             assert(*xsink);
             return v8::MaybeLocal<v8::Promise>();
@@ -159,10 +164,11 @@ v8::MaybeLocal<v8::Promise> QoreV8Promise::then(QoreV8ProgramHelper& v8h, const 
     return handle_scope.EscapeMaybe(rv);
 }
 
-v8::MaybeLocal<v8::Promise> QoreV8Promise::doCatch(QoreV8ProgramHelper& v8h, const ResolvedCallReferenceNode* code) {
+v8::MaybeLocal<v8::Promise> QoreV8Promise::doCatch(QoreV8ProgramHelper& v8h, ReferenceHolder<QoreListNode>& cbh,
+        const ResolvedCallReferenceNode* code) {
     ExceptionSink* xsink = v8h.getExceptionSink();
 
-    v8::MaybeLocal<v8::Function> func = getPromiseFunction(v8h, resolve_promise, code);
+    v8::MaybeLocal<v8::Function> func = getPromiseFunction(v8h, cbh, resolve_promise, code);
     if (func.IsEmpty()) {
         assert(*xsink);
         return v8::MaybeLocal<v8::Promise>();
@@ -193,11 +199,14 @@ v8::Promise::PromiseState QoreV8Promise::getState(QoreV8ProgramHelper& v8h) {
     return get()->State();
 }
 
+#if 0
 static void deref_callref(const v8::WeakCallbackInfo<QoreV8PromiseCallbackInfo>& data) {
     delete data.GetParameter();
 }
+#endif
 
 v8::MaybeLocal<v8::Function> QoreV8Promise::getPromiseFunction(QoreV8ProgramHelper& v8h,
+        ReferenceHolder<QoreListNode>& cbh,
         void (*call_wrapper)(const v8::FunctionCallbackInfo<v8::Value>& info),
         const ResolvedCallReferenceNode* call) {
     ExceptionSink* xsink = v8h.getExceptionSink();
@@ -207,13 +216,15 @@ v8::MaybeLocal<v8::Function> QoreV8Promise::getPromiseFunction(QoreV8ProgramHelp
     v8::EscapableHandleScope handle_scope(isolate);
     const v8::TryCatch tryCatch(isolate);
 
-    QoreV8PromiseCallbackInfo* cbinfo = new QoreV8PromiseCallbackInfo(call, v8h.getProgram(), get());
-    v8::Local<v8::External> ext = v8::External::New(isolate, (void*)cbinfo);
+    std::unique_ptr<QoreV8PromiseCallbackInfo> cbinfo(new QoreV8PromiseCallbackInfo(call, v8h.getProgram(), get()));
+    v8::Local<v8::External> ext = v8::External::New(isolate, (void*)cbinfo.get());
 
+#if 0
     // add callback to external object
     v8::Global<v8::External> gext;
     gext.Reset(isolate, ext);
     gext.SetWeak(cbinfo, deref_callref, v8::WeakCallbackType::kParameter);
+#endif
 
     v8::Local<v8::Context> context = v8h.getContext();
     v8::MaybeLocal<v8::Function> func = v8::Function::New(context, call_wrapper, ext);
@@ -224,18 +235,8 @@ v8::MaybeLocal<v8::Function> QoreV8Promise::getPromiseFunction(QoreV8ProgramHelp
         }
         return v8::MaybeLocal<v8::Function>();
     }
-    ReferenceHolder<QoreV8Dereferencer> rh(new QoreV8Dereferencer(cbinfo), xsink);
-    if (v8h.getProgram()->saveQoreReference(*rh, *xsink)) {
-        //printd(5, "call: %p -> cannot save Qore reference\n", call);
-        assert(*xsink);
-        return v8::MaybeLocal<v8::Function>();
-    }
+    cbh->push(cbinfo.release(), xsink);
+
     //printd(5, "call: %p -> returning JS function object\n", call);
     return v8::MaybeLocal<v8::Function>(handle_scope.Escape(func.ToLocalChecked()));
-}
-
-QoreV8PromiseCallbackInfo::QoreV8PromiseCallbackInfo(const ResolvedCallReferenceNode* ref, QoreV8Program* pgm,
-        v8::Local<v8::Promise> promise) : ref(const_cast<ResolvedCallReferenceNode*>(ref)), pgm(pgm),
-        promise(pgm->getIsolate(), promise) {
-    this->ref->ref();
 }

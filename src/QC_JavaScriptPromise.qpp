@@ -26,6 +26,36 @@
 #include "QC_JavaScriptObject.h"
 #include "QC_JavaScriptProgram.h"
 
+void copy_refs(ExceptionSink* xsink, QoreObject* source, QoreObject* target) {
+    ValueHolder v0(source->getReferencedMemberNoMethod("promise_refs", QC_JAVASCRIPTPROMISE, xsink), xsink);
+    if (!v0) {
+        return;
+    }
+    QoreListNode* tl;
+    ValueHolder v1(target->getReferencedMemberNoMethod("promise_refs", QC_JAVASCRIPTPROMISE, xsink), xsink);
+    if (!v1) {
+        ReferenceHolder<QoreListNode> rh(new QoreListNode(autoTypeInfo), xsink);
+        tl = *rh;
+        target->setMemberValue("promise_refs", QC_JAVASCRIPTPROMISE, *rh, xsink);
+    } else {
+        tl = v1->get<QoreListNode>();
+    }
+    tl->push(v0->refSelf(), xsink);
+}
+
+void save_ref(ExceptionSink* xsink, ReferenceHolder<QoreListNode>& ref, QoreObject* obj) {
+    assert(*ref);
+    // add call reference to parent object's "promise_refs" member
+    ValueHolder v(obj->getReferencedMemberNoMethod("promise_refs", QC_JAVASCRIPTPROMISE, xsink), xsink);
+    if (v) {
+        v->get<QoreListNode>()->push(ref->refSelf(), xsink);
+        //printd(5, "save_ref() obj %p added reference: %p\n", obj, *ref);
+    } else {
+        obj->setMemberValue("promise_refs", QC_JAVASCRIPTPROMISE, *ref, xsink);
+        //printd(5, "save_ref() obj %p set reference: %p\n", obj, *ref);
+    }
+}
+
 /** @defgroup promise_states Promise States
 */
 ///@{
@@ -44,7 +74,12 @@ const Rejected = qore(QoreValue(v8::Promise::PromiseState::kRejected));
 //! Promise for embedding and executing JavaScript code
 /**
 */
-qclass JavaScriptPromise [arg=QoreV8Promise* p; ns=V8; vparent=JavaScriptObject];
+qclass JavaScriptPromise [
+    arg=QoreV8Promise* p;
+    ns=V8;
+    vparent=JavaScriptObject;
+    internal_members=auto promise_refs;
+];
 
 //! Runs the given code asynchronously when the Promise resolves
 /** @param then_code the code to run when the Promise resolves, the value of the Promise is used as the argument to
@@ -57,7 +92,8 @@ JavaScriptPromise JavaScriptPromise::then(code then_code, *code reject_code) {
         return QoreValue();
     }
     v8::EscapableHandleScope handle_scope(v8h.getIsolate());
-    v8::MaybeLocal<v8::Promise> rv = p->then(v8h, then_code, reject_code);
+    ReferenceHolder<QoreListNode> ref(new QoreListNode(autoTypeInfo), xsink);
+    v8::MaybeLocal<v8::Promise> rv = p->then(v8h, ref, then_code, reject_code);
     if (*xsink) {
         return QoreValue();
     }
@@ -66,7 +102,10 @@ JavaScriptPromise JavaScriptPromise::then(code then_code, *code reject_code) {
     if (*xsink) {
         return QoreValue();
     }
-    return new QoreObject(QC_JAVASCRIPTPROMISE, getProgram(), pd.release());
+    ReferenceHolder<QoreObject> qrv(new QoreObject(QC_JAVASCRIPTPROMISE, getProgram(), pd.release()), xsink);
+    save_ref(xsink, ref, self);
+    copy_refs(xsink, self, *qrv);
+    return qrv.release();
 }
 
 //! Runs the given code asynchronously if the Promise throws an asynchronous error
@@ -78,7 +117,8 @@ JavaScriptPromise JavaScriptPromise::doCatch(code catch_code) {
         return QoreValue();
     }
     v8::EscapableHandleScope handle_scope(v8h.getIsolate());
-    v8::MaybeLocal<v8::Promise> rv = p->doCatch(v8h, catch_code);
+    ReferenceHolder<QoreListNode> ref(new QoreListNode(autoTypeInfo), xsink);
+    v8::MaybeLocal<v8::Promise> rv = p->doCatch(v8h, ref, catch_code);
     if (*xsink) {
         return QoreValue();
     }
@@ -87,7 +127,10 @@ JavaScriptPromise JavaScriptPromise::doCatch(code catch_code) {
     if (*xsink) {
         return QoreValue();
     }
-    return new QoreObject(QC_JAVASCRIPTPROMISE, getProgram(), pd.release());
+    ReferenceHolder<QoreObject> qrv(new QoreObject(QC_JAVASCRIPTPROMISE, getProgram(), pd.release()), xsink);
+    save_ref(xsink, ref, self);
+    copy_refs(xsink, self, *qrv);
+    return qrv.release();
 }
 
 //! Returns @ref True if the Promise has a handler

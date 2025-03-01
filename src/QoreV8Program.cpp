@@ -39,6 +39,17 @@ QoreThreadLock QoreV8Program::global_lock;
 QoreV8Program::pset_t QoreV8Program::pset;
 QoreString QoreV8Program::scont("\\n");
 
+#if 0
+static void qore_promise_hook(v8::PromiseHookType type, v8::Local<v8::Promise> promise,
+            v8::Local<v8::Value> parent_promise) {
+    switch(type) {
+        case v8::PromiseHookType::kAfter:
+            printd(0, "qore_promise_hook() after p: %p pp: %p\n", promise, parent_promise);
+            break;
+    }
+}
+#endif
+
 QoreV8Program::QoreV8Program() : save_ref_callback(nullptr) {
     //printd(5, "QoreV8Program::QoreV8Program() this: %p\n", this);
     // Setup up a libuv event loop, v8::Isolate, and Node.js Environment.
@@ -54,6 +65,10 @@ QoreV8Program::QoreV8Program() : save_ref_callback(nullptr) {
     }
 
     isolate = setup->isolate();
+#if 0
+    isolate->SetPromiseHook(qore_promise_hook);
+#endif
+
     isolate->AddNearHeapLimitCallback(heapLimitCallback, this);
     //isolate->SetMicrotasksPolicy(v8::MicrotasksPolicy::kAuto);
     assert(isolate);
@@ -549,19 +564,15 @@ public:
     }
 
     DLLLOCAL virtual ~QoreV8CallbackInfo() {
-        destroy(true);
     }
 
-    DLLLOCAL virtual void destroy(bool remove) {
-        if (ref) {
-            ref->weakDeref();
-            ref = nullptr;
-            pgm = nullptr;
-            if (remove) {
-                d->remove();
-            }
-        }
+    DLLLOCAL virtual void destroy() {
+        assert(ref);
+        ref->weakDeref();
+        ref = nullptr;
+        pgm = nullptr;
         d = nullptr;
+        delete this;
     }
 };
 
@@ -622,9 +633,11 @@ static void call_callref(const v8::FunctionCallbackInfo<v8::Value>& info) {
     info.GetReturnValue().Set(v8rv);
 }
 
+#if 0
 static void deref_callref(const v8::WeakCallbackInfo<QoreV8CallbackInfo>& data) {
     delete data.GetParameter();
 }
+#endif
 
 v8::Local<v8::Value> QoreV8Program::getV8Value(const QoreValue val, ExceptionSink* xsink) {
     //printd(5, "QoreV8Program::getV8Value() type '%s'\n", val.getFullTypeName());
@@ -776,10 +789,12 @@ v8::MaybeLocal<v8::Function> QoreV8Program::getV8Function(ExceptionSink* xsink, 
     QoreV8CallbackInfo* cbinfo = new QoreV8CallbackInfo(call, this);
     v8::Local<v8::External> ext = v8::External::New(isolate, (void*)cbinfo);
 
+#if 0
     // add callback to external object
     v8::Global<v8::External> gext;
     gext.Reset(isolate, ext);
     gext.SetWeak(cbinfo, deref_callref, v8::WeakCallbackType::kParameter);
+#endif
 
     v8::Local<v8::Context> context = setup->context();
     v8::MaybeLocal<v8::Function> func = v8::Function::New(context, call_callref, ext);
