@@ -189,9 +189,16 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
 
         # handle the call with a remote process
         if (TSAI::checkServer()) {
-            TSAI::info("Starting proxy for %y: %y", api.key, args);
+if (api.label =~ /Dynamic type function.*post-crm-v3-objects-products_create/) {
+    try {
+        throw 1;
+    } catch (hash<ExceptionInfo> ex) {
+        TSAI::info("%y: XXX %s", api.label, get_exception_string(ex));
+    }
+}
+            TSAI::info("%y: acquiring proxy for %y: %y", api.label, api.key, args);
             JavaScriptProgramProxy proxy = TypeScriptActionInterface::server.get();
-            TSAI::info("Proxy started for %y: %y", api.key, args);
+            TSAI::info("%y: proxy acquired for %y", api.label, api.key);
             on_exit TypeScriptActionInterface::server.release(proxy);
             return proxy.getAsyncValue(api, args);
         }
@@ -200,7 +207,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         try {
             v = call_function_args(api.async_call, args);
         } catch (hash<ExceptionInfo> ex) {
-            TSAI::error("Error making async JavaScript request %y: %s", api.label, get_exception_string(ex));
+            TSAI::error("%y: error making async JavaScript request: %s", api.label, get_exception_string(ex));
             rethrow;
         }
         auto rv;
@@ -210,7 +217,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             JavaScriptProgram js = v.getProgram();
             code run = js.getGlobal().runWithTimeout.toData();
             int ms = api.to.durationMilliseconds();
-            TSAI::debug("Running Promise with async timeout: %dms", ms);
+            TSAI::debug("%y: running Promise with async timeout: %dms", api.label, ms);
             v = run(v, ms);
             Queue q();
             code push_val = sub (string w, auto v) {
