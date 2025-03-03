@@ -10822,6 +10822,1220 @@ type RootTranslation = {
 				}
 			}
 		}
+		Outlook: {
+			/**
+			 * M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k
+			 */
+			displayName: string
+			/**
+			 * G​e​t​ ​a​c​c​e​s​s​ ​t​o​ ​y​o​u​r​ ​c​a​l​e​n​d​a​r​ ​e​v​e​n​t​s​,​ ​c​o​n​t​a​c​t​s​,​ ​a​n​d​ ​e​m​a​i​l​s​ ​i​n​ ​M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​.
+			 */
+			shortDesc: string
+			/**
+			 * M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​ ​i​s​ ​a​ ​p​e​r​s​o​n​a​l​ ​i​n​f​o​r​m​a​t​i​o​n​ ​m​a​n​a​g​e​r​ ​s​o​f​t​w​a​r​e​ ​s​y​s​t​e​m​ ​f​r​o​m​ ​M​i​c​r​o​s​o​f​t​,​ ​a​v​a​i​l​a​b​l​e​ ​a​s​ ​a​ ​p​a​r​t​ ​o​f​ ​t​h​e​ ​M​i​c​r​o​s​o​f​t​ ​O​f​f​i​c​e​ ​s​u​i​t​e​.​ ​P​r​i​m​a​r​i​l​y​ ​a​n​ ​e​m​a​i​l​ ​a​p​p​l​i​c​a​t​i​o​n​,​ ​i​t​ ​a​l​s​o​ ​i​n​c​l​u​d​e​s​ ​a​ ​c​a​l​e​n​d​a​r​,​ ​t​a​s​k​ ​m​a​n​a​g​e​r​,​ ​c​o​n​t​a​c​t​ ​m​a​n​a​g​e​r​,​ ​n​o​t​e​ ​t​a​k​i​n​g​,​ ​j​o​u​r​n​a​l​,​ ​a​n​d​ ​w​e​b​ ​b​r​o​w​s​i​n​g​.​ ​C​o​n​n​e​c​t​ ​y​o​u​r​ ​O​u​t​l​o​o​k​ ​a​c​c​o​u​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​n​d​ ​m​a​n​a​g​e​ ​c​o​n​t​a​c​t​s​,​ ​c​a​l​e​n​d​a​r​ ​e​v​e​n​t​s​,​ ​a​n​d​ ​s​e​n​d​ ​e​m​a​i​l​s​.
+			 */
+			longDesc: string
+			actions: {
+				'create-contact': {
+					/**
+					 * C​r​e​a​t​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​n​ ​y​o​u​r​ ​O​u​t​l​o​o​k​ ​c​o​n​t​a​c​t​s​.
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​w​i​t​h​ ​d​e​t​a​i​l​s​ ​s​u​c​h​ ​a​s​ ​n​a​m​e​,​ ​e​m​a​i​l​,​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s​,​ ​a​n​d​ ​j​o​b​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​ ​y​o​u​r​ ​M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​ ​c​o​n​t​a​c​t​s​.
+					 */
+					longDesc: string
+					options: {
+						givenName: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​f​i​r​s​t​ ​n​a​m​e​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​r​ ​g​i​v​e​n​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						surname: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​l​a​s​t​ ​n​a​m​e​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​o​r​ ​s​u​r​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						emailAddresses: {
+							/**
+							 * E​m​a​i​l​ ​A​d​d​r​e​s​s​e​s
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										address: {
+											/**
+											 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+											 */
+											shortDesc: string
+											/**
+											 * E​n​t​e​r​ ​a​ ​v​a​l​i​d​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+											 */
+											longDesc: string
+										}
+										name: {
+											/**
+											 * D​i​s​p​l​a​y​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​i​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.
+											 */
+											shortDesc: string
+											/**
+											 * E​n​t​e​r​ ​h​o​w​ ​y​o​u​ ​w​a​n​t​ ​t​h​e​ ​n​a​m​e​ ​t​o​ ​a​p​p​e​a​r​ ​f​o​r​ ​t​h​i​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+						businessPhones: {
+							/**
+							 * B​u​s​i​n​e​s​s​ ​P​h​o​n​e​s
+							 */
+							displayName: string
+							/**
+							 * B​u​s​i​n​e​s​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​b​u​s​i​n​e​s​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						mobilePhone: {
+							/**
+							 * M​o​b​i​l​e​ ​P​h​o​n​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​m​o​b​i​l​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​m​o​b​i​l​e​ ​o​r​ ​c​e​l​l​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						jobTitle: {
+							/**
+							 * J​o​b​ ​T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​j​o​b​ ​t​i​t​l​e​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​p​r​o​f​e​s​s​i​o​n​a​l​ ​t​i​t​l​e​ ​o​r​ ​r​o​l​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						companyName: {
+							/**
+							 * C​o​m​p​a​n​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​'​s​ ​c​o​m​p​a​n​y​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​o​r​ ​c​o​m​p​a​n​y​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​w​o​r​k​s​.
+							 */
+							longDesc: string
+						}
+						department: {
+							/**
+							 * D​e​p​a​r​t​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​d​e​p​a​r​t​m​e​n​t​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​d​e​p​a​r​t​m​e​n​t​ ​o​r​ ​d​i​v​i​s​i​o​n​ ​w​i​t​h​i​n​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​w​o​r​k​s​.
+							 */
+							longDesc: string
+						}
+						officeLocation: {
+							/**
+							 * O​f​f​i​c​e​ ​L​o​c​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​o​f​f​i​c​e​ ​l​o​c​a​t​i​o​n​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​p​h​y​s​i​c​a​l​ ​l​o​c​a​t​i​o​n​ ​o​r​ ​o​f​f​i​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​w​o​r​k​s​.
+							 */
+							longDesc: string
+						}
+						businessAddress: {
+							/**
+							 * B​u​s​i​n​e​s​s​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​b​u​s​i​n​e​s​s​ ​a​d​d​r​e​s​s​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​f​u​l​l​ ​b​u​s​i​n​e​s​s​ ​a​d​d​r​e​s​s​ ​d​e​t​a​i​l​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									street: {
+										/**
+										 * S​t​r​e​e​t
+										 */
+										displayName: string
+										/**
+										 * S​t​r​e​e​t​ ​a​d​d​r​e​s​s​.
+										 */
+										shortDesc: string
+										/**
+										 * E​n​t​e​r​ ​t​h​e​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​i​n​c​l​u​d​i​n​g​ ​b​u​i​l​d​i​n​g​ ​n​u​m​b​e​r​ ​a​n​d​ ​s​t​r​e​e​t​ ​n​a​m​e​.
+										 */
+										longDesc: string
+									}
+									city: {
+										/**
+										 * C​i​t​y
+										 */
+										displayName: string
+										/**
+										 * C​i​t​y​ ​n​a​m​e​.
+										 */
+										shortDesc: string
+										/**
+										 * E​n​t​e​r​ ​t​h​e​ ​c​i​t​y​ ​o​r​ ​t​o​w​n​ ​f​o​r​ ​t​h​e​ ​b​u​s​i​n​e​s​s​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+									state: {
+										/**
+										 * S​t​a​t​e​/​P​r​o​v​i​n​c​e
+										 */
+										displayName: string
+										/**
+										 * S​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​.
+										 */
+										shortDesc: string
+										/**
+										 * E​n​t​e​r​ ​t​h​e​ ​s​t​a​t​e​,​ ​p​r​o​v​i​n​c​e​,​ ​o​r​ ​r​e​g​i​o​n​ ​f​o​r​ ​t​h​e​ ​b​u​s​i​n​e​s​s​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+									countryOrRegion: {
+										/**
+										 * C​o​u​n​t​r​y​/​R​e​g​i​o​n
+										 */
+										displayName: string
+										/**
+										 * C​o​u​n​t​r​y​ ​o​r​ ​r​e​g​i​o​n​.
+										 */
+										shortDesc: string
+										/**
+										 * E​n​t​e​r​ ​t​h​e​ ​c​o​u​n​t​r​y​ ​o​r​ ​r​e​g​i​o​n​ ​f​o​r​ ​t​h​e​ ​b​u​s​i​n​e​s​s​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+									postalCode: {
+										/**
+										 * P​o​s​t​a​l​ ​C​o​d​e
+										 */
+										displayName: string
+										/**
+										 * P​o​s​t​a​l​ ​o​r​ ​z​i​p​ ​c​o​d​e​.
+										 */
+										shortDesc: string
+										/**
+										 * E​n​t​e​r​ ​t​h​e​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​o​r​ ​z​i​p​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​b​u​s​i​n​e​s​s​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				'update-contact': {
+					/**
+					 * U​p​d​a​t​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​ ​i​n​ ​y​o​u​r​ ​O​u​t​l​o​o​k​ ​c​o​n​t​a​c​t​s​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​d​i​f​y​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​ ​i​n​ ​y​o​u​r​ ​M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​ ​c​o​n​t​a​c​t​s​,​ ​s​u​c​h​ ​a​s​ ​n​a​m​e​,​ ​e​m​a​i​l​,​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s​,​ ​o​r​ ​j​o​b​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						contactId: {
+							/**
+							 * C​o​n​t​a​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						givenName: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​f​i​r​s​t​ ​n​a​m​e​.
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​r​ ​g​i​v​e​n​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						surname: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​l​a​s​t​ ​n​a​m​e​.
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​o​r​ ​s​u​r​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						emailAddresses: {
+							/**
+							 * E​m​a​i​l​ ​A​d​d​r​e​s​s​e​s
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										address: {
+											/**
+											 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+											 */
+											shortDesc: string
+											/**
+											 * E​n​t​e​r​ ​a​ ​v​a​l​i​d​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+											 */
+											longDesc: string
+										}
+										name: {
+											/**
+											 * D​i​s​p​l​a​y​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​i​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.
+											 */
+											shortDesc: string
+											/**
+											 * E​n​t​e​r​ ​h​o​w​ ​y​o​u​ ​w​a​n​t​ ​t​h​e​ ​n​a​m​e​ ​t​o​ ​a​p​p​e​a​r​ ​f​o​r​ ​t​h​i​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+						businessPhones: {
+							/**
+							 * B​u​s​i​n​e​s​s​ ​P​h​o​n​e​s
+							 */
+							displayName: string
+							/**
+							 * B​u​s​i​n​e​s​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​b​u​s​i​n​e​s​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						mobilePhone: {
+							/**
+							 * M​o​b​i​l​e​ ​P​h​o​n​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​m​o​b​i​l​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​.
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​m​o​b​i​l​e​ ​o​r​ ​c​e​l​l​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						jobTitle: {
+							/**
+							 * J​o​b​ ​T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​j​o​b​ ​t​i​t​l​e​.
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​p​r​o​f​e​s​s​i​o​n​a​l​ ​t​i​t​l​e​ ​o​r​ ​r​o​l​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						companyName: {
+							/**
+							 * C​o​m​p​a​n​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​'​s​ ​c​o​m​p​a​n​y​.
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​o​r​ ​c​o​m​p​a​n​y​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​w​o​r​k​s​.
+							 */
+							longDesc: string
+						}
+						department: {
+							/**
+							 * D​e​p​a​r​t​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​d​e​p​a​r​t​m​e​n​t​.
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​d​e​p​a​r​t​m​e​n​t​ ​o​r​ ​d​i​v​i​s​i​o​n​ ​w​i​t​h​i​n​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​w​o​r​k​s​.
+							 */
+							longDesc: string
+						}
+						officeLocation: {
+							/**
+							 * O​f​f​i​c​e​ ​L​o​c​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​o​f​f​i​c​e​ ​l​o​c​a​t​i​o​n​.
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​p​h​y​s​i​c​a​l​ ​l​o​c​a​t​i​o​n​ ​o​r​ ​o​f​f​i​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​w​o​r​k​s​.
+							 */
+							longDesc: string
+						}
+						businessAddress: {
+							/**
+							 * B​u​s​i​n​e​s​s​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​b​u​s​i​n​e​s​s​ ​a​d​d​r​e​s​s​.
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​f​u​l​l​ ​b​u​s​i​n​e​s​s​ ​a​d​d​r​e​s​s​ ​d​e​t​a​i​l​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									street: {
+										/**
+										 * S​t​r​e​e​t
+										 */
+										displayName: string
+										/**
+										 * S​t​r​e​e​t​ ​a​d​d​r​e​s​s​.
+										 */
+										shortDesc: string
+										/**
+										 * U​p​d​a​t​e​ ​t​h​e​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​i​n​c​l​u​d​i​n​g​ ​b​u​i​l​d​i​n​g​ ​n​u​m​b​e​r​ ​a​n​d​ ​s​t​r​e​e​t​ ​n​a​m​e​.
+										 */
+										longDesc: string
+									}
+									city: {
+										/**
+										 * C​i​t​y
+										 */
+										displayName: string
+										/**
+										 * C​i​t​y​ ​n​a​m​e​.
+										 */
+										shortDesc: string
+										/**
+										 * U​p​d​a​t​e​ ​t​h​e​ ​c​i​t​y​ ​o​r​ ​t​o​w​n​ ​f​o​r​ ​t​h​e​ ​b​u​s​i​n​e​s​s​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+									state: {
+										/**
+										 * S​t​a​t​e​/​P​r​o​v​i​n​c​e
+										 */
+										displayName: string
+										/**
+										 * S​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​.
+										 */
+										shortDesc: string
+										/**
+										 * U​p​d​a​t​e​ ​t​h​e​ ​s​t​a​t​e​,​ ​p​r​o​v​i​n​c​e​,​ ​o​r​ ​r​e​g​i​o​n​ ​f​o​r​ ​t​h​e​ ​b​u​s​i​n​e​s​s​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+									countryOrRegion: {
+										/**
+										 * C​o​u​n​t​r​y​/​R​e​g​i​o​n
+										 */
+										displayName: string
+										/**
+										 * C​o​u​n​t​r​y​ ​o​r​ ​r​e​g​i​o​n​.
+										 */
+										shortDesc: string
+										/**
+										 * U​p​d​a​t​e​ ​t​h​e​ ​c​o​u​n​t​r​y​ ​o​r​ ​r​e​g​i​o​n​ ​f​o​r​ ​t​h​e​ ​b​u​s​i​n​e​s​s​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+									postalCode: {
+										/**
+										 * P​o​s​t​a​l​ ​C​o​d​e
+										 */
+										displayName: string
+										/**
+										 * P​o​s​t​a​l​ ​o​r​ ​z​i​p​ ​c​o​d​e​.
+										 */
+										shortDesc: string
+										/**
+										 * U​p​d​a​t​e​ ​t​h​e​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​o​r​ ​z​i​p​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​b​u​s​i​n​e​s​s​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				'delete-contact': {
+					/**
+					 * D​e​l​e​t​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​c​o​n​t​a​c​t​ ​f​r​o​m​ ​y​o​u​r​ ​O​u​t​l​o​o​k​ ​c​o​n​t​a​c​t​s​.
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​ ​a​ ​c​o​n​t​a​c​t​ ​f​r​o​m​ ​y​o​u​r​ ​M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​ ​c​o​n​t​a​c​t​s​.
+					 */
+					longDesc: string
+					options: {
+						contactId: {
+							/**
+							 * C​o​n​t​a​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​b​e​ ​d​e​l​e​t​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'create-event': {
+					/**
+					 * C​r​e​a​t​e​ ​E​v​e​n​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​e​v​e​n​t​ ​i​n​ ​y​o​u​r​ ​O​u​t​l​o​o​k​ ​c​a​l​e​n​d​a​r​.
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​e​v​e​n​t​ ​o​r​ ​m​e​e​t​i​n​g​ ​i​n​ ​y​o​u​r​ ​M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​ ​c​a​l​e​n​d​a​r​ ​w​i​t​h​ ​d​e​t​a​i​l​s​ ​s​u​c​h​ ​a​s​ ​t​i​t​l​e​,​ ​s​t​a​r​t​ ​a​n​d​ ​e​n​d​ ​t​i​m​e​s​,​ ​l​o​c​a​t​i​o​n​,​ ​a​n​d​ ​a​t​t​e​n​d​e​e​s​.
+					 */
+					longDesc: string
+					options: {
+						calendarId: {
+							/**
+							 * C​a​l​e​n​d​a​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​a​l​e​n​d​a​r​ ​w​h​e​r​e​ ​t​h​e​ ​e​v​e​n​t​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​a​l​e​n​d​a​r​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​n​e​w​ ​e​v​e​n​t​.
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​o​r​ ​s​u​b​j​e​c​t​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​a​ ​t​i​t​l​e​ ​o​r​ ​s​u​b​j​e​c​t​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t​ ​t​h​a​t​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​i​n​ ​y​o​u​r​ ​c​a​l​e​n​d​a​r​.
+							 */
+							longDesc: string
+						}
+						start: {
+							/**
+							 * S​t​a​r​t​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​n​ ​t​h​e​ ​e​v​e​n​t​ ​b​e​g​i​n​s​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​w​h​e​n​ ​t​h​e​ ​e​v​e​n​t​ ​w​i​l​l​ ​s​t​a​r​t​.
+							 */
+							longDesc: string
+						}
+						timezone: {
+							/**
+							 * T​i​m​e​ ​Z​o​n​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​i​m​e​ ​z​o​n​e​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t​ ​t​i​m​e​s​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​i​m​e​ ​z​o​n​e​ ​t​h​a​t​ ​a​p​p​l​i​e​s​ ​t​o​ ​t​h​e​ ​s​t​a​r​t​ ​a​n​d​ ​e​n​d​ ​t​i​m​e​s​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​.
+							 */
+							longDesc: string
+						}
+						end: {
+							/**
+							 * E​n​d​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​n​ ​t​h​e​ ​e​v​e​n​t​ ​e​n​d​s​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​w​h​e​n​ ​t​h​e​ ​e​v​e​n​t​ ​w​i​l​l​ ​e​n​d​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​d​e​f​a​u​l​t​s​ ​t​o​ ​1​ ​h​o​u​r​ ​a​f​t​e​r​ ​s​t​a​r​t​ ​t​i​m​e​.
+							 */
+							longDesc: string
+						}
+						location: {
+							/**
+							 * L​o​c​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * W​h​e​r​e​ ​t​h​e​ ​e​v​e​n​t​ ​w​i​l​l​ ​t​a​k​e​ ​p​l​a​c​e​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​p​h​y​s​i​c​a​l​ ​l​o​c​a​t​i​o​n​ ​o​r​ ​v​i​r​t​u​a​l​ ​m​e​e​t​i​n​g​ ​p​l​a​c​e​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t​.
+							 */
+							longDesc: string
+						}
+						attendees: {
+							/**
+							 * A​t​t​e​n​d​e​e​s
+							 */
+							displayName: string
+							/**
+							 * P​e​o​p​l​e​ ​i​n​v​i​t​e​d​ ​t​o​ ​t​h​e​ ​e​v​e​n​t​.
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​a​t​t​e​n​d​e​e​s​ ​t​o​ ​i​n​v​i​t​e​ ​t​o​ ​t​h​e​ ​e​v​e​n​t​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										emailAddress: {
+											/**
+											 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​a​t​t​e​n​d​e​e​'​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.
+											 */
+											shortDesc: string
+											/**
+											 * E​n​t​e​r​ ​t​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​p​e​r​s​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​i​n​v​i​t​e​.
+											 */
+											longDesc: string
+										}
+										type: {
+											/**
+											 * A​t​t​e​n​d​e​e​ ​T​y​p​e
+											 */
+											displayName: string
+											/**
+											 * R​e​q​u​i​r​e​d​ ​o​r​ ​o​p​t​i​o​n​a​l​ ​a​t​t​e​n​d​e​e​.
+											 */
+											shortDesc: string
+											/**
+											 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​h​i​s​ ​p​e​r​s​o​n​ ​i​s​ ​a​ ​r​e​q​u​i​r​e​d​ ​o​r​ ​o​p​t​i​o​n​a​l​ ​a​t​t​e​n​d​e​e​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+						body: {
+							/**
+							 * B​o​d​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​b​o​d​y​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​d​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​t​h​a​t​ ​a​t​t​e​n​d​e​e​s​ ​w​i​l​l​ ​s​e​e​ ​i​n​ ​t​h​e​ ​i​n​v​i​t​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						bodyContentType: {
+							/**
+							 * B​o​d​y​ ​C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * F​o​r​m​a​t​ ​o​f​ ​t​h​e​ ​b​o​d​y​ ​c​o​n​t​e​n​t​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​b​o​d​y​ ​c​o​n​t​e​n​t​ ​i​s​ ​p​l​a​i​n​ ​t​e​x​t​ ​o​r​ ​H​T​M​L​ ​f​o​r​m​a​t​t​e​d​.
+							 */
+							longDesc: string
+						}
+						isOnlineMeeting: {
+							/**
+							 * O​n​l​i​n​e​ ​M​e​e​t​i​n​g
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​i​s​ ​i​s​ ​a​n​ ​o​n​l​i​n​e​ ​m​e​e​t​i​n​g​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​a​b​l​e​ ​t​h​i​s​ ​o​p​t​i​o​n​ ​t​o​ ​m​a​k​e​ ​t​h​i​s​ ​e​v​e​n​t​ ​a​n​ ​o​n​l​i​n​e​ ​m​e​e​t​i​n​g​ ​a​n​d​ ​g​e​n​e​r​a​t​e​ ​a​ ​m​e​e​t​i​n​g​ ​l​i​n​k​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'delete-event': {
+					/**
+					 * D​e​l​e​t​e​ ​E​v​e​n​t
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​n​ ​e​v​e​n​t​ ​f​r​o​m​ ​y​o​u​r​ ​O​u​t​l​o​o​k​ ​c​a​l​e​n​d​a​r​.
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​ ​a​n​ ​e​v​e​n​t​ ​o​r​ ​m​e​e​t​i​n​g​ ​f​r​o​m​ ​y​o​u​r​ ​M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​ ​c​a​l​e​n​d​a​r​.
+					 */
+					longDesc: string
+					options: {
+						calendarId: {
+							/**
+							 * C​a​l​e​n​d​a​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​a​l​e​n​d​a​r​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​e​v​e​n​t​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​a​l​e​n​d​a​r​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​e​v​e​n​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​.
+							 */
+							longDesc: string
+						}
+						eventId: {
+							/**
+							 * E​v​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​t​o​ ​b​e​ ​d​e​l​e​t​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'list-contacts': {
+					/**
+					 * L​i​s​t​ ​C​o​n​t​a​c​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m​ ​y​o​u​r​ ​O​u​t​l​o​o​k​ ​c​o​n​t​a​c​t​s​.
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​a​ ​l​i​s​t​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m​ ​y​o​u​r​ ​M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​ ​c​o​n​t​a​c​t​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​l​i​m​i​t​.
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​r​o​m​ ​t​h​e​ ​O​u​t​l​o​o​k​ ​a​c​c​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​n​t​a​c​t​s​ ​b​y​ ​n​a​m​e​ ​o​r​ ​e​m​a​i​l​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​e​x​t​ ​t​o​ ​f​i​l​t​e​r​ ​c​o​n​t​a​c​t​s​ ​b​y​ ​n​a​m​e​ ​o​r​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.​ ​O​n​l​y​ ​c​o​n​t​a​c​t​s​ ​m​a​t​c​h​i​n​g​ ​t​h​e​ ​f​i​l​t​e​r​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'list-events': {
+					/**
+					 * L​i​s​t​ ​E​v​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​e​v​e​n​t​s​ ​f​r​o​m​ ​y​o​u​r​ ​O​u​t​l​o​o​k​ ​c​a​l​e​n​d​a​r​.
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​a​ ​l​i​s​t​ ​o​f​ ​e​v​e​n​t​s​ ​f​r​o​m​ ​y​o​u​r​ ​M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​ ​c​a​l​e​n​d​a​r​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​d​a​t​e​ ​r​a​n​g​e​ ​a​n​d​ ​l​i​m​i​t​.
+					 */
+					longDesc: string
+					options: {
+						calendarId: {
+							/**
+							 * C​a​l​e​n​d​a​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​a​l​e​n​d​a​r​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​e​v​e​n​t​s​ ​f​r​o​m​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​a​l​e​n​d​a​r​ ​f​r​o​m​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​e​v​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+						startDateTime: {
+							/**
+							 * S​t​a​r​t​ ​D​a​t​e​ ​a​n​d​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​t​a​r​t​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​e​v​e​n​t​s​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​a​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​e​v​e​n​t​s​ ​t​h​a​t​ ​s​t​a​r​t​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​t​i​m​e​.
+							 */
+							longDesc: string
+						}
+						endDateTime: {
+							/**
+							 * E​n​d​ ​D​a​t​e​ ​a​n​d​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​d​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​e​v​e​n​t​s​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​a​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​e​v​e​n​t​s​ ​t​h​a​t​ ​e​n​d​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​t​i​m​e​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​e​v​e​n​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​e​v​e​n​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​r​o​m​ ​t​h​e​ ​O​u​t​l​o​o​k​ ​c​a​l​e​n​d​a​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'send-email': {
+					/**
+					 * S​e​n​d​ ​E​m​a​i​l
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​n​ ​e​m​a​i​l​ ​f​r​o​m​ ​y​o​u​r​ ​O​u​t​l​o​o​k​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+					/**
+					 * C​o​m​p​o​s​e​ ​a​n​d​ ​s​e​n​d​ ​a​n​ ​e​m​a​i​l​ ​m​e​s​s​a​g​e​ ​f​r​o​m​ ​y​o​u​r​ ​M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​ ​a​c​c​o​u​n​t​ ​t​o​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​r​e​c​i​p​i​e​n​t​s​.
+					 */
+					longDesc: string
+					options: {
+						toRecipients: {
+							/**
+							 * T​o​ ​R​e​c​i​p​i​e​n​t​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​i​m​a​r​y​ ​r​e​c​i​p​i​e​n​t​s​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​f​o​r​ ​t​h​e​ ​p​r​i​m​a​r​y​ ​r​e​c​i​p​i​e​n​t​s​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										emailAddress: {
+											/**
+											 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+											 */
+											displayName: string
+											/**
+											 * R​e​c​i​p​i​e​n​t​'​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.
+											 */
+											shortDesc: string
+											/**
+											 * E​n​t​e​r​ ​t​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​r​e​c​i​p​i​e​n​t​.
+											 */
+											longDesc: string
+										}
+										name: {
+											/**
+											 * D​i​s​p​l​a​y​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * R​e​c​i​p​i​e​n​t​'​s​ ​d​i​s​p​l​a​y​ ​n​a​m​e​.
+											 */
+											shortDesc: string
+											/**
+											 * O​p​t​i​o​n​a​l​l​y​ ​e​n​t​e​r​ ​a​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​r​e​c​i​p​i​e​n​t​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+						ccRecipients: {
+							/**
+							 * C​C​ ​R​e​c​i​p​i​e​n​t​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​a​r​b​o​n​ ​c​o​p​y​ ​r​e​c​i​p​i​e​n​t​s​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​.
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​e​n​t​e​r​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​f​o​r​ ​r​e​c​i​p​i​e​n​t​s​ ​t​o​ ​b​e​ ​c​o​p​i​e​d​ ​o​n​ ​t​h​e​ ​e​m​a​i​l​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										emailAddress: {
+											/**
+											 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+											 */
+											displayName: string
+											/**
+											 * C​C​ ​r​e​c​i​p​i​e​n​t​'​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.
+											 */
+											shortDesc: string
+											/**
+											 * E​n​t​e​r​ ​t​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​C​C​ ​r​e​c​i​p​i​e​n​t​.
+											 */
+											longDesc: string
+										}
+										name: {
+											/**
+											 * D​i​s​p​l​a​y​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * C​C​ ​r​e​c​i​p​i​e​n​t​'​s​ ​d​i​s​p​l​a​y​ ​n​a​m​e​.
+											 */
+											shortDesc: string
+											/**
+											 * O​p​t​i​o​n​a​l​l​y​ ​e​n​t​e​r​ ​a​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​C​C​ ​r​e​c​i​p​i​e​n​t​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+						bccRecipients: {
+							/**
+							 * B​C​C​ ​R​e​c​i​p​i​e​n​t​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​b​l​i​n​d​ ​c​a​r​b​o​n​ ​c​o​p​y​ ​r​e​c​i​p​i​e​n​t​s​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​.
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​e​n​t​e​r​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​f​o​r​ ​r​e​c​i​p​i​e​n​t​s​ ​t​o​ ​b​e​ ​b​l​i​n​d​ ​c​o​p​i​e​d​ ​o​n​ ​t​h​e​ ​e​m​a​i​l​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										emailAddress: {
+											/**
+											 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+											 */
+											displayName: string
+											/**
+											 * B​C​C​ ​r​e​c​i​p​i​e​n​t​'​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.
+											 */
+											shortDesc: string
+											/**
+											 * E​n​t​e​r​ ​t​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​B​C​C​ ​r​e​c​i​p​i​e​n​t​.
+											 */
+											longDesc: string
+										}
+										name: {
+											/**
+											 * D​i​s​p​l​a​y​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * B​C​C​ ​r​e​c​i​p​i​e​n​t​'​s​ ​d​i​s​p​l​a​y​ ​n​a​m​e​.
+											 */
+											shortDesc: string
+											/**
+											 * O​p​t​i​o​n​a​l​l​y​ ​e​n​t​e​r​ ​a​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​B​C​C​ ​r​e​c​i​p​i​e​n​t​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+						subject: {
+							/**
+							 * S​u​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​u​b​j​e​c​t​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​s​u​b​j​e​c​t​ ​l​i​n​e​ ​t​h​a​t​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​i​n​ ​t​h​e​ ​r​e​c​i​p​i​e​n​t​'​s​ ​i​n​b​o​x​.
+							 */
+							longDesc: string
+						}
+						body: {
+							/**
+							 * B​o​d​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​m​a​i​n​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​.
+							 */
+							longDesc: string
+						}
+						bodyContentType: {
+							/**
+							 * B​o​d​y​ ​C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * F​o​r​m​a​t​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​ ​b​o​d​y​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​e​m​a​i​l​ ​b​o​d​y​ ​i​s​ ​p​l​a​i​n​ ​t​e​x​t​ ​o​r​ ​H​T​M​L​ ​f​o​r​m​a​t​t​e​d​.
+							 */
+							longDesc: string
+						}
+						saveToSentItems: {
+							/**
+							 * S​a​v​e​ ​t​o​ ​S​e​n​t​ ​I​t​e​m​s
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​s​a​v​e​ ​a​ ​c​o​p​y​ ​i​n​ ​S​e​n​t​ ​I​t​e​m​s​.
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​a​v​e​ ​a​ ​c​o​p​y​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​ ​i​n​ ​y​o​u​r​ ​S​e​n​t​ ​I​t​e​m​s​ ​f​o​l​d​e​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				'new-contact': {
+					/**
+					 * N​e​w​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​O​u​t​l​o​o​k​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​i​s​ ​a​c​t​i​v​a​t​e​d​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​y​o​u​r​ ​M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​ ​c​o​n​t​a​c​t​s​.
+					 */
+					longDesc: string
+				}
+				'new-email': {
+					/**
+					 * N​e​w​ ​E​m​a​i​l
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​e​m​a​i​l​ ​i​s​ ​r​e​c​e​i​v​e​d​ ​i​n​ ​O​u​t​l​o​o​k​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​i​s​ ​a​c​t​i​v​a​t​e​d​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​e​m​a​i​l​ ​m​e​s​s​a​g​e​ ​i​s​ ​r​e​c​e​i​v​e​d​ ​i​n​ ​y​o​u​r​ ​M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​ ​i​n​b​o​x​.
+					 */
+					longDesc: string
+				}
+				'new-event': {
+					/**
+					 * N​e​w​ ​E​v​e​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​e​v​e​n​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​n​ ​O​u​t​l​o​o​k​ ​c​a​l​e​n​d​a​r​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​i​s​ ​a​c​t​i​v​a​t​e​d​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​e​v​e​n​t​ ​o​r​ ​m​e​e​t​i​n​g​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​y​o​u​r​ ​M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​ ​c​a​l​e​n​d​a​r​.
+					 */
+					longDesc: string
+					options: {
+						calendarId: {
+							/**
+							 * C​a​l​e​n​d​a​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​a​l​e​n​d​a​r​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​e​v​e​n​t​s​.
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​s​e​l​e​c​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​l​e​n​d​a​r​ ​t​o​ ​m​o​n​i​t​o​r​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​a​l​l​ ​c​a​l​e​n​d​a​r​s​ ​w​i​l​l​ ​b​e​ ​m​o​n​i​t​o​r​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -21628,6 +22842,1220 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Specify the Item ID of the list item that you want to update. This ensures that the correct item is modified.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		Outlook: {
+			/**
+			 * Microsoft Outlook
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Get access to your calendar events, contacts, and emails in Microsoft Outlook.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Microsoft Outlook is a personal information manager software system from Microsoft, available as a part of the Microsoft Office suite. Primarily an email application, it also includes a calendar, task manager, contact manager, note taking, journal, and web browsing. Connect your Outlook account to create and manage contacts, calendar events, and send emails.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				'create-contact': {
+					/**
+					 * Create Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new contact in your Outlook contacts.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new contact with details such as name, email, phone numbers, and job information in your Microsoft Outlook contacts.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						givenName: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's first name.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the first name or given name of the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						surname: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's last name.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the last name or surname of the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						emailAddresses: {
+							/**
+							 * Email Addresses
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email addresses for the contact.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter one or more email addresses for the contact.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										address: {
+											/**
+											 * Email Address
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The email address of the contact.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Enter a valid email address for the contact.
+											 */
+											longDesc: () => LocalizedString
+										}
+										name: {
+											/**
+											 * Display Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The display name for this email address.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Enter how you want the name to appear for this email address.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+						businessPhones: {
+							/**
+							 * Business Phones
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Business phone numbers for the contact.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter one or more business phone numbers for the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						mobilePhone: {
+							/**
+							 * Mobile Phone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's mobile phone number.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the mobile or cell phone number for the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						jobTitle: {
+							/**
+							 * Job Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's job title.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the professional title or role of the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						companyName: {
+							/**
+							 * Company Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The name of the contact's company.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the organization or company where the contact works.
+							 */
+							longDesc: () => LocalizedString
+						}
+						department: {
+							/**
+							 * Department
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's department.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the department or division within the company where the contact works.
+							 */
+							longDesc: () => LocalizedString
+						}
+						officeLocation: {
+							/**
+							 * Office Location
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's office location.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the physical location or office where the contact works.
+							 */
+							longDesc: () => LocalizedString
+						}
+						businessAddress: {
+							/**
+							 * Business Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's business address.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the full business address details for the contact.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									street: {
+										/**
+										 * Street
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Street address.
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Enter the street address including building number and street name.
+										 */
+										longDesc: () => LocalizedString
+									}
+									city: {
+										/**
+										 * City
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * City name.
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Enter the city or town for the business address.
+										 */
+										longDesc: () => LocalizedString
+									}
+									state: {
+										/**
+										 * State/Province
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * State or province.
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Enter the state, province, or region for the business address.
+										 */
+										longDesc: () => LocalizedString
+									}
+									countryOrRegion: {
+										/**
+										 * Country/Region
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Country or region.
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Enter the country or region for the business address.
+										 */
+										longDesc: () => LocalizedString
+									}
+									postalCode: {
+										/**
+										 * Postal Code
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Postal or zip code.
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Enter the postal code or zip code for the business address.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				'update-contact': {
+					/**
+					 * Update Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing contact in your Outlook contacts.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Modify details of an existing contact in your Microsoft Outlook contacts, such as name, email, phone numbers, or job information.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						contactId: {
+							/**
+							 * Contact ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier for the contact.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the unique identifier of the contact you want to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						givenName: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's first name.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the first name or given name of the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						surname: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's last name.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the last name or surname of the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						emailAddresses: {
+							/**
+							 * Email Addresses
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email addresses for the contact.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update one or more email addresses for the contact.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										address: {
+											/**
+											 * Email Address
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The email address of the contact.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Enter a valid email address for the contact.
+											 */
+											longDesc: () => LocalizedString
+										}
+										name: {
+											/**
+											 * Display Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The display name for this email address.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Enter how you want the name to appear for this email address.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+						businessPhones: {
+							/**
+							 * Business Phones
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Business phone numbers for the contact.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update one or more business phone numbers for the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						mobilePhone: {
+							/**
+							 * Mobile Phone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's mobile phone number.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the mobile or cell phone number for the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						jobTitle: {
+							/**
+							 * Job Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's job title.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the professional title or role of the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						companyName: {
+							/**
+							 * Company Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The name of the contact's company.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the organization or company where the contact works.
+							 */
+							longDesc: () => LocalizedString
+						}
+						department: {
+							/**
+							 * Department
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's department.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the department or division within the company where the contact works.
+							 */
+							longDesc: () => LocalizedString
+						}
+						officeLocation: {
+							/**
+							 * Office Location
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's office location.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the physical location or office where the contact works.
+							 */
+							longDesc: () => LocalizedString
+						}
+						businessAddress: {
+							/**
+							 * Business Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's business address.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the full business address details for the contact.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									street: {
+										/**
+										 * Street
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Street address.
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Update the street address including building number and street name.
+										 */
+										longDesc: () => LocalizedString
+									}
+									city: {
+										/**
+										 * City
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * City name.
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Update the city or town for the business address.
+										 */
+										longDesc: () => LocalizedString
+									}
+									state: {
+										/**
+										 * State/Province
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * State or province.
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Update the state, province, or region for the business address.
+										 */
+										longDesc: () => LocalizedString
+									}
+									countryOrRegion: {
+										/**
+										 * Country/Region
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Country or region.
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Update the country or region for the business address.
+										 */
+										longDesc: () => LocalizedString
+									}
+									postalCode: {
+										/**
+										 * Postal Code
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Postal or zip code.
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Update the postal code or zip code for the business address.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				'delete-contact': {
+					/**
+					 * Delete Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a contact from your Outlook contacts.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently remove a contact from your Microsoft Outlook contacts.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						contactId: {
+							/**
+							 * Contact ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier for the contact.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the unique identifier of the contact to be deleted.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'create-event': {
+					/**
+					 * Create Event
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new event in your Outlook calendar.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new event or meeting in your Microsoft Outlook calendar with details such as title, start and end times, location, and attendees.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						calendarId: {
+							/**
+							 * Calendar ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The calendar where the event will be created.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the calendar where you want to create the new event.
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The title or subject of the event.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter a title or subject for the event that will appear in your calendar.
+							 */
+							longDesc: () => LocalizedString
+						}
+						start: {
+							/**
+							 * Start Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * When the event begins.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the date and time when the event will start.
+							 */
+							longDesc: () => LocalizedString
+						}
+						timezone: {
+							/**
+							 * Time Zone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The time zone for the event times.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the time zone that applies to the start and end times of the event.
+							 */
+							longDesc: () => LocalizedString
+						}
+						end: {
+							/**
+							 * End Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * When the event ends.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the date and time when the event will end. If not specified, defaults to 1 hour after start time.
+							 */
+							longDesc: () => LocalizedString
+						}
+						location: {
+							/**
+							 * Location
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Where the event will take place.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the physical location or virtual meeting place for the event.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attendees: {
+							/**
+							 * Attendees
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * People invited to the event.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Add one or more attendees to invite to the event.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										emailAddress: {
+											/**
+											 * Email Address
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The attendee's email address.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Enter the email address of the person you want to invite.
+											 */
+											longDesc: () => LocalizedString
+										}
+										type: {
+											/**
+											 * Attendee Type
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Required or optional attendee.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Specify whether this person is a required or optional attendee.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+						body: {
+							/**
+							 * Body
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The body content of the event.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the description or details of the event that attendees will see in the invitation.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bodyContentType: {
+							/**
+							 * Body Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Format of the body content.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select whether the body content is plain text or HTML formatted.
+							 */
+							longDesc: () => LocalizedString
+						}
+						isOnlineMeeting: {
+							/**
+							 * Online Meeting
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether this is an online meeting.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enable this option to make this event an online meeting and generate a meeting link.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'delete-event': {
+					/**
+					 * Delete Event
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete an event from your Outlook calendar.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently remove an event or meeting from your Microsoft Outlook calendar.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						calendarId: {
+							/**
+							 * Calendar ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The calendar containing the event.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the calendar that contains the event you want to delete.
+							 */
+							longDesc: () => LocalizedString
+						}
+						eventId: {
+							/**
+							 * Event ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier for the event.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the unique identifier of the event to be deleted.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'list-contacts': {
+					/**
+					 * List Contacts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of contacts from your Outlook contacts.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get a list of contacts from your Microsoft Outlook contacts with optional filtering and limit.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The maximum number of contacts to retrieve.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the maximum number of contacts to retrieve from the Outlook account.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter contacts by name or email.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter text to filter contacts by name or email address. Only contacts matching the filter will be returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'list-events': {
+					/**
+					 * List Events
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of events from your Outlook calendar.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get a list of events from your Microsoft Outlook calendar with optional filtering by date range and limit.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						calendarId: {
+							/**
+							 * Calendar ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The calendar to retrieve events from.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the calendar from which you want to retrieve events.
+							 */
+							longDesc: () => LocalizedString
+						}
+						startDateTime: {
+							/**
+							 * Start Date and Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The start date and time for filtering events.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter a date and time to retrieve events that start on or after this time.
+							 */
+							longDesc: () => LocalizedString
+						}
+						endDateTime: {
+							/**
+							 * End Date and Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The end date and time for filtering events.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter a date and time to retrieve events that end on or before this time.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The maximum number of events to retrieve.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the maximum number of events to retrieve from the Outlook calendar.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'send-email': {
+					/**
+					 * Send Email
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send an email from your Outlook account.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Compose and send an email message from your Microsoft Outlook account to one or more recipients.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						toRecipients: {
+							/**
+							 * To Recipients
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The primary recipients of the email.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter one or more email addresses for the primary recipients of the email.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										emailAddress: {
+											/**
+											 * Email Address
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Recipient's email address.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Enter the email address of the recipient.
+											 */
+											longDesc: () => LocalizedString
+										}
+										name: {
+											/**
+											 * Display Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Recipient's display name.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Optionally enter a display name for the recipient.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+						ccRecipients: {
+							/**
+							 * CC Recipients
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The carbon copy recipients of the email.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally enter one or more email addresses for recipients to be copied on the email.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										emailAddress: {
+											/**
+											 * Email Address
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * CC recipient's email address.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Enter the email address of the CC recipient.
+											 */
+											longDesc: () => LocalizedString
+										}
+										name: {
+											/**
+											 * Display Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * CC recipient's display name.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Optionally enter a display name for the CC recipient.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+						bccRecipients: {
+							/**
+							 * BCC Recipients
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The blind carbon copy recipients of the email.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally enter one or more email addresses for recipients to be blind copied on the email.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										emailAddress: {
+											/**
+											 * Email Address
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * BCC recipient's email address.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Enter the email address of the BCC recipient.
+											 */
+											longDesc: () => LocalizedString
+										}
+										name: {
+											/**
+											 * Display Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * BCC recipient's display name.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Optionally enter a display name for the BCC recipient.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+						subject: {
+							/**
+							 * Subject
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The subject line of the email.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the subject line that will appear in the recipient's inbox.
+							 */
+							longDesc: () => LocalizedString
+						}
+						body: {
+							/**
+							 * Body
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content of the email.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the main message content of the email.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bodyContentType: {
+							/**
+							 * Body Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Format of the email body.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select whether the email body is plain text or HTML formatted.
+							 */
+							longDesc: () => LocalizedString
+						}
+						saveToSentItems: {
+							/**
+							 * Save to Sent Items
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to save a copy in Sent Items.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose whether to save a copy of the email in your Sent Items folder.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				'new-contact': {
+					/**
+					 * New Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a new contact is created in Outlook.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger is activated whenever a new contact is added to your Microsoft Outlook contacts.
+					 */
+					longDesc: () => LocalizedString
+				}
+				'new-email': {
+					/**
+					 * New Email
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a new email is received in Outlook.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger is activated whenever a new email message is received in your Microsoft Outlook inbox.
+					 */
+					longDesc: () => LocalizedString
+				}
+				'new-event': {
+					/**
+					 * New Event
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a new event is created in an Outlook calendar.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger is activated whenever a new event or meeting is created in your Microsoft Outlook calendar.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						calendarId: {
+							/**
+							 * Calendar ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The calendar to monitor for new events.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally select a specific calendar to monitor. If not specified, all calendars will be monitored.
 							 */
 							longDesc: () => LocalizedString
 						}
