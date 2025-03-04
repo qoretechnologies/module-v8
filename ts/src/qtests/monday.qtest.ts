@@ -121,7 +121,7 @@ describe('Should test Monday app', () => {
 
       const allowedValues = await getMondaySingleColumnAllowedValues({
         ...baseContext,
-        opts: { ...baseContext.opts, column_id: 'project_status' },
+        opts: { ...baseContext.opts, column_id: 'color_mknqsk4q' },
       });
 
       expect(allowedValues).toBeDefined();
