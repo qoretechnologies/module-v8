@@ -176,7 +176,7 @@ describe('Should test Monday app', () => {
         board_id: boardId,
         item_name: 'Test Item',
         group_id: groupId,
-        column_values: { priority_1: '10' },
+        column_values: { name: 'Test' },
       });
 
       expect(result).toBeDefined();
@@ -200,7 +200,7 @@ describe('Should test Monday app', () => {
       const result = await testApi.execAppAction('monday', 'clear-column-value', connection, {
         board_id: boardId,
         record_id: itemId,
-        column_id: 'priority_1',
+        column_id: 'name',
       });
 
       expect(result).toBeDefined();
@@ -233,7 +233,7 @@ describe('Should test Monday app', () => {
       const result = await testApi.execAppAction('monday', 'update-record', connection, {
         board_id: boardId,
         record_id: itemId,
-        column_values: { priority_1: '10', name: 'Test Item Updated' },
+        column_values: { name: 'Test Item Updated' },
       });
 
       expect(result).toBeDefined();
