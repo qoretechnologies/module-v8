@@ -919,13 +919,20 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             string pfx = " > stderr: ";
             str = pfx + str;
             str = replace(str, "\n", "\n" + pfx);
-            error("Child error output followg:\n%s", str);
+            error("Child error output follows:\n%s", str);
             if (!out) {
                 out = True;
             }
         }
         if (always_output && !out) {
             info("child has no output");
+        }
+        if (out) {
+            try {
+                throw "LOCATION-ERROR";
+            } catch (hash<ExceptionInfo> ex) {
+                info("%s", get_exception_string(ex));
+            }
         }
     }
 

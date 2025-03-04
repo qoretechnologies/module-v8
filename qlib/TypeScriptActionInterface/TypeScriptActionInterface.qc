@@ -1730,7 +1730,7 @@ public class TypeScriptActionInterface {
         }
         AbstractDataProviderType rv;
         if (orig.type == "hash") {
-            hash<auto> f = remove h.fields;
+            *hash<auto> f = remove h.fields;
             /*
             AbstractDataProviderType et;
             if (auto t = remove h.element_type) {
