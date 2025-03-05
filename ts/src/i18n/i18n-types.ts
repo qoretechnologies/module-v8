@@ -8561,6 +8561,10 @@ type RootTranslation = {
 					 * C​r​e​a​t​e​ ​O​r​ ​U​p​d​a​t​e​ ​C​o​m​p​a​n​i​e​s
 					 */
 					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​o​r​ ​u​p​d​a​t​e​ ​m​u​l​t​i​p​l​e​ ​c​o​m​p​a​n​i​e​s
+					 */
+					shortDesc: string
 				}
 				'get-crm-v3-objects-contacts': {
 					/**
@@ -8581,6 +8585,108 @@ type RootTranslation = {
 					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t
 					 */
 					shortDesc: string
+					options: {
+						associations: {
+							/**
+							 * H​u​b​S​p​o​t​ ​A​s​s​o​c​i​a​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * D​e​f​i​n​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​ ​b​e​t​w​e​e​n​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​s​s​o​c​i​a​t​i​o​n​s​ ​c​r​e​a​t​e​ ​c​o​n​n​e​c​t​i​o​n​s​ ​b​e​t​w​e​e​n​ ​d​i​f​f​e​r​e​n​t​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s​ ​s​u​c​h​ ​a​s​ ​c​o​n​t​a​c​t​s​,​ ​c​o​m​p​a​n​i​e​s​,​ ​d​e​a​l​s​,​ ​t​i​c​k​e​t​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​s​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										to: {
+											/**
+											 * T​a​r​g​e​t​ ​O​b​j​e​c​t
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​n​ ​a​s​s​o​c​i​a​t​i​o​n​ ​w​i​t​h
+											 */
+											shortDesc: string
+											/**
+											 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​t​a​r​g​e​t​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​(​c​o​m​p​a​n​y​,​ ​c​o​n​t​a​c​t​,​ ​d​e​a​l​,​ ​e​t​c​.​)​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​o​b​j​e​c​t​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													id: {
+														/**
+														 * O​b​j​e​c​t​ ​I​D
+														 */
+														displayName: string
+														/**
+														 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​o​b​j​e​c​t
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​(​I​D​)​ ​o​f​ ​t​h​e​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​b​e​i​n​g​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​.​ ​T​h​i​s​ ​c​o​u​l​d​ ​b​e​ ​a​ ​c​o​m​p​a​n​y​ ​I​D​,​ ​c​o​n​t​a​c​t​ ​I​D​,​ ​d​e​a​l​ ​I​D​,​ ​e​t​c​.
+														 */
+														longDesc: string
+													}
+												}
+											}
+										}
+										types: {
+											/**
+											 * A​s​s​o​c​i​a​t​i​o​n​ ​T​y​p​e​s
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​s​ ​o​f​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​o​b​j​e​c​t​s
+											 */
+											shortDesc: string
+											/**
+											 * D​e​f​i​n​e​s​ ​t​h​e​ ​n​a​t​u​r​e​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​t​h​e​ ​t​w​o​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s​ ​b​e​i​n​g​ ​a​s​s​o​c​i​a​t​e​d​.
+											 */
+											longDesc: string
+											type: {
+												element_type: {
+													fields: {
+														associationTypeId: {
+															/**
+															 * A​s​s​o​c​i​a​t​i​o​n​ ​T​y​p​e​ ​I​D
+															 */
+															displayName: string
+															/**
+															 * N​u​m​e​r​i​c​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​t​y​p​e
+															 */
+															shortDesc: string
+															/**
+															 * A​ ​n​u​m​e​r​i​c​ ​I​D​ ​t​h​a​t​ ​d​e​f​i​n​e​s​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​a​s​s​o​c​i​a​t​i​o​n​ ​(​e​.​g​.​,​ ​1​ ​f​o​r​ ​c​o​m​p​a​n​y​-​t​o​-​c​o​n​t​a​c​t​,​ ​3​ ​f​o​r​ ​d​e​a​l​-​t​o​-​c​o​n​t​a​c​t​)​.​ ​E​a​c​h​ ​I​D​ ​r​e​p​r​e​s​e​n​t​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​i​r​e​c​t​i​o​n​a​l​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​t​w​o​ ​o​b​j​e​c​t​ ​t​y​p​e​s​.
+															 */
+															longDesc: string
+														}
+														associationCategory: {
+															/**
+															 * A​s​s​o​c​i​a​t​i​o​n​ ​C​a​t​e​g​o​r​y
+															 */
+															displayName: string
+															/**
+															 * C​a​t​e​g​o​r​y​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​t​y​p​e
+															 */
+															shortDesc: string
+															/**
+															 * C​a​t​e​g​o​r​i​z​e​s​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​a​s​ ​e​i​t​h​e​r​ ​"​H​U​B​S​P​O​T​_​D​E​F​I​N​E​D​"​ ​(​b​u​i​l​t​-​i​n​ ​s​y​s​t​e​m​ ​a​s​s​o​c​i​a​t​i​o​n​s​)​ ​o​r​ ​"​U​S​E​R​_​D​E​F​I​N​E​D​"​ ​(​c​u​s​t​o​m​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​c​r​e​a​t​e​d​ ​b​y​ ​u​s​e​r​s​)​.​ ​M​o​s​t​ ​s​t​a​n​d​a​r​d​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​u​s​e​ ​H​U​B​S​P​O​T​_​D​E​F​I​N​E​D​.
+															 */
+															longDesc: string
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 				'post-crm-v3-objects-contacts-search': {
 					/**
@@ -8645,6 +8751,108 @@ type RootTranslation = {
 					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​ ​o​f​ ​a​ ​s​e​l​e​c​t​e​d​ ​t​y​p​e
 					 */
 					shortDesc: string
+					options: {
+						associations: {
+							/**
+							 * H​u​b​S​p​o​t​ ​A​s​s​o​c​i​a​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * D​e​f​i​n​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​ ​b​e​t​w​e​e​n​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​s​s​o​c​i​a​t​i​o​n​s​ ​c​r​e​a​t​e​ ​c​o​n​n​e​c​t​i​o​n​s​ ​b​e​t​w​e​e​n​ ​d​i​f​f​e​r​e​n​t​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s​ ​s​u​c​h​ ​a​s​ ​c​o​n​t​a​c​t​s​,​ ​c​o​m​p​a​n​i​e​s​,​ ​d​e​a​l​s​,​ ​t​i​c​k​e​t​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​s​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										to: {
+											/**
+											 * T​a​r​g​e​t​ ​O​b​j​e​c​t
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​n​ ​a​s​s​o​c​i​a​t​i​o​n​ ​w​i​t​h
+											 */
+											shortDesc: string
+											/**
+											 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​t​a​r​g​e​t​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​(​c​o​m​p​a​n​y​,​ ​c​o​n​t​a​c​t​,​ ​d​e​a​l​,​ ​e​t​c​.​)​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​o​b​j​e​c​t​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													id: {
+														/**
+														 * O​b​j​e​c​t​ ​I​D
+														 */
+														displayName: string
+														/**
+														 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​o​b​j​e​c​t
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​(​I​D​)​ ​o​f​ ​t​h​e​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​b​e​i​n​g​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​.​ ​T​h​i​s​ ​c​o​u​l​d​ ​b​e​ ​a​ ​c​o​m​p​a​n​y​ ​I​D​,​ ​c​o​n​t​a​c​t​ ​I​D​,​ ​d​e​a​l​ ​I​D​,​ ​e​t​c​.
+														 */
+														longDesc: string
+													}
+												}
+											}
+										}
+										types: {
+											/**
+											 * A​s​s​o​c​i​a​t​i​o​n​ ​T​y​p​e​s
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​s​ ​o​f​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​o​b​j​e​c​t​s
+											 */
+											shortDesc: string
+											/**
+											 * D​e​f​i​n​e​s​ ​t​h​e​ ​n​a​t​u​r​e​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​t​h​e​ ​t​w​o​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s​ ​b​e​i​n​g​ ​a​s​s​o​c​i​a​t​e​d​.
+											 */
+											longDesc: string
+											type: {
+												element_type: {
+													fields: {
+														associationTypeId: {
+															/**
+															 * A​s​s​o​c​i​a​t​i​o​n​ ​T​y​p​e​ ​I​D
+															 */
+															displayName: string
+															/**
+															 * N​u​m​e​r​i​c​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​t​y​p​e
+															 */
+															shortDesc: string
+															/**
+															 * A​ ​n​u​m​e​r​i​c​ ​I​D​ ​t​h​a​t​ ​d​e​f​i​n​e​s​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​a​s​s​o​c​i​a​t​i​o​n​ ​(​e​.​g​.​,​ ​1​ ​f​o​r​ ​c​o​m​p​a​n​y​-​t​o​-​c​o​n​t​a​c​t​,​ ​3​ ​f​o​r​ ​d​e​a​l​-​t​o​-​c​o​n​t​a​c​t​)​.​ ​E​a​c​h​ ​I​D​ ​r​e​p​r​e​s​e​n​t​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​i​r​e​c​t​i​o​n​a​l​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​t​w​o​ ​o​b​j​e​c​t​ ​t​y​p​e​s​.
+															 */
+															longDesc: string
+														}
+														associationCategory: {
+															/**
+															 * A​s​s​o​c​i​a​t​i​o​n​ ​C​a​t​e​g​o​r​y
+															 */
+															displayName: string
+															/**
+															 * C​a​t​e​g​o​r​y​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​t​y​p​e
+															 */
+															shortDesc: string
+															/**
+															 * C​a​t​e​g​o​r​i​z​e​s​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​a​s​ ​e​i​t​h​e​r​ ​"​H​U​B​S​P​O​T​_​D​E​F​I​N​E​D​"​ ​(​b​u​i​l​t​-​i​n​ ​s​y​s​t​e​m​ ​a​s​s​o​c​i​a​t​i​o​n​s​)​ ​o​r​ ​"​U​S​E​R​_​D​E​F​I​N​E​D​"​ ​(​c​u​s​t​o​m​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​c​r​e​a​t​e​d​ ​b​y​ ​u​s​e​r​s​)​.​ ​M​o​s​t​ ​s​t​a​n​d​a​r​d​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​u​s​e​ ​H​U​B​S​P​O​T​_​D​E​F​I​N​E​D​.
+															 */
+															longDesc: string
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 				'post-crm-v3-objects-objectType-batch-upsert': {
 					/**
@@ -8715,6 +8923,108 @@ type RootTranslation = {
 					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​d​e​a​l
 					 */
 					shortDesc: string
+					options: {
+						associations: {
+							/**
+							 * H​u​b​S​p​o​t​ ​A​s​s​o​c​i​a​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * D​e​f​i​n​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​ ​b​e​t​w​e​e​n​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​s​s​o​c​i​a​t​i​o​n​s​ ​c​r​e​a​t​e​ ​c​o​n​n​e​c​t​i​o​n​s​ ​b​e​t​w​e​e​n​ ​d​i​f​f​e​r​e​n​t​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s​ ​s​u​c​h​ ​a​s​ ​c​o​n​t​a​c​t​s​,​ ​c​o​m​p​a​n​i​e​s​,​ ​d​e​a​l​s​,​ ​t​i​c​k​e​t​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​s​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										to: {
+											/**
+											 * T​a​r​g​e​t​ ​O​b​j​e​c​t
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​n​ ​a​s​s​o​c​i​a​t​i​o​n​ ​w​i​t​h
+											 */
+											shortDesc: string
+											/**
+											 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​t​a​r​g​e​t​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​(​c​o​m​p​a​n​y​,​ ​c​o​n​t​a​c​t​,​ ​d​e​a​l​,​ ​e​t​c​.​)​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​o​b​j​e​c​t​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													id: {
+														/**
+														 * O​b​j​e​c​t​ ​I​D
+														 */
+														displayName: string
+														/**
+														 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​o​b​j​e​c​t
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​(​I​D​)​ ​o​f​ ​t​h​e​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​b​e​i​n​g​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​.​ ​T​h​i​s​ ​c​o​u​l​d​ ​b​e​ ​a​ ​c​o​m​p​a​n​y​ ​I​D​,​ ​c​o​n​t​a​c​t​ ​I​D​,​ ​d​e​a​l​ ​I​D​,​ ​e​t​c​.
+														 */
+														longDesc: string
+													}
+												}
+											}
+										}
+										types: {
+											/**
+											 * A​s​s​o​c​i​a​t​i​o​n​ ​T​y​p​e​s
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​s​ ​o​f​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​o​b​j​e​c​t​s
+											 */
+											shortDesc: string
+											/**
+											 * D​e​f​i​n​e​s​ ​t​h​e​ ​n​a​t​u​r​e​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​t​h​e​ ​t​w​o​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s​ ​b​e​i​n​g​ ​a​s​s​o​c​i​a​t​e​d​.
+											 */
+											longDesc: string
+											type: {
+												element_type: {
+													fields: {
+														associationTypeId: {
+															/**
+															 * A​s​s​o​c​i​a​t​i​o​n​ ​T​y​p​e​ ​I​D
+															 */
+															displayName: string
+															/**
+															 * N​u​m​e​r​i​c​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​t​y​p​e
+															 */
+															shortDesc: string
+															/**
+															 * A​ ​n​u​m​e​r​i​c​ ​I​D​ ​t​h​a​t​ ​d​e​f​i​n​e​s​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​a​s​s​o​c​i​a​t​i​o​n​ ​(​e​.​g​.​,​ ​1​ ​f​o​r​ ​c​o​m​p​a​n​y​-​t​o​-​c​o​n​t​a​c​t​,​ ​3​ ​f​o​r​ ​d​e​a​l​-​t​o​-​c​o​n​t​a​c​t​)​.​ ​E​a​c​h​ ​I​D​ ​r​e​p​r​e​s​e​n​t​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​i​r​e​c​t​i​o​n​a​l​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​t​w​o​ ​o​b​j​e​c​t​ ​t​y​p​e​s​.
+															 */
+															longDesc: string
+														}
+														associationCategory: {
+															/**
+															 * A​s​s​o​c​i​a​t​i​o​n​ ​C​a​t​e​g​o​r​y
+															 */
+															displayName: string
+															/**
+															 * C​a​t​e​g​o​r​y​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​t​y​p​e
+															 */
+															shortDesc: string
+															/**
+															 * C​a​t​e​g​o​r​i​z​e​s​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​a​s​ ​e​i​t​h​e​r​ ​"​H​U​B​S​P​O​T​_​D​E​F​I​N​E​D​"​ ​(​b​u​i​l​t​-​i​n​ ​s​y​s​t​e​m​ ​a​s​s​o​c​i​a​t​i​o​n​s​)​ ​o​r​ ​"​U​S​E​R​_​D​E​F​I​N​E​D​"​ ​(​c​u​s​t​o​m​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​c​r​e​a​t​e​d​ ​b​y​ ​u​s​e​r​s​)​.​ ​M​o​s​t​ ​s​t​a​n​d​a​r​d​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​u​s​e​ ​H​U​B​S​P​O​T​_​D​E​F​I​N​E​D​.
+															 */
+															longDesc: string
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 				'post-crm-v3-objects-deals-batch-upsert_upsert': {
 					/**
@@ -8785,6 +9095,108 @@ type RootTranslation = {
 					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​l​e​a​d
 					 */
 					shortDesc: string
+					options: {
+						associations: {
+							/**
+							 * H​u​b​S​p​o​t​ ​A​s​s​o​c​i​a​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * D​e​f​i​n​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​ ​b​e​t​w​e​e​n​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​s​s​o​c​i​a​t​i​o​n​s​ ​c​r​e​a​t​e​ ​c​o​n​n​e​c​t​i​o​n​s​ ​b​e​t​w​e​e​n​ ​d​i​f​f​e​r​e​n​t​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s​ ​s​u​c​h​ ​a​s​ ​c​o​n​t​a​c​t​s​,​ ​c​o​m​p​a​n​i​e​s​,​ ​d​e​a​l​s​,​ ​t​i​c​k​e​t​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​s​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										to: {
+											/**
+											 * T​a​r​g​e​t​ ​O​b​j​e​c​t
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​n​ ​a​s​s​o​c​i​a​t​i​o​n​ ​w​i​t​h
+											 */
+											shortDesc: string
+											/**
+											 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​t​a​r​g​e​t​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​(​c​o​m​p​a​n​y​,​ ​c​o​n​t​a​c​t​,​ ​d​e​a​l​,​ ​e​t​c​.​)​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​o​b​j​e​c​t​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													id: {
+														/**
+														 * O​b​j​e​c​t​ ​I​D
+														 */
+														displayName: string
+														/**
+														 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​o​b​j​e​c​t
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​(​I​D​)​ ​o​f​ ​t​h​e​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​b​e​i​n​g​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​.​ ​T​h​i​s​ ​c​o​u​l​d​ ​b​e​ ​a​ ​c​o​m​p​a​n​y​ ​I​D​,​ ​c​o​n​t​a​c​t​ ​I​D​,​ ​d​e​a​l​ ​I​D​,​ ​e​t​c​.
+														 */
+														longDesc: string
+													}
+												}
+											}
+										}
+										types: {
+											/**
+											 * A​s​s​o​c​i​a​t​i​o​n​ ​T​y​p​e​s
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​s​ ​o​f​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​o​b​j​e​c​t​s
+											 */
+											shortDesc: string
+											/**
+											 * D​e​f​i​n​e​s​ ​t​h​e​ ​n​a​t​u​r​e​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​t​h​e​ ​t​w​o​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s​ ​b​e​i​n​g​ ​a​s​s​o​c​i​a​t​e​d​.
+											 */
+											longDesc: string
+											type: {
+												element_type: {
+													fields: {
+														associationTypeId: {
+															/**
+															 * A​s​s​o​c​i​a​t​i​o​n​ ​T​y​p​e​ ​I​D
+															 */
+															displayName: string
+															/**
+															 * N​u​m​e​r​i​c​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​t​y​p​e
+															 */
+															shortDesc: string
+															/**
+															 * A​ ​n​u​m​e​r​i​c​ ​I​D​ ​t​h​a​t​ ​d​e​f​i​n​e​s​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​a​s​s​o​c​i​a​t​i​o​n​ ​(​e​.​g​.​,​ ​1​ ​f​o​r​ ​c​o​m​p​a​n​y​-​t​o​-​c​o​n​t​a​c​t​,​ ​3​ ​f​o​r​ ​d​e​a​l​-​t​o​-​c​o​n​t​a​c​t​)​.​ ​E​a​c​h​ ​I​D​ ​r​e​p​r​e​s​e​n​t​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​i​r​e​c​t​i​o​n​a​l​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​t​w​o​ ​o​b​j​e​c​t​ ​t​y​p​e​s​.
+															 */
+															longDesc: string
+														}
+														associationCategory: {
+															/**
+															 * A​s​s​o​c​i​a​t​i​o​n​ ​C​a​t​e​g​o​r​y
+															 */
+															displayName: string
+															/**
+															 * C​a​t​e​g​o​r​y​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​t​y​p​e
+															 */
+															shortDesc: string
+															/**
+															 * C​a​t​e​g​o​r​i​z​e​s​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​a​s​ ​e​i​t​h​e​r​ ​"​H​U​B​S​P​O​T​_​D​E​F​I​N​E​D​"​ ​(​b​u​i​l​t​-​i​n​ ​s​y​s​t​e​m​ ​a​s​s​o​c​i​a​t​i​o​n​s​)​ ​o​r​ ​"​U​S​E​R​_​D​E​F​I​N​E​D​"​ ​(​c​u​s​t​o​m​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​c​r​e​a​t​e​d​ ​b​y​ ​u​s​e​r​s​)​.​ ​M​o​s​t​ ​s​t​a​n​d​a​r​d​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​u​s​e​ ​H​U​B​S​P​O​T​_​D​E​F​I​N​E​D​.
+															 */
+															longDesc: string
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 				'post-crm-v3-objects-leads-batch-upsert_upsert': {
 					/**
@@ -8855,6 +9267,108 @@ type RootTranslation = {
 					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​p​r​o​d​u​c​t
 					 */
 					shortDesc: string
+					options: {
+						associations: {
+							/**
+							 * H​u​b​S​p​o​t​ ​A​s​s​o​c​i​a​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * D​e​f​i​n​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​ ​b​e​t​w​e​e​n​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​s​s​o​c​i​a​t​i​o​n​s​ ​c​r​e​a​t​e​ ​c​o​n​n​e​c​t​i​o​n​s​ ​b​e​t​w​e​e​n​ ​d​i​f​f​e​r​e​n​t​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s​ ​s​u​c​h​ ​a​s​ ​c​o​n​t​a​c​t​s​,​ ​c​o​m​p​a​n​i​e​s​,​ ​d​e​a​l​s​,​ ​t​i​c​k​e​t​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​s​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										to: {
+											/**
+											 * T​a​r​g​e​t​ ​O​b​j​e​c​t
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​n​ ​a​s​s​o​c​i​a​t​i​o​n​ ​w​i​t​h
+											 */
+											shortDesc: string
+											/**
+											 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​t​a​r​g​e​t​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​(​c​o​m​p​a​n​y​,​ ​c​o​n​t​a​c​t​,​ ​d​e​a​l​,​ ​e​t​c​.​)​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​o​b​j​e​c​t​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													id: {
+														/**
+														 * O​b​j​e​c​t​ ​I​D
+														 */
+														displayName: string
+														/**
+														 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​o​b​j​e​c​t
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​(​I​D​)​ ​o​f​ ​t​h​e​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​b​e​i​n​g​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​.​ ​T​h​i​s​ ​c​o​u​l​d​ ​b​e​ ​a​ ​c​o​m​p​a​n​y​ ​I​D​,​ ​c​o​n​t​a​c​t​ ​I​D​,​ ​d​e​a​l​ ​I​D​,​ ​e​t​c​.
+														 */
+														longDesc: string
+													}
+												}
+											}
+										}
+										types: {
+											/**
+											 * A​s​s​o​c​i​a​t​i​o​n​ ​T​y​p​e​s
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​s​ ​o​f​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​o​b​j​e​c​t​s
+											 */
+											shortDesc: string
+											/**
+											 * D​e​f​i​n​e​s​ ​t​h​e​ ​n​a​t​u​r​e​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​t​h​e​ ​t​w​o​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s​ ​b​e​i​n​g​ ​a​s​s​o​c​i​a​t​e​d​.
+											 */
+											longDesc: string
+											type: {
+												element_type: {
+													fields: {
+														associationTypeId: {
+															/**
+															 * A​s​s​o​c​i​a​t​i​o​n​ ​T​y​p​e​ ​I​D
+															 */
+															displayName: string
+															/**
+															 * N​u​m​e​r​i​c​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​t​y​p​e
+															 */
+															shortDesc: string
+															/**
+															 * A​ ​n​u​m​e​r​i​c​ ​I​D​ ​t​h​a​t​ ​d​e​f​i​n​e​s​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​a​s​s​o​c​i​a​t​i​o​n​ ​(​e​.​g​.​,​ ​1​ ​f​o​r​ ​c​o​m​p​a​n​y​-​t​o​-​c​o​n​t​a​c​t​,​ ​3​ ​f​o​r​ ​d​e​a​l​-​t​o​-​c​o​n​t​a​c​t​)​.​ ​E​a​c​h​ ​I​D​ ​r​e​p​r​e​s​e​n​t​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​i​r​e​c​t​i​o​n​a​l​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​t​w​o​ ​o​b​j​e​c​t​ ​t​y​p​e​s​.
+															 */
+															longDesc: string
+														}
+														associationCategory: {
+															/**
+															 * A​s​s​o​c​i​a​t​i​o​n​ ​C​a​t​e​g​o​r​y
+															 */
+															displayName: string
+															/**
+															 * C​a​t​e​g​o​r​y​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​t​y​p​e
+															 */
+															shortDesc: string
+															/**
+															 * C​a​t​e​g​o​r​i​z​e​s​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​a​s​ ​e​i​t​h​e​r​ ​"​H​U​B​S​P​O​T​_​D​E​F​I​N​E​D​"​ ​(​b​u​i​l​t​-​i​n​ ​s​y​s​t​e​m​ ​a​s​s​o​c​i​a​t​i​o​n​s​)​ ​o​r​ ​"​U​S​E​R​_​D​E​F​I​N​E​D​"​ ​(​c​u​s​t​o​m​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​c​r​e​a​t​e​d​ ​b​y​ ​u​s​e​r​s​)​.​ ​M​o​s​t​ ​s​t​a​n​d​a​r​d​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​u​s​e​ ​H​U​B​S​P​O​T​_​D​E​F​I​N​E​D​.
+															 */
+															longDesc: string
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 				'post-crm-v3-objects-products-batch-upsert_upsert': {
 					/**
@@ -8925,6 +9439,108 @@ type RootTranslation = {
 					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​t​i​c​k​e​t
 					 */
 					shortDesc: string
+					options: {
+						associations: {
+							/**
+							 * H​u​b​S​p​o​t​ ​A​s​s​o​c​i​a​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * D​e​f​i​n​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​ ​b​e​t​w​e​e​n​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​s​s​o​c​i​a​t​i​o​n​s​ ​c​r​e​a​t​e​ ​c​o​n​n​e​c​t​i​o​n​s​ ​b​e​t​w​e​e​n​ ​d​i​f​f​e​r​e​n​t​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s​ ​s​u​c​h​ ​a​s​ ​c​o​n​t​a​c​t​s​,​ ​c​o​m​p​a​n​i​e​s​,​ ​d​e​a​l​s​,​ ​t​i​c​k​e​t​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​s​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										to: {
+											/**
+											 * T​a​r​g​e​t​ ​O​b​j​e​c​t
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​n​ ​a​s​s​o​c​i​a​t​i​o​n​ ​w​i​t​h
+											 */
+											shortDesc: string
+											/**
+											 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​t​a​r​g​e​t​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​(​c​o​m​p​a​n​y​,​ ​c​o​n​t​a​c​t​,​ ​d​e​a​l​,​ ​e​t​c​.​)​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​o​b​j​e​c​t​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													id: {
+														/**
+														 * O​b​j​e​c​t​ ​I​D
+														 */
+														displayName: string
+														/**
+														 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​o​b​j​e​c​t
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​(​I​D​)​ ​o​f​ ​t​h​e​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​b​e​i​n​g​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​.​ ​T​h​i​s​ ​c​o​u​l​d​ ​b​e​ ​a​ ​c​o​m​p​a​n​y​ ​I​D​,​ ​c​o​n​t​a​c​t​ ​I​D​,​ ​d​e​a​l​ ​I​D​,​ ​e​t​c​.
+														 */
+														longDesc: string
+													}
+												}
+											}
+										}
+										types: {
+											/**
+											 * A​s​s​o​c​i​a​t​i​o​n​ ​T​y​p​e​s
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​s​ ​o​f​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​o​b​j​e​c​t​s
+											 */
+											shortDesc: string
+											/**
+											 * D​e​f​i​n​e​s​ ​t​h​e​ ​n​a​t​u​r​e​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​t​h​e​ ​t​w​o​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s​ ​b​e​i​n​g​ ​a​s​s​o​c​i​a​t​e​d​.
+											 */
+											longDesc: string
+											type: {
+												element_type: {
+													fields: {
+														associationTypeId: {
+															/**
+															 * A​s​s​o​c​i​a​t​i​o​n​ ​T​y​p​e​ ​I​D
+															 */
+															displayName: string
+															/**
+															 * N​u​m​e​r​i​c​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​t​y​p​e
+															 */
+															shortDesc: string
+															/**
+															 * A​ ​n​u​m​e​r​i​c​ ​I​D​ ​t​h​a​t​ ​d​e​f​i​n​e​s​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​a​s​s​o​c​i​a​t​i​o​n​ ​(​e​.​g​.​,​ ​1​ ​f​o​r​ ​c​o​m​p​a​n​y​-​t​o​-​c​o​n​t​a​c​t​,​ ​3​ ​f​o​r​ ​d​e​a​l​-​t​o​-​c​o​n​t​a​c​t​)​.​ ​E​a​c​h​ ​I​D​ ​r​e​p​r​e​s​e​n​t​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​i​r​e​c​t​i​o​n​a​l​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​t​w​o​ ​o​b​j​e​c​t​ ​t​y​p​e​s​.
+															 */
+															longDesc: string
+														}
+														associationCategory: {
+															/**
+															 * A​s​s​o​c​i​a​t​i​o​n​ ​C​a​t​e​g​o​r​y
+															 */
+															displayName: string
+															/**
+															 * C​a​t​e​g​o​r​y​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​t​y​p​e
+															 */
+															shortDesc: string
+															/**
+															 * C​a​t​e​g​o​r​i​z​e​s​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​a​s​ ​e​i​t​h​e​r​ ​"​H​U​B​S​P​O​T​_​D​E​F​I​N​E​D​"​ ​(​b​u​i​l​t​-​i​n​ ​s​y​s​t​e​m​ ​a​s​s​o​c​i​a​t​i​o​n​s​)​ ​o​r​ ​"​U​S​E​R​_​D​E​F​I​N​E​D​"​ ​(​c​u​s​t​o​m​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​c​r​e​a​t​e​d​ ​b​y​ ​u​s​e​r​s​)​.​ ​M​o​s​t​ ​s​t​a​n​d​a​r​d​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​u​s​e​ ​H​U​B​S​P​O​T​_​D​E​F​I​N​E​D​.
+															 */
+															longDesc: string
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 				'post-crm-v3-objects-tickets-batch-upsert_upsert': {
 					/**
@@ -20588,6 +21204,10 @@ export type TranslationFunctions = {
 					 * Create Or Update Companies
 					 */
 					displayName: () => LocalizedString
+					/**
+					 * Create or update multiple companies
+					 */
+					shortDesc: () => LocalizedString
 				}
 				'get-crm-v3-objects-contacts': {
 					/**
@@ -20608,6 +21228,108 @@ export type TranslationFunctions = {
 					 * Create a new contact
 					 */
 					shortDesc: () => LocalizedString
+					options: {
+						associations: {
+							/**
+							 * HubSpot Associations
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Define relationships between HubSpot objects
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Associations create connections between different HubSpot objects such as contacts, companies, deals, tickets, and custom objects.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										to: {
+											/**
+											 * Target Object
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The HubSpot object to create an association with
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Specifies the target HubSpot object (company, contact, deal, etc.) that will be associated with the current object.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													id: {
+														/**
+														 * Object ID
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Unique identifier of the target object
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The unique identifier (ID) of the HubSpot object being associated with. This could be a company ID, contact ID, deal ID, etc.
+														 */
+														longDesc: () => LocalizedString
+													}
+												}
+											}
+										}
+										types: {
+											/**
+											 * Association Types
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Types of relationship between objects
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Defines the nature and direction of the relationship between the two HubSpot objects being associated.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												element_type: {
+													fields: {
+														associationTypeId: {
+															/**
+															 * Association Type ID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Numeric identifier of the association type
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * A numeric ID that defines the type of association (e.g., 1 for company-to-contact, 3 for deal-to-contact). Each ID represents a specific directional relationship between two object types.
+															 */
+															longDesc: () => LocalizedString
+														}
+														associationCategory: {
+															/**
+															 * Association Category
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Category of the association type
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Categorizes the association as either "HUBSPOT_DEFINED" (built-in system associations) or "USER_DEFINED" (custom associations created by users). Most standard associations use HUBSPOT_DEFINED.
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 				'post-crm-v3-objects-contacts-search': {
 					/**
@@ -20672,6 +21394,108 @@ export type TranslationFunctions = {
 					 * Create a new custom object of a selected type
 					 */
 					shortDesc: () => LocalizedString
+					options: {
+						associations: {
+							/**
+							 * HubSpot Associations
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Define relationships between HubSpot objects
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Associations create connections between different HubSpot objects such as contacts, companies, deals, tickets, and custom objects.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										to: {
+											/**
+											 * Target Object
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The HubSpot object to create an association with
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Specifies the target HubSpot object (company, contact, deal, etc.) that will be associated with the current object.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													id: {
+														/**
+														 * Object ID
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Unique identifier of the target object
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The unique identifier (ID) of the HubSpot object being associated with. This could be a company ID, contact ID, deal ID, etc.
+														 */
+														longDesc: () => LocalizedString
+													}
+												}
+											}
+										}
+										types: {
+											/**
+											 * Association Types
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Types of relationship between objects
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Defines the nature and direction of the relationship between the two HubSpot objects being associated.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												element_type: {
+													fields: {
+														associationTypeId: {
+															/**
+															 * Association Type ID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Numeric identifier of the association type
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * A numeric ID that defines the type of association (e.g., 1 for company-to-contact, 3 for deal-to-contact). Each ID represents a specific directional relationship between two object types.
+															 */
+															longDesc: () => LocalizedString
+														}
+														associationCategory: {
+															/**
+															 * Association Category
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Category of the association type
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Categorizes the association as either "HUBSPOT_DEFINED" (built-in system associations) or "USER_DEFINED" (custom associations created by users). Most standard associations use HUBSPOT_DEFINED.
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 				'post-crm-v3-objects-objectType-batch-upsert': {
 					/**
@@ -20742,6 +21566,108 @@ export type TranslationFunctions = {
 					 * Create a new deal
 					 */
 					shortDesc: () => LocalizedString
+					options: {
+						associations: {
+							/**
+							 * HubSpot Associations
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Define relationships between HubSpot objects
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Associations create connections between different HubSpot objects such as contacts, companies, deals, tickets, and custom objects.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										to: {
+											/**
+											 * Target Object
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The HubSpot object to create an association with
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Specifies the target HubSpot object (company, contact, deal, etc.) that will be associated with the current object.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													id: {
+														/**
+														 * Object ID
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Unique identifier of the target object
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The unique identifier (ID) of the HubSpot object being associated with. This could be a company ID, contact ID, deal ID, etc.
+														 */
+														longDesc: () => LocalizedString
+													}
+												}
+											}
+										}
+										types: {
+											/**
+											 * Association Types
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Types of relationship between objects
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Defines the nature and direction of the relationship between the two HubSpot objects being associated.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												element_type: {
+													fields: {
+														associationTypeId: {
+															/**
+															 * Association Type ID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Numeric identifier of the association type
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * A numeric ID that defines the type of association (e.g., 1 for company-to-contact, 3 for deal-to-contact). Each ID represents a specific directional relationship between two object types.
+															 */
+															longDesc: () => LocalizedString
+														}
+														associationCategory: {
+															/**
+															 * Association Category
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Category of the association type
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Categorizes the association as either "HUBSPOT_DEFINED" (built-in system associations) or "USER_DEFINED" (custom associations created by users). Most standard associations use HUBSPOT_DEFINED.
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 				'post-crm-v3-objects-deals-batch-upsert_upsert': {
 					/**
@@ -20812,6 +21738,108 @@ export type TranslationFunctions = {
 					 * Create a new lead
 					 */
 					shortDesc: () => LocalizedString
+					options: {
+						associations: {
+							/**
+							 * HubSpot Associations
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Define relationships between HubSpot objects
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Associations create connections between different HubSpot objects such as contacts, companies, deals, tickets, and custom objects.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										to: {
+											/**
+											 * Target Object
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The HubSpot object to create an association with
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Specifies the target HubSpot object (company, contact, deal, etc.) that will be associated with the current object.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													id: {
+														/**
+														 * Object ID
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Unique identifier of the target object
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The unique identifier (ID) of the HubSpot object being associated with. This could be a company ID, contact ID, deal ID, etc.
+														 */
+														longDesc: () => LocalizedString
+													}
+												}
+											}
+										}
+										types: {
+											/**
+											 * Association Types
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Types of relationship between objects
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Defines the nature and direction of the relationship between the two HubSpot objects being associated.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												element_type: {
+													fields: {
+														associationTypeId: {
+															/**
+															 * Association Type ID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Numeric identifier of the association type
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * A numeric ID that defines the type of association (e.g., 1 for company-to-contact, 3 for deal-to-contact). Each ID represents a specific directional relationship between two object types.
+															 */
+															longDesc: () => LocalizedString
+														}
+														associationCategory: {
+															/**
+															 * Association Category
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Category of the association type
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Categorizes the association as either "HUBSPOT_DEFINED" (built-in system associations) or "USER_DEFINED" (custom associations created by users). Most standard associations use HUBSPOT_DEFINED.
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 				'post-crm-v3-objects-leads-batch-upsert_upsert': {
 					/**
@@ -20882,6 +21910,108 @@ export type TranslationFunctions = {
 					 * Create a new product
 					 */
 					shortDesc: () => LocalizedString
+					options: {
+						associations: {
+							/**
+							 * HubSpot Associations
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Define relationships between HubSpot objects
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Associations create connections between different HubSpot objects such as contacts, companies, deals, tickets, and custom objects.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										to: {
+											/**
+											 * Target Object
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The HubSpot object to create an association with
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Specifies the target HubSpot object (company, contact, deal, etc.) that will be associated with the current object.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													id: {
+														/**
+														 * Object ID
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Unique identifier of the target object
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The unique identifier (ID) of the HubSpot object being associated with. This could be a company ID, contact ID, deal ID, etc.
+														 */
+														longDesc: () => LocalizedString
+													}
+												}
+											}
+										}
+										types: {
+											/**
+											 * Association Types
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Types of relationship between objects
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Defines the nature and direction of the relationship between the two HubSpot objects being associated.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												element_type: {
+													fields: {
+														associationTypeId: {
+															/**
+															 * Association Type ID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Numeric identifier of the association type
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * A numeric ID that defines the type of association (e.g., 1 for company-to-contact, 3 for deal-to-contact). Each ID represents a specific directional relationship between two object types.
+															 */
+															longDesc: () => LocalizedString
+														}
+														associationCategory: {
+															/**
+															 * Association Category
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Category of the association type
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Categorizes the association as either "HUBSPOT_DEFINED" (built-in system associations) or "USER_DEFINED" (custom associations created by users). Most standard associations use HUBSPOT_DEFINED.
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 				'post-crm-v3-objects-products-batch-upsert_upsert': {
 					/**
@@ -20952,6 +22082,108 @@ export type TranslationFunctions = {
 					 * Create a new ticket
 					 */
 					shortDesc: () => LocalizedString
+					options: {
+						associations: {
+							/**
+							 * HubSpot Associations
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Define relationships between HubSpot objects
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Associations create connections between different HubSpot objects such as contacts, companies, deals, tickets, and custom objects.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										to: {
+											/**
+											 * Target Object
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The HubSpot object to create an association with
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Specifies the target HubSpot object (company, contact, deal, etc.) that will be associated with the current object.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													id: {
+														/**
+														 * Object ID
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Unique identifier of the target object
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The unique identifier (ID) of the HubSpot object being associated with. This could be a company ID, contact ID, deal ID, etc.
+														 */
+														longDesc: () => LocalizedString
+													}
+												}
+											}
+										}
+										types: {
+											/**
+											 * Association Types
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Types of relationship between objects
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Defines the nature and direction of the relationship between the two HubSpot objects being associated.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												element_type: {
+													fields: {
+														associationTypeId: {
+															/**
+															 * Association Type ID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Numeric identifier of the association type
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * A numeric ID that defines the type of association (e.g., 1 for company-to-contact, 3 for deal-to-contact). Each ID represents a specific directional relationship between two object types.
+															 */
+															longDesc: () => LocalizedString
+														}
+														associationCategory: {
+															/**
+															 * Association Category
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Category of the association type
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Categorizes the association as either "HUBSPOT_DEFINED" (built-in system associations) or "USER_DEFINED" (custom associations created by users). Most standard associations use HUBSPOT_DEFINED.
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 				'post-crm-v3-objects-tickets-batch-upsert_upsert': {
 					/**

@@ -1,5 +1,6 @@
 import type { BaseTranslation } from '../i18n-types';
 import { AsanaEventInfo } from './asana/event-info';
+import { HubspotAssociationsEn } from './hubspot/associations';
 import { HubspotTriggerOptionsEn } from './hubspot/trigger-options';
 import { StripeTriggerOptionsEn } from './stripe/trigger-options';
 
@@ -1747,6 +1748,7 @@ const en = {
       actions: {
         'post-crm-v3-objects-companies-batch-upsert_upsert': {
           displayName: 'Create Or Update Companies',
+          shortDesc: 'Create or update multiple companies',
         },
         'get-crm-v3-objects-contacts': {
           displayName: 'List Contacts',
@@ -1755,6 +1757,9 @@ const en = {
         'post-crm-v3-objects-contacts': {
           displayName: 'Create Contact',
           shortDesc: 'Create a new contact',
+          options: {
+            associations: HubspotAssociationsEn,
+          },
         },
         'post-crm-v3-objects-contacts-search': {
           displayName: 'Search Contacts',
@@ -1780,6 +1785,9 @@ const en = {
         'post-crm-v3-objects-objectType_create': {
           displayName: 'Create Custom Object',
           shortDesc: 'Create a new custom object of a selected type',
+          options: {
+            associations: HubspotAssociationsEn,
+          },
         },
         'post-crm-v3-objects-objectType-batch-upsert': {
           displayName: 'Create Or Update Custom Objects',
@@ -1808,6 +1816,9 @@ const en = {
         'post-crm-v3-objects-deals_create': {
           displayName: 'Create Deal',
           shortDesc: 'Create a new deal',
+          options: {
+            associations: HubspotAssociationsEn,
+          },
         },
         'post-crm-v3-objects-deals-batch-upsert_upsert': {
           displayName: 'Create Or Update Deals',
@@ -1836,6 +1847,9 @@ const en = {
         'post-crm-v3-objects-leads_create': {
           displayName: 'Create Lead',
           shortDesc: 'Create a new lead',
+          options: {
+            associations: HubspotAssociationsEn,
+          },
         },
         'post-crm-v3-objects-leads-batch-upsert_upsert': {
           displayName: 'Create Or Update Leads',
@@ -1864,6 +1878,9 @@ const en = {
         'post-crm-v3-objects-products_create': {
           displayName: 'Create Product',
           shortDesc: 'Create a new product',
+          options: {
+            associations: HubspotAssociationsEn,
+          },
         },
         'post-crm-v3-objects-products-batch-upsert_upsert': {
           displayName: 'Create Or Update Products',
@@ -1892,6 +1909,9 @@ const en = {
         'post-crm-v3-objects-tickets_create': {
           displayName: 'Create Ticket',
           shortDesc: 'Create a new ticket',
+          options: {
+            associations: HubspotAssociationsEn,
+          },
         },
         'post-crm-v3-objects-tickets-batch-upsert_upsert': {
           displayName: 'Create Or Update Tickets',

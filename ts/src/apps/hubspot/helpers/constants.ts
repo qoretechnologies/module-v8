@@ -23,12 +23,82 @@ type THubspotObjectsResponse<ItemType = unknown> = {
   paging?: { next: { after: string } };
 };
 
+type THubspotTicketPipeline = {
+  label: string;
+  id: string;
+  stages: {
+    id: string;
+    label: string;
+    metadata: Record<string, any>;
+  }[];
+};
+
 export const fetchHubspotAllowedValues = async <ItemType = unknown>(
   options: TFetchHubspotAllowedValuesOptions<ItemType>
 ): Promise<IQoreAllowedValue<string>[]> => {
   const items = await fetchHubspotRecords(options);
 
   return items.map(options.mapItemToAllowedValue);
+};
+
+const mapHubspotPipeline = (pipeline: THubspotTicketPipeline): IQoreAllowedValue<string> => ({
+  display_name: pipeline.label,
+  value: pipeline.id,
+  desc: `Stages:\n${pipeline.stages.map((stage) => `  - ${stage.label}`).join('\n')}`,
+});
+
+export const getHubspotPipelineAllowedValues = async (
+  token: string,
+  object: string
+): Promise<IQoreAllowedValue<string>[]> => {
+  const response = await QorusRequest.get<{ data: { results: THubspotTicketPipeline[] } }>(
+    {
+      path: `/crm/v3/pipelines/${object}`,
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    },
+    { endpointId: 'hubspot', url: 'https://api.hubapi.com' }
+  );
+
+  const responseData = response?.data;
+
+  if (!responseData) {
+    Debugger.log(`Failed to get Hubspot ${object} pipeline allowed values`);
+
+    return [];
+  }
+
+  const pipelines = responseData.results.map(mapHubspotPipeline);
+
+  return pipelines;
+};
+
+export const getHubspotPipelineStageAllowedValues = async (
+  token: string,
+  object: string,
+  pipelineId: string,
+  mapStage: (stage: Record<string, any>) => IQoreAllowedValue<string>
+): Promise<IQoreAllowedValue<string>[]> => {
+  const response = await QorusRequest.get<{ data: THubspotTicketPipeline }>(
+    {
+      path: `/crm/v3/pipelines/${object}/${pipelineId}`,
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    },
+    { endpointId: 'hubspot', url: 'https://api.hubapi.com' }
+  );
+
+  const responseData = response?.data;
+
+  if (!responseData) {
+    Debugger.log(`Failed to get Hubspot ${object} pipeline stages allowed values`);
+
+    return [];
+  }
+
+  return responseData.stages.map(mapStage);
 };
 
 export const fetchHubspotRecords = async <ItemType = unknown>(

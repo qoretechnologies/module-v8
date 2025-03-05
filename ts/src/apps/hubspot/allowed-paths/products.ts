@@ -2,7 +2,7 @@ import { TAllowedPaths, TQoreAppActionOverrideOption } from '@qoretechnologies/t
 import { OpenAPIV2 } from 'openapi-types';
 import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
 import hubspotProducts from '../../../schemas/hubspot/products.swagger.json';
-import { HUBSPOT_APP_NAME, hubspotSearchSortsOption } from '../constants';
+import { HUBSPOT_APP_NAME, HubspotAssociationsType, hubspotSearchSortsOption } from '../constants';
 import { getHubspotProductIdPropertyAllowedValues } from '../helpers/get-id-property-allowed-values';
 import {
   getHubspotProductPropertiesType,
@@ -31,9 +31,7 @@ export const HUBSPOT_PRODUCTS_ALLOWED_PATHS = {
     },
     POST: {
       override_options: {
-        associations: {
-          required: false,
-        },
+        associations: HubspotAssociationsType,
         properties: {
           required: true,
           get_dynamic_type: getHubspotProductPropertiesType,

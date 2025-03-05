@@ -10,6 +10,10 @@ import { getHubspotTicketAllowedValues } from '../apps/hubspot/helpers/get-ticke
 import { getHubspotUserAllowedValues } from '../apps/hubspot/helpers/get-user-allowed-values';
 import { getHubspotCompanyPropertiesAllowedValues } from '../apps/hubspot/helpers/object-properties-allowed-values';
 import { getHubspotCompanyIdPropertyAllowedValues } from '../apps/hubspot/helpers/get-id-property-allowed-values';
+import { getHubspotTicketPipelineAllowedValues } from '../apps/hubspot/helpers/get-ticket-pipeline-allowed-values';
+import { getHubspotTicketPipelineStageAllowedValues } from '../apps/hubspot/helpers/get-ticket-pipeline-stage-allowed-values';
+import { getHubspotDealPipelineAllowedValues } from '../apps/hubspot/helpers/get-deal-pipeline-allowed-values';
+import { getHubspotDealPipelineStageAllowedValues } from '../apps/hubspot/helpers/get-deal-pipeline-stage-allowed-values';
 
 let connection: string;
 describe('Tests Hubspot actions', () => {
@@ -40,6 +44,8 @@ describe('Tests Hubspot actions', () => {
     } as TQoreAppActionFunctionContext<TCustomConnOptions>;
 
     let objectType: string;
+    let ticketPipeline: string;
+    let dealPipeline: string;
 
     it('Should get Hubspot contact allowed values', async () => {
       const allowedValues = await getHubspotContactAllowedValues(baseContext);
@@ -133,6 +139,48 @@ describe('Tests Hubspot actions', () => {
       expect(allowedValues).toBeDefined();
       expect(allowedValues.length).toBeGreaterThan(0);
       expect(allowedValues[0]?.value).not.toBeFalsy();
+    });
+
+    it('Should get Hubspot ticket pipeline allowed values', async () => {
+      const allowedValues = await getHubspotTicketPipelineAllowedValues(baseContext);
+
+      expect(allowedValues).toBeDefined();
+      expect(allowedValues.length).toBeGreaterThan(0);
+      expect(allowedValues[0]?.value).not.toBeFalsy();
+
+      ticketPipeline = allowedValues[0].value;
+    });
+
+    it('Should get Hubspot deal pipeline allowed values', async () => {
+      const allowedValues = await getHubspotDealPipelineAllowedValues(baseContext);
+
+      expect(allowedValues).toBeDefined();
+      expect(allowedValues.length).toBeGreaterThan(0);
+      expect(allowedValues[0]?.value).not.toBeFalsy();
+
+      dealPipeline = allowedValues[0]?.value;
+    });
+
+    it('Should get Hubspot ticket stage allowed values', async () => {
+      const allowedValues = await getHubspotTicketPipelineStageAllowedValues({
+        ...baseContext,
+        opts: {
+          hs_pipeline: ticketPipeline,
+        },
+      });
+
+      expect(allowedValues).toBeDefined();
+    });
+
+    it('Should get Hubspot deal stage allowed values', async () => {
+      const allowedValues = await getHubspotDealPipelineStageAllowedValues({
+        ...baseContext,
+        opts: {
+          pipeline: dealPipeline,
+        },
+      });
+
+      expect(allowedValues).toBeDefined();
     });
   });
 
