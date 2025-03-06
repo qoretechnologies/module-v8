@@ -2392,8 +2392,6 @@ class ActionFunctionContext {
         *hash<string, hash<string, bool>> depmap;
 
         date io_timeout;
-
-        list<TypeScriptDataField> fields;
     }
 
     constructor(string app) {
@@ -2420,22 +2418,6 @@ class ActionFunctionContext {
         dvmap = fctx.dvmap;
         depmap = fctx.depmap;
         io_timeout = fctx.io_timeout;
-    }
-
-    copy() {
-        list<TypeScriptDataField> fl;
-        foreach TypeScriptDataField f in (fields) {
-            TypeScriptDataField nf = f.copy();
-            nf.setParent(self);
-            fl += nf;
-        }
-        if (fl) {
-            fields = fl;
-        }
-    }
-
-    registerField(TypeScriptDataField f) {
-        fields += f;
     }
 }
 }

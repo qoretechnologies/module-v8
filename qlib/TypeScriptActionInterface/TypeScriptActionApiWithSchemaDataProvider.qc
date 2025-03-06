@@ -254,6 +254,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         @throw INVALID-REQUEST the request argument provided do not match the expected request type
     */
     auto doRequest(auto req, *hash<auto> request_options) {
+        DataProviderContextHelper apch(self);
         return TypeScriptActionApiDataProvider::doRequest(req, request_options);
     }
 
@@ -265,6 +266,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         @note This API is meant to provide information about request data types that can depend on the call data
     */
     *hash<string, hash<ActionOptionInfo>> tryGetActionOptionsFromRequestTypeWithData(auto req) {
+        DataProviderContextHelper apch(self);
         return TypeScriptActionApiDataProvider::tryGetActionOptionsFromRequestTypeWithData(req);
     }
 
