@@ -1803,9 +1803,9 @@ public class TypeScriptActionInterface {
             ignore_dup);
         hash<auto> rv = TypeScriptActionInterface::getFieldHash(path, name, type, \h, req, fctx, ignore_dup);
         if (h) {
-            throw "FIELD-ERROR", sprintf("Field description has unknown keys: %y", keys h);
+            throw "FIELD-ERROR", sprintf("Description for field %y has unknown keys: %y", name, keys h);
         }
-        return new TypeScriptDataField(rv);
+        return new TypeScriptDataField(rv, fctx);
     }
 
     static hash<auto> getFieldHash(string path, string name, AbstractDataProviderType type,
@@ -2392,6 +2392,8 @@ class ActionFunctionContext {
         *hash<string, hash<string, bool>> depmap;
 
         date io_timeout;
+
+        list<TypeScriptDataField> fields;
     }
 
     constructor(string app) {
@@ -2418,6 +2420,22 @@ class ActionFunctionContext {
         dvmap = fctx.dvmap;
         depmap = fctx.depmap;
         io_timeout = fctx.io_timeout;
+    }
+
+    copy() {
+        list<TypeScriptDataField> fl;
+        foreach TypeScriptDataField f in (fields) {
+            TypeScriptDataField nf = f.copy();
+            nf.setParent(self);
+            fl += nf;
+        }
+        if (fl) {
+            fields = fl;
+        }
+    }
+
+    registerField(TypeScriptDataField f) {
+        fields += f;
     }
 }
 }
