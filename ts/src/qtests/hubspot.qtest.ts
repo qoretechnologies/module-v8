@@ -417,9 +417,8 @@ describe('Tests Hubspot actions', () => {
         {
           properties: {
             dealname: 'Test Deal',
-            amount: '1000',
-            dealtype: 'newbusiness',
-            hs_priority: 'low',
+            pipeline: 'default',
+            dealstage: 'appointmentscheduled',
           },
         }
       );
@@ -474,6 +473,8 @@ describe('Tests Hubspot actions', () => {
       );
 
       expect(body).toBeDefined();
+      expect(body.properties).toHaveProperty('amount');
+      expect(body.properties.amount).toBe('2000');
     });
 
     it('Should archive a deal', async () => {
