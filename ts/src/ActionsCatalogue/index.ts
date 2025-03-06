@@ -26,6 +26,7 @@ import { Locales } from '../i18n/i18n-types';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import outlook from '../apps/outlook';
+import teams from '../apps/teams';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -51,6 +52,7 @@ const NEW_APPS = {
   hubspot,
   sharepoint,
   outlook,
+  teams,
 } as const;
 
 const EXISTING_APPS = {
