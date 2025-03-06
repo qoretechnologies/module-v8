@@ -25,22 +25,8 @@
 public namespace TypeScriptActionInterface {
 #! The TypeScript data field
 public class TypeScriptDataField inherits DataProvider::QoreDataField {
-    private {
-        TypeScriptActionDataProviderBase prov;
-    }
-
     #! Creates the field from the argument
     constructor(hash<auto> h, *ActionFunctionContext fctx) : QoreDataField(h) {
-        if ((fctx instanceof TypeScriptActionDataProviderBase)
-            && (h.attr.dynamic_type || h.attr.get_default_value)) {
-            self.prov := cast<TypeScriptActionDataProviderBase>(fctx);
-            fctx.registerField(self);
-        }
-    }
-
-    #! Sets the new parent after the original parent was copied
-    setParent(ActionFunctionContext fctx) {
-        self.prov = cast<TypeScriptActionDataProviderBase>(fctx);
     }
 
     #! Returns the type of the field
@@ -49,13 +35,16 @@ public class TypeScriptDataField inherits DataProvider::QoreDataField {
             hash<AsyncCallInfo> call = TypeScriptActionInterface::getCall(attr.dynamic_type);
             try {
                 auto res;
-                if (prov) {
-                    res = prov.getAsyncValue(call, prov.getCallContextInfo());
+                TypeScriptActionDataProviderBase ts_prov_ctx;
+                if ((*AbstractDataProvider p = DataProviderContextHelper::get())
+                    && (p instanceof TypeScriptActionDataProviderBase)) {
+                    ts_prov_ctx = cast<TypeScriptActionDataProviderBase>(p);
+                    res = ts_prov_ctx.getAsyncValue(call, ts_prov_ctx.getCallContextInfo());
                 } else {
                     res = TypeScriptActionDataProviderBase::getAsyncValueArgs(NOTHING, call);
                 }
                 if (res) {
-                    return TypeScriptActionInterface::getType(name, res, attr.required, NOTHING, prov, True);
+                    return TypeScriptActionInterface::getType(name, res, attr.required, NOTHING, ts_prov_ctx, True);
                 }
             } catch (hash<ExceptionInfo> ex) {
                 TSAI::error("Failed to retrieve dynamic type for field %y: %y: %s", name, call.label,
@@ -70,13 +59,17 @@ public class TypeScriptDataField inherits DataProvider::QoreDataField {
         if (attr.get_default_value.val()) {
             hash<AsyncCallInfo> call = TypeScriptActionInterface::getCall(attr.get_default_value);
             try {
-                if (prov) {
-                    return prov.getAsyncValue(call, prov.getCallContextInfo());
+                TypeScriptActionDataProviderBase ts_prov_ctx;
+                if ((*AbstractDataProvider p = DataProviderContextHelper::get())
+                    && (p instanceof TypeScriptActionDataProviderBase)) {
+                    ts_prov_ctx = cast<TypeScriptActionDataProviderBase>(p);
+                    return ts_prov_ctx.getAsyncValue(call, ts_prov_ctx.getCallContextInfo());
                 } else {
                     return TypeScriptActionDataProviderBase::getAsyncValueArgs(NOTHING, call);
                 }
             } catch (hash<ExceptionInfo> ex) {
-                TSAI::error("Failed to retrieve default value for %y: %s", call.label, get_exception_string(ex));
+                TSAI::error("Failed to retrieve default value for field %y: %y: %s", name, call.label,
+                    get_exception_string(ex));
             }
         }
         return QoreDataField::getDefaultValue();
