@@ -3111,6 +3111,13 @@ const en = {
         },
       },
     },
+    Serenity: {
+      displayName: 'Serenity',
+      shortDesc: '',
+      longDesc: '',
+      actions: {},
+      triggers: {},
+    },
   },
 } satisfies BaseTranslation;
 

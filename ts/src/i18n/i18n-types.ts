@@ -12652,6 +12652,18 @@ type RootTranslation = {
 				}
 			}
 		}
+		Serenity: {
+			/**
+			 * S​e​r​e​n​i​t​y
+			 */
+			displayName: string
+			shortDesc: string
+			longDesc: string
+			actions: {
+			}
+			triggers: {
+			}
+		}
 	}
 }
 
@@ -25293,6 +25305,18 @@ export type TranslationFunctions = {
 						}
 					}
 				}
+			}
+		}
+		Serenity: {
+			/**
+			 * Serenity
+			 */
+			displayName: () => LocalizedString
+			shortDesc: () => LocalizedString
+			longDesc: () => LocalizedString
+			actions: {
+			}
+			triggers: {
 			}
 		}
 	}
