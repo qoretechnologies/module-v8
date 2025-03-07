@@ -681,6 +681,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                     info("Restarting command due to error");
                     continue;
                 }
+                error("Error running %y: %s", cmd, get_exception_string(ex));
                 rethrow;
             }
             break;

@@ -126,7 +126,6 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
         try {
             *hash<DataContextInfo> ctx = getCallContextInfo(event_options);
             info("Running event function for @%s/%s: %s", event.app, event.action, event.key);
-            info("CTX: %y", ctx);
             getAsyncValue(event, ctx, sub (JavaScriptObject o) {
                 auto event = o.toData();
                 if (event.typeCode() != NT_HASH) {
