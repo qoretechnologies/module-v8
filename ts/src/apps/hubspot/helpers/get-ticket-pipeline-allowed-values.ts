@@ -12,7 +12,9 @@ export const getHubspotTicketPipelineAllowedValues: TQoreGetAllowedValuesFunctio
   const token = context?.conn_opts?.token;
 
   if (!token) {
-    throw new Error('The token is required to get Hubspot ticket pipeline allowed values');
+    console.error('The token is required to get Hubspot ticket pipeline allowed values');
+
+    return [];
   }
 
   return await getHubspotPipelineAllowedValues(token!, 'tickets');
