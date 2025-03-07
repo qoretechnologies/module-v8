@@ -254,7 +254,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         @throw INVALID-REQUEST the request argument provided do not match the expected request type
     */
     auto doRequest(auto req, *hash<auto> request_options) {
-        ActionProviderContextHelper apch(self);
+        DataProviderContextHelper apch(self);
         return TypeScriptActionApiDataProvider::doRequest(req, request_options);
     }
 
@@ -266,7 +266,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         @note This API is meant to provide information about request data types that can depend on the call data
     */
     *hash<string, hash<ActionOptionInfo>> tryGetActionOptionsFromRequestTypeWithData(auto req) {
-        ActionProviderContextHelper apch(self);
+        DataProviderContextHelper apch(self);
         return TypeScriptActionApiDataProvider::tryGetActionOptionsFromRequestTypeWithData(req);
     }
 
@@ -568,19 +568,12 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
 }
 
 namespace Priv {
-thread_local *TypeScriptActionApiWithSchemaDataProvider ts_prov_ctx;
 class ActionProviderContextHelper {
-    private {
-        *TypeScriptActionApiWithSchemaDataProvider old_ts_prov_ctx;
-    }
-
-    constructor(TypeScriptActionApiWithSchemaDataProvider prov) {
-        old_ts_prov_ctx = ts_prov_ctx;
-        ts_prov_ctx = prov;
-    }
-
-    destructor() {
-        ts_prov_ctx = old_ts_prov_ctx;
+    static *TypeScriptActionApiWithSchemaDataProvider get() {
+        *AbstractDataProvider prov = DataProviderContextHelper::get();
+        if (prov && (prov instanceof TypeScriptActionApiWithSchemaDataProvider)) {
+            return cast<TypeScriptActionApiWithSchemaDataProvider>(prov);
+        }
     }
 }
 }
