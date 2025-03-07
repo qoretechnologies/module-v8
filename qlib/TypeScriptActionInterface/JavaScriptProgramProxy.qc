@@ -435,7 +435,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 info("Status event received: %y", v.info);
                 continue;
             }
-            debug("Received from PID %d (restarted: %y): %y", pid, restarted, v);
+            info("Received from PID %d (restarted: %y): %y", pid, restarted, v);
             # process event setup message if necessary inline
             if (restarted) {
                 if (event) {

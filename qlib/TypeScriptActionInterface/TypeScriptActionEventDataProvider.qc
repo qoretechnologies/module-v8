@@ -102,8 +102,12 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
         }
         self.conn = conn;
         self.rest = cast<RestClient>(connobj);
-        stop();
-        observersReady();
+        try {
+            stop();
+            observersReady();
+        } catch (hash<ExceptionInfo> ex) {
+            error("EVENT-ERROR", "Exception restarting event listener: %s", get_exception_string(ex));
+        }
     }
 
     #! Is this object still generating events
