@@ -35,16 +35,14 @@ public class TypeScriptDataField inherits DataProvider::QoreDataField {
             hash<AsyncCallInfo> call = TypeScriptActionInterface::getCall(attr.dynamic_type);
             try {
                 auto res;
-                TypeScriptActionDataProviderBase ts_prov_ctx;
-                if ((*AbstractDataProvider p = DataProviderContextHelper::get())
-                    && (p instanceof TypeScriptActionDataProviderBase)) {
-                    ts_prov_ctx = cast<TypeScriptActionDataProviderBase>(p);
-                    res = ts_prov_ctx.getAsyncValue(call, ts_prov_ctx.getCallContextInfo());
+                *TypeScriptActionApiWithSchemaDataProvider prov = ActionProviderContextHelper::get();
+                if (prov) {
+                    res = prov.getAsyncValue(call, prov.getCallContextInfo());
                 } else {
                     res = TypeScriptActionDataProviderBase::getAsyncValueArgs(NOTHING, call);
                 }
                 if (res) {
-                    return TypeScriptActionInterface::getType(name, res, attr.required, NOTHING, ts_prov_ctx, True);
+                    return TypeScriptActionInterface::getType(name, res, attr.required, NOTHING, prov);
                 }
             } catch (hash<ExceptionInfo> ex) {
                 TSAI::error("Failed to retrieve dynamic type for field %y: %y: %s", name, call.label,
@@ -59,11 +57,9 @@ public class TypeScriptDataField inherits DataProvider::QoreDataField {
         if (attr.get_default_value.val()) {
             hash<AsyncCallInfo> call = TypeScriptActionInterface::getCall(attr.get_default_value);
             try {
-                TypeScriptActionDataProviderBase ts_prov_ctx;
-                if ((*AbstractDataProvider p = DataProviderContextHelper::get())
-                    && (p instanceof TypeScriptActionDataProviderBase)) {
-                    ts_prov_ctx = cast<TypeScriptActionDataProviderBase>(p);
-                    return ts_prov_ctx.getAsyncValue(call, ts_prov_ctx.getCallContextInfo());
+                *TypeScriptActionApiWithSchemaDataProvider prov = ActionProviderContextHelper::get();
+                if (prov) {
+                    return prov.getAsyncValue(call, prov.getCallContextInfo());
                 } else {
                     return TypeScriptActionDataProviderBase::getAsyncValueArgs(NOTHING, call);
                 }

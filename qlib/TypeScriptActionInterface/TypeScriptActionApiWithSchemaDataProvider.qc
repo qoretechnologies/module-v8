@@ -566,3 +566,14 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
     }
 }
 }
+
+namespace Priv {
+class ActionProviderContextHelper {
+    static *TypeScriptActionApiWithSchemaDataProvider get() {
+        *AbstractDataProvider prov = DataProviderContextHelper::get();
+        if (prov && (prov instanceof TypeScriptActionApiWithSchemaDataProvider)) {
+            return cast<TypeScriptActionApiWithSchemaDataProvider>(prov);
+        }
+    }
+}
+}
