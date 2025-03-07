@@ -1530,7 +1530,7 @@ public class TypeScriptActionInterface {
                 "app": action.app,
                 "action": action.action,
                 "type": "get_element_allowed_values",
-                "label": sprintf("ElementrReference data function for app %y action %y option %y", action.app,
+                "label": sprintf("Element reference data function for app %y action %y option %y", action.app,
                     action.action, key),
                 "pool": fctx.pool,
                 "async_call": get_element_allowed_values,

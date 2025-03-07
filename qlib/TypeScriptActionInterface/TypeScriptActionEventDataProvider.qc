@@ -91,6 +91,21 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
         stop();
     }
 
+    #! Update any connection used by the data provider
+    /** @param conn the new AbstractConnection object
+        @param connobj the new connection object itself (ex: RestClient for a "rest" connection)
+    */
+    updateConnectionObjects(object conn, object connobj) {
+        if (!(connobj instanceof RestClient)) {
+            throw "UPDATE-CONNECTION-ERROR", sprintf("Data provider %y requires a \"RestClient\" object; got "
+                "%y instead", self.className(), connobj.className());
+        }
+        self.conn = conn;
+        self.rest = cast<RestClient>(connobj);
+        stop();
+        observersReady();
+    }
+
     #! Is this object still generating events
     bool isActive() {
         return running ?? False;
