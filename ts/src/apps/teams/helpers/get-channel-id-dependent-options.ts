@@ -37,7 +37,7 @@ export const getTeamsChannelIdDependentOptions: TQoreGetDependentOptionsFunction
     ? {
         addMembers: {
           required_groups: ['update'],
-          get_allowed_values: getTeamsChannelAddableMembersAllowedValues,
+          get_element_allowed_values: getTeamsChannelAddableMembersAllowedValues,
           type: {
             type: 'list',
             element_type: {
@@ -48,7 +48,7 @@ export const getTeamsChannelIdDependentOptions: TQoreGetDependentOptionsFunction
         },
         removeMembers: {
           required_groups: ['update'],
-          get_allowed_values: getTeamsChannelMembersAllowedValues,
+          get_element_allowed_values: getTeamsChannelMembersAllowedValues,
           type: 'list',
           required: false,
         },

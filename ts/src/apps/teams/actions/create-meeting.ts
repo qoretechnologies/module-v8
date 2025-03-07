@@ -50,8 +50,8 @@ const options = {
         type: 'string',
       },
     },
-    allowed_values_creatable: true,
-    get_allowed_values: getTeamsAttendeesAllowedValues,
+    element_allowed_values_creatable: true,
+    get_element_allowed_values: getTeamsAttendeesAllowedValues,
     required: false,
   },
   isOnlineMeeting: {

@@ -47,7 +47,7 @@ const FreshdeskNewTicketTrigger = QoreAppCreator.createLocalizedTrigger({
         type: 'list',
         element_type: 'softnumber',
       },
-      get_allowed_values: getFreshdeskTicketStatusAllowedValues,
+      get_element_allowed_values: getFreshdeskTicketStatusAllowedValues,
       default_value: [2],
     },
     ticketPriority: {
@@ -56,7 +56,7 @@ const FreshdeskNewTicketTrigger = QoreAppCreator.createLocalizedTrigger({
         type: 'list',
         element_type: 'softnumber',
       },
-      get_allowed_values: getFreshdeskTicketPriorityAllowedValues,
+      get_element_allowed_values: getFreshdeskTicketPriorityAllowedValues,
     },
   },
   webhook_method: 'POST',
