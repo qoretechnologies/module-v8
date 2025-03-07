@@ -242,9 +242,11 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
         #debug("JavaScriptProgramProxy::removeEventSource() ekey: %y remaining: %y stop: %y", ekey, keys event.omap,
         #    stop);
+        /*
         if (stop) {
             stopListener();
         }
+        */
     }
 
     #! Add an additional observable to the event source; called with the global lock held
@@ -298,9 +300,11 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
         #debug("JavaScriptProgramProxy::releaseEventSourceLocked() key: %y remaining: %y stop: %y", key,
         #    keys event.omap);
+        /*
         if (!event.omap) {
             stopListener();
         }
+        */
     }
 
     auto getAsyncValue(hash<AsyncCallInfo> api, ...) {
