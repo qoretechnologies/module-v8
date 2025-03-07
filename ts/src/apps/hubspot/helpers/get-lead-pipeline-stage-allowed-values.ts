@@ -31,9 +31,11 @@ export const getHubspotLeadPipelineStageAllowedValues: TQoreGetAllowedValuesFunc
   if (!hs_pipeline) missingValues.push('hs_pipeline');
 
   if (missingValues.length) {
-    throw new Error(
+    console.error(
       `The following values are required to get Hubspot lead stage allowed values: ${missingValues.join(', ')}`
     );
+
+    return [];
   }
 
   return await getHubspotPipelineStageAllowedValues(

@@ -179,7 +179,8 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         throw "ARG-ERROR", sprintf("Cannot calculate key value for type %y", arg.fullType());
     }
 
-    static private auto getAsyncValueArgsIntern(*LoggerInterface logger, hash<AsyncCallInfo> api, *softlist<auto> args) {
+    static private auto getAsyncValueArgsIntern(*LoggerInterface logger, hash<AsyncCallInfo> api,
+            *softlist<auto> args) {
         if (no_io) {
             return;
         }
@@ -189,13 +190,6 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
 
         # handle the call with a remote process
         if (TSAI::checkServer()) {
-if (api.label =~ /Dynamic type function.*post-crm-v3-objects-products_create/) {
-    try {
-        throw 1;
-    } catch (hash<ExceptionInfo> ex) {
-        TSAI::info("%y: XXX %s", api.label, get_exception_string(ex));
-    }
-}
             TSAI::info("%y: acquiring proxy for %y: %y", api.label, api.key, args);
             JavaScriptProgramProxy proxy = TypeScriptActionInterface::server.get();
             TSAI::info("%y: proxy acquired for %y", api.label, api.key);
@@ -288,6 +282,16 @@ if (api.label =~ /Dynamic type function.*post-crm-v3-objects-products_create/) {
         }
 
         TSAI::debug("Async result: %y", rv);
+
+        if (!exists err && api.post_processing) {
+            try {
+                api.post_processing(logger, api, args, \rv);
+                TSAI::debug("Post-processed async result: %y", rv);
+            } catch (hash<ExceptionInfo> ex) {
+                TSAI::error("Error post processing call result %y: %s", api.label, get_exception_string(ex));
+                rethrow;
+            }
+        }
 
         return rv;
     }

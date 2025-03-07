@@ -220,7 +220,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                 "keys: %y", action.app, action.action, key, k, keys type_hash);
         }
         on_error printf("%y info: %N\n", key, info + {"type": info.type.getName()});
-        t.addOrReplaceField(new TypeScriptDataField(info));
+        t.addOrReplaceField(new TypeScriptDataField(info, fctx));
         #printf("Edited %y (%s) => %y mandatory: %y av: %y (parent %y)\n", key, t.getFields(){key}.uniqueHash(),
         #    t.getFields(){key}.getType().className(), t.getFields(){key}.isMandatory(),
         #    t.getFields(){key}.getAllowedValues(), t.className());
@@ -254,7 +254,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         @throw INVALID-REQUEST the request argument provided do not match the expected request type
     */
     auto doRequest(auto req, *hash<auto> request_options) {
-        ActionProviderContextHelper apch(self);
+        DataProviderContextHelper apch(self);
         return TypeScriptActionApiDataProvider::doRequest(req, request_options);
     }
 
@@ -266,7 +266,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         @note This API is meant to provide information about request data types that can depend on the call data
     */
     *hash<string, hash<ActionOptionInfo>> tryGetActionOptionsFromRequestTypeWithData(auto req) {
-        ActionProviderContextHelper apch(self);
+        DataProviderContextHelper apch(self);
         return TypeScriptActionApiDataProvider::tryGetActionOptionsFromRequestTypeWithData(req);
     }
 
@@ -568,19 +568,12 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
 }
 
 namespace Priv {
-thread_local *TypeScriptActionApiWithSchemaDataProvider ts_prov_ctx;
 class ActionProviderContextHelper {
-    private {
-        *TypeScriptActionApiWithSchemaDataProvider old_ts_prov_ctx;
-    }
-
-    constructor(TypeScriptActionApiWithSchemaDataProvider prov) {
-        old_ts_prov_ctx = ts_prov_ctx;
-        ts_prov_ctx = prov;
-    }
-
-    destructor() {
-        ts_prov_ctx = old_ts_prov_ctx;
+    static *TypeScriptActionApiWithSchemaDataProvider get() {
+        *AbstractDataProvider prov = DataProviderContextHelper::get();
+        if (prov && (prov instanceof TypeScriptActionApiWithSchemaDataProvider)) {
+            return cast<TypeScriptActionApiWithSchemaDataProvider>(prov);
+        }
     }
 }
 }

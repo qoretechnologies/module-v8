@@ -35,9 +35,11 @@ export const getHubspotDealPipelineStageAllowedValues: TQoreGetAllowedValuesFunc
   if (!pipeline) missingValues.push('pipeline');
 
   if (missingValues.length) {
-    throw new Error(
+    console.error(
       `The following values are required to get Hubspot ticket stage allowed values: ${missingValues.join(', ')}`
     );
+
+    return [];
   }
 
   return await getHubspotPipelineStageAllowedValues(

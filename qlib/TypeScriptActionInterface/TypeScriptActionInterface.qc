@@ -50,7 +50,10 @@ public hashdecl AsyncCallInfo {
     #! Timeout
     date to;
 
-    #! Free-foirm extra info
+    #! Post-processing of successful call results
+    *code post_processing;
+
+    #! Free-form extra info
     *hash<auto> info;
 }
 
@@ -1573,6 +1576,7 @@ public class TypeScriptActionInterface {
                 "pool": fctx.pool,
                 "async_call": get_dynamic_type,
                 "to": io_timeout,
+                "post_processing": \TypeScriptActionInterface::postProcessDynamicTypeInfo(),
             };
             TypeScriptActionInterface::registerAsyncCall(\fctx.dtmap{key}, "app", action.app, action.action, key);
             h.dynamic_type = fctx.dtmap{key}.key;
@@ -1803,9 +1807,9 @@ public class TypeScriptActionInterface {
             ignore_dup);
         hash<auto> rv = TypeScriptActionInterface::getFieldHash(path, name, type, \h, req, fctx, ignore_dup);
         if (h) {
-            throw "FIELD-ERROR", sprintf("Field description has unknown keys: %y", keys h);
+            throw "FIELD-ERROR", sprintf("Description for field %y has unknown keys: %y", name, keys h);
         }
-        return new TypeScriptDataField(rv);
+        return new TypeScriptDataField(rv, fctx);
     }
 
     static hash<auto> getFieldHash(string path, string name, AbstractDataProviderType type,
@@ -1917,6 +1921,7 @@ public class TypeScriptActionInterface {
                     "pool": fctx.pool,
                     "async_call": c,
                     "to": fctx.io_timeout,
+                    "post_processing": \TypeScriptActionInterface::postProcessDynamicTypeInfo(),
                 };
                 TypeScriptActionInterface::registerAsyncCall(ignore_dup, \fctx.dtmap{key}, "app", fctx.app,
                     fctx.action, key);
@@ -2196,6 +2201,43 @@ public class TypeScriptActionInterface {
             }
         }
         return rv;
+    }
+
+    static private postProcessDynamicTypeInfo(*LoggerInterface logger, hash<AsyncCallInfo> call, *softlist<auto> args,
+            reference<auto> info) {
+        if (info.type != "hash") {
+            return;
+        }
+        postProcessDynamicTypeInfoIntern(logger, call, args, \info);
+    }
+
+    static private postProcessDynamicTypeInfoIntern(*LoggerInterface logger, hash<AsyncCallInfo> call,
+            *softlist<auto> args, reference<*hash<auto>> info) {
+        foreach hash<auto> i in (info.fields.pairIterator()) {
+            if (i.value.type == "hash" && i.value.fields) {
+                postProcessDynamicTypeInfoIntern(logger, call, args, \info{i.key});
+            }
+            if (i.value.get_allowed_values.callp()) {
+                code c = remove info.fields{i.key}.get_allowed_values;
+                hash<AsyncCallInfo> new_call = call;
+                new_call.type = "get_allowed_values";
+                new_call.label = sprintf("Ad-hoc reference data function for app %y action %y option %y",
+                    call.app, call.action, call.key),
+                new_call.async_call = c;
+                info.fields{i.key}.allowed_values = TypeScriptActionDataProviderBase::getAsyncValueArgs(logger,
+                    new_call, args);
+            }
+            if (i.value.get_default_value.callp()) {
+                code c = remove info.fields{i.key}.get_default_value;
+                hash<AsyncCallInfo> new_call = call;
+                new_call.type = "get_default_value";
+                new_call.label = sprintf("Ad-hoc default value function for app %y action %y option %y",
+                    call.app, call.action, call.key),
+                new_call.async_call = c;
+                info.fields{i.key}.default_value = TypeScriptActionDataProviderBase::getAsyncValueArgs(logger,
+                    new_call, args);
+            }
+        }
     }
 
     static private overrideTypes(string app, SwaggerSchema schema, hash<auto> swagger_type_overrides) {
