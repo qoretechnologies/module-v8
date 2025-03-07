@@ -1520,20 +1520,20 @@ public class TypeScriptActionInterface {
             # remove any manual allowed values
             remove h.allowed_values;
         }
-        if (exists (auto element_get_allowed_values = remove h.element_get_allowed_values)) {
-            if (!element_get_allowed_values.callp()) {
+        if (exists (auto get_element_allowed_values = remove h.get_element_allowed_values)) {
+            if (!get_element_allowed_values.callp()) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
                     "\"get_allowed_values\" attribute; got type %y; expecting a callable value", action.app,
-                    action.action, key, element_get_allowed_values.fullType());
+                    action.action, key, get_element_allowed_values.fullType());
             }
             fctx.omap{key} = <AsyncCallInfo>{
                 "app": action.app,
                 "action": action.action,
-                "type": "element_get_allowed_values",
+                "type": "get_element_allowed_values",
                 "label": sprintf("ElementrReference data function for app %y action %y option %y", action.app,
                     action.action, key),
                 "pool": fctx.pool,
-                "async_call": element_get_allowed_values,
+                "async_call": get_element_allowed_values,
                 "to": io_timeout,
             };
             TypeScriptActionInterface::registerAsyncCall(\fctx.eomap{key}, "app", action.app, action.action, key);
@@ -1584,7 +1584,7 @@ public class TypeScriptActionInterface {
             hash<RestGetAllowedValuesInfo> info;
             {
                 on_error rethrow "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
-                    "\"rest_element_get_allowed_values\" attribute: %s: %s", action.app, action.action, key, $1.err,
+                    "\"rest_get_element_allowed_values\" attribute: %s: %s", action.app, action.action, key, $1.err,
                     $1.desc);
                 info = cast<hash<RestGetAllowedValuesInfo>>(rest_get_element_allowed_values);
             }
