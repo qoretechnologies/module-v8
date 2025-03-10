@@ -64,6 +64,9 @@ public const CC_ERR = "ERR";
 #! Child command: "EVENT"
 public const CC_EVENT = "EVENT";
 
+#! Child command: "EVENT-TERMINATED"
+public const CC_EVENT_TERMINATED = "EVENT-TERMINATED";
+
 #! Child command: "STATUS"
 public const CC_STATUS = "STATUS";
 

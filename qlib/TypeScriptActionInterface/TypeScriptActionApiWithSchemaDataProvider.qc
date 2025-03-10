@@ -94,10 +94,16 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         if (conn_opt_map) {
             query_set = map {$1: True}, conn_opt_map.iterator();
         }
+        # if we need to override options, we do it now, so that action options reflect the requested changes
         if (override_options) {
-            NoIoHelper nih();
-            createRequestType(override_options, \action);
-            request_type_done = True;
+            action.get_dynamic_options = *hash<string, hash<ActionOptionInfo>> sub () {
+                NoIoHelper nih();
+                createRequestType(override_options, \action);
+                request_type_done = True;
+                if (*hash<string, AbstractDataField> fields = request_type.getFields()) {
+                    return DataProviderActionCatalog::getActionOptionFromFields(fields);
+                }
+            };
         }
     }
 

@@ -110,6 +110,12 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
         notifyObservers(event_id, event);
     }
 
+    #! Called when the event thread terminates prematurely
+    terminated() {
+        info("Event thread terminated prematurely");
+        stop();
+    }
+
     private startEventThread(Counter c) {
         on_exit {
             m.lock();

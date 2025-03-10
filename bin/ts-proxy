@@ -235,34 +235,42 @@ class TsProxy inherits TypeScriptProxy {
         } catch (hash<ExceptionInfo> ex) {
             error("EVENT-THREAD-ERROR", "Exception in event thread: %s", get_exception_string(ex));
         }
+        if (!event.stop_flag) {
+            error("The event thread terminated prematurely; notifying parent");
+            string yaml = makeSend(CC_EVENT_TERMINATED, {
+                "key": key,
+            });
+            sendString(yaml);
+        }
     }
 
     private releaseEvent(string key) {
         m.lock();
         on_exit m.unlock();
 
-        if (event.key != key) {
-            string yaml = makeSend(CC_ERR, {
-                "ex": {
-                    "err": "INVALID-EVENT-KEY",
-                    "desc": sprintf("Event key %y is unknown; managed event key: %y", key, event.key),
-                },
-            });
-            sendString(yaml);
-            info("Cannot release unknown event key %y; managed event key: %y", key, event.key);
-            return;
-        }
-
-        if (!event.stop_flag) {
-            event.stop_flag = True;
-        }
-        while (event.running) {
-            ++event.waiting;
-            event.cond.wait(m);
-            --event.waiting;
-        }
-        if (event && !event.waiting) {
-            remove event;
+        if (event.key) {
+            if (event.key != key) {
+                string yaml = makeSend(CC_ERR, {
+                    "ex": {
+                        "err": "INVALID-EVENT-KEY",
+                        "desc": sprintf("Event key %y is unknown; managed event key: %y", key, event.key),
+                    },
+                });
+                sendString(yaml);
+                info("Cannot release unknown event key %y; managed event key: %y", key, event.key);
+                return;
+            }
+            if (!event.stop_flag) {
+                event.stop_flag = True;
+            }
+            while (event.running) {
+                ++event.waiting;
+                event.cond.wait(m);
+                --event.waiting;
+            }
+            if (event && !event.waiting) {
+                remove event;
+            }
         }
         string yaml = makeSend(CC_OK);
         sendString(yaml);
