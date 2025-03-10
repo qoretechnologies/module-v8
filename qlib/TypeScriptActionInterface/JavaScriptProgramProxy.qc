@@ -425,6 +425,20 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 }
                 continue;
             }
+            if (v.cmd == CC_EVENT_TERMINATED) {
+                if (!event.omap) {
+                    error("No observers for event for key %y; ignoring", v.key);
+                }
+                foreach hash<auto> i in (event.omap.pairIterator()) {
+                    try {
+                        i.value.terminated();
+                    } catch (hash<ExceptionInfo> ex) {
+                        error("Error notifying observer %y of terminated event thread for key %y: %s", i.key, v.key,
+                            get_exception_string(ex));
+                    }
+                }
+                continue;
+            }
             if (v.cmd == CC_STATUS) {
                 info("Status event received: %y", v.info);
                 continue;
