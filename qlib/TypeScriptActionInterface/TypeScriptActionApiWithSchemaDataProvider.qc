@@ -107,6 +107,8 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         if (override_options) {
             action_save = action;
             override_options_save = override_options;
+            # remove options, as they will be processed on demand
+            action -= "options";
             action.get_dynamic_options = get_dynamic_options = sub (reference<hash<DataProviderActionInfo>> info) {
                 if (!request_type_done) {
                     NoIoHelper nih();
