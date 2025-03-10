@@ -113,7 +113,6 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                 if (!request_type_done) {
                     NoIoHelper nih();
                     createRequestType();
-                    request_type_done = True;
                 }
                 info += action_save;
                 if (*hash<string, AbstractDataField> fields = request_type.getFields()) {
@@ -123,9 +122,9 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         }
     }
 
-    overrideOptions(reference<hash<auto>> action, HashDataType type, hash<auto> opts) {
+    overrideOptions(HashDataType type) {
         *hash<string, AbstractDataField> fields = type.getFields();
-        foreach hash<auto> i in (opts.pairIterator()) {
+        foreach hash<auto> i in (override_options_save.pairIterator()) {
             # find option to update
             string k = rreqmap{i.key} ?? i.key;
             list<string> l = k.split(".");
@@ -136,9 +135,9 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
             *AbstractDataField f = fields{key};
             hash<auto> opt;
             if (!f) {
-                TypeScriptActionInterface::getOptionFunctions(\action, self, i.key, \i.value, True);
+                TypeScriptActionInterface::getOptionFunctions(\action_save, self, i.key, \i.value, True);
                 if (l.size() > 1) {
-                    overrideOptionType("option", action, type, l, i.value, k);
+                    overrideOptionType("option", type, l, i.value, k);
                     continue;
                 }
 
@@ -156,12 +155,12 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
             } else {
                 if (!(f instanceof QoreDataField)) {
                     throw "OPTION-OVERRIDE-ERROR", sprintf("App %y action %y option %y: cannot override %s; "
-                        "expecting \"QoreDataField\"", action.app, action.action, key, f.className());
+                        "expecting \"QoreDataField\"", action_save.app, action_save.action, key, f.className());
                 }
                 if (l.size() == 1) {
-                    TypeScriptActionInterface::getOptionFunctions(\action, self, i.key, \i.value, True);
+                    TypeScriptActionInterface::getOptionFunctions(\action_save, self, i.key, \i.value, True);
                 }
-                overrideOptionType("option", action, type, l, i.value, k);
+                overrideOptionType("option", type, l, i.value, k);
                 if (l.size() == 1 && (*list<auto> dl = i.value.depends_on)) {
                     depmap{l[0]} = map {$1: True}, dl;
                 }
@@ -169,9 +168,8 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         }
     }
 
-    overrideOptionType(string path, hash<auto> action, AbstractDataProviderType type, list<string> l,
-            hash<auto> type_hash, string k) {
-        TypeScriptActionApiWithSchemaDataProvider::overrideOptionType(path, action, type, l, type_hash, k, self);
+    overrideOptionType(string path, AbstractDataProviderType type, list<string> l, hash<auto> type_hash, string k) {
+        TypeScriptActionApiWithSchemaDataProvider::overrideOptionType(path, action_save, type, l, type_hash, k, self);
     }
 
     static overrideOptionType(string path, hash<auto> action, AbstractDataProviderType type, list<string> l,
@@ -298,7 +296,6 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
     private *DataProvider::AbstractDataProviderType getRequestTypeImpl() {
         if (!request_type_done) {
             createRequestType();
-            request_type_done = True;
         }
         return request_type;
     }
@@ -309,13 +306,16 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
     private *DataProvider::AbstractDataProviderType getResponseTypeImpl() {
         if (!response_type_done) {
             createResponseType();
-            response_type_done = True;
         }
         return response_type;
     }
 
     #! Creates the request type for this API
     private createRequestType() {
+        if (request_type_done) {
+            return;
+        }
+        request_type_done = True;
         checkDataProvider();
         request_type = prov.getRequestType();
 
@@ -424,7 +424,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                 throw "ACTION-ERROR", sprintf("Cannot override options of app %y action %y with non-hash "
                     "request type %y", action_save.app, action_save.action, request_type.getName());
             }
-            overrideOptions(\action_save, cast<HashDataType>(request_type), override_options_save);
+            overrideOptions(cast<HashDataType>(request_type));
             if (!prov.op.consumes) {
                 prov.op.consumes{MimeTypeJson} = True;
             }
@@ -455,6 +455,10 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
 
     #! Creates the response type for this API
     private createResponseType() {
+        if (response_type_done) {
+            return;
+        }
+        response_type_done = True;
         checkDataProvider();
         response_type = prov.getResponseType();
         if (response_type && (*hash<string, AbstractDataField> fields = response_type.getFields())
