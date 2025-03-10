@@ -45,6 +45,9 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
 
         #! For external processes
         JavaScriptProgramProxy proxy;
+
+        #! Event options
+        *hash<auto> event_options;
     }
 
     #! Creates the object from the arguments
@@ -67,21 +70,8 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
             throw "OBSERVABLE-ERROR", "observersReady() can only be called once";
         }
 
-        *hash<auto> options = ImpliedArgumentHelper::get();
-        if (TSAI::checkServer()) {
-            info("Starting external process for data provider %y for connection %y options %y", name, conn.name,
-                options);
-            running = True;
-            on_error running = False;
-            proxy = TSAI::server.setupEventSource(self, event.app, event.action, event.key,
-                getCallContextInfo(options));
-        } else {
-            info("Starting event thread for data provider %y for connection %y options %y", name, conn.name, options);
-            Counter c(1);
-            int tid = background startEventThread(c, options);
-            c.waitForZero();
-            info("Started event thread in TID %d", tid);
-        }
+        event_options = ImpliedArgumentHelper::get();
+        startEvent();
     }
 
     #! Called to stop generating events
@@ -89,6 +79,25 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
     */
     stopEvents() {
         stop();
+    }
+
+    #! Update any connection used by the data provider
+    /** @param conn the new AbstractConnection object
+        @param connobj the new connection object itself (ex: RestClient for a "rest" connection)
+    */
+    updateConnectionObjects(object conn, object connobj) {
+        if (!(connobj instanceof RestClient)) {
+            throw "UPDATE-CONNECTION-ERROR", sprintf("Data provider %y requires a \"RestClient\" object; got "
+                "%y instead", self.className(), connobj.className());
+        }
+        self.conn = conn;
+        self.rest = cast<RestClient>(connobj);
+        try {
+            stop();
+            startEvent();
+        } catch (hash<ExceptionInfo> ex) {
+            error("EVENT-ERROR", "Exception restarting event listener: %s", get_exception_string(ex));
+        }
     }
 
     #! Is this object still generating events
@@ -101,7 +110,7 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
         notifyObservers(event_id, event);
     }
 
-    private startEventThread(Counter c, *hash<auto> options) {
+    private startEventThread(Counter c) {
         on_exit {
             m.lock();
             on_exit m.unlock();
@@ -115,8 +124,9 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
         # signal calling thread that we are running
         c.dec();
         try {
+            *hash<DataContextInfo> ctx = getCallContextInfo(event_options);
             info("Running event function for @%s/%s: %s", event.app, event.action, event.key);
-            getAsyncValue(event, getCallContextInfo(options), sub (JavaScriptObject o) {
+            getAsyncValue(event, ctx, sub (JavaScriptObject o) {
                 auto event = o.toData();
                 if (event.typeCode() != NT_HASH) {
                     throw "INVALID-EVENT-DATA", sprintf("Cannot raise event %y with type %y; must be a hash "
@@ -151,6 +161,25 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
                 cond.wait(m);
                 --waiting;
             }
+        }
+    }
+
+    #! Start event listening
+    private startEvent() {
+        if (TSAI::checkServer()) {
+            info("Starting external process for data provider %y for connection %y options %y", name, conn.name,
+                event_options);
+            running = True;
+            on_error running = False;
+            proxy = TSAI::server.setupEventSource(self, event.app, event.action, event.key,
+                getCallContextInfo(event_options));
+        } else {
+            info("Starting event thread for data provider %y for connection %y options %y", name, conn.name,
+                event_options);
+            Counter c(1);
+            int tid = background startEventThread(c);
+            c.waitForZero();
+            info("Started event thread in TID %d", tid);
         }
     }
 
