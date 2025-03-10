@@ -50,6 +50,9 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         #! Any REST client to use for reference data, for example
         RestClient rest;
 
+        #! type cache for dependent options; opt val key -> type
+        hash<string, AbstractDataProviderType> dtcache;
+
         #! Data cache for retrieving allowed values
         static TypeScriptDataCache cache();
     }
@@ -424,6 +427,75 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                 "opts": action_opts,
             };
         }
+    }
+
+    #! Returns a key to the dependent type cache for the request type
+    private static *string getCacheKey(list<string> skeys, hash<auto> req) {
+        string ckey;
+        foreach string key in (skeys) {
+            auto val = req{key};
+            if (!val.strp()) {
+                return;
+            }
+            if (exists ckey) {
+                ckey += "|";
+            }
+            ckey += val.toString();
+        }
+        return (foldl $1 + "|" + $2, skeys) + "=" + ckey;
+    }
+
+    #! Returns a data type for the given base type and request / option data
+    private AbstractDataProviderType getDynamicDataType(AbstractDataProviderType rt, hash<auto> req) {
+        *hash<auto> slice = dmap{keys req};
+        if (!slice) {
+            return rt;
+        }
+        # cache key (opt[|opt...]=val[|val])
+        *string ckey = getCacheKey(keys slice, req);
+        if (exists ckey) {
+            if (*AbstractDataProviderType rv = dtcache{ckey}) {
+                return rv;
+            }
+        }
+
+        *HashDataType type;
+        if (TSAI::checkServer()) {
+            TSAI::debug("Starting proxy for app %y action %y: request type with args: %y", app, action, req);
+            JavaScriptProgramProxy proxy = TypeScriptActionInterface::server.get();
+            TSAI::debug("Proxy started for app %y action %y: request type with args", app, action);
+            on_exit TypeScriptActionInterface::server.release(proxy);
+            type = proxy.getRequestType(app, action, conn.name, conn.getRealOptions(), req);
+        } else {
+            type = getDynamicTypeIntern(rt, slice, req);
+        }
+        if (exists ckey) {
+            return dtcache{ckey} = type ?? rt;
+        }
+        return type ?? rt;
+    }
+
+    private *HashDataType getDynamicTypeIntern(AbstractDataProviderType rt, hash<auto> slice, hash<auto> req) {
+        HashDataType type;
+        foreach hash<auto> i in (slice.pairIterator()) {
+            auto val = req{i.key};
+            debug("Retrieving options dependent on option %y, value %y for data provider %y type %y", i.key, val,
+                getName(), type);
+            auto res = getAsyncValueWithCache(i.value, req, getCallContextInfo(req));
+            if (!exists res) {
+                continue;
+            }
+            if (res.typeCode() != NT_HASH) {
+                throw "DATA-PROVIDER-DYNAMIC-TYPE-ERROR", sprintf("JavaScript 'get_dependent_options()' function "
+                    "returned type %y; expecting \"hash\"", res.fullType());
+            }
+            if (!type) {
+                type = cast<HashDataType>(rt.copy());
+            }
+            map type.addField(TypeScriptActionInterface::getField("dynamic-type", $1.key, $1.value, self, True)),
+                res.pairIterator();
+        }
+        return type;
     }
 
     #! Returns reference data of the given kind if available

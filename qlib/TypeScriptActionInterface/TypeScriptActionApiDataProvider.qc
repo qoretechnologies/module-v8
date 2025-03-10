@@ -47,9 +47,6 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
         bool dtfields_done;
         *AbstractDataProviderType request_type;
         *AbstractDataProviderType response_type;
-
-        #! type cache for dependent options; opt val key -> type
-        hash<string, AbstractDataProviderType> dtcache;
     }
 
     constructor(string name, hash<AsyncCallInfo> api, *AbstractDataProviderType request_type,
@@ -177,33 +174,7 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
             throw "DATA-PROVIDER-REQUEST-TYPE-ERROR", sprintf("Request data has type %y; expecting \"hash\"",
                 req.fullType());
         }
-
-        *hash<auto> slice = dmap{keys req};
-        if (!slice) {
-            return rt;
-        }
-        # cache key (opt[|opt...]=val[|val])
-        *string ckey = getCacheKey(keys slice, req);
-        if (exists ckey) {
-            if (*AbstractDataProviderType rv = dtcache{ckey}) {
-                return rv;
-            }
-        }
-
-        *HashDataType type;
-        if (TSAI::checkServer()) {
-            TSAI::debug("Starting proxy for app %y action %y: request type with args: %y", api.app, api.action, req);
-            JavaScriptProgramProxy proxy = TypeScriptActionInterface::server.get();
-            TSAI::debug("Proxy started for app %y action %y: request type with args", api.app, api.action);
-            on_exit TypeScriptActionInterface::server.release(proxy);
-            type = proxy.getRequestType(api.app, api.action, conn.name, conn.getRealOptions(), req);
-        } else {
-            type = getRequestTypeIntern(rt, slice, req);
-        }
-        if (exists ckey) {
-            return dtcache{ckey} = type ?? rt;
-        }
-        return type ?? rt;
+        return getDynamicDataType(rt, req);
     }
 
     *HashDataType getRequestTypeExtern(*string conn_name, *hash<auto> conn_opts, hash<auto> req) {
@@ -237,45 +208,6 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
                 res.pairIterator();
         }
         return type;
-    }
-
-    private *HashDataType getRequestTypeIntern(AbstractDataProviderType rt, hash<auto> slice, hash<auto> req) {
-        HashDataType type;
-        foreach hash<auto> i in (slice.pairIterator()) {
-            auto val = req{i.key};
-            debug("Retrieving options dependent on option %y, value %y for data provider %y type %y", i.key, val,
-                getName(), type);
-            auto res = getAsyncValueWithCache(i.value, req, getCallContextInfo(req));
-            if (!exists res) {
-                continue;
-            }
-            if (res.typeCode() != NT_HASH) {
-                throw "DATA-PROVIDER-REQUEST-TYPE-ERROR", sprintf("JavaScript 'get_dependent_options()' function "
-                    "returned type %y; expecting \"hash\"", res.fullType());
-            }
-            if (!type) {
-                type = cast<HashDataType>(rt.copy());
-            }
-            map type.addField(TypeScriptActionInterface::getField("request-type", $1.key, $1.value, self, True)),
-                res.pairIterator();
-        }
-        return type;
-    }
-
-    #! Returns a key to the dependent type cache for the request type
-    private static *string getCacheKey(list<string> skeys, hash<auto> req) {
-        string ckey;
-        foreach string key in (skeys) {
-            auto val = req{key};
-            if (!val.strp()) {
-                return;
-            }
-            if (exists ckey) {
-                ckey += "|";
-            }
-            ckey += val.toString();
-        }
-        return (foldl $1 + "|" + $2, skeys) + "=" + ckey;
     }
 
     #! Returns the description of a response message, if this object represents a response message
