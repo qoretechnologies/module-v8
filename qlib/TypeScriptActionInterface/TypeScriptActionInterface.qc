@@ -1900,6 +1900,9 @@ public class TypeScriptActionInterface {
         if ((*string str = remove type_hash.ref_data).val()) {
             info.attr.ref_data = str;
         }
+        if ((*string str = remove type_hash.element_ref_data).val()) {
+            info.attr.element_ref_data = str;
+        }
         if ((*string str = remove type_hash.default_ref_data).val()) {
             info.attr.default_ref_data = str;
         }
