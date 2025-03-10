@@ -58,6 +58,26 @@ const asanaNewUserTrigger = QoreAppCreator.createLocalizedTrigger({
   webhook_deregister: deregisterAsanaWebhook,
   webhook_echo_header: asanaWebhookEchoHeader,
   webhook_event_loc: asanaWebhookInfoLocation,
+  get_example_event_data: () => ({
+    action: 'added',
+    type: 'user',
+    created_at: new Date().toISOString(),
+    parent: {
+      gid: '1208408525816938',
+      resource_type: 'workspace',
+      name: 'Workspace Name',
+    },
+    resource: {
+      gid: '1206987654321098',
+      resource_type: 'user',
+      name: 'new.user@example.com',
+    },
+    user: {
+      gid: '1206353569757060',
+      resource_type: 'user',
+      name: 'admin@example.com',
+    },
+  }),
   event_info: {
     desc: 'New user event data',
     type: asanaEventInfoType,
