@@ -29534,8 +29534,9 @@ const MondayApp = ts_toolkit_1.QoreAppCreator.createApp({
         oauth2_grant_type: 'authorization_code',
         oauth2_auth_url: 'https://auth.monday.com/oauth2/authorize',
         oauth2_token_url: 'https://auth.monday.com/oauth2/token',
-        ping_method: 'GET',
-        ping_path: '',
+        ping_method: 'POST',
+        ping_path: 'v2',
+        ping_body: { query: 'query{me{id}}' },
         oauth2_scopes: [
             'me:read',
             'boards:read',
