@@ -1190,11 +1190,6 @@ public class TypeScriptActionInterface {
 
         if (*hash<auto> opts = remove action.options) {
             action.options = TypeScriptActionInterface::getOptions(app, \action, opts, fctx);
-            if (fctx.dmap) {
-                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"options\" "
-                    "attribute; event actions do not support get_dependent_options() callbacks", action.app,
-                    action.action);
-            }
         }
         *hash<AsyncCallInfo> get_example_event_data = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
             "get_example_event_data", "example event data", pool, io_timeout, action.app, action.action);
@@ -1526,7 +1521,7 @@ public class TypeScriptActionInterface {
                     "\"get_allowed_values\" attribute; got type %y; expecting a callable value", action.app,
                     action.action, key, get_element_allowed_values.fullType());
             }
-            fctx.omap{key} = <AsyncCallInfo>{
+            fctx.eomap{key} = <AsyncCallInfo>{
                 "app": action.app,
                 "action": action.action,
                 "type": "get_element_allowed_values",
