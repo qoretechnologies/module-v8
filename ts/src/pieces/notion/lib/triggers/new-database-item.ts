@@ -4,7 +4,9 @@ import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../../global/constants';
 import { pollCreatedItemsForTrigger } from '../../../../global/helpers/event-triggers';
 import { getNotionDatabaseIdAllowedValues } from '../common/helpers/get-database-id-allowed-values';
 import { mapNotionProperties } from '../common/properties-mapping';
-import { databaseItemQoreType } from './constants';
+import { databaseItemQoreType, NOTION_FETCH_DELAY, NOTION_FETCH_MAX_RETRIES } from './constants';
+import { Debugger } from '../../../../utils/Debugger';
+import { delay } from '../../../../global/helpers';
 
 const notionNewDatabaseItemTrigger = QoreAppCreator.createLocalizedTrigger({
   app: 'Notion',
@@ -67,21 +69,41 @@ export const getLastCreatedDatabaseItems = async (
     notionVersion: '2022-02-22',
   });
 
-  const response = await notion.databases.query({
-    database_id: databaseId,
-    sorts: [
-      {
-        timestamp: 'created_time',
-        direction: 'descending',
-      },
-    ],
-    page_size: limit,
-  });
+  let retries = 0;
 
-  return response.results.map((item) => ({
-    ...item,
-    ...('properties' in item && { properties: mapNotionProperties(item.properties) }),
-  }));
+  while (true) {
+    try {
+      const response = await notion.databases.query({
+        database_id: databaseId,
+        sorts: [
+          {
+            timestamp: 'created_time',
+            direction: 'descending',
+          },
+        ],
+        page_size: limit,
+      });
+
+      return response.results.map((item) => ({
+        ...item,
+        ...('properties' in item && { properties: mapNotionProperties(item.properties) }),
+      }));
+    } catch (error) {
+      retries++;
+
+      if (retries > NOTION_FETCH_MAX_RETRIES) {
+        throw error;
+      }
+
+      Debugger.log(
+        `Notion API  last created database items request failed ` +
+          `(attempt ${retries}/${NOTION_FETCH_MAX_RETRIES}). Reason:`,
+        error
+      );
+
+      await delay(NOTION_FETCH_DELAY);
+    }
+  }
 };
 
 export default notionNewDatabaseItemTrigger;

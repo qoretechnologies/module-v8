@@ -1,5 +1,8 @@
 import { TQoreTypeObject } from '@qoretechnologies/ts-toolkit';
 
+export const NOTION_FETCH_MAX_RETRIES = 3;
+export const NOTION_FETCH_DELAY = 1000;
+
 export const databaseItemQoreType = {
   type: 'hash',
   fields: {
