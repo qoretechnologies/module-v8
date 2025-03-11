@@ -446,7 +446,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
     }
 
     #! Returns a data type for the given base type and request / option data
-    private AbstractDataProviderType getDynamicDataType(AbstractDataProviderType rt, hash<auto> req) {
+    private AbstractDataProviderType getDynamicDataType(string cmd, AbstractDataProviderType rt, hash<auto> req) {
         *hash<auto> slice = dmap{keys req};
         if (!slice) {
             return rt;
@@ -465,7 +465,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             JavaScriptProgramProxy proxy = TypeScriptActionInterface::server.get();
             TSAI::debug("Proxy started for app %y action %y: request type with args", app, action);
             on_exit TypeScriptActionInterface::server.release(proxy);
-            type = proxy.getRequestType(app, action, conn.name, conn.getRealOptions(), req);
+            type = proxy.getDynamicType(cmd, app, action, conn.name, conn.getRealOptions(), req);
         } else {
             type = getDynamicTypeIntern(rt, slice, req);
         }

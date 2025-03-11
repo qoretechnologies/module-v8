@@ -174,7 +174,7 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
             throw "DATA-PROVIDER-REQUEST-TYPE-ERROR", sprintf("Request data has type %y; expecting \"hash\"",
                 req.fullType());
         }
-        return getDynamicDataType(rt, req);
+        return getDynamicDataType(PC_GET_REQUEST_TYPE, rt, req);
     }
 
     *HashDataType getRequestTypeExtern(*string conn_name, *hash<auto> conn_opts, hash<auto> req) {

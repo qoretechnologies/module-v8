@@ -1535,7 +1535,7 @@ public class TypeScriptActionInterface {
             };
             TypeScriptActionInterface::registerAsyncCall(\fctx.eomap{key}, "app", action.app, action.action, key);
 
-            h.ref_data = key;
+            h.element_ref_data = key;
             # remove any manual allowed values
             remove h.element_allowed_values;
         }
