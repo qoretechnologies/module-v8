@@ -375,7 +375,7 @@ export const ASANA_ALLOWED_PATHS = {
             type: 'list',
             element_type: 'string',
           },
-          allowed_values_creatable: true,
+          element_allowed_values_creatable: true,
           rest_get_element_allowed_values: getAsanaUserIdAllowedValuesRest,
         },
       },

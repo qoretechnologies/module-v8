@@ -70,8 +70,8 @@ const options = {
         },
       },
     },
-    get_allowed_values: getOutlookRecipientsAllowedValues,
-    allowed_values_creatable: true,
+    get_element_allowed_values: getOutlookRecipientsAllowedValues,
+    element_allowed_values_creatable: true,
   },
   body: {
     type: 'string',
