@@ -2,7 +2,7 @@ import { TAllowedPaths, TQoreAppActionOverrideOption } from '@qoretechnologies/t
 import { OpenAPIV2 } from 'openapi-types';
 import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
 import hubspotCompanies from '../../../schemas/hubspot/companies.swagger.json';
-import { HUBSPOT_APP_NAME, hubspotSearchSortsOption } from '../constants';
+import { HUBSPOT_APP_NAME, HubspotAssociationsType, hubspotSearchSortsOption } from '../constants';
 import { getHubspotCompanyAllowedValues } from '../helpers/get-company-allowed-values';
 import { getHubspotCompanyIdPropertyAllowedValues } from '../helpers/get-id-property-allowed-values';
 import { getHubspotCompanyPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
@@ -35,9 +35,7 @@ export const HUBSPOT_COMPANIES_ALLOWED_PATHS = {
           required: true,
           get_dynamic_type: getHubspotCompanyPropertiesType,
         },
-        associations: {
-          required: false,
-        },
+        associations: HubspotAssociationsType,
       },
     },
   },
@@ -92,7 +90,7 @@ export const HUBSPOT_COMPANIES_ALLOWED_PATHS = {
             element_type: 'string',
             required: false,
           },
-          get_allowed_values: getHubspotCompanyPropertiesAllowedValues,
+          get_element_allowed_values: getHubspotCompanyPropertiesAllowedValues,
         },
       },
     },

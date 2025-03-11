@@ -2,7 +2,7 @@ import { TAllowedPaths, TQoreAppActionOverrideOption } from '@qoretechnologies/t
 import { OpenAPIV2 } from 'openapi-types';
 import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
 import hubspotTickets from '../../../schemas/hubspot/tickets.swagger.json';
-import { HUBSPOT_APP_NAME, hubspotSearchSortsOption } from '../constants';
+import { HUBSPOT_APP_NAME, HubspotAssociationsType, hubspotSearchSortsOption } from '../constants';
 import { getHubspotTicketAllowedValues } from '../helpers/get-ticket-allowed-value';
 import { getHubspotTicketPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
 import { getHubspotTicketIdPropertyAllowedValues } from '../helpers/get-id-property-allowed-values';
@@ -31,9 +31,7 @@ export const HUBSPOT_TICKETS_ALLOWED_PATHS = {
     },
     POST: {
       override_options: {
-        associations: {
-          required: false,
-        },
+        associations: HubspotAssociationsType,
         properties: {
           required: true,
           get_dynamic_type: getHubspotTicketPropertiesType,
@@ -70,7 +68,7 @@ export const HUBSPOT_TICKETS_ALLOWED_PATHS = {
             element_type: 'string',
             required: false,
           },
-          get_allowed_values: getHubspotTicketPropertiesAllowedValues,
+          get_element_allowed_values: getHubspotTicketPropertiesAllowedValues,
         },
       },
     },

@@ -8561,6 +8561,10 @@ type RootTranslation = {
 					 * C​r​e​a​t​e​ ​O​r​ ​U​p​d​a​t​e​ ​C​o​m​p​a​n​i​e​s
 					 */
 					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​o​r​ ​u​p​d​a​t​e​ ​m​u​l​t​i​p​l​e​ ​c​o​m​p​a​n​i​e​s
+					 */
+					shortDesc: string
 				}
 				'get-crm-v3-objects-contacts': {
 					/**
@@ -8581,6 +8585,108 @@ type RootTranslation = {
 					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t
 					 */
 					shortDesc: string
+					options: {
+						associations: {
+							/**
+							 * H​u​b​S​p​o​t​ ​A​s​s​o​c​i​a​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * D​e​f​i​n​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​ ​b​e​t​w​e​e​n​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​s​s​o​c​i​a​t​i​o​n​s​ ​c​r​e​a​t​e​ ​c​o​n​n​e​c​t​i​o​n​s​ ​b​e​t​w​e​e​n​ ​d​i​f​f​e​r​e​n​t​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s​ ​s​u​c​h​ ​a​s​ ​c​o​n​t​a​c​t​s​,​ ​c​o​m​p​a​n​i​e​s​,​ ​d​e​a​l​s​,​ ​t​i​c​k​e​t​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​s​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										to: {
+											/**
+											 * T​a​r​g​e​t​ ​O​b​j​e​c​t
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​n​ ​a​s​s​o​c​i​a​t​i​o​n​ ​w​i​t​h
+											 */
+											shortDesc: string
+											/**
+											 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​t​a​r​g​e​t​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​(​c​o​m​p​a​n​y​,​ ​c​o​n​t​a​c​t​,​ ​d​e​a​l​,​ ​e​t​c​.​)​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​o​b​j​e​c​t​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													id: {
+														/**
+														 * O​b​j​e​c​t​ ​I​D
+														 */
+														displayName: string
+														/**
+														 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​o​b​j​e​c​t
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​(​I​D​)​ ​o​f​ ​t​h​e​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​b​e​i​n​g​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​.​ ​T​h​i​s​ ​c​o​u​l​d​ ​b​e​ ​a​ ​c​o​m​p​a​n​y​ ​I​D​,​ ​c​o​n​t​a​c​t​ ​I​D​,​ ​d​e​a​l​ ​I​D​,​ ​e​t​c​.
+														 */
+														longDesc: string
+													}
+												}
+											}
+										}
+										types: {
+											/**
+											 * A​s​s​o​c​i​a​t​i​o​n​ ​T​y​p​e​s
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​s​ ​o​f​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​o​b​j​e​c​t​s
+											 */
+											shortDesc: string
+											/**
+											 * D​e​f​i​n​e​s​ ​t​h​e​ ​n​a​t​u​r​e​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​t​h​e​ ​t​w​o​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s​ ​b​e​i​n​g​ ​a​s​s​o​c​i​a​t​e​d​.
+											 */
+											longDesc: string
+											type: {
+												element_type: {
+													fields: {
+														associationTypeId: {
+															/**
+															 * A​s​s​o​c​i​a​t​i​o​n​ ​T​y​p​e​ ​I​D
+															 */
+															displayName: string
+															/**
+															 * N​u​m​e​r​i​c​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​t​y​p​e
+															 */
+															shortDesc: string
+															/**
+															 * A​ ​n​u​m​e​r​i​c​ ​I​D​ ​t​h​a​t​ ​d​e​f​i​n​e​s​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​a​s​s​o​c​i​a​t​i​o​n​ ​(​e​.​g​.​,​ ​1​ ​f​o​r​ ​c​o​m​p​a​n​y​-​t​o​-​c​o​n​t​a​c​t​,​ ​3​ ​f​o​r​ ​d​e​a​l​-​t​o​-​c​o​n​t​a​c​t​)​.​ ​E​a​c​h​ ​I​D​ ​r​e​p​r​e​s​e​n​t​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​i​r​e​c​t​i​o​n​a​l​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​t​w​o​ ​o​b​j​e​c​t​ ​t​y​p​e​s​.
+															 */
+															longDesc: string
+														}
+														associationCategory: {
+															/**
+															 * A​s​s​o​c​i​a​t​i​o​n​ ​C​a​t​e​g​o​r​y
+															 */
+															displayName: string
+															/**
+															 * C​a​t​e​g​o​r​y​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​t​y​p​e
+															 */
+															shortDesc: string
+															/**
+															 * C​a​t​e​g​o​r​i​z​e​s​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​a​s​ ​e​i​t​h​e​r​ ​"​H​U​B​S​P​O​T​_​D​E​F​I​N​E​D​"​ ​(​b​u​i​l​t​-​i​n​ ​s​y​s​t​e​m​ ​a​s​s​o​c​i​a​t​i​o​n​s​)​ ​o​r​ ​"​U​S​E​R​_​D​E​F​I​N​E​D​"​ ​(​c​u​s​t​o​m​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​c​r​e​a​t​e​d​ ​b​y​ ​u​s​e​r​s​)​.​ ​M​o​s​t​ ​s​t​a​n​d​a​r​d​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​u​s​e​ ​H​U​B​S​P​O​T​_​D​E​F​I​N​E​D​.
+															 */
+															longDesc: string
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 				'post-crm-v3-objects-contacts-search': {
 					/**
@@ -8645,6 +8751,108 @@ type RootTranslation = {
 					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​ ​o​f​ ​a​ ​s​e​l​e​c​t​e​d​ ​t​y​p​e
 					 */
 					shortDesc: string
+					options: {
+						associations: {
+							/**
+							 * H​u​b​S​p​o​t​ ​A​s​s​o​c​i​a​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * D​e​f​i​n​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​ ​b​e​t​w​e​e​n​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​s​s​o​c​i​a​t​i​o​n​s​ ​c​r​e​a​t​e​ ​c​o​n​n​e​c​t​i​o​n​s​ ​b​e​t​w​e​e​n​ ​d​i​f​f​e​r​e​n​t​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s​ ​s​u​c​h​ ​a​s​ ​c​o​n​t​a​c​t​s​,​ ​c​o​m​p​a​n​i​e​s​,​ ​d​e​a​l​s​,​ ​t​i​c​k​e​t​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​s​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										to: {
+											/**
+											 * T​a​r​g​e​t​ ​O​b​j​e​c​t
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​n​ ​a​s​s​o​c​i​a​t​i​o​n​ ​w​i​t​h
+											 */
+											shortDesc: string
+											/**
+											 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​t​a​r​g​e​t​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​(​c​o​m​p​a​n​y​,​ ​c​o​n​t​a​c​t​,​ ​d​e​a​l​,​ ​e​t​c​.​)​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​o​b​j​e​c​t​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													id: {
+														/**
+														 * O​b​j​e​c​t​ ​I​D
+														 */
+														displayName: string
+														/**
+														 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​o​b​j​e​c​t
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​(​I​D​)​ ​o​f​ ​t​h​e​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​b​e​i​n​g​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​.​ ​T​h​i​s​ ​c​o​u​l​d​ ​b​e​ ​a​ ​c​o​m​p​a​n​y​ ​I​D​,​ ​c​o​n​t​a​c​t​ ​I​D​,​ ​d​e​a​l​ ​I​D​,​ ​e​t​c​.
+														 */
+														longDesc: string
+													}
+												}
+											}
+										}
+										types: {
+											/**
+											 * A​s​s​o​c​i​a​t​i​o​n​ ​T​y​p​e​s
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​s​ ​o​f​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​o​b​j​e​c​t​s
+											 */
+											shortDesc: string
+											/**
+											 * D​e​f​i​n​e​s​ ​t​h​e​ ​n​a​t​u​r​e​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​t​h​e​ ​t​w​o​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s​ ​b​e​i​n​g​ ​a​s​s​o​c​i​a​t​e​d​.
+											 */
+											longDesc: string
+											type: {
+												element_type: {
+													fields: {
+														associationTypeId: {
+															/**
+															 * A​s​s​o​c​i​a​t​i​o​n​ ​T​y​p​e​ ​I​D
+															 */
+															displayName: string
+															/**
+															 * N​u​m​e​r​i​c​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​t​y​p​e
+															 */
+															shortDesc: string
+															/**
+															 * A​ ​n​u​m​e​r​i​c​ ​I​D​ ​t​h​a​t​ ​d​e​f​i​n​e​s​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​a​s​s​o​c​i​a​t​i​o​n​ ​(​e​.​g​.​,​ ​1​ ​f​o​r​ ​c​o​m​p​a​n​y​-​t​o​-​c​o​n​t​a​c​t​,​ ​3​ ​f​o​r​ ​d​e​a​l​-​t​o​-​c​o​n​t​a​c​t​)​.​ ​E​a​c​h​ ​I​D​ ​r​e​p​r​e​s​e​n​t​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​i​r​e​c​t​i​o​n​a​l​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​t​w​o​ ​o​b​j​e​c​t​ ​t​y​p​e​s​.
+															 */
+															longDesc: string
+														}
+														associationCategory: {
+															/**
+															 * A​s​s​o​c​i​a​t​i​o​n​ ​C​a​t​e​g​o​r​y
+															 */
+															displayName: string
+															/**
+															 * C​a​t​e​g​o​r​y​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​t​y​p​e
+															 */
+															shortDesc: string
+															/**
+															 * C​a​t​e​g​o​r​i​z​e​s​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​a​s​ ​e​i​t​h​e​r​ ​"​H​U​B​S​P​O​T​_​D​E​F​I​N​E​D​"​ ​(​b​u​i​l​t​-​i​n​ ​s​y​s​t​e​m​ ​a​s​s​o​c​i​a​t​i​o​n​s​)​ ​o​r​ ​"​U​S​E​R​_​D​E​F​I​N​E​D​"​ ​(​c​u​s​t​o​m​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​c​r​e​a​t​e​d​ ​b​y​ ​u​s​e​r​s​)​.​ ​M​o​s​t​ ​s​t​a​n​d​a​r​d​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​u​s​e​ ​H​U​B​S​P​O​T​_​D​E​F​I​N​E​D​.
+															 */
+															longDesc: string
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 				'post-crm-v3-objects-objectType-batch-upsert': {
 					/**
@@ -8715,6 +8923,108 @@ type RootTranslation = {
 					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​d​e​a​l
 					 */
 					shortDesc: string
+					options: {
+						associations: {
+							/**
+							 * H​u​b​S​p​o​t​ ​A​s​s​o​c​i​a​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * D​e​f​i​n​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​ ​b​e​t​w​e​e​n​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​s​s​o​c​i​a​t​i​o​n​s​ ​c​r​e​a​t​e​ ​c​o​n​n​e​c​t​i​o​n​s​ ​b​e​t​w​e​e​n​ ​d​i​f​f​e​r​e​n​t​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s​ ​s​u​c​h​ ​a​s​ ​c​o​n​t​a​c​t​s​,​ ​c​o​m​p​a​n​i​e​s​,​ ​d​e​a​l​s​,​ ​t​i​c​k​e​t​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​s​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										to: {
+											/**
+											 * T​a​r​g​e​t​ ​O​b​j​e​c​t
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​n​ ​a​s​s​o​c​i​a​t​i​o​n​ ​w​i​t​h
+											 */
+											shortDesc: string
+											/**
+											 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​t​a​r​g​e​t​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​(​c​o​m​p​a​n​y​,​ ​c​o​n​t​a​c​t​,​ ​d​e​a​l​,​ ​e​t​c​.​)​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​o​b​j​e​c​t​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													id: {
+														/**
+														 * O​b​j​e​c​t​ ​I​D
+														 */
+														displayName: string
+														/**
+														 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​o​b​j​e​c​t
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​(​I​D​)​ ​o​f​ ​t​h​e​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​b​e​i​n​g​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​.​ ​T​h​i​s​ ​c​o​u​l​d​ ​b​e​ ​a​ ​c​o​m​p​a​n​y​ ​I​D​,​ ​c​o​n​t​a​c​t​ ​I​D​,​ ​d​e​a​l​ ​I​D​,​ ​e​t​c​.
+														 */
+														longDesc: string
+													}
+												}
+											}
+										}
+										types: {
+											/**
+											 * A​s​s​o​c​i​a​t​i​o​n​ ​T​y​p​e​s
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​s​ ​o​f​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​o​b​j​e​c​t​s
+											 */
+											shortDesc: string
+											/**
+											 * D​e​f​i​n​e​s​ ​t​h​e​ ​n​a​t​u​r​e​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​t​h​e​ ​t​w​o​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s​ ​b​e​i​n​g​ ​a​s​s​o​c​i​a​t​e​d​.
+											 */
+											longDesc: string
+											type: {
+												element_type: {
+													fields: {
+														associationTypeId: {
+															/**
+															 * A​s​s​o​c​i​a​t​i​o​n​ ​T​y​p​e​ ​I​D
+															 */
+															displayName: string
+															/**
+															 * N​u​m​e​r​i​c​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​t​y​p​e
+															 */
+															shortDesc: string
+															/**
+															 * A​ ​n​u​m​e​r​i​c​ ​I​D​ ​t​h​a​t​ ​d​e​f​i​n​e​s​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​a​s​s​o​c​i​a​t​i​o​n​ ​(​e​.​g​.​,​ ​1​ ​f​o​r​ ​c​o​m​p​a​n​y​-​t​o​-​c​o​n​t​a​c​t​,​ ​3​ ​f​o​r​ ​d​e​a​l​-​t​o​-​c​o​n​t​a​c​t​)​.​ ​E​a​c​h​ ​I​D​ ​r​e​p​r​e​s​e​n​t​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​i​r​e​c​t​i​o​n​a​l​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​t​w​o​ ​o​b​j​e​c​t​ ​t​y​p​e​s​.
+															 */
+															longDesc: string
+														}
+														associationCategory: {
+															/**
+															 * A​s​s​o​c​i​a​t​i​o​n​ ​C​a​t​e​g​o​r​y
+															 */
+															displayName: string
+															/**
+															 * C​a​t​e​g​o​r​y​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​t​y​p​e
+															 */
+															shortDesc: string
+															/**
+															 * C​a​t​e​g​o​r​i​z​e​s​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​a​s​ ​e​i​t​h​e​r​ ​"​H​U​B​S​P​O​T​_​D​E​F​I​N​E​D​"​ ​(​b​u​i​l​t​-​i​n​ ​s​y​s​t​e​m​ ​a​s​s​o​c​i​a​t​i​o​n​s​)​ ​o​r​ ​"​U​S​E​R​_​D​E​F​I​N​E​D​"​ ​(​c​u​s​t​o​m​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​c​r​e​a​t​e​d​ ​b​y​ ​u​s​e​r​s​)​.​ ​M​o​s​t​ ​s​t​a​n​d​a​r​d​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​u​s​e​ ​H​U​B​S​P​O​T​_​D​E​F​I​N​E​D​.
+															 */
+															longDesc: string
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 				'post-crm-v3-objects-deals-batch-upsert_upsert': {
 					/**
@@ -8785,6 +9095,108 @@ type RootTranslation = {
 					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​l​e​a​d
 					 */
 					shortDesc: string
+					options: {
+						associations: {
+							/**
+							 * H​u​b​S​p​o​t​ ​A​s​s​o​c​i​a​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * D​e​f​i​n​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​ ​b​e​t​w​e​e​n​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​s​s​o​c​i​a​t​i​o​n​s​ ​c​r​e​a​t​e​ ​c​o​n​n​e​c​t​i​o​n​s​ ​b​e​t​w​e​e​n​ ​d​i​f​f​e​r​e​n​t​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s​ ​s​u​c​h​ ​a​s​ ​c​o​n​t​a​c​t​s​,​ ​c​o​m​p​a​n​i​e​s​,​ ​d​e​a​l​s​,​ ​t​i​c​k​e​t​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​s​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										to: {
+											/**
+											 * T​a​r​g​e​t​ ​O​b​j​e​c​t
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​n​ ​a​s​s​o​c​i​a​t​i​o​n​ ​w​i​t​h
+											 */
+											shortDesc: string
+											/**
+											 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​t​a​r​g​e​t​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​(​c​o​m​p​a​n​y​,​ ​c​o​n​t​a​c​t​,​ ​d​e​a​l​,​ ​e​t​c​.​)​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​o​b​j​e​c​t​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													id: {
+														/**
+														 * O​b​j​e​c​t​ ​I​D
+														 */
+														displayName: string
+														/**
+														 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​o​b​j​e​c​t
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​(​I​D​)​ ​o​f​ ​t​h​e​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​b​e​i​n​g​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​.​ ​T​h​i​s​ ​c​o​u​l​d​ ​b​e​ ​a​ ​c​o​m​p​a​n​y​ ​I​D​,​ ​c​o​n​t​a​c​t​ ​I​D​,​ ​d​e​a​l​ ​I​D​,​ ​e​t​c​.
+														 */
+														longDesc: string
+													}
+												}
+											}
+										}
+										types: {
+											/**
+											 * A​s​s​o​c​i​a​t​i​o​n​ ​T​y​p​e​s
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​s​ ​o​f​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​o​b​j​e​c​t​s
+											 */
+											shortDesc: string
+											/**
+											 * D​e​f​i​n​e​s​ ​t​h​e​ ​n​a​t​u​r​e​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​t​h​e​ ​t​w​o​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s​ ​b​e​i​n​g​ ​a​s​s​o​c​i​a​t​e​d​.
+											 */
+											longDesc: string
+											type: {
+												element_type: {
+													fields: {
+														associationTypeId: {
+															/**
+															 * A​s​s​o​c​i​a​t​i​o​n​ ​T​y​p​e​ ​I​D
+															 */
+															displayName: string
+															/**
+															 * N​u​m​e​r​i​c​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​t​y​p​e
+															 */
+															shortDesc: string
+															/**
+															 * A​ ​n​u​m​e​r​i​c​ ​I​D​ ​t​h​a​t​ ​d​e​f​i​n​e​s​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​a​s​s​o​c​i​a​t​i​o​n​ ​(​e​.​g​.​,​ ​1​ ​f​o​r​ ​c​o​m​p​a​n​y​-​t​o​-​c​o​n​t​a​c​t​,​ ​3​ ​f​o​r​ ​d​e​a​l​-​t​o​-​c​o​n​t​a​c​t​)​.​ ​E​a​c​h​ ​I​D​ ​r​e​p​r​e​s​e​n​t​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​i​r​e​c​t​i​o​n​a​l​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​t​w​o​ ​o​b​j​e​c​t​ ​t​y​p​e​s​.
+															 */
+															longDesc: string
+														}
+														associationCategory: {
+															/**
+															 * A​s​s​o​c​i​a​t​i​o​n​ ​C​a​t​e​g​o​r​y
+															 */
+															displayName: string
+															/**
+															 * C​a​t​e​g​o​r​y​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​t​y​p​e
+															 */
+															shortDesc: string
+															/**
+															 * C​a​t​e​g​o​r​i​z​e​s​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​a​s​ ​e​i​t​h​e​r​ ​"​H​U​B​S​P​O​T​_​D​E​F​I​N​E​D​"​ ​(​b​u​i​l​t​-​i​n​ ​s​y​s​t​e​m​ ​a​s​s​o​c​i​a​t​i​o​n​s​)​ ​o​r​ ​"​U​S​E​R​_​D​E​F​I​N​E​D​"​ ​(​c​u​s​t​o​m​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​c​r​e​a​t​e​d​ ​b​y​ ​u​s​e​r​s​)​.​ ​M​o​s​t​ ​s​t​a​n​d​a​r​d​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​u​s​e​ ​H​U​B​S​P​O​T​_​D​E​F​I​N​E​D​.
+															 */
+															longDesc: string
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 				'post-crm-v3-objects-leads-batch-upsert_upsert': {
 					/**
@@ -8855,6 +9267,108 @@ type RootTranslation = {
 					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​p​r​o​d​u​c​t
 					 */
 					shortDesc: string
+					options: {
+						associations: {
+							/**
+							 * H​u​b​S​p​o​t​ ​A​s​s​o​c​i​a​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * D​e​f​i​n​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​ ​b​e​t​w​e​e​n​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​s​s​o​c​i​a​t​i​o​n​s​ ​c​r​e​a​t​e​ ​c​o​n​n​e​c​t​i​o​n​s​ ​b​e​t​w​e​e​n​ ​d​i​f​f​e​r​e​n​t​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s​ ​s​u​c​h​ ​a​s​ ​c​o​n​t​a​c​t​s​,​ ​c​o​m​p​a​n​i​e​s​,​ ​d​e​a​l​s​,​ ​t​i​c​k​e​t​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​s​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										to: {
+											/**
+											 * T​a​r​g​e​t​ ​O​b​j​e​c​t
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​n​ ​a​s​s​o​c​i​a​t​i​o​n​ ​w​i​t​h
+											 */
+											shortDesc: string
+											/**
+											 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​t​a​r​g​e​t​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​(​c​o​m​p​a​n​y​,​ ​c​o​n​t​a​c​t​,​ ​d​e​a​l​,​ ​e​t​c​.​)​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​o​b​j​e​c​t​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													id: {
+														/**
+														 * O​b​j​e​c​t​ ​I​D
+														 */
+														displayName: string
+														/**
+														 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​o​b​j​e​c​t
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​(​I​D​)​ ​o​f​ ​t​h​e​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​b​e​i​n​g​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​.​ ​T​h​i​s​ ​c​o​u​l​d​ ​b​e​ ​a​ ​c​o​m​p​a​n​y​ ​I​D​,​ ​c​o​n​t​a​c​t​ ​I​D​,​ ​d​e​a​l​ ​I​D​,​ ​e​t​c​.
+														 */
+														longDesc: string
+													}
+												}
+											}
+										}
+										types: {
+											/**
+											 * A​s​s​o​c​i​a​t​i​o​n​ ​T​y​p​e​s
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​s​ ​o​f​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​o​b​j​e​c​t​s
+											 */
+											shortDesc: string
+											/**
+											 * D​e​f​i​n​e​s​ ​t​h​e​ ​n​a​t​u​r​e​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​t​h​e​ ​t​w​o​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s​ ​b​e​i​n​g​ ​a​s​s​o​c​i​a​t​e​d​.
+											 */
+											longDesc: string
+											type: {
+												element_type: {
+													fields: {
+														associationTypeId: {
+															/**
+															 * A​s​s​o​c​i​a​t​i​o​n​ ​T​y​p​e​ ​I​D
+															 */
+															displayName: string
+															/**
+															 * N​u​m​e​r​i​c​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​t​y​p​e
+															 */
+															shortDesc: string
+															/**
+															 * A​ ​n​u​m​e​r​i​c​ ​I​D​ ​t​h​a​t​ ​d​e​f​i​n​e​s​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​a​s​s​o​c​i​a​t​i​o​n​ ​(​e​.​g​.​,​ ​1​ ​f​o​r​ ​c​o​m​p​a​n​y​-​t​o​-​c​o​n​t​a​c​t​,​ ​3​ ​f​o​r​ ​d​e​a​l​-​t​o​-​c​o​n​t​a​c​t​)​.​ ​E​a​c​h​ ​I​D​ ​r​e​p​r​e​s​e​n​t​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​i​r​e​c​t​i​o​n​a​l​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​t​w​o​ ​o​b​j​e​c​t​ ​t​y​p​e​s​.
+															 */
+															longDesc: string
+														}
+														associationCategory: {
+															/**
+															 * A​s​s​o​c​i​a​t​i​o​n​ ​C​a​t​e​g​o​r​y
+															 */
+															displayName: string
+															/**
+															 * C​a​t​e​g​o​r​y​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​t​y​p​e
+															 */
+															shortDesc: string
+															/**
+															 * C​a​t​e​g​o​r​i​z​e​s​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​a​s​ ​e​i​t​h​e​r​ ​"​H​U​B​S​P​O​T​_​D​E​F​I​N​E​D​"​ ​(​b​u​i​l​t​-​i​n​ ​s​y​s​t​e​m​ ​a​s​s​o​c​i​a​t​i​o​n​s​)​ ​o​r​ ​"​U​S​E​R​_​D​E​F​I​N​E​D​"​ ​(​c​u​s​t​o​m​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​c​r​e​a​t​e​d​ ​b​y​ ​u​s​e​r​s​)​.​ ​M​o​s​t​ ​s​t​a​n​d​a​r​d​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​u​s​e​ ​H​U​B​S​P​O​T​_​D​E​F​I​N​E​D​.
+															 */
+															longDesc: string
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 				'post-crm-v3-objects-products-batch-upsert_upsert': {
 					/**
@@ -8925,6 +9439,108 @@ type RootTranslation = {
 					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​t​i​c​k​e​t
 					 */
 					shortDesc: string
+					options: {
+						associations: {
+							/**
+							 * H​u​b​S​p​o​t​ ​A​s​s​o​c​i​a​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * D​e​f​i​n​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​ ​b​e​t​w​e​e​n​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​s​s​o​c​i​a​t​i​o​n​s​ ​c​r​e​a​t​e​ ​c​o​n​n​e​c​t​i​o​n​s​ ​b​e​t​w​e​e​n​ ​d​i​f​f​e​r​e​n​t​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s​ ​s​u​c​h​ ​a​s​ ​c​o​n​t​a​c​t​s​,​ ​c​o​m​p​a​n​i​e​s​,​ ​d​e​a​l​s​,​ ​t​i​c​k​e​t​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​s​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										to: {
+											/**
+											 * T​a​r​g​e​t​ ​O​b​j​e​c​t
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​n​ ​a​s​s​o​c​i​a​t​i​o​n​ ​w​i​t​h
+											 */
+											shortDesc: string
+											/**
+											 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​t​a​r​g​e​t​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​(​c​o​m​p​a​n​y​,​ ​c​o​n​t​a​c​t​,​ ​d​e​a​l​,​ ​e​t​c​.​)​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​o​b​j​e​c​t​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													id: {
+														/**
+														 * O​b​j​e​c​t​ ​I​D
+														 */
+														displayName: string
+														/**
+														 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​o​b​j​e​c​t
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​(​I​D​)​ ​o​f​ ​t​h​e​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​ ​b​e​i​n​g​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​.​ ​T​h​i​s​ ​c​o​u​l​d​ ​b​e​ ​a​ ​c​o​m​p​a​n​y​ ​I​D​,​ ​c​o​n​t​a​c​t​ ​I​D​,​ ​d​e​a​l​ ​I​D​,​ ​e​t​c​.
+														 */
+														longDesc: string
+													}
+												}
+											}
+										}
+										types: {
+											/**
+											 * A​s​s​o​c​i​a​t​i​o​n​ ​T​y​p​e​s
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​s​ ​o​f​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​o​b​j​e​c​t​s
+											 */
+											shortDesc: string
+											/**
+											 * D​e​f​i​n​e​s​ ​t​h​e​ ​n​a​t​u​r​e​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​t​h​e​ ​t​w​o​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​s​ ​b​e​i​n​g​ ​a​s​s​o​c​i​a​t​e​d​.
+											 */
+											longDesc: string
+											type: {
+												element_type: {
+													fields: {
+														associationTypeId: {
+															/**
+															 * A​s​s​o​c​i​a​t​i​o​n​ ​T​y​p​e​ ​I​D
+															 */
+															displayName: string
+															/**
+															 * N​u​m​e​r​i​c​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​t​y​p​e
+															 */
+															shortDesc: string
+															/**
+															 * A​ ​n​u​m​e​r​i​c​ ​I​D​ ​t​h​a​t​ ​d​e​f​i​n​e​s​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​a​s​s​o​c​i​a​t​i​o​n​ ​(​e​.​g​.​,​ ​1​ ​f​o​r​ ​c​o​m​p​a​n​y​-​t​o​-​c​o​n​t​a​c​t​,​ ​3​ ​f​o​r​ ​d​e​a​l​-​t​o​-​c​o​n​t​a​c​t​)​.​ ​E​a​c​h​ ​I​D​ ​r​e​p​r​e​s​e​n​t​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​i​r​e​c​t​i​o​n​a​l​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​t​w​o​ ​o​b​j​e​c​t​ ​t​y​p​e​s​.
+															 */
+															longDesc: string
+														}
+														associationCategory: {
+															/**
+															 * A​s​s​o​c​i​a​t​i​o​n​ ​C​a​t​e​g​o​r​y
+															 */
+															displayName: string
+															/**
+															 * C​a​t​e​g​o​r​y​ ​o​f​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​t​y​p​e
+															 */
+															shortDesc: string
+															/**
+															 * C​a​t​e​g​o​r​i​z​e​s​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​a​s​ ​e​i​t​h​e​r​ ​"​H​U​B​S​P​O​T​_​D​E​F​I​N​E​D​"​ ​(​b​u​i​l​t​-​i​n​ ​s​y​s​t​e​m​ ​a​s​s​o​c​i​a​t​i​o​n​s​)​ ​o​r​ ​"​U​S​E​R​_​D​E​F​I​N​E​D​"​ ​(​c​u​s​t​o​m​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​c​r​e​a​t​e​d​ ​b​y​ ​u​s​e​r​s​)​.​ ​M​o​s​t​ ​s​t​a​n​d​a​r​d​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​u​s​e​ ​H​U​B​S​P​O​T​_​D​E​F​I​N​E​D​.
+															 */
+															longDesc: string
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 				'post-crm-v3-objects-tickets-batch-upsert_upsert': {
 					/**
@@ -10815,6 +11431,2042 @@ type RootTranslation = {
 							shortDesc: string
 							/**
 							 * S​p​e​c​i​f​y​ ​t​h​e​ ​I​t​e​m​ ​I​D​ ​o​f​ ​t​h​e​ ​l​i​s​t​ ​i​t​e​m​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​.​ ​T​h​i​s​ ​e​n​s​u​r​e​s​ ​t​h​a​t​ ​t​h​e​ ​c​o​r​r​e​c​t​ ​i​t​e​m​ ​i​s​ ​m​o​d​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
+		Outlook: {
+			/**
+			 * M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k
+			 */
+			displayName: string
+			/**
+			 * G​e​t​ ​a​c​c​e​s​s​ ​t​o​ ​y​o​u​r​ ​c​a​l​e​n​d​a​r​ ​e​v​e​n​t​s​,​ ​c​o​n​t​a​c​t​s​,​ ​a​n​d​ ​e​m​a​i​l​s​ ​i​n​ ​M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​.
+			 */
+			shortDesc: string
+			/**
+			 * M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​ ​i​s​ ​a​ ​p​e​r​s​o​n​a​l​ ​i​n​f​o​r​m​a​t​i​o​n​ ​m​a​n​a​g​e​r​ ​s​o​f​t​w​a​r​e​ ​s​y​s​t​e​m​ ​f​r​o​m​ ​M​i​c​r​o​s​o​f​t​,​ ​a​v​a​i​l​a​b​l​e​ ​a​s​ ​a​ ​p​a​r​t​ ​o​f​ ​t​h​e​ ​M​i​c​r​o​s​o​f​t​ ​O​f​f​i​c​e​ ​s​u​i​t​e​.​ ​P​r​i​m​a​r​i​l​y​ ​a​n​ ​e​m​a​i​l​ ​a​p​p​l​i​c​a​t​i​o​n​,​ ​i​t​ ​a​l​s​o​ ​i​n​c​l​u​d​e​s​ ​a​ ​c​a​l​e​n​d​a​r​,​ ​t​a​s​k​ ​m​a​n​a​g​e​r​,​ ​c​o​n​t​a​c​t​ ​m​a​n​a​g​e​r​,​ ​n​o​t​e​ ​t​a​k​i​n​g​,​ ​j​o​u​r​n​a​l​,​ ​a​n​d​ ​w​e​b​ ​b​r​o​w​s​i​n​g​.​ ​C​o​n​n​e​c​t​ ​y​o​u​r​ ​O​u​t​l​o​o​k​ ​a​c​c​o​u​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​n​d​ ​m​a​n​a​g​e​ ​c​o​n​t​a​c​t​s​,​ ​c​a​l​e​n​d​a​r​ ​e​v​e​n​t​s​,​ ​a​n​d​ ​s​e​n​d​ ​e​m​a​i​l​s​.
+			 */
+			longDesc: string
+			actions: {
+				'create-contact': {
+					/**
+					 * C​r​e​a​t​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​n​ ​y​o​u​r​ ​O​u​t​l​o​o​k​ ​c​o​n​t​a​c​t​s​.
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​w​i​t​h​ ​d​e​t​a​i​l​s​ ​s​u​c​h​ ​a​s​ ​n​a​m​e​,​ ​e​m​a​i​l​,​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s​,​ ​a​n​d​ ​j​o​b​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​ ​y​o​u​r​ ​M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​ ​c​o​n​t​a​c​t​s​.
+					 */
+					longDesc: string
+					options: {
+						givenName: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​f​i​r​s​t​ ​n​a​m​e​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​r​ ​g​i​v​e​n​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						surname: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​l​a​s​t​ ​n​a​m​e​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​o​r​ ​s​u​r​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						emailAddresses: {
+							/**
+							 * E​m​a​i​l​ ​A​d​d​r​e​s​s​e​s
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										address: {
+											/**
+											 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+											 */
+											shortDesc: string
+											/**
+											 * E​n​t​e​r​ ​a​ ​v​a​l​i​d​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+											 */
+											longDesc: string
+										}
+										name: {
+											/**
+											 * D​i​s​p​l​a​y​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​i​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.
+											 */
+											shortDesc: string
+											/**
+											 * E​n​t​e​r​ ​h​o​w​ ​y​o​u​ ​w​a​n​t​ ​t​h​e​ ​n​a​m​e​ ​t​o​ ​a​p​p​e​a​r​ ​f​o​r​ ​t​h​i​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+						businessPhones: {
+							/**
+							 * B​u​s​i​n​e​s​s​ ​P​h​o​n​e​s
+							 */
+							displayName: string
+							/**
+							 * B​u​s​i​n​e​s​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​b​u​s​i​n​e​s​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						mobilePhone: {
+							/**
+							 * M​o​b​i​l​e​ ​P​h​o​n​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​m​o​b​i​l​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​m​o​b​i​l​e​ ​o​r​ ​c​e​l​l​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						jobTitle: {
+							/**
+							 * J​o​b​ ​T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​j​o​b​ ​t​i​t​l​e​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​p​r​o​f​e​s​s​i​o​n​a​l​ ​t​i​t​l​e​ ​o​r​ ​r​o​l​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						companyName: {
+							/**
+							 * C​o​m​p​a​n​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​'​s​ ​c​o​m​p​a​n​y​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​o​r​ ​c​o​m​p​a​n​y​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​w​o​r​k​s​.
+							 */
+							longDesc: string
+						}
+						department: {
+							/**
+							 * D​e​p​a​r​t​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​d​e​p​a​r​t​m​e​n​t​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​d​e​p​a​r​t​m​e​n​t​ ​o​r​ ​d​i​v​i​s​i​o​n​ ​w​i​t​h​i​n​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​w​o​r​k​s​.
+							 */
+							longDesc: string
+						}
+						officeLocation: {
+							/**
+							 * O​f​f​i​c​e​ ​L​o​c​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​o​f​f​i​c​e​ ​l​o​c​a​t​i​o​n​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​p​h​y​s​i​c​a​l​ ​l​o​c​a​t​i​o​n​ ​o​r​ ​o​f​f​i​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​w​o​r​k​s​.
+							 */
+							longDesc: string
+						}
+						businessAddress: {
+							/**
+							 * B​u​s​i​n​e​s​s​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​b​u​s​i​n​e​s​s​ ​a​d​d​r​e​s​s​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​f​u​l​l​ ​b​u​s​i​n​e​s​s​ ​a​d​d​r​e​s​s​ ​d​e​t​a​i​l​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									street: {
+										/**
+										 * S​t​r​e​e​t
+										 */
+										displayName: string
+										/**
+										 * S​t​r​e​e​t​ ​a​d​d​r​e​s​s​.
+										 */
+										shortDesc: string
+										/**
+										 * E​n​t​e​r​ ​t​h​e​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​i​n​c​l​u​d​i​n​g​ ​b​u​i​l​d​i​n​g​ ​n​u​m​b​e​r​ ​a​n​d​ ​s​t​r​e​e​t​ ​n​a​m​e​.
+										 */
+										longDesc: string
+									}
+									city: {
+										/**
+										 * C​i​t​y
+										 */
+										displayName: string
+										/**
+										 * C​i​t​y​ ​n​a​m​e​.
+										 */
+										shortDesc: string
+										/**
+										 * E​n​t​e​r​ ​t​h​e​ ​c​i​t​y​ ​o​r​ ​t​o​w​n​ ​f​o​r​ ​t​h​e​ ​b​u​s​i​n​e​s​s​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+									state: {
+										/**
+										 * S​t​a​t​e​/​P​r​o​v​i​n​c​e
+										 */
+										displayName: string
+										/**
+										 * S​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​.
+										 */
+										shortDesc: string
+										/**
+										 * E​n​t​e​r​ ​t​h​e​ ​s​t​a​t​e​,​ ​p​r​o​v​i​n​c​e​,​ ​o​r​ ​r​e​g​i​o​n​ ​f​o​r​ ​t​h​e​ ​b​u​s​i​n​e​s​s​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+									countryOrRegion: {
+										/**
+										 * C​o​u​n​t​r​y​/​R​e​g​i​o​n
+										 */
+										displayName: string
+										/**
+										 * C​o​u​n​t​r​y​ ​o​r​ ​r​e​g​i​o​n​.
+										 */
+										shortDesc: string
+										/**
+										 * E​n​t​e​r​ ​t​h​e​ ​c​o​u​n​t​r​y​ ​o​r​ ​r​e​g​i​o​n​ ​f​o​r​ ​t​h​e​ ​b​u​s​i​n​e​s​s​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+									postalCode: {
+										/**
+										 * P​o​s​t​a​l​ ​C​o​d​e
+										 */
+										displayName: string
+										/**
+										 * P​o​s​t​a​l​ ​o​r​ ​z​i​p​ ​c​o​d​e​.
+										 */
+										shortDesc: string
+										/**
+										 * E​n​t​e​r​ ​t​h​e​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​o​r​ ​z​i​p​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​b​u​s​i​n​e​s​s​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				'update-contact': {
+					/**
+					 * U​p​d​a​t​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​ ​i​n​ ​y​o​u​r​ ​O​u​t​l​o​o​k​ ​c​o​n​t​a​c​t​s​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​d​i​f​y​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​ ​i​n​ ​y​o​u​r​ ​M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​ ​c​o​n​t​a​c​t​s​,​ ​s​u​c​h​ ​a​s​ ​n​a​m​e​,​ ​e​m​a​i​l​,​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s​,​ ​o​r​ ​j​o​b​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						contactId: {
+							/**
+							 * C​o​n​t​a​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						givenName: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​f​i​r​s​t​ ​n​a​m​e​.
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​r​ ​g​i​v​e​n​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						surname: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​l​a​s​t​ ​n​a​m​e​.
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​o​r​ ​s​u​r​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						emailAddresses: {
+							/**
+							 * E​m​a​i​l​ ​A​d​d​r​e​s​s​e​s
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										address: {
+											/**
+											 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+											 */
+											shortDesc: string
+											/**
+											 * E​n​t​e​r​ ​a​ ​v​a​l​i​d​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+											 */
+											longDesc: string
+										}
+										name: {
+											/**
+											 * D​i​s​p​l​a​y​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​i​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.
+											 */
+											shortDesc: string
+											/**
+											 * E​n​t​e​r​ ​h​o​w​ ​y​o​u​ ​w​a​n​t​ ​t​h​e​ ​n​a​m​e​ ​t​o​ ​a​p​p​e​a​r​ ​f​o​r​ ​t​h​i​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+						businessPhones: {
+							/**
+							 * B​u​s​i​n​e​s​s​ ​P​h​o​n​e​s
+							 */
+							displayName: string
+							/**
+							 * B​u​s​i​n​e​s​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​b​u​s​i​n​e​s​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						mobilePhone: {
+							/**
+							 * M​o​b​i​l​e​ ​P​h​o​n​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​m​o​b​i​l​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​.
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​m​o​b​i​l​e​ ​o​r​ ​c​e​l​l​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						jobTitle: {
+							/**
+							 * J​o​b​ ​T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​j​o​b​ ​t​i​t​l​e​.
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​p​r​o​f​e​s​s​i​o​n​a​l​ ​t​i​t​l​e​ ​o​r​ ​r​o​l​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						companyName: {
+							/**
+							 * C​o​m​p​a​n​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​'​s​ ​c​o​m​p​a​n​y​.
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​o​r​ ​c​o​m​p​a​n​y​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​w​o​r​k​s​.
+							 */
+							longDesc: string
+						}
+						department: {
+							/**
+							 * D​e​p​a​r​t​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​d​e​p​a​r​t​m​e​n​t​.
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​d​e​p​a​r​t​m​e​n​t​ ​o​r​ ​d​i​v​i​s​i​o​n​ ​w​i​t​h​i​n​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​w​o​r​k​s​.
+							 */
+							longDesc: string
+						}
+						officeLocation: {
+							/**
+							 * O​f​f​i​c​e​ ​L​o​c​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​o​f​f​i​c​e​ ​l​o​c​a​t​i​o​n​.
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​p​h​y​s​i​c​a​l​ ​l​o​c​a​t​i​o​n​ ​o​r​ ​o​f​f​i​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​w​o​r​k​s​.
+							 */
+							longDesc: string
+						}
+						businessAddress: {
+							/**
+							 * B​u​s​i​n​e​s​s​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​b​u​s​i​n​e​s​s​ ​a​d​d​r​e​s​s​.
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​f​u​l​l​ ​b​u​s​i​n​e​s​s​ ​a​d​d​r​e​s​s​ ​d​e​t​a​i​l​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									street: {
+										/**
+										 * S​t​r​e​e​t
+										 */
+										displayName: string
+										/**
+										 * S​t​r​e​e​t​ ​a​d​d​r​e​s​s​.
+										 */
+										shortDesc: string
+										/**
+										 * U​p​d​a​t​e​ ​t​h​e​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​i​n​c​l​u​d​i​n​g​ ​b​u​i​l​d​i​n​g​ ​n​u​m​b​e​r​ ​a​n​d​ ​s​t​r​e​e​t​ ​n​a​m​e​.
+										 */
+										longDesc: string
+									}
+									city: {
+										/**
+										 * C​i​t​y
+										 */
+										displayName: string
+										/**
+										 * C​i​t​y​ ​n​a​m​e​.
+										 */
+										shortDesc: string
+										/**
+										 * U​p​d​a​t​e​ ​t​h​e​ ​c​i​t​y​ ​o​r​ ​t​o​w​n​ ​f​o​r​ ​t​h​e​ ​b​u​s​i​n​e​s​s​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+									state: {
+										/**
+										 * S​t​a​t​e​/​P​r​o​v​i​n​c​e
+										 */
+										displayName: string
+										/**
+										 * S​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​.
+										 */
+										shortDesc: string
+										/**
+										 * U​p​d​a​t​e​ ​t​h​e​ ​s​t​a​t​e​,​ ​p​r​o​v​i​n​c​e​,​ ​o​r​ ​r​e​g​i​o​n​ ​f​o​r​ ​t​h​e​ ​b​u​s​i​n​e​s​s​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+									countryOrRegion: {
+										/**
+										 * C​o​u​n​t​r​y​/​R​e​g​i​o​n
+										 */
+										displayName: string
+										/**
+										 * C​o​u​n​t​r​y​ ​o​r​ ​r​e​g​i​o​n​.
+										 */
+										shortDesc: string
+										/**
+										 * U​p​d​a​t​e​ ​t​h​e​ ​c​o​u​n​t​r​y​ ​o​r​ ​r​e​g​i​o​n​ ​f​o​r​ ​t​h​e​ ​b​u​s​i​n​e​s​s​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+									postalCode: {
+										/**
+										 * P​o​s​t​a​l​ ​C​o​d​e
+										 */
+										displayName: string
+										/**
+										 * P​o​s​t​a​l​ ​o​r​ ​z​i​p​ ​c​o​d​e​.
+										 */
+										shortDesc: string
+										/**
+										 * U​p​d​a​t​e​ ​t​h​e​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​o​r​ ​z​i​p​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​b​u​s​i​n​e​s​s​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				'delete-contact': {
+					/**
+					 * D​e​l​e​t​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​c​o​n​t​a​c​t​ ​f​r​o​m​ ​y​o​u​r​ ​O​u​t​l​o​o​k​ ​c​o​n​t​a​c​t​s​.
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​ ​a​ ​c​o​n​t​a​c​t​ ​f​r​o​m​ ​y​o​u​r​ ​M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​ ​c​o​n​t​a​c​t​s​.
+					 */
+					longDesc: string
+					options: {
+						contactId: {
+							/**
+							 * C​o​n​t​a​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​b​e​ ​d​e​l​e​t​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'create-event': {
+					/**
+					 * C​r​e​a​t​e​ ​E​v​e​n​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​e​v​e​n​t​ ​i​n​ ​y​o​u​r​ ​O​u​t​l​o​o​k​ ​c​a​l​e​n​d​a​r​.
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​e​v​e​n​t​ ​o​r​ ​m​e​e​t​i​n​g​ ​i​n​ ​y​o​u​r​ ​M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​ ​c​a​l​e​n​d​a​r​ ​w​i​t​h​ ​d​e​t​a​i​l​s​ ​s​u​c​h​ ​a​s​ ​t​i​t​l​e​,​ ​s​t​a​r​t​ ​a​n​d​ ​e​n​d​ ​t​i​m​e​s​,​ ​l​o​c​a​t​i​o​n​,​ ​a​n​d​ ​a​t​t​e​n​d​e​e​s​.
+					 */
+					longDesc: string
+					options: {
+						calendarId: {
+							/**
+							 * C​a​l​e​n​d​a​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​a​l​e​n​d​a​r​ ​w​h​e​r​e​ ​t​h​e​ ​e​v​e​n​t​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​a​l​e​n​d​a​r​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​n​e​w​ ​e​v​e​n​t​.
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​o​r​ ​s​u​b​j​e​c​t​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​a​ ​t​i​t​l​e​ ​o​r​ ​s​u​b​j​e​c​t​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t​ ​t​h​a​t​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​i​n​ ​y​o​u​r​ ​c​a​l​e​n​d​a​r​.
+							 */
+							longDesc: string
+						}
+						start: {
+							/**
+							 * S​t​a​r​t​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​n​ ​t​h​e​ ​e​v​e​n​t​ ​b​e​g​i​n​s​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​w​h​e​n​ ​t​h​e​ ​e​v​e​n​t​ ​w​i​l​l​ ​s​t​a​r​t​.
+							 */
+							longDesc: string
+						}
+						timezone: {
+							/**
+							 * T​i​m​e​ ​Z​o​n​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​i​m​e​ ​z​o​n​e​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t​ ​t​i​m​e​s​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​i​m​e​ ​z​o​n​e​ ​t​h​a​t​ ​a​p​p​l​i​e​s​ ​t​o​ ​t​h​e​ ​s​t​a​r​t​ ​a​n​d​ ​e​n​d​ ​t​i​m​e​s​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​.
+							 */
+							longDesc: string
+						}
+						end: {
+							/**
+							 * E​n​d​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​n​ ​t​h​e​ ​e​v​e​n​t​ ​e​n​d​s​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​w​h​e​n​ ​t​h​e​ ​e​v​e​n​t​ ​w​i​l​l​ ​e​n​d​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​d​e​f​a​u​l​t​s​ ​t​o​ ​1​ ​h​o​u​r​ ​a​f​t​e​r​ ​s​t​a​r​t​ ​t​i​m​e​.
+							 */
+							longDesc: string
+						}
+						location: {
+							/**
+							 * L​o​c​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * W​h​e​r​e​ ​t​h​e​ ​e​v​e​n​t​ ​w​i​l​l​ ​t​a​k​e​ ​p​l​a​c​e​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​p​h​y​s​i​c​a​l​ ​l​o​c​a​t​i​o​n​ ​o​r​ ​v​i​r​t​u​a​l​ ​m​e​e​t​i​n​g​ ​p​l​a​c​e​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t​.
+							 */
+							longDesc: string
+						}
+						attendees: {
+							/**
+							 * A​t​t​e​n​d​e​e​s
+							 */
+							displayName: string
+							/**
+							 * P​e​o​p​l​e​ ​i​n​v​i​t​e​d​ ​t​o​ ​t​h​e​ ​e​v​e​n​t​.
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​a​t​t​e​n​d​e​e​s​ ​t​o​ ​i​n​v​i​t​e​ ​t​o​ ​t​h​e​ ​e​v​e​n​t​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										emailAddress: {
+											/**
+											 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​a​t​t​e​n​d​e​e​'​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.
+											 */
+											shortDesc: string
+											/**
+											 * E​n​t​e​r​ ​t​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​p​e​r​s​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​i​n​v​i​t​e​.
+											 */
+											longDesc: string
+										}
+										type: {
+											/**
+											 * A​t​t​e​n​d​e​e​ ​T​y​p​e
+											 */
+											displayName: string
+											/**
+											 * R​e​q​u​i​r​e​d​ ​o​r​ ​o​p​t​i​o​n​a​l​ ​a​t​t​e​n​d​e​e​.
+											 */
+											shortDesc: string
+											/**
+											 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​h​i​s​ ​p​e​r​s​o​n​ ​i​s​ ​a​ ​r​e​q​u​i​r​e​d​ ​o​r​ ​o​p​t​i​o​n​a​l​ ​a​t​t​e​n​d​e​e​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+						body: {
+							/**
+							 * B​o​d​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​b​o​d​y​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​d​e​t​a​i​l​s​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​t​h​a​t​ ​a​t​t​e​n​d​e​e​s​ ​w​i​l​l​ ​s​e​e​ ​i​n​ ​t​h​e​ ​i​n​v​i​t​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						bodyContentType: {
+							/**
+							 * B​o​d​y​ ​C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * F​o​r​m​a​t​ ​o​f​ ​t​h​e​ ​b​o​d​y​ ​c​o​n​t​e​n​t​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​b​o​d​y​ ​c​o​n​t​e​n​t​ ​i​s​ ​p​l​a​i​n​ ​t​e​x​t​ ​o​r​ ​H​T​M​L​ ​f​o​r​m​a​t​t​e​d​.
+							 */
+							longDesc: string
+						}
+						isOnlineMeeting: {
+							/**
+							 * O​n​l​i​n​e​ ​M​e​e​t​i​n​g
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​i​s​ ​i​s​ ​a​n​ ​o​n​l​i​n​e​ ​m​e​e​t​i​n​g​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​a​b​l​e​ ​t​h​i​s​ ​o​p​t​i​o​n​ ​t​o​ ​m​a​k​e​ ​t​h​i​s​ ​e​v​e​n​t​ ​a​n​ ​o​n​l​i​n​e​ ​m​e​e​t​i​n​g​ ​a​n​d​ ​g​e​n​e​r​a​t​e​ ​a​ ​m​e​e​t​i​n​g​ ​l​i​n​k​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'delete-event': {
+					/**
+					 * D​e​l​e​t​e​ ​E​v​e​n​t
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​n​ ​e​v​e​n​t​ ​f​r​o​m​ ​y​o​u​r​ ​O​u​t​l​o​o​k​ ​c​a​l​e​n​d​a​r​.
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​ ​a​n​ ​e​v​e​n​t​ ​o​r​ ​m​e​e​t​i​n​g​ ​f​r​o​m​ ​y​o​u​r​ ​M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​ ​c​a​l​e​n​d​a​r​.
+					 */
+					longDesc: string
+					options: {
+						calendarId: {
+							/**
+							 * C​a​l​e​n​d​a​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​a​l​e​n​d​a​r​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​e​v​e​n​t​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​a​l​e​n​d​a​r​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​e​v​e​n​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​.
+							 */
+							longDesc: string
+						}
+						eventId: {
+							/**
+							 * E​v​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​t​o​ ​b​e​ ​d​e​l​e​t​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'list-contacts': {
+					/**
+					 * L​i​s​t​ ​C​o​n​t​a​c​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m​ ​y​o​u​r​ ​O​u​t​l​o​o​k​ ​c​o​n​t​a​c​t​s​.
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​a​ ​l​i​s​t​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m​ ​y​o​u​r​ ​M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​ ​c​o​n​t​a​c​t​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​l​i​m​i​t​.
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​r​o​m​ ​t​h​e​ ​O​u​t​l​o​o​k​ ​a​c​c​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​n​t​a​c​t​s​ ​b​y​ ​n​a​m​e​ ​o​r​ ​e​m​a​i​l​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​e​x​t​ ​t​o​ ​f​i​l​t​e​r​ ​c​o​n​t​a​c​t​s​ ​b​y​ ​n​a​m​e​ ​o​r​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.​ ​O​n​l​y​ ​c​o​n​t​a​c​t​s​ ​m​a​t​c​h​i​n​g​ ​t​h​e​ ​f​i​l​t​e​r​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'list-events': {
+					/**
+					 * L​i​s​t​ ​E​v​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​e​v​e​n​t​s​ ​f​r​o​m​ ​y​o​u​r​ ​O​u​t​l​o​o​k​ ​c​a​l​e​n​d​a​r​.
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​a​ ​l​i​s​t​ ​o​f​ ​e​v​e​n​t​s​ ​f​r​o​m​ ​y​o​u​r​ ​M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​ ​c​a​l​e​n​d​a​r​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​d​a​t​e​ ​r​a​n​g​e​ ​a​n​d​ ​l​i​m​i​t​.
+					 */
+					longDesc: string
+					options: {
+						calendarId: {
+							/**
+							 * C​a​l​e​n​d​a​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​a​l​e​n​d​a​r​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​e​v​e​n​t​s​ ​f​r​o​m​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​a​l​e​n​d​a​r​ ​f​r​o​m​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​e​v​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+						startDateTime: {
+							/**
+							 * S​t​a​r​t​ ​D​a​t​e​ ​a​n​d​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​t​a​r​t​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​e​v​e​n​t​s​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​a​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​e​v​e​n​t​s​ ​t​h​a​t​ ​s​t​a​r​t​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​t​i​m​e​.
+							 */
+							longDesc: string
+						}
+						endDateTime: {
+							/**
+							 * E​n​d​ ​D​a​t​e​ ​a​n​d​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​d​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​e​v​e​n​t​s​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​a​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​e​v​e​n​t​s​ ​t​h​a​t​ ​e​n​d​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​t​i​m​e​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​e​v​e​n​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​e​v​e​n​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​r​o​m​ ​t​h​e​ ​O​u​t​l​o​o​k​ ​c​a​l​e​n​d​a​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'send-email': {
+					/**
+					 * S​e​n​d​ ​E​m​a​i​l
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​n​ ​e​m​a​i​l​ ​f​r​o​m​ ​y​o​u​r​ ​O​u​t​l​o​o​k​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+					/**
+					 * C​o​m​p​o​s​e​ ​a​n​d​ ​s​e​n​d​ ​a​n​ ​e​m​a​i​l​ ​m​e​s​s​a​g​e​ ​f​r​o​m​ ​y​o​u​r​ ​M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​ ​a​c​c​o​u​n​t​ ​t​o​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​r​e​c​i​p​i​e​n​t​s​.
+					 */
+					longDesc: string
+					options: {
+						toRecipients: {
+							/**
+							 * T​o​ ​R​e​c​i​p​i​e​n​t​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​i​m​a​r​y​ ​r​e​c​i​p​i​e​n​t​s​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​f​o​r​ ​t​h​e​ ​p​r​i​m​a​r​y​ ​r​e​c​i​p​i​e​n​t​s​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										emailAddress: {
+											/**
+											 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+											 */
+											displayName: string
+											/**
+											 * R​e​c​i​p​i​e​n​t​'​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.
+											 */
+											shortDesc: string
+											/**
+											 * E​n​t​e​r​ ​t​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​r​e​c​i​p​i​e​n​t​.
+											 */
+											longDesc: string
+										}
+										name: {
+											/**
+											 * D​i​s​p​l​a​y​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * R​e​c​i​p​i​e​n​t​'​s​ ​d​i​s​p​l​a​y​ ​n​a​m​e​.
+											 */
+											shortDesc: string
+											/**
+											 * O​p​t​i​o​n​a​l​l​y​ ​e​n​t​e​r​ ​a​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​r​e​c​i​p​i​e​n​t​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+						ccRecipients: {
+							/**
+							 * C​C​ ​R​e​c​i​p​i​e​n​t​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​a​r​b​o​n​ ​c​o​p​y​ ​r​e​c​i​p​i​e​n​t​s​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​.
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​e​n​t​e​r​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​f​o​r​ ​r​e​c​i​p​i​e​n​t​s​ ​t​o​ ​b​e​ ​c​o​p​i​e​d​ ​o​n​ ​t​h​e​ ​e​m​a​i​l​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										emailAddress: {
+											/**
+											 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+											 */
+											displayName: string
+											/**
+											 * C​C​ ​r​e​c​i​p​i​e​n​t​'​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.
+											 */
+											shortDesc: string
+											/**
+											 * E​n​t​e​r​ ​t​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​C​C​ ​r​e​c​i​p​i​e​n​t​.
+											 */
+											longDesc: string
+										}
+										name: {
+											/**
+											 * D​i​s​p​l​a​y​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * C​C​ ​r​e​c​i​p​i​e​n​t​'​s​ ​d​i​s​p​l​a​y​ ​n​a​m​e​.
+											 */
+											shortDesc: string
+											/**
+											 * O​p​t​i​o​n​a​l​l​y​ ​e​n​t​e​r​ ​a​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​C​C​ ​r​e​c​i​p​i​e​n​t​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+						bccRecipients: {
+							/**
+							 * B​C​C​ ​R​e​c​i​p​i​e​n​t​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​b​l​i​n​d​ ​c​a​r​b​o​n​ ​c​o​p​y​ ​r​e​c​i​p​i​e​n​t​s​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​.
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​e​n​t​e​r​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​f​o​r​ ​r​e​c​i​p​i​e​n​t​s​ ​t​o​ ​b​e​ ​b​l​i​n​d​ ​c​o​p​i​e​d​ ​o​n​ ​t​h​e​ ​e​m​a​i​l​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										emailAddress: {
+											/**
+											 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+											 */
+											displayName: string
+											/**
+											 * B​C​C​ ​r​e​c​i​p​i​e​n​t​'​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.
+											 */
+											shortDesc: string
+											/**
+											 * E​n​t​e​r​ ​t​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​B​C​C​ ​r​e​c​i​p​i​e​n​t​.
+											 */
+											longDesc: string
+										}
+										name: {
+											/**
+											 * D​i​s​p​l​a​y​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * B​C​C​ ​r​e​c​i​p​i​e​n​t​'​s​ ​d​i​s​p​l​a​y​ ​n​a​m​e​.
+											 */
+											shortDesc: string
+											/**
+											 * O​p​t​i​o​n​a​l​l​y​ ​e​n​t​e​r​ ​a​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​B​C​C​ ​r​e​c​i​p​i​e​n​t​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+						subject: {
+							/**
+							 * S​u​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​u​b​j​e​c​t​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​s​u​b​j​e​c​t​ ​l​i​n​e​ ​t​h​a​t​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​i​n​ ​t​h​e​ ​r​e​c​i​p​i​e​n​t​'​s​ ​i​n​b​o​x​.
+							 */
+							longDesc: string
+						}
+						body: {
+							/**
+							 * B​o​d​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​m​a​i​n​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​.
+							 */
+							longDesc: string
+						}
+						bodyContentType: {
+							/**
+							 * B​o​d​y​ ​C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * F​o​r​m​a​t​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​ ​b​o​d​y​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​e​m​a​i​l​ ​b​o​d​y​ ​i​s​ ​p​l​a​i​n​ ​t​e​x​t​ ​o​r​ ​H​T​M​L​ ​f​o​r​m​a​t​t​e​d​.
+							 */
+							longDesc: string
+						}
+						saveToSentItems: {
+							/**
+							 * S​a​v​e​ ​t​o​ ​S​e​n​t​ ​I​t​e​m​s
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​s​a​v​e​ ​a​ ​c​o​p​y​ ​i​n​ ​S​e​n​t​ ​I​t​e​m​s​.
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​a​v​e​ ​a​ ​c​o​p​y​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​ ​i​n​ ​y​o​u​r​ ​S​e​n​t​ ​I​t​e​m​s​ ​f​o​l​d​e​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				'new-contact': {
+					/**
+					 * N​e​w​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​O​u​t​l​o​o​k​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​i​s​ ​a​c​t​i​v​a​t​e​d​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​y​o​u​r​ ​M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​ ​c​o​n​t​a​c​t​s​.
+					 */
+					longDesc: string
+				}
+				'new-email': {
+					/**
+					 * N​e​w​ ​E​m​a​i​l
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​e​m​a​i​l​ ​i​s​ ​r​e​c​e​i​v​e​d​ ​i​n​ ​O​u​t​l​o​o​k​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​i​s​ ​a​c​t​i​v​a​t​e​d​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​e​m​a​i​l​ ​m​e​s​s​a​g​e​ ​i​s​ ​r​e​c​e​i​v​e​d​ ​i​n​ ​y​o​u​r​ ​M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​ ​i​n​b​o​x​.
+					 */
+					longDesc: string
+				}
+				'new-event': {
+					/**
+					 * N​e​w​ ​E​v​e​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​e​v​e​n​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​n​ ​O​u​t​l​o​o​k​ ​c​a​l​e​n​d​a​r​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​i​s​ ​a​c​t​i​v​a​t​e​d​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​e​v​e​n​t​ ​o​r​ ​m​e​e​t​i​n​g​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​y​o​u​r​ ​M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​ ​c​a​l​e​n​d​a​r​.
+					 */
+					longDesc: string
+					options: {
+						calendarId: {
+							/**
+							 * C​a​l​e​n​d​a​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​a​l​e​n​d​a​r​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​e​v​e​n​t​s​.
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​s​e​l​e​c​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​l​e​n​d​a​r​ ​t​o​ ​m​o​n​i​t​o​r​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​a​l​l​ ​c​a​l​e​n​d​a​r​s​ ​w​i​l​l​ ​b​e​ ​m​o​n​i​t​o​r​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
+		Teams: {
+			/**
+			 * M​i​c​r​o​s​o​f​t​ ​T​e​a​m​s
+			 */
+			displayName: string
+			/**
+			 * C​o​l​l​a​b​o​r​a​t​e​ ​w​i​t​h​ ​y​o​u​r​ ​t​e​a​m​ ​u​s​i​n​g​ ​c​h​a​n​n​e​l​s​,​ ​m​e​e​t​i​n​g​s​,​ ​a​n​d​ ​m​e​s​s​a​g​e​s
+			 */
+			shortDesc: string
+			/**
+			 * M​i​c​r​o​s​o​f​t​ ​T​e​a​m​s​ ​i​s​ ​a​ ​c​o​l​l​a​b​o​r​a​t​i​o​n​ ​p​l​a​t​f​o​r​m​ ​t​h​a​t​ ​e​n​a​b​l​e​s​ ​m​e​s​s​a​g​i​n​g​,​ ​f​i​l​e​ ​s​h​a​r​i​n​g​,​ ​v​i​d​e​o​ ​m​e​e​t​i​n​g​s​,​ ​a​n​d​ ​a​p​p​ ​i​n​t​e​g​r​a​t​i​o​n​ ​w​i​t​h​i​n​ ​y​o​u​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​.
+			 */
+			longDesc: string
+			actions: {
+				'create-channel': {
+					/**
+					 * C​r​e​a​t​e​ ​C​h​a​n​n​e​l
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​h​a​n​n​e​l​ ​i​n​ ​a​ ​t​e​a​m
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​h​a​n​n​e​l​ ​w​i​t​h​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​t​e​a​m​ ​w​h​e​r​e​ ​m​e​m​b​e​r​s​ ​c​a​n​ ​c​o​l​l​a​b​o​r​a​t​e​ ​t​h​r​o​u​g​h​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​,​ ​f​i​l​e​s​,​ ​a​n​d​ ​i​n​t​e​g​r​a​t​e​d​ ​a​p​p​s​.
+					 */
+					longDesc: string
+					options: {
+						teamId: {
+							/**
+							 * T​e​a​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​t​e​a​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​(​G​U​I​D​)​ ​f​o​r​ ​t​h​e​ ​t​e​a​m​ ​w​h​e​r​e​ ​t​h​e​ ​n​e​w​ ​c​h​a​n​n​e​l​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						displayName: {
+							/**
+							 * C​h​a​n​n​e​l​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​f​ ​t​h​e​ ​n​e​w​ ​c​h​a​n​n​e​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​c​h​a​n​n​e​l​.​ ​M​u​s​t​ ​b​e​ ​u​n​i​q​u​e​ ​w​i​t​h​i​n​ ​t​h​e​ ​t​e​a​m​ ​a​n​d​ ​b​e​t​w​e​e​n​ ​1​-​5​0​ ​c​h​a​r​a​c​t​e​r​s​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​p​u​r​p​o​s​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​e​x​p​l​a​i​n​i​n​g​ ​t​h​e​ ​p​u​r​p​o​s​e​ ​o​r​ ​t​o​p​i​c​ ​o​f​ ​t​h​e​ ​c​h​a​n​n​e​l​.​ ​L​i​m​i​t​e​d​ ​t​o​ ​1​0​2​4​ ​c​h​a​r​a​c​t​e​r​s​.
+							 */
+							longDesc: string
+						}
+						membershipType: {
+							/**
+							 * M​e​m​b​e​r​s​h​i​p​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * C​h​a​n​n​e​l​ ​p​r​i​v​a​c​y​ ​s​e​t​t​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * D​e​f​i​n​e​s​ ​t​h​e​ ​p​r​i​v​a​c​y​ ​l​e​v​e​l​ ​o​f​ ​t​h​e​ ​c​h​a​n​n​e​l​.​ ​O​p​t​i​o​n​s​ ​i​n​c​l​u​d​e​ ​"​s​t​a​n​d​a​r​d​"​ ​(​v​i​s​i​b​l​e​ ​t​o​ ​a​l​l​ ​t​e​a​m​ ​m​e​m​b​e​r​s​)​ ​o​r​ ​"​p​r​i​v​a​t​e​"​ ​(​v​i​s​i​b​l​e​ ​o​n​l​y​ ​t​o​ ​s​p​e​c​i​f​i​c​ ​m​e​m​b​e​r​s​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'create-meeting': {
+					/**
+					 * C​r​e​a​t​e​ ​M​e​e​t​i​n​g
+					 */
+					displayName: string
+					/**
+					 * S​c​h​e​d​u​l​e​ ​a​ ​n​e​w​ ​T​e​a​m​s​ ​m​e​e​t​i​n​g
+					 */
+					shortDesc: string
+					/**
+					 * S​c​h​e​d​u​l​e​ ​a​ ​n​e​w​ ​m​e​e​t​i​n​g​ ​i​n​ ​M​i​c​r​o​s​o​f​t​ ​T​e​a​m​s​ ​w​i​t​h​ ​s​p​e​c​i​f​i​e​d​ ​p​a​r​t​i​c​i​p​a​n​t​s​,​ ​t​i​m​e​,​ ​l​o​c​a​t​i​o​n​,​ ​a​n​d​ ​o​t​h​e​r​ ​m​e​e​t​i​n​g​ ​d​e​t​a​i​l​s​.
+					 */
+					longDesc: string
+					options: {
+						subject: {
+							/**
+							 * S​u​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * M​e​e​t​i​n​g​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​o​r​ ​s​u​b​j​e​c​t​ ​o​f​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​t​h​a​t​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​i​n​ ​c​a​l​e​n​d​a​r​ ​i​n​v​i​t​a​t​i​o​n​s​ ​a​n​d​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+						startDateTime: {
+							/**
+							 * S​t​a​r​t​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * M​e​e​t​i​n​g​ ​s​t​a​r​t​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​w​h​e​n​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​b​e​g​i​n​s​ ​i​n​ ​I​S​O​ ​8​6​0​1​ ​f​o​r​m​a​t​ ​(​Y​Y​Y​Y​-​M​M​-​D​D​T​H​H​:​M​M​:​S​S​)​.
+							 */
+							longDesc: string
+						}
+						endDateTime: {
+							/**
+							 * E​n​d​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * M​e​e​t​i​n​g​ ​e​n​d​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​w​h​e​n​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​e​n​d​s​ ​i​n​ ​I​S​O​ ​8​6​0​1​ ​f​o​r​m​a​t​ ​(​Y​Y​Y​Y​-​M​M​-​D​D​T​H​H​:​M​M​:​S​S​)​.
+							 */
+							longDesc: string
+						}
+						teamId: {
+							/**
+							 * T​e​a​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​t​e​a​m​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​t​e​a​m​ ​i​d​e​n​t​i​f​i​e​r​ ​i​f​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​i​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​e​a​m​.
+							 */
+							longDesc: string
+						}
+						channelId: {
+							/**
+							 * C​h​a​n​n​e​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​c​h​a​n​n​e​l​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​c​h​a​n​n​e​l​ ​i​d​e​n​t​i​f​i​e​r​ ​i​f​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​i​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​h​a​n​n​e​l​ ​w​i​t​h​i​n​ ​a​ ​t​e​a​m​.
+							 */
+							longDesc: string
+						}
+						content: {
+							/**
+							 * M​e​e​t​i​n​g​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * M​e​e​t​i​n​g​ ​a​g​e​n​d​a​ ​o​r​ ​n​o​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​t​e​x​t​ ​d​e​s​c​r​i​b​i​n​g​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​a​g​e​n​d​a​,​ ​p​r​e​p​a​r​a​t​i​o​n​ ​m​a​t​e​r​i​a​l​s​,​ ​o​r​ ​o​t​h​e​r​ ​r​e​l​e​v​a​n​t​ ​i​n​f​o​r​m​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						location: {
+							/**
+							 * L​o​c​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * P​h​y​s​i​c​a​l​ ​o​r​ ​v​i​r​t​u​a​l​ ​m​e​e​t​i​n​g​ ​l​o​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​h​y​s​i​c​a​l​ ​l​o​c​a​t​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​w​i​l​l​ ​t​a​k​e​ ​p​l​a​c​e​,​ ​o​r​ ​a​ ​c​u​s​t​o​m​ ​v​i​r​t​u​a​l​ ​l​o​c​a​t​i​o​n​ ​d​e​s​c​r​i​p​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						attendees: {
+							/**
+							 * A​t​t​e​n​d​e​e​s
+							 */
+							displayName: string
+							/**
+							 * M​e​e​t​i​n​g​ ​p​a​r​t​i​c​i​p​a​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​o​r​ ​u​s​e​r​ ​I​D​s​ ​f​o​r​ ​p​e​o​p​l​e​ ​w​h​o​ ​s​h​o​u​l​d​ ​b​e​ ​i​n​v​i​t​e​d​ ​t​o​ ​t​h​e​ ​m​e​e​t​i​n​g​.
+							 */
+							longDesc: string
+						}
+						isOnlineMeeting: {
+							/**
+							 * O​n​l​i​n​e​ ​M​e​e​t​i​n​g
+							 */
+							displayName: string
+							/**
+							 * E​n​a​b​l​e​ ​T​e​a​m​s​ ​o​n​l​i​n​e​ ​m​e​e​t​i​n​g​ ​f​e​a​t​u​r​e​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​s​e​t​ ​t​o​ ​t​r​u​e​,​ ​c​r​e​a​t​e​s​ ​a​ ​T​e​a​m​s​ ​o​n​l​i​n​e​ ​m​e​e​t​i​n​g​ ​w​i​t​h​ ​v​i​d​e​o​ ​c​o​n​f​e​r​e​n​c​i​n​g​ ​c​a​p​a​b​i​l​i​t​i​e​s​ ​a​n​d​ ​a​ ​j​o​i​n​ ​l​i​n​k​.
+							 */
+							longDesc: string
+						}
+						timeZone: {
+							/**
+							 * T​i​m​e​ ​Z​o​n​e
+							 */
+							displayName: string
+							/**
+							 * M​e​e​t​i​n​g​ ​t​i​m​e​ ​z​o​n​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​m​e​ ​z​o​n​e​ ​f​o​r​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​s​t​a​r​t​ ​a​n​d​ ​e​n​d​ ​t​i​m​e​s​,​ ​s​u​c​h​ ​a​s​ ​"​P​a​c​i​f​i​c​ ​S​t​a​n​d​a​r​d​ ​T​i​m​e​"​ ​o​r​ ​"​U​T​C​"​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'delete-meeting': {
+					/**
+					 * D​e​l​e​t​e​ ​M​e​e​t​i​n​g
+					 */
+					displayName: string
+					/**
+					 * C​a​n​c​e​l​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​m​e​e​t​i​n​g
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​c​a​n​c​e​l​s​ ​a​n​d​ ​r​e​m​o​v​e​s​ ​a​ ​s​c​h​e​d​u​l​e​d​ ​m​e​e​t​i​n​g​ ​f​r​o​m​ ​a​l​l​ ​p​a​r​t​i​c​i​p​a​n​t​s​'​ ​c​a​l​e​n​d​a​r​s​.
+					 */
+					longDesc: string
+					options: {
+						meetingId: {
+							/**
+							 * M​e​e​t​i​n​g​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * U​n​i​q​u​e​ ​m​e​e​t​i​n​g​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​(​G​U​I​D​)​ ​o​f​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​t​o​ ​b​e​ ​c​a​n​c​e​l​e​d​.
+							 */
+							longDesc: string
+						}
+						meetingSource: {
+							/**
+							 * M​e​e​t​i​n​g​ ​S​o​u​r​c​e
+							 */
+							displayName: string
+							/**
+							 * O​r​i​g​i​n​ ​o​f​ ​t​h​e​ ​m​e​e​t​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​i​e​s​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​w​a​s​ ​c​r​e​a​t​e​d​,​ ​s​u​c​h​ ​a​s​ ​"​p​r​i​v​a​t​e​"​ ​o​r​ ​"​t​e​a​m​"​.
+							 */
+							longDesc: string
+						}
+						teamId: {
+							/**
+							 * T​e​a​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​t​e​a​m​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​a​m​ ​i​d​e​n​t​i​f​i​e​r​ ​i​f​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​i​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​e​a​m​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'send-channel-message': {
+					/**
+					 * S​e​n​d​ ​C​h​a​n​n​e​l​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * P​o​s​t​ ​a​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​ ​t​e​a​m​ ​c​h​a​n​n​e​l
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​ ​a​ ​n​e​w​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​h​a​n​n​e​l​ ​w​i​t​h​i​n​ ​a​ ​t​e​a​m​ ​t​h​a​t​ ​a​l​l​ ​c​h​a​n​n​e​l​ ​m​e​m​b​e​r​s​ ​c​a​n​ ​v​i​e​w​ ​a​n​d​ ​r​e​s​p​o​n​d​ ​t​o​.
+					 */
+					longDesc: string
+					options: {
+						channelId: {
+							/**
+							 * C​h​a​n​n​e​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​c​h​a​n​n​e​l​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​w​i​l​l​ ​b​e​ ​p​o​s​t​e​d​.
+							 */
+							longDesc: string
+						}
+						teamId: {
+							/**
+							 * T​e​a​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​e​a​m​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​e​a​m​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​r​g​e​t​ ​c​h​a​n​n​e​l​.
+							 */
+							longDesc: string
+						}
+						message: {
+							/**
+							 * M​e​s​s​a​g​e
+							 */
+							displayName: string
+							/**
+							 * M​e​s​s​a​g​e​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​b​e​ ​p​o​s​t​e​d​ ​i​n​ ​t​h​e​ ​c​h​a​n​n​e​l​.
+							 */
+							longDesc: string
+						}
+						contentType: {
+							/**
+							 * C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * F​o​r​m​a​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​f​o​r​m​a​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t​,​ ​s​u​c​h​ ​a​s​ ​"​t​e​x​t​"​ ​f​o​r​ ​p​l​a​i​n​ ​t​e​x​t​ ​o​r​ ​"​h​t​m​l​"​ ​f​o​r​ ​f​o​r​m​a​t​t​e​d​ ​c​o​n​t​e​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'send-chat-message': {
+					/**
+					 * S​e​n​d​ ​C​h​a​t​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​ ​c​h​a​t​ ​c​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​ ​a​ ​n​e​w​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​ ​d​i​r​e​c​t​ ​c​h​a​t​ ​o​r​ ​g​r​o​u​p​ ​c​h​a​t​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​o​u​t​s​i​d​e​ ​o​f​ ​a​ ​t​e​a​m​ ​c​h​a​n​n​e​l​.
+					 */
+					longDesc: string
+					options: {
+						chatId: {
+							/**
+							 * C​h​a​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​c​h​a​t​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​d​i​r​e​c​t​ ​c​h​a​t​ ​o​r​ ​g​r​o​u​p​ ​c​h​a​t​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​w​i​l​l​ ​b​e​ ​s​e​n​t​.
+							 */
+							longDesc: string
+						}
+						message: {
+							/**
+							 * M​e​s​s​a​g​e
+							 */
+							displayName: string
+							/**
+							 * M​e​s​s​a​g​e​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​b​e​ ​s​e​n​t​ ​i​n​ ​t​h​e​ ​c​h​a​t​.
+							 */
+							longDesc: string
+						}
+						contentType: {
+							/**
+							 * C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * F​o​r​m​a​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​f​o​r​m​a​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t​,​ ​s​u​c​h​ ​a​s​ ​"​t​e​x​t​"​ ​f​o​r​ ​p​l​a​i​n​ ​t​e​x​t​ ​o​r​ ​"​h​t​m​l​"​ ​f​o​r​ ​f​o​r​m​a​t​t​e​d​ ​c​o​n​t​e​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'update-channel': {
+					/**
+					 * U​p​d​a​t​e​ ​C​h​a​n​n​e​l
+					 */
+					displayName: string
+					/**
+					 * M​o​d​i​f​y​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​h​a​n​n​e​l
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​p​r​o​p​e​r​t​i​e​s​ ​o​r​ ​m​e​m​b​e​r​s​h​i​p​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​h​a​n​n​e​l​ ​w​i​t​h​i​n​ ​a​ ​t​e​a​m​.
+					 */
+					longDesc: string
+					options: {
+						channelId: {
+							/**
+							 * C​h​a​n​n​e​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​c​h​a​n​n​e​l​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​b​e​ ​u​p​d​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						teamId: {
+							/**
+							 * T​e​a​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​e​a​m​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​e​a​m​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​b​e​ ​u​p​d​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						displayName: {
+							/**
+							 * C​h​a​n​n​e​l​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​c​h​a​n​n​e​l​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​h​a​n​n​e​l​.​ ​M​u​s​t​ ​b​e​ ​u​n​i​q​u​e​ ​w​i​t​h​i​n​ ​t​h​e​ ​t​e​a​m​ ​a​n​d​ ​b​e​t​w​e​e​n​ ​1​-​5​0​ ​c​h​a​r​a​c​t​e​r​s​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​c​h​a​n​n​e​l​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​e​x​p​l​a​i​n​i​n​g​ ​t​h​e​ ​p​u​r​p​o​s​e​ ​o​r​ ​t​o​p​i​c​ ​o​f​ ​t​h​e​ ​c​h​a​n​n​e​l​.​ ​L​i​m​i​t​e​d​ ​t​o​ ​1​0​2​4​ ​c​h​a​r​a​c​t​e​r​s​.
+							 */
+							longDesc: string
+						}
+						addMembers: {
+							/**
+							 * A​d​d​ ​M​e​m​b​e​r​s
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​c​h​a​n​n​e​l
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​u​s​e​r​ ​I​D​s​ ​t​o​ ​a​d​d​ ​a​s​ ​m​e​m​b​e​r​s​ ​t​o​ ​t​h​e​ ​c​h​a​n​n​e​l​.​ ​O​n​l​y​ ​a​p​p​l​i​c​a​b​l​e​ ​f​o​r​ ​p​r​i​v​a​t​e​ ​c​h​a​n​n​e​l​s​.
+							 */
+							longDesc: string
+						}
+						removeMembers: {
+							/**
+							 * R​e​m​o​v​e​ ​M​e​m​b​e​r​s
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​s​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​c​h​a​n​n​e​l
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​u​s​e​r​ ​I​D​s​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​m​e​m​b​e​r​s​h​i​p​.​ ​O​n​l​y​ ​a​p​p​l​i​c​a​b​l​e​ ​f​o​r​ ​p​r​i​v​a​t​e​ ​c​h​a​n​n​e​l​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'update-meeting': {
+					/**
+					 * U​p​d​a​t​e​ ​M​e​e​t​i​n​g
+					 */
+					displayName: string
+					/**
+					 * M​o​d​i​f​y​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​m​e​e​t​i​n​g
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​c​h​e​d​u​l​e​d​ ​m​e​e​t​i​n​g​,​ ​s​u​c​h​ ​a​s​ ​t​i​m​e​,​ ​l​o​c​a​t​i​o​n​,​ ​a​t​t​e​n​d​e​e​s​,​ ​o​r​ ​o​t​h​e​r​ ​p​r​o​p​e​r​t​i​e​s​.
+					 */
+					longDesc: string
+					options: {
+						meetingId: {
+							/**
+							 * M​e​e​t​i​n​g​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​m​e​e​t​i​n​g​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​t​o​ ​b​e​ ​u​p​d​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						subject: {
+							/**
+							 * S​u​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​m​e​e​t​i​n​g​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​t​i​t​l​e​ ​o​r​ ​s​u​b​j​e​c​t​ ​o​f​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​t​h​a​t​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​i​n​ ​c​a​l​e​n​d​a​r​ ​i​n​v​i​t​a​t​i​o​n​s​ ​a​n​d​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+						startDateTime: {
+							/**
+							 * S​t​a​r​t​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​m​e​e​t​i​n​g​ ​s​t​a​r​t​ ​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​w​h​e​n​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​b​e​g​i​n​s​ ​i​n​ ​I​S​O​ ​8​6​0​1​ ​f​o​r​m​a​t​ ​(​Y​Y​Y​Y​-​M​M​-​D​D​T​H​H​:​M​M​:​S​S​)​.
+							 */
+							longDesc: string
+						}
+						endDateTime: {
+							/**
+							 * E​n​d​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​m​e​e​t​i​n​g​ ​e​n​d​ ​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​w​h​e​n​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​e​n​d​s​ ​i​n​ ​I​S​O​ ​8​6​0​1​ ​f​o​r​m​a​t​ ​(​Y​Y​Y​Y​-​M​M​-​D​D​T​H​H​:​M​M​:​S​S​)​.
+							 */
+							longDesc: string
+						}
+						teamId: {
+							/**
+							 * T​e​a​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​t​e​a​m​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​t​e​a​m​ ​i​d​e​n​t​i​f​i​e​r​ ​i​f​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​i​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​e​a​m​.
+							 */
+							longDesc: string
+						}
+						channelId: {
+							/**
+							 * C​h​a​n​n​e​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​c​h​a​n​n​e​l​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​h​a​n​n​e​l​ ​i​d​e​n​t​i​f​i​e​r​ ​i​f​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​i​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​h​a​n​n​e​l​ ​w​i​t​h​i​n​ ​a​ ​t​e​a​m​.
+							 */
+							longDesc: string
+						}
+						content: {
+							/**
+							 * M​e​e​t​i​n​g​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​m​e​e​t​i​n​g​ ​a​g​e​n​d​a​ ​o​r​ ​n​o​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​t​e​x​t​ ​d​e​s​c​r​i​b​i​n​g​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​a​g​e​n​d​a​,​ ​p​r​e​p​a​r​a​t​i​o​n​ ​m​a​t​e​r​i​a​l​s​,​ ​o​r​ ​o​t​h​e​r​ ​r​e​l​e​v​a​n​t​ ​i​n​f​o​r​m​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						location: {
+							/**
+							 * L​o​c​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​m​e​e​t​i​n​g​ ​l​o​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​p​h​y​s​i​c​a​l​ ​l​o​c​a​t​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​w​i​l​l​ ​t​a​k​e​ ​p​l​a​c​e​,​ ​o​r​ ​a​ ​c​u​s​t​o​m​ ​v​i​r​t​u​a​l​ ​l​o​c​a​t​i​o​n​ ​d​e​s​c​r​i​p​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						attendees: {
+							/**
+							 * A​t​t​e​n​d​e​e​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​m​e​e​t​i​n​g​ ​p​a​r​t​i​c​i​p​a​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​o​r​ ​u​s​e​r​ ​I​D​s​ ​f​o​r​ ​p​e​o​p​l​e​ ​w​h​o​ ​s​h​o​u​l​d​ ​b​e​ ​i​n​v​i​t​e​d​ ​t​o​ ​t​h​e​ ​m​e​e​t​i​n​g​.
+							 */
+							longDesc: string
+						}
+						isOnlineMeeting: {
+							/**
+							 * O​n​l​i​n​e​ ​M​e​e​t​i​n​g
+							 */
+							displayName: string
+							/**
+							 * E​n​a​b​l​e​/​d​i​s​a​b​l​e​ ​T​e​a​m​s​ ​o​n​l​i​n​e​ ​m​e​e​t​i​n​g​ ​f​e​a​t​u​r​e​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​s​e​t​ ​t​o​ ​t​r​u​e​,​ ​e​n​s​u​r​e​s​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​h​a​s​ ​T​e​a​m​s​ ​o​n​l​i​n​e​ ​m​e​e​t​i​n​g​ ​c​a​p​a​b​i​l​i​t​i​e​s​ ​w​i​t​h​ ​v​i​d​e​o​ ​c​o​n​f​e​r​e​n​c​i​n​g​ ​a​n​d​ ​a​ ​j​o​i​n​ ​l​i​n​k​.
+							 */
+							longDesc: string
+						}
+						timeZone: {
+							/**
+							 * T​i​m​e​ ​Z​o​n​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​m​e​e​t​i​n​g​ ​t​i​m​e​ ​z​o​n​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​t​i​m​e​ ​z​o​n​e​ ​f​o​r​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​s​t​a​r​t​ ​a​n​d​ ​e​n​d​ ​t​i​m​e​s​,​ ​s​u​c​h​ ​a​s​ ​"​P​a​c​i​f​i​c​ ​S​t​a​n​d​a​r​d​ ​T​i​m​e​"​ ​o​r​ ​"​U​T​C​"​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				'new-channel-message': {
+					/**
+					 * N​e​w​ ​C​h​a​n​n​e​l​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​ ​w​h​e​n​ ​a​ ​m​e​s​s​a​g​e​ ​i​s​ ​p​o​s​t​e​d​ ​i​n​ ​a​ ​c​h​a​n​n​e​l
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​m​e​s​s​a​g​e​ ​i​s​ ​p​o​s​t​e​d​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​c​h​a​n​n​e​l​ ​w​i​t​h​i​n​ ​a​ ​t​e​a​m​.
+					 */
+					longDesc: string
+					options: {
+						channelId: {
+							/**
+							 * C​h​a​n​n​e​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * C​h​a​n​n​e​l​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​m​e​s​s​a​g​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​m​e​s​s​a​g​e​s​.
+							 */
+							longDesc: string
+						}
+						teamId: {
+							/**
+							 * T​e​a​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​e​a​m​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​e​a​m​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​m​o​n​i​t​o​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'new-chat-message': {
+					/**
+					 * N​e​w​ ​C​h​a​t​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​ ​w​h​e​n​ ​a​ ​m​e​s​s​a​g​e​ ​i​s​ ​s​e​n​t​ ​i​n​ ​a​ ​c​h​a​t
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​m​e​s​s​a​g​e​ ​i​s​ ​s​e​n​t​ ​i​n​ ​a​ ​d​i​r​e​c​t​ ​c​h​a​t​ ​o​r​ ​g​r​o​u​p​ ​c​h​a​t​ ​c​o​n​v​e​r​s​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						chatId: {
+							/**
+							 * C​h​a​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * C​h​a​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​m​e​s​s​a​g​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​d​i​r​e​c​t​ ​c​h​a​t​ ​o​r​ ​g​r​o​u​p​ ​c​h​a​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​m​e​s​s​a​g​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'new-meeting': {
+					/**
+					 * N​e​w​ ​M​e​e​t​i​n​g
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​ ​w​h​e​n​ ​a​ ​m​e​e​t​i​n​g​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​m​e​e​t​i​n​g​ ​i​s​ ​s​c​h​e​d​u​l​e​d​ ​t​h​a​t​ ​m​a​t​c​h​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​r​i​t​e​r​i​a​.
+					 */
+					longDesc: string
+					options: {
+						meetingSource: {
+							/**
+							 * M​e​e​t​i​n​g​ ​S​o​u​r​c​e
+							 */
+							displayName: string
+							/**
+							 * O​r​i​g​i​n​ ​o​f​ ​t​h​e​ ​m​e​e​t​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​i​e​s​ ​w​h​i​c​h​ ​t​y​p​e​ ​o​f​ ​m​e​e​t​i​n​g​s​ ​t​o​ ​m​o​n​i​t​o​r​,​ ​s​u​c​h​ ​a​s​ ​"​p​r​i​v​a​t​e​"​ ​o​r​ ​"​t​e​a​m​"​ ​m​e​e​t​i​n​g​s​.
+							 */
+							longDesc: string
+						}
+						teamId: {
+							/**
+							 * T​e​a​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​t​e​a​m​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​m​e​e​t​i​n​g​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​e​a​m​.
 							 */
 							longDesc: string
 						}
@@ -19374,6 +22026,10 @@ export type TranslationFunctions = {
 					 * Create Or Update Companies
 					 */
 					displayName: () => LocalizedString
+					/**
+					 * Create or update multiple companies
+					 */
+					shortDesc: () => LocalizedString
 				}
 				'get-crm-v3-objects-contacts': {
 					/**
@@ -19394,6 +22050,108 @@ export type TranslationFunctions = {
 					 * Create a new contact
 					 */
 					shortDesc: () => LocalizedString
+					options: {
+						associations: {
+							/**
+							 * HubSpot Associations
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Define relationships between HubSpot objects
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Associations create connections between different HubSpot objects such as contacts, companies, deals, tickets, and custom objects.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										to: {
+											/**
+											 * Target Object
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The HubSpot object to create an association with
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Specifies the target HubSpot object (company, contact, deal, etc.) that will be associated with the current object.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													id: {
+														/**
+														 * Object ID
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Unique identifier of the target object
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The unique identifier (ID) of the HubSpot object being associated with. This could be a company ID, contact ID, deal ID, etc.
+														 */
+														longDesc: () => LocalizedString
+													}
+												}
+											}
+										}
+										types: {
+											/**
+											 * Association Types
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Types of relationship between objects
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Defines the nature and direction of the relationship between the two HubSpot objects being associated.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												element_type: {
+													fields: {
+														associationTypeId: {
+															/**
+															 * Association Type ID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Numeric identifier of the association type
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * A numeric ID that defines the type of association (e.g., 1 for company-to-contact, 3 for deal-to-contact). Each ID represents a specific directional relationship between two object types.
+															 */
+															longDesc: () => LocalizedString
+														}
+														associationCategory: {
+															/**
+															 * Association Category
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Category of the association type
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Categorizes the association as either "HUBSPOT_DEFINED" (built-in system associations) or "USER_DEFINED" (custom associations created by users). Most standard associations use HUBSPOT_DEFINED.
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 				'post-crm-v3-objects-contacts-search': {
 					/**
@@ -19458,6 +22216,108 @@ export type TranslationFunctions = {
 					 * Create a new custom object of a selected type
 					 */
 					shortDesc: () => LocalizedString
+					options: {
+						associations: {
+							/**
+							 * HubSpot Associations
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Define relationships between HubSpot objects
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Associations create connections between different HubSpot objects such as contacts, companies, deals, tickets, and custom objects.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										to: {
+											/**
+											 * Target Object
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The HubSpot object to create an association with
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Specifies the target HubSpot object (company, contact, deal, etc.) that will be associated with the current object.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													id: {
+														/**
+														 * Object ID
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Unique identifier of the target object
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The unique identifier (ID) of the HubSpot object being associated with. This could be a company ID, contact ID, deal ID, etc.
+														 */
+														longDesc: () => LocalizedString
+													}
+												}
+											}
+										}
+										types: {
+											/**
+											 * Association Types
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Types of relationship between objects
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Defines the nature and direction of the relationship between the two HubSpot objects being associated.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												element_type: {
+													fields: {
+														associationTypeId: {
+															/**
+															 * Association Type ID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Numeric identifier of the association type
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * A numeric ID that defines the type of association (e.g., 1 for company-to-contact, 3 for deal-to-contact). Each ID represents a specific directional relationship between two object types.
+															 */
+															longDesc: () => LocalizedString
+														}
+														associationCategory: {
+															/**
+															 * Association Category
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Category of the association type
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Categorizes the association as either "HUBSPOT_DEFINED" (built-in system associations) or "USER_DEFINED" (custom associations created by users). Most standard associations use HUBSPOT_DEFINED.
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 				'post-crm-v3-objects-objectType-batch-upsert': {
 					/**
@@ -19528,6 +22388,108 @@ export type TranslationFunctions = {
 					 * Create a new deal
 					 */
 					shortDesc: () => LocalizedString
+					options: {
+						associations: {
+							/**
+							 * HubSpot Associations
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Define relationships between HubSpot objects
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Associations create connections between different HubSpot objects such as contacts, companies, deals, tickets, and custom objects.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										to: {
+											/**
+											 * Target Object
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The HubSpot object to create an association with
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Specifies the target HubSpot object (company, contact, deal, etc.) that will be associated with the current object.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													id: {
+														/**
+														 * Object ID
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Unique identifier of the target object
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The unique identifier (ID) of the HubSpot object being associated with. This could be a company ID, contact ID, deal ID, etc.
+														 */
+														longDesc: () => LocalizedString
+													}
+												}
+											}
+										}
+										types: {
+											/**
+											 * Association Types
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Types of relationship between objects
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Defines the nature and direction of the relationship between the two HubSpot objects being associated.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												element_type: {
+													fields: {
+														associationTypeId: {
+															/**
+															 * Association Type ID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Numeric identifier of the association type
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * A numeric ID that defines the type of association (e.g., 1 for company-to-contact, 3 for deal-to-contact). Each ID represents a specific directional relationship between two object types.
+															 */
+															longDesc: () => LocalizedString
+														}
+														associationCategory: {
+															/**
+															 * Association Category
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Category of the association type
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Categorizes the association as either "HUBSPOT_DEFINED" (built-in system associations) or "USER_DEFINED" (custom associations created by users). Most standard associations use HUBSPOT_DEFINED.
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 				'post-crm-v3-objects-deals-batch-upsert_upsert': {
 					/**
@@ -19598,6 +22560,108 @@ export type TranslationFunctions = {
 					 * Create a new lead
 					 */
 					shortDesc: () => LocalizedString
+					options: {
+						associations: {
+							/**
+							 * HubSpot Associations
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Define relationships between HubSpot objects
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Associations create connections between different HubSpot objects such as contacts, companies, deals, tickets, and custom objects.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										to: {
+											/**
+											 * Target Object
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The HubSpot object to create an association with
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Specifies the target HubSpot object (company, contact, deal, etc.) that will be associated with the current object.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													id: {
+														/**
+														 * Object ID
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Unique identifier of the target object
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The unique identifier (ID) of the HubSpot object being associated with. This could be a company ID, contact ID, deal ID, etc.
+														 */
+														longDesc: () => LocalizedString
+													}
+												}
+											}
+										}
+										types: {
+											/**
+											 * Association Types
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Types of relationship between objects
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Defines the nature and direction of the relationship between the two HubSpot objects being associated.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												element_type: {
+													fields: {
+														associationTypeId: {
+															/**
+															 * Association Type ID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Numeric identifier of the association type
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * A numeric ID that defines the type of association (e.g., 1 for company-to-contact, 3 for deal-to-contact). Each ID represents a specific directional relationship between two object types.
+															 */
+															longDesc: () => LocalizedString
+														}
+														associationCategory: {
+															/**
+															 * Association Category
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Category of the association type
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Categorizes the association as either "HUBSPOT_DEFINED" (built-in system associations) or "USER_DEFINED" (custom associations created by users). Most standard associations use HUBSPOT_DEFINED.
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 				'post-crm-v3-objects-leads-batch-upsert_upsert': {
 					/**
@@ -19668,6 +22732,108 @@ export type TranslationFunctions = {
 					 * Create a new product
 					 */
 					shortDesc: () => LocalizedString
+					options: {
+						associations: {
+							/**
+							 * HubSpot Associations
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Define relationships between HubSpot objects
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Associations create connections between different HubSpot objects such as contacts, companies, deals, tickets, and custom objects.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										to: {
+											/**
+											 * Target Object
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The HubSpot object to create an association with
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Specifies the target HubSpot object (company, contact, deal, etc.) that will be associated with the current object.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													id: {
+														/**
+														 * Object ID
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Unique identifier of the target object
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The unique identifier (ID) of the HubSpot object being associated with. This could be a company ID, contact ID, deal ID, etc.
+														 */
+														longDesc: () => LocalizedString
+													}
+												}
+											}
+										}
+										types: {
+											/**
+											 * Association Types
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Types of relationship between objects
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Defines the nature and direction of the relationship between the two HubSpot objects being associated.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												element_type: {
+													fields: {
+														associationTypeId: {
+															/**
+															 * Association Type ID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Numeric identifier of the association type
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * A numeric ID that defines the type of association (e.g., 1 for company-to-contact, 3 for deal-to-contact). Each ID represents a specific directional relationship between two object types.
+															 */
+															longDesc: () => LocalizedString
+														}
+														associationCategory: {
+															/**
+															 * Association Category
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Category of the association type
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Categorizes the association as either "HUBSPOT_DEFINED" (built-in system associations) or "USER_DEFINED" (custom associations created by users). Most standard associations use HUBSPOT_DEFINED.
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 				'post-crm-v3-objects-products-batch-upsert_upsert': {
 					/**
@@ -19738,6 +22904,108 @@ export type TranslationFunctions = {
 					 * Create a new ticket
 					 */
 					shortDesc: () => LocalizedString
+					options: {
+						associations: {
+							/**
+							 * HubSpot Associations
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Define relationships between HubSpot objects
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Associations create connections between different HubSpot objects such as contacts, companies, deals, tickets, and custom objects.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										to: {
+											/**
+											 * Target Object
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The HubSpot object to create an association with
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Specifies the target HubSpot object (company, contact, deal, etc.) that will be associated with the current object.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													id: {
+														/**
+														 * Object ID
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Unique identifier of the target object
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The unique identifier (ID) of the HubSpot object being associated with. This could be a company ID, contact ID, deal ID, etc.
+														 */
+														longDesc: () => LocalizedString
+													}
+												}
+											}
+										}
+										types: {
+											/**
+											 * Association Types
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Types of relationship between objects
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Defines the nature and direction of the relationship between the two HubSpot objects being associated.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												element_type: {
+													fields: {
+														associationTypeId: {
+															/**
+															 * Association Type ID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Numeric identifier of the association type
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * A numeric ID that defines the type of association (e.g., 1 for company-to-contact, 3 for deal-to-contact). Each ID represents a specific directional relationship between two object types.
+															 */
+															longDesc: () => LocalizedString
+														}
+														associationCategory: {
+															/**
+															 * Association Category
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Category of the association type
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Categorizes the association as either "HUBSPOT_DEFINED" (built-in system associations) or "USER_DEFINED" (custom associations created by users). Most standard associations use HUBSPOT_DEFINED.
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 				'post-crm-v3-objects-tickets-batch-upsert_upsert': {
 					/**
@@ -21628,6 +24896,2042 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Specify the Item ID of the list item that you want to update. This ensures that the correct item is modified.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		Outlook: {
+			/**
+			 * Microsoft Outlook
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Get access to your calendar events, contacts, and emails in Microsoft Outlook.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Microsoft Outlook is a personal information manager software system from Microsoft, available as a part of the Microsoft Office suite. Primarily an email application, it also includes a calendar, task manager, contact manager, note taking, journal, and web browsing. Connect your Outlook account to create and manage contacts, calendar events, and send emails.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				'create-contact': {
+					/**
+					 * Create Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new contact in your Outlook contacts.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new contact with details such as name, email, phone numbers, and job information in your Microsoft Outlook contacts.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						givenName: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's first name.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the first name or given name of the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						surname: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's last name.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the last name or surname of the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						emailAddresses: {
+							/**
+							 * Email Addresses
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email addresses for the contact.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter one or more email addresses for the contact.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										address: {
+											/**
+											 * Email Address
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The email address of the contact.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Enter a valid email address for the contact.
+											 */
+											longDesc: () => LocalizedString
+										}
+										name: {
+											/**
+											 * Display Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The display name for this email address.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Enter how you want the name to appear for this email address.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+						businessPhones: {
+							/**
+							 * Business Phones
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Business phone numbers for the contact.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter one or more business phone numbers for the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						mobilePhone: {
+							/**
+							 * Mobile Phone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's mobile phone number.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the mobile or cell phone number for the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						jobTitle: {
+							/**
+							 * Job Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's job title.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the professional title or role of the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						companyName: {
+							/**
+							 * Company Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The name of the contact's company.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the organization or company where the contact works.
+							 */
+							longDesc: () => LocalizedString
+						}
+						department: {
+							/**
+							 * Department
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's department.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the department or division within the company where the contact works.
+							 */
+							longDesc: () => LocalizedString
+						}
+						officeLocation: {
+							/**
+							 * Office Location
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's office location.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the physical location or office where the contact works.
+							 */
+							longDesc: () => LocalizedString
+						}
+						businessAddress: {
+							/**
+							 * Business Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's business address.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the full business address details for the contact.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									street: {
+										/**
+										 * Street
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Street address.
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Enter the street address including building number and street name.
+										 */
+										longDesc: () => LocalizedString
+									}
+									city: {
+										/**
+										 * City
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * City name.
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Enter the city or town for the business address.
+										 */
+										longDesc: () => LocalizedString
+									}
+									state: {
+										/**
+										 * State/Province
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * State or province.
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Enter the state, province, or region for the business address.
+										 */
+										longDesc: () => LocalizedString
+									}
+									countryOrRegion: {
+										/**
+										 * Country/Region
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Country or region.
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Enter the country or region for the business address.
+										 */
+										longDesc: () => LocalizedString
+									}
+									postalCode: {
+										/**
+										 * Postal Code
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Postal or zip code.
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Enter the postal code or zip code for the business address.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				'update-contact': {
+					/**
+					 * Update Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing contact in your Outlook contacts.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Modify details of an existing contact in your Microsoft Outlook contacts, such as name, email, phone numbers, or job information.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						contactId: {
+							/**
+							 * Contact ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier for the contact.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the unique identifier of the contact you want to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						givenName: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's first name.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the first name or given name of the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						surname: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's last name.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the last name or surname of the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						emailAddresses: {
+							/**
+							 * Email Addresses
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email addresses for the contact.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update one or more email addresses for the contact.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										address: {
+											/**
+											 * Email Address
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The email address of the contact.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Enter a valid email address for the contact.
+											 */
+											longDesc: () => LocalizedString
+										}
+										name: {
+											/**
+											 * Display Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The display name for this email address.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Enter how you want the name to appear for this email address.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+						businessPhones: {
+							/**
+							 * Business Phones
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Business phone numbers for the contact.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update one or more business phone numbers for the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						mobilePhone: {
+							/**
+							 * Mobile Phone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's mobile phone number.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the mobile or cell phone number for the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						jobTitle: {
+							/**
+							 * Job Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's job title.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the professional title or role of the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						companyName: {
+							/**
+							 * Company Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The name of the contact's company.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the organization or company where the contact works.
+							 */
+							longDesc: () => LocalizedString
+						}
+						department: {
+							/**
+							 * Department
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's department.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the department or division within the company where the contact works.
+							 */
+							longDesc: () => LocalizedString
+						}
+						officeLocation: {
+							/**
+							 * Office Location
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's office location.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the physical location or office where the contact works.
+							 */
+							longDesc: () => LocalizedString
+						}
+						businessAddress: {
+							/**
+							 * Business Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's business address.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the full business address details for the contact.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									street: {
+										/**
+										 * Street
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Street address.
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Update the street address including building number and street name.
+										 */
+										longDesc: () => LocalizedString
+									}
+									city: {
+										/**
+										 * City
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * City name.
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Update the city or town for the business address.
+										 */
+										longDesc: () => LocalizedString
+									}
+									state: {
+										/**
+										 * State/Province
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * State or province.
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Update the state, province, or region for the business address.
+										 */
+										longDesc: () => LocalizedString
+									}
+									countryOrRegion: {
+										/**
+										 * Country/Region
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Country or region.
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Update the country or region for the business address.
+										 */
+										longDesc: () => LocalizedString
+									}
+									postalCode: {
+										/**
+										 * Postal Code
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Postal or zip code.
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Update the postal code or zip code for the business address.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				'delete-contact': {
+					/**
+					 * Delete Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a contact from your Outlook contacts.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently remove a contact from your Microsoft Outlook contacts.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						contactId: {
+							/**
+							 * Contact ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier for the contact.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the unique identifier of the contact to be deleted.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'create-event': {
+					/**
+					 * Create Event
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new event in your Outlook calendar.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new event or meeting in your Microsoft Outlook calendar with details such as title, start and end times, location, and attendees.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						calendarId: {
+							/**
+							 * Calendar ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The calendar where the event will be created.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the calendar where you want to create the new event.
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The title or subject of the event.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter a title or subject for the event that will appear in your calendar.
+							 */
+							longDesc: () => LocalizedString
+						}
+						start: {
+							/**
+							 * Start Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * When the event begins.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the date and time when the event will start.
+							 */
+							longDesc: () => LocalizedString
+						}
+						timezone: {
+							/**
+							 * Time Zone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The time zone for the event times.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the time zone that applies to the start and end times of the event.
+							 */
+							longDesc: () => LocalizedString
+						}
+						end: {
+							/**
+							 * End Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * When the event ends.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the date and time when the event will end. If not specified, defaults to 1 hour after start time.
+							 */
+							longDesc: () => LocalizedString
+						}
+						location: {
+							/**
+							 * Location
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Where the event will take place.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the physical location or virtual meeting place for the event.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attendees: {
+							/**
+							 * Attendees
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * People invited to the event.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Add one or more attendees to invite to the event.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										emailAddress: {
+											/**
+											 * Email Address
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The attendee's email address.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Enter the email address of the person you want to invite.
+											 */
+											longDesc: () => LocalizedString
+										}
+										type: {
+											/**
+											 * Attendee Type
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Required or optional attendee.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Specify whether this person is a required or optional attendee.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+						body: {
+							/**
+							 * Body
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The body content of the event.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the description or details of the event that attendees will see in the invitation.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bodyContentType: {
+							/**
+							 * Body Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Format of the body content.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select whether the body content is plain text or HTML formatted.
+							 */
+							longDesc: () => LocalizedString
+						}
+						isOnlineMeeting: {
+							/**
+							 * Online Meeting
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether this is an online meeting.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enable this option to make this event an online meeting and generate a meeting link.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'delete-event': {
+					/**
+					 * Delete Event
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete an event from your Outlook calendar.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently remove an event or meeting from your Microsoft Outlook calendar.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						calendarId: {
+							/**
+							 * Calendar ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The calendar containing the event.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the calendar that contains the event you want to delete.
+							 */
+							longDesc: () => LocalizedString
+						}
+						eventId: {
+							/**
+							 * Event ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier for the event.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the unique identifier of the event to be deleted.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'list-contacts': {
+					/**
+					 * List Contacts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of contacts from your Outlook contacts.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get a list of contacts from your Microsoft Outlook contacts with optional filtering and limit.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The maximum number of contacts to retrieve.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the maximum number of contacts to retrieve from the Outlook account.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter contacts by name or email.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter text to filter contacts by name or email address. Only contacts matching the filter will be returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'list-events': {
+					/**
+					 * List Events
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of events from your Outlook calendar.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get a list of events from your Microsoft Outlook calendar with optional filtering by date range and limit.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						calendarId: {
+							/**
+							 * Calendar ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The calendar to retrieve events from.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the calendar from which you want to retrieve events.
+							 */
+							longDesc: () => LocalizedString
+						}
+						startDateTime: {
+							/**
+							 * Start Date and Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The start date and time for filtering events.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter a date and time to retrieve events that start on or after this time.
+							 */
+							longDesc: () => LocalizedString
+						}
+						endDateTime: {
+							/**
+							 * End Date and Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The end date and time for filtering events.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter a date and time to retrieve events that end on or before this time.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The maximum number of events to retrieve.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the maximum number of events to retrieve from the Outlook calendar.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'send-email': {
+					/**
+					 * Send Email
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send an email from your Outlook account.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Compose and send an email message from your Microsoft Outlook account to one or more recipients.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						toRecipients: {
+							/**
+							 * To Recipients
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The primary recipients of the email.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter one or more email addresses for the primary recipients of the email.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										emailAddress: {
+											/**
+											 * Email Address
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Recipient's email address.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Enter the email address of the recipient.
+											 */
+											longDesc: () => LocalizedString
+										}
+										name: {
+											/**
+											 * Display Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Recipient's display name.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Optionally enter a display name for the recipient.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+						ccRecipients: {
+							/**
+							 * CC Recipients
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The carbon copy recipients of the email.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally enter one or more email addresses for recipients to be copied on the email.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										emailAddress: {
+											/**
+											 * Email Address
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * CC recipient's email address.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Enter the email address of the CC recipient.
+											 */
+											longDesc: () => LocalizedString
+										}
+										name: {
+											/**
+											 * Display Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * CC recipient's display name.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Optionally enter a display name for the CC recipient.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+						bccRecipients: {
+							/**
+							 * BCC Recipients
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The blind carbon copy recipients of the email.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally enter one or more email addresses for recipients to be blind copied on the email.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										emailAddress: {
+											/**
+											 * Email Address
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * BCC recipient's email address.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Enter the email address of the BCC recipient.
+											 */
+											longDesc: () => LocalizedString
+										}
+										name: {
+											/**
+											 * Display Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * BCC recipient's display name.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Optionally enter a display name for the BCC recipient.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+						subject: {
+							/**
+							 * Subject
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The subject line of the email.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the subject line that will appear in the recipient's inbox.
+							 */
+							longDesc: () => LocalizedString
+						}
+						body: {
+							/**
+							 * Body
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content of the email.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the main message content of the email.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bodyContentType: {
+							/**
+							 * Body Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Format of the email body.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select whether the email body is plain text or HTML formatted.
+							 */
+							longDesc: () => LocalizedString
+						}
+						saveToSentItems: {
+							/**
+							 * Save to Sent Items
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to save a copy in Sent Items.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose whether to save a copy of the email in your Sent Items folder.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				'new-contact': {
+					/**
+					 * New Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a new contact is created in Outlook.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger is activated whenever a new contact is added to your Microsoft Outlook contacts.
+					 */
+					longDesc: () => LocalizedString
+				}
+				'new-email': {
+					/**
+					 * New Email
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a new email is received in Outlook.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger is activated whenever a new email message is received in your Microsoft Outlook inbox.
+					 */
+					longDesc: () => LocalizedString
+				}
+				'new-event': {
+					/**
+					 * New Event
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a new event is created in an Outlook calendar.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger is activated whenever a new event or meeting is created in your Microsoft Outlook calendar.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						calendarId: {
+							/**
+							 * Calendar ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The calendar to monitor for new events.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally select a specific calendar to monitor. If not specified, all calendars will be monitored.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		Teams: {
+			/**
+			 * Microsoft Teams
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Collaborate with your team using channels, meetings, and messages
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Microsoft Teams is a collaboration platform that enables messaging, file sharing, video meetings, and app integration within your organization.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				'create-channel': {
+					/**
+					 * Create Channel
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new channel in a team
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new channel within a specified team where members can collaborate through conversations, files, and integrated apps.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						teamId: {
+							/**
+							 * Team ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Unique identifier for the team
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier (GUID) for the team where the new channel will be created.
+							 */
+							longDesc: () => LocalizedString
+						}
+						displayName: {
+							/**
+							 * Channel Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name of the new channel
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The display name for the new channel. Must be unique within the team and between 1-50 characters.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Description of the channel purpose
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional description explaining the purpose or topic of the channel. Limited to 1024 characters.
+							 */
+							longDesc: () => LocalizedString
+						}
+						membershipType: {
+							/**
+							 * Membership Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Channel privacy setting
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Defines the privacy level of the channel. Options include "standard" (visible to all team members) or "private" (visible only to specific members).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'create-meeting': {
+					/**
+					 * Create Meeting
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Schedule a new Teams meeting
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Schedule a new meeting in Microsoft Teams with specified participants, time, location, and other meeting details.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						subject: {
+							/**
+							 * Subject
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Meeting title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The title or subject of the meeting that will appear in calendar invitations and the meeting list.
+							 */
+							longDesc: () => LocalizedString
+						}
+						startDateTime: {
+							/**
+							 * Start Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Meeting start date and time
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date and time when the meeting begins in ISO 8601 format (YYYY-MM-DDTHH:MM:SS).
+							 */
+							longDesc: () => LocalizedString
+						}
+						endDateTime: {
+							/**
+							 * End Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Meeting end date and time
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date and time when the meeting ends in ISO 8601 format (YYYY-MM-DDTHH:MM:SS).
+							 */
+							longDesc: () => LocalizedString
+						}
+						teamId: {
+							/**
+							 * Team ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Associated team identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional team identifier if the meeting is associated with a specific team.
+							 */
+							longDesc: () => LocalizedString
+						}
+						channelId: {
+							/**
+							 * Channel ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Associated channel identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional channel identifier if the meeting is associated with a specific channel within a team.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content: {
+							/**
+							 * Meeting Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Meeting agenda or notes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional text describing the meeting agenda, preparation materials, or other relevant information.
+							 */
+							longDesc: () => LocalizedString
+						}
+						location: {
+							/**
+							 * Location
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Physical or virtual meeting location
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The physical location where the meeting will take place, or a custom virtual location description.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attendees: {
+							/**
+							 * Attendees
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Meeting participants
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of email addresses or user IDs for people who should be invited to the meeting.
+							 */
+							longDesc: () => LocalizedString
+						}
+						isOnlineMeeting: {
+							/**
+							 * Online Meeting
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enable Teams online meeting features
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When set to true, creates a Teams online meeting with video conferencing capabilities and a join link.
+							 */
+							longDesc: () => LocalizedString
+						}
+						timeZone: {
+							/**
+							 * Time Zone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Meeting time zone
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The time zone for the meeting start and end times, such as "Pacific Standard Time" or "UTC".
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'delete-meeting': {
+					/**
+					 * Delete Meeting
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Cancel an existing meeting
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently cancels and removes a scheduled meeting from all participants' calendars.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						meetingId: {
+							/**
+							 * Meeting ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Unique meeting identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier (GUID) of the meeting to be canceled.
+							 */
+							longDesc: () => LocalizedString
+						}
+						meetingSource: {
+							/**
+							 * Meeting Source
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Origin of the meeting
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specifies where the meeting was created, such as "private" or "team".
+							 */
+							longDesc: () => LocalizedString
+						}
+						teamId: {
+							/**
+							 * Team ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Associated team identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The team identifier if the meeting is associated with a specific team.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'send-channel-message': {
+					/**
+					 * Send Channel Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Post a message to a team channel
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Send a new message to a specific channel within a team that all channel members can view and respond to.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channelId: {
+							/**
+							 * Channel ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target channel identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the channel where the message will be posted.
+							 */
+							longDesc: () => LocalizedString
+						}
+						teamId: {
+							/**
+							 * Team ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Team identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the team containing the target channel.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message: {
+							/**
+							 * Message
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Message content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text content of the message to be posted in the channel.
+							 */
+							longDesc: () => LocalizedString
+						}
+						contentType: {
+							/**
+							 * Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Format of the message content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specifies the format of the message content, such as "text" for plain text or "html" for formatted content.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'send-chat-message': {
+					/**
+					 * Send Chat Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a message to a chat conversation
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Send a new message to a direct chat or group chat conversation outside of a team channel.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						chatId: {
+							/**
+							 * Chat ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target chat identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the direct chat or group chat where the message will be sent.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message: {
+							/**
+							 * Message
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Message content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text content of the message to be sent in the chat.
+							 */
+							longDesc: () => LocalizedString
+						}
+						contentType: {
+							/**
+							 * Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Format of the message content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specifies the format of the message content, such as "text" for plain text or "html" for formatted content.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'update-channel': {
+					/**
+					 * Update Channel
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Modify an existing channel
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the properties or membership of an existing channel within a team.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channelId: {
+							/**
+							 * Channel ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target channel identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the channel to be updated.
+							 */
+							longDesc: () => LocalizedString
+						}
+						teamId: {
+							/**
+							 * Team ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Team identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the team containing the channel to be updated.
+							 */
+							longDesc: () => LocalizedString
+						}
+						displayName: {
+							/**
+							 * Channel Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New channel name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new display name for the channel. Must be unique within the team and between 1-50 characters.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New channel description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated description explaining the purpose or topic of the channel. Limited to 1024 characters.
+							 */
+							longDesc: () => LocalizedString
+						}
+						addMembers: {
+							/**
+							 * Add Members
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Users to add to the channel
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of user IDs to add as members to the channel. Only applicable for private channels.
+							 */
+							longDesc: () => LocalizedString
+						}
+						removeMembers: {
+							/**
+							 * Remove Members
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Users to remove from the channel
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of user IDs to remove from the channel membership. Only applicable for private channels.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'update-meeting': {
+					/**
+					 * Update Meeting
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Modify an existing meeting
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the details of a scheduled meeting, such as time, location, attendees, or other properties.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						meetingId: {
+							/**
+							 * Meeting ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target meeting identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the meeting to be updated.
+							 */
+							longDesc: () => LocalizedString
+						}
+						subject: {
+							/**
+							 * Subject
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated meeting title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new title or subject of the meeting that will appear in calendar invitations and the meeting list.
+							 */
+							longDesc: () => LocalizedString
+						}
+						startDateTime: {
+							/**
+							 * Start Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated meeting start time
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new date and time when the meeting begins in ISO 8601 format (YYYY-MM-DDTHH:MM:SS).
+							 */
+							longDesc: () => LocalizedString
+						}
+						endDateTime: {
+							/**
+							 * End Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated meeting end time
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new date and time when the meeting ends in ISO 8601 format (YYYY-MM-DDTHH:MM:SS).
+							 */
+							longDesc: () => LocalizedString
+						}
+						teamId: {
+							/**
+							 * Team ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Associated team identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated team identifier if the meeting is associated with a specific team.
+							 */
+							longDesc: () => LocalizedString
+						}
+						channelId: {
+							/**
+							 * Channel ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Associated channel identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated channel identifier if the meeting is associated with a specific channel within a team.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content: {
+							/**
+							 * Meeting Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated meeting agenda or notes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated text describing the meeting agenda, preparation materials, or other relevant information.
+							 */
+							longDesc: () => LocalizedString
+						}
+						location: {
+							/**
+							 * Location
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated meeting location
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new physical location where the meeting will take place, or a custom virtual location description.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attendees: {
+							/**
+							 * Attendees
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated meeting participants
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated list of email addresses or user IDs for people who should be invited to the meeting.
+							 */
+							longDesc: () => LocalizedString
+						}
+						isOnlineMeeting: {
+							/**
+							 * Online Meeting
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enable/disable Teams online meeting features
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When set to true, ensures the meeting has Teams online meeting capabilities with video conferencing and a join link.
+							 */
+							longDesc: () => LocalizedString
+						}
+						timeZone: {
+							/**
+							 * Time Zone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated meeting time zone
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new time zone for the meeting start and end times, such as "Pacific Standard Time" or "UTC".
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				'new-channel-message': {
+					/**
+					 * New Channel Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Trigger when a message is posted in a channel
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when a new message is posted in a specified channel within a team.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channelId: {
+							/**
+							 * Channel ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Channel to monitor for messages
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the channel to monitor for new messages.
+							 */
+							longDesc: () => LocalizedString
+						}
+						teamId: {
+							/**
+							 * Team ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Team identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the team containing the channel to monitor.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'new-chat-message': {
+					/**
+					 * New Chat Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Trigger when a message is sent in a chat
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when a new message is sent in a direct chat or group chat conversation.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						chatId: {
+							/**
+							 * Chat ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Chat to monitor for messages
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the direct chat or group chat to monitor for new messages.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'new-meeting': {
+					/**
+					 * New Meeting
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Trigger when a meeting is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when a new meeting is scheduled that matches the specified criteria.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						meetingSource: {
+							/**
+							 * Meeting Source
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Origin of the meeting
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specifies which type of meetings to monitor, such as "private" or "team" meetings.
+							 */
+							longDesc: () => LocalizedString
+						}
+						teamId: {
+							/**
+							 * Team ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Associated team identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional filter to only trigger for meetings associated with a specific team.
 							 */
 							longDesc: () => LocalizedString
 						}

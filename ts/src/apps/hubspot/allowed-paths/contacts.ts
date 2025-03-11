@@ -1,7 +1,7 @@
 import { TAllowedPaths, TQoreAppActionOverrideOption } from '@qoretechnologies/ts-toolkit';
 import { getHubspotContactAllowedValues } from '../helpers/get-contact-allowed-values';
 import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
-import { HUBSPOT_APP_NAME, hubspotSearchSortsOption } from '../constants';
+import { HUBSPOT_APP_NAME, HubspotAssociationsType, hubspotSearchSortsOption } from '../constants';
 import hubspotContacts from '../../../schemas/hubspot/contacts.swagger.json';
 import { OpenAPIV2 } from 'openapi-types';
 import { getHubspotContactPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
@@ -34,9 +34,7 @@ export const HUBSPOT_CONTACTS_ALLOWED_PATHS = {
           required: true,
           get_dynamic_type: getHubspotContactPropertiesType,
         },
-        associations: {
-          required: false,
-        },
+        associations: HubspotAssociationsType,
       },
     },
   },
@@ -54,7 +52,7 @@ export const HUBSPOT_CONTACTS_ALLOWED_PATHS = {
             element_type: 'string',
             required: false,
           },
-          get_allowed_values: getHubspotContactPropertiesAllowedValues,
+          get_element_allowed_values: getHubspotContactPropertiesAllowedValues,
         },
       },
     },

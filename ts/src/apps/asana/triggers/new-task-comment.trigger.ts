@@ -73,6 +73,27 @@ const asanaNewTaskCommentTrigger = QoreAppCreator.createLocalizedTrigger({
   webhook_deregister: deregisterAsanaWebhook,
   webhook_echo_header: asanaWebhookEchoHeader,
   webhook_event_loc: asanaWebhookInfoLocation,
+  get_example_event_data: () => ({
+    action: 'added',
+    type: 'story',
+    created_at: new Date().toISOString(),
+    parent: {
+      gid: '1209628887786464',
+      resource_type: 'task',
+      name: 'Task Name',
+    },
+    resource: {
+      gid: '1209843667890123',
+      resource_type: 'story',
+      resource_subtype: 'comment_added',
+      text: 'This is an example comment on a task',
+    },
+    user: {
+      gid: '1206353569757060',
+      resource_type: 'user',
+      name: 'user@example.com',
+    },
+  }),
   event_info: {
     desc: 'New task comment event data',
     type: asanaEventInfoType,

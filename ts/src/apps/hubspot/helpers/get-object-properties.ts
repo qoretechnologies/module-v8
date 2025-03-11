@@ -9,6 +9,12 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
 import { TFetchHubspotObjectPropertiesOptions } from './object-properties-allowed-values';
+import { getHubspotTicketPipelineStageAllowedValues } from './get-ticket-pipeline-stage-allowed-values';
+import { getHubspotTicketPipelineAllowedValues } from './get-ticket-pipeline-allowed-values';
+import { getHubspotDealPipelineStageAllowedValues } from './get-deal-pipeline-stage-allowed-values';
+import { getHubspotDealPipelineAllowedValues } from './get-deal-pipeline-allowed-values';
+import { getHubspotLeadPipelineStageAllowedValues } from './get-lead-pipeline-stage-allowed-values';
+import { getHubspotLeadPipelineAllowedValues } from './get-lead-pipeline-allowed-values';
 
 type THubspotObjectProperty = {
   name: string;
@@ -91,25 +97,44 @@ export const getHubspotPropertyOptionFunction = ({
       });
 
       properties.forEach((property) => {
+        const defaultPropertyValues: Partial<TQoreAppActionOption> = {};
+        const propertyValues: Partial<TQoreAppActionOption> = {};
+
+        if (defaultProperties?.[property.name]) {
+          const defaultProperty = defaultProperties[property.name];
+          if (defaultProperty.allowed_values) {
+            defaultPropertyValues.allowed_values = defaultProperty.allowed_values;
+          }
+
+          if (defaultProperty.get_allowed_values) {
+            defaultPropertyValues.get_allowed_values = defaultProperty.get_allowed_values;
+          }
+
+          if (defaultProperty.depends_on) {
+            defaultPropertyValues.depends_on = defaultProperty.depends_on;
+          }
+        }
+
+        if (property.options?.length) {
+          propertyValues.allowed_values_creatable = true;
+          propertyValues.allowed_values = property.options.map(
+            (option): IQoreAllowedValue<any> => ({
+              display_name: option.label,
+              value:
+                hubspotToQoreTypeMap[property.type] === 'boolean'
+                  ? option.value === 'true'
+                  : option.value,
+            })
+          );
+        }
+
         // @ts-expect-error - TS doesn't recognize the mapped type
         additionalProperties[property.name] = {
           type: hubspotToQoreTypeMap[property.type] || 'auto',
           display_name: property.label,
           short_desc: property.description,
-          ...(property.options?.length
-            ? {
-                allowed_values_creatable: true,
-                allowed_values: property.options.map(
-                  (option): IQoreAllowedValue<any> => ({
-                    display_name: option.label,
-                    value:
-                      hubspotToQoreTypeMap[property.type] === 'boolean'
-                        ? option.value === 'true'
-                        : option.value,
-                  })
-                ),
-              }
-            : {}),
+          ...propertyValues,
+          ...defaultPropertyValues,
           required: false,
         };
       });
@@ -149,19 +174,25 @@ export const getHubspotContactPropertiesType: TQoreGetDynamicTypeFunction =
         type: 'string',
         display_name: 'Email',
         short_desc: 'The email address of the contact',
-        required: true,
+        required_groups: ['create-contact'],
       },
       firstname: {
         type: 'string',
         display_name: 'First Name',
         short_desc: 'The first name of the contact',
-        required: true,
+        required_groups: ['create-contact'],
       },
       lastname: {
         type: 'string',
         display_name: 'Last Name',
         short_desc: 'The last name of the contact',
-        required: true,
+        required_groups: ['create-contact'],
+      },
+      company: {
+        type: 'softstring',
+        display_name: 'Company',
+        short_desc: 'The company of the contact',
+        required_groups: ['create-contact'],
       },
     },
     object: 'contacts',
@@ -175,13 +206,13 @@ export const getHubspotCompanyPropertiesType: TQoreGetDynamicTypeFunction =
         type: 'string',
         display_name: 'Name',
         short_desc: 'The name of the company',
-        required: true,
+        required_groups: ['create-company'],
       },
       domain: {
         type: 'string',
         display_name: 'Domain',
         short_desc: 'The domain of the company',
-        required: true,
+        required_groups: ['create-company'],
       },
     },
   });
@@ -196,16 +227,19 @@ export const getHubspotDealPropertiesType: TQoreGetDynamicTypeFunction =
         short_desc: 'The name of the deal',
         required: true,
       },
-      dealtype: {
+      pipeline: {
         type: 'softstring',
-        display_name: 'Type',
-        short_desc: 'The type of the deal',
+        display_name: 'Pipeline',
+        short_desc: 'The pipeline of the deal',
+        get_allowed_values: getHubspotDealPipelineAllowedValues,
         required: true,
       },
-      hs_priority: {
+      dealstage: {
         type: 'softstring',
-        display_name: 'Priority',
-        short_desc: 'The priority of the deal',
+        display_name: 'Stage',
+        short_desc: 'The stage of the deal',
+        depends_on: ['pipeline'],
+        get_allowed_values: getHubspotDealPipelineStageAllowedValues,
         required: true,
       },
     },
@@ -225,25 +259,30 @@ export const getHubspotLeadPropertiesType: TQoreGetDynamicTypeFunction =
         type: 'softstring',
         display_name: 'Pipeline',
         short_desc: 'The pipeline of the lead',
+        get_allowed_values: getHubspotLeadPipelineAllowedValues,
         required: true,
       },
       hs_pipeline_stage: {
         type: 'softstring',
         display_name: 'Pipeline Stage',
         short_desc: 'The pipeline stage of the lead',
+        depends_on: ['hs_pipeline'],
+        get_allowed_values: getHubspotLeadPipelineStageAllowedValues,
         required: true,
       },
       hs_lead_type: {
         type: 'softstring',
         display_name: 'Lead Type',
         short_desc: 'The lead type',
-        required: true,
+        required: false,
+        preselected: true,
       },
       hs_lead_label: {
         type: 'softstring',
         display_name: 'Lead Label',
         short_desc: 'The lead label',
-        required: true,
+        required: false,
+        preselected: true,
       },
     },
   });
@@ -262,13 +301,15 @@ export const getHubspotProductPropertiesType: TQoreGetDynamicTypeFunction =
         type: 'string',
         display_name: 'Description',
         short_desc: 'The description of the product',
-        required: true,
+        preselected: true,
+        required: false,
       },
       hs_product_type: {
         type: 'softstring',
         display_name: 'Product Type',
         short_desc: 'The type of the product',
-        required: true,
+        preselected: true,
+        required: false,
       },
     },
   });
@@ -287,25 +328,30 @@ export const getHubspotTicketPropertiesType: TQoreGetDynamicTypeFunction =
         type: 'softstring',
         display_name: 'Pipeline',
         short_desc: 'The pipeline of the ticket',
+        get_allowed_values: getHubspotTicketPipelineAllowedValues,
         required: true,
       },
       hs_pipeline_stage: {
         type: 'softstring',
         display_name: 'Ticket status',
         short_desc: 'The status of the ticket',
+        depends_on: ['hs_pipeline'],
+        get_allowed_values: getHubspotTicketPipelineStageAllowedValues,
         required: true,
       },
       content: {
         type: 'string',
         display_name: 'Content',
         short_desc: 'The content of the ticket',
-        required: true,
+        preselected: true,
+        required: false,
       },
       hs_ticket_priority: {
         type: 'softstring',
         display_name: 'Priority',
         short_desc: 'The priority of the ticket',
-        required: true,
+        preselected: true,
+        required: false,
       },
     },
   });

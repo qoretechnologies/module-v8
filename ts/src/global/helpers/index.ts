@@ -415,6 +415,29 @@ export const fixOptions = (
           };
         }
 
+        if (
+          typeof option.type === 'object' &&
+          option.type.type === 'list' &&
+          option.type.element_type &&
+          typeof option.type.element_type === 'object' &&
+          option.type.element_type.type === 'hash' &&
+          option.type.element_type.fields
+        ) {
+          const elementFields = processCollection(option.type.element_type.fields, [
+            ...currentPath,
+            'type',
+            'element_type',
+            'fields',
+          ]);
+          optionType = {
+            ...option.type,
+            element_type: {
+              ...option.type.element_type,
+              fields: elementFields,
+            },
+          };
+        }
+
         const updatedOption = {
           ...option,
           ...(optionType && { type: optionType }),

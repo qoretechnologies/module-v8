@@ -35,6 +35,9 @@ export const asanaEventInfoType = {
           resource_type: {
             type: 'string',
           },
+          name: {
+            type: 'string',
+          },
           resource_subtype: {
             type: 'string',
           },

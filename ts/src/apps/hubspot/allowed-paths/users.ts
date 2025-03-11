@@ -56,7 +56,7 @@ export const HUBSPOT_USERS_ALLOWED_PATHS = {
             element_type: 'string',
             required: false,
           },
-          get_allowed_values: getHubspotUserPropertiesAllowedValues,
+          get_element_allowed_values: getHubspotUserPropertiesAllowedValues,
         },
       },
     },

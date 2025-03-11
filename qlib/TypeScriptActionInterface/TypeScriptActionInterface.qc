@@ -1863,9 +1863,9 @@ public class TypeScriptActionInterface {
             ignore_dup);
         hash<auto> rv = TypeScriptActionInterface::getFieldHash(path, name, type, \h, req, fctx, ignore_dup);
         if (h) {
-            throw "FIELD-ERROR", sprintf("Field description has unknown keys: %y", keys h);
+            throw "FIELD-ERROR", sprintf("Description for field %y has unknown keys: %y", name, keys h);
         }
-        return new TypeScriptDataField(rv);
+        return new TypeScriptDataField(rv, fctx);
     }
 
     static hash<auto> getFieldHash(string path, string name, AbstractDataProviderType type,

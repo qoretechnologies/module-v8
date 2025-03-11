@@ -204,7 +204,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                 "keys: %y", action.app, action.action, key, k, keys type_hash);
         }
         on_error printf("%y info: %N\n", key, info + {"type": info.type.getName()});
-        t.addOrReplaceField(new TypeScriptDataField(info));
+        t.addOrReplaceField(new TypeScriptDataField(info, fctx));
         #printf("Edited %y (%s) => %y mandatory: %y av: %y (parent %y)\n", key, t.getFields(){key}.uniqueHash(),
         #    t.getFields(){key}.getType().className(), t.getFields(){key}.isMandatory(),
         #    t.getFields(){key}.getAllowedValues(), t.className());

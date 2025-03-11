@@ -11,7 +11,7 @@ export const getSharepointListIdAllowedValues: TQoreGetAllowedValuesFunction<
   string
 > = async (context): Promise<IQoreAllowedValue<string>[]> => {
   const token = context?.conn_opts?.token;
-  const siteId = context?.conn_opts?.site_id;
+  const siteId = context?.opts?.site_id;
   const missingValues: string[] = [];
 
   if (!token) missingValues.push('token');

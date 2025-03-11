@@ -3,7 +3,7 @@ import hubspotLeads from '../../../schemas/hubspot/leads.swagger.json';
 import { getHubspotLeadAllowedValues } from '../helpers/get-lead-allowed-values';
 import { buildActionsFromSwaggerSchema } from '../../../global/helpers';
 import { OpenAPIV2 } from 'openapi-types';
-import { HUBSPOT_APP_NAME, hubspotSearchSortsOption } from '../constants';
+import { HUBSPOT_APP_NAME, HubspotAssociationsType, hubspotSearchSortsOption } from '../constants';
 import { getHubspotLeadPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
 import { getHubspotLeadIdPropertyAllowedValues } from '../helpers/get-id-property-allowed-values';
 import {
@@ -35,9 +35,7 @@ export const HUBSPOT_LEADS_ALLOWED_PATHS = {
           required: true,
           get_dynamic_type: getHubspotLeadPropertiesType,
         },
-        associations: {
-          required: false,
-        },
+        associations: HubspotAssociationsType,
       },
     },
   },
@@ -70,7 +68,7 @@ export const HUBSPOT_LEADS_ALLOWED_PATHS = {
             element_type: 'string',
             required: false,
           },
-          get_allowed_values: getHubspotLeadPropertiesAllowedValues,
+          get_element_allowed_values: getHubspotLeadPropertiesAllowedValues,
         },
       },
     },

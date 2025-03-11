@@ -25,11 +25,11 @@
 public namespace TypeScriptActionInterface {
 #! The TypeScript data field
 public class TypeScriptDataField inherits DataProvider::QoreDataField {
-    #! creates the field from the argument
-    constructor(hash<auto> h) : QoreDataField(h) {
+    #! Creates the field from the argument
+    constructor(hash<auto> h, *ActionFunctionContext fctx) : QoreDataField(h) {
     }
 
-    #! returns the type of the field
+    #! Returns the type of the field
     AbstractDataProviderType getType() {
         if (attr.dynamic_type) {
             hash<AsyncCallInfo> call = TypeScriptActionInterface::getCall(attr.dynamic_type);
@@ -45,13 +45,14 @@ public class TypeScriptDataField inherits DataProvider::QoreDataField {
                     return TypeScriptActionInterface::getType(name, res, attr.required, NOTHING, prov);
                 }
             } catch (hash<ExceptionInfo> ex) {
-                TSAI::error("Failed to retrieve dynamic type for %y: %s", call.label, get_exception_string(ex));
+                TSAI::error("Failed to retrieve dynamic type for field %y: %y: %s", name, call.label,
+                    get_exception_string(ex));
             }
         }
         return QoreDataField::getType();
     }
 
-    #! get default value, if any
+    #! Get default value, if any
     auto getDefaultValue() {
         if (attr.get_default_value.val()) {
             hash<AsyncCallInfo> call = TypeScriptActionInterface::getCall(attr.get_default_value);
@@ -63,7 +64,8 @@ public class TypeScriptDataField inherits DataProvider::QoreDataField {
                     return TypeScriptActionDataProviderBase::getAsyncValueArgs(NOTHING, call);
                 }
             } catch (hash<ExceptionInfo> ex) {
-                TSAI::error("Failed to retrieve default value for %y: %s", call.label, get_exception_string(ex));
+                TSAI::error("Failed to retrieve default value for field %y: %y: %s", name, call.label,
+                    get_exception_string(ex));
             }
         }
         return QoreDataField::getDefaultValue();

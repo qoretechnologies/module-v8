@@ -97,7 +97,7 @@ export const getSharepointListDependentOptions: TQoreGetDependentOptionsFunction
 
   const listColumns = {
     list_columns: {
-      required: false,
+      required: true,
       display_name: 'Column Values',
       short_desc: 'The values to set for the item properties.',
       desc: 'The values to set for the item properties.',

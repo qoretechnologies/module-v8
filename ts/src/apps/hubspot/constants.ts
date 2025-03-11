@@ -1,4 +1,4 @@
-import { TQoreAppActionOverrideOption } from '@qoretechnologies/ts-toolkit';
+import { TQoreAppActionOption, TQoreAppActionOverrideOption } from '@qoretechnologies/ts-toolkit';
 
 export const HUBSPOT_APP_NAME = 'Hubspot';
 
@@ -31,3 +31,44 @@ export const hubspotSearchSortsOption = {
     },
   },
 } satisfies TQoreAppActionOverrideOption;
+
+export const HubspotAssociationsType: TQoreAppActionOption = {
+  required: false,
+  type: {
+    type: 'list',
+    element_type: {
+      type: 'hash',
+      fields: {
+        to: {
+          required: true,
+          type: {
+            type: 'hash',
+            fields: {
+              id: {
+                type: 'softstring',
+              },
+            },
+          },
+        },
+        types: {
+          type: {
+            type: 'list',
+            element_type: {
+              type: 'hash',
+              fields: {
+                associationCategory: {
+                  type: 'string',
+                  required: true,
+                },
+                associationTypeId: {
+                  type: 'string',
+                  required: true,
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+};

@@ -36,9 +36,9 @@ const hubspotCustomObjectCreatedOrUpdatedTrigger = QoreAppCreator.createLocalize
         element_type: 'string',
         required: false,
       },
-      allowed_values_creatable: true,
       depends_on: ['object'],
-      get_allowed_values: getHubspotCustomObjectPropertiesAllowedValues,
+      element_allowed_values_creatable: true,
+      get_element_allowed_values: getHubspotCustomObjectPropertiesAllowedValues,
     },
   },
   event_function: async (context, update, should_stop) => {

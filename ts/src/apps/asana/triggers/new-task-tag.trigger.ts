@@ -72,6 +72,26 @@ const asanaNewTaskTagTrigger = QoreAppCreator.createLocalizedTrigger({
   webhook_deregister: deregisterAsanaWebhook,
   webhook_echo_header: asanaWebhookEchoHeader,
   webhook_event_loc: asanaWebhookInfoLocation,
+  get_example_event_data: () => ({
+    action: 'added',
+    type: 'tag',
+    created_at: new Date().toISOString(),
+    parent: {
+      gid: '1209628887786464',
+      resource_type: 'task',
+      name: 'Task Name',
+    },
+    resource: {
+      gid: '1209876543210987',
+      resource_type: 'tag',
+      name: 'urgent',
+    },
+    user: {
+      gid: '1206353569757060',
+      resource_type: 'user',
+      name: 'user@example.com',
+    },
+  }),
   event_info: {
     desc: 'New task tag event data',
     type: asanaEventInfoType,
