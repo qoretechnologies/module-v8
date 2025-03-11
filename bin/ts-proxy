@@ -282,7 +282,20 @@ class TsProxy inherits TypeScriptProxy {
         if (action) {
             TypeScriptActionInterface::initAppAction(app, action);
         }
-        hash<AsyncCallInfo> api = TypeScriptActionInterface::getCall(key);
+        hash<AsyncCallInfo> api;
+        try {
+            api = TypeScriptActionInterface::getCall(key);
+        } catch (hash<ExceptionInfo> ex) {
+            if (ex.err == "ASYNC-CALL-ERROR") {
+                AbstractDataProvider prov = TypeScriptActionInterface::getAppDataProvider(app).getChildProviderEx(action);
+                if (prov instanceof TypeScriptActionApiWithSchemaDataProvider) {
+                    cast<TypeScriptActionApiWithSchemaDataProvider>(prov).init();
+                }
+                api = TypeScriptActionInterface::getCall(key);
+            } else {
+                rethrow;
+            }
+        }
         auto rv = TypeScriptActionDataProviderBase::getAsyncValueArgs(logger, api, args);
         string yaml = makeSend(CC_OK, {
             "rv": rv,

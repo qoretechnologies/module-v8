@@ -25,7 +25,7 @@
 #! Main namespace for the TypeScriptActionInterface module
 public namespace TypeScriptActionInterface {
 #! Generic API data provider for TypeScript actions based on a Swagger schema
-class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiDataProvider {
+public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiDataProvider {
     public {
         #! Provider info
         const ProviderInfo = <DataProviderInfo>{
@@ -79,14 +79,17 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         #! Response type created?
         bool response_type_done;
 
-        #! Dynamic option closure
-        *code get_dynamic_options;
-
         #! Saved option override info
         *hash<auto> override_options_save;
 
         #! Saved action attributes
         *hash<auto> action_save;
+
+        #! Global request type info per action for dynamic types: app-action -> type info
+        static hash<string, AbstractDataProviderType> grtmap;
+
+        #! Mutex for global request type info
+        static Mutex gtlock();
     }
 
     #! Creates the object from the arguments
@@ -109,7 +112,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
             override_options_save = override_options;
             # remove options, as they will be processed on demand
             action -= "options";
-            action.get_dynamic_options = get_dynamic_options = sub (reference<hash<DataProviderActionInfo>> info) {
+            action.get_dynamic_options = sub (reference<hash<DataProviderActionInfo>> info) {
                 if (!request_type_done) {
                     NoIoHelper nih();
                     createRequestType();
@@ -119,6 +122,14 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                     info.options = DataProviderActionCatalog::getActionOptionFromFields(fields);
                 }
             };
+        }
+    }
+
+    #! Initialize data provider if necessary
+    init() {
+        if (override_options_save && !request_type_done) {
+            NoIoHelper nih();
+            createRequestType();
         }
     }
 
@@ -321,6 +332,28 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
         }
         request_type_done = True;
         checkDataProvider();
+
+        # get type key
+        string tk = sprintf("%s-%s", app, action);
+
+        # check global map unlocked
+        *AbstractDataProviderType t = grtmap{tk};
+        if (!t) {
+            # check again in the lock
+            gtlock.lock();
+            on_exit gtlock.unlock();
+
+            t = grtmap{tk};
+            if (!t) {
+                createRequestTypeIntern(tk);
+                return;
+            }
+        }
+        request_type = t;
+    }
+
+    #! Creates the request type for this API
+    private createRequestTypeIntern(string tk) {
         request_type = prov.getRequestType();
 
         if (request_type && (*hash<string, AbstractDataField> fields = request_type.getFields())) {
@@ -455,6 +488,7 @@ class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiData
                 }
             }
         }
+        grtmap{tk} = request_type;
     }
 
     #! Creates the response type for this API
