@@ -1406,11 +1406,18 @@ public class TypeScriptActionInterface {
                     "this property cannot be defined when \"swagger_path\" (%y) is also defined for the action",
                     action.app, action.action, swagger_path);
             }
+            # NOTE we remove "response_type" here, because it's given as null in valid actions
+            if (remove action.response_type) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"response_type\" "
+                    "property; this property cannot be defined when \"swagger_path\" (%y) is also defined for the "
+                    "action", action.app, action.action, swagger_path);
+            }
+
             *softlist<string> independent_path_vars = remove action.independent_path_vars;
 
             ActionFunctionContext fctx(action.app, action.action, pool);
 
-            # check for path vars0
+            # check for path vars
             *hash<string, bool> path_vars = map {$1: True}, (swagger_path =~ x/\{([^\}]*)}/g);
             TypeScriptActionApiWithSchemaDataProvider dp(\action, swagger_path, api, path_vars,
                 (map {$1: True}, independent_path_vars), app_conn_opt_map{app.name.lwr()},
@@ -1418,11 +1425,6 @@ public class TypeScriptActionInterface {
             child = dp;
 
             action.output_type = child.getResponseType();
-            if (remove action.response_type) {
-                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"response_type\" "
-                    "property; this property cannot be defined when \"swagger_path\" (%y) is also defined for the "
-                    "action", action.app, action.action, swagger_path);
-            }
         } else {
             *AbstractDataProviderType request_type;
 
