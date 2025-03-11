@@ -6,6 +6,7 @@ import { getNotionPageIdAllowedValues } from '../common/helpers/get-page-id-allo
 import { pageItemQoreType } from './constants';
 import { DEFAULT_TRIGGER_POLLING_INTERVAL } from '../../../../global/constants';
 import { delayOrCancel } from '../../../../global/helpers/event-triggers';
+import { mapNotionProperties } from '../common/properties-mapping';
 
 const notionUpdatedPageEvent = QoreAppCreator.createLocalizedTrigger({
   app: 'Notion',
@@ -74,7 +75,10 @@ const getPageById = async (token: string, pageId: string) => {
     page_id: pageId,
   });
 
-  return response;
+  return {
+    ...response,
+    ...('properties' in response ? { properties: mapNotionProperties(response.properties) } : {}),
+  };
 };
 
 export default notionUpdatedPageEvent;

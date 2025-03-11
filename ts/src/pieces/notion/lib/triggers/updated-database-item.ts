@@ -1,9 +1,9 @@
 import { Client } from '@notionhq/client';
-import { DatabaseObjectResponse } from '@notionhq/client/build/src/api-endpoints';
 import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../../global/constants';
 import { pollUpdatedItemsForTrigger } from '../../../../global/helpers/event-triggers';
 import { getNotionDatabaseIdAllowedValues } from '../common/helpers/get-database-id-allowed-values';
+import { mapNotionProperties } from '../common/properties-mapping';
 import { databaseItemQoreType } from './constants';
 
 const notionUpdatedDatabaseItemTrigger = QoreAppCreator.createLocalizedTrigger({
@@ -79,7 +79,10 @@ export const getLastUpdatedDatabaseItems = async (
     page_size: limit,
   });
 
-  return response.results as DatabaseObjectResponse[];
+  return response.results.map((item) => ({
+    ...item,
+    ...('properties' in item && { properties: mapNotionProperties(item.properties) }),
+  }));
 };
 
 export default notionUpdatedDatabaseItemTrigger;

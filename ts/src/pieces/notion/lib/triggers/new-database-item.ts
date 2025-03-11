@@ -3,6 +3,7 @@ import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../../global/constants';
 import { pollCreatedItemsForTrigger } from '../../../../global/helpers/event-triggers';
 import { getNotionDatabaseIdAllowedValues } from '../common/helpers/get-database-id-allowed-values';
+import { mapNotionProperties } from '../common/properties-mapping';
 import { databaseItemQoreType } from './constants';
 
 const notionNewDatabaseItemTrigger = QoreAppCreator.createLocalizedTrigger({
@@ -77,7 +78,10 @@ export const getLastCreatedDatabaseItems = async (
     page_size: limit,
   });
 
-  return response.results;
+  return response.results.map((item) => ({
+    ...item,
+    ...('properties' in item && { properties: mapNotionProperties(item.properties) }),
+  }));
 };
 
 export default notionNewDatabaseItemTrigger;
