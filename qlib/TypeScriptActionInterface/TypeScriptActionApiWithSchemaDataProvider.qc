@@ -55,12 +55,6 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         #! Independent path vars
         *hash<string, bool> independent_path_vars;
 
-        #! Info on flattened request types: top-level key -> actual location
-        *hash<string, list<string>> reqmap;
-
-        #! Reverse map for flattened request types: dotted location -> top-level key
-        *hash<string, string> rreqmap;
-
         #! Info on flattened response types: top-level key -> actual location
         #hash<string, list<string>> resmap;
 
@@ -85,8 +79,17 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         #! Saved action attributes
         *hash<auto> action_save;
 
+        #! Request key for static request info
+        string request_key;
+
         #! Global request type info per action for dynamic types: app-action -> type info
         static hash<string, AbstractDataProviderType> grtmap;
+
+        #! Info on flattened request types: request key -> top-level key -> actual location
+        static hash<string, *hash<string, list<string>>> reqmap;
+
+        #! Reverse map for flattened request types: request key -> dotted location -> top-level key
+        static hash<string, *hash<string, string>> rreqmap;
 
         #! Mutex for global request type info
         static Mutex gtlock();
@@ -118,7 +121,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                     createRequestType();
                 }
                 info += action_save;
-                if (*hash<string, AbstractDataField> fields = request_type.getFields()) {
+                if (request_type && (*hash<string, AbstractDataField> fields = request_type.getFields())) {
                     info.options = DataProviderActionCatalog::getActionOptionFromFields(fields);
                 }
             };
@@ -131,56 +134,6 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             NoIoHelper nih();
             createRequestType();
         }
-    }
-
-    overrideOptions(HashDataType type) {
-        *hash<string, AbstractDataField> fields = type.getFields();
-        foreach hash<auto> i in (override_options_save.pairIterator()) {
-            # find option to update
-            string k = rreqmap{i.key} ?? i.key;
-            list<string> l = k.split(".");
-            string key = l[0];
-
-            on_error rethrow $1.err, sprintf("%s (while processing option %y in %y)", $1.desc, key, i.key);
-
-            *AbstractDataField f = fields{key};
-            hash<auto> opt;
-            if (!f) {
-                TypeScriptActionInterface::getOptionFunctions(\action_save, self, i.key, \i.value, True);
-                if (l.size() > 1) {
-                    overrideOptionType("option", type, l, i.value, k);
-                    continue;
-                }
-
-                type.addField(TypeScriptActionInterface::getField("option", key, i.value, self));
-                if (i.value_depends_on) {
-                    depmap{key} = map {$1: True}, i.value.depends_on;
-                }
-                if (prov.op.method != "GET") {
-                    reqmap{key} = ("body",);
-                    rreqmap{"body." + key} = key;
-                } else {
-                    reqmap{key} = ("query",);
-                    rreqmap{"query." + key} = key;
-                }
-            } else {
-                if (!(f instanceof QoreDataField)) {
-                    throw "OPTION-OVERRIDE-ERROR", sprintf("App %y action %y option %y: cannot override %s; "
-                        "expecting \"QoreDataField\"", action_save.app, action_save.action, key, f.className());
-                }
-                if (l.size() == 1) {
-                    TypeScriptActionInterface::getOptionFunctions(\action_save, self, i.key, \i.value, True);
-                }
-                overrideOptionType("option", type, l, i.value, k);
-                if (l.size() == 1 && (*list<auto> dl = i.value.depends_on)) {
-                    depmap{l[0]} = map {$1: True}, dl;
-                }
-            }
-        }
-    }
-
-    overrideOptionType(string path, AbstractDataProviderType type, list<string> l, hash<auto> type_hash, string k) {
-        TypeScriptActionApiWithSchemaDataProvider::overrideOptionType(path, action_save, type, l, type_hash, k, self);
     }
 
     static overrideOptionType(string path, hash<auto> action, AbstractDataProviderType type, list<string> l,
@@ -263,12 +216,12 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             NoIoHelper nih();
             createRequestType();
         }
-        if (reqmap && req) {
+        if (reqmap{request_key} && req) {
             hash<auto> req0;
             map req0{$1.key} = $1.value, (
-                map findNormalizedValue(req, $1.value, $1.key), reqmap.pairIterator()
+                map findNormalizedValue(req, $1.value, $1.key), reqmap{request_key}.pairIterator()
             ), $1;
-            map remove req{$1[0]}, reqmap.iterator();
+            map remove req{$1[0]}, reqmap{request_key}.iterator();
             map req0{$1.key} = $1.value, req.pairIterator(), !exists req0{$1.key};
             req = req0;
         }
@@ -305,6 +258,56 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         return TypeScriptActionApiDataProvider::tryGetActionOptionsFromRequestTypeWithData(req);
     }
 
+    private overrideOptions(HashDataType type) {
+        *hash<string, AbstractDataField> fields = type.getFields();
+        foreach hash<auto> i in (override_options_save.pairIterator()) {
+            # find option to update
+            string k = rreqmap{request_key}{i.key} ?? i.key;
+            list<string> l = k.split(".");
+            string key = l[0];
+
+            on_error rethrow $1.err, sprintf("%s (while processing option %y in %y)", $1.desc, key, i.key);
+
+            *AbstractDataField f = fields{key};
+            hash<auto> opt;
+            if (!f) {
+                TypeScriptActionInterface::getOptionFunctions(\action_save, self, i.key, \i.value, True);
+                if (l.size() > 1) {
+                    overrideOptionType("option", type, l, i.value, k);
+                    continue;
+                }
+
+                type.addField(TypeScriptActionInterface::getField("option", key, i.value, self));
+                if (i.value_depends_on) {
+                    depmap{key} = map {$1: True}, i.value.depends_on;
+                }
+                if (prov.op.method != "GET") {
+                    reqmap{request_key}{key} = ("body",);
+                    rreqmap{request_key}{"body." + key} = key;
+                } else {
+                    reqmap{request_key}{key} = ("query",);
+                    rreqmap{request_key}{"query." + key} = key;
+                }
+            } else {
+                if (!(f instanceof QoreDataField)) {
+                    throw "OPTION-OVERRIDE-ERROR", sprintf("App %y action %y option %y: cannot override %s; "
+                        "expecting \"QoreDataField\"", action_save.app, action_save.action, key, f.className());
+                }
+                if (l.size() == 1) {
+                    TypeScriptActionInterface::getOptionFunctions(\action_save, self, i.key, \i.value, True);
+                }
+                overrideOptionType("option", type, l, i.value, k);
+                if (l.size() == 1 && (*list<auto> dl = i.value.depends_on)) {
+                    depmap{l[0]} = map {$1: True}, dl;
+                }
+            }
+        }
+    }
+
+    private overrideOptionType(string path, AbstractDataProviderType type, list<string> l, hash<auto> type_hash, string k) {
+        TypeScriptActionApiWithSchemaDataProvider::overrideOptionType(path, action_save, type, l, type_hash, k, self);
+    }
+
     #! Returns the request type for this API
     /** @return the request type for this API
     */
@@ -334,26 +337,25 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         checkDataProvider();
 
         # get type key
-        string tk = sprintf("%s-%s", app, action);
+        request_key = sprintf("%s-%s", app, action);
 
         # check global map unlocked
-        *AbstractDataProviderType t = grtmap{tk};
-        if (!t) {
+        request_type = grtmap{request_key};
+        if (!request_type) {
             # check again in the lock
             gtlock.lock();
             on_exit gtlock.unlock();
 
-            t = grtmap{tk};
-            if (!t) {
-                createRequestTypeIntern(tk);
+            request_type = grtmap{request_key};
+            if (!request_type) {
+                createRequestTypeIntern();
                 return;
             }
         }
-        request_type = t;
     }
 
     #! Creates the request type for this API
-    private createRequestTypeIntern(string tk) {
+    private createRequestTypeIntern() {
         request_type = prov.getRequestType();
 
         if (request_type && (*hash<string, AbstractDataField> fields = request_type.getFields())) {
@@ -371,8 +373,8 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                 } else if (fields) {
                     map newreq.addField($1), (fields = fields - (keys newreq.getFields())).iterator();
                 }
-                map reqmap{$1} = l, keys fields;
-                map rreqmap{l.join(".") + ("." + $1)} = $1, keys fields;
+                map reqmap{request_key}{$1} = l, keys fields;
+                map rreqmap{request_key}{l.join(".") + ("." + $1)} = $1, keys fields;
             };
             bool stop;
             # process body args
@@ -488,7 +490,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                 }
             }
         }
-        grtmap{tk} = request_type;
+        grtmap{request_key} = request_type;
     }
 
     #! Creates the response type for this API
@@ -585,8 +587,8 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             }
 
             hash<auto> req0;
-            debug("Action options for action %y: %y reqmap: %y", getName(), req, reqmap);
-            map fixOptimizedValue(\req0, $1.value, $1.key, remove req{$1.key}), reqmap.pairIterator(),
+            debug("Action options for action %y: %y reqmap: %y", getName(), req, reqmap{request_key});
+            map fixOptimizedValue(\req0, $1.value, $1.key, remove req{$1.key}), reqmap{request_key}.pairIterator(),
                 req.hasKey($1.key);
             map req0{$1.key} = $1.value, req.pairIterator(), !req0.hasKey($1.key);
             req = req0;
@@ -603,7 +605,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                     path_vars{$1.value};
             }
         }
-        map fixOptimizedValue(\req, $1.value, remove req{$1.key}, $1.key), reqmap.pairIterator(),
+        map fixOptimizedValue(\req, $1.value, remove req{$1.key}, $1.key), reqmap{request_key}.pairIterator(),
             req.hasKey($1.key);
        return getAsyncValue(api, req, request_options, getCallContextInfo());
     }

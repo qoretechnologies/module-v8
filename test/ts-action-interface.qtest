@@ -454,9 +454,12 @@ var obj = {
             assertTrue(exists f);
         }
 
-        actioninfo = DataProviderActionCatalog::getAppActionEx("js-swagger-test", "get-pet");
+        actioninfo = DataProviderActionCatalog::checkAppActionOptions("js-swagger-test", "get-pet");
         assertEq("get-pet", actioninfo.action);
-        assertEq("id", actioninfo.options.id.ref_data);
+        {
+            on_error printf("options: %N\n", actioninfo.options);
+            assertEq("id", actioninfo.options.id.ref_data);
+        }
         assertEq((1, 2), (map $1.value, prov.getReferenceData("id")));
 
         string cname = TypeScriptActionInterface::createConnection("js-swagger-test", {} + {
