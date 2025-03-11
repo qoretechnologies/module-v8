@@ -3,6 +3,7 @@ import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
 import { Debugger } from '../../../utils/Debugger';
 import { NETSUITE_APP_NAME } from '../constants';
+import { getNetsuiteRecordTypesAllowedValues } from '../helpers/get-record-type-allowed-values';
 
 const netsuiteNewRecordTrigger = QoreAppCreator.createLocalizedTrigger({
   app: NETSUITE_APP_NAME,
@@ -12,6 +13,8 @@ const netsuiteNewRecordTrigger = QoreAppCreator.createLocalizedTrigger({
     recordType: {
       type: 'string',
       required: true,
+      allowed_values_creatable: true,
+      get_allowed_values: getNetsuiteRecordTypesAllowedValues,
     },
   },
   event_function: async (context, update, should_stop) => {
@@ -66,25 +69,23 @@ const netsuiteNewRecordTrigger = QoreAppCreator.createLocalizedTrigger({
 });
 
 const getLastCreatedRecordItems = async (recordType: string, accountId: string, token: string) => {
-  try {
-    const result = await fetchSuiteQlData({
-      token,
-      accountId,
-      query: `SELECT * FROM ${recordType} ORDER BY datecreated DESC`,
-    });
+  const dateFields = ['datecreated', 'createddate', 'created'];
 
-    return result.items[0];
-  } catch (error) {
-    Debugger.log('Error while fetching NetSuite record', error);
+  for (const dateField of dateFields) {
+    try {
+      const result = await fetchSuiteQlData({
+        token,
+        accountId,
+        query: `SELECT * FROM ${recordType} ORDER BY ${dateField} DESC`,
+      });
 
-    const result = await fetchSuiteQlData({
-      token,
-      accountId,
-      query: `SELECT * FROM ${recordType} ORDER BY createddate DESC`,
-    });
-
-    return result.items[0];
+      return result.items;
+    } catch (error) {
+      Debugger.log(`Error fetching with ${dateField}: ${error}`);
+    }
   }
+
+  throw new Error(`Failed to fetch ${recordType} records with any known date field`);
 };
 
 const fetchSuiteQlData = async ({
