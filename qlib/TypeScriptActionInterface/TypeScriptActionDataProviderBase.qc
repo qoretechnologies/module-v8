@@ -50,6 +50,9 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         #! Any REST client to use for reference data, for example
         RestClient rest;
 
+        #! type cache for dependent options; opt val key -> type
+        hash<string, AbstractDataProviderType> dtcache;
+
         #! Data cache for retrieving allowed values
         static TypeScriptDataCache cache();
     }
@@ -179,7 +182,8 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         throw "ARG-ERROR", sprintf("Cannot calculate key value for type %y", arg.fullType());
     }
 
-    static private auto getAsyncValueArgsIntern(*LoggerInterface logger, hash<AsyncCallInfo> api, *softlist<auto> args) {
+    static private auto getAsyncValueArgsIntern(*LoggerInterface logger, hash<AsyncCallInfo> api,
+            *softlist<auto> args) {
         if (no_io) {
             return;
         }
@@ -189,13 +193,6 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
 
         # handle the call with a remote process
         if (TSAI::checkServer()) {
-if (api.label =~ /Dynamic type function.*post-crm-v3-objects-products_create/) {
-    try {
-        throw 1;
-    } catch (hash<ExceptionInfo> ex) {
-        TSAI::info("%y: XXX %s", api.label, get_exception_string(ex));
-    }
-}
             TSAI::info("%y: acquiring proxy for %y: %y", api.label, api.key, args);
             JavaScriptProgramProxy proxy = TypeScriptActionInterface::server.get();
             TSAI::info("%y: proxy acquired for %y", api.label, api.key);
@@ -288,6 +285,16 @@ if (api.label =~ /Dynamic type function.*post-crm-v3-objects-products_create/) {
         }
 
         TSAI::debug("Async result: %y", rv);
+
+        if (!exists err && api.post_processing) {
+            try {
+                api.post_processing(logger, api, args, \rv);
+                TSAI::debug("Post-processed async result: %y", rv);
+            } catch (hash<ExceptionInfo> ex) {
+                TSAI::error("Error post processing call result %y: %s", api.label, get_exception_string(ex));
+                rethrow;
+            }
+        }
 
         return rv;
     }
@@ -420,6 +427,75 @@ if (api.label =~ /Dynamic type function.*post-crm-v3-objects-products_create/) {
                 "opts": action_opts,
             };
         }
+    }
+
+    #! Returns a key to the dependent type cache for the request type
+    private static *string getCacheKey(list<string> skeys, hash<auto> req) {
+        string ckey;
+        foreach string key in (skeys) {
+            auto val = req{key};
+            if (!val.strp()) {
+                return;
+            }
+            if (exists ckey) {
+                ckey += "|";
+            }
+            ckey += val.toString();
+        }
+        return (foldl $1 + "|" + $2, skeys) + "=" + ckey;
+    }
+
+    #! Returns a data type for the given base type and request / option data
+    private AbstractDataProviderType getDynamicDataType(AbstractDataProviderType rt, hash<auto> req) {
+        *hash<auto> slice = dmap{keys req};
+        if (!slice) {
+            return rt;
+        }
+        # cache key (opt[|opt...]=val[|val])
+        *string ckey = getCacheKey(keys slice, req);
+        if (exists ckey) {
+            if (*AbstractDataProviderType rv = dtcache{ckey}) {
+                return rv;
+            }
+        }
+
+        *HashDataType type;
+        if (TSAI::checkServer()) {
+            TSAI::debug("Starting proxy for app %y action %y: request type with args: %y", app, action, req);
+            JavaScriptProgramProxy proxy = TypeScriptActionInterface::server.get();
+            TSAI::debug("Proxy started for app %y action %y: request type with args", app, action);
+            on_exit TypeScriptActionInterface::server.release(proxy);
+            type = proxy.getRequestType(app, action, conn.name, conn.getRealOptions(), req);
+        } else {
+            type = getDynamicTypeIntern(rt, slice, req);
+        }
+        if (exists ckey) {
+            return dtcache{ckey} = type ?? rt;
+        }
+        return type ?? rt;
+    }
+
+    private *HashDataType getDynamicTypeIntern(AbstractDataProviderType rt, hash<auto> slice, hash<auto> req) {
+        HashDataType type;
+        foreach hash<auto> i in (slice.pairIterator()) {
+            auto val = req{i.key};
+            debug("Retrieving options dependent on option %y, value %y for data provider %y type %y", i.key, val,
+                getName(), type);
+            auto res = getAsyncValueWithCache(i.value, req, getCallContextInfo(req));
+            if (!exists res) {
+                continue;
+            }
+            if (res.typeCode() != NT_HASH) {
+                throw "DATA-PROVIDER-DYNAMIC-TYPE-ERROR", sprintf("JavaScript 'get_dependent_options()' function "
+                    "returned type %y; expecting \"hash\"", res.fullType());
+            }
+            if (!type) {
+                type = cast<HashDataType>(rt.copy());
+            }
+            map type.addField(TypeScriptActionInterface::getField("dynamic-type", $1.key, $1.value, self, True)),
+                res.pairIterator();
+        }
+        return type;
     }
 
     #! Returns reference data of the given kind if available

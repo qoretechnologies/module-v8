@@ -12652,6 +12652,828 @@ type RootTranslation = {
 				}
 			}
 		}
+		Teams: {
+			/**
+			 * M​i​c​r​o​s​o​f​t​ ​T​e​a​m​s
+			 */
+			displayName: string
+			/**
+			 * C​o​l​l​a​b​o​r​a​t​e​ ​w​i​t​h​ ​y​o​u​r​ ​t​e​a​m​ ​u​s​i​n​g​ ​c​h​a​n​n​e​l​s​,​ ​m​e​e​t​i​n​g​s​,​ ​a​n​d​ ​m​e​s​s​a​g​e​s
+			 */
+			shortDesc: string
+			/**
+			 * M​i​c​r​o​s​o​f​t​ ​T​e​a​m​s​ ​i​s​ ​a​ ​c​o​l​l​a​b​o​r​a​t​i​o​n​ ​p​l​a​t​f​o​r​m​ ​t​h​a​t​ ​e​n​a​b​l​e​s​ ​m​e​s​s​a​g​i​n​g​,​ ​f​i​l​e​ ​s​h​a​r​i​n​g​,​ ​v​i​d​e​o​ ​m​e​e​t​i​n​g​s​,​ ​a​n​d​ ​a​p​p​ ​i​n​t​e​g​r​a​t​i​o​n​ ​w​i​t​h​i​n​ ​y​o​u​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​.
+			 */
+			longDesc: string
+			actions: {
+				'create-channel': {
+					/**
+					 * C​r​e​a​t​e​ ​C​h​a​n​n​e​l
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​h​a​n​n​e​l​ ​i​n​ ​a​ ​t​e​a​m
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​h​a​n​n​e​l​ ​w​i​t​h​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​t​e​a​m​ ​w​h​e​r​e​ ​m​e​m​b​e​r​s​ ​c​a​n​ ​c​o​l​l​a​b​o​r​a​t​e​ ​t​h​r​o​u​g​h​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​,​ ​f​i​l​e​s​,​ ​a​n​d​ ​i​n​t​e​g​r​a​t​e​d​ ​a​p​p​s​.
+					 */
+					longDesc: string
+					options: {
+						teamId: {
+							/**
+							 * T​e​a​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​t​e​a​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​(​G​U​I​D​)​ ​f​o​r​ ​t​h​e​ ​t​e​a​m​ ​w​h​e​r​e​ ​t​h​e​ ​n​e​w​ ​c​h​a​n​n​e​l​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						displayName: {
+							/**
+							 * C​h​a​n​n​e​l​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​f​ ​t​h​e​ ​n​e​w​ ​c​h​a​n​n​e​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​c​h​a​n​n​e​l​.​ ​M​u​s​t​ ​b​e​ ​u​n​i​q​u​e​ ​w​i​t​h​i​n​ ​t​h​e​ ​t​e​a​m​ ​a​n​d​ ​b​e​t​w​e​e​n​ ​1​-​5​0​ ​c​h​a​r​a​c​t​e​r​s​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​p​u​r​p​o​s​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​e​x​p​l​a​i​n​i​n​g​ ​t​h​e​ ​p​u​r​p​o​s​e​ ​o​r​ ​t​o​p​i​c​ ​o​f​ ​t​h​e​ ​c​h​a​n​n​e​l​.​ ​L​i​m​i​t​e​d​ ​t​o​ ​1​0​2​4​ ​c​h​a​r​a​c​t​e​r​s​.
+							 */
+							longDesc: string
+						}
+						membershipType: {
+							/**
+							 * M​e​m​b​e​r​s​h​i​p​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * C​h​a​n​n​e​l​ ​p​r​i​v​a​c​y​ ​s​e​t​t​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * D​e​f​i​n​e​s​ ​t​h​e​ ​p​r​i​v​a​c​y​ ​l​e​v​e​l​ ​o​f​ ​t​h​e​ ​c​h​a​n​n​e​l​.​ ​O​p​t​i​o​n​s​ ​i​n​c​l​u​d​e​ ​"​s​t​a​n​d​a​r​d​"​ ​(​v​i​s​i​b​l​e​ ​t​o​ ​a​l​l​ ​t​e​a​m​ ​m​e​m​b​e​r​s​)​ ​o​r​ ​"​p​r​i​v​a​t​e​"​ ​(​v​i​s​i​b​l​e​ ​o​n​l​y​ ​t​o​ ​s​p​e​c​i​f​i​c​ ​m​e​m​b​e​r​s​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'create-meeting': {
+					/**
+					 * C​r​e​a​t​e​ ​M​e​e​t​i​n​g
+					 */
+					displayName: string
+					/**
+					 * S​c​h​e​d​u​l​e​ ​a​ ​n​e​w​ ​T​e​a​m​s​ ​m​e​e​t​i​n​g
+					 */
+					shortDesc: string
+					/**
+					 * S​c​h​e​d​u​l​e​ ​a​ ​n​e​w​ ​m​e​e​t​i​n​g​ ​i​n​ ​M​i​c​r​o​s​o​f​t​ ​T​e​a​m​s​ ​w​i​t​h​ ​s​p​e​c​i​f​i​e​d​ ​p​a​r​t​i​c​i​p​a​n​t​s​,​ ​t​i​m​e​,​ ​l​o​c​a​t​i​o​n​,​ ​a​n​d​ ​o​t​h​e​r​ ​m​e​e​t​i​n​g​ ​d​e​t​a​i​l​s​.
+					 */
+					longDesc: string
+					options: {
+						subject: {
+							/**
+							 * S​u​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * M​e​e​t​i​n​g​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​o​r​ ​s​u​b​j​e​c​t​ ​o​f​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​t​h​a​t​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​i​n​ ​c​a​l​e​n​d​a​r​ ​i​n​v​i​t​a​t​i​o​n​s​ ​a​n​d​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+						startDateTime: {
+							/**
+							 * S​t​a​r​t​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * M​e​e​t​i​n​g​ ​s​t​a​r​t​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​w​h​e​n​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​b​e​g​i​n​s​ ​i​n​ ​I​S​O​ ​8​6​0​1​ ​f​o​r​m​a​t​ ​(​Y​Y​Y​Y​-​M​M​-​D​D​T​H​H​:​M​M​:​S​S​)​.
+							 */
+							longDesc: string
+						}
+						endDateTime: {
+							/**
+							 * E​n​d​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * M​e​e​t​i​n​g​ ​e​n​d​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​w​h​e​n​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​e​n​d​s​ ​i​n​ ​I​S​O​ ​8​6​0​1​ ​f​o​r​m​a​t​ ​(​Y​Y​Y​Y​-​M​M​-​D​D​T​H​H​:​M​M​:​S​S​)​.
+							 */
+							longDesc: string
+						}
+						teamId: {
+							/**
+							 * T​e​a​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​t​e​a​m​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​t​e​a​m​ ​i​d​e​n​t​i​f​i​e​r​ ​i​f​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​i​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​e​a​m​.
+							 */
+							longDesc: string
+						}
+						channelId: {
+							/**
+							 * C​h​a​n​n​e​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​c​h​a​n​n​e​l​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​c​h​a​n​n​e​l​ ​i​d​e​n​t​i​f​i​e​r​ ​i​f​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​i​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​h​a​n​n​e​l​ ​w​i​t​h​i​n​ ​a​ ​t​e​a​m​.
+							 */
+							longDesc: string
+						}
+						content: {
+							/**
+							 * M​e​e​t​i​n​g​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * M​e​e​t​i​n​g​ ​a​g​e​n​d​a​ ​o​r​ ​n​o​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​t​e​x​t​ ​d​e​s​c​r​i​b​i​n​g​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​a​g​e​n​d​a​,​ ​p​r​e​p​a​r​a​t​i​o​n​ ​m​a​t​e​r​i​a​l​s​,​ ​o​r​ ​o​t​h​e​r​ ​r​e​l​e​v​a​n​t​ ​i​n​f​o​r​m​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						location: {
+							/**
+							 * L​o​c​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * P​h​y​s​i​c​a​l​ ​o​r​ ​v​i​r​t​u​a​l​ ​m​e​e​t​i​n​g​ ​l​o​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​h​y​s​i​c​a​l​ ​l​o​c​a​t​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​w​i​l​l​ ​t​a​k​e​ ​p​l​a​c​e​,​ ​o​r​ ​a​ ​c​u​s​t​o​m​ ​v​i​r​t​u​a​l​ ​l​o​c​a​t​i​o​n​ ​d​e​s​c​r​i​p​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						attendees: {
+							/**
+							 * A​t​t​e​n​d​e​e​s
+							 */
+							displayName: string
+							/**
+							 * M​e​e​t​i​n​g​ ​p​a​r​t​i​c​i​p​a​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​o​r​ ​u​s​e​r​ ​I​D​s​ ​f​o​r​ ​p​e​o​p​l​e​ ​w​h​o​ ​s​h​o​u​l​d​ ​b​e​ ​i​n​v​i​t​e​d​ ​t​o​ ​t​h​e​ ​m​e​e​t​i​n​g​.
+							 */
+							longDesc: string
+						}
+						isOnlineMeeting: {
+							/**
+							 * O​n​l​i​n​e​ ​M​e​e​t​i​n​g
+							 */
+							displayName: string
+							/**
+							 * E​n​a​b​l​e​ ​T​e​a​m​s​ ​o​n​l​i​n​e​ ​m​e​e​t​i​n​g​ ​f​e​a​t​u​r​e​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​s​e​t​ ​t​o​ ​t​r​u​e​,​ ​c​r​e​a​t​e​s​ ​a​ ​T​e​a​m​s​ ​o​n​l​i​n​e​ ​m​e​e​t​i​n​g​ ​w​i​t​h​ ​v​i​d​e​o​ ​c​o​n​f​e​r​e​n​c​i​n​g​ ​c​a​p​a​b​i​l​i​t​i​e​s​ ​a​n​d​ ​a​ ​j​o​i​n​ ​l​i​n​k​.
+							 */
+							longDesc: string
+						}
+						timeZone: {
+							/**
+							 * T​i​m​e​ ​Z​o​n​e
+							 */
+							displayName: string
+							/**
+							 * M​e​e​t​i​n​g​ ​t​i​m​e​ ​z​o​n​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​m​e​ ​z​o​n​e​ ​f​o​r​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​s​t​a​r​t​ ​a​n​d​ ​e​n​d​ ​t​i​m​e​s​,​ ​s​u​c​h​ ​a​s​ ​"​P​a​c​i​f​i​c​ ​S​t​a​n​d​a​r​d​ ​T​i​m​e​"​ ​o​r​ ​"​U​T​C​"​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'delete-meeting': {
+					/**
+					 * D​e​l​e​t​e​ ​M​e​e​t​i​n​g
+					 */
+					displayName: string
+					/**
+					 * C​a​n​c​e​l​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​m​e​e​t​i​n​g
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​c​a​n​c​e​l​s​ ​a​n​d​ ​r​e​m​o​v​e​s​ ​a​ ​s​c​h​e​d​u​l​e​d​ ​m​e​e​t​i​n​g​ ​f​r​o​m​ ​a​l​l​ ​p​a​r​t​i​c​i​p​a​n​t​s​'​ ​c​a​l​e​n​d​a​r​s​.
+					 */
+					longDesc: string
+					options: {
+						meetingId: {
+							/**
+							 * M​e​e​t​i​n​g​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * U​n​i​q​u​e​ ​m​e​e​t​i​n​g​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​(​G​U​I​D​)​ ​o​f​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​t​o​ ​b​e​ ​c​a​n​c​e​l​e​d​.
+							 */
+							longDesc: string
+						}
+						meetingSource: {
+							/**
+							 * M​e​e​t​i​n​g​ ​S​o​u​r​c​e
+							 */
+							displayName: string
+							/**
+							 * O​r​i​g​i​n​ ​o​f​ ​t​h​e​ ​m​e​e​t​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​i​e​s​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​w​a​s​ ​c​r​e​a​t​e​d​,​ ​s​u​c​h​ ​a​s​ ​"​p​r​i​v​a​t​e​"​ ​o​r​ ​"​t​e​a​m​"​.
+							 */
+							longDesc: string
+						}
+						teamId: {
+							/**
+							 * T​e​a​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​t​e​a​m​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​a​m​ ​i​d​e​n​t​i​f​i​e​r​ ​i​f​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​i​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​e​a​m​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'send-channel-message': {
+					/**
+					 * S​e​n​d​ ​C​h​a​n​n​e​l​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * P​o​s​t​ ​a​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​ ​t​e​a​m​ ​c​h​a​n​n​e​l
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​ ​a​ ​n​e​w​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​h​a​n​n​e​l​ ​w​i​t​h​i​n​ ​a​ ​t​e​a​m​ ​t​h​a​t​ ​a​l​l​ ​c​h​a​n​n​e​l​ ​m​e​m​b​e​r​s​ ​c​a​n​ ​v​i​e​w​ ​a​n​d​ ​r​e​s​p​o​n​d​ ​t​o​.
+					 */
+					longDesc: string
+					options: {
+						channelId: {
+							/**
+							 * C​h​a​n​n​e​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​c​h​a​n​n​e​l​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​w​i​l​l​ ​b​e​ ​p​o​s​t​e​d​.
+							 */
+							longDesc: string
+						}
+						teamId: {
+							/**
+							 * T​e​a​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​e​a​m​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​e​a​m​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​r​g​e​t​ ​c​h​a​n​n​e​l​.
+							 */
+							longDesc: string
+						}
+						message: {
+							/**
+							 * M​e​s​s​a​g​e
+							 */
+							displayName: string
+							/**
+							 * M​e​s​s​a​g​e​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​b​e​ ​p​o​s​t​e​d​ ​i​n​ ​t​h​e​ ​c​h​a​n​n​e​l​.
+							 */
+							longDesc: string
+						}
+						contentType: {
+							/**
+							 * C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * F​o​r​m​a​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​f​o​r​m​a​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t​,​ ​s​u​c​h​ ​a​s​ ​"​t​e​x​t​"​ ​f​o​r​ ​p​l​a​i​n​ ​t​e​x​t​ ​o​r​ ​"​h​t​m​l​"​ ​f​o​r​ ​f​o​r​m​a​t​t​e​d​ ​c​o​n​t​e​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'send-chat-message': {
+					/**
+					 * S​e​n​d​ ​C​h​a​t​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​ ​c​h​a​t​ ​c​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​ ​a​ ​n​e​w​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​ ​d​i​r​e​c​t​ ​c​h​a​t​ ​o​r​ ​g​r​o​u​p​ ​c​h​a​t​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​o​u​t​s​i​d​e​ ​o​f​ ​a​ ​t​e​a​m​ ​c​h​a​n​n​e​l​.
+					 */
+					longDesc: string
+					options: {
+						chatId: {
+							/**
+							 * C​h​a​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​c​h​a​t​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​d​i​r​e​c​t​ ​c​h​a​t​ ​o​r​ ​g​r​o​u​p​ ​c​h​a​t​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​w​i​l​l​ ​b​e​ ​s​e​n​t​.
+							 */
+							longDesc: string
+						}
+						message: {
+							/**
+							 * M​e​s​s​a​g​e
+							 */
+							displayName: string
+							/**
+							 * M​e​s​s​a​g​e​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​b​e​ ​s​e​n​t​ ​i​n​ ​t​h​e​ ​c​h​a​t​.
+							 */
+							longDesc: string
+						}
+						contentType: {
+							/**
+							 * C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * F​o​r​m​a​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​f​o​r​m​a​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t​,​ ​s​u​c​h​ ​a​s​ ​"​t​e​x​t​"​ ​f​o​r​ ​p​l​a​i​n​ ​t​e​x​t​ ​o​r​ ​"​h​t​m​l​"​ ​f​o​r​ ​f​o​r​m​a​t​t​e​d​ ​c​o​n​t​e​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'update-channel': {
+					/**
+					 * U​p​d​a​t​e​ ​C​h​a​n​n​e​l
+					 */
+					displayName: string
+					/**
+					 * M​o​d​i​f​y​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​h​a​n​n​e​l
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​p​r​o​p​e​r​t​i​e​s​ ​o​r​ ​m​e​m​b​e​r​s​h​i​p​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​h​a​n​n​e​l​ ​w​i​t​h​i​n​ ​a​ ​t​e​a​m​.
+					 */
+					longDesc: string
+					options: {
+						channelId: {
+							/**
+							 * C​h​a​n​n​e​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​c​h​a​n​n​e​l​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​b​e​ ​u​p​d​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						teamId: {
+							/**
+							 * T​e​a​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​e​a​m​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​e​a​m​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​b​e​ ​u​p​d​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						displayName: {
+							/**
+							 * C​h​a​n​n​e​l​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​c​h​a​n​n​e​l​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​h​a​n​n​e​l​.​ ​M​u​s​t​ ​b​e​ ​u​n​i​q​u​e​ ​w​i​t​h​i​n​ ​t​h​e​ ​t​e​a​m​ ​a​n​d​ ​b​e​t​w​e​e​n​ ​1​-​5​0​ ​c​h​a​r​a​c​t​e​r​s​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​c​h​a​n​n​e​l​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​e​x​p​l​a​i​n​i​n​g​ ​t​h​e​ ​p​u​r​p​o​s​e​ ​o​r​ ​t​o​p​i​c​ ​o​f​ ​t​h​e​ ​c​h​a​n​n​e​l​.​ ​L​i​m​i​t​e​d​ ​t​o​ ​1​0​2​4​ ​c​h​a​r​a​c​t​e​r​s​.
+							 */
+							longDesc: string
+						}
+						addMembers: {
+							/**
+							 * A​d​d​ ​M​e​m​b​e​r​s
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​c​h​a​n​n​e​l
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​u​s​e​r​ ​I​D​s​ ​t​o​ ​a​d​d​ ​a​s​ ​m​e​m​b​e​r​s​ ​t​o​ ​t​h​e​ ​c​h​a​n​n​e​l​.​ ​O​n​l​y​ ​a​p​p​l​i​c​a​b​l​e​ ​f​o​r​ ​p​r​i​v​a​t​e​ ​c​h​a​n​n​e​l​s​.
+							 */
+							longDesc: string
+						}
+						removeMembers: {
+							/**
+							 * R​e​m​o​v​e​ ​M​e​m​b​e​r​s
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​s​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​c​h​a​n​n​e​l
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​u​s​e​r​ ​I​D​s​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​m​e​m​b​e​r​s​h​i​p​.​ ​O​n​l​y​ ​a​p​p​l​i​c​a​b​l​e​ ​f​o​r​ ​p​r​i​v​a​t​e​ ​c​h​a​n​n​e​l​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'update-meeting': {
+					/**
+					 * U​p​d​a​t​e​ ​M​e​e​t​i​n​g
+					 */
+					displayName: string
+					/**
+					 * M​o​d​i​f​y​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​m​e​e​t​i​n​g
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​c​h​e​d​u​l​e​d​ ​m​e​e​t​i​n​g​,​ ​s​u​c​h​ ​a​s​ ​t​i​m​e​,​ ​l​o​c​a​t​i​o​n​,​ ​a​t​t​e​n​d​e​e​s​,​ ​o​r​ ​o​t​h​e​r​ ​p​r​o​p​e​r​t​i​e​s​.
+					 */
+					longDesc: string
+					options: {
+						meetingId: {
+							/**
+							 * M​e​e​t​i​n​g​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​m​e​e​t​i​n​g​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​t​o​ ​b​e​ ​u​p​d​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						subject: {
+							/**
+							 * S​u​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​m​e​e​t​i​n​g​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​t​i​t​l​e​ ​o​r​ ​s​u​b​j​e​c​t​ ​o​f​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​t​h​a​t​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​i​n​ ​c​a​l​e​n​d​a​r​ ​i​n​v​i​t​a​t​i​o​n​s​ ​a​n​d​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+						startDateTime: {
+							/**
+							 * S​t​a​r​t​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​m​e​e​t​i​n​g​ ​s​t​a​r​t​ ​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​w​h​e​n​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​b​e​g​i​n​s​ ​i​n​ ​I​S​O​ ​8​6​0​1​ ​f​o​r​m​a​t​ ​(​Y​Y​Y​Y​-​M​M​-​D​D​T​H​H​:​M​M​:​S​S​)​.
+							 */
+							longDesc: string
+						}
+						endDateTime: {
+							/**
+							 * E​n​d​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​m​e​e​t​i​n​g​ ​e​n​d​ ​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​w​h​e​n​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​e​n​d​s​ ​i​n​ ​I​S​O​ ​8​6​0​1​ ​f​o​r​m​a​t​ ​(​Y​Y​Y​Y​-​M​M​-​D​D​T​H​H​:​M​M​:​S​S​)​.
+							 */
+							longDesc: string
+						}
+						teamId: {
+							/**
+							 * T​e​a​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​t​e​a​m​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​t​e​a​m​ ​i​d​e​n​t​i​f​i​e​r​ ​i​f​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​i​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​e​a​m​.
+							 */
+							longDesc: string
+						}
+						channelId: {
+							/**
+							 * C​h​a​n​n​e​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​c​h​a​n​n​e​l​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​h​a​n​n​e​l​ ​i​d​e​n​t​i​f​i​e​r​ ​i​f​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​i​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​h​a​n​n​e​l​ ​w​i​t​h​i​n​ ​a​ ​t​e​a​m​.
+							 */
+							longDesc: string
+						}
+						content: {
+							/**
+							 * M​e​e​t​i​n​g​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​m​e​e​t​i​n​g​ ​a​g​e​n​d​a​ ​o​r​ ​n​o​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​t​e​x​t​ ​d​e​s​c​r​i​b​i​n​g​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​a​g​e​n​d​a​,​ ​p​r​e​p​a​r​a​t​i​o​n​ ​m​a​t​e​r​i​a​l​s​,​ ​o​r​ ​o​t​h​e​r​ ​r​e​l​e​v​a​n​t​ ​i​n​f​o​r​m​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						location: {
+							/**
+							 * L​o​c​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​m​e​e​t​i​n​g​ ​l​o​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​p​h​y​s​i​c​a​l​ ​l​o​c​a​t​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​w​i​l​l​ ​t​a​k​e​ ​p​l​a​c​e​,​ ​o​r​ ​a​ ​c​u​s​t​o​m​ ​v​i​r​t​u​a​l​ ​l​o​c​a​t​i​o​n​ ​d​e​s​c​r​i​p​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						attendees: {
+							/**
+							 * A​t​t​e​n​d​e​e​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​m​e​e​t​i​n​g​ ​p​a​r​t​i​c​i​p​a​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​o​r​ ​u​s​e​r​ ​I​D​s​ ​f​o​r​ ​p​e​o​p​l​e​ ​w​h​o​ ​s​h​o​u​l​d​ ​b​e​ ​i​n​v​i​t​e​d​ ​t​o​ ​t​h​e​ ​m​e​e​t​i​n​g​.
+							 */
+							longDesc: string
+						}
+						isOnlineMeeting: {
+							/**
+							 * O​n​l​i​n​e​ ​M​e​e​t​i​n​g
+							 */
+							displayName: string
+							/**
+							 * E​n​a​b​l​e​/​d​i​s​a​b​l​e​ ​T​e​a​m​s​ ​o​n​l​i​n​e​ ​m​e​e​t​i​n​g​ ​f​e​a​t​u​r​e​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​s​e​t​ ​t​o​ ​t​r​u​e​,​ ​e​n​s​u​r​e​s​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​h​a​s​ ​T​e​a​m​s​ ​o​n​l​i​n​e​ ​m​e​e​t​i​n​g​ ​c​a​p​a​b​i​l​i​t​i​e​s​ ​w​i​t​h​ ​v​i​d​e​o​ ​c​o​n​f​e​r​e​n​c​i​n​g​ ​a​n​d​ ​a​ ​j​o​i​n​ ​l​i​n​k​.
+							 */
+							longDesc: string
+						}
+						timeZone: {
+							/**
+							 * T​i​m​e​ ​Z​o​n​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​m​e​e​t​i​n​g​ ​t​i​m​e​ ​z​o​n​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​t​i​m​e​ ​z​o​n​e​ ​f​o​r​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​s​t​a​r​t​ ​a​n​d​ ​e​n​d​ ​t​i​m​e​s​,​ ​s​u​c​h​ ​a​s​ ​"​P​a​c​i​f​i​c​ ​S​t​a​n​d​a​r​d​ ​T​i​m​e​"​ ​o​r​ ​"​U​T​C​"​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				'new-channel-message': {
+					/**
+					 * N​e​w​ ​C​h​a​n​n​e​l​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​ ​w​h​e​n​ ​a​ ​m​e​s​s​a​g​e​ ​i​s​ ​p​o​s​t​e​d​ ​i​n​ ​a​ ​c​h​a​n​n​e​l
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​m​e​s​s​a​g​e​ ​i​s​ ​p​o​s​t​e​d​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​c​h​a​n​n​e​l​ ​w​i​t​h​i​n​ ​a​ ​t​e​a​m​.
+					 */
+					longDesc: string
+					options: {
+						channelId: {
+							/**
+							 * C​h​a​n​n​e​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * C​h​a​n​n​e​l​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​m​e​s​s​a​g​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​m​e​s​s​a​g​e​s​.
+							 */
+							longDesc: string
+						}
+						teamId: {
+							/**
+							 * T​e​a​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​e​a​m​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​e​a​m​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​m​o​n​i​t​o​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'new-chat-message': {
+					/**
+					 * N​e​w​ ​C​h​a​t​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​ ​w​h​e​n​ ​a​ ​m​e​s​s​a​g​e​ ​i​s​ ​s​e​n​t​ ​i​n​ ​a​ ​c​h​a​t
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​m​e​s​s​a​g​e​ ​i​s​ ​s​e​n​t​ ​i​n​ ​a​ ​d​i​r​e​c​t​ ​c​h​a​t​ ​o​r​ ​g​r​o​u​p​ ​c​h​a​t​ ​c​o​n​v​e​r​s​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						chatId: {
+							/**
+							 * C​h​a​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * C​h​a​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​m​e​s​s​a​g​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​d​i​r​e​c​t​ ​c​h​a​t​ ​o​r​ ​g​r​o​u​p​ ​c​h​a​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​m​e​s​s​a​g​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'new-meeting': {
+					/**
+					 * N​e​w​ ​M​e​e​t​i​n​g
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​ ​w​h​e​n​ ​a​ ​m​e​e​t​i​n​g​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​m​e​e​t​i​n​g​ ​i​s​ ​s​c​h​e​d​u​l​e​d​ ​t​h​a​t​ ​m​a​t​c​h​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​r​i​t​e​r​i​a​.
+					 */
+					longDesc: string
+					options: {
+						meetingSource: {
+							/**
+							 * M​e​e​t​i​n​g​ ​S​o​u​r​c​e
+							 */
+							displayName: string
+							/**
+							 * O​r​i​g​i​n​ ​o​f​ ​t​h​e​ ​m​e​e​t​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​i​e​s​ ​w​h​i​c​h​ ​t​y​p​e​ ​o​f​ ​m​e​e​t​i​n​g​s​ ​t​o​ ​m​o​n​i​t​o​r​,​ ​s​u​c​h​ ​a​s​ ​"​p​r​i​v​a​t​e​"​ ​o​r​ ​"​t​e​a​m​"​ ​m​e​e​t​i​n​g​s​.
+							 */
+							longDesc: string
+						}
+						teamId: {
+							/**
+							 * T​e​a​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​t​e​a​m​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​m​e​e​t​i​n​g​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​e​a​m​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Serenity: {
 			/**
 			 * S​e​r​e​n​i​t​y
@@ -25300,6 +26122,828 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Optionally select a specific calendar to monitor. If not specified, all calendars will be monitored.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		Teams: {
+			/**
+			 * Microsoft Teams
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Collaborate with your team using channels, meetings, and messages
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Microsoft Teams is a collaboration platform that enables messaging, file sharing, video meetings, and app integration within your organization.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				'create-channel': {
+					/**
+					 * Create Channel
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new channel in a team
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new channel within a specified team where members can collaborate through conversations, files, and integrated apps.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						teamId: {
+							/**
+							 * Team ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Unique identifier for the team
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier (GUID) for the team where the new channel will be created.
+							 */
+							longDesc: () => LocalizedString
+						}
+						displayName: {
+							/**
+							 * Channel Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name of the new channel
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The display name for the new channel. Must be unique within the team and between 1-50 characters.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Description of the channel purpose
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional description explaining the purpose or topic of the channel. Limited to 1024 characters.
+							 */
+							longDesc: () => LocalizedString
+						}
+						membershipType: {
+							/**
+							 * Membership Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Channel privacy setting
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Defines the privacy level of the channel. Options include "standard" (visible to all team members) or "private" (visible only to specific members).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'create-meeting': {
+					/**
+					 * Create Meeting
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Schedule a new Teams meeting
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Schedule a new meeting in Microsoft Teams with specified participants, time, location, and other meeting details.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						subject: {
+							/**
+							 * Subject
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Meeting title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The title or subject of the meeting that will appear in calendar invitations and the meeting list.
+							 */
+							longDesc: () => LocalizedString
+						}
+						startDateTime: {
+							/**
+							 * Start Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Meeting start date and time
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date and time when the meeting begins in ISO 8601 format (YYYY-MM-DDTHH:MM:SS).
+							 */
+							longDesc: () => LocalizedString
+						}
+						endDateTime: {
+							/**
+							 * End Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Meeting end date and time
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date and time when the meeting ends in ISO 8601 format (YYYY-MM-DDTHH:MM:SS).
+							 */
+							longDesc: () => LocalizedString
+						}
+						teamId: {
+							/**
+							 * Team ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Associated team identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional team identifier if the meeting is associated with a specific team.
+							 */
+							longDesc: () => LocalizedString
+						}
+						channelId: {
+							/**
+							 * Channel ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Associated channel identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional channel identifier if the meeting is associated with a specific channel within a team.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content: {
+							/**
+							 * Meeting Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Meeting agenda or notes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional text describing the meeting agenda, preparation materials, or other relevant information.
+							 */
+							longDesc: () => LocalizedString
+						}
+						location: {
+							/**
+							 * Location
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Physical or virtual meeting location
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The physical location where the meeting will take place, or a custom virtual location description.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attendees: {
+							/**
+							 * Attendees
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Meeting participants
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of email addresses or user IDs for people who should be invited to the meeting.
+							 */
+							longDesc: () => LocalizedString
+						}
+						isOnlineMeeting: {
+							/**
+							 * Online Meeting
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enable Teams online meeting features
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When set to true, creates a Teams online meeting with video conferencing capabilities and a join link.
+							 */
+							longDesc: () => LocalizedString
+						}
+						timeZone: {
+							/**
+							 * Time Zone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Meeting time zone
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The time zone for the meeting start and end times, such as "Pacific Standard Time" or "UTC".
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'delete-meeting': {
+					/**
+					 * Delete Meeting
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Cancel an existing meeting
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently cancels and removes a scheduled meeting from all participants' calendars.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						meetingId: {
+							/**
+							 * Meeting ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Unique meeting identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier (GUID) of the meeting to be canceled.
+							 */
+							longDesc: () => LocalizedString
+						}
+						meetingSource: {
+							/**
+							 * Meeting Source
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Origin of the meeting
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specifies where the meeting was created, such as "private" or "team".
+							 */
+							longDesc: () => LocalizedString
+						}
+						teamId: {
+							/**
+							 * Team ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Associated team identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The team identifier if the meeting is associated with a specific team.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'send-channel-message': {
+					/**
+					 * Send Channel Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Post a message to a team channel
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Send a new message to a specific channel within a team that all channel members can view and respond to.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channelId: {
+							/**
+							 * Channel ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target channel identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the channel where the message will be posted.
+							 */
+							longDesc: () => LocalizedString
+						}
+						teamId: {
+							/**
+							 * Team ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Team identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the team containing the target channel.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message: {
+							/**
+							 * Message
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Message content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text content of the message to be posted in the channel.
+							 */
+							longDesc: () => LocalizedString
+						}
+						contentType: {
+							/**
+							 * Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Format of the message content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specifies the format of the message content, such as "text" for plain text or "html" for formatted content.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'send-chat-message': {
+					/**
+					 * Send Chat Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a message to a chat conversation
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Send a new message to a direct chat or group chat conversation outside of a team channel.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						chatId: {
+							/**
+							 * Chat ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target chat identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the direct chat or group chat where the message will be sent.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message: {
+							/**
+							 * Message
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Message content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text content of the message to be sent in the chat.
+							 */
+							longDesc: () => LocalizedString
+						}
+						contentType: {
+							/**
+							 * Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Format of the message content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specifies the format of the message content, such as "text" for plain text or "html" for formatted content.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'update-channel': {
+					/**
+					 * Update Channel
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Modify an existing channel
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the properties or membership of an existing channel within a team.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channelId: {
+							/**
+							 * Channel ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target channel identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the channel to be updated.
+							 */
+							longDesc: () => LocalizedString
+						}
+						teamId: {
+							/**
+							 * Team ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Team identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the team containing the channel to be updated.
+							 */
+							longDesc: () => LocalizedString
+						}
+						displayName: {
+							/**
+							 * Channel Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New channel name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new display name for the channel. Must be unique within the team and between 1-50 characters.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New channel description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated description explaining the purpose or topic of the channel. Limited to 1024 characters.
+							 */
+							longDesc: () => LocalizedString
+						}
+						addMembers: {
+							/**
+							 * Add Members
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Users to add to the channel
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of user IDs to add as members to the channel. Only applicable for private channels.
+							 */
+							longDesc: () => LocalizedString
+						}
+						removeMembers: {
+							/**
+							 * Remove Members
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Users to remove from the channel
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of user IDs to remove from the channel membership. Only applicable for private channels.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'update-meeting': {
+					/**
+					 * Update Meeting
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Modify an existing meeting
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the details of a scheduled meeting, such as time, location, attendees, or other properties.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						meetingId: {
+							/**
+							 * Meeting ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target meeting identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the meeting to be updated.
+							 */
+							longDesc: () => LocalizedString
+						}
+						subject: {
+							/**
+							 * Subject
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated meeting title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new title or subject of the meeting that will appear in calendar invitations and the meeting list.
+							 */
+							longDesc: () => LocalizedString
+						}
+						startDateTime: {
+							/**
+							 * Start Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated meeting start time
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new date and time when the meeting begins in ISO 8601 format (YYYY-MM-DDTHH:MM:SS).
+							 */
+							longDesc: () => LocalizedString
+						}
+						endDateTime: {
+							/**
+							 * End Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated meeting end time
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new date and time when the meeting ends in ISO 8601 format (YYYY-MM-DDTHH:MM:SS).
+							 */
+							longDesc: () => LocalizedString
+						}
+						teamId: {
+							/**
+							 * Team ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Associated team identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated team identifier if the meeting is associated with a specific team.
+							 */
+							longDesc: () => LocalizedString
+						}
+						channelId: {
+							/**
+							 * Channel ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Associated channel identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated channel identifier if the meeting is associated with a specific channel within a team.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content: {
+							/**
+							 * Meeting Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated meeting agenda or notes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated text describing the meeting agenda, preparation materials, or other relevant information.
+							 */
+							longDesc: () => LocalizedString
+						}
+						location: {
+							/**
+							 * Location
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated meeting location
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new physical location where the meeting will take place, or a custom virtual location description.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attendees: {
+							/**
+							 * Attendees
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated meeting participants
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated list of email addresses or user IDs for people who should be invited to the meeting.
+							 */
+							longDesc: () => LocalizedString
+						}
+						isOnlineMeeting: {
+							/**
+							 * Online Meeting
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enable/disable Teams online meeting features
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When set to true, ensures the meeting has Teams online meeting capabilities with video conferencing and a join link.
+							 */
+							longDesc: () => LocalizedString
+						}
+						timeZone: {
+							/**
+							 * Time Zone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated meeting time zone
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new time zone for the meeting start and end times, such as "Pacific Standard Time" or "UTC".
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				'new-channel-message': {
+					/**
+					 * New Channel Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Trigger when a message is posted in a channel
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when a new message is posted in a specified channel within a team.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channelId: {
+							/**
+							 * Channel ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Channel to monitor for messages
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the channel to monitor for new messages.
+							 */
+							longDesc: () => LocalizedString
+						}
+						teamId: {
+							/**
+							 * Team ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Team identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the team containing the channel to monitor.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'new-chat-message': {
+					/**
+					 * New Chat Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Trigger when a message is sent in a chat
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when a new message is sent in a direct chat or group chat conversation.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						chatId: {
+							/**
+							 * Chat ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Chat to monitor for messages
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the direct chat or group chat to monitor for new messages.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'new-meeting': {
+					/**
+					 * New Meeting
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Trigger when a meeting is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when a new meeting is scheduled that matches the specified criteria.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						meetingSource: {
+							/**
+							 * Meeting Source
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Origin of the meeting
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specifies which type of meetings to monitor, such as "private" or "team" meetings.
+							 */
+							longDesc: () => LocalizedString
+						}
+						teamId: {
+							/**
+							 * Team ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Associated team identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional filter to only trigger for meetings associated with a specific team.
 							 */
 							longDesc: () => LocalizedString
 						}

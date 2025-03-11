@@ -68,7 +68,7 @@ export const HUBSPOT_TICKETS_ALLOWED_PATHS = {
             element_type: 'string',
             required: false,
           },
-          get_allowed_values: getHubspotTicketPropertiesAllowedValues,
+          get_element_allowed_values: getHubspotTicketPropertiesAllowedValues,
         },
       },
     },

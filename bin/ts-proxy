@@ -13,6 +13,7 @@
 %exec-class TsProxy
 
 hashdecl EventInfo {
+    string key;
     hash<AsyncCallInfo> event;
     int tid;
     Condition cond();
@@ -42,7 +43,7 @@ class TsProxy inherits TypeScriptProxy {
         Logger logger;
 
         # event map
-        hash<string, hash<EventInfo>> emap;
+        hash<EventInfo> event;
     }
 
     constructor() : TypeScriptProxy(False) {
@@ -173,11 +174,12 @@ class TsProxy inherits TypeScriptProxy {
     private setupEvent(string app, string action, string key, *hash<auto> arg0) {
         TypeScriptActionInterface::initApp(app);
         TypeScriptActionInterface::initAppAction(app, action);
-        if (emap{key}) {
-            throw "EVENT-ERROR", sprintf("Event key %y is already running", key);
+        if (event.running) {
+            throw "EVENT-ERROR", sprintf("Event key %y is already running", event.key);
         }
 
-        emap{key} = <EventInfo>{
+        event = <EventInfo>{
+            "key": key,
             "event": TypeScriptActionInterface::getCall(key),
         };
         *hash<DataContextInfo> arg;
@@ -193,23 +195,25 @@ class TsProxy inherits TypeScriptProxy {
     }
 
     private eventThread(Counter cnt, string key, *hash<DataContextInfo> arg) {
-        emap{key}.tid = gettid();
+        event.tid = gettid();
         on_exit {
             m.lock();
             on_exit m.unlock();
-            emap{key}.running = False;
-            if (emap{key}.waiting) {
-                emap{key}.cond.broadcast();
+            if (event.waiting) {
+                event.running = False;
+                event.cond.broadcast();
+            } else {
+                remove event;
             }
             info("Terminated JavaScript I/O event thread");
         }
-        emap{key}.running = True;
+        event.running = True;
         # signal calling thread that we are running
         cnt.dec();
         try {
-            hash<AsyncCallInfo> event = emap{key}.event;
-            info("Running event function for @%s/%s: %s", event.app, event.action, event.key);
-            TypeScriptActionDataProviderBase::getAsyncValueArgs(logger, event, (arg,
+            hash<AsyncCallInfo> call = event.event;
+            info("Running event function for @%s/%s: %s", call.app, call.action, call.key);
+            TypeScriptActionDataProviderBase::getAsyncValueArgs(logger, call, (arg,
                 sub (JavaScriptObject o) {
                     auto event_data = o.toData();
                     if (event_data.typeCode() != NT_HASH) {
@@ -224,12 +228,19 @@ class TsProxy inherits TypeScriptProxy {
                     sendString(yaml);
                 },
                 bool sub () {
-                    return emap{key}.stop_flag;
+                    return event.stop_flag;
                 })
             );
-            info("Event function for @%s/%s: %s returned", event.app, event.action, event.key);
+            info("Event function for @%s/%s: %s returned", call.app, call.action, call.key);
         } catch (hash<ExceptionInfo> ex) {
             error("EVENT-THREAD-ERROR", "Exception in event thread: %s", get_exception_string(ex));
+        }
+        if (!event.stop_flag) {
+            error("The event thread terminated prematurely; notifying parent");
+            string yaml = makeSend(CC_EVENT_TERMINATED, {
+                "key": key,
+            });
+            sendString(yaml);
         }
     }
 
@@ -237,25 +248,29 @@ class TsProxy inherits TypeScriptProxy {
         m.lock();
         on_exit m.unlock();
 
-        if (!emap{key}) {
-            string yaml = makeSend(CC_ERR, {
-                "ex": {
-                    "err": "INVALID-EVENT-KEY",
-                    "desc": sprintf("Event key %y is unknown; known event keys: %y", key, keys emap),
-                },
-            });
-            sendString(yaml);
-            info("Cannot release unknown event key %y; known event keys: %y", key, keys emap);
-            return;
-        }
-
-        if (!emap{key}.stop_flag) {
-            emap{key}.stop_flag = True;
-        }
-        while (emap{key}.running) {
-            ++emap{key}.waiting;
-            emap{key}.cond.wait(m);
-            --emap{key}.waiting;
+        if (event.key) {
+            if (event.key != key) {
+                string yaml = makeSend(CC_ERR, {
+                    "ex": {
+                        "err": "INVALID-EVENT-KEY",
+                        "desc": sprintf("Event key %y is unknown; managed event key: %y", key, event.key),
+                    },
+                });
+                sendString(yaml);
+                info("Cannot release unknown event key %y; managed event key: %y", key, event.key);
+                return;
+            }
+            if (!event.stop_flag) {
+                event.stop_flag = True;
+            }
+            while (event.running) {
+                ++event.waiting;
+                event.cond.wait(m);
+                --event.waiting;
+            }
+            if (event && !event.waiting) {
+                remove event;
+            }
         }
         string yaml = makeSend(CC_OK);
         sendString(yaml);
@@ -267,7 +282,20 @@ class TsProxy inherits TypeScriptProxy {
         if (action) {
             TypeScriptActionInterface::initAppAction(app, action);
         }
-        hash<AsyncCallInfo> api = TypeScriptActionInterface::getCall(key);
+        hash<AsyncCallInfo> api;
+        try {
+            api = TypeScriptActionInterface::getCall(key);
+        } catch (hash<ExceptionInfo> ex) {
+            if (ex.err == "ASYNC-CALL-ERROR") {
+                AbstractDataProvider prov = TypeScriptActionInterface::getAppDataProvider(app).getChildProviderEx(action);
+                if (prov instanceof TypeScriptActionApiWithSchemaDataProvider) {
+                    cast<TypeScriptActionApiWithSchemaDataProvider>(prov).init();
+                }
+                api = TypeScriptActionInterface::getCall(key);
+            } else {
+                rethrow;
+            }
+        }
         auto rv = TypeScriptActionDataProviderBase::getAsyncValueArgs(logger, api, args);
         string yaml = makeSend(CC_OK, {
             "rv": rv,

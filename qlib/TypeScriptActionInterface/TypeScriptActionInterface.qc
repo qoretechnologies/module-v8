@@ -50,7 +50,10 @@ public hashdecl AsyncCallInfo {
     #! Timeout
     date to;
 
-    #! Free-foirm extra info
+    #! Post-processing of successful call results
+    *code post_processing;
+
+    #! Free-form extra info
     *hash<auto> info;
 }
 
@@ -105,7 +108,8 @@ public class TypeScriptActionInterface {
 
         const TypeKeys = (
             "name", "display_name", "short_desc", "desc", "type", "example_value", "default_value", "multiselect",
-            "allowed_values", "allowed_values_creatable", "attr", "required", "on_change",
+            "allowed_values", "allowed_values_creatable", "element_allowed_values",
+            "element_allowed_values_creatable", "attr", "required", "on_change",
         );
 
         const TypeScriptAppRestConnectionOptions = RestConnection::ConnectionScheme.options;
@@ -616,6 +620,10 @@ public class TypeScriptActionInterface {
                 foreach hash<auto> i in (rest_modifiers.options.pairIterator()) {
                     if (i.value.allowed_values) {
                         i.value.allowed_values = map cast<hash<AllowedValueInfo>>($1), i.value.allowed_values;
+                    }
+                    if (i.value.element_allowed_values) {
+                        i.value.element_allowed_values = map cast<hash<AllowedValueInfo>>($1),
+                            i.value.element_allowed_values;
                     }
                     opts{i.key} = cast<hash<ConnectionOptionInfo>>(i.value);
                 }
@@ -1182,11 +1190,6 @@ public class TypeScriptActionInterface {
 
         if (*hash<auto> opts = remove action.options) {
             action.options = TypeScriptActionInterface::getOptions(app, \action, opts, fctx);
-            if (fctx.dmap) {
-                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"options\" "
-                    "attribute; event actions do not support get_dependent_options() callbacks", action.app,
-                    action.action);
-            }
         }
         *hash<AsyncCallInfo> get_example_event_data = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
             "get_example_event_data", "example event data", pool, io_timeout, action.app, action.action);
@@ -1403,11 +1406,18 @@ public class TypeScriptActionInterface {
                     "this property cannot be defined when \"swagger_path\" (%y) is also defined for the action",
                     action.app, action.action, swagger_path);
             }
+            # NOTE we remove "response_type" here, because it's given as null in valid actions
+            if (remove action.response_type) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"response_type\" "
+                    "property; this property cannot be defined when \"swagger_path\" (%y) is also defined for the "
+                    "action", action.app, action.action, swagger_path);
+            }
+
             *softlist<string> independent_path_vars = remove action.independent_path_vars;
 
             ActionFunctionContext fctx(action.app, action.action, pool);
 
-            # check for path vars0
+            # check for path vars
             *hash<string, bool> path_vars = map {$1: True}, (swagger_path =~ x/\{([^\}]*)}/g);
             TypeScriptActionApiWithSchemaDataProvider dp(\action, swagger_path, api, path_vars,
                 (map {$1: True}, independent_path_vars), app_conn_opt_map{app.name.lwr()},
@@ -1415,11 +1425,6 @@ public class TypeScriptActionInterface {
             child = dp;
 
             action.output_type = child.getResponseType();
-            if (remove action.response_type) {
-                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"response_type\" "
-                    "property; this property cannot be defined when \"swagger_path\" (%y) is also defined for the "
-                    "action", action.app, action.action, swagger_path);
-            }
         } else {
             *AbstractDataProviderType request_type;
 
@@ -1512,6 +1517,28 @@ public class TypeScriptActionInterface {
             # remove any manual allowed values
             remove h.allowed_values;
         }
+        if (exists (auto get_element_allowed_values = remove h.get_element_allowed_values)) {
+            if (!get_element_allowed_values.callp()) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
+                    "\"get_allowed_values\" attribute; got type %y; expecting a callable value", action.app,
+                    action.action, key, get_element_allowed_values.fullType());
+            }
+            fctx.eomap{key} = <AsyncCallInfo>{
+                "app": action.app,
+                "action": action.action,
+                "type": "get_element_allowed_values",
+                "label": sprintf("Element reference data function for app %y action %y option %y", action.app,
+                    action.action, key),
+                "pool": fctx.pool,
+                "async_call": get_element_allowed_values,
+                "to": io_timeout,
+            };
+            TypeScriptActionInterface::registerAsyncCall(\fctx.eomap{key}, "app", action.app, action.action, key);
+
+            h.ref_data = key;
+            # remove any manual allowed values
+            remove h.element_allowed_values;
+        }
         if (exists (auto rest_get_allowed_values = remove h.rest_get_allowed_values)) {
             if (rest_get_allowed_values.typeCode() != NT_HASH) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
@@ -1538,6 +1565,35 @@ public class TypeScriptActionInterface {
             h.ref_data = key;
             # remove any manual allowed values
             remove h.allowed_values;
+        }
+        if (exists (auto rest_get_element_allowed_values = remove h.rest_get_element_allowed_values)) {
+            if (rest_get_element_allowed_values.typeCode() != NT_HASH) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
+                    "\"rest_get_element_allowed_values\" attribute; got type %y; expecting \"hash\"", action.app,
+                    action.action, key, rest_get_element_allowed_values.fullType());
+            }
+            if (fctx.eomap{key}) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
+                    "\"rest_get_element_allowed_values\" attribute; this option already has a "
+                    "\"get_element_allowed_values\" value; cannot use both attributes for a single option",
+                    action.app, action.action, key);
+            }
+            hash<RestGetAllowedValuesInfo> info;
+            {
+                on_error rethrow "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
+                    "\"rest_get_element_allowed_values\" attribute: %s: %s", action.app, action.action, key, $1.err,
+                    $1.desc);
+                info = cast<hash<RestGetAllowedValuesInfo>>(rest_get_element_allowed_values);
+            }
+            if (*hash<auto> h = (RestGetAllowedValuesRequiredKeys - keys info)) {
+                on_error rethrow "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
+                    "\"rest_get_element_allowed_values\" attribute; the following required keys are missing: %y",
+                    action.app, action.action, key, keys h);
+            }
+            fctx.reomap{key} = info;
+            h.element_ref_data = key;
+            # remove any manual allowed values
+            remove h.element_allowed_values;
         }
         if (exists (auto get_dependent_options = remove h.get_dependent_options)) {
             if (!get_dependent_options.callp()) {
@@ -1573,6 +1629,7 @@ public class TypeScriptActionInterface {
                 "pool": fctx.pool,
                 "async_call": get_dynamic_type,
                 "to": io_timeout,
+                "post_processing": \TypeScriptActionInterface::postProcessDynamicTypeInfo(),
             };
             TypeScriptActionInterface::registerAsyncCall(\fctx.dtmap{key}, "app", action.app, action.action, key);
             h.dynamic_type = fctx.dtmap{key}.key;
@@ -1659,6 +1716,9 @@ public class TypeScriptActionInterface {
         opt.type = TypeScriptActionInterface::getType(path, opt.type, opt.required, remove opt.element_type, fctx);
         if (opt.allowed_values) {
             opt.allowed_values = map cast<hash<AllowedValueInfo>>($1), opt.allowed_values;
+        }
+        if (opt.element_allowed_values) {
+            opt.element_allowed_values = map cast<hash<AllowedValueInfo>>($1), opt.element_allowed_values;
         }
         if (opt.required_groups) {
             opt.required_groups = cast<list<string>>(opt.required_groups);
@@ -1842,6 +1902,9 @@ public class TypeScriptActionInterface {
         if ((*string str = remove type_hash.ref_data).val()) {
             info.attr.ref_data = str;
         }
+        if ((*string str = remove type_hash.element_ref_data).val()) {
+            info.attr.element_ref_data = str;
+        }
         if ((*string str = remove type_hash.default_ref_data).val()) {
             info.attr.default_ref_data = str;
         }
@@ -1865,6 +1928,12 @@ public class TypeScriptActionInterface {
         }
         if (remove type_hash.allowed_values_creatable) {
             info.allowed_values_creatable = True;
+        }
+        if (auto v = remove type_hash.element_allowed_values) {
+            info.element_allowed_values = v;
+        }
+        if (remove type_hash.element_allowed_values_creatable) {
+            info.element_allowed_values_creatable = True;
         }
         if ((*string str = remove type_hash.display_name).val()) {
             info.display_name = str;
@@ -1902,7 +1971,28 @@ public class TypeScriptActionInterface {
 
                 # remove any manual allowed values
                 remove info.allowed_values;
-                info.attr.ref_data = fctx.dtmap{key}.key;
+                info.attr.ref_data = fctx.omap{key}.key;
+                info.attr.dynamic = True;
+            }
+            if (exists (*code c = remove type_hash.get_element_allowed_values)) {
+                string key = sprintf("%s-%s", path, name);
+                fctx.eomap{key} = <AsyncCallInfo>{
+                    "key": key,
+                    "app": fctx.app,
+                    "action": fctx.action,
+                    "type": "get_element_allowed_values",
+                    "label": sprintf("Element reference data function for app %y action %y option %y", fctx.app,
+                        fctx.action, key),
+                    "pool": fctx.pool,
+                    "async_call": c,
+                    "to": fctx.io_timeout,
+                };
+                TypeScriptActionInterface::registerAsyncCall(ignore_dup, \fctx.eomap{key}, "app", fctx.app,
+                    fctx.action, key);
+
+                # remove any manual allowed values
+                remove info.element_allowed_values;
+                info.attr.element_ref_data = fctx.eomap{key}.key;
                 info.attr.dynamic = True;
             }
             if (exists (*code c = remove type_hash.get_dynamic_type)) {
@@ -1917,6 +2007,7 @@ public class TypeScriptActionInterface {
                     "pool": fctx.pool,
                     "async_call": c,
                     "to": fctx.io_timeout,
+                    "post_processing": \TypeScriptActionInterface::postProcessDynamicTypeInfo(),
                 };
                 TypeScriptActionInterface::registerAsyncCall(ignore_dup, \fctx.dtmap{key}, "app", fctx.app,
                     fctx.action, key);
@@ -2198,6 +2289,53 @@ public class TypeScriptActionInterface {
         return rv;
     }
 
+    static private postProcessDynamicTypeInfo(*LoggerInterface logger, hash<AsyncCallInfo> call, *softlist<auto> args,
+            reference<auto> info) {
+        if (info.type != "hash") {
+            return;
+        }
+        postProcessDynamicTypeInfoIntern(logger, call, args, \info);
+    }
+
+    static private postProcessDynamicTypeInfoIntern(*LoggerInterface logger, hash<AsyncCallInfo> call,
+            *softlist<auto> args, reference<*hash<auto>> info) {
+        foreach hash<auto> i in (info.fields.pairIterator()) {
+            if (i.value.type == "hash" && i.value.fields) {
+                postProcessDynamicTypeInfoIntern(logger, call, args, \info{i.key});
+            }
+            if (i.value.get_allowed_values.callp()) {
+                code c = remove info.fields{i.key}.get_allowed_values;
+                hash<AsyncCallInfo> new_call = call;
+                new_call.type = "get_allowed_values";
+                new_call.label = sprintf("Ad-hoc reference data function for app %y action %y option %y",
+                    call.app, call.action, call.key),
+                new_call.async_call = c;
+                info.fields{i.key}.allowed_values = TypeScriptActionDataProviderBase::getAsyncValueArgs(logger,
+                    new_call, args);
+            }
+            if (i.value.get_element_allowed_values.callp()) {
+                code c = remove info.fields{i.key}.get_element_allowed_values;
+                hash<AsyncCallInfo> new_call = call;
+                new_call.type = "get_element_allowed_values";
+                new_call.label = sprintf("Ad-hoc element reference data function for app %y action %y option %y",
+                    call.app, call.action, call.key),
+                new_call.async_call = c;
+                info.fields{i.key}.element_allowed_values = TypeScriptActionDataProviderBase::getAsyncValueArgs(logger,
+                    new_call, args);
+            }
+            if (i.value.get_default_value.callp()) {
+                code c = remove info.fields{i.key}.get_default_value;
+                hash<AsyncCallInfo> new_call = call;
+                new_call.type = "get_default_value";
+                new_call.label = sprintf("Ad-hoc default value function for app %y action %y option %y",
+                    call.app, call.action, call.key),
+                new_call.async_call = c;
+                info.fields{i.key}.default_value = TypeScriptActionDataProviderBase::getAsyncValueArgs(logger,
+                    new_call, args);
+            }
+        }
+    }
+
     static private overrideTypes(string app, SwaggerSchema schema, hash<auto> swagger_type_overrides) {
         foreach hash<auto> i in (swagger_type_overrides.pairIterator()) {
             list<string> l = i.key.split(".");
@@ -2380,20 +2518,22 @@ class ActionFunctionContext {
 
         # maps from options to "get_allowed_values" code
         *hash<string, hash<AsyncCallInfo>> omap;
+        # maps from options to "get_element_allowed_values" code
+        *hash<string, hash<AsyncCallInfo>> eomap;
         # maps from options to "get_dependent_options" code
         *hash<string, hash<AsyncCallInfo>> dmap;
         # maps from options to "get_dynamic_type" code
         *hash<string, hash<AsyncCallInfo>> dtmap;
         # maps from options to "rest_get_allowed_values" descriptions
         *hash<string, hash<RestGetAllowedValuesInfo>> romap;
+        # maps from options to "rest_get_element_allowed_values" descriptions
+        *hash<string, hash<RestGetAllowedValuesInfo>> reomap;
         # maps from options to "get_default_value" code
         *hash<string, hash<AsyncCallInfo>> dvmap;
         # maps from dependent options -> option -> True
         *hash<string, hash<string, bool>> depmap;
 
         date io_timeout;
-
-        list<TypeScriptDataField> fields;
     }
 
     constructor(string app) {
@@ -2414,28 +2554,14 @@ class ActionFunctionContext {
         action = fctx.action;
         pool = fctx.pool;
         omap = fctx.omap;
+        eomap = fctx.eomap;
         dmap = fctx.dmap;
         dtmap = fctx.dtmap;
         romap = fctx.romap;
+        reomap = fctx.reomap;
         dvmap = fctx.dvmap;
         depmap = fctx.depmap;
         io_timeout = fctx.io_timeout;
-    }
-
-    copy() {
-        list<TypeScriptDataField> fl;
-        foreach TypeScriptDataField f in (fields) {
-            TypeScriptDataField nf = f.copy();
-            nf.setParent(self);
-            fl += nf;
-        }
-        if (fl) {
-            fields = fl;
-        }
-    }
-
-    registerField(TypeScriptDataField f) {
-        fields += f;
     }
 }
 }

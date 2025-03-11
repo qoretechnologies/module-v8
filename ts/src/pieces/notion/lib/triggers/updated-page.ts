@@ -3,9 +3,11 @@ import { PageObjectResponse } from '@notionhq/client/build/src/api-endpoints';
 import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../../utils/Debugger';
 import { getNotionPageIdAllowedValues } from '../common/helpers/get-page-id-allowed-values';
-import { pageItemQoreType } from './constants';
+import { NOTION_FETCH_DELAY, NOTION_FETCH_MAX_RETRIES, pageItemQoreType } from './constants';
 import { DEFAULT_TRIGGER_POLLING_INTERVAL } from '../../../../global/constants';
 import { delayOrCancel } from '../../../../global/helpers/event-triggers';
+import { mapNotionProperties } from '../common/properties-mapping';
+import { delay } from '../../../../global/helpers';
 
 const notionUpdatedPageEvent = QoreAppCreator.createLocalizedTrigger({
   app: 'Notion',
@@ -70,11 +72,35 @@ const getPageById = async (token: string, pageId: string) => {
     notionVersion: '2022-02-22',
   });
 
-  const response = await notion.pages.retrieve({
-    page_id: pageId,
-  });
+  let retries = 0;
 
-  return response;
+  while (true) {
+    try {
+      const response = await notion.pages.retrieve({
+        page_id: pageId,
+      });
+
+      return {
+        ...response,
+        ...('properties' in response
+          ? { properties: mapNotionProperties(response.properties) }
+          : {}),
+      };
+    } catch (error) {
+      retries++;
+
+      if (retries > NOTION_FETCH_MAX_RETRIES) {
+        throw error;
+      }
+
+      Debugger.log(
+        `Notion API page request failed (attempt ${retries}/${NOTION_FETCH_MAX_RETRIES}). Reason:`,
+        error
+      );
+
+      await delay(NOTION_FETCH_DELAY);
+    }
+  }
 };
 
 export default notionUpdatedPageEvent;

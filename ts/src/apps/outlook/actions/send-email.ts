@@ -11,8 +11,8 @@ import { getOutlookRecipientsAllowedValues } from '../helpers/get-recepient-allo
 const options = {
   toRecipients: {
     required: true,
-    allowed_values_creatable: true,
-    get_allowed_values: getOutlookRecipientsAllowedValues,
+    element_allowed_values_creatable: true,
+    get_element_allowed_values: getOutlookRecipientsAllowedValues,
     type: {
       type: 'list',
       element_type: {
@@ -39,8 +39,8 @@ const options = {
   },
   ccRecipients: {
     required: false,
-    allowed_values_creatable: true,
-    get_allowed_values: getOutlookRecipientsAllowedValues,
+    element_allowed_values_creatable: true,
+    get_element_allowed_values: getOutlookRecipientsAllowedValues,
     type: {
       type: 'list',
       element_type: {
@@ -67,8 +67,8 @@ const options = {
   },
   bccRecipients: {
     required: false,
-    allowed_values_creatable: true,
-    get_allowed_values: getOutlookRecipientsAllowedValues,
+    element_allowed_values_creatable: true,
+    get_element_allowed_values: getOutlookRecipientsAllowedValues,
     type: {
       type: 'list',
       element_type: {

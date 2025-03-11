@@ -242,9 +242,6 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
         #debug("JavaScriptProgramProxy::removeEventSource() ekey: %y remaining: %y stop: %y", ekey, keys event.omap,
         #    stop);
-        if (stop) {
-            stopListener();
-        }
     }
 
     #! Add an additional observable to the event source; called with the global lock held
@@ -298,9 +295,6 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
         #debug("JavaScriptProgramProxy::releaseEventSourceLocked() key: %y remaining: %y stop: %y", key,
         #    keys event.omap);
-        if (!event.omap) {
-            stopListener();
-        }
     }
 
     auto getAsyncValue(hash<AsyncCallInfo> api, ...) {
@@ -431,11 +425,25 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 }
                 continue;
             }
+            if (v.cmd == CC_EVENT_TERMINATED) {
+                if (!event.omap) {
+                    error("No observers for event for key %y; ignoring", v.key);
+                }
+                foreach hash<auto> i in (event.omap.pairIterator()) {
+                    try {
+                        i.value.terminated();
+                    } catch (hash<ExceptionInfo> ex) {
+                        error("Error notifying observer %y of terminated event thread for key %y: %s", i.key, v.key,
+                            get_exception_string(ex));
+                    }
+                }
+                continue;
+            }
             if (v.cmd == CC_STATUS) {
                 info("Status event received: %y", v.info);
                 continue;
             }
-            debug("Received from PID %d (restarted: %y): %y", pid, restarted, v);
+            info("Received from PID %d (restarted: %y): %y", pid, restarted, v);
             # process event setup message if necessary inline
             if (restarted) {
                 if (event) {
@@ -687,6 +695,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                     info("Restarting command due to error");
                     continue;
                 }
+                error("Error running %y: %s", cmd, get_exception_string(ex));
                 rethrow;
             }
             break;
@@ -927,6 +936,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         if (always_output && !out) {
             info("child has no output");
         }
+        /*
         if (out) {
             try {
                 throw "LOCATION-ERROR";
@@ -934,6 +944,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 info("%s", get_exception_string(ex));
             }
         }
+        */
     }
 
     private debug(string fmt, ...) {

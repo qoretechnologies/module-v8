@@ -1,10 +1,12 @@
 import { Client } from '@notionhq/client';
-import { DatabaseObjectResponse } from '@notionhq/client/build/src/api-endpoints';
 import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../../global/constants';
 import { pollUpdatedItemsForTrigger } from '../../../../global/helpers/event-triggers';
 import { getNotionDatabaseIdAllowedValues } from '../common/helpers/get-database-id-allowed-values';
-import { databaseItemQoreType } from './constants';
+import { mapNotionProperties } from '../common/properties-mapping';
+import { databaseItemQoreType, NOTION_FETCH_DELAY, NOTION_FETCH_MAX_RETRIES } from './constants';
+import { Debugger } from '../../../../utils/Debugger';
+import { delay } from '../../../../global/helpers';
 
 const notionUpdatedDatabaseItemTrigger = QoreAppCreator.createLocalizedTrigger({
   app: 'Notion',
@@ -68,18 +70,41 @@ export const getLastUpdatedDatabaseItems = async (
     notionVersion: '2022-02-22',
   });
 
-  const response = await notion.databases.query({
-    database_id: databaseId,
-    sorts: [
-      {
-        timestamp: 'last_edited_time',
-        direction: 'descending',
-      },
-    ],
-    page_size: limit,
-  });
+  let retries = 0;
 
-  return response.results as DatabaseObjectResponse[];
+  while (true) {
+    try {
+      const response = await notion.databases.query({
+        database_id: databaseId,
+        sorts: [
+          {
+            timestamp: 'last_edited_time',
+            direction: 'descending',
+          },
+        ],
+        page_size: limit,
+      });
+
+      return response.results.map((item) => ({
+        ...item,
+        ...('properties' in item && { properties: mapNotionProperties(item.properties) }),
+      }));
+    } catch (error) {
+      retries++;
+
+      if (retries > NOTION_FETCH_MAX_RETRIES) {
+        throw error;
+      }
+
+      Debugger.log(
+        `Notion API Last updated database items request failed ` +
+          `(attempt ${retries}/${NOTION_FETCH_MAX_RETRIES}). Reason:`,
+        error
+      );
+
+      await delay(NOTION_FETCH_DELAY);
+    }
+  }
 };
 
 export default notionUpdatedDatabaseItemTrigger;

@@ -12,7 +12,9 @@ export const getHubspotDealPipelineAllowedValues: TQoreGetAllowedValuesFunction<
   const token = context?.conn_opts?.token;
 
   if (!token) {
-    throw new Error('The token is required to get Hubspot deal pipeline allowed values');
+    console.error('The token is required to get Hubspot deal pipeline allowed values');
+
+    return [];
   }
 
   return await getHubspotPipelineAllowedValues(token!, 'deals');

@@ -52,7 +52,7 @@ export const HUBSPOT_CONTACTS_ALLOWED_PATHS = {
             element_type: 'string',
             required: false,
           },
-          get_allowed_values: getHubspotContactPropertiesAllowedValues,
+          get_element_allowed_values: getHubspotContactPropertiesAllowedValues,
         },
       },
     },

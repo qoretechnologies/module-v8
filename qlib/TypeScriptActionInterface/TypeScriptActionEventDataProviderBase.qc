@@ -46,6 +46,10 @@ public class TypeScriptActionEventDataProviderBase inherits TypeScriptActionData
         @note only called if the provider supports the observer pattern / event API
     */
     private hash<string, hash<DataProviderMessageInfo>> getEventTypesImpl() {
+        hash<DataProviderMessageInfo> event_info = self.event_info;
+        if (dmap && (*hash<auto> options = ImpliedArgumentHelper::get())) {
+            event_info.type = getDynamicDataType(event_info.type, options);
+        }
         return {
             event_id: event_info,
         };

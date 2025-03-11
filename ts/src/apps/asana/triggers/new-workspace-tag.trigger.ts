@@ -58,6 +58,26 @@ const asanaNewWorkspaceTagTrigger = QoreAppCreator.createLocalizedTrigger({
   webhook_deregister: deregisterAsanaWebhook,
   webhook_echo_header: asanaWebhookEchoHeader,
   webhook_event_loc: asanaWebhookInfoLocation,
+  get_example_event_data: () => ({
+    action: 'added',
+    type: 'tag',
+    created_at: new Date().toISOString(),
+    parent: {
+      gid: '1208408525816938',
+      resource_type: 'workspace',
+      name: 'Workspace Name',
+    },
+    resource: {
+      gid: '1209876543212345',
+      resource_type: 'tag',
+      name: 'workspace-wide-tag',
+    },
+    user: {
+      gid: '1206353569757060',
+      resource_type: 'user',
+      name: 'user@example.com',
+    },
+  }),
   event_info: {
     desc: 'New workspace tag event data',
     type: asanaEventInfoType,

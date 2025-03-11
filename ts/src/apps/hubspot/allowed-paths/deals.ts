@@ -90,7 +90,7 @@ export const HUBSPOT_DEALS_ALLOWED_PATHS = {
             element_type: 'string',
             required: false,
           },
-          get_allowed_values: getHubspotDealPropertiesAllowedValues,
+          get_element_allowed_values: getHubspotDealPropertiesAllowedValues,
         },
       },
     },

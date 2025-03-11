@@ -110,6 +110,7 @@ export default (locale: Locales) =>
         'offline_access',
         'Sites.Manage.All',
         'Files.ReadWrite',
+        'Sites.Read.All',
       ],
       ping_path: '/v1.0/me',
     },

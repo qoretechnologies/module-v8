@@ -75,7 +75,7 @@ export const HUBSPOT_CUSTOM_OBJECTS_ALLOWED_PATHS = {
             element_type: 'string',
             required: false,
           },
-          get_allowed_values: getHubspotCustomObjectPropertiesAllowedValues,
+          get_element_allowed_values: getHubspotCustomObjectPropertiesAllowedValues,
         },
       },
     },

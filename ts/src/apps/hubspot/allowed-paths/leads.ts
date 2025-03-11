@@ -68,7 +68,7 @@ export const HUBSPOT_LEADS_ALLOWED_PATHS = {
             element_type: 'string',
             required: false,
           },
-          get_allowed_values: getHubspotLeadPropertiesAllowedValues,
+          get_element_allowed_values: getHubspotLeadPropertiesAllowedValues,
         },
       },
     },
