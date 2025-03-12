@@ -63,7 +63,7 @@ export const fetchHubspotObjectProperties = async (
     const filter = options.filter;
 
     if (options.filter.hasUniqueValue !== undefined) {
-      results = results.filter((property) => property.hasUniqueValue !== filter.hasUniqueValue);
+      results = results.filter((property) => property.hasUniqueValue === filter.hasUniqueValue);
     }
   }
 
