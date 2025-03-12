@@ -204,8 +204,8 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
             if (!type) {
                 type = cast<HashDataType>(rt.copy());
             }
-            map type.addField(TypeScriptActionInterface::getField("request-type", $1.key, $1.value, self, True)),
-                res.pairIterator();
+            map type.addField(TypeScriptActionInterface::getField(type, "request-type", $1.key, $1.value, self,
+                True)), res.pairIterator();
         }
         return type;
     }

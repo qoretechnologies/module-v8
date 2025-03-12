@@ -277,7 +277,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                     continue;
                 }
 
-                type.addField(TypeScriptActionInterface::getField("option", key, i.value, self));
+                type.addField(TypeScriptActionInterface::getField(type, "option", key, i.value, self));
                 if (i.value_depends_on) {
                     depmap{key} = map {$1: True}, i.value.depends_on;
                 }
@@ -334,6 +334,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             return;
         }
         request_type_done = True;
+
         checkDataProvider();
 
         # get type key
@@ -471,6 +472,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         }
 
         if (request_type && (*hash<string, AbstractDataField> fields = request_type.getFields())) {
+            NoIoHelper nih();
             action_save.options = DataProviderActionCatalog::getActionOptionFromFields(fields);
             TypeScriptActionInterface::sortOptions({"name": action_save.app}, action_save, \action_save.options);
 
@@ -490,6 +492,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                 }
             }
         }
+
         grtmap{request_key} = request_type;
     }
 

@@ -1843,7 +1843,7 @@ public class TypeScriptActionInterface {
 
     static HashDataType getHashTypeIntern(string path, HashDataType type, hash<auto> h, *bool required,
             *ActionFunctionContext fctx, *bool ignore_dup) {
-        map type.addField(TypeScriptActionInterface::getField(path, $1.key, $1.value, fctx, ignore_dup)),
+        map type.addField(TypeScriptActionInterface::getField(type, path, $1.key, $1.value, fctx, ignore_dup)),
             h.pairIterator();
         return type;
     }
@@ -1854,8 +1854,8 @@ public class TypeScriptActionInterface {
             "instead", v.fullType());
     }
 
-    static TypeScriptDataField getField(string path, string name, hash<auto> h, *ActionFunctionContext fctx,
-            *bool ignore_dup) {
+    static TypeScriptDataField getField(HashDataType type, string path, string name, hash<auto> h,
+            *ActionFunctionContext fctx, *bool ignore_dup) {
         on_error rethrow $1.err, sprintf("%s (field: %y)", $1.desc, h);
         *bool req = remove h.required;
         path += "-" + name;
@@ -1864,6 +1864,17 @@ public class TypeScriptActionInterface {
         hash<auto> rv = TypeScriptActionInterface::getFieldHash(path, name, type, \h, req, fctx, ignore_dup);
         if (h) {
             throw "FIELD-ERROR", sprintf("Description for field %y has unknown keys: %y", name, keys h);
+        }
+        if (*list<auto> deps = rv.attr.depends_on) {
+            hash<string, AbstractDataField> fields = type.getFields();
+            foreach string dep in (deps) {
+                *AbstractDataField df = fields{dep};
+                if (!df) {
+                    throw "FIELD-ERROR", sprintf("Field %y depends on unknown field %y; known fields: %y", name, dep,
+                        keys fields);
+                }
+                df.setAttribute({"has_dependents": True});
+            }
         }
         return new TypeScriptDataField(rv, fctx);
     }
