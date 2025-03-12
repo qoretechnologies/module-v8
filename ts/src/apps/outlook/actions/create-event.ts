@@ -9,7 +9,11 @@ import { OUTLOOK_APP_NAME, OUTLOOK_DATE_FORMAT } from '../constants';
 import { getOutlookCalendarIdAllowedValues } from '../helpers/get-calendar-id-allowed-values';
 import { getOutlookTimezonesAllowedValues } from '../helpers/get-timezone-allowed-values';
 import dayjs from 'dayjs';
-import { getOutlookRecipientsAllowedValues } from '../helpers/get-recepient-allowed-values';
+import {
+  getOutlookRecipientsAllowedValues,
+  IOutlookRecipient,
+  mapOutlookRecipientToAddress,
+} from '../helpers/get-recepient-allowed-values';
 
 const options = {
   calendarId: {
@@ -48,30 +52,19 @@ const options = {
       element_type: {
         type: 'hash',
         fields: {
-          emailAddress: {
-            type: {
-              type: 'hash',
-              fields: {
-                address: {
-                  type: 'string',
-                  required: true,
-                },
-                name: {
-                  type: 'string',
-                  required: false,
-                },
-              },
-            },
+          address: {
+            type: 'string',
+            required: true,
           },
-          type: {
+          name: {
             type: 'string',
             required: false,
           },
         },
       },
     },
-    get_element_allowed_values: getOutlookRecipientsAllowedValues,
-    element_allowed_values_creatable: true,
+    get_allowed_values: getOutlookRecipientsAllowedValues,
+    allowed_values_creatable: true,
   },
   body: {
     type: 'string',
@@ -190,12 +183,7 @@ export const CreateOutlookEvent = QoreAppCreator.createLocalizedAction<typeof op
     const timezone = data?.timezone;
     const title = data?.title;
     const location = data?.location;
-    const attendees = data?.attendees as
-      | Array<{
-          emailAddress: { address: string; name?: string };
-          type?: string;
-        }>
-      | undefined;
+    const attendees = (data?.attendees || []) as IOutlookRecipient[];
     const body = data?.body;
     const bodyContentType = data?.bodyContentType || 'Text';
     const isOnlineMeeting = data?.isOnlineMeeting || false;
@@ -240,7 +228,7 @@ export const CreateOutlookEvent = QoreAppCreator.createLocalizedAction<typeof op
           displayName: location,
         },
       }),
-      ...(attendees && attendees.length > 0 && { attendees }),
+      ...(attendees.length > 0 && { attendees: attendees.map(mapOutlookRecipientToAddress) }),
       ...(body && {
         body: {
           contentType: bodyContentType,
