@@ -184,7 +184,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
 
     static private auto getAsyncValueArgsIntern(*LoggerInterface logger, hash<AsyncCallInfo> api,
             *softlist<auto> args) {
-        if (no_io) {
+        if (_ts_no_io) {
             return;
         }
         date start = now_us();
@@ -476,12 +476,13 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
     }
 
     private *HashDataType getDynamicTypeIntern(AbstractDataProviderType rt, hash<auto> slice, hash<auto> req) {
+        *hash<DataContextInfo> cinfo = getCallContextInfo(req);
         HashDataType type;
         foreach hash<auto> i in (slice.pairIterator()) {
             auto val = req{i.key};
             debug("Retrieving options dependent on option %y, value %y for data provider %y type %y", i.key, val,
                 getName(), type);
-            auto res = getAsyncValueWithCache(i.value, req, getCallContextInfo(req));
+            auto res = getAsyncValueWithCache(i.value, req, cinfo);
             if (!exists res) {
                 continue;
             }
@@ -723,19 +724,19 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
 }
 
 namespace Priv {
-thread_local *bool no_io;
+thread_local *bool _ts_no_io;
 class NoIoHelper {
     private {
         *bool old_no_io;
     }
 
     constructor() {
-        old_no_io = no_io;
-        no_io = True;
+        old_no_io = _ts_no_io;
+        _ts_no_io = True;
     }
 
     destructor() {
-        no_io = old_no_io;
+        _ts_no_io = old_no_io;
     }
 }
 }
