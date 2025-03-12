@@ -2311,8 +2311,15 @@ public class TypeScriptActionInterface {
 
     static private postProcessDynamicTypeInfoIntern(*LoggerInterface logger, hash<AsyncCallInfo> call,
             *softlist<auto> args, reference<*hash<auto>> info) {
-        if (args[0].conn_name && (*hash<auto> req = DataProviderDataContextHelper::get())) {
-            args[0].opts = req;
+        if (args[0].conn_name && (auto req = DataProviderDataContextHelper::get())) {
+            TSAI::info("postProcessDynamicTypeInfoIntern() req: %y", req);
+            if (req.typeCode() == NT_LIST) {
+                # can be a list when the context data is set as the acutal args from ts-proxy
+                args = req;
+            } else if (req.typeCode() == NT_HASH) {
+                # can be a hash when the context data is set in the local process as the options
+                args[0].opts = req;
+            }
         }
         foreach hash<auto> i in (info.fields.pairIterator()) {
             if (i.value.type == "hash" && i.value.fields) {

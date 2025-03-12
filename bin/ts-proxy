@@ -301,6 +301,7 @@ class TsProxy inherits TypeScriptProxy {
                 rethrow;
             }
         }
+        DataProviderDataContextHelper dch(args);
         auto rv = TypeScriptActionDataProviderBase::getAsyncValueArgs(logger, api, args);
         string yaml = makeSend(CC_OK, {
             "rv": rv,
@@ -314,6 +315,7 @@ class TsProxy inherits TypeScriptProxy {
         TypeScriptActionInterface::initAppAction(app, action);
         TypeScriptActionEventDataProviderBase prov = TypeScriptActionInterface::getAppDataProvider(app)
             .getChildProviderEx(action);
+        DataProviderDataContextHelper dch(req);
         *HashDataType type = prov.getEventTypeExtern(conn_name, conn_opts, req);
         string yaml = makeSend(CC_OK, {
             "rv": type ? type.serialize() : NOTHING,
@@ -327,6 +329,7 @@ class TsProxy inherits TypeScriptProxy {
         TypeScriptActionInterface::initAppAction(app, action);
         TypeScriptActionApiDataProvider prov = TypeScriptActionInterface::getAppDataProvider(app)
             .getChildProviderEx(action);
+        DataProviderDataContextHelper dch(req);
         *HashDataType type = prov.getRequestTypeExtern(conn_name, conn_opts, req);
         string yaml = makeSend(CC_OK, {
             "rv": type ? type.serialize() : NOTHING,

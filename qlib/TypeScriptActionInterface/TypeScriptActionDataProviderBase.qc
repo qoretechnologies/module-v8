@@ -195,7 +195,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         if (TSAI::checkServer()) {
             TSAI::info("%y: acquiring proxy for %y: %y", api.label, api.key, args);
             JavaScriptProgramProxy proxy = TypeScriptActionInterface::server.get();
-            TSAI::info("%y: proxy acquired for %y", api.label, api.key);
+            TSAI::info("%y: proxy acquired for %y args: %y", api.label, api.key, args);
             on_exit TypeScriptActionInterface::server.release(proxy);
             return proxy.getAsyncValue(api, args);
         }
@@ -218,7 +218,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             v = run(v, ms);
             Queue q();
             code push_val = sub (string w, auto v) {
-                if (v.name && v.message && v.stack) {
+                if (w == "rejected" || (v.name && v.message && v.stack)) {
                     q.push({
                         "where": w,
                         "err": {
@@ -258,8 +258,12 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                     rv = rv.val;
                 } else {
                     errloc = rv."where";
-                    err = rv.err;
+                    err = rv.err ?? rv.val;
+                    if (err instanceof JavaScriptObject) {
+                        err = err.toData();
+                    }
                     TSAI::debug("Async error result: %y", rv);
+                    TSAI::error("Async error: %y", err);
                 }
             } catch (hash<ExceptionInfo> ex) {
                 TSAI::error("Error waiting for async JavaScript request %y: %s", api.label, get_exception_string(ex));
