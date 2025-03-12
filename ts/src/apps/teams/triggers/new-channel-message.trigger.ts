@@ -34,8 +34,8 @@ const TeamsNewChannelMessageTrigger = QoreAppCreator.createLocalizedTrigger({
     const missingValues: string[] = [];
 
     if (!token) missingValues.push('token');
-    if (!teamId) missingValues.push('team_id');
-    if (!channelId) missingValues.push('channel_id');
+    if (!teamId) missingValues.push('teamId');
+    if (!channelId) missingValues.push('channelId');
 
     if (missingValues.length) {
       throw new Error(
@@ -57,16 +57,22 @@ const TeamsNewChannelMessageTrigger = QoreAppCreator.createLocalizedTrigger({
   },
   get_example_event_data: async (context) => {
     const token = context?.conn_opts?.token;
-    const teamId = context?.conn_opts?.team_id;
-    const channelId = context?.conn_opts?.channel_id;
+    const teamId = context?.conn_opts?.teamId;
+    const channelId = context?.conn_opts?.channelId;
 
-    if (!token || !teamId || !channelId) {
+    const missingValues: string[] = [];
+
+    if (!token) missingValues.push('token');
+    if (!teamId) missingValues.push('teamId');
+    if (!channelId) missingValues.push('channelId');
+
+    if (missingValues.length) {
       throw new Error(
         'The token, team_id, and channel_id are required to get the new channel message example data'
       );
     }
 
-    const messages = await getLastTeamsChannelMessages(token, teamId, channelId);
+    const messages = await getLastTeamsChannelMessages(token!, teamId!, channelId!);
 
     return messages?.length > 0 ? messages[0] : null;
   },

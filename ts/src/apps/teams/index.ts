@@ -45,6 +45,7 @@ export default (locale: Locales) =>
         'ChannelMessage.Read.All',
         'Chat.ReadWrite.All',
       ],
+      ping_method: 'GET',
       ping_path: '/v1.0/me',
     },
   }) satisfies TQoreAppWithActions;

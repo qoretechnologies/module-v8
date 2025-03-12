@@ -37,5 +37,6 @@ export default (locale: Locales) =>
         'Mail.ReadWrite',
       ],
       ping_path: '/v1.0/me',
+      ping_method: 'GET',
     },
   }) satisfies TQoreAppWithActions;
