@@ -235,7 +235,6 @@ const getTeamsMeetings = async (
           'isCancelled',
         ].join(',')
       )
-      .filter('isOnlineMeeting eq true')
       .top(DEFAULT_TRIGGER_POLL_ITEM_LIMIT)
       .orderby('createdDateTime desc')
       .get();

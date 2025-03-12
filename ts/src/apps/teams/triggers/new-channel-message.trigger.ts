@@ -1,11 +1,11 @@
-import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
-import { TEAMS_APP_NAME } from '../constants';
-import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
 import { Client, PageCollection } from '@microsoft/microsoft-graph-client';
-import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
 import { ChatMessage } from '@microsoft/microsoft-graph-types';
-import { getTeamsTeamIdAllowedValues } from '../helpers/get-team-id-allowed-values';
+import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
+import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
+import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
+import { TEAMS_APP_NAME } from '../constants';
 import { getTeamsChannelIdAllowedValues } from '../helpers/get-channel-id-allowed-values';
+import { getTeamsTeamIdAllowedValues } from '../helpers/get-team-id-allowed-values';
 
 const options = {
   teamId: {
@@ -57,8 +57,8 @@ const TeamsNewChannelMessageTrigger = QoreAppCreator.createLocalizedTrigger({
   },
   get_example_event_data: async (context) => {
     const token = context?.conn_opts?.token;
-    const teamId = context?.conn_opts?.teamId;
-    const channelId = context?.conn_opts?.channelId;
+    const teamId = context?.opts?.teamId;
+    const channelId = context?.opts?.channelId;
 
     const missingValues: string[] = [];
 
@@ -193,22 +193,7 @@ const getLastTeamsChannelMessages = async (token: string, teamId: string, channe
   try {
     const response: PageCollection = await client
       .api(`/teams/${teamId}/channels/${channelId}/messages`)
-      .select(
-        [
-          'id',
-          'createdDateTime',
-          'lastModifiedDateTime',
-          'importance',
-          'subject',
-          'body',
-          'from',
-          'attachments',
-          'mentions',
-          'reactions',
-        ].join(',')
-      )
       .top(DEFAULT_TRIGGER_POLL_ITEM_LIMIT)
-      .orderby('createdDateTime desc')
       .get();
 
     return response.value as ChatMessage[];

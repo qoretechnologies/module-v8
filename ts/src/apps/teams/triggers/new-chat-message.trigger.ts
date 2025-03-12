@@ -175,22 +175,7 @@ const getLastTeamsChatMessages = async (token: string, chatId: string) => {
   try {
     const response: PageCollection = await client
       .api(`/chats/${chatId}/messages`)
-      .select(
-        [
-          'id',
-          'createdDateTime',
-          'lastModifiedDateTime',
-          'importance',
-          'subject',
-          'body',
-          'from',
-          'attachments',
-          'mentions',
-          'reactions',
-        ].join(',')
-      )
       .top(DEFAULT_TRIGGER_POLL_ITEM_LIMIT)
-      .orderby('createdDateTime desc')
       .get();
 
     return response.value as ChatMessage[];
