@@ -15,8 +15,8 @@ const userId = {
 } satisfies TQoreAppActionOverrideOption;
 
 const propertiesQuery = {
-  allowed_values_creatable: true,
-  get_allowed_values: getHubspotUserPropertiesAllowedValues,
+  element_allowed_values_creatable: true,
+  get_element_allowed_values: getHubspotUserPropertiesAllowedValues,
 } satisfies TQoreAppActionOverrideOption;
 
 export const HUBSPOT_USERS_ALLOWED_PATHS = {

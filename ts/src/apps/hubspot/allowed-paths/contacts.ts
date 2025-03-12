@@ -17,8 +17,8 @@ const contactId = {
 } satisfies TQoreAppActionOverrideOption;
 
 const propertiesQuery = {
-  allowed_values_creatable: true,
-  get_allowed_values: getHubspotContactPropertiesAllowedValues,
+  element_allowed_values_creatable: true,
+  get_element_allowed_values: getHubspotContactPropertiesAllowedValues,
 } satisfies TQoreAppActionOverrideOption;
 
 export const HUBSPOT_CONTACTS_ALLOWED_PATHS = {
