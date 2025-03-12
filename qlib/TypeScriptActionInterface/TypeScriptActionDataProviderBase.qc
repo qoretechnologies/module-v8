@@ -505,6 +505,23 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         @return a list of allowed values for this data
     */
     private *list<hash<AllowedValueInfo>> getReferenceDataImpl(string type, *hash<auto> action_opts) {
+        return getReferenceDataIntern(omap, romap, type, action_opts);
+    }
+
+    #! Returns element reference data of the given kind if available
+    /** @param type the unique type name of the reference data
+        @param action_opts an optional hash of action options when called when working with an app action
+
+        @return a list of allowed element values for this data
+    */
+    private *list<hash<AllowedValueInfo>> getElementReferenceDataImpl(string type, *hash<auto> action_opts) {
+        return getReferenceDataIntern(eomap, reomap, type, action_opts, "element ");
+    }
+
+    #! Returns allowed value data of the given kind if available
+    private *list<hash<AllowedValueInfo>> getReferenceDataIntern(*hash<string, hash<AsyncCallInfo>> omap,
+            *hash<string, hash<RestGetAllowedValuesInfo>> reomap, string type, *hash<auto> action_opts,
+            *string rtype) {
         if (((*hash<auto> deps = depmap{type})
             && (action_opts{keys deps}.size() != deps.size()))) {
             return;
@@ -512,10 +529,10 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
 
         if (*hash<AsyncCallInfo> ref_api = omap{type}) {
             *hash<DataContextInfo> arg = getCallContextInfo(action_opts);
-            debug("Retrieving reference data with JS for data provider %y type %y arg: %y (deps: %y)", getName(),
-                type, arg, depmap);
+            debug("Retrieving %sreference data with JS for data provider %y type %y arg: %y (deps: %y)", rtype,
+                getName(), type, arg, depmap);
             *softlist<auto> l = getAsyncValueWithCache(ref_api, action_opts, arg);
-            debug("Reference data for data provider %y type %y: %y", getName(), type, l);
+            debug("Got %sreference data for data provider %y type %y: %y", rtype, getName(), type, l);
             if (!l) {
                 return ();
             }
@@ -556,15 +573,16 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                 on_error entry.cancel($1);
 
                 hash<auto> info;
-                debug("Retrieving reference data with REST for data provider %y type %y: %s %s", getName(), type,
-                    ref_rest.method, path);
+                debug("Retrieving %sreference data with REST for data provider %y type %y: %s %s", rtype, getName(),
+                    type, ref_rest.method, path);
                 on_error rethrow $1.err, sprintf("%s: info: %y", $1.desc, info{"request-uri", "response-uri"});
                 entry.setValue(rest.doRequest(ref_rest.method, path, ref_rest.body, \info, NOTHING,
                     ref_rest.headers));
             }
             hash<auto> resp = entry.getValue();
 
-            debug("Reference data with REST for data provider %y type %y got: %y", getName(), type, resp);
+            debug("Got %sreference data with REST for data provider %y type %y: %y", rtype, getName(), type,
+                resp);
             *softlist<hash<AllowedValueInfo>> rv = getAllowedValues(resp, ref_rest.values.split(".")) ?? ();
             if (rv && ref_rest.display_names.val()) {
                 getAttributes("display_name", type, resp, ref_rest.display_names.split("."), \rv);
@@ -575,7 +593,8 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             if (rv && ref_rest.short_descs.val()) {
                 getAttributes("short_desc", type, resp, ref_rest.short_descs.split("."), \rv);
             }
-            debug("Reference data with REST for data provider %y type %y allowed values: %y", getName(), type, rv);
+            debug("Got %sreference data with REST for data provider %y type %y allowed values: %y", rtype, getName(),
+                type, rv);
             return rv;
         }
     }
