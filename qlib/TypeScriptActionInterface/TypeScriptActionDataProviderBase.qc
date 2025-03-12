@@ -492,8 +492,9 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             if (!type) {
                 type = cast<HashDataType>(rt.copy());
             }
-            map type.addField(TypeScriptActionInterface::getField(type, "dynamic-type", $1.key, $1.value, self,
-                True)), res.pairIterator();
+            map type.addField(TypeScriptActionInterface::getField("dynamic-type", $1.key, $1.value, self, True)),
+                res.pairIterator();
+            TypeScriptActionInterface::checkFieldDependencies(type);
         }
         return type;
     }

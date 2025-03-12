@@ -69,8 +69,9 @@ public class TypeScriptActionEventDataProviderBase inherits TypeScriptActionData
             if (!type) {
                 type = cast<HashDataType>(et.copy());
             }
-            map type.addField(TypeScriptActionInterface::getField(type, "event-type", $1.key, $1.value, self, True)),
+            map type.addField(TypeScriptActionInterface::getField("event-type", $1.key, $1.value, self, True)),
                 res.pairIterator();
+            TypeScriptActionInterface::checkFieldDependencies(type);
         }
         return type;
     }

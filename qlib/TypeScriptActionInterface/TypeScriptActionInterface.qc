@@ -1843,8 +1843,9 @@ public class TypeScriptActionInterface {
 
     static HashDataType getHashTypeIntern(string path, HashDataType type, hash<auto> h, *bool required,
             *ActionFunctionContext fctx, *bool ignore_dup) {
-        map type.addField(TypeScriptActionInterface::getField(type, path, $1.key, $1.value, fctx, ignore_dup)),
+        map type.addField(TypeScriptActionInterface::getField(path, $1.key, $1.value, fctx, ignore_dup)),
             h.pairIterator();
+        checkFieldDependencies(type);
         return type;
     }
 
@@ -1854,8 +1855,8 @@ public class TypeScriptActionInterface {
             "instead", v.fullType());
     }
 
-    static TypeScriptDataField getField(HashDataType type, string path, string name, hash<auto> h,
-            *ActionFunctionContext fctx, *bool ignore_dup) {
+    static TypeScriptDataField getField(string path, string name, hash<auto> h, *ActionFunctionContext fctx,
+            *bool ignore_dup) {
         on_error rethrow $1.err, sprintf("%s (field: %y)", $1.desc, h);
         *bool req = remove h.required;
         path += "-" + name;
@@ -1865,18 +1866,21 @@ public class TypeScriptActionInterface {
         if (h) {
             throw "FIELD-ERROR", sprintf("Description for field %y has unknown keys: %y", name, keys h);
         }
-        if (*list<auto> deps = rv.attr.depends_on) {
-            hash<string, AbstractDataField> fields = type.getFields();
-            foreach string dep in (deps) {
+        return new TypeScriptDataField(rv, fctx);
+    }
+
+    static checkFieldDependencies(HashDataType type) {
+        *hash<string, AbstractDataField> fields = type.getFields();
+        foreach AbstractDataField f in (fields.iterator()) {
+            foreach string dep in (f.getAttributes().depends_on) {
                 *AbstractDataField df = fields{dep};
                 if (!df) {
-                    throw "FIELD-ERROR", sprintf("Field %y depends on unknown field %y; known fields: %y", name, dep,
-                        keys fields);
+                    throw "FIELD-ERROR", sprintf("Field %y depends on unknown field %y; known fields: %y",
+                        f.getName(), dep, keys fields);
                 }
-                df.setAttribute({"has_dependents": True});
+                df.setAttributes({"has_dependents": True});
             }
         }
-        return new TypeScriptDataField(rv, fctx);
     }
 
     static hash<auto> getFieldHash(string path, string name, AbstractDataProviderType type,

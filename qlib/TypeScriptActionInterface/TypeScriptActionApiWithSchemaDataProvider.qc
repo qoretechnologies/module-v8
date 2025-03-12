@@ -277,7 +277,10 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                     continue;
                 }
 
-                type.addField(TypeScriptActionInterface::getField(type, "option", key, i.value, self));
+                type.addField(TypeScriptActionInterface::getField("option", key, i.value, self));
+                if (i.value.depends_on) {
+                    TypeScriptActionInterface::checkFieldDependencies(type);
+                }
                 if (i.value_depends_on) {
                     depmap{key} = map {$1: True}, i.value.depends_on;
                 }
