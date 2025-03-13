@@ -117,7 +117,7 @@ class TsProxy inherits TypeScriptProxy {
         while (True) {
             hash<auto> h;
             try {
-                h = getCommand();
+                h = getCommand(500ms);
                 if (!ValidCommands{h.cmd}) {
                     throw "CMD-ERROR", sprintf("Unknown parent command %y; valid send commands: %y", h.cmd,
                         keys ValidCommands);
@@ -150,6 +150,10 @@ class TsProxy inherits TypeScriptProxy {
 
                     case PC_GET_REQUEST_TYPE:
                         getRequestType(h.args[0], h.args[1], h.args[2], h.args[3], h.args[4]);
+                        break;
+
+                    case PC_GET_EVENT_TYPE:
+                        getEventType(h.args[0], h.args[1], h.args[2], h.args[3], h.args[4]);
                         break;
 
                     default:
@@ -221,6 +225,7 @@ class TsProxy inherits TypeScriptProxy {
                             "(JavaScript object)", key, event_data.fullType());
                     }
 
+                    #debug("Sending event: key: %y event: %y", key, event_data);
                     string yaml = makeSend(CC_EVENT, {
                         "key": key,
                         "event": event_data,
@@ -296,9 +301,24 @@ class TsProxy inherits TypeScriptProxy {
                 rethrow;
             }
         }
+        DataProviderDataContextHelper dch(args);
         auto rv = TypeScriptActionDataProviderBase::getAsyncValueArgs(logger, api, args);
         string yaml = makeSend(CC_OK, {
             "rv": rv,
+        });
+        sendString(yaml);
+    }
+
+    private getEventType(string app, string action, *string conn_name, *hash<auto> conn_opts, auto req) {
+        info("Get event type app: %y action: %y conn_opts: %y req: %y", app, action, conn_opts, req);
+        TypeScriptActionInterface::initApp(app);
+        TypeScriptActionInterface::initAppAction(app, action);
+        TypeScriptActionEventDataProviderBase prov = TypeScriptActionInterface::getAppDataProvider(app)
+            .getChildProviderEx(action);
+        DataProviderDataContextHelper dch(req);
+        *HashDataType type = prov.getEventTypeExtern(conn_name, conn_opts, req);
+        string yaml = makeSend(CC_OK, {
+            "rv": type ? type.serialize() : NOTHING,
         });
         sendString(yaml);
     }
@@ -309,6 +329,7 @@ class TsProxy inherits TypeScriptProxy {
         TypeScriptActionInterface::initAppAction(app, action);
         TypeScriptActionApiDataProvider prov = TypeScriptActionInterface::getAppDataProvider(app)
             .getChildProviderEx(action);
+        DataProviderDataContextHelper dch(req);
         *HashDataType type = prov.getRequestTypeExtern(conn_name, conn_opts, req);
         string yaml = makeSend(CC_OK, {
             "rv": type ? type.serialize() : NOTHING,

@@ -184,7 +184,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
 
     static private auto getAsyncValueArgsIntern(*LoggerInterface logger, hash<AsyncCallInfo> api,
             *softlist<auto> args) {
-        if (no_io) {
+        if (_ts_no_io) {
             return;
         }
         date start = now_us();
@@ -195,7 +195,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         if (TSAI::checkServer()) {
             TSAI::info("%y: acquiring proxy for %y: %y", api.label, api.key, args);
             JavaScriptProgramProxy proxy = TypeScriptActionInterface::server.get();
-            TSAI::info("%y: proxy acquired for %y", api.label, api.key);
+            TSAI::info("%y: proxy acquired for %y args: %y", api.label, api.key, args);
             on_exit TypeScriptActionInterface::server.release(proxy);
             return proxy.getAsyncValue(api, args);
         }
@@ -218,7 +218,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             v = run(v, ms);
             Queue q();
             code push_val = sub (string w, auto v) {
-                if (v.name && v.message && v.stack) {
+                if (w == "rejected" || (v.name && v.message && v.stack)) {
                     q.push({
                         "where": w,
                         "err": {
@@ -258,8 +258,12 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                     rv = rv.val;
                 } else {
                     errloc = rv."where";
-                    err = rv.err;
+                    err = rv.err ?? rv.val;
+                    if (err instanceof JavaScriptObject) {
+                        err = err.toData();
+                    }
                     TSAI::debug("Async error result: %y", rv);
+                    TSAI::error("Async error: %y", err);
                 }
             } catch (hash<ExceptionInfo> ex) {
                 TSAI::error("Error waiting for async JavaScript request %y: %s", api.label, get_exception_string(ex));
@@ -446,7 +450,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
     }
 
     #! Returns a data type for the given base type and request / option data
-    private AbstractDataProviderType getDynamicDataType(AbstractDataProviderType rt, hash<auto> req) {
+    private AbstractDataProviderType getDynamicDataType(string cmd, AbstractDataProviderType rt, hash<auto> req) {
         *hash<auto> slice = dmap{keys req};
         if (!slice) {
             return rt;
@@ -465,7 +469,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             JavaScriptProgramProxy proxy = TypeScriptActionInterface::server.get();
             TSAI::debug("Proxy started for app %y action %y: request type with args", app, action);
             on_exit TypeScriptActionInterface::server.release(proxy);
-            type = proxy.getRequestType(app, action, conn.name, conn.getRealOptions(), req);
+            type = proxy.getDynamicType(cmd, app, action, conn.name, conn.getRealOptions(), req);
         } else {
             type = getDynamicTypeIntern(rt, slice, req);
         }
@@ -476,12 +480,13 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
     }
 
     private *HashDataType getDynamicTypeIntern(AbstractDataProviderType rt, hash<auto> slice, hash<auto> req) {
+        *hash<DataContextInfo> cinfo = getCallContextInfo(req);
         HashDataType type;
         foreach hash<auto> i in (slice.pairIterator()) {
             auto val = req{i.key};
             debug("Retrieving options dependent on option %y, value %y for data provider %y type %y", i.key, val,
                 getName(), type);
-            auto res = getAsyncValueWithCache(i.value, req, getCallContextInfo(req));
+            auto res = getAsyncValueWithCache(i.value, req, cinfo);
             if (!exists res) {
                 continue;
             }
@@ -494,6 +499,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             }
             map type.addField(TypeScriptActionInterface::getField("dynamic-type", $1.key, $1.value, self, True)),
                 res.pairIterator();
+            TypeScriptActionInterface::checkFieldDependencies(type);
         }
         return type;
     }
@@ -505,6 +511,23 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         @return a list of allowed values for this data
     */
     private *list<hash<AllowedValueInfo>> getReferenceDataImpl(string type, *hash<auto> action_opts) {
+        return getReferenceDataIntern(omap, romap, type, action_opts);
+    }
+
+    #! Returns element reference data of the given kind if available
+    /** @param type the unique type name of the reference data
+        @param action_opts an optional hash of action options when called when working with an app action
+
+        @return a list of allowed element values for this data
+    */
+    private *list<hash<AllowedValueInfo>> getElementReferenceDataImpl(string type, *hash<auto> action_opts) {
+        return getReferenceDataIntern(eomap, reomap, type, action_opts, "element ");
+    }
+
+    #! Returns allowed value data of the given kind if available
+    private *list<hash<AllowedValueInfo>> getReferenceDataIntern(*hash<string, hash<AsyncCallInfo>> omap,
+            *hash<string, hash<RestGetAllowedValuesInfo>> reomap, string type, *hash<auto> action_opts,
+            *string rtype) {
         if (((*hash<auto> deps = depmap{type})
             && (action_opts{keys deps}.size() != deps.size()))) {
             return;
@@ -512,10 +535,10 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
 
         if (*hash<AsyncCallInfo> ref_api = omap{type}) {
             *hash<DataContextInfo> arg = getCallContextInfo(action_opts);
-            debug("Retrieving reference data with JS for data provider %y type %y arg: %y (deps: %y)", getName(),
-                type, arg, depmap);
+            debug("Retrieving %sreference data with JS for data provider %y type %y arg: %y (deps: %y)", rtype,
+                getName(), type, arg, depmap);
             *softlist<auto> l = getAsyncValueWithCache(ref_api, action_opts, arg);
-            debug("Reference data for data provider %y type %y: %y", getName(), type, l);
+            debug("Got %sreference data for data provider %y type %y: %y", rtype, getName(), type, l);
             if (!l) {
                 return ();
             }
@@ -556,15 +579,16 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                 on_error entry.cancel($1);
 
                 hash<auto> info;
-                debug("Retrieving reference data with REST for data provider %y type %y: %s %s", getName(), type,
-                    ref_rest.method, path);
+                debug("Retrieving %sreference data with REST for data provider %y type %y: %s %s", rtype, getName(),
+                    type, ref_rest.method, path);
                 on_error rethrow $1.err, sprintf("%s: info: %y", $1.desc, info{"request-uri", "response-uri"});
                 entry.setValue(rest.doRequest(ref_rest.method, path, ref_rest.body, \info, NOTHING,
                     ref_rest.headers));
             }
             hash<auto> resp = entry.getValue();
 
-            debug("Reference data with REST for data provider %y type %y got: %y", getName(), type, resp);
+            debug("Got %sreference data with REST for data provider %y type %y: %y", rtype, getName(), type,
+                resp);
             *softlist<hash<AllowedValueInfo>> rv = getAllowedValues(resp, ref_rest.values.split(".")) ?? ();
             if (rv && ref_rest.display_names.val()) {
                 getAttributes("display_name", type, resp, ref_rest.display_names.split("."), \rv);
@@ -575,7 +599,8 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             if (rv && ref_rest.short_descs.val()) {
                 getAttributes("short_desc", type, resp, ref_rest.short_descs.split("."), \rv);
             }
-            debug("Reference data with REST for data provider %y type %y allowed values: %y", getName(), type, rv);
+            debug("Got %sreference data with REST for data provider %y type %y allowed values: %y", rtype, getName(),
+                type, rv);
             return rv;
         }
     }
@@ -703,19 +728,19 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
 }
 
 namespace Priv {
-thread_local *bool no_io;
+thread_local *bool _ts_no_io;
 class NoIoHelper {
     private {
         *bool old_no_io;
     }
 
     constructor() {
-        old_no_io = no_io;
-        no_io = True;
+        old_no_io = _ts_no_io;
+        _ts_no_io = True;
     }
 
     destructor() {
-        no_io = old_no_io;
+        _ts_no_io = old_no_io;
     }
 }
 }

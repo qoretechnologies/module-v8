@@ -165,7 +165,9 @@ describe('Tests Hubspot actions', () => {
       const allowedValues = await getHubspotTicketPipelineStageAllowedValues({
         ...baseContext,
         opts: {
-          hs_pipeline: ticketPipeline,
+          properties: {
+            hs_pipeline: ticketPipeline,
+          },
         },
       });
 

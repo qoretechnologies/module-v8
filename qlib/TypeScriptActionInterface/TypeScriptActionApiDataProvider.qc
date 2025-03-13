@@ -88,9 +88,12 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
         on_error LoggerWrapper::error("%s", get_exception_string($1));
         bool new_type;
         if (get_dynamic_request_type && !dynamic_request_type_done) {
+            # include any context data in case request-specific info needs to be returned
+            *hash<auto> opts = DataProviderDataContextHelper::get();
             auto res = getAsyncValueArgs(self, get_dynamic_request_type, {
                 "conn_name": conn.name,
                 "conn_opts": conn.getRealOptions(),
+                "opts": opts,
             }, {
                 "conn_opts": conn.getRealOptions(),
             }, True);
@@ -118,11 +121,14 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
         if (!dtfields_done && dtmap) {
             foreach hash<auto> i in (dtmap.pairIterator()) {
                 debug("Retrieving dynamic type for option %y for data provider %y", i.key, getName());
+                # include any context data in case request-specific info needs to be returned
+                *hash<auto> opts = DataProviderDataContextHelper::get();
                 auto res = getAsyncValueArgs(self, i.value, {
                     "conn_name": conn.name,
-                    "conn_opts": conn.getRealOptions(),,
+                    "conn_opts": conn.getRealOptions(),
+                    "opts": opts,
                 }, {
-                    "conn_opts": conn.getRealOptions(),,
+                    "conn_opts": conn.getRealOptions(),
                 }, True);
                 if (!res) {
                     continue;
@@ -174,7 +180,7 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
             throw "DATA-PROVIDER-REQUEST-TYPE-ERROR", sprintf("Request data has type %y; expecting \"hash\"",
                 req.fullType());
         }
-        return getDynamicDataType(rt, req);
+        return getDynamicDataType(PC_GET_REQUEST_TYPE, rt, req);
     }
 
     *HashDataType getRequestTypeExtern(*string conn_name, *hash<auto> conn_opts, hash<auto> req) {
@@ -206,6 +212,7 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
             }
             map type.addField(TypeScriptActionInterface::getField("request-type", $1.key, $1.value, self, True)),
                 res.pairIterator();
+            TypeScriptActionInterface::checkFieldDependencies(type);
         }
         return type;
     }

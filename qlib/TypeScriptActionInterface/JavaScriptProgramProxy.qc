@@ -307,8 +307,8 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         return rv;
     }
 
-    *HashDataType getRequestType(string app, string action, *string conn_name, *hash<auto> conn_opts, auto req) {
-        *binary bin = sendCommandArgs(NOTHING, PC_GET_REQUEST_TYPE, (app, action, conn_name, conn_opts, req));
+    *HashDataType getDynamicType(string cmd, string app, string action, *string conn_name, *hash<auto> conn_opts, auto req) {
+        *binary bin = sendCommandArgs(NOTHING, cmd, (app, action, conn_name, conn_opts, req));
         *HashDataType rv = bin ? Serializable::deserialize(bin) : NOTHING;
         debug("getRequestType(app %y action %y req %y): %y", app, action, req, rv);
         return rv;
@@ -418,7 +418,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 }
                 foreach hash<auto> i in (event.omap.pairIterator()) {
                     try {
+                        info("Calling notify() for %y: %y", i.key, v.event);
                         i.value.notify(v.event);
+                        info("notify() done for %y", i.key);
                     } catch (hash<ExceptionInfo> ex) {
                         error("Error notifying observer %y for key %y: %s", i.key, v.key, get_exception_string(ex));
                     }

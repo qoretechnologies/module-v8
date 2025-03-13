@@ -125,7 +125,7 @@ const getLastUpdatedRecords = async (token: string, properties?: string[]): Prom
     properties,
     sort: {
       direction: 'DESCENDING',
-      propertyName: 'hs_lastmodifieddate',
+      propertyName: 'lastmodifieddate',
     },
   });
 

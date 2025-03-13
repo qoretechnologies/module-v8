@@ -29,6 +29,9 @@ export const dropboxAuth = PieceAuth.OAuth2({
     'files.content.read',
     'account_info.read',
   ],
+  extra: {
+    token_access_type: 'offline',
+  },
 });
 
 export const dropbox = createPiece({
