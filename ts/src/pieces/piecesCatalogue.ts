@@ -394,7 +394,7 @@ class _PiecesAppCatalogue {
   ): TQoreGetAllowedValuesFunction {
     return async (context: TQoreAppActionFunctionContext): Promise<IQoreAllowedValue[]> => {
       const auth = { access_token: context?.conn_opts?.token };
-      const options = await getOptions({ auth });
+      const options = await getOptions({ auth, ...context.opts });
 
       return options.options.map((option) => ({
         value: option.value,

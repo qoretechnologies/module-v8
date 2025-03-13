@@ -112,6 +112,7 @@ export default (locale: Locales) =>
         'Files.ReadWrite',
         'Sites.Read.All',
       ],
+      ping_method: 'GET',
       ping_path: '/v1.0/me',
     },
   }) satisfies TQoreAppWithActions;

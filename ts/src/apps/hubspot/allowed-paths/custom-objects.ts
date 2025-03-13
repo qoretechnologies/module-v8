@@ -23,9 +23,9 @@ const objectId = {
 } satisfies TQoreAppActionOverrideOption;
 
 const propertiesQuery = {
-  allowed_values_creatable: true,
+  element_allowed_values_creatable: true,
   depends_on: ['objectType'],
-  get_allowed_values: getHubspotCustomObjectPropertiesAllowedValues,
+  get_element_allowed_values: getHubspotCustomObjectPropertiesAllowedValues,
 } satisfies TQoreAppActionOverrideOption;
 
 export const HUBSPOT_CUSTOM_OBJECTS_ALLOWED_PATHS = {

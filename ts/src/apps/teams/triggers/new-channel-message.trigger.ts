@@ -1,11 +1,11 @@
-import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
-import { TEAMS_APP_NAME } from '../constants';
-import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
 import { Client, PageCollection } from '@microsoft/microsoft-graph-client';
-import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
 import { ChatMessage } from '@microsoft/microsoft-graph-types';
-import { getTeamsTeamIdAllowedValues } from '../helpers/get-team-id-allowed-values';
+import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
+import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
+import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
+import { TEAMS_APP_NAME } from '../constants';
 import { getTeamsChannelIdAllowedValues } from '../helpers/get-channel-id-allowed-values';
+import { getTeamsTeamIdAllowedValues } from '../helpers/get-team-id-allowed-values';
 
 const options = {
   teamId: {
@@ -34,8 +34,8 @@ const TeamsNewChannelMessageTrigger = QoreAppCreator.createLocalizedTrigger({
     const missingValues: string[] = [];
 
     if (!token) missingValues.push('token');
-    if (!teamId) missingValues.push('team_id');
-    if (!channelId) missingValues.push('channel_id');
+    if (!teamId) missingValues.push('teamId');
+    if (!channelId) missingValues.push('channelId');
 
     if (missingValues.length) {
       throw new Error(
@@ -57,16 +57,22 @@ const TeamsNewChannelMessageTrigger = QoreAppCreator.createLocalizedTrigger({
   },
   get_example_event_data: async (context) => {
     const token = context?.conn_opts?.token;
-    const teamId = context?.conn_opts?.team_id;
-    const channelId = context?.conn_opts?.channel_id;
+    const teamId = context?.opts?.teamId;
+    const channelId = context?.opts?.channelId;
 
-    if (!token || !teamId || !channelId) {
+    const missingValues: string[] = [];
+
+    if (!token) missingValues.push('token');
+    if (!teamId) missingValues.push('teamId');
+    if (!channelId) missingValues.push('channelId');
+
+    if (missingValues.length) {
       throw new Error(
         'The token, team_id, and channel_id are required to get the new channel message example data'
       );
     }
 
-    const messages = await getLastTeamsChannelMessages(token, teamId, channelId);
+    const messages = await getLastTeamsChannelMessages(token!, teamId!, channelId!);
 
     return messages?.length > 0 ? messages[0] : null;
   },
@@ -187,22 +193,7 @@ const getLastTeamsChannelMessages = async (token: string, teamId: string, channe
   try {
     const response: PageCollection = await client
       .api(`/teams/${teamId}/channels/${channelId}/messages`)
-      .select(
-        [
-          'id',
-          'createdDateTime',
-          'lastModifiedDateTime',
-          'importance',
-          'subject',
-          'body',
-          'from',
-          'attachments',
-          'mentions',
-          'reactions',
-        ].join(',')
-      )
       .top(DEFAULT_TRIGGER_POLL_ITEM_LIMIT)
-      .orderby('createdDateTime desc')
       .get();
 
     return response.value as ChatMessage[];

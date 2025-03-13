@@ -121,7 +121,7 @@ describe('Should test Monday app', () => {
 
       const allowedValues = await getMondaySingleColumnAllowedValues({
         ...baseContext,
-        opts: { ...baseContext.opts, column_id: 'color_mknqsk4q' },
+        opts: { ...baseContext.opts, column_id: 'status' },
       });
 
       expect(allowedValues).toBeDefined();
@@ -182,6 +182,7 @@ describe('Should test Monday app', () => {
       expect(result).toBeDefined();
       expect(result.data).toBeDefined();
       expect(result.data.create_item).toBeDefined();
+      expect(result.data.create_item.id).toBeDefined();
 
       itemId = result.data.create_item.id;
     });

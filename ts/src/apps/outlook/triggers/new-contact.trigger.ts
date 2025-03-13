@@ -14,7 +14,7 @@ const OutlookNewContactTrigger = QoreAppCreator.createLocalizedTrigger({
 
     const missingValues: string[] = [];
 
-    if (token) missingValues.push('token');
+    if (!token) missingValues.push('token');
 
     if (missingValues.length) {
       throw new Error(

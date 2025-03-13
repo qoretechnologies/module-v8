@@ -18,8 +18,8 @@ const productId = {
 } satisfies TQoreAppActionOverrideOption;
 
 const propertiesQuery = {
-  allowed_values_creatable: true,
-  get_allowed_values: getHubspotProductPropertiesAllowedValues,
+  element_allowed_values_creatable: true,
+  get_element_allowed_values: getHubspotProductPropertiesAllowedValues,
 } satisfies TQoreAppActionOverrideOption;
 
 export const HUBSPOT_PRODUCTS_ALLOWED_PATHS = {

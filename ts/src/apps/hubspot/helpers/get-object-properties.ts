@@ -231,6 +231,7 @@ export const getHubspotDealPropertiesType: TQoreGetDynamicTypeFunction =
         type: 'softstring',
         display_name: 'Pipeline',
         short_desc: 'The pipeline of the deal',
+        on_change: ['refetch'],
         get_allowed_values: getHubspotDealPipelineAllowedValues,
         required: true,
       },
@@ -260,6 +261,7 @@ export const getHubspotLeadPropertiesType: TQoreGetDynamicTypeFunction =
         display_name: 'Pipeline',
         short_desc: 'The pipeline of the lead',
         get_allowed_values: getHubspotLeadPipelineAllowedValues,
+        on_change: ['refetch'],
         required: true,
       },
       hs_pipeline_stage: {
@@ -329,6 +331,7 @@ export const getHubspotTicketPropertiesType: TQoreGetDynamicTypeFunction =
         display_name: 'Pipeline',
         short_desc: 'The pipeline of the ticket',
         get_allowed_values: getHubspotTicketPipelineAllowedValues,
+        on_change: ['refetch'],
         required: true,
       },
       hs_pipeline_stage: {
