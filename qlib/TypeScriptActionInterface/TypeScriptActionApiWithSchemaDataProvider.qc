@@ -190,8 +190,8 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                     type = type.getOrNothingType();
                 }
             }
-
         }
+
         info += TypeScriptActionInterface::getFieldHash(path, info.name, type ?? qdf.getType(), \type_hash, req,
             fctx);
         if (attr) {
@@ -446,7 +446,9 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                         "desc": "API request type",
                     });
                 } else {
-                    fields += request_type.getFields();
+                    # NOTE: here we assume that any fields in the request type with the same name as a path var
+                    # represent the same value
+                    fields += request_type.getFields() - keys path_vars;
                 }
             }
             request_type = new HashDataType(AutoHashType, "RestRequestType", fields);
