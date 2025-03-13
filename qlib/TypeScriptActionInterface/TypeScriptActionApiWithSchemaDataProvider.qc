@@ -136,7 +136,8 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         }
     }
 
-    static overrideOptionType(string path, hash<auto> action, AbstractDataProviderType type, list<string> l,
+    # returns True if a dynamic type was generated
+    static *bool overrideOptionType(string path, hash<auto> action, AbstractDataProviderType type, list<string> l,
             *hash<auto> type_hash, string k, *ActionFunctionContext fctx) {
         string key = shift l;
         HashDataType t;
@@ -163,8 +164,12 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                 "expecting \"QoreDataField\"", action.app, action.action, key, k, f.className());
         }
         if (l) {
-            overrideOptionType(path, action, f.getType(), l, type_hash, k, fctx);
-            return;
+            AbstractDataProviderType ftype = f.getType();
+            *bool rv = overrideOptionType(path, action, ftype, l, type_hash, k, fctx);
+            if (rv && !ftype.getTags().dynamic) {
+                ftype.setDynamicTag();
+            }
+            return rv;
         }
 
         # update field
@@ -208,6 +213,10 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         #printf("Edited %y (%s) => %y mandatory: %y av: %y (parent %y)\n", key, t.getFields(){key}.uniqueHash(),
         #    t.getFields(){key}.getType().className(), t.getFields(){key}.isMandatory(),
         #    t.getFields(){key}.getAllowedValues(), t.className());
+        if (info.attr.dynamic) {
+            t.setDynamicTag();
+        }
+        return info.attr.dynamic;
     }
 
     #! "Normalizes" the request and response for testing if necessary
@@ -643,10 +652,12 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
 
 namespace Priv {
 class ActionProviderContextHelper {
-    static *TypeScriptActionApiWithSchemaDataProvider get() {
+    static *TypeScriptActionDataProviderBase get() {
         *AbstractDataProvider prov = DataProviderContextHelper::get();
-        if (prov && (prov instanceof TypeScriptActionApiWithSchemaDataProvider)) {
-            return cast<TypeScriptActionApiWithSchemaDataProvider>(prov);
+        if (prov && (prov instanceof TypeScriptActionDataProviderBase)) {
+            return cast<TypeScriptActionDataProviderBase>(prov);
+        } else if (prov) {
+            TSAI::info("IGNORING %y", prov.className());
         }
     }
 }
