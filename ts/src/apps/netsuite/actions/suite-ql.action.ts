@@ -12,6 +12,7 @@ export const NetsuiteSuiteQlOptions = {
   query: {
     type: 'string',
     required: true,
+    allowed_values_creatable: true,
     allowed_values: NetsuiteSuiteQLQueryAllowedValues,
   },
   limit: {
