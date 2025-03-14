@@ -343,8 +343,10 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                     killChild();
                     restarted = checkRestart(NOTHING, True);
                     string desc = restarted
-                        ? sprintf("The async call timed out; terminated and restarted child process with PID %d", pid)
-                        : sprintf("The async call timed out; terminated child process");
+                        ? sprintf("The async call timed out (timeout: %y; duration: %y); terminated and restarted "
+                            "child process with PID %d", command_in_progress."timeout", d, pid)
+                        : sprintf("The async call timed out (timeout: %y; duration: %y); terminated child process",
+                            command_in_progress."timeout", d);
                     cmdq.push({
                         "cmd": CC_ERR,
                         "ex": {
@@ -878,7 +880,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         delete s;
 
         error("Restarting child process after an error");
-        logChildOutput();
+        *hash<auto> out = logChildOutput();
 
         ++restart_count;
 
@@ -890,7 +892,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 "ex": {
                     "err": "CHILD-ABORTED",
                     "desc": sprintf("Restarted child process with PID %d", pid),
-                    "arg": command_in_progress,
+                    "arg": command_in_progress + {
+                        "out": out,
+                    },
                 },
             });
         }
@@ -913,16 +917,16 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
     }
 
-    private logChildOutput(*bool always_output) {
+    private *hash<auto> logChildOutput(*bool always_output) {
         *string str = proc.readStdout(64 * 1024, 0s);
-        bool out;
+        hash<auto> rv;
         if (str) {
             trim str;
             string pfx = " > stdout: ";
             str = pfx + str;
             str = replace(str, "\n", "\n" + pfx);
             info("Child output follows:\n%s", str);
-            out = True;
+            rv."stdout" = str;
         }
         str = proc.readStderr(64 * 1024, 0s);
         if (str) {
@@ -931,22 +935,12 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             str = pfx + str;
             str = replace(str, "\n", "\n" + pfx);
             error("Child error output follows:\n%s", str);
-            if (!out) {
-                out = True;
-            }
+            rv."stdout" = str;
         }
-        if (always_output && !out) {
+        if (always_output && !rv) {
             info("child has no output");
         }
-        /*
-        if (out) {
-            try {
-                throw "LOCATION-ERROR";
-            } catch (hash<ExceptionInfo> ex) {
-                info("%s", get_exception_string(ex));
-            }
-        }
-        */
+        return rv;
     }
 
     private debug(string fmt, ...) {
@@ -1015,6 +1009,9 @@ class RetryCounter {
         TSAI::error("Not retrying cmd: %y args: %y that has failed %d times", command_in_progress.cmd,
             command_in_progress.args, MaxRetries);
 %else
+        if (command_in_progress.out =~ /EPIPE/) {
+            return True;
+        }
         return False;
 %endif
     }
