@@ -2067,6 +2067,10 @@ public class TypeScriptActionInterface {
                 info.attr.dynamic = True;
             }
         }
+        if (info.attr.dynamic) {
+            info.type = info.type.copy();
+            info.type.setDynamicTag();
+        }
 
         return info;
     }
