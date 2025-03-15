@@ -195,7 +195,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         if (TSAI::checkServer()) {
             TSAI::info("%y: acquiring proxy for %y: %y", api.label, api.key, args);
             JavaScriptProgramProxy proxy = TypeScriptActionInterface::server.get();
-            TSAI::info("%y: proxy acquired for %y args: %y", api.label, api.key, args);
+            TSAI::info("%y: proxy (%y) acquired for %y", api.label, proxy.getInfo(), api.key);
             on_exit TypeScriptActionInterface::server.release(proxy);
             return proxy.getAsyncValue(api, args);
         }

@@ -68,6 +68,9 @@ public const CC_ERR = "ERR";
 #! Child command: "EVENT"
 public const CC_EVENT = "EVENT";
 
+#! Child commnad: "EVENT-START"
+public const CC_EVENT_START = "EVENT-START";
+
 #! Child command: "EVENT-TERMINATED"
 public const CC_EVENT_TERMINATED = "EVENT-TERMINATED";
 
@@ -101,10 +104,15 @@ public class TypeScriptProxy {
 
     #! Sends a string to the remote end
     private sendString(string str) {
+        sendString(s, str);
+    }
+
+    #! Sends a string to the remote end
+    private sendString(Socket sock, string str) {
         # first send the size as an 8-byte integer in network byte order
-        s.sendi8(str.size(), DefaultIoTimeout);
+        sock.sendi8(str.size(), DefaultIoTimeout);
         # now send the UTF-8 string
-        s.send(str, DefaultIoTimeout);
+        sock.send(str, DefaultIoTimeout);
     }
 
     #! Creates a hash for sending

@@ -77,11 +77,26 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         #! Current command in progress
         hash<auto> command_in_progress;
 
-        #! Set when a proxy restart is made from a proxy listener thread
-        Queue rq;
-
         #! Event count
         Counter event_cnt();
+
+        #! Event socket counter
+        Counter es_cnt();
+
+        #! Event listener TID
+        int es_tid;
+
+        #! Event socket exit flag
+        bool es_exit;
+
+        #! File to signal the event listener thread
+        File es_sem_write;
+
+        #! File to read in the event listener thread
+        ReadOnlyFile es_sem_read;
+
+        #! Semaphore descriptor info for the event listener thread
+        hash<SocketPollInfo> es_sem_info;
 
         #! Master UNIX socket file path
         static string master_path;
@@ -151,7 +166,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 stopChildProcess();
             }
         }
-        stopListener();
+        stopEventListener();
 
         string uh = self.uniqueHash();
         bool lck = !global_lock.lockOwner();
@@ -166,6 +181,13 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         if (!cmap) {
             stopMasterListener();
         }
+    }
+
+    hash<auto> getInfo() {
+        return {
+            "proxy-pid": proc.id(),
+            "event-listener-tid": es_tid,
+        };
     }
 
     static stopMasterListener() {
@@ -223,13 +245,159 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         on_exit global_lock.lock();
 
         on_error removeEventSource(ekey);
-        info("Setting up event source for @%s/%s %y", app, action, key);
-        sendCommandArgs(NOTHING, PC_SETUP_EVENT, (app, action, key, options), SetupEventTimeout);
-        info("Event source for @%s/%s %y ready", app, action, key);
+        setupEventSourceLockedIntern();
+    }
+
+    private setupEventSourceLockedIntern() {
+        info("Setting up event source for PID %d @%s/%s %y", proc.id(), event.app, event.action, event.key);
+        sendCommandArgs(NOTHING, PC_SETUP_EVENT, (event.app, event.action, event.key, event.options));
+        info("Event source for @%s/%s %y ready", event.app, event.action, event.key);
+    }
+
+    private stopEventListener() {
+        if (es_tid) {
+            es_exit = True;
+            es_sem_write.write(".");
+            es_cnt.waitForZero();
+            TSAI::info("Shut down event listener for PID %d", proc.id());
+        }
+    }
+
+    startEventListener(Socket event_socket, hash<auto> v) {
+        if (es_tid) {
+            stopEventListener();
+        }
+
+        # setup semaphor to stop the event listener thread efficiently
+        hash<PipeInfo> info = File::getPipe();
+        es_sem_read = info.read;
+        es_sem_write = info.write;
+        es_sem_info = <SocketPollInfo>{
+            "events": SOCK_POLLIN,
+            "socket": es_sem_read,
+        };
+        es_cnt.inc();
+        on_error es_cnt.dec();
+        es_tid = background eventListenerThread(event_socket);
+    }
+
+    private eventListenerThread(Socket event_socket) {
+        info("Started event thread for PID %d for @%s/%s %y", proc.id(), event.app, event.action, event.key);
+        hash<auto> einfo = event{"app", "action", "key"};
+        on_exit {
+            remove es_exit;
+            remove es_tid;
+            remove es_sem_read;
+            remove es_sem_write;
+            remove es_sem_info;
+
+            es_cnt.dec();
+            info("Stopped event thread for PID %d for @%s/%s %y", proc.id(), einfo.app, einfo.action, einfo.key);
+        }
+
+        on_error error("Error in event listener thread for PID %d: %s", proc.id(), get_exception_string($1));
+        softlist<hash<SocketPollInfo>> poll_list = (es_sem_info, <SocketPollInfo>{
+            "events": SOCK_POLLIN,
+            "socket": event_socket,
+        });
+        while (True) {
+            int i;
+            try {
+                # setup polling
+                Socket::poll(poll_list, -1);
+                if (es_exit) {
+                    break;
+                }
+                if (!event_socket.isOpen()) {
+                    error("The event socket for PID %d is closed; terminating", proc.id());
+                    break;
+                }
+
+                # first read message size
+                i = event_socket.recvi8(5s);
+                if (!i) {
+                    continue;
+                }
+            } catch (hash<ExceptionInfo> ex) {
+                logChildOutput();
+                if (ex.err == "SOCKET-TIMEOUT") {
+                    continue;
+                }
+                if (ex.err == "SOCKET-NOT-OPEN" || ex.err == "SOCKET-CLOSED") {
+                    error("The event socket for PID %d is closed; terminating", proc.id());
+                    break;
+                }
+                error("Error in listener thread: %s; continuing to listen for events", get_exception_string(ex));
+                continue;
+            }
+            auto v;
+            try {
+                string yaml = event_socket.recv(i, DefaultIoTimeout);
+                if (!yaml.val()) {
+                    throw "CMD-ERROR", sprintf("Missing response payload of size %d", i);
+                }
+                v = parse_yaml(yaml);
+                if (v.typeCode() != NT_HASH) {
+                    throw "CMD-ERROR", sprintf("Expecting type \"hash\"; got %y", v.fullType());
+                }
+                if (v.cmd.typeCode() != NT_STRING) {
+                    throw "CMD-ERROR", sprintf("Expecting \"cmd\" as a string; got %y", v.cmd.fullType());
+                }
+            } catch (hash<ExceptionInfo> ex) {
+                logChildOutput();
+                if (ex.err == "SOCKET-NOT-OPEN" || ex.err == "SOCKET-CLOSED") {
+                    error("Error in event listener thread: %s; terminating", get_exception_string(ex));
+                    break;
+                }
+                error("Error in listener thread: %s; continuing to listen for events", get_exception_string(ex));
+                continue;
+            }
+            debug("Got event message: %y", v);
+
+            if (v.cmd == CC_EVENT) {
+                if (!event.omap) {
+                    error("No observers for event for key %y; ignoring", v.key);
+                }
+                foreach hash<auto> i in (event.omap.pairIterator()) {
+                    try {
+                        info("Calling notify() for %y: %y", i.key, v.event);
+                        i.value.notify(v.event);
+                        info("notify() done for %y", i.key);
+                    } catch (hash<ExceptionInfo> ex) {
+                        error("Error notifying observer %y for key %y: %s", i.key, v.key, get_exception_string(ex));
+                    }
+                }
+                continue;
+            }
+            if (v.cmd == CC_EVENT_TERMINATED) {
+                if (!event.omap) {
+                    error("No observers for event for key %y; ignoring", v.key);
+                }
+                foreach hash<auto> i in (event.omap.pairIterator()) {
+                    try {
+                        i.value.terminated();
+                    } catch (hash<ExceptionInfo> ex) {
+                        error("Error notifying observer %y of terminated event thread for key %y: %s", i.key, v.key,
+                            get_exception_string(ex));
+                    }
+                }
+                break;
+            }
+            error("Unknown command received on event listener: %y; ignoring", v);
+        }
+        if (!es_exit) {
+            info("Event listener thread terminated prematurely");
+            background sub () {
+                try {
+                    checkRestart();
+                } catch (hash<ExceptionInfo> ex) {
+                    error("Error restarting proxy after event listener error: %s", get_exception_string(ex));
+                }
+            }();
+        }
     }
 
     private removeEventSource(string ekey) {
-        bool stop;
         {
             global_lock.lock();
             on_exit global_lock.unlock();
@@ -237,11 +405,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             remove event.omap{ekey};
             if (!event.omap) {
                 remove event;
-                stop = True;
+                stopEventListener();
             }
         }
-        #debug("JavaScriptProgramProxy::removeEventSource() ekey: %y remaining: %y stop: %y", ekey, keys event.omap,
-        #    stop);
     }
 
     #! Add an additional observable to the event source; called with the global lock held
@@ -273,23 +439,28 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         if (!event.omap{ekey}) {
             throw "EVENT-ERROR", sprintf("Observable %y is not registered under event key %y", ekey, key);
         }
+        bool stop;
         {
             global_lock.unlock();
             on_exit global_lock.lock();
 
             remove event.omap{ekey};
             if (!event.omap) {
-                remove event;
                 info("Releasing event %y", key);
-                try {
-                    sendCommandArgs(NOTHING, PC_RELEASE_EVENT, key, NOTHING, True);
-                } catch (hash<ExceptionInfo> ex) {
-                    if (ex.err == "QUEUE-TIMEOUT") {
-                        error("Event key %y was released by killing the proxy process due to an error: %s: %s", key,
-                            ex.err, ex.desc);
-                    } else {
-                        rethrow;
-                    }
+                remove event;
+                stop = True;
+            }
+        }
+        if (stop) {
+            stopEventListener();
+            try {
+                sendCommandArgs(NOTHING, PC_RELEASE_EVENT, key, NOTHING, True);
+            } catch (hash<ExceptionInfo> ex) {
+                if (ex.err == "QUEUE-TIMEOUT") {
+                    error("Event key %y was released by killing the proxy process due to an error: %s: %s", key,
+                        ex.err, ex.desc);
+                } else {
+                    rethrow;
                 }
             }
         }
@@ -312,167 +483,6 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         *HashDataType rv = bin ? Serializable::deserialize(bin) : NOTHING;
         debug("getRequestType(app %y action %y req %y): %y", app, action, req, rv);
         return rv;
-    }
-
-    # called with the global lock held
-    private startListener() {
-        if (listener_tid) {
-            throw "LISTENER-ERROR", sprintf("Listener already running on TID %d", listener_tid);
-        }
-        listener_cnt.inc();
-        on_error listener_cnt.dec();
-        int pid = proc.id();
-        listener_tid = background listenerThread(pid);
-    }
-
-    private listenerThread(int pid) {
-        info("Started listener thread");
-        on_exit {
-            remove listener_stop;
-            remove listener_tid;
-            listener_cnt.dec();
-            info("Stopped listener thread for PID %d", pid);
-        }
-        on_error error("Error in listener thread for PID %d: %s", pid, get_exception_string($1));
-        bool restarted;
-        while (!listener_stop) {
-            int i;
-            if (command_in_progress."timeout") {
-                date d = now_us() - command_in_progress.start;
-                if (d > (command_in_progress."timeout" + 10s)) {
-                    killChild();
-                    restarted = checkRestart(NOTHING, True);
-                    string desc = restarted
-                        ? sprintf("The async call timed out (timeout: %y; duration: %y); terminated and restarted "
-                            "child process with PID %d", command_in_progress."timeout", d, pid)
-                        : sprintf("The async call timed out (timeout: %y; duration: %y); terminated child process",
-                            command_in_progress."timeout", d);
-                    cmdq.push({
-                        "cmd": CC_ERR,
-                        "ex": {
-                            "err": "ASYNC-CALL-TIMEOUT",
-                            "desc": sprintf("The async call timed out; terminated and restarted child process with "
-                                "PID %d", pid),
-                            "arg": command_in_progress,
-                        },
-                    });
-                    if (restarted) {
-                        pid = proc.id();
-                    }
-                }
-            }
-            bool restarted_flag;
-            code handle_restarted = sub () {
-                if (restarted_flag) {
-                    pid = proc.id();
-                    if (!restarted) {
-                        restarted = True;
-                    }
-                    remove restarted_flag;
-                }
-            };
-            try {
-                # first read message size
-                i = recvi8(5s, \restarted_flag);
-                handle_restarted();
-                if (!i) {
-                    continue;
-                }
-            } catch (hash<ExceptionInfo> ex) {
-                logChildOutput();
-                if (ex.err == "SOCKET-TIMEOUT") {
-                    continue;
-                }
-                if (retry(ex, \restarted_flag)) {
-                    handle_restarted();
-                    continue;
-                }
-                error("Error in listener thread: %s; exiting", get_exception_string(ex));
-                break;
-            }
-            auto v;
-            try {
-                string yaml = recv(i, DefaultIoTimeout, \restarted_flag);
-                handle_restarted();
-                if (!yaml.val()) {
-                    throw "CMD-ERROR", sprintf("Missing response payload of size %d", i);
-                }
-                v = parse_yaml(yaml);
-                if (v.typeCode() != NT_HASH) {
-                    throw "CMD-ERROR", sprintf("Expecting type \"hash\"; got %y", v.fullType());
-                }
-                if (v.cmd.typeCode() != NT_STRING) {
-                    throw "CMD-ERROR", sprintf("Expecting \"cmd\" as a string; got %y", v.cmd.fullType());
-                }
-            } catch (hash<ExceptionInfo> ex) {
-                logChildOutput();
-                if (retry(ex, \restarted_flag)) {
-                    handle_restarted();
-                    continue;
-                }
-                error("Error in listener thread: %s; exiting", get_exception_string(ex));
-                break;
-            }
-
-            if (v.cmd == CC_EVENT) {
-                if (!event.omap) {
-                    error("No observers for event for key %y; ignoring", v.key);
-                }
-                foreach hash<auto> i in (event.omap.pairIterator()) {
-                    try {
-                        info("Calling notify() for %y: %y", i.key, v.event);
-                        i.value.notify(v.event);
-                        info("notify() done for %y", i.key);
-                    } catch (hash<ExceptionInfo> ex) {
-                        error("Error notifying observer %y for key %y: %s", i.key, v.key, get_exception_string(ex));
-                    }
-                }
-                continue;
-            }
-            if (v.cmd == CC_EVENT_TERMINATED) {
-                if (!event.omap) {
-                    error("No observers for event for key %y; ignoring", v.key);
-                }
-                foreach hash<auto> i in (event.omap.pairIterator()) {
-                    try {
-                        i.value.terminated();
-                    } catch (hash<ExceptionInfo> ex) {
-                        error("Error notifying observer %y of terminated event thread for key %y: %s", i.key, v.key,
-                            get_exception_string(ex));
-                    }
-                }
-                continue;
-            }
-            if (v.cmd == CC_STATUS) {
-                info("Status event received: %y", v.info);
-                continue;
-            }
-            info("Received from PID %d (restarted: %y): %y", pid, restarted, v);
-            # process event setup message if necessary inline
-            if (restarted) {
-                if (event) {
-                    if (v.cmd == CC_OK) {
-                        info("Event listener restarted");
-                    } else if (v.cmd == CC_ERR) {
-                        logChildOutput();
-                        error("Error in proxy PID %d in event restart response: %s; exiting", pid, v.ex.desc);
-                        break;
-                    }
-                }
-                remove restarted;
-                continue;
-            }
-            # push command on queue
-            cmdq.push(v);
-            #debug("pushed to queue");
-        }
-    }
-
-    private stopListener() {
-        if (listener_tid) {
-            listener_stop = True;
-            listener_cnt.waitForZero();
-        }
     }
 
     private static masterListenerThread(Counter c) {
@@ -510,16 +520,21 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                             v.cmd.fullType());
                         continue;
                     }
-                    if (v.cmd != CC_STARTED) {
-                        TSAI::error("Proxy connection: expecting \"cmd\" = %y; got %y instead; closing", CC_STARTED,
-                            v.cmd);
-                        continue;
-                    }
                     # get proxy from key
                     *JavaScriptProgramProxy proxy = cmap{v.pkey};
                     if (!proxy) {
-                        TSAI::error("Proxy connection: invalid proxy key %y; known keys: %y; closing", v.pkey,
-                            keys cmap);
+                        TSAI::error("Proxy connection: invalid proxy key %y; known keys: %y; ignoring message: %y",
+                            v.pkey, keys cmap, v);
+                        continue;
+                    }
+
+                    if (v.cmd == CC_EVENT_START) {
+                        proxy.startEventListener(s0, v);
+                        continue;
+                    }
+                    if (v.cmd != CC_STARTED) {
+                        TSAI::error("Proxy connection: expecting \"cmd\" = %y; got %y instead; closing", CC_STARTED,
+                            v.cmd);
                         continue;
                     }
                     TSAI::debug("Got message from proxy PID %d: %y for proxy: %y", proxy.proc.id(), v,
@@ -528,14 +543,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                         "cmd": CC_OK,
                         "socket": s0,
                     };
-                    TSAI::info("Received startup confirmation message for proxy PID %d on %s queue",
-                        proxy.proc.id(), proxy.rq ? "restart" : "primary");
-                    if (proxy.rq) {
-                        proxy.rq.push(msg);
-                        remove proxy.rq;
-                    } else {
-                        proxy.cmdq.push(msg);
-                    }
+                    TSAI::info("Received startup confirmation message for proxy PID %d; sending notification on msg "
+                        "queue", proxy.proc.id());
+                    proxy.cmdq.push(msg);
                 } catch (hash<ExceptionInfo> ex) {
                     TSAI::error("Proxy connection: error processing request: %s", get_exception_string(ex));
                 }
@@ -564,6 +574,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         if (proc.running()) {
             killChild();
         } else {
+            stopEventListener();
             info("Child terminated normally");
         }
     }
@@ -575,6 +586,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         } catch (hash<ExceptionInfo> ex) {
             # ignore error
         }
+        stopEventListener();
         logChildOutput(True);
     }
 
@@ -602,13 +614,11 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
         info("Started child process");
         hash<auto> h;
-        bool start_listener = !exists rq;
         {
             date start = now_us();
-            Queue q = rq ?? cmdq;
             while (True) {
                 try {
-                    h = q.get(250ms);
+                    h = cmdq.get(250ms);
                     break;
                 } catch (hash<ExceptionInfo> ex) {
                     logChildOutput();
@@ -630,9 +640,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         s = h.socket;
         logChildOutput();
         info("Child process ready");
-        if (start_listener) {
-            startListener();
-        }
+        #if (start_listener) {
+        #    startListener();
+        #}
     }
 
     static private checkStartMasterListener() {
@@ -681,20 +691,27 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         string yaml = makeSend(cmd, {"args": args});
         hash<auto> h;
         RetryCounter rc();
+
         while (True) {
             try {
-                sendCommandArgsIntern(io_timeout, cmd, args, yaml);
+                command_in_progress = {
+                    "cmd": cmd,
+                    "args": args,
+                    "timeout": io_timeout,
+                    "start": now_us(),
+                };
+                if (!yaml.val()) {
+                    yaml = makeSend(cmd, {"args": args});
+                }
+                debug("Sending command %y", yaml);
+                sendString(yaml);
                 on_exit remove command_in_progress;
-                h = waitForCommand(response_timeout);
+                h = waitForResponse(response_timeout);
                 if (!ValidResponses{h.cmd}) {
                     throw "CMD-ERROR", sprintf("Unknown response %y; valid responses: %y", h.cmd,
                         keys ValidResponses);
                 }
             } catch (hash<ExceptionInfo> ex) {
-                if (ex.err == "QUEUE-TIMEOUT") {
-                    error("Error waiting for response to proxy command %y; terminating proxy and retrying", cmd);
-                    killChild();
-                }
                 if (retryIntern(ex, rc) && !no_retry) {
                     info("Restarting command due to error");
                     continue;
@@ -704,77 +721,54 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             }
             break;
         }
-        if (h.cmd == CC_ERR) {
-            logChildOutput();
-            throw h.ex.err, sprintf("Remote JavaScript error: %s", h.ex.desc), h.ex.arg;
-        }
         if (h.cmd != CC_OK) {
             throw "CMD-ERROR", sprintf("Unexpected command %y; expected %y", h.cmd, CC_OK);
         }
         return h.rv;
     }
 
-    private sendCommandArgsIntern(*date io_timeout, string cmd, *softlist<auto> args, *string yaml) {
-        command_in_progress = {
-            "cmd": cmd,
-            "args": args,
-            "timeout": io_timeout,
-            "start": now_us(),
-        };
-        if (!yaml.val()) {
-            yaml = makeSend(cmd, {"args": args});
-        }
-        debug("Sending command %y", yaml);
-        sendString(yaml);
-    }
-
     #! Wait for a command when the listener is active
-    hash<auto> waitForCommand(*date to) {
-        hash<auto> v = cmdq.get(to);
+    hash<auto> waitForResponse(*date to = DefaultIoTimeout) {
+        int pid = proc.id();
+        auto v;
+        while (True) {
+            int i;
+            try {
+                # first read message size
+                i = s.recvi8(1s);
+                if (!i) {
+                    throw "CMD-ERROR", sprintf("Invalid response received from proxy with PID %d", pid);
+                }
+            } catch (hash<ExceptionInfo> ex) {
+                logChildOutput();
+                if (ex.err == "SOCKET-TIMEOUT") {
+                    continue;
+                }
+                rethrow;
+            }
+            string yaml = recv(i, to);
+            if (!yaml.val()) {
+                throw "CMD-ERROR", sprintf("Missing response payload of size %d", i);
+            }
+            v = parse_yaml(yaml);
+            if (v.typeCode() != NT_HASH) {
+                throw "CMD-ERROR", sprintf("Expecting type \"hash\"; got %y", v.fullType());
+            }
+            if (v.cmd.typeCode() != NT_STRING) {
+                throw "CMD-ERROR", sprintf("Expecting \"cmd\" as a string; got %y", v.cmd.fullType());
+            }
+
+            info("Received from PID %d: %y", pid, v);
+            break;
+        }
         if (v.cmd == CC_ERR) {
+            logChildOutput();
             throw v.ex.err, v.ex.desc, v.ex.arg;
         }
         return v;
     }
 
-    #! Reads an 8-byte integer in network byte order from the socket
-    /** Only called in the per-process listener thread
-    */
-    int recvi8(*date to, *reference<bool> restarted) {
-        date start = now_us();
-        while (True) {
-            try {
-                return s.recvi8(250ms);
-            } catch (hash<ExceptionInfo> ex) {
-                if (ex.err == "SOCKET-CLOSED") {
-                    if (!listener_tid || listener_stop) {
-                        return 0;
-                    }
-                    if (checkRestart(NOTHING, True)) {
-                        restarted = True;
-                        continue;
-                    }
-                }
-                if (ex.err != "SOCKET-TIMEOUT") {
-                    rethrow;
-                }
-            }
-            if (listener_stop || !listener_tid) {
-                return 0;
-            }
-            if (checkRestart(NOTHING, True)) {
-                continue;
-            }
-            if (to) {
-                date d = now_us() - start;
-                if (d > to) {
-                    throw "SOCKET-TIMEOUT", sprintf("Operation interrupted after waiting %y for data", d);
-                }
-            }
-        }
-    }
-
-    string recv(int size, *date to, *reference<bool> restarted) {
+    string recv(int size, *date to) {
         string str;
         date start = now_us();
         while (True) {
@@ -786,21 +780,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                     return str;
                 }
             } catch (hash<ExceptionInfo> ex) {
-                if (ex.err == "SOCKET-CLOSED") {
-                    if (!listener_tid || listener_stop || checkRestart()) {
-                        return "";
-                    }
-                }
                 if (ex.err != "SOCKET-TIMEOUT") {
                     rethrow;
                 }
-            }
-            if (listener_stop || !listener_tid) {
-                return "";
-            }
-            if (checkRestart()) {
-                restarted = True;
-                return "";
             }
             if (to) {
                 date d = now_us() - start;
@@ -821,33 +803,30 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     private *bool retryIntern(hash<ExceptionInfo> ex, *RetryCounter rc, *reference<bool> restarted) {
-        bool aborted = (ex.err == "CHILD-ABORTED");
-        if (aborted) {
-            # at this point the process has been restarted
-            error("Error communicating with child: %s (restarted: %y)", get_exception_string(ex), proc.running());
-        } else if (checkRestart(rc)) {
+        if (checkRestart(rc)) {
             restarted = True;
             return True;
         }
         return rc ? rc.retry(ex, command_in_progress) : True;
     }
 
-    private *bool checkRestart(*RetryCounter rc, *bool in_listener) {
+    private *bool checkRestart(*RetryCounter rc) {
         bool restart;
         {
             AutoLock al(m);
-            if (proc && !restarting) {
+            if (restarting) {
+                while (restarting) {
+                    ++wait_restart;
+                    cond_restart.wait(m);
+                    --wait_restart;
+                }
+                return True;
+            }
+
+            if (proc) {
                 logChildOutput();
             }
 
-            while (restarting) {
-                ++wait_restart;
-                cond_restart.wait(m);
-                --wait_restart;
-            }
-            if (listener_stop || !listener_tid) {
-                return;
-            }
             if (!proc.running()) {
                 error("Child process aborted; restarting");
                 if (rc) {
@@ -855,8 +834,11 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 }
                 restarting = True;
                 delete al;
-                rq = new Queue();
+
+                # run the restart unlocked
                 restartProcessIntern();
+
+                al = new AutoLock(m);
                 remove restarting;
                 if (wait_restart) {
                     cond_restart.broadcast();
@@ -872,10 +854,6 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         int pid = proc.id();
         if (proc.running()) {
             proc.terminate();
-        }
-        bool in_listener = exists rq;
-        if (!in_listener) {
-            stopListener();
         }
         delete s;
 
@@ -909,11 +887,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
         if (event) {
             info("Restarting event listener for @%s/%s %y", event.app, event.action, event.key);
-            if (in_listener) {
-                sendCommandArgsIntern(NOTHING, PC_SETUP_EVENT, (event.app, event.action, event.key, event.options));
-            } else {
-                sendCommandArgs(NOTHING, PC_SETUP_EVENT, (event.app, event.action, event.key, event.options));
-            }
+            setupEventSourceLockedIntern();
         }
     }
 
