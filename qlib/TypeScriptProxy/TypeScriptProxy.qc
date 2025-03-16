@@ -127,22 +127,6 @@ public class TypeScriptProxy {
         } + info);
     }
 
-    #! Sends a command from the parent to the child without a response
-    private sendCommandOneWay(string cmd, *list<auto> args) {
-        string yaml = makeSend(cmd, {"args": args});
-        while (True) {
-            try {
-                sendString(yaml);
-            } catch (hash<ExceptionInfo> ex) {
-                if (retry(ex)) {
-                    continue;
-                }
-                rethrow;
-            }
-            break;
-        }
-    }
-
     #! Reads a string and returns the corresponding hash
     private hash<auto> getCommand(*timeout to) {
         # first read message size
@@ -175,8 +159,5 @@ public class TypeScriptProxy {
 
     #! Log fatal messages
     private abstract fatal(string fmt, ...);
-
-    #! Returns True if the operation should be retried, False if not
-    private abstract *bool retry(hash<ExceptionInfo> ex);
 }
 }

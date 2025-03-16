@@ -132,6 +132,12 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
         #! Semaphore descriptor info
         static hash<SocketPollInfo> sem_info;
+
+        #! Restart flag: do not restart event
+        const RF_NO_EVENT   = (1 << 0);
+
+        #! Restart flag: do not restart process
+        const RF_NO_RESTART = (1 << 1);
     }
 
     #! Creates the object
@@ -458,7 +464,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             } catch (hash<ExceptionInfo> ex) {
                 if (proc.running()) {
                     killChild();
-                    error("Event key %y was released with to an error; process process terminated: %s: %s", key,
+                    error("Event key %y was released with an error; proxy process terminated: %s: %s", key,
                         ex.err, ex.desc);
                 } else {
                     error("Event key %y was released with an error; proxy process is dead: %s: %s", key, ex.err,
@@ -480,7 +486,8 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         return rv;
     }
 
-    *HashDataType getDynamicType(string cmd, string app, string action, *string conn_name, *hash<auto> conn_opts, auto req) {
+    *HashDataType getDynamicType(string cmd, string app, string action, *string conn_name, *hash<auto> conn_opts,
+            auto req) {
         *binary bin = sendCommandArgs(NOTHING, cmd, (app, action, conn_name, conn_opts, req));
         *HashDataType rv = bin ? Serializable::deserialize(bin) : NOTHING;
         debug("getRequestType(app %y action %y req %y): %y", app, action, req, rv);
@@ -558,7 +565,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     private stopChildProcess() {
         # send shutdown command
         try {
-            sendCommandOneWay(PC_EXIT);
+            sendCommandOneWayStop(PC_EXIT);
         } catch (hash<ExceptionInfo> ex) {
             # ignore error
         }
@@ -578,6 +585,22 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         } else {
             stopEventListener();
             info("Child terminated normally");
+        }
+    }
+
+    #! Sends a command from the parent to the child without a response
+    private sendCommandOneWayStop(string cmd, *list<auto> args) {
+        string yaml = makeSend(cmd, {"args": args});
+        while (True) {
+            try {
+                sendString(yaml);
+            } catch (hash<ExceptionInfo> ex) {
+                if (retryIntern(ex, NOTHING, RF_NO_RESTART)) {
+                    continue;
+                }
+                rethrow;
+            }
+            break;
         }
     }
 
@@ -689,7 +712,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
     #! Sends a command from the parent to the child with a response
     private auto sendCommandArgs(*date io_timeout, string cmd, *softlist<auto> args,
-            date response_timeout = DefaultRequestTimeout, *bool no_retry) {
+            date response_timeout = DefaultRequestTimeout, *bool no_restart_event) {
         string yaml = makeSend(cmd, {"args": args});
         hash<auto> h;
         RetryCounter rc();
@@ -714,7 +737,8 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                         keys ValidResponses);
                 }
             } catch (hash<ExceptionInfo> ex) {
-                if (!no_retry && retryIntern(ex, rc)) {
+                bool restarted = retryIntern(ex, rc, no_restart_event ? RF_NO_EVENT : 0);
+                if (restarted && !no_restart_event) {
                     info("Restarting command due to error");
                     continue;
                 }
@@ -747,7 +771,8 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 if (ex.err == "SOCKET-TIMEOUT") {
                     date d = now_us() - start;
                     if (d > to) {
-                        rethrow;
+                        rethrow "SOCKET-TIMEOUT", sprintf("Timed out after %y waiting for a response from the async "
+                            "JavaScript call", to);
                     }
                     continue;
                 }
@@ -800,24 +825,14 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
     }
 
-    private *bool retry(hash<ExceptionInfo> ex) {
-        bool restarted;
-        return retry(ex, \restarted);
-    }
-
-    private *bool retry(hash<ExceptionInfo> ex, reference<bool> restarted) {
-        return retryIntern(ex, NOTHING, \restarted);
-    }
-
-    private *bool retryIntern(hash<ExceptionInfo> ex, *RetryCounter rc, *reference<bool> restarted) {
-        if (checkRestart(rc)) {
-            restarted = True;
+    private *bool retryIntern(hash<ExceptionInfo> ex, *RetryCounter rc, *int restart_flags) {
+        if (checkRestart(rc, restart_flags)) {
             return True;
         }
         return rc ? rc.retry(ex, command_in_progress) : True;
     }
 
-    private *bool checkRestart(*RetryCounter rc) {
+    private *bool checkRestart(*RetryCounter rc, *int restart_flags) {
         bool restart;
         {
             AutoLock al(m);
@@ -835,6 +850,10 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             }
 
             if (!proc.running()) {
+                if (restart_flags & RF_NO_RESTART) {
+                    error("Child process aborted; not restarting");
+                    return;
+                }
                 error("Child process aborted; restarting");
                 if (rc) {
                     rc.restart();
@@ -843,7 +862,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 delete al;
 
                 # run the restart unlocked
-                restartProcessIntern();
+                restartProcessIntern(restart_flags & RF_NO_EVENT ? True : False);
 
                 al = new AutoLock(m);
                 remove restarting;
@@ -857,7 +876,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     # Called with no locks held
-    private restartProcessIntern() {
+    private restartProcessIntern(*bool no_restart_event) {
         int pid = proc.id();
         if (proc.running()) {
             proc.terminate();
@@ -871,17 +890,8 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
         startChildProcess();
 
-        if (command_in_progress) {
-            cmdq.push({
-                "cmd": CC_ERR,
-                "ex": {
-                    "err": "CHILD-ABORTED",
-                    "desc": sprintf("Restarted child process with PID %d", pid),
-                    "arg": command_in_progress + {
-                        "out": out,
-                    },
-                },
-            });
+        if (no_restart_event) {
+            return;
         }
 
         *hash<EventSourceInfo> event;
