@@ -36,6 +36,9 @@ public const PC_RELEASE_EVENT = "RELEASE-EVENT";
 #! Proxy command "GET-REQUEST-TYPE": retrieve a dynamic type based on JS calls
 public const PC_GET_REQUEST_TYPE = "GET-REQUEST-TYPE";
 
+#! Proxy command "GET-RESPONSE-TYPE": retrieve a dynamic type based on JS calls
+public const PC_GET_RESPONSE_TYPE = "GET-RESPONSE-TYPE";
+
 #! Proxy command "GET-EVENT-TYPE": retrieve a dynamic type based on JS calls
 public const PC_GET_EVENT_TYPE = "GET-EVENT-TYPE";
 
@@ -48,6 +51,7 @@ public const ValidCommands = {
     PC_SETUP_EVENT: True,
     PC_RELEASE_EVENT: True,
     PC_GET_REQUEST_TYPE: True,
+    PC_GET_RESPONSE_TYPE: True,
     PC_GET_EVENT_TYPE: True,
     PC_EXIT: True,
 };

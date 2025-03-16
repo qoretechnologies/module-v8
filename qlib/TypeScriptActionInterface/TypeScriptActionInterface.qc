@@ -1386,13 +1386,33 @@ public class TypeScriptActionInterface {
                 "app": app.name,
                 "action": action.action,
                 "type": "api_function",
-                "label": sprintf("API function for app %y action %y", app.name, action.action),
+                "label": sprintf("Request type function for app %y action %y", app.name, action.action),
                 "pool": pool,
                 "async_call": js_api,
                 "to": seconds(io_timeout),
             };
             TypeScriptActionInterface::registerAsyncCall(\get_dynamic_request_type, "app", app.name, action.action,
                 "get_dynamic_request_type");
+        }
+        hash<AsyncCallInfo> get_dynamic_response_type;
+        if (auto js_api = remove action.get_dynamic_response_type) {
+            if (!js_api.callp()) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has no REST schema and has an invalid "
+                    "\"get_dynamic_response_type\" attribute; got type %y; expecting a callable value", action.app,
+                    action.action, js_api.fullType());
+            }
+            timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
+            get_dynamic_response_type = <AsyncCallInfo>{
+                "app": app.name,
+                "action": action.action,
+                "type": "api_function",
+                "label": sprintf("Response type function for app %y action %y", app.name, action.action),
+                "pool": pool,
+                "async_call": js_api,
+                "to": seconds(io_timeout),
+            };
+            TypeScriptActionInterface::registerAsyncCall(\get_dynamic_response_type, "app", app.name, action.action,
+                "get_dynamic_response_type");
         }
 
         TypeScriptActionApiDataProvider child;
@@ -1422,7 +1442,7 @@ public class TypeScriptActionInterface {
             *hash<string, bool> path_vars = map {$1: True}, (swagger_path =~ x/\{([^\}]*)}/g);
             TypeScriptActionApiWithSchemaDataProvider dp(\action, swagger_path, api, path_vars,
                 (map {$1: True}, independent_path_vars), app_conn_opt_map{app.name.lwr()},
-                remove action.override_options, fctx, get_dynamic_request_type);
+                remove action.override_options, fctx, get_dynamic_request_type, get_dynamic_response_type);
             child = dp;
 
             action.output_type = child.getResponseType();
@@ -1614,6 +1634,24 @@ public class TypeScriptActionInterface {
             };
             TypeScriptActionInterface::registerAsyncCall(\fctx.dmap{key}, "app", action.app, action.action, key);
             action.data_dependent_options = True;
+        }
+        if (exists (auto get_dependent_response_options = remove h.get_dependent_response_options)) {
+            if (!get_dependent_response_options.callp()) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
+                    "\"get_dependent_response_options\" attribute; got type %y; expecting a callable value", action.app,
+                    action.action, key, get_dependent_response_options.fullType());
+            }
+            fctx.drmap{key} = <AsyncCallInfo>{
+                "app": action.app,
+                "action": action.action,
+                "type": "get_dependent_response_options",
+                "label": sprintf("Dependent response option function for app %y action %y option %y", action.app,
+                    action.action, key),
+                "pool": fctx.pool,
+                "async_call": get_dependent_response_options,
+                "to": io_timeout,
+            };
+            TypeScriptActionInterface::registerAsyncCall(\fctx.drmap{key}, "app", action.app, action.action, key);
         }
         if (exists (auto get_dynamic_type = h.get_dynamic_type)) {
             if (!get_dynamic_type.callp()) {
@@ -2548,6 +2586,8 @@ class ActionFunctionContext {
         *hash<string, hash<AsyncCallInfo>> eomap;
         # maps from options to "get_dependent_options" code
         *hash<string, hash<AsyncCallInfo>> dmap;
+        # maps from options to "get_dependent_response_options" code
+        *hash<string, hash<AsyncCallInfo>> drmap;
         # maps from options to "get_dynamic_type" code
         *hash<string, hash<AsyncCallInfo>> dtmap;
         # maps from options to "rest_get_allowed_values" descriptions
@@ -2582,6 +2622,7 @@ class ActionFunctionContext {
         omap = fctx.omap;
         eomap = fctx.eomap;
         dmap = fctx.dmap;
+        drmap = fctx.drmap;
         dtmap = fctx.dtmap;
         romap = fctx.romap;
         reomap = fctx.reomap;

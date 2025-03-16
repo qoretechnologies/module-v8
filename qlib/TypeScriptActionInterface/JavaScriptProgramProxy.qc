@@ -456,11 +456,13 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             try {
                 sendCommandArgs(NOTHING, PC_RELEASE_EVENT, key, NOTHING, True);
             } catch (hash<ExceptionInfo> ex) {
-                if (ex.err == "QUEUE-TIMEOUT") {
-                    error("Event key %y was released by killing the proxy process due to an error: %s: %s", key,
+                if (proc.running()) {
+                    killChild();
+                    error("Event key %y was released with to an error; process process terminated: %s: %s", key,
                         ex.err, ex.desc);
                 } else {
-                    rethrow;
+                    error("Event key %y was released with an error; proxy process is dead: %s: %s", key, ex.err,
+                        ex.desc);
                 }
             }
         }
@@ -712,7 +714,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                         keys ValidResponses);
                 }
             } catch (hash<ExceptionInfo> ex) {
-                if (retryIntern(ex, rc) && !no_retry) {
+                if (!no_retry && retryIntern(ex, rc)) {
                     info("Restarting command due to error");
                     continue;
                 }
@@ -728,9 +730,10 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     #! Wait for a command when the listener is active
-    hash<auto> waitForResponse(*date to = DefaultIoTimeout) {
+    hash<auto> waitForResponse(date to = DefaultIoTimeout) {
         int pid = proc.id();
         auto v;
+        date start = now_us();
         while (True) {
             int i;
             try {
@@ -742,6 +745,10 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             } catch (hash<ExceptionInfo> ex) {
                 logChildOutput();
                 if (ex.err == "SOCKET-TIMEOUT") {
+                    date d = now_us() - start;
+                    if (d > to) {
+                        rethrow;
+                    }
                     continue;
                 }
                 rethrow;

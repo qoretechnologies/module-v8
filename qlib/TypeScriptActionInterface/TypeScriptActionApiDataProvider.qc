@@ -24,6 +24,14 @@
 
 #! Main namespace for the TypeScriptActionInterface module
 public namespace TypeScriptActionInterface {
+hashdecl DynamicTypeInfo {
+    *hash<AsyncCallInfo> get_dynamic_type;
+    bool dynamic_type_done;
+    *hash<string, AbstractDataField> dtfields;
+    bool dtfields_done;
+    *AbstractDataProviderType type;
+}
+
 #! Generic API data provider for TypeScript actions
 public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProviderBase {
     public {
@@ -41,22 +49,21 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
 
     private {
         hash<AsyncCallInfo> api;
-        *hash<AsyncCallInfo> get_dynamic_request_type;
-        bool dynamic_request_type_done;
-        *hash<string, AbstractDataField> dtfields;
-        bool dtfields_done;
-        *AbstractDataProviderType request_type;
-        *AbstractDataProviderType response_type;
+
+        hash<DynamicTypeInfo> request_type_info();
+        hash<DynamicTypeInfo> response_type_info();
     }
 
     constructor(string name, hash<AsyncCallInfo> api, *AbstractDataProviderType request_type,
             *AbstractDataProviderType response_type, ActionFunctionContext fctx,
-            *hash<AsyncCallInfo> get_dynamic_request_type)
+            *hash<AsyncCallInfo> get_dynamic_request_type, *hash<AsyncCallInfo> get_dynamic_response_type)
             : TypeScriptActionDataProviderBase(name, fctx) {
         self.api = api;
-        self.get_dynamic_request_type = get_dynamic_request_type;
-        self.request_type = request_type;
-        self.response_type = response_type;
+        request_type_info.get_dynamic_type = get_dynamic_request_type;
+        request_type_info.type = request_type;
+
+        response_type_info.get_dynamic_type = get_dynamic_response_type;
+        response_type_info.type = response_type;
     }
 
     private constructor(string name, *hash<AsyncCallInfo> api, ActionFunctionContext fctx)
@@ -85,12 +92,18 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
     /** @return the request type for this provider
     */
     private *DataProvider::AbstractDataProviderType getRequestTypeImpl() {
+        return getTypeImplIntern("request", \request_type_info);
+    }
+
+    #! Retrieves dynamic type info
+    private *DataProvider::AbstractDataProviderType getTypeImplIntern(string dtype,
+            reference<hash<DynamicTypeInfo>> type_info) {
         on_error LoggerWrapper::error("%s", get_exception_string($1));
         bool new_type;
-        if (get_dynamic_request_type && !dynamic_request_type_done) {
+        if (type_info.get_dynamic_type && !type_info.dynamic_type_done) {
             # include any context data in case request-specific info needs to be returned
             *hash<auto> opts = DataProviderDataContextHelper::get();
-            auto res = getAsyncValueArgs(self, get_dynamic_request_type, {
+            auto res = getAsyncValueArgs(self, type_info.get_dynamic_type, {
                 "conn_name": conn.name,
                 "conn_opts": conn.getRealOptions(),
                 "opts": opts,
@@ -98,27 +111,27 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
                 "conn_opts": conn.getRealOptions(),
             }, True);
             if (res) {
-                AbstractDataProviderType t = TypeScriptActionInterface::getType("get_dynamic_request_type", res,
+                AbstractDataProviderType t = TypeScriptActionInterface::getType("get_dynamic_" + dtype + "_type", res,
                     NOTHING, NOTHING, self);
                 if (!(t instanceof HashDataType)) {
-                    throw "DYNAMIC-TYPE-ERROR", sprintf("Dynamic type for @%s/%s is type %y; expecting \"hash\"",
-                        api.app, api.action, t.getName());
+                    throw "DYNAMIC-TYPE-ERROR", sprintf("Dynamic %s type for @%s/%s is type %y; expecting \"hash\"",
+                        dtype, api.app, api.action, t.getName());
                 }
-                if (!request_type) {
-                    request_type = t;
+                if (!type_info.type) {
+                    type_info.type = t;
                 } else if (*hash<string, AbstractDataField> fields = t.getFields()) {
-                    if (!(request_type instanceof HashDataType)) {
-                        throw "DYNAMIC-TYPE-ERROR", sprintf("Cannot add dynamic type for @%s/%s to existing request "
-                            "type %y; must be a hash to extend", api.app, api.action, request_type.getName());
+                    if (!(type_info.type instanceof HashDataType)) {
+                        throw "DYNAMIC-TYPE-ERROR", sprintf("Cannot add dynamic type for @%s/%s to existing %s "
+                            "type %y; must be a hash to extend", api.app, api.action, dtype, type_info.type.getName());
                     }
                     # do not modify the original type
-                    request_type = request_type.copyWithFields(request_type.getFields() + fields);
+                    type_info.type = type_info.type.copyWithFields(type_info.type.getFields() + fields);
                 }
                 new_type = True;
             }
-            dynamic_request_type_done = True;
+            type_info.dynamic_type_done = True;
         }
-        if (!dtfields_done && dtmap) {
+        if (dtype == "request" && !type_info.dtfields_done && dtmap) {
             foreach hash<auto> i in (dtmap.pairIterator()) {
                 debug("Retrieving dynamic type for option %y for data provider %y", i.key, getName());
                 # include any context data in case request-specific info needs to be returned
@@ -134,26 +147,26 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
                     continue;
                 }
 
-                AbstractDataProviderType t = TypeScriptActionInterface::getType("request option " + i.key, res,
+                AbstractDataProviderType t = TypeScriptActionInterface::getType(dtype + " option " + i.key, res,
                     NOTHING, NOTHING, self);
                 TypeScriptDataField field({
                     "name": i.key,
                     "type": t,
                 });
-                dtfields{i.key} = field;
+                type_info.dtfields{i.key} = field;
             }
-            dtfields_done = True;
+            type_info.dtfields_done = True;
         }
-        if (dtfields) {
-            if (!request_type) {
-                request_type = new HashDataType(AutoHashType, "RequestType");
+        if (type_info.dtfields) {
+            if (!type_info.type) {
+                type_info.type = new HashDataType(AutoHashType, dtype[0].upr() + dtype[1..] + "Type");
             } else {
-                request_type = request_type.copy();
+                type_info.type = type_info.type.copy();
             }
-            map request_type.addField($1), dtfields.iterator();
-            debug("Added dynamic fields: %y", keys dtfields);
+            map type_info.type.addField($1), type_info.dtfields.iterator();
+            debug("Added dynamic fields: %y", keys type_info.dtfields);
         }
-        return request_type;
+        return type_info.type;
     }
 
     #! Returns the description of a successful request message with call data, if any
@@ -221,7 +234,68 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
     /** @return the response type for this response message
     */
     private *DataProvider::AbstractDataProviderType getResponseTypeImpl() {
-        return response_type;
+        return getTypeImplIntern("response", \response_type_info);
+    }
+
+    #! Returns the description of a successful response message with call data, if any
+    /** @param req sample request data that can be used to determine the final type
+
+        @return the response type for this provider according to any call data passed
+
+        @note
+        - Only called if the provider supports the request / response API
+        - This API is meant to provide information about request data types that can depend on the call data
+
+        @since DataProvider 3.0
+    */
+    private *AbstractDataProviderType getResponseTypeWithDataImpl(auto req) {
+        *AbstractDataProviderType rt = getResponseTypeImpl();
+        if (!drmap || !exists req) {
+            return rt;
+        }
+        if (!(rt instanceof HashDataType)) {
+            throw "DATA-PROVIDER-RESPONSE-TYPE-ERROR", sprintf("Response type is not a hash; cannot add fields to "
+                "type %y", rt.getName());
+        }
+        if (req.typeCode() != NT_HASH) {
+            throw "DATA-PROVIDER-RESPONSE-TYPE-ERROR", sprintf("Response data has type %y; expecting \"hash\"",
+                req.fullType());
+        }
+        return getDynamicDataType(PC_GET_RESPONSE_TYPE, rt, req);
+    }
+
+    *HashDataType getResponseTypeExtern(*string conn_name, *hash<auto> conn_opts, hash<auto> req) {
+        AbstractDataProviderType rt = getResponseTypeImpl();
+        hash<auto> slice = drmap{keys req};
+
+        HashDataType type;
+        foreach hash<auto> i in (slice.pairIterator()) {
+            auto val = req{i.key};
+            debug("Retrieving options dependent on option %y, value %y for data provider %y type %y", i.key, val,
+                getName(), type);
+
+            auto res = getAsyncValueArgs(self, i.value, {
+                "conn_name": conn_name,
+                "conn_opts": conn_opts,
+                "opts": req,
+            }, req + {
+                "conn_opts": conn_opts,
+            }, True);
+            if (!exists res) {
+                continue;
+            }
+            if (res.typeCode() != NT_HASH) {
+                throw "DATA-PROVIDER-RESPONSE-TYPE-ERROR", sprintf("JavaScript 'get_dependent_response_options()' function "
+                    "returned type %y; expecting \"hash\"", res.fullType());
+            }
+            if (!type) {
+                type = cast<HashDataType>(rt.copy());
+            }
+            map type.addField(TypeScriptActionInterface::getField("response-type", $1.key, $1.value, self, True)),
+                res.pairIterator();
+            TypeScriptActionInterface::checkFieldDependencies(type);
+        }
+        return type;
     }
 
     #! Returns data provider static info

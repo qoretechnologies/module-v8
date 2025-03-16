@@ -153,6 +153,10 @@ class TsProxy inherits TypeScriptProxy {
                         getRequestType(h.args[0], h.args[1], h.args[2], h.args[3], h.args[4]);
                         break;
 
+                    case PC_GET_RESPONSE_TYPE:
+                        getResponseType(h.args[0], h.args[1], h.args[2], h.args[3], h.args[4]);
+                        break;
+
                     case PC_GET_EVENT_TYPE:
                         getEventType(h.args[0], h.args[1], h.args[2], h.args[3], h.args[4]);
                         break;
@@ -352,6 +356,20 @@ class TsProxy inherits TypeScriptProxy {
             .getChildProviderEx(action);
         DataProviderDataContextHelper dch(req);
         *HashDataType type = prov.getRequestTypeExtern(conn_name, conn_opts, req);
+        string yaml = makeSend(CC_OK, {
+            "rv": type ? type.serialize() : NOTHING,
+        });
+        sendString(yaml);
+    }
+
+    private getResponseType(string app, string action, *string conn_name, *hash<auto> conn_opts, auto req) {
+        info("Get response type app: %y action: %y conn_opts: %y req: %y", app, action, conn_opts, req);
+        TypeScriptActionInterface::initApp(app);
+        TypeScriptActionInterface::initAppAction(app, action);
+        TypeScriptActionApiDataProvider prov = TypeScriptActionInterface::getAppDataProvider(app)
+            .getChildProviderEx(action);
+        DataProviderDataContextHelper dch(req);
+        *HashDataType type = prov.getResponseTypeExtern(conn_name, conn_opts, req);
         string yaml = makeSend(CC_OK, {
             "rv": type ? type.serialize() : NOTHING,
         });

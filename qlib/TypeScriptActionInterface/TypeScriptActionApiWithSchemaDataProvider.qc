@@ -99,8 +99,9 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
     constructor(reference<hash<auto>> action, string swagger_path, *hash<AsyncCallInfo> api,
             *hash<string, bool> path_vars, *hash<string, bool> independent_path_vars,
             *hash<string, string> conn_opt_map, *hash<auto> override_options, ActionFunctionContext fctx,
-            *hash<AsyncCallInfo> get_dynamic_request_type)
-            : TypeScriptActionApiDataProvider(action.action, api, fctx, get_dynamic_request_type) {
+            *hash<AsyncCallInfo> get_dynamic_request_type, *hash<AsyncCallInfo> get_dynamic_response_type)
+            : TypeScriptActionApiDataProvider(action.action, api, fctx, get_dynamic_request_type,
+            get_dynamic_response_type) {
         self.swagger_schema = remove action.swagger_schema;
         swagger_path =~ s/^\///;
         self.swagger_path = swagger_path;
@@ -121,7 +122,8 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                     createRequestType();
                 }
                 info += action_save;
-                if (request_type && (*hash<string, AbstractDataField> fields = request_type.getFields())) {
+                if (request_type_info.type && (*hash<string, AbstractDataField> fields =
+                    request_type_info.type.getFields())) {
                     info.options = DataProviderActionCatalog::getActionOptionFromFields(fields);
                 }
             };
@@ -327,7 +329,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         if (!request_type_done) {
             createRequestType();
         }
-        return request_type;
+        return request_type_info.type;
     }
 
     #! Returns the response type for this API
@@ -337,7 +339,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         if (!response_type_done) {
             createResponseType();
         }
-        return response_type;
+        return response_type_info.type;
     }
 
     #! Creates the request type for this API
@@ -353,14 +355,14 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         request_key = sprintf("%s-%s", app, action);
 
         # check global map unlocked
-        request_type = grtmap{request_key};
-        if (!request_type) {
+        request_type_info.type = grtmap{request_key};
+        if (!request_type_info.type) {
             # check again in the lock
             gtlock.lock();
             on_exit gtlock.unlock();
 
-            request_type = grtmap{request_key};
-            if (!request_type) {
+            request_type_info.type = grtmap{request_key};
+            if (!request_type_info.type) {
                 createRequestTypeIntern();
                 return;
             }
@@ -369,9 +371,9 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
 
     #! Creates the request type for this API
     private createRequestTypeIntern() {
-        request_type = prov.getRequestType();
+        request_type_info.type = prov.getRequestType();
 
-        if (request_type && (*hash<string, AbstractDataField> fields = request_type.getFields())) {
+        if (request_type_info.type && (*hash<string, AbstractDataField> fields = request_type_info.type.getFields())) {
             HashDataType newreq;
             code check = sub (hash<string, AbstractDataField> fields, string key) {
                 list<string> l = (key,);
@@ -381,8 +383,8 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                     fields = f;
                 }
                 if (!newreq) {
-                    newreq = new HashDataType(request_type.isOrNothingType() ? AutoHashOrNothingType : AutoHashType,
-                        request_type.getName(), fields);
+                    newreq = new HashDataType(request_type_info.type.isOrNothingType() ? AutoHashOrNothingType : AutoHashType,
+                        request_type_info.type.getName(), fields);
                 } else if (fields) {
                     map newreq.addField($1), (fields = fields - (keys newreq.getFields())).iterator();
                 }
@@ -416,8 +418,8 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                 check(hf, "header");
             }
             if (newreq) {
-                request_type = newreq;
-                fields = request_type.getFields();
+                request_type_info.type = newreq;
+                fields = request_type_info.type.getFields();
             }
         }
 
@@ -442,8 +444,8 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                 }
             }
 
-            if (request_type) {
-                if (!(request_type instanceof HashDataType)) {
+            if (request_type_info.type) {
+                if (!(request_type_info.type instanceof HashDataType)) {
                     string fname = "data";
                     int i;
                     while (path_vars{fname}) {
@@ -451,21 +453,21 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                     }
                     fields{fname} = new TypeScriptDataField({
                         "name": fname,
-                        "type": request_type,
+                        "type": request_type_info.type,
                         "desc": "API request type",
                     });
                 } else {
                     # NOTE: here we assume that any fields in the request type with the same name as a path var
                     # represent the same value
-                    fields += request_type.getFields() - keys path_vars;
+                    fields += request_type_info.type.getFields() - keys path_vars;
                 }
             }
-            request_type = new HashDataType(AutoHashType, "RestRequestType", fields);
+            request_type_info.type = new HashDataType(AutoHashType, "RestRequestType", fields);
         }
 
         # allow options to be updated
         if (override_options_save) {
-            if (!request_type) {
+            if (!request_type_info.type) {
                 bool required = True;
                 foreach hash<auto> v in (override_options_save.iterator()) {
                     if (!v.required) {
@@ -473,19 +475,19 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                         break;
                     }
                 }
-                request_type = new HashDataType(required ? AutoHashType : AutoHashOrNothingType);
-            } else if (!(request_type instanceof HashDataType)) {
+                request_type_info.type = new HashDataType(required ? AutoHashType : AutoHashOrNothingType);
+            } else if (!(request_type_info.type instanceof HashDataType)) {
                 throw "ACTION-ERROR", sprintf("Cannot override options of app %y action %y with non-hash "
-                    "request type %y", action_save.app, action_save.action, request_type.getName());
+                    "request type %y", action_save.app, action_save.action, request_type_info.type.getName());
             }
-            overrideOptions(cast<HashDataType>(request_type));
+            overrideOptions(cast<HashDataType>(request_type_info.type));
             if (!prov.op.consumes) {
                 prov.op.consumes{MimeTypeJson} = True;
             }
             prov.disableRequestTypeCheck();
         }
 
-        if (request_type && (*hash<string, AbstractDataField> fields = request_type.getFields())) {
+        if (request_type_info.type && (*hash<string, AbstractDataField> fields = request_type_info.type.getFields())) {
             NoIoHelper nih();
             action_save.options = DataProviderActionCatalog::getActionOptionFromFields(fields);
             TypeScriptActionInterface::sortOptions({"name": action_save.app}, action_save, \action_save.options);
@@ -507,7 +509,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             }
         }
 
-        grtmap{request_key} = request_type;
+        grtmap{request_key} = request_type_info.type;
     }
 
     #! Creates the response type for this API
@@ -517,11 +519,11 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         }
         response_type_done = True;
         checkDataProvider();
-        response_type = prov.getResponseType();
-        if (response_type && (*hash<string, AbstractDataField> fields = response_type.getFields())
+        response_type_info.type = prov.getResponseType();
+        if (response_type_info.type && (*hash<string, AbstractDataField> fields = response_type_info.type.getFields())
             && fields.size() == 1 && fields.body) {
             res_only_body = True;
-            response_type = fields.body.getType();
+            response_type_info.type = fields.body.getType();
         }
     }
 
