@@ -3603,7 +3603,7 @@ const en = {
               longDesc:
                 'Enter the Conversation ID to specify the conversation where you want to monitor new messages.',
             },
-            agentId: {
+            agentCode: {
               displayName: 'Agent ID',
               shortDesc: 'The unique identifier for the agent.',
               longDesc: 'Agent ID to check for available conversations from',

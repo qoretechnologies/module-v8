@@ -13812,7 +13812,7 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
-						agentId: {
+						agentCode: {
 							/**
 							 * A​g​e​n​t​ ​I​D
 							 */
@@ -27647,7 +27647,7 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
-						agentId: {
+						agentCode: {
 							/**
 							 * Agent ID
 							 */
