@@ -859,7 +859,7 @@ exports.actionsCatalogue = {
                             },
                         ];
                     },
-                }
+                },
             },
             /** "event_function" is required when "action_code" == DPAT_EVENT and "webhook_method" is not present
                 @param ctx?: object with the following properties:
@@ -876,10 +876,14 @@ exports.actionsCatalogue = {
                 if (!ctx.opts.name) {
                     throw new Error("missing name");
                 }
-                update({
+                var event = {
                     "name": "name-1",
                     "code": 1234,
-                });
+                };
+                if (ctx && ctx.opts && ctx.opts.extra === true) {
+                    event = {...event, extra: "hi"};
+                }
+                update(event);
                 while (!should_stop()) {
                     // sleep for 100ms
                     setTimeout(function() {}, 100);
@@ -913,11 +917,35 @@ exports.actionsCatalogue = {
                 - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
                 - opts?: object -> a data object with option values set for the current action
             */
-            get_example_event_data: async function (ctx) {
-                return {
+            "get_example_event_data": async function (ctx) {
+                var rv = {
                     "name": "a name",
                     "code": 1234,
                 };
+                if (ctx && ctx.opts && ctx.opts.extra === true) {
+                    rv = {...rv, extra: "hi"};
+                }
+                return rv;
+            },
+            // get_dynamic_type?: function (): object
+            /** Returns type info to be added dynamically to any \a event_info
+
+                @param ctx: object -> with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+            */
+            "get_dynamic_type": async function (ctx) {
+                if (ctx && ctx.opts && ctx.opts.extra === true) {
+                    return {
+                        "type": "hash",
+                        "fields": {
+                            "extra": {
+                                "type": "string",
+                            },
+                        },
+                    };
+                }
             },
         });
 

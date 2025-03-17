@@ -6,6 +6,7 @@
 %enable-all-warnings
 
 %requires TypeScriptActionInterface
+%requires RestClient
 %requires Logger
 %requires yaml
 %requires v8
@@ -341,7 +342,14 @@ class TsProxy inherits TypeScriptProxy {
         TypeScriptActionEventDataProviderBase prov = TypeScriptActionInterface::getAppDataProvider(app)
             .getChildProviderEx(action);
         DataProviderDataContextHelper dch(req);
-        *HashDataType type = prov.getEventTypeExtern(conn_name, conn_opts, req);
+        if (conn_name.val()) {
+            prov.setConnection(new RestConnection({
+                "name": conn_name,
+                "url": "http://localhost",
+                "opts": conn_opts,
+            }));
+        }
+        *HashDataType type = prov.getEventInfoWithData(prov.getEventId(), req).type;
         string yaml = makeSend(CC_OK, {
             "rv": type ? type.serialize() : NOTHING,
         });
@@ -355,7 +363,14 @@ class TsProxy inherits TypeScriptProxy {
         TypeScriptActionApiDataProvider prov = TypeScriptActionInterface::getAppDataProvider(app)
             .getChildProviderEx(action);
         DataProviderDataContextHelper dch(req);
-        *HashDataType type = prov.getRequestTypeExtern(conn_name, conn_opts, req);
+        if (conn_name.val()) {
+            prov.setConnection(new RestConnection({
+                "name": conn_name,
+                "url": "http://localhost",
+                "opts": conn_opts,
+            }));
+        }
+        *HashDataType type = prov.getRequestTypeWithData(req);
         string yaml = makeSend(CC_OK, {
             "rv": type ? type.serialize() : NOTHING,
         });
@@ -369,7 +384,14 @@ class TsProxy inherits TypeScriptProxy {
         TypeScriptActionApiDataProvider prov = TypeScriptActionInterface::getAppDataProvider(app)
             .getChildProviderEx(action);
         DataProviderDataContextHelper dch(req);
-        *HashDataType type = prov.getResponseTypeExtern(conn_name, conn_opts, req);
+        if (conn_name.val()) {
+            prov.setConnection(new RestConnection({
+                "name": conn_name,
+                "url": "http://localhost",
+                "opts": conn_opts,
+            }));
+        }
+        *HashDataType type = prov.getResponseTypeWithData(req);
         string yaml = makeSend(CC_OK, {
             "rv": type ? type.serialize() : NOTHING,
         });

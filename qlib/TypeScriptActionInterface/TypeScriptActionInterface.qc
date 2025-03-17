@@ -939,7 +939,6 @@ public class TypeScriptActionInterface {
 
     private static registerActionIntern(hash<auto> action, JavaScriptProgramPool pool) {
         on_error printf("%s\n", get_exception_string($1));
-
         on_error rethrow $1.err, sprintf("%s (while registering action %y for app %y)", $1.desc, action.action,
             action.app);
         TypeScriptActionInterface::generateDataProvider(\action, pool);
@@ -1189,6 +1188,25 @@ public class TypeScriptActionInterface {
 
         timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
 
+        hash<AsyncCallInfo> get_dynamic_type;
+        if (exists (auto c = remove action.get_dynamic_type)) {
+            if (!c.callp()) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid "
+                    "\"get_dynamic_type\" attribute; got type %y; expecting a callable value", action.app,
+                    action.action, c.fullType());
+            }
+            get_dynamic_type = <AsyncCallInfo>{
+                "app": action.app,
+                "action": action.action,
+                "type": "get_dynamic_type",
+                "label": sprintf("Dynamic option type function for app %y action %y", action.app, action.action),
+                "pool": pool,
+                "async_call": c,
+                "to": seconds(io_timeout),
+                "post_processing": \TypeScriptActionInterface::postProcessDynamicTypeInfo(),
+            };
+        }
+
         if (*hash<auto> opts = remove action.options) {
             action.options = TypeScriptActionInterface::getOptions(app, \action, opts, fctx);
         }
@@ -1278,8 +1296,8 @@ public class TypeScriptActionInterface {
             TypeScriptActionInterface::registerAsyncCall(\webhook_deregister, "app", app.name, action.action);
 
             child = new TypeScriptActionWebhookEventDataProvider(action.action, event_id, event_info,
-                get_example_event_data, fctx, method, webhook_register, webhook_deregister, webhook_auth,
-                webhook_perms, webhook_event_loc, webhook_echo_header, webhook_echo_body_keys);
+                get_example_event_data, get_dynamic_type, fctx, method, webhook_register, webhook_deregister,
+                webhook_auth, webhook_perms, webhook_event_loc, webhook_echo_header, webhook_echo_body_keys);
             rv = AES_WH_EVENT;
         } else {
             auto event_function = remove action.event_function;
@@ -1299,7 +1317,7 @@ public class TypeScriptActionInterface {
             };
             TypeScriptActionInterface::registerAsyncCall(\event, "app", app.name, action.action);
             child = new TypeScriptActionEventDataProvider(action.action, event_id, event_info, get_example_event_data,
-                fctx, event);
+                get_dynamic_type, fctx, event);
             rv = AES_JS_EVENT;
         }
 

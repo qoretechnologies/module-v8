@@ -471,7 +471,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             on_exit TypeScriptActionInterface::server.release(proxy);
             type = proxy.getDynamicType(cmd, app, action, conn.name, conn.getRealOptions(), req);
         } else {
-            type = getDynamicTypeIntern(rt, slice, req);
+            type = getDynamicOptionTypeIntern(rt, slice, req);
         }
         if (exists ckey) {
             return dtcache{ckey} = type ?? rt;
@@ -479,7 +479,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         return type ?? rt;
     }
 
-    private *HashDataType getDynamicTypeIntern(AbstractDataProviderType rt, hash<auto> slice, hash<auto> req) {
+    private *HashDataType getDynamicOptionTypeIntern(AbstractDataProviderType rt, hash<auto> slice, hash<auto> req) {
         *hash<DataContextInfo> cinfo = getCallContextInfo(req);
         HashDataType type;
         foreach hash<auto> i in (slice.pairIterator()) {
@@ -696,6 +696,81 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         return foldl $1 + $2, (map TypeScriptActionDataProviderBase::getAttributeIntern(attr, type, $1, attrl), v0);
     }
 
+    #! Processes a dynamic type and executes any dynamic type function to extend the type, if defined
+    private *DataProvider::AbstractDataProviderType getDynamicTypeIntern(string dtype,
+            reference<hash<DynamicTypeInfo>> type_info, *hash<auto> opts = DataProviderDataContextHelper::get(),
+            *hash<string, hash<AsyncCallInfo>> dtmap) {
+        on_error LoggerWrapper::error("Error acquiring dynamic %s type: %s", dtype, get_exception_string($1));
+        bool new_type;
+        if (type_info.get_dynamic_type && !type_info.dynamic_type_done) {
+            auto res = getAsyncValueArgs(self, type_info.get_dynamic_type, {
+                "conn_name": conn.name,
+                "conn_opts": conn.getRealOptions(),
+                "opts": opts,
+            }, {
+                "conn_opts": conn.getRealOptions(),
+                "opts": opts,
+            }, True);
+            if (res) {
+                AbstractDataProviderType t = TypeScriptActionInterface::getType("get_dynamic_" + dtype + "_type", res,
+                    NOTHING, NOTHING, self);
+                if (!(t instanceof HashDataType)) {
+                    throw "DYNAMIC-TYPE-ERROR", sprintf("Dynamic %s type for @%s/%s is type %y; expecting \"hash\"",
+                        dtype, app, action, t.getName());
+                }
+                if (!type_info.type) {
+                    type_info.type = t;
+                } else if (*hash<string, AbstractDataField> fields = t.getFields()) {
+                    if (!(type_info.type instanceof HashDataType)) {
+                        throw "DYNAMIC-TYPE-ERROR", sprintf("Cannot add dynamic type for @%s/%s to existing %s "
+                            "type %y; must be a hash to extend", app, action, dtype, type_info.type.getName());
+                    }
+                    # do not modify the original type
+                    type_info.type = type_info.type.copyWithFields(type_info.type.getFields() + fields);
+                }
+                new_type = True;
+            }
+            type_info.dynamic_type_done = True;
+        }
+        if (!type_info.dtfields_done && dtmap) {
+            foreach hash<auto> i in (dtmap.pairIterator()) {
+                debug("Retrieving dynamic %s type for option %y for data provider %y", dtype, i.key, getName());
+                # include any context data in case request-specific info needs to be returned
+                *hash<auto> opts = DataProviderDataContextHelper::get();
+                auto res = getAsyncValueArgs(self, i.value, {
+                    "conn_name": conn.name,
+                    "conn_opts": conn.getRealOptions(),
+                    "opts": opts,
+                }, {
+                    "conn_opts": conn.getRealOptions(),
+                    "opts": opts,
+                }, True);
+                if (!res) {
+                    continue;
+                }
+
+                AbstractDataProviderType t = TypeScriptActionInterface::getType(dtype + " option " + i.key, res,
+                    NOTHING, NOTHING, self);
+                TypeScriptDataField field({
+                    "name": i.key,
+                    "type": t,
+                });
+                type_info.dtfields{i.key} = field;
+            }
+            type_info.dtfields_done = True;
+        }
+        if (type_info.dtfields) {
+            if (!type_info.type) {
+                type_info.type = new HashDataType(AutoHashType, dtype[0].upr() + dtype[1..] + "Type");
+            } else {
+                type_info.type = type_info.type.copy();
+            }
+            map type_info.type.addField($1), type_info.dtfields.iterator();
+            debug("Added dynamic fields: %y", keys type_info.dtfields);
+        }
+        return type_info.type;
+    }
+
     #! Check and assign REST client
     private synchronized checkRestClient(*hash<auto> action_opts) {
         if (!rest) {
@@ -728,6 +803,14 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
 }
 
 namespace Priv {
+hashdecl DynamicTypeInfo {
+    *hash<AsyncCallInfo> get_dynamic_type;
+    bool dynamic_type_done;
+    *hash<string, AbstractDataField> dtfields;
+    bool dtfields_done;
+    *AbstractDataProviderType type;
+}
+
 thread_local *bool _ts_no_io;
 class NoIoHelper {
     private {

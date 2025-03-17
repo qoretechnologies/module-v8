@@ -52,8 +52,10 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
 
     #! Creates the object from the arguments
     constructor(string name, string event_id, hash<DataProviderMessageInfo> event_info,
-            *hash<AsyncCallInfo> get_example_event_data, ActionFunctionContext fctx, hash<AsyncCallInfo> event)
-            : TypeScriptActionEventDataProviderBase(name, event_id, event_info, get_example_event_data, fctx) {
+            *hash<AsyncCallInfo> get_example_event_data, *hash<AsyncCallInfo> get_dynamic_type,
+            ActionFunctionContext fctx, hash<AsyncCallInfo> event)
+            : TypeScriptActionEventDataProviderBase(name, event_id, event_info, get_example_event_data,
+                get_dynamic_type, fctx) {
         self.event = event;
     }
 

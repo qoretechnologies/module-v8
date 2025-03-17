@@ -29,51 +29,23 @@ public class TypeScriptActionEventDataProviderBase inherits TypeScriptActionData
         string event_id;
         hash<DataProviderMessageInfo> event_info;
         *hash<AsyncCallInfo> get_example_event_data;
+        hash<DynamicTypeInfo> event_type_info();
     }
 
     #! Creates the object from the arguments
     constructor(string name, string event_id, hash<DataProviderMessageInfo> event_info,
-            *hash<AsyncCallInfo> get_example_event_data, ActionFunctionContext fctx)
+            *hash<AsyncCallInfo> get_example_event_data, *hash<AsyncCallInfo> get_dynamic_type,
+            ActionFunctionContext fctx)
             : TypeScriptActionDataProviderBase(name, fctx) {
         self.event_id = event_id;
         self.event_info = event_info;
         self.get_example_event_data = get_example_event_data;
+        event_type_info.get_dynamic_type = get_dynamic_type;
     }
 
-    #! Returns the event type from an external call
-    *HashDataType getEventTypeExtern(*string conn_name, *hash<auto> conn_opts, auto req) {
-        AbstractDataProviderType et = event_info.type;
-
-        hash<auto> slice = dmap{keys req};
-
-        HashDataType type;
-        foreach hash<auto> i in (slice.pairIterator()) {
-            auto val = req{i.key};
-            debug("Retrieving event type properties dependent on %y, value %y for data provider %y type %y", i.key,
-                val, getName(), type);
-
-            auto res = getAsyncValueArgs(self, i.value, {
-                "conn_name": conn_name,
-                "conn_opts": conn_opts,
-                "opts": req,
-            }, req + {
-                "conn_opts": conn_opts,
-            }, True);
-            if (!exists res) {
-                continue;
-            }
-            if (res.typeCode() != NT_HASH) {
-                throw "DATA-PROVIDER-EVENT-TYPE-ERROR", sprintf("JavaScript 'get_dependent_options()' function "
-                    "returned type %y; expecting \"hash\"", res.fullType());
-            }
-            if (!type) {
-                type = cast<HashDataType>(et.copy());
-            }
-            map type.addField(TypeScriptActionInterface::getField("event-type", $1.key, $1.value, self, True)),
-                res.pairIterator();
-            TypeScriptActionInterface::checkFieldDependencies(type);
-        }
-        return type;
+    #! Returns the event ID
+    string getEventId() {
+        return event_id;
     }
 
     #! Returns a hash of all supported event types
@@ -82,6 +54,7 @@ public class TypeScriptActionEventDataProviderBase inherits TypeScriptActionData
         @note only called if the provider supports the observer pattern / event API
     */
     private hash<string, hash<DataProviderMessageInfo>> getEventTypesImpl() {
+        checkEventType(ImpliedArgumentHelper::get());
         hash<DataProviderMessageInfo> event_info = self.event_info;
         if (dmap && (*hash<auto> options = ImpliedArgumentHelper::get())) {
             event_info.type = getDynamicDataType(PC_GET_EVENT_TYPE, event_info.type, options);
@@ -89,6 +62,27 @@ public class TypeScriptActionEventDataProviderBase inherits TypeScriptActionData
         return {
             event_id: event_info,
         };
+    }
+
+    #! Returns the description of an observable event, if any with option data, if any
+    /** @param event_id the event ID of the event
+        @param req example option data that can be used to determine the final type
+
+        @return the event type for this provider according to any call data passed
+
+        @throw INVALID-EVENT the event_id is not valid
+    */
+    private hash<DataProviderMessageInfo> getEventInfoWithDataImpl(string event_id, auto req) {
+        checkEventType(req);
+        if (event_id != self.event_id) {
+            throw "INVALID-EVENT", sprintf("Provider %y (type %y) does not support event %y; supported event: %y",
+                getName(), self.className(), event_id, self.event_id);
+        }
+        hash<DataProviderMessageInfo> event_info = self.event_info;
+        if (dmap && req && req.typeCode() == NT_HASH) {
+            event_info.type = getDynamicDataType(PC_GET_EVENT_TYPE, event_info.type, req);
+        }
+        return event_info;
     }
 
     #! Returns example data for the given observable event
@@ -108,6 +102,16 @@ public class TypeScriptActionEventDataProviderBase inherits TypeScriptActionData
         *hash<auto> options = ImpliedArgumentHelper::get();
         *hash<DataContextInfo> arg = getCallContextInfo(options);
         return getAsyncValue(get_example_event_data, arg);
+    }
+
+    #! Verifies that the dynamic type has been generated
+    private checkEventType(auto req) {
+        if (!event_type_info.get_dynamic_type || event_type_info.dynamic_type_done) {
+            return;
+        }
+        event_type_info.type = event_info.type;
+        getDynamicTypeIntern("event", \event_type_info, req && req.typeCode() == NT_HASH ? req : NOTHING);
+        event_info.type = event_type_info.type;
     }
 }
 }

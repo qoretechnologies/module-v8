@@ -158,31 +158,67 @@ async function runWithTimeout(promise, delay) {
         TypeScriptAppRestConnection conn(config);
         assertEq("tsrest-js-swagger-test://test.example.com/api", conn.getUrl());
 
-        ImpliedArgumentHelper iah({"name": "Fred"});
-        AbstractDataProvider prov =
-            TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("js-event-1");
-        AbstractDataProviderType t = prov.getEventTypes().event.type;
-        assertEq(2, t.getFields().size());
-        assertTrue(prov.supportsObservable());
-        assertEq({
-            "name": "a name",
-            "code": 1234,
-        }, prov.getExampleEventData("event"));
-
-        MyObserver o();
-        cast<Observable>(prov).registerObserver(o);
-        cast<DelayedObservable>(prov).observersReady();
-        on_exit cast<DelayedObservable>(prov).stopEvents();
-
-        # wait for a single event
-        hash<auto> event = o.waitForEvent();
-        assertEq({
-            "event_id": "event",
-            "data": {
-                "name": "name-1",
+        {
+            ImpliedArgumentHelper iah({"name": "Fred"});
+            AbstractDataProvider prov =
+                TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("js-event-1");
+            AbstractDataProviderType t = prov.getEventTypes().event.type;
+            assertEq(2, t.getFields().size());
+            assertTrue(prov.supportsObservable());
+            assertEq({
+                "name": "a name",
                 "code": 1234,
-            },
-        }, event);
+            }, prov.getExampleEventData("event"));
+
+            MyObserver o();
+            cast<Observable>(prov).registerObserver(o);
+            cast<DelayedObservable>(prov).observersReady();
+            on_exit cast<DelayedObservable>(prov).stopEvents();
+
+            # wait for a single event
+            hash<auto> event = o.waitForEvent();
+            assertEq({
+                "event_id": "event",
+                "data": {
+                    "name": "name-1",
+                    "code": 1234,
+                },
+            }, event);
+        }
+
+        {
+            hash<auto> opts = {
+                "name": "Fred",
+                "extra": True,
+            };
+            ImpliedArgumentHelper iah(opts);
+            AbstractDataProvider prov =
+                TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("js-event-1");
+            AbstractDataProviderType t = prov.getEventInfoWithData("event", opts).type;
+            assertEq(3, t.getFields().size());
+            assertTrue(prov.supportsObservable());
+            assertEq({
+                "name": "a name",
+                "code": 1234,
+                "extra": "hi",
+            }, prov.getExampleEventData("event"));
+
+            MyObserver o();
+            cast<Observable>(prov).registerObserver(o);
+            cast<DelayedObservable>(prov).observersReady();
+            on_exit cast<DelayedObservable>(prov).stopEvents();
+
+            # wait for a single event
+            hash<auto> event = o.waitForEvent();
+            assertEq({
+                "event_id": "event",
+                "data": {
+                    "name": "name-1",
+                    "code": 1234,
+                    "extra": "hi",
+                },
+            }, event);
+        }
     }
 
     private webhookEventTest() {
