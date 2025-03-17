@@ -44,7 +44,7 @@ export const getNetsuitePurchaseOrderIdAllowedValues: TQoreGetAllowedValuesFunct
 
   if (!token || !account_id) {
     throw new Error(
-      'The token and account_id is required to get NetSuite purchase order allowed values'
+      'The token and account_id are required to get NetSuite purchase order allowed values'
     );
   }
 
