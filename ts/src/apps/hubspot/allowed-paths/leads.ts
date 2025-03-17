@@ -18,8 +18,8 @@ const leadsId = {
 } satisfies TQoreAppActionOverrideOption;
 
 const propertiesQuery = {
-  allowed_values_creatable: true,
-  get_allowed_values: getHubspotLeadPropertiesAllowedValues,
+  element_allowed_values_creatable: true,
+  get_element_allowed_values: getHubspotLeadPropertiesAllowedValues,
 } satisfies TQoreAppActionOverrideOption;
 
 export const HUBSPOT_LEADS_ALLOWED_PATHS = {

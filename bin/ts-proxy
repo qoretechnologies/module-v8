@@ -117,7 +117,7 @@ class TsProxy inherits TypeScriptProxy {
         while (True) {
             hash<auto> h;
             try {
-                h = getCommand();
+                h = getCommand(500ms);
                 if (!ValidCommands{h.cmd}) {
                     throw "CMD-ERROR", sprintf("Unknown parent command %y; valid send commands: %y", h.cmd,
                         keys ValidCommands);
@@ -134,6 +134,7 @@ class TsProxy inherits TypeScriptProxy {
                 info("Child process PID %d exiting on parent's request", getpid());
                 break;
             }
+            debug("Got msg from server: %y", h);
             try {
                 switch (h.cmd) {
                     case PC_CALL:
@@ -150,6 +151,14 @@ class TsProxy inherits TypeScriptProxy {
 
                     case PC_GET_REQUEST_TYPE:
                         getRequestType(h.args[0], h.args[1], h.args[2], h.args[3], h.args[4]);
+                        break;
+
+                    case PC_GET_RESPONSE_TYPE:
+                        getResponseType(h.args[0], h.args[1], h.args[2], h.args[3], h.args[4]);
+                        break;
+
+                    case PC_GET_EVENT_TYPE:
+                        getEventType(h.args[0], h.args[1], h.args[2], h.args[3], h.args[4]);
                         break;
 
                     default:
@@ -186,15 +195,29 @@ class TsProxy inherits TypeScriptProxy {
         if (arg0) {
             arg = cast<hash<DataContextInfo>>(arg0);
         }
+
+        # connect to the master socket
+        Socket event_socket();
+        event_socket.connectUNIX(opts.socket);
+        string yaml = makeSend(CC_EVENT_START, {
+            "pkey": pkey,
+            "pid": getpid(),
+        });
+        sendString(event_socket, yaml);
+        info("Connected to server event socket: %y", event_socket.getPeerInfo());
+
         Counter cnt(1);
-        background eventThread(cnt, key, arg);
+        Counter ecnt(1);
+        background eventThread(cnt, ecnt, event_socket, key, arg);
         cnt.waitForZero();
-        string yaml = makeSend(CC_OK);
+
+        yaml = makeSend(CC_OK);
         sendString(yaml);
+        ecnt.dec();
         info("Started event thread");
     }
 
-    private eventThread(Counter cnt, string key, *hash<DataContextInfo> arg) {
+    private eventThread(Counter cnt, Counter ecnt, Socket event_socket, string key, *hash<DataContextInfo> arg) {
         event.tid = gettid();
         on_exit {
             m.lock();
@@ -207,9 +230,11 @@ class TsProxy inherits TypeScriptProxy {
             }
             info("Terminated JavaScript I/O event thread");
         }
+
         event.running = True;
         # signal calling thread that we are running
         cnt.dec();
+        ecnt.waitForZero();
         try {
             hash<AsyncCallInfo> call = event.event;
             info("Running event function for @%s/%s: %s", call.app, call.action, call.key);
@@ -221,11 +246,12 @@ class TsProxy inherits TypeScriptProxy {
                             "(JavaScript object)", key, event_data.fullType());
                     }
 
+                    #debug("Sending event: key: %y event: %y", key, event_data);
                     string yaml = makeSend(CC_EVENT, {
                         "key": key,
                         "event": event_data,
                     });
-                    sendString(yaml);
+                    sendString(event_socket, yaml);
                 },
                 bool sub () {
                     return event.stop_flag;
@@ -235,12 +261,16 @@ class TsProxy inherits TypeScriptProxy {
         } catch (hash<ExceptionInfo> ex) {
             error("EVENT-THREAD-ERROR", "Exception in event thread: %s", get_exception_string(ex));
         }
-        if (!event.stop_flag) {
-            error("The event thread terminated prematurely; notifying parent");
-            string yaml = makeSend(CC_EVENT_TERMINATED, {
-                "key": key,
-            });
-            sendString(yaml);
+        try {
+            if (!event.stop_flag) {
+                error("The event thread terminated prematurely; notifying parent");
+                string yaml = makeSend(CC_EVENT_TERMINATED, {
+                    "key": key,
+                });
+                sendString(event_socket, yaml);
+            }
+        } catch (hash<ExceptionInfo> ex) {
+            error("EVENT-THREAD-ERROR", "Exception in event thread: %s", get_exception_string(ex));
         }
     }
 
@@ -296,9 +326,24 @@ class TsProxy inherits TypeScriptProxy {
                 rethrow;
             }
         }
+        DataProviderDataContextHelper dch(args);
         auto rv = TypeScriptActionDataProviderBase::getAsyncValueArgs(logger, api, args);
         string yaml = makeSend(CC_OK, {
             "rv": rv,
+        });
+        sendString(yaml);
+    }
+
+    private getEventType(string app, string action, *string conn_name, *hash<auto> conn_opts, auto req) {
+        info("Get event type app: %y action: %y conn_opts: %y req: %y", app, action, conn_opts, req);
+        TypeScriptActionInterface::initApp(app);
+        TypeScriptActionInterface::initAppAction(app, action);
+        TypeScriptActionEventDataProviderBase prov = TypeScriptActionInterface::getAppDataProvider(app)
+            .getChildProviderEx(action);
+        DataProviderDataContextHelper dch(req);
+        *HashDataType type = prov.getEventTypeExtern(conn_name, conn_opts, req);
+        string yaml = makeSend(CC_OK, {
+            "rv": type ? type.serialize() : NOTHING,
         });
         sendString(yaml);
     }
@@ -309,7 +354,22 @@ class TsProxy inherits TypeScriptProxy {
         TypeScriptActionInterface::initAppAction(app, action);
         TypeScriptActionApiDataProvider prov = TypeScriptActionInterface::getAppDataProvider(app)
             .getChildProviderEx(action);
+        DataProviderDataContextHelper dch(req);
         *HashDataType type = prov.getRequestTypeExtern(conn_name, conn_opts, req);
+        string yaml = makeSend(CC_OK, {
+            "rv": type ? type.serialize() : NOTHING,
+        });
+        sendString(yaml);
+    }
+
+    private getResponseType(string app, string action, *string conn_name, *hash<auto> conn_opts, auto req) {
+        info("Get response type app: %y action: %y conn_opts: %y req: %y", app, action, conn_opts, req);
+        TypeScriptActionInterface::initApp(app);
+        TypeScriptActionInterface::initAppAction(app, action);
+        TypeScriptActionApiDataProvider prov = TypeScriptActionInterface::getAppDataProvider(app)
+            .getChildProviderEx(action);
+        DataProviderDataContextHelper dch(req);
+        *HashDataType type = prov.getResponseTypeExtern(conn_name, conn_opts, req);
         string yaml = makeSend(CC_OK, {
             "rv": type ? type.serialize() : NOTHING,
         });
@@ -319,6 +379,11 @@ class TsProxy inherits TypeScriptProxy {
     private *bool retry(hash<ExceptionInfo> ex) {
         fatal("Fatal error communicating with the server: %s; terminating the process", get_exception_string(ex));
         exit(1);
+    }
+
+    private debug(string fmt, ...) {
+        fmt = "ts-proxy: " + fmt;
+        logger.logArgs(LoggerLevel::LevelDebug, fmt, argv);
     }
 
     private info(string fmt, ...) {

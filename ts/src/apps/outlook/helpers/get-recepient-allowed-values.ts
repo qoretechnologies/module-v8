@@ -49,10 +49,8 @@ export const getOutlookRecipientsAllowedValues: TQoreGetAllowedValuesFunction<
               allowedValues.push({
                 display_name: `${fullName} (${email.address})`,
                 value: {
-                  emailAddress: {
-                    address: email.address,
-                    name: email.name || fullName,
-                  },
+                  address: email.address,
+                  name: email.name || fullName,
                 },
                 short_desc: `Email: ${email.address}\nName: ${fullName}`,
               });
@@ -73,3 +71,18 @@ export const getOutlookRecipientsAllowedValues: TQoreGetAllowedValuesFunction<
     throw new Error(`Failed to fetch Outlook recipients: ${error.message}`);
   }
 };
+
+export interface IOutlookRecipient {
+  address: string;
+  name?: string;
+}
+
+export interface IOutlookRecipientAddress {
+  emailAddress: IOutlookRecipient;
+}
+
+export const mapOutlookRecipientToAddress = (
+  recipient: IOutlookRecipient
+): IOutlookRecipientAddress => ({
+  emailAddress: recipient,
+});

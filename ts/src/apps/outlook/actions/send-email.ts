@@ -6,7 +6,11 @@ import {
   TQoreResponseType,
 } from '@qoretechnologies/ts-toolkit';
 import { OUTLOOK_APP_NAME } from '../constants';
-import { getOutlookRecipientsAllowedValues } from '../helpers/get-recepient-allowed-values';
+import {
+  getOutlookRecipientsAllowedValues,
+  IOutlookRecipient,
+  mapOutlookRecipientToAddress,
+} from '../helpers/get-recepient-allowed-values';
 
 const options = {
   toRecipients: {
@@ -18,20 +22,13 @@ const options = {
       element_type: {
         type: 'hash',
         fields: {
-          emailAddress: {
-            type: {
-              type: 'hash',
-              fields: {
-                address: {
-                  type: 'string',
-                  required: true,
-                },
-                name: {
-                  type: 'string',
-                  required: false,
-                },
-              },
-            },
+          address: {
+            type: 'string',
+            required: true,
+          },
+          name: {
+            type: 'string',
+            required: false,
           },
         },
       },
@@ -46,20 +43,13 @@ const options = {
       element_type: {
         type: 'hash',
         fields: {
-          emailAddress: {
-            type: {
-              type: 'hash',
-              fields: {
-                address: {
-                  type: 'string',
-                  required: true,
-                },
-                name: {
-                  type: 'string',
-                  required: false,
-                },
-              },
-            },
+          address: {
+            type: 'string',
+            required: true,
+          },
+          name: {
+            type: 'string',
+            required: false,
           },
         },
       },
@@ -74,20 +64,13 @@ const options = {
       element_type: {
         type: 'hash',
         fields: {
-          emailAddress: {
-            type: {
-              type: 'hash',
-              fields: {
-                address: {
-                  type: 'string',
-                  required: true,
-                },
-                name: {
-                  type: 'string',
-                  required: false,
-                },
-              },
-            },
+          address: {
+            type: 'string',
+            required: true,
+          },
+          name: {
+            type: 'string',
+            required: false,
           },
         },
       },
@@ -131,13 +114,9 @@ export const SendOutlookEmail = QoreAppCreator.createLocalizedAction<typeof opti
   action_code: EQoreAppActionCode.ACTION,
   api_function: async (data, _opts, context) => {
     const token = context?.conn_opts?.token;
-    const toRecipients = data?.toRecipients as
-      | Array<{
-          emailAddress: { address: string; name?: string };
-        }>
-      | undefined;
-    const ccRecipients = data?.ccRecipients;
-    const bccRecipients = data?.bccRecipients;
+    const toRecipients = (data?.toRecipients || []) as IOutlookRecipient[];
+    const ccRecipients = (data?.ccRecipients || []) as IOutlookRecipient[];
+    const bccRecipients = (data?.bccRecipients || []) as IOutlookRecipient[];
     const subject = data?.subject;
     const body = data?.body;
     const bodyContentType = data?.bodyContentType || 'Text';
@@ -146,7 +125,7 @@ export const SendOutlookEmail = QoreAppCreator.createLocalizedAction<typeof opti
     const missingValues: string[] = [];
 
     if (!token) missingValues.push('token');
-    if (!toRecipients || !toRecipients.length) missingValues.push('toRecipients');
+    if (!toRecipients.length) missingValues.push('toRecipients');
     if (!subject) missingValues.push('subject');
     if (!body) missingValues.push('body');
 
@@ -169,9 +148,9 @@ export const SendOutlookEmail = QoreAppCreator.createLocalizedAction<typeof opti
           contentType: bodyContentType,
           content: body,
         },
-        toRecipients,
-        ccRecipients,
-        bccRecipients,
+        toRecipients: toRecipients!.map(mapOutlookRecipientToAddress),
+        ccRecipients: ccRecipients.map(mapOutlookRecipientToAddress),
+        bccRecipients: bccRecipients.map(mapOutlookRecipientToAddress),
       },
       saveToSentItems,
     };

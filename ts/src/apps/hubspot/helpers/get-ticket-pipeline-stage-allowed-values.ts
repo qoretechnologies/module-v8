@@ -27,12 +27,12 @@ export const getHubspotTicketPipelineStageAllowedValues: TQoreGetAllowedValuesFu
   string
 > = async (context): Promise<IQoreAllowedValue<string>[]> => {
   const token = context?.conn_opts?.token;
-  const hs_pipeline = context?.opts?.hs_pipeline;
+  const hs_pipeline = context?.opts?.properties?.hs_pipeline;
 
   const missingValues: string[] = [];
 
   if (!token) missingValues.push('token');
-  if (!hs_pipeline) missingValues.push('hs_pipeline');
+  if (typeof hs_pipeline === 'undefined' || hs_pipeline === null) missingValues.push('hs_pipeline');
 
   if (missingValues.length) {
     console.error(

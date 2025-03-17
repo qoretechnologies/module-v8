@@ -36,6 +36,12 @@ public const PC_RELEASE_EVENT = "RELEASE-EVENT";
 #! Proxy command "GET-REQUEST-TYPE": retrieve a dynamic type based on JS calls
 public const PC_GET_REQUEST_TYPE = "GET-REQUEST-TYPE";
 
+#! Proxy command "GET-RESPONSE-TYPE": retrieve a dynamic type based on JS calls
+public const PC_GET_RESPONSE_TYPE = "GET-RESPONSE-TYPE";
+
+#! Proxy command "GET-EVENT-TYPE": retrieve a dynamic type based on JS calls
+public const PC_GET_EVENT_TYPE = "GET-EVENT-TYPE";
+
 #! Proxy command "EXIT": exit the process
 public const PC_EXIT = "EXIT";
 
@@ -45,6 +51,8 @@ public const ValidCommands = {
     PC_SETUP_EVENT: True,
     PC_RELEASE_EVENT: True,
     PC_GET_REQUEST_TYPE: True,
+    PC_GET_RESPONSE_TYPE: True,
+    PC_GET_EVENT_TYPE: True,
     PC_EXIT: True,
 };
 
@@ -63,6 +71,9 @@ public const CC_ERR = "ERR";
 
 #! Child command: "EVENT"
 public const CC_EVENT = "EVENT";
+
+#! Child commnad: "EVENT-START"
+public const CC_EVENT_START = "EVENT-START";
 
 #! Child command: "EVENT-TERMINATED"
 public const CC_EVENT_TERMINATED = "EVENT-TERMINATED";
@@ -97,10 +108,15 @@ public class TypeScriptProxy {
 
     #! Sends a string to the remote end
     private sendString(string str) {
+        sendString(s, str);
+    }
+
+    #! Sends a string to the remote end
+    private sendString(Socket sock, string str) {
         # first send the size as an 8-byte integer in network byte order
-        s.sendi8(str.size(), DefaultIoTimeout);
+        sock.sendi8(str.size(), DefaultIoTimeout);
         # now send the UTF-8 string
-        s.send(str, DefaultIoTimeout);
+        sock.send(str, DefaultIoTimeout);
     }
 
     #! Creates a hash for sending
@@ -109,22 +125,6 @@ public class TypeScriptProxy {
         return make_yaml({
             "cmd": cmd,
         } + info);
-    }
-
-    #! Sends a command from the parent to the child without a response
-    private sendCommandOneWay(string cmd, *list<auto> args) {
-        string yaml = makeSend(cmd, {"args": args});
-        while (True) {
-            try {
-                sendString(yaml);
-            } catch (hash<ExceptionInfo> ex) {
-                if (retry(ex)) {
-                    continue;
-                }
-                rethrow;
-            }
-            break;
-        }
     }
 
     #! Reads a string and returns the corresponding hash
@@ -159,8 +159,5 @@ public class TypeScriptProxy {
 
     #! Log fatal messages
     private abstract fatal(string fmt, ...);
-
-    #! Returns True if the operation should be retried, False if not
-    private abstract *bool retry(hash<ExceptionInfo> ex);
 }
 }

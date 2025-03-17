@@ -18,8 +18,8 @@ const companyId = {
 } satisfies TQoreAppActionOverrideOption;
 
 const propertiesQuery = {
-  allowed_values_creatable: true,
-  get_allowed_values: getHubspotCompanyPropertiesAllowedValues,
+  element_allowed_values_creatable: true,
+  get_element_allowed_values: getHubspotCompanyPropertiesAllowedValues,
 } satisfies TQoreAppActionOverrideOption;
 
 export const HUBSPOT_COMPANIES_ALLOWED_PATHS = {

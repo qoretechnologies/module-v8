@@ -37,7 +37,7 @@ public class TypeScriptDataField inherits DataProvider::QoreDataField {
                 auto res;
                 *TypeScriptActionApiWithSchemaDataProvider prov = ActionProviderContextHelper::get();
                 if (prov) {
-                    res = prov.getAsyncValue(call, prov.getCallContextInfo());
+                    res = prov.getAsyncValue(call, prov.getCallContextInfo(DataProviderDataContextHelper::get()));
                 } else {
                     res = TypeScriptActionDataProviderBase::getAsyncValueArgs(NOTHING, call);
                 }
@@ -59,7 +59,7 @@ public class TypeScriptDataField inherits DataProvider::QoreDataField {
             try {
                 *TypeScriptActionApiWithSchemaDataProvider prov = ActionProviderContextHelper::get();
                 if (prov) {
-                    return prov.getAsyncValue(call, prov.getCallContextInfo());
+                    return prov.getAsyncValue(call, prov.getCallContextInfo(DataProviderDataContextHelper::get()));
                 } else {
                     return TypeScriptActionDataProviderBase::getAsyncValueArgs(NOTHING, call);
                 }

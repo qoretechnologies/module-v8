@@ -15,6 +15,7 @@ import { getHubspotDealPipelineStageAllowedValues } from './get-deal-pipeline-st
 import { getHubspotDealPipelineAllowedValues } from './get-deal-pipeline-allowed-values';
 import { getHubspotLeadPipelineStageAllowedValues } from './get-lead-pipeline-stage-allowed-values';
 import { getHubspotLeadPipelineAllowedValues } from './get-lead-pipeline-allowed-values';
+import { omit } from 'lodash';
 
 type THubspotObjectProperty = {
   name: string;
@@ -97,26 +98,18 @@ export const getHubspotPropertyOptionFunction = ({
       });
 
       properties.forEach((property) => {
-        const defaultPropertyValues: Partial<TQoreAppActionOption> = {};
+        let defaultPropertyValues: Partial<TQoreAppActionOption> = {};
         const propertyValues: Partial<TQoreAppActionOption> = {};
 
         if (defaultProperties?.[property.name]) {
-          const defaultProperty = defaultProperties[property.name];
-          if (defaultProperty.allowed_values) {
-            defaultPropertyValues.allowed_values = defaultProperty.allowed_values;
-          }
-
-          if (defaultProperty.get_allowed_values) {
-            defaultPropertyValues.get_allowed_values = defaultProperty.get_allowed_values;
-          }
-
-          if (defaultProperty.depends_on) {
-            defaultPropertyValues.depends_on = defaultProperty.depends_on;
-          }
+          defaultPropertyValues = omit(defaultProperties[property.name], [
+            'short_desc',
+            'display_name',
+            'desc',
+          ]) as Partial<TQoreAppActionOption>;
         }
 
         if (property.options?.length) {
-          propertyValues.allowed_values_creatable = true;
           propertyValues.allowed_values = property.options.map(
             (option): IQoreAllowedValue<any> => ({
               display_name: option.label,
@@ -151,7 +144,7 @@ export const getHubspotPropertyOptionFunction = ({
 
           additionalProperties[key] = {
             ...additionalProperty,
-            required: defaultProperty.required,
+            required: !!defaultProperty.required,
           };
         });
       }
@@ -231,6 +224,7 @@ export const getHubspotDealPropertiesType: TQoreGetDynamicTypeFunction =
         type: 'softstring',
         display_name: 'Pipeline',
         short_desc: 'The pipeline of the deal',
+        on_change: ['refetch'],
         get_allowed_values: getHubspotDealPipelineAllowedValues,
         required: true,
       },
@@ -260,6 +254,7 @@ export const getHubspotLeadPropertiesType: TQoreGetDynamicTypeFunction =
         display_name: 'Pipeline',
         short_desc: 'The pipeline of the lead',
         get_allowed_values: getHubspotLeadPipelineAllowedValues,
+        on_change: ['refetch'],
         required: true,
       },
       hs_pipeline_stage: {
@@ -329,6 +324,7 @@ export const getHubspotTicketPropertiesType: TQoreGetDynamicTypeFunction =
         display_name: 'Pipeline',
         short_desc: 'The pipeline of the ticket',
         get_allowed_values: getHubspotTicketPipelineAllowedValues,
+        on_change: ['refetch'],
         required: true,
       },
       hs_pipeline_stage: {

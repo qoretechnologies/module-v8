@@ -38,7 +38,6 @@ export const getHubspotTriggerOptions = (
         element_type: 'string',
         required: false,
       },
-      element_allowed_values_creatable: true,
       get_element_allowed_values: getPropertiesAllowedValues,
     },
   };
