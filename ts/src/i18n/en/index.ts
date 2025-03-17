@@ -3466,8 +3466,10 @@ const en = {
     },
     Serenity: {
       displayName: 'Serenity',
-      shortDesc: '',
-      longDesc: '',
+      shortDesc:
+        'Create conversations, execute agents and manage interactions with Serenity AI Hub.',
+      longDesc:
+        'Enterprise AI ecosystem that enables businesses to create, manage, and scale AI agents effortlessly, enhancing productivity and innovation across various processes.',
       actions: {
         'create-conversation': {
           displayName: 'Create Conversation',

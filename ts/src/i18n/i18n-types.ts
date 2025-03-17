@@ -13479,7 +13479,13 @@ type RootTranslation = {
 			 * S​e​r​e​n​i​t​y
 			 */
 			displayName: string
+			/**
+			 * C​r​e​a​t​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​,​ ​e​x​e​c​u​t​e​ ​a​g​e​n​t​s​ ​a​n​d​ ​m​a​n​a​g​e​ ​i​n​t​e​r​a​c​t​i​o​n​s​ ​w​i​t​h​ ​S​e​r​e​n​i​t​y​ ​A​I​ ​H​u​b​.
+			 */
 			shortDesc: string
+			/**
+			 * E​n​t​e​r​p​r​i​s​e​ ​A​I​ ​e​c​o​s​y​s​t​e​m​ ​t​h​a​t​ ​e​n​a​b​l​e​s​ ​b​u​s​i​n​e​s​s​e​s​ ​t​o​ ​c​r​e​a​t​e​,​ ​m​a​n​a​g​e​,​ ​a​n​d​ ​s​c​a​l​e​ ​A​I​ ​a​g​e​n​t​s​ ​e​f​f​o​r​t​l​e​s​s​l​y​,​ ​e​n​h​a​n​c​i​n​g​ ​p​r​o​d​u​c​t​i​v​i​t​y​ ​a​n​d​ ​i​n​n​o​v​a​t​i​o​n​ ​a​c​r​o​s​s​ ​v​a​r​i​o​u​s​ ​p​r​o​c​e​s​s​e​s​.
+			 */
 			longDesc: string
 			actions: {
 				'create-conversation': {
@@ -27308,7 +27314,13 @@ export type TranslationFunctions = {
 			 * Serenity
 			 */
 			displayName: () => LocalizedString
+			/**
+			 * Create conversations, execute agents and manage interactions with Serenity AI Hub.
+			 */
 			shortDesc: () => LocalizedString
+			/**
+			 * Enterprise AI ecosystem that enables businesses to create, manage, and scale AI agents effortlessly, enhancing productivity and innovation across various processes.
+			 */
 			longDesc: () => LocalizedString
 			actions: {
 				'create-conversation': {
