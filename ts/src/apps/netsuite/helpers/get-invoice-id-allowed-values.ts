@@ -41,7 +41,7 @@ export const getNetsuiteInvoiceIdAllowedValues: TQoreGetAllowedValuesFunction<
   const account_id = context?.conn_opts?.account_id;
 
   if (!token || !account_id) {
-    throw new Error('The token and account_id is required to get NetSuite invoice allowed values');
+    throw new Error('The token and account_id are required to get NetSuite invoice allowed values');
   }
 
   const invoices = await fetchNetsuiteAllowedValues({
