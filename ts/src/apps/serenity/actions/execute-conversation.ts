@@ -6,14 +6,32 @@ import {
   TQoreOptions,
   TQoreResponseType,
 } from '@qoretechnologies/ts-toolkit';
+import { getSerenityConversationAgentAllowedValues } from '../helpers/agent-allowed-values';
+import { getSerenityConversationAllowedValues } from '../helpers/conversation-allowed-values';
 import { SERENITY_APP_NAME } from '../constants';
-import { getSerenitySystemAgentAllowedValues } from '../helpers/agent-allowed-values';
 
 const options = {
   agentCode: {
     required: true,
     type: 'string',
-    get_allowed_values: getSerenitySystemAgentAllowedValues,
+    on_change: ['refetch'],
+    get_allowed_values: getSerenityConversationAgentAllowedValues,
+  },
+  conversationId: {
+    required: true,
+    type: 'string',
+    depends_on: ['agentCode'],
+    get_allowed_values: getSerenityConversationAllowedValues,
+  },
+  userLanguage: {
+    required: false,
+    type: 'string',
+    preselected: true,
+    default_value: 'en',
+  },
+  message: {
+    required: true,
+    type: 'string',
   },
   culture: {
     required: false,
@@ -22,37 +40,6 @@ const options = {
       { display_name: 'EN', value: 'en' },
       { display_name: 'ES', value: 'es' },
     ],
-  },
-  userLanguage: {
-    required: false,
-    type: 'string',
-    preselected: true,
-    default_value: 'en',
-  },
-  params: {
-    required: true,
-    type: {
-      type: 'hash',
-      fields: {
-        parameterId: {
-          type: 'string',
-          required: true,
-        },
-        value: {
-          type: 'string',
-          required: true,
-        },
-      },
-    },
-  },
-  volatileKnowledgeIds: {
-    required: false,
-    type: {
-      type: 'list',
-      element_type: {
-        type: 'string',
-      },
-    },
   },
 } satisfies TQoreOptions;
 
@@ -112,42 +99,35 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const ExecuteSerenityAgent = QoreAppCreator.createLocalizedAction<typeof options>({
-  action: 'execute-agent',
+export const ExecuteSerenityConversation = QoreAppCreator.createLocalizedAction<typeof options>({
+  action: 'execute-conversation',
   app: SERENITY_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
   api_function: async (data, _opts, context) => {
     const token = context?.conn_opts?.token;
     const agentCode = data?.agentCode;
+    const userLanguage = data?.userLanguage;
+    const conversationId = data?.conversationId;
+    const message = data?.message;
     const culture = data?.culture;
-    const params = (data?.params || []) as { Key: string; Value: string }[];
-    const volatileKnowledgeIds = data?.volatileKnowledgeIds as string[] | undefined;
-    const userLanguage = data?.userLanguage || 'en';
 
     const missingValues: string[] = [];
 
-    if (!token) {
-      missingValues.push('token');
-    }
+    if (!token) missingValues.push('token');
+    if (!agentCode) missingValues.push('agentCode');
+    if (!conversationId) missingValues.push('conversationId');
+    if (!message) missingValues.push('message');
 
-    if (!agentCode) {
-      missingValues.push('agentCode');
-    }
-
-    if (!params) {
-      missingValues.push('params');
-    }
-
-    if (missingValues.length) {
+    if (missingValues.length > 0) {
       throw new Error(
-        `All of the following: ${missingValues.join(', ')} are required to execute a Serenity agent`
+        `The following values are required: [ ${missingValues.join(', ')} ] to execute the conversation`
       );
     }
 
     const body = [
-      ...params.filter((param) => param.Key !== 'userLanguage'),
-      ...(volatileKnowledgeIds?.length ? volatileKnowledgeIds : []),
+      { Key: 'chatId', Value: conversationId },
       { Key: 'userLanguage', Value: userLanguage },
+      { Key: 'message', Value: message },
     ];
 
     const response = await QorusRequest.post<{
@@ -155,14 +135,16 @@ export const ExecuteSerenityAgent = QoreAppCreator.createLocalizedAction<typeof 
     }>(
       {
         path: `/api/v2/agent/${agentCode}/execute`,
-        data: body,
         headers: {
-          'Content-Type': 'application/json',
           'X-API-KEY': token!,
         },
+        data: body,
         ...(culture ? { params: { culture } } : {}),
       },
-      { endpointId: 'serenity', url: 'https://api.serenitystar.ai' }
+      {
+        url: `https://api.serenitystar.ai`,
+        endpointId: 'Serenity',
+      }
     );
 
     return response?.data;

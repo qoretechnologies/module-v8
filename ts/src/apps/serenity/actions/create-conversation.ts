@@ -7,11 +7,13 @@ import {
   TQoreResponseType,
 } from '@qoretechnologies/ts-toolkit';
 import { SERENITY_APP_NAME } from '../constants';
+import { getSerenityConversationAgentAllowedValues } from '../helpers/agent-allowed-values';
 
 const options = {
   agentCode: {
     required: true,
     type: 'string',
+    get_allowed_values: getSerenityConversationAgentAllowedValues,
   },
   userIdentifier: {
     required: false,
@@ -84,7 +86,7 @@ export const CreateSerenityConversation = QoreAppCreator.createLocalizedAction<t
         data: body,
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
+          'X-API-KEY': token!,
         },
       },
       { endpointId: 'serenity', url: 'https://api.serenitystar.ai' }
