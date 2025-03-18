@@ -10461,6 +10461,22 @@ type RootTranslation = {
 					 * A​l​l​o​w​s​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​n​e​w​ ​i​n​v​o​i​c​e​ ​r​e​c​o​r​d​ ​i​n​ ​N​e​t​S​u​i​t​e​.
 					 */
 					longDesc: string
+					options: {
+						entity: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​f​o​r​ ​t​h​e​ ​i​n​v​o​i​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​f​o​r​ ​t​h​e​ ​i​n​v​o​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​f​o​r​ ​t​h​e​ ​i​n​v​o​i​c​e
+							 */
+							longDesc: string
+						}
+					}
 				}
 				invoice_id_get: {
 					/**
@@ -23926,6 +23942,22 @@ export type TranslationFunctions = {
 					 * Allows the user to create a new invoice record in NetSuite.
 					 */
 					longDesc: () => LocalizedString
+					options: {
+						entity: {
+							/**
+							 * Customer for the invoice
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The customer for the invoice
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The customer for the invoice
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				invoice_id_get: {
 					/**
