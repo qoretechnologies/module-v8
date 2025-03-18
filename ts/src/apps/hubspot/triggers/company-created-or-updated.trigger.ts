@@ -1,4 +1,4 @@
-import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode, QoreAppCreator, TQoreTypeObject } from '@qoretechnologies/ts-toolkit';
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
 import {
   pollCreatedItemsForTrigger,
@@ -6,6 +6,10 @@ import {
 } from '../../../global/helpers/event-triggers';
 import { HUBSPOT_APP_NAME } from '../constants';
 import { fetchHubspotRecords } from '../helpers/constants';
+import {
+  createHubspotGetDynamicEventInfoType,
+  hubspotBaseEventInfoType,
+} from '../helpers/get-event-info-type';
 import { getHubspotCompanyPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
 import {
   EHubspotTriggerCriteria,
@@ -14,6 +18,30 @@ import {
 } from './constants';
 
 const triggerName = 'hubspot_company_created_or_updated_trigger';
+
+const hubspotObjectDefaultProperties = {
+  type: 'hash',
+  fields: {
+    createdate: {
+      type: 'string',
+    },
+    email: {
+      type: 'string',
+    },
+    firstname: {
+      type: 'string',
+    },
+    lastmodifieddate: {
+      type: 'string',
+    },
+    hs_object_id: {
+      type: 'string',
+    },
+    lastname: {
+      type: 'string',
+    },
+  },
+} satisfies TQoreTypeObject;
 
 const hubspotCompanyCreatedOrUpdatedTrigger = QoreAppCreator.createLocalizedTrigger({
   app: HUBSPOT_APP_NAME,
@@ -73,39 +101,13 @@ const hubspotCompanyCreatedOrUpdatedTrigger = QoreAppCreator.createLocalizedTrig
 
     return records?.length > 0 ? records[0] : null;
   },
+  get_dynamic_type: createHubspotGetDynamicEventInfoType({
+    object: 'companies',
+    defaultProperties: hubspotObjectDefaultProperties,
+  }),
   event_info: {
     desc: 'Hubspot Company Created Or Updated Trigger Event Info',
-    type: {
-      type: 'hash',
-      fields: {
-        id: { type: 'string' },
-        createdAt: { type: 'string' },
-        updatedAt: { type: 'string' },
-        archived: { type: 'boolean' },
-        properties: {
-          type: {
-            type: 'hash',
-            fields: {
-              createdate: {
-                type: 'string',
-              },
-              domain: {
-                type: 'string',
-              },
-              hs_lastmodifieddate: {
-                type: 'string',
-              },
-              hs_object_id: {
-                type: 'string',
-              },
-              name: {
-                type: 'string',
-              },
-            },
-          },
-        },
-      },
-    },
+    type: hubspotBaseEventInfoType,
   },
 });
 

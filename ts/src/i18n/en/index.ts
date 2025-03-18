@@ -2190,6 +2190,13 @@ const en = {
           displayName: 'Create Invoice',
           shortDesc: 'Creates a new invoice.',
           longDesc: 'Allows the user to create a new invoice record in NetSuite.',
+          options: {
+            entity: {
+              displayName: 'Customer for the invoice',
+              shortDesc: 'The customer for the invoice',
+              longDesc: 'The customer for the invoice',
+            },
+          },
         },
         invoice_id_get: {
           displayName: 'Get Invoice',

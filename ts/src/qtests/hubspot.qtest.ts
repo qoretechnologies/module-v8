@@ -1,4 +1,8 @@
-import { TCustomConnOptions, TQoreAppActionFunctionContext } from '@qoretechnologies/ts-toolkit';
+import {
+  IQoreTypeObjectNonList,
+  TCustomConnOptions,
+  TQoreAppActionFunctionContext,
+} from '@qoretechnologies/ts-toolkit';
 import { getHubspotCompanyAllowedValues } from '../apps/hubspot/helpers/get-company-allowed-values';
 import { getHubspotContactAllowedValues } from '../apps/hubspot/helpers/get-contact-allowed-values';
 import { getHubspotCustomObjectIdAllowedValues } from '../apps/hubspot/helpers/get-custom-object-id-allowed-values';
@@ -14,6 +18,7 @@ import { getHubspotTicketPipelineAllowedValues } from '../apps/hubspot/helpers/g
 import { getHubspotTicketPipelineStageAllowedValues } from '../apps/hubspot/helpers/get-ticket-pipeline-stage-allowed-values';
 import { getHubspotDealPipelineAllowedValues } from '../apps/hubspot/helpers/get-deal-pipeline-allowed-values';
 import { getHubspotDealPipelineStageAllowedValues } from '../apps/hubspot/helpers/get-deal-pipeline-stage-allowed-values';
+import { getHubspotCustomObjectEventInfoType } from '../apps/hubspot/helpers/get-event-info-type';
 
 let connection: string;
 describe('Tests Hubspot actions', () => {
@@ -183,6 +188,18 @@ describe('Tests Hubspot actions', () => {
       });
 
       expect(allowedValues).toBeDefined();
+    });
+
+    it('Should get dynamic event info type', async () => {
+      const dynamicType = (await getHubspotCustomObjectEventInfoType({
+        ...baseContext,
+        opts: { object: customObjectType, additionalProperties: ['pet_type'] },
+      })) as IQoreTypeObjectNonList;
+
+      expect(dynamicType).toBeDefined();
+      expect(
+        (dynamicType.fields?.properties.type as IQoreTypeObjectNonList).fields
+      )?.toHaveProperty('pet_type');
     });
   });
 

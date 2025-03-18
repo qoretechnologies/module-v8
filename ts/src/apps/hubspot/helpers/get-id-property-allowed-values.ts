@@ -3,7 +3,7 @@ import {
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { fetchHubspotObjectProperties } from './object-properties-allowed-values';
+import { fetchHubspotObjectPropertiesAllowedValues } from './object-properties-allowed-values';
 
 export const getHubspotCompanyIdPropertyAllowedValues: TQoreGetAllowedValuesFunction<
   TCustomConnOptions,
@@ -11,7 +11,7 @@ export const getHubspotCompanyIdPropertyAllowedValues: TQoreGetAllowedValuesFunc
 > = async (context): Promise<IQoreAllowedValue<string>[]> => {
   const token = context?.conn_opts?.token;
 
-  return await fetchHubspotObjectProperties({
+  return await fetchHubspotObjectPropertiesAllowedValues({
     token,
     object: 'companies',
     filter: {
@@ -26,7 +26,7 @@ export const getHubspotContactIdPropertyAllowedValues: TQoreGetAllowedValuesFunc
 > = async (context): Promise<IQoreAllowedValue<string>[]> => {
   const token = context?.conn_opts?.token;
 
-  return await fetchHubspotObjectProperties({
+  return await fetchHubspotObjectPropertiesAllowedValues({
     token,
     object: 'contacts',
     filter: {
@@ -41,7 +41,7 @@ export const getHubspotDealIdPropertyAllowedValues: TQoreGetAllowedValuesFunctio
 > = async (context): Promise<IQoreAllowedValue<string>[]> => {
   const token = context?.conn_opts?.token;
 
-  return await fetchHubspotObjectProperties({
+  return await fetchHubspotObjectPropertiesAllowedValues({
     token,
     object: 'deals',
     filter: {
@@ -56,7 +56,7 @@ export const getHubspotLeadIdPropertyAllowedValues: TQoreGetAllowedValuesFunctio
 > = async (context): Promise<IQoreAllowedValue<string>[]> => {
   const token = context?.conn_opts?.token;
 
-  return await fetchHubspotObjectProperties({
+  return await fetchHubspotObjectPropertiesAllowedValues({
     token,
     object: 'leads',
     filter: {
@@ -71,7 +71,7 @@ export const getHubspotProductIdPropertyAllowedValues: TQoreGetAllowedValuesFunc
 > = async (context): Promise<IQoreAllowedValue<string>[]> => {
   const token = context?.conn_opts?.token;
 
-  return await fetchHubspotObjectProperties({
+  return await fetchHubspotObjectPropertiesAllowedValues({
     token,
     object: 'products',
     filter: {
@@ -86,7 +86,7 @@ export const getHubspotTicketIdPropertyAllowedValues: TQoreGetAllowedValuesFunct
 > = async (context): Promise<IQoreAllowedValue<string>[]> => {
   const token = context?.conn_opts?.token;
 
-  return await fetchHubspotObjectProperties({
+  return await fetchHubspotObjectPropertiesAllowedValues({
     token,
     object: 'tickets',
     filter: {
@@ -101,7 +101,7 @@ export const getHubspotUserIdPropertyAllowedValues: TQoreGetAllowedValuesFunctio
 > = async (context): Promise<IQoreAllowedValue<string>[]> => {
   const token = context?.conn_opts?.token;
 
-  return await fetchHubspotObjectProperties({
+  return await fetchHubspotObjectPropertiesAllowedValues({
     token,
     object: 'users',
     filter: {
@@ -117,5 +117,9 @@ export const getHubspotCustomObjectIdPropertyAllowedValues: TQoreGetAllowedValue
   const token = context?.conn_opts?.token;
   const object = context?.opts?.object || context?.opts?.objectType;
 
-  return await fetchHubspotObjectProperties({ token, object, filter: { hasUniqueValue: true } });
+  return await fetchHubspotObjectPropertiesAllowedValues({
+    token,
+    object,
+    filter: { hasUniqueValue: true },
+  });
 };

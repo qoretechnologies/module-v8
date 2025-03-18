@@ -1,4 +1,4 @@
-import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode, QoreAppCreator, TQoreTypeObject } from '@qoretechnologies/ts-toolkit';
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
 import {
   pollCreatedItemsForTrigger,
@@ -12,8 +12,36 @@ import {
   getHubspotTriggerOptions,
   hubspotTriggerCriteria,
 } from './constants';
+import {
+  createHubspotGetDynamicEventInfoType,
+  hubspotBaseEventInfoType,
+} from '../helpers/get-event-info-type';
 
 const triggerName = 'hubspot_contact_created_or_updated_trigger';
+
+const hubspotObjectDefaultProperties = {
+  type: 'hash',
+  fields: {
+    createdate: {
+      type: 'string',
+    },
+    email: {
+      type: 'string',
+    },
+    firstname: {
+      type: 'string',
+    },
+    lastmodifieddate: {
+      type: 'string',
+    },
+    hs_object_id: {
+      type: 'string',
+    },
+    lastname: {
+      type: 'string',
+    },
+  },
+} satisfies TQoreTypeObject;
 
 const hubspotContactCreatedOrUpdatedTrigger = QoreAppCreator.createLocalizedTrigger({
   app: HUBSPOT_APP_NAME,
@@ -73,30 +101,13 @@ const hubspotContactCreatedOrUpdatedTrigger = QoreAppCreator.createLocalizedTrig
 
     return records?.length > 0 ? records[0] : null;
   },
+  get_dynamic_type: createHubspotGetDynamicEventInfoType({
+    object: 'contacts',
+    defaultProperties: hubspotObjectDefaultProperties,
+  }),
   event_info: {
     desc: 'Hubspot Contact Created Or Updated Trigger Event Info',
-    type: {
-      type: 'hash',
-      fields: {
-        id: { type: 'string' },
-        createdAt: { type: 'string' },
-        updatedAt: { type: 'string' },
-        archived: { type: 'boolean' },
-        properties: {
-          type: {
-            type: 'hash',
-            fields: {
-              createdate: { type: 'string' },
-              email: { type: 'string' },
-              firstname: { type: 'string' },
-              hs_object_id: { type: 'string' },
-              lastmodifieddate: { type: 'string' },
-              lastname: { type: 'string' },
-            },
-          },
-        },
-      },
-    },
+    type: hubspotBaseEventInfoType,
   },
 });
 
