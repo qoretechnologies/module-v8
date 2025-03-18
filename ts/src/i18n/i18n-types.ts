@@ -13474,6 +13474,376 @@ type RootTranslation = {
 				}
 			}
 		}
+		Serenity: {
+			/**
+			 * S​e​r​e​n​i​t​y
+			 */
+			displayName: string
+			/**
+			 * C​r​e​a​t​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​,​ ​e​x​e​c​u​t​e​ ​a​g​e​n​t​s​ ​a​n​d​ ​m​a​n​a​g​e​ ​i​n​t​e​r​a​c​t​i​o​n​s​ ​w​i​t​h​ ​S​e​r​e​n​i​t​y​ ​A​I​ ​H​u​b​.
+			 */
+			shortDesc: string
+			/**
+			 * E​n​t​e​r​p​r​i​s​e​ ​A​I​ ​e​c​o​s​y​s​t​e​m​ ​t​h​a​t​ ​e​n​a​b​l​e​s​ ​b​u​s​i​n​e​s​s​e​s​ ​t​o​ ​c​r​e​a​t​e​,​ ​m​a​n​a​g​e​,​ ​a​n​d​ ​s​c​a​l​e​ ​A​I​ ​a​g​e​n​t​s​ ​e​f​f​o​r​t​l​e​s​s​l​y​,​ ​e​n​h​a​n​c​i​n​g​ ​p​r​o​d​u​c​t​i​v​i​t​y​ ​a​n​d​ ​i​n​n​o​v​a​t​i​o​n​ ​a​c​r​o​s​s​ ​v​a​r​i​o​u​s​ ​p​r​o​c​e​s​s​e​s​.
+			 */
+			longDesc: string
+			actions: {
+				'create-conversation': {
+					/**
+					 * C​r​e​a​t​e​ ​C​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​w​i​t​h​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​a​g​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​w​i​t​h​ ​t​h​e​ ​g​i​v​e​n​ ​a​g​e​n​t​ ​c​o​d​e​.​ ​T​h​i​s​ ​i​s​ ​r​e​q​u​i​r​e​d​ ​b​e​f​o​r​e​ ​e​x​e​c​u​t​i​n​g​ ​a​n​ ​a​g​e​n​t​.
+					 */
+					longDesc: string
+					options: {
+						agentCode: {
+							/**
+							 * A​g​e​n​t​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​d​e​ ​o​f​ ​t​h​e​ ​a​g​e​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​w​i​t​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​d​e​ ​o​f​ ​t​h​e​ ​a​g​e​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​w​i​t​h
+							 */
+							longDesc: string
+						}
+						userIdentifier: {
+							/**
+							 * U​s​e​r​ ​I​d​e​n​t​i​f​i​e​r
+							 */
+							displayName: string
+							/**
+							 * U​s​e​d​ ​t​o​ ​u​n​i​q​u​e​l​y​ ​i​d​e​n​t​i​f​y​ ​a​ ​u​s​e​r​ ​i​n​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n​.​ 
+							 */
+							shortDesc: string
+							/**
+							 * I​t​ ​h​e​l​p​s​ ​m​a​i​n​t​a​i​n​ ​c​o​n​t​e​x​t​ ​a​c​r​o​s​s​ ​i​n​t​e​r​a​c​t​i​o​n​s​.​ ​F​o​r​ ​e​x​a​m​p​l​e​,​ ​y​o​u​ ​m​i​g​h​t​ ​u​s​e​ ​`​"​u​s​e​r​I​d​e​n​t​i​f​i​e​r​"​:​ ​"​l​a​n​d​i​n​g​-​p​a​g​e​-​u​s​e​r​"​`​ ​t​o​ ​t​r​a​c​k​ ​a​ ​s​p​e​c​i​f​i​c​ ​u​s​e​r​ ​s​e​s​s​i​o​n​.
+							 */
+							longDesc: string
+						}
+						inputParameters: {
+							/**
+							 * I​n​p​u​t​ ​P​a​r​a​m​e​t​e​r​s
+							 */
+							displayName: string
+							/**
+							 * A​n​ ​a​r​r​a​y​ ​o​f​ ​k​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​ ​f​o​r​ ​a​d​d​i​t​i​o​n​a​l​ ​c​o​n​t​e​x​t​.
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​a​r​r​a​y​ ​o​f​ ​k​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​ ​f​o​r​ ​a​d​d​i​t​i​o​n​a​l​ ​c​o​n​t​e​x​t​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									key: {
+										/**
+										 * K​e​y
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​k​e​y​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​k​e​y​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				'execute-agent': {
+					/**
+					 * E​x​e​c​u​t​e​ ​A​g​e​n​t
+					 */
+					displayName: string
+					/**
+					 * E​x​e​c​u​t​e​s​ ​a​n​ ​a​g​e​n​t​ ​w​i​t​h​ ​t​h​e​ ​g​i​v​e​n​ ​c​o​d​e​.
+					 */
+					shortDesc: string
+					/**
+					 * E​x​e​c​u​t​e​s​ ​a​n​ ​a​g​e​n​t​ ​w​i​t​h​ ​t​h​e​ ​g​i​v​e​n​ ​c​o​d​e​.
+					 */
+					longDesc: string
+					options: {
+						agentCode: {
+							/**
+							 * A​g​e​n​t​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * U​s​e​d​ ​t​o​ ​i​d​e​n​t​i​f​y​ ​a​n​d​ ​e​x​e​c​u​t​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​a​g​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​S​e​r​e​n​i​t​y​*​ ​A​I​ ​H​u​b
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​d​ ​t​o​ ​i​d​e​n​t​i​f​y​ ​a​n​d​ ​e​x​e​c​u​t​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​a​g​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​S​e​r​e​n​i​t​y​*​ ​A​I​ ​H​u​b
+							 */
+							longDesc: string
+						}
+						culture: {
+							/**
+							 * C​u​l​t​u​r​e
+							 */
+							displayName: string
+							/**
+							 * U​s​e​ ​t​h​i​s​ ​p​a​r​a​m​ ​t​o​ ​o​v​e​r​r​i​d​e​ ​t​h​e​ ​c​u​l​t​u​r​e​ ​o​f​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​i​s​ ​p​a​r​a​m​ ​t​o​ ​o​v​e​r​r​i​d​e​ ​t​h​e​ ​c​u​l​t​u​r​e​ ​o​f​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.
+							 */
+							longDesc: string
+						}
+						userLanguage: {
+							/**
+							 * U​s​e​r​ ​L​a​n​g​u​a​g​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​e​f​e​r​r​e​d​ ​l​a​n​g​u​a​g​e​ ​o​f​ ​t​h​e​ ​r​e​s​p​o​n​s​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​e​f​e​r​r​e​d​ ​l​a​n​g​u​a​g​e​ ​o​f​ ​t​h​e​ ​r​e​s​p​o​n​s​e
+							 */
+							longDesc: string
+						}
+						params: {
+							/**
+							 * P​a​r​a​m​s
+							 */
+							displayName: string
+							/**
+							 * A​n​ ​a​r​r​a​y​ ​o​f​ ​k​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​ ​f​o​r​ ​e​x​e​c​u​t​i​o​n​ ​c​o​n​t​e​x​t​.
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​a​r​r​a​y​ ​o​f​ ​k​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​ ​f​o​r​ ​e​x​e​c​u​t​i​o​n​ ​c​o​n​t​e​x​t​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									key: {
+										/**
+										 * K​e​y
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​k​e​y​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​k​e​y​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						volatileKnowledgeIds: {
+							/**
+							 * V​o​l​a​t​i​l​e​ ​K​n​o​w​l​e​d​g​e​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​s​ ​(​U​U​I​D​s​)​ ​u​s​e​d​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​s​p​e​c​i​f​i​c​ ​p​i​e​c​e​s​ ​o​f​ ​v​o​l​a​t​i​l​e​ ​k​n​o​w​l​e​d​g​e​ ​i​n​ ​t​h​e​ ​S​e​r​e​n​i​t​y​*​ ​A​I​ ​H​u​b
+							 */
+							shortDesc: string
+							/**
+							 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​s​ ​(​U​U​I​D​s​)​ ​u​s​e​d​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​s​p​e​c​i​f​i​c​ ​p​i​e​c​e​s​ ​o​f​ ​v​o​l​a​t​i​l​e​ ​k​n​o​w​l​e​d​g​e​ ​i​n​ ​t​h​e​ ​S​e​r​e​n​i​t​y​*​ ​A​I​ ​H​u​b
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'execute-conversation': {
+					/**
+					 * E​x​e​c​u​t​e​ ​C​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​ ​c​h​a​t​ ​w​i​t​h​ ​a​g​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​ ​a​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​ ​c​h​a​t​ ​w​i​t​h​ ​a​g​e​n​t
+					 */
+					longDesc: string
+					options: {
+						agentCode: {
+							/**
+							 * A​g​e​n​t​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​g​e​n​t​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​w​i​t​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​a​g​e​n​t​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​w​i​t​h
+							 */
+							longDesc: string
+						}
+						conversationId: {
+							/**
+							 * C​o​n​v​e​r​s​a​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o
+							 */
+							longDesc: string
+						}
+						userLanguage: {
+							/**
+							 * U​s​e​r​ ​L​a​n​g​u​a​g​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​e​f​e​r​r​e​d​ ​l​a​n​g​u​a​g​e​ ​o​f​ ​t​h​e​ ​r​e​s​p​o​n​s​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​e​f​e​r​r​e​d​ ​l​a​n​g​u​a​g​e​ ​o​f​ ​t​h​e​ ​r​e​s​p​o​n​s​e
+							 */
+							longDesc: string
+						}
+						message: {
+							/**
+							 * M​e​s​s​a​g​e
+							 */
+							displayName: string
+							/**
+							 * M​e​s​s​a​g​e​ ​t​o​ ​s​e​n​d​ ​t​o​ ​t​h​e​ ​a​g​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * M​e​s​s​a​g​e​ ​t​o​ ​s​e​n​d​ ​t​o​ ​t​h​e​ ​a​g​e​n​t
+							 */
+							longDesc: string
+						}
+						culture: {
+							/**
+							 * C​u​l​t​u​r​e
+							 */
+							displayName: string
+							/**
+							 * U​s​e​ ​t​h​i​s​ ​p​a​r​a​m​ ​t​o​ ​o​v​e​r​r​i​d​e​ ​t​h​e​ ​c​u​l​t​u​r​e​ ​o​f​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​i​s​ ​p​a​r​a​m​ ​t​o​ ​o​v​e​r​r​i​d​e​ ​t​h​e​ ​c​u​l​t​u​r​e​ ​o​f​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.​ 
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				'new-conversation-message': {
+					/**
+					 * N​e​w​ ​C​o​n​v​e​r​s​a​t​i​o​n​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​m​e​s​s​a​g​e​ ​i​s​ ​p​o​s​t​e​d​ ​i​n​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​m​e​s​s​a​g​e​ ​i​s​ ​p​o​s​t​e​d​ ​i​n​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						conversationId: {
+							/**
+							 * C​o​n​v​e​r​s​a​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​.
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​C​o​n​v​e​r​s​a​t​i​o​n​ ​I​D​ ​t​o​ ​s​p​e​c​i​f​y​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​n​e​w​ ​m​e​s​s​a​g​e​s​.
+							 */
+							longDesc: string
+						}
+						agentCode: {
+							/**
+							 * A​g​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​a​g​e​n​t​.
+							 */
+							shortDesc: string
+							/**
+							 * A​g​e​n​t​ ​I​D​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​a​v​a​i​l​a​b​l​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+						sender: {
+							/**
+							 * S​e​n​d​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​m​e​s​s​a​g​e​s​ ​b​y​ ​t​h​e​ ​s​e​n​d​e​r​.
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​s​e​n​d​e​r​ ​t​h​e​ ​m​e​s​s​a​g​e​s​ ​s​h​o​u​l​d​ ​b​e​ ​f​i​l​t​e​r​e​d​ ​b​y​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -26932,6 +27302,376 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Optional filter to only trigger for meetings associated with a specific team.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		Serenity: {
+			/**
+			 * Serenity
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Create conversations, execute agents and manage interactions with Serenity AI Hub.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Enterprise AI ecosystem that enables businesses to create, manage, and scale AI agents effortlessly, enhancing productivity and innovation across various processes.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				'create-conversation': {
+					/**
+					 * Create Conversation
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a conversation with a conversation agent
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a conversation with the given agent code. This is required before executing an agent.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						agentCode: {
+							/**
+							 * Agent Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The code of the agent to create a conversation with
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The code of the agent to create a conversation with
+							 */
+							longDesc: () => LocalizedString
+						}
+						userIdentifier: {
+							/**
+							 * User Identifier
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Used to uniquely identify a user in a conversation. 
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * It helps maintain context across interactions. For example, you might use `"userIdentifier": "landing-page-user"` to track a specific user session.
+							 */
+							longDesc: () => LocalizedString
+						}
+						inputParameters: {
+							/**
+							 * Input Parameters
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * An array of key-value pairs for additional context.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An array of key-value pairs for additional context.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									key: {
+										/**
+										 * Key
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The key of the parameter
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The key of the parameter
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The value of the parameter
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value of the parameter
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				'execute-agent': {
+					/**
+					 * Execute Agent
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Executes an agent with the given code.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Executes an agent with the given code.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						agentCode: {
+							/**
+							 * Agent Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Used to identify and execute a specific agent within the Serenity* AI Hub
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Used to identify and execute a specific agent within the Serenity* AI Hub
+							 */
+							longDesc: () => LocalizedString
+						}
+						culture: {
+							/**
+							 * Culture
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Use this param to override the culture of the response.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use this param to override the culture of the response.
+							 */
+							longDesc: () => LocalizedString
+						}
+						userLanguage: {
+							/**
+							 * User Language
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The preferred language of the response
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The preferred language of the response
+							 */
+							longDesc: () => LocalizedString
+						}
+						params: {
+							/**
+							 * Params
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * An array of key-value pairs for execution context.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An array of key-value pairs for execution context.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									key: {
+										/**
+										 * Key
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The key of the parameter
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The key of the parameter
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The value of the parameter
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value of the parameter
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						volatileKnowledgeIds: {
+							/**
+							 * Volatile Knowledge IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Unique identifiers (UUIDs) used to retrieve specific pieces of volatile knowledge in the Serenity* AI Hub
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Unique identifiers (UUIDs) used to retrieve specific pieces of volatile knowledge in the Serenity* AI Hub
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'execute-conversation': {
+					/**
+					 * Execute Conversation
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a message to a chat with agent
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Send a message to a chat with agent
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						agentCode: {
+							/**
+							 * Agent Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The agent to check for conversations with
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The agent to check for conversations with
+							 */
+							longDesc: () => LocalizedString
+						}
+						conversationId: {
+							/**
+							 * Conversation ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conversation to send the message to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The conversation to send the message to
+							 */
+							longDesc: () => LocalizedString
+						}
+						userLanguage: {
+							/**
+							 * User Language
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The preferred language of the response
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The preferred language of the response
+							 */
+							longDesc: () => LocalizedString
+						}
+						message: {
+							/**
+							 * Message
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Message to send to the agent
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Message to send to the agent
+							 */
+							longDesc: () => LocalizedString
+						}
+						culture: {
+							/**
+							 * Culture
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Use this param to override the culture of the response.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use this param to override the culture of the response. 
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				'new-conversation-message': {
+					/**
+					 * New Conversation Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a new message is posted in a conversation.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when a new message is posted in a conversation.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						conversationId: {
+							/**
+							 * Conversation ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier for the conversation.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the Conversation ID to specify the conversation where you want to monitor new messages.
+							 */
+							longDesc: () => LocalizedString
+						}
+						agentCode: {
+							/**
+							 * Agent ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier for the agent.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Agent ID to check for available conversations from
+							 */
+							longDesc: () => LocalizedString
+						}
+						sender: {
+							/**
+							 * Sender
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter the messages by the sender.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the sender the messages should be filtered by.
 							 */
 							longDesc: () => LocalizedString
 						}

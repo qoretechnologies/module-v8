@@ -27,6 +27,7 @@ import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import outlook from '../apps/outlook';
 import teams from '../apps/teams';
+import serenity from '../apps/serenity';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -41,6 +42,7 @@ export interface IQoreApi {
 }
 
 const NEW_APPS = {
+  serenity,
   netsuite,
   zendesk,
   asana,
