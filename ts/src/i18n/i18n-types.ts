@@ -10434,6 +10434,146 @@ type RootTranslation = {
 					 */
 					longDesc: string
 				}
+				contact_get: {
+					/**
+					 * G​e​t​ ​L​i​s​t​ ​o​f​ ​C​o​n​t​a​c​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​o​n​t​a​c​t​s​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​e​d​ ​f​i​l​t​e​r​s​.
+					 */
+					longDesc: string
+				}
+				contact_post: {
+					/**
+					 * C​r​e​a​t​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​.
+					 */
+					shortDesc: string
+					/**
+					 * A​l​l​o​w​s​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​r​e​c​o​r​d​ ​i​n​ ​N​e​t​S​u​i​t​e​.
+					 */
+					longDesc: string
+				}
+				contact_id_delete: {
+					/**
+					 * D​e​l​e​t​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​ ​c​o​n​t​a​c​t​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​N​e​t​S​u​i​t​e​ ​b​a​s​e​d​ ​o​n​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				contact_id_get: {
+					/**
+					 * G​e​t​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​o​f​ ​a​ ​s​i​n​g​l​e​ ​c​o​n​t​a​c​t​ ​b​y​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				contact_id_patch: {
+					/**
+					 * U​p​d​a​t​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​.
+					 */
+					shortDesc: string
+					/**
+					 * A​l​l​o​w​s​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​u​p​d​a​t​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​ ​b​y​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				opportunity_get: {
+					/**
+					 * G​e​t​ ​L​i​s​t​ ​o​f​ ​O​p​p​o​r​t​u​n​i​t​i​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​e​d​ ​f​i​l​t​e​r​s​.
+					 */
+					longDesc: string
+				}
+				opportunity_id_delete: {
+					/**
+					 * D​e​l​e​t​e​ ​O​p​p​o​r​t​u​n​i​t​y
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​o​p​p​o​r​t​u​n​i​t​y​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​n​ ​o​p​p​o​r​t​u​n​i​t​y​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​N​e​t​S​u​i​t​e​ ​b​a​s​e​d​ ​o​n​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				opportunity_id_get: {
+					/**
+					 * G​e​t​ ​O​p​p​o​r​t​u​n​i​t​y
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​o​p​p​o​r​t​u​n​i​t​y​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​o​f​ ​a​ ​s​i​n​g​l​e​ ​o​p​p​o​r​t​u​n​i​t​y​ ​b​y​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				opportunity_id_patch: {
+					/**
+					 * U​p​d​a​t​e​ ​O​p​p​o​r​t​u​n​i​t​y
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​o​p​p​o​r​t​u​n​i​t​y​.
+					 */
+					shortDesc: string
+					/**
+					 * A​l​l​o​w​s​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​u​p​d​a​t​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​o​p​p​o​r​t​u​n​i​t​y​ ​b​y​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				opportunity_post: {
+					/**
+					 * C​r​e​a​t​e​ ​O​p​p​o​r​t​u​n​i​t​y
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​o​p​p​o​r​t​u​n​i​t​y​.
+					 */
+					shortDesc: string
+					/**
+					 * A​l​l​o​w​s​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​n​e​w​ ​o​p​p​o​r​t​u​n​i​t​y​ ​r​e​c​o​r​d​ ​i​n​ ​N​e​t​S​u​i​t​e​.
+					 */
+					longDesc: string
+				}
 				invoice_get: {
 					/**
 					 * G​e​t​ ​L​i​s​t​ ​o​f​ ​I​n​v​o​i​c​e​s
@@ -10604,7 +10744,7 @@ type RootTranslation = {
 					 */
 					longDesc: string
 				}
-				purchase_order_post: {
+				purchaseOrder_post: {
 					/**
 					 * C​r​e​a​t​e​ ​P​u​r​c​h​a​s​e​ ​O​r​d​e​r
 					 */
@@ -24285,6 +24425,146 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 				}
+				contact_get: {
+					/**
+					 * Get List of Contacts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of contacts.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a list of contacts based on specified filters.
+					 */
+					longDesc: () => LocalizedString
+				}
+				contact_post: {
+					/**
+					 * Create Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new contact.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Allows the user to create a new contact record in NetSuite.
+					 */
+					longDesc: () => LocalizedString
+				}
+				contact_id_delete: {
+					/**
+					 * Delete Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Deletes a specific contact.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes a contact record from NetSuite based on its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				contact_id_get: {
+					/**
+					 * Get Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific contact.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches detailed information of a single contact by its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				contact_id_patch: {
+					/**
+					 * Update Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates an existing contact.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Allows the user to update details of a specific contact by its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				opportunity_get: {
+					/**
+					 * Get List of Opportunities
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of opportunities.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a list of opportunities based on specified filters.
+					 */
+					longDesc: () => LocalizedString
+				}
+				opportunity_id_delete: {
+					/**
+					 * Delete Opportunity
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Deletes a specific opportunity.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes an opportunity record from NetSuite based on its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				opportunity_id_get: {
+					/**
+					 * Get Opportunity
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific opportunity.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches detailed information of a single opportunity by its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				opportunity_id_patch: {
+					/**
+					 * Update Opportunity
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates an existing opportunity.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Allows the user to update details of a specific opportunity by its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				opportunity_post: {
+					/**
+					 * Create Opportunity
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new opportunity.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Allows the user to create a new opportunity record in NetSuite.
+					 */
+					longDesc: () => LocalizedString
+				}
 				invoice_get: {
 					/**
 					 * Get List of Invoices
@@ -24455,7 +24735,7 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 				}
-				purchase_order_post: {
+				purchaseOrder_post: {
 					/**
 					 * Create Purchase Order
 					 */

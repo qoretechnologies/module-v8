@@ -2181,6 +2181,56 @@ const en = {
           shortDesc: 'Deletes a specific customer.',
           longDesc: 'Removes a customer record from NetSuite based on its ID.',
         },
+        contact_get: {
+          displayName: 'Get List of Contacts',
+          shortDesc: 'Retrieve a list of contacts.',
+          longDesc: 'Fetches a list of contacts based on specified filters.',
+        },
+        contact_post: {
+          displayName: 'Create Contact',
+          shortDesc: 'Creates a new contact.',
+          longDesc: 'Allows the user to create a new contact record in NetSuite.',
+        },
+        contact_id_delete: {
+          displayName: 'Delete Contact',
+          shortDesc: 'Deletes a specific contact.',
+          longDesc: 'Removes a contact record from NetSuite based on its ID.',
+        },
+        contact_id_get: {
+          displayName: 'Get Contact',
+          shortDesc: 'Retrieve details of a specific contact.',
+          longDesc: 'Fetches detailed information of a single contact by its ID.',
+        },
+        contact_id_patch: {
+          displayName: 'Update Contact',
+          shortDesc: 'Updates an existing contact.',
+          longDesc: 'Allows the user to update details of a specific contact by its ID.',
+        },
+        opportunity_get: {
+          displayName: 'Get List of Opportunities',
+          shortDesc: 'Retrieve a list of opportunities.',
+          longDesc: 'Fetches a list of opportunities based on specified filters.',
+        },
+        opportunity_id_delete: {
+          displayName: 'Delete Opportunity',
+          shortDesc: 'Deletes a specific opportunity.',
+          longDesc: 'Removes an opportunity record from NetSuite based on its ID.',
+        },
+        opportunity_id_get: {
+          displayName: 'Get Opportunity',
+          shortDesc: 'Retrieve details of a specific opportunity.',
+          longDesc: 'Fetches detailed information of a single opportunity by its ID.',
+        },
+        opportunity_id_patch: {
+          displayName: 'Update Opportunity',
+          shortDesc: 'Updates an existing opportunity.',
+          longDesc: 'Allows the user to update details of a specific opportunity by its ID.',
+        },
+        opportunity_post: {
+          displayName: 'Create Opportunity',
+          shortDesc: 'Creates a new opportunity.',
+          longDesc: 'Allows the user to create a new opportunity record in NetSuite.',
+        },
         invoice_get: {
           displayName: 'Get List of Invoices',
           shortDesc: 'Retrieve a list of invoices.',
@@ -2243,7 +2293,7 @@ const en = {
           shortDesc: 'Retrieve a list of purchase orders.',
           longDesc: 'Fetches a list of purchase orders based on specified filters.',
         },
-        purchase_order_post: {
+        purchaseOrder_post: {
           displayName: 'Create Purchase Order',
           shortDesc: 'Creates a new purchase order.',
           longDesc: 'Allows the user to create a new purchase order record in NetSuite.',
