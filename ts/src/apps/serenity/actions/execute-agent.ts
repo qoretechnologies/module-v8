@@ -7,12 +7,14 @@ import {
   TQoreResponseType,
 } from '@qoretechnologies/ts-toolkit';
 import { SERENITY_APP_NAME } from '../constants';
-import { getSerenitySystemAgentAllowedValues } from '../helpers/agent-allowed-values';
+import { getSerenitySystemAgentAllowedValues } from '../helpers/get-agent-allowed-values';
+import { getSerenityAgentParamsAllowedValues } from '../helpers/get-agent-params-allowed-values';
 
 const options = {
   agentCode: {
     required: true,
     type: 'string',
+    on_change: ['refetch'],
     get_allowed_values: getSerenitySystemAgentAllowedValues,
   },
   culture: {
@@ -34,8 +36,10 @@ const options = {
     type: {
       type: 'hash',
       fields: {
-        parameterId: {
+        key: {
           type: 'string',
+          get_allowed_values: getSerenityAgentParamsAllowedValues,
+          allowed_values_creatable: true,
           required: true,
         },
         value: {

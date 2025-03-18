@@ -18,7 +18,7 @@ const SERENITY_AGENT_TYPES: Record<number, string> = {
 const SERENITY_SYSTEM_AGENT_TYPES = [0, 1, 2, 3];
 const SERENITY_CONVERSATION_AGENT_TYPES = [4, 5];
 
-type TSerenityAgent = {
+export type TSerenityAgent = {
   id: string;
   name: string;
   code: string;
@@ -26,7 +26,7 @@ type TSerenityAgent = {
   agentType: number;
 };
 
-type TSerenityAgentsResponse = {
+export type TSerenityAgentsResponse = {
   data: { items: TSerenityAgent[]; total: number };
 };
 

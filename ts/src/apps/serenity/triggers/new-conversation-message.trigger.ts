@@ -10,8 +10,8 @@ import {
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
 import { SERENITY_APP_NAME } from '../constants';
-import { getSerenityConversationAgentAllowedValues } from '../helpers/agent-allowed-values';
-import { getSerenityConversationAllowedValues } from '../helpers/conversation-allowed-values';
+import { getSerenityConversationAgentAllowedValues } from '../helpers/get-agent-allowed-values';
+import { getSerenityConversationAllowedValues } from '../helpers/get-conversation-allowed-values';
 
 const options = {
   agentCode: {

@@ -7,7 +7,7 @@ import {
   TQoreResponseType,
 } from '@qoretechnologies/ts-toolkit';
 import { SERENITY_APP_NAME } from '../constants';
-import { getSerenityConversationAgentAllowedValues } from '../helpers/agent-allowed-values';
+import { getSerenityConversationAgentAllowedValues } from '../helpers/get-agent-allowed-values';
 
 const options = {
   agentCode: {

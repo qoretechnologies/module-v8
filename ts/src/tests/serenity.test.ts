@@ -4,9 +4,10 @@ import { CreateSerenityConversation } from '../apps/serenity/actions/create-conv
 import {
   getSerenityConversationAgentAllowedValues,
   getSerenitySystemAgentAllowedValues,
-} from '../apps/serenity/helpers/agent-allowed-values';
-import { getSerenityConversationAllowedValues } from '../apps/serenity/helpers/conversation-allowed-values';
+} from '../apps/serenity/helpers/get-agent-allowed-values';
+import { getSerenityConversationAllowedValues } from '../apps/serenity/helpers/get-conversation-allowed-values';
 import { Debugger, DebugLevels } from '../utils/Debugger';
+import { getSerenityAgentParamsAllowedValues } from '../apps/serenity/helpers/get-agent-params-allowed-values';
 
 Debugger.level = DebugLevels.Verbose;
 
@@ -54,6 +55,16 @@ describe('Should test serenity actions', () => {
       expect(allowed_values).toBeDefined();
       expect(allowed_values.length).toBeGreaterThan(0);
       testConversationId = allowed_values[0].value;
+    });
+
+    it('Should get serenity agent params', async () => {
+      const allowed_values = await getSerenityAgentParamsAllowedValues({
+        conn_opts: { token } as any,
+        opts: { agentCode: systemAgentCode },
+      });
+
+      expect(allowed_values).toBeDefined();
+      expect(allowed_values.length).toBeGreaterThan(0);
     });
   });
 
