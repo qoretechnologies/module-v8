@@ -1,4 +1,4 @@
-import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode, QoreAppCreator, TQoreTypeObject } from '@qoretechnologies/ts-toolkit';
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
 import {
   pollCreatedItemsForTrigger,
@@ -12,8 +12,33 @@ import {
   getHubspotTriggerOptions,
   hubspotTriggerCriteria,
 } from './constants';
+import { createHubspotGetDynamicEventInfoType } from '../helpers/get-event-info-type';
 
 const triggerName = 'hubspot_product_created_or_updated_trigger';
+
+const hubspotObjectDefaultProperties = {
+  type: 'hash',
+  fields: {
+    createdate: {
+      type: 'string',
+    },
+    hs_lastmodifieddate: {
+      type: 'string',
+    },
+    hs_object_id: {
+      type: 'string',
+    },
+    description: {
+      type: 'string',
+    },
+    name: {
+      type: 'string',
+    },
+    price: {
+      type: 'string',
+    },
+  },
+} satisfies TQoreTypeObject;
 
 const hubspotProductCreatedOrUpdatedTrigger = QoreAppCreator.createLocalizedTrigger({
   app: HUBSPOT_APP_NAME,
@@ -73,6 +98,10 @@ const hubspotProductCreatedOrUpdatedTrigger = QoreAppCreator.createLocalizedTrig
 
     return records?.length > 0 ? records[0] : null;
   },
+  get_dynamic_type: createHubspotGetDynamicEventInfoType({
+    object: 'products',
+    defaultProperties: hubspotObjectDefaultProperties,
+  }),
   event_info: {
     desc: 'Hubspot Product Created Or Updated Trigger Event Info',
     type: {

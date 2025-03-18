@@ -1,4 +1,4 @@
-import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode, QoreAppCreator, TQoreTypeObject } from '@qoretechnologies/ts-toolkit';
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
 import {
   pollCreatedItemsForTrigger,
@@ -12,8 +12,24 @@ import {
   getHubspotTriggerOptions,
   hubspotTriggerCriteria,
 } from './constants';
+import { createHubspotGetDynamicEventInfoType } from '../helpers/get-event-info-type';
 
 const triggerName = 'hubspot_user_created_or_updated_trigger';
+
+const hubspotObjectDefaultProperties = {
+  type: 'hash',
+  fields: {
+    hs_createdate: {
+      type: 'string',
+    },
+    hs_lastmodifieddate: {
+      type: 'string',
+    },
+    hs_object_id: {
+      type: 'string',
+    },
+  },
+} satisfies TQoreTypeObject;
 
 const hubspotUserCreatedOrUpdatedTrigger = QoreAppCreator.createLocalizedTrigger({
   app: HUBSPOT_APP_NAME,
@@ -73,6 +89,10 @@ const hubspotUserCreatedOrUpdatedTrigger = QoreAppCreator.createLocalizedTrigger
 
     return records?.length > 0 ? records[0] : null;
   },
+  get_dynamic_type: createHubspotGetDynamicEventInfoType({
+    object: 'users',
+    defaultProperties: hubspotObjectDefaultProperties,
+  }),
   event_info: {
     desc: 'Hubspot User Created Or Updated Trigger Event Info',
     type: {
@@ -83,15 +103,7 @@ const hubspotUserCreatedOrUpdatedTrigger = QoreAppCreator.createLocalizedTrigger
         updatedAt: { type: 'string' },
         archived: { type: 'boolean' },
         properties: {
-          type: {
-            type: 'hash',
-            fields: {
-              hs_createdate: { type: 'string' },
-              hs_lastmodifieddate: { type: 'string' },
-              hs_object_id: { type: 'string' },
-              hs_searchable_calculated_name: { type: 'string' },
-            },
-          },
+          type: hubspotObjectDefaultProperties,
         },
       },
     },

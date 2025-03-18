@@ -13,7 +13,7 @@ const fieldsToFetch = ['id', 'name', 'stage'];
 const mapNetsuiteCustomerStatus = (
   customerStatus: TNetsuiteCustomerStatusData
 ): IQoreAllowedValue => ({
-  value: customerStatus.id,
+  value: { id: customerStatus.id },
   display_name: customerStatus.name,
   desc: `ID: ${customerStatus.id}\n\nName: ${customerStatus.name}\n\nStage: ${customerStatus.stage}`,
 });

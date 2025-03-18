@@ -34,7 +34,7 @@ type THubspotObjectProperty = {
   };
 };
 
-const hubspotToQoreTypeMap: Record<string, TQoreSimpleType> = {
+export const HUBSPOT_TO_QORE_TYPE_MAPPING: Record<string, TQoreSimpleType> = {
   bool: 'boolean',
   enumeration: 'softstring',
   date: 'date',
@@ -114,7 +114,7 @@ export const getHubspotPropertyOptionFunction = ({
             (option): IQoreAllowedValue<any> => ({
               display_name: option.label,
               value:
-                hubspotToQoreTypeMap[property.type] === 'boolean'
+                HUBSPOT_TO_QORE_TYPE_MAPPING[property.type] === 'boolean'
                   ? option.value === 'true'
                   : option.value,
             })
@@ -123,7 +123,7 @@ export const getHubspotPropertyOptionFunction = ({
 
         // @ts-expect-error - TS doesn't recognize the mapped type
         additionalProperties[property.name] = {
-          type: hubspotToQoreTypeMap[property.type] || 'auto',
+          type: HUBSPOT_TO_QORE_TYPE_MAPPING[property.type] || 'auto',
           display_name: property.label,
           short_desc: property.description,
           ...propertyValues,
@@ -414,7 +414,7 @@ export const getHubspotCustomObjectPropertiesType: TQoreGetDynamicTypeFunction =
     properties.forEach((property) => {
       // @ts-expect-error - TS doesn't recognize the mapped type
       additionalProperties[property.name] = {
-        type: hubspotToQoreTypeMap[property.type] || 'auto',
+        type: HUBSPOT_TO_QORE_TYPE_MAPPING[property.type] || 'auto',
         display_name: property.label,
         short_desc: property.description,
         ...(property.options?.length

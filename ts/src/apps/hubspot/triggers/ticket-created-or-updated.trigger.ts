@@ -1,4 +1,4 @@
-import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode, QoreAppCreator, TQoreTypeObject } from '@qoretechnologies/ts-toolkit';
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
 import {
   pollCreatedItemsForTrigger,
@@ -12,8 +12,42 @@ import {
   getHubspotTriggerOptions,
   hubspotTriggerCriteria,
 } from './constants';
+import { createHubspotGetDynamicEventInfoType } from '../helpers/get-event-info-type';
 
 const triggerName = 'hubspot_ticket_created_or_updated_trigger';
+
+const hubspotObjectDefaultProperties = {
+  type: 'hash',
+  fields: {
+    createdate: {
+      type: 'string',
+    },
+    hs_lastmodifieddate: {
+      type: 'string',
+    },
+    hs_object_id: {
+      type: 'string',
+    },
+    content: {
+      type: 'string',
+    },
+    hs_pipeline: {
+      type: 'string',
+    },
+    hs_pipeline_stage: {
+      type: 'string',
+    },
+    hs_ticket_category: {
+      type: 'string',
+    },
+    hs_ticket_priority: {
+      type: 'string',
+    },
+    subject: {
+      type: 'string',
+    },
+  },
+} satisfies TQoreTypeObject;
 
 const hubspotTicketCreatedOrUpdatedTrigger = QoreAppCreator.createLocalizedTrigger({
   app: HUBSPOT_APP_NAME,
@@ -73,6 +107,10 @@ const hubspotTicketCreatedOrUpdatedTrigger = QoreAppCreator.createLocalizedTrigg
 
     return records?.length > 0 ? records[0] : null;
   },
+  get_dynamic_type: createHubspotGetDynamicEventInfoType({
+    object: 'tickets',
+    defaultProperties: hubspotObjectDefaultProperties,
+  }),
   event_info: {
     desc: 'Hubspot Ticket Created Or Updated Trigger Event Info',
     type: {
@@ -83,20 +121,7 @@ const hubspotTicketCreatedOrUpdatedTrigger = QoreAppCreator.createLocalizedTrigg
         updatedAt: { type: 'string' },
         archived: { type: 'boolean' },
         properties: {
-          type: {
-            type: 'hash',
-            fields: {
-              content: { type: 'string' },
-              createdate: { type: 'string' },
-              hs_lastmodifieddate: { type: 'string' },
-              hs_object_id: { type: 'string' },
-              hs_pipeline: { type: 'string' },
-              hs_pipeline_stage: { type: 'string' },
-              hs_ticket_category: { type: 'string' },
-              hs_ticket_priority: { type: 'string' },
-              subject: { type: 'string' },
-            },
-          },
+          type: hubspotObjectDefaultProperties,
         },
       },
     },
