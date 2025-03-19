@@ -24,6 +24,10 @@ import { getNetsuiteCurrencyIdAllowedValues } from './helpers/get-currency-id-al
 import { getNetsuiteCustomerStatusIdAllowedValues } from './helpers/get-customer-status-allowed-values';
 import { getNetsuiteAccountTypeAllowedValues } from './helpers/get-account-type-allowed-values';
 import { getNetsuiteOpportunityIdAllowedValues } from './helpers/get-opportunity-id-allowed-values';
+import {
+  getNetsuiteItemIdAllowedValues,
+  getNetsuiteItemIdArrayAllowedValues,
+} from './helpers/get-item-id-allowed-values';
 
 export const NETSUITE_APP_NAME = 'NetSuite';
 
@@ -112,6 +116,9 @@ const accountOptions = {
   acctName: {
     preselected: true,
   },
+  acctNumber: {
+    preselected: true,
+  },
 } satisfies Record<string, TQoreAppActionOverrideOption<TCustomConnOptions>>;
 
 const invoiceOptions = {
@@ -120,6 +127,7 @@ const invoiceOptions = {
     get_allowed_values: getNetsuiteCurrencyIdAllowedValues,
   },
   subsidiary: {
+    preselected: true,
     allowed_values_creatable: true,
     get_allowed_values: getNetsuiteSubsidiaryIdAllowedValues,
   },
@@ -135,6 +143,26 @@ const invoiceOptions = {
       },
     },
     preselected: true,
+  },
+  item: {
+    preselected: true,
+    allowed_values_creatable: true,
+    get_allowed_values: getNetsuiteItemIdArrayAllowedValues,
+  },
+  'item.items': {
+    preselected: true,
+    element_allowed_values_creatable: true,
+    get_element_allowed_values: getNetsuiteItemIdAllowedValues,
+  },
+  'item.items.item': {
+    type: {
+      type: 'hash',
+      fields: {
+        id: {
+          type: 'string',
+        },
+      },
+    },
   },
 } satisfies Record<string, TQoreAppActionOverrideOption<TCustomConnOptions>>;
 
