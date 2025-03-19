@@ -36,13 +36,13 @@ const mapSerenityAgent = (agent: TSerenityAgent): IQoreAllowedValue<string> => (
   desc: `Type: ${SERENITY_AGENT_TYPES[agent.agentType] || 'Unknown'}\n\nCode: ${agent.code}`,
 });
 
-const getSerenityAgents = async (token: string, page = 1): Promise<TSerenityAgent[]> => {
+const getSerenityAgents = async (apiKey: string, page = 1): Promise<TSerenityAgent[]> => {
   try {
     const response = await QorusRequest.get<TSerenityAgentsResponse>(
       {
         path: '/api/v2/agent',
         headers: {
-          'X-API-KEY': token,
+          'X-API-KEY': apiKey,
         },
         params: {
           pageSize: '100',
@@ -72,15 +72,15 @@ const getSerenityAgents = async (token: string, page = 1): Promise<TSerenityAgen
 const createGetSerenityAgentAllowedValues =
   (agentTypes: number[]): TQoreGetAllowedValuesFunction<typeof SERENITY_CONN_OPTIONS, string> =>
   async (context) => {
-    const token = context?.conn_opts?.token;
+    const apiKey = context?.conn_opts?.apiKey;
 
-    if (!token) {
-      throw new Error('Token is required to get Serenity activity agent allowed values');
+    if (!apiKey) {
+      throw new Error('apiKey is required to get Serenity activity agent allowed values');
     }
 
     const agents: IQoreAllowedValue<string>[] = [];
     let page = 1;
-    let serenityAgents = await getSerenityAgents(token, page);
+    let serenityAgents = await getSerenityAgents(apiKey, page);
 
     while (serenityAgents.length) {
       serenityAgents.reduce((acc, agent) => {
@@ -91,7 +91,7 @@ const createGetSerenityAgentAllowedValues =
         return acc;
       }, agents);
 
-      serenityAgents = await getSerenityAgents(token, ++page);
+      serenityAgents = await getSerenityAgents(apiKey, ++page);
     }
 
     return agents;

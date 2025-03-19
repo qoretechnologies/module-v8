@@ -47,15 +47,15 @@ export const CreateSerenityConversation = QoreAppCreator.createLocalizedAction<t
   app: SERENITY_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
   api_function: async (data, _opts, context) => {
-    const token = context?.conn_opts?.token;
+    const apiKey = context?.conn_opts?.apikey;
     const agentCode = data?.agentCode;
     const parameters = data?.inputParameters || [];
     const userIdentifier = data?.userIdentifier;
 
     const missingValues: string[] = [];
 
-    if (!token) {
-      missingValues.push('token');
+    if (!apiKey) {
+      missingValues.push('apiKey');
     }
 
     if (!agentCode) {
@@ -86,7 +86,7 @@ export const CreateSerenityConversation = QoreAppCreator.createLocalizedAction<t
         data: body,
         headers: {
           'Content-Type': 'application/json',
-          'X-API-KEY': token!,
+          'X-API-KEY': apiKey!,
         },
       },
       { endpointId: 'serenity', url: 'https://api.serenitystar.ai' }

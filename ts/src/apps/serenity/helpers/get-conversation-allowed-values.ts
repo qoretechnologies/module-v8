@@ -25,7 +25,7 @@ const mapSerenityConversation = (
 });
 
 const getSerenityConversations = async (
-  token: string,
+  apiKey: string,
   agentCode: string,
   page = 1
 ): Promise<TSerenityConversation[]> => {
@@ -34,7 +34,7 @@ const getSerenityConversations = async (
       {
         path: '/api/v2/AgentInstance',
         headers: {
-          'X-API-KEY': token,
+          'X-API-KEY': apiKey,
         },
         params: {
           pageSize: '100',
@@ -66,13 +66,13 @@ export const getSerenityConversationAllowedValues: TQoreGetAllowedValuesFunction
   typeof SERENITY_CONN_OPTIONS,
   string
 > = async (context) => {
-  const token = context?.conn_opts?.token;
+  const apiKey = context?.conn_opts?.apiKey;
   const agentCode = context?.opts?.agentCode;
 
   const missingValues: string[] = [];
 
-  if (!token) {
-    missingValues.push('token');
+  if (!apiKey) {
+    missingValues.push('apiKey');
   }
 
   if (!agentCode) {
@@ -87,11 +87,11 @@ export const getSerenityConversationAllowedValues: TQoreGetAllowedValuesFunction
 
   const conversations: IQoreAllowedValue<string>[] = [];
   let page = 1;
-  let serenityConversations = await getSerenityConversations(token!, agentCode, page);
+  let serenityConversations = await getSerenityConversations(apiKey!, agentCode, page);
 
   while (serenityConversations.length) {
     conversations.push(...serenityConversations.map(mapSerenityConversation));
-    serenityConversations = await getSerenityConversations(token!, agentCode, ++page);
+    serenityConversations = await getSerenityConversations(apiKey!, agentCode, ++page);
   }
 
   return conversations;

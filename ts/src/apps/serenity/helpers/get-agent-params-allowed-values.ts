@@ -9,7 +9,7 @@ import { SERENITY_CONN_OPTIONS } from '../constants';
 
 // TODO: Update if agent endpoint appears in the future
 const getSerenityAgent = async (
-  token: string,
+  apiKey: string,
   agentCode: string
 ): Promise<TSerenityAgent | null> => {
   try {
@@ -17,7 +17,7 @@ const getSerenityAgent = async (
       {
         path: '/api/v2/agent',
         headers: {
-          'X-API-KEY': token,
+          'X-API-KEY': apiKey,
         },
         params: {
           page: '1',
@@ -63,12 +63,12 @@ export const getSerenityAgentParamsAllowedValues: TQoreGetAllowedValuesFunction<
   typeof SERENITY_CONN_OPTIONS,
   string
 > = async (context): Promise<IQoreAllowedValue<string>[]> => {
-  const token = context?.conn_opts?.token;
+  const apiKey = context?.conn_opts?.apiKey;
   const agentCode = context?.opts?.agentCode;
 
   const missingValues: string[] = [];
 
-  if (!token) missingValues.push('token');
+  if (!apiKey) missingValues.push('apiKey');
   if (!agentCode) missingValues.push('agentCode');
 
   if (missingValues.length > 0) {
@@ -78,7 +78,7 @@ export const getSerenityAgentParamsAllowedValues: TQoreGetAllowedValuesFunction<
   }
 
   try {
-    const agent = await getSerenityAgent(token!, agentCode);
+    const agent = await getSerenityAgent(apiKey!, agentCode);
 
     if (!agent || !agent.ask) {
       return [];

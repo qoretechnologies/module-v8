@@ -12,7 +12,7 @@ import { getSerenityAgentParamsAllowedValues } from '../apps/serenity/helpers/ge
 Debugger.level = DebugLevels.Verbose;
 
 describe('Should test serenity actions', () => {
-  let token: string;
+  let apiKey: string;
   let conversationAgentCode: string;
   let systemAgentCode: string;
   let testConversationId: string;
@@ -22,13 +22,13 @@ describe('Should test serenity actions', () => {
       throw new Error('SERENITY_API_KEY environment variable is required for these tests');
     }
 
-    token = process.env.SERENITY_API_KEY;
+    apiKey = process.env.SERENITY_API_KEY;
   });
 
   describe('Should test serenity allowed values', () => {
     it('Should get serenity system agent allowed values', async () => {
       const allowed_values = await getSerenitySystemAgentAllowedValues({
-        conn_opts: { token } as any,
+        conn_opts: { apiKey } as any,
       });
 
       expect(allowed_values).toBeDefined();
@@ -38,7 +38,7 @@ describe('Should test serenity actions', () => {
 
     it('Should get serenity conversation agent allowed values', async () => {
       const allowed_values = await getSerenityConversationAgentAllowedValues({
-        conn_opts: { token } as any,
+        conn_opts: { apiKey } as any,
       });
 
       expect(allowed_values).toBeDefined();
@@ -48,7 +48,7 @@ describe('Should test serenity actions', () => {
 
     it('Should get serenity conversation allowed values', async () => {
       const allowed_values = await getSerenityConversationAllowedValues({
-        conn_opts: { token } as any,
+        conn_opts: { apiKey } as any,
         opts: { agentCode: conversationAgentCode },
       });
 
@@ -59,7 +59,7 @@ describe('Should test serenity actions', () => {
 
     it('Should get serenity agent params', async () => {
       const allowed_values = await getSerenityAgentParamsAllowedValues({
-        conn_opts: { token } as any,
+        conn_opts: { apiKey } as any,
         opts: { agentCode: systemAgentCode },
       });
 
@@ -83,7 +83,7 @@ describe('Should test serenity actions', () => {
       };
 
       const result = await action.api_function(data, undefined, {
-        conn_opts: { token } as any,
+        conn_opts: { apiKey } as any,
       });
 
       expect(result).toBeDefined();
@@ -103,7 +103,7 @@ describe('Should test serenity actions', () => {
       };
 
       const result = await action.api_function(data, undefined, {
-        conn_opts: { token } as any,
+        conn_opts: { apiKey } as any,
       });
 
       expect(result).toBeDefined();
@@ -121,7 +121,7 @@ describe('Should test serenity actions', () => {
       };
 
       const result = await action.api_function(data, undefined, {
-        conn_opts: { token } as any,
+        conn_opts: { apiKey } as any,
       });
 
       expect(result).toBeDefined();
