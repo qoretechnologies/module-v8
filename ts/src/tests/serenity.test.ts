@@ -8,6 +8,7 @@ import {
 import { getSerenityConversationAllowedValues } from '../apps/serenity/helpers/get-conversation-allowed-values';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import { getSerenityAgentParamsAllowedValues } from '../apps/serenity/helpers/get-agent-params-allowed-values';
+import { getSerenityExecuteAgentParamsDefaultValue } from '../apps/serenity/helpers/get-execute-agent-params-default-value';
 
 Debugger.level = DebugLevels.Verbose;
 
@@ -66,6 +67,16 @@ describe('Should test serenity actions', () => {
       expect(allowed_values).toBeDefined();
       expect(allowed_values.length).toBeGreaterThan(0);
     });
+
+    it('Should get serenity agent execution params default value', async () => {
+      const default_value = await getSerenityExecuteAgentParamsDefaultValue({
+        conn_opts: { apiKey } as any,
+        opts: { agentCode: systemAgentCode },
+      });
+
+      expect(default_value).toBeDefined();
+      expect(default_value.length).toBeGreaterThan(0);
+    });
   });
 
   describe('Should test serenity actions', () => {
@@ -78,6 +89,10 @@ describe('Should test serenity actions', () => {
           {
             Key: 'search',
             Value: 'how to cook pancakes',
+          },
+          {
+            Key: 'userLanguage',
+            Value: 'en',
           },
         ],
       };
