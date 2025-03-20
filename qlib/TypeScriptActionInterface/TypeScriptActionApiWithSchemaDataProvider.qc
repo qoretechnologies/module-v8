@@ -82,6 +82,12 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         #! Request key for static request info
         string request_key;
 
+        #! Code to convert the request data given by the user to the request data required by the API
+        *hash<AsyncCallInfo> request_data_converter;
+
+        #! Code to convert the response data provided by the API to the response data for the user
+        *hash<AsyncCallInfo> response_data_converter;
+
         #! Global request type info per action for dynamic types: app-action -> type info
         static hash<string, AbstractDataProviderType> grtmap;
 
@@ -99,7 +105,8 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
     constructor(reference<hash<auto>> action, string swagger_path, *hash<AsyncCallInfo> api,
             *hash<string, bool> path_vars, *hash<string, bool> independent_path_vars,
             *hash<string, string> conn_opt_map, *hash<auto> override_options, ActionFunctionContext fctx,
-            *hash<AsyncCallInfo> get_dynamic_request_type, *hash<AsyncCallInfo> get_dynamic_response_type)
+            *hash<AsyncCallInfo> get_dynamic_request_type, *hash<AsyncCallInfo> get_dynamic_response_type,
+            *hash<AsyncCallInfo> request_data_converter, *hash<AsyncCallInfo> response_data_converter)
             : TypeScriptActionApiDataProvider(action.action, api, fctx, get_dynamic_request_type,
             get_dynamic_response_type) {
         self.swagger_schema = remove action.swagger_schema;
@@ -107,6 +114,8 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         self.swagger_path = swagger_path;
         self.path_vars = path_vars;
         self.conn_opt_map = conn_opt_map;
+        self.request_data_converter = request_data_converter;
+        self.response_data_converter = response_data_converter;
         if (conn_opt_map) {
             query_set = map {$1: True}, conn_opt_map.iterator();
         }
@@ -584,37 +593,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
     private auto doRequestImpl(auto req, *hash<auto> request_options) {
         on_error rethrow $1.err, sprintf("%s (req: %y request_options: %y)", $1.desc, req, request_options);
         if (!api) {
-            checkDataProvider();
-            # *always* replace the RestClient with each call; it can have outdated auth info
-            prov.setRestClient(rest = conn.get());
-            if (req && req.typeCode() == NT_HASH) {
-                checkUpdateRestOptions(rest, req);
-            }
-            if (exists (*string base_path = conn.orig_opts.swagger_base_path)) {
-                request_options.base_path = base_path;
-            }
-            if (path_vars) {
-                if (conn_opt_map) {
-                    *hash<auto> opts = conn.getRealOptions();
-                    map request_options.path_vars{$1.value} = opts{$1.key}, conn_opt_map.pairIterator(),
-                        path_vars{$1.value};
-                }
-                if (*hash<auto> vars = req{keys path_vars}) {
-                    req -= keys path_vars;
-                    request_options.path_vars += vars;
-                }
-            }
-
-            hash<auto> req0;
-            debug("Action options for action %y: %y reqmap: %y", getName(), req, reqmap{request_key});
-            map fixOptimizedValue(\req0, $1.value, $1.key, remove req{$1.key}), reqmap{request_key}.pairIterator(),
-                req.hasKey($1.key);
-            map req0{$1.key} = $1.value, req.pairIterator(), !req0.hasKey($1.key);
-            req = req0;
-            debug("REST request for action %y: %y", getName(), req);
-
-            auto rv = prov.doRequest(req, request_options);
-            return res_only_body ? rv.body : rv;
+            return makeSwaggerRequest(req, request_options);
         }
         if (path_vars) {
             request_options.path_vars = remove req{keys path_vars};
@@ -626,7 +605,61 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         }
         map fixOptimizedValue(\req, $1.value, remove req{$1.key}, $1.key), reqmap{request_key}.pairIterator(),
             req.hasKey($1.key);
-       return getAsyncValue(api, req, request_options, getCallContextInfo());
+        return getAsyncValue(api, req, request_options, getCallContextInfo());
+    }
+
+    #! Makes a request and returns the response
+    /** @param req the request to serialize and make according to the request type
+        @param request_options the request options; will be processed by validateRequestOptions()
+
+        @return the response to the request
+    */
+    private auto makeSwaggerRequest(auto req, *hash<auto> request_options) {
+        checkDataProvider();
+        # *always* replace the RestClient with each call; it can have outdated auth info
+        prov.setRestClient(rest = conn.get());
+        if (req && req.typeCode() == NT_HASH) {
+            checkUpdateRestOptions(rest, req);
+        }
+        if (exists (*string base_path = conn.orig_opts.swagger_base_path)) {
+            request_options.base_path = base_path;
+        }
+        if (path_vars) {
+            if (conn_opt_map) {
+                *hash<auto> opts = conn.getRealOptions();
+                map request_options.path_vars{$1.value} = opts{$1.key}, conn_opt_map.pairIterator(),
+                    path_vars{$1.value};
+            }
+            if (*hash<auto> vars = req{keys path_vars}) {
+                req -= keys path_vars;
+                request_options.path_vars += vars;
+            }
+        }
+
+        hash<auto> req0;
+        debug("Action options for action %y: %y reqmap: %y", getName(), req, reqmap{request_key});
+        map fixOptimizedValue(\req0, $1.value, $1.key, remove req{$1.key}), reqmap{request_key}.pairIterator(),
+            req.hasKey($1.key);
+        map req0{$1.key} = $1.value, req.pairIterator(), !req0.hasKey($1.key);
+        req = req0;
+        debug("REST request for action %y: %y", getName(), req);
+
+        *hash<DataContextInfo> ctxinfo;
+        if (request_data_converter) {
+            ctxinfo = getCallContextInfo();
+            req = getAsyncValue(request_data_converter, req, ctxinfo);
+            debug("REST request for action after conversion %y: %y", getName(), req);
+        }
+
+        auto rv = prov.doRequest(req, request_options);
+        if (response_data_converter) {
+            if (!ctxinfo) {
+                ctxinfo = getCallContextInfo();
+            }
+            rv = getAsyncValue(response_data_converter, rv, ctxinfo);
+            debug("REST response for action after conversion %y: %y", getName(), rv);
+        }
+        return res_only_body ? rv.body : rv;
     }
 
     #! Moves a value in an optimized position to the standard position of the request hash

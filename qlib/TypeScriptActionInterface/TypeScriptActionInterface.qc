@@ -1434,6 +1434,44 @@ public class TypeScriptActionInterface {
             TypeScriptActionInterface::registerAsyncCall(\get_dynamic_response_type, "app", app.name, action.action,
                 "get_dynamic_response_type");
         }
+        hash<AsyncCallInfo> request_data_converter;
+        if (auto js_api = remove action.request_data_converter) {
+            if (!js_api.callp()) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"request_data_converter\" "
+                    "attribute; got type %y; expecting a callable value", action.app, action.action, js_api.fullType());
+            }
+            timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
+            request_data_converter = <AsyncCallInfo>{
+                "app": app.name,
+                "action": action.action,
+                "type": "api_function",
+                "label": sprintf("Request type function for app %y action %y", app.name, action.action),
+                "pool": pool,
+                "async_call": js_api,
+                "to": seconds(io_timeout),
+            };
+            TypeScriptActionInterface::registerAsyncCall(\request_data_converter, "app", app.name, action.action,
+                "request_data_converter");
+        }
+        hash<AsyncCallInfo> response_data_converter;
+        if (auto js_api = remove action.response_data_converter) {
+            if (!js_api.callp()) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"response_data_converter\" "
+                    "attribute; got type %y; expecting a callable value", action.app, action.action, js_api.fullType());
+            }
+            timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
+            response_data_converter = <AsyncCallInfo>{
+                "app": app.name,
+                "action": action.action,
+                "type": "api_function",
+                "label": sprintf("Request type function for app %y action %y", app.name, action.action),
+                "pool": pool,
+                "async_call": js_api,
+                "to": seconds(io_timeout),
+            };
+            TypeScriptActionInterface::registerAsyncCall(\response_data_converter, "app", app.name, action.action,
+                "response_data_converter");
+        }
 
         TypeScriptActionApiDataProvider child;
         if ((*string swagger_path = remove action.swagger_path).val()) {
@@ -1462,7 +1500,8 @@ public class TypeScriptActionInterface {
             *hash<string, bool> path_vars = map {$1: True}, (swagger_path =~ x/\{([^\}]*)}/g);
             TypeScriptActionApiWithSchemaDataProvider dp(\action, swagger_path, api, path_vars,
                 (map {$1: True}, independent_path_vars), app_conn_opt_map{app.name.lwr()},
-                remove action.override_options, fctx, get_dynamic_request_type, get_dynamic_response_type);
+                remove action.override_options, fctx, get_dynamic_request_type, get_dynamic_response_type,
+                request_data_converter, response_data_converter);
             child = dp;
 
             action.output_type = child.getResponseType();
