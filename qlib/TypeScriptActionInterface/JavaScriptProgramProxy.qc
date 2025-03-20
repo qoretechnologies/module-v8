@@ -433,7 +433,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     #! Called with the global lock held
-    releaseEventSourceLocked(TypeScriptActionEventDataProvider observable, string key) {
+    releaseEventSourceLocked(TypeScriptActionEventDataProvider observable, string key, *bool in_listener) {
         if (!event) {
             throw "EVENT-ERROR", sprintf("Event key %y is not registered", key);
         }
@@ -457,7 +457,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 stop = True;
             }
         }
-        if (stop) {
+        if (stop && !in_listener) {
             stopEventListener();
             try {
                 sendCommandArgs(NOTHING, PC_RELEASE_EVENT, key, NOTHING, True);
