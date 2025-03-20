@@ -1205,6 +1205,8 @@ public class TypeScriptActionInterface {
                 "to": seconds(io_timeout),
                 "post_processing": \TypeScriptActionInterface::postProcessDynamicTypeInfo(),
             };
+            # NOTE: all calls must be registered
+            TypeScriptActionInterface::registerAsyncCall(\get_dynamic_type, "app", app.name, action.action);
         }
 
         if (*hash<auto> opts = remove action.options) {
