@@ -107,9 +107,11 @@ public class TypeScriptActionInterface {
         static JavaScriptThreadProcessPool server;
 
         const TypeKeys = (
-            "name", "display_name", "short_desc", "desc", "type", "example_value", "default_value", "multiselect",
-            "allowed_values", "allowed_values_creatable", "get_allowed_values",
-            "element_allowed_values", "element_allowed_values_creatable", "get_element_allowed_values",
+            "name", "display_name", "short_desc", "desc", "example_value", "default_value", "multiselect",
+            "type", "allowed_values", "allowed_values_creatable",
+            "get_allowed_values",
+            "element_type", "element_allowed_values", "element_allowed_values_creatable",
+            "get_element_allowed_values",
             "attr", "required", "on_change", "preselected",
         );
 
