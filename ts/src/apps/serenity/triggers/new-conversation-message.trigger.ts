@@ -61,14 +61,14 @@ const event_info = {
 } satisfies TQoreAppActionWithEventOrWebhookEventInfo;
 
 const getContextValues = (context: TQoreAppActionFunctionContext) => {
-  const apiKey = context.conn_opts?.apiKey;
+  const token = context.conn_opts?.token;
   const agentCode = context.opts?.agentCode;
   const conversationId = context.opts?.conversationId;
   const sender = context.opts?.sender;
 
   const missingValues: string[] = [];
 
-  if (!apiKey) missingValues.push('apiKey');
+  if (!token) missingValues.push('token');
   if (!conversationId) missingValues.push('conversationId');
   if (!sender) missingValues.push('sender');
 
@@ -79,7 +79,7 @@ const getContextValues = (context: TQoreAppActionFunctionContext) => {
     );
   }
 
-  return { apiKey: apiKey!, agentCode, conversationId: conversationId!, sender: sender! };
+  return { token: token!, agentCode, conversationId: conversationId!, sender: sender! };
 };
 
 const SerenityNewConversationMessageTrigger = QoreAppCreator.createLocalizedTrigger<typeof options>(
@@ -89,9 +89,9 @@ const SerenityNewConversationMessageTrigger = QoreAppCreator.createLocalizedTrig
     options,
     action_code: EQoreAppActionCode.EVENT,
     event_function: async (context, update, should_stop) => {
-      const { apiKey, conversationId, sender } = getContextValues(context);
+      const { token, conversationId, sender } = getContextValues(context);
       const getItems = () => {
-        return getSerenityConversationMessages(apiKey, conversationId, sender);
+        return getSerenityConversationMessages(token, conversationId, sender);
       };
 
       await pollCreatedItemsForTrigger({
@@ -103,9 +103,9 @@ const SerenityNewConversationMessageTrigger = QoreAppCreator.createLocalizedTrig
       });
     },
     get_example_event_data: async (context) => {
-      const { apiKey, conversationId, sender } = getContextValues(context);
+      const { token, conversationId, sender } = getContextValues(context);
 
-      const messages = await getSerenityConversationMessages(apiKey, conversationId, sender);
+      const messages = await getSerenityConversationMessages(token, conversationId, sender);
 
       return messages?.length > 0 ? messages[0] : null;
     },
@@ -116,7 +116,7 @@ const SerenityNewConversationMessageTrigger = QoreAppCreator.createLocalizedTrig
 export default SerenityNewConversationMessageTrigger;
 
 const getSerenityConversationMessages = async (
-  apiKey: string,
+  token: string,
   conversationId: string,
   sender: string
 ) => {
@@ -127,7 +127,7 @@ const getSerenityConversationMessages = async (
       {
         path: '/api/v2/conversation',
         headers: {
-          'X-API-KEY': apiKey,
+          'X-API-KEY': token,
         },
         params: {
           id: conversationId,

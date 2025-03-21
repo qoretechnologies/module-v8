@@ -9,12 +9,12 @@ export const getSerenityExecuteAgentParamsDefaultValue: TQoreGetDefaultValueFunc
   typeof SERENITY_CONN_OPTIONS,
   TSerenityAgentExecutionParamsDefaultValue
 > = async (context): Promise<TSerenityAgentExecutionParamsDefaultValue> => {
-  const apiKey = context?.conn_opts?.apiKey;
+  const token = context?.conn_opts?.token;
   const agentCode = context?.opts?.agentCode;
 
   const missingValues: string[] = [];
 
-  if (!apiKey) missingValues.push('apiKey');
+  if (!token) missingValues.push('token');
   if (!agentCode) missingValues.push('agentCode');
 
   if (missingValues.length > 0) {

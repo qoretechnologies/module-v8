@@ -118,7 +118,7 @@ export const ExecuteSerenityAgent = QoreAppCreator.createLocalizedAction<typeof 
   app: SERENITY_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
   api_function: async (data, _opts, context) => {
-    const apiKey = context?.conn_opts?.apiKey;
+    const token = context?.conn_opts?.token;
     const agentCode = data?.agentCode;
     const culture = data?.culture;
     const params = (data?.params || []) as { Key: string; Value: string }[];
@@ -126,8 +126,8 @@ export const ExecuteSerenityAgent = QoreAppCreator.createLocalizedAction<typeof 
 
     const missingValues: string[] = [];
 
-    if (!apiKey) {
-      missingValues.push('apiKey');
+    if (!token) {
+      missingValues.push('token');
     }
 
     if (!agentCode) {
@@ -154,7 +154,7 @@ export const ExecuteSerenityAgent = QoreAppCreator.createLocalizedAction<typeof 
         data: body,
         headers: {
           'Content-Type': 'application/json',
-          'X-API-KEY': apiKey!,
+          'X-API-KEY': token!,
         },
         ...(culture ? { params: { culture } } : {}),
       },

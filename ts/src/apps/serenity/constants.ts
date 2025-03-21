@@ -3,10 +3,11 @@ import { TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
 export const SERENITY_APP_NAME = 'Serenity';
 
 export const SERENITY_CONN_OPTIONS = {
-  apiKey: {
+  token: {
     type: 'string',
     display_name: 'API Key',
-    short_desc: 'API Key',
+    short_desc: 'Your Serenity AI Hub API Key',
+    desc: 'To get your API Key, please visit Serenity AI Hub developer tools',
   },
 } satisfies TCustomConnOptions;
 
