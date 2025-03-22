@@ -175,6 +175,9 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
 
     #! Start event listening
     private startEvent() {
+        m.lock();
+        on_exit m.unlock();
+
         if (TSAI::checkServer()) {
             info("Starting external process for data provider %y for connection %y options %y", name, conn.name,
                 event_options);
