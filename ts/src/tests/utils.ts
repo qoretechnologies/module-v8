@@ -64,6 +64,7 @@ export const retry = async <T>(
     } catch (error) {
       if (i === retries - 1) throw error;
       console.warn(`Retry ${i + 1} failed. Retrying in ${delay}ms...`);
+      console.error(error);
       await new Promise((res) => setTimeout(res, delay));
       delay *= 2;
     }
