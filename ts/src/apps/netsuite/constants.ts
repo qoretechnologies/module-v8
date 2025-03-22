@@ -6,16 +6,28 @@ import {
 import { buildActionsFromSwaggerSchema } from '../../global/helpers';
 import netsuite from '../../schemas/netsuite.swagger.json';
 import { getNetsuiteAccountIdAllowedValues } from './helpers/get-account-id-allowed-values';
-import { getNetsuiteCustomerIdAllowedValues } from './helpers/get-customer-id-allowed-values';
+import {
+  getNetsuiteCustomerEntityIdAllowedValues,
+  getNetsuiteCustomerIdAllowedValues,
+} from './helpers/get-customer-id-allowed-values';
 import { getNetsuiteInvoiceIdAllowedValues } from './helpers/get-invoice-id-allowed-values';
 import { getNetsuiteJournalEntryIdAllowedValues } from './helpers/get-journal-entry-id-allowed-values';
 import { getNetsuitePurchaseOrderIdAllowedValues } from './helpers/get-purchase-order-id-allowed-values';
 import { getNetsuiteSalesOrderIdAllowedValues } from './helpers/get-sales-order-id-allowed-values';
 import { getNetsuitevendorIdAllowedValues } from './helpers/get-vendor-id-allowed-values';
 import { getNetsuiteContactIdAllowedValues } from './helpers/get-contact-id-allowed-values';
-import { getNetsuiteSubsidiaryIdAllowedValues } from './helpers/get-subsidiary-id-allowed-values';
+import {
+  getNetsuiteSubsidiaryIdAllowedValues,
+  getNetsuiteSubsidiaryIdArrayAllowedValues,
+} from './helpers/get-subsidiary-id-allowed-values';
 import { getNetsuiteCurrencyIdAllowedValues } from './helpers/get-currency-id-allowed-values';
 import { getNetsuiteCustomerStatusIdAllowedValues } from './helpers/get-customer-status-allowed-values';
+import { getNetsuiteAccountTypeAllowedValues } from './helpers/get-account-type-allowed-values';
+import { getNetsuiteOpportunityIdAllowedValues } from './helpers/get-opportunity-id-allowed-values';
+import {
+  getNetsuiteItemIdAllowedValues,
+  getNetsuiteItemIdArrayAllowedValues,
+} from './helpers/get-item-id-allowed-values';
 
 export const NETSUITE_APP_NAME = 'NetSuite';
 
@@ -68,6 +80,9 @@ const customerOptions = {
     allowed_values_creatable: true,
     get_allowed_values: getNetsuiteCustomerStatusIdAllowedValues,
   },
+  companyName: {
+    preselected: true,
+  },
 } satisfies Record<string, TQoreAppActionOverrideOption<TCustomConnOptions>>;
 
 const contactOptions = {
@@ -79,12 +94,30 @@ const contactOptions = {
 
 const accountOptions = {
   currency: {
+    preselected: true,
     allowed_values_creatable: true,
     get_allowed_values: getNetsuiteCurrencyIdAllowedValues,
   },
   subsidiary: {
+    preselected: true,
     allowed_values_creatable: true,
-    get_allowed_values: getNetsuiteSubsidiaryIdAllowedValues,
+    get_allowed_values: getNetsuiteSubsidiaryIdArrayAllowedValues,
+  },
+  'subsidiary.items': {
+    preselected: true,
+    element_allowed_values_creatable: true,
+    get_element_allowed_values: getNetsuiteSubsidiaryIdAllowedValues,
+  },
+  acctType: {
+    preselected: true,
+    allowed_values_creatable: true,
+    get_allowed_values: getNetsuiteAccountTypeAllowedValues,
+  },
+  acctName: {
+    preselected: true,
+  },
+  acctNumber: {
+    preselected: true,
   },
 } satisfies Record<string, TQoreAppActionOverrideOption<TCustomConnOptions>>;
 
@@ -92,6 +125,68 @@ const invoiceOptions = {
   currency: {
     allowed_values_creatable: true,
     get_allowed_values: getNetsuiteCurrencyIdAllowedValues,
+  },
+  subsidiary: {
+    preselected: true,
+    allowed_values_creatable: true,
+    get_allowed_values: getNetsuiteSubsidiaryIdAllowedValues,
+  },
+  entity: {
+    get_allowed_values: getNetsuiteCustomerEntityIdAllowedValues,
+    allowed_values_creatable: true,
+    type: {
+      type: 'hash',
+      fields: {
+        id: {
+          type: 'string',
+        },
+      },
+    },
+    preselected: true,
+  },
+  item: {
+    preselected: true,
+    allowed_values_creatable: true,
+    get_allowed_values: getNetsuiteItemIdArrayAllowedValues,
+  },
+  'item.items': {
+    preselected: true,
+    element_allowed_values_creatable: true,
+    get_element_allowed_values: getNetsuiteItemIdAllowedValues,
+  },
+  'item.items.item': {
+    type: {
+      type: 'hash',
+      fields: {
+        id: {
+          type: 'string',
+        },
+      },
+    },
+  },
+} satisfies Record<string, TQoreAppActionOverrideOption<TCustomConnOptions>>;
+
+const opportunityOptions = {
+  title: {
+    preselected: true,
+  },
+  entity: {
+    get_allowed_values: getNetsuiteCustomerEntityIdAllowedValues,
+    allowed_values_creatable: true,
+    preselected: true,
+    type: {
+      type: 'hash',
+      fields: {
+        id: {
+          type: 'string',
+        },
+      },
+    },
+  },
+  status: {
+    preselected: true,
+    allowed_values_creatable: true,
+    get_allowed_values: getNetsuiteCustomerStatusIdAllowedValues,
   },
 } satisfies Record<string, TQoreAppActionOverrideOption<TCustomConnOptions>>;
 
@@ -137,6 +232,7 @@ export const NETSUITE_ALLOWED_PATHS = {
     },
   },
   '/customer': {
+    GET: {},
     POST: {
       override_options: customerOptions,
     },
@@ -164,6 +260,39 @@ export const NETSUITE_ALLOWED_PATHS = {
         id: {
           allowed_values_creatable: true,
           get_allowed_values: getNetsuiteCustomerIdAllowedValues,
+        },
+      },
+    },
+  },
+  '/opportunity': {
+    GET: {},
+    POST: {
+      override_options: opportunityOptions,
+    },
+  },
+  '/opportunity/{id}': {
+    GET: {
+      override_options: {
+        id: {
+          get_element_allowed_values: getNetsuiteOpportunityIdAllowedValues,
+          allowed_values_creatable: true,
+        },
+      },
+    },
+    PATCH: {
+      override_options: {
+        id: {
+          get_element_allowed_values: getNetsuiteOpportunityIdAllowedValues,
+          allowed_values_creatable: true,
+        },
+        ...opportunityOptions,
+      },
+    },
+    DELETE: {
+      override_options: {
+        id: {
+          get_element_allowed_values: getNetsuiteOpportunityIdAllowedValues,
+          allowed_values_creatable: true,
         },
       },
     },

@@ -25,26 +25,23 @@ const options = {
       { display_name: 'ES', value: 'es' },
     ],
   },
-  userLanguage: {
-    required: false,
-    type: 'string',
-    preselected: true,
-    default_value: 'en',
-  },
   params: {
     required: true,
     type: {
-      type: 'hash',
-      fields: {
-        key: {
-          type: 'string',
-          get_allowed_values: getSerenityAgentParamsAllowedValues,
-          allowed_values_creatable: true,
-          required: true,
-        },
-        value: {
-          type: 'string',
-          required: true,
+      type: 'list',
+      element_type: {
+        type: 'hash',
+        fields: {
+          key: {
+            type: 'string',
+            get_allowed_values: getSerenityAgentParamsAllowedValues,
+            allowed_values_creatable: true,
+            required: true,
+          },
+          value: {
+            type: 'string',
+            required: true,
+          },
         },
       },
     },
@@ -126,7 +123,6 @@ export const ExecuteSerenityAgent = QoreAppCreator.createLocalizedAction<typeof 
     const culture = data?.culture;
     const params = (data?.params || []) as { Key: string; Value: string }[];
     const volatileKnowledgeIds = data?.volatileKnowledgeIds as string[] | undefined;
-    const userLanguage = data?.userLanguage || 'en';
 
     const missingValues: string[] = [];
 
@@ -148,11 +144,7 @@ export const ExecuteSerenityAgent = QoreAppCreator.createLocalizedAction<typeof 
       );
     }
 
-    const body = [
-      ...params.filter((param) => param.Key !== 'userLanguage'),
-      ...(volatileKnowledgeIds?.length ? volatileKnowledgeIds : []),
-      { Key: 'userLanguage', Value: userLanguage },
-    ];
+    const body = [...params, ...(volatileKnowledgeIds?.length ? volatileKnowledgeIds : [])];
 
     const response = await QorusRequest.post<{
       data: TQoreMappedOptions<typeof response_type.fields>;

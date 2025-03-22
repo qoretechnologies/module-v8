@@ -256,7 +256,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
     private setupEventSourceLockedIntern() {
         info("Setting up event source for PID %d @%s/%s %y", proc.id(), event.app, event.action, event.key);
-        sendCommandArgs(NOTHING, PC_SETUP_EVENT, (event.app, event.action, event.key, event.options));
+        sendCommandArgs(NOTHING, PC_SETUP_EVENT, (event.app, event.action, event.key, event.options), NOTHING, True);
         info("Event source for @%s/%s %y ready", event.app, event.action, event.key);
     }
 
@@ -433,7 +433,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     #! Called with the global lock held
-    releaseEventSourceLocked(TypeScriptActionEventDataProvider observable, string key) {
+    releaseEventSourceLocked(TypeScriptActionEventDataProvider observable, string key, *bool in_listener) {
         if (!event) {
             throw "EVENT-ERROR", sprintf("Event key %y is not registered", key);
         }
@@ -457,7 +457,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 stop = True;
             }
         }
-        if (stop) {
+        if (stop && !in_listener) {
             stopEventListener();
             try {
                 sendCommandArgs(NOTHING, PC_RELEASE_EVENT, key, NOTHING, True);
@@ -884,7 +884,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         delete s;
 
         error("Restarting child process after an error");
-        *hash<auto> out = logChildOutput();
+        *hash<auto> out = logChildOutput(True);
 
         ++restart_count;
 

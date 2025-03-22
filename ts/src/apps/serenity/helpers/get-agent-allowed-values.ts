@@ -75,7 +75,7 @@ const createGetSerenityAgentAllowedValues =
     const token = context?.conn_opts?.token;
 
     if (!token) {
-      throw new Error('Token is required to get Serenity activity agent allowed values');
+      throw new Error('token is required to get Serenity activity agent allowed values');
     }
 
     const agents: IQoreAllowedValue<string>[] = [];

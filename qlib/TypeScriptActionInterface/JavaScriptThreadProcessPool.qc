@@ -152,7 +152,7 @@ public class JavaScriptThreadProcessPool {
     }
 
     #! Releases a proxy as an event source
-    releaseEventSource(JavaScriptProgramProxy proxy, Observable observable, string key) {
+    releaseEventSource(JavaScriptProgramProxy proxy, Observable observable, string key, *bool in_listener) {
         AutoLock al(m);
 
         on_exit {
@@ -163,7 +163,7 @@ public class JavaScriptThreadProcessPool {
                 imap{pkey} = info;
             }
         }
-        proxy.releaseEventSourceLocked(observable, key);
+        proxy.releaseEventSourceLocked(observable, key, in_listener);
     }
 
     private preallocate(Counter cnt) {

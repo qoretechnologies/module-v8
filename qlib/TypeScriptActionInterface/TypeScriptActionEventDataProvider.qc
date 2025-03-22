@@ -112,10 +112,11 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
         notifyObservers(event_id, event);
     }
 
-    #! Called when the event thread terminates prematurely
+    #! Called from the proxy event listener thread when the event thread terminates prematurely
     terminated() {
         info("Event thread terminated prematurely");
-        stop();
+        # NOTE: terminated() is called from the proxy event listener thread
+        stop(True);
     }
 
     private startEventThread(Counter c) {
@@ -150,12 +151,12 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
         }
     }
 
-    stop() {
+    stop(*bool in_listener) {
         m.lock();
         on_exit m.unlock();
 
         if (*JavaScriptProgramProxy proxy = remove self.proxy) {
-            TSAI::server.releaseEventSource(proxy, self, event.key);
+            TSAI::server.releaseEventSource(proxy, self, event.key, in_listener);
             running = False;
             return;
         }

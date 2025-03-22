@@ -7,6 +7,7 @@ import {
 import { HUBSPOT_APP_NAME } from '../constants';
 import { fetchHubspotRecords } from '../helpers/constants';
 import { getHubspotCustomObjectTypeAllowedValues } from '../helpers/get-custom-object-type-allowed-values';
+import { getHubspotCustomObjectEventInfoType } from '../helpers/get-event-info-type';
 import { getHubspotCustomObjectPropertiesAllowedValues } from '../helpers/object-properties-allowed-values';
 import { EHubspotTriggerCriteria, hubspotTriggerCriteria } from './constants';
 
@@ -96,6 +97,7 @@ const hubspotCustomObjectCreatedOrUpdatedTrigger = QoreAppCreator.createLocalize
 
     return records?.length > 0 ? records[0] : null;
   },
+  get_dynamic_type: getHubspotCustomObjectEventInfoType,
   event_info: {
     desc: 'Hubspot Custom Object Created Or Updated Trigger Event Info',
     type: {
