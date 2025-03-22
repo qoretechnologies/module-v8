@@ -28,6 +28,7 @@ import { Debugger, DebugLevels } from '../utils/Debugger';
 import outlook from '../apps/outlook';
 import teams from '../apps/teams';
 import serenity from '../apps/serenity';
+import pipedrive from '../apps/pipedrive';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -55,6 +56,7 @@ const NEW_APPS = {
   sharepoint,
   outlook,
   teams,
+  pipedrive,
 } as const;
 
 const EXISTING_APPS = {
