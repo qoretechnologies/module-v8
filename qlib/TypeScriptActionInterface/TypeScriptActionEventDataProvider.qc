@@ -112,10 +112,10 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
         notifyObservers(event_id, event);
     }
 
-    #! Called when the event thread terminates prematurely
+    #! Called from the proxy event listener thread when the event thread terminates prematurely
     terminated() {
         info("Event thread terminated prematurely");
-        # NOTE: terminted() is called from the event listener thread
+        # NOTE: terminated() is called from the proxy event listener thread
         stop(True);
     }
 

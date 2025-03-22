@@ -256,7 +256,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
     private setupEventSourceLockedIntern() {
         info("Setting up event source for PID %d @%s/%s %y", proc.id(), event.app, event.action, event.key);
-        sendCommandArgs(NOTHING, PC_SETUP_EVENT, (event.app, event.action, event.key, event.options));
+        sendCommandArgs(NOTHING, PC_SETUP_EVENT, (event.app, event.action, event.key, event.options), NOTHING, True);
         info("Event source for @%s/%s %y ready", event.app, event.action, event.key);
     }
 
@@ -884,7 +884,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         delete s;
 
         error("Restarting child process after an error");
-        *hash<auto> out = logChildOutput();
+        *hash<auto> out = logChildOutput(True);
 
         ++restart_count;
 
