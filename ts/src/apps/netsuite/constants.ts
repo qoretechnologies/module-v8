@@ -199,7 +199,6 @@ const vendorOptions = {
 
 export const NETSUITE_ALLOWED_PATHS = {
   '/account': {
-    GET: {},
     POST: {
       override_options: accountOptions,
     },
@@ -232,7 +231,6 @@ export const NETSUITE_ALLOWED_PATHS = {
     },
   },
   '/customer': {
-    GET: {},
     POST: {
       override_options: customerOptions,
     },
@@ -265,7 +263,6 @@ export const NETSUITE_ALLOWED_PATHS = {
     },
   },
   '/opportunity': {
-    GET: {},
     POST: {
       override_options: opportunityOptions,
     },

@@ -10176,6 +10176,106 @@ type RootTranslation = {
 				}
 			}
 			actions: {
+				list_records: {
+					/**
+					 * L​i​s​t​ ​R​e​c​o​r​d​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​N​e​t​S​u​i​t​e​ ​r​e​c​o​r​d​s​ ​b​a​s​e​d​ ​o​n​ ​s​e​a​r​c​h​ ​c​r​i​t​e​r​i​a
+					 */
+					shortDesc: string
+					/**
+					 * Q​u​e​r​y​ ​N​e​t​S​u​i​t​e​ ​r​e​c​o​r​d​s​ ​b​y​ ​t​y​p​e​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​,​ ​f​i​e​l​d​ ​s​e​l​e​c​t​i​o​n​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n
+					 */
+					longDesc: string
+					options: {
+						recordType: {
+							/**
+							 * R​e​c​o​r​d​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​N​e​t​S​u​i​t​e​ ​r​e​c​o​r​d​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​i​e​s​ ​w​h​i​c​h​ ​N​e​t​S​u​i​t​e​ ​r​e​c​o​r​d​ ​t​y​p​e​ ​t​o​ ​q​u​e​r​y​ ​(​c​u​s​t​o​m​e​r​,​ ​i​n​v​o​i​c​e​,​ ​t​r​a​n​s​a​c​t​i​o​n​,​ ​e​t​c​.​)
+							 */
+							longDesc: string
+						}
+						searchMode: {
+							/**
+							 * S​e​a​r​c​h​ ​M​o​d​e
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​m​u​l​t​i​p​l​e​ ​s​e​a​r​c​h​ ​c​r​i​t​e​r​i​a​ ​a​r​e​ ​c​o​m​b​i​n​e​d
+							 */
+							shortDesc: string
+							/**
+							 * D​e​t​e​r​m​i​n​e​s​ ​i​f​ ​r​e​c​o​r​d​s​ ​m​u​s​t​ ​m​a​t​c​h​ ​a​l​l​ ​c​r​i​t​e​r​i​a​ ​(​A​l​l​)​ ​o​r​ ​a​n​y​ ​c​r​i​t​e​r​i​a​ ​(​A​n​y​)​ ​w​h​e​n​ ​m​u​l​t​i​p​l​e​ ​q​u​e​r​y​ ​f​i​e​l​d​s​ ​a​r​e​ ​p​r​o​v​i​d​e​d
+							 */
+							longDesc: string
+						}
+						fields: {
+							/**
+							 * F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​r​e​c​o​r​d​ ​f​i​e​l​d​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​f​i​e​l​d​ ​n​a​m​e​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​r​e​s​u​l​t​s​ ​(​r​e​t​u​r​n​s​ ​a​l​l​ ​f​i​e​l​d​s​ ​i​f​ ​o​m​i​t​t​e​d​)
+							 */
+							longDesc: string
+						}
+						query: {
+							/**
+							 * Q​u​e​r​y​ ​C​r​i​t​e​r​i​a
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​c​o​n​d​i​t​i​o​n​s​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​r​e​c​o​r​d​s
+							 */
+							shortDesc: string
+							/**
+							 * K​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​ ​d​e​f​i​n​i​n​g​ ​s​e​a​r​c​h​ ​c​r​i​t​e​r​i​a
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * C​a​p​s​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​r​e​t​u​r​n​e​d​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​q​u​e​r​y
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​d​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​t​o​ ​s​k​i​p​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​i​n​ ​t​h​e​ ​r​e​s​u​l​t​ ​s​e​t
+							 */
+							longDesc: string
+						}
+					}
+				}
 				suite_ql: {
 					/**
 					 * S​u​i​t​e​Q​L
@@ -24167,6 +24267,106 @@ export type TranslationFunctions = {
 				}
 			}
 			actions: {
+				list_records: {
+					/**
+					 * List Records
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve NetSuite records based on search criteria
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Query NetSuite records by type with optional filtering, field selection, and pagination
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						recordType: {
+							/**
+							 * Record Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of NetSuite record to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specifies which NetSuite record type to query (customer, invoice, transaction, etc.)
+							 */
+							longDesc: () => LocalizedString
+						}
+						searchMode: {
+							/**
+							 * Search Mode
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How multiple search criteria are combined
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Determines if records must match all criteria (All) or any criteria (Any) when multiple query fields are provided
+							 */
+							longDesc: () => LocalizedString
+						}
+						fields: {
+							/**
+							 * Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific record fields to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of field names to include in results (returns all fields if omitted)
+							 */
+							longDesc: () => LocalizedString
+						}
+						query: {
+							/**
+							 * Query Criteria
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search conditions for filtering records
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Key-value pairs defining search criteria
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of records to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Caps the number of results returned in a single query
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of records to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Used for pagination to skip a specified number of records in the result set
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
 				suite_ql: {
 					/**
 					 * SuiteQL

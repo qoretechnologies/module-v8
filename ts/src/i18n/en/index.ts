@@ -2085,6 +2085,47 @@ const en = {
         },
       },
       actions: {
+        list_records: {
+          displayName: 'List Records',
+          shortDesc: 'Retrieve NetSuite records based on search criteria',
+          longDesc:
+            'Query NetSuite records by type with optional filtering, field selection, and pagination',
+          options: {
+            recordType: {
+              displayName: 'Record Type',
+              shortDesc: 'Type of NetSuite record to retrieve',
+              longDesc:
+                'Specifies which NetSuite record type to query (customer, invoice, transaction, etc.)',
+            },
+            searchMode: {
+              displayName: 'Search Mode',
+              shortDesc: 'How multiple search criteria are combined',
+              longDesc:
+                'Determines if records must match all criteria (All) or any criteria (Any) when multiple query fields are provided',
+            },
+            fields: {
+              displayName: 'Fields',
+              shortDesc: 'Specific record fields to return',
+              longDesc: 'List of field names to include in results (returns all fields if omitted)',
+            },
+            query: {
+              displayName: 'Query Criteria',
+              shortDesc: 'Search conditions for filtering records',
+              longDesc: 'Key-value pairs defining search criteria',
+            },
+            limit: {
+              displayName: 'Limit',
+              shortDesc: 'Maximum number of records to return',
+              longDesc: 'Caps the number of results returned in a single query',
+            },
+            offset: {
+              displayName: 'Offset',
+              shortDesc: 'Number of records to skip',
+              longDesc:
+                'Used for pagination to skip a specified number of records in the result set',
+            },
+          },
+        },
         suite_ql: {
           displayName: 'SuiteQL',
           shortDesc: 'Run a SuiteQL query',

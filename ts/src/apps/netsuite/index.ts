@@ -1,12 +1,13 @@
-import { actionsCatalogue } from '../../ActionsCatalogue';
-import { createSwaggerPaths, mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import {
   TQoreAppActionFunctionContext,
   TQoreAppWithActions,
   TQoreMappedOptions,
 } from '@qoretechnologies/ts-toolkit';
+import { actionsCatalogue } from '../../ActionsCatalogue';
+import { createSwaggerPaths, mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
+import { NetsuiteListRecordsAction } from './actions/list-records.action';
 import { NetsuiteSuiteQlAction } from './actions/suite-ql.action';
 import {
   NETSUITE_ACTIONS,
@@ -23,7 +24,11 @@ export default (locale: Locales) =>
     name: NETSUITE_APP_NAME,
     desc: L[locale].apps[NETSUITE_APP_NAME].longDesc(),
     actions: [
-      ...mapActionsToApp(NETSUITE_APP_NAME, [...NETSUITE_ACTIONS, NetsuiteSuiteQlAction], locale),
+      ...mapActionsToApp(
+        NETSUITE_APP_NAME,
+        [...NETSUITE_ACTIONS, NetsuiteSuiteQlAction, NetsuiteListRecordsAction],
+        locale
+      ),
       ...mapTriggersToApp(NETSUITE_APP_NAME, NETSUITE_TRIGGERS, locale),
     ],
     logo:
