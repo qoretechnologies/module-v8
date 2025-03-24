@@ -22,15 +22,18 @@ const options = {
   inputParameters: {
     required: false,
     type: {
-      type: 'hash',
-      fields: {
-        key: {
-          type: 'string',
-          required: true,
-        },
-        value: {
-          type: 'string',
-          required: true,
+      type: 'list',
+      element_type: {
+        type: 'hash',
+        fields: {
+          key: {
+            type: 'string',
+            required: true,
+          },
+          value: {
+            type: 'string',
+            required: true,
+          },
         },
       },
     },
