@@ -16,6 +16,7 @@ import { getSerenityConversationAllowedValues } from '../helpers/get-conversatio
 const options = {
   agentCode: {
     required: false,
+    preselected: true,
     type: 'string',
     on_change: ['refetch'],
     get_allowed_values: getSerenityConversationAgentAllowedValues,
