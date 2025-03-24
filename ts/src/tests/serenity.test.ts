@@ -9,6 +9,7 @@ import { getSerenityConversationAllowedValues } from '../apps/serenity/helpers/g
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import { getSerenityAgentParamsAllowedValues } from '../apps/serenity/helpers/get-agent-params-allowed-values';
 import { getSerenityExecuteAgentParamsDefaultValue } from '../apps/serenity/helpers/get-execute-agent-params-default-value';
+import { retry } from './utils';
 
 Debugger.level = DebugLevels.Verbose;
 
@@ -97,9 +98,14 @@ describe('Should test serenity actions', () => {
         ],
       };
 
-      const result = await action.api_function(data, undefined, {
-        conn_opts: { token } as any,
-      });
+      const result = await retry<any>(
+        () =>
+          action.api_function(data, undefined, {
+            conn_opts: { token } as any,
+          }),
+        3,
+        5000
+      );
 
       expect(result).toBeDefined();
       expect(result.content).toBeDefined();

@@ -14100,6 +14100,232 @@ type RootTranslation = {
 				}
 			}
 		}
+		Pipedrive: {
+			/**
+			 * P​i​p​e​d​r​i​v​e
+			 */
+			displayName: string
+			/**
+			 * M​a​n​a​g​e​ ​y​o​u​r​ ​s​a​l​e​s​ ​p​i​p​e​l​i​n​e​ ​a​n​d​ ​c​u​s​t​o​m​e​r​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​ ​w​i​t​h​ ​P​i​p​e​d​r​i​v​e​.
+			 */
+			shortDesc: string
+			/**
+			 * P​i​p​e​d​r​i​v​e​ ​i​s​ ​a​ ​s​a​l​e​s​ ​m​a​n​a​g​e​m​e​n​t​ ​t​o​o​l​ ​d​e​s​i​g​n​e​d​ ​t​o​ ​h​e​l​p​ ​s​m​a​l​l​ ​s​a​l​e​s​ ​t​e​a​m​s​ ​m​a​n​a​g​e​ ​i​n​t​r​i​c​a​t​e​ ​o​r​ ​l​e​n​g​t​h​y​ ​s​a​l​e​s​ ​p​r​o​c​e​s​s​e​s​.
+			 */
+			longDesc: string
+			triggers: {
+				pipedrive_activity_trigger: {
+					/**
+					 * A​c​t​i​v​i​t​y​ ​A​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​a​c​t​i​o​n​ ​i​s​ ​p​e​r​f​o​r​m​e​d​ ​o​n​ ​a​n​ ​a​c​t​i​v​i​t​y
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​a​ ​s​e​l​e​c​t​e​d​ ​a​c​t​i​o​n​ ​i​s​ ​p​e​r​f​o​r​m​e​d​ ​o​n​ ​a​n​ ​a​c​t​i​v​i​t​y​ ​i​n​ ​P​i​p​e​d​r​i​v​e​.​ ​A​c​t​i​o​n​s​ ​i​n​c​l​u​d​e​ ​c​r​e​a​t​i​n​g​,​ ​u​p​d​a​t​i​n​g​,​ ​d​e​l​e​t​i​n​g​ ​a​n​ ​a​c​t​i​v​i​t​y​ ​o​r​ ​a​n​y​ ​c​h​a​n​g​e​.
+					 */
+					longDesc: string
+					options: {
+						action: {
+							/**
+							 * A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​s​ ​t​h​e​ ​f​l​o​w
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​s​ ​t​h​e​ ​f​l​o​w​.​ ​C​h​o​o​s​e​ ​f​r​o​m​:​ ​c​r​e​a​t​e​,​ ​u​p​d​a​t​e​,​ ​d​e​l​e​t​e​,​ ​o​r​ ​a​n​y​ ​c​h​a​n​g​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				pipedrive_deal_trigger: {
+					/**
+					 * D​e​a​l​ ​A​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​a​c​t​i​o​n​ ​i​s​ ​p​e​r​f​o​r​m​e​d​ ​o​n​ ​a​ ​d​e​a​l
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​a​ ​s​e​l​e​c​t​e​d​ ​a​c​t​i​o​n​ ​i​s​ ​p​e​r​f​o​r​m​e​d​ ​o​n​ ​a​ ​d​e​a​l​ ​i​n​ ​P​i​p​e​d​r​i​v​e​.​ ​A​c​t​i​o​n​s​ ​i​n​c​l​u​d​e​ ​c​r​e​a​t​i​n​g​,​ ​u​p​d​a​t​i​n​g​,​ ​d​e​l​e​t​i​n​g​ ​a​ ​d​e​a​l​ ​o​r​ ​a​n​y​ ​c​h​a​n​g​e​.
+					 */
+					longDesc: string
+					options: {
+						action: {
+							/**
+							 * A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​s​ ​t​h​e​ ​f​l​o​w
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​s​ ​t​h​e​ ​f​l​o​w​.​ ​C​h​o​o​s​e​ ​f​r​o​m​:​ ​c​r​e​a​t​e​,​ ​u​p​d​a​t​e​,​ ​d​e​l​e​t​e​,​ ​o​r​ ​a​n​y​ ​c​h​a​n​g​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				pipedrive_lead_trigger: {
+					/**
+					 * L​e​a​d​ ​A​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​a​c​t​i​o​n​ ​i​s​ ​p​e​r​f​o​r​m​e​d​ ​o​n​ ​a​ ​l​e​a​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​a​ ​s​e​l​e​c​t​e​d​ ​a​c​t​i​o​n​ ​i​s​ ​p​e​r​f​o​r​m​e​d​ ​o​n​ ​a​ ​l​e​a​d​ ​i​n​ ​P​i​p​e​d​r​i​v​e​.​ ​A​c​t​i​o​n​s​ ​i​n​c​l​u​d​e​ ​c​r​e​a​t​i​n​g​,​ ​u​p​d​a​t​i​n​g​,​ ​d​e​l​e​t​i​n​g​ ​a​ ​l​e​a​d​ ​o​r​ ​a​n​y​ ​c​h​a​n​g​e​.
+					 */
+					longDesc: string
+					options: {
+						action: {
+							/**
+							 * A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​s​ ​t​h​e​ ​f​l​o​w
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​s​ ​t​h​e​ ​f​l​o​w​.​ ​C​h​o​o​s​e​ ​f​r​o​m​:​ ​c​r​e​a​t​e​,​ ​u​p​d​a​t​e​,​ ​d​e​l​e​t​e​,​ ​o​r​ ​a​n​y​ ​c​h​a​n​g​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				pipedrive_note_trigger: {
+					/**
+					 * N​o​t​e​ ​A​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​a​c​t​i​o​n​ ​i​s​ ​p​e​r​f​o​r​m​e​d​ ​o​n​ ​a​ ​n​o​t​e
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​a​ ​s​e​l​e​c​t​e​d​ ​a​c​t​i​o​n​ ​i​s​ ​p​e​r​f​o​r​m​e​d​ ​o​n​ ​a​ ​n​o​t​e​ ​i​n​ ​P​i​p​e​d​r​i​v​e​.​ ​A​c​t​i​o​n​s​ ​i​n​c​l​u​d​e​ ​c​r​e​a​t​i​n​g​,​ ​u​p​d​a​t​i​n​g​,​ ​d​e​l​e​t​i​n​g​ ​a​ ​n​o​t​e​ ​o​r​ ​a​n​y​ ​c​h​a​n​g​e​.
+					 */
+					longDesc: string
+					options: {
+						action: {
+							/**
+							 * A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​s​ ​t​h​e​ ​f​l​o​w
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​s​ ​t​h​e​ ​f​l​o​w​.​ ​C​h​o​o​s​e​ ​f​r​o​m​:​ ​c​r​e​a​t​e​,​ ​u​p​d​a​t​e​,​ ​d​e​l​e​t​e​,​ ​o​r​ ​a​n​y​ ​c​h​a​n​g​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				pipedrive_organization_trigger: {
+					/**
+					 * O​r​g​a​n​i​z​a​t​i​o​n​ ​A​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​a​c​t​i​o​n​ ​i​s​ ​p​e​r​f​o​r​m​e​d​ ​o​n​ ​a​n​ ​o​r​g​a​n​i​z​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​a​ ​s​e​l​e​c​t​e​d​ ​a​c​t​i​o​n​ ​i​s​ ​p​e​r​f​o​r​m​e​d​ ​o​n​ ​a​n​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​i​n​ ​P​i​p​e​d​r​i​v​e​.​ ​A​c​t​i​o​n​s​ ​i​n​c​l​u​d​e​ ​c​r​e​a​t​i​n​g​,​ ​u​p​d​a​t​i​n​g​,​ ​d​e​l​e​t​i​n​g​ ​a​n​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​o​r​ ​a​n​y​ ​c​h​a​n​g​e​.
+					 */
+					longDesc: string
+					options: {
+						action: {
+							/**
+							 * A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​s​ ​t​h​e​ ​f​l​o​w
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​s​ ​t​h​e​ ​f​l​o​w​.​ ​C​h​o​o​s​e​ ​f​r​o​m​:​ ​c​r​e​a​t​e​,​ ​u​p​d​a​t​e​,​ ​d​e​l​e​t​e​,​ ​o​r​ ​a​n​y​ ​c​h​a​n​g​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				pipedrive_person_trigger: {
+					/**
+					 * P​e​r​s​o​n​ ​A​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​a​c​t​i​o​n​ ​i​s​ ​p​e​r​f​o​r​m​e​d​ ​o​n​ ​a​ ​p​e​r​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​a​ ​s​e​l​e​c​t​e​d​ ​a​c​t​i​o​n​ ​i​s​ ​p​e​r​f​o​r​m​e​d​ ​o​n​ ​a​ ​p​e​r​s​o​n​ ​i​n​ ​P​i​p​e​d​r​i​v​e​.​ ​A​c​t​i​o​n​s​ ​i​n​c​l​u​d​e​ ​c​r​e​a​t​i​n​g​,​ ​u​p​d​a​t​i​n​g​,​ ​d​e​l​e​t​i​n​g​ ​a​ ​p​e​r​s​o​n​ ​o​r​ ​a​n​y​ ​c​h​a​n​g​e​.
+					 */
+					longDesc: string
+					options: {
+						action: {
+							/**
+							 * A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​s​ ​t​h​e​ ​f​l​o​w
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​s​ ​t​h​e​ ​f​l​o​w​.​ ​C​h​o​o​s​e​ ​f​r​o​m​:​ ​c​r​e​a​t​e​,​ ​u​p​d​a​t​e​,​ ​d​e​l​e​t​e​,​ ​o​r​ ​a​n​y​ ​c​h​a​n​g​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				pipedrive_user_trigger: {
+					/**
+					 * U​s​e​r​ ​A​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​a​c​t​i​o​n​ ​i​s​ ​p​e​r​f​o​r​m​e​d​ ​o​n​ ​a​ ​u​s​e​r
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​a​ ​s​e​l​e​c​t​e​d​ ​a​c​t​i​o​n​ ​i​s​ ​p​e​r​f​o​r​m​e​d​ ​o​n​ ​a​ ​u​s​e​r​ ​i​n​ ​P​i​p​e​d​r​i​v​e​.​ ​A​c​t​i​o​n​s​ ​i​n​c​l​u​d​e​ ​c​r​e​a​t​i​n​g​,​ ​u​p​d​a​t​i​n​g​,​ ​d​e​l​e​t​i​n​g​ ​a​ ​u​s​e​r​ ​o​r​ ​a​n​y​ ​c​h​a​n​g​e​.
+					 */
+					longDesc: string
+					options: {
+						action: {
+							/**
+							 * A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​s​ ​t​h​e​ ​f​l​o​w
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​s​ ​t​h​e​ ​f​l​o​w​.​ ​C​h​o​o​s​e​ ​f​r​o​m​:​ ​c​r​e​a​t​e​,​ ​u​p​d​a​t​e​,​ ​d​e​l​e​t​e​,​ ​o​r​ ​a​n​y​ ​c​h​a​n​g​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -28184,6 +28410,232 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Choose the sender the messages should be filtered by.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		Pipedrive: {
+			/**
+			 * Pipedrive
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Manage your sales pipeline and customer relationships with Pipedrive.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Pipedrive is a sales management tool designed to help small sales teams manage intricate or lengthy sales processes.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				pipedrive_activity_trigger: {
+					/**
+					 * Activity Action
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an action is performed on an activity
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when a selected action is performed on an activity in Pipedrive. Actions include creating, updating, deleting an activity or any change.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						action: {
+							/**
+							 * Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the action that triggers the flow
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the action that triggers the flow. Choose from: create, update, delete, or any change.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				pipedrive_deal_trigger: {
+					/**
+					 * Deal Action
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an action is performed on a deal
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when a selected action is performed on a deal in Pipedrive. Actions include creating, updating, deleting a deal or any change.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						action: {
+							/**
+							 * Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the action that triggers the flow
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the action that triggers the flow. Choose from: create, update, delete, or any change.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				pipedrive_lead_trigger: {
+					/**
+					 * Lead Action
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an action is performed on a lead
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when a selected action is performed on a lead in Pipedrive. Actions include creating, updating, deleting a lead or any change.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						action: {
+							/**
+							 * Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the action that triggers the flow
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the action that triggers the flow. Choose from: create, update, delete, or any change.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				pipedrive_note_trigger: {
+					/**
+					 * Note Action
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an action is performed on a note
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when a selected action is performed on a note in Pipedrive. Actions include creating, updating, deleting a note or any change.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						action: {
+							/**
+							 * Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the action that triggers the flow
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the action that triggers the flow. Choose from: create, update, delete, or any change.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				pipedrive_organization_trigger: {
+					/**
+					 * Organization Action
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an action is performed on an organization
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when a selected action is performed on an organization in Pipedrive. Actions include creating, updating, deleting an organization or any change.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						action: {
+							/**
+							 * Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the action that triggers the flow
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the action that triggers the flow. Choose from: create, update, delete, or any change.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				pipedrive_person_trigger: {
+					/**
+					 * Person Action
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an action is performed on a person
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when a selected action is performed on a person in Pipedrive. Actions include creating, updating, deleting a person or any change.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						action: {
+							/**
+							 * Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the action that triggers the flow
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the action that triggers the flow. Choose from: create, update, delete, or any change.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				pipedrive_user_trigger: {
+					/**
+					 * User Action
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an action is performed on a user
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when a selected action is performed on a user in Pipedrive. Actions include creating, updating, deleting a user or any change.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						action: {
+							/**
+							 * Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the action that triggers the flow
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the action that triggers the flow. Choose from: create, update, delete, or any change.
 							 */
 							longDesc: () => LocalizedString
 						}
