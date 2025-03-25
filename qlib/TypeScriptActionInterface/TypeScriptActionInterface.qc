@@ -1955,8 +1955,8 @@ public class TypeScriptActionInterface {
         on_error rethrow $1.err, sprintf("%s (field: %y)", $1.desc, h);
         *bool req = remove h.required;
         path += "-" + name;
-        AbstractDataProviderType type = TypeScriptActionInterface::getType(path, remove h.type, req, NOTHING, fctx,
-            ignore_dup);
+        AbstractDataProviderType type = TypeScriptActionInterface::getType(path, remove h.type, req,
+            remove h.element_type, fctx, ignore_dup);
         hash<auto> rv = TypeScriptActionInterface::getFieldHash(path, name, type, \h, req, fctx, ignore_dup);
         if (h) {
             throw "FIELD-ERROR", sprintf("Description for field %y has unknown keys: %y", name, keys h);
