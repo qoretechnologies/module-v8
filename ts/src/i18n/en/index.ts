@@ -2338,6 +2338,18 @@ const en = {
           displayName: 'Create Purchase Order',
           shortDesc: 'Creates a new purchase order.',
           longDesc: 'Allows the user to create a new purchase order record in NetSuite.',
+          options: {
+            entity: {
+              displayName: 'Vendor',
+              shortDesc: 'The vendor for the purchase order',
+              longDesc: 'The vendor for the purchase order ',
+            },
+            employee: {
+              displayName: 'Employee (Requestor)',
+              shortDesc: 'The employee who requested the purchase order',
+              longDesc: 'The employee who requested the purchase order',
+            },
+          },
         },
         purchaseOrder_id_get: {
           displayName: 'Get Purchase Order',
@@ -2348,6 +2360,18 @@ const en = {
           displayName: 'Update Purchase Order',
           shortDesc: 'Updates an existing purchase order.',
           longDesc: 'Allows the user to update details of a specific purchase order by its ID.',
+          options: {
+            entity: {
+              displayName: 'Vendor',
+              shortDesc: 'The vendor for the purchase order',
+              longDesc: 'The vendor for the purchase order ',
+            },
+            employee: {
+              displayName: 'Employee (Requestor)',
+              shortDesc: 'The employee who requested the purchase order',
+              longDesc: 'The employee who requested the purchase order',
+            },
+          },
         },
         purchaseOrder_id_delete: {
           displayName: 'Delete Purchase Order',
@@ -2363,6 +2387,13 @@ const en = {
           displayName: 'Create Sales Order',
           shortDesc: 'Creates a new sales order.',
           longDesc: 'Allows the user to create a new sales order record in NetSuite.',
+          options: {
+            entity: {
+              displayName: 'Customer',
+              shortDesc: 'The customer for the sales order',
+              longDesc: 'The customer for the sales order ',
+            },
+          },
         },
         salesOrder_id_get: {
           displayName: 'Get Sales Order',
@@ -2373,6 +2404,13 @@ const en = {
           displayName: 'Update Sales Order',
           shortDesc: 'Updates an existing sales order.',
           longDesc: 'Allows the user to update details of a specific sales order by its ID.',
+          options: {
+            entity: {
+              displayName: 'Customer',
+              shortDesc: 'The customer for the sales order',
+              longDesc: 'The customer for the sales order ',
+            },
+          },
         },
         salesOrder_id_delete: {
           displayName: 'Delete Sales Order',
