@@ -24,7 +24,7 @@ import { getNetsuiteJournalEntryIdAllowedValues } from './helpers/get-journal-en
 import { getNetsuiteOpportunityIdAllowedValues } from './helpers/get-opportunity-id-allowed-values';
 import { getNetsuitePurchaseOrderIdAllowedValues } from './helpers/get-purchase-order-id-allowed-values';
 import { getNetsuiteSalesOrderIdAllowedValues } from './helpers/get-sales-order-id-allowed-values';
-import { getNetsuiteSalesOrderStatusIdAllowedValues } from './helpers/get-sales-order-status-id-allowed-values';
+import { getNetsuiteSalesOrderStatusObjectAllowedValues } from './helpers/get-sales-order-status-id-allowed-values';
 import {
   getNetsuiteSubsidiaryIdAllowedValues,
   getNetsuiteSubsidiaryIdArrayAllowedValues,
@@ -207,10 +207,8 @@ const salesOrderOptions = {
   },
   orderStatus: {
     preselected: true,
-  },
-  'orderStatus.id': {
     allowed_values_creatable: true,
-    get_allowed_values: getNetsuiteSalesOrderStatusIdAllowedValues,
+    get_allowed_values: getNetsuiteSalesOrderStatusObjectAllowedValues,
   },
   memo: {
     preselected: true,
@@ -219,6 +217,7 @@ const salesOrderOptions = {
 
 const purchaseOrderOptions = {
   employee: {
+    preselected: true,
     allowed_values_creatable: true,
     get_allowed_values: getNetsuiteEmployeeObjectAllowedValues,
   },
@@ -231,6 +230,7 @@ const purchaseOrderOptions = {
     get_allowed_values: getNetsuiteCurrencyIdAllowedValues,
   },
   entity: {
+    preselected: true,
     allowed_values_creatable: true,
     get_allowed_values: getNetsuiteVendorObjectAllowedValues,
     type: {
