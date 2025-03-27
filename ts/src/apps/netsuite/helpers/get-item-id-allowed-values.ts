@@ -42,7 +42,8 @@ const mapNetSuiteItemArray = (item: TNetsuiteItemData): IQoreAllowedValue => {
 const createNetsuiteItemIdAllowedValuesFunction = <
   T extends TNetsuiteItemAllowedValue | TNetsuiteItemArrayAllowedValue,
 >(
-  type: 'item' | 'array'
+  type: 'item' | 'array',
+  itemSubtype?: 'Sale' | 'Purchase'
 ): TQoreGetAllowedValuesFunction<typeof NETSUITE_CONN_OPTIONS, T> => {
   return async (context): Promise<IQoreAllowedValue<T>[]> => {
     const token = context?.conn_opts?.token;
@@ -58,19 +59,29 @@ const createNetsuiteItemIdAllowedValuesFunction = <
       mapItemToAllowedValue: type === 'item' ? mapNetSuiteItem : mapNetSuiteItemArray,
       query:
         `SELECT * FROM item WHERE item.isinactive='F' ` +
-        `AND (item.subtype='Sale' OR item.subtype='Both') ORDER BY item.lastmodifieddate DESC`,
+        `AND (item.subtype='${itemSubtype}' OR item.subtype='Both') ORDER BY item.lastmodifieddate DESC`,
     });
 
     return items as IQoreAllowedValue<T>[];
   };
 };
 
-export const getNetsuiteItemIdAllowedValues: TQoreGetAllowedValuesFunction<
+export const getNetsuiteSalesItemIdAllowedValues: TQoreGetAllowedValuesFunction<
   typeof NETSUITE_CONN_OPTIONS,
   TNetsuiteItemAllowedValue
-> = createNetsuiteItemIdAllowedValuesFunction<TNetsuiteItemAllowedValue>('item');
+> = createNetsuiteItemIdAllowedValuesFunction<TNetsuiteItemAllowedValue>('item', 'Sale');
 
-export const getNetsuiteItemIdArrayAllowedValues: TQoreGetAllowedValuesFunction<
+export const getNetsuiteSalesItemIdArrayAllowedValues: TQoreGetAllowedValuesFunction<
   typeof NETSUITE_CONN_OPTIONS,
   TNetsuiteItemArrayAllowedValue
-> = createNetsuiteItemIdAllowedValuesFunction<TNetsuiteItemArrayAllowedValue>('array');
+> = createNetsuiteItemIdAllowedValuesFunction<TNetsuiteItemArrayAllowedValue>('array', 'Sale');
+
+export const getNetsuitePurchaseItemIdAllowedValues: TQoreGetAllowedValuesFunction<
+  typeof NETSUITE_CONN_OPTIONS,
+  TNetsuiteItemAllowedValue
+> = createNetsuiteItemIdAllowedValuesFunction<TNetsuiteItemAllowedValue>('item', 'Purchase');
+
+export const getNetsuitePurchaseItemIdArrayAllowedValues: TQoreGetAllowedValuesFunction<
+  typeof NETSUITE_CONN_OPTIONS,
+  TNetsuiteItemArrayAllowedValue
+> = createNetsuiteItemIdAllowedValuesFunction<TNetsuiteItemArrayAllowedValue>('array', 'Purchase');

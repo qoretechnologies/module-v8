@@ -17,14 +17,19 @@ import { getNetsuiteCustomerStatusIdAllowedValues } from './helpers/get-customer
 import { getNetsuiteEmployeeObjectAllowedValues } from './helpers/get-employee-id-allowed-values';
 import { getNetsuiteInvoiceIdAllowedValues } from './helpers/get-invoice-id-allowed-values';
 import {
-  getNetsuiteItemIdAllowedValues,
-  getNetsuiteItemIdArrayAllowedValues,
+  getNetsuiteSalesItemIdAllowedValues,
+  getNetsuiteSalesItemIdArrayAllowedValues,
+  getNetsuitePurchaseItemIdAllowedValues,
+  getNetsuitePurchaseItemIdArrayAllowedValues,
 } from './helpers/get-item-id-allowed-values';
 import { getNetsuiteJournalEntryIdAllowedValues } from './helpers/get-journal-entry-id-allowed-values';
 import { getNetsuiteOpportunityIdAllowedValues } from './helpers/get-opportunity-id-allowed-values';
 import { getNetsuitePurchaseOrderIdAllowedValues } from './helpers/get-purchase-order-id-allowed-values';
 import { getNetsuiteSalesOrderIdAllowedValues } from './helpers/get-sales-order-id-allowed-values';
-import { getNetsuiteSalesOrderStatusObjectAllowedValues } from './helpers/get-sales-order-status-id-allowed-values';
+import {
+  getNetsuiteSalesOrderStatusIdAllowedValues,
+  getNetsuiteSalesOrderStatusObjectAllowedValues,
+} from './helpers/get-sales-order-status-id-allowed-values';
 import {
   getNetsuiteSubsidiaryIdAllowedValues,
   getNetsuiteSubsidiaryIdArrayAllowedValues,
@@ -152,12 +157,12 @@ const invoiceOptions = {
   item: {
     preselected: true,
     allowed_values_creatable: true,
-    get_allowed_values: getNetsuiteItemIdArrayAllowedValues,
+    get_allowed_values: getNetsuiteSalesItemIdArrayAllowedValues,
   },
   'item.items': {
     preselected: true,
     element_allowed_values_creatable: true,
-    get_element_allowed_values: getNetsuiteItemIdAllowedValues,
+    get_element_allowed_values: getNetsuiteSalesItemIdAllowedValues,
   },
   'item.items.item': {
     type: {
@@ -188,12 +193,12 @@ const salesOrderOptions = {
   item: {
     preselected: true,
     allowed_values_creatable: true,
-    get_allowed_values: getNetsuiteItemIdArrayAllowedValues,
+    get_allowed_values: getNetsuiteSalesItemIdArrayAllowedValues,
   },
   'item.items': {
     preselected: true,
     element_allowed_values_creatable: true,
-    get_element_allowed_values: getNetsuiteItemIdAllowedValues,
+    get_element_allowed_values: getNetsuiteSalesItemIdAllowedValues,
   },
   'item.items.item': {
     type: {
@@ -205,10 +210,20 @@ const salesOrderOptions = {
       },
     },
   },
+  'item.items.quantity': {
+    preselected: true,
+  },
+  'item.items.amount': {
+    preselected: true,
+  },
   orderStatus: {
     preselected: true,
     allowed_values_creatable: true,
     get_allowed_values: getNetsuiteSalesOrderStatusObjectAllowedValues,
+  },
+  'orderStatus.id': {
+    allowed_values_creatable: true,
+    get_allowed_values: getNetsuiteSalesOrderStatusIdAllowedValues,
   },
   memo: {
     preselected: true,
@@ -228,6 +243,32 @@ const purchaseOrderOptions = {
     preselected: true,
     allowed_values_creatable: true,
     get_allowed_values: getNetsuiteCurrencyIdAllowedValues,
+  },
+  item: {
+    preselected: true,
+    allowed_values_creatable: true,
+    get_allowed_values: getNetsuitePurchaseItemIdArrayAllowedValues,
+  },
+  'item.items': {
+    preselected: true,
+    element_allowed_values_creatable: true,
+    get_element_allowed_values: getNetsuitePurchaseItemIdAllowedValues,
+  },
+  'item.items.item': {
+    type: {
+      type: 'hash',
+      fields: {
+        id: {
+          type: 'string',
+        },
+      },
+    },
+  },
+  'item.items.quantity': {
+    preselected: true,
+  },
+  'item.items.amount': {
+    preselected: true,
   },
   entity: {
     preselected: true,

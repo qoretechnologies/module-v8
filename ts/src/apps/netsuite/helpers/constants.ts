@@ -60,7 +60,7 @@ export const fetchNetsuiteAllowedValues = async ({
   const allowedValues: IQoreAllowedValue[] = [];
   const startTime = Date.now();
   let offset = 0;
-  const limit = 500;
+  const limit = 1000;
 
   try {
     let hasMore = true;
