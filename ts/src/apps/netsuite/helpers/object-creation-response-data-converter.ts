@@ -12,9 +12,8 @@ export const netsuiteObjectCreationResponseDataConverter: TQoreResponseDataConve
 > = async (res, context) => {
   const token = context?.conn_opts?.token;
   const account_id = context?.conn_opts?.account_id;
-
-  const location = res?.headers?.Location;
-
+  const headers = context?.opts?.headers;
+  const location = headers?.Location;
   const missingValues: string[] = [];
 
   if (!token) missingValues.push('token');
@@ -22,10 +21,15 @@ export const netsuiteObjectCreationResponseDataConverter: TQoreResponseDataConve
   if (!location) missingValues.push('headers.Location');
 
   if (missingValues.length) {
-    throw new Error(
+    Debugger.log(
       `All of the following values are required: ${missingValues.join(', ')}` +
         ` to convert the netsuite customer response`
     );
+
+    return {
+      ...res,
+      headers,
+    };
   }
 
   const objectId = location.split('/').pop();
