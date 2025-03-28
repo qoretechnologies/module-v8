@@ -13,12 +13,12 @@ export const netsuiteObjectCreationResponseDataConverter: TQoreResponseDataConve
   const token = context?.conn_opts?.token;
   const account_id = context?.conn_opts?.account_id;
   const headers = context?.opts?.headers;
-  const location = headers?.Location;
+  const location = headers?.location;
   const missingValues: string[] = [];
 
   if (!token) missingValues.push('token');
   if (!account_id) missingValues.push('account_id');
-  if (!location) missingValues.push('headers.Location');
+  if (!location) missingValues.push('headers.location');
 
   if (missingValues.length) {
     Debugger.log(
