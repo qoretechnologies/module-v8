@@ -10857,6 +10857,36 @@ type RootTranslation = {
 					 * A​l​l​o​w​s​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​n​e​w​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​ ​r​e​c​o​r​d​ ​i​n​ ​N​e​t​S​u​i​t​e​.
 					 */
 					longDesc: string
+					options: {
+						entity: {
+							/**
+							 * V​e​n​d​o​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​v​e​n​d​o​r​ ​f​o​r​ ​t​h​e​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​e​n​d​o​r​ ​f​o​r​ ​t​h​e​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​ 
+							 */
+							longDesc: string
+						}
+						employee: {
+							/**
+							 * E​m​p​l​o​y​e​e​ ​(​R​e​q​u​e​s​t​o​r​)
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​m​p​l​o​y​e​e​ ​w​h​o​ ​r​e​q​u​e​s​t​e​d​ ​t​h​e​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​p​l​o​y​e​e​ ​w​h​o​ ​r​e​q​u​e​s​t​e​d​ ​t​h​e​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r
+							 */
+							longDesc: string
+						}
+					}
 				}
 				purchaseOrder_id_get: {
 					/**
@@ -10885,6 +10915,36 @@ type RootTranslation = {
 					 * A​l​l​o​w​s​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​u​p​d​a​t​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​ ​b​y​ ​i​t​s​ ​I​D​.
 					 */
 					longDesc: string
+					options: {
+						entity: {
+							/**
+							 * V​e​n​d​o​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​v​e​n​d​o​r​ ​f​o​r​ ​t​h​e​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​e​n​d​o​r​ ​f​o​r​ ​t​h​e​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​ 
+							 */
+							longDesc: string
+						}
+						employee: {
+							/**
+							 * E​m​p​l​o​y​e​e​ ​(​R​e​q​u​e​s​t​o​r​)
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​m​p​l​o​y​e​e​ ​w​h​o​ ​r​e​q​u​e​s​t​e​d​ ​t​h​e​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​p​l​o​y​e​e​ ​w​h​o​ ​r​e​q​u​e​s​t​e​d​ ​t​h​e​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r
+							 */
+							longDesc: string
+						}
+					}
 				}
 				purchaseOrder_id_delete: {
 					/**
@@ -10927,6 +10987,22 @@ type RootTranslation = {
 					 * A​l​l​o​w​s​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​n​e​w​ ​s​a​l​e​s​ ​o​r​d​e​r​ ​r​e​c​o​r​d​ ​i​n​ ​N​e​t​S​u​i​t​e​.
 					 */
 					longDesc: string
+					options: {
+						entity: {
+							/**
+							 * C​u​s​t​o​m​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​f​o​r​ ​t​h​e​ ​s​a​l​e​s​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​f​o​r​ ​t​h​e​ ​s​a​l​e​s​ ​o​r​d​e​r​ 
+							 */
+							longDesc: string
+						}
+					}
 				}
 				salesOrder_id_get: {
 					/**
@@ -10955,6 +11031,22 @@ type RootTranslation = {
 					 * A​l​l​o​w​s​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​u​p​d​a​t​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​a​l​e​s​ ​o​r​d​e​r​ ​b​y​ ​i​t​s​ ​I​D​.
 					 */
 					longDesc: string
+					options: {
+						entity: {
+							/**
+							 * C​u​s​t​o​m​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​f​o​r​ ​t​h​e​ ​s​a​l​e​s​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​f​o​r​ ​t​h​e​ ​s​a​l​e​s​ ​o​r​d​e​r​ 
+							 */
+							longDesc: string
+						}
+					}
 				}
 				salesOrder_id_delete: {
 					/**
@@ -25310,6 +25402,36 @@ export type TranslationFunctions = {
 					 * Allows the user to create a new purchase order record in NetSuite.
 					 */
 					longDesc: () => LocalizedString
+					options: {
+						entity: {
+							/**
+							 * Vendor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The vendor for the purchase order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The vendor for the purchase order 
+							 */
+							longDesc: () => LocalizedString
+						}
+						employee: {
+							/**
+							 * Employee (Requestor)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The employee who requested the purchase order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The employee who requested the purchase order
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				purchaseOrder_id_get: {
 					/**
@@ -25338,6 +25460,36 @@ export type TranslationFunctions = {
 					 * Allows the user to update details of a specific purchase order by its ID.
 					 */
 					longDesc: () => LocalizedString
+					options: {
+						entity: {
+							/**
+							 * Vendor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The vendor for the purchase order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The vendor for the purchase order 
+							 */
+							longDesc: () => LocalizedString
+						}
+						employee: {
+							/**
+							 * Employee (Requestor)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The employee who requested the purchase order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The employee who requested the purchase order
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				purchaseOrder_id_delete: {
 					/**
@@ -25380,6 +25532,22 @@ export type TranslationFunctions = {
 					 * Allows the user to create a new sales order record in NetSuite.
 					 */
 					longDesc: () => LocalizedString
+					options: {
+						entity: {
+							/**
+							 * Customer
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The customer for the sales order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The customer for the sales order 
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				salesOrder_id_get: {
 					/**
@@ -25408,6 +25576,22 @@ export type TranslationFunctions = {
 					 * Allows the user to update details of a specific sales order by its ID.
 					 */
 					longDesc: () => LocalizedString
+					options: {
+						entity: {
+							/**
+							 * Customer
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The customer for the sales order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The customer for the sales order 
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				salesOrder_id_delete: {
 					/**

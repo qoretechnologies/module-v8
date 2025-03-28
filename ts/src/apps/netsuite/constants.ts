@@ -6,28 +6,39 @@ import {
 import { buildActionsFromSwaggerSchema } from '../../global/helpers';
 import netsuite from '../../schemas/netsuite.swagger.json';
 import { getNetsuiteAccountIdAllowedValues } from './helpers/get-account-id-allowed-values';
+import { getNetsuiteAccountTypeAllowedValues } from './helpers/get-account-type-allowed-values';
+import { getNetsuiteContactIdAllowedValues } from './helpers/get-contact-id-allowed-values';
+import { getNetsuiteCurrencyIdAllowedValues } from './helpers/get-currency-id-allowed-values';
 import {
   getNetsuiteCustomerEntityIdAllowedValues,
   getNetsuiteCustomerIdAllowedValues,
 } from './helpers/get-customer-id-allowed-values';
+import { getNetsuiteCustomerStatusIdAllowedValues } from './helpers/get-customer-status-allowed-values';
+import { getNetsuiteEmployeeObjectAllowedValues } from './helpers/get-employee-id-allowed-values';
 import { getNetsuiteInvoiceIdAllowedValues } from './helpers/get-invoice-id-allowed-values';
+import {
+  getNetsuitePurchaseItemIdAllowedValues,
+  getNetsuitePurchaseItemIdArrayAllowedValues,
+  getNetsuiteSalesItemIdAllowedValues,
+  getNetsuiteSalesItemIdArrayAllowedValues,
+} from './helpers/get-item-id-allowed-values';
 import { getNetsuiteJournalEntryIdAllowedValues } from './helpers/get-journal-entry-id-allowed-values';
+import { getNetsuiteOpportunityIdAllowedValues } from './helpers/get-opportunity-id-allowed-values';
 import { getNetsuitePurchaseOrderIdAllowedValues } from './helpers/get-purchase-order-id-allowed-values';
 import { getNetsuiteSalesOrderIdAllowedValues } from './helpers/get-sales-order-id-allowed-values';
-import { getNetsuitevendorIdAllowedValues } from './helpers/get-vendor-id-allowed-values';
-import { getNetsuiteContactIdAllowedValues } from './helpers/get-contact-id-allowed-values';
+import {
+  getNetsuiteSalesOrderStatusIdAllowedValues,
+  getNetsuiteSalesOrderStatusObjectAllowedValues,
+} from './helpers/get-sales-order-status-id-allowed-values';
 import {
   getNetsuiteSubsidiaryIdAllowedValues,
   getNetsuiteSubsidiaryIdArrayAllowedValues,
 } from './helpers/get-subsidiary-id-allowed-values';
-import { getNetsuiteCurrencyIdAllowedValues } from './helpers/get-currency-id-allowed-values';
-import { getNetsuiteCustomerStatusIdAllowedValues } from './helpers/get-customer-status-allowed-values';
-import { getNetsuiteAccountTypeAllowedValues } from './helpers/get-account-type-allowed-values';
-import { getNetsuiteOpportunityIdAllowedValues } from './helpers/get-opportunity-id-allowed-values';
 import {
-  getNetsuiteItemIdAllowedValues,
-  getNetsuiteItemIdArrayAllowedValues,
-} from './helpers/get-item-id-allowed-values';
+  getNetsuiteVendorIdAllowedValues,
+  getNetsuiteVendorObjectAllowedValues,
+} from './helpers/get-vendor-id-allowed-values';
+import { netsuiteObjectCreationResponseDataConverter } from './helpers/object-creation-response-data-converter';
 
 export const NETSUITE_APP_NAME = 'NetSuite';
 
@@ -147,14 +158,123 @@ const invoiceOptions = {
   item: {
     preselected: true,
     allowed_values_creatable: true,
-    get_allowed_values: getNetsuiteItemIdArrayAllowedValues,
+    get_allowed_values: getNetsuiteSalesItemIdArrayAllowedValues,
   },
   'item.items': {
     preselected: true,
     element_allowed_values_creatable: true,
-    get_element_allowed_values: getNetsuiteItemIdAllowedValues,
+    get_element_allowed_values: getNetsuiteSalesItemIdAllowedValues,
   },
   'item.items.item': {
+    type: {
+      type: 'hash',
+      fields: {
+        id: {
+          type: 'string',
+        },
+      },
+    },
+  },
+} satisfies Record<string, TQoreAppActionOverrideOption<TCustomConnOptions>>;
+
+const salesOrderOptions = {
+  entity: {
+    get_allowed_values: getNetsuiteCustomerEntityIdAllowedValues,
+    allowed_values_creatable: true,
+    type: {
+      type: 'hash',
+      fields: {
+        id: {
+          type: 'string',
+        },
+      },
+    },
+    preselected: true,
+  },
+  item: {
+    preselected: true,
+    allowed_values_creatable: true,
+    get_allowed_values: getNetsuiteSalesItemIdArrayAllowedValues,
+  },
+  'item.items': {
+    preselected: true,
+    element_allowed_values_creatable: true,
+    get_element_allowed_values: getNetsuiteSalesItemIdAllowedValues,
+  },
+  'item.items.item': {
+    type: {
+      type: 'hash',
+      fields: {
+        id: {
+          type: 'string',
+        },
+      },
+    },
+  },
+  'item.items.quantity': {
+    preselected: true,
+  },
+  'item.items.amount': {
+    preselected: true,
+  },
+  orderStatus: {
+    preselected: true,
+    allowed_values_creatable: true,
+    get_allowed_values: getNetsuiteSalesOrderStatusObjectAllowedValues,
+  },
+  'orderStatus.id': {
+    allowed_values_creatable: true,
+    get_allowed_values: getNetsuiteSalesOrderStatusIdAllowedValues,
+  },
+  memo: {
+    preselected: true,
+  },
+} satisfies Record<string, TQoreAppActionOverrideOption<TCustomConnOptions>>;
+
+const purchaseOrderOptions = {
+  employee: {
+    preselected: true,
+    allowed_values_creatable: true,
+    get_allowed_values: getNetsuiteEmployeeObjectAllowedValues,
+  },
+  memo: {
+    preselected: true,
+  },
+  currency: {
+    preselected: true,
+    allowed_values_creatable: true,
+    get_allowed_values: getNetsuiteCurrencyIdAllowedValues,
+  },
+  item: {
+    preselected: true,
+    allowed_values_creatable: true,
+    get_allowed_values: getNetsuitePurchaseItemIdArrayAllowedValues,
+  },
+  'item.items': {
+    preselected: true,
+    element_allowed_values_creatable: true,
+    get_element_allowed_values: getNetsuitePurchaseItemIdAllowedValues,
+  },
+  'item.items.item': {
+    type: {
+      type: 'hash',
+      fields: {
+        id: {
+          type: 'string',
+        },
+      },
+    },
+  },
+  'item.items.quantity': {
+    preselected: true,
+  },
+  'item.items.amount': {
+    preselected: true,
+  },
+  entity: {
+    preselected: true,
+    allowed_values_creatable: true,
+    get_allowed_values: getNetsuiteVendorObjectAllowedValues,
     type: {
       type: 'hash',
       fields: {
@@ -233,6 +353,7 @@ export const NETSUITE_ALLOWED_PATHS = {
   '/customer': {
     POST: {
       override_options: customerOptions,
+      response_data_converter: netsuiteObjectCreationResponseDataConverter,
     },
   },
   '/customer/{id}': {
@@ -297,6 +418,7 @@ export const NETSUITE_ALLOWED_PATHS = {
   '/contact': {
     POST: {
       override_options: contactOptions,
+      response_data_converter: netsuiteObjectCreationResponseDataConverter,
     },
   },
   '/contact/{id}': {
@@ -327,7 +449,10 @@ export const NETSUITE_ALLOWED_PATHS = {
     },
   },
   '/salesOrder': {
-    POST: {},
+    POST: {
+      override_options: salesOrderOptions,
+      response_data_converter: netsuiteObjectCreationResponseDataConverter,
+    },
   },
   '/salesOrder/{id}': {
     GET: {
@@ -344,6 +469,7 @@ export const NETSUITE_ALLOWED_PATHS = {
           allowed_values_creatable: true,
           get_allowed_values: getNetsuiteSalesOrderIdAllowedValues,
         },
+        ...salesOrderOptions,
       },
     },
     DELETE: {
@@ -358,6 +484,7 @@ export const NETSUITE_ALLOWED_PATHS = {
   '/invoice': {
     POST: {
       override_options: invoiceOptions,
+      response_data_converter: netsuiteObjectCreationResponseDataConverter,
     },
   },
   '/invoice/{id}': {
@@ -390,6 +517,7 @@ export const NETSUITE_ALLOWED_PATHS = {
   '/vendor': {
     POST: {
       override_options: vendorOptions,
+      response_data_converter: netsuiteObjectCreationResponseDataConverter,
     },
   },
   '/vendor/{id}': {
@@ -397,7 +525,7 @@ export const NETSUITE_ALLOWED_PATHS = {
       override_options: {
         id: {
           allowed_values_creatable: true,
-          get_allowed_values: getNetsuitevendorIdAllowedValues,
+          get_allowed_values: getNetsuiteVendorIdAllowedValues,
         },
       },
     },
@@ -405,7 +533,7 @@ export const NETSUITE_ALLOWED_PATHS = {
       override_options: {
         id: {
           allowed_values_creatable: true,
-          get_allowed_values: getNetsuitevendorIdAllowedValues,
+          get_allowed_values: getNetsuiteVendorIdAllowedValues,
         },
         ...vendorOptions,
       },
@@ -414,13 +542,16 @@ export const NETSUITE_ALLOWED_PATHS = {
       override_options: {
         id: {
           allowed_values_creatable: true,
-          get_allowed_values: getNetsuitevendorIdAllowedValues,
+          get_allowed_values: getNetsuiteVendorIdAllowedValues,
         },
       },
     },
   },
   '/purchaseOrder': {
-    POST: {},
+    POST: {
+      override_options: purchaseOrderOptions,
+      response_data_converter: netsuiteObjectCreationResponseDataConverter,
+    },
   },
   '/purchaseOrder/{id}': {
     GET: {
@@ -437,6 +568,7 @@ export const NETSUITE_ALLOWED_PATHS = {
           allowed_values_creatable: true,
           get_allowed_values: getNetsuitePurchaseOrderIdAllowedValues,
         },
+        ...purchaseOrderOptions,
       },
     },
     DELETE: {
@@ -449,7 +581,9 @@ export const NETSUITE_ALLOWED_PATHS = {
     },
   },
   '/journalEntry': {
-    POST: {},
+    POST: {
+      response_data_converter: netsuiteObjectCreationResponseDataConverter,
+    },
   },
   '/journalEntry/{id}': {
     GET: {
