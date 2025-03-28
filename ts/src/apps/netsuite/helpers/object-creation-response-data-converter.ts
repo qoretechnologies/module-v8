@@ -12,8 +12,7 @@ export const netsuiteObjectCreationResponseDataConverter: TQoreResponseDataConve
 > = async (res, context) => {
   const token = context?.conn_opts?.token;
   const account_id = context?.conn_opts?.account_id;
-  const headers = context?.opts?.headers;
-  const location = headers?.location;
+  const location = res?.headers?.location;
   const missingValues: string[] = [];
 
   if (!token) missingValues.push('token');
@@ -26,10 +25,7 @@ export const netsuiteObjectCreationResponseDataConverter: TQoreResponseDataConve
         ` to convert the netsuite customer response`
     );
 
-    return {
-      ...res,
-      headers,
-    };
+    return res;
   }
 
   const objectId = location.split('/').pop();
@@ -55,7 +51,6 @@ export const netsuiteObjectCreationResponseDataConverter: TQoreResponseDataConve
 
       return {
         ...res,
-        location,
         id: objectId,
       };
     }
