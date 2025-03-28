@@ -17,10 +17,10 @@ import { getNetsuiteCustomerStatusIdAllowedValues } from './helpers/get-customer
 import { getNetsuiteEmployeeObjectAllowedValues } from './helpers/get-employee-id-allowed-values';
 import { getNetsuiteInvoiceIdAllowedValues } from './helpers/get-invoice-id-allowed-values';
 import {
-  getNetsuiteSalesItemIdAllowedValues,
-  getNetsuiteSalesItemIdArrayAllowedValues,
   getNetsuitePurchaseItemIdAllowedValues,
   getNetsuitePurchaseItemIdArrayAllowedValues,
+  getNetsuiteSalesItemIdAllowedValues,
+  getNetsuiteSalesItemIdArrayAllowedValues,
 } from './helpers/get-item-id-allowed-values';
 import { getNetsuiteJournalEntryIdAllowedValues } from './helpers/get-journal-entry-id-allowed-values';
 import { getNetsuiteOpportunityIdAllowedValues } from './helpers/get-opportunity-id-allowed-values';
@@ -38,6 +38,7 @@ import {
   getNetsuiteVendorIdAllowedValues,
   getNetsuiteVendorObjectAllowedValues,
 } from './helpers/get-vendor-id-allowed-values';
+import { netsuiteObjectCreationResponseDataConverter } from './helpers/object-creation-response-data-converter';
 
 export const NETSUITE_APP_NAME = 'NetSuite';
 
@@ -352,6 +353,7 @@ export const NETSUITE_ALLOWED_PATHS = {
   '/customer': {
     POST: {
       override_options: customerOptions,
+      response_data_converter: netsuiteObjectCreationResponseDataConverter,
     },
   },
   '/customer/{id}': {
@@ -416,6 +418,7 @@ export const NETSUITE_ALLOWED_PATHS = {
   '/contact': {
     POST: {
       override_options: contactOptions,
+      response_data_converter: netsuiteObjectCreationResponseDataConverter,
     },
   },
   '/contact/{id}': {
@@ -448,6 +451,7 @@ export const NETSUITE_ALLOWED_PATHS = {
   '/salesOrder': {
     POST: {
       override_options: salesOrderOptions,
+      response_data_converter: netsuiteObjectCreationResponseDataConverter,
     },
   },
   '/salesOrder/{id}': {
@@ -480,6 +484,7 @@ export const NETSUITE_ALLOWED_PATHS = {
   '/invoice': {
     POST: {
       override_options: invoiceOptions,
+      response_data_converter: netsuiteObjectCreationResponseDataConverter,
     },
   },
   '/invoice/{id}': {
@@ -512,6 +517,7 @@ export const NETSUITE_ALLOWED_PATHS = {
   '/vendor': {
     POST: {
       override_options: vendorOptions,
+      response_data_converter: netsuiteObjectCreationResponseDataConverter,
     },
   },
   '/vendor/{id}': {
@@ -544,6 +550,7 @@ export const NETSUITE_ALLOWED_PATHS = {
   '/purchaseOrder': {
     POST: {
       override_options: purchaseOrderOptions,
+      response_data_converter: netsuiteObjectCreationResponseDataConverter,
     },
   },
   '/purchaseOrder/{id}': {
@@ -574,7 +581,9 @@ export const NETSUITE_ALLOWED_PATHS = {
     },
   },
   '/journalEntry': {
-    POST: {},
+    POST: {
+      response_data_converter: netsuiteObjectCreationResponseDataConverter,
+    },
   },
   '/journalEntry/{id}': {
     GET: {
