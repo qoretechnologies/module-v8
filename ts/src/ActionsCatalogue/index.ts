@@ -10,8 +10,22 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import fs from 'fs';
 import path from 'path';
+import asana from '../apps/asana';
+import esignature from '../apps/esignature';
+import freshdesk from '../apps/freshdesk';
+import github from '../apps/github';
+import hubspot from '../apps/hubspot';
+import jira from '../apps/jira';
 import magento from '../apps/magento';
+import netsuite from '../apps/netsuite';
+import outlook from '../apps/outlook';
+import pipedrive from '../apps/pipedrive';
 import salesforce from '../apps/salesforce';
+import serenity from '../apps/serenity';
+import sharepoint from '../apps/sharepoint';
+import stripe from '../apps/stripe';
+import teams from '../apps/teams';
+import zendesk from '../apps/zendesk';
 import { Log } from '../decorators/Logger';
 import { Locales } from '../i18n/i18n-types';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
@@ -30,20 +44,20 @@ export interface IQoreApi {
 }
 
 const NEW_APPS = {
-  // serenity,
-  // netsuite,
-  // zendesk,
-  // asana,
-  // esignature,
-  // github,
-  // jira,
-  // stripe,
-  // freshdesk,
-  // hubspot,
-  // sharepoint,
-  // outlook,
-  // teams,
-  // pipedrive,
+  serenity,
+  netsuite,
+  zendesk,
+  asana,
+  esignature,
+  github,
+  jira,
+  stripe,
+  freshdesk,
+  hubspot,
+  sharepoint,
+  outlook,
+  teams,
+  pipedrive,
   magento,
 } as const;
 
