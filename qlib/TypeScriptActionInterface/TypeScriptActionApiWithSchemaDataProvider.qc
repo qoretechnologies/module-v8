@@ -651,10 +651,15 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             debug("REST request for action after conversion %y: %y", getName(), req);
         }
 
-        auto rv = prov.doRequest(req, request_options);
+        auto rv = prov.doRequest(req, request_options +
+            (response_data_converter
+                ? {"include_response_headers": True}
+                : NOTHING
+            )
+        );
         if (response_data_converter) {
             if (!ctxinfo) {
-                ctxinfo = getCallContextInfo();
+                ctxinfo = getCallContextInfo(rv{"headers", "headers-raw"});
             }
             rv = getAsyncValue(response_data_converter, rv, ctxinfo);
             debug("REST response for action after conversion %y: %y", getName(), rv);
