@@ -51,6 +51,7 @@ export default (locale: Locales) =>
     rest: {
       url: '{{instance_url}}/rest',
       oauth2_token_url: '{{instance_url}}/rest/V1/integration/admin/token',
+      oauth2_token_expiry_hint: 60,
       data: 'json',
       oauth2_grant_type: 'password',
       ping_method: 'GET',
