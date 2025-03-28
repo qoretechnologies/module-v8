@@ -14326,6 +14326,142 @@ type RootTranslation = {
 				}
 			}
 		}
+		Magento: {
+			/**
+			 * M​a​g​e​n​t​o
+			 */
+			displayName: string
+			/**
+			 * E​-​c​o​m​m​e​r​c​e​ ​p​l​a​t​f​o​r​m​ ​f​o​r​ ​b​u​i​l​d​i​n​g​ ​o​n​l​i​n​e​ ​s​t​o​r​e​s​ ​a​n​d​ ​m​a​n​a​g​i​n​g​ ​c​u​s​t​o​m​e​r​s​,​ ​p​r​o​d​u​c​t​s​,​ ​a​n​d​ ​o​r​d​e​r​s
+			 */
+			shortDesc: string
+			/**
+			 * M​a​g​e​n​t​o​ ​i​s​ ​a​ ​f​l​e​x​i​b​l​e​ ​e​-​c​o​m​m​e​r​c​e​ ​p​l​a​t​f​o​r​m​ ​t​h​a​t​ ​p​r​o​v​i​d​e​s​ ​b​u​s​i​n​e​s​s​e​s​ ​w​i​t​h​ ​a​ ​c​o​m​p​l​e​t​e​ ​s​o​l​u​t​i​o​n​ ​f​o​r​ ​b​u​i​l​d​i​n​g​ ​a​n​d​ ​m​a​n​a​g​i​n​g​ ​o​n​l​i​n​e​ ​s​t​o​r​e​s​.​ ​T​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​w​o​r​k​f​l​o​w​s​ ​w​h​e​n​ ​c​u​s​t​o​m​e​r​,​ ​p​r​o​d​u​c​t​,​ ​o​r​d​e​r​,​ ​i​n​v​o​i​c​e​,​ ​o​r​ ​s​h​i​p​m​e​n​t​ ​e​v​e​n​t​s​ ​o​c​c​u​r​ ​i​n​ ​y​o​u​r​ ​M​a​g​e​n​t​o​ ​s​t​o​r​e​.
+			 */
+			longDesc: string
+			actions: {
+			}
+			triggers: {
+				'customer-created-or-updated': {
+					/**
+					 * C​u​s​t​o​m​e​r​ ​C​r​e​a​t​e​d​ ​o​r​ ​U​p​d​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​c​u​s​t​o​m​e​r​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​M​a​g​e​n​t​o
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​e​r​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​y​o​u​r​ ​M​a​g​e​n​t​o​ ​s​t​o​r​e​ ​o​r​ ​w​h​e​n​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​u​s​t​o​m​e​r​'​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​s​ ​u​p​d​a​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						activationCriteria: {
+							/**
+							 * A​c​t​i​v​a​t​i​o​n​ ​C​r​i​t​e​r​i​a
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​y​ ​w​h​e​n​ ​t​h​i​s​ ​t​r​i​g​g​e​r​ ​s​h​o​u​l​d​ ​a​c​t​i​v​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​e​t​h​e​r​ ​t​h​i​s​ ​t​r​i​g​g​e​r​ ​s​h​o​u​l​d​ ​a​c​t​i​v​a​t​e​ ​o​n​ ​c​u​s​t​o​m​e​r​ ​c​r​e​a​t​i​o​n​ ​o​r​ ​o​n​ ​c​u​s​t​o​m​e​r​ ​u​p​d​a​t​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'invoice-created-or-updated': {
+					/**
+					 * I​n​v​o​i​c​e​ ​C​r​e​a​t​e​d​ ​o​r​ ​U​p​d​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​i​n​v​o​i​c​e​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​M​a​g​e​n​t​o
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​n​v​o​i​c​e​ ​i​s​ ​g​e​n​e​r​a​t​e​d​ ​i​n​ ​y​o​u​r​ ​M​a​g​e​n​t​o​ ​s​t​o​r​e​ ​o​r​ ​w​h​e​n​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​i​n​v​o​i​c​e​ ​i​s​ ​m​o​d​i​f​i​e​d​.
+					 */
+					longDesc: string
+					options: {
+						activationCriteria: {
+							/**
+							 * A​c​t​i​v​a​t​i​o​n​ ​C​r​i​t​e​r​i​a
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​y​ ​w​h​e​n​ ​t​h​i​s​ ​t​r​i​g​g​e​r​ ​s​h​o​u​l​d​ ​a​c​t​i​v​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​e​t​h​e​r​ ​t​h​i​s​ ​t​r​i​g​g​e​r​ ​s​h​o​u​l​d​ ​a​c​t​i​v​a​t​e​ ​o​n​ ​i​n​v​o​i​c​e​ ​c​r​e​a​t​i​o​n​ ​o​r​ ​o​n​ ​i​n​v​o​i​c​e​ ​u​p​d​a​t​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'product-created-or-updated': {
+					/**
+					 * P​r​o​d​u​c​t​ ​C​r​e​a​t​e​d​ ​o​r​ ​U​p​d​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​p​r​o​d​u​c​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​M​a​g​e​n​t​o
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​r​o​d​u​c​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​y​o​u​r​ ​M​a​g​e​n​t​o​ ​c​a​t​a​l​o​g​ ​o​r​ ​w​h​e​n​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​r​o​d​u​c​t​'​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​s​ ​m​o​d​i​f​i​e​d​.
+					 */
+					longDesc: string
+					options: {
+						activationCriteria: {
+							/**
+							 * A​c​t​i​v​a​t​i​o​n​ ​C​r​i​t​e​r​i​a
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​y​ ​w​h​e​n​ ​t​h​i​s​ ​t​r​i​g​g​e​r​ ​s​h​o​u​l​d​ ​a​c​t​i​v​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​e​t​h​e​r​ ​t​h​i​s​ ​t​r​i​g​g​e​r​ ​s​h​o​u​l​d​ ​a​c​t​i​v​a​t​e​ ​o​n​ ​p​r​o​d​u​c​t​ ​c​r​e​a​t​i​o​n​ ​o​r​ ​o​n​ ​p​r​o​d​u​c​t​ ​u​p​d​a​t​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'order-created': {
+					/**
+					 * O​r​d​e​r​ ​C​r​e​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​o​r​d​e​r​ ​i​s​ ​p​l​a​c​e​d​ ​i​n​ ​M​a​g​e​n​t​o
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​a​ ​c​u​s​t​o​m​e​r​ ​c​o​m​p​l​e​t​e​s​ ​t​h​e​ ​c​h​e​c​k​o​u​t​ ​p​r​o​c​e​s​s​ ​a​n​d​ ​p​l​a​c​e​s​ ​a​ ​n​e​w​ ​o​r​d​e​r​ ​i​n​ ​y​o​u​r​ ​M​a​g​e​n​t​o​ ​s​t​o​r​e​.
+					 */
+					longDesc: string
+				}
+				'shipment-created': {
+					/**
+					 * S​h​i​p​m​e​n​t​ ​C​r​e​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​s​h​i​p​m​e​n​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​M​a​g​e​n​t​o
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​s​h​i​p​m​e​n​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​f​o​r​ ​a​n​ ​o​r​d​e​r​ ​i​n​ ​y​o​u​r​ ​M​a​g​e​n​t​o​ ​s​t​o​r​e​,​ ​i​n​d​i​c​a​t​i​n​g​ ​t​h​a​t​ ​p​r​o​d​u​c​t​s​ ​h​a​v​e​ ​b​e​e​n​ ​s​h​i​p​p​e​d​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.
+					 */
+					longDesc: string
+				}
+			}
+		}
 	}
 }
 
@@ -28640,6 +28776,142 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 						}
 					}
+				}
+			}
+		}
+		Magento: {
+			/**
+			 * Magento
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * E-commerce platform for building online stores and managing customers, products, and orders
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Magento is a flexible e-commerce platform that provides businesses with a complete solution for building and managing online stores. This integration allows you to automate workflows when customer, product, order, invoice, or shipment events occur in your Magento store.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+			}
+			triggers: {
+				'customer-created-or-updated': {
+					/**
+					 * Customer Created or Updated
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a customer is created or updated in Magento
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when a new customer is created in your Magento store or when an existing customer's information is updated.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						activationCriteria: {
+							/**
+							 * Activation Criteria
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specify when this trigger should activate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select whether this trigger should activate on customer creation or on customer updates.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'invoice-created-or-updated': {
+					/**
+					 * Invoice Created or Updated
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an invoice is created or updated in Magento
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when a new invoice is generated in your Magento store or when an existing invoice is modified.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						activationCriteria: {
+							/**
+							 * Activation Criteria
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specify when this trigger should activate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select whether this trigger should activate on invoice creation or on invoice updates.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'product-created-or-updated': {
+					/**
+					 * Product Created or Updated
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a product is created or updated in Magento
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when a new product is added to your Magento catalog or when an existing product's information is modified.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						activationCriteria: {
+							/**
+							 * Activation Criteria
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specify when this trigger should activate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select whether this trigger should activate on product creation or on product updates.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'order-created': {
+					/**
+					 * Order Created
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new order is placed in Magento
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when a customer completes the checkout process and places a new order in your Magento store.
+					 */
+					longDesc: () => LocalizedString
+				}
+				'shipment-created': {
+					/**
+					 * Shipment Created
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new shipment is created in Magento
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when a new shipment is created for an order in your Magento store, indicating that products have been shipped to the customer.
+					 */
+					longDesc: () => LocalizedString
 				}
 			}
 		}

@@ -10,25 +10,12 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import fs from 'fs';
 import path from 'path';
-import asana from '../apps/asana';
-import esignature from '../apps/esignature';
-import freshdesk from '../apps/freshdesk';
-import github from '../apps/github';
-import hubspot from '../apps/hubspot';
-import jira from '../apps/jira';
-import netsuite from '../apps/netsuite';
+import magento from '../apps/magento';
 import salesforce from '../apps/salesforce';
-import sharepoint from '../apps/sharepoint';
-import stripe from '../apps/stripe';
-import zendesk from '../apps/zendesk';
 import { Log } from '../decorators/Logger';
 import { Locales } from '../i18n/i18n-types';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
-import outlook from '../apps/outlook';
-import teams from '../apps/teams';
-import serenity from '../apps/serenity';
-import pipedrive from '../apps/pipedrive';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -43,20 +30,21 @@ export interface IQoreApi {
 }
 
 const NEW_APPS = {
-  serenity,
-  netsuite,
-  zendesk,
-  asana,
-  esignature,
-  github,
-  jira,
-  stripe,
-  freshdesk,
-  hubspot,
-  sharepoint,
-  outlook,
-  teams,
-  pipedrive,
+  // serenity,
+  // netsuite,
+  // zendesk,
+  // asana,
+  // esignature,
+  // github,
+  // jira,
+  // stripe,
+  // freshdesk,
+  // hubspot,
+  // sharepoint,
+  // outlook,
+  // teams,
+  // pipedrive,
+  magento,
 } as const;
 
 const EXISTING_APPS = {
