@@ -39,14 +39,14 @@ export const getMagentoOrderIdAllowedValues: TQoreGetAllowedValuesFunction<
   const token = context?.conn_opts?.token;
   const url = context?.conn_opts?.url;
 
-  const missngValues: string[] = [];
+  const missingValues: string[] = [];
 
-  if (!url) missngValues.push('url');
-  if (!token) missngValues.push('token');
+  if (!url) missingValues.push('url');
+  if (!token) missingValues.push('token');
 
-  if (missngValues.length) {
+  if (missingValues.length) {
     throw new Error(
-      `All of the following values are required: ${missngValues.join(', ')} to fetch order allowed values for Magento`
+      `All of the following values are required: ${missingValues.join(', ')} to fetch order allowed values for Magento`
     );
   }
 
