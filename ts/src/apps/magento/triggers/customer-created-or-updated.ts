@@ -130,7 +130,7 @@ const getLastUpdatedRecords = async (token: string, url: string): Promise<any> =
   const { data } = await fetchMagentoData({
     token,
     url,
-    path: 'V1/customers/search',
+    path: '/V1/customers/search',
     limit: DEFAULT_TRIGGER_POLL_ITEM_LIMIT,
     params: {
       'searchCriteria[sortOrders][0][field]': 'updated_at',
