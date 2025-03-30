@@ -2395,6 +2395,60 @@ const en = {
             },
           },
         },
+        salesOrder_post_simplified: {
+          displayName: 'Create Sales Order (Simplified)',
+          shortDesc: 'Creates a new sales order with simplified options.',
+          longDesc:
+            'Creates a new customer sales order in NetSuite with only the most commonly used fields, making order creation faster and more straightforward.',
+          options: {
+            entity: {
+              displayName: 'Customer',
+              shortDesc: 'Customer for this order',
+              longDesc:
+                'The NetSuite internal ID of the customer this sales order is for. Must be an existing customer record in your NetSuite account.',
+            },
+            memo: {
+              displayName: 'Memo',
+              shortDesc: 'Order notes',
+              longDesc:
+                'Additional notes or information about this order. This will appear in the memo field on the sales order record.',
+            },
+            orderStatus: {
+              displayName: 'Order Status',
+              shortDesc: 'Current status of order',
+              longDesc:
+                'The processing status of this sales order (e.g., Pending Approval, Pending Fulfillment). Controls workflow and availability for further processing.',
+            },
+            item: {
+              displayName: 'Order Items',
+              shortDesc: 'Products or services being ordered',
+              longDesc:
+                'List of items being purchased in this order. Each item requires an ID and amount',
+              type: {
+                fields: {
+                  id: {
+                    displayName: 'Item ID',
+                    shortDesc: 'NetSuite item identifier',
+                    longDesc:
+                      'The internal ID of the inventory item, non-inventory item, service, or other item type in NetSuite that is being ordered.',
+                  },
+                  quantity: {
+                    displayName: 'Quantity',
+                    shortDesc: 'Number of units',
+                    longDesc:
+                      'The number of units being ordered for this line item. For services, this is typically hours or days.',
+                  },
+                  amount: {
+                    displayName: 'Amount Override',
+                    shortDesc: 'Custom price (optional)',
+                    longDesc:
+                      'Optional custom price override for this line item. If provided, overrides the standard price calculation (quantity × rate). Leave empty to use standard pricing from the price level assigned to the customer.',
+                  },
+                },
+              },
+            },
+          },
+        },
         salesOrder_id_get: {
           displayName: 'Get Sales Order',
           shortDesc: 'Retrieve details of a specific sales order.',
