@@ -32,12 +32,6 @@ const getMapNetSuiteSubsidiary =
       value = subsidiary.id as TValueType;
     }
 
-    if (type === 'object') {
-      value = { id: subsidiary.id } as TValueType;
-    } else if (type === 'array') {
-      value = { items: [{ id: subsidiary.id }] } as TValueType;
-    }
-
     return {
       value,
       display_name: subsidiary.fullname,
