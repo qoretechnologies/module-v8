@@ -55,6 +55,7 @@ type TBuildActionsFromSwaggerSchemaParams = {
   app?: string;
   locale?: Locales;
   schemaPath?: string;
+  actionNameModifier?: string;
 };
 
 // !IMPORTANT
@@ -73,6 +74,7 @@ export const buildActionsFromSwaggerSchema = ({
   schemaPath,
   app,
   locale = 'en',
+  actionNameModifier = '',
 }: TBuildActionsFromSwaggerSchemaParams): IQorePartialAppActionWithSwaggerPath[] => {
   // Return empty actions if schema or allowedPaths is missing
   if (!schema || (allowedPaths && Object.keys(allowedPaths).length === 0)) {
@@ -119,11 +121,15 @@ export const buildActionsFromSwaggerSchema = ({
         actionData = { ...actionData, ...pathData.processor(dataWithoutParameters) };
       }
 
-      const actionIdentifier = getPropertyOfSchemaData(
+      let actionIdentifier = getPropertyOfSchemaData(
         dataWithoutParameters,
         'operationId',
         `${path}/${method}`.replace(/\//g, '_').replace(/^_/, '').replace(/[{}]/g, '')
       );
+
+      if (actionNameModifier) {
+        actionIdentifier = `${actionIdentifier}_${actionNameModifier}`;
+      }
 
       const action: IQorePartialAppActionWithSwaggerPath = {
         action: actionIdentifier,

@@ -20,6 +20,10 @@ export type TNetsuiteSuiteQlData = {
   hasMore: boolean;
 };
 
+export type TNetsuiteObjectAllowedValue = {
+  id: string;
+};
+
 export const fetchSuiteQlData = async (
   options: TFetchSuiteQlDataOptions
 ): Promise<TNetsuiteSuiteQlData> => {

@@ -29,7 +29,7 @@ const mapNetSuiteCustomerEntity = (
 });
 
 const createNetsuiteCustomerIdAllowedValuesFunction = (
-  type: 'id' | 'entity'
+  type: 'string' | 'object'
 ): TQoreGetAllowedValuesFunction<typeof NETSUITE_CONN_OPTIONS, any> => {
   return async (context): Promise<IQoreAllowedValue<any>[]> => {
     const token = context?.conn_opts?.token;
@@ -44,7 +44,7 @@ const createNetsuiteCustomerIdAllowedValuesFunction = (
     const customers = (await fetchNetsuiteAllowedValues({
       account_id,
       token,
-      mapItemToAllowedValue: type === 'entity' ? mapNetSuiteCustomerEntity : mapNetSuiteCustomer,
+      mapItemToAllowedValue: type === 'object' ? mapNetSuiteCustomerEntity : mapNetSuiteCustomer,
       query: `SELECT ${fieldsToFetch.join(',')} FROM customer ORDER BY customer.datecreated DESC`,
     })) as IQoreAllowedValue<any>[];
 
@@ -55,9 +55,9 @@ const createNetsuiteCustomerIdAllowedValuesFunction = (
 export const getNetsuiteCustomerEntityIdAllowedValues: TQoreGetAllowedValuesFunction<
   typeof NETSUITE_CONN_OPTIONS,
   TCustomerAllowedValue
-> = createNetsuiteCustomerIdAllowedValuesFunction('entity');
+> = createNetsuiteCustomerIdAllowedValuesFunction('object');
 
 export const getNetsuiteCustomerIdAllowedValues: TQoreGetAllowedValuesFunction<
   typeof NETSUITE_CONN_OPTIONS,
   string
-> = createNetsuiteCustomerIdAllowedValuesFunction('id');
+> = createNetsuiteCustomerIdAllowedValuesFunction('string');

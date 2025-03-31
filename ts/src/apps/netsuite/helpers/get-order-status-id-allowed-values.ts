@@ -8,6 +8,10 @@ type TNetsuiteSalesOrderStatusData = {
   fullname: string;
 };
 
+type TNetsuiteObjectAllowedValue = {
+  id: string;
+};
+
 const mapNetSuiteSalesOrderStatus = (status: TNetsuiteSalesOrderStatusData): IQoreAllowedValue => ({
   value: status.id,
   display_name: status.name,
@@ -22,10 +26,13 @@ const mapNetSuiteSalesOrderStatusObject = (
   short_desc: status.fullname,
 });
 
-const createGetNetsuiteSalesOrderStatusIdAllowedValuesFunction = (
-  type: 'string' | 'object'
-): TQoreGetAllowedValuesFunction<typeof NETSUITE_CONN_OPTIONS> => {
-  return async (context): Promise<IQoreAllowedValue[]> => {
+const createGetNetsuiteOrderStatusIdAllowedValuesFunction = <
+  TValueType extends TNetsuiteObjectAllowedValue | string,
+>(
+  type: 'string' | 'object',
+  objectType: 'SalesOrd' | 'PurchReq'
+): TQoreGetAllowedValuesFunction<typeof NETSUITE_CONN_OPTIONS, TValueType> => {
+  return async (context): Promise<IQoreAllowedValue<TValueType>[]> => {
     const token = context?.conn_opts?.token;
     const account_id = context?.conn_opts?.account_id;
 
@@ -40,15 +47,27 @@ const createGetNetsuiteSalesOrderStatusIdAllowedValuesFunction = (
       token,
       mapItemToAllowedValue:
         type === 'string' ? mapNetSuiteSalesOrderStatus : mapNetSuiteSalesOrderStatusObject,
-      query: `SELECT * FROM transactionStatus`,
+      query: `SELECT * FROM transactionStatus WHERE trantype='${objectType}'`,
     });
 
-    return orderStatuses;
+    return orderStatuses as IQoreAllowedValue<TValueType>[];
   };
 };
 
 export const getNetsuiteSalesOrderStatusIdAllowedValues =
-  createGetNetsuiteSalesOrderStatusIdAllowedValuesFunction('string');
+  createGetNetsuiteOrderStatusIdAllowedValuesFunction<string>('string', 'SalesOrd');
 
 export const getNetsuiteSalesOrderStatusObjectAllowedValues =
-  createGetNetsuiteSalesOrderStatusIdAllowedValuesFunction('object');
+  createGetNetsuiteOrderStatusIdAllowedValuesFunction<TNetsuiteObjectAllowedValue>(
+    'object',
+    'SalesOrd'
+  );
+
+export const getNetsuitePurchaseOrderStatusIdAllowedValues =
+  createGetNetsuiteOrderStatusIdAllowedValuesFunction<string>('string', 'PurchReq');
+
+export const getNetsuitePurchaseOrderStatusObjectAllowedValues =
+  createGetNetsuiteOrderStatusIdAllowedValuesFunction<TNetsuiteObjectAllowedValue>(
+    'object',
+    'PurchReq'
+  );

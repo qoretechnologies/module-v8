@@ -11004,6 +11004,124 @@ type RootTranslation = {
 						}
 					}
 				}
+				salesOrder_post_simplified: {
+					/**
+					 * C​r​e​a​t​e​ ​S​a​l​e​s​ ​O​r​d​e​r​ ​(​S​i​m​p​l​i​f​i​e​d​)
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​s​a​l​e​s​ ​o​r​d​e​r​ ​w​i​t​h​ ​s​i​m​p​l​i​f​i​e​d​ ​o​p​t​i​o​n​s​.
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​e​r​ ​s​a​l​e​s​ ​o​r​d​e​r​ ​i​n​ ​N​e​t​S​u​i​t​e​ ​w​i​t​h​ ​o​n​l​y​ ​t​h​e​ ​m​o​s​t​ ​c​o​m​m​o​n​l​y​ ​u​s​e​d​ ​f​i​e​l​d​s​,​ ​m​a​k​i​n​g​ ​o​r​d​e​r​ ​c​r​e​a​t​i​o​n​ ​f​a​s​t​e​r​ ​a​n​d​ ​m​o​r​e​ ​s​t​r​a​i​g​h​t​f​o​r​w​a​r​d​.
+					 */
+					longDesc: string
+					options: {
+						entity: {
+							/**
+							 * C​u​s​t​o​m​e​r
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​e​r​ ​f​o​r​ ​t​h​i​s​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​N​e​t​S​u​i​t​e​ ​i​n​t​e​r​n​a​l​ ​I​D​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​t​h​i​s​ ​s​a​l​e​s​ ​o​r​d​e​r​ ​i​s​ ​f​o​r​.​ ​M​u​s​t​ ​b​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​u​s​t​o​m​e​r​ ​r​e​c​o​r​d​ ​i​n​ ​y​o​u​r​ ​N​e​t​S​u​i​t​e​ ​a​c​c​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+						memo: {
+							/**
+							 * M​e​m​o
+							 */
+							displayName: string
+							/**
+							 * O​r​d​e​r​ ​n​o​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​n​o​t​e​s​ ​o​r​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​i​s​ ​o​r​d​e​r​.​ ​T​h​i​s​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​i​n​ ​t​h​e​ ​m​e​m​o​ ​f​i​e​l​d​ ​o​n​ ​t​h​e​ ​s​a​l​e​s​ ​o​r​d​e​r​ ​r​e​c​o​r​d​.
+							 */
+							longDesc: string
+						}
+						orderStatus: {
+							/**
+							 * O​r​d​e​r​ ​S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * C​u​r​r​e​n​t​ ​s​t​a​t​u​s​ ​o​f​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​o​c​e​s​s​i​n​g​ ​s​t​a​t​u​s​ ​o​f​ ​t​h​i​s​ ​s​a​l​e​s​ ​o​r​d​e​r​ ​(​e​.​g​.​,​ ​P​e​n​d​i​n​g​ ​A​p​p​r​o​v​a​l​,​ ​P​e​n​d​i​n​g​ ​F​u​l​f​i​l​l​m​e​n​t​)​.​ ​C​o​n​t​r​o​l​s​ ​w​o​r​k​f​l​o​w​ ​a​n​d​ ​a​v​a​i​l​a​b​i​l​i​t​y​ ​f​o​r​ ​f​u​r​t​h​e​r​ ​p​r​o​c​e​s​s​i​n​g​.
+							 */
+							longDesc: string
+						}
+						item: {
+							/**
+							 * O​r​d​e​r​ ​I​t​e​m​s
+							 */
+							displayName: string
+							/**
+							 * P​r​o​d​u​c​t​s​ ​o​r​ ​s​e​r​v​i​c​e​s​ ​b​e​i​n​g​ ​o​r​d​e​r​e​d
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​i​t​e​m​s​ ​b​e​i​n​g​ ​p​u​r​c​h​a​s​e​d​ ​i​n​ ​t​h​i​s​ ​o​r​d​e​r​.​ ​E​a​c​h​ ​i​t​e​m​ ​r​e​q​u​i​r​e​s​ ​a​n​ ​I​D​ ​a​n​d​ ​a​m​o​u​n​t
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									id: {
+										/**
+										 * I​t​e​m​ ​I​D
+										 */
+										displayName: string
+										/**
+										 * N​e​t​S​u​i​t​e​ ​i​t​e​m​ ​i​d​e​n​t​i​f​i​e​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​i​n​t​e​r​n​a​l​ ​I​D​ ​o​f​ ​t​h​e​ ​i​n​v​e​n​t​o​r​y​ ​i​t​e​m​,​ ​n​o​n​-​i​n​v​e​n​t​o​r​y​ ​i​t​e​m​,​ ​s​e​r​v​i​c​e​,​ ​o​r​ ​o​t​h​e​r​ ​i​t​e​m​ ​t​y​p​e​ ​i​n​ ​N​e​t​S​u​i​t​e​ ​t​h​a​t​ ​i​s​ ​b​e​i​n​g​ ​o​r​d​e​r​e​d​.
+										 */
+										longDesc: string
+									}
+									quantity: {
+										/**
+										 * Q​u​a​n​t​i​t​y
+										 */
+										displayName: string
+										/**
+										 * N​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​b​e​i​n​g​ ​o​r​d​e​r​e​d​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​.​ ​F​o​r​ ​s​e​r​v​i​c​e​s​,​ ​t​h​i​s​ ​i​s​ ​t​y​p​i​c​a​l​l​y​ ​h​o​u​r​s​ ​o​r​ ​d​a​y​s​.
+										 */
+										longDesc: string
+									}
+									amount: {
+										/**
+										 * A​m​o​u​n​t​ ​O​v​e​r​r​i​d​e
+										 */
+										displayName: string
+										/**
+										 * C​u​s​t​o​m​ ​p​r​i​c​e​ ​(​o​p​t​i​o​n​a​l​)
+										 */
+										shortDesc: string
+										/**
+										 * O​p​t​i​o​n​a​l​ ​c​u​s​t​o​m​ ​p​r​i​c​e​ ​o​v​e​r​r​i​d​e​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​.​ ​I​f​ ​p​r​o​v​i​d​e​d​,​ ​o​v​e​r​r​i​d​e​s​ ​t​h​e​ ​s​t​a​n​d​a​r​d​ ​p​r​i​c​e​ ​c​a​l​c​u​l​a​t​i​o​n​ ​(​q​u​a​n​t​i​t​y​ ​×​ ​r​a​t​e​)​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​u​s​e​ ​s​t​a​n​d​a​r​d​ ​p​r​i​c​i​n​g​ ​f​r​o​m​ ​t​h​e​ ​p​r​i​c​e​ ​l​e​v​e​l​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
 				salesOrder_id_get: {
 					/**
 					 * G​e​t​ ​S​a​l​e​s​ ​O​r​d​e​r
@@ -25546,6 +25664,124 @@ export type TranslationFunctions = {
 							 * The customer for the sales order 
 							 */
 							longDesc: () => LocalizedString
+						}
+					}
+				}
+				salesOrder_post_simplified: {
+					/**
+					 * Create Sales Order (Simplified)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new sales order with simplified options.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new customer sales order in NetSuite with only the most commonly used fields, making order creation faster and more straightforward.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						entity: {
+							/**
+							 * Customer
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Customer for this order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The NetSuite internal ID of the customer this sales order is for. Must be an existing customer record in your NetSuite account.
+							 */
+							longDesc: () => LocalizedString
+						}
+						memo: {
+							/**
+							 * Memo
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Order notes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Additional notes or information about this order. This will appear in the memo field on the sales order record.
+							 */
+							longDesc: () => LocalizedString
+						}
+						orderStatus: {
+							/**
+							 * Order Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Current status of order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The processing status of this sales order (e.g., Pending Approval, Pending Fulfillment). Controls workflow and availability for further processing.
+							 */
+							longDesc: () => LocalizedString
+						}
+						item: {
+							/**
+							 * Order Items
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Products or services being ordered
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of items being purchased in this order. Each item requires an ID and amount
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									id: {
+										/**
+										 * Item ID
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * NetSuite item identifier
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The internal ID of the inventory item, non-inventory item, service, or other item type in NetSuite that is being ordered.
+										 */
+										longDesc: () => LocalizedString
+									}
+									quantity: {
+										/**
+										 * Quantity
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Number of units
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The number of units being ordered for this line item. For services, this is typically hours or days.
+										 */
+										longDesc: () => LocalizedString
+									}
+									amount: {
+										/**
+										 * Amount Override
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Custom price (optional)
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Optional custom price override for this line item. If provided, overrides the standard price calculation (quantity × rate). Leave empty to use standard pricing from the price level assigned to the customer.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
 						}
 					}
 				}

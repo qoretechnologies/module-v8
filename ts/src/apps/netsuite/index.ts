@@ -14,6 +14,7 @@ import {
   NETSUITE_ALLOWED_PATHS,
   NETSUITE_APP_NAME,
   NETSUITE_CONN_OPTIONS,
+  NETSUITE_SIMPLIFIED_ACTIONS,
 } from './constants';
 import * as NETSUITE_TRIGGERS from './triggers';
 
@@ -26,7 +27,12 @@ export default (locale: Locales) =>
     actions: [
       ...mapActionsToApp(
         NETSUITE_APP_NAME,
-        [...NETSUITE_ACTIONS, NetsuiteSuiteQlAction, NetsuiteListRecordsAction],
+        [
+          ...NETSUITE_ACTIONS,
+          ...NETSUITE_SIMPLIFIED_ACTIONS,
+          NetsuiteSuiteQlAction,
+          NetsuiteListRecordsAction,
+        ],
         locale
       ),
       ...mapTriggersToApp(NETSUITE_APP_NAME, NETSUITE_TRIGGERS, locale),
