@@ -85,6 +85,10 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
           get_allowed_values: getGitHubAssigneesAllowedValues,
         },
         assignees: {
+          type: {
+            type: 'list',
+            element_type: 'string',
+          },
           element_allowed_values_creatable: true,
           get_element_allowed_values: getGitHubAssigneesAllowedValues,
         },

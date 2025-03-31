@@ -11,8 +11,7 @@ const mapGithubUser = (user: {
 }): IQoreAllowedValue<string> => ({
   value: user.login!,
   display_name: user.login,
-  short_desc: `Username: ${user.login}\nType: ${user.type}`,
-  desc: `GitHub profile: https://github.com/${user.login}`,
+  desc: `Name: ${user.name}\n\nType: ${user.type}\n\nGitHub profile: [${user.login}](https://github.com/${user.login})`,
   image: user.avatar_url,
 });
 
