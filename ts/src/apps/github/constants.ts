@@ -6,6 +6,8 @@ import { getGitHubOwnerDefaultValue } from './helpers/get-owner-default-value';
 import { getGitHubPullIdAllowedValues } from './helpers/get-pull-id-allowed-values';
 import { getGitHubRepositoryIdAllowedValues } from './helpers/get-repository-id-allowed-values';
 import { getGitHubOrgAllowedValues } from './helpers/get-user-org-allowed-values';
+import { getGitHubAssigneesAllowedValues } from './helpers/get-assignee-allowed-values';
+import { getGitHubIssueLabelsAllowedValues } from './helpers/get-issue-label-allowed-values';
 
 export const GITHUB_APP_NAME = 'Github';
 
@@ -76,8 +78,24 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
     POST: {
       independent_path_vars: ['repo'],
       override_options: {
-        title: { required: true },
+        title: { required: true, type: 'string' },
         body: { required: true },
+        assignee: {
+          allowed_values_creatable: true,
+          get_allowed_values: getGitHubAssigneesAllowedValues,
+        },
+        assignees: {
+          element_allowed_values_creatable: true,
+          get_element_allowed_values: getGitHubAssigneesAllowedValues,
+        },
+        labels: {
+          element_allowed_values_creatable: true,
+          get_element_allowed_values: getGitHubIssueLabelsAllowedValues,
+          type: {
+            type: 'list',
+            element_type: 'string',
+          },
+        },
         ...repoOwnerCommonOptions,
       },
     },
