@@ -3859,6 +3859,70 @@ const en = {
         },
       },
     },
+    Magento: {
+      displayName: 'Magento',
+      shortDesc:
+        'E-commerce platform for building online stores and managing customers, products, and orders',
+      longDesc:
+        'Magento is a flexible e-commerce platform that provides businesses with a complete solution for building and managing online stores. This integration allows you to automate workflows when customer, product, order, invoice, or shipment events occur in your Magento store.',
+      actions: {},
+      triggers: {
+        'customer-created-or-updated': {
+          displayName: 'Customer Created or Updated',
+          shortDesc: 'Triggers when a customer is created or updated in Magento',
+          longDesc:
+            "This trigger activates when a new customer is created in your Magento store or when an existing customer's information is updated.",
+          options: {
+            activationCriteria: {
+              displayName: 'Activation Criteria',
+              shortDesc: 'Specify when this trigger should activate',
+              longDesc:
+                'Select whether this trigger should activate on customer creation or on customer updates.',
+            },
+          },
+        },
+        'invoice-created-or-updated': {
+          displayName: 'Invoice Created or Updated',
+          shortDesc: 'Triggers when an invoice is created or updated in Magento',
+          longDesc:
+            'This trigger activates when a new invoice is generated in your Magento store or when an existing invoice is modified.',
+          options: {
+            activationCriteria: {
+              displayName: 'Activation Criteria',
+              shortDesc: 'Specify when this trigger should activate',
+              longDesc:
+                'Select whether this trigger should activate on invoice creation or on invoice updates.',
+            },
+          },
+        },
+        'product-created-or-updated': {
+          displayName: 'Product Created or Updated',
+          shortDesc: 'Triggers when a product is created or updated in Magento',
+          longDesc:
+            "This trigger activates when a new product is added to your Magento catalog or when an existing product's information is modified.",
+          options: {
+            activationCriteria: {
+              displayName: 'Activation Criteria',
+              shortDesc: 'Specify when this trigger should activate',
+              longDesc:
+                'Select whether this trigger should activate on product creation or on product updates.',
+            },
+          },
+        },
+        'order-created': {
+          displayName: 'Order Created',
+          shortDesc: 'Triggers when a new order is placed in Magento',
+          longDesc:
+            'This trigger activates when a customer completes the checkout process and places a new order in your Magento store.',
+        },
+        'shipment-created': {
+          displayName: 'Shipment Created',
+          shortDesc: 'Triggers when a new shipment is created in Magento',
+          longDesc:
+            'This trigger activates when a new shipment is created for an order in your Magento store, indicating that products have been shipped to the customer.',
+        },
+      },
+    },
   },
 } satisfies BaseTranslation;
 
