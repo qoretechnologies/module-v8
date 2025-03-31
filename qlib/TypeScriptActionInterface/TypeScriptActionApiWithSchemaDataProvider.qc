@@ -106,7 +106,8 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             *hash<string, bool> path_vars, *hash<string, bool> independent_path_vars,
             *hash<string, string> conn_opt_map, *hash<auto> override_options, ActionFunctionContext fctx,
             *hash<AsyncCallInfo> get_dynamic_request_type, *hash<AsyncCallInfo> get_dynamic_response_type,
-            *hash<AsyncCallInfo> request_data_converter, *hash<AsyncCallInfo> response_data_converter)
+            *hash<AsyncCallInfo> request_data_converter, *hash<AsyncCallInfo> response_data_converter,
+            *AbstractDataProviderType request_type, *AbstractDataProviderType response_type)
             : TypeScriptActionApiDataProvider(action.action, api, fctx, get_dynamic_request_type,
             get_dynamic_response_type) {
         self.swagger_schema = remove action.swagger_schema;
@@ -136,6 +137,27 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                     info.options = DataProviderActionCatalog::getActionOptionFromFields(fields);
                 }
             };
+        }
+        if (request_type) {
+            if (override_options) {
+                throw "ACTION-ERROR", sprintf("@%s/%s: Cannot provide a request type and override options in the "
+                    "same action", action.app, action.action);
+            }
+            if (get_dynamic_request_type) {
+                throw "ACTION-ERROR", sprintf("@%s/%s: Cannot provide a request type and a "
+                    "`get_dynamic_request_type()` function in the same action", action.app, action.action);
+            }
+            request_type_done = True;
+            string key = sprintf("%s-%s", action.app, action.action);
+            request_type_info.type = grtmap{key} = request_type;
+        }
+        if (response_type) {
+            if (get_dynamic_response_type) {
+                throw "ACTION-ERROR", sprintf("@%s/%s: Cannot provide a response type and a "
+                    "`get_dynamic_response_type()` function in the same action", action.app, action.action);
+            }
+            response_type_done = True;
+            response_type_info.type = response_type;
         }
     }
 
@@ -659,7 +681,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         );
         if (response_data_converter) {
             if (!ctxinfo) {
-                ctxinfo = getCallContextInfo(rv{"headers", "headers-raw"});
+                ctxinfo = getCallContextInfo();
             }
             rv = getAsyncValue(response_data_converter, rv, ctxinfo);
             debug("REST response for action after conversion %y: %y", getName(), rv);
