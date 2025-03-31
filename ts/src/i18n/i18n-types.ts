@@ -10245,6 +10245,38 @@ type RootTranslation = {
 							 * K​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​ ​d​e​f​i​n​i​n​g​ ​s​e​a​r​c​h​ ​c​r​i​t​e​r​i​a
 							 */
 							longDesc: string
+							type: {
+								fields: {
+									key: {
+										/**
+										 * F​i​e​l​d​ ​N​a​m​e
+										 */
+										displayName: string
+										/**
+										 * N​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * F​i​e​l​d​ ​V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * V​a​l​u​e​ ​t​o​ ​m​a​t​c​h​ ​f​o​r​ ​t​h​e​ ​f​i​e​l​d
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​m​a​t​c​h​ ​f​o​r​ ​t​h​e​ ​f​i​e​l​d
+										 */
+										longDesc: string
+									}
+								}
+							}
 						}
 						limit: {
 							/**
@@ -10999,6 +11031,50 @@ type RootTranslation = {
 							shortDesc: string
 							/**
 							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​f​o​r​ ​t​h​e​ ​s​a​l​e​s​ ​o​r​d​e​r​ 
+							 */
+							longDesc: string
+						}
+					}
+				}
+				customer_post_simplified: {
+					/**
+					 * C​r​e​a​t​e​ ​C​u​s​t​o​m​e​r​ ​(​S​i​m​p​l​i​f​i​e​d​)
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​e​r​ ​w​i​t​h​ ​s​i​m​p​l​i​f​i​e​d​ ​o​p​t​i​o​n​s​.
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​e​r​ ​i​n​ ​N​e​t​S​u​i​t​e​ ​w​i​t​h​ ​s​i​m​p​l​i​f​i​e​d​ ​f​i​e​l​d​s
+					 */
+					longDesc: string
+					options: {
+						entityStatus: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​e​r​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​a​t​u​s​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​(​e​.​g​.​,​ ​A​c​t​i​v​e​,​ ​I​n​a​c​t​i​v​e​)
+							 */
+							longDesc: string
+						}
+						subsidiary: {
+							/**
+							 * S​u​b​s​i​d​i​a​r​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​u​b​s​i​d​i​a​r​y​ ​f​o​r​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​u​b​s​i​d​i​a​r​y​ ​f​o​r​ ​t​h​e​ ​c​u​s​t​o​m​e​r
 							 */
 							longDesc: string
 						}
@@ -24908,6 +24984,38 @@ export type TranslationFunctions = {
 							 * Key-value pairs defining search criteria
 							 */
 							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									key: {
+										/**
+										 * Field Name
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Name of the field to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The name of the field to filter by
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Field Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Value to match for the field
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to match for the field
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
 						}
 						limit: {
 							/**
@@ -25662,6 +25770,50 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * The customer for the sales order 
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				customer_post_simplified: {
+					/**
+					 * Create Customer (Simplified)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new customer with simplified options.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new customer in NetSuite with simplified fields
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						entityStatus: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Customer status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The status of the customer (e.g., Active, Inactive)
+							 */
+							longDesc: () => LocalizedString
+						}
+						subsidiary: {
+							/**
+							 * Subsidiary
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The subsidiary for the customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The subsidiary for the customer
 							 */
 							longDesc: () => LocalizedString
 						}

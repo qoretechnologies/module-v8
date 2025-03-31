@@ -39,6 +39,7 @@ const options = {
       element_type: 'string',
     },
     get_element_allowed_values: getNetsuiteQueryFieldAllowedValues,
+    element_allowed_values_creatable: true,
     required: false,
     depends_on: ['recordType'],
   },

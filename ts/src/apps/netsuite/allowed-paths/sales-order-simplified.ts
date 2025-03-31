@@ -1,10 +1,9 @@
 import { TAllowedPaths } from '@qoretechnologies/ts-toolkit';
-import { omit } from 'lodash';
+import { NetsuiteBaseObjectCreationResponseType } from '../constants';
 import { getNetsuiteCustomerIdAllowedValues } from '../helpers/get-customer-id-allowed-values';
 import { getNetsuiteSalesItemIdAllowedValues } from '../helpers/get-item-id-allowed-values';
 import { getNetsuiteSalesOrderStatusIdAllowedValues } from '../helpers/get-order-status-id-allowed-values';
 import { netsuiteObjectCreationResponseDataConverter } from '../helpers/object-creation-response-data-converter';
-import { NetsuiteBaseObjectCreationResponseType } from '../constants';
 
 export const NETSUITE_SIMPLIFIED_SALES_ORDER_ALLOWED_PATHS = {
   '/salesOrder': {
@@ -13,18 +12,24 @@ export const NETSUITE_SIMPLIFIED_SALES_ORDER_ALLOWED_PATHS = {
       request_data_converter: (request) => {
         const { entity, item, orderStatus, ...rest } = request;
 
+        const items = item?.map((i: { id: string }) => {
+          const { id, ...rest } = i;
+
+          return {
+            item: {
+              id,
+            },
+            ...rest,
+          };
+        });
+
         return {
           ...rest,
           entity: {
             id: entity,
           },
           item: {
-            items: item.map((i: { id: string }) => ({
-              item: {
-                id: i.id,
-              },
-              ...omit(i, ['id']),
-            })),
+            items,
           },
           orderStatus: {
             id: orderStatus,

@@ -2112,6 +2112,20 @@ const en = {
               displayName: 'Query Criteria',
               shortDesc: 'Search conditions for filtering records',
               longDesc: 'Key-value pairs defining search criteria',
+              type: {
+                fields: {
+                  key: {
+                    displayName: 'Field Name',
+                    shortDesc: 'Name of the field to filter by',
+                    longDesc: 'The name of the field to filter by',
+                  },
+                  value: {
+                    displayName: 'Field Value',
+                    shortDesc: 'Value to match for the field',
+                    longDesc: 'The value to match for the field',
+                  },
+                },
+              },
             },
             limit: {
               displayName: 'Limit',
@@ -2392,6 +2406,23 @@ const en = {
               displayName: 'Customer',
               shortDesc: 'The customer for the sales order',
               longDesc: 'The customer for the sales order ',
+            },
+          },
+        },
+        customer_post_simplified: {
+          displayName: 'Create Customer (Simplified)',
+          shortDesc: 'Creates a new customer with simplified options.',
+          longDesc: 'Creates a new customer in NetSuite with simplified fields',
+          options: {
+            entityStatus: {
+              displayName: 'Status',
+              shortDesc: 'Customer status',
+              longDesc: 'The status of the customer (e.g., Active, Inactive)',
+            },
+            subsidiary: {
+              displayName: 'Subsidiary',
+              shortDesc: 'The subsidiary for the customer',
+              longDesc: 'The subsidiary for the customer',
             },
           },
         },
