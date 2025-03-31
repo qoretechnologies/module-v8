@@ -6,9 +6,9 @@ import {
 import { NETSUITE_CONN_OPTIONS } from '../constants';
 import { getNetsuiteAccountIdAllowedValues } from '../helpers/get-account-id-allowed-values';
 import { getNetsuiteAccountTypeAllowedValues } from '../helpers/get-account-type-allowed-values';
-import { getNetsuiteCurrencyIdAllowedValues } from '../helpers/get-currency-id-allowed-values';
+import { getNetsuiteCurrencyObjectAllowedValues } from '../helpers/get-currency-id-allowed-values';
 import {
-  getNetsuiteSubsidiaryIdAllowedValues,
+  getNetsuiteSubsidiaryObjectAllowedValues,
   getNetsuiteSubsidiaryIdArrayAllowedValues,
 } from '../helpers/get-subsidiary-id-allowed-values';
 
@@ -16,7 +16,7 @@ const accountOptions = {
   currency: {
     preselected: true,
     allowed_values_creatable: true,
-    get_allowed_values: getNetsuiteCurrencyIdAllowedValues,
+    get_allowed_values: getNetsuiteCurrencyObjectAllowedValues,
   },
   subsidiary: {
     preselected: true,
@@ -26,7 +26,7 @@ const accountOptions = {
   'subsidiary.items': {
     preselected: true,
     element_allowed_values_creatable: true,
-    get_element_allowed_values: getNetsuiteSubsidiaryIdAllowedValues,
+    get_element_allowed_values: getNetsuiteSubsidiaryObjectAllowedValues,
   },
   acctType: {
     preselected: true,

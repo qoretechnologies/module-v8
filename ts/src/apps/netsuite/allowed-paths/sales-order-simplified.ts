@@ -4,10 +4,12 @@ import { getNetsuiteCustomerIdAllowedValues } from '../helpers/get-customer-id-a
 import { getNetsuiteSalesItemIdAllowedValues } from '../helpers/get-item-id-allowed-values';
 import { getNetsuiteSalesOrderStatusIdAllowedValues } from '../helpers/get-order-status-id-allowed-values';
 import { netsuiteObjectCreationResponseDataConverter } from '../helpers/object-creation-response-data-converter';
+import { NetsuiteBaseObjectCreationResponseType } from '../constants';
 
 export const NETSUITE_SIMPLIFIED_SALES_ORDER_ALLOWED_PATHS = {
   '/salesOrder': {
     POST: {
+      response_type: NetsuiteBaseObjectCreationResponseType,
       request_data_converter: (request) => {
         const { entity, item, orderStatus, ...rest } = request;
 

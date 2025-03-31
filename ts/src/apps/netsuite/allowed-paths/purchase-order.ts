@@ -12,7 +12,7 @@ import {
   getNetsuitePurchaseItemIdAllowedValues,
   getNetsuitePurchaseItemIdArrayAllowedValues,
 } from '../helpers/get-item-id-allowed-values';
-import { getNetsuiteCurrencyIdAllowedValues } from '../helpers/get-currency-id-allowed-values';
+import { getNetsuiteCurrencyObjectAllowedValues } from '../helpers/get-currency-id-allowed-values';
 import { getNetsuiteEmployeeObjectAllowedValues } from '../helpers/get-employee-id-allowed-values';
 import { NETSUITE_CONN_OPTIONS } from '../constants';
 import { netsuiteObjectCreationResponseDataConverter } from '../helpers/object-creation-response-data-converter';
@@ -30,7 +30,7 @@ const purchaseOrderOptions = {
   currency: {
     preselected: true,
     allowed_values_creatable: true,
-    get_allowed_values: getNetsuiteCurrencyIdAllowedValues,
+    get_allowed_values: getNetsuiteCurrencyObjectAllowedValues,
   },
   item: {
     preselected: true,

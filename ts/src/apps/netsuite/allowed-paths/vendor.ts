@@ -4,14 +4,14 @@ import {
   TQoreAppActionOverrideOption,
 } from '@qoretechnologies/ts-toolkit';
 import { NETSUITE_CONN_OPTIONS } from '../constants';
-import { netsuiteObjectCreationResponseDataConverter } from '../helpers/object-creation-response-data-converter';
+import { getNetsuiteSubsidiaryObjectAllowedValues } from '../helpers/get-subsidiary-id-allowed-values';
 import { getNetsuiteVendorIdAllowedValues } from '../helpers/get-vendor-id-allowed-values';
-import { getNetsuiteSubsidiaryIdAllowedValues } from '../helpers/get-subsidiary-id-allowed-values';
+import { netsuiteObjectCreationResponseDataConverter } from '../helpers/object-creation-response-data-converter';
 
 const vendorOptions = {
   subsidiary: {
     allowed_values_creatable: true,
-    get_allowed_values: getNetsuiteSubsidiaryIdAllowedValues,
+    get_allowed_values: getNetsuiteSubsidiaryObjectAllowedValues,
   },
 } satisfies Record<string, TQoreAppActionOverrideOption<TCustomConnOptions>>;
 

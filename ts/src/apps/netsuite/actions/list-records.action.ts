@@ -6,11 +6,8 @@ import {
   TQoreResponseType,
 } from '@qoretechnologies/ts-toolkit';
 import { NETSUITE_APP_NAME } from '../constants';
+import { getNetsuiteQueryFieldAllowedValues } from '../helpers/get-query-field-allowed-value';
 import { getNetsuiteRecordTypesAllowedValues } from '../helpers/get-record-type-allowed-values';
-import {
-  getNetsuiteQueryFieldAllowedValues,
-  getNetsuiteQueryFieldAllowedValuesObject,
-} from '../helpers/get-query-field-allowed-value';
 
 const options = {
   searchMode: {
@@ -49,8 +46,6 @@ const options = {
     preselected: true,
     required: false,
     depends_on: ['recordType'],
-    get_element_allowed_values: getNetsuiteQueryFieldAllowedValuesObject,
-    element_allowed_values_creatable: true,
     type: {
       type: 'list',
       element_type: {
@@ -58,6 +53,8 @@ const options = {
         fields: {
           key: {
             type: 'string',
+            get_allowed_values: getNetsuiteQueryFieldAllowedValues,
+            allowed_values_creatable: true,
             required: true,
           },
           value: {

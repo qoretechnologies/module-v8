@@ -3,28 +3,28 @@ import {
   TCustomConnOptions,
   TQoreAppActionOverrideOption,
 } from '@qoretechnologies/ts-toolkit';
-import { getNetsuiteCustomerStatusIdAllowedValues } from '../helpers/get-customer-status-allowed-values';
-import { getNetsuiteContactIdAllowedValues } from '../helpers/get-contact-id-allowed-values';
-import { getNetsuiteSubsidiaryIdAllowedValues } from '../helpers/get-subsidiary-id-allowed-values';
-import { getNetsuiteCurrencyIdAllowedValues } from '../helpers/get-currency-id-allowed-values';
 import { NETSUITE_CONN_OPTIONS } from '../constants';
-import { netsuiteObjectCreationResponseDataConverter } from '../helpers/object-creation-response-data-converter';
+import { getNetsuiteContactIdAllowedValues } from '../helpers/get-contact-id-allowed-values';
+import { getNetsuiteCurrencyObjectAllowedValues } from '../helpers/get-currency-id-allowed-values';
 import { getNetsuiteCustomerIdAllowedValues } from '../helpers/get-customer-id-allowed-values';
+import { getNetsuiteCustomerStatusObjectAllowedValues } from '../helpers/get-customer-status-allowed-values';
+import { getNetsuiteSubsidiaryObjectAllowedValues } from '../helpers/get-subsidiary-id-allowed-values';
+import { netsuiteObjectCreationResponseDataConverter } from '../helpers/object-creation-response-data-converter';
 
 const customerOptions = {
   currency: {
     preselected: true,
     allowed_values_creatable: true,
-    get_allowed_values: getNetsuiteCurrencyIdAllowedValues,
+    get_allowed_values: getNetsuiteCurrencyObjectAllowedValues,
   },
-  currencyList: {
+  'currencyList.items.currency': {
     element_allowed_values_creatable: true,
-    get_element_allowed_values: getNetsuiteCurrencyIdAllowedValues,
+    get_element_allowed_values: getNetsuiteCurrencyObjectAllowedValues,
   },
   subsidiary: {
     preselected: true,
     allowed_values_creatable: true,
-    get_allowed_values: getNetsuiteSubsidiaryIdAllowedValues,
+    get_allowed_values: getNetsuiteSubsidiaryObjectAllowedValues,
   },
   contact: {
     allowed_values_creatable: true,
@@ -37,7 +37,7 @@ const customerOptions = {
   entityStatus: {
     preselected: true,
     allowed_values_creatable: true,
-    get_allowed_values: getNetsuiteCustomerStatusIdAllowedValues,
+    get_allowed_values: getNetsuiteCustomerStatusObjectAllowedValues,
   },
   companyName: {
     preselected: true,

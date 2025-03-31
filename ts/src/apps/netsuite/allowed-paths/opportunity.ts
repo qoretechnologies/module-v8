@@ -1,11 +1,11 @@
 import {
+  TAllowedPaths,
   TCustomConnOptions,
   TQoreAppActionOverrideOption,
-  TAllowedPaths,
 } from '@qoretechnologies/ts-toolkit';
-import { getNetsuiteCustomerEntityIdAllowedValues } from '../helpers/get-customer-id-allowed-values';
-import { getNetsuiteCustomerStatusIdAllowedValues } from '../helpers/get-customer-status-allowed-values';
 import { NETSUITE_CONN_OPTIONS } from '../constants';
+import { getNetsuiteCustomerEntityIdAllowedValues } from '../helpers/get-customer-id-allowed-values';
+import { getNetsuiteCustomerStatusObjectAllowedValues } from '../helpers/get-customer-status-allowed-values';
 import { getNetsuiteOpportunityIdAllowedValues } from '../helpers/get-opportunity-id-allowed-values';
 
 const opportunityOptions = {
@@ -28,7 +28,7 @@ const opportunityOptions = {
   status: {
     preselected: true,
     allowed_values_creatable: true,
-    get_allowed_values: getNetsuiteCustomerStatusIdAllowedValues,
+    get_allowed_values: getNetsuiteCustomerStatusObjectAllowedValues,
   },
 } satisfies Record<string, TQoreAppActionOverrideOption<TCustomConnOptions>>;
 

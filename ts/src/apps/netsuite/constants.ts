@@ -1,4 +1,4 @@
-import { TAllowedPaths, TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
+import { TAllowedPaths, TCustomConnOptions, TQoreResponseType } from '@qoretechnologies/ts-toolkit';
 import { buildActionsFromSwaggerSchema } from '../../global/helpers';
 import netsuite from '../../schemas/netsuite.swagger.json';
 import { NETSUITE_ACCOUNT_ALLOWED_PATHS } from './allowed-paths/account';
@@ -11,6 +11,7 @@ import { NETSUITE_PURCHASE_ORDER_ALLOWED_PATHS } from './allowed-paths/purchase-
 import { NETSUITE_SALES_ORDER_ALLOWED_PATHS } from './allowed-paths/sales-order';
 import { NETSUITE_VENDOR_ALLOWED_PATHS } from './allowed-paths/vendor';
 import { NETSUITE_SIMPLIFIED_SALES_ORDER_ALLOWED_PATHS } from './allowed-paths/sales-order-simplified';
+import { NETSUITE_SIMPLIFIED_CUSTOMER_ALLOWED_PATHS } from './allowed-paths/customer-simplified';
 
 export const NETSUITE_APP_NAME = 'NetSuite';
 
@@ -35,6 +36,15 @@ export const NETSUITE_CONN_OPTIONS = {
   },
 } satisfies TCustomConnOptions;
 
+export const NetsuiteBaseObjectCreationResponseType = {
+  type: 'hash',
+  fields: {
+    id: {
+      type: 'string',
+    },
+  },
+} satisfies TQoreResponseType;
+
 export const NETSUITE_ALLOWED_PATHS = {
   ...NETSUITE_ACCOUNT_ALLOWED_PATHS,
   ...NETSUITE_CONTACT_ALLOWED_PATHS,
@@ -55,6 +65,7 @@ export const NETSUITE_ACTIONS = buildActionsFromSwaggerSchema({
 
 export const NETSUITE_SIMPLIFIED_ALLOWED_PATHS = {
   ...NETSUITE_SIMPLIFIED_SALES_ORDER_ALLOWED_PATHS,
+  ...NETSUITE_SIMPLIFIED_CUSTOMER_ALLOWED_PATHS,
 } satisfies TAllowedPaths;
 
 export const NETSUITE_SIMPLIFIED_ACTIONS = buildActionsFromSwaggerSchema({

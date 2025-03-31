@@ -4,25 +4,25 @@ import {
   TQoreAppActionOverrideOption,
 } from '@qoretechnologies/ts-toolkit';
 import { NETSUITE_CONN_OPTIONS } from '../constants';
-import { getNetsuiteCurrencyIdAllowedValues } from '../helpers/get-currency-id-allowed-values';
+import { getNetsuiteCurrencyObjectAllowedValues } from '../helpers/get-currency-id-allowed-values';
 import { getNetsuiteCustomerEntityIdAllowedValues } from '../helpers/get-customer-id-allowed-values';
-import {
-  getNetsuiteSalesItemIdObjectAllowedValues,
-  getNetsuiteSalesItemIdArrayAllowedValues,
-} from '../helpers/get-item-id-allowed-values';
-import { getNetsuiteSubsidiaryIdAllowedValues } from '../helpers/get-subsidiary-id-allowed-values';
-import { netsuiteObjectCreationResponseDataConverter } from '../helpers/object-creation-response-data-converter';
 import { getNetsuiteInvoiceIdAllowedValues } from '../helpers/get-invoice-id-allowed-values';
+import {
+  getNetsuiteSalesItemIdArrayAllowedValues,
+  getNetsuiteSalesItemIdObjectAllowedValues,
+} from '../helpers/get-item-id-allowed-values';
+import { getNetsuiteSubsidiaryObjectAllowedValues } from '../helpers/get-subsidiary-id-allowed-values';
+import { netsuiteObjectCreationResponseDataConverter } from '../helpers/object-creation-response-data-converter';
 
 const invoiceOptions = {
   currency: {
     allowed_values_creatable: true,
-    get_allowed_values: getNetsuiteCurrencyIdAllowedValues,
+    get_allowed_values: getNetsuiteCurrencyObjectAllowedValues,
   },
   subsidiary: {
     preselected: true,
     allowed_values_creatable: true,
-    get_allowed_values: getNetsuiteSubsidiaryIdAllowedValues,
+    get_allowed_values: getNetsuiteSubsidiaryObjectAllowedValues,
   },
   entity: {
     get_allowed_values: getNetsuiteCustomerEntityIdAllowedValues,
