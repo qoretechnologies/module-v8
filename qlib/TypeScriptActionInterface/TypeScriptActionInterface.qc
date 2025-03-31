@@ -1475,6 +1475,24 @@ public class TypeScriptActionInterface {
                 "response_data_converter");
         }
 
+        *AbstractDataProviderType request_type;
+
+        ActionFunctionContext fctx(app.name, action.action, pool);
+        if (*hash<auto> opts = remove action.options) {
+            request_type = TypeScriptActionInterface::getType("request", (map {$1.key: $1.value{TypeKeys}},
+                opts.pairIterator()), NOTHING, NOTHING, fctx);
+            action.options = TypeScriptActionInterface::getOptions(app, \action, opts, fctx);
+        }
+
+        *AbstractDataProviderType response_type;
+        if (action.response_type.val()) {
+            response_type = TypeScriptActionInterface::getType("response", remove action.response_type, NOTHING,
+                NOTHING, fctx);
+            action.output_type = response_type;
+        } else if (action.hasKey("response_type")) {
+            remove action.response_type;
+        }
+
         TypeScriptActionApiDataProvider child;
         if ((*string swagger_path = remove action.swagger_path).val()) {
             if (!schema) {
@@ -1487,12 +1505,6 @@ public class TypeScriptActionInterface {
                     "this property cannot be defined when \"swagger_path\" (%y) is also defined for the action",
                     action.app, action.action, swagger_path);
             }
-            # NOTE we remove "response_type" here, because it's given as null in valid actions
-            if (remove action.response_type) {
-                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"response_type\" "
-                    "property; this property cannot be defined when \"swagger_path\" (%y) is also defined for the "
-                    "action", action.app, action.action, swagger_path);
-            }
 
             *softlist<string> independent_path_vars = remove action.independent_path_vars;
 
@@ -1503,29 +1515,11 @@ public class TypeScriptActionInterface {
             TypeScriptActionApiWithSchemaDataProvider dp(\action, swagger_path, api, path_vars,
                 (map {$1: True}, independent_path_vars), app_conn_opt_map{app.name.lwr()},
                 remove action.override_options, fctx, get_dynamic_request_type, get_dynamic_response_type,
-                request_data_converter, response_data_converter);
+                request_data_converter, response_data_converter, request_type, response_type);
             child = dp;
 
             action.output_type = child.getResponseType();
         } else {
-            *AbstractDataProviderType request_type;
-
-            ActionFunctionContext fctx(app.name, action.action, pool);
-            if (*hash<auto> opts = remove action.options) {
-                request_type = TypeScriptActionInterface::getType("request", (map {$1.key: $1.value{TypeKeys}},
-                    opts.pairIterator()), NOTHING, NOTHING, fctx);
-                action.options = TypeScriptActionInterface::getOptions(app, \action, opts, fctx);
-            }
-
-            *AbstractDataProviderType response_type;
-            if (action.response_type.val()) {
-                response_type = TypeScriptActionInterface::getType("response", remove action.response_type, NOTHING,
-                    NOTHING, fctx);
-                action.output_type = response_type;
-            } else if (action.hasKey("response_type")) {
-                remove action.response_type;
-            }
-
             child = new TypeScriptActionApiDataProvider(action.action, api, request_type, response_type, fctx,
                 get_dynamic_request_type);
         }
