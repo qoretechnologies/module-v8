@@ -72,7 +72,7 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
             throw "OBSERVABLE-ERROR", "observersReady() can only be called once";
         }
 
-        event_options = ImpliedArgumentHelper::get();
+        event_options = DataProviderDataContextHelper::getHash();
         startEvent();
     }
 

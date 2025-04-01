@@ -93,7 +93,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         });
         info("Registered webhook with URL %y", wf_info.url);
 
-        event_opts += ImpliedArgumentHelper::get();
+        event_opts += DataProviderDataContextHelper::getHash();
         debug("Registering webhook for data provider %y URL %y opts %y", name, wf_info.url, event_opts);
         on_error rethrow $1.err, sprintf("%s (while registering webhook URL %y with the server; options: %y)",
             $1.desc, wf_info.url, event_opts);

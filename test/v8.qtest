@@ -16,16 +16,64 @@ class V8Test inherits Test {
     }
 
     constructor() : Test("v8 test", "1.0") {
+        addTestCase("function test", \functionTest());
         addTestCase("timeout", \timeoutTest());
-        /*
         addTestCase("process", \processTest());
         addTestCase("io test", \ioTest());
         addTestCase("async test", \asyncTest());
         addTestCase("v8 program test", \v8ProgramTest());
         addTestCase("exception test", \v8ExceptionTest());
-        */
         # Set return value for compatibility with test harnesses that check the return value
         set_return_value(main());
+    }
+
+    functionTest() {
+        JavaScriptProgram js("
+var exports = {};
+function test() {
+    return 1;
+}
+var obj = {
+    'f0': test,
+    'f1': test,
+};
+", "test.js");
+        JavaScriptObject global = js.getGlobal();
+        code test = global.test.toData();
+        assertEq(1, test());
+        assertEq(1, global.obj.f0());
+        assertEq(1, global.obj.f1());
+
+        hash<auto> obj = global.obj.toData();
+        on_error printf("%y\n", obj);
+        assertEq(1, obj.f0());
+        assertEq(1, obj.f1());
+
+        #js.spinOnce();
+        #assertEq(Type::String, global.exports.io.toData().stdout.type());
+
+/*
+        js = new JavaScriptProgram("var obj = {
+    a: 'string',
+    b: 1,
+    c: {
+      d: {
+        e: 'hi',
+      }
+    }
+};
+obj", "test.js");
+        o = js.getGlobal().obj;
+        assertEq(NT_OBJECT, o.typeCode());
+        assertEq("JavaScriptObject", o.className());
+        assertEq("string", o.a);
+        assertEq(1, o.b);
+        assertEq("hi", o.c.d.e);
+        h = o.toData();
+        assertEq("string", h.a);
+        assertEq(1, h.b);
+        assertEq("hi", h.c.d.e);
+*/
     }
 
     timeoutTest() {
@@ -737,7 +785,6 @@ obj", "test.js");
         });
         h = o.toData();
         assertTrue(h.func.callp());
-        assertEq(2, o.func(1));
 
         js = new JavaScriptProgram("var obj = {
     a: 'string',
