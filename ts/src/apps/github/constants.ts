@@ -91,10 +91,12 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
           },
           element_allowed_values_creatable: true,
           get_element_allowed_values: getGitHubAssigneesAllowedValues,
+          depends_on: ['repo', 'owner'],
         },
         labels: {
           element_allowed_values_creatable: true,
           get_element_allowed_values: getGitHubIssueLabelsAllowedValues,
+          depends_on: ['repo', 'owner'],
           type: {
             type: 'list',
             element_type: 'string',

@@ -31,6 +31,7 @@ const options = {
     type: 'string',
     required: true,
     allowed_values_creatable: true,
+    on_change: ['refetch'],
     get_allowed_values: getNetsuiteRecordTypesAllowedValues,
   },
   fields: {

@@ -3,8 +3,8 @@ import { getNetsuiteCurrencyIdAllowedValues } from '../helpers/get-currency-id-a
 import { getNetsuiteSubsidiaryIdAllowedValues } from '../helpers/get-subsidiary-id-allowed-values';
 import { getNetsuiteCustomerStatusIdAllowedValues } from '../helpers/get-customer-status-allowed-values';
 import { getNetsuiteContactIdAllowedValues } from '../helpers/get-contact-id-allowed-values';
-import { NetsuiteBaseObjectCreationResponseType } from '../constants';
 import { netsuiteObjectCreationResponseDataConverter } from '../helpers/object-creation-response-data-converter';
+import { NetsuiteBaseObjectCreationResponseType } from '../response-types/base-record-id-response-type';
 
 export const NETSUITE_SIMPLIFIED_CUSTOMER_ALLOWED_PATHS = {
   '/customer': {
