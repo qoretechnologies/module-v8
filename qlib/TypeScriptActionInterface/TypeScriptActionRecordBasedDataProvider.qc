@@ -52,7 +52,7 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         self.begin_transaction = begin_transaction;
         self.commit = commit;
         self.rollback = rollback;
-        options = ImpliedArgumentHelper::get();
+        options = DataProviderDataContextHelper::getHash();
     }
 
     #! Begins a transaction with a data provider
