@@ -10,8 +10,8 @@ export const NETSUITE_SIMPLIFIED_SALES_ORDER_ALLOWED_PATHS = {
     POST: {
       response_type: NetsuiteBaseObjectCreationResponseType,
       request_data_converter: (request) => {
-        console.dir(request, { depth: null });
-        const { entity, item, orderStatus, ...rest } = request;
+        const { body, ...requestRest } = request;
+        const { entity, item, orderStatus, ...rest } = body;
 
         const items = item?.map((i: { id: string }) => {
           const { id, ...rest } = i;
@@ -25,15 +25,18 @@ export const NETSUITE_SIMPLIFIED_SALES_ORDER_ALLOWED_PATHS = {
         });
 
         return {
-          ...rest,
-          entity: {
-            id: entity,
-          },
-          item: {
-            items,
-          },
-          orderStatus: {
-            id: orderStatus,
+          ...requestRest,
+          body: {
+            ...rest,
+            entity: {
+              id: entity,
+            },
+            item: {
+              items,
+            },
+            orderStatus: {
+              id: orderStatus,
+            },
           },
         };
       },

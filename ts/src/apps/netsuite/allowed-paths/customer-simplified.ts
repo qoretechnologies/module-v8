@@ -11,18 +11,22 @@ export const NETSUITE_SIMPLIFIED_CUSTOMER_ALLOWED_PATHS = {
     POST: {
       response_type: NetsuiteBaseObjectCreationResponseType,
       request_data_converter: (request) => {
-        const { entityStatus, subsidiary, currency, currencyList, ...rest } = request;
+        const { body, ...requestRest } = request;
+        const { entityStatus, subsidiary, currency, currencyList, ...rest } = body;
 
         return {
-          ...rest,
-          ...(entityStatus && { entityStatus: { id: entityStatus } }),
-          ...(subsidiary && { subsidiary: { id: subsidiary } }),
-          ...(currency && { currency: { id: currency } }),
-          ...(currencyList && {
-            currencyList: {
-              items: currencyList.map((c: { id: string }) => ({ currency: { id: c.id } })),
-            },
-          }),
+          ...requestRest,
+          body: {
+            ...rest,
+            ...(entityStatus && { entityStatus: { id: entityStatus } }),
+            ...(subsidiary && { subsidiary: { id: subsidiary } }),
+            ...(currency && { currency: { id: currency } }),
+            ...(currencyList && {
+              currencyList: {
+                items: currencyList.map((c: { id: string }) => ({ currency: { id: c.id } })),
+              },
+            }),
+          },
         };
       },
       response_data_converter: netsuiteObjectCreationResponseDataConverter,
