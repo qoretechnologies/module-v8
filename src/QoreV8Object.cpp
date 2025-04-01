@@ -66,11 +66,6 @@ AbstractQoreNode* QoreV8Object::toData(QoreV8ProgramHelper& v8h, v8::Local<v8::V
         if (b.ToChecked()) {
             return nullptr;
         }
-        v8::MaybeLocal<v8::Set> v = objset.Add(v8h.getContext(), obj);
-        if (v.IsEmpty()) {
-            v8h.checkException();
-            return nullptr;
-        }
     }
     if (obj->IsCallable()) {
         return new QoreV8CallReference(this, parent);
@@ -98,10 +93,31 @@ AbstractQoreNode* QoreV8Object::toData(QoreV8ProgramHelper& v8h, v8::Local<v8::V
         }
     }
 
-    if (obj->IsArray()) {
-        return toList(v8h, parent, objset, handle_scope.Escape(props), len);
+    {
+        v8::MaybeLocal<v8::Set> v = objset.Add(v8h.getContext(), obj);
+        if (v.IsEmpty()) {
+            v8h.checkException();
+            return nullptr;
+        }
     }
-    return toHash(v8h, parent, objset, handle_scope.Escape(props), len);
+
+    ReferenceHolder<AbstractQoreNode> rv(v8h.getExceptionSink());
+
+    if (obj->IsArray()) {
+        rv = toList(v8h, parent, objset, handle_scope.Escape(props), len);
+    } else {
+        rv = toHash(v8h, parent, objset, handle_scope.Escape(props), len);
+    }
+
+    {
+        v8::Maybe<bool> v = objset.Delete(v8h.getContext(), obj);
+        if (v.IsNothing()) {
+            v8h.checkException();
+            return nullptr;
+        }
+    }
+
+    return rv.release();
 }
 
 QoreStringNode* QoreV8Object::toString(QoreV8ProgramHelper& v8h) const {
