@@ -25,7 +25,7 @@ export const piecePropTypeToQoreOptionTypeIndex: {
   [PropertyType.DYNAMIC]: 'hash',
   [PropertyType.CUSTOM_AUTH]: 'string',
   [PropertyType.DATE_TIME]: 'date',
-  [PropertyType.FILE]: 'string',
+  [PropertyType.FILE]: 'file',
 };
 
 //TODO: you can see that most context data is currently mocked, need to figure out what to leave and what to remove

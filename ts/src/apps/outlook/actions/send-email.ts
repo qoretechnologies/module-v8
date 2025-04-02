@@ -2,6 +2,7 @@ import { Client } from '@microsoft/microsoft-graph-client';
 import {
   EQoreAppActionCode,
   QoreAppCreator,
+  TQoreFile,
   TQoreOptions,
   TQoreResponseType,
 } from '@qoretechnologies/ts-toolkit';
@@ -98,6 +99,12 @@ const options = {
     required: false,
     default_value: true,
   },
+  attachments: {
+    type: {
+      type: 'list',
+      element_type: 'file',
+    },
+  },
 } satisfies TQoreOptions;
 
 const response_type = {
@@ -121,6 +128,7 @@ export const SendOutlookEmail = QoreAppCreator.createLocalizedAction<typeof opti
     const body = data?.body;
     const bodyContentType = data?.bodyContentType || 'Text';
     const saveToSentItems = data?.saveToSentItems !== false;
+    const attachments = (data?.attachments || []) as TQoreFile[];
 
     const missingValues: string[] = [];
 
@@ -141,6 +149,15 @@ export const SendOutlookEmail = QoreAppCreator.createLocalizedAction<typeof opti
       },
     });
 
+    const processedAttachments = attachments.map((attachment) => {
+      return {
+        '@odata.type': '#microsoft.graph.fileAttachment',
+        name: attachment.name,
+        contentType: attachment.mime_type,
+        contentBytes: attachment.content,
+      };
+    });
+
     const emailMessage = {
       message: {
         subject,
@@ -151,6 +168,7 @@ export const SendOutlookEmail = QoreAppCreator.createLocalizedAction<typeof opti
         toRecipients: toRecipients!.map(mapOutlookRecipientToAddress),
         ccRecipients: ccRecipients.map(mapOutlookRecipientToAddress),
         bccRecipients: bccRecipients.map(mapOutlookRecipientToAddress),
+        attachments: processedAttachments,
       },
       saveToSentItems,
     };

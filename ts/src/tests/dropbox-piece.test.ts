@@ -4,6 +4,7 @@ import {
   TCustomConnOptions,
   TQoreAppActionFunctionContext,
   TQoreAppWithActions,
+  TQoreFile,
   TQoreMappedOptions,
 } from '@qoretechnologies/ts-toolkit';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
@@ -153,7 +154,11 @@ describe('DropboxPieceTest', () => {
             path: '/testing',
             autorename: true,
             mute: true,
-            file: 'data:text/plain;base64,SGVsbG8gV29ybGQh',
+            file: {
+              content: 'SnVzdCBhIHRlc3QgZmlsZQ==',
+              name: 'test.txt',
+              mime_type: 'plain/text',
+            } as TQoreFile,
           },
           undefined,
           actionContext

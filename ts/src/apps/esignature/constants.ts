@@ -2,6 +2,7 @@ import {
   TAllowedPaths,
   TCustomConnOptions,
   TQoreAppActionOverrideOption,
+  TQoreFile,
 } from '@qoretechnologies/ts-toolkit';
 import { OpenAPIV2 } from 'openapi-types';
 import { buildActionsFromSwaggerSchema } from '../../global/helpers';
@@ -10,6 +11,7 @@ import { getEsignatureDocumentIdAllowedValues } from './helpers/get-document-id-
 import { getEsignatureEnvelopeIdAllowedValues } from './helpers/get-envelope-id-allowed-values';
 import { getEsignatureFolderIdAllowedValues } from './helpers/get-folder-id-allowed-values';
 import { getEsignatureRecipientIdAllowedValues } from './helpers/get-recipient-id-allowed-values';
+import * as mime from 'mime-types';
 
 export const ESIGNATURE_APP_NAME = 'DocusignESignature';
 
@@ -88,6 +90,29 @@ export const ESIGNATURE_PATHS = {
       },
     },
     POST: {
+      request_data_converter: (request) => {
+        const { body, ...rest } = request;
+        const { documents, ...restBody } = body;
+
+        const convertedDocuments = documents.map((document: TQoreFile, index: number) => {
+          const fileExtension = mime.extension(document.mime_type);
+
+          return {
+            documentBase64: document.content,
+            documentId: ++index,
+            fileExtension,
+            name: document.name,
+          };
+        });
+
+        return {
+          ...rest,
+          body: {
+            ...restBody,
+            documents: convertedDocuments,
+          },
+        };
+      },
       override_options: {
         accountId: GetAccountIdConfig,
         status: {
@@ -111,20 +136,12 @@ export const ESIGNATURE_PATHS = {
         emailSubject: {
           required: true,
         },
+
         documents: {
-          required: true,
-        },
-        'documents.documentId': {
-          required: true,
-        },
-        'documents.documentBase64': {
-          required: true,
-        },
-        'documents.name': {
-          required: true,
-        },
-        'documents.fileExtension': {
-          required: true,
+          type: {
+            type: 'list',
+            element_type: 'file',
+          },
         },
         recipients: {
           required: true,

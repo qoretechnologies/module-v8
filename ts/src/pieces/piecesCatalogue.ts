@@ -10,6 +10,7 @@ import {
   TQoreAppActionOption,
   TQoreApps,
   TQoreAppWithActions,
+  TQoreFile,
   TQoreGetAllowedValuesFunction,
   TQoreGetDefaultValueFunction,
   TQoreGetDependentOptionsFunction,
@@ -144,7 +145,7 @@ class _PiecesAppCatalogue {
     props: Record<string, InputProperty>
   ): TQoreAppActionFunction {
     return async (
-      obj: TQoreOptions | undefined,
+      obj: Record<string, any> | undefined,
       _options: TQoreOptions | undefined,
       context: TQoreAppActionFunctionContext
     ): Promise<any> => {
@@ -162,6 +163,12 @@ class _PiecesAppCatalogue {
       for (const key in obj) {
         if (key in props) {
           const prop = props[key];
+          if (prop.type === PropertyType.FILE) {
+            const value = obj[key] as TQoreFile;
+            const convertedFile = `data:${value.mime_type};base64,${value.content}`;
+            obj[key] = convertedFile;
+          }
+
           if (prop.defaultProcessors && prop.defaultProcessors.length > 0) {
             await Promise.all(
               prop.defaultProcessors.map(

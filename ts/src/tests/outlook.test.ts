@@ -7,8 +7,8 @@ import { ListOutlookContacts } from '../apps/outlook/actions/list-contacts';
 import { UpdateOutlookContact } from '../apps/outlook/actions/update-contact';
 import { getOutlookCalendarIdAllowedValues } from '../apps/outlook/helpers/get-calendar-id-allowed-values';
 import { getOutlookContactIdAllowedValues } from '../apps/outlook/helpers/get-contact-id-allowed-values';
-import { getOutlookRecipientsAllowedValues } from '../apps/outlook/helpers/get-recepient-allowed-values';
 import { getOutlookEventIdAllowedValues } from '../apps/outlook/helpers/get-event-id-allowed-values';
+import { getOutlookRecipientsAllowedValues } from '../apps/outlook/helpers/get-recepient-allowed-values';
 
 describe('Should test Outlook actions', () => {
   const refreshToken = process.env.OUTLOOK_REFRESH_TOKEN;
@@ -215,6 +215,13 @@ describe('Should test Outlook actions', () => {
     //       subject: 'Test email',
     //       body: 'This is a test email',
     //       toRecipients: [recipient],
+    //       attachments: [
+    //         {
+    //           name: 'test.txt',
+    //           mime_type: 'text/plain',
+    //           content: 'SnVzdCBhIHRlc3QgZmlsZQ==',
+    //         },
+    //       ],
     //     },
     //     undefined,
     //     { conn_opts: { token } as any }

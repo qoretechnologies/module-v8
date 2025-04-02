@@ -1,4 +1,8 @@
-import { IQoreAppActionWithWebhookBase, QorusRequest } from '@qoretechnologies/ts-toolkit';
+import {
+  IQoreAppActionWithWebhookBase,
+  QorusRequest,
+  TQoreFile,
+} from '@qoretechnologies/ts-toolkit';
 import _sodium from 'libsodium-wrappers';
 import { ESIGNATURE_ACTIONS, ESIGNATURE_CONN_OPTIONS } from '../apps/esignature/constants';
 import * as ESIGNATURE_TRIGGERS from '../apps/esignature/triggers';
@@ -206,11 +210,10 @@ describe('Tests eSignature Actions', () => {
       body: {
         documents: [
           {
-            documentBase64: 'dGVzdCBkb2N1c2lnbmF0dXJl',
-            documentId: '1',
-            fileExtension: 'txt',
+            content: 'dGVzdCBkb2N1c2lnbmF0dXJl',
+            mime_type: 'text/plain',
             name: 'NDA.txt',
-          },
+          } as TQoreFile,
         ],
         emailSubject: 'Please sign the NDA',
         status: 'created',
