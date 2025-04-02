@@ -14640,6 +14640,314 @@ type RootTranslation = {
 			 */
 			longDesc: string
 			actions: {
+				customerCustomerRepositoryV1GetByIdGet: {
+					/**
+					 * G​e​t​ ​C​u​s​t​o​m​e​r​ ​b​y​ ​I​D
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​b​y​ ​I​D
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​u​s​i​n​g​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​I​D​.​ ​R​e​t​u​r​n​s​ ​a​l​l​ ​c​u​s​t​o​m​e​r​ ​a​t​t​r​i​b​u​t​e​s​ ​i​n​c​l​u​d​i​n​g​ ​a​d​d​r​e​s​s​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​c​c​o​u​n​t​ ​s​t​a​t​u​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​s​.
+					 */
+					longDesc: string
+				}
+				customerCustomerRepositoryV1SavePut: {
+					/**
+					 * U​p​d​a​t​e​ ​C​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​c​u​s​t​o​m​e​r​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​a​c​c​o​u​n​t​.​ ​T​h​i​s​ ​e​n​d​p​o​i​n​t​ ​a​l​l​o​w​s​ ​m​o​d​i​f​i​c​a​t​i​o​n​ ​o​f​ ​p​e​r​s​o​n​a​l​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​d​d​r​e​s​s​e​s​,​ ​c​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​a​c​c​o​u​n​t​ ​d​e​t​a​i​l​s​.​ ​T​h​e​ ​c​u​s​t​o​m​e​r​ ​I​D​ ​m​u​s​t​ ​b​e​ ​i​n​c​l​u​d​e​d​ ​i​n​ ​t​h​e​ ​r​e​q​u​e​s​t​.
+					 */
+					longDesc: string
+				}
+				customerCustomerRepositoryV1DeleteByIdDelete: {
+					/**
+					 * D​e​l​e​t​e​ ​C​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​a​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​b​y​ ​I​D
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​s​ ​a​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​f​r​o​m​ ​t​h​e​ ​s​y​s​t​e​m​.​ ​T​h​i​s​ ​o​p​e​r​a​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​ ​a​n​d​ ​w​i​l​l​ ​r​e​m​o​v​e​ ​a​l​l​ ​c​u​s​t​o​m​e​r​ ​d​a​t​a​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​I​D​,​ ​i​n​c​l​u​d​i​n​g​ ​a​d​d​r​e​s​s​e​s​ ​a​n​d​ ​o​r​d​e​r​ ​h​i​s​t​o​r​y​ ​r​e​f​e​r​e​n​c​e​s​.
+					 */
+					longDesc: string
+				}
+				customerCustomerRepositoryV1GetListGet: {
+					/**
+					 * L​i​s​t​ ​C​u​s​t​o​m​e​r​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​s​ ​t​h​a​t​ ​m​a​t​c​h​ ​s​p​e​c​i​f​i​e​d​ ​s​e​a​r​c​h​ ​c​r​i​t​e​r​i​a​.​ ​R​e​s​u​l​t​s​ ​c​a​n​ ​b​e​ ​f​i​l​t​e​r​e​d​,​ ​s​o​r​t​e​d​,​ ​a​n​d​ ​p​a​g​i​n​a​t​e​d​.​ ​U​s​e​ ​s​e​a​r​c​h​ ​c​r​i​t​e​r​i​a​ ​p​a​r​a​m​e​t​e​r​s​ ​t​o​ ​n​a​r​r​o​w​ ​r​e​s​u​l​t​s​ ​b​y​ ​e​m​a​i​l​,​ ​n​a​m​e​,​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e​,​ ​o​r​ ​o​t​h​e​r​ ​c​u​s​t​o​m​e​r​ ​a​t​t​r​i​b​u​t​e​s​.
+					 */
+					longDesc: string
+				}
+				customerAccountManagementV1CreateAccountPost: {
+					/**
+					 * C​r​e​a​t​e​ ​C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * R​e​g​i​s​t​e​r​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​w​i​t​h​ ​t​h​e​ ​p​r​o​v​i​d​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​.​ ​R​e​q​u​i​r​e​d​ ​f​i​e​l​d​s​ ​i​n​c​l​u​d​e​ ​e​m​a​i​l​,​ ​p​a​s​s​w​o​r​d​,​ ​a​n​d​ ​f​i​r​s​t​/​l​a​s​t​ ​n​a​m​e​.​ ​O​p​t​i​o​n​a​l​ ​d​e​t​a​i​l​s​ ​i​n​c​l​u​d​e​ ​a​d​d​r​e​s​s​e​s​,​ ​d​a​t​e​ ​o​f​ ​b​i​r​t​h​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​s​.​ ​R​e​t​u​r​n​s​ ​t​h​e​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​c​u​s​t​o​m​e​r​ ​I​D​ ​u​p​o​n​ ​s​u​c​c​e​s​s​.
+					 */
+					longDesc: string
+				}
+				catalogProductRepositoryV1SavePost: {
+					/**
+					 * C​r​e​a​t​e​ ​P​r​o​d​u​c​t
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​ ​n​e​w​ ​p​r​o​d​u​c​t​ ​t​o​ ​t​h​e​ ​c​a​t​a​l​o​g
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​p​r​o​d​u​c​t​ ​i​n​ ​t​h​e​ ​c​a​t​a​l​o​g​ ​w​i​t​h​ ​s​p​e​c​i​f​i​e​d​ ​a​t​t​r​i​b​u​t​e​s​,​ ​p​r​i​c​i​n​g​,​ ​a​n​d​ ​i​n​v​e​n​t​o​r​y​ ​i​n​f​o​r​m​a​t​i​o​n​.​ ​P​r​o​d​u​c​t​s​ ​c​a​n​ ​b​e​ ​s​i​m​p​l​e​,​ ​c​o​n​f​i​g​u​r​a​b​l​e​,​ ​b​u​n​d​l​e​d​,​ ​g​r​o​u​p​e​d​,​ ​v​i​r​t​u​a​l​,​ ​o​r​ ​d​o​w​n​l​o​a​d​a​b​l​e​.​ ​M​e​d​i​a​ ​g​a​l​l​e​r​y​ ​e​n​t​r​i​e​s​,​ ​t​i​e​r​ ​p​r​i​c​e​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​o​p​t​i​o​n​s​ ​c​a​n​ ​a​l​s​o​ ​b​e​ ​d​e​f​i​n​e​d​.
+					 */
+					longDesc: string
+				}
+				catalogProductRepositoryV1GetListGet: {
+					/**
+					 * L​i​s​t​ ​P​r​o​d​u​c​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​p​r​o​d​u​c​t​s​ ​f​r​o​m​ ​t​h​e​ ​c​a​t​a​l​o​g
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​c​o​l​l​e​c​t​i​o​n​ ​o​f​ ​p​r​o​d​u​c​t​s​ ​t​h​a​t​ ​m​a​t​c​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​e​a​r​c​h​ ​c​r​i​t​e​r​i​a​.​ ​R​e​s​u​l​t​s​ ​c​a​n​ ​b​e​ ​f​i​l​t​e​r​e​d​ ​b​y​ ​a​t​t​r​i​b​u​t​e​s​ ​l​i​k​e​ ​n​a​m​e​,​ ​S​K​U​,​ ​p​r​i​c​e​,​ ​a​n​d​ ​s​t​a​t​u​s​.​ ​S​u​p​p​o​r​t​s​ ​p​a​g​i​n​a​t​i​o​n​,​ ​s​o​r​t​i​n​g​,​ ​a​n​d​ ​i​n​c​l​u​s​i​o​n​ ​o​f​ ​c​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​s​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.
+					 */
+					longDesc: string
+				}
+				catalogProductRepositoryV1SavePut: {
+					/**
+					 * U​p​d​a​t​e​ ​P​r​o​d​u​c​t
+					 */
+					displayName: string
+					/**
+					 * M​o​d​i​f​y​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​r​o​d​u​c​t
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​r​o​d​u​c​t​ ​i​n​ ​t​h​e​ ​c​a​t​a​l​o​g​.​ ​C​a​n​ ​m​o​d​i​f​y​ ​a​n​y​ ​p​r​o​d​u​c​t​ ​a​t​t​r​i​b​u​t​e​ ​i​n​c​l​u​d​i​n​g​ ​n​a​m​e​,​ ​p​r​i​c​e​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​i​m​a​g​e​s​,​ ​i​n​v​e​n​t​o​r​y​,​ ​a​n​d​ ​c​a​t​e​g​o​r​y​ ​a​s​s​i​g​n​m​e​n​t​s​.​ ​T​h​e​ ​p​r​o​d​u​c​t​ ​S​K​U​ ​o​r​ ​I​D​ ​m​u​s​t​ ​b​e​ ​s​p​e​c​i​f​i​e​d​ ​i​n​ ​t​h​e​ ​r​e​q​u​e​s​t​.
+					 */
+					longDesc: string
+				}
+				catalogProductRepositoryV1DeleteByIdDelete: {
+					/**
+					 * D​e​l​e​t​e​ ​P​r​o​d​u​c​t
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​a​ ​p​r​o​d​u​c​t​ ​f​r​o​m​ ​t​h​e​ ​c​a​t​a​l​o​g
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​s​ ​a​ ​p​r​o​d​u​c​t​ ​f​r​o​m​ ​t​h​e​ ​c​a​t​a​l​o​g​ ​b​y​ ​I​D​ ​o​r​ ​S​K​U​.​ ​T​h​i​s​ ​o​p​e​r​a​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​ ​a​n​d​ ​m​a​y​ ​a​f​f​e​c​t​ ​e​x​i​s​t​i​n​g​ ​o​r​d​e​r​s​ ​a​n​d​ ​c​a​r​t​s​ ​t​h​a​t​ ​r​e​f​e​r​e​n​c​e​ ​t​h​e​ ​d​e​l​e​t​e​d​ ​p​r​o​d​u​c​t​.
+					 */
+					longDesc: string
+				}
+				catalogProductRepositoryV1GetGet: {
+					/**
+					 * G​e​t​ ​P​r​o​d​u​c​t​ ​D​e​t​a​i​l​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​r​o​d​u​c​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​r​o​d​u​c​t​ ​b​y​ ​S​K​U​ ​o​r​ ​I​D​.​ ​T​h​e​ ​r​e​s​p​o​n​s​e​ ​i​n​c​l​u​d​e​s​ ​a​l​l​ ​p​r​o​d​u​c​t​ ​a​t​t​r​i​b​u​t​e​s​,​ ​i​m​a​g​e​s​,​ ​p​r​i​c​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​i​n​v​e​n​t​o​r​y​ ​s​t​a​t​u​s​,​ ​a​n​d​ ​c​a​t​e​g​o​r​y​ ​a​s​s​i​g​n​m​e​n​t​s​.​ ​A​d​d​i​t​i​o​n​a​l​ ​p​a​r​a​m​e​t​e​r​s​ ​c​a​n​ ​c​o​n​t​r​o​l​ ​w​h​i​c​h​ ​d​a​t​a​ ​i​s​ ​i​n​c​l​u​d​e​d​.
+					 */
+					longDesc: string
+				}
+				quoteCartRepositoryV1GetListGet: {
+					/**
+					 * L​i​s​t​ ​S​h​o​p​p​i​n​g​ ​C​a​r​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​c​t​i​v​e​ ​s​h​o​p​p​i​n​g​ ​c​a​r​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​c​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​v​e​ ​s​h​o​p​p​i​n​g​ ​c​a​r​t​s​ ​t​h​a​t​ ​m​a​t​c​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​e​a​r​c​h​ ​c​r​i​t​e​r​i​a​.​ ​R​e​s​u​l​t​s​ ​c​a​n​ ​b​e​ ​f​i​l​t​e​r​e​d​ ​b​y​ ​c​u​s​t​o​m​e​r​ ​I​D​,​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e​,​ ​a​n​d​ ​c​a​r​t​ ​s​t​a​t​u​s​.​ ​E​a​c​h​ ​c​a​r​t​ ​i​n​c​l​u​d​e​s​ ​i​t​e​m​s​,​ ​a​p​p​l​i​e​d​ ​c​o​u​p​o​n​s​,​ ​a​n​d​ ​s​h​i​p​p​i​n​g​/​b​i​l​l​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​f​ ​a​v​a​i​l​a​b​l​e​.
+					 */
+					longDesc: string
+				}
+				salesOrderRepositoryV1GetGet: {
+					/**
+					 * G​e​t​ ​O​r​d​e​r​ ​D​e​t​a​i​l​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​o​r​d​e​r
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​o​r​d​e​r​ ​b​y​ ​I​D​.​ ​I​n​c​l​u​d​e​s​ ​o​r​d​e​r​ ​i​t​e​m​s​,​ ​b​i​l​l​i​n​g​ ​a​n​d​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s​e​s​,​ ​p​a​y​m​e​n​t​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​p​p​l​i​e​d​ ​d​i​s​c​o​u​n​t​s​,​ ​a​n​d​ ​o​r​d​e​r​ ​s​t​a​t​u​s​ ​h​i​s​t​o​r​y​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​o​r​d​e​r​ ​p​r​o​c​e​s​s​i​n​g​ ​a​n​d​ ​c​u​s​t​o​m​e​r​ ​s​e​r​v​i​c​e​ ​i​n​q​u​i​r​i​e​s​.
+					 */
+					longDesc: string
+				}
+				salesOrderRepositoryV1GetListGet: {
+					/**
+					 * L​i​s​t​ ​O​r​d​e​r​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​o​r​d​e​r​s​ ​b​a​s​e​d​ ​o​n​ ​s​e​a​r​c​h​ ​c​r​i​t​e​r​i​a
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​c​o​l​l​e​c​t​i​o​n​ ​o​f​ ​o​r​d​e​r​s​ ​t​h​a​t​ ​m​a​t​c​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​e​a​r​c​h​ ​c​r​i​t​e​r​i​a​.​ ​R​e​s​u​l​t​s​ ​c​a​n​ ​b​e​ ​f​i​l​t​e​r​e​d​ ​b​y​ ​c​u​s​t​o​m​e​r​,​ ​s​t​a​t​u​s​,​ ​d​a​t​e​ ​r​a​n​g​e​,​ ​a​n​d​ ​t​o​t​a​l​ ​a​m​o​u​n​t​.​ ​S​u​p​p​o​r​t​s​ ​p​a​g​i​n​a​t​i​o​n​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​t​o​ ​e​f​f​i​c​i​e​n​t​l​y​ ​b​r​o​w​s​e​ ​l​a​r​g​e​ ​o​r​d​e​r​ ​v​o​l​u​m​e​s​.
+					 */
+					longDesc: string
+				}
+				salesOrderRepositoryV1SavePut: {
+					/**
+					 * U​p​d​a​t​e​ ​O​r​d​e​r
+					 */
+					displayName: string
+					/**
+					 * M​o​d​i​f​y​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​o​r​d​e​r
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​o​r​d​e​r​ ​w​i​t​h​ ​n​e​w​ ​i​n​f​o​r​m​a​t​i​o​n​.​ ​C​a​n​ ​m​o​d​i​f​y​ ​s​t​a​t​u​s​,​ ​a​d​d​r​e​s​s​e​s​,​ ​i​t​e​m​s​,​ ​a​n​d​ ​p​a​y​m​e​n​t​ ​d​e​t​a​i​l​s​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​a​d​m​i​n​i​s​t​r​a​t​i​v​e​ ​c​o​r​r​e​c​t​i​o​n​s​ ​a​n​d​ ​o​r​d​e​r​ ​p​r​o​c​e​s​s​i​n​g​ ​w​o​r​k​f​l​o​w​s​.​ ​N​o​t​e​ ​t​h​a​t​ ​s​o​m​e​ ​o​r​d​e​r​ ​e​l​e​m​e​n​t​s​ ​m​a​y​ ​b​e​ ​i​m​m​u​t​a​b​l​e​ ​o​n​c​e​ ​c​e​r​t​a​i​n​ ​p​r​o​c​e​s​s​i​n​g​ ​s​t​a​g​e​s​ ​h​a​v​e​ ​b​e​e​n​ ​r​e​a​c​h​e​d​.
+					 */
+					longDesc: string
+				}
+				salesOrderManagementV1AddCommentPost: {
+					/**
+					 * A​d​d​ ​O​r​d​e​r​ ​C​o​m​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * A​p​p​e​n​d​ ​a​ ​c​o​m​m​e​n​t​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​o​r​d​e​r
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​s​ ​a​ ​c​o​m​m​e​n​t​ ​t​o​ ​t​h​e​ ​o​r​d​e​r​ ​h​i​s​t​o​r​y​.​ ​C​o​m​m​e​n​t​s​ ​c​a​n​ ​b​e​ ​i​n​t​e​r​n​a​l​ ​(​v​i​s​i​b​l​e​ ​o​n​l​y​ ​t​o​ ​a​d​m​i​n​i​s​t​r​a​t​o​r​s​)​ ​o​r​ ​c​u​s​t​o​m​e​r​-​v​i​s​i​b​l​e​.​ ​E​a​c​h​ ​c​o​m​m​e​n​t​ ​i​s​ ​t​i​m​e​s​t​a​m​p​e​d​ ​a​n​d​ ​a​t​t​r​i​b​u​t​e​d​ ​t​o​ ​t​h​e​ ​a​u​t​h​o​r​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​d​o​c​u​m​e​n​t​i​n​g​ ​o​r​d​e​r​ ​p​r​o​c​e​s​s​i​n​g​ ​s​t​e​p​s​ ​a​n​d​ ​c​u​s​t​o​m​e​r​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​s​.
+					 */
+					longDesc: string
+				}
+				salesOrderManagementV1GetCommentsListGet: {
+					/**
+					 * G​e​t​ ​O​r​d​e​r​ ​C​o​m​m​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​t​h​e​ ​c​o​m​m​e​n​t​ ​h​i​s​t​o​r​y​ ​f​o​r​ ​a​n​ ​o​r​d​e​r
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​t​h​e​ ​c​o​m​p​l​e​t​e​ ​c​o​m​m​e​n​t​ ​h​i​s​t​o​r​y​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​o​r​d​e​r​.​ ​R​e​s​u​l​t​s​ ​i​n​c​l​u​d​e​ ​c​o​m​m​e​n​t​ ​t​e​x​t​,​ ​t​i​m​e​s​t​a​m​p​,​ ​a​u​t​h​o​r​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​n​d​ ​v​i​s​i​b​i​l​i​t​y​ ​s​t​a​t​u​s​ ​(​c​u​s​t​o​m​e​r​-​v​i​s​i​b​l​e​ ​o​r​ ​a​d​m​i​n​-​o​n​l​y​)​.​ ​C​o​m​m​e​n​t​s​ ​a​r​e​ ​r​e​t​u​r​n​e​d​ ​i​n​ ​c​h​r​o​n​o​l​o​g​i​c​a​l​ ​o​r​d​e​r​.
+					 */
+					longDesc: string
+				}
+				salesInvoiceRepositoryV1GetListGet: {
+					/**
+					 * L​i​s​t​ ​I​n​v​o​i​c​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​c​o​l​l​e​c​t​i​o​n​ ​o​f​ ​i​n​v​o​i​c​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​i​n​v​o​i​c​e​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​e​d​ ​s​e​a​r​c​h​ ​c​r​i​t​e​r​i​a​.​ ​R​e​s​u​l​t​s​ ​c​a​n​ ​b​e​ ​f​i​l​t​e​r​e​d​ ​b​y​ ​o​r​d​e​r​ ​I​D​,​ ​c​u​s​t​o​m​e​r​,​ ​d​a​t​e​,​ ​a​n​d​ ​a​m​o​u​n​t​.​ ​E​a​c​h​ ​i​n​v​o​i​c​e​ ​i​n​c​l​u​d​e​s​ ​l​i​n​e​ ​i​t​e​m​s​,​ ​p​a​y​m​e​n​t​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​n​d​ ​r​e​l​a​t​e​d​ ​o​r​d​e​r​ ​d​e​t​a​i​l​s​.​ ​S​u​p​p​o​r​t​s​ ​p​a​g​i​n​a​t​i​o​n​ ​a​n​d​ ​s​o​r​t​i​n​g​.
+					 */
+					longDesc: string
+				}
+				salesShipmentRepositoryV1GetListGet: {
+					/**
+					 * L​i​s​t​ ​S​h​i​p​m​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​c​o​l​l​e​c​t​i​o​n​ ​o​f​ ​o​r​d​e​r​ ​s​h​i​p​m​e​n​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​s​h​i​p​m​e​n​t​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​e​d​ ​s​e​a​r​c​h​ ​c​r​i​t​e​r​i​a​.​ ​R​e​s​u​l​t​s​ ​c​a​n​ ​b​e​ ​f​i​l​t​e​r​e​d​ ​b​y​ ​o​r​d​e​r​ ​I​D​,​ ​c​u​s​t​o​m​e​r​,​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e​,​ ​a​n​d​ ​t​r​a​c​k​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n​.​ ​E​a​c​h​ ​s​h​i​p​m​e​n​t​ ​i​n​c​l​u​d​e​s​ ​i​t​e​m​s​ ​s​h​i​p​p​e​d​,​ ​q​u​a​n​t​i​t​i​e​s​,​ ​t​r​a​c​k​i​n​g​ ​n​u​m​b​e​r​s​,​ ​a​n​d​ ​c​a​r​r​i​e​r​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+				}
+				salesTransactionRepositoryV1GetListGet: {
+					/**
+					 * L​i​s​t​ ​P​a​y​m​e​n​t​ ​T​r​a​n​s​a​c​t​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​c​o​l​l​e​c​t​i​o​n​ ​o​f​ ​p​a​y​m​e​n​t​ ​t​r​a​n​s​a​c​t​i​o​n​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​p​a​y​m​e​n​t​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​e​d​ ​s​e​a​r​c​h​ ​c​r​i​t​e​r​i​a​.​ ​R​e​s​u​l​t​s​ ​c​a​n​ ​b​e​ ​f​i​l​t​e​r​e​d​ ​b​y​ ​o​r​d​e​r​ ​I​D​,​ ​p​a​y​m​e​n​t​ ​m​e​t​h​o​d​,​ ​t​r​a​n​s​a​c​t​i​o​n​ ​t​y​p​e​,​ ​a​n​d​ ​s​t​a​t​u​s​.​ ​E​a​c​h​ ​t​r​a​n​s​a​c​t​i​o​n​ ​i​n​c​l​u​d​e​s​ ​a​m​o​u​n​t​,​ ​s​t​a​t​u​s​,​ ​a​n​d​ ​r​e​l​a​t​e​d​ ​p​a​y​m​e​n​t​ ​g​a​t​e​w​a​y​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+				}
+				rmaRmaRepositoryV1DeleteDelete: {
+					/**
+					 * D​e​l​e​t​e​ ​R​e​t​u​r​n​ ​R​e​q​u​e​s​t
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​a​ ​R​e​t​u​r​n​ ​M​e​r​c​h​a​n​d​i​s​e​ ​A​u​t​h​o​r​i​z​a​t​i​o​n​ ​(​R​M​A​)
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​s​ ​a​ ​R​e​t​u​r​n​ ​M​e​r​c​h​a​n​d​i​s​e​ ​A​u​t​h​o​r​i​z​a​t​i​o​n​ ​(​R​M​A​)​ ​r​e​q​u​e​s​t​ ​f​r​o​m​ ​t​h​e​ ​s​y​s​t​e​m​.​ ​T​h​i​s​ ​o​p​e​r​a​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​ ​a​n​d​ ​r​e​m​o​v​e​s​ ​a​l​l​ ​a​s​s​o​c​i​a​t​e​d​ ​r​e​t​u​r​n​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​s​u​b​m​i​t​t​e​d​ ​i​t​e​m​s​,​ ​r​e​a​s​o​n​ ​c​o​d​e​s​,​ ​a​n​d​ ​p​r​o​c​e​s​s​i​n​g​ ​h​i​s​t​o​r​y​.
+					 */
+					longDesc: string
+				}
+				rmaRmaManagementV1SaveRmaPost: {
+					/**
+					 * C​r​e​a​t​e​ ​R​e​t​u​r​n​ ​R​e​q​u​e​s​t
+					 */
+					displayName: string
+					/**
+					 * S​u​b​m​i​t​ ​a​ ​n​e​w​ ​R​e​t​u​r​n​ ​M​e​r​c​h​a​n​d​i​s​e​ ​A​u​t​h​o​r​i​z​a​t​i​o​n​ ​(​R​M​A​)
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​R​e​t​u​r​n​ ​M​e​r​c​h​a​n​d​i​s​e​ ​A​u​t​h​o​r​i​z​a​t​i​o​n​ ​(​R​M​A​)​ ​r​e​q​u​e​s​t​ ​f​o​r​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​o​r​d​e​r​.​ ​T​h​e​ ​r​e​q​u​e​s​t​ ​i​n​c​l​u​d​e​s​ ​i​t​e​m​s​ ​t​o​ ​b​e​ ​r​e​t​u​r​n​e​d​,​ ​q​u​a​n​t​i​t​i​e​s​,​ ​r​e​a​s​o​n​ ​c​o​d​e​s​,​ ​a​n​d​ ​c​u​s​t​o​m​e​r​ ​c​o​m​m​e​n​t​s​.​ ​A​d​d​i​t​i​o​n​a​l​ ​d​o​c​u​m​e​n​t​a​t​i​o​n​ ​s​u​c​h​ ​a​s​ ​i​m​a​g​e​s​ ​c​a​n​ ​b​e​ ​a​t​t​a​c​h​e​d​ ​t​o​ ​s​u​p​p​o​r​t​ ​t​h​e​ ​r​e​t​u​r​n​ ​r​e​q​u​e​s​t​.
+					 */
+					longDesc: string
+				}
+				rmaRmaManagementV1SearchGet: {
+					/**
+					 * S​e​a​r​c​h​ ​R​e​t​u​r​n​ ​R​e​q​u​e​s​t​s
+					 */
+					displayName: string
+					/**
+					 * F​i​n​d​ ​R​e​t​u​r​n​ ​M​e​r​c​h​a​n​d​i​s​e​ ​A​u​t​h​o​r​i​z​a​t​i​o​n​s​ ​(​R​M​A​s​)
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​e​s​ ​f​o​r​ ​R​e​t​u​r​n​ ​M​e​r​c​h​a​n​d​i​s​e​ ​A​u​t​h​o​r​i​z​a​t​i​o​n​ ​(​R​M​A​)​ ​r​e​q​u​e​s​t​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​e​d​ ​c​r​i​t​e​r​i​a​.​ ​R​e​s​u​l​t​s​ ​c​a​n​ ​b​e​ ​f​i​l​t​e​r​e​d​ ​b​y​ ​o​r​d​e​r​ ​I​D​,​ ​c​u​s​t​o​m​e​r​,​ ​s​t​a​t​u​s​,​ ​a​n​d​ ​d​a​t​e​ ​r​a​n​g​e​.​ ​E​a​c​h​ ​R​M​A​ ​i​n​c​l​u​d​e​s​ ​r​e​t​u​r​n​ ​i​t​e​m​s​,​ ​p​r​o​c​e​s​s​i​n​g​ ​s​t​a​t​u​s​,​ ​a​n​d​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​ ​h​i​s​t​o​r​y​.
+					 */
+					longDesc: string
+				}
 			}
 			triggers: {
 				'customer-created-or-updated': {
@@ -29393,6 +29701,314 @@ export type TranslationFunctions = {
 			 */
 			longDesc: () => LocalizedString
 			actions: {
+				customerCustomerRepositoryV1GetByIdGet: {
+					/**
+					 * Get Customer by ID
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific customer account by ID
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves detailed information about a customer account using the customer ID. Returns all customer attributes including address information, account status, and custom attributes.
+					 */
+					longDesc: () => LocalizedString
+				}
+				customerCustomerRepositoryV1SavePut: {
+					/**
+					 * Update Customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing customer account
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates customer information for an existing account. This endpoint allows modification of personal information, addresses, custom attributes, and other account details. The customer ID must be included in the request.
+					 */
+					longDesc: () => LocalizedString
+				}
+				customerCustomerRepositoryV1DeleteByIdDelete: {
+					/**
+					 * Delete Customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove a customer account by ID
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently deletes a customer account from the system. This operation cannot be undone and will remove all customer data associated with the specified ID, including addresses and order history references.
+					 */
+					longDesc: () => LocalizedString
+				}
+				customerCustomerRepositoryV1GetListGet: {
+					/**
+					 * List Customers
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of customer accounts
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns a list of customer accounts that match specified search criteria. Results can be filtered, sorted, and paginated. Use search criteria parameters to narrow results by email, name, creation date, or other customer attributes.
+					 */
+					longDesc: () => LocalizedString
+				}
+				customerAccountManagementV1CreateAccountPost: {
+					/**
+					 * Create Customer Account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Register a new customer account
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new customer account with the provided information. Required fields include email, password, and first/last name. Optional details include addresses, date of birth, and custom attributes. Returns the newly created customer ID upon success.
+					 */
+					longDesc: () => LocalizedString
+				}
+				catalogProductRepositoryV1SavePost: {
+					/**
+					 * Create Product
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add a new product to the catalog
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new product in the catalog with specified attributes, pricing, and inventory information. Products can be simple, configurable, bundled, grouped, virtual, or downloadable. Media gallery entries, tier prices, and custom options can also be defined.
+					 */
+					longDesc: () => LocalizedString
+				}
+				catalogProductRepositoryV1GetListGet: {
+					/**
+					 * List Products
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of products from the catalog
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns a collection of products that match the specified search criteria. Results can be filtered by attributes like name, SKU, price, and status. Supports pagination, sorting, and inclusion of custom attributes in the response.
+					 */
+					longDesc: () => LocalizedString
+				}
+				catalogProductRepositoryV1SavePut: {
+					/**
+					 * Update Product
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Modify an existing product
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates an existing product in the catalog. Can modify any product attribute including name, price, description, images, inventory, and category assignments. The product SKU or ID must be specified in the request.
+					 */
+					longDesc: () => LocalizedString
+				}
+				catalogProductRepositoryV1DeleteByIdDelete: {
+					/**
+					 * Delete Product
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove a product from the catalog
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently removes a product from the catalog by ID or SKU. This operation cannot be undone and may affect existing orders and carts that reference the deleted product.
+					 */
+					longDesc: () => LocalizedString
+				}
+				catalogProductRepositoryV1GetGet: {
+					/**
+					 * Get Product Details
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific product
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves comprehensive information about a specific product by SKU or ID. The response includes all product attributes, images, pricing information, inventory status, and category assignments. Additional parameters can control which data is included.
+					 */
+					longDesc: () => LocalizedString
+				}
+				quoteCartRepositoryV1GetListGet: {
+					/**
+					 * List Shopping Carts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of active shopping carts
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns a collection of active shopping carts that match the specified search criteria. Results can be filtered by customer ID, creation date, and cart status. Each cart includes items, applied coupons, and shipping/billing information if available.
+					 */
+					longDesc: () => LocalizedString
+				}
+				salesOrderRepositoryV1GetGet: {
+					/**
+					 * Get Order Details
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific order
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves comprehensive information about a specific order by ID. Includes order items, billing and shipping addresses, payment information, applied discounts, and order status history. Useful for order processing and customer service inquiries.
+					 */
+					longDesc: () => LocalizedString
+				}
+				salesOrderRepositoryV1GetListGet: {
+					/**
+					 * List Orders
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of orders based on search criteria
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns a collection of orders that match the specified search criteria. Results can be filtered by customer, status, date range, and total amount. Supports pagination and sorting to efficiently browse large order volumes.
+					 */
+					longDesc: () => LocalizedString
+				}
+				salesOrderRepositoryV1SavePut: {
+					/**
+					 * Update Order
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Modify an existing order
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates an existing order with new information. Can modify status, addresses, items, and payment details. Useful for administrative corrections and order processing workflows. Note that some order elements may be immutable once certain processing stages have been reached.
+					 */
+					longDesc: () => LocalizedString
+				}
+				salesOrderManagementV1AddCommentPost: {
+					/**
+					 * Add Order Comment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Append a comment to an existing order
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Adds a comment to the order history. Comments can be internal (visible only to administrators) or customer-visible. Each comment is timestamped and attributed to the author. Useful for documenting order processing steps and customer communications.
+					 */
+					longDesc: () => LocalizedString
+				}
+				salesOrderManagementV1GetCommentsListGet: {
+					/**
+					 * Get Order Comments
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve the comment history for an order
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns the complete comment history for a specific order. Results include comment text, timestamp, author information, and visibility status (customer-visible or admin-only). Comments are returned in chronological order.
+					 */
+					longDesc: () => LocalizedString
+				}
+				salesInvoiceRepositoryV1GetListGet: {
+					/**
+					 * List Invoices
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a collection of invoices
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns a list of invoices based on specified search criteria. Results can be filtered by order ID, customer, date, and amount. Each invoice includes line items, payment information, and related order details. Supports pagination and sorting.
+					 */
+					longDesc: () => LocalizedString
+				}
+				salesShipmentRepositoryV1GetListGet: {
+					/**
+					 * List Shipments
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a collection of order shipments
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns a list of shipments based on specified search criteria. Results can be filtered by order ID, customer, creation date, and tracking information. Each shipment includes items shipped, quantities, tracking numbers, and carrier information.
+					 */
+					longDesc: () => LocalizedString
+				}
+				salesTransactionRepositoryV1GetListGet: {
+					/**
+					 * List Payment Transactions
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a collection of payment transactions
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns a list of payment transactions based on specified search criteria. Results can be filtered by order ID, payment method, transaction type, and status. Each transaction includes amount, status, and related payment gateway information.
+					 */
+					longDesc: () => LocalizedString
+				}
+				rmaRmaRepositoryV1DeleteDelete: {
+					/**
+					 * Delete Return Request
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove a Return Merchandise Authorization (RMA)
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently deletes a Return Merchandise Authorization (RMA) request from the system. This operation cannot be undone and removes all associated return information including submitted items, reason codes, and processing history.
+					 */
+					longDesc: () => LocalizedString
+				}
+				rmaRmaManagementV1SaveRmaPost: {
+					/**
+					 * Create Return Request
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Submit a new Return Merchandise Authorization (RMA)
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new Return Merchandise Authorization (RMA) request for an existing order. The request includes items to be returned, quantities, reason codes, and customer comments. Additional documentation such as images can be attached to support the return request.
+					 */
+					longDesc: () => LocalizedString
+				}
+				rmaRmaManagementV1SearchGet: {
+					/**
+					 * Search Return Requests
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Find Return Merchandise Authorizations (RMAs)
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Searches for Return Merchandise Authorization (RMA) requests based on specified criteria. Results can be filtered by order ID, customer, status, and date range. Each RMA includes return items, processing status, and communication history.
+					 */
+					longDesc: () => LocalizedString
+				}
 			}
 			triggers: {
 				'customer-created-or-updated': {

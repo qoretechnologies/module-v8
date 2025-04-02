@@ -158,5 +158,54 @@ async function runWithTimeout(promise, delay) {
             }
         }
     }
+
+    static *list<string> processJavaScriptAppFile(string path) {
+        on_error rethrow "APP-REGISTRATION-ERROR", sprintf("%s: %s (source: %y)", $1.err, $1.desc, path);
+        DynamicAppContextHelper dach(path);
+        JavaScriptProgramPool pool(DefaultCode + File::readTextFile(path), path,
+            sub (JavaScriptProgram pgm) {
+                pgm.getGlobal().exports.actionsCatalogue.registerAppActions(
+                    TypeScriptActionInterface::Api
+                );
+            },
+        );
+        pstore{pool.uniqueHash()} = pool;
+        return DynamicAppContextHelper::getApps();
+    }
+}
+}
+
+namespace Priv {
+thread_local *hash<auto> _app_ctx;
+class DynamicAppContextHelper {
+    private {
+        *hash<auto> old;
+    }
+
+    constructor(string path) {
+        old = _app_ctx;
+        _app_ctx.info = {
+            "info": {
+                "path": path,
+            },
+            "dynamic": True,
+        };
+    }
+
+    destructor() {
+        _app_ctx = old;
+    }
+
+    static *hash<auto> get() {
+        return _app_ctx.info;
+    }
+
+    static *list<string> getApps() {
+        return keys _app_ctx.apps;
+    }
+
+    static addApp(string name) {
+        _app_ctx.apps{name} = True;
+    }
 }
 }
