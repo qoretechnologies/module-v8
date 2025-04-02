@@ -208,9 +208,11 @@ class DynamicAppContextHelper {
             "info": {
                 "path": path,
             },
-            "replace": replace,
             "dynamic": True,
         };
+        if (replace) {
+            _app_ctx.replace = True;
+        }
     }
 
     destructor() {
