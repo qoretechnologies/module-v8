@@ -122,6 +122,8 @@ async function runWithTimeout(promise, delay) {
             DataProvider::addOptions(DPO_DisableOnDemandInitialization);
             DataProvider::checkStaticInit();
 
+            IgnoreDuplicateAppHelper idah();
+
             string cwd = getcwd();
             foreach string path in (scripts.split(":")) {
                 try {
@@ -176,6 +178,24 @@ async function runWithTimeout(promise, delay) {
 }
 
 namespace Priv {
+thread_local *bool _app_ignore_dup;
+class IgnoreDuplicateAppHelper {
+    private {
+        *bool b;
+    }
+
+    constructor() {
+        b = _app_ignore_dup;
+    }
+
+    destructor() {
+        _app_ignore_dup = b;
+    }
+
+    static *bool get() {
+        return _app_ignore_dup;
+    }
+}
 thread_local *hash<auto> _app_ctx;
 class DynamicAppContextHelper {
     private {

@@ -459,11 +459,13 @@ public class TypeScriptActionInterface {
             throw "APP-ERROR", sprintf("App name %y is invalid; it contains one or more spaces", app.name);
         }
         string appname = app.name.lwr();
-        if (exists appcasemap{app.name}) {
-            throw "APP-ERROR", sprintf("App %y has already been regstered and is pending initialization", app.name);
-        }
-        if (initmap{app.name}) {
-            throw "APP-ERROR", sprintf("App %y has already been registered", app.name);
+        if (!IgnoreDuplicateAppHelper::get()) {
+            if (exists appcasemap{app.name}) {
+                throw "APP-ERROR", sprintf("App %y has already been regstered and is pending initialization", app.name);
+            }
+            if (initmap{app.name}) {
+                throw "APP-ERROR", sprintf("App %y has already been registered", app.name);
+            }
         }
         if (*hash<auto> info = DynamicAppContextHelper::get()) {
             app += info;
