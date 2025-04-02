@@ -3,6 +3,7 @@ import {
   TCustomConnOptions,
   TQoreAppActionFunctionContext,
   TQoreAppWithActions,
+  TQoreFile,
   TQoreMappedOptions,
 } from '@qoretechnologies/ts-toolkit';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
@@ -376,7 +377,11 @@ describe('slackPieceTest', () => {
     // const fileData = Buffer.from('This is a test file content', 'utf-8');
 
     const props = {
-      file: 'data:text/plain;base64,SGVsbG8gV29ybGQh',
+      file: {
+        content: 'SnVzdCBhIHRlc3QgZmlsZQ==',
+        name: 'test.txt',
+        mime_type: 'plain/text',
+      } as TQoreFile,
       channel: channelIds[0].value,
       title: 'Example Title',
       filename: 'example.txt',
