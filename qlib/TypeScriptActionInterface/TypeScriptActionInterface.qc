@@ -257,6 +257,21 @@ public class TypeScriptActionInterface {
         }
     }
 
+    #! Register one or more dynamic apps from a JavaScript file
+    static *list<string> registerDynamicAppsFromJavaScript(string path) {
+        *list<string> rv = TypeScriptActionInterfacePriv::processJavaScriptAppFile(path);
+        map initApp($1), rv;
+        return rv;
+    }
+
+    #! Deregister a dynamic app given the app name
+    static deregisterDynamicApp(string name) {
+        DataProviderActionCatalog::deregisterDynamicApp(name);
+        remove appcasemap{name};
+        remove initmap{name};
+        remove appmap{name};
+    }
+
     #! Initialize all pending apps
     static initAllApps(bool do_actions = True) {
         map TypeScriptActionInterface::initApp($1, do_actions), keys appmap;
@@ -443,12 +458,22 @@ public class TypeScriptActionInterface {
         if (app.name =~ / /) {
             throw "APP-ERROR", sprintf("App name %y is invalid; it contains one or more spaces", app.name);
         }
+        string appname = app.name.lwr();
+        if (exists appcasemap{app.name}) {
+            throw "APP-ERROR", sprintf("App %y has already been regstered and is pending initialization", app.name);
+        }
+        if (initmap{app.name}) {
+            throw "APP-ERROR", sprintf("App %y has already been registered", app.name);
+        }
+        if (*hash<auto> info = DynamicAppContextHelper::get()) {
+            app += info;
+            DynamicAppContextHelper::addApp(app.name);
+        }
         appmap{app.name} = <AppInfo>{
             "app": app,
             "pool": pool,
         };
 
-        string appname = app.name.lwr();
         appcasemap{appname} = app.name;
 
         if (app.rest) {
@@ -470,6 +495,13 @@ public class TypeScriptActionInterface {
         if (app."module".typeCode() != NT_STRING || !app."module".val()) {
             throw "APP-ERROR", sprintf("App module %y is invalid; must be a non-empty string", app."module");
         }
+        string appname = app.name.lwr();
+        if (exists appcasemap{app.name}) {
+            throw "APP-ERROR", sprintf("App %y has already been regstered and is pending initialization", app.name);
+        }
+        if (initmap{app.name}) {
+            throw "APP-ERROR", sprintf("App %y has already been registered", app.name);
+        }
 
         # load the referenced module immediately
         load_module(app."module");
@@ -479,7 +511,6 @@ public class TypeScriptActionInterface {
             "pool": pool,
         };
 
-        string appname = app.name.lwr();
         appcasemap{appname} = app.name;
 
         # must register the app immediately
@@ -502,9 +533,6 @@ public class TypeScriptActionInterface {
     static bool initApp(string app, *bool do_actions) {
         if (exists (*string rn = appcasemap{app})) {
             app = rn;
-        }
-        if (initmap{app}) {
-            return False;
         }
         return TypeScriptActionInterface::initAppIntern(app, do_actions);
     }
