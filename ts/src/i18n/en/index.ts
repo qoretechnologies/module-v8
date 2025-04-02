@@ -3300,6 +3300,12 @@ const en = {
               shortDesc: 'Whether to save a copy in Sent Items.',
               longDesc: 'Choose whether to save a copy of the email in your Sent Items folder.',
             },
+            attachments: {
+              displayName: 'Attachments',
+              shortDesc: 'Files to attach to the email.',
+              longDesc:
+                'Optionally attach files to the email. You can add one or more files to be sent with the email.',
+            },
           },
         },
       },

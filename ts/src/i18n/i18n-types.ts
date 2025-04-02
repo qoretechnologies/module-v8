@@ -13130,6 +13130,20 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
+						attachments: {
+							/**
+							 * A​t​t​a​c​h​m​e​n​t​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​e​s​ ​t​o​ ​a​t​t​a​c​h​ ​t​o​ ​t​h​e​ ​e​m​a​i​l​.
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​a​t​t​a​c​h​ ​f​i​l​e​s​ ​t​o​ ​t​h​e​ ​e​m​a​i​l​.​ ​Y​o​u​ ​c​a​n​ ​a​d​d​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​f​i​l​e​s​ ​t​o​ ​b​e​ ​s​e​n​t​ ​w​i​t​h​ ​t​h​e​ ​e​m​a​i​l​.
+							 */
+							longDesc: string
+						}
 					}
 				}
 			}
@@ -27866,6 +27880,20 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Choose whether to save a copy of the email in your Sent Items folder.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attachments: {
+							/**
+							 * Attachments
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Files to attach to the email.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally attach files to the email. You can add one or more files to be sent with the email.
 							 */
 							longDesc: () => LocalizedString
 						}
