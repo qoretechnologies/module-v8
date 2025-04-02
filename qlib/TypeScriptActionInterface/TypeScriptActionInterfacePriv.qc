@@ -161,9 +161,9 @@ async function runWithTimeout(promise, delay) {
         }
     }
 
-    static *list<string> processJavaScriptAppFile(string path) {
+    static *list<string> processJavaScriptAppFile(string path, *bool replace) {
         on_error rethrow "APP-REGISTRATION-ERROR", sprintf("%s: %s (source: %y)", $1.err, $1.desc, path);
-        DynamicAppContextHelper dach(path);
+        DynamicAppContextHelper dach(path, replace);
         JavaScriptProgramPool pool(DefaultCode + File::readTextFile(path), path,
             sub (JavaScriptProgram pgm) {
                 pgm.getGlobal().exports.actionsCatalogue.registerAppActions(
@@ -202,12 +202,13 @@ class DynamicAppContextHelper {
         *hash<auto> old;
     }
 
-    constructor(string path) {
+    constructor(string path, *bool replace) {
         old = _app_ctx;
         _app_ctx.info = {
             "info": {
                 "path": path,
             },
+            "replace": replace,
             "dynamic": True,
         };
     }
@@ -226,6 +227,10 @@ class DynamicAppContextHelper {
 
     static addApp(string name) {
         _app_ctx.apps{name} = True;
+    }
+
+    static *bool replacing() {
+        return _app_ctx.replace;
     }
 }
 }

@@ -258,8 +258,8 @@ public class TypeScriptActionInterface {
     }
 
     #! Register one or more dynamic apps from a JavaScript file
-    static *list<string> registerDynamicAppsFromJavaScript(string path) {
-        *list<string> rv = TypeScriptActionInterfacePriv::processJavaScriptAppFile(path);
+    static *list<string> registerDynamicAppsFromJavaScript(string path, *bool replace) {
+        *list<string> rv = TypeScriptActionInterfacePriv::processJavaScriptAppFile(path, replace);
         map initApp($1), rv;
         return rv;
     }
@@ -393,9 +393,11 @@ public class TypeScriptActionInterface {
         string key;
         try {
             key = (foldl $1 + "-" + $2, argv) + sprintf("-%s", call.type);
-            if (acmap{key}) {
-                throw "ASYNC-CALL-ERROR", sprintf("Call %s is already registered", key);
+            if (acmap{key} && ((acmap{key} - "key") == (call - "key"))) {
+                # function is being reused
+                return key;
             }
+            # function is being replaced
             call.key = key;
             acmap{key} = call;
         } catch (hash<ExceptionInfo> ex) {
@@ -478,6 +480,9 @@ public class TypeScriptActionInterface {
     static registerApp(hash<auto> app, JavaScriptProgramPool pool) {
         if (app.name =~ / /) {
             throw "APP-ERROR", sprintf("App name %y is invalid; it contains one or more spaces", app.name);
+        }
+        if (DynamicAppContextHelper::replacing()) {
+            deregisterDynamicApp(app.name);
         }
         string appname = app.name.lwr();
         if (exists appcasemap{app.name}) {
