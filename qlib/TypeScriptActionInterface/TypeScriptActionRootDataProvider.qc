@@ -61,12 +61,17 @@ class TypeScriptActionRootDataProvider inherits AbstractDataProvider {
         return Root;
     }
 
-    #! Register a new child data provider for Discord guilds
+    #! Register a new child data provider
     registerChild(string pathname, TypeScriptActionAppDataProvider prov) {
         if (childMap{pathname}) {
             throw "TYPESCRIPT-CHILD-ERROR", sprintf("child %y already registered", pathname);
         }
         childMap{pathname} = prov;
+    }
+
+    #! Deregister a child data provider
+    deregisterChild(string pathname) {
+        remove childMap{pathname};
     }
 
     #! Return data provider summary info

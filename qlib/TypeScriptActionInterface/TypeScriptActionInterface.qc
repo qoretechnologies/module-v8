@@ -266,10 +266,31 @@ public class TypeScriptActionInterface {
 
     #! Deregister a dynamic app given the app name
     static deregisterDynamicApp(string name) {
-        DataProviderActionCatalog::deregisterDynamicApp(name);
+        *hash<DataProviderAppInfo> app = DataProviderActionCatalog::deregisterDynamicApp(name);
+        if (!app) {
+            return;
+        }
         remove appcasemap{name};
         remove initmap{name};
         remove appmap{name};
+
+        string appname = app.name.lwr();
+
+        root.deregisterChild(appname);
+
+        string sname = "tsrest-" + name;
+        if (remove samap{sname}) {
+            remove armap{appname};
+            remove aumap{appname};
+            remove app_post_auth_map{appname};
+            remove app_post_auth_code_map{appname};
+            remove app_conn_update_map{appname};
+            remove app_conn_opt_map{appname};
+            remove app_swagger_map{appname};
+            remove app_swagger_schema_map{appname};
+            remove atmap{appname};
+            ConnectionSchemeCache::deregisterScheme(sname);
+        }
     }
 
     #! Initialize all pending apps
@@ -459,13 +480,17 @@ public class TypeScriptActionInterface {
             throw "APP-ERROR", sprintf("App name %y is invalid; it contains one or more spaces", app.name);
         }
         string appname = app.name.lwr();
-        if (!IgnoreDuplicateAppHelper::get()) {
-            if (exists appcasemap{app.name}) {
-                throw "APP-ERROR", sprintf("App %y has already been regstered and is pending initialization", app.name);
+        if (exists appcasemap{app.name}) {
+            if (IgnoreDuplicateAppHelper::get()) {
+                return;
             }
-            if (initmap{app.name}) {
-                throw "APP-ERROR", sprintf("App %y has already been registered", app.name);
+            throw "APP-ERROR", sprintf("App %y has already been regstered and is pending initialization", app.name);
+        }
+        if (initmap{app.name}) {
+            if (IgnoreDuplicateAppHelper::get()) {
+                return;
             }
+            throw "APP-ERROR", sprintf("App %y has already been registered", app.name);
         }
         if (*hash<auto> info = DynamicAppContextHelper::get()) {
             app += info;
@@ -499,9 +524,15 @@ public class TypeScriptActionInterface {
         }
         string appname = app.name.lwr();
         if (exists appcasemap{app.name}) {
+            if (IgnoreDuplicateAppHelper::get()) {
+                return;
+            }
             throw "APP-ERROR", sprintf("App %y has already been regstered and is pending initialization", app.name);
         }
         if (initmap{app.name}) {
+            if (IgnoreDuplicateAppHelper::get()) {
+                return;
+            }
             throw "APP-ERROR", sprintf("App %y has already been registered", app.name);
         }
 
