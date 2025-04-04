@@ -258,8 +258,8 @@ public class TypeScriptActionInterface {
     }
 
     #! Register one or more dynamic apps from a JavaScript file
-    static *list<string> registerDynamicAppsFromJavaScript(string path, *bool replace) {
-        *list<string> rv = TypeScriptActionInterfacePriv::processJavaScriptAppFile(path, replace);
+    static *list<string> registerDynamicAppsFromJavaScript(string base_dir, data fdata, *bool replace) {
+        *list<string> rv = TypeScriptActionInterfacePriv::processDynamicJavaScriptAppFile(base_dir, fdata, replace);
         map initApp($1), rv;
         return rv;
     }

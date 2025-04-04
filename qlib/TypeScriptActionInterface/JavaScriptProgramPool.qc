@@ -57,7 +57,7 @@ public class JavaScriptProgramPool {
     }
 
     #! Creates the object and the initial template program
-    constructor(string source, string path, code init, int max = -1) {
+    constructor(string source, string path, code init, int max = 1) {
         self.source = source;
         self.path = path;
         self.init = init;

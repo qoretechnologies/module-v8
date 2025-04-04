@@ -27,11 +27,16 @@ namespace TypeScriptActionInterfacePriv {
 #! Internal interface class
 class TypeScriptActionInterfacePriv {
     private {
+        #! Master pool for registering dynamic apps
+        static JavaScriptProgramPool master;
+
         #! Static storage for JavaScriptProgramPool objects for app / actions, to ensure they do not go out of scope
         static hash<string, JavaScriptProgramPool> pstore;
 
         #! Default code in each JavaScriptProgram object
-        const DefaultCode = "var exports = {};
+        const DefaultCode = "const __filename = process.env._qore_v8_filename;
+const __dirname = process.env._qore_v8_dirname;
+var exports = {};
 // Returns a Promise that resolves immediately with the state of 'promise'
 function promiseState(promise) {
   const pendingState = { status: 'pending' };
@@ -41,7 +46,6 @@ function promiseState(promise) {
     (reason) => ({ status: 'rejected', reason }),
   );
 }
-
 // calls an async function with a timeout
 /* @param promise any value; a function will be called, and then any promise will be called with a timeout
    @param delay a timeout in milliseconds
@@ -69,7 +73,12 @@ async function runWithTimeout(promise, delay) {
   ]).finally(() => {
     if (timeout) clearTimeout(timeout);
   });
-}\n";
+}
+// updates an environment variable
+function setenv(vr, value) {
+  process.env[vr] = value;
+}
+";
     }
 
     static init() {
@@ -86,38 +95,27 @@ async function runWithTimeout(promise, delay) {
             DataProvider::setGlobalLogger(logger);
         }
 
-        *string scripts = ENV.QORE_TYPESCRIPT_ACTION_SCRIPTS;
-        if (scripts.val()) {
+        {
             # make sure that any calls to create data providers do not result in static initialization
             DataProvider::deferStaticInitialization();
             on_exit DataProvider::restoreStaticInitialization();
 
             string cwd = getcwd();
-            foreach string path in (scripts.split(":")) {
-                try {
-                    string dir = dirname(path);
-                    if (dir.val()) {
-                        chdir(dir);
-                    }
-                    on_exit if (dir.val()) {
-                        chdir(cwd);
-                    }
-                    JavaScriptProgramPool pool(DefaultCode + File::readTextFile(basename(path)), path,
-                        sub (JavaScriptProgram pgm) {
-                            pgm.getGlobal().exports.actionsCatalogue.registerAppActions(
-                                TypeScriptActionInterface::Api
-                            );
-                        },
-                    );
-                    pstore{pool.uniqueHash()} = pool;
-                } catch (hash<ExceptionInfo> ex) {
-                    TSAI::error("Error loading TypeScript action script %y: %s", path, get_exception_string(ex));
-                }
+
+            # initialize master TypeScript action script first
+            if ((*string script_path = ENV.QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT).val()
+                && (*JavaScriptProgramPool master = createPool(script_path, cwd,
+                    \TypeScriptActionInterfacePriv::registerApp()))) {
+                TypeScriptActionInterfacePriv::master = master;
+            }
+
+            *string scripts = ENV.QORE_TYPESCRIPT_ACTION_SCRIPTS;
+            if (scripts.val()) {
+                map createPool($1, cwd, \TypeScriptActionInterfacePriv::registerApp()), scripts.split(":");
             }
         }
 
-        scripts = ENV.QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS;
-        if (scripts.val()) {
+        if ((*string scripts = ENV.QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS).val()) {
             # initialize all apps in advance when running tests
             DataProvider::addOptions(DPO_DisableOnDemandInitialization);
             DataProvider::checkStaticInit();
@@ -125,54 +123,103 @@ async function runWithTimeout(promise, delay) {
             IgnoreDuplicateAppHelper idah();
 
             string cwd = getcwd();
-            foreach string path in (scripts.split(":")) {
-                try {
-                    string dir = dirname(path);
-                    if (dir.val()) {
-                        chdir(dir);
-                    }
-                    on_exit if (dir.val()) {
-                        chdir(cwd);
-                    }
-                    JavaScriptProgramPool pool(DefaultCode + File::readTextFile(basename(path)), path,
-                        sub (JavaScriptProgram pgm) {
-                            auto v = pgm.getGlobal().exports.qtester.run(
-                                TypeScriptActionInterface::TestApi
-                            );
-                            auto rv;
-                            if (v instanceof JavaScriptPromise) {
-                                v.then(sub (auto val) {
-                                    rv.result = val;
-                                }, sub (auto e) {
-                                    rv.error = e;
-                                });
-                                v.wait();
-                            } else {
-                                rv = v;
-                            }
-                        },
-                    );
-                    pstore{pool.uniqueHash()} = pool;
-                } catch (hash<ExceptionInfo> ex) {
-                    TSAI::error("Error loading TypeScript action test script %y: %s", path,
-                        get_exception_string(ex));
-                }
-            }
+            map createPool($1, cwd, \TypeScriptActionInterfacePriv::runTests()), scripts.split(":");
         }
     }
 
-    static *list<string> processJavaScriptAppFile(string path, *bool replace) {
-        on_error rethrow "APP-REGISTRATION-ERROR", sprintf("%s: %s (source: %y)", $1.err, $1.desc, path);
-        DynamicAppContextHelper dach(path, replace);
-        JavaScriptProgramPool pool(DefaultCode + File::readTextFile(path), path,
-            sub (JavaScriptProgram pgm) {
-                pgm.getGlobal().exports.actionsCatalogue.registerAppActions(
-                    TypeScriptActionInterface::Api
-                );
-            },
+    #! Creates a pool and returns the pool if created
+    static *JavaScriptProgramPool createPool(string path, string cwd, code init) {
+        try {
+            string dir = dirname(path);
+            if (dir.val()) {
+                chdir(dir);
+            }
+            on_exit if (dir.val()) {
+                chdir(cwd);
+            }
+            setenv("_qore_v8_filename", path);
+            setenv("_qore_v8_dirname", dir);
+            JavaScriptProgramPool pool(DefaultCode + File::readTextFile(basename(path)), path, init);
+            pstore{pool.uniqueHash()} = pool;
+            return pool;
+        } catch (hash<ExceptionInfo> ex) {
+            TSAI::error("Error loading TypeScript action script %y: %s", path, get_exception_string(ex));
+        }
+    }
+
+     #! Register a dynamic JavaScript file
+    static *list<string> processDynamicJavaScriptAppFile(string base_dir, data fdata, *bool replace) {
+        if (!master) {
+            throw "APP-REGISTRATION-ERROR", "Cannot register dynamic app, as there is no master app in place";
+        }
+        on_error rethrow "APP-REGISTRATION-ERROR";
+
+        string uuid = UUID::get();
+        string dir = sprintf("%s/%s", base_dir, uuid);
+        # make the folder if necessary
+        mkdir_ex(dir, 0755, True);
+        string path = sprintf("%s/index.js", dir);
+        {
+            File f();
+            f.open2(path, O_CREAT | O_WRONLY | O_TRUNC, 0644);
+            f.write(fdata);
+        }
+        *list<string> rv;
+        {
+            on_error remove_path(dir);
+
+            DynamicAppContextHelper dach(path, replace);
+            JavaScriptProgram js = master.get();
+            on_exit master.release(js);
+            JavaScriptObject global = js.getGlobal();
+            #global.setenv("CUSTOM_APPS_DIR", base_dir);
+            # call the master app's dynamic registration method
+            global.exports.actionsCatalogue.registerCustomApp(
+                TypeScriptActionInterface::Api, dir
+            );
+            rv = DynamicAppContextHelper::getApps();
+            if (rv.size() > 1) {
+                throw "REGISTER-APP-ERROR", sprintf("More than one app included in file: %y", rv);
+            }
+        }
+
+        if (rv) {
+            # rename directory
+            string new_dir = sprintf("%s/%s", base_dir, rv[0]);
+            if (hstat(new_dir)) {
+                remove_path(new_dir);
+            }
+            move_path(dir, new_dir);
+        }
+        return rv;
+    }
+
+    static private registerApp(JavaScriptProgram pgm) {
+        JavaScriptObject global = pgm.getGlobal();
+        if (!global.exports.actionsCatalogue) {
+            throw "JAVASCRIPT-INIT-ERROR", sprintf("No 'actionsCatalogue' property exists on "
+                "'exports'; known properties: %y", global.exports.getPropertyList());
+        }
+        global.exports.actionsCatalogue.registerAppActions(
+            TypeScriptActionInterface::Api
         );
-        pstore{pool.uniqueHash()} = pool;
-        return DynamicAppContextHelper::getApps();
+    }
+
+    static private runTests(JavaScriptProgram pgm) {
+        auto v = pgm.getGlobal().exports.qtester.run(
+            TypeScriptActionInterface::TestApi
+        );
+        auto rv;
+        if (v instanceof JavaScriptPromise) {
+            v.then(sub (auto val) {
+                rv.result = val;
+            }, sub (auto e) {
+                rv.error = e;
+            });
+            v.wait();
+        } else {
+            rv = v;
+        }
     }
 }
 }

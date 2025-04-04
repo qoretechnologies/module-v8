@@ -42,6 +42,7 @@
 %requires Swagger
 %requires SwaggerDataProvider
 %requires FileLocationHandler
+%requires FsUtil
 %requires Util
 %requires Logger
 %requires AsyncSocketIo
@@ -50,6 +51,7 @@
 %requires process
 %requires v8
 %requires yaml
+%requires uuid
 
 module TypeScriptActionInterface {
     version = "1.0";
