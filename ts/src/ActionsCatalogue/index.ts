@@ -81,7 +81,12 @@ function importIndexFilesFromDir(dir: string) {
   });
 }
 
+// Load our custom apps
 importIndexFilesFromDir(appsDir);
+// Load user defined custom apps
+if (process.env.CUSTOM_APPS_DIR) {
+  importIndexFilesFromDir(path.resolve(process.env.CUSTOM_APPS_DIR || ''));
+}
 
 export class ActionsCatalogue {
   public readonly apps: TQoreApps = {};
