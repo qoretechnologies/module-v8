@@ -113,6 +113,23 @@ export class ActionsCatalogue {
     );
   }
 
+  registerCustomApp(api: IQoreApi, appFolder: string) {
+    const appPath = path.resolve(appsDir, appFolder);
+    const indexPath = path.join(appPath, 'index.js');
+
+    if (fs.existsSync(indexPath)) {
+      const app: TQoreAppWithActions = require(indexPath).default;
+
+      this.registerAppCollection(
+        { [appFolder]: app },
+        (app) => api.registerApp(app),
+        (action) => api.registerAction(action)
+      );
+    } else {
+      throw new Error(`Custom app ${appFolder} not found`);
+    }
+  }
+
   private registerAppCollection<T extends TQoreAppWithActions | IQoreExistingAppWithActions>(
     collection: Record<string, T>,
     registerAppFn: (app: Omit<T, 'actions'>) => void,
