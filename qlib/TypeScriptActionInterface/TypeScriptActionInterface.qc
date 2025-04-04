@@ -417,8 +417,9 @@ public class TypeScriptActionInterface {
 
     static string registerAsyncCallArgs(reference<hash<AsyncCallInfo>> call, list<auto> args) {
         string key = (foldl $1 + "-" + $2, args) + sprintf("-%s", call.type);
-        if (acmap{key}) {
-            throw "ASYNC-CALL-ERROR", sprintf("Call %s is already registered", key);
+        if (acmap{key} && ((acmap{key} - "key") == (call - "key"))) {
+            # function is being reused
+            return key;
         }
         call.key = key;
         acmap{key} = call;
