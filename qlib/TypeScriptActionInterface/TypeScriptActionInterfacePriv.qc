@@ -168,7 +168,7 @@ function setenv(vr, value) {
         {
             on_error remove_path(dir);
 
-            DynamicAppContextHelper dach(path, replace);
+            DynamicAppContextHelper dach(base_dir, replace);
             JavaScriptProgram js = master.get();
             on_exit master.release(js);
             JavaScriptObject global = js.getGlobal();
@@ -179,19 +179,23 @@ function setenv(vr, value) {
             );
             rv = DynamicAppContextHelper::getApps();
             if (rv.size() > 1) {
-                throw "REGISTER-APP-ERROR", sprintf("More than one app included in file: %y", rv);
+                throw "REGISTER-APP-ERROR", sprintf("More than one dynamic app included in file: %y", rv);
             }
         }
 
         if (rv) {
             # rename directory
-            string new_dir = sprintf("%s/%s", base_dir, rv[0]);
+            string new_dir = getDynamicAppDir(base_dir, rv[0]);
             if (hstat(new_dir)) {
                 remove_path(new_dir);
             }
             move_path(dir, new_dir);
         }
         return rv;
+    }
+
+    static string getDynamicAppDir(string dir, string name) {
+        return sprintf("%s/%s", dir, name);
     }
 
     static private registerApp(JavaScriptProgram pgm) {
@@ -266,8 +270,13 @@ class DynamicAppContextHelper {
         _app_ctx = old;
     }
 
-    static *hash<auto> get() {
-        return _app_ctx.info;
+    static *hash<auto> get(string name) {
+        if (*hash<auto> rv = _app_ctx.info) {
+            # returns the "path" value to be stored against the app in dynamic registration, must be equal to
+            # the one calculated after app registration
+            rv.info.path = TypeScriptActionInterfacePriv::getDynamicAppDir(rv.info.path, name);
+            return rv;
+        }
     }
 
     static *list<string> getApps() {

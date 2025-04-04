@@ -270,6 +270,10 @@ public class TypeScriptActionInterface {
         if (!app) {
             return;
         }
+        on_success if (app.info.path.val()) {
+            remove_path(app.info.path);
+        }
+
         remove appcasemap{name};
         remove initmap{name};
         remove appmap{name};
@@ -278,19 +282,18 @@ public class TypeScriptActionInterface {
 
         root.deregisterChild(appname);
 
-        string sname = "tsrest-" + name;
-        if (remove samap{sname}) {
-            remove armap{appname};
-            remove aumap{appname};
-            remove app_post_auth_map{appname};
-            remove app_post_auth_code_map{appname};
-            remove app_conn_update_map{appname};
-            remove app_conn_opt_map{appname};
-            remove app_swagger_map{appname};
-            remove app_swagger_schema_map{appname};
-            remove atmap{appname};
-            ConnectionSchemeCache::deregisterScheme(sname);
-        }
+        string sname = "tsrest-" + appname;
+        remove samap{sname};
+        remove armap{appname};
+        remove aumap{appname};
+        remove app_post_auth_map{appname};
+        remove app_post_auth_code_map{appname};
+        remove app_conn_update_map{appname};
+        remove app_conn_opt_map{appname};
+        remove app_swagger_map{appname};
+        remove app_swagger_schema_map{appname};
+        remove atmap{appname};
+        ConnectionSchemeCache::deregisterScheme(sname);
     }
 
     #! Initialize all pending apps
@@ -481,9 +484,7 @@ public class TypeScriptActionInterface {
         if (app.name =~ / /) {
             throw "APP-ERROR", sprintf("App name %y is invalid; it contains one or more spaces", app.name);
         }
-        if (DynamicAppContextHelper::replacing()) {
-            deregisterDynamicApp(app.name);
-        }
+        deregisterDynamicApp(app.name);
         string appname = app.name.lwr();
         if (exists appcasemap{app.name}) {
             if (IgnoreDuplicateAppHelper::get()) {
@@ -497,7 +498,7 @@ public class TypeScriptActionInterface {
             }
             throw "APP-ERROR", sprintf("App %y has already been registered", app.name);
         }
-        if (*hash<auto> info = DynamicAppContextHelper::get()) {
+        if (*hash<auto> info = DynamicAppContextHelper::get(app.name)) {
             app += info;
             DynamicAppContextHelper::addApp(app.name);
         }
