@@ -24,7 +24,21 @@ describe('Should test serenity actions', () => {
       throw new Error('SERENITY_API_KEY environment variable is required for these tests');
     }
 
+    if (!process.env.SERENITY_SYSTEM_AGENT_CODE) {
+      throw new Error(
+        'SERENITY_SYSTEM_AGENT_CODE environment variable is required for these tests'
+      );
+    }
+
+    if (!process.env.SERENITY_CONVERSATION_AGENT_CODE) {
+      throw new Error(
+        'SERENITY_CONVERSATION_AGENT_CODE environment variable is required for these tests'
+      );
+    }
+
     token = process.env.SERENITY_API_KEY;
+    systemAgentCode = process.env.SERENITY_SYSTEM_AGENT_CODE;
+    conversationAgentCode = process.env.SERENITY_CONVERSATION_AGENT_CODE;
   });
 
   describe('Should test serenity allowed values', () => {
@@ -35,7 +49,6 @@ describe('Should test serenity actions', () => {
 
       expect(allowed_values).toBeDefined();
       expect(allowed_values.length).toBeGreaterThan(0);
-      systemAgentCode = allowed_values[0].value;
     });
 
     it('Should get serenity conversation agent allowed values', async () => {
@@ -45,7 +58,6 @@ describe('Should test serenity actions', () => {
 
       expect(allowed_values).toBeDefined();
       expect(allowed_values.length).toBeGreaterThan(0);
-      conversationAgentCode = allowed_values[0].value;
     });
 
     it('Should get serenity conversation allowed values', async () => {
