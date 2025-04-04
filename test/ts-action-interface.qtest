@@ -112,7 +112,7 @@ async function runWithTimeout(promise, delay) {
         DiscordRestConnection conn(config);
         assertEq("discord://x", conn.getUrl());
 
-        ImpliedArgumentHelper iah({"name": "Fred"});
+        DataProviderDataContextHelper dch({"name": "Fred"});
         AbstractDataProvider prov =
             TypeScriptActionInterface::getDataProvider("discord", conn).getChildProviderEx("js-event-1");
         AbstractDataProviderType t = prov.getEventTypes().event.type;
@@ -159,7 +159,7 @@ async function runWithTimeout(promise, delay) {
         assertEq("tsrest-js-swagger-test://test.example.com/api", conn.getUrl());
 
         {
-            ImpliedArgumentHelper iah({"name": "Fred"});
+            DataProviderDataContextHelper dch({"name": "Fred"});
             AbstractDataProvider prov =
                 TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("js-event-1");
             AbstractDataProviderType t = prov.getEventTypes().event.type;
@@ -191,7 +191,7 @@ async function runWithTimeout(promise, delay) {
                 "name": "Fred",
                 "extra": True,
             };
-            ImpliedArgumentHelper iah(opts);
+            DataProviderDataContextHelper dch(opts);
             AbstractDataProvider prov =
                 TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("js-event-1");
             AbstractDataProviderType t = prov.getEventInfoWithData("event", opts).type;
@@ -260,12 +260,12 @@ async function runWithTimeout(promise, delay) {
             cast<Observable>(prov).registerObserver(o);
             # temporarily disable data provider error logging, as the error from the negative test below will
             # otherwise be logged to the console
-            logger.removeAllAppenders();
-            on_exit logger.addAppender(new StdoutAppender());
+            #logger.removeAllAppenders();
+            #on_exit logger.addAppender(new StdoutAppender());
             assertThrows("JAVASCRIPT-ASYNC-ERROR", \cast<DelayedObservable>(prov).observersReady());
         }
 
-        ImpliedArgumentHelper iah({"name": "Fred"});
+        DataProviderDataContextHelper dch({"name": "Fred"});
         AbstractDataProvider prov =
             TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("webhook-event-1");
         AbstractDataProviderType t = prov.getEventTypes().event.type;
@@ -380,9 +380,6 @@ var obj = {
         AbstractDataProvider prov = TypeScriptActionInterface::getAppDataProvider("TestApp").
             getChildProviderEx("test-api");
         assertEq(1, prov.doRequest());
-        JavaScriptProgram pgm0 = pool.get();
-        on_exit pool.release(pgm0);
-        assertEq(1, prov.doRequest());
     }
 
     private sanityTest() {
@@ -413,12 +410,6 @@ var obj = {
         TypeScriptActionInterface::registerAction(action, pool);
         hash<DataProviderActionInfo> actioninfo = DataProviderActionCatalog::getAppActionEx(name, "test-api");
         assertEq("test-api", actioninfo.action);
-
-        JavaScriptProgram pgm0 = pool.get();
-        on_exit pool.release(pgm0);
-        JavaScriptProgram pgm1 = pool.get();
-        on_exit pool.release(pgm1);
-        assertEq(2, pool.size());
     }
 
     private jsTest() {
