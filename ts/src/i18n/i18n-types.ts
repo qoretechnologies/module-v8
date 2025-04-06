@@ -15070,6 +15070,3768 @@ type RootTranslation = {
 				}
 			}
 		}
+		Shopify: {
+			/**
+			 * S​h​o​p​i​f​y
+			 */
+			displayName: string
+			/**
+			 * E​-​c​o​m​m​e​r​c​e​ ​p​l​a​t​f​o​r​m​ ​f​o​r​ ​o​n​l​i​n​e​ ​s​t​o​r​e​s​ ​a​n​d​ ​r​e​t​a​i​l​ ​p​o​i​n​t​ ​o​f​ ​s​a​l​e
+			 */
+			shortDesc: string
+			/**
+			 * S​h​o​p​i​f​y​ ​i​s​ ​a​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​c​o​m​m​e​r​c​e​ ​p​l​a​t​f​o​r​m​ ​t​h​a​t​ ​a​l​l​o​w​s​ ​b​u​s​i​n​e​s​s​e​s​ ​t​o​ ​s​t​a​r​t​,​ ​g​r​o​w​,​ ​a​n​d​ ​m​a​n​a​g​e​ ​a​n​ ​o​n​l​i​n​e​ ​s​t​o​r​e​,​ ​s​e​l​l​ ​i​n​ ​m​u​l​t​i​p​l​e​ ​p​l​a​c​e​s​,​ ​a​n​d​ ​s​y​n​c​h​r​o​n​i​z​e​ ​o​n​l​i​n​e​ ​a​n​d​ ​i​n​-​p​e​r​s​o​n​ ​s​a​l​e​s​.
+			 */
+			longDesc: string
+			actions: {
+				'add-line-item-to-order': {
+					/**
+					 * A​d​d​ ​L​i​n​e​ ​I​t​e​m​ ​t​o​ ​O​r​d​e​r
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​ ​n​e​w​ ​p​r​o​d​u​c​t​ ​l​i​n​e​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​o​r​d​e​r
+					 */
+					shortDesc: string
+					/**
+					 * A​l​l​o​w​s​ ​a​d​d​i​n​g​ ​a​ ​n​e​w​ ​l​i​n​e​ ​i​t​e​m​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​o​r​d​e​r​,​ ​w​i​t​h​ ​o​p​t​i​o​n​s​ ​f​o​r​ ​q​u​a​n​t​i​t​y​,​ ​p​r​i​c​i​n​g​,​ ​a​n​d​ ​o​t​h​e​r​ ​p​r​o​d​u​c​t​ ​d​e​t​a​i​l​s
+					 */
+					longDesc: string
+					options: {
+						orderId: {
+							/**
+							 * O​r​d​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​o​r​d​e​r​ ​t​o​ ​w​h​i​c​h​ ​t​h​e​ ​l​i​n​e​ ​i​t​e​m​ ​w​i​l​l​ ​b​e​ ​a​d​d​e​d
+							 */
+							longDesc: string
+						}
+						type: {
+							/**
+							 * L​i​n​e​ ​I​t​e​m​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​l​i​n​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​a​d​d​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​n​a​t​u​r​e​ ​o​f​ ​t​h​e​ ​l​i​n​e​ ​i​t​e​m​ ​(​e​.​g​.​,​ ​p​r​o​d​u​c​t​,​ ​s​h​i​p​p​i​n​g​,​ ​t​a​x​)
+							 */
+							longDesc: string
+						}
+						quantity: {
+							/**
+							 * Q​u​a​n​t​i​t​y
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​i​t​e​m​s​ ​t​o​ ​a​d​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​p​r​o​d​u​c​t​ ​b​e​i​n​g​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​o​r​d​e​r
+							 */
+							longDesc: string
+						}
+						locationId: {
+							/**
+							 * L​o​c​a​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​n​v​e​n​t​o​r​y​ ​l​o​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​w​a​r​e​h​o​u​s​e​ ​o​r​ ​s​t​o​r​e​ ​l​o​c​a​t​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​i​t​e​m​ ​i​s​ ​s​t​o​c​k​e​d
+							 */
+							longDesc: string
+						}
+						reason: {
+							/**
+							 * R​e​a​s​o​n
+							 */
+							displayName: string
+							/**
+							 * R​e​a​s​o​n​ ​f​o​r​ ​a​d​d​i​n​g​ ​l​i​n​e​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * E​x​p​l​a​n​a​t​i​o​n​ ​f​o​r​ ​w​h​y​ ​t​h​e​ ​l​i​n​e​ ​i​t​e​m​ ​i​s​ ​b​e​i​n​g​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​o​r​d​e​r
+							 */
+							longDesc: string
+						}
+						notifyCustomer: {
+							/**
+							 * N​o​t​i​f​y​ ​C​u​s​t​o​m​e​r
+							 */
+							displayName: string
+							/**
+							 * S​e​n​d​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​a​b​o​u​t​ ​o​r​d​e​r​ ​c​h​a​n​g​e
+							 */
+							shortDesc: string
+							/**
+							 * D​e​t​e​r​m​i​n​e​s​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​s​h​o​u​l​d​ ​b​e​ ​n​o​t​i​f​i​e​d​ ​a​b​o​u​t​ ​t​h​e​ ​l​i​n​e​ ​i​t​e​m​ ​a​d​d​i​t​i​o​n
+							 */
+							longDesc: string
+						}
+						variantId: {
+							/**
+							 * V​a​r​i​a​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​p​r​o​d​u​c​t​ ​v​a​r​i​a​n​t
+							 */
+							shortDesc: string
+							/**
+							 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​p​r​o​d​u​c​t​ ​v​a​r​i​a​n​t​ ​b​e​i​n​g​ ​a​d​d​e​d
+							 */
+							longDesc: string
+						}
+						allowDuplicates: {
+							/**
+							 * A​l​l​o​w​ ​D​u​p​l​i​c​a​t​e​s
+							 */
+							displayName: string
+							/**
+							 * P​e​r​m​i​t​ ​d​u​p​l​i​c​a​t​e​ ​l​i​n​e​ ​i​t​e​m​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​i​d​e​n​t​i​c​a​l​ ​l​i​n​e​ ​i​t​e​m​s​ ​c​a​n​ ​b​e​ ​a​d​d​e​d​ ​m​u​l​t​i​p​l​e​ ​t​i​m​e​s​ ​t​o​ ​t​h​e​ ​o​r​d​e​r
+							 */
+							longDesc: string
+						}
+						itemName: {
+							/**
+							 * I​t​e​m​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​f​ ​t​h​e​ ​p​r​o​d​u​c​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​o​r​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​p​r​o​d​u​c​t​ ​b​e​i​n​g​ ​a​d​d​e​d
+							 */
+							longDesc: string
+						}
+						price: {
+							/**
+							 * P​r​i​c​e
+							 */
+							displayName: string
+							/**
+							 * P​r​i​c​e​ ​o​f​ ​t​h​e​ ​l​i​n​e​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​t​ ​p​r​i​c​e​ ​o​f​ ​t​h​e​ ​p​r​o​d​u​c​t​ ​b​e​i​n​g​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​o​r​d​e​r
+							 */
+							longDesc: string
+						}
+						currency: {
+							/**
+							 * C​u​r​r​e​n​c​y
+							 */
+							displayName: string
+							/**
+							 * C​u​r​r​e​n​c​y​ ​o​f​ ​t​h​e​ ​p​r​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​u​r​r​e​n​c​y​ ​i​n​ ​w​h​i​c​h​ ​t​h​e​ ​p​r​i​c​e​ ​i​s​ ​s​p​e​c​i​f​i​e​d
+							 */
+							longDesc: string
+						}
+						isTaxable: {
+							/**
+							 * I​s​ ​T​a​x​a​b​l​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​i​t​e​m​ ​i​s​ ​s​u​b​j​e​c​t​ ​t​o​ ​t​a​x
+							 */
+							shortDesc: string
+							/**
+							 * I​n​d​i​c​a​t​e​s​ ​i​f​ ​t​h​e​ ​l​i​n​e​ ​i​t​e​m​ ​s​h​o​u​l​d​ ​h​a​v​e​ ​t​a​x​ ​a​p​p​l​i​e​d
+							 */
+							longDesc: string
+						}
+						isPhysical: {
+							/**
+							 * I​s​ ​P​h​y​s​i​c​a​l
+							 */
+							displayName: string
+							/**
+							 * P​h​y​s​i​c​a​l​ ​v​s​ ​d​i​g​i​t​a​l​ ​p​r​o​d​u​c​t
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​i​e​s​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​i​t​e​m​ ​i​s​ ​a​ ​p​h​y​s​i​c​a​l​ ​p​r​o​d​u​c​t​ ​r​e​q​u​i​r​i​n​g​ ​s​h​i​p​p​i​n​g
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'create-gift-card': {
+					/**
+					 * C​r​e​a​t​e​ ​G​i​f​t​ ​C​a​r​d
+					 */
+					displayName: string
+					/**
+					 * G​e​n​e​r​a​t​e​ ​a​ ​n​e​w​ ​g​i​f​t​ ​c​a​r​d
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​g​i​f​t​ ​c​a​r​d​ ​w​i​t​h​ ​c​u​s​t​o​m​i​z​a​b​l​e​ ​p​a​r​a​m​e​t​e​r​s​ ​l​i​k​e​ ​i​n​i​t​i​a​l​ ​v​a​l​u​e​,​ ​e​x​p​i​r​a​t​i​o​n​,​ ​a​n​d​ ​r​e​c​i​p​i​e​n​t​ ​d​e​t​a​i​l​s
+					 */
+					longDesc: string
+					options: {
+						initialValue: {
+							/**
+							 * I​n​i​t​i​a​l​ ​V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * S​t​a​r​t​i​n​g​ ​b​a​l​a​n​c​e​ ​o​f​ ​g​i​f​t​ ​c​a​r​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​i​n​i​t​i​a​l​ ​m​o​n​e​t​a​r​y​ ​a​m​o​u​n​t​ ​l​o​a​d​e​d​ ​o​n​t​o​ ​t​h​e​ ​g​i​f​t​ ​c​a​r​d
+							 */
+							longDesc: string
+						}
+						customerId: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​g​i​f​t​ ​c​a​r​d​ ​r​e​c​i​p​i​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​r​e​c​e​i​v​i​n​g​ ​t​h​e​ ​g​i​f​t​ ​c​a​r​d
+							 */
+							longDesc: string
+						}
+						note: {
+							/**
+							 * N​o​t​e
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​g​i​f​t​ ​c​a​r​d​ ​i​n​f​o​r​m​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​p​e​r​s​o​n​a​l​ ​m​e​s​s​a​g​e​ ​o​r​ ​a​d​d​i​t​i​o​n​a​l​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​g​i​f​t​ ​c​a​r​d
+							 */
+							longDesc: string
+						}
+						expiresOn: {
+							/**
+							 * E​x​p​i​r​a​t​i​o​n​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * D​a​t​e​ ​w​h​e​n​ ​g​i​f​t​ ​c​a​r​d​ ​e​x​p​i​r​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​a​f​t​e​r​ ​w​h​i​c​h​ ​t​h​e​ ​g​i​f​t​ ​c​a​r​d​ ​w​i​l​l​ ​n​o​ ​l​o​n​g​e​r​ ​b​e​ ​v​a​l​i​d
+							 */
+							longDesc: string
+						}
+						code: {
+							/**
+							 * G​i​f​t​ ​C​a​r​d​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * U​n​i​q​u​e​ ​g​i​f​t​ ​c​a​r​d​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​c​o​d​e​ ​u​s​e​d​ ​t​o​ ​r​e​d​e​e​m​ ​t​h​e​ ​g​i​f​t​ ​c​a​r​d
+							 */
+							longDesc: string
+						}
+						templateSuffix: {
+							/**
+							 * T​e​m​p​l​a​t​e​ ​S​u​f​f​i​x
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​i​z​a​t​i​o​n​ ​o​f​ ​g​i​f​t​ ​c​a​r​d​ ​t​e​m​p​l​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​s​u​f​f​i​x​ ​t​o​ ​c​u​s​t​o​m​i​z​e​ ​t​h​e​ ​g​i​f​t​ ​c​a​r​d​'​s​ ​a​p​p​e​a​r​a​n​c​e​ ​o​r​ ​t​e​m​p​l​a​t​e
+							 */
+							longDesc: string
+						}
+						recipientAttributes: {
+							/**
+							 * R​e​c​i​p​i​e​n​t​ ​A​t​t​r​i​b​u​t​e​s
+							 */
+							displayName: string
+							/**
+							 * D​e​t​a​i​l​s​ ​a​b​o​u​t​ ​g​i​f​t​ ​c​a​r​d​ ​r​e​c​i​p​i​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​p​e​r​s​o​n​ ​r​e​c​e​i​v​i​n​g​ ​t​h​e​ ​g​i​f​t​ ​c​a​r​d
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									id: {
+										/**
+										 * R​e​c​i​p​i​e​n​t​ ​I​D
+										 */
+										displayName: string
+										/**
+										 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​r​e​c​i​p​i​e​n​t
+										 */
+										shortDesc: string
+										/**
+										 * A​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​g​i​f​t​ ​c​a​r​d​ ​r​e​c​i​p​i​e​n​t
+										 */
+										longDesc: string
+									}
+									message: {
+										/**
+										 * R​e​c​i​p​i​e​n​t​ ​M​e​s​s​a​g​e
+										 */
+										displayName: string
+										/**
+										 * P​e​r​s​o​n​a​l​ ​m​e​s​s​a​g​e​ ​t​o​ ​r​e​c​i​p​i​e​n​t
+										 */
+										shortDesc: string
+										/**
+										 * A​ ​p​e​r​s​o​n​a​l​i​z​e​d​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​c​c​o​m​p​a​n​y​ ​t​h​e​ ​g​i​f​t​ ​c​a​r​d
+										 */
+										longDesc: string
+									}
+									preferredName: {
+										/**
+										 * P​r​e​f​e​r​r​e​d​ ​N​a​m​e
+										 */
+										displayName: string
+										/**
+										 * R​e​c​i​p​i​e​n​t​'​s​ ​p​r​e​f​e​r​r​e​d​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​n​a​m​e​ ​t​h​e​ ​r​e​c​i​p​i​e​n​t​ ​p​r​e​f​e​r​s​ ​t​o​ ​b​e​ ​c​a​l​l​e​d
+										 */
+										longDesc: string
+									}
+									sendNotificationAt: {
+										/**
+										 * N​o​t​i​f​i​c​a​t​i​o​n​ ​T​i​m​i​n​g
+										 */
+										displayName: string
+										/**
+										 * W​h​e​n​ ​t​o​ ​s​e​n​d​ ​g​i​f​t​ ​c​a​r​d​ ​n​o​t​i​f​i​c​a​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​i​m​e​ ​o​r​ ​d​a​t​e​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​g​i​f​t​ ​c​a​r​d​ ​n​o​t​i​f​i​c​a​t​i​o​n
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				'create-fulfillment': {
+					/**
+					 * C​r​e​a​t​e​ ​F​u​l​f​i​l​l​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * P​r​o​c​e​s​s​ ​a​n​d​ ​s​h​i​p​ ​a​n​ ​o​r​d​e​r
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​f​u​l​f​i​l​l​m​e​n​t​ ​f​o​r​ ​a​n​ ​o​r​d​e​r​,​ ​h​a​n​d​l​i​n​g​ ​s​h​i​p​p​i​n​g​ ​a​n​d​ ​t​r​a​c​k​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n
+					 */
+					longDesc: string
+					options: {
+						lineItemsByFulfillmentOrder: {
+							/**
+							 * L​i​n​e​ ​I​t​e​m​s​ ​b​y​ ​F​u​l​f​i​l​l​m​e​n​t​ ​O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * I​t​e​m​s​ ​t​o​ ​b​e​ ​f​u​l​f​i​l​l​e​d
+							 */
+							shortDesc: string
+							/**
+							 * D​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​l​i​n​e​ ​i​t​e​m​s​ ​b​e​i​n​g​ ​f​u​l​f​i​l​l​e​d
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										fulfillmentOrderId: {
+											/**
+											 * F​u​l​f​i​l​l​m​e​n​t​ ​O​r​d​e​r​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * U​n​i​q​u​e​ ​f​u​l​f​i​l​l​m​e​n​t​ ​o​r​d​e​r​ ​i​d​e​n​t​i​f​i​e​r
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​f​u​l​f​i​l​l​m​e​n​t​ ​o​r​d​e​r​ ​b​e​i​n​g​ ​p​r​o​c​e​s​s​e​d
+											 */
+											longDesc: string
+										}
+										fulfillmentOrderLineItems: {
+											/**
+											 * F​u​l​f​i​l​l​m​e​n​t​ ​O​r​d​e​r​ ​L​i​n​e​ ​I​t​e​m​s
+											 */
+											displayName: string
+											/**
+											 * I​t​e​m​s​ ​i​n​ ​t​h​e​ ​f​u​l​f​i​l​l​m​e​n​t​ ​o​r​d​e​r
+											 */
+											shortDesc: string
+											/**
+											 * S​p​e​c​i​f​i​c​ ​l​i​n​e​ ​i​t​e​m​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​f​u​l​f​i​l​l​m​e​n​t​ ​o​r​d​e​r
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													id: {
+														/**
+														 * L​i​n​e​ ​I​t​e​m​ ​I​D
+														 */
+														displayName: string
+														/**
+														 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​l​i​n​e​ ​i​t​e​m
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​a​n​ ​i​n​d​i​v​i​d​u​a​l​ ​l​i​n​e​ ​i​t​e​m
+														 */
+														longDesc: string
+													}
+													quantity: {
+														/**
+														 * Q​u​a​n​t​i​t​y
+														 */
+														displayName: string
+														/**
+														 * N​u​m​b​e​r​ ​o​f​ ​i​t​e​m​s​ ​t​o​ ​f​u​l​f​i​l​l
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​i​t​e​m​ ​b​e​i​n​g​ ​f​u​l​f​i​l​l​e​d
+														 */
+														longDesc: string
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						notifyCustomer: {
+							/**
+							 * N​o​t​i​f​y​ ​C​u​s​t​o​m​e​r
+							 */
+							displayName: string
+							/**
+							 * S​e​n​d​ ​s​h​i​p​p​i​n​g​ ​n​o​t​i​f​i​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * D​e​t​e​r​m​i​n​e​s​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​e​n​d​ ​a​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​a​b​o​u​t​ ​t​h​e​ ​f​u​l​f​i​l​l​m​e​n​t
+							 */
+							longDesc: string
+						}
+						trackingInfo: {
+							/**
+							 * T​r​a​c​k​i​n​g​ ​I​n​f​o​r​m​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​h​i​p​p​i​n​g​ ​t​r​a​c​k​i​n​g​ ​d​e​t​a​i​l​s
+							 */
+							shortDesc: string
+							/**
+							 * I​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​ ​t​r​a​c​k​i​n​g​ ​t​h​e​ ​s​h​i​p​m​e​n​t
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									number: {
+										/**
+										 * T​r​a​c​k​i​n​g​ ​N​u​m​b​e​r
+										 */
+										displayName: string
+										/**
+										 * S​h​i​p​m​e​n​t​ ​t​r​a​c​k​i​n​g​ ​n​u​m​b​e​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​r​a​c​k​i​n​g​ ​t​h​e​ ​s​h​i​p​m​e​n​t
+										 */
+										longDesc: string
+									}
+									url: {
+										/**
+										 * T​r​a​c​k​i​n​g​ ​U​R​L
+										 */
+										displayName: string
+										/**
+										 * L​i​n​k​ ​t​o​ ​t​r​a​c​k​ ​s​h​i​p​m​e​n​t
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​w​e​b​ ​a​d​d​r​e​s​s​ ​w​h​e​r​e​ ​t​h​e​ ​s​h​i​p​m​e​n​t​ ​c​a​n​ ​b​e​ ​t​r​a​c​k​e​d
+										 */
+										longDesc: string
+									}
+									company: {
+										/**
+										 * S​h​i​p​p​i​n​g​ ​C​o​m​p​a​n​y
+										 */
+										displayName: string
+										/**
+										 * N​a​m​e​ ​o​f​ ​s​h​i​p​p​i​n​g​ ​c​a​r​r​i​e​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​r​e​s​p​o​n​s​i​b​l​e​ ​f​o​r​ ​s​h​i​p​p​i​n​g
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						message: {
+							/**
+							 * M​e​s​s​a​g​e
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​f​u​l​f​i​l​l​m​e​n​t​ ​n​o​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​n​y​ ​a​d​d​i​t​i​o​n​a​l​ ​i​n​f​o​r​m​a​t​i​o​n​ ​o​r​ ​n​o​t​e​s​ ​a​b​o​u​t​ ​t​h​e​ ​f​u​l​f​i​l​l​m​e​n​t
+							 */
+							longDesc: string
+						}
+						originAddress: {
+							/**
+							 * O​r​i​g​i​n​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * S​h​i​p​p​i​n​g​ ​o​r​i​g​i​n​ ​l​o​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​a​d​d​r​e​s​s​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​h​e​ ​i​t​e​m​s​ ​a​r​e​ ​b​e​i​n​g​ ​s​h​i​p​p​e​d
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									address1: {
+										/**
+										 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​1
+										 */
+										displayName: string
+										/**
+										 * P​r​i​m​a​r​y​ ​a​d​d​r​e​s​s​ ​l​i​n​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​i​r​s​t​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​o​r​i​g​i​n​ ​a​d​d​r​e​s​s
+										 */
+										longDesc: string
+									}
+									address2: {
+										/**
+										 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​2
+										 */
+										displayName: string
+										/**
+										 * S​e​c​o​n​d​a​r​y​ ​a​d​d​r​e​s​s​ ​l​i​n​e
+										 */
+										shortDesc: string
+										/**
+										 * O​p​t​i​o​n​a​l​ ​a​d​d​i​t​i​o​n​a​l​ ​a​d​d​r​e​s​s​ ​i​n​f​o​r​m​a​t​i​o​n
+										 */
+										longDesc: string
+									}
+									city: {
+										/**
+										 * C​i​t​y
+										 */
+										displayName: string
+										/**
+										 * C​i​t​y​ ​o​f​ ​o​r​i​g​i​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​i​t​y​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​h​e​ ​s​h​i​p​m​e​n​t​ ​o​r​i​g​i​n​a​t​e​s
+										 */
+										longDesc: string
+									}
+									countryCode: {
+										/**
+										 * C​o​u​n​t​r​y​ ​C​o​d​e
+										 */
+										displayName: string
+										/**
+										 * O​r​i​g​i​n​ ​c​o​u​n​t​r​y​ ​c​o​d​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​t​w​o​-​l​e​t​t​e​r​ ​c​o​u​n​t​r​y​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​o​r​i​g​i​n
+										 */
+										longDesc: string
+									}
+									provinceCode: {
+										/**
+										 * P​r​o​v​i​n​c​e​ ​C​o​d​e
+										 */
+										displayName: string
+										/**
+										 * S​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​ ​c​o​d​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​o​d​e​ ​r​e​p​r​e​s​e​n​t​i​n​g​ ​t​h​e​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​ ​o​f​ ​o​r​i​g​i​n
+										 */
+										longDesc: string
+									}
+									zip: {
+										/**
+										 * P​o​s​t​a​l​ ​C​o​d​e
+										 */
+										displayName: string
+										/**
+										 * O​r​i​g​i​n​ ​p​o​s​t​a​l​ ​c​o​d​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​o​f​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​o​r​i​g​i​n
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				'create-draft-order': {
+					/**
+					 * C​r​e​a​t​e​ ​D​r​a​f​t​ ​O​r​d​e​r
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​d​r​a​f​t​ ​o​r​d​e​r​ ​i​n​ ​S​h​o​p​i​f​y
+					 */
+					shortDesc: string
+					/**
+					 * G​e​n​e​r​a​t​e​s​ ​a​ ​d​r​a​f​t​ ​o​r​d​e​r​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​u​s​e​d​ ​t​o​ ​c​r​e​a​t​e​ ​a​n​ ​o​r​d​e​r​ ​m​a​n​u​a​l​l​y​,​ ​s​e​n​d​ ​i​n​v​o​i​c​e​s​,​ ​o​r​ ​p​r​o​c​e​s​s​ ​p​a​y​m​e​n​t​s​ ​l​a​t​e​r​.​ ​D​r​a​f​t​ ​o​r​d​e​r​s​ ​a​r​e​ ​u​s​e​f​u​l​ ​f​o​r​ ​c​u​s​t​o​m​ ​s​a​l​e​s​,​ ​w​h​o​l​e​s​a​l​e​ ​o​r​d​e​r​s​,​ ​o​r​ ​p​r​e​-​o​r​d​e​r​s​.
+					 */
+					longDesc: string
+					options: {
+						customerId: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​f​o​r​ ​t​h​e​ ​d​r​a​f​t​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​t​o​ ​a​s​s​o​c​i​a​t​e​ ​w​i​t​h​ ​t​h​i​s​ ​d​r​a​f​t​ ​o​r​d​e​r​.​ ​R​e​q​u​i​r​e​d​ ​i​f​ ​n​o​t​ ​u​s​i​n​g​ ​d​e​f​a​u​l​t​ ​a​d​d​r​e​s​s​.
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​e​r​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​,​ ​u​s​e​d​ ​f​o​r​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​a​n​d​ ​o​r​d​e​r​ ​c​o​n​f​i​r​m​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						phone: {
+							/**
+							 * P​h​o​n​e
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​e​r​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​,​ ​u​s​e​f​u​l​ ​f​o​r​ ​s​h​i​p​p​i​n​g​ ​u​p​d​a​t​e​s​ ​o​r​ ​c​o​n​t​a​c​t​ ​p​u​r​p​o​s​e​s​.
+							 */
+							longDesc: string
+						}
+						note: {
+							/**
+							 * N​o​t​e
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​n​o​t​e​s​ ​f​o​r​ ​t​h​e​ ​d​r​a​f​t​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​f​i​e​l​d​ ​f​o​r​ ​a​d​d​i​n​g​ ​i​n​t​e​r​n​a​l​ ​n​o​t​e​s​ ​a​b​o​u​t​ ​t​h​e​ ​d​r​a​f​t​ ​o​r​d​e​r​,​ ​s​u​c​h​ ​a​s​ ​s​p​e​c​i​a​l​ ​i​n​s​t​r​u​c​t​i​o​n​s​ ​o​r​ ​c​o​n​t​e​x​t​.
+							 */
+							longDesc: string
+						}
+						taxExempt: {
+							/**
+							 * T​a​x​ ​E​x​e​m​p​t
+							 */
+							displayName: string
+							/**
+							 * E​x​e​m​p​t​ ​o​r​d​e​r​ ​f​r​o​m​ ​t​a​x​e​s
+							 */
+							shortDesc: string
+							/**
+							 * I​n​d​i​c​a​t​e​s​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​e​n​t​i​r​e​ ​o​r​d​e​r​ ​i​s​ ​e​x​e​m​p​t​ ​f​r​o​m​ ​t​a​x​e​s​.​ ​S​e​t​ ​t​o​ ​t​r​u​e​ ​f​o​r​ ​t​a​x​-​e​x​e​m​p​t​ ​c​u​s​t​o​m​e​r​s​.
+							 */
+							longDesc: string
+						}
+						taxExemptions: {
+							/**
+							 * T​a​x​ ​E​x​e​m​p​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​t​a​x​ ​e​x​e​m​p​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​s​p​e​c​i​f​i​c​ ​t​a​x​ ​e​x​e​m​p​t​i​o​n​s​ ​a​p​p​l​i​e​d​ ​t​o​ ​t​h​e​ ​d​r​a​f​t​ ​o​r​d​e​r​,​ ​s​u​c​h​ ​a​s​ ​r​e​g​i​o​n​a​l​ ​o​r​ ​p​r​o​d​u​c​t​-​s​p​e​c​i​f​i​c​ ​e​x​e​m​p​t​i​o​n​s​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									/**
+									 * T​a​x​ ​E​x​e​m​p​t​i​o​n​ ​T​y​p​e
+									 */
+									displayName: string
+									/**
+									 * T​y​p​e​ ​o​f​ ​t​a​x​ ​e​x​e​m​p​t​i​o​n
+									 */
+									shortDesc: string
+									/**
+									 * D​e​f​i​n​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​t​a​x​ ​e​x​e​m​p​t​i​o​n​ ​a​p​p​l​i​e​d​,​ ​e​.​g​.​,​ ​G​S​T​,​ ​V​A​T​,​ ​o​r​ ​s​a​l​e​s​ ​t​a​x​.
+									 */
+									longDesc: string
+								}
+							}
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * T​a​g​s​ ​f​o​r​ ​t​h​e​ ​d​r​a​f​t​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​t​a​g​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​o​r​ ​f​i​l​t​e​r​ ​t​h​e​ ​d​r​a​f​t​ ​o​r​d​e​r​,​ ​e​.​g​.​,​ ​"​w​h​o​l​e​s​a​l​e​"​,​ ​"​p​r​e​-​o​r​d​e​r​"​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									/**
+									 * T​a​g
+									 */
+									displayName: string
+									/**
+									 * S​i​n​g​l​e​ ​t​a​g​ ​v​a​l​u​e
+									 */
+									shortDesc: string
+									/**
+									 * A​ ​s​i​n​g​l​e​ ​s​t​r​i​n​g​ ​v​a​l​u​e​ ​u​s​e​d​ ​t​o​ ​t​a​g​ ​t​h​e​ ​d​r​a​f​t​ ​o​r​d​e​r​ ​f​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​o​r​ ​s​e​a​r​c​h​ ​p​u​r​p​o​s​e​s​.
+									 */
+									longDesc: string
+								}
+							}
+						}
+						shippingAddress: {
+							/**
+							 * S​h​i​p​p​i​n​g​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​e​r​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​u​l​l​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s​ ​w​h​e​r​e​ ​t​h​e​ ​o​r​d​e​r​ ​w​i​l​l​ ​b​e​ ​d​e​l​i​v​e​r​e​d​,​ ​i​n​c​l​u​d​i​n​g​ ​a​l​l​ ​r​e​l​e​v​a​n​t​ ​f​i​e​l​d​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									address1: {
+										/**
+										 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​1
+										 */
+										displayName: string
+										/**
+										 * P​r​i​m​a​r​y​ ​a​d​d​r​e​s​s​ ​l​i​n​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​o​r​ ​P​O​ ​B​o​x​ ​f​o​r​ ​s​h​i​p​p​i​n​g​.
+										 */
+										longDesc: string
+									}
+									address2: {
+										/**
+										 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​2
+										 */
+										displayName: string
+										/**
+										 * S​e​c​o​n​d​a​r​y​ ​a​d​d​r​e​s​s​ ​l​i​n​e
+										 */
+										shortDesc: string
+										/**
+										 * A​d​d​i​t​i​o​n​a​l​ ​a​d​d​r​e​s​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​l​i​k​e​ ​a​p​a​r​t​m​e​n​t​ ​o​r​ ​s​u​i​t​e​ ​n​u​m​b​e​r​.
+										 */
+										longDesc: string
+									}
+									city: {
+										/**
+										 * C​i​t​y
+										 */
+										displayName: string
+										/**
+										 * S​h​i​p​p​i​n​g​ ​c​i​t​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​i​t​y​ ​f​o​r​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+									province: {
+										/**
+										 * P​r​o​v​i​n​c​e​/​S​t​a​t​e
+										 */
+										displayName: string
+										/**
+										 * S​h​i​p​p​i​n​g​ ​p​r​o​v​i​n​c​e​ ​o​r​ ​s​t​a​t​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​r​o​v​i​n​c​e​,​ ​s​t​a​t​e​,​ ​o​r​ ​r​e​g​i​o​n​ ​f​o​r​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+									country: {
+										/**
+										 * C​o​u​n​t​r​y
+										 */
+										displayName: string
+										/**
+										 * S​h​i​p​p​i​n​g​ ​c​o​u​n​t​r​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​o​u​n​t​r​y​ ​f​o​r​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+									zip: {
+										/**
+										 * Z​I​P​/​P​o​s​t​a​l​ ​C​o​d​e
+										 */
+										displayName: string
+										/**
+										 * S​h​i​p​p​i​n​g​ ​p​o​s​t​a​l​ ​c​o​d​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+									firstName: {
+										/**
+										 * F​i​r​s​t​ ​N​a​m​e
+										 */
+										displayName: string
+										/**
+										 * R​e​c​i​p​i​e​n​t​ ​f​i​r​s​t​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​r​e​c​i​p​i​e​n​t​.
+										 */
+										longDesc: string
+									}
+									lastName: {
+										/**
+										 * L​a​s​t​ ​N​a​m​e
+										 */
+										displayName: string
+										/**
+										 * R​e​c​i​p​i​e​n​t​ ​l​a​s​t​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​r​e​c​i​p​i​e​n​t​.
+										 */
+										longDesc: string
+									}
+									company: {
+										/**
+										 * C​o​m​p​a​n​y
+										 */
+										displayName: string
+										/**
+										 * S​h​i​p​p​i​n​g​ ​c​o​m​p​a​n​y​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​o​m​p​a​n​y​ ​n​a​m​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s​,​ ​i​f​ ​a​p​p​l​i​c​a​b​l​e​.
+										 */
+										longDesc: string
+									}
+									phone: {
+										/**
+										 * P​h​o​n​e
+										 */
+										displayName: string
+										/**
+										 * S​h​i​p​p​i​n​g​ ​c​o​n​t​a​c​t​ ​p​h​o​n​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​r​e​c​i​p​i​e​n​t​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						billingAddress: {
+							/**
+							 * B​i​l​l​i​n​g​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​e​r​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​a​d​d​r​e​s​s​ ​u​s​e​d​ ​f​o​r​ ​b​i​l​l​i​n​g​ ​p​u​r​p​o​s​e​s​,​ ​w​h​i​c​h​ ​m​a​y​ ​d​i​f​f​e​r​ ​f​r​o​m​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									address1: {
+										/**
+										 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​1
+										 */
+										displayName: string
+										/**
+										 * P​r​i​m​a​r​y​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s​ ​l​i​n​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​o​r​ ​P​O​ ​B​o​x​ ​f​o​r​ ​b​i​l​l​i​n​g​.
+										 */
+										longDesc: string
+									}
+									address2: {
+										/**
+										 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​2
+										 */
+										displayName: string
+										/**
+										 * S​e​c​o​n​d​a​r​y​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s​ ​l​i​n​e
+										 */
+										shortDesc: string
+										/**
+										 * A​d​d​i​t​i​o​n​a​l​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​l​i​k​e​ ​a​p​a​r​t​m​e​n​t​ ​o​r​ ​s​u​i​t​e​ ​n​u​m​b​e​r​.
+										 */
+										longDesc: string
+									}
+									city: {
+										/**
+										 * C​i​t​y
+										 */
+										displayName: string
+										/**
+										 * B​i​l​l​i​n​g​ ​c​i​t​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​i​t​y​ ​f​o​r​ ​t​h​e​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+									province: {
+										/**
+										 * P​r​o​v​i​n​c​e​/​S​t​a​t​e
+										 */
+										displayName: string
+										/**
+										 * B​i​l​l​i​n​g​ ​p​r​o​v​i​n​c​e​ ​o​r​ ​s​t​a​t​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​r​o​v​i​n​c​e​,​ ​s​t​a​t​e​,​ ​o​r​ ​r​e​g​i​o​n​ ​f​o​r​ ​t​h​e​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+									country: {
+										/**
+										 * C​o​u​n​t​r​y
+										 */
+										displayName: string
+										/**
+										 * B​i​l​l​i​n​g​ ​c​o​u​n​t​r​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​o​u​n​t​r​y​ ​f​o​r​ ​t​h​e​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+									zip: {
+										/**
+										 * Z​I​P​/​P​o​s​t​a​l​ ​C​o​d​e
+										 */
+										displayName: string
+										/**
+										 * B​i​l​l​i​n​g​ ​p​o​s​t​a​l​ ​c​o​d​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+									firstName: {
+										/**
+										 * F​i​r​s​t​ ​N​a​m​e
+										 */
+										displayName: string
+										/**
+										 * B​i​l​l​i​n​g​ ​f​i​r​s​t​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​b​i​l​l​i​n​g​ ​c​o​n​t​a​c​t​.
+										 */
+										longDesc: string
+									}
+									lastName: {
+										/**
+										 * L​a​s​t​ ​N​a​m​e
+										 */
+										displayName: string
+										/**
+										 * B​i​l​l​i​n​g​ ​l​a​s​t​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​b​i​l​l​i​n​g​ ​c​o​n​t​a​c​t​.
+										 */
+										longDesc: string
+									}
+									company: {
+										/**
+										 * C​o​m​p​a​n​y
+										 */
+										displayName: string
+										/**
+										 * B​i​l​l​i​n​g​ ​c​o​m​p​a​n​y​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​o​m​p​a​n​y​ ​n​a​m​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s​,​ ​i​f​ ​a​p​p​l​i​c​a​b​l​e​.
+										 */
+										longDesc: string
+									}
+									phone: {
+										/**
+										 * P​h​o​n​e
+										 */
+										displayName: string
+										/**
+										 * B​i​l​l​i​n​g​ ​c​o​n​t​a​c​t​ ​p​h​o​n​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​b​i​l​l​i​n​g​ ​c​o​n​t​a​c​t​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						useCustomerDefaultAddress: {
+							/**
+							 * U​s​e​ ​C​u​s​t​o​m​e​r​ ​D​e​f​a​u​l​t​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * U​s​e​ ​c​u​s​t​o​m​e​r​’​s​ ​d​e​f​a​u​l​t​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​t​r​u​e​,​ ​u​s​e​s​ ​t​h​e​ ​c​u​s​t​o​m​e​r​’​s​ ​d​e​f​a​u​l​t​ ​s​h​i​p​p​i​n​g​ ​a​n​d​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s​ ​i​n​s​t​e​a​d​ ​o​f​ ​c​u​s​t​o​m​ ​o​n​e​s​.
+							 */
+							longDesc: string
+						}
+						lineItems: {
+							/**
+							 * L​i​n​e​ ​I​t​e​m​s
+							 */
+							displayName: string
+							/**
+							 * P​r​o​d​u​c​t​s​ ​i​n​ ​t​h​e​ ​d​r​a​f​t​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​p​r​o​d​u​c​t​s​ ​o​r​ ​v​a​r​i​a​n​t​s​ ​i​n​c​l​u​d​e​d​ ​i​n​ ​t​h​e​ ​d​r​a​f​t​ ​o​r​d​e​r​,​ ​w​i​t​h​ ​d​e​t​a​i​l​s​ ​l​i​k​e​ ​q​u​a​n​t​i​t​y​ ​a​n​d​ ​p​r​i​c​e​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										variantId: {
+											/**
+											 * V​a​r​i​a​n​t​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * P​r​o​d​u​c​t​ ​v​a​r​i​a​n​t​ ​I​D
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​r​o​d​u​c​t​ ​v​a​r​i​a​n​t​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​o​r​d​e​r​.
+											 */
+											longDesc: string
+										}
+										quantity: {
+											/**
+											 * Q​u​a​n​t​i​t​y
+											 */
+											displayName: string
+											/**
+											 * N​u​m​b​e​r​ ​o​f​ ​i​t​e​m​s
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​o​f​ ​t​h​i​s​ ​v​a​r​i​a​n​t​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​d​r​a​f​t​ ​o​r​d​e​r​.
+											 */
+											longDesc: string
+										}
+										title: {
+											/**
+											 * T​i​t​l​e
+											 */
+											displayName: string
+											/**
+											 * I​t​e​m​ ​t​i​t​l​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​l​i​n​e​ ​i​t​e​m​,​ ​t​y​p​i​c​a​l​l​y​ ​t​h​e​ ​p​r​o​d​u​c​t​ ​o​r​ ​v​a​r​i​a​n​t​ ​n​a​m​e​.
+											 */
+											longDesc: string
+										}
+										originalUnitPrice: {
+											/**
+											 * O​r​i​g​i​n​a​l​ ​U​n​i​t​ ​P​r​i​c​e
+											 */
+											displayName: string
+											/**
+											 * P​r​i​c​e​ ​p​e​r​ ​u​n​i​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​o​r​i​g​i​n​a​l​ ​p​r​i​c​e​ ​p​e​r​ ​u​n​i​t​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​f​o​r​e​ ​d​i​s​c​o​u​n​t​s​.
+											 */
+											longDesc: string
+										}
+										originalUnitPriceWithCurrency: {
+											/**
+											 * O​r​i​g​i​n​a​l​ ​U​n​i​t​ ​P​r​i​c​e​ ​w​i​t​h​ ​C​u​r​r​e​n​c​y
+											 */
+											displayName: string
+											/**
+											 * P​r​i​c​e​ ​w​i​t​h​ ​c​u​r​r​e​n​c​y​ ​d​e​t​a​i​l​s
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​o​r​i​g​i​n​a​l​ ​u​n​i​t​ ​p​r​i​c​e​ ​i​n​c​l​u​d​i​n​g​ ​c​u​r​r​e​n​c​y​ ​s​p​e​c​i​f​i​c​a​t​i​o​n​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													amount: {
+														/**
+														 * A​m​o​u​n​t
+														 */
+														displayName: string
+														/**
+														 * P​r​i​c​e​ ​a​m​o​u​n​t
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​n​u​m​e​r​i​c​a​l​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​u​n​i​t​ ​p​r​i​c​e​.
+														 */
+														longDesc: string
+													}
+													currencyCode: {
+														/**
+														 * C​u​r​r​e​n​c​y​ ​C​o​d​e
+														 */
+														displayName: string
+														/**
+														 * C​u​r​r​e​n​c​y​ ​c​o​d​e
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​I​S​O​ ​4​2​1​7​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​p​r​i​c​e​,​ ​e​.​g​.​,​ ​U​S​D​,​ ​E​U​R​.
+														 */
+														longDesc: string
+													}
+												}
+											}
+										}
+										sku: {
+											/**
+											 * S​K​U
+											 */
+											displayName: string
+											/**
+											 * S​t​o​c​k​ ​K​e​e​p​i​n​g​ ​U​n​i​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​s​t​o​c​k​ ​k​e​e​p​i​n​g​ ​u​n​i​t​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​p​r​o​d​u​c​t​ ​v​a​r​i​a​n​t​.
+											 */
+											longDesc: string
+										}
+										requiresShipping: {
+											/**
+											 * R​e​q​u​i​r​e​s​ ​S​h​i​p​p​i​n​g
+											 */
+											displayName: string
+											/**
+											 * N​e​e​d​s​ ​s​h​i​p​p​i​n​g
+											 */
+											shortDesc: string
+											/**
+											 * I​n​d​i​c​a​t​e​s​ ​i​f​ ​t​h​e​ ​i​t​e​m​ ​r​e​q​u​i​r​e​s​ ​p​h​y​s​i​c​a​l​ ​s​h​i​p​p​i​n​g​.
+											 */
+											longDesc: string
+										}
+										taxable: {
+											/**
+											 * T​a​x​a​b​l​e
+											 */
+											displayName: string
+											/**
+											 * S​u​b​j​e​c​t​ ​t​o​ ​t​a​x
+											 */
+											shortDesc: string
+											/**
+											 * S​p​e​c​i​f​i​e​s​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​i​t​e​m​ ​i​s​ ​t​a​x​a​b​l​e​.
+											 */
+											longDesc: string
+										}
+										weight: {
+											/**
+											 * W​e​i​g​h​t
+											 */
+											displayName: string
+											/**
+											 * I​t​e​m​ ​w​e​i​g​h​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​w​e​i​g​h​t​ ​o​f​ ​t​h​e​ ​i​t​e​m​,​ ​u​s​e​d​ ​f​o​r​ ​s​h​i​p​p​i​n​g​ ​c​a​l​c​u​l​a​t​i​o​n​s​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													value: {
+														/**
+														 * W​e​i​g​h​t​ ​V​a​l​u​e
+														 */
+														displayName: string
+														/**
+														 * N​u​m​e​r​i​c​a​l​ ​w​e​i​g​h​t
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​n​u​m​e​r​i​c​a​l​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​i​t​e​m​’​s​ ​w​e​i​g​h​t​.
+														 */
+														longDesc: string
+													}
+													unit: {
+														/**
+														 * W​e​i​g​h​t​ ​U​n​i​t
+														 */
+														displayName: string
+														/**
+														 * U​n​i​t​ ​o​f​ ​w​e​i​g​h​t
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​u​n​i​t​ ​o​f​ ​m​e​a​s​u​r​e​m​e​n​t​ ​f​o​r​ ​t​h​e​ ​w​e​i​g​h​t​,​ ​e​.​g​.​,​ ​k​g​,​ ​l​b​.
+														 */
+														longDesc: string
+													}
+												}
+											}
+										}
+										customAttributes: {
+											/**
+											 * C​u​s​t​o​m​ ​A​t​t​r​i​b​u​t​e​s
+											 */
+											displayName: string
+											/**
+											 * A​d​d​i​t​i​o​n​a​l​ ​i​t​e​m​ ​a​t​t​r​i​b​u​t​e​s
+											 */
+											shortDesc: string
+											/**
+											 * K​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​ ​f​o​r​ ​a​d​d​i​n​g​ ​c​u​s​t​o​m​ ​m​e​t​a​d​a​t​a​ ​t​o​ ​t​h​e​ ​l​i​n​e​ ​i​t​e​m​.
+											 */
+											longDesc: string
+											type: {
+												element_type: {
+													fields: {
+														key: {
+															/**
+															 * K​e​y
+															 */
+															displayName: string
+															/**
+															 * A​t​t​r​i​b​u​t​e​ ​k​e​y
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​c​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​.
+															 */
+															longDesc: string
+														}
+														value: {
+															/**
+															 * V​a​l​u​e
+															 */
+															displayName: string
+															/**
+															 * A​t​t​r​i​b​u​t​e​ ​v​a​l​u​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​v​a​l​u​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​c​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​ ​k​e​y​.
+															 */
+															longDesc: string
+														}
+													}
+												}
+											}
+										}
+										appliedDiscount: {
+											/**
+											 * A​p​p​l​i​e​d​ ​D​i​s​c​o​u​n​t
+											 */
+											displayName: string
+											/**
+											 * D​i​s​c​o​u​n​t​ ​o​n​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * D​e​t​a​i​l​s​ ​o​f​ ​a​n​y​ ​d​i​s​c​o​u​n​t​ ​a​p​p​l​i​e​d​ ​t​o​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​l​i​n​e​ ​i​t​e​m​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													title: {
+														/**
+														 * D​i​s​c​o​u​n​t​ ​T​i​t​l​e
+														 */
+														displayName: string
+														/**
+														 * D​i​s​c​o​u​n​t​ ​n​a​m​e
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​n​a​m​e​ ​o​r​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​d​i​s​c​o​u​n​t​.
+														 */
+														longDesc: string
+													}
+													description: {
+														/**
+														 * D​i​s​c​o​u​n​t​ ​D​e​s​c​r​i​p​t​i​o​n
+														 */
+														displayName: string
+														/**
+														 * D​i​s​c​o​u​n​t​ ​d​e​t​a​i​l​s
+														 */
+														shortDesc: string
+														/**
+														 * A​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​d​i​s​c​o​u​n​t​ ​a​p​p​l​i​e​d​.
+														 */
+														longDesc: string
+													}
+													value: {
+														/**
+														 * D​i​s​c​o​u​n​t​ ​V​a​l​u​e
+														 */
+														displayName: string
+														/**
+														 * D​i​s​c​o​u​n​t​ ​a​m​o​u​n​t​ ​o​r​ ​p​e​r​c​e​n​t​a​g​e
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​n​u​m​e​r​i​c​a​l​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​d​i​s​c​o​u​n​t​,​ ​e​i​t​h​e​r​ ​a​s​ ​a​ ​f​i​x​e​d​ ​a​m​o​u​n​t​ ​o​r​ ​p​e​r​c​e​n​t​a​g​e​.
+														 */
+														longDesc: string
+													}
+													valueType: {
+														/**
+														 * V​a​l​u​e​ ​T​y​p​e
+														 */
+														displayName: string
+														/**
+														 * T​y​p​e​ ​o​f​ ​d​i​s​c​o​u​n​t​ ​v​a​l​u​e
+														 */
+														shortDesc: string
+														/**
+														 * S​p​e​c​i​f​i​e​s​ ​i​f​ ​t​h​e​ ​d​i​s​c​o​u​n​t​ ​i​s​ ​a​ ​f​i​x​e​d​ ​a​m​o​u​n​t​ ​o​r​ ​p​e​r​c​e​n​t​a​g​e​ ​(​e​.​g​.​,​ ​"​F​I​X​E​D​_​A​M​O​U​N​T​"​,​ ​"​P​E​R​C​E​N​T​A​G​E​"​)​.
+														 */
+														longDesc: string
+													}
+													amountWithCurrency: {
+														/**
+														 * A​m​o​u​n​t​ ​w​i​t​h​ ​C​u​r​r​e​n​c​y
+														 */
+														displayName: string
+														/**
+														 * D​i​s​c​o​u​n​t​ ​a​m​o​u​n​t​ ​w​i​t​h​ ​c​u​r​r​e​n​c​y
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​d​i​s​c​o​u​n​t​ ​a​m​o​u​n​t​ ​i​n​c​l​u​d​i​n​g​ ​c​u​r​r​e​n​c​y​ ​d​e​t​a​i​l​s​.
+														 */
+														longDesc: string
+														type: {
+															fields: {
+																amount: {
+																	/**
+																	 * A​m​o​u​n​t
+																	 */
+																	displayName: string
+																	/**
+																	 * D​i​s​c​o​u​n​t​ ​a​m​o​u​n​t
+																	 */
+																	shortDesc: string
+																	/**
+																	 * T​h​e​ ​n​u​m​e​r​i​c​a​l​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​d​i​s​c​o​u​n​t​.
+																	 */
+																	longDesc: string
+																}
+																currencyCode: {
+																	/**
+																	 * C​u​r​r​e​n​c​y​ ​C​o​d​e
+																	 */
+																	displayName: string
+																	/**
+																	 * D​i​s​c​o​u​n​t​ ​c​u​r​r​e​n​c​y
+																	 */
+																	shortDesc: string
+																	/**
+																	 * T​h​e​ ​I​S​O​ ​4​2​1​7​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​d​i​s​c​o​u​n​t​ ​a​m​o​u​n​t​.
+																	 */
+																	longDesc: string
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+										generatePriceOverride: {
+											/**
+											 * G​e​n​e​r​a​t​e​ ​P​r​i​c​e​ ​O​v​e​r​r​i​d​e
+											 */
+											displayName: string
+											/**
+											 * O​v​e​r​r​i​d​e​ ​i​t​e​m​ ​p​r​i​c​e
+											 */
+											shortDesc: string
+											/**
+											 * I​f​ ​t​r​u​e​,​ ​a​l​l​o​w​s​ ​s​e​t​t​i​n​g​ ​a​ ​c​u​s​t​o​m​ ​p​r​i​c​e​ ​f​o​r​ ​t​h​e​ ​i​t​e​m​ ​i​n​s​t​e​a​d​ ​o​f​ ​t​h​e​ ​o​r​i​g​i​n​a​l​ ​p​r​i​c​e​.
+											 */
+											longDesc: string
+										}
+										priceOverride: {
+											/**
+											 * P​r​i​c​e​ ​O​v​e​r​r​i​d​e
+											 */
+											displayName: string
+											/**
+											 * C​u​s​t​o​m​ ​i​t​e​m​ ​p​r​i​c​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​u​s​t​o​m​ ​p​r​i​c​e​ ​t​o​ ​o​v​e​r​r​i​d​e​ ​t​h​e​ ​o​r​i​g​i​n​a​l​ ​u​n​i​t​ ​p​r​i​c​e​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													amount: {
+														/**
+														 * A​m​o​u​n​t
+														 */
+														displayName: string
+														/**
+														 * O​v​e​r​r​i​d​e​ ​a​m​o​u​n​t
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​n​u​m​e​r​i​c​a​l​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​ ​p​r​i​c​e​.
+														 */
+														longDesc: string
+													}
+													currencyCode: {
+														/**
+														 * C​u​r​r​e​n​c​y​ ​C​o​d​e
+														 */
+														displayName: string
+														/**
+														 * O​v​e​r​r​i​d​e​ ​c​u​r​r​e​n​c​y
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​I​S​O​ ​4​2​1​7​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​c​u​s​t​o​m​ ​p​r​i​c​e​.
+														 */
+														longDesc: string
+													}
+												}
+											}
+										}
+										components: {
+											/**
+											 * C​o​m​p​o​n​e​n​t​s
+											 */
+											displayName: string
+											/**
+											 * B​u​n​d​l​e​ ​c​o​m​p​o​n​e​n​t​s
+											 */
+											shortDesc: string
+											/**
+											 * D​e​t​a​i​l​s​ ​o​f​ ​c​o​m​p​o​n​e​n​t​s​ ​i​f​ ​t​h​e​ ​i​t​e​m​ ​i​s​ ​a​ ​b​u​n​d​l​e​ ​o​r​ ​c​o​m​p​o​s​i​t​e​ ​p​r​o​d​u​c​t​.
+											 */
+											longDesc: string
+											type: {
+												element_type: {
+													fields: {
+														quantity: {
+															/**
+															 * Q​u​a​n​t​i​t​y
+															 */
+															displayName: string
+															/**
+															 * C​o​m​p​o​n​e​n​t​ ​q​u​a​n​t​i​t​y
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​o​f​ ​t​h​i​s​ ​c​o​m​p​o​n​e​n​t​ ​i​n​ ​t​h​e​ ​b​u​n​d​l​e​.
+															 */
+															longDesc: string
+														}
+														variantId: {
+															/**
+															 * V​a​r​i​a​n​t​ ​I​D
+															 */
+															displayName: string
+															/**
+															 * C​o​m​p​o​n​e​n​t​ ​v​a​r​i​a​n​t​ ​I​D
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​v​a​r​i​a​n​t​ ​i​n​c​l​u​d​e​d​ ​a​s​ ​a​ ​c​o​m​p​o​n​e​n​t​.
+															 */
+															longDesc: string
+														}
+													}
+												}
+											}
+										}
+										uuid: {
+											/**
+											 * U​U​I​D
+											 */
+											displayName: string
+											/**
+											 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r
+											 */
+											shortDesc: string
+											/**
+											 * A​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​l​i​n​e​ ​i​t​e​m​,​ ​o​f​t​e​n​ ​u​s​e​d​ ​f​o​r​ ​t​r​a​c​k​i​n​g​ ​o​r​ ​e​x​t​e​r​n​a​l​ ​s​y​s​t​e​m​s​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+						appliedDiscount: {
+							/**
+							 * A​p​p​l​i​e​d​ ​D​i​s​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * O​r​d​e​r​-​w​i​d​e​ ​d​i​s​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * D​e​t​a​i​l​s​ ​o​f​ ​a​ ​d​i​s​c​o​u​n​t​ ​a​p​p​l​i​e​d​ ​t​o​ ​t​h​e​ ​e​n​t​i​r​e​ ​d​r​a​f​t​ ​o​r​d​e​r​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									title: {
+										/**
+										 * D​i​s​c​o​u​n​t​ ​T​i​t​l​e
+										 */
+										displayName: string
+										/**
+										 * D​i​s​c​o​u​n​t​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​n​a​m​e​ ​o​r​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​o​r​d​e​r​-​w​i​d​e​ ​d​i​s​c​o​u​n​t​.
+										 */
+										longDesc: string
+									}
+									description: {
+										/**
+										 * D​i​s​c​o​u​n​t​ ​D​e​s​c​r​i​p​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * D​i​s​c​o​u​n​t​ ​d​e​t​a​i​l​s
+										 */
+										shortDesc: string
+										/**
+										 * A​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​o​r​d​e​r​-​w​i​d​e​ ​d​i​s​c​o​u​n​t​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * D​i​s​c​o​u​n​t​ ​V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * D​i​s​c​o​u​n​t​ ​a​m​o​u​n​t​ ​o​r​ ​p​e​r​c​e​n​t​a​g​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​n​u​m​e​r​i​c​a​l​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​d​i​s​c​o​u​n​t​,​ ​e​i​t​h​e​r​ ​a​s​ ​a​ ​f​i​x​e​d​ ​a​m​o​u​n​t​ ​o​r​ ​p​e​r​c​e​n​t​a​g​e​.
+										 */
+										longDesc: string
+									}
+									valueType: {
+										/**
+										 * V​a​l​u​e​ ​T​y​p​e
+										 */
+										displayName: string
+										/**
+										 * T​y​p​e​ ​o​f​ ​d​i​s​c​o​u​n​t​ ​v​a​l​u​e
+										 */
+										shortDesc: string
+										/**
+										 * S​p​e​c​i​f​i​e​s​ ​i​f​ ​t​h​e​ ​d​i​s​c​o​u​n​t​ ​i​s​ ​a​ ​f​i​x​e​d​ ​a​m​o​u​n​t​ ​o​r​ ​p​e​r​c​e​n​t​a​g​e​ ​(​e​.​g​.​,​ ​"​F​I​X​E​D​_​A​M​O​U​N​T​"​,​ ​"​P​E​R​C​E​N​T​A​G​E​"​)​.
+										 */
+										longDesc: string
+									}
+									amountWithCurrency: {
+										/**
+										 * A​m​o​u​n​t​ ​w​i​t​h​ ​C​u​r​r​e​n​c​y
+										 */
+										displayName: string
+										/**
+										 * D​i​s​c​o​u​n​t​ ​a​m​o​u​n​t​ ​w​i​t​h​ ​c​u​r​r​e​n​c​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​d​i​s​c​o​u​n​t​ ​a​m​o​u​n​t​ ​i​n​c​l​u​d​i​n​g​ ​c​u​r​r​e​n​c​y​ ​d​e​t​a​i​l​s​.
+										 */
+										longDesc: string
+										type: {
+											fields: {
+												amount: {
+													/**
+													 * A​m​o​u​n​t
+													 */
+													displayName: string
+													/**
+													 * D​i​s​c​o​u​n​t​ ​a​m​o​u​n​t
+													 */
+													shortDesc: string
+													/**
+													 * T​h​e​ ​n​u​m​e​r​i​c​a​l​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​d​i​s​c​o​u​n​t​.
+													 */
+													longDesc: string
+												}
+												currencyCode: {
+													/**
+													 * C​u​r​r​e​n​c​y​ ​C​o​d​e
+													 */
+													displayName: string
+													/**
+													 * D​i​s​c​o​u​n​t​ ​c​u​r​r​e​n​c​y
+													 */
+													shortDesc: string
+													/**
+													 * T​h​e​ ​I​S​O​ ​4​2​1​7​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​d​i​s​c​o​u​n​t​ ​a​m​o​u​n​t​.
+													 */
+													longDesc: string
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						shippingLine: {
+							/**
+							 * S​h​i​p​p​i​n​g​ ​L​i​n​e
+							 */
+							displayName: string
+							/**
+							 * S​h​i​p​p​i​n​g​ ​d​e​t​a​i​l​s
+							 */
+							shortDesc: string
+							/**
+							 * D​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​m​e​t​h​o​d​ ​a​n​d​ ​c​o​s​t​ ​f​o​r​ ​t​h​e​ ​d​r​a​f​t​ ​o​r​d​e​r​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									price: {
+										/**
+										 * P​r​i​c​e
+										 */
+										displayName: string
+										/**
+										 * S​h​i​p​p​i​n​g​ ​c​o​s​t
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​o​s​t​ ​o​f​ ​s​h​i​p​p​i​n​g​ ​a​s​ ​a​ ​n​u​m​e​r​i​c​a​l​ ​v​a​l​u​e​.
+										 */
+										longDesc: string
+									}
+									priceWithCurrency: {
+										/**
+										 * P​r​i​c​e​ ​w​i​t​h​ ​C​u​r​r​e​n​c​y
+										 */
+										displayName: string
+										/**
+										 * S​h​i​p​p​i​n​g​ ​c​o​s​t​ ​w​i​t​h​ ​c​u​r​r​e​n​c​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​h​i​p​p​i​n​g​ ​c​o​s​t​ ​i​n​c​l​u​d​i​n​g​ ​c​u​r​r​e​n​c​y​ ​s​p​e​c​i​f​i​c​a​t​i​o​n​.
+										 */
+										longDesc: string
+										type: {
+											fields: {
+												amount: {
+													/**
+													 * A​m​o​u​n​t
+													 */
+													displayName: string
+													/**
+													 * S​h​i​p​p​i​n​g​ ​a​m​o​u​n​t
+													 */
+													shortDesc: string
+													/**
+													 * T​h​e​ ​n​u​m​e​r​i​c​a​l​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​c​o​s​t​.
+													 */
+													longDesc: string
+												}
+												currencyCode: {
+													/**
+													 * C​u​r​r​e​n​c​y​ ​C​o​d​e
+													 */
+													displayName: string
+													/**
+													 * S​h​i​p​p​i​n​g​ ​c​u​r​r​e​n​c​y
+													 */
+													shortDesc: string
+													/**
+													 * T​h​e​ ​I​S​O​ ​4​2​1​7​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​c​o​s​t​.
+													 */
+													longDesc: string
+												}
+											}
+										}
+									}
+									title: {
+										/**
+										 * T​i​t​l​e
+										 */
+										displayName: string
+										/**
+										 * S​h​i​p​p​i​n​g​ ​m​e​t​h​o​d​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​m​e​t​h​o​d​,​ ​e​.​g​.​,​ ​"​S​t​a​n​d​a​r​d​ ​S​h​i​p​p​i​n​g​"​.
+										 */
+										longDesc: string
+									}
+									shippingRateHandle: {
+										/**
+										 * S​h​i​p​p​i​n​g​ ​R​a​t​e​ ​H​a​n​d​l​e
+										 */
+										displayName: string
+										/**
+										 * S​h​i​p​p​i​n​g​ ​r​a​t​e​ ​i​d​e​n​t​i​f​i​e​r
+										 */
+										shortDesc: string
+										/**
+										 * A​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​r​a​t​e​,​ ​o​f​t​e​n​ ​t​i​e​d​ ​t​o​ ​a​ ​p​r​e​d​e​f​i​n​e​d​ ​r​a​t​e​ ​i​n​ ​S​h​o​p​i​f​y​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						customAttributes: {
+							/**
+							 * C​u​s​t​o​m​ ​A​t​t​r​i​b​u​t​e​s
+							 */
+							displayName: string
+							/**
+							 * O​r​d​e​r​ ​c​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * K​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​ ​f​o​r​ ​a​d​d​i​n​g​ ​c​u​s​t​o​m​ ​m​e​t​a​d​a​t​a​ ​t​o​ ​t​h​e​ ​d​r​a​f​t​ ​o​r​d​e​r​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										key: {
+											/**
+											 * K​e​y
+											 */
+											displayName: string
+											/**
+											 * A​t​t​r​i​b​u​t​e​ ​k​e​y
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​c​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​.
+											 */
+											longDesc: string
+										}
+										value: {
+											/**
+											 * V​a​l​u​e
+											 */
+											displayName: string
+											/**
+											 * A​t​t​r​i​b​u​t​e​ ​v​a​l​u​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​v​a​l​u​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​c​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​ ​k​e​y​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+						allowDiscountCodesInCheckout: {
+							/**
+							 * A​l​l​o​w​ ​D​i​s​c​o​u​n​t​ ​C​o​d​e​s​ ​i​n​ ​C​h​e​c​k​o​u​t
+							 */
+							displayName: string
+							/**
+							 * E​n​a​b​l​e​ ​d​i​s​c​o​u​n​t​ ​c​o​d​e​s
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​t​r​u​e​,​ ​a​l​l​o​w​s​ ​c​u​s​t​o​m​e​r​s​ ​t​o​ ​a​p​p​l​y​ ​d​i​s​c​o​u​n​t​ ​c​o​d​e​s​ ​d​u​r​i​n​g​ ​c​h​e​c​k​o​u​t​ ​f​r​o​m​ ​t​h​i​s​ ​d​r​a​f​t​ ​o​r​d​e​r​.
+							 */
+							longDesc: string
+						}
+						acceptAutomaticDiscounts: {
+							/**
+							 * A​c​c​e​p​t​ ​A​u​t​o​m​a​t​i​c​ ​D​i​s​c​o​u​n​t​s
+							 */
+							displayName: string
+							/**
+							 * A​p​p​l​y​ ​a​u​t​o​m​a​t​i​c​ ​d​i​s​c​o​u​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​t​r​u​e​,​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​a​p​p​l​i​e​s​ ​a​n​y​ ​e​l​i​g​i​b​l​e​ ​s​t​o​r​e​-​w​i​d​e​ ​d​i​s​c​o​u​n​t​s​ ​t​o​ ​t​h​e​ ​d​r​a​f​t​ ​o​r​d​e​r​.
+							 */
+							longDesc: string
+						}
+						discountCodes: {
+							/**
+							 * D​i​s​c​o​u​n​t​ ​C​o​d​e​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​d​i​s​c​o​u​n​t​ ​c​o​d​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​d​i​s​c​o​u​n​t​ ​c​o​d​e​s​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​e​ ​d​r​a​f​t​ ​o​r​d​e​r​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									/**
+									 * D​i​s​c​o​u​n​t​ ​C​o​d​e
+									 */
+									displayName: string
+									/**
+									 * S​i​n​g​l​e​ ​d​i​s​c​o​u​n​t​ ​c​o​d​e
+									 */
+									shortDesc: string
+									/**
+									 * A​ ​s​p​e​c​i​f​i​c​ ​d​i​s​c​o​u​n​t​ ​c​o​d​e​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​e​ ​o​r​d​e​r​.
+									 */
+									longDesc: string
+								}
+							}
+						}
+						metafields: {
+							/**
+							 * M​e​t​a​f​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​m​e​t​a​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​m​e​t​a​d​a​t​a​ ​f​i​e​l​d​s​ ​f​o​r​ ​t​h​e​ ​d​r​a​f​t​ ​o​r​d​e​r​,​ ​u​s​e​f​u​l​ ​f​o​r​ ​c​u​s​t​o​m​ ​i​n​t​e​g​r​a​t​i​o​n​s​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										namespace: {
+											/**
+											 * N​a​m​e​s​p​a​c​e
+											 */
+											displayName: string
+											/**
+											 * M​e​t​a​f​i​e​l​d​ ​n​a​m​e​s​p​a​c​e
+											 */
+											shortDesc: string
+											/**
+											 * A​ ​g​r​o​u​p​i​n​g​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​m​e​t​a​f​i​e​l​d​.
+											 */
+											longDesc: string
+										}
+										key: {
+											/**
+											 * K​e​y
+											 */
+											displayName: string
+											/**
+											 * M​e​t​a​f​i​e​l​d​ ​k​e​y
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​m​e​t​a​f​i​e​l​d​.
+											 */
+											longDesc: string
+										}
+										value: {
+											/**
+											 * V​a​l​u​e
+											 */
+											displayName: string
+											/**
+											 * M​e​t​a​f​i​e​l​d​ ​v​a​l​u​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​v​a​l​u​e​ ​s​t​o​r​e​d​ ​i​n​ ​t​h​e​ ​m​e​t​a​f​i​e​l​d​.
+											 */
+											longDesc: string
+										}
+										type: {
+											/**
+											 * T​y​p​e
+											 */
+											displayName: string
+											/**
+											 * M​e​t​a​f​i​e​l​d​ ​d​a​t​a​ ​t​y​p​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​d​a​t​a​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​m​e​t​a​f​i​e​l​d​ ​v​a​l​u​e​,​ ​e​.​g​.​,​ ​s​t​r​i​n​g​,​ ​i​n​t​e​g​e​r​,​ ​J​S​O​N​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+						localizedFields: {
+							/**
+							 * L​o​c​a​l​i​z​e​d​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * L​o​c​a​l​i​z​e​d​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * F​i​e​l​d​s​ ​t​h​a​t​ ​s​u​p​p​o​r​t​ ​l​o​c​a​l​i​z​e​d​ ​c​o​n​t​e​n​t​ ​f​o​r​ ​d​i​f​f​e​r​e​n​t​ ​r​e​g​i​o​n​s​ ​o​r​ ​l​a​n​g​u​a​g​e​s​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										value: {
+											/**
+											 * V​a​l​u​e
+											 */
+											displayName: string
+											/**
+											 * L​o​c​a​l​i​z​e​d​ ​v​a​l​u​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​l​o​c​a​l​i​z​e​d​ ​c​o​n​t​e​n​t​ ​v​a​l​u​e​.
+											 */
+											longDesc: string
+										}
+										key: {
+											/**
+											 * K​e​y
+											 */
+											displayName: string
+											/**
+											 * L​o​c​a​l​i​z​e​d​ ​f​i​e​l​d​ ​k​e​y
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​l​o​c​a​l​i​z​e​d​ ​f​i​e​l​d​.
+											 */
+											longDesc: string
+										}
+										locale: {
+											/**
+											 * L​o​c​a​l​e
+											 */
+											displayName: string
+											/**
+											 * L​a​n​g​u​a​g​e​/​r​e​g​i​o​n​ ​c​o​d​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​l​o​c​a​l​e​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​l​o​c​a​l​i​z​e​d​ ​c​o​n​t​e​n​t​,​ ​e​.​g​.​,​ ​"​e​n​-​U​S​"​,​ ​"​f​r​-​C​A​"​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+						presentmentCurrencyCode: {
+							/**
+							 * P​r​e​s​e​n​t​m​e​n​t​ ​C​u​r​r​e​n​c​y​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * D​i​s​p​l​a​y​ ​c​u​r​r​e​n​c​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​S​O​ ​4​2​1​7​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​f​o​r​ ​d​i​s​p​l​a​y​i​n​g​ ​p​r​i​c​e​s​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​,​ ​e​.​g​.​,​ ​U​S​D​,​ ​C​A​D​.
+							 */
+							longDesc: string
+						}
+						poNumber: {
+							/**
+							 * P​O​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * P​u​r​c​h​a​s​e​ ​o​r​d​e​r​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​ ​n​u​m​b​e​r​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​d​r​a​f​t​ ​o​r​d​e​r​,​ ​o​f​t​e​n​ ​u​s​e​d​ ​f​o​r​ ​B​2​B​ ​t​r​a​n​s​a​c​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+						paymentTerms: {
+							/**
+							 * P​a​y​m​e​n​t​ ​T​e​r​m​s
+							 */
+							displayName: string
+							/**
+							 * P​a​y​m​e​n​t​ ​c​o​n​d​i​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * D​e​f​i​n​e​s​ ​t​h​e​ ​p​a​y​m​e​n​t​ ​t​e​r​m​s​ ​f​o​r​ ​t​h​e​ ​d​r​a​f​t​ ​o​r​d​e​r​,​ ​s​u​c​h​ ​a​s​ ​d​u​e​ ​d​a​t​e​s​ ​o​r​ ​s​c​h​e​d​u​l​e​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									paymentTermsTemplateId: {
+										/**
+										 * P​a​y​m​e​n​t​ ​T​e​r​m​s​ ​T​e​m​p​l​a​t​e​ ​I​D
+										 */
+										displayName: string
+										/**
+										 * T​e​m​p​l​a​t​e​ ​i​d​e​n​t​i​f​i​e​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​I​D​ ​o​f​ ​a​ ​p​r​e​d​e​f​i​n​e​d​ ​p​a​y​m​e​n​t​ ​t​e​r​m​s​ ​t​e​m​p​l​a​t​e​ ​i​n​ ​S​h​o​p​i​f​y​.
+										 */
+										longDesc: string
+									}
+									paymentSchedules: {
+										/**
+										 * P​a​y​m​e​n​t​ ​S​c​h​e​d​u​l​e​s
+										 */
+										displayName: string
+										/**
+										 * P​a​y​m​e​n​t​ ​d​u​e​ ​d​a​t​e​s
+										 */
+										shortDesc: string
+										/**
+										 * A​ ​l​i​s​t​ ​o​f​ ​s​c​h​e​d​u​l​e​d​ ​p​a​y​m​e​n​t​s​ ​w​i​t​h​ ​d​u​e​ ​d​a​t​e​s​ ​a​n​d​ ​a​m​o​u​n​t​s​.
+										 */
+										longDesc: string
+										type: {
+											element_type: {
+												fields: {
+													dueAt: {
+														/**
+														 * D​u​e​ ​A​t
+														 */
+														displayName: string
+														/**
+														 * D​u​e​ ​d​a​t​e
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​d​a​t​e​ ​w​h​e​n​ ​t​h​e​ ​p​a​y​m​e​n​t​ ​i​s​ ​d​u​e​.
+														 */
+														longDesc: string
+													}
+													amount: {
+														/**
+														 * A​m​o​u​n​t
+														 */
+														displayName: string
+														/**
+														 * P​a​y​m​e​n​t​ ​a​m​o​u​n​t
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​n​u​m​e​r​i​c​a​l​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​p​a​y​m​e​n​t​ ​d​u​e​.
+														 */
+														longDesc: string
+													}
+													currencyCode: {
+														/**
+														 * C​u​r​r​e​n​c​y​ ​C​o​d​e
+														 */
+														displayName: string
+														/**
+														 * P​a​y​m​e​n​t​ ​c​u​r​r​e​n​c​y
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​I​S​O​ ​4​2​1​7​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​p​a​y​m​e​n​t​ ​a​m​o​u​n​t​.
+														 */
+														longDesc: string
+													}
+													issuedAt: {
+														/**
+														 * I​s​s​u​e​d​ ​A​t
+														 */
+														displayName: string
+														/**
+														 * I​s​s​u​e​ ​d​a​t​e
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​d​a​t​e​ ​w​h​e​n​ ​t​h​e​ ​p​a​y​m​e​n​t​ ​s​c​h​e​d​u​l​e​ ​w​a​s​ ​i​s​s​u​e​d​.
+														 */
+														longDesc: string
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						purchasingEntity: {
+							/**
+							 * P​u​r​c​h​a​s​i​n​g​ ​E​n​t​i​t​y
+							 */
+							displayName: string
+							/**
+							 * B​u​y​e​r​ ​d​e​t​a​i​l​s
+							 */
+							shortDesc: string
+							/**
+							 * D​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​e​n​t​i​t​y​ ​m​a​k​i​n​g​ ​t​h​e​ ​p​u​r​c​h​a​s​e​,​ ​s​u​c​h​ ​a​s​ ​a​ ​c​o​m​p​a​n​y​ ​o​r​ ​i​n​d​i​v​i​d​u​a​l​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									customerId: {
+										/**
+										 * C​u​s​t​o​m​e​r​ ​I​D
+										 */
+										displayName: string
+										/**
+										 * P​u​r​c​h​a​s​e​r​ ​c​u​s​t​o​m​e​r​ ​I​D
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​m​a​k​i​n​g​ ​t​h​e​ ​p​u​r​c​h​a​s​e​.
+										 */
+										longDesc: string
+									}
+									companyId: {
+										/**
+										 * C​o​m​p​a​n​y​ ​I​D
+										 */
+										displayName: string
+										/**
+										 * P​u​r​c​h​a​s​e​r​ ​c​o​m​p​a​n​y​ ​I​D
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​m​a​k​i​n​g​ ​t​h​e​ ​p​u​r​c​h​a​s​e​.
+										 */
+										longDesc: string
+									}
+									companyLocationId: {
+										/**
+										 * C​o​m​p​a​n​y​ ​L​o​c​a​t​i​o​n​ ​I​D
+										 */
+										displayName: string
+										/**
+										 * C​o​m​p​a​n​y​ ​l​o​c​a​t​i​o​n​ ​I​D
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​c​o​m​p​a​n​y​ ​l​o​c​a​t​i​o​n​ ​m​a​k​i​n​g​ ​t​h​e​ ​p​u​r​c​h​a​s​e​.
+										 */
+										longDesc: string
+									}
+									companyContactId: {
+										/**
+										 * C​o​m​p​a​n​y​ ​C​o​n​t​a​c​t​ ​I​D
+										 */
+										displayName: string
+										/**
+										 * C​o​n​t​a​c​t​ ​I​D
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​c​o​n​t​a​c​t​ ​r​e​s​p​o​n​s​i​b​l​e​ ​f​o​r​ ​t​h​e​ ​p​u​r​c​h​a​s​e​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						reserveInventoryUntil: {
+							/**
+							 * R​e​s​e​r​v​e​ ​I​n​v​e​n​t​o​r​y​ ​U​n​t​i​l
+							 */
+							displayName: string
+							/**
+							 * I​n​v​e​n​t​o​r​y​ ​r​e​s​e​r​v​a​t​i​o​n​ ​d​e​a​d​l​i​n​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​u​n​t​i​l​ ​w​h​i​c​h​ ​t​h​e​ ​i​n​v​e​n​t​o​r​y​ ​i​s​ ​r​e​s​e​r​v​e​d​ ​f​o​r​ ​t​h​i​s​ ​d​r​a​f​t​ ​o​r​d​e​r​.
+							 */
+							longDesc: string
+						}
+						sourceName: {
+							/**
+							 * S​o​u​r​c​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * O​r​d​e​r​ ​s​o​u​r​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​o​u​r​c​e​ ​o​f​ ​t​h​e​ ​d​r​a​f​t​ ​o​r​d​e​r​,​ ​e​.​g​.​,​ ​"​w​e​b​"​,​ ​"​m​a​n​u​a​l​"​,​ ​o​r​ ​a​n​ ​a​p​p​ ​n​a​m​e​.
+							 */
+							longDesc: string
+						}
+						visibleToCustomer: {
+							/**
+							 * V​i​s​i​b​l​e​ ​t​o​ ​C​u​s​t​o​m​e​r
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​e​r​ ​v​i​s​i​b​i​l​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​t​r​u​e​,​ ​t​h​e​ ​d​r​a​f​t​ ​o​r​d​e​r​ ​i​s​ ​v​i​s​i​b​l​e​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​,​ ​e​.​g​.​,​ ​i​n​ ​t​h​e​i​r​ ​a​c​c​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'create-customer': {
+					/**
+					 * C​r​e​a​t​e​ ​C​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​e​r​ ​i​n​ ​S​h​o​p​i​f​y
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​s​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​e​r​ ​t​o​ ​t​h​e​ ​S​h​o​p​i​f​y​ ​s​t​o​r​e​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​s​t​o​r​e​ ​t​h​e​i​r​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​d​d​r​e​s​s​e​s​,​ ​a​n​d​ ​m​a​r​k​e​t​i​n​g​ ​p​r​e​f​e​r​e​n​c​e​s​ ​f​o​r​ ​f​u​t​u​r​e​ ​o​r​d​e​r​s​ ​a​n​d​ ​e​n​g​a​g​e​m​e​n​t​.
+					 */
+					longDesc: string
+					options: {
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​e​r​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​i​m​a​r​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​,​ ​u​s​e​d​ ​f​o​r​ ​a​c​c​o​u​n​t​ ​c​r​e​a​t​i​o​n​,​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​,​ ​a​n​d​ ​m​a​r​k​e​t​i​n​g​.
+							 */
+							longDesc: string
+						}
+						phone: {
+							/**
+							 * P​h​o​n​e
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​e​r​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​’​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r​,​ ​u​s​e​f​u​l​ ​f​o​r​ ​c​o​n​t​a​c​t​ ​p​u​r​p​o​s​e​s​ ​a​n​d​ ​S​M​S​ ​m​a​r​k​e​t​i​n​g​ ​i​f​ ​c​o​n​s​e​n​t​e​d​.
+							 */
+							longDesc: string
+						}
+						firstName: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​e​r​ ​f​i​r​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​,​ ​u​s​e​d​ ​f​o​r​ ​p​e​r​s​o​n​a​l​i​z​a​t​i​o​n​ ​a​n​d​ ​a​d​d​r​e​s​s​ ​d​e​t​a​i​l​s​.
+							 */
+							longDesc: string
+						}
+						lastName: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​e​r​ ​l​a​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​,​ ​c​o​m​p​l​e​t​i​n​g​ ​t​h​e​i​r​ ​f​u​l​l​ ​n​a​m​e​ ​f​o​r​ ​i​d​e​n​t​i​f​i​c​a​t​i​o​n​ ​a​n​d​ ​s​h​i​p​p​i​n​g​.
+							 */
+							longDesc: string
+						}
+						locale: {
+							/**
+							 * L​o​c​a​l​e
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​e​r​ ​l​a​n​g​u​a​g​e​/​r​e​g​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​e​f​e​r​r​e​d​ ​l​a​n​g​u​a​g​e​ ​a​n​d​ ​r​e​g​i​o​n​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​c​u​s​t​o​m​e​r​,​ ​e​.​g​.​,​ ​"​e​n​-​U​S​"​ ​o​r​ ​"​f​r​-​C​A​"​,​ ​a​f​f​e​c​t​i​n​g​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​ ​a​n​d​ ​f​o​r​m​a​t​t​i​n​g​.
+							 */
+							longDesc: string
+						}
+						note: {
+							/**
+							 * N​o​t​e
+							 */
+							displayName: string
+							/**
+							 * N​o​t​e​s​ ​a​b​o​u​t​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * I​n​t​e​r​n​a​l​ ​n​o​t​e​s​ ​a​b​o​u​t​ ​t​h​e​ ​c​u​s​t​o​m​e​r​,​ ​s​u​c​h​ ​a​s​ ​p​r​e​f​e​r​e​n​c​e​s​,​ ​s​p​e​c​i​a​l​ ​i​n​s​t​r​u​c​t​i​o​n​s​,​ ​o​r​ ​a​c​c​o​u​n​t​ ​d​e​t​a​i​l​s​.
+							 */
+							longDesc: string
+						}
+						taxExempt: {
+							/**
+							 * T​a​x​ ​E​x​e​m​p​t
+							 */
+							displayName: string
+							/**
+							 * E​x​e​m​p​t​ ​c​u​s​t​o​m​e​r​ ​f​r​o​m​ ​t​a​x​e​s
+							 */
+							shortDesc: string
+							/**
+							 * I​n​d​i​c​a​t​e​s​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​i​s​ ​e​x​e​m​p​t​ ​f​r​o​m​ ​t​a​x​e​s​ ​o​n​ ​a​l​l​ ​p​u​r​c​h​a​s​e​s​.​ ​S​e​t​ ​t​o​ ​t​r​u​e​ ​f​o​r​ ​t​a​x​-​e​x​e​m​p​t​ ​e​n​t​i​t​i​e​s​.
+							 */
+							longDesc: string
+						}
+						taxExemptions: {
+							/**
+							 * T​a​x​ ​E​x​e​m​p​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​t​a​x​ ​e​x​e​m​p​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​s​p​e​c​i​f​i​c​ ​t​a​x​ ​e​x​e​m​p​t​i​o​n​s​ ​a​p​p​l​i​e​d​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​,​ ​s​u​c​h​ ​a​s​ ​r​e​g​i​o​n​a​l​ ​o​r​ ​c​a​t​e​g​o​r​y​-​s​p​e​c​i​f​i​c​ ​e​x​e​m​p​t​i​o​n​s​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									/**
+									 * T​a​x​ ​E​x​e​m​p​t​i​o​n​ ​T​y​p​e
+									 */
+									displayName: string
+									/**
+									 * T​y​p​e​ ​o​f​ ​t​a​x​ ​e​x​e​m​p​t​i​o​n
+									 */
+									shortDesc: string
+									/**
+									 * D​e​f​i​n​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​t​a​x​ ​e​x​e​m​p​t​i​o​n​ ​a​p​p​l​i​e​d​,​ ​e​.​g​.​,​ ​G​S​T​,​ ​V​A​T​,​ ​o​r​ ​s​a​l​e​s​ ​t​a​x​.
+									 */
+									longDesc: string
+								}
+							}
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​e​r​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​t​a​g​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​o​r​ ​f​i​l​t​e​r​ ​t​h​e​ ​c​u​s​t​o​m​e​r​,​ ​e​.​g​.​,​ ​"​V​I​P​"​,​ ​"​w​h​o​l​e​s​a​l​e​"​,​ ​"​n​e​w​"​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									/**
+									 * T​a​g
+									 */
+									displayName: string
+									/**
+									 * S​i​n​g​l​e​ ​t​a​g​ ​v​a​l​u​e
+									 */
+									shortDesc: string
+									/**
+									 * A​ ​s​i​n​g​l​e​ ​s​t​r​i​n​g​ ​v​a​l​u​e​ ​u​s​e​d​ ​t​o​ ​t​a​g​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​f​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​o​r​ ​s​e​g​m​e​n​t​a​t​i​o​n​.
+									 */
+									longDesc: string
+								}
+							}
+						}
+						addresses: {
+							/**
+							 * A​d​d​r​e​s​s​e​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​e​r​ ​a​d​d​r​e​s​s​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​a​d​d​r​e​s​s​e​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​c​u​s​t​o​m​e​r​,​ ​s​u​c​h​ ​a​s​ ​s​h​i​p​p​i​n​g​ ​o​r​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s​e​s​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										address1: {
+											/**
+											 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​1
+											 */
+											displayName: string
+											/**
+											 * P​r​i​m​a​r​y​ ​a​d​d​r​e​s​s​ ​l​i​n​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​o​r​ ​P​O​ ​B​o​x​ ​f​o​r​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.
+											 */
+											longDesc: string
+										}
+										address2: {
+											/**
+											 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​2
+											 */
+											displayName: string
+											/**
+											 * S​e​c​o​n​d​a​r​y​ ​a​d​d​r​e​s​s​ ​l​i​n​e
+											 */
+											shortDesc: string
+											/**
+											 * A​d​d​i​t​i​o​n​a​l​ ​a​d​d​r​e​s​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​l​i​k​e​ ​a​p​a​r​t​m​e​n​t​ ​o​r​ ​s​u​i​t​e​ ​n​u​m​b​e​r​.
+											 */
+											longDesc: string
+										}
+										city: {
+											/**
+											 * C​i​t​y
+											 */
+											displayName: string
+											/**
+											 * C​u​s​t​o​m​e​r​ ​c​i​t​y
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​i​t​y​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​c​u​s​t​o​m​e​r​’​s​ ​a​d​d​r​e​s​s​.
+											 */
+											longDesc: string
+										}
+										province: {
+											/**
+											 * P​r​o​v​i​n​c​e​/​S​t​a​t​e
+											 */
+											displayName: string
+											/**
+											 * C​u​s​t​o​m​e​r​ ​p​r​o​v​i​n​c​e​ ​o​r​ ​s​t​a​t​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​p​r​o​v​i​n​c​e​,​ ​s​t​a​t​e​,​ ​o​r​ ​r​e​g​i​o​n​ ​f​o​r​ ​t​h​e​ ​c​u​s​t​o​m​e​r​’​s​ ​a​d​d​r​e​s​s​.
+											 */
+											longDesc: string
+										}
+										country: {
+											/**
+											 * C​o​u​n​t​r​y
+											 */
+											displayName: string
+											/**
+											 * C​u​s​t​o​m​e​r​ ​c​o​u​n​t​r​y
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​o​u​n​t​r​y​ ​f​o​r​ ​t​h​e​ ​c​u​s​t​o​m​e​r​’​s​ ​a​d​d​r​e​s​s​.
+											 */
+											longDesc: string
+										}
+										zip: {
+											/**
+											 * Z​I​P​/​P​o​s​t​a​l​ ​C​o​d​e
+											 */
+											displayName: string
+											/**
+											 * C​u​s​t​o​m​e​r​ ​p​o​s​t​a​l​ ​c​o​d​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​c​u​s​t​o​m​e​r​’​s​ ​a​d​d​r​e​s​s​.
+											 */
+											longDesc: string
+										}
+										firstName: {
+											/**
+											 * F​i​r​s​t​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * A​d​d​r​e​s​s​ ​f​i​r​s​t​ ​n​a​m​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​a​d​d​r​e​s​s​.
+											 */
+											longDesc: string
+										}
+										lastName: {
+											/**
+											 * L​a​s​t​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * A​d​d​r​e​s​s​ ​l​a​s​t​ ​n​a​m​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​a​d​d​r​e​s​s​.
+											 */
+											longDesc: string
+										}
+										company: {
+											/**
+											 * C​o​m​p​a​n​y
+											 */
+											displayName: string
+											/**
+											 * A​d​d​r​e​s​s​ ​c​o​m​p​a​n​y​ ​n​a​m​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​o​m​p​a​n​y​ ​n​a​m​e​ ​t​i​e​d​ ​t​o​ ​t​h​i​s​ ​a​d​d​r​e​s​s​,​ ​i​f​ ​a​p​p​l​i​c​a​b​l​e​.
+											 */
+											longDesc: string
+										}
+										phone: {
+											/**
+											 * P​h​o​n​e
+											 */
+											displayName: string
+											/**
+											 * A​d​d​r​e​s​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​l​i​n​k​e​d​ ​t​o​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​a​d​d​r​e​s​s​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+						emailMarketingConsent: {
+							/**
+							 * E​m​a​i​l​ ​M​a​r​k​e​t​i​n​g​ ​C​o​n​s​e​n​t
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​m​a​r​k​e​t​i​n​g​ ​p​r​e​f​e​r​e​n​c​e​s
+							 */
+							shortDesc: string
+							/**
+							 * D​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​c​u​s​t​o​m​e​r​’​s​ ​c​o​n​s​e​n​t​ ​t​o​ ​r​e​c​e​i​v​e​ ​e​m​a​i​l​ ​m​a​r​k​e​t​i​n​g​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									marketingState: {
+										/**
+										 * M​a​r​k​e​t​i​n​g​ ​S​t​a​t​e
+										 */
+										displayName: string
+										/**
+										 * C​o​n​s​e​n​t​ ​s​t​a​t​u​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​u​r​r​e​n​t​ ​s​t​a​t​e​ ​o​f​ ​e​m​a​i​l​ ​m​a​r​k​e​t​i​n​g​ ​c​o​n​s​e​n​t​,​ ​e​.​g​.​,​ ​"​S​U​B​S​C​R​I​B​E​D​"​,​ ​"​U​N​S​U​B​S​C​R​I​B​E​D​"​,​ ​o​r​ ​"​P​E​N​D​I​N​G​"​.
+										 */
+										longDesc: string
+									}
+									marketingOptInLevel: {
+										/**
+										 * M​a​r​k​e​t​i​n​g​ ​O​p​t​-​I​n​ ​L​e​v​e​l
+										 */
+										displayName: string
+										/**
+										 * O​p​t​-​i​n​ ​l​e​v​e​l
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​l​e​v​e​l​ ​o​f​ ​c​o​n​s​e​n​t​ ​p​r​o​v​i​d​e​d​,​ ​e​.​g​.​,​ ​"​S​I​N​G​L​E​_​O​P​T​_​I​N​"​ ​o​r​ ​"​C​O​N​F​I​R​M​E​D​_​O​P​T​_​I​N​"​,​ ​b​a​s​e​d​ ​o​n​ ​h​o​w​ ​c​o​n​s​e​n​t​ ​w​a​s​ ​o​b​t​a​i​n​e​d​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						smsMarketingConsent: {
+							/**
+							 * S​M​S​ ​M​a​r​k​e​t​i​n​g​ ​C​o​n​s​e​n​t
+							 */
+							displayName: string
+							/**
+							 * S​M​S​ ​m​a​r​k​e​t​i​n​g​ ​p​r​e​f​e​r​e​n​c​e​s
+							 */
+							shortDesc: string
+							/**
+							 * D​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​c​u​s​t​o​m​e​r​’​s​ ​c​o​n​s​e​n​t​ ​t​o​ ​r​e​c​e​i​v​e​ ​S​M​S​ ​m​a​r​k​e​t​i​n​g​ ​m​e​s​s​a​g​e​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									marketingState: {
+										/**
+										 * M​a​r​k​e​t​i​n​g​ ​S​t​a​t​e
+										 */
+										displayName: string
+										/**
+										 * C​o​n​s​e​n​t​ ​s​t​a​t​u​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​u​r​r​e​n​t​ ​s​t​a​t​e​ ​o​f​ ​S​M​S​ ​m​a​r​k​e​t​i​n​g​ ​c​o​n​s​e​n​t​,​ ​e​.​g​.​,​ ​"​S​U​B​S​C​R​I​B​E​D​"​,​ ​"​U​N​S​U​B​S​C​R​I​B​E​D​"​,​ ​o​r​ ​"​P​E​N​D​I​N​G​"​.
+										 */
+										longDesc: string
+									}
+									marketingOptInLevel: {
+										/**
+										 * M​a​r​k​e​t​i​n​g​ ​O​p​t​-​I​n​ ​L​e​v​e​l
+										 */
+										displayName: string
+										/**
+										 * O​p​t​-​i​n​ ​l​e​v​e​l
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​l​e​v​e​l​ ​o​f​ ​c​o​n​s​e​n​t​ ​p​r​o​v​i​d​e​d​ ​f​o​r​ ​S​M​S​,​ ​e​.​g​.​,​ ​"​S​I​N​G​L​E​_​O​P​T​_​I​N​"​ ​o​r​ ​"​C​O​N​F​I​R​M​E​D​_​O​P​T​_​I​N​"​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						metafields: {
+							/**
+							 * M​e​t​a​f​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​m​e​t​a​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​m​e​t​a​d​a​t​a​ ​f​i​e​l​d​s​ ​f​o​r​ ​t​h​e​ ​c​u​s​t​o​m​e​r​,​ ​u​s​e​f​u​l​ ​f​o​r​ ​c​u​s​t​o​m​ ​i​n​t​e​g​r​a​t​i​o​n​s​ ​o​r​ ​d​a​t​a​ ​s​t​o​r​a​g​e​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										namespace: {
+											/**
+											 * N​a​m​e​s​p​a​c​e
+											 */
+											displayName: string
+											/**
+											 * M​e​t​a​f​i​e​l​d​ ​n​a​m​e​s​p​a​c​e
+											 */
+											shortDesc: string
+											/**
+											 * A​ ​g​r​o​u​p​i​n​g​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​m​e​t​a​f​i​e​l​d​ ​t​o​ ​o​r​g​a​n​i​z​e​ ​r​e​l​a​t​e​d​ ​d​a​t​a​.
+											 */
+											longDesc: string
+										}
+										key: {
+											/**
+											 * K​e​y
+											 */
+											displayName: string
+											/**
+											 * M​e​t​a​f​i​e​l​d​ ​k​e​y
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​m​e​t​a​f​i​e​l​d​.
+											 */
+											longDesc: string
+										}
+										value: {
+											/**
+											 * V​a​l​u​e
+											 */
+											displayName: string
+											/**
+											 * M​e​t​a​f​i​e​l​d​ ​v​a​l​u​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​v​a​l​u​e​ ​s​t​o​r​e​d​ ​i​n​ ​t​h​e​ ​m​e​t​a​f​i​e​l​d​,​ ​w​h​i​c​h​ ​c​a​n​ ​b​e​ ​a​ ​s​t​r​i​n​g​,​ ​n​u​m​b​e​r​,​ ​o​r​ ​J​S​O​N​.
+											 */
+											longDesc: string
+										}
+										type: {
+											/**
+											 * T​y​p​e
+											 */
+											displayName: string
+											/**
+											 * M​e​t​a​f​i​e​l​d​ ​d​a​t​a​ ​t​y​p​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​d​a​t​a​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​m​e​t​a​f​i​e​l​d​ ​v​a​l​u​e​,​ ​e​.​g​.​,​ ​"​s​t​r​i​n​g​"​,​ ​"​i​n​t​e​g​e​r​"​,​ ​"​j​s​o​n​"​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				'create-blog-entry': {
+					/**
+					 * C​r​e​a​t​e​ ​B​l​o​g​ ​E​n​t​r​y
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​b​l​o​g​ ​p​o​s​t​ ​i​n​ ​S​h​o​p​i​f​y
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​s​ ​a​ ​n​e​w​ ​b​l​o​g​ ​p​o​s​t​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​b​l​o​g​ ​i​n​ ​y​o​u​r​ ​S​h​o​p​i​f​y​ ​s​t​o​r​e​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​p​u​b​l​i​s​h​ ​c​o​n​t​e​n​t​ ​s​u​c​h​ ​a​s​ ​a​r​t​i​c​l​e​s​,​ ​n​e​w​s​,​ ​o​r​ ​u​p​d​a​t​e​s​ ​f​o​r​ ​c​u​s​t​o​m​e​r​s​.
+					 */
+					longDesc: string
+					options: {
+						blogId: {
+							/**
+							 * B​l​o​g​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​b​l​o​g
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​b​l​o​g​ ​w​h​e​r​e​ ​t​h​e​ ​n​e​w​ ​e​n​t​r​y​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.​ ​R​e​q​u​i​r​e​d​ ​t​o​ ​a​s​s​o​c​i​a​t​e​ ​t​h​e​ ​p​o​s​t​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​b​l​o​g​.
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * B​l​o​g​ ​p​o​s​t​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​h​e​a​d​l​i​n​e​ ​o​r​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​b​l​o​g​ ​p​o​s​t​,​ ​d​i​s​p​l​a​y​e​d​ ​p​r​o​m​i​n​e​n​t​l​y​ ​t​o​ ​r​e​a​d​e​r​s​.
+							 */
+							longDesc: string
+						}
+						content: {
+							/**
+							 * C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * B​l​o​g​ ​p​o​s​t​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​i​n​ ​b​o​d​y​ ​o​f​ ​t​h​e​ ​b​l​o​g​ ​p​o​s​t​,​ ​w​h​i​c​h​ ​c​a​n​ ​i​n​c​l​u​d​e​ ​t​e​x​t​,​ ​H​T​M​L​,​ ​o​r​ ​o​t​h​e​r​ ​f​o​r​m​a​t​t​e​d​ ​c​o​n​t​e​n​t​ ​t​o​ ​c​o​n​v​e​y​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​o​r​ ​s​t​o​r​y​.
+							 */
+							longDesc: string
+						}
+						author: {
+							/**
+							 * A​u​t​h​o​r
+							 */
+							displayName: string
+							/**
+							 * A​u​t​h​o​r​ ​o​f​ ​t​h​e​ ​b​l​o​g​ ​p​o​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​e​r​s​o​n​ ​o​r​ ​e​n​t​i​t​y​ ​c​r​e​d​i​t​e​d​ ​w​i​t​h​ ​w​r​i​t​i​n​g​ ​t​h​e​ ​b​l​o​g​ ​p​o​s​t​,​ ​d​i​s​p​l​a​y​e​d​ ​a​s​ ​t​h​e​ ​a​u​t​h​o​r​.
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * T​a​g​s​ ​f​o​r​ ​t​h​e​ ​b​l​o​g​ ​p​o​s​t
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​k​e​y​w​o​r​d​s​ ​o​r​ ​c​a​t​e​g​o​r​i​e​s​ ​t​o​ ​t​a​g​ ​t​h​e​ ​b​l​o​g​ ​p​o​s​t​,​ ​a​i​d​i​n​g​ ​i​n​ ​s​e​a​r​c​h​a​b​i​l​i​t​y​ ​a​n​d​ ​o​r​g​a​n​i​z​a​t​i​o​n​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									/**
+									 * T​a​g
+									 */
+									displayName: string
+									/**
+									 * S​i​n​g​l​e​ ​t​a​g​ ​v​a​l​u​e
+									 */
+									shortDesc: string
+									/**
+									 * A​ ​s​i​n​g​l​e​ ​s​t​r​i​n​g​ ​v​a​l​u​e​ ​u​s​e​d​ ​t​o​ ​t​a​g​ ​t​h​e​ ​b​l​o​g​ ​p​o​s​t​,​ ​e​.​g​.​,​ ​"​n​e​w​s​"​,​ ​"​t​u​t​o​r​i​a​l​"​,​ ​"​p​r​o​m​o​t​i​o​n​"​.
+									 */
+									longDesc: string
+								}
+							}
+						}
+						summary: {
+							/**
+							 * S​u​m​m​a​r​y
+							 */
+							displayName: string
+							/**
+							 * B​l​o​g​ ​p​o​s​t​ ​s​u​m​m​a​r​y
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​b​r​i​e​f​ ​o​v​e​r​v​i​e​w​ ​o​r​ ​e​x​c​e​r​p​t​ ​o​f​ ​t​h​e​ ​b​l​o​g​ ​p​o​s​t​,​ ​o​f​t​e​n​ ​u​s​e​d​ ​a​s​ ​a​ ​t​e​a​s​e​r​ ​o​r​ ​p​r​e​v​i​e​w​ ​i​n​ ​b​l​o​g​ ​l​i​s​t​i​n​g​s​.
+							 */
+							longDesc: string
+						}
+						published: {
+							/**
+							 * P​u​b​l​i​s​h​e​d
+							 */
+							displayName: string
+							/**
+							 * P​u​b​l​i​c​a​t​i​o​n​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * I​n​d​i​c​a​t​e​s​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​b​l​o​g​ ​p​o​s​t​ ​i​s​ ​p​u​b​l​i​s​h​e​d​ ​(​t​r​u​e​)​ ​o​r​ ​s​a​v​e​d​ ​a​s​ ​a​ ​d​r​a​f​t​ ​(​f​a​l​s​e​)​ ​u​p​o​n​ ​c​r​e​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						image: {
+							/**
+							 * I​m​a​g​e
+							 */
+							displayName: string
+							/**
+							 * F​e​a​t​u​r​e​d​ ​i​m​a​g​e​ ​f​o​r​ ​t​h​e​ ​p​o​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​i​m​a​r​y​ ​i​m​a​g​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​b​l​o​g​ ​p​o​s​t​,​ ​u​s​e​d​ ​f​o​r​ ​v​i​s​u​a​l​ ​a​p​p​e​a​l​ ​i​n​ ​p​r​e​v​i​e​w​s​ ​o​r​ ​h​e​a​d​e​r​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									altText: {
+										/**
+										 * A​l​t​ ​T​e​x​t
+										 */
+										displayName: string
+										/**
+										 * I​m​a​g​e​ ​a​l​t​ ​t​e​x​t
+										 */
+										shortDesc: string
+										/**
+										 * D​e​s​c​r​i​p​t​i​v​e​ ​t​e​x​t​ ​f​o​r​ ​t​h​e​ ​i​m​a​g​e​,​ ​u​s​e​d​ ​f​o​r​ ​a​c​c​e​s​s​i​b​i​l​i​t​y​ ​a​n​d​ ​S​E​O​ ​p​u​r​p​o​s​e​s​.
+										 */
+										longDesc: string
+									}
+									url: {
+										/**
+										 * U​R​L
+										 */
+										displayName: string
+										/**
+										 * I​m​a​g​e​ ​U​R​L
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​w​e​b​ ​a​d​d​r​e​s​s​ ​o​r​ ​s​o​u​r​c​e​ ​l​o​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​i​m​a​g​e​ ​f​i​l​e​ ​t​o​ ​b​e​ ​u​s​e​d​ ​i​n​ ​t​h​e​ ​b​l​o​g​ ​p​o​s​t​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				'add-tag-to-customer': {
+					/**
+					 * A​d​d​ ​T​a​g​ ​t​o​ ​C​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * A​d​d​s​ ​t​a​g​s​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​u​s​t​o​m​e​r
+					 */
+					shortDesc: string
+					/**
+					 * A​p​p​e​n​d​s​ ​o​r​ ​r​e​p​l​a​c​e​s​ ​t​a​g​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​c​u​s​t​o​m​e​r​ ​i​n​ ​S​h​o​p​i​f​y​,​ ​u​s​e​f​u​l​ ​f​o​r​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​,​ ​s​e​g​m​e​n​t​a​t​i​o​n​,​ ​o​r​ ​t​r​a​c​k​i​n​g​ ​p​u​r​p​o​s​e​s​.
+					 */
+					longDesc: string
+					options: {
+						customerId: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​t​o​ ​w​h​o​m​ ​t​a​g​s​ ​w​i​l​l​ ​b​e​ ​a​d​d​e​d​.​ ​R​e​q​u​i​r​e​d​ ​t​o​ ​t​a​r​g​e​t​ ​t​h​e​ ​c​o​r​r​e​c​t​ ​c​u​s​t​o​m​e​r​.
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * T​a​g​s​ ​t​o​ ​a​d​d
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​t​a​g​s​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​,​ ​s​u​c​h​ ​a​s​ ​"​V​I​P​"​,​ ​"​l​o​y​a​l​"​,​ ​o​r​ ​"​n​e​w​s​l​e​t​t​e​r​"​.​ ​C​a​n​ ​b​e​ ​a​p​p​e​n​d​e​d​ ​o​r​ ​r​e​p​l​a​c​e​ ​e​x​i​s​t​i​n​g​ ​t​a​g​s​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​ ​a​p​p​e​n​d​ ​o​p​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						append: {
+							/**
+							 * A​p​p​e​n​d
+							 */
+							displayName: string
+							/**
+							 * A​p​p​e​n​d​ ​o​r​ ​r​e​p​l​a​c​e​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​t​r​u​e​,​ ​a​d​d​s​ ​t​h​e​ ​n​e​w​ ​t​a​g​s​ ​t​o​ ​t​h​e​ ​e​x​i​s​t​i​n​g​ ​o​n​e​s​;​ ​i​f​ ​f​a​l​s​e​,​ ​r​e​p​l​a​c​e​s​ ​a​l​l​ ​e​x​i​s​t​i​n​g​ ​t​a​g​s​ ​w​i​t​h​ ​t​h​e​ ​n​e​w​ ​o​n​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'create-transaction': {
+					/**
+					 * C​r​e​a​t​e​ ​T​r​a​n​s​a​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​t​r​a​n​s​a​c​t​i​o​n​ ​f​o​r​ ​a​n​ ​o​r​d​e​r
+					 */
+					shortDesc: string
+					/**
+					 * R​e​c​o​r​d​s​ ​a​ ​f​i​n​a​n​c​i​a​l​ ​t​r​a​n​s​a​c​t​i​o​n​ ​(​e​.​g​.​,​ ​p​a​y​m​e​n​t​,​ ​r​e​f​u​n​d​)​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​o​r​d​e​r​ ​i​n​ ​S​h​o​p​i​f​y​,​ ​l​i​n​k​e​d​ ​t​o​ ​a​ ​p​a​y​m​e​n​t​ ​g​a​t​e​w​a​y​.
+					 */
+					longDesc: string
+					options: {
+						orderId: {
+							/**
+							 * O​r​d​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​o​r​d​e​r​ ​t​o​ ​w​h​i​c​h​ ​t​h​i​s​ ​t​r​a​n​s​a​c​t​i​o​n​ ​a​p​p​l​i​e​s​.​ ​R​e​q​u​i​r​e​d​ ​t​o​ ​a​s​s​o​c​i​a​t​e​ ​t​h​e​ ​t​r​a​n​s​a​c​t​i​o​n​ ​c​o​r​r​e​c​t​l​y​.
+							 */
+							longDesc: string
+						}
+						amount: {
+							/**
+							 * A​m​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * T​r​a​n​s​a​c​t​i​o​n​ ​a​m​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​e​r​i​c​a​l​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​t​r​a​n​s​a​c​t​i​o​n​,​ ​s​u​c​h​ ​a​s​ ​t​h​e​ ​a​m​o​u​n​t​ ​p​a​i​d​ ​o​r​ ​r​e​f​u​n​d​e​d​.
+							 */
+							longDesc: string
+						}
+						currency: {
+							/**
+							 * C​u​r​r​e​n​c​y
+							 */
+							displayName: string
+							/**
+							 * T​r​a​n​s​a​c​t​i​o​n​ ​c​u​r​r​e​n​c​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​S​O​ ​4​2​1​7​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​t​r​a​n​s​a​c​t​i​o​n​ ​a​m​o​u​n​t​,​ ​e​.​g​.​,​ ​"​U​S​D​"​,​ ​"​E​U​R​"​.
+							 */
+							longDesc: string
+						}
+						type: {
+							/**
+							 * T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​r​a​n​s​a​c​t​i​o​n​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​t​r​a​n​s​a​c​t​i​o​n​,​ ​s​u​c​h​ ​a​s​ ​"​a​u​t​h​o​r​i​z​a​t​i​o​n​"​,​ ​"​c​a​p​t​u​r​e​"​,​ ​"​s​a​l​e​"​,​ ​o​r​ ​"​r​e​f​u​n​d​"​.​ ​D​e​f​i​n​e​s​ ​t​h​e​ ​t​r​a​n​s​a​c​t​i​o​n​’​s​ ​p​u​r​p​o​s​e​.
+							 */
+							longDesc: string
+						}
+						parentTransactionId: {
+							/**
+							 * P​a​r​e​n​t​ ​T​r​a​n​s​a​c​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​p​a​r​e​n​t​ ​t​r​a​n​s​a​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​a​ ​p​r​e​v​i​o​u​s​ ​t​r​a​n​s​a​c​t​i​o​n​ ​t​h​i​s​ ​o​n​e​ ​r​e​l​a​t​e​s​ ​t​o​,​ ​e​.​g​.​,​ ​f​o​r​ ​r​e​f​u​n​d​s​ ​o​r​ ​c​a​p​t​u​r​e​s​ ​l​i​n​k​e​d​ ​t​o​ ​a​n​ ​a​u​t​h​o​r​i​z​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						gateway: {
+							/**
+							 * G​a​t​e​w​a​y
+							 */
+							displayName: string
+							/**
+							 * P​a​y​m​e​n​t​ ​g​a​t​e​w​a​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​a​y​m​e​n​t​ ​g​a​t​e​w​a​y​ ​u​s​e​d​ ​f​o​r​ ​t​h​e​ ​t​r​a​n​s​a​c​t​i​o​n​,​ ​e​.​g​.​,​ ​"​s​h​o​p​i​f​y​_​p​a​y​m​e​n​t​s​"​,​ ​"​p​a​y​p​a​l​"​,​ ​o​r​ ​a​ ​c​u​s​t​o​m​ ​g​a​t​e​w​a​y​ ​n​a​m​e​.
+							 */
+							longDesc: string
+						}
+						finalCapture: {
+							/**
+							 * F​i​n​a​l​ ​C​a​p​t​u​r​e
+							 */
+							displayName: string
+							/**
+							 * C​o​m​p​l​e​t​e​ ​c​a​p​t​u​r​e​ ​f​l​a​g
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​t​r​u​e​,​ ​i​n​d​i​c​a​t​e​s​ ​t​h​i​s​ ​i​s​ ​t​h​e​ ​f​i​n​a​l​ ​c​a​p​t​u​r​e​ ​o​f​ ​f​u​n​d​s​ ​f​o​r​ ​a​n​ ​a​u​t​h​o​r​i​z​a​t​i​o​n​;​ ​i​f​ ​f​a​l​s​e​,​ ​p​a​r​t​i​a​l​ ​c​a​p​t​u​r​e​s​ ​m​a​y​ ​f​o​l​l​o​w​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'create-company': {
+					/**
+					 * C​r​e​a​t​e​ ​C​o​m​p​a​n​y
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​c​o​m​p​a​n​y​ ​i​n​ ​S​h​o​p​i​f​y
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​s​ ​a​ ​n​e​w​ ​c​o​m​p​a​n​y​ ​e​n​t​i​t​y​ ​t​o​ ​S​h​o​p​i​f​y​,​ ​t​y​p​i​c​a​l​l​y​ ​f​o​r​ ​B​2​B​ ​p​u​r​p​o​s​e​s​,​ ​i​n​c​l​u​d​i​n​g​ ​c​o​n​t​a​c​t​ ​a​n​d​ ​l​o​c​a​t​i​o​n​ ​d​e​t​a​i​l​s​ ​f​o​r​ ​w​h​o​l​e​s​a​l​e​ ​o​r​ ​e​n​t​e​r​p​r​i​s​e​ ​c​u​s​t​o​m​e​r​s​.
+					 */
+					longDesc: string
+					options: {
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * C​o​m​p​a​n​y​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​o​f​f​i​c​i​a​l​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​,​ ​u​s​e​d​ ​f​o​r​ ​i​d​e​n​t​i​f​i​c​a​t​i​o​n​ ​a​n​d​ ​d​i​s​p​l​a​y​ ​p​u​r​p​o​s​e​s​.
+							 */
+							longDesc: string
+						}
+						externalId: {
+							/**
+							 * E​x​t​e​r​n​a​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​r​o​m​ ​a​n​ ​e​x​t​e​r​n​a​l​ ​s​y​s​t​e​m​,​ ​u​s​e​f​u​l​ ​f​o​r​ ​s​y​n​c​i​n​g​ ​o​r​ ​r​e​f​e​r​e​n​c​i​n​g​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​o​u​t​s​i​d​e​ ​S​h​o​p​i​f​y​.
+							 */
+							longDesc: string
+						}
+						note: {
+							/**
+							 * N​o​t​e
+							 */
+							displayName: string
+							/**
+							 * C​o​m​p​a​n​y​ ​n​o​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * I​n​t​e​r​n​a​l​ ​n​o​t​e​s​ ​a​b​o​u​t​ ​t​h​e​ ​c​o​m​p​a​n​y​,​ ​s​u​c​h​ ​a​s​ ​a​c​c​o​u​n​t​ ​d​e​t​a​i​l​s​ ​o​r​ ​s​p​e​c​i​a​l​ ​i​n​s​t​r​u​c​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+						customerSince: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​S​i​n​c​e
+							 */
+							displayName: string
+							/**
+							 * S​t​a​r​t​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​b​e​c​a​m​e​ ​a​ ​c​u​s​t​o​m​e​r​,​ ​f​o​r​m​a​t​t​e​d​ ​a​s​ ​a​ ​t​i​m​e​s​t​a​m​p​,​ ​u​s​e​f​u​l​ ​f​o​r​ ​t​r​a​c​k​i​n​g​ ​t​e​n​u​r​e​.
+							 */
+							longDesc: string
+						}
+						contactProperties: {
+							/**
+							 * C​o​n​t​a​c​t​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * P​r​i​m​a​r​y​ ​c​o​n​t​a​c​t​ ​d​e​t​a​i​l​s
+							 */
+							shortDesc: string
+							/**
+							 * D​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​p​r​i​m​a​r​y​ ​c​o​n​t​a​c​t​ ​p​e​r​s​o​n​ ​f​o​r​ ​t​h​e​ ​c​o​m​p​a​n​y​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									firstName: {
+										/**
+										 * F​i​r​s​t​ ​N​a​m​e
+										 */
+										displayName: string
+										/**
+										 * C​o​n​t​a​c​t​ ​f​i​r​s​t​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​’​s​ ​p​r​i​m​a​r​y​ ​c​o​n​t​a​c​t​.
+										 */
+										longDesc: string
+									}
+									lastName: {
+										/**
+										 * L​a​s​t​ ​N​a​m​e
+										 */
+										displayName: string
+										/**
+										 * C​o​n​t​a​c​t​ ​l​a​s​t​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​’​s​ ​p​r​i​m​a​r​y​ ​c​o​n​t​a​c​t​.
+										 */
+										longDesc: string
+									}
+									email: {
+										/**
+										 * E​m​a​i​l
+										 */
+										displayName: string
+										/**
+										 * C​o​n​t​a​c​t​ ​e​m​a​i​l
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​p​r​i​m​a​r​y​ ​c​o​n​t​a​c​t​,​ ​u​s​e​d​ ​f​o​r​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​.
+										 */
+										longDesc: string
+									}
+									phone: {
+										/**
+										 * P​h​o​n​e
+										 */
+										displayName: string
+										/**
+										 * C​o​n​t​a​c​t​ ​p​h​o​n​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​o​f​ ​t​h​e​ ​p​r​i​m​a​r​y​ ​c​o​n​t​a​c​t​.
+										 */
+										longDesc: string
+									}
+									title: {
+										/**
+										 * T​i​t​l​e
+										 */
+										displayName: string
+										/**
+										 * C​o​n​t​a​c​t​ ​j​o​b​ ​t​i​t​l​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​j​o​b​ ​t​i​t​l​e​ ​o​r​ ​r​o​l​e​ ​o​f​ ​t​h​e​ ​p​r​i​m​a​r​y​ ​c​o​n​t​a​c​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​c​o​m​p​a​n​y​.
+										 */
+										longDesc: string
+									}
+									locale: {
+										/**
+										 * L​o​c​a​l​e
+										 */
+										displayName: string
+										/**
+										 * C​o​n​t​a​c​t​ ​l​a​n​g​u​a​g​e​/​r​e​g​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​r​e​f​e​r​r​e​d​ ​l​a​n​g​u​a​g​e​ ​a​n​d​ ​r​e​g​i​o​n​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​,​ ​e​.​g​.​,​ ​"​e​n​-​U​S​"​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						locationProperties: {
+							/**
+							 * L​o​c​a​t​i​o​n​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * C​o​m​p​a​n​y​ ​l​o​c​a​t​i​o​n​ ​d​e​t​a​i​l​s
+							 */
+							shortDesc: string
+							/**
+							 * D​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​c​o​m​p​a​n​y​’​s​ ​p​h​y​s​i​c​a​l​ ​l​o​c​a​t​i​o​n​,​ ​i​n​c​l​u​d​i​n​g​ ​s​h​i​p​p​i​n​g​ ​a​n​d​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s​e​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									name: {
+										/**
+										 * L​o​c​a​t​i​o​n​ ​N​a​m​e
+										 */
+										displayName: string
+										/**
+										 * N​a​m​e​ ​o​f​ ​l​o​c​a​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​i​s​ ​c​o​m​p​a​n​y​ ​l​o​c​a​t​i​o​n​,​ ​e​.​g​.​,​ ​"​H​e​a​d​q​u​a​r​t​e​r​s​"​.
+										 */
+										longDesc: string
+									}
+									phone: {
+										/**
+										 * P​h​o​n​e
+										 */
+										displayName: string
+										/**
+										 * L​o​c​a​t​i​o​n​ ​p​h​o​n​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​c​o​m​p​a​n​y​ ​l​o​c​a​t​i​o​n​.
+										 */
+										longDesc: string
+									}
+									note: {
+										/**
+										 * N​o​t​e
+										 */
+										displayName: string
+										/**
+										 * L​o​c​a​t​i​o​n​ ​n​o​t​e​s
+										 */
+										shortDesc: string
+										/**
+										 * I​n​t​e​r​n​a​l​ ​n​o​t​e​s​ ​a​b​o​u​t​ ​t​h​i​s​ ​l​o​c​a​t​i​o​n​,​ ​s​u​c​h​ ​a​s​ ​d​e​l​i​v​e​r​y​ ​i​n​s​t​r​u​c​t​i​o​n​s​.
+										 */
+										longDesc: string
+									}
+									externalId: {
+										/**
+										 * E​x​t​e​r​n​a​l​ ​I​D
+										 */
+										displayName: string
+										/**
+										 * L​o​c​a​t​i​o​n​ ​e​x​t​e​r​n​a​l​ ​I​D
+										 */
+										shortDesc: string
+										/**
+										 * A​n​ ​e​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​i​s​ ​l​o​c​a​t​i​o​n​,​ ​u​s​e​f​u​l​ ​f​o​r​ ​i​n​t​e​g​r​a​t​i​o​n​ ​w​i​t​h​ ​o​t​h​e​r​ ​s​y​s​t​e​m​s​.
+										 */
+										longDesc: string
+									}
+									taxExempt: {
+										/**
+										 * T​a​x​ ​E​x​e​m​p​t
+										 */
+										displayName: string
+										/**
+										 * T​a​x​ ​e​x​e​m​p​t​i​o​n​ ​s​t​a​t​u​s
+										 */
+										shortDesc: string
+										/**
+										 * I​n​d​i​c​a​t​e​s​ ​i​f​ ​t​h​i​s​ ​l​o​c​a​t​i​o​n​ ​i​s​ ​e​x​e​m​p​t​ ​f​r​o​m​ ​t​a​x​e​s​.
+										 */
+										longDesc: string
+									}
+									taxRegistrationId: {
+										/**
+										 * T​a​x​ ​R​e​g​i​s​t​r​a​t​i​o​n​ ​I​D
+										 */
+										displayName: string
+										/**
+										 * T​a​x​ ​I​D
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​t​a​x​ ​r​e​g​i​s​t​r​a​t​i​o​n​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​i​s​ ​l​o​c​a​t​i​o​n​,​ ​e​.​g​.​,​ ​V​A​T​ ​o​r​ ​E​I​N​.
+										 */
+										longDesc: string
+									}
+									taxExemptions: {
+										/**
+										 * T​a​x​ ​E​x​e​m​p​t​i​o​n​s
+										 */
+										displayName: string
+										/**
+										 * S​p​e​c​i​f​i​c​ ​t​a​x​ ​e​x​e​m​p​t​i​o​n​s
+										 */
+										shortDesc: string
+										/**
+										 * A​ ​l​i​s​t​ ​o​f​ ​s​p​e​c​i​f​i​c​ ​t​a​x​ ​e​x​e​m​p​t​i​o​n​s​ ​a​p​p​l​i​e​d​ ​t​o​ ​t​h​i​s​ ​l​o​c​a​t​i​o​n​.
+										 */
+										longDesc: string
+										type: {
+											element_type: {
+												/**
+												 * T​a​x​ ​E​x​e​m​p​t​i​o​n​ ​T​y​p​e
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​e​x​e​m​p​t​i​o​n
+												 */
+												shortDesc: string
+												/**
+												 * D​e​f​i​n​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​t​a​x​ ​e​x​e​m​p​t​i​o​n​,​ ​e​.​g​.​,​ ​"​G​S​T​"​,​ ​"​V​A​T​"​.
+												 */
+												longDesc: string
+											}
+										}
+									}
+									locale: {
+										/**
+										 * L​o​c​a​l​e
+										 */
+										displayName: string
+										/**
+										 * L​o​c​a​t​i​o​n​ ​l​a​n​g​u​a​g​e​/​r​e​g​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​r​e​f​e​r​r​e​d​ ​l​a​n​g​u​a​g​e​ ​a​n​d​ ​r​e​g​i​o​n​ ​c​o​d​e​ ​f​o​r​ ​t​h​i​s​ ​l​o​c​a​t​i​o​n​,​ ​e​.​g​.​,​ ​"​e​n​-​C​A​"​.
+										 */
+										longDesc: string
+									}
+									shippingAddress: {
+										/**
+										 * S​h​i​p​p​i​n​g​ ​A​d​d​r​e​s​s
+										 */
+										displayName: string
+										/**
+										 * S​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​a​d​d​r​e​s​s​ ​w​h​e​r​e​ ​g​o​o​d​s​ ​a​r​e​ ​s​h​i​p​p​e​d​ ​f​o​r​ ​t​h​i​s​ ​c​o​m​p​a​n​y​ ​l​o​c​a​t​i​o​n​.
+										 */
+										longDesc: string
+										type: {
+											fields: {
+												address1: {
+													/**
+													 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​1
+													 */
+													displayName: string
+													/**
+													 * P​r​i​m​a​r​y​ ​s​h​i​p​p​i​n​g​ ​l​i​n​e
+													 */
+													shortDesc: string
+													/**
+													 * T​h​e​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​o​r​ ​P​O​ ​B​o​x​ ​f​o​r​ ​s​h​i​p​p​i​n​g​.
+													 */
+													longDesc: string
+												}
+												address2: {
+													/**
+													 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​2
+													 */
+													displayName: string
+													/**
+													 * S​e​c​o​n​d​a​r​y​ ​s​h​i​p​p​i​n​g​ ​l​i​n​e
+													 */
+													shortDesc: string
+													/**
+													 * A​d​d​i​t​i​o​n​a​l​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s​ ​d​e​t​a​i​l​s​,​ ​e​.​g​.​,​ ​s​u​i​t​e​ ​n​u​m​b​e​r​.
+													 */
+													longDesc: string
+												}
+												city: {
+													/**
+													 * C​i​t​y
+													 */
+													displayName: string
+													/**
+													 * S​h​i​p​p​i​n​g​ ​c​i​t​y
+													 */
+													shortDesc: string
+													/**
+													 * T​h​e​ ​c​i​t​y​ ​f​o​r​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s​.
+													 */
+													longDesc: string
+												}
+												zoneCode: {
+													/**
+													 * Z​o​n​e​ ​C​o​d​e
+													 */
+													displayName: string
+													/**
+													 * P​r​o​v​i​n​c​e​/​s​t​a​t​e​ ​c​o​d​e
+													 */
+													shortDesc: string
+													/**
+													 * T​h​e​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​p​r​o​v​i​n​c​e​ ​o​r​ ​s​t​a​t​e​,​ ​e​.​g​.​,​ ​"​C​A​"​ ​f​o​r​ ​C​a​l​i​f​o​r​n​i​a​.
+													 */
+													longDesc: string
+												}
+												countryCode: {
+													/**
+													 * C​o​u​n​t​r​y​ ​C​o​d​e
+													 */
+													displayName: string
+													/**
+													 * C​o​u​n​t​r​y​ ​c​o​d​e
+													 */
+													shortDesc: string
+													/**
+													 * T​h​e​ ​I​S​O​ ​3​1​6​6​-​1​ ​a​l​p​h​a​-​2​ ​c​o​u​n​t​r​y​ ​c​o​d​e​,​ ​e​.​g​.​,​ ​"​U​S​"​.
+													 */
+													longDesc: string
+												}
+												zip: {
+													/**
+													 * Z​I​P​/​P​o​s​t​a​l​ ​C​o​d​e
+													 */
+													displayName: string
+													/**
+													 * S​h​i​p​p​i​n​g​ ​p​o​s​t​a​l​ ​c​o​d​e
+													 */
+													shortDesc: string
+													/**
+													 * T​h​e​ ​Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s​.
+													 */
+													longDesc: string
+												}
+											}
+										}
+									}
+									billingSameAsShipping: {
+										/**
+										 * B​i​l​l​i​n​g​ ​S​a​m​e​ ​a​s​ ​S​h​i​p​p​i​n​g
+										 */
+										displayName: string
+										/**
+										 * U​s​e​ ​s​h​i​p​p​i​n​g​ ​f​o​r​ ​b​i​l​l​i​n​g
+										 */
+										shortDesc: string
+										/**
+										 * I​f​ ​t​r​u​e​,​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s​ ​i​s​ ​a​l​s​o​ ​u​s​e​d​ ​a​s​ ​t​h​e​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+									billingAddress: {
+										/**
+										 * B​i​l​l​i​n​g​ ​A​d​d​r​e​s​s
+										 */
+										displayName: string
+										/**
+										 * B​i​l​l​i​n​g​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​a​d​d​r​e​s​s​ ​u​s​e​d​ ​f​o​r​ ​b​i​l​l​i​n​g​ ​p​u​r​p​o​s​e​s​,​ ​i​f​ ​d​i​f​f​e​r​e​n​t​ ​f​r​o​m​ ​s​h​i​p​p​i​n​g​.
+										 */
+										longDesc: string
+										type: {
+											fields: {
+												address1: {
+													/**
+													 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​1
+													 */
+													displayName: string
+													/**
+													 * P​r​i​m​a​r​y​ ​b​i​l​l​i​n​g​ ​l​i​n​e
+													 */
+													shortDesc: string
+													/**
+													 * T​h​e​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​o​r​ ​P​O​ ​B​o​x​ ​f​o​r​ ​b​i​l​l​i​n​g​.
+													 */
+													longDesc: string
+												}
+												address2: {
+													/**
+													 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​2
+													 */
+													displayName: string
+													/**
+													 * S​e​c​o​n​d​a​r​y​ ​b​i​l​l​i​n​g​ ​l​i​n​e
+													 */
+													shortDesc: string
+													/**
+													 * A​d​d​i​t​i​o​n​a​l​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s​ ​d​e​t​a​i​l​s​,​ ​e​.​g​.​,​ ​a​p​a​r​t​m​e​n​t​ ​n​u​m​b​e​r​.
+													 */
+													longDesc: string
+												}
+												city: {
+													/**
+													 * C​i​t​y
+													 */
+													displayName: string
+													/**
+													 * B​i​l​l​i​n​g​ ​c​i​t​y
+													 */
+													shortDesc: string
+													/**
+													 * T​h​e​ ​c​i​t​y​ ​f​o​r​ ​t​h​e​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s​.
+													 */
+													longDesc: string
+												}
+												zoneCode: {
+													/**
+													 * Z​o​n​e​ ​C​o​d​e
+													 */
+													displayName: string
+													/**
+													 * P​r​o​v​i​n​c​e​/​s​t​a​t​e​ ​c​o​d​e
+													 */
+													shortDesc: string
+													/**
+													 * T​h​e​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​p​r​o​v​i​n​c​e​ ​o​r​ ​s​t​a​t​e​,​ ​e​.​g​.​,​ ​"​N​Y​"​.
+													 */
+													longDesc: string
+												}
+												countryCode: {
+													/**
+													 * C​o​u​n​t​r​y​ ​C​o​d​e
+													 */
+													displayName: string
+													/**
+													 * C​o​u​n​t​r​y​ ​c​o​d​e
+													 */
+													shortDesc: string
+													/**
+													 * T​h​e​ ​I​S​O​ ​3​1​6​6​-​1​ ​a​l​p​h​a​-​2​ ​c​o​u​n​t​r​y​ ​c​o​d​e​,​ ​e​.​g​.​,​ ​"​C​A​"​.
+													 */
+													longDesc: string
+												}
+												zip: {
+													/**
+													 * Z​I​P​/​P​o​s​t​a​l​ ​C​o​d​e
+													 */
+													displayName: string
+													/**
+													 * B​i​l​l​i​n​g​ ​p​o​s​t​a​l​ ​c​o​d​e
+													 */
+													shortDesc: string
+													/**
+													 * T​h​e​ ​Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s​.
+													 */
+													longDesc: string
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			triggers: {
+			}
+		}
 	}
 }
 
@@ -30129,6 +33891,3768 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 				}
+			}
+		}
+		Shopify: {
+			/**
+			 * Shopify
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * E-commerce platform for online stores and retail point of sale
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Shopify is a comprehensive commerce platform that allows businesses to start, grow, and manage an online store, sell in multiple places, and synchronize online and in-person sales.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				'add-line-item-to-order': {
+					/**
+					 * Add Line Item to Order
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add a new product line to an existing order
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Allows adding a new line item to an existing order, with options for quantity, pricing, and other product details
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						orderId: {
+							/**
+							 * Order ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Unique identifier of the order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The specific order to which the line item will be added
+							 */
+							longDesc: () => LocalizedString
+						}
+						type: {
+							/**
+							 * Line Item Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of line item being added
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specifies the nature of the line item (e.g., product, shipping, tax)
+							 */
+							longDesc: () => LocalizedString
+						}
+						quantity: {
+							/**
+							 * Quantity
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of items to add
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The quantity of the specific product being added to the order
+							 */
+							longDesc: () => LocalizedString
+						}
+						locationId: {
+							/**
+							 * Location ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Inventory location
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The specific warehouse or store location where the item is stocked
+							 */
+							longDesc: () => LocalizedString
+						}
+						reason: {
+							/**
+							 * Reason
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Reason for adding line item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Explanation for why the line item is being added to the order
+							 */
+							longDesc: () => LocalizedString
+						}
+						notifyCustomer: {
+							/**
+							 * Notify Customer
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Send notification about order change
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Determines whether the customer should be notified about the line item addition
+							 */
+							longDesc: () => LocalizedString
+						}
+						variantId: {
+							/**
+							 * Variant ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific product variant
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Unique identifier for the specific product variant being added
+							 */
+							longDesc: () => LocalizedString
+						}
+						allowDuplicates: {
+							/**
+							 * Allow Duplicates
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Permit duplicate line items
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether identical line items can be added multiple times to the order
+							 */
+							longDesc: () => LocalizedString
+						}
+						itemName: {
+							/**
+							 * Item Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name of the product
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The display name or title of the product being added
+							 */
+							longDesc: () => LocalizedString
+						}
+						price: {
+							/**
+							 * Price
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Price of the line item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unit price of the product being added to the order
+							 */
+							longDesc: () => LocalizedString
+						}
+						currency: {
+							/**
+							 * Currency
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Currency of the price
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The currency in which the price is specified
+							 */
+							longDesc: () => LocalizedString
+						}
+						isTaxable: {
+							/**
+							 * Is Taxable
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether item is subject to tax
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Indicates if the line item should have tax applied
+							 */
+							longDesc: () => LocalizedString
+						}
+						isPhysical: {
+							/**
+							 * Is Physical
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Physical vs digital product
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specifies whether the item is a physical product requiring shipping
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'create-gift-card': {
+					/**
+					 * Create Gift Card
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Generate a new gift card
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a gift card with customizable parameters like initial value, expiration, and recipient details
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						initialValue: {
+							/**
+							 * Initial Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Starting balance of gift card
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The initial monetary amount loaded onto the gift card
+							 */
+							longDesc: () => LocalizedString
+						}
+						customerId: {
+							/**
+							 * Customer ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of gift card recipient
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the customer receiving the gift card
+							 */
+							longDesc: () => LocalizedString
+						}
+						note: {
+							/**
+							 * Note
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional gift card information
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A personal message or additional details about the gift card
+							 */
+							longDesc: () => LocalizedString
+						}
+						expiresOn: {
+							/**
+							 * Expiration Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Date when gift card expires
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date after which the gift card will no longer be valid
+							 */
+							longDesc: () => LocalizedString
+						}
+						code: {
+							/**
+							 * Gift Card Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Unique gift card identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The specific code used to redeem the gift card
+							 */
+							longDesc: () => LocalizedString
+						}
+						templateSuffix: {
+							/**
+							 * Template Suffix
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Customization of gift card template
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional suffix to customize the gift card's appearance or template
+							 */
+							longDesc: () => LocalizedString
+						}
+						recipientAttributes: {
+							/**
+							 * Recipient Attributes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Details about gift card recipient
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Additional information about the person receiving the gift card
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									id: {
+										/**
+										 * Recipient ID
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Unique identifier for recipient
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * A unique identifier for the gift card recipient
+										 */
+										longDesc: () => LocalizedString
+									}
+									message: {
+										/**
+										 * Recipient Message
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Personal message to recipient
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * A personalized message to accompany the gift card
+										 */
+										longDesc: () => LocalizedString
+									}
+									preferredName: {
+										/**
+										 * Preferred Name
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Recipient's preferred name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The name the recipient prefers to be called
+										 */
+										longDesc: () => LocalizedString
+									}
+									sendNotificationAt: {
+										/**
+										 * Notification Timing
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * When to send gift card notification
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The specific time or date to send the gift card notification
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				'create-fulfillment': {
+					/**
+					 * Create Fulfillment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Process and ship an order
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a fulfillment for an order, handling shipping and tracking information
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						lineItemsByFulfillmentOrder: {
+							/**
+							 * Line Items by Fulfillment Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Items to be fulfilled
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Detailed information about the specific line items being fulfilled
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										fulfillmentOrderId: {
+											/**
+											 * Fulfillment Order ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Unique fulfillment order identifier
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The specific fulfillment order being processed
+											 */
+											longDesc: () => LocalizedString
+										}
+										fulfillmentOrderLineItems: {
+											/**
+											 * Fulfillment Order Line Items
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Items in the fulfillment order
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Specific line items within the fulfillment order
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													id: {
+														/**
+														 * Line Item ID
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Unique identifier for line item
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The specific identifier for an individual line item
+														 */
+														longDesc: () => LocalizedString
+													}
+													quantity: {
+														/**
+														 * Quantity
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Number of items to fulfill
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The quantity of the specific item being fulfilled
+														 */
+														longDesc: () => LocalizedString
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						notifyCustomer: {
+							/**
+							 * Notify Customer
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Send shipping notification
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Determines whether to send a notification to the customer about the fulfillment
+							 */
+							longDesc: () => LocalizedString
+						}
+						trackingInfo: {
+							/**
+							 * Tracking Information
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Shipping tracking details
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Information for tracking the shipment
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									number: {
+										/**
+										 * Tracking Number
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Shipment tracking number
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The unique identifier for tracking the shipment
+										 */
+										longDesc: () => LocalizedString
+									}
+									url: {
+										/**
+										 * Tracking URL
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Link to track shipment
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The web address where the shipment can be tracked
+										 */
+										longDesc: () => LocalizedString
+									}
+									company: {
+										/**
+										 * Shipping Company
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Name of shipping carrier
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The name of the company responsible for shipping
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						message: {
+							/**
+							 * Message
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional fulfillment notes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Any additional information or notes about the fulfillment
+							 */
+							longDesc: () => LocalizedString
+						}
+						originAddress: {
+							/**
+							 * Origin Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Shipping origin location
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The address from which the items are being shipped
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									address1: {
+										/**
+										 * Address Line 1
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Primary address line
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The first line of the shipping origin address
+										 */
+										longDesc: () => LocalizedString
+									}
+									address2: {
+										/**
+										 * Address Line 2
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Secondary address line
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Optional additional address information
+										 */
+										longDesc: () => LocalizedString
+									}
+									city: {
+										/**
+										 * City
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * City of origin
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The city from which the shipment originates
+										 */
+										longDesc: () => LocalizedString
+									}
+									countryCode: {
+										/**
+										 * Country Code
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Origin country code
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The two-letter country code for the shipping origin
+										 */
+										longDesc: () => LocalizedString
+									}
+									provinceCode: {
+										/**
+										 * Province Code
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * State or province code
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The code representing the state or province of origin
+										 */
+										longDesc: () => LocalizedString
+									}
+									zip: {
+										/**
+										 * Postal Code
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Origin postal code
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The postal code of the shipping origin
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				'create-draft-order': {
+					/**
+					 * Create Draft Order
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new draft order in Shopify
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Generates a draft order that can be used to create an order manually, send invoices, or process payments later. Draft orders are useful for custom sales, wholesale orders, or pre-orders.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customerId: {
+							/**
+							 * Customer ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the customer for the draft order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specifies the unique identifier of the customer to associate with this draft order. Required if not using default address.
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Customer email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address of the customer, used for notifications and order confirmation.
+							 */
+							longDesc: () => LocalizedString
+						}
+						phone: {
+							/**
+							 * Phone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Customer phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The phone number of the customer, useful for shipping updates or contact purposes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						note: {
+							/**
+							 * Note
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional notes for the draft order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A field for adding internal notes about the draft order, such as special instructions or context.
+							 */
+							longDesc: () => LocalizedString
+						}
+						taxExempt: {
+							/**
+							 * Tax Exempt
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Exempt order from taxes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Indicates whether the entire order is exempt from taxes. Set to true for tax-exempt customers.
+							 */
+							longDesc: () => LocalizedString
+						}
+						taxExemptions: {
+							/**
+							 * Tax Exemptions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific tax exemptions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of specific tax exemptions applied to the draft order, such as regional or product-specific exemptions.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									/**
+									 * Tax Exemption Type
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Type of tax exemption
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Defines the specific tax exemption applied, e.g., GST, VAT, or sales tax.
+									 */
+									longDesc: () => LocalizedString
+								}
+							}
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Tags for the draft order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of tags to categorize or filter the draft order, e.g., "wholesale", "pre-order".
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									/**
+									 * Tag
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Single tag value
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * A single string value used to tag the draft order for organization or search purposes.
+									 */
+									longDesc: () => LocalizedString
+								}
+							}
+						}
+						shippingAddress: {
+							/**
+							 * Shipping Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Customer shipping address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The full shipping address where the order will be delivered, including all relevant fields.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									address1: {
+										/**
+										 * Address Line 1
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Primary address line
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The street address or PO Box for shipping.
+										 */
+										longDesc: () => LocalizedString
+									}
+									address2: {
+										/**
+										 * Address Line 2
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Secondary address line
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Additional address information like apartment or suite number.
+										 */
+										longDesc: () => LocalizedString
+									}
+									city: {
+										/**
+										 * City
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Shipping city
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The city for the shipping address.
+										 */
+										longDesc: () => LocalizedString
+									}
+									province: {
+										/**
+										 * Province/State
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Shipping province or state
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The province, state, or region for the shipping address.
+										 */
+										longDesc: () => LocalizedString
+									}
+									country: {
+										/**
+										 * Country
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Shipping country
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The country for the shipping address.
+										 */
+										longDesc: () => LocalizedString
+									}
+									zip: {
+										/**
+										 * ZIP/Postal Code
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Shipping postal code
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The ZIP or postal code for the shipping address.
+										 */
+										longDesc: () => LocalizedString
+									}
+									firstName: {
+										/**
+										 * First Name
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Recipient first name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The first name of the shipping recipient.
+										 */
+										longDesc: () => LocalizedString
+									}
+									lastName: {
+										/**
+										 * Last Name
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Recipient last name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The last name of the shipping recipient.
+										 */
+										longDesc: () => LocalizedString
+									}
+									company: {
+										/**
+										 * Company
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Shipping company name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The company name associated with the shipping address, if applicable.
+										 */
+										longDesc: () => LocalizedString
+									}
+									phone: {
+										/**
+										 * Phone
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Shipping contact phone
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The phone number for the shipping recipient.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						billingAddress: {
+							/**
+							 * Billing Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Customer billing address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The address used for billing purposes, which may differ from the shipping address.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									address1: {
+										/**
+										 * Address Line 1
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Primary billing address line
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The street address or PO Box for billing.
+										 */
+										longDesc: () => LocalizedString
+									}
+									address2: {
+										/**
+										 * Address Line 2
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Secondary billing address line
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Additional billing address information like apartment or suite number.
+										 */
+										longDesc: () => LocalizedString
+									}
+									city: {
+										/**
+										 * City
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Billing city
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The city for the billing address.
+										 */
+										longDesc: () => LocalizedString
+									}
+									province: {
+										/**
+										 * Province/State
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Billing province or state
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The province, state, or region for the billing address.
+										 */
+										longDesc: () => LocalizedString
+									}
+									country: {
+										/**
+										 * Country
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Billing country
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The country for the billing address.
+										 */
+										longDesc: () => LocalizedString
+									}
+									zip: {
+										/**
+										 * ZIP/Postal Code
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Billing postal code
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The ZIP or postal code for the billing address.
+										 */
+										longDesc: () => LocalizedString
+									}
+									firstName: {
+										/**
+										 * First Name
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Billing first name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The first name of the billing contact.
+										 */
+										longDesc: () => LocalizedString
+									}
+									lastName: {
+										/**
+										 * Last Name
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Billing last name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The last name of the billing contact.
+										 */
+										longDesc: () => LocalizedString
+									}
+									company: {
+										/**
+										 * Company
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Billing company name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The company name associated with the billing address, if applicable.
+										 */
+										longDesc: () => LocalizedString
+									}
+									phone: {
+										/**
+										 * Phone
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Billing contact phone
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The phone number for the billing contact.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						useCustomerDefaultAddress: {
+							/**
+							 * Use Customer Default Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Use customer’s default address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If true, uses the customer’s default shipping and billing address instead of custom ones.
+							 */
+							longDesc: () => LocalizedString
+						}
+						lineItems: {
+							/**
+							 * Line Items
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Products in the draft order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of products or variants included in the draft order, with details like quantity and price.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										variantId: {
+											/**
+											 * Variant ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Product variant ID
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the product variant to include in the order.
+											 */
+											longDesc: () => LocalizedString
+										}
+										quantity: {
+											/**
+											 * Quantity
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Number of items
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The number of units of this variant to include in the draft order.
+											 */
+											longDesc: () => LocalizedString
+										}
+										title: {
+											/**
+											 * Title
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Item title
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The display name of the line item, typically the product or variant name.
+											 */
+											longDesc: () => LocalizedString
+										}
+										originalUnitPrice: {
+											/**
+											 * Original Unit Price
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Price per unit
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The original price per unit of the item before discounts.
+											 */
+											longDesc: () => LocalizedString
+										}
+										originalUnitPriceWithCurrency: {
+											/**
+											 * Original Unit Price with Currency
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Price with currency details
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The original unit price including currency specification.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													amount: {
+														/**
+														 * Amount
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Price amount
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The numerical value of the unit price.
+														 */
+														longDesc: () => LocalizedString
+													}
+													currencyCode: {
+														/**
+														 * Currency Code
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Currency code
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The ISO 4217 currency code for the price, e.g., USD, EUR.
+														 */
+														longDesc: () => LocalizedString
+													}
+												}
+											}
+										}
+										sku: {
+											/**
+											 * SKU
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Stock Keeping Unit
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The stock keeping unit identifier for the product variant.
+											 */
+											longDesc: () => LocalizedString
+										}
+										requiresShipping: {
+											/**
+											 * Requires Shipping
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Needs shipping
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Indicates if the item requires physical shipping.
+											 */
+											longDesc: () => LocalizedString
+										}
+										taxable: {
+											/**
+											 * Taxable
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Subject to tax
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Specifies whether the item is taxable.
+											 */
+											longDesc: () => LocalizedString
+										}
+										weight: {
+											/**
+											 * Weight
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Item weight
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The weight of the item, used for shipping calculations.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													value: {
+														/**
+														 * Weight Value
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Numerical weight
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The numerical value of the item’s weight.
+														 */
+														longDesc: () => LocalizedString
+													}
+													unit: {
+														/**
+														 * Weight Unit
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Unit of weight
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The unit of measurement for the weight, e.g., kg, lb.
+														 */
+														longDesc: () => LocalizedString
+													}
+												}
+											}
+										}
+										customAttributes: {
+											/**
+											 * Custom Attributes
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Additional item attributes
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Key-value pairs for adding custom metadata to the line item.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												element_type: {
+													fields: {
+														key: {
+															/**
+															 * Key
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Attribute key
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The identifier for the custom attribute.
+															 */
+															longDesc: () => LocalizedString
+														}
+														value: {
+															/**
+															 * Value
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Attribute value
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The value associated with the custom attribute key.
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+										}
+										appliedDiscount: {
+											/**
+											 * Applied Discount
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Discount on item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Details of any discount applied to this specific line item.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													title: {
+														/**
+														 * Discount Title
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Discount name
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The name or title of the discount.
+														 */
+														longDesc: () => LocalizedString
+													}
+													description: {
+														/**
+														 * Discount Description
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Discount details
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * A description of the discount applied.
+														 */
+														longDesc: () => LocalizedString
+													}
+													value: {
+														/**
+														 * Discount Value
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Discount amount or percentage
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The numerical value of the discount, either as a fixed amount or percentage.
+														 */
+														longDesc: () => LocalizedString
+													}
+													valueType: {
+														/**
+														 * Value Type
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Type of discount value
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Specifies if the discount is a fixed amount or percentage (e.g., "FIXED_AMOUNT", "PERCENTAGE").
+														 */
+														longDesc: () => LocalizedString
+													}
+													amountWithCurrency: {
+														/**
+														 * Amount with Currency
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Discount amount with currency
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The discount amount including currency details.
+														 */
+														longDesc: () => LocalizedString
+														type: {
+															fields: {
+																amount: {
+																	/**
+																	 * Amount
+																	 */
+																	displayName: () => LocalizedString
+																	/**
+																	 * Discount amount
+																	 */
+																	shortDesc: () => LocalizedString
+																	/**
+																	 * The numerical value of the discount.
+																	 */
+																	longDesc: () => LocalizedString
+																}
+																currencyCode: {
+																	/**
+																	 * Currency Code
+																	 */
+																	displayName: () => LocalizedString
+																	/**
+																	 * Discount currency
+																	 */
+																	shortDesc: () => LocalizedString
+																	/**
+																	 * The ISO 4217 currency code for the discount amount.
+																	 */
+																	longDesc: () => LocalizedString
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+										generatePriceOverride: {
+											/**
+											 * Generate Price Override
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Override item price
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * If true, allows setting a custom price for the item instead of the original price.
+											 */
+											longDesc: () => LocalizedString
+										}
+										priceOverride: {
+											/**
+											 * Price Override
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Custom item price
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The custom price to override the original unit price.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													amount: {
+														/**
+														 * Amount
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Override amount
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The numerical value of the custom price.
+														 */
+														longDesc: () => LocalizedString
+													}
+													currencyCode: {
+														/**
+														 * Currency Code
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Override currency
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The ISO 4217 currency code for the custom price.
+														 */
+														longDesc: () => LocalizedString
+													}
+												}
+											}
+										}
+										components: {
+											/**
+											 * Components
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Bundle components
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Details of components if the item is a bundle or composite product.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												element_type: {
+													fields: {
+														quantity: {
+															/**
+															 * Quantity
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Component quantity
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The number of units of this component in the bundle.
+															 */
+															longDesc: () => LocalizedString
+														}
+														variantId: {
+															/**
+															 * Variant ID
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Component variant ID
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The unique identifier of the variant included as a component.
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+										}
+										uuid: {
+											/**
+											 * UUID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Unique identifier
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * A unique identifier for the line item, often used for tracking or external systems.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+						appliedDiscount: {
+							/**
+							 * Applied Discount
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Order-wide discount
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Details of a discount applied to the entire draft order.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									title: {
+										/**
+										 * Discount Title
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Discount name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The name or title of the order-wide discount.
+										 */
+										longDesc: () => LocalizedString
+									}
+									description: {
+										/**
+										 * Discount Description
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Discount details
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * A description of the order-wide discount.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Discount Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Discount amount or percentage
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The numerical value of the discount, either as a fixed amount or percentage.
+										 */
+										longDesc: () => LocalizedString
+									}
+									valueType: {
+										/**
+										 * Value Type
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Type of discount value
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Specifies if the discount is a fixed amount or percentage (e.g., "FIXED_AMOUNT", "PERCENTAGE").
+										 */
+										longDesc: () => LocalizedString
+									}
+									amountWithCurrency: {
+										/**
+										 * Amount with Currency
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Discount amount with currency
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The discount amount including currency details.
+										 */
+										longDesc: () => LocalizedString
+										type: {
+											fields: {
+												amount: {
+													/**
+													 * Amount
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Discount amount
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * The numerical value of the discount.
+													 */
+													longDesc: () => LocalizedString
+												}
+												currencyCode: {
+													/**
+													 * Currency Code
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Discount currency
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * The ISO 4217 currency code for the discount amount.
+													 */
+													longDesc: () => LocalizedString
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						shippingLine: {
+							/**
+							 * Shipping Line
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Shipping details
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Details about the shipping method and cost for the draft order.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									price: {
+										/**
+										 * Price
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Shipping cost
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The cost of shipping as a numerical value.
+										 */
+										longDesc: () => LocalizedString
+									}
+									priceWithCurrency: {
+										/**
+										 * Price with Currency
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Shipping cost with currency
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The shipping cost including currency specification.
+										 */
+										longDesc: () => LocalizedString
+										type: {
+											fields: {
+												amount: {
+													/**
+													 * Amount
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Shipping amount
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * The numerical value of the shipping cost.
+													 */
+													longDesc: () => LocalizedString
+												}
+												currencyCode: {
+													/**
+													 * Currency Code
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Shipping currency
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * The ISO 4217 currency code for the shipping cost.
+													 */
+													longDesc: () => LocalizedString
+												}
+											}
+										}
+									}
+									title: {
+										/**
+										 * Title
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Shipping method name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The name of the shipping method, e.g., "Standard Shipping".
+										 */
+										longDesc: () => LocalizedString
+									}
+									shippingRateHandle: {
+										/**
+										 * Shipping Rate Handle
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Shipping rate identifier
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * A unique identifier for the shipping rate, often tied to a predefined rate in Shopify.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						customAttributes: {
+							/**
+							 * Custom Attributes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Order custom attributes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Key-value pairs for adding custom metadata to the draft order.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										key: {
+											/**
+											 * Key
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Attribute key
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The identifier for the custom attribute.
+											 */
+											longDesc: () => LocalizedString
+										}
+										value: {
+											/**
+											 * Value
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Attribute value
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The value associated with the custom attribute key.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+						allowDiscountCodesInCheckout: {
+							/**
+							 * Allow Discount Codes in Checkout
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enable discount codes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If true, allows customers to apply discount codes during checkout from this draft order.
+							 */
+							longDesc: () => LocalizedString
+						}
+						acceptAutomaticDiscounts: {
+							/**
+							 * Accept Automatic Discounts
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Apply automatic discounts
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If true, automatically applies any eligible store-wide discounts to the draft order.
+							 */
+							longDesc: () => LocalizedString
+						}
+						discountCodes: {
+							/**
+							 * Discount Codes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of discount codes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of discount codes to apply to the draft order.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									/**
+									 * Discount Code
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Single discount code
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * A specific discount code to apply to the order.
+									 */
+									longDesc: () => LocalizedString
+								}
+							}
+						}
+						metafields: {
+							/**
+							 * Metafields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom metadata
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Additional metadata fields for the draft order, useful for custom integrations.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										namespace: {
+											/**
+											 * Namespace
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Metafield namespace
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * A grouping identifier for the metafield.
+											 */
+											longDesc: () => LocalizedString
+										}
+										key: {
+											/**
+											 * Key
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Metafield key
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The specific identifier for the metafield.
+											 */
+											longDesc: () => LocalizedString
+										}
+										value: {
+											/**
+											 * Value
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Metafield value
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The value stored in the metafield.
+											 */
+											longDesc: () => LocalizedString
+										}
+										type: {
+											/**
+											 * Type
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Metafield data type
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The data type of the metafield value, e.g., string, integer, JSON.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+						localizedFields: {
+							/**
+							 * Localized Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Localized content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Fields that support localized content for different regions or languages.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										value: {
+											/**
+											 * Value
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Localized value
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The localized content value.
+											 */
+											longDesc: () => LocalizedString
+										}
+										key: {
+											/**
+											 * Key
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Localized field key
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The identifier for the localized field.
+											 */
+											longDesc: () => LocalizedString
+										}
+										locale: {
+											/**
+											 * Locale
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Language/region code
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The locale code for the localized content, e.g., "en-US", "fr-CA".
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+						presentmentCurrencyCode: {
+							/**
+							 * Presentment Currency Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Display currency
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ISO 4217 currency code for displaying prices to the customer, e.g., USD, CAD.
+							 */
+							longDesc: () => LocalizedString
+						}
+						poNumber: {
+							/**
+							 * PO Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Purchase order number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The purchase order number associated with the draft order, often used for B2B transactions.
+							 */
+							longDesc: () => LocalizedString
+						}
+						paymentTerms: {
+							/**
+							 * Payment Terms
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Payment conditions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Defines the payment terms for the draft order, such as due dates or schedules.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									paymentTermsTemplateId: {
+										/**
+										 * Payment Terms Template ID
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Template identifier
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The ID of a predefined payment terms template in Shopify.
+										 */
+										longDesc: () => LocalizedString
+									}
+									paymentSchedules: {
+										/**
+										 * Payment Schedules
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Payment due dates
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * A list of scheduled payments with due dates and amounts.
+										 */
+										longDesc: () => LocalizedString
+										type: {
+											element_type: {
+												fields: {
+													dueAt: {
+														/**
+														 * Due At
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Due date
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The date when the payment is due.
+														 */
+														longDesc: () => LocalizedString
+													}
+													amount: {
+														/**
+														 * Amount
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Payment amount
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The numerical value of the payment due.
+														 */
+														longDesc: () => LocalizedString
+													}
+													currencyCode: {
+														/**
+														 * Currency Code
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Payment currency
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The ISO 4217 currency code for the payment amount.
+														 */
+														longDesc: () => LocalizedString
+													}
+													issuedAt: {
+														/**
+														 * Issued At
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Issue date
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The date when the payment schedule was issued.
+														 */
+														longDesc: () => LocalizedString
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						purchasingEntity: {
+							/**
+							 * Purchasing Entity
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Buyer details
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Details about the entity making the purchase, such as a company or individual.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									customerId: {
+										/**
+										 * Customer ID
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Purchaser customer ID
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The ID of the customer making the purchase.
+										 */
+										longDesc: () => LocalizedString
+									}
+									companyId: {
+										/**
+										 * Company ID
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Purchaser company ID
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The ID of the company making the purchase.
+										 */
+										longDesc: () => LocalizedString
+									}
+									companyLocationId: {
+										/**
+										 * Company Location ID
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Company location ID
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The ID of the specific company location making the purchase.
+										 */
+										longDesc: () => LocalizedString
+									}
+									companyContactId: {
+										/**
+										 * Company Contact ID
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Contact ID
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The ID of the company contact responsible for the purchase.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						reserveInventoryUntil: {
+							/**
+							 * Reserve Inventory Until
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Inventory reservation deadline
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date and time until which the inventory is reserved for this draft order.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sourceName: {
+							/**
+							 * Source Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Order source
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The source of the draft order, e.g., "web", "manual", or an app name.
+							 */
+							longDesc: () => LocalizedString
+						}
+						visibleToCustomer: {
+							/**
+							 * Visible to Customer
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Customer visibility
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If true, the draft order is visible to the customer, e.g., in their account.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'create-customer': {
+					/**
+					 * Create Customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new customer in Shopify
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Adds a new customer to the Shopify store, allowing you to store their contact information, addresses, and marketing preferences for future orders and engagement.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Customer email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The primary email address of the customer, used for account creation, notifications, and marketing.
+							 */
+							longDesc: () => LocalizedString
+						}
+						phone: {
+							/**
+							 * Phone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Customer phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The customer’s phone number, useful for contact purposes and SMS marketing if consented.
+							 */
+							longDesc: () => LocalizedString
+						}
+						firstName: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Customer first name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The first name of the customer, used for personalization and address details.
+							 */
+							longDesc: () => LocalizedString
+						}
+						lastName: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Customer last name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The last name of the customer, completing their full name for identification and shipping.
+							 */
+							longDesc: () => LocalizedString
+						}
+						locale: {
+							/**
+							 * Locale
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Customer language/region
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The preferred language and region code for the customer, e.g., "en-US" or "fr-CA", affecting communication and formatting.
+							 */
+							longDesc: () => LocalizedString
+						}
+						note: {
+							/**
+							 * Note
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Notes about the customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Internal notes about the customer, such as preferences, special instructions, or account details.
+							 */
+							longDesc: () => LocalizedString
+						}
+						taxExempt: {
+							/**
+							 * Tax Exempt
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Exempt customer from taxes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Indicates whether the customer is exempt from taxes on all purchases. Set to true for tax-exempt entities.
+							 */
+							longDesc: () => LocalizedString
+						}
+						taxExemptions: {
+							/**
+							 * Tax Exemptions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific tax exemptions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of specific tax exemptions applied to the customer, such as regional or category-specific exemptions.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									/**
+									 * Tax Exemption Type
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Type of tax exemption
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Defines the specific tax exemption applied, e.g., GST, VAT, or sales tax.
+									 */
+									longDesc: () => LocalizedString
+								}
+							}
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Customer tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of tags to categorize or filter the customer, e.g., "VIP", "wholesale", "new".
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									/**
+									 * Tag
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Single tag value
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * A single string value used to tag the customer for organization or segmentation.
+									 */
+									longDesc: () => LocalizedString
+								}
+							}
+						}
+						addresses: {
+							/**
+							 * Addresses
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Customer addresses
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of addresses associated with the customer, such as shipping or billing addresses.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										address1: {
+											/**
+											 * Address Line 1
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Primary address line
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The street address or PO Box for the customer.
+											 */
+											longDesc: () => LocalizedString
+										}
+										address2: {
+											/**
+											 * Address Line 2
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Secondary address line
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Additional address information like apartment or suite number.
+											 */
+											longDesc: () => LocalizedString
+										}
+										city: {
+											/**
+											 * City
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Customer city
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The city associated with the customer’s address.
+											 */
+											longDesc: () => LocalizedString
+										}
+										province: {
+											/**
+											 * Province/State
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Customer province or state
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The province, state, or region for the customer’s address.
+											 */
+											longDesc: () => LocalizedString
+										}
+										country: {
+											/**
+											 * Country
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Customer country
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The country for the customer’s address.
+											 */
+											longDesc: () => LocalizedString
+										}
+										zip: {
+											/**
+											 * ZIP/Postal Code
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Customer postal code
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The ZIP or postal code for the customer’s address.
+											 */
+											longDesc: () => LocalizedString
+										}
+										firstName: {
+											/**
+											 * First Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Address first name
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The first name associated with this specific address.
+											 */
+											longDesc: () => LocalizedString
+										}
+										lastName: {
+											/**
+											 * Last Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Address last name
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The last name associated with this specific address.
+											 */
+											longDesc: () => LocalizedString
+										}
+										company: {
+											/**
+											 * Company
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Address company name
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The company name tied to this address, if applicable.
+											 */
+											longDesc: () => LocalizedString
+										}
+										phone: {
+											/**
+											 * Phone
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Address phone number
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The phone number linked to this specific address.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+						emailMarketingConsent: {
+							/**
+							 * Email Marketing Consent
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email marketing preferences
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Details about the customer’s consent to receive email marketing communications.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									marketingState: {
+										/**
+										 * Marketing State
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Consent status
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The current state of email marketing consent, e.g., "SUBSCRIBED", "UNSUBSCRIBED", or "PENDING".
+										 */
+										longDesc: () => LocalizedString
+									}
+									marketingOptInLevel: {
+										/**
+										 * Marketing Opt-In Level
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Opt-in level
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The level of consent provided, e.g., "SINGLE_OPT_IN" or "CONFIRMED_OPT_IN", based on how consent was obtained.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						smsMarketingConsent: {
+							/**
+							 * SMS Marketing Consent
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * SMS marketing preferences
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Details about the customer’s consent to receive SMS marketing messages.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									marketingState: {
+										/**
+										 * Marketing State
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Consent status
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The current state of SMS marketing consent, e.g., "SUBSCRIBED", "UNSUBSCRIBED", or "PENDING".
+										 */
+										longDesc: () => LocalizedString
+									}
+									marketingOptInLevel: {
+										/**
+										 * Marketing Opt-In Level
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Opt-in level
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The level of consent provided for SMS, e.g., "SINGLE_OPT_IN" or "CONFIRMED_OPT_IN".
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						metafields: {
+							/**
+							 * Metafields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom metadata
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Additional metadata fields for the customer, useful for custom integrations or data storage.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										namespace: {
+											/**
+											 * Namespace
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Metafield namespace
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * A grouping identifier for the metafield to organize related data.
+											 */
+											longDesc: () => LocalizedString
+										}
+										key: {
+											/**
+											 * Key
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Metafield key
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The specific identifier for the metafield.
+											 */
+											longDesc: () => LocalizedString
+										}
+										value: {
+											/**
+											 * Value
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Metafield value
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The value stored in the metafield, which can be a string, number, or JSON.
+											 */
+											longDesc: () => LocalizedString
+										}
+										type: {
+											/**
+											 * Type
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Metafield data type
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The data type of the metafield value, e.g., "string", "integer", "json".
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				'create-blog-entry': {
+					/**
+					 * Create Blog Entry
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new blog post in Shopify
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Adds a new blog post to a specified blog in your Shopify store, allowing you to publish content such as articles, news, or updates for customers.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						blogId: {
+							/**
+							 * Blog ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of the target blog
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the blog where the new entry will be created. Required to associate the post with a specific blog.
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Blog post title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The headline or title of the blog post, displayed prominently to readers.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content: {
+							/**
+							 * Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Blog post content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The main body of the blog post, which can include text, HTML, or other formatted content to convey the message or story.
+							 */
+							longDesc: () => LocalizedString
+						}
+						author: {
+							/**
+							 * Author
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Author of the blog post
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the person or entity credited with writing the blog post, displayed as the author.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Tags for the blog post
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of keywords or categories to tag the blog post, aiding in searchability and organization.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									/**
+									 * Tag
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Single tag value
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * A single string value used to tag the blog post, e.g., "news", "tutorial", "promotion".
+									 */
+									longDesc: () => LocalizedString
+								}
+							}
+						}
+						summary: {
+							/**
+							 * Summary
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Blog post summary
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A brief overview or excerpt of the blog post, often used as a teaser or preview in blog listings.
+							 */
+							longDesc: () => LocalizedString
+						}
+						published: {
+							/**
+							 * Published
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Publication status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Indicates whether the blog post is published (true) or saved as a draft (false) upon creation.
+							 */
+							longDesc: () => LocalizedString
+						}
+						image: {
+							/**
+							 * Image
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Featured image for the post
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The primary image associated with the blog post, used for visual appeal in previews or headers.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									altText: {
+										/**
+										 * Alt Text
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Image alt text
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Descriptive text for the image, used for accessibility and SEO purposes.
+										 */
+										longDesc: () => LocalizedString
+									}
+									url: {
+										/**
+										 * URL
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Image URL
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The web address or source location of the image file to be used in the blog post.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				'add-tag-to-customer': {
+					/**
+					 * Add Tag to Customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Adds tags to an existing customer
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Appends or replaces tags for a specified customer in Shopify, useful for categorization, segmentation, or tracking purposes.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customerId: {
+							/**
+							 * Customer ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of the customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the customer to whom tags will be added. Required to target the correct customer.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Tags to add
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of tags to apply to the customer, such as "VIP", "loyal", or "newsletter". Can be appended or replace existing tags based on the append option.
+							 */
+							longDesc: () => LocalizedString
+						}
+						append: {
+							/**
+							 * Append
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Append or replace tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If true, adds the new tags to the existing ones; if false, replaces all existing tags with the new ones.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'create-transaction': {
+					/**
+					 * Create Transaction
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a transaction for an order
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Records a financial transaction (e.g., payment, refund) for a specific order in Shopify, linked to a payment gateway.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						orderId: {
+							/**
+							 * Order ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of the order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the order to which this transaction applies. Required to associate the transaction correctly.
+							 */
+							longDesc: () => LocalizedString
+						}
+						amount: {
+							/**
+							 * Amount
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Transaction amount
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The numerical value of the transaction, such as the amount paid or refunded.
+							 */
+							longDesc: () => LocalizedString
+						}
+						currency: {
+							/**
+							 * Currency
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Transaction currency
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ISO 4217 currency code for the transaction amount, e.g., "USD", "EUR".
+							 */
+							longDesc: () => LocalizedString
+						}
+						type: {
+							/**
+							 * Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Transaction type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The type of transaction, such as "authorization", "capture", "sale", or "refund". Defines the transaction’s purpose.
+							 */
+							longDesc: () => LocalizedString
+						}
+						parentTransactionId: {
+							/**
+							 * Parent Transaction ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of parent transaction
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of a previous transaction this one relates to, e.g., for refunds or captures linked to an authorization.
+							 */
+							longDesc: () => LocalizedString
+						}
+						gateway: {
+							/**
+							 * Gateway
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Payment gateway
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The payment gateway used for the transaction, e.g., "shopify_payments", "paypal", or a custom gateway name.
+							 */
+							longDesc: () => LocalizedString
+						}
+						finalCapture: {
+							/**
+							 * Final Capture
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Complete capture flag
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If true, indicates this is the final capture of funds for an authorization; if false, partial captures may follow.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'create-company': {
+					/**
+					 * Create Company
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new company in Shopify
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Adds a new company entity to Shopify, typically for B2B purposes, including contact and location details for wholesale or enterprise customers.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Company name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The official name of the company, used for identification and display purposes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						externalId: {
+							/**
+							 * External ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * External identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A unique identifier from an external system, useful for syncing or referencing the company outside Shopify.
+							 */
+							longDesc: () => LocalizedString
+						}
+						note: {
+							/**
+							 * Note
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Company notes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Internal notes about the company, such as account details or special instructions.
+							 */
+							longDesc: () => LocalizedString
+						}
+						customerSince: {
+							/**
+							 * Customer Since
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Start date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date the company became a customer, formatted as a timestamp, useful for tracking tenure.
+							 */
+							longDesc: () => LocalizedString
+						}
+						contactProperties: {
+							/**
+							 * Contact Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Primary contact details
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Details about the primary contact person for the company.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									firstName: {
+										/**
+										 * First Name
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Contact first name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The first name of the company’s primary contact.
+										 */
+										longDesc: () => LocalizedString
+									}
+									lastName: {
+										/**
+										 * Last Name
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Contact last name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The last name of the company’s primary contact.
+										 */
+										longDesc: () => LocalizedString
+									}
+									email: {
+										/**
+										 * Email
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Contact email
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The email address of the primary contact, used for communication.
+										 */
+										longDesc: () => LocalizedString
+									}
+									phone: {
+										/**
+										 * Phone
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Contact phone
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The phone number of the primary contact.
+										 */
+										longDesc: () => LocalizedString
+									}
+									title: {
+										/**
+										 * Title
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Contact job title
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The job title or role of the primary contact within the company.
+										 */
+										longDesc: () => LocalizedString
+									}
+									locale: {
+										/**
+										 * Locale
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Contact language/region
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The preferred language and region code for the contact, e.g., "en-US".
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						locationProperties: {
+							/**
+							 * Location Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Company location details
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Details about the company’s physical location, including shipping and billing addresses.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									name: {
+										/**
+										 * Location Name
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Name of location
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * A descriptive name for this company location, e.g., "Headquarters".
+										 */
+										longDesc: () => LocalizedString
+									}
+									phone: {
+										/**
+										 * Phone
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Location phone
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The phone number associated with this company location.
+										 */
+										longDesc: () => LocalizedString
+									}
+									note: {
+										/**
+										 * Note
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Location notes
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Internal notes about this location, such as delivery instructions.
+										 */
+										longDesc: () => LocalizedString
+									}
+									externalId: {
+										/**
+										 * External ID
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Location external ID
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * An external identifier for this location, useful for integration with other systems.
+										 */
+										longDesc: () => LocalizedString
+									}
+									taxExempt: {
+										/**
+										 * Tax Exempt
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Tax exemption status
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Indicates if this location is exempt from taxes.
+										 */
+										longDesc: () => LocalizedString
+									}
+									taxRegistrationId: {
+										/**
+										 * Tax Registration ID
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Tax ID
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The tax registration number for this location, e.g., VAT or EIN.
+										 */
+										longDesc: () => LocalizedString
+									}
+									taxExemptions: {
+										/**
+										 * Tax Exemptions
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Specific tax exemptions
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * A list of specific tax exemptions applied to this location.
+										 */
+										longDesc: () => LocalizedString
+										type: {
+											element_type: {
+												/**
+												 * Tax Exemption Type
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of exemption
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Defines the specific tax exemption, e.g., "GST", "VAT".
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+									locale: {
+										/**
+										 * Locale
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Location language/region
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The preferred language and region code for this location, e.g., "en-CA".
+										 */
+										longDesc: () => LocalizedString
+									}
+									shippingAddress: {
+										/**
+										 * Shipping Address
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Shipping address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The address where goods are shipped for this company location.
+										 */
+										longDesc: () => LocalizedString
+										type: {
+											fields: {
+												address1: {
+													/**
+													 * Address Line 1
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Primary shipping line
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * The street address or PO Box for shipping.
+													 */
+													longDesc: () => LocalizedString
+												}
+												address2: {
+													/**
+													 * Address Line 2
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Secondary shipping line
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * Additional shipping address details, e.g., suite number.
+													 */
+													longDesc: () => LocalizedString
+												}
+												city: {
+													/**
+													 * City
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Shipping city
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * The city for the shipping address.
+													 */
+													longDesc: () => LocalizedString
+												}
+												zoneCode: {
+													/**
+													 * Zone Code
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Province/state code
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * The code for the province or state, e.g., "CA" for California.
+													 */
+													longDesc: () => LocalizedString
+												}
+												countryCode: {
+													/**
+													 * Country Code
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Country code
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * The ISO 3166-1 alpha-2 country code, e.g., "US".
+													 */
+													longDesc: () => LocalizedString
+												}
+												zip: {
+													/**
+													 * ZIP/Postal Code
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Shipping postal code
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * The ZIP or postal code for the shipping address.
+													 */
+													longDesc: () => LocalizedString
+												}
+											}
+										}
+									}
+									billingSameAsShipping: {
+										/**
+										 * Billing Same as Shipping
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Use shipping for billing
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * If true, the shipping address is also used as the billing address.
+										 */
+										longDesc: () => LocalizedString
+									}
+									billingAddress: {
+										/**
+										 * Billing Address
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Billing address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The address used for billing purposes, if different from shipping.
+										 */
+										longDesc: () => LocalizedString
+										type: {
+											fields: {
+												address1: {
+													/**
+													 * Address Line 1
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Primary billing line
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * The street address or PO Box for billing.
+													 */
+													longDesc: () => LocalizedString
+												}
+												address2: {
+													/**
+													 * Address Line 2
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Secondary billing line
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * Additional billing address details, e.g., apartment number.
+													 */
+													longDesc: () => LocalizedString
+												}
+												city: {
+													/**
+													 * City
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Billing city
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * The city for the billing address.
+													 */
+													longDesc: () => LocalizedString
+												}
+												zoneCode: {
+													/**
+													 * Zone Code
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Province/state code
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * The code for the province or state, e.g., "NY".
+													 */
+													longDesc: () => LocalizedString
+												}
+												countryCode: {
+													/**
+													 * Country Code
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Country code
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * The ISO 3166-1 alpha-2 country code, e.g., "CA".
+													 */
+													longDesc: () => LocalizedString
+												}
+												zip: {
+													/**
+													 * ZIP/Postal Code
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Billing postal code
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * The ZIP or postal code for the billing address.
+													 */
+													longDesc: () => LocalizedString
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			triggers: {
 			}
 		}
 	}
