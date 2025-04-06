@@ -194,7 +194,7 @@ class QoreV8CallStack : public QoreCallStack {
 public:
     DLLLOCAL QoreV8CallStack(v8::Isolate* isolate, const v8::TryCatch& tryCatch,
             v8::Local<v8::Context> context, v8::Local<v8::Message> msg,
-            QoreExternalProgramLocationWrapper& loc);
+            QoreExternalProgramLocationWrapper& loc, std::string& code_line);
 };
 
 class QoreV8ProgramData : public AbstractPrivateData, public QoreV8Program {

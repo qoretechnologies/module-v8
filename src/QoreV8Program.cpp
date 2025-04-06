@@ -83,8 +83,6 @@ QoreV8Program::QoreV8Program(const QoreString& source_code, const QoreString& so
 
     source = source_code;
     label = source_label;
-    escapeSingle(source);
-    escapeSingle(label);
 
     init(xsink);
 }
@@ -148,8 +146,6 @@ BinaryNode* QoreV8Program::createSnapshot(ExceptionSink* xsink, const QoreString
 
     QoreString source = source_code;
     QoreString label = source_label;
-    escapeSingle(source);
-    escapeSingle(label);
 
     //creator.SetDefaultContext(setup->context());
     v8::StartupData data = creator.CreateBlob(v8::SnapshotCreator::FunctionCodeHandling::kKeep);
@@ -179,6 +175,13 @@ int QoreV8Program::init(ExceptionSink* xsink) {
         xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "Could not initialize JavaScript program");
         return -1;
     }
+
+    SystemEnvironment::set("_qore_v8_source", source.c_str());
+    SystemEnvironment::set("_qore_v8_filename", label.c_str());
+    char* dn = q_dirname(label.c_str());
+    ON_BLOCK_EXIT(free, dn);
+    SystemEnvironment::set("_qore_v8_dirname", dn);
+
     {
         v8::Locker locker(isolate);
 
@@ -198,9 +201,12 @@ int QoreV8Program::init(ExceptionSink* xsink) {
         // `module.createRequire()` is being used to create one that is able to
         // load files from the disk, and uses the standard CommonJS file loader
         // instead of the internal-only `require` function.
+
         QoreStringMaker envstr("const publicRequire = require('module').createRequire(process.cwd() + '/');\n"
             "globalThis.require = publicRequire;\n"
-            "publicRequire('node:vm').runInThisContext('%s', {'filename': '%s'});", source.c_str(), label.c_str());
+            "publicRequire('node:vm').runInThisContext(process.env._qore_v8_source, {\n"
+            "  'filename': process.env._qore_v8_filename\n"
+            "});");
         v8::MaybeLocal<v8::Value> loadenv_ret = node::LoadEnvironment(env, envstr.c_str());
         valid = !loadenv_ret.IsEmpty();
         if (!valid) {
@@ -217,25 +223,6 @@ int QoreV8Program::init(ExceptionSink* xsink) {
     pset.insert(this);
 
     return 0;
-}
-
-void QoreV8Program::escapeSingle(QoreString& str) {
-    ExceptionSink xsink;
-    for (size_t i = 0; i < str.size(); ++i) {
-        switch (str[i]) {
-            case '\\':
-            case '\'':
-                str.insertch('\\', i, 1);
-                ++i;
-                break;
-
-            case '\n':
-                str.splice(str.getByteOffset(i, &xsink), 1, scont, &xsink);
-                assert(!xsink);
-                i += (scont.size() - 1);
-                break;
-        }
-    }
 }
 
 void QoreV8Program::shutdown() {
@@ -368,24 +355,17 @@ int QoreV8Program::checkException(ExceptionSink* xsink, const v8::TryCatch& tryC
 
         v8::Local<v8::Context> context(isolate->GetCurrentContext());
 
-        /*
-        if (!desc->empty()) {
-            desc->concat('\n');
-        }
-        // Print wavy underline (GetUnderline is deprecated)
-        int start = msg->GetStartColumn(context).FromJust();
-        for (int i = 0; i < start; ++i) {
-            desc->concat(' ');
-        }
-        int end = msg->GetEndColumn(context).FromJust();
-        for (int i = start; i < end; i++) {
-            desc->concat('^');
-        }
-        */
-
         // add Java call stack to Qore call stack
         QoreExternalProgramLocationWrapper loc;
-        QoreV8CallStack stack(isolate, tryCatch, context, msg, loc);
+        std::string code_line;
+        QoreV8CallStack stack(isolate, tryCatch, context, msg, loc, code_line);
+
+        if (!code_line.empty()) {
+            if (!desc->empty()) {
+                desc->concat('\n');
+            }
+            desc->concat(code_line);
+        }
 
         xsink->raiseExceptionArg(loc.get(), "JAVASCRIPT-EXCEPTION", QoreValue(), desc.release(), stack);
         return -1;

@@ -258,8 +258,8 @@ public class TypeScriptActionInterface {
     }
 
     #! Register one or more dynamic apps from a JavaScript file
-    static *list<string> registerDynamicAppsFromJavaScript(string path, *bool replace) {
-        *list<string> rv = TypeScriptActionInterfacePriv::processJavaScriptAppFile(path, replace);
+    static *list<string> registerDynamicAppsFromJavaScript(string base_dir, data fdata, *bool replace) {
+        *list<string> rv = TypeScriptActionInterfacePriv::processDynamicJavaScriptAppFile(base_dir, fdata, replace);
         map initApp($1), rv;
         return rv;
     }
@@ -270,6 +270,10 @@ public class TypeScriptActionInterface {
         if (!app) {
             return;
         }
+        on_success if (app.info.path.val()) {
+            remove_path(app.info.path);
+        }
+
         remove appcasemap{name};
         remove initmap{name};
         remove appmap{name};
@@ -278,19 +282,18 @@ public class TypeScriptActionInterface {
 
         root.deregisterChild(appname);
 
-        string sname = "tsrest-" + name;
-        if (remove samap{sname}) {
-            remove armap{appname};
-            remove aumap{appname};
-            remove app_post_auth_map{appname};
-            remove app_post_auth_code_map{appname};
-            remove app_conn_update_map{appname};
-            remove app_conn_opt_map{appname};
-            remove app_swagger_map{appname};
-            remove app_swagger_schema_map{appname};
-            remove atmap{appname};
-            ConnectionSchemeCache::deregisterScheme(sname);
-        }
+        string sname = "tsrest-" + appname;
+        remove samap{sname};
+        remove armap{appname};
+        remove aumap{appname};
+        remove app_post_auth_map{appname};
+        remove app_post_auth_code_map{appname};
+        remove app_conn_update_map{appname};
+        remove app_conn_opt_map{appname};
+        remove app_swagger_map{appname};
+        remove app_swagger_schema_map{appname};
+        remove atmap{appname};
+        ConnectionSchemeCache::deregisterScheme(sname);
     }
 
     #! Initialize all pending apps
@@ -414,8 +417,9 @@ public class TypeScriptActionInterface {
 
     static string registerAsyncCallArgs(reference<hash<AsyncCallInfo>> call, list<auto> args) {
         string key = (foldl $1 + "-" + $2, args) + sprintf("-%s", call.type);
-        if (acmap{key}) {
-            throw "ASYNC-CALL-ERROR", sprintf("Call %s is already registered", key);
+        if (acmap{key} && ((acmap{key} - "key") == (call - "key"))) {
+            # function is being reused
+            return key;
         }
         call.key = key;
         acmap{key} = call;
@@ -481,9 +485,7 @@ public class TypeScriptActionInterface {
         if (app.name =~ / /) {
             throw "APP-ERROR", sprintf("App name %y is invalid; it contains one or more spaces", app.name);
         }
-        if (DynamicAppContextHelper::replacing()) {
-            deregisterDynamicApp(app.name);
-        }
+        deregisterDynamicApp(app.name);
         string appname = app.name.lwr();
         if (exists appcasemap{app.name}) {
             if (IgnoreDuplicateAppHelper::get()) {
@@ -497,7 +499,7 @@ public class TypeScriptActionInterface {
             }
             throw "APP-ERROR", sprintf("App %y has already been registered", app.name);
         }
-        if (*hash<auto> info = DynamicAppContextHelper::get()) {
+        if (*hash<auto> info = DynamicAppContextHelper::get(app.name)) {
             app += info;
             DynamicAppContextHelper::addApp(app.name);
         }

@@ -35,7 +35,7 @@
 
 QoreV8CallStack::QoreV8CallStack(v8::Isolate* isolate, const v8::TryCatch& tryCatch,
         v8::Local<v8::Context> context, v8::Local<v8::Message> msg,
-        QoreExternalProgramLocationWrapper& loc) {
+        QoreExternalProgramLocationWrapper& loc, std::string& code_line) {
     assert(!msg.IsEmpty());
 
     v8::String::Utf8Value filename(isolate, msg->GetScriptOrigin().ResourceName());
@@ -55,7 +55,7 @@ QoreV8CallStack::QoreV8CallStack(v8::Isolate* isolate, const v8::TryCatch& tryCa
         ++str;
 
         ExceptionSink xsink;
-        QoreRegexInterface re(&xsink, " at ([^\\)]+) \\(([^:]+):([0-9]+):[0-9]+\\)");
+        QoreRegexInterface re(&xsink, " at ([^\\)]+) \\((.+):([0-9]+):[0-9]+\\)", QRE_GLOBAL);
 
         //printd(5, "QoreV8CallStack::QoreV8CallStack() stack trace to parse: '%s'\n", str);
 
@@ -63,22 +63,37 @@ QoreV8CallStack::QoreV8CallStack(v8::Isolate* isolate, const v8::TryCatch& tryCa
         std::string line;
         std::stringstream ss(exstr);
 
+        bool stop = false;
         while (getline(ss, line, '\n')) {
             //printd(5, "stack trace line: '%s'\n", line.c_str());
             QoreString targ(line);
             ReferenceHolder<QoreListNode> l(re.extractSubstrings(targ, &xsink), &xsink);
             if (l) {
-                QoreValue func = l->retrieveEntry(0);
-                assert(func.getType() == NT_STRING);
-                QoreValue file = l->retrieveEntry(1);
-                assert(file.getType() == NT_STRING);
-                QoreValue line = l->retrieveEntry(2);
-                assert(line.getType() == NT_STRING);
+                size_t offset = 0;
+                while ((offset + 2) < l->size()) {
+                    QoreValue func = l->retrieveEntry(offset);
+                    assert(func.getType() == NT_STRING);
+                    QoreValue file = l->retrieveEntry(offset + 1);
+                    assert(file.getType() == NT_STRING);
+                    QoreValue line = l->retrieveEntry(offset + 2);
+                    assert(line.getType() == NT_STRING);
+                    long ln = strtol(line.get<const QoreStringNode>()->c_str(), nullptr, 10);
 
-                long ln = strtol(line.get<const QoreStringNode>()->c_str(), nullptr, 10);
-
-                add(CT_USER, file.get<const QoreStringNode>()->c_str(), ln, ln,
-                    func.get<const QoreStringNode>()->c_str(), "JavaScript");
+                    add(CT_USER, file.get<const QoreStringNode>()->c_str(), ln, ln,
+                        func.get<const QoreStringNode>()->c_str(), "JavaScript");
+                    offset += 3;
+                }
+            } else {
+                if (!stop) {
+                    if (!code_line.empty()) {
+                        code_line += '\n';
+                    }
+                    //code_line += "> ";
+                    code_line += line;
+                    if (line.find('^') != std::string::npos) {
+                        stop = true;
+                    }
+                }
             }
         }
     }
