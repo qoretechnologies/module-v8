@@ -119,7 +119,8 @@ jobs:
             libbz2-dev \
             doxygen \
             libnode-dev \
-            libyaml-dev
+            libyaml-dev \
+            uuid-dev
 
       # Clone the Qore repository and build it
       - name: Clone and Build Qore
