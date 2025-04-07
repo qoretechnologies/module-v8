@@ -16094,82 +16094,62 @@ type RootTranslation = {
 					 */
 					longDesc: string
 					options: {
-						lineItemsByFulfillmentOrder: {
+						fulfillmentOrderId: {
 							/**
-							 * L​i​n​e​ ​I​t​e​m​s​ ​b​y​ ​F​u​l​f​i​l​l​m​e​n​t​ ​O​r​d​e​r
+							 * F​u​l​f​i​l​l​m​e​n​t​ ​O​r​d​e​r​ ​I​D
 							 */
 							displayName: string
 							/**
-							 * I​t​e​m​s​ ​t​o​ ​b​e​ ​f​u​l​f​i​l​l​e​d
+							 * U​n​i​q​u​e​ ​f​u​l​f​i​l​l​m​e​n​t​ ​o​r​d​e​r​ ​i​d​e​n​t​i​f​i​e​r
 							 */
 							shortDesc: string
 							/**
-							 * D​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​l​i​n​e​ ​i​t​e​m​s​ ​b​e​i​n​g​ ​f​u​l​f​i​l​l​e​d
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​f​u​l​f​i​l​l​m​e​n​t​ ​o​r​d​e​r​ ​b​e​i​n​g​ ​p​r​o​c​e​s​s​e​d
+							 */
+							longDesc: string
+						}
+						fulfillmentOrderLineItems: {
+							/**
+							 * F​u​l​f​i​l​l​m​e​n​t​ ​O​r​d​e​r​ ​L​i​n​e​ ​I​t​e​m​s
+							 */
+							displayName: string
+							/**
+							 * I​t​e​m​s​ ​i​n​ ​t​h​e​ ​f​u​l​f​i​l​l​m​e​n​t​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​l​i​n​e​ ​i​t​e​m​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​f​u​l​f​i​l​l​m​e​n​t​ ​o​r​d​e​r
 							 */
 							longDesc: string
 							type: {
-								element_type: {
-									fields: {
-										fulfillmentOrderId: {
-											/**
-											 * F​u​l​f​i​l​l​m​e​n​t​ ​O​r​d​e​r​ ​I​D
-											 */
-											displayName: string
-											/**
-											 * U​n​i​q​u​e​ ​f​u​l​f​i​l​l​m​e​n​t​ ​o​r​d​e​r​ ​i​d​e​n​t​i​f​i​e​r
-											 */
-											shortDesc: string
-											/**
-											 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​f​u​l​f​i​l​l​m​e​n​t​ ​o​r​d​e​r​ ​b​e​i​n​g​ ​p​r​o​c​e​s​s​e​d
-											 */
-											longDesc: string
-										}
-										fulfillmentOrderLineItems: {
-											/**
-											 * F​u​l​f​i​l​l​m​e​n​t​ ​O​r​d​e​r​ ​L​i​n​e​ ​I​t​e​m​s
-											 */
-											displayName: string
-											/**
-											 * I​t​e​m​s​ ​i​n​ ​t​h​e​ ​f​u​l​f​i​l​l​m​e​n​t​ ​o​r​d​e​r
-											 */
-											shortDesc: string
-											/**
-											 * S​p​e​c​i​f​i​c​ ​l​i​n​e​ ​i​t​e​m​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​f​u​l​f​i​l​l​m​e​n​t​ ​o​r​d​e​r
-											 */
-											longDesc: string
-											type: {
-												fields: {
-													id: {
-														/**
-														 * L​i​n​e​ ​I​t​e​m​ ​I​D
-														 */
-														displayName: string
-														/**
-														 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​l​i​n​e​ ​i​t​e​m
-														 */
-														shortDesc: string
-														/**
-														 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​a​n​ ​i​n​d​i​v​i​d​u​a​l​ ​l​i​n​e​ ​i​t​e​m
-														 */
-														longDesc: string
-													}
-													quantity: {
-														/**
-														 * Q​u​a​n​t​i​t​y
-														 */
-														displayName: string
-														/**
-														 * N​u​m​b​e​r​ ​o​f​ ​i​t​e​m​s​ ​t​o​ ​f​u​l​f​i​l​l
-														 */
-														shortDesc: string
-														/**
-														 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​i​t​e​m​ ​b​e​i​n​g​ ​f​u​l​f​i​l​l​e​d
-														 */
-														longDesc: string
-													}
-												}
-											}
-										}
+								fields: {
+									id: {
+										/**
+										 * L​i​n​e​ ​I​t​e​m​ ​I​D
+										 */
+										displayName: string
+										/**
+										 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​l​i​n​e​ ​i​t​e​m
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​a​n​ ​i​n​d​i​v​i​d​u​a​l​ ​l​i​n​e​ ​i​t​e​m
+										 */
+										longDesc: string
+									}
+									quantity: {
+										/**
+										 * Q​u​a​n​t​i​t​y
+										 */
+										displayName: string
+										/**
+										 * N​u​m​b​e​r​ ​o​f​ ​i​t​e​m​s​ ​t​o​ ​f​u​l​f​i​l​l
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​i​t​e​m​ ​b​e​i​n​g​ ​f​u​l​f​i​l​l​e​d
+										 */
+										longDesc: string
 									}
 								}
 							}
@@ -35687,82 +35667,62 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 					options: {
-						lineItemsByFulfillmentOrder: {
+						fulfillmentOrderId: {
 							/**
-							 * Line Items by Fulfillment Order
+							 * Fulfillment Order ID
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * Items to be fulfilled
+							 * Unique fulfillment order identifier
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * Detailed information about the specific line items being fulfilled
+							 * The specific fulfillment order being processed
+							 */
+							longDesc: () => LocalizedString
+						}
+						fulfillmentOrderLineItems: {
+							/**
+							 * Fulfillment Order Line Items
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Items in the fulfillment order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specific line items within the fulfillment order
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								element_type: {
-									fields: {
-										fulfillmentOrderId: {
-											/**
-											 * Fulfillment Order ID
-											 */
-											displayName: () => LocalizedString
-											/**
-											 * Unique fulfillment order identifier
-											 */
-											shortDesc: () => LocalizedString
-											/**
-											 * The specific fulfillment order being processed
-											 */
-											longDesc: () => LocalizedString
-										}
-										fulfillmentOrderLineItems: {
-											/**
-											 * Fulfillment Order Line Items
-											 */
-											displayName: () => LocalizedString
-											/**
-											 * Items in the fulfillment order
-											 */
-											shortDesc: () => LocalizedString
-											/**
-											 * Specific line items within the fulfillment order
-											 */
-											longDesc: () => LocalizedString
-											type: {
-												fields: {
-													id: {
-														/**
-														 * Line Item ID
-														 */
-														displayName: () => LocalizedString
-														/**
-														 * Unique identifier for line item
-														 */
-														shortDesc: () => LocalizedString
-														/**
-														 * The specific identifier for an individual line item
-														 */
-														longDesc: () => LocalizedString
-													}
-													quantity: {
-														/**
-														 * Quantity
-														 */
-														displayName: () => LocalizedString
-														/**
-														 * Number of items to fulfill
-														 */
-														shortDesc: () => LocalizedString
-														/**
-														 * The quantity of the specific item being fulfilled
-														 */
-														longDesc: () => LocalizedString
-													}
-												}
-											}
-										}
+								fields: {
+									id: {
+										/**
+										 * Line Item ID
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Unique identifier for line item
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The specific identifier for an individual line item
+										 */
+										longDesc: () => LocalizedString
+									}
+									quantity: {
+										/**
+										 * Quantity
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Number of items to fulfill
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The quantity of the specific item being fulfilled
+										 */
+										longDesc: () => LocalizedString
 									}
 								}
 							}

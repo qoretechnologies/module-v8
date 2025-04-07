@@ -4543,37 +4543,26 @@ const en = {
           shortDesc: 'Process and ship an order',
           longDesc: 'Create a fulfillment for an order, handling shipping and tracking information',
           options: {
-            lineItemsByFulfillmentOrder: {
-              displayName: 'Line Items by Fulfillment Order',
-              shortDesc: 'Items to be fulfilled',
-              longDesc: 'Detailed information about the specific line items being fulfilled',
+            fulfillmentOrderId: {
+              displayName: 'Fulfillment Order ID',
+              shortDesc: 'Unique fulfillment order identifier',
+              longDesc: 'The specific fulfillment order being processed',
+            },
+            fulfillmentOrderLineItems: {
+              displayName: 'Fulfillment Order Line Items',
+              shortDesc: 'Items in the fulfillment order',
+              longDesc: 'Specific line items within the fulfillment order',
               type: {
-                element_type: {
-                  fields: {
-                    fulfillmentOrderId: {
-                      displayName: 'Fulfillment Order ID',
-                      shortDesc: 'Unique fulfillment order identifier',
-                      longDesc: 'The specific fulfillment order being processed',
-                    },
-                    fulfillmentOrderLineItems: {
-                      displayName: 'Fulfillment Order Line Items',
-                      shortDesc: 'Items in the fulfillment order',
-                      longDesc: 'Specific line items within the fulfillment order',
-                      type: {
-                        fields: {
-                          id: {
-                            displayName: 'Line Item ID',
-                            shortDesc: 'Unique identifier for line item',
-                            longDesc: 'The specific identifier for an individual line item',
-                          },
-                          quantity: {
-                            displayName: 'Quantity',
-                            shortDesc: 'Number of items to fulfill',
-                            longDesc: 'The quantity of the specific item being fulfilled',
-                          },
-                        },
-                      },
-                    },
+                fields: {
+                  id: {
+                    displayName: 'Line Item ID',
+                    shortDesc: 'Unique identifier for line item',
+                    longDesc: 'The specific identifier for an individual line item',
+                  },
+                  quantity: {
+                    displayName: 'Quantity',
+                    shortDesc: 'Number of items to fulfill',
+                    longDesc: 'The quantity of the specific item being fulfilled',
                   },
                 },
               },
