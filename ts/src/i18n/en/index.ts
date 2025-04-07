@@ -4153,6 +4153,250 @@ const en = {
       longDesc:
         'Shopify is a comprehensive commerce platform that allows businesses to start, grow, and manage an online store, sell in multiple places, and synchronize online and in-person sales.',
       actions: {
+        'find-product': {
+          displayName: 'Find Products',
+          shortDesc: 'Search for products in your store',
+          longDesc:
+            'Search and filter products in your Shopify store based on various criteria including title, vendor, product type, and more.',
+          options: {
+            titleQuery: {
+              displayName: 'Title',
+              shortDesc: 'Search by product title',
+              longDesc:
+                'Filter products by matching text in their titles. Supports partial matches.',
+            },
+            vendorQuery: {
+              displayName: 'Vendor',
+              shortDesc: 'Filter by product vendor',
+              longDesc: 'Find products from specific vendors or suppliers in your store.',
+            },
+            productTypeQuery: {
+              displayName: 'Product Type',
+              shortDesc: 'Filter by product type',
+              longDesc: 'Search for products based on their assigned product type category.',
+            },
+            tagQuery: {
+              displayName: 'Tags',
+              shortDesc: 'Search by product tags',
+              longDesc: 'Find products that have been tagged with specific keywords or labels.',
+            },
+            skuQuery: {
+              displayName: 'SKU',
+              shortDesc: 'Search by product SKU',
+              longDesc: 'Look up products using their Stock Keeping Unit (SKU) identifier.',
+            },
+            barcodeQuery: {
+              displayName: 'Barcode',
+              shortDesc: 'Search by barcode',
+              longDesc: 'Find products using their UPC, ISBN, or other barcode identifiers.',
+            },
+            productIdQuery: {
+              displayName: 'Product ID',
+              shortDesc: 'Search by product ID',
+              longDesc: 'Look up a specific product using its unique Shopify product ID.',
+            },
+            collectionIdQuery: {
+              displayName: 'Collection',
+              shortDesc: 'Filter by collection ID',
+              longDesc: 'Find products that belong to a specific collection in your store.',
+            },
+            sortKey: {
+              displayName: 'Sort By',
+              shortDesc: 'Sort the results',
+              longDesc: 'Choose how to order the results (e.g., by title, price, created date).',
+            },
+            reverse: {
+              displayName: 'Reverse Order',
+              shortDesc: 'Reverse the sort order',
+              longDesc: 'Toggle between ascending and descending sort order for the results.',
+            },
+            rawQuery: {
+              displayName: 'Advanced Query',
+              shortDesc: 'Use custom search syntax',
+              longDesc:
+                'Enter a custom search query for advanced filtering using Shopify search syntax.',
+            },
+            limit: {
+              displayName: 'Results Limit',
+              shortDesc: 'Maximum number of results',
+              longDesc: 'Specify the maximum number of products to return in the search results.',
+            },
+            cursor: {
+              displayName: 'Pagination Cursor',
+              shortDesc: 'Navigate through pages of results',
+              longDesc: 'Use a cursor to paginate through large sets of search results.',
+            },
+          },
+        },
+        'find-order': {
+          displayName: 'Find Orders',
+          shortDesc: 'Search for customer orders',
+          longDesc:
+            'Search and filter orders in your Shopify store based on various criteria including customer name, email, order number, and more.',
+          options: {
+            nameQuery: {
+              displayName: 'Customer Name',
+              shortDesc: 'Search by customer name',
+              longDesc: 'Find orders by matching customer first or last name.',
+            },
+            confirmationQuery: {
+              displayName: 'Order Number',
+              shortDesc: 'Search by order number',
+              longDesc: 'Look up orders using their confirmation or order number.',
+            },
+            emailQuery: {
+              displayName: 'Email',
+              shortDesc: 'Search by customer email',
+              longDesc: 'Find orders associated with a specific customer email address.',
+            },
+            customerIdQuery: {
+              displayName: 'Customer ID',
+              shortDesc: 'Filter by customer ID',
+              longDesc:
+                'Find all orders placed by a specific customer using their Shopify customer ID.',
+            },
+            locationIdQuery: {
+              displayName: 'Location',
+              shortDesc: 'Filter by store location',
+              longDesc:
+                'Find orders associated with a specific store location or fulfillment center.',
+            },
+            skuQuery: {
+              displayName: 'Product SKU',
+              shortDesc: 'Search by product SKU',
+              longDesc: 'Find orders containing products with a specific SKU.',
+            },
+            orderIdQuery: {
+              displayName: 'Order ID',
+              shortDesc: 'Search by order ID',
+              longDesc: 'Look up a specific order using its unique Shopify order ID.',
+            },
+            sortKey: {
+              displayName: 'Sort By',
+              shortDesc: 'Sort the results',
+              longDesc:
+                'Choose how to order the results (e.g., by date, order number, total value).',
+            },
+            reverse: {
+              displayName: 'Reverse Order',
+              shortDesc: 'Reverse the sort order',
+              longDesc: 'Toggle between ascending and descending sort order for the results.',
+            },
+            rawQuery: {
+              displayName: 'Advanced Query',
+              shortDesc: 'Use custom search syntax',
+              longDesc:
+                'Enter a custom search query for advanced filtering using Shopify search syntax.',
+            },
+            limit: {
+              displayName: 'Results Limit',
+              shortDesc: 'Maximum number of results',
+              longDesc: 'Specify the maximum number of orders to return in the search results.',
+            },
+            cursor: {
+              displayName: 'Pagination Cursor',
+              shortDesc: 'Navigate through pages of results',
+              longDesc: 'Use a cursor to paginate through large sets of search results.',
+            },
+          },
+        },
+        'find-customer': {
+          displayName: 'Find Customers',
+          shortDesc: 'Search for customers',
+          longDesc:
+            'Search and filter customers in your Shopify store based on names, emails, or other attributes.',
+          options: {
+            query: {
+              displayName: 'Search Query',
+              shortDesc: 'Search by name or email',
+              longDesc:
+                'Search for customers by their name, email, or other identifying information.',
+            },
+            limit: {
+              displayName: 'Results Limit',
+              shortDesc: 'Maximum number of results',
+              longDesc: 'Specify the maximum number of customers to return in the search results.',
+            },
+            cursor: {
+              displayName: 'Pagination Cursor',
+              shortDesc: 'Navigate through pages of results',
+              longDesc: 'Use a cursor to paginate through large sets of search results.',
+            },
+            sortKey: {
+              displayName: 'Sort By',
+              shortDesc: 'Sort the results',
+              longDesc:
+                'Choose how to order the results (e.g., by name, date created, total spent).',
+            },
+            reverse: {
+              displayName: 'Reverse Order',
+              shortDesc: 'Reverse the sort order',
+              longDesc: 'Toggle between ascending and descending sort order for the results.',
+            },
+          },
+        },
+        'find-variant': {
+          displayName: 'Find Product Variants',
+          shortDesc: 'Search for specific product variants',
+          longDesc:
+            'Search and filter product variants in your Shopify store based on criteria like SKU, barcode, price, or inventory status.',
+          options: {
+            productId: {
+              displayName: 'Product ID',
+              shortDesc: 'Filter by parent product',
+              longDesc:
+                'Find variants that belong to a specific parent product using its Shopify product ID.',
+            },
+            titleQuery: {
+              displayName: 'Variant Title',
+              shortDesc: 'Search by variant title',
+              longDesc: 'Filter variants by matching text in their titles or option values.',
+            },
+            skuQuery: {
+              displayName: 'SKU',
+              shortDesc: 'Search by variant SKU',
+              longDesc: 'Look up variants using their Stock Keeping Unit (SKU) identifier.',
+            },
+            barcodeQuery: {
+              displayName: 'Barcode',
+              shortDesc: 'Search by barcode',
+              longDesc: 'Find variants using their UPC, ISBN, or other barcode identifiers.',
+            },
+            variantIdQuery: {
+              displayName: 'Variant ID',
+              shortDesc: 'Search by variant ID',
+              longDesc: 'Look up a specific variant using its unique Shopify variant ID.',
+            },
+            inventoryQuery: {
+              displayName: 'Inventory Status',
+              shortDesc: 'Filter by inventory level',
+              longDesc:
+                'Find variants based on their inventory status (e.g., in stock, out of stock, low stock).',
+            },
+            priceQuery: {
+              displayName: 'Price',
+              shortDesc: 'Filter by price',
+              longDesc:
+                'Search for variants within a specific price range or at a particular price point.',
+            },
+            rawQuery: {
+              displayName: 'Advanced Query',
+              shortDesc: 'Use custom search syntax',
+              longDesc:
+                'Enter a custom search query for advanced filtering using Shopify search syntax.',
+            },
+            limit: {
+              displayName: 'Results Limit',
+              shortDesc: 'Maximum number of results',
+              longDesc: 'Specify the maximum number of variants to return in the search results.',
+            },
+            cursor: {
+              displayName: 'Pagination Cursor',
+              shortDesc: 'Navigate through pages of results',
+              longDesc: 'Use a cursor to paginate through large sets of search results.',
+            },
+          },
+        },
         'add-line-item-to-order': {
           displayName: 'Add Line Item to Order',
           shortDesc: 'Add a new product line to an existing order',
@@ -5500,7 +5744,7 @@ const en = {
           longDesc:
             'Adds a new company entity to Shopify, typically for B2B purposes, including contact and location details for wholesale or enterprise customers.',
           options: {
-            name: {
+            companyName: {
               displayName: 'Name',
               shortDesc: 'Company name',
               longDesc:
@@ -5571,7 +5815,7 @@ const en = {
                 'Details about the company’s physical location, including shipping and billing addresses.',
               type: {
                 fields: {
-                  name: {
+                  locationName: {
                     displayName: 'Location Name',
                     shortDesc: 'Name of location',
                     longDesc: 'A descriptive name for this company location, e.g., "Headquarters".',
@@ -5710,7 +5954,73 @@ const en = {
           },
         },
       },
-      triggers: {},
+      triggers: {
+        'shopify-abandoned-cart-trigger': {
+          displayName: 'Shopify New Abandoned Cart',
+          shortDesc: 'Triggers when a customer abandons a checkout in Shopify',
+          longDesc:
+            'This trigger activates when a Shopify checkout is created but not completed within the specified time window. Use this to send recovery emails, offer discounts, or analyze cart abandonment patterns.',
+          options: {
+            abandonedHours: {
+              displayName: 'Abandoned Hours',
+              shortDesc: 'Time window to consider a cart abandoned',
+              longDesc:
+                'Specify how many hours must pass since cart creation without completion for it to be considered abandoned. Values range from 1 hour to 168 hours (one week).',
+            },
+          },
+        },
+        'shopify-blog-trigger': {
+          displayName: 'Shopify Blog Created',
+          shortDesc: 'Triggers when a new blog is created in Shopify',
+          longDesc:
+            'This trigger activates whenever a new blog (not an article) is created in your Shopify store. Use this to monitor blog creation or automate follow-up tasks.',
+        },
+        'shopify-blog-entry-trigger': {
+          displayName: 'Shopify New Blog Article',
+          shortDesc: 'Triggers when a blog article is created or published',
+          longDesc:
+            'This trigger activates when a new article is created or published in a specified Shopify blog. Use this to automate social media sharing, email notifications, or content distribution workflows.',
+          options: {
+            blogId: {
+              displayName: 'Blog',
+              shortDesc: 'Select the blog to monitor',
+              longDesc: 'Choose which Shopify blog to monitor for new articles.',
+            },
+            entryStatus: {
+              displayName: 'Article Status',
+              shortDesc: 'Filter articles by publication status',
+              longDesc:
+                'Choose whether to trigger on all articles, only published articles, or only draft articles.',
+            },
+          },
+        },
+        'shopify-customer-created-trigger': {
+          displayName: 'Shopify Customer Created',
+          shortDesc: 'Triggers when a new customer account is created',
+          longDesc:
+            'This trigger activates whenever a new customer registers or is created in your Shopify store. Use this to send welcome emails, add customers to marketing lists, or create records in other systems.',
+        },
+        'shopify-customer-updated-trigger': {
+          displayName: 'Shopify Customer Updated',
+          shortDesc: 'Triggers when customer information is modified',
+          longDesc:
+            'This trigger activates whenever customer information is updated in your Shopify store. Use this to sync customer data with other systems, track specific customer changes, or update marketing preferences.',
+        },
+        'shopify-new-order-trigger': {
+          displayName: 'Shopify New Order',
+          shortDesc: 'Triggers when a new order is placed with the specified status',
+          longDesc:
+            'This trigger activates when a new order is created in your Shopify store that matches the specified status filter. Use this to process orders, update inventory in other systems, or send custom notifications based on order status.',
+          options: {
+            orderStatus: {
+              displayName: 'Order Status',
+              shortDesc: 'Filter orders by their status',
+              longDesc:
+                'Select which type of orders to monitor based on their status (e.g., any, paid, fulfilled, cancelled). This lets you create different workflows for different order conditions.',
+            },
+          },
+        },
+      },
     },
   },
 } satisfies BaseTranslation;

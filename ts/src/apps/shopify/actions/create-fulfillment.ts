@@ -29,24 +29,6 @@ const FulfillmentOrderLineItemInputType = {
   },
 } satisfies TQoreTypeObject;
 
-const FulfillmentOrderLineItemsInputType = {
-  type: 'hash',
-  fields: {
-    fulfillmentOrderId: {
-      type: 'string',
-      required: true,
-      get_allowed_values: getShopifyFulfillmentOrderIdAllowedValues,
-    },
-    fulfillmentOrderLineItems: {
-      type: {
-        type: 'list',
-        element_type: FulfillmentOrderLineItemInputType,
-      },
-      required: false,
-    },
-  },
-} satisfies TQoreTypeObject;
-
 const FulfillmentTrackingInputType = {
   type: 'hash',
   fields: {
@@ -96,12 +78,19 @@ const FulfillmentOriginAddressInputType = {
 } satisfies TQoreTypeObject;
 
 const options = {
-  lineItemsByFulfillmentOrder: {
+  fulfillmentOrderId: {
+    type: 'string',
+    required: true,
+    get_allowed_values: getShopifyFulfillmentOrderIdAllowedValues,
+  },
+  fulfillmentOrderLineItems: {
     type: {
       type: 'list',
-      element_type: FulfillmentOrderLineItemsInputType,
+      element_type: FulfillmentOrderLineItemInputType,
     },
-    required: true,
+    depends_on: ['fulfillmentOrderId'],
+    required: false,
+    preselected: true,
   },
   notifyCustomer: {
     type: 'bool',
@@ -255,7 +244,7 @@ const createFulfillment = async (
     fulfillment,
     message: data.message,
   };
-  console.dir(variables, { depth: null });
+
   const createFulfillmentResult = await executeShopifyGraphQL(
     context,
     createFulfillmentMutation,
@@ -276,45 +265,60 @@ export const CreateShopifyFulfillment = QoreAppCreator.createLocalizedAction<typ
   app: SHOPIFY_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
   api_function: async (data, _opts, context) => {
-    const lineItemsByFulfillmentOrder = data?.lineItemsByFulfillmentOrder as
-      | Array<Record<string, any>>
-      | undefined;
+    const { fulfillmentOrderId } = data || {};
+    const lineItems = (data?.fulfillmentOrderLineItems || []) as Array<{
+      id: string;
+      quantity: number;
+    }>;
+    const lineItemsByFulfillmentOrder: TCreateFulfillmentInput['lineItemsByFulfillmentOrder'] = [];
 
     try {
-      if (!lineItemsByFulfillmentOrder || lineItemsByFulfillmentOrder.length === 0) {
-        throw new ShopifyError('At least one fulfillment order must be provided');
+      if (!fulfillmentOrderId) {
+        throw new ShopifyError('Fulfillment order ID is required');
       }
 
-      lineItemsByFulfillmentOrder.forEach((item, index) => {
-        if (!item.fulfillmentOrderId) {
-          throw new ShopifyError(
-            `Fulfillment order at index ${index} must have a fulfillmentOrderId`
-          );
-        }
+      const formattedLineItems = lineItems.map(
+        (
+          lineItem: { id: string; quantity: number },
+          lineItemIndex: number
+        ): {
+          id: string;
+          quantity: number;
+        } => {
+          if (!lineItem.id) {
+            throw new ShopifyError(
+              `Line item at index ${lineItemIndex} for fulfillment order must have an id`
+            );
+          }
+          if (!lineItem.id.includes('gid://shopify/'))
+            lineItem.id = `gid://shopify/FulfillmentOrderLineItem/${lineItem.id}`;
+          if (!lineItem.quantity || lineItem.quantity <= 0) {
+            throw new ShopifyError(
+              `Line item at index ${lineItemIndex} for fulfillment order ` +
+                `must have a quantity greater than 0`
+            );
+          }
 
-        if (item.fulfillmentOrderLineItems) {
-          item.fulfillmentOrderLineItems.forEach(
-            (lineItem: { id: string; quantity: number }, lineItemIndex: number) => {
-              if (!lineItem.id) {
-                throw new ShopifyError(
-                  `Line item at index ${lineItemIndex} for fulfillment order at index ${index} must have an id`
-                );
-              }
-              if (!lineItem.quantity || lineItem.quantity <= 0) {
-                throw new ShopifyError(
-                  `Line item at index ${lineItemIndex} for fulfillment order at index ${index}` +
-                    `must have a quantity greater than 0`
-                );
-              }
-            }
-          );
+          return {
+            id: lineItem.id,
+            quantity: lineItem.quantity,
+          };
         }
-      });
-
-      const result = await createFulfillment(
-        context as TShopifyContextWithConn,
-        { ...data, lineItemsByFulfillmentOrder } as TCreateFulfillmentInput
       );
+
+      lineItemsByFulfillmentOrder[0] = {
+        fulfillmentOrderId: fulfillmentOrderId.includes('gid://shopify/')
+          ? fulfillmentOrderId
+          : `gid://shopify/FulfillmentOrder/${fulfillmentOrderId}`,
+        ...(lineItems?.length
+          ? {
+              fulfillmentOrderLineItems: formattedLineItems,
+            }
+          : {}),
+      };
+
+      const input = { ...data, lineItemsByFulfillmentOrder } as TCreateFulfillmentInput;
+      const result = await createFulfillment(context as TShopifyContextWithConn, input);
 
       return transformShopifyResponse(result);
     } catch (error) {

@@ -1,15 +1,19 @@
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 import { SHOPIFY_CONN_OPTIONS, TShopifyContextWithConn } from '../constants';
-import { executeShopifyGraphQL, ShopifyError } from './constants';
+import { executeShopifyGraphQL, extractShopifyNumericId, ShopifyError } from './constants';
 
 export const getShopifyFulfillmentOrderLineItemIdAllowedValues: TQoreGetAllowedValuesFunction<
   typeof SHOPIFY_CONN_OPTIONS,
   string
 > = async (context): Promise<IQoreAllowedValue<string>[]> => {
-  const fulfillmentOrderId = context?.opts?.fulfillmentOrderId;
+  let fulfillmentOrderId = context?.opts?.fulfillmentOrderId;
 
   if (!fulfillmentOrderId) {
     return [];
+  }
+
+  if (!fulfillmentOrderId.includes('gid://shopify')) {
+    fulfillmentOrderId = `gid://shopify/FulfillmentOrder/${fulfillmentOrderId}`;
   }
 
   try {
@@ -56,7 +60,7 @@ export const getShopifyFulfillmentOrderLineItemIdAllowedValues: TQoreGetAllowedV
         display_name:
           `${lineItem.title || product.title || 'Unknown Product'}` +
           `(${node.remainingQuantity}/${node.totalQuantity})`,
-        value: node.id,
+        value: extractShopifyNumericId(node.id),
         short_desc:
           `Product: ${product.title || 'Unknown'}\n` +
           `Variant: ${variant.title || 'Default'}\n` +

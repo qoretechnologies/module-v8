@@ -214,6 +214,14 @@ export const transformShopifyResponse = (response: Record<string, any>) => {
     const operationKey = Object.keys(response.data)[0];
     const operationData = response.data[operationKey];
 
+    if (operationData?.nodes && Array.isArray(operationData.nodes)) {
+      return operationData.nodes.map((node: any) => extractShopifyNodes(node));
+    }
+
+    if (operationData?.edges && Array.isArray(operationData.edges)) {
+      return extractShopifyNodes(operationData);
+    }
+
     return {
       ...operationData,
       ...Object.fromEntries(

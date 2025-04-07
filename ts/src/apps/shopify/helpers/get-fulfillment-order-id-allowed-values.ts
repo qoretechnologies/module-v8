@@ -1,6 +1,6 @@
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 import { SHOPIFY_CONN_OPTIONS, TShopifyContextWithConn } from '../constants';
-import { getShopifyAllowedValues } from './constants';
+import { extractShopifyNumericId, getShopifyAllowedValues } from './constants';
 
 export const getShopifyFulfillmentOrderIdAllowedValues: TQoreGetAllowedValuesFunction<
   typeof SHOPIFY_CONN_OPTIONS,
@@ -72,7 +72,7 @@ export const getShopifyFulfillmentOrderIdAllowedValues: TQoreGetAllowedValuesFun
 
       return {
         display_name: `${order.name || 'Unknown Order'} - ${node.status || 'Unknown Status'}`,
-        value: node.id,
+        value: extractShopifyNumericId(node.id),
         short_desc:
           `Created: ${new Date(node.createdAt).toLocaleString()}\n` +
           `Status: ${node.status}, Request Status: ${node.requestStatus}\n` +

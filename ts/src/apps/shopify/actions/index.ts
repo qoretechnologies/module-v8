@@ -1,3 +1,7 @@
+export { FindShopifyVariant } from './find-variant';
+export { FindShopifyCustomer } from './find-customer';
+export { FindShopifyOrder } from './find-order';
+export { FindShopifyProduct } from './find-product';
 export { AddLineItemToShopifyOrder } from './add-line-item-to-order';
 export { AddTagToShopifyCustomer } from './add-tag-to-customer';
 export { CreateShopifyBlogEntry } from './create-blog-entry';

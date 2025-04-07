@@ -15084,6 +15084,630 @@ type RootTranslation = {
 			 */
 			longDesc: string
 			actions: {
+				'find-product': {
+					/**
+					 * F​i​n​d​ ​P​r​o​d​u​c​t​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​p​r​o​d​u​c​t​s​ ​i​n​ ​y​o​u​r​ ​s​t​o​r​e
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​a​n​d​ ​f​i​l​t​e​r​ ​p​r​o​d​u​c​t​s​ ​i​n​ ​y​o​u​r​ ​S​h​o​p​i​f​y​ ​s​t​o​r​e​ ​b​a​s​e​d​ ​o​n​ ​v​a​r​i​o​u​s​ ​c​r​i​t​e​r​i​a​ ​i​n​c​l​u​d​i​n​g​ ​t​i​t​l​e​,​ ​v​e​n​d​o​r​,​ ​p​r​o​d​u​c​t​ ​t​y​p​e​,​ ​a​n​d​ ​m​o​r​e​.
+					 */
+					longDesc: string
+					options: {
+						titleQuery: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​b​y​ ​p​r​o​d​u​c​t​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​p​r​o​d​u​c​t​s​ ​b​y​ ​m​a​t​c​h​i​n​g​ ​t​e​x​t​ ​i​n​ ​t​h​e​i​r​ ​t​i​t​l​e​s​.​ ​S​u​p​p​o​r​t​s​ ​p​a​r​t​i​a​l​ ​m​a​t​c​h​e​s​.
+							 */
+							longDesc: string
+						}
+						vendorQuery: {
+							/**
+							 * V​e​n​d​o​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​r​o​d​u​c​t​ ​v​e​n​d​o​r
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​p​r​o​d​u​c​t​s​ ​f​r​o​m​ ​s​p​e​c​i​f​i​c​ ​v​e​n​d​o​r​s​ ​o​r​ ​s​u​p​p​l​i​e​r​s​ ​i​n​ ​y​o​u​r​ ​s​t​o​r​e​.
+							 */
+							longDesc: string
+						}
+						productTypeQuery: {
+							/**
+							 * P​r​o​d​u​c​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​r​o​d​u​c​t​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​a​r​c​h​ ​f​o​r​ ​p​r​o​d​u​c​t​s​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​i​r​ ​a​s​s​i​g​n​e​d​ ​p​r​o​d​u​c​t​ ​t​y​p​e​ ​c​a​t​e​g​o​r​y​.
+							 */
+							longDesc: string
+						}
+						tagQuery: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​b​y​ ​p​r​o​d​u​c​t​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​p​r​o​d​u​c​t​s​ ​t​h​a​t​ ​h​a​v​e​ ​b​e​e​n​ ​t​a​g​g​e​d​ ​w​i​t​h​ ​s​p​e​c​i​f​i​c​ ​k​e​y​w​o​r​d​s​ ​o​r​ ​l​a​b​e​l​s​.
+							 */
+							longDesc: string
+						}
+						skuQuery: {
+							/**
+							 * S​K​U
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​b​y​ ​p​r​o​d​u​c​t​ ​S​K​U
+							 */
+							shortDesc: string
+							/**
+							 * L​o​o​k​ ​u​p​ ​p​r​o​d​u​c​t​s​ ​u​s​i​n​g​ ​t​h​e​i​r​ ​S​t​o​c​k​ ​K​e​e​p​i​n​g​ ​U​n​i​t​ ​(​S​K​U​)​ ​i​d​e​n​t​i​f​i​e​r​.
+							 */
+							longDesc: string
+						}
+						barcodeQuery: {
+							/**
+							 * B​a​r​c​o​d​e
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​b​y​ ​b​a​r​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​p​r​o​d​u​c​t​s​ ​u​s​i​n​g​ ​t​h​e​i​r​ ​U​P​C​,​ ​I​S​B​N​,​ ​o​r​ ​o​t​h​e​r​ ​b​a​r​c​o​d​e​ ​i​d​e​n​t​i​f​i​e​r​s​.
+							 */
+							longDesc: string
+						}
+						productIdQuery: {
+							/**
+							 * P​r​o​d​u​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​b​y​ ​p​r​o​d​u​c​t​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * L​o​o​k​ ​u​p​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​r​o​d​u​c​t​ ​u​s​i​n​g​ ​i​t​s​ ​u​n​i​q​u​e​ ​S​h​o​p​i​f​y​ ​p​r​o​d​u​c​t​ ​I​D​.
+							 */
+							longDesc: string
+						}
+						collectionIdQuery: {
+							/**
+							 * C​o​l​l​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​o​l​l​e​c​t​i​o​n​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​p​r​o​d​u​c​t​s​ ​t​h​a​t​ ​b​e​l​o​n​g​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​l​l​e​c​t​i​o​n​ ​i​n​ ​y​o​u​r​ ​s​t​o​r​e​.
+							 */
+							longDesc: string
+						}
+						sortKey: {
+							/**
+							 * S​o​r​t​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​h​o​w​ ​t​o​ ​o​r​d​e​r​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​(​e​.​g​.​,​ ​b​y​ ​t​i​t​l​e​,​ ​p​r​i​c​e​,​ ​c​r​e​a​t​e​d​ ​d​a​t​e​)​.
+							 */
+							longDesc: string
+						}
+						reverse: {
+							/**
+							 * R​e​v​e​r​s​e​ ​O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * R​e​v​e​r​s​e​ ​t​h​e​ ​s​o​r​t​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​o​g​g​l​e​ ​b​e​t​w​e​e​n​ ​a​s​c​e​n​d​i​n​g​ ​a​n​d​ ​d​e​s​c​e​n​d​i​n​g​ ​s​o​r​t​ ​o​r​d​e​r​ ​f​o​r​ ​t​h​e​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						rawQuery: {
+							/**
+							 * A​d​v​a​n​c​e​d​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * U​s​e​ ​c​u​s​t​o​m​ ​s​e​a​r​c​h​ ​s​y​n​t​a​x
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​a​ ​c​u​s​t​o​m​ ​s​e​a​r​c​h​ ​q​u​e​r​y​ ​f​o​r​ ​a​d​v​a​n​c​e​d​ ​f​i​l​t​e​r​i​n​g​ ​u​s​i​n​g​ ​S​h​o​p​i​f​y​ ​s​e​a​r​c​h​ ​s​y​n​t​a​x​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * R​e​s​u​l​t​s​ ​L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​p​r​o​d​u​c​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​t​h​e​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						cursor: {
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * N​a​v​i​g​a​t​e​ ​t​h​r​o​u​g​h​ ​p​a​g​e​s​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​a​ ​c​u​r​s​o​r​ ​t​o​ ​p​a​g​i​n​a​t​e​ ​t​h​r​o​u​g​h​ ​l​a​r​g​e​ ​s​e​t​s​ ​o​f​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'find-order': {
+					/**
+					 * F​i​n​d​ ​O​r​d​e​r​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​c​u​s​t​o​m​e​r​ ​o​r​d​e​r​s
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​a​n​d​ ​f​i​l​t​e​r​ ​o​r​d​e​r​s​ ​i​n​ ​y​o​u​r​ ​S​h​o​p​i​f​y​ ​s​t​o​r​e​ ​b​a​s​e​d​ ​o​n​ ​v​a​r​i​o​u​s​ ​c​r​i​t​e​r​i​a​ ​i​n​c​l​u​d​i​n​g​ ​c​u​s​t​o​m​e​r​ ​n​a​m​e​,​ ​e​m​a​i​l​,​ ​o​r​d​e​r​ ​n​u​m​b​e​r​,​ ​a​n​d​ ​m​o​r​e​.
+					 */
+					longDesc: string
+					options: {
+						nameQuery: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​b​y​ ​c​u​s​t​o​m​e​r​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​o​r​d​e​r​s​ ​b​y​ ​m​a​t​c​h​i​n​g​ ​c​u​s​t​o​m​e​r​ ​f​i​r​s​t​ ​o​r​ ​l​a​s​t​ ​n​a​m​e​.
+							 */
+							longDesc: string
+						}
+						confirmationQuery: {
+							/**
+							 * O​r​d​e​r​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​b​y​ ​o​r​d​e​r​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * L​o​o​k​ ​u​p​ ​o​r​d​e​r​s​ ​u​s​i​n​g​ ​t​h​e​i​r​ ​c​o​n​f​i​r​m​a​t​i​o​n​ ​o​r​ ​o​r​d​e​r​ ​n​u​m​b​e​r​.
+							 */
+							longDesc: string
+						}
+						emailQuery: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​b​y​ ​c​u​s​t​o​m​e​r​ ​e​m​a​i​l
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​o​r​d​e​r​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​u​s​t​o​m​e​r​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.
+							 */
+							longDesc: string
+						}
+						customerIdQuery: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​u​s​t​o​m​e​r​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​a​l​l​ ​o​r​d​e​r​s​ ​p​l​a​c​e​d​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​u​s​t​o​m​e​r​ ​u​s​i​n​g​ ​t​h​e​i​r​ ​S​h​o​p​i​f​y​ ​c​u​s​t​o​m​e​r​ ​I​D​.
+							 */
+							longDesc: string
+						}
+						locationIdQuery: {
+							/**
+							 * L​o​c​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​t​o​r​e​ ​l​o​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​o​r​d​e​r​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​t​o​r​e​ ​l​o​c​a​t​i​o​n​ ​o​r​ ​f​u​l​f​i​l​l​m​e​n​t​ ​c​e​n​t​e​r​.
+							 */
+							longDesc: string
+						}
+						skuQuery: {
+							/**
+							 * P​r​o​d​u​c​t​ ​S​K​U
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​b​y​ ​p​r​o​d​u​c​t​ ​S​K​U
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​o​r​d​e​r​s​ ​c​o​n​t​a​i​n​i​n​g​ ​p​r​o​d​u​c​t​s​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​S​K​U​.
+							 */
+							longDesc: string
+						}
+						orderIdQuery: {
+							/**
+							 * O​r​d​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​b​y​ ​o​r​d​e​r​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * L​o​o​k​ ​u​p​ ​a​ ​s​p​e​c​i​f​i​c​ ​o​r​d​e​r​ ​u​s​i​n​g​ ​i​t​s​ ​u​n​i​q​u​e​ ​S​h​o​p​i​f​y​ ​o​r​d​e​r​ ​I​D​.
+							 */
+							longDesc: string
+						}
+						sortKey: {
+							/**
+							 * S​o​r​t​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​h​o​w​ ​t​o​ ​o​r​d​e​r​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​(​e​.​g​.​,​ ​b​y​ ​d​a​t​e​,​ ​o​r​d​e​r​ ​n​u​m​b​e​r​,​ ​t​o​t​a​l​ ​v​a​l​u​e​)​.
+							 */
+							longDesc: string
+						}
+						reverse: {
+							/**
+							 * R​e​v​e​r​s​e​ ​O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * R​e​v​e​r​s​e​ ​t​h​e​ ​s​o​r​t​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​o​g​g​l​e​ ​b​e​t​w​e​e​n​ ​a​s​c​e​n​d​i​n​g​ ​a​n​d​ ​d​e​s​c​e​n​d​i​n​g​ ​s​o​r​t​ ​o​r​d​e​r​ ​f​o​r​ ​t​h​e​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						rawQuery: {
+							/**
+							 * A​d​v​a​n​c​e​d​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * U​s​e​ ​c​u​s​t​o​m​ ​s​e​a​r​c​h​ ​s​y​n​t​a​x
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​a​ ​c​u​s​t​o​m​ ​s​e​a​r​c​h​ ​q​u​e​r​y​ ​f​o​r​ ​a​d​v​a​n​c​e​d​ ​f​i​l​t​e​r​i​n​g​ ​u​s​i​n​g​ ​S​h​o​p​i​f​y​ ​s​e​a​r​c​h​ ​s​y​n​t​a​x​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * R​e​s​u​l​t​s​ ​L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​o​r​d​e​r​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​t​h​e​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						cursor: {
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * N​a​v​i​g​a​t​e​ ​t​h​r​o​u​g​h​ ​p​a​g​e​s​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​a​ ​c​u​r​s​o​r​ ​t​o​ ​p​a​g​i​n​a​t​e​ ​t​h​r​o​u​g​h​ ​l​a​r​g​e​ ​s​e​t​s​ ​o​f​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'find-customer': {
+					/**
+					 * F​i​n​d​ ​C​u​s​t​o​m​e​r​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​c​u​s​t​o​m​e​r​s
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​a​n​d​ ​f​i​l​t​e​r​ ​c​u​s​t​o​m​e​r​s​ ​i​n​ ​y​o​u​r​ ​S​h​o​p​i​f​y​ ​s​t​o​r​e​ ​b​a​s​e​d​ ​o​n​ ​n​a​m​e​s​,​ ​e​m​a​i​l​s​,​ ​o​r​ ​o​t​h​e​r​ ​a​t​t​r​i​b​u​t​e​s​.
+					 */
+					longDesc: string
+					options: {
+						query: {
+							/**
+							 * S​e​a​r​c​h​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​b​y​ ​n​a​m​e​ ​o​r​ ​e​m​a​i​l
+							 */
+							shortDesc: string
+							/**
+							 * S​e​a​r​c​h​ ​f​o​r​ ​c​u​s​t​o​m​e​r​s​ ​b​y​ ​t​h​e​i​r​ ​n​a​m​e​,​ ​e​m​a​i​l​,​ ​o​r​ ​o​t​h​e​r​ ​i​d​e​n​t​i​f​y​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * R​e​s​u​l​t​s​ ​L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​u​s​t​o​m​e​r​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​t​h​e​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						cursor: {
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * N​a​v​i​g​a​t​e​ ​t​h​r​o​u​g​h​ ​p​a​g​e​s​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​a​ ​c​u​r​s​o​r​ ​t​o​ ​p​a​g​i​n​a​t​e​ ​t​h​r​o​u​g​h​ ​l​a​r​g​e​ ​s​e​t​s​ ​o​f​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						sortKey: {
+							/**
+							 * S​o​r​t​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​h​o​w​ ​t​o​ ​o​r​d​e​r​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​(​e​.​g​.​,​ ​b​y​ ​n​a​m​e​,​ ​d​a​t​e​ ​c​r​e​a​t​e​d​,​ ​t​o​t​a​l​ ​s​p​e​n​t​)​.
+							 */
+							longDesc: string
+						}
+						reverse: {
+							/**
+							 * R​e​v​e​r​s​e​ ​O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * R​e​v​e​r​s​e​ ​t​h​e​ ​s​o​r​t​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​o​g​g​l​e​ ​b​e​t​w​e​e​n​ ​a​s​c​e​n​d​i​n​g​ ​a​n​d​ ​d​e​s​c​e​n​d​i​n​g​ ​s​o​r​t​ ​o​r​d​e​r​ ​f​o​r​ ​t​h​e​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'find-variant': {
+					/**
+					 * F​i​n​d​ ​P​r​o​d​u​c​t​ ​V​a​r​i​a​n​t​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​s​p​e​c​i​f​i​c​ ​p​r​o​d​u​c​t​ ​v​a​r​i​a​n​t​s
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​a​n​d​ ​f​i​l​t​e​r​ ​p​r​o​d​u​c​t​ ​v​a​r​i​a​n​t​s​ ​i​n​ ​y​o​u​r​ ​S​h​o​p​i​f​y​ ​s​t​o​r​e​ ​b​a​s​e​d​ ​o​n​ ​c​r​i​t​e​r​i​a​ ​l​i​k​e​ ​S​K​U​,​ ​b​a​r​c​o​d​e​,​ ​p​r​i​c​e​,​ ​o​r​ ​i​n​v​e​n​t​o​r​y​ ​s​t​a​t​u​s​.
+					 */
+					longDesc: string
+					options: {
+						productId: {
+							/**
+							 * P​r​o​d​u​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​a​r​e​n​t​ ​p​r​o​d​u​c​t
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​v​a​r​i​a​n​t​s​ ​t​h​a​t​ ​b​e​l​o​n​g​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​a​r​e​n​t​ ​p​r​o​d​u​c​t​ ​u​s​i​n​g​ ​i​t​s​ ​S​h​o​p​i​f​y​ ​p​r​o​d​u​c​t​ ​I​D​.
+							 */
+							longDesc: string
+						}
+						titleQuery: {
+							/**
+							 * V​a​r​i​a​n​t​ ​T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​b​y​ ​v​a​r​i​a​n​t​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​v​a​r​i​a​n​t​s​ ​b​y​ ​m​a​t​c​h​i​n​g​ ​t​e​x​t​ ​i​n​ ​t​h​e​i​r​ ​t​i​t​l​e​s​ ​o​r​ ​o​p​t​i​o​n​ ​v​a​l​u​e​s​.
+							 */
+							longDesc: string
+						}
+						skuQuery: {
+							/**
+							 * S​K​U
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​b​y​ ​v​a​r​i​a​n​t​ ​S​K​U
+							 */
+							shortDesc: string
+							/**
+							 * L​o​o​k​ ​u​p​ ​v​a​r​i​a​n​t​s​ ​u​s​i​n​g​ ​t​h​e​i​r​ ​S​t​o​c​k​ ​K​e​e​p​i​n​g​ ​U​n​i​t​ ​(​S​K​U​)​ ​i​d​e​n​t​i​f​i​e​r​.
+							 */
+							longDesc: string
+						}
+						barcodeQuery: {
+							/**
+							 * B​a​r​c​o​d​e
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​b​y​ ​b​a​r​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​v​a​r​i​a​n​t​s​ ​u​s​i​n​g​ ​t​h​e​i​r​ ​U​P​C​,​ ​I​S​B​N​,​ ​o​r​ ​o​t​h​e​r​ ​b​a​r​c​o​d​e​ ​i​d​e​n​t​i​f​i​e​r​s​.
+							 */
+							longDesc: string
+						}
+						variantIdQuery: {
+							/**
+							 * V​a​r​i​a​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​b​y​ ​v​a​r​i​a​n​t​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * L​o​o​k​ ​u​p​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​a​r​i​a​n​t​ ​u​s​i​n​g​ ​i​t​s​ ​u​n​i​q​u​e​ ​S​h​o​p​i​f​y​ ​v​a​r​i​a​n​t​ ​I​D​.
+							 */
+							longDesc: string
+						}
+						inventoryQuery: {
+							/**
+							 * I​n​v​e​n​t​o​r​y​ ​S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​i​n​v​e​n​t​o​r​y​ ​l​e​v​e​l
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​v​a​r​i​a​n​t​s​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​i​r​ ​i​n​v​e​n​t​o​r​y​ ​s​t​a​t​u​s​ ​(​e​.​g​.​,​ ​i​n​ ​s​t​o​c​k​,​ ​o​u​t​ ​o​f​ ​s​t​o​c​k​,​ ​l​o​w​ ​s​t​o​c​k​)​.
+							 */
+							longDesc: string
+						}
+						priceQuery: {
+							/**
+							 * P​r​i​c​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​r​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​a​r​c​h​ ​f​o​r​ ​v​a​r​i​a​n​t​s​ ​w​i​t​h​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​r​i​c​e​ ​r​a​n​g​e​ ​o​r​ ​a​t​ ​a​ ​p​a​r​t​i​c​u​l​a​r​ ​p​r​i​c​e​ ​p​o​i​n​t​.
+							 */
+							longDesc: string
+						}
+						rawQuery: {
+							/**
+							 * A​d​v​a​n​c​e​d​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * U​s​e​ ​c​u​s​t​o​m​ ​s​e​a​r​c​h​ ​s​y​n​t​a​x
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​a​ ​c​u​s​t​o​m​ ​s​e​a​r​c​h​ ​q​u​e​r​y​ ​f​o​r​ ​a​d​v​a​n​c​e​d​ ​f​i​l​t​e​r​i​n​g​ ​u​s​i​n​g​ ​S​h​o​p​i​f​y​ ​s​e​a​r​c​h​ ​s​y​n​t​a​x​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * R​e​s​u​l​t​s​ ​L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​v​a​r​i​a​n​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​t​h​e​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						cursor: {
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * N​a​v​i​g​a​t​e​ ​t​h​r​o​u​g​h​ ​p​a​g​e​s​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​a​ ​c​u​r​s​o​r​ ​t​o​ ​p​a​g​i​n​a​t​e​ ​t​h​r​o​u​g​h​ ​l​a​r​g​e​ ​s​e​t​s​ ​o​f​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
 				'add-line-item-to-order': {
 					/**
 					 * A​d​d​ ​L​i​n​e​ ​I​t​e​m​ ​t​o​ ​O​r​d​e​r
@@ -18304,7 +18928,7 @@ type RootTranslation = {
 					 */
 					longDesc: string
 					options: {
-						name: {
+						companyName: {
 							/**
 							 * N​a​m​e
 							 */
@@ -18477,7 +19101,7 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								fields: {
-									name: {
+									locationName: {
 										/**
 										 * L​o​c​a​t​i​o​n​ ​N​a​m​e
 										 */
@@ -18830,6 +19454,152 @@ type RootTranslation = {
 				}
 			}
 			triggers: {
+				'shopify-abandoned-cart-trigger': {
+					/**
+					 * S​h​o​p​i​f​y​ ​N​e​w​ ​A​b​a​n​d​o​n​e​d​ ​C​a​r​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​c​u​s​t​o​m​e​r​ ​a​b​a​n​d​o​n​s​ ​a​ ​c​h​e​c​k​o​u​t​ ​i​n​ ​S​h​o​p​i​f​y
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​a​ ​S​h​o​p​i​f​y​ ​c​h​e​c​k​o​u​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​b​u​t​ ​n​o​t​ ​c​o​m​p​l​e​t​e​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​i​m​e​ ​w​i​n​d​o​w​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​s​e​n​d​ ​r​e​c​o​v​e​r​y​ ​e​m​a​i​l​s​,​ ​o​f​f​e​r​ ​d​i​s​c​o​u​n​t​s​,​ ​o​r​ ​a​n​a​l​y​z​e​ ​c​a​r​t​ ​a​b​a​n​d​o​n​m​e​n​t​ ​p​a​t​t​e​r​n​s​.
+					 */
+					longDesc: string
+					options: {
+						abandonedHours: {
+							/**
+							 * A​b​a​n​d​o​n​e​d​ ​H​o​u​r​s
+							 */
+							displayName: string
+							/**
+							 * T​i​m​e​ ​w​i​n​d​o​w​ ​t​o​ ​c​o​n​s​i​d​e​r​ ​a​ ​c​a​r​t​ ​a​b​a​n​d​o​n​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​m​a​n​y​ ​h​o​u​r​s​ ​m​u​s​t​ ​p​a​s​s​ ​s​i​n​c​e​ ​c​a​r​t​ ​c​r​e​a​t​i​o​n​ ​w​i​t​h​o​u​t​ ​c​o​m​p​l​e​t​i​o​n​ ​f​o​r​ ​i​t​ ​t​o​ ​b​e​ ​c​o​n​s​i​d​e​r​e​d​ ​a​b​a​n​d​o​n​e​d​.​ ​V​a​l​u​e​s​ ​r​a​n​g​e​ ​f​r​o​m​ ​1​ ​h​o​u​r​ ​t​o​ ​1​6​8​ ​h​o​u​r​s​ ​(​o​n​e​ ​w​e​e​k​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'shopify-blog-trigger': {
+					/**
+					 * S​h​o​p​i​f​y​ ​B​l​o​g​ ​C​r​e​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​b​l​o​g​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​S​h​o​p​i​f​y
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​b​l​o​g​ ​(​n​o​t​ ​a​n​ ​a​r​t​i​c​l​e​)​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​y​o​u​r​ ​S​h​o​p​i​f​y​ ​s​t​o​r​e​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​m​o​n​i​t​o​r​ ​b​l​o​g​ ​c​r​e​a​t​i​o​n​ ​o​r​ ​a​u​t​o​m​a​t​e​ ​f​o​l​l​o​w​-​u​p​ ​t​a​s​k​s​.
+					 */
+					longDesc: string
+				}
+				'shopify-blog-entry-trigger': {
+					/**
+					 * S​h​o​p​i​f​y​ ​N​e​w​ ​B​l​o​g​ ​A​r​t​i​c​l​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​b​l​o​g​ ​a​r​t​i​c​l​e​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​p​u​b​l​i​s​h​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​a​r​t​i​c​l​e​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​p​u​b​l​i​s​h​e​d​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​S​h​o​p​i​f​y​ ​b​l​o​g​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​s​h​a​r​i​n​g​,​ ​e​m​a​i​l​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​,​ ​o​r​ ​c​o​n​t​e​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​w​o​r​k​f​l​o​w​s​.
+					 */
+					longDesc: string
+					options: {
+						blogId: {
+							/**
+							 * B​l​o​g
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​b​l​o​g​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​i​c​h​ ​S​h​o​p​i​f​y​ ​b​l​o​g​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​a​r​t​i​c​l​e​s​.
+							 */
+							longDesc: string
+						}
+						entryStatus: {
+							/**
+							 * A​r​t​i​c​l​e​ ​S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​a​r​t​i​c​l​e​s​ ​b​y​ ​p​u​b​l​i​c​a​t​i​o​n​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​a​l​l​ ​a​r​t​i​c​l​e​s​,​ ​o​n​l​y​ ​p​u​b​l​i​s​h​e​d​ ​a​r​t​i​c​l​e​s​,​ ​o​r​ ​o​n​l​y​ ​d​r​a​f​t​ ​a​r​t​i​c​l​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'shopify-customer-created-trigger': {
+					/**
+					 * S​h​o​p​i​f​y​ ​C​u​s​t​o​m​e​r​ ​C​r​e​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​e​r​ ​r​e​g​i​s​t​e​r​s​ ​o​r​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​y​o​u​r​ ​S​h​o​p​i​f​y​ ​s​t​o​r​e​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​s​e​n​d​ ​w​e​l​c​o​m​e​ ​e​m​a​i​l​s​,​ ​a​d​d​ ​c​u​s​t​o​m​e​r​s​ ​t​o​ ​m​a​r​k​e​t​i​n​g​ ​l​i​s​t​s​,​ ​o​r​ ​c​r​e​a​t​e​ ​r​e​c​o​r​d​s​ ​i​n​ ​o​t​h​e​r​ ​s​y​s​t​e​m​s​.
+					 */
+					longDesc: string
+				}
+				'shopify-customer-updated-trigger': {
+					/**
+					 * S​h​o​p​i​f​y​ ​C​u​s​t​o​m​e​r​ ​U​p​d​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​c​u​s​t​o​m​e​r​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​s​ ​m​o​d​i​f​i​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​e​v​e​r​ ​c​u​s​t​o​m​e​r​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​s​ ​u​p​d​a​t​e​d​ ​i​n​ ​y​o​u​r​ ​S​h​o​p​i​f​y​ ​s​t​o​r​e​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​s​y​n​c​ ​c​u​s​t​o​m​e​r​ ​d​a​t​a​ ​w​i​t​h​ ​o​t​h​e​r​ ​s​y​s​t​e​m​s​,​ ​t​r​a​c​k​ ​s​p​e​c​i​f​i​c​ ​c​u​s​t​o​m​e​r​ ​c​h​a​n​g​e​s​,​ ​o​r​ ​u​p​d​a​t​e​ ​m​a​r​k​e​t​i​n​g​ ​p​r​e​f​e​r​e​n​c​e​s​.
+					 */
+					longDesc: string
+				}
+				'shopify-new-order-trigger': {
+					/**
+					 * S​h​o​p​i​f​y​ ​N​e​w​ ​O​r​d​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​o​r​d​e​r​ ​i​s​ ​p​l​a​c​e​d​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​t​a​t​u​s
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​o​r​d​e​r​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​y​o​u​r​ ​S​h​o​p​i​f​y​ ​s​t​o​r​e​ ​t​h​a​t​ ​m​a​t​c​h​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​t​a​t​u​s​ ​f​i​l​t​e​r​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​p​r​o​c​e​s​s​ ​o​r​d​e​r​s​,​ ​u​p​d​a​t​e​ ​i​n​v​e​n​t​o​r​y​ ​i​n​ ​o​t​h​e​r​ ​s​y​s​t​e​m​s​,​ ​o​r​ ​s​e​n​d​ ​c​u​s​t​o​m​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​b​a​s​e​d​ ​o​n​ ​o​r​d​e​r​ ​s​t​a​t​u​s​.
+					 */
+					longDesc: string
+					options: {
+						orderStatus: {
+							/**
+							 * O​r​d​e​r​ ​S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​o​r​d​e​r​s​ ​b​y​ ​t​h​e​i​r​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​i​c​h​ ​t​y​p​e​ ​o​f​ ​o​r​d​e​r​s​ ​t​o​ ​m​o​n​i​t​o​r​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​i​r​ ​s​t​a​t​u​s​ ​(​e​.​g​.​,​ ​a​n​y​,​ ​p​a​i​d​,​ ​f​u​l​f​i​l​l​e​d​,​ ​c​a​n​c​e​l​l​e​d​)​.​ ​T​h​i​s​ ​l​e​t​s​ ​y​o​u​ ​c​r​e​a​t​e​ ​d​i​f​f​e​r​e​n​t​ ​w​o​r​k​f​l​o​w​s​ ​f​o​r​ ​d​i​f​f​e​r​e​n​t​ ​o​r​d​e​r​ ​c​o​n​d​i​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
 			}
 		}
 	}
@@ -33907,6 +34677,630 @@ export type TranslationFunctions = {
 			 */
 			longDesc: () => LocalizedString
 			actions: {
+				'find-product': {
+					/**
+					 * Find Products
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for products in your store
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search and filter products in your Shopify store based on various criteria including title, vendor, product type, and more.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						titleQuery: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search by product title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter products by matching text in their titles. Supports partial matches.
+							 */
+							longDesc: () => LocalizedString
+						}
+						vendorQuery: {
+							/**
+							 * Vendor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by product vendor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find products from specific vendors or suppliers in your store.
+							 */
+							longDesc: () => LocalizedString
+						}
+						productTypeQuery: {
+							/**
+							 * Product Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by product type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Search for products based on their assigned product type category.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tagQuery: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search by product tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find products that have been tagged with specific keywords or labels.
+							 */
+							longDesc: () => LocalizedString
+						}
+						skuQuery: {
+							/**
+							 * SKU
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search by product SKU
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Look up products using their Stock Keeping Unit (SKU) identifier.
+							 */
+							longDesc: () => LocalizedString
+						}
+						barcodeQuery: {
+							/**
+							 * Barcode
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search by barcode
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find products using their UPC, ISBN, or other barcode identifiers.
+							 */
+							longDesc: () => LocalizedString
+						}
+						productIdQuery: {
+							/**
+							 * Product ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search by product ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Look up a specific product using its unique Shopify product ID.
+							 */
+							longDesc: () => LocalizedString
+						}
+						collectionIdQuery: {
+							/**
+							 * Collection
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by collection ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find products that belong to a specific collection in your store.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sortKey: {
+							/**
+							 * Sort By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort the results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose how to order the results (e.g., by title, price, created date).
+							 */
+							longDesc: () => LocalizedString
+						}
+						reverse: {
+							/**
+							 * Reverse Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Reverse the sort order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Toggle between ascending and descending sort order for the results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						rawQuery: {
+							/**
+							 * Advanced Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Use custom search syntax
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter a custom search query for advanced filtering using Shopify search syntax.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Results Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the maximum number of products to return in the search results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cursor: {
+							/**
+							 * Pagination Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Navigate through pages of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use a cursor to paginate through large sets of search results.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'find-order': {
+					/**
+					 * Find Orders
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for customer orders
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search and filter orders in your Shopify store based on various criteria including customer name, email, order number, and more.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						nameQuery: {
+							/**
+							 * Customer Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search by customer name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find orders by matching customer first or last name.
+							 */
+							longDesc: () => LocalizedString
+						}
+						confirmationQuery: {
+							/**
+							 * Order Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search by order number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Look up orders using their confirmation or order number.
+							 */
+							longDesc: () => LocalizedString
+						}
+						emailQuery: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search by customer email
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find orders associated with a specific customer email address.
+							 */
+							longDesc: () => LocalizedString
+						}
+						customerIdQuery: {
+							/**
+							 * Customer ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by customer ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find all orders placed by a specific customer using their Shopify customer ID.
+							 */
+							longDesc: () => LocalizedString
+						}
+						locationIdQuery: {
+							/**
+							 * Location
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by store location
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find orders associated with a specific store location or fulfillment center.
+							 */
+							longDesc: () => LocalizedString
+						}
+						skuQuery: {
+							/**
+							 * Product SKU
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search by product SKU
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find orders containing products with a specific SKU.
+							 */
+							longDesc: () => LocalizedString
+						}
+						orderIdQuery: {
+							/**
+							 * Order ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search by order ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Look up a specific order using its unique Shopify order ID.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sortKey: {
+							/**
+							 * Sort By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort the results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose how to order the results (e.g., by date, order number, total value).
+							 */
+							longDesc: () => LocalizedString
+						}
+						reverse: {
+							/**
+							 * Reverse Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Reverse the sort order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Toggle between ascending and descending sort order for the results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						rawQuery: {
+							/**
+							 * Advanced Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Use custom search syntax
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter a custom search query for advanced filtering using Shopify search syntax.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Results Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the maximum number of orders to return in the search results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cursor: {
+							/**
+							 * Pagination Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Navigate through pages of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use a cursor to paginate through large sets of search results.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'find-customer': {
+					/**
+					 * Find Customers
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for customers
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search and filter customers in your Shopify store based on names, emails, or other attributes.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						query: {
+							/**
+							 * Search Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search by name or email
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Search for customers by their name, email, or other identifying information.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Results Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the maximum number of customers to return in the search results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cursor: {
+							/**
+							 * Pagination Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Navigate through pages of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use a cursor to paginate through large sets of search results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sortKey: {
+							/**
+							 * Sort By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort the results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose how to order the results (e.g., by name, date created, total spent).
+							 */
+							longDesc: () => LocalizedString
+						}
+						reverse: {
+							/**
+							 * Reverse Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Reverse the sort order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Toggle between ascending and descending sort order for the results.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'find-variant': {
+					/**
+					 * Find Product Variants
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for specific product variants
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search and filter product variants in your Shopify store based on criteria like SKU, barcode, price, or inventory status.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						productId: {
+							/**
+							 * Product ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by parent product
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find variants that belong to a specific parent product using its Shopify product ID.
+							 */
+							longDesc: () => LocalizedString
+						}
+						titleQuery: {
+							/**
+							 * Variant Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search by variant title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter variants by matching text in their titles or option values.
+							 */
+							longDesc: () => LocalizedString
+						}
+						skuQuery: {
+							/**
+							 * SKU
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search by variant SKU
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Look up variants using their Stock Keeping Unit (SKU) identifier.
+							 */
+							longDesc: () => LocalizedString
+						}
+						barcodeQuery: {
+							/**
+							 * Barcode
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search by barcode
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find variants using their UPC, ISBN, or other barcode identifiers.
+							 */
+							longDesc: () => LocalizedString
+						}
+						variantIdQuery: {
+							/**
+							 * Variant ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search by variant ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Look up a specific variant using its unique Shopify variant ID.
+							 */
+							longDesc: () => LocalizedString
+						}
+						inventoryQuery: {
+							/**
+							 * Inventory Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by inventory level
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find variants based on their inventory status (e.g., in stock, out of stock, low stock).
+							 */
+							longDesc: () => LocalizedString
+						}
+						priceQuery: {
+							/**
+							 * Price
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by price
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Search for variants within a specific price range or at a particular price point.
+							 */
+							longDesc: () => LocalizedString
+						}
+						rawQuery: {
+							/**
+							 * Advanced Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Use custom search syntax
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter a custom search query for advanced filtering using Shopify search syntax.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Results Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the maximum number of variants to return in the search results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cursor: {
+							/**
+							 * Pagination Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Navigate through pages of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use a cursor to paginate through large sets of search results.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
 				'add-line-item-to-order': {
 					/**
 					 * Add Line Item to Order
@@ -37127,7 +38521,7 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 					options: {
-						name: {
+						companyName: {
 							/**
 							 * Name
 							 */
@@ -37300,7 +38694,7 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								fields: {
-									name: {
+									locationName: {
 										/**
 										 * Location Name
 										 */
@@ -37653,6 +39047,152 @@ export type TranslationFunctions = {
 				}
 			}
 			triggers: {
+				'shopify-abandoned-cart-trigger': {
+					/**
+					 * Shopify New Abandoned Cart
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a customer abandons a checkout in Shopify
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when a Shopify checkout is created but not completed within the specified time window. Use this to send recovery emails, offer discounts, or analyze cart abandonment patterns.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						abandonedHours: {
+							/**
+							 * Abandoned Hours
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Time window to consider a cart abandoned
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how many hours must pass since cart creation without completion for it to be considered abandoned. Values range from 1 hour to 168 hours (one week).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'shopify-blog-trigger': {
+					/**
+					 * Shopify Blog Created
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new blog is created in Shopify
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates whenever a new blog (not an article) is created in your Shopify store. Use this to monitor blog creation or automate follow-up tasks.
+					 */
+					longDesc: () => LocalizedString
+				}
+				'shopify-blog-entry-trigger': {
+					/**
+					 * Shopify New Blog Article
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a blog article is created or published
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when a new article is created or published in a specified Shopify blog. Use this to automate social media sharing, email notifications, or content distribution workflows.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						blogId: {
+							/**
+							 * Blog
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the blog to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose which Shopify blog to monitor for new articles.
+							 */
+							longDesc: () => LocalizedString
+						}
+						entryStatus: {
+							/**
+							 * Article Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter articles by publication status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose whether to trigger on all articles, only published articles, or only draft articles.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'shopify-customer-created-trigger': {
+					/**
+					 * Shopify Customer Created
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new customer account is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates whenever a new customer registers or is created in your Shopify store. Use this to send welcome emails, add customers to marketing lists, or create records in other systems.
+					 */
+					longDesc: () => LocalizedString
+				}
+				'shopify-customer-updated-trigger': {
+					/**
+					 * Shopify Customer Updated
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when customer information is modified
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates whenever customer information is updated in your Shopify store. Use this to sync customer data with other systems, track specific customer changes, or update marketing preferences.
+					 */
+					longDesc: () => LocalizedString
+				}
+				'shopify-new-order-trigger': {
+					/**
+					 * Shopify New Order
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new order is placed with the specified status
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when a new order is created in your Shopify store that matches the specified status filter. Use this to process orders, update inventory in other systems, or send custom notifications based on order status.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						orderStatus: {
+							/**
+							 * Order Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter orders by their status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select which type of orders to monitor based on their status (e.g., any, paid, fulfilled, cancelled). This lets you create different workflows for different order conditions.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
 			}
 		}
 	}

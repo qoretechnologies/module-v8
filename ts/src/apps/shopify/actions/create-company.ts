@@ -44,7 +44,7 @@ const AddressOptionType = {
 } satisfies TQoreTypeObject;
 
 const options = {
-  name: {
+  companyName: {
     type: 'string',
     required: true,
   },
@@ -92,14 +92,14 @@ const options = {
     },
     required: false,
   },
-
   locationProperties: {
     type: {
       type: 'hash',
       fields: {
-        name: {
+        locationName: {
           type: 'string',
-          required: true,
+          preselected: true,
+          required: false,
         },
         phone: {
           type: 'string',
@@ -176,9 +176,8 @@ type TCreateCompanyInput = {
     title?: string;
     locale?: string;
   };
-
   locationProperties?: {
-    name: string;
+    locationName: string;
     phone?: string;
     note?: string;
     externalId?: string;
@@ -284,7 +283,7 @@ const createCompany = async (context: TShopifyContextWithConn, data: TCreateComp
 
   if (data.locationProperties) {
     const locationInput: Record<string, any> = {
-      name: data.locationProperties.name,
+      name: data.locationProperties.locationName,
     };
 
     if (data.locationProperties.phone) locationInput.phone = data.locationProperties.phone;
@@ -355,14 +354,14 @@ export const CreateShopifyCompany = QoreAppCreator.createLocalizedAction<typeof 
   app: SHOPIFY_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
   api_function: async (data, _opts, context) => {
-    const { name, externalId, note, customerSince } = data || {};
+    const { companyName, externalId, note, customerSince } = data || {};
 
     const contactProperties =
       (data?.contactProperties as TCreateCompanyInput['contactProperties']) || undefined;
     const locationProperties =
       (data?.locationProperties as TCreateCompanyInput['locationProperties']) || undefined;
 
-    if (!name) {
+    if (!companyName) {
       throw new ShopifyError('Company name is required');
     }
 
@@ -373,13 +372,13 @@ export const CreateShopifyCompany = QoreAppCreator.createLocalizedAction<typeof 
       throw new ShopifyError('First name, last name, and email are required for company contact');
     }
 
-    if (locationProperties && !locationProperties.name) {
+    if (locationProperties && !locationProperties.locationName) {
       throw new ShopifyError('Location name is required for company location');
     }
 
     try {
       const result = await createCompany(context as TShopifyContextWithConn, {
-        name,
+        name: companyName,
         externalId,
         note,
         customerSince,
