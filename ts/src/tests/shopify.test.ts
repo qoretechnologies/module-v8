@@ -19,7 +19,7 @@ import { getShopifyFulfillmentOrderIdAllowedValues } from '../apps/shopify/helpe
 import { getShopifyFulfillmentOrderLineItemIdAllowedValues } from '../apps/shopify/helpers/get-fulfillment-order-item-id-allowed-values';
 import { getShopifyLocationIdAllowedValues } from '../apps/shopify/helpers/get-location-id-allowed-values';
 import { getShopifyOrderIdAllowedValues } from '../apps/shopify/helpers/get-order-id-allowed-values';
-import { getShopifyParentTransactionIdAllowedValues } from '../apps/shopify/helpers/get-parrent-transaction-id-allowed-values';
+import { getShopifyParentTransactionIdAllowedValues } from '../apps/shopify/helpers/get-parent-transaction-id-allowed-values';
 import { getShopifyProductVariantIdAllowedValues } from '../apps/shopify/helpers/get-product-variant-id-allowed-values';
 import { getShopifyTaxExemptionsAllowedValues } from '../apps/shopify/helpers/get-tax-exemptions-allowed-values';
 import { Debugger, DebugLevels } from '../utils/Debugger';

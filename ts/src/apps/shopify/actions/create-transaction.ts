@@ -3,8 +3,9 @@ import { SHOPIFY_APP_NAME, TShopifyContextWithConn } from '../constants';
 import { ShopifyError, transformShopifyResponse } from '../helpers/constants';
 import { getShopifyCurrencyAllowedValues } from '../helpers/get-currency-allowed-values';
 import { getShopifyOrderIdAllowedValues } from '../helpers/get-order-id-allowed-values';
-import { getShopifyParentTransactionIdAllowedValues } from '../helpers/get-parrent-transaction-id-allowed-values';
 import { ShopifyCreateTransactionResponseType } from './response-types/create-transaction.response';
+import { executeShopifyGraphQL } from '../helpers/constants';
+import { getShopifyParentTransactionIdAllowedValues } from '../helpers/get-parent-transaction-id-allowed-values';
 
 const options = {
   orderId: {
@@ -69,8 +70,6 @@ type TCreateTransactionInput = {
   finalCapture?: boolean;
   gateway?: string;
 };
-
-import { executeShopifyGraphQL } from '../helpers/constants';
 
 const createTransaction = async (
   context: TShopifyContextWithConn,
