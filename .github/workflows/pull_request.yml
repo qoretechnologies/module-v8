@@ -155,7 +155,7 @@ jobs:
       - name: Clone and build uuid module
         run: |
           git clone https://github.com/qorelanguage/module-uuid.git
-          cd module-yaml
+          cd module-uuid
           mkdir build
           cd build
           cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
