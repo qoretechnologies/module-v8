@@ -151,6 +151,16 @@ jobs:
           cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
           make && sudo make install
 
+      # Clone and build uuid-module
+      - name: Clone and build uuid module
+        run: |
+          git clone https://github.com/qorelanguage/module-uuid.git
+          cd module-yaml
+          mkdir build
+          cd build
+          cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
+          make && sudo make install
+
       # Clone and build json-module
       - name: Clone and build json-module
         run: |
