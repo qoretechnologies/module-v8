@@ -290,6 +290,8 @@ const DraftOrderLineItemInputType = {
     variantId: {
       type: 'string',
       required: false,
+      preselected: true,
+      get_allowed_values: getShopifyProductVariantIdAllowedValues,
     },
     quantity: {
       type: 'int',

@@ -532,6 +532,24 @@ describe('Should test Shopify integration', () => {
         expect(result.company.mainContact.customer.firstName).toBe('Complete');
         expect(result.company.mainContact.customer.lastName).toBe('Test');
       });
+      it('Should create a company with name only', async () => {
+        const action = CreateShopifyCompany as IQoreAppActionWithFunction;
+        const companyName = `Only name Test Company ${timestamp}`;
+        const result = await action.api_function(
+          {
+            companyName,
+          },
+          undefined,
+          {
+            conn_opts: {
+              shop: shopifyShop,
+              token: shopifyAccessToken,
+            } as any,
+          }
+        );
+        expect(result).toBeDefined();
+        expect(result.company.name).toBe(companyName);
+      });
     });
     describe('Should test customer creation', () => {
       it('Should create a complete customer with addresses and marketing consent', async () => {

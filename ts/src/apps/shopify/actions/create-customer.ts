@@ -123,7 +123,7 @@ const MetafieldType = {
 const options = {
   email: {
     type: 'string',
-    required: false,
+    required: true,
   },
   phone: {
     type: 'string',
@@ -131,10 +131,12 @@ const options = {
   },
   firstName: {
     type: 'string',
+    preselected: true,
     required: false,
   },
   lastName: {
     type: 'string',
+    preselected: true,
     required: false,
   },
   locale: {

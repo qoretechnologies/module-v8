@@ -444,6 +444,15 @@ export const fixOptions = (
           };
         }
 
+        if (typeof option.get_dependent_options === 'function') {
+          const original = option.get_dependent_options;
+          option.get_dependent_options = async (context) => {
+            const options = await original(context);
+
+            return fixOptions(action, options, appName, locale);
+          };
+        }
+
         const updatedOption = {
           ...option,
           ...(optionType && { type: optionType }),

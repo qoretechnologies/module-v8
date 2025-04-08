@@ -13,7 +13,6 @@ export const SHOPIFY_CONN_OPTIONS = {
 
 export const SHOPIFY_SCOPES = [
   'read_analytics',
-  'read_apps',
   'write_assigned_fulfillment_orders',
   'read_assigned_fulfillment_orders',
   'read_customer_events',

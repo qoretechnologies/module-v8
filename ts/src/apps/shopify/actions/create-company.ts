@@ -18,7 +18,7 @@ const AddressOptionType = {
   fields: {
     address1: {
       type: 'string',
-      required: false,
+      required: true,
     },
     address2: {
       type: 'string',
@@ -34,7 +34,7 @@ const AddressOptionType = {
     },
     countryCode: {
       type: 'string',
-      required: false,
+      required: true,
     },
     zip: {
       type: 'string',
@@ -98,8 +98,7 @@ const options = {
       fields: {
         locationName: {
           type: 'string',
-          preselected: true,
-          required: false,
+          required: true,
         },
         phone: {
           type: 'string',
@@ -137,15 +136,17 @@ const options = {
         shippingAddress: {
           type: AddressOptionType,
           required: false,
+          preselected: true,
         },
         billingSameAsShipping: {
           type: 'bool',
           required: false,
-          default_value: true,
+          preselected: true,
         },
         billingAddress: {
           type: AddressOptionType,
           required: false,
+          preselected: true,
         },
       },
     },
@@ -335,7 +336,6 @@ const createCompany = async (context: TShopifyContextWithConn, data: TCreateComp
 
     input.companyLocation = locationInput;
   }
-
   const createCompanyResult = await executeShopifyGraphQL(context, createCompanyMutation, {
     input,
   });

@@ -28,11 +28,11 @@ export default (locale: Locales) =>
     logo_mime_type: 'image/svg+xml',
 
     rest: {
-      url: 'https://{shop}.myshopify.com',
+      url: 'https://{{shop}}.myshopify.com',
       data: 'json',
       oauth2_grant_type: 'authorization_code',
-      oauth2_auth_url: 'https://{shop}.myshopify.com/admin/oauth/authorize',
-      oauth2_token_url: 'https://{shop}.myshopify.com/admin/oauth/access_token',
+      oauth2_auth_url: 'https://{{shop}}.myshopify.com/admin/oauth/authorize',
+      oauth2_token_url: 'https://{{shop}}.myshopify.com/admin/oauth/access_token',
       oauth2_scopes: SHOPIFY_SCOPES,
       ping_path: '/admin/api/2023-07/shop.json',
       ping_method: 'GET',

@@ -20,6 +20,7 @@ const options = {
   type: {
     type: 'string',
     required: true,
+    on_change: ['refetch'],
     allowed_values: [
       {
         value: 'product',

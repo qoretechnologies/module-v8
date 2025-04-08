@@ -111,6 +111,8 @@ export default (locale: Locales) =>
         'Sites.Manage.All',
         'Files.ReadWrite',
         'Sites.Read.All',
+        'User.Read',
+        'AllSites.Manage',
       ],
       ping_method: 'GET',
       ping_path: '/v1.0/me',
