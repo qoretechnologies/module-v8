@@ -3,7 +3,13 @@ import { ASANA_APP_NAME } from '../constants';
 import { getAsanaWorkspaceIdAllowedValuesRest } from '../helpers/get-workspace-id-allowed-values';
 import { getAsanaWorkspaceProjectIdAllowedValues } from '../helpers/get-workspace-project-id-allowed-values';
 import { asanaEventInfoType, asanaWebhookEchoHeader, asanaWebhookInfoLocation } from './constants';
-import { deregisterAsanaWebhook } from './helpers';
+import {
+  deregisterAsanaWebhook,
+  getAsanaProject,
+  getAsanaProjectTasks,
+  getCurrentAsanaUser,
+} from './helpers';
+import { Debugger } from '../../../utils/Debugger';
 
 const asanaTaskCompletedTrigger = QoreAppCreator.createLocalizedTrigger({
   app: ASANA_APP_NAME,
@@ -66,31 +72,68 @@ const asanaTaskCompletedTrigger = QoreAppCreator.createLocalizedTrigger({
   webhook_deregister: deregisterAsanaWebhook,
   webhook_echo_header: asanaWebhookEchoHeader,
   webhook_event_loc: asanaWebhookInfoLocation,
-  get_example_event_data: () => ({
-    action: 'changed',
-    type: 'task',
-    created_at: new Date().toISOString(),
-    parent: {
-      gid: '1208499061475139',
-      resource_type: 'project',
-      name: 'Project Name',
-    },
-    resource: {
-      gid: '1209628887786464',
-      resource_type: 'task',
-      name: 'Completed Task Example',
-      resource_subtype: 'default_task',
-    },
-    user: {
-      gid: '1206353569757060',
-      resource_type: 'user',
-      name: 'user@example.com',
-    },
-    change: {
-      field: 'completed',
+  get_example_event_data: async (context) => {
+    const mockData = {
       action: 'changed',
-    },
-  }),
+      type: 'task',
+      created_at: new Date().toISOString(),
+      parent: {
+        gid: '1208499061475139',
+        resource_type: 'project',
+        name: 'Project Name',
+      },
+      resource: {
+        gid: '1209628887786464',
+        resource_type: 'task',
+        name: 'Completed Task Example',
+        resource_subtype: 'default_task',
+      },
+      user: {
+        gid: '1206353569757060',
+        resource_type: 'user',
+        name: 'user@example.com',
+      },
+      change: {
+        field: 'completed',
+        action: 'changed',
+      },
+    };
+
+    const token = context?.conn_opts?.token;
+    const projectId = context?.opts?.project as string;
+
+    if (!token || !projectId) {
+      return mockData;
+    }
+
+    try {
+      const [user, project, tasks] = await Promise.all([
+        getCurrentAsanaUser(token),
+        getAsanaProject(token, projectId),
+        getAsanaProjectTasks(token, projectId),
+      ]);
+
+      if (user) {
+        mockData.user.gid = user.gid;
+        mockData.user.name = user.name;
+      }
+
+      const task = tasks?.[0];
+      if (task) {
+        mockData.resource.gid = task.gid;
+        mockData.resource.name = task.name;
+      }
+
+      if (project) {
+        mockData.parent.gid = project.gid;
+        mockData.parent.name = project.name;
+      }
+    } catch (error) {
+      Debugger.log(`Asana Error: Couldn't get example event data`, error);
+    } finally {
+      return mockData;
+    }
+  },
   event_info: {
     desc: 'New completed task event data',
     type: asanaEventInfoType,

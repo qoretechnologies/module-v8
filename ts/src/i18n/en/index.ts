@@ -919,244 +919,274 @@ const en = {
     },
     Asana: {
       displayName: 'Asana',
-      shortDesc: 'Collection of actions to interact with the Asana API',
-      longDesc: 'Collection of actions to interact with the Asana API',
+      shortDesc: 'Automate workflows by integrating with the Asana project management platform',
+      longDesc:
+        'Connect to Asana to automate task management, project monitoring, and team collaboration workflows. Use these triggers to respond to changes in tasks, projects, and workspaces.',
       triggers: {
         task_completed: {
           displayName: 'Task Completed',
-          shortDesc: 'Triggered when a task within a project is marked as completed.',
-          longDesc: 'Triggered when a task within a project is marked as completed.',
+          shortDesc: 'Triggers when a task is marked complete in a specific project',
+          longDesc:
+            'Initiates a workflow when any task within the specified project is marked as completed. Use this to automate follow-up actions or notifications upon task completion.',
           options: {
             project: {
               displayName: 'Project ID',
-              shortDesc: 'The project to look for tasks in',
-              longDesc: 'The project to look for tasks in',
+              shortDesc: 'The project containing the completed tasks',
+              longDesc:
+                'The unique identifier of the project where task completions will be monitored',
             },
             workspace: {
               displayName: 'Workspace ID',
-              shortDesc: 'The workspace to get projects from',
-              longDesc: 'The workspace to get projects from',
+              shortDesc: 'The workspace containing the project',
+              longDesc: 'The unique identifier of the workspace where the project exists',
             },
           },
           event_info: AsanaEventInfo,
         },
         attachment_added: {
           displayName: 'Attachment Added',
-          shortDesc: 'Triggered when an attachment is added to any task within a project.',
-          longDesc: 'Triggered when an attachment is added to any task within a project.',
+          shortDesc: 'Triggers when an attachment is uploaded to a task',
+          longDesc:
+            'Initiates a workflow when a file is attached to any task within the specified project. Optionally filter by a specific task. Use this to process or track files as they are added to tasks.',
           options: {
             project: {
               displayName: 'Project ID',
-              shortDesc: 'The project to look for tasks in',
-              longDesc: 'The project to look for tasks in',
+              shortDesc: 'The project containing the tasks with attachments',
+              longDesc:
+                'The unique identifier of the project where attachment activities will be monitored',
+            },
+            task: {
+              displayName: 'Task ID (Optional)',
+              shortDesc: 'Specific task to monitor for attachments',
+              longDesc:
+                'The unique identifier of a specific task to monitor. If not provided, attachments from all tasks in the project will trigger the workflow',
             },
             workspace: {
               displayName: 'Workspace ID',
-              shortDesc: 'The workspace to get projects from',
-              longDesc: 'The workspace to get projects from',
+              shortDesc: 'The workspace containing the project',
+              longDesc: 'The unique identifier of the workspace where the project exists',
             },
           },
           event_info: AsanaEventInfo,
         },
         subtask_completed: {
           displayName: 'Subtask Completed',
-          shortDesc: 'Triggered when a subtask is marked as completed.',
-          longDesc: 'Triggered when a subtask is marked as completed.',
+          shortDesc: 'Triggers when a subtask is marked complete',
+          longDesc:
+            'Initiates a workflow when a subtask within a specific parent task is marked as completed. Use this to track progress on multi-stage tasks or to trigger the next steps in a workflow.',
           options: {
             project: {
               displayName: 'Project ID',
-              shortDesc: 'The project to look for tasks in',
-              longDesc: 'The project to look for tasks in',
+              shortDesc: 'The project containing the parent task',
+              longDesc: 'The unique identifier of the project where the parent task exists',
             },
             workspace: {
               displayName: 'Workspace ID',
-              shortDesc: 'The workspace to get projects from',
-              longDesc: 'The workspace to get projects from',
+              shortDesc: 'The workspace containing the project',
+              longDesc: 'The unique identifier of the workspace where the project exists',
             },
             task: {
-              displayName: 'Task ID',
-              shortDesc: 'The task to look for subtasks in',
-              longDesc: 'The task to look for subtasks in',
+              displayName: 'Parent Task ID',
+              shortDesc: 'The parent task containing the subtasks',
+              longDesc:
+                'The unique identifier of the parent task whose subtasks will be monitored for completion',
             },
           },
           event_info: AsanaEventInfo,
         },
         project_task_added: {
           displayName: 'Project Task Added',
-          shortDesc: 'Triggered when a new task is added to a project.',
-          longDesc: 'Triggered when a new task is added to a project.',
+          shortDesc: 'Triggers when a new task is created in a project',
+          longDesc:
+            'Initiates a workflow whenever a new task is added to the specified project. Use this to automatically process, categorize, or assign new tasks as they are created.',
           options: {
             project: {
               displayName: 'Project ID',
-              shortDesc: 'The project to look for tasks in',
-              longDesc: 'The project to look for tasks in',
+              shortDesc: 'The project to monitor for new tasks',
+              longDesc:
+                'The unique identifier of the project where new task creation will be monitored',
             },
             workspace: {
               displayName: 'Workspace ID',
-              shortDesc: 'The workspace to get projects from',
-              longDesc: 'The workspace to get projects from',
+              shortDesc: 'The workspace containing the project',
+              longDesc: 'The unique identifier of the workspace where the project exists',
             },
           },
           event_info: AsanaEventInfo,
         },
         project_added: {
           displayName: 'Project Added',
-          shortDesc: 'Triggered when a new project is added to a workspace.',
-          longDesc: 'Triggered when a new project is added to a workspace.',
+          shortDesc: 'Triggers when a new project is created in a workspace',
+          longDesc:
+            'Initiates a workflow whenever a new project is created within the specified workspace. Use this to automate project setup, create standard templates, or notify team members about new initiatives.',
           options: {
             workspace: {
               displayName: 'Workspace ID',
-              shortDesc: 'The workspace to get projects from',
-              longDesc: 'The workspace to get projects from',
+              shortDesc: 'The workspace to monitor for new projects',
+              longDesc:
+                'The unique identifier of the workspace where new project creation will be monitored',
             },
           },
           event_info: AsanaEventInfo,
         },
         task_comment_added: {
           displayName: 'Task Comment Added',
-          shortDesc: 'Triggered when a new comment is added to a specific task.',
-          longDesc: 'Triggered when a new comment is added to a specific task.',
+          shortDesc: 'Triggers when a comment is added to a specific task',
+          longDesc:
+            'Initiates a workflow when a new comment is posted on the specified task. Use this to monitor discussions, notify stakeholders, or track communication around critical tasks.',
           options: {
             project: {
               displayName: 'Project ID',
-              shortDesc: 'The project to look for tasks in',
-              longDesc: 'The project to look for tasks in',
+              shortDesc: 'The project containing the task',
+              longDesc: 'The unique identifier of the project where the task exists',
             },
             workspace: {
               displayName: 'Workspace ID',
-              shortDesc: 'The workspace to get projects from',
-              longDesc: 'The workspace to get projects from',
+              shortDesc: 'The workspace containing the project',
+              longDesc: 'The unique identifier of the workspace where the project exists',
             },
             task: {
               displayName: 'Task ID',
-              shortDesc: 'The task to look for comments in',
-              longDesc: 'The task to look for comments in',
+              shortDesc: 'The specific task to monitor for comments',
+              longDesc: 'The unique identifier of the task where comments will be monitored',
             },
           },
           event_info: AsanaEventInfo,
         },
         task_story_added: {
           displayName: 'Task Story Added',
-          shortDesc: 'Triggered when a new story (e.g., a comment or update) is added to a task.',
-          longDesc: 'Triggered when a new story (e.g., a comment or update) is added to a task.',
+          shortDesc: 'Triggers when any activity occurs on a task',
+          longDesc:
+            'Initiates a workflow when any story (comment, status update, field change) is added to a task. This captures all activity including automated system updates. Use this for comprehensive task activity monitoring.',
           options: {
             project: {
               displayName: 'Project ID',
-              shortDesc: 'The project to look for tasks in',
-              longDesc: 'The project to look for tasks in',
+              shortDesc: 'The project containing the task',
+              longDesc: 'The unique identifier of the project where the task exists',
             },
             workspace: {
               displayName: 'Workspace ID',
-              shortDesc: 'The workspace to get projects from',
-              longDesc: 'The workspace to get projects from',
+              shortDesc: 'The workspace containing the project',
+              longDesc: 'The unique identifier of the workspace where the project exists',
             },
             task: {
               displayName: 'Task ID',
-              shortDesc: 'The task to look for stories in',
-              longDesc: 'The task to look for stories in',
+              shortDesc: 'The specific task to monitor for activity',
+              longDesc: 'The unique identifier of the task where all activity will be monitored',
             },
           },
           event_info: AsanaEventInfo,
         },
         task_subtask_added: {
           displayName: 'Task Subtask Added',
-          shortDesc: 'Triggered when a new subtask is added to a specific task.',
-          longDesc: 'Triggered when a new subtask is added to a specific task.',
+          shortDesc: 'Triggers when a subtask is created under a parent task',
+          longDesc:
+            'Initiates a workflow when a new subtask is added to the specified parent task. Use this to track task breakdown or to automate subtask assignments and deadlines.',
           options: {
             project: {
               displayName: 'Project ID',
-              shortDesc: 'The project to look for tasks in',
-              longDesc: 'The project to look for tasks in',
+              shortDesc: 'The project containing the parent task',
+              longDesc: 'The unique identifier of the project where the parent task exists',
             },
             workspace: {
               displayName: 'Workspace ID',
-              shortDesc: 'The workspace to get projects from',
-              longDesc: 'The workspace to get projects from',
+              shortDesc: 'The workspace containing the project',
+              longDesc: 'The unique identifier of the workspace where the project exists',
             },
             task: {
-              displayName: 'Task ID',
-              shortDesc: 'The task to look for subtasks in',
-              longDesc: 'The task to look for subtasks in',
+              displayName: 'Parent Task ID',
+              shortDesc: 'The parent task to monitor for new subtasks',
+              longDesc:
+                'The unique identifier of the parent task where subtask creation will be monitored',
             },
           },
           event_info: AsanaEventInfo,
         },
         task_tag_added: {
           displayName: 'Task Tag Added',
-          shortDesc: 'Triggered when a tag is added to a specific task.',
-          longDesc: 'Triggered when a tag is added to a specific task.',
+          shortDesc: 'Triggers when a tag is applied to a task',
+          longDesc:
+            'Initiates a workflow when a tag is added to the specified task. Use this to automate actions based on task categorization or to monitor how tasks are being classified.',
           options: {
             project: {
               displayName: 'Project ID',
-              shortDesc: 'The project to look for tasks in',
-              longDesc: 'The project to look for tasks in',
+              shortDesc: 'The project containing the task',
+              longDesc: 'The unique identifier of the project where the task exists',
             },
             workspace: {
               displayName: 'Workspace ID',
-              shortDesc: 'The workspace to get projects from',
-              longDesc: 'The workspace to get projects from',
+              shortDesc: 'The workspace containing the project',
+              longDesc: 'The unique identifier of the workspace where the project exists',
             },
             task: {
               displayName: 'Task ID',
-              shortDesc: 'The task to look for tags in',
-              longDesc: 'The task to look for tags in',
+              shortDesc: 'The specific task to monitor for tag additions',
+              longDesc: 'The unique identifier of the task where tag additions will be monitored',
             },
           },
           event_info: AsanaEventInfo,
         },
         team_added: {
           displayName: 'Team Added',
-          shortDesc: 'Triggered when a new team is created in a workspace.',
-          longDesc: 'Triggered when a new team is created in a workspace.',
+          shortDesc: 'Triggers when a new team is created in a workspace',
+          longDesc:
+            'Initiates a workflow when a new team is formed within the specified workspace. Use this to automate team onboarding processes or to set up default team resources.',
           options: {
             workspace: {
               displayName: 'Workspace ID',
-              shortDesc: 'The workspace to get teams from',
-              longDesc: 'The workspace to get teams from',
+              shortDesc: 'The workspace to monitor for new teams',
+              longDesc:
+                'The unique identifier of the workspace where new team creation will be monitored',
             },
           },
           event_info: AsanaEventInfo,
         },
         user_added: {
           displayName: 'User Added',
-          shortDesc: 'Triggered when a new user joins a workspace.',
-          longDesc: 'Triggered when a new user joins a workspace.',
+          shortDesc: 'Triggers when a user joins a workspace',
+          longDesc:
+            'Initiates a workflow when a new user is added to the specified workspace. Use this to automate user onboarding, permission assignments, or welcome notifications.',
           options: {
             workspace: {
               displayName: 'Workspace ID',
-              shortDesc: 'The workspace to get users from',
-              longDesc: 'The workspace to get users from',
+              shortDesc: 'The workspace to monitor for new users',
+              longDesc:
+                'The unique identifier of the workspace where new user additions will be monitored',
             },
           },
           event_info: AsanaEventInfo,
         },
         tag_created: {
           displayName: 'Tag Created',
-          shortDesc: 'Triggered when a new tag is created in a workspace.',
-          longDesc: 'Triggered when a new tag is created in a workspace.',
+          shortDesc: 'Triggers when a new tag is created in a workspace',
+          longDesc:
+            'Initiates a workflow when a new tag is created within the specified workspace. Use this to monitor taxonomy changes or to standardize tag usage across projects.',
           options: {
             workspace: {
               displayName: 'Workspace ID',
-              shortDesc: 'The workspace to get tags from',
-              longDesc: 'The workspace to get tags from',
+              shortDesc: 'The workspace to monitor for new tags',
+              longDesc:
+                'The unique identifier of the workspace where new tag creation will be monitored',
             },
           },
           event_info: AsanaEventInfo,
         },
         task_moved_to_section: {
           displayName: 'Task Moved to Section',
-          shortDesc: 'Triggered when a task is moved to a different section within a project.',
-          longDesc: 'Triggered when a task is moved to a different section within a project.',
+          shortDesc: 'Triggers when a task is moved to a different section',
+          longDesc:
+            'Initiates a workflow when a task is moved between sections in the specified project. Use this to track task progress through different stages or to automate actions based on task status changes.',
           options: {
             project: {
               displayName: 'Project ID',
-              shortDesc: 'The project to look for tasks in',
-              longDesc: 'The project to look for tasks in',
+              shortDesc: 'The project containing the sections and tasks',
+              longDesc:
+                'The unique identifier of the project where task movements between sections will be monitored',
             },
             workspace: {
               displayName: 'Workspace ID',
-              shortDesc: 'The workspace to get projects from',
-              longDesc: 'The workspace to get projects from',
+              shortDesc: 'The workspace containing the project',
+              longDesc: 'The unique identifier of the workspace where the project exists',
             },
           },
           event_info: AsanaEventInfo,

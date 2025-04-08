@@ -1,10 +1,17 @@
 import { EQoreAppActionCode, QoreAppCreator, QorusRequest } from '@qoretechnologies/ts-toolkit';
+import { Debugger } from '../../../utils/Debugger';
 import { ASANA_APP_NAME } from '../constants';
+import { getAsanaTaskIdAllowedValues } from '../helpers/get-task-id-allowed-values';
 import { getAsanaWorkspaceIdAllowedValuesRest } from '../helpers/get-workspace-id-allowed-values';
 import { getAsanaWorkspaceProjectIdAllowedValues } from '../helpers/get-workspace-project-id-allowed-values';
 import { asanaEventInfoType, asanaWebhookEchoHeader, asanaWebhookInfoLocation } from './constants';
-import { deregisterAsanaWebhook, getAsanaProjectTasks, getCurrentAsanaUser } from './helpers';
-import { Debugger } from '../../../utils/Debugger';
+import {
+  deregisterAsanaWebhook,
+  getAsanaProject,
+  getAsanaTask,
+  getAsasnaAttachments,
+  getCurrentAsanaUser,
+} from './helpers';
 
 const asanaNewAttachmentTrigger = QoreAppCreator.createLocalizedTrigger({
   action: 'attachment_added',
@@ -15,6 +22,7 @@ const asanaNewAttachmentTrigger = QoreAppCreator.createLocalizedTrigger({
     workspace: {
       type: 'string',
       required: true,
+      on_change: ['refetch'],
       rest_get_allowed_values: getAsanaWorkspaceIdAllowedValuesRest,
     },
     project: {
@@ -23,10 +31,18 @@ const asanaNewAttachmentTrigger = QoreAppCreator.createLocalizedTrigger({
       depends_on: ['workspace'],
       get_allowed_values: getAsanaWorkspaceProjectIdAllowedValues,
     },
+    task: {
+      type: 'string',
+      required: false,
+      preselected: true,
+      depends_on: ['project'],
+      get_allowed_values: getAsanaTaskIdAllowedValues,
+    },
   },
   webhook_register: async (context, url) => {
     const token = context?.conn_opts?.token;
     const project = context?.opts?.project;
+    const task = context?.opts?.task;
 
     if (!token) {
       throw new Error('Token is required to register New Attachment Asana webhook');
@@ -43,7 +59,7 @@ const asanaNewAttachmentTrigger = QoreAppCreator.createLocalizedTrigger({
         },
         data: {
           data: {
-            resource: project,
+            resource: task || project,
             target: url,
             filters: [
               {
@@ -69,24 +85,25 @@ const asanaNewAttachmentTrigger = QoreAppCreator.createLocalizedTrigger({
   get_example_event_data: async (context) => {
     const token = context?.conn_opts?.token;
     const project = context?.opts?.project;
+    const task = context?.opts?.task;
 
     const mockData = {
       action: 'added',
       type: 'attachment',
       created_at: new Date().toISOString(),
       parent: {
-        gid: '1209628887786464',
+        gid: 'example-task-gid',
         resource_type: 'task',
         name: 'Example Task',
       },
       resource: {
-        gid: '1209732554654321',
+        gid: 'example-attachment-gid',
         resource_type: 'attachment',
         name: 'document.pdf',
         resource_subtype: 'pdf',
       },
       user: {
-        gid: '1206353569757060',
+        gid: 'example-user-gid',
         resource_type: 'user',
         name: 'user@example.com',
       },
@@ -101,32 +118,33 @@ const asanaNewAttachmentTrigger = QoreAppCreator.createLocalizedTrigger({
     }
 
     try {
-      const [taskResult, userResult] = await Promise.allSettled([
-        getAsanaProjectTasks(token, project),
+      const [parent, user, attachments] = await Promise.all([
+        task ? getAsanaTask(token, task) : getAsanaProject(token, project),
         getCurrentAsanaUser(token),
+        getAsasnaAttachments(token, task || project, task ? 'tasks' : 'projects'),
       ]);
 
-      const event = { ...mockData };
-
-      if (taskResult.status === 'fulfilled' && taskResult.value) {
-        const taskData = taskResult.value[0];
-        if (taskData?.name) {
-          event.parent.name = taskData.name;
-        }
+      if (parent) {
+        mockData.parent.gid = parent.gid;
+        mockData.parent.name = parent.name;
+        mockData.parent.resource_type = parent.resource_type;
       }
 
-      if (userResult.status === 'fulfilled' && userResult.value) {
-        const userData = userResult.value;
-        if (userData) {
-          event.user.gid = userData.gid;
-          event.user.name = userData.email || userData.name;
-        }
+      if (user) {
+        mockData.user.gid = user.gid;
+        mockData.user.name = user.name;
       }
 
-      return event;
+      const attachment = attachments?.[0];
+      if (attachment) {
+        mockData.resource.gid = attachment.gid;
+        mockData.resource.name = attachment.name;
+        mockData.resource.resource_type = attachment.resource_type;
+        mockData.resource.resource_subtype = attachment.resource_subtype;
+      }
     } catch (error) {
       Debugger.log('Error fetching attachment event data:', error);
-
+    } finally {
       return mockData;
     }
   },

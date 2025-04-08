@@ -2,7 +2,8 @@ import { EQoreAppActionCode, QoreAppCreator, QorusRequest } from '@qoretechnolog
 import { ASANA_APP_NAME } from '../constants';
 import { getAsanaWorkspaceIdAllowedValuesRest } from '../helpers/get-workspace-id-allowed-values';
 import { asanaEventInfoType, asanaWebhookEchoHeader, asanaWebhookInfoLocation } from './constants';
-import { deregisterAsanaWebhook } from './helpers';
+import { deregisterAsanaWebhook, getCurrentAsanaUser } from './helpers';
+import { Debugger } from '../../../utils/Debugger';
 
 const asanaNewUserTrigger = QoreAppCreator.createLocalizedTrigger({
   app: ASANA_APP_NAME,
@@ -58,26 +59,56 @@ const asanaNewUserTrigger = QoreAppCreator.createLocalizedTrigger({
   webhook_deregister: deregisterAsanaWebhook,
   webhook_echo_header: asanaWebhookEchoHeader,
   webhook_event_loc: asanaWebhookInfoLocation,
-  get_example_event_data: () => ({
-    action: 'added',
-    type: 'user',
-    created_at: new Date().toISOString(),
-    parent: {
-      gid: '1208408525816938',
-      resource_type: 'workspace',
-      name: 'Workspace Name',
-    },
-    resource: {
-      gid: '1206987654321098',
-      resource_type: 'user',
-      name: 'new.user@example.com',
-    },
-    user: {
-      gid: '1206353569757060',
-      resource_type: 'user',
-      name: 'admin@example.com',
-    },
-  }),
+  get_example_event_data: async (context) => {
+    const mockData = {
+      action: 'added',
+      type: 'user',
+      created_at: new Date().toISOString(),
+      parent: {
+        gid: '1208408525816938',
+        resource_type: 'workspace',
+        name: 'Workspace Name',
+      },
+      resource: {
+        gid: '1206987654321098',
+        resource_type: 'user',
+        name: 'new.user@example.com',
+      },
+      user: {
+        gid: '1206353569757060',
+        resource_type: 'user',
+        name: 'admin@example.com',
+      },
+    };
+
+    const token = context?.conn_opts?.token;
+    const workspaceId = context?.opts?.workspace;
+
+    if (!token || !workspaceId) {
+      return mockData;
+    }
+
+    try {
+      const user = await getCurrentAsanaUser(token);
+
+      if (user) {
+        mockData.user = {
+          gid: user.gid,
+          resource_type: 'user',
+          name: user.name,
+        };
+        mockData.resource = {
+          gid: user.gid,
+          resource_type: 'user',
+          name: user.name,
+        };
+      }
+    } catch (error) {
+      Debugger.log(`Asana Error: Couldn't get example event data`, error);
+    } finally {
+      return mockData;
+    }
+  },
   event_info: {
     desc: 'New user event data',
     type: asanaEventInfoType,

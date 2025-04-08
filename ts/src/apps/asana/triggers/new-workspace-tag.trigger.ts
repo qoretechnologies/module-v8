@@ -2,7 +2,13 @@ import { EQoreAppActionCode, QoreAppCreator, QorusRequest } from '@qoretechnolog
 import { ASANA_APP_NAME } from '../constants';
 import { getAsanaWorkspaceIdAllowedValuesRest } from '../helpers/get-workspace-id-allowed-values';
 import { asanaEventInfoType, asanaWebhookEchoHeader, asanaWebhookInfoLocation } from './constants';
-import { deregisterAsanaWebhook } from './helpers';
+import {
+  deregisterAsanaWebhook,
+  getAsanaTags,
+  getAsanaWorkspace,
+  getCurrentAsanaUser,
+} from './helpers';
+import { Debugger } from '../../../utils/Debugger';
 
 const asanaNewWorkspaceTagTrigger = QoreAppCreator.createLocalizedTrigger({
   app: ASANA_APP_NAME,
@@ -58,26 +64,63 @@ const asanaNewWorkspaceTagTrigger = QoreAppCreator.createLocalizedTrigger({
   webhook_deregister: deregisterAsanaWebhook,
   webhook_echo_header: asanaWebhookEchoHeader,
   webhook_event_loc: asanaWebhookInfoLocation,
-  get_example_event_data: () => ({
-    action: 'added',
-    type: 'tag',
-    created_at: new Date().toISOString(),
-    parent: {
-      gid: '1208408525816938',
-      resource_type: 'workspace',
-      name: 'Workspace Name',
-    },
-    resource: {
-      gid: '1209876543212345',
-      resource_type: 'tag',
-      name: 'workspace-wide-tag',
-    },
-    user: {
-      gid: '1206353569757060',
-      resource_type: 'user',
-      name: 'user@example.com',
-    },
-  }),
+  get_example_event_data: async (context) => {
+    const mockData = {
+      action: 'added',
+      type: 'tag',
+      created_at: new Date().toISOString(),
+      parent: {
+        gid: '1208408525816938',
+        resource_type: 'workspace',
+        name: 'Workspace Name',
+      },
+      resource: {
+        gid: '1209876543212345',
+        resource_type: 'tag',
+        name: 'workspace-wide-tag',
+      },
+      user: {
+        gid: '1206353569757060',
+        resource_type: 'user',
+        name: 'user@example.com',
+      },
+    };
+
+    const workspaceId = context?.opts?.workspace;
+    const token = context?.conn_opts?.token;
+
+    if (!token || !workspaceId) {
+      return mockData;
+    }
+
+    try {
+      const [user, parent, tags] = await Promise.all([
+        getCurrentAsanaUser(token),
+        getAsanaWorkspace(token, workspaceId),
+        getAsanaTags(token, workspaceId, 'workspaces'),
+      ]);
+
+      if (parent) {
+        mockData.parent.gid = parent.gid;
+        mockData.parent.name = parent.name;
+      }
+
+      if (user) {
+        mockData.user.gid = user.gid;
+        mockData.user.name = user.name;
+      }
+
+      const tag = tags?.[0];
+      if (tag) {
+        mockData.resource.gid = tag.gid;
+        mockData.resource.name = tag.name;
+      }
+    } catch (error) {
+      Debugger.log(`Asana Error: Couldn't get example event data`, error);
+    } finally {
+      return mockData;
+    }
+  },
   event_info: {
     desc: 'New workspace tag event data',
     type: asanaEventInfoType,

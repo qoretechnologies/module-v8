@@ -4,7 +4,13 @@ import { getAsanaTaskIdAllowedValues } from '../helpers/get-task-id-allowed-valu
 import { getAsanaWorkspaceIdAllowedValuesRest } from '../helpers/get-workspace-id-allowed-values';
 import { getAsanaWorkspaceProjectIdAllowedValues } from '../helpers/get-workspace-project-id-allowed-values';
 import { asanaEventInfoType, asanaWebhookEchoHeader, asanaWebhookInfoLocation } from './constants';
-import { deregisterAsanaWebhook } from './helpers';
+import {
+  deregisterAsanaWebhook,
+  getAsanaTask,
+  getAsasnaTaskSubtask,
+  getCurrentAsanaUser,
+} from './helpers';
+import { Debugger } from '../../../utils/Debugger';
 
 const asanaNewTaskSubtaskTrigger = QoreAppCreator.createLocalizedTrigger({
   app: ASANA_APP_NAME,
@@ -72,27 +78,63 @@ const asanaNewTaskSubtaskTrigger = QoreAppCreator.createLocalizedTrigger({
   webhook_deregister: deregisterAsanaWebhook,
   webhook_echo_header: asanaWebhookEchoHeader,
   webhook_event_loc: asanaWebhookInfoLocation,
-  get_example_event_data: () => ({
-    action: 'added',
-    type: 'task',
-    created_at: new Date().toISOString(),
-    parent: {
-      gid: '1209628887786464',
-      resource_type: 'task',
-      name: 'Parent Task',
-    },
-    resource: {
-      gid: '1209732554321987',
-      resource_type: 'task',
-      name: 'Subtask Example',
-      resource_subtype: 'default_task',
-    },
-    user: {
-      gid: '1206353569757060',
-      resource_type: 'user',
-      name: 'user@example.com',
-    },
-  }),
+  get_example_event_data: async (context) => {
+    const mockData = {
+      action: 'added',
+      type: 'task',
+      created_at: new Date().toISOString(),
+      parent: {
+        gid: '1209628887786464',
+        resource_type: 'task',
+        name: 'Parent Task',
+      },
+      resource: {
+        gid: '1209732554321987',
+        resource_type: 'task',
+        name: 'Subtask Example',
+        resource_subtype: 'default_task',
+      },
+      user: {
+        gid: '1206353569757060',
+        resource_type: 'user',
+        name: 'user@example.com',
+      },
+    };
+
+    const token = context?.conn_opts?.token;
+    const task = context?.opts?.task as string;
+
+    if (!token || !task) {
+      return mockData;
+    }
+
+    try {
+      const [user, parent, subtask] = await Promise.all([
+        getCurrentAsanaUser(token),
+        getAsanaTask(token, task),
+        getAsasnaTaskSubtask(token, task),
+      ]);
+
+      if (parent) {
+        mockData.parent.gid = parent.gid;
+        mockData.parent.name = parent.name;
+      }
+
+      if (user) {
+        mockData.user.gid = user.gid;
+        mockData.user.name = user.name;
+      }
+
+      if (subtask) {
+        mockData.resource.gid = subtask.gid;
+        mockData.resource.name = subtask.name;
+      }
+    } catch (error) {
+      Debugger.log(`Asana Error: Couldn't get example event data`, error);
+    } finally {
+      return mockData;
+    }
+  },
   event_info: {
     desc: 'New task subtask event data',
     type: asanaEventInfoType,

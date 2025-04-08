@@ -2410,11 +2410,11 @@ type RootTranslation = {
 			 */
 			displayName: string
 			/**
-			 * C​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​t​h​e​ ​A​s​a​n​a​ ​A​P​I
+			 * A​u​t​o​m​a​t​e​ ​w​o​r​k​f​l​o​w​s​ ​b​y​ ​i​n​t​e​g​r​a​t​i​n​g​ ​w​i​t​h​ ​t​h​e​ ​A​s​a​n​a​ ​p​r​o​j​e​c​t​ ​m​a​n​a​g​e​m​e​n​t​ ​p​l​a​t​f​o​r​m
 			 */
 			shortDesc: string
 			/**
-			 * C​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​t​h​e​ ​A​s​a​n​a​ ​A​P​I
+			 * C​o​n​n​e​c​t​ ​t​o​ ​A​s​a​n​a​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​t​a​s​k​ ​m​a​n​a​g​e​m​e​n​t​,​ ​p​r​o​j​e​c​t​ ​m​o​n​i​t​o​r​i​n​g​,​ ​a​n​d​ ​t​e​a​m​ ​c​o​l​l​a​b​o​r​a​t​i​o​n​ ​w​o​r​k​f​l​o​w​s​.​ ​U​s​e​ ​t​h​e​s​e​ ​t​r​i​g​g​e​r​s​ ​t​o​ ​r​e​s​p​o​n​d​ ​t​o​ ​c​h​a​n​g​e​s​ ​i​n​ ​t​a​s​k​s​,​ ​p​r​o​j​e​c​t​s​,​ ​a​n​d​ ​w​o​r​k​s​p​a​c​e​s​.
 			 */
 			longDesc: string
 			triggers: {
@@ -2424,11 +2424,11 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​t​a​s​k​ ​w​i​t​h​i​n​ ​a​ ​p​r​o​j​e​c​t​ ​i​s​ ​m​a​r​k​e​d​ ​a​s​ ​c​o​m​p​l​e​t​e​d​.
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​t​a​s​k​ ​i​s​ ​m​a​r​k​e​d​ ​c​o​m​p​l​e​t​e​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​r​o​j​e​c​t
 					 */
 					shortDesc: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​t​a​s​k​ ​w​i​t​h​i​n​ ​a​ ​p​r​o​j​e​c​t​ ​i​s​ ​m​a​r​k​e​d​ ​a​s​ ​c​o​m​p​l​e​t​e​d​.
+					 * I​n​i​t​i​a​t​e​s​ ​a​ ​w​o​r​k​f​l​o​w​ ​w​h​e​n​ ​a​n​y​ ​t​a​s​k​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​p​r​o​j​e​c​t​ ​i​s​ ​m​a​r​k​e​d​ ​a​s​ ​c​o​m​p​l​e​t​e​d​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​f​o​l​l​o​w​-​u​p​ ​a​c​t​i​o​n​s​ ​o​r​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​u​p​o​n​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​.
 					 */
 					longDesc: string
 					options: {
@@ -2438,11 +2438,11 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​c​o​m​p​l​e​t​e​d​ ​t​a​s​k​s
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​s​ ​w​i​l​l​ ​b​e​ ​m​o​n​i​t​o​r​e​d
 							 */
 							longDesc: string
 						}
@@ -2452,11 +2452,11 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​p​r​o​j​e​c​t
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​w​o​r​k​s​p​a​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​e​x​i​s​t​s
 							 */
 							longDesc: string
 						}
@@ -2784,11 +2784,11 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​n​ ​a​t​t​a​c​h​m​e​n​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​n​y​ ​t​a​s​k​ ​w​i​t​h​i​n​ ​a​ ​p​r​o​j​e​c​t​.
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​a​t​t​a​c​h​m​e​n​t​ ​i​s​ ​u​p​l​o​a​d​e​d​ ​t​o​ ​a​ ​t​a​s​k
 					 */
 					shortDesc: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​n​ ​a​t​t​a​c​h​m​e​n​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​n​y​ ​t​a​s​k​ ​w​i​t​h​i​n​ ​a​ ​p​r​o​j​e​c​t​.
+					 * I​n​i​t​i​a​t​e​s​ ​a​ ​w​o​r​k​f​l​o​w​ ​w​h​e​n​ ​a​ ​f​i​l​e​ ​i​s​ ​a​t​t​a​c​h​e​d​ ​t​o​ ​a​n​y​ ​t​a​s​k​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​p​r​o​j​e​c​t​.​ ​O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​p​r​o​c​e​s​s​ ​o​r​ ​t​r​a​c​k​ ​f​i​l​e​s​ ​a​s​ ​t​h​e​y​ ​a​r​e​ ​a​d​d​e​d​ ​t​o​ ​t​a​s​k​s​.
 					 */
 					longDesc: string
 					options: {
@@ -2798,11 +2798,25 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​s​k​s​ ​w​i​t​h​ ​a​t​t​a​c​h​m​e​n​t​s
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​a​t​t​a​c​h​m​e​n​t​ ​a​c​t​i​v​i​t​i​e​s​ ​w​i​l​l​ ​b​e​ ​m​o​n​i​t​o​r​e​d
+							 */
+							longDesc: string
+						}
+						task: {
+							/**
+							 * T​a​s​k​ ​I​D​ ​(​O​p​t​i​o​n​a​l​)
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​t​a​s​k​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​a​t​t​a​c​h​m​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​ ​t​o​ ​m​o​n​i​t​o​r​.​ ​I​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​,​ ​a​t​t​a​c​h​m​e​n​t​s​ ​f​r​o​m​ ​a​l​l​ ​t​a​s​k​s​ ​i​n​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​w​i​l​l​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​w​o​r​k​f​l​o​w
 							 */
 							longDesc: string
 						}
@@ -2812,11 +2826,11 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​p​r​o​j​e​c​t
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​w​o​r​k​s​p​a​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​e​x​i​s​t​s
 							 */
 							longDesc: string
 						}
@@ -3144,11 +3158,11 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​s​u​b​t​a​s​k​ ​i​s​ ​m​a​r​k​e​d​ ​a​s​ ​c​o​m​p​l​e​t​e​d​.
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​s​u​b​t​a​s​k​ ​i​s​ ​m​a​r​k​e​d​ ​c​o​m​p​l​e​t​e
 					 */
 					shortDesc: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​s​u​b​t​a​s​k​ ​i​s​ ​m​a​r​k​e​d​ ​a​s​ ​c​o​m​p​l​e​t​e​d​.
+					 * I​n​i​t​i​a​t​e​s​ ​a​ ​w​o​r​k​f​l​o​w​ ​w​h​e​n​ ​a​ ​s​u​b​t​a​s​k​ ​w​i​t​h​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​a​r​e​n​t​ ​t​a​s​k​ ​i​s​ ​m​a​r​k​e​d​ ​a​s​ ​c​o​m​p​l​e​t​e​d​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​t​r​a​c​k​ ​p​r​o​g​r​e​s​s​ ​o​n​ ​m​u​l​t​i​-​s​t​a​g​e​ ​t​a​s​k​s​ ​o​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​n​e​x​t​ ​s​t​e​p​s​ ​i​n​ ​a​ ​w​o​r​k​f​l​o​w​.
 					 */
 					longDesc: string
 					options: {
@@ -3158,11 +3172,11 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​p​a​r​e​n​t​ ​t​a​s​k
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​t​h​e​ ​p​a​r​e​n​t​ ​t​a​s​k​ ​e​x​i​s​t​s
 							 */
 							longDesc: string
 						}
@@ -3172,25 +3186,25 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​p​r​o​j​e​c​t
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​w​o​r​k​s​p​a​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​e​x​i​s​t​s
 							 */
 							longDesc: string
 						}
 						task: {
 							/**
-							 * T​a​s​k​ ​I​D
+							 * P​a​r​e​n​t​ ​T​a​s​k​ ​I​D
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​s​u​b​t​a​s​k​s​ ​i​n
+							 * T​h​e​ ​p​a​r​e​n​t​ ​t​a​s​k​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​s​u​b​t​a​s​k​s
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​s​u​b​t​a​s​k​s​ ​i​n
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​t​a​s​k​ ​w​h​o​s​e​ ​s​u​b​t​a​s​k​s​ ​w​i​l​l​ ​b​e​ ​m​o​n​i​t​o​r​e​d​ ​f​o​r​ ​c​o​m​p​l​e​t​i​o​n
 							 */
 							longDesc: string
 						}
@@ -3518,11 +3532,11 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​a​s​k​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​p​r​o​j​e​c​t​.
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​a​s​k​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​ ​p​r​o​j​e​c​t
 					 */
 					shortDesc: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​a​s​k​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​p​r​o​j​e​c​t​.
+					 * I​n​i​t​i​a​t​e​s​ ​a​ ​w​o​r​k​f​l​o​w​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​t​a​s​k​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​p​r​o​j​e​c​t​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​p​r​o​c​e​s​s​,​ ​c​a​t​e​g​o​r​i​z​e​,​ ​o​r​ ​a​s​s​i​g​n​ ​n​e​w​ ​t​a​s​k​s​ ​a​s​ ​t​h​e​y​ ​a​r​e​ ​c​r​e​a​t​e​d​.
 					 */
 					longDesc: string
 					options: {
@@ -3532,11 +3546,11 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​t​a​s​k​s
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​n​e​w​ ​t​a​s​k​ ​c​r​e​a​t​i​o​n​ ​w​i​l​l​ ​b​e​ ​m​o​n​i​t​o​r​e​d
 							 */
 							longDesc: string
 						}
@@ -3546,11 +3560,11 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​p​r​o​j​e​c​t
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​w​o​r​k​s​p​a​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​e​x​i​s​t​s
 							 */
 							longDesc: string
 						}
@@ -3878,11 +3892,11 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​r​o​j​e​c​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​w​o​r​k​s​p​a​c​e​.
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​r​o​j​e​c​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​ ​w​o​r​k​s​p​a​c​e
 					 */
 					shortDesc: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​r​o​j​e​c​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​w​o​r​k​s​p​a​c​e​.
+					 * I​n​i​t​i​a​t​e​s​ ​a​ ​w​o​r​k​f​l​o​w​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​p​r​o​j​e​c​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​w​o​r​k​s​p​a​c​e​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​p​r​o​j​e​c​t​ ​s​e​t​u​p​,​ ​c​r​e​a​t​e​ ​s​t​a​n​d​a​r​d​ ​t​e​m​p​l​a​t​e​s​,​ ​o​r​ ​n​o​t​i​f​y​ ​t​e​a​m​ ​m​e​m​b​e​r​s​ ​a​b​o​u​t​ ​n​e​w​ ​i​n​i​t​i​a​t​i​v​e​s​.
 					 */
 					longDesc: string
 					options: {
@@ -3892,11 +3906,11 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​p​r​o​j​e​c​t​s
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​w​o​r​k​s​p​a​c​e​ ​w​h​e​r​e​ ​n​e​w​ ​p​r​o​j​e​c​t​ ​c​r​e​a​t​i​o​n​ ​w​i​l​l​ ​b​e​ ​m​o​n​i​t​o​r​e​d
 							 */
 							longDesc: string
 						}
@@ -4224,11 +4238,11 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​.
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​c​o​m​m​e​n​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k
 					 */
 					shortDesc: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​.
+					 * I​n​i​t​i​a​t​e​s​ ​a​ ​w​o​r​k​f​l​o​w​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​i​s​ ​p​o​s​t​e​d​ ​o​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​a​s​k​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​m​o​n​i​t​o​r​ ​d​i​s​c​u​s​s​i​o​n​s​,​ ​n​o​t​i​f​y​ ​s​t​a​k​e​h​o​l​d​e​r​s​,​ ​o​r​ ​t​r​a​c​k​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​ ​a​r​o​u​n​d​ ​c​r​i​t​i​c​a​l​ ​t​a​s​k​s​.
 					 */
 					longDesc: string
 					options: {
@@ -4238,11 +4252,11 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​s​k
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​s​k​ ​e​x​i​s​t​s
 							 */
 							longDesc: string
 						}
@@ -4252,11 +4266,11 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​p​r​o​j​e​c​t
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​w​o​r​k​s​p​a​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​e​x​i​s​t​s
 							 */
 							longDesc: string
 						}
@@ -4266,11 +4280,11 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​c​o​m​m​e​n​t​s​ ​i​n
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​c​o​m​m​e​n​t​s
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​c​o​m​m​e​n​t​s​ ​i​n
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​s​k​ ​w​h​e​r​e​ ​c​o​m​m​e​n​t​s​ ​w​i​l​l​ ​b​e​ ​m​o​n​i​t​o​r​e​d
 							 */
 							longDesc: string
 						}
@@ -4598,11 +4612,11 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​s​t​o​r​y​ ​(​e​.​g​.​,​ ​a​ ​c​o​m​m​e​n​t​ ​o​r​ ​u​p​d​a​t​e​)​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​t​a​s​k​.
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​y​ ​a​c​t​i​v​i​t​y​ ​o​c​c​u​r​s​ ​o​n​ ​a​ ​t​a​s​k
 					 */
 					shortDesc: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​s​t​o​r​y​ ​(​e​.​g​.​,​ ​a​ ​c​o​m​m​e​n​t​ ​o​r​ ​u​p​d​a​t​e​)​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​t​a​s​k​.
+					 * I​n​i​t​i​a​t​e​s​ ​a​ ​w​o​r​k​f​l​o​w​ ​w​h​e​n​ ​a​n​y​ ​s​t​o​r​y​ ​(​c​o​m​m​e​n​t​,​ ​s​t​a​t​u​s​ ​u​p​d​a​t​e​,​ ​f​i​e​l​d​ ​c​h​a​n​g​e​)​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​t​a​s​k​.​ ​T​h​i​s​ ​c​a​p​t​u​r​e​s​ ​a​l​l​ ​a​c​t​i​v​i​t​y​ ​i​n​c​l​u​d​i​n​g​ ​a​u​t​o​m​a​t​e​d​ ​s​y​s​t​e​m​ ​u​p​d​a​t​e​s​.​ ​U​s​e​ ​t​h​i​s​ ​f​o​r​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​t​a​s​k​ ​a​c​t​i​v​i​t​y​ ​m​o​n​i​t​o​r​i​n​g​.
 					 */
 					longDesc: string
 					options: {
@@ -4612,11 +4626,11 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​s​k
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​s​k​ ​e​x​i​s​t​s
 							 */
 							longDesc: string
 						}
@@ -4626,11 +4640,11 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​p​r​o​j​e​c​t
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​w​o​r​k​s​p​a​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​e​x​i​s​t​s
 							 */
 							longDesc: string
 						}
@@ -4640,11 +4654,11 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​s​t​o​r​i​e​s​ ​i​n
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​a​c​t​i​v​i​t​y
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​s​t​o​r​i​e​s​ ​i​n
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​s​k​ ​w​h​e​r​e​ ​a​l​l​ ​a​c​t​i​v​i​t​y​ ​w​i​l​l​ ​b​e​ ​m​o​n​i​t​o​r​e​d
 							 */
 							longDesc: string
 						}
@@ -4972,11 +4986,11 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​s​u​b​t​a​s​k​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​.
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​s​u​b​t​a​s​k​ ​i​s​ ​c​r​e​a​t​e​d​ ​u​n​d​e​r​ ​a​ ​p​a​r​e​n​t​ ​t​a​s​k
 					 */
 					shortDesc: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​s​u​b​t​a​s​k​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​.
+					 * I​n​i​t​i​a​t​e​s​ ​a​ ​w​o​r​k​f​l​o​w​ ​w​h​e​n​ ​a​ ​n​e​w​ ​s​u​b​t​a​s​k​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​p​a​r​e​n​t​ ​t​a​s​k​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​t​r​a​c​k​ ​t​a​s​k​ ​b​r​e​a​k​d​o​w​n​ ​o​r​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​s​u​b​t​a​s​k​ ​a​s​s​i​g​n​m​e​n​t​s​ ​a​n​d​ ​d​e​a​d​l​i​n​e​s​.
 					 */
 					longDesc: string
 					options: {
@@ -4986,11 +5000,11 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​p​a​r​e​n​t​ ​t​a​s​k
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​t​h​e​ ​p​a​r​e​n​t​ ​t​a​s​k​ ​e​x​i​s​t​s
 							 */
 							longDesc: string
 						}
@@ -5000,25 +5014,25 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​p​r​o​j​e​c​t
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​w​o​r​k​s​p​a​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​e​x​i​s​t​s
 							 */
 							longDesc: string
 						}
 						task: {
 							/**
-							 * T​a​s​k​ ​I​D
+							 * P​a​r​e​n​t​ ​T​a​s​k​ ​I​D
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​s​u​b​t​a​s​k​s​ ​i​n
+							 * T​h​e​ ​p​a​r​e​n​t​ ​t​a​s​k​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​s​u​b​t​a​s​k​s
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​s​u​b​t​a​s​k​s​ ​i​n
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​t​a​s​k​ ​w​h​e​r​e​ ​s​u​b​t​a​s​k​ ​c​r​e​a​t​i​o​n​ ​w​i​l​l​ ​b​e​ ​m​o​n​i​t​o​r​e​d
 							 */
 							longDesc: string
 						}
@@ -5346,11 +5360,11 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​t​a​g​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​.
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​t​a​g​ ​i​s​ ​a​p​p​l​i​e​d​ ​t​o​ ​a​ ​t​a​s​k
 					 */
 					shortDesc: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​t​a​g​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​.
+					 * I​n​i​t​i​a​t​e​s​ ​a​ ​w​o​r​k​f​l​o​w​ ​w​h​e​n​ ​a​ ​t​a​g​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​a​s​k​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​a​c​t​i​o​n​s​ ​b​a​s​e​d​ ​o​n​ ​t​a​s​k​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​ ​o​r​ ​t​o​ ​m​o​n​i​t​o​r​ ​h​o​w​ ​t​a​s​k​s​ ​a​r​e​ ​b​e​i​n​g​ ​c​l​a​s​s​i​f​i​e​d​.
 					 */
 					longDesc: string
 					options: {
@@ -5360,11 +5374,11 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​s​k
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​s​k​ ​e​x​i​s​t​s
 							 */
 							longDesc: string
 						}
@@ -5374,11 +5388,11 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​p​r​o​j​e​c​t
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​w​o​r​k​s​p​a​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​e​x​i​s​t​s
 							 */
 							longDesc: string
 						}
@@ -5388,11 +5402,11 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​g​s​ ​i​n
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​t​a​g​ ​a​d​d​i​t​i​o​n​s
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​g​s​ ​i​n
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​s​k​ ​w​h​e​r​e​ ​t​a​g​ ​a​d​d​i​t​i​o​n​s​ ​w​i​l​l​ ​b​e​ ​m​o​n​i​t​o​r​e​d
 							 */
 							longDesc: string
 						}
@@ -5720,11 +5734,11 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​e​a​m​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​ ​w​o​r​k​s​p​a​c​e​.
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​e​a​m​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​ ​w​o​r​k​s​p​a​c​e
 					 */
 					shortDesc: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​e​a​m​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​ ​w​o​r​k​s​p​a​c​e​.
+					 * I​n​i​t​i​a​t​e​s​ ​a​ ​w​o​r​k​f​l​o​w​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​e​a​m​ ​i​s​ ​f​o​r​m​e​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​w​o​r​k​s​p​a​c​e​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​t​e​a​m​ ​o​n​b​o​a​r​d​i​n​g​ ​p​r​o​c​e​s​s​e​s​ ​o​r​ ​t​o​ ​s​e​t​ ​u​p​ ​d​e​f​a​u​l​t​ ​t​e​a​m​ ​r​e​s​o​u​r​c​e​s​.
 					 */
 					longDesc: string
 					options: {
@@ -5734,11 +5748,11 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​t​e​a​m​s​ ​f​r​o​m
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​t​e​a​m​s
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​t​e​a​m​s​ ​f​r​o​m
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​w​o​r​k​s​p​a​c​e​ ​w​h​e​r​e​ ​n​e​w​ ​t​e​a​m​ ​c​r​e​a​t​i​o​n​ ​w​i​l​l​ ​b​e​ ​m​o​n​i​t​o​r​e​d
 							 */
 							longDesc: string
 						}
@@ -6066,11 +6080,11 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​u​s​e​r​ ​j​o​i​n​s​ ​a​ ​w​o​r​k​s​p​a​c​e​.
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​u​s​e​r​ ​j​o​i​n​s​ ​a​ ​w​o​r​k​s​p​a​c​e
 					 */
 					shortDesc: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​u​s​e​r​ ​j​o​i​n​s​ ​a​ ​w​o​r​k​s​p​a​c​e​.
+					 * I​n​i​t​i​a​t​e​s​ ​a​ ​w​o​r​k​f​l​o​w​ ​w​h​e​n​ ​a​ ​n​e​w​ ​u​s​e​r​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​w​o​r​k​s​p​a​c​e​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​u​s​e​r​ ​o​n​b​o​a​r​d​i​n​g​,​ ​p​e​r​m​i​s​s​i​o​n​ ​a​s​s​i​g​n​m​e​n​t​s​,​ ​o​r​ ​w​e​l​c​o​m​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​.
 					 */
 					longDesc: string
 					options: {
@@ -6080,11 +6094,11 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​u​s​e​r​s​ ​f​r​o​m
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​u​s​e​r​s
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​u​s​e​r​s​ ​f​r​o​m
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​w​o​r​k​s​p​a​c​e​ ​w​h​e​r​e​ ​n​e​w​ ​u​s​e​r​ ​a​d​d​i​t​i​o​n​s​ ​w​i​l​l​ ​b​e​ ​m​o​n​i​t​o​r​e​d
 							 */
 							longDesc: string
 						}
@@ -6412,11 +6426,11 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​a​g​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​ ​w​o​r​k​s​p​a​c​e​.
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​a​g​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​ ​w​o​r​k​s​p​a​c​e
 					 */
 					shortDesc: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​a​g​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​ ​w​o​r​k​s​p​a​c​e​.
+					 * I​n​i​t​i​a​t​e​s​ ​a​ ​w​o​r​k​f​l​o​w​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​a​g​ ​i​s​ ​c​r​e​a​t​e​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​w​o​r​k​s​p​a​c​e​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​m​o​n​i​t​o​r​ ​t​a​x​o​n​o​m​y​ ​c​h​a​n​g​e​s​ ​o​r​ ​t​o​ ​s​t​a​n​d​a​r​d​i​z​e​ ​t​a​g​ ​u​s​a​g​e​ ​a​c​r​o​s​s​ ​p​r​o​j​e​c​t​s​.
 					 */
 					longDesc: string
 					options: {
@@ -6426,11 +6440,11 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​t​a​g​s​ ​f​r​o​m
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​t​a​g​s
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​t​a​g​s​ ​f​r​o​m
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​w​o​r​k​s​p​a​c​e​ ​w​h​e​r​e​ ​n​e​w​ ​t​a​g​ ​c​r​e​a​t​i​o​n​ ​w​i​l​l​ ​b​e​ ​m​o​n​i​t​o​r​e​d
 							 */
 							longDesc: string
 						}
@@ -6758,11 +6772,11 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​t​a​s​k​ ​i​s​ ​m​o​v​e​d​ ​t​o​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​s​e​c​t​i​o​n​ ​w​i​t​h​i​n​ ​a​ ​p​r​o​j​e​c​t​.
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​t​a​s​k​ ​i​s​ ​m​o​v​e​d​ ​t​o​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​s​e​c​t​i​o​n
 					 */
 					shortDesc: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​t​a​s​k​ ​i​s​ ​m​o​v​e​d​ ​t​o​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​s​e​c​t​i​o​n​ ​w​i​t​h​i​n​ ​a​ ​p​r​o​j​e​c​t​.
+					 * I​n​i​t​i​a​t​e​s​ ​a​ ​w​o​r​k​f​l​o​w​ ​w​h​e​n​ ​a​ ​t​a​s​k​ ​i​s​ ​m​o​v​e​d​ ​b​e​t​w​e​e​n​ ​s​e​c​t​i​o​n​s​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​p​r​o​j​e​c​t​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​t​r​a​c​k​ ​t​a​s​k​ ​p​r​o​g​r​e​s​s​ ​t​h​r​o​u​g​h​ ​d​i​f​f​e​r​e​n​t​ ​s​t​a​g​e​s​ ​o​r​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​a​c​t​i​o​n​s​ ​b​a​s​e​d​ ​o​n​ ​t​a​s​k​ ​s​t​a​t​u​s​ ​c​h​a​n​g​e​s​.
 					 */
 					longDesc: string
 					options: {
@@ -6772,11 +6786,11 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​s​e​c​t​i​o​n​s​ ​a​n​d​ ​t​a​s​k​s
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​t​a​s​k​s​ ​i​n
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​t​a​s​k​ ​m​o​v​e​m​e​n​t​s​ ​b​e​t​w​e​e​n​ ​s​e​c​t​i​o​n​s​ ​w​i​l​l​ ​b​e​ ​m​o​n​i​t​o​r​e​d
 							 */
 							longDesc: string
 						}
@@ -6786,11 +6800,11 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​p​r​o​j​e​c​t
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​g​e​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​w​o​r​k​s​p​a​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​e​x​i​s​t​s
 							 */
 							longDesc: string
 						}
@@ -21983,11 +21997,11 @@ export type TranslationFunctions = {
 			 */
 			displayName: () => LocalizedString
 			/**
-			 * Collection of actions to interact with the Asana API
+			 * Automate workflows by integrating with the Asana project management platform
 			 */
 			shortDesc: () => LocalizedString
 			/**
-			 * Collection of actions to interact with the Asana API
+			 * Connect to Asana to automate task management, project monitoring, and team collaboration workflows. Use these triggers to respond to changes in tasks, projects, and workspaces.
 			 */
 			longDesc: () => LocalizedString
 			triggers: {
@@ -21997,11 +22011,11 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Triggered when a task within a project is marked as completed.
+					 * Triggers when a task is marked complete in a specific project
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Triggered when a task within a project is marked as completed.
+					 * Initiates a workflow when any task within the specified project is marked as completed. Use this to automate follow-up actions or notifications upon task completion.
 					 */
 					longDesc: () => LocalizedString
 					options: {
@@ -22011,11 +22025,11 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The project to look for tasks in
+							 * The project containing the completed tasks
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The project to look for tasks in
+							 * The unique identifier of the project where task completions will be monitored
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -22025,11 +22039,11 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The workspace to get projects from
+							 * The workspace containing the project
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The workspace to get projects from
+							 * The unique identifier of the workspace where the project exists
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -22357,11 +22371,11 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Triggered when an attachment is added to any task within a project.
+					 * Triggers when an attachment is uploaded to a task
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Triggered when an attachment is added to any task within a project.
+					 * Initiates a workflow when a file is attached to any task within the specified project. Optionally filter by a specific task. Use this to process or track files as they are added to tasks.
 					 */
 					longDesc: () => LocalizedString
 					options: {
@@ -22371,11 +22385,25 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The project to look for tasks in
+							 * The project containing the tasks with attachments
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The project to look for tasks in
+							 * The unique identifier of the project where attachment activities will be monitored
+							 */
+							longDesc: () => LocalizedString
+						}
+						task: {
+							/**
+							 * Task ID (Optional)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific task to monitor for attachments
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of a specific task to monitor. If not provided, attachments from all tasks in the project will trigger the workflow
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -22385,11 +22413,11 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The workspace to get projects from
+							 * The workspace containing the project
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The workspace to get projects from
+							 * The unique identifier of the workspace where the project exists
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -22717,11 +22745,11 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Triggered when a subtask is marked as completed.
+					 * Triggers when a subtask is marked complete
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Triggered when a subtask is marked as completed.
+					 * Initiates a workflow when a subtask within a specific parent task is marked as completed. Use this to track progress on multi-stage tasks or to trigger the next steps in a workflow.
 					 */
 					longDesc: () => LocalizedString
 					options: {
@@ -22731,11 +22759,11 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The project to look for tasks in
+							 * The project containing the parent task
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The project to look for tasks in
+							 * The unique identifier of the project where the parent task exists
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -22745,25 +22773,25 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The workspace to get projects from
+							 * The workspace containing the project
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The workspace to get projects from
+							 * The unique identifier of the workspace where the project exists
 							 */
 							longDesc: () => LocalizedString
 						}
 						task: {
 							/**
-							 * Task ID
+							 * Parent Task ID
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The task to look for subtasks in
+							 * The parent task containing the subtasks
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The task to look for subtasks in
+							 * The unique identifier of the parent task whose subtasks will be monitored for completion
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -23091,11 +23119,11 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Triggered when a new task is added to a project.
+					 * Triggers when a new task is created in a project
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Triggered when a new task is added to a project.
+					 * Initiates a workflow whenever a new task is added to the specified project. Use this to automatically process, categorize, or assign new tasks as they are created.
 					 */
 					longDesc: () => LocalizedString
 					options: {
@@ -23105,11 +23133,11 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The project to look for tasks in
+							 * The project to monitor for new tasks
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The project to look for tasks in
+							 * The unique identifier of the project where new task creation will be monitored
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -23119,11 +23147,11 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The workspace to get projects from
+							 * The workspace containing the project
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The workspace to get projects from
+							 * The unique identifier of the workspace where the project exists
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -23451,11 +23479,11 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Triggered when a new project is added to a workspace.
+					 * Triggers when a new project is created in a workspace
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Triggered when a new project is added to a workspace.
+					 * Initiates a workflow whenever a new project is created within the specified workspace. Use this to automate project setup, create standard templates, or notify team members about new initiatives.
 					 */
 					longDesc: () => LocalizedString
 					options: {
@@ -23465,11 +23493,11 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The workspace to get projects from
+							 * The workspace to monitor for new projects
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The workspace to get projects from
+							 * The unique identifier of the workspace where new project creation will be monitored
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -23797,11 +23825,11 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Triggered when a new comment is added to a specific task.
+					 * Triggers when a comment is added to a specific task
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Triggered when a new comment is added to a specific task.
+					 * Initiates a workflow when a new comment is posted on the specified task. Use this to monitor discussions, notify stakeholders, or track communication around critical tasks.
 					 */
 					longDesc: () => LocalizedString
 					options: {
@@ -23811,11 +23839,11 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The project to look for tasks in
+							 * The project containing the task
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The project to look for tasks in
+							 * The unique identifier of the project where the task exists
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -23825,11 +23853,11 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The workspace to get projects from
+							 * The workspace containing the project
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The workspace to get projects from
+							 * The unique identifier of the workspace where the project exists
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -23839,11 +23867,11 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The task to look for comments in
+							 * The specific task to monitor for comments
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The task to look for comments in
+							 * The unique identifier of the task where comments will be monitored
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -24171,11 +24199,11 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Triggered when a new story (e.g., a comment or update) is added to a task.
+					 * Triggers when any activity occurs on a task
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Triggered when a new story (e.g., a comment or update) is added to a task.
+					 * Initiates a workflow when any story (comment, status update, field change) is added to a task. This captures all activity including automated system updates. Use this for comprehensive task activity monitoring.
 					 */
 					longDesc: () => LocalizedString
 					options: {
@@ -24185,11 +24213,11 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The project to look for tasks in
+							 * The project containing the task
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The project to look for tasks in
+							 * The unique identifier of the project where the task exists
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -24199,11 +24227,11 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The workspace to get projects from
+							 * The workspace containing the project
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The workspace to get projects from
+							 * The unique identifier of the workspace where the project exists
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -24213,11 +24241,11 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The task to look for stories in
+							 * The specific task to monitor for activity
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The task to look for stories in
+							 * The unique identifier of the task where all activity will be monitored
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -24545,11 +24573,11 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Triggered when a new subtask is added to a specific task.
+					 * Triggers when a subtask is created under a parent task
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Triggered when a new subtask is added to a specific task.
+					 * Initiates a workflow when a new subtask is added to the specified parent task. Use this to track task breakdown or to automate subtask assignments and deadlines.
 					 */
 					longDesc: () => LocalizedString
 					options: {
@@ -24559,11 +24587,11 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The project to look for tasks in
+							 * The project containing the parent task
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The project to look for tasks in
+							 * The unique identifier of the project where the parent task exists
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -24573,25 +24601,25 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The workspace to get projects from
+							 * The workspace containing the project
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The workspace to get projects from
+							 * The unique identifier of the workspace where the project exists
 							 */
 							longDesc: () => LocalizedString
 						}
 						task: {
 							/**
-							 * Task ID
+							 * Parent Task ID
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The task to look for subtasks in
+							 * The parent task to monitor for new subtasks
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The task to look for subtasks in
+							 * The unique identifier of the parent task where subtask creation will be monitored
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -24919,11 +24947,11 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Triggered when a tag is added to a specific task.
+					 * Triggers when a tag is applied to a task
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Triggered when a tag is added to a specific task.
+					 * Initiates a workflow when a tag is added to the specified task. Use this to automate actions based on task categorization or to monitor how tasks are being classified.
 					 */
 					longDesc: () => LocalizedString
 					options: {
@@ -24933,11 +24961,11 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The project to look for tasks in
+							 * The project containing the task
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The project to look for tasks in
+							 * The unique identifier of the project where the task exists
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -24947,11 +24975,11 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The workspace to get projects from
+							 * The workspace containing the project
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The workspace to get projects from
+							 * The unique identifier of the workspace where the project exists
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -24961,11 +24989,11 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The task to look for tags in
+							 * The specific task to monitor for tag additions
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The task to look for tags in
+							 * The unique identifier of the task where tag additions will be monitored
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -25293,11 +25321,11 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Triggered when a new team is created in a workspace.
+					 * Triggers when a new team is created in a workspace
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Triggered when a new team is created in a workspace.
+					 * Initiates a workflow when a new team is formed within the specified workspace. Use this to automate team onboarding processes or to set up default team resources.
 					 */
 					longDesc: () => LocalizedString
 					options: {
@@ -25307,11 +25335,11 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The workspace to get teams from
+							 * The workspace to monitor for new teams
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The workspace to get teams from
+							 * The unique identifier of the workspace where new team creation will be monitored
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -25639,11 +25667,11 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Triggered when a new user joins a workspace.
+					 * Triggers when a user joins a workspace
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Triggered when a new user joins a workspace.
+					 * Initiates a workflow when a new user is added to the specified workspace. Use this to automate user onboarding, permission assignments, or welcome notifications.
 					 */
 					longDesc: () => LocalizedString
 					options: {
@@ -25653,11 +25681,11 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The workspace to get users from
+							 * The workspace to monitor for new users
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The workspace to get users from
+							 * The unique identifier of the workspace where new user additions will be monitored
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -25985,11 +26013,11 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Triggered when a new tag is created in a workspace.
+					 * Triggers when a new tag is created in a workspace
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Triggered when a new tag is created in a workspace.
+					 * Initiates a workflow when a new tag is created within the specified workspace. Use this to monitor taxonomy changes or to standardize tag usage across projects.
 					 */
 					longDesc: () => LocalizedString
 					options: {
@@ -25999,11 +26027,11 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The workspace to get tags from
+							 * The workspace to monitor for new tags
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The workspace to get tags from
+							 * The unique identifier of the workspace where new tag creation will be monitored
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -26331,11 +26359,11 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Triggered when a task is moved to a different section within a project.
+					 * Triggers when a task is moved to a different section
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Triggered when a task is moved to a different section within a project.
+					 * Initiates a workflow when a task is moved between sections in the specified project. Use this to track task progress through different stages or to automate actions based on task status changes.
 					 */
 					longDesc: () => LocalizedString
 					options: {
@@ -26345,11 +26373,11 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The project to look for tasks in
+							 * The project containing the sections and tasks
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The project to look for tasks in
+							 * The unique identifier of the project where task movements between sections will be monitored
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -26359,11 +26387,11 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The workspace to get projects from
+							 * The workspace containing the project
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The workspace to get projects from
+							 * The unique identifier of the workspace where the project exists
 							 */
 							longDesc: () => LocalizedString
 						}
