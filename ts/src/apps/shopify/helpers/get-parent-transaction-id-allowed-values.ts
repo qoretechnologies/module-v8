@@ -92,7 +92,7 @@ export const getShopifyParentTransactionIdAllowedValues: TQoreGetAllowedValuesFu
       return {
         display_name: `${txn.name || 'Transaction'} - ${txn.amount?.amount} ${txn.amount?.currencyCode || ''}`,
         value: txn.id,
-        short_desc:
+        desc:
           `Type: ${txn.kind || 'Unknown'}\n` +
           `Status: ${txn.status || 'Unknown'}\n` +
           `Date: ${new Date(txn.processedAt || txn.createdAt).toLocaleString()}\n` +

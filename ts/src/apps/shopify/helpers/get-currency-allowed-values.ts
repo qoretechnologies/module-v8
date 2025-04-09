@@ -87,7 +87,7 @@ export const getShopifyCurrencyAllowedValues: TQoreGetAllowedValuesFunction<
     return sortedCurrencies.map((currency) => ({
       display_name: `${currency.code} - ${currency.name} (${currency.symbol})`,
       value: currency.code,
-      short_desc:
+      desc:
         `ISO Currency Code: ${currency.code}\n\n` +
         `Name: ${currency.name}\n\n` +
         `Symbol: ${currency.symbol}${currency.enabled === false ? '\n\nNOTE: Not enabled in shop' : ''}`,

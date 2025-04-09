@@ -78,7 +78,7 @@ export const getShopifyOrderIdAllowedValues: TQoreGetAllowedValuesFunction<
       return {
         display_name: `${order.name} (${amount})`,
         value: numericId,
-        short_desc:
+        desc:
           `Date: ${date}\n\n` +
           `Customer: ${customerName}\n\n` +
           `Email: ${customerEmail}\n\n` +

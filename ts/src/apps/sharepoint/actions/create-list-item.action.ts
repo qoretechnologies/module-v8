@@ -15,6 +15,7 @@ const options = {
   site_id: {
     type: 'string',
     required: true,
+    on_change: ['refetch'],
     allowed_values_creatable: true,
     get_allowed_values: getSharepointSiteIdAllowedValues,
   },

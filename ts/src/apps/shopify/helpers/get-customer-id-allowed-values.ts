@@ -53,7 +53,7 @@ export const getShopifyCustomerIdAllowedValues: TQoreGetAllowedValuesFunction<
       return {
         display_name: fullName,
         value: numericId,
-        short_desc:
+        desc:
           `Email: ${email}\n\n` +
           `Orders: ${customer.numberOfOrders || 0}\n\n` +
           `Note: ${customer.note || 'Empty'}\n\n` +

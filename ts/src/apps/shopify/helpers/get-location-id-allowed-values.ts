@@ -76,8 +76,7 @@ export const getShopifyLocationIdAllowedValues: TQoreGetAllowedValuesFunction<
       return {
         display_name: `${location.name} ${location.isActive ? '(Active)' : '(Inactive)'}`,
         value: numericId,
-        short_desc:
-          `Address: ${address}\n\n` + `Status: ${status}\n\n` + `Fulfillment: ${fulfillment}`,
+        desc: `Address: ${address}\n\n` + `Status: ${status}\n\n` + `Fulfillment: ${fulfillment}`,
       };
     },
 

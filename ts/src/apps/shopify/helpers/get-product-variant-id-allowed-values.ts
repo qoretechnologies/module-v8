@@ -65,7 +65,7 @@ export const getShopifyProductVariantIdAllowedValues: TQoreGetAllowedValuesFunct
       return {
         display_name: `${displayName} (${price})`,
         value: numericId,
-        short_desc:
+        desc:
           `Product: ${productTitle}\n\n` +
           `Variant: ${variant.title}\n\n` +
           `SKU: ${variant.sku || 'N/A'}\n\n` +

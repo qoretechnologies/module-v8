@@ -61,7 +61,7 @@ export const getShopifyFulfillmentOrderLineItemIdAllowedValues: TQoreGetAllowedV
           `${lineItem.title || product.title || 'Unknown Product'}` +
           `(${node.remainingQuantity}/${node.totalQuantity})`,
         value: extractShopifyNumericId(node.id),
-        short_desc:
+        desc:
           `Product: ${product.title || 'Unknown'}\n` +
           `Variant: ${variant.title || 'Default'}\n` +
           `SKU: ${variant.sku || 'No SKU'}\n` +

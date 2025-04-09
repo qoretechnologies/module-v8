@@ -49,7 +49,7 @@ export const getShopifyBlogIdAllowedValues: TQoreGetAllowedValuesFunction<
       return {
         display_name: blog.title || 'Unnamed Blog',
         value: numericId,
-        short_desc: `Handle: ${blog.handle || 'No handle'}\n\nArticles: ${blog.articlesCount?.count || 0}`,
+        desc: `Handle: ${blog.handle || 'No handle'}\n\nArticles: ${blog.articlesCount?.count || 0}`,
       };
     },
 

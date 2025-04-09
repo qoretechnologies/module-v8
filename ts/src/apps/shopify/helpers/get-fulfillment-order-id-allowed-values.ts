@@ -73,7 +73,7 @@ export const getShopifyFulfillmentOrderIdAllowedValues: TQoreGetAllowedValuesFun
       return {
         display_name: `${order.name || 'Unknown Order'} - ${node.status || 'Unknown Status'}`,
         value: extractShopifyNumericId(node.id),
-        short_desc:
+        desc:
           `Created: ${new Date(node.createdAt).toLocaleString()}\n` +
           `Status: ${node.status}, Request Status: ${node.requestStatus}\n` +
           `Order: ${order.name || 'Unknown'}\n` +
