@@ -1,4 +1,4 @@
-import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
+import { TQoreAppWithActions, TQoreMappedOptions } from '@qoretechnologies/ts-toolkit';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
@@ -8,6 +8,7 @@ import {
   SHOPIFY_APP_LOGO,
   SHOPIFY_APP_NAME,
   SHOPIFY_CONN_OPTIONS,
+  SHOPIFY_POST_AUTH_CODE_CONN_OPTIONS,
   SHOPIFY_SCOPES,
 } from './constants';
 
@@ -41,5 +42,20 @@ export default (locale: Locales) =>
       options: SHOPIFY_CONN_OPTIONS,
       required_options: 'shop',
       url_template_options: ['shop'],
+      set_options_post_auth_code: (
+        context
+      ): TQoreMappedOptions<typeof SHOPIFY_POST_AUTH_CODE_CONN_OPTIONS> => {
+        const token = context?.conn_opts?.token;
+        if (!token)
+          return {
+            ping_headers: {},
+          };
+
+        return {
+          ping_headers: {
+            'X-Shopify-Access-Token': token,
+          },
+        };
+      },
     },
   }) satisfies TQoreAppWithActions;

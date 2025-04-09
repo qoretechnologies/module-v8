@@ -11,6 +11,12 @@ export const SHOPIFY_CONN_OPTIONS = {
   },
 } satisfies TCustomConnOptions;
 
+export const SHOPIFY_POST_AUTH_CODE_CONN_OPTIONS = {
+  ping_headers: {
+    type: 'hash',
+  },
+} satisfies TCustomConnOptions;
+
 export const SHOPIFY_SCOPES = [
   'read_analytics',
   'write_assigned_fulfillment_orders',
