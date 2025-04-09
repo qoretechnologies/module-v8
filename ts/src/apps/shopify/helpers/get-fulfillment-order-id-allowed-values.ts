@@ -74,11 +74,11 @@ export const getShopifyFulfillmentOrderIdAllowedValues: TQoreGetAllowedValuesFun
         display_name: `${order.name || 'Unknown Order'} - ${node.status || 'Unknown Status'}`,
         value: extractShopifyNumericId(node.id),
         desc:
-          `Created: ${new Date(node.createdAt).toLocaleString()}\n` +
-          `Status: ${node.status}, Request Status: ${node.requestStatus}\n` +
-          `Order: ${order.name || 'Unknown'}\n` +
-          `Customer: ${customerInfo || 'Unknown'}\n` +
-          `Shipping: ${deliveryMethod.presentedName || 'Not specified'}\n` +
+          `Created: ${new Date(node.createdAt).toLocaleString()}\n\n` +
+          `Status: ${node.status}, Request Status: ${node.requestStatus}\n\n` +
+          `Order: ${order.name || 'Unknown'}\n\n` +
+          `Customer: ${customerInfo || 'Unknown'}\n\n` +
+          `Shipping: ${deliveryMethod.presentedName || 'Not specified'}\n\n` +
           `Destination: ${address || 'No address'}`,
       };
     },
