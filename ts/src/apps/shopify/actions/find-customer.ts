@@ -76,7 +76,7 @@ type TFindCustomerInput = {
 
 const findCustomers = async (context: TShopifyContextWithConn, data: TFindCustomerInput) => {
   const limit = Math.min(data?.limit || 20, 250);
-  const query = data?.query ? `query:${data.query}` : '';
+  const query = data?.query ? data.query : '';
   const sortKey = data?.sortKey || 'CREATED_AT';
   const reverse = data?.reverse !== undefined ? data.reverse : true;
 

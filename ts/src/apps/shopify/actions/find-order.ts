@@ -6,37 +6,126 @@ import {
   transformShopifyResponse,
 } from '../helpers/constants';
 import { ShopifyFindOrderResponseType } from './response-types/find-order-response';
+import { getShopifyCustomerIdAllowedValues } from '../helpers/get-customer-id-allowed-values';
+import { getShopifyOrderIdAllowedValues } from '../helpers/get-order-id-allowed-values';
 
 const options = {
-  nameQuery: {
+  name: {
     type: 'string',
     required: false,
   },
-  confirmationQuery: {
+  email: {
     type: 'string',
     required: false,
   },
-  emailQuery: {
+  customer_id: {
+    type: 'string',
+    required: false,
+    get_allowed_values: getShopifyCustomerIdAllowedValues,
+    allowed_values_creatable: true,
+  },
+  confirmation_number: {
     type: 'string',
     required: false,
   },
-  customerIdQuery: {
+  id: {
     type: 'string',
     required: false,
+    get_allowed_values: getShopifyOrderIdAllowedValues,
+    allowed_values_creatable: true,
   },
-  locationIdQuery: {
+  financial_status: {
     type: 'string',
     required: false,
     allowed_values_creatable: true,
+    allowed_values: [
+      { value: 'paid', display_name: 'Paid' },
+      { value: 'pending', display_name: 'Pending' },
+      { value: 'authorized', display_name: 'Authorized' },
+      { value: 'partially_paid', display_name: 'Partially Paid' },
+      { value: 'partially_refunded', display_name: 'Partially Refunded' },
+      { value: 'refunded', display_name: 'Refunded' },
+      { value: 'voided', display_name: 'Voided' },
+      { value: 'expired', display_name: 'Expired' },
+    ],
   },
-  skuQuery: {
+  fulfillment_status: {
+    type: 'string',
+    required: false,
+    allowed_values_creatable: true,
+    allowed_values: [
+      { value: 'unshipped', display_name: 'Unshipped' },
+      { value: 'shipped', display_name: 'Shipped' },
+      { value: 'fulfilled', display_name: 'Fulfilled' },
+      { value: 'partial', display_name: 'Partial' },
+      { value: 'scheduled', display_name: 'Scheduled' },
+      { value: 'on_hold', display_name: 'On Hold' },
+      { value: 'unfulfilled', display_name: 'Unfulfilled' },
+      { value: 'request_declined', display_name: 'Request Declined' },
+    ],
+  },
+  status: {
+    type: 'string',
+    required: false,
+    allowed_values_creatable: true,
+    allowed_values: [
+      { value: 'open', display_name: 'Open' },
+      { value: 'closed', display_name: 'Closed' },
+      { value: 'cancelled', display_name: 'Cancelled' },
+      { value: 'not_closed', display_name: 'Not Closed' },
+    ],
+  },
+
+  source_name: {
     type: 'string',
     required: false,
   },
-  orderIdQuery: {
+  sales_channel: {
     type: 'string',
     required: false,
   },
+
+  sku: {
+    type: 'string',
+    required: false,
+  },
+
+  created_at: {
+    type: 'string',
+    required: false,
+  },
+  updated_at: {
+    type: 'string',
+    required: false,
+  },
+  processed_at: {
+    type: 'string',
+    required: false,
+  },
+
+  tag: {
+    type: 'string',
+    required: false,
+  },
+
+  test: {
+    type: 'boolean',
+    required: false,
+  },
+  location_id: {
+    type: 'string',
+    required: false,
+  },
+  po_number: {
+    type: 'string',
+    required: false,
+  },
+
+  rawQuery: {
+    type: 'string',
+    required: false,
+  },
+
   sortKey: {
     type: 'string',
     required: false,
@@ -64,16 +153,11 @@ const options = {
         display_name: 'Order ID',
       },
     ],
-    desc: 'Field to sort orders by',
   },
   reverse: {
     type: 'boolean',
     required: false,
     default_value: true,
-  },
-  rawQuery: {
-    type: 'string',
-    required: false,
   },
   limit: {
     type: 'integer',
@@ -87,16 +171,27 @@ const options = {
 } satisfies TQoreOptions;
 
 type TFindOrderInput = {
-  nameQuery?: string;
-  confirmationQuery?: string;
-  emailQuery?: string;
-  customerIdQuery?: string;
-  locationIdQuery?: string;
-  skuQuery?: string;
-  orderIdQuery?: string;
+  name?: string;
+  email?: string;
+  customer_id?: string;
+  confirmation_number?: string;
+  id?: string;
+  financial_status?: string;
+  fulfillment_status?: string;
+  status?: string;
+  source_name?: string;
+  sales_channel?: string;
+  sku?: string;
+  created_at?: string;
+  updated_at?: string;
+  processed_at?: string;
+  tag?: string;
+  test?: boolean;
+  location_id?: string;
+  po_number?: string;
+  rawQuery?: string;
   sortKey?: string;
   reverse?: boolean;
-  rawQuery?: string;
   limit?: number;
   cursor?: string;
 };
@@ -113,13 +208,25 @@ const findOrders = async (context: TShopifyContextWithConn, data: TFindOrderInpu
   } else {
     const queryParts = [];
 
-    if (data?.nameQuery) queryParts.push(`customer_name:${data.nameQuery}`);
-    if (data?.confirmationQuery) queryParts.push(`confirmation_number:${data.confirmationQuery}`);
-    if (data?.emailQuery) queryParts.push(`customer_email:${data.emailQuery}`);
-    if (data?.customerIdQuery) queryParts.push(`customer_id:${data.customerIdQuery}`);
-    if (data?.locationIdQuery) queryParts.push(`location_id:${data.locationIdQuery}`);
-    if (data?.skuQuery) queryParts.push(`sku:${data.skuQuery}`);
-    if (data?.orderIdQuery) queryParts.push(`id:${data.orderIdQuery}`);
+    if (data?.name) queryParts.push(`name:${data.name}`);
+    if (data?.email) queryParts.push(`email:${data.email}`);
+    if (data?.customer_id) queryParts.push(`customer_id:${data.customer_id}`);
+    if (data?.confirmation_number)
+      queryParts.push(`confirmation_number:${data.confirmation_number}`);
+    if (data?.id) queryParts.push(`id:${data.id}`);
+    if (data?.financial_status) queryParts.push(`financial_status:${data.financial_status}`);
+    if (data?.fulfillment_status) queryParts.push(`fulfillment_status:${data.fulfillment_status}`);
+    if (data?.status) queryParts.push(`status:${data.status}`);
+    if (data?.source_name) queryParts.push(`source_name:${data.source_name}`);
+    if (data?.sales_channel) queryParts.push(`sales_channel:${data.sales_channel}`);
+    if (data?.sku) queryParts.push(`sku:${data.sku}`);
+    if (data?.created_at) queryParts.push(`created_at:${data.created_at}`);
+    if (data?.updated_at) queryParts.push(`updated_at:${data.updated_at}`);
+    if (data?.processed_at) queryParts.push(`processed_at:${data.processed_at}`);
+    if (data?.tag) queryParts.push(`tag:${data.tag}`);
+    if (data?.test !== undefined) queryParts.push(`test:${data.test}`);
+    if (data?.location_id) queryParts.push(`location_id:${data.location_id}`);
+    if (data?.po_number) queryParts.push(`po_number:${data.po_number}`);
 
     queryStr = queryParts.join(' AND ');
   }

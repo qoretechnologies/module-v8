@@ -23,6 +23,7 @@ import { getShopifyParentTransactionIdAllowedValues } from '../apps/shopify/help
 import { getShopifyProductVariantIdAllowedValues } from '../apps/shopify/helpers/get-product-variant-id-allowed-values';
 import { getShopifyTaxExemptionsAllowedValues } from '../apps/shopify/helpers/get-tax-exemptions-allowed-values';
 import { Debugger, DebugLevels } from '../utils/Debugger';
+import { getShopifyProductIdAllowedValues } from '../apps/shopify/helpers/get-shopify-product-id-allowed-values';
 
 Debugger.level = DebugLevels.Verbose;
 
@@ -127,6 +128,18 @@ describe('Should test Shopify integration', () => {
 
     it('Should get Shopify tax exemptions allowed values', async () => {
       const allowed_values = await getShopifyTaxExemptionsAllowedValues({
+        conn_opts: {
+          shop: shopifyShop,
+          token: shopifyAccessToken,
+        } as any,
+      });
+
+      expect(allowed_values).toBeDefined();
+      expect(allowed_values.length).toBeGreaterThan(0);
+    });
+
+    it('Should get Shopify product id allowed values', async () => {
+      const allowed_values = await getShopifyProductIdAllowedValues({
         conn_opts: {
           shop: shopifyShop,
           token: shopifyAccessToken,

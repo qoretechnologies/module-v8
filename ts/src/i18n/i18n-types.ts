@@ -15310,21 +15310,7 @@ type RootTranslation = {
 					 */
 					longDesc: string
 					options: {
-						nameQuery: {
-							/**
-							 * C​u​s​t​o​m​e​r​ ​N​a​m​e
-							 */
-							displayName: string
-							/**
-							 * S​e​a​r​c​h​ ​b​y​ ​c​u​s​t​o​m​e​r​ ​n​a​m​e
-							 */
-							shortDesc: string
-							/**
-							 * F​i​n​d​ ​o​r​d​e​r​s​ ​b​y​ ​m​a​t​c​h​i​n​g​ ​c​u​s​t​o​m​e​r​ ​f​i​r​s​t​ ​o​r​ ​l​a​s​t​ ​n​a​m​e​.
-							 */
-							longDesc: string
-						}
-						confirmationQuery: {
+						name: {
 							/**
 							 * O​r​d​e​r​ ​N​u​m​b​e​r
 							 */
@@ -15338,7 +15324,7 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
-						emailQuery: {
+						email: {
 							/**
 							 * E​m​a​i​l
 							 */
@@ -15352,7 +15338,7 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
-						customerIdQuery: {
+						customer_id: {
 							/**
 							 * C​u​s​t​o​m​e​r​ ​I​D
 							 */
@@ -15366,21 +15352,105 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
-						locationIdQuery: {
+						confirmation_number: {
 							/**
-							 * L​o​c​a​t​i​o​n
+							 * C​o​n​f​i​r​m​a​t​i​o​n​ ​N​u​m​b​e​r
 							 */
 							displayName: string
 							/**
-							 * F​i​l​t​e​r​ ​b​y​ ​s​t​o​r​e​ ​l​o​c​a​t​i​o​n
+							 * S​e​a​r​c​h​ ​b​y​ ​c​o​n​f​i​r​m​a​t​i​o​n​ ​n​u​m​b​e​r
 							 */
 							shortDesc: string
 							/**
-							 * F​i​n​d​ ​o​r​d​e​r​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​t​o​r​e​ ​l​o​c​a​t​i​o​n​ ​o​r​ ​f​u​l​f​i​l​l​m​e​n​t​ ​c​e​n​t​e​r​.
+							 * F​i​n​d​ ​o​r​d​e​r​s​ ​b​y​ ​t​h​e​i​r​ ​u​n​i​q​u​e​ ​c​o​n​f​i​r​m​a​t​i​o​n​ ​n​u​m​b​e​r​ ​p​r​o​v​i​d​e​d​ ​t​o​ ​c​u​s​t​o​m​e​r​s​.
 							 */
 							longDesc: string
 						}
-						skuQuery: {
+						id: {
+							/**
+							 * O​r​d​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​b​y​ ​o​r​d​e​r​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * L​o​o​k​ ​u​p​ ​a​ ​s​p​e​c​i​f​i​c​ ​o​r​d​e​r​ ​u​s​i​n​g​ ​i​t​s​ ​u​n​i​q​u​e​ ​S​h​o​p​i​f​y​ ​o​r​d​e​r​ ​I​D​.
+							 */
+							longDesc: string
+						}
+						financial_status: {
+							/**
+							 * P​a​y​m​e​n​t​ ​S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​a​y​m​e​n​t​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​o​r​d​e​r​s​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​a​y​m​e​n​t​ ​s​t​a​t​u​s​ ​(​p​a​i​d​,​ ​p​e​n​d​i​n​g​,​ ​r​e​f​u​n​d​e​d​,​ ​e​t​c​.​)​.
+							 */
+							longDesc: string
+						}
+						fulfillment_status: {
+							/**
+							 * F​u​l​f​i​l​l​m​e​n​t​ ​S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​h​i​p​p​i​n​g​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​o​r​d​e​r​s​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​u​l​f​i​l​l​m​e​n​t​ ​s​t​a​t​u​s​ ​(​f​u​l​f​i​l​l​e​d​,​ ​u​n​f​u​l​f​i​l​l​e​d​,​ ​s​h​i​p​p​e​d​,​ ​e​t​c​.​)​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * O​r​d​e​r​ ​S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​o​r​d​e​r​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​o​r​d​e​r​s​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​i​r​ ​o​v​e​r​a​l​l​ ​s​t​a​t​u​s​ ​(​o​p​e​n​,​ ​c​l​o​s​e​d​,​ ​c​a​n​c​e​l​l​e​d​)​.
+							 */
+							longDesc: string
+						}
+						source_name: {
+							/**
+							 * S​o​u​r​c​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​o​r​d​e​r​ ​s​o​u​r​c​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​o​r​d​e​r​s​ ​f​r​o​m​ ​s​p​e​c​i​f​i​c​ ​s​o​u​r​c​e​s​ ​(​e​.​g​.​,​ ​w​e​b​,​ ​d​r​a​f​t​ ​o​r​d​e​r​s​,​ ​P​O​S​)​.
+							 */
+							longDesc: string
+						}
+						sales_channel: {
+							/**
+							 * S​a​l​e​s​ ​C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​a​l​e​s​ ​c​h​a​n​n​e​l
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​o​r​d​e​r​s​ ​f​r​o​m​ ​s​p​e​c​i​f​i​c​ ​s​a​l​e​s​ ​c​h​a​n​n​e​l​s​ ​c​o​n​f​i​g​u​r​e​d​ ​i​n​ ​y​o​u​r​ ​S​h​o​p​i​f​y​ ​s​t​o​r​e​.
+							 */
+							longDesc: string
+						}
+						sku: {
 							/**
 							 * P​r​o​d​u​c​t​ ​S​K​U
 							 */
@@ -15394,17 +15464,115 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
-						orderIdQuery: {
+						created_at: {
 							/**
-							 * O​r​d​e​r​ ​I​D
+							 * C​r​e​a​t​e​d​ ​D​a​t​e
 							 */
 							displayName: string
 							/**
-							 * S​e​a​r​c​h​ ​b​y​ ​o​r​d​e​r​ ​I​D
+							 * F​i​l​t​e​r​ ​b​y​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e
 							 */
 							shortDesc: string
 							/**
-							 * L​o​o​k​ ​u​p​ ​a​ ​s​p​e​c​i​f​i​c​ ​o​r​d​e​r​ ​u​s​i​n​g​ ​i​t​s​ ​u​n​i​q​u​e​ ​S​h​o​p​i​f​y​ ​o​r​d​e​r​ ​I​D​.
+							 * F​i​n​d​ ​o​r​d​e​r​s​ ​c​r​e​a​t​e​d​ ​o​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​a​t​e​ ​o​r​ ​w​i​t​h​i​n​ ​a​ ​d​a​t​e​ ​r​a​n​g​e​ ​(​e​.​g​.​,​ ​2​0​2​1​-​0​1​-​0​1​,​ ​<​n​o​w​,​ ​<​=​2​0​2​4​)​.
+							 */
+							longDesc: string
+						}
+						updated_at: {
+							/**
+							 * U​p​d​a​t​e​d​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​l​a​s​t​ ​u​p​d​a​t​e​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​o​r​d​e​r​s​ ​l​a​s​t​ ​u​p​d​a​t​e​d​ ​o​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​a​t​e​ ​o​r​ ​w​i​t​h​i​n​ ​a​ ​d​a​t​e​ ​r​a​n​g​e​.
+							 */
+							longDesc: string
+						}
+						processed_at: {
+							/**
+							 * P​r​o​c​e​s​s​e​d​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​r​o​c​e​s​s​e​d​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​o​r​d​e​r​s​ ​p​r​o​c​e​s​s​e​d​ ​o​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​a​t​e​ ​o​r​ ​w​i​t​h​i​n​ ​a​ ​d​a​t​e​ ​r​a​n​g​e​.
+							 */
+							longDesc: string
+						}
+						tag: {
+							/**
+							 * T​a​g
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​o​r​d​e​r​ ​t​a​g
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​o​r​d​e​r​s​ ​t​h​a​t​ ​h​a​v​e​ ​b​e​e​n​ ​t​a​g​g​e​d​ ​w​i​t​h​ ​s​p​e​c​i​f​i​c​ ​l​a​b​e​l​s​ ​i​n​ ​S​h​o​p​i​f​y​.
+							 */
+							longDesc: string
+						}
+						test: {
+							/**
+							 * T​e​s​t​ ​O​r​d​e​r​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​/​e​x​c​l​u​d​e​ ​t​e​s​t​ ​o​r​d​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​o​ ​s​h​o​w​ ​o​n​l​y​ ​t​e​s​t​ ​o​r​d​e​r​s​ ​(​t​r​u​e​)​ ​o​r​ ​e​x​c​l​u​d​e​ ​t​e​s​t​ ​o​r​d​e​r​s​ ​(​f​a​l​s​e​)​.
+							 */
+							longDesc: string
+						}
+						location_id: {
+							/**
+							 * L​o​c​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​t​o​r​e​ ​l​o​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​o​r​d​e​r​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​t​o​r​e​ ​l​o​c​a​t​i​o​n​ ​o​r​ ​f​u​l​f​i​l​l​m​e​n​t​ ​c​e​n​t​e​r​.
+							 */
+							longDesc: string
+						}
+						po_number: {
+							/**
+							 * P​u​r​c​h​a​s​e​ ​O​r​d​e​r​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​b​y​ ​P​O​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​o​r​d​e​r​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​ ​n​u​m​b​e​r​.
+							 */
+							longDesc: string
+						}
+						rawQuery: {
+							/**
+							 * A​d​v​a​n​c​e​d​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * U​s​e​ ​c​u​s​t​o​m​ ​s​e​a​r​c​h​ ​s​y​n​t​a​x
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​a​ ​c​u​s​t​o​m​ ​s​e​a​r​c​h​ ​q​u​e​r​y​ ​f​o​r​ ​a​d​v​a​n​c​e​d​ ​f​i​l​t​e​r​i​n​g​ ​u​s​i​n​g​ ​S​h​o​p​i​f​y​ ​s​e​a​r​c​h​ ​s​y​n​t​a​x​.
 							 */
 							longDesc: string
 						}
@@ -15436,20 +15604,6 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
-						rawQuery: {
-							/**
-							 * A​d​v​a​n​c​e​d​ ​Q​u​e​r​y
-							 */
-							displayName: string
-							/**
-							 * U​s​e​ ​c​u​s​t​o​m​ ​s​e​a​r​c​h​ ​s​y​n​t​a​x
-							 */
-							shortDesc: string
-							/**
-							 * E​n​t​e​r​ ​a​ ​c​u​s​t​o​m​ ​s​e​a​r​c​h​ ​q​u​e​r​y​ ​f​o​r​ ​a​d​v​a​n​c​e​d​ ​f​i​l​t​e​r​i​n​g​ ​u​s​i​n​g​ ​S​h​o​p​i​f​y​ ​s​e​a​r​c​h​ ​s​y​n​t​a​x​.
-							 */
-							longDesc: string
-						}
 						limit: {
 							/**
 							 * R​e​s​u​l​t​s​ ​L​i​m​i​t
@@ -15460,7 +15614,7 @@ type RootTranslation = {
 							 */
 							shortDesc: string
 							/**
-							 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​o​r​d​e​r​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​t​h​e​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​.
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​o​r​d​e​r​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​t​h​e​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​ ​(​m​a​x​:​ ​2​5​0​)​.
 							 */
 							longDesc: string
 						}
@@ -15594,7 +15748,7 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
-						titleQuery: {
+						title: {
 							/**
 							 * V​a​r​i​a​n​t​ ​T​i​t​l​e
 							 */
@@ -15608,7 +15762,7 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
-						skuQuery: {
+						sku: {
 							/**
 							 * S​K​U
 							 */
@@ -15622,7 +15776,7 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
-						barcodeQuery: {
+						barcode: {
 							/**
 							 * B​a​r​c​o​d​e
 							 */
@@ -15636,7 +15790,7 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
-						variantIdQuery: {
+						id: {
 							/**
 							 * V​a​r​i​a​n​t​ ​I​D
 							 */
@@ -15650,31 +15804,171 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
-						inventoryQuery: {
+						inventoryQuantity: {
 							/**
-							 * I​n​v​e​n​t​o​r​y​ ​S​t​a​t​u​s
+							 * I​n​v​e​n​t​o​r​y​ ​Q​u​a​n​t​i​t​y
 							 */
 							displayName: string
 							/**
-							 * F​i​l​t​e​r​ ​b​y​ ​i​n​v​e​n​t​o​r​y​ ​l​e​v​e​l
+							 * F​i​l​t​e​r​ ​b​y​ ​i​n​v​e​n​t​o​r​y​ ​q​u​a​n​t​i​t​y
 							 */
 							shortDesc: string
 							/**
-							 * F​i​n​d​ ​v​a​r​i​a​n​t​s​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​i​r​ ​i​n​v​e​n​t​o​r​y​ ​s​t​a​t​u​s​ ​(​e​.​g​.​,​ ​i​n​ ​s​t​o​c​k​,​ ​o​u​t​ ​o​f​ ​s​t​o​c​k​,​ ​l​o​w​ ​s​t​o​c​k​)​.
+							 * F​i​n​d​ ​v​a​r​i​a​n​t​s​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​i​r​ ​e​x​a​c​t​ ​i​n​v​e​n​t​o​r​y​ ​q​u​a​n​t​i​t​y​ ​o​r​ ​r​a​n​g​e​ ​(​e​.​g​.​,​ ​"​i​n​v​e​n​t​o​r​y​_​q​u​a​n​t​i​t​y​:​1​0​"​ ​o​r​ ​"​i​n​v​e​n​t​o​r​y​_​q​u​a​n​t​i​t​y​:​>​5​"​)​.
 							 */
 							longDesc: string
 						}
-						priceQuery: {
+						productStatus: {
 							/**
-							 * P​r​i​c​e
+							 * P​r​o​d​u​c​t​ ​S​t​a​t​u​s
 							 */
 							displayName: string
 							/**
-							 * F​i​l​t​e​r​ ​b​y​ ​p​r​i​c​e
+							 * F​i​l​t​e​r​ ​b​y​ ​p​r​o​d​u​c​t​ ​s​t​a​t​u​s
 							 */
 							shortDesc: string
 							/**
-							 * S​e​a​r​c​h​ ​f​o​r​ ​v​a​r​i​a​n​t​s​ ​w​i​t​h​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​r​i​c​e​ ​r​a​n​g​e​ ​o​r​ ​a​t​ ​a​ ​p​a​r​t​i​c​u​l​a​r​ ​p​r​i​c​e​ ​p​o​i​n​t​.
+							 * F​i​n​d​ ​v​a​r​i​a​n​t​s​ ​b​a​s​e​d​ ​o​n​ ​w​h​e​t​h​e​r​ ​t​h​e​i​r​ ​p​a​r​e​n​t​ ​p​r​o​d​u​c​t​ ​i​s​ ​a​c​t​i​v​e​,​ ​d​r​a​f​t​,​ ​o​r​ ​a​r​c​h​i​v​e​d​.
+							 */
+							longDesc: string
+						}
+						productType: {
+							/**
+							 * P​r​o​d​u​c​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​r​o​d​u​c​t​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​v​a​r​i​a​n​t​s​ ​b​e​l​o​n​g​i​n​g​ ​t​o​ ​p​r​o​d​u​c​t​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​r​ ​c​a​t​e​g​o​r​y​.
+							 */
+							longDesc: string
+						}
+						tag: {
+							/**
+							 * P​r​o​d​u​c​t​ ​T​a​g
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​r​o​d​u​c​t​ ​t​a​g
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​v​a​r​i​a​n​t​s​ ​b​e​l​o​n​g​i​n​g​ ​t​o​ ​p​r​o​d​u​c​t​s​ ​t​h​a​t​ ​h​a​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​a​g​.
+							 */
+							longDesc: string
+						}
+						tagNot: {
+							/**
+							 * E​x​c​l​u​d​e​ ​T​a​g
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​o​u​t​ ​p​r​o​d​u​c​t​s​ ​w​i​t​h​ ​t​a​g
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​v​a​r​i​a​n​t​s​ ​b​e​l​o​n​g​i​n​g​ ​t​o​ ​p​r​o​d​u​c​t​s​ ​t​h​a​t​ ​d​o​ ​n​o​t​ ​h​a​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​a​g​.
+							 */
+							longDesc: string
+						}
+						vendor: {
+							/**
+							 * V​e​n​d​o​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​v​e​n​d​o​r​ ​o​r​ ​s​u​p​p​l​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​v​a​r​i​a​n​t​s​ ​b​e​l​o​n​g​i​n​g​ ​t​o​ ​p​r​o​d​u​c​t​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​e​n​d​o​r​ ​o​r​ ​s​u​p​p​l​i​e​r​.
+							 */
+							longDesc: string
+						}
+						collection: {
+							/**
+							 * C​o​l​l​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​o​l​l​e​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​v​a​r​i​a​n​t​s​ ​b​e​l​o​n​g​i​n​g​ ​t​o​ ​p​r​o​d​u​c​t​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​l​l​e​c​t​i​o​n​ ​u​s​i​n​g​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​I​D​.
+							 */
+							longDesc: string
+						}
+						option1: {
+							/**
+							 * O​p​t​i​o​n​ ​1
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​f​i​r​s​t​ ​o​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​v​a​r​i​a​n​t​s​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​a​l​u​e​ ​f​o​r​ ​t​h​e​i​r​ ​f​i​r​s​t​ ​o​p​t​i​o​n​ ​(​e​.​g​.​,​ ​S​i​z​e​,​ ​C​o​l​o​r​)​.
+							 */
+							longDesc: string
+						}
+						option2: {
+							/**
+							 * O​p​t​i​o​n​ ​2
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​e​c​o​n​d​ ​o​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​v​a​r​i​a​n​t​s​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​a​l​u​e​ ​f​o​r​ ​t​h​e​i​r​ ​s​e​c​o​n​d​ ​o​p​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						option3: {
+							/**
+							 * O​p​t​i​o​n​ ​3
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​t​h​i​r​d​ ​o​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​v​a​r​i​a​n​t​s​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​a​l​u​e​ ​f​o​r​ ​t​h​e​i​r​ ​t​h​i​r​d​ ​o​p​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						taxable: {
+							/**
+							 * T​a​x​a​b​l​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​t​a​x​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​v​a​r​i​a​n​t​s​ ​b​a​s​e​d​ ​o​n​ ​w​h​e​t​h​e​r​ ​t​h​e​y​ ​a​r​e​ ​t​a​x​a​b​l​e​ ​o​r​ ​n​o​n​-​t​a​x​a​b​l​e​.
+							 */
+							longDesc: string
+						}
+						updatedAt: {
+							/**
+							 * U​p​d​a​t​e​d​ ​A​t
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​u​p​d​a​t​e​ ​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​n​d​ ​v​a​r​i​a​n​t​s​ ​b​a​s​e​d​ ​o​n​ ​w​h​e​n​ ​t​h​e​y​ ​w​e​r​e​ ​l​a​s​t​ ​u​p​d​a​t​e​d​ ​(​e​.​g​.​,​ ​"​u​p​d​a​t​e​d​_​a​t​:​>​2​0​2​3​-​0​1​-​0​1​"​ ​o​r​ ​"​u​p​d​a​t​e​d​_​a​t​:​<​n​o​w​"​)​.
 							 */
 							longDesc: string
 						}
@@ -15692,6 +15986,34 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
+						sortKey: {
+							/**
+							 * S​o​r​t​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * O​r​d​e​r​ ​r​e​s​u​l​t​s​ ​b​y​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​w​h​i​c​h​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						reverse: {
+							/**
+							 * R​e​v​e​r​s​e​ ​O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * R​e​v​e​r​s​e​ ​t​h​e​ ​s​o​r​t​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​r​e​v​e​r​s​e​s​ ​t​h​e​ ​o​r​d​e​r​ ​o​f​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​(​e​.​g​.​,​ ​Z​-​A​ ​i​n​s​t​e​a​d​ ​o​f​ ​A​-​Z​)​.
+							 */
+							longDesc: string
+						}
 						limit: {
 							/**
 							 * R​e​s​u​l​t​s​ ​L​i​m​i​t
@@ -15702,7 +16024,7 @@ type RootTranslation = {
 							 */
 							shortDesc: string
 							/**
-							 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​v​a​r​i​a​n​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​t​h​e​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​.
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​v​a​r​i​a​n​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​t​h​e​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​ ​(​m​a​x​:​ ​2​5​0​)​.
 							 */
 							longDesc: string
 						}
@@ -34897,21 +35219,7 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 					options: {
-						nameQuery: {
-							/**
-							 * Customer Name
-							 */
-							displayName: () => LocalizedString
-							/**
-							 * Search by customer name
-							 */
-							shortDesc: () => LocalizedString
-							/**
-							 * Find orders by matching customer first or last name.
-							 */
-							longDesc: () => LocalizedString
-						}
-						confirmationQuery: {
+						name: {
 							/**
 							 * Order Number
 							 */
@@ -34925,7 +35233,7 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
-						emailQuery: {
+						email: {
 							/**
 							 * Email
 							 */
@@ -34939,7 +35247,7 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
-						customerIdQuery: {
+						customer_id: {
 							/**
 							 * Customer ID
 							 */
@@ -34953,21 +35261,105 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
-						locationIdQuery: {
+						confirmation_number: {
 							/**
-							 * Location
+							 * Confirmation Number
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * Filter by store location
+							 * Search by confirmation number
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * Find orders associated with a specific store location or fulfillment center.
+							 * Find orders by their unique confirmation number provided to customers.
 							 */
 							longDesc: () => LocalizedString
 						}
-						skuQuery: {
+						id: {
+							/**
+							 * Order ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search by order ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Look up a specific order using its unique Shopify order ID.
+							 */
+							longDesc: () => LocalizedString
+						}
+						financial_status: {
+							/**
+							 * Payment Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by payment status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find orders with a specific payment status (paid, pending, refunded, etc.).
+							 */
+							longDesc: () => LocalizedString
+						}
+						fulfillment_status: {
+							/**
+							 * Fulfillment Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by shipping status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find orders with a specific fulfillment status (fulfilled, unfulfilled, shipped, etc.).
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Order Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by order status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find orders based on their overall status (open, closed, cancelled).
+							 */
+							longDesc: () => LocalizedString
+						}
+						source_name: {
+							/**
+							 * Source
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by order source
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find orders from specific sources (e.g., web, draft orders, POS).
+							 */
+							longDesc: () => LocalizedString
+						}
+						sales_channel: {
+							/**
+							 * Sales Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by sales channel
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find orders from specific sales channels configured in your Shopify store.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sku: {
 							/**
 							 * Product SKU
 							 */
@@ -34981,17 +35373,115 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
-						orderIdQuery: {
+						created_at: {
 							/**
-							 * Order ID
+							 * Created Date
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * Search by order ID
+							 * Filter by creation date
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * Look up a specific order using its unique Shopify order ID.
+							 * Find orders created on a specific date or within a date range (e.g., 2021-01-01, <now, <=2024).
+							 */
+							longDesc: () => LocalizedString
+						}
+						updated_at: {
+							/**
+							 * Updated Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by last update date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find orders last updated on a specific date or within a date range.
+							 */
+							longDesc: () => LocalizedString
+						}
+						processed_at: {
+							/**
+							 * Processed Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by processed date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find orders processed on a specific date or within a date range.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tag: {
+							/**
+							 * Tag
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by order tag
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find orders that have been tagged with specific labels in Shopify.
+							 */
+							longDesc: () => LocalizedString
+						}
+						test: {
+							/**
+							 * Test Orders
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include/exclude test orders
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter to show only test orders (true) or exclude test orders (false).
+							 */
+							longDesc: () => LocalizedString
+						}
+						location_id: {
+							/**
+							 * Location
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by store location
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find orders associated with a specific store location or fulfillment center.
+							 */
+							longDesc: () => LocalizedString
+						}
+						po_number: {
+							/**
+							 * Purchase Order Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search by PO number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find orders associated with a specific purchase order number.
+							 */
+							longDesc: () => LocalizedString
+						}
+						rawQuery: {
+							/**
+							 * Advanced Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Use custom search syntax
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter a custom search query for advanced filtering using Shopify search syntax.
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -35023,20 +35513,6 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
-						rawQuery: {
-							/**
-							 * Advanced Query
-							 */
-							displayName: () => LocalizedString
-							/**
-							 * Use custom search syntax
-							 */
-							shortDesc: () => LocalizedString
-							/**
-							 * Enter a custom search query for advanced filtering using Shopify search syntax.
-							 */
-							longDesc: () => LocalizedString
-						}
 						limit: {
 							/**
 							 * Results Limit
@@ -35047,7 +35523,7 @@ export type TranslationFunctions = {
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * Specify the maximum number of orders to return in the search results.
+							 * Specify the maximum number of orders to return in the search results (max: 250).
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -35181,7 +35657,7 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
-						titleQuery: {
+						title: {
 							/**
 							 * Variant Title
 							 */
@@ -35195,7 +35671,7 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
-						skuQuery: {
+						sku: {
 							/**
 							 * SKU
 							 */
@@ -35209,7 +35685,7 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
-						barcodeQuery: {
+						barcode: {
 							/**
 							 * Barcode
 							 */
@@ -35223,7 +35699,7 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
-						variantIdQuery: {
+						id: {
 							/**
 							 * Variant ID
 							 */
@@ -35237,31 +35713,171 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
-						inventoryQuery: {
+						inventoryQuantity: {
 							/**
-							 * Inventory Status
+							 * Inventory Quantity
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * Filter by inventory level
+							 * Filter by inventory quantity
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * Find variants based on their inventory status (e.g., in stock, out of stock, low stock).
+							 * Find variants based on their exact inventory quantity or range (e.g., "inventory_quantity:10" or "inventory_quantity:>5").
 							 */
 							longDesc: () => LocalizedString
 						}
-						priceQuery: {
+						productStatus: {
 							/**
-							 * Price
+							 * Product Status
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * Filter by price
+							 * Filter by product status
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * Search for variants within a specific price range or at a particular price point.
+							 * Find variants based on whether their parent product is active, draft, or archived.
+							 */
+							longDesc: () => LocalizedString
+						}
+						productType: {
+							/**
+							 * Product Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by product type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find variants belonging to products of a specific type or category.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tag: {
+							/**
+							 * Product Tag
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by product tag
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find variants belonging to products that have a specific tag.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tagNot: {
+							/**
+							 * Exclude Tag
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter out products with tag
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find variants belonging to products that do not have a specific tag.
+							 */
+							longDesc: () => LocalizedString
+						}
+						vendor: {
+							/**
+							 * Vendor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by vendor or supplier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find variants belonging to products from a specific vendor or supplier.
+							 */
+							longDesc: () => LocalizedString
+						}
+						collection: {
+							/**
+							 * Collection
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by collection
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find variants belonging to products in a specific collection using the collection ID.
+							 */
+							longDesc: () => LocalizedString
+						}
+						option1: {
+							/**
+							 * Option 1
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by first option
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find variants with a specific value for their first option (e.g., Size, Color).
+							 */
+							longDesc: () => LocalizedString
+						}
+						option2: {
+							/**
+							 * Option 2
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by second option
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find variants with a specific value for their second option.
+							 */
+							longDesc: () => LocalizedString
+						}
+						option3: {
+							/**
+							 * Option 3
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by third option
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find variants with a specific value for their third option.
+							 */
+							longDesc: () => LocalizedString
+						}
+						taxable: {
+							/**
+							 * Taxable
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by tax status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find variants based on whether they are taxable or non-taxable.
+							 */
+							longDesc: () => LocalizedString
+						}
+						updatedAt: {
+							/**
+							 * Updated At
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by update time
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Find variants based on when they were last updated (e.g., "updated_at:>2023-01-01" or "updated_at:<now").
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -35279,6 +35895,34 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
+						sortKey: {
+							/**
+							 * Sort By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Order results by field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify which field to use for sorting the results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						reverse: {
+							/**
+							 * Reverse Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Reverse the sort order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, reverses the order of the results (e.g., Z-A instead of A-Z).
+							 */
+							longDesc: () => LocalizedString
+						}
 						limit: {
 							/**
 							 * Results Limit
@@ -35289,7 +35933,7 @@ export type TranslationFunctions = {
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * Specify the maximum number of variants to return in the search results.
+							 * Specify the maximum number of variants to return in the search results (max: 250).
 							 */
 							longDesc: () => LocalizedString
 						}

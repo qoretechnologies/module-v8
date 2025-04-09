@@ -6,6 +6,7 @@ import {
   transformShopifyResponse,
 } from '../helpers/constants';
 import { ShopifyFindProductResponseType } from './response-types/find-product.response';
+import { getShopifyProductIdAllowedValues } from '../helpers/get-shopify-product-id-allowed-values';
 
 const options = {
   titleQuery: {
@@ -35,6 +36,8 @@ const options = {
   productIdQuery: {
     type: 'string',
     required: false,
+    get_allowed_values: getShopifyProductIdAllowedValues,
+    allowed_values_creatable: true,
   },
   collectionIdQuery: {
     type: 'string',

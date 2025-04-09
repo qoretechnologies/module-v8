@@ -4264,42 +4264,107 @@ const en = {
           longDesc:
             'Search and filter orders in your Shopify store based on various criteria including customer name, email, order number, and more.',
           options: {
-            nameQuery: {
-              displayName: 'Customer Name',
-              shortDesc: 'Search by customer name',
-              longDesc: 'Find orders by matching customer first or last name.',
-            },
-            confirmationQuery: {
+            name: {
               displayName: 'Order Number',
               shortDesc: 'Search by order number',
               longDesc: 'Look up orders using their confirmation or order number.',
             },
-            emailQuery: {
+            email: {
               displayName: 'Email',
               shortDesc: 'Search by customer email',
               longDesc: 'Find orders associated with a specific customer email address.',
             },
-            customerIdQuery: {
+            customer_id: {
               displayName: 'Customer ID',
               shortDesc: 'Filter by customer ID',
               longDesc:
                 'Find all orders placed by a specific customer using their Shopify customer ID.',
             },
-            locationIdQuery: {
+            confirmation_number: {
+              displayName: 'Confirmation Number',
+              shortDesc: 'Search by confirmation number',
+              longDesc: 'Find orders by their unique confirmation number provided to customers.',
+            },
+            id: {
+              displayName: 'Order ID',
+              shortDesc: 'Search by order ID',
+              longDesc: 'Look up a specific order using its unique Shopify order ID.',
+            },
+            financial_status: {
+              displayName: 'Payment Status',
+              shortDesc: 'Filter by payment status',
+              longDesc:
+                'Find orders with a specific payment status (paid, pending, refunded, etc.).',
+            },
+            fulfillment_status: {
+              displayName: 'Fulfillment Status',
+              shortDesc: 'Filter by shipping status',
+              longDesc:
+                'Find orders with a specific fulfillment status (fulfilled, unfulfilled, shipped, etc.).',
+            },
+            status: {
+              displayName: 'Order Status',
+              shortDesc: 'Filter by order status',
+              longDesc: 'Find orders based on their overall status (open, closed, cancelled).',
+            },
+            source_name: {
+              displayName: 'Source',
+              shortDesc: 'Filter by order source',
+              longDesc: 'Find orders from specific sources (e.g., web, draft orders, POS).',
+            },
+            sales_channel: {
+              displayName: 'Sales Channel',
+              shortDesc: 'Filter by sales channel',
+              longDesc:
+                'Find orders from specific sales channels configured in your Shopify store.',
+            },
+            sku: {
+              displayName: 'Product SKU',
+              shortDesc: 'Search by product SKU',
+              longDesc: 'Find orders containing products with a specific SKU.',
+            },
+            created_at: {
+              displayName: 'Created Date',
+              shortDesc: 'Filter by creation date',
+              longDesc:
+                'Find orders created on a specific date or within a date range (e.g., 2021-01-01, <now, <=2024).',
+            },
+            updated_at: {
+              displayName: 'Updated Date',
+              shortDesc: 'Filter by last update date',
+              longDesc: 'Find orders last updated on a specific date or within a date range.',
+            },
+            processed_at: {
+              displayName: 'Processed Date',
+              shortDesc: 'Filter by processed date',
+              longDesc: 'Find orders processed on a specific date or within a date range.',
+            },
+            tag: {
+              displayName: 'Tag',
+              shortDesc: 'Filter by order tag',
+              longDesc: 'Find orders that have been tagged with specific labels in Shopify.',
+            },
+            test: {
+              displayName: 'Test Orders',
+              shortDesc: 'Include/exclude test orders',
+              longDesc: 'Filter to show only test orders (true) or exclude test orders (false).',
+            },
+            location_id: {
               displayName: 'Location',
               shortDesc: 'Filter by store location',
               longDesc:
                 'Find orders associated with a specific store location or fulfillment center.',
             },
-            skuQuery: {
-              displayName: 'Product SKU',
-              shortDesc: 'Search by product SKU',
-              longDesc: 'Find orders containing products with a specific SKU.',
+            po_number: {
+              displayName: 'Purchase Order Number',
+              shortDesc: 'Search by PO number',
+              longDesc: 'Find orders associated with a specific purchase order number.',
             },
-            orderIdQuery: {
-              displayName: 'Order ID',
-              shortDesc: 'Search by order ID',
-              longDesc: 'Look up a specific order using its unique Shopify order ID.',
+            rawQuery: {
+              displayName: 'Advanced Query',
+              shortDesc: 'Use custom search syntax',
+              longDesc:
+                'Enter a custom search query for advanced filtering using Shopify search syntax.',
             },
             sortKey: {
               displayName: 'Sort By',
@@ -4312,16 +4377,11 @@ const en = {
               shortDesc: 'Reverse the sort order',
               longDesc: 'Toggle between ascending and descending sort order for the results.',
             },
-            rawQuery: {
-              displayName: 'Advanced Query',
-              shortDesc: 'Use custom search syntax',
-              longDesc:
-                'Enter a custom search query for advanced filtering using Shopify search syntax.',
-            },
             limit: {
               displayName: 'Results Limit',
               shortDesc: 'Maximum number of results',
-              longDesc: 'Specify the maximum number of orders to return in the search results.',
+              longDesc:
+                'Specify the maximum number of orders to return in the search results (max: 250).',
             },
             cursor: {
               displayName: 'Pagination Cursor',
@@ -4377,37 +4437,90 @@ const en = {
               longDesc:
                 'Find variants that belong to a specific parent product using its Shopify product ID.',
             },
-            titleQuery: {
+            title: {
               displayName: 'Variant Title',
               shortDesc: 'Search by variant title',
               longDesc: 'Filter variants by matching text in their titles or option values.',
             },
-            skuQuery: {
+            sku: {
               displayName: 'SKU',
               shortDesc: 'Search by variant SKU',
               longDesc: 'Look up variants using their Stock Keeping Unit (SKU) identifier.',
             },
-            barcodeQuery: {
+            barcode: {
               displayName: 'Barcode',
               shortDesc: 'Search by barcode',
               longDesc: 'Find variants using their UPC, ISBN, or other barcode identifiers.',
             },
-            variantIdQuery: {
+            id: {
               displayName: 'Variant ID',
               shortDesc: 'Search by variant ID',
               longDesc: 'Look up a specific variant using its unique Shopify variant ID.',
             },
-            inventoryQuery: {
-              displayName: 'Inventory Status',
-              shortDesc: 'Filter by inventory level',
+            inventoryQuantity: {
+              displayName: 'Inventory Quantity',
+              shortDesc: 'Filter by inventory quantity',
               longDesc:
-                'Find variants based on their inventory status (e.g., in stock, out of stock, low stock).',
+                'Find variants based on their exact inventory quantity or range (e.g., "inventory_quantity:10" or "inventory_quantity:>5").',
             },
-            priceQuery: {
-              displayName: 'Price',
-              shortDesc: 'Filter by price',
+            productStatus: {
+              displayName: 'Product Status',
+              shortDesc: 'Filter by product status',
               longDesc:
-                'Search for variants within a specific price range or at a particular price point.',
+                'Find variants based on whether their parent product is active, draft, or archived.',
+            },
+            productType: {
+              displayName: 'Product Type',
+              shortDesc: 'Filter by product type',
+              longDesc: 'Find variants belonging to products of a specific type or category.',
+            },
+            tag: {
+              displayName: 'Product Tag',
+              shortDesc: 'Filter by product tag',
+              longDesc: 'Find variants belonging to products that have a specific tag.',
+            },
+            tagNot: {
+              displayName: 'Exclude Tag',
+              shortDesc: 'Filter out products with tag',
+              longDesc: 'Find variants belonging to products that do not have a specific tag.',
+            },
+            vendor: {
+              displayName: 'Vendor',
+              shortDesc: 'Filter by vendor or supplier',
+              longDesc: 'Find variants belonging to products from a specific vendor or supplier.',
+            },
+            collection: {
+              displayName: 'Collection',
+              shortDesc: 'Filter by collection',
+              longDesc:
+                'Find variants belonging to products in a specific collection using the collection ID.',
+            },
+            option1: {
+              displayName: 'Option 1',
+              shortDesc: 'Filter by first option',
+              longDesc:
+                'Find variants with a specific value for their first option (e.g., Size, Color).',
+            },
+            option2: {
+              displayName: 'Option 2',
+              shortDesc: 'Filter by second option',
+              longDesc: 'Find variants with a specific value for their second option.',
+            },
+            option3: {
+              displayName: 'Option 3',
+              shortDesc: 'Filter by third option',
+              longDesc: 'Find variants with a specific value for their third option.',
+            },
+            taxable: {
+              displayName: 'Taxable',
+              shortDesc: 'Filter by tax status',
+              longDesc: 'Find variants based on whether they are taxable or non-taxable.',
+            },
+            updatedAt: {
+              displayName: 'Updated At',
+              shortDesc: 'Filter by update time',
+              longDesc:
+                'Find variants based on when they were last updated (e.g., "updated_at:>2023-01-01" or "updated_at:<now").',
             },
             rawQuery: {
               displayName: 'Advanced Query',
@@ -4415,10 +4528,22 @@ const en = {
               longDesc:
                 'Enter a custom search query for advanced filtering using Shopify search syntax.',
             },
+            sortKey: {
+              displayName: 'Sort By',
+              shortDesc: 'Order results by field',
+              longDesc: 'Specify which field to use for sorting the results.',
+            },
+            reverse: {
+              displayName: 'Reverse Order',
+              shortDesc: 'Reverse the sort order',
+              longDesc:
+                'When enabled, reverses the order of the results (e.g., Z-A instead of A-Z).',
+            },
             limit: {
               displayName: 'Results Limit',
               shortDesc: 'Maximum number of results',
-              longDesc: 'Specify the maximum number of variants to return in the search results.',
+              longDesc:
+                'Specify the maximum number of variants to return in the search results (max: 250).',
             },
             cursor: {
               displayName: 'Pagination Cursor',
