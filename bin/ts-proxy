@@ -343,11 +343,7 @@ class TsProxy inherits TypeScriptProxy {
             .getChildProviderEx(action);
         DataProviderDataContextHelper dch(req);
         if (conn_name.val()) {
-            prov.setConnection(new RestConnection({
-                "name": conn_name,
-                "url": "http://localhost",
-                "opts": conn_opts,
-            }));
+            prov.setConnection(getRestConnection(app, conn_name, conn_opts));
         }
         *HashDataType type = prov.getEventInfoWithData(prov.getEventId(), req).type;
         string yaml = makeSend(CC_OK, {
@@ -364,11 +360,7 @@ class TsProxy inherits TypeScriptProxy {
             .getChildProviderEx(action);
         DataProviderDataContextHelper dch(req);
         if (conn_name.val()) {
-            prov.setConnection(new RestConnection({
-                "name": conn_name,
-                "url": "http://localhost",
-                "opts": conn_opts,
-            }));
+            prov.setConnection(getRestConnection(app, conn_name, conn_opts));
         }
         *HashDataType type = prov.getRequestTypeWithData(req);
         string yaml = makeSend(CC_OK, {
@@ -385,17 +377,22 @@ class TsProxy inherits TypeScriptProxy {
             .getChildProviderEx(action);
         DataProviderDataContextHelper dch(req);
         if (conn_name.val()) {
-            prov.setConnection(new RestConnection({
-                "name": conn_name,
-                "url": "http://localhost",
-                "opts": conn_opts,
-            }));
+            prov.setConnection(getRestConnection(app, conn_name, conn_opts));
         }
         *HashDataType type = prov.getResponseTypeWithData(req);
         string yaml = makeSend(CC_OK, {
             "rv": type ? type.serialize() : NOTHING,
         });
         sendString(yaml);
+    }
+
+    TypeScriptAppRestConnection getRestConnection(string app, string conn_name, *hash<auto> conn_opts) {
+        return new TypeScriptAppRestConnection({
+            "name": conn_name,
+            "app": app,
+            "url": "tsrest-" + app.lwr() + "://x",
+            "opts": conn_opts,
+        });
     }
 
     private *bool retry(hash<ExceptionInfo> ex) {

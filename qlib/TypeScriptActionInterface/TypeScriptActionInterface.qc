@@ -2000,6 +2000,7 @@ public class TypeScriptActionInterface {
 
     static HashDataType getHashTypeIntern(string path, HashDataType type, hash<auto> h, *bool required,
             *ActionFunctionContext fctx, *bool ignore_dup) {
+        on_error rethrow $1.err, sprintf("%s (fields: %y)", $1.desc, h);
         map type.addField(TypeScriptActionInterface::getField(path, $1.key, $1.value, fctx, ignore_dup)),
             h.pairIterator();
         checkFieldDependencies(type);
