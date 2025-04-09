@@ -46,7 +46,7 @@ export const createHubspotGetDynamicEventInfoType = ({
     if (!token || !additionalProperties?.length) {
       eventInfoType.fields.properties.type.fields = {
         ...eventInfoType.fields.properties.type.fields,
-        ...defaultProperties,
+        ...defaultProperties.fields,
       };
 
       return eventInfoType;
@@ -75,7 +75,12 @@ export const createHubspotGetDynamicEventInfoType = ({
 
       return eventInfoType;
     } catch (error) {
-      return hubspotBaseEventInfoType;
+      eventInfoType.fields.properties.type.fields = {
+        ...eventInfoType.fields.properties.type.fields,
+        ...defaultProperties.fields,
+      };
+
+      return eventInfoType;
     }
   };
 };
