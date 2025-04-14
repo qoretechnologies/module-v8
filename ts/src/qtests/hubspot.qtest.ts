@@ -8,17 +8,16 @@ import { getHubspotContactAllowedValues } from '../apps/hubspot/helpers/get-cont
 import { getHubspotCustomObjectIdAllowedValues } from '../apps/hubspot/helpers/get-custom-object-id-allowed-values';
 import { getHubspotCustomObjectTypeAllowedValues } from '../apps/hubspot/helpers/get-custom-object-type-allowed-values';
 import { getHubspotDealAllowedValues } from '../apps/hubspot/helpers/get-deal-allowed-values';
-import { getHubspotLeadAllowedValues } from '../apps/hubspot/helpers/get-lead-allowed-values';
-import { getHubspotProductAllowedValues } from '../apps/hubspot/helpers/get-product.allowed-values';
-import { getHubspotTicketAllowedValues } from '../apps/hubspot/helpers/get-ticket-allowed-value';
-import { getHubspotUserAllowedValues } from '../apps/hubspot/helpers/get-user-allowed-values';
-import { getHubspotCompanyPropertiesAllowedValues } from '../apps/hubspot/helpers/object-properties-allowed-values';
-import { getHubspotCompanyIdPropertyAllowedValues } from '../apps/hubspot/helpers/get-id-property-allowed-values';
-import { getHubspotTicketPipelineAllowedValues } from '../apps/hubspot/helpers/get-ticket-pipeline-allowed-values';
-import { getHubspotTicketPipelineStageAllowedValues } from '../apps/hubspot/helpers/get-ticket-pipeline-stage-allowed-values';
 import { getHubspotDealPipelineAllowedValues } from '../apps/hubspot/helpers/get-deal-pipeline-allowed-values';
 import { getHubspotDealPipelineStageAllowedValues } from '../apps/hubspot/helpers/get-deal-pipeline-stage-allowed-values';
 import { getHubspotCustomObjectEventInfoType } from '../apps/hubspot/helpers/get-event-info-type';
+import { getHubspotCompanyIdPropertyAllowedValues } from '../apps/hubspot/helpers/get-id-property-allowed-values';
+import { getHubspotProductAllowedValues } from '../apps/hubspot/helpers/get-product.allowed-values';
+import { getHubspotTicketAllowedValues } from '../apps/hubspot/helpers/get-ticket-allowed-value';
+import { getHubspotTicketPipelineAllowedValues } from '../apps/hubspot/helpers/get-ticket-pipeline-allowed-values';
+import { getHubspotTicketPipelineStageAllowedValues } from '../apps/hubspot/helpers/get-ticket-pipeline-stage-allowed-values';
+import { getHubspotUserAllowedValues } from '../apps/hubspot/helpers/get-user-allowed-values';
+import { getHubspotCompanyPropertiesAllowedValues } from '../apps/hubspot/helpers/object-properties-allowed-values';
 
 let connection: string;
 describe('Tests Hubspot actions', () => {
@@ -116,11 +115,13 @@ describe('Tests Hubspot actions', () => {
       expect(allowedValues[0]?.value).not.toBeFalsy();
     });
 
-    it('Should get Hubspot lead allowed values', async () => {
-      const allowedValues = await getHubspotLeadAllowedValues(baseContext);
+    // Not enabled for test account
+    // it('Should get Hubspot lead allowed values', async () => {
+    //   const allowedValues = await getHubspotLeadAllowedValues(baseContext);
 
-      expect(allowedValues).toBeDefined();
-    });
+    //   expect(allowedValues).toBeDefined();
+    //   expect(allowedValues.length).toBeGreaterThan(0);
+    // });
 
     it('Should get Hubspot product allowed values', async () => {
       const allowedValues = await getHubspotProductAllowedValues(baseContext);

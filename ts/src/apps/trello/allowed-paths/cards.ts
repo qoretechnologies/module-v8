@@ -130,62 +130,6 @@ export const TRELLO_CARDS_ALLOWED_PATHS = {
       request_data_converter: removeTrelloFieldsFromQuery(['idBoard', 'idList']),
     },
   },
-  '/cards/{id}/checklists': {
-    POST: {
-      override_options: {
-        idBoard: {
-          type: 'string',
-          required: false,
-          preselected: true,
-          get_allowed_values: getTrelloBoardIdAllowedValues,
-          on_change: ['refetch'],
-        },
-        idList: {
-          type: 'string',
-          required: false,
-          preselected: true,
-          allowed_values_creatable: true,
-          get_allowed_values: getTrelloBoardListsIdAllowedValues,
-          on_change: ['refetch'],
-        },
-        id: {
-          allowed_values_creatable: true,
-          get_allowed_values: getTrelloListCardsIdAllowedValues,
-        },
-      },
-      request_data_converter: removeTrelloFieldsFromQuery(['idBoard', 'idList']),
-    },
-  },
-  '/cards/{id}/checklists/{idChecklist}': {
-    DELETE: {
-      override_options: {
-        idBoard: {
-          type: 'string',
-          required: false,
-          preselected: true,
-          get_allowed_values: getTrelloBoardIdAllowedValues,
-          on_change: ['refetch'],
-        },
-        idList: {
-          type: 'string',
-          required: false,
-          preselected: true,
-          allowed_values_creatable: true,
-          get_allowed_values: getTrelloBoardListsIdAllowedValues,
-          on_change: ['refetch'],
-        },
-        id: {
-          allowed_values_creatable: true,
-          get_allowed_values: getTrelloListCardsIdAllowedValues,
-        },
-        idChecklist: {
-          allowed_values_creatable: true,
-          get_allowed_values: getTrelloCardChecklistsIdAllowedValues,
-        },
-      },
-      request_data_converter: removeTrelloFieldsFromQuery(['idBoard', 'idList', 'idChecklist']),
-    },
-  },
   '/cards/{id}/idLabels': {
     POST: {
       override_options: {

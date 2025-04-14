@@ -5,7 +5,13 @@ import {
   TQoreMappedOptions,
 } from '@qoretechnologies/ts-toolkit';
 import { Locales } from '../../i18n/i18n-types';
-import { TRELLO_ACTIONS, TRELLO_APP_LOGO, TRELLO_APP_NAME, TRELLO_CONN_OPTIONS } from './constants';
+import {
+  TRELLO_ACTIONS,
+  TRELLO_APP_LOGO,
+  TRELLO_APP_NAME,
+  TRELLO_CONN_OPTIONS,
+  TRELLO_KEY,
+} from './constants';
 import L from '../../i18n/i18n-node';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import * as TRELLO_TRIGGERS from './triggers';
@@ -13,8 +19,12 @@ import * as TRELLO_TRIGGERS from './triggers';
 const setOptionsPostAuth: (
   context: Omit<TQoreAppActionFunctionContext<TCustomConnOptions>, 'opts'>
 ) => TQoreMappedOptions<any> = (context) => {
+  const token = context?.conn_opts?.token;
   const key = context?.conn_opts?.key || context?.conn_opts?.oauth2_client_id;
   const redirect_url = context?.conn_opts?.oauth2_redirect_url;
+  const headers = {
+    Authorization: `OAuth oauth_consumer_key="${key}", oauth_token="${token}"`,
+  };
 
   return {
     key,
@@ -22,6 +32,8 @@ const setOptionsPostAuth: (
       key,
       return_url: redirect_url,
     },
+    headers,
+    ping_headers: headers,
   };
 };
 
@@ -48,9 +60,9 @@ export default (locale: Locales) =>
         expiration: 'never',
         callback_method: 'fragment',
         scope: 'read,write',
-        key: 'c42891766a55f94a6e1666b540f58719',
+        key: TRELLO_KEY,
       },
-      oauth2_client_id: 'c42891766a55f94a6e1666b540f58719',
+      oauth2_client_id: TRELLO_KEY,
       oauth2_client_secret: 'x',
       oauth2_scopes: ['read', 'write'],
       ping_method: 'GET',
