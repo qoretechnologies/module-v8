@@ -9,9 +9,11 @@ import {
   IAllowedPathData,
   IQoreAppActionWithEvent,
   IQoreAppActionWithEventOrWebhook,
+  IQoreAppActionWithSwaggerPath,
   IQorePartialAppActionWithSwaggerPath,
   QoreAppActionCodeToLocale,
   TAllowedPaths,
+  TCustomConnOptions,
   THttpMethod,
   TQoreAppActionOption,
   TQoreAppActionWithEventOrWebhookEventInfo,
@@ -21,6 +23,7 @@ import {
   TQoreOptions,
   TQorePartialEventAction,
   TQorePartialNonEventAction,
+  TQoreRequestDataConverterFunction,
   TQoreTypeObject,
   TStringWithFirstUpperCaseCharacter,
 } from '@qoretechnologies/ts-toolkit';
@@ -56,6 +59,7 @@ type TBuildActionsFromSwaggerSchemaParams = {
   locale?: Locales;
   schemaPath?: string;
   actionNameModifier?: string;
+  globalRequestDataConverter?: TQoreRequestDataConverterFunction<TCustomConnOptions, any>;
 };
 
 // !IMPORTANT
@@ -75,6 +79,7 @@ export const buildActionsFromSwaggerSchema = ({
   app,
   locale = 'en',
   actionNameModifier = '',
+  globalRequestDataConverter,
 }: TBuildActionsFromSwaggerSchemaParams): IQorePartialAppActionWithSwaggerPath[] => {
   // Return empty actions if schema or allowedPaths is missing
   if (!schema || (allowedPaths && Object.keys(allowedPaths).length === 0)) {
@@ -131,7 +136,7 @@ export const buildActionsFromSwaggerSchema = ({
         actionIdentifier = `${actionIdentifier}_${actionNameModifier}`;
       }
 
-      const action: IQorePartialAppActionWithSwaggerPath = {
+      const action: Omit<IQoreAppActionWithSwaggerPath, 'app'> = {
         action: actionIdentifier,
         action_code: EQoreAppActionCode.ACTION,
         swagger_path: `${path}/${method.toUpperCase()}`,
@@ -149,12 +154,25 @@ export const buildActionsFromSwaggerSchema = ({
           getPropertyOfSchemaData(dataWithoutParameters, 'description', ''),
         ...(schemaPath && { swagger_schema: schemaPath }),
         ...actionData,
+        ...(globalRequestDataConverter
+          ? {
+              request_data_converter: (request, ctx) => {
+                const convertedRequest = globalRequestDataConverter(request, ctx);
+
+                if (pathData?.request_data_converter) {
+                  return pathData.request_data_converter(convertedRequest, ctx);
+                }
+
+                return convertedRequest;
+              },
+            }
+          : {}),
       };
       actions.push(action);
     });
   });
 
-  return actions satisfies IQorePartialAppActionWithSwaggerPath[];
+  return actions satisfies Omit<IQoreAppActionWithSwaggerPath, 'app'>[];
 };
 
 export const getPropertyOfSchemaData = (
