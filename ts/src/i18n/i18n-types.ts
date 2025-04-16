@@ -170,6 +170,182 @@ type RootTranslation = {
 				}
 			}
 		}
+		Mailchimp: {
+			/**
+			 * M​a​i​l​c​h​i​m​p
+			 */
+			displayName: string
+			/**
+			 * E​m​a​i​l​ ​m​a​r​k​e​t​i​n​g​,​ ​a​u​t​o​m​a​t​i​o​n​,​ ​a​n​d​ ​a​n​a​l​y​t​i​c​s​ ​p​l​a​t​f​o​r​m
+			 */
+			shortDesc: string
+			/**
+			 * C​o​n​n​e​c​t​ ​w​i​t​h​ ​M​a​i​l​c​h​i​m​p​ ​t​o​ ​c​r​e​a​t​e​ ​a​n​d​ ​m​a​n​a​g​e​ ​e​m​a​i​l​ ​c​a​m​p​a​i​g​n​s​,​ ​t​r​a​c​k​ ​s​u​b​s​c​r​i​b​e​r​ ​a​c​t​i​v​i​t​i​e​s​,​ ​a​n​d​ ​a​u​t​o​m​a​t​e​ ​m​a​r​k​e​t​i​n​g​ ​w​o​r​k​f​l​o​w​s​.
+			 */
+			longDesc: string
+			triggers: {
+				email_opened: {
+					/**
+					 * E​m​a​i​l​ ​O​p​e​n​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​s​u​b​s​c​r​i​b​e​r​ ​o​p​e​n​s​ ​a​n​ ​e​m​a​i​l
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​s​u​b​s​c​r​i​b​e​r​ ​o​p​e​n​s​ ​a​n​ ​e​m​a​i​l​ ​f​r​o​m​ ​y​o​u​r​ ​c​a​m​p​a​i​g​n​s​ ​o​r​ ​a​u​t​o​m​a​t​i​o​n​ ​w​o​r​k​f​l​o​w​s​.
+					 */
+					longDesc: string
+					options: {
+						audience: {
+							/**
+							 * A​u​d​i​e​n​c​e
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​u​d​i​e​n​c​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​i​c​h​ ​M​a​i​l​c​h​i​m​p​ ​a​u​d​i​e​n​c​e​ ​(​m​a​i​l​i​n​g​ ​l​i​s​t​)​ ​t​o​ ​t​r​a​c​k​ ​f​o​r​ ​e​m​a​i​l​ ​o​p​e​n​s​.
+							 */
+							longDesc: string
+						}
+						campaign_type: {
+							/**
+							 * C​a​m​p​a​i​g​n​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​a​c​k​ ​r​e​g​u​l​a​r​ ​c​a​m​p​a​i​g​n​s​,​ ​a​u​t​o​m​a​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+						trigger_on_subscriber: {
+							/**
+							 * T​r​i​g​g​e​r​ ​o​n​ ​S​u​b​s​c​r​i​b​e​r
+							 */
+							displayName: string
+							/**
+							 * T​r​i​g​g​e​r​ ​f​o​r​ ​s​p​e​c​i​f​i​c​ ​s​u​b​s​c​r​i​b​e​r​s​ ​o​n​l​y
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​s​p​e​c​i​f​y​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​t​h​e​s​e​ ​s​p​e​c​i​f​i​c​ ​s​u​b​s​c​r​i​b​e​r​s​.
+							 */
+							longDesc: string
+						}
+						campaign: {
+							/**
+							 * C​a​m​p​a​i​g​n
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​m​p​a​i​g​n
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​o​p​e​n​s​.​ ​L​e​a​v​e​ ​b​l​a​n​k​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​c​a​m​p​a​i​g​n​s​.
+							 */
+							longDesc: string
+						}
+						workflow_id: {
+							/**
+							 * W​o​r​k​f​l​o​w​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * A​u​t​o​m​a​t​i​o​n​ ​w​o​r​k​f​l​o​w​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​m​o​n​i​t​o​r​i​n​g​ ​a​n​ ​a​u​t​o​m​a​t​i​o​n​,​ ​s​p​e​c​i​f​y​ ​t​h​e​ ​w​o​r​k​f​l​o​w​ ​I​D​ ​t​o​ ​t​r​a​c​k​.
+							 */
+							longDesc: string
+						}
+						automation_email: {
+							/**
+							 * A​u​t​o​m​a​t​i​o​n​ ​E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​a​u​t​o​m​a​t​i​o​n​ ​e​m​a​i​l
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​e​m​a​i​l​ ​w​i​t​h​i​n​ ​a​n​ ​a​u​t​o​m​a​t​i​o​n​ ​w​o​r​k​f​l​o​w​ ​t​o​ ​m​o​n​i​t​o​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_unsubscriber: {
+					/**
+					 * N​e​w​ ​U​n​s​u​b​s​c​r​i​b​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​s​o​m​e​o​n​e​ ​u​n​s​u​b​s​c​r​i​b​e​s
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​c​o​n​t​a​c​t​ ​u​n​s​u​b​s​c​r​i​b​e​s​ ​f​r​o​m​ ​y​o​u​r​ ​M​a​i​l​c​h​i​m​p​ ​a​u​d​i​e​n​c​e​.
+					 */
+					longDesc: string
+					options: {
+						audience: {
+							/**
+							 * A​u​d​i​e​n​c​e
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​u​d​i​e​n​c​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​i​c​h​ ​M​a​i​l​c​h​i​m​p​ ​a​u​d​i​e​n​c​e​ ​t​o​ ​t​r​a​c​k​ ​f​o​r​ ​u​n​s​u​b​s​c​r​i​b​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_subscriber: {
+					/**
+					 * N​e​w​ ​S​u​b​s​c​r​i​b​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​s​u​b​s​c​r​i​b​e​r​ ​j​o​i​n​s
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​s​u​b​s​c​r​i​b​e​s​ ​t​o​ ​y​o​u​r​ ​M​a​i​l​c​h​i​m​p​ ​a​u​d​i​e​n​c​e​.
+					 */
+					longDesc: string
+					options: {
+						audience: {
+							/**
+							 * A​u​d​i​e​n​c​e
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​u​d​i​e​n​c​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​i​c​h​ ​M​a​i​l​c​h​i​m​p​ ​a​u​d​i​e​n​c​e​ ​t​o​ ​t​r​a​c​k​ ​f​o​r​ ​n​e​w​ ​s​u​b​s​c​r​i​b​e​r​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Notion: {
 			/**
 			 * N​o​t​i​o​n
@@ -20074,6 +20250,182 @@ export type TranslationFunctions = {
 							 * Second Option
 							 */
 							displayName: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		Mailchimp: {
+			/**
+			 * Mailchimp
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Email marketing, automation, and analytics platform
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Connect with Mailchimp to create and manage email campaigns, track subscriber activities, and automate marketing workflows.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				email_opened: {
+					/**
+					 * Email Opened
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a subscriber opens an email
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a subscriber opens an email from your campaigns or automation workflows.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						audience: {
+							/**
+							 * Audience
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the audience to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose which Mailchimp audience (mailing list) to track for email opens.
+							 */
+							longDesc: () => LocalizedString
+						}
+						campaign_type: {
+							/**
+							 * Campaign Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of campaign to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify whether to track regular campaigns, automations.
+							 */
+							longDesc: () => LocalizedString
+						}
+						trigger_on_subscriber: {
+							/**
+							 * Trigger on Subscriber
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Trigger for specific subscribers only
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally specify one or more email addresses to only trigger for these specific subscribers.
+							 */
+							longDesc: () => LocalizedString
+						}
+						campaign: {
+							/**
+							 * Campaign
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select a specific campaign
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose a specific campaign to monitor for opens. Leave blank to monitor all campaigns.
+							 */
+							longDesc: () => LocalizedString
+						}
+						workflow_id: {
+							/**
+							 * Workflow ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Automation workflow ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If monitoring an automation, specify the workflow ID to track.
+							 */
+							longDesc: () => LocalizedString
+						}
+						automation_email: {
+							/**
+							 * Automation Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific automation email
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select a specific email within an automation workflow to monitor.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_unsubscriber: {
+					/**
+					 * New Unsubscriber
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when someone unsubscribes
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a contact unsubscribes from your Mailchimp audience.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						audience: {
+							/**
+							 * Audience
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the audience to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose which Mailchimp audience to track for unsubscribes.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_subscriber: {
+					/**
+					 * New Subscriber
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new subscriber joins
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a new contact subscribes to your Mailchimp audience.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						audience: {
+							/**
+							 * Audience
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the audience to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose which Mailchimp audience to track for new subscribers.
+							 */
+							longDesc: () => LocalizedString
 						}
 					}
 				}
