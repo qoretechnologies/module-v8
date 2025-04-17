@@ -3,11 +3,12 @@ import {
   TQoreAppWithActions,
   TQoreMappedOptions,
 } from '@qoretechnologies/ts-toolkit';
-import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
+import { createSwaggerPaths, mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import {
   MAILCHIMP_ACTIONS,
+  MAILCHIMP_ALLOWED_PATHS,
   MAILCHIMP_APP_LOGO,
   MAILCHIMP_APP_NAME,
   MAILCHIMP_CONN_OPTIONS,
@@ -42,6 +43,7 @@ export default (locale: Locales) =>
     swagger_options: {
       parse_flags: -1,
     },
+    swagger_paths: createSwaggerPaths(MAILCHIMP_ALLOWED_PATHS),
     rest_modifiers: {
       options: MAILCHIMP_CONN_OPTIONS,
       url_template_options: ['datacenter'],
