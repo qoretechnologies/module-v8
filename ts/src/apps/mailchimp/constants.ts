@@ -6,7 +6,10 @@ import mailchimp from '../../schemas/mailchimp.swagger.json';
 import { getMailchimpCampaignIdAllowedValues } from './helpers/get-campaign-id-allowed-values';
 import { getMailchimpCustomerIdAllowedValues } from './helpers/get-customer-id-allowed-values';
 import { getMailchimpCampaignFolderIdAllowedValues } from './helpers/get-folder-id-allowed-values';
-import { getMailchimpInterestCategoryIdAllowedValues } from './helpers/get-interest-id-allowed-values';
+import {
+  getMailchimpInterestCategoryIdAllowedValues,
+  getMailchimpInterestIdAllowedValues,
+} from './helpers/get-interest-id-allowed-values';
 import { getMailchimpListIdAllowedValues } from './helpers/get-list-id-allowed-values';
 import { getMailchimpNoteIdAllowedValues } from './helpers/get-note-id-allowed-values';
 import { getMailchimpSegmentIdAllowedValues } from './helpers/get-segment-id-allowed-values';
@@ -107,13 +110,38 @@ export const MAILCHIMP_ALLOWED_PATHS = {
           on_change: ['refetch'],
         },
         unique_email_id: {
+          allowed_values_creatable: true,
           get_allowed_values: getMailchimpListUniqueEmailIdAllowedValues,
           on_change: ['refetch'],
         },
         interest_category_id: {
+          allowed_values_creatable: true,
           get_allowed_values: getMailchimpInterestCategoryIdAllowedValues,
         },
-        // TODO: add interest items check if it is an array
+        interest_ids: {
+          type: {
+            type: 'list',
+            element_type: 'string',
+          },
+          get_element_allowed_values: getMailchimpInterestIdAllowedValues,
+          element_allowed_values_creatable: true,
+        },
+      },
+      request_data_converter: (request) => {
+        const { query, ...rest } = request;
+        const { interest_ids, ...restQuery } = query;
+
+        return {
+          ...rest,
+          query: {
+            ...restQuery,
+            ...(interest_ids?.length
+              ? {
+                  interest_ids: interest_ids.join(','),
+                }
+              : {}),
+          },
+        };
       },
     },
   },
@@ -189,10 +217,9 @@ export const MAILCHIMP_ALLOWED_PATHS = {
       },
     },
   },
-  // TODO: Fix the schema somehow
-  // '/lists': {
-  //   POST: {},
-  // },
+  '/lists': {
+    POST: {},
+  },
   '/reports': {
     GET: {},
   },
