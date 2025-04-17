@@ -128,19 +128,21 @@ export const MAILCHIMP_ALLOWED_PATHS = {
         },
       },
       request_data_converter: (request) => {
+        if (!request) return request;
+
         const { query, ...rest } = request;
-        const { interest_ids, ...restQuery } = query;
+        const interest_ids = query?.interest_ids;
 
         return {
           ...rest,
-          query: {
-            ...restQuery,
-            ...(interest_ids?.length
-              ? {
-                  interest_ids: interest_ids.join(','),
-                }
-              : {}),
-          },
+          ...(query && {
+            query: {
+              ...omit(query, ['interest_ids']),
+              ...(interest_ids?.length && {
+                interest_ids: interest_ids.join(','),
+              }),
+            },
+          }),
         };
       },
     },
