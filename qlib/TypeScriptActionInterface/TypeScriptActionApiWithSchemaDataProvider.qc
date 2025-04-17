@@ -560,7 +560,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
 
     AbstractDataProvider checkDataProvider() {
         if (!prov) {
-            on_error rethrow $1.err, sprintf("Error setting data provider from appp %y action %y: %s (Swagger "
+            on_error rethrow $1.err, sprintf("Error setting data provider from app %y action %y: %s (Swagger "
                 "path: %y)", app, action, $1.desc, swagger_path);
             prov = TypeScriptActionInterface::getSwaggerDataProvider(app, swagger_schema)
                 .getChildProviderPath(swagger_path);
