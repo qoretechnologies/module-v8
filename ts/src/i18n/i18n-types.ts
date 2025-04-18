@@ -170,6 +170,250 @@ type RootTranslation = {
 				}
 			}
 		}
+		Dynamics: {
+			triggers: {
+				'new-or-updated-account': {
+					/**
+					 * N​e​w​ ​o​r​ ​U​p​d​a​t​e​d​ ​A​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​a​c​c​o​u​n​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​m​o​d​i​f​i​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​D​y​n​a​m​i​c​s​ ​3​6​5​ ​f​o​r​ ​a​c​c​o​u​n​t​s​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​c​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​a​c​c​o​u​n​t​s​ ​o​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​a​c​c​o​u​n​t​s​ ​a​r​e​ ​m​o​d​i​f​i​e​d​.
+					 */
+					longDesc: string
+					options: {
+						condition: {
+							/**
+							 * T​r​i​g​g​e​r​ ​C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​a​c​c​o​u​n​t​s​ ​a​r​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​w​h​e​n​ ​t​h​e​y​ ​a​r​e​ ​u​p​d​a​t​e​d​.​ ​O​n​l​y​ ​o​n​e​ ​c​o​n​d​i​t​i​o​n​ ​c​a​n​ ​b​e​ ​s​e​l​e​c​t​e​d​ ​a​t​ ​a​ ​t​i​m​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'new-or-updated-case': {
+					/**
+					 * N​e​w​ ​o​r​ ​U​p​d​a​t​e​d​ ​C​a​s​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​c​a​s​e​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​m​o​d​i​f​i​e​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​t​e​c​t​s​ ​w​h​e​n​ ​s​u​p​p​o​r​t​ ​c​a​s​e​s​ ​a​r​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​D​y​n​a​m​i​c​s​ ​3​6​5​,​ ​e​n​a​b​l​i​n​g​ ​a​u​t​o​m​a​t​e​d​ ​r​e​s​p​o​n​s​e​s​,​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​,​ ​o​r​ ​c​a​s​e​ ​m​a​n​a​g​e​m​e​n​t​ ​w​o​r​k​f​l​o​w​s​.
+					 */
+					longDesc: string
+					options: {
+						condition: {
+							/**
+							 * T​r​i​g​g​e​r​ ​C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​n​e​w​ ​c​a​s​e​s​ ​(​c​r​e​a​t​e​d​)​ ​o​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​c​a​s​e​s​ ​a​r​e​ ​m​o​d​i​f​i​e​d​ ​(​u​p​d​a​t​e​d​)​.​ ​Y​o​u​ ​m​u​s​t​ ​s​e​l​e​c​t​ ​o​n​e​ ​o​p​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'new-or-updated-contact': {
+					/**
+					 * N​e​w​ ​o​r​ ​U​p​d​a​t​e​d​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​c​o​n​t​a​c​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​m​o​d​i​f​i​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​D​y​n​a​m​i​c​s​ ​3​6​5​ ​e​n​v​i​r​o​n​m​e​n​t​ ​f​o​r​ ​c​o​n​t​a​c​t​s​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​o​r​k​f​l​o​w​s​ ​e​i​t​h​e​r​ ​w​h​e​n​ ​n​e​w​ ​c​o​n​t​a​c​t​s​ ​a​r​e​ ​a​d​d​e​d​ ​o​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​ ​r​e​c​o​r​d​s​ ​a​r​e​ ​c​h​a​n​g​e​d​.
+					 */
+					longDesc: string
+					options: {
+						condition: {
+							/**
+							 * T​r​i​g​g​e​r​ ​C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​s​h​o​u​l​d​ ​f​i​r​e​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​c​o​n​t​a​c​t​s​ ​o​r​ ​f​o​r​ ​u​p​d​a​t​e​s​ ​t​o​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​s​.​ ​O​n​l​y​ ​o​n​e​ ​o​p​t​i​o​n​ ​c​a​n​ ​b​e​ ​a​c​t​i​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'new-custom-entity': {
+					/**
+					 * N​e​w​ ​C​u​s​t​o​m​ ​E​n​t​i​t​y​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​c​u​s​t​o​m​ ​e​n​t​i​t​y​ ​r​e​c​o​r​d​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * W​o​r​k​s​ ​w​i​t​h​ ​y​o​u​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​'​s​ ​c​u​s​t​o​m​ ​e​n​t​i​t​i​e​s​ ​i​n​ ​D​y​n​a​m​i​c​s​ ​3​6​5​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​n​d​ ​r​e​s​p​o​n​d​ ​w​h​e​n​ ​n​e​w​ ​r​e​c​o​r​d​s​ ​a​r​e​ ​c​r​e​a​t​e​d​ ​f​o​r​ ​a​n​y​ ​c​u​s​t​o​m​ ​e​n​t​i​t​y​ ​t​y​p​e​ ​y​o​u​ ​s​p​e​c​i​f​y​.
+					 */
+					longDesc: string
+					options: {
+						entityName: {
+							/**
+							 * E​n​t​i​t​y​ ​L​o​g​i​c​a​l​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​i​n​t​e​r​n​a​l​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​ ​e​n​t​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​l​o​g​i​c​a​l​ ​(​s​c​h​e​m​a​)​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​ ​e​n​t​i​t​y​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​.​ ​T​h​i​s​ ​i​s​ ​t​y​p​i​c​a​l​l​y​ ​i​n​ ​t​h​e​ ​f​o​r​m​a​t​ ​"​n​e​w​_​e​n​t​i​t​y​n​a​m​e​"​ ​o​r​ ​"​c​u​s​t​o​m​_​e​n​t​i​t​y​n​a​m​e​"​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'new-or-updated-invoice': {
+					/**
+					 * N​e​w​ ​o​r​ ​U​p​d​a​t​e​d​ ​I​n​v​o​i​c​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​i​n​v​o​i​c​e​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​m​o​d​i​f​i​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​i​n​v​o​i​c​e​-​r​e​l​a​t​e​d​ ​a​c​t​i​v​i​t​i​e​s​ ​i​n​ ​D​y​n​a​m​i​c​s​ ​3​6​5​,​ ​l​e​t​t​i​n​g​ ​y​o​u​ ​c​h​o​o​s​e​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​o​r​k​f​l​o​w​s​ ​e​i​t​h​e​r​ ​w​h​e​n​ ​n​e​w​ ​i​n​v​o​i​c​e​s​ ​a​r​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​o​n​e​s​ ​a​r​e​ ​u​p​d​a​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						condition: {
+							/**
+							 * T​r​i​g​g​e​r​ ​C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​i​n​v​o​i​c​e​s​ ​o​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​i​n​v​o​i​c​e​s​ ​a​r​e​ ​m​o​d​i​f​i​e​d​.​ ​Y​o​u​ ​m​u​s​t​ ​s​e​l​e​c​t​ ​o​n​e​ ​o​p​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'new-or-updated-lead': {
+					/**
+					 * N​e​w​ ​o​r​ ​U​p​d​a​t​e​d​ ​L​e​a​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​l​e​a​d​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​m​o​d​i​f​i​e​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​t​e​c​t​s​ ​w​h​e​n​ ​l​e​a​d​s​ ​a​r​e​ ​a​d​d​e​d​ ​o​r​ ​m​o​d​i​f​i​e​d​ ​i​n​ ​D​y​n​a​m​i​c​s​ ​3​6​5​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​c​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​n​e​w​ ​l​e​a​d​s​ ​o​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​l​e​a​d​ ​r​e​c​o​r​d​s​ ​c​h​a​n​g​e​.
+					 */
+					longDesc: string
+					options: {
+						condition: {
+							/**
+							 * T​r​i​g​g​e​r​ ​C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​n​e​w​ ​l​e​a​d​s​ ​a​r​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​l​e​a​d​s​ ​a​r​e​ ​u​p​d​a​t​e​d​.​ ​O​n​l​y​ ​o​n​e​ ​c​o​n​d​i​t​i​o​n​ ​c​a​n​ ​b​e​ ​s​e​l​e​c​t​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'new-or-updated-opportunity': {
+					/**
+					 * N​e​w​ ​o​r​ ​U​p​d​a​t​e​d​ ​O​p​p​o​r​t​u​n​i​t​y
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​o​p​p​o​r​t​u​n​i​t​y​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​m​o​d​i​f​i​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​s​a​l​e​s​ ​p​i​p​e​l​i​n​e​ ​i​n​ ​D​y​n​a​m​i​c​s​ ​3​6​5​,​ ​g​i​v​i​n​g​ ​y​o​u​ ​t​h​e​ ​o​p​t​i​o​n​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​o​r​k​f​l​o​w​s​ ​e​i​t​h​e​r​ ​w​h​e​n​ ​n​e​w​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​a​r​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​o​n​e​s​ ​c​h​a​n​g​e​.
+					 */
+					longDesc: string
+					options: {
+						condition: {
+							/**
+							 * T​r​i​g​g​e​r​ ​C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​n​e​w​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​b​e​i​n​g​ ​c​r​e​a​t​e​d​ ​o​r​ ​o​n​ ​u​p​d​a​t​e​s​ ​t​o​ ​e​x​i​s​t​i​n​g​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​.​ ​Y​o​u​ ​m​u​s​t​ ​s​e​l​e​c​t​ ​o​n​e​ ​o​p​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'new-or-updated-order': {
+					/**
+					 * N​e​w​ ​o​r​ ​U​p​d​a​t​e​d​ ​O​r​d​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​o​r​d​e​r​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​m​o​d​i​f​i​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​a​c​k​s​ ​o​r​d​e​r​-​r​e​l​a​t​e​d​ ​a​c​t​i​v​i​t​i​e​s​ ​i​n​ ​D​y​n​a​m​i​c​s​ ​3​6​5​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​c​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​o​r​k​f​l​o​w​s​ ​w​h​e​n​ ​n​e​w​ ​o​r​d​e​r​s​ ​a​r​e​ ​p​l​a​c​e​d​ ​o​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​o​r​d​e​r​s​ ​a​r​e​ ​u​p​d​a​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						condition: {
+							/**
+							 * T​r​i​g​g​e​r​ ​C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​o​r​d​e​r​s​ ​o​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​o​r​d​e​r​s​ ​a​r​e​ ​m​o​d​i​f​i​e​d​.​ ​O​n​l​y​ ​o​n​e​ ​c​o​n​d​i​t​i​o​n​ ​c​a​n​ ​b​e​ ​a​c​t​i​v​e​ ​a​t​ ​a​ ​t​i​m​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Mailchimp: {
 			/**
 			 * M​a​i​l​c​h​i​m​p
@@ -20250,6 +20494,250 @@ export type TranslationFunctions = {
 							 * Second Option
 							 */
 							displayName: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		Dynamics: {
+			triggers: {
+				'new-or-updated-account': {
+					/**
+					 * New or Updated Account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an account is created or modified
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors Dynamics 365 for accounts, allowing you to choose whether to trigger on newly created accounts or when existing accounts are modified.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						condition: {
+							/**
+							 * Trigger Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose created or updated
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select whether to trigger when accounts are created or when they are updated. Only one condition can be selected at a time.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'new-or-updated-case': {
+					/**
+					 * New or Updated Case
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a case is created or modified
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Detects when support cases are created or updated in Dynamics 365, enabling automated responses, notifications, or case management workflows.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						condition: {
+							/**
+							 * Trigger Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose created or updated
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify whether to trigger on new cases (created) or when existing cases are modified (updated). You must select one option.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'new-or-updated-contact': {
+					/**
+					 * New or Updated Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a contact is created or modified
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors your Dynamics 365 environment for contacts, allowing you to trigger workflows either when new contacts are added or when existing contact records are changed.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						condition: {
+							/**
+							 * Trigger Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose created or updated
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select whether the trigger should fire for newly created contacts or for updates to existing contacts. Only one option can be active.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'new-custom-entity': {
+					/**
+					 * New Custom Entity Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a custom entity record is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Works with your organization's custom entities in Dynamics 365, allowing you to monitor and respond when new records are created for any custom entity type you specify.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						entityName: {
+							/**
+							 * Entity Logical Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The internal name of the custom entity
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the logical (schema) name of the custom entity you want to monitor. This is typically in the format "new_entityname" or "custom_entityname".
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'new-or-updated-invoice': {
+					/**
+					 * New or Updated Invoice
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an invoice is created or modified
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors invoice-related activities in Dynamics 365, letting you choose to trigger workflows either when new invoices are created or when existing ones are updated.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						condition: {
+							/**
+							 * Trigger Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose created or updated
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify whether to trigger on newly created invoices or when existing invoices are modified. You must select one option.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'new-or-updated-lead': {
+					/**
+					 * New or Updated Lead
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a lead is created or modified
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Detects when leads are added or modified in Dynamics 365, allowing you to choose whether to trigger on new leads or when existing lead records change.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						condition: {
+							/**
+							 * Trigger Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose created or updated
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select whether to trigger when new leads are created or when existing leads are updated. Only one condition can be selected.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'new-or-updated-opportunity': {
+					/**
+					 * New or Updated Opportunity
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an opportunity is created or modified
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors your sales pipeline in Dynamics 365, giving you the option to trigger workflows either when new opportunities are created or when existing ones change.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						condition: {
+							/**
+							 * Trigger Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose created or updated
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify whether to trigger on new opportunities being created or on updates to existing opportunities. You must select one option.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'new-or-updated-order': {
+					/**
+					 * New or Updated Order
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an order is created or modified
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Tracks order-related activities in Dynamics 365, allowing you to choose whether to trigger workflows when new orders are placed or when existing orders are updated.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						condition: {
+							/**
+							 * Trigger Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose created or updated
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select whether to trigger on newly created orders or when existing orders are modified. Only one condition can be active at a time.
+							 */
+							longDesc: () => LocalizedString
 						}
 					}
 				}
