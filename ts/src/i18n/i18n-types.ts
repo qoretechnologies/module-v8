@@ -170,6 +170,138 @@ type RootTranslation = {
 				}
 			}
 		}
+		Dynamics: {
+			triggers: {
+				'new-account': {
+					/**
+					 * N​e​w​ ​A​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​a​c​c​o​u​n​t​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​a​c​c​o​u​n​t​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					longDesc: string
+				}
+				'new-case': {
+					/**
+					 * N​e​w​ ​C​a​s​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​a​s​e​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​a​s​e​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					longDesc: string
+				}
+				'new-contact': {
+					/**
+					 * N​e​w​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					longDesc: string
+				}
+				'new-custom-entity': {
+					/**
+					 * N​e​w​ ​C​u​s​t​o​m​ ​E​n​t​i​t​y
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​ ​e​n​t​i​t​y​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​ ​e​n​t​i​t​y​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					longDesc: string
+					options: {
+						entityName: {
+							/**
+							 * E​n​t​i​t​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​l​o​g​i​c​a​l​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​ ​e​n​t​i​t​y​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​g​i​c​a​l​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​ ​e​n​t​i​t​y​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'new-invoice': {
+					/**
+					 * N​e​w​ ​I​n​v​o​i​c​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​n​v​o​i​c​e​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​n​v​o​i​c​e​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					longDesc: string
+				}
+				'new-lead': {
+					/**
+					 * N​e​w​ ​L​e​a​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​l​e​a​d​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​l​e​a​d​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					longDesc: string
+				}
+				'new-opportunity': {
+					/**
+					 * N​e​w​ ​O​p​p​o​r​t​u​n​i​t​y
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​o​p​p​o​r​t​u​n​i​t​y​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​o​p​p​o​r​t​u​n​i​t​y​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					longDesc: string
+				}
+				'new-order': {
+					/**
+					 * N​e​w​ ​O​r​d​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​o​r​d​e​r​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​o​r​d​e​r​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					longDesc: string
+				}
+			}
+		}
 		Mailchimp: {
 			/**
 			 * M​a​i​l​c​h​i​m​p
@@ -20252,6 +20384,138 @@ export type TranslationFunctions = {
 							displayName: () => LocalizedString
 						}
 					}
+				}
+			}
+		}
+		Dynamics: {
+			triggers: {
+				'new-account': {
+					/**
+					 * New Account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new account is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new account is created
+					 */
+					longDesc: () => LocalizedString
+				}
+				'new-case': {
+					/**
+					 * New Case
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new case is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new case is created
+					 */
+					longDesc: () => LocalizedString
+				}
+				'new-contact': {
+					/**
+					 * New Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new contact is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new contact is created
+					 */
+					longDesc: () => LocalizedString
+				}
+				'new-custom-entity': {
+					/**
+					 * New Custom Entity
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new custom entity is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new custom entity is created
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						entityName: {
+							/**
+							 * Entity Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The logical name of the custom entity to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The logical name of the custom entity to monitor
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'new-invoice': {
+					/**
+					 * New Invoice
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new invoice is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new invoice is created
+					 */
+					longDesc: () => LocalizedString
+				}
+				'new-lead': {
+					/**
+					 * New Lead
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new lead is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new lead is created
+					 */
+					longDesc: () => LocalizedString
+				}
+				'new-opportunity': {
+					/**
+					 * New Opportunity
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new opportunity is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new opportunity is created
+					 */
+					longDesc: () => LocalizedString
+				}
+				'new-order': {
+					/**
+					 * New Order
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new order is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new order is created
+					 */
+					longDesc: () => LocalizedString
 				}
 			}
 		}

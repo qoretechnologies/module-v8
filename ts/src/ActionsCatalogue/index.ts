@@ -32,6 +32,7 @@ import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import shopify from '../apps/shopify';
 import mailchimp from '../apps/mailchimp';
+import dynamics from '../apps/dynamics';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -67,6 +68,7 @@ const NEW_APPS = {
 
 const EXISTING_APPS = {
   salesforce,
+  dynamics,
 } as const;
 
 const CUSTOM_APPS: Record<string, TQoreAppWithActions> = {};

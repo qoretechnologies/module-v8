@@ -83,6 +83,106 @@ const en = {
         },
       },
     },
+    Dynamics: {
+      triggers: {
+        'new-or-updated-account': {
+          displayName: 'New Account',
+          shortDesc: 'Triggers when a new account is created',
+          longDesc: 'Triggers when a new account is created',
+          options: {
+            condition: {
+              displayName: 'Condition',
+              shortDesc: 'Condition to trigger on',
+              longDesc: 'Condition to trigger on [created or updated]',
+            },
+          },
+        },
+        'new-or-updated-case': {
+          displayName: 'New Case',
+          shortDesc: 'Triggers when a new case is created',
+          longDesc: 'Triggers when a new case is created',
+          options: {
+            condition: {
+              displayName: 'Condition',
+              shortDesc: 'Condition to trigger on',
+              longDesc: 'Condition to trigger on [created or updated]',
+            },
+          },
+        },
+        'new-or-updated-contact': {
+          displayName: 'New Contact',
+          shortDesc: 'Triggers when a new contact is created',
+          longDesc: 'Triggers when a new contact is created',
+          options: {
+            condition: {
+              displayName: 'Condition',
+              shortDesc: 'Condition to trigger on',
+              longDesc: 'Condition to trigger on [created or updated]',
+            },
+          },
+        },
+        'new-custom-entity': {
+          displayName: 'New Custom Entity',
+          shortDesc: 'Triggers when a new custom entity is created',
+          longDesc: 'Triggers when a new custom entity is created',
+          options: {
+            entityName: {
+              displayName: 'Entity Name',
+              shortDesc: 'The logical name of the custom entity to monitor',
+              longDesc: 'The logical name of the custom entity to monitor',
+            },
+          },
+        },
+        'new-or-updated-invoice': {
+          displayName: 'New Invoice',
+          shortDesc: 'Triggers when a new invoice is created',
+          longDesc: 'Triggers when a new invoice is created',
+          options: {
+            condition: {
+              displayName: 'Condition',
+              shortDesc: 'Condition to trigger on',
+              longDesc: 'Condition to trigger on [created or updated]',
+            },
+          },
+        },
+        'new-or-updated-lead': {
+          displayName: 'New Lead',
+          shortDesc: 'Triggers when a new lead is created',
+          longDesc: 'Triggers when a new lead is created',
+          options: {
+            condition: {
+              displayName: 'Condition',
+              shortDesc: 'Condition to trigger on',
+              longDesc: 'Condition to trigger on [created or updated]',
+            },
+          },
+        },
+        'new-or-updated-opportunity': {
+          displayName: 'New Opportunity',
+          shortDesc: 'Triggers when a new opportunity is created',
+          longDesc: 'Triggers when a new opportunity is created',
+          options: {
+            condition: {
+              displayName: 'Condition',
+              shortDesc: 'Condition to trigger on',
+              longDesc: 'Condition to trigger on [created or updated]',
+            },
+          },
+        },
+        'new-or-updated-order': {
+          displayName: 'New Order',
+          shortDesc: 'Triggers when a new order is created',
+          longDesc: 'Triggers when a new order is created',
+          options: {
+            condition: {
+              displayName: 'Condition',
+              shortDesc: 'Condition to trigger on',
+              longDesc: 'Condition to trigger on [created or updated]',
+            },
+          },
+        },
+      },
+    },
     Mailchimp: {
       displayName: 'Mailchimp',
       shortDesc: 'Email marketing, automation, and analytics platform',
