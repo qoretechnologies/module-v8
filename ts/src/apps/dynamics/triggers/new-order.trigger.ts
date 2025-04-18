@@ -173,7 +173,7 @@ const getLatestDynamicsOrders = async (
         path: '/api/data/v9.1/salesorders',
         headers,
         params: {
-          $orderby: `${sortField} asc`,
+          $orderby: `${sortField} desc`,
           $top: DEFAULT_TRIGGER_POLL_ITEM_LIMIT.toString(),
         },
       },
