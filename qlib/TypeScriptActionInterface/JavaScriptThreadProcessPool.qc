@@ -53,13 +53,11 @@ public class JavaScriptThreadProcessPool {
         JavaScriptProgramProxy::init(m);
 
         # start 3 processes in parallel
-        Counter cnt();
-        {
-            cnt.inc();
-            on_error cnt.dec();
-            map background preallocate(cnt), xrange(MinProcesses);
+        Queue q();
+        background preallocate(q, MinProcesses);
+        if (*hash<ExceptionInfo> ex = q.get()) {
+            throw ex.err, ex.desc, ex.arg;
         }
-        cnt.waitForZero();
     }
 
     #! Destroys the object
@@ -166,15 +164,20 @@ public class JavaScriptThreadProcessPool {
         proxy.releaseEventSourceLocked(observable, key, in_listener);
     }
 
-    private preallocate(Counter cnt) {
-        on_exit cnt.dec();
-        int tid = gettid();
-        string pkey;
-
-        m.lock();
-        on_exit m.unlock();
-        hash<ProxyCacheInfo> info = getProxyIntern(tid, \pkey);
-        imap{pkey} = info;
+    private preallocate(Queue q, int num) {
+        try {
+            int tid = gettid();
+            m.lock();
+            on_exit m.unlock();
+            for (int i = 0; i < num; ++i ){
+                string pkey;
+                hash<ProxyCacheInfo> info = getProxyIntern(tid, \pkey);
+                imap{pkey} = info;
+            }
+        } catch (hash<ExceptionInfo> ex) {
+            q.push(ex);
+        }
+        q.push();
     }
 
     private hash<ProxyCacheInfo> getProxyIntern(int tid, reference<string> pkey) {

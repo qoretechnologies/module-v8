@@ -207,6 +207,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         remove sem_write;
         remove sem_info;
         TSAI::info("Shut down master listener on %y", master_path);
+        unlink(master_path);
         remove master_path;
     }
 
@@ -665,9 +666,6 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         s = h.socket;
         logChildOutput();
         info("Child process ready");
-        #if (start_listener) {
-        #    startListener();
-        #}
     }
 
     static private checkStartMasterListener() {
@@ -686,6 +684,11 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             master_path = sprintf("/tmp/ts-proxy-%d.sock", tmp_location(), getpid());
         }
         on_error remove master_path, remove master;
+
+        # delete the socket file if it exsts
+        if (hstat(master_path) && unlink(master_path)) {
+            throw "TS-PROXY-ERROR", sprintf("%s: %s; cannot bind master proxy listener", master_path, strerror());
+        }
 
         master.bindUNIX(master_path);
         master.listen();
