@@ -423,7 +423,9 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         if (conn) {
             return <DataContextInfo>{
                 "conn_name": conn.name,
-                "conn_opts": conn.getRealOptions(),
+                "conn_opts": conn.getRealOptions() + {
+                    "url": conn.real_url,
+                },
                 "opts": action_opts,
             };
         } else if (action_opts) {
