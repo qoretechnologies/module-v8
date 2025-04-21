@@ -170,6 +170,426 @@ type RootTranslation = {
 				}
 			}
 		}
+		Dynamics: {
+			triggers: {
+				'new-or-updated-account': {
+					/**
+					 * N​e​w​ ​o​r​ ​U​p​d​a​t​e​d​ ​A​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​a​c​c​o​u​n​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​m​o​d​i​f​i​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​D​y​n​a​m​i​c​s​ ​3​6​5​ ​f​o​r​ ​a​c​c​o​u​n​t​s​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​c​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​a​c​c​o​u​n​t​s​ ​o​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​a​c​c​o​u​n​t​s​ ​a​r​e​ ​m​o​d​i​f​i​e​d​.
+					 */
+					longDesc: string
+					options: {
+						condition: {
+							/**
+							 * T​r​i​g​g​e​r​ ​C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​a​c​c​o​u​n​t​s​ ​a​r​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​w​h​e​n​ ​t​h​e​y​ ​a​r​e​ ​u​p​d​a​t​e​d​.​ ​O​n​l​y​ ​o​n​e​ ​c​o​n​d​i​t​i​o​n​ ​c​a​n​ ​b​e​ ​s​e​l​e​c​t​e​d​ ​a​t​ ​a​ ​t​i​m​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'new-or-updated-case': {
+					/**
+					 * N​e​w​ ​o​r​ ​U​p​d​a​t​e​d​ ​C​a​s​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​c​a​s​e​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​m​o​d​i​f​i​e​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​t​e​c​t​s​ ​w​h​e​n​ ​s​u​p​p​o​r​t​ ​c​a​s​e​s​ ​a​r​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​D​y​n​a​m​i​c​s​ ​3​6​5​,​ ​e​n​a​b​l​i​n​g​ ​a​u​t​o​m​a​t​e​d​ ​r​e​s​p​o​n​s​e​s​,​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​,​ ​o​r​ ​c​a​s​e​ ​m​a​n​a​g​e​m​e​n​t​ ​w​o​r​k​f​l​o​w​s​.
+					 */
+					longDesc: string
+					options: {
+						condition: {
+							/**
+							 * T​r​i​g​g​e​r​ ​C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​n​e​w​ ​c​a​s​e​s​ ​(​c​r​e​a​t​e​d​)​ ​o​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​c​a​s​e​s​ ​a​r​e​ ​m​o​d​i​f​i​e​d​ ​(​u​p​d​a​t​e​d​)​.​ ​Y​o​u​ ​m​u​s​t​ ​s​e​l​e​c​t​ ​o​n​e​ ​o​p​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'new-or-updated-contact': {
+					/**
+					 * N​e​w​ ​o​r​ ​U​p​d​a​t​e​d​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​c​o​n​t​a​c​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​m​o​d​i​f​i​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​D​y​n​a​m​i​c​s​ ​3​6​5​ ​e​n​v​i​r​o​n​m​e​n​t​ ​f​o​r​ ​c​o​n​t​a​c​t​s​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​o​r​k​f​l​o​w​s​ ​e​i​t​h​e​r​ ​w​h​e​n​ ​n​e​w​ ​c​o​n​t​a​c​t​s​ ​a​r​e​ ​a​d​d​e​d​ ​o​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​ ​r​e​c​o​r​d​s​ ​a​r​e​ ​c​h​a​n​g​e​d​.
+					 */
+					longDesc: string
+					options: {
+						condition: {
+							/**
+							 * T​r​i​g​g​e​r​ ​C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​s​h​o​u​l​d​ ​f​i​r​e​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​c​o​n​t​a​c​t​s​ ​o​r​ ​f​o​r​ ​u​p​d​a​t​e​s​ ​t​o​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​s​.​ ​O​n​l​y​ ​o​n​e​ ​o​p​t​i​o​n​ ​c​a​n​ ​b​e​ ​a​c​t​i​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'new-custom-entity': {
+					/**
+					 * N​e​w​ ​C​u​s​t​o​m​ ​E​n​t​i​t​y​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​c​u​s​t​o​m​ ​e​n​t​i​t​y​ ​r​e​c​o​r​d​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * W​o​r​k​s​ ​w​i​t​h​ ​y​o​u​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​'​s​ ​c​u​s​t​o​m​ ​e​n​t​i​t​i​e​s​ ​i​n​ ​D​y​n​a​m​i​c​s​ ​3​6​5​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​n​d​ ​r​e​s​p​o​n​d​ ​w​h​e​n​ ​n​e​w​ ​r​e​c​o​r​d​s​ ​a​r​e​ ​c​r​e​a​t​e​d​ ​f​o​r​ ​a​n​y​ ​c​u​s​t​o​m​ ​e​n​t​i​t​y​ ​t​y​p​e​ ​y​o​u​ ​s​p​e​c​i​f​y​.
+					 */
+					longDesc: string
+					options: {
+						entityName: {
+							/**
+							 * E​n​t​i​t​y​ ​L​o​g​i​c​a​l​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​i​n​t​e​r​n​a​l​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​ ​e​n​t​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​l​o​g​i​c​a​l​ ​(​s​c​h​e​m​a​)​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​ ​e​n​t​i​t​y​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​.​ ​T​h​i​s​ ​i​s​ ​t​y​p​i​c​a​l​l​y​ ​i​n​ ​t​h​e​ ​f​o​r​m​a​t​ ​"​n​e​w​_​e​n​t​i​t​y​n​a​m​e​"​ ​o​r​ ​"​c​u​s​t​o​m​_​e​n​t​i​t​y​n​a​m​e​"​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'new-or-updated-invoice': {
+					/**
+					 * N​e​w​ ​o​r​ ​U​p​d​a​t​e​d​ ​I​n​v​o​i​c​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​i​n​v​o​i​c​e​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​m​o​d​i​f​i​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​i​n​v​o​i​c​e​-​r​e​l​a​t​e​d​ ​a​c​t​i​v​i​t​i​e​s​ ​i​n​ ​D​y​n​a​m​i​c​s​ ​3​6​5​,​ ​l​e​t​t​i​n​g​ ​y​o​u​ ​c​h​o​o​s​e​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​o​r​k​f​l​o​w​s​ ​e​i​t​h​e​r​ ​w​h​e​n​ ​n​e​w​ ​i​n​v​o​i​c​e​s​ ​a​r​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​o​n​e​s​ ​a​r​e​ ​u​p​d​a​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						condition: {
+							/**
+							 * T​r​i​g​g​e​r​ ​C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​i​n​v​o​i​c​e​s​ ​o​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​i​n​v​o​i​c​e​s​ ​a​r​e​ ​m​o​d​i​f​i​e​d​.​ ​Y​o​u​ ​m​u​s​t​ ​s​e​l​e​c​t​ ​o​n​e​ ​o​p​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'new-or-updated-lead': {
+					/**
+					 * N​e​w​ ​o​r​ ​U​p​d​a​t​e​d​ ​L​e​a​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​l​e​a​d​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​m​o​d​i​f​i​e​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​t​e​c​t​s​ ​w​h​e​n​ ​l​e​a​d​s​ ​a​r​e​ ​a​d​d​e​d​ ​o​r​ ​m​o​d​i​f​i​e​d​ ​i​n​ ​D​y​n​a​m​i​c​s​ ​3​6​5​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​c​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​n​e​w​ ​l​e​a​d​s​ ​o​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​l​e​a​d​ ​r​e​c​o​r​d​s​ ​c​h​a​n​g​e​.
+					 */
+					longDesc: string
+					options: {
+						condition: {
+							/**
+							 * T​r​i​g​g​e​r​ ​C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​n​e​w​ ​l​e​a​d​s​ ​a​r​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​l​e​a​d​s​ ​a​r​e​ ​u​p​d​a​t​e​d​.​ ​O​n​l​y​ ​o​n​e​ ​c​o​n​d​i​t​i​o​n​ ​c​a​n​ ​b​e​ ​s​e​l​e​c​t​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'new-or-updated-opportunity': {
+					/**
+					 * N​e​w​ ​o​r​ ​U​p​d​a​t​e​d​ ​O​p​p​o​r​t​u​n​i​t​y
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​o​p​p​o​r​t​u​n​i​t​y​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​m​o​d​i​f​i​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​s​a​l​e​s​ ​p​i​p​e​l​i​n​e​ ​i​n​ ​D​y​n​a​m​i​c​s​ ​3​6​5​,​ ​g​i​v​i​n​g​ ​y​o​u​ ​t​h​e​ ​o​p​t​i​o​n​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​o​r​k​f​l​o​w​s​ ​e​i​t​h​e​r​ ​w​h​e​n​ ​n​e​w​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​a​r​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​o​n​e​s​ ​c​h​a​n​g​e​.
+					 */
+					longDesc: string
+					options: {
+						condition: {
+							/**
+							 * T​r​i​g​g​e​r​ ​C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​n​e​w​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​b​e​i​n​g​ ​c​r​e​a​t​e​d​ ​o​r​ ​o​n​ ​u​p​d​a​t​e​s​ ​t​o​ ​e​x​i​s​t​i​n​g​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​.​ ​Y​o​u​ ​m​u​s​t​ ​s​e​l​e​c​t​ ​o​n​e​ ​o​p​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'new-or-updated-order': {
+					/**
+					 * N​e​w​ ​o​r​ ​U​p​d​a​t​e​d​ ​O​r​d​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​o​r​d​e​r​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​m​o​d​i​f​i​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​a​c​k​s​ ​o​r​d​e​r​-​r​e​l​a​t​e​d​ ​a​c​t​i​v​i​t​i​e​s​ ​i​n​ ​D​y​n​a​m​i​c​s​ ​3​6​5​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​c​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​o​r​k​f​l​o​w​s​ ​w​h​e​n​ ​n​e​w​ ​o​r​d​e​r​s​ ​a​r​e​ ​p​l​a​c​e​d​ ​o​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​o​r​d​e​r​s​ ​a​r​e​ ​u​p​d​a​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						condition: {
+							/**
+							 * T​r​i​g​g​e​r​ ​C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​o​r​d​e​r​s​ ​o​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​o​r​d​e​r​s​ ​a​r​e​ ​m​o​d​i​f​i​e​d​.​ ​O​n​l​y​ ​o​n​e​ ​c​o​n​d​i​t​i​o​n​ ​c​a​n​ ​b​e​ ​a​c​t​i​v​e​ ​a​t​ ​a​ ​t​i​m​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
+		Mailchimp: {
+			/**
+			 * M​a​i​l​c​h​i​m​p
+			 */
+			displayName: string
+			/**
+			 * E​m​a​i​l​ ​m​a​r​k​e​t​i​n​g​,​ ​a​u​t​o​m​a​t​i​o​n​,​ ​a​n​d​ ​a​n​a​l​y​t​i​c​s​ ​p​l​a​t​f​o​r​m
+			 */
+			shortDesc: string
+			/**
+			 * C​o​n​n​e​c​t​ ​w​i​t​h​ ​M​a​i​l​c​h​i​m​p​ ​t​o​ ​c​r​e​a​t​e​ ​a​n​d​ ​m​a​n​a​g​e​ ​e​m​a​i​l​ ​c​a​m​p​a​i​g​n​s​,​ ​t​r​a​c​k​ ​s​u​b​s​c​r​i​b​e​r​ ​a​c​t​i​v​i​t​i​e​s​,​ ​a​n​d​ ​a​u​t​o​m​a​t​e​ ​m​a​r​k​e​t​i​n​g​ ​w​o​r​k​f​l​o​w​s​.
+			 */
+			longDesc: string
+			triggers: {
+				email_opened: {
+					/**
+					 * E​m​a​i​l​ ​O​p​e​n​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​s​u​b​s​c​r​i​b​e​r​ ​o​p​e​n​s​ ​a​n​ ​e​m​a​i​l
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​s​u​b​s​c​r​i​b​e​r​ ​o​p​e​n​s​ ​a​n​ ​e​m​a​i​l​ ​f​r​o​m​ ​y​o​u​r​ ​c​a​m​p​a​i​g​n​s​ ​o​r​ ​a​u​t​o​m​a​t​i​o​n​ ​w​o​r​k​f​l​o​w​s​.
+					 */
+					longDesc: string
+					options: {
+						audience: {
+							/**
+							 * A​u​d​i​e​n​c​e
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​u​d​i​e​n​c​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​i​c​h​ ​M​a​i​l​c​h​i​m​p​ ​a​u​d​i​e​n​c​e​ ​(​m​a​i​l​i​n​g​ ​l​i​s​t​)​ ​t​o​ ​t​r​a​c​k​ ​f​o​r​ ​e​m​a​i​l​ ​o​p​e​n​s​.
+							 */
+							longDesc: string
+						}
+						campaign_type: {
+							/**
+							 * C​a​m​p​a​i​g​n​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​a​c​k​ ​r​e​g​u​l​a​r​ ​c​a​m​p​a​i​g​n​s​,​ ​a​u​t​o​m​a​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+						trigger_on_subscriber: {
+							/**
+							 * T​r​i​g​g​e​r​ ​o​n​ ​S​u​b​s​c​r​i​b​e​r
+							 */
+							displayName: string
+							/**
+							 * T​r​i​g​g​e​r​ ​f​o​r​ ​s​p​e​c​i​f​i​c​ ​s​u​b​s​c​r​i​b​e​r​s​ ​o​n​l​y
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​s​p​e​c​i​f​y​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​t​h​e​s​e​ ​s​p​e​c​i​f​i​c​ ​s​u​b​s​c​r​i​b​e​r​s​.
+							 */
+							longDesc: string
+						}
+						campaign: {
+							/**
+							 * C​a​m​p​a​i​g​n
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​m​p​a​i​g​n
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​o​p​e​n​s​.​ ​L​e​a​v​e​ ​b​l​a​n​k​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​c​a​m​p​a​i​g​n​s​.
+							 */
+							longDesc: string
+						}
+						workflow_id: {
+							/**
+							 * W​o​r​k​f​l​o​w​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * A​u​t​o​m​a​t​i​o​n​ ​w​o​r​k​f​l​o​w​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​m​o​n​i​t​o​r​i​n​g​ ​a​n​ ​a​u​t​o​m​a​t​i​o​n​,​ ​s​p​e​c​i​f​y​ ​t​h​e​ ​w​o​r​k​f​l​o​w​ ​I​D​ ​t​o​ ​t​r​a​c​k​.
+							 */
+							longDesc: string
+						}
+						automation_email: {
+							/**
+							 * A​u​t​o​m​a​t​i​o​n​ ​E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​a​u​t​o​m​a​t​i​o​n​ ​e​m​a​i​l
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​e​m​a​i​l​ ​w​i​t​h​i​n​ ​a​n​ ​a​u​t​o​m​a​t​i​o​n​ ​w​o​r​k​f​l​o​w​ ​t​o​ ​m​o​n​i​t​o​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_unsubscriber: {
+					/**
+					 * N​e​w​ ​U​n​s​u​b​s​c​r​i​b​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​s​o​m​e​o​n​e​ ​u​n​s​u​b​s​c​r​i​b​e​s
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​c​o​n​t​a​c​t​ ​u​n​s​u​b​s​c​r​i​b​e​s​ ​f​r​o​m​ ​y​o​u​r​ ​M​a​i​l​c​h​i​m​p​ ​a​u​d​i​e​n​c​e​.
+					 */
+					longDesc: string
+					options: {
+						audience: {
+							/**
+							 * A​u​d​i​e​n​c​e
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​u​d​i​e​n​c​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​i​c​h​ ​M​a​i​l​c​h​i​m​p​ ​a​u​d​i​e​n​c​e​ ​t​o​ ​t​r​a​c​k​ ​f​o​r​ ​u​n​s​u​b​s​c​r​i​b​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_subscriber: {
+					/**
+					 * N​e​w​ ​S​u​b​s​c​r​i​b​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​s​u​b​s​c​r​i​b​e​r​ ​j​o​i​n​s
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​s​u​b​s​c​r​i​b​e​s​ ​t​o​ ​y​o​u​r​ ​M​a​i​l​c​h​i​m​p​ ​a​u​d​i​e​n​c​e​.
+					 */
+					longDesc: string
+					options: {
+						audience: {
+							/**
+							 * A​u​d​i​e​n​c​e
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​u​d​i​e​n​c​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​i​c​h​ ​M​a​i​l​c​h​i​m​p​ ​a​u​d​i​e​n​c​e​ ​t​o​ ​t​r​a​c​k​ ​f​o​r​ ​n​e​w​ ​s​u​b​s​c​r​i​b​e​r​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Notion: {
 			/**
 			 * N​o​t​i​o​n
@@ -20074,6 +20494,426 @@ export type TranslationFunctions = {
 							 * Second Option
 							 */
 							displayName: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		Dynamics: {
+			triggers: {
+				'new-or-updated-account': {
+					/**
+					 * New or Updated Account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an account is created or modified
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors Dynamics 365 for accounts, allowing you to choose whether to trigger on newly created accounts or when existing accounts are modified.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						condition: {
+							/**
+							 * Trigger Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose created or updated
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select whether to trigger when accounts are created or when they are updated. Only one condition can be selected at a time.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'new-or-updated-case': {
+					/**
+					 * New or Updated Case
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a case is created or modified
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Detects when support cases are created or updated in Dynamics 365, enabling automated responses, notifications, or case management workflows.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						condition: {
+							/**
+							 * Trigger Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose created or updated
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify whether to trigger on new cases (created) or when existing cases are modified (updated). You must select one option.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'new-or-updated-contact': {
+					/**
+					 * New or Updated Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a contact is created or modified
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors your Dynamics 365 environment for contacts, allowing you to trigger workflows either when new contacts are added or when existing contact records are changed.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						condition: {
+							/**
+							 * Trigger Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose created or updated
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select whether the trigger should fire for newly created contacts or for updates to existing contacts. Only one option can be active.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'new-custom-entity': {
+					/**
+					 * New Custom Entity Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a custom entity record is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Works with your organization's custom entities in Dynamics 365, allowing you to monitor and respond when new records are created for any custom entity type you specify.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						entityName: {
+							/**
+							 * Entity Logical Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The internal name of the custom entity
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the logical (schema) name of the custom entity you want to monitor. This is typically in the format "new_entityname" or "custom_entityname".
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'new-or-updated-invoice': {
+					/**
+					 * New or Updated Invoice
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an invoice is created or modified
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors invoice-related activities in Dynamics 365, letting you choose to trigger workflows either when new invoices are created or when existing ones are updated.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						condition: {
+							/**
+							 * Trigger Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose created or updated
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify whether to trigger on newly created invoices or when existing invoices are modified. You must select one option.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'new-or-updated-lead': {
+					/**
+					 * New or Updated Lead
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a lead is created or modified
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Detects when leads are added or modified in Dynamics 365, allowing you to choose whether to trigger on new leads or when existing lead records change.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						condition: {
+							/**
+							 * Trigger Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose created or updated
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select whether to trigger when new leads are created or when existing leads are updated. Only one condition can be selected.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'new-or-updated-opportunity': {
+					/**
+					 * New or Updated Opportunity
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an opportunity is created or modified
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors your sales pipeline in Dynamics 365, giving you the option to trigger workflows either when new opportunities are created or when existing ones change.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						condition: {
+							/**
+							 * Trigger Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose created or updated
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify whether to trigger on new opportunities being created or on updates to existing opportunities. You must select one option.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'new-or-updated-order': {
+					/**
+					 * New or Updated Order
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an order is created or modified
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Tracks order-related activities in Dynamics 365, allowing you to choose whether to trigger workflows when new orders are placed or when existing orders are updated.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						condition: {
+							/**
+							 * Trigger Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose created or updated
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select whether to trigger on newly created orders or when existing orders are modified. Only one condition can be active at a time.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		Mailchimp: {
+			/**
+			 * Mailchimp
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Email marketing, automation, and analytics platform
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Connect with Mailchimp to create and manage email campaigns, track subscriber activities, and automate marketing workflows.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				email_opened: {
+					/**
+					 * Email Opened
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a subscriber opens an email
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a subscriber opens an email from your campaigns or automation workflows.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						audience: {
+							/**
+							 * Audience
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the audience to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose which Mailchimp audience (mailing list) to track for email opens.
+							 */
+							longDesc: () => LocalizedString
+						}
+						campaign_type: {
+							/**
+							 * Campaign Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of campaign to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify whether to track regular campaigns, automations.
+							 */
+							longDesc: () => LocalizedString
+						}
+						trigger_on_subscriber: {
+							/**
+							 * Trigger on Subscriber
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Trigger for specific subscribers only
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally specify one or more email addresses to only trigger for these specific subscribers.
+							 */
+							longDesc: () => LocalizedString
+						}
+						campaign: {
+							/**
+							 * Campaign
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select a specific campaign
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose a specific campaign to monitor for opens. Leave blank to monitor all campaigns.
+							 */
+							longDesc: () => LocalizedString
+						}
+						workflow_id: {
+							/**
+							 * Workflow ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Automation workflow ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If monitoring an automation, specify the workflow ID to track.
+							 */
+							longDesc: () => LocalizedString
+						}
+						automation_email: {
+							/**
+							 * Automation Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific automation email
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select a specific email within an automation workflow to monitor.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_unsubscriber: {
+					/**
+					 * New Unsubscriber
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when someone unsubscribes
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a contact unsubscribes from your Mailchimp audience.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						audience: {
+							/**
+							 * Audience
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the audience to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose which Mailchimp audience to track for unsubscribes.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_subscriber: {
+					/**
+					 * New Subscriber
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new subscriber joins
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a new contact subscribes to your Mailchimp audience.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						audience: {
+							/**
+							 * Audience
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the audience to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose which Mailchimp audience to track for new subscribers.
+							 */
+							longDesc: () => LocalizedString
 						}
 					}
 				}

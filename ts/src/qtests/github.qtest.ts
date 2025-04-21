@@ -1,6 +1,7 @@
 import { IQoreAppActionWithWebhookBase } from '@qoretechnologies/ts-toolkit';
 import { GITHUB_ACTIONS } from '../apps/github';
 import * as GITHUB_TRIGGERS from '../apps/github/triggers';
+import { delay } from '../global/helpers';
 
 let connection: string;
 
@@ -492,6 +493,7 @@ describe('Tests Github Actions', () => {
   });
 
   it('Should list repository issues', async () => {
+    await delay(5000);
     const action = GITHUB_ACTIONS.find((a) => a.action === 'issues-list-for-repo');
 
     expect(action).toBeDefined();
