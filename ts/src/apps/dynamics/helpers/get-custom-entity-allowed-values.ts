@@ -1,17 +1,18 @@
 import {
-  TCustomConnOptions,
-  TQoreGetAllowedValuesFunction,
   IQoreAllowedValue,
   QorusRequest,
+  TCustomConnOptions,
+  TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
+import { formatDynamicsUrl } from '../constants';
 
 export const getDynamicsCustomEntityAllowedValues: TQoreGetAllowedValuesFunction<
   TCustomConnOptions,
   string
 > = async (context): Promise<IQoreAllowedValue<string>[]> => {
   const token = context?.conn_opts?.token;
-  const organizationUrl = context?.conn_opts?.url;
+  const organizationUrl = formatDynamicsUrl(context?.conn_opts?.url);
 
   const missingValues: string[] = [];
   if (!token) missingValues.push('token');

@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
-import { DYNAMICS_APP_NAME } from '../constants';
+import { DYNAMICS_APP_NAME, formatDynamicsUrl } from '../constants';
 import { getDynamicsCustomEntityAllowedValues } from '../helpers/get-custom-entity-allowed-values';
 
 const DynamicsNewCustomEntityTrigger = QoreAppCreator.createLocalizedTrigger({
@@ -18,7 +18,7 @@ const DynamicsNewCustomEntityTrigger = QoreAppCreator.createLocalizedTrigger({
   },
   event_function: async (context, update, should_stop) => {
     const token = context.conn_opts?.token;
-    const organizationUrl = context.conn_opts?.url;
+    const organizationUrl = formatDynamicsUrl(context?.conn_opts?.url);
     const entityName = context.opts?.entityName;
 
     const missingValues: string[] = [];
@@ -47,7 +47,7 @@ const DynamicsNewCustomEntityTrigger = QoreAppCreator.createLocalizedTrigger({
   },
   get_example_event_data: async (context) => {
     const token = context?.conn_opts?.token;
-    const organizationUrl = context?.conn_opts?.url;
+    const organizationUrl = formatDynamicsUrl(context?.conn_opts?.url);
     const entityName = context?.opts?.entityName;
 
     if (!token || !organizationUrl || !entityName) {

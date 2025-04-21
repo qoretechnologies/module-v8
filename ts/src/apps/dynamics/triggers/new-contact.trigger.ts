@@ -4,7 +4,7 @@ import {
   pollCreatedItemsForTrigger,
   pollUpdatedItemsForTrigger,
 } from '../../../global/helpers/event-triggers';
-import { DYNAMICS_APP_NAME } from '../constants';
+import { DYNAMICS_APP_NAME, formatDynamicsUrl } from '../constants';
 import { dynamicsTriggerOptionsWithCondition } from './constants';
 
 const DynamicsNewContactTrigger = QoreAppCreator.createLocalizedTrigger({
@@ -14,7 +14,7 @@ const DynamicsNewContactTrigger = QoreAppCreator.createLocalizedTrigger({
   options: dynamicsTriggerOptionsWithCondition,
   event_function: async (context, update, should_stop) => {
     const token = context.conn_opts?.token;
-    const organizationUrl = context.conn_opts?.url;
+    const organizationUrl = formatDynamicsUrl(context?.conn_opts?.url);
     const condition = context.opts?.condition;
 
     const missingValues: string[] = [];
@@ -57,7 +57,7 @@ const DynamicsNewContactTrigger = QoreAppCreator.createLocalizedTrigger({
   },
   get_example_event_data: async (context) => {
     const token = context?.conn_opts?.token;
-    const organizationUrl = context?.conn_opts?.url;
+    const organizationUrl = formatDynamicsUrl(context?.conn_opts?.url);
     const condition = context?.opts?.condition;
 
     if (!token || !organizationUrl) {
