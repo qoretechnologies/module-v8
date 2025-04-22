@@ -66,7 +66,7 @@ export default (locale: Locales) =>
             throw new MailchimpError('Datacenter not found in response');
           }
 
-          return { datacenter };
+          return { datacenter, url: `https://${datacenter}.api.mailchimp.com/3.0` };
         } catch (error) {
           throw new MailchimpError(`Error while getting datacenter: ${error}`);
         }
