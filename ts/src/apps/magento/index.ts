@@ -58,6 +58,7 @@ export default (locale: Locales) =>
       ping_path: '/V1/store/storeConfigs',
     },
     rest_modifiers: {
+      options: MAGENTO_CONN_OPTIONS,
       required_options: 'instance_url,username,password',
       url_template_options: ['instance_url'],
       set_options_post_auth: (
