@@ -54,9 +54,9 @@ export default (locale: Locales) =>
         if (!token) throw new MailchimpError('Token has to be set to get the datacenter');
         try {
           const response = await QorusRequest.get<{ data: { dc: string } }>(
-            { path: '/metadata', headers: { Authorization: `Oauth ${token}` } },
+            { path: '/oauth2/metadata', headers: { Authorization: `Bearer ${token}` } },
             {
-              url: 'https://login.mailchimp.com/oauth2',
+              url: 'https://login.mailchimp.com',
               endpointId: 'mailchimp',
             }
           );
