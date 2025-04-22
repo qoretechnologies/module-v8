@@ -1,4 +1,5 @@
 import {
+  QorusRequest,
   TQoreAppActionFunctionContext,
   TQoreAppWithActions,
   TQoreMappedOptions,
@@ -6,13 +7,13 @@ import {
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
-import * as MAGENTO_TRIGGERS from './triggers';
 import {
   MAGENTO_ACTIONS,
   MAGENTO_APP_LOGO,
   MAGENTO_APP_NAME,
   MAGENTO_CONN_OPTIONS,
 } from './constants';
+import * as MAGENTO_TRIGGERS from './triggers';
 
 export default (locale: Locales) =>
   ({
@@ -49,28 +50,26 @@ export default (locale: Locales) =>
       },
     },
     rest: {
-      url: '{{instance_url}}/rest',
-      oauth2_token_url: '{{instance_url}}/rest/V1/integration/admin/token',
-      oauth2_token_expiry_hint: 60,
+      url: '',
       data: 'json',
-      oauth2_grant_type: 'password',
+      oauth2_grant_type: 'none',
       ping_method: 'GET',
       ping_path: '/V1/store/storeConfigs',
     },
     rest_modifiers: {
       options: MAGENTO_CONN_OPTIONS,
-      required_options: 'instance_url,username,password',
-      url_template_options: ['instance_url'],
-      set_options_post_auth: (
+      required_options: 'url,username,password',
+      url_template_options: ['url'],
+      set_options_post_auth: async (
         context: Omit<TQoreAppActionFunctionContext<typeof MAGENTO_CONN_OPTIONS>, 'opts'>
-      ): TQoreMappedOptions<typeof MAGENTO_CONN_OPTIONS> => {
-        const instanceUrl = context.conn_opts?.instance_url;
+      ): Promise<TQoreMappedOptions<typeof MAGENTO_CONN_OPTIONS>> => {
+        const instanceUrl = context.conn_opts?.url;
         const username = context.conn_opts?.username;
         const password = context.conn_opts?.password;
 
         const missingValues: string[] = [];
 
-        if (!instanceUrl) missingValues.push('instance_url');
+        if (!instanceUrl) missingValues.push('url');
         if (!username) missingValues.push('username');
         if (!password) missingValues.push('password');
 
@@ -78,11 +77,29 @@ export default (locale: Locales) =>
           throw new Error(`All of the following values are required: ${missingValues.join(', ')}`);
         }
 
+        const response = await QorusRequest.post<{ data: string }>(
+          {
+            path: '/rest/V1/integration/admin/token',
+            data: {
+              username: username!,
+              password: password!,
+            },
+          },
+          { url: instanceUrl!, endpointId: 'magento' }
+        );
+
+        if (!response?.data) {
+          throw new Error('Failed to get token from Magento');
+        }
+
+        const token = response.data;
+
         return {
-          instance_url: instanceUrl!,
+          token,
+          url: `${instanceUrl!}/rest`,
           username: username!,
           password: password!,
-        };
+        } as any;
       },
     },
   }) satisfies TQoreAppWithActions;

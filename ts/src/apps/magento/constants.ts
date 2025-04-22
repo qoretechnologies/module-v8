@@ -6,20 +6,22 @@ import { MAGENTO_CUSTOMERS_ALLOWED_PATHS } from './allowed-paths/customers';
 import { MAGENTO_INVOICES_ALLOWED_PATHS } from './allowed-paths/invoices';
 import { MAGENTO_ORDERS_ALLOWED_PATHS } from './allowed-paths/orders';
 import { MAGENTO_PRODUCTS_ALLOWED_PATHS } from './allowed-paths/products';
-import { MAGENTO_RETURNS_ALLOWED_PATHS } from './allowed-paths/returns';
 import { MAGENTO_SHIPMENTS_ALLOWED_PATHS } from './allowed-paths/shipments';
 import { MAGENTO_TRANSACTIONS_ALLOWED_PATHS } from './allowed-paths/transactions';
 
 export const MAGENTO_CONN_OPTIONS = {
-  instance_url: {
+  url: {
+    display_name: 'Magento URL',
     type: 'string',
     desc: 'The url of the Magento instance',
   },
   username: {
     type: 'string',
+    display_name: 'Username',
     desc: 'The username of the Magento account',
   },
   password: {
+    display_name: 'Password',
     type: 'string',
     desc: 'The password of the Magento account',
   },
@@ -34,7 +36,6 @@ export const MAGENTO_ALLOWED_PATHS = {
   ...MAGENTO_INVOICES_ALLOWED_PATHS,
   ...MAGENTO_ORDERS_ALLOWED_PATHS,
   ...MAGENTO_PRODUCTS_ALLOWED_PATHS,
-  ...MAGENTO_RETURNS_ALLOWED_PATHS,
   ...MAGENTO_SHIPMENTS_ALLOWED_PATHS,
   ...MAGENTO_TRANSACTIONS_ALLOWED_PATHS,
 } satisfies TAllowedPaths;
