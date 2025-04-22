@@ -64,6 +64,10 @@ public class TypeScriptAppRestClient inherits RestClient {
                 "conn_name": conn.name,
                 "conn_opts": conn.getRealOptions() + h + new_opts,
             });
+            # We have to use the connection scheme if a URL was returned
+            if (rv.url && rv.url =~ /^https?:\/\//) {
+                rv.url = regex_subst(rv.url, "^https?://", conn.getType() + "://");
+            }
             info("Connection %y app %y post-auth adding options: %y", conn.name, conn.getAppName(), rv);
         } catch (hash<ExceptionInfo> ex) {
             LoggerWrapper::error("Error executing %s for connection %y: %s: %s (new_opts: %y)", call.label, conn.name,
@@ -71,7 +75,7 @@ public class TypeScriptAppRestClient inherits RestClient {
         }
 
         hash<auto> config = {
-            "url": getURL(),
+            "url": rv.url ?? getURL(),
             "opts": conn.getRealOptions() + new_opts + rv,
         };
         config = TypeScriptActionInterface::getRestConfig(conn.getAppName(), config);
@@ -238,6 +242,10 @@ public class TypeScriptAppRestConnection inherits RestConnection {
                 "conn_name": name,
                 "conn_opts": real_opts + new_opts + resp,
             });
+            # We have to use the connection scheme if a URL was returned
+            if (rv.url && rv.url =~ /^https?:\/\//) {
+                rv.url = regex_subst(rv.url, "^https?://", scheme + "://");
+            }
             LoggerWrapper::info("Connection %y app %y %s adding options: %y from %y", name, app, call.label,
                 new_opts + rv, resp);
             return rv;

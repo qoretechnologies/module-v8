@@ -35,6 +35,9 @@ export const MAILCHIMP_CONN_OPTIONS = {
     short_desc: 'Datacenter',
     desc: 'Datacenter',
   },
+  url: {
+    type: 'string',
+  },
 } satisfies TCustomConnOptions;
 
 export const MAILCHIMP_ALLOWED_PATHS = {
