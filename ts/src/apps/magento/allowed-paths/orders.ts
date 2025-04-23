@@ -20,8 +20,15 @@ export const MAGENTO_ORDERS_ALLOWED_PATHS = {
       override_options: {
         customer_id: {
           get_allowed_values: getMagentoCustomerIdAllowedValues,
+          required: false,
+          preselected: true,
+          required_groups: ['order_customer'],
         },
         customer_email: {
+          required_groups: ['order_customer'],
+          allowed_values_creatable: true,
+          preselected: true,
+          required: false,
           get_allowed_values: getMagentoCustomerEmailAllowedValues,
         },
         items: {
@@ -29,8 +36,10 @@ export const MAGENTO_ORDERS_ALLOWED_PATHS = {
           get_element_allowed_values: getMagentoProductSkuObjectAllowedValues,
         },
         payment: {
+          required: true,
+        },
+        'payment.cc_last4': {
           required: false,
-          preselected: true,
         },
         'payment.method': {
           required: false,
