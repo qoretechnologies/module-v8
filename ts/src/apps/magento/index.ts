@@ -55,6 +55,10 @@ export default (locale: Locales) =>
       oauth2_grant_type: 'none',
       ping_method: 'GET',
       ping_path: '/V1/store/storeConfigs',
+      custom_token_refresh_auth: 'body-user-pass',
+      custom_token_refresh_location: 'body-plain',
+      custom_token_refresh_method: 'POST',
+      custom_token_refresh_path: '/V1/integration/admin/token',
     },
     rest_modifiers: {
       options: MAGENTO_CONN_OPTIONS,
