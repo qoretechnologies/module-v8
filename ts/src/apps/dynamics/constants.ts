@@ -1,9 +1,6 @@
 import { TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
 
 export const DYNAMICS_CONN_OPTIONS = {
-  url: {
-    type: 'string',
-  },
   tenant: {
     type: 'string',
   },

@@ -10,11 +10,6 @@ import { MAGENTO_SHIPMENTS_ALLOWED_PATHS } from './allowed-paths/shipments';
 import { MAGENTO_TRANSACTIONS_ALLOWED_PATHS } from './allowed-paths/transactions';
 
 export const MAGENTO_CONN_OPTIONS = {
-  url: {
-    display_name: 'Magento URL',
-    type: 'string',
-    desc: 'The url of the Magento instance',
-  },
   username: {
     type: 'string',
     display_name: 'Username',

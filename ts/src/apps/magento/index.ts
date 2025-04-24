@@ -50,18 +50,19 @@ export default (locale: Locales) =>
       },
     },
     rest: {
+      //url: '',
       data: 'json',
       oauth2_grant_type: 'none',
       ping_method: 'GET',
-      ping_path: '/V1/store/storeConfigs',
+      ping_path: '/rest/V1/store/storeConfigs',
       custom_token_auth: 'body-user-pass',
       custom_token_location: 'body-direct',
       custom_token_method: 'POST',
-      custom_token_path: '/V1/integration/admin/token',
+      custom_token_path: '/rest/V1/integration/admin/token',
     },
     rest_modifiers: {
       options: MAGENTO_CONN_OPTIONS,
-      required_options: 'url,username,password',
+      required_options: 'username,password',
       url_template_options: ['url'],
       set_options_post_auth: async (
         context: Omit<TQoreAppActionFunctionContext<typeof MAGENTO_CONN_OPTIONS>, 'opts'>
