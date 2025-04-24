@@ -18,21 +18,32 @@ export const MAGENTO_ORDERS_ALLOWED_PATHS = {
   '/V1/orders/create': {
     PUT: {
       override_options: {
-        'entity.customer_id': {
+        customer_id: {
           get_allowed_values: getMagentoCustomerIdAllowedValues,
+          required: false,
+          preselected: true,
+          required_groups: ['order_customer'],
         },
-        'entity.customer_email': {
+        customer_email: {
+          required_groups: ['order_customer'],
+          allowed_values_creatable: true,
+          preselected: true,
+          required: false,
           get_allowed_values: getMagentoCustomerEmailAllowedValues,
         },
-        'entity.items': {
+        items: {
           element_allowed_values_creatable: true,
           get_element_allowed_values: getMagentoProductSkuObjectAllowedValues,
         },
-        'entity.payment': {
+        payment: {
           required: true,
         },
-        'entity.payment.method': {
-          required: true,
+        'payment.cc_last4': {
+          required: false,
+        },
+        'payment.method': {
+          required: false,
+          preselected: true,
           allowed_values_creatable: true,
           allowed_values: [
             { value: 'checkmo', display_name: 'Check / Money order' },
@@ -67,16 +78,16 @@ export const MAGENTO_ORDERS_ALLOWED_PATHS = {
         id: {
           get_allowed_values: getMagentoOrderIdAllowedValues,
         },
-        'statusHistory.parent_id': {
+        parent_id: {
           required: false,
         },
-        'statusHistory.is_visible_on_front': {
+        is_visible_on_front: {
           required: false,
         },
-        'statusHistory.is_customer_notified': {
+        is_customer_notified: {
           required: false,
         },
-        'statusHistory.comment': {
+        comment: {
           required: true,
         },
       },

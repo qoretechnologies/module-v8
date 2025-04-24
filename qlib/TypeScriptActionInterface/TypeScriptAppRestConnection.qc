@@ -34,10 +34,15 @@ public class TypeScriptAppRestClient inherits RestClient {
 
     #! calls the base class HTTPClient constructor and optionally connects to the REST server
     constructor(TypeScriptAppRestConnection conn, *hash<auto> opts, *softbool do_not_connect)
-            : RestClient(opts, do_not_connect) {
+            : RestClient(opts, True) {
         self.conn := conn;
         post_auth = TypeScriptActionInterface::getPostAuthCall(conn.getAppName());
         post_auth_code = TypeScriptActionInterface::getPostAuthCodeCall(conn.getAppName());
+
+        if (!do_not_connect) {
+            checkLogin();
+            connect();
+        }
     }
 
     #! Returns options to update after an OAuth2 login
@@ -62,7 +67,9 @@ public class TypeScriptAppRestClient inherits RestClient {
         try {
             rv = TypeScriptActionDataProviderBase::getAsyncValueArgs(self, call, {
                 "conn_name": conn.name,
-                "conn_opts": conn.getRealOptions() + h + new_opts,
+                "conn_opts": {
+                    "url": getURL(),
+                } + conn.getRealOptions() + h + new_opts,
             });
             # We have to use the connection scheme if a URL was returned
             if (rv.url && rv.url =~ /^https?:\/\//) {
@@ -240,7 +247,9 @@ public class TypeScriptAppRestConnection inherits RestConnection {
         try {
             *hash<auto> rv = TypeScriptActionDataProviderBase::getAsyncValueArgs(self, call, {
                 "conn_name": name,
-                "conn_opts": real_opts + new_opts + resp,
+                "conn_opts": {
+                    "url": real_url,
+                } + real_opts + new_opts + resp,
             });
             # We have to use the connection scheme if a URL was returned
             if (rv.url && rv.url =~ /^https?:\/\//) {

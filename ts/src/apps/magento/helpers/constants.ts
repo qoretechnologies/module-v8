@@ -14,12 +14,12 @@ export type TFetchMagentoDataOptions = {
   params?: Record<string, string>;
 };
 
-export type TfetchMagentoAllowedValuesOptions<ItemType = unknown> = {
+export type TfetchMagentoAllowedValuesOptions<ItemType = unknown, AllowedValueType = string> = {
   token: string;
   url: string;
   path: string;
   params?: Record<string, string>;
-  mapItemToAllowedValue: (item: ItemType) => IQoreAllowedValue<string>;
+  mapItemToAllowedValue: (item: ItemType) => IQoreAllowedValue<AllowedValueType>;
 };
 
 export type TfetchMagentoObjectFieldsAllowedValuesOptions = {
@@ -85,10 +85,10 @@ export const fetchMagentoData = async <ItemType = unknown>(
 /**
  * Fetch Magento allowed values
  */
-export const fetchMagentoAllowedValues = async <ItemType = unknown>(
-  options: TfetchMagentoAllowedValuesOptions<ItemType>
-): Promise<IQoreAllowedValue<string>[]> => {
-  const allowedValues: IQoreAllowedValue<string>[] = [];
+export const fetchMagentoAllowedValues = async <ItemType = unknown, AllowedValueType = string>(
+  options: TfetchMagentoAllowedValuesOptions<ItemType, AllowedValueType>
+): Promise<IQoreAllowedValue<AllowedValueType>[]> => {
+  const allowedValues: IQoreAllowedValue<AllowedValueType>[] = [];
   const startTime = Date.now();
   let offset = 0;
   const limit = 500;
