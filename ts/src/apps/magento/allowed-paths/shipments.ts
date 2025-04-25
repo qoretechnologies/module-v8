@@ -1,5 +1,4 @@
-import { TAllowedPaths } from '@qoretechnologies/ts-toolkit';
-import { MAGENTO_CONN_OPTIONS } from '../constants';
+import { TAllowedPaths, TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
 import { getMagentoShipmentFieldsAllowedValues } from '../helpers/get-object-fields-allowed-values';
 import { getMagentoOrderIdAllowedValues } from '../helpers/get-order-id-allowed-values';
 import { getMagentoOrderItemIdAllowedValues } from '../helpers/get-order-item-id-allowed-values';
@@ -36,4 +35,4 @@ export const MAGENTO_SHIPMENTS_ALLOWED_PATHS = {
       },
     },
   },
-} satisfies TAllowedPaths<typeof MAGENTO_CONN_OPTIONS>;
+} satisfies TAllowedPaths<TCustomConnOptions>;

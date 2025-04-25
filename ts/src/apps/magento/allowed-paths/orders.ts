@@ -1,13 +1,12 @@
-import { TAllowedPaths } from '@qoretechnologies/ts-toolkit';
-import { MAGENTO_CONN_OPTIONS } from '../constants';
-import { getMagentoSearchCriteriaOptions } from './constants';
-import { getMagentoOrderFieldsAllowedValues } from '../helpers/get-object-fields-allowed-values';
+import { TAllowedPaths, TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
 import {
   getMagentoCustomerEmailAllowedValues,
   getMagentoCustomerIdAllowedValues,
 } from '../helpers/get-customer-id-allowed-values';
-import { getMagentoProductSkuObjectAllowedValues } from '../helpers/get-product-sku-allowed-values';
+import { getMagentoOrderFieldsAllowedValues } from '../helpers/get-object-fields-allowed-values';
 import { getMagentoOrderIdAllowedValues } from '../helpers/get-order-id-allowed-values';
+import { getMagentoProductSkuObjectAllowedValues } from '../helpers/get-product-sku-allowed-values';
+import { getMagentoSearchCriteriaOptions } from './constants';
 
 export const MAGENTO_ORDERS_ALLOWED_PATHS = {
   '/V1/orders': {
@@ -93,4 +92,4 @@ export const MAGENTO_ORDERS_ALLOWED_PATHS = {
       },
     },
   },
-} satisfies TAllowedPaths<typeof MAGENTO_CONN_OPTIONS>;
+} satisfies TAllowedPaths<TCustomConnOptions>;

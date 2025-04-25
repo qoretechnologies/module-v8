@@ -1,12 +1,11 @@
-import { TAllowedPaths } from '@qoretechnologies/ts-toolkit';
-import { MAGENTO_CONN_OPTIONS } from '../constants';
-import { getMagentoSearchCriteriaOptions } from './constants';
+import { TAllowedPaths, TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
+import { getMagentoAttributeSetIdAllowedValues } from '../helpers/get-attribute-set-id-allowed-values';
 import {
   getMagentoCartFieldsAllowedValues,
   getMagentoProductFieldsAllowedValues,
 } from '../helpers/get-object-fields-allowed-values';
 import { getMagentoProductSkuAllowedValues } from '../helpers/get-product-sku-allowed-values';
-import { getMagentoAttributeSetIdAllowedValues } from '../helpers/get-attribute-set-id-allowed-values';
+import { getMagentoSearchCriteriaOptions } from './constants';
 
 export const MAGENTO_PRODUCTS_ALLOWED_PATHS = {
   '/V1/products': {
@@ -64,4 +63,4 @@ export const MAGENTO_PRODUCTS_ALLOWED_PATHS = {
       override_options: getMagentoSearchCriteriaOptions(getMagentoCartFieldsAllowedValues),
     },
   },
-} satisfies TAllowedPaths<typeof MAGENTO_CONN_OPTIONS>;
+} satisfies TAllowedPaths<TCustomConnOptions>;

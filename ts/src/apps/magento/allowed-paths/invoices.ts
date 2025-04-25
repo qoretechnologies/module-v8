@@ -1,5 +1,4 @@
-import { TAllowedPaths } from '@qoretechnologies/ts-toolkit';
-import { MAGENTO_CONN_OPTIONS } from '../constants';
+import { TAllowedPaths, TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
 import { getMagentoSearchCriteriaOptions } from './constants';
 import { getMagentoInvoiceFieldsAllowedValues } from '../helpers/get-object-fields-allowed-values';
 import { getMagentoOrderIdAllowedValues } from '../helpers/get-order-id-allowed-values';
@@ -28,4 +27,4 @@ export const MAGENTO_INVOICES_ALLOWED_PATHS = {
       },
     },
   },
-} satisfies TAllowedPaths<typeof MAGENTO_CONN_OPTIONS>;
+} satisfies TAllowedPaths<TCustomConnOptions>;

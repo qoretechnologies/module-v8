@@ -1,5 +1,4 @@
-import { TAllowedPaths } from '@qoretechnologies/ts-toolkit';
-import { MAGENTO_CONN_OPTIONS } from '../constants';
+import { TAllowedPaths, TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
 import { getMagentoCustomerIdAllowedValues } from '../helpers/get-customer-id-allowed-values';
 import { getMagentoCustomerFieldsAllowedValues } from '../helpers/get-object-fields-allowed-values';
 import { getMagentoSearchCriteriaOptions } from './constants';
@@ -63,4 +62,4 @@ export const MAGENTO_CUSTOMERS_ALLOWED_PATHS = {
       },
     },
   },
-} satisfies TAllowedPaths<typeof MAGENTO_CONN_OPTIONS>;
+} satisfies TAllowedPaths<TCustomConnOptions>;
