@@ -12,7 +12,7 @@ import { getXeroItemCodeAllowedValues } from '../helpers/get-item-code-allowed-v
 import { getXeroItemIdAllowedValues } from '../helpers/get-item-id-allowed-values';
 import { getXeroAccountCodeAllowedValues } from '../helpers/get-account-code-allowed-values';
 import { getXeroCreditNoteIdAllowedValues } from '../helpers/get-credit-note-id-allowed-values';
-import { getXeroEmployeeIdAllowedValues } from '../helpers/get-employee.id-allowed-values';
+import { getXeroEmployeeIdAllowedValues } from '../helpers/get-employee-id-allowed-values';
 
 export const XERO_ACCOUNTING_ALLOWED_PATHS = {
   '/Contacts': {
