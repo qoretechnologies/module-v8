@@ -68,7 +68,10 @@ describe('Should test serenity actions', () => {
 
       expect(allowed_values).toBeDefined();
       expect(allowed_values.length).toBeGreaterThan(0);
-      testConversationId = allowed_values[0].value;
+      const lastConversation = allowed_values.at(-1)?.value;
+      if (lastConversation) {
+        testConversationId = lastConversation;
+      }
     });
 
     it('Should get serenity agent params', async () => {
