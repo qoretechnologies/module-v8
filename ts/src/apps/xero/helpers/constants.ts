@@ -7,6 +7,9 @@ import {
 import { Debugger } from '../../../utils/Debugger';
 import { XeroError } from '../constants';
 
+const MAX_ITEMS_PER_PAGE = 100;
+const MAX_PAGES = 10;
+
 export const getTokenRequired = (
   context?: TQoreAppActionFunctionContext<TCustomConnOptions>
 ): string => {
@@ -40,7 +43,11 @@ export const fetchXeroData = async <T>(options: {
     let hasMorePages = true;
 
     while (hasMorePages) {
-      const queryParams = { ...params, page: currentPage.toString() };
+      const queryParams = {
+        ...params,
+        page: currentPage.toString(),
+        limit: MAX_ITEMS_PER_PAGE.toString(),
+      };
 
       const response = await QorusRequest.get<{ data: any }>(
         {
@@ -75,11 +82,11 @@ export const fetchXeroData = async <T>(options: {
       }
 
       const items = Object.values(data).find((val) => Array.isArray(val)) as any[];
-      hasMorePages = items?.length === 100;
+      hasMorePages = items?.length === MAX_ITEMS_PER_PAGE;
 
       currentPage++;
 
-      if (currentPage > 10) {
+      if (currentPage > MAX_PAGES) {
         Debugger.log('Reached maximum pagination limit for Xero API request');
         break;
       }
