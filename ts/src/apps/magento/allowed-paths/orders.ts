@@ -21,6 +21,7 @@ export const MAGENTO_ORDERS_ALLOWED_PATHS = {
           get_allowed_values: getMagentoCustomerIdAllowedValues,
           required: false,
           preselected: true,
+          type: 'softstring',
           required_groups: ['order_customer'],
         },
         customer_email: {
@@ -41,8 +42,7 @@ export const MAGENTO_ORDERS_ALLOWED_PATHS = {
           required: false,
         },
         'payment.method': {
-          required: false,
-          preselected: true,
+          required: true,
           allowed_values_creatable: true,
           allowed_values: [
             { value: 'checkmo', display_name: 'Check / Money order' },
@@ -59,6 +59,7 @@ export const MAGENTO_ORDERS_ALLOWED_PATHS = {
     GET: {
       override_options: {
         id: {
+          type: 'softstring',
           get_allowed_values: getMagentoOrderIdAllowedValues,
         },
       },
@@ -68,6 +69,7 @@ export const MAGENTO_ORDERS_ALLOWED_PATHS = {
     GET: {
       override_options: {
         id: {
+          type: 'softstring',
           get_allowed_values: getMagentoOrderIdAllowedValues,
         },
       },
@@ -75,6 +77,7 @@ export const MAGENTO_ORDERS_ALLOWED_PATHS = {
     POST: {
       override_options: {
         id: {
+          type: 'softstring',
           get_allowed_values: getMagentoOrderIdAllowedValues,
         },
         parent_id: {

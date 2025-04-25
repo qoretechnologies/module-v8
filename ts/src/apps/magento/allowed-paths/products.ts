@@ -23,9 +23,10 @@ export const MAGENTO_PRODUCTS_ALLOWED_PATHS = {
         'product.name': {
           required: true,
         },
-        'product.attributes_set_id': {
+        'product.attribute_set_id': {
           required: true,
           allowed_values_creatable: true,
+          type: 'softstring',
           get_allowed_values: getMagentoAttributeSetIdAllowedValues,
         },
       },

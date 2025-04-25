@@ -14,6 +14,7 @@ export const MAGENTO_SHIPMENTS_ALLOWED_PATHS = {
     POST: {
       override_options: {
         order_id: {
+          type: 'softstring',
           get_allowed_values: getMagentoOrderIdAllowedValues,
         },
         'items.sku': {

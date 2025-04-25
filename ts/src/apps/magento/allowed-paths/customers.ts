@@ -31,6 +31,7 @@ export const MAGENTO_CUSTOMERS_ALLOWED_PATHS = {
     GET: {
       override_options: {
         customerId: {
+          type: 'softstring',
           get_allowed_values: getMagentoCustomerIdAllowedValues,
         },
       },
@@ -38,6 +39,7 @@ export const MAGENTO_CUSTOMERS_ALLOWED_PATHS = {
     PUT: {
       override_options: {
         customerId: {
+          type: 'softstring',
           get_allowed_values: getMagentoCustomerIdAllowedValues,
         },
         'customer.email': {
@@ -57,6 +59,7 @@ export const MAGENTO_CUSTOMERS_ALLOWED_PATHS = {
     DELETE: {
       override_options: {
         customerId: {
+          type: 'softstring',
           get_allowed_values: getMagentoCustomerIdAllowedValues,
         },
       },

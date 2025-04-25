@@ -16,7 +16,8 @@ type TMagentoOrderItemData = {
 };
 
 export const getMagentoOrderItemIdAllowedValues: TQoreGetAllowedValuesFunction<
-  TCustomConnOptions
+  TCustomConnOptions,
+  string
 > = async (context): Promise<IQoreAllowedValue<string>[]> => {
   const token = context?.conn_opts?.token;
   const url = context?.conn_opts?.url;
@@ -57,7 +58,7 @@ export const getMagentoOrderItemIdAllowedValues: TQoreGetAllowedValuesFunction<
 
     return orderData.items.map((item: TMagentoOrderItemData) => ({
       display_name: `${item.name} (${item.sku})`,
-      value: item.item_id,
+      value: item.item_id.toString(),
       desc:
         `Item ID: ${item.item_id}\n\n` +
         `SKU: ${item.sku}\n\n` +
