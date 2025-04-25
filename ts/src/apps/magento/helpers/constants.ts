@@ -54,7 +54,7 @@ export const fetchMagentoData = async <ItemType = unknown>(
           Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json',
         },
-        path,
+        path: `/rest${path}`,
         params: {
           'searchCriteria[pageSize]': limit.toString(),
           'searchCriteria[currentPage]': page.toString(),

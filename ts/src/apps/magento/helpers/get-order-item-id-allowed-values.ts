@@ -37,7 +37,7 @@ export const getMagentoOrderItemIdAllowedValues: TQoreGetAllowedValuesFunction<
   try {
     const response = await QorusRequest.get<{ data: { items: TMagentoOrderItemData[] } }>(
       {
-        path: `/V1/orders/${orderId}`,
+        path: `/rest/V1/orders/${orderId}`,
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json',
