@@ -170,6 +170,640 @@ type RootTranslation = {
 				}
 			}
 		}
+		Xero: {
+			/**
+			 * X​e​r​o
+			 */
+			displayName: string
+			/**
+			 * C​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​t​h​e​ ​X​e​r​o​ ​A​P​I
+			 */
+			shortDesc: string
+			/**
+			 * C​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​t​h​e​ ​X​e​r​o​ ​A​P​I
+			 */
+			longDesc: string
+			triggers: {
+				new_bank_transaction: {
+					/**
+					 * N​e​w​ ​B​a​n​k​ ​T​r​a​n​s​a​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​b​a​n​k​ ​t​r​a​n​s​a​c​t​i​o​n​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​X​e​r​o
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​m​o​n​i​t​o​r​s​ ​y​o​u​r​ ​X​e​r​o​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​ ​b​a​n​k​ ​t​r​a​n​s​a​c​t​i​o​n​s​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​b​a​n​k​ ​a​c​c​o​u​n​t​ ​a​n​d​ ​t​r​a​n​s​a​c​t​i​o​n​ ​t​y​p​e​ ​(​m​o​n​e​y​ ​i​n​ ​o​r​ ​m​o​n​e​y​ ​o​u​t​)​.
+					 */
+					longDesc: string
+					options: {
+						'xero-tenant-id': {
+							/**
+							 * X​e​r​o​ ​O​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​X​e​r​o​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​b​a​n​k​ ​t​r​a​n​s​a​c​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​i​c​h​ ​X​e​r​o​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​(​t​e​n​a​n​t​)​ ​s​h​o​u​l​d​ ​b​e​ ​m​o​n​i​t​o​r​e​d​ ​f​o​r​ ​n​e​w​ ​b​a​n​k​ ​t​r​a​n​s​a​c​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+						transactionType: {
+							/**
+							 * T​r​a​n​s​a​c​t​i​o​n​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​b​y​ ​t​y​p​e​ ​(​m​o​n​e​y​ ​i​n​ ​o​r​ ​m​o​n​e​y​ ​o​u​t​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​t​r​a​n​s​a​c​t​i​o​n​ ​t​y​p​e​s​:​ ​"​R​e​c​e​i​v​e​"​ ​f​o​r​ ​m​o​n​e​y​ ​c​o​m​i​n​g​ ​i​n​t​o​ ​y​o​u​r​ ​a​c​c​o​u​n​t​,​ ​o​r​ ​"​S​p​e​n​d​"​ ​f​o​r​ ​m​o​n​e​y​ ​g​o​i​n​g​ ​o​u​t
+							 */
+							longDesc: string
+						}
+						bankAccountId: {
+							/**
+							 * B​a​n​k​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​b​y​ ​b​a​n​k​ ​a​c​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​o​n​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​b​a​n​k​ ​a​c​c​o​u​n​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_contact: {
+					/**
+					 * N​e​w​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​X​e​r​o
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​m​o​n​i​t​o​r​s​ ​y​o​u​r​ ​X​e​r​o​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​c​o​n​t​a​c​t​s​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​m​o​n​i​t​o​r​ ​c​u​s​t​o​m​e​r​s​,​ ​s​u​p​p​l​i​e​r​s​,​ ​o​r​ ​a​l​l​ ​c​o​n​t​a​c​t​s​.
+					 */
+					longDesc: string
+					options: {
+						'xero-tenant-id': {
+							/**
+							 * X​e​r​o​ ​O​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​X​e​r​o​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​c​o​n​t​a​c​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​i​c​h​ ​X​e​r​o​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​(​t​e​n​a​n​t​)​ ​s​h​o​u​l​d​ ​b​e​ ​m​o​n​i​t​o​r​e​d​ ​f​o​r​ ​n​e​w​ ​c​o​n​t​a​c​t​s
+							 */
+							longDesc: string
+						}
+						contactType: {
+							/**
+							 * C​o​n​t​a​c​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​u​s​t​o​m​e​r​ ​o​r​ ​s​u​p​p​l​i​e​r​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​c​o​n​t​a​c​t​s​,​ ​o​n​l​y​ ​c​u​s​t​o​m​e​r​s​,​ ​o​r​ ​o​n​l​y​ ​s​u​p​p​l​i​e​r​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_credit_note: {
+					/**
+					 * N​e​w​ ​C​r​e​d​i​t​ ​N​o​t​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​r​e​d​i​t​ ​n​o​t​e​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​X​e​r​o
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​m​o​n​i​t​o​r​s​ ​y​o​u​r​ ​X​e​r​o​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​c​r​e​d​i​t​ ​n​o​t​e​s​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​c​u​s​t​o​m​e​r​ ​a​n​d​ ​s​t​a​t​u​s​.
+					 */
+					longDesc: string
+					options: {
+						'xero-tenant-id': {
+							/**
+							 * X​e​r​o​ ​O​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​X​e​r​o​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​c​r​e​d​i​t​ ​n​o​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​i​c​h​ ​X​e​r​o​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​(​t​e​n​a​n​t​)​ ​s​h​o​u​l​d​ ​b​e​ ​m​o​n​i​t​o​r​e​d​ ​f​o​r​ ​n​e​w​ ​c​r​e​d​i​t​ ​n​o​t​e​s
+							 */
+							longDesc: string
+						}
+						contactId: {
+							/**
+							 * C​u​s​t​o​m​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​e​d​i​t​ ​n​o​t​e​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​o​n​ ​c​r​e​d​i​t​ ​n​o​t​e​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​u​s​t​o​m​e​r​ ​(​c​o​n​t​a​c​t​)
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * C​r​e​d​i​t​ ​N​o​t​e​ ​S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​e​d​i​t​ ​n​o​t​e​s​ ​b​y​ ​t​h​e​i​r​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​o​n​ ​c​r​e​d​i​t​ ​n​o​t​e​s​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​t​a​t​u​s​ ​(​D​r​a​f​t​,​ ​S​u​b​m​i​t​t​e​d​,​ ​A​u​t​h​o​r​i​s​e​d​,​ ​e​t​c​.​)
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_employee: {
+					/**
+					 * N​e​w​ ​E​m​p​l​o​y​e​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​e​m​p​l​o​y​e​e​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​X​e​r​o
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​m​o​n​i​t​o​r​s​ ​y​o​u​r​ ​X​e​r​o​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​e​m​p​l​o​y​e​e​s​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​e​m​p​l​o​y​e​e​ ​s​t​a​t​u​s​ ​(​a​c​t​i​v​e​ ​o​r​ ​t​e​r​m​i​n​a​t​e​d​)​.
+					 */
+					longDesc: string
+					options: {
+						'xero-tenant-id': {
+							/**
+							 * X​e​r​o​ ​O​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​X​e​r​o​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​e​m​p​l​o​y​e​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​i​c​h​ ​X​e​r​o​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​(​t​e​n​a​n​t​)​ ​s​h​o​u​l​d​ ​b​e​ ​m​o​n​i​t​o​r​e​d​ ​f​o​r​ ​n​e​w​ ​e​m​p​l​o​y​e​e​s
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * E​m​p​l​o​y​e​e​ ​S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​e​m​p​l​o​y​e​e​s​ ​b​y​ ​a​c​t​i​v​e​ ​o​r​ ​t​e​r​m​i​n​a​t​e​d​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​e​m​p​l​o​y​e​e​s​,​ ​o​n​l​y​ ​a​c​t​i​v​e​ ​e​m​p​l​o​y​e​e​s​,​ ​o​r​ ​o​n​l​y​ ​t​e​r​m​i​n​a​t​e​d​ ​e​m​p​l​o​y​e​e​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_payment: {
+					/**
+					 * N​e​w​ ​P​a​y​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​a​y​m​e​n​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​X​e​r​o
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​m​o​n​i​t​o​r​s​ ​y​o​u​r​ ​X​e​r​o​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​ ​p​a​y​m​e​n​t​s​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​c​u​s​t​o​m​e​r​,​ ​p​a​y​m​e​n​t​ ​s​t​a​t​u​s​,​ ​a​n​d​ ​b​a​n​k​ ​a​c​c​o​u​n​t​.
+					 */
+					longDesc: string
+					options: {
+						'xero-tenant-id': {
+							/**
+							 * X​e​r​o​ ​O​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​X​e​r​o​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​p​a​y​m​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​i​c​h​ ​X​e​r​o​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​(​t​e​n​a​n​t​)​ ​s​h​o​u​l​d​ ​b​e​ ​m​o​n​i​t​o​r​e​d​ ​f​o​r​ ​n​e​w​ ​p​a​y​m​e​n​t​s
+							 */
+							longDesc: string
+						}
+						contactId: {
+							/**
+							 * C​u​s​t​o​m​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​p​a​y​m​e​n​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​o​n​ ​p​a​y​m​e​n​t​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​u​s​t​o​m​e​r​ ​(​c​o​n​t​a​c​t​)
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * P​a​y​m​e​n​t​ ​S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​p​a​y​m​e​n​t​s​ ​b​y​ ​t​h​e​i​r​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​o​n​ ​p​a​y​m​e​n​t​s​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​t​a​t​u​s​ ​(​A​u​t​h​o​r​i​s​e​d​ ​o​r​ ​D​e​l​e​t​e​d​)
+							 */
+							longDesc: string
+						}
+						bankAccountId: {
+							/**
+							 * B​a​n​k​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​p​a​y​m​e​n​t​s​ ​b​y​ ​b​a​n​k​ ​a​c​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​o​n​ ​p​a​y​m​e​n​t​s​ ​t​o​ ​o​r​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​b​a​n​k​ ​a​c​c​o​u​n​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_purchase_order: {
+					/**
+					 * N​e​w​ ​P​u​r​c​h​a​s​e​ ​O​r​d​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​X​e​r​o
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​m​o​n​i​t​o​r​s​ ​y​o​u​r​ ​X​e​r​o​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​s​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​s​u​p​p​l​i​e​r​ ​a​n​d​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​ ​s​t​a​t​u​s​.
+					 */
+					longDesc: string
+					options: {
+						'xero-tenant-id': {
+							/**
+							 * X​e​r​o​ ​O​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​X​e​r​o​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​i​c​h​ ​X​e​r​o​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​(​t​e​n​a​n​t​)​ ​s​h​o​u​l​d​ ​b​e​ ​m​o​n​i​t​o​r​e​d​ ​f​o​r​ ​n​e​w​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​s
+							 */
+							longDesc: string
+						}
+						contactId: {
+							/**
+							 * S​u​p​p​l​i​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​u​p​p​l​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​o​n​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​u​p​p​l​i​e​r​ ​(​c​o​n​t​a​c​t​)
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * P​u​r​c​h​a​s​e​ ​O​r​d​e​r​ ​S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​s​ ​b​y​ ​t​h​e​i​r​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​o​n​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​s​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​t​a​t​u​s​ ​(​D​r​a​f​t​,​ ​S​u​b​m​i​t​t​e​d​,​ ​A​u​t​h​o​r​i​s​e​d​,​ ​e​t​c​.​)
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_bill: {
+					/**
+					 * N​e​w​ ​B​i​l​l
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​b​i​l​l​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​X​e​r​o
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​m​o​n​i​t​o​r​s​ ​y​o​u​r​ ​X​e​r​o​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​b​i​l​l​s​ ​(​A​c​c​o​u​n​t​s​ ​P​a​y​a​b​l​e​ ​i​n​v​o​i​c​e​s​)​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​s​u​p​p​l​i​e​r​ ​(​c​o​n​t​a​c​t​)​,​ ​s​t​a​t​u​s​,​ ​o​r​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​n​e​w​ ​b​i​l​l​s​.
+					 */
+					longDesc: string
+					options: {
+						'xero-tenant-id': {
+							/**
+							 * X​e​r​o​ ​O​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​X​e​r​o​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​b​i​l​l​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​i​c​h​ ​X​e​r​o​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​(​t​e​n​a​n​t​)​ ​s​h​o​u​l​d​ ​b​e​ ​m​o​n​i​t​o​r​e​d​ ​f​o​r​ ​n​e​w​ ​b​i​l​l​s
+							 */
+							longDesc: string
+						}
+						contactId: {
+							/**
+							 * S​u​p​p​l​i​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​i​l​l​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​u​p​p​l​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​o​n​ ​b​i​l​l​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​u​p​p​l​i​e​r​ ​(​c​o​n​t​a​c​t​)
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * B​i​l​l​ ​S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​i​l​l​s​ ​b​y​ ​t​h​e​i​r​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​o​n​ ​b​i​l​l​s​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​t​a​t​u​s​ ​(​D​r​a​f​t​,​ ​S​u​b​m​i​t​t​e​d​,​ ​A​u​t​h​o​r​i​s​e​d​,​ ​e​t​c​.​)
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			actions: {
+				getProjects: {
+					/**
+					 * F​i​n​d​ ​P​r​o​j​e​c​t​s
+					 */
+					displayName: string
+				}
+				createProject: {
+					/**
+					 * C​r​e​a​t​e​ ​P​r​o​j​e​c​t
+					 */
+					displayName: string
+				}
+				getTasks: {
+					/**
+					 * F​i​n​d​ ​T​a​s​k​s
+					 */
+					displayName: string
+				}
+				createTask: {
+					/**
+					 * C​r​e​a​t​e​ ​T​a​s​k
+					 */
+					displayName: string
+				}
+				getProjectUsers: {
+					/**
+					 * F​i​n​d​ ​P​r​o​j​e​c​t​ ​U​s​e​r​s
+					 */
+					displayName: string
+				}
+				uploadFile: {
+					/**
+					 * U​p​l​o​a​d​ ​A​t​t​a​c​h​m​e​n​t
+					 */
+					displayName: string
+					options: {
+						body: {
+							/**
+							 * F​i​l​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​e​ ​t​o​ ​u​p​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​e​ ​t​o​ ​u​p​l​o​a​d
+							 */
+							longDesc: string
+						}
+					}
+				}
+				updateOrCreateBankTransactions: {
+					/**
+					 * C​r​e​a​t​e​ ​B​a​n​k​ ​T​r​a​n​s​a​c​t​i​o​n
+					 */
+					displayName: string
+				}
+				getContacts: {
+					/**
+					 * F​i​n​d​ ​C​o​n​t​a​c​t​s
+					 */
+					displayName: string
+				}
+				updateOrCreateContacts: {
+					/**
+					 * C​r​e​a​t​e​ ​o​r​ ​U​p​d​a​t​e​ ​C​o​n​t​a​c​t​s
+					 */
+					displayName: string
+				}
+				updateOrCreateCreditNotes: {
+					/**
+					 * C​r​e​a​t​e​ ​C​r​e​d​i​t​ ​N​o​t​e
+					 */
+					displayName: string
+				}
+				createCreditNoteAllocation: {
+					/**
+					 * A​l​l​o​c​a​t​e​ ​C​r​e​d​i​t​ ​N​o​t​e​ ​t​o​ ​I​n​v​o​i​c​e
+					 */
+					displayName: string
+					options: {
+						InvoiceID: {
+							/**
+							 * I​n​v​o​i​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​i​n​v​o​i​c​e​ ​t​o​ ​a​l​l​o​c​a​t​e​ ​t​h​e​ ​c​r​e​d​i​t​ ​n​o​t​e​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​i​n​v​o​i​c​e​ ​t​o​ ​a​l​l​o​c​a​t​e​ ​t​h​e​ ​c​r​e​d​i​t​ ​n​o​t​e​ ​t​o
+							 */
+							longDesc: string
+						}
+						Amount: {
+							/**
+							 * A​m​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * A​m​o​u​n​t​ ​t​o​ ​a​l​l​o​c​a​t​e​ ​f​r​o​m​ ​t​h​e​ ​c​r​e​d​i​t​ ​n​o​t​e
+							 */
+							shortDesc: string
+							/**
+							 * A​m​o​u​n​t​ ​t​o​ ​a​l​l​o​c​a​t​e​ ​f​r​o​m​ ​t​h​e​ ​c​r​e​d​i​t​ ​n​o​t​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				getEmployees: {
+					/**
+					 * F​i​n​d​ ​E​m​p​l​o​y​e​e​s
+					 */
+					displayName: string
+				}
+				updateOrCreateEmployees: {
+					/**
+					 * C​r​e​a​t​e​/​U​p​d​a​t​e​ ​E​m​p​l​o​y​e​e
+					 */
+					displayName: string
+				}
+				getInvoices: {
+					/**
+					 * F​i​n​d​ ​I​n​v​o​i​c​e​s
+					 */
+					displayName: string
+				}
+				updateOrCreateInvoices: {
+					/**
+					 * C​r​e​a​t​e​ ​S​a​l​e​s​ ​I​n​v​o​i​c​e
+					 */
+					displayName: string
+				}
+				updateInvoice: {
+					/**
+					 * U​p​d​a​t​e​ ​S​a​l​e​s​ ​I​n​v​o​i​c​e
+					 */
+					displayName: string
+				}
+				emailInvoice: {
+					/**
+					 * S​e​n​d​ ​S​a​l​e​s​ ​I​n​v​o​i​c​e​ ​b​y​ ​E​m​a​i​l
+					 */
+					displayName: string
+				}
+				getInvoiceHistory: {
+					/**
+					 * G​e​t​ ​I​n​v​o​i​c​e​ ​H​i​s​t​o​r​y
+					 */
+					displayName: string
+				}
+				createInvoiceHistory: {
+					/**
+					 * A​d​d​ ​N​o​t​e​ ​t​o​ ​I​n​v​o​i​c​e
+					 */
+					displayName: string
+					options: {
+						note: {
+							/**
+							 * N​o​t​e
+							 */
+							displayName: string
+							/**
+							 * N​o​t​e​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​i​n​v​o​i​c​e​ ​h​i​s​t​o​r​y
+							 */
+							shortDesc: string
+							/**
+							 * N​o​t​e​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​i​n​v​o​i​c​e​ ​h​i​s​t​o​r​y
+							 */
+							longDesc: string
+						}
+					}
+				}
+				getItems: {
+					/**
+					 * F​i​n​d​ ​I​t​e​m​s
+					 */
+					displayName: string
+				}
+				updateOrCreateItems: {
+					/**
+					 * A​d​d​ ​o​r​ ​U​p​d​a​t​e​ ​S​t​o​c​k​ ​I​t​e​m​s
+					 */
+					displayName: string
+				}
+				createPayment: {
+					/**
+					 * C​r​e​a​t​e​ ​P​a​y​m​e​n​t
+					 */
+					displayName: string
+				}
+				getPurchaseOrders: {
+					/**
+					 * F​i​n​d​ ​P​u​r​c​h​a​s​e​ ​O​r​d​e​r​s
+					 */
+					displayName: string
+				}
+				updateOrCreatePurchaseOrders: {
+					/**
+					 * C​r​e​a​t​e​ ​P​u​r​c​h​a​s​e​ ​O​r​d​e​r
+					 */
+					displayName: string
+				}
+				updatePurchaseOrder: {
+					/**
+					 * U​p​d​a​t​e​ ​P​u​r​c​h​a​s​e​ ​O​r​d​e​r
+					 */
+					displayName: string
+				}
+				updateOrCreateQuotes: {
+					/**
+					 * C​r​e​a​t​e​ ​N​e​w​ ​Q​u​o​t​e​ ​D​r​a​f​t
+					 */
+					displayName: string
+				}
+				updateOrCreateRepeatingInvoices: {
+					/**
+					 * C​r​e​a​t​e​ ​R​e​p​e​a​t​i​n​g​ ​S​a​l​e​s​ ​I​n​v​o​i​c​e
+					 */
+					displayName: string
+				}
+			}
+		}
 		Dynamics: {
 			triggers: {
 				'new-or-updated-account': {
@@ -21288,6 +21922,640 @@ export type TranslationFunctions = {
 							displayName: () => LocalizedString
 						}
 					}
+				}
+			}
+		}
+		Xero: {
+			/**
+			 * Xero
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Collection of actions to interact with the Xero API
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Collection of actions to interact with the Xero API
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				new_bank_transaction: {
+					/**
+					 * New Bank Transaction
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new bank transaction is created in Xero
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger monitors your Xero account for new bank transactions. You can filter by bank account and transaction type (money in or money out).
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						'xero-tenant-id': {
+							/**
+							 * Xero Organization
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Xero organization to monitor for new bank transactions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select which Xero organization (tenant) should be monitored for new bank transactions
+							 */
+							longDesc: () => LocalizedString
+						}
+						transactionType: {
+							/**
+							 * Transaction Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter transactions by type (money in or money out)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter to only trigger on specific transaction types: "Receive" for money coming into your account, or "Spend" for money going out
+							 */
+							longDesc: () => LocalizedString
+						}
+						bankAccountId: {
+							/**
+							 * Bank Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter transactions by bank account
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter to only trigger on transactions from a specific bank account
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_contact: {
+					/**
+					 * New Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new contact is created in Xero
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger monitors your Xero account for newly created contacts. You can filter to only monitor customers, suppliers, or all contacts.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						'xero-tenant-id': {
+							/**
+							 * Xero Organization
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Xero organization to monitor for new contacts
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select which Xero organization (tenant) should be monitored for new contacts
+							 */
+							longDesc: () => LocalizedString
+						}
+						contactType: {
+							/**
+							 * Contact Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by customer or supplier type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose whether to monitor all contacts, only customers, or only suppliers
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_credit_note: {
+					/**
+					 * New Credit Note
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new credit note is created in Xero
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger monitors your Xero account for newly created credit notes. You can filter by customer and status.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						'xero-tenant-id': {
+							/**
+							 * Xero Organization
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Xero organization to monitor for new credit notes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select which Xero organization (tenant) should be monitored for new credit notes
+							 */
+							longDesc: () => LocalizedString
+						}
+						contactId: {
+							/**
+							 * Customer
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter credit notes by a specific customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter to only trigger on credit notes for a specific customer (contact)
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Credit Note Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter credit notes by their status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter to only trigger on credit notes with a specific status (Draft, Submitted, Authorised, etc.)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_employee: {
+					/**
+					 * New Employee
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new employee is created in Xero
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger monitors your Xero account for newly created employees. You can filter by employee status (active or terminated).
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						'xero-tenant-id': {
+							/**
+							 * Xero Organization
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Xero organization to monitor for new employees
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select which Xero organization (tenant) should be monitored for new employees
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Employee Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter employees by active or terminated status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose whether to monitor all employees, only active employees, or only terminated employees
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_payment: {
+					/**
+					 * New Payment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new payment is created in Xero
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger monitors your Xero account for new payments. You can filter by customer, payment status, and bank account.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						'xero-tenant-id': {
+							/**
+							 * Xero Organization
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Xero organization to monitor for new payments
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select which Xero organization (tenant) should be monitored for new payments
+							 */
+							longDesc: () => LocalizedString
+						}
+						contactId: {
+							/**
+							 * Customer
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter payments by a specific customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter to only trigger on payments from a specific customer (contact)
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Payment Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter payments by their status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter to only trigger on payments with a specific status (Authorised or Deleted)
+							 */
+							longDesc: () => LocalizedString
+						}
+						bankAccountId: {
+							/**
+							 * Bank Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter payments by bank account
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter to only trigger on payments to or from a specific bank account
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_purchase_order: {
+					/**
+					 * New Purchase Order
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new purchase order is created in Xero
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger monitors your Xero account for newly created purchase orders. You can filter by supplier and purchase order status.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						'xero-tenant-id': {
+							/**
+							 * Xero Organization
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Xero organization to monitor for new purchase orders
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select which Xero organization (tenant) should be monitored for new purchase orders
+							 */
+							longDesc: () => LocalizedString
+						}
+						contactId: {
+							/**
+							 * Supplier
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter purchase orders by a specific supplier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter to only trigger on purchase orders from a specific supplier (contact)
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Purchase Order Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter purchase orders by their status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter to only trigger on purchase orders with a specific status (Draft, Submitted, Authorised, etc.)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_bill: {
+					/**
+					 * New Bill
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new bill is created in Xero
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger monitors your Xero account for newly created bills (Accounts Payable invoices). You can filter by supplier (contact), status, or monitor all new bills.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						'xero-tenant-id': {
+							/**
+							 * Xero Organization
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Xero organization to monitor for new bills
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select which Xero organization (tenant) should be monitored for new bills
+							 */
+							longDesc: () => LocalizedString
+						}
+						contactId: {
+							/**
+							 * Supplier
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter bills by a specific supplier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter to only trigger on bills from a specific supplier (contact)
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Bill Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter bills by their status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter to only trigger on bills with a specific status (Draft, Submitted, Authorised, etc.)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			actions: {
+				getProjects: {
+					/**
+					 * Find Projects
+					 */
+					displayName: () => LocalizedString
+				}
+				createProject: {
+					/**
+					 * Create Project
+					 */
+					displayName: () => LocalizedString
+				}
+				getTasks: {
+					/**
+					 * Find Tasks
+					 */
+					displayName: () => LocalizedString
+				}
+				createTask: {
+					/**
+					 * Create Task
+					 */
+					displayName: () => LocalizedString
+				}
+				getProjectUsers: {
+					/**
+					 * Find Project Users
+					 */
+					displayName: () => LocalizedString
+				}
+				uploadFile: {
+					/**
+					 * Upload Attachment
+					 */
+					displayName: () => LocalizedString
+					options: {
+						body: {
+							/**
+							 * File
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * File to upload
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * File to upload
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				updateOrCreateBankTransactions: {
+					/**
+					 * Create Bank Transaction
+					 */
+					displayName: () => LocalizedString
+				}
+				getContacts: {
+					/**
+					 * Find Contacts
+					 */
+					displayName: () => LocalizedString
+				}
+				updateOrCreateContacts: {
+					/**
+					 * Create or Update Contacts
+					 */
+					displayName: () => LocalizedString
+				}
+				updateOrCreateCreditNotes: {
+					/**
+					 * Create Credit Note
+					 */
+					displayName: () => LocalizedString
+				}
+				createCreditNoteAllocation: {
+					/**
+					 * Allocate Credit Note to Invoice
+					 */
+					displayName: () => LocalizedString
+					options: {
+						InvoiceID: {
+							/**
+							 * Invoice ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of the invoice to allocate the credit note to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * ID of the invoice to allocate the credit note to
+							 */
+							longDesc: () => LocalizedString
+						}
+						Amount: {
+							/**
+							 * Amount
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Amount to allocate from the credit note
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Amount to allocate from the credit note
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				getEmployees: {
+					/**
+					 * Find Employees
+					 */
+					displayName: () => LocalizedString
+				}
+				updateOrCreateEmployees: {
+					/**
+					 * Create/Update Employee
+					 */
+					displayName: () => LocalizedString
+				}
+				getInvoices: {
+					/**
+					 * Find Invoices
+					 */
+					displayName: () => LocalizedString
+				}
+				updateOrCreateInvoices: {
+					/**
+					 * Create Sales Invoice
+					 */
+					displayName: () => LocalizedString
+				}
+				updateInvoice: {
+					/**
+					 * Update Sales Invoice
+					 */
+					displayName: () => LocalizedString
+				}
+				emailInvoice: {
+					/**
+					 * Send Sales Invoice by Email
+					 */
+					displayName: () => LocalizedString
+				}
+				getInvoiceHistory: {
+					/**
+					 * Get Invoice History
+					 */
+					displayName: () => LocalizedString
+				}
+				createInvoiceHistory: {
+					/**
+					 * Add Note to Invoice
+					 */
+					displayName: () => LocalizedString
+					options: {
+						note: {
+							/**
+							 * Note
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Note to add to the invoice history
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Note to add to the invoice history
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				getItems: {
+					/**
+					 * Find Items
+					 */
+					displayName: () => LocalizedString
+				}
+				updateOrCreateItems: {
+					/**
+					 * Add or Update Stock Items
+					 */
+					displayName: () => LocalizedString
+				}
+				createPayment: {
+					/**
+					 * Create Payment
+					 */
+					displayName: () => LocalizedString
+				}
+				getPurchaseOrders: {
+					/**
+					 * Find Purchase Orders
+					 */
+					displayName: () => LocalizedString
+				}
+				updateOrCreatePurchaseOrders: {
+					/**
+					 * Create Purchase Order
+					 */
+					displayName: () => LocalizedString
+				}
+				updatePurchaseOrder: {
+					/**
+					 * Update Purchase Order
+					 */
+					displayName: () => LocalizedString
+				}
+				updateOrCreateQuotes: {
+					/**
+					 * Create New Quote Draft
+					 */
+					displayName: () => LocalizedString
+				}
+				updateOrCreateRepeatingInvoices: {
+					/**
+					 * Create Repeating Sales Invoice
+					 */
+					displayName: () => LocalizedString
 				}
 			}
 		}

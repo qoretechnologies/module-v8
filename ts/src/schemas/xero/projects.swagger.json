@@ -1,0 +1,1916 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "contact": {
+      "email": "api@xero.com",
+      "name": "Xero Platform Team",
+      "url": "https://developer.xero.com"
+    },
+    "description": "This is the Xero Projects API",
+    "license": {
+      "name": "MIT",
+      "url": "https://github.com/XeroAPI/Xero-OpenAPI/blob/master/LICENSE"
+    },
+    "termsOfService": "https://developer.xero.com/xero-developer-platform-terms-conditions/",
+    "title": "Xero Projects API",
+    "version": "8.1.0"
+  },
+  "host": "api.xero.com",
+  "basePath": "/projects.xro/2.0",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/Projects": {
+      "parameters": [
+        {
+          "description": "Xero identifier for Tenant",
+          "in": "header",
+          "name": "xero-tenant-id",
+          "required": true,
+          "type": "string",
+          "x-snake": "xero_tenant_id"
+        }
+      ],
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "collectionFormat": "multi",
+            "description": "Search for all projects that match a comma separated list of projectIds",
+            "in": "query",
+            "items": {
+              "format": "uuid",
+              "type": "string"
+            },
+            "name": "projectIds",
+            "required": false,
+            "type": "array",
+            "x-snake": "project_ids"
+          },
+          {
+            "description": "Filter for projects for a specific contact",
+            "format": "uuid",
+            "in": "query",
+            "name": "contactID",
+            "required": false,
+            "type": "string",
+            "x-snake": "contact_id"
+          },
+          {
+            "description": "Filter for projects in a particular state (INPROGRESS or CLOSED)",
+            "in": "query",
+            "name": "states",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "default": 1,
+            "description": "set to 1 by default. The requested number of the page in paged response - Must be a number greater than 0.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "default": 50,
+            "description": "Optional, it is set to 50 by default. The number of items to return per page in a paged response - Must be a number between 1 and 500.",
+            "in": "query",
+            "maximum": 500,
+            "minimum": 1,
+            "name": "pageSize",
+            "required": false,
+            "type": "integer",
+            "x-snake": "page_size"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK/success, returns a list of project objects",
+            "examples": {
+              "application/json": "{ \"pagination\": { \"page\": 1, \"pageSize\": 50, \"pageCount\": 1, \"itemCount\": 9 }, \"items\": [ { \"projectId\": \"00000000-0000-0000-0000-000000000000\", \"contactId\": \"00000000-0000-0000-0000-000000000000\", \"name\": \"FooProject28916\", \"currencyCode\": \"AUD\", \"minutesLogged\": 180, \"totalTaskAmount\": { \"currency\": \"AUD\", \"value\": 60.0 }, \"totalExpenseAmount\": { \"currency\": \"AUD\", \"value\": 499.0 }, \"minutesToBeInvoiced\": 180, \"taskAmountToBeInvoiced\": { \"currency\": \"AUD\", \"value\": 60.0 }, \"taskAmountInvoiced\": { \"currency\": \"AUD\", \"value\": 0.0 }, \"expenseAmountToBeInvoiced\": { \"currency\": \"AUD\", \"value\": 499.0 }, \"expenseAmountInvoiced\": { \"currency\": \"AUD\", \"value\": 0.0 }, \"projectAmountInvoiced\": { \"currency\": \"AUD\", \"value\": 0.0 }, \"deposit\": { \"currency\": \"AUD\", \"value\": 0.0 }, \"depositApplied\": { \"currency\": \"AUD\", \"value\": 0.0 }, \"creditNoteAmount\": { \"currency\": \"AUD\", \"value\": 0.0 }, \"totalInvoiced\": { \"currency\": \"AUD\", \"value\": 0.0 }, \"totalToBeInvoiced\": { \"currency\": \"AUD\", \"value\": 559.0 }, \"deadlineUtc\": \"2020-03-03T15:00:00Z\", \"estimate\": { \"currency\": \"AUD\", \"value\": 99.99 }, \"status\": \"INPROGRESS\" } ] }"
+            },
+            "schema": {
+              "$ref": "#/definitions/Projects"
+            }
+          },
+          "400": {
+            "description": "A failed request due to validation error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "projects",
+              "projects.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Project"
+        ],
+        "description": "Allows you to retrieve, create and update projects.",
+        "operationId": "getProjects",
+        "summary": "Retrieves all projects"
+      },
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "This allows you to safely retry requests without the risk of duplicate processing. 128 character max.",
+            "in": "header",
+            "name": "Idempotency-Key",
+            "type": "string",
+            "x-example": "KEY_VALUE",
+            "x-snake": "idempotency_key"
+          },
+          {
+            "description": "Create a new project with ProjectCreateOrUpdate object",
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ProjectCreateOrUpdate"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "OK/success, returns the new project object",
+            "examples": {
+              "application/json": "{  \"projectId\": \"00000000-0000-0000-0000-000000000000\", \"contactId\": \"00000000-0000-0000-0000-000000000000\", \"name\": \"New Kitchen\", \"currencyCode\": \"AUD\", \"minutesLogged\": 0, \"totalTaskAmount\": {  \"currency\": \"AUD\", \"value\": 0.0 }, \"totalExpenseAmount\": {  \"currency\": \"AUD\", \"value\": 0.0 }, \"minutesToBeInvoiced\": 0, \"taskAmountToBeInvoiced\": {  \"currency\": \"AUD\", \"value\": 0.0 }, \"taskAmountInvoiced\": {  \"currency\": \"AUD\", \"value\": 0.0 }, \"expenseAmountToBeInvoiced\": {  \"currency\": \"AUD\", \"value\": 0.0 }, \"expenseAmountInvoiced\": {  \"currency\": \"AUD\", \"value\": 0.0 }, \"projectAmountInvoiced\": {  \"currency\": \"AUD\", \"value\": 0.0 }, \"deposit\": {  \"currency\": \"AUD\", \"value\": 0.0 }, \"depositApplied\": {  \"currency\": \"AUD\", \"value\": 0.0 }, \"creditNoteAmount\": {  \"currency\": \"AUD\", \"value\": 0.0 }, \"totalInvoiced\": {  \"currency\": \"AUD\", \"value\": 0.0 }, \"totalToBeInvoiced\": {  \"currency\": \"AUD\", \"value\": 0.0 }, \"deadlineUtc\": \"2020-03-03T15:00:00Z\", \"estimate\": {  \"currency\": \"AUD\", \"value\": 99.99 }, \"status\": \"INPROGRESS\" }"
+            },
+            "schema": {
+              "$ref": "#/definitions/Project"
+            }
+          },
+          "400": {
+            "description": "A failed request due to validation error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "projects"
+            ]
+          }
+        ],
+        "tags": [
+          "Project"
+        ],
+        "operationId": "createProject",
+        "summary": "Create one or more new projects"
+      }
+    },
+    "/Projects/{projectId}": {
+      "parameters": [
+        {
+          "description": "Xero identifier for Tenant",
+          "in": "header",
+          "name": "xero-tenant-id",
+          "required": true,
+          "type": "string",
+          "x-snake": "xero_tenant_id"
+        }
+      ],
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "You can specify an individual project by appending the projectId to the endpoint",
+            "format": "uuid",
+            "in": "path",
+            "name": "projectId",
+            "required": true,
+            "type": "string",
+            "x-snake": "project_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK/success, returns the specified project object",
+            "examples": {
+              "application/json": "{ \"projectId\": \"00000000-0000-0000-0000-000000000000\", \"contactId\": \"00000000-0000-0000-0000-000000000000\", \"name\": \"Remodeling 2012\", \"currencyCode\": \"AUD\", \"minutesLogged\": 180, \"totalTaskAmount\": { \"currency\": \"AUD\", \"value\": 60.0 }, \"totalExpenseAmount\": { \"currency\": \"AUD\", \"value\": 499.0 }, \"minutesToBeInvoiced\": 180, \"taskAmountToBeInvoiced\": { \"currency\": \"AUD\", \"value\": 60.0 }, \"taskAmountInvoiced\": { \"currency\": \"AUD\", \"value\": 0.0 }, \"expenseAmountToBeInvoiced\": { \"currency\": \"AUD\", \"value\": 499.0 }, \"expenseAmountInvoiced\": { \"currency\": \"AUD\", \"value\": 0.0 }, \"projectAmountInvoiced\": { \"currency\": \"AUD\", \"value\": 0.0 }, \"deposit\": { \"currency\": \"AUD\", \"value\": 0.0 }, \"depositApplied\": { \"currency\": \"AUD\", \"value\": 0.0 }, \"creditNoteAmount\": { \"currency\": \"AUD\", \"value\": 0.0 }, \"totalInvoiced\": { \"currency\": \"AUD\", \"value\": 0.0 }, \"totalToBeInvoiced\": { \"currency\": \"AUD\", \"value\": 559.0 }, \"deadlineUtc\": \"2020-03-03T15:00:00Z\", \"estimate\": { \"currency\": \"AUD\", \"value\": 99.99 }, \"status\": \"INPROGRESS\" }"
+            },
+            "schema": {
+              "$ref": "#/definitions/Project"
+            }
+          },
+          "400": {
+            "description": "A failed request due to validation error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "projects",
+              "projects.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Project"
+        ],
+        "description": "Allows you to retrieve a specific project using the projectId",
+        "operationId": "getProject",
+        "summary": "Retrieves a single project"
+      },
+      "patch": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "This allows you to safely retry requests without the risk of duplicate processing. 128 character max.",
+            "in": "header",
+            "name": "Idempotency-Key",
+            "type": "string",
+            "x-example": "KEY_VALUE",
+            "x-snake": "idempotency_key"
+          },
+          {
+            "description": "You can specify an individual project by appending the projectId to the endpoint",
+            "format": "uuid",
+            "in": "path",
+            "name": "projectId",
+            "required": true,
+            "type": "string",
+            "x-snake": "project_id"
+          },
+          {
+            "description": "Update the status of an existing Project",
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ProjectPatch"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Success - return response 204 no content",
+            "x-isEmpty": true
+          },
+          "400": {
+            "description": "A failed request due to validation error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "projects"
+            ]
+          }
+        ],
+        "tags": [
+          "Project"
+        ],
+        "description": "Allows you to update a specific projects.",
+        "operationId": "patchProject",
+        "summary": "creates a project for the specified contact"
+      },
+      "put": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "This allows you to safely retry requests without the risk of duplicate processing. 128 character max.",
+            "in": "header",
+            "name": "Idempotency-Key",
+            "type": "string",
+            "x-example": "KEY_VALUE",
+            "x-snake": "idempotency_key"
+          },
+          {
+            "description": "You can specify an individual project by appending the projectId to the endpoint",
+            "format": "uuid",
+            "in": "path",
+            "name": "projectId",
+            "required": true,
+            "type": "string",
+            "x-snake": "project_id"
+          },
+          {
+            "description": "Request of type ProjectCreateOrUpdate",
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ProjectCreateOrUpdate"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Success - return response 204 no content",
+            "x-isEmpty": true
+          },
+          "400": {
+            "description": "A failed request due to validation error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "projects"
+            ]
+          }
+        ],
+        "tags": [
+          "Project"
+        ],
+        "description": "Allows you to update a specific projects.",
+        "operationId": "updateProject",
+        "summary": "Updates a specific project"
+      }
+    },
+    "/Projects/{projectId}/Tasks": {
+      "parameters": [
+        {
+          "description": "Xero identifier for Tenant",
+          "in": "header",
+          "name": "xero-tenant-id",
+          "required": true,
+          "type": "string",
+          "x-snake": "xero_tenant_id"
+        }
+      ],
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "You can specify an individual project by appending the projectId to the endpoint",
+            "format": "uuid",
+            "in": "path",
+            "name": "projectId",
+            "required": true,
+            "type": "string",
+            "x-snake": "project_id"
+          },
+          {
+            "description": "Set to 1 by default. The requested number of the page in paged response - Must be a number greater than 0.",
+            "in": "query",
+            "name": "page",
+            "type": "integer"
+          },
+          {
+            "description": "Optional, it is set to 50 by default. The number of items to return per page in a paged response - Must be a number between 1 and 500.",
+            "in": "query",
+            "name": "pageSize",
+            "type": "integer",
+            "x-snake": "page_size"
+          },
+          {
+            "description": "Search for all tasks that match a comma separated list of taskIds, i.e. GET https://.../tasks?taskIds={taskID},{taskID}",
+            "in": "query",
+            "name": "taskIds",
+            "type": "string",
+            "x-snake": "task_ids"
+          },
+          {
+            "description": "Can be `TIME`, `FIXED` or `NON_CHARGEABLE`, defines how the task will be charged. Use `TIME` when you want to charge per hour and `FIXED` to charge as a fixed amount. If the task will not be charged use `NON_CHARGEABLE`.",
+            "enum": [
+              "TIME",
+              "FIXED",
+              "NON_CHARGEABLE"
+            ],
+            "in": "query",
+            "name": "chargeType",
+            "type": "string",
+            "x-snake": "charge_type"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK/success, returns a list of task objects",
+            "examples": {
+              "application/json": "{ \"pagination\": { \"page\": 1, \"pageSize\": 50, \"pageCount\": 1, \"itemCount\": 1 }, \"items\": [ { \"name\": \"Demolition\", \"rate\": { \"currency\": \"AUD\", \"value\": 20.0 }, \"chargeType\": \"TIME\", \"status\": \"ACTIVE\", \"estimateMinutes\": 12000, \"taskId\": \"00000000-0000-0000-0000-000000000000\", \"projectId\": \"00000000-0000-0000-0000-000000000000\", \"totalMinutes\": 180, \"totalAmount\": { \"currency\": \"AUD\", \"value\": 60.0 }, \"minutesToBeInvoiced\": 180, \"minutesInvoiced\": 0, \"nonChargeableMinutes\": 0, \"fixedMinutes\": 0, \"amountToBeInvoiced\": { \"currency\": \"AUD\", \"value\": 60.0 }, \"amountInvoiced\": { \"currency\": \"AUD\", \"value\": 0.0 } } ] }"
+            },
+            "schema": {
+              "$ref": "#/definitions/Tasks"
+            }
+          },
+          "400": {
+            "description": "A failed request due to validation error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "projects",
+              "projects.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Project"
+        ],
+        "description": "Allows you to retrieve a specific project",
+        "operationId": "getTasks",
+        "summary": "Retrieves all project tasks"
+      },
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "This allows you to safely retry requests without the risk of duplicate processing. 128 character max.",
+            "in": "header",
+            "name": "Idempotency-Key",
+            "type": "string",
+            "x-example": "KEY_VALUE",
+            "x-snake": "idempotency_key"
+          },
+          {
+            "description": "You can create a task on a specified projectId",
+            "format": "uuid",
+            "in": "path",
+            "name": "projectId",
+            "required": true,
+            "type": "string",
+            "x-snake": "project_id"
+          },
+          {
+            "description": "The task object you are creating",
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TaskCreateOrUpdate"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "OK/success, returns the new task object",
+            "examples": {
+              "application/json": "{ \"name\": \"Demolition\", \"rate\": { \"currency\": \"AUD\", \"value\": 20 }, \"chargeType\": \"TIME\", \"status\": \"ACTIVE\", \"estimateMinutes\": 12000, \"taskId\": \"00000000-0000-0000-0000-000000000000\", \"projectId\": \"00000000-0000-0000-0000-000000000000\", \"totalMinutes\": 300, \"totalAmount\": { \"currency\": \"AUD\", \"value\": 100 }, \"minutesToBeInvoiced\": 300, \"minutesInvoiced\": 0, \"nonChargeableMinutes\": 0, \"fixedMinutes\": 0, \"amountToBeInvoiced\": { \"currency\": \"AUD\", \"value\": 100 }, \"amountInvoiced\": { \"currency\": \"AUD\", \"value\": 0 } }"
+            },
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          },
+          "400": {
+            "description": "A failed request due to validation error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "projects"
+            ]
+          }
+        ],
+        "tags": [
+          "Project"
+        ],
+        "description": "Allows you to create a specific task",
+        "operationId": "createTask",
+        "summary": "Allows you to create a task"
+      }
+    },
+    "/Projects/{projectId}/Tasks/{taskId}": {
+      "parameters": [
+        {
+          "description": "Xero identifier for Tenant",
+          "in": "header",
+          "name": "xero-tenant-id",
+          "required": true,
+          "type": "string",
+          "x-snake": "xero_tenant_id"
+        }
+      ],
+      "delete": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "You can specify an individual project by appending the projectId to the endpoint",
+            "format": "uuid",
+            "in": "path",
+            "name": "projectId",
+            "required": true,
+            "type": "string",
+            "x-snake": "project_id"
+          },
+          {
+            "description": "You can specify an individual task by appending the id to the endpoint",
+            "format": "uuid",
+            "in": "path",
+            "name": "taskId",
+            "required": true,
+            "type": "string",
+            "x-snake": "task_id"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Success - return response 204 no content",
+            "x-isEmpty": true
+          },
+          "400": {
+            "description": "A failed request due to validation error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "projects"
+            ]
+          }
+        ],
+        "tags": [
+          "Project"
+        ],
+        "description": "Allows you to delete a specific task",
+        "operationId": "deleteTask",
+        "summary": "Allows you to delete a task"
+      },
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "You can specify an individual project by appending the projectId to the endpoint",
+            "format": "uuid",
+            "in": "path",
+            "name": "projectId",
+            "required": true,
+            "type": "string",
+            "x-snake": "project_id"
+          },
+          {
+            "description": "You can specify an individual task by appending the taskId to the endpoint, i.e. GET https://.../tasks/{taskID}",
+            "format": "uuid",
+            "in": "path",
+            "name": "taskId",
+            "required": true,
+            "type": "string",
+            "x-snake": "task_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK/success, returns the specified task object",
+            "examples": {
+              "application/json": "{ \"name\": \"Demolition\", \"rate\": { \"currency\": \"AUD\", \"value\": 20 }, \"chargeType\": \"TIME\", \"status\": \"ACTIVE\", \"estimateMinutes\": 12000, \"taskId\": \"00000000-0000-0000-0000-000000000000\", \"projectId\": \"00000000-0000-0000-0000-000000000000\", \"totalMinutes\": 300, \"totalAmount\": { \"currency\": \"AUD\", \"value\": 100 }, \"minutesToBeInvoiced\": 300, \"minutesInvoiced\": 0, \"nonChargeableMinutes\": 0, \"fixedMinutes\": 0, \"amountToBeInvoiced\": { \"currency\": \"AUD\", \"value\": 100 }, \"amountInvoiced\": { \"currency\": \"AUD\", \"value\": 0 } }"
+            },
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          },
+          "400": {
+            "description": "A failed request due to validation error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "projects",
+              "projects.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Project"
+        ],
+        "description": "Allows you to retrieve a specific project",
+        "operationId": "getTask",
+        "summary": "Retrieves a single project task"
+      },
+      "put": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "This allows you to safely retry requests without the risk of duplicate processing. 128 character max.",
+            "in": "header",
+            "name": "Idempotency-Key",
+            "type": "string",
+            "x-example": "KEY_VALUE",
+            "x-snake": "idempotency_key"
+          },
+          {
+            "description": "You can specify an individual project by appending the projectId to the endpoint",
+            "format": "uuid",
+            "in": "path",
+            "name": "projectId",
+            "required": true,
+            "type": "string",
+            "x-snake": "project_id"
+          },
+          {
+            "description": "You can specify an individual task by appending the id to the endpoint",
+            "format": "uuid",
+            "in": "path",
+            "name": "taskId",
+            "required": true,
+            "type": "string",
+            "x-snake": "task_id"
+          },
+          {
+            "description": "The task object you are updating",
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TaskCreateOrUpdate"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK/Success - return response 204 no content",
+            "x-isEmpty": true
+          },
+          "400": {
+            "description": "A failed request due to validation error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "projects"
+            ]
+          }
+        ],
+        "tags": [
+          "Project"
+        ],
+        "description": "Allows you to update a specific task",
+        "operationId": "updateTask",
+        "summary": "Allows you to update a task"
+      }
+    },
+    "/Projects/{projectId}/Time": {
+      "parameters": [
+        {
+          "description": "Xero identifier for Tenant",
+          "in": "header",
+          "name": "xero-tenant-id",
+          "required": true,
+          "type": "string",
+          "x-snake": "xero_tenant_id"
+        }
+      ],
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "Identifier of the project, that the task (which the time entry is logged against) belongs to.",
+            "format": "uuid",
+            "in": "path",
+            "name": "projectId",
+            "required": true,
+            "type": "string",
+            "x-snake": "project_id"
+          },
+          {
+            "description": "The xero user identifier of the person who logged time.",
+            "format": "uuid",
+            "in": "query",
+            "name": "userId",
+            "type": "string",
+            "x-snake": "user_id"
+          },
+          {
+            "description": "Identifier of the task that time entry is logged against.",
+            "format": "uuid",
+            "in": "query",
+            "name": "taskId",
+            "type": "string",
+            "x-snake": "task_id"
+          },
+          {
+            "description": "Finds all time entries for this invoice.",
+            "format": "uuid",
+            "in": "query",
+            "name": "invoiceId",
+            "type": "string",
+            "x-snake": "invoice_id"
+          },
+          {
+            "description": "Finds all time entries for this contact identifier.",
+            "format": "uuid",
+            "in": "query",
+            "name": "contactId",
+            "type": "string",
+            "x-snake": "contact_id"
+          },
+          {
+            "description": "Set to 1 by default. The requested number of the page in paged response - Must be a number greater than 0.",
+            "in": "query",
+            "name": "page",
+            "type": "integer"
+          },
+          {
+            "description": "Optional, it is set to 50 by default. The number of items to return per page in a paged response - Must be a number between 1 and 500.",
+            "in": "query",
+            "name": "pageSize",
+            "type": "integer",
+            "x-snake": "page_size"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Comma-separated list of states to find. Will find all time entries that are in the status of whatever is specified.\t",
+            "in": "query",
+            "items": {
+              "type": "string"
+            },
+            "name": "states",
+            "type": "array"
+          },
+          {
+            "description": "Finds all time entries which relate to tasks with the charge type `TIME` or `FIXED`.",
+            "in": "query",
+            "name": "isChargeable",
+            "type": "boolean",
+            "x-snake": "is_chargeable"
+          },
+          {
+            "description": "ISO 8601 UTC date. Finds all time entries on or after this date filtered on the `dateUtc` field.",
+            "format": "date-time",
+            "in": "query",
+            "name": "dateAfterUtc",
+            "type": "string",
+            "x-snake": "date_after_utc"
+          },
+          {
+            "description": "ISO 8601 UTC date. Finds all time entries on or before this date filtered on the `dateUtc` field.",
+            "format": "date-time",
+            "in": "query",
+            "name": "dateBeforeUtc",
+            "type": "string",
+            "x-snake": "date_before_utc"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK/success, returns a list of time entry objects",
+            "examples": {
+              "application/json": "{ \"pagination\": { \"page\": 1, \"pageSize\": 50, \"pageCount\": 1, \"itemCount\": 9 }, \"items\":[ { \"timeEntryId\": \"00000000-0000-0000-0000-000000000000\", \"userId\": \"00000000-0000-0000-0000-000000000000\", \"projectId\": \"00000000-0000-0000-0000-000000000000\", \"taskId\": \"00000000-0000-0000-0000-000000000000\", \"dateUtc\": \"2020-02-27T15:00:00Z\", \"dateEnteredUtc\": \"00000000-0000-0000-0000-000000000000 \"duration\":45, \"description\": \"My description\", \"status\": \"ACTIVE\" }, { \"timeEntryId\": \"00000000-0000-0000-0000-000000000000\", \"userId\": \"00000000-0000-0000-0000-000000000000\", \"projectId\": \"00000000-0000-0000-0000-000000000000\", \"taskId\": \"00000000-0000-0000-0000-000000000000\", \"dateUtc\": \"2020-02-26T15:00:00Z\", \"dateEnteredUtc\": \"2020-02-28T03:24:29.2215641Z\", \"duration\":30, \"description\": \"My description\", \"status\": \"ACTIVE\" } ] }"
+            },
+            "schema": {
+              "$ref": "#/definitions/TimeEntries"
+            }
+          },
+          "400": {
+            "description": "A failed request due to validation error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "projects",
+              "projects.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Project"
+        ],
+        "description": "Allows you to retrieve the time entries associated with a specific project",
+        "operationId": "getTimeEntries",
+        "summary": "Retrieves all time entries associated with a specific project"
+      },
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "This allows you to safely retry requests without the risk of duplicate processing. 128 character max.",
+            "in": "header",
+            "name": "Idempotency-Key",
+            "type": "string",
+            "x-example": "KEY_VALUE",
+            "x-snake": "idempotency_key"
+          },
+          {
+            "description": "You can specify an individual project by appending the projectId to the endpoint",
+            "format": "uuid",
+            "in": "path",
+            "name": "projectId",
+            "required": true,
+            "type": "string",
+            "x-snake": "project_id"
+          },
+          {
+            "description": "The time entry object you are creating",
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TimeEntryCreateOrUpdate"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK/success, returns the newly created time entry",
+            "examples": {
+              "application/json": "{ \"timeEntryId\": \"00000000-0000-0000-0000-000000000000\", \"userId\": \"00000000-0000-0000-0000-000000000000\", \"projectId\": \"00000000-0000-0000-0000-000000000000\", \"taskId\": \"00000000-0000-0000-0000-000000000000\", \"dateUtc\": \"2020-02-26T15:00:00Z\", \"dateEnteredUtc\": \"2020-02-28T20:37:42.8652832Z\", \"duration\":30, \"description\": \"My description\", \"status\": \"ACTIVE\" }"
+            },
+            "schema": {
+              "$ref": "#/definitions/TimeEntry"
+            }
+          },
+          "400": {
+            "description": "A failed request due to validation error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "projects"
+            ]
+          }
+        ],
+        "tags": [
+          "Project"
+        ],
+        "description": "Allows you to create a specific task",
+        "operationId": "createTimeEntry",
+        "summary": "Creates a time entry for a specific project"
+      }
+    },
+    "/Projects/{projectId}/Time/{timeEntryId}": {
+      "parameters": [
+        {
+          "description": "Xero identifier for Tenant",
+          "in": "header",
+          "name": "xero-tenant-id",
+          "required": true,
+          "type": "string",
+          "x-snake": "xero_tenant_id"
+        }
+      ],
+      "delete": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "You can specify an individual project by appending the projectId to the endpoint",
+            "format": "uuid",
+            "in": "path",
+            "name": "projectId",
+            "required": true,
+            "type": "string",
+            "x-snake": "project_id"
+          },
+          {
+            "description": "You can specify an individual task by appending the id to the endpoint",
+            "format": "uuid",
+            "in": "path",
+            "name": "timeEntryId",
+            "required": true,
+            "type": "string",
+            "x-snake": "time_entry_id"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Success - return response 204 no content",
+            "x-isEmpty": true
+          },
+          "400": {
+            "description": "A failed request due to validation error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "projects"
+            ]
+          }
+        ],
+        "tags": [
+          "Project"
+        ],
+        "description": "Allows you to delete a specific time entry",
+        "operationId": "deleteTimeEntry",
+        "summary": "Deletes a time entry for a specific project"
+      },
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "You can specify an individual project by appending the projectId to the endpoint",
+            "format": "uuid",
+            "in": "path",
+            "name": "projectId",
+            "required": true,
+            "type": "string",
+            "x-snake": "project_id"
+          },
+          {
+            "description": "You can specify an individual time entry by appending the id to the endpoint",
+            "format": "uuid",
+            "in": "path",
+            "name": "timeEntryId",
+            "required": true,
+            "type": "string",
+            "x-snake": "time_entry_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK/success, returns the specified time entry",
+            "examples": {
+              "application/json": "{ \"timeEntryId\": \"00000000-0000-0000-0000-000000000000\", \"userId\": \"00000000-0000-0000-0000-000000000000\", \"projectId\": \"00000000-0000-0000-0000-000000000000\", \"taskId\": \"00000000-0000-0000-0000-000000000000\", \"dateUtc\": \"2020-02-27T15:00:00Z\", \"dateEnteredUtc\": \"2020-02-21T21:41:22.2642727Z\", \"duration\":45, \"description\": \"My description\", \"status\": \"ACTIVE\" }"
+            },
+            "schema": {
+              "$ref": "#/definitions/TimeEntry"
+            }
+          },
+          "400": {
+            "description": "A failed request due to validation error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "projects",
+              "projects.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Project"
+        ],
+        "description": "Allows you to get a single time entry in a project",
+        "operationId": "getTimeEntry",
+        "summary": "Retrieves a single time entry for a specific project"
+      },
+      "put": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "description": "This allows you to safely retry requests without the risk of duplicate processing. 128 character max.",
+            "in": "header",
+            "name": "Idempotency-Key",
+            "type": "string",
+            "x-example": "KEY_VALUE",
+            "x-snake": "idempotency_key"
+          },
+          {
+            "description": "You can specify an individual project by appending the projectId to the endpoint",
+            "format": "uuid",
+            "in": "path",
+            "name": "projectId",
+            "required": true,
+            "type": "string",
+            "x-snake": "project_id"
+          },
+          {
+            "description": "You can specify an individual time entry by appending the id to the endpoint",
+            "format": "uuid",
+            "in": "path",
+            "name": "timeEntryId",
+            "required": true,
+            "type": "string",
+            "x-snake": "time_entry_id"
+          },
+          {
+            "description": "The time entry object you are updating",
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TimeEntryCreateOrUpdate"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Success - return response 204 no content",
+            "x-isEmpty": true
+          },
+          "400": {
+            "description": "A failed request due to validation error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "projects"
+            ]
+          }
+        ],
+        "tags": [
+          "Project"
+        ],
+        "description": "Allows you to update time entry in a project",
+        "operationId": "updateTimeEntry",
+        "summary": "Updates a time entry for a specific project"
+      }
+    },
+    "/ProjectsUsers": {
+      "parameters": [
+        {
+          "description": "Xero identifier for Tenant",
+          "in": "header",
+          "name": "xero-tenant-id",
+          "required": true,
+          "type": "string",
+          "x-snake": "xero_tenant_id"
+        }
+      ],
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "default": 1,
+            "description": "set to 1 by default. The requested number of the page in paged response - Must be a number greater than 0.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "default": 50,
+            "description": "Optional, it is set to 50 by default. The number of items to return per page in a paged response - Must be a number between 1 and 500.",
+            "in": "query",
+            "maximum": 500,
+            "minimum": 1,
+            "name": "pageSize",
+            "required": false,
+            "type": "integer",
+            "x-snake": "page_size"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK/success, returns a list of project users",
+            "examples": {
+              "application/json": "{ \"pagination\": { \"page\": 1, \"pageSize\": 50, \"pageCount\": 1, \"itemCount\": 2 }, \"items\":[ { \"userId\": \"00000000-0000-0000-0000-000000000000\", \"name\": \"Test User\", \"email\": \"test@xero.com\" }, { \"userId\": \"00000000-0000-0000-0000-000000000000\", \"name\": \"API Team\", \"email\": \"api@xero.com\" } ] }"
+            },
+            "schema": {
+              "$ref": "#/definitions/ProjectUsers"
+            }
+          },
+          "400": {
+            "description": "A failed request due to validation error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "projects",
+              "projects.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Project"
+        ],
+        "description": "Allows you to retrieve the users on a projects.",
+        "operationId": "getProjectUsers",
+        "summary": "Retrieves a list of all project users"
+      }
+    }
+  },
+  "definitions": {
+    "Amount": {
+      "properties": {
+        "currency": {
+          "$ref": "#/definitions/CurrencyCode",
+          "type": "string"
+        },
+        "value": {
+          "example": 1,
+          "format": "double",
+          "type": "number",
+          "x-is-money": true
+        }
+      },
+      "type": "object"
+    },
+    "ChargeType": {
+      "description": "Can be `TIME`, `FIXED` or `NON_CHARGEABLE`, defines how the task will be charged. Use `TIME` when you want to charge per hour and `FIXED` to charge as a fixed amount. If the task will not be charged use `NON_CHARGEABLE`.",
+      "enum": [
+        "TIME",
+        "FIXED",
+        "NON_CHARGEABLE"
+      ],
+      "type": "string"
+    },
+    "CurrencyCode": {
+      "description": "3 letter alpha code for the ISO-4217 currency code, e.g. USD, AUD.",
+      "enum": [
+        "AED",
+        "AFN",
+        "ALL",
+        "AMD",
+        "ANG",
+        "AOA",
+        "ARS",
+        "AUD",
+        "AWG",
+        "AZN",
+        "BAM",
+        "BBD",
+        "BDT",
+        "BGN",
+        "BHD",
+        "BIF",
+        "BMD",
+        "BND",
+        "BOB",
+        "BRL",
+        "BSD",
+        "BTN",
+        "BWP",
+        "BYN",
+        "BZD",
+        "CAD",
+        "CDF",
+        "CHF",
+        "CLP",
+        "CNY",
+        "COP",
+        "CRC",
+        "CUC",
+        "CUP",
+        "CVE",
+        "CZK",
+        "DJF",
+        "DKK",
+        "DOP",
+        "DZD",
+        "EGP",
+        "ERN",
+        "ETB",
+        "EUR",
+        "FJD",
+        "FKP",
+        "GBP",
+        "GEL",
+        "GGP",
+        "GHS",
+        "GIP",
+        "GMD",
+        "GNF",
+        "GTQ",
+        "GYD",
+        "HKD",
+        "HNL",
+        "HRK",
+        "HTG",
+        "HUF",
+        "IDR",
+        "ILS",
+        "IMP",
+        "INR",
+        "IQD",
+        "IRR",
+        "ISK",
+        "JEP",
+        "JMD",
+        "JOD",
+        "JPY",
+        "KES",
+        "KGS",
+        "KHR",
+        "KMF",
+        "KPW",
+        "KRW",
+        "KWD",
+        "KYD",
+        "KZT",
+        "LAK",
+        "LBP",
+        "LKR",
+        "LRD",
+        "LSL",
+        "LYD",
+        "MAD",
+        "MDL",
+        "MGA",
+        "MKD",
+        "MMK",
+        "MNT",
+        "MOP",
+        "MRU",
+        "MUR",
+        "MVR",
+        "MWK",
+        "MXN",
+        "MYR",
+        "MZN",
+        "NAD",
+        "NGN",
+        "NIO",
+        "NOK",
+        "NPR",
+        "NZD",
+        "OMR",
+        "PAB",
+        "PEN",
+        "PGK",
+        "PHP",
+        "PKR",
+        "PLN",
+        "PYG",
+        "QAR",
+        "RON",
+        "RSD",
+        "RUB",
+        "RWF",
+        "SAR",
+        "SBD",
+        "SCR",
+        "SDG",
+        "SEK",
+        "SGD",
+        "SHP",
+        "SLL",
+        "SOS",
+        "SPL",
+        "SRD",
+        "STN",
+        "SVC",
+        "SYP",
+        "SZL",
+        "THB",
+        "TJS",
+        "TMT",
+        "TND",
+        "TOP",
+        "TRY",
+        "TTD",
+        "TVD",
+        "TWD",
+        "TZS",
+        "UAH",
+        "UGX",
+        "USD",
+        "UYU",
+        "UZS",
+        "VEF",
+        "VND",
+        "VUV",
+        "WST",
+        "XAF",
+        "XCD",
+        "XDR",
+        "XOF",
+        "XPF",
+        "YER",
+        "ZAR",
+        "ZMW",
+        "ZMK",
+        "ZWD"
+      ],
+      "example": "AUD",
+      "type": "string"
+    },
+    "Error": {
+      "externalDocs": {
+        "url": "https://developer.xero.com/documentation/projects/projects-response-codes"
+      },
+      "properties": {
+        "message": {
+          "description": "Exception message",
+          "type": "string"
+        },
+        "modelState": {
+          "description": "Array of Elements of validation Errors",
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "Pagination": {
+      "properties": {
+        "itemCount": {
+          "description": "Number of items returned",
+          "example": 2,
+          "type": "integer"
+        },
+        "page": {
+          "description": "Set to 1 by default. The requested number of the page in paged response - Must be a number greater than 0.",
+          "example": 1,
+          "type": "integer"
+        },
+        "pageCount": {
+          "description": "Number of pages available",
+          "example": 1,
+          "type": "integer"
+        },
+        "pageSize": {
+          "description": "Optional, it is set to 50 by default. The number of items to return per page in a paged response - Must be a number between 1 and 500.",
+          "example": 10,
+          "type": "integer"
+        }
+      }
+    },
+    "Project": {
+      "externalDocs": {
+        "url": "https://developer.xero.com/documentation/projects/projects"
+      },
+      "properties": {
+        "contactId": {
+          "externalDocs": {
+            "url": "https://developer.xero.com/documentation/api/contacts"
+          },
+          "description": "Identifier of the contact this project was created for.",
+          "example": "01234567-89ab-cdef-0123-456789abcdef",
+          "format": "uuid",
+          "type": "string"
+        },
+        "creditNoteAmount": {
+          "$ref": "#/definitions/Amount"
+        },
+        "currencyCode": {
+          "$ref": "#/definitions/CurrencyCode",
+          "type": "string"
+        },
+        "deadlineUtc": {
+          "description": "Deadline for the project. UTC Date Time in ISO-8601 format.",
+          "example": "2019-12-10T12:59:59Z",
+          "format": "date-time",
+          "type": "string"
+        },
+        "deposit": {
+          "$ref": "#/definitions/Amount"
+        },
+        "depositApplied": {
+          "$ref": "#/definitions/Amount"
+        },
+        "estimate": {
+          "$ref": "#/definitions/Amount"
+        },
+        "estimateAmount": {
+          "$ref": "#/definitions/Amount"
+        },
+        "expenseAmountInvoiced": {
+          "$ref": "#/definitions/Amount"
+        },
+        "expenseAmountToBeInvoiced": {
+          "$ref": "#/definitions/Amount"
+        },
+        "minutesLogged": {
+          "description": "A total of minutes logged against all tasks on the Project.",
+          "example": 0,
+          "type": "integer"
+        },
+        "minutesToBeInvoiced": {
+          "description": "Minutes which have not been invoiced across all chargeable tasks in the project.",
+          "example": 0,
+          "type": "integer"
+        },
+        "name": {
+          "description": "Name of the project.",
+          "example": "New Kitchen",
+          "type": "string"
+        },
+        "projectAmountInvoiced": {
+          "$ref": "#/definitions/Amount"
+        },
+        "projectId": {
+          "description": "Identifier of the project.",
+          "example": "254553fa-2be8-4991-bd5e-70a97ea12ef8",
+          "format": "uuid",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/ProjectStatus",
+          "type": "string"
+        },
+        "taskAmountInvoiced": {
+          "$ref": "#/definitions/Amount"
+        },
+        "taskAmountToBeInvoiced": {
+          "$ref": "#/definitions/Amount"
+        },
+        "totalExpenseAmount": {
+          "$ref": "#/definitions/Amount"
+        },
+        "totalInvoiced": {
+          "$ref": "#/definitions/Amount"
+        },
+        "totalTaskAmount": {
+          "$ref": "#/definitions/Amount"
+        },
+        "totalToBeInvoiced": {
+          "$ref": "#/definitions/Amount"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "ProjectCreateOrUpdate": {
+      "externalDocs": {
+        "url": "https://developer.xero.com/documentation/projects/projects"
+      },
+      "properties": {
+        "contactId": {
+          "externalDocs": {
+            "url": "https://developer.xero.com/documentation/api/contacts"
+          },
+          "description": "Identifier of the contact this project was created for.",
+          "example": "01234567-89ab-cdef-0123-456789abcdef",
+          "format": "uuid",
+          "type": "string"
+        },
+        "deadlineUtc": {
+          "description": "Deadline for the project. UTC Date Time in ISO-8601 format.",
+          "example": "2019-12-10T12:59:59Z",
+          "format": "date-time",
+          "type": "string"
+        },
+        "estimateAmount": {
+          "example": 1,
+          "format": "double",
+          "type": "number",
+          "x-is-money": true
+        },
+        "name": {
+          "description": "Name of the project.",
+          "example": "New Kitchen",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "ProjectPatch": {
+      "externalDocs": {
+        "url": "https://developer.xero.com/documentation/projects/projects"
+      },
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/ProjectStatus",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status"
+      ],
+      "type": "object"
+    },
+    "ProjectStatus": {
+      "description": "Status for project",
+      "enum": [
+        "INPROGRESS",
+        "CLOSED"
+      ],
+      "example": "INPROGRESS",
+      "type": "string"
+    },
+    "ProjectUser": {
+      "externalDocs": {
+        "url": "https://developer.xero.com/documentation/projects/users"
+      },
+      "properties": {
+        "email": {
+          "description": "Email address of the user.",
+          "example": "sidneyallen@xero.com",
+          "type": "string"
+        },
+        "name": {
+          "description": "Full name of the user.",
+          "example": "Sidney Allen",
+          "type": "string"
+        },
+        "userId": {
+          "description": "Identifier of the user of the project.",
+          "example": "254553fa-2be8-4991-bd5e-70a97ea12ef8",
+          "format": "uuid",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ProjectUsers": {
+      "externalDocs": {
+        "url": "https://developer.xero.com/documentation/projects/users"
+      },
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/ProjectUser"
+          },
+          "type": "array"
+        },
+        "pagination": {
+          "$ref": "#/definitions/Pagination"
+        }
+      },
+      "type": "object"
+    },
+    "Projects": {
+      "externalDocs": {
+        "url": "https://developer.xero.com/documentation/projects/projects"
+      },
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/Project"
+          },
+          "type": "array"
+        },
+        "pagination": {
+          "$ref": "#/definitions/Pagination"
+        }
+      },
+      "type": "object"
+    },
+    "Task": {
+      "externalDocs": {
+        "url": "https://developer.xero.com/documentation/projects/projects"
+      },
+      "properties": {
+        "amountInvoiced": {
+          "$ref": "#/definitions/Amount",
+          "type": "number"
+        },
+        "amountToBeInvoiced": {
+          "$ref": "#/definitions/Amount",
+          "type": "number"
+        },
+        "chargeType": {
+          "$ref": "#/definitions/ChargeType",
+          "type": "string"
+        },
+        "estimateMinutes": {
+          "description": "An estimated time to perform the task",
+          "type": "integer"
+        },
+        "fixedMinutes": {
+          "description": "Minutes logged against this task if its charge type is `FIXED`.",
+          "type": "integer"
+        },
+        "minutesInvoiced": {
+          "description": "Minutes on this task which have been invoiced.",
+          "type": "integer"
+        },
+        "minutesToBeInvoiced": {
+          "description": "Minutes on this task which have not been invoiced.",
+          "type": "integer"
+        },
+        "name": {
+          "description": "Name of the task.",
+          "type": "string"
+        },
+        "nonChargeableMinutes": {
+          "description": "Minutes logged against this task if its charge type is `NON_CHARGEABLE`.",
+          "type": "integer"
+        },
+        "projectId": {
+          "description": "Identifier of the project task belongs to.",
+          "example": "00000000-0000-0000-000-000000000000",
+          "format": "uuid",
+          "type": "string"
+        },
+        "rate": {
+          "$ref": "#/definitions/Amount",
+          "type": "number"
+        },
+        "status": {
+          "description": "Status of the task. When a task of ChargeType is `FIXED` and the rate amount is invoiced the status will be set to `INVOICED` and can't be modified. A task with ChargeType of `TIME` or `NON_CHARGEABLE` cannot have a status of `INVOICED`. A `LOCKED` state indicates that the task is currently changing state (for example being invoiced) and can't be modified.",
+          "enum": [
+            "ACTIVE",
+            "INVOICED",
+            "LOCKED"
+          ],
+          "type": "string"
+        },
+        "taskId": {
+          "description": "Identifier of the task.",
+          "example": "00000000-0000-0000-000-000000000000",
+          "format": "uuid",
+          "type": "string"
+        },
+        "totalAmount": {
+          "$ref": "#/definitions/Amount",
+          "type": "number"
+        },
+        "totalMinutes": {
+          "description": "Total minutes which have been logged against the task. Logged by assigning a time entry to a task",
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "TaskCreateOrUpdate": {
+      "externalDocs": {
+        "url": "https://developer.xero.com/documentation/projects/projects"
+      },
+      "properties": {
+        "chargeType": {
+          "$ref": "#/definitions/ChargeType",
+          "type": "string"
+        },
+        "estimateMinutes": {
+          "description": "An estimated time to perform the task",
+          "type": "integer"
+        },
+        "name": {
+          "description": "Name of the task. Max length 100 characters.",
+          "maximum": 100,
+          "type": "string"
+        },
+        "rate": {
+          "$ref": "#/definitions/Amount",
+          "type": "number"
+        }
+      },
+      "required": [
+        "name",
+        "rate",
+        "chargeType"
+      ],
+      "type": "object"
+    },
+    "Tasks": {
+      "externalDocs": {
+        "url": "https://developer.xero.com/documentation/projects/projects"
+      },
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/Task"
+          },
+          "type": "array"
+        },
+        "pagination": {
+          "$ref": "#/definitions/Pagination"
+        }
+      },
+      "type": "object"
+    },
+    "TimeEntries": {
+      "externalDocs": {
+        "url": "https://developer.xero.com/documentation/projects/time"
+      },
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/TimeEntry"
+          },
+          "type": "array"
+        },
+        "pagination": {
+          "$ref": "#/definitions/Pagination"
+        }
+      },
+      "type": "object"
+    },
+    "TimeEntry": {
+      "externalDocs": {
+        "url": "https://developer.xero.com/documentation/projects/time"
+      },
+      "properties": {
+        "dateEnteredUtc": {
+          "description": "The date time that time entry is created. UTC Date Time in ISO-8601 format. By default it is set to server time.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "dateUtc": {
+          "description": "The date time that time entry is logged on. UTC Date Time in ISO-8601 format.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "description": {
+          "description": "A description of the time entry.",
+          "type": "string"
+        },
+        "duration": {
+          "description": "The duration of logged minutes.",
+          "type": "integer"
+        },
+        "projectId": {
+          "description": "Identifier of the project, that the task (which the time entry is logged against) belongs to.",
+          "example": "00000000-0000-0000-000-000000000000",
+          "format": "uuid",
+          "type": "string"
+        },
+        "status": {
+          "description": "Status of the time entry. By default a time entry is created with status of `ACTIVE`. A `LOCKED` state indicates that the time entry is currently changing state (for example being invoiced). Updates are not allowed when in this state. It will have a status of INVOICED once it is invoiced.",
+          "enum": [
+            "ACTIVE",
+            "LOCKED",
+            "INVOICED"
+          ],
+          "type": "string"
+        },
+        "taskId": {
+          "description": "Identifier of the task that time entry is logged against.",
+          "example": "00000000-0000-0000-000-000000000000",
+          "format": "uuid",
+          "type": "string"
+        },
+        "timeEntryId": {
+          "description": "Identifier of the time entry.",
+          "example": "00000000-0000-0000-000-000000000000",
+          "format": "uuid",
+          "type": "string"
+        },
+        "userId": {
+          "description": "The xero user identifier of the person who logged time.",
+          "example": "00000000-0000-0000-000-000000000000",
+          "format": "uuid",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "TimeEntryCreateOrUpdate": {
+      "externalDocs": {
+        "url": "https://developer.xero.com/documentation/projects/time"
+      },
+      "properties": {
+        "dateUtc": {
+          "description": "Date time entry is logged on. UTC Date Time in ISO-8601 format.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "description": {
+          "description": "An optional description of the time entry, will be set to null if not provided during update.",
+          "type": "string"
+        },
+        "duration": {
+          "description": "Number of minutes to be logged. Duration is between 1 and 59940 inclusively.",
+          "type": "integer"
+        },
+        "taskId": {
+          "description": "Identifier of the task that time entry is logged against.",
+          "example": "00000000-0000-0000-000-000000000000",
+          "format": "uuid",
+          "type": "string"
+        },
+        "userId": {
+          "description": "The xero user identifier of the person logging the time.",
+          "example": "00000000-0000-0000-000-000000000000",
+          "format": "uuid",
+          "type": "string"
+        }
+      },
+      "required": [
+        "userId",
+        "taskId",
+        "dateUtc",
+        "duration"
+      ],
+      "type": "object"
+    }
+  },
+  "securityDefinitions": {
+    "OAuth2": {
+      "authorizationUrl": "https://login.xero.com/identity/connect/authorize",
+      "description": "For more information",
+      "flow": "accessCode",
+      "scopes": {
+        "email": "Grant read-only access to your email",
+        "openid": "Grant read-only access to your open id",
+        "profile": "your profile information",
+        "projects": "Grant read-write access to projects",
+        "projects.read": "Grant read-only access to projects"
+      },
+      "tokenUrl": "https://identity.xero.com/connect/token",
+      "type": "oauth2"
+    }
+  },
+  "x-components": {
+    "parameters": {
+      "chargeType": {
+        "description": "Can be `TIME`, `FIXED` or `NON_CHARGEABLE`, defines how the task will be charged. Use `TIME` when you want to charge per hour and `FIXED` to charge as a fixed amount. If the task will not be charged use `NON_CHARGEABLE`.",
+        "enum": [
+          "TIME",
+          "FIXED",
+          "NON_CHARGEABLE"
+        ],
+        "in": "query",
+        "name": "chargeType",
+        "type": "string",
+        "x-snake": "charge_type"
+      },
+      "idempotencyKey": {
+        "description": "This allows you to safely retry requests without the risk of duplicate processing. 128 character max.",
+        "in": "header",
+        "name": "Idempotency-Key",
+        "type": "string",
+        "x-example": "KEY_VALUE",
+        "x-snake": "idempotency_key"
+      },
+      "requiredHeader": {
+        "description": "Xero identifier for Tenant",
+        "in": "header",
+        "name": "xero-tenant-id",
+        "required": true,
+        "type": "string",
+        "x-snake": "xero_tenant_id"
+      }
+    },
+    "responses": {
+      "400Error": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "description": "A failed request due to validation error"
+      }
+    }
+  }
+}
