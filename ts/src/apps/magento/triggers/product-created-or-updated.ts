@@ -1,6 +1,7 @@
 import {
   EQoreAppActionCode,
   QoreAppCreator,
+  TCustomConnOptions,
   TQoreAppActionFunctionContext,
   TQoreOptions,
 } from '@qoretechnologies/ts-toolkit';
@@ -9,7 +10,7 @@ import {
   pollCreatedItemsForTrigger,
   pollUpdatedItemsForTrigger,
 } from '../../../global/helpers/event-triggers';
-import { MAGENTO_APP_NAME, MAGENTO_CONN_OPTIONS } from '../constants';
+import { MAGENTO_APP_NAME } from '../constants';
 import { fetchMagentoData } from '../helpers/constants';
 import { EMagentoTriggerCriteria, magentoTriggerCriteria } from './constants';
 import { magentoProductEventInfo } from './event-info/product.event-info';
@@ -34,7 +35,7 @@ const options = {
 
 const triggerName = 'product-created-or-updated';
 
-const getContextValues = (context?: TQoreAppActionFunctionContext<typeof MAGENTO_CONN_OPTIONS>) => {
+const getContextValues = (context?: TQoreAppActionFunctionContext<TCustomConnOptions>) => {
   const token = context?.conn_opts?.token;
   const url = context?.conn_opts?.url;
   const activationCriteria = context?.opts?.activationCriteria;
@@ -66,7 +67,7 @@ const magentoProductCreatedOrUpdatedTrigger = QoreAppCreator.createLocalizedTrig
   options,
   event_function: async (context, update, should_stop) => {
     const { token, url, activationCriteria } = getContextValues(
-      context as TQoreAppActionFunctionContext<typeof MAGENTO_CONN_OPTIONS>
+      context as TQoreAppActionFunctionContext<TCustomConnOptions>
     );
 
     const isUpdatedCriteria =
@@ -101,7 +102,7 @@ const magentoProductCreatedOrUpdatedTrigger = QoreAppCreator.createLocalizedTrig
   },
   get_example_event_data: async (context) => {
     const { token, url } = getContextValues(
-      context as TQoreAppActionFunctionContext<typeof MAGENTO_CONN_OPTIONS>
+      context as TQoreAppActionFunctionContext<TCustomConnOptions>
     );
 
     const records = await getLastCreatedRecords(token, url);

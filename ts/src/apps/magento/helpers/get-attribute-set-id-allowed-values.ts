@@ -14,9 +14,9 @@ type TMagentoAttributeSet = {
 
 const mapMagentoAttributeSetToAllowedValue = (
   attributeSet: TMagentoAttributeSet
-): IQoreAllowedValue<number> => ({
+): IQoreAllowedValue<string> => ({
   display_name: attributeSet.attribute_set_name,
-  value: attributeSet.attribute_set_id,
+  value: attributeSet.attribute_set_id.toString(),
   desc:
     `Attribute Set ID: ${attributeSet.attribute_set_id}\n\n` +
     `Name: ${attributeSet.attribute_set_name}\n\n` +
@@ -26,8 +26,8 @@ const mapMagentoAttributeSetToAllowedValue = (
 
 export const getMagentoAttributeSetIdAllowedValues: TQoreGetAllowedValuesFunction<
   TCustomConnOptions,
-  number
-> = async (context): Promise<IQoreAllowedValue<number>[]> => {
+  string
+> = async (context): Promise<IQoreAllowedValue<string>[]> => {
   const token = context?.conn_opts?.token;
   const url = context?.conn_opts?.url;
 
@@ -43,7 +43,7 @@ export const getMagentoAttributeSetIdAllowedValues: TQoreGetAllowedValuesFunctio
     );
   }
 
-  const attributeSets = await fetchMagentoAllowedValues<TMagentoAttributeSet, number>({
+  const attributeSets = await fetchMagentoAllowedValues<TMagentoAttributeSet, string>({
     url: url!,
     token: token!,
     mapItemToAllowedValue: mapMagentoAttributeSetToAllowedValue,

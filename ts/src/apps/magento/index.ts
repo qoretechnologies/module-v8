@@ -1,18 +1,8 @@
-import {
-  QorusRequest,
-  TQoreAppActionFunctionContext,
-  TQoreAppWithActions,
-  TQoreMappedOptions,
-} from '@qoretechnologies/ts-toolkit';
+import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
-import {
-  MAGENTO_ACTIONS,
-  MAGENTO_APP_LOGO,
-  MAGENTO_APP_NAME,
-  MAGENTO_CONN_OPTIONS,
-} from './constants';
+import { MAGENTO_ACTIONS, MAGENTO_APP_LOGO, MAGENTO_APP_NAME } from './constants';
 import * as MAGENTO_TRIGGERS from './triggers';
 
 export default (locale: Locales) =>
@@ -50,56 +40,16 @@ export default (locale: Locales) =>
       },
     },
     rest: {
-      url: '',
       data: 'json',
       oauth2_grant_type: 'none',
       ping_method: 'GET',
-      ping_path: '/V1/store/storeConfigs',
+      ping_path: '/rest/V1/store/storeConfigs',
+      custom_token_auth: 'body-user-pass',
+      custom_token_location: 'body-direct',
+      custom_token_method: 'POST',
+      custom_token_path: '/rest/V1/integration/admin/token',
     },
     rest_modifiers: {
-      options: MAGENTO_CONN_OPTIONS,
-      required_options: 'url,username,password',
-      url_template_options: ['url'],
-      set_options_post_auth: async (
-        context: Omit<TQoreAppActionFunctionContext<typeof MAGENTO_CONN_OPTIONS>, 'opts'>
-      ): Promise<TQoreMappedOptions<typeof MAGENTO_CONN_OPTIONS>> => {
-        const instanceUrl = context.conn_opts?.url;
-        const username = context.conn_opts?.username;
-        const password = context.conn_opts?.password;
-
-        const missingValues: string[] = [];
-
-        if (!instanceUrl) missingValues.push('url');
-        if (!username) missingValues.push('username');
-        if (!password) missingValues.push('password');
-
-        if (missingValues.length) {
-          throw new Error(`All of the following values are required: ${missingValues.join(', ')}`);
-        }
-
-        const response = await QorusRequest.post<{ data: string }>(
-          {
-            path: '/rest/V1/integration/admin/token',
-            data: {
-              username: username!,
-              password: password!,
-            },
-          },
-          { url: instanceUrl!, endpointId: 'magento' }
-        );
-
-        if (!response?.data) {
-          throw new Error('Failed to get token from Magento');
-        }
-
-        const token = response.data;
-
-        return {
-          token,
-          url: `${instanceUrl!}/rest`,
-          username: username!,
-          password: password!,
-        } as any;
-      },
+      required_options: 'username,password',
     },
   }) satisfies TQoreAppWithActions;

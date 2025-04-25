@@ -1,5 +1,4 @@
-import { TAllowedPaths } from '@qoretechnologies/ts-toolkit';
-import { MAGENTO_CONN_OPTIONS } from '../constants';
+import { TAllowedPaths, TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
 import { getMagentoSearchCriteriaOptions } from './constants';
 import { getMagentoTransactionFieldsAllowedValues } from '../helpers/get-object-fields-allowed-values';
 
@@ -9,4 +8,4 @@ export const MAGENTO_TRANSACTIONS_ALLOWED_PATHS = {
       override_options: getMagentoSearchCriteriaOptions(getMagentoTransactionFieldsAllowedValues),
     },
   },
-} satisfies TAllowedPaths<typeof MAGENTO_CONN_OPTIONS>;
+} satisfies TAllowedPaths<TCustomConnOptions>;

@@ -26,7 +26,7 @@ type TMagentoCustomerData = {
 const getMapMagentoCustomerFunction = (valueField: 'id' | 'email') => {
   return (customer: TMagentoCustomerData): IQoreAllowedValue<string> => ({
     display_name: `${customer.firstname} ${customer.lastname} (${customer.email})`,
-    value: customer[valueField],
+    value: customer[valueField].toString(),
     desc:
       `Customer ID: ${customer.id}\n\n` +
       `Email: ${customer.email}\n\n` +
@@ -38,7 +38,7 @@ const getMapMagentoCustomerFunction = (valueField: 'id' | 'email') => {
 
 export const createMagentoCustomerAllowedValues = (
   field: 'id' | 'email'
-): TQoreGetAllowedValuesFunction<TCustomConnOptions> => {
+): TQoreGetAllowedValuesFunction<TCustomConnOptions, string> => {
   return async (context): Promise<IQoreAllowedValue<string>[]> => {
     const token = context?.conn_opts?.token;
     const url = context?.conn_opts?.url;
