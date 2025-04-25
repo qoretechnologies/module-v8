@@ -48,6 +48,7 @@ export default (locale: Locales) =>
       custom_token_location: 'body-direct',
       custom_token_method: 'POST',
       custom_token_path: '/rest/V1/integration/admin/token',
+      oauth2_token_expiry_hint: 60,
     },
     rest_modifiers: {
       required_options: 'username,password',
