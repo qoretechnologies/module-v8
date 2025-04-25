@@ -562,8 +562,14 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         if (!prov) {
             on_error rethrow $1.err, sprintf("Error setting data provider from app %y action %y: %s (Swagger "
                 "path: %y)", app, action, $1.desc, swagger_path);
-            prov = TypeScriptActionInterface::getSwaggerDataProvider(app, swagger_schema)
+
+            AbstractDataProvider p = TypeScriptActionInterface::getSwaggerDataProvider(app, swagger_schema)
                 .getChildProviderPath(swagger_path);
+            if (!(p instanceof SwaggerRequestDataProvider)) {
+                throw "ACTION-ERROR", sprintf("App %y action %y: Swagger path %y is not an API endpoint (%s -> %y)", app,
+                    action, swagger_path, p.className(), p.getChildProviderNames());
+            }
+            prov = cast<SwaggerRequestDataProvider>(p);
         }
         return prov;
     }
