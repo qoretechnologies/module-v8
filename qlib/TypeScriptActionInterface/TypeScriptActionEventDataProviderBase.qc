@@ -82,6 +82,7 @@ public class TypeScriptActionEventDataProviderBase inherits TypeScriptActionData
         hash<DataProviderMessageInfo> event_info = self.event_info;
         if (dmap && req && req.typeCode() == NT_HASH) {
             event_info.type = getDynamicDataType(PC_GET_EVENT_TYPE, event_info.type, req);
+            TypeScriptActionInterface::resolveDynamicType(self, req, event_info.type);
         }
         return event_info;
     }

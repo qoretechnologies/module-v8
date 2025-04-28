@@ -2524,6 +2524,43 @@ public class TypeScriptActionInterface {
         }
     }
 
+    static resolveDynamicType(TypeScriptActionDataProviderBase prov, auto req, HashDataType type) {
+        # find allowed values
+        foreach TypeScriptDataField f in (type.getFields().iterator()) {
+            *hash<auto> attr = f.getAttributes();
+            if (attr.ref_data) {
+                f.setAllowedValues(prov.getReferenceData(attr.ref_data, req), f.getAllowedValuesCreatable());
+                f.replaceAttributes(attr - "ref_data");
+            }
+            if (attr.element_ref_data) {
+                f.setElementAllowedValues(prov.getReferenceData(attr.ref_data, req),
+                    f.getElementAllowedValuesCreatable());
+                f.replaceAttributes(attr - "element_ref_data");
+            }
+            if (attr.default_ref_data) {
+                hash<AsyncCallInfo> call = TypeScriptActionInterface::getCall(attr.get_default_value);
+                try {
+                    auto v = prov.getAsyncValue(call, prov.getCallContextInfo(req));
+                    f.setDefaultValue(v);
+                } catch (hash<ExceptionInfo> ex) {
+                    TSAI::error("Failed to retrieve default value for field %y: %y: %s", f.getName(), call.label,
+                        get_exception_string(ex));
+                }
+                f.replaceAttributes(attr - "default_ref_data");
+            }
+            AbstractDataProviderType t = f.getType();
+            if (t instanceof HashDataType) {
+                resolveDynamicType(prov, req, cast<HashDataType>(t));
+            }
+            if (t instanceof ListDataType) {
+                ListDataType ldt = cast<ListDataType>(t);
+                if (ldt.getElementType() instanceof HashDataType) {
+                    resolveDynamicType(prov, req, cast<HashDataType>(ldt.getElementType()));
+                }
+            }
+        }
+    }
+
     static private overrideTypes(string app, SwaggerSchema schema, hash<auto> swagger_type_overrides) {
         foreach hash<auto> i in (swagger_type_overrides.pairIterator()) {
             list<string> l = i.key.split(".");
