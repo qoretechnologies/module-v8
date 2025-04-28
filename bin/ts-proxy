@@ -362,7 +362,10 @@ class TsProxy inherits TypeScriptProxy {
         if (conn_name.val()) {
             prov.setConnection(getRestConnection(app, conn_name, conn_opts));
         }
-        *HashDataType type = prov.getRequestTypeWithData(req);
+        *AbstractDataProviderType type = prov.getRequestTypeWithData(req);
+        if (type && (type instanceof HashDataType)) {
+            resolveDynamicType(prov, req, type);
+        }
         string yaml = makeSend(CC_OK, {
             "rv": type ? type.serialize() : NOTHING,
         });
@@ -379,20 +382,60 @@ class TsProxy inherits TypeScriptProxy {
         if (conn_name.val()) {
             prov.setConnection(getRestConnection(app, conn_name, conn_opts));
         }
-        *HashDataType type = prov.getResponseTypeWithData(req);
+        *AbstractDataProviderType type = prov.getResponseTypeWithData(req);
+        if (type && (type instanceof HashDataType)) {
+            resolveDynamicType(prov, req, type);
+        }
         string yaml = makeSend(CC_OK, {
             "rv": type ? type.serialize() : NOTHING,
         });
         sendString(yaml);
     }
 
-    TypeScriptAppRestConnection getRestConnection(string app, string conn_name, *hash<auto> conn_opts) {
+    private TypeScriptAppRestConnection getRestConnection(string app, string conn_name, *hash<auto> conn_opts) {
         return new TypeScriptAppRestConnection({
             "name": conn_name,
             "app": app,
             "url": "tsrest-" + app.lwr() + "://x",
             "opts": conn_opts,
         });
+    }
+
+    private resolveDynamicType(TypeScriptActionApiDataProvider prov, auto req, HashDataType type) {
+        # find allowed values
+        foreach TypeScriptDataField f in (type.getFields().iterator()) {
+            *hash<auto> attr = f.getAttributes();
+            if (attr.ref_data) {
+                f.setAllowedValues(prov.getReferenceData(attr.ref_data, req), f.getAllowedValuesCreatable());
+                f.replaceAttributes(attr - "ref_data");
+            }
+            if (attr.element_ref_data) {
+                f.setElementAllowedValues(prov.getReferenceData(attr.ref_data, req),
+                    f.getElementAllowedValuesCreatable());
+                f.replaceAttributes(attr - "element_ref_data");
+            }
+            if (attr.default_ref_data) {
+                hash<AsyncCallInfo> call = TypeScriptActionInterface::getCall(attr.get_default_value);
+                try {
+                    auto v = prov.getAsyncValue(call, prov.getCallContextInfo(req));
+                    f.setDefaultValue(v);
+                } catch (hash<ExceptionInfo> ex) {
+                    error("Failed to retrieve default value for field %y: %y: %s", f.getName(), call.label,
+                        get_exception_string(ex));
+                }
+                f.replaceAttributes(attr - "default_ref_data");
+            }
+            AbstractDataProviderType t = f.getType();
+            if (t instanceof HashDataType) {
+                resolveDynamicType(prov, req, cast<HashDataType>(t));
+            }
+            if (t instanceof ListDataType) {
+                ListDataType ldt = cast<ListDataType>(t);
+                if (ldt.getElementType() instanceof HashDataType) {
+                    resolveDynamicType(prov, req, cast<HashDataType>(ldt.getElementType()));
+                }
+            }
+        }
     }
 
     private *bool retry(hash<ExceptionInfo> ex) {
