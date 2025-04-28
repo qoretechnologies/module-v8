@@ -33,6 +33,7 @@ import { Debugger, DebugLevels } from '../utils/Debugger';
 import shopify from '../apps/shopify';
 import mailchimp from '../apps/mailchimp';
 import dynamics from '../apps/dynamics';
+import xero from '../apps/xero';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -64,6 +65,7 @@ const NEW_APPS = {
   magento,
   shopify,
   mailchimp,
+  xero,
 } as const;
 
 const EXISTING_APPS = {
