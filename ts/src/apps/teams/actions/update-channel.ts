@@ -19,6 +19,7 @@ const options = {
   channelId: {
     type: 'string',
     depends_on: ['teamId'],
+    on_change: ['refetch'],
     get_allowed_values: getTeamsChannelIdAllowedValues,
     get_dependent_options: getTeamsChannelIdDependentOptions,
     required: true,

@@ -60,6 +60,7 @@ const options = {
     type: 'string',
     required: true,
     get_dependent_options: getDependentOptions,
+    on_change: ['refetch'],
     allowed_values: [
       {
         display_name: 'Campaign',
