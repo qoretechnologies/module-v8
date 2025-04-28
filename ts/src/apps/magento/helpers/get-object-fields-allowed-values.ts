@@ -1,10 +1,9 @@
-import { TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
-import { MAGENTO_CONN_OPTIONS } from '../constants';
+import { TCustomConnOptions, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 import { fetchMagentoObjectFieldsAllowedValues } from './constants';
 
 const createGetMagentoOrderFieldsAllowedValuesFunction = (
   path: string
-): TQoreGetAllowedValuesFunction<typeof MAGENTO_CONN_OPTIONS, string> => {
+): TQoreGetAllowedValuesFunction<TCustomConnOptions, string> => {
   return async (context) => {
     const token = context?.conn_opts?.token;
     const url = context?.conn_opts?.url;

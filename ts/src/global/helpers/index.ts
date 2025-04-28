@@ -16,6 +16,7 @@ import {
   TCustomConnOptions,
   THttpMethod,
   TQoreAppActionOption,
+  TQoreAppActionOverrideOption,
   TQoreAppActionWithEventOrWebhookEventInfo,
   TQoreAppActionWithWebhook,
   TQoreAppEventAction,
@@ -62,6 +63,7 @@ type TBuildActionsFromSwaggerSchemaParams = {
   actionNameModifier?: string;
   globalRequestDataConverter?: TQoreRequestDataConverterFunction<TCustomConnOptions, any>;
   globalResponseDataConverter?: TQoreResponseDataConverterFunction<TCustomConnOptions, any>;
+  globalOptionsOverride?: Record<string, TQoreAppActionOverrideOption<TCustomConnOptions>>;
 };
 
 // !IMPORTANT
@@ -83,6 +85,7 @@ export const buildActionsFromSwaggerSchema = ({
   actionNameModifier = '',
   globalRequestDataConverter,
   globalResponseDataConverter,
+  globalOptionsOverride,
 }: TBuildActionsFromSwaggerSchemaParams): IQorePartialAppActionWithSwaggerPath[] => {
   // Return empty actions if schema or allowedPaths is missing
   if (!schema || (allowedPaths && Object.keys(allowedPaths).length === 0)) {
@@ -157,6 +160,14 @@ export const buildActionsFromSwaggerSchema = ({
           getPropertyOfSchemaData(dataWithoutParameters, 'description', ''),
         ...(schemaPath && { swagger_schema: schemaPath }),
         ...actionData,
+        ...(globalOptionsOverride
+          ? {
+              override_options: {
+                ...globalOptionsOverride,
+                ...actionData.override_options,
+              },
+            }
+          : {}),
         ...(globalRequestDataConverter
           ? {
               request_data_converter: (request, ctx) => {

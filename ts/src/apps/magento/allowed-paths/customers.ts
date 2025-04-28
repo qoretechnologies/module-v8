@@ -1,5 +1,4 @@
-import { TAllowedPaths } from '@qoretechnologies/ts-toolkit';
-import { MAGENTO_CONN_OPTIONS } from '../constants';
+import { TAllowedPaths, TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
 import { getMagentoCustomerIdAllowedValues } from '../helpers/get-customer-id-allowed-values';
 import { getMagentoCustomerFieldsAllowedValues } from '../helpers/get-object-fields-allowed-values';
 import { getMagentoSearchCriteriaOptions } from './constants';
@@ -32,6 +31,7 @@ export const MAGENTO_CUSTOMERS_ALLOWED_PATHS = {
     GET: {
       override_options: {
         customerId: {
+          type: 'softstring',
           get_allowed_values: getMagentoCustomerIdAllowedValues,
         },
       },
@@ -39,6 +39,7 @@ export const MAGENTO_CUSTOMERS_ALLOWED_PATHS = {
     PUT: {
       override_options: {
         customerId: {
+          type: 'softstring',
           get_allowed_values: getMagentoCustomerIdAllowedValues,
         },
         'customer.email': {
@@ -58,9 +59,10 @@ export const MAGENTO_CUSTOMERS_ALLOWED_PATHS = {
     DELETE: {
       override_options: {
         customerId: {
+          type: 'softstring',
           get_allowed_values: getMagentoCustomerIdAllowedValues,
         },
       },
     },
   },
-} satisfies TAllowedPaths<typeof MAGENTO_CONN_OPTIONS>;
+} satisfies TAllowedPaths<TCustomConnOptions>;

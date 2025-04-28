@@ -9,7 +9,6 @@ type TMagentoShipmentData = {
   entity_id: string;
   increment_id: string;
   order_id: string;
-  order_increment_id: string;
   customer_id: string;
   created_at: string;
   total_qty: number;
@@ -26,8 +25,8 @@ type TMagentoShipmentData = {
 };
 
 const mapMagentoShipment = (shipment: TMagentoShipmentData): IQoreAllowedValue<string> => ({
-  display_name: `Shipment #${shipment.increment_id} - Order #${shipment.order_increment_id}`,
-  value: shipment.entity_id,
+  display_name: `Shipment #${shipment.increment_id}`,
+  value: shipment.entity_id.toString(),
   desc:
     `Created: ${shipment.created_at}\n\n` +
     `Total Quantity: ${shipment.total_qty}\n\n` +

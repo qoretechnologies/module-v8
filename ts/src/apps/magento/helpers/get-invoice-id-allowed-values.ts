@@ -9,7 +9,6 @@ type TMagentoInvoiceData = {
   entity_id: string;
   increment_id: string;
   order_id: string;
-  order_increment_id: string;
   created_at: string;
   grand_total: number;
   state: string;
@@ -20,8 +19,8 @@ type TMagentoInvoiceData = {
 };
 
 const mapMagentoInvoice = (invoice: TMagentoInvoiceData): IQoreAllowedValue<string> => ({
-  display_name: `Invoice #${invoice.increment_id} - Order #${invoice.order_increment_id}`,
-  value: invoice.entity_id,
+  display_name: `Invoice #${invoice.increment_id}`,
+  value: invoice.entity_id.toString(),
   desc:
     `Created: ${invoice.created_at}\n\n` +
     `State: ${invoice.state}\n\n` +
