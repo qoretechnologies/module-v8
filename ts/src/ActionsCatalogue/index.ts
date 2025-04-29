@@ -34,6 +34,7 @@ import shopify from '../apps/shopify';
 import mailchimp from '../apps/mailchimp';
 import dynamics from '../apps/dynamics';
 import xero from '../apps/xero';
+import intercom from '../apps/intercom';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -66,6 +67,7 @@ const NEW_APPS = {
   shopify,
   mailchimp,
   xero,
+  intercom,
 } as const;
 
 const EXISTING_APPS = {

@@ -1,12 +1,12 @@
 import {
+  IQoreAllowedValue,
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
-  IQoreAllowedValue,
 } from '@qoretechnologies/ts-toolkit';
+import { capitalize } from 'lodash';
 import { MailchimpError } from '../constants';
 import { fetchMailchimpData } from './constants';
 
-// Types for Mailchimp automation data
 type TMailchimpAutomation = {
   id: string;
   create_time: string;
@@ -91,27 +91,12 @@ export const getMailchimpAutomationAllowedValues: TQoreGetAllowedValuesFunction<
       },
     });
 
-    const formatStatus = (status: string): string => {
-      switch (status) {
-        case 'sending':
-          return 'Sending';
-        case 'paused':
-          return 'Paused';
-        case 'stopped':
-          return 'Stopped';
-        case 'draft':
-          return 'Draft';
-        default:
-          return status.charAt(0).toUpperCase() + status.slice(1);
-      }
-    };
-
     const allowedValues: IQoreAllowedValue<string>[] = (data.automations || []).map(
       (automation) => ({
         display_name: automation.settings.title,
         value: automation.id,
         desc:
-          `Status: ${formatStatus(automation.status)}\n` +
+          `Status: ${capitalize(automation.status)}\n` +
           `List: ${automation.recipients.list_name}\n` +
           `Created: ${new Date(automation.create_time).toLocaleString()}\n` +
           `Emails Sent: ${automation.emails_sent || 0}\n` +
@@ -190,7 +175,6 @@ export const getMailchimpAutomationEmailAllowedValues: TQoreGetAllowedValuesFunc
       }
     };
 
-    // Map automation emails to allowed values
     const allowedValues: IQoreAllowedValue<string>[] = (data.emails || []).map((email) => ({
       display_name: email.settings.title || email.settings.subject_line,
       value: email.id,

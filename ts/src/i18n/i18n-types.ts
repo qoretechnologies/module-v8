@@ -170,17 +170,313 @@ type RootTranslation = {
 				}
 			}
 		}
+		Intercom: {
+			/**
+			 * I​n​t​e​r​c​o​m
+			 */
+			displayName: string
+			/**
+			 * I​n​t​e​r​a​c​t​ ​w​i​t​h​ ​I​n​t​e​r​c​o​m​ ​c​u​s​t​o​m​e​r​ ​m​e​s​s​a​g​i​n​g​ ​p​l​a​t​f​o​r​m
+			 */
+			shortDesc: string
+			/**
+			 * C​o​n​n​e​c​t​ ​w​i​t​h​ ​I​n​t​e​r​c​o​m​ ​t​o​ ​m​a​n​a​g​e​ ​c​o​n​t​a​c​t​s​,​ ​c​o​m​p​a​n​i​e​s​,​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​,​ ​a​n​d​ ​e​v​e​n​t​s​.​ ​T​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​b​o​t​h​ ​p​e​r​f​o​r​m​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​r​e​s​p​o​n​d​ ​t​o​ ​e​v​e​n​t​s​ ​i​n​ ​y​o​u​r​ ​I​n​t​e​r​c​o​m​ ​w​o​r​k​s​p​a​c​e​,​ ​e​n​a​b​l​i​n​g​ ​y​o​u​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​c​u​s​t​o​m​e​r​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​s​ ​a​n​d​ ​d​a​t​a​ ​m​a​n​a​g​e​m​e​n​t​ ​w​o​r​k​f​l​o​w​s​.
+			 */
+			longDesc: string
+			triggers: {
+				'new-contact': {
+					/**
+					 * N​e​w​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​I​n​t​e​r​c​o​m
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​y​o​u​r​ ​I​n​t​e​r​c​o​m​ ​a​c​c​o​u​n​t​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​r​o​l​e​ ​(​u​s​e​r​,​ ​l​e​a​d​,​ ​o​r​ ​b​o​t​h​)​.
+					 */
+					longDesc: string
+					options: {
+						role: {
+							/**
+							 * C​o​n​t​a​c​t​ ​R​o​l​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​n​t​a​c​t​s​ ​b​y​ ​r​o​l​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​u​s​e​r​s​,​ ​l​e​a​d​s​,​ ​o​r​ ​b​o​t​h​ ​t​y​p​e​s​ ​o​f​ ​c​o​n​t​a​c​t​s​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​"​c​o​n​t​a​c​t​"​ ​(​b​o​t​h​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'new-conversation': {
+					/**
+					 * N​e​w​ ​C​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​I​n​t​e​r​c​o​m
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​y​o​u​r​ ​I​n​t​e​r​c​o​m​ ​a​c​c​o​u​n​t​.​ ​I​t​ ​m​o​n​i​t​o​r​s​ ​f​o​r​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​c​r​e​a​t​i​o​n​ ​e​v​e​n​t​s​ ​a​n​d​ ​p​r​o​v​i​d​e​s​ ​a​l​l​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​d​e​t​a​i​l​s​.
+					 */
+					longDesc: string
+				}
+			}
+			actions: {
+				searchConversations: {
+					options: {
+						query: {
+							/**
+							 * S​e​a​r​c​h​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * Q​u​e​r​y​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​c​o​n​v​e​r​s​a​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * Q​u​e​r​y​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​c​o​n​v​e​r​s​a​t​i​o​n​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h​ ​i​n
+										 */
+										shortDesc: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h​ ​i​n
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * O​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​e​ ​s​e​a​r​c​h
+										 */
+										shortDesc: string
+										/**
+										 * O​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​e​ ​s​e​a​r​c​h
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * V​a​l​u​e​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r
+										 */
+										shortDesc: string
+										/**
+										 * V​a​l​u​e​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				SearchContacts: {
+					options: {
+						query: {
+							/**
+							 * S​e​a​r​c​h​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * Q​u​e​r​y​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​c​o​n​t​a​c​t​s
+							 */
+							shortDesc: string
+							/**
+							 * Q​u​e​r​y​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​c​o​n​t​a​c​t​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h​ ​i​n
+										 */
+										shortDesc: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h​ ​i​n
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * O​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​e​ ​s​e​a​r​c​h
+										 */
+										shortDesc: string
+										/**
+										 * O​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​e​ ​s​e​a​r​c​h
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * V​a​l​u​e​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r
+										 */
+										shortDesc: string
+										/**
+										 * V​a​l​u​e​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				createMessage: {
+					options: {
+						from: {
+							/**
+							 * S​e​n​d​e​r
+							 */
+							displayName: string
+							/**
+							 * S​e​n​d​e​r​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​n​d​e​r​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							longDesc: string
+						}
+						to: {
+							/**
+							 * R​e​c​i​p​i​e​n​t
+							 */
+							displayName: string
+							/**
+							 * R​e​c​i​p​i​e​n​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * R​e​c​i​p​i​e​n​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				createNote: {
+					/**
+					 * A​d​d​ ​N​o​t​e​ ​t​o​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					options: {
+						id: {
+							/**
+							 * C​o​n​t​a​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​a​d​d​ ​a​ ​n​o​t​e​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​a​d​d​ ​a​ ​n​o​t​e​ ​t​o
+							 */
+							longDesc: string
+						}
+						body: {
+							/**
+							 * N​o​t​e​ ​B​o​d​y
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​n​o​t​e​ ​t​o​ ​a​d​d
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​n​o​t​e​ ​t​o​ ​a​d​d
+							 */
+							longDesc: string
+						}
+					}
+				}
+				createConversation: {
+					/**
+					 * C​r​e​a​t​e​ ​C​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					displayName: string
+				}
+				lisDataEvents: {
+					options: {
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​f​i​e​l​d​ ​f​o​r​ ​t​h​e​ ​d​a​t​a​ ​e​v​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​f​i​e​l​d​ ​f​o​r​ ​t​h​e​ ​d​a​t​a​ ​e​v​e​n​t
+							 */
+							longDesc: string
+						}
+						value: {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​f​o​r​ ​t​h​e​ ​f​i​l​t​e​r​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * V​a​l​u​e​ ​f​o​r​ ​t​h​e​ ​f​i​l​t​e​r​ ​f​i​e​l​d
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Xero: {
 			/**
 			 * X​e​r​o
 			 */
 			displayName: string
 			/**
-			 * C​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​t​h​e​ ​X​e​r​o​ ​A​P​I
+			 * S​e​a​m​l​e​s​s​l​y​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​X​e​r​o​'​s​ ​A​P​I
 			 */
 			shortDesc: string
 			/**
-			 * C​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​t​h​e​ ​X​e​r​o​ ​A​P​I
+			 * C​o​n​n​e​c​t​,​ ​m​a​n​a​g​e​,​ ​a​n​d​ ​a​u​t​o​m​a​t​e​ ​t​a​s​k​s​ ​v​i​a​ ​t​h​e​ ​X​e​r​o​ ​A​P​I
 			 */
 			longDesc: string
 			triggers: {
@@ -21925,17 +22221,313 @@ export type TranslationFunctions = {
 				}
 			}
 		}
+		Intercom: {
+			/**
+			 * Intercom
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Interact with Intercom customer messaging platform
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Connect with Intercom to manage contacts, companies, conversations, and events. This integration allows you to both perform actions and respond to events in your Intercom workspace, enabling you to automate customer communications and data management workflows.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				'new-contact': {
+					/**
+					 * New Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new contact is created in Intercom
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a new contact is created in your Intercom account. You can filter by role (user, lead, or both).
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						role: {
+							/**
+							 * Contact Role
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter contacts by role
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose whether to trigger for users, leads, or both types of contacts. Default is "contact" (both).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'new-conversation': {
+					/**
+					 * New Conversation
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new conversation is created in Intercom
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a new conversation is created in your Intercom account. It monitors for conversation creation events and provides all conversation details.
+					 */
+					longDesc: () => LocalizedString
+				}
+			}
+			actions: {
+				searchConversations: {
+					options: {
+						query: {
+							/**
+							 * Search Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Query to search for conversations
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Query to search for conversations
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to search in
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Field to search in
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Operator to use for the search
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Operator to use for the search
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Value to search for
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Value to search for
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				SearchContacts: {
+					options: {
+						query: {
+							/**
+							 * Search Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Query to search for contacts
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Query to search for contacts
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to search in
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Field to search in
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Operator to use for the search
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Operator to use for the search
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Value to search for
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Value to search for
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				createMessage: {
+					options: {
+						from: {
+							/**
+							 * Sender
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sender of the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Sender of the message
+							 */
+							longDesc: () => LocalizedString
+						}
+						to: {
+							/**
+							 * Recipient
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Recipient of the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Recipient of the message
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				createNote: {
+					/**
+					 * Add Note to Contact
+					 */
+					displayName: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Contact ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of the contact to add a note to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * ID of the contact to add a note to
+							 */
+							longDesc: () => LocalizedString
+						}
+						body: {
+							/**
+							 * Note Body
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Content of the note to add
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Content of the note to add
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				createConversation: {
+					/**
+					 * Create Conversation
+					 */
+					displayName: () => LocalizedString
+				}
+				lisDataEvents: {
+					options: {
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter field for the data event
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter field for the data event
+							 */
+							longDesc: () => LocalizedString
+						}
+						value: {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value for the filter field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Value for the filter field
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
 		Xero: {
 			/**
 			 * Xero
 			 */
 			displayName: () => LocalizedString
 			/**
-			 * Collection of actions to interact with the Xero API
+			 * Seamlessly interact with Xero's API
 			 */
 			shortDesc: () => LocalizedString
 			/**
-			 * Collection of actions to interact with the Xero API
+			 * Connect, manage, and automate tasks via the Xero API
 			 */
 			longDesc: () => LocalizedString
 			triggers: {
