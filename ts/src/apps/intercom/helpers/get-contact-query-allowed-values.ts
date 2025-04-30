@@ -37,7 +37,7 @@ export const intercomContactQueryFieldAllowedValues = [
   { display_name: 'Android App Version', value: 'android_app_version' },
   { display_name: 'Android Device', value: 'android_device' },
   { display_name: 'Android App Name', value: 'android_app_name' },
-  { display_name: 'Android SDK Version', value: 'andoid_sdk_version' },
+  { display_name: 'Android SDK Version', value: 'android_sdk_version' },
   { display_name: 'Segment ID', value: 'segment_id' },
   { display_name: 'Tag ID', value: 'tag_id' },
 ];
