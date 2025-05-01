@@ -52,6 +52,7 @@ env:
   SHOPIFY_SHOP: ${{ secrets.SHOPIFY_SHOP }}
   MAILCHIMP_TOKEN: ${{ secrets.MAILCHIMP_TOKEN }}
   MAILCHIMP_DATACENTER: ${{ secrets.MAILCHIMP_DATACENTER }}  
+  INTERCOM_TOKEN: ${{ secrets.INTERCOM_TOKEN }}
 
 jobs:
   PullRequestTests:
