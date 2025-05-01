@@ -139,7 +139,6 @@ const mailchimpEmailOpenedTrigger = QoreAppCreator.createLocalizedTrigger<
     const workflowId = context?.opts?.workflow_id;
     const automationEmail = context?.opts?.automation_email;
 
-    // Create a mock example response that matches the expected event data structure
     const exampleData = {
       campaign_id: campaignId || 'example-campaign-id',
       email_id: automationEmail || 'example-email-id',
