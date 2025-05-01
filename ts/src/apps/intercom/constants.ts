@@ -20,7 +20,7 @@ import {
   getIntercomUserExternalIdAllowedValues,
   getIntercomUserIdAllowedValues,
 } from './helpers/get-lead-id-allowed-values';
-import { getIntercomSectionIdAllowedValues } from './helpers/get-secion-id-allowed-values';
+import { getIntercomSectionIdAllowedValues } from './helpers/get-section-id-allowed-values';
 import { getIntercomTagIdAllowedValues } from './helpers/get-tag-id-allowed-values';
 
 export const INTERCOM_APP_NAME = 'Intercom';
