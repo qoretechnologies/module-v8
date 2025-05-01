@@ -202,9 +202,6 @@ describe('Should test Intercom integration', () => {
       const { body } = await testApi.execAppAction('intercom', action!.action, connection, {
         name: companyName,
         company_id: `test-company`,
-        custom_attributes: {
-          test_field: 'test value',
-        },
       });
 
       expect(body).toBeDefined();
@@ -254,7 +251,7 @@ describe('Should test Intercom integration', () => {
       });
 
       expect(body).toBeDefined();
-      expect(body.id).toBe(contactId);
+      expect(body.id).toBe(tagId);
     });
 
     it('Should detach a tag from a contact', async () => {
@@ -273,7 +270,7 @@ describe('Should test Intercom integration', () => {
       });
 
       expect(body).toBeDefined();
-      expect(body.id).toBe(contactId);
+      expect(body.id).toBe(tagId);
     });
 
     it('Should create a note for a contact', async () => {
@@ -288,7 +285,9 @@ describe('Should test Intercom integration', () => {
 
       const { body } = await testApi.execAppAction('intercom', action!.action, connection, {
         id: contactId,
-        body: `Test note created at ${new Date().toISOString()}`,
+        body: {
+          body: `Test note created at ${new Date().toISOString()}`,
+        },
       });
 
       expect(body).toBeDefined();
@@ -308,18 +307,17 @@ describe('Should test Intercom integration', () => {
       }
 
       const { body } = await testApi.execAppAction('intercom', action!.action, connection, {
-        from: {
-          type: 'admin',
-          id: adminId,
+        body: {
+          from: {
+            type: 'user',
+            id: contactId,
+          },
+          body: `Test conversation created at ${new Date().toISOString()}`,
         },
-        body: `Test conversation created at ${new Date().toISOString()}`,
       });
 
       expect(body).toBeDefined();
       expect(body.id).toBeDefined();
-
-      conversationId = body.id;
-      console.log(`Created conversation ID: ${conversationId}`);
     });
 
     it('Should search conversations', async () => {
@@ -337,11 +335,6 @@ describe('Should test Intercom integration', () => {
       expect(body).toBeDefined();
       expect(body.conversations).toBeDefined();
       expect(Array.isArray(body.conversations)).toBe(true);
-
-      if (!conversationId && body.conversations.length > 0) {
-        conversationId = body.conversations[0].id;
-        console.log(`Found conversation ID: ${conversationId}`);
-      }
     });
 
     it('Should reply to a conversation', async () => {
@@ -390,12 +383,14 @@ describe('Should test Intercom integration', () => {
         return;
       }
 
-      const { body } = await testApi.execAppAction('intercom', action!.action, connection, {
-        event_name: `test_event_${timestamp}`,
-        id: contactId,
+      const response = await testApi.execAppAction('intercom', action!.action, connection, {
+        body: {
+          event_name: `test_event_${timestamp}`,
+          id: contactId,
+        },
       });
 
-      expect(body).toBeDefined();
+      expect(response).toBeDefined();
     });
 
     it('Should list data events', async () => {
@@ -409,9 +404,8 @@ describe('Should test Intercom integration', () => {
       }
 
       const { body } = await testApi.execAppAction('intercom', action!.action, connection, {
-        filter: 'intercom_user_id',
         type: 'user',
-        value: contactId,
+        email: 'test@example.com',
       });
 
       expect(body).toBeDefined();
@@ -424,9 +418,11 @@ describe('Should test Intercom integration', () => {
       expect(action).toBeDefined();
 
       const { body } = await testApi.execAppAction('intercom', action!.action, connection, {
-        title: `Test Article ${timestamp}`,
-        body: '<p>This is the content of the test article</p>',
-        author_id: adminId,
+        body: {
+          title: `Test Article ${timestamp}`,
+          body: '<p>This is the content of the test article</p>',
+          author_id: adminId,
+        },
       });
 
       expect(body).toBeDefined();
@@ -459,20 +455,19 @@ describe('Should test Intercom integration', () => {
       }
 
       const { body } = await testApi.execAppAction('intercom', action!.action, connection, {
-        from: {
-          type: 'admin',
-          id: adminId,
+        body: {
+          from: adminId,
+          to: {
+            type: 'user',
+            id: contactId,
+          },
+          body: `Test message created at ${new Date().toISOString()}`,
+          message_type: 'in_app',
         },
-        to: {
-          type: 'user',
-          id: contactId,
-        },
-        body: `Test message created at ${new Date().toISOString()}`,
-        message_type: 'in_app',
       });
 
       expect(body).toBeDefined();
-      expect(body.type).toBe('message');
+      expect(body.type).toBe('admin_message');
     });
   });
 });

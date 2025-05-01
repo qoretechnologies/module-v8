@@ -38,18 +38,6 @@ export class IntercomError extends Error {
 export const INTERCOM_ALLOWED_PATHS = {
   '/events': {
     GET: {
-      request_data_converter: (req) => {
-        const { query, ...rest } = req;
-        const { filter, value, ...restQuery } = query;
-
-        return {
-          ...rest,
-          query: {
-            ...restQuery,
-            [filter]: value,
-          },
-        };
-      },
       override_options: {
         type: {
           required: true,
@@ -61,42 +49,20 @@ export const INTERCOM_ALLOWED_PATHS = {
             },
           ],
         },
-        filter: {
+        user_id: {
+          required_groups: ['event-filter'],
+          get_allowed_values: getIntercomUserExternalIdAllowedValues,
           type: 'string',
-          preselected: true,
-          default_value: 'user_id',
-          on_change: ['refetch'],
-          allowed_values: [
-            {
-              display_name: 'User ID',
-              value: 'user_id',
-            },
-            {
-              display_name: 'Email',
-              value: 'email',
-            },
-            {
-              display_name: 'Intercom User ID',
-              value: 'intercom_user_id',
-            },
-          ],
         },
-        value: {
+        email: {
+          required_groups: ['event-filter'],
+          get_allowed_values: getIntercomUserEmailAllowedValues,
           type: 'string',
-          required: true,
-          depends_on: ['filter'],
-          get_allowed_values: (context) => {
-            const filter = context?.opts?.filter;
-            if (filter === 'user_id') {
-              return getIntercomUserExternalIdAllowedValues(context);
-            } else if (filter === 'email') {
-              return getIntercomUserEmailAllowedValues(context);
-            } else if (filter === 'intercom_user_id') {
-              return getIntercomUserIdAllowedValues(context);
-            }
-
-            return getIntercomUserExternalIdAllowedValues(context);
-          },
+        },
+        intercom_user_id: {
+          required_groups: ['event-filter'],
+          get_allowed_values: getIntercomUserIdAllowedValues,
+          type: 'string',
         },
       },
     },
@@ -154,20 +120,30 @@ export const INTERCOM_ALLOWED_PATHS = {
       override_options: {
         'from.type': {
           on_change: ['refetch'],
+          required: true,
+          default_value: 'lead',
+          allowed_values: [
+            {
+              display_name: 'Lead',
+              value: 'lead',
+            },
+            {
+              display_name: 'User',
+              value: 'user',
+            },
+          ],
         },
         'from.id': {
           depends_on: ['from.type'],
           get_allowed_values: (context) => {
             const fromType = context?.opts?.from?.type;
-            if (fromType === 'contact') {
-              return getIntercomContactIdAllowedValues(context);
-            } else if (fromType === 'user') {
+            if (fromType === 'user') {
               return getIntercomUserIdAllowedValues(context);
             } else if (fromType === 'lead') {
               return getIntercomLeadIdAllowedValues(context);
             }
 
-            return [];
+            return getIntercomLeadIdAllowedValues(context);
           },
         },
       },

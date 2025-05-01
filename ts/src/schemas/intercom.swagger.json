@@ -4257,6 +4257,27 @@
             "type": "string"
           },
           {
+            "description": "The email events should be associated with",
+            "in": "query",
+            "name": "email",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "The user id events should be associated with",
+            "in": "query",
+            "name": "user_id",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "The intercom_user_id events should be associated with",
+            "in": "query",
+            "name": "intercom_user_id",
+            "required": false,
+            "type": "string"
+          },
+          {
             "description": "summary flag",
             "in": "query",
             "name": "summary",
