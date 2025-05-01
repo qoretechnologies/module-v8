@@ -9,7 +9,7 @@ import {
   getIntercomLeadIdAllowedValues,
   getIntercomUserIdAllowedValues,
 } from '../apps/intercom/helpers/get-lead-id-allowed-values';
-import { getIntercomSectionIdAllowedValues } from '../apps/intercom/helpers/get-secion-id-allowed-values';
+import { getIntercomSectionIdAllowedValues } from '../apps/intercom/helpers/get-section-id-allowed-values';
 import { getIntercomTagIdAllowedValues } from '../apps/intercom/helpers/get-tag-id-allowed-values';
 import { IntercomNewConversationTrigger } from '../apps/intercom/triggers';
 import { delay } from '../global/helpers';
