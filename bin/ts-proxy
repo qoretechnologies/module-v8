@@ -162,6 +162,10 @@ class TsProxy inherits TypeScriptProxy {
                         getEventType(h.args[0], h.args[1], h.args[2], h.args[3], h.args[4]);
                         break;
 
+                    case PC_GET_DYNAMIC_OPTIONS:
+                        getDynamicOptions(h.args[0], h.args[1], h.args[2], h.args[3], h.args[4]);
+                        break;
+
                     default:
                         throw "UNKNOWN-COMMAND", sprintf("Unknown command %y", h.cmd);
                 }
@@ -348,6 +352,23 @@ class TsProxy inherits TypeScriptProxy {
         *HashDataType type = prov.getEventInfoWithData(prov.getEventId(), req).type;
         string yaml = makeSend(CC_OK, {
             "rv": type ? type.serialize() : NOTHING,
+        });
+        sendString(yaml);
+    }
+
+    private getDynamicOptions(string app, string action, *string conn_name, *hash<auto> conn_opts, auto req) {
+        info("Get dynamic options app: %y action: %y conn_opts: %y req: %y", app, action, conn_opts, req);
+        TypeScriptActionInterface::initApp(app);
+        TypeScriptActionInterface::initAppAction(app, action);
+        TypeScriptActionEventDataProviderBase prov = TypeScriptActionInterface::getAppDataProvider(app)
+            .getChildProviderEx(action);
+        DataProviderDataContextHelper dch(req);
+        if (conn_name.val()) {
+            prov.setConnection(getRestConnection(app, conn_name, conn_opts));
+        }
+        *hash<string, hash<ActionOptionInfo>> rv = prov.getActionOptionsWithData(req);
+        string yaml = makeSend(CC_OK, {
+            "rv": rv ? Serializable::serialize(rv) : NOTHING,
         });
         sendString(yaml);
     }

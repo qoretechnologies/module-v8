@@ -53,6 +53,9 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         #! type cache for dependent options; opt val key -> type
         hash<string, AbstractDataProviderType> dtcache;
 
+        #! dependent option cache; opt val key -> option info
+        hash<string, *hash<string, hash<ActionOptionInfo>>> docache;
+
         #! Data cache for retrieving allowed values
         static TypeScriptDataCache cache();
     }
@@ -435,6 +438,36 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         }
     }
 
+    #! Returns a data type for the given base type and request / option data
+    *hash<string, hash<ActionOptionInfo>> getActionOptionsWithData(hash<auto> req) {
+        *hash<auto> slice = dmap{keys req};
+        if (!slice) {
+            return;
+        }
+        # cache key (opt[|opt...]=val[|val])
+        *string ckey = getCacheKey(keys slice, req);
+        if (exists ckey && docache.hasKey(ckey)) {
+            return docache{ckey};
+        }
+
+        *hash<string, hash<ActionOptionInfo>> rv;
+        if (TSAI::checkServer()) {
+            TSAI::debug("Starting proxy for app %y action %y: plain dynamic type with args: %y", app, action, req);
+            JavaScriptProgramProxy proxy = TypeScriptActionInterface::server.get();
+            TSAI::debug("Proxy started for app %y action %y: plain dynamic type with args", app, action);
+            on_exit TypeScriptActionInterface::server.release(proxy);
+            rv = proxy.getDynamicOptions(app, action, conn.name, conn.getRealOptions(), req);
+        } else {
+            rv = getActionOptionsWithDataIntern({
+                "app": app,
+                "action": action,
+            }, slice, req);
+        }
+        return exists ckey
+            ? docache{ckey} = rv
+            : rv;
+    }
+
     #! Returns a key to the dependent type cache for the request type
     private static *string getCacheKey(list<string> skeys, hash<auto> req) {
         string ckey;
@@ -467,9 +500,9 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
 
         *HashDataType type;
         if (TSAI::checkServer()) {
-            TSAI::debug("Starting proxy for app %y action %y: request type with args: %y", app, action, req);
+            TSAI::debug("Starting proxy for app %y action %y: dynamic type with args: %y", app, action, req);
             JavaScriptProgramProxy proxy = TypeScriptActionInterface::server.get();
-            TSAI::debug("Proxy started for app %y action %y: request type with args", app, action);
+            TSAI::debug("Proxy started for app %y action %y: dynamic type with args", app, action);
             on_exit TypeScriptActionInterface::server.release(proxy);
             type = proxy.getDynamicType(cmd, app, action, conn.name, conn.getRealOptions(), req);
         } else {
@@ -504,6 +537,59 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             TypeScriptActionInterface::checkFieldDependencies(type);
         }
         return type;
+    }
+
+    private *hash<string, hash<ActionOptionInfo>> getActionOptionsWithDataIntern(hash<auto> action, hash<auto> slice,
+            hash<auto> req) {
+        *hash<DataContextInfo> cinfo = getCallContextInfo(req);
+        *hash<string, hash<ActionOptionInfo>> rv;
+        foreach hash<auto> i in (slice.pairIterator()) {
+            auto val = req{i.key};
+            info("Retrieving options dependent on option %y = %y for dynamic options for data provider %y",
+                i.key, val, getName());
+            auto res = getAsyncValueWithCache(i.value, req, cinfo);
+            if (!exists res) {
+                continue;
+            }
+            if (res.typeCode() != NT_HASH) {
+                throw "DATA-PROVIDER-DYNAMIC-TYPE-ERROR", sprintf("JavaScript 'get_dependent_options()' function "
+                    "returned type %y; expecting \"hash\"", res.fullType());
+            }
+            info("Got %y = %y", i.key, res);
+            foreach hash<auto> j in (res.pairIterator()) {
+                TypeScriptActionInterface::getOptionAllowedValuesFunction(\action, self, j.key, \j.value);
+                TypeScriptActionInterface::getOptionElementAllowedValuesFunction(\action, self, j.key, \j.value);
+                TypeScriptActionInterface::getOptionDefaultValueFunction(\action, self, j.key, \j.value);
+                rv{j.key} = TypeScriptActionInterface::getOptionInfo("option", j.value);
+                if (j.value.ref_data) {
+                    rv{j.key}.allowed_values = getReferenceData(j.value.ref_data, req);
+                }
+                if (j.value.element_ref_data) {
+                    rv{j.key}.element_allowed_values = getElementReferenceData(j.value.element_ref_data, req);
+                }
+                if (j.value.default_ref_data) {
+                    rv{j.key}.default_value = getReferenceDataValue(j.value.default_ref_data, req);
+                }
+            }
+        }
+        return rv;
+    }
+
+    #! Returns action options corresponding to the given option data
+    /** @param req sample option data that can be used to determine the final type
+
+        @return action options according to the available option data
+
+        @note This API is meant to provide information about options that can depend on option data
+    */
+    private *hash<string, hash<ActionOptionInfo>> tryGetActionOptionsWithDataImpl(hash<DataProviderActionInfo> action,
+            auto req) {
+        if (!dmap || !req.val() || req.typeCode() != NT_HASH) {
+            return action.options;
+        }
+        *hash<string, hash<ActionOptionInfo>> rv = action.options;
+        rv += getActionOptionsWithData(req);
+        return rv;
     }
 
     #! Returns reference data of the given kind if available
