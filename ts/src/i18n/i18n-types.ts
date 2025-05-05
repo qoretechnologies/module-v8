@@ -170,6 +170,520 @@ type RootTranslation = {
 				}
 			}
 		}
+		Attio: {
+			/**
+			 * A​t​t​i​o
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​w​i​t​h​ ​A​t​t​i​o​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​c​o​n​t​a​c​t​s​ ​a​n​d​ ​d​a​t​a
+			 */
+			shortDesc: string
+			/**
+			 * I​n​t​e​g​r​a​t​e​ ​w​i​t​h​ ​A​t​t​i​o​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​c​o​n​t​a​c​t​s​,​ ​c​o​m​p​a​n​i​e​s​,​ ​a​n​d​ ​d​a​t​a​.​ ​T​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​p​e​r​f​o​r​m​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​r​e​s​p​o​n​d​ ​t​o​ ​e​v​e​n​t​s​ ​i​n​ ​y​o​u​r​ ​A​t​t​i​o​ ​w​o​r​k​s​p​a​c​e​,​ ​e​n​a​b​l​i​n​g​ ​y​o​u​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​w​o​r​k​f​l​o​w​s​ ​a​n​d​ ​e​n​h​a​n​c​e​ ​y​o​u​r​ ​p​r​o​d​u​c​t​i​v​i​t​y​.
+			 */
+			longDesc: string
+			triggers: {
+			}
+			actions: {
+				find_list_entries: {
+					/**
+					 * F​i​n​d​ ​L​i​s​t​ ​E​n​t​r​i​e​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​e​n​t​r​i​e​s​ ​i​n​ ​a​n​ ​A​t​t​i​o​ ​l​i​s​t​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​o​p​t​i​o​n​s​.
+					 */
+					shortDesc: string
+					/**
+					 * Q​u​e​r​i​e​s​ ​e​n​t​r​i​e​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​A​t​t​i​o​ ​l​i​s​t​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​a​t​t​r​i​b​u​t​e​ ​v​a​l​u​e​s​,​ ​s​o​r​t​i​n​g​ ​b​y​ ​a​t​t​r​i​b​u​t​e​s​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​.​ ​R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​e​n​t​r​i​e​s​ ​m​a​t​c​h​i​n​g​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​r​i​t​e​r​i​a​.
+					 */
+					longDesc: string
+					options: {
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​t​t​i​o​ ​l​i​s​t​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​P​I​ ​s​l​u​g​ ​o​f​ ​t​h​e​ ​A​t​t​i​o​ ​l​i​s​t​ ​t​o​ ​s​e​a​r​c​h​ ​e​n​t​r​i​e​s​ ​i​n​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​e​n​t​r​i​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​e​n​t​r​i​e​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​e​n​t​r​i​e​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​e​n​t​r​i​e​s​ ​t​o​ ​s​k​i​p​ ​b​e​f​o​r​e​ ​s​t​a​r​t​i​n​g​ ​t​o​ ​r​e​t​u​r​n​ ​r​e​s​u​l​t​s​.​ ​U​s​e​d​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​0​.
+							 */
+							longDesc: string
+						}
+						sort_attribute: {
+							/**
+							 * S​o​r​t​ ​A​t​t​r​i​b​u​t​e
+							 */
+							displayName: string
+							/**
+							 * A​t​t​r​i​b​u​t​e​ ​t​o​ ​s​o​r​t​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​a​t​t​r​i​b​u​t​e​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​b​y​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​"​c​r​e​a​t​e​d​_​a​t​"​.
+							 */
+							longDesc: string
+						}
+						sort_direction: {
+							/**
+							 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​.​ ​C​a​n​ ​b​e​ ​e​i​t​h​e​r​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​a​s​c​e​n​d​i​n​g​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​e​ ​q​u​e​r​y​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									attribute: {
+										/**
+										 * A​t​t​r​i​b​u​t​e
+										 */
+										displayName: string
+										/**
+										 * A​t​t​r​i​b​u​t​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​a​t​t​r​i​b​u​t​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​v​a​l​u​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				update_list_entry: {
+					/**
+					 * U​p​d​a​t​e​ ​L​i​s​t​ ​E​n​t​r​y
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​e​n​t​r​y​ ​i​n​ ​a​n​ ​A​t​t​i​o​ ​l​i​s​t​.
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​a​t​t​r​i​b​u​t​e​ ​v​a​l​u​e​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​e​n​t​r​y​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​A​t​t​i​o​ ​l​i​s​t​.​ ​R​e​q​u​i​r​e​s​ ​t​h​e​ ​l​i​s​t​ ​i​d​e​n​t​i​f​i​e​r​,​ ​e​n​t​r​y​ ​I​D​,​ ​a​n​d​ ​t​h​e​ ​a​t​t​r​i​b​u​t​e​ ​v​a​l​u​e​s​ ​t​o​ ​u​p​d​a​t​e​.
+					 */
+					longDesc: string
+					options: {
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​t​t​i​o​ ​l​i​s​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​e​n​t​r​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​P​I​ ​s​l​u​g​ ​o​f​ ​t​h​e​ ​A​t​t​i​o​ ​l​i​s​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​e​n​t​r​y​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						entry_id: {
+							/**
+							 * E​n​t​r​y​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​e​n​t​r​y​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​l​i​s​t​ ​e​n​t​r​y​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						attributes: {
+							/**
+							 * A​t​t​r​i​b​u​t​e​s
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​s​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​h​a​s​h​ ​o​f​ ​a​t​t​r​i​b​u​t​e​ ​n​a​m​e​s​ ​a​n​d​ ​t​h​e​i​r​ ​n​e​w​ ​v​a​l​u​e​s​ ​t​o​ ​u​p​d​a​t​e​ ​i​n​ ​t​h​e​ ​l​i​s​t​ ​e​n​t​r​y​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_list_entry: {
+					/**
+					 * C​r​e​a​t​e​ ​L​i​s​t​ ​E​n​t​r​y
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​e​n​t​r​y​ ​i​n​ ​a​n​ ​A​t​t​i​o​ ​l​i​s​t​.
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​e​n​t​r​y​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​A​t​t​i​o​ ​l​i​s​t​.​ ​R​e​q​u​i​r​e​s​ ​t​h​e​ ​l​i​s​t​ ​i​d​e​n​t​i​f​i​e​r​,​ ​p​a​r​e​n​t​ ​o​b​j​e​c​t​ ​r​e​f​e​r​e​n​c​e​,​ ​a​n​d​ ​a​t​t​r​i​b​u​t​e​ ​v​a​l​u​e​s​ ​t​o​ ​p​o​p​u​l​a​t​e​ ​t​h​e​ ​e​n​t​r​y​.
+					 */
+					longDesc: string
+					options: {
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​t​t​i​o​ ​l​i​s​t​ ​t​o​ ​c​r​e​a​t​e​ ​e​n​t​r​y​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​P​I​ ​s​l​u​g​ ​o​f​ ​t​h​e​ ​A​t​t​i​o​ ​l​i​s​t​ ​w​h​e​r​e​ ​t​h​e​ ​n​e​w​ ​e​n​t​r​y​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						parent_object: {
+							/**
+							 * P​a​r​e​n​t​ ​O​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​a​r​e​n​t​ ​o​b​j​e​c​t​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​o​b​j​e​c​t​ ​t​h​a​t​ ​t​h​i​s​ ​l​i​s​t​ ​e​n​t​r​y​ ​b​e​l​o​n​g​s​ ​t​o​.
+							 */
+							longDesc: string
+						}
+						parent_record_id: {
+							/**
+							 * P​a​r​e​n​t​ ​R​e​c​o​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​c​o​r​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​c​o​r​d​ ​t​o​ ​w​h​i​c​h​ ​t​h​i​s​ ​l​i​s​t​ ​e​n​t​r​y​ ​w​i​l​l​ ​b​e​ ​l​i​n​k​e​d​.
+							 */
+							longDesc: string
+						}
+						attributes: {
+							/**
+							 * A​t​t​r​i​b​u​t​e​s
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​s​ ​f​o​r​ ​l​i​s​t​ ​e​n​t​r​y​ ​a​t​t​r​i​b​u​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​h​a​s​h​ ​o​f​ ​a​t​t​r​i​b​u​t​e​ ​n​a​m​e​s​ ​a​n​d​ ​t​h​e​i​r​ ​v​a​l​u​e​s​ ​t​o​ ​p​o​p​u​l​a​t​e​ ​i​n​ ​t​h​e​ ​n​e​w​ ​l​i​s​t​ ​e​n​t​r​y​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_object_record: {
+					/**
+					 * U​p​d​a​t​e​ ​O​b​j​e​c​t​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​r​e​c​o​r​d​ ​i​n​ ​a​n​ ​A​t​t​i​o​ ​o​b​j​e​c​t​.
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​v​a​l​u​e​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​r​e​c​o​r​d​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​A​t​t​i​o​ ​o​b​j​e​c​t​.​ ​R​e​q​u​i​r​e​s​ ​t​h​e​ ​o​b​j​e​c​t​ ​t​y​p​e​,​ ​r​e​c​o​r​d​ ​I​D​,​ ​a​n​d​ ​t​h​e​ ​a​t​t​r​i​b​u​t​e​ ​v​a​l​u​e​s​ ​t​o​ ​u​p​d​a​t​e​.
+					 */
+					longDesc: string
+					options: {
+						object: {
+							/**
+							 * O​b​j​e​c​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​t​t​i​o​ ​o​b​j​e​c​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​P​I​ ​s​l​u​g​ ​o​f​ ​t​h​e​ ​A​t​t​i​o​ ​o​b​j​e​c​t​ ​t​y​p​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						record_id: {
+							/**
+							 * R​e​c​o​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						attributes: {
+							/**
+							 * A​t​t​r​i​b​u​t​e​s
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​s​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​h​a​s​h​ ​o​f​ ​a​t​t​r​i​b​u​t​e​ ​n​a​m​e​s​ ​a​n​d​ ​t​h​e​i​r​ ​n​e​w​ ​v​a​l​u​e​s​ ​t​o​ ​u​p​d​a​t​e​ ​i​n​ ​t​h​e​ ​r​e​c​o​r​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				find_object_records: {
+					/**
+					 * F​i​n​d​ ​O​b​j​e​c​t​ ​R​e​c​o​r​d​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​r​e​c​o​r​d​s​ ​i​n​ ​a​n​ ​A​t​t​i​o​ ​o​b​j​e​c​t​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​o​p​t​i​o​n​s​.
+					 */
+					shortDesc: string
+					/**
+					 * Q​u​e​r​i​e​s​ ​r​e​c​o​r​d​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​A​t​t​i​o​ ​o​b​j​e​c​t​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​a​t​t​r​i​b​u​t​e​ ​v​a​l​u​e​s​,​ ​s​o​r​t​i​n​g​ ​b​y​ ​a​t​t​r​i​b​u​t​e​s​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​.​ ​R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​r​e​c​o​r​d​s​ ​m​a​t​c​h​i​n​g​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​r​i​t​e​r​i​a​.
+					 */
+					longDesc: string
+					options: {
+						object: {
+							/**
+							 * O​b​j​e​c​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​t​t​i​o​ ​o​b​j​e​c​t​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​P​I​ ​s​l​u​g​ ​o​f​ ​t​h​e​ ​A​t​t​i​o​ ​o​b​j​e​c​t​ ​t​y​p​e​ ​t​o​ ​s​e​a​r​c​h​ ​i​n​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​s​k​i​p​ ​b​e​f​o​r​e​ ​s​t​a​r​t​i​n​g​ ​t​o​ ​r​e​t​u​r​n​ ​r​e​s​u​l​t​s​.​ ​U​s​e​d​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​0​.
+							 */
+							longDesc: string
+						}
+						sort_attribute: {
+							/**
+							 * S​o​r​t​ ​A​t​t​r​i​b​u​t​e
+							 */
+							displayName: string
+							/**
+							 * A​t​t​r​i​b​u​t​e​ ​t​o​ ​s​o​r​t​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​a​t​t​r​i​b​u​t​e​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​b​y​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​"​c​r​e​a​t​e​d​_​a​t​"​.
+							 */
+							longDesc: string
+						}
+						sort_direction: {
+							/**
+							 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​.​ ​C​a​n​ ​b​e​ ​e​i​t​h​e​r​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​a​s​c​e​n​d​i​n​g​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​e​ ​q​u​e​r​y​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									attribute: {
+										/**
+										 * A​t​t​r​i​b​u​t​e
+										 */
+										displayName: string
+										/**
+										 * A​t​t​r​i​b​u​t​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​a​t​t​r​i​b​u​t​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​v​a​l​u​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				create_object_record: {
+					/**
+					 * C​r​e​a​t​e​ ​O​b​j​e​c​t​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​o​b​j​e​c​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​o​b​j​e​c​t​ ​w​i​t​h​i​n​ ​y​o​u​r​ ​A​t​t​i​o​ ​w​o​r​k​s​p​a​c​e​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​d​e​f​i​n​e​ ​t​h​e​ ​o​b​j​e​c​t​ ​t​y​p​e​ ​a​n​d​ ​t​h​e​ ​a​t​t​r​i​b​u​t​e​s​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​r​e​c​o​r​d​.
+					 */
+					longDesc: string
+					options: {
+						object: {
+							/**
+							 * O​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​o​b​j​e​c​t​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​o​b​j​e​c​t​ ​t​y​p​e​ ​i​n​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​.​ ​T​h​i​s​ ​c​a​n​ ​b​e​ ​a​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​ ​o​r​ ​a​ ​s​t​a​n​d​a​r​d​ ​o​b​j​e​c​t​ ​i​n​ ​y​o​u​r​ ​A​t​t​i​o​ ​w​o​r​k​s​p​a​c​e​.
+							 */
+							longDesc: string
+						}
+						attributes: {
+							/**
+							 * A​t​t​r​i​b​u​t​e​s
+							 */
+							displayName: string
+							/**
+							 * D​e​f​i​n​e​ ​t​h​e​ ​a​t​t​r​i​b​u​t​e​s​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​r​e​c​o​r​d
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​a​t​t​r​i​b​u​t​e​s​ ​a​n​d​ ​t​h​e​i​r​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​r​e​c​o​r​d​.​ ​T​h​e​ ​a​t​t​r​i​b​u​t​e​s​ ​m​u​s​t​ ​m​a​t​c​h​ ​t​h​e​ ​s​c​h​e​m​a​ ​o​f​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​o​b​j​e​c​t​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Intercom: {
 			/**
 			 * I​n​t​e​r​c​o​m
@@ -22216,6 +22730,520 @@ export type TranslationFunctions = {
 							 * Second Option
 							 */
 							displayName: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		Attio: {
+			/**
+			 * Attio
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect with Attio to manage your contacts and data
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Integrate with Attio to manage your contacts, companies, and data. This integration allows you to perform actions and respond to events in your Attio workspace, enabling you to automate workflows and enhance your productivity.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+			}
+			actions: {
+				find_list_entries: {
+					/**
+					 * Find List Entries
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for entries in an Attio list with filtering and sorting options.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Queries entries from a specific Attio list with support for filtering by attribute values, sorting by attributes, and pagination. Returns a list of entries matching the specified criteria.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Attio list to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The API slug of the Attio list to search entries in.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of entries to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of entries to return. Default is 50.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of entries to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of entries to skip before starting to return results. Used for pagination. Default is 0.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort_attribute: {
+							/**
+							 * Sort Attribute
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Attribute to sort by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The attribute to sort the results by. Default is "created_at".
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort_direction: {
+							/**
+							 * Sort Direction
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort direction
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The direction to sort the results. Can be either ascending or descending. Default is ascending.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter criteria to apply to the query.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									attribute: {
+										/**
+										 * Attribute
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Attribute to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The attribute to filter by.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter value
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to filter by.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				update_list_entry: {
+					/**
+					 * Update List Entry
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing entry in an Attio list.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates the attribute values of an existing entry in a specified Attio list. Requires the list identifier, entry ID, and the attribute values to update.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Attio list containing the entry
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The API slug of the Attio list containing the entry to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						entry_id: {
+							/**
+							 * Entry ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of the entry to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the list entry to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attributes: {
+							/**
+							 * Attributes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Values to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A hash of attribute names and their new values to update in the list entry.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_list_entry: {
+					/**
+					 * Create List Entry
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new entry in an Attio list.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new entry in a specified Attio list. Requires the list identifier, parent object reference, and attribute values to populate the entry.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Attio list to create entry in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The API slug of the Attio list where the new entry will be created.
+							 */
+							longDesc: () => LocalizedString
+						}
+						parent_object: {
+							/**
+							 * Parent Object
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The parent object type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The type of the parent object that this list entry belongs to.
+							 */
+							longDesc: () => LocalizedString
+						}
+						parent_record_id: {
+							/**
+							 * Parent Record ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of the parent record
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the parent record to which this list entry will be linked.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attributes: {
+							/**
+							 * Attributes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Values for list entry attributes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A hash of attribute names and their values to populate in the new list entry.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_object_record: {
+					/**
+					 * Update Object Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing record in an Attio object.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates the values of an existing record in a specified Attio object. Requires the object type, record ID, and the attribute values to update.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						object: {
+							/**
+							 * Object Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Attio object to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The API slug of the Attio object type containing the record to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						record_id: {
+							/**
+							 * Record ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of the record to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the record to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attributes: {
+							/**
+							 * Attributes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Values to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A hash of attribute names and their new values to update in the record.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				find_object_records: {
+					/**
+					 * Find Object Records
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for records in an Attio object with filtering and sorting options.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Queries records from a specific Attio object with support for filtering by attribute values, sorting by attributes, and pagination. Returns a list of records matching the specified criteria.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						object: {
+							/**
+							 * Object Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Attio object to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The API slug of the Attio object type to search in.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of records to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of records to return. Default is 50.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of records to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of records to skip before starting to return results. Used for pagination. Default is 0.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort_attribute: {
+							/**
+							 * Sort Attribute
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Attribute to sort by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The attribute to sort the results by. Default is "created_at".
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort_direction: {
+							/**
+							 * Sort Direction
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort direction
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The direction to sort the results. Can be either ascending or descending. Default is ascending.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter criteria to apply to the query.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									attribute: {
+										/**
+										 * Attribute
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Attribute to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The attribute to filter by.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter value
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to filter by.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				create_object_record: {
+					/**
+					 * Create Object Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new record in a specified object
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new record in a specified object within your Attio workspace. This action allows you to define the object type and the attributes for the new record.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						object: {
+							/**
+							 * Object
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the object type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the object type in which you want to create a new record. This can be a custom object or a standard object in your Attio workspace.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attributes: {
+							/**
+							 * Attributes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Define the attributes for the new record
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the attributes and their values for the new record. The attributes must match the schema of the selected object type.
+							 */
+							longDesc: () => LocalizedString
 						}
 					}
 				}

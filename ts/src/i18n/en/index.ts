@@ -84,6 +84,220 @@ const en = {
         },
       },
     },
+    Attio: {
+      displayName: 'Attio',
+      shortDesc: 'Connect with Attio to manage your contacts and data',
+      longDesc:
+        'Integrate with Attio to manage your contacts, companies, and data. This integration allows you to perform actions and respond to events in your Attio workspace, enabling you to automate workflows and enhance your productivity.',
+      triggers: {},
+      actions: {
+        find_list_entries: {
+          displayName: 'Find List Entries',
+          shortDesc: 'Search for entries in an Attio list with filtering and sorting options.',
+          longDesc:
+            'Queries entries from a specific Attio list with support for filtering by attribute values, sorting by attributes, and pagination. Returns a list of entries matching the specified criteria.',
+          options: {
+            list: {
+              displayName: 'List',
+              shortDesc: 'The Attio list to search',
+              longDesc: 'The API slug of the Attio list to search entries in.',
+            },
+            limit: {
+              displayName: 'Limit',
+              shortDesc: 'Maximum number of entries to return',
+              longDesc: 'The maximum number of entries to return. Default is 50.',
+            },
+            offset: {
+              displayName: 'Offset',
+              shortDesc: 'Number of entries to skip',
+              longDesc:
+                'The number of entries to skip before starting to return results. Used for pagination. Default is 0.',
+            },
+            sort_attribute: {
+              displayName: 'Sort Attribute',
+              shortDesc: 'Attribute to sort by',
+              longDesc: 'The attribute to sort the results by. Default is "created_at".',
+            },
+            sort_direction: {
+              displayName: 'Sort Direction',
+              shortDesc: 'Sort direction',
+              longDesc:
+                'The direction to sort the results. Can be either ascending or descending. Default is ascending.',
+            },
+            filter: {
+              displayName: 'Filter',
+              shortDesc: 'Filter criteria',
+              longDesc: 'Filter criteria to apply to the query.',
+              type: {
+                fields: {
+                  attribute: {
+                    displayName: 'Attribute',
+                    shortDesc: 'Attribute to filter by',
+                    longDesc: 'The attribute to filter by.',
+                  },
+                  value: {
+                    displayName: 'Value',
+                    shortDesc: 'Filter value',
+                    longDesc: 'The value to filter by.',
+                  },
+                },
+              },
+            },
+          },
+        },
+        update_list_entry: {
+          displayName: 'Update List Entry',
+          shortDesc: 'Update an existing entry in an Attio list.',
+          longDesc:
+            'Updates the attribute values of an existing entry in a specified Attio list. Requires the list identifier, entry ID, and the attribute values to update.',
+          options: {
+            list: {
+              displayName: 'List',
+              shortDesc: 'The Attio list containing the entry',
+              longDesc: 'The API slug of the Attio list containing the entry to update.',
+            },
+            entry_id: {
+              displayName: 'Entry ID',
+              shortDesc: 'ID of the entry to update',
+              longDesc: 'The unique identifier of the list entry to update.',
+            },
+            attributes: {
+              displayName: 'Attributes',
+              shortDesc: 'Values to update',
+              longDesc:
+                'A hash of attribute names and their new values to update in the list entry.',
+            },
+          },
+        },
+        create_list_entry: {
+          displayName: 'Create List Entry',
+          shortDesc: 'Create a new entry in an Attio list.',
+          longDesc:
+            'Creates a new entry in a specified Attio list. Requires the list identifier, parent object reference, and attribute values to populate the entry.',
+          options: {
+            list: {
+              displayName: 'List',
+              shortDesc: 'The Attio list to create entry in',
+              longDesc: 'The API slug of the Attio list where the new entry will be created.',
+            },
+            parent_object: {
+              displayName: 'Parent Object',
+              shortDesc: 'The parent object type',
+              longDesc: 'The type of the parent object that this list entry belongs to.',
+            },
+            parent_record_id: {
+              displayName: 'Parent Record ID',
+              shortDesc: 'ID of the parent record',
+              longDesc:
+                'The unique identifier of the parent record to which this list entry will be linked.',
+            },
+            attributes: {
+              displayName: 'Attributes',
+              shortDesc: 'Values for list entry attributes',
+              longDesc:
+                'A hash of attribute names and their values to populate in the new list entry.',
+            },
+          },
+        },
+        update_object_record: {
+          displayName: 'Update Object Record',
+          shortDesc: 'Update an existing record in an Attio object.',
+          longDesc:
+            'Updates the values of an existing record in a specified Attio object. Requires the object type, record ID, and the attribute values to update.',
+          options: {
+            object: {
+              displayName: 'Object Type',
+              shortDesc: 'The Attio object to update',
+              longDesc: 'The API slug of the Attio object type containing the record to update.',
+            },
+            record_id: {
+              displayName: 'Record ID',
+              shortDesc: 'ID of the record to update',
+              longDesc: 'The unique identifier of the record to update.',
+            },
+            attributes: {
+              displayName: 'Attributes',
+              shortDesc: 'Values to update',
+              longDesc: 'A hash of attribute names and their new values to update in the record.',
+            },
+          },
+        },
+        find_object_records: {
+          displayName: 'Find Object Records',
+          shortDesc: 'Search for records in an Attio object with filtering and sorting options.',
+          longDesc:
+            'Queries records from a specific Attio object with support for filtering by attribute values, sorting by attributes, and pagination. Returns a list of records matching the specified criteria.',
+          options: {
+            object: {
+              displayName: 'Object Type',
+              shortDesc: 'The Attio object to search',
+              longDesc: 'The API slug of the Attio object type to search in.',
+            },
+            limit: {
+              displayName: 'Limit',
+              shortDesc: 'Maximum number of records to return',
+              longDesc: 'The maximum number of records to return. Default is 50.',
+            },
+            offset: {
+              displayName: 'Offset',
+              shortDesc: 'Number of records to skip',
+              longDesc:
+                'The number of records to skip before starting to return results. Used for pagination. Default is 0.',
+            },
+            sort_attribute: {
+              displayName: 'Sort Attribute',
+              shortDesc: 'Attribute to sort by',
+              longDesc: 'The attribute to sort the results by. Default is "created_at".',
+            },
+            sort_direction: {
+              displayName: 'Sort Direction',
+              shortDesc: 'Sort direction',
+              longDesc:
+                'The direction to sort the results. Can be either ascending or descending. Default is ascending.',
+            },
+            filter: {
+              displayName: 'Filter',
+              shortDesc: 'Filter criteria',
+              longDesc: 'Filter criteria to apply to the query.',
+              type: {
+                fields: {
+                  attribute: {
+                    displayName: 'Attribute',
+                    shortDesc: 'Attribute to filter by',
+                    longDesc: 'The attribute to filter by.',
+                  },
+                  value: {
+                    displayName: 'Value',
+                    shortDesc: 'Filter value',
+                    longDesc: 'The value to filter by.',
+                  },
+                },
+              },
+            },
+          },
+        },
+        create_object_record: {
+          displayName: 'Create Object Record',
+          shortDesc: 'Create a new record in a specified object',
+          longDesc:
+            'Create a new record in a specified object within your Attio workspace. This action allows you to define the object type and the attributes for the new record.',
+          options: {
+            object: {
+              displayName: 'Object',
+              shortDesc: 'Select the object type',
+              longDesc:
+                'Choose the object type in which you want to create a new record. This can be a custom object or a standard object in your Attio workspace.',
+            },
+            attributes: {
+              displayName: 'Attributes',
+              shortDesc: 'Define the attributes for the new record',
+              longDesc:
+                'Specify the attributes and their values for the new record. The attributes must match the schema of the selected object type.',
+            },
+          },
+        },
+      },
+    },
     Intercom: {
       displayName: 'Intercom',
       shortDesc: 'Interact with Intercom customer messaging platform',

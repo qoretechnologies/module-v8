@@ -35,6 +35,7 @@ import mailchimp from '../apps/mailchimp';
 import dynamics from '../apps/dynamics';
 import xero from '../apps/xero';
 import intercom from '../apps/intercom';
+import attio from '../apps/attio';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -68,6 +69,7 @@ const NEW_APPS = {
   mailchimp,
   xero,
   intercom,
+  attio,
 } as const;
 
 const EXISTING_APPS = {

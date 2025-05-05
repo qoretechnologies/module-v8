@@ -1,0 +1,65 @@
+import { TQoreType, TQoreTypeObject } from '@qoretechnologies/ts-toolkit';
+
+export const ATTIO_TO_QORUS_TYPE_MAP: Record<string, TQoreTypeObject | TQoreType> = {
+  text: 'string',
+  'personal-name': 'string',
+  'phone-number': 'string',
+  'email-address': 'string',
+  domain: 'string',
+  select: 'string',
+  status: 'string',
+  date: 'date',
+  timestamp: 'date',
+  number: 'number',
+  currency: 'number',
+  checkbox: 'boolean',
+  'multi-select': 'list',
+  'record-reference': 'hash',
+  'actor-reference': 'hash',
+  location: {
+    type: 'hash',
+    fields: {
+      line_1: {
+        display_name: 'Address Line 1',
+        type: 'string',
+      },
+      line_2: {
+        display_name: 'Address Line 2',
+        type: 'string',
+      },
+      line_3: {
+        display_name: 'Address Line 3',
+        type: 'string',
+      },
+      line_4: {
+        display_name: 'Address Line 4',
+        type: 'string',
+      },
+      locality: {
+        display_name: 'City',
+        type: 'string',
+      },
+      region: {
+        display_name: 'State/Region',
+        type: 'string',
+      },
+      postcode: {
+        display_name: 'Postal Code',
+        type: 'string',
+      },
+      country_code: {
+        display_name: 'Country Code',
+        type: 'string',
+      },
+      latitude: {
+        display_name: 'Latitude',
+        type: 'string',
+      },
+      longitude: {
+        display_name: 'Longitude',
+        type: 'string',
+      },
+    },
+  },
+  interaction: 'hash',
+};
