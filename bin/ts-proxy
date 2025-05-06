@@ -360,7 +360,7 @@ class TsProxy inherits TypeScriptProxy {
         info("Get dynamic options app: %y action: %y conn_opts: %y req: %y", app, action, conn_opts, req);
         TypeScriptActionInterface::initApp(app);
         TypeScriptActionInterface::initAppAction(app, action);
-        TypeScriptActionEventDataProviderBase prov = TypeScriptActionInterface::getAppDataProvider(app)
+        TypeScriptActionDataProviderBase prov = TypeScriptActionInterface::getAppDataProvider(app)
             .getChildProviderEx(action);
         DataProviderDataContextHelper dch(req);
         if (conn_name.val()) {
