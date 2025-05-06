@@ -46,6 +46,7 @@
 %requires Util
 %requires Logger
 %requires AsyncSocketIo
+%requires GoogleDataProvider
 
 %requires json
 %requires process
@@ -54,7 +55,7 @@
 %requires uuid
 
 module TypeScriptActionInterface {
-    version = "1.0";
+    version = "1.1";
     desc = "User module providing an API for Qore DataProvider app actions in TypeScript";
     author = "David Nichols <david@qore.org>";
     url = "http://qore.org";

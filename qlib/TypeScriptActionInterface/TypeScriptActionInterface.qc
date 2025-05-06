@@ -84,6 +84,30 @@ hashdecl RestGetAllowedValuesInfo {
     *string short_descs;
 }
 
+#! When defining Google apps
+hashdecl GoogleAppInfo {
+    #! The name of the Google API in the Discovery API
+    string api;
+
+    #! The resource path to the APIs under the app in the Discory API
+    /** Only provided if the app should generate actions automatically
+    */
+    *string resource;
+
+    #! Any path arguments to be automatically provided when making calls: key -> value
+    *hash<auto> path_args;
+
+    #! Any path prefix for the subpaths
+    /** This option is only used with subpaths, which is only used if \a resource is set
+    */
+    *string path_prefix;
+
+    #! A list of one or more subpaths to use to only expose the given paths in the app
+    /** Ignored if \a resource is not set
+    */
+    *list<string> subpaths;
+}
+
 #! Required attributes for RestGetAllowedValuesInfo
 const RestGetAllowedValuesRequiredKeys = {
     "method": True,
@@ -189,8 +213,11 @@ public class TypeScriptActionInterface {
         #! Maps from app and schema names to Swagger schemas
         static hash<string, hash<string, SwaggerSchema>> app_swagger_schema_map;
 
-        #! Maps from app and schema names names to SwaggerDataProvider objects
+        #! Maps from app and schema names to SwaggerDataProvider objects
         static hash<string, hash<string, SwaggerDataProvider>> app_swagger_schema_dp;
+
+        #! Maps from lower-case app names to Google app definitions
+        static hash<string, hash<GoogleAppInfo>> google_app_map;
 
         #! Maps from app names to REST template options; app -> option -> True
         static hash<string, hash<string, bool>> atmap;
@@ -292,6 +319,7 @@ public class TypeScriptActionInterface {
         remove app_conn_opt_map{appname};
         remove app_swagger_map{appname};
         remove app_swagger_schema_map{appname};
+        remove google_app_map{appname};
         remove atmap{appname};
         ConnectionSchemeCache::deregisterScheme(sname);
     }
@@ -663,6 +691,41 @@ public class TypeScriptActionInterface {
         if (app.logo) {
             app0.logo = parse_base64_string(app.logo);
         }
+
+        hash<GoogleAppInfo> google_app;
+        if (exists (*hash<auto> h = remove app0.google_app)) {
+            if (schema) {
+                throw "APP-ERROR", sprintf("App %y cannot define both the \"google_app\" (%y) and \"swagger\" "
+                    "attributes", app.name, google_app);
+            }
+            if (swagger_schema_map) {
+                throw "APP-ERROR", sprintf("App %y cannot define both the \"google_app\" (%y) and "
+                    "\"swagger_schema_map\" attributes", app.name, google_app);
+            }
+            if (h.api.typeCode() != NT_STRING) {
+                throw "APP-ERROR", sprintf("App %y google_app.api must be a string; got type %y instead",
+                    app.name, h.api.fullType());
+            }
+            if (exists h.resource && (h.resource.typeCode() != NT_STRING)) {
+                throw "APP-ERROR", sprintf("App %y google_app.resource must be a string if present; got type %y "
+                    "instead", app.name, h.resource.fullType());
+            }
+            if (exists h.path_args && (h.path_args.typeCode() != NT_HASH)) {
+                throw "APP-ERROR", sprintf("App %y google_app.path_args must be a hash; got type %y instead",
+                    app.name, h.path_args.fullType());
+            }
+            if (exists h.path_prefix && (h.path_prefix.typeCode() != NT_STRING)) {
+                throw "APP-ERROR", sprintf("App %y google_app.path_prefix must be a string; got type %y instead",
+                    app.name, h.path_prefix.fullType());
+            }
+            if (exists h.subpaths && (h.subpaths.typeCode() != NT_LIST)) {
+                throw "APP-ERROR", sprintf("App %y google_app.subpaths must be a list; got type %y instead",
+                    app.name, h.subpaths.fullType());
+            }
+
+            google_app = cast<hash<GoogleAppInfo>>(h);
+        }
+
         hash<string, bool> url_template_options;
         if (*hash<auto> rest = remove app0.rest) {
             string sname = "tsrest-" + app.name.lwr();
@@ -804,6 +867,14 @@ public class TypeScriptActionInterface {
         TypeScriptActionAppDataProvider prov(appname);
         TypeScriptActionInterface::checkRoot();
         root.registerChild(appname, prov);
+
+        if (google_app) {
+            if (google_app.resource.val()) {
+                # register all actions for the app
+                prov.registerGoogleAppActions(app.name, google_app);
+            }
+            google_app_map{appname} = google_app;
+        }
 
         if (schema) {
             app_swagger_map{appname} = schema;
@@ -1442,10 +1513,46 @@ public class TypeScriptActionInterface {
 
     static generateApiDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
             JavaScriptProgramPool pool, *SwaggerSchema schema) {
+        string appname = app.name.lwr();
+        hash<auto> google_action;
+        if (auto h = remove action.google_action) {
+            if (h.typeCode() != NT_HASH) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"google_action\" "
+                    "attribute; got type %y; expecting \"hash\"", action.app, action.action,
+                    h.fullType());
+            }
+            # must have a registered google app for this action
+            *hash<GoogleAppInfo> gapp = google_app_map{appname};
+            if (!gapp) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"google_action\" "
+                    "attribute; app %y is not registered as a Google app", action.app, action.action, h.app);
+            }
+
+            if (h.resource.typeCode() != NT_STRING) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y \"google_action.resource\" must be a "
+                    "string; got type %y instead", app.name, action.action, h.resource.fullType());
+            }
+            (*string category, *string name) = (h.resource =~ x/([^\/]+)\/([^\/]+)/);
+            if (!category.val() || !name.val()) {
+                throw "APP-ERROR", sprintf("Invalid resource %y for app %y action %y; must be of the form "
+                    "category/resource", h.resource, app.name, action.action);
+            }
+            if (exists h.path_args && (h.path_args.typeCode() != NT_HASH)) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y \"google_action.path_args\" must be a "
+                    "hash when present; got type %y instead", app.name, action.action, h.path_args.fullType());
+            }
+            if (exists h.query_args && (h.query_args.typeCode() != NT_HASH)) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y \"google_action.query_args\" must be a "
+                    "hash when present; got type %y instead", app.name, action.action, h.query_args.fullType());
+            }
+            h.app = gapp;
+
+            google_action = h;
+        }
         hash<AsyncCallInfo> api;
         {
             auto api_function = remove action.api_function;
-            if (!api_function.callp() && !schema) {
+            if (!api_function.callp() && !schema && !google_action) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has no REST schema and has a missing or "
                     "invalid \"api_function\" attribute; got type %y; expecting a callable value", action.app,
                     action.action, api_function.fullType());
@@ -1581,15 +1688,18 @@ public class TypeScriptActionInterface {
             # check for path vars
             *hash<string, bool> path_vars = map {$1: True}, (swagger_path =~ x/\{([^\}]*)}/g);
             TypeScriptActionApiWithSchemaDataProvider dp(\action, swagger_path, api, path_vars,
-                (map {$1: True}, independent_path_vars), app_conn_opt_map{app.name.lwr()},
+                (map {$1: True}, independent_path_vars), app_conn_opt_map{appname},
                 remove action.override_options, fctx, get_dynamic_request_type, get_dynamic_response_type,
                 request_data_converter, response_data_converter, request_type, response_type);
             child = dp;
 
             action.output_type = child.getResponseType();
+        } else if (google_action) {
+            child = new TypeScriptActionGoogleApiDataProvider(action.action, google_action, api, fctx,
+                get_dynamic_request_type, get_dynamic_response_type);
         } else {
             child = new TypeScriptActionApiDataProvider(action.action, api, request_type, response_type, fctx,
-                get_dynamic_request_type);
+                get_dynamic_request_type, get_dynamic_response_type);
         }
 
         TypeScriptActionAppDataProvider prov = TypeScriptActionInterface::getAppDataProvider(action.app);
@@ -1949,8 +2059,47 @@ public class TypeScriptActionInterface {
         return type;
     }
 
+    static AbstractDataProviderType getGoogleType(bool input, string path, hash<auto> h, *bool required,
+            auto element_type, *ActionFunctionContext fctx, *bool ignore_dup) {
+        on_error rethrow $1.err, sprintf("%s (type: %y)", $1.desc, h);
+        string key = input ? "google_input_type" : "google_output_type";
+        if (h{key}.typeCode() != NT_HASH) {
+            throw "TYPE-ERROR", sprintf("Expecting %y to be type \"hash\"; got %y instead", key, h{key}.fullType());
+        }
+        if (h{key}.app.typeCode() != NT_STRING) {
+            throw "TYPE-ERROR", sprintf("Expecting %y.\"app\" to be type \"string\"; got %y instead", key,
+                h{key}.app.fullType());
+        }
+        string app = h{key}.app;
+        if (h{key}.type.typeCode() != NT_STRING) {
+            throw "TYPE-ERROR", sprintf("Expecting %y.\"type\" to be type \"string\"; got %y instead", key,
+                h{key}.type.fullType());
+        }
+        string type = h{key}.type;
+        if (h.size() > 1) {
+            throw "TYPE-ERROR", sprintf("Google type description has unsupported keys: %y", keys (h - key));
+        }
+        if (element_type) {
+            throw "TYPE-ERROR", sprintf("Cannot use an element type with Google %s type %y %y",
+                input ? "input" : "output", app, type);
+        }
+        AbstractDataProviderType rv = input
+            ? GoogleDataProviderBase::getInputTypeForSchema(app, type)
+            : GoogleDataProviderBase::getTypeForSchema(app, type);
+        if (!required) {
+            rv = rv.getOrNothingType();
+        }
+        return rv;
+    }
+
     static AbstractDataProviderType getType(string path, hash<auto> h, *bool required, auto element_type,
             *ActionFunctionContext fctx, *bool ignore_dup) {
+        if (h.google_input_type) {
+            return getGoogleType(True, path, h, required, element_type, fctx, ignore_dup);
+        } else if (h.google_output_type) {
+            return getGoogleType(False, path, h, required, element_type, fctx, ignore_dup);
+        }
+
         if (h.required.typeCode() == NT_BOOLEAN) {
             required = h.required;
         }
