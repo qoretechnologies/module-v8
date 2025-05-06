@@ -260,8 +260,8 @@ async function runWithTimeout(promise, delay) {
             cast<Observable>(prov).registerObserver(o);
             # temporarily disable data provider error logging, as the error from the negative test below will
             # otherwise be logged to the console
-            #logger.removeAllAppenders();
-            #on_exit logger.addAppender(new StdoutAppender());
+            logger.removeAllAppenders();
+            on_exit logger.addAppender(new StdoutAppender());
             assertThrows("JAVASCRIPT-ASYNC-ERROR", \cast<DelayedObservable>(prov).observersReady());
         }
 

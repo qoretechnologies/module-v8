@@ -55,6 +55,18 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
 
         #! The name of the root data provider class for chilren if this an extension of an existing app
         *StaticMethod registerChildMethod;
+
+        #! For Google APIs
+        GoogleApiParentDataProvider google_api_provider;
+
+        #! Children can support records
+        bool children_can_support_records = False;
+
+        #! Children can support observers
+        bool children_can_support_observers = False;
+
+        #! For Google APIs
+        static Class GoogleApiParentDataProviderClass = Class::forName("GoogleApiParentDataProvider");
     }
 
     #! Creates the object
@@ -130,8 +142,90 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
     *list<hash<DataProviderSummaryInfo>> getChildProviderSummaryInfo() {
         TypeScriptActionInterface::checkAppActions(name);
         *hash<string, DataProvider::AbstractDataProvider> childMap = self.childMap ?? parent.childMap;
-        return map cast<hash<DataProviderSummaryInfo>>($1.getInfo(){DataProviderSummaryInfoKeys}),
-            childMap.iterator();
+        *list<hash<DataProviderSummaryInfo>> rv =
+            map cast<hash<DataProviderSummaryInfo>>($1.getInfo(){DataProviderSummaryInfoKeys}), childMap.iterator();
+        if (google_api_provider && (*list<hash<DataProviderSummaryInfo>> l =
+            google_api_provider.getChildProviderSummaryInfo())) {
+            rv += l;
+        }
+        return rv;
+    }
+
+    #! Register actions for the given Google app
+    registerGoogleAppActions(string app, hash<GoogleAppInfo> google_app) {
+        if (google_api_provider) {
+            throw "TYPESCRIPT-CHILD-ERROR", sprintf("Google API provider %y already registered",
+                google_api_provider.getDesc());
+        }
+        list<auto> args += (google_app.api, google_app.resource, google_app.path_args, google_app.path_prefix);
+        if (google_app.subpaths) {
+            args += google_app.subpaths;
+        }
+        google_api_provider = GoogleApiParentDataProviderClass.newObjectArgs(args);
+
+        # set a dummy REST client
+        google_api_provider.setRestClient(new RestClient({"url": "https://www.googleapis.com"}));
+
+        # register actions
+        registerActions(app, google_api_provider);
+    }
+
+    private registerActions(string app, GoogleApiParentDataProvider provider, *string parent_path) {
+        foreach string child in (provider.getChildProviderNames()) {
+            AbstractDataProvider p = provider.getChildProvider(child);
+            hash<DataProviderInfo> info = p.getInfo();
+            string path = parent_path ? parent_path + "/" + child : child;
+            if (info.supports_request) {
+                if (!children_can_support_observers
+                    && (info.supports_observable || info.children_can_support_observers)) {
+                    children_can_support_observers = True;
+                }
+                if (!children_can_support_records
+                    && (info.has_record || info.children_can_support_records)) {
+                    children_can_support_records = True;
+                }
+                string name = parent_path ? parent_path + "-" + child : child;
+                hash<string, hash<ActionOptionInfo>> options;
+                if ((*AbstractDataProviderType rt = p.getRequestType()) && (*hash<string, AbstractDataField> fields =
+                    rt.getFields())) {
+                    foreach AbstractDataField field in (fields.iterator()) {
+                        AbstractDataProviderType ft = field.getType();
+                        hash<ActionOptionInfo> opt = <ActionOptionInfo>{
+                            "type": ft,
+                            "desc": field.getDescription(),
+                            "short_desc": field.getShortDescription(),
+                            "required": ft.isMandatory(),
+                            "default_value": field.getDefaultValue(),
+                            "allowed_values": field.getAllowedValues(),
+                            "element_allowed_values": field.getElementAllowedValues(),
+                            "example_value": field.getExampleValue(),
+                        };
+                        map remove opt{$1.key}, opt.pairIterator(), !exists $1.value;
+                        if (opt.allowed_values && field.getAllowedValuesCreatable()) {
+                            opt.allowed_values_creatable = True;
+                        }
+                        if (opt.element_allowed_values && field.getElementAllowedValuesCreatable()) {
+                            opt.element_allowed_values_creatable = True;
+                        }
+                        options{field.getName()} = opt;
+                    }
+                }
+                hash<DataProviderActionInfo> action = <DataProviderActionInfo>{
+                    "app": app,
+                    "action": name,
+                    "path": path,
+                    "display_name": AbstractDataField::getDisplayName(info.name),
+                    "short_desc": AbstractDataField::getShortDescription(info.desc),
+                    "desc": info.desc,
+                    "action_code": DPAT_API,
+                    "options": options,
+                };
+                DataProviderActionCatalog::registerAction(action);
+            }
+            if (info.supports_children) {
+                registerActions(app, p, path);
+            }
+        }
     }
 
     #! Returns a list of child data provider names, if any
@@ -140,7 +234,11 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
     private *list<string> getChildProviderNamesImpl() {
         TypeScriptActionInterface::checkAppActions(name);
         *hash<string, DataProvider::AbstractDataProvider> childMap = self.childMap ?? parent.childMap;
-        return keys childMap;
+        *list<string> rv = keys childMap;
+        if (google_api_provider && (*list<string> l = google_api_provider.getChildProviderNames())) {
+            rv += l;
+        }
+        return rv;
     }
 
     #! Returns the given child provider or @ref nothing if the given child is unknown
@@ -161,15 +259,24 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
             }
             return prov;
         }
+        if (google_api_provider && (*AbstractDataProvider p = google_api_provider.getChildProvider(name))
+            && (p instanceof GoogleDataProviderBase)) {
+            p = p.copy();
+            if (!p.getLogger() && logger) {
+                p.setLogger(logger);
+            }
+            cast<GoogleDataProviderBase>(p).setRestClient(conn.get());
+            return p;
+        }
     }
 
     #! Returns data provider static info
     private hash<DataProviderInfo> getStaticInfoImpl() {
         hash<DataProviderInfo> rv = ProviderInfo;
-        if (TypeScriptActionInterface::appSupportsEvents(name)) {
+        if (children_can_support_observers || TypeScriptActionInterface::appSupportsEvents(name)) {
             rv.children_can_support_observers = True;
         }
-        if (TypeScriptActionInterface::appSupportsRecords(name)) {
+        if (children_can_support_records || TypeScriptActionInterface::appSupportsRecords(name)) {
             rv.children_can_support_records = True;
         }
         return rv;

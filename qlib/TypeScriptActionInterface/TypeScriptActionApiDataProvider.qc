@@ -58,10 +58,17 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
         response_type_info.type = response_type;
     }
 
-    private constructor(string name, *hash<AsyncCallInfo> api, ActionFunctionContext fctx)
+    private constructor(string name, *hash<AsyncCallInfo> api, ActionFunctionContext fctx,
+            *hash<AsyncCallInfo> get_dynamic_request_type, *hash<AsyncCallInfo> get_dynamic_response_type)
             : TypeScriptActionDataProviderBase(name, fctx) {
         if (api) {
             self.api = api;
+        }
+        if (get_dynamic_request_type) {
+            request_type_info.get_dynamic_type = get_dynamic_request_type;
+        }
+        if (get_dynamic_response_type) {
+            response_type_info.get_dynamic_type = get_dynamic_response_type;
         }
     }
 
