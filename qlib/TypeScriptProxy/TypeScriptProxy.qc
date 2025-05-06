@@ -42,6 +42,9 @@ public const PC_GET_RESPONSE_TYPE = "GET-RESPONSE-TYPE";
 #! Proxy command "GET-EVENT-TYPE": retrieve a dynamic type based on JS calls
 public const PC_GET_EVENT_TYPE = "GET-EVENT-TYPE";
 
+#! Proxy command "GET-DYNAMIC-OPTIONS": retrieve dynamic options based on JS calls
+public const PC_GET_DYNAMIC_OPTIONS = "GET-DYNAMIC-OPTIONS";
+
 #! Proxy command "EXIT": exit the process
 public const PC_EXIT = "EXIT";
 
@@ -53,6 +56,7 @@ public const ValidCommands = {
     PC_GET_REQUEST_TYPE: True,
     PC_GET_RESPONSE_TYPE: True,
     PC_GET_EVENT_TYPE: True,
+    PC_GET_DYNAMIC_OPTIONS: True,
     PC_EXIT: True,
 };
 

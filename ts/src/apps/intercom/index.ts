@@ -26,6 +26,9 @@ export default (locale: Locales) =>
       oauth2_token_url: 'https://api.intercom.io/auth/eagle/token',
       ping_method: 'GET',
       ping_path: '/me',
+      headers: {
+        Accept: 'application/json',
+      },
     },
     swagger: 'schemas/intercom.swagger.json',
     // swagger_paths: createSwaggerPaths(INTERCOM_ALLOWED_PATHS),

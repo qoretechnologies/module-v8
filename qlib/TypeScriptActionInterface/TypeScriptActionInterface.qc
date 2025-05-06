@@ -1635,15 +1635,16 @@ public class TypeScriptActionInterface {
         root.setLogger(DataProvider::getGlobalLogger());
     }
 
-    static getOptionFunctions(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
-            reference<hash<auto>> h, *bool keep_field_functions) {
-        on_error rethrow $1.err, sprintf("%s (while processing option %y)", $1.desc, key);
-        date io_timeout = seconds(remove h.io_timeout_secs ?? DefaultIoTimeoutSecs);
+    static getOptionAllowedValuesFunction(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
+            reference<hash<auto>> h, *date io_timeout, *bool keep_field_functions) {
         if (exists (auto get_allowed_values = remove h.get_allowed_values)) {
             if (!get_allowed_values.callp()) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
                     "\"get_allowed_values\" attribute; got type %y; expecting a callable value", action.app,
                     action.action, key, get_allowed_values.fullType());
+            }
+            if (!io_timeout) {
+                io_timeout = seconds(remove h.io_timeout_secs ?? DefaultIoTimeoutSecs);
             }
             fctx.omap{key} = <AsyncCallInfo>{
                 "app": action.app,
@@ -1661,11 +1662,18 @@ public class TypeScriptActionInterface {
             # remove any manual allowed values
             remove h.allowed_values;
         }
+    }
+
+    static getOptionElementAllowedValuesFunction(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
+            reference<hash<auto>> h, *date io_timeout, *bool keep_field_functions) {
         if (exists (auto get_element_allowed_values = remove h.get_element_allowed_values)) {
             if (!get_element_allowed_values.callp()) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
                     "\"get_allowed_values\" attribute; got type %y; expecting a callable value", action.app,
                     action.action, key, get_element_allowed_values.fullType());
+            }
+            if (!io_timeout) {
+                io_timeout = seconds(remove h.io_timeout_secs ?? DefaultIoTimeoutSecs);
             }
             fctx.eomap{key} = <AsyncCallInfo>{
                 "app": action.app,
@@ -1683,6 +1691,47 @@ public class TypeScriptActionInterface {
             # remove any manual allowed values
             remove h.element_allowed_values;
         }
+    }
+
+    static getOptionDefaultValueFunction(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
+            reference<hash<auto>> h, *date io_timeout, *bool keep_field_functions) {
+        if (exists (auto get_default_value = h.get_default_value)) {
+            if (!get_default_value.callp()) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
+                    "\"get_default_value\" attribute; got type %y; expecting a callable value", action.app,
+                    action.action, key, get_default_value.fullType());
+            }
+            if (!io_timeout) {
+                io_timeout = seconds(remove h.io_timeout_secs ?? DefaultIoTimeoutSecs);
+            }
+            fctx.dvmap{key} = <AsyncCallInfo>{
+                "app": action.app,
+                "action": action.action,
+                "type": "get_default_value",
+                "label": sprintf("Default value data function for app %y action %y option %y", action.app,
+                    action.action, key),
+                "pool": fctx.pool,
+                "async_call": get_default_value,
+                "to": io_timeout,
+            };
+            TypeScriptActionInterface::registerAsyncCall(\fctx.dvmap{key}, "app", action.app, action.action, key);
+            h.default_ref_data = key;
+            action.data_dependent_options = True;
+            if (!keep_field_functions) {
+                remove h.get_default_value;
+            }
+        }
+    }
+
+    static getOptionFunctions(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
+            reference<hash<auto>> h, *bool keep_field_functions) {
+        on_error rethrow $1.err, sprintf("%s (while processing option %y)", $1.desc, key);
+        date io_timeout = seconds(remove h.io_timeout_secs ?? DefaultIoTimeoutSecs);
+
+        getOptionAllowedValuesFunction(\action, fctx, key, \h, io_timeout, keep_field_functions);
+        getOptionElementAllowedValuesFunction(\action, fctx, key, \h, io_timeout, keep_field_functions);
+        getOptionDefaultValueFunction(\action, fctx, key, \h, io_timeout, keep_field_functions);
+
         if (exists (auto rest_get_allowed_values = remove h.rest_get_allowed_values)) {
             if (rest_get_allowed_values.typeCode() != NT_HASH) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
@@ -1800,29 +1849,6 @@ public class TypeScriptActionInterface {
                 remove h.get_dynamic_type;
             }
         }
-        if (exists (auto get_default_value = h.get_default_value)) {
-            if (!get_default_value.callp()) {
-                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
-                    "\"get_default_value\" attribute; got type %y; expecting a callable value", action.app,
-                    action.action, key, get_default_value.fullType());
-            }
-            fctx.dvmap{key} = <AsyncCallInfo>{
-                "app": action.app,
-                "action": action.action,
-                "type": "get_default_value",
-                "label": sprintf("Default value data function for app %y action %y option %y", action.app,
-                    action.action, key),
-                "pool": fctx.pool,
-                "async_call": get_default_value,
-                "to": io_timeout,
-            };
-            TypeScriptActionInterface::registerAsyncCall(\fctx.dvmap{key}, "app", action.app, action.action, key);
-            h.default_ref_data = key;
-            action.data_dependent_options = True;
-            if (!keep_field_functions) {
-                remove h.get_default_value;
-            }
-        }
         if (h.required && !h.preselected && !exists h.default_value) {
             h.preselected = True;
         }
@@ -1874,7 +1900,7 @@ public class TypeScriptActionInterface {
         opts = new_opts;
     }
 
-    static hash<ActionOptionInfo> getOptionInfo(string path, hash<auto> opt, *ActionFunctionContext fctx) {
+    static hash<auto> getOptionHashInfo(string path, hash<auto> opt, *ActionFunctionContext fctx) {
         opt.type = TypeScriptActionInterface::getType(path, opt.type, opt.required, remove opt.element_type, fctx);
         if (opt.allowed_values) {
             opt.allowed_values = map cast<hash<AllowedValueInfo>>($1), opt.allowed_values;
@@ -1885,7 +1911,11 @@ public class TypeScriptActionInterface {
         if (opt.required_groups) {
             opt.required_groups = cast<list<string>>(opt.required_groups);
         }
-        return cast<hash<ActionOptionInfo>>(opt);
+        return opt;
+    }
+
+    static hash<ActionOptionInfo> getOptionInfo(string path, hash<auto> opt, *ActionFunctionContext fctx) {
+        return cast<hash<ActionOptionInfo>>(getOptionHashInfo(path, opt, fctx));
     }
 
     static AbstractDataProviderType getType(string path, string name, *bool required, auto element_type,

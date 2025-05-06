@@ -97,7 +97,10 @@ public class TypeScriptAppRestClient inherits RestClient {
 public class TypeScriptAppRestConnection inherits RestConnection {
     private {
         string scheme;
+        #! App name in lower case for use with most internal APIs
         string app;
+        #! Case-sensitive app name for reporting the app name
+        string appname;
         hash<ConnectionSchemeInfo> info;
         *hash<string, bool> url_template_options;
         *hash<AsyncCallInfo> post_auth;
@@ -181,7 +184,7 @@ public class TypeScriptAppRestConnection inherits RestConnection {
 
     #! Returns the app name
     *string getAppName() {
-        return app;
+        return appname;
     }
 
     #! returns the type
@@ -293,6 +296,7 @@ public class TypeScriptAppRestConnection inherits RestConnection {
                 "in URL %y", scheme, url);
         }
         self.app = app;
+        appname = TypeScriptActionInterface::getCamelCaseAppName(app);
         url_template_options = TypeScriptActionInterface::getUrlTemplateOptions(app);
         info = ConnectionSchemeCache::getSchemeEx(scheme);
     }
