@@ -1,7 +1,8 @@
 import {
-  IQoreAllowedValue,
+  TCustomConnOptions,
   TQoreAnyType,
   TQoreAppActionOption,
+  TQoreGetAllowedValuesFunction,
   TQoreOptions,
   TQoreType,
   TQoreTypeObject,
@@ -54,19 +55,19 @@ export type TAttioTargetRecord = {
 
 const getAllowedValuesConfig = (
   type: TQoreType | TQoreAnyType,
-  allowed_values: IQoreAllowedValue<any>[]
+  get_allowed_values: TQoreGetAllowedValuesFunction<TCustomConnOptions, string>
 ) => {
   const isListType = type === 'list' || (typeof type === 'object' && type.type === 'list');
 
   if (isListType) {
     return {
-      element_allowed_values: allowed_values,
+      get_element_allowed_values: get_allowed_values,
       element_allowed_values_creatable: true,
     };
   }
 
   return {
-    allowed_values,
+    get_allowed_values: get_allowed_values,
     allowed_values_creatable: true,
   };
 };
@@ -119,21 +120,19 @@ export const getAttioAttributesAsQoreOptions = async (
 
   const qoreOptions: TQoreOptions = {};
 
-  await Promise.all(
-    filteredAttributes.map(async (attribute) => {
-      qoreOptions[attribute.api_slug] = await mapAttioAttributeToQoreOption(attribute, token);
-    })
-  );
+  filteredAttributes.forEach((attribute) => {
+    qoreOptions[attribute.api_slug] = mapAttioAttributeToQoreOption(attribute, token);
+  });
 
   return qoreOptions;
 };
 
-export const mapAttioAttributeToQoreOption = async (
+export const mapAttioAttributeToQoreOption = (
   attribute: TAttioAttribute,
   token: string
-): Promise<TQoreAppActionOption> => {
+): TQoreAppActionOption => {
   const { title, description, type, is_required } = attribute;
-  let allowed_values: IQoreAllowedValue<string>[] | undefined;
+  let get_allowed_values: TQoreGetAllowedValuesFunction<TCustomConnOptions, string> | undefined;
 
   const qorusType = ATTIO_TO_QORUS_TYPE_MAP[type];
   let qorusFixedType: TQoreType | TQoreTypeObject = qorusType;
@@ -156,36 +155,43 @@ export const mapAttioAttributeToQoreOption = async (
   }
 
   if (attribute.type === 'select') {
-    allowed_values = await getAttioAllowedValues<
-      {
-        id: { option_id: string };
-        title: string;
-        is_archived: boolean;
-      },
-      string
-    >({
-      token,
-      path: `objects/${attribute.id.object_id}/attributes/${attribute.id.attribute_id}/options`,
-      mapItemToAllowedValue: (item) => ({
-        display_name: item.title,
-        value: item.id.option_id,
-      }),
-    });
+    get_allowed_values = async () => {
+      return await getAttioAllowedValues<
+        {
+          id: { option_id: string };
+          title: string;
+          is_archived: boolean;
+        },
+        string
+      >({
+        token,
+        path: `objects/${attribute.id.object_id}/attributes/${attribute.id.attribute_id}/options`,
+        mapItemToAllowedValue: (item) => ({
+          display_name: item.title,
+          value: item.id.option_id,
+        }),
+      });
+    };
   }
 
   if (type === 'record-reference') {
-    const targetAllowedValues = await getAttioAllowedValues<TAttioTargetRecord, string>({
-      path: `objects/${attribute.relationship.id.object_id}/records/query`,
-      token,
-      method: 'POST',
-      mapItemToAllowedValue: (item) => ({
-        display_name:
-          item.values.name[0].value ||
-          item.values.name[0].full_name ||
-          item.values.record_id[0].value,
-        value: item.values.record_id[0].value,
-      }),
-    });
+    const targetAllowedValuesFunction: TQoreGetAllowedValuesFunction<
+      TCustomConnOptions,
+      string
+    > = async () => {
+      return await getAttioAllowedValues<TAttioTargetRecord, string>({
+        path: `objects/${attribute.relationship.id.object_id}/records/query`,
+        token,
+        method: 'POST',
+        mapItemToAllowedValue: (item) => ({
+          display_name:
+            item.values.name[0].value ||
+            item.values.name[0].full_name ||
+            item.values.record_id[0].value,
+          value: item.values.record_id[0].value,
+        }),
+      });
+    };
 
     const referenceFields = {
       target_object: {
@@ -201,8 +207,7 @@ export const mapAttioAttributeToQoreOption = async (
         type: 'string',
         required: true,
         allowed_values_creatable: true,
-        allowed_values: targetAllowedValues,
-        default_value: targetAllowedValues[0]?.value,
+        get_allowed_values: targetAllowedValuesFunction,
       },
     } satisfies TQoreOptions;
 
@@ -230,7 +235,8 @@ export const mapAttioAttributeToQoreOption = async (
     type: qorusFixedType as TQoreAnyType,
   };
 
-  if (allowed_values) Object.assign(result, getAllowedValuesConfig(qorusFixedType, allowed_values));
+  if (get_allowed_values)
+    Object.assign(result, getAllowedValuesConfig(qorusFixedType, get_allowed_values));
 
   return result;
 };

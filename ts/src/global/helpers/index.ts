@@ -521,3 +521,64 @@ export const fixOptions = (
 export const delay = (ms: number): Promise<void> => {
   return new Promise<void>((resolve) => setTimeout(resolve, ms));
 };
+
+type ErrorConstructor = new (message: string) => Error;
+
+type TOptions = Record<string, any>;
+type TQoreAppActionFunctionContext<
+  TConn extends Record<string, any> = Record<string, any>,
+  TOpts extends TOptions = TOptions,
+> = {
+  opts?: TOpts;
+  conn_opts?: TConn;
+};
+
+export const getQoreContextRequiredValues = <
+  ReturnTypeOverride extends Record<string, any> = never,
+  TConn extends Record<string, any> = Record<string, any>,
+  TOpts extends TOptions = TOptions,
+  OptKeys extends keyof TOpts = keyof TOpts,
+  ConnKeys extends keyof TConn = keyof TConn,
+>(options: {
+  context: TQoreAppActionFunctionContext<TConn, TOpts>;
+  optionFields?: readonly OptKeys[];
+  connectionFields?: readonly ConnKeys[];
+  ErrorClass?: ErrorConstructor;
+}): ReturnTypeOverride extends never ? { [K in OptKeys | ConnKeys]: any } : ReturnTypeOverride => {
+  const {
+    context,
+    optionFields = [] as readonly OptKeys[],
+    connectionFields = [] as readonly ConnKeys[],
+    ErrorClass = Error,
+  } = options;
+  const missingOptions: OptKeys[] = [];
+  const missingConnections: ConnKeys[] = [];
+  const result = {} as ReturnTypeOverride extends never
+    ? { [K in OptKeys | ConnKeys]: any }
+    : ReturnTypeOverride;
+  if (optionFields.length === 0 && connectionFields.length === 0) {
+    return result;
+  }
+  optionFields.forEach((field) => {
+    const value = context?.opts?.[field];
+    if (value === undefined || value === null || value === '') {
+      missingOptions.push(field);
+    } else {
+      (result as any)[field] = value;
+    }
+  });
+  connectionFields.forEach((field) => {
+    const value = context?.conn_opts?.[field];
+    if (value === undefined || value === null || value === '') {
+      missingConnections.push(field);
+    } else {
+      (result as any)[field] = value;
+    }
+  });
+  const missingFields = [...missingOptions, ...missingConnections] as string[];
+  if (missingFields.length > 0) {
+    throw new ErrorClass(`Missing required values: ${missingFields.join(', ')}`);
+  }
+
+  return result;
+};

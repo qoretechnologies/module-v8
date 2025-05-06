@@ -10,6 +10,8 @@ import { getAttioListApiSlugAllowedValues } from '../helpers/get-list-allowed-va
 import { getAttioAttributesAsQoreOptions } from '../helpers/get-object-properties';
 import { getAttioListParentRecordIdAllowedValues } from '../helpers/get-list-parent-record-id-allowed-values';
 import { getListParentObjectDefaultValue } from '../helpers/get-list-parent-object-default-value';
+import { getQoreContextRequiredValues } from '../../../global/helpers';
+import { getAttioResponseType } from '../helpers/get-response-type';
 
 const options = {
   list: {
@@ -105,6 +107,21 @@ const createAttioListEntry = QoreAppCreator.createLocalizedAction<
     } catch (error) {
       throw new AttioError(`Failed to create list entry: ${error}`);
     }
+  },
+  get_dynamic_response_type: async (context) => {
+    if (!context) throw new AttioError('Context is required to get dynamic response type');
+
+    const { list, token } = getQoreContextRequiredValues({
+      context,
+      optionFields: ['list'],
+      connectionFields: ['token'],
+      ErrorClass: AttioError,
+    });
+
+    return await getAttioResponseType({
+      list,
+      token,
+    });
   },
 });
 

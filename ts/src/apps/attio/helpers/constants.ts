@@ -5,8 +5,7 @@ import {
   TQoreAppActionFunctionContext,
 } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
-import { ATTIO_APP_API_URL, ATTIO_APP_NAME, AttioError } from '../constants';
-import { IEndpoint } from '@qoretechnologies/ts-toolkit/dist/QorusAuthenticator';
+import { AttioEndpointData, AttioError } from '../constants';
 
 const MAX_ITEMS_PER_PAGE = 50;
 const MAX_PAGES = 10;
@@ -35,14 +34,9 @@ export interface IFetchAttioAllowedValuesOptions<TItemType, TAllowedValueType>
 
 export type QorusRequestResponse<TItemType> = { data: { data: TItemType[] } };
 
-const endpointData = {
-  url: ATTIO_APP_API_URL,
-  endpointId: ATTIO_APP_NAME,
-} satisfies IEndpoint;
-
-export const fetchAttioData = async <TItemType>(
+export const fetchAttioData = async <TItemType, TResponseType = TItemType[]>(
   options: IFetchAttioDataOptions
-): Promise<TItemType[]> => {
+): Promise<TResponseType> => {
   const { token, path, method = 'GET' } = options;
   let { body = {}, params = {} } = options;
 
@@ -83,12 +77,12 @@ export const fetchAttioData = async <TItemType>(
             ...commonRequestOptions,
             data: body,
           },
-          endpointData
+          AttioEndpointData
         );
       } else {
         response = await QorusRequest.get<QorusRequestResponse<TItemType>>(
           commonRequestOptions,
-          endpointData
+          AttioEndpointData
         );
       }
 
@@ -111,7 +105,7 @@ export const fetchAttioData = async <TItemType>(
       }
     }
 
-    return allData as TItemType[];
+    return allData as TResponseType;
   } catch (error) {
     throw new AttioError(`Failed to fetch data from Attio API for ${path}: ${error}`);
   }

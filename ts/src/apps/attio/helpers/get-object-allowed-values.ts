@@ -17,17 +17,19 @@ interface AttioObject {
   created_at: string;
 }
 
-const mapAttioObjectToAllowedValue = (item: AttioObject): IQoreAllowedValue<string> => {
-  return {
-    display_name: item.singular_noun,
-    value: item.api_slug,
-    desc:
-      `Object ID: ${item.id.object_id}\n` +
-      `Plural: ${item.plural_noun}\n` +
-      `API Slug: ${item.api_slug}\n` +
-      `Created: ${new Date(item.created_at).toLocaleString()}`,
+const createAttioObjectToAllowedValueMapFunction =
+  (valueField: 'id' | 'api_slug') =>
+  (item: AttioObject): IQoreAllowedValue<string> => {
+    return {
+      display_name: item.singular_noun,
+      value: valueField === 'id' ? item.id.object_id : item.api_slug,
+      desc:
+        `Object ID: ${item.id.object_id}\n` +
+        `Plural: ${item.plural_noun}\n` +
+        `API Slug: ${item.api_slug}\n` +
+        `Created: ${new Date(item.created_at).toLocaleString()}`,
+    };
   };
-};
 
 export const getAttioObjectApiSlugAllowedValues: TQoreGetAllowedValuesFunction<
   TCustomConnOptions,
@@ -40,7 +42,25 @@ export const getAttioObjectApiSlugAllowedValues: TQoreGetAllowedValuesFunction<
       token,
       path: 'objects',
       method: 'GET',
-      mapItemToAllowedValue: mapAttioObjectToAllowedValue,
+      mapItemToAllowedValue: createAttioObjectToAllowedValueMapFunction('api_slug'),
+    });
+  } catch (error) {
+    throw new AttioError(`Failed to get Attio objects allowed values: ${error}`);
+  }
+};
+
+export const getAttioObjectIdAllowedValues: TQoreGetAllowedValuesFunction<
+  TCustomConnOptions,
+  string
+> = async (context) => {
+  try {
+    const token = getAttioTokenRequired(context);
+
+    return await getAttioAllowedValues<AttioObject, string>({
+      token,
+      path: 'objects',
+      method: 'GET',
+      mapItemToAllowedValue: createAttioObjectToAllowedValueMapFunction('id'),
     });
   } catch (error) {
     throw new AttioError(`Failed to get Attio objects allowed values: ${error}`);

@@ -32,7 +32,8 @@ export const getAttioObjectRecordIdAllowedValues: TQoreGetAllowedValuesFunction<
 > = async (context) => {
   try {
     const token = getAttioTokenRequired(context);
-    const object = context?.opts?.object;
+    const object =
+      context?.opts?.object || context?.opts?.parent_object || context?.opts?.linked_object;
 
     if (!object) {
       throw new Error('Object is required to get allowed values for records');

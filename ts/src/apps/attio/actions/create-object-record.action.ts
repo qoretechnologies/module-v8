@@ -9,6 +9,8 @@ import { getAttioObjectApiSlugAllowedValues } from '../helpers/get-object-allowe
 import { AttioCompanyRequiredFields, AttioPersonRequiredFields } from '../helpers/constants';
 import { formatAttioResponse } from '../helpers/format-response';
 import { getAttioAttributesAsQoreOptions } from '../helpers/get-object-properties';
+import { getQoreContextRequiredValues } from '../../../global/helpers';
+import { getAttioResponseType } from '../helpers/get-response-type';
 
 const setRequiredFields = (object: string, attributes: TQoreOptions) => {
   let requiredFields: string[] = [];
@@ -111,6 +113,21 @@ const createAttioObjectRecord = QoreAppCreator.createLocalizedAction<
     } catch (error) {
       throw new AttioError(`Failed to create object record: ${error}`);
     }
+  },
+  get_dynamic_response_type: async (context) => {
+    if (!context) throw new AttioError('Context is required to get dynamic response type');
+
+    const { object, token } = getQoreContextRequiredValues({
+      context,
+      optionFields: ['object'],
+      connectionFields: ['token'],
+      ErrorClass: AttioError,
+    });
+
+    return await getAttioResponseType({
+      object,
+      token,
+    });
   },
 });
 

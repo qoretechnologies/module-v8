@@ -1,10 +1,12 @@
-import axios from 'axios';
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
+import axios from 'axios';
+import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { ATTIO_APP_API_URL, ATTIO_APP_NAME, AttioError } from '../constants';
 import { formatAttioResponse } from '../helpers/format-response';
 import { getAttioObjectApiSlugAllowedValues } from '../helpers/get-object-allowed-values';
 import { getAttioAttributesAsQoreOptions } from '../helpers/get-object-properties';
 import { getAttioObjectRecordIdAllowedValues } from '../helpers/get-object-record-id-allowed-values';
+import { getAttioResponseType } from '../helpers/get-response-type';
 
 const options = {
   object: {
@@ -96,6 +98,21 @@ const updateAttioObjectRecord = QoreAppCreator.createLocalizedAction<
     } catch (error) {
       throw new AttioError(`Failed to update object record: ${error}`);
     }
+  },
+  get_dynamic_response_type: async (context) => {
+    if (!context) throw new AttioError('Context is required to get dynamic response type');
+
+    const { object, token } = getQoreContextRequiredValues({
+      context,
+      optionFields: ['object'],
+      connectionFields: ['token'],
+      ErrorClass: AttioError,
+    });
+
+    return await getAttioResponseType({
+      object,
+      token,
+    });
   },
 });
 

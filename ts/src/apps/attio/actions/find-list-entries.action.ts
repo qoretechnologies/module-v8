@@ -3,11 +3,15 @@ import {
   QoreAppCreator,
   QorusRequest,
   TQoreOptions,
+  TQoreResponseType,
+  TQoreTypeObject,
 } from '@qoretechnologies/ts-toolkit';
+import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { ATTIO_APP_API_URL, ATTIO_APP_NAME, AttioError } from '../constants';
 import { formatAttioResponse } from '../helpers/format-response';
 import { getAttioListAttributesAllowedValues } from '../helpers/get-attio-list-attribute-allowed-values';
 import { getAttioListApiSlugAllowedValues } from '../helpers/get-list-allowed-values';
+import { getAttioResponseType } from '../helpers/get-response-type';
 
 const options = {
   list: {
@@ -123,6 +127,27 @@ const findAttioListEntries = QoreAppCreator.createLocalizedAction<typeof options
     } catch (error) {
       throw new AttioError(`Failed to find list entries: ${error}`);
     }
+  },
+
+  get_dynamic_response_type: async (context) => {
+    if (!context) throw new AttioError('Context is required to get dynamic response type');
+
+    const { list, token } = getQoreContextRequiredValues({
+      context,
+      optionFields: ['list'],
+      connectionFields: ['token'],
+      ErrorClass: AttioError,
+    });
+
+    const entryType = await getAttioResponseType({
+      list,
+      token,
+    });
+
+    return {
+      type: 'list',
+      element_type: entryType as TQoreTypeObject,
+    } satisfies TQoreResponseType;
   },
 });
 

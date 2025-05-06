@@ -184,8 +184,664 @@ type RootTranslation = {
 			 */
 			longDesc: string
 			triggers: {
+				list_entry_created: {
+					/**
+					 * N​e​w​ ​L​i​s​t​ ​E​n​t​r​y​ ​C​r​e​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​e​n​t​r​y​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​n​ ​A​t​t​i​o​ ​l​i​s​t​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​e​n​t​r​y​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​A​t​t​i​o​ ​l​i​s​t​.​ ​I​t​ ​p​r​o​v​i​d​e​s​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​c​r​e​a​t​e​d​ ​e​n​t​r​y​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​I​D​,​ ​p​a​r​e​n​t​ ​o​b​j​e​c​t​,​ ​a​n​d​ ​t​h​e​ ​a​c​t​o​r​ ​w​h​o​ ​c​r​e​a​t​e​d​ ​i​t​.
+					 */
+					longDesc: string
+					options: {
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​t​t​i​o​ ​l​i​s​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​e​n​t​r​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​P​I​ ​s​l​u​g​ ​o​f​ ​t​h​e​ ​A​t​t​i​o​ ​l​i​s​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​e​n​t​r​i​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_entry_updated: {
+					/**
+					 * L​i​s​t​ ​E​n​t​r​y​ ​U​p​d​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​e​n​t​r​y​ ​i​s​ ​u​p​d​a​t​e​d​ ​i​n​ ​a​n​ ​A​t​t​i​o​ ​l​i​s​t​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​n​ ​e​n​t​r​y​ ​i​s​ ​u​p​d​a​t​e​d​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​A​t​t​i​o​ ​l​i​s​t​.​ ​I​t​ ​p​r​o​v​i​d​e​s​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​u​p​d​a​t​e​d​ ​e​n​t​r​y​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​I​D​,​ ​p​a​r​e​n​t​ ​o​b​j​e​c​t​,​ ​t​h​e​ ​a​c​t​o​r​ ​w​h​o​ ​m​a​d​e​ ​t​h​e​ ​u​p​d​a​t​e​,​ ​a​n​d​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​c​h​a​n​g​e​s​ ​t​h​a​t​ ​w​e​r​e​ ​m​a​d​e​.
+					 */
+					longDesc: string
+					options: {
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​t​t​i​o​ ​l​i​s​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​u​p​d​a​t​e​d​ ​e​n​t​r​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​P​I​ ​s​l​u​g​ ​o​f​ ​t​h​e​ ​A​t​t​i​o​ ​l​i​s​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​u​p​d​a​t​e​d​ ​e​n​t​r​i​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_entry_deleted: {
+					/**
+					 * L​i​s​t​ ​E​n​t​r​y​ ​D​e​l​e​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​e​n​t​r​y​ ​i​s​ ​d​e​l​e​t​e​d​ ​f​r​o​m​ ​a​n​ ​A​t​t​i​o​ ​l​i​s​t​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​n​ ​e​n​t​r​y​ ​i​s​ ​d​e​l​e​t​e​d​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​A​t​t​i​o​ ​l​i​s​t​.​ ​I​t​ ​p​r​o​v​i​d​e​s​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​d​e​l​e​t​e​d​ ​e​n​t​r​y​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​I​D​,​ ​p​a​r​e​n​t​ ​o​b​j​e​c​t​,​ ​a​n​d​ ​t​h​e​ ​a​c​t​o​r​ ​w​h​o​ ​p​e​r​f​o​r​m​e​d​ ​t​h​e​ ​d​e​l​e​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​t​t​i​o​ ​l​i​s​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​d​e​l​e​t​e​d​ ​e​n​t​r​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​P​I​ ​s​l​u​g​ ​o​f​ ​t​h​e​ ​A​t​t​i​o​ ​l​i​s​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​d​e​l​e​t​e​d​ ​e​n​t​r​i​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				object_record_created: {
+					/**
+					 * N​e​w​ ​O​b​j​e​c​t​ ​R​e​c​o​r​d​ ​C​r​e​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​i​s​ ​c​r​e​a​t​e​d​ ​f​o​r​ ​a​n​ ​A​t​t​i​o​ ​o​b​j​e​c​t​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​i​s​ ​c​r​e​a​t​e​d​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​A​t​t​i​o​ ​o​b​j​e​c​t​.​ ​I​t​ ​p​r​o​v​i​d​e​s​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​c​r​e​a​t​e​d​ ​r​e​c​o​r​d​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​I​D​,​ ​o​b​j​e​c​t​ ​t​y​p​e​,​ ​a​n​d​ ​t​h​e​ ​a​c​t​o​r​ ​w​h​o​ ​c​r​e​a​t​e​d​ ​i​t​.
+					 */
+					longDesc: string
+					options: {
+						object: {
+							/**
+							 * O​b​j​e​c​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​t​t​i​o​ ​o​b​j​e​c​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​r​e​c​o​r​d​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​P​I​ ​s​l​u​g​ ​o​f​ ​t​h​e​ ​A​t​t​i​o​ ​o​b​j​e​c​t​ ​t​y​p​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​r​e​c​o​r​d​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				object_record_updated: {
+					/**
+					 * O​b​j​e​c​t​ ​R​e​c​o​r​d​ ​U​p​d​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​r​e​c​o​r​d​ ​i​s​ ​u​p​d​a​t​e​d​ ​f​o​r​ ​a​n​ ​A​t​t​i​o​ ​o​b​j​e​c​t​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​r​e​c​o​r​d​ ​i​s​ ​u​p​d​a​t​e​d​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​A​t​t​i​o​ ​o​b​j​e​c​t​.​ ​I​t​ ​p​r​o​v​i​d​e​s​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​u​p​d​a​t​e​d​ ​r​e​c​o​r​d​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​I​D​,​ ​o​b​j​e​c​t​ ​t​y​p​e​,​ ​t​h​e​ ​a​c​t​o​r​ ​w​h​o​ ​m​a​d​e​ ​t​h​e​ ​u​p​d​a​t​e​,​ ​a​n​d​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​c​h​a​n​g​e​s​ ​t​h​a​t​ ​w​e​r​e​ ​m​a​d​e​.
+					 */
+					longDesc: string
+					options: {
+						object: {
+							/**
+							 * O​b​j​e​c​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​t​t​i​o​ ​o​b​j​e​c​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​u​p​d​a​t​e​d​ ​r​e​c​o​r​d​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​P​I​ ​s​l​u​g​ ​o​f​ ​t​h​e​ ​A​t​t​i​o​ ​o​b​j​e​c​t​ ​t​y​p​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​u​p​d​a​t​e​d​ ​r​e​c​o​r​d​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				object_record_deleted: {
+					/**
+					 * O​b​j​e​c​t​ ​R​e​c​o​r​d​ ​D​e​l​e​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​r​e​c​o​r​d​ ​i​s​ ​d​e​l​e​t​e​d​ ​f​r​o​m​ ​a​n​ ​A​t​t​i​o​ ​o​b​j​e​c​t​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​r​e​c​o​r​d​ ​i​s​ ​d​e​l​e​t​e​d​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​A​t​t​i​o​ ​o​b​j​e​c​t​.​ ​I​t​ ​p​r​o​v​i​d​e​s​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​d​e​l​e​t​e​d​ ​r​e​c​o​r​d​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​I​D​,​ ​o​b​j​e​c​t​ ​t​y​p​e​,​ ​a​n​d​ ​t​h​e​ ​a​c​t​o​r​ ​w​h​o​ ​p​e​r​f​o​r​m​e​d​ ​t​h​e​ ​d​e​l​e​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						object: {
+							/**
+							 * O​b​j​e​c​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​t​t​i​o​ ​o​b​j​e​c​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​d​e​l​e​t​e​d​ ​r​e​c​o​r​d​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​P​I​ ​s​l​u​g​ ​o​f​ ​t​h​e​ ​A​t​t​i​o​ ​o​b​j​e​c​t​ ​t​y​p​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​d​e​l​e​t​e​d​ ​r​e​c​o​r​d​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				task_created: {
+					/**
+					 * N​e​w​ ​T​a​s​k​ ​C​r​e​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​a​s​k​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​A​t​t​i​o​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​t​a​s​k​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​y​o​u​r​ ​A​t​t​i​o​ ​w​o​r​k​s​p​a​c​e​.​ ​I​t​ ​p​r​o​v​i​d​e​s​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​c​r​e​a​t​e​d​ ​t​a​s​k​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​I​D​,​ ​t​i​t​l​e​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​a​s​s​i​g​n​e​e​s​,​ ​d​u​e​ ​d​a​t​e​,​ ​a​n​d​ ​t​h​e​ ​a​c​t​o​r​ ​w​h​o​ ​c​r​e​a​t​e​d​ ​i​t​.
+					 */
+					longDesc: string
+				}
 			}
 			actions: {
+				create_note: {
+					/**
+					 * C​r​e​a​t​e​ ​N​o​t​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​n​o​t​e​ ​a​t​t​a​c​h​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​r​e​c​o​r​d​ ​i​n​ ​A​t​t​i​o​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​a​c​t​i​o​n​ ​c​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​n​o​t​e​ ​a​n​d​ ​a​t​t​a​c​h​e​s​ ​i​t​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​r​e​c​o​r​d​ ​w​i​t​h​i​n​ ​a​n​ ​A​t​t​i​o​ ​o​b​j​e​c​t​.​ ​N​o​t​e​s​ ​c​a​n​ ​b​e​ ​w​r​i​t​t​e​n​ ​i​n​ ​p​l​a​i​n​ ​t​e​x​t​ ​o​r​ ​m​a​r​k​d​o​w​n​ ​f​o​r​m​a​t​ ​a​n​d​ ​i​n​c​l​u​d​e​ ​a​ ​t​i​t​l​e​ ​a​n​d​ ​c​o​n​t​e​n​t​ ​b​o​d​y​.​ ​T​h​e​y​ ​s​e​r​v​e​ ​a​s​ ​a​ ​w​a​y​ ​t​o​ ​d​o​c​u​m​e​n​t​ ​i​m​p​o​r​t​a​n​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​r​e​c​o​r​d​s​ ​i​n​ ​y​o​u​r​ ​w​o​r​k​s​p​a​c​e​.
+					 */
+					longDesc: string
+					options: {
+						parent_object: {
+							/**
+							 * P​a​r​e​n​t​ ​O​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​o​b​j​e​c​t​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​a​t​t​a​c​h​ ​t​h​e​ ​n​o​t​e​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​t​t​i​o​ ​o​b​j​e​c​t​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​t​t​a​c​h​ ​t​h​i​s​ ​n​o​t​e​ ​t​o​.​ ​T​h​i​s​ ​d​e​f​i​n​e​s​ ​w​h​i​c​h​ ​o​b​j​e​c​t​ ​t​y​p​e​ ​t​h​e​ ​n​o​t​e​ ​w​i​l​l​ ​b​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​.
+							 */
+							longDesc: string
+						}
+						parent_record_id: {
+							/**
+							 * P​a​r​e​n​t​ ​R​e​c​o​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​r​e​c​o​r​d​ ​t​o​ ​a​t​t​a​c​h​ ​t​h​e​ ​n​o​t​e​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​r​e​c​o​r​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​p​a​r​e​n​t​ ​o​b​j​e​c​t​ ​t​h​a​t​ ​t​h​i​s​ ​n​o​t​e​ ​s​h​o​u​l​d​ ​b​e​ ​a​t​t​a​c​h​e​d​ ​t​o​.​ ​A​v​a​i​l​a​b​l​e​ ​o​p​t​i​o​n​s​ ​w​i​l​l​ ​b​e​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​ ​p​a​r​e​n​t​ ​o​b​j​e​c​t​ ​y​o​u​ ​s​e​l​e​c​t​e​d​.
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​n​o​t​e
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​a​ ​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​n​o​t​e​.​ ​T​h​i​s​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​a​s​ ​t​h​e​ ​h​e​a​d​i​n​g​ ​w​h​e​n​ ​v​i​e​w​i​n​g​ ​t​h​e​ ​n​o​t​e​ ​i​n​ ​A​t​t​i​o​.
+							 */
+							longDesc: string
+						}
+						format: {
+							/**
+							 * F​o​r​m​a​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​f​o​r​m​a​t​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​e​ ​n​o​t​e​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​n​o​t​e​ ​c​o​n​t​e​n​t​ ​s​h​o​u​l​d​ ​b​e​ ​t​r​e​a​t​e​d​ ​a​s​ ​p​l​a​i​n​ ​t​e​x​t​ ​o​r​ ​m​a​r​k​d​o​w​n​.​ ​M​a​r​k​d​o​w​n​ ​a​l​l​o​w​s​ ​f​o​r​ ​r​i​c​h​ ​t​e​x​t​ ​f​o​r​m​a​t​t​i​n​g​ ​i​n​c​l​u​d​i​n​g​ ​h​e​a​d​e​r​s​,​ ​l​i​s​t​s​,​ ​l​i​n​k​s​,​ ​a​n​d​ ​m​o​r​e​.
+							 */
+							longDesc: string
+						}
+						content: {
+							/**
+							 * C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​m​a​i​n​ ​b​o​d​y​ ​t​e​x​t​ ​o​f​ ​t​h​e​ ​n​o​t​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​f​o​r​ ​y​o​u​r​ ​n​o​t​e​.​ ​T​h​i​s​ ​c​a​n​ ​b​e​ ​f​o​r​m​a​t​t​e​d​ ​a​c​c​o​r​d​i​n​g​ ​t​o​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​f​o​r​m​a​t​ ​t​y​p​e​ ​(​p​l​a​i​n​ ​t​e​x​t​ ​o​r​ ​m​a​r​k​d​o​w​n​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_task: {
+					/**
+					 * C​r​e​a​t​e​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​t​a​s​k​ ​i​n​ ​A​t​t​i​o​ ​w​i​t​h​ ​s​p​e​c​i​f​i​e​d​ ​d​e​t​a​i​l​s​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​a​c​t​i​o​n​ ​c​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​t​a​s​k​ ​i​n​ ​A​t​t​i​o​ ​w​i​t​h​ ​c​o​n​t​e​n​t​,​ ​d​e​a​d​l​i​n​e​,​ ​c​o​m​p​l​e​t​i​o​n​ ​s​t​a​t​u​s​,​ ​a​n​d​ ​o​p​t​i​o​n​a​l​ ​a​s​s​i​g​n​e​e​s​.​ ​Y​o​u​ ​c​a​n​ ​s​e​t​ ​t​h​e​ ​t​a​s​k​ ​c​o​n​t​e​n​t​,​ ​s​p​e​c​i​f​y​ ​a​ ​d​e​a​d​l​i​n​e​ ​d​a​t​e​,​ ​m​a​r​k​ ​i​t​ ​a​s​ ​c​o​m​p​l​e​t​e​d​ ​o​r​ ​n​o​t​,​ ​a​n​d​ ​a​s​s​i​g​n​ ​i​t​ ​t​o​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​w​o​r​k​s​p​a​c​e​ ​m​e​m​b​e​r​s​.
+					 */
+					longDesc: string
+					options: {
+						content: {
+							/**
+							 * T​a​s​k​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​o​r​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​o​r​ ​d​e​s​c​r​i​p​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​t​a​s​k​.​ ​T​h​i​s​ ​w​i​l​l​ ​b​e​ ​t​h​e​ ​m​a​i​n​ ​t​e​x​t​ ​d​e​s​c​r​i​b​i​n​g​ ​w​h​a​t​ ​n​e​e​d​s​ ​t​o​ ​b​e​ ​d​o​n​e​.
+							 */
+							longDesc: string
+						}
+						deadline_at: {
+							/**
+							 * D​e​a​d​l​i​n​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​e​a​d​l​i​n​e​ ​d​a​t​e​ ​f​o​r​ ​t​h​e​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​b​y​ ​w​h​i​c​h​ ​t​h​e​ ​t​a​s​k​ ​s​h​o​u​l​d​ ​b​e​ ​c​o​m​p​l​e​t​e​d​.​ ​T​h​i​s​ ​w​i​l​l​ ​b​e​ ​d​i​s​p​l​a​y​e​d​ ​i​n​ ​t​h​e​ ​t​a​s​k​ ​d​e​t​a​i​l​s​ ​a​n​d​ ​c​a​n​ ​b​e​ ​u​s​e​d​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​a​n​d​ ​f​i​l​t​e​r​i​n​g​ ​t​a​s​k​s​.
+							 */
+							longDesc: string
+						}
+						is_completed: {
+							/**
+							 * C​o​m​p​l​e​t​e​d
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​e​ ​t​a​s​k​ ​i​s​ ​a​l​r​e​a​d​y​ ​c​o​m​p​l​e​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​t​a​s​k​ ​s​h​o​u​l​d​ ​b​e​ ​m​a​r​k​e​d​ ​a​s​ ​c​o​m​p​l​e​t​e​d​ ​w​h​e​n​ ​c​r​e​a​t​e​d​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​f​a​l​s​e​ ​(​t​a​s​k​ ​i​s​ ​n​o​t​ ​c​o​m​p​l​e​t​e​d​)​.
+							 */
+							longDesc: string
+						}
+						assignees: {
+							/**
+							 * A​s​s​i​g​n​e​e​s
+							 */
+							displayName: string
+							/**
+							 * W​o​r​k​s​p​a​c​e​ ​m​e​m​b​e​r​s​ ​t​o​ ​a​s​s​i​g​n​ ​t​h​e​ ​t​a​s​k​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​w​o​r​k​s​p​a​c​e​ ​m​e​m​b​e​r​s​ ​w​h​o​ ​w​i​l​l​ ​b​e​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​i​s​ ​t​a​s​k​.​ ​T​h​e​s​e​ ​m​e​m​b​e​r​s​ ​w​i​l​l​ ​b​e​ ​r​e​s​p​o​n​s​i​b​l​e​ ​f​o​r​ ​c​o​m​p​l​e​t​i​n​g​ ​t​h​e​ ​t​a​s​k​ ​a​n​d​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​a​b​o​u​t​ ​i​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_tasks: {
+					/**
+					 * L​i​s​t​ ​T​a​s​k​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​t​a​s​k​s​ ​f​r​o​m​ ​A​t​t​i​o​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​ ​o​p​t​i​o​n​s​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​a​c​t​i​o​n​ ​r​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​t​a​s​k​s​ ​f​r​o​m​ ​A​t​t​i​o​ ​w​i​t​h​ ​v​a​r​i​o​u​s​ ​f​i​l​t​e​r​i​n​g​,​ ​s​o​r​t​i​n​g​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​ ​o​p​t​i​o​n​s​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​t​a​s​k​s​ ​b​y​ ​l​i​n​k​e​d​ ​r​e​c​o​r​d​s​,​ ​c​o​m​p​l​e​t​i​o​n​ ​s​t​a​t​u​s​,​ ​a​n​d​ ​a​s​s​i​g​n​e​e​,​ ​a​s​ ​w​e​l​l​ ​a​s​ ​c​o​n​t​r​o​l​ ​t​h​e​ ​o​r​d​e​r​ ​a​n​d​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​r​e​t​u​r​n​e​d​.
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​a​s​k​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​a​s​k​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​t​a​s​k​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​t​a​s​k​s​ ​t​o​ ​s​k​i​p​ ​b​e​f​o​r​e​ ​s​t​a​r​t​i​n​g​ ​t​o​ ​r​e​t​u​r​n​ ​r​e​s​u​l​t​s​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​0​.
+							 */
+							longDesc: string
+						}
+						linked_object: {
+							/**
+							 * L​i​n​k​e​d​ ​O​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​b​y​ ​l​i​n​k​e​d​ ​o​b​j​e​c​t​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​t​h​o​s​e​ ​l​i​n​k​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​o​b​j​e​c​t​ ​t​y​p​e​ ​i​n​ ​A​t​t​i​o​.​ ​W​h​e​n​ ​s​e​l​e​c​t​e​d​,​ ​y​o​u​ ​c​a​n​ ​f​u​r​t​h​e​r​ ​r​e​f​i​n​e​ ​b​y​ ​s​p​e​c​i​f​y​i​n​g​ ​a​ ​p​a​r​t​i​c​u​l​a​r​ ​r​e​c​o​r​d​.
+							 */
+							longDesc: string
+						}
+						linked_record_id: {
+							/**
+							 * L​i​n​k​e​d​ ​R​e​c​o​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​l​i​n​k​e​d​ ​r​e​c​o​r​d
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​t​h​o​s​e​ ​l​i​n​k​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​r​e​c​o​r​d​ ​i​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​l​i​n​k​e​d​ ​o​b​j​e​c​t​.​ ​T​h​i​s​ ​o​p​t​i​o​n​ ​i​s​ ​o​n​l​y​ ​a​v​a​i​l​a​b​l​e​ ​a​f​t​e​r​ ​s​e​l​e​c​t​i​n​g​ ​a​ ​l​i​n​k​e​d​ ​o​b​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+						is_completed: {
+							/**
+							 * C​o​m​p​l​e​t​e​d
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​o​m​p​l​e​t​i​o​n​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​b​a​s​e​d​ ​o​n​ ​w​h​e​t​h​e​r​ ​t​h​e​y​ ​a​r​e​ ​c​o​m​p​l​e​t​e​d​ ​o​r​ ​n​o​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​f​a​l​s​e​ ​(​s​h​o​w​s​ ​i​n​c​o​m​p​l​e​t​e​ ​t​a​s​k​s​)​.
+							 */
+							longDesc: string
+						}
+						sort: {
+							/**
+							 * S​o​r​t​ ​O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * O​r​d​e​r​ ​o​f​ ​r​e​t​u​r​n​e​d​ ​t​a​s​k​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​o​r​d​e​r​ ​i​n​ ​w​h​i​c​h​ ​t​a​s​k​s​ ​s​h​o​u​l​d​ ​b​e​ ​r​e​t​u​r​n​e​d​.​ ​'​O​l​d​e​s​t​ ​F​i​r​s​t​'​ ​s​o​r​t​s​ ​b​y​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e​ ​a​s​c​e​n​d​i​n​g​,​ ​'​N​e​w​e​s​t​ ​F​i​r​s​t​'​ ​s​o​r​t​s​ ​b​y​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e​ ​d​e​s​c​e​n​d​i​n​g​.
+							 */
+							longDesc: string
+						}
+						assignee: {
+							/**
+							 * A​s​s​i​g​n​e​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​b​y​ ​a​s​s​i​g​n​e​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​t​h​o​s​e​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​w​o​r​k​s​p​a​c​e​ ​m​e​m​b​e​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_notes: {
+					/**
+					 * G​e​t​ ​N​o​t​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​N​o​t​e​s​ ​f​r​o​m​ ​A​t​t​i​o​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​N​o​t​e​s​ ​f​r​o​m​ ​y​o​u​r​ ​A​t​t​i​o​ ​w​o​r​k​s​p​a​c​e​.​ 
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​n​o​t​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​n​o​t​e​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.​ ​Y​o​u​ ​c​a​n​ ​s​p​e​c​i​f​y​ ​a​ ​v​a​l​u​e​ ​b​e​t​w​e​e​n​ ​1​ ​a​n​d​ ​1​0​0​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​n​o​t​e​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​n​o​t​e​s​ ​t​o​ ​s​k​i​p​ ​b​e​f​o​r​e​ ​s​t​a​r​t​i​n​g​ ​t​o​ ​r​e​t​u​r​n​ ​r​e​s​u​l​t​s​.​ ​U​s​e​d​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​0​.
+							 */
+							longDesc: string
+						}
+						parent_object: {
+							/**
+							 * P​a​r​e​n​t​ ​O​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​a​r​e​n​t​ ​o​b​j​e​c​t​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​o​b​j​e​c​t​ ​t​h​a​t​ ​t​h​i​s​ ​n​o​t​e​ ​i​s​ ​l​i​n​k​e​d​ ​t​o​.​ ​T​h​i​s​ ​i​s​ ​r​e​q​u​i​r​e​d​ ​t​o​ ​f​i​l​t​e​r​ ​n​o​t​e​s​ ​b​y​ ​t​h​e​i​r​ ​p​a​r​e​n​t​ ​o​b​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+						parent_record_id: {
+							/**
+							 * P​a​r​e​n​t​ ​R​e​c​o​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​c​o​r​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​r​e​c​o​r​d​ ​t​o​ ​w​h​i​c​h​ ​t​h​i​s​ ​n​o​t​e​ ​i​s​ ​l​i​n​k​e​d​.​ ​T​h​i​s​ ​i​s​ ​r​e​q​u​i​r​e​d​ ​t​o​ ​f​i​l​t​e​r​ ​n​o​t​e​s​ ​b​y​ ​t​h​e​i​r​ ​p​a​r​e​n​t​ ​r​e​c​o​r​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_task: {
+					/**
+					 * G​e​t​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​ ​f​r​o​m​ ​A​t​t​i​o​ ​b​y​ ​i​t​s​ ​I​D​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​a​c​t​i​o​n​ ​r​e​t​r​i​e​v​e​s​ ​a​ ​s​i​n​g​l​e​ ​t​a​s​k​ ​f​r​o​m​ ​A​t​t​i​o​ ​u​s​i​n​g​ ​i​t​s​ ​u​n​i​q​u​e​ ​t​a​s​k​ ​I​D​.​ ​T​h​e​ ​r​e​s​p​o​n​s​e​ ​i​n​c​l​u​d​e​s​ ​a​l​l​ ​t​a​s​k​ ​d​e​t​a​i​l​s​ ​s​u​c​h​ ​a​s​ ​c​o​n​t​e​n​t​,​ ​c​o​m​p​l​e​t​i​o​n​ ​s​t​a​t​u​s​,​ ​d​e​a​d​l​i​n​e​,​ ​l​i​n​k​e​d​ ​r​e​c​o​r​d​s​,​ ​a​s​s​i​g​n​e​e​s​,​ ​a​n​d​ ​c​r​e​a​t​i​o​n​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						task_id: {
+							/**
+							 * T​a​s​k​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​s​k​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​T​h​e​ ​a​v​a​i​l​a​b​l​e​ ​t​a​s​k​ ​I​D​s​ ​w​i​l​l​ ​b​e​ ​l​o​a​d​e​d​ ​b​a​s​e​d​ ​o​n​ ​y​o​u​r​ ​p​r​e​v​i​o​u​s​ ​o​b​j​e​c​t​ ​s​e​l​e​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_object_record: {
+					/**
+					 * G​e​t​ ​S​i​n​g​l​e​ ​O​b​j​e​c​t​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​a​n​ ​A​t​t​i​o​ ​o​b​j​e​c​t​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​a​c​t​i​o​n​ ​r​e​t​r​i​e​v​e​s​ ​a​ ​s​i​n​g​l​e​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​a​n​ ​A​t​t​i​o​ ​o​b​j​e​c​t​ ​b​y​ ​i​t​s​ ​r​e​c​o​r​d​ ​I​D​.​ ​Y​o​u​ ​m​u​s​t​ ​s​p​e​c​i​f​y​ ​b​o​t​h​ ​t​h​e​ ​o​b​j​e​c​t​ ​a​n​d​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​r​e​c​o​r​d​ ​I​D​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​T​h​i​s​ ​p​r​o​v​i​d​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​r​e​c​o​r​d​ ​i​n​c​l​u​d​i​n​g​ ​a​l​l​ ​i​t​s​ ​a​t​t​r​i​b​u​t​e​s​ ​a​n​d​ ​v​a​l​u​e​s​.
+					 */
+					longDesc: string
+					options: {
+						object: {
+							/**
+							 * O​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​t​t​i​o​ ​o​b​j​e​c​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​r​e​c​o​r​d​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​t​t​i​o​ ​o​b​j​e​c​t​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​T​h​i​s​ ​i​s​ ​r​e​q​u​i​r​e​d​ ​t​o​ ​i​d​e​n​t​i​f​y​ ​w​h​i​c​h​ ​o​b​j​e​c​t​ ​t​o​ ​s​e​a​r​c​h​ ​i​n​.
+							 */
+							longDesc: string
+						}
+						record_id: {
+							/**
+							 * R​e​c​o​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​r​e​c​o​r​d​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​T​h​i​s​ ​I​D​ ​i​s​ ​s​p​e​c​i​f​i​c​ ​t​o​ ​t​h​e​ ​o​b​j​e​c​t​ ​y​o​u​'​v​e​ ​s​e​l​e​c​t​e​d​ ​a​n​d​ ​w​i​l​l​ ​l​o​a​d​ ​a​v​a​i​l​a​b​l​e​ ​r​e​c​o​r​d​s​ ​b​a​s​e​d​ ​o​n​ ​y​o​u​r​ ​o​b​j​e​c​t​ ​s​e​l​e​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_list_entry: {
+					/**
+					 * G​e​t​ ​S​i​n​g​l​e​ ​L​i​s​t​ ​E​n​t​r​y
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​e​n​t​r​y​ ​f​r​o​m​ ​a​n​ ​A​t​t​i​o​ ​l​i​s​t​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​a​c​t​i​o​n​ ​r​e​t​r​i​e​v​e​s​ ​a​ ​s​i​n​g​l​e​ ​e​n​t​r​y​ ​f​r​o​m​ ​a​n​ ​A​t​t​i​o​ ​l​i​s​t​ ​b​y​ ​i​t​s​ ​e​n​t​r​y​ ​I​D​.​ ​Y​o​u​ ​m​u​s​t​ ​s​p​e​c​i​f​y​ ​b​o​t​h​ ​t​h​e​ ​l​i​s​t​ ​a​n​d​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​e​n​t​r​y​ ​I​D​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​T​h​i​s​ ​p​r​o​v​i​d​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​e​n​t​r​y​ ​i​n​c​l​u​d​i​n​g​ ​a​l​l​ ​i​t​s​ ​a​t​t​r​i​b​u​t​e​s​ ​a​n​d​ ​v​a​l​u​e​s​.
+					 */
+					longDesc: string
+					options: {
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​t​t​i​o​ ​l​i​s​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​e​n​t​r​y​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​t​t​i​o​ ​l​i​s​t​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​e​n​t​r​y​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​T​h​i​s​ ​i​s​ ​r​e​q​u​i​r​e​d​ ​t​o​ ​i​d​e​n​t​i​f​y​ ​w​h​i​c​h​ ​l​i​s​t​ ​t​o​ ​s​e​a​r​c​h​ ​i​n​.
+							 */
+							longDesc: string
+						}
+						entry_id: {
+							/**
+							 * E​n​t​r​y​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​e​n​t​r​y​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​e​n​t​r​y​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​T​h​i​s​ ​I​D​ ​i​s​ ​s​p​e​c​i​f​i​c​ ​t​o​ ​t​h​e​ ​l​i​s​t​ ​y​o​u​'​v​e​ ​s​e​l​e​c​t​e​d​ ​a​n​d​ ​w​i​l​l​ ​l​o​a​d​ ​a​v​a​i​l​a​b​l​e​ ​e​n​t​r​i​e​s​ ​b​a​s​e​d​ ​o​n​ ​y​o​u​r​ ​l​i​s​t​ ​s​e​l​e​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
 				find_list_entries: {
 					/**
 					 * F​i​n​d​ ​L​i​s​t​ ​E​n​t​r​i​e​s
@@ -22749,8 +23405,664 @@ export type TranslationFunctions = {
 			 */
 			longDesc: () => LocalizedString
 			triggers: {
+				list_entry_created: {
+					/**
+					 * New List Entry Created
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new entry is created in an Attio list.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a new entry is created in a specified Attio list. It provides details about the created entry including its ID, parent object, and the actor who created it.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Attio list to monitor for new entries
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The API slug of the Attio list to monitor for new entries.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_entry_updated: {
+					/**
+					 * List Entry Updated
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an entry is updated in an Attio list.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever an entry is updated in a specified Attio list. It provides details about the updated entry including its ID, parent object, the actor who made the update, and the specific changes that were made.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Attio list to monitor for updated entries
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The API slug of the Attio list to monitor for updated entries.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_entry_deleted: {
+					/**
+					 * List Entry Deleted
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an entry is deleted from an Attio list.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever an entry is deleted from a specified Attio list. It provides details about the deleted entry including its ID, parent object, and the actor who performed the deletion.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Attio list to monitor for deleted entries
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The API slug of the Attio list to monitor for deleted entries.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				object_record_created: {
+					/**
+					 * New Object Record Created
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new record is created for an Attio object.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a new record is created for a specified Attio object. It provides details about the created record including its ID, object type, and the actor who created it.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						object: {
+							/**
+							 * Object Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Attio object to monitor for new records
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The API slug of the Attio object type to monitor for new records.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				object_record_updated: {
+					/**
+					 * Object Record Updated
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a record is updated for an Attio object.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a record is updated for a specified Attio object. It provides details about the updated record including its ID, object type, the actor who made the update, and the specific changes that were made.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						object: {
+							/**
+							 * Object Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Attio object to monitor for updated records
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The API slug of the Attio object type to monitor for updated records.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				object_record_deleted: {
+					/**
+					 * Object Record Deleted
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a record is deleted from an Attio object.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a record is deleted from a specified Attio object. It provides details about the deleted record including its ID, object type, and the actor who performed the deletion.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						object: {
+							/**
+							 * Object Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Attio object to monitor for deleted records
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The API slug of the Attio object type to monitor for deleted records.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				task_created: {
+					/**
+					 * New Task Created
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new task is created in Attio.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a new task is created in your Attio workspace. It provides details about the created task including its ID, title, description, assignees, due date, and the actor who created it.
+					 */
+					longDesc: () => LocalizedString
+				}
 			}
 			actions: {
+				create_note: {
+					/**
+					 * Create Note
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new note attached to a specific record in Attio.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This action creates a new note and attaches it to a specific record within an Attio object. Notes can be written in plain text or markdown format and include a title and content body. They serve as a way to document important information about records in your workspace.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						parent_object: {
+							/**
+							 * Parent Object
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The object that contains the record to attach the note to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Attio object that contains the record you want to attach this note to. This defines which object type the note will be associated with.
+							 */
+							longDesc: () => LocalizedString
+						}
+						parent_record_id: {
+							/**
+							 * Parent Record ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The specific record to attach the note to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific record within the parent object that this note should be attached to. Available options will be based on the parent object you selected.
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The title of the note
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide a title for the note. This will appear as the heading when viewing the note in Attio.
+							 */
+							longDesc: () => LocalizedString
+						}
+						format: {
+							/**
+							 * Format
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The text format to use for the note content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose whether the note content should be treated as plain text or markdown. Markdown allows for rich text formatting including headers, lists, links, and more.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content: {
+							/**
+							 * Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The main body text of the note
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the content for your note. This can be formatted according to the selected format type (plain text or markdown).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_task: {
+					/**
+					 * Create Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new task in Attio with specified details.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This action creates a new task in Attio with content, deadline, completion status, and optional assignees. You can set the task content, specify a deadline date, mark it as completed or not, and assign it to one or more workspace members.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						content: {
+							/**
+							 * Task Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content or description of the task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the content or description for the task. This will be the main text describing what needs to be done.
+							 */
+							longDesc: () => LocalizedString
+						}
+						deadline_at: {
+							/**
+							 * Deadline
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The deadline date for the task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the date and time by which the task should be completed. This will be displayed in the task details and can be used for sorting and filtering tasks.
+							 */
+							longDesc: () => LocalizedString
+						}
+						is_completed: {
+							/**
+							 * Completed
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether the task is already completed
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify whether the task should be marked as completed when created. Default is false (task is not completed).
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignees: {
+							/**
+							 * Assignees
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Workspace members to assign the task to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select one or more workspace members who will be assigned to this task. These members will be responsible for completing the task and will receive notifications about it.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_tasks: {
+					/**
+					 * List Tasks
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves a list of tasks from Attio with filtering options.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This action retrieves a list of tasks from Attio with various filtering, sorting, and pagination options. You can filter tasks by linked records, completion status, and assignee, as well as control the order and number of results returned.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of tasks to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the maximum number of tasks to return in a single request. Default is 10.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of tasks to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the number of tasks to skip before starting to return results. Useful for pagination. Default is 0.
+							 */
+							longDesc: () => LocalizedString
+						}
+						linked_object: {
+							/**
+							 * Linked Object
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter tasks by linked object type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter tasks to only include those linked to a specific object type in Attio. When selected, you can further refine by specifying a particular record.
+							 */
+							longDesc: () => LocalizedString
+						}
+						linked_record_id: {
+							/**
+							 * Linked Record ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter tasks by specific linked record
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter tasks to only include those linked to a specific record in the selected linked object. This option is only available after selecting a linked object.
+							 */
+							longDesc: () => LocalizedString
+						}
+						is_completed: {
+							/**
+							 * Completed
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by completion status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter tasks based on whether they are completed or not. Default is false (shows incomplete tasks).
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort: {
+							/**
+							 * Sort Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Order of returned tasks
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the order in which tasks should be returned. 'Oldest First' sorts by creation date ascending, 'Newest First' sorts by creation date descending.
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignee: {
+							/**
+							 * Assignee
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter tasks by assignee
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter tasks to only include those assigned to a specific workspace member.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_notes: {
+					/**
+					 * Get Notes
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves Notes from Attio.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve Notes from your Attio workspace. 
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of notes to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of notes to return. Default is 50. You can specify a value between 1 and 100.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of notes to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of notes to skip before starting to return results. Used for pagination. Default is 0.
+							 */
+							longDesc: () => LocalizedString
+						}
+						parent_object: {
+							/**
+							 * Parent Object
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The parent object type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The type of the parent object that this note is linked to. This is required to filter notes by their parent object.
+							 */
+							longDesc: () => LocalizedString
+						}
+						parent_record_id: {
+							/**
+							 * Parent Record ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of the parent record
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the parent record to which this note is linked. This is required to filter notes by their parent record.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_task: {
+					/**
+					 * Get Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves a specific task from Attio by its ID.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This action retrieves a single task from Attio using its unique task ID. The response includes all task details such as content, completion status, deadline, linked records, assignees, and creation information.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						task_id: {
+							/**
+							 * Task ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the specific task to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the unique identifier of the task you want to retrieve. The available task IDs will be loaded based on your previous object selection.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_object_record: {
+					/**
+					 * Get Single Object Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves a specific record from an Attio object.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This action retrieves a single record from an Attio object by its record ID. You must specify both the object and the specific record ID you want to retrieve. This provides detailed information about the record including all its attributes and values.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						object: {
+							/**
+							 * Object
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Attio object to retrieve the record from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Attio object that contains the record you want to retrieve. This is required to identify which object to search in.
+							 */
+							longDesc: () => LocalizedString
+						}
+						record_id: {
+							/**
+							 * Record ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the specific record to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the unique identifier of the record you want to retrieve. This ID is specific to the object you've selected and will load available records based on your object selection.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_list_entry: {
+					/**
+					 * Get Single List Entry
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves a specific entry from an Attio list.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This action retrieves a single entry from an Attio list by its entry ID. You must specify both the list and the specific entry ID you want to retrieve. This provides detailed information about the entry including all its attributes and values.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Attio list to retrieve the entry from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Attio list that contains the entry you want to retrieve. This is required to identify which list to search in.
+							 */
+							longDesc: () => LocalizedString
+						}
+						entry_id: {
+							/**
+							 * Entry ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the specific entry to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the unique identifier of the entry you want to retrieve. This ID is specific to the list you've selected and will load available entries based on your list selection.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
 				find_list_entries: {
 					/**
 					 * Find List Entries

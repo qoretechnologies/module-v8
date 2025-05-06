@@ -26,17 +26,19 @@ interface AttioList {
   };
 }
 
-const mapAttioListToAllowedValue = (item: AttioList): IQoreAllowedValue<string> => {
-  return {
-    display_name: item.name,
-    value: item.api_slug,
-    desc:
-      `List ID: ${item.id.list_id}\n` +
-      `API Slug: ${item.api_slug}\n` +
-      `Parent Object: ${item.parent_object.join(', ')}\n` +
-      `Created: ${new Date(item.created_at).toLocaleString()}`,
+const createAttioListToAllowedValueMapFunction =
+  (valueField: 'api_slug' | 'id') =>
+  (item: AttioList): IQoreAllowedValue<string> => {
+    return {
+      display_name: item.name,
+      value: valueField === 'api_slug' ? item.api_slug : item.id.list_id,
+      desc:
+        `List ID: ${item.id.list_id}\n` +
+        `API Slug: ${item.api_slug}\n` +
+        `Parent Object: ${item.parent_object.join(', ')}\n` +
+        `Created: ${new Date(item.created_at).toLocaleString()}`,
+    };
   };
-};
 
 export const getAttioListApiSlugAllowedValues: TQoreGetAllowedValuesFunction<
   TCustomConnOptions,
@@ -49,7 +51,25 @@ export const getAttioListApiSlugAllowedValues: TQoreGetAllowedValuesFunction<
       token,
       path: 'lists',
       method: 'GET',
-      mapItemToAllowedValue: mapAttioListToAllowedValue,
+      mapItemToAllowedValue: createAttioListToAllowedValueMapFunction('api_slug'),
+    });
+  } catch (error) {
+    throw new AttioError(`Failed to get Attio lists allowed values: ${error}`);
+  }
+};
+
+export const getAttioListIdAllowedValues: TQoreGetAllowedValuesFunction<
+  TCustomConnOptions,
+  string
+> = async (context) => {
+  try {
+    const token = getAttioTokenRequired(context);
+
+    return await getAttioAllowedValues<AttioList, string>({
+      token,
+      path: 'lists',
+      method: 'GET',
+      mapItemToAllowedValue: createAttioListToAllowedValueMapFunction('id'),
     });
   } catch (error) {
     throw new AttioError(`Failed to get Attio lists allowed values: ${error}`);

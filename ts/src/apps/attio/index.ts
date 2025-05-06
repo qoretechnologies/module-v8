@@ -1,8 +1,9 @@
 import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
-import { mapActionsToApp } from '../../global/helpers';
+import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import * as ATTIO_ACTIONS from './actions';
+import * as ATTIO_TRIGGERS from './triggers';
 import { ATTIO_APP_API_URL, ATTIO_APP_LOGO, ATTIO_APP_NAME } from './constants';
 
 export default (locale: Locales) =>
@@ -14,7 +15,10 @@ export default (locale: Locales) =>
     logo: ATTIO_APP_LOGO,
     logo_file_name: 'attio-logo.svg',
     logo_mime_type: 'image/svg+xml',
-    actions: [...mapActionsToApp(ATTIO_APP_NAME, ATTIO_ACTIONS, locale)],
+    actions: [
+      ...mapActionsToApp(ATTIO_APP_NAME, ATTIO_ACTIONS, locale),
+      ...mapTriggersToApp(ATTIO_APP_NAME, ATTIO_TRIGGERS, locale),
+    ],
     rest: {
       url: ATTIO_APP_API_URL,
       data: 'json',

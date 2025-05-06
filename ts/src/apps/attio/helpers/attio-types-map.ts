@@ -63,3 +63,86 @@ export const ATTIO_TO_QORUS_TYPE_MAP: Record<string, TQoreTypeObject | TQoreType
   },
   interaction: 'hash',
 };
+
+export const ATTIO_TO_QORUS_RESPONSE_TYPE_MAP: Record<string, TQoreTypeObject | TQoreType> = {
+  date: 'string',
+  status: {
+    type: 'hash',
+    fields: {
+      status_id: { type: 'string' },
+      title: { type: 'string' },
+      celebration_enabled: { type: 'boolean' },
+    },
+  },
+  timestamp: { type: 'string' },
+  'personal-name': {
+    type: 'hash',
+    fields: {
+      first_name: { type: 'string' },
+      last_name: { type: 'string' },
+      full_name: { type: 'string' },
+    },
+  },
+  'email-address': {
+    type: 'hash',
+    fields: {
+      original_email_address: { type: 'string' },
+      email_address: { type: 'string' },
+      email_domain: { type: 'string' },
+      email_root_domain: { type: 'string' },
+      email_local_specifier: { type: 'string' },
+    },
+  },
+  'record-reference': {
+    type: 'hash',
+    fields: {
+      target_object: { type: 'string' },
+      target_object_id: { type: 'string' },
+    },
+  },
+  'actor-reference': {
+    type: 'hash',
+    fields: {
+      referenced_actor_type: { type: 'string' },
+      referenced_actor_id: { type: 'string' },
+    },
+  },
+  'phone-number': {
+    type: 'hash',
+    fields: {
+      phone_number: { type: 'string' },
+      country_code: { type: 'string' },
+      original_phone_number: { type: 'string' },
+    },
+  },
+  domain: {
+    type: 'hash',
+    fields: {
+      domain: { type: 'string' },
+      root_domain: { type: 'string' },
+    },
+  },
+  select: {
+    type: 'hash',
+    fields: {
+      id: { type: 'string' },
+      title: { type: 'string' },
+    },
+  },
+  interaction: {
+    type: 'hash',
+    fields: {
+      interaction_type: { type: 'string' },
+      interacted_at: { type: 'string' },
+      owner_actor: {
+        type: {
+          type: 'hash',
+          fields: {
+            id: { type: 'string' },
+            type: { type: 'string' },
+          },
+        },
+      },
+    },
+  },
+};
