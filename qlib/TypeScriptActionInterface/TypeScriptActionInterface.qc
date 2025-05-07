@@ -2138,23 +2138,25 @@ public class TypeScriptActionInterface {
             *hash<auto> f = remove h.fields;
             HashDataType ht(type, attr.name, NOTHING, tags, default_value, attr);
             if (f) {
-                TypeScriptActionInterface::getHashTypeIntern(path, ht, f, required, fctx, ignore_dup);
+                TypeScriptActionInterface::getHashTypeIntern(path, ht, f, required, fctx, ignore_dup,
+                    resolve_dynamic);
             } else if (exists element_type) {
                 AbstractDataProviderType element_type = TypeScriptActionInterface::getType(path + "-element",
-                    element_type, NOTHING, NOTHING, fctx);
+                    element_type, NOTHING, NOTHING, fctx, ignore_dup, resolve_dynamic);
                 ht.setDefaultOtherFieldType(element_type);
             }
             rv = ht;
         } else if (orig.type == "list") {
             AbstractDataProviderType et;
             if (auto t = (remove h.element_type ?? element_type)) {
-                et = TypeScriptActionInterface::getType(path, t, NOTHING, NOTHING, fctx);
+                et = TypeScriptActionInterface::getType(path, t, NOTHING, NOTHING, fctx, ignore_dup, resolve_dynamic);
             }
             rv = new ListDataType(et ?? AutoType, !orig.required, NOTHING, tags, default_value, attr);
         } else if (orig.type == "softlist") {
             AbstractDataProviderType et;
             if (auto t = (remove h.element_type ?? element_type)) {
-                et = TypeScriptActionInterface::getType(path + "-element", t, NOTHING, NOTHING, fctx);
+                et = TypeScriptActionInterface::getType(path + "-element", t, NOTHING, NOTHING, fctx, ignore_dup,
+                    resolve_dynamic);
             }
             rv = new SoftListDataType(et ?? AutoType, !orig.required, NOTHING, tags, default_value, attr);
         } else {
@@ -2335,7 +2337,7 @@ public class TypeScriptActionInterface {
                 # remove any manual allowed values
                 remove info.allowed_values;
                 if (resolve_dynamic) {
-                    info.allowed_values = cast<AbstractDataProvider>(fctx).getReferenceData(key,
+                    info.allowed_values = cast<AbstractDataProvider>(fctx).getReferenceDataSafe(key,
                         DataProviderDataContextHelper::getHash());
                 } else {
                     info.attr.ref_data = key;
@@ -2361,7 +2363,7 @@ public class TypeScriptActionInterface {
                 # remove any manual allowed values
                 remove info.element_allowed_values;
                 if (resolve_dynamic) {
-                    info.allowed_values = cast<AbstractDataProvider>(fctx).getElementReferenceData(key,
+                    info.allowed_values = cast<AbstractDataProvider>(fctx).getElementReferenceDataSafe(key,
                         DataProviderDataContextHelper::getHash());
                 } else {
                     info.attr.element_ref_data = key;
@@ -2426,7 +2428,7 @@ public class TypeScriptActionInterface {
                 string ix = TypeScriptActionInterface::registerAsyncCall(ignore_dup, \fctx.dvmap{key}, "app",
                     fctx.app, fctx.action, key);
                 if (resolve_dynamic) {
-                    info.default_value = cast<AbstractDataProvider>(fctx).getReferenceDataValue(ix,
+                    info.default_value = cast<AbstractDataProvider>(fctx).getReferenceDataValueSafe(ix,
                         DataProviderDataContextHelper::getHash());
                 } else {
                     info.attr.get_default_value = ix;

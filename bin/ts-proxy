@@ -345,6 +345,7 @@ class TsProxy inherits TypeScriptProxy {
         TypeScriptActionInterface::initAppAction(app, action);
         TypeScriptActionEventDataProviderBase prov = TypeScriptActionInterface::getAppDataProvider(app)
             .getChildProviderEx(action);
+        prov.setLogger(logger);
         DataProviderDataContextHelper dch(req);
         if (conn_name.val()) {
             prov.setConnection(getRestConnection(app, conn_name, conn_opts));
@@ -362,6 +363,7 @@ class TsProxy inherits TypeScriptProxy {
         TypeScriptActionInterface::initAppAction(app, action);
         TypeScriptActionDataProviderBase prov = TypeScriptActionInterface::getAppDataProvider(app)
             .getChildProviderEx(action);
+        prov.setLogger(logger);
         DataProviderDataContextHelper dch(req);
         if (conn_name.val()) {
             prov.setConnection(getRestConnection(app, conn_name, conn_opts));
@@ -379,6 +381,7 @@ class TsProxy inherits TypeScriptProxy {
         TypeScriptActionInterface::initAppAction(app, action);
         TypeScriptActionApiDataProvider prov = TypeScriptActionInterface::getAppDataProvider(app)
             .getChildProviderEx(action);
+        prov.setLogger(logger);
         DataProviderDataContextHelper dch(req);
         if (conn_name.val()) {
             prov.setConnection(getRestConnection(app, conn_name, conn_opts));
@@ -399,6 +402,7 @@ class TsProxy inherits TypeScriptProxy {
         TypeScriptActionInterface::initAppAction(app, action);
         TypeScriptActionApiDataProvider prov = TypeScriptActionInterface::getAppDataProvider(app)
             .getChildProviderEx(action);
+        prov.setLogger(logger);
         DataProviderDataContextHelper dch(req);
         if (conn_name.val()) {
             prov.setConnection(getRestConnection(app, conn_name, conn_opts));

@@ -191,7 +191,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             return;
         }
         date start = now_us();
-        on_exit TSAI::debug("perf: %y get async value: %y", api.label, now_us() - start);
+        on_exit TSAI::debug("perf: %y get async value: %y (args: %y)", api.label, now_us() - start, args);
         on_error TSAI::error("%s", get_exception_string($1));
 
         # handle the call with a remote process
@@ -442,6 +442,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
     *hash<string, hash<ActionOptionInfo>> getActionOptionsWithData(hash<auto> req) {
         *hash<auto> slice = dmap{keys req};
         if (!slice) {
+            TSAI::debug("getActionOptionsWithData() req: %y dmap: %y no data in slice", req, keys dmap);
             return;
         }
         # cache key (opt[|opt...]=val[|val])
@@ -458,6 +459,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             on_exit TypeScriptActionInterface::server.release(proxy);
             rv = proxy.getDynamicOptions(app, action, conn.name, conn.getRealOptions(), req);
         } else {
+            TSAI::debug("getActionOptionsWithData() exec req: %y slice: %y", req, keys slice);
             rv = getActionOptionsWithDataIntern({
                 "app": app,
                 "action": action,
@@ -563,13 +565,13 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                 TypeScriptActionInterface::getOptionDefaultValueFunction(\action, self, j.key, \j.value);
                 rv{j.key} = TypeScriptActionInterface::getOptionInfo("option", j.value, self, True);
                 if (j.value.ref_data) {
-                    rv{j.key}.allowed_values = getReferenceData(j.value.ref_data, req);
+                    rv{j.key}.allowed_values = getReferenceDataSafe(j.value.ref_data, req);
                 }
                 if (j.value.element_ref_data) {
-                    rv{j.key}.element_allowed_values = getElementReferenceData(j.value.element_ref_data, req);
+                    rv{j.key}.element_allowed_values = getElementReferenceDataSafe(j.value.element_ref_data, req);
                 }
                 if (j.value.default_ref_data) {
-                    rv{j.key}.default_value = getReferenceDataValue(j.value.default_ref_data, req);
+                    rv{j.key}.default_value = getReferenceDataValueSafe(j.value.default_ref_data, req);
                 }
             }
         }
