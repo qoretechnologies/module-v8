@@ -92,7 +92,7 @@ export const fetchAttioData = async <TItemType, TResponseType = TItemType[]>(
 
       const data = response.data;
 
-      allData = allData ? [...allData, data.data] : data.data;
+      allData = allData ? [...allData, ...data.data] : data.data;
 
       const items = data.data;
       hasMorePages = items?.length === MAX_ITEMS_PER_PAGE;
