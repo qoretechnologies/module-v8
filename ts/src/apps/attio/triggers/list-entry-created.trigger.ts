@@ -36,21 +36,23 @@ const attioListEntryCreatedTrigger = QoreAppCreator.createLocalizedTrigger({
             'Content-Type': 'application/json',
           },
           data: {
-            target_url: url,
-            subscriptions: [
-              {
-                event_type: 'list-entry.created',
-                filter: {
-                  $and: [
-                    {
-                      field: 'list_id',
-                      operator: 'equals',
-                      value: list,
-                    },
-                  ],
+            data: {
+              target_url: url,
+              subscriptions: [
+                {
+                  event_type: 'list-entry.created',
+                  filter: {
+                    $and: [
+                      {
+                        field: 'list_id',
+                        operator: 'equals',
+                        value: list,
+                      },
+                    ],
+                  },
                 },
-              },
-            ],
+              ],
+            },
           },
           path: '/v2/webhooks',
         },

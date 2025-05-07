@@ -28,13 +28,15 @@ const attioTaskCreatedTrigger = QoreAppCreator.createLocalizedTrigger({
             'Content-Type': 'application/json',
           },
           data: {
-            target_url: url,
-            subscriptions: [
-              {
-                event_type: 'task.created',
-                filter: null,
-              },
-            ],
+            data: {
+              target_url: url,
+              subscriptions: [
+                {
+                  event_type: 'task.created',
+                  filter: null,
+                },
+              ],
+            },
           },
           path: '/v2/webhooks',
         },
