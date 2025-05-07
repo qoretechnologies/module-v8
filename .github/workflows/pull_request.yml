@@ -53,6 +53,7 @@ env:
   MAILCHIMP_TOKEN: ${{ secrets.MAILCHIMP_TOKEN }}
   MAILCHIMP_DATACENTER: ${{ secrets.MAILCHIMP_DATACENTER }}  
   INTERCOM_TOKEN: ${{ secrets.INTERCOM_TOKEN }}
+  ATTIO_TOKEN: ${{ secrets.ATTIO_TOKEN }}
 
 jobs:
   PullRequestTests:
