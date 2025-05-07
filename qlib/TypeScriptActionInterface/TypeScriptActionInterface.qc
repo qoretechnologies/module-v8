@@ -2733,12 +2733,12 @@ public class TypeScriptActionInterface {
         # find allowed values
         foreach TypeScriptDataField f in (type.getFields().iterator()) {
             *hash<auto> attr = f.getAttributes();
-            if (attr.ref_data) {
-                f.setAllowedValues(prov.getReferenceData(attr.ref_data, req), f.getAllowedValuesCreatable());
+            if (attr.ref_data.val()) {
+                f.setAllowedValues(prov.getReferenceData(attr.ref_data, req) ?? (), f.getAllowedValuesCreatable());
                 f.replaceAttributes(attr - "ref_data");
             }
-            if (attr.element_ref_data) {
-                f.setElementAllowedValues(prov.getReferenceData(attr.ref_data, req),
+            if (attr.element_ref_data.val()) {
+                f.setElementAllowedValues(prov.getReferenceData(attr.element_ref_data, req) ?? (),
                     f.getElementAllowedValuesCreatable());
                 f.replaceAttributes(attr - "element_ref_data");
             }
