@@ -2010,8 +2010,10 @@ public class TypeScriptActionInterface {
         opts = new_opts;
     }
 
-    static hash<auto> getOptionHashInfo(string path, hash<auto> opt, *ActionFunctionContext fctx) {
-        opt.type = TypeScriptActionInterface::getType(path, opt.type, opt.required, remove opt.element_type, fctx);
+    static hash<auto> getOptionHashInfo(string path, hash<auto> opt, *ActionFunctionContext fctx,
+            *bool resolve_dynamic) {
+        opt.type = TypeScriptActionInterface::getType(path, opt.type, opt.required, remove opt.element_type, fctx,
+            NOTHING, resolve_dynamic);
         if (opt.allowed_values) {
             opt.allowed_values = map cast<hash<AllowedValueInfo>>($1), opt.allowed_values;
         }
@@ -2024,12 +2026,13 @@ public class TypeScriptActionInterface {
         return opt;
     }
 
-    static hash<ActionOptionInfo> getOptionInfo(string path, hash<auto> opt, *ActionFunctionContext fctx) {
-        return cast<hash<ActionOptionInfo>>(getOptionHashInfo(path, opt, fctx));
+    static hash<ActionOptionInfo> getOptionInfo(string path, hash<auto> opt, *ActionFunctionContext fctx,
+            *bool resolve_dynamic) {
+        return cast<hash<ActionOptionInfo>>(getOptionHashInfo(path, opt, fctx, resolve_dynamic));
     }
 
     static AbstractDataProviderType getType(string path, string name, *bool required, auto element_type,
-            *ActionFunctionContext fctx, *bool ignore_dup) {
+            *ActionFunctionContext fctx, *bool ignore_dup, *bool resolve_dynamic) {
         if (!required) {
             if (name !~ /^\*/ && name != "auto" && name != "any") {
                 name = "*" + name;
@@ -2041,7 +2044,7 @@ public class TypeScriptActionInterface {
         path += "-" + name;
         if (exists element_type) {
             AbstractDataProviderType et = TypeScriptActionInterface::getType(path + "-element",
-                element_type, NOTHING, NOTHING, fctx, ignore_dup);
+                element_type, NOTHING, NOTHING, fctx, ignore_dup, resolve_dynamic);
             if (name =~ /^\*?list$/) {
                 return new ListDataType(et, !required);
             } else if (name =~ /^\*?hash$/) {
@@ -2093,7 +2096,7 @@ public class TypeScriptActionInterface {
     }
 
     static AbstractDataProviderType getType(string path, hash<auto> h, *bool required, auto element_type,
-            *ActionFunctionContext fctx, *bool ignore_dup) {
+            *ActionFunctionContext fctx, *bool ignore_dup, *bool resolve_dynamic) {
         if (h.google_input_type) {
             return getGoogleType(True, path, h, required, element_type, fctx, ignore_dup);
         } else if (h.google_output_type) {
@@ -2119,7 +2122,7 @@ public class TypeScriptActionInterface {
         }
 
         if (h.type.typeCode() != NT_STRING) {
-            return TypeScriptActionInterface::getHashType(path, h, required, fctx, ignore_dup, tags);
+            return TypeScriptActionInterface::getHashType(path, h, required, fctx, ignore_dup, tags, resolve_dynamic);
         }
 
         hash<auto> info;
@@ -2171,38 +2174,45 @@ public class TypeScriptActionInterface {
     }
 
     static HashDataType getHashType(string path, hash<auto> h, *bool required, *ActionFunctionContext fctx,
-            *bool ignore_dup, *hash<auto> tags) {
+            *bool ignore_dup, *hash<auto> tags, *bool resolve_dynamic) {
         on_error rethrow $1.err, sprintf("%s (type: %y)", $1.desc, h);
         HashDataType type(required ? AutoHashType : AutoHashOrNothingType, NOTHING, NOTHING, tags);
-        return TypeScriptActionInterface::getHashTypeIntern(path, type, h, required, fctx, ignore_dup);
+        return TypeScriptActionInterface::getHashTypeIntern(path, type, h, required, fctx, ignore_dup,
+            resolve_dynamic);
     }
 
     static HashDataType getHashTypeIntern(string path, HashDataType type, hash<auto> h, *bool required,
-            *ActionFunctionContext fctx, *bool ignore_dup) {
+            *ActionFunctionContext fctx, *bool ignore_dup, *bool resolve_dynamic) {
         on_error rethrow $1.err, sprintf("%s (fields: %y)", $1.desc, h);
-        map type.addField(TypeScriptActionInterface::getField(path, $1.key, $1.value, fctx, ignore_dup)),
-            h.pairIterator();
+        map type.addField(TypeScriptActionInterface::getField(path, $1.key, $1.value, fctx, ignore_dup,
+            resolve_dynamic)), h.pairIterator();
         checkFieldDependencies(type);
         return type;
     }
 
     static AbstractDataProviderType getType(string path, auto v, *bool required, auto element_type,
-            *ActionFunctionContext fctx, *bool ignore_dup) {
+            *ActionFunctionContext fctx, *bool ignore_dup, *bool resolve_dynamic) {
         throw "TYPE-ERROR", sprintf("Expecting \"string\" or \"hash\" for the option \"type\"; got %y "
             "instead", v.fullType());
     }
 
     static TypeScriptDataField getField(string path, string name, hash<auto> h, *ActionFunctionContext fctx,
-            *bool ignore_dup) {
-        on_error rethrow $1.err, sprintf("%s (field: %y)", $1.desc, h);
-        *bool req = remove h.required;
-        path += "-" + name;
-        AbstractDataProviderType type = TypeScriptActionInterface::getType(path, remove h.type, req,
-            remove h.element_type, fctx, ignore_dup);
-        hash<auto> rv = TypeScriptActionInterface::getFieldHash(path, name, type, \h, req, fctx, ignore_dup);
-        if (h) {
-            throw "FIELD-ERROR", sprintf("Description for field %y has unknown keys: %y", name, keys h);
+            *bool ignore_dup, *bool resolve_dynamic) {
+        hash<auto> rv;
+        {
+            hash<auto> orig = h;
+            on_error rethrow $1.err, sprintf("%s (field: %y)", $1.desc, orig);
+            *bool req = remove h.required;
+            path += "-" + name;
+            AbstractDataProviderType type = TypeScriptActionInterface::getType(path, remove h.type, req,
+                remove h.element_type, fctx, ignore_dup, resolve_dynamic);
+            rv = TypeScriptActionInterface::getFieldHash(path, name, type, \h, req, fctx, ignore_dup,
+                resolve_dynamic);
+            if (h) {
+                throw "FIELD-ERROR", sprintf("Description for field %y has unknown keys: %y", name, keys h);
+            }
         }
+        on_error rethrow $1.err, sprintf("%s (field desc: %N)", $1.desc, rv);
         return new TypeScriptDataField(rv, fctx);
     }
 
@@ -2221,7 +2231,8 @@ public class TypeScriptActionInterface {
     }
 
     static hash<auto> getFieldHash(string path, string name, AbstractDataProviderType type,
-            reference<hash<auto>> type_hash, *bool req, *ActionFunctionContext fctx, *bool ignore_dup) {
+            reference<hash<auto>> type_hash, *bool req, *ActionFunctionContext fctx, *bool ignore_dup,
+            *bool resolve_dynamic) {
         hash<auto> info += {
             "name": name,
             "type": type,
@@ -2298,8 +2309,8 @@ public class TypeScriptActionInterface {
         }
         if (exists (auto v = remove type_hash.default_value)) {
             info.default_value = v;
-        } else if (!info.default_value) {
-            info.default_value = info.type.getDefaultValue();
+        } else if (!exists info.default_value && exists (v = info.type.getDefaultValue())) {
+            info.default_value = v;
         }
         if (exists (auto v = remove type_hash.example_value)) {
             info.example_value = v;
@@ -2323,8 +2334,13 @@ public class TypeScriptActionInterface {
 
                 # remove any manual allowed values
                 remove info.allowed_values;
-                info.attr.ref_data = key;
-                info.attr.dynamic = True;
+                if (resolve_dynamic) {
+                    info.allowed_values = cast<AbstractDataProvider>(fctx).getReferenceData(key,
+                        DataProviderDataContextHelper::getHash());
+                } else {
+                    info.attr.ref_data = key;
+                    info.attr.dynamic = True;
+                }
             }
             if (exists (*code c = remove type_hash.get_element_allowed_values)) {
                 string key = sprintf("%s-%s", path, name);
@@ -2344,8 +2360,13 @@ public class TypeScriptActionInterface {
 
                 # remove any manual allowed values
                 remove info.element_allowed_values;
-                info.attr.element_ref_data = key;
-                info.attr.dynamic = True;
+                if (resolve_dynamic) {
+                    info.allowed_values = cast<AbstractDataProvider>(fctx).getElementReferenceData(key,
+                        DataProviderDataContextHelper::getHash());
+                } else {
+                    info.attr.element_ref_data = key;
+                    info.attr.dynamic = True;
+                }
             }
             if (exists (*code c = remove type_hash.get_dynamic_type)) {
                 string key = sprintf("%s-%s", path, name);
@@ -2404,8 +2425,13 @@ public class TypeScriptActionInterface {
                 };
                 string ix = TypeScriptActionInterface::registerAsyncCall(ignore_dup, \fctx.dvmap{key}, "app",
                     fctx.app, fctx.action, key);
-                info.attr.get_default_value = ix;
-                info.attr.dynamic = True;
+                if (resolve_dynamic) {
+                    info.allowed_values = cast<AbstractDataProvider>(fctx).getReferenceDataValue(ix,
+                        DataProviderDataContextHelper::getHash());
+                } else {
+                    info.attr.get_default_value = ix;
+                    info.attr.dynamic = True;
+                }
             }
         }
         if (info.attr.dynamic) {

@@ -541,6 +541,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
 
     private *hash<string, hash<ActionOptionInfo>> getActionOptionsWithDataIntern(hash<auto> action, hash<auto> slice,
             hash<auto> req) {
+        DataProviderDataContextHelper dch(req);
         *hash<DataContextInfo> cinfo = getCallContextInfo(req);
         *hash<string, hash<ActionOptionInfo>> rv;
         foreach hash<auto> i in (slice.pairIterator()) {
@@ -560,7 +561,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                 TypeScriptActionInterface::getOptionAllowedValuesFunction(\action, self, j.key, \j.value);
                 TypeScriptActionInterface::getOptionElementAllowedValuesFunction(\action, self, j.key, \j.value);
                 TypeScriptActionInterface::getOptionDefaultValueFunction(\action, self, j.key, \j.value);
-                rv{j.key} = TypeScriptActionInterface::getOptionInfo("option", j.value);
+                rv{j.key} = TypeScriptActionInterface::getOptionInfo("option", j.value, self, True);
                 if (j.value.ref_data) {
                     rv{j.key}.allowed_values = getReferenceData(j.value.ref_data, req);
                 }
