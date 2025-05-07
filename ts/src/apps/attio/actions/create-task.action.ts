@@ -126,6 +126,12 @@ const createAttioTask = QoreAppCreator.createLocalizedAction<typeof options>({
             },
           },
         },
+        example_value: [
+          {
+            referenced_actor_type: 'workspace-member',
+            referenced_actor_id: 'attio_workspace_member_id',
+          },
+        ],
       },
       created_by_actor: {
         type: {
