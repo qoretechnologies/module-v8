@@ -16,6 +16,7 @@ export const ATTIO_TO_QORUS_TYPE_MAP: Record<string, TQoreTypeObject | TQoreType
   'multi-select': 'list',
   'record-reference': 'hash',
   'actor-reference': 'hash',
+  rating: 'number',
   location: {
     type: 'hash',
     fields: {

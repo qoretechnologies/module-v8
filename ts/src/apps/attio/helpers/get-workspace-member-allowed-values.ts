@@ -18,14 +18,14 @@ interface TAttioWorkspaceMember {
   access_level: string;
 }
 
-const mapAttioWorkspaceMemberToAllowedValue = (
-  item: TAttioWorkspaceMember
-): IQoreAllowedValue<string> => ({
-  value: item.id.workspace_member_id,
-  display_name: `${item.first_name} ${item.last_name}`,
-  ...(item.avatar_url && { image: item.avatar_url }),
-  desc: `Email: ${item.email_address}\n` + `Access Level: ${item.access_level}`,
-});
+const createAttioWorkspaceMemberToAllowedValueMapFunction =
+  (valueField: 'id' | 'email') =>
+  (item: TAttioWorkspaceMember): IQoreAllowedValue<string> => ({
+    value: valueField === 'id' ? item.id.workspace_member_id : item.email_address,
+    display_name: `${item.first_name} ${item.last_name}`,
+    ...(item.avatar_url && { image: item.avatar_url }),
+    desc: `Email: ${item.email_address}\n` + `Access Level: ${item.access_level}`,
+  });
 
 export const getAttioWorkspaceMemberIdAllowedValues: TQoreGetAllowedValuesFunction<
   TCustomConnOptions,
@@ -37,7 +37,24 @@ export const getAttioWorkspaceMemberIdAllowedValues: TQoreGetAllowedValuesFuncti
     return await getAttioAllowedValues<TAttioWorkspaceMember, string>({
       path: `workspace_members`,
       token,
-      mapItemToAllowedValue: mapAttioWorkspaceMemberToAllowedValue,
+      mapItemToAllowedValue: createAttioWorkspaceMemberToAllowedValueMapFunction('id'),
+    });
+  } catch (error) {
+    throw new AttioError(`Failed to get Attio workspace members allowed values: ${error}`);
+  }
+};
+
+export const getAttioWorkspaceMemberEmailAllowedValues: TQoreGetAllowedValuesFunction<
+  TCustomConnOptions,
+  string
+> = async (context) => {
+  try {
+    const token = getAttioTokenRequired(context);
+
+    return await getAttioAllowedValues<TAttioWorkspaceMember, string>({
+      path: `workspace_members`,
+      token,
+      mapItemToAllowedValue: createAttioWorkspaceMemberToAllowedValueMapFunction('email'),
     });
   } catch (error) {
     throw new AttioError(`Failed to get Attio workspace members allowed values: ${error}`);

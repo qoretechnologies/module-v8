@@ -14,16 +14,19 @@ import {
 import { getAttioObjectAttributesAllowedValues } from '../apps/attio/helpers/get-object-attribute-allowed-values';
 import { getAttioObjectRecordIdAllowedValues } from '../apps/attio/helpers/get-object-record-id-allowed-values';
 import { getAttioTaskIdAllowedValues } from '../apps/attio/helpers/get-task-id-allowed-values';
-import { getAttioWorkspaceMemberIdAllowedValues } from '../apps/attio/helpers/get-workspace-member-allowed-values';
+import {
+  getAttioWorkspaceMemberEmailAllowedValues,
+  getAttioWorkspaceMemberIdAllowedValues,
+} from '../apps/attio/helpers/get-workspace-member-allowed-values';
 import attioListEntryCreatedTrigger from '../apps/attio/triggers/list-entry-created.trigger';
-import { delay } from '../global/helpers';
-import { Debugger, DebugLevels } from '../utils/Debugger';
 import attioListEntryDeletedTrigger from '../apps/attio/triggers/list-entry-deleted.trigger';
 import attioListEntryUpdatedTrigger from '../apps/attio/triggers/list-entry-updated.trigger';
 import attioObjectRecordCreatedTrigger from '../apps/attio/triggers/object-record-created.trigger';
 import attioObjectRecordDeletedTrigger from '../apps/attio/triggers/object-record-deleted.trigger';
 import attioObjectRecordUpdatedTrigger from '../apps/attio/triggers/object-record-updated.trigger';
 import attioTaskCreatedTrigger from '../apps/attio/triggers/task-created.trigger';
+import { delay } from '../global/helpers';
+import { Debugger, DebugLevels } from '../utils/Debugger';
 
 Debugger.level = DebugLevels.Verbose;
 
@@ -141,8 +144,13 @@ describe('Should test attio actions', () => {
       expect(allowed_values).toBeDefined();
       expect(allowed_values.length).toBeGreaterThan(0);
       expect(allowed_values[0].value).toBeDefined();
+    });
 
-      objectId = allowed_values[0].value;
+    it('Should get attio workspace member allowed values', async () => {
+      const allowed_values = await getAttioWorkspaceMemberEmailAllowedValues(baseContext);
+      expect(allowed_values).toBeDefined();
+      expect(allowed_values.length).toBeGreaterThan(0);
+      expect(allowed_values[0].value).toBeDefined();
     });
   });
 
