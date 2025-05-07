@@ -46,7 +46,7 @@ export type TAttioTargetRecord = {
     record_id: {
       value: string;
     }[];
-    name: {
+    name?: {
       value?: string;
       full_name?: string;
     }[];
@@ -183,13 +183,15 @@ export const mapAttioAttributeToQoreOption = (
         path: `objects/${attribute.relationship.id.object_id}/records/query`,
         token,
         method: 'POST',
-        mapItemToAllowedValue: (item) => ({
-          display_name:
-            item.values.name[0].value ||
-            item.values.name[0].full_name ||
-            item.values.record_id[0].value,
-          value: item.values.record_id[0].value,
-        }),
+        mapItemToAllowedValue: (item) => {
+          return {
+            display_name:
+              item.values.name?.[0]?.value ||
+              item.values.name?.[0]?.full_name ||
+              item.values.record_id[0]?.value,
+            value: item.values.record_id[0]?.value,
+          };
+        },
       });
     };
 
