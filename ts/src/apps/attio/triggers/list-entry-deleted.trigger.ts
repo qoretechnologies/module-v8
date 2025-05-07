@@ -2,7 +2,7 @@ import { EQoreAppActionCode, QoreAppCreator, QorusRequest } from '@qoretechnolog
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { ATTIO_APP_NAME, AttioEndpointData, AttioError } from '../constants';
 import { getAttioListIdAllowedValues } from '../helpers/get-list-allowed-values';
-import { deregisterAttioWebhook } from './constants';
+import { attioWebhookInfoLocation, deregisterAttioWebhook } from './constants';
 import {
   createAttioListEntryExampleEventData,
   getAttioListEntryEventEventInfo,
@@ -13,6 +13,7 @@ const attioListEntryDeletedTrigger = QoreAppCreator.createLocalizedTrigger({
   action: 'list_entry_deleted',
   action_code: EQoreAppActionCode.EVENT,
   webhook_method: 'POST',
+  webhook_event_loc: attioWebhookInfoLocation,
   options: {
     list: {
       type: 'string',
@@ -44,7 +45,7 @@ const attioListEntryDeletedTrigger = QoreAppCreator.createLocalizedTrigger({
                   filter: {
                     $and: [
                       {
-                        field: 'list_id',
+                        field: 'id.list_id',
                         operator: 'equals',
                         value: list,
                       },

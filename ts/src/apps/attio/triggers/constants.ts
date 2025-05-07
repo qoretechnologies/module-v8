@@ -6,6 +6,8 @@ import {
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { AttioEndpointData, AttioError } from '../constants';
 
+export const attioWebhookInfoLocation = 'events';
+
 export const deregisterAttioWebhook: TWebhookDeregisterFunction<TCustomConnOptions> = async (
   context,
   _url,

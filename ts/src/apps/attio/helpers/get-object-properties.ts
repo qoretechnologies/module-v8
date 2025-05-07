@@ -222,7 +222,6 @@ export const mapAttioAttributeToQoreOption = (
     } else {
       qorusFixedType = {
         type: 'hash',
-        preselected: false,
         fields: referenceFields,
       };
     }

@@ -2,7 +2,7 @@ import { EQoreAppActionCode, QoreAppCreator, QorusRequest } from '@qoretechnolog
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { ATTIO_APP_NAME, AttioEndpointData, AttioError } from '../constants';
 import { getAttioObjectIdAllowedValues } from '../helpers/get-object-allowed-values';
-import { deregisterAttioWebhook } from './constants';
+import { attioWebhookInfoLocation, deregisterAttioWebhook } from './constants';
 import {
   createAttioObjectRecordExampleEventData,
   getAttioObjectRecordEventEventInfo,
@@ -13,6 +13,7 @@ const attioObjectRecordUpdatedTrigger = QoreAppCreator.createLocalizedTrigger({
   action: 'object_record_updated',
   action_code: EQoreAppActionCode.EVENT,
   webhook_method: 'POST',
+  webhook_event_loc: attioWebhookInfoLocation,
   options: {
     object: {
       type: 'string',
@@ -44,7 +45,7 @@ const attioObjectRecordUpdatedTrigger = QoreAppCreator.createLocalizedTrigger({
                   filter: {
                     $and: [
                       {
-                        field: 'object_id',
+                        field: 'id.object_id',
                         operator: 'equals',
                         value: object,
                       },
