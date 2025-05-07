@@ -534,7 +534,7 @@ type TQoreAppActionFunctionContext<
 };
 
 export const getQoreContextRequiredValues = <
-  ReturnTypeOverride extends Record<string, any> = never,
+  ReturnTypeOverride extends Record<string, any> | undefined = undefined,
   TConn extends Record<string, any> = Record<string, any>,
   TOpts extends TOptions = TOptions,
   OptKeys extends keyof TOpts = keyof TOpts,
@@ -544,7 +544,9 @@ export const getQoreContextRequiredValues = <
   optionFields?: readonly OptKeys[];
   connectionFields?: readonly ConnKeys[];
   ErrorClass?: ErrorConstructor;
-}): ReturnTypeOverride extends never ? { [K in OptKeys | ConnKeys]: any } : ReturnTypeOverride => {
+}): ReturnTypeOverride extends undefined
+  ? { [K in OptKeys | ConnKeys]: any }
+  : ReturnTypeOverride => {
   const {
     context,
     optionFields = [] as readonly OptKeys[],
@@ -553,7 +555,7 @@ export const getQoreContextRequiredValues = <
   } = options;
   const missingOptions: OptKeys[] = [];
   const missingConnections: ConnKeys[] = [];
-  const result = {} as ReturnTypeOverride extends never
+  const result = {} as ReturnTypeOverride extends undefined
     ? { [K in OptKeys | ConnKeys]: any }
     : ReturnTypeOverride;
   if (optionFields.length === 0 && connectionFields.length === 0) {
@@ -577,7 +579,11 @@ export const getQoreContextRequiredValues = <
   });
   const missingFields = [...missingOptions, ...missingConnections] as string[];
   if (missingFields.length > 0) {
-    throw new ErrorClass(`Missing required values: ${missingFields.join(', ')}`);
+    throw new ErrorClass(
+      `Missing required values:\n` +
+        (missingOptions.length ? `Options: ${missingOptions.join(', ')}\n` : '') +
+        (missingConnections.length ? `Connection options: ${missingConnections.join(', ')}` : '')
+    );
   }
 
   return result;

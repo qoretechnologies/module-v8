@@ -62,25 +62,16 @@ const updateAttioObjectRecord = QoreAppCreator.createLocalizedAction<
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const token = context?.conn_opts?.token;
-    const object = obj?.object;
-    const attributes = obj?.attributes;
-    const recordId = obj?.record_id;
-
-    const missingValues: string[] = [];
-
-    if (!token) missingValues.push('token');
-    if (!object) missingValues.push('object');
-    if (!recordId) missingValues.push('record_id');
-    if (!attributes) missingValues.push('attributes');
-
-    if (missingValues.length > 0) {
-      throw new AttioError(`Missing required values: ${missingValues.join(', ')}`);
-    }
+    const { attributes, object, record_id, token } = getQoreContextRequiredValues({
+      context: { ...context, opts: obj },
+      optionFields: ['object', 'record_id', 'attributes'],
+      connectionFields: ['token'],
+      ErrorClass: AttioError,
+    });
 
     try {
       const response = await axios.patch(
-        `${ATTIO_APP_API_URL}/v2/objects/${object}/records/${recordId}`,
+        `${ATTIO_APP_API_URL}/v2/objects/${object}/records/${record_id}`,
         {
           data: {
             values: attributes,
