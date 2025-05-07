@@ -2404,8 +2404,13 @@ public class TypeScriptActionInterface {
                 };
                 string ix = TypeScriptActionInterface::registerAsyncCall(ignore_dup, \fctx.dvmap{key}, "app",
                     fctx.app, fctx.action, key);
-                info.attr.get_default_value = ix;
-                info.attr.dynamic = True;
+                if (resolve_dynamic) {
+                    info.default_value = cast<AbstractDataProvider>(fctx).getReferenceDataValue(ix,
+                        DataProviderDataContextHelper::getHash());
+                } else {
+                    info.attr.get_default_value = ix;
+                    info.attr.dynamic = True;
+                }
             }
         }
         if (info.attr.dynamic) {
