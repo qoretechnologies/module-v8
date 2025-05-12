@@ -174,8 +174,8 @@ const addSpreadsheetRows = QoreAppCreator.createLocalizedAction<
         end_row: endRowIndex,
         updated_range: insert_at_start
           ? `${sheetTitle}!A2:${toColumnLetter(headers.length)}${1 + rows.length}`
-          : updatedRange || '',
-        updated_cells: insert_at_start ? updatedCells || 0 : headers.length * rows.length,
+          : updatedRange,
+        updated_cells: insert_at_start ? headers.length * rows.length : updatedCells,
         insert_at_start,
       };
     } catch (error) {
