@@ -98,6 +98,7 @@ class _PiecesAppCatalogue {
         ping_method: auth.pingMethod,
         ping_path: auth.pingPath,
         ping_headers: auth.pingHeaders,
+        ping_body: auth.pingBody,
         oauth2_auth_url: auth.authUrl,
         oauth2_token_url: auth.tokenUrl,
         oauth2_scopes: auth.scope,
