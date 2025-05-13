@@ -9,6 +9,7 @@ export const getSheetRowsOptions: TQoreGetDependentOptionsFunction = async (cont
   const token = conn_opts?.token;
   const spreadsheet_id = opts?.spreadsheet_id;
   const sheet_id = opts?.sheet_id;
+  const add_row_index = opts?.add_row_index;
 
   if (!token || !spreadsheet_id || !sheet_id) {
     return {
@@ -182,7 +183,17 @@ export const getSheetRowsOptions: TQoreGetDependentOptionsFunction = async (cont
           type: 'list',
           element_type: {
             type: 'hash',
-            fields: rowFields,
+            fields: {
+              ...rowFields,
+              ...(add_row_index
+                ? {
+                    row_index: {
+                      type: 'integer',
+                      required: true,
+                    },
+                  }
+                : {}),
+            },
           },
         },
         display_name: 'Rows to Add',

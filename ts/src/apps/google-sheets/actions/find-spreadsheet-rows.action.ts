@@ -83,7 +83,7 @@ const options = {
         },
         value: {
           required: true,
-          type: 'any',
+          type: 'softstring',
         },
       },
     },
@@ -368,7 +368,7 @@ const createResponse = ({
         rows: rows.map(({ row_index, values }) => {
           const mappedValues: Record<string, any> = {};
           values.forEach((value: any, index: number) => {
-            mappedValues[toColumnLetter(index)] = value;
+            mappedValues[toColumnLetter(++index)] = value;
           });
 
           return {

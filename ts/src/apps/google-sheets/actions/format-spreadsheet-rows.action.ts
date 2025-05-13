@@ -283,7 +283,12 @@ const formatSpreadsheetRows = QoreAppCreator.createLocalizedAction<typeof option
 });
 
 const qoreRgbToGoogleRgb = (rgbColor: TQoreRgbColor) => {
-  return { red: rgbColor.r, green: rgbColor.g, blue: rgbColor.b };
+  return {
+    red: rgbColor.r / 255,
+    green: rgbColor.g / 255,
+    blue: rgbColor.b / 255,
+    alpha: rgbColor.a,
+  };
 };
 
 export default formatSpreadsheetRows;

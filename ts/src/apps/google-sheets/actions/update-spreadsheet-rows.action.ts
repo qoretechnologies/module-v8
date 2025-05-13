@@ -23,15 +23,13 @@ const options = {
     depends_on: ['spreadsheet_id'],
     on_change: ['refetch'],
     get_dependent_options: async (context) => {
-      const rows = await getSheetRowsOptions(context);
-
-      return {
-        row_index: {
-          type: 'integer',
-          required: true,
+      return await getSheetRowsOptions({
+        ...context,
+        opts: {
+          ...context?.opts,
+          add_row_index: true,
         },
-        ...rows,
-      };
+      });
     },
   },
 } satisfies TQoreOptions;

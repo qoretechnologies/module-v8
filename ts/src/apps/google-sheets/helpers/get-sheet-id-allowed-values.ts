@@ -11,7 +11,7 @@ export const getGoogleSheetIdAllowedValues: TQoreGetAllowedValuesFunction<
   string
 > = async (context) => {
   const token = context?.conn_opts?.token;
-  const spreadsheetId = context?.opts?.spreadsheet_id;
+  const spreadsheetId = context?.opts?.spreadsheet_id || context?.opts?.source_spreadsheet_id;
 
   if (!token) {
     throw new GoogleSheetsError('Authentication token is required to get sheet IDs');
