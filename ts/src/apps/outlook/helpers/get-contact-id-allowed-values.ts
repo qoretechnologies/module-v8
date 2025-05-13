@@ -51,8 +51,8 @@ export const getOutlookContactIdAllowedValues: TQoreGetAllowedValuesFunction<
           display_name: fullName,
           value: contact.id!,
           short_desc:
-            `Email: ${email}\n\n` +
-            `Company: ${contact.companyName || 'Not specified'}\n\n` +
+            `Email: ${email}\n` +
+            `Company: ${contact.companyName || 'Not specified'}\n` +
             `Job Title: ${contact.jobTitle || 'Not specified'}`,
         });
       }

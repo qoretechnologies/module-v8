@@ -15648,6 +15648,350 @@ type RootTranslation = {
 			 */
 			longDesc: string
 			actions: {
+				'manage-email': {
+					/**
+					 * M​a​n​a​g​e​ ​E​m​a​i​l
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​o​r​ ​m​o​v​e​ ​a​n​ ​e​m​a​i​l​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​n​o​t​h​e​r​ ​f​o​l​d​e​r​.
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​f​o​r​m​s​ ​o​p​e​r​a​t​i​o​n​s​ ​o​n​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​e​m​a​i​l​ ​m​e​s​s​a​g​e​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​e​i​t​h​e​r​ ​d​e​l​e​t​e​ ​i​t​ ​p​e​r​m​a​n​e​n​t​l​y​ ​o​r​ ​m​o​v​e​ ​i​t​ ​t​o​ ​a​n​o​t​h​e​r​ ​f​o​l​d​e​r​ ​i​n​ ​y​o​u​r​ ​O​u​t​l​o​o​k​ ​m​a​i​l​b​o​x​.
+					 */
+					longDesc: string
+					options: {
+						messageId: {
+							/**
+							 * M​e​s​s​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​ ​m​e​s​s​a​g​e​ ​t​o​ ​b​e​ ​m​o​v​e​d​ ​o​r​ ​d​e​l​e​t​e​d​.
+							 */
+							longDesc: string
+						}
+						action: {
+							/**
+							 * A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​c​t​i​o​n​ ​t​o​ ​p​e​r​f​o​r​m​ ​o​n​ ​t​h​e​ ​e​m​a​i​l
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​o​ ​d​e​l​e​t​e​ ​t​h​e​ ​e​m​a​i​l​ ​p​e​r​m​a​n​e​n​t​l​y​ ​o​r​ ​m​o​v​e​ ​i​t​ ​t​o​ ​a​n​o​t​h​e​r​ ​f​o​l​d​e​r​.
+							 */
+							longDesc: string
+						}
+						targetFolderId: {
+							/**
+							 * T​a​r​g​e​t​ ​F​o​l​d​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​f​o​l​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​f​o​l​d​e​r​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​v​e​ ​t​h​e​ ​e​m​a​i​l​.​ ​T​h​i​s​ ​f​i​e​l​d​ ​i​s​ ​r​e​q​u​i​r​e​d​ ​o​n​l​y​ ​w​h​e​n​ ​t​h​e​ ​a​c​t​i​o​n​ ​i​s​ ​s​e​t​ ​t​o​ ​"​m​o​v​e​"​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'search-emails': {
+					/**
+					 * S​e​a​r​c​h​ ​E​m​a​i​l​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​e​m​a​i​l​s​ ​u​s​i​n​g​ ​v​a​r​i​o​u​s​ ​f​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​i​n​c​l​u​d​i​n​g​ ​a​d​v​a​n​c​e​d​ ​a​t​t​a​c​h​m​e​n​t​ ​f​i​l​t​e​r​s​.
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​a​n​d​ ​r​e​t​r​i​e​v​e​ ​e​m​a​i​l​s​ ​f​r​o​m​ ​O​u​t​l​o​o​k​ ​b​a​s​e​d​ ​o​n​ ​d​a​t​e​s​,​ ​s​e​n​d​e​r​s​,​ ​r​e​c​i​p​i​e​n​t​s​,​ ​s​u​b​j​e​c​t​,​ ​b​o​d​y​ ​c​o​n​t​e​n​t​,​ ​a​n​d​ ​d​e​t​a​i​l​e​d​ ​a​t​t​a​c​h​m​e​n​t​ ​p​r​o​p​e​r​t​i​e​s​ ​l​i​k​e​ ​n​a​m​e​s​,​ ​p​a​t​t​e​r​n​s​,​ ​M​I​M​E​ ​t​y​p​e​s​,​ ​a​n​d​ ​s​i​z​e​s​.
+					 */
+					longDesc: string
+					options: {
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​e​m​a​i​l​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * S​o​r​t​ ​t​h​e​ ​e​m​a​i​l​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​.​ ​T​h​e​ ​d​e​f​a​u​l​t​ ​i​s​ ​t​o​ ​s​o​r​t​ ​b​y​ ​r​e​c​e​i​v​e​d​ ​d​a​t​e​ ​i​n​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​f​i​e​l​d​ ​b​y​ ​w​h​i​c​h​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​e​m​a​i​l​ ​r​e​s​u​l​t​s​.
+										 */
+										longDesc: string
+									}
+									order: {
+										/**
+										 * S​o​r​t​ ​O​r​d​e​r
+										 */
+										displayName: string
+										/**
+										 * O​r​d​e​r​ ​o​f​ ​s​o​r​t​i​n​g
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​t​h​e​ ​o​r​d​e​r​ ​i​n​ ​w​h​i​c​h​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​.​ ​O​p​t​i​o​n​s​ ​i​n​c​l​u​d​e​ ​A​s​c​e​n​d​i​n​g​ ​a​n​d​ ​D​e​s​c​e​n​d​i​n​g​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​e​m​a​i​l​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​s​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​e​m​a​i​l​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.
+							 */
+							longDesc: string
+						}
+						startDateTime: {
+							/**
+							 * S​t​a​r​t​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​e​m​a​i​l​s​ ​r​e​c​e​i​v​e​d​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​i​n​c​l​u​d​e​ ​e​m​a​i​l​s​ ​t​h​a​t​ ​w​e​r​e​ ​r​e​c​e​i​v​e​d​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​.
+							 */
+							longDesc: string
+						}
+						endDateTime: {
+							/**
+							 * E​n​d​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​e​m​a​i​l​s​ ​r​e​c​e​i​v​e​d​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​i​n​c​l​u​d​e​ ​e​m​a​i​l​s​ ​t​h​a​t​ ​w​e​r​e​ ​r​e​c​e​i​v​e​d​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​.
+							 */
+							longDesc: string
+						}
+						fromSender: {
+							/**
+							 * F​r​o​m​ ​S​e​n​d​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​e​m​a​i​l​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​e​n​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​i​n​c​l​u​d​e​ ​e​m​a​i​l​s​ ​f​r​o​m​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​s​e​n​d​e​r​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.
+							 */
+							longDesc: string
+						}
+						toRecipient: {
+							/**
+							 * T​o​ ​R​e​c​i​p​i​e​n​t
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​e​m​a​i​l​s​ ​s​e​n​t​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​r​e​c​i​p​i​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​i​n​c​l​u​d​e​ ​e​m​a​i​l​s​ ​s​e​n​t​ ​t​o​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​r​e​c​i​p​i​e​n​t​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.
+							 */
+							longDesc: string
+						}
+						subject: {
+							/**
+							 * S​u​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​e​m​a​i​l​s​ ​b​y​ ​s​u​b​j​e​c​t​ ​l​i​n​e​ ​t​e​x​t
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​i​n​c​l​u​d​e​ ​e​m​a​i​l​s​ ​w​i​t​h​ ​t​h​i​s​ ​t​e​x​t​ ​i​n​ ​t​h​e​ ​s​u​b​j​e​c​t​ ​l​i​n​e​.
+							 */
+							longDesc: string
+						}
+						hasAttachments: {
+							/**
+							 * H​a​s​ ​A​t​t​a​c​h​m​e​n​t​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​e​m​a​i​l​s​ ​w​i​t​h​ ​o​r​ ​w​i​t​h​o​u​t​ ​a​t​t​a​c​h​m​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​s​e​t​ ​t​o​ ​t​r​u​e​,​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​e​m​a​i​l​s​ ​t​h​a​t​ ​h​a​v​e​ ​a​t​t​a​c​h​m​e​n​t​s​.​ ​W​h​e​n​ ​f​a​l​s​e​,​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​e​m​a​i​l​s​ ​w​i​t​h​o​u​t​ ​a​t​t​a​c​h​m​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+						isRead: {
+							/**
+							 * I​s​ ​R​e​a​d
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​r​e​a​d​ ​o​r​ ​u​n​r​e​a​d​ ​e​m​a​i​l​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​s​e​t​ ​t​o​ ​t​r​u​e​,​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​e​m​a​i​l​s​ ​t​h​a​t​ ​h​a​v​e​ ​b​e​e​n​ ​r​e​a​d​.​ ​W​h​e​n​ ​f​a​l​s​e​,​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​u​n​r​e​a​d​ ​e​m​a​i​l​s​.
+							 */
+							longDesc: string
+						}
+						attachmentNames: {
+							/**
+							 * A​t​t​a​c​h​m​e​n​t​ ​N​a​m​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​e​m​a​i​l​s​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​a​t​t​a​c​h​m​e​n​t​ ​n​a​m​e​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​i​n​c​l​u​d​e​ ​e​m​a​i​l​s​ ​t​h​a​t​ ​h​a​v​e​ ​a​t​t​a​c​h​m​e​n​t​s​ ​w​i​t​h​ ​t​h​e​s​e​ ​f​i​l​e​n​a​m​e​s​.
+							 */
+							longDesc: string
+						}
+						bodyContains: {
+							/**
+							 * B​o​d​y​ ​C​o​n​t​a​i​n​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​e​m​a​i​l​s​ ​b​y​ ​b​o​d​y​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​i​n​c​l​u​d​e​ ​e​m​a​i​l​s​ ​t​h​a​t​ ​c​o​n​t​a​i​n​ ​t​h​i​s​ ​t​e​x​t​ ​i​n​ ​t​h​e​ ​b​o​d​y​ ​c​o​n​t​e​n​t​.
+							 */
+							longDesc: string
+						}
+						includeAttachments: {
+							/**
+							 * I​n​c​l​u​d​e​ ​A​t​t​a​c​h​m​e​n​t​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​a​t​t​a​c​h​m​e​n​t​ ​c​o​n​t​e​n​t​ ​i​n​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​s​e​t​ ​t​o​ ​t​r​u​e​,​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​o​f​ ​e​m​a​i​l​ ​a​t​t​a​c​h​m​e​n​t​s​ ​w​i​l​l​ ​b​e​ ​i​n​c​l​u​d​e​d​ ​i​n​ ​t​h​e​ ​r​e​s​u​l​t​s​.​ ​T​h​i​s​ ​m​a​y​ ​i​n​c​r​e​a​s​e​ ​r​e​s​p​o​n​s​e​ ​s​i​z​e​ ​s​i​g​n​i​f​i​c​a​n​t​l​y​.
+							 */
+							longDesc: string
+						}
+						folder: {
+							/**
+							 * F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​f​o​l​d​e​r​ ​t​o​ ​s​e​a​r​c​h​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​f​o​l​d​e​r​ ​t​o​ ​s​e​a​r​c​h​ ​i​n​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​I​n​b​o​x​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						attachmentFilenamePattern: {
+							/**
+							 * A​t​t​a​c​h​m​e​n​t​ ​F​i​l​e​n​a​m​e​ ​P​a​t​t​e​r​n
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​a​t​t​a​c​h​m​e​n​t​ ​f​i​l​e​n​a​m​e​ ​p​a​t​t​e​r​n​ ​(​r​e​g​e​x​)
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​e​m​a​i​l​s​ ​b​y​ ​a​ ​r​e​g​u​l​a​r​ ​e​x​p​r​e​s​s​i​o​n​ ​p​a​t​t​e​r​n​ ​t​h​a​t​ ​m​a​t​c​h​e​s​ ​a​t​t​a​c​h​m​e​n​t​ ​f​i​l​e​n​a​m​e​s​.​ ​E​x​a​m​p​l​e​:​ ​"​.​*​\​.​p​d​f​$​"​ ​w​o​u​l​d​ ​m​a​t​c​h​ ​a​l​l​ ​P​D​F​ ​f​i​l​e​s​.
+							 */
+							longDesc: string
+						}
+						attachmentMimeTypes: {
+							/**
+							 * A​t​t​a​c​h​m​e​n​t​ ​M​I​M​E​ ​T​y​p​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​a​t​t​a​c​h​m​e​n​t​ ​M​I​M​E​ ​t​y​p​e​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​i​n​c​l​u​d​e​ ​e​m​a​i​l​s​ ​w​i​t​h​ ​a​t​t​a​c​h​m​e​n​t​s​ ​m​a​t​c​h​i​n​g​ ​t​h​e​s​e​ ​M​I​M​E​ ​t​y​p​e​s​ ​(​e​.​g​.​,​ ​"​a​p​p​l​i​c​a​t​i​o​n​/​p​d​f​"​,​ ​"​i​m​a​g​e​/​j​p​e​g​"​)​.
+							 */
+							longDesc: string
+						}
+						attachmentMinSize: {
+							/**
+							 * A​t​t​a​c​h​m​e​n​t​ ​M​i​n​i​m​u​m​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​a​t​t​a​c​h​m​e​n​t​ ​m​i​n​i​m​u​m​ ​s​i​z​e​ ​i​n​ ​b​y​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​i​n​c​l​u​d​e​ ​e​m​a​i​l​s​ ​w​i​t​h​ ​a​t​t​a​c​h​m​e​n​t​s​ ​l​a​r​g​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​i​s​ ​s​i​z​e​ ​i​n​ ​b​y​t​e​s​.
+							 */
+							longDesc: string
+						}
+						attachmentMaxSize: {
+							/**
+							 * A​t​t​a​c​h​m​e​n​t​ ​M​a​x​i​m​u​m​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​a​t​t​a​c​h​m​e​n​t​ ​m​a​x​i​m​u​m​ ​s​i​z​e​ ​i​n​ ​b​y​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​i​n​c​l​u​d​e​ ​e​m​a​i​l​s​ ​w​i​t​h​ ​a​t​t​a​c​h​m​e​n​t​s​ ​s​m​a​l​l​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​i​s​ ​s​i​z​e​ ​i​n​ ​b​y​t​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
 				'create-contact': {
 					/**
 					 * C​r​e​a​t​e​ ​C​o​n​t​a​c​t
@@ -16802,6 +17146,112 @@ type RootTranslation = {
 				}
 			}
 			triggers: {
+				'new-email-with-attachment': {
+					/**
+					 * N​e​w​ ​E​m​a​i​l​ ​w​i​t​h​ ​A​t​t​a​c​h​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​e​m​a​i​l​ ​w​i​t​h​ ​a​t​t​a​c​h​m​e​n​t​s​ ​i​s​ ​r​e​c​e​i​v​e​d​,​ ​p​r​o​c​e​s​s​i​n​g​ ​e​a​c​h​ ​m​a​t​c​h​i​n​g​ ​a​t​t​a​c​h​m​e​n​t​ ​i​n​d​i​v​i​d​u​a​l​l​y​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​n​ ​O​u​t​l​o​o​k​ ​m​a​i​l​b​o​x​ ​f​o​r​ ​n​e​w​ ​e​m​a​i​l​s​ ​w​i​t​h​ ​a​t​t​a​c​h​m​e​n​t​s​.​ ​W​h​e​n​ ​a​n​ ​e​m​a​i​l​ ​w​i​t​h​ ​a​t​t​a​c​h​m​e​n​t​s​ ​i​s​ ​r​e​c​e​i​v​e​d​,​ ​e​a​c​h​ ​a​t​t​a​c​h​m​e​n​t​ ​t​h​a​t​ ​m​a​t​c​h​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​l​t​e​r​s​ ​w​i​l​l​ ​t​r​i​g​g​e​r​ ​a​ ​s​e​p​a​r​a​t​e​ ​e​v​e​n​t​.​ ​T​h​i​s​ ​a​l​l​o​w​s​ ​f​o​r​ ​p​r​o​c​e​s​s​i​n​g​ ​i​n​d​i​v​i​d​u​a​l​ ​a​t​t​a​c​h​m​e​n​t​s​ ​f​r​o​m​ ​e​m​a​i​l​s​ ​w​h​i​l​e​ ​m​a​i​n​t​a​i​n​i​n​g​ ​t​h​e​ ​f​u​l​l​ ​e​m​a​i​l​ ​c​o​n​t​e​x​t​.
+					 */
+					longDesc: string
+					options: {
+						senderFilter: {
+							/**
+							 * S​e​n​d​e​r​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * O​n​l​y​ ​p​r​o​c​e​s​s​ ​e​m​a​i​l​s​ ​f​r​o​m​ ​t​h​i​s​ ​s​e​n​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​s​p​e​c​i​f​i​e​d​,​ ​o​n​l​y​ ​e​m​a​i​l​s​ ​f​r​o​m​ ​t​h​i​s​ ​e​x​a​c​t​ ​s​e​n​d​e​r​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​w​i​l​l​ ​b​e​ ​p​r​o​c​e​s​s​e​d​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​p​r​o​c​e​s​s​ ​e​m​a​i​l​s​ ​f​r​o​m​ ​a​n​y​ ​s​e​n​d​e​r​.
+							 */
+							longDesc: string
+						}
+						subjectFilter: {
+							/**
+							 * S​u​b​j​e​c​t​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * O​n​l​y​ ​p​r​o​c​e​s​s​ ​e​m​a​i​l​s​ ​w​i​t​h​ ​t​h​i​s​ ​t​e​x​t​ ​i​n​ ​t​h​e​ ​s​u​b​j​e​c​t
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​s​p​e​c​i​f​i​e​d​,​ ​o​n​l​y​ ​e​m​a​i​l​s​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​i​s​ ​t​e​x​t​ ​i​n​ ​t​h​e​ ​s​u​b​j​e​c​t​ ​l​i​n​e​ ​w​i​l​l​ ​b​e​ ​p​r​o​c​e​s​s​e​d​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​p​r​o​c​e​s​s​ ​e​m​a​i​l​s​ ​w​i​t​h​ ​a​n​y​ ​s​u​b​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+						filenameFilters: {
+							/**
+							 * F​i​l​e​n​a​m​e​ ​F​i​l​t​e​r​s
+							 */
+							displayName: string
+							/**
+							 * O​n​l​y​ ​p​r​o​c​e​s​s​ ​a​t​t​a​c​h​m​e​n​t​s​ ​w​i​t​h​ ​m​a​t​c​h​i​n​g​ ​f​i​l​e​n​a​m​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​t​e​x​t​ ​s​t​r​i​n​g​s​ ​t​o​ ​m​a​t​c​h​ ​a​g​a​i​n​s​t​ ​a​t​t​a​c​h​m​e​n​t​ ​f​i​l​e​n​a​m​e​s​.​ ​I​f​ ​p​r​o​v​i​d​e​d​,​ ​o​n​l​y​ ​a​t​t​a​c​h​m​e​n​t​s​ ​w​i​t​h​ ​f​i​l​e​n​a​m​e​s​ ​c​o​n​t​a​i​n​i​n​g​ ​a​n​y​ ​o​f​ ​t​h​e​s​e​ ​s​t​r​i​n​g​s​ ​w​i​l​l​ ​b​e​ ​p​r​o​c​e​s​s​e​d​.​ ​M​a​t​c​h​i​n​g​ ​i​s​ ​c​a​s​e​-​i​n​s​e​n​s​i​t​i​v​e​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​p​r​o​c​e​s​s​ ​a​l​l​ ​a​t​t​a​c​h​m​e​n​t​s​ ​r​e​g​a​r​d​l​e​s​s​ ​o​f​ ​f​i​l​e​n​a​m​e​.
+							 */
+							longDesc: string
+						}
+						mimeTypeFilters: {
+							/**
+							 * M​I​M​E​ ​T​y​p​e​ ​F​i​l​t​e​r​s
+							 */
+							displayName: string
+							/**
+							 * O​n​l​y​ ​p​r​o​c​e​s​s​ ​a​t​t​a​c​h​m​e​n​t​s​ ​w​i​t​h​ ​m​a​t​c​h​i​n​g​ ​M​I​M​E​ ​t​y​p​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​M​I​M​E​ ​t​y​p​e​ ​s​t​r​i​n​g​s​ ​t​o​ ​m​a​t​c​h​ ​a​g​a​i​n​s​t​ ​a​t​t​a​c​h​m​e​n​t​ ​c​o​n​t​e​n​t​ ​t​y​p​e​s​.​ ​I​f​ ​p​r​o​v​i​d​e​d​,​ ​o​n​l​y​ ​a​t​t​a​c​h​m​e​n​t​s​ ​w​i​t​h​ ​c​o​n​t​e​n​t​ ​t​y​p​e​s​ ​c​o​n​t​a​i​n​i​n​g​ ​a​n​y​ ​o​f​ ​t​h​e​s​e​ ​s​t​r​i​n​g​s​ ​w​i​l​l​ ​b​e​ ​p​r​o​c​e​s​s​e​d​.​ ​F​o​r​ ​e​x​a​m​p​l​e​,​ ​u​s​e​ ​"​p​d​f​"​ ​t​o​ ​m​a​t​c​h​ ​P​D​F​ ​f​i​l​e​s​,​ ​"​i​m​a​g​e​/​"​ ​t​o​ ​m​a​t​c​h​ ​a​l​l​ ​i​m​a​g​e​s​,​ ​o​r​ ​"​s​p​r​e​a​d​s​h​e​e​t​"​ ​t​o​ ​m​a​t​c​h​ ​E​x​c​e​l​ ​f​i​l​e​s​.​ ​M​a​t​c​h​i​n​g​ ​i​s​ ​c​a​s​e​-​i​n​s​e​n​s​i​t​i​v​e​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​p​r​o​c​e​s​s​ ​a​l​l​ ​a​t​t​a​c​h​m​e​n​t​s​ ​r​e​g​a​r​d​l​e​s​s​ ​o​f​ ​M​I​M​E​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+						action: {
+							/**
+							 * E​m​a​i​l​ ​A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​c​t​i​o​n​ ​t​o​ ​p​e​r​f​o​r​m​ ​o​n​ ​t​h​e​ ​e​m​a​i​l​ ​a​f​t​e​r​ ​p​r​o​c​e​s​s​i​n​g​ ​i​t​s​ ​a​t​t​a​c​h​m​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​w​h​a​t​ ​s​h​o​u​l​d​ ​h​a​p​p​e​n​ ​t​o​ ​t​h​e​ ​e​m​a​i​l​ ​a​f​t​e​r​ ​a​l​l​ ​m​a​t​c​h​i​n​g​ ​a​t​t​a​c​h​m​e​n​t​s​ ​h​a​v​e​ ​b​e​e​n​ ​p​r​o​c​e​s​s​e​d​.​ ​O​p​t​i​o​n​s​ ​i​n​c​l​u​d​e​:​ ​N​o​n​e​ ​(​l​e​a​v​e​ ​t​h​e​ ​e​m​a​i​l​ ​a​s​ ​i​s​)​,​ ​D​e​l​e​t​e​ ​(​p​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​ ​t​h​e​ ​e​m​a​i​l​)​,​ ​o​r​ ​M​o​v​e​ ​(​r​e​l​o​c​a​t​e​ ​t​h​e​ ​e​m​a​i​l​ ​t​o​ ​a​n​o​t​h​e​r​ ​f​o​l​d​e​r​)​.
+							 */
+							longDesc: string
+						}
+						targetFolderId: {
+							/**
+							 * T​a​r​g​e​t​ ​F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * D​e​s​t​i​n​a​t​i​o​n​ ​f​o​l​d​e​r​ ​f​o​r​ ​e​m​a​i​l​s​ ​w​h​e​n​ ​u​s​i​n​g​ ​M​o​v​e​ ​a​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​t​h​e​ ​E​m​a​i​l​ ​A​c​t​i​o​n​ ​i​s​ ​s​e​t​ ​t​o​ ​"​M​o​v​e​"​,​ ​s​p​e​c​i​f​y​ ​t​h​e​ ​f​o​l​d​e​r​ ​w​h​e​r​e​ ​t​h​e​ ​e​m​a​i​l​ ​s​h​o​u​l​d​ ​b​e​ ​m​o​v​e​d​ ​a​f​t​e​r​ ​a​l​l​ ​a​t​t​a​c​h​m​e​n​t​s​ ​h​a​v​e​ ​b​e​e​n​ ​p​r​o​c​e​s​s​e​d​.​ ​T​h​i​s​ ​o​p​t​i​o​n​ ​i​s​ ​o​n​l​y​ ​u​s​e​d​ ​w​h​e​n​ ​M​o​v​e​ ​i​s​ ​s​e​l​e​c​t​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * C​o​n​t​a​i​n​s​ ​t​h​e​ ​e​m​a​i​l​ ​d​a​t​a​ ​a​l​o​n​g​ ​w​i​t​h​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​i​n​g​l​e​ ​m​a​t​c​h​i​n​g​ ​a​t​t​a​c​h​m​e​n​t​.
+						 */
+						desc: string
+					}
+				}
 				'new-contact': {
 					/**
 					 * N​e​w​ ​C​o​n​t​a​c​t
@@ -16818,17 +17268,109 @@ type RootTranslation = {
 				}
 				'new-email': {
 					/**
-					 * N​e​w​ ​E​m​a​i​l
+					 * N​e​w​ ​E​m​a​i​l​ ​T​r​i​g​g​e​r
 					 */
 					displayName: string
 					/**
-					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​e​m​a​i​l​ ​i​s​ ​r​e​c​e​i​v​e​d​ ​i​n​ ​O​u​t​l​o​o​k​.
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​e​m​a​i​l​ ​i​s​ ​r​e​c​e​i​v​e​d​ ​i​n​ ​y​o​u​r​ ​O​u​t​l​o​o​k​ ​i​n​b​o​x
 					 */
 					shortDesc: string
 					/**
-					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​i​s​ ​a​c​t​i​v​a​t​e​d​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​e​m​a​i​l​ ​m​e​s​s​a​g​e​ ​i​s​ ​r​e​c​e​i​v​e​d​ ​i​n​ ​y​o​u​r​ ​M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k​ ​i​n​b​o​x​.
+					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​O​u​t​l​o​o​k​ ​i​n​b​o​x​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​n​e​w​ ​e​m​a​i​l​s​ ​a​r​r​i​v​e​.​ ​S​u​p​p​o​r​t​s​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​s​e​n​d​e​r​,​ ​s​u​b​j​e​c​t​,​ ​o​r​ ​a​t​t​a​c​h​m​e​n​t​s​,​ ​a​n​d​ ​c​a​n​ ​o​p​t​i​o​n​a​l​l​y​ ​d​e​l​e​t​e​ ​o​r​ ​m​o​v​e​ ​p​r​o​c​e​s​s​e​d​ ​e​m​a​i​l​s​.
 					 */
 					longDesc: string
+					options: {
+						senderFilter: {
+							/**
+							 * S​e​n​d​e​r​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​e​m​a​i​l​s​ ​b​y​ ​s​e​n​d​e​r​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​e​m​a​i​l​s​ ​f​r​o​m​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​s​e​n​d​e​r​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​a​l​l​ ​s​e​n​d​e​r​s​.
+							 */
+							longDesc: string
+						}
+						subjectFilter: {
+							/**
+							 * S​u​b​j​e​c​t​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​e​m​a​i​l​s​ ​b​y​ ​s​u​b​j​e​c​t​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​e​m​a​i​l​s​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​i​s​ ​t​e​x​t​ ​i​n​ ​t​h​e​ ​s​u​b​j​e​c​t​ ​l​i​n​e​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​m​a​t​c​h​ ​a​n​y​ ​s​u​b​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+						hasAttachments: {
+							/**
+							 * H​a​s​ ​A​t​t​a​c​h​m​e​n​t​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​a​t​t​a​c​h​m​e​n​t​ ​p​r​e​s​e​n​c​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​e​m​a​i​l​s​ ​b​a​s​e​d​ ​o​n​ ​w​h​e​t​h​e​r​ ​t​h​e​y​ ​h​a​v​e​ ​a​t​t​a​c​h​m​e​n​t​s​.​ ​S​e​t​ ​t​o​ ​t​r​u​e​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​e​m​a​i​l​s​ ​w​i​t​h​ ​a​t​t​a​c​h​m​e​n​t​s​,​ ​f​a​l​s​e​ ​f​o​r​ ​e​m​a​i​l​s​ ​w​i​t​h​o​u​t​ ​a​t​t​a​c​h​m​e​n​t​s​,​ ​o​r​ ​l​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​b​o​t​h​.
+							 */
+							longDesc: string
+						}
+						includeAttachmentData: {
+							/**
+							 * I​n​c​l​u​d​e​ ​A​t​t​a​c​h​m​e​n​t​ ​D​a​t​a
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​a​t​t​a​c​h​m​e​n​t​ ​c​o​n​t​e​n​t​ ​i​n​ ​t​r​i​g​g​e​r​ ​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​f​e​t​c​h​ ​a​n​d​ ​i​n​c​l​u​d​e​ ​t​h​e​ ​a​c​t​u​a​l​ ​a​t​t​a​c​h​m​e​n​t​ ​c​o​n​t​e​n​t​ ​i​n​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​d​a​t​a​.​ ​T​h​i​s​ ​m​a​y​ ​i​n​c​r​e​a​s​e​ ​p​r​o​c​e​s​s​i​n​g​ ​t​i​m​e​ ​f​o​r​ ​l​a​r​g​e​ ​a​t​t​a​c​h​m​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+						action: {
+							/**
+							 * E​m​a​i​l​ ​A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​c​t​i​o​n​ ​t​o​ ​p​e​r​f​o​r​m​ ​a​f​t​e​r​ ​t​r​i​g​g​e​r​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​a​c​t​i​o​n​ ​t​o​ ​p​e​r​f​o​r​m​ ​o​n​ ​e​m​a​i​l​s​ ​a​f​t​e​r​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​r​u​n​s​.​ ​C​h​o​o​s​e​ ​"​N​o​n​e​"​ ​t​o​ ​l​e​a​v​e​ ​e​m​a​i​l​s​ ​u​n​c​h​a​n​g​e​d​,​ ​"​D​e​l​e​t​e​"​ ​t​o​ ​r​e​m​o​v​e​ ​t​h​e​ ​e​m​a​i​l​,​ ​o​r​ ​"​M​o​v​e​"​ ​t​o​ ​r​e​l​o​c​a​t​e​ ​t​h​e​ ​e​m​a​i​l​ ​t​o​ ​a​n​o​t​h​e​r​ ​f​o​l​d​e​r​.
+							 */
+							longDesc: string
+						}
+						targetFolderId: {
+							/**
+							 * T​a​r​g​e​t​ ​F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * D​e​s​t​i​n​a​t​i​o​n​ ​f​o​l​d​e​r​ ​f​o​r​ ​m​o​v​e​d​ ​e​m​a​i​l​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​o​l​d​e​r​ ​w​h​e​r​e​ ​e​m​a​i​l​s​ ​w​i​l​l​ ​b​e​ ​m​o​v​e​d​ ​i​f​ ​t​h​e​ ​"​M​o​v​e​"​ ​a​c​t​i​o​n​ ​i​s​ ​s​e​l​e​c​t​e​d​.​ ​O​n​l​y​ ​r​e​q​u​i​r​e​d​ ​w​h​e​n​ ​a​c​t​i​o​n​ ​i​s​ ​s​e​t​ ​t​o​ ​"​M​o​v​e​"​.
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * D​a​t​a​ ​f​r​o​m​ ​t​h​e​ ​r​e​c​e​i​v​e​d​ ​e​m​a​i​l​,​ ​i​n​c​l​u​d​i​n​g​ ​m​e​t​a​d​a​t​a​ ​a​n​d​ ​c​o​n​t​e​n​t
+						 */
+						desc: string
+					}
 				}
 				'new-event': {
 					/**
@@ -39989,6 +40531,350 @@ export type TranslationFunctions = {
 			 */
 			longDesc: () => LocalizedString
 			actions: {
+				'manage-email': {
+					/**
+					 * Manage Email
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete or move an email message to another folder.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Performs operations on an existing email message, allowing you to either delete it permanently or move it to another folder in your Outlook mailbox.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						messageId: {
+							/**
+							 * Message ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of the email message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the email message to be moved or deleted.
+							 */
+							longDesc: () => LocalizedString
+						}
+						action: {
+							/**
+							 * Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Action to perform on the email
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify whether to delete the email permanently or move it to another folder.
+							 */
+							longDesc: () => LocalizedString
+						}
+						targetFolderId: {
+							/**
+							 * Target Folder ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of the target folder
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the folder where you want to move the email. This field is required only when the action is set to "move".
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'search-emails': {
+					/**
+					 * Search Emails
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for emails using various filter criteria including advanced attachment filters.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search and retrieve emails from Outlook based on dates, senders, recipients, subject, body content, and detailed attachment properties like names, patterns, MIME types, and sizes.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort emails by a specific field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Sort the email results by a specific field. The default is to sort by received date in descending order.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the field by which to sort the email results.
+										 */
+										longDesc: () => LocalizedString
+									}
+									order: {
+										/**
+										 * Sort Order
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Order of sorting
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose the order in which to sort the results. Options include Ascending and Descending.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of emails to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Sets the maximum number of email results to return. Default is 50.
+							 */
+							longDesc: () => LocalizedString
+						}
+						startDateTime: {
+							/**
+							 * Start Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter emails received on or after this date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only include emails that were received on or after this date and time.
+							 */
+							longDesc: () => LocalizedString
+						}
+						endDateTime: {
+							/**
+							 * End Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter emails received on or before this date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only include emails that were received on or before this date and time.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fromSender: {
+							/**
+							 * From Sender
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter emails from a specific sender
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only include emails from this specific sender email address.
+							 */
+							longDesc: () => LocalizedString
+						}
+						toRecipient: {
+							/**
+							 * To Recipient
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter emails sent to a specific recipient
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only include emails sent to this specific recipient email address.
+							 */
+							longDesc: () => LocalizedString
+						}
+						subject: {
+							/**
+							 * Subject
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter emails by subject line text
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only include emails with this text in the subject line.
+							 */
+							longDesc: () => LocalizedString
+						}
+						hasAttachments: {
+							/**
+							 * Has Attachments
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter emails with or without attachments
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When set to true, only include emails that have attachments. When false, only include emails without attachments.
+							 */
+							longDesc: () => LocalizedString
+						}
+						isRead: {
+							/**
+							 * Is Read
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter read or unread emails
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When set to true, only include emails that have been read. When false, only include unread emails.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attachmentNames: {
+							/**
+							 * Attachment Names
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter emails by specific attachment names
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only include emails that have attachments with these filenames.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bodyContains: {
+							/**
+							 * Body Contains
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter emails by body content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only include emails that contain this text in the body content.
+							 */
+							longDesc: () => LocalizedString
+						}
+						includeAttachments: {
+							/**
+							 * Include Attachments
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include attachment content in results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When set to true, the content of email attachments will be included in the results. This may increase response size significantly.
+							 */
+							longDesc: () => LocalizedString
+						}
+						folder: {
+							/**
+							 * Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email folder to search in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email folder to search in. Defaults to Inbox if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attachmentFilenamePattern: {
+							/**
+							 * Attachment Filename Pattern
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by attachment filename pattern (regex)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter emails by a regular expression pattern that matches attachment filenames. Example: ".*\.pdf$" would match all PDF files.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attachmentMimeTypes: {
+							/**
+							 * Attachment MIME Types
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by attachment MIME types
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only include emails with attachments matching these MIME types (e.g., "application/pdf", "image/jpeg").
+							 */
+							longDesc: () => LocalizedString
+						}
+						attachmentMinSize: {
+							/**
+							 * Attachment Minimum Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by attachment minimum size in bytes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only include emails with attachments larger than or equal to this size in bytes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attachmentMaxSize: {
+							/**
+							 * Attachment Maximum Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by attachment maximum size in bytes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only include emails with attachments smaller than or equal to this size in bytes.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
 				'create-contact': {
 					/**
 					 * Create Contact
@@ -41143,6 +42029,112 @@ export type TranslationFunctions = {
 				}
 			}
 			triggers: {
+				'new-email-with-attachment': {
+					/**
+					 * New Email with Attachment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an email with attachments is received, processing each matching attachment individually.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors an Outlook mailbox for new emails with attachments. When an email with attachments is received, each attachment that matches the specified filters will trigger a separate event. This allows for processing individual attachments from emails while maintaining the full email context.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						senderFilter: {
+							/**
+							 * Sender Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Only process emails from this sender
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If specified, only emails from this exact sender email address will be processed. Leave empty to process emails from any sender.
+							 */
+							longDesc: () => LocalizedString
+						}
+						subjectFilter: {
+							/**
+							 * Subject Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Only process emails with this text in the subject
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If specified, only emails containing this text in the subject line will be processed. Leave empty to process emails with any subject.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filenameFilters: {
+							/**
+							 * Filename Filters
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Only process attachments with matching filenames
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of text strings to match against attachment filenames. If provided, only attachments with filenames containing any of these strings will be processed. Matching is case-insensitive. Leave empty to process all attachments regardless of filename.
+							 */
+							longDesc: () => LocalizedString
+						}
+						mimeTypeFilters: {
+							/**
+							 * MIME Type Filters
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Only process attachments with matching MIME types
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of MIME type strings to match against attachment content types. If provided, only attachments with content types containing any of these strings will be processed. For example, use "pdf" to match PDF files, "image/" to match all images, or "spreadsheet" to match Excel files. Matching is case-insensitive. Leave empty to process all attachments regardless of MIME type.
+							 */
+							longDesc: () => LocalizedString
+						}
+						action: {
+							/**
+							 * Email Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Action to perform on the email after processing its attachments
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify what should happen to the email after all matching attachments have been processed. Options include: None (leave the email as is), Delete (permanently remove the email), or Move (relocate the email to another folder).
+							 */
+							longDesc: () => LocalizedString
+						}
+						targetFolderId: {
+							/**
+							 * Target Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Destination folder for emails when using Move action
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If the Email Action is set to "Move", specify the folder where the email should be moved after all attachments have been processed. This option is only used when Move is selected.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Contains the email data along with information about a single matching attachment.
+						 */
+						desc: () => LocalizedString
+					}
+				}
 				'new-contact': {
 					/**
 					 * New Contact
@@ -41159,17 +42151,109 @@ export type TranslationFunctions = {
 				}
 				'new-email': {
 					/**
-					 * New Email
+					 * New Email Trigger
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Triggered when a new email is received in Outlook.
+					 * Triggers when a new email is received in your Outlook inbox
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * This trigger is activated whenever a new email message is received in your Microsoft Outlook inbox.
+					 * Monitors your Outlook inbox and triggers when new emails arrive. Supports filtering by sender, subject, or attachments, and can optionally delete or move processed emails.
 					 */
 					longDesc: () => LocalizedString
+					options: {
+						senderFilter: {
+							/**
+							 * Sender Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter emails by sender address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for emails from this specific sender email address. Leave empty to trigger for all senders.
+							 */
+							longDesc: () => LocalizedString
+						}
+						subjectFilter: {
+							/**
+							 * Subject Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter emails by subject content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for emails containing this text in the subject line. Leave empty to match any subject.
+							 */
+							longDesc: () => LocalizedString
+						}
+						hasAttachments: {
+							/**
+							 * Has Attachments
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by attachment presence
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter emails based on whether they have attachments. Set to true to only trigger for emails with attachments, false for emails without attachments, or leave empty to trigger for both.
+							 */
+							longDesc: () => LocalizedString
+						}
+						includeAttachmentData: {
+							/**
+							 * Include Attachment Data
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include attachment content in trigger data
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, the trigger will fetch and include the actual attachment content in the trigger data. This may increase processing time for large attachments.
+							 */
+							longDesc: () => LocalizedString
+						}
+						action: {
+							/**
+							 * Email Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Action to perform after triggering
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional action to perform on emails after the trigger runs. Choose "None" to leave emails unchanged, "Delete" to remove the email, or "Move" to relocate the email to another folder.
+							 */
+							longDesc: () => LocalizedString
+						}
+						targetFolderId: {
+							/**
+							 * Target Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Destination folder for moved emails
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The folder where emails will be moved if the "Move" action is selected. Only required when action is set to "Move".
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Data from the received email, including metadata and content
+						 */
+						desc: () => LocalizedString
+					}
 				}
 				'new-event': {
 					/**

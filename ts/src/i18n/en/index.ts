@@ -4474,6 +4474,148 @@ const en = {
       longDesc:
         'Microsoft Outlook is a personal information manager software system from Microsoft, available as a part of the Microsoft Office suite. Primarily an email application, it also includes a calendar, task manager, contact manager, note taking, journal, and web browsing. Connect your Outlook account to create and manage contacts, calendar events, and send emails.',
       actions: {
+        'manage-email': {
+          displayName: 'Manage Email',
+          shortDesc: 'Delete or move an email message to another folder.',
+          longDesc:
+            'Performs operations on an existing email message, allowing you to either delete it permanently or move it to another folder in your Outlook mailbox.',
+          options: {
+            messageId: {
+              displayName: 'Message ID',
+              shortDesc: 'ID of the email message',
+              longDesc: 'The unique identifier of the email message to be moved or deleted.',
+            },
+            action: {
+              displayName: 'Action',
+              shortDesc: 'Action to perform on the email',
+              longDesc:
+                'Specify whether to delete the email permanently or move it to another folder.',
+            },
+            targetFolderId: {
+              displayName: 'Target Folder ID',
+              shortDesc: 'ID of the target folder',
+              longDesc:
+                'The ID of the folder where you want to move the email. This field is required only when the action is set to "move".',
+            },
+          },
+        },
+        'search-emails': {
+          displayName: 'Search Emails',
+          shortDesc:
+            'Search for emails using various filter criteria including advanced attachment filters.',
+          longDesc:
+            'Search and retrieve emails from Outlook based on dates, senders, recipients, subject, body content, and detailed attachment properties like names, patterns, MIME types, and sizes.',
+          options: {
+            sort: {
+              displayName: 'Sort',
+              shortDesc: 'Sort emails by a specific field',
+              longDesc:
+                'Sort the email results by a specific field. The default is to sort by received date in descending order.',
+              type: {
+                fields: {
+                  field: {
+                    displayName: 'Sort Field',
+                    shortDesc: 'Field to sort by',
+                    longDesc: 'Select the field by which to sort the email results.',
+                  },
+                  order: {
+                    displayName: 'Sort Order',
+                    shortDesc: 'Order of sorting',
+                    longDesc:
+                      'Choose the order in which to sort the results. Options include Ascending and Descending.',
+                  },
+                },
+              },
+            },
+            limit: {
+              displayName: 'Limit',
+              shortDesc: 'Maximum number of emails to return',
+              longDesc: 'Sets the maximum number of email results to return. Default is 50.',
+            },
+            startDateTime: {
+              displayName: 'Start Date',
+              shortDesc: 'Filter emails received on or after this date',
+              longDesc: 'Only include emails that were received on or after this date and time.',
+            },
+            endDateTime: {
+              displayName: 'End Date',
+              shortDesc: 'Filter emails received on or before this date',
+              longDesc: 'Only include emails that were received on or before this date and time.',
+            },
+            fromSender: {
+              displayName: 'From Sender',
+              shortDesc: 'Filter emails from a specific sender',
+              longDesc: 'Only include emails from this specific sender email address.',
+            },
+            toRecipient: {
+              displayName: 'To Recipient',
+              shortDesc: 'Filter emails sent to a specific recipient',
+              longDesc: 'Only include emails sent to this specific recipient email address.',
+            },
+            subject: {
+              displayName: 'Subject',
+              shortDesc: 'Filter emails by subject line text',
+              longDesc: 'Only include emails with this text in the subject line.',
+            },
+            hasAttachments: {
+              displayName: 'Has Attachments',
+              shortDesc: 'Filter emails with or without attachments',
+              longDesc:
+                'When set to true, only include emails that have attachments. When false, only include emails without attachments.',
+            },
+            isRead: {
+              displayName: 'Is Read',
+              shortDesc: 'Filter read or unread emails',
+              longDesc:
+                'When set to true, only include emails that have been read. When false, only include unread emails.',
+            },
+            attachmentNames: {
+              displayName: 'Attachment Names',
+              shortDesc: 'Filter emails by specific attachment names',
+              longDesc: 'Only include emails that have attachments with these filenames.',
+            },
+            bodyContains: {
+              displayName: 'Body Contains',
+              shortDesc: 'Filter emails by body content',
+              longDesc: 'Only include emails that contain this text in the body content.',
+            },
+            includeAttachments: {
+              displayName: 'Include Attachments',
+              shortDesc: 'Include attachment content in results',
+              longDesc:
+                'When set to true, the content of email attachments will be included in the results. This may increase response size significantly.',
+            },
+            folder: {
+              displayName: 'Folder',
+              shortDesc: 'Email folder to search in',
+              longDesc: 'The email folder to search in. Defaults to Inbox if not specified.',
+            },
+            attachmentFilenamePattern: {
+              displayName: 'Attachment Filename Pattern',
+              shortDesc: 'Filter by attachment filename pattern (regex)',
+              longDesc:
+                'Filter emails by a regular expression pattern that matches attachment filenames. Example: ".*\\.pdf$" would match all PDF files.',
+            },
+            attachmentMimeTypes: {
+              displayName: 'Attachment MIME Types',
+              shortDesc: 'Filter by attachment MIME types',
+              longDesc:
+                'Only include emails with attachments matching these MIME types (e.g., "application/pdf", "image/jpeg").',
+            },
+            attachmentMinSize: {
+              displayName: 'Attachment Minimum Size',
+              shortDesc: 'Filter by attachment minimum size in bytes',
+              longDesc:
+                'Only include emails with attachments larger than or equal to this size in bytes.',
+            },
+            attachmentMaxSize: {
+              displayName: 'Attachment Maximum Size',
+              shortDesc: 'Filter by attachment maximum size in bytes',
+              longDesc:
+                'Only include emails with attachments smaller than or equal to this size in bytes.',
+            },
+          },
+        },
         'create-contact': {
           displayName: 'Create Contact',
           shortDesc: 'Create a new contact in your Outlook contacts.',
@@ -4947,6 +5089,54 @@ const en = {
         },
       },
       triggers: {
+        'new-email-with-attachment': {
+          displayName: 'New Email with Attachment',
+          shortDesc:
+            'Triggers when an email with attachments is received, processing each matching attachment individually.',
+          longDesc:
+            'Monitors an Outlook mailbox for new emails with attachments. When an email with attachments is received, each attachment that matches the specified filters will trigger a separate event. This allows for processing individual attachments from emails while maintaining the full email context.',
+          options: {
+            senderFilter: {
+              displayName: 'Sender Filter',
+              shortDesc: 'Only process emails from this sender',
+              longDesc:
+                'If specified, only emails from this exact sender email address will be processed. Leave empty to process emails from any sender.',
+            },
+            subjectFilter: {
+              displayName: 'Subject Filter',
+              shortDesc: 'Only process emails with this text in the subject',
+              longDesc:
+                'If specified, only emails containing this text in the subject line will be processed. Leave empty to process emails with any subject.',
+            },
+            filenameFilters: {
+              displayName: 'Filename Filters',
+              shortDesc: 'Only process attachments with matching filenames',
+              longDesc:
+                'A list of text strings to match against attachment filenames. If provided, only attachments with filenames containing any of these strings will be processed. Matching is case-insensitive. Leave empty to process all attachments regardless of filename.',
+            },
+            mimeTypeFilters: {
+              displayName: 'MIME Type Filters',
+              shortDesc: 'Only process attachments with matching MIME types',
+              longDesc:
+                'A list of MIME type strings to match against attachment content types. If provided, only attachments with content types containing any of these strings will be processed. For example, use "pdf" to match PDF files, "image/" to match all images, or "spreadsheet" to match Excel files. Matching is case-insensitive. Leave empty to process all attachments regardless of MIME type.',
+            },
+            action: {
+              displayName: 'Email Action',
+              shortDesc: 'Action to perform on the email after processing its attachments',
+              longDesc:
+                'Specify what should happen to the email after all matching attachments have been processed. Options include: None (leave the email as is), Delete (permanently remove the email), or Move (relocate the email to another folder).',
+            },
+            targetFolderId: {
+              displayName: 'Target Folder',
+              shortDesc: 'Destination folder for emails when using Move action',
+              longDesc:
+                'If the Email Action is set to "Move", specify the folder where the email should be moved after all attachments have been processed. This option is only used when Move is selected.',
+            },
+          },
+          event_info: {
+            desc: 'Contains the email data along with information about a single matching attachment.',
+          },
+        },
         'new-contact': {
           displayName: 'New Contact',
           shortDesc: 'Triggered when a new contact is created in Outlook.',
@@ -4954,10 +5144,51 @@ const en = {
             'This trigger is activated whenever a new contact is added to your Microsoft Outlook contacts.',
         },
         'new-email': {
-          displayName: 'New Email',
-          shortDesc: 'Triggered when a new email is received in Outlook.',
+          displayName: 'New Email Trigger',
+          shortDesc: 'Triggers when a new email is received in your Outlook inbox',
           longDesc:
-            'This trigger is activated whenever a new email message is received in your Microsoft Outlook inbox.',
+            'Monitors your Outlook inbox and triggers when new emails arrive. Supports filtering by sender, subject, or attachments, and can optionally delete or move processed emails.',
+          options: {
+            senderFilter: {
+              displayName: 'Sender Filter',
+              shortDesc: 'Filter emails by sender address',
+              longDesc:
+                'Only trigger for emails from this specific sender email address. Leave empty to trigger for all senders.',
+            },
+            subjectFilter: {
+              displayName: 'Subject Filter',
+              shortDesc: 'Filter emails by subject content',
+              longDesc:
+                'Only trigger for emails containing this text in the subject line. Leave empty to match any subject.',
+            },
+            hasAttachments: {
+              displayName: 'Has Attachments',
+              shortDesc: 'Filter by attachment presence',
+              longDesc:
+                'Filter emails based on whether they have attachments. Set to true to only trigger for emails with attachments, false for emails without attachments, or leave empty to trigger for both.',
+            },
+            includeAttachmentData: {
+              displayName: 'Include Attachment Data',
+              shortDesc: 'Include attachment content in trigger data',
+              longDesc:
+                'When enabled, the trigger will fetch and include the actual attachment content in the trigger data. This may increase processing time for large attachments.',
+            },
+            action: {
+              displayName: 'Email Action',
+              shortDesc: 'Action to perform after triggering',
+              longDesc:
+                'Optional action to perform on emails after the trigger runs. Choose "None" to leave emails unchanged, "Delete" to remove the email, or "Move" to relocate the email to another folder.',
+            },
+            targetFolderId: {
+              displayName: 'Target Folder',
+              shortDesc: 'Destination folder for moved emails',
+              longDesc:
+                'The folder where emails will be moved if the "Move" action is selected. Only required when action is set to "Move".',
+            },
+          },
+          event_info: {
+            desc: 'Data from the received email, including metadata and content',
+          },
         },
         'new-event': {
           displayName: 'New Event',

@@ -54,12 +54,12 @@ export const getOutlookEventIdAllowedValues: TQoreGetAllowedValuesFunction<
           display_name: event.subject || 'Untitled Event',
           value: event.id!,
           short_desc:
-            `When: ${dateRangeDisplay}\n\n` +
+            `When: ${dateRangeDisplay}\n` +
             `Organizer: ${
               event.organizer?.emailAddress?.name ||
               event.organizer?.emailAddress?.address ||
               'Unknown'
-            }\n\n` +
+            }\n` +
             `Location: ${event.location?.displayName || 'Not specified'}`,
         });
       }
