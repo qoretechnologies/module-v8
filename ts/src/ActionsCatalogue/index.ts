@@ -1,4 +1,3 @@
-// appsCatalogue.ts
 import {
   IQoreApp,
   IQoreExistingApp,
@@ -36,6 +35,7 @@ import dynamics from '../apps/dynamics';
 import xero from '../apps/xero';
 import intercom from '../apps/intercom';
 import attio from '../apps/attio';
+import googleSheets from '../apps/google-sheets';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -50,6 +50,7 @@ export interface IQoreApi {
 }
 
 const NEW_APPS = {
+  googleSheets,
   serenity,
   netsuite,
   zendesk,

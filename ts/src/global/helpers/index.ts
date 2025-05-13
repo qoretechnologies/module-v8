@@ -540,7 +540,7 @@ export const getQoreContextRequiredValues = <
   OptKeys extends keyof TOpts = keyof TOpts,
   ConnKeys extends keyof TConn = keyof TConn,
 >(options: {
-  context: TQoreAppActionFunctionContext<TConn, TOpts>;
+  context: TQoreAppActionFunctionContext<TConn, TOpts> | undefined;
   optionFields?: readonly OptKeys[];
   connectionFields?: readonly ConnKeys[];
   ErrorClass?: ErrorConstructor;
@@ -553,6 +553,9 @@ export const getQoreContextRequiredValues = <
     connectionFields = [] as readonly ConnKeys[],
     ErrorClass = Error,
   } = options;
+
+  if (!context) throw new ErrorClass('No context provided');
+
   const missingOptions: OptKeys[] = [];
   const missingConnections: ConnKeys[] = [];
   const result = {} as ReturnTypeOverride extends undefined

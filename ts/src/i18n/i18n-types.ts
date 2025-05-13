@@ -170,6 +170,1126 @@ type RootTranslation = {
 				}
 			}
 		}
+		GoogleSheets: {
+			/**
+			 * G​o​o​g​l​e​ ​S​h​e​e​t​s
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​w​i​t​h​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​s​p​r​e​a​d​s​h​e​e​t​s
+			 */
+			shortDesc: string
+			/**
+			 * I​n​t​e​g​r​a​t​e​ ​w​i​t​h​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​t​o​ ​c​r​e​a​t​e​,​ ​u​p​d​a​t​e​,​ ​a​n​d​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​s​p​r​e​a​d​s​h​e​e​t​s​.​ ​T​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​p​e​r​f​o​r​m​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​r​e​s​p​o​n​d​ ​t​o​ ​e​v​e​n​t​s​ ​i​n​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​a​c​c​o​u​n​t​,​ ​e​n​a​b​l​i​n​g​ ​y​o​u​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​d​a​t​a​ ​m​a​n​a​g​e​m​e​n​t​ ​a​n​d​ ​r​e​p​o​r​t​i​n​g​ ​w​o​r​k​f​l​o​w​s​.
+			 */
+			longDesc: string
+			triggers: {
+				new_spreadsheet_row: {
+					/**
+					 * N​e​w​ ​S​p​r​e​a​d​s​h​e​e​t​ ​R​o​w
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​o​w​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​G​o​o​g​l​e​ ​S​h​e​e​t​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​h​e​e​t​ ​i​n​ ​a​ ​G​o​o​g​l​e​ ​S​p​r​e​a​d​s​h​e​e​t​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​n​e​w​ ​r​o​w​s​ ​a​r​e​ ​a​d​d​e​d​.​ ​T​h​e​ ​t​r​i​g​g​e​r​ ​p​r​o​v​i​d​e​s​ ​t​h​e​ ​r​o​w​ ​d​a​t​a​ ​w​i​t​h​ ​c​o​l​u​m​n​ ​h​e​a​d​e​r​s​ ​a​s​ ​f​i​e​l​d​ ​n​a​m​e​s​.
+					 */
+					longDesc: string
+					options: {
+						spreadsheet_id: {
+							/**
+							 * S​p​r​e​a​d​s​h​e​e​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​S​p​r​e​a​d​s​h​e​e​t​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​S​p​r​e​a​d​s​h​e​e​t​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​h​e​e​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​r​o​w​s​.
+							 */
+							longDesc: string
+						}
+						sheet_id: {
+							/**
+							 * S​h​e​e​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​s​h​e​e​t​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​s​h​e​e​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​r​o​w​s​.​ ​T​h​e​ ​s​h​e​e​t​ ​I​D​ ​c​a​n​ ​b​e​ ​f​o​u​n​d​ ​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t​ ​U​R​L​.
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​n​e​w​l​y​ ​a​d​d​e​d​ ​r​o​w​ ​i​n​ ​a​ ​G​o​o​g​l​e​ ​S​h​e​e​t
+						 */
+						desc: string
+					}
+				}
+				new_spreadsheet_sheet: {
+					/**
+					 * N​e​w​ ​S​p​r​e​a​d​s​h​e​e​t​ ​S​h​e​e​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​s​h​e​e​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​G​o​o​g​l​e​ ​S​p​r​e​a​d​s​h​e​e​t​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​ ​G​o​o​g​l​e​ ​S​p​r​e​a​d​s​h​e​e​t​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​n​e​w​ ​s​h​e​e​t​s​ ​a​r​e​ ​a​d​d​e​d​.​ ​T​h​e​ ​t​r​i​g​g​e​r​ ​p​r​o​v​i​d​e​s​ ​m​e​t​a​d​a​t​a​ ​a​b​o​u​t​ ​t​h​e​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​s​h​e​e​t​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​I​D​,​ ​t​i​t​l​e​,​ ​i​n​d​e​x​ ​p​o​s​i​t​i​o​n​,​ ​a​n​d​ ​d​i​m​e​n​s​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						spreadsheet_id: {
+							/**
+							 * S​p​r​e​a​d​s​h​e​e​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​S​p​r​e​a​d​s​h​e​e​t​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​S​p​r​e​a​d​s​h​e​e​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​s​h​e​e​t​s​.​ ​T​h​e​ ​s​p​r​e​a​d​s​h​e​e​t​ ​I​D​ ​c​a​n​ ​b​e​ ​f​o​u​n​d​ ​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t​ ​U​R​L​.
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​n​e​w​l​y​ ​a​d​d​e​d​ ​s​h​e​e​t​ ​i​n​ ​a​ ​G​o​o​g​l​e​ ​S​p​r​e​a​d​s​h​e​e​t
+						 */
+						desc: string
+					}
+				}
+				new_spreadsheet: {
+					/**
+					 * N​e​w​ ​S​p​r​e​a​d​s​h​e​e​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​G​o​o​g​l​e​ ​S​p​r​e​a​d​s​h​e​e​t​ ​i​s​ ​c​r​e​a​t​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​G​o​o​g​l​e​ ​S​p​r​e​a​d​s​h​e​e​t​s​.​ ​T​h​e​ ​t​r​i​g​g​e​r​ ​p​r​o​v​i​d​e​s​ ​m​e​t​a​d​a​t​a​ ​a​b​o​u​t​ ​t​h​e​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​s​p​r​e​a​d​s​h​e​e​t​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​I​D​,​ ​n​a​m​e​,​ ​U​R​L​,​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e​,​ ​a​n​d​ ​o​w​n​e​r​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					event_info: {
+						/**
+						 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​G​o​o​g​l​e​ ​S​p​r​e​a​d​s​h​e​e​t
+						 */
+						desc: string
+					}
+				}
+			}
+			actions: {
+				find_spreadsheet_rows: {
+					/**
+					 * F​i​n​d​ ​S​p​r​e​a​d​s​h​e​e​t​ ​R​o​w​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​r​o​w​s​ ​i​n​ ​a​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​ ​t​h​a​t​ ​m​a​t​c​h​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a​.
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​e​s​ ​f​o​r​ ​r​o​w​s​ ​i​n​ ​a​ ​G​o​o​g​l​e​ ​S​h​e​e​t​ ​t​h​a​t​ ​m​a​t​c​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​a​l​u​e​ ​i​n​ ​a​ ​d​e​s​i​g​n​a​t​e​d​ ​c​o​l​u​m​n​.​ ​S​u​p​p​o​r​t​s​ ​s​e​a​r​c​h​i​n​g​ ​b​y​ ​c​o​l​u​m​n​ ​h​e​a​d​e​r​ ​o​r​ ​l​e​t​t​e​r​,​ ​p​a​g​i​n​a​t​i​o​n​,​ ​a​n​d​ ​d​i​f​f​e​r​e​n​t​ ​r​e​s​p​o​n​s​e​ ​f​o​r​m​a​t​s​.
+					 */
+					longDesc: string
+					options: {
+						spreadsheet_id: {
+							/**
+							 * S​p​r​e​a​d​s​h​e​e​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​ ​t​o​ ​s​e​a​r​c​h​ ​i​n​.​ ​T​h​i​s​ ​c​a​n​ ​b​e​ ​f​o​u​n​d​ ​i​n​ ​t​h​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t​.
+							 */
+							longDesc: string
+						}
+						sheet_id: {
+							/**
+							 * S​h​e​e​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​s​h​e​e​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​s​h​e​e​t​ ​t​o​ ​s​e​a​r​c​h​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t​.​ ​E​a​c​h​ ​s​h​e​e​t​ ​h​a​s​ ​a​ ​u​n​i​q​u​e​ ​I​D​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​s​e​l​e​c​t​e​d​ ​f​r​o​m​ ​t​h​e​ ​a​v​a​i​l​a​b​l​e​ ​s​h​e​e​t​s​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​a​t​c​h​i​n​g​ ​r​o​w​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​a​t​c​h​i​n​g​ ​r​o​w​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​r​e​s​u​l​t​s​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​m​a​t​c​h​i​n​g​ ​r​o​w​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​m​a​t​c​h​i​n​g​ ​r​o​w​s​ ​t​o​ ​s​k​i​p​ ​b​e​f​o​r​e​ ​r​e​t​u​r​n​i​n​g​ ​r​e​s​u​l​t​s​.​ ​U​s​e​d​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​0​.
+							 */
+							longDesc: string
+						}
+						search_from_last_row: {
+							/**
+							 * S​e​a​r​c​h​ ​F​r​o​m​ ​L​a​s​t​ ​R​o​w
+							 */
+							displayName: string
+							/**
+							 * S​t​a​r​t​ ​s​e​a​r​c​h​i​n​g​ ​f​r​o​m​ ​t​h​e​ ​b​o​t​t​o​m​ ​o​f​ ​t​h​e​ ​s​h​e​e​t
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​s​e​a​r​c​h​e​s​ ​f​r​o​m​ ​t​h​e​ ​b​o​t​t​o​m​ ​o​f​ ​t​h​e​ ​s​h​e​e​t​ ​u​p​w​a​r​d​ ​i​n​s​t​e​a​d​ ​o​f​ ​f​r​o​m​ ​t​h​e​ ​t​o​p​ ​d​o​w​n​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​f​i​n​d​i​n​g​ ​t​h​e​ ​m​o​s​t​ ​r​e​c​e​n​t​ ​e​n​t​r​i​e​s​ ​i​n​ ​s​h​e​e​t​s​ ​w​h​e​r​e​ ​n​e​w​ ​d​a​t​a​ ​i​s​ ​a​p​p​e​n​d​e​d​ ​a​t​ ​t​h​e​ ​b​o​t​t​o​m​.
+							 */
+							longDesc: string
+						}
+						max_rows_to_search: {
+							/**
+							 * M​a​x​i​m​u​m​ ​R​o​w​s​ ​t​o​ ​S​e​a​r​c​h
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​o​w​s​ ​t​o​ ​s​e​a​r​c​h​ ​t​h​r​o​u​g​h
+							 */
+							shortDesc: string
+							/**
+							 * L​i​m​i​t​s​ ​t​h​e​ ​t​o​t​a​l​ ​n​u​m​b​e​r​ ​o​f​ ​r​o​w​s​ ​t​o​ ​s​e​a​r​c​h​ ​t​o​ ​c​o​n​t​r​o​l​ ​p​e​r​f​o​r​m​a​n​c​e​ ​w​i​t​h​ ​l​a​r​g​e​ ​s​h​e​e​t​s​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​0​0​.
+							 */
+							longDesc: string
+						}
+						response_type: {
+							/**
+							 * R​e​s​p​o​n​s​e​ ​F​o​r​m​a​t
+							 */
+							displayName: string
+							/**
+							 * F​o​r​m​a​t​ ​o​f​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​r​o​w​s
+							 */
+							shortDesc: string
+							/**
+							 * D​e​t​e​r​m​i​n​e​s​ ​h​o​w​ ​t​h​e​ ​m​a​t​c​h​e​d​ ​r​o​w​s​ ​a​r​e​ ​f​o​r​m​a​t​t​e​d​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.​ ​O​p​t​i​o​n​s​ ​i​n​c​l​u​d​e​ ​r​a​w​ ​v​a​l​u​e​s​,​ ​v​a​l​u​e​s​ ​m​a​p​p​e​d​ ​t​o​ ​c​o​l​u​m​n​ ​h​e​a​d​e​r​s​,​ ​o​r​ ​v​a​l​u​e​s​ ​m​a​p​p​e​d​ ​t​o​ ​c​o​l​u​m​n​ ​l​e​t​t​e​r​s​.
+							 */
+							longDesc: string
+						}
+						search: {
+							/**
+							 * S​e​a​r​c​h​ ​C​r​i​t​e​r​i​a
+							 */
+							displayName: string
+							/**
+							 * C​r​i​t​e​r​i​a​ ​f​o​r​ ​f​i​n​d​i​n​g​ ​m​a​t​c​h​i​n​g​ ​r​o​w​s
+							 */
+							shortDesc: string
+							/**
+							 * D​e​f​i​n​e​s​ ​t​h​e​ ​s​e​a​r​c​h​ ​c​r​i​t​e​r​i​a​ ​t​o​ ​u​s​e​ ​w​h​e​n​ ​l​o​o​k​i​n​g​ ​f​o​r​ ​m​a​t​c​h​i​n​g​ ​r​o​w​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									header: {
+										/**
+										 * C​o​l​u​m​n​ ​H​e​a​d​e​r
+										 */
+										displayName: string
+										/**
+										 * H​e​a​d​e​r​ ​o​f​ ​t​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​s​e​a​r​c​h​ ​i​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​h​e​a​d​e​r​ ​t​e​x​t​ ​o​f​ ​t​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​s​e​a​r​c​h​ ​i​n​.​ ​U​s​e​ ​t​h​i​s​ ​o​r​ ​C​o​l​u​m​n​ ​L​e​t​t​e​r​,​ ​n​o​t​ ​b​o​t​h​.
+										 */
+										longDesc: string
+									}
+									column: {
+										/**
+										 * C​o​l​u​m​n​ ​L​e​t​t​e​r
+										 */
+										displayName: string
+										/**
+										 * L​e​t​t​e​r​ ​o​f​ ​t​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​s​e​a​r​c​h​ ​i​n​ ​(​A​,​ ​B​,​ ​C​,​ ​e​t​c​.​)
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​l​e​t​t​e​r​ ​d​e​s​i​g​n​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​s​e​a​r​c​h​ ​i​n​ ​(​e​.​g​.​,​ ​A​,​ ​B​,​ ​C​)​.​ ​U​s​e​ ​t​h​i​s​ ​o​r​ ​C​o​l​u​m​n​ ​H​e​a​d​e​r​,​ ​n​o​t​ ​b​o​t​h​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * S​e​a​r​c​h​ ​V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * V​a​l​u​e​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​o​l​u​m​n​.​ ​R​o​w​s​ ​w​i​t​h​ ​t​h​i​s​ ​e​x​a​c​t​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				search_worksheets: {
+					/**
+					 * S​e​a​r​c​h​ ​W​o​r​k​s​h​e​e​t​s
+					 */
+					displayName: string
+					/**
+					 * F​i​n​d​ ​w​o​r​k​s​h​e​e​t​s​ ​w​i​t​h​i​n​ ​a​ ​G​o​o​g​l​e​ ​S​p​r​e​a​d​s​h​e​e​t​ ​b​y​ ​t​i​t​l​e​.
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​e​s​ ​f​o​r​ ​w​o​r​k​s​h​e​e​t​s​ ​(​t​a​b​s​)​ ​w​i​t​h​i​n​ ​a​ ​G​o​o​g​l​e​ ​S​p​r​e​a​d​s​h​e​e​t​ ​b​y​ ​t​h​e​i​r​ ​t​i​t​l​e​s​.​ ​R​e​t​u​r​n​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​m​a​t​c​h​i​n​g​ ​w​o​r​k​s​h​e​e​t​s​ ​i​n​c​l​u​d​i​n​g​ ​d​i​m​e​n​s​i​o​n​s​,​ ​p​o​s​i​t​i​o​n​,​ ​a​n​d​ ​v​i​s​i​b​i​l​i​t​y​.​ ​C​a​n​ ​b​e​ ​u​s​e​d​ ​t​o​ ​f​i​n​d​ ​s​p​e​c​i​f​i​c​ ​w​o​r​k​s​h​e​e​t​s​ ​o​r​ ​l​i​s​t​ ​a​l​l​ ​w​o​r​k​s​h​e​e​t​s​ ​i​n​ ​a​ ​s​p​r​e​a​d​s​h​e​e​t​.
+					 */
+					longDesc: string
+					options: {
+						spreadsheet_id: {
+							/**
+							 * S​p​r​e​a​d​s​h​e​e​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​S​p​r​e​a​d​s​h​e​e​t​ ​t​o​ ​s​e​a​r​c​h​ ​w​i​t​h​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​S​p​r​e​a​d​s​h​e​e​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​w​o​r​k​s​h​e​e​t​s​ ​i​n​.​ ​T​h​i​s​ ​c​a​n​ ​b​e​ ​f​o​u​n​d​ ​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t​ ​U​R​L​.
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * S​h​e​e​t​ ​T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​i​t​l​e​ ​t​e​x​t​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​(​c​a​s​e​-​i​n​s​e​n​s​i​t​i​v​e​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​a​r​c​h​ ​f​o​r​ ​w​o​r​k​s​h​e​e​t​s​ ​w​i​t​h​ ​t​i​t​l​e​s​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​i​s​ ​t​e​x​t​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​l​i​s​t​ ​a​l​l​ ​w​o​r​k​s​h​e​e​t​s​ ​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t​.​ ​T​h​e​ ​s​e​a​r​c​h​ ​i​s​ ​c​a​s​e​-​i​n​s​e​n​s​i​t​i​v​e​ ​b​y​ ​d​e​f​a​u​l​t​.
+							 */
+							longDesc: string
+						}
+						exact_match: {
+							/**
+							 * E​x​a​c​t​ ​M​a​t​c​h
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​m​a​t​c​h​ ​t​h​e​ ​t​i​t​l​e​ ​e​x​a​c​t​l​y
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​o​n​l​y​ ​w​o​r​k​s​h​e​e​t​s​ ​w​i​t​h​ ​e​x​a​c​t​l​y​ ​m​a​t​c​h​i​n​g​ ​t​i​t​l​e​s​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.​ ​I​f​ ​d​i​s​a​b​l​e​d​ ​(​d​e​f​a​u​l​t​)​,​ ​w​o​r​k​s​h​e​e​t​s​ ​w​i​t​h​ ​t​i​t​l​e​s​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​s​e​a​r​c​h​ ​t​e​x​t​ ​w​i​l​l​ ​b​e​ ​i​n​c​l​u​d​e​d​ ​i​n​ ​t​h​e​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_spreadsheet_rows: {
+					/**
+					 * U​p​d​a​t​e​ ​S​p​r​e​a​d​s​h​e​e​t​ ​R​o​w​s
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​e​x​i​s​t​i​n​g​ ​r​o​w​s​ ​i​n​ ​a​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​.
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​s​p​e​c​i​f​i​c​ ​r​o​w​s​ ​i​n​ ​a​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​ ​b​y​ ​t​h​e​i​r​ ​r​o​w​ ​i​n​d​i​c​e​s​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​m​o​d​i​f​y​ ​m​u​l​t​i​p​l​e​ ​r​o​w​s​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​o​p​e​r​a​t​i​o​n​ ​w​h​i​l​e​ ​p​r​e​s​e​r​v​i​n​g​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t​ ​s​t​r​u​c​t​u​r​e​.
+					 */
+					longDesc: string
+					options: {
+						spreadsheet_id: {
+							/**
+							 * S​p​r​e​a​d​s​h​e​e​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​ ​r​o​w​s​ ​i​n​.​ ​T​h​i​s​ ​c​a​n​ ​b​e​ ​f​o​u​n​d​ ​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t​ ​U​R​L​.
+							 */
+							longDesc: string
+						}
+						sheet_id: {
+							/**
+							 * S​h​e​e​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​h​e​e​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​s​h​e​e​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t​ ​w​h​e​r​e​ ​r​o​w​s​ ​w​i​l​l​ ​b​e​ ​u​p​d​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						rows: {
+							/**
+							 * R​o​w​s​ ​t​o​ ​U​p​d​a​t​e
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​r​o​w​s​ ​w​i​t​h​ ​t​h​e​i​r​ ​i​n​d​i​c​e​s​ ​a​n​d​ ​d​a​t​a​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​r​o​w​s​ ​t​o​ ​u​p​d​a​t​e​,​ ​e​a​c​h​ ​c​o​n​t​a​i​n​i​n​g​ ​a​ ​r​o​w​ ​i​n​d​e​x​ ​(​s​t​a​r​t​i​n​g​ ​f​r​o​m​ ​2​,​ ​a​s​ ​r​o​w​ ​1​ ​c​o​n​t​a​i​n​s​ ​h​e​a​d​e​r​s​)​ ​a​n​d​ ​t​h​e​ ​d​a​t​a​ ​t​o​ ​u​p​d​a​t​e​ ​i​n​ ​t​h​a​t​ ​r​o​w​.​ ​T​h​e​ ​d​a​t​a​ ​s​h​o​u​l​d​ ​m​a​t​c​h​ ​t​h​e​ ​h​e​a​d​e​r​s​ ​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									row_index: {
+										/**
+										 * R​o​w​ ​I​n​d​e​x
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​i​n​d​e​x​ ​o​f​ ​t​h​e​ ​r​o​w​ ​t​o​ ​u​p​d​a​t​e​.
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​r​o​w​ ​n​u​m​b​e​r​ ​t​o​ ​u​p​d​a​t​e​,​ ​s​t​a​r​t​i​n​g​ ​f​r​o​m​ ​2​ ​(​r​o​w​ ​1​ ​i​s​ ​r​e​s​e​r​v​e​d​ ​f​o​r​ ​h​e​a​d​e​r​s​)​.​ ​T​h​i​s​ ​n​u​m​b​e​r​ ​m​u​s​t​ ​r​e​f​e​r​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​r​o​w​ ​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				format_spreadsheet_rows: {
+					/**
+					 * F​o​r​m​a​t​ ​S​p​r​e​a​d​s​h​e​e​t​ ​R​o​w​s
+					 */
+					displayName: string
+					/**
+					 * A​p​p​l​y​ ​f​o​r​m​a​t​t​i​n​g​ ​t​o​ ​s​p​e​c​i​f​i​c​ ​r​o​w​s​ ​i​n​ ​a​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​.
+					 */
+					shortDesc: string
+					/**
+					 * A​p​p​l​y​ ​v​a​r​i​o​u​s​ ​f​o​r​m​a​t​t​i​n​g​ ​o​p​t​i​o​n​s​ ​s​u​c​h​ ​a​s​ ​c​o​l​o​r​s​,​ ​t​e​x​t​ ​s​t​y​l​e​s​,​ ​a​n​d​ ​a​l​i​g​n​m​e​n​t​ ​t​o​ ​s​p​e​c​i​f​i​e​d​ ​r​o​w​s​ ​i​n​ ​a​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​.​ ​F​o​r​m​a​t​ ​m​u​l​t​i​p​l​e​ ​r​o​w​s​ ​a​t​ ​o​n​c​e​ ​w​i​t​h​ ​c​o​n​s​i​s​t​e​n​t​ ​s​t​y​l​i​n​g​.
+					 */
+					longDesc: string
+					options: {
+						spreadsheet_id: {
+							/**
+							 * S​p​r​e​a​d​s​h​e​e​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​ ​t​o​ ​f​o​r​m​a​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​o​w​s​ ​t​o​ ​f​o​r​m​a​t​.​ ​T​h​i​s​ ​c​a​n​ ​b​e​ ​f​o​u​n​d​ ​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t​ ​U​R​L​.
+							 */
+							longDesc: string
+						}
+						sheet_id: {
+							/**
+							 * W​o​r​k​s​h​e​e​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​w​o​r​k​s​h​e​e​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​w​o​r​k​s​h​e​e​t​ ​(​t​a​b​)​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​o​w​s​ ​t​o​ ​f​o​r​m​a​t​.​ ​E​a​c​h​ ​w​o​r​k​s​h​e​e​t​ ​h​a​s​ ​a​ ​u​n​i​q​u​e​ ​I​D​ ​w​i​t​h​i​n​ ​a​ ​s​p​r​e​a​d​s​h​e​e​t​.
+							 */
+							longDesc: string
+						}
+						rows: {
+							/**
+							 * R​o​w​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​r​o​w​ ​n​u​m​b​e​r​s​ ​t​o​ ​f​o​r​m​a​t
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​r​o​w​ ​n​u​m​b​e​r​s​ ​t​o​ ​f​o​r​m​a​t​ ​(​1​-​b​a​s​e​d​ ​i​n​d​e​x​i​n​g​)​.​ ​F​o​r​ ​e​x​a​m​p​l​e​,​ ​[​1​,​ ​2​,​ ​5​]​ ​w​i​l​l​ ​f​o​r​m​a​t​ ​t​h​e​ ​f​i​r​s​t​,​ ​s​e​c​o​n​d​,​ ​a​n​d​ ​f​i​f​t​h​ ​r​o​w​s​.
+							 */
+							longDesc: string
+						}
+						background_color: {
+							/**
+							 * B​a​c​k​g​r​o​u​n​d​ ​C​o​l​o​r
+							 */
+							displayName: string
+							/**
+							 * B​a​c​k​g​r​o​u​n​d​ ​c​o​l​o​r​ ​f​o​r​ ​t​h​e​ ​c​e​l​l​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​b​a​c​k​g​r​o​u​n​d​ ​c​o​l​o​r​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​e​ ​c​e​l​l​s​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​o​w​s​.​ ​U​s​e​s​ ​R​G​B​ ​c​o​l​o​r​ ​f​o​r​m​a​t​.
+							 */
+							longDesc: string
+						}
+						text_color: {
+							/**
+							 * T​e​x​t​ ​C​o​l​o​r
+							 */
+							displayName: string
+							/**
+							 * C​o​l​o​r​ ​f​o​r​ ​t​h​e​ ​t​e​x​t​ ​i​n​ ​t​h​e​ ​c​e​l​l​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​l​o​r​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​e​ ​t​e​x​t​ ​i​n​ ​t​h​e​ ​c​e​l​l​s​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​o​w​s​.​ ​U​s​e​s​ ​R​G​B​ ​c​o​l​o​r​ ​f​o​r​m​a​t​.
+							 */
+							longDesc: string
+						}
+						bold: {
+							/**
+							 * B​o​l​d
+							 */
+							displayName: string
+							/**
+							 * M​a​k​e​ ​t​e​x​t​ ​b​o​l​d
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​m​a​k​e​ ​t​h​e​ ​t​e​x​t​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​o​w​s​ ​b​o​l​d​.
+							 */
+							longDesc: string
+						}
+						italic: {
+							/**
+							 * I​t​a​l​i​c
+							 */
+							displayName: string
+							/**
+							 * M​a​k​e​ ​t​e​x​t​ ​i​t​a​l​i​c
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​m​a​k​e​ ​t​h​e​ ​t​e​x​t​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​o​w​s​ ​i​t​a​l​i​c​.
+							 */
+							longDesc: string
+						}
+						strikethrough: {
+							/**
+							 * S​t​r​i​k​e​t​h​r​o​u​g​h
+							 */
+							displayName: string
+							/**
+							 * A​p​p​l​y​ ​s​t​r​i​k​e​t​h​r​o​u​g​h​ ​t​o​ ​t​e​x​t
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​a​p​p​l​y​ ​s​t​r​i​k​e​t​h​r​o​u​g​h​ ​f​o​r​m​a​t​t​i​n​g​ ​t​o​ ​t​h​e​ ​t​e​x​t​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​o​w​s​.
+							 */
+							longDesc: string
+						}
+						underline: {
+							/**
+							 * U​n​d​e​r​l​i​n​e
+							 */
+							displayName: string
+							/**
+							 * U​n​d​e​r​l​i​n​e​ ​t​h​e​ ​t​e​x​t
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​u​n​d​e​r​l​i​n​e​ ​t​h​e​ ​t​e​x​t​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​o​w​s​.
+							 */
+							longDesc: string
+						}
+						horizontal_alignment: {
+							/**
+							 * H​o​r​i​z​o​n​t​a​l​ ​A​l​i​g​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * H​o​r​i​z​o​n​t​a​l​ ​a​l​i​g​n​m​e​n​t​ ​o​f​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​h​o​r​i​z​o​n​t​a​l​ ​a​l​i​g​n​m​e​n​t​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​o​w​s​ ​(​L​e​f​t​,​ ​C​e​n​t​e​r​,​ ​o​r​ ​R​i​g​h​t​)​.
+							 */
+							longDesc: string
+						}
+						vertical_alignment: {
+							/**
+							 * V​e​r​t​i​c​a​l​ ​A​l​i​g​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * V​e​r​t​i​c​a​l​ ​a​l​i​g​n​m​e​n​t​ ​o​f​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​e​r​t​i​c​a​l​ ​a​l​i​g​n​m​e​n​t​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​o​w​s​ ​(​T​o​p​,​ ​M​i​d​d​l​e​,​ ​o​r​ ​B​o​t​t​o​m​)​.
+							 */
+							longDesc: string
+						}
+						font_size: {
+							/**
+							 * F​o​n​t​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​f​o​n​t​ ​s​i​z​e​ ​i​n​ ​p​o​i​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​o​n​t​ ​s​i​z​e​ ​i​n​ ​p​o​i​n​t​s​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​e​ ​t​e​x​t​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​o​w​s​.
+							 */
+							longDesc: string
+						}
+						wrap_text: {
+							/**
+							 * W​r​a​p​ ​T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​w​r​a​p​ ​t​e​x​t​ ​i​n​ ​c​e​l​l​s
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​t​e​x​t​ ​w​i​l​l​ ​w​r​a​p​ ​w​i​t​h​i​n​ ​c​e​l​l​s​ ​r​a​t​h​e​r​ ​t​h​a​n​ ​o​v​e​r​f​l​o​w​i​n​g​ ​i​n​t​o​ ​a​d​j​a​c​e​n​t​ ​c​e​l​l​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_row: {
+					/**
+					 * D​e​l​e​t​e​ ​R​o​w
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​r​o​w​ ​f​r​o​m​ ​a​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​w​o​r​k​s​h​e​e​t​.
+					 */
+					shortDesc: string
+					/**
+					 * C​o​m​p​l​e​t​e​l​y​ ​r​e​m​o​v​e​s​ ​a​ ​r​o​w​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​w​o​r​k​s​h​e​e​t​ ​w​i​t​h​o​u​t​ ​l​e​a​v​i​n​g​ ​a​n​ ​e​m​p​t​y​ ​s​p​a​c​e​ ​b​e​h​i​n​d​.​ ​T​h​e​ ​r​o​w​ ​i​n​d​e​x​i​n​g​ ​s​t​a​r​t​s​ ​f​r​o​m​ ​1​,​ ​m​a​t​c​h​i​n​g​ ​w​h​a​t​ ​y​o​u​ ​s​e​e​ ​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t​ ​U​I​.
+					 */
+					longDesc: string
+					options: {
+						spreadsheet_id: {
+							/**
+							 * S​p​r​e​a​d​s​h​e​e​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​o​w​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​w​o​r​k​s​h​e​e​t​ ​w​i​t​h​ ​t​h​e​ ​r​o​w​ ​t​o​ ​d​e​l​e​t​e​.
+							 */
+							longDesc: string
+						}
+						sheet_id: {
+							/**
+							 * W​o​r​k​s​h​e​e​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​w​o​r​k​s​h​e​e​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​o​w​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​w​o​r​k​s​h​e​e​t​ ​(​t​a​b​)​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​r​o​w​ ​t​o​ ​d​e​l​e​t​e​.
+							 */
+							longDesc: string
+						}
+						row_index: {
+							/**
+							 * R​o​w​ ​I​n​d​e​x
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​i​n​d​e​x​ ​o​f​ ​t​h​e​ ​r​o​w​ ​t​o​ ​d​e​l​e​t​e​ ​(​s​t​a​r​t​i​n​g​ ​f​r​o​m​ ​1​)
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​o​s​i​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​o​w​ ​t​o​ ​d​e​l​e​t​e​,​ ​s​t​a​r​t​i​n​g​ ​f​r​o​m​ ​1​ ​(​n​o​t​ ​0​)​.​ ​T​h​i​s​ ​m​a​t​c​h​e​s​ ​t​h​e​ ​r​o​w​ ​n​u​m​b​e​r​s​ ​y​o​u​ ​s​e​e​ ​i​n​ ​t​h​e​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​U​I​.​ ​F​o​r​ ​e​x​a​m​p​l​e​,​ ​t​o​ ​d​e​l​e​t​e​ ​t​h​e​ ​v​e​r​y​ ​f​i​r​s​t​ ​r​o​w​,​ ​u​s​e​ ​1​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_worksheet: {
+					/**
+					 * C​r​e​a​t​e​ ​W​o​r​k​s​h​e​e​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​w​o​r​k​s​h​e​e​t​ ​i​n​ ​a​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​h​e​a​d​e​r​s​.
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​w​o​r​k​s​h​e​e​t​ ​(​t​a​b​)​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​ ​w​i​t​h​ ​c​u​s​t​o​m​ ​t​i​t​l​e​ ​a​n​d​ ​o​p​t​i​o​n​a​l​ ​c​o​l​u​m​n​ ​h​e​a​d​e​r​s​.​ ​C​a​n​ ​o​p​t​i​o​n​a​l​l​y​ ​o​v​e​r​w​r​i​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​w​o​r​k​s​h​e​e​t​ ​w​i​t​h​ ​t​h​e​ ​s​a​m​e​ ​n​a​m​e​.
+					 */
+					longDesc: string
+					options: {
+						spreadsheet_id: {
+							/**
+							 * S​p​r​e​a​d​s​h​e​e​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​ ​w​h​e​r​e​ ​t​h​e​ ​w​o​r​k​s​h​e​e​t​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​ ​i​n​ ​w​h​i​c​h​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​n​e​w​ ​w​o​r​k​s​h​e​e​t​.
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * W​o​r​k​s​h​e​e​t​ ​T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​w​o​r​k​s​h​e​e​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​t​h​a​t​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​o​n​ ​t​h​e​ ​t​a​b​ ​o​f​ ​t​h​e​ ​n​e​w​ ​w​o​r​k​s​h​e​e​t​.
+							 */
+							longDesc: string
+						}
+						overwrite_existing: {
+							/**
+							 * O​v​e​r​w​r​i​t​e​ ​E​x​i​s​t​i​n​g
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​r​e​p​l​a​c​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​w​o​r​k​s​h​e​e​t​ ​w​i​t​h​ ​t​h​e​ ​s​a​m​e​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​t​r​u​e​ ​a​n​d​ ​a​ ​w​o​r​k​s​h​e​e​t​ ​w​i​t​h​ ​t​h​e​ ​s​a​m​e​ ​t​i​t​l​e​ ​a​l​r​e​a​d​y​ ​e​x​i​s​t​s​,​ ​t​h​e​ ​e​x​i​s​t​i​n​g​ ​w​o​r​k​s​h​e​e​t​ ​w​i​l​l​ ​b​e​ ​d​e​l​e​t​e​d​ ​a​n​d​ ​r​e​p​l​a​c​e​d​.​ ​I​f​ ​f​a​l​s​e​ ​a​n​d​ ​a​ ​d​u​p​l​i​c​a​t​e​ ​e​x​i​s​t​s​,​ ​t​h​e​ ​a​c​t​i​o​n​ ​w​i​l​l​ ​f​a​i​l​.
+							 */
+							longDesc: string
+						}
+						headers: {
+							/**
+							 * H​e​a​d​e​r​s
+							 */
+							displayName: string
+							/**
+							 * C​o​l​u​m​n​ ​h​e​a​d​e​r​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​f​i​r​s​t​ ​r​o​w
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​c​o​l​u​m​n​ ​h​e​a​d​e​r​s​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​f​i​r​s​t​ ​r​o​w​ ​o​f​ ​t​h​e​ ​n​e​w​ ​w​o​r​k​s​h​e​e​t​ ​a​n​d​ ​f​o​r​m​a​t​t​e​d​ ​i​n​ ​b​o​l​d​.
+							 */
+							longDesc: string
+						}
+						insert_sheet_index: {
+							/**
+							 * S​h​e​e​t​ ​P​o​s​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * P​o​s​i​t​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​n​e​w​ ​w​o​r​k​s​h​e​e​t​ ​s​h​o​u​l​d​ ​b​e​ ​p​l​a​c​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​o​s​i​t​i​o​n​ ​(​z​e​r​o​-​b​a​s​e​d​ ​i​n​d​e​x​)​ ​w​h​e​r​e​ ​t​h​e​ ​n​e​w​ ​w​o​r​k​s​h​e​e​t​ ​s​h​o​u​l​d​ ​b​e​ ​i​n​s​e​r​t​e​d​ ​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​t​h​e​ ​w​o​r​k​s​h​e​e​t​ ​w​i​l​l​ ​b​e​ ​a​d​d​e​d​ ​a​t​ ​t​h​e​ ​e​n​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_spreadsheet_column: {
+					/**
+					 * C​r​e​a​t​e​ ​S​p​r​e​a​d​s​h​e​e​t​ ​C​o​l​u​m​n
+					 */
+					displayName: string
+					/**
+					 * I​n​s​e​r​t​ ​a​ ​n​e​w​ ​c​o​l​u​m​n​ ​i​n​t​o​ ​a​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​.
+					 */
+					shortDesc: string
+					/**
+					 * I​n​s​e​r​t​s​ ​a​ ​n​e​w​ ​c​o​l​u​m​n​ ​a​t​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​p​o​s​i​t​i​o​n​ ​i​n​ ​a​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​ ​a​n​d​ ​a​d​d​s​ ​a​ ​f​o​r​m​a​t​t​e​d​ ​h​e​a​d​e​r​ ​a​t​ ​t​h​e​ ​t​o​p​ ​o​f​ ​t​h​e​ ​c​o​l​u​m​n​.
+					 */
+					longDesc: string
+					options: {
+						spreadsheet_id: {
+							/**
+							 * S​p​r​e​a​d​s​h​e​e​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​l​u​m​n​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						sheet_id: {
+							/**
+							 * S​h​e​e​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​h​e​e​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​s​h​e​e​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​l​u​m​n​ ​w​i​l​l​ ​b​e​ ​a​d​d​e​d​.
+							 */
+							longDesc: string
+						}
+						column_title: {
+							/**
+							 * C​o​l​u​m​n​ ​T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​c​o​l​u​m​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​h​e​a​d​e​r​ ​t​e​x​t​ ​t​h​a​t​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​a​t​ ​t​h​e​ ​t​o​p​ ​o​f​ ​t​h​e​ ​n​e​w​ ​c​o​l​u​m​n​.
+							 */
+							longDesc: string
+						}
+						column_index: {
+							/**
+							 * C​o​l​u​m​n​ ​I​n​d​e​x
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​o​s​i​t​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​l​u​m​n​ ​w​i​l​l​ ​b​e​ ​i​n​s​e​r​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * Z​e​r​o​-​b​a​s​e​d​ ​i​n​d​e​x​ ​o​f​ ​t​h​e​ ​p​o​s​i​t​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​n​e​w​ ​c​o​l​u​m​n​ ​s​h​o​u​l​d​ ​b​e​ ​i​n​s​e​r​t​e​d​.​ ​F​o​r​ ​e​x​a​m​p​l​e​,​ ​0​ ​m​e​a​n​s​ ​t​h​e​ ​c​o​l​u​m​n​ ​w​i​l​l​ ​b​e​ ​i​n​s​e​r​t​e​d​ ​a​t​ ​t​h​e​ ​b​e​g​i​n​n​i​n​g​ ​o​f​ ​t​h​e​ ​s​h​e​e​t​,​ ​1​ ​m​e​a​n​s​ ​a​f​t​e​r​ ​t​h​e​ ​f​i​r​s​t​ ​c​o​l​u​m​n​,​ ​e​t​c​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_spreadsheet: {
+					/**
+					 * C​r​e​a​t​e​ ​S​p​r​e​a​d​s​h​e​e​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​h​e​a​d​e​r​s​ ​o​r​ ​b​y​ ​c​o​p​y​i​n​g​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​o​n​e​.
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​.​ ​Y​o​u​ ​c​a​n​ ​e​i​t​h​e​r​ ​c​r​e​a​t​e​ ​i​t​ ​f​r​o​m​ ​s​c​r​a​t​c​h​ ​w​i​t​h​ ​c​u​s​t​o​m​ ​h​e​a​d​e​r​s​ ​o​r​ ​c​o​p​y​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​s​p​r​e​a​d​s​h​e​e​t​.​ ​W​h​e​n​ ​h​e​a​d​e​r​s​ ​a​r​e​ ​p​r​o​v​i​d​e​d​,​ ​t​h​e​y​ ​a​r​e​ ​f​o​r​m​a​t​t​e​d​ ​a​s​ ​b​o​l​d​ ​w​i​t​h​ ​b​o​r​d​e​r​s​ ​a​n​d​ ​t​h​e​ ​h​e​a​d​e​r​ ​r​o​w​ ​i​s​ ​f​r​o​z​e​n​.
+					 */
+					longDesc: string
+					options: {
+						title: {
+							/**
+							 * S​p​r​e​a​d​s​h​e​e​t​ ​T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​s​p​r​e​a​d​s​h​e​e​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​g​i​v​e​n​ ​t​o​ ​t​h​e​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​.
+							 */
+							longDesc: string
+						}
+						source_spreadsheet_id: {
+							/**
+							 * S​o​u​r​c​e​ ​S​p​r​e​a​d​s​h​e​e​t
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​s​p​r​e​a​d​s​h​e​e​t​ ​t​o​ ​c​o​p​y
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​.​ ​I​f​ ​p​r​o​v​i​d​e​d​,​ ​t​h​e​ ​n​e​w​ ​s​p​r​e​a​d​s​h​e​e​t​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​ ​a​s​ ​a​ ​c​o​p​y​ ​o​f​ ​t​h​i​s​ ​e​x​i​s​t​i​n​g​ ​s​p​r​e​a​d​s​h​e​e​t​.​ ​H​e​a​d​e​r​s​ ​o​p​t​i​o​n​ ​w​i​l​l​ ​b​e​ ​i​g​n​o​r​e​d​ ​i​f​ ​t​h​i​s​ ​i​s​ ​p​r​o​v​i​d​e​d​.
+							 */
+							longDesc: string
+						}
+						headers: {
+							/**
+							 * H​e​a​d​e​r​s
+							 */
+							displayName: string
+							/**
+							 * C​o​l​u​m​n​ ​h​e​a​d​e​r​s​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​s​p​r​e​a​d​s​h​e​e​t
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​.​ ​A​ ​l​i​s​t​ ​o​f​ ​c​o​l​u​m​n​ ​h​e​a​d​e​r​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​f​i​r​s​t​ ​r​o​w​ ​o​f​ ​t​h​e​ ​n​e​w​ ​s​p​r​e​a​d​s​h​e​e​t​.​ ​H​e​a​d​e​r​s​ ​w​i​l​l​ ​b​e​ ​f​o​r​m​a​t​t​e​d​ ​a​s​ ​b​o​l​d​ ​w​i​t​h​ ​b​o​r​d​e​r​s​ ​a​n​d​ ​t​h​e​ ​h​e​a​d​e​r​ ​r​o​w​ ​w​i​l​l​ ​b​e​ ​f​r​o​z​e​n​.​ ​T​h​i​s​ ​o​p​t​i​o​n​ ​i​s​ ​i​g​n​o​r​e​d​ ​i​f​ ​a​ ​s​o​u​r​c​e​ ​s​p​r​e​a​d​s​h​e​e​t​ ​i​s​ ​p​r​o​v​i​d​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_spreadsheet_rows: {
+					/**
+					 * A​d​d​ ​R​o​w​s​ ​t​o​ ​S​p​r​e​a​d​s​h​e​e​t
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​r​o​w​s​ ​t​o​ ​t​h​e​ ​e​n​d​ ​o​f​ ​a​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​t​a​b​l​e
+					 */
+					shortDesc: string
+					/**
+					 * A​p​p​e​n​d​ ​n​e​w​ ​r​o​w​s​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​t​a​b​l​e​ ​w​i​t​h​ ​d​a​t​a​ ​m​a​p​p​e​d​ ​t​o​ ​t​h​e​ ​t​a​b​l​e​ ​h​e​a​d​e​r​s
+					 */
+					longDesc: string
+					options: {
+						spreadsheet_id: {
+							/**
+							 * S​p​r​e​a​d​s​h​e​e​t
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​r​o​w​s
+							 */
+							longDesc: string
+						}
+						sheet_id: {
+							/**
+							 * W​o​r​k​s​h​e​e​t
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​w​o​r​k​s​h​e​e​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​w​o​r​k​s​h​e​e​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t​ ​w​h​e​r​e​ ​t​h​e​ ​r​o​w​s​ ​w​i​l​l​ ​b​e​ ​a​d​d​e​d
+							 */
+							longDesc: string
+						}
+						insert_at_start: {
+							/**
+							 * I​n​s​e​r​t​ ​a​t​ ​S​t​a​r​t
+							 */
+							displayName: string
+							/**
+							 * I​n​s​e​r​t​ ​r​o​w​s​ ​a​t​ ​t​h​e​ ​s​t​a​r​t​ ​o​f​ ​t​h​e​ ​t​a​b​l​e
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​s​e​l​e​c​t​e​d​,​ ​n​e​w​ ​r​o​w​s​ ​w​i​l​l​ ​b​e​ ​i​n​s​e​r​t​e​d​ ​a​t​ ​t​h​e​ ​s​t​a​r​t​ ​o​f​ ​t​h​e​ ​t​a​b​l​e​.​ ​I​f​ ​n​o​t​ ​s​e​l​e​c​t​e​d​,​ ​r​o​w​s​ ​w​i​l​l​ ​b​e​ ​a​p​p​e​n​d​e​d​ ​t​o​ ​t​h​e​ ​e​n​d​ ​o​f​ ​t​h​e​ ​t​a​b​l​e​.
+							 */
+							longDesc: string
+						}
+						rows: {
+							/**
+							 * R​o​w​s​ ​t​o​ ​A​d​d
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​a​t​a​ ​t​o​ ​a​d​d​ ​a​s​ ​n​e​w​ ​r​o​w​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​d​a​t​a​ ​f​o​r​ ​e​a​c​h​ ​r​o​w​ ​t​o​ ​a​d​d​.​ ​V​a​l​u​e​s​ ​s​h​o​u​l​d​ ​m​a​t​c​h​ ​t​h​e​ ​h​e​a​d​e​r​s​ ​i​n​ ​t​h​e​ ​f​i​r​s​t​ ​r​o​w​ ​o​f​ ​t​h​e​ ​s​h​e​e​t​.​ ​E​a​c​h​ ​r​o​w​ ​i​s​ ​a​ ​s​e​t​ ​o​f​ ​k​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​ ​w​h​e​r​e​ ​k​e​y​s​ ​a​r​e​ ​c​o​l​u​m​n​ ​h​e​a​d​e​r​s​ ​a​n​d​ ​v​a​l​u​e​s​ ​a​r​e​ ​t​h​e​ ​d​a​t​a​ ​t​o​ ​i​n​s​e​r​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				copy_worksheet: {
+					/**
+					 * C​o​p​y​ ​W​o​r​k​s​h​e​e​t
+					 */
+					displayName: string
+					/**
+					 * C​o​p​y​ ​a​ ​w​o​r​k​s​h​e​e​t​ ​f​r​o​m​ ​o​n​e​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​ ​t​o​ ​a​n​o​t​h​e​r
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​c​o​p​y​ ​o​f​ ​a​ ​w​o​r​k​s​h​e​e​t​ ​f​r​o​m​ ​a​ ​s​o​u​r​c​e​ ​s​p​r​e​a​d​s​h​e​e​t​ ​t​o​ ​a​ ​d​e​s​t​i​n​a​t​i​o​n​ ​s​p​r​e​a​d​s​h​e​e​t​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​c​u​s​t​o​m​i​z​a​t​i​o​n
+					 */
+					longDesc: string
+					options: {
+						source_spreadsheet_id: {
+							/**
+							 * S​o​u​r​c​e​ ​S​p​r​e​a​d​s​h​e​e​t
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​o​u​r​c​e​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​w​o​r​k​s​h​e​e​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​o​p​y
+							 */
+							longDesc: string
+						}
+						source_sheet_id: {
+							/**
+							 * S​o​u​r​c​e​ ​W​o​r​k​s​h​e​e​t
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​w​o​r​k​s​h​e​e​t​ ​t​o​ ​c​o​p​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​w​o​r​k​s​h​e​e​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​o​u​r​c​e​ ​s​p​r​e​a​d​s​h​e​e​t​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​c​o​p​i​e​d
+							 */
+							longDesc: string
+						}
+						destination_spreadsheet_id: {
+							/**
+							 * D​e​s​t​i​n​a​t​i​o​n​ ​S​p​r​e​a​d​s​h​e​e​t
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​d​e​s​t​i​n​a​t​i​o​n​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​ ​w​h​e​r​e​ ​t​h​e​ ​w​o​r​k​s​h​e​e​t​ ​w​i​l​l​ ​b​e​ ​c​o​p​i​e​d​ ​t​o
+							 */
+							longDesc: string
+						}
+						new_sheet_name: {
+							/**
+							 * N​e​w​ ​W​o​r​k​s​h​e​e​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​n​e​w​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​o​p​i​e​d​ ​w​o​r​k​s​h​e​e​t
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​a​ ​c​u​s​t​o​m​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​o​p​i​e​d​ ​w​o​r​k​s​h​e​e​t​.​ ​I​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​,​ ​t​h​e​ ​o​r​i​g​i​n​a​l​ ​n​a​m​e​ ​w​i​l​l​ ​b​e​ ​u​s​e​d​ ​w​i​t​h​ ​"​C​o​p​y​ ​o​f​"​ ​p​r​e​f​i​x
+							 */
+							longDesc: string
+						}
+						insert_sheet_index: {
+							/**
+							 * I​n​s​e​r​t​ ​P​o​s​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​p​o​s​i​t​i​o​n​ ​t​o​ ​i​n​s​e​r​t​ ​t​h​e​ ​n​e​w​ ​w​o​r​k​s​h​e​e​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​z​e​r​o​-​b​a​s​e​d​ ​i​n​d​e​x​ ​w​h​e​r​e​ ​t​h​e​ ​n​e​w​ ​w​o​r​k​s​h​e​e​t​ ​s​h​o​u​l​d​ ​b​e​ ​i​n​s​e​r​t​e​d​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​t​h​e​ ​w​o​r​k​s​h​e​e​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​e​n​d​ ​o​f​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				clear_spreadsheet_rows: {
+					/**
+					 * C​l​e​a​r​ ​S​p​r​e​a​d​s​h​e​e​t​ ​R​o​w​(​s​)
+					 */
+					displayName: string
+					/**
+					 * C​l​e​a​r​ ​c​o​n​t​e​n​t​ ​f​r​o​m​ ​s​p​e​c​i​f​i​c​ ​r​o​w​s​ ​i​n​ ​a​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​ ​a​l​l​ ​d​a​t​a​ ​f​r​o​m​ ​s​e​l​e​c​t​e​d​ ​r​o​w​s​ ​i​n​ ​a​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​ ​w​h​i​l​e​ ​p​r​e​s​e​r​v​i​n​g​ ​f​o​r​m​a​t​t​i​n​g
+					 */
+					longDesc: string
+					options: {
+						spreadsheet_id: {
+							/**
+							 * S​p​r​e​a​d​s​h​e​e​t
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​o​w​s​ ​t​o​ ​b​e​ ​c​l​e​a​r​e​d
+							 */
+							longDesc: string
+						}
+						sheet_id: {
+							/**
+							 * S​h​e​e​t
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​h​e​e​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​s​h​e​e​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t​ ​w​h​e​r​e​ ​r​o​w​s​ ​w​i​l​l​ ​b​e​ ​c​l​e​a​r​e​d
+							 */
+							longDesc: string
+						}
+						rows: {
+							/**
+							 * R​o​w​s​ ​t​o​ ​C​l​e​a​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​r​o​w​ ​n​u​m​b​e​r​s​ ​t​o​ ​c​l​e​a​r​ ​(​1​-​b​a​s​e​d​)
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​w​h​i​c​h​ ​r​o​w​s​ ​t​o​ ​c​l​e​a​r​.​ ​R​o​w​ ​n​u​m​b​e​r​s​ ​s​t​a​r​t​ ​a​t​ ​1​ ​a​s​ ​s​e​e​n​ ​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t​.​ ​F​o​r​ ​e​x​a​m​p​l​e​,​ ​[​1​,​ ​3​,​ ​5​]​ ​w​i​l​l​ ​c​l​e​a​r​ ​r​o​w​s​ ​1​,​ ​3​,​ ​a​n​d​ ​5​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Attio: {
 			/**
 			 * A​t​t​i​o
@@ -23386,6 +24506,1126 @@ export type TranslationFunctions = {
 							 * Second Option
 							 */
 							displayName: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		GoogleSheets: {
+			/**
+			 * Google Sheets
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect with Google Sheets to manage your spreadsheets
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Integrate with Google Sheets to create, update, and manage your spreadsheets. This integration allows you to perform actions and respond to events in your Google Sheets account, enabling you to automate data management and reporting workflows.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				new_spreadsheet_row: {
+					/**
+					 * New Spreadsheet Row
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new row is added to a Google Sheet.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors a specific sheet in a Google Spreadsheet and triggers when new rows are added. The trigger provides the row data with column headers as field names.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						spreadsheet_id: {
+							/**
+							 * Spreadsheet ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the Google Spreadsheet to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Spreadsheet that contains the sheet you want to monitor for new rows.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sheet_id: {
+							/**
+							 * Sheet ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the specific sheet to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the specific sheet within the spreadsheet that you want to monitor for new rows. The sheet ID can be found in the spreadsheet URL.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Information about a newly added row in a Google Sheet
+						 */
+						desc: () => LocalizedString
+					}
+				}
+				new_spreadsheet_sheet: {
+					/**
+					 * New Spreadsheet Sheet
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new sheet is added to a Google Spreadsheet.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors a Google Spreadsheet and triggers when new sheets are added. The trigger provides metadata about the newly created sheet including its ID, title, index position, and dimensions.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						spreadsheet_id: {
+							/**
+							 * Spreadsheet ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the Google Spreadsheet to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Spreadsheet that you want to monitor for new sheets. The spreadsheet ID can be found in the spreadsheet URL.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Information about a newly added sheet in a Google Spreadsheet
+						 */
+						desc: () => LocalizedString
+					}
+				}
+				new_spreadsheet: {
+					/**
+					 * New Spreadsheet
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new Google Spreadsheet is created.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors Google Drive for newly created Google Spreadsheets. The trigger provides metadata about the newly created spreadsheet including its ID, name, URL, creation time, and owner information.
+					 */
+					longDesc: () => LocalizedString
+					event_info: {
+						/**
+						 * Information about a newly created Google Spreadsheet
+						 */
+						desc: () => LocalizedString
+					}
+				}
+			}
+			actions: {
+				find_spreadsheet_rows: {
+					/**
+					 * Find Spreadsheet Rows
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for rows in a Google Sheets spreadsheet that match specific criteria.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Searches for rows in a Google Sheet that match a specific value in a designated column. Supports searching by column header or letter, pagination, and different response formats.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						spreadsheet_id: {
+							/**
+							 * Spreadsheet ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of the Google Sheets spreadsheet
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Sheets spreadsheet to search in. This can be found in the URL of the spreadsheet.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sheet_id: {
+							/**
+							 * Sheet ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of the specific sheet within the spreadsheet
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the specific sheet to search within the spreadsheet. Each sheet has a unique ID that can be selected from the available sheets.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of matching rows to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of matching rows to include in the results. Default is 10.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of matching rows to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of matching rows to skip before returning results. Used for pagination. Default is 0.
+							 */
+							longDesc: () => LocalizedString
+						}
+						search_from_last_row: {
+							/**
+							 * Search From Last Row
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Start searching from the bottom of the sheet
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, searches from the bottom of the sheet upward instead of from the top down. Useful for finding the most recent entries in sheets where new data is appended at the bottom.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_rows_to_search: {
+							/**
+							 * Maximum Rows to Search
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of rows to search through
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Limits the total number of rows to search to control performance with large sheets. Default is 5000.
+							 */
+							longDesc: () => LocalizedString
+						}
+						response_type: {
+							/**
+							 * Response Format
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Format of the returned rows
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Determines how the matched rows are formatted in the response. Options include raw values, values mapped to column headers, or values mapped to column letters.
+							 */
+							longDesc: () => LocalizedString
+						}
+						search: {
+							/**
+							 * Search Criteria
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Criteria for finding matching rows
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Defines the search criteria to use when looking for matching rows.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									header: {
+										/**
+										 * Column Header
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Header of the column to search in
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The header text of the column to search in. Use this or Column Letter, not both.
+										 */
+										longDesc: () => LocalizedString
+									}
+									column: {
+										/**
+										 * Column Letter
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Letter of the column to search in (A, B, C, etc.)
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The letter designation of the column to search in (e.g., A, B, C). Use this or Column Header, not both.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Search Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Value to search for
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to look for in the specified column. Rows with this exact value will be returned.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				search_worksheets: {
+					/**
+					 * Search Worksheets
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Find worksheets within a Google Spreadsheet by title.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Searches for worksheets (tabs) within a Google Spreadsheet by their titles. Returns detailed information about matching worksheets including dimensions, position, and visibility. Can be used to find specific worksheets or list all worksheets in a spreadsheet.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						spreadsheet_id: {
+							/**
+							 * Spreadsheet ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the Google Spreadsheet to search within
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Spreadsheet you want to search for worksheets in. This can be found in the spreadsheet URL.
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Sheet Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Title text to search for (case-insensitive)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Search for worksheets with titles containing this text. Leave empty to list all worksheets in the spreadsheet. The search is case-insensitive by default.
+							 */
+							longDesc: () => LocalizedString
+						}
+						exact_match: {
+							/**
+							 * Exact Match
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to match the title exactly
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, only worksheets with exactly matching titles will be returned. If disabled (default), worksheets with titles containing the search text will be included in the results.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_spreadsheet_rows: {
+					/**
+					 * Update Spreadsheet Rows
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update existing rows in a Google Sheets spreadsheet.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates specific rows in a Google Sheets spreadsheet by their row indices. This action allows you to modify multiple rows in a single operation while preserving the spreadsheet structure.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						spreadsheet_id: {
+							/**
+							 * Spreadsheet ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the Google Sheets spreadsheet.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Sheets spreadsheet you want to update rows in. This can be found in the spreadsheet URL.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sheet_id: {
+							/**
+							 * Sheet ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the sheet within the spreadsheet.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the specific sheet within the spreadsheet where rows will be updated.
+							 */
+							longDesc: () => LocalizedString
+						}
+						rows: {
+							/**
+							 * Rows to Update
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of rows with their indices and data to update.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of rows to update, each containing a row index (starting from 2, as row 1 contains headers) and the data to update in that row. The data should match the headers in the spreadsheet.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									row_index: {
+										/**
+										 * Row Index
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The index of the row to update.
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The row number to update, starting from 2 (row 1 is reserved for headers). This number must refer to an existing row in the spreadsheet.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				format_spreadsheet_rows: {
+					/**
+					 * Format Spreadsheet Rows
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Apply formatting to specific rows in a Google Sheets spreadsheet.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Apply various formatting options such as colors, text styles, and alignment to specified rows in a Google Sheets spreadsheet. Format multiple rows at once with consistent styling.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						spreadsheet_id: {
+							/**
+							 * Spreadsheet
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the Google Sheets spreadsheet to format
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the Google Sheets spreadsheet containing the rows to format. This can be found in the spreadsheet URL.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sheet_id: {
+							/**
+							 * Worksheet
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the specific worksheet within the spreadsheet
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the specific worksheet (tab) containing the rows to format. Each worksheet has a unique ID within a spreadsheet.
+							 */
+							longDesc: () => LocalizedString
+						}
+						rows: {
+							/**
+							 * Rows
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of row numbers to format
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of row numbers to format (1-based indexing). For example, [1, 2, 5] will format the first, second, and fifth rows.
+							 */
+							longDesc: () => LocalizedString
+						}
+						background_color: {
+							/**
+							 * Background Color
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Background color for the cells
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The background color to apply to the cells in the specified rows. Uses RGB color format.
+							 */
+							longDesc: () => LocalizedString
+						}
+						text_color: {
+							/**
+							 * Text Color
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Color for the text in the cells
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The color to apply to the text in the cells of the specified rows. Uses RGB color format.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bold: {
+							/**
+							 * Bold
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Make text bold
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to make the text in the specified rows bold.
+							 */
+							longDesc: () => LocalizedString
+						}
+						italic: {
+							/**
+							 * Italic
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Make text italic
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to make the text in the specified rows italic.
+							 */
+							longDesc: () => LocalizedString
+						}
+						strikethrough: {
+							/**
+							 * Strikethrough
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Apply strikethrough to text
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to apply strikethrough formatting to the text in the specified rows.
+							 */
+							longDesc: () => LocalizedString
+						}
+						underline: {
+							/**
+							 * Underline
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Underline the text
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to underline the text in the specified rows.
+							 */
+							longDesc: () => LocalizedString
+						}
+						horizontal_alignment: {
+							/**
+							 * Horizontal Alignment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Horizontal alignment of content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The horizontal alignment to apply to the content in the specified rows (Left, Center, or Right).
+							 */
+							longDesc: () => LocalizedString
+						}
+						vertical_alignment: {
+							/**
+							 * Vertical Alignment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Vertical alignment of content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The vertical alignment to apply to the content in the specified rows (Top, Middle, or Bottom).
+							 */
+							longDesc: () => LocalizedString
+						}
+						font_size: {
+							/**
+							 * Font Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text font size in points
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The font size in points to apply to the text in the specified rows.
+							 */
+							longDesc: () => LocalizedString
+						}
+						wrap_text: {
+							/**
+							 * Wrap Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to wrap text in cells
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, text will wrap within cells rather than overflowing into adjacent cells.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_row: {
+					/**
+					 * Delete Row
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a specific row from a Google Sheets worksheet.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Completely removes a row from a specified Google Sheets worksheet without leaving an empty space behind. The row indexing starts from 1, matching what you see in the spreadsheet UI.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						spreadsheet_id: {
+							/**
+							 * Spreadsheet
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Sheets spreadsheet containing the row to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the Google Sheets spreadsheet that contains the worksheet with the row to delete.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sheet_id: {
+							/**
+							 * Worksheet
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The worksheet containing the row to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the worksheet (tab) within the spreadsheet that contains the row to delete.
+							 */
+							longDesc: () => LocalizedString
+						}
+						row_index: {
+							/**
+							 * Row Index
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The index of the row to delete (starting from 1)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The position of the row to delete, starting from 1 (not 0). This matches the row numbers you see in the Google Sheets UI. For example, to delete the very first row, use 1.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_worksheet: {
+					/**
+					 * Create Worksheet
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new worksheet in a Google Sheets spreadsheet with optional headers.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new worksheet (tab) in a specified Google Sheets spreadsheet with custom title and optional column headers. Can optionally overwrite an existing worksheet with the same name.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						spreadsheet_id: {
+							/**
+							 * Spreadsheet
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Sheets spreadsheet where the worksheet will be created
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the Google Sheets spreadsheet in which to create the new worksheet.
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Worksheet Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Title for the new worksheet
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name that will appear on the tab of the new worksheet.
+							 */
+							longDesc: () => LocalizedString
+						}
+						overwrite_existing: {
+							/**
+							 * Overwrite Existing
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to replace an existing worksheet with the same title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If true and a worksheet with the same title already exists, the existing worksheet will be deleted and replaced. If false and a duplicate exists, the action will fail.
+							 */
+							longDesc: () => LocalizedString
+						}
+						headers: {
+							/**
+							 * Headers
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Column headers to add to the first row
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of column headers that will be added to the first row of the new worksheet and formatted in bold.
+							 */
+							longDesc: () => LocalizedString
+						}
+						insert_sheet_index: {
+							/**
+							 * Sheet Position
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Position where the new worksheet should be placed
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The position (zero-based index) where the new worksheet should be inserted in the spreadsheet. If not specified, the worksheet will be added at the end.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_spreadsheet_column: {
+					/**
+					 * Create Spreadsheet Column
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Insert a new column into a Google Sheets spreadsheet.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Inserts a new column at the specified position in a Google Sheets spreadsheet and adds a formatted header at the top of the column.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						spreadsheet_id: {
+							/**
+							 * Spreadsheet
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Sheets spreadsheet
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the Google Sheets spreadsheet where the column will be created.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sheet_id: {
+							/**
+							 * Sheet
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The sheet within the spreadsheet
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the specific sheet within the spreadsheet where the column will be added.
+							 */
+							longDesc: () => LocalizedString
+						}
+						column_title: {
+							/**
+							 * Column Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The title for the new column
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The header text that will appear at the top of the new column.
+							 */
+							longDesc: () => LocalizedString
+						}
+						column_index: {
+							/**
+							 * Column Index
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The position where the column will be inserted
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Zero-based index of the position where the new column should be inserted. For example, 0 means the column will be inserted at the beginning of the sheet, 1 means after the first column, etc.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_spreadsheet: {
+					/**
+					 * Create Spreadsheet
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new Google Sheets spreadsheet with optional headers or by copying an existing one.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new Google Sheets spreadsheet. You can either create it from scratch with custom headers or copy an existing spreadsheet. When headers are provided, they are formatted as bold with borders and the header row is frozen.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						title: {
+							/**
+							 * Spreadsheet Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The title for the new spreadsheet
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name that will be given to the newly created Google Sheets spreadsheet.
+							 */
+							longDesc: () => LocalizedString
+						}
+						source_spreadsheet_id: {
+							/**
+							 * Source Spreadsheet
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of an existing spreadsheet to copy
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional. If provided, the new spreadsheet will be created as a copy of this existing spreadsheet. Headers option will be ignored if this is provided.
+							 */
+							longDesc: () => LocalizedString
+						}
+						headers: {
+							/**
+							 * Headers
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Column headers for the new spreadsheet
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional. A list of column headers to add to the first row of the new spreadsheet. Headers will be formatted as bold with borders and the header row will be frozen. This option is ignored if a source spreadsheet is provided.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_spreadsheet_rows: {
+					/**
+					 * Add Rows to Spreadsheet
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add one or more rows to the end of a Google Sheets table
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Append new rows to an existing Google Sheets table with data mapped to the table headers
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						spreadsheet_id: {
+							/**
+							 * Spreadsheet
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the Google Sheets spreadsheet
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Google Sheets spreadsheet where you want to add rows
+							 */
+							longDesc: () => LocalizedString
+						}
+						sheet_id: {
+							/**
+							 * Worksheet
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the worksheet within the spreadsheet
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The specific worksheet within the spreadsheet where the rows will be added
+							 */
+							longDesc: () => LocalizedString
+						}
+						insert_at_start: {
+							/**
+							 * Insert at Start
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Insert rows at the start of the table
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If selected, new rows will be inserted at the start of the table. If not selected, rows will be appended to the end of the table.
+							 */
+							longDesc: () => LocalizedString
+						}
+						rows: {
+							/**
+							 * Rows to Add
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The data to add as new rows
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the data for each row to add. Values should match the headers in the first row of the sheet. Each row is a set of key-value pairs where keys are column headers and values are the data to insert.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				copy_worksheet: {
+					/**
+					 * Copy Worksheet
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Copy a worksheet from one Google Sheets spreadsheet to another
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a copy of a worksheet from a source spreadsheet to a destination spreadsheet with optional customization
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						source_spreadsheet_id: {
+							/**
+							 * Source Spreadsheet
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the source Google Sheets spreadsheet
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Google Sheets spreadsheet containing the worksheet you want to copy
+							 */
+							longDesc: () => LocalizedString
+						}
+						source_sheet_id: {
+							/**
+							 * Source Worksheet
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the worksheet to copy
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The specific worksheet within the source spreadsheet that will be copied
+							 */
+							longDesc: () => LocalizedString
+						}
+						destination_spreadsheet_id: {
+							/**
+							 * Destination Spreadsheet
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the destination Google Sheets spreadsheet
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Google Sheets spreadsheet where the worksheet will be copied to
+							 */
+							longDesc: () => LocalizedString
+						}
+						new_sheet_name: {
+							/**
+							 * New Worksheet Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional new name for the copied worksheet
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify a custom name for the copied worksheet. If not provided, the original name will be used with "Copy of" prefix
+							 */
+							longDesc: () => LocalizedString
+						}
+						insert_sheet_index: {
+							/**
+							 * Insert Position
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional position to insert the new worksheet
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The zero-based index where the new worksheet should be inserted. If not specified, the worksheet is added to the end of the spreadsheet
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				clear_spreadsheet_rows: {
+					/**
+					 * Clear Spreadsheet Row(s)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Clear content from specific rows in a Google Sheets spreadsheet
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Remove all data from selected rows in a Google Sheets spreadsheet while preserving formatting
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						spreadsheet_id: {
+							/**
+							 * Spreadsheet
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the Google Sheets spreadsheet
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Google Sheets spreadsheet containing the rows to be cleared
+							 */
+							longDesc: () => LocalizedString
+						}
+						sheet_id: {
+							/**
+							 * Sheet
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the sheet within the spreadsheet
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The specific sheet within the spreadsheet where rows will be cleared
+							 */
+							longDesc: () => LocalizedString
+						}
+						rows: {
+							/**
+							 * Rows to Clear
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The row numbers to clear (1-based)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify which rows to clear. Row numbers start at 1 as seen in the spreadsheet. For example, [1, 3, 5] will clear rows 1, 3, and 5.
+							 */
+							longDesc: () => LocalizedString
 						}
 					}
 				}

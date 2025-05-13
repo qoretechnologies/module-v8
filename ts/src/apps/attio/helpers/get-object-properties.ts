@@ -10,6 +10,7 @@ import {
 import { AttioError } from '../constants';
 import { ATTIO_TO_QORUS_TYPE_MAP } from './attio-types-map';
 import { fetchAttioData, getAttioAllowedValues } from './constants';
+import { getAttioWorkspaceMemberEmailAllowedValues } from './get-workspace-member-allowed-values';
 
 export type TAttioAttribute = {
   id: {
@@ -134,7 +135,7 @@ export const mapAttioAttributeToQoreOption = (
   const { title, description, type, is_required } = attribute;
   let get_allowed_values: TQoreGetAllowedValuesFunction<TCustomConnOptions, string> | undefined;
 
-  const qorusType = ATTIO_TO_QORUS_TYPE_MAP[type];
+  const qorusType = ATTIO_TO_QORUS_TYPE_MAP[type] || 'any';
   let qorusFixedType: TQoreType | TQoreTypeObject = qorusType;
   if (qorusType === 'hash') {
     qorusFixedType = {
@@ -210,6 +211,33 @@ export const mapAttioAttributeToQoreOption = (
         required: true,
         allowed_values_creatable: true,
         get_allowed_values: targetAllowedValuesFunction,
+      },
+    } satisfies TQoreOptions;
+
+    if (attribute.is_multiselect) {
+      qorusFixedType = {
+        type: 'list',
+        element_type: {
+          type: 'hash',
+          fields: referenceFields,
+        },
+      };
+    } else {
+      qorusFixedType = {
+        type: 'hash',
+        fields: referenceFields,
+      };
+    }
+  }
+
+  if (type === 'actor-reference') {
+    const referenceFields = {
+      workspace_member_email_address: {
+        display_name: 'Workspace Member Email Address',
+        type: 'string',
+        required: true,
+        allowed_values_creatable: true,
+        get_allowed_values: getAttioWorkspaceMemberEmailAllowedValues,
       },
     } satisfies TQoreOptions;
 

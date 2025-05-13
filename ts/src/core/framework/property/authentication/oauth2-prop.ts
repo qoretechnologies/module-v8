@@ -51,6 +51,7 @@ type OAuth2ExtraProps = {
   url?: string;
   pingPath?: string;
   pingMethod?: string;
+  pingBody?: object;
   authUrl: string;
   tokenUrl: string;
   scope: string[];
