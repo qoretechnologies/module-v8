@@ -170,6 +170,1234 @@ type RootTranslation = {
 				}
 			}
 		}
+		GoogleDrive: {
+			/**
+			 * G​o​o​g​l​e​ ​D​r​i​v​e
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​w​i​t​h​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​f​i​l​e​s​ ​a​n​d​ ​f​o​l​d​e​r​s
+			 */
+			shortDesc: string
+			/**
+			 * I​n​t​e​g​r​a​t​e​ ​w​i​t​h​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​f​i​l​e​s​ ​a​n​d​ ​f​o​l​d​e​r​s​.​ ​T​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​p​e​r​f​o​r​m​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​r​e​s​p​o​n​d​ ​t​o​ ​e​v​e​n​t​s​ ​i​n​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​a​c​c​o​u​n​t​,​ ​e​n​a​b​l​i​n​g​ ​y​o​u​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​f​i​l​e​ ​m​a​n​a​g​e​m​e​n​t​ ​a​n​d​ ​s​h​a​r​i​n​g​ ​w​o​r​k​f​l​o​w​s​.
+			 */
+			longDesc: string
+			triggers: {
+				new_file: {
+					/**
+					 * N​e​w​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​f​i​l​e​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​G​o​o​g​l​e​ ​D​r​i​v​e​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​o​r​ ​n​e​w​ ​f​i​l​e​s​ ​t​h​a​t​ ​m​a​t​c​h​ ​y​o​u​r​ ​c​r​i​t​e​r​i​a​.​ ​C​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​f​o​l​d​e​r​,​ ​f​i​l​e​n​a​m​e​,​ ​a​n​d​ ​f​i​l​e​ ​t​y​p​e​,​ ​w​i​t​h​ ​o​p​t​i​o​n​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​f​i​l​e​ ​c​o​n​t​e​n​t​ ​i​n​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						folder_id: {
+							/**
+							 * F​o​l​d​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​o​l​d​e​r​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​o​l​d​e​r​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​f​i​l​e​s​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​a​l​l​ ​f​i​l​e​s​ ​i​n​ ​t​h​e​ ​d​r​i​v​e​ ​w​i​l​l​ ​b​e​ ​m​o​n​i​t​o​r​e​d​.
+							 */
+							longDesc: string
+						}
+						filename: {
+							/**
+							 * F​i​l​e​n​a​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​f​i​l​e​s​ ​b​y​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​d​e​t​e​c​t​ ​f​i​l​e​s​ ​w​i​t​h​ ​n​a​m​e​s​ ​m​a​t​c​h​i​n​g​ ​t​h​i​s​ ​v​a​l​u​e​.​ ​C​a​n​ ​b​e​ ​u​s​e​d​ ​w​i​t​h​ ​t​h​e​ ​s​e​a​r​c​h​ ​t​y​p​e​ ​o​p​t​i​o​n​ ​t​o​ ​c​o​n​t​r​o​l​ ​m​a​t​c​h​i​n​g​ ​b​e​h​a​v​i​o​r​.
+							 */
+							longDesc: string
+						}
+						search_type: {
+							/**
+							 * S​e​a​r​c​h​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​m​a​t​c​h​ ​f​i​l​e​n​a​m​e​s
+							 */
+							shortDesc: string
+							/**
+							 * D​e​t​e​r​m​i​n​e​s​ ​h​o​w​ ​t​h​e​ ​f​i​l​e​n​a​m​e​ ​f​i​l​t​e​r​ ​i​s​ ​a​p​p​l​i​e​d​.​ ​"​C​o​n​t​a​i​n​s​"​ ​w​i​l​l​ ​m​a​t​c​h​ ​a​n​y​ ​f​i​l​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t​,​ ​w​h​i​l​e​ ​"​E​x​a​c​t​ ​M​a​t​c​h​"​ ​r​e​q​u​i​r​e​s​ ​t​h​e​ ​c​o​m​p​l​e​t​e​ ​f​i​l​e​n​a​m​e​ ​t​o​ ​m​a​t​c​h​.
+							 */
+							longDesc: string
+						}
+						file_types: {
+							/**
+							 * F​i​l​e​ ​T​y​p​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​f​i​l​e​s​ ​b​y​ ​M​I​M​E​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​d​e​t​e​c​t​ ​f​i​l​e​s​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​M​I​M​E​ ​t​y​p​e​s​.​ ​M​u​l​t​i​p​l​e​ ​t​y​p​e​s​ ​c​a​n​ ​b​e​ ​s​e​l​e​c​t​e​d​ ​t​o​ ​i​n​c​l​u​d​e​ ​v​a​r​i​o​u​s​ ​f​i​l​e​ ​f​o​r​m​a​t​s​.
+							 */
+							longDesc: string
+						}
+						include_content: {
+							/**
+							 * I​n​c​l​u​d​e​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​f​i​l​e​ ​c​o​n​t​e​n​t​ ​i​n​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​i​n​c​l​u​d​e​ ​t​h​e​ ​f​i​l​e​ ​c​o​n​t​e​n​t​ ​i​n​ ​t​h​e​ ​e​v​e​n​t​ ​d​a​t​a​.​ ​F​o​r​ ​t​e​x​t​-​b​a​s​e​d​ ​f​i​l​e​s​,​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​w​i​l​l​ ​a​l​s​o​ ​b​e​ ​a​v​a​i​l​a​b​l​e​ ​a​s​ ​p​l​a​i​n​ ​t​e​x​t​.​ ​T​h​i​s​ ​m​a​y​ ​i​n​c​r​e​a​s​e​ ​p​r​o​c​e​s​s​i​n​g​ ​t​i​m​e​ ​f​o​r​ ​l​a​r​g​e​ ​f​i​l​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * C​o​n​t​a​i​n​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​i​l​e​,​ ​i​n​c​l​u​d​i​n​g​ ​m​e​t​a​d​a​t​a​ ​a​n​d​ ​o​p​t​i​o​n​a​l​l​y​ ​t​h​e​ ​f​i​l​e​ ​c​o​n​t​e​n​t​.
+						 */
+						desc: string
+					}
+				}
+				new_folder: {
+					/**
+					 * N​e​w​ ​F​o​l​d​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​f​o​l​d​e​r​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​G​o​o​g​l​e​ ​D​r​i​v​e​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​f​o​l​d​e​r​s​ ​t​h​a​t​ ​m​a​t​c​h​ ​y​o​u​r​ ​c​r​i​t​e​r​i​a​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​p​a​r​e​n​t​ ​f​o​l​d​e​r​ ​a​n​d​ ​f​o​l​d​e​r​ ​n​a​m​e​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​f​o​l​d​e​r​s​ ​b​e​i​n​g​ ​m​o​n​i​t​o​r​e​d​.
+					 */
+					longDesc: string
+					options: {
+						folder_name: {
+							/**
+							 * F​o​l​d​e​r​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​f​o​l​d​e​r​s​ ​b​y​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​d​e​t​e​c​t​ ​f​o​l​d​e​r​s​ ​w​i​t​h​ ​n​a​m​e​s​ ​m​a​t​c​h​i​n​g​ ​t​h​i​s​ ​v​a​l​u​e​.​ ​C​a​n​ ​b​e​ ​u​s​e​d​ ​w​i​t​h​ ​t​h​e​ ​s​e​a​r​c​h​ ​t​y​p​e​ ​o​p​t​i​o​n​ ​t​o​ ​c​o​n​t​r​o​l​ ​m​a​t​c​h​i​n​g​ ​b​e​h​a​v​i​o​r​.
+							 */
+							longDesc: string
+						}
+						folder_id: {
+							/**
+							 * P​a​r​e​n​t​ ​F​o​l​d​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​a​r​e​n​t​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​o​l​d​e​r​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​o​l​d​e​r​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​f​o​l​d​e​r​s​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​a​l​l​ ​f​o​l​d​e​r​s​ ​a​c​r​o​s​s​ ​t​h​e​ ​d​r​i​v​e​ ​w​i​l​l​ ​b​e​ ​m​o​n​i​t​o​r​e​d​.
+							 */
+							longDesc: string
+						}
+						search_type: {
+							/**
+							 * S​e​a​r​c​h​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​m​a​t​c​h​ ​f​o​l​d​e​r​ ​n​a​m​e​s
+							 */
+							shortDesc: string
+							/**
+							 * D​e​t​e​r​m​i​n​e​s​ ​h​o​w​ ​t​h​e​ ​f​o​l​d​e​r​ ​n​a​m​e​ ​f​i​l​t​e​r​ ​i​s​ ​a​p​p​l​i​e​d​.​ ​"​C​o​n​t​a​i​n​s​"​ ​w​i​l​l​ ​m​a​t​c​h​ ​a​n​y​ ​f​o​l​d​e​r​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t​,​ ​w​h​i​l​e​ ​"​E​x​a​c​t​ ​M​a​t​c​h​"​ ​r​e​q​u​i​r​e​s​ ​t​h​e​ ​c​o​m​p​l​e​t​e​ ​f​o​l​d​e​r​ ​n​a​m​e​ ​t​o​ ​m​a​t​c​h​.
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * C​o​n​t​a​i​n​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​o​l​d​e​r​,​ ​i​n​c​l​u​d​i​n​g​ ​m​e​t​a​d​a​t​a​ ​s​u​c​h​ ​a​s​ ​I​D​,​ ​n​a​m​e​,​ ​a​n​d​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e​.
+						 */
+						desc: string
+					}
+				}
+			}
+			actions: {
+				add_file_sharing_preference: {
+					/**
+					 * A​d​d​ ​F​i​l​e​ ​S​h​a​r​i​n​g​ ​P​r​e​f​e​r​e​n​c​e
+					 */
+					displayName: string
+					/**
+					 * S​e​t​ ​s​h​a​r​i​n​g​ ​p​e​r​m​i​s​s​i​o​n​s​ ​f​o​r​ ​a​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​i​l​e
+					 */
+					shortDesc: string
+					/**
+					 * M​o​d​i​f​y​ ​w​h​o​ ​c​a​n​ ​a​c​c​e​s​s​ ​a​ ​f​i​l​e​ ​i​n​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​b​y​ ​s​e​t​t​i​n​g​ ​s​p​e​c​i​f​i​c​ ​s​h​a​r​i​n​g​ ​p​r​e​f​e​r​e​n​c​e​s​.​ ​S​u​p​p​o​r​t​s​ ​o​r​g​a​n​i​z​a​t​i​o​n​-​w​i​d​e​ ​s​h​a​r​i​n​g​,​ ​p​u​b​l​i​c​ ​s​h​a​r​i​n​g​,​ ​a​n​d​ ​s​h​a​r​i​n​g​ ​w​i​t​h​ ​s​p​e​c​i​f​i​c​ ​i​n​d​i​v​i​d​u​a​l​s​ ​b​y​ ​e​m​a​i​l​.
+					 */
+					longDesc: string
+					options: {
+						file_id: {
+							/**
+							 * F​i​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​s​h​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​i​l​e​ ​I​D​ ​o​f​ ​t​h​e​ ​d​o​c​u​m​e​n​t​,​ ​s​p​r​e​a​d​s​h​e​e​t​,​ ​o​r​ ​o​t​h​e​r​ ​f​i​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​d​i​f​y​ ​s​h​a​r​i​n​g​ ​s​e​t​t​i​n​g​s​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+						sharing_preference: {
+							/**
+							 * S​h​a​r​i​n​g​ ​P​r​e​f​e​r​e​n​c​e
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​s​h​a​r​e​ ​t​h​e​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * D​e​t​e​r​m​i​n​e​s​ ​w​h​o​ ​c​a​n​ ​a​c​c​e​s​s​ ​t​h​e​ ​f​i​l​e​ ​a​n​d​ ​w​h​a​t​ ​p​e​r​m​i​s​s​i​o​n​s​ ​t​h​e​y​ ​h​a​v​e​.​ ​C​h​o​o​s​e​ ​b​e​t​w​e​e​n​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​s​h​a​r​i​n​g​,​ ​p​u​b​l​i​c​ ​s​h​a​r​i​n​g​,​ ​o​r​ ​s​h​a​r​i​n​g​ ​w​i​t​h​ ​s​p​e​c​i​f​i​c​ ​i​n​d​i​v​i​d​u​a​l​s​.
+							 */
+							longDesc: string
+						}
+						organization_domain: {
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​D​o​m​a​i​n
+							 */
+							displayName: string
+							/**
+							 * D​o​m​a​i​n​ ​f​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​s​h​a​r​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​o​m​a​i​n​ ​n​a​m​e​ ​o​f​ ​y​o​u​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​(​e​.​g​.​,​ ​e​x​a​m​p​l​e​.​c​o​m​)​.​ ​R​e​q​u​i​r​e​d​ ​w​h​e​n​ ​u​s​i​n​g​ ​o​r​g​a​n​i​z​a​t​i​o​n​-​b​a​s​e​d​ ​s​h​a​r​i​n​g​ ​o​p​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+						email_address: {
+							/**
+							 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * P​e​r​s​o​n​ ​t​o​ ​s​h​a​r​e​ ​w​i​t​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​p​e​r​s​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​s​h​a​r​e​ ​t​h​e​ ​f​i​l​e​ ​w​i​t​h​.​ ​R​e​q​u​i​r​e​d​ ​w​h​e​n​ ​u​s​i​n​g​ ​e​m​a​i​l​-​b​a​s​e​d​ ​s​h​a​r​i​n​g​.
+							 */
+							longDesc: string
+						}
+						sharing_role: {
+							/**
+							 * P​e​r​m​i​s​s​i​o​n​ ​L​e​v​e​l
+							 */
+							displayName: string
+							/**
+							 * A​c​c​e​s​s​ ​l​e​v​e​l​ ​t​o​ ​g​r​a​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​a​c​c​e​s​s​ ​t​o​ ​g​r​a​n​t​ ​t​o​ ​t​h​e​ ​p​e​r​s​o​n​ ​w​h​e​n​ ​s​h​a​r​i​n​g​ ​v​i​a​ ​e​m​a​i​l​.​ ​O​p​t​i​o​n​s​ ​i​n​c​l​u​d​e​ ​v​i​e​w​e​r​ ​(​c​a​n​ ​v​i​e​w​)​,​ ​c​o​m​m​e​n​t​e​r​ ​(​c​a​n​ ​c​o​m​m​e​n​t​)​,​ ​o​r​ ​e​d​i​t​o​r​ ​(​c​a​n​ ​e​d​i​t​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				copy_file: {
+					/**
+					 * C​o​p​y​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​c​o​p​y​ ​o​f​ ​a​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​i​l​e​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​p​a​r​a​m​e​t​e​r​s​.
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​c​o​p​y​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​f​i​l​e​ ​i​n​ ​G​o​o​g​l​e​ ​D​r​i​v​e​.​ ​A​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​s​p​e​c​i​f​y​ ​a​ ​n​e​w​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​o​p​y​,​ ​p​l​a​c​e​ ​i​t​ ​i​n​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​f​o​l​d​e​r​ ​o​r​ ​d​r​i​v​e​,​ ​a​n​d​ ​o​p​t​i​o​n​a​l​l​y​ ​c​o​n​v​e​r​t​ ​c​o​m​p​a​t​i​b​l​e​ ​f​i​l​e​s​ ​t​o​ ​G​o​o​g​l​e​ ​D​o​c​u​m​e​n​t​s​ ​f​o​r​m​a​t​.
+					 */
+					longDesc: string
+					options: {
+						file_id: {
+							/**
+							 * F​i​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​c​o​p​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​f​i​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​c​o​p​y​ ​o​f​.
+							 */
+							longDesc: string
+						}
+						new_name: {
+							/**
+							 * N​e​w​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​c​o​p​y
+							 */
+							shortDesc: string
+							/**
+							 * N​a​m​e​ ​t​o​ ​g​i​v​e​ ​t​o​ ​t​h​e​ ​n​e​w​ ​f​i​l​e​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​t​h​e​ ​o​r​i​g​i​n​a​l​ ​f​i​l​e​ ​n​a​m​e​ ​w​i​l​l​ ​b​e​ ​u​s​e​d​ ​w​i​t​h​ ​"​C​o​p​y​ ​o​f​"​ ​p​r​e​f​i​x​.
+							 */
+							longDesc: string
+						}
+						convert_to_document: {
+							/**
+							 * C​o​n​v​e​r​t​ ​t​o​ ​G​o​o​g​l​e​ ​D​o​c​u​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * C​o​n​v​e​r​t​ ​f​i​l​e​ ​t​o​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​f​o​r​m​a​t
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​c​o​m​p​a​t​i​b​l​e​ ​f​i​l​e​s​ ​(​l​i​k​e​ ​.​d​o​c​x​,​ ​.​t​x​t​,​ ​e​t​c​.​)​ ​w​i​l​l​ ​b​e​ ​c​o​n​v​e​r​t​e​d​ ​t​o​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​f​o​r​m​a​t​ ​w​h​e​n​ ​c​o​p​i​e​d​.
+							 */
+							longDesc: string
+						}
+						folder_id: {
+							/**
+							 * F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * D​e​s​t​i​n​a​t​i​o​n​ ​f​o​l​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​o​l​d​e​r​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​p​y​ ​s​h​o​u​l​d​ ​b​e​ ​p​l​a​c​e​d​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​t​h​e​ ​f​i​l​e​ ​w​i​l​l​ ​b​e​ ​c​o​p​i​e​d​ ​t​o​ ​t​h​e​ ​r​o​o​t​ ​o​f​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​d​r​i​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_file: {
+					/**
+					 * D​e​l​e​t​e​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​s​ ​a​ ​f​i​l​e​ ​o​r​ ​m​o​v​e​s​ ​i​t​ ​t​o​ ​t​r​a​s​h​ ​i​n​ ​G​o​o​g​l​e​ ​D​r​i​v​e​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​ ​f​i​l​e​ ​f​r​o​m​ ​G​o​o​g​l​e​ ​D​r​i​v​e​.​ ​B​y​ ​d​e​f​a​u​l​t​,​ ​f​i​l​e​s​ ​a​r​e​ ​m​o​v​e​d​ ​t​o​ ​t​r​a​s​h​ ​a​n​d​ ​c​a​n​ ​b​e​ ​r​e​c​o​v​e​r​e​d​ ​l​a​t​e​r​.​ ​S​e​t​ ​t​h​e​ ​"​p​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​"​ ​o​p​t​i​o​n​ ​t​o​ ​t​r​u​e​ ​t​o​ ​b​y​p​a​s​s​ ​t​h​e​ ​t​r​a​s​h​ ​a​n​d​ ​d​e​l​e​t​e​ ​t​h​e​ ​f​i​l​e​ ​p​e​r​m​a​n​e​n​t​l​y​.
+					 */
+					longDesc: string
+					options: {
+						file_id: {
+							/**
+							 * F​i​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​f​i​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​ ​f​r​o​m​ ​G​o​o​g​l​e​ ​D​r​i​v​e​.
+							 */
+							longDesc: string
+						}
+						permanently_delete: {
+							/**
+							 * P​e​r​m​a​n​e​n​t​l​y​ ​D​e​l​e​t​e
+							 */
+							displayName: string
+							/**
+							 * S​k​i​p​ ​t​h​e​ ​t​r​a​s​h​ ​a​n​d​ ​d​e​l​e​t​e​ ​p​e​r​m​a​n​e​n​t​l​y
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​f​i​l​e​ ​w​i​l​l​ ​b​e​ ​p​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​d​,​ ​b​y​p​a​s​s​i​n​g​ ​t​h​e​ ​t​r​a​s​h​.​ ​T​h​i​s​ ​o​p​e​r​a​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_file_from_text: {
+					/**
+					 * C​r​e​a​t​e​ ​F​i​l​e​ ​F​r​o​m​ ​T​e​x​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​t​e​x​t​ ​f​i​l​e​ ​o​r​ ​G​o​o​g​l​e​ ​D​o​c​ ​f​r​o​m​ ​p​r​o​v​i​d​e​d​ ​c​o​n​t​e​n​t​.
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​f​i​l​e​ ​i​n​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t​ ​c​o​n​t​e​n​t​.​ ​Y​o​u​ ​c​a​n​ ​c​h​o​o​s​e​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​p​l​a​i​n​ ​t​e​x​t​ ​f​i​l​e​ ​o​r​ ​c​o​n​v​e​r​t​ ​i​t​ ​d​i​r​e​c​t​l​y​ ​t​o​ ​a​ ​G​o​o​g​l​e​ ​D​o​c​u​m​e​n​t​.​ ​T​h​e​ ​f​i​l​e​ ​c​a​n​ ​b​e​ ​p​l​a​c​e​d​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​o​l​d​e​r​ ​o​r​ ​i​n​ ​t​h​e​ ​r​o​o​t​ ​o​f​ ​y​o​u​r​ ​d​r​i​v​e​.
+					 */
+					longDesc: string
+					options: {
+						folder_id: {
+							/**
+							 * F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * L​o​c​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​o​l​d​e​r​ ​w​h​e​r​e​ ​t​h​e​ ​n​e​w​ ​f​i​l​e​ ​s​h​o​u​l​d​ ​b​e​ ​c​r​e​a​t​e​d​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​t​h​e​ ​f​i​l​e​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​ ​i​n​ ​t​h​e​ ​r​o​o​t​ ​o​f​ ​y​o​u​r​ ​d​r​i​v​e​.
+							 */
+							longDesc: string
+						}
+						file_name: {
+							/**
+							 * F​i​l​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​t​o​ ​g​i​v​e​ ​t​o​ ​t​h​e​ ​n​e​w​ ​f​i​l​e​,​ ​i​n​c​l​u​d​i​n​g​ ​a​n​y​ ​e​x​t​e​n​s​i​o​n​ ​(​e​.​g​.​,​ ​"​n​o​t​e​s​.​t​x​t​"​)​.
+							 */
+							longDesc: string
+						}
+						file_content: {
+							/**
+							 * F​i​l​e​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​c​o​n​t​e​n​t​ ​f​o​r​ ​t​h​e​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​t​o​ ​b​e​ ​w​r​i​t​t​e​n​ ​t​o​ ​t​h​e​ ​f​i​l​e​.​ ​T​h​i​s​ ​c​a​n​ ​i​n​c​l​u​d​e​ ​p​l​a​i​n​ ​t​e​x​t​,​ ​f​o​r​m​a​t​t​e​d​ ​t​e​x​t​,​ ​o​r​ ​m​a​r​k​d​o​w​n​ ​(​i​f​ ​c​o​n​v​e​r​t​i​n​g​ ​t​o​ ​a​ ​G​o​o​g​l​e​ ​D​o​c​u​m​e​n​t​)​.
+							 */
+							longDesc: string
+						}
+						convert_to_document: {
+							/**
+							 * C​o​n​v​e​r​t​ ​t​o​ ​G​o​o​g​l​e​ ​D​o​c​u​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * C​r​e​a​t​e​ ​a​s​ ​G​o​o​g​l​e​ ​D​o​c​ ​i​n​s​t​e​a​d​ ​o​f​ ​t​e​x​t​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​w​i​l​l​ ​b​e​ ​u​s​e​d​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​G​o​o​g​l​e​ ​D​o​c​u​m​e​n​t​ ​i​n​s​t​e​a​d​ ​o​f​ ​a​ ​p​l​a​i​n​ ​t​e​x​t​ ​f​i​l​e​.​ ​T​h​i​s​ ​a​l​l​o​w​s​ ​f​o​r​ ​r​i​c​h​ ​t​e​x​t​ ​f​o​r​m​a​t​t​i​n​g​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_folder: {
+					/**
+					 * C​r​e​a​t​e​ ​F​o​l​d​e​r
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​f​o​l​d​e​r​ ​i​n​ ​G​o​o​g​l​e​ ​D​r​i​v​e​.
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​f​o​l​d​e​r​ ​i​n​ ​G​o​o​g​l​e​ ​D​r​i​v​e​.​ ​Y​o​u​ ​c​a​n​ ​s​p​e​c​i​f​y​ ​a​ ​p​a​r​e​n​t​ ​f​o​l​d​e​r​ ​w​h​e​r​e​ ​t​h​e​ ​n​e​w​ ​f​o​l​d​e​r​ ​s​h​o​u​l​d​ ​b​e​ ​c​r​e​a​t​e​d​,​ ​o​r​ ​l​e​a​v​e​ ​i​t​ ​b​l​a​n​k​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​f​o​l​d​e​r​ ​i​n​ ​t​h​e​ ​r​o​o​t​ ​o​f​ ​y​o​u​r​ ​D​r​i​v​e​.
+					 */
+					longDesc: string
+					options: {
+						parent_folder_id: {
+							/**
+							 * P​a​r​e​n​t​ ​F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * L​o​c​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​f​o​l​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​o​l​d​e​r​ ​w​h​e​r​e​ ​t​h​e​ ​n​e​w​ ​f​o​l​d​e​r​ ​s​h​o​u​l​d​ ​b​e​ ​c​r​e​a​t​e​d​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​t​h​e​ ​f​o​l​d​e​r​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​ ​i​n​ ​t​h​e​ ​r​o​o​t​ ​o​f​ ​y​o​u​r​ ​D​r​i​v​e​.
+							 */
+							longDesc: string
+						}
+						folder_name: {
+							/**
+							 * F​o​l​d​e​r​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​f​o​l​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​t​o​ ​g​i​v​e​ ​t​o​ ​t​h​e​ ​n​e​w​ ​f​o​l​d​e​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_shortcut: {
+					/**
+					 * C​r​e​a​t​e​ ​S​h​o​r​t​c​u​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​s​h​o​r​t​c​u​t​ ​t​o​ ​a​ ​f​i​l​e​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​o​l​d​e​r​.
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​s​h​o​r​t​c​u​t​ ​(​l​i​n​k​)​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​f​i​l​e​ ​i​n​ ​G​o​o​g​l​e​ ​D​r​i​v​e​.​ ​T​h​e​ ​s​h​o​r​t​c​u​t​ ​w​i​l​l​ ​b​e​ ​p​l​a​c​e​d​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​o​l​d​e​r​.​ ​S​h​o​r​t​c​u​t​s​ ​a​l​l​o​w​ ​y​o​u​ ​t​o​ ​o​r​g​a​n​i​z​e​ ​f​i​l​e​s​ ​w​i​t​h​o​u​t​ ​c​r​e​a​t​i​n​g​ ​d​u​p​l​i​c​a​t​e​s​,​ ​g​i​v​i​n​g​ ​y​o​u​ ​a​c​c​e​s​s​ ​t​o​ ​t​h​e​ ​s​a​m​e​ ​f​i​l​e​ ​f​r​o​m​ ​m​u​l​t​i​p​l​e​ ​l​o​c​a​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						file_id: {
+							/**
+							 * T​a​r​g​e​t​ ​F​i​l​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​e​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​s​h​o​r​t​c​u​t​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​h​a​t​ ​t​h​e​ ​s​h​o​r​t​c​u​t​ ​w​i​l​l​ ​p​o​i​n​t​ ​t​o​.​ ​T​h​i​s​ ​f​i​l​e​ ​w​i​l​l​ ​r​e​m​a​i​n​ ​i​n​ ​i​t​s​ ​o​r​i​g​i​n​a​l​ ​l​o​c​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						folder_id: {
+							/**
+							 * D​e​s​t​i​n​a​t​i​o​n​ ​F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * F​o​l​d​e​r​ ​t​o​ ​p​l​a​c​e​ ​t​h​e​ ​s​h​o​r​t​c​u​t​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​o​l​d​e​r​ ​w​h​e​r​e​ ​t​h​e​ ​n​e​w​ ​s​h​o​r​t​c​u​t​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						shortcut_name: {
+							/**
+							 * S​h​o​r​t​c​u​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​s​h​o​r​t​c​u​t​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​c​u​s​t​o​m​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​s​h​o​r​t​c​u​t​.​ ​I​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​,​ ​t​h​e​ ​o​r​i​g​i​n​a​l​ ​f​i​l​e​ ​n​a​m​e​ ​w​i​l​l​ ​b​e​ ​u​s​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				move_file: {
+					/**
+					 * M​o​v​e​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * M​o​v​e​s​ ​a​ ​f​i​l​e​ ​t​o​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​f​o​l​d​e​r​ ​i​n​ ​G​o​o​g​l​e​ ​D​r​i​v​e​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​v​e​s​ ​a​ ​f​i​l​e​ ​f​r​o​m​ ​i​t​s​ ​c​u​r​r​e​n​t​ ​l​o​c​a​t​i​o​n​ ​t​o​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​f​o​l​d​e​r​ ​i​n​ ​G​o​o​g​l​e​ ​D​r​i​v​e​.​ ​Y​o​u​ ​c​a​n​ ​o​p​t​i​o​n​a​l​l​y​ ​k​e​e​p​ ​t​h​e​ ​f​i​l​e​ ​i​n​ ​i​t​s​ ​o​r​i​g​i​n​a​l​ ​l​o​c​a​t​i​o​n​(​s​)​,​ ​w​h​i​c​h​ ​e​f​f​e​c​t​i​v​e​l​y​ ​c​r​e​a​t​e​s​ ​a​ ​c​o​p​y​ ​o​f​ ​t​h​e​ ​f​i​l​e​ ​i​n​ ​t​h​e​ ​n​e​w​ ​l​o​c​a​t​i​o​n​ ​w​h​i​l​e​ ​m​a​i​n​t​a​i​n​i​n​g​ ​t​h​e​ ​o​r​i​g​i​n​a​l​.
+					 */
+					longDesc: string
+					options: {
+						file_id: {
+							/**
+							 * F​i​l​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​e​ ​t​o​ ​m​o​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​v​e​ ​t​o​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​f​o​l​d​e​r​.
+							 */
+							longDesc: string
+						}
+						folder_id: {
+							/**
+							 * D​e​s​t​i​n​a​t​i​o​n​ ​F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * F​o​l​d​e​r​ ​t​o​ ​m​o​v​e​ ​t​h​e​ ​f​i​l​e​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​o​l​d​e​r​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​v​e​ ​t​h​e​ ​f​i​l​e​ ​t​o​.
+							 */
+							longDesc: string
+						}
+						keep_in_original_folders: {
+							/**
+							 * K​e​e​p​ ​i​n​ ​O​r​i​g​i​n​a​l​ ​F​o​l​d​e​r​s
+							 */
+							displayName: string
+							/**
+							 * K​e​e​p​ ​f​i​l​e​ ​i​n​ ​o​r​i​g​i​n​a​l​ ​l​o​c​a​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​f​i​l​e​ ​w​i​l​l​ ​r​e​m​a​i​n​ ​i​n​ ​i​t​s​ ​o​r​i​g​i​n​a​l​ ​f​o​l​d​e​r​(​s​)​ ​a​n​d​ ​a​l​s​o​ ​b​e​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​d​e​s​t​i​n​a​t​i​o​n​ ​f​o​l​d​e​r​.​ ​I​f​ ​d​i​s​a​b​l​e​d​ ​(​d​e​f​a​u​l​t​)​,​ ​t​h​e​ ​f​i​l​e​ ​w​i​l​l​ ​b​e​ ​r​e​m​o​v​e​d​ ​f​r​o​m​ ​i​t​s​ ​o​r​i​g​i​n​a​l​ ​l​o​c​a​t​i​o​n​(​s​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				replace_file: {
+					/**
+					 * R​e​p​l​a​c​e​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * R​e​p​l​a​c​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​f​i​l​e​ ​i​n​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​w​i​t​h​ ​a​ ​n​e​w​ ​o​n​e​.
+					 */
+					shortDesc: string
+					/**
+					 * U​p​l​o​a​d​s​ ​a​ ​n​e​w​ ​f​i​l​e​ ​t​o​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​t​o​ ​r​e​p​l​a​c​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​f​i​l​e​.​ ​T​h​e​ ​o​r​i​g​i​n​a​l​ ​f​i​l​e​ ​I​D​ ​i​s​ ​p​r​e​s​e​r​v​e​d​,​ ​b​u​t​ ​i​t​s​ ​c​o​n​t​e​n​t​s​ ​a​n​d​ ​o​p​t​i​o​n​a​l​l​y​ ​n​a​m​e​ ​a​n​d​ ​e​x​t​e​n​s​i​o​n​ ​a​r​e​ ​u​p​d​a​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						file_to_replace: {
+							/**
+							 * F​i​l​e​ ​t​o​ ​R​e​p​l​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​r​e​p​l​a​c​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​x​i​s​t​i​n​g​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​i​l​e​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​p​l​a​c​e​ ​w​i​t​h​ ​n​e​w​ ​c​o​n​t​e​n​t​.
+							 */
+							longDesc: string
+						}
+						file: {
+							/**
+							 * N​e​w​ ​F​i​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​c​o​n​t​e​n​t​ ​t​h​a​t​ ​w​i​l​l​ ​r​e​p​l​a​c​e​ ​t​h​e​ ​e​x​i​s​t​i​n​g​ ​f​i​l​e​ ​i​n​ ​G​o​o​g​l​e​ ​D​r​i​v​e​.
+							 */
+							longDesc: string
+						}
+						file_name: {
+							/**
+							 * F​i​l​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​n​e​w​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​n​e​w​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​f​i​l​e​.​ ​I​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​,​ ​t​h​e​ ​o​r​i​g​i​n​a​l​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​u​p​l​o​a​d​e​d​ ​f​i​l​e​ ​w​i​l​l​ ​b​e​ ​u​s​e​d​.
+							 */
+							longDesc: string
+						}
+						file_extension: {
+							/**
+							 * F​i​l​e​ ​E​x​t​e​n​s​i​o​n
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​n​e​w​ ​f​i​l​e​ ​e​x​t​e​n​s​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​n​e​w​ ​e​x​t​e​n​s​i​o​n​ ​f​o​r​ ​t​h​e​ ​f​i​l​e​.​ ​T​h​i​s​ ​w​i​l​l​ ​a​l​s​o​ ​u​p​d​a​t​e​ ​t​h​e​ ​f​i​l​e​ ​M​I​M​E​ ​t​y​p​e​ ​i​f​ ​a​ ​k​n​o​w​n​ ​e​x​t​e​n​s​i​o​n​ ​i​s​ ​p​r​o​v​i​d​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_files: {
+					/**
+					 * L​i​s​t​ ​F​i​l​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​f​i​l​e​s​ ​f​r​o​m​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​o​p​t​i​o​n​s​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​f​i​l​e​s​ ​f​r​o​m​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​v​a​r​i​o​u​s​ ​f​i​l​t​e​r​s​,​ ​c​u​s​t​o​m​ ​q​u​e​r​i​e​s​,​ ​s​o​r​t​i​n​g​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						filename: {
+							/**
+							 * F​i​l​e​n​a​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​f​i​l​e​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​r​e​s​u​l​t​s​ ​t​o​ ​f​i​l​e​s​ ​w​h​o​s​e​ ​n​a​m​e​s​ ​m​a​t​c​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e​,​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​s​e​a​r​c​h​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+						search_type: {
+							/**
+							 * S​e​a​r​c​h​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​m​a​t​c​h​ ​t​h​e​ ​f​i​l​e​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​f​i​l​e​s​ ​w​i​t​h​ ​n​a​m​e​s​ ​t​h​a​t​ ​c​o​n​t​a​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t​ ​o​r​ ​t​h​a​t​ ​e​x​a​c​t​l​y​ ​m​a​t​c​h​ ​i​t​.
+							 */
+							longDesc: string
+						}
+						folder: {
+							/**
+							 * F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​a​r​e​n​t​ ​f​o​l​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​r​e​s​u​l​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​f​i​l​e​s​ ​t​h​a​t​ ​a​r​e​ ​c​o​n​t​a​i​n​e​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​o​l​d​e​r​.
+							 */
+							longDesc: string
+						}
+						file_types: {
+							/**
+							 * F​i​l​e​ ​T​y​p​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​f​i​l​e​ ​t​y​p​e​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​r​e​s​u​l​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​f​i​l​e​s​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​y​p​e​s​.​ ​M​u​l​t​i​p​l​e​ ​t​y​p​e​s​ ​c​a​n​ ​b​e​ ​s​e​l​e​c​t​e​d​.
+							 */
+							longDesc: string
+						}
+						order_by: {
+							/**
+							 * O​r​d​e​r​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​s​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​s​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​f​i​l​e​s​.​ ​Y​o​u​ ​c​a​n​ ​a​d​d​ ​m​u​l​t​i​p​l​e​ ​s​o​r​t​i​n​g​ ​c​r​i​t​e​r​i​a​,​ ​e​a​c​h​ ​w​i​t​h​ ​a​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​i​l​e​ ​p​r​o​p​e​r​t​y​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​,​ ​s​u​c​h​ ​a​s​ ​n​a​m​e​,​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e​,​ ​o​r​ ​m​o​d​i​f​i​c​a​t​i​o​n​ ​t​i​m​e​.
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​i​n​,​ ​e​i​t​h​e​r​ ​a​s​c​e​n​d​i​n​g​ ​(​a​s​c​)​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​(​d​e​s​c​)​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						page_size: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​f​i​l​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​f​i​l​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.​ ​M​a​x​i​m​u​m​ ​a​l​l​o​w​e​d​ ​i​s​ ​1​0​0​0​.
+							 */
+							longDesc: string
+						}
+						custom_query: {
+							/**
+							 * C​u​s​t​o​m​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * A​d​v​a​n​c​e​d​ ​s​e​a​r​c​h​ ​q​u​e​r​y​ ​t​o​ ​f​i​l​t​e​r​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​a​ ​c​u​s​t​o​m​ ​s​e​a​r​c​h​ ​q​u​e​r​y​ ​t​o​ ​f​i​l​t​e​r​ ​t​h​e​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				upload_file: {
+					/**
+					 * U​p​l​o​a​d​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * U​p​l​o​a​d​ ​a​ ​f​i​l​e​ ​t​o​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​c​o​n​v​e​r​s​i​o​n​ ​t​o​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​f​o​r​m​a​t​.
+					 */
+					shortDesc: string
+					/**
+					 * U​p​l​o​a​d​s​ ​a​ ​f​i​l​e​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​o​l​d​e​r​ ​i​n​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​w​i​t​h​ ​o​p​t​i​o​n​s​ ​t​o​ ​c​u​s​t​o​m​i​z​e​ ​t​h​e​ ​f​i​l​e​ ​n​a​m​e​,​ ​f​o​r​m​a​t​,​ ​a​n​d​ ​c​o​n​v​e​r​t​ ​t​o​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​f​o​r​m​a​t​ ​w​h​e​n​ ​a​p​p​l​i​c​a​b​l​e​.
+					 */
+					longDesc: string
+					options: {
+						folder: {
+							/**
+							 * F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​o​l​d​e​r​ ​t​o​ ​u​p​l​o​a​d​ ​t​h​e​ ​f​i​l​e​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​o​l​d​e​r​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​l​e​ ​w​i​l​l​ ​b​e​ ​u​p​l​o​a​d​e​d​.​ ​R​e​q​u​i​r​e​d​.
+							 */
+							longDesc: string
+						}
+						file: {
+							/**
+							 * F​i​l​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​e​ ​t​o​ ​u​p​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​b​e​ ​u​p​l​o​a​d​e​d​ ​t​o​ ​G​o​o​g​l​e​ ​D​r​i​v​e​.​ ​R​e​q​u​i​r​e​d​.
+							 */
+							longDesc: string
+						}
+						convert_to_document: {
+							/**
+							 * C​o​n​v​e​r​t​ ​t​o​ ​G​o​o​g​l​e​ ​F​o​r​m​a​t
+							 */
+							displayName: string
+							/**
+							 * C​o​n​v​e​r​t​ ​f​i​l​e​ ​t​o​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​f​o​r​m​a​t​ ​w​h​e​n​ ​p​o​s​s​i​b​l​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​c​o​m​p​a​t​i​b​l​e​ ​f​i​l​e​s​ ​(​d​o​c​u​m​e​n​t​s​,​ ​s​p​r​e​a​d​s​h​e​e​t​s​,​ ​p​r​e​s​e​n​t​a​t​i​o​n​s​,​ ​e​t​c​.​)​ ​w​i​l​l​ ​b​e​ ​c​o​n​v​e​r​t​e​d​ ​t​o​ ​t​h​e​i​r​ ​e​q​u​i​v​a​l​e​n​t​ ​G​o​o​g​l​e​ ​W​o​r​k​s​p​a​c​e​ ​f​o​r​m​a​t​s​.
+							 */
+							longDesc: string
+						}
+						file_name: {
+							/**
+							 * F​i​l​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​f​i​l​e​ ​n​a​m​e​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​c​u​s​t​o​m​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​f​i​l​e​.​ ​I​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​,​ ​t​h​e​ ​o​r​i​g​i​n​a​l​ ​f​i​l​e​ ​n​a​m​e​ ​w​i​l​l​ ​b​e​ ​u​s​e​d​.
+							 */
+							longDesc: string
+						}
+						file_extension: {
+							/**
+							 * F​i​l​e​ ​E​x​t​e​n​s​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​a​n​g​e​ ​f​i​l​e​ ​e​x​t​e​n​s​i​o​n​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​e​ ​e​x​t​e​n​s​i​o​n​ ​t​o​ ​c​h​a​n​g​e​ ​t​h​e​ ​f​o​r​m​a​t​ ​o​f​ ​t​h​e​ ​f​i​l​e​.​ ​O​n​l​y​ ​a​p​p​l​i​e​s​ ​w​h​e​n​ ​c​u​s​t​o​m​ ​f​i​l​e​ ​n​a​m​e​ ​i​s​ ​p​r​o​v​i​d​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				find_or_create_file: {
+					/**
+					 * F​i​n​d​ ​o​r​ ​C​r​e​a​t​e​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​a​ ​f​i​l​e​ ​i​n​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​a​n​d​ ​o​p​t​i​o​n​a​l​l​y​ ​c​r​e​a​t​e​ ​i​t​ ​i​f​ ​n​o​t​ ​f​o​u​n​d​.
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​e​s​ ​f​o​r​ ​a​ ​f​i​l​e​ ​i​n​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​w​i​t​h​ ​o​p​t​i​o​n​s​ ​f​o​r​ ​e​x​a​c​t​ ​o​r​ ​p​a​r​t​i​a​l​ ​n​a​m​e​ ​m​a​t​c​h​i​n​g​,​ ​f​o​l​d​e​r​ ​f​i​l​t​e​r​i​n​g​,​ ​a​n​d​ ​f​i​l​e​ ​t​y​p​e​ ​f​i​l​t​e​r​i​n​g​.​ ​I​f​ ​t​h​e​ ​f​i​l​e​ ​i​s​ ​n​o​t​ ​f​o​u​n​d​,​ ​i​t​ ​c​a​n​ ​o​p​t​i​o​n​a​l​l​y​ ​c​r​e​a​t​e​ ​a​ ​n​e​w​ ​f​i​l​e​ ​w​i​t​h​ ​t​h​e​ ​p​r​o​v​i​d​e​d​ ​c​o​n​t​e​n​t​.
+					 */
+					longDesc: string
+					options: {
+						filename: {
+							/**
+							 * F​i​l​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​i​n​ ​G​o​o​g​l​e​ ​D​r​i​v​e​.​ ​R​e​q​u​i​r​e​d​.
+							 */
+							longDesc: string
+						}
+						search_type: {
+							/**
+							 * S​e​a​r​c​h​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​m​a​t​c​h​ ​t​h​e​ ​f​i​l​e​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​b​e​t​w​e​e​n​ ​"​c​o​n​t​a​i​n​s​"​ ​(​p​a​r​t​i​a​l​ ​m​a​t​c​h​)​ ​o​r​ ​"​e​x​a​c​t​"​ ​(​e​x​a​c​t​ ​m​a​t​c​h​)​ ​f​o​r​ ​t​h​e​ ​f​i​l​e​n​a​m​e​ ​s​e​a​r​c​h​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​"​c​o​n​t​a​i​n​s​"​.
+							 */
+							longDesc: string
+						}
+						folder: {
+							/**
+							 * F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * L​i​m​i​t​ ​s​e​a​r​c​h​ ​t​o​ ​s​p​e​c​i​f​i​c​ ​f​o​l​d​e​r​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​o​l​d​e​r​ ​I​D​ ​t​o​ ​l​i​m​i​t​ ​t​h​e​ ​s​e​a​r​c​h​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​o​l​d​e​r​.
+							 */
+							longDesc: string
+						}
+						file_types: {
+							/**
+							 * F​i​l​e​ ​T​y​p​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​f​i​l​e​ ​t​y​p​e​s​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​l​i​s​t​ ​o​f​ ​M​I​M​E​ ​t​y​p​e​s​ ​t​o​ ​f​i​l​t​e​r​ ​t​h​e​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​ ​b​y​ ​f​i​l​e​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+						create_if_not_exists: {
+							/**
+							 * C​r​e​a​t​e​ ​I​f​ ​N​o​t​ ​F​o​u​n​d
+							 */
+							displayName: string
+							/**
+							 * C​r​e​a​t​e​ ​t​h​e​ ​f​i​l​e​ ​i​f​ ​n​o​t​ ​f​o​u​n​d
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​i​f​ ​t​h​e​ ​f​i​l​e​ ​i​s​ ​n​o​t​ ​f​o​u​n​d​,​ ​a​ ​n​e​w​ ​f​i​l​e​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​p​r​o​v​i​d​e​d​ ​c​o​n​t​e​n​t​.
+							 */
+							longDesc: string
+						}
+						file: {
+							/**
+							 * F​i​l​e​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​e​n​t​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​f​i​l​e​ ​i​f​ ​c​r​e​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​c​o​n​t​e​n​t​ ​t​o​ ​u​s​e​ ​w​h​e​n​ ​c​r​e​a​t​i​n​g​ ​a​ ​n​e​w​ ​f​i​l​e​ ​i​f​ ​t​h​e​ ​s​e​a​r​c​h​ ​d​o​e​s​ ​n​o​t​ ​f​i​n​d​ ​a​ ​m​a​t​c​h​.
+							 */
+							longDesc: string
+						}
+						convert_to_document: {
+							/**
+							 * C​o​n​v​e​r​t​ ​t​o​ ​G​o​o​g​l​e​ ​F​o​r​m​a​t
+							 */
+							displayName: string
+							/**
+							 * C​o​n​v​e​r​t​ ​f​i​l​e​ ​t​o​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​f​o​r​m​a​t​ ​w​h​e​n​ ​p​o​s​s​i​b​l​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​c​o​m​p​a​t​i​b​l​e​ ​f​i​l​e​s​ ​(​d​o​c​u​m​e​n​t​s​,​ ​s​p​r​e​a​d​s​h​e​e​t​s​,​ ​p​r​e​s​e​n​t​a​t​i​o​n​s​,​ ​e​t​c​.​)​ ​w​i​l​l​ ​b​e​ ​c​o​n​v​e​r​t​e​d​ ​t​o​ ​t​h​e​i​r​ ​e​q​u​i​v​a​l​e​n​t​ ​G​o​o​g​l​e​ ​W​o​r​k​s​p​a​c​e​ ​f​o​r​m​a​t​s​ ​w​h​e​n​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						file_extension: {
+							/**
+							 * F​i​l​e​ ​E​x​t​e​n​s​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​y​ ​f​i​l​e​ ​e​x​t​e​n​s​i​o​n​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​e​ ​e​x​t​e​n​s​i​o​n​ ​t​o​ ​s​p​e​c​i​f​y​ ​t​h​e​ ​f​o​r​m​a​t​ ​o​f​ ​t​h​e​ ​n​e​w​ ​f​i​l​e​ ​i​f​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				find_or_create_folder: {
+					/**
+					 * F​i​n​d​ ​o​r​ ​C​r​e​a​t​e​ ​F​o​l​d​e​r
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​a​ ​f​o​l​d​e​r​ ​i​n​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​a​n​d​ ​o​p​t​i​o​n​a​l​l​y​ ​c​r​e​a​t​e​ ​i​t​ ​i​f​ ​n​o​t​ ​f​o​u​n​d​.
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​e​s​ ​f​o​r​ ​a​ ​f​o​l​d​e​r​ ​i​n​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​w​i​t​h​ ​o​p​t​i​o​n​s​ ​f​o​r​ ​e​x​a​c​t​ ​o​r​ ​p​a​r​t​i​a​l​ ​n​a​m​e​ ​m​a​t​c​h​i​n​g​ ​a​n​d​ ​p​a​r​e​n​t​ ​f​o​l​d​e​r​ ​f​i​l​t​e​r​i​n​g​.​ ​I​f​ ​t​h​e​ ​f​o​l​d​e​r​ ​i​s​ ​n​o​t​ ​f​o​u​n​d​,​ ​i​t​ ​c​a​n​ ​o​p​t​i​o​n​a​l​l​y​ ​c​r​e​a​t​e​ ​a​ ​n​e​w​ ​f​o​l​d​e​r​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​n​a​m​e​.
+					 */
+					longDesc: string
+					options: {
+						folder_name: {
+							/**
+							 * F​o​l​d​e​r​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​f​ ​t​h​e​ ​f​o​l​d​e​r​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​o​l​d​e​r​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​i​n​ ​G​o​o​g​l​e​ ​D​r​i​v​e​.​ ​R​e​q​u​i​r​e​d​.
+							 */
+							longDesc: string
+						}
+						search_type: {
+							/**
+							 * S​e​a​r​c​h​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​m​a​t​c​h​ ​t​h​e​ ​f​o​l​d​e​r​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​b​e​t​w​e​e​n​ ​"​c​o​n​t​a​i​n​s​"​ ​(​p​a​r​t​i​a​l​ ​m​a​t​c​h​)​ ​o​r​ ​"​e​x​a​c​t​"​ ​(​e​x​a​c​t​ ​m​a​t​c​h​)​ ​f​o​r​ ​t​h​e​ ​f​o​l​d​e​r​ ​n​a​m​e​ ​s​e​a​r​c​h​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​"​c​o​n​t​a​i​n​s​"​.
+							 */
+							longDesc: string
+						}
+						parent_folder: {
+							/**
+							 * P​a​r​e​n​t​ ​F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * L​i​m​i​t​ ​s​e​a​r​c​h​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​a​r​e​n​t​ ​f​o​l​d​e​r​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​o​l​d​e​r​ ​I​D​ ​t​o​ ​l​i​m​i​t​ ​t​h​e​ ​s​e​a​r​c​h​ ​t​o​ ​f​o​l​d​e​r​s​ ​w​i​t​h​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​a​r​e​n​t​ ​f​o​l​d​e​r​.
+							 */
+							longDesc: string
+						}
+						create_if_not_exists: {
+							/**
+							 * C​r​e​a​t​e​ ​I​f​ ​N​o​t​ ​F​o​u​n​d
+							 */
+							displayName: string
+							/**
+							 * C​r​e​a​t​e​ ​t​h​e​ ​f​o​l​d​e​r​ ​i​f​ ​n​o​t​ ​f​o​u​n​d
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​i​f​ ​t​h​e​ ​f​o​l​d​e​r​ ​i​s​ ​n​o​t​ ​f​o​u​n​d​,​ ​a​ ​n​e​w​ ​f​o​l​d​e​r​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​n​a​m​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_file: {
+					/**
+					 * G​e​t​ ​F​i​l​e​ ​b​y​ ​I​D
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​s​i​n​g​l​e​ ​f​i​l​e​ ​f​r​o​m​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​b​y​ ​i​t​s​ ​I​D​ ​w​i​t​h​ ​d​e​t​a​i​l​e​d​ ​m​e​t​a​d​a​t​a​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​f​i​l​e​ ​f​r​o​m​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​u​s​i​n​g​ ​i​t​s​ ​u​n​i​q​u​e​ ​I​D​,​ ​r​e​t​u​r​n​i​n​g​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​m​e​t​a​d​a​t​a​ ​a​n​d​ ​o​p​t​i​o​n​a​l​l​y​ ​t​h​e​ ​f​i​l​e​ ​c​o​n​t​e​n​t​.​ ​S​u​p​p​o​r​t​s​ ​r​e​t​r​i​e​v​i​n​g​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​w​i​t​h​ ​v​a​r​i​o​u​s​ ​e​x​p​o​r​t​ ​f​o​r​m​a​t​ ​o​p​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						file_id: {
+							/**
+							 * F​i​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​I​D​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​i​l​e​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​i​l​e​ ​I​D​.​ ​T​h​i​s​ ​i​s​ ​t​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​u​n​d​ ​i​n​ ​t​h​e​ ​U​R​L​ ​w​h​e​n​ ​v​i​e​w​i​n​g​ ​a​ ​f​i​l​e​ ​i​n​ ​G​o​o​g​l​e​ ​D​r​i​v​e​.
+							 */
+							longDesc: string
+						}
+						include_content: {
+							/**
+							 * I​n​c​l​u​d​e​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​t​h​e​ ​f​i​l​e​ ​c​o​n​t​e​n​t​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​r​e​t​r​i​e​v​e​s​ ​t​h​e​ ​f​i​l​e​ ​c​o​n​t​e​n​t​ ​a​n​d​ ​r​e​t​u​r​n​s​ ​i​t​ ​e​n​c​o​d​e​d​ ​i​n​ ​b​a​s​e​6​4​ ​f​o​r​m​a​t​.​ ​F​o​r​ ​t​e​x​t​ ​f​i​l​e​s​,​ ​a​l​s​o​ ​a​t​t​e​m​p​t​s​ ​t​o​ ​p​r​o​v​i​d​e​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​a​s​ ​p​l​a​i​n​ ​t​e​x​t​.​ ​T​h​i​s​ ​m​a​y​ ​i​n​c​r​e​a​s​e​ ​r​e​s​p​o​n​s​e​ ​t​i​m​e​ ​f​o​r​ ​l​a​r​g​e​r​ ​f​i​l​e​s​.
+							 */
+							longDesc: string
+						}
+						convert_export_format: {
+							/**
+							 * E​x​p​o​r​t​ ​F​o​r​m​a​t
+							 */
+							displayName: string
+							/**
+							 * F​o​r​m​a​t​ ​t​o​ ​e​x​p​o​r​t​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​f​i​l​e​s
+							 */
+							shortDesc: string
+							/**
+							 * F​o​r​ ​G​o​o​g​l​e​ ​W​o​r​k​s​p​a​c​e​ ​f​i​l​e​s​ ​(​D​o​c​s​,​ ​S​h​e​e​t​s​,​ ​S​l​i​d​e​s​,​ ​e​t​c​.​)​,​ ​s​p​e​c​i​f​i​e​s​ ​t​h​e​ ​f​o​r​m​a​t​ ​t​o​ ​e​x​p​o​r​t​ ​t​h​e​ ​f​i​l​e​.​ ​O​n​l​y​ ​a​p​p​l​i​c​a​b​l​e​ ​w​h​e​n​ ​I​n​c​l​u​d​e​ ​C​o​n​t​e​n​t​ ​i​s​ ​e​n​a​b​l​e​d​ ​a​n​d​ ​t​h​e​ ​f​i​l​e​ ​i​s​ ​a​ ​G​o​o​g​l​e​ ​W​o​r​k​s​p​a​c​e​ ​d​o​c​u​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_folder: {
+					/**
+					 * G​e​t​ ​F​o​l​d​e​r​ ​b​y​ ​I​D
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​f​o​l​d​e​r​ ​f​r​o​m​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​b​y​ ​i​t​s​ ​I​D​ ​w​i​t​h​ ​d​e​t​a​i​l​e​d​ ​m​e​t​a​d​a​t​a​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​f​o​l​d​e​r​ ​f​r​o​m​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​u​s​i​n​g​ ​i​t​s​ ​u​n​i​q​u​e​ ​I​D​,​ ​r​e​t​u​r​n​i​n​g​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​m​e​t​a​d​a​t​a​ ​a​n​d​ ​o​p​t​i​o​n​a​l​l​y​ ​a​ ​l​i​s​t​ ​o​f​ ​i​t​s​ ​i​m​m​e​d​i​a​t​e​ ​c​h​i​l​d​r​e​n​ ​(​f​i​l​e​s​ ​a​n​d​ ​s​u​b​f​o​l​d​e​r​s​)​.
+					 */
+					longDesc: string
+					options: {
+						folder_id: {
+							/**
+							 * F​o​l​d​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​I​D​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​o​l​d​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​o​l​d​e​r​ ​I​D​.​ ​T​h​i​s​ ​i​s​ ​t​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​u​n​d​ ​i​n​ ​t​h​e​ ​U​R​L​ ​w​h​e​n​ ​v​i​e​w​i​n​g​ ​a​ ​f​o​l​d​e​r​ ​i​n​ ​G​o​o​g​l​e​ ​D​r​i​v​e​.
+							 */
+							longDesc: string
+						}
+						include_children: {
+							/**
+							 * I​n​c​l​u​d​e​ ​C​h​i​l​d​r​e​n
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​t​h​e​ ​f​o​l​d​e​r​'​s​ ​i​m​m​e​d​i​a​t​e​ ​c​h​i​l​d​r​e​n​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​r​e​t​r​i​e​v​e​s​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​f​i​l​e​s​ ​a​n​d​ ​s​u​b​f​o​l​d​e​r​s​ ​d​i​r​e​c​t​l​y​ ​c​o​n​t​a​i​n​e​d​ ​i​n​ ​t​h​i​s​ ​f​o​l​d​e​r​.​ ​E​a​c​h​ ​c​h​i​l​d​ ​i​n​c​l​u​d​e​s​ ​b​a​s​i​c​ ​m​e​t​a​d​a​t​a​ ​s​u​c​h​ ​a​s​ ​n​a​m​e​,​ ​I​D​,​ ​t​y​p​e​,​ ​a​n​d​ ​m​o​d​i​f​i​c​a​t​i​o​n​ ​d​a​t​e​s​.
+							 */
+							longDesc: string
+						}
+						children_limit: {
+							/**
+							 * C​h​i​l​d​r​e​n​ ​L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​h​i​l​d​r​e​n​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * L​i​m​i​t​s​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​c​h​i​l​d​r​e​n​ ​i​t​e​m​s​ ​r​e​t​u​r​n​e​d​ ​w​h​e​n​ ​I​n​c​l​u​d​e​ ​C​h​i​l​d​r​e​n​ ​i​s​ ​e​n​a​b​l​e​d​.​ ​T​h​e​ ​r​e​s​p​o​n​s​e​ ​w​i​l​l​ ​i​n​d​i​c​a​t​e​ ​i​f​ ​t​h​e​r​e​ ​a​r​e​ ​m​o​r​e​ ​c​h​i​l​d​r​e​n​ ​b​e​y​o​n​d​ ​t​h​i​s​ ​l​i​m​i​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		GoogleSheets: {
 			/**
 			 * G​o​o​g​l​e​ ​S​h​e​e​t​s
@@ -25048,6 +26276,1234 @@ export type TranslationFunctions = {
 							 * Second Option
 							 */
 							displayName: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		GoogleDrive: {
+			/**
+			 * Google Drive
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect with Google Drive to manage your files and folders
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Integrate with Google Drive to manage your files and folders. This integration allows you to perform actions and respond to events in your Google Drive account, enabling you to automate file management and sharing workflows.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				new_file: {
+					/**
+					 * New File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new file is added to Google Drive.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors Google Drive for new files that match your criteria. Can filter by folder, filename, and file type, with options to include file content in the trigger data.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						folder_id: {
+							/**
+							 * Folder ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Drive folder to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the Google Drive folder to monitor for new files. If not specified, all files in the drive will be monitored.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filename: {
+							/**
+							 * Filename
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter files by name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only detect files with names matching this value. Can be used with the search type option to control matching behavior.
+							 */
+							longDesc: () => LocalizedString
+						}
+						search_type: {
+							/**
+							 * Search Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to match filenames
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Determines how the filename filter is applied. "Contains" will match any file containing the specified text, while "Exact Match" requires the complete filename to match.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file_types: {
+							/**
+							 * File Types
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter files by MIME type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only detect files of the specified MIME types. Multiple types can be selected to include various file formats.
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_content: {
+							/**
+							 * Include Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include file content in the trigger data
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, the trigger will include the file content in the event data. For text-based files, the content will also be available as plain text. This may increase processing time for large files.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Contains information about the newly created Google Drive file, including metadata and optionally the file content.
+						 */
+						desc: () => LocalizedString
+					}
+				}
+				new_folder: {
+					/**
+					 * New Folder
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new folder is created in Google Drive.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors Google Drive for newly created folders that match your criteria. You can filter by parent folder and folder name to narrow down the folders being monitored.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						folder_name: {
+							/**
+							 * Folder Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter folders by name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only detect folders with names matching this value. Can be used with the search type option to control matching behavior.
+							 */
+							longDesc: () => LocalizedString
+						}
+						folder_id: {
+							/**
+							 * Parent Folder ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The parent Google Drive folder to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the parent Google Drive folder to monitor for new folders. If not specified, all folders across the drive will be monitored.
+							 */
+							longDesc: () => LocalizedString
+						}
+						search_type: {
+							/**
+							 * Search Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to match folder names
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Determines how the folder name filter is applied. "Contains" will match any folder containing the specified text, while "Exact Match" requires the complete folder name to match.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Contains information about the newly created Google Drive folder, including metadata such as ID, name, and creation time.
+						 */
+						desc: () => LocalizedString
+					}
+				}
+			}
+			actions: {
+				add_file_sharing_preference: {
+					/**
+					 * Add File Sharing Preference
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Set sharing permissions for a Google Drive file
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Modify who can access a file in Google Drive by setting specific sharing preferences. Supports organization-wide sharing, public sharing, and sharing with specific individuals by email.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						file_id: {
+							/**
+							 * File ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of the file to share
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Google Drive file ID of the document, spreadsheet, or other file you want to modify sharing settings for.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sharing_preference: {
+							/**
+							 * Sharing Preference
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to share the file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Determines who can access the file and what permissions they have. Choose between organization sharing, public sharing, or sharing with specific individuals.
+							 */
+							longDesc: () => LocalizedString
+						}
+						organization_domain: {
+							/**
+							 * Organization Domain
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Domain for organization sharing
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The domain name of your organization (e.g., example.com). Required when using organization-based sharing options.
+							 */
+							longDesc: () => LocalizedString
+						}
+						email_address: {
+							/**
+							 * Email Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Person to share with
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address of the specific person you want to share the file with. Required when using email-based sharing.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sharing_role: {
+							/**
+							 * Permission Level
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Access level to grant
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The type of access to grant to the person when sharing via email. Options include viewer (can view), commenter (can comment), or editor (can edit).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				copy_file: {
+					/**
+					 * Copy File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a copy of a Google Drive file with optional parameters.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a copy of an existing file in Google Drive. Allows you to specify a new name for the copy, place it in a different folder or drive, and optionally convert compatible files to Google Documents format.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						file_id: {
+							/**
+							 * File
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The file to copy
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the file you want to create a copy of.
+							 */
+							longDesc: () => LocalizedString
+						}
+						new_name: {
+							/**
+							 * New Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name for the new copy
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Name to give to the new file. If not specified, the original file name will be used with "Copy of" prefix.
+							 */
+							longDesc: () => LocalizedString
+						}
+						convert_to_document: {
+							/**
+							 * Convert to Google Document
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Convert file to Google Docs format
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, compatible files (like .docx, .txt, etc.) will be converted to Google Docs format when copied.
+							 */
+							longDesc: () => LocalizedString
+						}
+						folder_id: {
+							/**
+							 * Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Destination folder
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The folder where the copy should be placed. If not specified, the file will be copied to the root of the selected drive.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_file: {
+					/**
+					 * Delete File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Deletes a file or moves it to trash in Google Drive.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes a file from Google Drive. By default, files are moved to trash and can be recovered later. Set the "permanently delete" option to true to bypass the trash and delete the file permanently.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						file_id: {
+							/**
+							 * File
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The file to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the file you want to delete from Google Drive.
+							 */
+							longDesc: () => LocalizedString
+						}
+						permanently_delete: {
+							/**
+							 * Permanently Delete
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Skip the trash and delete permanently
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, the file will be permanently deleted, bypassing the trash. This operation cannot be undone.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_file_from_text: {
+					/**
+					 * Create File From Text
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new text file or Google Doc from provided content.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new file in Google Drive with the specified text content. You can choose to create a plain text file or convert it directly to a Google Document. The file can be placed in a specific folder or in the root of your drive.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						folder_id: {
+							/**
+							 * Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Location for the new file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The folder where the new file should be created. If not specified, the file will be created in the root of your drive.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file_name: {
+							/**
+							 * File Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name for the new file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name to give to the new file, including any extension (e.g., "notes.txt").
+							 */
+							longDesc: () => LocalizedString
+						}
+						file_content: {
+							/**
+							 * File Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text content for the file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text content to be written to the file. This can include plain text, formatted text, or markdown (if converting to a Google Document).
+							 */
+							longDesc: () => LocalizedString
+						}
+						convert_to_document: {
+							/**
+							 * Convert to Google Document
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Create as Google Doc instead of text file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, the content will be used to create a Google Document instead of a plain text file. This allows for rich text formatting.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_folder: {
+					/**
+					 * Create Folder
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new folder in Google Drive.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new folder in Google Drive. You can specify a parent folder where the new folder should be created, or leave it blank to create the folder in the root of your Drive.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						parent_folder_id: {
+							/**
+							 * Parent Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Location for the new folder
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The folder where the new folder should be created. If not specified, the folder will be created in the root of your Drive.
+							 */
+							longDesc: () => LocalizedString
+						}
+						folder_name: {
+							/**
+							 * Folder Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name for the new folder
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name to give to the new folder.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_shortcut: {
+					/**
+					 * Create Shortcut
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a shortcut to a file in a specific folder.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a shortcut (link) to an existing file in Google Drive. The shortcut will be placed in the specified folder. Shortcuts allow you to organize files without creating duplicates, giving you access to the same file from multiple locations.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						file_id: {
+							/**
+							 * Target File
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * File to create a shortcut to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The file that the shortcut will point to. This file will remain in its original location.
+							 */
+							longDesc: () => LocalizedString
+						}
+						folder_id: {
+							/**
+							 * Destination Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Folder to place the shortcut in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The folder where the new shortcut will be created.
+							 */
+							longDesc: () => LocalizedString
+						}
+						shortcut_name: {
+							/**
+							 * Shortcut Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom name for the shortcut (optional)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional custom name for the shortcut. If not provided, the original file name will be used.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				move_file: {
+					/**
+					 * Move File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Moves a file to a different folder in Google Drive.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Moves a file from its current location to a different folder in Google Drive. You can optionally keep the file in its original location(s), which effectively creates a copy of the file in the new location while maintaining the original.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						file_id: {
+							/**
+							 * File
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * File to move
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The file that you want to move to a different folder.
+							 */
+							longDesc: () => LocalizedString
+						}
+						folder_id: {
+							/**
+							 * Destination Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Folder to move the file to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The folder where you want to move the file to.
+							 */
+							longDesc: () => LocalizedString
+						}
+						keep_in_original_folders: {
+							/**
+							 * Keep in Original Folders
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Keep file in original locations
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, the file will remain in its original folder(s) and also be added to the destination folder. If disabled (default), the file will be removed from its original location(s).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				replace_file: {
+					/**
+					 * Replace File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Replace an existing file in Google Drive with a new one.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Uploads a new file to Google Drive to replace an existing file. The original file ID is preserved, but its contents and optionally name and extension are updated.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						file_to_replace: {
+							/**
+							 * File to Replace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The file that will be replaced
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the existing Google Drive file that you want to replace with new content.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file: {
+							/**
+							 * New File
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new file to upload
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The file content that will replace the existing file in Google Drive.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file_name: {
+							/**
+							 * File Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional new name for the file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A new name for the file. If not provided, the original name of the uploaded file will be used.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file_extension: {
+							/**
+							 * File Extension
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional new file extension
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A new extension for the file. This will also update the file MIME type if a known extension is provided.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_files: {
+					/**
+					 * List Files
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve files from Google Drive with filtering and sorting options.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a list of files from Google Drive with support for various filters, custom queries, sorting, and pagination.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						filename: {
+							/**
+							 * Filename
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by filename
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter results to files whose names match the specified value, based on the selected search type.
+							 */
+							longDesc: () => LocalizedString
+						}
+						search_type: {
+							/**
+							 * Search Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to match the filename
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify whether to search for files with names that contain the specified text or that exactly match it.
+							 */
+							longDesc: () => LocalizedString
+						}
+						folder: {
+							/**
+							 * Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by parent folder
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter results to only include files that are contained within the specified folder.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file_types: {
+							/**
+							 * File Types
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by file types
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter results to only include files of the specified types. Multiple types can be selected.
+							 */
+							longDesc: () => LocalizedString
+						}
+						order_by: {
+							/**
+							 * Order By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Fields and directions to sort results by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the returned files. You can add multiple sorting criteria, each with a field and direction.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The file property to use for sorting, such as name, creation time, or modification time.
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The direction to sort in, either ascending (asc) or descending (desc).
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						page_size: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of files to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of files to return in a single request. Default is 100. Maximum allowed is 1000.
+							 */
+							longDesc: () => LocalizedString
+						}
+						custom_query: {
+							/**
+							 * Custom Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Advanced search query to filter results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify a custom search query to filter the results.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				upload_file: {
+					/**
+					 * Upload File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Upload a file to Google Drive with optional conversion to Google Docs format.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Uploads a file to a specific folder in Google Drive with options to customize the file name, format, and convert to Google Docs format when applicable.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						folder: {
+							/**
+							 * Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Drive folder to upload the file to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the Google Drive folder where the file will be uploaded. Required.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file: {
+							/**
+							 * File
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * File to upload
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The file to be uploaded to Google Drive. Required.
+							 */
+							longDesc: () => LocalizedString
+						}
+						convert_to_document: {
+							/**
+							 * Convert to Google Format
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Convert file to Google Docs format when possible
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, compatible files (documents, spreadsheets, presentations, etc.) will be converted to their equivalent Google Workspace formats.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file_name: {
+							/**
+							 * File Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom file name (optional)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional custom name for the file. If not provided, the original file name will be used.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file_extension: {
+							/**
+							 * File Extension
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Change file extension (optional)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional file extension to change the format of the file. Only applies when custom file name is provided.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				find_or_create_file: {
+					/**
+					 * Find or Create File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for a file in Google Drive and optionally create it if not found.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Searches for a file in Google Drive with options for exact or partial name matching, folder filtering, and file type filtering. If the file is not found, it can optionally create a new file with the provided content.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						filename: {
+							/**
+							 * File Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name of the file to search for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the file to search for in Google Drive. Required.
+							 */
+							longDesc: () => LocalizedString
+						}
+						search_type: {
+							/**
+							 * Search Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to match the filename
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose between "contains" (partial match) or "exact" (exact match) for the filename search. Default is "contains".
+							 */
+							longDesc: () => LocalizedString
+						}
+						folder: {
+							/**
+							 * Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Limit search to specific folder (optional)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional Google Drive folder ID to limit the search to a specific folder.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file_types: {
+							/**
+							 * File Types
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by file types (optional)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional list of MIME types to filter the search results by file type.
+							 */
+							longDesc: () => LocalizedString
+						}
+						create_if_not_exists: {
+							/**
+							 * Create If Not Found
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Create the file if not found
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, if the file is not found, a new file will be created with the provided content.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file: {
+							/**
+							 * File Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Content for the new file if created
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The file content to use when creating a new file if the search does not find a match.
+							 */
+							longDesc: () => LocalizedString
+						}
+						convert_to_document: {
+							/**
+							 * Convert to Google Format
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Convert file to Google Docs format when possible
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, compatible files (documents, spreadsheets, presentations, etc.) will be converted to their equivalent Google Workspace formats when created.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file_extension: {
+							/**
+							 * File Extension
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specify file extension for the new file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional file extension to specify the format of the new file if created.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				find_or_create_folder: {
+					/**
+					 * Find or Create Folder
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for a folder in Google Drive and optionally create it if not found.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Searches for a folder in Google Drive with options for exact or partial name matching and parent folder filtering. If the folder is not found, it can optionally create a new folder with the specified name.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						folder_name: {
+							/**
+							 * Folder Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name of the folder to search for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the folder to search for in Google Drive. Required.
+							 */
+							longDesc: () => LocalizedString
+						}
+						search_type: {
+							/**
+							 * Search Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to match the folder name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose between "contains" (partial match) or "exact" (exact match) for the folder name search. Default is "contains".
+							 */
+							longDesc: () => LocalizedString
+						}
+						parent_folder: {
+							/**
+							 * Parent Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Limit search to a specific parent folder (optional)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional Google Drive folder ID to limit the search to folders within a specific parent folder.
+							 */
+							longDesc: () => LocalizedString
+						}
+						create_if_not_exists: {
+							/**
+							 * Create If Not Found
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Create the folder if not found
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, if the folder is not found, a new folder will be created with the specified name.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_file: {
+					/**
+					 * Get File by ID
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves a single file from Google Drive by its ID with detailed metadata.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a file from Google Drive using its unique ID, returning comprehensive metadata and optionally the file content. Supports retrieving Google Docs with various export format options.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						file_id: {
+							/**
+							 * File ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique ID of the Google Drive file to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Google Drive file ID. This is the unique identifier found in the URL when viewing a file in Google Drive.
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_content: {
+							/**
+							 * Include Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include the file content in the response
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, retrieves the file content and returns it encoded in base64 format. For text files, also attempts to provide the content as plain text. This may increase response time for larger files.
+							 */
+							longDesc: () => LocalizedString
+						}
+						convert_export_format: {
+							/**
+							 * Export Format
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Format to export Google Docs files
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * For Google Workspace files (Docs, Sheets, Slides, etc.), specifies the format to export the file. Only applicable when Include Content is enabled and the file is a Google Workspace document.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_folder: {
+					/**
+					 * Get Folder by ID
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves a folder from Google Drive by its ID with detailed metadata.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a folder from Google Drive using its unique ID, returning comprehensive metadata and optionally a list of its immediate children (files and subfolders).
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						folder_id: {
+							/**
+							 * Folder ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique ID of the Google Drive folder to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Google Drive folder ID. This is the unique identifier found in the URL when viewing a folder in Google Drive.
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_children: {
+							/**
+							 * Include Children
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include the folder's immediate children in the response
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, retrieves the list of files and subfolders directly contained in this folder. Each child includes basic metadata such as name, ID, type, and modification dates.
+							 */
+							longDesc: () => LocalizedString
+						}
+						children_limit: {
+							/**
+							 * Children Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of children to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Limits the number of children items returned when Include Children is enabled. The response will indicate if there are more children beyond this limit. Default is 100.
+							 */
+							longDesc: () => LocalizedString
 						}
 					}
 				}

@@ -1,8 +1,9 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { GOOGLE_SHEETS_APP_NAME, GoogleSheetsError } from '../constants';
-import { createDriveClient, createGoogleSheetsClient } from '../helpers/constants';
+import { createGoogleSheetsClient } from '../helpers/constants';
 import { getGoogleDriveFileIdAllowedValues } from '../helpers/get-drive-file-id-allowed-values';
+import { createGoogleDriveClient } from '../../google-drive/helpers/constants';
 
 const options = {
   title: {
@@ -47,7 +48,7 @@ const createSpreadsheet = QoreAppCreator.createLocalizedAction<typeof options>({
       const sheetsClient = createGoogleSheetsClient(token);
 
       if (source_spreadsheet_id) {
-        const driveClient = createDriveClient(token);
+        const driveClient = createGoogleDriveClient(token);
         const copyResponse = await driveClient.files.copy({
           fileId: source_spreadsheet_id,
           requestBody: {

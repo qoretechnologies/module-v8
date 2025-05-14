@@ -5,6 +5,7 @@ import {
   TQoreOptions,
 } from '@qoretechnologies/ts-toolkit';
 
+import { createGoogleDriveClient } from '../apps/google-drive/helpers/constants';
 import {
   addSpreadsheetRows,
   clearSpreadsheetRows,
@@ -18,10 +19,7 @@ import {
 } from '../apps/google-sheets/actions';
 import createSpreadsheetColumn from '../apps/google-sheets/actions/add-spreadsheet-column.action';
 import deleteRow from '../apps/google-sheets/actions/delete-spreadsheet-row.action';
-import {
-  createDriveClient,
-  createGoogleSheetsClient,
-} from '../apps/google-sheets/helpers/constants';
+import { createGoogleSheetsClient } from '../apps/google-sheets/helpers/constants';
 import { getGoogleDriveFileIdAllowedValues } from '../apps/google-sheets/helpers/get-drive-file-id-allowed-values';
 import { getGoogleSheetHeadersAllowedValues } from '../apps/google-sheets/helpers/get-headers-allowed-values';
 import { getGoogleSheetIdAllowedValues } from '../apps/google-sheets/helpers/get-sheet-id-allowed-values';
@@ -386,14 +384,14 @@ describe('Google Sheets', () => {
 
   describe('Clean up', () => {
     it('Should delete copied spreadsheet', async () => {
-      const client = createDriveClient(base_context.conn_opts.token);
+      const client = createGoogleDriveClient(base_context.conn_opts.token);
       await client.files.delete({
         fileId: copiedSpreadsheetId,
       });
     });
 
     it('Should delete created spreadsheet', async () => {
-      const client = createDriveClient(base_context.conn_opts.token);
+      const client = createGoogleDriveClient(base_context.conn_opts.token);
       await client.files.delete({
         fileId: createdSpreadsheetId,
       });
