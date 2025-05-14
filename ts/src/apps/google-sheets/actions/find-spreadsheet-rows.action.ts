@@ -87,6 +87,7 @@ const options = {
         },
       },
     },
+    depends_on: ['spreadsheet_id', 'sheet_id'],
   },
 } satisfies TQoreOptions;
 

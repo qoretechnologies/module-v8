@@ -136,7 +136,7 @@ public class TypeScriptActionInterface {
             "get_allowed_values",
             "element_type", "element_allowed_values", "element_allowed_values_creatable",
             "get_element_allowed_values",
-            "attr", "required", "on_change", "preselected",
+            "attr", "required", "on_change", "preselected", "depends_on",
         );
 
         const TypeScriptAppRestConnectionOptions = RestConnection::ConnectionScheme.options;
