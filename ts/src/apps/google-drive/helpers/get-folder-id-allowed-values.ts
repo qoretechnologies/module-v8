@@ -58,8 +58,9 @@ export const getGoogleDriveFolderIdAllowedValues: TQoreGetAllowedValuesFunction<
       return {
         value: folder.id!,
         display_name: folder.name || 'Unnamed Folder',
-        desc: `ID: ${folder.id}\n${parentInfo}Owner: ${owner}\nModified: ${modified}\nCreated: ${created}`,
-        ...(folder.webViewLink && { short_desc: `(Link To Folder)[${folder.webViewLink}]` }),
+        desc:
+          `ID: ${folder.id}\n${parentInfo}Owner: ${owner}\nModified: ${modified}\nCreated: ${created}` +
+          (folder.webViewLink ? `\n(Link To Folder)[${folder.webViewLink}]` : ''),
       };
     });
 

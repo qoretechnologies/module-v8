@@ -44,8 +44,9 @@ export const getGoogleDriveFileIdAllowedValues: TQoreGetAllowedValuesFunction<
       return {
         value: file.id!,
         display_name: file.name || 'Unnamed Spreadsheet',
-        desc: `ID: ${file.id}\nOwner: ${owner}\nModified: ${modified}\nCreated: ${created}`,
-        ...(file.webViewLink && { short_desc: `(Link To File)[${file.webViewLink}]` }),
+        desc:
+          `ID: ${file.id}\nOwner: ${owner}\nModified: ${modified}\nCreated: ${created}` +
+          (file.webViewLink ? `\n(Link To File)[${file.webViewLink}]` : ''),
       };
     });
 

@@ -37,7 +37,7 @@ const GoogleDriveNewFileTrigger = QoreAppCreator.createLocalizedTrigger({
         element_type: 'string',
       },
       element_allowed_values_creatable: true,
-      allowed_values: GoogleDriveFileTypeAllowedValues,
+      element_allowed_values: GoogleDriveFileTypeAllowedValues,
     },
     include_content: {
       type: 'boolean',
