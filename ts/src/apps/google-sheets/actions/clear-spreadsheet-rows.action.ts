@@ -50,7 +50,7 @@ const clearSpreadsheetRows = QoreAppCreator.createLocalizedAction<typeof options
     });
 
     try {
-      const sheetsClient = await createGoogleSheetsClient(token);
+      const sheetsClient = createGoogleSheetsClient(token);
 
       const spreadsheet = await sheetsClient.spreadsheets.get({
         spreadsheetId: spreadsheet_id,

@@ -3,8 +3,8 @@ import {
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { GoogleSheetsError } from '../constants';
 import { createGoogleDriveClient } from '../../google-drive/helpers/constants';
+import { GoogleDriveError } from '../constants';
 
 export const getGoogleDriveFileIdAllowedValues: TQoreGetAllowedValuesFunction<
   TCustomConnOptions,
@@ -13,14 +13,13 @@ export const getGoogleDriveFileIdAllowedValues: TQoreGetAllowedValuesFunction<
   const token = context?.conn_opts?.token;
 
   if (!token) {
-    throw new GoogleSheetsError('Authentication token is required to get spreadsheet files');
+    throw new GoogleDriveError('Authentication token is required to get spreadsheet files');
   }
 
   try {
     const driveClient = createGoogleDriveClient(token);
 
     const response = await driveClient.files.list({
-      q: "mimeType='application/vnd.google-apps.spreadsheet' and trashed=false",
       fields: 'files(id, name, createdTime, modifiedTime, webViewLink, owners)',
       orderBy: 'modifiedTime desc',
       pageSize: 100,
@@ -52,6 +51,6 @@ export const getGoogleDriveFileIdAllowedValues: TQoreGetAllowedValuesFunction<
 
     return allowedValues;
   } catch (error) {
-    throw new GoogleSheetsError(`Failed to fetch spreadsheets: ${error.message || error}`);
+    throw new GoogleDriveError(`Failed to fetch google drive files: ${error.message || error}`);
   }
 };
