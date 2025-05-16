@@ -10,32 +10,33 @@ import {
 import fs from 'fs';
 import path from 'path';
 import asana from '../apps/asana';
+import attio from '../apps/attio';
+import dynamics from '../apps/dynamics';
 import esignature from '../apps/esignature';
 import freshdesk from '../apps/freshdesk';
 import github from '../apps/github';
+import googleDrive from '../apps/google-drive';
+import googleSheets from '../apps/google-sheets';
 import hubspot from '../apps/hubspot';
+import intercom from '../apps/intercom';
 import jira from '../apps/jira';
 import magento from '../apps/magento';
+import mailchimp from '../apps/mailchimp';
 import netsuite from '../apps/netsuite';
 import outlook from '../apps/outlook';
 import pipedrive from '../apps/pipedrive';
 import salesforce from '../apps/salesforce';
 import serenity from '../apps/serenity';
 import sharepoint from '../apps/sharepoint';
+import shopify from '../apps/shopify';
 import stripe from '../apps/stripe';
 import teams from '../apps/teams';
+import xero from '../apps/xero';
 import zendesk from '../apps/zendesk';
 import { Log } from '../decorators/Logger';
 import { Locales } from '../i18n/i18n-types';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
-import shopify from '../apps/shopify';
-import mailchimp from '../apps/mailchimp';
-import dynamics from '../apps/dynamics';
-import xero from '../apps/xero';
-import intercom from '../apps/intercom';
-import attio from '../apps/attio';
-import googleSheets from '../apps/google-sheets';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -51,6 +52,7 @@ export interface IQoreApi {
 
 const NEW_APPS = {
   googleSheets,
+  googleDrive,
   serenity,
   netsuite,
   zendesk,

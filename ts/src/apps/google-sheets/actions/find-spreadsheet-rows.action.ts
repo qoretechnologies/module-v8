@@ -25,7 +25,7 @@ const options = {
     depends_on: ['spreadsheet_id'],
   },
   limit: {
-    required: false,
+    required: true,
     type: 'integer',
     default_value: 10,
   },
@@ -67,7 +67,7 @@ const options = {
     ],
   },
   search: {
-    required: true,
+    required: false,
     type: {
       type: 'hash',
       fields: {
@@ -97,20 +97,27 @@ const findSpreadsheetRows = QoreAppCreator.createLocalizedAction<typeof options>
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const { token, spreadsheet_id, sheet_id, search } = getQoreContextRequiredValues({
+    const { token, spreadsheet_id, sheet_id } = getQoreContextRequiredValues({
       context: { ...context, opts: obj },
-      optionFields: ['spreadsheet_id', 'sheet_id', 'search'],
+      optionFields: ['spreadsheet_id', 'sheet_id'],
       connectionFields: ['token'],
       ErrorClass: GoogleSheetsError,
     });
 
+    const search = obj?.search as
+      | {
+          header?: string;
+          column?: string;
+          value: string;
+        }
+      | undefined;
     const limit = obj?.limit || 10;
     const offset = obj?.offset || 0;
     const searchFromLastRow = obj?.search_from_last_row || false;
     const maxRowsToSearch = obj?.max_rows_to_search || 5000;
     const responseType = obj?.response_type || 'raw';
 
-    if (!search.header && !search.column) {
+    if (search && !search.header && !search.column) {
       throw new GoogleSheetsError('Either header or column must be provided in search criteria');
     }
 
@@ -151,6 +158,42 @@ const findSpreadsheetRows = QoreAppCreator.createLocalizedAction<typeof options>
 
       if (totalRowCount <= 0 || columnCount === 0) {
         return createEmptyResponse(responseType, totalRowCount, 0);
+      }
+
+      if (!search) {
+        const startRow = offset + 2;
+        const endRow = startRow + limit - 1;
+
+        const valuesResponse = await sheetsClient.spreadsheets.values.get({
+          spreadsheetId: spreadsheet_id,
+          range: `${sheetTitle}!A${startRow}:${toColumnLetter(columnCount - 1)}${endRow}`,
+          valueRenderOption: 'UNFORMATTED_VALUE',
+        });
+
+        const rows = valuesResponse.data.values || [];
+
+        let headers: string[] = [];
+        if (responseType === 'mapped-headers') {
+          const headersResponse = await sheetsClient.spreadsheets.values.get({
+            spreadsheetId: spreadsheet_id,
+            range: `${sheetTitle}!1:1`,
+          });
+          headers = headersResponse.data.values?.[0] || [];
+        }
+
+        const rowsWithIndices = rows.map((values, i) => ({
+          row_index: startRow + i,
+          values,
+        }));
+
+        return createResponse({
+          headers,
+          responseType,
+          rows: rowsWithIndices,
+          rowsFound: rowsWithIndices.length,
+          rowsSearched: rowsWithIndices.length,
+          totalRows: totalRowCount,
+        });
       }
 
       let headers = [];

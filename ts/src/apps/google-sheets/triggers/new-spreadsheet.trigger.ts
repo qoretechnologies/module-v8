@@ -2,8 +2,9 @@ import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
+import { createGoogleDriveClient } from '../../google-drive/helpers/constants';
 import { GOOGLE_SHEETS_APP_NAME, GoogleSheetsError } from '../constants';
-import { createDriveClient, createGoogleSheetsClient } from '../helpers/constants';
+import { createGoogleSheetsClient } from '../helpers/constants';
 
 const GoogleSheetsNewSpreadsheetTrigger = QoreAppCreator.createLocalizedTrigger({
   app: GOOGLE_SHEETS_APP_NAME,
@@ -72,7 +73,7 @@ export default GoogleSheetsNewSpreadsheetTrigger;
 const fetchLatestSpreadsheets = async (token: string) => {
   const limit = DEFAULT_TRIGGER_POLL_ITEM_LIMIT;
   try {
-    const driveClient = createDriveClient(token);
+    const driveClient = createGoogleDriveClient(token);
     const sheetsClient = createGoogleSheetsClient(token);
 
     const response = await driveClient.files.list({

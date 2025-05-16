@@ -4,7 +4,6 @@ import { getIntercomCollectionIdAllowedValues } from '../apps/intercom/helpers/g
 import { getIntercomCompanyIdAllowedValues } from '../apps/intercom/helpers/get-company-id-allowed-values';
 import { getIntercomContactIdAllowedValues } from '../apps/intercom/helpers/get-contact-id-allowed-values';
 import { getIntercomContactTagsAllowedValues } from '../apps/intercom/helpers/get-contact-tag-id-allowed-values';
-import { getIntercomConversationIdAllowedValues } from '../apps/intercom/helpers/get-conversation-id-allowed-values';
 import {
   getIntercomLeadIdAllowedValues,
   getIntercomUserIdAllowedValues,
@@ -22,7 +21,7 @@ describe('Should test Intercom integration', () => {
   const token = process.env.INTERCOM_TOKEN;
 
   let contactId: string;
-  let conversationId: string;
+  // let conversationId: string;
   let companyId: string;
   let tagId: string;
   let articleId: string;
@@ -48,18 +47,19 @@ describe('Should test Intercom integration', () => {
       await delay(1000);
     });
 
-    it('Should get intercom conversation id allowed values', async () => {
-      const allowed_values = await getIntercomConversationIdAllowedValues({
-        conn_opts: { token },
-      } as any);
+    // Plan restricted
+    // it('Should get intercom conversation id allowed values', async () => {
+    //   const allowed_values = await getIntercomConversationIdAllowedValues({
+    //     conn_opts: { token },
+    //   } as any);
 
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
+    //   expect(allowed_values).toBeDefined();
+    //   expect(allowed_values.length).toBeGreaterThan(0);
 
-      if (allowed_values.length > 0) {
-        conversationId = allowed_values[0].value;
-      }
-    });
+    //   if (allowed_values.length > 0) {
+    //     conversationId = allowed_values[0].value;
+    //   }
+    // });
 
     it('Should get intercom contact id allowed values', async () => {
       const allowed_values = await getIntercomContactIdAllowedValues({
@@ -296,29 +296,30 @@ describe('Should test Intercom integration', () => {
       expect(body.contact.id).toBe(contactId);
     });
 
-    it('Should create a conversation', async () => {
-      const action = INTERCOM_ACTIONS.find((a) => a.action === 'createConversation');
-      expect(action).toBeDefined();
+    // Plan restricted
+    // it('Should create a conversation', async () => {
+    //   const action = INTERCOM_ACTIONS.find((a) => a.action === 'createConversation');
+    //   expect(action).toBeDefined();
 
-      if (!contactId) {
-        console.warn('Contact ID not available, skipping test');
+    //   if (!contactId) {
+    //     console.warn('Contact ID not available, skipping test');
 
-        return;
-      }
+    //     return;
+    //   }
 
-      const { body } = await testApi.execAppAction('intercom', action!.action, connection, {
-        body: {
-          from: {
-            type: 'user',
-            id: contactId,
-          },
-          body: `Test conversation created at ${new Date().toISOString()}`,
-        },
-      });
+    //   const { body } = await testApi.execAppAction('intercom', action!.action, connection, {
+    //     body: {
+    //       from: {
+    //         type: 'user',
+    //         id: contactId,
+    //       },
+    //       body: `Test conversation created at ${new Date().toISOString()}`,
+    //     },
+    //   });
 
-      expect(body).toBeDefined();
-      expect(body.id).toBeDefined();
-    });
+    //   expect(body).toBeDefined();
+    //   expect(body.id).toBeDefined();
+    // });
 
     it('Should search conversations', async () => {
       const action = INTERCOM_ACTIONS.find((a) => a.action === 'searchConversations');
@@ -337,25 +338,26 @@ describe('Should test Intercom integration', () => {
       expect(Array.isArray(body.conversations)).toBe(true);
     });
 
-    it('Should reply to a conversation', async () => {
-      const action = INTERCOM_ACTIONS.find((a) => a.action === 'replyConversation');
-      expect(action).toBeDefined();
+    // Plan restricted
+    // it('Should reply to a conversation', async () => {
+    //   const action = INTERCOM_ACTIONS.find((a) => a.action === 'replyConversation');
+    //   expect(action).toBeDefined();
 
-      if (!conversationId) {
-        console.warn('Conversation ID not available, skipping test');
+    //   if (!conversationId) {
+    //     console.warn('Conversation ID not available, skipping test');
 
-        return;
-      }
+    //     return;
+    //   }
 
-      const { body } = await testApi.execAppAction('intercom', action!.action, connection, {
-        id: conversationId,
-        from: adminId,
-        message: `Test reply created at ${new Date().toISOString()}`,
-      });
+    //   const { body } = await testApi.execAppAction('intercom', action!.action, connection, {
+    //     id: conversationId,
+    //     from: adminId,
+    //     message: `Test reply created at ${new Date().toISOString()}`,
+    //   });
 
-      expect(body).toBeDefined();
-      expect(body.id).toBe(conversationId);
-    });
+    //   expect(body).toBeDefined();
+    //   expect(body.id).toBe(conversationId);
+    // });
 
     it('Should list tags', async () => {
       const action = INTERCOM_ACTIONS.find((a) => a.action === 'listTags');
@@ -444,30 +446,31 @@ describe('Should test Intercom integration', () => {
       expect(Array.isArray(body.data)).toBe(true);
     });
 
-    it('Should create a message', async () => {
-      const action = INTERCOM_ACTIONS.find((a) => a.action === 'createMessage');
-      expect(action).toBeDefined();
+    // Plan restricted
+    // it('Should create a message', async () => {
+    //   const action = INTERCOM_ACTIONS.find((a) => a.action === 'createMessage');
+    //   expect(action).toBeDefined();
 
-      if (!contactId) {
-        console.warn('Contact ID not available, skipping test');
+    //   if (!contactId) {
+    //     console.warn('Contact ID not available, skipping test');
 
-        return;
-      }
+    //     return;
+    //   }
 
-      const { body } = await testApi.execAppAction('intercom', action!.action, connection, {
-        body: {
-          from: adminId,
-          to: {
-            type: 'user',
-            id: contactId,
-          },
-          body: `Test message created at ${new Date().toISOString()}`,
-          message_type: 'in_app',
-        },
-      });
+    //   const { body } = await testApi.execAppAction('intercom', action!.action, connection, {
+    //     body: {
+    //       from: adminId,
+    //       to: {
+    //         type: 'user',
+    //         id: contactId,
+    //       },
+    //       body: `Test message created at ${new Date().toISOString()}`,
+    //       message_type: 'in_app',
+    //     },
+    //   });
 
-      expect(body).toBeDefined();
-      expect(body.type).toBe('admin_message');
-    });
+    //   expect(body).toBeDefined();
+    //   expect(body.type).toBe('admin_message');
+    // });
   });
 });
