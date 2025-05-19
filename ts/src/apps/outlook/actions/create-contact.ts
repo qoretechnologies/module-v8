@@ -221,7 +221,7 @@ export const CreateOutlookContact = QoreAppCreator.createLocalizedAction<typeof 
     });
 
     const formattedEmailAddresses = emailAddresses
-      ? (emailAddresses as { address: string; name?: string }[]).map((email) => ({
+      ? emailAddresses.map((email) => ({
           address: email.address,
           name: email.name || `${givenName} ${surname || ''}`.trim(),
         }))

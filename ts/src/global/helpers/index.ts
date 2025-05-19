@@ -580,7 +580,7 @@ export const getQoreContextRequiredValues = <
       (result as any)[field] = value;
     }
   });
-  const missingFields = [...missingOptions, ...missingConnections] as string[];
+  const missingFields = [...missingOptions, ...missingConnections];
   if (missingFields.length > 0) {
     throw new ErrorClass(
       `Missing required values:\n` +

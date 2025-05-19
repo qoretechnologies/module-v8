@@ -111,7 +111,7 @@ export const UpdateTeamsMeeting = QoreAppCreator.createLocalizedAction<typeof op
     const channelId = data?.channelId;
     const content = data?.content;
     const location = data?.location;
-    const attendees = data?.attendees as string[] | undefined;
+    const attendees = data?.attendees;
     const isOnlineMeeting = data?.isOnlineMeeting;
     const timeZone = data?.timeZone;
 

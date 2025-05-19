@@ -49,7 +49,12 @@ const additionalOptions = {
   },
   removeMembers: {
     required_groups: ['update'],
-    type: 'list',
+    type: {
+      type: 'list',
+      element_type: {
+        type: 'string',
+      },
+    },
     required: false,
   },
 } satisfies TQoreOptions;
@@ -77,9 +82,7 @@ const response_type = {
     removedMembers: {
       type: {
         type: 'list',
-        element_type: {
-          type: 'string',
-        },
+        element_type: 'string',
       },
     },
     error: {
@@ -100,8 +103,8 @@ export const UpdateTeamsChannel = QoreAppCreator.createLocalizedAction<
     const channelId = data?.channelId;
     const displayName = data?.displayName;
     const description = data?.description;
-    const addMembers = (data?.addMembers as string[] | undefined) || [];
-    const removeMembers = (data?.removeMembers as string[] | undefined) || [];
+    const addMembers = data?.addMembers || [];
+    const removeMembers = data?.removeMembers || [];
 
     const missingValues: string[] = [];
     if (!token) missingValues.push('token');

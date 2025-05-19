@@ -23,7 +23,7 @@ export const getGoogleDriveFileIdAllowedValues: TQoreGetAllowedValuesFunction<
       q: "mimeType='application/vnd.google-apps.spreadsheet' and trashed=false",
       fields: 'files(id, name, createdTime, modifiedTime, webViewLink, owners)',
       orderBy: 'modifiedTime desc',
-      pageSize: 100,
+      pageSize: 1000,
     });
 
     const files = response.data.files || [];

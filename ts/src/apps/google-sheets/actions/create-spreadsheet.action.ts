@@ -42,7 +42,7 @@ const createSpreadsheet = QoreAppCreator.createLocalizedAction<typeof options>({
     });
 
     const source_spreadsheet_id = obj?.source_spreadsheet_id;
-    const headers = obj?.headers as string[] | undefined;
+    const headers = obj?.headers;
 
     try {
       const sheetsClient = createGoogleSheetsClient(token);

@@ -2,10 +2,12 @@ import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnolog
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { GOOGLE_DRIVE_APP_NAME, GoogleDriveError } from '../constants';
 import { createGoogleDriveClient } from '../helpers/constants';
+import { getGoogleDriveFileIdAllowedValues } from '../helpers/get-file-id-allowed-values';
 
 const options = {
   file_id: {
     required: true,
+    get_allowed_values: getGoogleDriveFileIdAllowedValues,
     type: 'string',
   },
   include_content: {

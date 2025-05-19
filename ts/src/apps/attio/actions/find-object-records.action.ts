@@ -78,7 +78,7 @@ const findAttioObjectRecords = QoreAppCreator.createLocalizedAction<typeof optio
   api_function: async (obj, _opts, context) => {
     const token = context?.conn_opts?.token;
     const object = obj?.object;
-    const filter = obj?.filter as { attribute: string; value: string } | undefined;
+    const filter = obj?.filter;
 
     const missingValues: string[] = [];
 

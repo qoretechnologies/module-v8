@@ -87,9 +87,7 @@ const listFiles = QoreAppCreator.createLocalizedAction<typeof options>({
       ErrorClass: GoogleDriveError,
     });
 
-    const orderBy = (obj?.order_by as { field: string; direction: string }[] | undefined)
-      ?.map((item) => `${item.field} ${item.direction}`)
-      .join(',');
+    const orderBy = obj?.order_by?.map((item) => `${item.field} ${item.direction}`).join(',');
     const pageSize = obj?.page_size || 100;
     const customQuery = obj?.custom_query || '';
 

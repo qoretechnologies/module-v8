@@ -141,15 +141,15 @@ export const SearchOutlookEmails = QoreAppCreator.createLocalizedAction<typeof o
       subject: data?.subject,
       hasAttachments: data?.hasAttachments,
       isRead: data?.isRead,
-      attachmentNames: data?.attachmentNames as string[] | undefined,
+      attachmentNames: data?.attachmentNames,
       attachmentFilenamePattern: data?.attachmentFilenamePattern,
-      attachmentMimeTypes: data?.attachmentMimeTypes as string[] | undefined,
+      attachmentMimeTypes: data?.attachmentMimeTypes,
       attachmentMinSize: data?.attachmentMinSize,
       attachmentMaxSize: data?.attachmentMaxSize,
       bodyContains: data?.bodyContains,
       includeAttachments: data?.includeAttachments || false,
       folder: data?.folder || 'inbox',
-      sort: data?.sort as { field: string; order: string } | undefined,
+      sort: data?.sort,
     };
 
     const hasAttachmentFilters = !!(
