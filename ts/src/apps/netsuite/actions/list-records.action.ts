@@ -133,11 +133,11 @@ export const NetsuiteListRecordsAction = QoreAppCreator.createLocalizedAction<ty
   action: 'list_records',
   action_code: EQoreAppActionCode.ACTION,
   api_function: async (obj, _options, context) => {
-    const query = obj?.query as { key: string; value: string }[] | undefined;
+    const query = obj?.query;
     const account_id = context?.conn_opts?.account_id;
     const token = context?.conn_opts?.token;
     const recordType = obj?.recordType;
-    const fields = obj?.fields as string[] | undefined;
+    const fields = obj?.fields;
     const searchMode = obj?.searchMode || 'all';
 
     const missingValues: string[] = [];

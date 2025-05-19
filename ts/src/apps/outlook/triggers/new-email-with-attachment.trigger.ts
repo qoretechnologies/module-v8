@@ -72,8 +72,8 @@ const OutlookEmailAttachmentTrigger = QoreAppCreator.createLocalizedTrigger<
     const token = context.conn_opts?.token;
     const senderFilter = context.opts?.senderFilter;
     const subjectFilter = context.opts?.subjectFilter;
-    const filenameFilters = context.opts?.filenameFilters as string[] | undefined;
-    const mimeTypeFilters = context.opts?.mimeTypeFilters as string[] | undefined;
+    const filenameFilters = context.opts?.filenameFilters;
+    const mimeTypeFilters = context.opts?.mimeTypeFilters;
     const action = context.opts?.action || 'none';
     const targetFolderId = context.opts?.targetFolderId;
 

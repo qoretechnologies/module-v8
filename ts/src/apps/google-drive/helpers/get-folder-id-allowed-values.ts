@@ -23,7 +23,7 @@ export const getGoogleDriveFolderIdAllowedValues: TQoreGetAllowedValuesFunction<
       q: "mimeType='application/vnd.google-apps.folder'",
       fields: 'files(id, name, createdTime, modifiedTime, webViewLink, owners, parents)',
       orderBy: 'name',
-      pageSize: 100,
+      pageSize: 1000,
       supportsAllDrives: true,
       includeItemsFromAllDrives: true,
     };

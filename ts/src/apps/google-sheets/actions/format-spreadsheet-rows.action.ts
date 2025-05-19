@@ -34,11 +34,11 @@ const options = {
   },
   background_color: {
     required: false,
-    type: 'rbgcolor',
+    type: 'rgbcolor',
   },
   text_color: {
     required: false,
-    type: 'rbgcolor',
+    type: 'rgbcolor',
   },
   bold: {
     required: false,

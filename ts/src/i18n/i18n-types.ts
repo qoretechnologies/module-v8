@@ -170,6 +170,800 @@ type RootTranslation = {
 				}
 			}
 		}
+		GoogleForms: {
+			/**
+			 * G​o​o​g​l​e​ ​F​o​r​m​s
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​w​i​t​h​ ​G​o​o​g​l​e​ ​F​o​r​m​s​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​f​o​r​m​s​ ​a​n​d​ ​r​e​s​p​o​n​s​e​s
+			 */
+			shortDesc: string
+			/**
+			 * I​n​t​e​g​r​a​t​e​ ​w​i​t​h​ ​G​o​o​g​l​e​ ​F​o​r​m​s​ ​t​o​ ​c​r​e​a​t​e​,​ ​u​p​d​a​t​e​,​ ​a​n​d​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​f​o​r​m​s​ ​a​n​d​ ​r​e​s​p​o​n​s​e​s​.​ ​T​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​p​e​r​f​o​r​m​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​r​e​s​p​o​n​d​ ​t​o​ ​e​v​e​n​t​s​ ​i​n​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​F​o​r​m​s​ ​a​c​c​o​u​n​t​,​ ​e​n​a​b​l​i​n​g​ ​y​o​u​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​f​o​r​m​ ​m​a​n​a​g​e​m​e​n​t​ ​a​n​d​ ​d​a​t​a​ ​c​o​l​l​e​c​t​i​o​n​ ​w​o​r​k​f​l​o​w​s​.
+			 */
+			longDesc: string
+			triggers: {
+				new_form_response: {
+					/**
+					 * N​e​w​ ​F​o​r​m​ ​R​e​s​p​o​n​s​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​e​s​p​o​n​s​e​ ​i​s​ ​s​u​b​m​i​t​t​e​d​ ​t​o​ ​a​ ​G​o​o​g​l​e​ ​F​o​r​m​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​ ​G​o​o​g​l​e​ ​F​o​r​m​ ​f​o​r​ ​n​e​w​ ​r​e​s​p​o​n​s​e​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​s​o​m​e​o​n​e​ ​s​u​b​m​i​t​s​ ​a​ ​n​e​w​ ​r​e​s​p​o​n​s​e​.​ ​O​p​t​i​o​n​a​l​l​y​ ​i​n​c​l​u​d​e​s​ ​f​o​r​m​ ​q​u​e​s​t​i​o​n​s​ ​a​n​d​ ​m​e​t​a​d​a​t​a​ ​i​n​ ​t​h​e​ ​e​v​e​n​t​ ​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						form_id: {
+							/**
+							 * F​o​r​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​F​o​r​m​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​F​o​r​m​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​r​e​s​p​o​n​s​e​s​.
+							 */
+							longDesc: string
+						}
+						include_questions: {
+							/**
+							 * I​n​c​l​u​d​e​ ​Q​u​e​s​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​f​o​r​m​ ​q​u​e​s​t​i​o​n​s​ ​i​n​ ​t​h​e​ ​e​v​e​n​t​ ​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​t​h​e​ ​f​o​r​m​ ​q​u​e​s​t​i​o​n​s​ ​a​n​d​ ​m​e​t​a​d​a​t​a​ ​i​n​ ​e​a​c​h​ ​t​r​i​g​g​e​r​e​d​ ​e​v​e​n​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​f​a​l​s​e​.
+							 */
+							longDesc: string
+						}
+						include_answers: {
+							/**
+							 * I​n​c​l​u​d​e​ ​A​n​s​w​e​r​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​d​e​t​a​i​l​e​d​ ​a​n​s​w​e​r​s​ ​i​n​ ​t​h​e​ ​e​v​e​n​t​ ​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​t​h​e​ ​f​o​r​m​ ​a​n​s​w​e​r​s​ ​i​n​ ​e​a​c​h​ ​t​r​i​g​g​e​r​e​d​ ​e​v​e​n​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​f​a​l​s​e​.
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * E​v​e​n​t​ ​d​a​t​a​ ​f​o​r​ ​n​e​w​ ​G​o​o​g​l​e​ ​F​o​r​m​s​ ​r​e​s​p​o​n​s​e​s
+						 */
+						desc: string
+					}
+				}
+			}
+			actions: {
+				get_form_response: {
+					/**
+					 * G​e​t​ ​F​o​r​m​ ​R​e​s​p​o​n​s​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​r​e​s​p​o​n​s​e​ ​f​r​o​m​ ​a​ ​G​o​o​g​l​e​ ​F​o​r​m​ ​b​y​ ​i​t​s​ ​I​D​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​s​i​n​g​l​e​ ​r​e​s​p​o​n​s​e​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​G​o​o​g​l​e​ ​F​o​r​m​ ​u​s​i​n​g​ ​t​h​e​ ​r​e​s​p​o​n​s​e​ ​I​D​.​ ​O​p​t​i​o​n​a​l​l​y​ ​i​n​c​l​u​d​e​s​ ​f​o​r​m​ ​q​u​e​s​t​i​o​n​s​ ​a​n​d​ ​m​e​t​a​d​a​t​a​ ​f​o​r​ ​a​d​d​i​t​i​o​n​a​l​ ​c​o​n​t​e​x​t​.
+					 */
+					longDesc: string
+					options: {
+						form_id: {
+							/**
+							 * F​o​r​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​F​o​r​m​ ​t​o​ ​g​e​t​ ​t​h​e​ ​r​e​s​p​o​n​s​e​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​F​o​r​m​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.
+							 */
+							longDesc: string
+						}
+						response_id: {
+							/**
+							 * R​e​s​p​o​n​s​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​f​o​r​m​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+						include_questions: {
+							/**
+							 * I​n​c​l​u​d​e​ ​Q​u​e​s​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​f​o​r​m​ ​q​u​e​s​t​i​o​n​s​ ​i​n​ ​r​e​s​p​o​n​s​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​t​h​e​ ​f​o​r​m​ ​q​u​e​s​t​i​o​n​s​ ​a​n​d​ ​m​e​t​a​d​a​t​a​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​f​a​l​s​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_form_publish_settings: {
+					/**
+					 * U​p​d​a​t​e​ ​F​o​r​m​ ​P​u​b​l​i​s​h​ ​S​e​t​t​i​n​g​s
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​p​u​b​l​i​s​h​i​n​g​ ​s​e​t​t​i​n​g​s​ ​o​f​ ​a​ ​G​o​o​g​l​e​ ​F​o​r​m​.
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​p​u​b​l​i​s​h​ ​s​e​t​t​i​n​g​s​ ​o​f​ ​a​ ​G​o​o​g​l​e​ ​F​o​r​m​,​ ​i​n​c​l​u​d​i​n​g​ ​w​h​e​t​h​e​r​ ​i​t​ ​i​s​ ​a​c​c​e​p​t​i​n​g​ ​r​e​s​p​o​n​s​e​s​ ​a​n​d​ ​w​h​e​t​h​e​r​ ​i​t​ ​i​s​ ​p​u​b​l​i​s​h​e​d​.​ ​A​t​ ​l​e​a​s​t​ ​o​n​e​ ​s​e​t​t​i​n​g​ ​m​u​s​t​ ​b​e​ ​p​r​o​v​i​d​e​d​.
+					 */
+					longDesc: string
+					options: {
+						form_id: {
+							/**
+							 * F​o​r​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​F​o​r​m​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​F​o​r​m​ ​w​h​o​s​e​ ​p​u​b​l​i​s​h​ ​s​e​t​t​i​n​g​s​ ​w​i​l​l​ ​b​e​ ​u​p​d​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						is_accepting_responses: {
+							/**
+							 * I​s​ ​A​c​c​e​p​t​i​n​g​ ​R​e​s​p​o​n​s​e​s
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​e​ ​f​o​r​m​ ​s​h​o​u​l​d​ ​a​c​c​e​p​t​ ​n​e​w​ ​r​e​s​p​o​n​s​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​t​r​u​e​ ​t​o​ ​a​l​l​o​w​ ​n​e​w​ ​r​e​s​p​o​n​s​e​s​,​ ​f​a​l​s​e​ ​t​o​ ​s​t​o​p​ ​a​c​c​e​p​t​i​n​g​ ​r​e​s​p​o​n​s​e​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​k​e​e​p​ ​c​u​r​r​e​n​t​ ​s​e​t​t​i​n​g​.
+							 */
+							longDesc: string
+						}
+						is_published: {
+							/**
+							 * I​s​ ​P​u​b​l​i​s​h​e​d
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​e​ ​f​o​r​m​ ​s​h​o​u​l​d​ ​b​e​ ​p​u​b​l​i​s​h​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​t​r​u​e​ ​t​o​ ​p​u​b​l​i​s​h​ ​t​h​e​ ​f​o​r​m​,​ ​f​a​l​s​e​ ​t​o​ ​u​n​p​u​b​l​i​s​h​ ​i​t​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​k​e​e​p​ ​c​u​r​r​e​n​t​ ​s​e​t​t​i​n​g​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_form: {
+					/**
+					 * G​e​t​ ​F​o​r​m
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​G​o​o​g​l​e​ ​F​o​r​m​ ​b​y​ ​I​D​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​G​o​o​g​l​e​ ​F​o​r​m​,​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​m​e​t​a​d​a​t​a​,​ ​q​u​e​s​t​i​o​n​s​,​ ​a​n​d​ ​o​p​t​i​o​n​a​l​l​y​ ​i​t​s​ ​r​e​s​p​o​n​s​e​s​.
+					 */
+					longDesc: string
+					options: {
+						form_id: {
+							/**
+							 * F​o​r​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​F​o​r​m​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​F​o​r​m​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+						include_questions: {
+							/**
+							 * I​n​c​l​u​d​e​ ​Q​u​e​s​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​f​o​r​m​ ​q​u​e​s​t​i​o​n​s​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​r​e​t​u​r​n​s​ ​t​h​e​ ​c​o​m​p​l​e​t​e​ ​l​i​s​t​ ​o​f​ ​q​u​e​s​t​i​o​n​s​ ​i​n​ ​t​h​e​ ​f​o​r​m​ ​w​i​t​h​ ​t​h​e​i​r​ ​p​r​o​p​e​r​t​i​e​s​.
+							 */
+							longDesc: string
+						}
+						include_responses: {
+							/**
+							 * I​n​c​l​u​d​e​ ​R​e​s​p​o​n​s​e​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​f​o​r​m​ ​r​e​s​p​o​n​s​e​s​ ​i​n​ ​t​h​e​ ​r​e​s​u​l​t
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​f​e​t​c​h​e​s​ ​a​l​l​ ​s​u​b​m​i​t​t​e​d​ ​r​e​s​p​o​n​s​e​s​ ​f​o​r​ ​t​h​e​ ​f​o​r​m​.​ ​M​a​y​ ​i​n​c​r​e​a​s​e​ ​r​e​s​p​o​n​s​e​ ​t​i​m​e​ ​f​o​r​ ​f​o​r​m​s​ ​w​i​t​h​ ​m​a​n​y​ ​s​u​b​m​i​s​s​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_form_responses: {
+					/**
+					 * G​e​t​ ​F​o​r​m​ ​R​e​s​p​o​n​s​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​r​e​s​p​o​n​s​e​s​ ​f​r​o​m​ ​a​ ​G​o​o​g​l​e​ ​F​o​r​m​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​l​l​ ​r​e​s​p​o​n​s​e​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​G​o​o​g​l​e​ ​F​o​r​m​.​ ​S​u​p​p​o​r​t​s​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​r​e​s​p​o​n​d​e​n​t​ ​e​m​a​i​l​ ​a​n​d​ ​a​n​s​w​e​r​ ​v​a​l​u​e​s​,​ ​p​a​g​i​n​a​t​i​o​n​ ​w​i​t​h​ ​p​a​g​e​ ​t​o​k​e​n​s​,​ ​a​n​d​ ​o​p​t​i​o​n​a​l​ ​i​n​c​l​u​s​i​o​n​ ​o​f​ ​f​o​r​m​ ​q​u​e​s​t​i​o​n​s​ ​a​n​d​ ​m​e​t​a​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						form_id: {
+							/**
+							 * F​o​r​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​F​o​r​m​ ​t​o​ ​g​e​t​ ​r​e​s​p​o​n​s​e​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​F​o​r​m​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​r​e​s​p​o​n​s​e​s​ ​f​r​o​m​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​p​o​n​s​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​p​o​n​s​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​,​ ​m​a​x​i​m​u​m​ ​i​s​ ​1​0​0​0​.
+							 */
+							longDesc: string
+						}
+						page_token: {
+							/**
+							 * P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​t​o​k​e​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​.​ ​U​s​e​d​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​t​h​r​o​u​g​h​ ​l​a​r​g​e​ ​r​e​s​p​o​n​s​e​ ​s​e​t​s​.
+							 */
+							longDesc: string
+						}
+						respondent_email: {
+							/**
+							 * R​e​s​p​o​n​d​e​n​t​ ​E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​r​e​s​p​o​n​d​e​n​t​ ​e​m​a​i​l
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​r​e​s​p​o​n​s​e​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​t​h​o​s​e​ ​f​r​o​m​ ​r​e​s​p​o​n​d​e​n​t​s​ ​w​i​t​h​ ​e​m​a​i​l​s​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​i​s​ ​v​a​l​u​e​.
+							 */
+							longDesc: string
+						}
+						filter_answers: {
+							/**
+							 * F​i​l​t​e​r​ ​A​n​s​w​e​r​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​r​e​s​p​o​n​s​e​s​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​a​n​s​w​e​r​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​r​e​s​p​o​n​s​e​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​q​u​e​s​t​i​o​n​ ​a​n​s​w​e​r​s​.​ ​E​a​c​h​ ​f​i​l​t​e​r​ ​s​p​e​c​i​f​i​e​s​ ​a​ ​q​u​e​s​t​i​o​n​ ​I​D​,​ ​f​i​l​t​e​r​ ​t​y​p​e​,​ ​a​n​d​ ​e​x​p​e​c​t​e​d​ ​v​a​l​u​e​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									question_id: {
+										/**
+										 * Q​u​e​s​t​i​o​n​ ​I​D
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​q​u​e​s​t​i​o​n​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​q​u​e​s​t​i​o​n​ ​t​o​ ​f​i​l​t​e​r​ ​r​e​s​p​o​n​s​e​s​ ​b​y​.
+										 */
+										longDesc: string
+									}
+									filter_type: {
+										/**
+										 * F​i​l​t​e​r​ ​T​y​p​e
+										 */
+										displayName: string
+										/**
+										 * T​y​p​e​ ​o​f​ ​f​i​l​t​e​r​ ​t​o​ ​a​p​p​l​y
+										 */
+										shortDesc: string
+										/**
+										 * W​h​e​t​h​e​r​ ​t​h​e​ ​a​n​s​w​e​r​ ​s​h​o​u​l​d​ ​c​o​n​t​a​i​n​ ​o​r​ ​e​x​a​c​t​l​y​ ​e​q​u​a​l​ ​t​h​e​ ​f​i​l​t​e​r​ ​v​a​l​u​e​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * F​i​l​t​e​r​ ​V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * V​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​m​a​t​c​h​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​q​u​e​s​t​i​o​n​ ​a​n​s​w​e​r​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						include_questions: {
+							/**
+							 * I​n​c​l​u​d​e​ ​Q​u​e​s​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​f​o​r​m​ ​q​u​e​s​t​i​o​n​s​ ​i​n​ ​r​e​s​p​o​n​s​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​t​h​e​ ​f​o​r​m​ ​q​u​e​s​t​i​o​n​s​ ​a​n​d​ ​m​e​t​a​d​a​t​a​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​f​a​l​s​e​.
+							 */
+							longDesc: string
+						}
+						include_answers: {
+							/**
+							 * I​n​c​l​u​d​e​ ​A​n​s​w​e​r​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​d​e​t​a​i​l​e​d​ ​a​n​s​w​e​r​s​ ​i​n​ ​r​e​s​p​o​n​s​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​t​h​e​ ​d​e​t​a​i​l​e​d​ ​a​n​s​w​e​r​ ​d​a​t​a​ ​f​o​r​ ​e​a​c​h​ ​r​e​s​p​o​n​s​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​t​r​u​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				search_forms: {
+					/**
+					 * S​e​a​r​c​h​ ​F​o​r​m​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​G​o​o​g​l​e​ ​F​o​r​m​s​ ​b​y​ ​n​a​m​e​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​ ​o​p​t​i​o​n​s​.
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​G​o​o​g​l​e​ ​F​o​r​m​s​ ​i​n​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​w​i​t​h​ ​o​p​t​i​o​n​s​ ​t​o​ ​f​i​l​t​e​r​ ​b​y​ ​f​i​l​e​n​a​m​e​,​ ​s​p​e​c​i​f​y​ ​s​e​a​r​c​h​ ​t​y​p​e​,​ ​a​n​d​ ​p​a​g​i​n​a​t​e​ ​r​e​s​u​l​t​s​.
+					 */
+					longDesc: string
+					options: {
+						filename: {
+							/**
+							 * F​o​r​m​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​f​ ​t​h​e​ ​f​o​r​m​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​r​ ​p​a​r​t​ ​o​f​ ​t​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​F​o​r​m​s​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​a​l​l​ ​f​o​r​m​s​.
+							 */
+							longDesc: string
+						}
+						search_type: {
+							/**
+							 * S​e​a​r​c​h​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​s​e​a​r​c​h​ ​t​o​ ​p​e​r​f​o​r​m
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​f​o​r​m​s​ ​w​h​e​r​e​ ​t​h​e​ ​n​a​m​e​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​e​a​r​c​h​ ​t​e​r​m​ ​o​r​ ​m​a​t​c​h​e​s​ ​i​t​ ​e​x​a​c​t​l​y​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​f​o​r​m​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​f​o​r​m​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​M​a​x​i​m​u​m​ ​v​a​l​u​e​ ​i​s​ ​1​0​0​0​.
+							 */
+							longDesc: string
+						}
+						page_token: {
+							/**
+							 * P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​t​o​k​e​n​ ​r​e​t​u​r​n​e​d​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​s​e​a​r​c​h​ ​t​o​ ​c​o​n​t​i​n​u​e​ ​p​a​g​i​n​a​t​i​o​n​.​ ​U​s​e​ ​t​h​e​ ​n​e​x​t​_​p​a​g​e​_​t​o​k​e​n​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_form: {
+					/**
+					 * C​r​e​a​t​e​ ​F​o​r​m
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​G​o​o​g​l​e​ ​F​o​r​m​ ​w​i​t​h​ ​c​u​s​t​o​m​i​z​a​b​l​e​ ​q​u​e​s​t​i​o​n​s​ ​a​n​d​ ​s​e​t​t​i​n​g​s​.
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​G​o​o​g​l​e​ ​F​o​r​m​ ​w​i​t​h​ ​s​p​e​c​i​f​i​e​d​ ​t​i​t​l​e​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​a​n​d​ ​o​p​t​i​o​n​a​l​ ​q​u​e​s​t​i​o​n​s​.​ ​S​u​p​p​o​r​t​s​ ​v​a​r​i​o​u​s​ ​q​u​e​s​t​i​o​n​ ​t​y​p​e​s​,​ ​q​u​i​z​ ​f​u​n​c​t​i​o​n​a​l​i​t​y​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​o​r​m​ ​s​e​t​t​i​n​g​s​.
+					 */
+					longDesc: string
+					options: {
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * F​o​r​m​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​F​o​r​m​.​ ​T​h​i​s​ ​w​i​l​l​ ​b​e​ ​d​i​s​p​l​a​y​e​d​ ​a​t​ ​t​h​e​ ​t​o​p​ ​o​f​ ​t​h​e​ ​f​o​r​m​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * F​o​r​m​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​o​p​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​t​h​a​t​ ​a​p​p​e​a​r​s​ ​b​e​l​o​w​ ​t​h​e​ ​f​o​r​m​ ​t​i​t​l​e​ ​t​o​ ​p​r​o​v​i​d​e​ ​a​d​d​i​t​i​o​n​a​l​ ​c​o​n​t​e​x​t​.
+							 */
+							longDesc: string
+						}
+						document_title: {
+							/**
+							 * D​o​c​u​m​e​n​t​ ​T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​d​o​c​u​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​o​c​u​m​e​n​t​ ​t​i​t​l​e​ ​t​h​a​t​ ​a​p​p​e​a​r​s​ ​i​n​ ​t​h​e​ ​b​r​o​w​s​e​r​ ​t​a​b​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​t​h​e​ ​f​o​r​m​ ​t​i​t​l​e​ ​w​i​l​l​ ​b​e​ ​u​s​e​d​.
+							 */
+							longDesc: string
+						}
+						settings: {
+							/**
+							 * F​o​r​m​ ​S​e​t​t​i​n​g​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​f​o​r​m​ ​s​e​t​t​i​n​g​s
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​a​d​d​i​t​i​o​n​a​l​ ​f​o​r​m​ ​s​e​t​t​i​n​g​s​ ​l​i​k​e​ ​e​m​a​i​l​ ​c​o​l​l​e​c​t​i​o​n​ ​a​n​d​ ​q​u​i​z​ ​m​o​d​e​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									email_collection: {
+										/**
+										 * E​m​a​i​l​ ​C​o​l​l​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * E​m​a​i​l​ ​c​o​l​l​e​c​t​i​o​n​ ​s​e​t​t​i​n​g​s
+										 */
+										shortDesc: string
+										/**
+										 * C​o​n​t​r​o​l​s​ ​h​o​w​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​a​r​e​ ​c​o​l​l​e​c​t​e​d​ ​f​r​o​m​ ​f​o​r​m​ ​r​e​s​p​o​n​d​e​n​t​s​.
+										 */
+										longDesc: string
+									}
+									is_quiz: {
+										/**
+										 * Q​u​i​z​ ​M​o​d​e
+										 */
+										displayName: string
+										/**
+										 * E​n​a​b​l​e​ ​q​u​i​z​ ​f​u​n​c​t​i​o​n​a​l​i​t​y
+										 */
+										shortDesc: string
+										/**
+										 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​a​l​l​o​w​s​ ​s​e​t​t​i​n​g​ ​c​o​r​r​e​c​t​ ​a​n​s​w​e​r​s​ ​a​n​d​ ​p​o​i​n​t​s​ ​f​o​r​ ​q​u​e​s​t​i​o​n​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						questions: {
+							/**
+							 * Q​u​e​s​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * F​o​r​m​ ​q​u​e​s​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​q​u​e​s​t​i​o​n​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​f​o​r​m​.​ ​E​a​c​h​ ​q​u​e​s​t​i​o​n​ ​c​a​n​ ​h​a​v​e​ ​d​i​f​f​e​r​e​n​t​ ​t​y​p​e​s​ ​a​n​d​ ​p​r​o​p​e​r​t​i​e​s​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										title: {
+											/**
+											 * Q​u​e​s​t​i​o​n​ ​T​i​t​l​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​q​u​e​s​t​i​o​n​ ​t​e​x​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​m​a​i​n​ ​t​e​x​t​ ​o​f​ ​t​h​e​ ​q​u​e​s​t​i​o​n​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​s​h​o​w​n​ ​t​o​ ​r​e​s​p​o​n​d​e​n​t​s​.
+											 */
+											longDesc: string
+										}
+										type: {
+											/**
+											 * Q​u​e​s​t​i​o​n​ ​T​y​p​e
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​ ​o​f​ ​q​u​e​s​t​i​o​n
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​t​y​p​e​ ​o​f​ ​q​u​e​s​t​i​o​n​ ​t​o​ ​c​r​e​a​t​e​ ​(​e​.​g​.​,​ ​t​e​x​t​,​ ​m​u​l​t​i​p​l​e​-​c​h​o​i​c​e​,​ ​c​h​e​c​k​b​o​x​,​ ​e​t​c​.​)​.
+											 */
+											longDesc: string
+										}
+										required: {
+											/**
+											 * R​e​q​u​i​r​e​d
+											 */
+											displayName: string
+											/**
+											 * M​a​k​e​ ​q​u​e​s​t​i​o​n​ ​r​e​q​u​i​r​e​d
+											 */
+											shortDesc: string
+											/**
+											 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​r​e​s​p​o​n​d​e​n​t​s​ ​m​u​s​t​ ​a​n​s​w​e​r​ ​t​h​i​s​ ​q​u​e​s​t​i​o​n​ ​t​o​ ​s​u​b​m​i​t​ ​t​h​e​ ​f​o​r​m​.
+											 */
+											longDesc: string
+										}
+										help_text: {
+											/**
+											 * H​e​l​p​ ​T​e​x​t
+											 */
+											displayName: string
+											/**
+											 * A​d​d​i​t​i​o​n​a​l​ ​g​u​i​d​a​n​c​e​ ​t​e​x​t
+											 */
+											shortDesc: string
+											/**
+											 * O​p​t​i​o​n​a​l​ ​t​e​x​t​ ​t​h​a​t​ ​a​p​p​e​a​r​s​ ​b​e​l​o​w​ ​t​h​e​ ​q​u​e​s​t​i​o​n​ ​t​o​ ​p​r​o​v​i​d​e​ ​a​d​d​i​t​i​o​n​a​l​ ​g​u​i​d​a​n​c​e​ ​t​o​ ​r​e​s​p​o​n​d​e​n​t​s​.
+											 */
+											longDesc: string
+										}
+										choices: {
+											/**
+											 * A​n​s​w​e​r​ ​C​h​o​i​c​e​s
+											 */
+											displayName: string
+											/**
+											 * L​i​s​t​ ​o​f​ ​p​o​s​s​i​b​l​e​ ​a​n​s​w​e​r​s
+											 */
+											shortDesc: string
+											/**
+											 * F​o​r​ ​m​u​l​t​i​p​l​e​-​c​h​o​i​c​e​,​ ​c​h​e​c​k​b​o​x​,​ ​a​n​d​ ​d​r​o​p​d​o​w​n​ ​q​u​e​s​t​i​o​n​s​,​ ​t​h​e​s​e​ ​a​r​e​ ​t​h​e​ ​o​p​t​i​o​n​s​ ​r​e​s​p​o​n​d​e​n​t​s​ ​c​a​n​ ​s​e​l​e​c​t​ ​f​r​o​m​.
+											 */
+											longDesc: string
+										}
+										scale_min: {
+											/**
+											 * S​c​a​l​e​ ​M​i​n​i​m​u​m
+											 */
+											displayName: string
+											/**
+											 * M​i​n​i​m​u​m​ ​v​a​l​u​e​ ​f​o​r​ ​s​c​a​l​e
+											 */
+											shortDesc: string
+											/**
+											 * F​o​r​ ​s​c​a​l​e​ ​q​u​e​s​t​i​o​n​s​,​ ​t​h​e​ ​l​o​w​e​s​t​ ​v​a​l​u​e​ ​o​n​ ​t​h​e​ ​s​c​a​l​e​.​ ​M​u​s​t​ ​b​e​ ​b​e​t​w​e​e​n​ ​0​ ​a​n​d​ ​1​0​.
+											 */
+											longDesc: string
+										}
+										scale_max: {
+											/**
+											 * S​c​a​l​e​ ​M​a​x​i​m​u​m
+											 */
+											displayName: string
+											/**
+											 * M​a​x​i​m​u​m​ ​v​a​l​u​e​ ​f​o​r​ ​s​c​a​l​e
+											 */
+											shortDesc: string
+											/**
+											 * F​o​r​ ​s​c​a​l​e​ ​q​u​e​s​t​i​o​n​s​,​ ​t​h​e​ ​h​i​g​h​e​s​t​ ​v​a​l​u​e​ ​o​n​ ​t​h​e​ ​s​c​a​l​e​.​ ​M​u​s​t​ ​b​e​ ​b​e​t​w​e​e​n​ ​0​ ​a​n​d​ ​1​0​.
+											 */
+											longDesc: string
+										}
+										scale_min_label: {
+											/**
+											 * S​c​a​l​e​ ​M​i​n​i​m​u​m​ ​L​a​b​e​l
+											 */
+											displayName: string
+											/**
+											 * L​a​b​e​l​ ​f​o​r​ ​m​i​n​i​m​u​m​ ​s​c​a​l​e​ ​v​a​l​u​e
+											 */
+											shortDesc: string
+											/**
+											 * O​p​t​i​o​n​a​l​ ​l​a​b​e​l​ ​t​o​ ​d​e​s​c​r​i​b​e​ ​t​h​e​ ​l​o​w​e​s​t​ ​v​a​l​u​e​ ​o​n​ ​a​ ​s​c​a​l​e​ ​q​u​e​s​t​i​o​n​.
+											 */
+											longDesc: string
+										}
+										scale_max_label: {
+											/**
+											 * S​c​a​l​e​ ​M​a​x​i​m​u​m​ ​L​a​b​e​l
+											 */
+											displayName: string
+											/**
+											 * L​a​b​e​l​ ​f​o​r​ ​m​a​x​i​m​u​m​ ​s​c​a​l​e​ ​v​a​l​u​e
+											 */
+											shortDesc: string
+											/**
+											 * O​p​t​i​o​n​a​l​ ​l​a​b​e​l​ ​t​o​ ​d​e​s​c​r​i​b​e​ ​t​h​e​ ​h​i​g​h​e​s​t​ ​v​a​l​u​e​ ​o​n​ ​a​ ​s​c​a​l​e​ ​q​u​e​s​t​i​o​n​.
+											 */
+											longDesc: string
+										}
+										correct_answer: {
+											/**
+											 * C​o​r​r​e​c​t​ ​A​n​s​w​e​r
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​c​o​r​r​e​c​t​ ​a​n​s​w​e​r​ ​f​o​r​ ​q​u​i​z​ ​q​u​e​s​t​i​o​n​s
+											 */
+											shortDesc: string
+											/**
+											 * F​o​r​ ​q​u​i​z​ ​q​u​e​s​t​i​o​n​s​,​ ​s​p​e​c​i​f​i​e​s​ ​t​h​e​ ​c​o​r​r​e​c​t​ ​a​n​s​w​e​r​.​ ​F​o​r​ ​c​h​e​c​k​b​o​x​ ​q​u​e​s​t​i​o​n​s​,​ ​m​u​l​t​i​p​l​e​ ​a​n​s​w​e​r​s​ ​c​a​n​ ​b​e​ ​p​r​o​v​i​d​e​d​ ​a​s​ ​a​ ​c​o​m​m​a​-​s​e​p​a​r​a​t​e​d​ ​l​i​s​t​.
+											 */
+											longDesc: string
+										}
+										points: {
+											/**
+											 * P​o​i​n​t​s
+											 */
+											displayName: string
+											/**
+											 * P​o​i​n​t​ ​v​a​l​u​e​ ​f​o​r​ ​q​u​i​z​ ​q​u​e​s​t​i​o​n​s
+											 */
+											shortDesc: string
+											/**
+											 * F​o​r​ ​q​u​i​z​ ​q​u​e​s​t​i​o​n​s​,​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​p​o​i​n​t​s​ ​a​w​a​r​d​e​d​ ​f​o​r​ ​a​ ​c​o​r​r​e​c​t​ ​a​n​s​w​e​r​.
+											 */
+											longDesc: string
+										}
+										feedback: {
+											/**
+											 * F​e​e​d​b​a​c​k
+											 */
+											displayName: string
+											/**
+											 * F​e​e​d​b​a​c​k​ ​f​o​r​ ​q​u​i​z​ ​a​n​s​w​e​r​s
+											 */
+											shortDesc: string
+											/**
+											 * F​o​r​ ​q​u​i​z​ ​q​u​e​s​t​i​o​n​s​,​ ​f​e​e​d​b​a​c​k​ ​t​o​ ​s​h​o​w​ ​r​e​s​p​o​n​d​e​n​t​s​ ​a​f​t​e​r​ ​t​h​e​y​ ​a​n​s​w​e​r​.
+											 */
+											longDesc: string
+										}
+										shuffle_choices: {
+											/**
+											 * S​h​u​f​f​l​e​ ​C​h​o​i​c​e​s
+											 */
+											displayName: string
+											/**
+											 * R​a​n​d​o​m​i​z​e​ ​a​n​s​w​e​r​ ​c​h​o​i​c​e​s
+											 */
+											shortDesc: string
+											/**
+											 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​o​r​d​e​r​ ​o​f​ ​a​n​s​w​e​r​ ​c​h​o​i​c​e​s​ ​w​i​l​l​ ​b​e​ ​r​a​n​d​o​m​i​z​e​d​ ​f​o​r​ ​e​a​c​h​ ​r​e​s​p​o​n​d​e​n​t​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 		GoogleDrive: {
 			/**
 			 * G​o​o​g​l​e​ ​D​r​i​v​e
@@ -26276,6 +27070,800 @@ export type TranslationFunctions = {
 							 * Second Option
 							 */
 							displayName: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		GoogleForms: {
+			/**
+			 * Google Forms
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect with Google Forms to manage your forms and responses
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Integrate with Google Forms to create, update, and manage your forms and responses. This integration allows you to perform actions and respond to events in your Google Forms account, enabling you to automate form management and data collection workflows.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				new_form_response: {
+					/**
+					 * New Form Response
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new response is submitted to a Google Form.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors a Google Form for new responses and triggers when someone submits a new response. Optionally includes form questions and metadata in the event data.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						form_id: {
+							/**
+							 * Form ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Form to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Form to monitor for new responses.
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_questions: {
+							/**
+							 * Include Questions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include form questions in the event data
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include the form questions and metadata in each triggered event. Default is false.
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_answers: {
+							/**
+							 * Include Answers
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include detailed answers in the event data
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include the form answers in each triggered event. Default is false.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Event data for new Google Forms responses
+						 */
+						desc: () => LocalizedString
+					}
+				}
+			}
+			actions: {
+				get_form_response: {
+					/**
+					 * Get Form Response
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific response from a Google Form by its ID.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a single response from a specified Google Form using the response ID. Optionally includes form questions and metadata for additional context.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						form_id: {
+							/**
+							 * Form ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Form to get the response from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Form that contains the response.
+							 */
+							longDesc: () => LocalizedString
+						}
+						response_id: {
+							/**
+							 * Response ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The specific response to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the form response to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_questions: {
+							/**
+							 * Include Questions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include form questions in response
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include the form questions and metadata in the response. Default is false.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_form_publish_settings: {
+					/**
+					 * Update Form Publish Settings
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update the publishing settings of a Google Form.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates the publish settings of a Google Form, including whether it is accepting responses and whether it is published. At least one setting must be provided.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						form_id: {
+							/**
+							 * Form ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Form to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Form whose publish settings will be updated.
+							 */
+							longDesc: () => LocalizedString
+						}
+						is_accepting_responses: {
+							/**
+							 * Is Accepting Responses
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether the form should accept new responses
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to true to allow new responses, false to stop accepting responses. Leave empty to keep current setting.
+							 */
+							longDesc: () => LocalizedString
+						}
+						is_published: {
+							/**
+							 * Is Published
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether the form should be published
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to true to publish the form, false to unpublish it. Leave empty to keep current setting.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_form: {
+					/**
+					 * Get Form
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a Google Form by ID.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches comprehensive information about a Google Form, including its metadata, questions, and optionally its responses.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						form_id: {
+							/**
+							 * Form ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Form ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Form to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_questions: {
+							/**
+							 * Include Questions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include form questions in the response
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, returns the complete list of questions in the form with their properties.
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_responses: {
+							/**
+							 * Include Responses
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include form responses in the result
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, fetches all submitted responses for the form. May increase response time for forms with many submissions.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_form_responses: {
+					/**
+					 * Get Form Responses
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve responses from a Google Form with filtering and pagination.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves all responses from a specified Google Form. Supports filtering by respondent email and answer values, pagination with page tokens, and optional inclusion of form questions and metadata.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						form_id: {
+							/**
+							 * Form ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Form to get responses from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Form to retrieve responses from.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of responses to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of responses to return per request. Default is 50, maximum is 1000.
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_token: {
+							/**
+							 * Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A token to retrieve the next page of results. Used for pagination through large response sets.
+							 */
+							longDesc: () => LocalizedString
+						}
+						respondent_email: {
+							/**
+							 * Respondent Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by respondent email
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter responses to only include those from respondents with emails containing this value.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter_answers: {
+							/**
+							 * Filter Answers
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter responses by specific answer values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter responses based on specific question answers. Each filter specifies a question ID, filter type, and expected value.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									question_id: {
+										/**
+										 * Question ID
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The question to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The unique identifier of the question to filter responses by.
+										 */
+										longDesc: () => LocalizedString
+									}
+									filter_type: {
+										/**
+										 * Filter Type
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Type of filter to apply
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Whether the answer should contain or exactly equal the filter value.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Filter Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Value to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to match against the question answers.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						include_questions: {
+							/**
+							 * Include Questions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include form questions in response
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include the form questions and metadata in the response. Default is false.
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_answers: {
+							/**
+							 * Include Answers
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include detailed answers in response
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include the detailed answer data for each response. Default is true.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				search_forms: {
+					/**
+					 * Search Forms
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for Google Forms by name with filtering options.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search for Google Forms in your Google Drive with options to filter by filename, specify search type, and paginate results.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						filename: {
+							/**
+							 * Form Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name of the form to search for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name or part of the name of the Google Forms to search for. Leave empty to retrieve all forms.
+							 */
+							longDesc: () => LocalizedString
+						}
+						search_type: {
+							/**
+							 * Search Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of search to perform
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify whether to search for forms where the name contains the search term or matches it exactly.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of forms to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of forms to return in a single request. Maximum value is 1000.
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_token: {
+							/**
+							 * Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A token returned from a previous search to continue pagination. Use the next_page_token from a previous response.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_form: {
+					/**
+					 * Create Form
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new Google Form with customizable questions and settings.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new Google Form with specified title, description, and optional questions. Supports various question types, quiz functionality, and custom form settings.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Form title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The title of the Google Form. This will be displayed at the top of the form.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Form description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An optional description that appears below the form title to provide additional context.
+							 */
+							longDesc: () => LocalizedString
+						}
+						document_title: {
+							/**
+							 * Document Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Title for the document
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The document title that appears in the browser tab. If not specified, the form title will be used.
+							 */
+							longDesc: () => LocalizedString
+						}
+						settings: {
+							/**
+							 * Form Settings
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional form settings
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Configure additional form settings like email collection and quiz mode.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									email_collection: {
+										/**
+										 * Email Collection
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Email collection settings
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Controls how email addresses are collected from form respondents.
+										 */
+										longDesc: () => LocalizedString
+									}
+									is_quiz: {
+										/**
+										 * Quiz Mode
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Enable quiz functionality
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * When enabled, allows setting correct answers and points for questions.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						questions: {
+							/**
+							 * Questions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Form questions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of questions to add to the form. Each question can have different types and properties.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										title: {
+											/**
+											 * Question Title
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The question text
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The main text of the question that will be shown to respondents.
+											 */
+											longDesc: () => LocalizedString
+										}
+										type: {
+											/**
+											 * Question Type
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Type of question
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The type of question to create (e.g., text, multiple-choice, checkbox, etc.).
+											 */
+											longDesc: () => LocalizedString
+										}
+										required: {
+											/**
+											 * Required
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Make question required
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * When enabled, respondents must answer this question to submit the form.
+											 */
+											longDesc: () => LocalizedString
+										}
+										help_text: {
+											/**
+											 * Help Text
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Additional guidance text
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Optional text that appears below the question to provide additional guidance to respondents.
+											 */
+											longDesc: () => LocalizedString
+										}
+										choices: {
+											/**
+											 * Answer Choices
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * List of possible answers
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * For multiple-choice, checkbox, and dropdown questions, these are the options respondents can select from.
+											 */
+											longDesc: () => LocalizedString
+										}
+										scale_min: {
+											/**
+											 * Scale Minimum
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Minimum value for scale
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * For scale questions, the lowest value on the scale. Must be between 0 and 10.
+											 */
+											longDesc: () => LocalizedString
+										}
+										scale_max: {
+											/**
+											 * Scale Maximum
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Maximum value for scale
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * For scale questions, the highest value on the scale. Must be between 0 and 10.
+											 */
+											longDesc: () => LocalizedString
+										}
+										scale_min_label: {
+											/**
+											 * Scale Minimum Label
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Label for minimum scale value
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Optional label to describe the lowest value on a scale question.
+											 */
+											longDesc: () => LocalizedString
+										}
+										scale_max_label: {
+											/**
+											 * Scale Maximum Label
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Label for maximum scale value
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Optional label to describe the highest value on a scale question.
+											 */
+											longDesc: () => LocalizedString
+										}
+										correct_answer: {
+											/**
+											 * Correct Answer
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The correct answer for quiz questions
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * For quiz questions, specifies the correct answer. For checkbox questions, multiple answers can be provided as a comma-separated list.
+											 */
+											longDesc: () => LocalizedString
+										}
+										points: {
+											/**
+											 * Points
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Point value for quiz questions
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * For quiz questions, the number of points awarded for a correct answer.
+											 */
+											longDesc: () => LocalizedString
+										}
+										feedback: {
+											/**
+											 * Feedback
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Feedback for quiz answers
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * For quiz questions, feedback to show respondents after they answer.
+											 */
+											longDesc: () => LocalizedString
+										}
+										shuffle_choices: {
+											/**
+											 * Shuffle Choices
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Randomize answer choices
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * When enabled, the order of answer choices will be randomized for each respondent.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
 						}
 					}
 				}
