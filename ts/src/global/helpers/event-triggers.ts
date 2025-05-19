@@ -47,10 +47,11 @@ export const pollCreatedItemsForTrigger = async <ItemType extends Record<string,
   trigger_name: string;
   uniqueField: keyof ItemType;
   getItems: () => Promise<ItemType[]>;
+  updateLastPollTime?: (lastPoll: Date) => void;
   update: (data: ItemType) => void;
   should_stop: () => boolean;
 }) => {
-  const { trigger_name, getItems, update, should_stop, uniqueField } = opts;
+  const { trigger_name, getItems, update, should_stop, uniqueField, updateLastPollTime } = opts;
 
   try {
     const initialItems = await getItems();
@@ -73,6 +74,9 @@ export const pollCreatedItemsForTrigger = async <ItemType extends Record<string,
         );
       }
 
+      if (updateLastPollTime) {
+        updateLastPollTime(new Date());
+      }
       await delayOrCancel(DEFAULT_TRIGGER_POLLING_INTERVAL, should_stop);
     }
   } catch (error) {

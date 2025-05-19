@@ -49,7 +49,7 @@ const createAttioTask = QoreAppCreator.createLocalizedAction<typeof options>({
       ErrorClass: AttioError,
     });
 
-    const assignees = (obj?.assignees || []) as string[];
+    const assignees = obj?.assignees || [];
 
     try {
       const response = await QorusRequest.post<{ data: { data: any } }>(

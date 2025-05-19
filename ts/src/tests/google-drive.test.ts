@@ -13,7 +13,7 @@ import {
   listFiles,
   moveFile,
   replaceFile,
-  uploadFIle,
+  uploadFile,
 } from '../apps/google-drive/actions';
 import { createGoogleDriveClient } from '../apps/google-drive/helpers/constants';
 import { getGoogleDriveFileIdAllowedValues } from '../apps/google-drive/helpers/get-file-id-allowed-values';
@@ -39,7 +39,7 @@ describe('Google Drive', () => {
     if (!refreshToken || !clientId || !clientSecret) {
       throw new Error(
         `Please set the` +
-          `GOOGLE_SHEETS_REFRESH_TOKEN, GOOGLE_SHEETS_CLIENT_ID, and GOOGLE_SHEETS_CLIENT_SECRET environment variables.`
+          `GOOGLE_DRIVE_REFRESH_TOKEN, GOOGLE_DRIVE_CLIENT_ID, and GOOGLE_DRIVE_CLIENT_SECRET environment variables.`
       );
     }
 
@@ -264,7 +264,7 @@ describe('Google Drive', () => {
     });
 
     it('Should upload a file', async () => {
-      const action = uploadFIle as IQoreAppActionWithFunction;
+      const action = uploadFile as IQoreAppActionWithFunction;
       const result = await action.api_function(
         {
           file: {

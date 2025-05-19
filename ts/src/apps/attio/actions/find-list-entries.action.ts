@@ -79,7 +79,7 @@ const findAttioListEntries = QoreAppCreator.createLocalizedAction<typeof options
   api_function: async (obj, _opts, context) => {
     const token = context?.conn_opts?.token;
     const list = obj?.list;
-    const filter = obj?.filter as { attribute: string; value: string } | undefined;
+    const filter = obj?.filter;
 
     const missingValues: string[] = [];
 

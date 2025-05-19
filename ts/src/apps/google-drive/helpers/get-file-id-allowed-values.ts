@@ -20,9 +20,11 @@ export const getGoogleDriveFileIdAllowedValues: TQoreGetAllowedValuesFunction<
     const driveClient = createGoogleDriveClient(token);
 
     const response = await driveClient.files.list({
-      fields: 'files(id, name, createdTime, modifiedTime, webViewLink, owners)',
+      fields: 'files(id, name, createdTime, modifiedTime, webViewLink, owners, iconLink)',
       orderBy: 'modifiedTime desc',
-      pageSize: 100,
+      pageSize: 1000,
+      includeItemsFromAllDrives: true,
+      supportsAllDrives: true,
     });
 
     const files = response.data.files || [];
@@ -47,6 +49,7 @@ export const getGoogleDriveFileIdAllowedValues: TQoreGetAllowedValuesFunction<
         desc:
           `ID: ${file.id}\nOwner: ${owner}\nModified: ${modified}\nCreated: ${created}` +
           (file.webViewLink ? `\n(Link To File)[${file.webViewLink}]` : ''),
+        ...(file.iconLink && { image: file.iconLink }),
       };
     });
 
