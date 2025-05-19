@@ -63,16 +63,18 @@ const options = {
             required: false,
             type: 'boolean',
             default_value: false,
+            preselected: true,
           },
           help_text: {
             required: false,
+            preselected: true,
             type: 'string',
           },
           choices: {
             required: false,
             type: {
               type: 'list',
-              element_type: 'string',
+              element_type: 'softstring',
             },
           },
           scale_min: {
