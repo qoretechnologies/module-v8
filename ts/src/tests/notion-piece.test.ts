@@ -54,7 +54,7 @@ describe('notionPieceTest', () => {
   it('should find users', async () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'get_users'
-    ) as IQoreAppActionWithFunction<any>;
+    ) as IQoreAppActionWithFunction;
     const actionFunction = action?.api_function as (
       obj?: TQoreMappedOptions<any>,
       options?: never,
@@ -84,12 +84,8 @@ describe('notionPieceTest', () => {
   it('should get user', async () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'get_user'
-    ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof notionCustomConnOpts, any>
-    ) => any;
+    ) as IQoreAppActionWithFunction;
+    const actionFunction = action?.api_function;
 
     if (actionFunction && user) {
       try {
@@ -112,12 +108,8 @@ describe('notionPieceTest', () => {
   it('should get token user', async () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'get_current_user'
-    ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof notionCustomConnOpts, any>
-    ) => any;
+    ) as IQoreAppActionWithFunction;
+    const actionFunction = action?.api_function;
 
     if (actionFunction) {
       try {
@@ -139,16 +131,12 @@ describe('notionPieceTest', () => {
   it('should create a page', async () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'create_page'
-    ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof notionCustomConnOpts, any>
-    ) => any;
+    ) as IQoreAppActionWithFunction;
+    const actionFunction = action?.api_function;
 
     if (actionFunction) {
       try {
-        const pages = await action.options.pageId.get_allowed_values(actionContext);
+        const pages = await action.options!.pageId.get_allowed_values!(actionContext);
         const result = await actionFunction(
           {
             pageId: pages[0].value,
@@ -176,12 +164,8 @@ describe('notionPieceTest', () => {
   it('should add a comment to a page', async () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'add_comment_to_page'
-    ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof notionCustomConnOpts, any>
-    ) => any;
+    ) as IQoreAppActionWithFunction;
+    const actionFunction = action?.api_function;
 
     if (actionFunction && page) {
       try {
@@ -211,12 +195,8 @@ describe('notionPieceTest', () => {
   it('should add comment to discussion', async () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'add_comment_to_discussion'
-    ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof notionCustomConnOpts, any>
-    ) => any;
+    ) as IQoreAppActionWithFunction;
+    const actionFunction = action?.api_function;
 
     if (actionFunction) {
       try {
@@ -246,12 +226,8 @@ describe('notionPieceTest', () => {
   it('should create a database', async () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'create_database'
-    ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof notionCustomConnOpts, any>
-    ) => any;
+    ) as IQoreAppActionWithFunction;
+    const actionFunction = action?.api_function;
 
     if (actionFunction) {
       try {
@@ -294,16 +270,11 @@ describe('notionPieceTest', () => {
     }
   });
 
-  // finish the test to add item to database
   it('should create an item in a database', async () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'create_database_item'
-    ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof notionCustomConnOpts, any>
-    ) => any;
+    ) as IQoreAppActionWithFunction;
+    const actionFunction = action?.api_function;
 
     if (actionFunction && database) {
       try {
@@ -337,12 +308,8 @@ describe('notionPieceTest', () => {
   it('should append to a page', async () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'append_to_page'
-    ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof notionCustomConnOpts, any>
-    ) => any;
+    ) as IQoreAppActionWithFunction;
+    const actionFunction = action?.api_function;
 
     if (actionFunction && page) {
       try {
@@ -371,12 +338,8 @@ describe('notionPieceTest', () => {
   it('should get comments from a page', async () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'get_comments'
-    ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof notionCustomConnOpts, any>
-    ) => any;
+    ) as IQoreAppActionWithFunction;
+    const actionFunction = action?.api_function;
 
     if (actionFunction && page) {
       try {
@@ -406,17 +369,13 @@ describe('notionPieceTest', () => {
   it('should test dependent options', async () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'notion_find_database_item'
-    ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof notionCustomConnOpts, any>
-    ) => any;
+    ) as IQoreAppActionWithFunction;
+    const actionFunction = action?.api_function;
 
     expect(actionFunction).toBeDefined();
     expect(database).toBeDefined();
 
-    const dependentOption = await action.options.database_id.get_dependent_options({
+    const dependentOption = await action.options!.database_id.get_dependent_options!({
       ...actionContext,
       opts: {
         database_id: database.id,
@@ -428,14 +387,10 @@ describe('notionPieceTest', () => {
   it('should remove the page', async () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'remove_page'
-    ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof notionCustomConnOpts, any>
-    ) => any;
+    ) as IQoreAppActionWithFunction;
+    const actionFunction = action?.api_function;
 
-    const pages = await action.options.pageId.get_allowed_values(actionContext);
+    const pages = await action.options!.pageId.get_allowed_values!(actionContext);
     const pageId = pages.find(
       (foundPage: IQoreAllowedValue) =>
         foundPage.display_name === TEST_PAGE_NAME || foundPage.value === page.id
@@ -472,12 +427,8 @@ describe('notionPieceTest', () => {
   it('Should make a custom API call', async () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'custom_api_call'
-    ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof notionCustomConnOpts, any>
-    ) => any;
+    ) as IQoreAppActionWithFunction;
+    const actionFunction = action?.api_function;
 
     if (actionFunction) {
       try {

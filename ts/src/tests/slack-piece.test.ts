@@ -4,11 +4,9 @@ import {
   TQoreAppActionFunctionContext,
   TQoreAppWithActions,
   TQoreFile,
-  TQoreMappedOptions,
 } from '@qoretechnologies/ts-toolkit';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { validateResponseProperties } from './utils';
-
 const slackCustomConnOpts = {
   authed_user: {
     type: 'hash',
@@ -54,13 +52,9 @@ describe('slackPieceTest', () => {
   it('should find a Slack user by email', async () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'slack_find_user_by_email'
-    ) as IQoreAppActionWithFunction<any>;
+    ) as IQoreAppActionWithFunction;
 
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof slackCustomConnOpts, any>
-    ) => any;
+    const actionFunction = action?.api_function;
     expect(actionFunction).toBeDefined();
 
     const props = { email: process.env.SLACK_USER_EMAIL! };
@@ -89,14 +83,10 @@ describe('slackPieceTest', () => {
   it('should send a Slack message and receive a positive response', async () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'send_channel_message'
-    ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof slackCustomConnOpts, any>
-    ) => any;
+    ) as IQoreAppActionWithFunction;
+    const actionFunction = action?.api_function;
 
-    const channelIds = await action.options.channel.get_allowed_values(actionContext);
+    const channelIds = await action.options!.channel.get_allowed_values!(actionContext);
     expect(channelIds).toBeDefined();
     expect(channelIds.length).toBeGreaterThan(0);
 
@@ -125,14 +115,10 @@ describe('slackPieceTest', () => {
   it('should get channel history', async () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'get_channel_history'
-    ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof slackCustomConnOpts, any>
-    ) => any;
+    ) as IQoreAppActionWithFunction;
+    const actionFunction = action?.api_function;
 
-    const channelIds = await action.options.channel.get_allowed_values(actionContext);
+    const channelIds = await action.options!.channel.get_allowed_values!(actionContext);
     expect(channelIds).toBeDefined();
     expect(channelIds.length).toBeGreaterThan(0);
 
@@ -159,14 +145,10 @@ describe('slackPieceTest', () => {
   it('should add reaction to message', async () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'slack_add_reaction_to_message'
-    ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof slackCustomConnOpts, any>
-    ) => any;
+    ) as IQoreAppActionWithFunction;
+    const actionFunction = action?.api_function;
 
-    const channelIds = await action.options.channel.get_allowed_values(actionContext);
+    const channelIds = await action.options!.channel.get_allowed_values!(actionContext);
     expect(channelIds).toBeDefined();
     expect(channelIds.length).toBeGreaterThan(0);
 
@@ -197,12 +179,8 @@ describe('slackPieceTest', () => {
   it('should create a channel', async () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'slack_create_channel'
-    ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof slackCustomConnOpts, any>
-    ) => any;
+    ) as IQoreAppActionWithFunction;
+    const actionFunction = action?.api_function;
 
     const props = {
       channelName: 'test-channel',
@@ -231,9 +209,9 @@ describe('slackPieceTest', () => {
   it('should request action direct message', async () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'request_action_direct_message'
-    ) as IQoreAppActionWithFunction<any>;
+    ) as IQoreAppActionWithFunction;
 
-    const userIds = await action.options.userId.get_allowed_values(actionContext);
+    const userIds = await action.options!.userId.get_allowed_values!(actionContext);
 
     expect(userIds).toBeDefined();
     expect(userIds.length).toBeGreaterThan(0);
@@ -244,11 +222,7 @@ describe('slackPieceTest', () => {
       actions: [{ title: 'Test', url: 'https://example.com' }],
     };
 
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof slackCustomConnOpts, any>
-    ) => any;
+    const actionFunction = action?.api_function;
 
     expect(actionFunction).toBeDefined();
 
@@ -264,9 +238,9 @@ describe('slackPieceTest', () => {
   it('should request action in channel', async () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'request_action_message'
-    ) as IQoreAppActionWithFunction<any>;
+    ) as IQoreAppActionWithFunction;
 
-    const channelIds = await action.options.channel.get_allowed_values(actionContext);
+    const channelIds = await action.options!.channel.get_allowed_values!(actionContext);
     expect(channelIds).toBeDefined();
     expect(channelIds.length).toBeGreaterThan(0);
 
@@ -276,11 +250,7 @@ describe('slackPieceTest', () => {
       actions: [{ title: 'Test', url: 'https://example.com' }],
     };
 
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof slackCustomConnOpts, any>
-    ) => any;
+    const actionFunction = action?.api_function;
 
     expect(actionFunction).toBeDefined();
 
@@ -295,12 +265,8 @@ describe('slackPieceTest', () => {
   it('should search for messages', async () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'search_messages'
-    ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof slackCustomConnOpts, any>
-    ) => any;
+    ) as IQoreAppActionWithFunction;
+    const actionFunction = action?.api_function;
 
     const props = { query: 'test' };
 
@@ -325,14 +291,10 @@ describe('slackPieceTest', () => {
   it('should update a message', async () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'update_message'
-    ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof slackCustomConnOpts, any>
-    ) => any;
+    ) as IQoreAppActionWithFunction;
+    const actionFunction = action?.api_function;
 
-    const channelIds = await action.options.channel.get_allowed_values(actionContext);
+    const channelIds = await action.options!.channel.get_allowed_values!(actionContext);
     expect(channelIds).toBeDefined();
     expect(channelIds.length).toBeGreaterThan(0);
 
@@ -363,14 +325,10 @@ describe('slackPieceTest', () => {
   it('should upload a file', async () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'upload_file'
-    ) as IQoreAppActionWithFunction<any>;
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof slackCustomConnOpts, any>
-    ) => any;
+    ) as IQoreAppActionWithFunction;
+    const actionFunction = action?.api_function;
 
-    const channelIds = await action.options.channel.get_allowed_values(actionContext);
+    const channelIds = await action.options!.channel.get_allowed_values!(actionContext);
     expect(channelIds).toBeDefined();
     expect(channelIds.length).toBeGreaterThan(0);
 
@@ -409,23 +367,15 @@ describe('slackPieceTest', () => {
     const testName = 'test';
     const findUserAction = slackApp.actions.find(
       (action) => action.action === 'slack_find_user_by_email'
-    ) as IQoreAppActionWithFunction<any>;
+    ) as IQoreAppActionWithFunction;
 
-    const findUserActionFunction = findUserAction?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof slackCustomConnOpts, any>
-    ) => any;
+    const findUserActionFunction = findUserAction?.api_function;
 
     const action = slackApp.actions.find(
       (action) => action.action === 'slack_update_profile'
-    ) as IQoreAppActionWithFunction<any>;
+    ) as IQoreAppActionWithFunction;
 
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof slackCustomConnOpts, any>
-    ) => any;
+    const actionFunction = action?.api_function;
 
     expect(actionFunction).toBeDefined();
     expect(findUserActionFunction).toBeDefined();

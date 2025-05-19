@@ -1,11 +1,9 @@
 import {
   IQoreAppActionWithFunction,
   QorusRequest,
-  TCustomConnOptions,
   TQoreAppActionFunctionContext,
   TQoreAppWithActions,
   TQoreFile,
-  TQoreMappedOptions,
 } from '@qoretechnologies/ts-toolkit';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { validateResponseProperties } from './utils';
@@ -17,19 +15,13 @@ describe('DropboxPieceTest', () => {
   let copiedFolder: { path_lower: string; id: string } | null = null;
   let createdTextFile: { path_lower: string; id: string } | null = null;
 
-  const dropboxCustomConnOpts = {
-    token: {
-      type: 'string',
-    },
-  } satisfies TCustomConnOptions;
-
   const actionContext = {
     conn_name: 'dropbox',
     conn_opts: {
       token: '',
     },
     opts: undefined,
-  } satisfies TQoreAppActionFunctionContext<any>;
+  } satisfies TQoreAppActionFunctionContext;
 
   beforeAll(async () => {
     const dropboxRefreshToken = process.env.DROPBOX_REFRESH_TOKEN;
@@ -38,7 +30,7 @@ describe('DropboxPieceTest', () => {
 
     expect(dropboxRefreshToken).toBeDefined();
     expect(dropboxClientId).toBeDefined();
-    expect(dropboxClientSecret).toBeDefined;
+    expect(dropboxClientSecret).toBeDefined();
 
     const response = (await QorusRequest.post(
       {
@@ -66,13 +58,9 @@ describe('DropboxPieceTest', () => {
   it('should create new folder', async () => {
     const action = dropboxApp!.actions.find(
       (action) => action.action === 'create_new_dropbox_folder'
-    ) as IQoreAppActionWithFunction<any>;
+    ) as IQoreAppActionWithFunction;
 
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof dropboxCustomConnOpts, any>
-    ) => any;
+    const actionFunction = action?.api_function;
 
     if (actionFunction) {
       try {
@@ -100,13 +88,9 @@ describe('DropboxPieceTest', () => {
   it('should create a text file', async () => {
     const action = dropboxApp!.actions.find(
       (action) => action.action === 'create_new_dropbox_text_file'
-    ) as IQoreAppActionWithFunction<any>;
+    ) as IQoreAppActionWithFunction;
 
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof dropboxCustomConnOpts, any>
-    ) => any;
+    const actionFunction = action?.api_function;
 
     if (actionFunction && folder) {
       try {
@@ -139,13 +123,9 @@ describe('DropboxPieceTest', () => {
   it('should upload a file', async () => {
     const action = dropboxApp!.actions.find(
       (action) => action.action === 'upload_dropbox_file'
-    ) as IQoreAppActionWithFunction<any>;
+    ) as IQoreAppActionWithFunction;
 
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof dropboxCustomConnOpts, any>
-    ) => any;
+    const actionFunction = action?.api_function;
 
     if (actionFunction) {
       try {
@@ -182,13 +162,9 @@ describe('DropboxPieceTest', () => {
   it('should get file link', async () => {
     const action = dropboxApp!.actions.find(
       (action) => action.action === 'get_dropbox_file_link'
-    ) as IQoreAppActionWithFunction<any>;
+    ) as IQoreAppActionWithFunction;
 
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof dropboxCustomConnOpts, any>
-    ) => any;
+    const actionFunction = action?.api_function;
 
     if (actionFunction && folder) {
       try {
@@ -216,13 +192,9 @@ describe('DropboxPieceTest', () => {
   it('should copy file', async () => {
     const action = dropboxApp!.actions.find(
       (action) => action.action === 'copy_dropbox_file'
-    ) as IQoreAppActionWithFunction<any>;
+    ) as IQoreAppActionWithFunction;
 
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof dropboxCustomConnOpts, any>
-    ) => any;
+    const actionFunction = action?.api_function;
 
     if (actionFunction && folder) {
       try {
@@ -252,13 +224,9 @@ describe('DropboxPieceTest', () => {
   it('should copy folder', async () => {
     const action = dropboxApp!.actions.find(
       (action) => action.action === 'copy_dropbox_folder'
-    ) as IQoreAppActionWithFunction<any>;
+    ) as IQoreAppActionWithFunction;
 
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof dropboxCustomConnOpts, any>
-    ) => any;
+    const actionFunction = action?.api_function;
 
     if (actionFunction && folder) {
       try {
@@ -290,13 +258,9 @@ describe('DropboxPieceTest', () => {
   it('should move file', async () => {
     const action = dropboxApp!.actions.find(
       (action) => action.action === 'move_dropbox_file'
-    ) as IQoreAppActionWithFunction<any>;
+    ) as IQoreAppActionWithFunction;
 
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof dropboxCustomConnOpts, any>
-    ) => any;
+    const actionFunction = action?.api_function;
 
     if (actionFunction && folder) {
       try {
@@ -327,13 +291,9 @@ describe('DropboxPieceTest', () => {
   it('should move folder', async () => {
     const action = dropboxApp!.actions.find(
       (action) => action.action === 'move_dropbox_folder'
-    ) as IQoreAppActionWithFunction<any>;
+    ) as IQoreAppActionWithFunction;
 
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof dropboxCustomConnOpts, any>
-    ) => any;
+    const actionFunction = action?.api_function;
     expect(copiedFolder).toBeDefined();
     if (actionFunction && folder) {
       try {
@@ -364,13 +324,9 @@ describe('DropboxPieceTest', () => {
   it('should delete file', async () => {
     const action = dropboxApp!.actions.find(
       (action) => action.action === 'delete_dropbox_file'
-    ) as IQoreAppActionWithFunction<any>;
+    ) as IQoreAppActionWithFunction;
 
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof dropboxCustomConnOpts, any>
-    ) => any;
+    const actionFunction = action?.api_function;
 
     expect(createdTextFile).toBeDefined();
 
@@ -399,13 +355,9 @@ describe('DropboxPieceTest', () => {
   it('should list folder', async () => {
     const action = dropboxApp!.actions.find(
       (action) => action.action === 'list_dropbox_folder'
-    ) as IQoreAppActionWithFunction<any>;
+    ) as IQoreAppActionWithFunction;
 
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof dropboxCustomConnOpts, any>
-    ) => any;
+    const actionFunction = action?.api_function;
 
     if (actionFunction && folder) {
       try {
@@ -428,13 +380,9 @@ describe('DropboxPieceTest', () => {
   it('should search', async () => {
     const action = dropboxApp!.actions.find(
       (action) => action.action === 'search_dropbox'
-    ) as IQoreAppActionWithFunction<any>;
+    ) as IQoreAppActionWithFunction;
 
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof dropboxCustomConnOpts, any>
-    ) => any;
+    const actionFunction = action?.api_function;
 
     if (actionFunction && folder) {
       try {
@@ -457,13 +405,9 @@ describe('DropboxPieceTest', () => {
   it('should delete folder', async () => {
     const action = dropboxApp!.actions.find(
       (action) => action.action === 'delete_dropbox_folder'
-    ) as IQoreAppActionWithFunction<any>;
+    ) as IQoreAppActionWithFunction;
 
-    const actionFunction = action?.api_function as (
-      obj?: TQoreMappedOptions<any>,
-      options?: never,
-      context?: TQoreAppActionFunctionContext<typeof dropboxCustomConnOpts, any>
-    ) => any;
+    const actionFunction = action?.api_function;
 
     if (actionFunction && folder) {
       try {
