@@ -121,7 +121,7 @@ const getForm = QoreAppCreator.createLocalizedAction<typeof options>({
         edit_url: `https://docs.google.com/forms/d/${form_id}/edit`,
         view_url: form.responderUri || undefined,
         settings: {
-          email_collection: form.settings?.emailCollectionType || 'NONE',
+          email_collection: form.settings?.emailCollectionType || 'DO_NOT_COLLECT',
           is_quiz: form.settings?.quizSettings?.isQuiz || false,
         },
       };

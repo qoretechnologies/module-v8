@@ -1,3 +1,4 @@
+import { forms_v1 } from '@googleapis/forms';
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { GOOGLE_FORMS_APP_NAME, GoogleFormsError } from '../constants';
@@ -52,51 +53,42 @@ const updateFormPublishSettings = QoreAppCreator.createLocalizedAction<typeof op
     try {
       const formsClient = createGoogleFormsClient(token);
 
-      const currentForm = await formsClient.forms.get({
+      const form = await formsClient.forms.get({
         formId: form_id,
-        fields: 'settings',
+        fields: 'publishSettings',
       });
 
       const updateMask: string[] = [];
-      const settings: any = {
-        ...currentForm.data.settings,
+      const settings: forms_v1.Schema$PublishState = {
+        isAcceptingResponses:
+          form.data.publishSettings?.publishState?.isAcceptingResponses ?? false,
+        isPublished: form.data.publishSettings?.publishState?.isPublished ?? false,
       };
 
       if (isAcceptingResponses !== undefined) {
         settings.isAcceptingResponses = isAcceptingResponses;
-        updateMask.push('settings.isAcceptingResponses');
       }
 
       if (isPublished !== undefined) {
         settings.isPublished = isPublished;
-        updateMask.push('settings.isPublished');
       }
 
-      await formsClient.forms.batchUpdate({
+      const updateResponse = await formsClient.forms.setPublishSettings({
         formId: form_id,
         requestBody: {
-          requests: [
-            {
-              updateSettings: {
-                settings,
-                updateMask: updateMask.join(','),
-              },
-            },
-          ],
+          publishSettings: {
+            publishState: settings,
+          },
+          updateMask: 'publishState',
         },
-      });
-
-      const updatedForm = await formsClient.forms.get({
-        formId: form_id,
-        fields: 'settings',
       });
 
       return {
         form_id,
         success: true,
         isAcceptingResponses:
-          updatedForm.data.publishSettings?.publishState?.isAcceptingResponses ?? false,
-        isPublished: updatedForm.data.publishSettings?.publishState?.isPublished ?? false,
+          updateResponse.data.publishSettings?.publishState?.isAcceptingResponses ?? false,
+        isPublished: updateResponse.data.publishSettings?.publishState?.isPublished ?? false,
         updated_settings: updateMask,
         message: `Successfully updated ${updateMask.length} publish setting(s)`,
       };

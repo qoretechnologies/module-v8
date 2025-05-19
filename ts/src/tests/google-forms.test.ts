@@ -258,6 +258,27 @@ describe('Google Drive', () => {
       expect(result.response.response_id).toBe(responseId);
       expect(result.form_id).toBe(formId);
     });
+
+    // Google forms api method is not implemented yet
+    // (getting api error although the method is in documentation already)
+    //   it('Should update form publish settings', async () => {
+    //     const action = updateGoogleFormPublishSettings as IQoreAppActionWithFunction;
+
+    //     const result = await action.api_function(
+    //       {
+    //         form_id: createdFormId,
+    //         is_accepting_responses: true,
+    //         is_published: true,
+    //       },
+    //       undefined,
+    //       base_context
+    //     );
+
+    //     expect(result).toBeDefined();
+    //     expect(result.form_id).toBe(createdFormId);
+    //     expect(result.is_accepting_responses).toBe(true);
+    //     expect(result.is_published).toBe(true);
+    //   });
   });
 
   describe('Clean up', () => {

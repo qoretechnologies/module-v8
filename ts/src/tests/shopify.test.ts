@@ -21,9 +21,9 @@ import { getShopifyLocationIdAllowedValues } from '../apps/shopify/helpers/get-l
 import { getShopifyOrderIdAllowedValues } from '../apps/shopify/helpers/get-order-id-allowed-values';
 import { getShopifyParentTransactionIdAllowedValues } from '../apps/shopify/helpers/get-parent-transaction-id-allowed-values';
 import { getShopifyProductVariantIdAllowedValues } from '../apps/shopify/helpers/get-product-variant-id-allowed-values';
+import { getShopifyProductIdAllowedValues } from '../apps/shopify/helpers/get-shopify-product-id-allowed-values';
 import { getShopifyTaxExemptionsAllowedValues } from '../apps/shopify/helpers/get-tax-exemptions-allowed-values';
 import { Debugger, DebugLevels } from '../utils/Debugger';
-import { getShopifyProductIdAllowedValues } from '../apps/shopify/helpers/get-shopify-product-id-allowed-values';
 
 Debugger.level = DebugLevels.Verbose;
 
