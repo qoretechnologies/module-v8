@@ -43,7 +43,6 @@ const options = {
         fields: {
           question_id: {
             type: 'string',
-            depends_on: ['form_id'],
             get_allowed_values: getGoogleFormQuestionIdAllowedValues,
             required: true,
           },
