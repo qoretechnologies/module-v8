@@ -10,12 +10,14 @@ import { GOOGLE_FORMS_APP_NAME, GoogleFormsError } from '../constants';
 import { createGoogleFormsClient } from '../helpers/constants';
 import { getGoogleFormIdAllowedValues } from '../helpers/get-form-id-allowed-values';
 import { mapGoogleFormsQuestions } from '../helpers/map-form-questions.helper';
+import { getGoogleFormQuestionIdAllowedValues } from '../helpers/get-form-question-id-allowed-values';
 
 const options = {
   form_id: {
     required: true,
     type: 'string',
     preselected: true,
+    on_change: ['refetch'],
     allowed_values_creatable: true,
     get_allowed_values: getGoogleFormIdAllowedValues,
   },
@@ -41,6 +43,8 @@ const options = {
         fields: {
           question_id: {
             type: 'string',
+            depends_on: ['form_id'],
+            get_allowed_values: getGoogleFormQuestionIdAllowedValues,
             required: true,
           },
           filter_type: {
