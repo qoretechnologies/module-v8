@@ -59,6 +59,6 @@ export const getGoogleMeetConferenceTranscriptIdAllowedValues: TQoreGetAllowedVa
 
     return allowedValues;
   } catch (error) {
-    throw new GoogleMeetError(`Failed to fetch conference IDs: ${error.message || error}`);
+    throw new GoogleMeetError(`Failed to fetch transcript IDs: ${error.message || error}`);
   }
 };

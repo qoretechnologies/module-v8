@@ -46,7 +46,7 @@ const getConferenceParticipants = QoreAppCreator.createLocalizedAction<typeof op
     const meetClient = createGoogleMeetClient(token);
     let conference = obj?.conference;
     const search = obj?.search;
-    const include_time_spent = obj?.include_time_spent || true;
+    const include_time_spent = obj?.include_time_spent !== false;
 
     if (conference?.length === 10 && conference.split('-').length === 3) {
       const foundId = await getConferenceIdByMeetingCode(conference, token);
