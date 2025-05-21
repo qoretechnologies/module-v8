@@ -170,6 +170,838 @@ type RootTranslation = {
 				}
 			}
 		}
+		GoogleMeet: {
+			/**
+			 * G​o​o​g​l​e​ ​M​e​e​t
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​w​i​t​h​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​m​e​e​t​i​n​g​s​ ​a​n​d​ ​e​v​e​n​t​s
+			 */
+			shortDesc: string
+			/**
+			 * I​n​t​e​g​r​a​t​e​ ​w​i​t​h​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​m​e​e​t​i​n​g​s​ ​a​n​d​ ​e​v​e​n​t​s​.​ ​T​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​p​e​r​f​o​r​m​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​r​e​s​p​o​n​d​ ​t​o​ ​e​v​e​n​t​s​ ​i​n​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​a​c​c​o​u​n​t​,​ ​e​n​a​b​l​i​n​g​ ​y​o​u​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​m​e​e​t​i​n​g​ ​m​a​n​a​g​e​m​e​n​t​ ​a​n​d​ ​s​c​h​e​d​u​l​i​n​g​ ​w​o​r​k​f​l​o​w​s​.
+			 */
+			longDesc: string
+			actions: {
+				update_event: {
+					/**
+					 * U​p​d​a​t​e​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​M​e​e​t​i​n​g
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​m​e​e​t​i​n​g​ ​o​r​ ​c​a​l​e​n​d​a​r​ ​e​v​e​n​t​.
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​ ​o​r​ ​G​o​o​g​l​e​ ​C​a​l​e​n​d​a​r​ ​e​v​e​n​t​.​ ​Y​o​u​ ​c​a​n​ ​m​o​d​i​f​y​ ​v​a​r​i​o​u​s​ ​p​r​o​p​e​r​t​i​e​s​ ​i​n​c​l​u​d​i​n​g​ ​t​i​t​l​e​,​ ​t​i​m​e​s​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​l​o​c​a​t​i​o​n​,​ ​a​t​t​e​n​d​e​e​s​,​ ​a​n​d​ ​m​o​r​e​.​ ​C​a​l​e​n​d​a​r​ ​u​p​d​a​t​e​s​ ​c​a​n​ ​o​p​t​i​o​n​a​l​l​y​ ​n​o​t​i​f​y​ ​a​t​t​e​n​d​e​e​s​.
+					 */
+					longDesc: string
+					options: {
+						event_id: {
+							/**
+							 * E​v​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​C​a​l​e​n​d​a​r​ ​e​v​e​n​t​ ​o​r​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​m​e​e​t​i​n​g​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						calendar_id: {
+							/**
+							 * C​a​l​e​n​d​a​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​a​l​e​n​d​a​r​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​m​e​e​t​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​C​a​l​e​n​d​a​r​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​m​e​e​t​i​n​g​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​p​r​i​m​a​r​y​"​ ​w​h​i​c​h​ ​i​s​ ​t​h​e​ ​u​s​e​r​'​s​ ​p​r​i​m​a​r​y​ ​c​a​l​e​n​d​a​r​.
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​o​r​ ​s​u​m​m​a​r​y​ ​o​f​ ​t​h​e​ ​m​e​e​t​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​o​r​ ​s​u​m​m​a​r​y​ ​t​h​a​t​ ​a​p​p​e​a​r​s​ ​i​n​ ​t​h​e​ ​c​a​l​e​n​d​a​r​ ​f​o​r​ ​t​h​i​s​ ​m​e​e​t​i​n​g​ ​o​r​ ​e​v​e​n​t​.
+							 */
+							longDesc: string
+						}
+						start_time: {
+							/**
+							 * S​t​a​r​t​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​n​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​s​t​a​r​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​w​h​e​n​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​s​t​a​r​t​s​.
+							 */
+							longDesc: string
+						}
+						end_time: {
+							/**
+							 * E​n​d​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​n​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​e​n​d​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​w​h​e​n​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​e​n​d​s​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * M​e​e​t​i​n​g​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​a​g​e​n​d​a
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​a​g​e​n​d​a​ ​o​f​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​v​i​s​i​b​l​e​ ​t​o​ ​a​t​t​e​n​d​e​e​s​.
+							 */
+							longDesc: string
+						}
+						attendees: {
+							/**
+							 * A​t​t​e​n​d​e​e​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​a​t​t​e​n​d​e​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​f​o​r​ ​p​e​o​p​l​e​ ​w​h​o​ ​s​h​o​u​l​d​ ​b​e​ ​i​n​v​i​t​e​d​ ​t​o​ ​t​h​e​ ​m​e​e​t​i​n​g​.
+							 */
+							longDesc: string
+						}
+						send_notifications: {
+							/**
+							 * S​e​n​d​ ​N​o​t​i​f​i​c​a​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​n​o​t​i​f​y​ ​a​t​t​e​n​d​e​e​s​ ​a​b​o​u​t​ ​t​h​e​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​t​r​u​e​,​ ​G​o​o​g​l​e​ ​C​a​l​e​n​d​a​r​ ​w​i​l​l​ ​s​e​n​d​ ​e​m​a​i​l​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​a​b​o​u​t​ ​t​h​e​ ​u​p​d​a​t​e​ ​t​o​ ​a​l​l​ ​a​t​t​e​n​d​e​e​s​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​t​r​u​e​.
+							 */
+							longDesc: string
+						}
+						timezone: {
+							/**
+							 * T​i​m​e​ ​Z​o​n​e
+							 */
+							displayName: string
+							/**
+							 * T​i​m​e​ ​z​o​n​e​ ​f​o​r​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​t​i​m​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​m​e​ ​z​o​n​e​ ​i​n​ ​w​h​i​c​h​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​s​t​a​r​t​ ​a​n​d​ ​e​n​d​ ​t​i​m​e​s​ ​a​r​e​ ​s​p​e​c​i​f​i​e​d​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​U​T​C​.
+							 */
+							longDesc: string
+						}
+						location: {
+							/**
+							 * L​o​c​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * P​h​y​s​i​c​a​l​ ​l​o​c​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​m​e​e​t​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​h​y​s​i​c​a​l​ ​l​o​c​a​t​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​w​i​l​l​ ​t​a​k​e​ ​p​l​a​c​e​,​ ​i​f​ ​a​p​p​l​i​c​a​b​l​e​.
+							 */
+							longDesc: string
+						}
+						recurrence_settings: {
+							/**
+							 * R​e​c​u​r​r​e​n​c​e​ ​S​e​t​t​i​n​g​s
+							 */
+							displayName: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​r​e​c​u​r​r​i​n​g​ ​e​v​e​n​t​ ​p​a​t​t​e​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​t​i​n​g​s​ ​t​o​ ​m​a​k​e​ ​t​h​e​ ​e​v​e​n​t​ ​r​e​p​e​a​t​ ​o​n​ ​a​ ​s​c​h​e​d​u​l​e​ ​(​d​a​i​l​y​,​ ​w​e​e​k​l​y​,​ ​m​o​n​t​h​l​y​,​ ​e​t​c​.​)
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									enabled: {
+										/**
+										 * E​n​a​b​l​e​ ​R​e​c​u​r​r​e​n​c​e
+										 */
+										displayName: string
+										/**
+										 * T​u​r​n​ ​o​n​ ​r​e​c​u​r​r​i​n​g​ ​e​v​e​n​t​s
+										 */
+										shortDesc: string
+										/**
+										 * W​h​e​t​h​e​r​ ​t​h​i​s​ ​e​v​e​n​t​ ​s​h​o​u​l​d​ ​r​e​p​e​a​t​ ​o​n​ ​a​ ​s​c​h​e​d​u​l​e​.
+										 */
+										longDesc: string
+									}
+									frequency: {
+										/**
+										 * F​r​e​q​u​e​n​c​y
+										 */
+										displayName: string
+										/**
+										 * H​o​w​ ​o​f​t​e​n​ ​t​h​e​ ​e​v​e​n​t​ ​r​e​p​e​a​t​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​u​n​i​t​ ​o​f​ ​t​i​m​e​ ​b​y​ ​w​h​i​c​h​ ​t​h​e​ ​e​v​e​n​t​ ​r​e​p​e​a​t​s​ ​(​d​a​i​l​y​,​ ​w​e​e​k​l​y​,​ ​m​o​n​t​h​l​y​,​ ​o​r​ ​y​e​a​r​l​y​)​.
+										 */
+										longDesc: string
+									}
+									interval: {
+										/**
+										 * I​n​t​e​r​v​a​l
+										 */
+										displayName: string
+										/**
+										 * R​e​p​e​a​t​ ​e​v​e​r​y​ ​X​ ​u​n​i​t​s
+										 */
+										shortDesc: string
+										/**
+										 * H​o​w​ ​m​a​n​y​ ​u​n​i​t​s​ ​b​e​t​w​e​e​n​ ​o​c​c​u​r​r​e​n​c​e​s​ ​(​e​.​g​.​,​ ​e​v​e​r​y​ ​2​ ​w​e​e​k​s​)​.
+										 */
+										longDesc: string
+									}
+									count: {
+										/**
+										 * C​o​u​n​t
+										 */
+										displayName: string
+										/**
+										 * N​u​m​b​e​r​ ​o​f​ ​o​c​c​u​r​r​e​n​c​e​s
+										 */
+										shortDesc: string
+										/**
+										 * T​o​t​a​l​ ​n​u​m​b​e​r​ ​o​f​ ​t​i​m​e​s​ ​t​h​e​ ​e​v​e​n​t​ ​s​h​o​u​l​d​ ​o​c​c​u​r​.
+										 */
+										longDesc: string
+									}
+									until: {
+										/**
+										 * E​n​d​ ​D​a​t​e
+										 */
+										displayName: string
+										/**
+										 * L​a​s​t​ ​d​a​t​e​ ​o​f​ ​r​e​c​u​r​r​e​n​c​e
+										 */
+										shortDesc: string
+										/**
+										 * D​a​t​e​ ​u​n​t​i​l​ ​w​h​i​c​h​ ​t​h​e​ ​e​v​e​n​t​ ​s​h​o​u​l​d​ ​r​e​p​e​a​t​.
+										 */
+										longDesc: string
+									}
+									by_day: {
+										/**
+										 * D​a​y​s​ ​o​f​ ​W​e​e​k
+										 */
+										displayName: string
+										/**
+										 * W​h​i​c​h​ ​d​a​y​s​ ​o​f​ ​t​h​e​ ​w​e​e​k
+										 */
+										shortDesc: string
+										/**
+										 * F​o​r​ ​w​e​e​k​l​y​ ​r​e​c​u​r​r​e​n​c​e​,​ ​t​h​e​ ​d​a​y​s​ ​o​f​ ​t​h​e​ ​w​e​e​k​ ​o​n​ ​w​h​i​c​h​ ​t​h​e​ ​e​v​e​n​t​ ​o​c​c​u​r​s​.
+										 */
+										longDesc: string
+									}
+									by_month_day: {
+										/**
+										 * D​a​y​s​ ​o​f​ ​M​o​n​t​h
+										 */
+										displayName: string
+										/**
+										 * W​h​i​c​h​ ​d​a​y​s​ ​o​f​ ​t​h​e​ ​m​o​n​t​h
+										 */
+										shortDesc: string
+										/**
+										 * F​o​r​ ​m​o​n​t​h​l​y​ ​r​e​c​u​r​r​e​n​c​e​,​ ​t​h​e​ ​d​a​y​s​ ​o​f​ ​t​h​e​ ​m​o​n​t​h​ ​o​n​ ​w​h​i​c​h​ ​t​h​e​ ​e​v​e​n​t​ ​o​c​c​u​r​s​ ​(​1​-​3​1​)​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				create_event: {
+					/**
+					 * C​r​e​a​t​e​ ​M​e​e​t​i​n​g
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​v​i​d​e​o​ ​c​o​n​f​e​r​e​n​c​e​ ​w​i​t​h​ ​c​a​l​e​n​d​a​r​ ​i​n​t​e​g​r​a​t​i​o​n​.
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​v​i​d​e​o​ ​c​o​n​f​e​r​e​n​c​e​ ​b​y​ ​a​d​d​i​n​g​ ​i​t​ ​t​o​ ​a​ ​G​o​o​g​l​e​ ​C​a​l​e​n​d​a​r​ ​e​v​e​n​t​.​ ​T​h​e​ ​m​e​e​t​i​n​g​ ​i​n​c​l​u​d​e​s​ ​a​ ​u​n​i​q​u​e​ ​l​i​n​k​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​s​h​a​r​e​d​ ​w​i​t​h​ ​p​a​r​t​i​c​i​p​a​n​t​s​ ​a​n​d​ ​o​p​t​i​o​n​s​ ​t​o​ ​c​u​s​t​o​m​i​z​e​ ​s​t​a​r​t​ ​t​i​m​e​,​ ​e​n​d​ ​t​i​m​e​,​ ​a​n​d​ ​a​t​t​e​n​d​e​e​s​.
+					 */
+					longDesc: string
+					options: {
+						recurrence_settings: {
+							/**
+							 * R​e​c​u​r​r​e​n​c​e​ ​S​e​t​t​i​n​g​s
+							 */
+							displayName: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​r​e​c​u​r​r​i​n​g​ ​e​v​e​n​t​ ​p​a​t​t​e​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​t​i​n​g​s​ ​t​o​ ​m​a​k​e​ ​t​h​e​ ​e​v​e​n​t​ ​r​e​p​e​a​t​ ​o​n​ ​a​ ​s​c​h​e​d​u​l​e​ ​(​d​a​i​l​y​,​ ​w​e​e​k​l​y​,​ ​m​o​n​t​h​l​y​,​ ​e​t​c​.​)
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									enabled: {
+										/**
+										 * E​n​a​b​l​e​ ​R​e​c​u​r​r​e​n​c​e
+										 */
+										displayName: string
+										/**
+										 * T​u​r​n​ ​o​n​ ​r​e​c​u​r​r​i​n​g​ ​e​v​e​n​t​s
+										 */
+										shortDesc: string
+										/**
+										 * W​h​e​t​h​e​r​ ​t​h​i​s​ ​e​v​e​n​t​ ​s​h​o​u​l​d​ ​r​e​p​e​a​t​ ​o​n​ ​a​ ​s​c​h​e​d​u​l​e​.
+										 */
+										longDesc: string
+									}
+									frequency: {
+										/**
+										 * F​r​e​q​u​e​n​c​y
+										 */
+										displayName: string
+										/**
+										 * H​o​w​ ​o​f​t​e​n​ ​t​h​e​ ​e​v​e​n​t​ ​r​e​p​e​a​t​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​u​n​i​t​ ​o​f​ ​t​i​m​e​ ​b​y​ ​w​h​i​c​h​ ​t​h​e​ ​e​v​e​n​t​ ​r​e​p​e​a​t​s​ ​(​d​a​i​l​y​,​ ​w​e​e​k​l​y​,​ ​m​o​n​t​h​l​y​,​ ​o​r​ ​y​e​a​r​l​y​)​.
+										 */
+										longDesc: string
+									}
+									interval: {
+										/**
+										 * I​n​t​e​r​v​a​l
+										 */
+										displayName: string
+										/**
+										 * R​e​p​e​a​t​ ​e​v​e​r​y​ ​X​ ​u​n​i​t​s
+										 */
+										shortDesc: string
+										/**
+										 * H​o​w​ ​m​a​n​y​ ​u​n​i​t​s​ ​b​e​t​w​e​e​n​ ​o​c​c​u​r​r​e​n​c​e​s​ ​(​e​.​g​.​,​ ​e​v​e​r​y​ ​2​ ​w​e​e​k​s​)​.
+										 */
+										longDesc: string
+									}
+									count: {
+										/**
+										 * C​o​u​n​t
+										 */
+										displayName: string
+										/**
+										 * N​u​m​b​e​r​ ​o​f​ ​o​c​c​u​r​r​e​n​c​e​s
+										 */
+										shortDesc: string
+										/**
+										 * T​o​t​a​l​ ​n​u​m​b​e​r​ ​o​f​ ​t​i​m​e​s​ ​t​h​e​ ​e​v​e​n​t​ ​s​h​o​u​l​d​ ​o​c​c​u​r​.
+										 */
+										longDesc: string
+									}
+									until: {
+										/**
+										 * E​n​d​ ​D​a​t​e
+										 */
+										displayName: string
+										/**
+										 * L​a​s​t​ ​d​a​t​e​ ​o​f​ ​r​e​c​u​r​r​e​n​c​e
+										 */
+										shortDesc: string
+										/**
+										 * D​a​t​e​ ​u​n​t​i​l​ ​w​h​i​c​h​ ​t​h​e​ ​e​v​e​n​t​ ​s​h​o​u​l​d​ ​r​e​p​e​a​t​.
+										 */
+										longDesc: string
+									}
+									by_day: {
+										/**
+										 * D​a​y​s​ ​o​f​ ​W​e​e​k
+										 */
+										displayName: string
+										/**
+										 * W​h​i​c​h​ ​d​a​y​s​ ​o​f​ ​t​h​e​ ​w​e​e​k
+										 */
+										shortDesc: string
+										/**
+										 * F​o​r​ ​w​e​e​k​l​y​ ​r​e​c​u​r​r​e​n​c​e​,​ ​t​h​e​ ​d​a​y​s​ ​o​f​ ​t​h​e​ ​w​e​e​k​ ​o​n​ ​w​h​i​c​h​ ​t​h​e​ ​e​v​e​n​t​ ​o​c​c​u​r​s​.
+										 */
+										longDesc: string
+									}
+									by_month_day: {
+										/**
+										 * D​a​y​s​ ​o​f​ ​M​o​n​t​h
+										 */
+										displayName: string
+										/**
+										 * W​h​i​c​h​ ​d​a​y​s​ ​o​f​ ​t​h​e​ ​m​o​n​t​h
+										 */
+										shortDesc: string
+										/**
+										 * F​o​r​ ​m​o​n​t​h​l​y​ ​r​e​c​u​r​r​e​n​c​e​,​ ​t​h​e​ ​d​a​y​s​ ​o​f​ ​t​h​e​ ​m​o​n​t​h​ ​o​n​ ​w​h​i​c​h​ ​t​h​e​ ​e​v​e​n​t​ ​o​c​c​u​r​s​ ​(​1​-​3​1​)​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						title: {
+							/**
+							 * M​e​e​t​i​n​g​ ​T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​m​e​e​t​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​s​e​s​s​i​o​n​ ​t​h​a​t​ ​p​a​r​t​i​c​i​p​a​n​t​s​ ​w​i​l​l​ ​s​e​e​ ​i​n​ ​t​h​e​i​r​ ​c​a​l​e​n​d​a​r​ ​a​n​d​ ​m​e​e​t​i​n​g​ ​i​n​v​i​t​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						start_time: {
+							/**
+							 * S​t​a​r​t​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​n​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​s​t​a​r​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​w​h​e​n​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​s​h​o​u​l​d​ ​s​t​a​r​t​.​ ​T​h​i​s​ ​w​i​l​l​ ​b​e​ ​u​s​e​d​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​c​a​l​e​n​d​a​r​ ​e​v​e​n​t​ ​a​n​d​ ​s​c​h​e​d​u​l​e​ ​t​h​e​ ​m​e​e​t​i​n​g​.
+							 */
+							longDesc: string
+						}
+						end_time: {
+							/**
+							 * E​n​d​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​n​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​e​n​d​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​w​h​e​n​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​s​h​o​u​l​d​ ​e​n​d​.​ ​T​h​i​s​ ​w​i​l​l​ ​d​e​f​i​n​e​ ​t​h​e​ ​d​u​r​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​c​a​l​e​n​d​a​r​ ​e​v​e​n​t​.
+							 */
+							longDesc: string
+						}
+						calendar_id: {
+							/**
+							 * C​a​l​e​n​d​a​r
+							 */
+							displayName: string
+							/**
+							 * W​h​i​c​h​ ​c​a​l​e​n​d​a​r​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​C​a​l​e​n​d​a​r​ ​I​D​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​s​h​o​u​l​d​ ​b​e​ ​c​r​e​a​t​e​d​.​ ​B​y​ ​d​e​f​a​u​l​t​,​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​ ​i​n​ ​y​o​u​r​ ​p​r​i​m​a​r​y​ ​c​a​l​e​n​d​a​r​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * M​e​e​t​i​n​g​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​a​g​e​n​d​a
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​v​i​s​i​b​l​e​ ​i​n​ ​t​h​e​ ​c​a​l​e​n​d​a​r​ ​e​v​e​n​t​ ​a​n​d​ ​i​n​v​i​t​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						attendees: {
+							/**
+							 * A​t​t​e​n​d​e​e​s
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​o​f​ ​p​a​r​t​i​c​i​p​a​n​t​s​ ​t​o​ ​i​n​v​i​t​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​f​o​r​ ​p​e​o​p​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​i​n​v​i​t​e​ ​t​o​ ​t​h​e​ ​m​e​e​t​i​n​g​.​ ​T​h​e​y​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​c​a​l​e​n​d​a​r​ ​i​n​v​i​t​a​t​i​o​n​s​ ​t​o​ ​j​o​i​n​.
+							 */
+							longDesc: string
+						}
+						send_notifications: {
+							/**
+							 * S​e​n​d​ ​N​o​t​i​f​i​c​a​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​s​e​n​d​ ​e​m​a​i​l​ ​i​n​v​i​t​a​t​i​o​n​s​ ​t​o​ ​a​t​t​e​n​d​e​e​s
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​a​l​l​ ​a​t​t​e​n​d​e​e​s​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​e​m​a​i​l​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​a​b​o​u​t​ ​t​h​e​ ​m​e​e​t​i​n​g​.​ ​I​f​ ​d​i​s​a​b​l​e​d​,​ ​t​h​e​ ​e​v​e​n​t​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​ ​w​i​t​h​o​u​t​ ​s​e​n​d​i​n​g​ ​e​m​a​i​l​s​.
+							 */
+							longDesc: string
+						}
+						timezone: {
+							/**
+							 * T​i​m​e​z​o​n​e
+							 */
+							displayName: string
+							/**
+							 * T​i​m​e​z​o​n​e​ ​f​o​r​ ​t​h​e​ ​m​e​e​t​i​n​g​ ​t​i​m​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​m​e​z​o​n​e​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​e​ ​s​t​a​r​t​ ​a​n​d​ ​e​n​d​ ​t​i​m​e​s​ ​o​f​ ​t​h​e​ ​m​e​e​t​i​n​g​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​U​T​C​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						location: {
+							/**
+							 * L​o​c​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * P​h​y​s​i​c​a​l​ ​l​o​c​a​t​i​o​n​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​o​p​t​i​o​n​a​l​ ​p​h​y​s​i​c​a​l​ ​l​o​c​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​m​e​e​t​i​n​g​,​ ​w​h​i​c​h​ ​w​i​l​l​ ​b​e​ ​d​i​s​p​l​a​y​e​d​ ​i​n​ ​t​h​e​ ​c​a​l​e​n​d​a​r​ ​e​v​e​n​t​ ​a​l​o​n​g​s​i​d​e​ ​t​h​e​ ​v​i​r​t​u​a​l​ ​m​e​e​t​i​n​g​ ​l​i​n​k​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				cancel_event: {
+					/**
+					 * C​a​n​c​e​l​ ​o​r​ ​D​e​l​e​t​e​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​E​v​e​n​t
+					 */
+					displayName: string
+					/**
+					 * C​a​n​c​e​l​ ​o​r​ ​d​e​l​e​t​e​ ​a​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​e​v​e​n​t​ ​f​r​o​m​ ​a​ ​c​a​l​e​n​d​a​r​.
+					 */
+					shortDesc: string
+					/**
+					 * C​a​n​c​e​l​s​ ​o​r​ ​p​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​s​ ​a​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​e​v​e​n​t​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​c​a​l​e​n​d​a​r​,​ ​w​i​t​h​ ​o​p​t​i​o​n​s​ ​f​o​r​ ​h​a​n​d​l​i​n​g​ ​r​e​c​u​r​r​i​n​g​ ​e​v​e​n​t​s​ ​a​n​d​ ​s​e​n​d​i​n​g​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​t​o​ ​a​t​t​e​n​d​e​e​s​.
+					 */
+					longDesc: string
+					options: {
+						action: {
+							/**
+							 * A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​a​c​t​i​o​n​ ​t​o​ ​p​e​r​f​o​r​m
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​o​ ​m​a​r​k​ ​t​h​e​ ​e​v​e​n​t​ ​a​s​ ​c​a​n​c​e​l​l​e​d​ ​o​r​ ​t​o​ ​p​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​i​t​ ​f​r​o​m​ ​t​h​e​ ​c​a​l​e​n​d​a​r​.
+							 */
+							longDesc: string
+						}
+						event_id: {
+							/**
+							 * E​v​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​t​o​ ​c​a​n​c​e​l​ ​o​r​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​C​a​l​e​n​d​a​r​ ​e​v​e​n​t​ ​t​o​ ​c​a​n​c​e​l​ ​o​r​ ​d​e​l​e​t​e​.
+							 */
+							longDesc: string
+						}
+						calendar_id: {
+							/**
+							 * C​a​l​e​n​d​a​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​c​a​l​e​n​d​a​r​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​e​v​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​C​a​l​e​n​d​a​r​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​e​v​e​n​t​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​p​r​i​m​a​r​y​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						send_notifications: {
+							/**
+							 * S​e​n​d​ ​N​o​t​i​f​i​c​a​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * N​o​t​i​f​y​ ​a​t​t​e​n​d​e​e​s​ ​a​b​o​u​t​ ​t​h​e​ ​c​a​n​c​e​l​l​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​a​t​t​e​n​d​e​e​s​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​a​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​e​v​e​n​t​ ​c​a​n​c​e​l​l​a​t​i​o​n​ ​o​r​ ​d​e​l​e​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						cancel_reason: {
+							/**
+							 * C​a​n​c​e​l​l​a​t​i​o​n​ ​R​e​a​s​o​n
+							 */
+							displayName: string
+							/**
+							 * R​e​a​s​o​n​ ​f​o​r​ ​c​a​n​c​e​l​l​i​n​g​ ​t​h​e​ ​e​v​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​m​e​s​s​a​g​e​ ​e​x​p​l​a​i​n​i​n​g​ ​w​h​y​ ​t​h​e​ ​e​v​e​n​t​ ​i​s​ ​b​e​i​n​g​ ​c​a​n​c​e​l​l​e​d​.​ ​W​i​l​l​ ​b​e​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​e​v​e​n​t​ ​d​e​s​c​r​i​p​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						recurring_event_handling: {
+							/**
+							 * R​e​c​u​r​r​i​n​g​ ​E​v​e​n​t​ ​H​a​n​d​l​i​n​g
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​h​a​n​d​l​e​ ​r​e​c​u​r​r​i​n​g​ ​e​v​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​i​e​s​ ​h​o​w​ ​t​o​ ​h​a​n​d​l​e​ ​r​e​c​u​r​r​i​n​g​ ​e​v​e​n​t​s​:​ ​c​a​n​c​e​l​/​d​e​l​e​t​e​ ​j​u​s​t​ ​t​h​i​s​ ​i​n​s​t​a​n​c​e​,​ ​a​l​l​ ​f​u​t​u​r​e​ ​i​n​s​t​a​n​c​e​s​,​ ​o​r​ ​a​l​l​ ​i​n​s​t​a​n​c​e​s​ ​o​f​ ​t​h​e​ ​r​e​c​u​r​r​i​n​g​ ​e​v​e​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_event: {
+					/**
+					 * G​e​t​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​E​v​e​n​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​e​v​e​n​t​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​a​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​e​v​e​n​t​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​c​a​l​e​n​d​a​r​,​ ​i​n​c​l​u​d​i​n​g​ ​m​e​e​t​i​n​g​ ​l​i​n​k​s​,​ ​a​t​t​e​n​d​e​e​s​,​ ​s​c​h​e​d​u​l​e​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​n​d​ ​r​e​c​u​r​r​e​n​c​e​ ​d​e​t​a​i​l​s​.
+					 */
+					longDesc: string
+					options: {
+						event_id: {
+							/**
+							 * E​v​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​C​a​l​e​n​d​a​r​ ​e​v​e​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+						calendar_id: {
+							/**
+							 * C​a​l​e​n​d​a​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​c​a​l​e​n​d​a​r​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​e​v​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​C​a​l​e​n​d​a​r​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​e​v​e​n​t​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​p​r​i​m​a​r​y​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				search_events: {
+					/**
+					 * S​e​a​r​c​h​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​E​v​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​e​v​e​n​t​s​ ​i​n​ ​a​ ​c​a​l​e​n​d​a​r​ ​w​i​t​h​ ​v​a​r​i​o​u​s​ ​f​i​l​t​e​r​i​n​g​ ​o​p​t​i​o​n​s​.
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​e​s​ ​f​o​r​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​e​v​e​n​t​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​c​a​l​e​n​d​a​r​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​d​a​t​e​ ​r​a​n​g​e​,​ ​s​u​m​m​a​r​y​ ​t​e​x​t​,​ ​a​n​d​ ​o​t​h​e​r​ ​c​r​i​t​e​r​i​a​.​ ​R​e​t​u​r​n​s​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​e​v​e​n​t​s​ ​m​a​t​c​h​i​n​g​ ​t​h​e​ ​s​e​a​r​c​h​ ​p​a​r​a​m​e​t​e​r​s​.
+					 */
+					longDesc: string
+					options: {
+						calendar_id: {
+							/**
+							 * C​a​l​e​n​d​a​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​c​a​l​e​n​d​a​r​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​C​a​l​e​n​d​a​r​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​e​v​e​n​t​s​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​p​r​i​m​a​r​y​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​e​v​e​n​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​e​v​e​n​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​s​p​o​n​s​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.
+							 */
+							longDesc: string
+						}
+						page_token: {
+							/**
+							 * P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​o​k​e​n​ ​s​p​e​c​i​f​y​i​n​g​ ​w​h​i​c​h​ ​r​e​s​u​l​t​ ​p​a​g​e​ ​t​o​ ​r​e​t​u​r​n​.​ ​U​s​e​d​ ​f​o​r​ ​p​a​g​i​n​a​t​i​n​g​ ​t​h​r​o​u​g​h​ ​l​a​r​g​e​ ​r​e​s​u​l​t​ ​s​e​t​s​.
+							 */
+							longDesc: string
+						}
+						date_from: {
+							/**
+							 * S​t​a​r​t​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * S​t​a​r​t​ ​d​a​t​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​e​v​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * R​e​t​u​r​n​ ​o​n​l​y​ ​e​v​e​n​t​s​ ​t​h​a​t​ ​s​t​a​r​t​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						date_to: {
+							/**
+							 * E​n​d​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * E​n​d​ ​d​a​t​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​e​v​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * R​e​t​u​r​n​ ​o​n​l​y​ ​e​v​e​n​t​s​ ​t​h​a​t​ ​e​n​d​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						query: {
+							/**
+							 * Q​u​e​r​y​ ​T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​t​o​ ​s​e​a​r​c​h​ ​i​n​ ​e​v​e​n​t​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * F​r​e​e​ ​t​e​x​t​ ​s​e​a​r​c​h​ ​t​e​r​m​s​ ​t​o​ ​f​i​n​d​ ​e​v​e​n​t​s​ ​t​h​a​t​ ​m​a​t​c​h​ ​t​h​e​s​e​ ​t​e​r​m​s​ ​i​n​ ​t​h​e​ ​f​o​l​l​o​w​i​n​g​ ​f​i​e​l​d​s​:​ ​s​u​m​m​a​r​y​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​l​o​c​a​t​i​o​n​,​ ​a​t​t​e​n​d​e​e​'​s​ ​d​i​s​p​l​a​y​N​a​m​e​,​ ​a​t​t​e​n​d​e​e​'​s​ ​e​m​a​i​l​,​ ​o​r​g​a​n​i​z​e​r​'​s​ ​d​i​s​p​l​a​y​N​a​m​e​,​ ​o​r​g​a​n​i​z​e​r​'​s​ ​e​m​a​i​l​,​ ​w​o​r​k​i​n​g​L​o​c​a​t​i​o​n​P​r​o​p​e​r​t​i​e​s​.​o​f​f​i​c​e​L​o​c​a​t​i​o​n​.​b​u​i​l​d​i​n​g​I​d​,​ ​w​o​r​k​i​n​g​L​o​c​a​t​i​o​n​P​r​o​p​e​r​t​i​e​s​.​o​f​f​i​c​e​L​o​c​a​t​i​o​n​.​d​e​s​k​I​d​,​ ​w​o​r​k​i​n​g​L​o​c​a​t​i​o​n​P​r​o​p​e​r​t​i​e​s​.​o​f​f​i​c​e​L​o​c​a​t​i​o​n​.​l​a​b​e​l​,​ ​w​o​r​k​i​n​g​L​o​c​a​t​i​o​n​P​r​o​p​e​r​t​i​e​s​.​c​u​s​t​o​m​L​o​c​a​t​i​o​n​.​l​a​b​e​l
+							 */
+							longDesc: string
+						}
+						include_deleted: {
+							/**
+							 * I​n​c​l​u​d​e​ ​D​e​l​e​t​e​d
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​d​e​l​e​t​e​d​ ​e​v​e​n​t​s​ ​i​n​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​d​e​l​e​t​e​d​ ​e​v​e​n​t​s​ ​w​i​l​l​ ​b​e​ ​i​n​c​l​u​d​e​d​ ​i​n​ ​t​h​e​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​f​a​l​s​e​.
+							 */
+							longDesc: string
+						}
+						order_by: {
+							/**
+							 * O​r​d​e​r​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * D​e​t​e​r​m​i​n​e​s​ ​h​o​w​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​ ​a​r​e​ ​o​r​d​e​r​e​d​.​ ​C​a​n​ ​b​e​ ​s​o​r​t​e​d​ ​b​y​ ​s​t​a​r​t​ ​t​i​m​e​ ​o​r​ ​l​a​s​t​ ​u​p​d​a​t​e​ ​t​i​m​e​.
+							 */
+							longDesc: string
+						}
+						expand_recurring_events: {
+							/**
+							 * E​x​p​a​n​d​ ​R​e​c​u​r​r​i​n​g​ ​E​v​e​n​t​s
+							 */
+							displayName: string
+							/**
+							 * E​x​p​a​n​d​ ​r​e​c​u​r​r​i​n​g​ ​e​v​e​n​t​s​ ​i​n​t​o​ ​i​n​d​i​v​i​d​u​a​l​ ​i​n​s​t​a​n​c​e​s
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​r​e​c​u​r​r​i​n​g​ ​e​v​e​n​t​s​ ​w​i​l​l​ ​b​e​ ​e​x​p​a​n​d​e​d​ ​i​n​t​o​ ​i​n​d​i​v​i​d​u​a​l​ ​i​n​s​t​a​n​c​e​s​.​ ​I​f​ ​d​i​s​a​b​l​e​d​,​ ​o​n​l​y​ ​t​h​e​ ​m​a​s​t​e​r​ ​r​e​c​u​r​r​i​n​g​ ​e​v​e​n​t​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​t​r​u​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		GoogleForms: {
 			/**
 			 * G​o​o​g​l​e​ ​F​o​r​m​s
@@ -27070,6 +27902,838 @@ export type TranslationFunctions = {
 							 * Second Option
 							 */
 							displayName: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		GoogleMeet: {
+			/**
+			 * Google Meet
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect with Google Meet to manage your meetings and events
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Integrate with Google Meet to manage your meetings and events. This integration allows you to perform actions and respond to events in your Google Meet account, enabling you to automate meeting management and scheduling workflows.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				update_event: {
+					/**
+					 * Update Google Meet Meeting
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing Google Meet meeting or calendar event.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates an existing Google Meet conference or Google Calendar event. You can modify various properties including title, times, description, location, attendees, and more. Calendar updates can optionally notify attendees.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						event_id: {
+							/**
+							 * Event ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the meeting to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Calendar event or Google Meet meeting to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						calendar_id: {
+							/**
+							 * Calendar ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The calendar containing the meeting
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the Google Calendar containing the meeting. Defaults to "primary" which is the user's primary calendar.
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The title or summary of the meeting
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The title or summary that appears in the calendar for this meeting or event.
+							 */
+							longDesc: () => LocalizedString
+						}
+						start_time: {
+							/**
+							 * Start Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * When the meeting starts
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date and time when the meeting starts.
+							 */
+							longDesc: () => LocalizedString
+						}
+						end_time: {
+							/**
+							 * End Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * When the meeting ends
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date and time when the meeting ends.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Meeting description or agenda
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The description or agenda of the meeting that will be visible to attendees.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attendees: {
+							/**
+							 * Attendees
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of attendee email addresses
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of email addresses for people who should be invited to the meeting.
+							 */
+							longDesc: () => LocalizedString
+						}
+						send_notifications: {
+							/**
+							 * Send Notifications
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to notify attendees about the update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If true, Google Calendar will send email notifications about the update to all attendees. Defaults to true.
+							 */
+							longDesc: () => LocalizedString
+						}
+						timezone: {
+							/**
+							 * Time Zone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Time zone for the meeting times
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The time zone in which the meeting start and end times are specified. Defaults to UTC.
+							 */
+							longDesc: () => LocalizedString
+						}
+						location: {
+							/**
+							 * Location
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Physical location for the meeting
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The physical location where the meeting will take place, if applicable.
+							 */
+							longDesc: () => LocalizedString
+						}
+						recurrence_settings: {
+							/**
+							 * Recurrence Settings
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Configure recurring event pattern
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Settings to make the event repeat on a schedule (daily, weekly, monthly, etc.)
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									enabled: {
+										/**
+										 * Enable Recurrence
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Turn on recurring events
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Whether this event should repeat on a schedule.
+										 */
+										longDesc: () => LocalizedString
+									}
+									frequency: {
+										/**
+										 * Frequency
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * How often the event repeats
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The unit of time by which the event repeats (daily, weekly, monthly, or yearly).
+										 */
+										longDesc: () => LocalizedString
+									}
+									interval: {
+										/**
+										 * Interval
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Repeat every X units
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * How many units between occurrences (e.g., every 2 weeks).
+										 */
+										longDesc: () => LocalizedString
+									}
+									count: {
+										/**
+										 * Count
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Number of occurrences
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Total number of times the event should occur.
+										 */
+										longDesc: () => LocalizedString
+									}
+									until: {
+										/**
+										 * End Date
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Last date of recurrence
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Date until which the event should repeat.
+										 */
+										longDesc: () => LocalizedString
+									}
+									by_day: {
+										/**
+										 * Days of Week
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Which days of the week
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * For weekly recurrence, the days of the week on which the event occurs.
+										 */
+										longDesc: () => LocalizedString
+									}
+									by_month_day: {
+										/**
+										 * Days of Month
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Which days of the month
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * For monthly recurrence, the days of the month on which the event occurs (1-31).
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				create_event: {
+					/**
+					 * Create Meeting
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new Google Meet video conference with calendar integration.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new Google Meet video conference by adding it to a Google Calendar event. The meeting includes a unique link that can be shared with participants and options to customize start time, end time, and attendees.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						recurrence_settings: {
+							/**
+							 * Recurrence Settings
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Configure recurring event pattern
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Settings to make the event repeat on a schedule (daily, weekly, monthly, etc.)
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									enabled: {
+										/**
+										 * Enable Recurrence
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Turn on recurring events
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Whether this event should repeat on a schedule.
+										 */
+										longDesc: () => LocalizedString
+									}
+									frequency: {
+										/**
+										 * Frequency
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * How often the event repeats
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The unit of time by which the event repeats (daily, weekly, monthly, or yearly).
+										 */
+										longDesc: () => LocalizedString
+									}
+									interval: {
+										/**
+										 * Interval
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Repeat every X units
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * How many units between occurrences (e.g., every 2 weeks).
+										 */
+										longDesc: () => LocalizedString
+									}
+									count: {
+										/**
+										 * Count
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Number of occurrences
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Total number of times the event should occur.
+										 */
+										longDesc: () => LocalizedString
+									}
+									until: {
+										/**
+										 * End Date
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Last date of recurrence
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Date until which the event should repeat.
+										 */
+										longDesc: () => LocalizedString
+									}
+									by_day: {
+										/**
+										 * Days of Week
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Which days of the week
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * For weekly recurrence, the days of the week on which the event occurs.
+										 */
+										longDesc: () => LocalizedString
+									}
+									by_month_day: {
+										/**
+										 * Days of Month
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Which days of the month
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * For monthly recurrence, the days of the month on which the event occurs (1-31).
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						title: {
+							/**
+							 * Meeting Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The title of the meeting
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A descriptive title for the Google Meet session that participants will see in their calendar and meeting invitation.
+							 */
+							longDesc: () => LocalizedString
+						}
+						start_time: {
+							/**
+							 * Start Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * When the meeting starts
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date and time when the meeting should start. This will be used to create the calendar event and schedule the meeting.
+							 */
+							longDesc: () => LocalizedString
+						}
+						end_time: {
+							/**
+							 * End Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * When the meeting ends
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date and time when the meeting should end. This will define the duration of the calendar event.
+							 */
+							longDesc: () => LocalizedString
+						}
+						calendar_id: {
+							/**
+							 * Calendar
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Which calendar to create the meeting in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Google Calendar ID where the meeting should be created. By default, the meeting will be created in your primary calendar.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Meeting description or agenda
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Additional details about the meeting that will be visible in the calendar event and invitation.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attendees: {
+							/**
+							 * Attendees
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email addresses of participants to invite
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of email addresses for people you want to invite to the meeting. They will receive calendar invitations to join.
+							 */
+							longDesc: () => LocalizedString
+						}
+						send_notifications: {
+							/**
+							 * Send Notifications
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to send email invitations to attendees
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, all attendees will receive email notifications about the meeting. If disabled, the event will be created without sending emails.
+							 */
+							longDesc: () => LocalizedString
+						}
+						timezone: {
+							/**
+							 * Timezone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Timezone for the meeting times
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The timezone to use for the start and end times of the meeting. Defaults to UTC if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						location: {
+							/**
+							 * Location
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Physical location (optional)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An optional physical location for the meeting, which will be displayed in the calendar event alongside the virtual meeting link.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				cancel_event: {
+					/**
+					 * Cancel or Delete Google Meet Event
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Cancel or delete a Google Meet event from a calendar.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Cancels or permanently deletes a Google Meet event from a specified calendar, with options for handling recurring events and sending notifications to attendees.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						action: {
+							/**
+							 * Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of action to perform
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify whether to mark the event as cancelled or to permanently delete it from the calendar.
+							 */
+							longDesc: () => LocalizedString
+						}
+						event_id: {
+							/**
+							 * Event ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of the event to cancel or delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Calendar event to cancel or delete.
+							 */
+							longDesc: () => LocalizedString
+						}
+						calendar_id: {
+							/**
+							 * Calendar ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of the calendar containing the event
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the Google Calendar containing the event. Defaults to "primary" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						send_notifications: {
+							/**
+							 * Send Notifications
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Notify attendees about the cancellation
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, attendees will receive a notification about the event cancellation or deletion.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cancel_reason: {
+							/**
+							 * Cancellation Reason
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Reason for cancelling the event
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional message explaining why the event is being cancelled. Will be added to the event description.
+							 */
+							longDesc: () => LocalizedString
+						}
+						recurring_event_handling: {
+							/**
+							 * Recurring Event Handling
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to handle recurring events
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specifies how to handle recurring events: cancel/delete just this instance, all future instances, or all instances of the recurring event.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_event: {
+					/**
+					 * Get Google Meet Event
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific Google Meet event.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches comprehensive details about a Google Meet event from a specified calendar, including meeting links, attendees, schedule information, and recurrence details.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						event_id: {
+							/**
+							 * Event ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of the event to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Calendar event to retrieve details for.
+							 */
+							longDesc: () => LocalizedString
+						}
+						calendar_id: {
+							/**
+							 * Calendar ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of the calendar containing the event
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the Google Calendar containing the event. Defaults to "primary" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				search_events: {
+					/**
+					 * Search Google Meet Events
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for Google Meet events in a calendar with various filtering options.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Searches for Google Meet events in a specified calendar with support for filtering by date range, summary text, and other criteria. Returns a paginated list of events matching the search parameters.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						calendar_id: {
+							/**
+							 * Calendar ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of the calendar to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the Google Calendar to search for events. Defaults to "primary" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of events to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of events to return in a single response. Default is 50.
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_token: {
+							/**
+							 * Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Token specifying which result page to return. Used for paginating through large result sets.
+							 */
+							longDesc: () => LocalizedString
+						}
+						date_from: {
+							/**
+							 * Start Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Start date for filtering events
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Return only events that start on or after this date.
+							 */
+							longDesc: () => LocalizedString
+						}
+						date_to: {
+							/**
+							 * End Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * End date for filtering events
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Return only events that end on or before this date.
+							 */
+							longDesc: () => LocalizedString
+						}
+						query: {
+							/**
+							 * Query Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text to search in event field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Free text search terms to find events that match these terms in the following fields: summary, description, location, attendee's displayName, attendee's email, organizer's displayName, organizer's email, workingLocationProperties.officeLocation.buildingId, workingLocationProperties.officeLocation.deskId, workingLocationProperties.officeLocation.label, workingLocationProperties.customLocation.label
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_deleted: {
+							/**
+							 * Include Deleted
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include deleted events in results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, deleted events will be included in the search results. Default is false.
+							 */
+							longDesc: () => LocalizedString
+						}
+						order_by: {
+							/**
+							 * Order By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to sort the results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Determines how search results are ordered. Can be sorted by start time or last update time.
+							 */
+							longDesc: () => LocalizedString
+						}
+						expand_recurring_events: {
+							/**
+							 * Expand Recurring Events
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Expand recurring events into individual instances
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, recurring events will be expanded into individual instances. If disabled, only the master recurring event will be returned. Default is true.
+							 */
+							longDesc: () => LocalizedString
 						}
 					}
 				}
