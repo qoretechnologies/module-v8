@@ -170,6 +170,332 @@ type RootTranslation = {
 				}
 			}
 		}
+		GoogleMeet: {
+			/**
+			 * G​o​o​g​l​e​ ​M​e​e​t
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​w​i​t​h​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​m​e​e​t​i​n​g​s​ ​a​n​d​ ​e​v​e​n​t​s
+			 */
+			shortDesc: string
+			/**
+			 * I​n​t​e​g​r​a​t​e​ ​w​i​t​h​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​m​e​e​t​i​n​g​s​ ​a​n​d​ ​e​v​e​n​t​s​.​ ​T​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​p​e​r​f​o​r​m​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​r​e​s​p​o​n​d​ ​t​o​ ​e​v​e​n​t​s​ ​i​n​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​a​c​c​o​u​n​t​,​ ​e​n​a​b​l​i​n​g​ ​y​o​u​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​m​e​e​t​i​n​g​ ​m​a​n​a​g​e​m​e​n​t​ ​a​n​d​ ​s​c​h​e​d​u​l​i​n​g​ ​w​o​r​k​f​l​o​w​s​.
+			 */
+			longDesc: string
+			actions: {
+				list_conferences: {
+					/**
+					 * L​i​s​t​ ​C​o​n​f​e​r​e​n​c​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​s​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​ ​o​p​t​i​o​n​s​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​s​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​m​e​e​t​i​n​g​ ​c​o​d​e​,​ ​t​i​m​e​ ​r​a​n​g​e​,​ ​a​n​d​ ​s​p​a​c​e​ ​n​a​m​e​.​ ​R​e​t​u​r​n​s​ ​c​o​n​f​e​r​e​n​c​e​ ​d​e​t​a​i​l​s​ ​i​n​c​l​u​d​i​n​g​ ​I​D​,​ ​s​t​a​r​t​ ​t​i​m​e​,​ ​e​n​d​ ​t​i​m​e​,​ ​e​x​p​i​r​a​t​i​o​n​ ​t​i​m​e​,​ ​a​n​d​ ​s​p​a​c​e​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​f​e​r​e​n​c​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​f​e​r​e​n​c​e​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​s​p​o​n​s​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.
+							 */
+							longDesc: string
+						}
+						nextPageToken: {
+							/**
+							 * N​e​x​t​ ​P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​t​o​k​e​n​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​ ​t​h​a​t​ ​a​l​l​o​w​s​ ​r​e​t​r​i​e​v​i​n​g​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​f​o​r​ ​t​h​e​ ​f​i​r​s​t​ ​r​e​q​u​e​s​t​.
+							 */
+							longDesc: string
+						}
+						meeting_code: {
+							/**
+							 * M​e​e​t​i​n​g​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​m​e​e​t​i​n​g​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​r​e​s​u​l​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​c​o​n​f​e​r​e​n​c​e​s​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​m​e​e​t​i​n​g​ ​c​o​d​e​.
+							 */
+							longDesc: string
+						}
+						start_time: {
+							/**
+							 * S​t​a​r​t​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​t​a​r​t​ ​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​r​e​s​u​l​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​c​o​n​f​e​r​e​n​c​e​s​ ​t​h​a​t​ ​s​t​a​r​t​e​d​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​.
+							 */
+							longDesc: string
+						}
+						end_time: {
+							/**
+							 * E​n​d​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​e​n​d​ ​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​r​e​s​u​l​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​c​o​n​f​e​r​e​n​c​e​s​ ​t​h​a​t​ ​e​n​d​e​d​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​.
+							 */
+							longDesc: string
+						}
+						space_name: {
+							/**
+							 * S​p​a​c​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​p​a​c​e​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​r​e​s​u​l​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​c​o​n​f​e​r​e​n​c​e​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​p​a​c​e​ ​n​a​m​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_conference_participants: {
+					/**
+					 * G​e​t​ ​C​o​n​f​e​r​e​n​c​e​ ​P​a​r​t​i​c​i​p​a​n​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​p​a​r​t​i​c​i​p​a​n​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​p​a​r​t​i​c​i​p​a​n​t​s​ ​w​h​o​ ​a​t​t​e​n​d​e​d​ ​a​ ​s​p​e​c​i​f​i​c​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​.​ ​C​a​n​ ​f​i​l​t​e​r​ ​p​a​r​t​i​c​i​p​a​n​t​s​ ​b​y​ ​s​e​a​r​c​h​ ​t​e​r​m​ ​a​n​d​ ​i​n​c​l​u​d​e​ ​t​i​m​e​ ​s​p​e​n​t​ ​m​e​t​r​i​c​s​.
+					 */
+					longDesc: string
+					options: {
+						conference: {
+							/**
+							 * C​o​n​f​e​r​e​n​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​p​a​r​t​i​c​i​p​a​n​t​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​r​ ​m​e​e​t​i​n​g​ ​c​o​d​e​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​p​a​r​t​i​c​i​p​a​n​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​.​ ​C​a​n​ ​b​e​ ​e​i​t​h​e​r​ ​a​ ​c​o​n​f​e​r​e​n​c​e​ ​I​D​ ​o​r​ ​a​ ​m​e​e​t​i​n​g​ ​c​o​d​e​ ​i​n​ ​t​h​e​ ​f​o​r​m​a​t​ ​X​X​X​-​X​X​X​X​-​X​X​X​.
+							 */
+							longDesc: string
+						}
+						search: {
+							/**
+							 * S​e​a​r​c​h
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​p​a​r​t​i​c​i​p​a​n​t​s​ ​b​y​ ​s​e​a​r​c​h​ ​t​e​r​m
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​s​e​a​r​c​h​ ​t​e​r​m​ ​t​o​ ​f​i​l​t​e​r​ ​p​a​r​t​i​c​i​p​a​n​t​s​ ​b​y​ ​n​a​m​e​ ​o​r​ ​o​t​h​e​r​ ​a​t​t​r​i​b​u​t​e​s​.​ ​O​n​l​y​ ​p​a​r​t​i​c​i​p​a​n​t​s​ ​m​a​t​c​h​i​n​g​ ​t​h​e​ ​s​e​a​r​c​h​ ​t​e​r​m​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+						include_time_spent: {
+							/**
+							 * I​n​c​l​u​d​e​ ​T​i​m​e​ ​S​p​e​n​t
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​p​a​r​t​i​c​i​p​a​n​t​ ​t​i​m​e​ ​m​e​t​r​i​c​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​i​n​c​l​u​d​e​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​h​o​w​ ​l​o​n​g​ ​e​a​c​h​ ​p​a​r​t​i​c​i​p​a​n​t​ ​s​p​e​n​t​ ​i​n​ ​t​h​e​ ​c​o​n​f​e​r​e​n​c​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​t​r​u​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_conference_recordings: {
+					/**
+					 * G​e​t​ ​C​o​n​f​e​r​e​n​c​e​ ​R​e​c​o​r​d​i​n​g​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​r​e​c​o​r​d​i​n​g​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​l​l​ ​a​v​a​i​l​a​b​l​e​ ​r​e​c​o​r​d​i​n​g​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​.​ ​R​e​t​u​r​n​s​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​e​a​c​h​ ​r​e​c​o​r​d​i​n​g​ ​i​n​c​l​u​d​i​n​g​ ​s​t​a​t​e​,​ ​t​i​m​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​n​d​ ​s​t​o​r​a​g​e​ ​l​o​c​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						conference: {
+							/**
+							 * C​o​n​f​e​r​e​n​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​r​e​c​o​r​d​i​n​g​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​r​ ​m​e​e​t​i​n​g​ ​c​o​d​e​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​r​e​c​o​r​d​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​.​ ​C​a​n​ ​b​e​ ​e​i​t​h​e​r​ ​a​ ​c​o​n​f​e​r​e​n​c​e​ ​I​D​ ​o​r​ ​a​ ​m​e​e​t​i​n​g​ ​c​o​d​e​ ​i​n​ ​t​h​e​ ​f​o​r​m​a​t​ ​X​X​X​-​X​X​X​X​-​X​X​X​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_conference_transcript: {
+					/**
+					 * G​e​t​ ​C​o​n​f​e​r​e​n​c​e​ ​T​r​a​n​s​c​r​i​p​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​r​a​n​s​c​r​i​p​t​ ​f​r​o​m​ ​a​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​t​h​e​ ​d​e​t​a​i​l​e​d​ ​c​o​n​t​e​n​t​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​r​a​n​s​c​r​i​p​t​ ​c​r​e​a​t​e​d​ ​f​o​r​ ​a​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​.​ ​R​e​q​u​i​r​e​s​ ​e​i​t​h​e​r​ ​a​ ​c​o​n​f​e​r​e​n​c​e​ ​I​D​ ​a​n​d​ ​t​r​a​n​s​c​r​i​p​t​ ​I​D​ ​o​r​ ​j​u​s​t​ ​a​ ​t​r​a​n​s​c​r​i​p​t​ ​I​D​ ​i​f​ ​i​t​ ​i​s​ ​a​l​r​e​a​d​y​ ​k​n​o​w​n​.
+					 */
+					longDesc: string
+					options: {
+						conference: {
+							/**
+							 * C​o​n​f​e​r​e​n​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​r​a​n​s​c​r​i​p​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​r​ ​m​e​e​t​i​n​g​ ​c​o​d​e​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​t​r​a​n​s​c​r​i​p​t​.​ ​C​a​n​ ​b​e​ ​e​i​t​h​e​r​ ​a​ ​c​o​n​f​e​r​e​n​c​e​ ​I​D​ ​o​r​ ​a​ ​m​e​e​t​i​n​g​ ​c​o​d​e​ ​i​n​ ​t​h​e​ ​f​o​r​m​a​t​ ​X​X​X​-​X​X​X​X​-​X​X​X​.​ ​O​p​t​i​o​n​a​l​ ​i​f​ ​t​h​e​ ​t​r​a​n​s​c​r​i​p​t​ ​I​D​ ​i​s​ ​a​l​r​e​a​d​y​ ​k​n​o​w​n​.
+							 */
+							longDesc: string
+						}
+						transcript: {
+							/**
+							 * T​r​a​n​s​c​r​i​p​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​r​a​n​s​c​r​i​p​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​t​r​a​n​s​c​r​i​p​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​r​o​m​ ​t​h​e​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				conference_ended: {
+					/**
+					 * C​o​n​f​e​r​e​n​c​e​ ​E​n​d​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​ ​h​a​s​ ​e​n​d​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​c​o​n​f​e​r​e​n​c​e​ ​h​a​s​ ​e​n​d​e​d​.​ ​R​e​t​u​r​n​s​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​c​o​m​p​l​e​t​e​d​ ​c​o​n​f​e​r​e​n​c​e​ ​i​n​c​l​u​d​i​n​g​ ​n​a​m​e​,​ ​s​t​a​r​t​ ​t​i​m​e​,​ ​e​n​d​ ​t​i​m​e​,​ ​e​x​p​i​r​a​t​i​o​n​ ​t​i​m​e​,​ ​a​n​d​ ​s​p​a​c​e​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+					}
+				}
+				recording_created: {
+					/**
+					 * R​e​c​o​r​d​i​n​g​ ​C​r​e​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​i​n​g​ ​i​s​ ​c​r​e​a​t​e​d​ ​f​o​r​ ​a​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​i​n​g​ ​h​a​s​ ​b​e​e​n​ ​g​e​n​e​r​a​t​e​d​.​ ​R​e​t​u​r​n​s​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​r​e​c​o​r​d​i​n​g​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​n​a​m​e​,​ ​s​t​a​t​e​,​ ​t​i​m​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​n​d​ ​D​r​i​v​e​ ​d​e​s​t​i​n​a​t​i​o​n​ ​d​e​t​a​i​l​s​.
+					 */
+					longDesc: string
+					options: {
+						conference: {
+							/**
+							 * C​o​n​f​e​r​e​n​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​r​ ​m​e​e​t​i​n​g​ ​c​o​d​e​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​r​e​c​o​r​d​i​n​g​s​.​ ​C​a​n​ ​b​e​ ​e​i​t​h​e​r​ ​a​ ​c​o​n​f​e​r​e​n​c​e​ ​I​D​ ​o​r​ ​a​ ​m​e​e​t​i​n​g​ ​c​o​d​e​ ​i​n​ ​t​h​e​ ​f​o​r​m​a​t​ ​X​X​X​-​X​X​X​X​-​X​X​X​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				transcript_created: {
+					/**
+					 * T​r​a​n​s​c​r​i​p​t​ ​C​r​e​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​r​a​n​s​c​r​i​p​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​f​o​r​ ​a​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​r​a​n​s​c​r​i​p​t​ ​h​a​s​ ​b​e​e​n​ ​g​e​n​e​r​a​t​e​d​.​ ​R​e​t​u​r​n​s​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​t​r​a​n​s​c​r​i​p​t​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​n​a​m​e​,​ ​s​t​a​t​e​,​ ​t​i​m​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​n​d​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​d​e​s​t​i​n​a​t​i​o​n​ ​d​e​t​a​i​l​s​.
+					 */
+					longDesc: string
+					options: {
+						conference: {
+							/**
+							 * C​o​n​f​e​r​e​n​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​r​ ​m​e​e​t​i​n​g​ ​c​o​d​e​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​t​r​a​n​s​c​r​i​p​t​s​.​ ​C​a​n​ ​b​e​ ​e​i​t​h​e​r​ ​a​ ​c​o​n​f​e​r​e​n​c​e​ ​I​D​ ​o​r​ ​a​ ​m​e​e​t​i​n​g​ ​c​o​d​e​ ​i​n​ ​t​h​e​ ​f​o​r​m​a​t​ ​X​X​X​-​X​X​X​X​-​X​X​X​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		GoogleForms: {
 			/**
 			 * G​o​o​g​l​e​ ​F​o​r​m​s
@@ -27070,6 +27396,332 @@ export type TranslationFunctions = {
 							 * Second Option
 							 */
 							displayName: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		GoogleMeet: {
+			/**
+			 * Google Meet
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect with Google Meet to manage your meetings and events
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Integrate with Google Meet to manage your meetings and events. This integration allows you to perform actions and respond to events in your Google Meet account, enabling you to automate meeting management and scheduling workflows.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				list_conferences: {
+					/**
+					 * List Conferences
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves a list of Google Meet conferences with filtering options.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a paginated list of Google Meet conferences with support for filtering by meeting code, time range, and space name. Returns conference details including ID, start time, end time, expiration time, and space information.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of conferences to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of conference records to return in a single response. Default is 100.
+							 */
+							longDesc: () => LocalizedString
+						}
+						nextPageToken: {
+							/**
+							 * Next Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A token from a previous response that allows retrieving the next page of results. Leave empty for the first request.
+							 */
+							longDesc: () => LocalizedString
+						}
+						meeting_code: {
+							/**
+							 * Meeting Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by meeting code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter results to only include conferences with the specified meeting code.
+							 */
+							longDesc: () => LocalizedString
+						}
+						start_time: {
+							/**
+							 * Start Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by start time
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter results to only include conferences that started on or after the specified date and time.
+							 */
+							longDesc: () => LocalizedString
+						}
+						end_time: {
+							/**
+							 * End Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by end time
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter results to only include conferences that ended on or before the specified date and time.
+							 */
+							longDesc: () => LocalizedString
+						}
+						space_name: {
+							/**
+							 * Space Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by space name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter results to only include conferences associated with the specified space name.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_conference_participants: {
+					/**
+					 * Get Conference Participants
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves participant information for a specific Google Meet conference.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves detailed information about participants who attended a specific Google Meet conference. Can filter participants by search term and include time spent metrics.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						conference: {
+							/**
+							 * Conference
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Meet conference to retrieve participants from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The identifier or meeting code of the Google Meet conference to retrieve participant information for. Can be either a conference ID or a meeting code in the format XXX-XXXX-XXX.
+							 */
+							longDesc: () => LocalizedString
+						}
+						search: {
+							/**
+							 * Search
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter participants by search term
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional search term to filter participants by name or other attributes. Only participants matching the search term will be returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_time_spent: {
+							/**
+							 * Include Time Spent
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include participant time metrics
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, includes information about how long each participant spent in the conference. Default is true.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_conference_recordings: {
+					/**
+					 * Get Conference Recordings
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves recordings for a specific Google Meet conference.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves all available recordings associated with a specific Google Meet conference. Returns details about each recording including state, timing information, and storage location.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						conference: {
+							/**
+							 * Conference
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Meet conference to retrieve recordings from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The identifier or meeting code of the Google Meet conference to retrieve recording information for. Can be either a conference ID or a meeting code in the format XXX-XXXX-XXX.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_conference_transcript: {
+					/**
+					 * Get Conference Transcript
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves a specific transcript from a Google Meet conference.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves the detailed content of a specific transcript created for a Google Meet conference. Requires either a conference ID and transcript ID or just a transcript ID if it is already known.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						conference: {
+							/**
+							 * Conference
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Meet conference containing the transcript
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The identifier or meeting code of the Google Meet conference that contains the transcript. Can be either a conference ID or a meeting code in the format XXX-XXXX-XXX. Optional if the transcript ID is already known.
+							 */
+							longDesc: () => LocalizedString
+						}
+						transcript: {
+							/**
+							 * Transcript
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The transcript to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The identifier of the specific transcript to retrieve from the Google Meet conference.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				conference_ended: {
+					/**
+					 * Conference Ended
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a Google Meet conference has ended.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors Google Meet conferences and triggers when a conference has ended. Returns details about the completed conference including name, start time, end time, expiration time, and space information.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+					}
+				}
+				recording_created: {
+					/**
+					 * Recording Created
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new recording is created for a Google Meet conference.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors a specific Google Meet conference and triggers when a new recording has been generated. Returns details about the recording including its name, state, timing information, and Drive destination details.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						conference: {
+							/**
+							 * Conference
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Meet conference to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The identifier or meeting code of the Google Meet conference to monitor for new recordings. Can be either a conference ID or a meeting code in the format XXX-XXXX-XXX.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				transcript_created: {
+					/**
+					 * Transcript Created
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new transcript is created for a Google Meet conference.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors a specific Google Meet conference and triggers when a new transcript has been generated. Returns details about the transcript including its name, state, timing information, and Google Docs destination details.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						conference: {
+							/**
+							 * Conference
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Meet conference to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The identifier or meeting code of the Google Meet conference to monitor for new transcripts. Can be either a conference ID or a meeting code in the format XXX-XXXX-XXX.
+							 */
+							longDesc: () => LocalizedString
 						}
 					}
 				}
