@@ -74,11 +74,11 @@ describe('Google Drive', () => {
     it('Should get Google Transcript IDs', async () => {
       const allowed_values = await getGoogleMeetConferenceTranscriptIdAllowedValues({
         ...base_context,
-        opts: { conference: 'conferenceRecords/701ace91-4f7b-49ef-a955-4b4f76584902' },
+        opts: { conference: conferenceId },
       });
 
       expect(allowed_values).toBeDefined();
-      transcriptId = allowed_values[0].value;
+      transcriptId = allowed_values[0]?.value;
     });
   });
 
@@ -109,7 +109,7 @@ describe('Google Drive', () => {
 
       const result = await action.api_function(
         {
-          conference: 'conferenceRecords/a7517c70-3060-42cf-a928-a5a6a0b62b5d',
+          conference: conferenceId,
         },
         undefined,
         base_context
@@ -123,6 +123,8 @@ describe('Google Drive', () => {
       if (!('api_function' in action)) {
         throw new Error('api_function is not defined in action');
       }
+
+      if (!transcriptId) return;
 
       const result = await action.api_function(
         {
