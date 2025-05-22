@@ -65,8 +65,6 @@ public class TypeScriptActionGoogleApiDataProvider inherits TypeScriptActionApiD
     private auto doRequestImpl(auto req, *hash<auto> request_options) {
         checkRestClient(req);
         if (!api) {
-# XXX DEBUG DELETEME
-printf("OPTS: %N\n", google_api.getRestClient().getOAuth2Options());
             return google_api.doRequest(req, request_options);
         }
         return getAsyncValue(api, req, request_options, getCallContextInfo());
