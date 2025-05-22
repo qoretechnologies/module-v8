@@ -4,6 +4,7 @@ import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { GOOGLE_MEET_APP_NAME, GoogleMeetError } from '../constants';
 import { createGoogleMeetClient, formatDate } from '../helpers/constants';
 import { getGoogleMeetConferenceIdAllowedValues } from '../helpers/get-conference-id-allowed-values';
+import { getGoogleMeetConferenceTranscriptIdAllowedValues } from '../helpers/get-transcript-id-allowed-values';
 
 type TranscriptEntry = {
   text: string;
@@ -25,6 +26,7 @@ const options = {
   transcript: {
     type: 'string',
     allowed_values_creatable: true,
+    get_allowed_values: getGoogleMeetConferenceTranscriptIdAllowedValues,
     required: true,
   },
 } satisfies TQoreOptions;
