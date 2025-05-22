@@ -38,6 +38,7 @@ import { Locales } from '../i18n/i18n-types';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import googleForms from '../apps/google-forms';
+import googleMeet from '../apps/google-meet';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -52,6 +53,7 @@ export interface IQoreApi {
 }
 
 const NEW_APPS = {
+  googleMeet,
   googleSheets,
   googleDrive,
   googleForms,
