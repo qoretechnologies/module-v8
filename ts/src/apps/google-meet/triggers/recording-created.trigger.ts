@@ -1,15 +1,11 @@
-import {
-  EQoreAppActionCode,
-  QoreAppCreator,
-  TQoreAppActionFunctionContext,
-} from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
 import { GOOGLE_MEET_APP_NAME, GoogleMeetError } from '../constants';
 import { createGoogleMeetClient } from '../helpers/constants';
 import { getGoogleMeetConferenceIdAllowedValues } from '../helpers/get-conference-id-allowed-values';
-import { getConferenceIdByMeetingCode } from '../helpers/get-conference-id-by-meeting-code.helper';
+import { getGoogleMeetConferenceOption } from '../helpers/get-conference-id-by-meeting-code.helper';
 
 const GoogleMeetRecordingCreatedTrigger = QoreAppCreator.createLocalizedTrigger({
   app: GOOGLE_MEET_APP_NAME,
@@ -31,7 +27,7 @@ const GoogleMeetRecordingCreatedTrigger = QoreAppCreator.createLocalizedTrigger(
       ErrorClass: GoogleMeetError,
     });
 
-    const conference = await getConferenceId(context, token);
+    const conference = await getGoogleMeetConferenceOption(context?.opts, token);
 
     const getItems = () => {
       return fetchLatestRecordings(token, conference);
@@ -52,7 +48,7 @@ const GoogleMeetRecordingCreatedTrigger = QoreAppCreator.createLocalizedTrigger(
       ErrorClass: GoogleMeetError,
     });
 
-    const conference = await getConferenceId(context, token);
+    const conference = await getGoogleMeetConferenceOption(context?.opts, token);
 
     const responses = await fetchLatestRecordings(token, conference);
 
@@ -94,25 +90,6 @@ const GoogleMeetRecordingCreatedTrigger = QoreAppCreator.createLocalizedTrigger(
 });
 
 export default GoogleMeetRecordingCreatedTrigger;
-
-const getConferenceId = async (
-  context: TQoreAppActionFunctionContext,
-  token: string
-): Promise<string> => {
-  const conference = context?.opts?.conference as string;
-
-  if (conference?.length === 10 && conference.split('-').length === 3) {
-    const foundId = await getConferenceIdByMeetingCode(conference, token);
-
-    if (!foundId) {
-      throw new GoogleMeetError(`Invalid meeting code: ${conference}`);
-    }
-
-    return foundId;
-  }
-
-  return conference;
-};
 
 const fetchLatestRecordings = async (token: string, conference_id?: string) => {
   const limit = DEFAULT_TRIGGER_POLL_ITEM_LIMIT;

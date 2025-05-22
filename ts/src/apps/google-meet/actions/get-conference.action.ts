@@ -3,7 +3,7 @@ import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { GOOGLE_MEET_APP_NAME, GoogleMeetError } from '../constants';
 import { createGoogleMeetClient } from '../helpers/constants';
 import { getGoogleMeetConferenceIdAllowedValues } from '../helpers/get-conference-id-allowed-values';
-import { getConferenceIdByMeetingCode } from '../helpers/get-conference-id-by-meeting-code.helper';
+import { getGoogleMeetConferenceOption } from '../helpers/get-conference-id-by-meeting-code.helper';
 
 const options = {
   conference: {
@@ -28,17 +28,7 @@ const getConference = QoreAppCreator.createLocalizedAction<typeof options>({
       ErrorClass: GoogleMeetError,
     });
 
-    let conference = obj?.conference;
-
-    if (conference?.length === 10 && conference.split('-').length === 3) {
-      const foundId = await getConferenceIdByMeetingCode(conference, token);
-
-      if (!foundId) {
-        throw new GoogleMeetError(`Invalid meeting code: ${conference}`);
-      }
-
-      conference = foundId;
-    }
+    const conference = await getGoogleMeetConferenceOption(obj, token);
 
     const meetClient = createGoogleMeetClient(token);
 
