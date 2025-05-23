@@ -621,8 +621,13 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             *string rtype) {
         if (((*hash<auto> deps = depmap{type})
             && (action_opts{keys deps}.size() != deps.size()))) {
+            debug("TypeScriptActionDataProviderBase::getReferenceDataIntern() type: %y deps not satisfied: %y opts "
+                "provided: %y", type, keys deps, keys action_opts{keys deps});
             return;
         }
+
+        debug("TypeScriptActionDataProviderBase::getReferenceDataIntern() type: %y omap: %y romap: %y (%y %s %s)",
+            type, keys omap, keys romap, self.className(), getName(), self.uniqueHash());
 
         if (*hash<AsyncCallInfo> ref_api = omap{type}) {
             *hash<DataContextInfo> arg = getCallContextInfo(action_opts);
