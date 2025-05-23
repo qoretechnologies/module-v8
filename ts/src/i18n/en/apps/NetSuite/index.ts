@@ -1,0 +1,467 @@
+
+
+const NetSuiteAppEn = {
+  displayName: 'NetSuite',
+  shortDesc: 'A comprehensive suite of cloud-based business management solutions.',
+  longDesc:
+    'NetSuite offers a unified platform for ERP, CRM, e-commerce, and more, enabling businesses to manage all key operations in a single system.',
+  triggers: {
+    new_record: {
+      displayName: 'New Record',
+      shortDesc: 'Triggers when a new record is created',
+      longDesc: 'Triggers when a new record is created',
+      options: {
+        recordType: {
+          displayName: 'Record Type',
+          shortDesc: 'The type of record to monitor',
+          longDesc: 'The type of record to monitor',
+        },
+      },
+    },
+  },
+  actions: {
+    list_records: {
+      displayName: 'List Records',
+      shortDesc: 'Retrieve NetSuite records based on search criteria',
+      longDesc:
+        'Query NetSuite records by type with optional filtering, field selection, and pagination',
+      options: {
+        recordType: {
+          displayName: 'Record Type',
+          shortDesc: 'Type of NetSuite record to retrieve',
+          longDesc:
+            'Specifies which NetSuite record type to query (customer, invoice, transaction, etc.)',
+        },
+        searchMode: {
+          displayName: 'Search Mode',
+          shortDesc: 'How multiple search criteria are combined',
+          longDesc:
+            'Determines if records must match all criteria (All) or any criteria (Any) when multiple query fields are provided',
+        },
+        fields: {
+          displayName: 'Fields',
+          shortDesc: 'Specific record fields to return',
+          longDesc: 'List of field names to include in results (returns all fields if omitted)',
+        },
+        query: {
+          displayName: 'Query Criteria',
+          shortDesc: 'Search conditions for filtering records',
+          longDesc: 'Key-value pairs defining search criteria',
+          type: {
+            fields: {
+              key: {
+                displayName: 'Field Name',
+                shortDesc: 'Name of the field to filter by',
+                longDesc: 'The name of the field to filter by',
+              },
+              value: {
+                displayName: 'Field Value',
+                shortDesc: 'Value to match for the field',
+                longDesc: 'The value to match for the field',
+              },
+            },
+          },
+        },
+        limit: {
+          displayName: 'Limit',
+          shortDesc: 'Maximum number of records to return',
+          longDesc: 'Caps the number of results returned in a single query',
+        },
+        offset: {
+          displayName: 'Offset',
+          shortDesc: 'Number of records to skip',
+          longDesc: 'Used for pagination to skip a specified number of records in the result set',
+        },
+      },
+    },
+    suite_ql: {
+      displayName: 'SuiteQL',
+      shortDesc: 'Run a SuiteQL query',
+      longDesc: 'Run a SuiteQL query',
+      options: {
+        query: {
+          displayName: 'Query',
+          shortDesc: 'The SuiteQL query to run',
+          longDesc: 'The SuiteQL query to run',
+        },
+        limit: {
+          displayName: 'Limit',
+          shortDesc: 'The maximum number of records to return',
+          longDesc: 'The maximum number of records to return',
+        },
+        offset: {
+          displayName: 'Offset',
+          shortDesc: 'The number of records to skip',
+          longDesc: 'The number of records to skip',
+        },
+        response_type: {
+          fields: {
+            links: {
+              display_name: 'Links',
+              short_desc: 'Links',
+              desc: 'Links',
+            },
+            count: {
+              display_name: 'Count',
+              short_desc: 'The number of results',
+              desc: 'The number of results',
+            },
+            hasMore: {
+              display_name: 'Has More',
+              short_desc: 'Whether there are more results',
+              desc: 'Whether there are more results',
+            },
+            items: {
+              display_name: 'Items',
+              short_desc: 'The items',
+              desc: 'The items',
+            },
+          },
+        },
+      },
+    },
+    account_get: {
+      displayName: 'Get List of Accounts',
+      shortDesc: 'Retrieve a list of accounts.',
+      longDesc: 'Fetches a list of accounts based on specified filters.',
+    },
+    account_post: {
+      displayName: 'Create Account',
+      shortDesc: 'Creates a new account.',
+      longDesc: 'Allows the user to create a new account record in NetSuite.',
+    },
+    account_id_get: {
+      displayName: 'Get Account',
+      shortDesc: 'Retrieve details of a specific account.',
+      longDesc: 'Fetches detailed information of a single account by its ID.',
+    },
+    account_id_patch: {
+      displayName: 'Update Account',
+      shortDesc: 'Updates an existing account.',
+      longDesc: 'Allows the user to update details of a specific account by its ID.',
+    },
+    account_id_delete: {
+      displayName: 'Delete Account',
+      shortDesc: 'Deletes a specific account.',
+      longDesc: 'Removes an account record from NetSuite based on its ID.',
+    },
+    customer_get: {
+      displayName: 'Get List of Customers',
+      shortDesc: 'Retrieve a list of customers.',
+      longDesc: 'Fetches a list of customers based on specified filters.',
+    },
+    customer_post: {
+      displayName: 'Create Customer',
+      shortDesc: 'Creates a new customer.',
+      longDesc: 'Allows the user to create a new customer record in NetSuite.',
+    },
+    customer_id_get: {
+      displayName: 'Get Customer',
+      shortDesc: 'Retrieve details of a specific customer.',
+      longDesc: 'Fetches detailed information of a single customer by its ID.',
+    },
+    customer_id_patch: {
+      displayName: 'Update Customer',
+      shortDesc: 'Updates an existing customer.',
+      longDesc: 'Allows the user to update details of a specific customer by its ID.',
+    },
+    customer_id_delete: {
+      displayName: 'Delete Customer',
+      shortDesc: 'Deletes a specific customer.',
+      longDesc: 'Removes a customer record from NetSuite based on its ID.',
+    },
+    contact_get: {
+      displayName: 'Get List of Contacts',
+      shortDesc: 'Retrieve a list of contacts.',
+      longDesc: 'Fetches a list of contacts based on specified filters.',
+    },
+    contact_post: {
+      displayName: 'Create Contact',
+      shortDesc: 'Creates a new contact.',
+      longDesc: 'Allows the user to create a new contact record in NetSuite.',
+    },
+    contact_id_delete: {
+      displayName: 'Delete Contact',
+      shortDesc: 'Deletes a specific contact.',
+      longDesc: 'Removes a contact record from NetSuite based on its ID.',
+    },
+    contact_id_get: {
+      displayName: 'Get Contact',
+      shortDesc: 'Retrieve details of a specific contact.',
+      longDesc: 'Fetches detailed information of a single contact by its ID.',
+    },
+    contact_id_patch: {
+      displayName: 'Update Contact',
+      shortDesc: 'Updates an existing contact.',
+      longDesc: 'Allows the user to update details of a specific contact by its ID.',
+    },
+    opportunity_get: {
+      displayName: 'Get List of Opportunities',
+      shortDesc: 'Retrieve a list of opportunities.',
+      longDesc: 'Fetches a list of opportunities based on specified filters.',
+    },
+    opportunity_id_delete: {
+      displayName: 'Delete Opportunity',
+      shortDesc: 'Deletes a specific opportunity.',
+      longDesc: 'Removes an opportunity record from NetSuite based on its ID.',
+    },
+    opportunity_id_get: {
+      displayName: 'Get Opportunity',
+      shortDesc: 'Retrieve details of a specific opportunity.',
+      longDesc: 'Fetches detailed information of a single opportunity by its ID.',
+    },
+    opportunity_id_patch: {
+      displayName: 'Update Opportunity',
+      shortDesc: 'Updates an existing opportunity.',
+      longDesc: 'Allows the user to update details of a specific opportunity by its ID.',
+    },
+    opportunity_post: {
+      displayName: 'Create Opportunity',
+      shortDesc: 'Creates a new opportunity.',
+      longDesc: 'Allows the user to create a new opportunity record in NetSuite.',
+    },
+    invoice_get: {
+      displayName: 'Get List of Invoices',
+      shortDesc: 'Retrieve a list of invoices.',
+      longDesc: 'Fetches a list of invoices based on specified filters.',
+    },
+    invoice_post: {
+      displayName: 'Create Invoice',
+      shortDesc: 'Creates a new invoice.',
+      longDesc: 'Allows the user to create a new invoice record in NetSuite.',
+      options: {
+        entity: {
+          displayName: 'Customer for the invoice',
+          shortDesc: 'The customer for the invoice',
+          longDesc: 'The customer for the invoice',
+        },
+      },
+    },
+    invoice_id_get: {
+      displayName: 'Get Invoice',
+      shortDesc: 'Retrieve details of a specific invoice.',
+      longDesc: 'Fetches detailed information of a single invoice by its ID.',
+    },
+    invoice_id_patch: {
+      displayName: 'Update Invoice',
+      shortDesc: 'Updates an existing invoice.',
+      longDesc: 'Allows the user to update details of a specific invoice by its ID.',
+    },
+    invoice_id_delete: {
+      displayName: 'Delete Invoice',
+      shortDesc: 'Deletes a specific invoice.',
+      longDesc: 'Removes an invoice record from NetSuite based on its ID.',
+    },
+    journalEntry_get: {
+      displayName: 'Get List of Journal Entries',
+      shortDesc: 'Retrieve a list of journal entries.',
+      longDesc: 'Fetches a list of journal entries based on specified filters.',
+    },
+    journalEntry_post: {
+      displayName: 'Create Journal Entry',
+      shortDesc: 'Creates a new journal entry.',
+      longDesc: 'Allows the user to create a new journal entry record in NetSuite.',
+    },
+    journalEntry_id_get: {
+      displayName: 'Get Journal Entry',
+      shortDesc: 'Retrieve details of a specific journal entry.',
+      longDesc: 'Fetches detailed information of a single journal entry by its ID.',
+    },
+    journal_entry_id_patch: {
+      displayName: 'Update Journal Entry',
+      shortDesc: 'Updates an existing journal entry.',
+      longDesc: 'Allows the user to update details of a specific journal entry by its ID.',
+    },
+    journalEntry_id_delete: {
+      displayName: 'Delete Journal Entry',
+      shortDesc: 'Deletes a specific journal entry.',
+      longDesc: 'Removes a journal entry record from NetSuite based on its ID.',
+    },
+    purchaseOrder_get: {
+      displayName: 'Get List of Purchase Orders',
+      shortDesc: 'Retrieve a list of purchase orders.',
+      longDesc: 'Fetches a list of purchase orders based on specified filters.',
+    },
+    purchaseOrder_post: {
+      displayName: 'Create Purchase Order',
+      shortDesc: 'Creates a new purchase order.',
+      longDesc: 'Allows the user to create a new purchase order record in NetSuite.',
+      options: {
+        entity: {
+          displayName: 'Vendor',
+          shortDesc: 'The vendor for the purchase order',
+          longDesc: 'The vendor for the purchase order ',
+        },
+        employee: {
+          displayName: 'Employee (Requestor)',
+          shortDesc: 'The employee who requested the purchase order',
+          longDesc: 'The employee who requested the purchase order',
+        },
+      },
+    },
+    purchaseOrder_id_get: {
+      displayName: 'Get Purchase Order',
+      shortDesc: 'Retrieve details of a specific purchase order.',
+      longDesc: 'Fetches detailed information of a single purchase order by its ID.',
+    },
+    purchaseOrder_id_patch: {
+      displayName: 'Update Purchase Order',
+      shortDesc: 'Updates an existing purchase order.',
+      longDesc: 'Allows the user to update details of a specific purchase order by its ID.',
+      options: {
+        entity: {
+          displayName: 'Vendor',
+          shortDesc: 'The vendor for the purchase order',
+          longDesc: 'The vendor for the purchase order ',
+        },
+        employee: {
+          displayName: 'Employee (Requestor)',
+          shortDesc: 'The employee who requested the purchase order',
+          longDesc: 'The employee who requested the purchase order',
+        },
+      },
+    },
+    purchaseOrder_id_delete: {
+      displayName: 'Delete Purchase Order',
+      shortDesc: 'Deletes a specific purchase order.',
+      longDesc: 'Removes a purchase order record from NetSuite based on its ID.',
+    },
+    salesOrder_get: {
+      displayName: 'Get List of Sales Orders',
+      shortDesc: 'Retrieve a list of sales orders.',
+      longDesc: 'Fetches a list of sales orders based on specified filters.',
+    },
+    salesOrder_post: {
+      displayName: 'Create Sales Order',
+      shortDesc: 'Creates a new sales order.',
+      longDesc: 'Allows the user to create a new sales order record in NetSuite.',
+      options: {
+        entity: {
+          displayName: 'Customer',
+          shortDesc: 'The customer for the sales order',
+          longDesc: 'The customer for the sales order ',
+        },
+      },
+    },
+    customer_post_simplified: {
+      displayName: 'Create Customer (Simplified)',
+      shortDesc: 'Creates a new customer with simplified options.',
+      longDesc: 'Creates a new customer in NetSuite with simplified fields',
+      options: {
+        entityStatus: {
+          displayName: 'Status',
+          shortDesc: 'Customer status',
+          longDesc: 'The status of the customer (e.g., Active, Inactive)',
+        },
+        subsidiary: {
+          displayName: 'Subsidiary',
+          shortDesc: 'The subsidiary for the customer',
+          longDesc: 'The subsidiary for the customer',
+        },
+      },
+    },
+    salesOrder_post_simplified: {
+      displayName: 'Create Sales Order (Simplified)',
+      shortDesc: 'Creates a new sales order with simplified options.',
+      longDesc:
+        'Creates a new customer sales order in NetSuite with only the most commonly used fields, making order creation faster and more straightforward.',
+      options: {
+        entity: {
+          displayName: 'Customer',
+          shortDesc: 'Customer for this order',
+          longDesc:
+            'The NetSuite internal ID of the customer this sales order is for. Must be an existing customer record in your NetSuite account.',
+        },
+        memo: {
+          displayName: 'Memo',
+          shortDesc: 'Order notes',
+          longDesc:
+            'Additional notes or information about this order. This will appear in the memo field on the sales order record.',
+        },
+        orderStatus: {
+          displayName: 'Order Status',
+          shortDesc: 'Current status of order',
+          longDesc:
+            'The processing status of this sales order (e.g., Pending Approval, Pending Fulfillment). Controls workflow and availability for further processing.',
+        },
+        item: {
+          displayName: 'Order Items',
+          shortDesc: 'Products or services being ordered',
+          longDesc:
+            'List of items being purchased in this order. Each item requires an ID and amount',
+          type: {
+            fields: {
+              id: {
+                displayName: 'Item ID',
+                shortDesc: 'NetSuite item identifier',
+                longDesc:
+                  'The internal ID of the inventory item, non-inventory item, service, or other item type in NetSuite that is being ordered.',
+              },
+              quantity: {
+                displayName: 'Quantity',
+                shortDesc: 'Number of units',
+                longDesc:
+                  'The number of units being ordered for this line item. For services, this is typically hours or days.',
+              },
+              amount: {
+                displayName: 'Amount Override',
+                shortDesc: 'Custom price (optional)',
+                longDesc:
+                  'Optional custom price override for this line item. If provided, overrides the standard price calculation (quantity × rate). Leave empty to use standard pricing from the price level assigned to the customer.',
+              },
+            },
+          },
+        },
+      },
+    },
+    salesOrder_id_get: {
+      displayName: 'Get Sales Order',
+      shortDesc: 'Retrieve details of a specific sales order.',
+      longDesc: 'Fetches detailed information of a single sales order by its ID.',
+    },
+    salesOrder_id_patch: {
+      displayName: 'Update Sales Order',
+      shortDesc: 'Updates an existing sales order.',
+      longDesc: 'Allows the user to update details of a specific sales order by its ID.',
+      options: {
+        entity: {
+          displayName: 'Customer',
+          shortDesc: 'The customer for the sales order',
+          longDesc: 'The customer for the sales order ',
+        },
+      },
+    },
+    salesOrder_id_delete: {
+      displayName: 'Delete Sales Order',
+      shortDesc: 'Deletes a specific sales order.',
+      longDesc: 'Removes a sales order record from NetSuite based on its ID.',
+    },
+    vendor_get: {
+      displayName: 'Get List of Vendors',
+      shortDesc: 'Retrieve a list of vendors.',
+      longDesc: 'Fetches a list of vendors based on specified filters.',
+    },
+    vendor_post: {
+      displayName: 'Create Vendor',
+      shortDesc: 'Creates a new vendor.',
+      longDesc: 'Allows the user to create a new vendor record in NetSuite.',
+    },
+    vendor_id_get: {
+      displayName: 'Get Vendor',
+      shortDesc: 'Retrieve details of a specific vendor.',
+      longDesc: 'Fetches detailed information of a single vendor by its ID.',
+    },
+    vendor_id_patch: {
+      displayName: 'Update Vendor',
+      shortDesc: 'Updates an existing vendor.',
+      longDesc: 'Allows the user to update details of a specific vendor by its ID.',
+    },
+    vendor_id_delete: {
+      displayName: 'Delete Vendor',
+      shortDesc: 'Deletes a specific vendor.',
+      longDesc: 'Removes a vendor record from NetSuite based on its ID.',
+    },
+  },
+};
+
+export default NetSuiteAppEn;
