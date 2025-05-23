@@ -33,7 +33,8 @@ describe('Qorus Apps Catalogue tests', () => {
         expect(action.desc).not.toBeFalsy();
 
         if ('options' in action) {
-          forEach(action.options, (option) => {
+          forEach(action.options, (option, _key) => {
+            // console.log(`${app.name} -> ${action.action} -> ${_key}`);
             expect(option.display_name).not.toBeFalsy();
             expect(option.short_desc).not.toBeFalsy();
             expect(option.desc).not.toBeFalsy();
