@@ -6,7 +6,7 @@ import {
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { GoogleMeetError } from '../constants';
 import { createGoogleMeetClient, formatDate } from './constants';
-import { getConferenceIdByMeetingCode } from './get-conference-id-by-meeting-code.helper';
+import { getGoogleMeetConferenceOption } from './get-conference-id-by-meeting-code.helper';
 
 export const getGoogleMeetConferenceTranscriptIdAllowedValues: TQoreGetAllowedValuesFunction<
   TCustomConnOptions,
@@ -18,19 +18,7 @@ export const getGoogleMeetConferenceTranscriptIdAllowedValues: TQoreGetAllowedVa
     ErrorClass: GoogleMeetError,
   });
 
-  let conference = context?.opts?.conference;
-
-  if (!conference) return [];
-
-  if (conference?.length === 10 && conference.split('-').length === 3) {
-    const foundId = await getConferenceIdByMeetingCode(conference, token);
-
-    if (!foundId) {
-      throw new GoogleMeetError(`Invalid meeting code: ${conference}`);
-    }
-
-    conference = foundId;
-  }
+  const conference = await getGoogleMeetConferenceOption(context?.opts, token);
 
   try {
     const meetClient = createGoogleMeetClient(token);

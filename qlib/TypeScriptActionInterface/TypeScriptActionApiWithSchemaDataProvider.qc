@@ -89,7 +89,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         *hash<AsyncCallInfo> response_data_converter;
 
         #! Global request type info per action for dynamic types: app-action -> type info
-        static hash<string, AbstractDataProviderType> grtmap;
+        static hash<string, hash<TypeProviderInfo>> grtmap;
 
         #! Info on flattened request types: request key -> top-level key -> actual location
         static hash<string, *hash<string, list<string>>> reqmap;
@@ -149,7 +149,11 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             }
             request_type_done = True;
             string key = sprintf("%s-%s", action.app, action.action);
-            request_type_info.type = grtmap{key} = request_type;
+            grtmap{key} = <TypeProviderInfo>{
+                "type": request_type,
+                "prov": self,
+            };
+            request_type_info.type = request_type;
         }
         if (response_type) {
             if (get_dynamic_response_type) {
@@ -386,17 +390,24 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         request_key = sprintf("%s-%s", app, action);
 
         # check global map unlocked
-        request_type_info.type = grtmap{request_key};
-        if (!request_type_info.type) {
+        if (!checkRequestType(request_key)) {
             # check again in the lock
             gtlock.lock();
             on_exit gtlock.unlock();
 
-            request_type_info.type = grtmap{request_key};
-            if (!request_type_info.type) {
+            if (!checkRequestType(request_key)) {
                 createRequestTypeIntern();
-                return;
             }
+        }
+    }
+
+    #! Checks the request type and merges any reference data maps from the source provider if found
+    private *bool checkRequestType(string key) {
+        if (grtmap{key}) {
+            request_type_info.type = grtmap{key}.type;
+            map omap{$1.key} = $1.value, grtmap{key}.prov.omap.pairIterator(), !omap{$1.key};
+            map romap{$1.key} = $1.value, grtmap{key}.prov.romap.pairIterator(), !romap{$1.key};
+            return True;
         }
     }
 
@@ -540,7 +551,10 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             }
         }
 
-        grtmap{request_key} = request_type_info.type;
+        grtmap{request_key} = <TypeProviderInfo>{
+            "type": request_type_info.type,
+            "prov": self,
+        };
     }
 
     #! Creates the response type for this API
@@ -728,5 +742,10 @@ class ActionProviderContextHelper {
             TSAI::info("IGNORING %y", prov.className());
         }
     }
+}
+
+hashdecl TypeProviderInfo {
+    AbstractDataProviderType type;
+    TypeScriptActionDataProviderBase prov;
 }
 }

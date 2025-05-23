@@ -36,6 +36,6 @@ export default (locale: Locales) =>
         prompt: 'consent',
       },
       ping_method: 'GET',
-      ping_path: '/calendar/v3/users/me/calendarList',
+      ping_path: '/drive/v3/about?fields=user',
     },
   }) satisfies TQoreAppWithActions;

@@ -5,8 +5,8 @@ import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { createGoogleDriveClient } from '../../google-drive/helpers/constants';
 import { GOOGLE_MEET_APP_NAME, GoogleMeetError } from '../constants';
 import { createGoogleMeetClient, formatDate } from '../helpers/constants';
-import { getConferenceIdByMeetingCode } from '../helpers/get-conference-id-by-meeting-code.helper';
 import { getGoogleMeetConferenceIdAllowedValues } from '../helpers/get-conference-id-allowed-values';
+import { getGoogleMeetConferenceOption } from '../helpers/get-conference-id-by-meeting-code.helper';
 
 const options = {
   conference: {
@@ -33,17 +33,7 @@ const getConferenceRecordings = QoreAppCreator.createLocalizedAction<typeof opti
     const meetClient = createGoogleMeetClient(token);
     const driveClient = createGoogleDriveClient(token);
 
-    let conference = obj?.conference;
-
-    if (conference?.length === 10 && conference.split('-').length === 3) {
-      const foundId = await getConferenceIdByMeetingCode(conference, token);
-
-      if (!foundId) {
-        throw new GoogleMeetError(`Invalid meeting code: ${conference}`);
-      }
-
-      conference = foundId;
-    }
+    const conference = await getGoogleMeetConferenceOption(obj, token);
 
     try {
       let pageToken: string | undefined = undefined;
