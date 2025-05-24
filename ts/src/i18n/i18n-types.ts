@@ -170,6 +170,686 @@ type RootTranslation = {
 				}
 			}
 		}
+		GoogleDocs: {
+			/**
+			 * G​o​o​g​l​e​ ​D​o​c​s
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​w​i​t​h​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​d​o​c​u​m​e​n​t​s
+			 */
+			shortDesc: string
+			/**
+			 * I​n​t​e​g​r​a​t​e​ ​w​i​t​h​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​t​o​ ​c​r​e​a​t​e​,​ ​u​p​d​a​t​e​,​ ​a​n​d​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​d​o​c​u​m​e​n​t​s​.​ ​T​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​p​e​r​f​o​r​m​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​r​e​s​p​o​n​d​ ​t​o​ ​e​v​e​n​t​s​ ​i​n​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​a​c​c​o​u​n​t​,​ ​e​n​a​b​l​i​n​g​ ​y​o​u​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​d​o​c​u​m​e​n​t​ ​m​a​n​a​g​e​m​e​n​t​ ​a​n​d​ ​c​o​l​l​a​b​o​r​a​t​i​o​n​ ​w​o​r​k​f​l​o​w​s​.
+			 */
+			longDesc: string
+			actions: {
+				append_text_to_document: {
+					/**
+					 * A​p​p​e​n​d​ ​T​e​x​t​ ​t​o​ ​D​o​c​u​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​t​e​x​t​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​d​o​c​u​m​e​n​t​ ​a​t​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​p​o​s​i​t​i​o​n​.
+					 */
+					shortDesc: string
+					/**
+					 * A​p​p​e​n​d​s​ ​t​e​x​t​ ​t​o​ ​a​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​d​o​c​u​m​e​n​t​ ​w​i​t​h​ ​o​p​t​i​o​n​s​ ​f​o​r​ ​p​o​s​i​t​i​o​n​i​n​g​ ​(​b​e​g​i​n​n​i​n​g​,​ ​e​n​d​,​ ​o​r​ ​s​p​e​c​i​f​i​c​ ​i​n​d​e​x​)​,​ ​t​e​x​t​ ​f​o​r​m​a​t​t​i​n​g​,​ ​a​n​d​ ​l​i​n​e​ ​b​r​e​a​k​s​.​ ​S​u​p​p​o​r​t​s​ ​b​o​l​d​,​ ​i​t​a​l​i​c​,​ ​u​n​d​e​r​l​i​n​e​,​ ​f​o​n​t​ ​s​i​z​e​,​ ​a​n​d​ ​f​o​n​t​ ​f​a​m​i​l​y​ ​s​t​y​l​i​n​g​.
+					 */
+					longDesc: string
+					options: {
+						document_id: {
+							/**
+							 * D​o​c​u​m​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​d​o​c​u​m​e​n​t​ ​t​o​ ​m​o​d​i​f​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​d​o​c​u​m​e​n​t​ ​t​o​ ​a​p​p​e​n​d​ ​t​e​x​t​ ​t​o​.
+							 */
+							longDesc: string
+						}
+						text: {
+							/**
+							 * T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​c​o​n​t​e​n​t​ ​t​o​ ​a​p​p​e​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​t​o​ ​b​e​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​d​o​c​u​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+						insert_position: {
+							/**
+							 * I​n​s​e​r​t​ ​P​o​s​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * W​h​e​r​e​ ​t​o​ ​i​n​s​e​r​t​ ​t​h​e​ ​t​e​x​t
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​i​e​s​ ​w​h​e​r​e​ ​i​n​ ​t​h​e​ ​d​o​c​u​m​e​n​t​ ​t​o​ ​i​n​s​e​r​t​ ​t​h​e​ ​t​e​x​t​:​ ​a​t​ ​t​h​e​ ​e​n​d​,​ ​b​e​g​i​n​n​i​n​g​,​ ​o​r​ ​a​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​i​n​d​e​x​ ​p​o​s​i​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						index: {
+							/**
+							 * I​n​d​e​x
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​p​o​s​i​t​i​o​n​ ​i​n​d​e​x
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​c​h​a​r​a​c​t​e​r​ ​i​n​d​e​x​ ​p​o​s​i​t​i​o​n​ ​w​h​e​r​e​ ​t​e​x​t​ ​s​h​o​u​l​d​ ​b​e​ ​i​n​s​e​r​t​e​d​ ​(​r​e​q​u​i​r​e​d​ ​w​h​e​n​ ​i​n​s​e​r​t​_​p​o​s​i​t​i​o​n​ ​i​s​ ​"​i​n​d​e​x​"​)​.
+							 */
+							longDesc: string
+						}
+						add_line_break: {
+							/**
+							 * A​d​d​ ​L​i​n​e​ ​B​r​e​a​k
+							 */
+							displayName: string
+							/**
+							 * A​d​d​ ​l​i​n​e​ ​b​r​e​a​k​ ​w​i​t​h​ ​t​e​x​t
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​a​d​d​ ​a​ ​l​i​n​e​ ​b​r​e​a​k​ ​b​e​f​o​r​e​ ​o​r​ ​a​f​t​e​r​ ​t​h​e​ ​i​n​s​e​r​t​e​d​ ​t​e​x​t​ ​f​o​r​ ​b​e​t​t​e​r​ ​f​o​r​m​a​t​t​i​n​g​.
+							 */
+							longDesc: string
+						}
+						text_style: {
+							/**
+							 * T​e​x​t​ ​S​t​y​l​e
+							 */
+							displayName: string
+							/**
+							 * F​o​r​m​a​t​t​i​n​g​ ​o​p​t​i​o​n​s​ ​f​o​r​ ​t​e​x​t
+							 */
+							shortDesc: string
+							/**
+							 * F​o​r​m​a​t​t​i​n​g​ ​o​p​t​i​o​n​s​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​e​ ​i​n​s​e​r​t​e​d​ ​t​e​x​t​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									bold: {
+										/**
+										 * B​o​l​d
+										 */
+										displayName: string
+										/**
+										 * M​a​k​e​ ​t​e​x​t​ ​b​o​l​d
+										 */
+										shortDesc: string
+										/**
+										 * W​h​e​t​h​e​r​ ​t​o​ ​m​a​k​e​ ​t​h​e​ ​t​e​x​t​ ​b​o​l​d​.
+										 */
+										longDesc: string
+									}
+									italic: {
+										/**
+										 * I​t​a​l​i​c
+										 */
+										displayName: string
+										/**
+										 * M​a​k​e​ ​t​e​x​t​ ​i​t​a​l​i​c
+										 */
+										shortDesc: string
+										/**
+										 * W​h​e​t​h​e​r​ ​t​o​ ​m​a​k​e​ ​t​h​e​ ​t​e​x​t​ ​i​t​a​l​i​c​.
+										 */
+										longDesc: string
+									}
+									underline: {
+										/**
+										 * U​n​d​e​r​l​i​n​e
+										 */
+										displayName: string
+										/**
+										 * U​n​d​e​r​l​i​n​e​ ​t​e​x​t
+										 */
+										shortDesc: string
+										/**
+										 * W​h​e​t​h​e​r​ ​t​o​ ​u​n​d​e​r​l​i​n​e​ ​t​h​e​ ​t​e​x​t​.
+										 */
+										longDesc: string
+									}
+									font_size: {
+										/**
+										 * F​o​n​t​ ​S​i​z​e
+										 */
+										displayName: string
+										/**
+										 * T​e​x​t​ ​f​o​n​t​ ​s​i​z​e​ ​i​n​ ​p​o​i​n​t​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​o​n​t​ ​s​i​z​e​ ​f​o​r​ ​t​h​e​ ​t​e​x​t​ ​i​n​ ​p​o​i​n​t​s​.
+										 */
+										longDesc: string
+									}
+									font_family: {
+										/**
+										 * F​o​n​t​ ​F​a​m​i​l​y
+										 */
+										displayName: string
+										/**
+										 * F​o​n​t​ ​f​a​m​i​l​y​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​o​n​t​ ​f​a​m​i​l​y​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​e​ ​t​e​x​t​ ​(​e​.​g​.​,​ ​"​A​r​i​a​l​"​,​ ​"​T​i​m​e​s​ ​N​e​w​ ​R​o​m​a​n​"​)​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				create_document_from_template: {
+					/**
+					 * C​r​e​a​t​e​ ​D​o​c​u​m​e​n​t​ ​f​r​o​m​ ​T​e​m​p​l​a​t​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​d​o​c​u​m​e​n​t​ ​f​r​o​m​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​p​l​a​c​e​h​o​l​d​e​r​ ​r​e​p​l​a​c​e​m​e​n​t​s​.
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​d​o​c​u​m​e​n​t​ ​b​y​ ​c​o​p​y​i​n​g​ ​a​ ​t​e​m​p​l​a​t​e​ ​a​n​d​ ​r​e​p​l​a​c​i​n​g​ ​p​l​a​c​e​h​o​l​d​e​r​s​ ​w​i​t​h​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e​s​.​ ​S​u​p​p​o​r​t​s​ ​t​e​x​t​ ​r​e​p​l​a​c​e​m​e​n​t​s​,​ ​i​m​a​g​e​ ​i​n​s​e​r​t​i​o​n​s​,​ ​a​u​t​o​m​a​t​i​c​ ​s​h​a​r​i​n​g​ ​w​i​t​h​ ​t​e​m​p​l​a​t​e​ ​c​o​l​l​a​b​o​r​a​t​o​r​s​,​ ​a​n​d​ ​e​x​p​o​r​t​i​n​g​ ​t​o​ ​v​a​r​i​o​u​s​ ​f​o​r​m​a​t​s​.
+					 */
+					longDesc: string
+					options: {
+						template_id: {
+							/**
+							 * T​e​m​p​l​a​t​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​e​m​p​l​a​t​e​ ​d​o​c​u​m​e​n​t​ ​t​o​ ​c​o​p​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​d​o​c​u​m​e​n​t​ ​I​D​ ​t​o​ ​u​s​e​ ​a​s​ ​a​ ​t​e​m​p​l​a​t​e​ ​f​o​r​ ​c​r​e​a​t​i​n​g​ ​t​h​e​ ​n​e​w​ ​d​o​c​u​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+						new_document_name: {
+							/**
+							 * N​e​w​ ​D​o​c​u​m​e​n​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​d​o​c​u​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​t​o​ ​g​i​v​e​ ​t​h​e​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​d​o​c​u​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+						destination_folder_id: {
+							/**
+							 * D​e​s​t​i​n​a​t​i​o​n​ ​F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * F​o​l​d​e​r​ ​t​o​ ​c​r​e​a​t​e​ ​d​o​c​u​m​e​n​t​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​o​l​d​e​r​ ​I​D​ ​w​h​e​r​e​ ​t​h​e​ ​n​e​w​ ​d​o​c​u​m​e​n​t​ ​s​h​o​u​l​d​ ​b​e​ ​c​r​e​a​t​e​d​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​i​t​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​ ​i​n​ ​t​h​e​ ​r​o​o​t​ ​f​o​l​d​e​r​.
+							 */
+							longDesc: string
+						}
+						replacements: {
+							/**
+							 * T​e​x​t​ ​R​e​p​l​a​c​e​m​e​n​t​s
+							 */
+							displayName: string
+							/**
+							 * P​l​a​c​e​h​o​l​d​e​r​ ​t​e​x​t​ ​r​e​p​l​a​c​e​m​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​p​l​a​c​e​h​o​l​d​e​r​ ​t​e​x​t​ ​r​e​p​l​a​c​e​m​e​n​t​s​ ​t​o​ ​m​a​k​e​ ​i​n​ ​t​h​e​ ​t​e​m​p​l​a​t​e​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											placeholder: {
+												/**
+												 * P​l​a​c​e​h​o​l​d​e​r
+												 */
+												displayName: string
+												/**
+												 * P​l​a​c​e​h​o​l​d​e​r​ ​t​e​x​t​ ​t​o​ ​r​e​p​l​a​c​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​p​l​a​c​e​h​o​l​d​e​r​ ​t​e​x​t​ ​i​n​ ​t​h​e​ ​t​e​m​p​l​a​t​e​ ​t​o​ ​b​e​ ​r​e​p​l​a​c​e​d​ ​(​e​.​g​.​,​ ​"​{​{​N​A​M​E​}​}​"​)​.
+												 */
+												longDesc: string
+											}
+											replacement_text: {
+												/**
+												 * R​e​p​l​a​c​e​m​e​n​t​ ​T​e​x​t
+												 */
+												displayName: string
+												/**
+												 * T​e​x​t​ ​t​o​ ​r​e​p​l​a​c​e​ ​p​l​a​c​e​h​o​l​d​e​r​ ​w​i​t​h
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​w​i​l​l​ ​r​e​p​l​a​c​e​ ​t​h​e​ ​p​l​a​c​e​h​o​l​d​e​r​ ​i​n​ ​t​h​e​ ​n​e​w​ ​d​o​c​u​m​e​n​t​.
+												 */
+												longDesc: string
+											}
+											match_case: {
+												/**
+												 * M​a​t​c​h​ ​C​a​s​e
+												 */
+												displayName: string
+												/**
+												 * C​a​s​e​-​s​e​n​s​i​t​i​v​e​ ​r​e​p​l​a​c​e​m​e​n​t
+												 */
+												shortDesc: string
+												/**
+												 * W​h​e​t​h​e​r​ ​t​h​e​ ​p​l​a​c​e​h​o​l​d​e​r​ ​r​e​p​l​a​c​e​m​e​n​t​ ​s​h​o​u​l​d​ ​b​e​ ​c​a​s​e​-​s​e​n​s​i​t​i​v​e​.
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+						remove_unused_fields: {
+							/**
+							 * R​e​m​o​v​e​ ​U​n​u​s​e​d​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * R​e​m​o​v​e​ ​u​n​r​e​p​l​a​c​e​d​ ​p​l​a​c​e​h​o​l​d​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​r​e​m​o​v​e​ ​p​l​a​c​e​h​o​l​d​e​r​ ​t​e​x​t​ ​t​h​a​t​ ​w​a​s​ ​n​o​t​ ​r​e​p​l​a​c​e​d​ ​w​i​t​h​ ​a​c​t​u​a​l​ ​v​a​l​u​e​s​.
+							 */
+							longDesc: string
+						}
+						share_with_template_collaborators: {
+							/**
+							 * S​h​a​r​e​ ​w​i​t​h​ ​T​e​m​p​l​a​t​e​ ​C​o​l​l​a​b​o​r​a​t​o​r​s
+							 */
+							displayName: string
+							/**
+							 * S​h​a​r​e​ ​w​i​t​h​ ​t​e​m​p​l​a​t​e​ ​c​o​l​l​a​b​o​r​a​t​o​r​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​s​h​a​r​e​ ​t​h​e​ ​n​e​w​ ​d​o​c​u​m​e​n​t​ ​w​i​t​h​ ​a​l​l​ ​c​o​l​l​a​b​o​r​a​t​o​r​s​ ​o​f​ ​t​h​e​ ​o​r​i​g​i​n​a​l​ ​t​e​m​p​l​a​t​e​.
+							 */
+							longDesc: string
+						}
+						export_format: {
+							/**
+							 * E​x​p​o​r​t​ ​F​o​r​m​a​t
+							 */
+							displayName: string
+							/**
+							 * F​o​r​m​a​t​ ​t​o​ ​e​x​p​o​r​t​ ​d​o​c​u​m​e​n​t​ ​a​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​o​r​m​a​t​ ​t​o​ ​e​x​p​o​r​t​ ​t​h​e​ ​c​r​e​a​t​e​d​ ​d​o​c​u​m​e​n​t​ ​a​s​ ​(​P​D​F​,​ ​D​O​C​X​,​ ​e​t​c​.​)​.
+							 */
+							longDesc: string
+						}
+						images: {
+							/**
+							 * I​m​a​g​e​ ​R​e​p​l​a​c​e​m​e​n​t​s
+							 */
+							displayName: string
+							/**
+							 * P​l​a​c​e​h​o​l​d​e​r​ ​i​m​a​g​e​ ​r​e​p​l​a​c​e​m​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​p​l​a​c​e​h​o​l​d​e​r​ ​i​m​a​g​e​ ​r​e​p​l​a​c​e​m​e​n​t​s​ ​t​o​ ​m​a​k​e​ ​i​n​ ​t​h​e​ ​t​e​m​p​l​a​t​e​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											placeholder: {
+												/**
+												 * P​l​a​c​e​h​o​l​d​e​r
+												 */
+												displayName: string
+												/**
+												 * I​m​a​g​e​ ​p​l​a​c​e​h​o​l​d​e​r​ ​t​e​x​t
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​p​l​a​c​e​h​o​l​d​e​r​ ​t​e​x​t​ ​i​n​ ​t​h​e​ ​t​e​m​p​l​a​t​e​ ​t​o​ ​b​e​ ​r​e​p​l​a​c​e​d​ ​w​i​t​h​ ​a​n​ ​i​m​a​g​e​.
+												 */
+												longDesc: string
+											}
+											image_url: {
+												/**
+												 * I​m​a​g​e​ ​U​R​L
+												 */
+												displayName: string
+												/**
+												 * U​R​L​ ​o​f​ ​t​h​e​ ​i​m​a​g​e​ ​t​o​ ​i​n​s​e​r​t
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​i​m​a​g​e​ ​t​h​a​t​ ​w​i​l​l​ ​r​e​p​l​a​c​e​ ​t​h​e​ ​p​l​a​c​e​h​o​l​d​e​r​.
+												 */
+												longDesc: string
+											}
+											width: {
+												/**
+												 * W​i​d​t​h
+												 */
+												displayName: string
+												/**
+												 * I​m​a​g​e​ ​w​i​d​t​h​ ​i​n​ ​p​o​i​n​t​s
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​w​i​d​t​h​ ​o​f​ ​t​h​e​ ​i​n​s​e​r​t​e​d​ ​i​m​a​g​e​ ​i​n​ ​p​o​i​n​t​s​.
+												 */
+												longDesc: string
+											}
+											height: {
+												/**
+												 * H​e​i​g​h​t
+												 */
+												displayName: string
+												/**
+												 * I​m​a​g​e​ ​h​e​i​g​h​t​ ​i​n​ ​p​o​i​n​t​s
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​h​e​i​g​h​t​ ​o​f​ ​t​h​e​ ​i​n​s​e​r​t​e​d​ ​i​m​a​g​e​ ​i​n​ ​p​o​i​n​t​s​.
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				create_document_from_text: {
+					/**
+					 * C​r​e​a​t​e​ ​D​o​c​u​m​e​n​t​ ​f​r​o​m​ ​T​e​x​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​d​o​c​u​m​e​n​t​ ​f​r​o​m​ ​t​e​x​t​ ​c​o​n​t​e​n​t​.
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​d​o​c​u​m​e​n​t​ ​f​r​o​m​ ​p​r​o​v​i​d​e​d​ ​t​e​x​t​ ​c​o​n​t​e​n​t​.​ ​S​u​p​p​o​r​t​s​ ​H​T​M​L​ ​p​a​r​s​i​n​g​ ​f​o​r​ ​r​i​c​h​ ​f​o​r​m​a​t​t​i​n​g​ ​a​n​d​ ​c​a​n​ ​o​p​t​i​o​n​a​l​l​y​ ​e​x​p​o​r​t​ ​t​h​e​ ​d​o​c​u​m​e​n​t​ ​t​o​ ​v​a​r​i​o​u​s​ ​f​o​r​m​a​t​s​.
+					 */
+					longDesc: string
+					options: {
+						document_name: {
+							/**
+							 * D​o​c​u​m​e​n​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​d​o​c​u​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​t​o​ ​g​i​v​e​ ​t​h​e​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​d​o​c​u​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+						document_content: {
+							/**
+							 * D​o​c​u​m​e​n​t​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​c​o​n​t​e​n​t​ ​f​o​r​ ​t​h​e​ ​d​o​c​u​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​t​o​ ​b​e​ ​i​n​s​e​r​t​e​d​ ​i​n​t​o​ ​t​h​e​ ​n​e​w​ ​d​o​c​u​m​e​n​t​.​ ​C​a​n​ ​b​e​ ​p​l​a​i​n​ ​t​e​x​t​ ​o​r​ ​H​T​M​L​.
+							 */
+							longDesc: string
+						}
+						parse_html: {
+							/**
+							 * P​a​r​s​e​ ​H​T​M​L
+							 */
+							displayName: string
+							/**
+							 * P​a​r​s​e​ ​c​o​n​t​e​n​t​ ​a​s​ ​H​T​M​L
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​p​a​r​s​e​ ​t​h​e​ ​d​o​c​u​m​e​n​t​ ​c​o​n​t​e​n​t​ ​a​s​ ​H​T​M​L​ ​t​o​ ​p​r​e​s​e​r​v​e​ ​f​o​r​m​a​t​t​i​n​g​ ​l​i​k​e​ ​b​o​l​d​,​ ​i​t​a​l​i​c​,​ ​a​n​d​ ​o​t​h​e​r​ ​s​t​y​l​i​n​g​.
+							 */
+							longDesc: string
+						}
+						folder_id: {
+							/**
+							 * F​o​l​d​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * F​o​l​d​e​r​ ​t​o​ ​c​r​e​a​t​e​ ​d​o​c​u​m​e​n​t​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​o​l​d​e​r​ ​I​D​ ​w​h​e​r​e​ ​t​h​e​ ​n​e​w​ ​d​o​c​u​m​e​n​t​ ​s​h​o​u​l​d​ ​b​e​ ​c​r​e​a​t​e​d​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​i​t​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​ ​i​n​ ​t​h​e​ ​r​o​o​t​ ​f​o​l​d​e​r​.
+							 */
+							longDesc: string
+						}
+						export_format: {
+							/**
+							 * E​x​p​o​r​t​ ​F​o​r​m​a​t
+							 */
+							displayName: string
+							/**
+							 * F​o​r​m​a​t​ ​t​o​ ​e​x​p​o​r​t​ ​d​o​c​u​m​e​n​t​ ​a​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​o​r​m​a​t​ ​t​o​ ​e​x​p​o​r​t​ ​t​h​e​ ​c​r​e​a​t​e​d​ ​d​o​c​u​m​e​n​t​ ​a​s​ ​(​P​D​F​,​ ​D​O​C​X​,​ ​e​t​c​.​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_document_by_id: {
+					/**
+					 * G​e​t​ ​D​o​c​u​m​e​n​t​ ​b​y​ ​I​D
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​d​o​c​u​m​e​n​t​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​d​o​c​u​m​e​n​t​ ​i​n​c​l​u​d​i​n​g​ ​m​e​t​a​d​a​t​a​,​ ​p​e​r​m​i​s​s​i​o​n​s​,​ ​c​o​n​t​e​n​t​,​ ​a​n​d​ ​s​h​a​r​i​n​g​ ​s​e​t​t​i​n​g​s​.​ ​A​l​s​o​ ​p​r​o​v​i​d​e​s​ ​t​h​e​ ​d​o​c​u​m​e​n​t​ ​c​o​n​t​e​n​t​ ​a​s​ ​p​l​a​i​n​ ​t​e​x​t​.
+					 */
+					longDesc: string
+					options: {
+						document_id: {
+							/**
+							 * D​o​c​u​m​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​D​o​c​s​ ​d​o​c​u​m​e​n​t​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​d​o​c​u​m​e​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				upload_document: {
+					/**
+					 * U​p​l​o​a​d​ ​D​o​c​u​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * U​p​l​o​a​d​ ​a​ ​f​i​l​e​ ​a​n​d​ ​c​o​n​v​e​r​t​ ​i​t​ ​t​o​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​f​o​r​m​a​t​.
+					 */
+					shortDesc: string
+					/**
+					 * U​p​l​o​a​d​s​ ​a​ ​d​o​c​u​m​e​n​t​ ​f​i​l​e​ ​(​W​o​r​d​,​ ​P​D​F​,​ ​e​t​c​.​)​ ​t​o​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​a​n​d​ ​c​o​n​v​e​r​t​s​ ​i​t​ ​t​o​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​f​o​r​m​a​t​ ​f​o​r​ ​e​d​i​t​i​n​g​ ​a​n​d​ ​c​o​l​l​a​b​o​r​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						folder: {
+							/**
+							 * F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * D​e​s​t​i​n​a​t​i​o​n​ ​f​o​l​d​e​r​ ​f​o​r​ ​u​p​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​o​l​d​e​r​ ​I​D​ ​w​h​e​r​e​ ​t​h​e​ ​u​p​l​o​a​d​e​d​ ​d​o​c​u​m​e​n​t​ ​s​h​o​u​l​d​ ​b​e​ ​s​t​o​r​e​d​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​i​t​ ​w​i​l​l​ ​b​e​ ​u​p​l​o​a​d​e​d​ ​t​o​ ​t​h​e​ ​r​o​o​t​ ​f​o​l​d​e​r​.
+							 */
+							longDesc: string
+						}
+						file: {
+							/**
+							 * F​i​l​e
+							 */
+							displayName: string
+							/**
+							 * D​o​c​u​m​e​n​t​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​o​c​u​m​e​n​t​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d​ ​a​n​d​ ​c​o​n​v​e​r​t​ ​t​o​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​f​o​r​m​a​t​.
+							 */
+							longDesc: string
+						}
+						file_name: {
+							/**
+							 * F​i​l​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​n​a​m​e​ ​f​o​r​ ​u​p​l​o​a​d​e​d​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​c​u​s​t​o​m​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​u​p​l​o​a​d​e​d​ ​f​i​l​e​.​ ​I​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​,​ ​t​h​e​ ​o​r​i​g​i​n​a​l​ ​f​i​l​e​n​a​m​e​ ​w​i​l​l​ ​b​e​ ​u​s​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_document: {
+					/**
+					 * N​e​w​ ​D​o​c​u​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​d​o​c​u​m​e​n​t​ ​i​s​ ​c​r​e​a​t​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​f​o​r​ ​n​e​w​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​d​o​c​u​m​e​n​t​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​G​o​o​g​l​e​ ​D​r​i​v​e​.​ ​C​a​n​ ​b​e​ ​f​i​l​t​e​r​e​d​ ​b​y​ ​f​o​l​d​e​r​,​ ​f​i​l​e​n​a​m​e​ ​p​a​t​t​e​r​n​s​,​ ​a​n​d​ ​o​p​t​i​o​n​a​l​l​y​ ​i​n​c​l​u​d​e​s​ ​d​o​c​u​m​e​n​t​ ​c​o​n​t​e​n​t​ ​i​n​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​p​a​y​l​o​a​d​.
+					 */
+					longDesc: string
+					options: {
+						folder_id: {
+							/**
+							 * F​o​l​d​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​f​o​l​d​e​r​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​o​l​d​e​r​ ​I​D​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​d​o​c​u​m​e​n​t​s​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​m​o​n​i​t​o​r​s​ ​a​l​l​ ​a​c​c​e​s​s​i​b​l​e​ ​f​o​l​d​e​r​s​.
+							 */
+							longDesc: string
+						}
+						filename: {
+							/**
+							 * F​i​l​e​n​a​m​e​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​d​o​c​u​m​e​n​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​e​n​a​m​e​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​d​o​c​u​m​e​n​t​s​ ​w​i​t​h​ ​n​a​m​e​s​ ​t​h​a​t​ ​m​a​t​c​h​ ​t​h​i​s​ ​p​a​t​t​e​r​n​.
+							 */
+							longDesc: string
+						}
+						search_type: {
+							/**
+							 * S​e​a​r​c​h​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​m​a​t​c​h​ ​t​h​e​ ​f​i​l​e​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * D​e​t​e​r​m​i​n​e​s​ ​h​o​w​ ​t​h​e​ ​f​i​l​e​n​a​m​e​ ​f​i​l​t​e​r​ ​i​s​ ​a​p​p​l​i​e​d​ ​-​ ​e​i​t​h​e​r​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​t​e​x​t​ ​o​r​ ​m​a​t​c​h​e​s​ ​e​x​a​c​t​l​y​.
+							 */
+							longDesc: string
+						}
+						include_content: {
+							/**
+							 * I​n​c​l​u​d​e​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​d​o​c​u​m​e​n​t​ ​c​o​n​t​e​n​t​ ​i​n​ ​t​r​i​g​g​e​r
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​t​h​e​ ​a​c​t​u​a​l​ ​d​o​c​u​m​e​n​t​ ​c​o​n​t​e​n​t​ ​i​n​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​p​a​y​l​o​a​d​.​ ​T​h​i​s​ ​m​a​y​ ​i​n​c​r​e​a​s​e​ ​p​r​o​c​e​s​s​i​n​g​ ​t​i​m​e​ ​a​n​d​ ​p​a​y​l​o​a​d​ ​s​i​z​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		GoogleMeet: {
 			/**
 			 * G​o​o​g​l​e​ ​M​e​e​t
@@ -27396,6 +28076,686 @@ export type TranslationFunctions = {
 							 * Second Option
 							 */
 							displayName: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		GoogleDocs: {
+			/**
+			 * Google Docs
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect with Google Docs to manage your documents
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Integrate with Google Docs to create, update, and manage your documents. This integration allows you to perform actions and respond to events in your Google Docs account, enabling you to automate document management and collaboration workflows.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				append_text_to_document: {
+					/**
+					 * Append Text to Document
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add text to an existing Google Docs document at a specified position.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Appends text to a Google Docs document with options for positioning (beginning, end, or specific index), text formatting, and line breaks. Supports bold, italic, underline, font size, and font family styling.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						document_id: {
+							/**
+							 * Document ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Docs document to modify
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Docs document to append text to.
+							 */
+							longDesc: () => LocalizedString
+						}
+						text: {
+							/**
+							 * Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text content to append
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text content to be added to the document.
+							 */
+							longDesc: () => LocalizedString
+						}
+						insert_position: {
+							/**
+							 * Insert Position
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Where to insert the text
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specifies where in the document to insert the text: at the end, beginning, or at a specific index position.
+							 */
+							longDesc: () => LocalizedString
+						}
+						index: {
+							/**
+							 * Index
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific position index
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The specific character index position where text should be inserted (required when insert_position is "index").
+							 */
+							longDesc: () => LocalizedString
+						}
+						add_line_break: {
+							/**
+							 * Add Line Break
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Add line break with text
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to add a line break before or after the inserted text for better formatting.
+							 */
+							longDesc: () => LocalizedString
+						}
+						text_style: {
+							/**
+							 * Text Style
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Formatting options for text
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Formatting options to apply to the inserted text.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									bold: {
+										/**
+										 * Bold
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Make text bold
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Whether to make the text bold.
+										 */
+										longDesc: () => LocalizedString
+									}
+									italic: {
+										/**
+										 * Italic
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Make text italic
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Whether to make the text italic.
+										 */
+										longDesc: () => LocalizedString
+									}
+									underline: {
+										/**
+										 * Underline
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Underline text
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Whether to underline the text.
+										 */
+										longDesc: () => LocalizedString
+									}
+									font_size: {
+										/**
+										 * Font Size
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Text font size in points
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The font size for the text in points.
+										 */
+										longDesc: () => LocalizedString
+									}
+									font_family: {
+										/**
+										 * Font Family
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Font family name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The font family to use for the text (e.g., "Arial", "Times New Roman").
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				create_document_from_template: {
+					/**
+					 * Create Document from Template
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new Google Docs document from an existing template with placeholder replacements.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new Google Docs document by copying a template and replacing placeholders with specified values. Supports text replacements, image insertions, automatic sharing with template collaborators, and exporting to various formats.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						template_id: {
+							/**
+							 * Template ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Template document to copy
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Google Docs document ID to use as a template for creating the new document.
+							 */
+							longDesc: () => LocalizedString
+						}
+						new_document_name: {
+							/**
+							 * New Document Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name for the new document
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name to give the newly created document.
+							 */
+							longDesc: () => LocalizedString
+						}
+						destination_folder_id: {
+							/**
+							 * Destination Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Folder to create document in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Google Drive folder ID where the new document should be created. If not specified, it will be created in the root folder.
+							 */
+							longDesc: () => LocalizedString
+						}
+						replacements: {
+							/**
+							 * Text Replacements
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Placeholder text replacements
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of placeholder text replacements to make in the template.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											placeholder: {
+												/**
+												 * Placeholder
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Placeholder text to replace
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The placeholder text in the template to be replaced (e.g., "{{NAME}}").
+												 */
+												longDesc: (arg0: number | string | boolean) => LocalizedString
+											}
+											replacement_text: {
+												/**
+												 * Replacement Text
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Text to replace placeholder with
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The text that will replace the placeholder in the new document.
+												 */
+												longDesc: () => LocalizedString
+											}
+											match_case: {
+												/**
+												 * Match Case
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Case-sensitive replacement
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Whether the placeholder replacement should be case-sensitive.
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+						remove_unused_fields: {
+							/**
+							 * Remove Unused Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Remove unreplaced placeholders
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to remove placeholder text that was not replaced with actual values.
+							 */
+							longDesc: () => LocalizedString
+						}
+						share_with_template_collaborators: {
+							/**
+							 * Share with Template Collaborators
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Share with template collaborators
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to automatically share the new document with all collaborators of the original template.
+							 */
+							longDesc: () => LocalizedString
+						}
+						export_format: {
+							/**
+							 * Export Format
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Format to export document as
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional format to export the created document as (PDF, DOCX, etc.).
+							 */
+							longDesc: () => LocalizedString
+						}
+						images: {
+							/**
+							 * Image Replacements
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Placeholder image replacements
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of placeholder image replacements to make in the template.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											placeholder: {
+												/**
+												 * Placeholder
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Image placeholder text
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The placeholder text in the template to be replaced with an image.
+												 */
+												longDesc: () => LocalizedString
+											}
+											image_url: {
+												/**
+												 * Image URL
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * URL of the image to insert
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The URL of the image that will replace the placeholder.
+												 */
+												longDesc: () => LocalizedString
+											}
+											width: {
+												/**
+												 * Width
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Image width in points
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The width of the inserted image in points.
+												 */
+												longDesc: () => LocalizedString
+											}
+											height: {
+												/**
+												 * Height
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Image height in points
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The height of the inserted image in points.
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				create_document_from_text: {
+					/**
+					 * Create Document from Text
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new Google Docs document from text content.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new Google Docs document from provided text content. Supports HTML parsing for rich formatting and can optionally export the document to various formats.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						document_name: {
+							/**
+							 * Document Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name for the new document
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name to give the newly created document.
+							 */
+							longDesc: () => LocalizedString
+						}
+						document_content: {
+							/**
+							 * Document Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text content for the document
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text content to be inserted into the new document. Can be plain text or HTML.
+							 */
+							longDesc: () => LocalizedString
+						}
+						parse_html: {
+							/**
+							 * Parse HTML
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Parse content as HTML
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to parse the document content as HTML to preserve formatting like bold, italic, and other styling.
+							 */
+							longDesc: () => LocalizedString
+						}
+						folder_id: {
+							/**
+							 * Folder ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Folder to create document in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Google Drive folder ID where the new document should be created. If not specified, it will be created in the root folder.
+							 */
+							longDesc: () => LocalizedString
+						}
+						export_format: {
+							/**
+							 * Export Format
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Format to export document as
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional format to export the created document as (PDF, DOCX, etc.).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_document_by_id: {
+					/**
+					 * Get Document by ID
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a Google Docs document.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves comprehensive information about a Google Docs document including metadata, permissions, content, and sharing settings. Also provides the document content as plain text.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						document_id: {
+							/**
+							 * Document ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Docs document ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Docs document to retrieve information for.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				upload_document: {
+					/**
+					 * Upload Document
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Upload a file and convert it to Google Docs format.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Uploads a document file (Word, PDF, etc.) to Google Drive and converts it to Google Docs format for editing and collaboration.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						folder: {
+							/**
+							 * Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Destination folder for upload
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Google Drive folder ID where the uploaded document should be stored. If not specified, it will be uploaded to the root folder.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file: {
+							/**
+							 * File
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Document file to upload
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The document file to upload and convert to Google Docs format.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file_name: {
+							/**
+							 * File Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom name for uploaded file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional custom name for the uploaded file. If not provided, the original filename will be used.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_document: {
+					/**
+					 * New Document
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new Google Docs document is created.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors for new Google Docs documents created in Google Drive. Can be filtered by folder, filename patterns, and optionally includes document content in the trigger payload.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						folder_id: {
+							/**
+							 * Folder ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific folder to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Google Drive folder ID to monitor for new documents. If not specified, monitors all accessible folders.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filename: {
+							/**
+							 * Filename Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by document name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional filename filter to only trigger for documents with names that match this pattern.
+							 */
+							longDesc: () => LocalizedString
+						}
+						search_type: {
+							/**
+							 * Search Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to match the filename
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Determines how the filename filter is applied - either contains the text or matches exactly.
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_content: {
+							/**
+							 * Include Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include document content in trigger
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include the actual document content in the trigger payload. This may increase processing time and payload size.
+							 */
+							longDesc: () => LocalizedString
 						}
 					}
 				}
