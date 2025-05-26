@@ -1022,6 +1022,36 @@ type RootTranslation = {
 						}
 					}
 				}
+				get_conference: {
+					/**
+					 * G​e​t​ ​C​o​n​f​e​r​e​n​c​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​ ​i​n​c​l​u​d​i​n​g​ ​b​a​s​i​c​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​r​e​c​o​r​d​i​n​g​s​,​ ​p​a​r​t​i​c​i​p​a​n​t​s​,​ ​a​n​d​ ​t​r​a​n​s​c​r​i​p​t​s​.​ ​R​e​t​u​r​n​s​ ​a​l​l​ ​r​e​l​a​t​e​d​ ​d​a​t​a​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​s​p​o​n​s​e​.
+					 */
+					longDesc: string
+					options: {
+						conference: {
+							/**
+							 * C​o​n​f​e​r​e​n​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​f​e​r​e​n​c​e​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​n​f​e​r​e​n​c​e​ ​I​D​ ​o​r​ ​m​e​e​t​i​n​g​ ​c​o​d​e​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​M​e​e​t​ ​c​o​n​f​e​r​e​n​c​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
 				get_conference_recordings: {
 					/**
 					 * G​e​t​ ​C​o​n​f​e​r​e​n​c​e​ ​R​e​c​o​r​d​i​n​g​s
@@ -4315,6 +4345,688 @@ type RootTranslation = {
 							longDesc: string
 						}
 					}
+				}
+			}
+		}
+		GoogleContacts: {
+			/**
+			 * G​o​o​g​l​e​ ​C​o​n​t​a​c​t​s
+			 */
+			displayName: string
+			/**
+			 * M​a​n​a​g​e​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​C​o​n​t​a​c​t​s
+			 */
+			shortDesc: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​G​o​o​g​l​e​ ​C​o​n​t​a​c​t​s​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​c​o​n​t​a​c​t​s​ ​d​i​r​e​c​t​l​y​ ​f​r​o​m​ ​y​o​u​r​ ​a​p​p​l​i​c​a​t​i​o​n​.​ ​C​r​e​a​t​e​,​ ​u​p​d​a​t​e​,​ ​a​n​d​ ​d​e​l​e​t​e​ ​c​o​n​t​a​c​t​s​ ​s​e​a​m​l​e​s​s​l​y​.
+			 */
+			longDesc: string
+			actions: {
+				get_contact: {
+					/**
+					 * G​e​t​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​G​o​o​g​l​e​ ​c​o​n​t​a​c​t​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​r​o​m​ ​G​o​o​g​l​e​ ​C​o​n​t​a​c​t​s​ ​i​n​c​l​u​d​i​n​g​ ​n​a​m​e​s​,​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​,​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s​,​ ​o​r​g​a​n​i​z​a​t​i​o​n​s​,​ ​a​d​d​r​e​s​s​e​s​,​ ​b​i​r​t​h​d​a​y​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​p​e​r​s​o​n​a​l​ ​d​e​t​a​i​l​s​.​ ​R​e​t​u​r​n​s​ ​a​l​l​ ​a​v​a​i​l​a​b​l​e​ ​f​i​e​l​d​s​ ​f​o​r​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​o​n​t​a​c​t​.
+					 */
+					longDesc: string
+					options: {
+						resource_name: {
+							/**
+							 * C​o​n​t​a​c​t​ ​R​e​s​o​u​r​c​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​r​e​s​o​u​r​c​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​(​e​.​g​.​,​ ​"​p​e​o​p​l​e​/​1​2​3​4​5​"​)​.​ ​T​h​i​s​ ​u​n​i​q​u​e​l​y​ ​i​d​e​n​t​i​f​i​e​s​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​i​n​ ​G​o​o​g​l​e​ ​C​o​n​t​a​c​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_groups: {
+					/**
+					 * L​i​s​t​ ​C​o​n​t​a​c​t​ ​G​r​o​u​p​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​o​n​t​a​c​t​ ​g​r​o​u​p​s​ ​f​r​o​m​ ​G​o​o​g​l​e​ ​C​o​n​t​a​c​t​s​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​l​l​ ​c​o​n​t​a​c​t​ ​g​r​o​u​p​s​ ​f​r​o​m​ ​G​o​o​g​l​e​ ​C​o​n​t​a​c​t​s​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​g​r​o​u​p​ ​t​y​p​e​,​ ​s​e​a​r​c​h​i​n​g​ ​b​y​ ​n​a​m​e​,​ ​a​n​d​ ​s​e​l​e​c​t​i​n​g​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​s​.​ ​R​e​t​u​r​n​s​ ​b​o​t​h​ ​s​y​s​t​e​m​ ​a​n​d​ ​u​s​e​r​-​c​r​e​a​t​e​d​ ​g​r​o​u​p​s​ ​w​i​t​h​ ​m​e​t​a​d​a​t​a​ ​i​n​c​l​u​d​i​n​g​ ​m​e​m​b​e​r​ ​c​o​u​n​t​s​.
+					 */
+					longDesc: string
+					options: {
+						search_name: {
+							/**
+							 * S​e​a​r​c​h​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​g​r​o​u​p​s​ ​b​y​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​s​e​a​r​c​h​ ​t​e​r​m​ ​t​o​ ​f​i​l​t​e​r​ ​g​r​o​u​p​s​ ​b​y​ ​n​a​m​e​.​ ​T​h​e​ ​s​e​a​r​c​h​ ​i​s​ ​c​a​s​e​-​i​n​s​e​n​s​i​t​i​v​e​ ​a​n​d​ ​m​a​t​c​h​e​s​ ​p​a​r​t​i​a​l​ ​n​a​m​e​s​.
+							 */
+							longDesc: string
+						}
+						group_type: {
+							/**
+							 * G​r​o​u​p​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​g​r​o​u​p​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​g​r​o​u​p​s​ ​b​y​ ​t​y​p​e​:​ ​"​a​l​l​"​ ​f​o​r​ ​b​o​t​h​ ​s​y​s​t​e​m​ ​a​n​d​ ​u​s​e​r​ ​g​r​o​u​p​s​,​ ​"​u​s​e​r​"​ ​f​o​r​ ​u​s​e​r​-​c​r​e​a​t​e​d​ ​g​r​o​u​p​s​ ​o​n​l​y​,​ ​o​r​ ​"​s​y​s​t​e​m​"​ ​f​o​r​ ​s​y​s​t​e​m​ ​g​r​o​u​p​s​ ​o​n​l​y​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​"​a​l​l​"​.
+							 */
+							longDesc: string
+						}
+						group_fields: {
+							/**
+							 * G​r​o​u​p​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e
+							 */
+							shortDesc: string
+							/**
+							 * C​o​m​m​a​-​s​e​p​a​r​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​f​i​e​l​d​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.​ ​O​p​t​i​o​n​s​ ​r​a​n​g​e​ ​f​r​o​m​ ​b​a​s​i​c​ ​n​a​m​e​ ​o​n​l​y​ ​t​o​ ​a​l​l​ ​f​i​e​l​d​s​ ​i​n​c​l​u​d​i​n​g​ ​c​u​s​t​o​m​ ​d​a​t​a​.​ ​D​e​f​a​u​l​t​ ​i​n​c​l​u​d​e​s​ ​n​a​m​e​,​ ​t​y​p​e​,​ ​m​e​m​b​e​r​ ​c​o​u​n​t​,​ ​a​n​d​ ​m​e​t​a​d​a​t​a​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				search_contacts: {
+					/**
+					 * S​e​a​r​c​h​ ​C​o​n​t​a​c​t​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​c​o​n​t​a​c​t​s​ ​i​n​ ​G​o​o​g​l​e​ ​C​o​n​t​a​c​t​s​ ​b​y​ ​v​a​r​i​o​u​s​ ​c​r​i​t​e​r​i​a​.
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​t​h​r​o​u​g​h​ ​G​o​o​g​l​e​ ​C​o​n​t​a​c​t​s​ ​u​s​i​n​g​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​,​ ​f​u​l​l​ ​n​a​m​e​s​,​ ​o​r​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s​.​ ​S​u​p​p​o​r​t​s​ ​b​o​t​h​ ​e​x​a​c​t​ ​m​a​t​c​h​i​n​g​ ​a​n​d​ ​p​a​r​t​i​a​l​ ​m​a​t​c​h​i​n​g​ ​(​c​o​n​t​a​i​n​s​)​ ​s​e​a​r​c​h​ ​t​y​p​e​s​.​ ​R​e​t​u​r​n​s​ ​b​a​s​i​c​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​ ​m​a​t​c​h​i​n​g​ ​c​o​n​t​a​c​t​s​.
+					 */
+					longDesc: string
+					options: {
+						search_field: {
+							/**
+							 * S​e​a​r​c​h​ ​F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h​ ​i​n​:​ ​"​e​m​a​i​l​"​ ​f​o​r​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​,​ ​"​f​u​l​l​_​n​a​m​e​"​ ​f​o​r​ ​n​a​m​e​s​,​ ​o​r​ ​"​p​h​o​n​e​_​n​u​m​b​e​r​"​ ​f​o​r​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s​.
+							 */
+							longDesc: string
+						}
+						search_type: {
+							/**
+							 * S​e​a​r​c​h​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​s​e​a​r​c​h​ ​t​o​ ​p​e​r​f​o​r​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​a​r​c​h​ ​m​a​t​c​h​i​n​g​ ​t​y​p​e​:​ ​"​c​o​n​t​a​i​n​s​"​ ​f​o​r​ ​p​a​r​t​i​a​l​ ​m​a​t​c​h​e​s​ ​o​r​ ​"​e​x​a​c​t​"​ ​f​o​r​ ​e​x​a​c​t​ ​m​a​t​c​h​e​s​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​"​c​o​n​t​a​i​n​s​"​.
+							 */
+							longDesc: string
+						}
+						search_value: {
+							/**
+							 * S​e​a​r​c​h​ ​V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​e​a​r​c​h​ ​t​e​r​m​ ​o​r​ ​v​a​l​u​e​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d​.​ ​S​e​a​r​c​h​ ​i​s​ ​c​a​s​e​-​i​n​s​e​n​s​i​t​i​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_contact_to_group: {
+					/**
+					 * A​d​d​ ​C​o​n​t​a​c​t​ ​t​o​ ​G​r​o​u​p
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​ ​t​o​ ​a​ ​c​o​n​t​a​c​t​ ​g​r​o​u​p​.
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​s​ ​a​ ​c​o​n​t​a​c​t​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​ ​g​r​o​u​p​ ​i​n​ ​G​o​o​g​l​e​ ​C​o​n​t​a​c​t​s​.​ ​B​o​t​h​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​a​n​d​ ​g​r​o​u​p​ ​m​u​s​t​ ​a​l​r​e​a​d​y​ ​e​x​i​s​t​.​ ​R​e​t​u​r​n​s​ ​c​o​n​f​i​r​m​a​t​i​o​n​ ​w​i​t​h​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​b​o​t​h​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​a​n​d​ ​g​r​o​u​p​.
+					 */
+					longDesc: string
+					options: {
+						group_resource_name: {
+							/**
+							 * G​r​o​u​p​ ​R​e​s​o​u​r​c​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​g​r​o​u​p​ ​t​o​ ​a​d​d​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​r​e​s​o​u​r​c​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​g​r​o​u​p​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​w​i​l​l​ ​b​e​ ​a​d​d​e​d​ ​(​e​.​g​.​,​ ​"​c​o​n​t​a​c​t​G​r​o​u​p​s​/​1​2​3​4​5​"​)​.
+							 */
+							longDesc: string
+						}
+						contact_resource_name: {
+							/**
+							 * C​o​n​t​a​c​t​ ​R​e​s​o​u​r​c​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​g​r​o​u​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​r​e​s​o​u​r​c​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​g​r​o​u​p​ ​(​e​.​g​.​,​ ​"​p​e​o​p​l​e​/​1​2​3​4​5​"​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_contact: {
+					/**
+					 * C​r​e​a​t​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​n​ ​G​o​o​g​l​e​ ​C​o​n​t​a​c​t​s​.
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​n​ ​G​o​o​g​l​e​ ​C​o​n​t​a​c​t​s​ ​w​i​t​h​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​n​a​m​e​s​,​ ​c​o​n​t​a​c​t​ ​d​e​t​a​i​l​s​,​ ​a​d​d​r​e​s​s​e​s​,​ ​o​r​g​a​n​i​z​a​t​i​o​n​s​,​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.​ ​R​e​t​u​r​n​s​ ​t​h​e​ ​c​r​e​a​t​e​d​ ​c​o​n​t​a​c​t​'​s​ ​b​a​s​i​c​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						first_name: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​'​s​ ​f​i​r​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​g​i​v​e​n​ ​n​a​m​e​ ​(​f​i​r​s​t​ ​n​a​m​e​)​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​.​ ​T​h​i​s​ ​f​i​e​l​d​ ​i​s​ ​r​e​q​u​i​r​e​d​.
+							 */
+							longDesc: string
+						}
+						middle_name: {
+							/**
+							 * M​i​d​d​l​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​'​s​ ​m​i​d​d​l​e​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​i​d​d​l​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​.​ ​T​h​i​s​ ​f​i​e​l​d​ ​i​s​ ​o​p​t​i​o​n​a​l​.
+							 */
+							longDesc: string
+						}
+						last_name: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​'​s​ ​l​a​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​a​m​i​l​y​ ​n​a​m​e​ ​(​l​a​s​t​ ​n​a​m​e​)​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​.​ ​T​h​i​s​ ​f​i​e​l​d​ ​i​s​ ​r​e​q​u​i​r​e​d​.
+							 */
+							longDesc: string
+						}
+						name_prefix: {
+							/**
+							 * N​a​m​e​ ​P​r​e​f​i​x
+							 */
+							displayName: string
+							/**
+							 * H​o​n​o​r​i​f​i​c​ ​p​r​e​f​i​x​ ​(​e​.​g​.​,​ ​M​r​.​,​ ​D​r​.​)
+							 */
+							shortDesc: string
+							/**
+							 * H​o​n​o​r​i​f​i​c​ ​p​r​e​f​i​x​ ​s​u​c​h​ ​a​s​ ​"​M​r​.​"​,​ ​"​M​s​.​"​,​ ​"​D​r​.​"​,​ ​e​t​c​.​ ​T​h​i​s​ ​f​i​e​l​d​ ​i​s​ ​o​p​t​i​o​n​a​l​.
+							 */
+							longDesc: string
+						}
+						name_suffix: {
+							/**
+							 * N​a​m​e​ ​S​u​f​f​i​x
+							 */
+							displayName: string
+							/**
+							 * H​o​n​o​r​i​f​i​c​ ​s​u​f​f​i​x​ ​(​e​.​g​.​,​ ​J​r​.​,​ ​S​r​.​)
+							 */
+							shortDesc: string
+							/**
+							 * H​o​n​o​r​i​f​i​c​ ​s​u​f​f​i​x​ ​s​u​c​h​ ​a​s​ ​"​J​r​.​"​,​ ​"​S​r​.​"​,​ ​"​I​I​I​"​,​ ​e​t​c​.​ ​T​h​i​s​ ​f​i​e​l​d​ ​i​s​ ​o​p​t​i​o​n​a​l​.
+							 */
+							longDesc: string
+						}
+						job_title: {
+							/**
+							 * J​o​b​ ​T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​'​s​ ​j​o​b​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​j​o​b​ ​t​i​t​l​e​ ​o​r​ ​p​o​s​i​t​i​o​n​.​ ​T​h​i​s​ ​f​i​e​l​d​ ​i​s​ ​o​p​t​i​o​n​a​l​.
+							 */
+							longDesc: string
+						}
+						company: {
+							/**
+							 * C​o​m​p​a​n​y
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​'​s​ ​c​o​m​p​a​n​y​ ​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​w​o​r​k​s​.​ ​T​h​i​s​ ​f​i​e​l​d​ ​i​s​ ​o​p​t​i​o​n​a​l​.
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * P​r​i​m​a​r​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​p​r​i​m​a​r​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.​ ​T​h​i​s​ ​f​i​e​l​d​ ​i​s​ ​o​p​t​i​o​n​a​l​ ​b​u​t​ ​c​o​m​m​o​n​l​y​ ​u​s​e​d​.
+							 */
+							longDesc: string
+						}
+						email_type: {
+							/**
+							 * E​m​a​i​l​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​:​ ​"​h​o​m​e​"​,​ ​"​w​o​r​k​"​,​ ​o​r​ ​"​o​t​h​e​r​"​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​"​o​t​h​e​r​"​.
+							 */
+							longDesc: string
+						}
+						phone_number: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * P​r​i​m​a​r​y​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​p​r​i​m​a​r​y​ ​p​h​o​n​e​ ​n​u​m​b​e​r​.​ ​T​h​i​s​ ​f​i​e​l​d​ ​i​s​ ​o​p​t​i​o​n​a​l​.
+							 */
+							longDesc: string
+						}
+						phone_type: {
+							/**
+							 * P​h​o​n​e​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r​:​ ​"​h​o​m​e​"​,​ ​"​w​o​r​k​"​,​ ​"​m​o​b​i​l​e​"​,​ ​"​m​a​i​n​"​,​ ​"​h​o​m​e​F​a​x​"​,​ ​"​w​o​r​k​F​a​x​"​,​ ​"​p​a​g​e​r​"​,​ ​o​r​ ​"​o​t​h​e​r​"​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​"​o​t​h​e​r​"​.
+							 */
+							longDesc: string
+						}
+						additional_phone_numbers: {
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​P​h​o​n​e​ ​N​u​m​b​e​r​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​a​d​d​i​t​i​o​n​a​l​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s​ ​w​i​t​h​ ​t​h​e​i​r​ ​r​e​s​p​e​c​t​i​v​e​ ​t​y​p​e​s​.​ ​E​a​c​h​ ​e​n​t​r​y​ ​c​o​n​t​a​i​n​s​ ​a​ ​n​u​m​b​e​r​ ​a​n​d​ ​t​y​p​e​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									number: {
+										/**
+										 * P​h​o​n​e​ ​N​u​m​b​e​r
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​v​a​l​u​e​.
+										 */
+										longDesc: string
+									}
+									type: {
+										/**
+										 * P​h​o​n​e​ ​T​y​p​e
+										 */
+										displayName: string
+										/**
+										 * T​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​t​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r​:​ ​"​h​o​m​e​"​,​ ​"​w​o​r​k​"​,​ ​"​m​o​b​i​l​e​"​,​ ​"​m​a​i​n​"​,​ ​"​h​o​m​e​F​a​x​"​,​ ​"​w​o​r​k​F​a​x​"​,​ ​"​p​a​g​e​r​"​,​ ​o​r​ ​"​o​t​h​e​r​"​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​"​o​t​h​e​r​"​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						address: {
+							/**
+							 * A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​'​s​ ​a​d​d​r​e​s​s​ ​i​n​f​o​r​m​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * C​o​m​p​l​e​t​e​ ​a​d​d​r​e​s​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​i​n​c​l​u​d​i​n​g​ ​s​t​r​e​e​t​,​ ​c​i​t​y​,​ ​s​t​a​t​e​,​ ​a​n​d​ ​c​o​u​n​t​r​y​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									street: {
+										/**
+										 * S​t​r​e​e​t​ ​A​d​d​r​e​s​s
+										 */
+										displayName: string
+										/**
+										 * S​t​r​e​e​t​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​l​i​n​e​.
+										 */
+										longDesc: string
+									}
+									po_box: {
+										/**
+										 * P​O​ ​B​o​x
+										 */
+										displayName: string
+										/**
+										 * P​o​s​t​ ​o​f​f​i​c​e​ ​b​o​x​ ​n​u​m​b​e​r
+										 */
+										shortDesc: string
+										/**
+										 * P​o​s​t​ ​o​f​f​i​c​e​ ​b​o​x​ ​n​u​m​b​e​r​ ​i​f​ ​a​p​p​l​i​c​a​b​l​e​.
+										 */
+										longDesc: string
+									}
+									neighbourhood: {
+										/**
+										 * N​e​i​g​h​b​o​u​r​h​o​o​d
+										 */
+										displayName: string
+										/**
+										 * N​e​i​g​h​b​o​u​r​h​o​o​d​ ​o​r​ ​d​i​s​t​r​i​c​t
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​n​e​i​g​h​b​o​u​r​h​o​o​d​,​ ​d​i​s​t​r​i​c​t​,​ ​o​r​ ​e​x​t​e​n​d​e​d​ ​a​d​d​r​e​s​s​ ​i​n​f​o​r​m​a​t​i​o​n​.
+										 */
+										longDesc: string
+									}
+									city: {
+										/**
+										 * C​i​t​y
+										 */
+										displayName: string
+										/**
+										 * C​i​t​y​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​i​t​y​ ​o​r​ ​l​o​c​a​l​i​t​y​ ​n​a​m​e​.
+										 */
+										longDesc: string
+									}
+									state: {
+										/**
+										 * S​t​a​t​e​/​P​r​o​v​i​n​c​e
+										 */
+										displayName: string
+										/**
+										 * S​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​a​t​e​,​ ​p​r​o​v​i​n​c​e​,​ ​o​r​ ​r​e​g​i​o​n​ ​n​a​m​e​.
+										 */
+										longDesc: string
+									}
+									zip: {
+										/**
+										 * Z​I​P​/​P​o​s​t​a​l​ ​C​o​d​e
+										 */
+										displayName: string
+										/**
+										 * Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​Z​I​P​ ​c​o​d​e​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​.
+										 */
+										longDesc: string
+									}
+									country: {
+										/**
+										 * C​o​u​n​t​r​y
+										 */
+										displayName: string
+										/**
+										 * C​o​u​n​t​r​y​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​o​u​n​t​r​y​ ​n​a​m​e​.
+										 */
+										longDesc: string
+									}
+									type: {
+										/**
+										 * A​d​d​r​e​s​s​ ​T​y​p​e
+										 */
+										displayName: string
+										/**
+										 * T​y​p​e​ ​o​f​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​t​y​p​e​ ​o​f​ ​a​d​d​r​e​s​s​:​ ​"​h​o​m​e​"​,​ ​"​w​o​r​k​"​,​ ​o​r​ ​"​o​t​h​e​r​"​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​"​o​t​h​e​r​"​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						birthday: {
+							/**
+							 * B​i​r​t​h​d​a​y
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​'​s​ ​b​i​r​t​h​d​a​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​d​a​t​e​ ​o​f​ ​b​i​r​t​h​.​ ​P​r​o​v​i​d​e​ ​a​s​ ​a​ ​d​a​t​e​ ​v​a​l​u​e​.
+							 */
+							longDesc: string
+						}
+						url: {
+							/**
+							 * W​e​b​s​i​t​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​'​s​ ​w​e​b​s​i​t​e​ ​o​r​ ​U​R​L
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​w​e​b​s​i​t​e​ ​U​R​L​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						related_person: {
+							/**
+							 * R​e​l​a​t​e​d​ ​P​e​r​s​o​n
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​f​ ​a​ ​r​e​l​a​t​e​d​ ​p​e​r​s​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​a​ ​p​e​r​s​o​n​ ​r​e​l​a​t​e​d​ ​t​o​ ​t​h​i​s​ ​c​o​n​t​a​c​t​ ​(​e​.​g​.​,​ ​s​p​o​u​s​e​,​ ​m​a​n​a​g​e​r​,​ ​e​t​c​.​)​.
+							 */
+							longDesc: string
+						}
+						relationship_type: {
+							/**
+							 * R​e​l​a​t​i​o​n​s​h​i​p​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​r​e​l​a​t​i​o​n​s​h​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​r​e​l​a​t​i​o​n​s​h​i​p​:​ ​"​s​p​o​u​s​e​"​,​ ​"​c​h​i​l​d​"​,​ ​"​m​o​t​h​e​r​"​,​ ​"​f​a​t​h​e​r​"​,​ ​"​p​a​r​e​n​t​"​,​ ​"​b​r​o​t​h​e​r​"​,​ ​"​s​i​s​t​e​r​"​,​ ​"​f​r​i​e​n​d​"​,​ ​"​r​e​l​a​t​i​v​e​"​,​ ​"​d​o​m​e​s​t​i​c​P​a​r​t​n​e​r​"​,​ ​"​m​a​n​a​g​e​r​"​,​ ​"​a​s​s​i​s​t​a​n​t​"​,​ ​"​r​e​f​e​r​r​e​d​B​y​"​,​ ​"​p​a​r​t​n​e​r​"​,​ ​o​r​ ​"​o​t​h​e​r​"​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​"​o​t​h​e​r​"​.
+							 */
+							longDesc: string
+						}
+						custom_fields: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​u​s​e​r​-​d​e​f​i​n​e​d​ ​f​i​e​l​d​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​h​a​s​h​ ​o​f​ ​c​u​s​t​o​m​ ​k​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​ ​f​o​r​ ​s​t​o​r​i​n​g​ ​a​d​d​i​t​i​o​n​a​l​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						notes: {
+							/**
+							 * N​o​t​e​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​n​o​t​e​s​ ​a​b​o​u​t​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							shortDesc: string
+							/**
+							 * F​r​e​e​-​f​o​r​m​ ​t​e​x​t​ ​n​o​t​e​s​ ​o​r​ ​b​i​o​g​r​a​p​h​y​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_group: {
+					/**
+					 * C​r​e​a​t​e​ ​C​o​n​t​a​c​t​ ​G​r​o​u​p
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​g​r​o​u​p​ ​i​n​ ​G​o​o​g​l​e​ ​C​o​n​t​a​c​t​s​.
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​u​s​e​r​-​d​e​f​i​n​e​d​ ​c​o​n​t​a​c​t​ ​g​r​o​u​p​ ​i​n​ ​G​o​o​g​l​e​ ​C​o​n​t​a​c​t​s​.​ ​T​h​e​ ​g​r​o​u​p​ ​c​a​n​ ​t​h​e​n​ ​b​e​ ​u​s​e​d​ ​t​o​ ​o​r​g​a​n​i​z​e​ ​c​o​n​t​a​c​t​s​.​ ​R​e​t​u​r​n​s​ ​t​h​e​ ​c​r​e​a​t​e​d​ ​g​r​o​u​p​'​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​r​e​s​o​u​r​c​e​ ​n​a​m​e​.
+					 */
+					longDesc: string
+					options: {
+						name: {
+							/**
+							 * G​r​o​u​p​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​g​r​o​u​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​g​r​o​u​p​.​ ​T​h​i​s​ ​n​a​m​e​ ​w​i​l​l​ ​b​e​ ​v​i​s​i​b​l​e​ ​i​n​ ​G​o​o​g​l​e​ ​C​o​n​t​a​c​t​s​ ​a​n​d​ ​m​u​s​t​ ​b​e​ ​p​r​o​v​i​d​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_contact: {
+					/**
+					 * N​e​w​ ​C​o​n​t​a​c​t​ ​C​r​e​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​G​o​o​g​l​e​ ​C​o​n​t​a​c​t​s​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​G​o​o​g​l​e​ ​C​o​n​t​a​c​t​s​.​ ​I​t​ ​p​r​o​v​i​d​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​c​o​n​t​a​c​t​ ​i​n​c​l​u​d​i​n​g​ ​n​a​m​e​s​,​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​,​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s​,​ ​a​n​d​ ​m​o​r​e​.
+					 */
+					longDesc: string
 				}
 			}
 		}
@@ -28933,6 +29645,36 @@ export type TranslationFunctions = {
 						}
 					}
 				}
+				get_conference: {
+					/**
+					 * Get Conference
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a Google Meet conference.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches comprehensive details about a specific Google Meet conference including basic information, recordings, participants, and transcripts. Returns all related data in a single response.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						conference: {
+							/**
+							 * Conference
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conference to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The conference ID or meeting code of the Google Meet conference to retrieve detailed information for.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
 				get_conference_recordings: {
 					/**
 					 * Get Conference Recordings
@@ -32226,6 +32968,688 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 						}
 					}
+				}
+			}
+		}
+		GoogleContacts: {
+			/**
+			 * Google Contacts
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Manage your Google Contacts
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Connect to Google Contacts to manage your contacts directly from your application. Create, update, and delete contacts seamlessly.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				get_contact: {
+					/**
+					 * Get Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific Google contact.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches comprehensive contact information from Google Contacts including names, email addresses, phone numbers, organizations, addresses, birthdays, and other personal details. Returns all available fields for the specified contact.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						resource_name: {
+							/**
+							 * Contact Resource Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier for the contact
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The resource name of the contact to retrieve (e.g., "people/12345"). This uniquely identifies the contact in Google Contacts.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_groups: {
+					/**
+					 * List Contact Groups
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of contact groups from Google Contacts.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches all contact groups from Google Contacts with support for filtering by group type, searching by name, and selecting specific fields. Returns both system and user-created groups with metadata including member counts.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						search_name: {
+							/**
+							 * Search Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter groups by name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional search term to filter groups by name. The search is case-insensitive and matches partial names.
+							 */
+							longDesc: () => LocalizedString
+						}
+						group_type: {
+							/**
+							 * Group Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of groups to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter groups by type: "all" for both system and user groups, "user" for user-created groups only, or "system" for system groups only. Default is "all".
+							 */
+							longDesc: () => LocalizedString
+						}
+						group_fields: {
+							/**
+							 * Group Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Fields to include in the response
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Comma-separated list of fields to include in the response. Options range from basic name only to all fields including custom data. Default includes name, type, member count, and metadata.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				search_contacts: {
+					/**
+					 * Search Contacts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for contacts in Google Contacts by various criteria.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search through Google Contacts using email addresses, full names, or phone numbers. Supports both exact matching and partial matching (contains) search types. Returns basic contact information for matching contacts.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						search_field: {
+							/**
+							 * Search Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to search in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The contact field to search in: "email" for email addresses, "full_name" for names, or "phone_number" for phone numbers.
+							 */
+							longDesc: () => LocalizedString
+						}
+						search_type: {
+							/**
+							 * Search Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of search to perform
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Search matching type: "contains" for partial matches or "exact" for exact matches. Default is "contains".
+							 */
+							longDesc: () => LocalizedString
+						}
+						search_value: {
+							/**
+							 * Search Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to search for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The search term or value to look for in the specified field. Search is case-insensitive.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_contact_to_group: {
+					/**
+					 * Add Contact to Group
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add an existing contact to a contact group.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Adds a contact to an existing contact group in Google Contacts. Both the contact and group must already exist. Returns confirmation with details about both the contact and group.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						group_resource_name: {
+							/**
+							 * Group Resource Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact group to add to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The resource name of the contact group where the contact will be added (e.g., "contactGroups/12345").
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact_resource_name: {
+							/**
+							 * Contact Resource Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact to add to the group
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The resource name of the contact to add to the group (e.g., "people/12345").
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_contact: {
+					/**
+					 * Create Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new contact in Google Contacts.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new contact in Google Contacts with comprehensive information including names, contact details, addresses, organizations, relationships, and custom fields. Returns the created contact's basic information.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						first_name: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact's first name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The given name (first name) of the contact. This field is required.
+							 */
+							longDesc: () => LocalizedString
+						}
+						middle_name: {
+							/**
+							 * Middle Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact's middle name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The middle name of the contact. This field is optional.
+							 */
+							longDesc: () => LocalizedString
+						}
+						last_name: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact's last name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The family name (last name) of the contact. This field is required.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name_prefix: {
+							/**
+							 * Name Prefix
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Honorific prefix (e.g., Mr., Dr.)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Honorific prefix such as "Mr.", "Ms.", "Dr.", etc. This field is optional.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name_suffix: {
+							/**
+							 * Name Suffix
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Honorific suffix (e.g., Jr., Sr.)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Honorific suffix such as "Jr.", "Sr.", "III", etc. This field is optional.
+							 */
+							longDesc: () => LocalizedString
+						}
+						job_title: {
+							/**
+							 * Job Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact's job title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The contact's job title or position. This field is optional.
+							 */
+							longDesc: () => LocalizedString
+						}
+						company: {
+							/**
+							 * Company
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact's company or organization
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the company or organization where the contact works. This field is optional.
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Primary email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The contact's primary email address. This field is optional but commonly used.
+							 */
+							longDesc: () => LocalizedString
+						}
+						email_type: {
+							/**
+							 * Email Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The type of email address: "home", "work", or "other". Default is "other".
+							 */
+							longDesc: () => LocalizedString
+						}
+						phone_number: {
+							/**
+							 * Phone Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Primary phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The contact's primary phone number. This field is optional.
+							 */
+							longDesc: () => LocalizedString
+						}
+						phone_type: {
+							/**
+							 * Phone Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The type of phone number: "home", "work", "mobile", "main", "homeFax", "workFax", "pager", or "other". Default is "other".
+							 */
+							longDesc: () => LocalizedString
+						}
+						additional_phone_numbers: {
+							/**
+							 * Additional Phone Numbers
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional phone numbers for the contact
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of additional phone numbers with their respective types. Each entry contains a number and type.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									number: {
+										/**
+										 * Phone Number
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The phone number
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The phone number value.
+										 */
+										longDesc: () => LocalizedString
+									}
+									type: {
+										/**
+										 * Phone Type
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Type of phone number
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The type of phone number: "home", "work", "mobile", "main", "homeFax", "workFax", "pager", or "other". Default is "other".
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						address: {
+							/**
+							 * Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact's address information
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Complete address information for the contact including street, city, state, and country.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									street: {
+										/**
+										 * Street Address
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Street address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The street address line.
+										 */
+										longDesc: () => LocalizedString
+									}
+									po_box: {
+										/**
+										 * PO Box
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Post office box number
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Post office box number if applicable.
+										 */
+										longDesc: () => LocalizedString
+									}
+									neighbourhood: {
+										/**
+										 * Neighbourhood
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Neighbourhood or district
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The neighbourhood, district, or extended address information.
+										 */
+										longDesc: () => LocalizedString
+									}
+									city: {
+										/**
+										 * City
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * City name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The city or locality name.
+										 */
+										longDesc: () => LocalizedString
+									}
+									state: {
+										/**
+										 * State/Province
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * State or province
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The state, province, or region name.
+										 */
+										longDesc: () => LocalizedString
+									}
+									zip: {
+										/**
+										 * ZIP/Postal Code
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * ZIP or postal code
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The ZIP code or postal code.
+										 */
+										longDesc: () => LocalizedString
+									}
+									country: {
+										/**
+										 * Country
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Country name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The country name.
+										 */
+										longDesc: () => LocalizedString
+									}
+									type: {
+										/**
+										 * Address Type
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Type of address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The type of address: "home", "work", or "other". Default is "other".
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						birthday: {
+							/**
+							 * Birthday
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact's birthday
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The contact's date of birth. Provide as a date value.
+							 */
+							longDesc: () => LocalizedString
+						}
+						url: {
+							/**
+							 * Website URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact's website or URL
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A website URL associated with the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						related_person: {
+							/**
+							 * Related Person
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name of a related person
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of a person related to this contact (e.g., spouse, manager, etc.).
+							 */
+							longDesc: () => LocalizedString
+						}
+						relationship_type: {
+							/**
+							 * Relationship Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of relationship
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The type of relationship: "spouse", "child", "mother", "father", "parent", "brother", "sister", "friend", "relative", "domesticPartner", "manager", "assistant", "referredBy", "partner", or "other". Default is "other".
+							 */
+							longDesc: () => LocalizedString
+						}
+						custom_fields: {
+							/**
+							 * Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom user-defined fields
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A hash of custom key-value pairs for storing additional contact information.
+							 */
+							longDesc: () => LocalizedString
+						}
+						notes: {
+							/**
+							 * Notes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional notes about the contact
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Free-form text notes or biography information about the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_group: {
+					/**
+					 * Create Contact Group
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new contact group in Google Contacts.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new user-defined contact group in Google Contacts. The group can then be used to organize contacts. Returns the created group's information including its resource name.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						name: {
+							/**
+							 * Group Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name for the new contact group
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The display name for the new contact group. This name will be visible in Google Contacts and must be provided.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_contact: {
+					/**
+					 * New Contact Created
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Trigger when a new contact is created in Google Contacts.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates whenever a new contact is added to Google Contacts. It provides detailed information about the newly created contact including names, email addresses, phone numbers, and more.
+					 */
+					longDesc: () => LocalizedString
 				}
 			}
 		}

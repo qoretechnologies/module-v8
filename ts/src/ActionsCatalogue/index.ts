@@ -40,6 +40,7 @@ import { Debugger, DebugLevels } from '../utils/Debugger';
 import googleForms from '../apps/google-forms';
 import googleMeet from '../apps/google-meet';
 import googleDocs from '../apps/google-docs';
+import googleContacts from '../apps/google-contacts';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -54,6 +55,7 @@ export interface IQoreApi {
 }
 
 const NEW_APPS = {
+  googleContacts,
   googleDocs,
   googleMeet,
   googleSheets,
