@@ -6,6 +6,7 @@ import Dropbox from './apps/Dropbox';
 import Dynamics from './apps/Dynamics';
 import Freshdesk from './apps/Freshdesk';
 import Github from './apps/Github';
+import GoogleContacts from './apps/GoogleContacts';
 import GoogleDocs from './apps/GoogleDocs';
 import GoogleDrive from './apps/GoogleDrive';
 import GoogleForms from './apps/GoogleForms';
@@ -113,6 +114,7 @@ const en = {
     GoogleForms,
     GoogleDrive,
     GoogleSheets,
+    GoogleContacts,
     Attio,
     Intercom,
     Xero,
