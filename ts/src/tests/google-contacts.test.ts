@@ -178,8 +178,6 @@ describe('Google Contacts', () => {
         base_context
       );
 
-      console.dir(result, { depth: null });
-
       expect(result).toBeDefined();
     });
   });
