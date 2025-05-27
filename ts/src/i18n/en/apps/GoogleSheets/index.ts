@@ -1,5 +1,4 @@
-
-
+/* eslint-disable max-len */
 const GoogleSheetsAppEn = {
   displayName: 'Google Sheets',
   shortDesc: 'Connect with Google Sheets to manage your spreadsheets',
@@ -57,6 +56,65 @@ const GoogleSheetsAppEn = {
     },
   },
   actions: {
+    search_spreadsheets: {
+      displayName: 'Search Spreadsheets',
+      shortDesc:
+        'Search for Google Sheets spreadsheets with advanced filtering and sorting options.',
+      longDesc:
+        'Search for Google Sheets spreadsheets in Google Drive using various criteria including filename, folder location, and custom queries. Supports sorting by different fields and directions with pagination.',
+      options: {
+        filename: {
+          displayName: 'Filename',
+          shortDesc: 'Name of the spreadsheet to search for',
+          longDesc: 'The name or partial name of the Google Sheets spreadsheet to search for.',
+        },
+        search_type: {
+          displayName: 'Search Type',
+          shortDesc: 'Type of filename matching',
+          longDesc:
+            'How to match the filename - either contains the text or exact match. Default is contains.',
+        },
+        folder: {
+          displayName: 'Folder',
+          shortDesc: 'Folder to search within',
+          longDesc:
+            'The Google Drive folder ID to limit the search to. If not specified, searches all accessible folders.',
+        },
+        order_by: {
+          displayName: 'Order By',
+          shortDesc: 'Sorting criteria for results',
+          longDesc:
+            'List of sorting criteria to apply to the search results. Each item specifies a field and direction.',
+          type: {
+            fields: {
+              field: {
+                displayName: 'Field',
+                shortDesc: 'Field to sort by',
+                longDesc:
+                  'The field to sort the results by (e.g., name, modifiedTime, createdTime).',
+              },
+              direction: {
+                displayName: 'Direction',
+                shortDesc: 'Sort direction',
+                longDesc: 'The direction to sort - either ascending (asc) or descending (desc).',
+              },
+            },
+          },
+        },
+        page_size: {
+          displayName: 'Page Size',
+          shortDesc: 'Maximum number of results to return',
+          longDesc:
+            'The maximum number of spreadsheets to return in a single request. Default is 100.',
+        },
+        custom_query: {
+          displayName: 'Custom Query',
+          shortDesc: 'Additional search criteria',
+          longDesc:
+            'Custom Google Drive search query to add additional filtering criteria beyond the basic options.',
+        },
+      },
+    },
     find_spreadsheet_rows: {
       displayName: 'Find Spreadsheet Rows',
       shortDesc: 'Search for rows in a Google Sheets spreadsheet that match specific criteria.',

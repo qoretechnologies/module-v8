@@ -1,0 +1,4662 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Lists",
+    "version": "v3",
+    "x-hubspot-api-use-case": "You want to bulk add contacts to a particular list, or remove company records from a company list.",
+    "x-hubspot-documentation-banner": "NONE",
+    "x-hubspot-introduction": "Use the lists API to manage list memberships for object lists.",
+    "x-hubspot-product-tier-requirements": {
+      "cms": "STARTER",
+      "marketing": "STARTER"
+    },
+    "x-hubspot-related-documentation": [
+      {
+        "name": "Lists Guide",
+        "url": "https://developers.hubspot.com/docs/guides/api/crm/lists/overview"
+      }
+    ]
+  },
+  "host": "api.hubapi.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/crm/v3/lists/": {
+      "get": {
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "collectionFormat": "multi",
+            "description": "The **ILS IDs** of the lists to fetch.",
+            "in": "query",
+            "items": {
+              "type": "string"
+            },
+            "name": "listIds",
+            "required": false,
+            "type": "array"
+          },
+          {
+            "default": false,
+            "description": "A flag indicating whether or not the response object list definitions should include a filter branch definition. By default, object list definitions will not have their filter branch definitions included in the response.",
+            "in": "query",
+            "name": "includeFilters",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ListsByIdResponse"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "private_apps": [
+              "crm.lists.read"
+            ]
+          },
+          {
+            "oauth2": [
+              "crm.lists.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Lists"
+        ],
+        "description": "Fetch multiple lists in a single request by **ILS list ID**. The response will include the definitions of all lists that exist for the `listIds` provided.",
+        "operationId": "get-/crm/v3/lists/_getAll",
+        "summary": "Fetch Multiple Lists"
+      },
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ListCreateRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ListCreateResponse"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "private_apps": [
+              "cms.membership.access_groups.write"
+            ]
+          },
+          {
+            "oauth2": [
+              "cms.membership.access_groups.write"
+            ]
+          },
+          {
+            "oauth2": [
+              "crm.lists.write"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.lists.write"
+            ]
+          }
+        ],
+        "tags": [
+          "Lists"
+        ],
+        "description": "Create a new list with the provided object list definition.",
+        "operationId": "create_list",
+        "summary": "Create List"
+      }
+    },
+    "/crm/v3/lists/folders": {
+      "get": {
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "default": "0",
+            "description": "The Id of the folder to retrieve.",
+            "in": "query",
+            "name": "folderId",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ListFolderFetchResponse"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "private_apps": [
+              "crm.lists.read"
+            ]
+          },
+          {
+            "oauth2": [
+              "crm.lists.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Folders"
+        ],
+        "description": "Retrieves a folder and recursively includes all folders via the childNodes attribute.  The child lists field will be empty in all child nodes. Only the folder retrieved will include the child lists in that folder.",
+        "operationId": "get-/crm/v3/lists/folders_getAll",
+        "summary": "Retrieves a folder."
+      },
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ListFolderCreateRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ListFolderCreateResponse"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "oauth2": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Folders"
+        ],
+        "description": "Creates a folder with the given information.",
+        "operationId": "post-/crm/v3/lists/folders_create",
+        "summary": "Creates a folder"
+      }
+    },
+    "/crm/v3/lists/folders/move-list": {
+      "put": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ListMoveRequest"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "oauth2": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Folders"
+        ],
+        "description": "Given a list and a folder, the list will be moved to that folder.",
+        "operationId": "put-/crm/v3/lists/folders/move-list_moveList",
+        "summary": "Moves a list to a given folder"
+      }
+    },
+    "/crm/v3/lists/folders/{folderId}": {
+      "delete": {
+        "produces": [
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "description": "",
+            "in": "path",
+            "name": "folderId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "oauth2": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Folders"
+        ],
+        "description": "Deletes the folder with the given Id.",
+        "operationId": "delete-/crm/v3/lists/folders/{folderId}_remove",
+        "summary": "Deletes a folder"
+      }
+    },
+    "/crm/v3/lists/folders/{folderId}/move/{newParentFolderId}": {
+      "put": {
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "description": "",
+            "in": "path",
+            "name": "folderId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "",
+            "in": "path",
+            "name": "newParentFolderId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ListFolderFetchResponse"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "oauth2": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Folders"
+        ],
+        "description": "This moves the folder from its current location to a new location. It updates the parent of this folder to the new Id given.",
+        "operationId": "put-/crm/v3/lists/folders/{folderId}/move/{newParentFolderId}_move",
+        "summary": "Moves a folder"
+      }
+    },
+    "/crm/v3/lists/folders/{folderId}/rename": {
+      "put": {
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "description": "",
+            "in": "path",
+            "name": "folderId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "",
+            "in": "query",
+            "name": "newFolderName",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ListFolderFetchResponse"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "oauth2": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Folders"
+        ],
+        "description": "Renames the given folderId with a new name.",
+        "operationId": "put-/crm/v3/lists/folders/{folderId}/rename_rename",
+        "summary": "Rename a folder"
+      }
+    },
+    "/crm/v3/lists/idmapping": {
+      "get": {
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "description": "The legacy list id from lists v1 API.",
+            "in": "query",
+            "name": "legacyListId",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/PublicMigrationMapping"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "private_apps": [
+              "crm.lists.read"
+            ]
+          },
+          {
+            "oauth2": [
+              "crm.lists.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Mapping"
+        ],
+        "description": "This API allows translation of legacy list id to list id. This is a temporary API allowed for mapping old id's to new id's and will expire on May 30th, 2025.",
+        "operationId": "get-/crm/v3/lists/idmapping_translateLegacyListIdToListId",
+        "summary": "Translate Legacy List Id to Modern List Id"
+      },
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/PublicBatchMigrationMapping"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "private_apps": [
+              "crm.lists.read"
+            ]
+          },
+          {
+            "oauth2": [
+              "crm.lists.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Mapping"
+        ],
+        "description": "This API allows translation of a batch of legacy list id's to list id's. This allows for a maximum of 10,000 id's. This is a temporary API allowed for mapping old id's to new id's and will expire on May 30th, 2025.",
+        "operationId": "post-/crm/v3/lists/idmapping_translateLegacyListIdToListIdBatch",
+        "summary": "Translate Legacy List Id to Modern List Id in Batch"
+      }
+    },
+    "/crm/v3/lists/object-type-id/{objectTypeId}/name/{listName}": {
+      "get": {
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "description": "The name of the list to fetch. This is **not** case sensitive.",
+            "in": "path",
+            "name": "listName",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The object type ID of the object types stored by the list to fetch. For example, `0-1` for a `CONTACT` list.",
+            "in": "path",
+            "name": "objectTypeId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "default": false,
+            "description": "A flag indicating whether or not the response object list definition should include a filter branch definition. By default, object list definitions will not have their filter branch definitions included in the response.",
+            "in": "query",
+            "name": "includeFilters",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ListFetchResponse"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "private_apps": [
+              "crm.lists.read"
+            ]
+          },
+          {
+            "oauth2": [
+              "crm.lists.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Lists"
+        ],
+        "description": "Fetch a single list by list name and object type.",
+        "operationId": "get-/crm/v3/lists/object-type-id/{objectTypeId}/name/{listName}_getByName",
+        "summary": "Fetch List by Name"
+      }
+    },
+    "/crm/v3/lists/records/{objectTypeId}/{recordId}/memberships": {
+      "get": {
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "description": "Object type id of the record",
+            "in": "path",
+            "name": "objectTypeId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "Id of the record",
+            "in": "path",
+            "name": "recordId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ApiCollectionResponseRecordListMembershipNoPaging"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "private_apps": [
+              "crm.lists.read"
+            ]
+          },
+          {
+            "oauth2": [
+              "crm.lists.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Memberships"
+        ],
+        "description": "For given record provide lists this record is member of.",
+        "operationId": "get-/crm/v3/lists/records/{objectTypeId}/{recordId}/memberships_getLists",
+        "summary": "Get lists record is member of"
+      }
+    },
+    "/crm/v3/lists/search": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ListSearchRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ListSearchResponse"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "private_apps": [
+              "crm.lists.read"
+            ]
+          },
+          {
+            "oauth2": [
+              "crm.lists.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Lists"
+        ],
+        "description": "Search lists by list name or page through all lists by providing an empty `query` value.",
+        "operationId": "search_lists",
+        "summary": "Search Lists"
+      }
+    },
+    "/crm/v3/lists/{listId}": {
+      "delete": {
+        "produces": [
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "description": "The **ILS ID** of the list to delete.",
+            "in": "path",
+            "name": "listId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "oauth2": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Lists"
+        ],
+        "description": "Delete a list by **ILS list ID**. Lists deleted through this endpoint can be restored up to 90-days following the delete. After 90-days, the list is purged and can no longer be restored.",
+        "operationId": "delete_list",
+        "summary": "Delete a List"
+      },
+      "get": {
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "description": "The **ILS ID** of the list to fetch.",
+            "in": "path",
+            "name": "listId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "default": false,
+            "description": "A flag indicating whether or not the response object list definition should include a filter branch definition. By default, object list definitions will not have their filter branch definitions included in the response.",
+            "in": "query",
+            "name": "includeFilters",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ListFetchResponse"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "private_apps": [
+              "crm.lists.read"
+            ]
+          },
+          {
+            "oauth2": [
+              "crm.lists.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Lists"
+        ],
+        "description": "Fetch a single list by **ILS list ID**.",
+        "operationId": "get_list",
+        "summary": "Fetch List by ID"
+      }
+    },
+    "/crm/v3/lists/{listId}/memberships": {
+      "delete": {
+        "produces": [
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "description": "The **ILS ID** of the `MANUAL` or `SNAPSHOT` list.",
+            "in": "path",
+            "name": "listId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "oauth2": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Memberships"
+        ],
+        "description": "Remove **all** of the records from a list. ***Note:*** *The list is not deleted.*\n\nThis endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.\n\nThis endpoint only supports lists that have less than 100,000 memberships.",
+        "operationId": "delete-/crm/v3/lists/{listId}/memberships_removeAll",
+        "summary": "Delete All Records from a List"
+      },
+      "get": {
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "description": "The **ILS ID** of the list.",
+            "in": "path",
+            "name": "listId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The paging offset token for the page that comes `after` the previously requested records.\n\nIf provided, then the records in the response will be the records following the offset, sorted in *ascending* order. Takes precedence over the `before` offset.",
+            "in": "query",
+            "name": "after",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "The paging offset token for the page that comes `before` the previously requested records.\n\nIf provided, then the records in the response will be the records preceding the offset, sorted in *descending* order.",
+            "in": "query",
+            "name": "before",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "default": 100,
+            "description": "The number of records to return in the response. The maximum `limit` is 250.",
+            "format": "int32",
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ApiCollectionResponseJoinTimeAndRecordId"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "private_apps": [
+              "crm.lists.read"
+            ]
+          },
+          {
+            "oauth2": [
+              "crm.lists.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Memberships"
+        ],
+        "description": "Fetch the memberships of a list in order sorted by the `recordId` of the records in the list.\n\nThe `recordId`s are sorted in *ascending* order if an `after` offset or no offset is provided. If only a `before` offset is provided, then the records are sorted in *descending* order.\n\nThe `after` offset parameter will take precedence over the `before` offset in a case where both are provided.",
+        "operationId": "get-/crm/v3/lists/{listId}/memberships_getPage",
+        "summary": "Fetch List Memberships Ordered by ID"
+      }
+    },
+    "/crm/v3/lists/{listId}/memberships/add": {
+      "put": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "description": "The **ILS ID** of the `MANUAL` or `SNAPSHOT` list.",
+            "in": "path",
+            "name": "listId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/MembershipsUpdateResponse"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "oauth2": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Memberships"
+        ],
+        "description": "Add the records provided to the list. Records that do not exist or that are already members of the list are ignored.\n\nThis endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.",
+        "operationId": "add_memberships",
+        "summary": "Add Records to a List"
+      }
+    },
+    "/crm/v3/lists/{listId}/memberships/add-and-remove": {
+      "put": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "description": "The **ILS ID** of the `MANUAL` or `SNAPSHOT` list.",
+            "in": "path",
+            "name": "listId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/MembershipChangeRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/MembershipsUpdateResponse"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "oauth2": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Memberships"
+        ],
+        "description": "Add and/or remove records that have already been created in the system to and/or from a list.\n\nThis endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.",
+        "operationId": "put-/crm/v3/lists/{listId}/memberships/add-and-remove_addAndRemove",
+        "summary": "Add and/or Remove Records from a List"
+      }
+    },
+    "/crm/v3/lists/{listId}/memberships/add-from/{sourceListId}": {
+      "put": {
+        "produces": [
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "description": "The **ILS ID** of the `MANUAL` or `SNAPSHOT` *destination list*, which the *source list* records are added to.",
+            "in": "path",
+            "name": "listId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The **ILS ID** of the *source list* to grab the records from, which are then added to the *destination list*.",
+            "in": "path",
+            "name": "sourceListId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "oauth2": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Memberships"
+        ],
+        "description": "Add all of the records from a *source list* (specified by the `sourceListId`) to a *destination list* (specified by the `listId`). Records that are already members of the *destination list* will be ignored. The *destination* and *source list* IDs must be different. The *destination* and *source lists* must contain records of the same type (e.g. contacts, companies, etc.).\n\nThis endpoint only works for *destination lists* that have a `processingType` of `MANUAL` or `SNAPSHOT`. The *source list* can have any `processingType`.\n\nThis endpoint only supports a `sourceListId` for lists with less than 100,000 memberships.",
+        "operationId": "add_members_from_source_list",
+        "summary": "Add All Records from a Source List to a Destination List"
+      }
+    },
+    "/crm/v3/lists/{listId}/memberships/join-order": {
+      "get": {
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "description": "The **ILS ID** of the list.",
+            "in": "path",
+            "name": "listId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The paging offset token for the page that comes `after` the previously requested records.\n\nIf provided, then the records in the response will be the records following the offset, sorted in *ascending* order. Takes precedence over the `before` offset.",
+            "in": "query",
+            "name": "after",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "The paging offset token for the page that comes `before` the previously requested records.\n\nIf provided, then the records in the response will be the records preceding the offset, sorted in *descending* order.",
+            "in": "query",
+            "name": "before",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "default": 100,
+            "description": "The number of records to return in the response. The maximum `limit` is 250.",
+            "format": "int32",
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ApiCollectionResponseJoinTimeAndRecordId"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "private_apps": [
+              "crm.lists.read"
+            ]
+          },
+          {
+            "oauth2": [
+              "crm.lists.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Memberships"
+        ],
+        "description": "Fetch the memberships of a list in order sorted by the time the records were added to the list.\n\nThe `recordId`s are sorted in *ascending* order if an `after` offset or no offset is provided. If only a `before` offset is provided, then the records are sorted in *descending* order.\n\nThe `after` offset parameter will take precedence over the `before` offset in a case where both are provided.",
+        "operationId": "get-/crm/v3/lists/{listId}/memberships/join-order_getPageOrderedByAddedToListDate",
+        "summary": "Fetch List Memberships Ordered by Added to List Date"
+      }
+    },
+    "/crm/v3/lists/{listId}/memberships/remove": {
+      "put": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "description": "The **ILS ID** of the `MANUAL` or `SNAPSHOT` list.",
+            "in": "path",
+            "name": "listId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/MembershipsUpdateResponse"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "oauth2": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Memberships"
+        ],
+        "description": "Remove the records provided from the list. Records that do not exist or that are not members of the list are ignored.\n\nThis endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.",
+        "operationId": "remove_members_from_list",
+        "summary": "Remove Records from a List"
+      }
+    },
+    "/crm/v3/lists/{listId}/restore": {
+      "put": {
+        "produces": [
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "description": "The **ILS ID** of the list to restore.",
+            "in": "path",
+            "name": "listId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "oauth2": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Lists"
+        ],
+        "description": "Restore a previously deleted list by **ILS list ID**. Deleted lists are eligible to be restored up-to 90-days after the list has been deleted.",
+        "operationId": "put-/crm/v3/lists/{listId}/restore_restore",
+        "summary": "Restore a List"
+      }
+    },
+    "/crm/v3/lists/{listId}/update-list-filters": {
+      "put": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "description": "The **ILS ID** of the list to update.",
+            "in": "path",
+            "name": "listId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "default": false,
+            "description": "A flag indicating whether or not the memberships added to the list as a result of the filter change should be enrolled in workflows that are relevant to this list.",
+            "in": "query",
+            "name": "enrollObjectsInWorkflows",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ListFilterUpdateRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ListUpdateResponse"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "oauth2": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Lists"
+        ],
+        "description": "Update the filter branch definition of a `DYNAMIC` list. Once updated, the list memberships will be re-evaluated and updated to match the new definition.",
+        "operationId": "put-/crm/v3/lists/{listId}/update-list-filters_updateListFilters",
+        "summary": "Update List Filter Definition"
+      }
+    },
+    "/crm/v3/lists/{listId}/update-list-name": {
+      "put": {
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "description": "The **ILS ID** of the list to update.",
+            "in": "path",
+            "name": "listId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The name to update the list to.",
+            "in": "query",
+            "name": "listName",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "default": false,
+            "description": "A flag indicating whether or not the response object list definition should include a filter branch definition. By default, object list definitions will not have their filter branch definitions included in the response.",
+            "in": "query",
+            "name": "includeFilters",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ListUpdateResponse"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "oauth2": [
+              "crm.lists.write",
+              "crm.lists.read"
+            ]
+          },
+          {
+            "private_apps": [
+              "cms.membership.access_groups.write",
+              "crm.lists.read"
+            ]
+          }
+        ],
+        "tags": [
+          "Lists"
+        ],
+        "description": "Update the name of a list. The name must be globally unique relative to all other public lists in the portal.",
+        "operationId": "put-/crm/v3/lists/{listId}/update-list-name_updateName",
+        "summary": "Update List Name"
+      }
+    }
+  },
+  "definitions": {
+    "ApiCollectionResponseJoinTimeAndRecordId": {
+      "properties": {
+        "paging": {
+          "$ref": "#/definitions/Paging"
+        },
+        "results": {
+          "items": {
+            "$ref": "#/definitions/JoinTimeAndRecordId"
+          },
+          "type": "array"
+        },
+        "total": {
+          "format": "int64",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "results"
+      ],
+      "type": "object"
+    },
+    "ApiCollectionResponseRecordListMembershipNoPaging": {
+      "properties": {
+        "results": {
+          "items": {
+            "$ref": "#/definitions/RecordListMembership"
+          },
+          "type": "array"
+        },
+        "total": {
+          "format": "int64",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "results"
+      ],
+      "type": "object"
+    },
+    "Error": {
+      "example": {
+        "category": "VALIDATION_ERROR",
+        "correlationId": "aeb5f871-7f07-4993-9211-075dc63e7cbf",
+        "links": {
+          "knowledge-base": "https://www.hubspot.com/products/service/knowledge-base"
+        },
+        "message": "Invalid input (details will vary based on the error)"
+      },
+      "properties": {
+        "category": {
+          "description": "The error category",
+          "example": "VALIDATION_ERROR",
+          "type": "string"
+        },
+        "context": {
+          "additionalProperties": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "description": "Context about the error condition",
+          "example": {
+            "invalidPropertyName": [
+              "propertyValue"
+            ],
+            "missingScopes": [
+              "scope1",
+              "scope2"
+            ]
+          },
+          "type": "object"
+        },
+        "correlationId": {
+          "description": "A unique identifier for the request. Include this value with any error reports or support tickets",
+          "example": "aeb5f871-7f07-4993-9211-075dc63e7cbf",
+          "format": "uuid",
+          "type": "string"
+        },
+        "errors": {
+          "description": "further information about the error",
+          "items": {
+            "$ref": "#/definitions/ErrorDetail"
+          },
+          "type": "array"
+        },
+        "links": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "A map of link names to associated URIs containing documentation about the error or recommended remediation steps",
+          "example": {
+            "knowledge-base": "https://www.hubspot.com/products/service/knowledge-base"
+          },
+          "type": "object"
+        },
+        "message": {
+          "description": "A human readable message describing the error along with remediation steps where appropriate",
+          "example": "Invalid input (details will vary based on the error)",
+          "type": "string"
+        },
+        "subCategory": {
+          "description": "A specific category that contains more specific detail about the error",
+          "type": "string"
+        }
+      },
+      "required": [
+        "category",
+        "correlationId",
+        "message"
+      ],
+      "type": "object"
+    },
+    "ErrorDetail": {
+      "properties": {
+        "code": {
+          "description": "The status code associated with the error detail",
+          "type": "string"
+        },
+        "context": {
+          "additionalProperties": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "description": "Context about the error condition",
+          "example": {
+            "missingScopes": [
+              "scope1",
+              "scope2"
+            ]
+          },
+          "type": "object"
+        },
+        "in": {
+          "description": "The name of the field or parameter in which the error was found.",
+          "type": "string"
+        },
+        "message": {
+          "description": "A human readable message describing the error along with remediation steps where appropriate",
+          "type": "string"
+        },
+        "subCategory": {
+          "description": "A specific category that contains more specific detail about the error",
+          "type": "string"
+        }
+      },
+      "required": [
+        "message"
+      ],
+      "type": "object"
+    },
+    "JoinTimeAndRecordId": {
+      "properties": {
+        "membershipTimestamp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "recordId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "membershipTimestamp",
+        "recordId"
+      ],
+      "type": "object"
+    },
+    "ListCreateRequest": {
+      "properties": {
+        "customProperties": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "The list of custom properties to tie to the list. Custom property name is the key, the value is the value.",
+          "type": "object"
+        },
+        "filterBranch": {},
+        "listFolderId": {
+          "description": "The ID of the folder that the list should be created in. If left blank, then the list will be created in the root of the list folder structure.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "description": "The name of the list, which must be globally unique across all public lists in the portal.",
+          "type": "string"
+        },
+        "objectTypeId": {
+          "description": "The object type ID of the type of objects that the list will store.",
+          "type": "string"
+        },
+        "processingType": {
+          "description": "The processing type of the list. One of: `SNAPSHOT`, `MANUAL`, or `DYNAMIC`.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "objectTypeId",
+        "processingType"
+      ],
+      "type": "object"
+    },
+    "ListCreateResponse": {
+      "properties": {
+        "list": {
+          "$ref": "#/definitions/PublicObjectList"
+        }
+      },
+      "required": [
+        "list"
+      ],
+      "type": "object"
+    },
+    "ListFetchResponse": {
+      "properties": {
+        "list": {
+          "$ref": "#/definitions/PublicObjectList"
+        }
+      },
+      "required": [
+        "list"
+      ],
+      "type": "object"
+    },
+    "ListFilterUpdateRequest": {
+      "properties": {
+        "filterBranch": {}
+      },
+      "required": [
+        "filterBranch"
+      ],
+      "type": "object"
+    },
+    "ListFolderCreateRequest": {
+      "properties": {
+        "name": {
+          "description": "The name of the folder to be created.",
+          "type": "string"
+        },
+        "parentFolderId": {
+          "description": "The folder this should be created in, if not specified will be created in the root folder 0.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "ListFolderCreateResponse": {
+      "properties": {
+        "folder": {
+          "$ref": "#/definitions/PublicListFolder"
+        }
+      },
+      "required": [
+        "folder"
+      ],
+      "type": "object"
+    },
+    "ListFolderFetchResponse": {
+      "properties": {
+        "folder": {
+          "$ref": "#/definitions/PublicListFolder"
+        }
+      },
+      "required": [
+        "folder"
+      ],
+      "type": "object"
+    },
+    "ListMoveRequest": {
+      "properties": {
+        "listId": {
+          "description": "The Id of the list to move.",
+          "type": "string"
+        },
+        "newFolderId": {
+          "description": "The Id of folder to move the list to, the root folder is Id 0.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "listId",
+        "newFolderId"
+      ],
+      "type": "object"
+    },
+    "ListSearchRequest": {
+      "properties": {
+        "additionalProperties": {
+          "description": "The property names of any additional list properties to include in the response. Properties that do not exist or that are empty for a particular list are not included in the response.\n\nBy default, all requests will fetch the following properties for each list: `hs_list_size`, `hs_last_record_added_at`, `hs_last_record_removed_at`, `hs_folder_name`, and `hs_list_reference_count`.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "count": {
+          "description": "The number of lists to include in the response. Defaults to `20` if no value is provided. The max `count` is `500`.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "listIds": {
+          "description": "The `listIds` that will be used to filter results by `listId`. If values are provided, then the response will only include results that have a `listId` in this array.\n\nIf no value is provided, or if an empty list is provided, then the results will not be filtered by `listId`.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "offset": {
+          "description": "Value used to paginate through lists. The `offset` provided in the response can be used in the next request to fetch the next page of results. Defaults to `0` if no offset is provided.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "processingTypes": {
+          "description": "The `processingTypes` that will be used to filter results by `processingType`. If values are provided, then the response will only include results that have a `processingType` in this array.\n\nIf no value is provided, or if an empty list is provided, then results will not be filtered by `processingType`.\n\nValid `processingTypes` are: `MANUAL`, `SNAPSHOT`, or `DYNAMIC`.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "query": {
+          "description": "The `query` that will be used to search for lists by list name. If no `query` is provided, then the results will include all lists.",
+          "type": "string"
+        },
+        "sort": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ListSearchResponse": {
+      "properties": {
+        "hasMore": {
+          "description": "Whether or not there are more results to page through.",
+          "type": "boolean"
+        },
+        "lists": {
+          "description": "The lists that matched the search criteria.",
+          "items": {
+            "$ref": "#/definitions/PublicObjectListSearchResult"
+          },
+          "type": "array"
+        },
+        "offset": {
+          "description": "Value to be passed in a future request to paginate through list search results.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "total": {
+          "description": "The total number of lists that match the search criteria.",
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "hasMore",
+        "lists",
+        "offset",
+        "total"
+      ],
+      "type": "object"
+    },
+    "ListUpdateResponse": {
+      "properties": {
+        "updatedList": {
+          "$ref": "#/definitions/PublicObjectList"
+        }
+      },
+      "type": "object"
+    },
+    "ListsByIdResponse": {
+      "properties": {
+        "lists": {
+          "description": "The object list definitions.",
+          "items": {
+            "$ref": "#/definitions/PublicObjectList"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "lists"
+      ],
+      "type": "object"
+    },
+    "MembershipChangeRequest": {
+      "properties": {
+        "recordIdsToAdd": {
+          "description": "",
+          "example": [
+            123,
+            456,
+            789
+          ],
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "recordIdsToRemove": {
+          "description": "",
+          "example": [
+            654
+          ],
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "recordIdsToAdd",
+        "recordIdsToRemove"
+      ],
+      "type": "object"
+    },
+    "MembershipsUpdateResponse": {
+      "properties": {
+        "recordIdsMissing": {
+          "description": "The IDs of the records that were `missing` (e.g. did not exist in the portal) and so were not `added` or `removed`.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "recordIdsRemoved": {
+          "description": "The IDs of the records that were `removed` from the list.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "recordsIdsAdded": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "recordIdsMissing",
+        "recordIdsRemoved",
+        "recordsIdsAdded"
+      ],
+      "type": "object"
+    },
+    "NextPage": {
+      "properties": {
+        "after": {
+          "description": "The offset for the next page of records.",
+          "type": "string"
+        },
+        "link": {
+          "description": "A direct link to the request for the next page of records.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "after"
+      ],
+      "type": "object"
+    },
+    "Paging": {
+      "properties": {
+        "next": {
+          "$ref": "#/definitions/NextPage"
+        },
+        "prev": {
+          "$ref": "#/definitions/PreviousPage"
+        }
+      },
+      "type": "object"
+    },
+    "PreviousPage": {
+      "properties": {
+        "before": {
+          "description": "The offset of the previous page of records.",
+          "type": "string"
+        },
+        "link": {
+          "description": "A direct link to the request for the previous page of records.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "before"
+      ],
+      "type": "object"
+    },
+    "PublicAbsoluteComparativeTimestampRefineBy": {
+      "properties": {
+        "comparison": {
+          "type": "string"
+        },
+        "timestamp": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "type": {
+          "default": "ABSOLUTE_COMPARATIVE",
+          "enum": [
+            "ABSOLUTE_COMPARATIVE"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "comparison",
+        "timestamp",
+        "type"
+      ],
+      "title": "ABSOLUTE_COMPARATIVE",
+      "type": "object"
+    },
+    "PublicAbsoluteRangedTimestampRefineBy": {
+      "properties": {
+        "lowerTimestamp": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "rangeType": {
+          "type": "string"
+        },
+        "type": {
+          "default": "ABSOLUTE_RANGED",
+          "enum": [
+            "ABSOLUTE_RANGED"
+          ],
+          "type": "string"
+        },
+        "upperTimestamp": {
+          "format": "int64",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "lowerTimestamp",
+        "rangeType",
+        "type",
+        "upperTimestamp"
+      ],
+      "title": "ABSOLUTE_RANGED",
+      "type": "object"
+    },
+    "PublicAdsSearchFilter": {
+      "properties": {
+        "adNetwork": {
+          "type": "string"
+        },
+        "entityType": {
+          "type": "string"
+        },
+        "filterType": {
+          "default": "ADS_SEARCH",
+          "enum": [
+            "ADS_SEARCH"
+          ],
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        },
+        "searchTermType": {
+          "type": "string"
+        },
+        "searchTerms": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "adNetwork",
+        "entityType",
+        "filterType",
+        "operator",
+        "searchTermType",
+        "searchTerms"
+      ],
+      "title": "ADS_SEARCH",
+      "type": "object"
+    },
+    "PublicAdsTimeFilter": {
+      "properties": {
+        "filterType": {
+          "default": "ADS_TIME",
+          "enum": [
+            "ADS_TIME"
+          ],
+          "type": "string"
+        },
+        "pruningRefineBy": {}
+      },
+      "required": [
+        "filterType",
+        "pruningRefineBy"
+      ],
+      "title": "ADS_TIME",
+      "type": "object"
+    },
+    "PublicAllHistoryRefineBy": {
+      "properties": {
+        "type": {
+          "default": "ALL_HISTORY",
+          "enum": [
+            "ALL_HISTORY"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "title": "ALL_HISTORY",
+      "type": "object"
+    },
+    "PublicAllPropertyTypesOperation": {
+      "properties": {
+        "includeObjectsWithNoValueSet": {
+          "type": "boolean"
+        },
+        "operationType": {
+          "default": "ALL_PROPERTY",
+          "enum": [
+            "ALL_PROPERTY"
+          ],
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "includeObjectsWithNoValueSet",
+        "operationType",
+        "operator"
+      ],
+      "title": "ALL_PROPERTY",
+      "type": "object"
+    },
+    "PublicAndFilterBranch": {
+      "properties": {
+        "filterBranchOperator": {
+          "type": "string"
+        },
+        "filterBranchType": {
+          "default": "AND",
+          "enum": [
+            "AND"
+          ],
+          "type": "string"
+        },
+        "filterBranches": {
+          "items": {},
+          "type": "array"
+        },
+        "filters": {
+          "items": {},
+          "type": "array"
+        }
+      },
+      "required": [
+        "filterBranchOperator",
+        "filterBranchType",
+        "filterBranches",
+        "filters"
+      ],
+      "title": "AND",
+      "type": "object"
+    },
+    "PublicAssociationFilterBranch": {
+      "properties": {
+        "associationCategory": {
+          "type": "string"
+        },
+        "associationTypeId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "filterBranchOperator": {
+          "type": "string"
+        },
+        "filterBranchType": {
+          "default": "ASSOCIATION",
+          "enum": [
+            "ASSOCIATION"
+          ],
+          "type": "string"
+        },
+        "filterBranches": {
+          "items": {},
+          "type": "array"
+        },
+        "filters": {
+          "items": {},
+          "type": "array"
+        },
+        "objectTypeId": {
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "associationCategory",
+        "associationTypeId",
+        "filterBranchOperator",
+        "filterBranchType",
+        "filterBranches",
+        "filters",
+        "objectTypeId",
+        "operator"
+      ],
+      "title": "ASSOCIATION",
+      "type": "object"
+    },
+    "PublicAssociationInListFilter": {
+      "properties": {
+        "associationCategory": {
+          "type": "string"
+        },
+        "associationTypeId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "coalescingRefineBy": {},
+        "filterType": {
+          "default": "ASSOCIATION",
+          "enum": [
+            "ASSOCIATION"
+          ],
+          "type": "string"
+        },
+        "listId": {
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        },
+        "toObjectType": {
+          "type": "string"
+        },
+        "toObjectTypeId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "associationCategory",
+        "associationTypeId",
+        "coalescingRefineBy",
+        "filterType",
+        "listId",
+        "operator"
+      ],
+      "title": "ASSOCIATION",
+      "type": "object"
+    },
+    "PublicBatchMigrationMapping": {
+      "properties": {
+        "legacyListIdsToIdsMapping": {
+          "items": {
+            "$ref": "#/definitions/PublicMigrationMapping"
+          },
+          "type": "array"
+        },
+        "missingLegacyListIds": {
+          "description": "A list of legacy list ids that were passed in but not found. It will be empty if no id's are missing",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "legacyListIdsToIdsMapping",
+        "missingLegacyListIds"
+      ],
+      "type": "object"
+    },
+    "PublicBoolPropertyOperation": {
+      "properties": {
+        "includeObjectsWithNoValueSet": {
+          "type": "boolean"
+        },
+        "operationType": {
+          "default": "BOOL",
+          "enum": [
+            "BOOL"
+          ],
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        },
+        "value": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "includeObjectsWithNoValueSet",
+        "operationType",
+        "operator",
+        "value"
+      ],
+      "title": "BOOL",
+      "type": "object"
+    },
+    "PublicCalendarDatePropertyOperation": {
+      "properties": {
+        "fiscalYearStart": {
+          "enum": [
+            "JANUARY",
+            "FEBRUARY",
+            "MARCH",
+            "APRIL",
+            "MAY",
+            "JUNE",
+            "JULY",
+            "AUGUST",
+            "SEPTEMBER",
+            "OCTOBER",
+            "NOVEMBER",
+            "DECEMBER"
+          ],
+          "type": "string"
+        },
+        "includeObjectsWithNoValueSet": {
+          "type": "boolean"
+        },
+        "operationType": {
+          "default": "CALENDAR_DATE",
+          "enum": [
+            "CALENDAR_DATE"
+          ],
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        },
+        "timeUnit": {
+          "type": "string"
+        },
+        "timeUnitCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "useFiscalYear": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "includeObjectsWithNoValueSet",
+        "operationType",
+        "operator",
+        "timeUnit"
+      ],
+      "title": "CALENDAR_DATE",
+      "type": "object"
+    },
+    "PublicCampaignInfluencedFilter": {
+      "properties": {
+        "campaignId": {
+          "type": "string"
+        },
+        "filterType": {
+          "default": "CAMPAIGN_INFLUENCED",
+          "enum": [
+            "CAMPAIGN_INFLUENCED"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "campaignId",
+        "filterType"
+      ],
+      "title": "CAMPAIGN_INFLUENCED",
+      "type": "object"
+    },
+    "PublicCommunicationSubscriptionFilter": {
+      "properties": {
+        "acceptedOptStates": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "businessUnitId": {
+          "type": "string"
+        },
+        "channel": {
+          "type": "string"
+        },
+        "filterType": {
+          "default": "COMMUNICATION_SUBSCRIPTION",
+          "enum": [
+            "COMMUNICATION_SUBSCRIPTION"
+          ],
+          "type": "string"
+        },
+        "subscriptionIds": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "subscriptionType": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "acceptedOptStates",
+        "channel",
+        "filterType",
+        "subscriptionIds",
+        "subscriptionType"
+      ],
+      "title": "COMMUNICATION_SUBSCRIPTION",
+      "type": "object"
+    },
+    "PublicComparativeDatePropertyOperation": {
+      "properties": {
+        "comparisonPropertyName": {
+          "type": "string"
+        },
+        "defaultComparisonValue": {
+          "type": "string"
+        },
+        "includeObjectsWithNoValueSet": {
+          "type": "boolean"
+        },
+        "operationType": {
+          "default": "COMPARATIVE_DATE",
+          "enum": [
+            "COMPARATIVE_DATE"
+          ],
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "comparisonPropertyName",
+        "includeObjectsWithNoValueSet",
+        "operationType",
+        "operator"
+      ],
+      "title": "COMPARATIVE_DATE",
+      "type": "object"
+    },
+    "PublicComparativePropertyUpdatedOperation": {
+      "properties": {
+        "comparisonPropertyName": {
+          "type": "string"
+        },
+        "defaultComparisonValue": {
+          "type": "string"
+        },
+        "includeObjectsWithNoValueSet": {
+          "type": "boolean"
+        },
+        "operationType": {
+          "default": "COMPARATIVE_PROPERTY_UPDATED",
+          "enum": [
+            "COMPARATIVE_PROPERTY_UPDATED"
+          ],
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "comparisonPropertyName",
+        "includeObjectsWithNoValueSet",
+        "operationType",
+        "operator"
+      ],
+      "title": "COMPARATIVE_PROPERTY_UPDATED",
+      "type": "object"
+    },
+    "PublicConstantFilter": {
+      "properties": {
+        "filterType": {
+          "default": "CONSTANT",
+          "enum": [
+            "CONSTANT"
+          ],
+          "type": "string"
+        },
+        "shouldAccept": {
+          "type": "boolean"
+        },
+        "source": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "filterType",
+        "shouldAccept"
+      ],
+      "title": "CONSTANT",
+      "type": "object"
+    },
+    "PublicCtaAnalyticsFilter": {
+      "properties": {
+        "coalescingRefineBy": {},
+        "ctaName": {
+          "type": "string"
+        },
+        "filterType": {
+          "default": "CTA",
+          "enum": [
+            "CTA"
+          ],
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        },
+        "pruningRefineBy": {}
+      },
+      "required": [
+        "ctaName",
+        "filterType",
+        "operator"
+      ],
+      "title": "CTA",
+      "type": "object"
+    },
+    "PublicDatePoint": {
+      "properties": {
+        "day": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "hour": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "millisecond": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "minute": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "month": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "second": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "timeType": {
+          "default": "DATE",
+          "enum": [
+            "DATE"
+          ],
+          "type": "string"
+        },
+        "timezoneSource": {
+          "type": "string"
+        },
+        "year": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "zoneId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "day",
+        "month",
+        "timeType",
+        "year",
+        "zoneId"
+      ],
+      "title": "DATE",
+      "type": "object"
+    },
+    "PublicDatePropertyOperation": {
+      "properties": {
+        "day": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "includeObjectsWithNoValueSet": {
+          "type": "boolean"
+        },
+        "month": {
+          "type": "string"
+        },
+        "operationType": {
+          "default": "DATE",
+          "enum": [
+            "DATE"
+          ],
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        },
+        "year": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "day",
+        "includeObjectsWithNoValueSet",
+        "month",
+        "operationType",
+        "operator",
+        "year"
+      ],
+      "title": "DATE",
+      "type": "object"
+    },
+    "PublicDateTimePropertyOperation": {
+      "properties": {
+        "includeObjectsWithNoValueSet": {
+          "type": "boolean"
+        },
+        "operationType": {
+          "default": "DATETIME",
+          "enum": [
+            "DATETIME"
+          ],
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        },
+        "requiresTimeZoneConversion": {
+          "type": "boolean"
+        },
+        "timestamp": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "includeObjectsWithNoValueSet",
+        "operationType",
+        "operator",
+        "requiresTimeZoneConversion",
+        "timestamp"
+      ],
+      "title": "DATETIME",
+      "type": "object"
+    },
+    "PublicEmailEventFilter": {
+      "properties": {
+        "appId": {
+          "type": "string"
+        },
+        "clickUrl": {
+          "type": "string"
+        },
+        "emailId": {
+          "type": "string"
+        },
+        "filterType": {
+          "default": "EMAIL_EVENT",
+          "enum": [
+            "EMAIL_EVENT"
+          ],
+          "type": "string"
+        },
+        "level": {
+          "type": "string"
+        },
+        "operator": {
+          "enum": [
+            "LINK_CLICKED",
+            "MARKED_SPAM",
+            "OPENED",
+            "OPENED_BUT_LINK_NOT_CLICKED",
+            "OPENED_BUT_NOT_REPLIED",
+            "REPLIED",
+            "UNSUBSCRIBED",
+            "BOUNCED",
+            "RECEIVED",
+            "RECEIVED_BUT_NOT_OPENED",
+            "SENT",
+            "SENT_BUT_LINK_NOT_CLICKED",
+            "SENT_BUT_NOT_RECEIVED"
+          ],
+          "type": "string"
+        },
+        "pruningRefineBy": {}
+      },
+      "required": [
+        "appId",
+        "emailId",
+        "filterType",
+        "level",
+        "operator"
+      ],
+      "title": "EMAIL_EVENT",
+      "type": "object"
+    },
+    "PublicEmailSubscriptionFilter": {
+      "properties": {
+        "acceptedStatuses": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "filterType": {
+          "default": "EMAIL_SUBSCRIPTION",
+          "enum": [
+            "EMAIL_SUBSCRIPTION"
+          ],
+          "type": "string"
+        },
+        "subscriptionIds": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "subscriptionType": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "acceptedStatuses",
+        "filterType",
+        "subscriptionIds"
+      ],
+      "title": "EMAIL_SUBSCRIPTION",
+      "type": "object"
+    },
+    "PublicEnumerationPropertyOperation": {
+      "properties": {
+        "includeObjectsWithNoValueSet": {
+          "type": "boolean"
+        },
+        "operationType": {
+          "default": "ENUMERATION",
+          "enum": [
+            "ENUMERATION"
+          ],
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        },
+        "values": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "includeObjectsWithNoValueSet",
+        "operationType",
+        "operator",
+        "values"
+      ],
+      "title": "ENUMERATION",
+      "type": "object"
+    },
+    "PublicEventAnalyticsFilter": {
+      "properties": {
+        "coalescingRefineBy": {},
+        "eventId": {
+          "type": "string"
+        },
+        "filterType": {
+          "default": "EVENT",
+          "enum": [
+            "EVENT"
+          ],
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        },
+        "pruningRefineBy": {}
+      },
+      "required": [
+        "eventId",
+        "filterType",
+        "operator"
+      ],
+      "title": "EVENT",
+      "type": "object"
+    },
+    "PublicEventFilterMetadata": {
+      "properties": {
+        "operation": {},
+        "property": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "operation",
+        "property"
+      ],
+      "type": "object"
+    },
+    "PublicFiscalQuarterReference": {
+      "properties": {
+        "day": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "hour": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "millisecond": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "minute": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "month": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "referenceType": {
+          "default": "FISCAL_QUARTER",
+          "enum": [
+            "FISCAL_QUARTER"
+          ],
+          "type": "string"
+        },
+        "second": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "day",
+        "month",
+        "referenceType"
+      ],
+      "title": "FISCAL_QUARTER",
+      "type": "object"
+    },
+    "PublicFiscalYearReference": {
+      "properties": {
+        "day": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "hour": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "millisecond": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "minute": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "month": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "referenceType": {
+          "default": "FISCAL_YEAR",
+          "enum": [
+            "FISCAL_YEAR"
+          ],
+          "type": "string"
+        },
+        "second": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "day",
+        "month",
+        "referenceType"
+      ],
+      "title": "FISCAL_YEAR",
+      "type": "object"
+    },
+    "PublicFormSubmissionFilter": {
+      "properties": {
+        "coalescingRefineBy": {},
+        "filterType": {
+          "default": "FORM_SUBMISSION",
+          "enum": [
+            "FORM_SUBMISSION"
+          ],
+          "type": "string"
+        },
+        "formId": {
+          "type": "string"
+        },
+        "operator": {
+          "enum": [
+            "FILLED_OUT",
+            "NOT_FILLED_OUT"
+          ],
+          "type": "string"
+        },
+        "pruningRefineBy": {}
+      },
+      "required": [
+        "filterType",
+        "operator"
+      ],
+      "title": "FORM_SUBMISSION",
+      "type": "object"
+    },
+    "PublicFormSubmissionOnPageFilter": {
+      "properties": {
+        "coalescingRefineBy": {},
+        "filterType": {
+          "default": "FORM_SUBMISSION_ON_PAGE",
+          "enum": [
+            "FORM_SUBMISSION_ON_PAGE"
+          ],
+          "type": "string"
+        },
+        "formId": {
+          "type": "string"
+        },
+        "operator": {
+          "enum": [
+            "FILLED_OUT",
+            "NOT_FILLED_OUT"
+          ],
+          "type": "string"
+        },
+        "pageId": {
+          "type": "string"
+        },
+        "pruningRefineBy": {}
+      },
+      "required": [
+        "filterType",
+        "operator",
+        "pageId"
+      ],
+      "title": "FORM_SUBMISSION_ON_PAGE",
+      "type": "object"
+    },
+    "PublicInListFilter": {
+      "properties": {
+        "filterType": {
+          "default": "IN_LIST",
+          "enum": [
+            "IN_LIST"
+          ],
+          "type": "string"
+        },
+        "listId": {
+          "type": "string"
+        },
+        "metadata": {
+          "$ref": "#/definitions/PublicInListFilterMetadata"
+        },
+        "operator": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "filterType",
+        "listId",
+        "operator"
+      ],
+      "title": "IN_LIST",
+      "type": "object"
+    },
+    "PublicInListFilterMetadata": {
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "inListType": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "inListType"
+      ],
+      "type": "object"
+    },
+    "PublicIndexOffset": {
+      "properties": {
+        "days": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "hours": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "milliseconds": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "minutes": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "months": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "quarters": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "seconds": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "weeks": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "years": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "PublicIndexedTimePoint": {
+      "properties": {
+        "indexReference": {},
+        "offset": {
+          "$ref": "#/definitions/PublicIndexOffset"
+        },
+        "timeType": {
+          "default": "INDEXED",
+          "enum": [
+            "INDEXED"
+          ],
+          "type": "string"
+        },
+        "timezoneSource": {
+          "type": "string"
+        },
+        "zoneId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "indexReference",
+        "timeType",
+        "zoneId"
+      ],
+      "title": "INDEXED",
+      "type": "object"
+    },
+    "PublicIntegrationEventFilter": {
+      "properties": {
+        "eventTypeId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "filterLines": {
+          "items": {
+            "$ref": "#/definitions/PublicEventFilterMetadata"
+          },
+          "type": "array"
+        },
+        "filterType": {
+          "default": "INTEGRATION_EVENT",
+          "enum": [
+            "INTEGRATION_EVENT"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "eventTypeId",
+        "filterLines",
+        "filterType"
+      ],
+      "title": "INTEGRATION_EVENT",
+      "type": "object"
+    },
+    "PublicListFolder": {
+      "properties": {
+        "childLists": {
+          "description": "An array of list Id's contained in this folder.",
+          "items": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "type": "array"
+        },
+        "childNodes": {
+          "items": {
+            "$ref": "#/definitions/PublicListFolder"
+          },
+          "type": "array"
+        },
+        "createdAt": {
+          "description": "The time the folder was created at.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "id": {
+          "description": "The Id of the folder.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "description": "The name of the folder.",
+          "type": "string"
+        },
+        "parentFolderId": {
+          "description": "The Id of the folder this folder is in, the root folder is represented as 0.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "updatedAt": {
+          "description": "The time the folder was last updated at.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedContentsAt": {
+          "description": "The time that the contents of the folder was last updated at.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "userId": {
+          "description": "The user Id of the owner of the folder.",
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "childLists",
+        "childNodes",
+        "id",
+        "parentFolderId"
+      ],
+      "type": "object"
+    },
+    "PublicMigrationMapping": {
+      "properties": {
+        "legacyListId": {
+          "description": "The legacy list id for the list",
+          "type": "string"
+        },
+        "listId": {
+          "description": "The V3 list id for the list",
+          "type": "string"
+        }
+      },
+      "required": [
+        "legacyListId",
+        "listId"
+      ],
+      "type": "object"
+    },
+    "PublicMonthReference": {
+      "properties": {
+        "day": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "hour": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "millisecond": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "minute": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "referenceType": {
+          "default": "MONTH",
+          "enum": [
+            "MONTH"
+          ],
+          "type": "string"
+        },
+        "second": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "day",
+        "referenceType"
+      ],
+      "title": "MONTH",
+      "type": "object"
+    },
+    "PublicMultiStringPropertyOperation": {
+      "properties": {
+        "includeObjectsWithNoValueSet": {
+          "type": "boolean"
+        },
+        "operationType": {
+          "default": "MULTISTRING",
+          "enum": [
+            "MULTISTRING"
+          ],
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        },
+        "values": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "includeObjectsWithNoValueSet",
+        "operationType",
+        "operator",
+        "values"
+      ],
+      "title": "MULTISTRING",
+      "type": "object"
+    },
+    "PublicNotAllFilterBranch": {
+      "properties": {
+        "filterBranchOperator": {
+          "type": "string"
+        },
+        "filterBranchType": {
+          "default": "NOT_ALL",
+          "enum": [
+            "NOT_ALL"
+          ],
+          "type": "string"
+        },
+        "filterBranches": {
+          "items": {},
+          "type": "array"
+        },
+        "filters": {
+          "items": {},
+          "type": "array"
+        }
+      },
+      "required": [
+        "filterBranchOperator",
+        "filterBranchType",
+        "filterBranches",
+        "filters"
+      ],
+      "title": "NOT_ALL",
+      "type": "object"
+    },
+    "PublicNotAnyFilterBranch": {
+      "properties": {
+        "filterBranchOperator": {
+          "type": "string"
+        },
+        "filterBranchType": {
+          "default": "NOT_ANY",
+          "enum": [
+            "NOT_ANY"
+          ],
+          "type": "string"
+        },
+        "filterBranches": {
+          "items": {},
+          "type": "array"
+        },
+        "filters": {
+          "items": {},
+          "type": "array"
+        }
+      },
+      "required": [
+        "filterBranchOperator",
+        "filterBranchType",
+        "filterBranches",
+        "filters"
+      ],
+      "title": "NOT_ANY",
+      "type": "object"
+    },
+    "PublicNowReference": {
+      "properties": {
+        "hour": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "millisecond": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "minute": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "referenceType": {
+          "default": "NOW",
+          "enum": [
+            "NOW"
+          ],
+          "type": "string"
+        },
+        "second": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "referenceType"
+      ],
+      "title": "NOW",
+      "type": "object"
+    },
+    "PublicNumAssociationsFilter": {
+      "properties": {
+        "associationCategory": {
+          "type": "string"
+        },
+        "associationTypeId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "coalescingRefineBy": {},
+        "filterType": {
+          "default": "NUM_ASSOCIATIONS",
+          "enum": [
+            "NUM_ASSOCIATIONS"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "associationCategory",
+        "associationTypeId",
+        "coalescingRefineBy",
+        "filterType"
+      ],
+      "title": "NUM_ASSOCIATIONS",
+      "type": "object"
+    },
+    "PublicNumOccurrencesRefineBy": {
+      "properties": {
+        "maxOccurrences": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "minOccurrences": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "type": {
+          "default": "NUM_OCCURRENCES",
+          "enum": [
+            "NUM_OCCURRENCES"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "title": "NUM_OCCURRENCES",
+      "type": "object"
+    },
+    "PublicNumberPropertyOperation": {
+      "properties": {
+        "includeObjectsWithNoValueSet": {
+          "type": "boolean"
+        },
+        "operationType": {
+          "default": "NUMBER",
+          "enum": [
+            "NUMBER"
+          ],
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "includeObjectsWithNoValueSet",
+        "operationType",
+        "operator",
+        "value"
+      ],
+      "title": "NUMBER",
+      "type": "object"
+    },
+    "PublicObjectList": {
+      "properties": {
+        "createdAt": {
+          "description": "The time when the list was created.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "createdById": {
+          "description": "The ID of the user that created the list.",
+          "type": "string"
+        },
+        "deletedAt": {
+          "description": "The time when the list was deleted.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "filterBranch": {},
+        "filtersUpdatedAt": {
+          "description": "The time when the filters for this list were last updated.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "listId": {
+          "description": "The **ILS ID** of the list.",
+          "type": "string"
+        },
+        "listVersion": {
+          "description": "The version of the list.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "description": "The name of the list.",
+          "type": "string"
+        },
+        "objectTypeId": {
+          "description": "The object type of the list.",
+          "type": "string"
+        },
+        "processingStatus": {
+          "description": "The processing status of the list.",
+          "type": "string"
+        },
+        "processingType": {
+          "description": "The processing type of the list.",
+          "type": "string"
+        },
+        "size": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "updatedAt": {
+          "description": "The time the list was last updated.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedById": {
+          "description": "The ID of the user that last updated the list.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "listId",
+        "listVersion",
+        "name",
+        "objectTypeId",
+        "processingStatus",
+        "processingType"
+      ],
+      "type": "object"
+    },
+    "PublicObjectListSearchResult": {
+      "properties": {
+        "additionalProperties": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "The name and value of any additional properties that exist for this list and that were included in the search request.",
+          "type": "object"
+        },
+        "createdAt": {
+          "description": "The time when the list was created.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "createdById": {
+          "description": "The ID of the user that created the list.",
+          "type": "string"
+        },
+        "deletedAt": {
+          "description": "The time when the list was deleted.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "filtersUpdatedAt": {
+          "description": "The time when the filters for this list were last updated.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "listId": {
+          "description": "The **ILS ID** of the list.",
+          "type": "string"
+        },
+        "listVersion": {
+          "description": "The version of the list.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "description": "The name of the list.",
+          "type": "string"
+        },
+        "objectTypeId": {
+          "description": "The object type of the list.",
+          "type": "string"
+        },
+        "processingStatus": {
+          "description": "The processing status of the list.",
+          "type": "string"
+        },
+        "processingType": {
+          "description": "The processing type of the list.",
+          "type": "string"
+        },
+        "updatedAt": {
+          "description": "The time the list was last updated.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedById": {
+          "description": "The ID of the user that last updated the list.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "additionalProperties",
+        "listId",
+        "listVersion",
+        "name",
+        "objectTypeId",
+        "processingStatus",
+        "processingType"
+      ],
+      "type": "object"
+    },
+    "PublicOrFilterBranch": {
+      "properties": {
+        "filterBranchOperator": {
+          "type": "string"
+        },
+        "filterBranchType": {
+          "default": "OR",
+          "enum": [
+            "OR"
+          ],
+          "type": "string"
+        },
+        "filterBranches": {
+          "items": {},
+          "type": "array"
+        },
+        "filters": {
+          "items": {},
+          "type": "array"
+        }
+      },
+      "required": [
+        "filterBranchOperator",
+        "filterBranchType",
+        "filterBranches",
+        "filters"
+      ],
+      "title": "OR",
+      "type": "object"
+    },
+    "PublicPageViewAnalyticsFilter": {
+      "properties": {
+        "coalescingRefineBy": {},
+        "enableTracking": {
+          "type": "boolean"
+        },
+        "filterType": {
+          "default": "PAGE_VIEW",
+          "enum": [
+            "PAGE_VIEW"
+          ],
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        },
+        "pageUrl": {
+          "type": "string"
+        },
+        "pruningRefineBy": {}
+      },
+      "required": [
+        "filterType",
+        "operator",
+        "pageUrl"
+      ],
+      "title": "PAGE_VIEW",
+      "type": "object"
+    },
+    "PublicPrivacyAnalyticsFilter": {
+      "properties": {
+        "filterType": {
+          "default": "PRIVACY",
+          "enum": [
+            "PRIVACY"
+          ],
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        },
+        "privacyName": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "filterType",
+        "operator",
+        "privacyName"
+      ],
+      "title": "PRIVACY",
+      "type": "object"
+    },
+    "PublicPropertyAssociationFilterBranch": {
+      "properties": {
+        "filterBranchOperator": {
+          "type": "string"
+        },
+        "filterBranchType": {
+          "default": "PROPERTY_ASSOCIATION",
+          "enum": [
+            "PROPERTY_ASSOCIATION"
+          ],
+          "type": "string"
+        },
+        "filterBranches": {
+          "items": {},
+          "type": "array"
+        },
+        "filters": {
+          "items": {},
+          "type": "array"
+        },
+        "objectTypeId": {
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        },
+        "propertyWithObjectId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "filterBranchOperator",
+        "filterBranchType",
+        "filterBranches",
+        "filters",
+        "objectTypeId",
+        "operator",
+        "propertyWithObjectId"
+      ],
+      "title": "PROPERTY_ASSOCIATION",
+      "type": "object"
+    },
+    "PublicPropertyAssociationInListFilter": {
+      "properties": {
+        "coalescingRefineBy": {},
+        "filterType": {
+          "default": "PROPERTY_ASSOCIATION",
+          "enum": [
+            "PROPERTY_ASSOCIATION"
+          ],
+          "type": "string"
+        },
+        "listId": {
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        },
+        "propertyWithObjectId": {
+          "type": "string"
+        },
+        "toObjectTypeId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "coalescingRefineBy",
+        "filterType",
+        "listId",
+        "operator",
+        "propertyWithObjectId"
+      ],
+      "title": "PROPERTY_ASSOCIATION",
+      "type": "object"
+    },
+    "PublicPropertyFilter": {
+      "properties": {
+        "filterType": {
+          "default": "PROPERTY",
+          "enum": [
+            "PROPERTY"
+          ],
+          "type": "string"
+        },
+        "operation": {},
+        "property": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "filterType",
+        "operation",
+        "property"
+      ],
+      "title": "PROPERTY",
+      "type": "object"
+    },
+    "PublicPropertyReferencedTime": {
+      "properties": {
+        "property": {
+          "type": "string"
+        },
+        "referenceType": {
+          "type": "string"
+        },
+        "timeType": {
+          "default": "PROPERTY_REFERENCED",
+          "enum": [
+            "PROPERTY_REFERENCED"
+          ],
+          "type": "string"
+        },
+        "timezoneSource": {
+          "type": "string"
+        },
+        "zoneId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "property",
+        "referenceType",
+        "timeType",
+        "zoneId"
+      ],
+      "title": "PROPERTY_REFERENCED",
+      "type": "object"
+    },
+    "PublicQuarterReference": {
+      "properties": {
+        "day": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "hour": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "millisecond": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "minute": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "month": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "referenceType": {
+          "default": "QUARTER",
+          "enum": [
+            "QUARTER"
+          ],
+          "type": "string"
+        },
+        "second": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "day",
+        "month",
+        "referenceType"
+      ],
+      "title": "QUARTER",
+      "type": "object"
+    },
+    "PublicRangedDatePropertyOperation": {
+      "properties": {
+        "includeObjectsWithNoValueSet": {
+          "type": "boolean"
+        },
+        "lowerBound": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "operationType": {
+          "default": "RANGED_DATE",
+          "enum": [
+            "RANGED_DATE"
+          ],
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        },
+        "requiresTimeZoneConversion": {
+          "type": "boolean"
+        },
+        "upperBound": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "includeObjectsWithNoValueSet",
+        "lowerBound",
+        "operationType",
+        "operator",
+        "requiresTimeZoneConversion",
+        "upperBound"
+      ],
+      "title": "RANGED_DATE",
+      "type": "object"
+    },
+    "PublicRangedNumberPropertyOperation": {
+      "properties": {
+        "includeObjectsWithNoValueSet": {
+          "type": "boolean"
+        },
+        "lowerBound": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "operationType": {
+          "default": "NUMBER_RANGED",
+          "enum": [
+            "NUMBER_RANGED"
+          ],
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        },
+        "upperBound": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "includeObjectsWithNoValueSet",
+        "lowerBound",
+        "operationType",
+        "operator",
+        "upperBound"
+      ],
+      "title": "NUMBER_RANGED",
+      "type": "object"
+    },
+    "PublicRangedTimeOperation": {
+      "properties": {
+        "includeObjectsWithNoValueSet": {
+          "type": "boolean"
+        },
+        "lowerBoundEndpointBehavior": {
+          "type": "string"
+        },
+        "lowerBoundTimePoint": {},
+        "operationType": {
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        },
+        "propertyParser": {
+          "type": "string"
+        },
+        "type": {
+          "default": "TIME_RANGED",
+          "enum": [
+            "TIME_RANGED"
+          ],
+          "type": "string"
+        },
+        "upperBoundEndpointBehavior": {
+          "type": "string"
+        },
+        "upperBoundTimePoint": {}
+      },
+      "required": [
+        "includeObjectsWithNoValueSet",
+        "lowerBoundTimePoint",
+        "operationType",
+        "operator",
+        "type",
+        "upperBoundTimePoint"
+      ],
+      "title": "TIME_RANGED",
+      "type": "object"
+    },
+    "PublicRelativeComparativeTimestampRefineBy": {
+      "properties": {
+        "comparison": {
+          "type": "string"
+        },
+        "timeOffset": {
+          "$ref": "#/definitions/PublicTimeOffset"
+        },
+        "type": {
+          "default": "RELATIVE_COMPARATIVE",
+          "enum": [
+            "RELATIVE_COMPARATIVE"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "comparison",
+        "timeOffset",
+        "type"
+      ],
+      "title": "RELATIVE_COMPARATIVE",
+      "type": "object"
+    },
+    "PublicRelativeRangedTimestampRefineBy": {
+      "properties": {
+        "lowerBoundOffset": {
+          "$ref": "#/definitions/PublicTimeOffset"
+        },
+        "rangeType": {
+          "type": "string"
+        },
+        "type": {
+          "default": "RELATIVE_RANGED",
+          "enum": [
+            "RELATIVE_RANGED"
+          ],
+          "type": "string"
+        },
+        "upperBoundOffset": {
+          "$ref": "#/definitions/PublicTimeOffset"
+        }
+      },
+      "required": [
+        "lowerBoundOffset",
+        "rangeType",
+        "type",
+        "upperBoundOffset"
+      ],
+      "title": "RELATIVE_RANGED",
+      "type": "object"
+    },
+    "PublicRestrictedFilterBranch": {
+      "properties": {
+        "filterBranchOperator": {
+          "type": "string"
+        },
+        "filterBranchType": {
+          "default": "RESTRICTED",
+          "enum": [
+            "RESTRICTED"
+          ],
+          "type": "string"
+        },
+        "filterBranches": {
+          "items": {},
+          "type": "array"
+        },
+        "filters": {
+          "items": {},
+          "type": "array"
+        }
+      },
+      "required": [
+        "filterBranchOperator",
+        "filterBranchType",
+        "filterBranches",
+        "filters"
+      ],
+      "title": "RESTRICTED",
+      "type": "object"
+    },
+    "PublicRollingDateRangePropertyOperation": {
+      "properties": {
+        "includeObjectsWithNoValueSet": {
+          "type": "boolean"
+        },
+        "numberOfDays": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "operationType": {
+          "default": "ROLLING_DATE_RANGE",
+          "enum": [
+            "ROLLING_DATE_RANGE"
+          ],
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        },
+        "requiresTimeZoneConversion": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "includeObjectsWithNoValueSet",
+        "numberOfDays",
+        "operationType",
+        "operator",
+        "requiresTimeZoneConversion"
+      ],
+      "title": "ROLLING_DATE_RANGE",
+      "type": "object"
+    },
+    "PublicRollingPropertyUpdatedOperation": {
+      "properties": {
+        "includeObjectsWithNoValueSet": {
+          "type": "boolean"
+        },
+        "numberOfDays": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "operationType": {
+          "default": "ROLLING_PROPERTY_UPDATED",
+          "enum": [
+            "ROLLING_PROPERTY_UPDATED"
+          ],
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "includeObjectsWithNoValueSet",
+        "numberOfDays",
+        "operationType",
+        "operator"
+      ],
+      "title": "ROLLING_PROPERTY_UPDATED",
+      "type": "object"
+    },
+    "PublicSetOccurrencesRefineBy": {
+      "properties": {
+        "setType": {
+          "type": "string"
+        },
+        "type": {
+          "default": "SET_OCCURRENCES",
+          "enum": [
+            "SET_OCCURRENCES"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "setType",
+        "type"
+      ],
+      "title": "SET_OCCURRENCES",
+      "type": "object"
+    },
+    "PublicStringPropertyOperation": {
+      "properties": {
+        "includeObjectsWithNoValueSet": {
+          "type": "boolean"
+        },
+        "operationType": {
+          "default": "STRING",
+          "enum": [
+            "STRING"
+          ],
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "includeObjectsWithNoValueSet",
+        "operationType",
+        "operator",
+        "value"
+      ],
+      "title": "STRING",
+      "type": "object"
+    },
+    "PublicSurveyMonkeyFilter": {
+      "properties": {
+        "filterType": {
+          "default": "SURVEY_MONKEY",
+          "enum": [
+            "SURVEY_MONKEY"
+          ],
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        },
+        "surveyId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "filterType",
+        "operator",
+        "surveyId"
+      ],
+      "title": "SURVEY_MONKEY",
+      "type": "object"
+    },
+    "PublicSurveyMonkeyValueFilter": {
+      "properties": {
+        "filterType": {
+          "default": "SURVEY_MONKEY_VALUE",
+          "enum": [
+            "SURVEY_MONKEY_VALUE"
+          ],
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        },
+        "surveyAnswerColId": {
+          "type": "string"
+        },
+        "surveyAnswerRowId": {
+          "type": "string"
+        },
+        "surveyId": {
+          "type": "string"
+        },
+        "surveyQuestion": {
+          "type": "string"
+        },
+        "valueComparison": {}
+      },
+      "required": [
+        "filterType",
+        "operator",
+        "surveyId",
+        "surveyQuestion",
+        "valueComparison"
+      ],
+      "title": "SURVEY_MONKEY_VALUE",
+      "type": "object"
+    },
+    "PublicTimeOffset": {
+      "properties": {
+        "amount": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "offsetDirection": {
+          "type": "string"
+        },
+        "timeUnit": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "amount",
+        "offsetDirection",
+        "timeUnit"
+      ],
+      "type": "object"
+    },
+    "PublicTimePointOperation": {
+      "properties": {
+        "endpointBehavior": {
+          "type": "string"
+        },
+        "includeObjectsWithNoValueSet": {
+          "type": "boolean"
+        },
+        "operationType": {
+          "default": "TIME_POINT",
+          "enum": [
+            "TIME_POINT"
+          ],
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        },
+        "propertyParser": {
+          "type": "string"
+        },
+        "timePoint": {},
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "includeObjectsWithNoValueSet",
+        "operationType",
+        "operator",
+        "timePoint",
+        "type"
+      ],
+      "title": "TIME_POINT",
+      "type": "object"
+    },
+    "PublicTodayReference": {
+      "properties": {
+        "hour": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "millisecond": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "minute": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "referenceType": {
+          "default": "TODAY",
+          "enum": [
+            "TODAY"
+          ],
+          "type": "string"
+        },
+        "second": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "referenceType"
+      ],
+      "title": "TODAY",
+      "type": "object"
+    },
+    "PublicUnifiedEventsFilter": {
+      "properties": {
+        "coalescingRefineBy": {},
+        "eventTypeId": {
+          "type": "string"
+        },
+        "filterLines": {
+          "items": {
+            "$ref": "#/definitions/PublicEventFilterMetadata"
+          },
+          "type": "array"
+        },
+        "filterType": {
+          "default": "UNIFIED_EVENTS",
+          "enum": [
+            "UNIFIED_EVENTS"
+          ],
+          "type": "string"
+        },
+        "pruningRefineBy": {}
+      },
+      "required": [
+        "filterLines",
+        "filterType"
+      ],
+      "title": "UNIFIED_EVENTS",
+      "type": "object"
+    },
+    "PublicUnifiedEventsFilterBranch": {
+      "properties": {
+        "coalescingRefineBy": {},
+        "eventTypeId": {
+          "type": "string"
+        },
+        "filterBranchOperator": {
+          "type": "string"
+        },
+        "filterBranchType": {
+          "default": "UNIFIED_EVENTS",
+          "enum": [
+            "UNIFIED_EVENTS"
+          ],
+          "type": "string"
+        },
+        "filterBranches": {
+          "items": {},
+          "type": "array"
+        },
+        "filters": {
+          "items": {},
+          "type": "array"
+        },
+        "operator": {
+          "enum": [
+            "HAS_COMPLETED",
+            "HAS_NOT_COMPLETED"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "eventTypeId",
+        "filterBranchOperator",
+        "filterBranchType",
+        "filterBranches",
+        "filters",
+        "operator"
+      ],
+      "title": "UNIFIED_EVENTS",
+      "type": "object"
+    },
+    "PublicWebinarFilter": {
+      "properties": {
+        "filterType": {
+          "default": "WEBINAR",
+          "enum": [
+            "WEBINAR"
+          ],
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        },
+        "webinarId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "filterType",
+        "operator"
+      ],
+      "title": "WEBINAR",
+      "type": "object"
+    },
+    "PublicWeekReference": {
+      "properties": {
+        "dayOfWeek": {
+          "enum": [
+            "MONDAY",
+            "TUESDAY",
+            "WEDNESDAY",
+            "THURSDAY",
+            "FRIDAY",
+            "SATURDAY",
+            "SUNDAY"
+          ],
+          "type": "string"
+        },
+        "hour": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "millisecond": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "minute": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "referenceType": {
+          "default": "WEEK",
+          "enum": [
+            "WEEK"
+          ],
+          "type": "string"
+        },
+        "second": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "dayOfWeek",
+        "referenceType"
+      ],
+      "title": "WEEK",
+      "type": "object"
+    },
+    "PublicYearReference": {
+      "properties": {
+        "day": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "hour": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "millisecond": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "minute": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "month": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "referenceType": {
+          "default": "YEAR",
+          "enum": [
+            "YEAR"
+          ],
+          "type": "string"
+        },
+        "second": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "day",
+        "month",
+        "referenceType"
+      ],
+      "title": "YEAR",
+      "type": "object"
+    },
+    "RecordListMembership": {
+      "properties": {
+        "firstAddedTimestamp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "lastAddedTimestamp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "listId": {
+          "type": "string"
+        },
+        "listVersion": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "firstAddedTimestamp",
+        "lastAddedTimestamp",
+        "listId",
+        "listVersion"
+      ],
+      "type": "object"
+    }
+  },
+  "securityDefinitions": {
+    "oauth2": {
+      "authorizationUrl": "https://app.hubspot.com/oauth/authorize",
+      "flow": "accessCode",
+      "scopes": {
+        "cms.membership.access_groups.write": "Write membership access groups.",
+        "crm.lists.read": " ",
+        "crm.lists.write": " "
+      },
+      "tokenUrl": "https://api.hubapi.com/oauth/v1/token",
+      "type": "oauth2"
+    },
+    "private_apps": {
+      "in": "header",
+      "name": "private-app",
+      "type": "apiKey"
+    }
+  },
+  "tags": [
+    {
+      "name": "Lists"
+    },
+    {
+      "name": "Memberships"
+    },
+    {
+      "name": "Folders"
+    },
+    {
+      "name": "Mapping"
+    }
+  ],
+  "x-components": {
+    "responses": {
+      "Error": {
+        "content": {
+          "*/*": {
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "description": "An error occurred."
+      }
+    }
+  },
+  "x-hubspot-available-client-libraries": [
+    "PHP",
+    "Node",
+    "Ruby",
+    "Python"
+  ],
+  "x-hubspot-documentation-banner": "NONE",
+  "x-hubspot-product-tier-requirements": {
+    "cms": "STARTER",
+    "marketing": "STARTER"
+  }
+}

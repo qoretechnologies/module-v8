@@ -184,6 +184,138 @@ type RootTranslation = {
 			 */
 			longDesc: string
 			actions: {
+				search_documents: {
+					/**
+					 * S​e​a​r​c​h​ ​D​o​c​u​m​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​d​o​c​u​m​e​n​t​s​ ​w​i​t​h​ ​a​d​v​a​n​c​e​d​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​o​p​t​i​o​n​s​.
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​d​o​c​u​m​e​n​t​s​ ​i​n​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​u​s​i​n​g​ ​v​a​r​i​o​u​s​ ​c​r​i​t​e​r​i​a​ ​i​n​c​l​u​d​i​n​g​ ​f​i​l​e​n​a​m​e​,​ ​f​o​l​d​e​r​ ​l​o​c​a​t​i​o​n​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​q​u​e​r​i​e​s​.​ ​S​u​p​p​o​r​t​s​ ​s​o​r​t​i​n​g​ ​b​y​ ​d​i​f​f​e​r​e​n​t​ ​f​i​e​l​d​s​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​s​ ​w​i​t​h​ ​p​a​g​i​n​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						filename: {
+							/**
+							 * F​i​l​e​n​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​f​ ​t​h​e​ ​d​o​c​u​m​e​n​t​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​r​ ​p​a​r​t​i​a​l​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​D​o​c​s​ ​d​o​c​u​m​e​n​t​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+						search_type: {
+							/**
+							 * S​e​a​r​c​h​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​f​i​l​e​n​a​m​e​ ​m​a​t​c​h​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * H​o​w​ ​t​o​ ​m​a​t​c​h​ ​t​h​e​ ​f​i​l​e​n​a​m​e​ ​-​ ​e​i​t​h​e​r​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​t​e​x​t​ ​o​r​ ​e​x​a​c​t​ ​m​a​t​c​h​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​c​o​n​t​a​i​n​s​.
+							 */
+							longDesc: string
+						}
+						folder: {
+							/**
+							 * F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * F​o​l​d​e​r​ ​t​o​ ​s​e​a​r​c​h​ ​w​i​t​h​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​o​l​d​e​r​ ​I​D​ ​t​o​ ​l​i​m​i​t​ ​t​h​e​ ​s​e​a​r​c​h​ ​t​o​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​s​e​a​r​c​h​e​s​ ​a​l​l​ ​a​c​c​e​s​s​i​b​l​e​ ​f​o​l​d​e​r​s​.
+							 */
+							longDesc: string
+						}
+						order_by: {
+							/**
+							 * O​r​d​e​r​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​i​n​g​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​s​o​r​t​i​n​g​ ​c​r​i​t​e​r​i​a​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​e​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​.​ ​E​a​c​h​ ​i​t​e​m​ ​s​p​e​c​i​f​i​e​s​ ​a​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​b​y​ ​(​e​.​g​.​,​ ​n​a​m​e​,​ ​m​o​d​i​f​i​e​d​T​i​m​e​,​ ​c​r​e​a​t​e​d​T​i​m​e​)​.
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​-​ ​e​i​t​h​e​r​ ​a​s​c​e​n​d​i​n​g​ ​(​a​s​c​)​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​(​d​e​s​c​)​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						page_size: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​d​o​c​u​m​e​n​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.
+							 */
+							longDesc: string
+						}
+						custom_query: {
+							/**
+							 * C​u​s​t​o​m​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​s​e​a​r​c​h​ ​c​r​i​t​e​r​i​a
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​s​e​a​r​c​h​ ​q​u​e​r​y​ ​t​o​ ​a​d​d​ ​a​d​d​i​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​c​r​i​t​e​r​i​a​ ​b​e​y​o​n​d​ ​t​h​e​ ​b​a​s​i​c​ ​o​p​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
 				append_text_to_document: {
 					/**
 					 * A​p​p​e​n​d​ ​T​e​x​t​ ​t​o​ ​D​o​c​u​m​e​n​t
@@ -3350,6 +3482,138 @@ type RootTranslation = {
 				}
 			}
 			actions: {
+				search_spreadsheets: {
+					/**
+					 * S​e​a​r​c​h​ ​S​p​r​e​a​d​s​h​e​e​t​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​s​ ​w​i​t​h​ ​a​d​v​a​n​c​e​d​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​o​p​t​i​o​n​s​.
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​s​ ​i​n​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​u​s​i​n​g​ ​v​a​r​i​o​u​s​ ​c​r​i​t​e​r​i​a​ ​i​n​c​l​u​d​i​n​g​ ​f​i​l​e​n​a​m​e​,​ ​f​o​l​d​e​r​ ​l​o​c​a​t​i​o​n​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​q​u​e​r​i​e​s​.​ ​S​u​p​p​o​r​t​s​ ​s​o​r​t​i​n​g​ ​b​y​ ​d​i​f​f​e​r​e​n​t​ ​f​i​e​l​d​s​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​s​ ​w​i​t​h​ ​p​a​g​i​n​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						filename: {
+							/**
+							 * F​i​l​e​n​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​f​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​r​ ​p​a​r​t​i​a​l​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+						search_type: {
+							/**
+							 * S​e​a​r​c​h​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​f​i​l​e​n​a​m​e​ ​m​a​t​c​h​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * H​o​w​ ​t​o​ ​m​a​t​c​h​ ​t​h​e​ ​f​i​l​e​n​a​m​e​ ​-​ ​e​i​t​h​e​r​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​t​e​x​t​ ​o​r​ ​e​x​a​c​t​ ​m​a​t​c​h​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​c​o​n​t​a​i​n​s​.
+							 */
+							longDesc: string
+						}
+						folder: {
+							/**
+							 * F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * F​o​l​d​e​r​ ​t​o​ ​s​e​a​r​c​h​ ​w​i​t​h​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​f​o​l​d​e​r​ ​I​D​ ​t​o​ ​l​i​m​i​t​ ​t​h​e​ ​s​e​a​r​c​h​ ​t​o​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​s​e​a​r​c​h​e​s​ ​a​l​l​ ​a​c​c​e​s​s​i​b​l​e​ ​f​o​l​d​e​r​s​.
+							 */
+							longDesc: string
+						}
+						order_by: {
+							/**
+							 * O​r​d​e​r​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​i​n​g​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​s​o​r​t​i​n​g​ ​c​r​i​t​e​r​i​a​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​e​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​.​ ​E​a​c​h​ ​i​t​e​m​ ​s​p​e​c​i​f​i​e​s​ ​a​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​b​y​ ​(​e​.​g​.​,​ ​n​a​m​e​,​ ​m​o​d​i​f​i​e​d​T​i​m​e​,​ ​c​r​e​a​t​e​d​T​i​m​e​)​.
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​-​ ​e​i​t​h​e​r​ ​a​s​c​e​n​d​i​n​g​ ​(​a​s​c​)​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​(​d​e​s​c​)​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						page_size: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​s​p​r​e​a​d​s​h​e​e​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.
+							 */
+							longDesc: string
+						}
+						custom_query: {
+							/**
+							 * C​u​s​t​o​m​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​s​e​a​r​c​h​ ​c​r​i​t​e​r​i​a
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​G​o​o​g​l​e​ ​D​r​i​v​e​ ​s​e​a​r​c​h​ ​q​u​e​r​y​ ​t​o​ ​a​d​d​ ​a​d​d​i​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​c​r​i​t​e​r​i​a​ ​b​e​y​o​n​d​ ​t​h​e​ ​b​a​s​i​c​ ​o​p​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
 				find_spreadsheet_rows: {
 					/**
 					 * F​i​n​d​ ​S​p​r​e​a​d​s​h​e​e​t​ ​R​o​w​s
@@ -4503,6 +4767,20 @@ type RootTranslation = {
 							shortDesc: string
 							/**
 							 * T​h​e​ ​s​e​a​r​c​h​ ​t​e​r​m​ ​o​r​ ​v​a​l​u​e​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d​.​ ​S​e​a​r​c​h​ ​i​s​ ​c​a​s​e​-​i​n​s​e​n​s​i​t​i​v​e​.
+							 */
+							longDesc: string
+						}
+						group: {
+							/**
+							 * C​o​n​t​a​c​t​ ​G​r​o​u​p
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​o​n​t​a​c​t​ ​g​r​o​u​p
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​c​o​n​t​a​c​t​ ​g​r​o​u​p​ ​t​o​ ​f​i​l​t​e​r​ ​r​e​s​u​l​t​s​.​ ​O​n​l​y​ ​c​o​n​t​a​c​t​s​ ​i​n​ ​t​h​i​s​ ​g​r​o​u​p​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.​ ​P​r​o​v​i​d​e​ ​t​h​e​ ​g​r​o​u​p​ ​r​e​s​o​u​r​c​e​ ​n​a​m​e​ ​(​e​.​g​.​,​ ​"​c​o​n​t​a​c​t​G​r​o​u​p​s​/​1​2​3​4​5​"​)​.
 							 */
 							longDesc: string
 						}
@@ -17036,6 +17314,190 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 				}
+				create_list: {
+					/**
+					 * C​r​e​a​t​e​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​H​u​b​S​p​o​t​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​l​i​s​t​ ​i​n​ ​H​u​b​S​p​o​t​ ​C​R​M​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​a​n​d​ ​p​r​o​p​e​r​t​i​e​s​.
+					 */
+					longDesc: string
+				}
+				search_lists: {
+					/**
+					 * S​e​a​r​c​h​ ​L​i​s​t​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​H​u​b​S​p​o​t​ ​l​i​s​t​s
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​a​n​d​ ​r​e​t​r​i​e​v​e​ ​H​u​b​S​p​o​t​ ​l​i​s​t​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​e​d​ ​c​r​i​t​e​r​i​a​ ​a​n​d​ ​f​i​l​t​e​r​s​.
+					 */
+					longDesc: string
+				}
+				delete_list: {
+					/**
+					 * D​e​l​e​t​e​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​H​u​b​S​p​o​t​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​s​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​l​i​s​t​ ​f​r​o​m​ ​H​u​b​S​p​o​t​ ​C​R​M​ ​b​y​ ​i​t​s​ ​I​D​.
+					 */
+					longDesc: string
+				}
+				get_list: {
+					/**
+					 * G​e​t​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​H​u​b​S​p​o​t​ ​l​i​s​t​ ​b​y​ ​I​D
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​H​u​b​S​p​o​t​ ​l​i​s​t​ ​u​s​i​n​g​ ​i​t​s​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​.
+					 */
+					longDesc: string
+				}
+				add_memberships: {
+					/**
+					 * A​d​d​ ​L​i​s​t​ ​R​e​c​o​r​d​s
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​r​e​c​o​r​d​s​ ​t​o​ ​a​ ​H​u​b​S​p​o​t​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​s​ ​s​p​e​c​i​f​i​e​d​ ​r​e​c​o​r​d​s​ ​a​s​ ​m​e​m​b​e​r​s​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​H​u​b​S​p​o​t​ ​l​i​s​t​.
+					 */
+					longDesc: string
+				}
+				add_members_from_source_list: {
+					/**
+					 * A​d​d​ ​R​e​c​o​r​d​s​ ​f​r​o​m​ ​a​n​o​t​h​e​r​ ​l​i​s​t
+					 */
+					displayName: string
+					/**
+					 * C​o​p​y​ ​a​l​l​ ​m​e​m​b​e​r​s​ ​f​r​o​m​ ​o​n​e​ ​l​i​s​t​ ​t​o​ ​a​n​o​t​h​e​r
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​s​ ​a​l​l​ ​m​e​m​b​e​r​s​ ​f​r​o​m​ ​a​ ​s​o​u​r​c​e​ ​H​u​b​S​p​o​t​ ​l​i​s​t​ ​t​o​ ​a​ ​t​a​r​g​e​t​ ​l​i​s​t​,​ ​e​f​f​e​c​t​i​v​e​l​y​ ​c​o​p​y​i​n​g​ ​t​h​e​ ​m​e​m​b​e​r​s​h​i​p​.
+					 */
+					longDesc: string
+				}
+				remove_members_from_list: {
+					/**
+					 * R​e​m​o​v​e​ ​L​i​s​t​ ​R​e​c​o​r​d​s
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​r​e​c​o​r​d​s​ ​f​r​o​m​ ​a​ ​H​u​b​S​p​o​t​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​s​p​e​c​i​f​i​e​d​ ​r​e​c​o​r​d​s​ ​f​r​o​m​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​H​u​b​S​p​o​t​ ​l​i​s​t​ ​m​e​m​b​e​r​s​h​i​p​.
+					 */
+					longDesc: string
+				}
+				get_list_records: {
+					/**
+					 * G​e​t​ ​L​i​s​t​ ​R​e​c​o​r​d​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​r​e​c​o​r​d​s​ ​f​r​o​m​ ​a​ ​H​u​b​S​p​o​t​ ​l​i​s​t​ ​w​i​t​h​ ​p​a​g​i​n​a​t​i​o​n​ ​a​n​d​ ​p​r​o​p​e​r​t​y​ ​f​i​l​t​e​r​i​n​g​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​H​u​b​S​p​o​t​ ​l​i​s​t​,​ ​i​n​c​l​u​d​i​n​g​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​u​s​i​n​g​ ​b​e​f​o​r​e​/​a​f​t​e​r​ ​c​u​r​s​o​r​s​ ​a​n​d​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​p​r​o​p​e​r​t​i​e​s​.​ ​R​e​t​u​r​n​s​ ​t​h​e​ ​a​c​t​u​a​l​ ​r​e​c​o​r​d​ ​d​a​t​a​ ​a​l​o​n​g​ ​w​i​t​h​ ​p​a​g​i​n​a​t​i​o​n​ ​m​e​t​a​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						listId: {
+							/**
+							 * L​i​s​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​H​u​b​S​p​o​t​ ​l​i​s​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​r​e​c​o​r​d​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​H​u​b​S​p​o​t​ ​l​i​s​t​ ​t​o​ ​f​e​t​c​h​ ​r​e​c​o​r​d​s​ ​f​r​o​m​.
+							 */
+							longDesc: string
+						}
+						after: {
+							/**
+							 * A​f​t​e​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r​ ​f​o​r​ ​n​e​x​t​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * C​u​r​s​o​r​ ​v​a​l​u​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​r​e​c​o​r​d​s​ ​a​f​t​e​r​ ​t​h​i​s​ ​p​o​i​n​t​.​ ​U​s​e​d​ ​f​o​r​ ​f​o​r​w​a​r​d​ ​p​a​g​i​n​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						before: {
+							/**
+							 * B​e​f​o​r​e
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r​ ​f​o​r​ ​p​r​e​v​i​o​u​s​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * C​u​r​s​o​r​ ​v​a​l​u​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​r​e​c​o​r​d​s​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​p​o​i​n​t​.​ ​U​s​e​d​ ​f​o​r​ ​b​a​c​k​w​a​r​d​ ​p​a​g​i​n​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.
+							 */
+							longDesc: string
+						}
+						properties: {
+							/**
+							 * P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​i​n​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​ ​f​o​r​ ​e​a​c​h​ ​r​e​c​o​r​d​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​d​e​f​a​u​l​t​ ​p​r​o​p​e​r​t​i​e​s​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
 			}
 			triggers: {
 				hubspot_company_created_or_updated_trigger: {
@@ -28807,6 +29269,138 @@ export type TranslationFunctions = {
 			 */
 			longDesc: () => LocalizedString
 			actions: {
+				search_documents: {
+					/**
+					 * Search Documents
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for Google Docs documents with advanced filtering and sorting options.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search for Google Docs documents in Google Drive using various criteria including filename, folder location, and custom queries. Supports sorting by different fields and directions with pagination.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						filename: {
+							/**
+							 * Filename
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name of the document to search for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name or partial name of the Google Docs document to search for.
+							 */
+							longDesc: () => LocalizedString
+						}
+						search_type: {
+							/**
+							 * Search Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of filename matching
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * How to match the filename - either contains the text or exact match. Default is contains.
+							 */
+							longDesc: () => LocalizedString
+						}
+						folder: {
+							/**
+							 * Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Folder to search within
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Google Drive folder ID to limit the search to. If not specified, searches all accessible folders.
+							 */
+							longDesc: () => LocalizedString
+						}
+						order_by: {
+							/**
+							 * Order By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sorting criteria for results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of sorting criteria to apply to the search results. Each item specifies a field and direction.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The field to sort the results by (e.g., name, modifiedTime, createdTime).
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The direction to sort - either ascending (asc) or descending (desc).
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						page_size: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of results to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of documents to return in a single request. Default is 100.
+							 */
+							longDesc: () => LocalizedString
+						}
+						custom_query: {
+							/**
+							 * Custom Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional search criteria
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom Google Drive search query to add additional filtering criteria beyond the basic options.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
 				append_text_to_document: {
 					/**
 					 * Append Text to Document
@@ -31973,6 +32567,138 @@ export type TranslationFunctions = {
 				}
 			}
 			actions: {
+				search_spreadsheets: {
+					/**
+					 * Search Spreadsheets
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for Google Sheets spreadsheets with advanced filtering and sorting options.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search for Google Sheets spreadsheets in Google Drive using various criteria including filename, folder location, and custom queries. Supports sorting by different fields and directions with pagination.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						filename: {
+							/**
+							 * Filename
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name of the spreadsheet to search for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name or partial name of the Google Sheets spreadsheet to search for.
+							 */
+							longDesc: () => LocalizedString
+						}
+						search_type: {
+							/**
+							 * Search Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of filename matching
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * How to match the filename - either contains the text or exact match. Default is contains.
+							 */
+							longDesc: () => LocalizedString
+						}
+						folder: {
+							/**
+							 * Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Folder to search within
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Google Drive folder ID to limit the search to. If not specified, searches all accessible folders.
+							 */
+							longDesc: () => LocalizedString
+						}
+						order_by: {
+							/**
+							 * Order By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sorting criteria for results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of sorting criteria to apply to the search results. Each item specifies a field and direction.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The field to sort the results by (e.g., name, modifiedTime, createdTime).
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The direction to sort - either ascending (asc) or descending (desc).
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						page_size: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of results to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of spreadsheets to return in a single request. Default is 100.
+							 */
+							longDesc: () => LocalizedString
+						}
+						custom_query: {
+							/**
+							 * Custom Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional search criteria
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom Google Drive search query to add additional filtering criteria beyond the basic options.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
 				find_spreadsheet_rows: {
 					/**
 					 * Find Spreadsheet Rows
@@ -33126,6 +33852,20 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * The search term or value to look for in the specified field. Search is case-insensitive.
+							 */
+							longDesc: () => LocalizedString
+						}
+						group: {
+							/**
+							 * Contact Group
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by contact group
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional contact group to filter results. Only contacts in this group will be returned. Provide the group resource name (e.g., "contactGroups/12345").
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -45658,6 +46398,190 @@ export type TranslationFunctions = {
 					 * Update an existing user
 					 */
 					shortDesc: () => LocalizedString
+				}
+				create_list: {
+					/**
+					 * Create List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new HubSpot list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new list in HubSpot CRM with the specified configuration and properties.
+					 */
+					longDesc: () => LocalizedString
+				}
+				search_lists: {
+					/**
+					 * Search Lists
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for HubSpot lists
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search and retrieve HubSpot lists based on specified criteria and filters.
+					 */
+					longDesc: () => LocalizedString
+				}
+				delete_list: {
+					/**
+					 * Delete List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a HubSpot list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently removes a specified list from HubSpot CRM by its ID.
+					 */
+					longDesc: () => LocalizedString
+				}
+				get_list: {
+					/**
+					 * Get List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a HubSpot list by ID
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches detailed information about a specific HubSpot list using its unique identifier.
+					 */
+					longDesc: () => LocalizedString
+				}
+				add_memberships: {
+					/**
+					 * Add List Records
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add records to a HubSpot list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Adds specified records as members to an existing HubSpot list.
+					 */
+					longDesc: () => LocalizedString
+				}
+				add_members_from_source_list: {
+					/**
+					 * Add Records from another list
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Copy all members from one list to another
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Adds all members from a source HubSpot list to a target list, effectively copying the membership.
+					 */
+					longDesc: () => LocalizedString
+				}
+				remove_members_from_list: {
+					/**
+					 * Remove List Records
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove records from a HubSpot list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes specified records from an existing HubSpot list membership.
+					 */
+					longDesc: () => LocalizedString
+				}
+				get_list_records: {
+					/**
+					 * Get List Records
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve records from a HubSpot list with pagination and property filtering.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches records from a specified HubSpot list, including support for pagination using before/after cursors and filtering by specific properties. Returns the actual record data along with pagination metadata.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						listId: {
+							/**
+							 * List ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The HubSpot list to retrieve records from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the HubSpot list to fetch records from.
+							 */
+							longDesc: () => LocalizedString
+						}
+						after: {
+							/**
+							 * After
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor for next page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Cursor value to retrieve records after this point. Used for forward pagination.
+							 */
+							longDesc: () => LocalizedString
+						}
+						before: {
+							/**
+							 * Before
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor for previous page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Cursor value to retrieve records before this point. Used for backward pagination.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of records to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of records to return in a single request. Default is 100.
+							 */
+							longDesc: () => LocalizedString
+						}
+						properties: {
+							/**
+							 * Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of properties to include
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specific properties to include in the response for each record. If not specified, default properties will be returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 			}
 			triggers: {

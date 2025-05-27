@@ -216,6 +216,80 @@ const HubspotAppEn = {
       displayName: 'Update User',
       shortDesc: 'Update an existing user',
     },
+    create_list: {
+      displayName: 'Create List',
+      shortDesc: 'Create a new HubSpot list',
+      longDesc:
+        'Creates a new list in HubSpot CRM with the specified configuration and properties.',
+    },
+    search_lists: {
+      displayName: 'Search Lists',
+      shortDesc: 'Search for HubSpot lists',
+      longDesc: 'Search and retrieve HubSpot lists based on specified criteria and filters.',
+    },
+    delete_list: {
+      displayName: 'Delete List',
+      shortDesc: 'Delete a HubSpot list',
+      longDesc: 'Permanently removes a specified list from HubSpot CRM by its ID.',
+    },
+    get_list: {
+      displayName: 'Get List',
+      shortDesc: 'Retrieve a HubSpot list by ID',
+      longDesc:
+        'Fetches detailed information about a specific HubSpot list using its unique identifier.',
+    },
+    add_memberships: {
+      displayName: 'Add List Records',
+      shortDesc: 'Add records to a HubSpot list',
+      longDesc: 'Adds specified records as members to an existing HubSpot list.',
+    },
+    add_members_from_source_list: {
+      displayName: 'Add Records from another list',
+      shortDesc: 'Copy all members from one list to another',
+      longDesc:
+        'Adds all members from a source HubSpot list to a target list, effectively copying the membership.',
+    },
+    remove_members_from_list: {
+      displayName: 'Remove List Records',
+      shortDesc: 'Remove records from a HubSpot list',
+      longDesc: 'Removes specified records from an existing HubSpot list membership.',
+    },
+    get_list_records: {
+      displayName: 'Get List Records',
+      shortDesc: 'Retrieve records from a HubSpot list with pagination and property filtering.',
+      longDesc:
+        'Fetches records from a specified HubSpot list, including support for pagination using before/after cursors and filtering by specific properties. Returns the actual record data along with pagination metadata.',
+      options: {
+        listId: {
+          displayName: 'List ID',
+          shortDesc: 'The HubSpot list to retrieve records from',
+          longDesc: 'The unique identifier of the HubSpot list to fetch records from.',
+        },
+        after: {
+          displayName: 'After',
+          shortDesc: 'Pagination cursor for next page',
+          longDesc:
+            'Cursor value to retrieve records after this point. Used for forward pagination.',
+        },
+        before: {
+          displayName: 'Before',
+          shortDesc: 'Pagination cursor for previous page',
+          longDesc:
+            'Cursor value to retrieve records before this point. Used for backward pagination.',
+        },
+        limit: {
+          displayName: 'Limit',
+          shortDesc: 'Maximum number of records to return',
+          longDesc: 'The maximum number of records to return in a single request. Default is 100.',
+        },
+        properties: {
+          displayName: 'Properties',
+          shortDesc: 'List of properties to include',
+          longDesc:
+            'Specific properties to include in the response for each record. If not specified, default properties will be returned.',
+        },
+      },
+    },
   },
   triggers: {
     hubspot_company_created_or_updated_trigger: {

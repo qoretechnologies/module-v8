@@ -104,6 +104,8 @@ const options = {
         fields: {
           placeholder: {
             type: 'string',
+            get_allowed_values: getGoogleDocsTemplatePlaceholderAllowedValues,
+            allowed_values_creatable: true,
             required: true,
           },
           image_url: {

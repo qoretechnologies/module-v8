@@ -71,6 +71,12 @@ const GoogleContactsAppEn = {
           longDesc:
             'The search term or value to look for in the specified field. Search is case-insensitive.',
         },
+        group: {
+          displayName: 'Contact Group',
+          shortDesc: 'Filter by contact group',
+          longDesc:
+            'Optional contact group to filter results. Only contacts in this group will be returned. Provide the group resource name (e.g., "contactGroups/12345").',
+        },
       },
     },
 

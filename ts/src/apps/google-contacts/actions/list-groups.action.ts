@@ -25,21 +25,6 @@ const options = {
     ],
     default_value: 'all',
   },
-  group_fields: {
-    type: 'string',
-    required: false,
-    default_value: 'name,groupType,memberCount,metadata',
-    allowed_values: [
-      { value: 'name', display_name: 'Name only' },
-      { value: 'name,groupType', display_name: 'Name and type' },
-      { value: 'name,groupType,memberCount', display_name: 'Name, type, and member count' },
-      { value: 'name,groupType,memberCount,metadata', display_name: 'All basic fields' },
-      {
-        value: 'name,groupType,memberCount,metadata,clientData',
-        display_name: 'All fields including custom data',
-      },
-    ],
-  },
 } satisfies TQoreOptions;
 
 const response_type = {
@@ -92,7 +77,7 @@ const listGroups = QoreAppCreator.createLocalizedAction<typeof options>({
       ErrorClass: GoogleContactsError,
     });
 
-    const { search_name, group_type, group_fields } = obj || {};
+    const { search_name, group_type } = obj || {};
 
     try {
       const client = createGooglePeopleClient(token);
@@ -101,9 +86,9 @@ const listGroups = QoreAppCreator.createLocalizedAction<typeof options>({
       let nextPageToken: string | undefined | null = null;
 
       do {
-        const requestParams: any = {
+        const requestParams: people_v1.Params$Resource$Contactgroups$List = {
           pageSize: 1000,
-          groupFields: group_fields || 'name,groupType,memberCount,metadata',
+          groupFields: 'name,groupType,memberCount,metadata',
         };
 
         if (nextPageToken) {

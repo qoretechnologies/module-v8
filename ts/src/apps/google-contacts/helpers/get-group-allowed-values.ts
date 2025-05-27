@@ -29,7 +29,7 @@ export const getGoogleContactsGroupAllowedValues: TQoreGetAllowedValuesFunction<
       response.data.contactGroups.forEach((group) => {
         if (group.resourceName && group.name) {
           allowedValues.push({
-            display_name: group.name,
+            display_name: group.formattedName || group.name,
             value: group.resourceName,
             desc:
               `Resource Name: ${group.resourceName}\n` +
