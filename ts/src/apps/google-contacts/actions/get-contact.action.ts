@@ -15,7 +15,6 @@ const options = {
   resource_name: {
     type: 'string',
     required: true,
-    allowed_values_creatable: true,
     get_allowed_values: getGoogleContactsContactAllowedValues,
   },
 } satisfies TQoreOptions;

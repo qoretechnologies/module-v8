@@ -8,12 +8,14 @@ import {
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { GOOGLE_CONTACTS_APP_NAME, GoogleContactsError } from '../constants';
 import { createGooglePeopleClient } from '../helpers/constants';
+import { getGoogleContactsGroupAllowedValues } from '../helpers/get-group-allowed-values';
 
 const options = {
   search_field: {
     type: 'string',
     required: false,
     preselected: true,
+    default_value: 'email',
     allowed_values: [
       {
         value: 'email',
@@ -28,6 +30,11 @@ const options = {
         display_name: 'Phone Number',
       },
     ],
+  },
+  group: {
+    type: 'string',
+    required: false,
+    get_allowed_values: getGoogleContactsGroupAllowedValues,
   },
   search_type: {
     type: 'string',
@@ -67,6 +74,7 @@ const searchGoogleContacts = QoreAppCreator.createLocalizedAction<typeof options
     const search_field = obj?.search_field;
     const search_type = obj?.search_type || 'contains';
     const search_value = obj?.search_value?.trim();
+    const group = obj?.group;
 
     try {
       const client = createGooglePeopleClient(token);
@@ -77,7 +85,7 @@ const searchGoogleContacts = QoreAppCreator.createLocalizedAction<typeof options
       do {
         const response = await client.people.connections.list({
           resourceName: 'people/me',
-          personFields: 'names,emailAddresses,phoneNumbers,metadata',
+          personFields: 'names,emailAddresses,phoneNumbers,metadata,memberships',
           pageSize: 1000,
           ...(pageToken && { pageToken }),
         });
@@ -89,10 +97,18 @@ const searchGoogleContacts = QoreAppCreator.createLocalizedAction<typeof options
         pageToken = response.data.nextPageToken;
       } while (pageToken);
 
-      let filteredContacts: people_v1.Schema$Person[] = [];
+      let filteredContacts = allContacts;
+
+      if (group) {
+        filteredContacts = filteredContacts.filter((contact) => {
+          return contact.memberships?.some((membership) => {
+            return membership.contactGroupMembership?.contactGroupResourceName === group;
+          });
+        });
+      }
 
       if (search_value) {
-        filteredContacts = allContacts.filter((contact) => {
+        filteredContacts = filteredContacts.filter((contact) => {
           const searchValueLower = search_value.toLowerCase();
 
           switch (search_field) {
@@ -149,8 +165,6 @@ const searchGoogleContacts = QoreAppCreator.createLocalizedAction<typeof options
               return false;
           }
         });
-      } else {
-        filteredContacts = allContacts;
       }
 
       const transformedContacts = filteredContacts.map((contact) => ({

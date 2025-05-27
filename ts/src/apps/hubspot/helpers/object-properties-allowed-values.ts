@@ -146,3 +146,30 @@ export const getHubspotCustomObjectPropertiesAllowedValues: TQoreGetAllowedValue
 
   return await fetchHubspotObjectPropertiesAllowedValues({ token, object });
 };
+
+export const getHubspotListObjectPropertiesAllowedValues: TQoreGetAllowedValuesFunction<
+  TCustomConnOptions,
+  string
+> = async (context): Promise<IQoreAllowedValue<string>[]> => {
+  const token = context?.conn_opts?.token;
+  const listId = context?.opts?.listId;
+
+  const listResponse = await QorusRequest.get<{
+    data: { list: { objectTypeId: string } };
+  }>(
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      path: `/crm/v3/lists/${listId}`,
+    },
+    {
+      endpointId: 'Hubspot',
+      url: 'https://api.hubapi.com',
+    }
+  );
+
+  const objectType = listResponse?.data?.list?.objectTypeId;
+
+  return await fetchHubspotObjectPropertiesAllowedValues({ token, object: objectType });
+};

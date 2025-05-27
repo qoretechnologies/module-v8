@@ -1,11 +1,68 @@
-
-
+/* eslint-disable max-len */
 const GoogleDocsAppEn = {
   displayName: 'Google Docs',
   shortDesc: 'Connect with Google Docs to manage your documents',
   longDesc:
     'Integrate with Google Docs to create, update, and manage your documents. This integration allows you to perform actions and respond to events in your Google Docs account, enabling you to automate document management and collaboration workflows.',
   actions: {
+    search_documents: {
+      displayName: 'Search Documents',
+      shortDesc: 'Search for Google Docs documents with advanced filtering and sorting options.',
+      longDesc:
+        'Search for Google Docs documents in Google Drive using various criteria including filename, folder location, and custom queries. Supports sorting by different fields and directions with pagination.',
+      options: {
+        filename: {
+          displayName: 'Filename',
+          shortDesc: 'Name of the document to search for',
+          longDesc: 'The name or partial name of the Google Docs document to search for.',
+        },
+        search_type: {
+          displayName: 'Search Type',
+          shortDesc: 'Type of filename matching',
+          longDesc:
+            'How to match the filename - either contains the text or exact match. Default is contains.',
+        },
+        folder: {
+          displayName: 'Folder',
+          shortDesc: 'Folder to search within',
+          longDesc:
+            'The Google Drive folder ID to limit the search to. If not specified, searches all accessible folders.',
+        },
+        order_by: {
+          displayName: 'Order By',
+          shortDesc: 'Sorting criteria for results',
+          longDesc:
+            'List of sorting criteria to apply to the search results. Each item specifies a field and direction.',
+          type: {
+            fields: {
+              field: {
+                displayName: 'Field',
+                shortDesc: 'Field to sort by',
+                longDesc:
+                  'The field to sort the results by (e.g., name, modifiedTime, createdTime).',
+              },
+              direction: {
+                displayName: 'Direction',
+                shortDesc: 'Sort direction',
+                longDesc: 'The direction to sort - either ascending (asc) or descending (desc).',
+              },
+            },
+          },
+        },
+        page_size: {
+          displayName: 'Page Size',
+          shortDesc: 'Maximum number of results to return',
+          longDesc:
+            'The maximum number of documents to return in a single request. Default is 100.',
+        },
+        custom_query: {
+          displayName: 'Custom Query',
+          shortDesc: 'Additional search criteria',
+          longDesc:
+            'Custom Google Drive search query to add additional filtering criteria beyond the basic options.',
+        },
+      },
+    },
     append_text_to_document: {
       displayName: 'Append Text to Document',
       shortDesc: 'Add text to an existing Google Docs document at a specified position.',

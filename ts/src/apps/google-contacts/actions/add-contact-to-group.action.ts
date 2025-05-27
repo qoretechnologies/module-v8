@@ -15,13 +15,11 @@ const options = {
   group_resource_name: {
     type: 'string',
     required: true,
-    allowed_values_creatable: true,
     get_allowed_values: getGoogleContactsGroupAllowedValues,
   },
   contact_resource_name: {
     type: 'string',
     required: true,
-    allowed_values_creatable: true,
     get_allowed_values: getGoogleContactsContactAllowedValues,
   },
 } satisfies TQoreOptions;

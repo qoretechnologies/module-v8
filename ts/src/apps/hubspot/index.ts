@@ -3,16 +3,18 @@ import { actionsCatalogue } from '../../ActionsCatalogue';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
-import { HUBSPOT_APP_NAME } from './constants';
 import { HUBSPOT_COMPANIES_ACTIONS } from './allowed-paths/companies';
 import { HUBSPOT_CONTACTS_ACTIONS } from './allowed-paths/contacts';
 import { HUBSPOT_CUSTOM_OBJECTS_ACTIONS } from './allowed-paths/custom-objects';
 import { HUBSPOT_DEALS_ACTIONS } from './allowed-paths/deals';
 import { HUBSPOT_LEADS_ACTIONS } from './allowed-paths/leads';
+import { HUBSPOT_LISTS_ACTIONS } from './allowed-paths/lists';
 import { HUBSPOT_PRODUCTS_ACTIONS } from './allowed-paths/products';
 import { HUBSPOT_TICKETS_ACTIONS } from './allowed-paths/tickets';
 import { HUBSPOT_USERS_ACTIONS } from './allowed-paths/users';
+import { HUBSPOT_APP_NAME } from './constants';
 import * as HUBSPOT_TRIGGERS from './triggers';
+import * as HUBSPOT_ACTIONS from './actions';
 
 export default (locale: Locales) =>
   ({
@@ -50,6 +52,8 @@ export default (locale: Locales) =>
       ...mapActionsToApp(HUBSPOT_APP_NAME, HUBSPOT_PRODUCTS_ACTIONS, locale),
       ...mapActionsToApp(HUBSPOT_APP_NAME, HUBSPOT_TICKETS_ACTIONS, locale),
       ...mapActionsToApp(HUBSPOT_APP_NAME, HUBSPOT_USERS_ACTIONS, locale),
+      ...mapActionsToApp(HUBSPOT_APP_NAME, HUBSPOT_LISTS_ACTIONS, locale),
+      ...mapActionsToApp(HUBSPOT_APP_NAME, HUBSPOT_ACTIONS, locale),
       ...mapTriggersToApp(HUBSPOT_APP_NAME, HUBSPOT_TRIGGERS, locale),
     ],
     rest: {
@@ -81,6 +85,8 @@ export default (locale: Locales) =>
         'crm.objects.leads.write',
         'crm.objects.users.read',
         'crm.objects.users.write',
+        'crm.lists.read',
+        'crm.lists.write',
       ],
       ping_method: 'GET',
       ping_path: '/integrations/v1/me',
@@ -112,6 +118,9 @@ export default (locale: Locales) =>
       },
       users: {
         swagger: 'schemas/hubspot/users.swagger.json',
+      },
+      lists: {
+        swagger: 'schemas/hubspot/lists.swagger.json',
       },
     },
   }) satisfies TQoreAppWithActions;

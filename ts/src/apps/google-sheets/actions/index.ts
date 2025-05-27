@@ -9,3 +9,4 @@ export { default as findSpreadsheetRows } from './find-spreadsheet-rows.action';
 export { default as formatSpreadsheetRows } from './format-spreadsheet-rows.action';
 export { default as searchWorksheets } from './search-worksheets.action';
 export { default as updateSpreadsheetRows } from './update-spreadsheet-rows.action';
+export { default as searchSpreadsheets } from './search-spreadsheets.action';
