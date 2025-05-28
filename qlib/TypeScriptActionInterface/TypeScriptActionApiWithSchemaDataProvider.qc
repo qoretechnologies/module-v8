@@ -154,6 +154,13 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                 "prov": self,
             };
             request_type_info.type = request_type;
+        } else if (!override_options && !action.options) {
+            NoIoHelper nih();
+            createRequestType();
+            if (request_type_info.type && (*hash<string, AbstractDataField> fields =
+                request_type_info.type.getFields())) {
+                action.options = DataProviderActionCatalog::getActionOptionFromFields(fields);
+            }
         }
         if (response_type) {
             if (get_dynamic_response_type) {
