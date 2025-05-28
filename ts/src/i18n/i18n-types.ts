@@ -3769,6 +3769,20 @@ type RootTranslation = {
 										 */
 										longDesc: string
 									}
+									type: {
+										/**
+										 * S​e​a​r​c​h​ ​T​y​p​e
+										 */
+										displayName: string
+										/**
+										 * T​y​p​e​ ​o​f​ ​s​e​a​r​c​h​ ​t​o​ ​p​e​r​f​o​r​m
+										 */
+										shortDesc: string
+										/**
+										 * D​e​t​e​r​m​i​n​e​s​ ​h​o​w​ ​t​h​e​ ​s​e​a​r​c​h​ ​v​a​l​u​e​ ​i​s​ ​m​a​t​c​h​e​d​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​c​o​l​u​m​n​ ​d​a​t​a​.​ ​O​p​t​i​o​n​s​ ​i​n​c​l​u​d​e​ ​e​x​a​c​t​ ​m​a​t​c​h​,​ ​c​o​n​t​a​i​n​s​.
+										 */
+										longDesc: string
+									}
 									value: {
 										/**
 										 * S​e​a​r​c​h​ ​V​a​l​u​e
@@ -32851,6 +32865,20 @@ export type TranslationFunctions = {
 										shortDesc: () => LocalizedString
 										/**
 										 * The letter designation of the column to search in (e.g., A, B, C). Use this or Column Header, not both.
+										 */
+										longDesc: () => LocalizedString
+									}
+									type: {
+										/**
+										 * Search Type
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Type of search to perform
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Determines how the search value is matched against the column data. Options include exact match, contains.
 										 */
 										longDesc: () => LocalizedString
 									}

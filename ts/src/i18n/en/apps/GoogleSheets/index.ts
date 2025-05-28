@@ -180,6 +180,12 @@ const GoogleSheetsAppEn = {
                 longDesc:
                   'The letter designation of the column to search in (e.g., A, B, C). Use this or Column Header, not both.',
               },
+              type: {
+                displayName: 'Search Type',
+                shortDesc: 'Type of search to perform',
+                longDesc:
+                  'Determines how the search value is matched against the column data. Options include exact match, contains.',
+              },
               value: {
                 displayName: 'Search Value',
                 shortDesc: 'Value to search for',
