@@ -104,6 +104,43 @@ export const MAILCHIMP_ALLOWED_PATHS = {
         list_id: {
           get_allowed_values: getMailchimpListIdAllowedValues,
         },
+        interest_category_id: {
+          type: 'string',
+          required: false,
+          depends_on: ['list_id'],
+          get_allowed_values: getMailchimpInterestCategoryIdAllowedValues,
+        },
+        interests: {
+          depends_on: ['list_id', 'interest_category_id'],
+          type: {
+            type: 'list',
+            element_type: 'string',
+          },
+          get_element_allowed_values: getMailchimpInterestIdAllowedValues,
+          element_allowed_values_creatable: true,
+        },
+      },
+      request_data_converter: (request) => {
+        if (!request) return request;
+
+        const { body, ...rest } = request;
+        const interests = body?.interests;
+
+        return {
+          ...rest,
+          ...(body && {
+            body: {
+              ...omit(body, ['interest_category_id', 'interests']),
+              ...(interests?.length && {
+                interests: interests.reduce((acc: Record<string, boolean>, interest: string) => {
+                  acc[interest] = true;
+
+                  return acc;
+                }, {}),
+              }),
+            },
+          }),
+        };
       },
     },
     GET: {

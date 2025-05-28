@@ -293,6 +293,7 @@ describe('Google Sheets', () => {
           limit: 1,
           search: {
             column: 'A',
+            type: 'contains',
             value: 'Test',
           },
           response_type: 'mapped-headers',

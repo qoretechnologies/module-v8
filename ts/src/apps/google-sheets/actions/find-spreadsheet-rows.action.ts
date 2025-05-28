@@ -81,6 +81,22 @@ const options = {
           required_groups: ['search'],
           type: 'string',
         },
+        type: {
+          required: false,
+          preselected: true,
+          type: 'string',
+          default_value: 'contains',
+          allowed_values: [
+            {
+              display_name: 'Exact match',
+              value: 'exact',
+            },
+            {
+              display_name: 'Contains',
+              value: 'contains',
+            },
+          ],
+        },
         value: {
           required: true,
           type: 'softstring',
@@ -104,13 +120,8 @@ const findSpreadsheetRows = QoreAppCreator.createLocalizedAction<typeof options>
       ErrorClass: GoogleSheetsError,
     });
 
-    const search = obj?.search as
-      | {
-          header?: string;
-          column?: string;
-          value: string;
-        }
-      | undefined;
+    const search = obj?.search;
+    const searchType = search?.type || 'contains';
     const limit = obj?.limit || 10;
     const offset = obj?.offset || 0;
     const searchFromLastRow = obj?.search_from_last_row || false;
@@ -258,8 +269,15 @@ const findSpreadsheetRows = QoreAppCreator.createLocalizedAction<typeof options>
         const matchingIndices: number[] = [];
         for (let i = 0; i < searchColumnValues.length; i++) {
           const rowValue = searchColumnValues[i][0];
-          if (rowValue !== undefined && String(rowValue).trim() === String(search.value).trim()) {
-            matchingIndices.push(i + chunkStart);
+          if (rowValue !== undefined) {
+            const searchValue = String(search.value).trim();
+            const formattedRowValue = String(rowValue).trim();
+
+            if (searchType === 'contains' && formattedRowValue.includes(searchValue)) {
+              matchingIndices.push(i + chunkStart);
+            } else if (searchType === 'exact' && formattedRowValue === searchValue) {
+              matchingIndices.push(i + chunkStart);
+            }
           }
         }
 
