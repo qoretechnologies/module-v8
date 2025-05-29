@@ -7679,6 +7679,316 @@ type RootTranslation = {
 			 * C​o​n​n​e​c​t​ ​w​i​t​h​ ​M​a​i​l​c​h​i​m​p​ ​t​o​ ​c​r​e​a​t​e​ ​a​n​d​ ​m​a​n​a​g​e​ ​e​m​a​i​l​ ​c​a​m​p​a​i​g​n​s​,​ ​t​r​a​c​k​ ​s​u​b​s​c​r​i​b​e​r​ ​a​c​t​i​v​i​t​i​e​s​,​ ​a​n​d​ ​a​u​t​o​m​a​t​e​ ​m​a​r​k​e​t​i​n​g​ ​w​o​r​k​f​l​o​w​s​.
 			 */
 			longDesc: string
+			actions: {
+				getCampaigns: {
+					/**
+					 * G​e​t​ ​C​a​m​p​a​i​g​n​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​e​m​a​i​l​ ​c​a​m​p​a​i​g​n​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​l​l​ ​e​m​a​i​l​ ​c​a​m​p​a​i​g​n​s​ ​f​r​o​m​ ​y​o​u​r​ ​M​a​i​l​c​h​i​m​p​ ​a​c​c​o​u​n​t​ ​w​i​t​h​ ​t​h​e​i​r​ ​d​e​t​a​i​l​s​ ​i​n​c​l​u​d​i​n​g​ ​s​t​a​t​u​s​,​ ​s​e​t​t​i​n​g​s​,​ ​a​n​d​ ​p​e​r​f​o​r​m​a​n​c​e​ ​m​e​t​r​i​c​s​.
+					 */
+					longDesc: string
+				}
+				postCampaigns: {
+					/**
+					 * C​r​e​a​t​e​ ​C​a​m​p​a​i​g​n
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​e​m​a​i​l​ ​c​a​m​p​a​i​g​n
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​e​m​a​i​l​ ​c​a​m​p​a​i​g​n​ ​i​n​ ​M​a​i​l​c​h​i​m​p​ ​w​i​t​h​ ​s​p​e​c​i​f​i​e​d​ ​s​e​t​t​i​n​g​s​,​ ​c​o​n​t​e​n​t​,​ ​a​n​d​ ​a​u​d​i​e​n​c​e​ ​t​a​r​g​e​t​i​n​g​ ​o​p​t​i​o​n​s​.
+					 */
+					longDesc: string
+				}
+				postCampaignsIdActionsSend: {
+					/**
+					 * S​e​n​d​ ​C​a​m​p​a​i​g​n
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​n​ ​e​m​a​i​l​ ​c​a​m​p​a​i​g​n
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​s​ ​a​ ​p​r​e​v​i​o​u​s​l​y​ ​c​r​e​a​t​e​d​ ​e​m​a​i​l​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​i​t​s​ ​t​a​r​g​e​t​e​d​ ​a​u​d​i​e​n​c​e​ ​i​m​m​e​d​i​a​t​e​l​y​ ​o​r​ ​s​c​h​e​d​u​l​e​s​ ​i​t​ ​f​o​r​ ​l​a​t​e​r​ ​d​e​l​i​v​e​r​y​.
+					 */
+					longDesc: string
+				}
+				postLists: {
+					/**
+					 * C​r​e​a​t​e​ ​A​u​d​i​e​n​c​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​a​u​d​i​e​n​c​e
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​a​u​d​i​e​n​c​e​ ​(​m​a​i​l​i​n​g​ ​l​i​s​t​)​ ​i​n​ ​M​a​i​l​c​h​i​m​p​ ​w​i​t​h​ ​s​p​e​c​i​f​i​e​d​ ​s​e​t​t​i​n​g​s​ ​a​n​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​o​p​t​i​o​n​s​.
+					 */
+					longDesc: string
+				}
+				searchTagsByName: {
+					/**
+					 * S​e​a​r​c​h​ ​T​a​g​s​ ​b​y​ ​N​a​m​e
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​t​a​g​s​ ​b​y​ ​n​a​m​e
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​e​s​ ​f​o​r​ ​s​u​b​s​c​r​i​b​e​r​ ​t​a​g​s​ ​b​y​ ​n​a​m​e​ ​t​o​ ​h​e​l​p​ ​o​r​g​a​n​i​z​e​ ​a​n​d​ ​s​e​g​m​e​n​t​ ​y​o​u​r​ ​a​u​d​i​e​n​c​e​ ​m​e​m​b​e​r​s​.
+					 */
+					longDesc: string
+				}
+				getListsIdMembers: {
+					/**
+					 * G​e​t​ ​A​u​d​i​e​n​c​e​ ​M​e​m​b​e​r​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​m​e​m​b​e​r​s​ ​f​r​o​m​ ​a​n​ ​a​u​d​i​e​n​c​e
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​l​l​ ​m​e​m​b​e​r​s​ ​(​s​u​b​s​c​r​i​b​e​r​s​)​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​a​u​d​i​e​n​c​e​ ​w​i​t​h​ ​t​h​e​i​r​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​n​d​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​d​e​t​a​i​l​s​.
+					 */
+					longDesc: string
+				}
+				postListsIdMembers: {
+					/**
+					 * A​d​d​ ​A​u​d​i​e​n​c​e​ ​M​e​m​b​e​r
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​ ​n​e​w​ ​m​e​m​b​e​r​ ​t​o​ ​a​n​ ​a​u​d​i​e​n​c​e
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​s​ ​a​ ​n​e​w​ ​s​u​b​s​c​r​i​b​e​r​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​a​u​d​i​e​n​c​e​ ​w​i​t​h​ ​t​h​e​i​r​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​n​d​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​p​r​e​f​e​r​e​n​c​e​s​.
+					 */
+					longDesc: string
+				}
+				getListsIdMembersId: {
+					/**
+					 * G​e​t​ ​A​u​d​i​e​n​c​e​ ​M​e​m​b​e​r
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​a​u​d​i​e​n​c​e​ ​m​e​m​b​e​r
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​m​b​e​r​ ​(​s​u​b​s​c​r​i​b​e​r​)​ ​f​r​o​m​ ​a​n​ ​a​u​d​i​e​n​c​e​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​i​r​ ​p​r​o​f​i​l​e​ ​a​n​d​ ​a​c​t​i​v​i​t​y​ ​d​a​t​a​.
+					 */
+					longDesc: string
+				}
+				putListsIdMembersId: {
+					/**
+					 * U​p​d​a​t​e​ ​A​u​d​i​e​n​c​e​ ​M​e​m​b​e​r
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​a​u​d​i​e​n​c​e​ ​m​e​m​b​e​r
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​n​d​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​p​r​e​f​e​r​e​n​c​e​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​m​e​m​b​e​r​ ​i​n​ ​a​n​ ​a​u​d​i​e​n​c​e​.
+					 */
+					longDesc: string
+				}
+				deleteListsIdMembersId: {
+					/**
+					 * R​e​m​o​v​e​ ​A​u​d​i​e​n​c​e​ ​M​e​m​b​e​r
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​a​ ​m​e​m​b​e​r​ ​f​r​o​m​ ​a​n​ ​a​u​d​i​e​n​c​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​ ​s​u​b​s​c​r​i​b​e​r​ ​f​r​o​m​ ​a​n​ ​a​u​d​i​e​n​c​e​ ​w​h​i​l​e​ ​p​r​e​s​e​r​v​i​n​g​ ​t​h​e​i​r​ ​d​a​t​a​ ​f​o​r​ ​c​o​m​p​l​i​a​n​c​e​ ​p​u​r​p​o​s​e​s​.
+					 */
+					longDesc: string
+				}
+				postListMemberTags: {
+					/**
+					 * A​d​d​ ​M​e​m​b​e​r​ ​T​a​g​s
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​t​a​g​s​ ​t​o​ ​a​u​d​i​e​n​c​e​ ​m​e​m​b​e​r​s
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​s​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​t​a​g​s​ ​t​o​ ​a​u​d​i​e​n​c​e​ ​m​e​m​b​e​r​s​ ​f​o​r​ ​b​e​t​t​e​r​ ​s​e​g​m​e​n​t​a​t​i​o​n​ ​a​n​d​ ​o​r​g​a​n​i​z​a​t​i​o​n​.
+					 */
+					longDesc: string
+				}
+				postListMemberEvents: {
+					/**
+					 * A​d​d​ ​M​e​m​b​e​r​ ​E​v​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​e​v​e​n​t​s​ ​t​o​ ​a​u​d​i​e​n​c​e​ ​m​e​m​b​e​r​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​c​o​r​d​s​ ​c​u​s​t​o​m​ ​e​v​e​n​t​s​ ​f​o​r​ ​a​u​d​i​e​n​c​e​ ​m​e​m​b​e​r​s​ ​t​o​ ​t​r​a​c​k​ ​t​h​e​i​r​ ​b​e​h​a​v​i​o​r​ ​a​n​d​ ​i​n​t​e​r​a​c​t​i​o​n​s​ ​w​i​t​h​ ​y​o​u​r​ ​b​r​a​n​d​.
+					 */
+					longDesc: string
+				}
+				postListsIdMembersIdNotes: {
+					/**
+					 * A​d​d​ ​M​e​m​b​e​r​ ​N​o​t​e
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​ ​n​o​t​e​ ​t​o​ ​a​n​ ​a​u​d​i​e​n​c​e​ ​m​e​m​b​e​r
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​s​ ​a​ ​n​o​t​e​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​a​u​d​i​e​n​c​e​ ​m​e​m​b​e​r​ ​f​o​r​ ​i​n​t​e​r​n​a​l​ ​t​r​a​c​k​i​n​g​ ​a​n​d​ ​c​u​s​t​o​m​e​r​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​m​a​n​a​g​e​m​e​n​t​.
+					 */
+					longDesc: string
+				}
+				patchListsIdMembersIdNotesId: {
+					/**
+					 * U​p​d​a​t​e​ ​M​e​m​b​e​r​ ​N​o​t​e
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​a​u​d​i​e​n​c​e​ ​m​e​m​b​e​r​ ​n​o​t​e
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​n​o​t​e​ ​a​t​t​a​c​h​e​d​ ​t​o​ ​a​n​ ​a​u​d​i​e​n​c​e​ ​m​e​m​b​e​r​ ​w​i​t​h​ ​n​e​w​ ​i​n​f​o​r​m​a​t​i​o​n​ ​o​r​ ​c​o​r​r​e​c​t​i​o​n​s​.
+					 */
+					longDesc: string
+				}
+				deleteListsIdMembersIdNotesId: {
+					/**
+					 * D​e​l​e​t​e​ ​M​e​m​b​e​r​ ​N​o​t​e
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​n​ ​a​u​d​i​e​n​c​e​ ​m​e​m​b​e​r​ ​n​o​t​e
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​s​ ​a​ ​n​o​t​e​ ​f​r​o​m​ ​a​n​ ​a​u​d​i​e​n​c​e​ ​m​e​m​b​e​r​'​s​ ​p​r​o​f​i​l​e​.
+					 */
+					longDesc: string
+				}
+				postListsIdMembersHashActionsDeletePermanent: {
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​D​e​l​e​t​e​ ​M​e​m​b​e​r
+					 */
+					displayName: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​a​n​ ​a​u​d​i​e​n​c​e​ ​m​e​m​b​e​r
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​s​ ​a​n​ ​a​u​d​i​e​n​c​e​ ​m​e​m​b​e​r​ ​a​n​d​ ​a​l​l​ ​t​h​e​i​r​ ​a​s​s​o​c​i​a​t​e​d​ ​d​a​t​a​ ​f​r​o​m​ ​M​a​i​l​c​h​i​m​p​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.
+					 */
+					longDesc: string
+				}
+				getReports: {
+					/**
+					 * G​e​t​ ​C​a​m​p​a​i​g​n​ ​R​e​p​o​r​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​c​a​m​p​a​i​g​n​ ​p​e​r​f​o​r​m​a​n​c​e​ ​r​e​p​o​r​t​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​p​e​r​f​o​r​m​a​n​c​e​ ​r​e​p​o​r​t​s​ ​f​o​r​ ​y​o​u​r​ ​e​m​a​i​l​ ​c​a​m​p​a​i​g​n​s​ ​i​n​c​l​u​d​i​n​g​ ​o​p​e​n​ ​r​a​t​e​s​,​ ​c​l​i​c​k​ ​r​a​t​e​s​,​ ​a​n​d​ ​e​n​g​a​g​e​m​e​n​t​ ​m​e​t​r​i​c​s​.
+					 */
+					longDesc: string
+				}
+				getReportsId: {
+					/**
+					 * G​e​t​ ​C​a​m​p​a​i​g​n​ ​R​e​p​o​r​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​m​p​a​i​g​n​ ​r​e​p​o​r​t
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​d​e​t​a​i​l​e​d​ ​p​e​r​f​o​r​m​a​n​c​e​ ​m​e​t​r​i​c​s​ ​a​n​d​ ​a​n​a​l​y​t​i​c​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​e​m​a​i​l​ ​c​a​m​p​a​i​g​n​.
+					 */
+					longDesc: string
+				}
+				getReportsIdClickDetails: {
+					/**
+					 * G​e​t​ ​C​a​m​p​a​i​g​n​ ​C​l​i​c​k​ ​D​e​t​a​i​l​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​c​l​i​c​k​ ​d​e​t​a​i​l​s​ ​f​o​r​ ​a​ ​c​a​m​p​a​i​g​n
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​c​l​i​c​k​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​m​p​a​i​g​n​ ​i​n​c​l​u​d​i​n​g​ ​w​h​i​c​h​ ​l​i​n​k​s​ ​w​e​r​e​ ​c​l​i​c​k​e​d​ ​a​n​d​ ​b​y​ ​w​h​o​m​.
+					 */
+					longDesc: string
+				}
+				getEcommerceStoresIdCustomersId: {
+					/**
+					 * G​e​t​ ​S​t​o​r​e​ ​C​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​t​o​r​e​ ​c​u​s​t​o​m​e​r
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​u​s​t​o​m​e​r​ ​f​r​o​m​ ​y​o​u​r​ ​c​o​n​n​e​c​t​e​d​ ​e​-​c​o​m​m​e​r​c​e​ ​s​t​o​r​e​.
+					 */
+					longDesc: string
+				}
+				getSearchCampaigns: {
+					/**
+					 * S​e​a​r​c​h​ ​C​a​m​p​a​i​g​n​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​c​a​m​p​a​i​g​n​s
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​e​s​ ​t​h​r​o​u​g​h​ ​y​o​u​r​ ​e​m​a​i​l​ ​c​a​m​p​a​i​g​n​s​ ​u​s​i​n​g​ ​v​a​r​i​o​u​s​ ​c​r​i​t​e​r​i​a​ ​t​o​ ​f​i​n​d​ ​s​p​e​c​i​f​i​c​ ​c​a​m​p​a​i​g​n​s​ ​q​u​i​c​k​l​y​.
+					 */
+					longDesc: string
+				}
+				getSearchMembers: {
+					/**
+					 * S​e​a​r​c​h​ ​A​u​d​i​e​n​c​e​ ​M​e​m​b​e​r​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​a​u​d​i​e​n​c​e​ ​m​e​m​b​e​r​s
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​e​s​ ​t​h​r​o​u​g​h​ ​a​u​d​i​e​n​c​e​ ​m​e​m​b​e​r​s​ ​u​s​i​n​g​ ​v​a​r​i​o​u​s​ ​c​r​i​t​e​r​i​a​ ​s​u​c​h​ ​a​s​ ​e​m​a​i​l​,​ ​n​a​m​e​,​ ​o​r​ ​t​a​g​s​ ​t​o​ ​f​i​n​d​ ​s​p​e​c​i​f​i​c​ ​s​u​b​s​c​r​i​b​e​r​s​.
+					 */
+					longDesc: string
+				}
+			}
 			triggers: {
 				email_opened: {
 					/**
@@ -29108,6 +29418,24 @@ type RootTranslation = {
 				}
 			}
 		}
+		Zoom: {
+			/**
+			 * Z​o​o​m
+			 */
+			displayName: string
+			/**
+			 * V​i​d​e​o​ ​c​o​n​f​e​r​e​n​c​i​n​g​ ​a​n​d​ ​o​n​l​i​n​e​ ​m​e​e​t​i​n​g​ ​p​l​a​t​f​o​r​m
+			 */
+			shortDesc: string
+			/**
+			 * Z​o​o​m​ ​i​s​ ​a​ ​v​i​d​e​o​ ​c​o​n​f​e​r​e​n​c​i​n​g​ ​a​n​d​ ​o​n​l​i​n​e​ ​m​e​e​t​i​n​g​ ​p​l​a​t​f​o​r​m​ ​t​h​a​t​ ​a​l​l​o​w​s​ ​u​s​e​r​s​ ​t​o​ ​h​o​s​t​ ​a​n​d​ ​j​o​i​n​ ​v​i​r​t​u​a​l​ ​m​e​e​t​i​n​g​s​,​ ​w​e​b​i​n​a​r​s​,​ ​a​n​d​ ​v​i​d​e​o​ ​c​o​n​f​e​r​e​n​c​e​s​.​ ​I​t​ ​o​f​f​e​r​s​ ​f​e​a​t​u​r​e​s​ ​s​u​c​h​ ​a​s​ ​s​c​r​e​e​n​ ​s​h​a​r​i​n​g​,​ ​r​e​c​o​r​d​i​n​g​,​ ​a​n​d​ ​c​h​a​t​ ​f​u​n​c​t​i​o​n​a​l​i​t​i​e​s​ ​t​o​ ​e​n​h​a​n​c​e​ ​c​o​l​l​a​b​o​r​a​t​i​o​n​ ​a​n​d​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​ ​a​m​o​n​g​ ​p​a​r​t​i​c​i​p​a​n​t​s​.
+			 */
+			longDesc: string
+			actions: {
+			}
+			triggers: {
+			}
+		}
 	}
 }
 
@@ -36778,6 +37106,316 @@ export type TranslationFunctions = {
 			 * Connect with Mailchimp to create and manage email campaigns, track subscriber activities, and automate marketing workflows.
 			 */
 			longDesc: () => LocalizedString
+			actions: {
+				getCampaigns: {
+					/**
+					 * Get Campaigns
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of email campaigns
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches all email campaigns from your Mailchimp account with their details including status, settings, and performance metrics.
+					 */
+					longDesc: () => LocalizedString
+				}
+				postCampaigns: {
+					/**
+					 * Create Campaign
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new email campaign
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new email campaign in Mailchimp with specified settings, content, and audience targeting options.
+					 */
+					longDesc: () => LocalizedString
+				}
+				postCampaignsIdActionsSend: {
+					/**
+					 * Send Campaign
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send an email campaign
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Sends a previously created email campaign to its targeted audience immediately or schedules it for later delivery.
+					 */
+					longDesc: () => LocalizedString
+				}
+				postLists: {
+					/**
+					 * Create Audience
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new audience
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new audience (mailing list) in Mailchimp with specified settings and configuration options.
+					 */
+					longDesc: () => LocalizedString
+				}
+				searchTagsByName: {
+					/**
+					 * Search Tags by Name
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for tags by name
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Searches for subscriber tags by name to help organize and segment your audience members.
+					 */
+					longDesc: () => LocalizedString
+				}
+				getListsIdMembers: {
+					/**
+					 * Get Audience Members
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve members from an audience
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches all members (subscribers) from a specific audience with their contact information and subscription details.
+					 */
+					longDesc: () => LocalizedString
+				}
+				postListsIdMembers: {
+					/**
+					 * Add Audience Member
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add a new member to an audience
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Adds a new subscriber to a specific audience with their contact information and subscription preferences.
+					 */
+					longDesc: () => LocalizedString
+				}
+				getListsIdMembersId: {
+					/**
+					 * Get Audience Member
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific audience member
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches detailed information about a specific member (subscriber) from an audience including their profile and activity data.
+					 */
+					longDesc: () => LocalizedString
+				}
+				putListsIdMembersId: {
+					/**
+					 * Update Audience Member
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an audience member
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates the information and subscription preferences of an existing member in an audience.
+					 */
+					longDesc: () => LocalizedString
+				}
+				deleteListsIdMembersId: {
+					/**
+					 * Remove Audience Member
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove a member from an audience
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes a subscriber from an audience while preserving their data for compliance purposes.
+					 */
+					longDesc: () => LocalizedString
+				}
+				postListMemberTags: {
+					/**
+					 * Add Member Tags
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add tags to audience members
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Adds one or more tags to audience members for better segmentation and organization.
+					 */
+					longDesc: () => LocalizedString
+				}
+				postListMemberEvents: {
+					/**
+					 * Add Member Events
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add events to audience members
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Records custom events for audience members to track their behavior and interactions with your brand.
+					 */
+					longDesc: () => LocalizedString
+				}
+				postListsIdMembersIdNotes: {
+					/**
+					 * Add Member Note
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add a note to an audience member
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Adds a note to a specific audience member for internal tracking and customer relationship management.
+					 */
+					longDesc: () => LocalizedString
+				}
+				patchListsIdMembersIdNotesId: {
+					/**
+					 * Update Member Note
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an audience member note
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates an existing note attached to an audience member with new information or corrections.
+					 */
+					longDesc: () => LocalizedString
+				}
+				deleteListsIdMembersIdNotesId: {
+					/**
+					 * Delete Member Note
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete an audience member note
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently removes a note from an audience member's profile.
+					 */
+					longDesc: () => LocalizedString
+				}
+				postListsIdMembersHashActionsDeletePermanent: {
+					/**
+					 * Permanently Delete Member
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Permanently delete an audience member
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently removes an audience member and all their associated data from Mailchimp. This action cannot be undone.
+					 */
+					longDesc: () => LocalizedString
+				}
+				getReports: {
+					/**
+					 * Get Campaign Reports
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve campaign performance reports
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches performance reports for your email campaigns including open rates, click rates, and engagement metrics.
+					 */
+					longDesc: () => LocalizedString
+				}
+				getReportsId: {
+					/**
+					 * Get Campaign Report
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific campaign report
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches detailed performance metrics and analytics for a specific email campaign.
+					 */
+					longDesc: () => LocalizedString
+				}
+				getReportsIdClickDetails: {
+					/**
+					 * Get Campaign Click Details
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve click details for a campaign
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches detailed information about clicks in a specific campaign including which links were clicked and by whom.
+					 */
+					longDesc: () => LocalizedString
+				}
+				getEcommerceStoresIdCustomersId: {
+					/**
+					 * Get Store Customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific store customer
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches detailed information about a specific customer from your connected e-commerce store.
+					 */
+					longDesc: () => LocalizedString
+				}
+				getSearchCampaigns: {
+					/**
+					 * Search Campaigns
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for campaigns
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Searches through your email campaigns using various criteria to find specific campaigns quickly.
+					 */
+					longDesc: () => LocalizedString
+				}
+				getSearchMembers: {
+					/**
+					 * Search Audience Members
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for audience members
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Searches through audience members using various criteria such as email, name, or tags to find specific subscribers.
+					 */
+					longDesc: () => LocalizedString
+				}
+			}
 			triggers: {
 				email_opened: {
 					/**
@@ -58205,6 +58843,24 @@ export type TranslationFunctions = {
 						}
 					}
 				}
+			}
+		}
+		Zoom: {
+			/**
+			 * Zoom
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Video conferencing and online meeting platform
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Zoom is a video conferencing and online meeting platform that allows users to host and join virtual meetings, webinars, and video conferences. It offers features such as screen sharing, recording, and chat functionalities to enhance collaboration and communication among participants.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+			}
+			triggers: {
 			}
 		}
 	}

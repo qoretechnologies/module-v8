@@ -1,10 +1,141 @@
-
-
+/* eslint-disable max-len */
 const MailchimpAppEn = {
   displayName: 'Mailchimp',
   shortDesc: 'Email marketing, automation, and analytics platform',
   longDesc:
     'Connect with Mailchimp to create and manage email campaigns, track subscriber activities, and automate marketing workflows.',
+  actions: {
+    getCampaigns: {
+      displayName: 'Get Campaigns',
+      shortDesc: 'Retrieve a list of email campaigns',
+      longDesc:
+        'Fetches all email campaigns from your Mailchimp account with their details including status, settings, and performance metrics.',
+    },
+    postCampaigns: {
+      displayName: 'Create Campaign',
+      shortDesc: 'Create a new email campaign',
+      longDesc:
+        'Creates a new email campaign in Mailchimp with specified settings, content, and audience targeting options.',
+    },
+    postCampaignsIdActionsSend: {
+      displayName: 'Send Campaign',
+      shortDesc: 'Send an email campaign',
+      longDesc:
+        'Sends a previously created email campaign to its targeted audience immediately or schedules it for later delivery.',
+    },
+    postLists: {
+      displayName: 'Create Audience',
+      shortDesc: 'Create a new audience',
+      longDesc:
+        'Creates a new audience (mailing list) in Mailchimp with specified settings and configuration options.',
+    },
+    searchTagsByName: {
+      displayName: 'Search Tags by Name',
+      shortDesc: 'Search for tags by name',
+      longDesc:
+        'Searches for subscriber tags by name to help organize and segment your audience members.',
+    },
+    getListsIdMembers: {
+      displayName: 'Get Audience Members',
+      shortDesc: 'Retrieve members from an audience',
+      longDesc:
+        'Fetches all members (subscribers) from a specific audience with their contact information and subscription details.',
+    },
+    postListsIdMembers: {
+      displayName: 'Add Audience Member',
+      shortDesc: 'Add a new member to an audience',
+      longDesc:
+        'Adds a new subscriber to a specific audience with their contact information and subscription preferences.',
+    },
+    getListsIdMembersId: {
+      displayName: 'Get Audience Member',
+      shortDesc: 'Retrieve a specific audience member',
+      longDesc:
+        'Fetches detailed information about a specific member (subscriber) from an audience including their profile and activity data.',
+    },
+    putListsIdMembersId: {
+      displayName: 'Update Audience Member',
+      shortDesc: 'Update an audience member',
+      longDesc:
+        'Updates the information and subscription preferences of an existing member in an audience.',
+    },
+    deleteListsIdMembersId: {
+      displayName: 'Remove Audience Member',
+      shortDesc: 'Remove a member from an audience',
+      longDesc:
+        'Removes a subscriber from an audience while preserving their data for compliance purposes.',
+    },
+    postListMemberTags: {
+      displayName: 'Add Member Tags',
+      shortDesc: 'Add tags to audience members',
+      longDesc:
+        'Adds one or more tags to audience members for better segmentation and organization.',
+    },
+    postListMemberEvents: {
+      displayName: 'Add Member Events',
+      shortDesc: 'Add events to audience members',
+      longDesc:
+        'Records custom events for audience members to track their behavior and interactions with your brand.',
+    },
+    postListsIdMembersIdNotes: {
+      displayName: 'Add Member Note',
+      shortDesc: 'Add a note to an audience member',
+      longDesc:
+        'Adds a note to a specific audience member for internal tracking and customer relationship management.',
+    },
+    patchListsIdMembersIdNotesId: {
+      displayName: 'Update Member Note',
+      shortDesc: 'Update an audience member note',
+      longDesc:
+        'Updates an existing note attached to an audience member with new information or corrections.',
+    },
+    deleteListsIdMembersIdNotesId: {
+      displayName: 'Delete Member Note',
+      shortDesc: 'Delete an audience member note',
+      longDesc: "Permanently removes a note from an audience member's profile.",
+    },
+    postListsIdMembersHashActionsDeletePermanent: {
+      displayName: 'Permanently Delete Member',
+      shortDesc: 'Permanently delete an audience member',
+      longDesc:
+        'Permanently removes an audience member and all their associated data from Mailchimp. This action cannot be undone.',
+    },
+    getReports: {
+      displayName: 'Get Campaign Reports',
+      shortDesc: 'Retrieve campaign performance reports',
+      longDesc:
+        'Fetches performance reports for your email campaigns including open rates, click rates, and engagement metrics.',
+    },
+    getReportsId: {
+      displayName: 'Get Campaign Report',
+      shortDesc: 'Retrieve a specific campaign report',
+      longDesc: 'Fetches detailed performance metrics and analytics for a specific email campaign.',
+    },
+    getReportsIdClickDetails: {
+      displayName: 'Get Campaign Click Details',
+      shortDesc: 'Retrieve click details for a campaign',
+      longDesc:
+        'Fetches detailed information about clicks in a specific campaign including which links were clicked and by whom.',
+    },
+    getEcommerceStoresIdCustomersId: {
+      displayName: 'Get Store Customer',
+      shortDesc: 'Retrieve a specific store customer',
+      longDesc:
+        'Fetches detailed information about a specific customer from your connected e-commerce store.',
+    },
+    getSearchCampaigns: {
+      displayName: 'Search Campaigns',
+      shortDesc: 'Search for campaigns',
+      longDesc:
+        'Searches through your email campaigns using various criteria to find specific campaigns quickly.',
+    },
+    getSearchMembers: {
+      displayName: 'Search Audience Members',
+      shortDesc: 'Search for audience members',
+      longDesc:
+        'Searches through audience members using various criteria such as email, name, or tags to find specific subscribers.',
+    },
+  },
   triggers: {
     email_opened: {
       displayName: 'Email Opened',
