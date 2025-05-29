@@ -11,6 +11,10 @@ import {
   getMailchimpInterestIdAllowedValues,
 } from './helpers/get-interest-id-allowed-values';
 import { getMailchimpListIdAllowedValues } from './helpers/get-list-id-allowed-values';
+import {
+  MailchimpCommonMemberOptions,
+  MailchimpMemberCreateRequestConverter,
+} from './helpers/get-member-common-options';
 import { getMailchimpNoteIdAllowedValues } from './helpers/get-note-id-allowed-values';
 import { getMailchimpSegmentIdAllowedValues } from './helpers/get-segment-id-allowed-values';
 import { getMailchimpSubscriberHashAllowedValues } from './helpers/get-subscriber-allowed-values';
@@ -103,45 +107,11 @@ export const MAILCHIMP_ALLOWED_PATHS = {
       override_options: {
         list_id: {
           get_allowed_values: getMailchimpListIdAllowedValues,
+          on_change: ['refetch'],
         },
-        interest_category_id: {
-          type: 'string',
-          required: false,
-          depends_on: ['list_id'],
-          get_allowed_values: getMailchimpInterestCategoryIdAllowedValues,
-        },
-        interests: {
-          depends_on: ['list_id', 'interest_category_id'],
-          type: {
-            type: 'list',
-            element_type: 'string',
-          },
-          get_element_allowed_values: getMailchimpInterestIdAllowedValues,
-          element_allowed_values_creatable: true,
-        },
+        ...MailchimpCommonMemberOptions,
       },
-      request_data_converter: (request) => {
-        if (!request) return request;
-
-        const { body, ...rest } = request;
-        const interests = body?.interests;
-
-        return {
-          ...rest,
-          ...(body && {
-            body: {
-              ...omit(body, ['interest_category_id', 'interests']),
-              ...(interests?.length && {
-                interests: interests.reduce((acc: Record<string, boolean>, interest: string) => {
-                  acc[interest] = true;
-
-                  return acc;
-                }, {}),
-              }),
-            },
-          }),
-        };
-      },
+      request_data_converter: MailchimpMemberCreateRequestConverter,
     },
     GET: {
       override_options: {
@@ -230,7 +200,9 @@ export const MAILCHIMP_ALLOWED_PATHS = {
           get_allowed_values: getMailchimpSubscriberHashAllowedValues,
           allowed_values_creatable: true,
         },
+        ...MailchimpCommonMemberOptions,
       },
+      request_data_converter: MailchimpMemberCreateRequestConverter,
     },
     DELETE: {
       override_options: {
@@ -260,7 +232,16 @@ export const MAILCHIMP_ALLOWED_PATHS = {
     },
   },
   '/lists': {
-    POST: {},
+    POST: {
+      override_options: {
+        'contact.zip': {
+          required: true,
+        },
+        'contact.state': {
+          required: true,
+        },
+      },
+    },
   },
   '/reports': {
     GET: {},

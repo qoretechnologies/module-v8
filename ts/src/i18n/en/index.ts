@@ -29,6 +29,7 @@ import Stripe from './apps/Stripe';
 import Teams from './apps/Teams';
 import Xero from './apps/Xero';
 import Zendesk from './apps/Zendesk';
+import Zoom from './apps/Zoom';
 
 const en = {
   common: {},
@@ -139,6 +140,7 @@ const en = {
     Pipedrive,
     Magento,
     Shopify,
+    Zoom,
   },
 } satisfies BaseTranslation;
 
