@@ -7,7 +7,6 @@ import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { getMailchimpAllowedValues } from './constants';
 
 type TMailchimpMergeField = {
-  id: string;
   tag: string;
   name: string;
   type: string;
@@ -20,7 +19,6 @@ const mapMailchimpMergeFieldToAllowedValue = (
   display_name: item.name,
   value: item.tag,
   desc:
-    `ID: ${item.id}\n\n` +
     `Name: ${item.name}\n\n` +
     `Type: ${item.type}\n\n` +
     `Required: ${item.required ? 'Yes' : 'No'}`.trim(),
