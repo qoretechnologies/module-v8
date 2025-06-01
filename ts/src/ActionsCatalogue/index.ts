@@ -15,7 +15,11 @@ import dynamics from '../apps/dynamics';
 import esignature from '../apps/esignature';
 import freshdesk from '../apps/freshdesk';
 import github from '../apps/github';
+import googleContacts from '../apps/google-contacts';
+import googleDocs from '../apps/google-docs';
 import googleDrive from '../apps/google-drive';
+import googleForms from '../apps/google-forms';
+import googleMeet from '../apps/google-meet';
 import googleSheets from '../apps/google-sheets';
 import hubspot from '../apps/hubspot';
 import intercom from '../apps/intercom';
@@ -33,14 +37,11 @@ import stripe from '../apps/stripe';
 import teams from '../apps/teams';
 import xero from '../apps/xero';
 import zendesk from '../apps/zendesk';
+import zoom from '../apps/zoom';
 import { Log } from '../decorators/Logger';
 import { Locales } from '../i18n/i18n-types';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
-import googleForms from '../apps/google-forms';
-import googleMeet from '../apps/google-meet';
-import googleDocs from '../apps/google-docs';
-import googleContacts from '../apps/google-contacts';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -55,6 +56,7 @@ export interface IQoreApi {
 }
 
 const NEW_APPS = {
+  zoom,
   googleContacts,
   googleDocs,
   googleMeet,

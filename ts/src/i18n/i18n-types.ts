@@ -29418,6 +29418,24 @@ type RootTranslation = {
 				}
 			}
 		}
+		Zoom: {
+			/**
+			 * Z​o​o​m
+			 */
+			displayName: string
+			/**
+			 * V​i​d​e​o​ ​c​o​n​f​e​r​e​n​c​i​n​g​ ​a​n​d​ ​o​n​l​i​n​e​ ​m​e​e​t​i​n​g​ ​p​l​a​t​f​o​r​m
+			 */
+			shortDesc: string
+			/**
+			 * Z​o​o​m​ ​i​s​ ​a​ ​v​i​d​e​o​ ​c​o​n​f​e​r​e​n​c​i​n​g​ ​a​n​d​ ​o​n​l​i​n​e​ ​m​e​e​t​i​n​g​ ​p​l​a​t​f​o​r​m​ ​t​h​a​t​ ​a​l​l​o​w​s​ ​u​s​e​r​s​ ​t​o​ ​h​o​s​t​ ​a​n​d​ ​j​o​i​n​ ​v​i​r​t​u​a​l​ ​m​e​e​t​i​n​g​s​,​ ​w​e​b​i​n​a​r​s​,​ ​a​n​d​ ​v​i​d​e​o​ ​c​o​n​f​e​r​e​n​c​e​s​.​ ​I​t​ ​o​f​f​e​r​s​ ​f​e​a​t​u​r​e​s​ ​s​u​c​h​ ​a​s​ ​s​c​r​e​e​n​ ​s​h​a​r​i​n​g​,​ ​r​e​c​o​r​d​i​n​g​,​ ​a​n​d​ ​c​h​a​t​ ​f​u​n​c​t​i​o​n​a​l​i​t​i​e​s​ ​t​o​ ​e​n​h​a​n​c​e​ ​c​o​l​l​a​b​o​r​a​t​i​o​n​ ​a​n​d​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​ ​a​m​o​n​g​ ​p​a​r​t​i​c​i​p​a​n​t​s​.
+			 */
+			longDesc: string
+			actions: {
+			}
+			triggers: {
+			}
+		}
 	}
 }
 
@@ -58825,6 +58843,24 @@ export type TranslationFunctions = {
 						}
 					}
 				}
+			}
+		}
+		Zoom: {
+			/**
+			 * Zoom
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Video conferencing and online meeting platform
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Zoom is a video conferencing and online meeting platform that allows users to host and join virtual meetings, webinars, and video conferences. It offers features such as screen sharing, recording, and chat functionalities to enhance collaboration and communication among participants.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+			}
+			triggers: {
 			}
 		}
 	}
