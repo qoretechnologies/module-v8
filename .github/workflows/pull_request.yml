@@ -7,7 +7,6 @@ on:
     branches:
       - develop
 env:
-  NODE_OPTIONS: "--max_old_space_size=4096"
   ZENDESK_SUBDOMAIN: ${{ secrets.ZENDESK_SUBDOMAIN }}
   ZENDESK_USER: ${{ secrets.ZENDESK_USER }}
   ZENDESK_API_KEY: ${{ secrets.ZENDESK_API_KEY }}
@@ -127,7 +126,9 @@ jobs:
       - name: Run unit tests
         run: |
           cd ts
-          yarn test:ci
+          NODE_OPTIONS="--max_old_space_size=8192" yarn test:ci
+        env:
+          NODE_OPTIONS: "--max_old_space_size=8192"
 
       # Install system dependencies needed for building Qore and modules
       - name: Install dependencies
