@@ -7,6 +7,7 @@ on:
     branches:
       - develop
 env:
+  NODE_OPTIONS: "--max_old_space_size=4096"
   ZENDESK_SUBDOMAIN: ${{ secrets.ZENDESK_SUBDOMAIN }}
   ZENDESK_USER: ${{ secrets.ZENDESK_USER }}
   ZENDESK_API_KEY: ${{ secrets.ZENDESK_API_KEY }}
