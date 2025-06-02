@@ -29434,6 +29434,64 @@ type RootTranslation = {
 			actions: {
 			}
 			triggers: {
+				new_meeting: {
+					/**
+					 * N​e​w​ ​M​e​e​t​i​n​g
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​Z​o​o​m​ ​m​e​e​t​i​n​g​ ​i​s​ ​c​r​e​a​t​e​d​,​ ​s​t​a​r​t​e​d​,​ ​o​r​ ​e​n​d​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​Z​o​o​m​ ​m​e​e​t​i​n​g​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​m​e​e​t​i​n​g​s​ ​a​r​e​ ​c​r​e​a​t​e​d​,​ ​s​t​a​r​t​e​d​ ​(​l​i​v​e​)​,​ ​o​r​ ​e​n​d​e​d​ ​(​p​r​e​v​i​o​u​s​ ​m​e​e​t​i​n​g​s​)​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​e​v​e​n​t​ ​t​y​p​e​.​ ​R​e​t​u​r​n​s​ ​m​e​e​t​i​n​g​ ​d​e​t​a​i​l​s​ ​i​n​c​l​u​d​i​n​g​ ​t​o​p​i​c​,​ ​d​u​r​a​t​i​o​n​,​ ​j​o​i​n​ ​U​R​L​,​ ​a​n​d​ ​m​e​e​t​i​n​g​ ​t​y​p​e​.
+					 */
+					longDesc: string
+					options: {
+						meeting_event_type: {
+							/**
+							 * M​e​e​t​i​n​g​ ​E​v​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​m​e​e​t​i​n​g​ ​e​v​e​n​t​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​i​e​s​ ​w​h​i​c​h​ ​t​y​p​e​ ​o​f​ ​m​e​e​t​i​n​g​ ​e​v​e​n​t​ ​s​h​o​u​l​d​ ​t​r​i​g​g​e​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.​ ​C​h​o​o​s​e​ ​"​a​n​y​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​a​l​l​ ​m​e​e​t​i​n​g​ ​c​r​e​a​t​i​o​n​s​,​ ​"​l​i​v​e​"​ ​f​o​r​ ​w​h​e​n​ ​m​e​e​t​i​n​g​s​ ​s​t​a​r​t​,​ ​o​r​ ​"​p​r​e​v​i​o​u​s​_​m​e​e​t​i​n​g​s​"​ ​f​o​r​ ​w​h​e​n​ ​m​e​e​t​i​n​g​s​ ​e​n​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_webinar: {
+					/**
+					 * N​e​w​ ​W​e​b​i​n​a​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​Z​o​o​m​ ​w​e​b​i​n​a​r​ ​i​s​ ​c​r​e​a​t​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​Z​o​o​m​ ​w​e​b​i​n​a​r​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​n​e​w​ ​w​e​b​i​n​a​r​s​ ​a​r​e​ ​c​r​e​a​t​e​d​.​ ​R​e​t​u​r​n​s​ ​w​e​b​i​n​a​r​ ​d​e​t​a​i​l​s​ ​i​n​c​l​u​d​i​n​g​ ​t​o​p​i​c​,​ ​d​u​r​a​t​i​o​n​,​ ​j​o​i​n​ ​U​R​L​,​ ​r​e​g​i​s​t​r​a​t​i​o​n​ ​U​R​L​,​ ​a​n​d​ ​w​e​b​i​n​a​r​ ​t​y​p​e​.
+					 */
+					longDesc: string
+				}
+				new_meeting_summary: {
+					/**
+					 * N​e​w​ ​M​e​e​t​i​n​g​ ​S​u​m​m​a​r​y
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​Z​o​o​m​ ​m​e​e​t​i​n​g​ ​s​u​m​m​a​r​y​ ​i​s​ ​c​r​e​a​t​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​Z​o​o​m​ ​m​e​e​t​i​n​g​ ​s​u​m​m​a​r​i​e​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​n​e​w​ ​s​u​m​m​a​r​i​e​s​ ​a​r​e​ ​g​e​n​e​r​a​t​e​d​ ​a​f​t​e​r​ ​m​e​e​t​i​n​g​s​ ​e​n​d​.​ ​R​e​t​u​r​n​s​ ​s​u​m​m​a​r​y​ ​d​e​t​a​i​l​s​ ​i​n​c​l​u​d​i​n​g​ ​m​e​e​t​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​h​o​s​t​ ​d​e​t​a​i​l​s​,​ ​a​n​d​ ​s​u​m​m​a​r​y​ ​t​i​m​e​s​t​a​m​p​s​.
+					 */
+					longDesc: string
+				}
 			}
 		}
 	}
@@ -58861,6 +58919,64 @@ export type TranslationFunctions = {
 			actions: {
 			}
 			triggers: {
+				new_meeting: {
+					/**
+					 * New Meeting
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a Zoom meeting is created, started, or ended.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors Zoom meetings and triggers when meetings are created, started (live), or ended (previous meetings) based on the selected event type. Returns meeting details including topic, duration, join URL, and meeting type.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						meeting_event_type: {
+							/**
+							 * Meeting Event Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of meeting event to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specifies which type of meeting event should trigger this action. Choose "any" to trigger on all meeting creations, "live" for when meetings start, or "previous_meetings" for when meetings end.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_webinar: {
+					/**
+					 * New Webinar
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new Zoom webinar is created.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors Zoom webinars and triggers when new webinars are created. Returns webinar details including topic, duration, join URL, registration URL, and webinar type.
+					 */
+					longDesc: () => LocalizedString
+				}
+				new_meeting_summary: {
+					/**
+					 * New Meeting Summary
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new Zoom meeting summary is created.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors Zoom meeting summaries and triggers when new summaries are generated after meetings end. Returns summary details including meeting information, host details, and summary timestamps.
+					 */
+					longDesc: () => LocalizedString
+				}
 			}
 		}
 	}
