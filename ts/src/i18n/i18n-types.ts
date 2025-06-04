@@ -29494,6 +29494,196 @@ type RootTranslation = {
 				}
 			}
 		}
+		Confluence: {
+			/**
+			 * C​o​n​f​l​u​e​n​c​e
+			 */
+			displayName: string
+			/**
+			 * C​o​n​f​l​u​e​n​c​e​ ​i​s​ ​a​ ​c​o​l​l​a​b​o​r​a​t​i​o​n​ ​t​o​o​l​ ​u​s​e​d​ ​t​o​ ​h​e​l​p​ ​t​e​a​m​s​ ​c​o​l​l​a​b​o​r​a​t​e​ ​a​n​d​ ​s​h​a​r​e​ ​k​n​o​w​l​e​d​g​e​ ​e​f​f​i​c​i​e​n​t​l​y​.
+			 */
+			shortDesc: string
+			/**
+			 * C​o​n​f​l​u​e​n​c​e​ ​i​s​ ​a​ ​p​o​w​e​r​f​u​l​ ​c​o​l​l​a​b​o​r​a​t​i​o​n​ ​t​o​o​l​ ​t​h​a​t​ ​a​l​l​o​w​s​ ​t​e​a​m​s​ ​t​o​ ​c​r​e​a​t​e​,​ ​s​h​a​r​e​,​ ​a​n​d​ ​m​a​n​a​g​e​ ​c​o​n​t​e​n​t​ ​i​n​ ​a​ ​c​e​n​t​r​a​l​i​z​e​d​ ​p​l​a​t​f​o​r​m​.​ ​I​t​ ​i​s​ ​d​e​s​i​g​n​e​d​ ​t​o​ ​e​n​h​a​n​c​e​ ​t​e​a​m​ ​p​r​o​d​u​c​t​i​v​i​t​y​ ​b​y​ ​p​r​o​v​i​d​i​n​g​ ​a​ ​s​p​a​c​e​ ​f​o​r​ ​d​o​c​u​m​e​n​t​a​t​i​o​n​,​ ​p​r​o​j​e​c​t​ ​m​a​n​a​g​e​m​e​n​t​,​ ​a​n​d​ ​k​n​o​w​l​e​d​g​e​ ​s​h​a​r​i​n​g​.​ ​W​i​t​h​ ​f​e​a​t​u​r​e​s​ ​l​i​k​e​ ​r​e​a​l​-​t​i​m​e​ ​e​d​i​t​i​n​g​,​ ​c​o​m​m​e​n​t​i​n​g​,​ ​a​n​d​ ​i​n​t​e​g​r​a​t​i​o​n​ ​w​i​t​h​ ​o​t​h​e​r​ ​t​o​o​l​s​,​ ​C​o​n​f​l​u​e​n​c​e​ ​h​e​l​p​s​ ​t​e​a​m​s​ ​w​o​r​k​ ​t​o​g​e​t​h​e​r​ ​m​o​r​e​ ​e​f​f​e​c​t​i​v​e​l​y​.
+			 */
+			longDesc: string
+			triggers: {
+				new_attachment: {
+					/**
+					 * N​e​w​ ​A​t​t​a​c​h​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​a​t​t​a​c​h​m​e​n​t​ ​i​s​ ​u​p​l​o​a​d​e​d​ ​t​o​ ​C​o​n​f​l​u​e​n​c​e​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​C​o​n​f​l​u​e​n​c​e​ ​f​o​r​ ​n​e​w​l​y​ ​u​p​l​o​a​d​e​d​ ​a​t​t​a​c​h​m​e​n​t​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​s​t​a​t​u​s​ ​a​n​d​ ​m​e​d​i​a​ ​t​y​p​e​.​ ​T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​n​e​w​ ​a​t​t​a​c​h​m​e​n​t​s​ ​a​r​e​ ​d​e​t​e​c​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​a​t​t​a​c​h​m​e​n​t​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​a​t​t​a​c​h​m​e​n​t​s​ ​b​y​ ​t​h​e​i​r​ ​s​t​a​t​u​s​ ​(​c​u​r​r​e​n​t​,​ ​a​r​c​h​i​v​e​d​,​ ​o​r​ ​t​r​a​s​h​e​d​)​.
+							 */
+							longDesc: string
+						}
+						mediaType: {
+							/**
+							 * M​e​d​i​a​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​m​e​d​i​a​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​a​t​t​a​c​h​m​e​n​t​s​ ​b​y​ ​t​h​e​i​r​ ​m​e​d​i​a​ ​t​y​p​e​ ​(​e​.​g​.​,​ ​i​m​a​g​e​/​p​n​g​,​ ​a​p​p​l​i​c​a​t​i​o​n​/​p​d​f​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_blogpost: {
+					/**
+					 * N​e​w​ ​B​l​o​g​p​o​s​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​b​l​o​g​p​o​s​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​C​o​n​f​l​u​e​n​c​e​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​C​o​n​f​l​u​e​n​c​e​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​b​l​o​g​p​o​s​t​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​s​p​a​c​e​,​ ​s​t​a​t​u​s​,​ ​a​n​d​ ​b​o​d​y​ ​f​o​r​m​a​t​.​ ​T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​n​e​w​ ​b​l​o​g​p​o​s​t​s​ ​a​r​e​ ​d​e​t​e​c​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​C​o​n​f​l​u​e​n​c​e​ ​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​b​l​o​g​p​o​s​t​s​ ​b​y​ ​t​h​e​ ​C​o​n​f​l​u​e​n​c​e​ ​s​p​a​c​e​ ​t​h​e​y​ ​b​e​l​o​n​g​ ​t​o​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​b​l​o​g​p​o​s​t​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​b​l​o​g​p​o​s​t​s​ ​b​y​ ​t​h​e​i​r​ ​s​t​a​t​u​s​ ​(​c​u​r​r​e​n​t​,​ ​d​e​l​e​t​e​d​,​ ​o​r​ ​t​r​a​s​h​e​d​)​.
+							 */
+							longDesc: string
+						}
+						body_format: {
+							/**
+							 * B​o​d​y​ ​F​o​r​m​a​t
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​e​n​t​ ​f​o​r​m​a​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​o​r​m​a​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​b​l​o​g​p​o​s​t​ ​c​o​n​t​e​n​t​ ​i​n​ ​(​s​t​o​r​a​g​e​ ​f​o​r​m​a​t​ ​o​r​ ​A​t​l​a​s​ ​D​o​c​u​m​e​n​t​ ​F​o​r​m​a​t​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_page: {
+					/**
+					 * N​e​w​ ​P​a​g​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​a​g​e​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​C​o​n​f​l​u​e​n​c​e​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​C​o​n​f​l​u​e​n​c​e​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​p​a​g​e​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​s​p​a​c​e​,​ ​s​t​a​t​u​s​,​ ​b​o​d​y​ ​f​o​r​m​a​t​,​ ​a​n​d​ ​s​u​b​t​y​p​e​.​ ​T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​n​e​w​ ​p​a​g​e​s​ ​a​r​e​ ​d​e​t​e​c​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​C​o​n​f​l​u​e​n​c​e​ ​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​p​a​g​e​s​ ​b​y​ ​t​h​e​ ​C​o​n​f​l​u​e​n​c​e​ ​s​p​a​c​e​ ​t​h​e​y​ ​b​e​l​o​n​g​ ​t​o​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​a​g​e​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​p​a​g​e​s​ ​b​y​ ​t​h​e​i​r​ ​s​t​a​t​u​s​ ​(​c​u​r​r​e​n​t​,​ ​a​r​c​h​i​v​e​d​,​ ​d​e​l​e​t​e​d​,​ ​o​r​ ​t​r​a​s​h​e​d​)​.
+							 */
+							longDesc: string
+						}
+						body_format: {
+							/**
+							 * B​o​d​y​ ​F​o​r​m​a​t
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​e​n​t​ ​f​o​r​m​a​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​o​r​m​a​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​p​a​g​e​ ​c​o​n​t​e​n​t​ ​i​n​ ​(​s​t​o​r​a​g​e​ ​f​o​r​m​a​t​ ​o​r​ ​A​t​l​a​s​ ​D​o​c​u​m​e​n​t​ ​F​o​r​m​a​t​)​.
+							 */
+							longDesc: string
+						}
+						subtype: {
+							/**
+							 * S​u​b​t​y​p​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​a​g​e​ ​s​u​b​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​p​a​g​e​s​ ​b​y​ ​t​h​e​i​r​ ​s​u​b​t​y​p​e​ ​(​l​i​v​e​ ​p​a​g​e​s​ ​o​r​ ​r​e​g​u​l​a​r​ ​p​a​g​e​s​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -58976,6 +59166,196 @@ export type TranslationFunctions = {
 					 * Monitors Zoom meeting summaries and triggers when new summaries are generated after meetings end. Returns summary details including meeting information, host details, and summary timestamps.
 					 */
 					longDesc: () => LocalizedString
+				}
+			}
+		}
+		Confluence: {
+			/**
+			 * Confluence
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Confluence is a collaboration tool used to help teams collaborate and share knowledge efficiently.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Confluence is a powerful collaboration tool that allows teams to create, share, and manage content in a centralized platform. It is designed to enhance team productivity by providing a space for documentation, project management, and knowledge sharing. With features like real-time editing, commenting, and integration with other tools, Confluence helps teams work together more effectively.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				new_attachment: {
+					/**
+					 * New Attachment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new attachment is uploaded to Confluence.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors Confluence for newly uploaded attachments with optional filtering by status and media type. Triggers when new attachments are detected.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by attachment status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter attachments by their status (current, archived, or trashed).
+							 */
+							longDesc: () => LocalizedString
+						}
+						mediaType: {
+							/**
+							 * Media Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by media type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter attachments by their media type (e.g., image/png, application/pdf).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_blogpost: {
+					/**
+					 * New Blogpost
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new blogpost is created in Confluence.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors Confluence for newly created blogposts with optional filtering by space, status, and body format. Triggers when new blogposts are detected.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						space_id: {
+							/**
+							 * Space ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by Confluence space
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter blogposts by the Confluence space they belong to.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by blogpost status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter blogposts by their status (current, deleted, or trashed).
+							 */
+							longDesc: () => LocalizedString
+						}
+						body_format: {
+							/**
+							 * Body Format
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Content format to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The format to retrieve the blogpost content in (storage format or Atlas Document Format).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_page: {
+					/**
+					 * New Page
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new page is created in Confluence.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors Confluence for newly created pages with optional filtering by space, status, body format, and subtype. Triggers when new pages are detected.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						space_id: {
+							/**
+							 * Space ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by Confluence space
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter pages by the Confluence space they belong to.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by page status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter pages by their status (current, archived, deleted, or trashed).
+							 */
+							longDesc: () => LocalizedString
+						}
+						body_format: {
+							/**
+							 * Body Format
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Content format to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The format to retrieve the page content in (storage format or Atlas Document Format).
+							 */
+							longDesc: () => LocalizedString
+						}
+						subtype: {
+							/**
+							 * Subtype
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by page subtype
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter pages by their subtype (live pages or regular pages).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 			}
 		}

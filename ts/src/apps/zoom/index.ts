@@ -24,7 +24,6 @@ export default (locale: Locales) =>
       url: 'https://api.zoom.us/v2',
       data: 'json',
       oauth2_grant_type: 'authorization_code',
-      oauth2_client_id: 'your-zoom-client-id',
       oauth2_client_secret: actionsCatalogue.getOauth2ClientSecret(ZOOM_APP_NAME),
       oauth2_auth_url: 'https://zoom.us/oauth/authorize',
       oauth2_token_url: 'https://zoom.us/oauth/token',
