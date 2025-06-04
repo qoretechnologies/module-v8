@@ -9,7 +9,7 @@ import { delay } from '../global/helpers';
 
 let connection: string;
 
-describe('Tests Zendesk Actions', () => {
+describe('Tests Zoom Actions', () => {
   const base_context = {
     conn_opts: {
       token: '',
