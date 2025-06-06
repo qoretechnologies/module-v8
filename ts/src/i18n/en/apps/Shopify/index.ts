@@ -1,5 +1,4 @@
-
-
+/* eslint-disable max-len */
 const ShopifyAppEn = {
   displayName: 'Shopify',
   shortDesc: 'E-commerce platform for online stores and retail point of sale',
@@ -1922,7 +1921,7 @@ const ShopifyAppEn = {
       longDesc:
         'This trigger activates when a new article is created or published in a specified Shopify blog. Use this to automate social media sharing, email notifications, or content distribution workflows.',
       options: {
-        blogId: {
+        blog_title: {
           displayName: 'Blog',
           shortDesc: 'Select the blog to monitor',
           longDesc: 'Choose which Shopify blog to monitor for new articles.',

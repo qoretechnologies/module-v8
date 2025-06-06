@@ -3,7 +3,8 @@ import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
 import { SHOPIFY_APP_NAME, TShopifyContextWithConn } from '../constants';
 import { executeShopifyGraphQL, transformShopifyResponse } from '../helpers/constants';
-import { getShopifyBlogIdAllowedValues } from '../helpers/get-blog-id-allowed-values';
+import { getShopifyBlogTitleAllowedValues } from '../helpers/get-blog-id-allowed-values';
+import { getQoreContextRequiredValues } from '../../../global/helpers';
 
 const triggerName = 'shopify-blog-entry-trigger';
 
@@ -112,59 +113,36 @@ const shopifyBlogEntryTrigger = QoreAppCreator.createLocalizedTrigger({
   action: triggerName,
   action_code: EQoreAppActionCode.EVENT,
   options: {
-    blogId: {
+    blog_title: {
       type: 'string',
-      desc: 'The ID of the blog to filter entries by (can be a GraphQL ID or regular ID)',
       allowed_values_creatable: true,
-      get_allowed_values: getShopifyBlogIdAllowedValues,
-      required: true,
-    },
-    entryStatus: {
-      type: 'string',
-      desc: 'The status of blog entries to fetch',
-      allowed_values: [
-        { value: 'ANY', desc: 'Any status' },
-        { value: 'PUBLISHED', desc: 'Published entries' },
-        { value: 'DRAFT', desc: 'Draft entries' },
-        { value: 'ARCHIVED', desc: 'Archived entries' },
-      ],
-      default_value: 'PUBLISHED',
+      get_allowed_values: getShopifyBlogTitleAllowedValues,
       required: true,
     },
   },
   event_function: async (context, update, should_stop) => {
-    if (!context.conn_opts?.token || !context.conn_opts?.shop || !context.opts?.blogId) {
-      throw new Error(
-        `The shop, blogId and token are required to start the Shopify ${triggerName} trigger`
-      );
-    }
-
-    const blogId = context.opts?.blogId || null;
-    const entryStatus = context.opts?.entryStatus || 'PUBLISHED';
+    const { blog_title } = getQoreContextRequiredValues({
+      context,
+      connectionFields: ['token', 'shop'],
+      optionFields: ['blog_title'],
+    });
 
     await pollCreatedItemsForTrigger({
       trigger_name: triggerName,
       uniqueField: 'id',
-      getItems: () => getBlogEntries(context as TShopifyContextWithConn, blogId, entryStatus),
+      getItems: () => getBlogEntries(context as TShopifyContextWithConn, blog_title),
       update,
       should_stop,
     });
   },
   get_example_event_data: async (context) => {
-    if (!context.conn_opts?.token || !context.conn_opts?.shop) {
-      throw new Error(
-        `The shop and token are required to get the example event data for the Shopify ${triggerName}`
-      );
-    }
+    const { blog_title } = getQoreContextRequiredValues({
+      context,
+      connectionFields: ['token', 'shop'],
+      optionFields: ['blog_title'],
+    });
 
-    const blogId = context.opts?.blogId || null;
-    const entryStatus = context.opts?.entryStatus || 'PUBLISHED';
-
-    const blogEntries = await getBlogEntries(
-      context as TShopifyContextWithConn,
-      blogId,
-      entryStatus
-    );
+    const blogEntries = await getBlogEntries(context as TShopifyContextWithConn, blog_title);
 
     return blogEntries?.length > 0 ? blogEntries[0] : null;
   },
@@ -174,29 +152,13 @@ const shopifyBlogEntryTrigger = QoreAppCreator.createLocalizedTrigger({
   },
 });
 
-const getBlogEntries = async (
-  context: TShopifyContextWithConn,
-  blogId: string | null = null,
-  entryStatus: string = 'PUBLISHED'
-) => {
-  let blogFilter = '';
-  if (blogId) {
-    if (blogId.startsWith('gid://')) {
-      blogFilter = `, blog: "${blogId}"`;
-    } else {
-      const formattedBlogId = `gid://shopify/OnlineStoreBlog/${blogId}`;
-      blogFilter = `, blog: "${formattedBlogId}"`;
-    }
-  }
-
-  let statusFilter = '';
-  if (entryStatus && entryStatus !== 'ANY') {
-    statusFilter = `, query: "status:${entryStatus.toLowerCase()}"`;
-  }
-
+const getBlogEntries = async (context: TShopifyContextWithConn, blog_title: string) => {
   const query = `
     query BlogEntryList {
-      articles(first: ${DEFAULT_TRIGGER_POLL_ITEM_LIMIT}${blogFilter}${statusFilter}) {
+      articles(
+        first: ${DEFAULT_TRIGGER_POLL_ITEM_LIMIT},
+        query: "blog_title:'${blog_title}'"
+      ) {
         nodes {
           id
           handle
@@ -226,10 +188,8 @@ const getBlogEntries = async (
     }
   `;
 
-  const variables = {};
-
   try {
-    const response = await executeShopifyGraphQL(context, query, variables);
+    const response = await executeShopifyGraphQL(context, query, {});
     const transformedResponse = transformShopifyResponse(response);
 
     return transformedResponse || [];
