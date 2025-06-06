@@ -72,6 +72,12 @@ env:
   GOOGLE_CONTACTS_CLIENT_SECRET: ${{ secrets.GOOGLE_CONTACTS_CLIENT_SECRET }}
   GOOGLE_CONTACTS_CLIENT_ID: ${{ secrets.GOOGLE_CONTACTS_CLIENT_ID }}
   GOOGLE_CONTACTS_REFRESH_TOKEN: ${{ secrets.GOOGLE_CONTACTS_REFRESH_TOKEN }}
+  ZOOM_REFRESH_TOKEN: ${{ secrets.ZOOM_REFRESH_TOKEN }}
+  ZOOM_CLIENT_ID: ${{ secrets.ZOOM_CLIENT_ID }}
+  ZOOM_CLIENT_SECRET: ${{ secrets.ZOOM_CLIENT_SECRET }}
+  CONFLUENCE_USERNAME: ${{ secrets.CONFLUENCE_USERNAME }}
+  CONFLUENCE_PASSWORD: ${{ secrets.CONFLUENCE_PASSWORD }}
+  CONFLUENCE_CLOUD_ID: ${{ secrets.CONFLUENCE_CLOUD_ID }}
 
 jobs:
   PullRequestTests:
@@ -123,7 +129,9 @@ jobs:
       - name: Run unit tests
         run: |
           cd ts
-          yarn test:ci
+          NODE_OPTIONS="--max_old_space_size=8192" yarn test:ci
+        env:
+          NODE_OPTIONS: "--max_old_space_size=8192"
 
       # Install system dependencies needed for building Qore and modules
       - name: Install dependencies
