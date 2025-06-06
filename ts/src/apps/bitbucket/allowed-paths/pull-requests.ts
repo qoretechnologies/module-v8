@@ -34,6 +34,9 @@ export const BITBUCKET_PULL_REQUESTS_ALLOWED_PATHS = {
     PUT: {
       override_options: {
         ...BitbucketWorkspaceAndRepoOptions,
+        type: {
+          required: false,
+        },
         pull_request_id: {
           type: 'softstring',
           depends_on: ['workspace', 'repo_slug'],
@@ -56,6 +59,9 @@ export const BITBUCKET_PULL_REQUESTS_ALLOWED_PATHS = {
     POST: {
       override_options: {
         ...BitbucketWorkspaceAndRepoOptions,
+        type: {
+          required: false,
+        },
         pull_request_id: {
           type: 'softstring',
           depends_on: ['workspace', 'repo_slug'],
@@ -90,6 +96,9 @@ export const BITBUCKET_PULL_REQUESTS_ALLOWED_PATHS = {
           depends_on: ['workspace', 'repo_slug'],
           on_change: ['refetch'],
           get_allowed_values: getBitbucketPullRequestAllowedValues,
+        },
+        type: {
+          required: false,
         },
         comment_id: {
           type: 'softstring',

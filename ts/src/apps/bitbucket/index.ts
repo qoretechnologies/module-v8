@@ -16,6 +16,7 @@ export default (locale: Locales) =>
     logo_mime_type: 'image/svg+xml',
     actions: [...mapActionsToApp(BITBUCKET_APP_NAME, BITBUCKET_ACTIONS, locale)],
     swagger_paths: BITBUCKET_ALLOWED_PATHS,
+    swagger: 'schemas/bitbucket.swagger.json',
     rest: {
       url: 'https://api.bitbucket.org',
       data: 'json',
@@ -29,5 +30,4 @@ export default (locale: Locales) =>
     swagger_options: {
       parse_flags: -1,
     },
-    swagger: 'schemas/bitbucket.swagger.json',
   }) satisfies TQoreAppWithActions;

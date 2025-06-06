@@ -32,6 +32,9 @@ export const BITBUCKET_REPOSITORIES_ALLOWED_PATHS = {
     },
     POST: {
       override_options: {
+        type: {
+          required: false,
+        },
         workspace: {
           get_allowed_values: getBitbucketWorkspaceIdAllowedValues,
         },

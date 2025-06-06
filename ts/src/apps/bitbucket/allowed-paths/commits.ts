@@ -51,7 +51,9 @@ export const BITBUCKET_COMMITS_ALLOWED_PATHS = {
     POST: {
       override_options: {
         ...BitbucketWorkspaceAndRepoOptions,
-
+        type: {
+          required: false,
+        },
         commit: {
           depends_on: ['workspace', 'repo_slug'],
           get_allowed_values: getBitbucketCommitAllowedValues,
