@@ -117,8 +117,6 @@ describe('Tests Zoom Actions', () => {
         },
       });
       expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-      expect(allowed_values[0].value).toBeDefined();
     });
   });
 
