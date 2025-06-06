@@ -637,7 +637,7 @@ const createDraftOrder = async (context: TShopifyContextWithConn, data: TCreateD
 
   const input: Record<string, any> = {};
 
-  if (data.customerId) input.customerId = data.customerId;
+  if (data.customerId) input.customerId = `gid://shopify/Customer/${data.customerId}`;
   if (data.email) input.email = data.email;
   if (data.phone) input.phone = data.phone;
   if (data.note) input.note = data.note;
