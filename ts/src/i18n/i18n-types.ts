@@ -29328,7 +29328,7 @@ type RootTranslation = {
 					 */
 					longDesc: string
 					options: {
-						blogId: {
+						blog_title: {
 							/**
 							 * B​l​o​g
 							 */
@@ -29677,6 +29677,168 @@ type RootTranslation = {
 							shortDesc: string
 							/**
 							 * F​i​l​t​e​r​ ​p​a​g​e​s​ ​b​y​ ​t​h​e​i​r​ ​s​u​b​t​y​p​e​ ​(​l​i​v​e​ ​p​a​g​e​s​ ​o​r​ ​r​e​g​u​l​a​r​ ​p​a​g​e​s​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
+		Bitbucket: {
+			/**
+			 * B​i​t​b​u​c​k​e​t
+			 */
+			displayName: string
+			/**
+			 * B​i​t​b​u​c​k​e​t​ ​i​s​ ​a​ ​G​i​t​ ​r​e​p​o​s​i​t​o​r​y​ ​m​a​n​a​g​e​m​e​n​t​ ​s​o​l​u​t​i​o​n​ ​d​e​s​i​g​n​e​d​ ​f​o​r​ ​p​r​o​f​e​s​s​i​o​n​a​l​ ​t​e​a​m​s​.
+			 */
+			shortDesc: string
+			/**
+			 * B​i​t​b​u​c​k​e​t​ ​i​s​ ​a​ ​G​i​t​ ​r​e​p​o​s​i​t​o​r​y​ ​m​a​n​a​g​e​m​e​n​t​ ​s​o​l​u​t​i​o​n​ ​d​e​s​i​g​n​e​d​ ​f​o​r​ ​p​r​o​f​e​s​s​i​o​n​a​l​ ​t​e​a​m​s​.​ ​I​t​ ​p​r​o​v​i​d​e​s​ ​f​e​a​t​u​r​e​s​ ​s​u​c​h​ ​a​s​ ​p​u​l​l​ ​r​e​q​u​e​s​t​s​,​ ​c​o​d​e​ ​r​e​v​i​e​w​s​,​ ​a​n​d​ ​c​o​n​t​i​n​u​o​u​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​t​o​ ​h​e​l​p​ ​t​e​a​m​s​ ​c​o​l​l​a​b​o​r​a​t​e​ ​o​n​ ​c​o​d​e​ ​e​f​f​e​c​t​i​v​e​l​y​.
+			 */
+			longDesc: string
+			triggers: {
+				new_commit: {
+					/**
+					 * N​e​w​ ​C​o​m​m​i​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​m​m​i​t​ ​i​s​ ​p​u​s​h​e​d​ ​t​o​ ​a​ ​r​e​p​o​s​i​t​o​r​y​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​ ​B​i​t​b​u​c​k​e​t​ ​r​e​p​o​s​i​t​o​r​y​ ​f​o​r​ ​n​e​w​ ​c​o​m​m​i​t​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​c​o​m​m​i​t​s​ ​a​r​e​ ​p​u​s​h​e​d​ ​t​o​ ​a​n​y​ ​b​r​a​n​c​h​.​ ​P​r​o​v​i​d​e​s​ ​d​e​t​a​i​l​e​d​ ​c​o​m​m​i​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​a​u​t​h​o​r​,​ ​m​e​s​s​a​g​e​,​ ​h​a​s​h​,​ ​a​n​d​ ​r​e​p​o​s​i​t​o​r​y​ ​d​e​t​a​i​l​s​.
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​B​i​t​b​u​c​k​e​t​ ​w​o​r​k​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​B​i​t​b​u​c​k​e​t​ ​w​o​r​k​s​p​a​c​e​ ​(​o​r​g​a​n​i​z​a​t​i​o​n​ ​o​r​ ​u​s​e​r​ ​a​c​c​o​u​n​t​)​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y​ ​t​o​ ​m​o​n​i​t​o​r​.
+							 */
+							longDesc: string
+						}
+						repo_slug: {
+							/**
+							 * R​e​p​o​s​i​t​o​r​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​r​e​p​o​s​i​t​o​r​y​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​r​e​p​o​s​i​t​o​r​y​ ​s​l​u​g​ ​(​n​a​m​e​)​ ​o​f​ ​t​h​e​ ​B​i​t​b​u​c​k​e​t​ ​r​e​p​o​s​i​t​o​r​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​c​o​m​m​i​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_deployment: {
+					/**
+					 * N​e​w​ ​D​e​p​l​o​y​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​d​e​p​l​o​y​m​e​n​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​f​o​r​ ​a​ ​r​e​p​o​s​i​t​o​r​y​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​ ​B​i​t​b​u​c​k​e​t​ ​r​e​p​o​s​i​t​o​r​y​ ​f​o​r​ ​n​e​w​ ​d​e​p​l​o​y​m​e​n​t​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​d​e​p​l​o​y​m​e​n​t​s​ ​a​r​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​.​ ​P​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​d​e​p​l​o​y​m​e​n​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​e​n​v​i​r​o​n​m​e​n​t​,​ ​s​t​a​t​e​,​ ​c​o​m​m​i​t​ ​d​e​t​a​i​l​s​,​ ​a​n​d​ ​d​e​p​l​o​y​m​e​n​t​ ​s​t​e​p​s​.
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​B​i​t​b​u​c​k​e​t​ ​w​o​r​k​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​B​i​t​b​u​c​k​e​t​ ​w​o​r​k​s​p​a​c​e​ ​(​o​r​g​a​n​i​z​a​t​i​o​n​ ​o​r​ ​u​s​e​r​ ​a​c​c​o​u​n​t​)​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​d​e​p​l​o​y​m​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+						repo_slug: {
+							/**
+							 * R​e​p​o​s​i​t​o​r​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​r​e​p​o​s​i​t​o​r​y​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​r​e​p​o​s​i​t​o​r​y​ ​s​l​u​g​ ​(​n​a​m​e​)​ ​o​f​ ​t​h​e​ ​B​i​t​b​u​c​k​e​t​ ​r​e​p​o​s​i​t​o​r​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​d​e​p​l​o​y​m​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_pull_request: {
+					/**
+					 * N​e​w​ ​P​u​l​l​ ​R​e​q​u​e​s​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​u​l​l​ ​r​e​q​u​e​s​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​ ​B​i​t​b​u​c​k​e​t​ ​r​e​p​o​s​i​t​o​r​y​ ​f​o​r​ ​n​e​w​ ​p​u​l​l​ ​r​e​q​u​e​s​t​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​p​u​l​l​ ​r​e​q​u​e​s​t​s​ ​a​r​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​t​h​e​i​r​ ​s​t​a​t​e​ ​c​h​a​n​g​e​s​.​ ​S​u​p​p​o​r​t​s​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​p​u​l​l​ ​r​e​q​u​e​s​t​ ​s​t​a​t​e​ ​a​n​d​ ​p​r​o​v​i​d​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​p​u​l​l​ ​r​e​q​u​e​s​t​,​ ​r​e​v​i​e​w​e​r​s​,​ ​a​n​d​ ​c​h​a​n​g​e​s​.
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​B​i​t​b​u​c​k​e​t​ ​w​o​r​k​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​B​i​t​b​u​c​k​e​t​ ​w​o​r​k​s​p​a​c​e​ ​(​o​r​g​a​n​i​z​a​t​i​o​n​ ​o​r​ ​u​s​e​r​ ​a​c​c​o​u​n​t​)​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​p​u​l​l​ ​r​e​q​u​e​s​t​s​.
+							 */
+							longDesc: string
+						}
+						repo_slug: {
+							/**
+							 * R​e​p​o​s​i​t​o​r​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​r​e​p​o​s​i​t​o​r​y​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​r​e​p​o​s​i​t​o​r​y​ ​s​l​u​g​ ​(​n​a​m​e​)​ ​o​f​ ​t​h​e​ ​B​i​t​b​u​c​k​e​t​ ​r​e​p​o​s​i​t​o​r​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​p​u​l​l​ ​r​e​q​u​e​s​t​s​.
+							 */
+							longDesc: string
+						}
+						state: {
+							/**
+							 * P​u​l​l​ ​R​e​q​u​e​s​t​ ​S​t​a​t​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​u​l​l​ ​r​e​q​u​e​s​t​ ​s​t​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​t​o​ ​m​o​n​i​t​o​r​ ​o​n​l​y​ ​p​u​l​l​ ​r​e​q​u​e​s​t​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​t​a​t​e​ ​(​O​p​e​n​,​ ​M​e​r​g​e​d​,​ ​D​e​c​l​i​n​e​d​,​ ​o​r​ ​S​u​p​e​r​s​e​d​e​d​)​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​a​l​l​ ​p​u​l​l​ ​r​e​q​u​e​s​t​s​ ​w​i​l​l​ ​b​e​ ​m​o​n​i​t​o​r​e​d​.
 							 */
 							longDesc: string
 						}
@@ -59003,7 +59165,7 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 					options: {
-						blogId: {
+						blog_title: {
 							/**
 							 * Blog
 							 */
@@ -59352,6 +59514,168 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Filter pages by their subtype (live pages or regular pages).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		Bitbucket: {
+			/**
+			 * Bitbucket
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Bitbucket is a Git repository management solution designed for professional teams.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Bitbucket is a Git repository management solution designed for professional teams. It provides features such as pull requests, code reviews, and continuous integration to help teams collaborate on code effectively.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				new_commit: {
+					/**
+					 * New Commit
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new commit is pushed to a repository.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors a Bitbucket repository for new commits and triggers when commits are pushed to any branch. Provides detailed commit information including author, message, hash, and repository details.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Bitbucket workspace
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Bitbucket workspace (organization or user account) that contains the repository to monitor.
+							 */
+							longDesc: () => LocalizedString
+						}
+						repo_slug: {
+							/**
+							 * Repository
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The repository to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The repository slug (name) of the Bitbucket repository to monitor for new commits.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_deployment: {
+					/**
+					 * New Deployment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new deployment is created for a repository.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors a Bitbucket repository for new deployments and triggers when deployments are created or updated. Provides comprehensive deployment information including environment, state, commit details, and deployment steps.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Bitbucket workspace
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Bitbucket workspace (organization or user account) that contains the repository to monitor for deployments.
+							 */
+							longDesc: () => LocalizedString
+						}
+						repo_slug: {
+							/**
+							 * Repository
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The repository to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The repository slug (name) of the Bitbucket repository to monitor for new deployments.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_pull_request: {
+					/**
+					 * New Pull Request
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new pull request is created or updated.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors a Bitbucket repository for new pull requests and triggers when pull requests are created or their state changes. Supports filtering by pull request state and provides detailed information about the pull request, reviewers, and changes.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Bitbucket workspace
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Bitbucket workspace (organization or user account) that contains the repository to monitor for pull requests.
+							 */
+							longDesc: () => LocalizedString
+						}
+						repo_slug: {
+							/**
+							 * Repository
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The repository to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The repository slug (name) of the Bitbucket repository to monitor for new pull requests.
+							 */
+							longDesc: () => LocalizedString
+						}
+						state: {
+							/**
+							 * Pull Request State
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by pull request state
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional filter to monitor only pull requests in a specific state (Open, Merged, Declined, or Superseded). If not specified, all pull requests will be monitored.
 							 */
 							longDesc: () => LocalizedString
 						}
