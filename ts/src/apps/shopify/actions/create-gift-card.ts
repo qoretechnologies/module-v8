@@ -137,7 +137,7 @@ const createGiftCard = async (context: TShopifyContextWithConn, data: TCreateGif
 
   if (data.customerId) input.customerId = `gid://shopify/Customer/${data.customerId}`;
   if (data.note) input.note = data.note;
-  if (data.expiresOn) input.expiresOn = data.expiresOn.toISOString().split('T')[0];
+  if (data.expiresOn) input.expiresOn = new Date(data.expiresOn).toISOString().split('T')[0];
   if (data.code) input.code = data.code;
   if (data.templateSuffix) input.templateSuffix = data.templateSuffix;
 

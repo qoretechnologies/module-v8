@@ -31,6 +31,7 @@ import Xero from './apps/Xero';
 import Zendesk from './apps/Zendesk';
 import Zoom from './apps/Zoom';
 import Confluence from './apps/Confluence';
+import Bitbucket from './apps/Bitbucket';
 
 const en = {
   common: {},
@@ -143,6 +144,7 @@ const en = {
     Shopify,
     Zoom,
     Confluence,
+    Bitbucket,
   },
 } satisfies BaseTranslation;
 
