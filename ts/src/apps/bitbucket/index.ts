@@ -1,9 +1,10 @@
 import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
-import { Locales } from '../../i18n/i18n-types';
-import { BITBUCKET_APP_LOGO, BITBUCKET_APP_NAME } from './constants';
+import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
-import { mapActionsToApp } from '../../global/helpers';
+import { Locales } from '../../i18n/i18n-types';
 import { BITBUCKET_ACTIONS, BITBUCKET_ALLOWED_PATHS } from './allowed-paths';
+import { BITBUCKET_APP_LOGO, BITBUCKET_APP_NAME } from './constants';
+import * as BITBUCKET_TRIGGERS from './triggers';
 
 export default (locale: Locales) =>
   ({
@@ -14,7 +15,10 @@ export default (locale: Locales) =>
     logo: BITBUCKET_APP_LOGO,
     logo_file_name: 'bitbucket-logo.svg',
     logo_mime_type: 'image/svg+xml',
-    actions: [...mapActionsToApp(BITBUCKET_APP_NAME, BITBUCKET_ACTIONS, locale)],
+    actions: [
+      ...mapActionsToApp(BITBUCKET_APP_NAME, BITBUCKET_ACTIONS, locale),
+      ...mapTriggersToApp(BITBUCKET_APP_NAME, BITBUCKET_TRIGGERS, locale),
+    ],
     swagger_paths: BITBUCKET_ALLOWED_PATHS,
     swagger: 'schemas/bitbucket.swagger.json',
     rest: {
