@@ -44,6 +44,8 @@ export default (locale: Locales) =>
         'write:label:confluence',
         'read:confluence-space.summary',
         'write:confluence-content',
+        'read:content:confluence',
+        'read:attachment:confluence',
       ],
       oauth2_auth_url: 'https://auth.atlassian.com/authorize',
       oauth2_token_url: 'https://auth.atlassian.com/oauth/token',
