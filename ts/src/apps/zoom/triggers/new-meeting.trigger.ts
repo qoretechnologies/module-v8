@@ -89,7 +89,9 @@ const ZoomNewMeetingTrigger = QoreAppCreator.createLocalizedTrigger({
       ErrorClass: ZoomError,
     });
 
-    const meetings = await fetchLatestMeetings(token);
+    const meetings = await fetchLatestMeetings({
+      token,
+    });
 
     return meetings?.length > 0 ? meetings[0] : null;
   },

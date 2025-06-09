@@ -58,6 +58,9 @@ export const BITBUCKET_COMMITS_ALLOWED_PATHS = {
           depends_on: ['workspace', 'repo_slug'],
           get_allowed_values: getBitbucketCommitAllowedValues,
         },
+        content: {
+          required: true,
+        },
       },
     },
   },
