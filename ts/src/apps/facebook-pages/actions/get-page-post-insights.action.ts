@@ -29,6 +29,7 @@ const options = {
       element_type: 'string',
     },
     default_value: ['post_impressions', 'post_clicks'],
+    element_allowed_values_creatable: true,
     element_allowed_values: FacebookPostMetricsAllowedValues,
   },
   period: {
