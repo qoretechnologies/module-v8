@@ -44,6 +44,7 @@ import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import confluence from '../apps/confluence';
 import bitbucket from '../apps/bitbucket';
+import facebookPages from '../apps/facebook-pages';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -61,6 +62,7 @@ const NEW_APPS = {
   bitbucket,
   confluence,
   zoom,
+  facebookPages,
   googleContacts,
   googleDocs,
   googleMeet,
