@@ -9,6 +9,7 @@ export const BitbucketWorkspaceAndRepoOptions = {
   },
   repo_slug: {
     depends_on: ['workspace'],
+    on_change: ['refetch'],
     get_allowed_values: getBitbucketRepositoryAllowedValues,
   },
 } satisfies Record<string, TQoreAppActionOverrideOption<TCustomConnOptions>>;
