@@ -196,7 +196,6 @@ const createPagePost = QoreAppCreator.createLocalizedAction<typeof options>({
         generated_at: new Date().toISOString(),
       };
     } catch (error) {
-      console.dir(error, { depth: null });
       if (error instanceof FacebookPagesError) {
         throw error;
       }
