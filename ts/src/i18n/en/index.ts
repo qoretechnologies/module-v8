@@ -1,9 +1,12 @@
 import type { BaseTranslation } from '../i18n-types';
 import Asana from './apps/Asana';
 import Attio from './apps/Attio';
+import Bitbucket from './apps/Bitbucket';
+import Confluence from './apps/Confluence';
 import DocusignESignature from './apps/DocusignESignature';
 import Dropbox from './apps/Dropbox';
 import Dynamics from './apps/Dynamics';
+import FacebookPages from './apps/FacebookPages';
 import Freshdesk from './apps/Freshdesk';
 import Github from './apps/Github';
 import GoogleContacts from './apps/GoogleContacts';
@@ -30,8 +33,6 @@ import Teams from './apps/Teams';
 import Xero from './apps/Xero';
 import Zendesk from './apps/Zendesk';
 import Zoom from './apps/Zoom';
-import Confluence from './apps/Confluence';
-import Bitbucket from './apps/Bitbucket';
 
 const en = {
   common: {},
@@ -145,6 +146,7 @@ const en = {
     Zoom,
     Confluence,
     Bitbucket,
+    FacebookPages,
   },
 } satisfies BaseTranslation;
 
