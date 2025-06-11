@@ -24,22 +24,26 @@ export const BITBUCKET_PULL_REQUESTS_ALLOWED_PATHS = {
           type: 'softstring',
           get_allowed_values: getBitbucketBranchAllowedValues,
           allowed_values_creatable: true,
+          depends_on: ['repo_slug', 'workspace'],
           required: true,
         },
         destination: {
           type: 'softstring',
           get_allowed_values: getBitbucketBranchAllowedValues,
-          allowed_values_creatable: true,
+          depends_on: ['repo_slug', 'workspace'],
           required: false,
           preselected: true,
         },
         type: {
           required: false,
+          default_value: 'pullrequest',
+          type: 'softstring',
         },
         title: {
           required: true,
         },
         reviewers: {
+          depends_on: ['workspace'],
           type: {
             type: 'list',
             element_type: 'softstring',
@@ -108,6 +112,7 @@ export const BITBUCKET_PULL_REQUESTS_ALLOWED_PATHS = {
         },
         source: {
           type: 'softstring',
+          depends_on: ['repo_slug', 'workspace'],
           get_allowed_values: getBitbucketBranchAllowedValues,
           allowed_values_creatable: true,
           required: false,
@@ -115,6 +120,7 @@ export const BITBUCKET_PULL_REQUESTS_ALLOWED_PATHS = {
         },
         destination: {
           type: 'softstring',
+          depends_on: ['repo_slug', 'workspace'],
           get_allowed_values: getBitbucketBranchAllowedValues,
           allowed_values_creatable: true,
           required: false,
@@ -125,6 +131,7 @@ export const BITBUCKET_PULL_REQUESTS_ALLOWED_PATHS = {
           preselected: true,
         },
         reviewers: {
+          depends_on: ['workspace'],
           type: {
             type: 'list',
             element_type: 'softstring',
