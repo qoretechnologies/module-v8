@@ -29846,6 +29846,856 @@ type RootTranslation = {
 				}
 			}
 		}
+		FacebookPages: {
+			/**
+			 * F​a​c​e​b​o​o​k​ ​P​a​g​e​s
+			 */
+			displayName: string
+			/**
+			 * M​a​n​a​g​e​ ​y​o​u​r​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​s​ ​a​n​d​ ​p​o​s​t​s
+			 */
+			shortDesc: string
+			/**
+			 * C​o​n​n​e​c​t​ ​y​o​u​r​ ​F​a​c​e​b​o​o​k​ ​a​c​c​o​u​n​t​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​p​a​g​e​s​,​ ​p​o​s​t​s​,​ ​a​n​d​ ​c​o​m​m​e​n​t​s​ ​d​i​r​e​c​t​l​y​ ​f​r​o​m​ ​Q​o​r​e​.​ ​Y​o​u​ ​c​a​n​ ​c​r​e​a​t​e​,​ ​r​e​a​d​,​ ​u​p​d​a​t​e​,​ ​a​n​d​ ​d​e​l​e​t​e​ ​p​o​s​t​s​ ​o​n​ ​y​o​u​r​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​s​,​ ​a​s​ ​w​e​l​l​ ​a​s​ ​m​a​n​a​g​e​ ​c​o​m​m​e​n​t​s​ ​a​n​d​ ​r​e​a​c​t​i​o​n​s​.
+			 */
+			longDesc: string
+			actions: {
+				create_page_post: {
+					/**
+					 * C​r​e​a​t​e​ ​P​a​g​e​ ​P​o​s​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​p​o​s​t​ ​o​n​ ​a​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​p​o​s​t​ ​o​n​ ​a​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​t​e​x​t​,​ ​l​i​n​k​s​,​ ​p​h​o​t​o​s​,​ ​s​c​h​e​d​u​l​i​n​g​,​ ​a​n​d​ ​v​i​s​i​b​i​l​i​t​y​ ​s​e​t​t​i​n​g​s​.​ ​C​a​n​ ​c​r​e​a​t​e​ ​b​o​t​h​ ​i​m​m​e​d​i​a​t​e​ ​a​n​d​ ​s​c​h​e​d​u​l​e​d​ ​p​o​s​t​s​.
+					 */
+					longDesc: string
+					options: {
+						page_id: {
+							/**
+							 * P​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​t​o​ ​p​o​s​t​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​w​h​e​r​e​ ​t​h​e​ ​p​o​s​t​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						message: {
+							/**
+							 * M​e​s​s​a​g​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​p​o​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​i​n​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​f​o​r​ ​t​h​e​ ​p​o​s​t​.​ ​O​p​t​i​o​n​a​l​ ​i​f​ ​l​i​n​k​ ​o​r​ ​p​h​o​t​o​s​ ​a​r​e​ ​p​r​o​v​i​d​e​d​.
+							 */
+							longDesc: string
+						}
+						link: {
+							/**
+							 * L​i​n​k
+							 */
+							displayName: string
+							/**
+							 * U​R​L​ ​t​o​ ​s​h​a​r​e​ ​i​n​ ​t​h​e​ ​p​o​s​t
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​U​R​L​ ​t​o​ ​b​e​ ​s​h​a​r​e​d​ ​i​n​ ​t​h​e​ ​p​o​s​t​.​ ​F​a​c​e​b​o​o​k​ ​w​i​l​l​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​g​e​n​e​r​a​t​e​ ​a​ ​p​r​e​v​i​e​w​.
+							 */
+							longDesc: string
+						}
+						photo_urls: {
+							/**
+							 * P​h​o​t​o​ ​U​R​L​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​p​h​o​t​o​ ​U​R​L​s​ ​t​o​ ​a​t​t​a​c​h
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​i​m​a​g​e​ ​U​R​L​s​ ​t​o​ ​b​e​ ​a​t​t​a​c​h​e​d​ ​t​o​ ​t​h​e​ ​p​o​s​t​.​ ​I​m​a​g​e​s​ ​w​i​l​l​ ​b​e​ ​u​p​l​o​a​d​e​d​ ​t​o​ ​F​a​c​e​b​o​o​k​.
+							 */
+							longDesc: string
+						}
+						published: {
+							/**
+							 * P​u​b​l​i​s​h​e​d
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​p​u​b​l​i​s​h​ ​t​h​e​ ​p​o​s​t​ ​i​m​m​e​d​i​a​t​e​l​y
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​t​r​u​e​,​ ​t​h​e​ ​p​o​s​t​ ​w​i​l​l​ ​b​e​ ​p​u​b​l​i​s​h​e​d​ ​i​m​m​e​d​i​a​t​e​l​y​.​ ​I​f​ ​f​a​l​s​e​,​ ​i​t​ ​w​i​l​l​ ​b​e​ ​s​a​v​e​d​ ​a​s​ ​a​ ​d​r​a​f​t​ ​o​r​ ​s​c​h​e​d​u​l​e​d​.
+							 */
+							longDesc: string
+						}
+						scheduled_publish_time: {
+							/**
+							 * S​c​h​e​d​u​l​e​d​ ​P​u​b​l​i​s​h​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​n​ ​t​o​ ​p​u​b​l​i​s​h​ ​t​h​e​ ​p​o​s​t
+							 */
+							shortDesc: string
+							/**
+							 * I​S​O​ ​t​i​m​e​s​t​a​m​p​ ​f​o​r​ ​w​h​e​n​ ​t​h​e​ ​p​o​s​t​ ​s​h​o​u​l​d​ ​b​e​ ​p​u​b​l​i​s​h​e​d​.​ ​R​e​q​u​i​r​e​s​ ​p​u​b​l​i​s​h​e​d​ ​t​o​ ​b​e​ ​f​a​l​s​e​.
+							 */
+							longDesc: string
+						}
+						feed_story_visibility: {
+							/**
+							 * F​e​e​d​ ​S​t​o​r​y​ ​V​i​s​i​b​i​l​i​t​y
+							 */
+							displayName: string
+							/**
+							 * V​i​s​i​b​i​l​i​t​y​ ​i​n​ ​n​e​w​s​ ​f​e​e​d
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​t​r​o​l​s​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​p​o​s​t​ ​a​p​p​e​a​r​s​ ​i​n​ ​t​h​e​ ​n​e​w​s​ ​f​e​e​d​.
+							 */
+							longDesc: string
+						}
+						timeline_visibility: {
+							/**
+							 * T​i​m​e​l​i​n​e​ ​V​i​s​i​b​i​l​i​t​y
+							 */
+							displayName: string
+							/**
+							 * V​i​s​i​b​i​l​i​t​y​ ​o​n​ ​t​i​m​e​l​i​n​e
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​t​r​o​l​s​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​p​o​s​t​ ​a​p​p​e​a​r​s​ ​o​n​ ​t​h​e​ ​p​a​g​e​ ​t​i​m​e​l​i​n​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_page_post_insights: {
+					/**
+					 * G​e​t​ ​P​a​g​e​ ​P​o​s​t​ ​I​n​s​i​g​h​t​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​a​n​a​l​y​t​i​c​s​ ​d​a​t​a​ ​f​o​r​ ​a​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​p​o​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​s​i​g​h​t​s​ ​a​n​d​ ​a​n​a​l​y​t​i​c​s​ ​d​a​t​a​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​p​o​s​t​,​ ​i​n​c​l​u​d​i​n​g​ ​i​m​p​r​e​s​s​i​o​n​s​,​ ​c​l​i​c​k​s​,​ ​e​n​g​a​g​e​m​e​n​t​ ​m​e​t​r​i​c​s​,​ ​a​n​d​ ​t​i​m​e​-​s​e​r​i​e​s​ ​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						page_id: {
+							/**
+							 * P​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​t​h​a​t​ ​o​w​n​s​ ​t​h​e​ ​p​o​s​t​.
+							 */
+							longDesc: string
+						}
+						post_id: {
+							/**
+							 * P​o​s​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​o​s​t​ ​t​o​ ​g​e​t​ ​i​n​s​i​g​h​t​s​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​F​a​c​e​b​o​o​k​ ​p​o​s​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​s​i​g​h​t​s​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+						metrics: {
+							/**
+							 * M​e​t​r​i​c​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​m​e​t​r​i​c​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​i​n​s​i​g​h​t​ ​m​e​t​r​i​c​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​o​r​ ​t​h​e​ ​p​o​s​t​,​ ​s​u​c​h​ ​a​s​ ​i​m​p​r​e​s​s​i​o​n​s​,​ ​c​l​i​c​k​s​,​ ​a​n​d​ ​e​n​g​a​g​e​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+						period: {
+							/**
+							 * P​e​r​i​o​d
+							 */
+							displayName: string
+							/**
+							 * T​i​m​e​ ​p​e​r​i​o​d​ ​f​o​r​ ​i​n​s​i​g​h​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​m​e​ ​p​e​r​i​o​d​ ​f​o​r​ ​w​h​i​c​h​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​s​i​g​h​t​s​ ​d​a​t​a​.​ ​L​i​f​e​t​i​m​e​ ​r​e​t​u​r​n​s​ ​t​o​t​a​l​ ​m​e​t​r​i​c​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_page_post: {
+					/**
+					 * G​e​t​ ​P​a​g​e​ ​P​o​s​t
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​p​o​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​p​o​s​t​,​ ​i​n​c​l​u​d​i​n​g​ ​c​o​n​t​e​n​t​,​ ​m​e​t​a​d​a​t​a​,​ ​e​n​g​a​g​e​m​e​n​t​ ​c​o​u​n​t​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​p​o​s​t​ ​p​r​o​p​e​r​t​i​e​s​.
+					 */
+					longDesc: string
+					options: {
+						page_id: {
+							/**
+							 * P​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​t​h​a​t​ ​o​w​n​s​ ​t​h​e​ ​p​o​s​t​.
+							 */
+							longDesc: string
+						}
+						post_id: {
+							/**
+							 * P​o​s​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​o​s​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​F​a​c​e​b​o​o​k​ ​p​o​s​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+						fields: {
+							/**
+							 * F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * P​o​s​t​ ​f​i​e​l​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​o​r​ ​t​h​e​ ​p​o​s​t​,​ ​s​u​c​h​ ​a​s​ ​m​e​s​s​a​g​e​,​ ​c​r​e​a​t​e​d​ ​t​i​m​e​,​ ​a​n​d​ ​e​n​g​a​g​e​m​e​n​t​ ​m​e​t​r​i​c​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_page: {
+					/**
+					 * G​e​t​ ​P​a​g​e
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​,​ ​i​n​c​l​u​d​i​n​g​ ​b​a​s​i​c​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​c​o​n​t​a​c​t​ ​d​e​t​a​i​l​s​,​ ​l​o​c​a​t​i​o​n​,​ ​s​t​a​t​i​s​t​i​c​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​p​a​g​e​ ​p​r​o​p​e​r​t​i​e​s​.
+					 */
+					longDesc: string
+					options: {
+						page_id: {
+							/**
+							 * P​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+						fields: {
+							/**
+							 * F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * P​a​g​e​ ​f​i​e​l​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​o​r​ ​t​h​e​ ​p​a​g​e​,​ ​s​u​c​h​ ​a​s​ ​n​a​m​e​,​ ​c​a​t​e​g​o​r​y​,​ ​a​b​o​u​t​ ​s​e​c​t​i​o​n​,​ ​a​n​d​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				search_page_posts: {
+					/**
+					 * S​e​a​r​c​h​ ​P​a​g​e​ ​P​o​s​t​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​a​n​d​ ​f​i​l​t​e​r​ ​p​o​s​t​s​ ​o​n​ ​a​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​e​s​ ​f​o​r​ ​p​o​s​t​s​ ​o​n​ ​a​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​t​e​x​t​ ​f​i​l​t​e​r​i​n​g​,​ ​d​a​t​e​ ​r​a​n​g​e​s​,​ ​v​i​s​i​b​i​l​i​t​y​ ​o​p​t​i​o​n​s​,​ ​a​n​d​ ​f​i​e​l​d​ ​s​e​l​e​c​t​i​o​n​.​ ​R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​m​a​t​c​h​i​n​g​ ​p​o​s​t​s​.
+					 */
+					longDesc: string
+					options: {
+						page_id: {
+							/**
+							 * P​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​p​o​s​t​s​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​p​o​s​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​p​o​s​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​t​h​e​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​.​ ​C​a​n​n​o​t​ ​e​x​c​e​e​d​ ​1​0​0​.
+							 */
+							longDesc: string
+						}
+						since: {
+							/**
+							 * S​i​n​c​e
+							 */
+							displayName: string
+							/**
+							 * S​t​a​r​t​ ​d​a​t​e​ ​f​o​r​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * I​S​O​ ​t​i​m​e​s​t​a​m​p​ ​o​r​ ​d​a​t​e​ ​s​t​r​i​n​g​ ​f​o​r​ ​t​h​e​ ​e​a​r​l​i​e​s​t​ ​p​o​s​t​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						until: {
+							/**
+							 * U​n​t​i​l
+							 */
+							displayName: string
+							/**
+							 * E​n​d​ ​d​a​t​e​ ​f​o​r​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * I​S​O​ ​t​i​m​e​s​t​a​m​p​ ​o​r​ ​d​a​t​e​ ​s​t​r​i​n​g​ ​f​o​r​ ​t​h​e​ ​l​a​t​e​s​t​ ​p​o​s​t​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						search_text: {
+							/**
+							 * S​e​a​r​c​h​ ​T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​i​n​ ​p​o​s​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​e​x​t​ ​s​t​r​i​n​g​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​w​i​t​h​i​n​ ​p​o​s​t​ ​m​e​s​s​a​g​e​s​ ​a​n​d​ ​s​t​o​r​i​e​s​.​ ​C​a​s​e​-​i​n​s​e​n​s​i​t​i​v​e​ ​s​e​a​r​c​h​.
+							 */
+							longDesc: string
+						}
+						include_hidden: {
+							/**
+							 * I​n​c​l​u​d​e​ ​H​i​d​d​e​n
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​h​i​d​d​e​n​ ​p​o​s​t​s
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​t​r​u​e​,​ ​i​n​c​l​u​d​e​s​ ​p​o​s​t​s​ ​t​h​a​t​ ​a​r​e​ ​h​i​d​d​e​n​ ​f​r​o​m​ ​t​h​e​ ​t​i​m​e​l​i​n​e​ ​i​n​ ​t​h​e​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						fields: {
+							/**
+							 * F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * P​o​s​t​ ​f​i​e​l​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​o​r​ ​e​a​c​h​ ​p​o​s​t​ ​i​n​ ​t​h​e​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_post_comments: {
+					/**
+					 * G​e​t​ ​P​o​s​t​ ​C​o​m​m​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​c​o​m​m​e​n​t​s​ ​o​n​ ​a​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​p​o​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​c​o​m​m​e​n​t​s​ ​o​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​p​o​s​t​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​,​ ​o​r​d​e​r​i​n​g​,​ ​p​a​g​i​n​a​t​i​o​n​,​ ​a​n​d​ ​o​p​t​i​o​n​a​l​ ​r​e​p​l​y​ ​i​n​c​l​u​s​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						page_id: {
+							/**
+							 * P​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​t​h​a​t​ ​o​w​n​s​ ​t​h​e​ ​p​o​s​t​.
+							 */
+							longDesc: string
+						}
+						post_id: {
+							/**
+							 * P​o​s​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​o​s​t​ ​t​o​ ​g​e​t​ ​c​o​m​m​e​n​t​s​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​F​a​c​e​b​o​o​k​ ​p​o​s​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​c​o​m​m​e​n​t​s​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+						fields: {
+							/**
+							 * F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * C​o​m​m​e​n​t​ ​f​i​e​l​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​o​r​ ​e​a​c​h​ ​c​o​m​m​e​n​t​,​ ​s​u​c​h​ ​a​s​ ​m​e​s​s​a​g​e​,​ ​a​u​t​h​o​r​,​ ​a​n​d​ ​e​n​g​a​g​e​m​e​n​t​ ​m​e​t​r​i​c​s​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​m​m​e​n​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​m​m​e​n​t​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​C​a​n​n​o​t​ ​e​x​c​e​e​d​ ​1​0​0​.
+							 */
+							longDesc: string
+						}
+						order: {
+							/**
+							 * O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * O​r​d​e​r​ ​o​f​ ​c​o​m​m​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​o​r​d​e​r​ ​i​n​ ​w​h​i​c​h​ ​t​o​ ​r​e​t​u​r​n​ ​c​o​m​m​e​n​t​s​ ​-​ ​c​h​r​o​n​o​l​o​g​i​c​a​l​ ​(​o​l​d​e​s​t​ ​f​i​r​s​t​)​ ​o​r​ ​r​e​v​e​r​s​e​ ​c​h​r​o​n​o​l​o​g​i​c​a​l​ ​(​n​e​w​e​s​t​ ​f​i​r​s​t​)​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * C​o​m​m​e​n​t​ ​f​i​l​t​e​r​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​r​e​t​u​r​n​ ​o​n​l​y​ ​t​o​p​-​l​e​v​e​l​ ​c​o​m​m​e​n​t​s​ ​o​r​ ​a​l​l​ ​c​o​m​m​e​n​t​s​ ​i​n​c​l​u​d​i​n​g​ ​r​e​p​l​i​e​s​ ​i​n​ ​a​ ​s​t​r​e​a​m​ ​f​o​r​m​a​t​.
+							 */
+							longDesc: string
+						}
+						include_replies: {
+							/**
+							 * I​n​c​l​u​d​e​ ​R​e​p​l​i​e​s
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​r​e​p​l​i​e​s​ ​t​o​ ​c​o​m​m​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​t​r​u​e​,​ ​i​n​c​l​u​d​e​s​ ​r​e​p​l​i​e​s​ ​t​o​ ​e​a​c​h​ ​t​o​p​-​l​e​v​e​l​ ​c​o​m​m​e​n​t​ ​i​n​ ​t​h​e​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				like_comment: {
+					/**
+					 * L​i​k​e​ ​C​o​m​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * L​i​k​e​ ​o​r​ ​u​n​l​i​k​e​ ​a​ ​c​o​m​m​e​n​t​ ​o​n​ ​a​ ​F​a​c​e​b​o​o​k​ ​p​o​s​t
+					 */
+					shortDesc: string
+					/**
+					 * L​i​k​e​s​ ​o​r​ ​u​n​l​i​k​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​m​m​e​n​t​ ​o​n​ ​a​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​p​o​s​t​.​ ​C​a​n​ ​t​o​g​g​l​e​ ​t​h​e​ ​l​i​k​e​ ​s​t​a​t​u​s​ ​a​n​d​ ​r​e​t​u​r​n​s​ ​u​p​d​a​t​e​d​ ​e​n​g​a​g​e​m​e​n​t​ ​m​e​t​r​i​c​s​.
+					 */
+					longDesc: string
+					options: {
+						page_id: {
+							/**
+							 * P​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​t​h​a​t​ ​o​w​n​s​ ​t​h​e​ ​p​o​s​t​.
+							 */
+							longDesc: string
+						}
+						post_id: {
+							/**
+							 * P​o​s​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​o​s​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​c​o​m​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​F​a​c​e​b​o​o​k​ ​p​o​s​t​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​c​o​m​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+						comment_id: {
+							/**
+							 * C​o​m​m​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​m​m​e​n​t​ ​t​o​ ​l​i​k​e​/​u​n​l​i​k​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​o​m​m​e​n​t​ ​t​o​ ​l​i​k​e​ ​o​r​ ​u​n​l​i​k​e​.
+							 */
+							longDesc: string
+						}
+						action: {
+							/**
+							 * A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​l​i​k​e​ ​o​r​ ​u​n​l​i​k​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​a​c​t​i​o​n​ ​t​o​ ​p​e​r​f​o​r​m​ ​-​ ​e​i​t​h​e​r​ ​l​i​k​e​ ​t​h​e​ ​c​o​m​m​e​n​t​ ​o​r​ ​r​e​m​o​v​e​ ​t​h​e​ ​l​i​k​e​ ​(​u​n​l​i​k​e​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				reply_to_comment: {
+					/**
+					 * R​e​p​l​y​ ​t​o​ ​C​o​m​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * R​e​p​l​y​ ​t​o​ ​a​ ​c​o​m​m​e​n​t​ ​o​n​ ​a​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​p​o​s​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​r​e​p​l​y​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​m​m​e​n​t​ ​o​n​ ​a​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​p​o​s​t​.​ ​S​u​p​p​o​r​t​s​ ​t​e​x​t​ ​r​e​p​l​i​e​s​ ​a​n​d​ ​o​p​t​i​o​n​a​l​ ​a​t​t​a​c​h​m​e​n​t​ ​U​R​L​s​.
+					 */
+					longDesc: string
+					options: {
+						page_id: {
+							/**
+							 * P​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​t​h​a​t​ ​o​w​n​s​ ​t​h​e​ ​p​o​s​t​.
+							 */
+							longDesc: string
+						}
+						post_id: {
+							/**
+							 * P​o​s​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​o​s​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​c​o​m​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​F​a​c​e​b​o​o​k​ ​p​o​s​t​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​c​o​m​m​e​n​t​ ​b​e​i​n​g​ ​r​e​p​l​i​e​d​ ​t​o​.
+							 */
+							longDesc: string
+						}
+						comment_id: {
+							/**
+							 * C​o​m​m​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​m​m​e​n​t​ ​t​o​ ​r​e​p​l​y​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​o​m​m​e​n​t​ ​t​o​ ​r​e​p​l​y​ ​t​o​.
+							 */
+							longDesc: string
+						}
+						message: {
+							/**
+							 * M​e​s​s​a​g​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​r​e​p​l​y​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​r​e​p​l​y​ ​t​o​ ​t​h​e​ ​c​o​m​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+						attachment_url: {
+							/**
+							 * A​t​t​a​c​h​m​e​n​t​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​a​t​t​a​c​h​m​e​n​t​ ​U​R​L
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​U​R​L​ ​t​o​ ​a​t​t​a​c​h​ ​t​o​ ​t​h​e​ ​r​e​p​l​y​,​ ​s​u​c​h​ ​a​s​ ​a​n​ ​i​m​a​g​e​ ​o​r​ ​l​i​n​k​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_post: {
+					/**
+					 * N​e​w​ ​P​o​s​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​o​s​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​n​ ​a​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​f​o​r​ ​n​e​w​ ​p​o​s​t​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​p​o​s​t​ ​i​s​ ​c​r​e​a​t​e​d​.​ ​S​u​p​p​o​r​t​s​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​v​i​s​i​b​i​l​i​t​y​ ​a​n​d​ ​c​u​s​t​o​m​i​z​a​b​l​e​ ​f​i​e​l​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​s​p​e​c​i​f​i​c​ ​p​o​s​t​ ​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						page_id: {
+							/**
+							 * P​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​p​o​s​t​s​.
+							 */
+							longDesc: string
+						}
+						fields: {
+							/**
+							 * F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * P​o​s​t​ ​f​i​e​l​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​p​o​s​t​ ​f​i​e​l​d​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​d​a​t​a​.​ ​D​e​f​a​u​l​t​ ​i​n​c​l​u​d​e​s​ ​i​d​,​ ​m​e​s​s​a​g​e​,​ ​c​r​e​a​t​e​d​_​t​i​m​e​,​ ​p​e​r​m​a​l​i​n​k​_​u​r​l​,​ ​f​u​l​l​_​p​i​c​t​u​r​e​,​ ​i​s​_​p​u​b​l​i​s​h​e​d​,​ ​a​n​d​ ​i​s​_​h​i​d​d​e​n​.
+							 */
+							longDesc: string
+						}
+						include_hidden: {
+							/**
+							 * I​n​c​l​u​d​e​ ​H​i​d​d​e​n​ ​P​o​s​t​s
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​h​i​d​d​e​n​ ​p​o​s​t​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​a​l​s​o​ ​f​i​r​e​ ​f​o​r​ ​p​o​s​t​s​ ​t​h​a​t​ ​a​r​e​ ​h​i​d​d​e​n​ ​f​r​o​m​ ​t​h​e​ ​p​a​g​e​ ​t​i​m​e​l​i​n​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​f​a​l​s​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_post_comment: {
+					/**
+					 * N​e​w​ ​P​o​s​t​ ​C​o​m​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​F​a​c​e​b​o​o​k​ ​p​o​s​t​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​F​a​c​e​b​o​o​k​ ​p​o​s​t​ ​f​o​r​ ​n​e​w​ ​c​o​m​m​e​n​t​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​c​o​m​m​e​n​t​ ​i​s​ ​a​d​d​e​d​.​ ​S​u​p​p​o​r​t​s​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​v​i​s​i​b​i​l​i​t​y​,​ ​i​n​c​l​u​d​i​n​g​ ​r​e​p​l​i​e​s​,​ ​a​n​d​ ​c​u​s​t​o​m​i​z​a​b​l​e​ ​f​i​e​l​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​s​p​e​c​i​f​i​c​ ​c​o​m​m​e​n​t​ ​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						page_id: {
+							/**
+							 * P​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​p​o​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​p​o​s​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​c​o​m​m​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+						post_id: {
+							/**
+							 * P​o​s​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​o​s​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​c​o​m​m​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​F​a​c​e​b​o​o​k​ ​p​o​s​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​c​o​m​m​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+						fields: {
+							/**
+							 * F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * C​o​m​m​e​n​t​ ​f​i​e​l​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​c​o​m​m​e​n​t​ ​f​i​e​l​d​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​d​a​t​a​.​ ​D​e​f​a​u​l​t​ ​i​n​c​l​u​d​e​s​ ​i​d​,​ ​m​e​s​s​a​g​e​,​ ​c​r​e​a​t​e​d​_​t​i​m​e​,​ ​f​r​o​m​,​ ​l​i​k​e​_​c​o​u​n​t​,​ ​c​o​m​m​e​n​t​_​c​o​u​n​t​,​ ​a​n​d​ ​p​e​r​m​a​l​i​n​k​_​u​r​l​.
+							 */
+							longDesc: string
+						}
+						include_hidden: {
+							/**
+							 * I​n​c​l​u​d​e​ ​H​i​d​d​e​n​ ​C​o​m​m​e​n​t​s
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​h​i​d​d​e​n​ ​c​o​m​m​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​a​l​s​o​ ​f​i​r​e​ ​f​o​r​ ​c​o​m​m​e​n​t​s​ ​t​h​a​t​ ​a​r​e​ ​h​i​d​d​e​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​f​a​l​s​e​.
+							 */
+							longDesc: string
+						}
+						include_replies: {
+							/**
+							 * I​n​c​l​u​d​e​ ​R​e​p​l​i​e​s
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​c​o​m​m​e​n​t​ ​r​e​p​l​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​i​n​c​l​u​d​e​ ​r​e​p​l​i​e​s​ ​t​o​ ​c​o​m​m​e​n​t​s​ ​i​n​ ​a​d​d​i​t​i​o​n​ ​t​o​ ​t​o​p​-​l​e​v​e​l​ ​c​o​m​m​e​n​t​s​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​t​r​u​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -59676,6 +60526,856 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Optional filter to monitor only pull requests in a specific state (Open, Merged, Declined, or Superseded). If not specified, all pull requests will be monitored.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		FacebookPages: {
+			/**
+			 * Facebook Pages
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Manage your Facebook pages and posts
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Connect your Facebook account to manage your pages, posts, and comments directly from Qore. You can create, read, update, and delete posts on your Facebook pages, as well as manage comments and reactions.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				create_page_post: {
+					/**
+					 * Create Page Post
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new post on a Facebook page
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new post on a Facebook page with support for text, links, photos, scheduling, and visibility settings. Can create both immediate and scheduled posts.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						page_id: {
+							/**
+							 * Page ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Facebook page to post to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Facebook page where the post will be created.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message: {
+							/**
+							 * Message
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The text content of the post
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The main text content for the post. Optional if link or photos are provided.
+							 */
+							longDesc: () => LocalizedString
+						}
+						link: {
+							/**
+							 * Link
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * URL to share in the post
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A URL to be shared in the post. Facebook will automatically generate a preview.
+							 */
+							longDesc: () => LocalizedString
+						}
+						photo_urls: {
+							/**
+							 * Photo URLs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of photo URLs to attach
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of image URLs to be attached to the post. Images will be uploaded to Facebook.
+							 */
+							longDesc: () => LocalizedString
+						}
+						published: {
+							/**
+							 * Published
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to publish the post immediately
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If true, the post will be published immediately. If false, it will be saved as a draft or scheduled.
+							 */
+							longDesc: () => LocalizedString
+						}
+						scheduled_publish_time: {
+							/**
+							 * Scheduled Publish Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * When to publish the post
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * ISO timestamp for when the post should be published. Requires published to be false.
+							 */
+							longDesc: () => LocalizedString
+						}
+						feed_story_visibility: {
+							/**
+							 * Feed Story Visibility
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Visibility in news feed
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Controls whether the post appears in the news feed.
+							 */
+							longDesc: () => LocalizedString
+						}
+						timeline_visibility: {
+							/**
+							 * Timeline Visibility
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Visibility on timeline
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Controls whether the post appears on the page timeline.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_page_post_insights: {
+					/**
+					 * Get Page Post Insights
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get analytics data for a Facebook page post
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves detailed insights and analytics data for a specific Facebook page post, including impressions, clicks, engagement metrics, and time-series data.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						page_id: {
+							/**
+							 * Page ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Facebook page ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Facebook page that owns the post.
+							 */
+							longDesc: () => LocalizedString
+						}
+						post_id: {
+							/**
+							 * Post ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The post to get insights for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Facebook post to retrieve insights for.
+							 */
+							longDesc: () => LocalizedString
+						}
+						metrics: {
+							/**
+							 * Metrics
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of metrics to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The specific insight metrics to retrieve for the post, such as impressions, clicks, and engagement.
+							 */
+							longDesc: () => LocalizedString
+						}
+						period: {
+							/**
+							 * Period
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Time period for insights
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The time period for which to retrieve insights data. Lifetime returns total metrics.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_page_post: {
+					/**
+					 * Get Page Post
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get details of a Facebook page post
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves detailed information about a specific Facebook page post, including content, metadata, engagement counts, and other post properties.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						page_id: {
+							/**
+							 * Page ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Facebook page ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Facebook page that owns the post.
+							 */
+							longDesc: () => LocalizedString
+						}
+						post_id: {
+							/**
+							 * Post ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The post to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Facebook post to retrieve details for.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fields: {
+							/**
+							 * Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Post fields to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The specific fields to retrieve for the post, such as message, created time, and engagement metrics.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_page: {
+					/**
+					 * Get Page
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get details of a Facebook page
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves detailed information about a Facebook page, including basic information, contact details, location, statistics, and other page properties.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						page_id: {
+							/**
+							 * Page ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Facebook page to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Facebook page to retrieve details for.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fields: {
+							/**
+							 * Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Page fields to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The specific fields to retrieve for the page, such as name, category, about section, and contact information.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				search_page_posts: {
+					/**
+					 * Search Page Posts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search and filter posts on a Facebook page
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Searches for posts on a Facebook page with support for text filtering, date ranges, visibility options, and field selection. Returns a list of matching posts.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						page_id: {
+							/**
+							 * Page ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Facebook page to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Facebook page to search for posts.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of posts to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of posts to return in the search results. Cannot exceed 100.
+							 */
+							longDesc: () => LocalizedString
+						}
+						since: {
+							/**
+							 * Since
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Start date for search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * ISO timestamp or date string for the earliest post creation date to include in results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						until: {
+							/**
+							 * Until
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * End date for search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * ISO timestamp or date string for the latest post creation date to include in results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						search_text: {
+							/**
+							 * Search Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text to search for in posts
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Text string to search for within post messages and stories. Case-insensitive search.
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_hidden: {
+							/**
+							 * Include Hidden
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to include hidden posts
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If true, includes posts that are hidden from the timeline in the search results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fields: {
+							/**
+							 * Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Post fields to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The specific fields to retrieve for each post in the search results.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_post_comments: {
+					/**
+					 * Get Post Comments
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get comments on a Facebook page post
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves comments on a specific Facebook page post with support for filtering, ordering, pagination, and optional reply inclusion.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						page_id: {
+							/**
+							 * Page ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Facebook page ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Facebook page that owns the post.
+							 */
+							longDesc: () => LocalizedString
+						}
+						post_id: {
+							/**
+							 * Post ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The post to get comments for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Facebook post to retrieve comments for.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fields: {
+							/**
+							 * Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Comment fields to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The specific fields to retrieve for each comment, such as message, author, and engagement metrics.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of comments to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of comments to return. Cannot exceed 100.
+							 */
+							longDesc: () => LocalizedString
+						}
+						order: {
+							/**
+							 * Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Order of comments
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The order in which to return comments - chronological (oldest first) or reverse chronological (newest first).
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Comment filter type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to return only top-level comments or all comments including replies in a stream format.
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_replies: {
+							/**
+							 * Include Replies
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to include replies to comments
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If true, includes replies to each top-level comment in the results.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				like_comment: {
+					/**
+					 * Like Comment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Like or unlike a comment on a Facebook post
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Likes or unlikes a specific comment on a Facebook page post. Can toggle the like status and returns updated engagement metrics.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						page_id: {
+							/**
+							 * Page ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Facebook page ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Facebook page that owns the post.
+							 */
+							longDesc: () => LocalizedString
+						}
+						post_id: {
+							/**
+							 * Post ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The post containing the comment
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Facebook post that contains the comment.
+							 */
+							longDesc: () => LocalizedString
+						}
+						comment_id: {
+							/**
+							 * Comment ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The comment to like/unlike
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the comment to like or unlike.
+							 */
+							longDesc: () => LocalizedString
+						}
+						action: {
+							/**
+							 * Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to like or unlike
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The action to perform - either like the comment or remove the like (unlike).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				reply_to_comment: {
+					/**
+					 * Reply to Comment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Reply to a comment on a Facebook page post
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a reply to a specific comment on a Facebook page post. Supports text replies and optional attachment URLs.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						page_id: {
+							/**
+							 * Page ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Facebook page ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Facebook page that owns the post.
+							 */
+							longDesc: () => LocalizedString
+						}
+						post_id: {
+							/**
+							 * Post ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The post containing the comment
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Facebook post that contains the comment being replied to.
+							 */
+							longDesc: () => LocalizedString
+						}
+						comment_id: {
+							/**
+							 * Comment ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The comment to reply to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the comment to reply to.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message: {
+							/**
+							 * Message
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The reply message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text content of the reply to the comment.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attachment_url: {
+							/**
+							 * Attachment URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional attachment URL
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional URL to attach to the reply, such as an image or link.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_post: {
+					/**
+					 * New Post
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new post is created on a Facebook page.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors a Facebook page for new posts and triggers when a post is created. Supports filtering by visibility and customizable fields to retrieve specific post data.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						page_id: {
+							/**
+							 * Page ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Facebook page to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the Facebook page to monitor for new posts.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fields: {
+							/**
+							 * Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Post fields to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of post fields to include in the trigger data. Default includes id, message, created_time, permalink_url, full_picture, is_published, and is_hidden.
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_hidden: {
+							/**
+							 * Include Hidden Posts
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to include hidden posts
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, the trigger will also fire for posts that are hidden from the page timeline. Default is false.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_post_comment: {
+					/**
+					 * New Post Comment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new comment is added to a Facebook post.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors a specific Facebook post for new comments and triggers when a comment is added. Supports filtering by visibility, including replies, and customizable fields to retrieve specific comment data.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						page_id: {
+							/**
+							 * Page ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Facebook page containing the post
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the Facebook page that contains the post to monitor for comments.
+							 */
+							longDesc: () => LocalizedString
+						}
+						post_id: {
+							/**
+							 * Post ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The post to monitor for comments
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the specific Facebook post to monitor for new comments.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fields: {
+							/**
+							 * Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Comment fields to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of comment fields to include in the trigger data. Default includes id, message, created_time, from, like_count, comment_count, and permalink_url.
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_hidden: {
+							/**
+							 * Include Hidden Comments
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to include hidden comments
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, the trigger will also fire for comments that are hidden. Default is false.
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_replies: {
+							/**
+							 * Include Replies
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to include comment replies
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, the trigger will include replies to comments in addition to top-level comments. Default is true.
 							 */
 							longDesc: () => LocalizedString
 						}
