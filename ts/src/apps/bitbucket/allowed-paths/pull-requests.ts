@@ -18,6 +18,21 @@ export const BITBUCKET_PULL_REQUESTS_ALLOWED_PATHS = {
       },
     },
     POST: {
+      ignore_options: [
+        'type',
+        'author',
+        'closed_by',
+        'comment_count',
+        'created_on',
+        'id',
+        'merge_commit',
+        'participants',
+        'reason',
+        'rendered',
+        'state',
+        'task_count',
+        'updated_on',
+      ],
       override_options: {
         ...BitbucketWorkspaceAndRepoOptions,
         source: {
@@ -190,6 +205,18 @@ export const BITBUCKET_PULL_REQUESTS_ALLOWED_PATHS = {
       },
     },
     POST: {
+      ignore_options: [
+        'created_on',
+        'deleted',
+        'id',
+        'parent',
+        'pending',
+        'pullrequest',
+        'type',
+        'updated_on',
+        'user',
+        'links',
+      ],
       override_options: {
         ...BitbucketWorkspaceAndRepoOptions,
         type: {
@@ -225,6 +252,18 @@ export const BITBUCKET_PULL_REQUESTS_ALLOWED_PATHS = {
       },
     },
     PUT: {
+      ignore_options: [
+        'created_on',
+        'deleted',
+        'id',
+        'parent',
+        'pending',
+        'pullrequest',
+        'type',
+        'updated_on',
+        'user',
+        'links',
+      ],
       override_options: {
         ...BitbucketWorkspaceAndRepoOptions,
         pull_request_id: {
