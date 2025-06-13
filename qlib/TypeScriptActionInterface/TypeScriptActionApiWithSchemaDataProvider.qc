@@ -76,6 +76,9 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         #! Saved option override info
         *hash<auto> override_options_save;
 
+        #! Saved ignore options list
+        *list<auto> ignore_options_save;
+
         #! Saved action attributes
         *hash<auto> action_save;
 
@@ -104,10 +107,11 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
     #! Creates the object from the arguments
     constructor(reference<hash<auto>> action, string swagger_path, *hash<AsyncCallInfo> api,
             *hash<string, bool> path_vars, *hash<string, bool> independent_path_vars,
-            *hash<string, string> conn_opt_map, *hash<auto> override_options, ActionFunctionContext fctx,
-            *hash<AsyncCallInfo> get_dynamic_request_type, *hash<AsyncCallInfo> get_dynamic_response_type,
-            *hash<AsyncCallInfo> request_data_converter, *hash<AsyncCallInfo> response_data_converter,
-            *AbstractDataProviderType request_type, *AbstractDataProviderType response_type)
+            *hash<string, string> conn_opt_map, *hash<auto> override_options, *softlist<auto> ignore_options,
+            ActionFunctionContext fctx, *hash<AsyncCallInfo> get_dynamic_request_type,
+            *hash<AsyncCallInfo> get_dynamic_response_type, *hash<AsyncCallInfo> request_data_converter,
+            *hash<AsyncCallInfo> response_data_converter, *AbstractDataProviderType request_type,
+            *AbstractDataProviderType response_type)
             : TypeScriptActionApiDataProvider(action.action, api, fctx, get_dynamic_request_type,
             get_dynamic_response_type) {
         self.swagger_schema = remove action.swagger_schema;
@@ -134,9 +138,11 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                 info += action_save;
                 if (request_type_info.type && (*hash<string, AbstractDataField> fields =
                     request_type_info.type.getFields())) {
-                    info.options = DataProviderActionCatalog::getActionOptionFromFields(fields);
+                    info.options = DataProviderActionCatalog::getActionOptionFromFields(fields) - ignore_options;
                 }
             };
+        } else if (ignore_options) {
+            ignore_options_save = ignore_options;
         }
         if (request_type) {
             if (override_options) {
@@ -422,7 +428,16 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
     private createRequestTypeIntern() {
         request_type_info.type = prov.getRequestType();
 
-        if (request_type_info.type && (*hash<string, AbstractDataField> fields = request_type_info.type.getFields())) {
+        *hash<string, AbstractDataField> fields;
+        if (request_type_info.type && (fields = request_type_info.type.getFields())
+            && fields{ignore_options_save}) {
+            fields -= ignore_options_save;
+            request_type_info.type = request_type_info.type.copyWithFields(fields);
+            # disable the request type check
+            prov.disableRequestTypeCheck();
+        }
+
+        if (fields) {
             HashDataType newreq;
             code check = sub (hash<string, AbstractDataField> fields, string key) {
                 list<string> l = (key,);
@@ -536,7 +551,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             prov.disableRequestTypeCheck();
         }
 
-        if (request_type_info.type && (*hash<string, AbstractDataField> fields = request_type_info.type.getFields())) {
+        if (request_type_info.type && (fields = request_type_info.type.getFields())) {
             NoIoHelper nih();
             action_save.options = DataProviderActionCatalog::getActionOptionFromFields(fields);
             TypeScriptActionInterface::sortOptions({"name": action_save.app}, action_save, \action_save.options);

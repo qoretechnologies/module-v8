@@ -618,6 +618,8 @@ exports.actionsCatalogue = {
             "desc": "Create pet",
             "action_code": 2,  // DPAT_API == 2
             "swagger_path": "pet/POST",
+            /** ignore_options?: string[] -> ignores options given in the request type
+            */
             /** override_options?: object -> allows options to be overridden; keys are non-optimized request property
                 paths and must refer to a property that will be presented as an action option after flattening /
                 optimization. The attributes of the object are handled like action option attributes
