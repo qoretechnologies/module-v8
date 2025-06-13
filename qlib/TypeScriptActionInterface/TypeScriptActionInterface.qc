@@ -1689,8 +1689,9 @@ public class TypeScriptActionInterface {
             *hash<string, bool> path_vars = map {$1: True}, (swagger_path =~ x/\{([^\}]*)}/g);
             TypeScriptActionApiWithSchemaDataProvider dp(\action, swagger_path, api, path_vars,
                 (map {$1: True}, independent_path_vars), app_conn_opt_map{appname},
-                remove action.override_options, fctx, get_dynamic_request_type, get_dynamic_response_type,
-                request_data_converter, response_data_converter, request_type, response_type);
+                remove action.override_options, remove action.ignore_options, fctx, get_dynamic_request_type,
+                get_dynamic_response_type, request_data_converter, response_data_converter, request_type,
+                response_type);
             child = dp;
 
             action.output_type = child.getResponseType();
