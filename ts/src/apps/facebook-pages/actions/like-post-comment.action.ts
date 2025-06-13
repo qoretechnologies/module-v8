@@ -10,14 +10,12 @@ const options = {
   page_id: {
     required: true,
     type: 'string',
-    allowed_values_creatable: true,
     get_allowed_values: getFacebookPageIdAllowedValues,
     on_change: ['refetch'],
   },
   post_id: {
     required: true,
     type: 'string',
-    allowed_values_creatable: true,
     get_allowed_values: getFacebookPostIdAllowedValues,
     depends_on: ['page_id'],
   },

@@ -9,7 +9,6 @@ const options = {
   page_id: {
     required: true,
     type: 'string',
-    allowed_values_creatable: true,
     get_allowed_values: getFacebookPageIdAllowedValues,
   },
   limit: {
