@@ -33,6 +33,7 @@ import Teams from './apps/Teams';
 import Xero from './apps/Xero';
 import Zendesk from './apps/Zendesk';
 import Zoom from './apps/Zoom';
+import Odoo from './apps/Odoo';
 
 const en = {
   common: {},
@@ -120,6 +121,7 @@ const en = {
     GoogleSheets,
     GoogleContacts,
     Attio,
+    Odoo,
     Intercom,
     Xero,
     Dynamics,

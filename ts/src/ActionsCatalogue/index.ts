@@ -45,6 +45,7 @@ import { Debugger, DebugLevels } from '../utils/Debugger';
 import confluence from '../apps/confluence';
 import bitbucket from '../apps/bitbucket';
 import facebookPages from '../apps/facebook-pages';
+import odoo from '../apps/odoo';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -60,6 +61,7 @@ export interface IQoreApi {
 
 const NEW_APPS = {
   bitbucket,
+  odoo,
   confluence,
   zoom,
   facebookPages,
