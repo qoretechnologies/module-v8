@@ -1,5 +1,3 @@
-
-
 const NotionAppEn = {
   displayName: 'Notion',
   shortDesc: 'Collection of actions to interact with the Notion API',

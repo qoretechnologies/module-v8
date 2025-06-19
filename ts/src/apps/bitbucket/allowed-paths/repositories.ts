@@ -29,8 +29,30 @@ export const BITBUCKET_REPOSITORIES_ALLOWED_PATHS = {
       override_options: {
         ...BitbucketWorkspaceAndRepoOptions,
       },
+      ignore_options: [
+        'type',
+        'scm',
+        'uuid',
+        'size',
+        'updated_on',
+        'created_on',
+        'owner',
+        'has_issues',
+        'has_wiki',
+      ],
     },
     POST: {
+      ignore_options: [
+        'type',
+        'scm',
+        'uuid',
+        'size',
+        'updated_on',
+        'created_on',
+        'owner',
+        'has_issues',
+        'has_wiki',
+      ],
       override_options: {
         type: {
           required: false,

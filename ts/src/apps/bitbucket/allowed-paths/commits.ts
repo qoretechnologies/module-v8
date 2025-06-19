@@ -49,6 +49,17 @@ export const BITBUCKET_COMMITS_ALLOWED_PATHS = {
       },
     },
     POST: {
+      ignore_options: [
+        'type',
+        'created_on',
+        'updated_on',
+        'user',
+        'id',
+        'deleted',
+        'inline',
+        'links',
+        'parent',
+      ],
       override_options: {
         ...BitbucketWorkspaceAndRepoOptions,
         type: {
