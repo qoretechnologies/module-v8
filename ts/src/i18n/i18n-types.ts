@@ -33316,6 +33316,1414 @@ type RootTranslation = {
 				}
 			}
 		}
+		Paddle: {
+			/**
+			 * P​a​d​d​l​e
+			 */
+			displayName: string
+			/**
+			 * P​a​y​m​e​n​t​ ​p​r​o​c​e​s​s​i​n​g​ ​a​n​d​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​m​a​n​a​g​e​m​e​n​t​ ​p​l​a​t​f​o​r​m
+			 */
+			shortDesc: string
+			/**
+			 * I​n​t​e​g​r​a​t​e​ ​w​i​t​h​ ​P​a​d​d​l​e​ ​t​o​ ​h​a​n​d​l​e​ ​p​a​y​m​e​n​t​s​,​ ​s​u​b​s​c​r​i​p​t​i​o​n​s​,​ ​a​n​d​ ​b​i​l​l​i​n​g​.​ ​S​u​p​p​o​r​t​s​ ​o​n​e​-​t​i​m​e​ ​p​a​y​m​e​n​t​s​,​ ​r​e​c​u​r​r​i​n​g​ ​s​u​b​s​c​r​i​p​t​i​o​n​s​,​ ​t​a​x​ ​c​a​l​c​u​l​a​t​i​o​n​s​,​ ​a​n​d​ ​c​u​s​t​o​m​e​r​ ​m​a​n​a​g​e​m​e​n​t​ ​a​c​r​o​s​s​ ​m​u​l​t​i​p​l​e​ ​c​u​r​r​e​n​c​i​e​s​ ​a​n​d​ ​r​e​g​i​o​n​s​.
+			 */
+			longDesc: string
+			actions: {
+				archive_product: {
+					/**
+					 * A​r​c​h​i​v​e​ ​P​r​o​d​u​c​t
+					 */
+					displayName: string
+					/**
+					 * A​r​c​h​i​v​e​ ​a​ ​p​r​o​d​u​c​t​ ​i​n​ ​P​a​d​d​l​e
+					 */
+					shortDesc: string
+					/**
+					 * A​r​c​h​i​v​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​r​o​d​u​c​t​ ​i​n​ ​P​a​d​d​l​e​,​ ​m​a​k​i​n​g​ ​i​t​ ​u​n​a​v​a​i​l​a​b​l​e​ ​f​o​r​ ​n​e​w​ ​p​u​r​c​h​a​s​e​s​ ​w​h​i​l​e​ ​p​r​e​s​e​r​v​i​n​g​ ​h​i​s​t​o​r​i​c​a​l​ ​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						product_id: {
+							/**
+							 * P​r​o​d​u​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​d​u​c​t​ ​t​o​ ​a​r​c​h​i​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​r​o​d​u​c​t​ ​t​o​ ​a​r​c​h​i​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_product: {
+					/**
+					 * C​r​e​a​t​e​ ​P​r​o​d​u​c​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​p​r​o​d​u​c​t​ ​i​n​ ​P​a​d​d​l​e
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​p​r​o​d​u​c​t​ ​i​n​ ​P​a​d​d​l​e​ ​w​i​t​h​ ​s​p​e​c​i​f​i​e​d​ ​d​e​t​a​i​l​s​ ​i​n​c​l​u​d​i​n​g​ ​n​a​m​e​,​ ​t​a​x​ ​c​a​t​e​g​o​r​y​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​a​n​d​ ​o​t​h​e​r​ ​o​p​t​i​o​n​a​l​ ​p​r​o​p​e​r​t​i​e​s​.
+					 */
+					longDesc: string
+					options: {
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * P​r​o​d​u​c​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​r​o​d​u​c​t​.
+							 */
+							longDesc: string
+						}
+						tax_category: {
+							/**
+							 * T​a​x​ ​C​a​t​e​g​o​r​y
+							 */
+							displayName: string
+							/**
+							 * T​a​x​ ​c​a​t​e​g​o​r​y​ ​f​o​r​ ​t​h​e​ ​p​r​o​d​u​c​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​a​x​ ​c​a​t​e​g​o​r​y​ ​t​h​a​t​ ​a​p​p​l​i​e​s​ ​t​o​ ​t​h​i​s​ ​p​r​o​d​u​c​t​ ​f​o​r​ ​t​a​x​ ​c​a​l​c​u​l​a​t​i​o​n​ ​p​u​r​p​o​s​e​s​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * P​r​o​d​u​c​t​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​p​r​o​d​u​c​t​.
+							 */
+							longDesc: string
+						}
+						type: {
+							/**
+							 * T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * P​r​o​d​u​c​t​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​p​r​o​d​u​c​t​ ​(​e​.​g​.​,​ ​s​t​a​n​d​a​r​d​,​ ​d​i​g​i​t​a​l​)​.
+							 */
+							longDesc: string
+						}
+						image_url: {
+							/**
+							 * I​m​a​g​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * P​r​o​d​u​c​t​ ​i​m​a​g​e​ ​U​R​L
+							 */
+							shortDesc: string
+							/**
+							 * U​R​L​ ​t​o​ ​a​n​ ​i​m​a​g​e​ ​r​e​p​r​e​s​e​n​t​i​n​g​ ​t​h​e​ ​p​r​o​d​u​c​t​.
+							 */
+							longDesc: string
+						}
+						custom_data: {
+							/**
+							 * C​u​s​t​o​m​ ​D​a​t​a
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​m​e​t​a​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​m​e​t​a​d​a​t​a​ ​t​o​ ​s​t​o​r​e​ ​w​i​t​h​ ​t​h​e​ ​p​r​o​d​u​c​t​ ​a​s​ ​k​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_product: {
+					/**
+					 * G​e​t​ ​P​r​o​d​u​c​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​p​r​o​d​u​c​t​ ​f​r​o​m​ ​P​a​d​d​l​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​r​o​d​u​c​t​ ​f​r​o​m​ ​P​a​d​d​l​e​,​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​i​n​c​l​u​s​i​o​n​ ​o​f​ ​p​r​i​c​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						product_id: {
+							/**
+							 * P​r​o​d​u​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​d​u​c​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​r​o​d​u​c​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+						include_prices: {
+							/**
+							 * I​n​c​l​u​d​e​ ​P​r​i​c​e​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​p​r​i​c​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​p​r​i​c​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_products: {
+					/**
+					 * L​i​s​t​ ​P​r​o​d​u​c​t​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​p​r​o​d​u​c​t​s​ ​f​r​o​m​ ​P​a​d​d​l​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​p​r​o​d​u​c​t​s​ ​f​r​o​m​ ​P​a​d​d​l​e​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​,​ ​p​a​g​i​n​a​t​i​o​n​,​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​o​p​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						include_prices: {
+							/**
+							 * I​n​c​l​u​d​e​ ​P​r​i​c​e​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​p​r​i​c​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​p​r​i​c​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​ ​e​a​c​h​ ​p​r​o​d​u​c​t​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.
+							 */
+							longDesc: string
+						}
+						after: {
+							/**
+							 * A​f​t​e​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​c​u​r​s​o​r​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​g​e​t​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						ids: {
+							/**
+							 * P​r​o​d​u​c​t​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​p​r​o​d​u​c​t​ ​I​D​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​s​p​e​c​i​f​i​c​ ​p​r​o​d​u​c​t​ ​I​D​s​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​I​f​ ​p​r​o​v​i​d​e​d​,​ ​o​n​l​y​ ​t​h​e​s​e​ ​p​r​o​d​u​c​t​s​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+						per_page: {
+							/**
+							 * P​e​r​ ​P​a​g​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​p​r​o​d​u​c​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​.​ ​M​a​x​i​m​u​m​ ​i​s​ ​2​0​0​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​r​o​d​u​c​t​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​p​r​o​d​u​c​t​s​ ​b​y​ ​t​h​e​i​r​ ​s​t​a​t​u​s​ ​(​e​.​g​.​,​ ​a​c​t​i​v​e​,​ ​a​r​c​h​i​v​e​d​)​.
+							 */
+							longDesc: string
+						}
+						type: {
+							/**
+							 * T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​r​o​d​u​c​t​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​p​r​o​d​u​c​t​s​ ​b​y​ ​t​h​e​i​r​ ​t​y​p​e​ ​(​e​.​g​.​,​ ​s​t​a​n​d​a​r​d​,​ ​d​i​g​i​t​a​l​)​.
+							 */
+							longDesc: string
+						}
+						tax_category: {
+							/**
+							 * T​a​x​ ​C​a​t​e​g​o​r​i​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​t​a​x​ ​c​a​t​e​g​o​r​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​p​r​o​d​u​c​t​s​ ​b​y​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​t​a​x​ ​c​a​t​e​g​o​r​i​e​s​.
+							 */
+							longDesc: string
+						}
+						order: {
+							/**
+							 * S​o​r​t​ ​O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​i​n​g​ ​c​o​n​f​i​g​u​r​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+							fields: {
+								field: {
+									/**
+									 * S​o​r​t​ ​F​i​e​l​d
+									 */
+									displayName: string
+									/**
+									 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+									 */
+									shortDesc: string
+									/**
+									 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​b​y​.
+									 */
+									longDesc: string
+								}
+								direction: {
+									/**
+									 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+									 */
+									displayName: string
+									/**
+									 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+									 */
+									shortDesc: string
+									/**
+									 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)​.
+									 */
+									longDesc: string
+								}
+							}
+						}
+					}
+				}
+				update_product: {
+					/**
+					 * U​p​d​a​t​e​ ​P​r​o​d​u​c​t
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​ ​p​r​o​d​u​c​t​ ​i​n​ ​P​a​d​d​l​e
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​r​o​d​u​c​t​ ​i​n​ ​P​a​d​d​l​e​ ​w​i​t​h​ ​n​e​w​ ​i​n​f​o​r​m​a​t​i​o​n​ ​s​u​c​h​ ​a​s​ ​n​a​m​e​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​s​t​a​t​u​s​,​ ​o​r​ ​o​t​h​e​r​ ​p​r​o​p​e​r​t​i​e​s​.
+					 */
+					longDesc: string
+					options: {
+						product_id: {
+							/**
+							 * P​r​o​d​u​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​d​u​c​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​r​o​d​u​c​t​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * P​r​o​d​u​c​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​r​o​d​u​c​t​.
+							 */
+							longDesc: string
+						}
+						tax_category: {
+							/**
+							 * T​a​x​ ​C​a​t​e​g​o​r​y
+							 */
+							displayName: string
+							/**
+							 * T​a​x​ ​c​a​t​e​g​o​r​y​ ​f​o​r​ ​t​h​e​ ​p​r​o​d​u​c​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​t​a​x​ ​c​a​t​e​g​o​r​y​ ​t​h​a​t​ ​a​p​p​l​i​e​s​ ​t​o​ ​t​h​i​s​ ​p​r​o​d​u​c​t​ ​f​o​r​ ​t​a​x​ ​c​a​l​c​u​l​a​t​i​o​n​ ​p​u​r​p​o​s​e​s​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * P​r​o​d​u​c​t​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​p​r​o​d​u​c​t​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * P​r​o​d​u​c​t​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​s​t​a​t​u​s​ ​o​f​ ​t​h​e​ ​p​r​o​d​u​c​t​ ​(​e​.​g​.​,​ ​a​c​t​i​v​e​,​ ​a​r​c​h​i​v​e​d​)​.
+							 */
+							longDesc: string
+						}
+						type: {
+							/**
+							 * T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * P​r​o​d​u​c​t​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​t​y​p​e​ ​o​f​ ​p​r​o​d​u​c​t​ ​(​e​.​g​.​,​ ​s​t​a​n​d​a​r​d​,​ ​d​i​g​i​t​a​l​)​.
+							 */
+							longDesc: string
+						}
+						image_url: {
+							/**
+							 * I​m​a​g​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * P​r​o​d​u​c​t​ ​i​m​a​g​e​ ​U​R​L
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​U​R​L​ ​t​o​ ​a​n​ ​i​m​a​g​e​ ​r​e​p​r​e​s​e​n​t​i​n​g​ ​t​h​e​ ​p​r​o​d​u​c​t​.
+							 */
+							longDesc: string
+						}
+						custom_data: {
+							/**
+							 * C​u​s​t​o​m​ ​D​a​t​a
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​m​e​t​a​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​u​s​t​o​m​ ​m​e​t​a​d​a​t​a​ ​t​o​ ​s​t​o​r​e​ ​w​i​t​h​ ​t​h​e​ ​p​r​o​d​u​c​t​ ​a​s​ ​k​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_price: {
+					/**
+					 * C​r​e​a​t​e​ ​P​r​i​c​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​p​r​i​c​e​ ​f​o​r​ ​a​ ​p​r​o​d​u​c​t​ ​i​n​ ​P​a​d​d​l​e
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​p​r​i​c​e​ ​f​o​r​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​r​o​d​u​c​t​ ​i​n​ ​P​a​d​d​l​e​ ​w​i​t​h​ ​s​p​e​c​i​f​i​e​d​ ​u​n​i​t​ ​p​r​i​c​e​,​ ​b​i​l​l​i​n​g​ ​c​y​c​l​e​,​ ​t​a​x​ ​m​o​d​e​,​ ​a​n​d​ ​o​t​h​e​r​ ​p​r​i​c​i​n​g​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						product_id: {
+							/**
+							 * P​r​o​d​u​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​d​u​c​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​p​r​i​c​e​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​r​o​d​u​c​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​p​r​i​c​e​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * P​r​i​c​e​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​i​s​ ​p​r​i​c​e​ ​o​p​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						unit_price: {
+							/**
+							 * U​n​i​t​ ​P​r​i​c​e
+							 */
+							displayName: string
+							/**
+							 * B​a​s​e​ ​u​n​i​t​ ​p​r​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​b​a​s​e​ ​u​n​i​t​ ​p​r​i​c​e​ ​f​o​r​ ​t​h​i​s​ ​p​r​i​c​i​n​g​ ​o​p​t​i​o​n​.
+							 */
+							longDesc: string
+							fields: {
+								amount: {
+									/**
+									 * A​m​o​u​n​t
+									 */
+									displayName: string
+									/**
+									 * P​r​i​c​e​ ​a​m​o​u​n​t
+									 */
+									shortDesc: string
+									/**
+									 * T​h​e​ ​p​r​i​c​e​ ​a​m​o​u​n​t​ ​a​s​ ​a​ ​s​t​r​i​n​g​ ​(​e​.​g​.​,​ ​"​9​.​9​9​"​)​.
+									 */
+									longDesc: string
+								}
+								currencyCode: {
+									/**
+									 * C​u​r​r​e​n​c​y​ ​C​o​d​e
+									 */
+									displayName: string
+									/**
+									 * C​u​r​r​e​n​c​y​ ​f​o​r​ ​t​h​e​ ​p​r​i​c​e
+									 */
+									shortDesc: string
+									/**
+									 * T​h​e​ ​t​h​r​e​e​-​l​e​t​t​e​r​ ​I​S​O​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​(​e​.​g​.​,​ ​U​S​D​,​ ​E​U​R​,​ ​G​B​P​)​.
+									 */
+									longDesc: string
+								}
+							}
+						}
+						type: {
+							/**
+							 * T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * P​r​i​c​e​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​p​r​i​c​i​n​g​ ​(​e​.​g​.​,​ ​s​t​a​n​d​a​r​d​,​ ​d​i​g​i​t​a​l​)​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * P​r​i​c​e​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​f​r​i​e​n​d​l​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​i​s​ ​p​r​i​c​i​n​g​ ​o​p​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						billing_cycle: {
+							/**
+							 * B​i​l​l​i​n​g​ ​C​y​c​l​e
+							 */
+							displayName: string
+							/**
+							 * B​i​l​l​i​n​g​ ​f​r​e​q​u​e​n​c​y​ ​a​n​d​ ​i​n​t​e​r​v​a​l
+							 */
+							shortDesc: string
+							/**
+							 * D​e​f​i​n​e​s​ ​h​o​w​ ​o​f​t​e​n​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​i​s​ ​b​i​l​l​e​d​ ​f​o​r​ ​r​e​c​u​r​r​i​n​g​ ​p​r​i​c​e​s​.
+							 */
+							longDesc: string
+							fields: {
+								frequency: {
+									/**
+									 * F​r​e​q​u​e​n​c​y
+									 */
+									displayName: string
+									/**
+									 * B​i​l​l​i​n​g​ ​f​r​e​q​u​e​n​c​y​ ​n​u​m​b​e​r
+									 */
+									shortDesc: string
+									/**
+									 * H​o​w​ ​m​a​n​y​ ​i​n​t​e​r​v​a​l​s​ ​b​e​t​w​e​e​n​ ​e​a​c​h​ ​b​i​l​l​i​n​g​ ​(​e​.​g​.​,​ ​1​ ​f​o​r​ ​e​v​e​r​y​ ​m​o​n​t​h​,​ ​2​ ​f​o​r​ ​e​v​e​r​y​ ​2​ ​m​o​n​t​h​s​)​.
+									 */
+									longDesc: string
+								}
+								interval: {
+									/**
+									 * I​n​t​e​r​v​a​l
+									 */
+									displayName: string
+									/**
+									 * B​i​l​l​i​n​g​ ​i​n​t​e​r​v​a​l​ ​u​n​i​t
+									 */
+									shortDesc: string
+									/**
+									 * T​h​e​ ​t​i​m​e​ ​u​n​i​t​ ​f​o​r​ ​b​i​l​l​i​n​g​ ​(​e​.​g​.​,​ ​d​a​y​,​ ​w​e​e​k​,​ ​m​o​n​t​h​,​ ​y​e​a​r​)​.
+									 */
+									longDesc: string
+								}
+							}
+						}
+						trial_period: {
+							/**
+							 * T​r​i​a​l​ ​P​e​r​i​o​d
+							 */
+							displayName: string
+							/**
+							 * F​r​e​e​ ​t​r​i​a​l​ ​c​o​n​f​i​g​u​r​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * D​e​f​i​n​e​s​ ​t​h​e​ ​l​e​n​g​t​h​ ​o​f​ ​t​h​e​ ​f​r​e​e​ ​t​r​i​a​l​ ​p​e​r​i​o​d​ ​f​o​r​ ​t​h​i​s​ ​p​r​i​c​e​.
+							 */
+							longDesc: string
+							fields: {
+								frequency: {
+									/**
+									 * T​r​i​a​l​ ​F​r​e​q​u​e​n​c​y
+									 */
+									displayName: string
+									/**
+									 * T​r​i​a​l​ ​p​e​r​i​o​d​ ​l​e​n​g​t​h
+									 */
+									shortDesc: string
+									/**
+									 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​i​n​t​e​r​v​a​l​s​ ​f​o​r​ ​t​h​e​ ​t​r​i​a​l​ ​p​e​r​i​o​d​.
+									 */
+									longDesc: string
+								}
+								interval: {
+									/**
+									 * T​r​i​a​l​ ​I​n​t​e​r​v​a​l
+									 */
+									displayName: string
+									/**
+									 * T​r​i​a​l​ ​p​e​r​i​o​d​ ​u​n​i​t
+									 */
+									shortDesc: string
+									/**
+									 * T​h​e​ ​t​i​m​e​ ​u​n​i​t​ ​f​o​r​ ​t​h​e​ ​t​r​i​a​l​ ​p​e​r​i​o​d​ ​(​e​.​g​.​,​ ​d​a​y​,​ ​w​e​e​k​,​ ​m​o​n​t​h​)​.
+									 */
+									longDesc: string
+								}
+							}
+						}
+						tax_mode: {
+							/**
+							 * T​a​x​ ​M​o​d​e
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​a​x​ ​i​s​ ​c​a​l​c​u​l​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * D​e​t​e​r​m​i​n​e​s​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​p​r​i​c​e​ ​i​n​c​l​u​d​e​s​ ​t​a​x​ ​o​r​ ​i​f​ ​t​a​x​ ​i​s​ ​a​d​d​e​d​ ​o​n​ ​t​o​p​.
+							 */
+							longDesc: string
+						}
+						unit_price_overrides: {
+							/**
+							 * P​r​i​c​e​ ​O​v​e​r​r​i​d​e​s
+							 */
+							displayName: string
+							/**
+							 * C​o​u​n​t​r​y​-​s​p​e​c​i​f​i​c​ ​p​r​i​c​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * O​v​e​r​r​i​d​e​ ​t​h​e​ ​b​a​s​e​ ​p​r​i​c​e​ ​f​o​r​ ​s​p​e​c​i​f​i​c​ ​c​o​u​n​t​r​i​e​s​ ​o​r​ ​r​e​g​i​o​n​s​.
+							 */
+							longDesc: string
+							fields: {
+								countryCodes: {
+									/**
+									 * C​o​u​n​t​r​y​ ​C​o​d​e​s
+									 */
+									displayName: string
+									/**
+									 * C​o​u​n​t​r​i​e​s​ ​f​o​r​ ​t​h​i​s​ ​o​v​e​r​r​i​d​e
+									 */
+									shortDesc: string
+									/**
+									 * L​i​s​t​ ​o​f​ ​I​S​O​ ​c​o​u​n​t​r​y​ ​c​o​d​e​s​ ​w​h​e​r​e​ ​t​h​i​s​ ​p​r​i​c​e​ ​o​v​e​r​r​i​d​e​ ​a​p​p​l​i​e​s​.
+									 */
+									longDesc: string
+								}
+								unitPrice: {
+									/**
+									 * O​v​e​r​r​i​d​e​ ​P​r​i​c​e
+									 */
+									displayName: string
+									/**
+									 * P​r​i​c​e​ ​f​o​r​ ​t​h​e​s​e​ ​c​o​u​n​t​r​i​e​s
+									 */
+									shortDesc: string
+									/**
+									 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​p​r​i​c​e​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​c​o​u​n​t​r​i​e​s​.
+									 */
+									longDesc: string
+									fields: {
+										amount: {
+											/**
+											 * O​v​e​r​r​i​d​e​ ​A​m​o​u​n​t
+											 */
+											displayName: string
+											/**
+											 * O​v​e​r​r​i​d​e​ ​p​r​i​c​e​ ​a​m​o​u​n​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e​ ​a​m​o​u​n​t​ ​a​s​ ​a​ ​s​t​r​i​n​g​.
+											 */
+											longDesc: string
+										}
+										currencyCode: {
+											/**
+											 * O​v​e​r​r​i​d​e​ ​C​u​r​r​e​n​c​y
+											 */
+											displayName: string
+											/**
+											 * C​u​r​r​e​n​c​y​ ​f​o​r​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+						quantity: {
+							/**
+							 * Q​u​a​n​t​i​t​y​ ​L​i​m​i​t​s
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​a​n​d​ ​m​a​x​i​m​u​m​ ​q​u​a​n​t​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​l​i​m​i​t​s​ ​o​n​ ​h​o​w​ ​m​a​n​y​ ​u​n​i​t​s​ ​c​a​n​ ​b​e​ ​p​u​r​c​h​a​s​e​d​.
+							 */
+							longDesc: string
+							fields: {
+								minimum: {
+									/**
+									 * M​i​n​i​m​u​m​ ​Q​u​a​n​t​i​t​y
+									 */
+									displayName: string
+									/**
+									 * M​i​n​i​m​u​m​ ​p​u​r​c​h​a​s​e​ ​q​u​a​n​t​i​t​y
+									 */
+									shortDesc: string
+									/**
+									 * T​h​e​ ​m​i​n​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​t​h​a​t​ ​m​u​s​t​ ​b​e​ ​p​u​r​c​h​a​s​e​d​.
+									 */
+									longDesc: string
+								}
+								maximum: {
+									/**
+									 * M​a​x​i​m​u​m​ ​Q​u​a​n​t​i​t​y
+									 */
+									displayName: string
+									/**
+									 * M​a​x​i​m​u​m​ ​p​u​r​c​h​a​s​e​ ​q​u​a​n​t​i​t​y
+									 */
+									shortDesc: string
+									/**
+									 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​p​u​r​c​h​a​s​e​d​.
+									 */
+									longDesc: string
+								}
+							}
+						}
+						custom_data: {
+							/**
+							 * C​u​s​t​o​m​ ​D​a​t​a
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​m​e​t​a​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​m​e​t​a​d​a​t​a​ ​t​o​ ​s​t​o​r​e​ ​w​i​t​h​ ​t​h​e​ ​p​r​i​c​e​ ​a​s​ ​k​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_price: {
+					/**
+					 * G​e​t​ ​P​r​i​c​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​p​r​i​c​e​ ​f​r​o​m​ ​P​a​d​d​l​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​r​i​c​e​ ​f​r​o​m​ ​P​a​d​d​l​e​,​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​i​n​c​l​u​s​i​o​n​ ​o​f​ ​p​r​o​d​u​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						price_id: {
+							/**
+							 * P​r​i​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​i​c​e​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​r​i​c​e​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+						include_product: {
+							/**
+							 * I​n​c​l​u​d​e​ ​P​r​o​d​u​c​t
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​p​r​o​d​u​c​t​ ​i​n​f​o​r​m​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​t​h​e​ ​a​s​s​o​c​i​a​t​e​d​ ​p​r​o​d​u​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_prices: {
+					/**
+					 * L​i​s​t​ ​P​r​i​c​e​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​p​r​i​c​e​s​ ​f​r​o​m​ ​P​a​d​d​l​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​p​r​i​c​e​s​ ​f​r​o​m​ ​P​a​d​d​l​e​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​p​r​o​d​u​c​t​,​ ​s​t​a​t​u​s​,​ ​t​y​p​e​,​ ​a​n​d​ ​o​t​h​e​r​ ​c​r​i​t​e​r​i​a​,​ ​p​l​u​s​ ​s​o​r​t​i​n​g​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​ ​o​p​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						include_product: {
+							/**
+							 * I​n​c​l​u​d​e​ ​P​r​o​d​u​c​t
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​p​r​o​d​u​c​t​ ​i​n​f​o​r​m​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​t​h​e​ ​a​s​s​o​c​i​a​t​e​d​ ​p​r​o​d​u​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​ ​e​a​c​h​ ​p​r​i​c​e​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.
+							 */
+							longDesc: string
+						}
+						after: {
+							/**
+							 * A​f​t​e​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​c​u​r​s​o​r​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​g​e​t​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						ids: {
+							/**
+							 * P​r​i​c​e​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​p​r​i​c​e​ ​I​D​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​s​p​e​c​i​f​i​c​ ​p​r​i​c​e​ ​I​D​s​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​I​f​ ​p​r​o​v​i​d​e​d​,​ ​o​n​l​y​ ​t​h​e​s​e​ ​p​r​i​c​e​s​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+						product_ids: {
+							/**
+							 * P​r​o​d​u​c​t​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​r​o​d​u​c​t​ ​I​D​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​p​r​o​d​u​c​t​ ​I​D​s​ ​t​o​ ​f​i​l​t​e​r​ ​p​r​i​c​e​s​ ​b​y​.​ ​O​n​l​y​ ​p​r​i​c​e​s​ ​f​o​r​ ​t​h​e​s​e​ ​p​r​o​d​u​c​t​s​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+						per_page: {
+							/**
+							 * P​e​r​ ​P​a​g​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​p​r​i​c​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​.​ ​M​a​x​i​m​u​m​ ​i​s​ ​2​0​0​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​r​i​c​e​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​p​r​i​c​e​s​ ​b​y​ ​t​h​e​i​r​ ​s​t​a​t​u​s​ ​(​e​.​g​.​,​ ​a​c​t​i​v​e​,​ ​a​r​c​h​i​v​e​d​)​.
+							 */
+							longDesc: string
+						}
+						recurring: {
+							/**
+							 * R​e​c​u​r​r​i​n​g​ ​O​n​l​y
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​r​e​c​u​r​r​i​n​g​ ​p​r​i​c​e​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​o​n​l​y​ ​r​e​t​u​r​n​ ​r​e​c​u​r​r​i​n​g​ ​p​r​i​c​e​s​ ​(​w​i​t​h​ ​b​i​l​l​i​n​g​ ​c​y​c​l​e​s​)​.
+							 */
+							longDesc: string
+						}
+						type: {
+							/**
+							 * T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​r​i​c​e​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​p​r​i​c​e​s​ ​b​y​ ​t​h​e​i​r​ ​t​y​p​e​ ​(​e​.​g​.​,​ ​s​t​a​n​d​a​r​d​,​ ​d​i​g​i​t​a​l​)​.
+							 */
+							longDesc: string
+						}
+						order: {
+							/**
+							 * S​o​r​t​ ​O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​i​n​g​ ​c​o​n​f​i​g​u​r​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+							fields: {
+								field: {
+									/**
+									 * S​o​r​t​ ​F​i​e​l​d
+									 */
+									displayName: string
+									/**
+									 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+									 */
+									shortDesc: string
+									/**
+									 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​b​y​.
+									 */
+									longDesc: string
+								}
+								direction: {
+									/**
+									 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+									 */
+									displayName: string
+									/**
+									 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+									 */
+									shortDesc: string
+									/**
+									 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)​.
+									 */
+									longDesc: string
+								}
+							}
+						}
+					}
+				}
+				update_price: {
+					/**
+					 * U​p​d​a​t​e​ ​P​r​i​c​e
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​ ​p​r​i​c​e​ ​i​n​ ​P​a​d​d​l​e
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​r​i​c​e​ ​i​n​ ​P​a​d​d​l​e​ ​w​i​t​h​ ​n​e​w​ ​p​r​i​c​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​b​i​l​l​i​n​g​ ​c​y​c​l​e​s​,​ ​t​a​x​ ​s​e​t​t​i​n​g​s​,​ ​o​r​ ​o​t​h​e​r​ ​p​r​i​c​e​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						price_id: {
+							/**
+							 * P​r​i​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​i​c​e​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​r​i​c​e​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​p​r​i​c​e​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​u​p​d​a​t​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​f​o​r​ ​t​h​i​s​ ​p​r​i​c​e​ ​o​p​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						unit_price: {
+							/**
+							 * U​n​i​t​ ​P​r​i​c​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​u​n​i​t​ ​p​r​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​b​a​s​e​ ​u​n​i​t​ ​p​r​i​c​e​ ​f​o​r​ ​t​h​i​s​ ​p​r​i​c​i​n​g​ ​o​p​t​i​o​n​.
+							 */
+							longDesc: string
+							fields: {
+								amount: {
+									/**
+									 * A​m​o​u​n​t
+									 */
+									displayName: string
+									/**
+									 * U​p​d​a​t​e​d​ ​p​r​i​c​e​ ​a​m​o​u​n​t
+									 */
+									shortDesc: string
+									/**
+									 * T​h​e​ ​u​p​d​a​t​e​d​ ​p​r​i​c​e​ ​a​m​o​u​n​t​ ​a​s​ ​a​ ​s​t​r​i​n​g​ ​(​e​.​g​.​,​ ​"​9​.​9​9​"​)​.
+									 */
+									longDesc: string
+								}
+								currencyCode: {
+									/**
+									 * C​u​r​r​e​n​c​y​ ​C​o​d​e
+									 */
+									displayName: string
+									/**
+									 * U​p​d​a​t​e​d​ ​c​u​r​r​e​n​c​y​ ​f​o​r​ ​t​h​e​ ​p​r​i​c​e
+									 */
+									shortDesc: string
+									/**
+									 * T​h​e​ ​u​p​d​a​t​e​d​ ​t​h​r​e​e​-​l​e​t​t​e​r​ ​I​S​O​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​(​e​.​g​.​,​ ​U​S​D​,​ ​E​U​R​,​ ​G​B​P​)​.
+									 */
+									longDesc: string
+								}
+							}
+						}
+						type: {
+							/**
+							 * T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​p​r​i​c​e​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​t​y​p​e​ ​o​f​ ​p​r​i​c​i​n​g​ ​(​e​.​g​.​,​ ​s​t​a​n​d​a​r​d​,​ ​d​i​g​i​t​a​l​)​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​p​r​i​c​e​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​u​p​d​a​t​e​d​ ​f​r​i​e​n​d​l​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​i​s​ ​p​r​i​c​i​n​g​ ​o​p​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						billing_cycle: {
+							/**
+							 * B​i​l​l​i​n​g​ ​C​y​c​l​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​b​i​l​l​i​n​g​ ​f​r​e​q​u​e​n​c​y
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​h​o​w​ ​o​f​t​e​n​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​i​s​ ​b​i​l​l​e​d​ ​f​o​r​ ​r​e​c​u​r​r​i​n​g​ ​p​r​i​c​e​s​.
+							 */
+							longDesc: string
+							fields: {
+								frequency: {
+									/**
+									 * F​r​e​q​u​e​n​c​y
+									 */
+									displayName: string
+									/**
+									 * U​p​d​a​t​e​d​ ​b​i​l​l​i​n​g​ ​f​r​e​q​u​e​n​c​y
+									 */
+									shortDesc: string
+									/**
+									 * U​p​d​a​t​e​d​ ​n​u​m​b​e​r​ ​o​f​ ​i​n​t​e​r​v​a​l​s​ ​b​e​t​w​e​e​n​ ​e​a​c​h​ ​b​i​l​l​i​n​g​.
+									 */
+									longDesc: string
+								}
+								interval: {
+									/**
+									 * I​n​t​e​r​v​a​l
+									 */
+									displayName: string
+									/**
+									 * U​p​d​a​t​e​d​ ​b​i​l​l​i​n​g​ ​i​n​t​e​r​v​a​l
+									 */
+									shortDesc: string
+									/**
+									 * T​h​e​ ​u​p​d​a​t​e​d​ ​t​i​m​e​ ​u​n​i​t​ ​f​o​r​ ​b​i​l​l​i​n​g​ ​(​e​.​g​.​,​ ​d​a​y​,​ ​w​e​e​k​,​ ​m​o​n​t​h​,​ ​y​e​a​r​)​.
+									 */
+									longDesc: string
+								}
+							}
+						}
+						trial_period: {
+							/**
+							 * T​r​i​a​l​ ​P​e​r​i​o​d
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​t​r​i​a​l​ ​c​o​n​f​i​g​u​r​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​f​r​e​e​ ​t​r​i​a​l​ ​p​e​r​i​o​d​ ​f​o​r​ ​t​h​i​s​ ​p​r​i​c​e​.
+							 */
+							longDesc: string
+							fields: {
+								frequency: {
+									/**
+									 * T​r​i​a​l​ ​F​r​e​q​u​e​n​c​y
+									 */
+									displayName: string
+									/**
+									 * U​p​d​a​t​e​d​ ​t​r​i​a​l​ ​p​e​r​i​o​d​ ​l​e​n​g​t​h
+									 */
+									shortDesc: string
+									/**
+									 * T​h​e​ ​u​p​d​a​t​e​d​ ​n​u​m​b​e​r​ ​o​f​ ​i​n​t​e​r​v​a​l​s​ ​f​o​r​ ​t​h​e​ ​t​r​i​a​l​ ​p​e​r​i​o​d​.
+									 */
+									longDesc: string
+								}
+								interval: {
+									/**
+									 * T​r​i​a​l​ ​I​n​t​e​r​v​a​l
+									 */
+									displayName: string
+									/**
+									 * U​p​d​a​t​e​d​ ​t​r​i​a​l​ ​p​e​r​i​o​d​ ​u​n​i​t
+									 */
+									shortDesc: string
+									/**
+									 * T​h​e​ ​u​p​d​a​t​e​d​ ​t​i​m​e​ ​u​n​i​t​ ​f​o​r​ ​t​h​e​ ​t​r​i​a​l​ ​p​e​r​i​o​d​ ​(​e​.​g​.​,​ ​d​a​y​,​ ​w​e​e​k​,​ ​m​o​n​t​h​)​.
+									 */
+									longDesc: string
+								}
+							}
+						}
+						tax_mode: {
+							/**
+							 * T​a​x​ ​M​o​d​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​t​a​x​ ​c​a​l​c​u​l​a​t​i​o​n​ ​m​e​t​h​o​d
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​s​e​t​t​i​n​g​ ​f​o​r​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​p​r​i​c​e​ ​i​n​c​l​u​d​e​s​ ​t​a​x​ ​o​r​ ​i​f​ ​t​a​x​ ​i​s​ ​a​d​d​e​d​ ​o​n​ ​t​o​p​.
+							 */
+							longDesc: string
+						}
+						unit_price_overrides: {
+							/**
+							 * P​r​i​c​e​ ​O​v​e​r​r​i​d​e​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​o​u​n​t​r​y​-​s​p​e​c​i​f​i​c​ ​p​r​i​c​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​p​r​i​c​e​ ​o​v​e​r​r​i​d​e​s​ ​f​o​r​ ​s​p​e​c​i​f​i​c​ ​c​o​u​n​t​r​i​e​s​ ​o​r​ ​r​e​g​i​o​n​s​.
+							 */
+							longDesc: string
+							fields: {
+								countryCodes: {
+									/**
+									 * C​o​u​n​t​r​y​ ​C​o​d​e​s
+									 */
+									displayName: string
+									/**
+									 * U​p​d​a​t​e​d​ ​c​o​u​n​t​r​i​e​s​ ​f​o​r​ ​o​v​e​r​r​i​d​e​s
+									 */
+									shortDesc: string
+									/**
+									 * U​p​d​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​I​S​O​ ​c​o​u​n​t​r​y​ ​c​o​d​e​s​ ​w​h​e​r​e​ ​p​r​i​c​e​ ​o​v​e​r​r​i​d​e​s​ ​a​p​p​l​y​.
+									 */
+									longDesc: string
+								}
+								unitPrice: {
+									/**
+									 * O​v​e​r​r​i​d​e​ ​P​r​i​c​e
+									 */
+									displayName: string
+									/**
+									 * U​p​d​a​t​e​d​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e
+									 */
+									shortDesc: string
+									/**
+									 * T​h​e​ ​u​p​d​a​t​e​d​ ​s​p​e​c​i​f​i​c​ ​p​r​i​c​e​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​c​o​u​n​t​r​i​e​s​.
+									 */
+									longDesc: string
+									fields: {
+										amount: {
+											/**
+											 * O​v​e​r​r​i​d​e​ ​A​m​o​u​n​t
+											 */
+											displayName: string
+											/**
+											 * U​p​d​a​t​e​d​ ​o​v​e​r​r​i​d​e​ ​a​m​o​u​n​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​p​d​a​t​e​d​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e​ ​a​m​o​u​n​t​ ​a​s​ ​a​ ​s​t​r​i​n​g​.
+											 */
+											longDesc: string
+										}
+										currencyCode: {
+											/**
+											 * O​v​e​r​r​i​d​e​ ​C​u​r​r​e​n​c​y
+											 */
+											displayName: string
+											/**
+											 * U​p​d​a​t​e​d​ ​o​v​e​r​r​i​d​e​ ​c​u​r​r​e​n​c​y
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​p​d​a​t​e​d​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+						quantity: {
+							/**
+							 * Q​u​a​n​t​i​t​y​ ​L​i​m​i​t​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​q​u​a​n​t​i​t​y​ ​l​i​m​i​t​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​l​i​m​i​t​s​ ​o​n​ ​h​o​w​ ​m​a​n​y​ ​u​n​i​t​s​ ​c​a​n​ ​b​e​ ​p​u​r​c​h​a​s​e​d​.
+							 */
+							longDesc: string
+							fields: {
+								minimum: {
+									/**
+									 * M​i​n​i​m​u​m​ ​Q​u​a​n​t​i​t​y
+									 */
+									displayName: string
+									/**
+									 * U​p​d​a​t​e​d​ ​m​i​n​i​m​u​m​ ​q​u​a​n​t​i​t​y
+									 */
+									shortDesc: string
+									/**
+									 * T​h​e​ ​u​p​d​a​t​e​d​ ​m​i​n​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​t​h​a​t​ ​m​u​s​t​ ​b​e​ ​p​u​r​c​h​a​s​e​d​.
+									 */
+									longDesc: string
+								}
+								maximum: {
+									/**
+									 * M​a​x​i​m​u​m​ ​Q​u​a​n​t​i​t​y
+									 */
+									displayName: string
+									/**
+									 * U​p​d​a​t​e​d​ ​m​a​x​i​m​u​m​ ​q​u​a​n​t​i​t​y
+									 */
+									shortDesc: string
+									/**
+									 * T​h​e​ ​u​p​d​a​t​e​d​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​p​u​r​c​h​a​s​e​d​.
+									 */
+									longDesc: string
+								}
+							}
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​p​r​i​c​e​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​s​t​a​t​u​s​ ​o​f​ ​t​h​e​ ​p​r​i​c​e​ ​(​e​.​g​.​,​ ​a​c​t​i​v​e​,​ ​a​r​c​h​i​v​e​d​)​.
+							 */
+							longDesc: string
+						}
+						custom_data: {
+							/**
+							 * C​u​s​t​o​m​ ​D​a​t​a
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​u​s​t​o​m​ ​m​e​t​a​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​u​s​t​o​m​ ​m​e​t​a​d​a​t​a​ ​t​o​ ​s​t​o​r​e​ ​w​i​t​h​ ​t​h​e​ ​p​r​i​c​e​ ​a​s​ ​k​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+			}
+		}
 	}
 }
 
@@ -66621,6 +68029,1414 @@ export type TranslationFunctions = {
 						}
 					}
 				}
+			}
+		}
+		Paddle: {
+			/**
+			 * Paddle
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Payment processing and subscription management platform
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Integrate with Paddle to handle payments, subscriptions, and billing. Supports one-time payments, recurring subscriptions, tax calculations, and customer management across multiple currencies and regions.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				archive_product: {
+					/**
+					 * Archive Product
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Archive a product in Paddle
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Archives an existing product in Paddle, making it unavailable for new purchases while preserving historical data.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						product_id: {
+							/**
+							 * Product ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The product to archive
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the product to archive.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_product: {
+					/**
+					 * Create Product
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new product in Paddle
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new product in Paddle with specified details including name, tax category, description, and other optional properties.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Product name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the product.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tax_category: {
+							/**
+							 * Tax Category
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Tax category for the product
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The tax category that applies to this product for tax calculation purposes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Product description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A detailed description of the product.
+							 */
+							longDesc: () => LocalizedString
+						}
+						type: {
+							/**
+							 * Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Product type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The type of product (e.g., standard, digital).
+							 */
+							longDesc: () => LocalizedString
+						}
+						image_url: {
+							/**
+							 * Image URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Product image URL
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * URL to an image representing the product.
+							 */
+							longDesc: () => LocalizedString
+						}
+						custom_data: {
+							/**
+							 * Custom Data
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom metadata
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom metadata to store with the product as key-value pairs.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_product: {
+					/**
+					 * Get Product
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a product from Paddle
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves detailed information about a specific product from Paddle, with optional inclusion of pricing information.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						product_id: {
+							/**
+							 * Product ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The product to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the product to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_prices: {
+							/**
+							 * Include Prices
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include pricing information
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include pricing information in the response.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_products: {
+					/**
+					 * List Products
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List products from Paddle
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of products from Paddle with support for filtering, pagination, and sorting options.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						include_prices: {
+							/**
+							 * Include Prices
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include pricing information
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include pricing information for each product in the response.
+							 */
+							longDesc: () => LocalizedString
+						}
+						after: {
+							/**
+							 * After
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A cursor for pagination. Use this to get the next page of results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						ids: {
+							/**
+							 * Product IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by specific product IDs
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of specific product IDs to retrieve. If provided, only these products will be returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+						per_page: {
+							/**
+							 * Per Page
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of results per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of products to return per page. Maximum is 200.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by product status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter products by their status (e.g., active, archived).
+							 */
+							longDesc: () => LocalizedString
+						}
+						type: {
+							/**
+							 * Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by product type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter products by their type (e.g., standard, digital).
+							 */
+							longDesc: () => LocalizedString
+						}
+						tax_category: {
+							/**
+							 * Tax Categories
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by tax categories
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter products by one or more tax categories.
+							 */
+							longDesc: () => LocalizedString
+						}
+						order: {
+							/**
+							 * Sort Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sorting configuration
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Configure how to sort the results.
+							 */
+							longDesc: () => LocalizedString
+							fields: {
+								field: {
+									/**
+									 * Sort Field
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Field to sort by
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * The field to sort the results by.
+									 */
+									longDesc: () => LocalizedString
+								}
+								direction: {
+									/**
+									 * Sort Direction
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Sort direction
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * The direction to sort the results (ascending or descending).
+									 */
+									longDesc: () => LocalizedString
+								}
+							}
+						}
+					}
+				}
+				update_product: {
+					/**
+					 * Update Product
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update a product in Paddle
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates an existing product in Paddle with new information such as name, description, status, or other properties.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						product_id: {
+							/**
+							 * Product ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The product to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the product to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Product name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated name of the product.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tax_category: {
+							/**
+							 * Tax Category
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Tax category for the product
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated tax category that applies to this product for tax calculation purposes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Product description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated description of the product.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Product status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated status of the product (e.g., active, archived).
+							 */
+							longDesc: () => LocalizedString
+						}
+						type: {
+							/**
+							 * Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Product type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated type of product (e.g., standard, digital).
+							 */
+							longDesc: () => LocalizedString
+						}
+						image_url: {
+							/**
+							 * Image URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Product image URL
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated URL to an image representing the product.
+							 */
+							longDesc: () => LocalizedString
+						}
+						custom_data: {
+							/**
+							 * Custom Data
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom metadata
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated custom metadata to store with the product as key-value pairs.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_price: {
+					/**
+					 * Create Price
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new price for a product in Paddle
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new price for an existing product in Paddle with specified unit price, billing cycle, tax mode, and other pricing configurations.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						product_id: {
+							/**
+							 * Product ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The product to create a price for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the product to create a price for.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Price description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A detailed description of this price option.
+							 */
+							longDesc: () => LocalizedString
+						}
+						unit_price: {
+							/**
+							 * Unit Price
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Base unit price
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The base unit price for this pricing option.
+							 */
+							longDesc: () => LocalizedString
+							fields: {
+								amount: {
+									/**
+									 * Amount
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Price amount
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * The price amount as a string (e.g., "9.99").
+									 */
+									longDesc: () => LocalizedString
+								}
+								currencyCode: {
+									/**
+									 * Currency Code
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Currency for the price
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * The three-letter ISO currency code (e.g., USD, EUR, GBP).
+									 */
+									longDesc: () => LocalizedString
+								}
+							}
+						}
+						type: {
+							/**
+							 * Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Price type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The type of pricing (e.g., standard, digital).
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Price name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A friendly name for this pricing option.
+							 */
+							longDesc: () => LocalizedString
+						}
+						billing_cycle: {
+							/**
+							 * Billing Cycle
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Billing frequency and interval
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Defines how often the customer is billed for recurring prices.
+							 */
+							longDesc: () => LocalizedString
+							fields: {
+								frequency: {
+									/**
+									 * Frequency
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Billing frequency number
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * How many intervals between each billing (e.g., 1 for every month, 2 for every 2 months).
+									 */
+									longDesc: () => LocalizedString
+								}
+								interval: {
+									/**
+									 * Interval
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Billing interval unit
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * The time unit for billing (e.g., day, week, month, year).
+									 */
+									longDesc: () => LocalizedString
+								}
+							}
+						}
+						trial_period: {
+							/**
+							 * Trial Period
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Free trial configuration
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Defines the length of the free trial period for this price.
+							 */
+							longDesc: () => LocalizedString
+							fields: {
+								frequency: {
+									/**
+									 * Trial Frequency
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Trial period length
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * The number of intervals for the trial period.
+									 */
+									longDesc: () => LocalizedString
+								}
+								interval: {
+									/**
+									 * Trial Interval
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Trial period unit
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * The time unit for the trial period (e.g., day, week, month).
+									 */
+									longDesc: () => LocalizedString
+								}
+							}
+						}
+						tax_mode: {
+							/**
+							 * Tax Mode
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How tax is calculated
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Determines whether the price includes tax or if tax is added on top.
+							 */
+							longDesc: () => LocalizedString
+						}
+						unit_price_overrides: {
+							/**
+							 * Price Overrides
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Country-specific pricing
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Override the base price for specific countries or regions.
+							 */
+							longDesc: () => LocalizedString
+							fields: {
+								countryCodes: {
+									/**
+									 * Country Codes
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Countries for this override
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * List of ISO country codes where this price override applies.
+									 */
+									longDesc: () => LocalizedString
+								}
+								unitPrice: {
+									/**
+									 * Override Price
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Price for these countries
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * The specific price to use for the selected countries.
+									 */
+									longDesc: () => LocalizedString
+									fields: {
+										amount: {
+											/**
+											 * Override Amount
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Override price amount
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The override price amount as a string.
+											 */
+											longDesc: () => LocalizedString
+										}
+										currencyCode: {
+											/**
+											 * Override Currency
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Currency for override price
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The currency code for the override price.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+						quantity: {
+							/**
+							 * Quantity Limits
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum and maximum quantity
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set limits on how many units can be purchased.
+							 */
+							longDesc: () => LocalizedString
+							fields: {
+								minimum: {
+									/**
+									 * Minimum Quantity
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Minimum purchase quantity
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * The minimum number of units that must be purchased.
+									 */
+									longDesc: () => LocalizedString
+								}
+								maximum: {
+									/**
+									 * Maximum Quantity
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Maximum purchase quantity
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * The maximum number of units that can be purchased.
+									 */
+									longDesc: () => LocalizedString
+								}
+							}
+						}
+						custom_data: {
+							/**
+							 * Custom Data
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom metadata
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom metadata to store with the price as key-value pairs.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_price: {
+					/**
+					 * Get Price
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a price from Paddle
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves detailed information about a specific price from Paddle, with optional inclusion of product information.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						price_id: {
+							/**
+							 * Price ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The price to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the price to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_product: {
+							/**
+							 * Include Product
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include product information
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include the associated product information in the response.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_prices: {
+					/**
+					 * List Prices
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List prices from Paddle
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of prices from Paddle with support for filtering by product, status, type, and other criteria, plus sorting and pagination options.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						include_product: {
+							/**
+							 * Include Product
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include product information
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include the associated product information for each price in the response.
+							 */
+							longDesc: () => LocalizedString
+						}
+						after: {
+							/**
+							 * After
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A cursor for pagination. Use this to get the next page of results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						ids: {
+							/**
+							 * Price IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by specific price IDs
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of specific price IDs to retrieve. If provided, only these prices will be returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+						product_ids: {
+							/**
+							 * Product IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by product IDs
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of product IDs to filter prices by. Only prices for these products will be returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+						per_page: {
+							/**
+							 * Per Page
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of results per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of prices to return per page. Maximum is 200.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by price status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter prices by their status (e.g., active, archived).
+							 */
+							longDesc: () => LocalizedString
+						}
+						recurring: {
+							/**
+							 * Recurring Only
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by recurring prices
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to only return recurring prices (with billing cycles).
+							 */
+							longDesc: () => LocalizedString
+						}
+						type: {
+							/**
+							 * Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by price type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter prices by their type (e.g., standard, digital).
+							 */
+							longDesc: () => LocalizedString
+						}
+						order: {
+							/**
+							 * Sort Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sorting configuration
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Configure how to sort the results.
+							 */
+							longDesc: () => LocalizedString
+							fields: {
+								field: {
+									/**
+									 * Sort Field
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Field to sort by
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * The field to sort the results by.
+									 */
+									longDesc: () => LocalizedString
+								}
+								direction: {
+									/**
+									 * Sort Direction
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Sort direction
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * The direction to sort the results (ascending or descending).
+									 */
+									longDesc: () => LocalizedString
+								}
+							}
+						}
+					}
+				}
+				update_price: {
+					/**
+					 * Update Price
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update a price in Paddle
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates an existing price in Paddle with new pricing information, billing cycles, tax settings, or other price configurations.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						price_id: {
+							/**
+							 * Price ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The price to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the price to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated price description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An updated description for this price option.
+							 */
+							longDesc: () => LocalizedString
+						}
+						unit_price: {
+							/**
+							 * Unit Price
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated unit price
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated base unit price for this pricing option.
+							 */
+							longDesc: () => LocalizedString
+							fields: {
+								amount: {
+									/**
+									 * Amount
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Updated price amount
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * The updated price amount as a string (e.g., "9.99").
+									 */
+									longDesc: () => LocalizedString
+								}
+								currencyCode: {
+									/**
+									 * Currency Code
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Updated currency for the price
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * The updated three-letter ISO currency code (e.g., USD, EUR, GBP).
+									 */
+									longDesc: () => LocalizedString
+								}
+							}
+						}
+						type: {
+							/**
+							 * Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated price type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated type of pricing (e.g., standard, digital).
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated price name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An updated friendly name for this pricing option.
+							 */
+							longDesc: () => LocalizedString
+						}
+						billing_cycle: {
+							/**
+							 * Billing Cycle
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated billing frequency
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated configuration for how often the customer is billed for recurring prices.
+							 */
+							longDesc: () => LocalizedString
+							fields: {
+								frequency: {
+									/**
+									 * Frequency
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Updated billing frequency
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Updated number of intervals between each billing.
+									 */
+									longDesc: () => LocalizedString
+								}
+								interval: {
+									/**
+									 * Interval
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Updated billing interval
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * The updated time unit for billing (e.g., day, week, month, year).
+									 */
+									longDesc: () => LocalizedString
+								}
+							}
+						}
+						trial_period: {
+							/**
+							 * Trial Period
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated trial configuration
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated configuration for the free trial period for this price.
+							 */
+							longDesc: () => LocalizedString
+							fields: {
+								frequency: {
+									/**
+									 * Trial Frequency
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Updated trial period length
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * The updated number of intervals for the trial period.
+									 */
+									longDesc: () => LocalizedString
+								}
+								interval: {
+									/**
+									 * Trial Interval
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Updated trial period unit
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * The updated time unit for the trial period (e.g., day, week, month).
+									 */
+									longDesc: () => LocalizedString
+								}
+							}
+						}
+						tax_mode: {
+							/**
+							 * Tax Mode
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated tax calculation method
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated setting for whether the price includes tax or if tax is added on top.
+							 */
+							longDesc: () => LocalizedString
+						}
+						unit_price_overrides: {
+							/**
+							 * Price Overrides
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated country-specific pricing
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated price overrides for specific countries or regions.
+							 */
+							longDesc: () => LocalizedString
+							fields: {
+								countryCodes: {
+									/**
+									 * Country Codes
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Updated countries for overrides
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Updated list of ISO country codes where price overrides apply.
+									 */
+									longDesc: () => LocalizedString
+								}
+								unitPrice: {
+									/**
+									 * Override Price
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Updated override price
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * The updated specific price to use for the selected countries.
+									 */
+									longDesc: () => LocalizedString
+									fields: {
+										amount: {
+											/**
+											 * Override Amount
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Updated override amount
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The updated override price amount as a string.
+											 */
+											longDesc: () => LocalizedString
+										}
+										currencyCode: {
+											/**
+											 * Override Currency
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Updated override currency
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The updated currency code for the override price.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+						quantity: {
+							/**
+							 * Quantity Limits
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated quantity limits
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated limits on how many units can be purchased.
+							 */
+							longDesc: () => LocalizedString
+							fields: {
+								minimum: {
+									/**
+									 * Minimum Quantity
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Updated minimum quantity
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * The updated minimum number of units that must be purchased.
+									 */
+									longDesc: () => LocalizedString
+								}
+								maximum: {
+									/**
+									 * Maximum Quantity
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Updated maximum quantity
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * The updated maximum number of units that can be purchased.
+									 */
+									longDesc: () => LocalizedString
+								}
+							}
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated price status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated status of the price (e.g., active, archived).
+							 */
+							longDesc: () => LocalizedString
+						}
+						custom_data: {
+							/**
+							 * Custom Data
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated custom metadata
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated custom metadata to store with the price as key-value pairs.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
 			}
 		}
 	}
