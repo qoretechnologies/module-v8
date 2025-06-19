@@ -6492,6 +6492,2626 @@ type RootTranslation = {
 				}
 			}
 		}
+		Odoo: {
+			/**
+			 * O​d​o​o​ ​C​R​M
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​y​o​u​r​ ​O​d​o​o​ ​C​R​M​ ​i​n​s​t​a​n​c​e
+			 */
+			shortDesc: string
+			/**
+			 * O​d​o​o​ ​i​s​ ​a​ ​s​u​i​t​e​ ​o​f​ ​o​p​e​n​-​s​o​u​r​c​e​ ​b​u​s​i​n​e​s​s​ ​a​p​p​s​ ​t​h​a​t​ ​c​o​v​e​r​ ​a​l​l​ ​y​o​u​r​ ​c​o​m​p​a​n​y​ ​n​e​e​d​s​:​ ​C​R​M​,​ ​e​C​o​m​m​e​r​c​e​,​ ​a​c​c​o​u​n​t​i​n​g​,​ ​i​n​v​e​n​t​o​r​y​,​ ​p​o​i​n​t​ ​o​f​ ​s​a​l​e​,​ ​p​r​o​j​e​c​t​ ​m​a​n​a​g​e​m​e​n​t​,​ ​e​t​c​.
+			 */
+			longDesc: string
+			actions: {
+				create_partner: {
+					/**
+					 * C​r​e​a​t​e​ ​P​a​r​t​n​e​r
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​p​a​r​t​n​e​r​ ​(​c​o​n​t​a​c​t​ ​o​r​ ​c​o​m​p​a​n​y​)​ ​i​n​ ​O​d​o​o
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​p​a​r​t​n​e​r​ ​r​e​c​o​r​d​ ​i​n​ ​O​d​o​o​ ​w​i​t​h​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​d​d​r​e​s​s​ ​d​e​t​a​i​l​s​,​ ​b​u​s​i​n​e​s​s​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​n​d​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​d​a​t​a​.​ ​P​a​r​t​n​e​r​s​ ​c​a​n​ ​b​e​ ​i​n​d​i​v​i​d​u​a​l​s​ ​o​r​ ​c​o​m​p​a​n​i​e​s​ ​a​n​d​ ​s​e​r​v​e​ ​a​s​ ​c​u​s​t​o​m​e​r​s​,​ ​v​e​n​d​o​r​s​,​ ​o​r​ ​b​o​t​h​.
+					 */
+					longDesc: string
+					options: {
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * P​a​r​t​n​e​r​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​a​r​t​n​e​r​ ​(​i​n​d​i​v​i​d​u​a​l​ ​o​r​ ​c​o​m​p​a​n​y​ ​n​a​m​e​)​.
+							 */
+							longDesc: string
+						}
+						is_company: {
+							/**
+							 * I​s​ ​C​o​m​p​a​n​y
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​i​s​ ​p​a​r​t​n​e​r​ ​i​s​ ​a​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​t​r​u​e​ ​i​f​ ​t​h​i​s​ ​p​a​r​t​n​e​r​ ​r​e​p​r​e​s​e​n​t​s​ ​a​ ​c​o​m​p​a​n​y​/​o​r​g​a​n​i​z​a​t​i​o​n​,​ ​f​a​l​s​e​ ​f​o​r​ ​i​n​d​i​v​i​d​u​a​l​ ​c​o​n​t​a​c​t​s​.
+							 */
+							longDesc: string
+						}
+						contact_info: {
+							/**
+							 * C​o​n​t​a​c​t​ ​I​n​f​o​r​m​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​ ​d​e​t​a​i​l​s​ ​f​o​r​ ​t​h​e​ ​p​a​r​t​n​e​r
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​e​m​a​i​l​,​ ​p​h​o​n​e​,​ ​w​e​b​s​i​t​e​,​ ​j​o​b​ ​f​u​n​c​t​i​o​n​ ​a​n​d​ ​t​i​t​l​e​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									email: {
+										/**
+										 * E​m​a​i​l
+										 */
+										displayName: string
+										/**
+										 * E​m​a​i​l​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * P​r​i​m​a​r​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​p​a​r​t​n​e​r​.
+										 */
+										longDesc: string
+									}
+									phone: {
+										/**
+										 * P​h​o​n​e
+										 */
+										displayName: string
+										/**
+										 * P​h​o​n​e​ ​n​u​m​b​e​r
+										 */
+										shortDesc: string
+										/**
+										 * P​r​i​m​a​r​y​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​p​a​r​t​n​e​r​.
+										 */
+										longDesc: string
+									}
+									website: {
+										/**
+										 * W​e​b​s​i​t​e
+										 */
+										displayName: string
+										/**
+										 * W​e​b​s​i​t​e​ ​U​R​L
+										 */
+										shortDesc: string
+										/**
+										 * W​e​b​s​i​t​e​ ​U​R​L​ ​f​o​r​ ​t​h​e​ ​p​a​r​t​n​e​r​ ​o​r​ ​c​o​m​p​a​n​y​.
+										 */
+										longDesc: string
+									}
+									'function': {
+										/**
+										 * J​o​b​ ​F​u​n​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * J​o​b​ ​t​i​t​l​e​ ​o​r​ ​f​u​n​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * J​o​b​ ​t​i​t​l​e​ ​o​r​ ​f​u​n​c​t​i​o​n​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​p​e​r​s​o​n​.
+										 */
+										longDesc: string
+									}
+									title: {
+										/**
+										 * T​i​t​l​e
+										 */
+										displayName: string
+										/**
+										 * T​i​t​l​e​ ​(​M​r​.​,​ ​M​r​s​.​,​ ​e​t​c​.​)
+										 */
+										shortDesc: string
+										/**
+										 * P​e​r​s​o​n​a​l​ ​t​i​t​l​e​ ​s​u​c​h​ ​a​s​ ​M​r​.​,​ ​M​r​s​.​,​ ​M​s​.​,​ ​D​r​.​,​ ​P​r​o​f​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						address_info: {
+							/**
+							 * A​d​d​r​e​s​s​ ​I​n​f​o​r​m​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​d​d​r​e​s​s​ ​d​e​t​a​i​l​s​ ​f​o​r​ ​t​h​e​ ​p​a​r​t​n​e​r
+							 */
+							shortDesc: string
+							/**
+							 * C​o​m​p​l​e​t​e​ ​a​d​d​r​e​s​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​s​t​r​e​e​t​,​ ​c​i​t​y​,​ ​s​t​a​t​e​,​ ​c​o​u​n​t​r​y​,​ ​a​n​d​ ​p​o​s​t​a​l​ ​c​o​d​e​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									street: {
+										/**
+										 * S​t​r​e​e​t
+										 */
+										displayName: string
+										/**
+										 * S​t​r​e​e​t​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * P​r​i​m​a​r​y​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​l​i​n​e​.
+										 */
+										longDesc: string
+									}
+									street2: {
+										/**
+										 * S​t​r​e​e​t​ ​2
+										 */
+										displayName: string
+										/**
+										 * A​d​d​i​t​i​o​n​a​l​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * A​d​d​i​t​i​o​n​a​l​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​l​i​n​e​ ​(​a​p​a​r​t​m​e​n​t​,​ ​s​u​i​t​e​,​ ​e​t​c​.​)​.
+										 */
+										longDesc: string
+									}
+									city: {
+										/**
+										 * C​i​t​y
+										 */
+										displayName: string
+										/**
+										 * C​i​t​y​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * C​i​t​y​ ​o​r​ ​l​o​c​a​l​i​t​y​ ​n​a​m​e​.
+										 */
+										longDesc: string
+									}
+									zip: {
+										/**
+										 * Z​I​P​ ​C​o​d​e
+										 */
+										displayName: string
+										/**
+										 * P​o​s​t​a​l​ ​c​o​d​e
+										 */
+										shortDesc: string
+										/**
+										 * Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​.
+										 */
+										longDesc: string
+									}
+									country_id: {
+										/**
+										 * C​o​u​n​t​r​y
+										 */
+										displayName: string
+										/**
+										 * C​o​u​n​t​r​y
+										 */
+										shortDesc: string
+										/**
+										 * C​o​u​n​t​r​y​ ​w​h​e​r​e​ ​t​h​e​ ​p​a​r​t​n​e​r​ ​i​s​ ​l​o​c​a​t​e​d​.
+										 */
+										longDesc: string
+									}
+									state_id: {
+										/**
+										 * S​t​a​t​e
+										 */
+										displayName: string
+										/**
+										 * S​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e
+										 */
+										shortDesc: string
+										/**
+										 * S​t​a​t​e​,​ ​p​r​o​v​i​n​c​e​,​ ​o​r​ ​r​e​g​i​o​n​ ​w​i​t​h​i​n​ ​t​h​e​ ​c​o​u​n​t​r​y​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						business_info: {
+							/**
+							 * B​u​s​i​n​e​s​s​ ​I​n​f​o​r​m​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * B​u​s​i​n​e​s​s​-​r​e​l​a​t​e​d​ ​d​e​t​a​i​l​s
+							 */
+							shortDesc: string
+							/**
+							 * B​u​s​i​n​e​s​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​V​A​T​ ​n​u​m​b​e​r​,​ ​r​e​f​e​r​e​n​c​e​ ​c​o​d​e​,​ ​a​n​d​ ​i​n​d​u​s​t​r​y​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									vat: {
+										/**
+										 * V​A​T​ ​N​u​m​b​e​r
+										 */
+										displayName: string
+										/**
+										 * T​a​x​ ​i​d​e​n​t​i​f​i​c​a​t​i​o​n​ ​n​u​m​b​e​r
+										 */
+										shortDesc: string
+										/**
+										 * V​A​T​ ​o​r​ ​t​a​x​ ​i​d​e​n​t​i​f​i​c​a​t​i​o​n​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​p​a​r​t​n​e​r​.
+										 */
+										longDesc: string
+									}
+									ref: {
+										/**
+										 * R​e​f​e​r​e​n​c​e
+										 */
+										displayName: string
+										/**
+										 * I​n​t​e​r​n​a​l​ ​r​e​f​e​r​e​n​c​e​ ​c​o​d​e
+										 */
+										shortDesc: string
+										/**
+										 * I​n​t​e​r​n​a​l​ ​r​e​f​e​r​e​n​c​e​ ​c​o​d​e​ ​o​r​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​p​a​r​t​n​e​r​.
+										 */
+										longDesc: string
+									}
+									industry_id: {
+										/**
+										 * I​n​d​u​s​t​r​y
+										 */
+										displayName: string
+										/**
+										 * I​n​d​u​s​t​r​y​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * I​n​d​u​s​t​r​y​ ​o​r​ ​b​u​s​i​n​e​s​s​ ​s​e​c​t​o​r​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						relationship_info: {
+							/**
+							 * R​e​l​a​t​i​o​n​s​h​i​p​ ​I​n​f​o​r​m​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * R​e​l​a​t​i​o​n​s​h​i​p​ ​a​n​d​ ​a​s​s​i​g​n​m​e​n​t​ ​d​e​t​a​i​l​s
+							 */
+							shortDesc: string
+							/**
+							 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​ ​t​o​ ​o​t​h​e​r​ ​p​a​r​t​n​e​r​s​ ​a​n​d​ ​u​s​e​r​ ​a​s​s​i​g​n​m​e​n​t​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									parent_id: {
+										/**
+										 * P​a​r​e​n​t​ ​C​o​m​p​a​n​y
+										 */
+										displayName: string
+										/**
+										 * P​a​r​e​n​t​ ​c​o​m​p​a​n​y​ ​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * P​a​r​e​n​t​ ​c​o​m​p​a​n​y​ ​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​t​h​i​s​ ​p​a​r​t​n​e​r​ ​b​e​l​o​n​g​s​ ​t​o​.
+										 */
+										longDesc: string
+									}
+									user_id: {
+										/**
+										 * A​s​s​i​g​n​e​d​ ​U​s​e​r
+										 */
+										displayName: string
+										/**
+										 * U​s​e​r​ ​r​e​s​p​o​n​s​i​b​l​e​ ​f​o​r​ ​t​h​i​s​ ​p​a​r​t​n​e​r
+										 */
+										shortDesc: string
+										/**
+										 * O​d​o​o​ ​u​s​e​r​ ​r​e​s​p​o​n​s​i​b​l​e​ ​f​o​r​ ​m​a​n​a​g​i​n​g​ ​t​h​i​s​ ​p​a​r​t​n​e​r​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						category_ids: {
+							/**
+							 * C​a​t​e​g​o​r​i​e​s
+							 */
+							displayName: string
+							/**
+							 * P​a​r​t​n​e​r​ ​c​a​t​e​g​o​r​i​e​s​ ​o​r​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * C​a​t​e​g​o​r​i​e​s​ ​o​r​ ​t​a​g​s​ ​t​o​ ​c​l​a​s​s​i​f​y​ ​a​n​d​ ​o​r​g​a​n​i​z​e​ ​p​a​r​t​n​e​r​s​.
+							 */
+							longDesc: string
+						}
+						active: {
+							/**
+							 * A​c​t​i​v​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​e​ ​p​a​r​t​n​e​r​ ​i​s​ ​a​c​t​i​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​f​a​l​s​e​ ​t​o​ ​a​r​c​h​i​v​e​ ​t​h​e​ ​p​a​r​t​n​e​r​ ​w​i​t​h​o​u​t​ ​d​e​l​e​t​i​n​g​ ​i​t​.
+							 */
+							longDesc: string
+						}
+						comment: {
+							/**
+							 * I​n​t​e​r​n​a​l​ ​N​o​t​e​s
+							 */
+							displayName: string
+							/**
+							 * I​n​t​e​r​n​a​l​ ​n​o​t​e​s​ ​a​b​o​u​t​ ​t​h​e​ ​p​a​r​t​n​e​r
+							 */
+							shortDesc: string
+							/**
+							 * I​n​t​e​r​n​a​l​ ​n​o​t​e​s​ ​o​r​ ​c​o​m​m​e​n​t​s​ ​a​b​o​u​t​ ​t​h​e​ ​p​a​r​t​n​e​r​.
+							 */
+							longDesc: string
+						}
+						lang: {
+							/**
+							 * L​a​n​g​u​a​g​e
+							 */
+							displayName: string
+							/**
+							 * P​r​e​f​e​r​r​e​d​ ​l​a​n​g​u​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * P​r​e​f​e​r​r​e​d​ ​l​a​n​g​u​a​g​e​ ​f​o​r​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​ ​w​i​t​h​ ​t​h​i​s​ ​p​a​r​t​n​e​r​.
+							 */
+							longDesc: string
+						}
+						tz: {
+							/**
+							 * T​i​m​e​z​o​n​e
+							 */
+							displayName: string
+							/**
+							 * P​a​r​t​n​e​r​ ​t​i​m​e​z​o​n​e
+							 */
+							shortDesc: string
+							/**
+							 * T​i​m​e​z​o​n​e​ ​w​h​e​r​e​ ​t​h​e​ ​p​a​r​t​n​e​r​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						image_1920: {
+							/**
+							 * P​r​o​f​i​l​e​ ​I​m​a​g​e
+							 */
+							displayName: string
+							/**
+							 * P​a​r​t​n​e​r​ ​p​r​o​f​i​l​e​ ​i​m​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​f​i​l​e​ ​i​m​a​g​e​ ​f​o​r​ ​t​h​e​ ​p​a​r​t​n​e​r​ ​(​b​a​s​e​6​4​ ​e​n​c​o​d​e​d​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_partner: {
+					/**
+					 * G​e​t​ ​P​a​r​t​n​e​r
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​i​n​g​l​e​ ​p​a​r​t​n​e​r​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​O​d​o​o
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​a​r​t​n​e​r​ ​f​r​o​m​ ​O​d​o​o​.​ ​A​l​l​o​w​s​ ​s​e​l​e​c​t​i​n​g​ ​w​h​i​c​h​ ​f​i​e​l​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​o​r​ ​c​u​s​t​o​m​i​z​e​d​ ​d​a​t​a​ ​r​e​q​u​i​r​e​m​e​n​t​s​.
+					 */
+					longDesc: string
+					options: {
+						partner_id: {
+							/**
+							 * P​a​r​t​n​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​p​a​r​t​n​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​a​r​t​n​e​r​ ​r​e​c​o​r​d​ ​t​o​ ​f​e​t​c​h​ ​f​r​o​m​ ​O​d​o​o​.
+							 */
+							longDesc: string
+						}
+						fields: {
+							/**
+							 * F​i​e​l​d​s​ ​t​o​ ​R​e​t​r​i​e​v​e
+							 */
+							displayName: string
+							/**
+							 * P​a​r​t​n​e​r​ ​f​i​e​l​d​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​r​e​s​p​o​n​s​e
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​s​p​e​c​i​f​i​c​ ​p​a​r​t​n​e​r​ ​f​i​e​l​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​r​e​t​u​r​n​s​ ​b​a​s​i​c​ ​p​a​r​t​n​e​r​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​I​D​,​ ​n​a​m​e​,​ ​e​m​a​i​l​,​ ​p​h​o​n​e​,​ ​a​n​d​ ​c​o​m​p​a​n​y​ ​s​t​a​t​u​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_partner: {
+					/**
+					 * D​e​l​e​t​e​ ​P​a​r​t​n​e​r
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​p​a​r​t​n​e​r​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​O​d​o​o
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​s​ ​a​ ​p​a​r​t​n​e​r​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​O​d​o​o​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.​ ​C​o​n​s​i​d​e​r​ ​a​r​c​h​i​v​i​n​g​ ​(​s​e​t​t​i​n​g​ ​a​c​t​i​v​e​ ​t​o​ ​f​a​l​s​e​)​ ​i​n​s​t​e​a​d​ ​i​f​ ​y​o​u​ ​n​e​e​d​ ​t​o​ ​p​r​e​s​e​r​v​e​ ​t​h​e​ ​r​e​c​o​r​d​.
+					 */
+					longDesc: string
+					options: {
+						partner_id: {
+							/**
+							 * P​a​r​t​n​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​p​a​r​t​n​e​r​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​a​r​t​n​e​r​ ​r​e​c​o​r​d​ ​t​o​ ​d​e​l​e​t​e​ ​f​r​o​m​ ​O​d​o​o​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_lead: {
+					/**
+					 * C​r​e​a​t​e​ ​L​e​a​d
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​l​e​a​d​ ​o​r​ ​o​p​p​o​r​t​u​n​i​t​y​ ​i​n​ ​O​d​o​o​ ​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​l​e​a​d​ ​o​r​ ​o​p​p​o​r​t​u​n​i​t​y​ ​r​e​c​o​r​d​ ​i​n​ ​O​d​o​o​ ​C​R​M​ ​w​i​t​h​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​c​o​n​t​a​c​t​,​ ​s​a​l​e​s​,​ ​a​n​d​ ​m​a​r​k​e​t​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n​.​ ​S​u​p​p​o​r​t​s​ ​g​r​o​u​p​i​n​g​ ​r​e​l​a​t​e​d​ ​f​i​e​l​d​s​ ​f​o​r​ ​b​e​t​t​e​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						name: {
+							/**
+							 * O​p​p​o​r​t​u​n​i​t​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​a​m​e​/​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​l​e​a​d​ ​o​r​ ​o​p​p​o​r​t​u​n​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​i​n​ ​t​i​t​l​e​ ​o​r​ ​n​a​m​e​ ​t​h​a​t​ ​i​d​e​n​t​i​f​i​e​s​ ​t​h​i​s​ ​l​e​a​d​ ​o​r​ ​o​p​p​o​r​t​u​n​i​t​y​.​ ​T​h​i​s​ ​i​s​ ​a​ ​r​e​q​u​i​r​e​d​ ​f​i​e​l​d​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​d​i​s​p​l​a​y​e​d​ ​i​n​ ​l​e​a​d​ ​l​i​s​t​s​ ​a​n​d​ ​r​e​p​o​r​t​s​.
+							 */
+							longDesc: string
+						}
+						contact_name: {
+							/**
+							 * C​o​n​t​a​c​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​p​e​r​s​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​u​l​l​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​r​i​m​a​r​y​ ​c​o​n​t​a​c​t​ ​p​e​r​s​o​n​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​l​e​a​d​.
+							 */
+							longDesc: string
+						}
+						partner_name: {
+							/**
+							 * C​o​m​p​a​n​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​t​h​a​t​ ​t​h​i​s​ ​l​e​a​d​ ​r​e​p​r​e​s​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+						contact_info: {
+							/**
+							 * C​o​n​t​a​c​t​ ​I​n​f​o​r​m​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​ ​d​e​t​a​i​l​s​ ​f​o​r​ ​t​h​e​ ​l​e​a​d
+							 */
+							shortDesc: string
+							/**
+							 * C​o​m​p​l​e​t​e​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​,​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s​,​ ​j​o​b​ ​p​o​s​i​t​i​o​n​,​ ​a​n​d​ ​w​e​b​s​i​t​e​ ​d​e​t​a​i​l​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									email_from: {
+										/**
+										 * E​m​a​i​l
+										 */
+										displayName: string
+										/**
+										 * P​r​i​m​a​r​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​m​a​i​n​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​c​o​n​t​a​c​t​i​n​g​ ​t​h​i​s​ ​l​e​a​d​.
+										 */
+										longDesc: string
+									}
+									email_cc: {
+										/**
+										 * E​m​a​i​l​ ​C​C
+										 */
+										displayName: string
+										/**
+										 * C​C​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s
+										 */
+										shortDesc: string
+										/**
+										 * A​d​d​i​t​i​o​n​a​l​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​b​e​ ​c​o​p​i​e​d​ ​o​n​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​s​.
+										 */
+										longDesc: string
+									}
+									phone: {
+										/**
+										 * P​h​o​n​e
+										 */
+										displayName: string
+										/**
+										 * P​r​i​m​a​r​y​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​m​a​i​n​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​c​o​n​t​a​c​t​i​n​g​ ​t​h​i​s​ ​l​e​a​d​.
+										 */
+										longDesc: string
+									}
+									mobile: {
+										/**
+										 * P​h​o​n​e​ ​N​u​m​b​e​r
+										 */
+										displayName: string
+										/**
+										 * M​o​b​i​l​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+										 */
+										shortDesc: string
+										/**
+										 * M​o​b​i​l​e​ ​o​r​ ​c​e​l​l​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+										 */
+										longDesc: string
+									}
+									'function': {
+										/**
+										 * J​o​b​ ​P​o​s​i​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * J​o​b​ ​t​i​t​l​e​ ​o​r​ ​p​o​s​i​t​i​o​n​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​j​o​b​ ​t​i​t​l​e​,​ ​r​o​l​e​,​ ​o​r​ ​p​o​s​i​t​i​o​n​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​p​e​r​s​o​n​ ​w​i​t​h​i​n​ ​t​h​e​i​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​.
+										 */
+										longDesc: string
+									}
+									website: {
+										/**
+										 * W​e​b​s​i​t​e
+										 */
+										displayName: string
+										/**
+										 * C​o​m​p​a​n​y​ ​o​r​ ​c​o​n​t​a​c​t​ ​w​e​b​s​i​t​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​w​e​b​s​i​t​e​ ​U​R​L​ ​f​o​r​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​o​r​ ​c​o​n​t​a​c​t​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						address_info: {
+							/**
+							 * A​d​d​r​e​s​s​ ​I​n​f​o​r​m​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​d​d​r​e​s​s​ ​d​e​t​a​i​l​s​ ​f​o​r​ ​t​h​e​ ​l​e​a​d
+							 */
+							shortDesc: string
+							/**
+							 * C​o​m​p​l​e​t​e​ ​a​d​d​r​e​s​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​,​ ​c​i​t​y​,​ ​s​t​a​t​e​,​ ​c​o​u​n​t​r​y​,​ ​a​n​d​ ​p​o​s​t​a​l​ ​c​o​d​e​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									street: {
+										/**
+										 * S​t​r​e​e​t
+										 */
+										displayName: string
+										/**
+										 * S​t​r​e​e​t​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​o​r​ ​f​i​r​s​t​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+									street2: {
+										/**
+										 * S​t​r​e​e​t​2
+										 */
+										displayName: string
+										/**
+										 * A​d​d​i​t​i​o​n​a​l​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​i​n​f​o​r​m​a​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * A​d​d​i​t​i​o​n​a​l​ ​a​d​d​r​e​s​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​s​u​c​h​ ​a​s​ ​a​p​a​r​t​m​e​n​t​ ​n​u​m​b​e​r​,​ ​s​u​i​t​e​,​ ​o​r​ ​b​u​i​l​d​i​n​g​ ​d​e​t​a​i​l​s​.
+										 */
+										longDesc: string
+									}
+									city: {
+										/**
+										 * C​i​t​y
+										 */
+										displayName: string
+										/**
+										 * C​i​t​y​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​i​t​y​ ​o​r​ ​t​o​w​n​ ​n​a​m​e​.
+										 */
+										longDesc: string
+									}
+									zip: {
+										/**
+										 * Z​i​p
+										 */
+										displayName: string
+										/**
+										 * P​o​s​t​a​l​/​Z​I​P​ ​c​o​d​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​o​r​ ​Z​I​P​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+									country_id: {
+										/**
+										 * C​o​u​n​t​r​y
+										 */
+										displayName: string
+										/**
+										 * C​o​u​n​t​r​y​ ​I​D​ ​(​u​s​e​ ​c​o​u​n​t​r​y​ ​r​e​c​o​r​d​ ​I​D​)
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​u​n​t​r​y​ ​r​e​c​o​r​d​ ​i​n​ ​O​d​o​o​.​ ​U​s​e​ ​t​h​e​ ​a​p​p​r​o​p​r​i​a​t​e​ ​c​o​u​n​t​r​y​ ​I​D​ ​f​r​o​m​ ​y​o​u​r​ ​O​d​o​o​ ​i​n​s​t​a​n​c​e​.
+										 */
+										longDesc: string
+									}
+									state_id: {
+										/**
+										 * S​t​a​t​e
+										 */
+										displayName: string
+										/**
+										 * S​t​a​t​e​/​P​r​o​v​i​n​c​e​ ​I​D​ ​(​u​s​e​ ​s​t​a​t​e​ ​r​e​c​o​r​d​ ​I​D​)
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​ ​r​e​c​o​r​d​ ​i​n​ ​O​d​o​o​.​ ​U​s​e​ ​t​h​e​ ​a​p​p​r​o​p​r​i​a​t​e​ ​s​t​a​t​e​ ​I​D​ ​f​r​o​m​ ​y​o​u​r​ ​O​d​o​o​ ​i​n​s​t​a​n​c​e​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sales_info: {
+							/**
+							 * S​a​l​e​s​ ​I​n​f​o​r​m​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​a​l​e​s​-​r​e​l​a​t​e​d​ ​d​e​t​a​i​l​s​ ​f​o​r​ ​t​h​e​ ​l​e​a​d
+							 */
+							shortDesc: string
+							/**
+							 * S​a​l​e​s​ ​m​a​n​a​g​e​m​e​n​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​a​s​s​i​g​n​e​d​ ​s​a​l​e​s​p​e​r​s​o​n​,​ ​t​e​a​m​,​ ​s​t​a​g​e​,​ ​p​r​i​o​r​i​t​y​,​ ​a​n​d​ ​e​x​p​e​c​t​e​d​ ​c​l​o​s​i​n​g​ ​d​e​t​a​i​l​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									user_id: {
+										/**
+										 * S​a​l​e​s​p​e​r​s​o​n
+										 */
+										displayName: string
+										/**
+										 * I​D​ ​o​f​ ​t​h​e​ ​a​s​s​i​g​n​e​d​ ​s​a​l​e​s​p​e​r​s​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​ ​i​s​ ​a​s​s​i​g​n​e​d​ ​a​s​ ​t​h​e​ ​s​a​l​e​s​p​e​r​s​o​n​ ​f​o​r​ ​t​h​i​s​ ​l​e​a​d​.
+										 */
+										longDesc: string
+									}
+									team_id: {
+										/**
+										 * S​a​l​e​s​ ​T​e​a​m
+										 */
+										displayName: string
+										/**
+										 * I​D​ ​o​f​ ​t​h​e​ ​s​a​l​e​s​ ​t​e​a​m
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​a​l​e​s​ ​t​e​a​m​ ​r​e​s​p​o​n​s​i​b​l​e​ ​f​o​r​ ​t​h​i​s​ ​l​e​a​d​.
+										 */
+										longDesc: string
+									}
+									stage_id: {
+										/**
+										 * S​t​a​g​e
+										 */
+										displayName: string
+										/**
+										 * I​D​ ​o​f​ ​t​h​e​ ​l​e​a​d​ ​s​t​a​g​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​s​t​a​g​e​ ​i​n​ ​t​h​e​ ​s​a​l​e​s​ ​p​i​p​e​l​i​n​e​ ​f​o​r​ ​t​h​i​s​ ​l​e​a​d​.
+										 */
+										longDesc: string
+									}
+									priority: {
+										/**
+										 * P​r​i​o​r​i​t​y
+										 */
+										displayName: string
+										/**
+										 * P​r​i​o​r​i​t​y​ ​l​e​v​e​l
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​r​i​o​r​i​t​y​ ​l​e​v​e​l​ ​f​o​r​ ​t​h​i​s​ ​l​e​a​d​,​ ​r​a​n​g​i​n​g​ ​f​r​o​m​ ​L​o​w​ ​t​o​ ​V​e​r​y​ ​H​i​g​h​.
+										 */
+										longDesc: string
+									}
+									probability: {
+										/**
+										 * P​r​o​b​a​b​i​l​i​t​y
+										 */
+										displayName: string
+										/**
+										 * S​u​c​c​e​s​s​ ​p​r​o​b​a​b​i​l​i​t​y​ ​(​0​-​1​0​0​)
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​e​s​t​i​m​a​t​e​d​ ​p​r​o​b​a​b​i​l​i​t​y​ ​o​f​ ​c​l​o​s​i​n​g​ ​t​h​i​s​ ​l​e​a​d​ ​s​u​c​c​e​s​s​f​u​l​l​y​,​ ​e​x​p​r​e​s​s​e​d​ ​a​s​ ​a​ ​p​e​r​c​e​n​t​a​g​e​ ​f​r​o​m​ ​0​ ​t​o​ ​1​0​0​.
+										 */
+										longDesc: string
+									}
+									date_deadline: {
+										/**
+										 * E​x​p​e​c​t​e​d​ ​C​l​o​s​i​n​g
+										 */
+										displayName: string
+										/**
+										 * E​x​p​e​c​t​e​d​ ​c​l​o​s​i​n​g​ ​d​a​t​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​e​x​p​e​c​t​e​d​ ​d​a​t​e​ ​w​h​e​n​ ​t​h​i​s​ ​l​e​a​d​ ​o​r​ ​o​p​p​o​r​t​u​n​i​t​y​ ​i​s​ ​a​n​t​i​c​i​p​a​t​e​d​ ​t​o​ ​c​l​o​s​e​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						marketing_info: {
+							/**
+							 * M​a​r​k​e​t​i​n​g​ ​I​n​f​o​r​m​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * M​a​r​k​e​t​i​n​g​ ​a​n​d​ ​s​o​u​r​c​e​ ​t​r​a​c​k​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * M​a​r​k​e​t​i​n​g​ ​c​a​m​p​a​i​g​n​ ​a​n​d​ ​l​e​a​d​ ​s​o​u​r​c​e​ ​t​r​a​c​k​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n​ ​t​o​ ​u​n​d​e​r​s​t​a​n​d​ ​h​o​w​ ​t​h​i​s​ ​l​e​a​d​ ​w​a​s​ ​g​e​n​e​r​a​t​e​d​ ​a​n​d​ ​a​c​q​u​i​r​e​d​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									campaign_id: {
+										/**
+										 * C​a​m​p​a​i​g​n
+										 */
+										displayName: string
+										/**
+										 * I​D​ ​o​f​ ​t​h​e​ ​m​a​r​k​e​t​i​n​g​ ​c​a​m​p​a​i​g​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​m​a​r​k​e​t​i​n​g​ ​c​a​m​p​a​i​g​n​ ​t​h​a​t​ ​g​e​n​e​r​a​t​e​d​ ​t​h​i​s​ ​l​e​a​d​.
+										 */
+										longDesc: string
+									}
+									medium_id: {
+										/**
+										 * M​e​d​i​u​m
+										 */
+										displayName: string
+										/**
+										 * I​D​ ​o​f​ ​t​h​e​ ​m​a​r​k​e​t​i​n​g​ ​m​e​d​i​u​m
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​m​a​r​k​e​t​i​n​g​ ​m​e​d​i​u​m​ ​(​s​u​c​h​ ​a​s​ ​e​m​a​i​l​,​ ​s​o​c​i​a​l​ ​m​e​d​i​a​,​ ​a​d​v​e​r​t​i​s​i​n​g​)​ ​t​h​r​o​u​g​h​ ​w​h​i​c​h​ ​t​h​i​s​ ​l​e​a​d​ ​w​a​s​ ​a​c​q​u​i​r​e​d​.
+										 */
+										longDesc: string
+									}
+									source_id: {
+										/**
+										 * S​o​u​r​c​e
+										 */
+										displayName: string
+										/**
+										 * I​D​ ​o​f​ ​t​h​e​ ​l​e​a​d​ ​s​o​u​r​c​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​s​o​u​r​c​e​ ​t​h​a​t​ ​g​e​n​e​r​a​t​e​d​ ​t​h​i​s​ ​l​e​a​d​.
+										 */
+										longDesc: string
+									}
+									referred: {
+										/**
+										 * R​e​f​e​r​r​e​d​ ​b​y
+										 */
+										displayName: string
+										/**
+										 * W​h​o​ ​r​e​f​e​r​r​e​d​ ​t​h​i​s​ ​l​e​a​d
+										 */
+										shortDesc: string
+										/**
+										 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​w​h​o​ ​o​r​ ​w​h​a​t​ ​r​e​f​e​r​r​e​d​ ​t​h​i​s​ ​l​e​a​d​ ​t​o​ ​y​o​u​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						activity_info: {
+							/**
+							 * A​c​t​i​v​i​t​y​ ​I​n​f​o​r​m​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * N​e​x​t​ ​a​c​t​i​v​i​t​y​ ​p​l​a​n​n​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​n​e​x​t​ ​p​l​a​n​n​e​d​ ​a​c​t​i​v​i​t​y​ ​o​r​ ​f​o​l​l​o​w​-​u​p​ ​a​c​t​i​o​n​ ​f​o​r​ ​t​h​i​s​ ​l​e​a​d​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									activity_summary: {
+										/**
+										 * N​e​x​t​ ​A​c​t​i​v​i​t​y​ ​S​u​m​m​a​r​y
+										 */
+										displayName: string
+										/**
+										 * S​u​m​m​a​r​y​ ​o​f​ ​t​h​e​ ​n​e​x​t​ ​p​l​a​n​n​e​d​ ​a​c​t​i​v​i​t​y
+										 */
+										shortDesc: string
+										/**
+										 * A​ ​b​r​i​e​f​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​s​u​m​m​a​r​y​ ​o​f​ ​t​h​e​ ​n​e​x​t​ ​a​c​t​i​v​i​t​y​ ​p​l​a​n​n​e​d​ ​f​o​r​ ​t​h​i​s​ ​l​e​a​d​.
+										 */
+										longDesc: string
+									}
+									activity_type_id: {
+										/**
+										 * N​e​x​t​ ​A​c​t​i​v​i​t​y​ ​T​y​p​e
+										 */
+										displayName: string
+										/**
+										 * I​D​ ​o​f​ ​t​h​e​ ​a​c​t​i​v​i​t​y​ ​t​y​p​e​ ​(​E​m​a​i​l​,​ ​C​a​l​l​,​ ​M​e​e​t​i​n​g​,​ ​e​t​c​.​)
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​a​c​t​i​v​i​t​y​ ​p​l​a​n​n​e​d​ ​n​e​x​t​,​ ​s​u​c​h​ ​a​s​ ​E​m​a​i​l​,​ ​C​a​l​l​,​ ​M​e​e​t​i​n​g​,​ ​o​r​ ​D​o​c​u​m​e​n​t​ ​r​e​v​i​e​w​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						active: {
+							/**
+							 * A​c​t​i​v​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​e​ ​l​e​a​d​ ​i​s​ ​a​c​t​i​v​e
+							 */
+							shortDesc: string
+							/**
+							 * I​n​d​i​c​a​t​e​s​ ​w​h​e​t​h​e​r​ ​t​h​i​s​ ​l​e​a​d​ ​i​s​ ​c​u​r​r​e​n​t​l​y​ ​a​c​t​i​v​e​ ​a​n​d​ ​s​h​o​u​l​d​ ​a​p​p​e​a​r​ ​i​n​ ​s​t​a​n​d​a​r​d​ ​v​i​e​w​s​ ​a​n​d​ ​r​e​p​o​r​t​s​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * N​o​t​e​s
+							 */
+							displayName: string
+							/**
+							 * I​n​t​e​r​n​a​l​ ​n​o​t​e​s​ ​a​b​o​u​t​ ​t​h​e​ ​l​e​a​d
+							 */
+							shortDesc: string
+							/**
+							 * I​n​t​e​r​n​a​l​ ​n​o​t​e​s​ ​a​n​d​ ​c​o​m​m​e​n​t​s​ ​a​b​o​u​t​ ​t​h​i​s​ ​l​e​a​d​.​ ​T​h​i​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​s​ ​f​o​r​ ​i​n​t​e​r​n​a​l​ ​u​s​e​ ​a​n​d​ ​n​o​t​ ​v​i​s​i​b​l​e​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.
+							 */
+							longDesc: string
+						}
+						color: {
+							/**
+							 * C​o​l​o​r​ ​I​n​d​e​x
+							 */
+							displayName: string
+							/**
+							 * C​o​l​o​r​ ​i​n​d​e​x​ ​f​o​r​ ​U​I​ ​d​i​s​p​l​a​y​ ​(​0​-​1​1​)
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​c​o​l​o​r​ ​i​n​d​e​x​ ​(​0​-​1​1​)​ ​u​s​e​d​ ​f​o​r​ ​v​i​s​u​a​l​ ​i​d​e​n​t​i​f​i​c​a​t​i​o​n​ ​i​n​ ​t​h​e​ ​u​s​e​r​ ​i​n​t​e​r​f​a​c​e​.​ ​T​h​i​s​ ​h​e​l​p​s​ ​w​i​t​h​ ​q​u​i​c​k​ ​v​i​s​u​a​l​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​o​f​ ​l​e​a​d​s​.
+							 */
+							longDesc: string
+						}
+						tag_ids: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​t​a​g​ ​I​D​s​ ​t​o​ ​a​s​s​o​c​i​a​t​e​ ​w​i​t​h​ ​t​h​e​ ​l​e​a​d
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​t​a​g​ ​I​D​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​a​n​d​ ​o​r​g​a​n​i​z​e​ ​t​h​i​s​ ​l​e​a​d​.​ ​T​a​g​s​ ​h​e​l​p​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​g​r​o​u​p​i​n​g​ ​l​e​a​d​s​.
+							 */
+							longDesc: string
+						}
+						partner_id: {
+							/**
+							 * C​u​s​t​o​m​e​r
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​e​x​i​s​t​i​n​g​ ​c​u​s​t​o​m​e​r​/​p​a​r​t​n​e​r​ ​r​e​c​o​r​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​u​s​t​o​m​e​r​ ​o​r​ ​p​a​r​t​n​e​r​ ​r​e​c​o​r​d​ ​i​f​ ​t​h​i​s​ ​l​e​a​d​ ​i​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						company_id: {
+							/**
+							 * C​o​m​p​a​n​y
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​(​u​s​u​a​l​l​y​ ​c​u​r​r​e​n​t​ ​u​s​e​r​ ​c​o​m​p​a​n​y​)
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​r​e​c​o​r​d​ ​t​h​a​t​ ​o​w​n​s​ ​t​h​i​s​ ​l​e​a​d​.​ ​T​y​p​i​c​a​l​l​y​ ​t​h​i​s​ ​i​s​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​u​s​e​r​'​s​ ​c​o​m​p​a​n​y​.
+							 */
+							longDesc: string
+						}
+						lang_code: {
+							/**
+							 * L​a​n​g​u​a​g​e
+							 */
+							displayName: string
+							/**
+							 * L​a​n​g​u​a​g​e​ ​c​o​d​e​ ​(​e​.​g​.​,​ ​e​n​_​U​S​,​ ​f​r​_​F​R​)
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​e​f​e​r​r​e​d​ ​l​a​n​g​u​a​g​e​ ​c​o​d​e​ ​f​o​r​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​s​ ​w​i​t​h​ ​t​h​i​s​ ​l​e​a​d​ ​(​e​.​g​.​,​ ​e​n​_​U​S​ ​f​o​r​ ​E​n​g​l​i​s​h​,​ ​f​r​_​F​R​ ​f​o​r​ ​F​r​e​n​c​h​)​.
+							 */
+							longDesc: string
+						}
+						type: {
+							/**
+							 * T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​i​s​ ​i​s​ ​a​ ​l​e​a​d​ ​o​r​ ​o​p​p​o​r​t​u​n​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​i​e​s​ ​w​h​e​t​h​e​r​ ​t​h​i​s​ ​r​e​c​o​r​d​ ​s​h​o​u​l​d​ ​b​e​ ​t​r​e​a​t​e​d​ ​a​s​ ​a​ ​l​e​a​d​ ​(​e​a​r​l​y​ ​s​t​a​g​e​)​ ​o​r​ ​o​p​p​o​r​t​u​n​i​t​y​ ​(​q​u​a​l​i​f​i​e​d​ ​p​r​o​s​p​e​c​t​)​.
+							 */
+							longDesc: string
+						}
+						recurring_plan: {
+							/**
+							 * R​e​c​u​r​r​i​n​g​ ​P​l​a​n
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​r​e​c​u​r​r​i​n​g​ ​p​l​a​n​ ​i​f​ ​a​p​p​l​i​c​a​b​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​a​ ​r​e​c​u​r​r​i​n​g​ ​p​l​a​n​ ​i​f​ ​t​h​i​s​ ​l​e​a​d​ ​i​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​o​r​ ​r​e​c​u​r​r​i​n​g​ ​s​e​r​v​i​c​e​.
+							 */
+							longDesc: string
+						}
+						reveal_id: {
+							/**
+							 * R​e​v​e​a​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * E​x​t​e​r​n​a​l​ ​r​e​v​e​a​l​ ​s​e​r​v​i​c​e​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​e​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r​ ​f​r​o​m​ ​a​ ​r​e​v​e​a​l​ ​s​e​r​v​i​c​e​ ​o​r​ ​l​e​a​d​ ​i​n​t​e​l​l​i​g​e​n​c​e​ ​p​l​a​t​f​o​r​m​.
+							 */
+							longDesc: string
+						}
+						lead_mining_request_id: {
+							/**
+							 * L​e​a​d​ ​M​i​n​i​n​g​ ​R​e​q​u​e​s​t
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​l​e​a​d​ ​m​i​n​i​n​g​ ​r​e​q​u​e​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​l​e​a​d​ ​m​i​n​i​n​g​ ​r​e​q​u​e​s​t​ ​t​h​a​t​ ​g​e​n​e​r​a​t​e​d​ ​t​h​i​s​ ​l​e​a​d​,​ ​i​f​ ​a​p​p​l​i​c​a​b​l​e​.
+							 */
+							longDesc: string
+						}
+						enrichment_done: {
+							/**
+							 * E​n​r​i​c​h​m​e​n​t​ ​D​o​n​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​l​e​a​d​ ​e​n​r​i​c​h​m​e​n​t​ ​h​a​s​ ​b​e​e​n​ ​c​o​m​p​l​e​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * I​n​d​i​c​a​t​e​s​ ​w​h​e​t​h​e​r​ ​a​u​t​o​m​a​t​e​d​ ​l​e​a​d​ ​e​n​r​i​c​h​m​e​n​t​ ​(​d​a​t​a​ ​e​n​h​a​n​c​e​m​e​n​t​)​ ​h​a​s​ ​b​e​e​n​ ​c​o​m​p​l​e​t​e​d​ ​f​o​r​ ​t​h​i​s​ ​l​e​a​d​.
+							 */
+							longDesc: string
+						}
+						email_bounce: {
+							/**
+							 * B​o​u​n​c​e
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​b​o​u​n​c​e​ ​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​e​m​a​i​l​ ​b​o​u​n​c​e​s​ ​r​e​c​o​r​d​e​d​ ​f​o​r​ ​t​h​i​s​ ​l​e​a​d​'​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.
+							 */
+							longDesc: string
+						}
+						lost_reason: {
+							/**
+							 * L​o​s​t​ ​R​e​a​s​o​n
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​l​o​s​t​ ​r​e​a​s​o​n​ ​i​f​ ​l​e​a​d​ ​w​a​s​ ​l​o​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​r​e​a​s​o​n​ ​w​h​y​ ​t​h​i​s​ ​l​e​a​d​ ​w​a​s​ ​m​a​r​k​e​d​ ​a​s​ ​l​o​s​t​,​ ​i​f​ ​a​p​p​l​i​c​a​b​l​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_lead: {
+					/**
+					 * G​e​t​ ​L​e​a​d
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​l​e​a​d​ ​b​y​ ​I​D​ ​w​i​t​h​ ​c​u​s​t​o​m​i​z​a​b​l​e​ ​f​i​e​l​d​s​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​l​e​a​d​ ​f​r​o​m​ ​O​d​o​o​ ​C​R​M​.​ ​A​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​s​p​e​c​i​f​y​ ​w​h​i​c​h​ ​f​i​e​l​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e​,​ ​w​i​t​h​ ​c​o​m​m​o​n​ ​f​i​e​l​d​s​ ​l​i​k​e​ ​I​D​,​ ​n​a​m​e​,​ ​e​m​a​i​l​,​ ​c​o​n​t​a​c​t​ ​n​a​m​e​,​ ​a​n​d​ ​p​a​r​t​n​e​r​ ​n​a​m​e​ ​s​e​l​e​c​t​e​d​ ​b​y​ ​d​e​f​a​u​l​t​.
+					 */
+					longDesc: string
+					options: {
+						lead_id: {
+							/**
+							 * L​e​a​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​l​e​a​d​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​l​e​a​d​ ​r​e​c​o​r​d​ ​i​n​ ​O​d​o​o​ ​C​R​M​.
+							 */
+							longDesc: string
+						}
+						fields: {
+							/**
+							 * F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​f​i​e​l​d​ ​n​a​m​e​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​r​o​m​ ​t​h​e​ ​l​e​a​d​ ​r​e​c​o​r​d​.​ ​C​o​m​m​o​n​ ​f​i​e​l​d​s​ ​a​r​e​ ​p​r​e​-​s​e​l​e​c​t​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_companies: {
+					/**
+					 * L​i​s​t​ ​C​o​m​p​a​n​i​e​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​c​o​m​p​a​n​i​e​s​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​,​ ​s​o​r​t​i​n​g​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​ ​o​p​t​i​o​n​s​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​c​o​m​p​a​n​i​e​s​ ​f​r​o​m​ ​O​d​o​o​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​f​i​e​l​d​ ​v​a​l​u​e​s​,​ ​s​o​r​t​i​n​g​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​s​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​.​ ​R​e​t​u​r​n​s​ ​c​o​m​p​a​n​y​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​d​i​s​p​l​a​y​ ​n​a​m​e​,​ ​e​m​a​i​l​,​ ​p​h​o​n​e​,​ ​a​n​d​ ​w​e​b​s​i​t​e​.
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​m​p​a​n​i​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​m​p​a​n​y​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​c​o​m​p​a​n​i​e​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​m​p​a​n​y​ ​r​e​c​o​r​d​s​ ​t​o​ ​s​k​i​p​ ​b​e​f​o​r​e​ ​s​t​a​r​t​i​n​g​ ​t​o​ ​r​e​t​u​r​n​ ​r​e​s​u​l​t​s​.​ ​U​s​e​d​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​0​.
+							 */
+							longDesc: string
+						}
+						fields: {
+							/**
+							 * F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​f​i​e​l​d​ ​n​a​m​e​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​r​o​m​ ​e​a​c​h​ ​c​o​m​p​a​n​y​ ​r​e​c​o​r​d​.​ ​C​o​m​m​o​n​ ​f​i​e​l​d​s​ ​a​r​e​ ​p​r​e​-​s​e​l​e​c​t​e​d​.
+							 */
+							longDesc: string
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​i​n​g​ ​c​o​n​f​i​g​u​r​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​n​a​m​e​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​b​y​.
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​-​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​s​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​e​ ​q​u​e​r​y​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										field: {
+											/**
+											 * F​i​e​l​d
+											 */
+											displayName: string
+											/**
+											 * F​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​f​i​e​l​d​ ​n​a​m​e​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​ ​t​o​.
+											 */
+											longDesc: string
+										}
+										searchType: {
+											/**
+											 * S​e​a​r​c​h​ ​T​y​p​e
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​ ​o​f​ ​s​e​a​r​c​h​ ​o​p​e​r​a​t​i​o​n
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​t​y​p​e​ ​o​f​ ​c​o​m​p​a​r​i​s​o​n​ ​t​o​ ​p​e​r​f​o​r​m​ ​-​ ​e​q​u​a​l​s​ ​o​r​ ​c​o​n​t​a​i​n​s​.
+											 */
+											longDesc: string
+										}
+										value: {
+											/**
+											 * V​a​l​u​e
+											 */
+											displayName: string
+											/**
+											 * F​i​l​t​e​r​ ​v​a​l​u​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​f​i​e​l​d​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				list_leads: {
+					/**
+					 * L​i​s​t​ ​L​e​a​d​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​l​e​a​d​s​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​,​ ​s​o​r​t​i​n​g​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​ ​o​p​t​i​o​n​s​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​l​e​a​d​s​ ​f​r​o​m​ ​O​d​o​o​ ​C​R​M​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​f​i​e​l​d​ ​v​a​l​u​e​s​,​ ​s​o​r​t​i​n​g​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​s​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​.​ ​R​e​t​u​r​n​s​ ​l​e​a​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​I​D​,​ ​n​a​m​e​,​ ​e​m​a​i​l​,​ ​c​o​n​t​a​c​t​ ​n​a​m​e​,​ ​a​n​d​ ​p​a​r​t​n​e​r​ ​n​a​m​e​.
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​l​e​a​d​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​l​e​a​d​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​l​e​a​d​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​l​e​a​d​ ​r​e​c​o​r​d​s​ ​t​o​ ​s​k​i​p​ ​b​e​f​o​r​e​ ​s​t​a​r​t​i​n​g​ ​t​o​ ​r​e​t​u​r​n​ ​r​e​s​u​l​t​s​.​ ​U​s​e​d​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​0​.
+							 */
+							longDesc: string
+						}
+						fields: {
+							/**
+							 * F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​f​i​e​l​d​ ​n​a​m​e​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​r​o​m​ ​e​a​c​h​ ​l​e​a​d​ ​r​e​c​o​r​d​.​ ​C​o​m​m​o​n​ ​f​i​e​l​d​s​ ​a​r​e​ ​p​r​e​-​s​e​l​e​c​t​e​d​.
+							 */
+							longDesc: string
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​i​n​g​ ​c​o​n​f​i​g​u​r​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​n​a​m​e​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​b​y​.
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​-​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​s​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​e​ ​q​u​e​r​y​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										field: {
+											/**
+											 * F​i​e​l​d
+											 */
+											displayName: string
+											/**
+											 * F​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​f​i​e​l​d​ ​n​a​m​e​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​ ​t​o​.
+											 */
+											longDesc: string
+										}
+										searchType: {
+											/**
+											 * S​e​a​r​c​h​ ​T​y​p​e
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​ ​o​f​ ​s​e​a​r​c​h​ ​o​p​e​r​a​t​i​o​n
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​t​y​p​e​ ​o​f​ ​c​o​m​p​a​r​i​s​o​n​ ​t​o​ ​p​e​r​f​o​r​m​ ​-​ ​e​q​u​a​l​s​ ​o​r​ ​c​o​n​t​a​i​n​s​.
+											 */
+											longDesc: string
+										}
+										value: {
+											/**
+											 * V​a​l​u​e
+											 */
+											displayName: string
+											/**
+											 * F​i​l​t​e​r​ ​v​a​l​u​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​f​i​e​l​d​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				list_partners: {
+					/**
+					 * L​i​s​t​ ​P​a​r​t​n​e​r​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​p​a​r​t​n​e​r​s​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​,​ ​s​o​r​t​i​n​g​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​ ​o​p​t​i​o​n​s​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​p​a​r​t​n​e​r​s​ ​f​r​o​m​ ​O​d​o​o​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​f​i​e​l​d​ ​v​a​l​u​e​s​,​ ​s​o​r​t​i​n​g​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​s​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​.​ ​R​e​t​u​r​n​s​ ​p​a​r​t​n​e​r​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​I​D​,​ ​d​i​s​p​l​a​y​ ​n​a​m​e​,​ ​a​n​d​ ​e​m​a​i​l​.
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​p​a​r​t​n​e​r​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​p​a​r​t​n​e​r​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​p​a​r​t​n​e​r​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​p​a​r​t​n​e​r​ ​r​e​c​o​r​d​s​ ​t​o​ ​s​k​i​p​ ​b​e​f​o​r​e​ ​s​t​a​r​t​i​n​g​ ​t​o​ ​r​e​t​u​r​n​ ​r​e​s​u​l​t​s​.​ ​U​s​e​d​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​0​.
+							 */
+							longDesc: string
+						}
+						fields: {
+							/**
+							 * F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​f​i​e​l​d​ ​n​a​m​e​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​r​o​m​ ​e​a​c​h​ ​p​a​r​t​n​e​r​ ​r​e​c​o​r​d​.​ ​C​o​m​m​o​n​ ​f​i​e​l​d​s​ ​a​r​e​ ​p​r​e​-​s​e​l​e​c​t​e​d​.
+							 */
+							longDesc: string
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​i​n​g​ ​c​o​n​f​i​g​u​r​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​n​a​m​e​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​b​y​.
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​-​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​s​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​e​ ​q​u​e​r​y​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										field: {
+											/**
+											 * F​i​e​l​d
+											 */
+											displayName: string
+											/**
+											 * F​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​f​i​e​l​d​ ​n​a​m​e​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​ ​t​o​.
+											 */
+											longDesc: string
+										}
+										searchType: {
+											/**
+											 * S​e​a​r​c​h​ ​T​y​p​e
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​ ​o​f​ ​s​e​a​r​c​h​ ​o​p​e​r​a​t​i​o​n
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​t​y​p​e​ ​o​f​ ​c​o​m​p​a​r​i​s​o​n​ ​t​o​ ​p​e​r​f​o​r​m​ ​-​ ​e​q​u​a​l​s​ ​o​r​ ​c​o​n​t​a​i​n​s​.
+											 */
+											longDesc: string
+										}
+										value: {
+											/**
+											 * V​a​l​u​e
+											 */
+											displayName: string
+											/**
+											 * F​i​l​t​e​r​ ​v​a​l​u​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​f​i​e​l​d​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				update_lead: {
+					/**
+					 * U​p​d​a​t​e​ ​L​e​a​d
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​l​e​a​d​ ​w​i​t​h​ ​n​e​w​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​l​e​a​d​ ​i​n​ ​O​d​o​o​ ​C​R​M​ ​w​i​t​h​ ​n​e​w​ ​i​n​f​o​r​m​a​t​i​o​n​.​ ​S​u​p​p​o​r​t​s​ ​u​p​d​a​t​i​n​g​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​d​d​r​e​s​s​ ​d​e​t​a​i​l​s​,​ ​s​a​l​e​s​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​m​a​r​k​e​t​i​n​g​ ​d​a​t​a​,​ ​a​n​d​ ​a​c​t​i​v​i​t​y​ ​d​e​t​a​i​l​s​.​ ​A​l​l​ ​f​i​e​l​d​s​ ​a​r​e​ ​o​p​t​i​o​n​a​l​ ​e​x​c​e​p​t​ ​t​h​e​ ​l​e​a​d​ ​I​D​.
+					 */
+					longDesc: string
+					options: {
+						lead_id: {
+							/**
+							 * L​e​a​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​l​e​a​d​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​l​e​a​d​ ​r​e​c​o​r​d​ ​t​o​ ​u​p​d​a​t​e​ ​i​n​ ​O​d​o​o​ ​C​R​M​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * L​e​a​d​ ​t​i​t​l​e​ ​o​r​ ​s​u​b​j​e​c​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​o​r​ ​s​u​b​j​e​c​t​ ​o​f​ ​t​h​e​ ​l​e​a​d​.
+							 */
+							longDesc: string
+						}
+						contact_name: {
+							/**
+							 * C​o​n​t​a​c​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​p​e​r​s​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​r​i​m​a​r​y​ ​c​o​n​t​a​c​t​ ​p​e​r​s​o​n​ ​f​o​r​ ​t​h​i​s​ ​l​e​a​d​.
+							 */
+							longDesc: string
+						}
+						partner_name: {
+							/**
+							 * P​a​r​t​n​e​r​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​f​ ​t​h​e​ ​p​a​r​t​n​e​r​/​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​a​r​t​n​e​r​ ​o​r​ ​c​o​m​p​a​n​y​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​l​e​a​d​.
+							 */
+							longDesc: string
+						}
+						contact_info: {
+							/**
+							 * C​o​n​t​a​c​t​ ​I​n​f​o​r​m​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​ ​d​e​t​a​i​l​s​ ​f​o​r​ ​t​h​e​ ​l​e​a​d
+							 */
+							shortDesc: string
+							/**
+							 * E​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​,​ ​p​h​o​n​e​ ​n​u​m​b​e​r​,​ ​j​o​b​ ​f​u​n​c​t​i​o​n​,​ ​a​n​d​ ​w​e​b​s​i​t​e​ ​i​n​f​o​r​m​a​t​i​o​n​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									email_from: {
+										/**
+										 * E​m​a​i​l
+										 */
+										displayName: string
+										/**
+										 * P​r​i​m​a​r​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​r​i​m​a​r​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+										 */
+										longDesc: string
+									}
+									email_cc: {
+										/**
+										 * C​C​ ​E​m​a​i​l
+										 */
+										displayName: string
+										/**
+										 * C​C​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s
+										 */
+										shortDesc: string
+										/**
+										 * A​d​d​i​t​i​o​n​a​l​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​s​.
+										 */
+										longDesc: string
+									}
+									phone: {
+										/**
+										 * P​h​o​n​e
+										 */
+										displayName: string
+										/**
+										 * P​h​o​n​e​ ​n​u​m​b​e​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+										 */
+										longDesc: string
+									}
+									'function': {
+										/**
+										 * J​o​b​ ​F​u​n​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * J​o​b​ ​t​i​t​l​e​ ​o​r​ ​f​u​n​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​j​o​b​ ​t​i​t​l​e​ ​o​r​ ​f​u​n​c​t​i​o​n​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​p​e​r​s​o​n​.
+										 */
+										longDesc: string
+									}
+									website: {
+										/**
+										 * W​e​b​s​i​t​e
+										 */
+										displayName: string
+										/**
+										 * W​e​b​s​i​t​e​ ​U​R​L
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​w​e​b​s​i​t​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​o​r​ ​c​o​m​p​a​n​y​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						address_info: {
+							/**
+							 * A​d​d​r​e​s​s​ ​I​n​f​o​r​m​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​d​d​r​e​s​s​ ​d​e​t​a​i​l​s​ ​f​o​r​ ​t​h​e​ ​l​e​a​d
+							 */
+							shortDesc: string
+							/**
+							 * S​t​r​e​e​t​ ​a​d​d​r​e​s​s​,​ ​c​i​t​y​,​ ​p​o​s​t​a​l​ ​c​o​d​e​,​ ​c​o​u​n​t​r​y​,​ ​a​n​d​ ​s​t​a​t​e​ ​i​n​f​o​r​m​a​t​i​o​n​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									street: {
+										/**
+										 * S​t​r​e​e​t
+										 */
+										displayName: string
+										/**
+										 * S​t​r​e​e​t​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+										 */
+										longDesc: string
+									}
+									street2: {
+										/**
+										 * S​t​r​e​e​t​ ​2
+										 */
+										displayName: string
+										/**
+										 * A​d​d​i​t​i​o​n​a​l​ ​a​d​d​r​e​s​s​ ​l​i​n​e
+										 */
+										shortDesc: string
+										/**
+										 * A​d​d​i​t​i​o​n​a​l​ ​a​d​d​r​e​s​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​(​a​p​a​r​t​m​e​n​t​,​ ​s​u​i​t​e​,​ ​e​t​c​.​)​.
+										 */
+										longDesc: string
+									}
+									city: {
+										/**
+										 * C​i​t​y
+										 */
+										displayName: string
+										/**
+										 * C​i​t​y​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​i​t​y​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+									zip: {
+										/**
+										 * Z​I​P​ ​C​o​d​e
+										 */
+										displayName: string
+										/**
+										 * P​o​s​t​a​l​/​Z​I​P​ ​c​o​d​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​o​s​t​a​l​ ​o​r​ ​Z​I​P​ ​c​o​d​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+									country_id: {
+										/**
+										 * C​o​u​n​t​r​y
+										 */
+										displayName: string
+										/**
+										 * C​o​u​n​t​r​y​ ​s​e​l​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​o​u​n​t​r​y​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+									state_id: {
+										/**
+										 * S​t​a​t​e
+										 */
+										displayName: string
+										/**
+										 * S​t​a​t​e​/​p​r​o​v​i​n​c​e​ ​s​e​l​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​a​d​d​r​e​s​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sales_info: {
+							/**
+							 * S​a​l​e​s​ ​I​n​f​o​r​m​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​a​l​e​s​-​r​e​l​a​t​e​d​ ​d​e​t​a​i​l​s​ ​f​o​r​ ​t​h​e​ ​l​e​a​d
+							 */
+							shortDesc: string
+							/**
+							 * S​a​l​e​s​p​e​r​s​o​n​ ​a​s​s​i​g​n​m​e​n​t​,​ ​t​e​a​m​,​ ​s​t​a​g​e​,​ ​p​r​i​o​r​i​t​y​,​ ​p​r​o​b​a​b​i​l​i​t​y​,​ ​a​n​d​ ​d​e​a​d​l​i​n​e​ ​i​n​f​o​r​m​a​t​i​o​n​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									user_id: {
+										/**
+										 * S​a​l​e​s​p​e​r​s​o​n
+										 */
+										displayName: string
+										/**
+										 * A​s​s​i​g​n​e​d​ ​s​a​l​e​s​p​e​r​s​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​a​l​e​s​p​e​r​s​o​n​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​i​s​ ​l​e​a​d​.
+										 */
+										longDesc: string
+									}
+									team_id: {
+										/**
+										 * S​a​l​e​s​ ​T​e​a​m
+										 */
+										displayName: string
+										/**
+										 * A​s​s​i​g​n​e​d​ ​s​a​l​e​s​ ​t​e​a​m
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​a​l​e​s​ ​t​e​a​m​ ​r​e​s​p​o​n​s​i​b​l​e​ ​f​o​r​ ​t​h​i​s​ ​l​e​a​d​.
+										 */
+										longDesc: string
+									}
+									stage_id: {
+										/**
+										 * S​t​a​g​e
+										 */
+										displayName: string
+										/**
+										 * C​u​r​r​e​n​t​ ​s​t​a​g​e​ ​o​f​ ​t​h​e​ ​l​e​a​d
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​u​r​r​e​n​t​ ​s​t​a​g​e​ ​o​r​ ​p​h​a​s​e​ ​o​f​ ​t​h​e​ ​l​e​a​d​ ​i​n​ ​t​h​e​ ​s​a​l​e​s​ ​p​r​o​c​e​s​s​.
+										 */
+										longDesc: string
+									}
+									priority: {
+										/**
+										 * P​r​i​o​r​i​t​y
+										 */
+										displayName: string
+										/**
+										 * L​e​a​d​ ​p​r​i​o​r​i​t​y​ ​l​e​v​e​l
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​r​i​o​r​i​t​y​ ​l​e​v​e​l​ ​o​f​ ​t​h​i​s​ ​l​e​a​d​ ​(​L​o​w​,​ ​M​e​d​i​u​m​,​ ​H​i​g​h​,​ ​V​e​r​y​ ​H​i​g​h​)​.
+										 */
+										longDesc: string
+									}
+									probability: {
+										/**
+										 * P​r​o​b​a​b​i​l​i​t​y
+										 */
+										displayName: string
+										/**
+										 * S​u​c​c​e​s​s​ ​p​r​o​b​a​b​i​l​i​t​y​ ​p​e​r​c​e​n​t​a​g​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​e​s​t​i​m​a​t​e​d​ ​p​r​o​b​a​b​i​l​i​t​y​ ​o​f​ ​c​o​n​v​e​r​t​i​n​g​ ​t​h​i​s​ ​l​e​a​d​ ​(​0​-​1​0​0​%​)​.
+										 */
+										longDesc: string
+									}
+									date_deadline: {
+										/**
+										 * D​e​a​d​l​i​n​e
+										 */
+										displayName: string
+										/**
+										 * E​x​p​e​c​t​e​d​ ​c​l​o​s​i​n​g​ ​d​a​t​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​e​x​p​e​c​t​e​d​ ​d​a​t​e​ ​f​o​r​ ​c​l​o​s​i​n​g​ ​t​h​i​s​ ​l​e​a​d​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						marketing_info: {
+							/**
+							 * M​a​r​k​e​t​i​n​g​ ​I​n​f​o​r​m​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * M​a​r​k​e​t​i​n​g​ ​c​a​m​p​a​i​g​n​ ​a​n​d​ ​s​o​u​r​c​e​ ​d​e​t​a​i​l​s
+							 */
+							shortDesc: string
+							/**
+							 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​m​a​r​k​e​t​i​n​g​ ​c​a​m​p​a​i​g​n​,​ ​m​e​d​i​u​m​,​ ​s​o​u​r​c​e​,​ ​a​n​d​ ​r​e​f​e​r​r​a​l​ ​t​h​a​t​ ​g​e​n​e​r​a​t​e​d​ ​t​h​i​s​ ​l​e​a​d​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									campaign_id: {
+										/**
+										 * C​a​m​p​a​i​g​n
+										 */
+										displayName: string
+										/**
+										 * M​a​r​k​e​t​i​n​g​ ​c​a​m​p​a​i​g​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​m​a​r​k​e​t​i​n​g​ ​c​a​m​p​a​i​g​n​ ​t​h​a​t​ ​g​e​n​e​r​a​t​e​d​ ​t​h​i​s​ ​l​e​a​d​.
+										 */
+										longDesc: string
+									}
+									medium_id: {
+										/**
+										 * M​e​d​i​u​m
+										 */
+										displayName: string
+										/**
+										 * M​a​r​k​e​t​i​n​g​ ​m​e​d​i​u​m
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​m​a​r​k​e​t​i​n​g​ ​m​e​d​i​u​m​ ​u​s​e​d​ ​(​e​m​a​i​l​,​ ​s​o​c​i​a​l​ ​m​e​d​i​a​,​ ​e​t​c​.​)​.
+										 */
+										longDesc: string
+									}
+									source_id: {
+										/**
+										 * S​o​u​r​c​e
+										 */
+										displayName: string
+										/**
+										 * M​a​r​k​e​t​i​n​g​ ​s​o​u​r​c​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​s​o​u​r​c​e​ ​t​h​a​t​ ​g​e​n​e​r​a​t​e​d​ ​t​h​i​s​ ​l​e​a​d​.
+										 */
+										longDesc: string
+									}
+									referred: {
+										/**
+										 * R​e​f​e​r​r​e​d​ ​B​y
+										 */
+										displayName: string
+										/**
+										 * R​e​f​e​r​r​a​l​ ​s​o​u​r​c​e
+										 */
+										shortDesc: string
+										/**
+										 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​w​h​o​ ​o​r​ ​w​h​a​t​ ​r​e​f​e​r​r​e​d​ ​t​h​i​s​ ​l​e​a​d​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						activity_info: {
+							/**
+							 * A​c​t​i​v​i​t​y​ ​I​n​f​o​r​m​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * N​e​x​t​ ​a​c​t​i​v​i​t​y​ ​d​e​t​a​i​l​s
+							 */
+							shortDesc: string
+							/**
+							 * I​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​n​e​x​t​ ​p​l​a​n​n​e​d​ ​a​c​t​i​v​i​t​y​ ​f​o​r​ ​t​h​i​s​ ​l​e​a​d​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									activity_summary: {
+										/**
+										 * A​c​t​i​v​i​t​y​ ​S​u​m​m​a​r​y
+										 */
+										displayName: string
+										/**
+										 * S​u​m​m​a​r​y​ ​o​f​ ​n​e​x​t​ ​a​c​t​i​v​i​t​y
+										 */
+										shortDesc: string
+										/**
+										 * A​ ​b​r​i​e​f​ ​s​u​m​m​a​r​y​ ​o​f​ ​t​h​e​ ​n​e​x​t​ ​p​l​a​n​n​e​d​ ​a​c​t​i​v​i​t​y​.
+										 */
+										longDesc: string
+									}
+									activity_type_id: {
+										/**
+										 * A​c​t​i​v​i​t​y​ ​T​y​p​e
+										 */
+										displayName: string
+										/**
+										 * T​y​p​e​ ​o​f​ ​n​e​x​t​ ​a​c​t​i​v​i​t​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​n​e​x​t​ ​p​l​a​n​n​e​d​ ​a​c​t​i​v​i​t​y​ ​(​c​a​l​l​,​ ​m​e​e​t​i​n​g​,​ ​e​m​a​i​l​,​ ​e​t​c​.​)​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						active: {
+							/**
+							 * A​c​t​i​v​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​e​ ​l​e​a​d​ ​i​s​ ​a​c​t​i​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​f​a​l​s​e​ ​t​o​ ​a​r​c​h​i​v​e​ ​t​h​e​ ​l​e​a​d​ ​w​i​t​h​o​u​t​ ​d​e​l​e​t​i​n​g​ ​i​t​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * L​e​a​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​n​o​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​n​o​t​e​s​ ​o​r​ ​d​e​s​c​r​i​p​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​l​e​a​d​.
+							 */
+							longDesc: string
+						}
+						color: {
+							/**
+							 * C​o​l​o​r
+							 */
+							displayName: string
+							/**
+							 * C​o​l​o​r​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​l​e​a​d
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​c​o​l​o​r​ ​c​o​d​e​ ​t​o​ ​v​i​s​u​a​l​l​y​ ​d​i​s​t​i​n​g​u​i​s​h​ ​t​h​i​s​ ​l​e​a​d​ ​i​n​ ​t​h​e​ ​i​n​t​e​r​f​a​c​e​.
+							 */
+							longDesc: string
+						}
+						tag_ids: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * T​a​g​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​t​h​e​ ​l​e​a​d
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​t​a​g​s​ ​t​o​ ​h​e​l​p​ ​c​a​t​e​g​o​r​i​z​e​ ​a​n​d​ ​o​r​g​a​n​i​z​e​ ​t​h​i​s​ ​l​e​a​d​.
+							 */
+							longDesc: string
+						}
+						partner_id: {
+							/**
+							 * P​a​r​t​n​e​r
+							 */
+							displayName: string
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​p​a​r​t​n​e​r​ ​r​e​c​o​r​d
+							 */
+							shortDesc: string
+							/**
+							 * L​i​n​k​ ​t​h​i​s​ ​l​e​a​d​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​a​r​t​n​e​r​/​c​u​s​t​o​m​e​r​ ​r​e​c​o​r​d​.
+							 */
+							longDesc: string
+						}
+						company_id: {
+							/**
+							 * C​o​m​p​a​n​y
+							 */
+							displayName: string
+							/**
+							 * C​o​m​p​a​n​y​ ​t​h​a​t​ ​o​w​n​s​ ​t​h​i​s​ ​l​e​a​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​m​p​a​n​y​ ​t​h​a​t​ ​o​w​n​s​ ​t​h​i​s​ ​l​e​a​d​ ​r​e​c​o​r​d​.
+							 */
+							longDesc: string
+						}
+						type: {
+							/**
+							 * T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * L​e​a​d​ ​o​r​ ​o​p​p​o​r​t​u​n​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​i​s​ ​r​e​c​o​r​d​ ​i​s​ ​a​ ​l​e​a​d​ ​o​r​ ​h​a​s​ ​b​e​e​n​ ​c​o​n​v​e​r​t​e​d​ ​t​o​ ​a​n​ ​o​p​p​o​r​t​u​n​i​t​y​.
+							 */
+							longDesc: string
+						}
+						email_bounce: {
+							/**
+							 * E​m​a​i​l​ ​B​o​u​n​c​e​ ​C​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​e​m​a​i​l​ ​b​o​u​n​c​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​t​i​m​e​s​ ​e​m​a​i​l​s​ ​t​o​ ​t​h​i​s​ ​c​o​n​t​a​c​t​ ​h​a​v​e​ ​b​o​u​n​c​e​d​.
+							 */
+							longDesc: string
+						}
+						lost_reason: {
+							/**
+							 * L​o​s​t​ ​R​e​a​s​o​n
+							 */
+							displayName: string
+							/**
+							 * R​e​a​s​o​n​ ​f​o​r​ ​l​o​s​i​n​g​ ​t​h​e​ ​l​e​a​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​r​e​a​s​o​n​ ​w​h​y​ ​t​h​i​s​ ​l​e​a​d​ ​w​a​s​ ​m​a​r​k​e​d​ ​a​s​ ​l​o​s​t​.
+							 */
+							longDesc: string
+						}
+						lang_code: {
+							/**
+							 * L​a​n​g​u​a​g​e
+							 */
+							displayName: string
+							/**
+							 * P​r​e​f​e​r​r​e​d​ ​l​a​n​g​u​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​e​f​e​r​r​e​d​ ​l​a​n​g​u​a​g​e​ ​f​o​r​ ​c​o​m​m​u​n​i​c​a​t​i​n​g​ ​w​i​t​h​ ​t​h​i​s​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_lead: {
+					/**
+					 * D​e​l​e​t​e​ ​L​e​a​d
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​l​e​a​d​ ​f​r​o​m​ ​O​d​o​o​ ​C​R​M​.
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​s​ ​a​ ​l​e​a​d​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​O​d​o​o​ ​C​R​M​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.​ ​C​o​n​s​i​d​e​r​ ​a​r​c​h​i​v​i​n​g​ ​t​h​e​ ​l​e​a​d​ ​i​n​s​t​e​a​d​ ​b​y​ ​s​e​t​t​i​n​g​ ​i​t​ ​a​s​ ​i​n​a​c​t​i​v​e​.
+					 */
+					longDesc: string
+					options: {
+						lead_id: {
+							/**
+							 * L​e​a​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​l​e​a​d​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​l​e​a​d​ ​r​e​c​o​r​d​ ​t​o​ ​p​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​f​r​o​m​ ​O​d​o​o​ ​C​R​M​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_lead: {
+					/**
+					 * N​e​w​ ​L​e​a​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​l​e​a​d​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​O​d​o​o
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​O​d​o​o​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​l​e​a​d​s​ ​o​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​.​ ​S​u​p​p​o​r​t​s​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​c​o​m​p​a​n​y​,​ ​t​e​a​m​,​ ​u​s​e​r​,​ ​s​t​a​g​e​,​ ​l​e​a​d​ ​t​y​p​e​,​ ​a​n​d​ ​t​a​g​s​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​s​p​e​c​i​f​i​c​ ​l​e​a​d​s​ ​t​h​a​t​ ​m​a​t​c​h​ ​y​o​u​r​ ​c​r​i​t​e​r​i​a​.
+					 */
+					longDesc: string
+					options: {
+						company_id: {
+							/**
+							 * C​o​m​p​a​n​y
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​b​e​l​o​n​g​i​n​g​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​o​m​p​a​n​y​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​c​o​m​p​a​n​i​e​s​.
+							 */
+							longDesc: string
+						}
+						team_id: {
+							/**
+							 * S​a​l​e​s​ ​T​e​a​m
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​a​l​e​s​ ​t​e​a​m
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​a​l​e​s​ ​t​e​a​m​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​t​e​a​m​s​.
+							 */
+							longDesc: string
+						}
+						user_id: {
+							/**
+							 * S​a​l​e​s​p​e​r​s​o​n
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​a​s​s​i​g​n​e​d​ ​s​a​l​e​s​p​e​r​s​o​n
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​a​l​e​s​p​e​r​s​o​n​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​u​s​e​r​s​.
+							 */
+							longDesc: string
+						}
+						stage_id: {
+							/**
+							 * S​t​a​g​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​l​e​a​d​ ​s​t​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​t​a​g​e​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​s​t​a​g​e​s​.
+							 */
+							longDesc: string
+						}
+						lead_type: {
+							/**
+							 * L​e​a​d​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​m​o​n​i​t​o​r​ ​l​e​a​d​s​,​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​,​ ​o​r​ ​b​o​t​h​ ​t​y​p​e​s​ ​o​f​ ​r​e​c​o​r​d​s​.
+							 */
+							longDesc: string
+						}
+						tag_ids: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​t​h​a​t​ ​h​a​v​e​ ​a​n​y​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​a​g​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​l​e​a​d​s​ ​r​e​g​a​r​d​l​e​s​s​ ​o​f​ ​t​a​g​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				updated_lead: {
+					/**
+					 * U​p​d​a​t​e​d​ ​L​e​a​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​l​e​a​d​ ​i​s​ ​u​p​d​a​t​e​d​ ​i​n​ ​O​d​o​o
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​O​d​o​o​ ​f​o​r​ ​u​p​d​a​t​e​s​ ​t​o​ ​e​x​i​s​t​i​n​g​ ​l​e​a​d​s​ ​o​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​.​ ​S​u​p​p​o​r​t​s​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​c​o​m​p​a​n​y​,​ ​t​e​a​m​,​ ​u​s​e​r​,​ ​s​t​a​g​e​,​ ​l​e​a​d​ ​t​y​p​e​,​ ​a​n​d​ ​t​a​g​s​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​s​p​e​c​i​f​i​c​ ​l​e​a​d​s​ ​t​h​a​t​ ​m​a​t​c​h​ ​y​o​u​r​ ​c​r​i​t​e​r​i​a​.
+					 */
+					longDesc: string
+					options: {
+						company_id: {
+							/**
+							 * C​o​m​p​a​n​y
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​b​e​l​o​n​g​i​n​g​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​o​m​p​a​n​y​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​c​o​m​p​a​n​i​e​s​.
+							 */
+							longDesc: string
+						}
+						team_id: {
+							/**
+							 * S​a​l​e​s​ ​T​e​a​m
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​a​l​e​s​ ​t​e​a​m
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​a​l​e​s​ ​t​e​a​m​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​t​e​a​m​s​.
+							 */
+							longDesc: string
+						}
+						user_id: {
+							/**
+							 * S​a​l​e​s​p​e​r​s​o​n
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​a​s​s​i​g​n​e​d​ ​s​a​l​e​s​p​e​r​s​o​n
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​a​l​e​s​p​e​r​s​o​n​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​u​s​e​r​s​.
+							 */
+							longDesc: string
+						}
+						stage_id: {
+							/**
+							 * S​t​a​g​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​l​e​a​d​ ​s​t​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​t​a​g​e​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​s​t​a​g​e​s​.
+							 */
+							longDesc: string
+						}
+						lead_type: {
+							/**
+							 * L​e​a​d​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​m​o​n​i​t​o​r​ ​l​e​a​d​s​,​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​,​ ​o​r​ ​b​o​t​h​ ​t​y​p​e​s​ ​o​f​ ​r​e​c​o​r​d​s​.
+							 */
+							longDesc: string
+						}
+						tag_ids: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​t​h​a​t​ ​h​a​v​e​ ​a​n​y​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​a​g​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​l​e​a​d​s​ ​r​e​g​a​r​d​l​e​s​s​ ​o​f​ ​t​a​g​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_company: {
+					/**
+					 * N​e​w​ ​C​o​m​p​a​n​y
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​m​p​a​n​y​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​O​d​o​o
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​O​d​o​o​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​c​o​m​p​a​n​y​ ​r​e​c​o​r​d​s​ ​i​n​ ​t​h​e​ ​r​e​s​.​c​o​m​p​a​n​y​ ​m​o​d​e​l​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​c​o​m​p​a​n​y​ ​e​n​t​i​t​y​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​y​o​u​r​ ​O​d​o​o​ ​s​y​s​t​e​m​,​ ​p​r​o​v​i​d​i​n​g​ ​c​o​m​p​a​n​y​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​d​e​t​a​i​l​s​ ​i​n​c​l​u​d​i​n​g​ ​a​d​d​r​e​s​s​,​ ​c​u​r​r​e​n​c​y​,​ ​a​n​d​ ​o​r​g​a​n​i​z​a​t​i​o​n​a​l​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+				}
+				new_partner: {
+					/**
+					 * N​e​w​ ​P​a​r​t​n​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​a​r​t​n​e​r​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​O​d​o​o
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​O​d​o​o​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​p​a​r​t​n​e​r​ ​r​e​c​o​r​d​s​ ​i​n​ ​t​h​e​ ​r​e​s​.​p​a​r​t​n​e​r​ ​m​o​d​e​l​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​p​a​r​t​n​e​r​ ​e​n​t​i​t​y​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​y​o​u​r​ ​O​d​o​o​ ​s​y​s​t​e​m​,​ ​p​r​o​v​i​d​i​n​g​ ​p​a​r​t​n​e​r​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​d​e​t​a​i​l​s​ ​i​n​c​l​u​d​i​n​g​ ​a​d​d​r​e​s​s​,​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​n​d​ ​o​r​g​a​n​i​z​a​t​i​o​n​a​l​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+				}
+			}
+		}
 		Intercom: {
 			/**
 			 * I​n​t​e​r​c​o​m
@@ -37176,6 +39796,2626 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 						}
 					}
+				}
+			}
+		}
+		Odoo: {
+			/**
+			 * Odoo CRM
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect to your Odoo CRM instance
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Odoo is a suite of open-source business apps that cover all your company needs: CRM, eCommerce, accounting, inventory, point of sale, project management, etc.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				create_partner: {
+					/**
+					 * Create Partner
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new partner (contact or company) in Odoo
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new partner record in Odoo with comprehensive contact information, address details, business information, and relationship data. Partners can be individuals or companies and serve as customers, vendors, or both.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Partner name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the partner (individual or company name).
+							 */
+							longDesc: () => LocalizedString
+						}
+						is_company: {
+							/**
+							 * Is Company
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether this partner is a company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to true if this partner represents a company/organization, false for individual contacts.
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact_info: {
+							/**
+							 * Contact Information
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact details for the partner
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Contact information including email, phone, website, job function and title.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									email: {
+										/**
+										 * Email
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Email address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Primary email address for the partner.
+										 */
+										longDesc: () => LocalizedString
+									}
+									phone: {
+										/**
+										 * Phone
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Phone number
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Primary phone number for the partner.
+										 */
+										longDesc: () => LocalizedString
+									}
+									website: {
+										/**
+										 * Website
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Website URL
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Website URL for the partner or company.
+										 */
+										longDesc: () => LocalizedString
+									}
+									'function': {
+										/**
+										 * Job Function
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Job title or function
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Job title or function of the contact person.
+										 */
+										longDesc: () => LocalizedString
+									}
+									title: {
+										/**
+										 * Title
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Title (Mr., Mrs., etc.)
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Personal title such as Mr., Mrs., Ms., Dr., Prof.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						address_info: {
+							/**
+							 * Address Information
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Address details for the partner
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Complete address information including street, city, state, country, and postal code.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									street: {
+										/**
+										 * Street
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Street address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Primary street address line.
+										 */
+										longDesc: () => LocalizedString
+									}
+									street2: {
+										/**
+										 * Street 2
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Additional street address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Additional street address line (apartment, suite, etc.).
+										 */
+										longDesc: () => LocalizedString
+									}
+									city: {
+										/**
+										 * City
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * City name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * City or locality name.
+										 */
+										longDesc: () => LocalizedString
+									}
+									zip: {
+										/**
+										 * ZIP Code
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Postal code
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * ZIP or postal code.
+										 */
+										longDesc: () => LocalizedString
+									}
+									country_id: {
+										/**
+										 * Country
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Country
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Country where the partner is located.
+										 */
+										longDesc: () => LocalizedString
+									}
+									state_id: {
+										/**
+										 * State
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * State or province
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * State, province, or region within the country.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						business_info: {
+							/**
+							 * Business Information
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Business-related details
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Business information including VAT number, reference code, and industry classification.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									vat: {
+										/**
+										 * VAT Number
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Tax identification number
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * VAT or tax identification number for the partner.
+										 */
+										longDesc: () => LocalizedString
+									}
+									ref: {
+										/**
+										 * Reference
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Internal reference code
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Internal reference code or identifier for the partner.
+										 */
+										longDesc: () => LocalizedString
+									}
+									industry_id: {
+										/**
+										 * Industry
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Industry classification
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Industry or business sector classification.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						relationship_info: {
+							/**
+							 * Relationship Information
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Relationship and assignment details
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Information about relationships to other partners and user assignments.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									parent_id: {
+										/**
+										 * Parent Company
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Parent company or organization
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Parent company or organization this partner belongs to.
+										 */
+										longDesc: () => LocalizedString
+									}
+									user_id: {
+										/**
+										 * Assigned User
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * User responsible for this partner
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Odoo user responsible for managing this partner.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						category_ids: {
+							/**
+							 * Categories
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Partner categories or tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Categories or tags to classify and organize partners.
+							 */
+							longDesc: () => LocalizedString
+						}
+						active: {
+							/**
+							 * Active
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether the partner is active
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to false to archive the partner without deleting it.
+							 */
+							longDesc: () => LocalizedString
+						}
+						comment: {
+							/**
+							 * Internal Notes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Internal notes about the partner
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Internal notes or comments about the partner.
+							 */
+							longDesc: () => LocalizedString
+						}
+						lang: {
+							/**
+							 * Language
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Preferred language
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Preferred language for communication with this partner.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tz: {
+							/**
+							 * Timezone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Partner timezone
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Timezone where the partner is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						image_1920: {
+							/**
+							 * Profile Image
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Partner profile image
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Profile image for the partner (base64 encoded).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_partner: {
+					/**
+					 * Get Partner
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a single partner record from Odoo
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches detailed information about a specific partner from Odoo. Allows selecting which fields to retrieve for customized data requirements.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						partner_id: {
+							/**
+							 * Partner ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of the partner to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the partner record to fetch from Odoo.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fields: {
+							/**
+							 * Fields to Retrieve
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Partner fields to include in response
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of specific partner fields to retrieve. If not specified, returns basic partner information including ID, name, email, phone, and company status.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_partner: {
+					/**
+					 * Delete Partner
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a partner record from Odoo
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently deletes a partner record from Odoo. This action cannot be undone. Consider archiving (setting active to false) instead if you need to preserve the record.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						partner_id: {
+							/**
+							 * Partner ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of the partner to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the partner record to delete from Odoo.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_lead: {
+					/**
+					 * Create Lead
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new lead or opportunity in Odoo CRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new lead or opportunity record in Odoo CRM with comprehensive contact, sales, and marketing information. Supports grouping related fields for better organization.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						name: {
+							/**
+							 * Opportunity
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The name/title of the lead or opportunity
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The main title or name that identifies this lead or opportunity. This is a required field that will be displayed in lead lists and reports.
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact_name: {
+							/**
+							 * Contact Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name of the contact person
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The full name of the primary contact person associated with this lead.
+							 */
+							longDesc: () => LocalizedString
+						}
+						partner_name: {
+							/**
+							 * Company Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name of the customer company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the company or organization that this lead represents.
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact_info: {
+							/**
+							 * Contact Information
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact details for the lead
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Complete contact information including email addresses, phone numbers, job position, and website details.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									email_from: {
+										/**
+										 * Email
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Primary email address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The main email address for contacting this lead.
+										 */
+										longDesc: () => LocalizedString
+									}
+									email_cc: {
+										/**
+										 * Email CC
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * CC email addresses
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Additional email addresses that should be copied on communications.
+										 */
+										longDesc: () => LocalizedString
+									}
+									phone: {
+										/**
+										 * Phone
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Primary phone number
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The main phone number for contacting this lead.
+										 */
+										longDesc: () => LocalizedString
+									}
+									mobile: {
+										/**
+										 * Phone Number
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Mobile phone number
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Mobile or cell phone number for the contact.
+										 */
+										longDesc: () => LocalizedString
+									}
+									'function': {
+										/**
+										 * Job Position
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Job title or position of the contact
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The job title, role, or position of the contact person within their organization.
+										 */
+										longDesc: () => LocalizedString
+									}
+									website: {
+										/**
+										 * Website
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Company or contact website
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The website URL for the company or contact.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						address_info: {
+							/**
+							 * Address Information
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Address details for the lead
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Complete address information including street address, city, state, country, and postal code.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									street: {
+										/**
+										 * Street
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Street address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The street address or first line of the address.
+										 */
+										longDesc: () => LocalizedString
+									}
+									street2: {
+										/**
+										 * Street2
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Additional street address information
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Additional address information such as apartment number, suite, or building details.
+										 */
+										longDesc: () => LocalizedString
+									}
+									city: {
+										/**
+										 * City
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * City name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The city or town name.
+										 */
+										longDesc: () => LocalizedString
+									}
+									zip: {
+										/**
+										 * Zip
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Postal/ZIP code
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The postal code or ZIP code for the address.
+										 */
+										longDesc: () => LocalizedString
+									}
+									country_id: {
+										/**
+										 * Country
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Country ID (use country record ID)
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The ID of the country record in Odoo. Use the appropriate country ID from your Odoo instance.
+										 */
+										longDesc: () => LocalizedString
+									}
+									state_id: {
+										/**
+										 * State
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * State/Province ID (use state record ID)
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The ID of the state or province record in Odoo. Use the appropriate state ID from your Odoo instance.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sales_info: {
+							/**
+							 * Sales Information
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sales-related details for the lead
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Sales management information including assigned salesperson, team, stage, priority, and expected closing details.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									user_id: {
+										/**
+										 * Salesperson
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * ID of the assigned salesperson
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The ID of the user who is assigned as the salesperson for this lead.
+										 */
+										longDesc: () => LocalizedString
+									}
+									team_id: {
+										/**
+										 * Sales Team
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * ID of the sales team
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The ID of the sales team responsible for this lead.
+										 */
+										longDesc: () => LocalizedString
+									}
+									stage_id: {
+										/**
+										 * Stage
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * ID of the lead stage
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The ID of the current stage in the sales pipeline for this lead.
+										 */
+										longDesc: () => LocalizedString
+									}
+									priority: {
+										/**
+										 * Priority
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Priority level
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The priority level for this lead, ranging from Low to Very High.
+										 */
+										longDesc: () => LocalizedString
+									}
+									probability: {
+										/**
+										 * Probability
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Success probability (0-100)
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The estimated probability of closing this lead successfully, expressed as a percentage from 0 to 100.
+										 */
+										longDesc: () => LocalizedString
+									}
+									date_deadline: {
+										/**
+										 * Expected Closing
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Expected closing date
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The expected date when this lead or opportunity is anticipated to close.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						marketing_info: {
+							/**
+							 * Marketing Information
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Marketing and source tracking information
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Marketing campaign and lead source tracking information to understand how this lead was generated and acquired.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									campaign_id: {
+										/**
+										 * Campaign
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * ID of the marketing campaign
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The ID of the marketing campaign that generated this lead.
+										 */
+										longDesc: () => LocalizedString
+									}
+									medium_id: {
+										/**
+										 * Medium
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * ID of the marketing medium
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The ID of the marketing medium (such as email, social media, advertising) through which this lead was acquired.
+										 */
+										longDesc: () => LocalizedString
+									}
+									source_id: {
+										/**
+										 * Source
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * ID of the lead source
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The ID of the specific source that generated this lead.
+										 */
+										longDesc: () => LocalizedString
+									}
+									referred: {
+										/**
+										 * Referred by
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Who referred this lead
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Information about who or what referred this lead to your organization.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						activity_info: {
+							/**
+							 * Activity Information
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Next activity planning information
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Information about the next planned activity or follow-up action for this lead.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									activity_summary: {
+										/**
+										 * Next Activity Summary
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Summary of the next planned activity
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * A brief description or summary of the next activity planned for this lead.
+										 */
+										longDesc: () => LocalizedString
+									}
+									activity_type_id: {
+										/**
+										 * Next Activity Type
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * ID of the activity type (Email, Call, Meeting, etc.)
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The ID of the type of activity planned next, such as Email, Call, Meeting, or Document review.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						active: {
+							/**
+							 * Active
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether the lead is active
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Indicates whether this lead is currently active and should appear in standard views and reports.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Notes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Internal notes about the lead
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Internal notes and comments about this lead. This information is for internal use and not visible to the customer.
+							 */
+							longDesc: () => LocalizedString
+						}
+						color: {
+							/**
+							 * Color Index
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Color index for UI display (0-11)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A color index (0-11) used for visual identification in the user interface. This helps with quick visual organization of leads.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tag_ids: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of tag IDs to associate with the lead
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of tag IDs to categorize and organize this lead. Tags help with filtering and grouping leads.
+							 */
+							longDesc: () => LocalizedString
+						}
+						partner_id: {
+							/**
+							 * Customer
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of existing customer/partner record
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of an existing customer or partner record if this lead is associated with an existing contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						company_id: {
+							/**
+							 * Company
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of the company (usually current user company)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the company record that owns this lead. Typically this is the current user's company.
+							 */
+							longDesc: () => LocalizedString
+						}
+						lang_code: {
+							/**
+							 * Language
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Language code (e.g., en_US, fr_FR)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The preferred language code for communications with this lead (e.g., en_US for English, fr_FR for French).
+							 */
+							longDesc: () => LocalizedString
+						}
+						type: {
+							/**
+							 * Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether this is a lead or opportunity
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specifies whether this record should be treated as a lead (early stage) or opportunity (qualified prospect).
+							 */
+							longDesc: () => LocalizedString
+						}
+						recurring_plan: {
+							/**
+							 * Recurring Plan
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of recurring plan if applicable
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of a recurring plan if this lead is associated with a subscription or recurring service.
+							 */
+							longDesc: () => LocalizedString
+						}
+						reveal_id: {
+							/**
+							 * Reveal ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * External reveal service ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An external identifier from a reveal service or lead intelligence platform.
+							 */
+							longDesc: () => LocalizedString
+						}
+						lead_mining_request_id: {
+							/**
+							 * Lead Mining Request
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of lead mining request
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the lead mining request that generated this lead, if applicable.
+							 */
+							longDesc: () => LocalizedString
+						}
+						enrichment_done: {
+							/**
+							 * Enrichment Done
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether lead enrichment has been completed
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Indicates whether automated lead enrichment (data enhancement) has been completed for this lead.
+							 */
+							longDesc: () => LocalizedString
+						}
+						email_bounce: {
+							/**
+							 * Bounce
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email bounce count
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of email bounces recorded for this lead's email address.
+							 */
+							longDesc: () => LocalizedString
+						}
+						lost_reason: {
+							/**
+							 * Lost Reason
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of lost reason if lead was lost
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the reason why this lead was marked as lost, if applicable.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_lead: {
+					/**
+					 * Get Lead
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific lead by ID with customizable fields.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches detailed information about a specific lead from Odoo CRM. Allows you to specify which fields to retrieve, with common fields like ID, name, email, contact name, and partner name selected by default.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						lead_id: {
+							/**
+							 * Lead ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the lead to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the lead record in Odoo CRM.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fields: {
+							/**
+							 * Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Fields to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of field names to retrieve from the lead record. Common fields are pre-selected.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_companies: {
+					/**
+					 * List Companies
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List companies with filtering, sorting, and pagination options.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of companies from Odoo with support for filtering by field values, sorting by specific fields, and pagination. Returns company information including display name, email, phone, and website.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of companies to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of company records to return. Default is 10.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of companies to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of company records to skip before starting to return results. Used for pagination. Default is 0.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fields: {
+							/**
+							 * Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Fields to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of field names to retrieve from each company record. Common fields are pre-selected.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sorting configuration
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the field and direction to sort the results.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The field name to sort the results by.
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The direction to sort the results - ascending or descending.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of filter conditions to apply to the query.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										field: {
+											/**
+											 * Field
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Field to filter by
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The field name to apply the filter condition to.
+											 */
+											longDesc: () => LocalizedString
+										}
+										searchType: {
+											/**
+											 * Search Type
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Type of search operation
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The type of comparison to perform - equals or contains.
+											 */
+											longDesc: () => LocalizedString
+										}
+										value: {
+											/**
+											 * Value
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Filter value
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The value to compare against the field.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				list_leads: {
+					/**
+					 * List Leads
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List leads with filtering, sorting, and pagination options.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of leads from Odoo CRM with support for filtering by field values, sorting by specific fields, and pagination. Returns lead information including ID, name, email, contact name, and partner name.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of leads to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of lead records to return. Default is 10.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of leads to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of lead records to skip before starting to return results. Used for pagination. Default is 0.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fields: {
+							/**
+							 * Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Fields to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of field names to retrieve from each lead record. Common fields are pre-selected.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sorting configuration
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the field and direction to sort the results.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The field name to sort the results by.
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The direction to sort the results - ascending or descending.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of filter conditions to apply to the query.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										field: {
+											/**
+											 * Field
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Field to filter by
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The field name to apply the filter condition to.
+											 */
+											longDesc: () => LocalizedString
+										}
+										searchType: {
+											/**
+											 * Search Type
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Type of search operation
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The type of comparison to perform - equals or contains.
+											 */
+											longDesc: () => LocalizedString
+										}
+										value: {
+											/**
+											 * Value
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Filter value
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The value to compare against the field.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				list_partners: {
+					/**
+					 * List Partners
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List partners with filtering, sorting, and pagination options.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of partners from Odoo with support for filtering by field values, sorting by specific fields, and pagination. Returns partner information including ID, display name, and email.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of partners to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of partner records to return. Default is 10.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of partners to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of partner records to skip before starting to return results. Used for pagination. Default is 0.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fields: {
+							/**
+							 * Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Fields to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of field names to retrieve from each partner record. Common fields are pre-selected.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sorting configuration
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the field and direction to sort the results.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The field name to sort the results by.
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The direction to sort the results - ascending or descending.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of filter conditions to apply to the query.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										field: {
+											/**
+											 * Field
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Field to filter by
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The field name to apply the filter condition to.
+											 */
+											longDesc: () => LocalizedString
+										}
+										searchType: {
+											/**
+											 * Search Type
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Type of search operation
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The type of comparison to perform - equals or contains.
+											 */
+											longDesc: () => LocalizedString
+										}
+										value: {
+											/**
+											 * Value
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Filter value
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The value to compare against the field.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				update_lead: {
+					/**
+					 * Update Lead
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing lead with new information.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates an existing lead in Odoo CRM with new information. Supports updating contact information, address details, sales information, marketing data, and activity details. All fields are optional except the lead ID.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						lead_id: {
+							/**
+							 * Lead ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the lead to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the lead record to update in Odoo CRM.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lead title or subject
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The title or subject of the lead.
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact_name: {
+							/**
+							 * Contact Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name of the contact person
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the primary contact person for this lead.
+							 */
+							longDesc: () => LocalizedString
+						}
+						partner_name: {
+							/**
+							 * Partner Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name of the partner/company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the partner or company associated with this lead.
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact_info: {
+							/**
+							 * Contact Information
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact details for the lead
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Email addresses, phone number, job function, and website information.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									email_from: {
+										/**
+										 * Email
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Primary email address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The primary email address of the contact.
+										 */
+										longDesc: () => LocalizedString
+									}
+									email_cc: {
+										/**
+										 * CC Email
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * CC email addresses
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Additional email addresses to include in communications.
+										 */
+										longDesc: () => LocalizedString
+									}
+									phone: {
+										/**
+										 * Phone
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Phone number
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The phone number of the contact.
+										 */
+										longDesc: () => LocalizedString
+									}
+									'function': {
+										/**
+										 * Job Function
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Job title or function
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The job title or function of the contact person.
+										 */
+										longDesc: () => LocalizedString
+									}
+									website: {
+										/**
+										 * Website
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Website URL
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The website URL of the contact or company.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						address_info: {
+							/**
+							 * Address Information
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Address details for the lead
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Street address, city, postal code, country, and state information.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									street: {
+										/**
+										 * Street
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Street address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The street address of the contact.
+										 */
+										longDesc: () => LocalizedString
+									}
+									street2: {
+										/**
+										 * Street 2
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Additional address line
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Additional address information (apartment, suite, etc.).
+										 */
+										longDesc: () => LocalizedString
+									}
+									city: {
+										/**
+										 * City
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * City name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The city of the contact address.
+										 */
+										longDesc: () => LocalizedString
+									}
+									zip: {
+										/**
+										 * ZIP Code
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Postal/ZIP code
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The postal or ZIP code of the contact address.
+										 */
+										longDesc: () => LocalizedString
+									}
+									country_id: {
+										/**
+										 * Country
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Country selection
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The country of the contact address.
+										 */
+										longDesc: () => LocalizedString
+									}
+									state_id: {
+										/**
+										 * State
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * State/province selection
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The state or province of the contact address.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sales_info: {
+							/**
+							 * Sales Information
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sales-related details for the lead
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Salesperson assignment, team, stage, priority, probability, and deadline information.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									user_id: {
+										/**
+										 * Salesperson
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Assigned salesperson
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The salesperson assigned to this lead.
+										 */
+										longDesc: () => LocalizedString
+									}
+									team_id: {
+										/**
+										 * Sales Team
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Assigned sales team
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The sales team responsible for this lead.
+										 */
+										longDesc: () => LocalizedString
+									}
+									stage_id: {
+										/**
+										 * Stage
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Current stage of the lead
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The current stage or phase of the lead in the sales process.
+										 */
+										longDesc: () => LocalizedString
+									}
+									priority: {
+										/**
+										 * Priority
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Lead priority level
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The priority level of this lead (Low, Medium, High, Very High).
+										 */
+										longDesc: () => LocalizedString
+									}
+									probability: {
+										/**
+										 * Probability
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Success probability percentage
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The estimated probability of converting this lead (0-100%).
+										 */
+										longDesc: () => LocalizedString
+									}
+									date_deadline: {
+										/**
+										 * Deadline
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Expected closing date
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The expected date for closing this lead.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						marketing_info: {
+							/**
+							 * Marketing Information
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Marketing campaign and source details
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Information about the marketing campaign, medium, source, and referral that generated this lead.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									campaign_id: {
+										/**
+										 * Campaign
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Marketing campaign
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The marketing campaign that generated this lead.
+										 */
+										longDesc: () => LocalizedString
+									}
+									medium_id: {
+										/**
+										 * Medium
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Marketing medium
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The marketing medium used (email, social media, etc.).
+										 */
+										longDesc: () => LocalizedString
+									}
+									source_id: {
+										/**
+										 * Source
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Marketing source
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The specific source that generated this lead.
+										 */
+										longDesc: () => LocalizedString
+									}
+									referred: {
+										/**
+										 * Referred By
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Referral source
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Information about who or what referred this lead.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						activity_info: {
+							/**
+							 * Activity Information
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Next activity details
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Information about the next planned activity for this lead.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									activity_summary: {
+										/**
+										 * Activity Summary
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Summary of next activity
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * A brief summary of the next planned activity.
+										 */
+										longDesc: () => LocalizedString
+									}
+									activity_type_id: {
+										/**
+										 * Activity Type
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Type of next activity
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The type of the next planned activity (call, meeting, email, etc.).
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						active: {
+							/**
+							 * Active
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether the lead is active
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to false to archive the lead without deleting it.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lead description or notes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Additional notes or description about the lead.
+							 */
+							longDesc: () => LocalizedString
+						}
+						color: {
+							/**
+							 * Color
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Color code for the lead
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A color code to visually distinguish this lead in the interface.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tag_ids: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Tags to categorize the lead
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of tags to help categorize and organize this lead.
+							 */
+							longDesc: () => LocalizedString
+						}
+						partner_id: {
+							/**
+							 * Partner
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Associated partner record
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Link this lead to an existing partner/customer record.
+							 */
+							longDesc: () => LocalizedString
+						}
+						company_id: {
+							/**
+							 * Company
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Company that owns this lead
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The company that owns this lead record.
+							 */
+							longDesc: () => LocalizedString
+						}
+						type: {
+							/**
+							 * Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lead or opportunity
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether this record is a lead or has been converted to an opportunity.
+							 */
+							longDesc: () => LocalizedString
+						}
+						email_bounce: {
+							/**
+							 * Email Bounce Count
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of email bounces
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of times emails to this contact have bounced.
+							 */
+							longDesc: () => LocalizedString
+						}
+						lost_reason: {
+							/**
+							 * Lost Reason
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Reason for losing the lead
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The reason why this lead was marked as lost.
+							 */
+							longDesc: () => LocalizedString
+						}
+						lang_code: {
+							/**
+							 * Language
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Preferred language
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The preferred language for communicating with this contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_lead: {
+					/**
+					 * Delete Lead
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a lead from Odoo CRM.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently deletes a lead record from Odoo CRM. This action cannot be undone. Consider archiving the lead instead by setting it as inactive.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						lead_id: {
+							/**
+							 * Lead ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the lead to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the lead record to permanently delete from Odoo CRM.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_lead: {
+					/**
+					 * New Lead
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new lead is created in Odoo
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors Odoo for newly created leads or opportunities. Supports filtering by company, team, user, stage, lead type, and tags to only trigger for specific leads that match your criteria.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						company_id: {
+							/**
+							 * Company
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads belonging to the specified company. Leave empty to monitor all companies.
+							 */
+							longDesc: () => LocalizedString
+						}
+						team_id: {
+							/**
+							 * Sales Team
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by sales team
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads assigned to the specified sales team. Leave empty to monitor all teams.
+							 */
+							longDesc: () => LocalizedString
+						}
+						user_id: {
+							/**
+							 * Salesperson
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by assigned salesperson
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads assigned to the specified salesperson. Leave empty to monitor all users.
+							 */
+							longDesc: () => LocalizedString
+						}
+						stage_id: {
+							/**
+							 * Stage
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by lead stage
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads in the specified stage. Leave empty to monitor all stages.
+							 */
+							longDesc: () => LocalizedString
+						}
+						lead_type: {
+							/**
+							 * Lead Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of records to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose whether to monitor leads, opportunities, or both types of records.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tag_ids: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads that have any of the specified tags. Leave empty to monitor all leads regardless of tags.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				updated_lead: {
+					/**
+					 * Updated Lead
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an existing lead is updated in Odoo
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors Odoo for updates to existing leads or opportunities. Supports filtering by company, team, user, stage, lead type, and tags to only trigger for specific leads that match your criteria.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						company_id: {
+							/**
+							 * Company
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads belonging to the specified company. Leave empty to monitor all companies.
+							 */
+							longDesc: () => LocalizedString
+						}
+						team_id: {
+							/**
+							 * Sales Team
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by sales team
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads assigned to the specified sales team. Leave empty to monitor all teams.
+							 */
+							longDesc: () => LocalizedString
+						}
+						user_id: {
+							/**
+							 * Salesperson
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by assigned salesperson
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads assigned to the specified salesperson. Leave empty to monitor all users.
+							 */
+							longDesc: () => LocalizedString
+						}
+						stage_id: {
+							/**
+							 * Stage
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by lead stage
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads in the specified stage. Leave empty to monitor all stages.
+							 */
+							longDesc: () => LocalizedString
+						}
+						lead_type: {
+							/**
+							 * Lead Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of records to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose whether to monitor leads, opportunities, or both types of records.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tag_ids: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads that have any of the specified tags. Leave empty to monitor all leads regardless of tags.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_company: {
+					/**
+					 * New Company
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new company is created in Odoo
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors Odoo for newly created company records in the res.company model. This trigger fires whenever a new company entity is added to your Odoo system, providing company configuration details including address, currency, and organizational information.
+					 */
+					longDesc: () => LocalizedString
+				}
+				new_partner: {
+					/**
+					 * New Partner
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new partner is created in Odoo
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors Odoo for newly created partner records in the res.partner model. This trigger fires whenever a new partner entity is added to your Odoo system, providing partner configuration details including address, contact information, and organizational information.
+					 */
+					longDesc: () => LocalizedString
 				}
 			}
 		}
