@@ -136,7 +136,7 @@ public class TypeScriptActionInterface {
             "get_allowed_values",
             "element_type", "element_allowed_values", "element_allowed_values_creatable",
             "get_element_allowed_values",
-            "attr", "required", "on_change", "preselected", "depends_on",
+            "attr", "required", "on_change", "preselected", "depends_on", "validation_regex",
         );
 
         const TypeScriptAppRestConnectionOptions = RestConnection::ConnectionScheme.options;
@@ -2282,6 +2282,9 @@ public class TypeScriptActionInterface {
         }
         if (*softlist<auto> l = remove type_hash.depends_on) {
             info.attr.depends_on = l;
+        }
+        if ((*string str = remove type_hash.validation_regex).val()) {
+            info.attr.validation_regex = str;
         }
         if (exists (auto v = remove type_hash.on_change)) {
             info.attr.on_change = v;

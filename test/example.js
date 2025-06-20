@@ -626,6 +626,7 @@ exports.actionsCatalogue = {
             */
             "override_options": {
                 "name": {
+                    "validation_regex": "^.*$",
                     "get_allowed_values": async (ctx) => [
                         {
                             "display_name": "Fido",
