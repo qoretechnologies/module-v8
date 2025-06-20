@@ -5,14 +5,14 @@ import {
   TQoreOptions,
   TQoreResponseType,
 } from '@qoretechnologies/ts-toolkit';
-import { getQoreContextRequiredValues } from '../../../global/helpers';
-import { PADDLE_APP_NAME, PaddleError } from '../constants';
-import { createPaddleClient } from '../helpers/constants';
-import { getPaddleProductIdAllowedValues } from '../helpers/get-product-id-allowed-values';
-import { PaddleTaxCategoryAllowedValues } from '../helpers/get-product-tax-category-allowed-values';
-import { PaddleTypeAllowedValues } from '../helpers/get-type-allowed-values';
-import { PaddleStatusAllowedValues } from '../helpers/get-status-allowed-values';
-import { PaddleProductOrderByFieldAllowedValues } from '../helpers/get-products-order-by-fields-allowed-values';
+import { getQoreContextRequiredValues } from '../../../../global/helpers';
+import { PADDLE_APP_NAME, PaddleError } from '../../constants';
+import { createPaddleClient } from '../../helpers/constants';
+import { getPaddleProductIdAllowedValues } from '../../helpers/get-product-id-allowed-values';
+import { PaddleTaxCategoryAllowedValues } from '../../helpers/get-product-tax-category-allowed-values';
+import { PaddleTypeAllowedValues } from '../../helpers/get-type-allowed-values';
+import { PaddleStatusAllowedValues } from '../../helpers/get-status-allowed-values';
+import { PaddleProductOrderByFieldAllowedValues } from '../../helpers/get-products-order-by-fields-allowed-values';
 
 const options = {
   include_prices: {

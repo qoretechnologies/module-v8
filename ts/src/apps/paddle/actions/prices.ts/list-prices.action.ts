@@ -5,14 +5,14 @@ import {
   TQoreOptions,
   TQoreResponseType,
 } from '@qoretechnologies/ts-toolkit';
-import { getQoreContextRequiredValues } from '../../../global/helpers';
-import { PADDLE_APP_NAME, PaddleError } from '../constants';
-import { createPaddleClient } from '../helpers/constants';
-import { getPaddlePriceIdAllowedValues } from '../helpers/get-price-id-allowed-values';
-import { PaddlePricesOrderByFieldsAllowedValues } from '../helpers/get-prices-order-by-fields-allowed-values';
-import { getPaddleProductIdAllowedValues } from '../helpers/get-product-id-allowed-values';
-import { PaddleStatusAllowedValues } from '../helpers/get-status-allowed-values';
-import { PaddleTypeAllowedValues } from '../helpers/get-type-allowed-values';
+import { getQoreContextRequiredValues } from '../../../../global/helpers';
+import { PADDLE_APP_NAME, PaddleError } from '../../constants';
+import { createPaddleClient } from '../../helpers/constants';
+import { getPaddlePriceIdAllowedValues } from '../../helpers/get-price-id-allowed-values';
+import { PaddlePricesOrderByFieldsAllowedValues } from '../../helpers/get-prices-order-by-fields-allowed-values';
+import { getPaddleProductIdAllowedValues } from '../../helpers/get-product-id-allowed-values';
+import { PaddleStatusAllowedValues } from '../../helpers/get-status-allowed-values';
+import { PaddleTypeAllowedValues } from '../../helpers/get-type-allowed-values';
 
 const options = {
   include_product: {
@@ -99,7 +99,7 @@ const listPrices = QoreAppCreator.createLocalizedAction<typeof options>({
     const status = obj?.status as Status | undefined;
     const type = obj?.type as CatalogType | undefined;
     const sortOrder = obj?.order?.direction || 'ASC';
-    const sortField = obj?.order?.field || 'created_at';
+    const sortField = obj?.order?.field || 'status';
 
     try {
       const client = createPaddleClient(token, instance_type);

@@ -4,10 +4,10 @@ import {
   TQoreOptions,
   TQoreResponseType,
 } from '@qoretechnologies/ts-toolkit';
-import { getQoreContextRequiredValues } from '../../../global/helpers';
-import { PADDLE_APP_NAME, PaddleError } from '../constants';
-import { createPaddleClient } from '../helpers/constants';
-import { getPaddlePriceIdAllowedValues } from '../helpers/get-price-id-allowed-values';
+import { getQoreContextRequiredValues } from '../../../../global/helpers';
+import { PADDLE_APP_NAME, PaddleError } from '../../constants';
+import { createPaddleClient } from '../../helpers/constants';
+import { getPaddlePriceIdAllowedValues } from '../../helpers/get-price-id-allowed-values';
 
 const options = {
   price_id: {

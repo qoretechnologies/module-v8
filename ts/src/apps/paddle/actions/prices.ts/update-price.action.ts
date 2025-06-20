@@ -11,16 +11,16 @@ import {
   TQoreOptions,
   TQoreResponseType,
 } from '@qoretechnologies/ts-toolkit';
-import { getQoreContextRequiredValues } from '../../../global/helpers';
-import { PADDLE_APP_NAME, PaddleError } from '../constants';
-import { createPaddleClient } from '../helpers/constants';
-import { PaddleCountryAllowedValues } from '../helpers/get-country-code-allowed-values';
-import { PaddleCurrencyAllowedValues } from '../helpers/get-currency-allowed-values';
-import { PaddleIntervalAllowedValues } from '../helpers/get-interval-allowed-values';
-import { getPaddlePriceIdAllowedValues } from '../helpers/get-price-id-allowed-values';
-import { PaddleStatusAllowedValues } from '../helpers/get-status-allowed-values';
-import { PaddleTaxModeAllowedValues } from '../helpers/get-tax-mode-allowed-values';
-import { PaddleTypeAllowedValues } from '../helpers/get-type-allowed-values';
+import { getQoreContextRequiredValues } from '../../../../global/helpers';
+import { PADDLE_APP_NAME, PaddleError } from '../../constants';
+import { createPaddleClient } from '../../helpers/constants';
+import { PaddleCountryAllowedValues } from '../../helpers/get-country-code-allowed-values';
+import { PaddleCurrencyAllowedValues } from '../../helpers/get-currency-allowed-values';
+import { PaddleIntervalAllowedValues } from '../../helpers/get-interval-allowed-values';
+import { getPaddlePriceIdAllowedValues } from '../../helpers/get-price-id-allowed-values';
+import { PaddleStatusAllowedValues } from '../../helpers/get-status-allowed-values';
+import { PaddleTaxModeAllowedValues } from '../../helpers/get-tax-mode-allowed-values';
+import { PaddleTypeAllowedValues } from '../../helpers/get-type-allowed-values';
 
 const options = {
   price_id: {
