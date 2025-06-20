@@ -12,6 +12,7 @@ import {
   getPaddleSubscription,
   getPaddleTransaction,
   listPaddleCustomers,
+  listPaddlePrices,
   listPaddleProducts,
   listPaddleSubscriptions,
   listPaddleTransactions,
@@ -77,8 +78,6 @@ describe('Test Paddle Actions', () => {
       expect(allowed_values).toBeDefined();
       expect(allowed_values.length).toBeGreaterThan(0);
       expect(allowed_values[0].value).toBeDefined();
-
-      console.dir(allowed_values, { depth: null });
     });
 
     it('Should get paddle transaction allowed values', async () => {
@@ -146,6 +145,7 @@ describe('Test Paddle Actions', () => {
         const action = listPaddleProducts;
 
         if (!('api_function' in action)) throw new Error('api_function not found in action');
+
         const result = await action.api_function(
           {
             per_page: 1,
@@ -211,7 +211,7 @@ describe('Test Paddle Actions', () => {
             product_id: created_product_id,
             description: 'Test Price for Paddle Integration',
             unit_price: {
-              amount: '10',
+              amount: '1000',
               currencyCode: 'USD',
             },
           },
@@ -247,7 +247,7 @@ describe('Test Paddle Actions', () => {
       });
 
       it('Should list prices', async () => {
-        const action = listPaddleProducts;
+        const action = listPaddlePrices;
 
         if (!('api_function' in action)) throw new Error('api_function not found in action');
 

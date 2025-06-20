@@ -52,7 +52,7 @@ const listCustomerCreditBalances = QoreAppCreator.createLocalizedAction<typeof o
 
       return customerCreditBalances;
     } catch (error) {
-      throw new PaddleError(`Failed to get customer: ${error.message || error}`);
+      throw new PaddleError(`Failed to list customer credit balances: ${error.message || error}`);
     }
   },
   response_type: {

@@ -151,7 +151,7 @@ const listSubscriptions = QoreAppCreator.createLocalizedAction<typeof options>({
 
       return await subscriptionCollection.next();
     } catch (error) {
-      throw new PaddleError(`Failed to get subscription: ${error.message || error}`);
+      throw new PaddleError(`Failed to list subscriptions: ${error.message || error}`);
     }
   },
   response_type: paddleSubscriptionResponseType,

@@ -37,7 +37,7 @@ const listCustomerCreditBalances = QoreAppCreator.createLocalizedAction<typeof o
 
       return authToken;
     } catch (error) {
-      throw new PaddleError(`Failed to get customer: ${error.message || error}`);
+      throw new PaddleError(`Failed to get customer auth token: ${error.message || error}`);
     }
   },
   response_type: {

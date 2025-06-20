@@ -32,7 +32,7 @@ const getReportFile = QoreAppCreator.createLocalizedAction<typeof options>({
 
       return report;
     } catch (error) {
-      throw new PaddleError(`Failed to get report: ${error.message || error}`);
+      throw new PaddleError(`Failed to get report file: ${error.message || error}`);
     }
   },
   response_type: {

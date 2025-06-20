@@ -190,7 +190,7 @@ const updatePrice = QoreAppCreator.createLocalizedAction<typeof options>({
 
       return product;
     } catch (error) {
-      throw new PaddleError(`Failed to create a price: ${error.message || error}`);
+      throw new PaddleError(`Failed to update a price: ${error.message || error}`);
     }
   },
   response_type: {

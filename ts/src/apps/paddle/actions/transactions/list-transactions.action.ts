@@ -203,7 +203,7 @@ const listTransactions = QoreAppCreator.createLocalizedAction<typeof options>({
 
       return await transactionCollection.next();
     } catch (error) {
-      throw new PaddleError(`Failed to get transaction: ${error.message || error}`);
+      throw new PaddleError(`Failed to list transactions: ${error.message || error}`);
     }
   },
   response_type: {
