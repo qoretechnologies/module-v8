@@ -3,11 +3,12 @@ import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { PADDLE_APP_NAME, PaddleError } from '../../constants';
 import { createPaddleClient } from '../../helpers/constants';
 import { getPaddleSubscriptionIdAllowedValues } from '../../helpers/get-subscription-id-allowed-values';
-import { paddleSubscriptionResponseType } from './response-types/subscirption.response-type';
+import { paddleSubscriptionResponseType } from './response-types/subscription.response-type';
 import { getPaddleCustomerIdAllowedValues } from '../../helpers/get-customer-id-allowed-values';
 import { getPaddleCustomerAddressIdAllowedValues } from '../../helpers/get-customer-address-id-allowed-values';
 import { getPaddlePriceIdAllowedValues } from '../../helpers/get-price-id-allowed-values';
 import { CollectionMode, ScheduledChangeAction, SubscriptionStatus } from '@paddle/paddle-node-sdk';
+import { PaddleSubscriptionStatusAllowedValues } from '../../helpers/get-subscription-status-allowed-values';
 
 const options = {
   customer_id: {
@@ -97,13 +98,7 @@ const options = {
       type: 'list',
       element_type: 'string',
     },
-    element_allowed_values: [
-      { value: 'active', display_name: 'Active' },
-      { value: 'canceled', display_name: 'Canceled' },
-      { value: 'past_due', display_name: 'Past Due' },
-      { value: 'paused', display_name: 'Paused' },
-      { value: 'trialing', display_name: 'Trialing' },
-    ],
+    element_allowed_values: PaddleSubscriptionStatusAllowedValues,
   },
 } satisfies TQoreOptions;
 
@@ -130,7 +125,7 @@ const listSubscriptions = QoreAppCreator.createLocalizedAction<typeof options>({
       | undefined;
     const status = obj?.status as SubscriptionStatus[] | undefined;
     const perPage = obj?.per_page ? Math.min(obj.per_page, 200) : 50;
-    const sortOrder = obj?.order?.direction || 'ASC';
+    const sortOrder = obj?.order?.direction || 'DESC';
     const sortField = obj?.order?.field;
 
     try {

@@ -98,7 +98,7 @@ const listPrices = QoreAppCreator.createLocalizedAction<typeof options>({
     const perPage = obj?.per_page ? Math.min(obj.per_page, 200) : 50;
     const status = obj?.status as Status | undefined;
     const type = obj?.type as CatalogType | undefined;
-    const sortOrder = obj?.order?.direction || 'ASC';
+    const sortOrder = obj?.order?.direction || 'DESC';
     const sortField = obj?.order?.field || 'status';
 
     try {

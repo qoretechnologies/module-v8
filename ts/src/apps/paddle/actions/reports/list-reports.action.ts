@@ -66,7 +66,7 @@ const listReports = QoreAppCreator.createLocalizedAction<typeof options>({
     const after = obj?.after;
     const status = obj?.status as ReportStatus[] | undefined;
     const perPage = obj?.per_page ? Math.min(obj.per_page, 200) : 50;
-    const sortOrder = obj?.order?.direction || 'ASC';
+    const sortOrder = obj?.order?.direction || 'DESC';
     const sortField = obj?.order?.field || 'created_at';
 
     try {

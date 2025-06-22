@@ -1,9 +1,10 @@
 import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
+import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
-import { PADDLE_APP_LOGO, PADDLE_APP_NAME, PADDLE_CONN_OPTIONS } from './constants';
 import * as PADDLE_ACTIONS from './actions';
-import { mapActionsToApp } from '../../global/helpers';
+import { PADDLE_APP_LOGO, PADDLE_APP_NAME, PADDLE_CONN_OPTIONS } from './constants';
+import * as PADDLE_TRIGGERS from './triggers';
 
 export default (locale: Locales) =>
   ({
@@ -11,7 +12,10 @@ export default (locale: Locales) =>
     short_desc: L[locale].apps[PADDLE_APP_NAME].shortDesc(),
     desc: L[locale].apps[PADDLE_APP_NAME].longDesc(),
     name: PADDLE_APP_NAME,
-    actions: [...mapActionsToApp(PADDLE_APP_NAME, PADDLE_ACTIONS, locale)],
+    actions: [
+      ...mapActionsToApp(PADDLE_APP_NAME, PADDLE_ACTIONS, locale),
+      ...mapTriggersToApp(PADDLE_APP_NAME, PADDLE_TRIGGERS, locale),
+    ],
     logo: PADDLE_APP_LOGO,
     logo_file_name: 'paddle-logo.svg',
     logo_mime_type: 'image/svg+xml',

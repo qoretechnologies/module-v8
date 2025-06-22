@@ -3,7 +3,7 @@ import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { PADDLE_APP_NAME, PaddleError } from '../../constants';
 import { createPaddleClient } from '../../helpers/constants';
 import { getPaddleSubscriptionIdAllowedValues } from '../../helpers/get-subscription-id-allowed-values';
-import { paddleSubscriptionResponseType } from './response-types/subscirption.response-type';
+import { paddleSubscriptionResponseType } from './response-types/subscription.response-type';
 
 const options = {
   subscription_id: {

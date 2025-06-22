@@ -85,7 +85,7 @@ const listCustomers = QoreAppCreator.createLocalizedAction<typeof options>({
     const search = obj?.search;
     const status = obj?.status as Status | undefined;
     const perPage = obj?.per_page ? Math.min(obj.per_page, 200) : 50;
-    const sortOrder = obj?.order?.direction || 'ASC';
+    const sortOrder = obj?.order?.direction || 'DESC';
     const sortField = obj?.order?.field || 'created_at';
 
     try {

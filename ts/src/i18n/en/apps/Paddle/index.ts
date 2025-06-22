@@ -1269,7 +1269,144 @@ const PaddleAppEn = {
       },
     },
   },
-  triggers: {},
+  triggers: {
+    new_customer: {
+      displayName: 'New Customer',
+      shortDesc: 'Triggers when a new customer is created in Paddle.',
+      longDesc:
+        'Monitors for newly created customers in your Paddle account. You can filter by customer status and search criteria to only trigger for specific customers that match your requirements.',
+      options: {
+        status: {
+          displayName: 'Status',
+          shortDesc: 'Filter by customer status',
+          longDesc:
+            'Only trigger for customers with this specific status. Leave empty to trigger for customers with any status.',
+        },
+        search: {
+          displayName: 'Search',
+          shortDesc: 'Search filter for customers',
+          longDesc:
+            'Search term to filter customers by name, email, or other searchable fields. Leave empty to include all customers.',
+        },
+      },
+    },
+    new_product: {
+      displayName: 'New Product',
+      shortDesc: 'Triggers when a new product is created in Paddle.',
+      longDesc:
+        'Monitors for newly created products in your Paddle catalog. You can filter by product status, type, and tax category to only trigger for specific products that match your criteria.',
+      options: {
+        include_prices: {
+          displayName: 'Include Prices',
+          shortDesc: 'Include price information in the response',
+          longDesc:
+            'When enabled, the trigger will include detailed price information for each product in the event data.',
+        },
+        status: {
+          displayName: 'Status',
+          shortDesc: 'Filter by product status',
+          longDesc:
+            'Only trigger for products with this specific status. Leave empty to trigger for products with any status.',
+        },
+        type: {
+          displayName: 'Type',
+          shortDesc: 'Filter by product type',
+          longDesc:
+            'Only trigger for products of this specific type. Leave empty to trigger for products of any type.',
+        },
+        tax_category: {
+          displayName: 'Tax Category',
+          shortDesc: 'Filter by tax categories',
+          longDesc:
+            'Only trigger for products in these specific tax categories. Leave empty to trigger for products in any tax category.',
+        },
+      },
+    },
+    new_report: {
+      displayName: 'New Report',
+      shortDesc: 'Triggers when a new report is created in Paddle.',
+      longDesc:
+        'Monitors for newly created reports in your Paddle account. You can filter by report status to only trigger for reports in specific states.',
+      options: {
+        status: {
+          displayName: 'Status',
+          shortDesc: 'Filter by report status',
+          longDesc:
+            'Only trigger for reports with these specific statuses. Leave empty to trigger for reports with any status.',
+        },
+      },
+    },
+    new_subscription: {
+      displayName: 'New Subscription',
+      shortDesc: 'Triggers when a new subscription is created in Paddle.',
+      longDesc:
+        'Monitors for newly created subscriptions in your Paddle account. You can filter by customer, price, status, collection mode, and scheduled changes to only trigger for specific subscriptions.',
+      options: {
+        customer_id: {
+          displayName: 'Customer',
+          shortDesc: 'Filter by customer',
+          longDesc:
+            'Only trigger for subscriptions belonging to this specific customer. Leave empty to trigger for subscriptions from any customer.',
+        },
+        price_id: {
+          displayName: 'Price IDs',
+          shortDesc: 'Filter by price IDs',
+          longDesc:
+            'Only trigger for subscriptions using these specific prices. Leave empty to trigger for subscriptions with any price.',
+        },
+        status: {
+          displayName: 'Status',
+          shortDesc: 'Filter by subscription status',
+          longDesc:
+            'Only trigger for subscriptions with these specific statuses. Leave empty to trigger for subscriptions with any status.',
+        },
+        collection_mode: {
+          displayName: 'Collection Mode',
+          shortDesc: 'Filter by collection mode',
+          longDesc:
+            'Only trigger for subscriptions with this specific collection mode. Leave empty to trigger for subscriptions with any collection mode.',
+        },
+        scheduled_change_action: {
+          displayName: 'Scheduled Change Action',
+          shortDesc: 'Filter by scheduled change actions',
+          longDesc:
+            'Only trigger for subscriptions with these specific scheduled change actions. Leave empty to trigger for subscriptions with any or no scheduled changes.',
+        },
+      },
+    },
+    new_transaction: {
+      displayName: 'New Transaction',
+      shortDesc: 'Triggers when a new transaction is created in Paddle.',
+      longDesc:
+        'Monitors for newly created transactions in your Paddle account. You can filter by customer, subscription, status, and origin to only trigger for specific transactions that match your criteria.',
+      options: {
+        customer_id: {
+          displayName: 'Customer IDs',
+          shortDesc: 'Filter by customer IDs',
+          longDesc:
+            'Only trigger for transactions from these specific customers. Leave empty to trigger for transactions from any customer.',
+        },
+        status: {
+          displayName: 'Status',
+          shortDesc: 'Filter by transaction status',
+          longDesc:
+            'Only trigger for transactions with these specific statuses. Leave empty to trigger for transactions with any status.',
+        },
+        subscription_id: {
+          displayName: 'Subscription IDs',
+          shortDesc: 'Filter by subscription IDs',
+          longDesc:
+            'Only trigger for transactions related to these specific subscriptions. Leave empty to trigger for transactions from any subscription.',
+        },
+        origin: {
+          displayName: 'Origin',
+          shortDesc: 'Filter by transaction origin',
+          longDesc:
+            'Only trigger for transactions with these specific origins. Leave empty to trigger for transactions with any origin.',
+        },
+      },
+    },
+  },
 };
 
 export default PaddleAppEn;

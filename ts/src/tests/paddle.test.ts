@@ -27,6 +27,13 @@ import { getPaddleDiscountIdAllowedValues } from '../apps/paddle/helpers/get-dis
 import { getPaddlePriceIdAllowedValues } from '../apps/paddle/helpers/get-price-id-allowed-values';
 import { getPaddleProductIdAllowedValues } from '../apps/paddle/helpers/get-product-id-allowed-values';
 import { getPaddleTransactionIdAllowedValues } from '../apps/paddle/helpers/get-transaction-id-allowed-values';
+import {
+  PaddleNewCustomerTrigger,
+  PaddleNewProductTrigger,
+  PaddleNewReportTrigger,
+  PaddleNewSubscriptionTrigger,
+  PaddleNewTransactionTrigger,
+} from '../apps/paddle/triggers';
 
 configDotenv({ path: '.env' });
 
@@ -604,6 +611,63 @@ describe('Test Paddle Actions', () => {
         base_context
       );
 
+      expect(result).toBeDefined();
+      expect(result.id).toBeDefined();
+    });
+  });
+
+  describe('Should test Paddle triggers event example data', () => {
+    it('Should get example event data for new transaction trigger', async () => {
+      const trigger = PaddleNewTransactionTrigger;
+
+      if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
+        throw new Error('get_example_event_data not found in trigger');
+
+      const result = await trigger.get_example_event_data(base_context);
+      expect(result).toBeDefined();
+      expect(result.id).toBeDefined();
+    });
+
+    it('Should get example event data for new subscription trigger', async () => {
+      const trigger = PaddleNewSubscriptionTrigger;
+
+      if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
+        throw new Error('get_example_event_data not found in trigger');
+
+      const result = await trigger.get_example_event_data(base_context);
+      expect(result).toBeDefined();
+      expect(result.id).toBeDefined();
+    });
+
+    it('Should get example event data for new customer trigger', async () => {
+      const trigger = PaddleNewCustomerTrigger;
+
+      if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
+        throw new Error('get_example_event_data not found in trigger');
+
+      const result = await trigger.get_example_event_data(base_context);
+      expect(result).toBeDefined();
+      expect(result.id).toBeDefined();
+    });
+
+    it('Should get example event data for new report trigger', async () => {
+      const trigger = PaddleNewReportTrigger;
+
+      if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
+        throw new Error('get_example_event_data not found in trigger');
+
+      const result = await trigger.get_example_event_data(base_context);
+      expect(result).toBeDefined();
+      expect(result.id).toBeDefined();
+    });
+
+    it('Should get example event data for new product trigger', async () => {
+      const trigger = PaddleNewProductTrigger;
+
+      if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
+        throw new Error('get_example_event_data not found in trigger');
+
+      const result = await trigger.get_example_event_data(base_context);
       expect(result).toBeDefined();
       expect(result.id).toBeDefined();
     });

@@ -91,7 +91,7 @@ const listProducts = QoreAppCreator.createLocalizedAction<typeof options>({
     const status = obj?.status as Status | undefined;
     const type = obj?.type as CatalogType | undefined;
     const taxCategory = obj?.tax_category;
-    const sortOrder = obj?.order?.direction || 'ASC';
+    const sortOrder = obj?.order?.direction || 'DESC';
     const sortField = obj?.order?.field || 'created_at';
 
     try {

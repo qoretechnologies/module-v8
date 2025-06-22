@@ -36390,6 +36390,310 @@ type RootTranslation = {
 				}
 			}
 			triggers: {
+				new_customer: {
+					/**
+					 * N​e​w​ ​C​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​e​r​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​P​a​d​d​l​e​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​c​u​s​t​o​m​e​r​s​ ​i​n​ ​y​o​u​r​ ​P​a​d​d​l​e​ ​a​c​c​o​u​n​t​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​c​u​s​t​o​m​e​r​ ​s​t​a​t​u​s​ ​a​n​d​ ​s​e​a​r​c​h​ ​c​r​i​t​e​r​i​a​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​s​p​e​c​i​f​i​c​ ​c​u​s​t​o​m​e​r​s​ ​t​h​a​t​ ​m​a​t​c​h​ ​y​o​u​r​ ​r​e​q​u​i​r​e​m​e​n​t​s​.
+					 */
+					longDesc: string
+					options: {
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​u​s​t​o​m​e​r​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​c​u​s​t​o​m​e​r​s​ ​w​i​t​h​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​s​t​a​t​u​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​c​u​s​t​o​m​e​r​s​ ​w​i​t​h​ ​a​n​y​ ​s​t​a​t​u​s​.
+							 */
+							longDesc: string
+						}
+						search: {
+							/**
+							 * S​e​a​r​c​h
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​f​i​l​t​e​r​ ​f​o​r​ ​c​u​s​t​o​m​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​a​r​c​h​ ​t​e​r​m​ ​t​o​ ​f​i​l​t​e​r​ ​c​u​s​t​o​m​e​r​s​ ​b​y​ ​n​a​m​e​,​ ​e​m​a​i​l​,​ ​o​r​ ​o​t​h​e​r​ ​s​e​a​r​c​h​a​b​l​e​ ​f​i​e​l​d​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​i​n​c​l​u​d​e​ ​a​l​l​ ​c​u​s​t​o​m​e​r​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_product: {
+					/**
+					 * N​e​w​ ​P​r​o​d​u​c​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​r​o​d​u​c​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​P​a​d​d​l​e​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​p​r​o​d​u​c​t​s​ ​i​n​ ​y​o​u​r​ ​P​a​d​d​l​e​ ​c​a​t​a​l​o​g​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​p​r​o​d​u​c​t​ ​s​t​a​t​u​s​,​ ​t​y​p​e​,​ ​a​n​d​ ​t​a​x​ ​c​a​t​e​g​o​r​y​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​s​p​e​c​i​f​i​c​ ​p​r​o​d​u​c​t​s​ ​t​h​a​t​ ​m​a​t​c​h​ ​y​o​u​r​ ​c​r​i​t​e​r​i​a​.
+					 */
+					longDesc: string
+					options: {
+						include_prices: {
+							/**
+							 * I​n​c​l​u​d​e​ ​P​r​i​c​e​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​p​r​i​c​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​i​n​c​l​u​d​e​ ​d​e​t​a​i​l​e​d​ ​p​r​i​c​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​ ​e​a​c​h​ ​p​r​o​d​u​c​t​ ​i​n​ ​t​h​e​ ​e​v​e​n​t​ ​d​a​t​a​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​r​o​d​u​c​t​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​p​r​o​d​u​c​t​s​ ​w​i​t​h​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​s​t​a​t​u​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​p​r​o​d​u​c​t​s​ ​w​i​t​h​ ​a​n​y​ ​s​t​a​t​u​s​.
+							 */
+							longDesc: string
+						}
+						type: {
+							/**
+							 * T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​r​o​d​u​c​t​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​p​r​o​d​u​c​t​s​ ​o​f​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​p​r​o​d​u​c​t​s​ ​o​f​ ​a​n​y​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+						tax_category: {
+							/**
+							 * T​a​x​ ​C​a​t​e​g​o​r​y
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​t​a​x​ ​c​a​t​e​g​o​r​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​p​r​o​d​u​c​t​s​ ​i​n​ ​t​h​e​s​e​ ​s​p​e​c​i​f​i​c​ ​t​a​x​ ​c​a​t​e​g​o​r​i​e​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​p​r​o​d​u​c​t​s​ ​i​n​ ​a​n​y​ ​t​a​x​ ​c​a​t​e​g​o​r​y​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_report: {
+					/**
+					 * N​e​w​ ​R​e​p​o​r​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​e​p​o​r​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​P​a​d​d​l​e​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​r​e​p​o​r​t​s​ ​i​n​ ​y​o​u​r​ ​P​a​d​d​l​e​ ​a​c​c​o​u​n​t​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​r​e​p​o​r​t​ ​s​t​a​t​u​s​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​r​e​p​o​r​t​s​ ​i​n​ ​s​p​e​c​i​f​i​c​ ​s​t​a​t​e​s​.
+					 */
+					longDesc: string
+					options: {
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​r​e​p​o​r​t​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​r​e​p​o​r​t​s​ ​w​i​t​h​ ​t​h​e​s​e​ ​s​p​e​c​i​f​i​c​ ​s​t​a​t​u​s​e​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​r​e​p​o​r​t​s​ ​w​i​t​h​ ​a​n​y​ ​s​t​a​t​u​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_subscription: {
+					/**
+					 * N​e​w​ ​S​u​b​s​c​r​i​p​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​P​a​d​d​l​e​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​s​u​b​s​c​r​i​p​t​i​o​n​s​ ​i​n​ ​y​o​u​r​ ​P​a​d​d​l​e​ ​a​c​c​o​u​n​t​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​c​u​s​t​o​m​e​r​,​ ​p​r​i​c​e​,​ ​s​t​a​t​u​s​,​ ​c​o​l​l​e​c​t​i​o​n​ ​m​o​d​e​,​ ​a​n​d​ ​s​c​h​e​d​u​l​e​d​ ​c​h​a​n​g​e​s​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​s​p​e​c​i​f​i​c​ ​s​u​b​s​c​r​i​p​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​s​u​b​s​c​r​i​p​t​i​o​n​s​ ​b​e​l​o​n​g​i​n​g​ ​t​o​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​c​u​s​t​o​m​e​r​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​s​u​b​s​c​r​i​p​t​i​o​n​s​ ​f​r​o​m​ ​a​n​y​ ​c​u​s​t​o​m​e​r​.
+							 */
+							longDesc: string
+						}
+						price_id: {
+							/**
+							 * P​r​i​c​e​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​r​i​c​e​ ​I​D​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​s​u​b​s​c​r​i​p​t​i​o​n​s​ ​u​s​i​n​g​ ​t​h​e​s​e​ ​s​p​e​c​i​f​i​c​ ​p​r​i​c​e​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​s​u​b​s​c​r​i​p​t​i​o​n​s​ ​w​i​t​h​ ​a​n​y​ ​p​r​i​c​e​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​s​u​b​s​c​r​i​p​t​i​o​n​s​ ​w​i​t​h​ ​t​h​e​s​e​ ​s​p​e​c​i​f​i​c​ ​s​t​a​t​u​s​e​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​s​u​b​s​c​r​i​p​t​i​o​n​s​ ​w​i​t​h​ ​a​n​y​ ​s​t​a​t​u​s​.
+							 */
+							longDesc: string
+						}
+						collection_mode: {
+							/**
+							 * C​o​l​l​e​c​t​i​o​n​ ​M​o​d​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​o​l​l​e​c​t​i​o​n​ ​m​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​s​u​b​s​c​r​i​p​t​i​o​n​s​ ​w​i​t​h​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​c​o​l​l​e​c​t​i​o​n​ ​m​o​d​e​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​s​u​b​s​c​r​i​p​t​i​o​n​s​ ​w​i​t​h​ ​a​n​y​ ​c​o​l​l​e​c​t​i​o​n​ ​m​o​d​e​.
+							 */
+							longDesc: string
+						}
+						scheduled_change_action: {
+							/**
+							 * S​c​h​e​d​u​l​e​d​ ​C​h​a​n​g​e​ ​A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​c​h​e​d​u​l​e​d​ ​c​h​a​n​g​e​ ​a​c​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​s​u​b​s​c​r​i​p​t​i​o​n​s​ ​w​i​t​h​ ​t​h​e​s​e​ ​s​p​e​c​i​f​i​c​ ​s​c​h​e​d​u​l​e​d​ ​c​h​a​n​g​e​ ​a​c​t​i​o​n​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​s​u​b​s​c​r​i​p​t​i​o​n​s​ ​w​i​t​h​ ​a​n​y​ ​o​r​ ​n​o​ ​s​c​h​e​d​u​l​e​d​ ​c​h​a​n​g​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_transaction: {
+					/**
+					 * N​e​w​ ​T​r​a​n​s​a​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​r​a​n​s​a​c​t​i​o​n​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​P​a​d​d​l​e​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​i​n​ ​y​o​u​r​ ​P​a​d​d​l​e​ ​a​c​c​o​u​n​t​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​c​u​s​t​o​m​e​r​,​ ​s​u​b​s​c​r​i​p​t​i​o​n​,​ ​s​t​a​t​u​s​,​ ​a​n​d​ ​o​r​i​g​i​n​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​s​p​e​c​i​f​i​c​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​t​h​a​t​ ​m​a​t​c​h​ ​y​o​u​r​ ​c​r​i​t​e​r​i​a​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​u​s​t​o​m​e​r​ ​I​D​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​f​r​o​m​ ​t​h​e​s​e​ ​s​p​e​c​i​f​i​c​ ​c​u​s​t​o​m​e​r​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​f​r​o​m​ ​a​n​y​ ​c​u​s​t​o​m​e​r​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​t​r​a​n​s​a​c​t​i​o​n​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​w​i​t​h​ ​t​h​e​s​e​ ​s​p​e​c​i​f​i​c​ ​s​t​a​t​u​s​e​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​w​i​t​h​ ​a​n​y​ ​s​t​a​t​u​s​.
+							 */
+							longDesc: string
+						}
+						subscription_id: {
+							/**
+							 * S​u​b​s​c​r​i​p​t​i​o​n​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​I​D​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​r​e​l​a​t​e​d​ ​t​o​ ​t​h​e​s​e​ ​s​p​e​c​i​f​i​c​ ​s​u​b​s​c​r​i​p​t​i​o​n​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​f​r​o​m​ ​a​n​y​ ​s​u​b​s​c​r​i​p​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						origin: {
+							/**
+							 * O​r​i​g​i​n
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​t​r​a​n​s​a​c​t​i​o​n​ ​o​r​i​g​i​n
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​w​i​t​h​ ​t​h​e​s​e​ ​s​p​e​c​i​f​i​c​ ​o​r​i​g​i​n​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​w​i​t​h​ ​a​n​y​ ​o​r​i​g​i​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
 			}
 		}
 	}
@@ -72773,6 +73077,310 @@ export type TranslationFunctions = {
 				}
 			}
 			triggers: {
+				new_customer: {
+					/**
+					 * New Customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new customer is created in Paddle.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors for newly created customers in your Paddle account. You can filter by customer status and search criteria to only trigger for specific customers that match your requirements.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by customer status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for customers with this specific status. Leave empty to trigger for customers with any status.
+							 */
+							longDesc: () => LocalizedString
+						}
+						search: {
+							/**
+							 * Search
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search filter for customers
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Search term to filter customers by name, email, or other searchable fields. Leave empty to include all customers.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_product: {
+					/**
+					 * New Product
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new product is created in Paddle.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors for newly created products in your Paddle catalog. You can filter by product status, type, and tax category to only trigger for specific products that match your criteria.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						include_prices: {
+							/**
+							 * Include Prices
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include price information in the response
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, the trigger will include detailed price information for each product in the event data.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by product status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for products with this specific status. Leave empty to trigger for products with any status.
+							 */
+							longDesc: () => LocalizedString
+						}
+						type: {
+							/**
+							 * Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by product type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for products of this specific type. Leave empty to trigger for products of any type.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tax_category: {
+							/**
+							 * Tax Category
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by tax categories
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for products in these specific tax categories. Leave empty to trigger for products in any tax category.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_report: {
+					/**
+					 * New Report
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new report is created in Paddle.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors for newly created reports in your Paddle account. You can filter by report status to only trigger for reports in specific states.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by report status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for reports with these specific statuses. Leave empty to trigger for reports with any status.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_subscription: {
+					/**
+					 * New Subscription
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new subscription is created in Paddle.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors for newly created subscriptions in your Paddle account. You can filter by customer, price, status, collection mode, and scheduled changes to only trigger for specific subscriptions.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for subscriptions belonging to this specific customer. Leave empty to trigger for subscriptions from any customer.
+							 */
+							longDesc: () => LocalizedString
+						}
+						price_id: {
+							/**
+							 * Price IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by price IDs
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for subscriptions using these specific prices. Leave empty to trigger for subscriptions with any price.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by subscription status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for subscriptions with these specific statuses. Leave empty to trigger for subscriptions with any status.
+							 */
+							longDesc: () => LocalizedString
+						}
+						collection_mode: {
+							/**
+							 * Collection Mode
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by collection mode
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for subscriptions with this specific collection mode. Leave empty to trigger for subscriptions with any collection mode.
+							 */
+							longDesc: () => LocalizedString
+						}
+						scheduled_change_action: {
+							/**
+							 * Scheduled Change Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by scheduled change actions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for subscriptions with these specific scheduled change actions. Leave empty to trigger for subscriptions with any or no scheduled changes.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_transaction: {
+					/**
+					 * New Transaction
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new transaction is created in Paddle.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors for newly created transactions in your Paddle account. You can filter by customer, subscription, status, and origin to only trigger for specific transactions that match your criteria.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by customer IDs
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for transactions from these specific customers. Leave empty to trigger for transactions from any customer.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by transaction status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for transactions with these specific statuses. Leave empty to trigger for transactions with any status.
+							 */
+							longDesc: () => LocalizedString
+						}
+						subscription_id: {
+							/**
+							 * Subscription IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by subscription IDs
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for transactions related to these specific subscriptions. Leave empty to trigger for transactions from any subscription.
+							 */
+							longDesc: () => LocalizedString
+						}
+						origin: {
+							/**
+							 * Origin
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by transaction origin
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for transactions with these specific origins. Leave empty to trigger for transactions with any origin.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
 			}
 		}
 	}
