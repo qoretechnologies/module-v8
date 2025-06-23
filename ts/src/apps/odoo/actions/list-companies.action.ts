@@ -31,13 +31,17 @@ const options = {
     get_element_allowed_values: getOdooCompanyFieldsAllowedValues,
     default_value: defaultCompanyFields,
     required: false,
-    preselected: true,
   },
   sort: {
     type: {
       type: 'hash',
       fields: {
-        field: { type: 'string', required: true },
+        field: {
+          type: 'string',
+          allowed_values_creatable: true,
+          get_allowed_values: getOdooCompanyFieldsAllowedValues,
+          required: true,
+        },
         direction: {
           type: 'string',
           required: true,

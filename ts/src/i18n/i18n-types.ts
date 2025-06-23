@@ -33629,34 +33629,36 @@ type RootTranslation = {
 							 * C​o​n​f​i​g​u​r​e​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​.
 							 */
 							longDesc: string
-							fields: {
-								field: {
-									/**
-									 * S​o​r​t​ ​F​i​e​l​d
-									 */
-									displayName: string
-									/**
-									 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
-									 */
-									shortDesc: string
-									/**
-									 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​b​y​.
-									 */
-									longDesc: string
-								}
-								direction: {
-									/**
-									 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
-									 */
-									displayName: string
-									/**
-									 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
-									 */
-									shortDesc: string
-									/**
-									 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)​.
-									 */
-									longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​b​y​.
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)​.
+										 */
+										longDesc: string
+									}
 								}
 							}
 						}
@@ -33845,34 +33847,36 @@ type RootTranslation = {
 							 * T​h​e​ ​b​a​s​e​ ​u​n​i​t​ ​p​r​i​c​e​ ​f​o​r​ ​t​h​i​s​ ​p​r​i​c​i​n​g​ ​o​p​t​i​o​n​.
 							 */
 							longDesc: string
-							fields: {
-								amount: {
-									/**
-									 * A​m​o​u​n​t
-									 */
-									displayName: string
-									/**
-									 * P​r​i​c​e​ ​a​m​o​u​n​t
-									 */
-									shortDesc: string
-									/**
-									 * T​h​e​ ​p​r​i​c​e​ ​a​m​o​u​n​t​ ​a​s​ ​a​ ​s​t​r​i​n​g​ ​(​e​.​g​.​,​ ​"​9​.​9​9​"​)​.
-									 */
-									longDesc: string
-								}
-								currencyCode: {
-									/**
-									 * C​u​r​r​e​n​c​y​ ​C​o​d​e
-									 */
-									displayName: string
-									/**
-									 * C​u​r​r​e​n​c​y​ ​f​o​r​ ​t​h​e​ ​p​r​i​c​e
-									 */
-									shortDesc: string
-									/**
-									 * T​h​e​ ​t​h​r​e​e​-​l​e​t​t​e​r​ ​I​S​O​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​(​e​.​g​.​,​ ​U​S​D​,​ ​E​U​R​,​ ​G​B​P​)​.
-									 */
-									longDesc: string
+							type: {
+								fields: {
+									amount: {
+										/**
+										 * A​m​o​u​n​t
+										 */
+										displayName: string
+										/**
+										 * P​r​i​c​e​ ​a​m​o​u​n​t
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​r​i​c​e​ ​a​m​o​u​n​t​ ​a​s​ ​a​ ​s​t​r​i​n​g​ ​(​e​.​g​.​,​ ​"​9​.​9​9​"​)​.
+										 */
+										longDesc: string
+									}
+									currencyCode: {
+										/**
+										 * C​u​r​r​e​n​c​y​ ​C​o​d​e
+										 */
+										displayName: string
+										/**
+										 * C​u​r​r​e​n​c​y​ ​f​o​r​ ​t​h​e​ ​p​r​i​c​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​t​h​r​e​e​-​l​e​t​t​e​r​ ​I​S​O​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​(​e​.​g​.​,​ ​U​S​D​,​ ​E​U​R​,​ ​G​B​P​)​.
+										 */
+										longDesc: string
+									}
 								}
 							}
 						}
@@ -33917,34 +33921,36 @@ type RootTranslation = {
 							 * D​e​f​i​n​e​s​ ​h​o​w​ ​o​f​t​e​n​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​i​s​ ​b​i​l​l​e​d​ ​f​o​r​ ​r​e​c​u​r​r​i​n​g​ ​p​r​i​c​e​s​.
 							 */
 							longDesc: string
-							fields: {
-								frequency: {
-									/**
-									 * F​r​e​q​u​e​n​c​y
-									 */
-									displayName: string
-									/**
-									 * B​i​l​l​i​n​g​ ​f​r​e​q​u​e​n​c​y​ ​n​u​m​b​e​r
-									 */
-									shortDesc: string
-									/**
-									 * H​o​w​ ​m​a​n​y​ ​i​n​t​e​r​v​a​l​s​ ​b​e​t​w​e​e​n​ ​e​a​c​h​ ​b​i​l​l​i​n​g​ ​(​e​.​g​.​,​ ​1​ ​f​o​r​ ​e​v​e​r​y​ ​m​o​n​t​h​,​ ​2​ ​f​o​r​ ​e​v​e​r​y​ ​2​ ​m​o​n​t​h​s​)​.
-									 */
-									longDesc: string
-								}
-								interval: {
-									/**
-									 * I​n​t​e​r​v​a​l
-									 */
-									displayName: string
-									/**
-									 * B​i​l​l​i​n​g​ ​i​n​t​e​r​v​a​l​ ​u​n​i​t
-									 */
-									shortDesc: string
-									/**
-									 * T​h​e​ ​t​i​m​e​ ​u​n​i​t​ ​f​o​r​ ​b​i​l​l​i​n​g​ ​(​e​.​g​.​,​ ​d​a​y​,​ ​w​e​e​k​,​ ​m​o​n​t​h​,​ ​y​e​a​r​)​.
-									 */
-									longDesc: string
+							type: {
+								fields: {
+									frequency: {
+										/**
+										 * F​r​e​q​u​e​n​c​y
+										 */
+										displayName: string
+										/**
+										 * B​i​l​l​i​n​g​ ​f​r​e​q​u​e​n​c​y​ ​n​u​m​b​e​r
+										 */
+										shortDesc: string
+										/**
+										 * H​o​w​ ​m​a​n​y​ ​i​n​t​e​r​v​a​l​s​ ​b​e​t​w​e​e​n​ ​e​a​c​h​ ​b​i​l​l​i​n​g​ ​(​e​.​g​.​,​ ​1​ ​f​o​r​ ​e​v​e​r​y​ ​m​o​n​t​h​,​ ​2​ ​f​o​r​ ​e​v​e​r​y​ ​2​ ​m​o​n​t​h​s​)​.
+										 */
+										longDesc: string
+									}
+									interval: {
+										/**
+										 * I​n​t​e​r​v​a​l
+										 */
+										displayName: string
+										/**
+										 * B​i​l​l​i​n​g​ ​i​n​t​e​r​v​a​l​ ​u​n​i​t
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​t​i​m​e​ ​u​n​i​t​ ​f​o​r​ ​b​i​l​l​i​n​g​ ​(​e​.​g​.​,​ ​d​a​y​,​ ​w​e​e​k​,​ ​m​o​n​t​h​,​ ​y​e​a​r​)​.
+										 */
+										longDesc: string
+									}
 								}
 							}
 						}
@@ -33961,34 +33967,36 @@ type RootTranslation = {
 							 * D​e​f​i​n​e​s​ ​t​h​e​ ​l​e​n​g​t​h​ ​o​f​ ​t​h​e​ ​f​r​e​e​ ​t​r​i​a​l​ ​p​e​r​i​o​d​ ​f​o​r​ ​t​h​i​s​ ​p​r​i​c​e​.
 							 */
 							longDesc: string
-							fields: {
-								frequency: {
-									/**
-									 * T​r​i​a​l​ ​F​r​e​q​u​e​n​c​y
-									 */
-									displayName: string
-									/**
-									 * T​r​i​a​l​ ​p​e​r​i​o​d​ ​l​e​n​g​t​h
-									 */
-									shortDesc: string
-									/**
-									 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​i​n​t​e​r​v​a​l​s​ ​f​o​r​ ​t​h​e​ ​t​r​i​a​l​ ​p​e​r​i​o​d​.
-									 */
-									longDesc: string
-								}
-								interval: {
-									/**
-									 * T​r​i​a​l​ ​I​n​t​e​r​v​a​l
-									 */
-									displayName: string
-									/**
-									 * T​r​i​a​l​ ​p​e​r​i​o​d​ ​u​n​i​t
-									 */
-									shortDesc: string
-									/**
-									 * T​h​e​ ​t​i​m​e​ ​u​n​i​t​ ​f​o​r​ ​t​h​e​ ​t​r​i​a​l​ ​p​e​r​i​o​d​ ​(​e​.​g​.​,​ ​d​a​y​,​ ​w​e​e​k​,​ ​m​o​n​t​h​)​.
-									 */
-									longDesc: string
+							type: {
+								fields: {
+									frequency: {
+										/**
+										 * T​r​i​a​l​ ​F​r​e​q​u​e​n​c​y
+										 */
+										displayName: string
+										/**
+										 * T​r​i​a​l​ ​p​e​r​i​o​d​ ​l​e​n​g​t​h
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​i​n​t​e​r​v​a​l​s​ ​f​o​r​ ​t​h​e​ ​t​r​i​a​l​ ​p​e​r​i​o​d​.
+										 */
+										longDesc: string
+									}
+									interval: {
+										/**
+										 * T​r​i​a​l​ ​I​n​t​e​r​v​a​l
+										 */
+										displayName: string
+										/**
+										 * T​r​i​a​l​ ​p​e​r​i​o​d​ ​u​n​i​t
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​t​i​m​e​ ​u​n​i​t​ ​f​o​r​ ​t​h​e​ ​t​r​i​a​l​ ​p​e​r​i​o​d​ ​(​e​.​g​.​,​ ​d​a​y​,​ ​w​e​e​k​,​ ​m​o​n​t​h​)​.
+										 */
+										longDesc: string
+									}
 								}
 							}
 						}
@@ -34019,62 +34027,66 @@ type RootTranslation = {
 							 * O​v​e​r​r​i​d​e​ ​t​h​e​ ​b​a​s​e​ ​p​r​i​c​e​ ​f​o​r​ ​s​p​e​c​i​f​i​c​ ​c​o​u​n​t​r​i​e​s​ ​o​r​ ​r​e​g​i​o​n​s​.
 							 */
 							longDesc: string
-							fields: {
-								countryCodes: {
-									/**
-									 * C​o​u​n​t​r​y​ ​C​o​d​e​s
-									 */
-									displayName: string
-									/**
-									 * C​o​u​n​t​r​i​e​s​ ​f​o​r​ ​t​h​i​s​ ​o​v​e​r​r​i​d​e
-									 */
-									shortDesc: string
-									/**
-									 * L​i​s​t​ ​o​f​ ​I​S​O​ ​c​o​u​n​t​r​y​ ​c​o​d​e​s​ ​w​h​e​r​e​ ​t​h​i​s​ ​p​r​i​c​e​ ​o​v​e​r​r​i​d​e​ ​a​p​p​l​i​e​s​.
-									 */
-									longDesc: string
-								}
-								unitPrice: {
-									/**
-									 * O​v​e​r​r​i​d​e​ ​P​r​i​c​e
-									 */
-									displayName: string
-									/**
-									 * P​r​i​c​e​ ​f​o​r​ ​t​h​e​s​e​ ​c​o​u​n​t​r​i​e​s
-									 */
-									shortDesc: string
-									/**
-									 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​p​r​i​c​e​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​c​o​u​n​t​r​i​e​s​.
-									 */
-									longDesc: string
-									fields: {
-										amount: {
-											/**
-											 * O​v​e​r​r​i​d​e​ ​A​m​o​u​n​t
-											 */
-											displayName: string
-											/**
-											 * O​v​e​r​r​i​d​e​ ​p​r​i​c​e​ ​a​m​o​u​n​t
-											 */
-											shortDesc: string
-											/**
-											 * T​h​e​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e​ ​a​m​o​u​n​t​ ​a​s​ ​a​ ​s​t​r​i​n​g​.
-											 */
-											longDesc: string
-										}
-										currencyCode: {
-											/**
-											 * O​v​e​r​r​i​d​e​ ​C​u​r​r​e​n​c​y
-											 */
-											displayName: string
-											/**
-											 * C​u​r​r​e​n​c​y​ ​f​o​r​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e
-											 */
-											shortDesc: string
-											/**
-											 * T​h​e​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e​.
-											 */
-											longDesc: string
+							type: {
+								fields: {
+									countryCodes: {
+										/**
+										 * C​o​u​n​t​r​y​ ​C​o​d​e​s
+										 */
+										displayName: string
+										/**
+										 * C​o​u​n​t​r​i​e​s​ ​f​o​r​ ​t​h​i​s​ ​o​v​e​r​r​i​d​e
+										 */
+										shortDesc: string
+										/**
+										 * L​i​s​t​ ​o​f​ ​I​S​O​ ​c​o​u​n​t​r​y​ ​c​o​d​e​s​ ​w​h​e​r​e​ ​t​h​i​s​ ​p​r​i​c​e​ ​o​v​e​r​r​i​d​e​ ​a​p​p​l​i​e​s​.
+										 */
+										longDesc: string
+									}
+									unitPrice: {
+										/**
+										 * O​v​e​r​r​i​d​e​ ​P​r​i​c​e
+										 */
+										displayName: string
+										/**
+										 * P​r​i​c​e​ ​f​o​r​ ​t​h​e​s​e​ ​c​o​u​n​t​r​i​e​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​p​r​i​c​e​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​c​o​u​n​t​r​i​e​s​.
+										 */
+										longDesc: string
+										type: {
+											fields: {
+												amount: {
+													/**
+													 * O​v​e​r​r​i​d​e​ ​A​m​o​u​n​t
+													 */
+													displayName: string
+													/**
+													 * O​v​e​r​r​i​d​e​ ​p​r​i​c​e​ ​a​m​o​u​n​t
+													 */
+													shortDesc: string
+													/**
+													 * T​h​e​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e​ ​a​m​o​u​n​t​ ​a​s​ ​a​ ​s​t​r​i​n​g​.
+													 */
+													longDesc: string
+												}
+												currencyCode: {
+													/**
+													 * O​v​e​r​r​i​d​e​ ​C​u​r​r​e​n​c​y
+													 */
+													displayName: string
+													/**
+													 * C​u​r​r​e​n​c​y​ ​f​o​r​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e
+													 */
+													shortDesc: string
+													/**
+													 * T​h​e​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e​.
+													 */
+													longDesc: string
+												}
+											}
 										}
 									}
 								}
@@ -34093,34 +34105,36 @@ type RootTranslation = {
 							 * S​e​t​ ​l​i​m​i​t​s​ ​o​n​ ​h​o​w​ ​m​a​n​y​ ​u​n​i​t​s​ ​c​a​n​ ​b​e​ ​p​u​r​c​h​a​s​e​d​.
 							 */
 							longDesc: string
-							fields: {
-								minimum: {
-									/**
-									 * M​i​n​i​m​u​m​ ​Q​u​a​n​t​i​t​y
-									 */
-									displayName: string
-									/**
-									 * M​i​n​i​m​u​m​ ​p​u​r​c​h​a​s​e​ ​q​u​a​n​t​i​t​y
-									 */
-									shortDesc: string
-									/**
-									 * T​h​e​ ​m​i​n​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​t​h​a​t​ ​m​u​s​t​ ​b​e​ ​p​u​r​c​h​a​s​e​d​.
-									 */
-									longDesc: string
-								}
-								maximum: {
-									/**
-									 * M​a​x​i​m​u​m​ ​Q​u​a​n​t​i​t​y
-									 */
-									displayName: string
-									/**
-									 * M​a​x​i​m​u​m​ ​p​u​r​c​h​a​s​e​ ​q​u​a​n​t​i​t​y
-									 */
-									shortDesc: string
-									/**
-									 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​p​u​r​c​h​a​s​e​d​.
-									 */
-									longDesc: string
+							type: {
+								fields: {
+									minimum: {
+										/**
+										 * M​i​n​i​m​u​m​ ​Q​u​a​n​t​i​t​y
+										 */
+										displayName: string
+										/**
+										 * M​i​n​i​m​u​m​ ​p​u​r​c​h​a​s​e​ ​q​u​a​n​t​i​t​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​m​i​n​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​t​h​a​t​ ​m​u​s​t​ ​b​e​ ​p​u​r​c​h​a​s​e​d​.
+										 */
+										longDesc: string
+									}
+									maximum: {
+										/**
+										 * M​a​x​i​m​u​m​ ​Q​u​a​n​t​i​t​y
+										 */
+										displayName: string
+										/**
+										 * M​a​x​i​m​u​m​ ​p​u​r​c​h​a​s​e​ ​q​u​a​n​t​i​t​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​p​u​r​c​h​a​s​e​d​.
+										 */
+										longDesc: string
+									}
 								}
 							}
 						}
@@ -34323,34 +34337,36 @@ type RootTranslation = {
 							 * C​o​n​f​i​g​u​r​e​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​.
 							 */
 							longDesc: string
-							fields: {
-								field: {
-									/**
-									 * S​o​r​t​ ​F​i​e​l​d
-									 */
-									displayName: string
-									/**
-									 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
-									 */
-									shortDesc: string
-									/**
-									 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​b​y​.
-									 */
-									longDesc: string
-								}
-								direction: {
-									/**
-									 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
-									 */
-									displayName: string
-									/**
-									 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
-									 */
-									shortDesc: string
-									/**
-									 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)​.
-									 */
-									longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​b​y​.
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)​.
+										 */
+										longDesc: string
+									}
 								}
 							}
 						}
@@ -34411,34 +34427,36 @@ type RootTranslation = {
 							 * T​h​e​ ​u​p​d​a​t​e​d​ ​b​a​s​e​ ​u​n​i​t​ ​p​r​i​c​e​ ​f​o​r​ ​t​h​i​s​ ​p​r​i​c​i​n​g​ ​o​p​t​i​o​n​.
 							 */
 							longDesc: string
-							fields: {
-								amount: {
-									/**
-									 * A​m​o​u​n​t
-									 */
-									displayName: string
-									/**
-									 * U​p​d​a​t​e​d​ ​p​r​i​c​e​ ​a​m​o​u​n​t
-									 */
-									shortDesc: string
-									/**
-									 * T​h​e​ ​u​p​d​a​t​e​d​ ​p​r​i​c​e​ ​a​m​o​u​n​t​ ​a​s​ ​a​ ​s​t​r​i​n​g​ ​(​e​.​g​.​,​ ​"​9​.​9​9​"​)​.
-									 */
-									longDesc: string
-								}
-								currencyCode: {
-									/**
-									 * C​u​r​r​e​n​c​y​ ​C​o​d​e
-									 */
-									displayName: string
-									/**
-									 * U​p​d​a​t​e​d​ ​c​u​r​r​e​n​c​y​ ​f​o​r​ ​t​h​e​ ​p​r​i​c​e
-									 */
-									shortDesc: string
-									/**
-									 * T​h​e​ ​u​p​d​a​t​e​d​ ​t​h​r​e​e​-​l​e​t​t​e​r​ ​I​S​O​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​(​e​.​g​.​,​ ​U​S​D​,​ ​E​U​R​,​ ​G​B​P​)​.
-									 */
-									longDesc: string
+							type: {
+								fields: {
+									amount: {
+										/**
+										 * A​m​o​u​n​t
+										 */
+										displayName: string
+										/**
+										 * U​p​d​a​t​e​d​ ​p​r​i​c​e​ ​a​m​o​u​n​t
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​u​p​d​a​t​e​d​ ​p​r​i​c​e​ ​a​m​o​u​n​t​ ​a​s​ ​a​ ​s​t​r​i​n​g​ ​(​e​.​g​.​,​ ​"​9​.​9​9​"​)​.
+										 */
+										longDesc: string
+									}
+									currencyCode: {
+										/**
+										 * C​u​r​r​e​n​c​y​ ​C​o​d​e
+										 */
+										displayName: string
+										/**
+										 * U​p​d​a​t​e​d​ ​c​u​r​r​e​n​c​y​ ​f​o​r​ ​t​h​e​ ​p​r​i​c​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​u​p​d​a​t​e​d​ ​t​h​r​e​e​-​l​e​t​t​e​r​ ​I​S​O​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​(​e​.​g​.​,​ ​U​S​D​,​ ​E​U​R​,​ ​G​B​P​)​.
+										 */
+										longDesc: string
+									}
 								}
 							}
 						}
@@ -34483,34 +34501,36 @@ type RootTranslation = {
 							 * U​p​d​a​t​e​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​h​o​w​ ​o​f​t​e​n​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​i​s​ ​b​i​l​l​e​d​ ​f​o​r​ ​r​e​c​u​r​r​i​n​g​ ​p​r​i​c​e​s​.
 							 */
 							longDesc: string
-							fields: {
-								frequency: {
-									/**
-									 * F​r​e​q​u​e​n​c​y
-									 */
-									displayName: string
-									/**
-									 * U​p​d​a​t​e​d​ ​b​i​l​l​i​n​g​ ​f​r​e​q​u​e​n​c​y
-									 */
-									shortDesc: string
-									/**
-									 * U​p​d​a​t​e​d​ ​n​u​m​b​e​r​ ​o​f​ ​i​n​t​e​r​v​a​l​s​ ​b​e​t​w​e​e​n​ ​e​a​c​h​ ​b​i​l​l​i​n​g​.
-									 */
-									longDesc: string
-								}
-								interval: {
-									/**
-									 * I​n​t​e​r​v​a​l
-									 */
-									displayName: string
-									/**
-									 * U​p​d​a​t​e​d​ ​b​i​l​l​i​n​g​ ​i​n​t​e​r​v​a​l
-									 */
-									shortDesc: string
-									/**
-									 * T​h​e​ ​u​p​d​a​t​e​d​ ​t​i​m​e​ ​u​n​i​t​ ​f​o​r​ ​b​i​l​l​i​n​g​ ​(​e​.​g​.​,​ ​d​a​y​,​ ​w​e​e​k​,​ ​m​o​n​t​h​,​ ​y​e​a​r​)​.
-									 */
-									longDesc: string
+							type: {
+								fields: {
+									frequency: {
+										/**
+										 * F​r​e​q​u​e​n​c​y
+										 */
+										displayName: string
+										/**
+										 * U​p​d​a​t​e​d​ ​b​i​l​l​i​n​g​ ​f​r​e​q​u​e​n​c​y
+										 */
+										shortDesc: string
+										/**
+										 * U​p​d​a​t​e​d​ ​n​u​m​b​e​r​ ​o​f​ ​i​n​t​e​r​v​a​l​s​ ​b​e​t​w​e​e​n​ ​e​a​c​h​ ​b​i​l​l​i​n​g​.
+										 */
+										longDesc: string
+									}
+									interval: {
+										/**
+										 * I​n​t​e​r​v​a​l
+										 */
+										displayName: string
+										/**
+										 * U​p​d​a​t​e​d​ ​b​i​l​l​i​n​g​ ​i​n​t​e​r​v​a​l
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​u​p​d​a​t​e​d​ ​t​i​m​e​ ​u​n​i​t​ ​f​o​r​ ​b​i​l​l​i​n​g​ ​(​e​.​g​.​,​ ​d​a​y​,​ ​w​e​e​k​,​ ​m​o​n​t​h​,​ ​y​e​a​r​)​.
+										 */
+										longDesc: string
+									}
 								}
 							}
 						}
@@ -34527,34 +34547,36 @@ type RootTranslation = {
 							 * U​p​d​a​t​e​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​f​r​e​e​ ​t​r​i​a​l​ ​p​e​r​i​o​d​ ​f​o​r​ ​t​h​i​s​ ​p​r​i​c​e​.
 							 */
 							longDesc: string
-							fields: {
-								frequency: {
-									/**
-									 * T​r​i​a​l​ ​F​r​e​q​u​e​n​c​y
-									 */
-									displayName: string
-									/**
-									 * U​p​d​a​t​e​d​ ​t​r​i​a​l​ ​p​e​r​i​o​d​ ​l​e​n​g​t​h
-									 */
-									shortDesc: string
-									/**
-									 * T​h​e​ ​u​p​d​a​t​e​d​ ​n​u​m​b​e​r​ ​o​f​ ​i​n​t​e​r​v​a​l​s​ ​f​o​r​ ​t​h​e​ ​t​r​i​a​l​ ​p​e​r​i​o​d​.
-									 */
-									longDesc: string
-								}
-								interval: {
-									/**
-									 * T​r​i​a​l​ ​I​n​t​e​r​v​a​l
-									 */
-									displayName: string
-									/**
-									 * U​p​d​a​t​e​d​ ​t​r​i​a​l​ ​p​e​r​i​o​d​ ​u​n​i​t
-									 */
-									shortDesc: string
-									/**
-									 * T​h​e​ ​u​p​d​a​t​e​d​ ​t​i​m​e​ ​u​n​i​t​ ​f​o​r​ ​t​h​e​ ​t​r​i​a​l​ ​p​e​r​i​o​d​ ​(​e​.​g​.​,​ ​d​a​y​,​ ​w​e​e​k​,​ ​m​o​n​t​h​)​.
-									 */
-									longDesc: string
+							type: {
+								fields: {
+									frequency: {
+										/**
+										 * T​r​i​a​l​ ​F​r​e​q​u​e​n​c​y
+										 */
+										displayName: string
+										/**
+										 * U​p​d​a​t​e​d​ ​t​r​i​a​l​ ​p​e​r​i​o​d​ ​l​e​n​g​t​h
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​u​p​d​a​t​e​d​ ​n​u​m​b​e​r​ ​o​f​ ​i​n​t​e​r​v​a​l​s​ ​f​o​r​ ​t​h​e​ ​t​r​i​a​l​ ​p​e​r​i​o​d​.
+										 */
+										longDesc: string
+									}
+									interval: {
+										/**
+										 * T​r​i​a​l​ ​I​n​t​e​r​v​a​l
+										 */
+										displayName: string
+										/**
+										 * U​p​d​a​t​e​d​ ​t​r​i​a​l​ ​p​e​r​i​o​d​ ​u​n​i​t
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​u​p​d​a​t​e​d​ ​t​i​m​e​ ​u​n​i​t​ ​f​o​r​ ​t​h​e​ ​t​r​i​a​l​ ​p​e​r​i​o​d​ ​(​e​.​g​.​,​ ​d​a​y​,​ ​w​e​e​k​,​ ​m​o​n​t​h​)​.
+										 */
+										longDesc: string
+									}
 								}
 							}
 						}
@@ -34585,62 +34607,66 @@ type RootTranslation = {
 							 * U​p​d​a​t​e​d​ ​p​r​i​c​e​ ​o​v​e​r​r​i​d​e​s​ ​f​o​r​ ​s​p​e​c​i​f​i​c​ ​c​o​u​n​t​r​i​e​s​ ​o​r​ ​r​e​g​i​o​n​s​.
 							 */
 							longDesc: string
-							fields: {
-								countryCodes: {
-									/**
-									 * C​o​u​n​t​r​y​ ​C​o​d​e​s
-									 */
-									displayName: string
-									/**
-									 * U​p​d​a​t​e​d​ ​c​o​u​n​t​r​i​e​s​ ​f​o​r​ ​o​v​e​r​r​i​d​e​s
-									 */
-									shortDesc: string
-									/**
-									 * U​p​d​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​I​S​O​ ​c​o​u​n​t​r​y​ ​c​o​d​e​s​ ​w​h​e​r​e​ ​p​r​i​c​e​ ​o​v​e​r​r​i​d​e​s​ ​a​p​p​l​y​.
-									 */
-									longDesc: string
-								}
-								unitPrice: {
-									/**
-									 * O​v​e​r​r​i​d​e​ ​P​r​i​c​e
-									 */
-									displayName: string
-									/**
-									 * U​p​d​a​t​e​d​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e
-									 */
-									shortDesc: string
-									/**
-									 * T​h​e​ ​u​p​d​a​t​e​d​ ​s​p​e​c​i​f​i​c​ ​p​r​i​c​e​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​c​o​u​n​t​r​i​e​s​.
-									 */
-									longDesc: string
-									fields: {
-										amount: {
-											/**
-											 * O​v​e​r​r​i​d​e​ ​A​m​o​u​n​t
-											 */
-											displayName: string
-											/**
-											 * U​p​d​a​t​e​d​ ​o​v​e​r​r​i​d​e​ ​a​m​o​u​n​t
-											 */
-											shortDesc: string
-											/**
-											 * T​h​e​ ​u​p​d​a​t​e​d​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e​ ​a​m​o​u​n​t​ ​a​s​ ​a​ ​s​t​r​i​n​g​.
-											 */
-											longDesc: string
-										}
-										currencyCode: {
-											/**
-											 * O​v​e​r​r​i​d​e​ ​C​u​r​r​e​n​c​y
-											 */
-											displayName: string
-											/**
-											 * U​p​d​a​t​e​d​ ​o​v​e​r​r​i​d​e​ ​c​u​r​r​e​n​c​y
-											 */
-											shortDesc: string
-											/**
-											 * T​h​e​ ​u​p​d​a​t​e​d​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e​.
-											 */
-											longDesc: string
+							type: {
+								fields: {
+									countryCodes: {
+										/**
+										 * C​o​u​n​t​r​y​ ​C​o​d​e​s
+										 */
+										displayName: string
+										/**
+										 * U​p​d​a​t​e​d​ ​c​o​u​n​t​r​i​e​s​ ​f​o​r​ ​o​v​e​r​r​i​d​e​s
+										 */
+										shortDesc: string
+										/**
+										 * U​p​d​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​I​S​O​ ​c​o​u​n​t​r​y​ ​c​o​d​e​s​ ​w​h​e​r​e​ ​p​r​i​c​e​ ​o​v​e​r​r​i​d​e​s​ ​a​p​p​l​y​.
+										 */
+										longDesc: string
+									}
+									unitPrice: {
+										/**
+										 * O​v​e​r​r​i​d​e​ ​P​r​i​c​e
+										 */
+										displayName: string
+										/**
+										 * U​p​d​a​t​e​d​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​u​p​d​a​t​e​d​ ​s​p​e​c​i​f​i​c​ ​p​r​i​c​e​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​c​o​u​n​t​r​i​e​s​.
+										 */
+										longDesc: string
+										type: {
+											fields: {
+												amount: {
+													/**
+													 * O​v​e​r​r​i​d​e​ ​A​m​o​u​n​t
+													 */
+													displayName: string
+													/**
+													 * U​p​d​a​t​e​d​ ​o​v​e​r​r​i​d​e​ ​a​m​o​u​n​t
+													 */
+													shortDesc: string
+													/**
+													 * T​h​e​ ​u​p​d​a​t​e​d​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e​ ​a​m​o​u​n​t​ ​a​s​ ​a​ ​s​t​r​i​n​g​.
+													 */
+													longDesc: string
+												}
+												currencyCode: {
+													/**
+													 * O​v​e​r​r​i​d​e​ ​C​u​r​r​e​n​c​y
+													 */
+													displayName: string
+													/**
+													 * U​p​d​a​t​e​d​ ​o​v​e​r​r​i​d​e​ ​c​u​r​r​e​n​c​y
+													 */
+													shortDesc: string
+													/**
+													 * T​h​e​ ​u​p​d​a​t​e​d​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e​.
+													 */
+													longDesc: string
+												}
+											}
 										}
 									}
 								}
@@ -34659,34 +34685,36 @@ type RootTranslation = {
 							 * U​p​d​a​t​e​d​ ​l​i​m​i​t​s​ ​o​n​ ​h​o​w​ ​m​a​n​y​ ​u​n​i​t​s​ ​c​a​n​ ​b​e​ ​p​u​r​c​h​a​s​e​d​.
 							 */
 							longDesc: string
-							fields: {
-								minimum: {
-									/**
-									 * M​i​n​i​m​u​m​ ​Q​u​a​n​t​i​t​y
-									 */
-									displayName: string
-									/**
-									 * U​p​d​a​t​e​d​ ​m​i​n​i​m​u​m​ ​q​u​a​n​t​i​t​y
-									 */
-									shortDesc: string
-									/**
-									 * T​h​e​ ​u​p​d​a​t​e​d​ ​m​i​n​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​t​h​a​t​ ​m​u​s​t​ ​b​e​ ​p​u​r​c​h​a​s​e​d​.
-									 */
-									longDesc: string
-								}
-								maximum: {
-									/**
-									 * M​a​x​i​m​u​m​ ​Q​u​a​n​t​i​t​y
-									 */
-									displayName: string
-									/**
-									 * U​p​d​a​t​e​d​ ​m​a​x​i​m​u​m​ ​q​u​a​n​t​i​t​y
-									 */
-									shortDesc: string
-									/**
-									 * T​h​e​ ​u​p​d​a​t​e​d​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​p​u​r​c​h​a​s​e​d​.
-									 */
-									longDesc: string
+							type: {
+								fields: {
+									minimum: {
+										/**
+										 * M​i​n​i​m​u​m​ ​Q​u​a​n​t​i​t​y
+										 */
+										displayName: string
+										/**
+										 * U​p​d​a​t​e​d​ ​m​i​n​i​m​u​m​ ​q​u​a​n​t​i​t​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​u​p​d​a​t​e​d​ ​m​i​n​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​t​h​a​t​ ​m​u​s​t​ ​b​e​ ​p​u​r​c​h​a​s​e​d​.
+										 */
+										longDesc: string
+									}
+									maximum: {
+										/**
+										 * M​a​x​i​m​u​m​ ​Q​u​a​n​t​i​t​y
+										 */
+										displayName: string
+										/**
+										 * U​p​d​a​t​e​d​ ​m​a​x​i​m​u​m​ ​q​u​a​n​t​i​t​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​u​p​d​a​t​e​d​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​p​u​r​c​h​a​s​e​d​.
+										 */
+										longDesc: string
+									}
 								}
 							}
 						}
@@ -70316,34 +70344,36 @@ export type TranslationFunctions = {
 							 * Configure how to sort the results.
 							 */
 							longDesc: () => LocalizedString
-							fields: {
-								field: {
-									/**
-									 * Sort Field
-									 */
-									displayName: () => LocalizedString
-									/**
-									 * Field to sort by
-									 */
-									shortDesc: () => LocalizedString
-									/**
-									 * The field to sort the results by.
-									 */
-									longDesc: () => LocalizedString
-								}
-								direction: {
-									/**
-									 * Sort Direction
-									 */
-									displayName: () => LocalizedString
-									/**
-									 * Sort direction
-									 */
-									shortDesc: () => LocalizedString
-									/**
-									 * The direction to sort the results (ascending or descending).
-									 */
-									longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The field to sort the results by.
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The direction to sort the results (ascending or descending).
+										 */
+										longDesc: () => LocalizedString
+									}
 								}
 							}
 						}
@@ -70532,34 +70562,36 @@ export type TranslationFunctions = {
 							 * The base unit price for this pricing option.
 							 */
 							longDesc: () => LocalizedString
-							fields: {
-								amount: {
-									/**
-									 * Amount
-									 */
-									displayName: () => LocalizedString
-									/**
-									 * Price amount
-									 */
-									shortDesc: () => LocalizedString
-									/**
-									 * The price amount as a string (e.g., "9.99").
-									 */
-									longDesc: () => LocalizedString
-								}
-								currencyCode: {
-									/**
-									 * Currency Code
-									 */
-									displayName: () => LocalizedString
-									/**
-									 * Currency for the price
-									 */
-									shortDesc: () => LocalizedString
-									/**
-									 * The three-letter ISO currency code (e.g., USD, EUR, GBP).
-									 */
-									longDesc: () => LocalizedString
+							type: {
+								fields: {
+									amount: {
+										/**
+										 * Amount
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Price amount
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The price amount as a string (e.g., "9.99").
+										 */
+										longDesc: () => LocalizedString
+									}
+									currencyCode: {
+										/**
+										 * Currency Code
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Currency for the price
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The three-letter ISO currency code (e.g., USD, EUR, GBP).
+										 */
+										longDesc: () => LocalizedString
+									}
 								}
 							}
 						}
@@ -70604,34 +70636,36 @@ export type TranslationFunctions = {
 							 * Defines how often the customer is billed for recurring prices.
 							 */
 							longDesc: () => LocalizedString
-							fields: {
-								frequency: {
-									/**
-									 * Frequency
-									 */
-									displayName: () => LocalizedString
-									/**
-									 * Billing frequency number
-									 */
-									shortDesc: () => LocalizedString
-									/**
-									 * How many intervals between each billing (e.g., 1 for every month, 2 for every 2 months).
-									 */
-									longDesc: () => LocalizedString
-								}
-								interval: {
-									/**
-									 * Interval
-									 */
-									displayName: () => LocalizedString
-									/**
-									 * Billing interval unit
-									 */
-									shortDesc: () => LocalizedString
-									/**
-									 * The time unit for billing (e.g., day, week, month, year).
-									 */
-									longDesc: () => LocalizedString
+							type: {
+								fields: {
+									frequency: {
+										/**
+										 * Frequency
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Billing frequency number
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * How many intervals between each billing (e.g., 1 for every month, 2 for every 2 months).
+										 */
+										longDesc: () => LocalizedString
+									}
+									interval: {
+										/**
+										 * Interval
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Billing interval unit
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The time unit for billing (e.g., day, week, month, year).
+										 */
+										longDesc: () => LocalizedString
+									}
 								}
 							}
 						}
@@ -70648,34 +70682,36 @@ export type TranslationFunctions = {
 							 * Defines the length of the free trial period for this price.
 							 */
 							longDesc: () => LocalizedString
-							fields: {
-								frequency: {
-									/**
-									 * Trial Frequency
-									 */
-									displayName: () => LocalizedString
-									/**
-									 * Trial period length
-									 */
-									shortDesc: () => LocalizedString
-									/**
-									 * The number of intervals for the trial period.
-									 */
-									longDesc: () => LocalizedString
-								}
-								interval: {
-									/**
-									 * Trial Interval
-									 */
-									displayName: () => LocalizedString
-									/**
-									 * Trial period unit
-									 */
-									shortDesc: () => LocalizedString
-									/**
-									 * The time unit for the trial period (e.g., day, week, month).
-									 */
-									longDesc: () => LocalizedString
+							type: {
+								fields: {
+									frequency: {
+										/**
+										 * Trial Frequency
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Trial period length
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The number of intervals for the trial period.
+										 */
+										longDesc: () => LocalizedString
+									}
+									interval: {
+										/**
+										 * Trial Interval
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Trial period unit
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The time unit for the trial period (e.g., day, week, month).
+										 */
+										longDesc: () => LocalizedString
+									}
 								}
 							}
 						}
@@ -70706,62 +70742,66 @@ export type TranslationFunctions = {
 							 * Override the base price for specific countries or regions.
 							 */
 							longDesc: () => LocalizedString
-							fields: {
-								countryCodes: {
-									/**
-									 * Country Codes
-									 */
-									displayName: () => LocalizedString
-									/**
-									 * Countries for this override
-									 */
-									shortDesc: () => LocalizedString
-									/**
-									 * List of ISO country codes where this price override applies.
-									 */
-									longDesc: () => LocalizedString
-								}
-								unitPrice: {
-									/**
-									 * Override Price
-									 */
-									displayName: () => LocalizedString
-									/**
-									 * Price for these countries
-									 */
-									shortDesc: () => LocalizedString
-									/**
-									 * The specific price to use for the selected countries.
-									 */
-									longDesc: () => LocalizedString
-									fields: {
-										amount: {
-											/**
-											 * Override Amount
-											 */
-											displayName: () => LocalizedString
-											/**
-											 * Override price amount
-											 */
-											shortDesc: () => LocalizedString
-											/**
-											 * The override price amount as a string.
-											 */
-											longDesc: () => LocalizedString
-										}
-										currencyCode: {
-											/**
-											 * Override Currency
-											 */
-											displayName: () => LocalizedString
-											/**
-											 * Currency for override price
-											 */
-											shortDesc: () => LocalizedString
-											/**
-											 * The currency code for the override price.
-											 */
-											longDesc: () => LocalizedString
+							type: {
+								fields: {
+									countryCodes: {
+										/**
+										 * Country Codes
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Countries for this override
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * List of ISO country codes where this price override applies.
+										 */
+										longDesc: () => LocalizedString
+									}
+									unitPrice: {
+										/**
+										 * Override Price
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Price for these countries
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The specific price to use for the selected countries.
+										 */
+										longDesc: () => LocalizedString
+										type: {
+											fields: {
+												amount: {
+													/**
+													 * Override Amount
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Override price amount
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * The override price amount as a string.
+													 */
+													longDesc: () => LocalizedString
+												}
+												currencyCode: {
+													/**
+													 * Override Currency
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Currency for override price
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * The currency code for the override price.
+													 */
+													longDesc: () => LocalizedString
+												}
+											}
 										}
 									}
 								}
@@ -70780,34 +70820,36 @@ export type TranslationFunctions = {
 							 * Set limits on how many units can be purchased.
 							 */
 							longDesc: () => LocalizedString
-							fields: {
-								minimum: {
-									/**
-									 * Minimum Quantity
-									 */
-									displayName: () => LocalizedString
-									/**
-									 * Minimum purchase quantity
-									 */
-									shortDesc: () => LocalizedString
-									/**
-									 * The minimum number of units that must be purchased.
-									 */
-									longDesc: () => LocalizedString
-								}
-								maximum: {
-									/**
-									 * Maximum Quantity
-									 */
-									displayName: () => LocalizedString
-									/**
-									 * Maximum purchase quantity
-									 */
-									shortDesc: () => LocalizedString
-									/**
-									 * The maximum number of units that can be purchased.
-									 */
-									longDesc: () => LocalizedString
+							type: {
+								fields: {
+									minimum: {
+										/**
+										 * Minimum Quantity
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Minimum purchase quantity
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The minimum number of units that must be purchased.
+										 */
+										longDesc: () => LocalizedString
+									}
+									maximum: {
+										/**
+										 * Maximum Quantity
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Maximum purchase quantity
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The maximum number of units that can be purchased.
+										 */
+										longDesc: () => LocalizedString
+									}
 								}
 							}
 						}
@@ -71010,34 +71052,36 @@ export type TranslationFunctions = {
 							 * Configure how to sort the results.
 							 */
 							longDesc: () => LocalizedString
-							fields: {
-								field: {
-									/**
-									 * Sort Field
-									 */
-									displayName: () => LocalizedString
-									/**
-									 * Field to sort by
-									 */
-									shortDesc: () => LocalizedString
-									/**
-									 * The field to sort the results by.
-									 */
-									longDesc: () => LocalizedString
-								}
-								direction: {
-									/**
-									 * Sort Direction
-									 */
-									displayName: () => LocalizedString
-									/**
-									 * Sort direction
-									 */
-									shortDesc: () => LocalizedString
-									/**
-									 * The direction to sort the results (ascending or descending).
-									 */
-									longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The field to sort the results by.
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The direction to sort the results (ascending or descending).
+										 */
+										longDesc: () => LocalizedString
+									}
 								}
 							}
 						}
@@ -71098,34 +71142,36 @@ export type TranslationFunctions = {
 							 * The updated base unit price for this pricing option.
 							 */
 							longDesc: () => LocalizedString
-							fields: {
-								amount: {
-									/**
-									 * Amount
-									 */
-									displayName: () => LocalizedString
-									/**
-									 * Updated price amount
-									 */
-									shortDesc: () => LocalizedString
-									/**
-									 * The updated price amount as a string (e.g., "9.99").
-									 */
-									longDesc: () => LocalizedString
-								}
-								currencyCode: {
-									/**
-									 * Currency Code
-									 */
-									displayName: () => LocalizedString
-									/**
-									 * Updated currency for the price
-									 */
-									shortDesc: () => LocalizedString
-									/**
-									 * The updated three-letter ISO currency code (e.g., USD, EUR, GBP).
-									 */
-									longDesc: () => LocalizedString
+							type: {
+								fields: {
+									amount: {
+										/**
+										 * Amount
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Updated price amount
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The updated price amount as a string (e.g., "9.99").
+										 */
+										longDesc: () => LocalizedString
+									}
+									currencyCode: {
+										/**
+										 * Currency Code
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Updated currency for the price
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The updated three-letter ISO currency code (e.g., USD, EUR, GBP).
+										 */
+										longDesc: () => LocalizedString
+									}
 								}
 							}
 						}
@@ -71170,34 +71216,36 @@ export type TranslationFunctions = {
 							 * Updated configuration for how often the customer is billed for recurring prices.
 							 */
 							longDesc: () => LocalizedString
-							fields: {
-								frequency: {
-									/**
-									 * Frequency
-									 */
-									displayName: () => LocalizedString
-									/**
-									 * Updated billing frequency
-									 */
-									shortDesc: () => LocalizedString
-									/**
-									 * Updated number of intervals between each billing.
-									 */
-									longDesc: () => LocalizedString
-								}
-								interval: {
-									/**
-									 * Interval
-									 */
-									displayName: () => LocalizedString
-									/**
-									 * Updated billing interval
-									 */
-									shortDesc: () => LocalizedString
-									/**
-									 * The updated time unit for billing (e.g., day, week, month, year).
-									 */
-									longDesc: () => LocalizedString
+							type: {
+								fields: {
+									frequency: {
+										/**
+										 * Frequency
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Updated billing frequency
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Updated number of intervals between each billing.
+										 */
+										longDesc: () => LocalizedString
+									}
+									interval: {
+										/**
+										 * Interval
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Updated billing interval
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The updated time unit for billing (e.g., day, week, month, year).
+										 */
+										longDesc: () => LocalizedString
+									}
 								}
 							}
 						}
@@ -71214,34 +71262,36 @@ export type TranslationFunctions = {
 							 * Updated configuration for the free trial period for this price.
 							 */
 							longDesc: () => LocalizedString
-							fields: {
-								frequency: {
-									/**
-									 * Trial Frequency
-									 */
-									displayName: () => LocalizedString
-									/**
-									 * Updated trial period length
-									 */
-									shortDesc: () => LocalizedString
-									/**
-									 * The updated number of intervals for the trial period.
-									 */
-									longDesc: () => LocalizedString
-								}
-								interval: {
-									/**
-									 * Trial Interval
-									 */
-									displayName: () => LocalizedString
-									/**
-									 * Updated trial period unit
-									 */
-									shortDesc: () => LocalizedString
-									/**
-									 * The updated time unit for the trial period (e.g., day, week, month).
-									 */
-									longDesc: () => LocalizedString
+							type: {
+								fields: {
+									frequency: {
+										/**
+										 * Trial Frequency
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Updated trial period length
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The updated number of intervals for the trial period.
+										 */
+										longDesc: () => LocalizedString
+									}
+									interval: {
+										/**
+										 * Trial Interval
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Updated trial period unit
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The updated time unit for the trial period (e.g., day, week, month).
+										 */
+										longDesc: () => LocalizedString
+									}
 								}
 							}
 						}
@@ -71272,62 +71322,66 @@ export type TranslationFunctions = {
 							 * Updated price overrides for specific countries or regions.
 							 */
 							longDesc: () => LocalizedString
-							fields: {
-								countryCodes: {
-									/**
-									 * Country Codes
-									 */
-									displayName: () => LocalizedString
-									/**
-									 * Updated countries for overrides
-									 */
-									shortDesc: () => LocalizedString
-									/**
-									 * Updated list of ISO country codes where price overrides apply.
-									 */
-									longDesc: () => LocalizedString
-								}
-								unitPrice: {
-									/**
-									 * Override Price
-									 */
-									displayName: () => LocalizedString
-									/**
-									 * Updated override price
-									 */
-									shortDesc: () => LocalizedString
-									/**
-									 * The updated specific price to use for the selected countries.
-									 */
-									longDesc: () => LocalizedString
-									fields: {
-										amount: {
-											/**
-											 * Override Amount
-											 */
-											displayName: () => LocalizedString
-											/**
-											 * Updated override amount
-											 */
-											shortDesc: () => LocalizedString
-											/**
-											 * The updated override price amount as a string.
-											 */
-											longDesc: () => LocalizedString
-										}
-										currencyCode: {
-											/**
-											 * Override Currency
-											 */
-											displayName: () => LocalizedString
-											/**
-											 * Updated override currency
-											 */
-											shortDesc: () => LocalizedString
-											/**
-											 * The updated currency code for the override price.
-											 */
-											longDesc: () => LocalizedString
+							type: {
+								fields: {
+									countryCodes: {
+										/**
+										 * Country Codes
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Updated countries for overrides
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Updated list of ISO country codes where price overrides apply.
+										 */
+										longDesc: () => LocalizedString
+									}
+									unitPrice: {
+										/**
+										 * Override Price
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Updated override price
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The updated specific price to use for the selected countries.
+										 */
+										longDesc: () => LocalizedString
+										type: {
+											fields: {
+												amount: {
+													/**
+													 * Override Amount
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Updated override amount
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * The updated override price amount as a string.
+													 */
+													longDesc: () => LocalizedString
+												}
+												currencyCode: {
+													/**
+													 * Override Currency
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Updated override currency
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * The updated currency code for the override price.
+													 */
+													longDesc: () => LocalizedString
+												}
+											}
 										}
 									}
 								}
@@ -71346,34 +71400,36 @@ export type TranslationFunctions = {
 							 * Updated limits on how many units can be purchased.
 							 */
 							longDesc: () => LocalizedString
-							fields: {
-								minimum: {
-									/**
-									 * Minimum Quantity
-									 */
-									displayName: () => LocalizedString
-									/**
-									 * Updated minimum quantity
-									 */
-									shortDesc: () => LocalizedString
-									/**
-									 * The updated minimum number of units that must be purchased.
-									 */
-									longDesc: () => LocalizedString
-								}
-								maximum: {
-									/**
-									 * Maximum Quantity
-									 */
-									displayName: () => LocalizedString
-									/**
-									 * Updated maximum quantity
-									 */
-									shortDesc: () => LocalizedString
-									/**
-									 * The updated maximum number of units that can be purchased.
-									 */
-									longDesc: () => LocalizedString
+							type: {
+								fields: {
+									minimum: {
+										/**
+										 * Minimum Quantity
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Updated minimum quantity
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The updated minimum number of units that must be purchased.
+										 */
+										longDesc: () => LocalizedString
+									}
+									maximum: {
+										/**
+										 * Maximum Quantity
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Updated maximum quantity
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The updated maximum number of units that can be purchased.
+										 */
+										longDesc: () => LocalizedString
+									}
 								}
 							}
 						}

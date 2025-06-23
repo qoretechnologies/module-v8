@@ -7,11 +7,13 @@ import {
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { ODOO_APP_NAME, OdooError } from '../constants';
 import { createOdooClient } from '../helpers/constants';
+import { getOdooPartnerAllowedValues } from '../helpers/get-partner-allowed-values';
 
 const options = {
   partner_id: {
     type: 'number',
     required: true,
+    get_allowed_values: getOdooPartnerAllowedValues,
   },
 } satisfies TQoreOptions;
 

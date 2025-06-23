@@ -9,6 +9,7 @@ import { ODOO_APP_NAME, OdooError } from '../constants';
 import { createOdooClient } from '../helpers/constants';
 import { getOdooLeadFieldsAllowedValues } from '../helpers/get-fields-allowed-values';
 import { mapOdooFieldsToQoreType } from '../helpers/map-odoo-field-type-to-qore-type';
+import { getOdooLeadIdAllowedValues } from '../helpers/get-lead-allowed-values';
 
 const defaultLeadFields = ['id', 'name', 'email_from', 'contact_name', 'partner_name'];
 
@@ -16,6 +17,7 @@ const options = {
   lead_id: {
     type: 'number',
     required: true,
+    get_allowed_values: getOdooLeadIdAllowedValues,
   },
   fields: {
     type: {
@@ -25,7 +27,6 @@ const options = {
     get_element_allowed_values: getOdooLeadFieldsAllowedValues,
     default_value: defaultLeadFields,
     required: false,
-    preselected: true,
   },
 } satisfies TQoreOptions;
 

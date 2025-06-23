@@ -11,11 +11,13 @@ import { createPaddleClient } from '../../helpers/constants';
 import { PaddleStatusAllowedValues } from '../../helpers/get-status-allowed-values';
 import { PaddleTaxCategoryAllowedValues } from '../../helpers/get-product-tax-category-allowed-values';
 import { PaddleTypeAllowedValues } from '../../helpers/get-type-allowed-values';
+import { getPaddleProductIdAllowedValues } from '../../helpers/get-product-id-allowed-values';
 
 const options = {
   product_id: {
     type: 'string',
     required: true,
+    get_allowed_values: getPaddleProductIdAllowedValues,
   },
   name: {
     required: false,
