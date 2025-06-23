@@ -7,11 +7,13 @@ import {
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { ODOO_APP_NAME, OdooError } from '../constants';
 import { createOdooClient } from '../helpers/constants';
+import { getOdooLeadIdAllowedValues } from '../helpers/get-lead-allowed-values';
 
 const options = {
   lead_id: {
     type: 'number',
     required: true,
+    get_allowed_values: getOdooLeadIdAllowedValues,
   },
 } satisfies TQoreOptions;
 

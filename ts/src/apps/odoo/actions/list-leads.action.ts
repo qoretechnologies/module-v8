@@ -31,13 +31,17 @@ const options = {
     get_element_allowed_values: getOdooLeadFieldsAllowedValues,
     default_value: defaultLeadFields,
     required: false,
-    preselected: true,
   },
   sort: {
     type: {
       type: 'hash',
       fields: {
-        field: { type: 'string', required: true },
+        field: {
+          type: 'string',
+          allowed_values_creatable: true,
+          get_allowed_values: getOdooLeadFieldsAllowedValues,
+          required: true,
+        },
         direction: {
           type: 'string',
           required: true,

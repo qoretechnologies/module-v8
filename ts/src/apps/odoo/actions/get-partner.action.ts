@@ -9,6 +9,7 @@ import { ODOO_APP_NAME, OdooError } from '../constants';
 import { createOdooClient } from '../helpers/constants';
 import { getOdooPartnerFieldsAllowedValues } from '../helpers/get-fields-allowed-values';
 import { mapOdooFieldsToQoreType } from '../helpers/map-odoo-field-type-to-qore-type';
+import { getOdooPartnerAllowedValues } from '../helpers/get-partner-allowed-values';
 
 const defaultPartnerFields = ['id', 'name', 'display_name', 'email', 'phone', 'is_company'];
 
@@ -16,6 +17,7 @@ const options = {
   partner_id: {
     type: 'number',
     required: true,
+    get_allowed_values: getOdooPartnerAllowedValues,
   },
   fields: {
     type: {
@@ -25,7 +27,6 @@ const options = {
     get_element_allowed_values: getOdooPartnerFieldsAllowedValues,
     default_value: defaultPartnerFields,
     required: false,
-    preselected: true,
   },
 } satisfies TQoreOptions;
 
