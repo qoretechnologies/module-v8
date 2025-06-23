@@ -34,6 +34,7 @@ import Xero from './apps/Xero';
 import Zendesk from './apps/Zendesk';
 import Zoom from './apps/Zoom';
 import Odoo from './apps/Odoo';
+import Paddle from './apps/Paddle';
 
 const en = {
   common: {},
@@ -149,6 +150,7 @@ const en = {
     Confluence,
     Bitbucket,
     FacebookPages,
+    Paddle,
   },
 } satisfies BaseTranslation;
 
