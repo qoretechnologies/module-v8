@@ -123,16 +123,18 @@ const PaddleAppEn = {
           displayName: 'Sort Order',
           shortDesc: 'Sorting configuration',
           longDesc: 'Configure how to sort the results.',
-          fields: {
-            field: {
-              displayName: 'Sort Field',
-              shortDesc: 'Field to sort by',
-              longDesc: 'The field to sort the results by.',
-            },
-            direction: {
-              displayName: 'Sort Direction',
-              shortDesc: 'Sort direction',
-              longDesc: 'The direction to sort the results (ascending or descending).',
+          type: {
+            fields: {
+              field: {
+                displayName: 'Sort Field',
+                shortDesc: 'Field to sort by',
+                longDesc: 'The field to sort the results by.',
+              },
+              direction: {
+                displayName: 'Sort Direction',
+                shortDesc: 'Sort direction',
+                longDesc: 'The direction to sort the results (ascending or descending).',
+              },
             },
           },
         },
@@ -209,16 +211,18 @@ const PaddleAppEn = {
           displayName: 'Unit Price',
           shortDesc: 'Base unit price',
           longDesc: 'The base unit price for this pricing option.',
-          fields: {
-            amount: {
-              displayName: 'Amount',
-              shortDesc: 'Price amount',
-              longDesc: 'The price amount as a string (e.g., "9.99").',
-            },
-            currencyCode: {
-              displayName: 'Currency Code',
-              shortDesc: 'Currency for the price',
-              longDesc: 'The three-letter ISO currency code (e.g., USD, EUR, GBP).',
+          type: {
+            fields: {
+              amount: {
+                displayName: 'Amount',
+                shortDesc: 'Price amount',
+                longDesc: 'The price amount as a string (e.g., "9.99").',
+              },
+              currencyCode: {
+                displayName: 'Currency Code',
+                shortDesc: 'Currency for the price',
+                longDesc: 'The three-letter ISO currency code (e.g., USD, EUR, GBP).',
+              },
             },
           },
         },
@@ -236,17 +240,19 @@ const PaddleAppEn = {
           displayName: 'Billing Cycle',
           shortDesc: 'Billing frequency and interval',
           longDesc: 'Defines how often the customer is billed for recurring prices.',
-          fields: {
-            frequency: {
-              displayName: 'Frequency',
-              shortDesc: 'Billing frequency number',
-              longDesc:
-                'How many intervals between each billing (e.g., 1 for every month, 2 for every 2 months).',
-            },
-            interval: {
-              displayName: 'Interval',
-              shortDesc: 'Billing interval unit',
-              longDesc: 'The time unit for billing (e.g., day, week, month, year).',
+          type: {
+            fields: {
+              frequency: {
+                displayName: 'Frequency',
+                shortDesc: 'Billing frequency number',
+                longDesc:
+                  'How many intervals between each billing (e.g., 1 for every month, 2 for every 2 months).',
+              },
+              interval: {
+                displayName: 'Interval',
+                shortDesc: 'Billing interval unit',
+                longDesc: 'The time unit for billing (e.g., day, week, month, year).',
+              },
             },
           },
         },
@@ -254,16 +260,18 @@ const PaddleAppEn = {
           displayName: 'Trial Period',
           shortDesc: 'Free trial configuration',
           longDesc: 'Defines the length of the free trial period for this price.',
-          fields: {
-            frequency: {
-              displayName: 'Trial Frequency',
-              shortDesc: 'Trial period length',
-              longDesc: 'The number of intervals for the trial period.',
-            },
-            interval: {
-              displayName: 'Trial Interval',
-              shortDesc: 'Trial period unit',
-              longDesc: 'The time unit for the trial period (e.g., day, week, month).',
+          type: {
+            fields: {
+              frequency: {
+                displayName: 'Trial Frequency',
+                shortDesc: 'Trial period length',
+                longDesc: 'The number of intervals for the trial period.',
+              },
+              interval: {
+                displayName: 'Trial Interval',
+                shortDesc: 'Trial period unit',
+                longDesc: 'The time unit for the trial period (e.g., day, week, month).',
+              },
             },
           },
         },
@@ -276,26 +284,30 @@ const PaddleAppEn = {
           displayName: 'Price Overrides',
           shortDesc: 'Country-specific pricing',
           longDesc: 'Override the base price for specific countries or regions.',
-          fields: {
-            countryCodes: {
-              displayName: 'Country Codes',
-              shortDesc: 'Countries for this override',
-              longDesc: 'List of ISO country codes where this price override applies.',
-            },
-            unitPrice: {
-              displayName: 'Override Price',
-              shortDesc: 'Price for these countries',
-              longDesc: 'The specific price to use for the selected countries.',
-              fields: {
-                amount: {
-                  displayName: 'Override Amount',
-                  shortDesc: 'Override price amount',
-                  longDesc: 'The override price amount as a string.',
-                },
-                currencyCode: {
-                  displayName: 'Override Currency',
-                  shortDesc: 'Currency for override price',
-                  longDesc: 'The currency code for the override price.',
+          type: {
+            fields: {
+              countryCodes: {
+                displayName: 'Country Codes',
+                shortDesc: 'Countries for this override',
+                longDesc: 'List of ISO country codes where this price override applies.',
+              },
+              unitPrice: {
+                displayName: 'Override Price',
+                shortDesc: 'Price for these countries',
+                longDesc: 'The specific price to use for the selected countries.',
+                type: {
+                  fields: {
+                    amount: {
+                      displayName: 'Override Amount',
+                      shortDesc: 'Override price amount',
+                      longDesc: 'The override price amount as a string.',
+                    },
+                    currencyCode: {
+                      displayName: 'Override Currency',
+                      shortDesc: 'Currency for override price',
+                      longDesc: 'The currency code for the override price.',
+                    },
+                  },
                 },
               },
             },
@@ -305,16 +317,18 @@ const PaddleAppEn = {
           displayName: 'Quantity Limits',
           shortDesc: 'Minimum and maximum quantity',
           longDesc: 'Set limits on how many units can be purchased.',
-          fields: {
-            minimum: {
-              displayName: 'Minimum Quantity',
-              shortDesc: 'Minimum purchase quantity',
-              longDesc: 'The minimum number of units that must be purchased.',
-            },
-            maximum: {
-              displayName: 'Maximum Quantity',
-              shortDesc: 'Maximum purchase quantity',
-              longDesc: 'The maximum number of units that can be purchased.',
+          type: {
+            fields: {
+              minimum: {
+                displayName: 'Minimum Quantity',
+                shortDesc: 'Minimum purchase quantity',
+                longDesc: 'The minimum number of units that must be purchased.',
+              },
+              maximum: {
+                displayName: 'Maximum Quantity',
+                shortDesc: 'Maximum purchase quantity',
+                longDesc: 'The maximum number of units that can be purchased.',
+              },
             },
           },
         },
@@ -398,16 +412,18 @@ const PaddleAppEn = {
           displayName: 'Sort Order',
           shortDesc: 'Sorting configuration',
           longDesc: 'Configure how to sort the results.',
-          fields: {
-            field: {
-              displayName: 'Sort Field',
-              shortDesc: 'Field to sort by',
-              longDesc: 'The field to sort the results by.',
-            },
-            direction: {
-              displayName: 'Sort Direction',
-              shortDesc: 'Sort direction',
-              longDesc: 'The direction to sort the results (ascending or descending).',
+          type: {
+            fields: {
+              field: {
+                displayName: 'Sort Field',
+                shortDesc: 'Field to sort by',
+                longDesc: 'The field to sort the results by.',
+              },
+              direction: {
+                displayName: 'Sort Direction',
+                shortDesc: 'Sort direction',
+                longDesc: 'The direction to sort the results (ascending or descending).',
+              },
             },
           },
         },
@@ -434,16 +450,18 @@ const PaddleAppEn = {
           displayName: 'Unit Price',
           shortDesc: 'Updated unit price',
           longDesc: 'The updated base unit price for this pricing option.',
-          fields: {
-            amount: {
-              displayName: 'Amount',
-              shortDesc: 'Updated price amount',
-              longDesc: 'The updated price amount as a string (e.g., "9.99").',
-            },
-            currencyCode: {
-              displayName: 'Currency Code',
-              shortDesc: 'Updated currency for the price',
-              longDesc: 'The updated three-letter ISO currency code (e.g., USD, EUR, GBP).',
+          type: {
+            fields: {
+              amount: {
+                displayName: 'Amount',
+                shortDesc: 'Updated price amount',
+                longDesc: 'The updated price amount as a string (e.g., "9.99").',
+              },
+              currencyCode: {
+                displayName: 'Currency Code',
+                shortDesc: 'Updated currency for the price',
+                longDesc: 'The updated three-letter ISO currency code (e.g., USD, EUR, GBP).',
+              },
             },
           },
         },
@@ -462,16 +480,18 @@ const PaddleAppEn = {
           shortDesc: 'Updated billing frequency',
           longDesc:
             'Updated configuration for how often the customer is billed for recurring prices.',
-          fields: {
-            frequency: {
-              displayName: 'Frequency',
-              shortDesc: 'Updated billing frequency',
-              longDesc: 'Updated number of intervals between each billing.',
-            },
-            interval: {
-              displayName: 'Interval',
-              shortDesc: 'Updated billing interval',
-              longDesc: 'The updated time unit for billing (e.g., day, week, month, year).',
+          type: {
+            fields: {
+              frequency: {
+                displayName: 'Frequency',
+                shortDesc: 'Updated billing frequency',
+                longDesc: 'Updated number of intervals between each billing.',
+              },
+              interval: {
+                displayName: 'Interval',
+                shortDesc: 'Updated billing interval',
+                longDesc: 'The updated time unit for billing (e.g., day, week, month, year).',
+              },
             },
           },
         },
@@ -479,16 +499,18 @@ const PaddleAppEn = {
           displayName: 'Trial Period',
           shortDesc: 'Updated trial configuration',
           longDesc: 'Updated configuration for the free trial period for this price.',
-          fields: {
-            frequency: {
-              displayName: 'Trial Frequency',
-              shortDesc: 'Updated trial period length',
-              longDesc: 'The updated number of intervals for the trial period.',
-            },
-            interval: {
-              displayName: 'Trial Interval',
-              shortDesc: 'Updated trial period unit',
-              longDesc: 'The updated time unit for the trial period (e.g., day, week, month).',
+          type: {
+            fields: {
+              frequency: {
+                displayName: 'Trial Frequency',
+                shortDesc: 'Updated trial period length',
+                longDesc: 'The updated number of intervals for the trial period.',
+              },
+              interval: {
+                displayName: 'Trial Interval',
+                shortDesc: 'Updated trial period unit',
+                longDesc: 'The updated time unit for the trial period (e.g., day, week, month).',
+              },
             },
           },
         },
@@ -501,26 +523,30 @@ const PaddleAppEn = {
           displayName: 'Price Overrides',
           shortDesc: 'Updated country-specific pricing',
           longDesc: 'Updated price overrides for specific countries or regions.',
-          fields: {
-            countryCodes: {
-              displayName: 'Country Codes',
-              shortDesc: 'Updated countries for overrides',
-              longDesc: 'Updated list of ISO country codes where price overrides apply.',
-            },
-            unitPrice: {
-              displayName: 'Override Price',
-              shortDesc: 'Updated override price',
-              longDesc: 'The updated specific price to use for the selected countries.',
-              fields: {
-                amount: {
-                  displayName: 'Override Amount',
-                  shortDesc: 'Updated override amount',
-                  longDesc: 'The updated override price amount as a string.',
-                },
-                currencyCode: {
-                  displayName: 'Override Currency',
-                  shortDesc: 'Updated override currency',
-                  longDesc: 'The updated currency code for the override price.',
+          type: {
+            fields: {
+              countryCodes: {
+                displayName: 'Country Codes',
+                shortDesc: 'Updated countries for overrides',
+                longDesc: 'Updated list of ISO country codes where price overrides apply.',
+              },
+              unitPrice: {
+                displayName: 'Override Price',
+                shortDesc: 'Updated override price',
+                longDesc: 'The updated specific price to use for the selected countries.',
+                type: {
+                  fields: {
+                    amount: {
+                      displayName: 'Override Amount',
+                      shortDesc: 'Updated override amount',
+                      longDesc: 'The updated override price amount as a string.',
+                    },
+                    currencyCode: {
+                      displayName: 'Override Currency',
+                      shortDesc: 'Updated override currency',
+                      longDesc: 'The updated currency code for the override price.',
+                    },
+                  },
                 },
               },
             },
@@ -530,16 +556,18 @@ const PaddleAppEn = {
           displayName: 'Quantity Limits',
           shortDesc: 'Updated quantity limits',
           longDesc: 'Updated limits on how many units can be purchased.',
-          fields: {
-            minimum: {
-              displayName: 'Minimum Quantity',
-              shortDesc: 'Updated minimum quantity',
-              longDesc: 'The updated minimum number of units that must be purchased.',
-            },
-            maximum: {
-              displayName: 'Maximum Quantity',
-              shortDesc: 'Updated maximum quantity',
-              longDesc: 'The updated maximum number of units that can be purchased.',
+          type: {
+            fields: {
+              minimum: {
+                displayName: 'Minimum Quantity',
+                shortDesc: 'Updated minimum quantity',
+                longDesc: 'The updated minimum number of units that must be purchased.',
+              },
+              maximum: {
+                displayName: 'Maximum Quantity',
+                shortDesc: 'Updated maximum quantity',
+                longDesc: 'The updated maximum number of units that can be purchased.',
+              },
             },
           },
         },

@@ -64,10 +64,12 @@ const options = {
       fields: {
         field: {
           type: 'string',
+          required: true,
           allowed_values: PaddlePricesOrderByFieldsAllowedValues,
         },
         direction: {
           type: 'string',
+          preselected: true,
           allowed_values: [
             { value: 'ASC', display_name: 'Ascending' },
             { value: 'DESC', display_name: 'Descending' },

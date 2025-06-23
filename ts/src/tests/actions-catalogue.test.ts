@@ -33,12 +33,22 @@ describe('Qorus Apps Catalogue tests', () => {
         expect(action.desc).not.toBeFalsy();
 
         if ('options' in action) {
-          forEach(action.options, (option, _key) => {
-            // console.log(`${app.name} -> ${action.action} -> ${_key}`);
+          const checkOption = (option: any) => {
             expect(option.display_name).not.toBeFalsy();
             expect(option.short_desc).not.toBeFalsy();
             expect(option.desc).not.toBeFalsy();
             expect(option.type).not.toBeFalsy();
+
+            if (typeof option.type === 'object' && option.type.fields) {
+              forEach(option.type.fields, (field) => {
+                checkOption(field);
+              });
+            }
+          };
+
+          forEach(action.options, (option, _key) => {
+            // console.log(`${app.name} -> ${action.action} -> ${_key}`);
+            checkOption(option);
           });
         }
 

@@ -32,13 +32,7 @@ const options = {
   },
   custom_data: {
     required: false,
-    type: {
-      type: 'hash',
-      fields: {
-        key: { type: 'string' },
-        value: { type: 'string' },
-      },
-    },
+    type: 'hash',
   },
 } satisfies TQoreOptions;
 

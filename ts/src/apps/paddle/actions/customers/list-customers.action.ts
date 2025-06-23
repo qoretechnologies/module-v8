@@ -39,9 +39,11 @@ const options = {
         field: {
           type: 'string',
           allowed_values: PaddleCustomerOrderByFieldsAllowedValues,
+          required: true,
         },
         direction: {
           type: 'string',
+          preselected: true,
           allowed_values: [
             { value: 'ASC', display_name: 'Ascending' },
             { value: 'DESC', display_name: 'Descending' },
