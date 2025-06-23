@@ -27,7 +27,7 @@ export const PADDLE_CONN_OPTIONS = {
   token: {
     display_name: 'API Key',
     short_desc: 'API Key for Paddle',
-    desc: `API you can get from this page. 'https://vendors.paddle.com/authentication-v2'`,
+    desc: `API key you can get from this page. 'https://vendors.paddle.com/authentication-v2'`,
     type: 'string',
   },
   instance_type: {

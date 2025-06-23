@@ -28,7 +28,7 @@ export default (locale: Locales) =>
     },
     rest_modifiers: {
       options: PADDLE_CONN_OPTIONS,
-      required_options: 'instance_type, token',
+      required_options: 'instance_type,token',
       url_template_options: ['instance_type'],
     },
   }) satisfies TQoreAppWithActions;
