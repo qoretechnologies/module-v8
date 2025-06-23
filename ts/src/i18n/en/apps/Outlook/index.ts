@@ -1,4 +1,4 @@
-
+/* eslint-disable max-len */
 
 const OutlookAppEn = {
   displayName: 'Microsoft Outlook',

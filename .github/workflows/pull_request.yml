@@ -85,6 +85,7 @@ env:
   ODOO_SUBDOMAIN: ${{ secrets.ODOO_SUBDOMAIN }}
   ODOO_USERNAME: ${{ secrets.ODOO_USERNAME }}
   ODOO_PASSWORD: ${{ secrets.ODOO_PASSWORD }}
+  PADDLE_SANDBOX_API_KEY: ${{ secrets.PADDLE_SANDBOX_API_KEY }}
 
 jobs:
   PullRequestTests:

@@ -46,6 +46,7 @@ import confluence from '../apps/confluence';
 import bitbucket from '../apps/bitbucket';
 import facebookPages from '../apps/facebook-pages';
 import odoo from '../apps/odoo';
+import paddle from '../apps/paddle';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -60,37 +61,38 @@ export interface IQoreApi {
 }
 
 const NEW_APPS = {
+  asana,
+  attio,
   bitbucket,
-  odoo,
   confluence,
-  zoom,
+  esignature,
   facebookPages,
+  freshdesk,
+  github,
   googleContacts,
   googleDocs,
-  googleMeet,
-  googleSheets,
   googleDrive,
   googleForms,
-  serenity,
-  netsuite,
-  zendesk,
-  asana,
-  esignature,
-  github,
-  jira,
-  stripe,
-  freshdesk,
+  googleMeet,
+  googleSheets,
   hubspot,
-  sharepoint,
-  outlook,
-  teams,
-  pipedrive,
-  magento,
-  shopify,
-  mailchimp,
-  xero,
   intercom,
-  attio,
+  jira,
+  magento,
+  mailchimp,
+  netsuite,
+  odoo,
+  outlook,
+  paddle,
+  pipedrive,
+  serenity,
+  sharepoint,
+  shopify,
+  stripe,
+  teams,
+  xero,
+  zendesk,
+  zoom,
 } as const;
 
 const EXISTING_APPS = {
