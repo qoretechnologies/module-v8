@@ -5322,6 +5322,20 @@ type RootTranslation = {
 				}
 			}
 		}
+		BusinessCentral: {
+			/**
+			 * M​i​c​r​o​s​o​f​t​ ​D​y​n​a​m​i​c​s​ ​3​6​5​ ​B​u​s​i​n​e​s​s​ ​C​e​n​t​r​a​l
+			 */
+			displayName: string
+			/**
+			 * C​o​m​p​r​e​h​e​n​s​i​v​e​ ​c​l​o​u​d​-​b​a​s​e​d​ ​E​R​P​ ​s​o​l​u​t​i​o​n​ ​f​o​r​ ​m​a​n​a​g​i​n​g​ ​f​i​n​a​n​c​e​s​,​ ​o​p​e​r​a​t​i​o​n​s​,​ ​s​a​l​e​s​,​ ​a​n​d​ ​c​u​s​t​o​m​e​r​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​.
+			 */
+			shortDesc: string
+			/**
+			 * M​i​c​r​o​s​o​f​t​ ​D​y​n​a​m​i​c​s​ ​3​6​5​ ​B​u​s​i​n​e​s​s​ ​C​e​n​t​r​a​l​ ​i​s​ ​a​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​c​l​o​u​d​-​b​a​s​e​d​ ​E​n​t​e​r​p​r​i​s​e​ ​R​e​s​o​u​r​c​e​ ​P​l​a​n​n​i​n​g​ ​(​E​R​P​)​ ​s​o​l​u​t​i​o​n​ ​d​e​s​i​g​n​e​d​ ​f​o​r​ ​s​m​a​l​l​ ​t​o​ ​m​e​d​i​u​m​-​s​i​z​e​d​ ​b​u​s​i​n​e​s​s​e​s​.​ ​I​t​ ​p​r​o​v​i​d​e​s​ ​i​n​t​e​g​r​a​t​e​d​ ​c​a​p​a​b​i​l​i​t​i​e​s​ ​f​o​r​ ​f​i​n​a​n​c​i​a​l​ ​m​a​n​a​g​e​m​e​n​t​,​ ​s​u​p​p​l​y​ ​c​h​a​i​n​ ​o​p​e​r​a​t​i​o​n​s​,​ ​s​a​l​e​s​ ​a​u​t​o​m​a​t​i​o​n​,​ ​c​u​s​t​o​m​e​r​ ​s​e​r​v​i​c​e​,​ ​a​n​d​ ​p​r​o​j​e​c​t​ ​m​a​n​a​g​e​m​e​n​t​.​ ​T​h​e​ ​p​l​a​t​f​o​r​m​ ​o​f​f​e​r​s​ ​r​e​a​l​-​t​i​m​e​ ​b​u​s​i​n​e​s​s​ ​i​n​s​i​g​h​t​s​ ​t​h​r​o​u​g​h​ ​b​u​i​l​t​-​i​n​ ​a​n​a​l​y​t​i​c​s​ ​a​n​d​ ​r​e​p​o​r​t​i​n​g​,​ ​e​n​a​b​l​i​n​g​ ​d​a​t​a​-​d​r​i​v​e​n​ ​d​e​c​i​s​i​o​n​ ​m​a​k​i​n​g​.​ ​B​u​s​i​n​e​s​s​ ​C​e​n​t​r​a​l​ ​s​e​a​m​l​e​s​s​l​y​ ​i​n​t​e​g​r​a​t​e​s​ ​w​i​t​h​ ​t​h​e​ ​M​i​c​r​o​s​o​f​t​ ​e​c​o​s​y​s​t​e​m​ ​i​n​c​l​u​d​i​n​g​ ​O​f​f​i​c​e​ ​3​6​5​,​ ​P​o​w​e​r​ ​P​l​a​t​f​o​r​m​,​ ​a​n​d​ ​A​z​u​r​e​ ​s​e​r​v​i​c​e​s​,​ ​p​r​o​v​i​d​i​n​g​ ​a​ ​u​n​i​f​i​e​d​ ​b​u​s​i​n​e​s​s​ ​m​a​n​a​g​e​m​e​n​t​ ​e​x​p​e​r​i​e​n​c​e​.​ ​F​e​a​t​u​r​e​s​ ​i​n​c​l​u​d​e​ ​a​u​t​o​m​a​t​e​d​ ​w​o​r​k​f​l​o​w​s​,​ ​c​u​s​t​o​m​i​z​a​b​l​e​ ​d​a​s​h​b​o​a​r​d​s​,​ ​m​o​b​i​l​e​ ​a​c​c​e​s​s​i​b​i​l​i​t​y​,​ ​a​n​d​ ​s​c​a​l​a​b​l​e​ ​a​r​c​h​i​t​e​c​t​u​r​e​ ​t​h​a​t​ ​g​r​o​w​s​ ​w​i​t​h​ ​y​o​u​r​ ​b​u​s​i​n​e​s​s​ ​n​e​e​d​s​.
+			 */
+			longDesc: string
+		}
 		Attio: {
 			/**
 			 * A​t​t​i​o
@@ -42262,6 +42276,20 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 			}
+		}
+		BusinessCentral: {
+			/**
+			 * Microsoft Dynamics 365 Business Central
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Comprehensive cloud-based ERP solution for managing finances, operations, sales, and customer relationships.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Microsoft Dynamics 365 Business Central is a comprehensive cloud-based Enterprise Resource Planning (ERP) solution designed for small to medium-sized businesses. It provides integrated capabilities for financial management, supply chain operations, sales automation, customer service, and project management. The platform offers real-time business insights through built-in analytics and reporting, enabling data-driven decision making. Business Central seamlessly integrates with the Microsoft ecosystem including Office 365, Power Platform, and Azure services, providing a unified business management experience. Features include automated workflows, customizable dashboards, mobile accessibility, and scalable architecture that grows with your business needs.
+			 */
+			longDesc: () => LocalizedString
 		}
 		Attio: {
 			/**
