@@ -4,6 +4,7 @@ import {
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { get360MessengerAllowedValues } from './constants';
+import { Messenger360Error } from '../constants';
 
 interface IContact {
   number: string;
@@ -29,7 +30,7 @@ export const getMessenger360ContactNumberAllowedValues: TQoreGetAllowedValuesFun
   const token = context?.conn_opts?.token;
 
   if (!token) {
-    throw new Error('Token is required to fetch Messenger360 contacts');
+    throw new Messenger360Error('Token is required to fetch Messenger360 contacts');
   }
 
   return await get360MessengerAllowedValues<IContact>({

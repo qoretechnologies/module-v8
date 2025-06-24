@@ -57,7 +57,7 @@ const sendTextMessage = QoreAppCreator.createLocalizedAction<typeof options>({
 
       return data;
     } catch (error) {
-      throw new Messenger360Error(`Failed to send message to group: ${error.message || error}`);
+      throw new Messenger360Error(`Failed to send message: ${error.message || error}`);
     }
   },
   response_type: {

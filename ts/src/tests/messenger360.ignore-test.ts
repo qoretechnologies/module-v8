@@ -18,11 +18,20 @@ describe('Test Messenger360 Actions', () => {
     } as any,
   };
 
+  let phonenumber: string | undefined;
+  let groupId: string | undefined;
+
   beforeAll(() => {
     const token = process.env.MESSENGER360_API_KEY;
+    phonenumber = process.env.MESSENGER360_TEST_PHONENUMBER;
+    groupId = process.env.MESSENGER360_TEST_GROUP_ID;
 
-    if (!token) {
-      throw new Error(`Please set the MESSENGER360_API_KEY environment variable.`);
+    if (!token || !phonenumber || !groupId) {
+      throw new Error(
+        `Please set the` +
+          `MESSENGER360_API_KEY, MESSENGER360_TEST_PHONENUMBER, MESSENGER360_TEST_GROUP_ID` +
+          `environment variables.`
+      );
     }
 
     base_context.conn_opts.token = token;
@@ -83,7 +92,7 @@ describe('Test Messenger360 Actions', () => {
 
       const result = await action.api_function(
         {
-          phonenumber: '1234567890', // Replace with a valid phone number
+          phonenumber,
           text: 'Hello from Qore!',
           url: 'https://example.com', // Optional URL
           delay: new Date(Date.now() + 60000).toISOString(), // Optional delay
@@ -103,7 +112,7 @@ describe('Test Messenger360 Actions', () => {
 
       const result = await action.api_function(
         {
-          groupId: '1234567890', // Replace with a valid group ID
+          groupId,
           text: 'Hello from Qore!',
           url: 'https://example.com', // Optional URL
           delay: new Date(Date.now() + 60000).toISOString(), // Optional delay

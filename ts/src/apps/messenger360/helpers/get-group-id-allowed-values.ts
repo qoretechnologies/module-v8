@@ -4,6 +4,7 @@ import {
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { get360MessengerAllowedValues } from './constants';
+import { Messenger360Error } from '../constants';
 
 interface IGroup {
   id: string;
@@ -25,7 +26,7 @@ export const getMessenger360GroupIdAllowedValues: TQoreGetAllowedValuesFunction<
   const token = context?.conn_opts?.token;
 
   if (!token) {
-    throw new Error('Token is required to fetch Messenger360 groups');
+    throw new Messenger360Error('Token is required to fetch Messenger360 groups');
   }
 
   return await get360MessengerAllowedValues<IGroup>({
