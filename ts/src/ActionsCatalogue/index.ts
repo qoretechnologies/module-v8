@@ -47,6 +47,7 @@ import bitbucket from '../apps/bitbucket';
 import facebookPages from '../apps/facebook-pages';
 import odoo from '../apps/odoo';
 import paddle from '../apps/paddle';
+import messenger360 from '../apps/messenger360';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -80,6 +81,7 @@ const NEW_APPS = {
   jira,
   magento,
   mailchimp,
+  messenger360,
   netsuite,
   odoo,
   outlook,

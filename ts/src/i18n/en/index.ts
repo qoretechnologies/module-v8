@@ -35,6 +35,7 @@ import Zendesk from './apps/Zendesk';
 import Zoom from './apps/Zoom';
 import Odoo from './apps/Odoo';
 import Paddle from './apps/Paddle';
+import Messenger360 from './apps/Messenger360';
 
 const en = {
   common: {},
@@ -151,6 +152,7 @@ const en = {
     Bitbucket,
     FacebookPages,
     Paddle,
+    Messenger360,
   },
 } satisfies BaseTranslation;
 

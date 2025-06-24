@@ -36724,6 +36724,232 @@ type RootTranslation = {
 				}
 			}
 		}
+		Messenger360: {
+			/**
+			 * 3​6​0​ ​M​e​s​s​e​n​g​e​r​ ​f​o​r​ ​W​h​a​t​s​A​p​p
+			 */
+			displayName: string
+			/**
+			 * A​u​t​o​m​a​t​e​ ​a​n​d​ ​s​e​n​d​ ​p​e​r​s​o​n​a​l​i​z​e​d​ ​W​h​a​t​s​A​p​p​ ​m​e​s​s​a​g​e​s​ ​u​s​i​n​g​ ​3​6​0​ ​M​e​s​s​e​n​g​e​r​.
+			 */
+			shortDesc: string
+			/**
+			 * 3​6​0​ ​M​e​s​s​e​n​g​e​r​ ​f​o​r​ ​W​h​a​t​s​A​p​p​ ​e​n​a​b​l​e​s​ ​y​o​u​ ​t​o​ ​s​e​n​d​ ​a​u​t​o​m​a​t​e​d​ ​a​n​d​ ​p​e​r​s​o​n​a​l​i​z​e​d​ ​m​e​s​s​a​g​e​s​ ​d​i​r​e​c​t​l​y​ ​t​h​r​o​u​g​h​ ​W​h​a​t​s​A​p​p​ ​B​u​s​i​n​e​s​s​ ​a​c​c​o​u​n​t​s​.​ ​I​d​e​a​l​ ​f​o​r​ ​c​u​s​t​o​m​e​r​ ​e​n​g​a​g​e​m​e​n​t​,​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​,​ ​a​n​d​ ​s​u​p​p​o​r​t​ ​w​o​r​k​f​l​o​w​s​,​ ​t​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​e​n​s​u​r​e​s​ ​f​a​s​t​ ​a​n​d​ ​r​e​l​i​a​b​l​e​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​ ​a​t​ ​s​c​a​l​e​ ​v​i​a​ ​W​h​a​t​s​A​p​p​.
+			 */
+			longDesc: string
+			actions: {
+				get_contacts: {
+					/**
+					 * G​e​t​ ​W​h​a​t​s​A​p​p​ ​C​o​n​t​a​c​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​W​h​a​t​s​A​p​p​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m​ ​y​o​u​r​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​c​o​m​p​l​e​t​e​ ​l​i​s​t​ ​o​f​ ​W​h​a​t​s​A​p​p​ ​c​o​n​t​a​c​t​s​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​i​r​ ​d​e​t​a​i​l​s​ ​s​u​c​h​ ​a​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s​,​ ​b​u​s​i​n​e​s​s​ ​s​t​a​t​u​s​,​ ​a​n​d​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+					}
+				}
+				get_chats: {
+					/**
+					 * G​e​t​ ​W​h​a​t​s​A​p​p​ ​C​h​a​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​W​h​a​t​s​A​p​p​ ​c​h​a​t​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​W​h​a​t​s​A​p​p​ ​c​h​a​t​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​i​n​c​l​u​d​i​n​g​ ​c​h​a​t​ ​d​e​t​a​i​l​s​,​ ​l​a​s​t​ ​m​e​s​s​a​g​e​s​,​ ​u​n​r​e​a​d​ ​c​o​u​n​t​s​,​ ​a​n​d​ ​c​h​a​t​ ​m​e​t​a​d​a​t​a​ ​s​u​c​h​ ​a​s​ ​p​i​n​n​e​d​ ​a​n​d​ ​a​r​c​h​i​v​e​d​ ​s​t​a​t​u​s​.
+					 */
+					longDesc: string
+					options: {
+					}
+				}
+				get_groups: {
+					/**
+					 * G​e​t​ ​W​h​a​t​s​A​p​p​ ​G​r​o​u​p​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​W​h​a​t​s​A​p​p​ ​g​r​o​u​p​ ​c​h​a​t​s​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​W​h​a​t​s​A​p​p​ ​g​r​o​u​p​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​t​h​a​t​ ​y​o​u​ ​a​r​e​ ​a​ ​m​e​m​b​e​r​ ​o​f​,​ ​i​n​c​l​u​d​i​n​g​ ​g​r​o​u​p​ ​I​D​s​ ​a​n​d​ ​n​a​m​e​s​.
+					 */
+					longDesc: string
+					options: {
+					}
+				}
+				send_text_message: {
+					/**
+					 * S​e​n​d​ ​W​h​a​t​s​A​p​p​ ​T​e​x​t​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​t​e​x​t​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​ ​W​h​a​t​s​A​p​p​ ​c​o​n​t​a​c​t​.
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​s​ ​a​ ​t​e​x​t​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​W​h​a​t​s​A​p​p​ ​c​o​n​t​a​c​t​ ​b​y​ ​p​h​o​n​e​ ​n​u​m​b​e​r​.​ ​O​p​t​i​o​n​a​l​l​y​ ​i​n​c​l​u​d​e​ ​a​ ​U​R​L​ ​l​i​n​k​ ​a​n​d​ ​s​c​h​e​d​u​l​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​f​o​r​ ​l​a​t​e​r​ ​d​e​l​i​v​e​r​y​.
+					 */
+					longDesc: string
+					options: {
+						phonenumber: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​r​e​c​i​p​i​e​n​t​'​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​o​f​ ​t​h​e​ ​W​h​a​t​s​A​p​p​ ​c​o​n​t​a​c​t​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​.​ ​S​h​o​u​l​d​ ​i​n​c​l​u​d​e​ ​c​o​u​n​t​r​y​ ​c​o​d​e​.
+							 */
+							longDesc: string
+						}
+						text: {
+							/**
+							 * M​e​s​s​a​g​e​ ​T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​s​e​n​t​ ​a​s​ ​t​h​e​ ​W​h​a​t​s​A​p​p​ ​m​e​s​s​a​g​e​.
+							 */
+							longDesc: string
+						}
+						url: {
+							/**
+							 * U​R​L​ ​L​i​n​k
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​U​R​L​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​o​p​t​i​o​n​a​l​ ​U​R​L​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​i​n​c​l​u​d​e​d​ ​w​i​t​h​ ​t​h​e​ ​t​e​x​t​ ​m​e​s​s​a​g​e​ ​f​o​r​ ​s​h​a​r​i​n​g​ ​l​i​n​k​s​.
+							 */
+							longDesc: string
+						}
+						delay: {
+							/**
+							 * S​c​h​e​d​u​l​e​d​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​t​i​m​e​ ​t​o​ ​s​c​h​e​d​u​l​e​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​o​ ​s​c​h​e​d​u​l​e​ ​w​h​e​n​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​s​h​o​u​l​d​ ​b​e​ ​s​e​n​t​.​ ​I​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​,​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​w​i​l​l​ ​b​e​ ​s​e​n​t​ ​i​m​m​e​d​i​a​t​e​l​y​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				send_group_text_message: {
+					/**
+					 * S​e​n​d​ ​W​h​a​t​s​A​p​p​ ​G​r​o​u​p​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​t​e​x​t​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​ ​W​h​a​t​s​A​p​p​ ​g​r​o​u​p​.
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​s​ ​a​ ​t​e​x​t​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​W​h​a​t​s​A​p​p​ ​g​r​o​u​p​.​ ​O​p​t​i​o​n​a​l​l​y​ ​i​n​c​l​u​d​e​ ​a​ ​U​R​L​ ​l​i​n​k​ ​a​n​d​ ​s​c​h​e​d​u​l​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​f​o​r​ ​l​a​t​e​r​ ​d​e​l​i​v​e​r​y​.
+					 */
+					longDesc: string
+					options: {
+						groupId: {
+							/**
+							 * G​r​o​u​p​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​W​h​a​t​s​A​p​p​ ​g​r​o​u​p​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​W​h​a​t​s​A​p​p​ ​g​r​o​u​p​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​w​i​l​l​ ​b​e​ ​s​e​n​t​.
+							 */
+							longDesc: string
+						}
+						text: {
+							/**
+							 * M​e​s​s​a​g​e​ ​T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​s​e​n​t​ ​a​s​ ​t​h​e​ ​W​h​a​t​s​A​p​p​ ​g​r​o​u​p​ ​m​e​s​s​a​g​e​.
+							 */
+							longDesc: string
+						}
+						url: {
+							/**
+							 * U​R​L​ ​L​i​n​k
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​U​R​L​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​o​p​t​i​o​n​a​l​ ​U​R​L​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​i​n​c​l​u​d​e​d​ ​w​i​t​h​ ​t​h​e​ ​t​e​x​t​ ​m​e​s​s​a​g​e​ ​f​o​r​ ​s​h​a​r​i​n​g​ ​l​i​n​k​s​.
+							 */
+							longDesc: string
+						}
+						delay: {
+							/**
+							 * S​c​h​e​d​u​l​e​d​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​t​i​m​e​ ​t​o​ ​s​c​h​e​d​u​l​e​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​t​o​ ​s​c​h​e​d​u​l​e​ ​w​h​e​n​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​s​h​o​u​l​d​ ​b​e​ ​s​e​n​t​.​ ​I​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​,​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​w​i​l​l​ ​b​e​ ​s​e​n​t​ ​i​m​m​e​d​i​a​t​e​l​y​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_message: {
+					/**
+					 * N​e​w​ ​W​h​a​t​s​A​p​p​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​W​h​a​t​s​A​p​p​ ​m​e​s​s​a​g​e​ ​i​s​ ​r​e​c​e​i​v​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​w​e​b​h​o​o​k​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​W​h​a​t​s​A​p​p​ ​m​e​s​s​a​g​e​ ​i​s​ ​r​e​c​e​i​v​e​d​ ​i​n​ ​a​n​y​ ​c​h​a​t​ ​o​r​ ​g​r​o​u​p​ ​c​o​n​v​e​r​s​a​t​i​o​n​.​ ​I​t​ ​c​a​p​t​u​r​e​s​ ​m​e​s​s​a​g​e​ ​d​e​t​a​i​l​s​ ​i​n​c​l​u​d​i​n​g​ ​s​e​n​d​e​r​,​ ​r​e​c​i​p​i​e​n​t​,​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t​,​ ​a​n​d​ ​m​e​t​a​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -73435,6 +73661,232 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
+					}
+				}
+			}
+		}
+		Messenger360: {
+			/**
+			 * 360 Messenger for WhatsApp
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Automate and send personalized WhatsApp messages using 360 Messenger.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * 360 Messenger for WhatsApp enables you to send automated and personalized messages directly through WhatsApp Business accounts. Ideal for customer engagement, notifications, and support workflows, this integration ensures fast and reliable communication at scale via WhatsApp.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				get_contacts: {
+					/**
+					 * Get WhatsApp Contacts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve all WhatsApp contacts from your account.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a complete list of WhatsApp contacts including their details such as phone numbers, business status, and contact information.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+					}
+				}
+				get_chats: {
+					/**
+					 * Get WhatsApp Chats
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve all WhatsApp chat conversations.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a list of all WhatsApp chat conversations including chat details, last messages, unread counts, and chat metadata such as pinned and archived status.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+					}
+				}
+				get_groups: {
+					/**
+					 * Get WhatsApp Groups
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve all WhatsApp group chats.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a list of all WhatsApp group conversations that you are a member of, including group IDs and names.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+					}
+				}
+				send_text_message: {
+					/**
+					 * Send WhatsApp Text Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a text message to a WhatsApp contact.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Sends a text message to a specific WhatsApp contact by phone number. Optionally include a URL link and schedule the message for later delivery.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						phonenumber: {
+							/**
+							 * Phone Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The recipient's phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The phone number of the WhatsApp contact to send the message to. Should include country code.
+							 */
+							longDesc: () => LocalizedString
+						}
+						text: {
+							/**
+							 * Message Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The text content of the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text content that will be sent as the WhatsApp message.
+							 */
+							longDesc: () => LocalizedString
+						}
+						url: {
+							/**
+							 * URL Link
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional URL to include in the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An optional URL that can be included with the text message for sharing links.
+							 */
+							longDesc: () => LocalizedString
+						}
+						delay: {
+							/**
+							 * Scheduled Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional time to schedule the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional date and time to schedule when the message should be sent. If not provided, the message will be sent immediately.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				send_group_text_message: {
+					/**
+					 * Send WhatsApp Group Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a text message to a WhatsApp group.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Sends a text message to a specific WhatsApp group. Optionally include a URL link and schedule the message for later delivery.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						groupId: {
+							/**
+							 * Group ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The WhatsApp group identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the WhatsApp group where the message will be sent.
+							 */
+							longDesc: () => LocalizedString
+						}
+						text: {
+							/**
+							 * Message Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The text content of the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text content that will be sent as the WhatsApp group message.
+							 */
+							longDesc: () => LocalizedString
+						}
+						url: {
+							/**
+							 * URL Link
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional URL to include in the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An optional URL that can be included with the text message for sharing links.
+							 */
+							longDesc: () => LocalizedString
+						}
+						delay: {
+							/**
+							 * Scheduled Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional time to schedule the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional date and time to schedule when the message should be sent. If not provided, the message will be sent immediately.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_message: {
+					/**
+					 * New WhatsApp Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new WhatsApp message is received.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This webhook trigger activates whenever a new WhatsApp message is received in any chat or group conversation. It captures message details including sender, recipient, message content, and metadata.
+					 */
+					longDesc: () => LocalizedString
+					options: {
 					}
 				}
 			}
