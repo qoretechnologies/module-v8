@@ -5335,6 +5335,188 @@ type RootTranslation = {
 			 * M​i​c​r​o​s​o​f​t​ ​D​y​n​a​m​i​c​s​ ​3​6​5​ ​B​u​s​i​n​e​s​s​ ​C​e​n​t​r​a​l​ ​i​s​ ​a​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​c​l​o​u​d​-​b​a​s​e​d​ ​E​n​t​e​r​p​r​i​s​e​ ​R​e​s​o​u​r​c​e​ ​P​l​a​n​n​i​n​g​ ​(​E​R​P​)​ ​s​o​l​u​t​i​o​n​ ​d​e​s​i​g​n​e​d​ ​f​o​r​ ​s​m​a​l​l​ ​t​o​ ​m​e​d​i​u​m​-​s​i​z​e​d​ ​b​u​s​i​n​e​s​s​e​s​.​ ​I​t​ ​p​r​o​v​i​d​e​s​ ​i​n​t​e​g​r​a​t​e​d​ ​c​a​p​a​b​i​l​i​t​i​e​s​ ​f​o​r​ ​f​i​n​a​n​c​i​a​l​ ​m​a​n​a​g​e​m​e​n​t​,​ ​s​u​p​p​l​y​ ​c​h​a​i​n​ ​o​p​e​r​a​t​i​o​n​s​,​ ​s​a​l​e​s​ ​a​u​t​o​m​a​t​i​o​n​,​ ​c​u​s​t​o​m​e​r​ ​s​e​r​v​i​c​e​,​ ​a​n​d​ ​p​r​o​j​e​c​t​ ​m​a​n​a​g​e​m​e​n​t​.​ ​T​h​e​ ​p​l​a​t​f​o​r​m​ ​o​f​f​e​r​s​ ​r​e​a​l​-​t​i​m​e​ ​b​u​s​i​n​e​s​s​ ​i​n​s​i​g​h​t​s​ ​t​h​r​o​u​g​h​ ​b​u​i​l​t​-​i​n​ ​a​n​a​l​y​t​i​c​s​ ​a​n​d​ ​r​e​p​o​r​t​i​n​g​,​ ​e​n​a​b​l​i​n​g​ ​d​a​t​a​-​d​r​i​v​e​n​ ​d​e​c​i​s​i​o​n​ ​m​a​k​i​n​g​.​ ​B​u​s​i​n​e​s​s​ ​C​e​n​t​r​a​l​ ​s​e​a​m​l​e​s​s​l​y​ ​i​n​t​e​g​r​a​t​e​s​ ​w​i​t​h​ ​t​h​e​ ​M​i​c​r​o​s​o​f​t​ ​e​c​o​s​y​s​t​e​m​ ​i​n​c​l​u​d​i​n​g​ ​O​f​f​i​c​e​ ​3​6​5​,​ ​P​o​w​e​r​ ​P​l​a​t​f​o​r​m​,​ ​a​n​d​ ​A​z​u​r​e​ ​s​e​r​v​i​c​e​s​,​ ​p​r​o​v​i​d​i​n​g​ ​a​ ​u​n​i​f​i​e​d​ ​b​u​s​i​n​e​s​s​ ​m​a​n​a​g​e​m​e​n​t​ ​e​x​p​e​r​i​e​n​c​e​.​ ​F​e​a​t​u​r​e​s​ ​i​n​c​l​u​d​e​ ​a​u​t​o​m​a​t​e​d​ ​w​o​r​k​f​l​o​w​s​,​ ​c​u​s​t​o​m​i​z​a​b​l​e​ ​d​a​s​h​b​o​a​r​d​s​,​ ​m​o​b​i​l​e​ ​a​c​c​e​s​s​i​b​i​l​i​t​y​,​ ​a​n​d​ ​s​c​a​l​a​b​l​e​ ​a​r​c​h​i​t​e​c​t​u​r​e​ ​t​h​a​t​ ​g​r​o​w​s​ ​w​i​t​h​ ​y​o​u​r​ ​b​u​s​i​n​e​s​s​ ​n​e​e​d​s​.
 			 */
 			longDesc: string
+			triggers: {
+				new_record: {
+					/**
+					 * N​e​w​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​B​u​s​i​n​e​s​s​ ​C​e​n​t​r​a​l​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​r​e​c​o​r​d​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​B​u​s​i​n​e​s​s​ ​C​e​n​t​r​a​l​ ​o​b​j​e​c​t​.​ ​T​h​e​ ​t​r​i​g​g​e​r​ ​p​o​l​l​s​ ​f​o​r​ ​r​e​c​o​r​d​s​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​i​r​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e​s​t​a​m​p​ ​a​n​d​ ​c​a​n​ ​b​e​ ​f​i​l​t​e​r​e​d​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​c​r​i​t​e​r​i​a​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​a​u​t​o​m​a​t​i​n​g​ ​w​o​r​k​f​l​o​w​s​ ​w​h​e​n​ ​n​e​w​ ​d​a​t​a​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​y​o​u​r​ ​B​u​s​i​n​e​s​s​ ​C​e​n​t​r​a​l​ ​s​y​s​t​e​m​.
+					 */
+					longDesc: string
+					options: {
+						object: {
+							/**
+							 * O​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * B​u​s​i​n​e​s​s​ ​C​e​n​t​r​a​l​ ​o​b​j​e​c​t​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​B​u​s​i​n​e​s​s​ ​C​e​n​t​r​a​l​ ​o​b​j​e​c​t​ ​(​e​n​t​i​t​y​)​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​r​e​c​o​r​d​s​,​ ​s​u​c​h​ ​a​s​ ​c​u​s​t​o​m​e​r​s​,​ ​i​t​e​m​s​,​ ​o​r​ ​s​a​l​e​s​ ​o​r​d​e​r​s​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​r​e​c​o​r​d​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​t​o​ ​l​i​m​i​t​ ​w​h​i​c​h​ ​r​e​c​o​r​d​s​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​e​v​e​n​t​ ​b​a​s​e​d​ ​o​n​ ​f​i​e​l​d​ ​v​a​l​u​e​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​n​a​m​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​ ​t​o​.
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​(​e​q​u​a​l​s​,​ ​n​o​t​ ​e​q​u​a​l​s​,​ ​g​r​e​a​t​e​r​ ​t​h​a​n​,​ ​l​e​s​s​ ​t​h​a​n​)​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​v​a​l​u​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​ ​w​h​e​n​ ​f​i​l​t​e​r​i​n​g​ ​r​e​c​o​r​d​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				updated_record: {
+					/**
+					 * U​p​d​a​t​e​d​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​r​e​c​o​r​d​ ​i​s​ ​m​o​d​i​f​i​e​d​ ​i​n​ ​B​u​s​i​n​e​s​s​ ​C​e​n​t​r​a​l​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​f​o​r​ ​r​e​c​e​n​t​l​y​ ​u​p​d​a​t​e​d​ ​r​e​c​o​r​d​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​B​u​s​i​n​e​s​s​ ​C​e​n​t​r​a​l​ ​o​b​j​e​c​t​.​ ​T​h​e​ ​t​r​i​g​g​e​r​ ​p​o​l​l​s​ ​f​o​r​ ​r​e​c​o​r​d​s​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​i​r​ ​m​o​d​i​f​i​c​a​t​i​o​n​ ​t​i​m​e​s​t​a​m​p​ ​a​n​d​ ​c​a​n​ ​b​e​ ​f​i​l​t​e​r​e​d​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​c​r​i​t​e​r​i​a​.​ ​I​d​e​a​l​ ​f​o​r​ ​t​r​a​c​k​i​n​g​ ​c​h​a​n​g​e​s​ ​a​n​d​ ​a​u​t​o​m​a​t​i​n​g​ ​w​o​r​k​f​l​o​w​s​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​d​a​t​a​ ​i​s​ ​m​o​d​i​f​i​e​d​ ​i​n​ ​y​o​u​r​ ​B​u​s​i​n​e​s​s​ ​C​e​n​t​r​a​l​ ​s​y​s​t​e​m​.
+					 */
+					longDesc: string
+					options: {
+						object: {
+							/**
+							 * O​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * B​u​s​i​n​e​s​s​ ​C​e​n​t​r​a​l​ ​o​b​j​e​c​t​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​B​u​s​i​n​e​s​s​ ​C​e​n​t​r​a​l​ ​o​b​j​e​c​t​ ​(​e​n​t​i​t​y​)​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​u​p​d​a​t​e​d​ ​r​e​c​o​r​d​s​,​ ​s​u​c​h​ ​a​s​ ​c​u​s​t​o​m​e​r​s​,​ ​i​t​e​m​s​,​ ​o​r​ ​s​a​l​e​s​ ​o​r​d​e​r​s​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​r​e​c​o​r​d​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​t​o​ ​l​i​m​i​t​ ​w​h​i​c​h​ ​u​p​d​a​t​e​d​ ​r​e​c​o​r​d​s​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​e​v​e​n​t​ ​b​a​s​e​d​ ​o​n​ ​f​i​e​l​d​ ​v​a​l​u​e​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​n​a​m​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​ ​t​o​.
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​(​e​q​u​a​l​s​,​ ​n​o​t​ ​e​q​u​a​l​s​,​ ​g​r​e​a​t​e​r​ ​t​h​a​n​,​ ​l​e​s​s​ ​t​h​a​n​)​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​v​a​l​u​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​ ​w​h​e​n​ ​f​i​l​t​e​r​i​n​g​ ​r​e​c​o​r​d​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 		Attio: {
 			/**
@@ -42290,6 +42472,188 @@ export type TranslationFunctions = {
 			 * Microsoft Dynamics 365 Business Central is a comprehensive cloud-based Enterprise Resource Planning (ERP) solution designed for small to medium-sized businesses. It provides integrated capabilities for financial management, supply chain operations, sales automation, customer service, and project management. The platform offers real-time business insights through built-in analytics and reporting, enabling data-driven decision making. Business Central seamlessly integrates with the Microsoft ecosystem including Office 365, Power Platform, and Azure services, providing a unified business management experience. Features include automated workflows, customizable dashboards, mobile accessibility, and scalable architecture that grows with your business needs.
 			 */
 			longDesc: () => LocalizedString
+			triggers: {
+				new_record: {
+					/**
+					 * New Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new record is created in Business Central.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors for newly created records in a specified Business Central object. The trigger polls for records based on their creation timestamp and can be filtered by specific field criteria. Useful for automating workflows when new data is added to your Business Central system.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						object: {
+							/**
+							 * Object
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Business Central object to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Business Central object (entity) to monitor for new records, such as customers, items, or sales orders.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional filter criteria for records
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional filter to limit which records trigger the event based on field values.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field name to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The name of the field to apply the filter condition to.
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The comparison operator to use for filtering (equals, not equals, greater than, less than).
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter value
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to compare against when filtering records.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				updated_record: {
+					/**
+					 * Updated Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an existing record is modified in Business Central.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors for recently updated records in a specified Business Central object. The trigger polls for records based on their modification timestamp and can be filtered by specific field criteria. Ideal for tracking changes and automating workflows when existing data is modified in your Business Central system.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						object: {
+							/**
+							 * Object
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Business Central object to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Business Central object (entity) to monitor for updated records, such as customers, items, or sales orders.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional filter criteria for records
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional filter to limit which updated records trigger the event based on field values.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field name to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The name of the field to apply the filter condition to.
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The comparison operator to use for filtering (equals, not equals, greater than, less than).
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter value
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to compare against when filtering records.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 		Attio: {
 			/**
