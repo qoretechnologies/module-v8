@@ -36,6 +36,7 @@ import Zoom from './apps/Zoom';
 import Odoo from './apps/Odoo';
 import Paddle from './apps/Paddle';
 import Messenger360 from './apps/Messenger360';
+import BusinessCentral from './apps/BusinessCentral';
 
 const en = {
   common: {},
@@ -122,6 +123,7 @@ const en = {
     GoogleDrive,
     GoogleSheets,
     GoogleContacts,
+    BusinessCentral,
     Attio,
     Odoo,
     Intercom,
