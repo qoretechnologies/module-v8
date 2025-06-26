@@ -17730,6 +17730,20 @@ type RootTranslation = {
 				}
 			}
 		}
+		Typeform: {
+			/**
+			 * T​y​p​e​f​o​r​m
+			 */
+			displayName: string
+			/**
+			 * C​r​e​a​t​e​ ​a​n​d​ ​m​a​n​a​g​e​ ​i​n​t​e​r​a​c​t​i​v​e​ ​f​o​r​m​s​,​ ​s​u​r​v​e​y​s​,​ ​a​n​d​ ​q​u​i​z​z​e​s​ ​w​i​t​h​ ​T​y​p​e​f​o​r​m​.
+			 */
+			shortDesc: string
+			/**
+			 * T​y​p​e​f​o​r​m​ ​i​s​ ​a​ ​v​e​r​s​a​t​i​l​e​ ​f​o​r​m​ ​b​u​i​l​d​e​r​ ​t​h​a​t​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​c​r​e​a​t​e​ ​e​n​g​a​g​i​n​g​,​ ​c​o​n​v​e​r​s​a​t​i​o​n​a​l​ ​f​o​r​m​s​,​ ​s​u​r​v​e​y​s​,​ ​q​u​i​z​z​e​s​,​ ​a​n​d​ ​p​o​l​l​s​.​ ​W​i​t​h​ ​i​t​s​ ​i​n​t​u​i​t​i​v​e​ ​i​n​t​e​r​f​a​c​e​ ​a​n​d​ ​p​o​w​e​r​f​u​l​ ​f​e​a​t​u​r​e​s​,​ ​y​o​u​ ​c​a​n​ ​c​o​l​l​e​c​t​ ​r​e​s​p​o​n​s​e​s​,​ ​a​n​a​l​y​z​e​ ​d​a​t​a​,​ ​a​n​d​ ​i​n​t​e​g​r​a​t​e​ ​w​i​t​h​ ​o​t​h​e​r​ ​t​o​o​l​s​ ​t​o​ ​s​t​r​e​a​m​l​i​n​e​ ​y​o​u​r​ ​w​o​r​k​f​l​o​w​.​ ​P​e​r​f​e​c​t​ ​f​o​r​ ​l​e​a​d​ ​g​e​n​e​r​a​t​i​o​n​,​ ​c​u​s​t​o​m​e​r​ ​f​e​e​d​b​a​c​k​,​ ​e​v​e​n​t​ ​r​e​g​i​s​t​r​a​t​i​o​n​,​ ​a​n​d​ ​m​a​r​k​e​t​ ​r​e​s​e​a​r​c​h​.
+			 */
+			longDesc: string
+		}
 		DocusignESignature: {
 			/**
 			 * D​o​c​u​s​i​g​n​ ​e​S​i​g​n​a​t​u​r​e
@@ -54670,6 +54684,20 @@ export type TranslationFunctions = {
 					}
 				}
 			}
+		}
+		Typeform: {
+			/**
+			 * Typeform
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Create and manage interactive forms, surveys, and quizzes with Typeform.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Typeform is a versatile form builder that allows you to create engaging, conversational forms, surveys, quizzes, and polls. With its intuitive interface and powerful features, you can collect responses, analyze data, and integrate with other tools to streamline your workflow. Perfect for lead generation, customer feedback, event registration, and market research.
+			 */
+			longDesc: () => LocalizedString
 		}
 		DocusignESignature: {
 			/**

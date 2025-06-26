@@ -48,6 +48,7 @@ import facebookPages from '../apps/facebook-pages';
 import odoo from '../apps/odoo';
 import paddle from '../apps/paddle';
 import messenger360 from '../apps/messenger360';
+import typeform from '../apps/typeform';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -92,6 +93,7 @@ const NEW_APPS = {
   shopify,
   stripe,
   teams,
+  typeform,
   xero,
   zendesk,
   zoom,
