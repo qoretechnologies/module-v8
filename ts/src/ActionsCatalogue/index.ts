@@ -42,6 +42,7 @@ import sharepoint from '../apps/sharepoint';
 import shopify from '../apps/shopify';
 import stripe from '../apps/stripe';
 import teams from '../apps/teams';
+import typeform from '../apps/typeform';
 import xero from '../apps/xero';
 import zendesk from '../apps/zendesk';
 import zoom from '../apps/zoom';
@@ -94,6 +95,7 @@ const NEW_APPS = {
   shopify,
   stripe,
   teams,
+  typeform,
   xero,
   zendesk,
   zoom,

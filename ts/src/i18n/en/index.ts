@@ -36,6 +36,7 @@ import Zoom from './apps/Zoom';
 import Odoo from './apps/Odoo';
 import Paddle from './apps/Paddle';
 import Messenger360 from './apps/Messenger360';
+import Typeform from './apps/Typeform';
 import BusinessCentral from './apps/BusinessCentral';
 
 const en = {
@@ -107,6 +108,24 @@ const en = {
                       },
                     },
                   },
+                  subOption3: {
+                    displayName: 'Sub Option 3 of option 1',
+                    shortDesc: 'Sub Option 3 Short Description',
+                    longDesc: 'Sub Option 3 Long Description',
+                    type: {
+                      element_type: {
+                        type: {
+                          fields: {
+                            subSubOption1: {
+                              displayName: 'Sub Sub Option 1',
+                              shortDesc: 'Sub Sub Option 1 Short Description',
+                              longDesc: 'Sub Sub Option 1 Long Description',
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
                 },
               },
             },
@@ -135,6 +154,7 @@ const en = {
     Stripe,
     Github,
     Asana,
+    Typeform,
     DocusignESignature,
     Zendesk,
     Hubspot,
