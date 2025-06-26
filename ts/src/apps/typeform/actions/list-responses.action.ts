@@ -107,7 +107,7 @@ const options = {
   },
 } satisfies TQoreOptions;
 
-const listImages = QoreAppCreator.createLocalizedAction({
+const listResponses = QoreAppCreator.createLocalizedAction({
   app: TYPEFORM_APP_NAME,
   action: 'list_responses',
   action_code: EQoreAppActionCode.ACTION,
@@ -233,4 +233,4 @@ const listImages = QoreAppCreator.createLocalizedAction({
   },
 });
 
-export default listImages;
+export default listResponses;

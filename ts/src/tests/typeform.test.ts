@@ -209,7 +209,7 @@ describe('Test Typeform Actions', () => {
     });
   });
 
-  describe('Should test Paddle triggers webhook registration', () => {
+  describe('Should test Typeform triggers webhook registration', () => {
     let webhook: { id: string; tag: string } | undefined;
     it('Should register the webhook', async () => {
       const trigger = NewTypeformFormResponse;
