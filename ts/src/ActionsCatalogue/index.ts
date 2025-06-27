@@ -11,8 +11,12 @@ import fs from 'fs';
 import path from 'path';
 import asana from '../apps/asana';
 import attio from '../apps/attio';
+import bitbucket from '../apps/bitbucket';
+import businessCentral from '../apps/business-central';
+import confluence from '../apps/confluence';
 import dynamics from '../apps/dynamics';
 import esignature from '../apps/esignature';
+import facebookPages from '../apps/facebook-pages';
 import freshdesk from '../apps/freshdesk';
 import github from '../apps/github';
 import googleContacts from '../apps/google-contacts';
@@ -26,8 +30,11 @@ import intercom from '../apps/intercom';
 import jira from '../apps/jira';
 import magento from '../apps/magento';
 import mailchimp from '../apps/mailchimp';
+import messenger360 from '../apps/messenger360';
 import netsuite from '../apps/netsuite';
+import odoo from '../apps/odoo';
 import outlook from '../apps/outlook';
+import paddle from '../apps/paddle';
 import pipedrive from '../apps/pipedrive';
 import salesforce from '../apps/salesforce';
 import serenity from '../apps/serenity';
@@ -35,6 +42,7 @@ import sharepoint from '../apps/sharepoint';
 import shopify from '../apps/shopify';
 import stripe from '../apps/stripe';
 import teams from '../apps/teams';
+import typeform from '../apps/typeform';
 import xero from '../apps/xero';
 import zendesk from '../apps/zendesk';
 import zoom from '../apps/zoom';
@@ -42,12 +50,6 @@ import { Log } from '../decorators/Logger';
 import { Locales } from '../i18n/i18n-types';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
-import confluence from '../apps/confluence';
-import bitbucket from '../apps/bitbucket';
-import facebookPages from '../apps/facebook-pages';
-import odoo from '../apps/odoo';
-import paddle from '../apps/paddle';
-import messenger360 from '../apps/messenger360';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -65,6 +67,7 @@ const NEW_APPS = {
   asana,
   attio,
   bitbucket,
+  businessCentral,
   confluence,
   esignature,
   facebookPages,
@@ -92,6 +95,7 @@ const NEW_APPS = {
   shopify,
   stripe,
   teams,
+  typeform,
   xero,
   zendesk,
   zoom,
