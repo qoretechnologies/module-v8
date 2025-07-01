@@ -38,6 +38,7 @@ import Paddle from './apps/Paddle';
 import Messenger360 from './apps/Messenger360';
 import Typeform from './apps/Typeform';
 import BusinessCentral from './apps/BusinessCentral';
+import Airtable from './apps/Airtable';
 
 const en = {
   common: {},
@@ -144,6 +145,7 @@ const en = {
     GoogleContacts,
     BusinessCentral,
     Attio,
+    Airtable,
     Odoo,
     Intercom,
     Xero,
