@@ -50,6 +50,7 @@ import { Log } from '../decorators/Logger';
 import { Locales } from '../i18n/i18n-types';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
+import airtable from '../apps/airtable';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -64,6 +65,7 @@ export interface IQoreApi {
 }
 
 const NEW_APPS = {
+  airtable,
   asana,
   attio,
   bitbucket,

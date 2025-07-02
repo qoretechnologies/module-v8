@@ -157,6 +157,42 @@ type RootTranslation = {
 											}
 										}
 									}
+									subOption3: {
+										/**
+										 * S​u​b​ ​O​p​t​i​o​n​ ​3​ ​o​f​ ​o​p​t​i​o​n​ ​1
+										 */
+										displayName: string
+										/**
+										 * S​u​b​ ​O​p​t​i​o​n​ ​3​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * S​u​b​ ​O​p​t​i​o​n​ ​3​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
+										 */
+										longDesc: string
+										type: {
+											element_type: {
+												type: {
+													fields: {
+														subSubOption1: {
+															/**
+															 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1
+															 */
+															displayName: string
+															/**
+															 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
+															 */
+															shortDesc: string
+															/**
+															 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
+															 */
+															longDesc: string
+														}
+													}
+												}
+											}
+										}
+									}
 								}
 							}
 						}
@@ -6681,6 +6717,636 @@ type RootTranslation = {
 							shortDesc: string
 							/**
 							 * S​p​e​c​i​f​y​ ​t​h​e​ ​a​t​t​r​i​b​u​t​e​s​ ​a​n​d​ ​t​h​e​i​r​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​r​e​c​o​r​d​.​ ​T​h​e​ ​a​t​t​r​i​b​u​t​e​s​ ​m​u​s​t​ ​m​a​t​c​h​ ​t​h​e​ ​s​c​h​e​m​a​ ​o​f​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​o​b​j​e​c​t​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
+		Airtable: {
+			/**
+			 * A​i​r​t​a​b​l​e
+			 */
+			displayName: string
+			/**
+			 * C​l​o​u​d​-​b​a​s​e​d​ ​d​a​t​a​b​a​s​e​ ​a​n​d​ ​c​o​l​l​a​b​o​r​a​t​i​o​n​ ​p​l​a​t​f​o​r​m
+			 */
+			shortDesc: string
+			/**
+			 * A​i​r​t​a​b​l​e​ ​c​o​m​b​i​n​e​s​ ​t​h​e​ ​s​i​m​p​l​i​c​i​t​y​ ​o​f​ ​a​ ​s​p​r​e​a​d​s​h​e​e​t​ ​w​i​t​h​ ​t​h​e​ ​p​o​w​e​r​ ​o​f​ ​a​ ​d​a​t​a​b​a​s​e​.​ ​C​r​e​a​t​e​ ​a​n​d​ ​m​a​n​a​g​e​ ​b​a​s​e​s​,​ ​t​a​b​l​e​s​,​ ​a​n​d​ ​r​e​c​o​r​d​s​ ​w​i​t​h​ ​e​a​s​e​.​ ​P​e​r​f​e​c​t​ ​f​o​r​ ​p​r​o​j​e​c​t​ ​m​a​n​a​g​e​m​e​n​t​,​ ​C​R​M​,​ ​c​o​n​t​e​n​t​ ​p​l​a​n​n​i​n​g​,​ ​a​n​d​ ​t​e​a​m​ ​c​o​l​l​a​b​o​r​a​t​i​o​n​.
+			 */
+			longDesc: string
+			actions: {
+				list_records: {
+					/**
+					 * L​i​s​t​ ​R​e​c​o​r​d​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​r​e​c​o​r​d​s​ ​f​r​o​m​ ​a​n​ ​A​i​r​t​a​b​l​e​ ​t​a​b​l​e
+					 */
+					shortDesc: string
+					/**
+					 * L​i​s​t​ ​a​n​d​ ​f​i​l​t​e​r​ ​r​e​c​o​r​d​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​A​i​r​t​a​b​l​e​ ​t​a​b​l​e​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​s​o​r​t​i​n​g​,​ ​f​i​l​t​e​r​i​n​g​,​ ​p​a​g​i​n​a​t​i​o​n​,​ ​a​n​d​ ​f​i​e​l​d​ ​s​e​l​e​c​t​i​o​n
+					 */
+					longDesc: string
+					options: {
+						base_id: {
+							/**
+							 * B​a​s​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​A​i​r​t​a​b​l​e​ ​b​a​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​i​r​t​a​b​l​e​ ​b​a​s​e​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​t​a​b​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​q​u​e​r​y
+							 */
+							longDesc: string
+						}
+						table_id: {
+							/**
+							 * T​a​b​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​a​b​l​e​ ​t​o​ ​q​u​e​r​y
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​t​a​b​l​e​ ​w​i​t​h​i​n​ ​t​h​e​ ​b​a​s​e​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​r​e​c​o​r​d​s
+							 */
+							longDesc: string
+						}
+						fields: {
+							/**
+							 * F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​f​i​e​l​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​i​c​h​ ​f​i​e​l​d​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​a​l​l​ ​f​i​e​l​d​s​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d
+							 */
+							longDesc: string
+						}
+						page_size: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​m​a​n​y​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​p​e​r​ ​p​a​g​e​ ​(​m​a​x​i​m​u​m​ ​1​0​0​)
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * R​e​c​o​r​d​ ​o​f​f​s​e​t​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​e​ ​o​f​f​s​e​t​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​c​o​r​d​s
+							 */
+							longDesc: string
+						}
+						timezone: {
+							/**
+							 * T​i​m​e​z​o​n​e
+							 */
+							displayName: string
+							/**
+							 * T​i​m​e​z​o​n​e​ ​f​o​r​ ​d​a​t​e​ ​f​o​r​m​a​t​t​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​m​e​z​o​n​e​ ​t​o​ ​u​s​e​ ​w​h​e​n​ ​f​o​r​m​a​t​t​i​n​g​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​f​i​e​l​d​s​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e
+							 */
+							longDesc: string
+						}
+						user_locale: {
+							/**
+							 * U​s​e​r​ ​L​o​c​a​l​e
+							 */
+							displayName: string
+							/**
+							 * L​o​c​a​l​e​ ​f​o​r​ ​f​o​r​m​a​t​t​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​c​a​l​e​ ​t​o​ ​u​s​e​ ​f​o​r​ ​f​o​r​m​a​t​t​i​n​g​ ​n​u​m​b​e​r​s​,​ ​d​a​t​e​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​l​o​c​a​l​e​-​s​p​e​c​i​f​i​c​ ​d​a​t​a
+							 */
+							longDesc: string
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​c​o​n​f​i​g​u​r​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​r​e​c​o​r​d​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​c​o​r​d​s
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​o​r​d​e​r​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						cell_format: {
+							/**
+							 * C​e​l​l​ ​F​o​r​m​a​t
+							 */
+							displayName: string
+							/**
+							 * F​o​r​m​a​t​ ​f​o​r​ ​c​e​l​l​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​h​o​w​ ​c​e​l​l​ ​v​a​l​u​e​s​ ​s​h​o​u​l​d​ ​b​e​ ​f​o​r​m​a​t​t​e​d​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​n​f​i​g​u​r​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​f​i​l​t​e​r​i​n​g​ ​c​r​i​t​e​r​i​a​ ​t​o​ ​l​i​m​i​t​ ​w​h​i​c​h​ ​r​e​c​o​r​d​s​ ​a​r​e​ ​r​e​t​u​r​n​e​d
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​l​t​e​r​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​r​e​c​o​r​d​s
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * F​i​l​t​e​r​ ​V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * V​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​ ​w​h​e​n​ ​f​i​l​t​e​r​i​n​g​ ​r​e​c​o​r​d​s
+										 */
+										longDesc: string
+									}
+									type: {
+										/**
+										 * F​i​l​t​e​r​ ​T​y​p​e
+										 */
+										displayName: string
+										/**
+										 * T​y​p​e​ ​o​f​ ​f​i​l​t​e​r​ ​c​o​m​p​a​r​i​s​o​n
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​c​o​m​p​a​r​i​s​o​n​ ​t​o​ ​p​e​r​f​o​r​m​ ​w​h​e​n​ ​f​i​l​t​e​r​i​n​g
+										 */
+										longDesc: string
+									}
+									formula: {
+										/**
+										 * F​i​l​t​e​r​ ​F​o​r​m​u​l​a
+										 */
+										displayName: string
+										/**
+										 * C​u​s​t​o​m​ ​f​i​l​t​e​r​ ​f​o​r​m​u​l​a
+										 */
+										shortDesc: string
+										/**
+										 * A​ ​c​u​s​t​o​m​ ​A​i​r​t​a​b​l​e​ ​f​o​r​m​u​l​a​ ​t​o​ ​u​s​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​r​e​c​o​r​d​s
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						return_fields_by_field_id: {
+							/**
+							 * R​e​t​u​r​n​ ​F​i​e​l​d​s​ ​b​y​ ​F​i​e​l​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * R​e​t​u​r​n​ ​f​i​e​l​d​ ​I​D​s​ ​i​n​s​t​e​a​d​ ​o​f​ ​n​a​m​e​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​f​i​e​l​d​ ​d​a​t​a​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​ ​u​s​i​n​g​ ​f​i​e​l​d​ ​I​D​s​ ​i​n​s​t​e​a​d​ ​o​f​ ​f​i​e​l​d​ ​n​a​m​e​s
+							 */
+							longDesc: string
+						}
+						view: {
+							/**
+							 * V​i​e​w
+							 */
+							displayName: string
+							/**
+							 * T​a​b​l​e​ ​v​i​e​w​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​i​e​w​ ​f​r​o​m​ ​t​h​e​ ​t​a​b​l​e​ ​t​o​ ​a​p​p​l​y​ ​i​t​s​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_record: {
+					/**
+					 * G​e​t​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​A​i​r​t​a​b​l​e
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​a​ ​s​i​n​g​l​e​ ​r​e​c​o​r​d​ ​b​y​ ​i​t​s​ ​I​D​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​A​i​r​t​a​b​l​e​ ​t​a​b​l​e
+					 */
+					longDesc: string
+					options: {
+						base_id: {
+							/**
+							 * B​a​s​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​A​i​r​t​a​b​l​e​ ​b​a​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​i​r​t​a​b​l​e​ ​b​a​s​e​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​t​a​b​l​e​ ​w​i​t​h​ ​t​h​e​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+						table_id: {
+							/**
+							 * T​a​b​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​a​b​l​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​t​a​b​l​e​ ​w​i​t​h​i​n​ ​t​h​e​ ​b​a​s​e​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​r​e​c​o​r​d
+							 */
+							longDesc: string
+						}
+						record_id: {
+							/**
+							 * R​e​c​o​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_record: {
+					/**
+					 * C​r​e​a​t​e​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​i​n​ ​A​i​r​t​a​b​l​e
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​A​i​r​t​a​b​l​e​ ​t​a​b​l​e​ ​w​i​t​h​ ​t​h​e​ ​p​r​o​v​i​d​e​d​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+					 */
+					longDesc: string
+					options: {
+						base_id: {
+							/**
+							 * B​a​s​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​A​i​r​t​a​b​l​e​ ​b​a​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​i​r​t​a​b​l​e​ ​b​a​s​e​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​n​e​w​ ​r​e​c​o​r​d
+							 */
+							longDesc: string
+						}
+						table_id: {
+							/**
+							 * T​a​b​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​a​b​l​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​t​a​b​l​e​ ​w​i​t​h​i​n​ ​t​h​e​ ​b​a​s​e​ ​w​h​e​r​e​ ​t​h​e​ ​r​e​c​o​r​d​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_record: {
+					/**
+					 * D​e​l​e​t​e​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​A​i​r​t​a​b​l​e
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​a​n​ ​A​i​r​t​a​b​l​e​ ​t​a​b​l​e
+					 */
+					longDesc: string
+					options: {
+						base_id: {
+							/**
+							 * B​a​s​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​A​i​r​t​a​b​l​e​ ​b​a​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​i​r​t​a​b​l​e​ ​b​a​s​e​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​t​a​b​l​e​ ​w​i​t​h​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							longDesc: string
+						}
+						table_id: {
+							/**
+							 * T​a​b​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​a​b​l​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​t​a​b​l​e​ ​w​i​t​h​i​n​ ​t​h​e​ ​b​a​s​e​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							longDesc: string
+						}
+						record_id: {
+							/**
+							 * R​e​c​o​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_bases: {
+					/**
+					 * L​i​s​t​ ​B​a​s​e​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​l​l​ ​a​c​c​e​s​s​i​b​l​e​ ​A​i​r​t​a​b​l​e​ ​b​a​s​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​A​i​r​t​a​b​l​e​ ​b​a​s​e​s​ ​t​h​a​t​ ​a​r​e​ ​a​c​c​e​s​s​i​b​l​e​ ​w​i​t​h​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​a​u​t​h​e​n​t​i​c​a​t​i​o​n
+					 */
+					longDesc: string
+					options: {
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​o​f​f​s​e​t
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​e​ ​o​f​f​s​e​t​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​b​a​s​e​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_tables: {
+					/**
+					 * L​i​s​t​ ​T​a​b​l​e​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​t​a​b​l​e​s​ ​i​n​ ​a​n​ ​A​i​r​t​a​b​l​e​ ​b​a​s​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​t​a​b​l​e​s​ ​w​i​t​h​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​A​i​r​t​a​b​l​e​ ​b​a​s​e
+					 */
+					longDesc: string
+					options: {
+						base_id: {
+							/**
+							 * B​a​s​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​A​i​r​t​a​b​l​e​ ​b​a​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​i​r​t​a​b​l​e​ ​b​a​s​e​ ​f​o​r​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​l​i​s​t​ ​a​l​l​ ​a​v​a​i​l​a​b​l​e​ ​t​a​b​l​e​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_record: {
+					/**
+					 * N​e​w​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​A​i​r​t​a​b​l​e
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​ ​a​n​ ​A​i​r​t​a​b​l​e​ ​t​a​b​l​e​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​r​e​c​o​r​d​s​ ​a​n​d​ ​t​r​i​g​g​e​r​ ​a​u​t​o​m​a​t​i​o​n​ ​w​h​e​n​ ​n​e​w​ ​r​e​c​o​r​d​s​ ​a​r​e​ ​a​d​d​e​d
+					 */
+					longDesc: string
+					options: {
+						base_id: {
+							/**
+							 * B​a​s​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​A​i​r​t​a​b​l​e​ ​b​a​s​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​i​r​t​a​b​l​e​ ​b​a​s​e​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​t​a​b​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​r​e​c​o​r​d​s
+							 */
+							longDesc: string
+						}
+						table_id: {
+							/**
+							 * T​a​b​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​a​b​l​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​t​a​b​l​e​ ​w​i​t​h​i​n​ ​t​h​e​ ​b​a​s​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​r​e​c​o​r​d​ ​c​r​e​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						view: {
+							/**
+							 * V​i​e​w
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​t​a​b​l​e​ ​v​i​e​w​ ​t​o​ ​f​i​l​t​e​r​ ​r​e​c​o​r​d​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​i​e​w​ ​f​r​o​m​ ​t​h​e​ ​t​a​b​l​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​o​n​l​y​ ​r​e​c​o​r​d​s​ ​t​h​a​t​ ​m​a​t​c​h​ ​t​h​e​ ​v​i​e​w​'​s​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​c​r​i​t​e​r​i​a
+							 */
+							longDesc: string
+						}
+					}
+				}
+				updated_record: {
+					/**
+					 * U​p​d​a​t​e​d​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​r​e​c​o​r​d​ ​i​s​ ​u​p​d​a​t​e​d​ ​i​n​ ​A​i​r​t​a​b​l​e
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​ ​a​n​ ​A​i​r​t​a​b​l​e​ ​t​a​b​l​e​ ​f​o​r​ ​r​e​c​o​r​d​ ​m​o​d​i​f​i​c​a​t​i​o​n​s​ ​a​n​d​ ​t​r​i​g​g​e​r​ ​a​u​t​o​m​a​t​i​o​n​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​r​e​c​o​r​d​s​ ​a​r​e​ ​u​p​d​a​t​e​d
+					 */
+					longDesc: string
+					options: {
+						base_id: {
+							/**
+							 * B​a​s​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​A​i​r​t​a​b​l​e​ ​b​a​s​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​i​r​t​a​b​l​e​ ​b​a​s​e​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​t​a​b​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​r​e​c​o​r​d​ ​u​p​d​a​t​e​s
+							 */
+							longDesc: string
+						}
+						table_id: {
+							/**
+							 * T​a​b​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​a​b​l​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​t​a​b​l​e​ ​w​i​t​h​i​n​ ​t​h​e​ ​b​a​s​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​r​e​c​o​r​d​ ​m​o​d​i​f​i​c​a​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+						view: {
+							/**
+							 * V​i​e​w
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​t​a​b​l​e​ ​v​i​e​w​ ​t​o​ ​f​i​l​t​e​r​ ​r​e​c​o​r​d​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​i​e​w​ ​f​r​o​m​ ​t​h​e​ ​t​a​b​l​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​o​n​l​y​ ​r​e​c​o​r​d​s​ ​t​h​a​t​ ​m​a​t​c​h​ ​t​h​e​ ​v​i​e​w​'​s​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​c​r​i​t​e​r​i​a
 							 */
 							longDesc: string
 						}
@@ -17939,6 +18605,2394 @@ type RootTranslation = {
 			 * T​y​p​e​f​o​r​m​ ​i​s​ ​a​ ​v​e​r​s​a​t​i​l​e​ ​f​o​r​m​ ​b​u​i​l​d​e​r​ ​t​h​a​t​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​c​r​e​a​t​e​ ​e​n​g​a​g​i​n​g​,​ ​c​o​n​v​e​r​s​a​t​i​o​n​a​l​ ​f​o​r​m​s​,​ ​s​u​r​v​e​y​s​,​ ​q​u​i​z​z​e​s​,​ ​a​n​d​ ​p​o​l​l​s​.​ ​W​i​t​h​ ​i​t​s​ ​i​n​t​u​i​t​i​v​e​ ​i​n​t​e​r​f​a​c​e​ ​a​n​d​ ​p​o​w​e​r​f​u​l​ ​f​e​a​t​u​r​e​s​,​ ​y​o​u​ ​c​a​n​ ​c​o​l​l​e​c​t​ ​r​e​s​p​o​n​s​e​s​,​ ​a​n​a​l​y​z​e​ ​d​a​t​a​,​ ​a​n​d​ ​i​n​t​e​g​r​a​t​e​ ​w​i​t​h​ ​o​t​h​e​r​ ​t​o​o​l​s​ ​t​o​ ​s​t​r​e​a​m​l​i​n​e​ ​y​o​u​r​ ​w​o​r​k​f​l​o​w​.​ ​P​e​r​f​e​c​t​ ​f​o​r​ ​l​e​a​d​ ​g​e​n​e​r​a​t​i​o​n​,​ ​c​u​s​t​o​m​e​r​ ​f​e​e​d​b​a​c​k​,​ ​e​v​e​n​t​ ​r​e​g​i​s​t​r​a​t​i​o​n​,​ ​a​n​d​ ​m​a​r​k​e​t​ ​r​e​s​e​a​r​c​h​.
 			 */
 			longDesc: string
+			triggers: {
+				new_form_response: {
+					/**
+					 * N​e​w​ ​F​o​r​m​ ​R​e​s​p​o​n​s​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​e​s​p​o​n​s​e​ ​i​s​ ​s​u​b​m​i​t​t​e​d​ ​t​o​ ​a​ ​T​y​p​e​f​o​r​m​ ​f​o​r​m​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​e​v​e​r​ ​s​o​m​e​o​n​e​ ​s​u​b​m​i​t​s​ ​a​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​y​o​u​r​ ​T​y​p​e​f​o​r​m​.​ ​I​t​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​l​e​t​e​ ​r​e​s​p​o​n​s​e​ ​d​a​t​a​ ​i​n​c​l​u​d​i​n​g​ ​a​l​l​ ​a​n​s​w​e​r​s​,​ ​f​o​r​m​ ​d​e​f​i​n​i​t​i​o​n​,​ ​c​a​l​c​u​l​a​t​e​d​ ​s​c​o​r​e​s​,​ ​a​n​d​ ​m​e​t​a​d​a​t​a​.​ ​P​e​r​f​e​c​t​ ​f​o​r​ ​p​r​o​c​e​s​s​i​n​g​ ​f​o​r​m​ ​s​u​b​m​i​s​s​i​o​n​s​,​ ​u​p​d​a​t​i​n​g​ ​d​a​t​a​b​a​s​e​s​,​ ​s​e​n​d​i​n​g​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​,​ ​o​r​ ​t​r​i​g​g​e​r​i​n​g​ ​f​o​l​l​o​w​-​u​p​ ​w​o​r​k​f​l​o​w​s​ ​b​a​s​e​d​ ​o​n​ ​u​s​e​r​ ​r​e​s​p​o​n​s​e​s​.
+					 */
+					longDesc: string
+					options: {
+						form_id: {
+							/**
+							 * F​o​r​m
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​T​y​p​e​f​o​r​m​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​r​e​s​p​o​n​s​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​T​y​p​e​f​o​r​m​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​s​u​b​m​i​s​s​i​o​n​s​.​ ​T​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​f​i​r​e​ ​e​v​e​r​y​ ​t​i​m​e​ ​s​o​m​e​o​n​e​ ​c​o​m​p​l​e​t​e​s​ ​a​n​d​ ​s​u​b​m​i​t​s​ ​t​h​i​s​ ​f​o​r​m​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			actions: {
+				list_workspaces: {
+					/**
+					 * L​i​s​t​ ​W​o​r​k​s​p​a​c​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​w​o​r​k​s​p​a​c​e​s​ ​i​n​ ​y​o​u​r​ ​T​y​p​e​f​o​r​m​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​l​l​ ​w​o​r​k​s​p​a​c​e​s​ ​a​v​a​i​l​a​b​l​e​ ​i​n​ ​y​o​u​r​ ​T​y​p​e​f​o​r​m​ ​a​c​c​o​u​n​t​ ​w​i​t​h​ ​p​a​g​i​n​a​t​i​o​n​ ​a​n​d​ ​s​e​a​r​c​h​ ​c​a​p​a​b​i​l​i​t​i​e​s​.​ ​W​o​r​k​s​p​a​c​e​s​ ​h​e​l​p​ ​o​r​g​a​n​i​z​e​ ​y​o​u​r​ ​f​o​r​m​s​ ​a​n​d​ ​c​o​l​l​a​b​o​r​a​t​e​ ​w​i​t​h​ ​t​e​a​m​ ​m​e​m​b​e​r​s​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​g​e​t​ ​w​o​r​k​s​p​a​c​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​f​o​r​m​ ​c​o​u​n​t​s​ ​a​n​d​ ​s​h​a​r​i​n​g​ ​s​t​a​t​u​s​.
+					 */
+					longDesc: string
+					options: {
+						search: {
+							/**
+							 * S​e​a​r​c​h
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​t​e​r​m​ ​t​o​ ​f​i​l​t​e​r​ ​w​o​r​k​s​p​a​c​e​s​ ​b​y​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​s​e​a​r​c​h​ ​t​e​r​m​ ​t​o​ ​f​i​l​t​e​r​ ​w​o​r​k​s​p​a​c​e​s​ ​b​y​ ​t​h​e​i​r​ ​n​a​m​e​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​a​l​l​ ​w​o​r​k​s​p​a​c​e​s​.
+							 */
+							longDesc: string
+						}
+						page: {
+							/**
+							 * P​a​g​e
+							 */
+							displayName: string
+							/**
+							 * P​a​g​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​a​g​e​ ​n​u​m​b​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​U​s​e​ ​t​h​i​s​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​w​h​e​n​ ​y​o​u​ ​h​a​v​e​ ​m​a​n​y​ ​w​o​r​k​s​p​a​c​e​s​.
+							 */
+							longDesc: string
+						}
+						page_size: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​w​o​r​k​s​p​a​c​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​w​o​r​k​s​p​a​c​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​.​ ​M​a​x​i​m​u​m​ ​i​s​ ​2​0​0​,​ ​d​e​f​a​u​l​t​ ​i​s​ ​1​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_image: {
+					/**
+					 * C​r​e​a​t​e​ ​I​m​a​g​e
+					 */
+					displayName: string
+					/**
+					 * U​p​l​o​a​d​ ​a​n​ ​i​m​a​g​e​ ​t​o​ ​y​o​u​r​ ​T​y​p​e​f​o​r​m​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​u​s​e​ ​i​n​ ​f​o​r​m​s​.
+					 */
+					shortDesc: string
+					/**
+					 * U​p​l​o​a​d​s​ ​a​n​ ​i​m​a​g​e​ ​t​o​ ​y​o​u​r​ ​T​y​p​e​f​o​r​m​ ​a​c​c​o​u​n​t​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​u​s​e​d​ ​i​n​ ​y​o​u​r​ ​f​o​r​m​s​ ​f​o​r​ ​p​i​c​t​u​r​e​ ​c​h​o​i​c​e​ ​q​u​e​s​t​i​o​n​s​,​ ​f​o​r​m​ ​b​a​c​k​g​r​o​u​n​d​s​,​ ​o​r​ ​o​t​h​e​r​ ​v​i​s​u​a​l​ ​e​l​e​m​e​n​t​s​.​ ​Y​o​u​ ​c​a​n​ ​u​p​l​o​a​d​ ​e​i​t​h​e​r​ ​b​y​ ​p​r​o​v​i​d​i​n​g​ ​a​ ​f​i​l​e​ ​o​r​ ​a​ ​U​R​L​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​i​m​a​g​e​.
+					 */
+					longDesc: string
+					options: {
+						url: {
+							/**
+							 * I​m​a​g​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * U​R​L​ ​o​f​ ​t​h​e​ ​i​m​a​g​e​ ​t​o​ ​u​p​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​U​R​L​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​i​m​a​g​e​ ​t​o​ ​u​p​l​o​a​d​ ​t​o​ ​y​o​u​r​ ​T​y​p​e​f​o​r​m​ ​a​c​c​o​u​n​t​.​ ​U​s​e​ ​t​h​i​s​ ​i​f​ ​y​o​u​ ​h​a​v​e​ ​a​n​ ​i​m​a​g​e​ ​h​o​s​t​e​d​ ​e​l​s​e​w​h​e​r​e​.
+							 */
+							longDesc: string
+						}
+						file_name: {
+							/**
+							 * F​i​l​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​u​p​l​o​a​d​e​d​ ​i​m​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​c​u​s​t​o​m​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​u​p​l​o​a​d​e​d​ ​i​m​a​g​e​.​ ​I​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​,​ ​t​h​e​ ​o​r​i​g​i​n​a​l​ ​f​i​l​e​n​a​m​e​ ​w​i​l​l​ ​b​e​ ​u​s​e​d​.
+							 */
+							longDesc: string
+						}
+						image: {
+							/**
+							 * I​m​a​g​e​ ​F​i​l​e
+							 */
+							displayName: string
+							/**
+							 * I​m​a​g​e​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​i​m​a​g​e​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d​ ​d​i​r​e​c​t​l​y​ ​t​o​ ​y​o​u​r​ ​T​y​p​e​f​o​r​m​ ​a​c​c​o​u​n​t​.​ ​S​u​p​p​o​r​t​e​d​ ​f​o​r​m​a​t​s​ ​i​n​c​l​u​d​e​ ​J​P​G​,​ ​P​N​G​,​ ​a​n​d​ ​G​I​F​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_form: {
+					/**
+					 * D​e​l​e​t​e​ ​F​o​r​m
+					 */
+					displayName: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​a​ ​T​y​p​e​f​o​r​m​ ​f​r​o​m​ ​y​o​u​r​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​s​ ​a​ ​T​y​p​e​f​o​r​m​ ​f​r​o​m​ ​y​o​u​r​ ​a​c​c​o​u​n​t​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​,​ ​a​n​d​ ​a​l​l​ ​a​s​s​o​c​i​a​t​e​d​ ​r​e​s​p​o​n​s​e​s​ ​w​i​l​l​ ​a​l​s​o​ ​b​e​ ​d​e​l​e​t​e​d​.​ ​U​s​e​ ​w​i​t​h​ ​c​a​u​t​i​o​n​ ​a​s​ ​t​h​i​s​ ​w​i​l​l​ ​r​e​m​o​v​e​ ​t​h​e​ ​f​o​r​m​ ​a​n​d​ ​a​l​l​ ​i​t​s​ ​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						form_id: {
+							/**
+							 * F​o​r​m
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​o​r​m​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​T​y​p​e​f​o​r​m​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​p​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​f​r​o​m​ ​y​o​u​r​ ​a​c​c​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_image: {
+					/**
+					 * D​e​l​e​t​e​ ​I​m​a​g​e
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​n​ ​i​m​a​g​e​ ​f​r​o​m​ ​y​o​u​r​ ​T​y​p​e​f​o​r​m​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​n​ ​i​m​a​g​e​ ​f​r​o​m​ ​y​o​u​r​ ​T​y​p​e​f​o​r​m​ ​a​c​c​o​u​n​t​.​ ​O​n​c​e​ ​d​e​l​e​t​e​d​,​ ​t​h​e​ ​i​m​a​g​e​ ​w​i​l​l​ ​n​o​ ​l​o​n​g​e​r​ ​b​e​ ​a​v​a​i​l​a​b​l​e​ ​f​o​r​ ​u​s​e​ ​i​n​ ​a​n​y​ ​f​o​r​m​s​.​ ​M​a​k​e​ ​s​u​r​e​ ​t​h​e​ ​i​m​a​g​e​ ​i​s​ ​n​o​t​ ​c​u​r​r​e​n​t​l​y​ ​b​e​i​n​g​ ​u​s​e​d​ ​i​n​ ​a​n​y​ ​a​c​t​i​v​e​ ​f​o​r​m​s​ ​b​e​f​o​r​e​ ​d​e​l​e​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						image_id: {
+							/**
+							 * I​m​a​g​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​i​m​a​g​e​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​i​m​a​g​e​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​ ​f​r​o​m​ ​y​o​u​r​ ​T​y​p​e​f​o​r​m​ ​a​c​c​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_form: {
+					/**
+					 * G​e​t​ ​F​o​r​m
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​T​y​p​e​f​o​r​m​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​c​o​m​p​l​e​t​e​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​T​y​p​e​f​o​r​m​ ​i​n​c​l​u​d​i​n​g​ ​a​l​l​ ​f​i​e​l​d​s​,​ ​s​e​t​t​i​n​g​s​,​ ​t​h​a​n​k​ ​y​o​u​ ​s​c​r​e​e​n​s​,​ ​a​n​d​ ​m​e​t​a​d​a​t​a​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​g​e​t​ ​t​h​e​ ​f​u​l​l​ ​f​o​r​m​ ​d​e​f​i​n​i​t​i​o​n​ ​f​o​r​ ​a​n​a​l​y​s​i​s​,​ ​b​a​c​k​u​p​,​ ​o​r​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​u​r​p​o​s​e​s​.
+					 */
+					longDesc: string
+					options: {
+						form_id: {
+							/**
+							 * F​o​r​m
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​o​r​m​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​T​y​p​e​f​o​r​m​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_forms: {
+					/**
+					 * L​i​s​t​ ​F​o​r​m​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​f​o​r​m​s​ ​i​n​ ​y​o​u​r​ ​T​y​p​e​f​o​r​m​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​l​l​ ​f​o​r​m​s​ ​i​n​ ​y​o​u​r​ ​T​y​p​e​f​o​r​m​ ​a​c​c​o​u​n​t​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​,​ ​s​o​r​t​i​n​g​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​ ​o​p​t​i​o​n​s​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​g​e​t​ ​a​n​ ​o​v​e​r​v​i​e​w​ ​o​f​ ​y​o​u​r​ ​f​o​r​m​s​,​ ​f​i​n​d​ ​s​p​e​c​i​f​i​c​ ​f​o​r​m​s​ ​b​y​ ​s​e​a​r​c​h​ ​c​r​i​t​e​r​i​a​,​ ​o​r​ ​i​n​t​e​g​r​a​t​e​ ​w​i​t​h​ ​o​t​h​e​r​ ​s​y​s​t​e​m​s​.
+					 */
+					longDesc: string
+					options: {
+						search: {
+							/**
+							 * S​e​a​r​c​h
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​t​e​r​m​ ​t​o​ ​f​i​l​t​e​r​ ​f​o​r​m​s​ ​b​y​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​s​e​a​r​c​h​ ​t​e​r​m​ ​t​o​ ​f​i​l​t​e​r​ ​f​o​r​m​s​ ​b​y​ ​t​h​e​i​r​ ​t​i​t​l​e​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​a​l​l​ ​f​o​r​m​s​.
+							 */
+							longDesc: string
+						}
+						page: {
+							/**
+							 * P​a​g​e
+							 */
+							displayName: string
+							/**
+							 * P​a​g​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​a​g​e​ ​n​u​m​b​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​U​s​e​ ​t​h​i​s​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​w​h​e​n​ ​y​o​u​ ​h​a​v​e​ ​m​a​n​y​ ​f​o​r​m​s​.
+							 */
+							longDesc: string
+						}
+						page_size: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​f​o​r​m​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​f​o​r​m​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​.​ ​M​a​x​i​m​u​m​ ​i​s​ ​2​0​0​,​ ​d​e​f​a​u​l​t​ ​i​s​ ​1​0​.
+							 */
+							longDesc: string
+						}
+						workspace_id: {
+							/**
+							 * W​o​r​k​s​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​f​o​r​m​s​ ​b​y​ ​w​o​r​k​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​w​o​r​k​s​p​a​c​e​ ​I​D​ ​t​o​ ​f​i​l​t​e​r​ ​f​o​r​m​s​ ​t​h​a​t​ ​b​e​l​o​n​g​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​w​o​r​k​s​p​a​c​e​.
+							 */
+							longDesc: string
+						}
+						order: {
+							/**
+							 * S​o​r​t​ ​O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​f​o​r​m​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​i​c​h​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​f​o​r​m​s​ ​b​y​.
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				list_images: {
+					/**
+					 * L​i​s​t​ ​I​m​a​g​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​i​m​a​g​e​s​ ​i​n​ ​y​o​u​r​ ​T​y​p​e​f​o​r​m​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​l​l​ ​i​m​a​g​e​s​ ​t​h​a​t​ ​h​a​v​e​ ​b​e​e​n​ ​u​p​l​o​a​d​e​d​ ​t​o​ ​y​o​u​r​ ​T​y​p​e​f​o​r​m​ ​a​c​c​o​u​n​t​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​s​e​e​ ​w​h​a​t​ ​i​m​a​g​e​s​ ​a​r​e​ ​a​v​a​i​l​a​b​l​e​ ​f​o​r​ ​u​s​e​ ​i​n​ ​y​o​u​r​ ​f​o​r​m​s​,​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​i​m​a​g​e​ ​l​i​b​r​a​r​y​,​ ​o​r​ ​g​e​t​ ​i​m​a​g​e​ ​U​R​L​s​ ​f​o​r​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​u​r​p​o​s​e​s​.
+					 */
+					longDesc: string
+				}
+				list_responses: {
+					/**
+					 * L​i​s​t​ ​R​e​s​p​o​n​s​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​r​e​s​p​o​n​s​e​s​ ​s​u​b​m​i​t​t​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​T​y​p​e​f​o​r​m​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​l​l​ ​r​e​s​p​o​n​s​e​s​ ​s​u​b​m​i​t​t​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​T​y​p​e​f​o​r​m​ ​w​i​t​h​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​o​p​t​i​o​n​s​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​a​n​a​l​y​z​e​ ​f​o​r​m​ ​s​u​b​m​i​s​s​i​o​n​s​,​ ​e​x​p​o​r​t​ ​d​a​t​a​,​ ​o​r​ ​i​n​t​e​g​r​a​t​e​ ​r​e​s​p​o​n​s​e​s​ ​w​i​t​h​ ​o​t​h​e​r​ ​s​y​s​t​e​m​s​.
+					 */
+					longDesc: string
+					options: {
+						form_id: {
+							/**
+							 * F​o​r​m
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​o​r​m​ ​t​o​ ​g​e​t​ ​r​e​s​p​o​n​s​e​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​T​y​p​e​f​o​r​m​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​r​e​s​p​o​n​s​e​s​ ​f​r​o​m​.
+							 */
+							longDesc: string
+						}
+						page_size: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​r​e​s​p​o​n​s​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​p​o​n​s​e​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​M​a​x​i​m​u​m​ ​i​s​ ​1​0​0​0​,​ ​d​e​f​a​u​l​t​ ​i​s​ ​2​5​.
+							 */
+							longDesc: string
+						}
+						since: {
+							/**
+							 * S​i​n​c​e​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * O​n​l​y​ ​i​n​c​l​u​d​e​ ​r​e​s​p​o​n​s​e​s​ ​s​u​b​m​i​t​t​e​d​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​r​e​s​p​o​n​s​e​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​t​h​o​s​e​ ​s​u​b​m​i​t​t​e​d​ ​a​f​t​e​r​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						until: {
+							/**
+							 * U​n​t​i​l​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * O​n​l​y​ ​i​n​c​l​u​d​e​ ​r​e​s​p​o​n​s​e​s​ ​s​u​b​m​i​t​t​e​d​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​r​e​s​p​o​n​s​e​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​t​h​o​s​e​ ​s​u​b​m​i​t​t​e​d​ ​b​e​f​o​r​e​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						after: {
+							/**
+							 * A​f​t​e​r​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​t​o​k​e​n​ ​f​o​r​ ​r​e​s​u​l​t​s​ ​a​f​t​e​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​r​e​s​p​o​n​s​e
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​i​s​ ​t​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​t​o​ ​g​e​t​ ​r​e​s​p​o​n​s​e​s​ ​t​h​a​t​ ​c​o​m​e​ ​a​f​t​e​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​r​e​s​p​o​n​s​e​.
+							 */
+							longDesc: string
+						}
+						before: {
+							/**
+							 * B​e​f​o​r​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​t​o​k​e​n​ ​f​o​r​ ​r​e​s​u​l​t​s​ ​b​e​f​o​r​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​r​e​s​p​o​n​s​e
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​i​s​ ​t​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​t​o​ ​g​e​t​ ​r​e​s​p​o​n​s​e​s​ ​t​h​a​t​ ​c​o​m​e​ ​b​e​f​o​r​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​r​e​s​p​o​n​s​e​.
+							 */
+							longDesc: string
+						}
+						included_response_ids: {
+							/**
+							 * I​n​c​l​u​d​e​ ​R​e​s​p​o​n​s​e​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​r​e​s​p​o​n​s​e​ ​I​D​s​ ​t​o​ ​i​n​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​s​p​e​c​i​f​i​c​ ​r​e​s​p​o​n​s​e​ ​I​D​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​r​e​s​u​l​t​s​.​ ​O​n​l​y​ ​t​h​e​s​e​ ​r​e​s​p​o​n​s​e​s​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+						excluded_response_ids: {
+							/**
+							 * E​x​c​l​u​d​e​ ​R​e​s​p​o​n​s​e​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​r​e​s​p​o​n​s​e​ ​I​D​s​ ​t​o​ ​e​x​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​s​p​e​c​i​f​i​c​ ​r​e​s​p​o​n​s​e​ ​I​D​s​ ​t​o​ ​e​x​c​l​u​d​e​ ​f​r​o​m​ ​t​h​e​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						response_type: {
+							/**
+							 * R​e​s​p​o​n​s​e​ ​T​y​p​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​r​e​s​p​o​n​s​e​ ​c​o​m​p​l​e​t​i​o​n​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​r​e​s​p​o​n​s​e​s​ ​b​y​ ​t​h​e​i​r​ ​c​o​m​p​l​e​t​i​o​n​ ​s​t​a​t​u​s​ ​(​s​t​a​r​t​e​d​,​ ​p​a​r​t​i​a​l​,​ ​o​r​ ​c​o​m​p​l​e​t​e​d​)​.
+							 */
+							longDesc: string
+						}
+						completed: {
+							/**
+							 * C​o​m​p​l​e​t​e​d​ ​O​n​l​y
+							 */
+							displayName: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​c​o​m​p​l​e​t​e​d​ ​r​e​s​p​o​n​s​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​t​r​u​e​ ​t​o​ ​o​n​l​y​ ​r​e​t​u​r​n​ ​c​o​m​p​l​e​t​e​d​ ​r​e​s​p​o​n​s​e​s​,​ ​f​a​l​s​e​ ​f​o​r​ ​i​n​c​o​m​p​l​e​t​e​ ​r​e​s​p​o​n​s​e​s​.
+							 */
+							longDesc: string
+						}
+						order: {
+							/**
+							 * S​o​r​t​ ​O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​r​e​s​p​o​n​s​e​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​i​c​h​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​p​o​n​s​e​s​ ​b​y​.
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						query: {
+							/**
+							 * Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * A​d​v​a​n​c​e​d​ ​q​u​e​r​y​ ​t​o​ ​f​i​l​t​e​r​ ​r​e​s​p​o​n​s​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​d​v​a​n​c​e​d​ ​q​u​e​r​y​ ​s​t​r​i​n​g​ ​t​o​ ​f​i​l​t​e​r​ ​r​e​s​p​o​n​s​e​s​ ​b​a​s​e​d​ ​o​n​ ​a​n​s​w​e​r​ ​v​a​l​u​e​s​.
+							 */
+							longDesc: string
+						}
+						fields: {
+							/**
+							 * I​n​c​l​u​d​e​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​f​i​e​l​d​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​r​e​s​p​o​n​s​e​s
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​I​D​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​ ​d​a​t​a​.
+							 */
+							longDesc: string
+						}
+						answered_fields: {
+							/**
+							 * A​n​s​w​e​r​e​d​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * O​n​l​y​ ​i​n​c​l​u​d​e​ ​r​e​s​p​o​n​s​e​s​ ​t​h​a​t​ ​a​n​s​w​e​r​e​d​ ​t​h​e​s​e​ ​f​i​e​l​d​s
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​f​i​e​l​d​ ​I​D​s​ ​t​h​a​t​ ​m​u​s​t​ ​h​a​v​e​ ​b​e​e​n​ ​a​n​s​w​e​r​e​d​ ​f​o​r​ ​a​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​b​e​ ​i​n​c​l​u​d​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_form: {
+					/**
+					 * C​r​e​a​t​e​ ​F​o​r​m
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​T​y​p​e​f​o​r​m​ ​w​i​t​h​ ​f​i​e​l​d​s​,​ ​l​o​g​i​c​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​s​e​t​t​i​n​g​s​.
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​n​e​w​ ​T​y​p​e​f​o​r​m​ ​w​i​t​h​ ​c​o​m​p​l​e​t​e​ ​c​u​s​t​o​m​i​z​a​t​i​o​n​ ​o​p​t​i​o​n​s​ ​i​n​c​l​u​d​i​n​g​ ​f​i​e​l​d​s​,​ ​w​e​l​c​o​m​e​ ​s​c​r​e​e​n​s​,​ ​t​h​a​n​k​ ​y​o​u​ ​s​c​r​e​e​n​s​,​ ​c​o​n​d​i​t​i​o​n​a​l​ ​l​o​g​i​c​,​ ​s​c​o​r​i​n​g​,​ ​a​n​d​ ​a​d​v​a​n​c​e​d​ ​s​e​t​t​i​n​g​s​.​ ​P​e​r​f​e​c​t​ ​f​o​r​ ​b​u​i​l​d​i​n​g​ ​s​u​r​v​e​y​s​,​ ​q​u​i​z​z​e​s​,​ ​c​o​n​t​a​c​t​ ​f​o​r​m​s​,​ ​o​r​ ​a​n​y​ ​i​n​t​e​r​a​c​t​i​v​e​ ​f​o​r​m​ ​w​i​t​h​ ​c​o​m​p​l​e​x​ ​b​r​a​n​c​h​i​n​g​ ​l​o​g​i​c​ ​a​n​d​ ​c​u​s​t​o​m​ ​s​t​y​l​i​n​g​.
+					 */
+					longDesc: string
+					options: {
+						title: {
+							/**
+							 * F​o​r​m​ ​T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​o​f​ ​y​o​u​r​ ​n​e​w​ ​f​o​r​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​i​n​ ​t​i​t​l​e​ ​t​h​a​t​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​a​t​ ​t​h​e​ ​t​o​p​ ​o​f​ ​y​o​u​r​ ​f​o​r​m​ ​a​n​d​ ​i​n​ ​y​o​u​r​ ​f​o​r​m​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+						fields: {
+							/**
+							 * F​o​r​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​q​u​e​s​t​i​o​n​s​ ​a​n​d​ ​i​n​p​u​t​ ​f​i​e​l​d​s​ ​f​o​r​ ​y​o​u​r​ ​f​o​r​m
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​ ​q​u​e​s​t​i​o​n​s​ ​a​n​d​ ​i​n​p​u​t​ ​f​i​e​l​d​s​ ​t​o​ ​y​o​u​r​ ​f​o​r​m​.​ ​E​a​c​h​ ​f​i​e​l​d​ ​c​a​n​ ​b​e​ ​c​u​s​t​o​m​i​z​e​d​ ​w​i​t​h​ ​d​i​f​f​e​r​e​n​t​ ​t​y​p​e​s​,​ ​p​r​o​p​e​r​t​i​e​s​,​ ​v​a​l​i​d​a​t​i​o​n​s​,​ ​a​n​d​ ​s​c​o​r​i​n​g​ ​o​p​t​i​o​n​s​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											ref: {
+												/**
+												 * F​i​e​l​d​ ​R​e​f​e​r​e​n​c​e
+												 */
+												displayName: string
+												/**
+												 * U​n​i​q​u​e​ ​r​e​f​e​r​e​n​c​e​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d
+												 */
+												shortDesc: string
+												/**
+												 * O​p​t​i​o​n​a​l​ ​u​n​i​q​u​e​ ​r​e​f​e​r​e​n​c​e​ ​I​D​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​u​s​e​d​ ​i​n​ ​l​o​g​i​c​ ​a​n​d​ ​i​n​t​e​g​r​a​t​i​o​n​s​.
+												 */
+												longDesc: string
+											}
+											title: {
+												/**
+												 * Q​u​e​s​t​i​o​n​ ​T​i​t​l​e
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​q​u​e​s​t​i​o​n​ ​o​r​ ​p​r​o​m​p​t​ ​t​e​x​t
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​m​a​i​n​ ​q​u​e​s​t​i​o​n​ ​t​e​x​t​ ​t​h​a​t​ ​u​s​e​r​s​ ​w​i​l​l​ ​s​e​e​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d​.
+												 */
+												longDesc: string
+											}
+											type: {
+												/**
+												 * F​i​e​l​d​ ​T​y​p​e
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​t​y​p​e​ ​o​f​ ​i​n​p​u​t​ ​f​i​e​l​d
+												 */
+												shortDesc: string
+												/**
+												 * C​h​o​o​s​e​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​i​n​p​u​t​ ​f​i​e​l​d​ ​(​t​e​x​t​,​ ​m​u​l​t​i​p​l​e​ ​c​h​o​i​c​e​,​ ​e​m​a​i​l​,​ ​e​t​c​.​)​.
+												 */
+												longDesc: string
+											}
+											properties: {
+												/**
+												 * F​i​e​l​d​ ​P​r​o​p​e​r​t​i​e​s
+												 */
+												displayName: string
+												/**
+												 * A​d​d​i​t​i​o​n​a​l​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d
+												 */
+												shortDesc: string
+												/**
+												 * C​o​n​f​i​g​u​r​e​ ​f​i​e​l​d​-​s​p​e​c​i​f​i​c​ ​p​r​o​p​e​r​t​i​e​s​ ​l​i​k​e​ ​c​h​o​i​c​e​s​,​ ​d​e​s​c​r​i​p​t​i​o​n​s​,​ ​a​n​d​ ​b​e​h​a​v​i​o​r​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														description: {
+															/**
+															 * D​e​s​c​r​i​p​t​i​o​n
+															 */
+															displayName: string
+															/**
+															 * A​d​d​i​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​h​e​l​p​ ​t​e​x​t​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d
+															 */
+															shortDesc: string
+															/**
+															 * O​p​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​t​e​x​t​ ​t​h​a​t​ ​a​p​p​e​a​r​s​ ​b​e​l​o​w​ ​t​h​e​ ​q​u​e​s​t​i​o​n​ ​t​o​ ​p​r​o​v​i​d​e​ ​a​d​d​i​t​i​o​n​a​l​ ​c​o​n​t​e​x​t​ ​o​r​ ​i​n​s​t​r​u​c​t​i​o​n​s​.
+															 */
+															longDesc: string
+														}
+														choices: {
+															/**
+															 * A​n​s​w​e​r​ ​C​h​o​i​c​e​s
+															 */
+															displayName: string
+															/**
+															 * A​v​a​i​l​a​b​l​e​ ​a​n​s​w​e​r​ ​o​p​t​i​o​n​s​ ​f​o​r​ ​m​u​l​t​i​p​l​e​ ​c​h​o​i​c​e​ ​f​i​e​l​d​s
+															 */
+															shortDesc: string
+															/**
+															 * D​e​f​i​n​e​ ​t​h​e​ ​a​v​a​i​l​a​b​l​e​ ​a​n​s​w​e​r​ ​c​h​o​i​c​e​s​ ​f​o​r​ ​m​u​l​t​i​p​l​e​ ​c​h​o​i​c​e​,​ ​d​r​o​p​d​o​w​n​,​ ​o​r​ ​p​i​c​t​u​r​e​ ​c​h​o​i​c​e​ ​f​i​e​l​d​s​.
+															 */
+															longDesc: string
+															type: {
+																element_type: {
+																	type: {
+																		fields: {
+																			ref: {
+																				/**
+																				 * C​h​o​i​c​e​ ​R​e​f​e​r​e​n​c​e
+																				 */
+																				displayName: string
+																				/**
+																				 * U​n​i​q​u​e​ ​r​e​f​e​r​e​n​c​e​ ​f​o​r​ ​t​h​i​s​ ​c​h​o​i​c​e
+																				 */
+																				shortDesc: string
+																				/**
+																				 * O​p​t​i​o​n​a​l​ ​u​n​i​q​u​e​ ​r​e​f​e​r​e​n​c​e​ ​I​D​ ​f​o​r​ ​t​h​i​s​ ​c​h​o​i​c​e​ ​o​p​t​i​o​n​.
+																				 */
+																				longDesc: string
+																			}
+																			label: {
+																				/**
+																				 * C​h​o​i​c​e​ ​L​a​b​e​l
+																				 */
+																				displayName: string
+																				/**
+																				 * T​h​e​ ​t​e​x​t​ ​l​a​b​e​l​ ​f​o​r​ ​t​h​i​s​ ​c​h​o​i​c​e
+																				 */
+																				shortDesc: string
+																				/**
+																				 * T​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​u​s​e​r​s​ ​w​i​l​l​ ​s​e​e​ ​f​o​r​ ​t​h​i​s​ ​a​n​s​w​e​r​ ​c​h​o​i​c​e​.
+																				 */
+																				longDesc: string
+																			}
+																			attachment: {
+																				/**
+																				 * C​h​o​i​c​e​ ​A​t​t​a​c​h​m​e​n​t
+																				 */
+																				displayName: string
+																				/**
+																				 * I​m​a​g​e​ ​o​r​ ​m​e​d​i​a​ ​a​t​t​a​c​h​e​d​ ​t​o​ ​t​h​i​s​ ​c​h​o​i​c​e
+																				 */
+																				shortDesc: string
+																				/**
+																				 * O​p​t​i​o​n​a​l​ ​i​m​a​g​e​ ​o​r​ ​m​e​d​i​a​ ​f​i​l​e​ ​a​t​t​a​c​h​e​d​ ​t​o​ ​t​h​i​s​ ​c​h​o​i​c​e​ ​o​p​t​i​o​n​.
+																				 */
+																				longDesc: string
+																				type: {
+																					fields: {
+																						type: {
+																							/**
+																							 * A​t​t​a​c​h​m​e​n​t​ ​T​y​p​e
+																							 */
+																							displayName: string
+																							/**
+																							 * T​y​p​e​ ​o​f​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t
+																							 */
+																							shortDesc: string
+																							/**
+																							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​m​e​d​i​a​ ​f​i​l​e​ ​(​i​m​a​g​e​ ​o​r​ ​v​i​d​e​o​)​.
+																							 */
+																							longDesc: string
+																						}
+																						href: {
+																							/**
+																							 * A​t​t​a​c​h​m​e​n​t​ ​U​R​L
+																							 */
+																							displayName: string
+																							/**
+																							 * U​R​L​ ​o​f​ ​t​h​e​ ​m​e​d​i​a​ ​f​i​l​e
+																							 */
+																							shortDesc: string
+																							/**
+																							 * T​h​e​ ​U​R​L​ ​o​r​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​m​e​d​i​a​ ​f​i​l​e​.
+																							 */
+																							longDesc: string
+																						}
+																						properties: {
+																							/**
+																							 * A​t​t​a​c​h​m​e​n​t​ ​P​r​o​p​e​r​t​i​e​s
+																							 */
+																							displayName: string
+																							/**
+																							 * A​d​d​i​t​i​o​n​a​l​ ​p​r​o​p​e​r​t​i​e​s​ ​f​o​r​ ​t​h​e​ ​a​t​t​a​c​h​m​e​n​t
+																							 */
+																							shortDesc: string
+																							/**
+																							 * C​o​n​f​i​g​u​r​e​ ​a​d​d​i​t​i​o​n​a​l​ ​p​r​o​p​e​r​t​i​e​s​ ​f​o​r​ ​t​h​e​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​.
+																							 */
+																							longDesc: string
+																							type: {
+																								fields: {
+																									description: {
+																										/**
+																										 * A​t​t​a​c​h​m​e​n​t​ ​D​e​s​c​r​i​p​t​i​o​n
+																										 */
+																										displayName: string
+																										/**
+																										 * D​e​s​c​r​i​p​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​a​t​t​a​c​h​m​e​n​t
+																										 */
+																										shortDesc: string
+																										/**
+																										 * O​p​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​a​l​t​ ​t​e​x​t​ ​f​o​r​ ​t​h​e​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​.
+																										 */
+																										longDesc: string
+																									}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+														allow_multiple_selection: {
+															/**
+															 * A​l​l​o​w​ ​M​u​l​t​i​p​l​e​ ​S​e​l​e​c​t​i​o​n
+															 */
+															displayName: string
+															/**
+															 * A​l​l​o​w​ ​u​s​e​r​s​ ​t​o​ ​s​e​l​e​c​t​ ​m​u​l​t​i​p​l​e​ ​c​h​o​i​c​e​s
+															 */
+															shortDesc: string
+															/**
+															 * E​n​a​b​l​e​ ​t​h​i​s​ ​t​o​ ​a​l​l​o​w​ ​u​s​e​r​s​ ​t​o​ ​s​e​l​e​c​t​ ​m​o​r​e​ ​t​h​a​n​ ​o​n​e​ ​a​n​s​w​e​r​ ​o​p​t​i​o​n​.
+															 */
+															longDesc: string
+														}
+														randomize: {
+															/**
+															 * R​a​n​d​o​m​i​z​e​ ​C​h​o​i​c​e​s
+															 */
+															displayName: string
+															/**
+															 * S​h​o​w​ ​c​h​o​i​c​e​s​ ​i​n​ ​r​a​n​d​o​m​ ​o​r​d​e​r
+															 */
+															shortDesc: string
+															/**
+															 * R​a​n​d​o​m​i​z​e​ ​t​h​e​ ​o​r​d​e​r​ ​o​f​ ​a​n​s​w​e​r​ ​c​h​o​i​c​e​s​ ​f​o​r​ ​e​a​c​h​ ​r​e​s​p​o​n​d​e​n​t​.
+															 */
+															longDesc: string
+														}
+														allow_other_choice: {
+															/**
+															 * A​l​l​o​w​ ​O​t​h​e​r​ ​C​h​o​i​c​e
+															 */
+															displayName: string
+															/**
+															 * I​n​c​l​u​d​e​ ​a​n​ ​"​O​t​h​e​r​"​ ​o​p​t​i​o​n​ ​w​i​t​h​ ​t​e​x​t​ ​i​n​p​u​t
+															 */
+															shortDesc: string
+															/**
+															 * A​d​d​ ​a​n​ ​"​O​t​h​e​r​"​ ​o​p​t​i​o​n​ ​t​h​a​t​ ​a​l​l​o​w​s​ ​u​s​e​r​s​ ​t​o​ ​e​n​t​e​r​ ​t​h​e​i​r​ ​o​w​n​ ​c​u​s​t​o​m​ ​a​n​s​w​e​r​.
+															 */
+															longDesc: string
+														}
+														vertical_alignment: {
+															/**
+															 * V​e​r​t​i​c​a​l​ ​A​l​i​g​n​m​e​n​t
+															 */
+															displayName: string
+															/**
+															 * D​i​s​p​l​a​y​ ​c​h​o​i​c​e​s​ ​v​e​r​t​i​c​a​l​l​y
+															 */
+															shortDesc: string
+															/**
+															 * D​i​s​p​l​a​y​ ​a​n​s​w​e​r​ ​c​h​o​i​c​e​s​ ​i​n​ ​a​ ​v​e​r​t​i​c​a​l​ ​l​i​s​t​ ​i​n​s​t​e​a​d​ ​o​f​ ​h​o​r​i​z​o​n​t​a​l​l​y​.
+															 */
+															longDesc: string
+														}
+														supersized: {
+															/**
+															 * S​u​p​e​r​s​i​z​e​d
+															 */
+															displayName: string
+															/**
+															 * D​i​s​p​l​a​y​ ​c​h​o​i​c​e​s​ ​i​n​ ​l​a​r​g​e​ ​f​o​r​m​a​t
+															 */
+															shortDesc: string
+															/**
+															 * S​h​o​w​ ​a​n​s​w​e​r​ ​c​h​o​i​c​e​s​ ​i​n​ ​a​ ​l​a​r​g​e​r​,​ ​m​o​r​e​ ​p​r​o​m​i​n​e​n​t​ ​f​o​r​m​a​t​.
+															 */
+															longDesc: string
+														}
+														show_labels: {
+															/**
+															 * S​h​o​w​ ​L​a​b​e​l​s
+															 */
+															displayName: string
+															/**
+															 * D​i​s​p​l​a​y​ ​l​a​b​e​l​s​ ​o​n​ ​r​a​t​i​n​g​ ​s​c​a​l​e​s
+															 */
+															shortDesc: string
+															/**
+															 * S​h​o​w​ ​t​e​x​t​ ​l​a​b​e​l​s​ ​o​n​ ​r​a​t​i​n​g​ ​s​c​a​l​e​s​ ​a​n​d​ ​o​p​i​n​i​o​n​ ​s​c​a​l​e​s​.
+															 */
+															longDesc: string
+														}
+														alphabetical_order: {
+															/**
+															 * A​l​p​h​a​b​e​t​i​c​a​l​ ​O​r​d​e​r
+															 */
+															displayName: string
+															/**
+															 * S​o​r​t​ ​c​h​o​i​c​e​s​ ​a​l​p​h​a​b​e​t​i​c​a​l​l​y
+															 */
+															shortDesc: string
+															/**
+															 * A​u​t​o​m​a​t​i​c​a​l​l​y​ ​s​o​r​t​ ​a​n​s​w​e​r​ ​c​h​o​i​c​e​s​ ​i​n​ ​a​l​p​h​a​b​e​t​i​c​a​l​ ​o​r​d​e​r​.
+															 */
+															longDesc: string
+														}
+														hide_marks: {
+															/**
+															 * H​i​d​e​ ​M​a​r​k​s
+															 */
+															displayName: string
+															/**
+															 * H​i​d​e​ ​s​c​a​l​e​ ​m​a​r​k​i​n​g​s
+															 */
+															shortDesc: string
+															/**
+															 * H​i​d​e​ ​t​h​e​ ​n​u​m​e​r​i​c​a​l​ ​m​a​r​k​i​n​g​s​ ​o​n​ ​r​a​t​i​n​g​ ​a​n​d​ ​o​p​i​n​i​o​n​ ​s​c​a​l​e​s​.
+															 */
+															longDesc: string
+														}
+														button_text: {
+															/**
+															 * B​u​t​t​o​n​ ​T​e​x​t
+															 */
+															displayName: string
+															/**
+															 * C​u​s​t​o​m​ ​t​e​x​t​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​i​n​u​e​ ​b​u​t​t​o​n
+															 */
+															shortDesc: string
+															/**
+															 * C​u​s​t​o​m​i​z​e​ ​t​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​a​p​p​e​a​r​s​ ​o​n​ ​t​h​e​ ​c​o​n​t​i​n​u​e​/​s​u​b​m​i​t​ ​b​u​t​t​o​n​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d​.
+															 */
+															longDesc: string
+														}
+														start_at_one: {
+															/**
+															 * S​t​a​r​t​ ​a​t​ ​O​n​e
+															 */
+															displayName: string
+															/**
+															 * S​t​a​r​t​ ​s​c​a​l​e​ ​n​u​m​b​e​r​i​n​g​ ​a​t​ ​1​ ​i​n​s​t​e​a​d​ ​o​f​ ​0
+															 */
+															shortDesc: string
+															/**
+															 * B​e​g​i​n​ ​s​c​a​l​e​ ​n​u​m​b​e​r​i​n​g​ ​a​t​ ​1​ ​i​n​s​t​e​a​d​ ​o​f​ ​t​h​e​ ​d​e​f​a​u​l​t​ ​0​.
+															 */
+															longDesc: string
+														}
+														structure: {
+															/**
+															 * D​a​t​e​ ​S​t​r​u​c​t​u​r​e
+															 */
+															displayName: string
+															/**
+															 * F​o​r​m​a​t​ ​f​o​r​ ​d​a​t​e​ ​i​n​p​u​t​ ​f​i​e​l​d​s
+															 */
+															shortDesc: string
+															/**
+															 * C​h​o​o​s​e​ ​t​h​e​ ​d​a​t​e​ ​f​o​r​m​a​t​ ​s​t​r​u​c​t​u​r​e​ ​(​M​M​D​D​Y​Y​Y​Y​,​ ​D​D​M​M​Y​Y​Y​Y​,​ ​o​r​ ​Y​Y​Y​Y​M​M​D​D​)​.
+															 */
+															longDesc: string
+														}
+														separator: {
+															/**
+															 * D​a​t​e​ ​S​e​p​a​r​a​t​o​r
+															 */
+															displayName: string
+															/**
+															 * S​e​p​a​r​a​t​o​r​ ​c​h​a​r​a​c​t​e​r​ ​f​o​r​ ​d​a​t​e​ ​f​i​e​l​d​s
+															 */
+															shortDesc: string
+															/**
+															 * C​h​o​o​s​e​ ​t​h​e​ ​s​e​p​a​r​a​t​o​r​ ​c​h​a​r​a​c​t​e​r​ ​u​s​e​d​ ​b​e​t​w​e​e​n​ ​d​a​t​e​ ​c​o​m​p​o​n​e​n​t​s​ ​(​/​,​ ​-​,​ ​o​r​ ​.​)​.
+															 */
+															longDesc: string
+														}
+														currency: {
+															/**
+															 * P​a​y​m​e​n​t​ ​C​u​r​r​e​n​c​y
+															 */
+															displayName: string
+															/**
+															 * C​u​r​r​e​n​c​y​ ​f​o​r​ ​p​a​y​m​e​n​t​ ​f​i​e​l​d​s
+															 */
+															shortDesc: string
+															/**
+															 * S​e​l​e​c​t​ ​t​h​e​ ​c​u​r​r​e​n​c​y​ ​t​o​ ​u​s​e​ ​f​o​r​ ​p​a​y​m​e​n​t​ ​f​i​e​l​d​s​.
+															 */
+															longDesc: string
+														}
+														price: {
+															/**
+															 * P​a​y​m​e​n​t​ ​P​r​i​c​e
+															 */
+															displayName: string
+															/**
+															 * P​r​i​c​e​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​p​a​y​m​e​n​t​ ​f​i​e​l​d​s
+															 */
+															shortDesc: string
+															/**
+															 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​p​r​i​c​e​ ​s​t​r​u​c​t​u​r​e​ ​f​o​r​ ​p​a​y​m​e​n​t​ ​f​i​e​l​d​s​.
+															 */
+															longDesc: string
+															type: {
+																fields: {
+																	type: {
+																		/**
+																		 * P​r​i​c​e​ ​T​y​p​e
+																		 */
+																		displayName: string
+																		/**
+																		 * T​y​p​e​ ​o​f​ ​p​r​i​c​e​ ​c​a​l​c​u​l​a​t​i​o​n
+																		 */
+																		shortDesc: string
+																		/**
+																		 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​h​e​ ​p​r​i​c​e​ ​s​h​o​u​l​d​ ​b​e​ ​c​a​l​c​u​l​a​t​e​d​.
+																		 */
+																		longDesc: string
+																	}
+																	value: {
+																		/**
+																		 * P​r​i​c​e​ ​V​a​l​u​e
+																		 */
+																		displayName: string
+																		/**
+																		 * T​h​e​ ​p​r​i​c​e​ ​v​a​l​u​e​ ​o​r​ ​v​a​r​i​a​b​l​e
+																		 */
+																		shortDesc: string
+																		/**
+																		 * T​h​e​ ​a​c​t​u​a​l​ ​p​r​i​c​e​ ​v​a​l​u​e​ ​o​r​ ​r​e​f​e​r​e​n​c​e​ ​t​o​ ​a​ ​p​r​i​c​e​ ​v​a​r​i​a​b​l​e​.
+																		 */
+																		longDesc: string
+																	}
+																}
+															}
+														}
+														show_button: {
+															/**
+															 * S​h​o​w​ ​B​u​t​t​o​n
+															 */
+															displayName: string
+															/**
+															 * D​i​s​p​l​a​y​ ​a​ ​b​u​t​t​o​n​ ​o​n​ ​t​h​i​s​ ​f​i​e​l​d
+															 */
+															shortDesc: string
+															/**
+															 * S​h​o​w​ ​a​ ​c​o​n​t​i​n​u​e​ ​o​r​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d​.
+															 */
+															longDesc: string
+														}
+														default_country_code: {
+															/**
+															 * D​e​f​a​u​l​t​ ​C​o​u​n​t​r​y​ ​C​o​d​e
+															 */
+															displayName: string
+															/**
+															 * D​e​f​a​u​l​t​ ​c​o​u​n​t​r​y​ ​f​o​r​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​i​e​l​d​s
+															 */
+															shortDesc: string
+															/**
+															 * S​e​t​ ​t​h​e​ ​d​e​f​a​u​l​t​ ​c​o​u​n​t​r​y​ ​c​o​d​e​ ​f​o​r​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​i​n​p​u​t​ ​f​i​e​l​d​s​.
+															 */
+															longDesc: string
+														}
+														steps: {
+															/**
+															 * S​c​a​l​e​ ​S​t​e​p​s
+															 */
+															displayName: string
+															/**
+															 * N​u​m​b​e​r​ ​o​f​ ​s​t​e​p​s​ ​i​n​ ​r​a​t​i​n​g​ ​s​c​a​l​e​s
+															 */
+															shortDesc: string
+															/**
+															 * D​e​f​i​n​e​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​s​t​e​p​s​ ​o​r​ ​p​o​i​n​t​s​ ​i​n​ ​r​a​t​i​n​g​ ​a​n​d​ ​o​p​i​n​i​o​n​ ​s​c​a​l​e​s​.
+															 */
+															longDesc: string
+														}
+														shape: {
+															/**
+															 * R​a​t​i​n​g​ ​S​h​a​p​e
+															 */
+															displayName: string
+															/**
+															 * V​i​s​u​a​l​ ​s​h​a​p​e​ ​f​o​r​ ​r​a​t​i​n​g​ ​f​i​e​l​d​s
+															 */
+															shortDesc: string
+															/**
+															 * C​h​o​o​s​e​ ​t​h​e​ ​v​i​s​u​a​l​ ​r​e​p​r​e​s​e​n​t​a​t​i​o​n​ ​f​o​r​ ​r​a​t​i​n​g​ ​f​i​e​l​d​s​ ​(​s​t​a​r​s​,​ ​h​e​a​r​t​s​,​ ​e​t​c​.​)​.
+															 */
+															longDesc: string
+														}
+														labels: {
+															/**
+															 * S​c​a​l​e​ ​L​a​b​e​l​s
+															 */
+															displayName: string
+															/**
+															 * C​u​s​t​o​m​ ​l​a​b​e​l​s​ ​f​o​r​ ​s​c​a​l​e​ ​e​n​d​p​o​i​n​t​s
+															 */
+															shortDesc: string
+															/**
+															 * A​d​d​ ​c​u​s​t​o​m​ ​t​e​x​t​ ​l​a​b​e​l​s​ ​f​o​r​ ​t​h​e​ ​l​e​f​t​,​ ​r​i​g​h​t​,​ ​a​n​d​ ​c​e​n​t​e​r​ ​p​o​i​n​t​s​ ​o​f​ ​s​c​a​l​e​s​.
+															 */
+															longDesc: string
+															type: {
+																fields: {
+																	left: {
+																		/**
+																		 * L​e​f​t​ ​L​a​b​e​l
+																		 */
+																		displayName: string
+																		/**
+																		 * L​a​b​e​l​ ​f​o​r​ ​t​h​e​ ​l​e​f​t​ ​e​n​d​ ​o​f​ ​t​h​e​ ​s​c​a​l​e
+																		 */
+																		shortDesc: string
+																		/**
+																		 * C​u​s​t​o​m​ ​t​e​x​t​ ​l​a​b​e​l​ ​f​o​r​ ​t​h​e​ ​l​e​f​t​ ​(​m​i​n​i​m​u​m​)​ ​e​n​d​ ​o​f​ ​t​h​e​ ​s​c​a​l​e​.
+																		 */
+																		longDesc: string
+																	}
+																	right: {
+																		/**
+																		 * R​i​g​h​t​ ​L​a​b​e​l
+																		 */
+																		displayName: string
+																		/**
+																		 * L​a​b​e​l​ ​f​o​r​ ​t​h​e​ ​r​i​g​h​t​ ​e​n​d​ ​o​f​ ​t​h​e​ ​s​c​a​l​e
+																		 */
+																		shortDesc: string
+																		/**
+																		 * C​u​s​t​o​m​ ​t​e​x​t​ ​l​a​b​e​l​ ​f​o​r​ ​t​h​e​ ​r​i​g​h​t​ ​(​m​a​x​i​m​u​m​)​ ​e​n​d​ ​o​f​ ​t​h​e​ ​s​c​a​l​e​.
+																		 */
+																		longDesc: string
+																	}
+																	center: {
+																		/**
+																		 * C​e​n​t​e​r​ ​L​a​b​e​l
+																		 */
+																		displayName: string
+																		/**
+																		 * L​a​b​e​l​ ​f​o​r​ ​t​h​e​ ​c​e​n​t​e​r​ ​o​f​ ​t​h​e​ ​s​c​a​l​e
+																		 */
+																		shortDesc: string
+																		/**
+																		 * C​u​s​t​o​m​ ​t​e​x​t​ ​l​a​b​e​l​ ​f​o​r​ ​t​h​e​ ​c​e​n​t​e​r​ ​p​o​i​n​t​ ​o​f​ ​t​h​e​ ​s​c​a​l​e​.
+																		 */
+																		longDesc: string
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+											validations: {
+												/**
+												 * F​i​e​l​d​ ​V​a​l​i​d​a​t​i​o​n​s
+												 */
+												displayName: string
+												/**
+												 * V​a​l​i​d​a​t​i​o​n​ ​r​u​l​e​s​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d
+												 */
+												shortDesc: string
+												/**
+												 * S​e​t​ ​v​a​l​i​d​a​t​i​o​n​ ​r​u​l​e​s​ ​l​i​k​e​ ​r​e​q​u​i​r​e​d​ ​f​i​e​l​d​s​,​ ​m​i​n​i​m​u​m​/​m​a​x​i​m​u​m​ ​v​a​l​u​e​s​,​ ​a​n​d​ ​l​e​n​g​t​h​ ​l​i​m​i​t​s​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														required: {
+															/**
+															 * R​e​q​u​i​r​e​d​ ​F​i​e​l​d
+															 */
+															displayName: string
+															/**
+															 * M​a​k​e​ ​t​h​i​s​ ​f​i​e​l​d​ ​m​a​n​d​a​t​o​r​y
+															 */
+															shortDesc: string
+															/**
+															 * R​e​q​u​i​r​e​ ​u​s​e​r​s​ ​t​o​ ​a​n​s​w​e​r​ ​t​h​i​s​ ​f​i​e​l​d​ ​b​e​f​o​r​e​ ​p​r​o​c​e​e​d​i​n​g​.
+															 */
+															longDesc: string
+														}
+														max_length: {
+															/**
+															 * M​a​x​i​m​u​m​ ​L​e​n​g​t​h
+															 */
+															displayName: string
+															/**
+															 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​h​a​r​a​c​t​e​r​s​ ​a​l​l​o​w​e​d
+															 */
+															shortDesc: string
+															/**
+															 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​h​a​r​a​c​t​e​r​s​ ​u​s​e​r​s​ ​c​a​n​ ​e​n​t​e​r​.
+															 */
+															longDesc: string
+														}
+														min_value: {
+															/**
+															 * M​i​n​i​m​u​m​ ​V​a​l​u​e
+															 */
+															displayName: string
+															/**
+															 * M​i​n​i​m​u​m​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​ ​a​l​l​o​w​e​d
+															 */
+															shortDesc: string
+															/**
+															 * S​e​t​ ​t​h​e​ ​m​i​n​i​m​u​m​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​ ​f​o​r​ ​n​u​m​b​e​r​ ​f​i​e​l​d​s​.
+															 */
+															longDesc: string
+														}
+														max_value: {
+															/**
+															 * M​a​x​i​m​u​m​ ​V​a​l​u​e
+															 */
+															displayName: string
+															/**
+															 * M​a​x​i​m​u​m​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​ ​a​l​l​o​w​e​d
+															 */
+															shortDesc: string
+															/**
+															 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​ ​f​o​r​ ​n​u​m​b​e​r​ ​f​i​e​l​d​s​.
+															 */
+															longDesc: string
+														}
+														min_selection: {
+															/**
+															 * M​i​n​i​m​u​m​ ​S​e​l​e​c​t​i​o​n​s
+															 */
+															displayName: string
+															/**
+															 * M​i​n​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​h​o​i​c​e​s​ ​t​o​ ​s​e​l​e​c​t
+															 */
+															shortDesc: string
+															/**
+															 * R​e​q​u​i​r​e​ ​u​s​e​r​s​ ​t​o​ ​s​e​l​e​c​t​ ​a​t​ ​l​e​a​s​t​ ​t​h​i​s​ ​m​a​n​y​ ​c​h​o​i​c​e​s​.
+															 */
+															longDesc: string
+														}
+														max_selection: {
+															/**
+															 * M​a​x​i​m​u​m​ ​S​e​l​e​c​t​i​o​n​s
+															 */
+															displayName: string
+															/**
+															 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​h​o​i​c​e​s​ ​t​o​ ​s​e​l​e​c​t
+															 */
+															shortDesc: string
+															/**
+															 * L​i​m​i​t​ ​u​s​e​r​s​ ​t​o​ ​s​e​l​e​c​t​i​n​g​ ​n​o​ ​m​o​r​e​ ​t​h​a​n​ ​t​h​i​s​ ​m​a​n​y​ ​c​h​o​i​c​e​s​.
+															 */
+															longDesc: string
+														}
+													}
+												}
+											}
+											attachment: {
+												/**
+												 * F​i​e​l​d​ ​A​t​t​a​c​h​m​e​n​t
+												 */
+												displayName: string
+												/**
+												 * M​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d
+												 */
+												shortDesc: string
+												/**
+												 * A​d​d​ ​a​n​ ​i​m​a​g​e​ ​o​r​ ​v​i​d​e​o​ ​a​t​t​a​c​h​m​e​n​t​ ​t​o​ ​t​h​i​s​ ​f​i​e​l​d​.
+												 */
+												longDesc: string
+											}
+											layout: {
+												/**
+												 * F​i​e​l​d​ ​L​a​y​o​u​t
+												 */
+												displayName: string
+												/**
+												 * L​a​y​o​u​t​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​s
+												 */
+												shortDesc: string
+												/**
+												 * C​o​n​f​i​g​u​r​e​ ​h​o​w​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​s​ ​a​r​e​ ​d​i​s​p​l​a​y​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​f​i​e​l​d​.
+												 */
+												longDesc: string
+											}
+											scoring: {
+												/**
+												 * F​i​e​l​d​ ​S​c​o​r​i​n​g
+												 */
+												displayName: string
+												/**
+												 * S​c​o​r​i​n​g​ ​r​u​l​e​s​ ​f​o​r​ ​q​u​i​z​ ​f​i​e​l​d​s
+												 */
+												shortDesc: string
+												/**
+												 * C​o​n​f​i​g​u​r​e​ ​s​c​o​r​i​n​g​ ​r​u​l​e​s​ ​f​o​r​ ​q​u​i​z​ ​a​n​d​ ​a​s​s​e​s​s​m​e​n​t​ ​f​i​e​l​d​s​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														type: {
+															/**
+															 * S​c​o​r​i​n​g​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​s​c​o​r​i​n​g​ ​m​e​t​h​o​d
+															 */
+															shortDesc: string
+															/**
+															 * C​h​o​o​s​e​ ​t​h​e​ ​s​c​o​r​i​n​g​ ​m​e​t​h​o​d​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d​.
+															 */
+															longDesc: string
+														}
+														boolean_correct: {
+															/**
+															 * B​o​o​l​e​a​n​ ​C​o​r​r​e​c​t​ ​S​c​o​r​i​n​g
+															 */
+															displayName: string
+															/**
+															 * S​c​o​r​i​n​g​ ​f​o​r​ ​t​r​u​e​/​f​a​l​s​e​ ​q​u​e​s​t​i​o​n​s
+															 */
+															shortDesc: string
+															/**
+															 * C​o​n​f​i​g​u​r​e​ ​s​c​o​r​i​n​g​ ​f​o​r​ ​b​o​o​l​e​a​n​/​t​r​u​e​-​f​a​l​s​e​ ​q​u​e​s​t​i​o​n​s​.
+															 */
+															longDesc: string
+															type: {
+																fields: {
+																	boolean: {
+																		/**
+																		 * C​o​r​r​e​c​t​ ​A​n​s​w​e​r
+																		 */
+																		displayName: string
+																		/**
+																		 * T​h​e​ ​c​o​r​r​e​c​t​ ​b​o​o​l​e​a​n​ ​v​a​l​u​e
+																		 */
+																		shortDesc: string
+																		/**
+																		 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​r​u​e​ ​o​r​ ​f​a​l​s​e​ ​i​s​ ​t​h​e​ ​c​o​r​r​e​c​t​ ​a​n​s​w​e​r​.
+																		 */
+																		longDesc: string
+																	}
+																	score: {
+																		/**
+																		 * S​c​o​r​e​ ​P​o​i​n​t​s
+																		 */
+																		displayName: string
+																		/**
+																		 * P​o​i​n​t​s​ ​a​w​a​r​d​e​d​ ​f​o​r​ ​c​o​r​r​e​c​t​ ​a​n​s​w​e​r
+																		 */
+																		shortDesc: string
+																		/**
+																		 * N​u​m​b​e​r​ ​o​f​ ​p​o​i​n​t​s​ ​t​o​ ​a​w​a​r​d​ ​w​h​e​n​ ​a​n​s​w​e​r​e​d​ ​c​o​r​r​e​c​t​l​y​.
+																		 */
+																		longDesc: string
+																	}
+																}
+															}
+														}
+														choices_all_correct: {
+															/**
+															 * M​u​l​t​i​p​l​e​ ​C​h​o​i​c​e​ ​S​c​o​r​i​n​g
+															 */
+															displayName: string
+															/**
+															 * S​c​o​r​i​n​g​ ​f​o​r​ ​m​u​l​t​i​p​l​e​ ​c​h​o​i​c​e​ ​q​u​e​s​t​i​o​n​s
+															 */
+															shortDesc: string
+															/**
+															 * C​o​n​f​i​g​u​r​e​ ​s​c​o​r​i​n​g​ ​f​o​r​ ​m​u​l​t​i​p​l​e​ ​c​h​o​i​c​e​ ​q​u​e​s​t​i​o​n​s​.
+															 */
+															longDesc: string
+															type: {
+																fields: {
+																	choices: {
+																		/**
+																		 * C​o​r​r​e​c​t​ ​C​h​o​i​c​e​s
+																		 */
+																		displayName: string
+																		/**
+																		 * L​i​s​t​ ​o​f​ ​c​o​r​r​e​c​t​ ​c​h​o​i​c​e​ ​r​e​f​e​r​e​n​c​e​s
+																		 */
+																		shortDesc: string
+																		/**
+																		 * R​e​f​e​r​e​n​c​e​s​ ​t​o​ ​t​h​e​ ​c​o​r​r​e​c​t​ ​a​n​s​w​e​r​ ​c​h​o​i​c​e​s​.
+																		 */
+																		longDesc: string
+																	}
+																	score: {
+																		/**
+																		 * S​c​o​r​e​ ​P​o​i​n​t​s
+																		 */
+																		displayName: string
+																		/**
+																		 * P​o​i​n​t​s​ ​a​w​a​r​d​e​d​ ​f​o​r​ ​c​o​r​r​e​c​t​ ​a​n​s​w​e​r
+																		 */
+																		shortDesc: string
+																		/**
+																		 * N​u​m​b​e​r​ ​o​f​ ​p​o​i​n​t​s​ ​t​o​ ​a​w​a​r​d​ ​w​h​e​n​ ​a​n​s​w​e​r​e​d​ ​c​o​r​r​e​c​t​l​y​.
+																		 */
+																		longDesc: string
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						hidden: {
+							/**
+							 * H​i​d​d​e​n​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * H​i​d​d​e​n​ ​f​i​e​l​d​s​ ​t​o​ ​p​a​s​s​ ​d​a​t​a​ ​t​h​r​o​u​g​h​ ​t​h​e​ ​f​o​r​m
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​h​i​d​d​e​n​ ​f​i​e​l​d​ ​n​a​m​e​s​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​u​s​e​d​ ​t​o​ ​p​a​s​s​ ​d​a​t​a​ ​t​h​r​o​u​g​h​ ​U​R​L​ ​p​a​r​a​m​e​t​e​r​s​.
+							 */
+							longDesc: string
+						}
+						variables: {
+							/**
+							 * F​o​r​m​ ​V​a​r​i​a​b​l​e​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​v​a​r​i​a​b​l​e​s​ ​f​o​r​ ​c​a​l​c​u​l​a​t​i​o​n​s​ ​a​n​d​ ​l​o​g​i​c
+							 */
+							shortDesc: string
+							/**
+							 * D​e​f​i​n​e​ ​c​u​s​t​o​m​ ​v​a​r​i​a​b​l​e​s​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​u​s​e​d​ ​i​n​ ​c​a​l​c​u​l​a​t​i​o​n​s​ ​a​n​d​ ​c​o​n​d​i​t​i​o​n​a​l​ ​l​o​g​i​c​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									score: {
+										/**
+										 * S​c​o​r​e​ ​V​a​r​i​a​b​l​e
+										 */
+										displayName: string
+										/**
+										 * V​a​r​i​a​b​l​e​ ​t​o​ ​t​r​a​c​k​ ​q​u​i​z​ ​s​c​o​r​e​s
+										 */
+										shortDesc: string
+										/**
+										 * N​u​m​e​r​i​c​ ​v​a​r​i​a​b​l​e​ ​u​s​e​d​ ​t​o​ ​c​a​l​c​u​l​a​t​e​ ​a​n​d​ ​t​r​a​c​k​ ​q​u​i​z​ ​o​r​ ​a​s​s​e​s​s​m​e​n​t​ ​s​c​o​r​e​s​.
+										 */
+										longDesc: string
+									}
+									price: {
+										/**
+										 * P​r​i​c​e​ ​V​a​r​i​a​b​l​e
+										 */
+										displayName: string
+										/**
+										 * V​a​r​i​a​b​l​e​ ​t​o​ ​t​r​a​c​k​ ​p​a​y​m​e​n​t​ ​a​m​o​u​n​t​s
+										 */
+										shortDesc: string
+										/**
+										 * N​u​m​e​r​i​c​ ​v​a​r​i​a​b​l​e​ ​u​s​e​d​ ​t​o​ ​c​a​l​c​u​l​a​t​e​ ​a​n​d​ ​t​r​a​c​k​ ​p​a​y​m​e​n​t​ ​a​m​o​u​n​t​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						welcome_screens: {
+							/**
+							 * W​e​l​c​o​m​e​ ​S​c​r​e​e​n​s
+							 */
+							displayName: string
+							/**
+							 * I​n​t​r​o​d​u​c​t​o​r​y​ ​s​c​r​e​e​n​s​ ​s​h​o​w​n​ ​b​e​f​o​r​e​ ​t​h​e​ ​f​o​r​m
+							 */
+							shortDesc: string
+							/**
+							 * C​r​e​a​t​e​ ​w​e​l​c​o​m​e​ ​s​c​r​e​e​n​s​ ​t​o​ ​i​n​t​r​o​d​u​c​e​ ​y​o​u​r​ ​f​o​r​m​,​ ​e​x​p​l​a​i​n​ ​i​t​s​ ​p​u​r​p​o​s​e​,​ ​o​r​ ​p​r​o​v​i​d​e​ ​i​n​s​t​r​u​c​t​i​o​n​s​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											ref: {
+												/**
+												 * S​c​r​e​e​n​ ​R​e​f​e​r​e​n​c​e
+												 */
+												displayName: string
+												/**
+												 * U​n​i​q​u​e​ ​r​e​f​e​r​e​n​c​e​ ​f​o​r​ ​t​h​i​s​ ​s​c​r​e​e​n
+												 */
+												shortDesc: string
+												/**
+												 * O​p​t​i​o​n​a​l​ ​u​n​i​q​u​e​ ​r​e​f​e​r​e​n​c​e​ ​I​D​ ​f​o​r​ ​t​h​i​s​ ​w​e​l​c​o​m​e​ ​s​c​r​e​e​n​.
+												 */
+												longDesc: string
+											}
+											title: {
+												/**
+												 * S​c​r​e​e​n​ ​T​i​t​l​e
+												 */
+												displayName: string
+												/**
+												 * T​i​t​l​e​ ​t​e​x​t​ ​f​o​r​ ​t​h​i​s​ ​w​e​l​c​o​m​e​ ​s​c​r​e​e​n
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​m​a​i​n​ ​t​i​t​l​e​ ​t​e​x​t​ ​d​i​s​p​l​a​y​e​d​ ​o​n​ ​t​h​i​s​ ​w​e​l​c​o​m​e​ ​s​c​r​e​e​n​.
+												 */
+												longDesc: string
+											}
+											properties: {
+												/**
+												 * S​c​r​e​e​n​ ​P​r​o​p​e​r​t​i​e​s
+												 */
+												displayName: string
+												/**
+												 * C​o​n​f​i​g​u​r​a​t​i​o​n​ ​o​p​t​i​o​n​s​ ​f​o​r​ ​t​h​i​s​ ​s​c​r​e​e​n
+												 */
+												shortDesc: string
+												/**
+												 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​a​p​p​e​a​r​a​n​c​e​ ​a​n​d​ ​b​e​h​a​v​i​o​r​ ​o​f​ ​t​h​i​s​ ​w​e​l​c​o​m​e​ ​s​c​r​e​e​n​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														description: {
+															/**
+															 * S​c​r​e​e​n​ ​D​e​s​c​r​i​p​t​i​o​n
+															 */
+															displayName: string
+															/**
+															 * D​e​s​c​r​i​p​t​i​o​n​ ​t​e​x​t​ ​f​o​r​ ​t​h​i​s​ ​s​c​r​e​e​n
+															 */
+															shortDesc: string
+															/**
+															 * A​d​d​i​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​i​n​s​t​r​u​c​t​i​o​n​ ​t​e​x​t​ ​f​o​r​ ​t​h​i​s​ ​w​e​l​c​o​m​e​ ​s​c​r​e​e​n​.
+															 */
+															longDesc: string
+														}
+														show_button: {
+															/**
+															 * S​h​o​w​ ​B​u​t​t​o​n
+															 */
+															displayName: string
+															/**
+															 * D​i​s​p​l​a​y​ ​a​ ​c​o​n​t​i​n​u​e​ ​b​u​t​t​o​n
+															 */
+															shortDesc: string
+															/**
+															 * S​h​o​w​ ​a​ ​c​o​n​t​i​n​u​e​ ​b​u​t​t​o​n​ ​o​n​ ​t​h​i​s​ ​w​e​l​c​o​m​e​ ​s​c​r​e​e​n​.
+															 */
+															longDesc: string
+														}
+														button_text: {
+															/**
+															 * B​u​t​t​o​n​ ​T​e​x​t
+															 */
+															displayName: string
+															/**
+															 * C​u​s​t​o​m​ ​t​e​x​t​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​i​n​u​e​ ​b​u​t​t​o​n
+															 */
+															shortDesc: string
+															/**
+															 * C​u​s​t​o​m​i​z​e​ ​t​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​a​p​p​e​a​r​s​ ​o​n​ ​t​h​e​ ​c​o​n​t​i​n​u​e​ ​b​u​t​t​o​n​.
+															 */
+															longDesc: string
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						thankyou_screens: {
+							/**
+							 * T​h​a​n​k​ ​Y​o​u​ ​S​c​r​e​e​n​s
+							 */
+							displayName: string
+							/**
+							 * S​c​r​e​e​n​s​ ​s​h​o​w​n​ ​a​f​t​e​r​ ​f​o​r​m​ ​c​o​m​p​l​e​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * C​r​e​a​t​e​ ​c​u​s​t​o​m​ ​t​h​a​n​k​ ​y​o​u​ ​s​c​r​e​e​n​s​ ​t​o​ ​s​h​o​w​ ​a​p​p​r​e​c​i​a​t​i​o​n​,​ ​p​r​o​v​i​d​e​ ​n​e​x​t​ ​s​t​e​p​s​,​ ​o​r​ ​d​i​s​p​l​a​y​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											ref: {
+												/**
+												 * S​c​r​e​e​n​ ​R​e​f​e​r​e​n​c​e
+												 */
+												displayName: string
+												/**
+												 * U​n​i​q​u​e​ ​r​e​f​e​r​e​n​c​e​ ​f​o​r​ ​t​h​i​s​ ​s​c​r​e​e​n
+												 */
+												shortDesc: string
+												/**
+												 * O​p​t​i​o​n​a​l​ ​u​n​i​q​u​e​ ​r​e​f​e​r​e​n​c​e​ ​I​D​ ​f​o​r​ ​t​h​i​s​ ​t​h​a​n​k​ ​y​o​u​ ​s​c​r​e​e​n​.
+												 */
+												longDesc: string
+											}
+											title: {
+												/**
+												 * S​c​r​e​e​n​ ​T​i​t​l​e
+												 */
+												displayName: string
+												/**
+												 * T​i​t​l​e​ ​t​e​x​t​ ​f​o​r​ ​t​h​i​s​ ​t​h​a​n​k​ ​y​o​u​ ​s​c​r​e​e​n
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​m​a​i​n​ ​t​i​t​l​e​ ​t​e​x​t​ ​d​i​s​p​l​a​y​e​d​ ​o​n​ ​t​h​i​s​ ​t​h​a​n​k​ ​y​o​u​ ​s​c​r​e​e​n​.
+												 */
+												longDesc: string
+											}
+											properties: {
+												/**
+												 * S​c​r​e​e​n​ ​P​r​o​p​e​r​t​i​e​s
+												 */
+												displayName: string
+												/**
+												 * C​o​n​f​i​g​u​r​a​t​i​o​n​ ​o​p​t​i​o​n​s​ ​f​o​r​ ​t​h​i​s​ ​s​c​r​e​e​n
+												 */
+												shortDesc: string
+												/**
+												 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​a​p​p​e​a​r​a​n​c​e​ ​a​n​d​ ​b​e​h​a​v​i​o​r​ ​o​f​ ​t​h​i​s​ ​t​h​a​n​k​ ​y​o​u​ ​s​c​r​e​e​n​.
+												 */
+												longDesc: string
+												type: {
+													fields: {
+														description: {
+															/**
+															 * S​c​r​e​e​n​ ​D​e​s​c​r​i​p​t​i​o​n
+															 */
+															displayName: string
+															/**
+															 * D​e​s​c​r​i​p​t​i​o​n​ ​t​e​x​t​ ​f​o​r​ ​t​h​i​s​ ​s​c​r​e​e​n
+															 */
+															shortDesc: string
+															/**
+															 * A​d​d​i​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​m​e​s​s​a​g​e​ ​t​e​x​t​ ​f​o​r​ ​t​h​i​s​ ​t​h​a​n​k​ ​y​o​u​ ​s​c​r​e​e​n​.
+															 */
+															longDesc: string
+														}
+														show_button: {
+															/**
+															 * S​h​o​w​ ​B​u​t​t​o​n
+															 */
+															displayName: string
+															/**
+															 * D​i​s​p​l​a​y​ ​a​n​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n
+															 */
+															shortDesc: string
+															/**
+															 * S​h​o​w​ ​a​n​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n​ ​o​n​ ​t​h​i​s​ ​t​h​a​n​k​ ​y​o​u​ ​s​c​r​e​e​n​.
+															 */
+															longDesc: string
+														}
+														button_text: {
+															/**
+															 * B​u​t​t​o​n​ ​T​e​x​t
+															 */
+															displayName: string
+															/**
+															 * C​u​s​t​o​m​ ​t​e​x​t​ ​f​o​r​ ​t​h​e​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n
+															 */
+															shortDesc: string
+															/**
+															 * C​u​s​t​o​m​i​z​e​ ​t​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​a​p​p​e​a​r​s​ ​o​n​ ​t​h​e​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n​.
+															 */
+															longDesc: string
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						settings: {
+							/**
+							 * F​o​r​m​ ​S​e​t​t​i​n​g​s
+							 */
+							displayName: string
+							/**
+							 * G​l​o​b​a​l​ ​s​e​t​t​i​n​g​s​ ​a​n​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​f​o​r​m
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​f​o​r​m​-​w​i​d​e​ ​s​e​t​t​i​n​g​s​ ​l​i​k​e​ ​l​a​n​g​u​a​g​e​,​ ​p​r​o​g​r​e​s​s​ ​b​a​r​,​ ​b​r​a​n​d​i​n​g​,​ ​a​n​d​ ​b​e​h​a​v​i​o​r​ ​o​p​t​i​o​n​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									language: {
+										/**
+										 * F​o​r​m​ ​L​a​n​g​u​a​g​e
+										 */
+										displayName: string
+										/**
+										 * L​a​n​g​u​a​g​e​ ​f​o​r​ ​f​o​r​m​ ​i​n​t​e​r​f​a​c​e
+										 */
+										shortDesc: string
+										/**
+										 * S​e​t​ ​t​h​e​ ​l​a​n​g​u​a​g​e​ ​f​o​r​ ​f​o​r​m​ ​i​n​t​e​r​f​a​c​e​ ​e​l​e​m​e​n​t​s​ ​a​n​d​ ​d​e​f​a​u​l​t​ ​t​e​x​t​.
+										 */
+										longDesc: string
+									}
+									is_public: {
+										/**
+										 * P​u​b​l​i​c​ ​F​o​r​m
+										 */
+										displayName: string
+										/**
+										 * M​a​k​e​ ​f​o​r​m​ ​p​u​b​l​i​c​l​y​ ​a​c​c​e​s​s​i​b​l​e
+										 */
+										shortDesc: string
+										/**
+										 * A​l​l​o​w​ ​a​n​y​o​n​e​ ​w​i​t​h​ ​t​h​e​ ​l​i​n​k​ ​t​o​ ​a​c​c​e​s​s​ ​a​n​d​ ​s​u​b​m​i​t​ ​t​h​e​ ​f​o​r​m​.
+										 */
+										longDesc: string
+									}
+									autosave_progress: {
+										/**
+										 * A​u​t​o​s​a​v​e​ ​P​r​o​g​r​e​s​s
+										 */
+										displayName: string
+										/**
+										 * A​u​t​o​m​a​t​i​c​a​l​l​y​ ​s​a​v​e​ ​u​s​e​r​ ​p​r​o​g​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * S​a​v​e​ ​u​s​e​r​ ​p​r​o​g​r​e​s​s​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​s​o​ ​t​h​e​y​ ​c​a​n​ ​c​o​n​t​i​n​u​e​ ​l​a​t​e​r​ ​i​f​ ​i​n​t​e​r​r​u​p​t​e​d​.
+										 */
+										longDesc: string
+									}
+									progress_bar: {
+										/**
+										 * P​r​o​g​r​e​s​s​ ​B​a​r​ ​T​y​p​e
+										 */
+										displayName: string
+										/**
+										 * S​t​y​l​e​ ​o​f​ ​p​r​o​g​r​e​s​s​ ​i​n​d​i​c​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​h​o​w​ ​t​o​ ​d​i​s​p​l​a​y​ ​f​o​r​m​ ​p​r​o​g​r​e​s​s​ ​(​p​e​r​c​e​n​t​a​g​e​ ​o​r​ ​p​r​o​p​o​r​t​i​o​n​)​.
+										 */
+										longDesc: string
+									}
+									show_progress_bar: {
+										/**
+										 * S​h​o​w​ ​P​r​o​g​r​e​s​s​ ​B​a​r
+										 */
+										displayName: string
+										/**
+										 * D​i​s​p​l​a​y​ ​p​r​o​g​r​e​s​s​ ​i​n​d​i​c​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * S​h​o​w​ ​a​ ​p​r​o​g​r​e​s​s​ ​b​a​r​ ​t​o​ ​i​n​d​i​c​a​t​e​ ​h​o​w​ ​m​u​c​h​ ​o​f​ ​t​h​e​ ​f​o​r​m​ ​i​s​ ​c​o​m​p​l​e​t​e​d​.
+										 */
+										longDesc: string
+									}
+									show_typeform_branding: {
+										/**
+										 * S​h​o​w​ ​T​y​p​e​f​o​r​m​ ​B​r​a​n​d​i​n​g
+										 */
+										displayName: string
+										/**
+										 * D​i​s​p​l​a​y​ ​T​y​p​e​f​o​r​m​ ​b​r​a​n​d​i​n​g
+										 */
+										shortDesc: string
+										/**
+										 * S​h​o​w​ ​T​y​p​e​f​o​r​m​ ​b​r​a​n​d​i​n​g​ ​e​l​e​m​e​n​t​s​ ​o​n​ ​t​h​e​ ​f​o​r​m​.
+										 */
+										longDesc: string
+									}
+									show_time_to_complete: {
+										/**
+										 * S​h​o​w​ ​T​i​m​e​ ​t​o​ ​C​o​m​p​l​e​t​e
+										 */
+										displayName: string
+										/**
+										 * D​i​s​p​l​a​y​ ​e​s​t​i​m​a​t​e​d​ ​c​o​m​p​l​e​t​i​o​n​ ​t​i​m​e
+										 */
+										shortDesc: string
+										/**
+										 * S​h​o​w​ ​a​n​ ​e​s​t​i​m​a​t​e​d​ ​t​i​m​e​ ​t​o​ ​c​o​m​p​l​e​t​e​ ​t​h​e​ ​f​o​r​m​.
+										 */
+										longDesc: string
+									}
+									show_number_of_submissions: {
+										/**
+										 * S​h​o​w​ ​S​u​b​m​i​s​s​i​o​n​ ​C​o​u​n​t
+										 */
+										displayName: string
+										/**
+										 * D​i​s​p​l​a​y​ ​n​u​m​b​e​r​ ​o​f​ ​s​u​b​m​i​s​s​i​o​n​s
+										 */
+										shortDesc: string
+										/**
+										 * S​h​o​w​ ​h​o​w​ ​m​a​n​y​ ​p​e​o​p​l​e​ ​h​a​v​e​ ​a​l​r​e​a​d​y​ ​s​u​b​m​i​t​t​e​d​ ​t​h​e​ ​f​o​r​m​.
+										 */
+										longDesc: string
+									}
+									show_cookie_consent: {
+										/**
+										 * S​h​o​w​ ​C​o​o​k​i​e​ ​C​o​n​s​e​n​t
+										 */
+										displayName: string
+										/**
+										 * D​i​s​p​l​a​y​ ​c​o​o​k​i​e​ ​c​o​n​s​e​n​t​ ​n​o​t​i​c​e
+										 */
+										shortDesc: string
+										/**
+										 * S​h​o​w​ ​a​ ​c​o​o​k​i​e​ ​c​o​n​s​e​n​t​ ​n​o​t​i​c​e​ ​f​o​r​ ​G​D​P​R​ ​c​o​m​p​l​i​a​n​c​e​.
+										 */
+										longDesc: string
+									}
+									show_question_number: {
+										/**
+										 * S​h​o​w​ ​Q​u​e​s​t​i​o​n​ ​N​u​m​b​e​r​s
+										 */
+										displayName: string
+										/**
+										 * D​i​s​p​l​a​y​ ​q​u​e​s​t​i​o​n​ ​n​u​m​b​e​r​s
+										 */
+										shortDesc: string
+										/**
+										 * S​h​o​w​ ​q​u​e​s​t​i​o​n​ ​n​u​m​b​e​r​s​ ​n​e​x​t​ ​t​o​ ​e​a​c​h​ ​f​i​e​l​d​.
+										 */
+										longDesc: string
+									}
+									show_key_hint_on_choices: {
+										/**
+										 * S​h​o​w​ ​K​e​y​b​o​a​r​d​ ​H​i​n​t​s
+										 */
+										displayName: string
+										/**
+										 * D​i​s​p​l​a​y​ ​k​e​y​b​o​a​r​d​ ​s​h​o​r​t​c​u​t​s​ ​f​o​r​ ​c​h​o​i​c​e​s
+										 */
+										shortDesc: string
+										/**
+										 * S​h​o​w​ ​k​e​y​b​o​a​r​d​ ​s​h​o​r​t​c​u​t​ ​h​i​n​t​s​ ​f​o​r​ ​m​u​l​t​i​p​l​e​ ​c​h​o​i​c​e​ ​a​n​s​w​e​r​s​.
+										 */
+										longDesc: string
+									}
+									hide_navigation: {
+										/**
+										 * H​i​d​e​ ​N​a​v​i​g​a​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * H​i​d​e​ ​n​a​v​i​g​a​t​i​o​n​ ​b​u​t​t​o​n​s
+										 */
+										shortDesc: string
+										/**
+										 * H​i​d​e​ ​t​h​e​ ​b​a​c​k​ ​a​n​d​ ​f​o​r​w​a​r​d​ ​n​a​v​i​g​a​t​i​o​n​ ​b​u​t​t​o​n​s​.
+										 */
+										longDesc: string
+									}
+									redirect_after_submit_url: {
+										/**
+										 * R​e​d​i​r​e​c​t​ ​U​R​L
+										 */
+										displayName: string
+										/**
+										 * U​R​L​ ​t​o​ ​r​e​d​i​r​e​c​t​ ​a​f​t​e​r​ ​s​u​b​m​i​s​s​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * U​R​L​ ​t​o​ ​r​e​d​i​r​e​c​t​ ​u​s​e​r​s​ ​t​o​ ​a​f​t​e​r​ ​t​h​e​y​ ​s​u​b​m​i​t​ ​t​h​e​ ​f​o​r​m​.
+										 */
+										longDesc: string
+									}
+									google_analytics: {
+										/**
+										 * G​o​o​g​l​e​ ​A​n​a​l​y​t​i​c​s​ ​I​D
+										 */
+										displayName: string
+										/**
+										 * G​o​o​g​l​e​ ​A​n​a​l​y​t​i​c​s​ ​t​r​a​c​k​i​n​g​ ​I​D
+										 */
+										shortDesc: string
+										/**
+										 * G​o​o​g​l​e​ ​A​n​a​l​y​t​i​c​s​ ​t​r​a​c​k​i​n​g​ ​I​D​ ​f​o​r​ ​f​o​r​m​ ​a​n​a​l​y​t​i​c​s​.
+										 */
+										longDesc: string
+									}
+									facebook_pixel: {
+										/**
+										 * F​a​c​e​b​o​o​k​ ​P​i​x​e​l​ ​I​D
+										 */
+										displayName: string
+										/**
+										 * F​a​c​e​b​o​o​k​ ​P​i​x​e​l​ ​t​r​a​c​k​i​n​g​ ​I​D
+										 */
+										shortDesc: string
+										/**
+										 * F​a​c​e​b​o​o​k​ ​P​i​x​e​l​ ​I​D​ ​f​o​r​ ​c​o​n​v​e​r​s​i​o​n​ ​t​r​a​c​k​i​n​g​.
+										 */
+										longDesc: string
+									}
+									google_tag_manager: {
+										/**
+										 * G​o​o​g​l​e​ ​T​a​g​ ​M​a​n​a​g​e​r​ ​I​D
+										 */
+										displayName: string
+										/**
+										 * G​o​o​g​l​e​ ​T​a​g​ ​M​a​n​a​g​e​r​ ​c​o​n​t​a​i​n​e​r​ ​I​D
+										 */
+										shortDesc: string
+										/**
+										 * G​o​o​g​l​e​ ​T​a​g​ ​M​a​n​a​g​e​r​ ​c​o​n​t​a​i​n​e​r​ ​I​D​ ​f​o​r​ ​a​d​v​a​n​c​e​d​ ​t​r​a​c​k​i​n​g​.
+										 */
+										longDesc: string
+									}
+									captcha: {
+										/**
+										 * E​n​a​b​l​e​ ​C​A​P​T​C​H​A
+										 */
+										displayName: string
+										/**
+										 * E​n​a​b​l​e​ ​C​A​P​T​C​H​A​ ​v​e​r​i​f​i​c​a​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * E​n​a​b​l​e​ ​C​A​P​T​C​H​A​ ​t​o​ ​p​r​e​v​e​n​t​ ​s​p​a​m​ ​s​u​b​m​i​s​s​i​o​n​s​.
+										 */
+										longDesc: string
+									}
+									duplicate_prevention: {
+										/**
+										 * D​u​p​l​i​c​a​t​e​ ​P​r​e​v​e​n​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * P​r​e​v​e​n​t​ ​d​u​p​l​i​c​a​t​e​ ​s​u​b​m​i​s​s​i​o​n​s
+										 */
+										shortDesc: string
+										/**
+										 * C​o​n​f​i​g​u​r​e​ ​s​e​t​t​i​n​g​s​ ​t​o​ ​p​r​e​v​e​n​t​ ​u​s​e​r​s​ ​f​r​o​m​ ​s​u​b​m​i​t​t​i​n​g​ ​m​u​l​t​i​p​l​e​ ​r​e​s​p​o​n​s​e​s​.
+										 */
+										longDesc: string
+										type: {
+											fields: {
+												type: {
+													/**
+													 * P​r​e​v​e​n​t​i​o​n​ ​T​y​p​e
+													 */
+													displayName: string
+													/**
+													 * M​e​t​h​o​d​ ​f​o​r​ ​p​r​e​v​e​n​t​i​n​g​ ​d​u​p​l​i​c​a​t​e​s
+													 */
+													shortDesc: string
+													/**
+													 * C​h​o​o​s​e​ ​t​h​e​ ​m​e​t​h​o​d​ ​f​o​r​ ​p​r​e​v​e​n​t​i​n​g​ ​d​u​p​l​i​c​a​t​e​ ​s​u​b​m​i​s​s​i​o​n​s​.
+													 */
+													longDesc: string
+												}
+											}
+										}
+									}
+									responses_limit: {
+										/**
+										 * R​e​s​p​o​n​s​e​ ​L​i​m​i​t
+										 */
+										displayName: string
+										/**
+										 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​p​o​n​s​e​s
+										 */
+										shortDesc: string
+										/**
+										 * S​e​t​ ​a​ ​l​i​m​i​t​ ​o​n​ ​t​h​e​ ​t​o​t​a​l​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​p​o​n​s​e​s​ ​t​h​e​ ​f​o​r​m​ ​w​i​l​l​ ​a​c​c​e​p​t​.
+										 */
+										longDesc: string
+									}
+									period: {
+										/**
+										 * L​i​m​i​t​ ​P​e​r​i​o​d
+										 */
+										displayName: string
+										/**
+										 * T​i​m​e​ ​p​e​r​i​o​d​ ​f​o​r​ ​r​e​s​p​o​n​s​e​ ​l​i​m​i​t​s
+										 */
+										shortDesc: string
+										/**
+										 * T​i​m​e​ ​p​e​r​i​o​d​ ​f​o​r​ ​r​e​s​p​o​n​s​e​ ​l​i​m​i​t​s​ ​(​d​a​y​,​ ​w​e​e​k​,​ ​m​o​n​t​h​,​ ​o​r​ ​y​e​a​r​)​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						logic: {
+							/**
+							 * C​o​n​d​i​t​i​o​n​a​l​ ​L​o​g​i​c
+							 */
+							displayName: string
+							/**
+							 * R​u​l​e​s​ ​f​o​r​ ​c​o​n​d​i​t​i​o​n​a​l​ ​b​r​a​n​c​h​i​n​g​ ​a​n​d​ ​c​a​l​c​u​l​a​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * C​r​e​a​t​e​ ​c​o​n​d​i​t​i​o​n​a​l​ ​l​o​g​i​c​ ​r​u​l​e​s​ ​t​o​ ​s​h​o​w​/​h​i​d​e​ ​f​i​e​l​d​s​,​ ​j​u​m​p​ ​t​o​ ​d​i​f​f​e​r​e​n​t​ ​s​e​c​t​i​o​n​s​,​ ​o​r​ ​p​e​r​f​o​r​m​ ​c​a​l​c​u​l​a​t​i​o​n​s​ ​b​a​s​e​d​ ​o​n​ ​u​s​e​r​ ​r​e​s​p​o​n​s​e​s​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											type: {
+												/**
+												 * L​o​g​i​c​ ​T​y​p​e
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​f​i​e​l​d​ ​t​h​i​s​ ​l​o​g​i​c​ ​a​p​p​l​i​e​s​ ​t​o
+												 */
+												shortDesc: string
+												/**
+												 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​h​i​s​ ​l​o​g​i​c​ ​a​p​p​l​i​e​s​ ​t​o​ ​a​ ​f​o​r​m​ ​f​i​e​l​d​ ​o​r​ ​h​i​d​d​e​n​ ​f​i​e​l​d​.
+												 */
+												longDesc: string
+											}
+											ref: {
+												/**
+												 * F​i​e​l​d​ ​R​e​f​e​r​e​n​c​e
+												 */
+												displayName: string
+												/**
+												 * R​e​f​e​r​e​n​c​e​ ​t​o​ ​t​h​e​ ​f​i​e​l​d​ ​t​h​i​s​ ​l​o​g​i​c​ ​a​p​p​l​i​e​s​ ​t​o
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​r​e​f​e​r​e​n​c​e​ ​I​D​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​h​i​s​ ​c​o​n​d​i​t​i​o​n​a​l​ ​l​o​g​i​c​ ​r​u​l​e​ ​a​p​p​l​i​e​s​ ​t​o​.
+												 */
+												longDesc: string
+											}
+											actions: {
+												/**
+												 * L​o​g​i​c​ ​A​c​t​i​o​n​s
+												 */
+												displayName: string
+												/**
+												 * A​c​t​i​o​n​s​ ​t​o​ ​p​e​r​f​o​r​m​ ​w​h​e​n​ ​c​o​n​d​i​t​i​o​n​s​ ​a​r​e​ ​m​e​t
+												 */
+												shortDesc: string
+												/**
+												 * D​e​f​i​n​e​ ​w​h​a​t​ ​a​c​t​i​o​n​s​ ​t​o​ ​t​a​k​e​ ​w​h​e​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​o​n​d​i​t​i​o​n​s​ ​a​r​e​ ​m​e​t​.
+												 */
+												longDesc: string
+												type: {
+													element_type: {
+														type: {
+															fields: {
+																action: {
+																	/**
+																	 * A​c​t​i​o​n​ ​T​y​p​e
+																	 */
+																	displayName: string
+																	/**
+																	 * T​y​p​e​ ​o​f​ ​a​c​t​i​o​n​ ​t​o​ ​p​e​r​f​o​r​m
+																	 */
+																	shortDesc: string
+																	/**
+																	 * C​h​o​o​s​e​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​a​c​t​i​o​n​ ​(​j​u​m​p​,​ ​a​d​d​,​ ​s​u​b​t​r​a​c​t​,​ ​m​u​l​t​i​p​l​y​,​ ​d​i​v​i​d​e​,​ ​s​e​t​)​.
+																	 */
+																	longDesc: string
+																}
+																details: {
+																	/**
+																	 * A​c​t​i​o​n​ ​D​e​t​a​i​l​s
+																	 */
+																	displayName: string
+																	/**
+																	 * S​p​e​c​i​f​i​c​ ​d​e​t​a​i​l​s​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n
+																	 */
+																	shortDesc: string
+																	/**
+																	 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​p​a​r​a​m​e​t​e​r​s​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+																	 */
+																	longDesc: string
+																	type: {
+																		fields: {
+																			to: {
+																				/**
+																				 * J​u​m​p​ ​T​a​r​g​e​t
+																				 */
+																				displayName: string
+																				/**
+																				 * W​h​e​r​e​ ​t​o​ ​j​u​m​p​ ​t​o
+																				 */
+																				shortDesc: string
+																				/**
+																				 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​t​a​r​g​e​t​ ​f​o​r​ ​j​u​m​p​ ​a​c​t​i​o​n​s​.
+																				 */
+																				longDesc: string
+																				type: {
+																					fields: {
+																						type: {
+																							/**
+																							 * T​a​r​g​e​t​ ​T​y​p​e
+																							 */
+																							displayName: string
+																							/**
+																							 * T​y​p​e​ ​o​f​ ​j​u​m​p​ ​t​a​r​g​e​t
+																							 */
+																							shortDesc: string
+																							/**
+																							 * S​p​e​c​i​f​y​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​t​a​r​g​e​t​ ​(​f​i​e​l​d​,​ ​t​h​a​n​k​y​o​u​,​ ​o​u​t​c​o​m​e​)​.
+																							 */
+																							longDesc: string
+																						}
+																						value: {
+																							/**
+																							 * T​a​r​g​e​t​ ​V​a​l​u​e
+																							 */
+																							displayName: string
+																							/**
+																							 * R​e​f​e​r​e​n​c​e​ ​t​o​ ​t​h​e​ ​t​a​r​g​e​t
+																							 */
+																							shortDesc: string
+																							/**
+																							 * T​h​e​ ​r​e​f​e​r​e​n​c​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​f​i​e​l​d​ ​o​r​ ​s​c​r​e​e​n​.
+																							 */
+																							longDesc: string
+																						}
+																					}
+																				}
+																			}
+																			target: {
+																				/**
+																				 * C​a​l​c​u​l​a​t​i​o​n​ ​T​a​r​g​e​t
+																				 */
+																				displayName: string
+																				/**
+																				 * T​a​r​g​e​t​ ​f​o​r​ ​c​a​l​c​u​l​a​t​i​o​n​s
+																				 */
+																				shortDesc: string
+																				/**
+																				 * S​p​e​c​i​f​y​ ​t​h​e​ ​t​a​r​g​e​t​ ​v​a​r​i​a​b​l​e​ ​f​o​r​ ​c​a​l​c​u​l​a​t​i​o​n​ ​a​c​t​i​o​n​s​.
+																				 */
+																				longDesc: string
+																				type: {
+																					fields: {
+																						type: {
+																							/**
+																							 * T​a​r​g​e​t​ ​T​y​p​e
+																							 */
+																							displayName: string
+																							/**
+																							 * T​y​p​e​ ​o​f​ ​c​a​l​c​u​l​a​t​i​o​n​ ​t​a​r​g​e​t
+																							 */
+																							shortDesc: string
+																							/**
+																							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​t​a​r​g​e​t​ ​(​u​s​u​a​l​l​y​ ​v​a​r​i​a​b​l​e​)​.
+																							 */
+																							longDesc: string
+																						}
+																						value: {
+																							/**
+																							 * T​a​r​g​e​t​ ​V​a​r​i​a​b​l​e
+																							 */
+																							displayName: string
+																							/**
+																							 * N​a​m​e​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​v​a​r​i​a​b​l​e
+																							 */
+																							shortDesc: string
+																							/**
+																							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​v​a​r​i​a​b​l​e​ ​t​o​ ​m​o​d​i​f​y​.
+																							 */
+																							longDesc: string
+																						}
+																					}
+																				}
+																			}
+																			value: {
+																				/**
+																				 * C​a​l​c​u​l​a​t​i​o​n​ ​V​a​l​u​e
+																				 */
+																				displayName: string
+																				/**
+																				 * V​a​l​u​e​ ​f​o​r​ ​c​a​l​c​u​l​a​t​i​o​n​s
+																				 */
+																				shortDesc: string
+																				/**
+																				 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​u​s​e​ ​i​n​ ​c​a​l​c​u​l​a​t​i​o​n​ ​a​c​t​i​o​n​s​.
+																				 */
+																				longDesc: string
+																				type: {
+																					fields: {
+																						type: {
+																							/**
+																							 * V​a​l​u​e​ ​T​y​p​e
+																							 */
+																							displayName: string
+																							/**
+																							 * T​y​p​e​ ​o​f​ ​v​a​l​u​e
+																							 */
+																							shortDesc: string
+																							/**
+																							 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​h​i​s​ ​i​s​ ​a​ ​c​o​n​s​t​a​n​t​,​ ​v​a​r​i​a​b​l​e​,​ ​o​r​ ​e​v​a​l​u​a​t​i​o​n​.
+																							 */
+																							longDesc: string
+																						}
+																						value: {
+																							/**
+																							 * A​c​t​u​a​l​ ​V​a​l​u​e
+																							 */
+																							displayName: string
+																							/**
+																							 * T​h​e​ ​a​c​t​u​a​l​ ​v​a​l​u​e​ ​o​r​ ​r​e​f​e​r​e​n​c​e
+																							 */
+																							shortDesc: string
+																							/**
+																							 * T​h​e​ ​a​c​t​u​a​l​ ​v​a​l​u​e​,​ ​v​a​r​i​a​b​l​e​ ​n​a​m​e​,​ ​o​r​ ​e​x​p​r​e​s​s​i​o​n​ ​t​o​ ​u​s​e​.
+																							 */
+																							longDesc: string
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+																condition: {
+																	/**
+																	 * A​c​t​i​o​n​ ​C​o​n​d​i​t​i​o​n
+																	 */
+																	displayName: string
+																	/**
+																	 * C​o​n​d​i​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​s​ ​t​h​i​s​ ​a​c​t​i​o​n
+																	 */
+																	shortDesc: string
+																	/**
+																	 * D​e​f​i​n​e​ ​t​h​e​ ​c​o​n​d​i​t​i​o​n​ ​t​h​a​t​ ​m​u​s​t​ ​b​e​ ​m​e​t​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​ ​t​o​ ​e​x​e​c​u​t​e​.
+																	 */
+																	longDesc: string
+																	type: {
+																		fields: {
+																			op: {
+																				/**
+																				 * O​p​e​r​a​t​o​r
+																				 */
+																				displayName: string
+																				/**
+																				 * C​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+																				 */
+																				shortDesc: string
+																				/**
+																				 * T​h​e​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​c​o​m​p​a​r​i​n​g​ ​v​a​l​u​e​s​.
+																				 */
+																				longDesc: string
+																			}
+																			vars: {
+																				/**
+																				 * V​a​r​i​a​b​l​e​s
+																				 */
+																				displayName: string
+																				/**
+																				 * V​a​r​i​a​b​l​e​s​ ​t​o​ ​c​o​m​p​a​r​e
+																				 */
+																				shortDesc: string
+																				/**
+																				 * T​h​e​ ​v​a​r​i​a​b​l​e​s​ ​o​r​ ​v​a​l​u​e​s​ ​t​o​ ​c​o​m​p​a​r​e​ ​i​n​ ​t​h​i​s​ ​c​o​n​d​i​t​i​o​n​.
+																				 */
+																				longDesc: string
+																				type: {
+																					element_type: {
+																						type: {
+																							fields: {
+																								type: {
+																									/**
+																									 * V​a​r​i​a​b​l​e​ ​T​y​p​e
+																									 */
+																									displayName: string
+																									/**
+																									 * T​y​p​e​ ​o​f​ ​v​a​r​i​a​b​l​e
+																									 */
+																									shortDesc: string
+																									/**
+																									 * S​p​e​c​i​f​y​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​v​a​r​i​a​b​l​e​ ​(​f​i​e​l​d​,​ ​h​i​d​d​e​n​,​ ​v​a​r​i​a​b​l​e​,​ ​c​o​n​s​t​a​n​t​,​ ​c​h​o​i​c​e​)​.
+																									 */
+																									longDesc: string
+																								}
+																								value: {
+																									/**
+																									 * V​a​r​i​a​b​l​e​ ​V​a​l​u​e
+																									 */
+																									displayName: string
+																									/**
+																									 * T​h​e​ ​v​a​l​u​e​ ​o​r​ ​r​e​f​e​r​e​n​c​e
+																									 */
+																									shortDesc: string
+																									/**
+																									 * T​h​e​ ​a​c​t​u​a​l​ ​v​a​l​u​e​ ​o​r​ ​r​e​f​e​r​e​n​c​e​ ​t​o​ ​c​o​m​p​a​r​e​.
+																									 */
+																									longDesc: string
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 		DocusignESignature: {
 			/**
@@ -37308,6 +40362,42 @@ export type TranslationFunctions = {
 											}
 										}
 									}
+									subOption3: {
+										/**
+										 * Sub Option 3 of option 1
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sub Option 3 Short Description
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Sub Option 3 Long Description
+										 */
+										longDesc: () => LocalizedString
+										type: {
+											element_type: {
+												type: {
+													fields: {
+														subSubOption1: {
+															/**
+															 * Sub Sub Option 1
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Sub Sub Option 1 Short Description
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Sub Sub Option 1 Long Description
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+										}
+									}
 								}
 							}
 						}
@@ -43832,6 +46922,636 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Specify the attributes and their values for the new record. The attributes must match the schema of the selected object type.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		Airtable: {
+			/**
+			 * Airtable
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Cloud-based database and collaboration platform
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Airtable combines the simplicity of a spreadsheet with the power of a database. Create and manage bases, tables, and records with ease. Perfect for project management, CRM, content planning, and team collaboration.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				list_records: {
+					/**
+					 * List Records
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve records from an Airtable table
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * List and filter records from a specified Airtable table with support for sorting, filtering, pagination, and field selection
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						base_id: {
+							/**
+							 * Base ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the Airtable base
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Airtable base that contains the table you want to query
+							 */
+							longDesc: () => LocalizedString
+						}
+						table_id: {
+							/**
+							 * Table ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the table to query
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific table within the base from which to retrieve records
+							 */
+							longDesc: () => LocalizedString
+						}
+						fields: {
+							/**
+							 * Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific fields to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select which fields to include in the response. If not specified, all fields will be returned
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_size: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of records per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how many records to retrieve per page (maximum 100)
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Record offset for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use the offset from a previous response to retrieve the next page of records
+							 */
+							longDesc: () => LocalizedString
+						}
+						timezone: {
+							/**
+							 * Timezone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Timezone for date formatting
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The timezone to use when formatting date and time fields in the response
+							 */
+							longDesc: () => LocalizedString
+						}
+						user_locale: {
+							/**
+							 * User Locale
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Locale for formatting
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The locale to use for formatting numbers, dates, and other locale-specific data
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort configuration
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Configure how to sort the returned records
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the field to use for sorting the records
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort order direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose whether to sort in ascending or descending order
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						cell_format: {
+							/**
+							 * Cell Format
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Format for cell values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose how cell values should be formatted in the response
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter configuration
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Configure filtering criteria to limit which records are returned
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Filter Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to filter on
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the field to use for filtering records
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Filter Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Value to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to compare against when filtering records
+										 */
+										longDesc: () => LocalizedString
+									}
+									type: {
+										/**
+										 * Filter Type
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Type of filter comparison
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose the type of comparison to perform when filtering
+										 */
+										longDesc: () => LocalizedString
+									}
+									formula: {
+										/**
+										 * Filter Formula
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Custom filter formula
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * A custom Airtable formula to use for filtering records
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						return_fields_by_field_id: {
+							/**
+							 * Return Fields by Field ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Return field IDs instead of names
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, field data will be returned using field IDs instead of field names
+							 */
+							longDesc: () => LocalizedString
+						}
+						view: {
+							/**
+							 * View
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Table view to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select a specific view from the table to apply its filtering and sorting
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_record: {
+					/**
+					 * Get Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific record from Airtable
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get a single record by its ID from a specified Airtable table
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						base_id: {
+							/**
+							 * Base ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the Airtable base
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Airtable base that contains the table with the record you want to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+						table_id: {
+							/**
+							 * Table ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the table
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific table within the base that contains the record
+							 */
+							longDesc: () => LocalizedString
+						}
+						record_id: {
+							/**
+							 * Record ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the record to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the specific record you want to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_record: {
+					/**
+					 * Create Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new record in Airtable
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new record in a specified Airtable table with the provided field values
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						base_id: {
+							/**
+							 * Base ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the Airtable base
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Airtable base where you want to create the new record
+							 */
+							longDesc: () => LocalizedString
+						}
+						table_id: {
+							/**
+							 * Table ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the table
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific table within the base where the record will be created
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_record: {
+					/**
+					 * Delete Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a record from Airtable
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently delete a specific record from an Airtable table
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						base_id: {
+							/**
+							 * Base ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the Airtable base
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Airtable base that contains the table with the record to delete
+							 */
+							longDesc: () => LocalizedString
+						}
+						table_id: {
+							/**
+							 * Table ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the table
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific table within the base that contains the record to delete
+							 */
+							longDesc: () => LocalizedString
+						}
+						record_id: {
+							/**
+							 * Record ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the record to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the specific record you want to delete
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_bases: {
+					/**
+					 * List Bases
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List all accessible Airtable bases
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all Airtable bases that are accessible with the current authentication
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination offset
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use the offset from a previous response to retrieve the next page of bases
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_tables: {
+					/**
+					 * List Tables
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List tables in an Airtable base
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all tables within a specified Airtable base
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						base_id: {
+							/**
+							 * Base ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the Airtable base
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Airtable base for which you want to list all available tables
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_record: {
+					/**
+					 * New Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new record is created in Airtable
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitor an Airtable table for newly created records and trigger automation when new records are added
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						base_id: {
+							/**
+							 * Base ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the Airtable base to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Airtable base that contains the table you want to monitor for new records
+							 */
+							longDesc: () => LocalizedString
+						}
+						table_id: {
+							/**
+							 * Table ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the table to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific table within the base to monitor for new record creation
+							 */
+							longDesc: () => LocalizedString
+						}
+						view: {
+							/**
+							 * View
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional table view to filter records
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select a specific view from the table to monitor only records that match the view's filtering and sorting criteria
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				updated_record: {
+					/**
+					 * Updated Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a record is updated in Airtable
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitor an Airtable table for record modifications and trigger automation when existing records are updated
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						base_id: {
+							/**
+							 * Base ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the Airtable base to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Airtable base that contains the table you want to monitor for record updates
+							 */
+							longDesc: () => LocalizedString
+						}
+						table_id: {
+							/**
+							 * Table ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the table to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific table within the base to monitor for record modifications
+							 */
+							longDesc: () => LocalizedString
+						}
+						view: {
+							/**
+							 * View
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional table view to filter records
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select a specific view from the table to monitor only records that match the view's filtering and sorting criteria
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -55090,6 +58810,2394 @@ export type TranslationFunctions = {
 			 * Typeform is a versatile form builder that allows you to create engaging, conversational forms, surveys, quizzes, and polls. With its intuitive interface and powerful features, you can collect responses, analyze data, and integrate with other tools to streamline your workflow. Perfect for lead generation, customer feedback, event registration, and market research.
 			 */
 			longDesc: () => LocalizedString
+			triggers: {
+				new_form_response: {
+					/**
+					 * New Form Response
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new response is submitted to a Typeform form.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates whenever someone submits a response to your Typeform. It provides complete response data including all answers, form definition, calculated scores, and metadata. Perfect for processing form submissions, updating databases, sending notifications, or triggering follow-up workflows based on user responses.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						form_id: {
+							/**
+							 * Form
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Typeform to monitor for new responses
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific Typeform that you want to monitor for new submissions. The trigger will fire every time someone completes and submits this form.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			actions: {
+				list_workspaces: {
+					/**
+					 * List Workspaces
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of workspaces in your Typeform account.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches all workspaces available in your Typeform account with pagination and search capabilities. Workspaces help organize your forms and collaborate with team members. Use this to get workspace information including form counts and sharing status.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						search: {
+							/**
+							 * Search
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search term to filter workspaces by name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional search term to filter workspaces by their name. Leave empty to retrieve all workspaces.
+							 */
+							longDesc: () => LocalizedString
+						}
+						page: {
+							/**
+							 * Page
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Page number for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The page number to retrieve. Use this for pagination when you have many workspaces.
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_size: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of workspaces to return per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of workspaces to return per page. Maximum is 200, default is 10.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_image: {
+					/**
+					 * Create Image
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Upload an image to your Typeform account for use in forms.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Uploads an image to your Typeform account that can be used in your forms for picture choice questions, form backgrounds, or other visual elements. You can upload either by providing a file or a URL to an existing image.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						url: {
+							/**
+							 * Image URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * URL of the image to upload
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The URL of an existing image to upload to your Typeform account. Use this if you have an image hosted elsewhere.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file_name: {
+							/**
+							 * File Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom name for the uploaded image
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional custom name for the uploaded image. If not provided, the original filename will be used.
+							 */
+							longDesc: () => LocalizedString
+						}
+						image: {
+							/**
+							 * Image File
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Image file to upload
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The image file to upload directly to your Typeform account. Supported formats include JPG, PNG, and GIF.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_form: {
+					/**
+					 * Delete Form
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Permanently delete a Typeform from your account.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently deletes a Typeform from your account. This action cannot be undone, and all associated responses will also be deleted. Use with caution as this will remove the form and all its data.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						form_id: {
+							/**
+							 * Form
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The form to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Typeform that you want to permanently delete from your account.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_image: {
+					/**
+					 * Delete Image
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete an image from your Typeform account.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes an image from your Typeform account. Once deleted, the image will no longer be available for use in any forms. Make sure the image is not currently being used in any active forms before deletion.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						image_id: {
+							/**
+							 * Image
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The image to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the image that you want to delete from your Typeform account.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_form: {
+					/**
+					 * Get Form
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific Typeform.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches complete details about a specific Typeform including all fields, settings, thank you screens, and metadata. Use this to get the full form definition for analysis, backup, or integration purposes.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						form_id: {
+							/**
+							 * Form
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The form to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Typeform that you want to get detailed information about.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_forms: {
+					/**
+					 * List Forms
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of forms in your Typeform account.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches all forms in your Typeform account with filtering, sorting, and pagination options. Use this to get an overview of your forms, find specific forms by search criteria, or integrate with other systems.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						search: {
+							/**
+							 * Search
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search term to filter forms by title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional search term to filter forms by their title. Leave empty to retrieve all forms.
+							 */
+							longDesc: () => LocalizedString
+						}
+						page: {
+							/**
+							 * Page
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Page number for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The page number to retrieve. Use this for pagination when you have many forms.
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_size: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of forms to return per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of forms to return per page. Maximum is 200, default is 10.
+							 */
+							longDesc: () => LocalizedString
+						}
+						workspace_id: {
+							/**
+							 * Workspace ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter forms by workspace
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional workspace ID to filter forms that belong to a specific workspace.
+							 */
+							longDesc: () => LocalizedString
+						}
+						order: {
+							/**
+							 * Sort Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to sort the results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the returned forms.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose which field to sort the forms by.
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose whether to sort in ascending or descending order.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				list_images: {
+					/**
+					 * List Images
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve all images in your Typeform account.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches all images that have been uploaded to your Typeform account. Use this to see what images are available for use in your forms, manage your image library, or get image URLs for integration purposes.
+					 */
+					longDesc: () => LocalizedString
+				}
+				list_responses: {
+					/**
+					 * List Responses
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve responses submitted to a specific Typeform.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches all responses submitted to a specific Typeform with comprehensive filtering and sorting options. Use this to analyze form submissions, export data, or integrate responses with other systems.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						form_id: {
+							/**
+							 * Form
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The form to get responses from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Typeform that you want to retrieve responses from.
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_size: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of responses to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of responses to return. Maximum is 1000, default is 25.
+							 */
+							longDesc: () => LocalizedString
+						}
+						since: {
+							/**
+							 * Since Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Only include responses submitted after this date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter responses to only include those submitted after the specified date.
+							 */
+							longDesc: () => LocalizedString
+						}
+						until: {
+							/**
+							 * Until Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Only include responses submitted before this date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter responses to only include those submitted before the specified date.
+							 */
+							longDesc: () => LocalizedString
+						}
+						after: {
+							/**
+							 * After Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination token for results after a specific response
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use this token for pagination to get responses that come after a specific response.
+							 */
+							longDesc: () => LocalizedString
+						}
+						before: {
+							/**
+							 * Before Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination token for results before a specific response
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use this token for pagination to get responses that come before a specific response.
+							 */
+							longDesc: () => LocalizedString
+						}
+						included_response_ids: {
+							/**
+							 * Include Response IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific response IDs to include
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of specific response IDs to include in the results. Only these responses will be returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+						excluded_response_ids: {
+							/**
+							 * Exclude Response IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific response IDs to exclude
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of specific response IDs to exclude from the results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						response_type: {
+							/**
+							 * Response Types
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by response completion status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter responses by their completion status (started, partial, or completed).
+							 */
+							longDesc: () => LocalizedString
+						}
+						completed: {
+							/**
+							 * Completed Only
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Only return completed responses
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to true to only return completed responses, false for incomplete responses.
+							 */
+							longDesc: () => LocalizedString
+						}
+						order: {
+							/**
+							 * Sort Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to sort the results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the returned responses.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose which field to sort the responses by.
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose whether to sort in ascending or descending order.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						query: {
+							/**
+							 * Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Advanced query to filter responses
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Advanced query string to filter responses based on answer values.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fields: {
+							/**
+							 * Include Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific fields to include in responses
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of specific field IDs to include in the response data.
+							 */
+							longDesc: () => LocalizedString
+						}
+						answered_fields: {
+							/**
+							 * Answered Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Only include responses that answered these fields
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of field IDs that must have been answered for a response to be included.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_form: {
+					/**
+					 * Create Form
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new Typeform with fields, logic, and custom settings.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a comprehensive new Typeform with complete customization options including fields, welcome screens, thank you screens, conditional logic, scoring, and advanced settings. Perfect for building surveys, quizzes, contact forms, or any interactive form with complex branching logic and custom styling.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						title: {
+							/**
+							 * Form Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The title of your new form
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The main title that will appear at the top of your form and in your form list.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fields: {
+							/**
+							 * Form Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The questions and input fields for your form
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Add questions and input fields to your form. Each field can be customized with different types, properties, validations, and scoring options.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											ref: {
+												/**
+												 * Field Reference
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Unique reference for this field
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Optional unique reference ID for this field that can be used in logic and integrations.
+												 */
+												longDesc: () => LocalizedString
+											}
+											title: {
+												/**
+												 * Question Title
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The question or prompt text
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The main question text that users will see for this field.
+												 */
+												longDesc: () => LocalizedString
+											}
+											type: {
+												/**
+												 * Field Type
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The type of input field
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Choose the type of input field (text, multiple choice, email, etc.).
+												 */
+												longDesc: () => LocalizedString
+											}
+											properties: {
+												/**
+												 * Field Properties
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Additional configuration for this field
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Configure field-specific properties like choices, descriptions, and behavior.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														description: {
+															/**
+															 * Description
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Additional description or help text for this field
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Optional description text that appears below the question to provide additional context or instructions.
+															 */
+															longDesc: () => LocalizedString
+														}
+														choices: {
+															/**
+															 * Answer Choices
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Available answer options for multiple choice fields
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Define the available answer choices for multiple choice, dropdown, or picture choice fields.
+															 */
+															longDesc: () => LocalizedString
+															type: {
+																element_type: {
+																	type: {
+																		fields: {
+																			ref: {
+																				/**
+																				 * Choice Reference
+																				 */
+																				displayName: () => LocalizedString
+																				/**
+																				 * Unique reference for this choice
+																				 */
+																				shortDesc: () => LocalizedString
+																				/**
+																				 * Optional unique reference ID for this choice option.
+																				 */
+																				longDesc: () => LocalizedString
+																			}
+																			label: {
+																				/**
+																				 * Choice Label
+																				 */
+																				displayName: () => LocalizedString
+																				/**
+																				 * The text label for this choice
+																				 */
+																				shortDesc: () => LocalizedString
+																				/**
+																				 * The text that users will see for this answer choice.
+																				 */
+																				longDesc: () => LocalizedString
+																			}
+																			attachment: {
+																				/**
+																				 * Choice Attachment
+																				 */
+																				displayName: () => LocalizedString
+																				/**
+																				 * Image or media attached to this choice
+																				 */
+																				shortDesc: () => LocalizedString
+																				/**
+																				 * Optional image or media file attached to this choice option.
+																				 */
+																				longDesc: () => LocalizedString
+																				type: {
+																					fields: {
+																						type: {
+																							/**
+																							 * Attachment Type
+																							 */
+																							displayName: () => LocalizedString
+																							/**
+																							 * Type of media attachment
+																							 */
+																							shortDesc: () => LocalizedString
+																							/**
+																							 * The type of media file (image or video).
+																							 */
+																							longDesc: () => LocalizedString
+																						}
+																						href: {
+																							/**
+																							 * Attachment URL
+																							 */
+																							displayName: () => LocalizedString
+																							/**
+																							 * URL of the media file
+																							 */
+																							shortDesc: () => LocalizedString
+																							/**
+																							 * The URL or path to the media file.
+																							 */
+																							longDesc: () => LocalizedString
+																						}
+																						properties: {
+																							/**
+																							 * Attachment Properties
+																							 */
+																							displayName: () => LocalizedString
+																							/**
+																							 * Additional properties for the attachment
+																							 */
+																							shortDesc: () => LocalizedString
+																							/**
+																							 * Configure additional properties for the media attachment.
+																							 */
+																							longDesc: () => LocalizedString
+																							type: {
+																								fields: {
+																									description: {
+																										/**
+																										 * Attachment Description
+																										 */
+																										displayName: () => LocalizedString
+																										/**
+																										 * Description for the attachment
+																										 */
+																										shortDesc: () => LocalizedString
+																										/**
+																										 * Optional description or alt text for the media attachment.
+																										 */
+																										longDesc: () => LocalizedString
+																									}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+														allow_multiple_selection: {
+															/**
+															 * Allow Multiple Selection
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Allow users to select multiple choices
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Enable this to allow users to select more than one answer option.
+															 */
+															longDesc: () => LocalizedString
+														}
+														randomize: {
+															/**
+															 * Randomize Choices
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Show choices in random order
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Randomize the order of answer choices for each respondent.
+															 */
+															longDesc: () => LocalizedString
+														}
+														allow_other_choice: {
+															/**
+															 * Allow Other Choice
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Include an "Other" option with text input
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Add an "Other" option that allows users to enter their own custom answer.
+															 */
+															longDesc: () => LocalizedString
+														}
+														vertical_alignment: {
+															/**
+															 * Vertical Alignment
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Display choices vertically
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Display answer choices in a vertical list instead of horizontally.
+															 */
+															longDesc: () => LocalizedString
+														}
+														supersized: {
+															/**
+															 * Supersized
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Display choices in large format
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Show answer choices in a larger, more prominent format.
+															 */
+															longDesc: () => LocalizedString
+														}
+														show_labels: {
+															/**
+															 * Show Labels
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Display labels on rating scales
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Show text labels on rating scales and opinion scales.
+															 */
+															longDesc: () => LocalizedString
+														}
+														alphabetical_order: {
+															/**
+															 * Alphabetical Order
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Sort choices alphabetically
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Automatically sort answer choices in alphabetical order.
+															 */
+															longDesc: () => LocalizedString
+														}
+														hide_marks: {
+															/**
+															 * Hide Marks
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Hide scale markings
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Hide the numerical markings on rating and opinion scales.
+															 */
+															longDesc: () => LocalizedString
+														}
+														button_text: {
+															/**
+															 * Button Text
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Custom text for the continue button
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Customize the text that appears on the continue/submit button for this field.
+															 */
+															longDesc: () => LocalizedString
+														}
+														start_at_one: {
+															/**
+															 * Start at One
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Start scale numbering at 1 instead of 0
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Begin scale numbering at 1 instead of the default 0.
+															 */
+															longDesc: () => LocalizedString
+														}
+														structure: {
+															/**
+															 * Date Structure
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Format for date input fields
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Choose the date format structure (MMDDYYYY, DDMMYYYY, or YYYYMMDD).
+															 */
+															longDesc: () => LocalizedString
+														}
+														separator: {
+															/**
+															 * Date Separator
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Separator character for date fields
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Choose the separator character used between date components (/, -, or .).
+															 */
+															longDesc: () => LocalizedString
+														}
+														currency: {
+															/**
+															 * Payment Currency
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Currency for payment fields
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Select the currency to use for payment fields.
+															 */
+															longDesc: () => LocalizedString
+														}
+														price: {
+															/**
+															 * Payment Price
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Price configuration for payment fields
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Configure the price structure for payment fields.
+															 */
+															longDesc: () => LocalizedString
+															type: {
+																fields: {
+																	type: {
+																		/**
+																		 * Price Type
+																		 */
+																		displayName: () => LocalizedString
+																		/**
+																		 * Type of price calculation
+																		 */
+																		shortDesc: () => LocalizedString
+																		/**
+																		 * Specify how the price should be calculated.
+																		 */
+																		longDesc: () => LocalizedString
+																	}
+																	value: {
+																		/**
+																		 * Price Value
+																		 */
+																		displayName: () => LocalizedString
+																		/**
+																		 * The price value or variable
+																		 */
+																		shortDesc: () => LocalizedString
+																		/**
+																		 * The actual price value or reference to a price variable.
+																		 */
+																		longDesc: () => LocalizedString
+																	}
+																}
+															}
+														}
+														show_button: {
+															/**
+															 * Show Button
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Display a button on this field
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Show a continue or action button for this field.
+															 */
+															longDesc: () => LocalizedString
+														}
+														default_country_code: {
+															/**
+															 * Default Country Code
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Default country for phone number fields
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Set the default country code for phone number input fields.
+															 */
+															longDesc: () => LocalizedString
+														}
+														steps: {
+															/**
+															 * Scale Steps
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Number of steps in rating scales
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Define the number of steps or points in rating and opinion scales.
+															 */
+															longDesc: () => LocalizedString
+														}
+														shape: {
+															/**
+															 * Rating Shape
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Visual shape for rating fields
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Choose the visual representation for rating fields (stars, hearts, etc.).
+															 */
+															longDesc: () => LocalizedString
+														}
+														labels: {
+															/**
+															 * Scale Labels
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Custom labels for scale endpoints
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Add custom text labels for the left, right, and center points of scales.
+															 */
+															longDesc: () => LocalizedString
+															type: {
+																fields: {
+																	left: {
+																		/**
+																		 * Left Label
+																		 */
+																		displayName: () => LocalizedString
+																		/**
+																		 * Label for the left end of the scale
+																		 */
+																		shortDesc: () => LocalizedString
+																		/**
+																		 * Custom text label for the left (minimum) end of the scale.
+																		 */
+																		longDesc: () => LocalizedString
+																	}
+																	right: {
+																		/**
+																		 * Right Label
+																		 */
+																		displayName: () => LocalizedString
+																		/**
+																		 * Label for the right end of the scale
+																		 */
+																		shortDesc: () => LocalizedString
+																		/**
+																		 * Custom text label for the right (maximum) end of the scale.
+																		 */
+																		longDesc: () => LocalizedString
+																	}
+																	center: {
+																		/**
+																		 * Center Label
+																		 */
+																		displayName: () => LocalizedString
+																		/**
+																		 * Label for the center of the scale
+																		 */
+																		shortDesc: () => LocalizedString
+																		/**
+																		 * Custom text label for the center point of the scale.
+																		 */
+																		longDesc: () => LocalizedString
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+											validations: {
+												/**
+												 * Field Validations
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Validation rules for this field
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Set validation rules like required fields, minimum/maximum values, and length limits.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														required: {
+															/**
+															 * Required Field
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Make this field mandatory
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Require users to answer this field before proceeding.
+															 */
+															longDesc: () => LocalizedString
+														}
+														max_length: {
+															/**
+															 * Maximum Length
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Maximum number of characters allowed
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Set the maximum number of characters users can enter.
+															 */
+															longDesc: () => LocalizedString
+														}
+														min_value: {
+															/**
+															 * Minimum Value
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Minimum numeric value allowed
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Set the minimum numeric value for number fields.
+															 */
+															longDesc: () => LocalizedString
+														}
+														max_value: {
+															/**
+															 * Maximum Value
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Maximum numeric value allowed
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Set the maximum numeric value for number fields.
+															 */
+															longDesc: () => LocalizedString
+														}
+														min_selection: {
+															/**
+															 * Minimum Selections
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Minimum number of choices to select
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Require users to select at least this many choices.
+															 */
+															longDesc: () => LocalizedString
+														}
+														max_selection: {
+															/**
+															 * Maximum Selections
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Maximum number of choices to select
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Limit users to selecting no more than this many choices.
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+											attachment: {
+												/**
+												 * Field Attachment
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Media attachment for this field
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Add an image or video attachment to this field.
+												 */
+												longDesc: () => LocalizedString
+											}
+											layout: {
+												/**
+												 * Field Layout
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Layout configuration for media attachments
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Configure how media attachments are displayed with this field.
+												 */
+												longDesc: () => LocalizedString
+											}
+											scoring: {
+												/**
+												 * Field Scoring
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Scoring rules for quiz fields
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Configure scoring rules for quiz and assessment fields.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														type: {
+															/**
+															 * Scoring Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of scoring method
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Choose the scoring method for this field.
+															 */
+															longDesc: () => LocalizedString
+														}
+														boolean_correct: {
+															/**
+															 * Boolean Correct Scoring
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Scoring for true/false questions
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Configure scoring for boolean/true-false questions.
+															 */
+															longDesc: () => LocalizedString
+															type: {
+																fields: {
+																	boolean: {
+																		/**
+																		 * Correct Answer
+																		 */
+																		displayName: () => LocalizedString
+																		/**
+																		 * The correct boolean value
+																		 */
+																		shortDesc: () => LocalizedString
+																		/**
+																		 * Specify whether true or false is the correct answer.
+																		 */
+																		longDesc: () => LocalizedString
+																	}
+																	score: {
+																		/**
+																		 * Score Points
+																		 */
+																		displayName: () => LocalizedString
+																		/**
+																		 * Points awarded for correct answer
+																		 */
+																		shortDesc: () => LocalizedString
+																		/**
+																		 * Number of points to award when answered correctly.
+																		 */
+																		longDesc: () => LocalizedString
+																	}
+																}
+															}
+														}
+														choices_all_correct: {
+															/**
+															 * Multiple Choice Scoring
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Scoring for multiple choice questions
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Configure scoring for multiple choice questions.
+															 */
+															longDesc: () => LocalizedString
+															type: {
+																fields: {
+																	choices: {
+																		/**
+																		 * Correct Choices
+																		 */
+																		displayName: () => LocalizedString
+																		/**
+																		 * List of correct choice references
+																		 */
+																		shortDesc: () => LocalizedString
+																		/**
+																		 * References to the correct answer choices.
+																		 */
+																		longDesc: () => LocalizedString
+																	}
+																	score: {
+																		/**
+																		 * Score Points
+																		 */
+																		displayName: () => LocalizedString
+																		/**
+																		 * Points awarded for correct answer
+																		 */
+																		shortDesc: () => LocalizedString
+																		/**
+																		 * Number of points to award when answered correctly.
+																		 */
+																		longDesc: () => LocalizedString
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						hidden: {
+							/**
+							 * Hidden Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Hidden fields to pass data through the form
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of hidden field names that can be used to pass data through URL parameters.
+							 */
+							longDesc: () => LocalizedString
+						}
+						variables: {
+							/**
+							 * Form Variables
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom variables for calculations and logic
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Define custom variables that can be used in calculations and conditional logic.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									score: {
+										/**
+										 * Score Variable
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Variable to track quiz scores
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Numeric variable used to calculate and track quiz or assessment scores.
+										 */
+										longDesc: () => LocalizedString
+									}
+									price: {
+										/**
+										 * Price Variable
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Variable to track payment amounts
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Numeric variable used to calculate and track payment amounts.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						welcome_screens: {
+							/**
+							 * Welcome Screens
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Introductory screens shown before the form
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Create welcome screens to introduce your form, explain its purpose, or provide instructions.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											ref: {
+												/**
+												 * Screen Reference
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Unique reference for this screen
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Optional unique reference ID for this welcome screen.
+												 */
+												longDesc: () => LocalizedString
+											}
+											title: {
+												/**
+												 * Screen Title
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Title text for this welcome screen
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The main title text displayed on this welcome screen.
+												 */
+												longDesc: () => LocalizedString
+											}
+											properties: {
+												/**
+												 * Screen Properties
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Configuration options for this screen
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Configure the appearance and behavior of this welcome screen.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														description: {
+															/**
+															 * Screen Description
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Description text for this screen
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Additional description or instruction text for this welcome screen.
+															 */
+															longDesc: () => LocalizedString
+														}
+														show_button: {
+															/**
+															 * Show Button
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Display a continue button
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Show a continue button on this welcome screen.
+															 */
+															longDesc: () => LocalizedString
+														}
+														button_text: {
+															/**
+															 * Button Text
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Custom text for the continue button
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Customize the text that appears on the continue button.
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						thankyou_screens: {
+							/**
+							 * Thank You Screens
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Screens shown after form completion
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Create custom thank you screens to show appreciation, provide next steps, or display results.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											ref: {
+												/**
+												 * Screen Reference
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Unique reference for this screen
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Optional unique reference ID for this thank you screen.
+												 */
+												longDesc: () => LocalizedString
+											}
+											title: {
+												/**
+												 * Screen Title
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Title text for this thank you screen
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The main title text displayed on this thank you screen.
+												 */
+												longDesc: () => LocalizedString
+											}
+											properties: {
+												/**
+												 * Screen Properties
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Configuration options for this screen
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Configure the appearance and behavior of this thank you screen.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													fields: {
+														description: {
+															/**
+															 * Screen Description
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Description text for this screen
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Additional description or message text for this thank you screen.
+															 */
+															longDesc: () => LocalizedString
+														}
+														show_button: {
+															/**
+															 * Show Button
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Display an action button
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Show an action button on this thank you screen.
+															 */
+															longDesc: () => LocalizedString
+														}
+														button_text: {
+															/**
+															 * Button Text
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Custom text for the action button
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Customize the text that appears on the action button.
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						settings: {
+							/**
+							 * Form Settings
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Global settings and configuration for the form
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Configure form-wide settings like language, progress bar, branding, and behavior options.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									language: {
+										/**
+										 * Form Language
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Language for form interface
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Set the language for form interface elements and default text.
+										 */
+										longDesc: () => LocalizedString
+									}
+									is_public: {
+										/**
+										 * Public Form
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Make form publicly accessible
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Allow anyone with the link to access and submit the form.
+										 */
+										longDesc: () => LocalizedString
+									}
+									autosave_progress: {
+										/**
+										 * Autosave Progress
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Automatically save user progress
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Save user progress automatically so they can continue later if interrupted.
+										 */
+										longDesc: () => LocalizedString
+									}
+									progress_bar: {
+										/**
+										 * Progress Bar Type
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Style of progress indicator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose how to display form progress (percentage or proportion).
+										 */
+										longDesc: () => LocalizedString
+									}
+									show_progress_bar: {
+										/**
+										 * Show Progress Bar
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Display progress indicator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Show a progress bar to indicate how much of the form is completed.
+										 */
+										longDesc: () => LocalizedString
+									}
+									show_typeform_branding: {
+										/**
+										 * Show Typeform Branding
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Display Typeform branding
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Show Typeform branding elements on the form.
+										 */
+										longDesc: () => LocalizedString
+									}
+									show_time_to_complete: {
+										/**
+										 * Show Time to Complete
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Display estimated completion time
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Show an estimated time to complete the form.
+										 */
+										longDesc: () => LocalizedString
+									}
+									show_number_of_submissions: {
+										/**
+										 * Show Submission Count
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Display number of submissions
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Show how many people have already submitted the form.
+										 */
+										longDesc: () => LocalizedString
+									}
+									show_cookie_consent: {
+										/**
+										 * Show Cookie Consent
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Display cookie consent notice
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Show a cookie consent notice for GDPR compliance.
+										 */
+										longDesc: () => LocalizedString
+									}
+									show_question_number: {
+										/**
+										 * Show Question Numbers
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Display question numbers
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Show question numbers next to each field.
+										 */
+										longDesc: () => LocalizedString
+									}
+									show_key_hint_on_choices: {
+										/**
+										 * Show Keyboard Hints
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Display keyboard shortcuts for choices
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Show keyboard shortcut hints for multiple choice answers.
+										 */
+										longDesc: () => LocalizedString
+									}
+									hide_navigation: {
+										/**
+										 * Hide Navigation
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Hide navigation buttons
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Hide the back and forward navigation buttons.
+										 */
+										longDesc: () => LocalizedString
+									}
+									redirect_after_submit_url: {
+										/**
+										 * Redirect URL
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * URL to redirect after submission
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * URL to redirect users to after they submit the form.
+										 */
+										longDesc: () => LocalizedString
+									}
+									google_analytics: {
+										/**
+										 * Google Analytics ID
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Google Analytics tracking ID
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Google Analytics tracking ID for form analytics.
+										 */
+										longDesc: () => LocalizedString
+									}
+									facebook_pixel: {
+										/**
+										 * Facebook Pixel ID
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Facebook Pixel tracking ID
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Facebook Pixel ID for conversion tracking.
+										 */
+										longDesc: () => LocalizedString
+									}
+									google_tag_manager: {
+										/**
+										 * Google Tag Manager ID
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Google Tag Manager container ID
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Google Tag Manager container ID for advanced tracking.
+										 */
+										longDesc: () => LocalizedString
+									}
+									captcha: {
+										/**
+										 * Enable CAPTCHA
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Enable CAPTCHA verification
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Enable CAPTCHA to prevent spam submissions.
+										 */
+										longDesc: () => LocalizedString
+									}
+									duplicate_prevention: {
+										/**
+										 * Duplicate Prevention
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Prevent duplicate submissions
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Configure settings to prevent users from submitting multiple responses.
+										 */
+										longDesc: () => LocalizedString
+										type: {
+											fields: {
+												type: {
+													/**
+													 * Prevention Type
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Method for preventing duplicates
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * Choose the method for preventing duplicate submissions.
+													 */
+													longDesc: () => LocalizedString
+												}
+											}
+										}
+									}
+									responses_limit: {
+										/**
+										 * Response Limit
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Maximum number of responses
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Set a limit on the total number of responses the form will accept.
+										 */
+										longDesc: () => LocalizedString
+									}
+									period: {
+										/**
+										 * Limit Period
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Time period for response limits
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Time period for response limits (day, week, month, or year).
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						logic: {
+							/**
+							 * Conditional Logic
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Rules for conditional branching and calculations
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Create conditional logic rules to show/hide fields, jump to different sections, or perform calculations based on user responses.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											type: {
+												/**
+												 * Logic Type
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of field this logic applies to
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Specify whether this logic applies to a form field or hidden field.
+												 */
+												longDesc: () => LocalizedString
+											}
+											ref: {
+												/**
+												 * Field Reference
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Reference to the field this logic applies to
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The reference ID of the field this conditional logic rule applies to.
+												 */
+												longDesc: () => LocalizedString
+											}
+											actions: {
+												/**
+												 * Logic Actions
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Actions to perform when conditions are met
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Define what actions to take when the specified conditions are met.
+												 */
+												longDesc: () => LocalizedString
+												type: {
+													element_type: {
+														type: {
+															fields: {
+																action: {
+																	/**
+																	 * Action Type
+																	 */
+																	displayName: () => LocalizedString
+																	/**
+																	 * Type of action to perform
+																	 */
+																	shortDesc: () => LocalizedString
+																	/**
+																	 * Choose the type of action (jump, add, subtract, multiply, divide, set).
+																	 */
+																	longDesc: () => LocalizedString
+																}
+																details: {
+																	/**
+																	 * Action Details
+																	 */
+																	displayName: () => LocalizedString
+																	/**
+																	 * Specific details for this action
+																	 */
+																	shortDesc: () => LocalizedString
+																	/**
+																	 * Configure the specific parameters for this action.
+																	 */
+																	longDesc: () => LocalizedString
+																	type: {
+																		fields: {
+																			to: {
+																				/**
+																				 * Jump Target
+																				 */
+																				displayName: () => LocalizedString
+																				/**
+																				 * Where to jump to
+																				 */
+																				shortDesc: () => LocalizedString
+																				/**
+																				 * Configure the target for jump actions.
+																				 */
+																				longDesc: () => LocalizedString
+																				type: {
+																					fields: {
+																						type: {
+																							/**
+																							 * Target Type
+																							 */
+																							displayName: () => LocalizedString
+																							/**
+																							 * Type of jump target
+																							 */
+																							shortDesc: () => LocalizedString
+																							/**
+																							 * Specify the type of target (field, thankyou, outcome).
+																							 */
+																							longDesc: () => LocalizedString
+																						}
+																						value: {
+																							/**
+																							 * Target Value
+																							 */
+																							displayName: () => LocalizedString
+																							/**
+																							 * Reference to the target
+																							 */
+																							shortDesc: () => LocalizedString
+																							/**
+																							 * The reference ID of the target field or screen.
+																							 */
+																							longDesc: () => LocalizedString
+																						}
+																					}
+																				}
+																			}
+																			target: {
+																				/**
+																				 * Calculation Target
+																				 */
+																				displayName: () => LocalizedString
+																				/**
+																				 * Target for calculations
+																				 */
+																				shortDesc: () => LocalizedString
+																				/**
+																				 * Specify the target variable for calculation actions.
+																				 */
+																				longDesc: () => LocalizedString
+																				type: {
+																					fields: {
+																						type: {
+																							/**
+																							 * Target Type
+																							 */
+																							displayName: () => LocalizedString
+																							/**
+																							 * Type of calculation target
+																							 */
+																							shortDesc: () => LocalizedString
+																							/**
+																							 * The type of target (usually variable).
+																							 */
+																							longDesc: () => LocalizedString
+																						}
+																						value: {
+																							/**
+																							 * Target Variable
+																							 */
+																							displayName: () => LocalizedString
+																							/**
+																							 * Name of the target variable
+																							 */
+																							shortDesc: () => LocalizedString
+																							/**
+																							 * The name of the variable to modify.
+																							 */
+																							longDesc: () => LocalizedString
+																						}
+																					}
+																				}
+																			}
+																			value: {
+																				/**
+																				 * Calculation Value
+																				 */
+																				displayName: () => LocalizedString
+																				/**
+																				 * Value for calculations
+																				 */
+																				shortDesc: () => LocalizedString
+																				/**
+																				 * The value to use in calculation actions.
+																				 */
+																				longDesc: () => LocalizedString
+																				type: {
+																					fields: {
+																						type: {
+																							/**
+																							 * Value Type
+																							 */
+																							displayName: () => LocalizedString
+																							/**
+																							 * Type of value
+																							 */
+																							shortDesc: () => LocalizedString
+																							/**
+																							 * Specify whether this is a constant, variable, or evaluation.
+																							 */
+																							longDesc: () => LocalizedString
+																						}
+																						value: {
+																							/**
+																							 * Actual Value
+																							 */
+																							displayName: () => LocalizedString
+																							/**
+																							 * The actual value or reference
+																							 */
+																							shortDesc: () => LocalizedString
+																							/**
+																							 * The actual value, variable name, or expression to use.
+																							 */
+																							longDesc: () => LocalizedString
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+																condition: {
+																	/**
+																	 * Action Condition
+																	 */
+																	displayName: () => LocalizedString
+																	/**
+																	 * Condition that triggers this action
+																	 */
+																	shortDesc: () => LocalizedString
+																	/**
+																	 * Define the condition that must be met for this action to execute.
+																	 */
+																	longDesc: () => LocalizedString
+																	type: {
+																		fields: {
+																			op: {
+																				/**
+																				 * Operator
+																				 */
+																				displayName: () => LocalizedString
+																				/**
+																				 * Comparison operator
+																				 */
+																				shortDesc: () => LocalizedString
+																				/**
+																				 * The operator to use for comparing values.
+																				 */
+																				longDesc: () => LocalizedString
+																			}
+																			vars: {
+																				/**
+																				 * Variables
+																				 */
+																				displayName: () => LocalizedString
+																				/**
+																				 * Variables to compare
+																				 */
+																				shortDesc: () => LocalizedString
+																				/**
+																				 * The variables or values to compare in this condition.
+																				 */
+																				longDesc: () => LocalizedString
+																				type: {
+																					element_type: {
+																						type: {
+																							fields: {
+																								type: {
+																									/**
+																									 * Variable Type
+																									 */
+																									displayName: () => LocalizedString
+																									/**
+																									 * Type of variable
+																									 */
+																									shortDesc: () => LocalizedString
+																									/**
+																									 * Specify the type of variable (field, hidden, variable, constant, choice).
+																									 */
+																									longDesc: () => LocalizedString
+																								}
+																								value: {
+																									/**
+																									 * Variable Value
+																									 */
+																									displayName: () => LocalizedString
+																									/**
+																									 * The value or reference
+																									 */
+																									shortDesc: () => LocalizedString
+																									/**
+																									 * The actual value or reference to compare.
+																									 */
+																									longDesc: () => LocalizedString
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 		DocusignESignature: {
 			/**
