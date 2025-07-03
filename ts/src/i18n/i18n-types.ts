@@ -5554,6 +5554,20 @@ type RootTranslation = {
 				}
 			}
 		}
+		Quickbooks: {
+			/**
+			 * Q​u​i​c​k​B​o​o​k​s
+			 */
+			displayName: string
+			/**
+			 * I​n​t​e​g​r​a​t​e​ ​w​i​t​h​ ​Q​u​i​c​k​B​o​o​k​s​ ​O​n​l​i​n​e​ ​f​o​r​ ​a​c​c​o​u​n​t​i​n​g​ ​a​n​d​ ​f​i​n​a​n​c​i​a​l​ ​m​a​n​a​g​e​m​e​n​t
+			 */
+			shortDesc: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​Q​u​i​c​k​B​o​o​k​s​ ​O​n​l​i​n​e​ ​t​o​ ​m​a​n​a​g​e​ ​c​u​s​t​o​m​e​r​s​,​ ​v​e​n​d​o​r​s​,​ ​i​t​e​m​s​,​ ​i​n​v​o​i​c​e​s​,​ ​p​a​y​m​e​n​t​s​,​ ​a​n​d​ ​f​i​n​a​n​c​i​a​l​ ​r​e​p​o​r​t​s​.​ ​A​u​t​o​m​a​t​e​ ​y​o​u​r​ ​a​c​c​o​u​n​t​i​n​g​ ​w​o​r​k​f​l​o​w​s​ ​a​n​d​ ​k​e​e​p​ ​y​o​u​r​ ​f​i​n​a​n​c​i​a​l​ ​d​a​t​a​ ​s​y​n​c​h​r​o​n​i​z​e​d​.
+			 */
+			longDesc: string
+		}
 		Attio: {
 			/**
 			 * A​t​t​i​o
@@ -45758,6 +45772,20 @@ export type TranslationFunctions = {
 					}
 				}
 			}
+		}
+		Quickbooks: {
+			/**
+			 * QuickBooks
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Integrate with QuickBooks Online for accounting and financial management
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Connect to QuickBooks Online to manage customers, vendors, items, invoices, payments, and financial reports. Automate your accounting workflows and keep your financial data synchronized.
+			 */
+			longDesc: () => LocalizedString
 		}
 		Attio: {
 			/**

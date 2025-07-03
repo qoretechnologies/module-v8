@@ -51,6 +51,7 @@ import { Locales } from '../i18n/i18n-types';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import airtable from '../apps/airtable';
+import quickbooks from '../apps/quickbooks';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -92,6 +93,7 @@ const NEW_APPS = {
   outlook,
   paddle,
   pipedrive,
+  quickbooks,
   serenity,
   sharepoint,
   shopify,
