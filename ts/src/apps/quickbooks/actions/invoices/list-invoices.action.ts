@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { QUICKBOOKS_APP_NAME, QuickbooksError } from '../../constants';
-import { createQuickbooksClient } from '../../helpers/constants';
+import { createQuickbooksClient, getQuickbooksErrorMessage } from '../../helpers/constants';
 import { QuickBooksOperatorsAllowedValues } from '../../helpers/get-filter-operator-allowed-values';
 import { QuickBooksInvoiceFieldsAllowedValues } from '../../helpers/get-invoice-fields-allowed-values';
 
@@ -108,7 +108,7 @@ const listInvoices = QoreAppCreator.createLocalizedAction<typeof options>({
         invoices: response.QueryResponse.Invoice || [],
       };
     } catch (error) {
-      throw new QuickbooksError(`Failed to list invoices: ${error.message || error}`);
+      throw new QuickbooksError(`Failed to list invoices: ${getQuickbooksErrorMessage(error)}`);
     }
   },
   response_type: {

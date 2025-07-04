@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { QUICKBOOKS_APP_NAME, QuickbooksError } from '../../constants';
-import { createQuickbooksClient } from '../../helpers/constants';
+import { createQuickbooksClient, getQuickbooksErrorMessage } from '../../helpers/constants';
 import { getQuickbooksBillIdAllowedValues } from '../../helpers/get-bill-id-allowed-values';
 
 const options = {
@@ -36,7 +36,7 @@ const getBill = QoreAppCreator.createLocalizedAction<typeof options>({
 
       return response.Bill;
     } catch (error) {
-      throw new QuickbooksError(`Failed to get bill: ${error.message || error}`);
+      throw new QuickbooksError(`Failed to get bill: ${getQuickbooksErrorMessage(error)}`);
     }
   },
   response_type: {

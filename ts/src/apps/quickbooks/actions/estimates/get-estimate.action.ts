@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { QUICKBOOKS_APP_NAME, QuickbooksError } from '../../constants';
-import { createQuickbooksClient } from '../../helpers/constants';
+import { createQuickbooksClient, getQuickbooksErrorMessage } from '../../helpers/constants';
 import { getQuickbooksEstimateIdAllowedValues } from '../../helpers/get-estimate-id-allowed-values';
 
 const options = {
@@ -36,7 +36,7 @@ const getEstimate = QoreAppCreator.createLocalizedAction<typeof options>({
 
       return response.Estimate;
     } catch (error) {
-      throw new QuickbooksError(`Failed to get estimate: ${error.message || error}`);
+      throw new QuickbooksError(`Failed to get estimate: ${getQuickbooksErrorMessage(error)}`);
     }
   },
   response_type: {

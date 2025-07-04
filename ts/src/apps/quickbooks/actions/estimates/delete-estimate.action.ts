@@ -32,17 +32,25 @@ const deleteEstimate = QoreAppCreator.createLocalizedAction<typeof options>({
     });
 
     try {
-      const response = await client.deleteEstimate(id);
+      const estimate = await client.getEstimate(id);
+      const response = await client.deleteEstimate({
+        Id: id,
+        SyncToken: estimate.Estimate.SyncToken,
+      });
 
-      return response.Estimate.Id;
+      return response.Estimate;
     } catch (error) {
-      throw new QuickbooksError(`Failed to delete estimate: ${error.message || error}`);
+      throw new QuickbooksError(
+        `Failed to delete estimate: ${error?.errorResponse?.Fault?.Error?.[0]?.Detail || error}`
+      );
     }
   },
   response_type: {
     type: 'hash',
     fields: {
       Id: { type: 'string' },
+      domain: { type: 'string' },
+      status: { type: 'string' },
     },
   },
 });

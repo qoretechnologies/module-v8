@@ -32,17 +32,26 @@ const deleteBill = QoreAppCreator.createLocalizedAction<typeof options>({
     });
 
     try {
-      const response = await client.deleteBill(id);
+      const bill = await client.getBill(id);
 
-      return response.Bill.Id;
+      const response = await client.deleteBill({
+        Id: id,
+        SyncToken: bill.Bill.SyncToken,
+      });
+
+      return response.Bill;
     } catch (error) {
-      throw new QuickbooksError(`Failed to delete bill: ${error.message || error}`);
+      throw new QuickbooksError(
+        `Failed to delete bill: ${error?.errorResponse?.Fault?.Error?.[0]?.Detail || error}`
+      );
     }
   },
   response_type: {
     type: 'hash',
     fields: {
       Id: { type: 'string' },
+      domain: { type: 'string' },
+      status: { type: 'string' },
     },
   },
 });

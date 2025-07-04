@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { QUICKBOOKS_APP_NAME, QuickbooksError } from '../../constants';
-import { createQuickbooksClient } from '../../helpers/constants';
+import { createQuickbooksClient, getQuickbooksErrorMessage } from '../../helpers/constants';
 import { getQuickbooksCustomerIdAllowedValues } from '../../helpers/get-customer-id-allowed-values';
 import { getQuickbooksItemIdAllowedValues } from '../../helpers/get-item-id-allowed-values';
 import { getQuickbooksTaxCodeIdAllowedValues } from '../../helpers/get-tax-code-id-allowed-values';
@@ -75,7 +75,9 @@ const updateInvoice = QoreAppCreator.createLocalizedAction<typeof options>({
     });
 
     try {
+      const invoice = await client.getInvoice(invoice_id);
       const response = await client.updateInvoice({
+        SyncToken: invoice.Invoice.SyncToken,
         Id: invoice_id,
         ...(customer && { CustomerRef: { value: customer } }),
         ...(lines &&
@@ -97,7 +99,7 @@ const updateInvoice = QoreAppCreator.createLocalizedAction<typeof options>({
 
       return response.Invoice;
     } catch (error) {
-      throw new QuickbooksError(`Failed to update invoice: ${error.message || error}`);
+      throw new QuickbooksError(`Failed to update invoice: ${getQuickbooksErrorMessage(error)}`);
     }
   },
   response_type: {

@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { QUICKBOOKS_APP_NAME, QuickbooksError } from '../../constants';
-import { createQuickbooksClient } from '../../helpers/constants';
+import { createQuickbooksClient, getQuickbooksErrorMessage } from '../../helpers/constants';
 import { getQuickbooksPurchaseOrderIdAllowedValues } from '../../helpers/get-purchase-order-id-allowed-values';
 
 const options = {
@@ -36,7 +36,9 @@ const getPurchaseOrder = QoreAppCreator.createLocalizedAction<typeof options>({
 
       return response.PurchaseOrder;
     } catch (error) {
-      throw new QuickbooksError(`Failed to get purchase order: ${error.message || error}`);
+      throw new QuickbooksError(
+        `Failed to get purchase order: ${getQuickbooksErrorMessage(error)}`
+      );
     }
   },
   response_type: {

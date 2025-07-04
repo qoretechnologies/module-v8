@@ -8,7 +8,7 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { QUICKBOOKS_APP_NAME, QuickbooksError } from '../../constants';
-import { createQuickbooksClient } from '../../helpers/constants';
+import { createQuickbooksClient, getQuickbooksErrorMessage } from '../../helpers/constants';
 import { getQuickbooksVendorIdAllowedValues } from '../../helpers/get-vendor-id-allowed-values';
 import { getQuickbooksAccountIdAllowedValues } from '../../helpers/get-account-id-allowed-values';
 import { getQuickbooksTaxCodeIdAllowedValues } from '../../helpers/get-tax-code-id-allowed-values';
@@ -162,7 +162,10 @@ const updateBill = QoreAppCreator.createLocalizedAction<
     });
 
     try {
+      const bill = await client.getBill(bill_id);
+
       const response = await client.updateBill({
+        SyncToken: bill.Bill.SyncToken,
         Id: bill_id,
         ...(vendor_id && {
           VendorRef: {
@@ -217,7 +220,7 @@ const updateBill = QoreAppCreator.createLocalizedAction<
 
       return response.Bill;
     } catch (error) {
-      throw new QuickbooksError(`Failed to update a bill: ${error.message || error}`);
+      throw new QuickbooksError(`Failed to update a bill: ${getQuickbooksErrorMessage(error)}`);
     }
   },
   response_type: {

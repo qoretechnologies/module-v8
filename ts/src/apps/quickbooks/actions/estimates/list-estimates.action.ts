@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { QUICKBOOKS_APP_NAME, QuickbooksError } from '../../constants';
-import { createQuickbooksClient } from '../../helpers/constants';
+import { createQuickbooksClient, getQuickbooksErrorMessage } from '../../helpers/constants';
 import { QuickBooksOperatorsAllowedValues } from '../../helpers/get-filter-operator-allowed-values';
 import { QuickBooksEstimateFieldsAllowedValues } from '../../helpers/get-estimate-fields-allowed-values';
 
@@ -108,7 +108,7 @@ const listEstimates = QoreAppCreator.createLocalizedAction<typeof options>({
         estimates: response.QueryResponse.Estimate || [],
       };
     } catch (error) {
-      throw new QuickbooksError(`Failed to list estimates: ${error.message || error}`);
+      throw new QuickbooksError(`Failed to list estimates: ${getQuickbooksErrorMessage(error)}`);
     }
   },
   response_type: {

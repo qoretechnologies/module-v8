@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { QUICKBOOKS_APP_NAME, QuickbooksError } from '../../constants';
-import { createQuickbooksClient } from '../../helpers/constants';
+import { createQuickbooksClient, getQuickbooksErrorMessage } from '../../helpers/constants';
 import { getQuickbooksJournalEntryIdAllowedValues } from '../../helpers/get-journal-entry-id-allowed-values';
 
 const options = {
@@ -36,7 +36,7 @@ const getJournalEntry = QoreAppCreator.createLocalizedAction<typeof options>({
 
       return response.JournalEntry;
     } catch (error) {
-      throw new QuickbooksError(`Failed to get journal entry: ${error.message || error}`);
+      throw new QuickbooksError(`Failed to get journal entry: ${getQuickbooksErrorMessage(error)}`);
     }
   },
   response_type: {

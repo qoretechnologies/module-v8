@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { QUICKBOOKS_APP_NAME, QuickbooksError } from '../../constants';
-import { createQuickbooksClient } from '../../helpers/constants';
+import { createQuickbooksClient, getQuickbooksErrorMessage } from '../../helpers/constants';
 import { QuickBooksOperatorsAllowedValues } from '../../helpers/get-filter-operator-allowed-values';
 import { QuickBooksPurchaseOrderFieldsAllowedValues } from '../../helpers/get-purchase-order-fields-allowed-values';
 
@@ -108,7 +108,9 @@ const listPurchaseOrders = QoreAppCreator.createLocalizedAction<typeof options>(
         purchase_orders: response.QueryResponse.PurchaseOrder || [],
       };
     } catch (error) {
-      throw new QuickbooksError(`Failed to list purchase orders: ${error.message || error}`);
+      throw new QuickbooksError(
+        `Failed to list purchase orders: ${getQuickbooksErrorMessage(error)}`
+      );
     }
   },
   response_type: {

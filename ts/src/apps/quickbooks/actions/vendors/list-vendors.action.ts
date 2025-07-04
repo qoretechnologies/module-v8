@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { QUICKBOOKS_APP_NAME, QuickbooksError } from '../../constants';
-import { createQuickbooksClient } from '../../helpers/constants';
+import { createQuickbooksClient, getQuickbooksErrorMessage } from '../../helpers/constants';
 import { QuickBooksOperatorsAllowedValues } from '../../helpers/get-filter-operator-allowed-values';
 import { QuickBooksVendorFieldsAllowedValues } from '../../helpers/get-vendor-fields-allowed-values';
 
@@ -108,7 +108,7 @@ const listVendors = QoreAppCreator.createLocalizedAction<typeof options>({
         vendors: response.QueryResponse.Vendor || [],
       };
     } catch (error) {
-      throw new QuickbooksError(`Failed to list vendors: ${error.message || error}`);
+      throw new QuickbooksError(`Failed to list vendors: ${getQuickbooksErrorMessage(error)}`);
     }
   },
   response_type: {

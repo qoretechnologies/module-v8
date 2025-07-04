@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { QUICKBOOKS_APP_NAME, QuickbooksError } from '../../constants';
-import { createQuickbooksClient } from '../../helpers/constants';
+import { createQuickbooksClient, getQuickbooksErrorMessage } from '../../helpers/constants';
 import { QuickBooksOperatorsAllowedValues } from '../../helpers/get-filter-operator-allowed-values';
 import { QuickBooksSalesReceiptFieldsAllowedValues } from '../../helpers/get-sales-receipt-fields-allowed-values';
 
@@ -108,7 +108,9 @@ const listSalesReceipts = QoreAppCreator.createLocalizedAction<typeof options>({
         sales_receipts: response.QueryResponse.SalesReceipt || [],
       };
     } catch (error) {
-      throw new QuickbooksError(`Failed to list sales receipts: ${error.message || error}`);
+      throw new QuickbooksError(
+        `Failed to list sales receipts: ${getQuickbooksErrorMessage(error)}`
+      );
     }
   },
   response_type: {

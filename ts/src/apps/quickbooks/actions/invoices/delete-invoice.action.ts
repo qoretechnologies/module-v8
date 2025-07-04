@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { QUICKBOOKS_APP_NAME, QuickbooksError } from '../../constants';
-import { createQuickbooksClient } from '../../helpers/constants';
+import { createQuickbooksClient, getQuickbooksErrorMessage } from '../../helpers/constants';
 import { getQuickbooksInvoiceIdAllowedValues } from '../../helpers/get-invoice-id-allowed-values';
 
 const options = {
@@ -32,17 +32,24 @@ const deleteInvoice = QoreAppCreator.createLocalizedAction<typeof options>({
     });
 
     try {
-      const response = await client.deleteInvoice(id);
+      const invoice = await client.getInvoice(id);
 
-      return response.Invoice.Id;
+      const response = await client.deleteInvoice({
+        Id: id,
+        SyncToken: invoice.Invoice.SyncToken,
+      });
+
+      return response.Invoice;
     } catch (error) {
-      throw new QuickbooksError(`Failed to delete invoice: ${error.message || error}`);
+      throw new QuickbooksError(`Failed to delete invoice: ${getQuickbooksErrorMessage(error)}`);
     }
   },
   response_type: {
     type: 'hash',
     fields: {
       Id: { type: 'string' },
+      domain: { type: 'string' },
+      status: { type: 'string' },
     },
   },
 });

@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { QUICKBOOKS_APP_NAME, QuickbooksError } from '../constants';
-import { createQuickbooksClient } from '../helpers/constants';
+import { createQuickbooksClient, getQuickbooksErrorMessage } from '../helpers/constants';
 
 const getCompanyInfo = QoreAppCreator.createLocalizedAction({
   app: QUICKBOOKS_APP_NAME,
@@ -29,7 +29,9 @@ const getCompanyInfo = QoreAppCreator.createLocalizedAction({
 
       return companiesResponse.QueryResponse.CompanyInfo[0];
     } catch (error) {
-      throw new QuickbooksError(`Failed to get company information: ${error.message || error}`);
+      throw new QuickbooksError(
+        `Failed to get company information: ${getQuickbooksErrorMessage(error)}`
+      );
     }
   },
   response_type: {

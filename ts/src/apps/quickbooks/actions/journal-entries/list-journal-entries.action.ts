@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { QUICKBOOKS_APP_NAME, QuickbooksError } from '../../constants';
-import { createQuickbooksClient } from '../../helpers/constants';
+import { createQuickbooksClient, getQuickbooksErrorMessage } from '../../helpers/constants';
 import { QuickBooksOperatorsAllowedValues } from '../../helpers/get-filter-operator-allowed-values';
 import { QuickBooksJournalEntryFieldsAllowedValues } from '../../helpers/get-journal-entry-fields-allowed-values';
 
@@ -108,7 +108,9 @@ const listJournalEntries = QoreAppCreator.createLocalizedAction<typeof options>(
         journal_entries: response.QueryResponse.JournalEntry || [],
       };
     } catch (error) {
-      throw new QuickbooksError(`Failed to list journal entries: ${error.message || error}`);
+      throw new QuickbooksError(
+        `Failed to list journal entries: ${getQuickbooksErrorMessage(error)}`
+      );
     }
   },
   response_type: {

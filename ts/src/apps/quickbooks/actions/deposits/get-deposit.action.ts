@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { QUICKBOOKS_APP_NAME, QuickbooksError } from '../../constants';
-import { createQuickbooksClient } from '../../helpers/constants';
+import { createQuickbooksClient, getQuickbooksErrorMessage } from '../../helpers/constants';
 import { getQuickbooksDepositIdAllowedValues } from '../../helpers/get-deposit-id-allowed-values';
 
 const options = {
@@ -36,7 +36,7 @@ const getDeposit = QoreAppCreator.createLocalizedAction<typeof options>({
 
       return response.Deposit;
     } catch (error) {
-      throw new QuickbooksError(`Failed to get deposit: ${error.message || error}`);
+      throw new QuickbooksError(`Failed to get deposit: ${getQuickbooksErrorMessage(error)}`);
     }
   },
   response_type: {

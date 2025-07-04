@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { QUICKBOOKS_APP_NAME, QuickbooksError } from '../../constants';
-import { createQuickbooksClient } from '../../helpers/constants';
+import { createQuickbooksClient, getQuickbooksErrorMessage } from '../../helpers/constants';
 import { QuickBooksOperatorsAllowedValues } from '../../helpers/get-filter-operator-allowed-values';
 import { QuickBooksDepositFieldsAllowedValues } from '../../helpers/get-deposit-fields-allowed-values';
 
@@ -108,7 +108,7 @@ const listDeposits = QoreAppCreator.createLocalizedAction<typeof options>({
         deposits: response.QueryResponse.Deposit || [],
       };
     } catch (error) {
-      throw new QuickbooksError(`Failed to list deposits: ${error.message || error}`);
+      throw new QuickbooksError(`Failed to list deposits: ${getQuickbooksErrorMessage(error)}`);
     }
   },
   response_type: {

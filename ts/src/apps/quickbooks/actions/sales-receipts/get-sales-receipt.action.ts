@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { QUICKBOOKS_APP_NAME, QuickbooksError } from '../../constants';
-import { createQuickbooksClient } from '../../helpers/constants';
+import { createQuickbooksClient, getQuickbooksErrorMessage } from '../../helpers/constants';
 import { getQuickbooksSalesReceiptIdAllowedValues } from '../../helpers/get-sales-receipt-id-allowed-values';
 
 const options = {
@@ -36,7 +36,7 @@ const getSalesReceipt = QoreAppCreator.createLocalizedAction<typeof options>({
 
       return response.SalesReceipt;
     } catch (error) {
-      throw new QuickbooksError(`Failed to get sales receipt: ${error.message || error}`);
+      throw new QuickbooksError(`Failed to get sales receipt: ${getQuickbooksErrorMessage(error)}`);
     }
   },
   response_type: {

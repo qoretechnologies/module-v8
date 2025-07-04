@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { QUICKBOOKS_APP_NAME, QuickbooksError } from '../../constants';
-import { createQuickbooksClient } from '../../helpers/constants';
+import { createQuickbooksClient, getQuickbooksErrorMessage } from '../../helpers/constants';
 import { getQuickbooksPaymentIdAllowedValues } from '../../helpers/get-payment-id-allowed-values';
 
 const options = {
@@ -32,17 +32,23 @@ const deletePayment = QoreAppCreator.createLocalizedAction<typeof options>({
     });
 
     try {
-      const response = await client.deletePayment(id);
+      const payment = await client.getPayment(id);
+      const response = await client.deletePayment({
+        Id: id,
+        SyncToken: payment.Payment.SyncToken,
+      });
 
-      return response.Payment.Id;
+      return response.Payment;
     } catch (error) {
-      throw new QuickbooksError(`Failed to delete payment: ${error.message || error}`);
+      throw new QuickbooksError(`Failed to delete payment: ${getQuickbooksErrorMessage(error)}`);
     }
   },
   response_type: {
     type: 'hash',
     fields: {
       Id: { type: 'string' },
+      domain: { type: 'string' },
+      status: { type: 'string' },
     },
   },
 });

@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { QUICKBOOKS_APP_NAME, QuickbooksError } from '../../constants';
-import { createQuickbooksClient } from '../../helpers/constants';
+import { createQuickbooksClient, getQuickbooksErrorMessage } from '../../helpers/constants';
 import { getQuickbooksAccountIdAllowedValues } from '../../helpers/get-account-id-allowed-values';
 
 const options = {
@@ -36,7 +36,7 @@ const getAccount = QoreAppCreator.createLocalizedAction<typeof options>({
 
       return response.Account;
     } catch (error) {
-      throw new QuickbooksError(`Failed to get account: ${error.message || error}`);
+      throw new QuickbooksError(`Failed to get account: ${getQuickbooksErrorMessage(error)}`);
     }
   },
   response_type: {

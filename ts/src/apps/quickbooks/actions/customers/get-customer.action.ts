@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { QUICKBOOKS_APP_NAME, QuickbooksError } from '../../constants';
-import { createQuickbooksClient } from '../../helpers/constants';
+import { createQuickbooksClient, getQuickbooksErrorMessage } from '../../helpers/constants';
 import { getQuickbooksCustomerIdAllowedValues } from '../../helpers/get-customer-id-allowed-values';
 
 const options = {
@@ -36,7 +36,7 @@ const getCustomer = QoreAppCreator.createLocalizedAction<typeof options>({
 
       return response.Customer;
     } catch (error) {
-      throw new QuickbooksError(`Failed to get customer: ${error.message || error}`);
+      throw new QuickbooksError(`Failed to get customer: ${getQuickbooksErrorMessage(error)}`);
     }
   },
   response_type: {

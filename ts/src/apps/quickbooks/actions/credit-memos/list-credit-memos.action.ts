@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { QUICKBOOKS_APP_NAME, QuickbooksError } from '../../constants';
-import { createQuickbooksClient } from '../../helpers/constants';
+import { createQuickbooksClient, getQuickbooksErrorMessage } from '../../helpers/constants';
 import { QuickBooksOperatorsAllowedValues } from '../../helpers/get-filter-operator-allowed-values';
 import { QuickBooksCreditMemoFieldsAllowedValues } from '../../helpers/get-credit-memo-fields-allowed-values';
 
@@ -108,7 +108,7 @@ const listCreditMemos = QoreAppCreator.createLocalizedAction<typeof options>({
         credit_memos: response.QueryResponse.CreditMemo || [],
       };
     } catch (error) {
-      throw new QuickbooksError(`Failed to list credit memos: ${error.message || error}`);
+      throw new QuickbooksError(`Failed to list credit memos: ${getQuickbooksErrorMessage(error)}`);
     }
   },
   response_type: {

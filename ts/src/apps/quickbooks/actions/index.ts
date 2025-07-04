@@ -15,6 +15,7 @@ export { default as ListQuickbooksCreditMemos } from './credit-memos/list-credit
 export { default as CreateQuickbooksCustomer } from './customers/create-customer.action';
 export { default as GetQuickbooksCustomer } from './customers/get-customer.action';
 export { default as ListQuickbooksCustomers } from './customers/list-customers.action';
+export { default as UpdateQuickbooksCustomer } from './customers/update-customer.action';
 
 export { default as GetQuickbooksDeposit } from './deposits/get-deposit.action';
 export { default as ListQuickbooksDeposits } from './deposits/list-deposits.action';
@@ -39,6 +40,7 @@ export { default as ListQuickbooksJournalEntries } from './journal-entries/list-
 
 export { default as GetQuickbooksPayment } from './payments/get-payment.action';
 export { default as ListQuickbooksPayments } from './payments/list-payments.action';
+export { default as DeleteQuickbooksPayment } from './payments/delete-payment.action';
 
 export { default as GetQuickbooksPurchaseOrder } from './purchase-orders/get-purchase-order.action';
 export { default as ListQuickbooksPurchaseOrders } from './purchase-orders/list-purchase-orders.action';

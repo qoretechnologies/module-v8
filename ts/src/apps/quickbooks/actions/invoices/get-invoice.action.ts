@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { QUICKBOOKS_APP_NAME, QuickbooksError } from '../../constants';
-import { createQuickbooksClient } from '../../helpers/constants';
+import { createQuickbooksClient, getQuickbooksErrorMessage } from '../../helpers/constants';
 import { getQuickbooksInvoiceIdAllowedValues } from '../../helpers/get-invoice-id-allowed-values';
 
 const options = {
@@ -36,7 +36,7 @@ const getInvoice = QoreAppCreator.createLocalizedAction<typeof options>({
 
       return response.Invoice;
     } catch (error) {
-      throw new QuickbooksError(`Failed to get invoice: ${error.message || error}`);
+      throw new QuickbooksError(`Failed to get invoice: ${getQuickbooksErrorMessage(error)}`);
     }
   },
   response_type: {

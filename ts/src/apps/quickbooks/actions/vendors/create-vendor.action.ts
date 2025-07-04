@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { QUICKBOOKS_APP_NAME, QuickbooksError } from '../../constants';
-import { createQuickbooksClient } from '../../helpers/constants';
+import { createQuickbooksClient, getQuickbooksErrorMessage } from '../../helpers/constants';
 
 const options = {
   display_name: {
@@ -70,7 +70,7 @@ const createVendor = QoreAppCreator.createLocalizedAction<typeof options>({
 
       return response.Vendor;
     } catch (error) {
-      throw new QuickbooksError(`Failed to create vendor: ${error.message || error}`);
+      throw new QuickbooksError(`Failed to create vendor: ${getQuickbooksErrorMessage(error)}`);
     }
   },
   response_type: {

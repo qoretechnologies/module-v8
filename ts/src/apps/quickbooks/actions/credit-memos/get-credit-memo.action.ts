@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { QUICKBOOKS_APP_NAME, QuickbooksError } from '../../constants';
-import { createQuickbooksClient } from '../../helpers/constants';
+import { createQuickbooksClient, getQuickbooksErrorMessage } from '../../helpers/constants';
 import { getQuickbooksCreditMemoIdAllowedValues } from '../../helpers/get-credit-memo-id-allowed-values';
 
 const options = {
@@ -36,7 +36,7 @@ const getCreditMemo = QoreAppCreator.createLocalizedAction<typeof options>({
 
       return response.CreditMemo;
     } catch (error) {
-      throw new QuickbooksError(`Failed to get credit memo: ${error.message || error}`);
+      throw new QuickbooksError(`Failed to get credit memo: ${getQuickbooksErrorMessage(error)}`);
     }
   },
   response_type: {

@@ -1541,6 +1541,86 @@ const QuickbooksAppEn = {
         },
       },
     },
+    get_purchase: {
+      displayName: 'Get Purchase',
+      shortDesc: 'Retrieve a specific purchase from QuickBooks',
+      longDesc: 'Fetch detailed information about a specific purchase transaction using its ID',
+      options: {
+        id: {
+          displayName: 'Purchase ID',
+          shortDesc: 'The unique identifier of the purchase',
+          longDesc: 'The QuickBooks purchase ID to retrieve detailed information for',
+        },
+      },
+    },
+    list_purchases: {
+      displayName: 'List Purchases',
+      shortDesc: 'Retrieve a list of purchases from QuickBooks',
+      longDesc:
+        'Fetch multiple purchases from QuickBooks with optional filtering, sorting, and pagination capabilities',
+      options: {
+        fetchAll: {
+          displayName: 'Fetch All',
+          shortDesc: 'Retrieve all purchases without pagination',
+          longDesc: 'When enabled, fetches all purchases ignoring limit and offset parameters',
+        },
+        limit: {
+          displayName: 'Limit',
+          shortDesc: 'Maximum number of purchases to retrieve',
+          longDesc: 'The maximum number of purchases to return in a single request (default: 50)',
+        },
+        offset: {
+          displayName: 'Offset',
+          shortDesc: 'Number of purchases to skip',
+          longDesc:
+            'The number of purchases to skip before starting to return results (default: 0)',
+        },
+        filter: {
+          displayName: 'Filter',
+          shortDesc: 'Filter criteria for purchases',
+          longDesc:
+            'Apply filtering to narrow down the list of purchases based on specific field values',
+          type: {
+            fields: {
+              field: {
+                displayName: 'Field',
+                shortDesc: 'The field to filter on',
+                longDesc: 'The purchase field to apply the filter criteria to',
+              },
+              operator: {
+                displayName: 'Operator',
+                shortDesc: 'The comparison operator',
+                longDesc: 'The operator to use for comparing the field value (e.g., =, !=, <, >)',
+              },
+              value: {
+                displayName: 'Value',
+                shortDesc: 'The value to filter by',
+                longDesc: 'The value to compare against the specified field',
+              },
+            },
+          },
+        },
+        sort: {
+          displayName: 'Sort',
+          shortDesc: 'Sort criteria for purchases',
+          longDesc: 'Specify how to sort the returned purchases list',
+          type: {
+            fields: {
+              field: {
+                displayName: 'Sort Field',
+                shortDesc: 'The field to sort by',
+                longDesc: 'The purchase field to use for sorting the results',
+              },
+              direction: {
+                displayName: 'Sort Direction',
+                shortDesc: 'The sort direction',
+                longDesc: 'Whether to sort in ascending or descending order',
+              },
+            },
+          },
+        },
+      },
+    },
     list_purchase_orders: {
       displayName: 'List Purchase Orders',
       shortDesc: 'Retrieve a list of purchase orders from QuickBooks',
@@ -1771,6 +1851,422 @@ const QuickbooksAppEn = {
               },
             },
           },
+        },
+      },
+    },
+    create_vendor: {
+      displayName: 'Create Vendor',
+      shortDesc: 'Create a new vendor in QuickBooks',
+      longDesc:
+        'Create a new vendor record with contact information, address, and other business details',
+      options: {
+        display_name: {
+          displayName: 'Display Name',
+          shortDesc: 'The display name for the vendor',
+          longDesc: 'The name that will be displayed for this vendor in QuickBooks',
+        },
+        phone: {
+          displayName: 'Phone Number',
+          shortDesc: 'The primary phone number of the vendor',
+          longDesc: 'The main contact phone number for the vendor',
+        },
+        email: {
+          displayName: 'Email Address',
+          shortDesc: 'The email address of the vendor',
+          longDesc: 'The primary email address for contacting the vendor',
+        },
+        website: {
+          displayName: 'Website',
+          shortDesc: "The vendor's website URL",
+          longDesc: "The web address of the vendor's website",
+        },
+        address: {
+          displayName: 'Address',
+          shortDesc: 'The billing address of the vendor',
+          longDesc: 'The address where bills should be sent for this vendor',
+          type: {
+            fields: {
+              Line1: {
+                displayName: 'Address Line 1',
+                shortDesc: 'The first line of the vendor address',
+                longDesc: 'The street address or P.O. box number',
+              },
+              Line2: {
+                displayName: 'Address Line 2',
+                shortDesc: 'The second line of the vendor address',
+                longDesc: 'Additional address information like apartment or suite number',
+              },
+              City: {
+                displayName: 'City',
+                shortDesc: 'The city of the vendor address',
+                longDesc: 'The city where the vendor is located',
+              },
+              PostalCode: {
+                displayName: 'Postal Code',
+                shortDesc: 'The postal code of the vendor address',
+                longDesc: 'The ZIP code or postal code for the vendor address',
+              },
+              CountrySubDivisionCode: {
+                displayName: 'State/Province',
+                shortDesc: 'The state or province code',
+                longDesc: 'The state or province abbreviation (e.g., CA, NY, ON)',
+              },
+              Country: {
+                displayName: 'Country',
+                shortDesc: 'The country of the vendor address',
+                longDesc: 'The country where the vendor is located',
+              },
+            },
+          },
+        },
+      },
+    },
+    get_vendor: {
+      displayName: 'Get Vendor',
+      shortDesc: 'Retrieve a specific vendor from QuickBooks',
+      longDesc: 'Fetch detailed information about a specific vendor using their ID',
+      options: {
+        id: {
+          displayName: 'Vendor ID',
+          shortDesc: 'The unique identifier of the vendor',
+          longDesc: 'The QuickBooks vendor ID to retrieve detailed information for',
+        },
+      },
+    },
+    list_vendors: {
+      displayName: 'List Vendors',
+      shortDesc: 'Retrieve a list of vendors from QuickBooks',
+      longDesc:
+        'Fetch multiple vendors from QuickBooks with optional filtering, sorting, and pagination capabilities',
+      options: {
+        fetchAll: {
+          displayName: 'Fetch All',
+          shortDesc: 'Retrieve all vendors without pagination',
+          longDesc: 'When enabled, fetches all vendors ignoring limit and offset parameters',
+        },
+        limit: {
+          displayName: 'Limit',
+          shortDesc: 'Maximum number of vendors to retrieve',
+          longDesc: 'The maximum number of vendors to return in a single request (default: 50)',
+        },
+        offset: {
+          displayName: 'Offset',
+          shortDesc: 'Number of vendors to skip',
+          longDesc: 'The number of vendors to skip before starting to return results (default: 0)',
+        },
+        filter: {
+          displayName: 'Filter',
+          shortDesc: 'Filter criteria for vendors',
+          longDesc:
+            'Apply filtering to narrow down the list of vendors based on specific field values',
+          type: {
+            fields: {
+              field: {
+                displayName: 'Field',
+                shortDesc: 'The field to filter on',
+                longDesc: 'The vendor field to apply the filter criteria to',
+              },
+              operator: {
+                displayName: 'Operator',
+                shortDesc: 'The comparison operator',
+                longDesc: 'The operator to use for comparing the field value (e.g., =, !=, <, >)',
+              },
+              value: {
+                displayName: 'Value',
+                shortDesc: 'The value to filter by',
+                longDesc: 'The value to compare against the specified field',
+              },
+            },
+          },
+        },
+        sort: {
+          displayName: 'Sort',
+          shortDesc: 'Sort criteria for vendors',
+          longDesc: 'Specify how to sort the returned vendors list',
+          type: {
+            fields: {
+              field: {
+                displayName: 'Sort Field',
+                shortDesc: 'The field to sort by',
+                longDesc: 'The vendor field to use for sorting the results',
+              },
+              direction: {
+                displayName: 'Sort Direction',
+                shortDesc: 'The sort direction',
+                longDesc: 'Whether to sort in ascending or descending order',
+              },
+            },
+          },
+        },
+      },
+    },
+    update_vendor: {
+      displayName: 'Update Vendor',
+      shortDesc: 'Update an existing vendor in QuickBooks',
+      longDesc:
+        'Modify an existing vendor record with updated contact information, address, and other business details',
+      options: {
+        id: {
+          displayName: 'Vendor ID',
+          shortDesc: 'The unique identifier of the vendor to update',
+          longDesc: 'The QuickBooks vendor ID that you want to update',
+        },
+        display_name: {
+          displayName: 'Display Name',
+          shortDesc: 'The display name for the vendor',
+          longDesc: 'The name that will be displayed for this vendor in QuickBooks',
+        },
+        phone: {
+          displayName: 'Phone Number',
+          shortDesc: 'The primary phone number of the vendor',
+          longDesc: 'The main contact phone number for the vendor',
+        },
+        email: {
+          displayName: 'Email Address',
+          shortDesc: 'The email address of the vendor',
+          longDesc: 'The primary email address for contacting the vendor',
+        },
+        website: {
+          displayName: 'Website',
+          shortDesc: "The vendor's website URL",
+          longDesc: "The web address of the vendor's website",
+        },
+        address: {
+          displayName: 'Address',
+          shortDesc: 'The billing address of the vendor',
+          longDesc: 'The address where bills should be sent for this vendor',
+          type: {
+            fields: {
+              Line1: {
+                displayName: 'Address Line 1',
+                shortDesc: 'The first line of the vendor address',
+                longDesc: 'The street address or P.O. box number',
+              },
+              Line2: {
+                displayName: 'Address Line 2',
+                shortDesc: 'The second line of the vendor address',
+                longDesc: 'Additional address information like apartment or suite number',
+              },
+              City: {
+                displayName: 'City',
+                shortDesc: 'The city of the vendor address',
+                longDesc: 'The city where the vendor is located',
+              },
+              PostalCode: {
+                displayName: 'Postal Code',
+                shortDesc: 'The postal code of the vendor address',
+                longDesc: 'The ZIP code or postal code for the vendor address',
+              },
+              CountrySubDivisionCode: {
+                displayName: 'State/Province',
+                shortDesc: 'The state or province code',
+                longDesc: 'The state or province abbreviation (e.g., CA, NY, ON)',
+              },
+              Country: {
+                displayName: 'Country',
+                shortDesc: 'The country of the vendor address',
+                longDesc: 'The country where the vendor is located',
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+  triggers: {
+    bill_trigger: {
+      displayName: 'Bill Trigger',
+      shortDesc: 'Triggers when a bill is created or updated in QuickBooks',
+      longDesc:
+        'Monitor QuickBooks for new bills or updates to existing bills. This trigger allows you to respond to bill events in real-time.',
+      options: {
+        action: {
+          displayName: 'Trigger Action',
+          shortDesc: 'Choose whether to trigger on created or updated bills',
+          longDesc:
+            'Select "Created" to trigger when new bills are added to QuickBooks, or "Updated" to trigger when existing bills are modified.',
+        },
+      },
+    },
+    credit_memo_trigger: {
+      displayName: 'Credit Memo Trigger',
+      shortDesc: 'Triggers when a credit memo is created or updated in QuickBooks',
+      longDesc:
+        'Monitor QuickBooks for new credit memos or updates to existing credit memos. This trigger allows you to respond to credit memo events in real-time.',
+      options: {
+        action: {
+          displayName: 'Trigger Action',
+          shortDesc: 'Choose whether to trigger on created or updated credit memos',
+          longDesc:
+            'Select "Created" to trigger when new credit memos are added to QuickBooks, or "Updated" to trigger when existing credit memos are modified.',
+        },
+      },
+    },
+    customer_trigger: {
+      displayName: 'Customer Trigger',
+      shortDesc: 'Triggers when a customer is created or updated in QuickBooks',
+      longDesc:
+        'Monitor QuickBooks for new customers or updates to existing customers. This trigger allows you to respond to customer events in real-time.',
+      options: {
+        action: {
+          displayName: 'Trigger Action',
+          shortDesc: 'Choose whether to trigger on created or updated customers',
+          longDesc:
+            'Select "Created" to trigger when new customers are added to QuickBooks, or "Updated" to trigger when existing customers are modified.',
+        },
+      },
+    },
+    deposit_trigger: {
+      displayName: 'Deposit Trigger',
+      shortDesc: 'Triggers when a deposit is created or updated in QuickBooks',
+      longDesc:
+        'Monitor QuickBooks for new deposits or updates to existing deposits. This trigger allows you to respond to deposit events in real-time.',
+      options: {
+        action: {
+          displayName: 'Trigger Action',
+          shortDesc: 'Choose whether to trigger on created or updated deposits',
+          longDesc:
+            'Select "Created" to trigger when new deposits are added to QuickBooks, or "Updated" to trigger when existing deposits are modified.',
+        },
+      },
+    },
+    estimate_trigger: {
+      displayName: 'Estimate Trigger',
+      shortDesc: 'Triggers when an estimate is created or updated in QuickBooks',
+      longDesc:
+        'Monitor QuickBooks for new estimates or updates to existing estimates. This trigger allows you to respond to estimate events in real-time.',
+      options: {
+        action: {
+          displayName: 'Trigger Action',
+          shortDesc: 'Choose whether to trigger on created or updated estimates',
+          longDesc:
+            'Select "Created" to trigger when new estimates are added to QuickBooks, or "Updated" to trigger when existing estimates are modified.',
+        },
+      },
+    },
+    invoice_trigger: {
+      displayName: 'Invoice Trigger',
+      shortDesc: 'Triggers when an invoice is created or updated in QuickBooks',
+      longDesc:
+        'Monitor QuickBooks for new invoices or updates to existing invoices. This trigger allows you to respond to invoice events in real-time.',
+      options: {
+        action: {
+          displayName: 'Trigger Action',
+          shortDesc: 'Choose whether to trigger on created or updated invoices',
+          longDesc:
+            'Select "Created" to trigger when new invoices are added to QuickBooks, or "Updated" to trigger when existing invoices are modified.',
+        },
+      },
+    },
+    item_trigger: {
+      displayName: 'Item Trigger',
+      shortDesc: 'Triggers when an item is created or updated in QuickBooks',
+      longDesc:
+        'Monitor QuickBooks for new items or updates to existing items. This trigger allows you to respond to item events in real-time.',
+      options: {
+        action: {
+          displayName: 'Trigger Action',
+          shortDesc: 'Choose whether to trigger on created or updated items',
+          longDesc:
+            'Select "Created" to trigger when new items are added to QuickBooks, or "Updated" to trigger when existing items are modified.',
+        },
+      },
+    },
+    journal_entry_trigger: {
+      displayName: 'Journal Entry Trigger',
+      shortDesc: 'Triggers when a journal entry is created or updated in QuickBooks',
+      longDesc:
+        'Monitor QuickBooks for new journal entries or updates to existing journal entries. This trigger allows you to respond to journal entry events in real-time.',
+      options: {
+        action: {
+          displayName: 'Trigger Action',
+          shortDesc: 'Choose whether to trigger on created or updated journal entries',
+          longDesc:
+            'Select "Created" to trigger when new journal entries are added to QuickBooks, or "Updated" to trigger when existing journal entries are modified.',
+        },
+      },
+    },
+    payment_trigger: {
+      displayName: 'Payment Trigger',
+      shortDesc: 'Triggers when a payment is created or updated in QuickBooks',
+      longDesc:
+        'Monitor QuickBooks for new payments or updates to existing payments. This trigger allows you to respond to payment events in real-time.',
+      options: {
+        action: {
+          displayName: 'Trigger Action',
+          shortDesc: 'Choose whether to trigger on created or updated payments',
+          longDesc:
+            'Select "Created" to trigger when new payments are added to QuickBooks, or "Updated" to trigger when existing payments are modified.',
+        },
+      },
+    },
+    purchase_order_trigger: {
+      displayName: 'Purchase Order Trigger',
+      shortDesc: 'Triggers when a purchase order is created or updated in QuickBooks',
+      longDesc:
+        'Monitor QuickBooks for new purchase orders or updates to existing purchase orders. This trigger allows you to respond to purchase order events in real-time.',
+      options: {
+        action: {
+          displayName: 'Trigger Action',
+          shortDesc: 'Choose whether to trigger on created or updated purchase orders',
+          longDesc:
+            'Select "Created" to trigger when new purchase orders are added to QuickBooks, or "Updated" to trigger when existing purchase orders are modified.',
+        },
+      },
+    },
+    purchase_trigger: {
+      displayName: 'Purchase Trigger',
+      shortDesc: 'Triggers when a purchase is created or updated in QuickBooks',
+      longDesc:
+        'Monitor QuickBooks for new purchases or updates to existing purchases. This trigger allows you to respond to purchase events in real-time.',
+      options: {
+        action: {
+          displayName: 'Trigger Action',
+          shortDesc: 'Choose whether to trigger on created or updated purchases',
+          longDesc:
+            'Select "Created" to trigger when new purchases are added to QuickBooks, or "Updated" to trigger when existing purchases are modified.',
+        },
+      },
+    },
+    refund_receipt_trigger: {
+      displayName: 'Refund Receipt Trigger',
+      shortDesc: 'Triggers when a refund receipt is created or updated in QuickBooks',
+      longDesc:
+        'Monitor QuickBooks for new refund receipts or updates to existing refund receipts. This trigger allows you to respond to refund receipt events in real-time.',
+      options: {
+        action: {
+          displayName: 'Trigger Action',
+          shortDesc: 'Choose whether to trigger on created or updated refund receipts',
+          longDesc:
+            'Select "Created" to trigger when new refund receipts are added to QuickBooks, or "Updated" to trigger when existing refund receipts are modified.',
+        },
+      },
+    },
+    sales_receipt_trigger: {
+      displayName: 'Sales Receipt Trigger',
+      shortDesc: 'Triggers when a sales receipt is created or updated in QuickBooks',
+      longDesc:
+        'Monitor QuickBooks for new sales receipts or updates to existing sales receipts. This trigger allows you to respond to sales receipt events in real-time.',
+      options: {
+        action: {
+          displayName: 'Trigger Action',
+          shortDesc: 'Choose whether to trigger on created or updated sales receipts',
+          longDesc:
+            'Select "Created" to trigger when new sales receipts are added to QuickBooks, or "Updated" to trigger when existing sales receipts are modified.',
+        },
+      },
+    },
+    vendor_trigger: {
+      displayName: 'Vendor Trigger',
+      shortDesc: 'Triggers when a vendor is created or updated in QuickBooks',
+      longDesc:
+        'Monitor QuickBooks for new vendors or updates to existing vendors. This trigger allows you to respond to vendor events in real-time.',
+      options: {
+        action: {
+          displayName: 'Trigger Action',
+          shortDesc: 'Choose whether to trigger on created or updated vendors',
+          longDesc:
+            'Select "Created" to trigger when new vendors are added to QuickBooks, or "Updated" to trigger when existing vendors are modified.',
         },
       },
     },

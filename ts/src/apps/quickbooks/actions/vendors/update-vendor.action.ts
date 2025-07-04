@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { QUICKBOOKS_APP_NAME, QuickbooksError } from '../../constants';
-import { createQuickbooksClient } from '../../helpers/constants';
+import { createQuickbooksClient, getQuickbooksErrorMessage } from '../../helpers/constants';
 import { getQuickbooksVendorIdAllowedValues } from '../../helpers/get-vendor-id-allowed-values';
 
 const options = {
@@ -67,7 +67,10 @@ const updateVendor = QoreAppCreator.createLocalizedAction<typeof options>({
     });
 
     try {
+      const vendor = await client.getVendor(id);
+
       const response = await client.updateVendor({
+        SyncToken: vendor.Vendor.SyncToken,
         Id: id,
         ...(DisplayName && { DisplayName }),
         ...(PrimaryPhone && { PrimaryPhone: { FreeFormNumber: PrimaryPhone } }),
@@ -78,7 +81,7 @@ const updateVendor = QoreAppCreator.createLocalizedAction<typeof options>({
 
       return response.Vendor;
     } catch (error) {
-      throw new QuickbooksError(`Failed to update vendor: ${error.message || error}`);
+      throw new QuickbooksError(`Failed to update vendor: ${getQuickbooksErrorMessage(error)}`);
     }
   },
   response_type: {

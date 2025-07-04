@@ -8,8 +8,6 @@ export const QuickBooksBillFieldsAllowedValues = [
   { value: 'Id', display_name: 'Bill ID' },
   { value: 'SyncToken', display_name: 'Sync Token' },
   { value: 'MetaData.CreateTime', display_name: 'Create Time' },
-  { value: 'MetaData.LastModifiedByRef', display_name: 'Last Modified By Reference' },
-  { value: 'MetaData.LastModifiedByRef.value', display_name: 'Last Modified By Value' },
   { value: 'MetaData.LastUpdatedTime', display_name: 'Last Updated Time' },
   { value: 'TxnDate', display_name: 'Transaction Date' },
   { value: 'PrivateNote', display_name: 'Private Note' },

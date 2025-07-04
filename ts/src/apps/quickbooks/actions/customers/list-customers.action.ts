@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { QUICKBOOKS_APP_NAME, QuickbooksError } from '../../constants';
-import { createQuickbooksClient } from '../../helpers/constants';
+import { createQuickbooksClient, getQuickbooksErrorMessage } from '../../helpers/constants';
 import { QuickBooksOperatorsAllowedValues } from '../../helpers/get-filter-operator-allowed-values';
 import { QuickBooksCustomerFieldsAllowedValues } from '../../helpers/get-customer-fields-allowed-values';
 
@@ -108,7 +108,7 @@ const listCustomers = QoreAppCreator.createLocalizedAction<typeof options>({
         customers: response.QueryResponse.Customer || [],
       };
     } catch (error) {
-      throw new QuickbooksError(`Failed to list customers: ${error.message || error}`);
+      throw new QuickbooksError(`Failed to list customers: ${getQuickbooksErrorMessage(error)}`);
     }
   },
   response_type: {
