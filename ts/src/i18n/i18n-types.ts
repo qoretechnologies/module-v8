@@ -5358,6 +5358,20 @@ type RootTranslation = {
 				}
 			}
 		}
+		GoogleChat: {
+			/**
+			 * G​o​o​g​l​e​ ​C​h​a​t
+			 */
+			displayName: string
+			/**
+			 * S​e​n​d​ ​m​e​s​s​a​g​e​s​ ​a​n​d​ ​m​a​n​a​g​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​i​n​ ​G​o​o​g​l​e​ ​C​h​a​t
+			 */
+			shortDesc: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​G​o​o​g​l​e​ ​C​h​a​t​ ​t​o​ ​s​e​n​d​ ​d​i​r​e​c​t​ ​m​e​s​s​a​g​e​s​,​ ​p​o​s​t​ ​t​o​ ​s​p​a​c​e​s​,​ ​m​a​n​a​g​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​,​ ​a​n​d​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​y​o​u​r​ ​t​e​a​m​ ​c​o​l​l​a​b​o​r​a​t​i​o​n​ ​p​l​a​t​f​o​r​m​.​ ​A​u​t​o​m​a​t​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​,​ ​r​e​s​p​o​n​d​ ​t​o​ ​m​e​s​s​a​g​e​s​,​ ​a​n​d​ ​s​t​r​e​a​m​l​i​n​e​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​W​o​r​k​s​p​a​c​e​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​ ​w​o​r​k​f​l​o​w​s​.
+			 */
+			longDesc: string
+		}
 		BusinessCentral: {
 			/**
 			 * M​i​c​r​o​s​o​f​t​ ​D​y​n​a​m​i​c​s​ ​3​6​5​ ​B​u​s​i​n​e​s​s​ ​C​e​n​t​r​a​l
@@ -45562,6 +45576,20 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 			}
+		}
+		GoogleChat: {
+			/**
+			 * Google Chat
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Send messages and manage conversations in Google Chat
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Connect to Google Chat to send direct messages, post to spaces, manage conversations, and interact with your team collaboration platform. Automate notifications, respond to messages, and streamline your Google Workspace communication workflows.
+			 */
+			longDesc: () => LocalizedString
 		}
 		BusinessCentral: {
 			/**
