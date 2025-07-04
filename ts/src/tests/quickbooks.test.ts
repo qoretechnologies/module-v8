@@ -64,7 +64,7 @@ describe('Test Quickbooks Actions', () => {
     if (!token || !realm_id || !clientId || !clientSecret) {
       throw new Error(
         `Please set the` +
-          `QUICKBOOKS_ACCESS_TOKEN, QUICKBOOKS_REALM_ID, QUICKBOOKS_CLIENT_ID, ` +
+          `QUICKBOOKS_REFRESH_TOKEN, QUICKBOOKS_REALM_ID, QUICKBOOKS_CLIENT_ID, ` +
           `and QUICKBOOKS_CLIENT_SECRET environment variables.`
       );
     }
@@ -108,131 +108,128 @@ describe('Test Quickbooks Actions', () => {
   let item_id: string | undefined;
 
   describe('Should test Quickbooks allowed values', () => {
-    it('Should get account id allowed values', async () => {
-      const allowed_values = await getQuickbooksAccountIdAllowedValues(base_context);
+    const testCases = [
+      {
+        name: 'account id',
+        fn: getQuickbooksAccountIdAllowedValues,
+        assignTo: 'account_id',
+        expectMinItems: 1,
+      },
+      {
+        name: 'class id',
+        fn: getQuickbooksClassIdAllowedValues,
+        assignTo: null,
+        expectMinItems: 0,
+      },
+      {
+        name: 'tax code id',
+        fn: getQuickbooksTaxCodeIdAllowedValues,
+        assignTo: null,
+        expectMinItems: 1,
+      },
+      {
+        name: 'bill id',
+        fn: getQuickbooksBillIdAllowedValues,
+        assignTo: null,
+        expectMinItems: 1,
+      },
+      {
+        name: 'credit memo id',
+        fn: getQuickbooksCreditMemoIdAllowedValues,
+        assignTo: null,
+        expectMinItems: 1,
+      },
+      {
+        name: 'customer id',
+        fn: getQuickbooksCustomerIdAllowedValues,
+        assignTo: 'customer_id',
+        expectMinItems: 1,
+      },
+      {
+        name: 'deposit id',
+        fn: getQuickbooksDepositIdAllowedValues,
+        assignTo: null,
+        expectMinItems: 1,
+      },
+      {
+        name: 'estimate id',
+        fn: getQuickbooksEstimateIdAllowedValues,
+        assignTo: null,
+        expectMinItems: 1,
+      },
+      {
+        name: 'invoice id',
+        fn: getQuickbooksInvoiceIdAllowedValues,
+        assignTo: null,
+        expectMinItems: 1,
+      },
+      {
+        name: 'item id',
+        fn: getQuickbooksItemIdAllowedValues,
+        assignTo: 'item_id',
+        expectMinItems: 1,
+      },
+      {
+        name: 'journal entry id',
+        fn: getQuickbooksJournalEntryIdAllowedValues,
+        assignTo: null,
+        expectMinItems: 1,
+      },
+      {
+        name: 'payment id',
+        fn: getQuickbooksPaymentIdAllowedValues,
+        assignTo: null,
+        expectMinItems: 1,
+      },
+      {
+        name: 'purchase order id',
+        fn: getQuickbooksPurchaseOrderIdAllowedValues,
+        assignTo: null,
+        expectMinItems: 1,
+      },
+      {
+        name: 'purchase id',
+        fn: getQuickbooksPurchaseIdAllowedValues,
+        assignTo: null,
+        expectMinItems: 1,
+      },
+      {
+        name: 'refund receipt id',
+        fn: getQuickbooksRefundReceiptIdAllowedValues,
+        assignTo: null,
+        expectMinItems: 1,
+      },
+      {
+        name: 'sales receipt id',
+        fn: getQuickbooksSalesReceiptIdAllowedValues,
+        assignTo: null,
+        expectMinItems: 1,
+      },
+      {
+        name: 'vendor id',
+        fn: getQuickbooksVendorIdAllowedValues,
+        assignTo: 'vendor_id',
+        expectMinItems: 1,
+      },
+    ];
 
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
+    test.each(testCases)(
+      'Should get $name allowed values',
+      async ({ expectMinItems, fn, assignTo }) => {
+        const allowed_values = await fn(base_context);
 
-      account_id = allowed_values[0].value;
-    });
+        expect(allowed_values).toBeDefined();
+        expect(Array.isArray(allowed_values)).toBe(true);
+        expect(allowed_values.length).toBeGreaterThanOrEqual(expectMinItems);
 
-    it('Should get class id allowed values', async () => {
-      const allowed_values = await getQuickbooksClassIdAllowedValues(base_context);
+        if (!(assignTo && allowed_values.length > 0)) return;
 
-      expect(allowed_values).toBeDefined();
-    });
-
-    it('Should get tax code id allowed values', async () => {
-      const allowed_values = await getQuickbooksTaxCodeIdAllowedValues(base_context);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-    });
-
-    it('Should get bill id allowed values', async () => {
-      const allowed_values = await getQuickbooksBillIdAllowedValues(base_context);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-    });
-
-    it('Should get credit memo id allowed values', async () => {
-      const allowed_values = await getQuickbooksCreditMemoIdAllowedValues(base_context);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-    });
-
-    it('Should get customer id allowed values', async () => {
-      const allowed_values = await getQuickbooksCustomerIdAllowedValues(base_context);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-
-      customer_id = allowed_values[0].value;
-    });
-
-    it('Should get deposit id allowed values', async () => {
-      const allowed_values = await getQuickbooksDepositIdAllowedValues(base_context);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-    });
-
-    it('Should get estimate id allowed values', async () => {
-      const allowed_values = await getQuickbooksEstimateIdAllowedValues(base_context);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-    });
-
-    it('Should get invoice id allowed values', async () => {
-      const allowed_values = await getQuickbooksInvoiceIdAllowedValues(base_context);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-    });
-
-    it('Should get item id allowed values', async () => {
-      const allowed_values = await getQuickbooksItemIdAllowedValues(base_context);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-
-      item_id = allowed_values[0].value;
-    });
-
-    it('Should get journal entry id allowed values', async () => {
-      const allowed_values = await getQuickbooksJournalEntryIdAllowedValues(base_context);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-    });
-
-    it('Should get payment id allowed values', async () => {
-      const allowed_values = await getQuickbooksPaymentIdAllowedValues(base_context);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-    });
-
-    it('Should get purchase order id allowed values', async () => {
-      const allowed_values = await getQuickbooksPurchaseOrderIdAllowedValues(base_context);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-    });
-
-    it('Should get purchase id allowed values', async () => {
-      const allowed_values = await getQuickbooksPurchaseIdAllowedValues(base_context);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-    });
-
-    it('Should get refund receipt id allowed values', async () => {
-      const allowed_values = await getQuickbooksRefundReceiptIdAllowedValues(base_context);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-    });
-
-    it('Should get sales receipt id allowed values', async () => {
-      const allowed_values = await getQuickbooksSalesReceiptIdAllowedValues(base_context);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-    });
-
-    it('Should get vendor id allowed values', async () => {
-      const allowed_values = await getQuickbooksVendorIdAllowedValues(base_context);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-
-      vendor_id = allowed_values[0].value;
-    });
+        if (assignTo === 'account_id') account_id = allowed_values[0].value;
+        if (assignTo === 'customer_id') customer_id = allowed_values[0].value;
+        if (assignTo === 'item_id') item_id = allowed_values[0].value;
+        if (assignTo === 'vendor_id') vendor_id = allowed_values[0].value;
+      }
+    );
   });
 
   describe('Should test Quickbooks actions', () => {
