@@ -1,7 +1,11 @@
 import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
+import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import { GOOGLE_CHAT_APP_LOGO, GOOGLE_CHAT_APP_NAME } from './constants';
+
+import * as GOOGLE_CHAT_ACTIONS from './actions';
+import * as GOOGLE_CHAT_TRIGGERS from './triggers';
 
 export default (locale: Locales) =>
   ({
@@ -12,7 +16,10 @@ export default (locale: Locales) =>
     logo: GOOGLE_CHAT_APP_LOGO,
     logo_file_name: 'google-chat-logo.svg',
     logo_mime_type: 'image/svg+xml',
-    actions: [],
+    actions: [
+      ...mapActionsToApp(GOOGLE_CHAT_APP_NAME, GOOGLE_CHAT_ACTIONS, locale),
+      ...mapTriggersToApp(GOOGLE_CHAT_APP_NAME, GOOGLE_CHAT_TRIGGERS, locale),
+    ],
     rest: {
       url: 'https://chat.googleapis.com',
       data: 'json',

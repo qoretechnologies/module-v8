@@ -1,12 +1,18 @@
 import { configDotenv } from 'dotenv';
 import {
+  DeleteGoogleChatMessage,
   GetGoogleChatMember,
+  GetGoogleChatMessage,
   GetGoogleChatSpace,
   ListGoogleChatMembers,
+  ListGoogleChatMessages,
   ListGoogleChatSpaces,
+  SendGoogleChatMessage,
 } from '../apps/google-chat/actions';
 import { getGoogleChatMemberIdAllowedValues } from '../apps/google-chat/helpers/get-member-id-allowed-values';
+import { getGoogleChatMessageIdAllowedValues } from '../apps/google-chat/helpers/get-message-id-allowed-values';
 import { getGoogleChatSpaceIdAllowedValues } from '../apps/google-chat/helpers/get-space-id-allowed-values';
+import { GoogleChatNewMessageTrigger } from '../apps/google-chat/triggers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 
 Debugger.level = DebugLevels.Verbose;
@@ -63,6 +69,8 @@ describe('Google Chat', () => {
 
   let memberId: string | undefined;
   let spaceId: string | undefined;
+  let messageId: string | undefined;
+  let createdMessageId: string | undefined;
   describe('Should test google chat allowed values', () => {
     it('Should get space id allowed values', async () => {
       const allowed_values = await getGoogleChatSpaceIdAllowedValues(base_context);
@@ -82,7 +90,24 @@ describe('Google Chat', () => {
         opts: { spaceId },
       });
 
+      expect(allowed_values).toBeDefined();
+      expect(allowed_values.length).toBeGreaterThan(0);
+
       memberId = allowed_values[0].value;
+    });
+
+    it('Should get message id allowed values', async () => {
+      if (!spaceId) throw new Error('Space ID is not defined');
+
+      const allowed_values = await getGoogleChatMessageIdAllowedValues({
+        ...base_context,
+        opts: { spaceId },
+      });
+
+      expect(allowed_values).toBeDefined();
+      expect(allowed_values.length).toBeGreaterThan(0);
+
+      messageId = allowed_values[0].value;
     });
   });
 
@@ -160,11 +185,95 @@ describe('Google Chat', () => {
         base_context
       );
 
-      console.dir(result, { depth: null });
-
       expect(result).toBeDefined();
       expect(result.name).toBeDefined();
       expect(result.name).toBe(memberId);
+    });
+
+    it('Should list messages in the space', async () => {
+      const action = ListGoogleChatMessages;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      if (!spaceId) throw new Error('Space ID is not defined');
+
+      const result = await action.api_function(
+        {
+          spaceId,
+        },
+        undefined,
+        base_context
+      );
+
+      expect(result).toBeDefined();
+      expect(result.messages).toBeDefined();
+      expect(result.messages.length).toBeGreaterThan(0);
+    });
+
+    it('Should get message by id', async () => {
+      const action = GetGoogleChatMessage;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+      if (!messageId) throw new Error('Message ID is not defined');
+
+      const result = await action.api_function(
+        {
+          messageId,
+        },
+        undefined,
+        base_context
+      );
+
+      expect(result).toBeDefined();
+      expect(result.name).toBe(messageId);
+    });
+
+    it('Should send a message to the space', async () => {
+      const action = SendGoogleChatMessage;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      const result = await action.api_function(
+        {
+          spaceId,
+          text: 'Hello, world!',
+        },
+        undefined,
+        base_context
+      );
+
+      expect(result).toBeDefined();
+      expect(result.name).toBeDefined();
+
+      createdMessageId = result.name;
+    });
+
+    it('Should delete the message from the space', async () => {
+      const action = DeleteGoogleChatMessage;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+      if (!createdMessageId) throw new Error('Created Message ID is not defined');
+
+      await action.api_function(
+        {
+          messageId: createdMessageId,
+        },
+        undefined,
+        base_context
+      );
+    });
+
+    it('Should get example event data for new message trigger', async () => {
+      const trigger = GoogleChatNewMessageTrigger;
+
+      if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
+        throw new Error('get_example_event_data not found in trigger');
+
+      if (!spaceId) throw new Error('Space ID is not defined');
+
+      const result = await trigger.get_example_event_data({ ...base_context, opts: { spaceId } });
+      expect(result).toBeDefined();
+      expect(result.name).toBeDefined();
     });
   });
 });
