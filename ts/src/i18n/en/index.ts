@@ -39,6 +39,7 @@ import Messenger360 from './apps/Messenger360';
 import Typeform from './apps/Typeform';
 import BusinessCentral from './apps/BusinessCentral';
 import Airtable from './apps/Airtable';
+import GoogleChat from './apps/GoogleChat';
 
 const en = {
   common: {},
@@ -143,6 +144,7 @@ const en = {
     GoogleDrive,
     GoogleSheets,
     GoogleContacts,
+    GoogleChat,
     BusinessCentral,
     Attio,
     Airtable,

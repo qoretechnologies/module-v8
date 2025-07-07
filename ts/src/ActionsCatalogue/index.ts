@@ -9,6 +9,7 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import fs from 'fs';
 import path from 'path';
+import airtable from '../apps/airtable';
 import asana from '../apps/asana';
 import attio from '../apps/attio';
 import bitbucket from '../apps/bitbucket';
@@ -19,6 +20,7 @@ import esignature from '../apps/esignature';
 import facebookPages from '../apps/facebook-pages';
 import freshdesk from '../apps/freshdesk';
 import github from '../apps/github';
+import googleChat from '../apps/google-chat';
 import googleContacts from '../apps/google-contacts';
 import googleDocs from '../apps/google-docs';
 import googleDrive from '../apps/google-drive';
@@ -50,7 +52,6 @@ import { Log } from '../decorators/Logger';
 import { Locales } from '../i18n/i18n-types';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
-import airtable from '../apps/airtable';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -75,6 +76,7 @@ const NEW_APPS = {
   facebookPages,
   freshdesk,
   github,
+  googleChat,
   googleContacts,
   googleDocs,
   googleDrive,
