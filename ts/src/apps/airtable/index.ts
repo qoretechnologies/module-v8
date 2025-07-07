@@ -24,6 +24,8 @@ export default (locale: Locales) =>
       url: 'https://api.airtable.com',
       data: 'json',
       oauth2_grant_type: 'authorization_code',
+      oauth2_token_use_basic_auth: true,
+      oauth2_pkce: 'S256',
       oauth2_auth_url: 'https://airtable.com/oauth2/v1/authorize',
       oauth2_token_url: 'https://airtable.com/oauth2/v1/token',
       oauth2_scopes: [

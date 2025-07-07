@@ -5358,6 +5358,600 @@ type RootTranslation = {
 				}
 			}
 		}
+		GoogleChat: {
+			/**
+			 * G​o​o​g​l​e​ ​C​h​a​t
+			 */
+			displayName: string
+			/**
+			 * S​e​n​d​ ​m​e​s​s​a​g​e​s​ ​a​n​d​ ​m​a​n​a​g​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​i​n​ ​G​o​o​g​l​e​ ​C​h​a​t
+			 */
+			shortDesc: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​G​o​o​g​l​e​ ​C​h​a​t​ ​t​o​ ​s​e​n​d​ ​d​i​r​e​c​t​ ​m​e​s​s​a​g​e​s​,​ ​p​o​s​t​ ​t​o​ ​s​p​a​c​e​s​,​ ​m​a​n​a​g​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​,​ ​a​n​d​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​y​o​u​r​ ​t​e​a​m​ ​c​o​l​l​a​b​o​r​a​t​i​o​n​ ​p​l​a​t​f​o​r​m​.​ ​A​u​t​o​m​a​t​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​,​ ​r​e​s​p​o​n​d​ ​t​o​ ​m​e​s​s​a​g​e​s​,​ ​a​n​d​ ​s​t​r​e​a​m​l​i​n​e​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​W​o​r​k​s​p​a​c​e​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​ ​w​o​r​k​f​l​o​w​s​.
+			 */
+			longDesc: string
+			triggers: {
+				new_message: {
+					options: {
+						spaceId: {
+							/**
+							 * S​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​C​h​a​t​ ​s​p​a​c​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​m​e​s​s​a​g​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​C​h​a​t​ ​s​p​a​c​e​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​m​e​s​s​a​g​e​s​.​ ​T​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​f​i​r​e​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​m​e​s​s​a​g​e​ ​i​s​ ​p​o​s​t​e​d​ ​i​n​ ​t​h​i​s​ ​s​p​a​c​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			actions: {
+				list_spaces: {
+					options: {
+						pageSize: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​s​p​a​c​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​s​p​a​c​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​p​a​g​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​2​0​.
+							 */
+							longDesc: string
+						}
+						pageToken: {
+							/**
+							 * P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​p​a​g​e​ ​t​o​k​e​n​,​ ​r​e​c​e​i​v​e​d​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​l​i​s​t​ ​s​p​a​c​e​s​ ​c​a​l​l​.​ ​P​r​o​v​i​d​e​ ​t​h​i​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​s​u​b​s​e​q​u​e​n​t​ ​p​a​g​e​.
+							 */
+							longDesc: string
+						}
+						spaceType: {
+							/**
+							 * S​p​a​c​e​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​s​p​a​c​e​s​ ​b​y​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​s​p​a​c​e​s​ ​b​y​ ​t​h​e​i​r​ ​t​y​p​e​:​ ​S​p​a​c​e​,​ ​G​r​o​u​p​ ​C​h​a​t​,​ ​o​r​ ​D​i​r​e​c​t​ ​M​e​s​s​a​g​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_space: {
+					options: {
+						id: {
+							/**
+							 * S​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​a​c​e​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​C​h​a​t​ ​s​p​a​c​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_members: {
+					options: {
+						spaceId: {
+							/**
+							 * S​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​a​c​e​ ​t​o​ ​l​i​s​t​ ​m​e​m​b​e​r​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​C​h​a​t​ ​s​p​a​c​e​ ​w​h​o​s​e​ ​m​e​m​b​e​r​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+						pageSize: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​m​e​m​b​e​r​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​e​m​b​e​r​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​p​a​g​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​2​0​.
+							 */
+							longDesc: string
+						}
+						pageToken: {
+							/**
+							 * P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​p​a​g​e​ ​t​o​k​e​n​,​ ​r​e​c​e​i​v​e​d​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​l​i​s​t​ ​m​e​m​b​e​r​s​ ​c​a​l​l​.​ ​P​r​o​v​i​d​e​ ​t​h​i​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​s​u​b​s​e​q​u​e​n​t​ ​p​a​g​e​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​m​e​m​b​e​r​s​ ​b​y​ ​f​i​e​l​d​ ​a​n​d​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​m​e​m​b​e​r​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​a​n​d​ ​v​a​l​u​e​,​ ​s​u​c​h​ ​a​s​ ​r​o​l​e​ ​o​r​ ​m​e​m​b​e​r​ ​t​y​p​e​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​l​t​e​r​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​m​e​m​b​e​r​s​ ​b​y​:​ ​r​o​l​e​ ​o​r​ ​m​e​m​b​e​r​ ​t​y​p​e​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * F​i​l​t​e​r​ ​V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​m​e​m​b​e​r​s​ ​b​y​,​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​f​i​e​l​d​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						showGroups: {
+							/**
+							 * S​h​o​w​ ​G​r​o​u​p​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​g​r​o​u​p​ ​m​e​m​b​e​r​s​h​i​p​s​ ​i​n​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​g​r​o​u​p​ ​m​e​m​b​e​r​s​h​i​p​s​ ​i​n​ ​t​h​e​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						showInvited: {
+							/**
+							 * S​h​o​w​ ​I​n​v​i​t​e​d
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​i​n​v​i​t​e​d​ ​m​e​m​b​e​r​s​ ​i​n​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​m​e​m​b​e​r​s​ ​w​h​o​ ​h​a​v​e​ ​b​e​e​n​ ​i​n​v​i​t​e​d​ ​b​u​t​ ​n​o​t​ ​y​e​t​ ​j​o​i​n​e​d​.
+							 */
+							longDesc: string
+						}
+						useAdminAccess: {
+							/**
+							 * U​s​e​ ​A​d​m​i​n​ ​A​c​c​e​s​s
+							 */
+							displayName: string
+							/**
+							 * U​s​e​ ​a​d​m​i​n​ ​p​r​i​v​i​l​e​g​e​s​ ​f​o​r​ ​t​h​e​ ​r​e​q​u​e​s​t
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​u​s​e​ ​a​d​m​i​n​ ​a​c​c​e​s​s​ ​p​r​i​v​i​l​e​g​e​s​ ​w​h​e​n​ ​l​i​s​t​i​n​g​ ​m​e​m​b​e​r​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_member: {
+					options: {
+						spaceId: {
+							/**
+							 * S​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​C​h​a​t​ ​s​p​a​c​e​.
+							 */
+							longDesc: string
+						}
+						memberId: {
+							/**
+							 * M​e​m​b​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​m​e​m​b​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​m​e​m​b​e​r​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_messages: {
+					options: {
+						spaceId: {
+							/**
+							 * S​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​a​c​e​ ​t​o​ ​l​i​s​t​ ​m​e​s​s​a​g​e​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​C​h​a​t​ ​s​p​a​c​e​ ​w​h​o​s​e​ ​m​e​s​s​a​g​e​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+						pageSize: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​p​a​g​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​2​5​.
+							 */
+							longDesc: string
+						}
+						pageToken: {
+							/**
+							 * P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​p​a​g​e​ ​t​o​k​e​n​,​ ​r​e​c​e​i​v​e​d​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​l​i​s​t​ ​m​e​s​s​a​g​e​s​ ​c​a​l​l​.​ ​P​r​o​v​i​d​e​ ​t​h​i​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​s​u​b​s​e​q​u​e​n​t​ ​p​a​g​e​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​m​e​s​s​a​g​e​s​ ​b​y​ ​f​i​e​l​d​ ​a​n​d​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​m​e​s​s​a​g​e​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​a​n​d​ ​v​a​l​u​e​,​ ​s​u​c​h​ ​a​s​ ​c​r​e​a​t​e​ ​t​i​m​e​ ​o​r​ ​t​h​r​e​a​d​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​l​t​e​r​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​m​e​s​s​a​g​e​s​ ​b​y​:​ ​c​r​e​a​t​e​ ​t​i​m​e​ ​o​r​ ​t​h​r​e​a​d​ ​n​a​m​e​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * F​i​l​t​e​r​ ​V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​m​e​s​s​a​g​e​s​ ​b​y​,​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​f​i​e​l​d​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						showDeleted: {
+							/**
+							 * S​h​o​w​ ​D​e​l​e​t​e​d
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​d​e​l​e​t​e​d​ ​m​e​s​s​a​g​e​s​ ​i​n​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​d​e​l​e​t​e​d​ ​m​e​s​s​a​g​e​s​ ​i​n​ ​t​h​e​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						sortOrder: {
+							/**
+							 * S​o​r​t​ ​O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * O​r​d​e​r​ ​t​o​ ​s​o​r​t​ ​m​e​s​s​a​g​e​s​ ​b​y​ ​c​r​e​a​t​e​ ​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​o​r​d​e​r​ ​t​o​ ​s​o​r​t​ ​m​e​s​s​a​g​e​s​ ​b​y​ ​t​h​e​i​r​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e​:​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_message: {
+					options: {
+						spaceId: {
+							/**
+							 * S​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​C​h​a​t​ ​s​p​a​c​e​.
+							 */
+							longDesc: string
+						}
+						messageId: {
+							/**
+							 * M​e​s​s​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_message: {
+					options: {
+						spaceId: {
+							/**
+							 * S​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​C​h​a​t​ ​s​p​a​c​e​.
+							 */
+							longDesc: string
+						}
+						messageId: {
+							/**
+							 * M​e​s​s​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​.
+							 */
+							longDesc: string
+						}
+						force: {
+							/**
+							 * F​o​r​c​e​ ​D​e​l​e​t​e
+							 */
+							displayName: string
+							/**
+							 * F​o​r​c​e​ ​d​e​l​e​t​i​o​n​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​f​o​r​c​e​ ​d​e​l​e​t​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​e​v​e​n​ ​i​f​ ​i​t​ ​c​a​n​n​o​t​ ​b​e​ ​n​o​r​m​a​l​l​y​ ​d​e​l​e​t​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				send_message: {
+					options: {
+						spaceId: {
+							/**
+							 * S​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​a​c​e​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​C​h​a​t​ ​s​p​a​c​e​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​m​e​s​s​a​g​e​.
+							 */
+							longDesc: string
+						}
+						text: {
+							/**
+							 * T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * P​l​a​i​n​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​l​a​i​n​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​.​ ​T​h​i​s​ ​i​s​ ​t​h​e​ ​m​a​i​n​ ​t​e​x​t​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​d​i​s​p​l​a​y​e​d​ ​i​n​ ​t​h​e​ ​c​h​a​t​.
+							 */
+							longDesc: string
+						}
+						formattedText: {
+							/**
+							 * F​o​r​m​a​t​t​e​d​ ​T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * F​o​r​m​a​t​t​e​d​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​u​s​i​n​g​ ​m​a​r​k​d​o​w​n
+							 */
+							shortDesc: string
+							/**
+							 * R​i​c​h​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​f​o​r​m​a​t​t​e​d​ ​w​i​t​h​ ​m​a​r​k​d​o​w​n​ ​s​y​n​t​a​x​.​ ​T​h​i​s​ ​a​l​l​o​w​s​ ​f​o​r​ ​b​o​l​d​,​ ​i​t​a​l​i​c​,​ ​l​i​n​k​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​f​o​r​m​a​t​t​i​n​g​.
+							 */
+							longDesc: string
+						}
+						messageId: {
+							/**
+							 * M​e​s​s​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​f​o​r​ ​m​e​s​s​a​g​e​ ​r​e​p​l​i​e​s​ ​o​r​ ​u​p​d​a​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​m​e​s​s​a​g​e​ ​t​o​ ​r​e​p​l​y​ ​t​o​ ​o​r​ ​u​p​d​a​t​e​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​s​e​n​d​ ​a​ ​n​e​w​ ​m​e​s​s​a​g​e​.
+							 */
+							longDesc: string
+						}
+						cardTitle: {
+							/**
+							 * C​a​r​d​ ​T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​c​a​r​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​t​o​ ​d​i​s​p​l​a​y​ ​i​n​ ​t​h​e​ ​c​a​r​d​ ​h​e​a​d​e​r​.​ ​T​h​i​s​ ​c​r​e​a​t​e​s​ ​a​ ​v​i​s​u​a​l​l​y​ ​p​r​o​m​i​n​e​n​t​ ​h​e​a​d​e​r​ ​f​o​r​ ​y​o​u​r​ ​m​e​s​s​a​g​e​.
+							 */
+							longDesc: string
+						}
+						cardSubtitle: {
+							/**
+							 * C​a​r​d​ ​S​u​b​t​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * S​u​b​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​c​a​r​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​u​b​t​i​t​l​e​ ​t​o​ ​d​i​s​p​l​a​y​ ​b​e​l​o​w​ ​t​h​e​ ​c​a​r​d​ ​t​i​t​l​e​.​ ​T​h​i​s​ ​p​r​o​v​i​d​e​s​ ​a​d​d​i​t​i​o​n​a​l​ ​c​o​n​t​e​x​t​ ​o​r​ ​d​e​s​c​r​i​p​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						cardImageUrl: {
+							/**
+							 * C​a​r​d​ ​I​m​a​g​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * I​m​a​g​e​ ​U​R​L​ ​t​o​ ​d​i​s​p​l​a​y​ ​i​n​ ​t​h​e​ ​c​a​r​d​ ​h​e​a​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​U​R​L​ ​p​o​i​n​t​i​n​g​ ​t​o​ ​a​n​ ​i​m​a​g​e​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​d​i​s​p​l​a​y​e​d​ ​i​n​ ​t​h​e​ ​c​a​r​d​ ​h​e​a​d​e​r​.​ ​T​h​e​ ​i​m​a​g​e​ ​s​h​o​u​l​d​ ​b​e​ ​p​u​b​l​i​c​l​y​ ​a​c​c​e​s​s​i​b​l​e​.
+							 */
+							longDesc: string
+						}
+						buttonText: {
+							/**
+							 * B​u​t​t​o​n​ ​T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​t​o​ ​d​i​s​p​l​a​y​ ​o​n​ ​t​h​e​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​o​n​ ​t​h​e​ ​c​l​i​c​k​a​b​l​e​ ​b​u​t​t​o​n​ ​i​n​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​c​a​r​d​.
+							 */
+							longDesc: string
+						}
+						buttonUrl: {
+							/**
+							 * B​u​t​t​o​n​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * U​R​L​ ​t​h​a​t​ ​t​h​e​ ​b​u​t​t​o​n​ ​w​i​l​l​ ​o​p​e​n​ ​w​h​e​n​ ​c​l​i​c​k​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​w​e​b​ ​a​d​d​r​e​s​s​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​o​p​e​n​e​d​ ​w​h​e​n​ ​u​s​e​r​s​ ​c​l​i​c​k​ ​t​h​e​ ​b​u​t​t​o​n​.​ ​R​e​q​u​i​r​e​d​ ​i​f​ ​b​u​t​t​o​n​ ​t​e​x​t​ ​i​s​ ​p​r​o​v​i​d​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		BusinessCentral: {
 			/**
 			 * M​i​c​r​o​s​o​f​t​ ​D​y​n​a​m​i​c​s​ ​3​6​5​ ​B​u​s​i​n​e​s​s​ ​C​e​n​t​r​a​l
@@ -51128,6 +51722,600 @@ export type TranslationFunctions = {
 					 * This trigger activates whenever a new contact is added to Google Contacts. It provides detailed information about the newly created contact including names, email addresses, phone numbers, and more.
 					 */
 					longDesc: () => LocalizedString
+				}
+			}
+		}
+		GoogleChat: {
+			/**
+			 * Google Chat
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Send messages and manage conversations in Google Chat
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Connect to Google Chat to send direct messages, post to spaces, manage conversations, and interact with your team collaboration platform. Automate notifications, respond to messages, and streamline your Google Workspace communication workflows.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				new_message: {
+					options: {
+						spaceId: {
+							/**
+							 * Space ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Chat space to monitor for new messages
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Chat space where you want to monitor for new messages. The trigger will fire whenever a new message is posted in this space.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			actions: {
+				list_spaces: {
+					options: {
+						pageSize: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of spaces to return per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of spaces to return in a single page. Default is 20.
+							 */
+							longDesc: () => LocalizedString
+						}
+						pageToken: {
+							/**
+							 * Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A page token, received from a previous list spaces call. Provide this to retrieve the subsequent page.
+							 */
+							longDesc: () => LocalizedString
+						}
+						spaceType: {
+							/**
+							 * Space Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter spaces by type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter the list of spaces by their type: Space, Group Chat, or Direct Message.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_space: {
+					options: {
+						id: {
+							/**
+							 * Space ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the space to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Chat space you want to get information about.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_members: {
+					options: {
+						spaceId: {
+							/**
+							 * Space ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the space to list members from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Chat space whose members you want to list.
+							 */
+							longDesc: () => LocalizedString
+						}
+						pageSize: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of members to return per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of members to return in a single page. Default is 20.
+							 */
+							longDesc: () => LocalizedString
+						}
+						pageToken: {
+							/**
+							 * Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A page token, received from a previous list members call. Provide this to retrieve the subsequent page.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter members by field and value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter the list of members by a specific field and value, such as role or member type.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Filter Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose the field to filter members by: role or member type.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Filter Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The value to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The specific value to filter members by, based on the selected field.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						showGroups: {
+							/**
+							 * Show Groups
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include group memberships in results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include group memberships in the results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						showInvited: {
+							/**
+							 * Show Invited
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include invited members in results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include members who have been invited but not yet joined.
+							 */
+							longDesc: () => LocalizedString
+						}
+						useAdminAccess: {
+							/**
+							 * Use Admin Access
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Use admin privileges for the request
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to use admin access privileges when listing members.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_member: {
+					options: {
+						spaceId: {
+							/**
+							 * Space ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the space
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Chat space.
+							 */
+							longDesc: () => LocalizedString
+						}
+						memberId: {
+							/**
+							 * Member ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the member to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the member you want to get information about.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_messages: {
+					options: {
+						spaceId: {
+							/**
+							 * Space ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the space to list messages from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Chat space whose messages you want to list.
+							 */
+							longDesc: () => LocalizedString
+						}
+						pageSize: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of messages to return per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of messages to return in a single page. Default is 25.
+							 */
+							longDesc: () => LocalizedString
+						}
+						pageToken: {
+							/**
+							 * Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A page token, received from a previous list messages call. Provide this to retrieve the subsequent page.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter messages by field and value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter the list of messages by a specific field and value, such as create time or thread.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Filter Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose the field to filter messages by: create time or thread name.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Filter Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The value to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The specific value to filter messages by, based on the selected field.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						showDeleted: {
+							/**
+							 * Show Deleted
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include deleted messages in results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include deleted messages in the results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sortOrder: {
+							/**
+							 * Sort Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Order to sort messages by create time
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The order to sort messages by their creation time: ascending or descending.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_message: {
+					options: {
+						spaceId: {
+							/**
+							 * Space ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the space
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Chat space.
+							 */
+							longDesc: () => LocalizedString
+						}
+						messageId: {
+							/**
+							 * Message ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the message to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the message you want to get information about.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_message: {
+					options: {
+						spaceId: {
+							/**
+							 * Space ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the space
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Chat space.
+							 */
+							longDesc: () => LocalizedString
+						}
+						messageId: {
+							/**
+							 * Message ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the message to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the message you want to delete.
+							 */
+							longDesc: () => LocalizedString
+						}
+						force: {
+							/**
+							 * Force Delete
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Force deletion of the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to force delete the message even if it cannot be normally deleted.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				send_message: {
+					options: {
+						spaceId: {
+							/**
+							 * Space ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the space to send the message to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Chat space where you want to send the message.
+							 */
+							longDesc: () => LocalizedString
+						}
+						text: {
+							/**
+							 * Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Plain text content of the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The plain text content of the message. This is the main text that will be displayed in the chat.
+							 */
+							longDesc: () => LocalizedString
+						}
+						formattedText: {
+							/**
+							 * Formatted Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Formatted text content using markdown
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Rich text content formatted with markdown syntax. This allows for bold, italic, links, and other formatting.
+							 */
+							longDesc: () => LocalizedString
+						}
+						messageId: {
+							/**
+							 * Message ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID for message replies or updates
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of an existing message to reply to or update. Leave empty to send a new message.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cardTitle: {
+							/**
+							 * Card Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Title for the message card
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The title to display in the card header. This creates a visually prominent header for your message.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cardSubtitle: {
+							/**
+							 * Card Subtitle
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Subtitle for the message card
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The subtitle to display below the card title. This provides additional context or description.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cardImageUrl: {
+							/**
+							 * Card Image URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Image URL to display in the card header
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A URL pointing to an image that will be displayed in the card header. The image should be publicly accessible.
+							 */
+							longDesc: () => LocalizedString
+						}
+						buttonText: {
+							/**
+							 * Button Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text to display on the action button
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text that will appear on the clickable button in the message card.
+							 */
+							longDesc: () => LocalizedString
+						}
+						buttonUrl: {
+							/**
+							 * Button URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * URL that the button will open when clicked
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The web address that will be opened when users click the button. Required if button text is provided.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 			}
 		}

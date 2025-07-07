@@ -40,6 +40,7 @@ import Typeform from './apps/Typeform';
 import Xero from './apps/Xero';
 import Zendesk from './apps/Zendesk';
 import Zoom from './apps/Zoom';
+import GoogleChat from './apps/GoogleChat';
 
 const en = {
   common: {},
@@ -144,6 +145,7 @@ const en = {
     GoogleDrive,
     GoogleSheets,
     GoogleContacts,
+    GoogleChat,
     BusinessCentral,
     Quickbooks,
     Attio,
