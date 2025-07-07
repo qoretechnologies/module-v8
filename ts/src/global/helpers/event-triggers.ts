@@ -1,3 +1,4 @@
+import { get } from 'lodash';
 import { Debugger } from '../../utils/Debugger';
 import {
   DEFAULT_TRIGGER_POLLING_INTERVAL,
@@ -116,7 +117,7 @@ export const pollUpdatedItemsForTrigger = async <ItemType extends Record<string,
     const initialItems = await getItems();
 
     for (const item of initialItems) {
-      const initialTime = new Date(item[updatedDateField]).getTime();
+      const initialTime = new Date(get(item, updatedDateField)).getTime();
       lastSeenEdits.set(item[uniqueField], initialTime);
     }
 
@@ -126,7 +127,7 @@ export const pollUpdatedItemsForTrigger = async <ItemType extends Record<string,
 
       for (const item of latestItems) {
         const previousEditTime = lastSeenEdits.get(item[uniqueField]);
-        const newEditTime = new Date(item[updatedDateField]).getTime();
+        const newEditTime = new Date(get(item, updatedDateField)).getTime();
         if (!previousEditTime || newEditTime > previousEditTime) {
           update(item);
           lastSeenEdits.set(item[uniqueField], newEditTime);
