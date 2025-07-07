@@ -51,7 +51,7 @@ const listMembers = QoreAppCreator.createLocalizedAction<typeof options>({
 
       return response?.data;
     } catch (error) {
-      throw new GoogleChatError(`Failed to list members: ${error}`);
+      throw new GoogleChatError(`Failed to get the member: ${error}`);
     }
   },
   response_type: {
