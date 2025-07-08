@@ -47,10 +47,10 @@ const listGroups = QoreAppCreator.createLocalizedAction<typeof options>({
       return await fetchCalendlyData({
         token,
         params,
-        path: 'scheduled_events',
+        path: 'groups',
       });
     } catch (error) {
-      throw new CalendlyError(`Failed to list events: ${error}`);
+      throw new CalendlyError(`Failed to list groups: ${error}`);
     }
   },
   response_type: {

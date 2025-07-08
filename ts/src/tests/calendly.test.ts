@@ -284,7 +284,6 @@ describe('Calendly', () => {
 
       const result = await trigger.get_example_event_data(base_context);
 
-      console.log('result', result);
       expect(result).toBeDefined();
       expect(result.payload).toBeDefined();
     });

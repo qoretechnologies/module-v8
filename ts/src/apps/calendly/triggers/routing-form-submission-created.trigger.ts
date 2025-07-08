@@ -1,9 +1,10 @@
 import { EQoreAppActionCode, QoreAppCreator, QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { getQoreContextRequiredValues } from '../../../global/helpers';
-import { CALENDLY_APP_NAME, CalendlyError } from '../constants';
-import { getCalendlyOrganizationDefaultValue } from '../helpers/get-organization-default-value';
-import { fetchCalendlyData } from '../helpers/constants';
 import { last } from 'lodash';
+import { getQoreContextRequiredValues } from '../../../global/helpers';
+import { Debugger } from '../../../utils/Debugger';
+import { CALENDLY_APP_NAME, CalendlyError } from '../constants';
+import { fetchCalendlyData } from '../helpers/constants';
+import { getCalendlyOrganizationDefaultValue } from '../helpers/get-organization-default-value';
 
 const CalendlyNewFormSubmissionCreated = QoreAppCreator.createLocalizedTrigger({
   action: 'new_form_submission_created',
@@ -70,7 +71,7 @@ const CalendlyNewFormSubmissionCreated = QoreAppCreator.createLocalizedTrigger({
 
     const organization = await getCalendlyOrganizationDefaultValue(context);
 
-    return await fetchCalendlyData({
+    const requestData = {
       token,
       path: 'sample_webhook_data',
       params: {
@@ -78,7 +79,21 @@ const CalendlyNewFormSubmissionCreated = QoreAppCreator.createLocalizedTrigger({
         event: 'routing_form_submission.created',
         scope: 'organization',
       },
-    });
+    };
+
+    try {
+      return await fetchCalendlyData(requestData);
+    } catch (error) {
+      Debugger.log(
+        'Failed to fetch example event data for routing form submission created trigger:',
+        error
+      );
+
+      return await fetchCalendlyData({
+        ...requestData,
+        useMockServer: true,
+      });
+    }
   },
   event_info: {
     desc: 'New message event data',

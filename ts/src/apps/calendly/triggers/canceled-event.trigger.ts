@@ -145,6 +145,6 @@ const fetchLatestEvents = async (options: {
 
     return response.collection;
   } catch (error) {
-    throw new CalendlyError(`Failed to fetch latest messages: ${error}`);
+    throw new CalendlyError(`Failed to fetch latest events: ${error}`);
   }
 };

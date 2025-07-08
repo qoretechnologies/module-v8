@@ -9,6 +9,7 @@ import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { CALENDLY_APP_NAME, CalendlyError } from '../constants';
 import { fetchCalendlyData } from '../helpers/constants';
 import { getCalendlyGroupAllowedValues } from '../helpers/get-group-allowed-values';
+import { Debugger } from '../../../utils/Debugger';
 
 const groupRelatedOptions = {
   group: {
@@ -124,7 +125,7 @@ const CalendlyInviteeCanceled = QoreAppCreator.createLocalizedTrigger<
     const user = userData.uri;
     const organization = userData.current_organization;
 
-    return await fetchCalendlyData<{ resource: { uri: string } }>({
+    const requestData = {
       token,
       path: 'sample_webhook_data',
       params: {
@@ -134,7 +135,18 @@ const CalendlyInviteeCanceled = QoreAppCreator.createLocalizedTrigger<
         ...(scope === 'user' && { user, organization }),
         ...(scope === 'group' && { group, organization }),
       },
-    });
+    };
+
+    try {
+      return await fetchCalendlyData<{ resource: { uri: string } }>(requestData);
+    } catch (error) {
+      Debugger.log(`Failed to fetch example event data for invitee canceled trigger:`, error);
+
+      return await fetchCalendlyData<{ resource: { uri: string } }>({
+        ...requestData,
+        useMockServer: true,
+      });
+    }
   },
   event_info: {
     desc: 'Invitee canceled event data',

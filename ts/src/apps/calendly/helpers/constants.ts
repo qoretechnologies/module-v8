@@ -16,6 +16,7 @@ export type TFetchCalendlyAllowedValuesOptions<ItemType = unknown> = {
   params?: Record<string, string>;
   method?: 'GET' | 'POST';
   body?: Record<string, any>;
+  useMockServer?: boolean;
   mapItemToAllowedValue: (item: ItemType) => IQoreAllowedValue<any>;
 };
 
@@ -54,7 +55,11 @@ export const fetchCalendlyRecords = async <
   const startTime = Date.now();
   const maxResults = options.maxResults || 200;
   const count = options.limit?.toString() || '100';
-  let path = `/${options.path}`;
+  let path = options.useMockServer
+    ? `/mocks/calendly/api-docs/395/${options.path}`
+    : `/${options.path}`;
+
+  const url = options.useMockServer ? 'https://stoplight.io' : `https://api.calendly.com`;
 
   try {
     do {
@@ -85,7 +90,7 @@ export const fetchCalendlyRecords = async <
               path,
             },
             {
-              url: `https://api.calendly.com`,
+              url,
               endpointId: CALENDLY_APP_NAME,
             }
           )) || {};
@@ -102,7 +107,7 @@ export const fetchCalendlyRecords = async <
               ...(body && { data: body }),
             },
             {
-              url: `https://api.calendly.com`,
+              url,
               endpointId: CALENDLY_APP_NAME,
             }
           )) || {};
@@ -145,7 +150,11 @@ export const fetchCalendlyData = async <ItemType = unknown, ResponseKey extends 
   options: Omit<TFetchCalendlyAllowedValuesOptions<ItemType>, 'mapItemToAllowedValue'>
 ): Promise<ItemType> => {
   const { token, object = '', params, method = 'GET', body } = options;
-  const path = `/${options.path}`;
+  const path = options.useMockServer
+    ? `/mocks/calendly/api-docs/395/${options.path}`
+    : `/${options.path}`;
+
+  const url = options.useMockServer ? 'https://stoplight.io' : `https://api.calendly.com`;
 
   try {
     let response: { data?: TObjectsResponse<ItemType, ResponseKey> } = {};
@@ -163,7 +172,7 @@ export const fetchCalendlyData = async <ItemType = unknown, ResponseKey extends 
             path,
           },
           {
-            url: `https://api.calendly.com`,
+            url,
             endpointId: CALENDLY_APP_NAME,
           }
         )) || {};
@@ -181,7 +190,7 @@ export const fetchCalendlyData = async <ItemType = unknown, ResponseKey extends 
             path,
           },
           {
-            url: `https://api.calendly.com`,
+            url,
             endpointId: CALENDLY_APP_NAME,
           }
         )) || {};
