@@ -106,10 +106,10 @@ public class TypeScriptAppRestConnection inherits RestConnection {
         *hash<AsyncCallInfo> post_auth;
         *hash<AsyncCallInfo> post_auth_code;
 
-        Mutex m();
-        hash<string, Condition> cmap;
-        hash<string, int> wmap;
-        hash<string, bool> pmap;
+        transient Mutex m();
+        transient hash<string, Condition> cmap;
+        transient hash<string, int> wmap;
+        transient hash<string, bool> pmap;
         hash<auto> cache;
     }
 

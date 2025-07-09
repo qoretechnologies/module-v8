@@ -280,7 +280,7 @@ public class TypeScriptActionInterface {
             on_demand = True;
         }
         if (opts & DPO_DisableOnDemandInitialization) {
-            TypeScriptActionInterface::initAllApps();
+            TypeScriptActionInterface::initAllApps(opts & DPO_EnableOnDemandActions ? False : True);
         }
     }
 
