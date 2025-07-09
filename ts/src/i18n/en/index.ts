@@ -41,6 +41,7 @@ import Xero from './apps/Xero';
 import Zendesk from './apps/Zendesk';
 import Zoom from './apps/Zoom';
 import GoogleChat from './apps/GoogleChat';
+import Calendly from './apps/Calendly';
 
 const en = {
   common: {},
@@ -139,6 +140,7 @@ const en = {
         },
       },
     },
+    Calendly,
     GoogleDocs,
     GoogleMeet,
     GoogleForms,

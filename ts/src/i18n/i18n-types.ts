@@ -206,6 +206,1006 @@ type RootTranslation = {
 				}
 			}
 		}
+		Calendly: {
+			/**
+			 * C​a​l​e​n​d​l​y
+			 */
+			displayName: string
+			/**
+			 * S​c​h​e​d​u​l​e​ ​m​e​e​t​i​n​g​s​ ​a​n​d​ ​m​a​n​a​g​e​ ​a​p​p​o​i​n​t​m​e​n​t​s​ ​w​i​t​h​ ​C​a​l​e​n​d​l​y​ ​i​n​t​e​g​r​a​t​i​o​n
+			 */
+			shortDesc: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​C​a​l​e​n​d​l​y​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​s​c​h​e​d​u​l​i​n​g​ ​w​o​r​k​f​l​o​w​s​,​ ​m​a​n​a​g​e​ ​e​v​e​n​t​ ​t​y​p​e​s​,​ ​a​n​d​ ​s​y​n​c​ ​c​a​l​e​n​d​a​r​ ​d​a​t​a​ ​w​i​t​h​ ​y​o​u​r​ ​a​u​t​o​m​a​t​i​o​n​ ​p​r​o​c​e​s​s​e​s​.
+			 */
+			longDesc: string
+			triggers: {
+				event_canceled: {
+					/**
+					 * E​v​e​n​t​ ​C​a​n​c​e​l​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​C​a​l​e​n​d​l​y​ ​e​v​e​n​t​ ​i​s​ ​c​a​n​c​e​l​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​a​n​y​ ​s​c​h​e​d​u​l​e​d​ ​e​v​e​n​t​ ​i​n​ ​y​o​u​r​ ​C​a​l​e​n​d​l​y​ ​a​c​c​o​u​n​t​ ​i​s​ ​c​a​n​c​e​l​e​d​ ​b​y​ ​e​i​t​h​e​r​ ​t​h​e​ ​o​r​g​a​n​i​z​e​r​ ​o​r​ ​i​n​v​i​t​e​e​.
+					 */
+					longDesc: string
+					options: {
+					}
+				}
+				invitee_created: {
+					/**
+					 * I​n​v​i​t​e​e​ ​C​r​e​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​n​v​i​t​e​e​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​s​o​m​e​o​n​e​ ​b​o​o​k​s​ ​a​ ​m​e​e​t​i​n​g​ ​a​n​d​ ​b​e​c​o​m​e​s​ ​a​n​ ​i​n​v​i​t​e​e​ ​f​o​r​ ​a​ ​s​c​h​e​d​u​l​e​d​ ​e​v​e​n​t​.
+					 */
+					longDesc: string
+					options: {
+						scope: {
+							/**
+							 * S​c​o​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​c​o​p​e​ ​f​o​r​ ​m​o​n​i​t​o​r​i​n​g​ ​i​n​v​i​t​e​e​ ​c​r​e​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * D​e​f​i​n​e​s​ ​t​h​e​ ​l​e​v​e​l​ ​a​t​ ​w​h​i​c​h​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​i​n​v​i​t​e​e​s​ ​-​ ​o​r​g​a​n​i​z​a​t​i​o​n​-​w​i​d​e​,​ ​s​p​e​c​i​f​i​c​ ​u​s​e​r​,​ ​o​r​ ​s​p​e​c​i​f​i​c​ ​g​r​o​u​p​.
+							 */
+							longDesc: string
+						}
+						group: {
+							/**
+							 * G​r​o​u​p
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​g​r​o​u​p​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​g​r​o​u​p​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​i​n​v​i​t​e​e​s​ ​w​h​e​n​ ​s​c​o​p​e​ ​i​s​ ​s​e​t​ ​t​o​ ​g​r​o​u​p​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				invitee_canceled: {
+					/**
+					 * I​n​v​i​t​e​e​ ​C​a​n​c​e​l​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​i​n​v​i​t​e​e​ ​c​a​n​c​e​l​s​ ​t​h​e​i​r​ ​b​o​o​k​i​n​g
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​a​n​ ​i​n​v​i​t​e​e​ ​c​a​n​c​e​l​s​ ​t​h​e​i​r​ ​s​c​h​e​d​u​l​e​d​ ​m​e​e​t​i​n​g​ ​o​r​ ​a​p​p​o​i​n​t​m​e​n​t​.
+					 */
+					longDesc: string
+					options: {
+						scope: {
+							/**
+							 * S​c​o​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​c​o​p​e​ ​f​o​r​ ​m​o​n​i​t​o​r​i​n​g​ ​i​n​v​i​t​e​e​ ​c​a​n​c​e​l​l​a​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * D​e​f​i​n​e​s​ ​t​h​e​ ​l​e​v​e​l​ ​a​t​ ​w​h​i​c​h​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​i​n​v​i​t​e​e​ ​c​a​n​c​e​l​l​a​t​i​o​n​s​ ​-​ ​o​r​g​a​n​i​z​a​t​i​o​n​-​w​i​d​e​,​ ​s​p​e​c​i​f​i​c​ ​u​s​e​r​,​ ​o​r​ ​s​p​e​c​i​f​i​c​ ​g​r​o​u​p​.
+							 */
+							longDesc: string
+						}
+						group: {
+							/**
+							 * G​r​o​u​p
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​g​r​o​u​p​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​g​r​o​u​p​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​i​n​v​i​t​e​e​ ​c​a​n​c​e​l​l​a​t​i​o​n​s​ ​w​h​e​n​ ​s​c​o​p​e​ ​i​s​ ​s​e​t​ ​t​o​ ​g​r​o​u​p​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				invitee_no_show_created: {
+					/**
+					 * I​n​v​i​t​e​e​ ​N​o​-​S​h​o​w​ ​C​r​e​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​i​n​v​i​t​e​e​ ​i​s​ ​m​a​r​k​e​d​ ​a​s​ ​a​ ​n​o​-​s​h​o​w
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​a​n​ ​i​n​v​i​t​e​e​ ​f​a​i​l​s​ ​t​o​ ​a​t​t​e​n​d​ ​t​h​e​i​r​ ​s​c​h​e​d​u​l​e​d​ ​m​e​e​t​i​n​g​ ​a​n​d​ ​i​s​ ​m​a​r​k​e​d​ ​a​s​ ​a​ ​n​o​-​s​h​o​w​.
+					 */
+					longDesc: string
+					options: {
+						scope: {
+							/**
+							 * S​c​o​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​c​o​p​e​ ​f​o​r​ ​m​o​n​i​t​o​r​i​n​g​ ​n​o​-​s​h​o​w​ ​e​v​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * D​e​f​i​n​e​s​ ​t​h​e​ ​l​e​v​e​l​ ​a​t​ ​w​h​i​c​h​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​o​-​s​h​o​w​ ​e​v​e​n​t​s​ ​-​ ​o​r​g​a​n​i​z​a​t​i​o​n​-​w​i​d​e​,​ ​s​p​e​c​i​f​i​c​ ​u​s​e​r​,​ ​o​r​ ​s​p​e​c​i​f​i​c​ ​g​r​o​u​p​.
+							 */
+							longDesc: string
+						}
+						group: {
+							/**
+							 * G​r​o​u​p
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​g​r​o​u​p​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​g​r​o​u​p​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​o​-​s​h​o​w​ ​e​v​e​n​t​s​ ​w​h​e​n​ ​s​c​o​p​e​ ​i​s​ ​s​e​t​ ​t​o​ ​g​r​o​u​p​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_form_submission_created: {
+					/**
+					 * N​e​w​ ​F​o​r​m​ ​S​u​b​m​i​s​s​i​o​n​ ​C​r​e​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​r​o​u​t​i​n​g​ ​f​o​r​m​ ​s​u​b​m​i​s​s​i​o​n​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​s​o​m​e​o​n​e​ ​s​u​b​m​i​t​s​ ​a​ ​r​o​u​t​i​n​g​ ​f​o​r​m​,​ ​w​h​i​c​h​ ​h​e​l​p​s​ ​d​i​r​e​c​t​ ​t​h​e​m​ ​t​o​ ​t​h​e​ ​a​p​p​r​o​p​r​i​a​t​e​ ​s​c​h​e​d​u​l​i​n​g​ ​o​p​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+					}
+				}
+			}
+			actions: {
+				cancel_event: {
+					/**
+					 * C​a​n​c​e​l​ ​E​v​e​n​t
+					 */
+					displayName: string
+					/**
+					 * C​a​n​c​e​l​ ​a​ ​s​c​h​e​d​u​l​e​d​ ​C​a​l​e​n​d​l​y​ ​e​v​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * C​a​n​c​e​l​s​ ​a​ ​s​c​h​e​d​u​l​e​d​ ​e​v​e​n​t​ ​i​n​ ​C​a​l​e​n​d​l​y​ ​a​n​d​ ​n​o​t​i​f​i​e​s​ ​a​l​l​ ​p​a​r​t​i​c​i​p​a​n​t​s​ ​a​b​o​u​t​ ​t​h​e​ ​c​a​n​c​e​l​l​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						event_id: {
+							/**
+							 * E​v​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​t​o​ ​c​a​n​c​e​l
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​e​v​e​n​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​a​n​c​e​l​ ​f​r​o​m​ ​y​o​u​r​ ​s​c​h​e​d​u​l​e​d​ ​e​v​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+						reason: {
+							/**
+							 * C​a​n​c​e​l​l​a​t​i​o​n​ ​R​e​a​s​o​n
+							 */
+							displayName: string
+							/**
+							 * R​e​a​s​o​n​ ​f​o​r​ ​c​a​n​c​e​l​i​n​g​ ​t​h​e​ ​e​v​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​r​e​a​s​o​n​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​i​n​c​l​u​d​e​d​ ​i​n​ ​t​h​e​ ​c​a​n​c​e​l​l​a​t​i​o​n​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​s​e​n​t​ ​t​o​ ​p​a​r​t​i​c​i​p​a​n​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_group: {
+					/**
+					 * G​e​t​ ​G​r​o​u​p
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​g​r​o​u​p
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​g​r​o​u​p​ ​w​i​t​h​i​n​ ​y​o​u​r​ ​C​a​l​e​n​d​l​y​ ​o​r​g​a​n​i​z​a​t​i​o​n​,​ ​i​n​c​l​u​d​i​n​g​ ​m​e​m​b​e​r​ ​c​o​u​n​t​ ​a​n​d​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​d​e​t​a​i​l​s​.
+					 */
+					longDesc: string
+					options: {
+						group_id: {
+							/**
+							 * G​r​o​u​p​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​g​r​o​u​p​ ​w​h​o​s​e​ ​d​e​t​a​i​l​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​r​o​m​ ​y​o​u​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_scheduling_link: {
+					/**
+					 * C​r​e​a​t​e​ ​S​c​h​e​d​u​l​i​n​g​ ​L​i​n​k
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​s​c​h​e​d​u​l​i​n​g​ ​l​i​n​k​ ​f​o​r​ ​a​n​ ​e​v​e​n​t​ ​t​y​p​e
+					 */
+					shortDesc: string
+					/**
+					 * G​e​n​e​r​a​t​e​s​ ​a​ ​s​c​h​e​d​u​l​i​n​g​ ​l​i​n​k​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​s​h​a​r​e​d​ ​w​i​t​h​ ​o​t​h​e​r​s​ ​t​o​ ​b​o​o​k​ ​m​e​e​t​i​n​g​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​e​v​e​n​t​ ​t​y​p​e​.
+					 */
+					longDesc: string
+					options: {
+						max_event_count: {
+							/**
+							 * M​a​x​i​m​u​m​ ​E​v​e​n​t​ ​C​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​e​v​e​n​t​s​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​s​c​h​e​d​u​l​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​e​v​e​n​t​s​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​s​c​h​e​d​u​l​e​d​ ​u​s​i​n​g​ ​t​h​i​s​ ​l​i​n​k​ ​b​e​f​o​r​e​ ​i​t​ ​b​e​c​o​m​e​s​ ​i​n​a​c​t​i​v​e​.
+							 */
+							longDesc: string
+						}
+						event_type: {
+							/**
+							 * E​v​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​e​v​e​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​s​c​h​e​d​u​l​i​n​g​ ​l​i​n​k​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​v​e​n​t​ ​t​y​p​e​ ​t​h​a​t​ ​p​e​o​p​l​e​ ​w​i​l​l​ ​b​e​ ​a​b​l​e​ ​t​o​ ​b​o​o​k​ ​w​h​e​n​ ​u​s​i​n​g​ ​t​h​i​s​ ​s​c​h​e​d​u​l​i​n​g​ ​l​i​n​k​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_event: {
+					/**
+					 * G​e​t​ ​E​v​e​n​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​e​v​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​c​h​e​d​u​l​e​d​ ​e​v​e​n​t​ ​i​n​c​l​u​d​i​n​g​ ​p​a​r​t​i​c​i​p​a​n​t​s​,​ ​t​i​m​i​n​g​,​ ​a​n​d​ ​m​e​e​t​i​n​g​ ​d​e​t​a​i​l​s​.
+					 */
+					longDesc: string
+					options: {
+						event_id: {
+							/**
+							 * E​v​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​e​v​e​n​t​ ​w​h​o​s​e​ ​d​e​t​a​i​l​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_event_invitee: {
+					/**
+					 * G​e​t​ ​E​v​e​n​t​ ​I​n​v​i​t​e​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​e​v​e​n​t​ ​i​n​v​i​t​e​e
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​i​n​v​i​t​e​e​ ​f​o​r​ ​a​n​ ​e​v​e​n​t​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​i​r​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​n​d​ ​r​e​s​p​o​n​s​e​s​.
+					 */
+					longDesc: string
+					options: {
+						event_id: {
+							/**
+							 * E​v​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​v​e​n​t​ ​f​o​r​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​v​i​t​e​e​ ​i​n​f​o​r​m​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						invitee: {
+							/**
+							 * I​n​v​i​t​e​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​i​n​v​i​t​e​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​i​n​v​i​t​e​e​ ​w​h​o​s​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_event_type: {
+					/**
+					 * G​e​t​ ​E​v​e​n​t​ ​T​y​p​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​e​v​e​n​t​ ​t​y​p​e
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​n​ ​e​v​e​n​t​ ​t​y​p​e​ ​i​n​c​l​u​d​i​n​g​ ​d​u​r​a​t​i​o​n​,​ ​s​e​t​t​i​n​g​s​,​ ​a​n​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						event_type_id: {
+							/**
+							 * E​v​e​n​t​ ​T​y​p​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​t​y​p​e​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​e​v​e​n​t​ ​t​y​p​e​ ​w​h​o​s​e​ ​d​e​t​a​i​l​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_event_invitees: {
+					/**
+					 * L​i​s​t​ ​E​v​e​n​t​ ​I​n​v​i​t​e​e​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​l​l​ ​i​n​v​i​t​e​e​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​e​v​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​i​n​v​i​t​e​e​s​ ​f​o​r​ ​a​ ​s​c​h​e​d​u​l​e​d​ ​e​v​e​n​t​ ​w​i​t​h​ ​t​h​e​i​r​ ​s​t​a​t​u​s​ ​a​n​d​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						event_id: {
+							/**
+							 * E​v​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​v​e​n​t​ ​f​o​r​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​l​i​s​t​ ​a​l​l​ ​i​n​v​i​t​e​e​s​.
+							 */
+							longDesc: string
+						}
+						count: {
+							/**
+							 * C​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​i​n​v​i​t​e​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​i​n​v​i​t​e​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​ ​(​d​e​f​a​u​l​t​ ​i​s​ ​2​0​)​.
+							 */
+							longDesc: string
+						}
+						page_token: {
+							/**
+							 * P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​i​s​ ​t​o​k​e​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​ ​w​h​e​n​ ​t​h​e​r​e​ ​a​r​e​ ​m​o​r​e​ ​i​n​v​i​t​e​e​s​ ​t​h​a​n​ ​t​h​e​ ​c​o​u​n​t​ ​l​i​m​i​t​.
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​i​n​v​i​t​e​e​s​ ​b​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​i​n​v​i​t​e​e​s​ ​w​i​t​h​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.
+							 */
+							longDesc: string
+						}
+						sort: {
+							/**
+							 * S​o​r​t​ ​O​p​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​i​n​v​i​t​e​e​s​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​h​o​w​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​i​n​v​i​t​e​e​s​ ​s​h​o​u​l​d​ ​b​e​ ​s​o​r​t​e​d​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * D​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.
+										 */
+										longDesc: string
+									}
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​i​c​h​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​i​n​v​i​t​e​e​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​i​n​v​i​t​e​e​s​ ​b​y​ ​t​h​e​i​r​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​i​n​v​i​t​e​e​s​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​t​a​t​u​s​ ​(​a​c​t​i​v​e​ ​o​r​ ​c​a​n​c​e​l​e​d​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_events: {
+					/**
+					 * L​i​s​t​ ​E​v​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​s​c​h​e​d​u​l​e​d​ ​e​v​e​n​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​s​c​h​e​d​u​l​e​d​ ​e​v​e​n​t​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​c​a​p​a​b​i​l​i​t​i​e​s​.
+					 */
+					longDesc: string
+					options: {
+						count: {
+							/**
+							 * C​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​e​v​e​n​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​e​v​e​n​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​ ​(​d​e​f​a​u​l​t​ ​i​s​ ​2​0​)​.
+							 */
+							longDesc: string
+						}
+						group: {
+							/**
+							 * G​r​o​u​p​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​e​v​e​n​t​s​ ​b​y​ ​g​r​o​u​p
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​e​v​e​n​t​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​g​r​o​u​p​.
+							 */
+							longDesc: string
+						}
+						invitee_email: {
+							/**
+							 * I​n​v​i​t​e​e​ ​E​m​a​i​l​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​e​v​e​n​t​s​ ​b​y​ ​i​n​v​i​t​e​e​ ​e​m​a​i​l
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​e​v​e​n​t​s​ ​w​h​e​r​e​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​i​s​ ​a​n​ ​i​n​v​i​t​e​e​.
+							 */
+							longDesc: string
+						}
+						max_start_time: {
+							/**
+							 * M​a​x​i​m​u​m​ ​S​t​a​r​t​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * L​a​t​e​s​t​ ​s​t​a​r​t​ ​t​i​m​e​ ​f​o​r​ ​e​v​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​e​v​e​n​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​t​h​o​s​e​ ​t​h​a​t​ ​s​t​a​r​t​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​.
+							 */
+							longDesc: string
+						}
+						min_start_time: {
+							/**
+							 * M​i​n​i​m​u​m​ ​S​t​a​r​t​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * E​a​r​l​i​e​s​t​ ​s​t​a​r​t​ ​t​i​m​e​ ​f​o​r​ ​e​v​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​e​v​e​n​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​t​h​o​s​e​ ​t​h​a​t​ ​s​t​a​r​t​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​.
+							 */
+							longDesc: string
+						}
+						page_token: {
+							/**
+							 * P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​i​s​ ​t​o​k​e​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​ ​w​h​e​n​ ​t​h​e​r​e​ ​a​r​e​ ​m​o​r​e​ ​e​v​e​n​t​s​ ​t​h​a​n​ ​t​h​e​ ​c​o​u​n​t​ ​l​i​m​i​t​.
+							 */
+							longDesc: string
+						}
+						sort: {
+							/**
+							 * S​o​r​t​ ​O​p​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​e​v​e​n​t​s​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​h​o​w​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​e​v​e​n​t​s​ ​s​h​o​u​l​d​ ​b​e​ ​s​o​r​t​e​d​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * D​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.
+										 */
+										longDesc: string
+									}
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​i​c​h​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​e​v​e​n​t​s​ ​(​s​t​a​r​t​_​t​i​m​e​ ​o​r​ ​e​n​d​_​t​i​m​e​)​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						organization: {
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​e​v​e​n​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​t​h​o​s​e​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​o​r​g​a​n​i​z​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						user: {
+							/**
+							 * U​s​e​r​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​e​v​e​n​t​s​ ​b​y​ ​u​s​e​r
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​e​v​e​n​t​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​u​s​e​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_event_types: {
+					/**
+					 * L​i​s​t​ ​E​v​e​n​t​ ​T​y​p​e​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​v​a​i​l​a​b​l​e​ ​e​v​e​n​t​ ​t​y​p​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​u​s​e​d​ ​f​o​r​ ​s​c​h​e​d​u​l​i​n​g​ ​m​e​e​t​i​n​g​s​.
+					 */
+					longDesc: string
+					options: {
+						count: {
+							/**
+							 * C​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​ ​(​d​e​f​a​u​l​t​ ​i​s​ ​2​0​)​.
+							 */
+							longDesc: string
+						}
+						page_token: {
+							/**
+							 * P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​i​s​ ​t​o​k​e​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​ ​w​h​e​n​ ​t​h​e​r​e​ ​a​r​e​ ​m​o​r​e​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​t​h​a​n​ ​t​h​e​ ​c​o​u​n​t​ ​l​i​m​i​t​.
+							 */
+							longDesc: string
+						}
+						sort: {
+							/**
+							 * S​o​r​t​ ​O​p​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​h​o​w​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​s​h​o​u​l​d​ ​b​e​ ​s​o​r​t​e​d​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * D​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.
+										 */
+										longDesc: string
+									}
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​i​c​h​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​(​n​a​m​e​,​ ​p​o​s​i​t​i​o​n​,​ ​c​r​e​a​t​e​d​_​a​t​,​ ​o​r​ ​u​p​d​a​t​e​d​_​a​t​)​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						organization: {
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​t​h​o​s​e​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​o​r​g​a​n​i​z​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						user: {
+							/**
+							 * U​s​e​r​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​b​y​ ​u​s​e​r
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​u​s​e​r​.
+							 */
+							longDesc: string
+						}
+						admin_managed: {
+							/**
+							 * A​d​m​i​n​ ​M​a​n​a​g​e​d​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​a​d​m​i​n​-​m​a​n​a​g​e​d​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​b​a​s​e​d​ ​o​n​ ​w​h​e​t​h​e​r​ ​t​h​e​y​ ​a​r​e​ ​m​a​n​a​g​e​d​ ​b​y​ ​a​n​ ​a​d​m​i​n​i​s​t​r​a​t​o​r​.
+							 */
+							longDesc: string
+						}
+						active: {
+							/**
+							 * A​c​t​i​v​e​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​a​c​t​i​v​e​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​b​a​s​e​d​ ​o​n​ ​w​h​e​t​h​e​r​ ​t​h​e​y​ ​a​r​e​ ​c​u​r​r​e​n​t​l​y​ ​a​c​t​i​v​e​ ​a​n​d​ ​a​v​a​i​l​a​b​l​e​ ​f​o​r​ ​b​o​o​k​i​n​g​.
+							 */
+							longDesc: string
+						}
+						user_availability_schedule: {
+							/**
+							 * U​s​e​r​ ​A​v​a​i​l​a​b​i​l​i​t​y​ ​S​c​h​e​d​u​l​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​u​s​e​r​ ​a​v​a​i​l​a​b​i​l​i​t​y​ ​s​c​h​e​d​u​l​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​b​a​s​e​d​ ​o​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​u​s​e​r​ ​a​v​a​i​l​a​b​i​l​i​t​y​ ​s​c​h​e​d​u​l​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_groups: {
+					/**
+					 * L​i​s​t​ ​G​r​o​u​p​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​v​a​i​l​a​b​l​e​ ​g​r​o​u​p​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​g​r​o​u​p​s​ ​w​i​t​h​i​n​ ​a​n​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​u​s​e​d​ ​f​o​r​ ​o​r​g​a​n​i​z​i​n​g​ ​e​v​e​n​t​s​ ​a​n​d​ ​u​s​e​r​s​.
+					 */
+					longDesc: string
+					options: {
+						count: {
+							/**
+							 * C​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​g​r​o​u​p​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​g​r​o​u​p​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​ ​(​d​e​f​a​u​l​t​ ​i​s​ ​2​0​)​.
+							 */
+							longDesc: string
+						}
+						page_token: {
+							/**
+							 * P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​i​s​ ​t​o​k​e​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​ ​w​h​e​n​ ​t​h​e​r​e​ ​a​r​e​ ​m​o​r​e​ ​g​r​o​u​p​s​ ​t​h​a​n​ ​t​h​e​ ​c​o​u​n​t​ ​l​i​m​i​t​.
+							 */
+							longDesc: string
+						}
+						organization: {
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​t​o​ ​l​i​s​t​ ​g​r​o​u​p​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​g​r​o​u​p​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_organization_members: {
+					/**
+					 * L​i​s​t​ ​O​r​g​a​n​i​z​a​t​i​o​n​ ​M​e​m​b​e​r​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​m​e​m​b​e​r​s​ ​o​f​ ​a​n​ ​o​r​g​a​n​i​z​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​m​e​m​b​e​r​s​ ​w​i​t​h​i​n​ ​a​ ​C​a​l​e​n​d​l​y​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​a​l​o​n​g​ ​w​i​t​h​ ​t​h​e​i​r​ ​r​o​l​e​s​ ​a​n​d​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						count: {
+							/**
+							 * C​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​m​e​m​b​e​r​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​m​e​m​b​e​r​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​ ​(​d​e​f​a​u​l​t​ ​i​s​ ​2​0​)​.
+							 */
+							longDesc: string
+						}
+						page_token: {
+							/**
+							 * P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​i​s​ ​t​o​k​e​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​ ​w​h​e​n​ ​t​h​e​r​e​ ​a​r​e​ ​m​o​r​e​ ​m​e​m​b​e​r​s​ ​t​h​a​n​ ​t​h​e​ ​c​o​u​n​t​ ​l​i​m​i​t​.
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​m​e​m​b​e​r​s​ ​b​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​m​e​m​b​e​r​s​ ​w​i​t​h​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.
+							 */
+							longDesc: string
+						}
+						organization: {
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​t​o​ ​l​i​s​t​ ​m​e​m​b​e​r​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​m​e​m​b​e​r​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		GoogleDocs: {
 			/**
 			 * G​o​o​g​l​e​ ​D​o​c​s
@@ -46568,6 +47568,1006 @@ export type TranslationFunctions = {
 							 * Second Option
 							 */
 							displayName: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		Calendly: {
+			/**
+			 * Calendly
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Schedule meetings and manage appointments with Calendly integration
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Connect to Calendly to automate scheduling workflows, manage event types, and sync calendar data with your automation processes.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				event_canceled: {
+					/**
+					 * Event Canceled
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a Calendly event is canceled
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when any scheduled event in your Calendly account is canceled by either the organizer or invitee.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+					}
+				}
+				invitee_created: {
+					/**
+					 * Invitee Created
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new invitee is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when someone books a meeting and becomes an invitee for a scheduled event.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						scope: {
+							/**
+							 * Scope
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The scope for monitoring invitee creation
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Defines the level at which to monitor for new invitees - organization-wide, specific user, or specific group.
+							 */
+							longDesc: () => LocalizedString
+						}
+						group: {
+							/**
+							 * Group
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The specific group to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the group to monitor for new invitees when scope is set to group.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				invitee_canceled: {
+					/**
+					 * Invitee Canceled
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an invitee cancels their booking
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when an invitee cancels their scheduled meeting or appointment.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						scope: {
+							/**
+							 * Scope
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The scope for monitoring invitee cancellations
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Defines the level at which to monitor for invitee cancellations - organization-wide, specific user, or specific group.
+							 */
+							longDesc: () => LocalizedString
+						}
+						group: {
+							/**
+							 * Group
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The specific group to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the group to monitor for invitee cancellations when scope is set to group.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				invitee_no_show_created: {
+					/**
+					 * Invitee No-Show Created
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an invitee is marked as a no-show
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when an invitee fails to attend their scheduled meeting and is marked as a no-show.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						scope: {
+							/**
+							 * Scope
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The scope for monitoring no-show events
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Defines the level at which to monitor for no-show events - organization-wide, specific user, or specific group.
+							 */
+							longDesc: () => LocalizedString
+						}
+						group: {
+							/**
+							 * Group
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The specific group to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the group to monitor for no-show events when scope is set to group.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_form_submission_created: {
+					/**
+					 * New Form Submission Created
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a routing form submission is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when someone submits a routing form, which helps direct them to the appropriate scheduling option.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+					}
+				}
+			}
+			actions: {
+				cancel_event: {
+					/**
+					 * Cancel Event
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Cancel a scheduled Calendly event
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Cancels a scheduled event in Calendly and notifies all participants about the cancellation.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						event_id: {
+							/**
+							 * Event ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the event to cancel
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific event that you want to cancel from your scheduled events.
+							 */
+							longDesc: () => LocalizedString
+						}
+						reason: {
+							/**
+							 * Cancellation Reason
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Reason for canceling the event
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional reason that will be included in the cancellation notification sent to participants.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_group: {
+					/**
+					 * Get Group
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific group
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches comprehensive information about a specific group within your Calendly organization, including member count and organization details.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						group_id: {
+							/**
+							 * Group ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the group to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific group whose details you want to retrieve from your organization.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_scheduling_link: {
+					/**
+					 * Create Scheduling Link
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a scheduling link for an event type
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Generates a scheduling link that can be shared with others to book meetings for a specific event type.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						max_event_count: {
+							/**
+							 * Maximum Event Count
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of events that can be scheduled
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of events that can be scheduled using this link before it becomes inactive.
+							 */
+							longDesc: () => LocalizedString
+						}
+						event_type: {
+							/**
+							 * Event Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The type of event to create a scheduling link for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the event type that people will be able to book when using this scheduling link.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_event: {
+					/**
+					 * Get Event
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific event
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches comprehensive information about a scheduled event including participants, timing, and meeting details.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						event_id: {
+							/**
+							 * Event ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the event to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific event whose details you want to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_event_invitee: {
+					/**
+					 * Get Event Invitee
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific event invitee
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches detailed information about a specific invitee for an event, including their contact information and responses.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						event_id: {
+							/**
+							 * Event ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the event
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the event for which you want to retrieve invitee information.
+							 */
+							longDesc: () => LocalizedString
+						}
+						invitee: {
+							/**
+							 * Invitee
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The invitee to retrieve details for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific invitee whose information you want to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_event_type: {
+					/**
+					 * Get Event Type
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific event type
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches comprehensive information about an event type including duration, settings, and configuration.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						event_type_id: {
+							/**
+							 * Event Type ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the event type to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific event type whose details you want to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_event_invitees: {
+					/**
+					 * List Event Invitees
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List all invitees for a specific event
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of all invitees for a scheduled event with their status and contact information.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						event_id: {
+							/**
+							 * Event ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the event
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the event for which you want to list all invitees.
+							 */
+							longDesc: () => LocalizedString
+						}
+						count: {
+							/**
+							 * Count
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of invitees to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of invitees to return in the response (default is 20).
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_token: {
+							/**
+							 * Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use this token to retrieve the next page of results when there are more invitees than the count limit.
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter invitees by email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter the results to only include invitees with this specific email address.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort: {
+							/**
+							 * Sort Options
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to sort the invitees list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Configure how the list of invitees should be sorted.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Direction to sort (ascending or descending)
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose whether to sort in ascending or descending order.
+										 */
+										longDesc: () => LocalizedString
+									}
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose which field to use for sorting the invitees.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						status: {
+							/**
+							 * Status Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter invitees by their status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter the results to only include invitees with the specified status (active or canceled).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_events: {
+					/**
+					 * List Events
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List scheduled events
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of scheduled events with optional filtering and sorting capabilities.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						count: {
+							/**
+							 * Count
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of events to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of events to return in the response (default is 20).
+							 */
+							longDesc: () => LocalizedString
+						}
+						group: {
+							/**
+							 * Group Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter events by group
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter the results to only include events associated with a specific group.
+							 */
+							longDesc: () => LocalizedString
+						}
+						invitee_email: {
+							/**
+							 * Invitee Email Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter events by invitee email
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter the results to only include events where the specified email address is an invitee.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_start_time: {
+							/**
+							 * Maximum Start Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Latest start time for events
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter events to only include those that start before this date and time.
+							 */
+							longDesc: () => LocalizedString
+						}
+						min_start_time: {
+							/**
+							 * Minimum Start Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Earliest start time for events
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter events to only include those that start after this date and time.
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_token: {
+							/**
+							 * Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use this token to retrieve the next page of results when there are more events than the count limit.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort: {
+							/**
+							 * Sort Options
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to sort the events list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Configure how the list of events should be sorted.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Direction to sort (ascending or descending)
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose whether to sort in ascending or descending order.
+										 */
+										longDesc: () => LocalizedString
+									}
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose which field to use for sorting the events (start_time or end_time).
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						organization: {
+							/**
+							 * Organization
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Organization to filter by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter events to only include those from a specific organization.
+							 */
+							longDesc: () => LocalizedString
+						}
+						user: {
+							/**
+							 * User Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter events by user
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter the results to only include events associated with a specific user.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_event_types: {
+					/**
+					 * List Event Types
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List available event types
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of event types that can be used for scheduling meetings.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						count: {
+							/**
+							 * Count
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of event types to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of event types to return in the response (default is 20).
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_token: {
+							/**
+							 * Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use this token to retrieve the next page of results when there are more event types than the count limit.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort: {
+							/**
+							 * Sort Options
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to sort the event types list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Configure how the list of event types should be sorted.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Direction to sort (ascending or descending)
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose whether to sort in ascending or descending order.
+										 */
+										longDesc: () => LocalizedString
+									}
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose which field to use for sorting the event types (name, position, created_at, or updated_at).
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						organization: {
+							/**
+							 * Organization
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Organization to filter by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter event types to only include those from a specific organization.
+							 */
+							longDesc: () => LocalizedString
+						}
+						user: {
+							/**
+							 * User Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter event types by user
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter the results to only include event types associated with a specific user.
+							 */
+							longDesc: () => LocalizedString
+						}
+						admin_managed: {
+							/**
+							 * Admin Managed Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by admin-managed status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter event types based on whether they are managed by an administrator.
+							 */
+							longDesc: () => LocalizedString
+						}
+						active: {
+							/**
+							 * Active Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by active status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter event types based on whether they are currently active and available for booking.
+							 */
+							longDesc: () => LocalizedString
+						}
+						user_availability_schedule: {
+							/**
+							 * User Availability Schedule
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by user availability schedule
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter event types based on a specific user availability schedule.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_groups: {
+					/**
+					 * List Groups
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List available groups
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of groups within an organization that can be used for organizing events and users.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						count: {
+							/**
+							 * Count
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of groups to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of groups to return in the response (default is 20).
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_token: {
+							/**
+							 * Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use this token to retrieve the next page of results when there are more groups than the count limit.
+							 */
+							longDesc: () => LocalizedString
+						}
+						organization: {
+							/**
+							 * Organization
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Organization to list groups from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The organization from which to retrieve the list of groups.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_organization_members: {
+					/**
+					 * List Organization Members
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List members of an organization
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of all members within a Calendly organization along with their roles and information.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						count: {
+							/**
+							 * Count
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of members to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of organization members to return in the response (default is 20).
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_token: {
+							/**
+							 * Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use this token to retrieve the next page of results when there are more members than the count limit.
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter members by email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter the results to only include members with this specific email address.
+							 */
+							longDesc: () => LocalizedString
+						}
+						organization: {
+							/**
+							 * Organization
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Organization to list members from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The organization from which to retrieve the list of members.
+							 */
+							longDesc: () => LocalizedString
 						}
 					}
 				}
