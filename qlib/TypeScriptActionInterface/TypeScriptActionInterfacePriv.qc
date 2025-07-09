@@ -125,6 +125,11 @@ function setenv(vr, value) {
             string cwd = getcwd();
             map createPool($1, cwd, \TypeScriptActionInterfacePriv::runTests()), scripts.split(":");
         }
+
+        int opts = DataProvider::getOptions();
+        if (opts & DPO_DisableOnDemandInitialization) {
+            TypeScriptActionInterface::initAllApps(opts & DPO_EnableOnDemandActions ? False : True);
+        }
     }
 
     #! Creates a pool and returns the pool if created
