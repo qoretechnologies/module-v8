@@ -33206,6 +33206,2068 @@ type RootTranslation = {
 				}
 			}
 		}
+		Klaviyo: {
+			/**
+			 * K​l​a​v​i​y​o
+			 */
+			displayName: string
+			/**
+			 * E​m​a​i​l​ ​a​n​d​ ​S​M​S​ ​m​a​r​k​e​t​i​n​g​ ​a​u​t​o​m​a​t​i​o​n​ ​p​l​a​t​f​o​r​m
+			 */
+			shortDesc: string
+			/**
+			 * K​l​a​v​i​y​o​ ​i​s​ ​a​ ​u​n​i​f​i​e​d​ ​c​u​s​t​o​m​e​r​ ​p​l​a​t​f​o​r​m​ ​t​h​a​t​ ​g​i​v​e​s​ ​o​n​l​i​n​e​ ​b​r​a​n​d​s​ ​d​i​r​e​c​t​ ​o​w​n​e​r​s​h​i​p​ ​o​f​ ​t​h​e​i​r​ ​c​o​n​s​u​m​e​r​ ​d​a​t​a​ ​a​n​d​ ​i​n​t​e​r​a​c​t​i​o​n​s​,​ ​e​m​p​o​w​e​r​i​n​g​ ​t​h​e​m​ ​t​o​ ​t​u​r​n​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​w​i​t​h​ ​c​u​s​t​o​m​e​r​s​ ​i​n​t​o​ ​p​r​o​d​u​c​t​i​v​e​ ​l​o​n​g​-​t​e​r​m​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​.
+			 */
+			longDesc: string
+			actions: {
+				get_profile: {
+					/**
+					 * G​e​t​ ​P​r​o​f​i​l​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​r​o​f​i​l​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​r​o​f​i​l​e​ ​b​y​ ​i​t​s​ ​I​D
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * P​r​o​f​i​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+						additionalFields: {
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​p​r​o​f​i​l​e​ ​f​i​e​l​d​s​ ​t​o​ ​i​n​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​a​d​d​i​t​i​o​n​a​l​ ​f​i​e​l​d​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​r​e​s​p​o​n​s​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_campaigns: {
+					/**
+					 * L​i​s​t​ ​C​a​m​p​a​i​g​n​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​s​ ​c​a​m​p​a​i​g​n​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​c​a​m​p​a​i​g​n​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g
+					 */
+					longDesc: string
+					options: {
+						cursor: {
+							/**
+							 * C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r
+							 */
+							shortDesc: string
+							/**
+							 * C​u​r​s​o​r​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​t​o​ ​g​e​t​ ​t​h​e​ ​n​e​x​t​ ​s​e​t​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						pageSize: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​i​t​e​m​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​c​a​m​p​a​i​g​n​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e
+							 */
+							longDesc: string
+						}
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * C​a​m​p​a​i​g​n​ ​c​h​a​n​n​e​l​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​h​a​n​n​e​l​ ​t​y​p​e​ ​t​o​ ​f​i​l​t​e​r​ ​c​a​m​p​a​i​g​n​s​ ​b​y​ ​(​e​m​a​i​l​ ​o​r​ ​S​M​S​)
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * C​a​m​p​a​i​g​n​ ​n​a​m​e​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​a​m​p​a​i​g​n​s​ ​b​y​ ​n​a​m​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​i​s​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​o​p​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * S​o​r​t​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​l​i​s​t
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​l​i​s​t
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​l​i​s​t​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				list_lists: {
+					/**
+					 * L​i​s​t​ ​L​i​s​t​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​s​ ​a​l​l​ ​l​i​s​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​l​i​s​t​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g
+					 */
+					longDesc: string
+					options: {
+						cursor: {
+							/**
+							 * C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r
+							 */
+							shortDesc: string
+							/**
+							 * C​u​r​s​o​r​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​t​o​ ​g​e​t​ ​t​h​e​ ​n​e​x​t​ ​s​e​t​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​l​i​s​t​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									name: {
+										/**
+										 * N​a​m​e​ ​F​i​l​t​e​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​b​y​ ​l​i​s​t​ ​n​a​m​e​s
+										 */
+										shortDesc: string
+										/**
+										 * F​i​l​t​e​r​ ​l​i​s​t​s​ ​b​y​ ​n​a​m​e​s​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​s​e​ ​v​a​l​u​e​s
+										 */
+										longDesc: string
+									}
+									id: {
+										/**
+										 * I​D​ ​F​i​l​t​e​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​b​y​ ​l​i​s​t​ ​I​D​s
+										 */
+										shortDesc: string
+										/**
+										 * F​i​l​t​e​r​ ​l​i​s​t​s​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​I​D​s
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​o​p​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * S​o​r​t​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​l​i​s​t​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​l​i​s​t​ ​r​e​s​u​l​t​s
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​l​i​s​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				list_profiles: {
+					/**
+					 * L​i​s​t​ ​P​r​o​f​i​l​e​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​s​ ​p​r​o​f​i​l​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​p​r​o​f​i​l​e​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g
+					 */
+					longDesc: string
+					options: {
+						additionalFields: {
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​p​r​o​f​i​l​e​ ​f​i​e​l​d​s​ ​t​o​ ​i​n​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​a​d​d​i​t​i​o​n​a​l​ ​f​i​e​l​d​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​r​e​s​p​o​n​s​e​s
+							 */
+							longDesc: string
+						}
+						cursor: {
+							/**
+							 * C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r
+							 */
+							shortDesc: string
+							/**
+							 * C​u​r​s​o​r​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​t​o​ ​g​e​t​ ​t​h​e​ ​n​e​x​t​ ​s​e​t​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						pageSize: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​i​t​e​m​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​p​r​o​f​i​l​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									email: {
+										/**
+										 * E​m​a​i​l​ ​F​i​l​t​e​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​b​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s
+										 */
+										shortDesc: string
+										/**
+										 * F​i​l​t​e​r​ ​p​r​o​f​i​l​e​s​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s
+										 */
+										longDesc: string
+									}
+									phone_number: {
+										/**
+										 * P​h​o​n​e​ ​N​u​m​b​e​r​ ​F​i​l​t​e​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​b​y​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s
+										 */
+										shortDesc: string
+										/**
+										 * F​i​l​t​e​r​ ​p​r​o​f​i​l​e​s​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s
+										 */
+										longDesc: string
+									}
+									external_id: {
+										/**
+										 * E​x​t​e​r​n​a​l​ ​I​D​ ​F​i​l​t​e​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​b​y​ ​e​x​t​e​r​n​a​l​ ​I​D​s
+										 */
+										shortDesc: string
+										/**
+										 * F​i​l​t​e​r​ ​p​r​o​f​i​l​e​s​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​e​x​t​e​r​n​a​l​ ​I​D​s
+										 */
+										longDesc: string
+									}
+									id: {
+										/**
+										 * I​D​ ​F​i​l​t​e​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​b​y​ ​p​r​o​f​i​l​e​ ​I​D​s
+										 */
+										shortDesc: string
+										/**
+										 * F​i​l​t​e​r​ ​p​r​o​f​i​l​e​s​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​p​r​o​f​i​l​e​ ​I​D​s
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​o​p​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * S​o​r​t​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​r​e​s​u​l​t​s
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				list_segments: {
+					/**
+					 * L​i​s​t​ ​S​e​g​m​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​s​ ​s​e​g​m​e​n​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​s​e​g​m​e​n​t​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g
+					 */
+					longDesc: string
+					options: {
+						cursor: {
+							/**
+							 * C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r
+							 */
+							shortDesc: string
+							/**
+							 * C​u​r​s​o​r​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​t​o​ ​g​e​t​ ​t​h​e​ ​n​e​x​t​ ​s​e​t​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​s​e​g​m​e​n​t​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									name: {
+										/**
+										 * N​a​m​e​ ​F​i​l​t​e​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​b​y​ ​s​e​g​m​e​n​t​ ​n​a​m​e​s
+										 */
+										shortDesc: string
+										/**
+										 * F​i​l​t​e​r​ ​s​e​g​m​e​n​t​s​ ​b​y​ ​n​a​m​e​s​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​s​e​ ​v​a​l​u​e​s
+										 */
+										longDesc: string
+									}
+									id: {
+										/**
+										 * I​D​ ​F​i​l​t​e​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​b​y​ ​s​e​g​m​e​n​t​ ​I​D​s
+										 */
+										shortDesc: string
+										/**
+										 * F​i​l​t​e​r​ ​s​e​g​m​e​n​t​s​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​I​D​s
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​o​p​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * S​o​r​t​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​s​e​g​m​e​n​t​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​s​e​g​m​e​n​t​ ​r​e​s​u​l​t​s
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​s​e​g​m​e​n​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				list_tags: {
+					/**
+					 * L​i​s​t​ ​T​a​g​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​s​ ​t​a​g​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​t​a​g​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g
+					 */
+					longDesc: string
+					options: {
+						cursor: {
+							/**
+							 * C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r
+							 */
+							shortDesc: string
+							/**
+							 * C​u​r​s​o​r​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​t​o​ ​g​e​t​ ​t​h​e​ ​n​e​x​t​ ​s​e​t​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​t​a​g​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									name: {
+										/**
+										 * N​a​m​e​ ​F​i​l​t​e​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​b​y​ ​t​a​g​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * F​i​l​t​e​r​ ​t​a​g​s​ ​b​y​ ​n​a​m​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​i​s​ ​v​a​l​u​e
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​o​p​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * S​o​r​t​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​t​a​g​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​t​a​g​ ​r​e​s​u​l​t​s
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​t​a​g​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				remove_profile_from_list: {
+					/**
+					 * R​e​m​o​v​e​ ​P​r​o​f​i​l​e​ ​f​r​o​m​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​ ​p​r​o​f​i​l​e​ ​f​r​o​m​ ​a​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​p​r​o​f​i​l​e​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​l​i​s​t​ ​i​n​ ​K​l​a​v​i​y​o
+					 */
+					longDesc: string
+					options: {
+						profile: {
+							/**
+							 * P​r​o​f​i​l​e
+							 */
+							displayName: string
+							/**
+							 * P​r​o​f​i​l​e​ ​t​o​ ​r​e​m​o​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​o​f​i​l​e​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​i​s​t​ ​t​o​ ​r​e​m​o​v​e​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+					}
+				}
+				remove_tag_from_list: {
+					/**
+					 * R​e​m​o​v​e​ ​T​a​g​ ​f​r​o​m​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​ ​t​a​g​ ​f​r​o​m​ ​a​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​t​a​g​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​l​i​s​t​ ​i​n​ ​K​l​a​v​i​y​o
+					 */
+					longDesc: string
+					options: {
+						tag: {
+							/**
+							 * T​a​g
+							 */
+							displayName: string
+							/**
+							 * T​a​g​ ​t​o​ ​r​e​m​o​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​a​g​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​i​s​t​ ​t​o​ ​r​e​m​o​v​e​ ​t​h​e​ ​t​a​g​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+					}
+				}
+				remove_tag_from_segment: {
+					/**
+					 * R​e​m​o​v​e​ ​T​a​g​ ​f​r​o​m​ ​S​e​g​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​ ​t​a​g​ ​f​r​o​m​ ​a​ ​s​e​g​m​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​t​a​g​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​s​e​g​m​e​n​t​ ​i​n​ ​K​l​a​v​i​y​o
+					 */
+					longDesc: string
+					options: {
+						tag: {
+							/**
+							 * T​a​g
+							 */
+							displayName: string
+							/**
+							 * T​a​g​ ​t​o​ ​r​e​m​o​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​a​g​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​s​e​g​m​e​n​t
+							 */
+							longDesc: string
+						}
+						segment: {
+							/**
+							 * S​e​g​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​s​e​g​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​e​g​m​e​n​t​ ​t​o​ ​r​e​m​o​v​e​ ​t​h​e​ ​t​a​g​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+					}
+				}
+				send_campaign: {
+					/**
+					 * S​e​n​d​ ​C​a​m​p​a​i​g​n
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​s​ ​a​ ​c​a​m​p​a​i​g​n
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​s​ ​a​ ​d​r​a​f​t​ ​c​a​m​p​a​i​g​n​ ​i​m​m​e​d​i​a​t​e​l​y​ ​t​o​ ​i​t​s​ ​t​a​r​g​e​t​ ​a​u​d​i​e​n​c​e
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * C​a​m​p​a​i​g​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​s​e​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​s​e​n​d
+							 */
+							longDesc: string
+						}
+					}
+				}
+				subscribe_profile: {
+					/**
+					 * S​u​b​s​c​r​i​b​e​ ​P​r​o​f​i​l​e
+					 */
+					displayName: string
+					/**
+					 * S​u​b​s​c​r​i​b​e​s​ ​a​ ​p​r​o​f​i​l​e​ ​t​o​ ​m​a​r​k​e​t​i​n​g​ ​c​h​a​n​n​e​l​s
+					 */
+					shortDesc: string
+					/**
+					 * S​u​b​s​c​r​i​b​e​s​ ​a​ ​p​r​o​f​i​l​e​ ​t​o​ ​e​m​a​i​l​ ​m​a​r​k​e​t​i​n​g​,​ ​S​M​S​ ​m​a​r​k​e​t​i​n​g​,​ ​o​r​ ​b​o​t​h​ ​c​h​a​n​n​e​l​s
+					 */
+					longDesc: string
+					options: {
+						profileId: {
+							/**
+							 * P​r​o​f​i​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​t​o​ ​s​u​b​s​c​r​i​b​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​t​o​ ​s​u​b​s​c​r​i​b​e
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​t​o​ ​s​u​b​s​c​r​i​b​e
+							 */
+							longDesc: string
+						}
+						phoneNumber: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * P​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​t​o​ ​s​u​b​s​c​r​i​b​e
+							 */
+							longDesc: string
+						}
+						consentToSubscribeToChannel: {
+							/**
+							 * S​u​b​s​c​r​i​p​t​i​o​n​ ​C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * C​h​a​n​n​e​l​ ​t​o​ ​s​u​b​s​c​r​i​b​e​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​r​k​e​t​i​n​g​ ​c​h​a​n​n​e​l​(​s​)​ ​t​o​ ​s​u​b​s​c​r​i​b​e​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​t​o
+							 */
+							longDesc: string
+						}
+						smsSubscriptionType: {
+							/**
+							 * S​M​S​ ​S​u​b​s​c​r​i​p​t​i​o​n​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​S​M​S​ ​s​u​b​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​S​M​S​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​(​m​a​r​k​e​t​i​n​g​,​ ​t​r​a​n​s​a​c​t​i​o​n​a​l​,​ ​o​r​ ​b​o​t​h​)
+							 */
+							longDesc: string
+						}
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​l​i​s​t​ ​t​o​ ​a​d​d​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​t​o​ ​d​u​r​i​n​g​ ​s​u​b​s​c​r​i​p​t​i​o​n
+							 */
+							longDesc: string
+						}
+					}
+				}
+				unsubscribe_profile: {
+					/**
+					 * U​n​s​u​b​s​c​r​i​b​e​ ​P​r​o​f​i​l​e
+					 */
+					displayName: string
+					/**
+					 * U​n​s​u​b​s​c​r​i​b​e​s​ ​a​ ​p​r​o​f​i​l​e​ ​f​r​o​m​ ​m​a​r​k​e​t​i​n​g​ ​c​h​a​n​n​e​l​s
+					 */
+					shortDesc: string
+					/**
+					 * U​n​s​u​b​s​c​r​i​b​e​s​ ​a​ ​p​r​o​f​i​l​e​ ​f​r​o​m​ ​e​m​a​i​l​ ​a​n​d​/​o​r​ ​S​M​S​ ​m​a​r​k​e​t​i​n​g​ ​b​a​s​e​d​ ​o​n​ ​p​r​o​v​i​d​e​d​ ​i​d​e​n​t​i​f​i​e​r​s
+					 */
+					longDesc: string
+					options: {
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​t​o​ ​u​n​s​u​b​s​c​r​i​b​e
+							 */
+							longDesc: string
+						}
+						phoneNumber: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * P​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​t​o​ ​u​n​s​u​b​s​c​r​i​b​e
+							 */
+							longDesc: string
+						}
+						smsSubscriptionType: {
+							/**
+							 * S​M​S​ ​S​u​b​s​c​r​i​p​t​i​o​n​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​S​M​S​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​t​o​ ​c​a​n​c​e​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​S​M​S​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​t​o​ ​c​a​n​c​e​l​ ​(​m​a​r​k​e​t​i​n​g​,​ ​t​r​a​n​s​a​c​t​i​o​n​a​l​,​ ​o​r​ ​b​o​t​h​)
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_profile: {
+					/**
+					 * U​p​d​a​t​e​ ​P​r​o​f​i​l​e
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​r​o​f​i​l​e
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​r​o​f​i​l​e​ ​w​i​t​h​ ​n​e​w​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​n​d​ ​o​p​t​i​o​n​a​l​l​y​ ​a​d​d​s​ ​t​h​e​m​ ​t​o​ ​a​ ​l​i​s​t
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * P​r​o​f​i​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						phoneNumber: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * P​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						firstName: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​r​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						lastName: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * L​a​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * J​o​b​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​j​o​b​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						organization: {
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​o​r​ ​c​o​m​p​a​n​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						city: {
+							/**
+							 * C​i​t​y
+							 */
+							displayName: string
+							/**
+							 * C​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​i​t​y​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							longDesc: string
+						}
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​t​a​t​e​ ​o​r​ ​r​e​g​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							longDesc: string
+						}
+						country: {
+							/**
+							 * C​o​u​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * C​o​u​n​t​r​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​u​n​t​r​y​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							longDesc: string
+						}
+						zip: {
+							/**
+							 * Z​I​P​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​l​o​c​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						imageUrl: {
+							/**
+							 * I​m​a​g​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * P​r​o​f​i​l​e​ ​i​m​a​g​e​ ​U​R​L
+							 */
+							shortDesc: string
+							/**
+							 * U​R​L​ ​t​o​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​i​m​a​g​e
+							 */
+							longDesc: string
+						}
+						externalId: {
+							/**
+							 * E​x​t​e​r​n​a​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​f​r​o​m​ ​y​o​u​r​ ​s​y​s​t​e​m
+							 */
+							longDesc: string
+						}
+						customProperties: {
+							/**
+							 * C​u​s​t​o​m​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​p​r​o​f​i​l​e​ ​p​r​o​p​e​r​t​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​c​u​s​t​o​m​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​s​e​t​ ​o​n​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_tag_to_list: {
+					/**
+					 * A​d​d​ ​T​a​g​ ​t​o​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * A​d​d​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​t​a​g​ ​t​o​ ​a​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * A​s​s​o​c​i​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​t​a​g​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​l​i​s​t​ ​i​n​ ​K​l​a​v​i​y​o
+					 */
+					longDesc: string
+					options: {
+						tag: {
+							/**
+							 * T​a​g
+							 */
+							displayName: string
+							/**
+							 * T​a​g​ ​t​o​ ​a​d​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​a​g​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​i​s​t​ ​t​o​ ​a​d​d​ ​t​h​e​ ​t​a​g​ ​t​o
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_tag_to_segment: {
+					/**
+					 * A​d​d​ ​T​a​g​ ​t​o​ ​S​e​g​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * A​d​d​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​t​a​g​ ​t​o​ ​a​ ​s​e​g​m​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * A​s​s​o​c​i​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​t​a​g​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​s​e​g​m​e​n​t​ ​i​n​ ​K​l​a​v​i​y​o
+					 */
+					longDesc: string
+					options: {
+						tag: {
+							/**
+							 * T​a​g
+							 */
+							displayName: string
+							/**
+							 * T​a​g​ ​t​o​ ​a​d​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​a​g​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​s​e​g​m​e​n​t
+							 */
+							longDesc: string
+						}
+						segment: {
+							/**
+							 * S​e​g​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​s​e​g​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​e​g​m​e​n​t​ ​t​o​ ​a​d​d​ ​t​h​e​ ​t​a​g​ ​t​o
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_event: {
+					/**
+					 * C​r​e​a​t​e​ ​E​v​e​n​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​e​v​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​e​v​e​n​t​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​t​r​i​c​ ​i​n​ ​K​l​a​v​i​y​o
+					 */
+					longDesc: string
+					options: {
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
+							 */
+							longDesc: string
+						}
+						metric: {
+							/**
+							 * M​e​t​r​i​c
+							 */
+							displayName: string
+							/**
+							 * E​v​e​n​t​ ​m​e​t​r​i​c
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​e​t​r​i​c​ ​o​r​ ​e​v​e​n​t​ ​t​y​p​e​ ​t​o​ ​t​r​a​c​k
+							 */
+							longDesc: string
+						}
+						profile: {
+							/**
+							 * P​r​o​f​i​l​e
+							 */
+							displayName: string
+							/**
+							 * P​r​o​f​i​l​e​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​o​f​i​l​e​ ​I​D​ ​t​o​ ​a​s​s​o​c​i​a​t​e​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t
+							 */
+							longDesc: string
+						}
+						time: {
+							/**
+							 * T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * E​v​e​n​t​ ​t​i​m​e​s​t​a​m​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​w​h​e​n​ ​t​h​e​ ​e​v​e​n​t​ ​o​c​c​u​r​r​e​d
+							 */
+							longDesc: string
+						}
+						value: {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * E​v​e​n​t​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​o​n​e​t​a​r​y​ ​v​a​l​u​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t
+							 */
+							longDesc: string
+						}
+						customId: {
+							/**
+							 * C​u​s​t​o​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * U​n​i​q​u​e​ ​e​v​e​n​t​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​c​u​s​t​o​m​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
+							 */
+							longDesc: string
+						}
+						customProperties: {
+							/**
+							 * C​u​s​t​o​m​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * E​v​e​n​t​ ​p​r​o​p​e​r​t​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​c​u​s​t​o​m​ ​p​r​o​p​e​r​t​i​e​s​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_list: {
+					/**
+					 * C​r​e​a​t​e​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​l​i​s​t​ ​i​n​ ​K​l​a​v​i​y​o​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n
+					 */
+					longDesc: string
+					options: {
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​n​e​w​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_or_update_profile: {
+					/**
+					 * C​r​e​a​t​e​ ​O​r​ ​U​p​d​a​t​e​ ​P​r​o​f​i​l​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​p​r​o​f​i​l​e​ ​o​r​ ​u​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​o​n​e
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​p​r​o​f​i​l​e​ ​o​r​ ​u​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​r​o​f​i​l​e​ ​a​n​d​ ​o​p​t​i​o​n​a​l​l​y​ ​a​d​d​s​ ​i​t​ ​t​o​ ​a​ ​l​i​s​t
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * P​r​o​f​i​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * P​r​o​f​i​l​e​ ​I​D​ ​(​f​o​r​ ​u​p​d​a​t​e​)
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​r​o​f​i​l​e​ ​t​o​ ​u​p​d​a​t​e​ ​(​l​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​c​r​e​a​t​e​ ​n​e​w​)
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						phoneNumber: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * P​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						firstName: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​r​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						lastName: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * L​a​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * J​o​b​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​j​o​b​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						organization: {
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​o​r​ ​c​o​m​p​a​n​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						city: {
+							/**
+							 * C​i​t​y
+							 */
+							displayName: string
+							/**
+							 * C​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​i​t​y​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							longDesc: string
+						}
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​t​a​t​e​ ​o​r​ ​r​e​g​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							longDesc: string
+						}
+						country: {
+							/**
+							 * C​o​u​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * C​o​u​n​t​r​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​u​n​t​r​y​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							longDesc: string
+						}
+						zip: {
+							/**
+							 * Z​I​P​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​l​o​c​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						imageUrl: {
+							/**
+							 * I​m​a​g​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * P​r​o​f​i​l​e​ ​i​m​a​g​e​ ​U​R​L
+							 */
+							shortDesc: string
+							/**
+							 * U​R​L​ ​t​o​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​i​m​a​g​e
+							 */
+							longDesc: string
+						}
+						externalId: {
+							/**
+							 * E​x​t​e​r​n​a​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​f​r​o​m​ ​y​o​u​r​ ​s​y​s​t​e​m
+							 */
+							longDesc: string
+						}
+						customProperties: {
+							/**
+							 * C​u​s​t​o​m​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​p​r​o​f​i​l​e​ ​p​r​o​p​e​r​t​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​c​u​s​t​o​m​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​s​e​t​ ​o​n​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_profile: {
+					/**
+					 * C​r​e​a​t​e​ ​P​r​o​f​i​l​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​p​r​o​f​i​l​e
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​p​r​o​f​i​l​e​ ​i​n​ ​K​l​a​v​i​y​o​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​i​n​f​o​r​m​a​t​i​o​n
+					 */
+					longDesc: string
+					options: {
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						phoneNumber: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * P​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						firstName: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​r​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						lastName: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * L​a​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * J​o​b​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​j​o​b​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						organization: {
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​o​r​ ​c​o​m​p​a​n​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						city: {
+							/**
+							 * C​i​t​y
+							 */
+							displayName: string
+							/**
+							 * C​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​i​t​y​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							longDesc: string
+						}
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​t​a​t​e​ ​o​r​ ​r​e​g​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							longDesc: string
+						}
+						country: {
+							/**
+							 * C​o​u​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * C​o​u​n​t​r​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​u​n​t​r​y​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							longDesc: string
+						}
+						zip: {
+							/**
+							 * Z​I​P​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​l​o​c​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						imageUrl: {
+							/**
+							 * I​m​a​g​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * P​r​o​f​i​l​e​ ​i​m​a​g​e​ ​U​R​L
+							 */
+							shortDesc: string
+							/**
+							 * U​R​L​ ​t​o​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​i​m​a​g​e
+							 */
+							longDesc: string
+						}
+						externalId: {
+							/**
+							 * E​x​t​e​r​n​a​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​f​r​o​m​ ​y​o​u​r​ ​s​y​s​t​e​m
+							 */
+							longDesc: string
+						}
+						customProperties: {
+							/**
+							 * C​u​s​t​o​m​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​p​r​o​f​i​l​e​ ​p​r​o​p​e​r​t​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​c​u​s​t​o​m​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​s​e​t​ ​o​n​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_campaign: {
+					/**
+					 * G​e​t​ ​C​a​m​p​a​i​g​n
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​m​p​a​i​g​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​m​p​a​i​g​n​ ​b​y​ ​i​t​s​ ​I​D
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * C​a​m​p​a​i​g​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_profile_to_list: {
+					/**
+					 * A​d​d​ ​P​r​o​f​i​l​e​ ​t​o​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * A​d​d​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​r​o​f​i​l​e​ ​t​o​ ​a​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​r​o​f​i​l​e​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​l​i​s​t​ ​i​n​ ​K​l​a​v​i​y​o
+					 */
+					longDesc: string
+					options: {
+						profile: {
+							/**
+							 * P​r​o​f​i​l​e
+							 */
+							displayName: string
+							/**
+							 * P​r​o​f​i​l​e​ ​t​o​ ​a​d​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​o​f​i​l​e​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​i​s​t​ ​t​o​ ​a​d​d​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​t​o
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_event: {
+					/**
+					 * N​e​w​ ​E​v​e​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​e​v​e​n​t​ ​o​c​c​u​r​s
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​e​v​e​n​t​ ​o​c​c​u​r​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​t​r​i​c​ ​i​n​ ​K​l​a​v​i​y​o
+					 */
+					longDesc: string
+					options: {
+						metric: {
+							/**
+							 * M​e​t​r​i​c
+							 */
+							displayName: string
+							/**
+							 * E​v​e​n​t​ ​m​e​t​r​i​c​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​m​e​t​r​i​c​ ​o​r​ ​e​v​e​n​t​ ​t​y​p​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​e​v​e​n​t​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_profile: {
+					/**
+					 * N​e​w​ ​P​r​o​f​i​l​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​r​o​f​i​l​e​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​r​o​f​i​l​e​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​K​l​a​v​i​y​o
+					 */
+					longDesc: string
+				}
+				new_list_profile: {
+					/**
+					 * P​r​o​f​i​l​e​ ​A​d​d​e​d​ ​t​o​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​p​r​o​f​i​l​e​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​p​r​o​f​i​l​e​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t​ ​i​n​ ​K​l​a​v​i​y​o
+					 */
+					longDesc: string
+					options: {
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​p​r​o​f​i​l​e​ ​a​d​d​i​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_segment_profile: {
+					/**
+					 * P​r​o​f​i​l​e​ ​A​d​d​e​d​ ​t​o​ ​S​e​g​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​p​r​o​f​i​l​e​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​e​g​m​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​p​r​o​f​i​l​e​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​e​g​m​e​n​t​ ​i​n​ ​K​l​a​v​i​y​o
+					 */
+					longDesc: string
+					options: {
+						segment: {
+							/**
+							 * S​e​g​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * S​e​g​m​e​n​t​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​s​e​g​m​e​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​p​r​o​f​i​l​e​ ​a​d​d​i​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Outlook: {
 			/**
 			 * M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k
@@ -80566,6 +82628,2068 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Specify the Item ID of the list item that you want to update. This ensures that the correct item is modified.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		Klaviyo: {
+			/**
+			 * Klaviyo
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Email and SMS marketing automation platform
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Klaviyo is a unified customer platform that gives online brands direct ownership of their consumer data and interactions, empowering them to turn transactions with customers into productive long-term relationships.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				get_profile: {
+					/**
+					 * Get Profile
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves a specific profile
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves detailed information about a specific profile by its ID
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Profile ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the profile to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the profile you want to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+						additionalFields: {
+							/**
+							 * Additional Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional profile fields to include
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional additional fields to include in the profile response
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_campaigns: {
+					/**
+					 * List Campaigns
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Lists campaigns
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of campaigns with optional filtering and sorting
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						cursor: {
+							/**
+							 * Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Cursor for pagination to get the next set of results
+							 */
+							longDesc: () => LocalizedString
+						}
+						pageSize: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of items per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of campaigns to return per page
+							 */
+							longDesc: () => LocalizedString
+						}
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Campaign channel type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The channel type to filter campaigns by (email or SMS)
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Campaign name filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter campaigns by name containing this value
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort options
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Sort configuration for the campaign list
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The field to use for sorting the campaign list
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The direction to sort the campaign list (ascending or descending)
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				list_lists: {
+					/**
+					 * List Lists
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Lists all lists
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of all lists with optional filtering and sorting
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						cursor: {
+							/**
+							 * Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Cursor for pagination to get the next set of results
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter options
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter configuration for the list results
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									name: {
+										/**
+										 * Name Filter
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter by list names
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Filter lists by names containing these values
+										 */
+										longDesc: () => LocalizedString
+									}
+									id: {
+										/**
+										 * ID Filter
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter by list IDs
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Filter lists by specific IDs
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort options
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Sort configuration for the list results
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The field to use for sorting the list results
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The direction to sort the list results (ascending or descending)
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				list_profiles: {
+					/**
+					 * List Profiles
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Lists profiles
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of profiles with optional filtering and sorting
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						additionalFields: {
+							/**
+							 * Additional Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional profile fields to include
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional additional fields to include in the profile responses
+							 */
+							longDesc: () => LocalizedString
+						}
+						cursor: {
+							/**
+							 * Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Cursor for pagination to get the next set of results
+							 */
+							longDesc: () => LocalizedString
+						}
+						pageSize: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of items per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of profiles to return per page
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter options
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter configuration for the profile results
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									email: {
+										/**
+										 * Email Filter
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter by email addresses
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Filter profiles by specific email addresses
+										 */
+										longDesc: () => LocalizedString
+									}
+									phone_number: {
+										/**
+										 * Phone Number Filter
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter by phone numbers
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Filter profiles by specific phone numbers
+										 */
+										longDesc: () => LocalizedString
+									}
+									external_id: {
+										/**
+										 * External ID Filter
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter by external IDs
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Filter profiles by specific external IDs
+										 */
+										longDesc: () => LocalizedString
+									}
+									id: {
+										/**
+										 * ID Filter
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter by profile IDs
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Filter profiles by specific profile IDs
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort options
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Sort configuration for the profile results
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The field to use for sorting the profile results
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The direction to sort the profile results (ascending or descending)
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				list_segments: {
+					/**
+					 * List Segments
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Lists segments
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of segments with optional filtering and sorting
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						cursor: {
+							/**
+							 * Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Cursor for pagination to get the next set of results
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter options
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter configuration for the segment results
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									name: {
+										/**
+										 * Name Filter
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter by segment names
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Filter segments by names containing these values
+										 */
+										longDesc: () => LocalizedString
+									}
+									id: {
+										/**
+										 * ID Filter
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter by segment IDs
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Filter segments by specific IDs
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort options
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Sort configuration for the segment results
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The field to use for sorting the segment results
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The direction to sort the segment results (ascending or descending)
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				list_tags: {
+					/**
+					 * List Tags
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Lists tags
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of tags with optional filtering and sorting
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						cursor: {
+							/**
+							 * Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Cursor for pagination to get the next set of results
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter options
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter configuration for the tag results
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									name: {
+										/**
+										 * Name Filter
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter by tag name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Filter tags by name containing this value
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort options
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Sort configuration for the tag results
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The field to use for sorting the tag results
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The direction to sort the tag results (ascending or descending)
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				remove_profile_from_list: {
+					/**
+					 * Remove Profile from List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Removes a profile from a list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes a specified profile from a specified list in Klaviyo
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						profile: {
+							/**
+							 * Profile
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Profile to remove
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The profile to remove from the list
+							 */
+							longDesc: () => LocalizedString
+						}
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The list to remove the profile from
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				remove_tag_from_list: {
+					/**
+					 * Remove Tag from List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Removes a tag from a list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes a specified tag from a specified list in Klaviyo
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						tag: {
+							/**
+							 * Tag
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Tag to remove
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The tag to remove from the list
+							 */
+							longDesc: () => LocalizedString
+						}
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The list to remove the tag from
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				remove_tag_from_segment: {
+					/**
+					 * Remove Tag from Segment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Removes a tag from a segment
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes a specified tag from a specified segment in Klaviyo
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						tag: {
+							/**
+							 * Tag
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Tag to remove
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The tag to remove from the segment
+							 */
+							longDesc: () => LocalizedString
+						}
+						segment: {
+							/**
+							 * Segment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target segment
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The segment to remove the tag from
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				send_campaign: {
+					/**
+					 * Send Campaign
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Sends a campaign
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Sends a draft campaign immediately to its target audience
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Campaign ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the campaign to send
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the campaign you want to send
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				subscribe_profile: {
+					/**
+					 * Subscribe Profile
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Subscribes a profile to marketing channels
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Subscribes a profile to email marketing, SMS marketing, or both channels
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						profileId: {
+							/**
+							 * Profile ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the profile to subscribe
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the profile to subscribe
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address of the profile to subscribe
+							 */
+							longDesc: () => LocalizedString
+						}
+						phoneNumber: {
+							/**
+							 * Phone Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The phone number of the profile to subscribe
+							 */
+							longDesc: () => LocalizedString
+						}
+						consentToSubscribeToChannel: {
+							/**
+							 * Subscription Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Channel to subscribe to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The marketing channel(s) to subscribe the profile to
+							 */
+							longDesc: () => LocalizedString
+						}
+						smsSubscriptionType: {
+							/**
+							 * SMS Subscription Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of SMS subscription
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The type of SMS subscription (marketing, transactional, or both)
+							 */
+							longDesc: () => LocalizedString
+						}
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional list to add the profile to during subscription
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				unsubscribe_profile: {
+					/**
+					 * Unsubscribe Profile
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Unsubscribes a profile from marketing channels
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Unsubscribes a profile from email and/or SMS marketing based on provided identifiers
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address of the profile to unsubscribe
+							 */
+							longDesc: () => LocalizedString
+						}
+						phoneNumber: {
+							/**
+							 * Phone Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The phone number of the profile to unsubscribe
+							 */
+							longDesc: () => LocalizedString
+						}
+						smsSubscriptionType: {
+							/**
+							 * SMS Subscription Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of SMS subscription to cancel
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The type of SMS subscription to cancel (marketing, transactional, or both)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_profile: {
+					/**
+					 * Update Profile
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates an existing profile
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates an existing profile with new information and optionally adds them to a list
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Profile ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the profile to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the profile you want to update
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new email address for the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						phoneNumber: {
+							/**
+							 * Phone Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new phone number for the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						firstName: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * First name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The first name of the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						lastName: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Last name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The last name of the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Job title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The job title of the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						organization: {
+							/**
+							 * Organization
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Organization name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The organization or company name for the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						city: {
+							/**
+							 * City
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * City
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The city where the profile is located
+							 */
+							longDesc: () => LocalizedString
+						}
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * State or region
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The state or region where the profile is located
+							 */
+							longDesc: () => LocalizedString
+						}
+						country: {
+							/**
+							 * Country
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Country
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The country where the profile is located
+							 */
+							longDesc: () => LocalizedString
+						}
+						zip: {
+							/**
+							 * ZIP Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ZIP or postal code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ZIP or postal code for the profile location
+							 */
+							longDesc: () => LocalizedString
+						}
+						imageUrl: {
+							/**
+							 * Image URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Profile image URL
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * URL to the profile image
+							 */
+							longDesc: () => LocalizedString
+						}
+						externalId: {
+							/**
+							 * External ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * External identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * External identifier for the profile from your system
+							 */
+							longDesc: () => LocalizedString
+						}
+						customProperties: {
+							/**
+							 * Custom Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom profile properties
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Additional custom properties to set on the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_tag_to_list: {
+					/**
+					 * Add Tag to List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Adds an existing tag to a list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Associates an existing tag with a specified list in Klaviyo
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						tag: {
+							/**
+							 * Tag
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Tag to add
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The tag to add to the list
+							 */
+							longDesc: () => LocalizedString
+						}
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The list to add the tag to
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_tag_to_segment: {
+					/**
+					 * Add Tag to Segment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Adds an existing tag to a segment
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Associates an existing tag with a specified segment in Klaviyo
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						tag: {
+							/**
+							 * Tag
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Tag to add
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The tag to add to the segment
+							 */
+							longDesc: () => LocalizedString
+						}
+						segment: {
+							/**
+							 * Segment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target segment
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The segment to add the tag to
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_event: {
+					/**
+					 * Create Event
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new event
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new event for a specific metric in Klaviyo
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address of the profile for the event
+							 */
+							longDesc: () => LocalizedString
+						}
+						metric: {
+							/**
+							 * Metric
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Event metric
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The metric or event type to track
+							 */
+							longDesc: () => LocalizedString
+						}
+						profile: {
+							/**
+							 * Profile
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Profile ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The profile ID to associate with the event
+							 */
+							longDesc: () => LocalizedString
+						}
+						time: {
+							/**
+							 * Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Event timestamp
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The timestamp when the event occurred
+							 */
+							longDesc: () => LocalizedString
+						}
+						value: {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Event value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The monetary value associated with the event
+							 */
+							longDesc: () => LocalizedString
+						}
+						customId: {
+							/**
+							 * Custom ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Unique event identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A custom unique identifier for the event
+							 */
+							longDesc: () => LocalizedString
+						}
+						customProperties: {
+							/**
+							 * Custom Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Event properties
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Additional custom properties for the event
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_list: {
+					/**
+					 * Create List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new list in Klaviyo with the specified configuration
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the new list
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_or_update_profile: {
+					/**
+					 * Create Or Update Profile
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new profile or updates an existing one
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new profile or updates an existing profile and optionally adds it to a list
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Profile ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Profile ID (for update)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of an existing profile to update (leave empty to create new)
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address for the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						phoneNumber: {
+							/**
+							 * Phone Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The phone number for the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						firstName: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * First name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The first name of the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						lastName: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Last name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The last name of the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Job title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The job title of the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						organization: {
+							/**
+							 * Organization
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Organization name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The organization or company name for the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						city: {
+							/**
+							 * City
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * City
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The city where the profile is located
+							 */
+							longDesc: () => LocalizedString
+						}
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * State or region
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The state or region where the profile is located
+							 */
+							longDesc: () => LocalizedString
+						}
+						country: {
+							/**
+							 * Country
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Country
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The country where the profile is located
+							 */
+							longDesc: () => LocalizedString
+						}
+						zip: {
+							/**
+							 * ZIP Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ZIP or postal code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ZIP or postal code for the profile location
+							 */
+							longDesc: () => LocalizedString
+						}
+						imageUrl: {
+							/**
+							 * Image URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Profile image URL
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * URL to the profile image
+							 */
+							longDesc: () => LocalizedString
+						}
+						externalId: {
+							/**
+							 * External ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * External identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * External identifier for the profile from your system
+							 */
+							longDesc: () => LocalizedString
+						}
+						customProperties: {
+							/**
+							 * Custom Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom profile properties
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Additional custom properties to set on the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_profile: {
+					/**
+					 * Create Profile
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new profile
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new profile in Klaviyo with the specified information
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address for the new profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						phoneNumber: {
+							/**
+							 * Phone Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The phone number for the new profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						firstName: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * First name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The first name of the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						lastName: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Last name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The last name of the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Job title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The job title of the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						organization: {
+							/**
+							 * Organization
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Organization name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The organization or company name for the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						city: {
+							/**
+							 * City
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * City
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The city where the profile is located
+							 */
+							longDesc: () => LocalizedString
+						}
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * State or region
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The state or region where the profile is located
+							 */
+							longDesc: () => LocalizedString
+						}
+						country: {
+							/**
+							 * Country
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Country
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The country where the profile is located
+							 */
+							longDesc: () => LocalizedString
+						}
+						zip: {
+							/**
+							 * ZIP Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ZIP or postal code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ZIP or postal code for the profile location
+							 */
+							longDesc: () => LocalizedString
+						}
+						imageUrl: {
+							/**
+							 * Image URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Profile image URL
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * URL to the profile image
+							 */
+							longDesc: () => LocalizedString
+						}
+						externalId: {
+							/**
+							 * External ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * External identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * External identifier for the profile from your system
+							 */
+							longDesc: () => LocalizedString
+						}
+						customProperties: {
+							/**
+							 * Custom Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom profile properties
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Additional custom properties to set on the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_campaign: {
+					/**
+					 * Get Campaign
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves a specific campaign
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves detailed information about a specific campaign by its ID
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Campaign ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the campaign to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the campaign you want to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_profile_to_list: {
+					/**
+					 * Add Profile to List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Adds an existing profile to a list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Adds an existing profile to a specified list in Klaviyo
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						profile: {
+							/**
+							 * Profile
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Profile to add
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The profile to add to the list
+							 */
+							longDesc: () => LocalizedString
+						}
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The list to add the profile to
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_event: {
+					/**
+					 * New Event
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new event occurs
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new event occurs for a specific metric in Klaviyo
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						metric: {
+							/**
+							 * Metric
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Event metric to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The specific metric or event type to monitor for new events
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_profile: {
+					/**
+					 * New Profile
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new profile is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new profile is created in Klaviyo
+					 */
+					longDesc: () => LocalizedString
+				}
+				new_list_profile: {
+					/**
+					 * Profile Added to List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a profile is added to a list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a profile is added to a specific list in Klaviyo
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The specific list to monitor for new profile additions
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_segment_profile: {
+					/**
+					 * Profile Added to Segment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a profile is added to a segment
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a profile is added to a specific segment in Klaviyo
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						segment: {
+							/**
+							 * Segment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Segment to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The specific segment to monitor for new profile additions
 							 */
 							longDesc: () => LocalizedString
 						}

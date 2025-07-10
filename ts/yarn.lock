@@ -3184,7 +3184,7 @@ axios@^1.7.2, axios@^1.7.4:
     form-data "^4.0.0"
     proxy-from-env "^1.1.0"
 
-axios@^1.7.8:
+axios@^1.7.7, axios@^1.7.8:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/axios/-/axios-1.10.0.tgz#af320aee8632eaf2a400b6a1979fa75856f38d54"
   integrity sha512-/1xYAC4MP/HEG+3duIhFr4ZQXR4sQXOIe+o6sdqzeykGLx6Upp/1p8MHqhINOvGeP7xyNHe7tsiJByc4SSVUxw==
@@ -6608,6 +6608,14 @@ kind-of@^6.0.2:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.3.tgz#07c05034a6c349fa06e24fa35aa76db4580ce4dd"
   integrity sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
+
+klaviyo-api@^18.0.0:
+  version "18.0.0"
+  resolved "https://registry.yarnpkg.com/klaviyo-api/-/klaviyo-api-18.0.0.tgz#f892d0fe20d20b587a680c7e48d2faada9bb2132"
+  integrity sha512-EtiqQwKVi7LzmrNXfTWelTIG4SYPnrILzGNOa9PUAuLFM5LhRGZkfR4tzfFI8FJLTwOcBdpvLRkNZdkaJAcRLg==
+  dependencies:
+    axios "^1.7.7"
+    form-data "^4.0.0"
 
 kleur@^3.0.3:
   version "3.0.3"
