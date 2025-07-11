@@ -1,0 +1,302 @@
+import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
+import { omit } from 'lodash';
+import { getQoreContextRequiredValues } from '../../../global/helpers';
+import { KLAVIYO_APP_NAME, KlaviyoError } from '../constants';
+import { getKlaviyoApis, getKlaviyoErrorMessage } from '../helpers/constants';
+import { getKlaviyoProfileIdAllowedValues } from '../helpers/get-profile-allowed-values';
+
+const options = {
+  id: {
+    type: 'string',
+    required: true,
+    get_allowed_values: getKlaviyoProfileIdAllowedValues,
+  },
+  email: {
+    type: 'string',
+    required: false,
+    preselected: true,
+  },
+  phoneNumber: {
+    type: 'string',
+    required: false,
+    preselected: true,
+  },
+  firstName: {
+    type: 'string',
+    required: false,
+    preselected: true,
+  },
+  lastName: {
+    type: 'string',
+    required: false,
+    preselected: true,
+  },
+  title: {
+    type: 'string',
+    required: false,
+  },
+  organization: {
+    type: 'string',
+    required: false,
+  },
+  city: {
+    type: 'string',
+    required: false,
+  },
+  region: {
+    type: 'string',
+    required: false,
+  },
+  country: {
+    type: 'string',
+    required: false,
+  },
+  zip: {
+    type: 'string',
+    required: false,
+  },
+  imageUrl: {
+    type: 'string',
+    required: false,
+  },
+  externalId: {
+    type: 'string',
+    required: false,
+  },
+  customProperties: {
+    type: 'hash',
+    required: false,
+  },
+} satisfies TQoreOptions;
+
+const updateProfile = QoreAppCreator.createLocalizedAction<typeof options>({
+  app: KLAVIYO_APP_NAME,
+  action: 'update_profile',
+  action_code: EQoreAppActionCode.ACTION,
+  options,
+  api_function: async (obj, _opts, context) => {
+    const { token, id } = getQoreContextRequiredValues({
+      context: { ...context, opts: obj },
+      connectionFields: ['token'],
+      optionFields: ['id'],
+      ErrorClass: KlaviyoError,
+    });
+
+    const apis = getKlaviyoApis(token);
+
+    const {
+      city,
+      region,
+      country,
+      zip,
+      email,
+      phoneNumber,
+      firstName,
+      lastName,
+      title,
+      organization,
+      imageUrl: image,
+      externalId,
+      customProperties: properties,
+    } = obj || {};
+
+    try {
+      const response = await apis.profilesApi.updateProfile(id, {
+        data: {
+          id,
+          type: 'profile',
+          attributes: {
+            ...(email && { email }),
+            ...(phoneNumber && { phoneNumber }),
+            ...(firstName && { firstName }),
+            ...(lastName && { lastName }),
+            ...(title && { title }),
+            ...(organization && { organization }),
+            ...(image && { image }),
+            ...(externalId && { externalId }),
+            ...(properties && { properties }),
+            ...((city || region || country || zip) && {
+              location: {
+                ...(city && { city }),
+                ...(region && { region }),
+                ...(country && { country }),
+                ...(zip && { zip }),
+              },
+            }),
+          },
+        },
+      });
+
+      return omit(response.body.data, ['relationships', 'links']);
+    } catch (error) {
+      throw new KlaviyoError(`Failed to update profile: ${getKlaviyoErrorMessage(error)}`);
+    }
+  },
+  response_type: {
+    type: 'hash',
+
+    fields: {
+      type: { type: 'string' },
+      id: { type: 'string' },
+      attributes: {
+        type: {
+          type: 'hash',
+          fields: {
+            email: { type: 'string' },
+            phoneNumber: { type: 'string' },
+            externalId: { type: 'string' },
+            firstName: { type: 'string' },
+            lastName: { type: 'string' },
+            organization: { type: 'string' },
+            locale: { type: 'string' },
+            title: { type: 'string' },
+            image: { type: 'string' },
+            created: { type: 'string' },
+            updated: { type: 'string' },
+            lastEventDate: { type: 'string' },
+            location: {
+              type: {
+                type: 'hash',
+                fields: {
+                  address1: { type: 'string' },
+                  address2: { type: 'string' },
+                  city: { type: 'string' },
+                  country: { type: 'string' },
+                  latitude: { type: 'string' },
+                  longitude: { type: 'string' },
+                  region: { type: 'string' },
+                  zip: { type: 'string' },
+                  timezone: { type: 'string' },
+                  ip: { type: 'string' },
+                },
+              },
+            },
+            properties: { type: 'hash' },
+            subscriptions: {
+              type: {
+                type: 'hash',
+                fields: {
+                  email: {
+                    type: {
+                      type: 'hash',
+                      fields: {
+                        marketing: {
+                          type: {
+                            type: 'hash',
+                            fields: {
+                              canReceiveEmailMarketing: { type: 'boolean' },
+                              consent: { type: 'string' },
+                              consentTimestamp: { type: 'string' },
+                              lastUpdated: { type: 'string' },
+                              method: { type: 'string' },
+                              methodDetail: { type: 'string' },
+                              customMethodDetail: { type: 'string' },
+                              doubleOptin: { type: 'boolean' },
+                              suppression: {
+                                type: {
+                                  type: 'list',
+                                  element_type: {
+                                    type: 'hash',
+                                    fields: {
+                                      reason: { type: 'string' },
+                                      timestamp: { type: 'string' },
+                                    },
+                                  },
+                                },
+                              },
+                              listSuppressions: {
+                                type: {
+                                  type: 'list',
+                                  element_type: {
+                                    type: 'hash',
+                                    fields: {
+                                      listId: { type: 'string' },
+                                      reason: { type: 'string' },
+                                      timestamp: { type: 'string' },
+                                    },
+                                  },
+                                },
+                              },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                  sms: {
+                    type: {
+                      type: 'hash',
+                      fields: {
+                        marketing: {
+                          type: {
+                            type: 'hash',
+                            fields: {
+                              canReceiveSmsMarketing: { type: 'boolean' },
+                              consent: { type: 'string' },
+                              consentTimestamp: { type: 'string' },
+                              method: { type: 'string' },
+                              methodDetail: { type: 'string' },
+                              lastUpdated: { type: 'string' },
+                            },
+                          },
+                        },
+                        transactional: {
+                          type: {
+                            type: 'hash',
+                            fields: {
+                              canReceiveSmsTransactional: { type: 'boolean' },
+                              consent: { type: 'string' },
+                              consentTimestamp: { type: 'string' },
+                              method: { type: 'string' },
+                              methodDetail: { type: 'string' },
+                              lastUpdated: { type: 'string' },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                  mobilePush: {
+                    type: {
+                      type: 'hash',
+                      fields: {
+                        marketing: {
+                          type: {
+                            type: 'hash',
+                            fields: {
+                              canReceivePushMarketing: { type: 'boolean' },
+                              consent: { type: 'string' },
+                              consentTimestamp: { type: 'string' },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+            predictiveAnalytics: {
+              type: {
+                type: 'hash',
+                fields: {
+                  historicClv: { type: 'number' },
+                  predictedClv: { type: 'number' },
+                  totalClv: { type: 'number' },
+                  historicNumberOfOrders: { type: 'number' },
+                  predictedNumberOfOrders: { type: 'number' },
+                  averageDaysBetweenOrders: { type: 'number' },
+                  averageOrderValue: { type: 'number' },
+                  churnProbability: { type: 'number' },
+                  expectedDateOfNextOrder: { type: 'string' },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+});
+
+export default updateProfile;

@@ -4,6 +4,7 @@ import Asana from './apps/Asana';
 import Attio from './apps/Attio';
 import Bitbucket from './apps/Bitbucket';
 import BusinessCentral from './apps/BusinessCentral';
+import Calendly from './apps/Calendly';
 import Confluence from './apps/Confluence';
 import DocusignESignature from './apps/DocusignESignature';
 import Dropbox from './apps/Dropbox';
@@ -11,6 +12,7 @@ import Dynamics from './apps/Dynamics';
 import FacebookPages from './apps/FacebookPages';
 import Freshdesk from './apps/Freshdesk';
 import Github from './apps/Github';
+import GoogleChat from './apps/GoogleChat';
 import GoogleContacts from './apps/GoogleContacts';
 import GoogleDocs from './apps/GoogleDocs';
 import GoogleDrive from './apps/GoogleDrive';
@@ -20,6 +22,7 @@ import GoogleSheets from './apps/GoogleSheets';
 import Hubspot from './apps/Hubspot';
 import Intercom from './apps/Intercom';
 import Jira from './apps/Jira';
+import Klaviyo from './apps/Klaviyo';
 import Magento from './apps/Magento';
 import Mailchimp from './apps/Mailchimp';
 import Messenger360 from './apps/Messenger360';
@@ -40,8 +43,6 @@ import Typeform from './apps/Typeform';
 import Xero from './apps/Xero';
 import Zendesk from './apps/Zendesk';
 import Zoom from './apps/Zoom';
-import GoogleChat from './apps/GoogleChat';
-import Calendly from './apps/Calendly';
 
 const en = {
   common: {},
@@ -171,6 +172,7 @@ const en = {
     Salesforce,
     Freshdesk,
     SharePoint,
+    Klaviyo,
     Outlook,
     Teams,
     Serenity,

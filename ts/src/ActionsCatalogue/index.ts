@@ -54,6 +54,7 @@ import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import quickbooks from '../apps/quickbooks';
 import calendly from '../apps/calendly';
+import klaviyo from '../apps/klaviyo';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -89,6 +90,7 @@ const NEW_APPS = {
   hubspot,
   intercom,
   jira,
+  klaviyo,
   magento,
   mailchimp,
   messenger360,
