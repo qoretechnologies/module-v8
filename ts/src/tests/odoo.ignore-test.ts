@@ -1,3 +1,4 @@
+import { configDotenv } from 'dotenv';
 import {
   createOdooLead,
   createOdooPartner,
@@ -27,6 +28,7 @@ import { getOdooStageIdAllowedValues } from '../apps/odoo/helpers/get-stage-allo
 import { getOdooLeadTagAllowedValues } from '../apps/odoo/helpers/get-tag-allowed-values';
 import { getOdooTeamIdAllowedValues } from '../apps/odoo/helpers/get-team-allowed-values';
 import { getOdooUserIdAllowedValues } from '../apps/odoo/helpers/get-user-allowed-values';
+configDotenv({ path: '.env' });
 
 describe('Tests Odoo Actions', () => {
   const base_context = {
@@ -131,6 +133,7 @@ describe('Tests Odoo Actions', () => {
 
       expect(allowed_values).toBeDefined();
       expect(allowed_values.length).toBeGreaterThan(0);
+      console.dir(allowed_values, { depth: null, colors: true });
     });
 
     it('Should get company allowed values', async () => {

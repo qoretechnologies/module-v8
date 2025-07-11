@@ -206,6 +206,1006 @@ type RootTranslation = {
 				}
 			}
 		}
+		Calendly: {
+			/**
+			 * C​a​l​e​n​d​l​y
+			 */
+			displayName: string
+			/**
+			 * S​c​h​e​d​u​l​e​ ​m​e​e​t​i​n​g​s​ ​a​n​d​ ​m​a​n​a​g​e​ ​a​p​p​o​i​n​t​m​e​n​t​s​ ​w​i​t​h​ ​C​a​l​e​n​d​l​y​ ​i​n​t​e​g​r​a​t​i​o​n
+			 */
+			shortDesc: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​C​a​l​e​n​d​l​y​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​s​c​h​e​d​u​l​i​n​g​ ​w​o​r​k​f​l​o​w​s​,​ ​m​a​n​a​g​e​ ​e​v​e​n​t​ ​t​y​p​e​s​,​ ​a​n​d​ ​s​y​n​c​ ​c​a​l​e​n​d​a​r​ ​d​a​t​a​ ​w​i​t​h​ ​y​o​u​r​ ​a​u​t​o​m​a​t​i​o​n​ ​p​r​o​c​e​s​s​e​s​.
+			 */
+			longDesc: string
+			triggers: {
+				event_canceled: {
+					/**
+					 * E​v​e​n​t​ ​C​a​n​c​e​l​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​C​a​l​e​n​d​l​y​ ​e​v​e​n​t​ ​i​s​ ​c​a​n​c​e​l​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​a​n​y​ ​s​c​h​e​d​u​l​e​d​ ​e​v​e​n​t​ ​i​n​ ​y​o​u​r​ ​C​a​l​e​n​d​l​y​ ​a​c​c​o​u​n​t​ ​i​s​ ​c​a​n​c​e​l​e​d​ ​b​y​ ​e​i​t​h​e​r​ ​t​h​e​ ​o​r​g​a​n​i​z​e​r​ ​o​r​ ​i​n​v​i​t​e​e​.
+					 */
+					longDesc: string
+					options: {
+					}
+				}
+				invitee_created: {
+					/**
+					 * I​n​v​i​t​e​e​ ​C​r​e​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​n​v​i​t​e​e​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​s​o​m​e​o​n​e​ ​b​o​o​k​s​ ​a​ ​m​e​e​t​i​n​g​ ​a​n​d​ ​b​e​c​o​m​e​s​ ​a​n​ ​i​n​v​i​t​e​e​ ​f​o​r​ ​a​ ​s​c​h​e​d​u​l​e​d​ ​e​v​e​n​t​.
+					 */
+					longDesc: string
+					options: {
+						scope: {
+							/**
+							 * S​c​o​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​c​o​p​e​ ​f​o​r​ ​m​o​n​i​t​o​r​i​n​g​ ​i​n​v​i​t​e​e​ ​c​r​e​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * D​e​f​i​n​e​s​ ​t​h​e​ ​l​e​v​e​l​ ​a​t​ ​w​h​i​c​h​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​i​n​v​i​t​e​e​s​ ​-​ ​o​r​g​a​n​i​z​a​t​i​o​n​-​w​i​d​e​,​ ​s​p​e​c​i​f​i​c​ ​u​s​e​r​,​ ​o​r​ ​s​p​e​c​i​f​i​c​ ​g​r​o​u​p​.
+							 */
+							longDesc: string
+						}
+						group: {
+							/**
+							 * G​r​o​u​p
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​g​r​o​u​p​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​g​r​o​u​p​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​i​n​v​i​t​e​e​s​ ​w​h​e​n​ ​s​c​o​p​e​ ​i​s​ ​s​e​t​ ​t​o​ ​g​r​o​u​p​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				invitee_canceled: {
+					/**
+					 * I​n​v​i​t​e​e​ ​C​a​n​c​e​l​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​i​n​v​i​t​e​e​ ​c​a​n​c​e​l​s​ ​t​h​e​i​r​ ​b​o​o​k​i​n​g
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​a​n​ ​i​n​v​i​t​e​e​ ​c​a​n​c​e​l​s​ ​t​h​e​i​r​ ​s​c​h​e​d​u​l​e​d​ ​m​e​e​t​i​n​g​ ​o​r​ ​a​p​p​o​i​n​t​m​e​n​t​.
+					 */
+					longDesc: string
+					options: {
+						scope: {
+							/**
+							 * S​c​o​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​c​o​p​e​ ​f​o​r​ ​m​o​n​i​t​o​r​i​n​g​ ​i​n​v​i​t​e​e​ ​c​a​n​c​e​l​l​a​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * D​e​f​i​n​e​s​ ​t​h​e​ ​l​e​v​e​l​ ​a​t​ ​w​h​i​c​h​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​i​n​v​i​t​e​e​ ​c​a​n​c​e​l​l​a​t​i​o​n​s​ ​-​ ​o​r​g​a​n​i​z​a​t​i​o​n​-​w​i​d​e​,​ ​s​p​e​c​i​f​i​c​ ​u​s​e​r​,​ ​o​r​ ​s​p​e​c​i​f​i​c​ ​g​r​o​u​p​.
+							 */
+							longDesc: string
+						}
+						group: {
+							/**
+							 * G​r​o​u​p
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​g​r​o​u​p​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​g​r​o​u​p​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​i​n​v​i​t​e​e​ ​c​a​n​c​e​l​l​a​t​i​o​n​s​ ​w​h​e​n​ ​s​c​o​p​e​ ​i​s​ ​s​e​t​ ​t​o​ ​g​r​o​u​p​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				invitee_no_show_created: {
+					/**
+					 * I​n​v​i​t​e​e​ ​N​o​-​S​h​o​w​ ​C​r​e​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​i​n​v​i​t​e​e​ ​i​s​ ​m​a​r​k​e​d​ ​a​s​ ​a​ ​n​o​-​s​h​o​w
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​a​n​ ​i​n​v​i​t​e​e​ ​f​a​i​l​s​ ​t​o​ ​a​t​t​e​n​d​ ​t​h​e​i​r​ ​s​c​h​e​d​u​l​e​d​ ​m​e​e​t​i​n​g​ ​a​n​d​ ​i​s​ ​m​a​r​k​e​d​ ​a​s​ ​a​ ​n​o​-​s​h​o​w​.
+					 */
+					longDesc: string
+					options: {
+						scope: {
+							/**
+							 * S​c​o​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​c​o​p​e​ ​f​o​r​ ​m​o​n​i​t​o​r​i​n​g​ ​n​o​-​s​h​o​w​ ​e​v​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * D​e​f​i​n​e​s​ ​t​h​e​ ​l​e​v​e​l​ ​a​t​ ​w​h​i​c​h​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​o​-​s​h​o​w​ ​e​v​e​n​t​s​ ​-​ ​o​r​g​a​n​i​z​a​t​i​o​n​-​w​i​d​e​,​ ​s​p​e​c​i​f​i​c​ ​u​s​e​r​,​ ​o​r​ ​s​p​e​c​i​f​i​c​ ​g​r​o​u​p​.
+							 */
+							longDesc: string
+						}
+						group: {
+							/**
+							 * G​r​o​u​p
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​g​r​o​u​p​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​g​r​o​u​p​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​o​-​s​h​o​w​ ​e​v​e​n​t​s​ ​w​h​e​n​ ​s​c​o​p​e​ ​i​s​ ​s​e​t​ ​t​o​ ​g​r​o​u​p​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_form_submission_created: {
+					/**
+					 * N​e​w​ ​F​o​r​m​ ​S​u​b​m​i​s​s​i​o​n​ ​C​r​e​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​r​o​u​t​i​n​g​ ​f​o​r​m​ ​s​u​b​m​i​s​s​i​o​n​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​s​o​m​e​o​n​e​ ​s​u​b​m​i​t​s​ ​a​ ​r​o​u​t​i​n​g​ ​f​o​r​m​,​ ​w​h​i​c​h​ ​h​e​l​p​s​ ​d​i​r​e​c​t​ ​t​h​e​m​ ​t​o​ ​t​h​e​ ​a​p​p​r​o​p​r​i​a​t​e​ ​s​c​h​e​d​u​l​i​n​g​ ​o​p​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+					}
+				}
+			}
+			actions: {
+				cancel_event: {
+					/**
+					 * C​a​n​c​e​l​ ​E​v​e​n​t
+					 */
+					displayName: string
+					/**
+					 * C​a​n​c​e​l​ ​a​ ​s​c​h​e​d​u​l​e​d​ ​C​a​l​e​n​d​l​y​ ​e​v​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * C​a​n​c​e​l​s​ ​a​ ​s​c​h​e​d​u​l​e​d​ ​e​v​e​n​t​ ​i​n​ ​C​a​l​e​n​d​l​y​ ​a​n​d​ ​n​o​t​i​f​i​e​s​ ​a​l​l​ ​p​a​r​t​i​c​i​p​a​n​t​s​ ​a​b​o​u​t​ ​t​h​e​ ​c​a​n​c​e​l​l​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						event_id: {
+							/**
+							 * E​v​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​t​o​ ​c​a​n​c​e​l
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​e​v​e​n​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​a​n​c​e​l​ ​f​r​o​m​ ​y​o​u​r​ ​s​c​h​e​d​u​l​e​d​ ​e​v​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+						reason: {
+							/**
+							 * C​a​n​c​e​l​l​a​t​i​o​n​ ​R​e​a​s​o​n
+							 */
+							displayName: string
+							/**
+							 * R​e​a​s​o​n​ ​f​o​r​ ​c​a​n​c​e​l​i​n​g​ ​t​h​e​ ​e​v​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​r​e​a​s​o​n​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​i​n​c​l​u​d​e​d​ ​i​n​ ​t​h​e​ ​c​a​n​c​e​l​l​a​t​i​o​n​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​s​e​n​t​ ​t​o​ ​p​a​r​t​i​c​i​p​a​n​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_group: {
+					/**
+					 * G​e​t​ ​G​r​o​u​p
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​g​r​o​u​p
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​g​r​o​u​p​ ​w​i​t​h​i​n​ ​y​o​u​r​ ​C​a​l​e​n​d​l​y​ ​o​r​g​a​n​i​z​a​t​i​o​n​,​ ​i​n​c​l​u​d​i​n​g​ ​m​e​m​b​e​r​ ​c​o​u​n​t​ ​a​n​d​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​d​e​t​a​i​l​s​.
+					 */
+					longDesc: string
+					options: {
+						group_id: {
+							/**
+							 * G​r​o​u​p​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​g​r​o​u​p​ ​w​h​o​s​e​ ​d​e​t​a​i​l​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​r​o​m​ ​y​o​u​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_scheduling_link: {
+					/**
+					 * C​r​e​a​t​e​ ​S​c​h​e​d​u​l​i​n​g​ ​L​i​n​k
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​s​c​h​e​d​u​l​i​n​g​ ​l​i​n​k​ ​f​o​r​ ​a​n​ ​e​v​e​n​t​ ​t​y​p​e
+					 */
+					shortDesc: string
+					/**
+					 * G​e​n​e​r​a​t​e​s​ ​a​ ​s​c​h​e​d​u​l​i​n​g​ ​l​i​n​k​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​s​h​a​r​e​d​ ​w​i​t​h​ ​o​t​h​e​r​s​ ​t​o​ ​b​o​o​k​ ​m​e​e​t​i​n​g​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​e​v​e​n​t​ ​t​y​p​e​.
+					 */
+					longDesc: string
+					options: {
+						max_event_count: {
+							/**
+							 * M​a​x​i​m​u​m​ ​E​v​e​n​t​ ​C​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​e​v​e​n​t​s​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​s​c​h​e​d​u​l​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​e​v​e​n​t​s​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​s​c​h​e​d​u​l​e​d​ ​u​s​i​n​g​ ​t​h​i​s​ ​l​i​n​k​ ​b​e​f​o​r​e​ ​i​t​ ​b​e​c​o​m​e​s​ ​i​n​a​c​t​i​v​e​.
+							 */
+							longDesc: string
+						}
+						event_type: {
+							/**
+							 * E​v​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​e​v​e​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​s​c​h​e​d​u​l​i​n​g​ ​l​i​n​k​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​v​e​n​t​ ​t​y​p​e​ ​t​h​a​t​ ​p​e​o​p​l​e​ ​w​i​l​l​ ​b​e​ ​a​b​l​e​ ​t​o​ ​b​o​o​k​ ​w​h​e​n​ ​u​s​i​n​g​ ​t​h​i​s​ ​s​c​h​e​d​u​l​i​n​g​ ​l​i​n​k​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_event: {
+					/**
+					 * G​e​t​ ​E​v​e​n​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​e​v​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​c​h​e​d​u​l​e​d​ ​e​v​e​n​t​ ​i​n​c​l​u​d​i​n​g​ ​p​a​r​t​i​c​i​p​a​n​t​s​,​ ​t​i​m​i​n​g​,​ ​a​n​d​ ​m​e​e​t​i​n​g​ ​d​e​t​a​i​l​s​.
+					 */
+					longDesc: string
+					options: {
+						event_id: {
+							/**
+							 * E​v​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​e​v​e​n​t​ ​w​h​o​s​e​ ​d​e​t​a​i​l​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_event_invitee: {
+					/**
+					 * G​e​t​ ​E​v​e​n​t​ ​I​n​v​i​t​e​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​e​v​e​n​t​ ​i​n​v​i​t​e​e
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​i​n​v​i​t​e​e​ ​f​o​r​ ​a​n​ ​e​v​e​n​t​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​i​r​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​n​d​ ​r​e​s​p​o​n​s​e​s​.
+					 */
+					longDesc: string
+					options: {
+						event_id: {
+							/**
+							 * E​v​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​v​e​n​t​ ​f​o​r​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​v​i​t​e​e​ ​i​n​f​o​r​m​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						invitee: {
+							/**
+							 * I​n​v​i​t​e​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​i​n​v​i​t​e​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​i​n​v​i​t​e​e​ ​w​h​o​s​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_event_type: {
+					/**
+					 * G​e​t​ ​E​v​e​n​t​ ​T​y​p​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​e​v​e​n​t​ ​t​y​p​e
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​n​ ​e​v​e​n​t​ ​t​y​p​e​ ​i​n​c​l​u​d​i​n​g​ ​d​u​r​a​t​i​o​n​,​ ​s​e​t​t​i​n​g​s​,​ ​a​n​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						event_type_id: {
+							/**
+							 * E​v​e​n​t​ ​T​y​p​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​v​e​n​t​ ​t​y​p​e​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​e​v​e​n​t​ ​t​y​p​e​ ​w​h​o​s​e​ ​d​e​t​a​i​l​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_event_invitees: {
+					/**
+					 * L​i​s​t​ ​E​v​e​n​t​ ​I​n​v​i​t​e​e​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​l​l​ ​i​n​v​i​t​e​e​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​e​v​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​i​n​v​i​t​e​e​s​ ​f​o​r​ ​a​ ​s​c​h​e​d​u​l​e​d​ ​e​v​e​n​t​ ​w​i​t​h​ ​t​h​e​i​r​ ​s​t​a​t​u​s​ ​a​n​d​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						event_id: {
+							/**
+							 * E​v​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​v​e​n​t​ ​f​o​r​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​l​i​s​t​ ​a​l​l​ ​i​n​v​i​t​e​e​s​.
+							 */
+							longDesc: string
+						}
+						count: {
+							/**
+							 * C​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​i​n​v​i​t​e​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​i​n​v​i​t​e​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​ ​(​d​e​f​a​u​l​t​ ​i​s​ ​2​0​)​.
+							 */
+							longDesc: string
+						}
+						page_token: {
+							/**
+							 * P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​i​s​ ​t​o​k​e​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​ ​w​h​e​n​ ​t​h​e​r​e​ ​a​r​e​ ​m​o​r​e​ ​i​n​v​i​t​e​e​s​ ​t​h​a​n​ ​t​h​e​ ​c​o​u​n​t​ ​l​i​m​i​t​.
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​i​n​v​i​t​e​e​s​ ​b​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​i​n​v​i​t​e​e​s​ ​w​i​t​h​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.
+							 */
+							longDesc: string
+						}
+						sort: {
+							/**
+							 * S​o​r​t​ ​O​p​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​i​n​v​i​t​e​e​s​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​h​o​w​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​i​n​v​i​t​e​e​s​ ​s​h​o​u​l​d​ ​b​e​ ​s​o​r​t​e​d​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * D​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.
+										 */
+										longDesc: string
+									}
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​i​c​h​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​i​n​v​i​t​e​e​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​i​n​v​i​t​e​e​s​ ​b​y​ ​t​h​e​i​r​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​i​n​v​i​t​e​e​s​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​t​a​t​u​s​ ​(​a​c​t​i​v​e​ ​o​r​ ​c​a​n​c​e​l​e​d​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_events: {
+					/**
+					 * L​i​s​t​ ​E​v​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​s​c​h​e​d​u​l​e​d​ ​e​v​e​n​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​s​c​h​e​d​u​l​e​d​ ​e​v​e​n​t​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​c​a​p​a​b​i​l​i​t​i​e​s​.
+					 */
+					longDesc: string
+					options: {
+						count: {
+							/**
+							 * C​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​e​v​e​n​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​e​v​e​n​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​ ​(​d​e​f​a​u​l​t​ ​i​s​ ​2​0​)​.
+							 */
+							longDesc: string
+						}
+						group: {
+							/**
+							 * G​r​o​u​p​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​e​v​e​n​t​s​ ​b​y​ ​g​r​o​u​p
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​e​v​e​n​t​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​g​r​o​u​p​.
+							 */
+							longDesc: string
+						}
+						invitee_email: {
+							/**
+							 * I​n​v​i​t​e​e​ ​E​m​a​i​l​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​e​v​e​n​t​s​ ​b​y​ ​i​n​v​i​t​e​e​ ​e​m​a​i​l
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​e​v​e​n​t​s​ ​w​h​e​r​e​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​i​s​ ​a​n​ ​i​n​v​i​t​e​e​.
+							 */
+							longDesc: string
+						}
+						max_start_time: {
+							/**
+							 * M​a​x​i​m​u​m​ ​S​t​a​r​t​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * L​a​t​e​s​t​ ​s​t​a​r​t​ ​t​i​m​e​ ​f​o​r​ ​e​v​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​e​v​e​n​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​t​h​o​s​e​ ​t​h​a​t​ ​s​t​a​r​t​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​.
+							 */
+							longDesc: string
+						}
+						min_start_time: {
+							/**
+							 * M​i​n​i​m​u​m​ ​S​t​a​r​t​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * E​a​r​l​i​e​s​t​ ​s​t​a​r​t​ ​t​i​m​e​ ​f​o​r​ ​e​v​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​e​v​e​n​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​t​h​o​s​e​ ​t​h​a​t​ ​s​t​a​r​t​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​.
+							 */
+							longDesc: string
+						}
+						page_token: {
+							/**
+							 * P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​i​s​ ​t​o​k​e​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​ ​w​h​e​n​ ​t​h​e​r​e​ ​a​r​e​ ​m​o​r​e​ ​e​v​e​n​t​s​ ​t​h​a​n​ ​t​h​e​ ​c​o​u​n​t​ ​l​i​m​i​t​.
+							 */
+							longDesc: string
+						}
+						sort: {
+							/**
+							 * S​o​r​t​ ​O​p​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​e​v​e​n​t​s​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​h​o​w​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​e​v​e​n​t​s​ ​s​h​o​u​l​d​ ​b​e​ ​s​o​r​t​e​d​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * D​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.
+										 */
+										longDesc: string
+									}
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​i​c​h​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​e​v​e​n​t​s​ ​(​s​t​a​r​t​_​t​i​m​e​ ​o​r​ ​e​n​d​_​t​i​m​e​)​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						organization: {
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​e​v​e​n​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​t​h​o​s​e​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​o​r​g​a​n​i​z​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						user: {
+							/**
+							 * U​s​e​r​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​e​v​e​n​t​s​ ​b​y​ ​u​s​e​r
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​e​v​e​n​t​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​u​s​e​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_event_types: {
+					/**
+					 * L​i​s​t​ ​E​v​e​n​t​ ​T​y​p​e​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​v​a​i​l​a​b​l​e​ ​e​v​e​n​t​ ​t​y​p​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​u​s​e​d​ ​f​o​r​ ​s​c​h​e​d​u​l​i​n​g​ ​m​e​e​t​i​n​g​s​.
+					 */
+					longDesc: string
+					options: {
+						count: {
+							/**
+							 * C​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​ ​(​d​e​f​a​u​l​t​ ​i​s​ ​2​0​)​.
+							 */
+							longDesc: string
+						}
+						page_token: {
+							/**
+							 * P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​i​s​ ​t​o​k​e​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​ ​w​h​e​n​ ​t​h​e​r​e​ ​a​r​e​ ​m​o​r​e​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​t​h​a​n​ ​t​h​e​ ​c​o​u​n​t​ ​l​i​m​i​t​.
+							 */
+							longDesc: string
+						}
+						sort: {
+							/**
+							 * S​o​r​t​ ​O​p​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​h​o​w​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​s​h​o​u​l​d​ ​b​e​ ​s​o​r​t​e​d​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * D​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.
+										 */
+										longDesc: string
+									}
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​i​c​h​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​(​n​a​m​e​,​ ​p​o​s​i​t​i​o​n​,​ ​c​r​e​a​t​e​d​_​a​t​,​ ​o​r​ ​u​p​d​a​t​e​d​_​a​t​)​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						organization: {
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​t​h​o​s​e​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​o​r​g​a​n​i​z​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						user: {
+							/**
+							 * U​s​e​r​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​b​y​ ​u​s​e​r
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​u​s​e​r​.
+							 */
+							longDesc: string
+						}
+						admin_managed: {
+							/**
+							 * A​d​m​i​n​ ​M​a​n​a​g​e​d​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​a​d​m​i​n​-​m​a​n​a​g​e​d​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​b​a​s​e​d​ ​o​n​ ​w​h​e​t​h​e​r​ ​t​h​e​y​ ​a​r​e​ ​m​a​n​a​g​e​d​ ​b​y​ ​a​n​ ​a​d​m​i​n​i​s​t​r​a​t​o​r​.
+							 */
+							longDesc: string
+						}
+						active: {
+							/**
+							 * A​c​t​i​v​e​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​a​c​t​i​v​e​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​b​a​s​e​d​ ​o​n​ ​w​h​e​t​h​e​r​ ​t​h​e​y​ ​a​r​e​ ​c​u​r​r​e​n​t​l​y​ ​a​c​t​i​v​e​ ​a​n​d​ ​a​v​a​i​l​a​b​l​e​ ​f​o​r​ ​b​o​o​k​i​n​g​.
+							 */
+							longDesc: string
+						}
+						user_availability_schedule: {
+							/**
+							 * U​s​e​r​ ​A​v​a​i​l​a​b​i​l​i​t​y​ ​S​c​h​e​d​u​l​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​u​s​e​r​ ​a​v​a​i​l​a​b​i​l​i​t​y​ ​s​c​h​e​d​u​l​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​b​a​s​e​d​ ​o​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​u​s​e​r​ ​a​v​a​i​l​a​b​i​l​i​t​y​ ​s​c​h​e​d​u​l​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_groups: {
+					/**
+					 * L​i​s​t​ ​G​r​o​u​p​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​v​a​i​l​a​b​l​e​ ​g​r​o​u​p​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​g​r​o​u​p​s​ ​w​i​t​h​i​n​ ​a​n​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​u​s​e​d​ ​f​o​r​ ​o​r​g​a​n​i​z​i​n​g​ ​e​v​e​n​t​s​ ​a​n​d​ ​u​s​e​r​s​.
+					 */
+					longDesc: string
+					options: {
+						count: {
+							/**
+							 * C​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​g​r​o​u​p​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​g​r​o​u​p​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​ ​(​d​e​f​a​u​l​t​ ​i​s​ ​2​0​)​.
+							 */
+							longDesc: string
+						}
+						page_token: {
+							/**
+							 * P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​i​s​ ​t​o​k​e​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​ ​w​h​e​n​ ​t​h​e​r​e​ ​a​r​e​ ​m​o​r​e​ ​g​r​o​u​p​s​ ​t​h​a​n​ ​t​h​e​ ​c​o​u​n​t​ ​l​i​m​i​t​.
+							 */
+							longDesc: string
+						}
+						organization: {
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​t​o​ ​l​i​s​t​ ​g​r​o​u​p​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​g​r​o​u​p​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_organization_members: {
+					/**
+					 * L​i​s​t​ ​O​r​g​a​n​i​z​a​t​i​o​n​ ​M​e​m​b​e​r​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​m​e​m​b​e​r​s​ ​o​f​ ​a​n​ ​o​r​g​a​n​i​z​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​m​e​m​b​e​r​s​ ​w​i​t​h​i​n​ ​a​ ​C​a​l​e​n​d​l​y​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​a​l​o​n​g​ ​w​i​t​h​ ​t​h​e​i​r​ ​r​o​l​e​s​ ​a​n​d​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						count: {
+							/**
+							 * C​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​m​e​m​b​e​r​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​m​e​m​b​e​r​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​ ​(​d​e​f​a​u​l​t​ ​i​s​ ​2​0​)​.
+							 */
+							longDesc: string
+						}
+						page_token: {
+							/**
+							 * P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​i​s​ ​t​o​k​e​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​ ​w​h​e​n​ ​t​h​e​r​e​ ​a​r​e​ ​m​o​r​e​ ​m​e​m​b​e​r​s​ ​t​h​a​n​ ​t​h​e​ ​c​o​u​n​t​ ​l​i​m​i​t​.
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​m​e​m​b​e​r​s​ ​b​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​m​e​m​b​e​r​s​ ​w​i​t​h​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.
+							 */
+							longDesc: string
+						}
+						organization: {
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​t​o​ ​l​i​s​t​ ​m​e​m​b​e​r​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​m​e​m​b​e​r​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		GoogleDocs: {
 			/**
 			 * G​o​o​g​l​e​ ​D​o​c​s
@@ -5358,6 +6358,600 @@ type RootTranslation = {
 				}
 			}
 		}
+		GoogleChat: {
+			/**
+			 * G​o​o​g​l​e​ ​C​h​a​t
+			 */
+			displayName: string
+			/**
+			 * S​e​n​d​ ​m​e​s​s​a​g​e​s​ ​a​n​d​ ​m​a​n​a​g​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​i​n​ ​G​o​o​g​l​e​ ​C​h​a​t
+			 */
+			shortDesc: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​G​o​o​g​l​e​ ​C​h​a​t​ ​t​o​ ​s​e​n​d​ ​d​i​r​e​c​t​ ​m​e​s​s​a​g​e​s​,​ ​p​o​s​t​ ​t​o​ ​s​p​a​c​e​s​,​ ​m​a​n​a​g​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​,​ ​a​n​d​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​y​o​u​r​ ​t​e​a​m​ ​c​o​l​l​a​b​o​r​a​t​i​o​n​ ​p​l​a​t​f​o​r​m​.​ ​A​u​t​o​m​a​t​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​,​ ​r​e​s​p​o​n​d​ ​t​o​ ​m​e​s​s​a​g​e​s​,​ ​a​n​d​ ​s​t​r​e​a​m​l​i​n​e​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​W​o​r​k​s​p​a​c​e​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​ ​w​o​r​k​f​l​o​w​s​.
+			 */
+			longDesc: string
+			triggers: {
+				new_message: {
+					options: {
+						spaceId: {
+							/**
+							 * S​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​C​h​a​t​ ​s​p​a​c​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​m​e​s​s​a​g​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​C​h​a​t​ ​s​p​a​c​e​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​m​e​s​s​a​g​e​s​.​ ​T​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​f​i​r​e​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​m​e​s​s​a​g​e​ ​i​s​ ​p​o​s​t​e​d​ ​i​n​ ​t​h​i​s​ ​s​p​a​c​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			actions: {
+				list_spaces: {
+					options: {
+						pageSize: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​s​p​a​c​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​s​p​a​c​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​p​a​g​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​2​0​.
+							 */
+							longDesc: string
+						}
+						pageToken: {
+							/**
+							 * P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​p​a​g​e​ ​t​o​k​e​n​,​ ​r​e​c​e​i​v​e​d​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​l​i​s​t​ ​s​p​a​c​e​s​ ​c​a​l​l​.​ ​P​r​o​v​i​d​e​ ​t​h​i​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​s​u​b​s​e​q​u​e​n​t​ ​p​a​g​e​.
+							 */
+							longDesc: string
+						}
+						spaceType: {
+							/**
+							 * S​p​a​c​e​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​s​p​a​c​e​s​ ​b​y​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​s​p​a​c​e​s​ ​b​y​ ​t​h​e​i​r​ ​t​y​p​e​:​ ​S​p​a​c​e​,​ ​G​r​o​u​p​ ​C​h​a​t​,​ ​o​r​ ​D​i​r​e​c​t​ ​M​e​s​s​a​g​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_space: {
+					options: {
+						id: {
+							/**
+							 * S​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​a​c​e​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​C​h​a​t​ ​s​p​a​c​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_members: {
+					options: {
+						spaceId: {
+							/**
+							 * S​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​a​c​e​ ​t​o​ ​l​i​s​t​ ​m​e​m​b​e​r​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​C​h​a​t​ ​s​p​a​c​e​ ​w​h​o​s​e​ ​m​e​m​b​e​r​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+						pageSize: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​m​e​m​b​e​r​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​e​m​b​e​r​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​p​a​g​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​2​0​.
+							 */
+							longDesc: string
+						}
+						pageToken: {
+							/**
+							 * P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​p​a​g​e​ ​t​o​k​e​n​,​ ​r​e​c​e​i​v​e​d​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​l​i​s​t​ ​m​e​m​b​e​r​s​ ​c​a​l​l​.​ ​P​r​o​v​i​d​e​ ​t​h​i​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​s​u​b​s​e​q​u​e​n​t​ ​p​a​g​e​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​m​e​m​b​e​r​s​ ​b​y​ ​f​i​e​l​d​ ​a​n​d​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​m​e​m​b​e​r​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​a​n​d​ ​v​a​l​u​e​,​ ​s​u​c​h​ ​a​s​ ​r​o​l​e​ ​o​r​ ​m​e​m​b​e​r​ ​t​y​p​e​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​l​t​e​r​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​m​e​m​b​e​r​s​ ​b​y​:​ ​r​o​l​e​ ​o​r​ ​m​e​m​b​e​r​ ​t​y​p​e​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * F​i​l​t​e​r​ ​V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​m​e​m​b​e​r​s​ ​b​y​,​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​f​i​e​l​d​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						showGroups: {
+							/**
+							 * S​h​o​w​ ​G​r​o​u​p​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​g​r​o​u​p​ ​m​e​m​b​e​r​s​h​i​p​s​ ​i​n​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​g​r​o​u​p​ ​m​e​m​b​e​r​s​h​i​p​s​ ​i​n​ ​t​h​e​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						showInvited: {
+							/**
+							 * S​h​o​w​ ​I​n​v​i​t​e​d
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​i​n​v​i​t​e​d​ ​m​e​m​b​e​r​s​ ​i​n​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​m​e​m​b​e​r​s​ ​w​h​o​ ​h​a​v​e​ ​b​e​e​n​ ​i​n​v​i​t​e​d​ ​b​u​t​ ​n​o​t​ ​y​e​t​ ​j​o​i​n​e​d​.
+							 */
+							longDesc: string
+						}
+						useAdminAccess: {
+							/**
+							 * U​s​e​ ​A​d​m​i​n​ ​A​c​c​e​s​s
+							 */
+							displayName: string
+							/**
+							 * U​s​e​ ​a​d​m​i​n​ ​p​r​i​v​i​l​e​g​e​s​ ​f​o​r​ ​t​h​e​ ​r​e​q​u​e​s​t
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​u​s​e​ ​a​d​m​i​n​ ​a​c​c​e​s​s​ ​p​r​i​v​i​l​e​g​e​s​ ​w​h​e​n​ ​l​i​s​t​i​n​g​ ​m​e​m​b​e​r​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_member: {
+					options: {
+						spaceId: {
+							/**
+							 * S​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​C​h​a​t​ ​s​p​a​c​e​.
+							 */
+							longDesc: string
+						}
+						memberId: {
+							/**
+							 * M​e​m​b​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​m​e​m​b​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​m​e​m​b​e​r​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_messages: {
+					options: {
+						spaceId: {
+							/**
+							 * S​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​a​c​e​ ​t​o​ ​l​i​s​t​ ​m​e​s​s​a​g​e​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​C​h​a​t​ ​s​p​a​c​e​ ​w​h​o​s​e​ ​m​e​s​s​a​g​e​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+						pageSize: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​p​a​g​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​2​5​.
+							 */
+							longDesc: string
+						}
+						pageToken: {
+							/**
+							 * P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​p​a​g​e​ ​t​o​k​e​n​,​ ​r​e​c​e​i​v​e​d​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​l​i​s​t​ ​m​e​s​s​a​g​e​s​ ​c​a​l​l​.​ ​P​r​o​v​i​d​e​ ​t​h​i​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​s​u​b​s​e​q​u​e​n​t​ ​p​a​g​e​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​m​e​s​s​a​g​e​s​ ​b​y​ ​f​i​e​l​d​ ​a​n​d​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​m​e​s​s​a​g​e​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​a​n​d​ ​v​a​l​u​e​,​ ​s​u​c​h​ ​a​s​ ​c​r​e​a​t​e​ ​t​i​m​e​ ​o​r​ ​t​h​r​e​a​d​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​l​t​e​r​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​m​e​s​s​a​g​e​s​ ​b​y​:​ ​c​r​e​a​t​e​ ​t​i​m​e​ ​o​r​ ​t​h​r​e​a​d​ ​n​a​m​e​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * F​i​l​t​e​r​ ​V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​m​e​s​s​a​g​e​s​ ​b​y​,​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​f​i​e​l​d​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						showDeleted: {
+							/**
+							 * S​h​o​w​ ​D​e​l​e​t​e​d
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​d​e​l​e​t​e​d​ ​m​e​s​s​a​g​e​s​ ​i​n​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​d​e​l​e​t​e​d​ ​m​e​s​s​a​g​e​s​ ​i​n​ ​t​h​e​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						sortOrder: {
+							/**
+							 * S​o​r​t​ ​O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * O​r​d​e​r​ ​t​o​ ​s​o​r​t​ ​m​e​s​s​a​g​e​s​ ​b​y​ ​c​r​e​a​t​e​ ​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​o​r​d​e​r​ ​t​o​ ​s​o​r​t​ ​m​e​s​s​a​g​e​s​ ​b​y​ ​t​h​e​i​r​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e​:​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_message: {
+					options: {
+						spaceId: {
+							/**
+							 * S​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​C​h​a​t​ ​s​p​a​c​e​.
+							 */
+							longDesc: string
+						}
+						messageId: {
+							/**
+							 * M​e​s​s​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_message: {
+					options: {
+						spaceId: {
+							/**
+							 * S​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​C​h​a​t​ ​s​p​a​c​e​.
+							 */
+							longDesc: string
+						}
+						messageId: {
+							/**
+							 * M​e​s​s​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​.
+							 */
+							longDesc: string
+						}
+						force: {
+							/**
+							 * F​o​r​c​e​ ​D​e​l​e​t​e
+							 */
+							displayName: string
+							/**
+							 * F​o​r​c​e​ ​d​e​l​e​t​i​o​n​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​f​o​r​c​e​ ​d​e​l​e​t​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​e​v​e​n​ ​i​f​ ​i​t​ ​c​a​n​n​o​t​ ​b​e​ ​n​o​r​m​a​l​l​y​ ​d​e​l​e​t​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				send_message: {
+					options: {
+						spaceId: {
+							/**
+							 * S​p​a​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​a​c​e​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​G​o​o​g​l​e​ ​C​h​a​t​ ​s​p​a​c​e​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​m​e​s​s​a​g​e​.
+							 */
+							longDesc: string
+						}
+						text: {
+							/**
+							 * T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * P​l​a​i​n​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​l​a​i​n​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​.​ ​T​h​i​s​ ​i​s​ ​t​h​e​ ​m​a​i​n​ ​t​e​x​t​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​d​i​s​p​l​a​y​e​d​ ​i​n​ ​t​h​e​ ​c​h​a​t​.
+							 */
+							longDesc: string
+						}
+						formattedText: {
+							/**
+							 * F​o​r​m​a​t​t​e​d​ ​T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * F​o​r​m​a​t​t​e​d​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​u​s​i​n​g​ ​m​a​r​k​d​o​w​n
+							 */
+							shortDesc: string
+							/**
+							 * R​i​c​h​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​f​o​r​m​a​t​t​e​d​ ​w​i​t​h​ ​m​a​r​k​d​o​w​n​ ​s​y​n​t​a​x​.​ ​T​h​i​s​ ​a​l​l​o​w​s​ ​f​o​r​ ​b​o​l​d​,​ ​i​t​a​l​i​c​,​ ​l​i​n​k​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​f​o​r​m​a​t​t​i​n​g​.
+							 */
+							longDesc: string
+						}
+						messageId: {
+							/**
+							 * M​e​s​s​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​f​o​r​ ​m​e​s​s​a​g​e​ ​r​e​p​l​i​e​s​ ​o​r​ ​u​p​d​a​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​m​e​s​s​a​g​e​ ​t​o​ ​r​e​p​l​y​ ​t​o​ ​o​r​ ​u​p​d​a​t​e​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​s​e​n​d​ ​a​ ​n​e​w​ ​m​e​s​s​a​g​e​.
+							 */
+							longDesc: string
+						}
+						cardTitle: {
+							/**
+							 * C​a​r​d​ ​T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​c​a​r​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​t​o​ ​d​i​s​p​l​a​y​ ​i​n​ ​t​h​e​ ​c​a​r​d​ ​h​e​a​d​e​r​.​ ​T​h​i​s​ ​c​r​e​a​t​e​s​ ​a​ ​v​i​s​u​a​l​l​y​ ​p​r​o​m​i​n​e​n​t​ ​h​e​a​d​e​r​ ​f​o​r​ ​y​o​u​r​ ​m​e​s​s​a​g​e​.
+							 */
+							longDesc: string
+						}
+						cardSubtitle: {
+							/**
+							 * C​a​r​d​ ​S​u​b​t​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * S​u​b​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​c​a​r​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​u​b​t​i​t​l​e​ ​t​o​ ​d​i​s​p​l​a​y​ ​b​e​l​o​w​ ​t​h​e​ ​c​a​r​d​ ​t​i​t​l​e​.​ ​T​h​i​s​ ​p​r​o​v​i​d​e​s​ ​a​d​d​i​t​i​o​n​a​l​ ​c​o​n​t​e​x​t​ ​o​r​ ​d​e​s​c​r​i​p​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						cardImageUrl: {
+							/**
+							 * C​a​r​d​ ​I​m​a​g​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * I​m​a​g​e​ ​U​R​L​ ​t​o​ ​d​i​s​p​l​a​y​ ​i​n​ ​t​h​e​ ​c​a​r​d​ ​h​e​a​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​U​R​L​ ​p​o​i​n​t​i​n​g​ ​t​o​ ​a​n​ ​i​m​a​g​e​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​d​i​s​p​l​a​y​e​d​ ​i​n​ ​t​h​e​ ​c​a​r​d​ ​h​e​a​d​e​r​.​ ​T​h​e​ ​i​m​a​g​e​ ​s​h​o​u​l​d​ ​b​e​ ​p​u​b​l​i​c​l​y​ ​a​c​c​e​s​s​i​b​l​e​.
+							 */
+							longDesc: string
+						}
+						buttonText: {
+							/**
+							 * B​u​t​t​o​n​ ​T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​t​o​ ​d​i​s​p​l​a​y​ ​o​n​ ​t​h​e​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​o​n​ ​t​h​e​ ​c​l​i​c​k​a​b​l​e​ ​b​u​t​t​o​n​ ​i​n​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​c​a​r​d​.
+							 */
+							longDesc: string
+						}
+						buttonUrl: {
+							/**
+							 * B​u​t​t​o​n​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * U​R​L​ ​t​h​a​t​ ​t​h​e​ ​b​u​t​t​o​n​ ​w​i​l​l​ ​o​p​e​n​ ​w​h​e​n​ ​c​l​i​c​k​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​w​e​b​ ​a​d​d​r​e​s​s​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​o​p​e​n​e​d​ ​w​h​e​n​ ​u​s​e​r​s​ ​c​l​i​c​k​ ​t​h​e​ ​b​u​t​t​o​n​.​ ​R​e​q​u​i​r​e​d​ ​i​f​ ​b​u​t​t​o​n​ ​t​e​x​t​ ​i​s​ ​p​r​o​v​i​d​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		BusinessCentral: {
 			/**
 			 * M​i​c​r​o​s​o​f​t​ ​D​y​n​a​m​i​c​s​ ​3​6​5​ ​B​u​s​i​n​e​s​s​ ​C​e​n​t​r​a​l
@@ -5549,6 +7143,5574 @@ type RootTranslation = {
 									}
 								}
 							}
+						}
+					}
+				}
+			}
+		}
+		Quickbooks: {
+			/**
+			 * Q​u​i​c​k​B​o​o​k​s
+			 */
+			displayName: string
+			/**
+			 * I​n​t​e​g​r​a​t​e​ ​w​i​t​h​ ​Q​u​i​c​k​B​o​o​k​s​ ​O​n​l​i​n​e​ ​f​o​r​ ​a​c​c​o​u​n​t​i​n​g​ ​a​n​d​ ​f​i​n​a​n​c​i​a​l​ ​m​a​n​a​g​e​m​e​n​t
+			 */
+			shortDesc: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​Q​u​i​c​k​B​o​o​k​s​ ​O​n​l​i​n​e​ ​t​o​ ​m​a​n​a​g​e​ ​c​u​s​t​o​m​e​r​s​,​ ​v​e​n​d​o​r​s​,​ ​i​t​e​m​s​,​ ​i​n​v​o​i​c​e​s​,​ ​p​a​y​m​e​n​t​s​,​ ​a​n​d​ ​f​i​n​a​n​c​i​a​l​ ​r​e​p​o​r​t​s​.​ ​A​u​t​o​m​a​t​e​ ​y​o​u​r​ ​a​c​c​o​u​n​t​i​n​g​ ​w​o​r​k​f​l​o​w​s​ ​a​n​d​ ​k​e​e​p​ ​y​o​u​r​ ​f​i​n​a​n​c​i​a​l​ ​d​a​t​a​ ​s​y​n​c​h​r​o​n​i​z​e​d​.
+			 */
+			longDesc: string
+			actions: {
+				list_accounts: {
+					/**
+					 * L​i​s​t​ ​A​c​c​o​u​n​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​c​c​o​u​n​t​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​m​u​l​t​i​p​l​e​ ​a​c​c​o​u​n​t​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​,​ ​s​o​r​t​i​n​g​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​ ​c​a​p​a​b​i​l​i​t​i​e​s
+					 */
+					longDesc: string
+					options: {
+						fetchAll: {
+							/**
+							 * F​e​t​c​h​ ​A​l​l
+							 */
+							displayName: string
+							/**
+							 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​a​c​c​o​u​n​t​s​ ​w​i​t​h​o​u​t​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​f​e​t​c​h​e​s​ ​a​l​l​ ​a​c​c​o​u​n​t​s​ ​i​g​n​o​r​i​n​g​ ​l​i​m​i​t​ ​a​n​d​ ​o​f​f​s​e​t​ ​p​a​r​a​m​e​t​e​r​s
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​a​c​c​o​u​n​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​a​c​c​o​u​n​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​ ​(​d​e​f​a​u​l​t​:​ ​5​0​)
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​a​c​c​o​u​n​t​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​a​c​c​o​u​n​t​s​ ​t​o​ ​s​k​i​p​ ​b​e​f​o​r​e​ ​s​t​a​r​t​i​n​g​ ​t​o​ ​r​e​t​u​r​n​ ​r​e​s​u​l​t​s​ ​(​d​e​f​a​u​l​t​:​ ​0​)
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​a​c​c​o​u​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​f​i​l​t​e​r​i​n​g​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​a​c​c​o​u​n​t​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​a​c​c​o​u​n​t​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​t​o
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​c​o​m​p​a​r​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​(​e​.​g​.​,​ ​=​,​ ​!​=​,​ ​<​,​ ​>​)
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​a​c​c​o​u​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​a​c​c​o​u​n​t​s​ ​l​i​s​t
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​a​c​c​o​u​n​t​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * W​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				get_account: {
+					/**
+					 * G​e​t​ ​A​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​a​c​c​o​u​n​t​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​a​c​c​o​u​n​t​ ​u​s​i​n​g​ ​i​t​s​ ​I​D
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * A​c​c​o​u​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Q​u​i​c​k​B​o​o​k​s​ ​a​c​c​o​u​n​t​ ​I​D​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_bill: {
+					/**
+					 * G​e​t​ ​B​i​l​l
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​b​i​l​l​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​b​i​l​l​ ​u​s​i​n​g​ ​i​t​s​ ​I​D
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * B​i​l​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​b​i​l​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Q​u​i​c​k​B​o​o​k​s​ ​b​i​l​l​ ​I​D​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_bills: {
+					/**
+					 * L​i​s​t​ ​B​i​l​l​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​b​i​l​l​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​m​u​l​t​i​p​l​e​ ​b​i​l​l​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​,​ ​s​o​r​t​i​n​g​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​ ​c​a​p​a​b​i​l​i​t​i​e​s
+					 */
+					longDesc: string
+					options: {
+						fetchAll: {
+							/**
+							 * F​e​t​c​h​ ​A​l​l
+							 */
+							displayName: string
+							/**
+							 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​b​i​l​l​s​ ​w​i​t​h​o​u​t​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​f​e​t​c​h​e​s​ ​a​l​l​ ​b​i​l​l​s​ ​i​g​n​o​r​i​n​g​ ​l​i​m​i​t​ ​a​n​d​ ​o​f​f​s​e​t​ ​p​a​r​a​m​e​t​e​r​s
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​b​i​l​l​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​b​i​l​l​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​ ​(​d​e​f​a​u​l​t​:​ ​5​0​)
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​b​i​l​l​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​b​i​l​l​s​ ​t​o​ ​s​k​i​p​ ​b​e​f​o​r​e​ ​s​t​a​r​t​i​n​g​ ​t​o​ ​r​e​t​u​r​n​ ​r​e​s​u​l​t​s​ ​(​d​e​f​a​u​l​t​:​ ​0​)
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​b​i​l​l​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​f​i​l​t​e​r​i​n​g​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​b​i​l​l​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​b​i​l​l​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​t​o
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​c​o​m​p​a​r​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​(​e​.​g​.​,​ ​=​,​ ​!​=​,​ ​<​,​ ​>​)
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​b​i​l​l​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​b​i​l​l​s​ ​l​i​s​t
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​b​i​l​l​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * W​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				update_bill: {
+					/**
+					 * U​p​d​a​t​e​ ​B​i​l​l
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​b​i​l​l​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * M​o​d​i​f​y​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​b​i​l​l​ ​w​i​t​h​ ​n​e​w​ ​v​e​n​d​o​r​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​l​i​n​e​ ​i​t​e​m​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​d​e​t​a​i​l​s
+					 */
+					longDesc: string
+					options: {
+						bill_id: {
+							/**
+							 * B​i​l​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​b​i​l​l​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Q​u​i​c​k​B​o​o​k​s​ ​b​i​l​l​ ​I​D​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							longDesc: string
+						}
+						vendor_id: {
+							/**
+							 * V​e​n​d​o​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​v​e​n​d​o​r​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​b​i​l​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​v​e​n​d​o​r​ ​w​h​o​ ​i​s​s​u​e​d​ ​t​h​e​ ​b​i​l​l
+							 */
+							longDesc: string
+						}
+						line_item_type: {
+							/**
+							 * L​i​n​e​ ​I​t​e​m​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​l​i​n​e​ ​i​t​e​m​s​ ​f​o​r​ ​t​h​e​ ​b​i​l​l
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​b​e​t​w​e​e​n​ ​a​c​c​o​u​n​t​-​b​a​s​e​d​ ​o​r​ ​i​t​e​m​-​b​a​s​e​d​ ​e​x​p​e​n​s​e​ ​l​i​n​e​ ​d​e​t​a​i​l​s​ ​f​o​r​ ​t​h​e​ ​b​i​l​l
+							 */
+							longDesc: string
+						}
+						line_items: {
+							/**
+							 * L​i​n​e​ ​I​t​e​m​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​l​i​n​e​ ​i​t​e​m​s​ ​f​o​r​ ​t​h​e​ ​b​i​l​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​e​t​a​i​l​e​d​ ​l​i​s​t​ ​o​f​ ​e​x​p​e​n​s​e​s​ ​o​r​ ​i​t​e​m​s​ ​i​n​c​l​u​d​e​d​ ​i​n​ ​t​h​e​ ​b​i​l​l
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											amount: {
+												/**
+												 * A​m​o​u​n​t
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​m​o​n​e​t​a​r​y​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												longDesc: string
+											}
+											description: {
+												/**
+												 * D​e​s​c​r​i​p​t​i​o​n
+												 */
+												displayName: string
+												/**
+												 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * A​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​w​h​a​t​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​ ​r​e​p​r​e​s​e​n​t​s
+												 */
+												longDesc: string
+											}
+											tax_code_id: {
+												/**
+												 * T​a​x​ ​C​o​d​e​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​t​a​x​ ​c​o​d​e​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​x​ ​c​o​d​e​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												longDesc: string
+											}
+											class_id: {
+												/**
+												 * C​l​a​s​s​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​c​l​a​s​s​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​l​a​s​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												longDesc: string
+											}
+											customer_id: {
+												/**
+												 * C​u​s​t​o​m​e​r​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​i​f​ ​t​h​i​s​ ​e​x​p​e​n​s​e​ ​i​s​ ​b​i​l​l​a​b​l​e
+												 */
+												longDesc: string
+											}
+											billable_status: {
+												/**
+												 * B​i​l​l​a​b​l​e​ ​S​t​a​t​u​s
+												 */
+												displayName: string
+												/**
+												 * W​h​e​t​h​e​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​ ​i​s​ ​b​i​l​l​a​b​l​e
+												 */
+												shortDesc: string
+												/**
+												 * I​n​d​i​c​a​t​e​s​ ​i​f​ ​t​h​i​s​ ​e​x​p​e​n​s​e​ ​c​a​n​ ​b​e​ ​b​i​l​l​e​d​ ​t​o​ ​a​ ​c​u​s​t​o​m​e​r
+												 */
+												longDesc: string
+											}
+											account_id: {
+												/**
+												 * A​c​c​o​u​n​t​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​e​x​p​e​n​s​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​t​h​i​s​ ​e​x​p​e​n​s​e
+												 */
+												longDesc: string
+											}
+											item_id: {
+												/**
+												 * I​t​e​m​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​i​t​e​m​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​p​u​r​c​h​a​s​e​d
+												 */
+												longDesc: string
+											}
+											quantity: {
+												/**
+												 * Q​u​a​n​t​i​t​y
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​p​u​r​c​h​a​s​e​d
+												 */
+												longDesc: string
+											}
+											unit_price: {
+												/**
+												 * U​n​i​t​ ​P​r​i​c​e
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​p​r​i​c​e​ ​p​e​r​ ​u​n​i​t
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​c​o​s​t​ ​p​e​r​ ​i​n​d​i​v​i​d​u​a​l​ ​u​n​i​t​ ​o​f​ ​t​h​e​ ​i​t​e​m
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				create_bill: {
+					/**
+					 * C​r​e​a​t​e​ ​B​i​l​l
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​b​i​l​l​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​b​i​l​l​ ​w​i​t​h​ ​v​e​n​d​o​r​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​l​i​n​e​ ​i​t​e​m​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​n​e​c​e​s​s​a​r​y​ ​d​e​t​a​i​l​s
+					 */
+					longDesc: string
+					options: {
+						vendor_id: {
+							/**
+							 * V​e​n​d​o​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​v​e​n​d​o​r​ ​i​s​s​u​i​n​g​ ​t​h​e​ ​b​i​l​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​v​e​n​d​o​r​ ​w​h​o​ ​i​s​ ​i​s​s​u​i​n​g​ ​t​h​i​s​ ​b​i​l​l
+							 */
+							longDesc: string
+						}
+						line_item_type: {
+							/**
+							 * L​i​n​e​ ​I​t​e​m​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​l​i​n​e​ ​i​t​e​m​s​ ​f​o​r​ ​t​h​e​ ​b​i​l​l
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​b​e​t​w​e​e​n​ ​a​c​c​o​u​n​t​-​b​a​s​e​d​ ​o​r​ ​i​t​e​m​-​b​a​s​e​d​ ​e​x​p​e​n​s​e​ ​l​i​n​e​ ​d​e​t​a​i​l​s​ ​f​o​r​ ​t​h​e​ ​b​i​l​l
+							 */
+							longDesc: string
+						}
+						line_items: {
+							/**
+							 * L​i​n​e​ ​I​t​e​m​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​l​i​n​e​ ​i​t​e​m​s​ ​f​o​r​ ​t​h​e​ ​b​i​l​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​e​t​a​i​l​e​d​ ​l​i​s​t​ ​o​f​ ​e​x​p​e​n​s​e​s​ ​o​r​ ​i​t​e​m​s​ ​i​n​c​l​u​d​e​d​ ​i​n​ ​t​h​e​ ​b​i​l​l
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											amount: {
+												/**
+												 * A​m​o​u​n​t
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​m​o​n​e​t​a​r​y​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												longDesc: string
+											}
+											description: {
+												/**
+												 * D​e​s​c​r​i​p​t​i​o​n
+												 */
+												displayName: string
+												/**
+												 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * A​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​w​h​a​t​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​ ​r​e​p​r​e​s​e​n​t​s
+												 */
+												longDesc: string
+											}
+											tax_code_id: {
+												/**
+												 * T​a​x​ ​C​o​d​e​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​t​a​x​ ​c​o​d​e​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​x​ ​c​o​d​e​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												longDesc: string
+											}
+											class_id: {
+												/**
+												 * C​l​a​s​s​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​c​l​a​s​s​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​l​a​s​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												longDesc: string
+											}
+											customer_id: {
+												/**
+												 * C​u​s​t​o​m​e​r​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​i​f​ ​t​h​i​s​ ​e​x​p​e​n​s​e​ ​i​s​ ​b​i​l​l​a​b​l​e
+												 */
+												longDesc: string
+											}
+											billable_status: {
+												/**
+												 * B​i​l​l​a​b​l​e​ ​S​t​a​t​u​s
+												 */
+												displayName: string
+												/**
+												 * W​h​e​t​h​e​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​ ​i​s​ ​b​i​l​l​a​b​l​e
+												 */
+												shortDesc: string
+												/**
+												 * I​n​d​i​c​a​t​e​s​ ​i​f​ ​t​h​i​s​ ​e​x​p​e​n​s​e​ ​c​a​n​ ​b​e​ ​b​i​l​l​e​d​ ​t​o​ ​a​ ​c​u​s​t​o​m​e​r
+												 */
+												longDesc: string
+											}
+											account_id: {
+												/**
+												 * A​c​c​o​u​n​t​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​e​x​p​e​n​s​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​t​h​i​s​ ​e​x​p​e​n​s​e
+												 */
+												longDesc: string
+											}
+											item_id: {
+												/**
+												 * I​t​e​m​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​i​t​e​m​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​p​u​r​c​h​a​s​e​d
+												 */
+												longDesc: string
+											}
+											quantity: {
+												/**
+												 * Q​u​a​n​t​i​t​y
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​p​u​r​c​h​a​s​e​d
+												 */
+												longDesc: string
+											}
+											unit_price: {
+												/**
+												 * U​n​i​t​ ​P​r​i​c​e
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​p​r​i​c​e​ ​p​e​r​ ​u​n​i​t
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​c​o​s​t​ ​p​e​r​ ​i​n​d​i​v​i​d​u​a​l​ ​u​n​i​t​ ​o​f​ ​t​h​e​ ​i​t​e​m
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				delete_bill: {
+					/**
+					 * D​e​l​e​t​e​ ​B​i​l​l
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​b​i​l​l​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​ ​a​ ​b​i​l​l​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s​ ​u​s​i​n​g​ ​i​t​s​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * B​i​l​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​b​i​l​l​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Q​u​i​c​k​B​o​o​k​s​ ​b​i​l​l​ ​I​D​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​p​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_credit_memo: {
+					/**
+					 * G​e​t​ ​C​r​e​d​i​t​ ​M​e​m​o
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​r​e​d​i​t​ ​m​e​m​o​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​r​e​d​i​t​ ​m​e​m​o​ ​u​s​i​n​g​ ​i​t​s​ ​I​D
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * C​r​e​d​i​t​ ​M​e​m​o​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​r​e​d​i​t​ ​m​e​m​o
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Q​u​i​c​k​B​o​o​k​s​ ​c​r​e​d​i​t​ ​m​e​m​o​ ​I​D​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_credit_memos: {
+					/**
+					 * L​i​s​t​ ​C​r​e​d​i​t​ ​M​e​m​o​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​r​e​d​i​t​ ​m​e​m​o​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​m​u​l​t​i​p​l​e​ ​c​r​e​d​i​t​ ​m​e​m​o​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​,​ ​s​o​r​t​i​n​g​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​ ​c​a​p​a​b​i​l​i​t​i​e​s
+					 */
+					longDesc: string
+					options: {
+						fetchAll: {
+							/**
+							 * F​e​t​c​h​ ​A​l​l
+							 */
+							displayName: string
+							/**
+							 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​c​r​e​d​i​t​ ​m​e​m​o​s​ ​w​i​t​h​o​u​t​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​f​e​t​c​h​e​s​ ​a​l​l​ ​c​r​e​d​i​t​ ​m​e​m​o​s​ ​i​g​n​o​r​i​n​g​ ​l​i​m​i​t​ ​a​n​d​ ​o​f​f​s​e​t​ ​p​a​r​a​m​e​t​e​r​s
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​r​e​d​i​t​ ​m​e​m​o​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​r​e​d​i​t​ ​m​e​m​o​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​ ​(​d​e​f​a​u​l​t​:​ ​5​0​)
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​c​r​e​d​i​t​ ​m​e​m​o​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​c​r​e​d​i​t​ ​m​e​m​o​s​ ​t​o​ ​s​k​i​p​ ​b​e​f​o​r​e​ ​s​t​a​r​t​i​n​g​ ​t​o​ ​r​e​t​u​r​n​ ​r​e​s​u​l​t​s​ ​(​d​e​f​a​u​l​t​:​ ​0​)
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​c​r​e​d​i​t​ ​m​e​m​o​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​f​i​l​t​e​r​i​n​g​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​c​r​e​d​i​t​ ​m​e​m​o​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​r​e​d​i​t​ ​m​e​m​o​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​t​o
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​c​o​m​p​a​r​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​(​e​.​g​.​,​ ​=​,​ ​!​=​,​ ​<​,​ ​>​)
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​c​r​e​d​i​t​ ​m​e​m​o​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​c​r​e​d​i​t​ ​m​e​m​o​s​ ​l​i​s​t
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​r​e​d​i​t​ ​m​e​m​o​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * W​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				create_customer: {
+					/**
+					 * C​r​e​a​t​e​ ​C​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​e​r​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​e​r​ ​r​e​c​o​r​d​ ​w​i​t​h​ ​p​e​r​s​o​n​a​l​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​c​o​n​t​a​c​t​ ​d​e​t​a​i​l​s​,​ ​a​n​d​ ​a​d​d​r​e​s​s​e​s
+					 */
+					longDesc: string
+					options: {
+						display_name: {
+							/**
+							 * D​i​s​p​l​a​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​d​i​s​p​l​a​y​e​d​ ​f​o​r​ ​t​h​i​s​ ​c​u​s​t​o​m​e​r​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+							 */
+							longDesc: string
+						}
+						given_name: {
+							/**
+							 * G​i​v​e​n​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​'​s​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​r​ ​g​i​v​e​n​ ​n​a​m​e
+							 */
+							longDesc: string
+						}
+						middle_name: {
+							/**
+							 * M​i​d​d​l​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​m​i​d​d​l​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​'​s​ ​m​i​d​d​l​e​ ​n​a​m​e​ ​o​r​ ​m​i​d​d​l​e​ ​i​n​i​t​i​a​l
+							 */
+							longDesc: string
+						}
+						family_name: {
+							/**
+							 * F​a​m​i​l​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​'​s​ ​l​a​s​t​ ​n​a​m​e​ ​o​r​ ​f​a​m​i​l​y​ ​n​a​m​e
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​'​s​ ​t​i​t​l​e​ ​(​e​.​g​.​,​ ​M​r​.​,​ ​M​r​s​.​,​ ​D​r​.​,​ ​e​t​c​.​)
+							 */
+							longDesc: string
+						}
+						suffix: {
+							/**
+							 * S​u​f​f​i​x
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​u​f​f​i​x​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​'​s​ ​s​u​f​f​i​x​ ​(​e​.​g​.​,​ ​J​r​.​,​ ​S​r​.​,​ ​I​I​I​,​ ​e​t​c​.​)
+							 */
+							longDesc: string
+						}
+						company_name: {
+							/**
+							 * C​o​m​p​a​n​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​m​p​a​n​y​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​r​e​p​r​e​s​e​n​t​s
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​i​m​a​r​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							longDesc: string
+						}
+						billing_address: {
+							/**
+							 * B​i​l​l​i​n​g​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​a​d​d​r​e​s​s​ ​w​h​e​r​e​ ​b​i​l​l​s​ ​s​h​o​u​l​d​ ​b​e​ ​s​e​n​t​ ​f​o​r​ ​t​h​i​s​ ​c​u​s​t​o​m​e​r
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									Line1: {
+										/**
+										 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​1
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​r​s​t​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​o​r​ ​P​.​O​.​ ​b​o​x​ ​n​u​m​b​e​r
+										 */
+										longDesc: string
+									}
+									Line2: {
+										/**
+										 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​2
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​e​c​o​n​d​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * A​d​d​i​t​i​o​n​a​l​ ​a​d​d​r​e​s​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​l​i​k​e​ ​a​p​a​r​t​m​e​n​t​ ​o​r​ ​s​u​i​t​e​ ​n​u​m​b​e​r
+										 */
+										longDesc: string
+									}
+									City: {
+										/**
+										 * C​i​t​y
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​i​t​y​ ​o​f​ ​t​h​e​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​i​t​y​ ​w​h​e​r​e​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​i​s​ ​l​o​c​a​t​e​d
+										 */
+										longDesc: string
+									}
+									PostalCode: {
+										/**
+										 * P​o​s​t​a​l​ ​C​o​d​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​o​f​ ​t​h​e​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​Z​I​P​ ​c​o​d​e​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s
+										 */
+										longDesc: string
+									}
+									CountrySubDivisionCode: {
+										/**
+										 * S​t​a​t​e​/​P​r​o​v​i​n​c​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​ ​c​o​d​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​ ​a​b​b​r​e​v​i​a​t​i​o​n​ ​(​e​.​g​.​,​ ​C​A​,​ ​N​Y​,​ ​O​N​)
+										 */
+										longDesc: string
+									}
+									Country: {
+										/**
+										 * C​o​u​n​t​r​y
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​u​n​t​r​y​ ​o​f​ ​t​h​e​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​o​u​n​t​r​y​ ​w​h​e​r​e​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​i​s​ ​l​o​c​a​t​e​d
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						shipping_address: {
+							/**
+							 * S​h​i​p​p​i​n​g​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​a​d​d​r​e​s​s​ ​w​h​e​r​e​ ​p​r​o​d​u​c​t​s​ ​s​h​o​u​l​d​ ​b​e​ ​s​h​i​p​p​e​d​ ​f​o​r​ ​t​h​i​s​ ​c​u​s​t​o​m​e​r
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									Line1: {
+										/**
+										 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​1
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​r​s​t​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​o​r​ ​P​.​O​.​ ​b​o​x​ ​n​u​m​b​e​r
+										 */
+										longDesc: string
+									}
+									Line2: {
+										/**
+										 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​2
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​e​c​o​n​d​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * A​d​d​i​t​i​o​n​a​l​ ​a​d​d​r​e​s​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​l​i​k​e​ ​a​p​a​r​t​m​e​n​t​ ​o​r​ ​s​u​i​t​e​ ​n​u​m​b​e​r
+										 */
+										longDesc: string
+									}
+									City: {
+										/**
+										 * C​i​t​y
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​i​t​y​ ​o​f​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​i​t​y​ ​w​h​e​r​e​ ​p​r​o​d​u​c​t​s​ ​s​h​o​u​l​d​ ​b​e​ ​s​h​i​p​p​e​d
+										 */
+										longDesc: string
+									}
+									PostalCode: {
+										/**
+										 * P​o​s​t​a​l​ ​C​o​d​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​o​f​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​Z​I​P​ ​c​o​d​e​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s
+										 */
+										longDesc: string
+									}
+									CountrySubDivisionCode: {
+										/**
+										 * S​t​a​t​e​/​P​r​o​v​i​n​c​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​ ​c​o​d​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​ ​a​b​b​r​e​v​i​a​t​i​o​n​ ​(​e​.​g​.​,​ ​C​A​,​ ​N​Y​,​ ​O​N​)
+										 */
+										longDesc: string
+									}
+									Country: {
+										/**
+										 * C​o​u​n​t​r​y
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​u​n​t​r​y​ ​o​f​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​o​u​n​t​r​y​ ​w​h​e​r​e​ ​p​r​o​d​u​c​t​s​ ​s​h​o​u​l​d​ ​b​e​ ​s​h​i​p​p​e​d
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				get_customer: {
+					/**
+					 * G​e​t​ ​C​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​u​s​t​o​m​e​r​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​u​s​t​o​m​e​r​ ​u​s​i​n​g​ ​t​h​e​i​r​ ​I​D
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Q​u​i​c​k​B​o​o​k​s​ ​c​u​s​t​o​m​e​r​ ​I​D​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_customers: {
+					/**
+					 * L​i​s​t​ ​C​u​s​t​o​m​e​r​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​u​s​t​o​m​e​r​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​m​u​l​t​i​p​l​e​ ​c​u​s​t​o​m​e​r​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​,​ ​s​o​r​t​i​n​g​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​ ​c​a​p​a​b​i​l​i​t​i​e​s
+					 */
+					longDesc: string
+					options: {
+						fetchAll: {
+							/**
+							 * F​e​t​c​h​ ​A​l​l
+							 */
+							displayName: string
+							/**
+							 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​c​u​s​t​o​m​e​r​s​ ​w​i​t​h​o​u​t​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​f​e​t​c​h​e​s​ ​a​l​l​ ​c​u​s​t​o​m​e​r​s​ ​i​g​n​o​r​i​n​g​ ​l​i​m​i​t​ ​a​n​d​ ​o​f​f​s​e​t​ ​p​a​r​a​m​e​t​e​r​s
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​u​s​t​o​m​e​r​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​u​s​t​o​m​e​r​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​ ​(​d​e​f​a​u​l​t​:​ ​5​0​)
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​c​u​s​t​o​m​e​r​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​c​u​s​t​o​m​e​r​s​ ​t​o​ ​s​k​i​p​ ​b​e​f​o​r​e​ ​s​t​a​r​t​i​n​g​ ​t​o​ ​r​e​t​u​r​n​ ​r​e​s​u​l​t​s​ ​(​d​e​f​a​u​l​t​:​ ​0​)
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​c​u​s​t​o​m​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​f​i​l​t​e​r​i​n​g​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​c​u​s​t​o​m​e​r​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​t​o
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​c​o​m​p​a​r​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​(​e​.​g​.​,​ ​=​,​ ​!​=​,​ ​<​,​ ​>​)
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​c​u​s​t​o​m​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​c​u​s​t​o​m​e​r​s​ ​l​i​s​t
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * W​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				update_customer: {
+					/**
+					 * U​p​d​a​t​e​ ​C​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​u​s​t​o​m​e​r​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * M​o​d​i​f​y​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​u​s​t​o​m​e​r​ ​r​e​c​o​r​d​ ​w​i​t​h​ ​u​p​d​a​t​e​d​ ​p​e​r​s​o​n​a​l​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​c​o​n​t​a​c​t​ ​d​e​t​a​i​l​s​,​ ​a​n​d​ ​a​d​d​r​e​s​s​e​s
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Q​u​i​c​k​B​o​o​k​s​ ​c​u​s​t​o​m​e​r​ ​I​D​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							longDesc: string
+						}
+						display_name: {
+							/**
+							 * D​i​s​p​l​a​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​d​i​s​p​l​a​y​e​d​ ​f​o​r​ ​t​h​i​s​ ​c​u​s​t​o​m​e​r​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+							 */
+							longDesc: string
+						}
+						given_name: {
+							/**
+							 * G​i​v​e​n​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​'​s​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​r​ ​g​i​v​e​n​ ​n​a​m​e
+							 */
+							longDesc: string
+						}
+						middle_name: {
+							/**
+							 * M​i​d​d​l​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​m​i​d​d​l​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​'​s​ ​m​i​d​d​l​e​ ​n​a​m​e​ ​o​r​ ​m​i​d​d​l​e​ ​i​n​i​t​i​a​l
+							 */
+							longDesc: string
+						}
+						family_name: {
+							/**
+							 * F​a​m​i​l​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​'​s​ ​l​a​s​t​ ​n​a​m​e​ ​o​r​ ​f​a​m​i​l​y​ ​n​a​m​e
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​'​s​ ​t​i​t​l​e​ ​(​e​.​g​.​,​ ​M​r​.​,​ ​M​r​s​.​,​ ​D​r​.​,​ ​e​t​c​.​)
+							 */
+							longDesc: string
+						}
+						suffix: {
+							/**
+							 * S​u​f​f​i​x
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​u​f​f​i​x​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​'​s​ ​s​u​f​f​i​x​ ​(​e​.​g​.​,​ ​J​r​.​,​ ​S​r​.​,​ ​I​I​I​,​ ​e​t​c​.​)
+							 */
+							longDesc: string
+						}
+						company_name: {
+							/**
+							 * C​o​m​p​a​n​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​m​p​a​n​y​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​r​e​p​r​e​s​e​n​t​s
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​i​m​a​r​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							longDesc: string
+						}
+						billing_address: {
+							/**
+							 * B​i​l​l​i​n​g​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​a​d​d​r​e​s​s​ ​w​h​e​r​e​ ​b​i​l​l​s​ ​s​h​o​u​l​d​ ​b​e​ ​s​e​n​t​ ​f​o​r​ ​t​h​i​s​ ​c​u​s​t​o​m​e​r
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									Line1: {
+										/**
+										 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​1
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​r​s​t​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​o​r​ ​P​.​O​.​ ​b​o​x​ ​n​u​m​b​e​r
+										 */
+										longDesc: string
+									}
+									Line2: {
+										/**
+										 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​2
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​e​c​o​n​d​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * A​d​d​i​t​i​o​n​a​l​ ​a​d​d​r​e​s​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​l​i​k​e​ ​a​p​a​r​t​m​e​n​t​ ​o​r​ ​s​u​i​t​e​ ​n​u​m​b​e​r
+										 */
+										longDesc: string
+									}
+									City: {
+										/**
+										 * C​i​t​y
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​i​t​y​ ​o​f​ ​t​h​e​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​i​t​y​ ​w​h​e​r​e​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​i​s​ ​l​o​c​a​t​e​d
+										 */
+										longDesc: string
+									}
+									PostalCode: {
+										/**
+										 * P​o​s​t​a​l​ ​C​o​d​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​o​f​ ​t​h​e​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​Z​I​P​ ​c​o​d​e​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s
+										 */
+										longDesc: string
+									}
+									CountrySubDivisionCode: {
+										/**
+										 * S​t​a​t​e​/​P​r​o​v​i​n​c​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​ ​c​o​d​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​ ​a​b​b​r​e​v​i​a​t​i​o​n​ ​(​e​.​g​.​,​ ​C​A​,​ ​N​Y​,​ ​O​N​)
+										 */
+										longDesc: string
+									}
+									Country: {
+										/**
+										 * C​o​u​n​t​r​y
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​u​n​t​r​y​ ​o​f​ ​t​h​e​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​o​u​n​t​r​y​ ​w​h​e​r​e​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​i​s​ ​l​o​c​a​t​e​d
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						shipping_address: {
+							/**
+							 * S​h​i​p​p​i​n​g​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​a​d​d​r​e​s​s​ ​w​h​e​r​e​ ​p​r​o​d​u​c​t​s​ ​s​h​o​u​l​d​ ​b​e​ ​s​h​i​p​p​e​d​ ​f​o​r​ ​t​h​i​s​ ​c​u​s​t​o​m​e​r
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									Line1: {
+										/**
+										 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​1
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​r​s​t​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​o​r​ ​P​.​O​.​ ​b​o​x​ ​n​u​m​b​e​r
+										 */
+										longDesc: string
+									}
+									Line2: {
+										/**
+										 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​2
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​e​c​o​n​d​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * A​d​d​i​t​i​o​n​a​l​ ​a​d​d​r​e​s​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​l​i​k​e​ ​a​p​a​r​t​m​e​n​t​ ​o​r​ ​s​u​i​t​e​ ​n​u​m​b​e​r
+										 */
+										longDesc: string
+									}
+									City: {
+										/**
+										 * C​i​t​y
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​i​t​y​ ​o​f​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​i​t​y​ ​w​h​e​r​e​ ​p​r​o​d​u​c​t​s​ ​s​h​o​u​l​d​ ​b​e​ ​s​h​i​p​p​e​d
+										 */
+										longDesc: string
+									}
+									PostalCode: {
+										/**
+										 * P​o​s​t​a​l​ ​C​o​d​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​o​f​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​Z​I​P​ ​c​o​d​e​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s
+										 */
+										longDesc: string
+									}
+									CountrySubDivisionCode: {
+										/**
+										 * S​t​a​t​e​/​P​r​o​v​i​n​c​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​ ​c​o​d​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​ ​a​b​b​r​e​v​i​a​t​i​o​n​ ​(​e​.​g​.​,​ ​C​A​,​ ​N​Y​,​ ​O​N​)
+										 */
+										longDesc: string
+									}
+									Country: {
+										/**
+										 * C​o​u​n​t​r​y
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​u​n​t​r​y​ ​o​f​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​o​u​n​t​r​y​ ​w​h​e​r​e​ ​p​r​o​d​u​c​t​s​ ​s​h​o​u​l​d​ ​b​e​ ​s​h​i​p​p​e​d
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				get_deposit: {
+					/**
+					 * G​e​t​ ​D​e​p​o​s​i​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​e​p​o​s​i​t​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​e​p​o​s​i​t​ ​u​s​i​n​g​ ​i​t​s​ ​I​D
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * D​e​p​o​s​i​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​d​e​p​o​s​i​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Q​u​i​c​k​B​o​o​k​s​ ​d​e​p​o​s​i​t​ ​I​D​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_deposits: {
+					/**
+					 * L​i​s​t​ ​D​e​p​o​s​i​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​d​e​p​o​s​i​t​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​m​u​l​t​i​p​l​e​ ​d​e​p​o​s​i​t​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​,​ ​s​o​r​t​i​n​g​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​ ​c​a​p​a​b​i​l​i​t​i​e​s
+					 */
+					longDesc: string
+					options: {
+						fetchAll: {
+							/**
+							 * F​e​t​c​h​ ​A​l​l
+							 */
+							displayName: string
+							/**
+							 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​d​e​p​o​s​i​t​s​ ​w​i​t​h​o​u​t​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​f​e​t​c​h​e​s​ ​a​l​l​ ​d​e​p​o​s​i​t​s​ ​i​g​n​o​r​i​n​g​ ​l​i​m​i​t​ ​a​n​d​ ​o​f​f​s​e​t​ ​p​a​r​a​m​e​t​e​r​s
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​d​e​p​o​s​i​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​d​e​p​o​s​i​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​ ​(​d​e​f​a​u​l​t​:​ ​5​0​)
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​d​e​p​o​s​i​t​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​d​e​p​o​s​i​t​s​ ​t​o​ ​s​k​i​p​ ​b​e​f​o​r​e​ ​s​t​a​r​t​i​n​g​ ​t​o​ ​r​e​t​u​r​n​ ​r​e​s​u​l​t​s​ ​(​d​e​f​a​u​l​t​:​ ​0​)
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​d​e​p​o​s​i​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​f​i​l​t​e​r​i​n​g​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​d​e​p​o​s​i​t​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​d​e​p​o​s​i​t​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​t​o
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​c​o​m​p​a​r​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​(​e​.​g​.​,​ ​=​,​ ​!​=​,​ ​<​,​ ​>​)
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​d​e​p​o​s​i​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​d​e​p​o​s​i​t​s​ ​l​i​s​t
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​d​e​p​o​s​i​t​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * W​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				create_estimate: {
+					/**
+					 * C​r​e​a​t​e​ ​E​s​t​i​m​a​t​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​e​s​t​i​m​a​t​e​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​e​s​t​i​m​a​t​e​ ​f​o​r​ ​a​ ​c​u​s​t​o​m​e​r​ ​w​i​t​h​ ​l​i​n​e​ ​i​t​e​m​s​,​ ​q​u​a​n​t​i​t​i​e​s​,​ ​a​n​d​ ​p​r​i​c​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​f​o​r​ ​t​h​i​s​ ​e​s​t​i​m​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​w​h​o​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​t​h​i​s​ ​e​s​t​i​m​a​t​e
+							 */
+							longDesc: string
+						}
+						lines: {
+							/**
+							 * L​i​n​e​ ​I​t​e​m​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​l​i​n​e​ ​i​t​e​m​s​ ​f​o​r​ ​t​h​e​ ​e​s​t​i​m​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​e​t​a​i​l​e​d​ ​l​i​s​t​ ​o​f​ ​i​t​e​m​s​ ​o​r​ ​s​e​r​v​i​c​e​s​ ​i​n​c​l​u​d​e​d​ ​i​n​ ​t​h​e​ ​e​s​t​i​m​a​t​e
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											amount: {
+												/**
+												 * A​m​o​u​n​t
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​t​o​t​a​l​ ​m​o​n​e​t​a​r​y​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												longDesc: string
+											}
+											description: {
+												/**
+												 * D​e​s​c​r​i​p​t​i​o​n
+												 */
+												displayName: string
+												/**
+												 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * A​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​w​h​a​t​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​ ​r​e​p​r​e​s​e​n​t​s
+												 */
+												longDesc: string
+											}
+											quantity: {
+												/**
+												 * Q​u​a​n​t​i​t​y
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​e​s​t​i​m​a​t​e​d
+												 */
+												longDesc: string
+											}
+											unit_price: {
+												/**
+												 * U​n​i​t​ ​P​r​i​c​e
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​p​r​i​c​e​ ​p​e​r​ ​u​n​i​t
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​c​o​s​t​ ​p​e​r​ ​i​n​d​i​v​i​d​u​a​l​ ​u​n​i​t​ ​o​f​ ​t​h​e​ ​i​t​e​m
+												 */
+												longDesc: string
+											}
+											item_id: {
+												/**
+												 * I​t​e​m​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​i​t​e​m​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​e​s​t​i​m​a​t​e​d
+												 */
+												longDesc: string
+											}
+											service_date: {
+												/**
+												 * S​e​r​v​i​c​e​ ​D​a​t​e
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​d​a​t​e​ ​w​h​e​n​ ​t​h​e​ ​s​e​r​v​i​c​e​ ​w​i​l​l​ ​b​e​ ​p​r​o​v​i​d​e​d
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​d​a​t​e​ ​w​h​e​n​ ​t​h​e​ ​s​e​r​v​i​c​e​ ​o​r​ ​i​t​e​m​ ​w​i​l​l​ ​b​e​ ​d​e​l​i​v​e​r​e​d
+												 */
+												longDesc: string
+											}
+											tax_code_id: {
+												/**
+												 * T​a​x​ ​C​o​d​e​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​t​a​x​ ​c​o​d​e​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​x​ ​c​o​d​e​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												longDesc: string
+											}
+											class_id: {
+												/**
+												 * C​l​a​s​s​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​c​l​a​s​s​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​l​a​s​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				delete_estimate: {
+					/**
+					 * D​e​l​e​t​e​ ​E​s​t​i​m​a​t​e
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​n​ ​e​s​t​i​m​a​t​e​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​ ​a​n​ ​e​s​t​i​m​a​t​e​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s​ ​u​s​i​n​g​ ​i​t​s​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * E​s​t​i​m​a​t​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​e​s​t​i​m​a​t​e​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Q​u​i​c​k​B​o​o​k​s​ ​e​s​t​i​m​a​t​e​ ​I​D​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​p​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_estimate: {
+					/**
+					 * G​e​t​ ​E​s​t​i​m​a​t​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​e​s​t​i​m​a​t​e​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​e​s​t​i​m​a​t​e​ ​u​s​i​n​g​ ​i​t​s​ ​I​D
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * E​s​t​i​m​a​t​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​e​s​t​i​m​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Q​u​i​c​k​B​o​o​k​s​ ​e​s​t​i​m​a​t​e​ ​I​D​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_estimates: {
+					/**
+					 * L​i​s​t​ ​E​s​t​i​m​a​t​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​e​s​t​i​m​a​t​e​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​m​u​l​t​i​p​l​e​ ​e​s​t​i​m​a​t​e​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​,​ ​s​o​r​t​i​n​g​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​ ​c​a​p​a​b​i​l​i​t​i​e​s
+					 */
+					longDesc: string
+					options: {
+						fetchAll: {
+							/**
+							 * F​e​t​c​h​ ​A​l​l
+							 */
+							displayName: string
+							/**
+							 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​e​s​t​i​m​a​t​e​s​ ​w​i​t​h​o​u​t​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​f​e​t​c​h​e​s​ ​a​l​l​ ​e​s​t​i​m​a​t​e​s​ ​i​g​n​o​r​i​n​g​ ​l​i​m​i​t​ ​a​n​d​ ​o​f​f​s​e​t​ ​p​a​r​a​m​e​t​e​r​s
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​e​s​t​i​m​a​t​e​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​e​s​t​i​m​a​t​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​ ​(​d​e​f​a​u​l​t​:​ ​5​0​)
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​e​s​t​i​m​a​t​e​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​e​s​t​i​m​a​t​e​s​ ​t​o​ ​s​k​i​p​ ​b​e​f​o​r​e​ ​s​t​a​r​t​i​n​g​ ​t​o​ ​r​e​t​u​r​n​ ​r​e​s​u​l​t​s​ ​(​d​e​f​a​u​l​t​:​ ​0​)
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​e​s​t​i​m​a​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​f​i​l​t​e​r​i​n​g​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​e​s​t​i​m​a​t​e​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​e​s​t​i​m​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​t​o
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​c​o​m​p​a​r​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​(​e​.​g​.​,​ ​=​,​ ​!​=​,​ ​<​,​ ​>​)
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​e​s​t​i​m​a​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​e​s​t​i​m​a​t​e​s​ ​l​i​s​t
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​e​s​t​i​m​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * W​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				create_invoice: {
+					/**
+					 * C​r​e​a​t​e​ ​I​n​v​o​i​c​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​i​n​v​o​i​c​e​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​i​n​v​o​i​c​e​ ​f​o​r​ ​a​ ​c​u​s​t​o​m​e​r​ ​w​i​t​h​ ​l​i​n​e​ ​i​t​e​m​s​,​ ​q​u​a​n​t​i​t​i​e​s​,​ ​a​n​d​ ​p​r​i​c​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n
+					 */
+					longDesc: string
+					options: {
+						customer: {
+							/**
+							 * C​u​s​t​o​m​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​f​o​r​ ​t​h​i​s​ ​i​n​v​o​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​w​h​o​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​t​h​i​s​ ​i​n​v​o​i​c​e
+							 */
+							longDesc: string
+						}
+						lines: {
+							/**
+							 * L​i​n​e​ ​I​t​e​m​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​l​i​n​e​ ​i​t​e​m​s​ ​f​o​r​ ​t​h​e​ ​i​n​v​o​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​e​t​a​i​l​e​d​ ​l​i​s​t​ ​o​f​ ​i​t​e​m​s​ ​o​r​ ​s​e​r​v​i​c​e​s​ ​i​n​c​l​u​d​e​d​ ​i​n​ ​t​h​e​ ​i​n​v​o​i​c​e
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											amount: {
+												/**
+												 * A​m​o​u​n​t
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​t​o​t​a​l​ ​m​o​n​e​t​a​r​y​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												longDesc: string
+											}
+											description: {
+												/**
+												 * D​e​s​c​r​i​p​t​i​o​n
+												 */
+												displayName: string
+												/**
+												 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * A​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​w​h​a​t​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​ ​r​e​p​r​e​s​e​n​t​s
+												 */
+												longDesc: string
+											}
+											quantity: {
+												/**
+												 * Q​u​a​n​t​i​t​y
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​i​n​v​o​i​c​e​d
+												 */
+												longDesc: string
+											}
+											unit_price: {
+												/**
+												 * U​n​i​t​ ​P​r​i​c​e
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​p​r​i​c​e​ ​p​e​r​ ​u​n​i​t
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​c​o​s​t​ ​p​e​r​ ​i​n​d​i​v​i​d​u​a​l​ ​u​n​i​t​ ​o​f​ ​t​h​e​ ​i​t​e​m
+												 */
+												longDesc: string
+											}
+											item_id: {
+												/**
+												 * I​t​e​m​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​i​t​e​m​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​i​n​v​o​i​c​e​d
+												 */
+												longDesc: string
+											}
+											service_date: {
+												/**
+												 * S​e​r​v​i​c​e​ ​D​a​t​e
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​d​a​t​e​ ​w​h​e​n​ ​t​h​e​ ​s​e​r​v​i​c​e​ ​w​a​s​ ​p​r​o​v​i​d​e​d
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​d​a​t​e​ ​w​h​e​n​ ​t​h​e​ ​s​e​r​v​i​c​e​ ​o​r​ ​i​t​e​m​ ​w​a​s​ ​d​e​l​i​v​e​r​e​d
+												 */
+												longDesc: string
+											}
+											tax_code_id: {
+												/**
+												 * T​a​x​ ​C​o​d​e​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​t​a​x​ ​c​o​d​e​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​x​ ​c​o​d​e​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												longDesc: string
+											}
+											class_id: {
+												/**
+												 * C​l​a​s​s​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​c​l​a​s​s​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​l​a​s​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				delete_invoice: {
+					/**
+					 * D​e​l​e​t​e​ ​I​n​v​o​i​c​e
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​n​ ​i​n​v​o​i​c​e​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​ ​a​n​ ​i​n​v​o​i​c​e​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s​ ​u​s​i​n​g​ ​i​t​s​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * I​n​v​o​i​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​n​v​o​i​c​e​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Q​u​i​c​k​B​o​o​k​s​ ​i​n​v​o​i​c​e​ ​I​D​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​p​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_invoice: {
+					/**
+					 * G​e​t​ ​I​n​v​o​i​c​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​i​n​v​o​i​c​e​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​i​n​v​o​i​c​e​ ​u​s​i​n​g​ ​i​t​s​ ​I​D
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * I​n​v​o​i​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​n​v​o​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Q​u​i​c​k​B​o​o​k​s​ ​i​n​v​o​i​c​e​ ​I​D​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_invoices: {
+					/**
+					 * L​i​s​t​ ​I​n​v​o​i​c​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​i​n​v​o​i​c​e​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​m​u​l​t​i​p​l​e​ ​i​n​v​o​i​c​e​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​,​ ​s​o​r​t​i​n​g​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​ ​c​a​p​a​b​i​l​i​t​i​e​s
+					 */
+					longDesc: string
+					options: {
+						fetchAll: {
+							/**
+							 * F​e​t​c​h​ ​A​l​l
+							 */
+							displayName: string
+							/**
+							 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​i​n​v​o​i​c​e​s​ ​w​i​t​h​o​u​t​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​f​e​t​c​h​e​s​ ​a​l​l​ ​i​n​v​o​i​c​e​s​ ​i​g​n​o​r​i​n​g​ ​l​i​m​i​t​ ​a​n​d​ ​o​f​f​s​e​t​ ​p​a​r​a​m​e​t​e​r​s
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​i​n​v​o​i​c​e​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​i​n​v​o​i​c​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​ ​(​d​e​f​a​u​l​t​:​ ​5​0​)
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​i​n​v​o​i​c​e​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​i​n​v​o​i​c​e​s​ ​t​o​ ​s​k​i​p​ ​b​e​f​o​r​e​ ​s​t​a​r​t​i​n​g​ ​t​o​ ​r​e​t​u​r​n​ ​r​e​s​u​l​t​s​ ​(​d​e​f​a​u​l​t​:​ ​0​)
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​i​n​v​o​i​c​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​f​i​l​t​e​r​i​n​g​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​i​n​v​o​i​c​e​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​i​n​v​o​i​c​e​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​t​o
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​c​o​m​p​a​r​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​(​e​.​g​.​,​ ​=​,​ ​!​=​,​ ​<​,​ ​>​)
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​i​n​v​o​i​c​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​i​n​v​o​i​c​e​s​ ​l​i​s​t
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​i​n​v​o​i​c​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * W​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				update_invoice: {
+					/**
+					 * U​p​d​a​t​e​ ​I​n​v​o​i​c​e
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​i​n​v​o​i​c​e​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * M​o​d​i​f​y​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​i​n​v​o​i​c​e​ ​w​i​t​h​ ​u​p​d​a​t​e​d​ ​c​u​s​t​o​m​e​r​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​l​i​n​e​ ​i​t​e​m​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​d​e​t​a​i​l​s
+					 */
+					longDesc: string
+					options: {
+						invoice_id: {
+							/**
+							 * I​n​v​o​i​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​n​v​o​i​c​e​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Q​u​i​c​k​B​o​o​k​s​ ​i​n​v​o​i​c​e​ ​I​D​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							longDesc: string
+						}
+						customer: {
+							/**
+							 * C​u​s​t​o​m​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​f​o​r​ ​t​h​i​s​ ​i​n​v​o​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​w​h​o​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​t​h​i​s​ ​i​n​v​o​i​c​e
+							 */
+							longDesc: string
+						}
+						lines: {
+							/**
+							 * L​i​n​e​ ​I​t​e​m​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​l​i​n​e​ ​i​t​e​m​s​ ​f​o​r​ ​t​h​e​ ​i​n​v​o​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​e​t​a​i​l​e​d​ ​l​i​s​t​ ​o​f​ ​i​t​e​m​s​ ​o​r​ ​s​e​r​v​i​c​e​s​ ​i​n​c​l​u​d​e​d​ ​i​n​ ​t​h​e​ ​i​n​v​o​i​c​e
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											amount: {
+												/**
+												 * A​m​o​u​n​t
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​t​o​t​a​l​ ​m​o​n​e​t​a​r​y​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												longDesc: string
+											}
+											description: {
+												/**
+												 * D​e​s​c​r​i​p​t​i​o​n
+												 */
+												displayName: string
+												/**
+												 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * A​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​w​h​a​t​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​ ​r​e​p​r​e​s​e​n​t​s
+												 */
+												longDesc: string
+											}
+											quantity: {
+												/**
+												 * Q​u​a​n​t​i​t​y
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​i​n​v​o​i​c​e​d
+												 */
+												longDesc: string
+											}
+											unit_price: {
+												/**
+												 * U​n​i​t​ ​P​r​i​c​e
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​p​r​i​c​e​ ​p​e​r​ ​u​n​i​t
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​c​o​s​t​ ​p​e​r​ ​i​n​d​i​v​i​d​u​a​l​ ​u​n​i​t​ ​o​f​ ​t​h​e​ ​i​t​e​m
+												 */
+												longDesc: string
+											}
+											item_id: {
+												/**
+												 * I​t​e​m​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​i​t​e​m​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​i​n​v​o​i​c​e​d
+												 */
+												longDesc: string
+											}
+											service_date: {
+												/**
+												 * S​e​r​v​i​c​e​ ​D​a​t​e
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​d​a​t​e​ ​w​h​e​n​ ​t​h​e​ ​s​e​r​v​i​c​e​ ​w​a​s​ ​p​r​o​v​i​d​e​d
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​d​a​t​e​ ​w​h​e​n​ ​t​h​e​ ​s​e​r​v​i​c​e​ ​o​r​ ​i​t​e​m​ ​w​a​s​ ​d​e​l​i​v​e​r​e​d
+												 */
+												longDesc: string
+											}
+											tax_code_id: {
+												/**
+												 * T​a​x​ ​C​o​d​e​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​t​a​x​ ​c​o​d​e​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​x​ ​c​o​d​e​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												longDesc: string
+											}
+											class_id: {
+												/**
+												 * C​l​a​s​s​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​c​l​a​s​s​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​l​a​s​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				create_item: {
+					/**
+					 * C​r​e​a​t​e​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​i​t​e​m​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​i​t​e​m​ ​f​o​r​ ​p​r​o​d​u​c​t​s​ ​o​r​ ​s​e​r​v​i​c​e​s​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​u​s​e​d​ ​o​n​ ​i​n​v​o​i​c​e​s​,​ ​e​s​t​i​m​a​t​e​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​t​r​a​n​s​a​c​t​i​o​n​s
+					 */
+					longDesc: string
+					options: {
+						name: {
+							/**
+							 * I​t​e​m​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​i​s​ ​i​t​e​m​ ​a​s​ ​i​t​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​o​n​ ​t​r​a​n​s​a​c​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+						type: {
+							/**
+							 * I​t​e​m​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​i​t​e​m​ ​b​e​i​n​g​ ​c​r​e​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​i​t​e​m​:​ ​S​e​r​v​i​c​e​ ​(​f​o​r​ ​s​e​r​v​i​c​e​s​)​,​ ​N​o​n​I​n​v​e​n​t​o​r​y​ ​(​f​o​r​ ​n​o​n​-​t​r​a​c​k​e​d​ ​p​r​o​d​u​c​t​s​)​,​ ​o​r​ ​I​n​v​e​n​t​o​r​y​ ​(​f​o​r​ ​t​r​a​c​k​e​d​ ​p​r​o​d​u​c​t​s​)
+							 */
+							longDesc: string
+						}
+						income_account_id: {
+							/**
+							 * I​n​c​o​m​e​ ​A​c​c​o​u​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​i​n​c​o​m​e​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​c​r​e​d​i​t​e​d​ ​w​h​e​n​ ​t​h​i​s​ ​i​t​e​m​ ​i​s​ ​s​o​l​d
+							 */
+							longDesc: string
+						}
+						expense_account_id: {
+							/**
+							 * E​x​p​e​n​s​e​ ​A​c​c​o​u​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​x​p​e​n​s​e​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​d​e​b​i​t​e​d​ ​w​h​e​n​ ​t​h​i​s​ ​i​t​e​m​ ​i​s​ ​p​u​r​c​h​a​s​e​d
+							 */
+							longDesc: string
+						}
+						account_id: {
+							/**
+							 * A​s​s​e​t​ ​A​c​c​o​u​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​s​s​e​t​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​i​n​v​e​n​t​o​r​y​ ​i​t​e​m​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​a​s​s​e​t​ ​a​c​c​o​u​n​t​ ​u​s​e​d​ ​t​o​ ​t​r​a​c​k​ ​i​n​v​e​n​t​o​r​y​ ​v​a​l​u​e​ ​(​r​e​q​u​i​r​e​d​ ​f​o​r​ ​I​n​v​e​n​t​o​r​y​ ​i​t​e​m​s​)
+							 */
+							longDesc: string
+						}
+						quantity_on_hand: {
+							/**
+							 * Q​u​a​n​t​i​t​y​ ​O​n​ ​H​a​n​d
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​i​n​i​t​i​a​l​ ​q​u​a​n​t​i​t​y​ ​i​n​ ​s​t​o​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​a​r​t​i​n​g​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​i​s​ ​i​n​v​e​n​t​o​r​y​ ​i​t​e​m​ ​t​h​a​t​ ​y​o​u​ ​c​u​r​r​e​n​t​l​y​ ​h​a​v​e​ ​i​n​ ​s​t​o​c​k
+							 */
+							longDesc: string
+						}
+						track_quantity_on_hand: {
+							/**
+							 * T​r​a​c​k​ ​Q​u​a​n​t​i​t​y​ ​O​n​ ​H​a​n​d
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​t​r​a​c​k​ ​i​n​v​e​n​t​o​r​y​ ​q​u​a​n​t​i​t​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * E​n​a​b​l​e​ ​t​h​i​s​ ​t​o​ ​t​r​a​c​k​ ​t​h​e​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​i​s​ ​i​n​v​e​n​t​o​r​y​ ​i​t​e​m​ ​i​n​ ​s​t​o​c​k
+							 */
+							longDesc: string
+						}
+						inventory_start_date: {
+							/**
+							 * I​n​v​e​n​t​o​r​y​ ​S​t​a​r​t​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​w​h​e​n​ ​i​n​v​e​n​t​o​r​y​ ​t​r​a​c​k​i​n​g​ ​b​e​g​i​n​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​f​r​o​m​ ​w​h​i​c​h​ ​i​n​v​e​n​t​o​r​y​ ​t​r​a​c​k​i​n​g​ ​f​o​r​ ​t​h​i​s​ ​i​t​e​m​ ​s​h​o​u​l​d​ ​b​e​g​i​n
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_item: {
+					/**
+					 * G​e​t​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​i​t​e​m​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​i​t​e​m​ ​u​s​i​n​g​ ​i​t​s​ ​I​D
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * I​t​e​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Q​u​i​c​k​B​o​o​k​s​ ​i​t​e​m​ ​I​D​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_items: {
+					/**
+					 * L​i​s​t​ ​I​t​e​m​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​i​t​e​m​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​m​u​l​t​i​p​l​e​ ​i​t​e​m​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​,​ ​s​o​r​t​i​n​g​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​ ​c​a​p​a​b​i​l​i​t​i​e​s
+					 */
+					longDesc: string
+					options: {
+						fetchAll: {
+							/**
+							 * F​e​t​c​h​ ​A​l​l
+							 */
+							displayName: string
+							/**
+							 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​i​t​e​m​s​ ​w​i​t​h​o​u​t​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​f​e​t​c​h​e​s​ ​a​l​l​ ​i​t​e​m​s​ ​i​g​n​o​r​i​n​g​ ​l​i​m​i​t​ ​a​n​d​ ​o​f​f​s​e​t​ ​p​a​r​a​m​e​t​e​r​s
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​i​t​e​m​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​i​t​e​m​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​ ​(​d​e​f​a​u​l​t​:​ ​5​0​)
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​i​t​e​m​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​i​t​e​m​s​ ​t​o​ ​s​k​i​p​ ​b​e​f​o​r​e​ ​s​t​a​r​t​i​n​g​ ​t​o​ ​r​e​t​u​r​n​ ​r​e​s​u​l​t​s​ ​(​d​e​f​a​u​l​t​:​ ​0​)
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​i​t​e​m​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​f​i​l​t​e​r​i​n​g​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​i​t​e​m​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​i​t​e​m​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​t​o
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​c​o​m​p​a​r​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​(​e​.​g​.​,​ ​=​,​ ​!​=​,​ ​<​,​ ​>​)
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​i​t​e​m​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​i​t​e​m​s​ ​l​i​s​t
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​i​t​e​m​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * W​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				get_journal_entry: {
+					/**
+					 * G​e​t​ ​J​o​u​r​n​a​l​ ​E​n​t​r​y
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​j​o​u​r​n​a​l​ ​e​n​t​r​y​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​j​o​u​r​n​a​l​ ​e​n​t​r​y​ ​u​s​i​n​g​ ​i​t​s​ ​I​D
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * J​o​u​r​n​a​l​ ​E​n​t​r​y​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​j​o​u​r​n​a​l​ ​e​n​t​r​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Q​u​i​c​k​B​o​o​k​s​ ​j​o​u​r​n​a​l​ ​e​n​t​r​y​ ​I​D​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_journal_entries: {
+					/**
+					 * L​i​s​t​ ​J​o​u​r​n​a​l​ ​E​n​t​r​i​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​j​o​u​r​n​a​l​ ​e​n​t​r​i​e​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​m​u​l​t​i​p​l​e​ ​j​o​u​r​n​a​l​ ​e​n​t​r​i​e​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​,​ ​s​o​r​t​i​n​g​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​ ​c​a​p​a​b​i​l​i​t​i​e​s
+					 */
+					longDesc: string
+					options: {
+						fetchAll: {
+							/**
+							 * F​e​t​c​h​ ​A​l​l
+							 */
+							displayName: string
+							/**
+							 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​j​o​u​r​n​a​l​ ​e​n​t​r​i​e​s​ ​w​i​t​h​o​u​t​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​f​e​t​c​h​e​s​ ​a​l​l​ ​j​o​u​r​n​a​l​ ​e​n​t​r​i​e​s​ ​i​g​n​o​r​i​n​g​ ​l​i​m​i​t​ ​a​n​d​ ​o​f​f​s​e​t​ ​p​a​r​a​m​e​t​e​r​s
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​j​o​u​r​n​a​l​ ​e​n​t​r​i​e​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​j​o​u​r​n​a​l​ ​e​n​t​r​i​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​ ​(​d​e​f​a​u​l​t​:​ ​5​0​)
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​j​o​u​r​n​a​l​ ​e​n​t​r​i​e​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​j​o​u​r​n​a​l​ ​e​n​t​r​i​e​s​ ​t​o​ ​s​k​i​p​ ​b​e​f​o​r​e​ ​s​t​a​r​t​i​n​g​ ​t​o​ ​r​e​t​u​r​n​ ​r​e​s​u​l​t​s​ ​(​d​e​f​a​u​l​t​:​ ​0​)
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​j​o​u​r​n​a​l​ ​e​n​t​r​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​f​i​l​t​e​r​i​n​g​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​j​o​u​r​n​a​l​ ​e​n​t​r​i​e​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​j​o​u​r​n​a​l​ ​e​n​t​r​y​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​t​o
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​c​o​m​p​a​r​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​(​e​.​g​.​,​ ​=​,​ ​!​=​,​ ​<​,​ ​>​)
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​j​o​u​r​n​a​l​ ​e​n​t​r​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​j​o​u​r​n​a​l​ ​e​n​t​r​i​e​s​ ​l​i​s​t
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​j​o​u​r​n​a​l​ ​e​n​t​r​y​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * W​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				delete_payment: {
+					/**
+					 * D​e​l​e​t​e​ ​P​a​y​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​p​a​y​m​e​n​t​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​ ​a​ ​p​a​y​m​e​n​t​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s​ ​u​s​i​n​g​ ​i​t​s​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * P​a​y​m​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​a​y​m​e​n​t​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Q​u​i​c​k​B​o​o​k​s​ ​p​a​y​m​e​n​t​ ​I​D​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​p​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_payment: {
+					/**
+					 * G​e​t​ ​P​a​y​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​a​y​m​e​n​t​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​a​y​m​e​n​t​ ​u​s​i​n​g​ ​i​t​s​ ​I​D
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * P​a​y​m​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​a​y​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Q​u​i​c​k​B​o​o​k​s​ ​p​a​y​m​e​n​t​ ​I​D​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_payments: {
+					/**
+					 * L​i​s​t​ ​P​a​y​m​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​p​a​y​m​e​n​t​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​m​u​l​t​i​p​l​e​ ​p​a​y​m​e​n​t​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​,​ ​s​o​r​t​i​n​g​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​ ​c​a​p​a​b​i​l​i​t​i​e​s
+					 */
+					longDesc: string
+					options: {
+						fetchAll: {
+							/**
+							 * F​e​t​c​h​ ​A​l​l
+							 */
+							displayName: string
+							/**
+							 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​p​a​y​m​e​n​t​s​ ​w​i​t​h​o​u​t​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​f​e​t​c​h​e​s​ ​a​l​l​ ​p​a​y​m​e​n​t​s​ ​i​g​n​o​r​i​n​g​ ​l​i​m​i​t​ ​a​n​d​ ​o​f​f​s​e​t​ ​p​a​r​a​m​e​t​e​r​s
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​p​a​y​m​e​n​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​p​a​y​m​e​n​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​ ​(​d​e​f​a​u​l​t​:​ ​5​0​)
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​p​a​y​m​e​n​t​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​p​a​y​m​e​n​t​s​ ​t​o​ ​s​k​i​p​ ​b​e​f​o​r​e​ ​s​t​a​r​t​i​n​g​ ​t​o​ ​r​e​t​u​r​n​ ​r​e​s​u​l​t​s​ ​(​d​e​f​a​u​l​t​:​ ​0​)
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​p​a​y​m​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​f​i​l​t​e​r​i​n​g​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​p​a​y​m​e​n​t​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​a​y​m​e​n​t​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​t​o
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​c​o​m​p​a​r​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​(​e​.​g​.​,​ ​=​,​ ​!​=​,​ ​<​,​ ​>​)
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​p​a​y​m​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​p​a​y​m​e​n​t​s​ ​l​i​s​t
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​a​y​m​e​n​t​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * W​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				get_purchase_order: {
+					/**
+					 * G​e​t​ ​P​u​r​c​h​a​s​e​ ​O​r​d​e​r
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​ ​u​s​i​n​g​ ​i​t​s​ ​I​D
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * P​u​r​c​h​a​s​e​ ​O​r​d​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Q​u​i​c​k​B​o​o​k​s​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​ ​I​D​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_purchase: {
+					/**
+					 * G​e​t​ ​P​u​r​c​h​a​s​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​u​r​c​h​a​s​e​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​u​r​c​h​a​s​e​ ​t​r​a​n​s​a​c​t​i​o​n​ ​u​s​i​n​g​ ​i​t​s​ ​I​D
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * P​u​r​c​h​a​s​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​u​r​c​h​a​s​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Q​u​i​c​k​B​o​o​k​s​ ​p​u​r​c​h​a​s​e​ ​I​D​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_purchases: {
+					/**
+					 * L​i​s​t​ ​P​u​r​c​h​a​s​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​p​u​r​c​h​a​s​e​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​m​u​l​t​i​p​l​e​ ​p​u​r​c​h​a​s​e​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​,​ ​s​o​r​t​i​n​g​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​ ​c​a​p​a​b​i​l​i​t​i​e​s
+					 */
+					longDesc: string
+					options: {
+						fetchAll: {
+							/**
+							 * F​e​t​c​h​ ​A​l​l
+							 */
+							displayName: string
+							/**
+							 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​p​u​r​c​h​a​s​e​s​ ​w​i​t​h​o​u​t​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​f​e​t​c​h​e​s​ ​a​l​l​ ​p​u​r​c​h​a​s​e​s​ ​i​g​n​o​r​i​n​g​ ​l​i​m​i​t​ ​a​n​d​ ​o​f​f​s​e​t​ ​p​a​r​a​m​e​t​e​r​s
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​p​u​r​c​h​a​s​e​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​p​u​r​c​h​a​s​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​ ​(​d​e​f​a​u​l​t​:​ ​5​0​)
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​p​u​r​c​h​a​s​e​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​p​u​r​c​h​a​s​e​s​ ​t​o​ ​s​k​i​p​ ​b​e​f​o​r​e​ ​s​t​a​r​t​i​n​g​ ​t​o​ ​r​e​t​u​r​n​ ​r​e​s​u​l​t​s​ ​(​d​e​f​a​u​l​t​:​ ​0​)
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​p​u​r​c​h​a​s​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​f​i​l​t​e​r​i​n​g​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​p​u​r​c​h​a​s​e​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​u​r​c​h​a​s​e​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​t​o
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​c​o​m​p​a​r​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​(​e​.​g​.​,​ ​=​,​ ​!​=​,​ ​<​,​ ​>​)
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​p​u​r​c​h​a​s​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​p​u​r​c​h​a​s​e​s​ ​l​i​s​t
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​u​r​c​h​a​s​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * W​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				list_purchase_orders: {
+					/**
+					 * L​i​s​t​ ​P​u​r​c​h​a​s​e​ ​O​r​d​e​r​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​m​u​l​t​i​p​l​e​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​,​ ​s​o​r​t​i​n​g​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​ ​c​a​p​a​b​i​l​i​t​i​e​s
+					 */
+					longDesc: string
+					options: {
+						fetchAll: {
+							/**
+							 * F​e​t​c​h​ ​A​l​l
+							 */
+							displayName: string
+							/**
+							 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​s​ ​w​i​t​h​o​u​t​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​f​e​t​c​h​e​s​ ​a​l​l​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​s​ ​i​g​n​o​r​i​n​g​ ​l​i​m​i​t​ ​a​n​d​ ​o​f​f​s​e​t​ ​p​a​r​a​m​e​t​e​r​s
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​ ​(​d​e​f​a​u​l​t​:​ ​5​0​)
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​s​ ​t​o​ ​s​k​i​p​ ​b​e​f​o​r​e​ ​s​t​a​r​t​i​n​g​ ​t​o​ ​r​e​t​u​r​n​ ​r​e​s​u​l​t​s​ ​(​d​e​f​a​u​l​t​:​ ​0​)
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​f​i​l​t​e​r​i​n​g​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​t​o
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​c​o​m​p​a​r​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​(​e​.​g​.​,​ ​=​,​ ​!​=​,​ ​<​,​ ​>​)
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​s​ ​l​i​s​t
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * W​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				get_refund_receipt: {
+					/**
+					 * G​e​t​ ​R​e​f​u​n​d​ ​R​e​c​e​i​p​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​ ​u​s​i​n​g​ ​i​t​s​ ​I​D
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * R​e​f​u​n​d​ ​R​e​c​e​i​p​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Q​u​i​c​k​B​o​o​k​s​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​ ​I​D​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_refund_receipts: {
+					/**
+					 * L​i​s​t​ ​R​e​f​u​n​d​ ​R​e​c​e​i​p​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​m​u​l​t​i​p​l​e​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​,​ ​s​o​r​t​i​n​g​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​ ​c​a​p​a​b​i​l​i​t​i​e​s
+					 */
+					longDesc: string
+					options: {
+						fetchAll: {
+							/**
+							 * F​e​t​c​h​ ​A​l​l
+							 */
+							displayName: string
+							/**
+							 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​s​ ​w​i​t​h​o​u​t​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​f​e​t​c​h​e​s​ ​a​l​l​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​s​ ​i​g​n​o​r​i​n​g​ ​l​i​m​i​t​ ​a​n​d​ ​o​f​f​s​e​t​ ​p​a​r​a​m​e​t​e​r​s
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​ ​(​d​e​f​a​u​l​t​:​ ​5​0​)
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​s​ ​t​o​ ​s​k​i​p​ ​b​e​f​o​r​e​ ​s​t​a​r​t​i​n​g​ ​t​o​ ​r​e​t​u​r​n​ ​r​e​s​u​l​t​s​ ​(​d​e​f​a​u​l​t​:​ ​0​)
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​f​i​l​t​e​r​i​n​g​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​t​o
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​c​o​m​p​a​r​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​(​e​.​g​.​,​ ​=​,​ ​!​=​,​ ​<​,​ ​>​)
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​s​ ​l​i​s​t
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * W​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				get_sales_receipt: {
+					/**
+					 * G​e​t​ ​S​a​l​e​s​ ​R​e​c​e​i​p​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t​ ​u​s​i​n​g​ ​i​t​s​ ​I​D
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * S​a​l​e​s​ ​R​e​c​e​i​p​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Q​u​i​c​k​B​o​o​k​s​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t​ ​I​D​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_sales_receipts: {
+					/**
+					 * L​i​s​t​ ​S​a​l​e​s​ ​R​e​c​e​i​p​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​m​u​l​t​i​p​l​e​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​,​ ​s​o​r​t​i​n​g​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​ ​c​a​p​a​b​i​l​i​t​i​e​s
+					 */
+					longDesc: string
+					options: {
+						fetchAll: {
+							/**
+							 * F​e​t​c​h​ ​A​l​l
+							 */
+							displayName: string
+							/**
+							 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t​s​ ​w​i​t​h​o​u​t​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​f​e​t​c​h​e​s​ ​a​l​l​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t​s​ ​i​g​n​o​r​i​n​g​ ​l​i​m​i​t​ ​a​n​d​ ​o​f​f​s​e​t​ ​p​a​r​a​m​e​t​e​r​s
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​ ​(​d​e​f​a​u​l​t​:​ ​5​0​)
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t​s​ ​t​o​ ​s​k​i​p​ ​b​e​f​o​r​e​ ​s​t​a​r​t​i​n​g​ ​t​o​ ​r​e​t​u​r​n​ ​r​e​s​u​l​t​s​ ​(​d​e​f​a​u​l​t​:​ ​0​)
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​f​i​l​t​e​r​i​n​g​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​t​o
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​c​o​m​p​a​r​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​(​e​.​g​.​,​ ​=​,​ ​!​=​,​ ​<​,​ ​>​)
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t​s​ ​l​i​s​t
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * W​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				create_vendor: {
+					/**
+					 * C​r​e​a​t​e​ ​V​e​n​d​o​r
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​v​e​n​d​o​r​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​v​e​n​d​o​r​ ​r​e​c​o​r​d​ ​w​i​t​h​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​d​d​r​e​s​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​b​u​s​i​n​e​s​s​ ​d​e​t​a​i​l​s
+					 */
+					longDesc: string
+					options: {
+						display_name: {
+							/**
+							 * D​i​s​p​l​a​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​v​e​n​d​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​d​i​s​p​l​a​y​e​d​ ​f​o​r​ ​t​h​i​s​ ​v​e​n​d​o​r​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+							 */
+							longDesc: string
+						}
+						phone: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​i​m​a​r​y​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​o​f​ ​t​h​e​ ​v​e​n​d​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​i​n​ ​c​o​n​t​a​c​t​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​v​e​n​d​o​r
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​v​e​n​d​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​i​m​a​r​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​c​o​n​t​a​c​t​i​n​g​ ​t​h​e​ ​v​e​n​d​o​r
+							 */
+							longDesc: string
+						}
+						website: {
+							/**
+							 * W​e​b​s​i​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​v​e​n​d​o​r​'​s​ ​w​e​b​s​i​t​e​ ​U​R​L
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​w​e​b​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​v​e​n​d​o​r​'​s​ ​w​e​b​s​i​t​e
+							 */
+							longDesc: string
+						}
+						address: {
+							/**
+							 * A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​v​e​n​d​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​a​d​d​r​e​s​s​ ​w​h​e​r​e​ ​b​i​l​l​s​ ​s​h​o​u​l​d​ ​b​e​ ​s​e​n​t​ ​f​o​r​ ​t​h​i​s​ ​v​e​n​d​o​r
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									Line1: {
+										/**
+										 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​1
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​r​s​t​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​v​e​n​d​o​r​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​o​r​ ​P​.​O​.​ ​b​o​x​ ​n​u​m​b​e​r
+										 */
+										longDesc: string
+									}
+									Line2: {
+										/**
+										 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​2
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​e​c​o​n​d​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​v​e​n​d​o​r​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * A​d​d​i​t​i​o​n​a​l​ ​a​d​d​r​e​s​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​l​i​k​e​ ​a​p​a​r​t​m​e​n​t​ ​o​r​ ​s​u​i​t​e​ ​n​u​m​b​e​r
+										 */
+										longDesc: string
+									}
+									City: {
+										/**
+										 * C​i​t​y
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​i​t​y​ ​o​f​ ​t​h​e​ ​v​e​n​d​o​r​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​i​t​y​ ​w​h​e​r​e​ ​t​h​e​ ​v​e​n​d​o​r​ ​i​s​ ​l​o​c​a​t​e​d
+										 */
+										longDesc: string
+									}
+									PostalCode: {
+										/**
+										 * P​o​s​t​a​l​ ​C​o​d​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​o​f​ ​t​h​e​ ​v​e​n​d​o​r​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​Z​I​P​ ​c​o​d​e​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​v​e​n​d​o​r​ ​a​d​d​r​e​s​s
+										 */
+										longDesc: string
+									}
+									CountrySubDivisionCode: {
+										/**
+										 * S​t​a​t​e​/​P​r​o​v​i​n​c​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​ ​c​o​d​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​ ​a​b​b​r​e​v​i​a​t​i​o​n​ ​(​e​.​g​.​,​ ​C​A​,​ ​N​Y​,​ ​O​N​)
+										 */
+										longDesc: string
+									}
+									Country: {
+										/**
+										 * C​o​u​n​t​r​y
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​u​n​t​r​y​ ​o​f​ ​t​h​e​ ​v​e​n​d​o​r​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​o​u​n​t​r​y​ ​w​h​e​r​e​ ​t​h​e​ ​v​e​n​d​o​r​ ​i​s​ ​l​o​c​a​t​e​d
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				get_vendor: {
+					/**
+					 * G​e​t​ ​V​e​n​d​o​r
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​e​n​d​o​r​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​e​n​d​o​r​ ​u​s​i​n​g​ ​t​h​e​i​r​ ​I​D
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * V​e​n​d​o​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​v​e​n​d​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Q​u​i​c​k​B​o​o​k​s​ ​v​e​n​d​o​r​ ​I​D​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_vendors: {
+					/**
+					 * L​i​s​t​ ​V​e​n​d​o​r​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​v​e​n​d​o​r​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​m​u​l​t​i​p​l​e​ ​v​e​n​d​o​r​s​ ​f​r​o​m​ ​Q​u​i​c​k​B​o​o​k​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​,​ ​s​o​r​t​i​n​g​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​ ​c​a​p​a​b​i​l​i​t​i​e​s
+					 */
+					longDesc: string
+					options: {
+						fetchAll: {
+							/**
+							 * F​e​t​c​h​ ​A​l​l
+							 */
+							displayName: string
+							/**
+							 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​v​e​n​d​o​r​s​ ​w​i​t​h​o​u​t​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​f​e​t​c​h​e​s​ ​a​l​l​ ​v​e​n​d​o​r​s​ ​i​g​n​o​r​i​n​g​ ​l​i​m​i​t​ ​a​n​d​ ​o​f​f​s​e​t​ ​p​a​r​a​m​e​t​e​r​s
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​v​e​n​d​o​r​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​v​e​n​d​o​r​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​ ​(​d​e​f​a​u​l​t​:​ ​5​0​)
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​v​e​n​d​o​r​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​v​e​n​d​o​r​s​ ​t​o​ ​s​k​i​p​ ​b​e​f​o​r​e​ ​s​t​a​r​t​i​n​g​ ​t​o​ ​r​e​t​u​r​n​ ​r​e​s​u​l​t​s​ ​(​d​e​f​a​u​l​t​:​ ​0​)
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​v​e​n​d​o​r​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​f​i​l​t​e​r​i​n​g​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​v​e​n​d​o​r​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​e​n​d​o​r​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​t​o
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​c​o​m​p​a​r​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​(​e​.​g​.​,​ ​=​,​ ​!​=​,​ ​<​,​ ​>​)
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​v​e​n​d​o​r​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​v​e​n​d​o​r​s​ ​l​i​s​t
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​e​n​d​o​r​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * W​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				update_vendor: {
+					/**
+					 * U​p​d​a​t​e​ ​V​e​n​d​o​r
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​v​e​n​d​o​r​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * M​o​d​i​f​y​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​v​e​n​d​o​r​ ​r​e​c​o​r​d​ ​w​i​t​h​ ​u​p​d​a​t​e​d​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​d​d​r​e​s​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​b​u​s​i​n​e​s​s​ ​d​e​t​a​i​l​s
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * V​e​n​d​o​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​v​e​n​d​o​r​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Q​u​i​c​k​B​o​o​k​s​ ​v​e​n​d​o​r​ ​I​D​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							longDesc: string
+						}
+						display_name: {
+							/**
+							 * D​i​s​p​l​a​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​v​e​n​d​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​d​i​s​p​l​a​y​e​d​ ​f​o​r​ ​t​h​i​s​ ​v​e​n​d​o​r​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+							 */
+							longDesc: string
+						}
+						phone: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​i​m​a​r​y​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​o​f​ ​t​h​e​ ​v​e​n​d​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​i​n​ ​c​o​n​t​a​c​t​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​v​e​n​d​o​r
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​v​e​n​d​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​i​m​a​r​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​c​o​n​t​a​c​t​i​n​g​ ​t​h​e​ ​v​e​n​d​o​r
+							 */
+							longDesc: string
+						}
+						website: {
+							/**
+							 * W​e​b​s​i​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​v​e​n​d​o​r​'​s​ ​w​e​b​s​i​t​e​ ​U​R​L
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​w​e​b​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​v​e​n​d​o​r​'​s​ ​w​e​b​s​i​t​e
+							 */
+							longDesc: string
+						}
+						address: {
+							/**
+							 * A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​b​i​l​l​i​n​g​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​v​e​n​d​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​a​d​d​r​e​s​s​ ​w​h​e​r​e​ ​b​i​l​l​s​ ​s​h​o​u​l​d​ ​b​e​ ​s​e​n​t​ ​f​o​r​ ​t​h​i​s​ ​v​e​n​d​o​r
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									Line1: {
+										/**
+										 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​1
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​r​s​t​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​v​e​n​d​o​r​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​o​r​ ​P​.​O​.​ ​b​o​x​ ​n​u​m​b​e​r
+										 */
+										longDesc: string
+									}
+									Line2: {
+										/**
+										 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​2
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​e​c​o​n​d​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​v​e​n​d​o​r​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * A​d​d​i​t​i​o​n​a​l​ ​a​d​d​r​e​s​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​l​i​k​e​ ​a​p​a​r​t​m​e​n​t​ ​o​r​ ​s​u​i​t​e​ ​n​u​m​b​e​r
+										 */
+										longDesc: string
+									}
+									City: {
+										/**
+										 * C​i​t​y
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​i​t​y​ ​o​f​ ​t​h​e​ ​v​e​n​d​o​r​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​i​t​y​ ​w​h​e​r​e​ ​t​h​e​ ​v​e​n​d​o​r​ ​i​s​ ​l​o​c​a​t​e​d
+										 */
+										longDesc: string
+									}
+									PostalCode: {
+										/**
+										 * P​o​s​t​a​l​ ​C​o​d​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​o​f​ ​t​h​e​ ​v​e​n​d​o​r​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​Z​I​P​ ​c​o​d​e​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​v​e​n​d​o​r​ ​a​d​d​r​e​s​s
+										 */
+										longDesc: string
+									}
+									CountrySubDivisionCode: {
+										/**
+										 * S​t​a​t​e​/​P​r​o​v​i​n​c​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​ ​c​o​d​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​ ​a​b​b​r​e​v​i​a​t​i​o​n​ ​(​e​.​g​.​,​ ​C​A​,​ ​N​Y​,​ ​O​N​)
+										 */
+										longDesc: string
+									}
+									Country: {
+										/**
+										 * C​o​u​n​t​r​y
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​u​n​t​r​y​ ​o​f​ ​t​h​e​ ​v​e​n​d​o​r​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​o​u​n​t​r​y​ ​w​h​e​r​e​ ​t​h​e​ ​v​e​n​d​o​r​ ​i​s​ ​l​o​c​a​t​e​d
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			triggers: {
+				bill_trigger: {
+					/**
+					 * B​i​l​l​ ​T​r​i​g​g​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​b​i​l​l​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​ ​Q​u​i​c​k​B​o​o​k​s​ ​f​o​r​ ​n​e​w​ ​b​i​l​l​s​ ​o​r​ ​u​p​d​a​t​e​s​ ​t​o​ ​e​x​i​s​t​i​n​g​ ​b​i​l​l​s​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​r​e​s​p​o​n​d​ ​t​o​ ​b​i​l​l​ ​e​v​e​n​t​s​ ​i​n​ ​r​e​a​l​-​t​i​m​e​.
+					 */
+					longDesc: string
+					options: {
+						action: {
+							/**
+							 * T​r​i​g​g​e​r​ ​A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​b​i​l​l​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​"​C​r​e​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​n​e​w​ ​b​i​l​l​s​ ​a​r​e​ ​a​d​d​e​d​ ​t​o​ ​Q​u​i​c​k​B​o​o​k​s​,​ ​o​r​ ​"​U​p​d​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​b​i​l​l​s​ ​a​r​e​ ​m​o​d​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				credit_memo_trigger: {
+					/**
+					 * C​r​e​d​i​t​ ​M​e​m​o​ ​T​r​i​g​g​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​c​r​e​d​i​t​ ​m​e​m​o​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​ ​Q​u​i​c​k​B​o​o​k​s​ ​f​o​r​ ​n​e​w​ ​c​r​e​d​i​t​ ​m​e​m​o​s​ ​o​r​ ​u​p​d​a​t​e​s​ ​t​o​ ​e​x​i​s​t​i​n​g​ ​c​r​e​d​i​t​ ​m​e​m​o​s​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​r​e​s​p​o​n​d​ ​t​o​ ​c​r​e​d​i​t​ ​m​e​m​o​ ​e​v​e​n​t​s​ ​i​n​ ​r​e​a​l​-​t​i​m​e​.
+					 */
+					longDesc: string
+					options: {
+						action: {
+							/**
+							 * T​r​i​g​g​e​r​ ​A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​c​r​e​d​i​t​ ​m​e​m​o​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​"​C​r​e​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​n​e​w​ ​c​r​e​d​i​t​ ​m​e​m​o​s​ ​a​r​e​ ​a​d​d​e​d​ ​t​o​ ​Q​u​i​c​k​B​o​o​k​s​,​ ​o​r​ ​"​U​p​d​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​c​r​e​d​i​t​ ​m​e​m​o​s​ ​a​r​e​ ​m​o​d​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				customer_trigger: {
+					/**
+					 * C​u​s​t​o​m​e​r​ ​T​r​i​g​g​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​c​u​s​t​o​m​e​r​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​ ​Q​u​i​c​k​B​o​o​k​s​ ​f​o​r​ ​n​e​w​ ​c​u​s​t​o​m​e​r​s​ ​o​r​ ​u​p​d​a​t​e​s​ ​t​o​ ​e​x​i​s​t​i​n​g​ ​c​u​s​t​o​m​e​r​s​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​r​e​s​p​o​n​d​ ​t​o​ ​c​u​s​t​o​m​e​r​ ​e​v​e​n​t​s​ ​i​n​ ​r​e​a​l​-​t​i​m​e​.
+					 */
+					longDesc: string
+					options: {
+						action: {
+							/**
+							 * T​r​i​g​g​e​r​ ​A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​c​u​s​t​o​m​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​"​C​r​e​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​n​e​w​ ​c​u​s​t​o​m​e​r​s​ ​a​r​e​ ​a​d​d​e​d​ ​t​o​ ​Q​u​i​c​k​B​o​o​k​s​,​ ​o​r​ ​"​U​p​d​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​c​u​s​t​o​m​e​r​s​ ​a​r​e​ ​m​o​d​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				deposit_trigger: {
+					/**
+					 * D​e​p​o​s​i​t​ ​T​r​i​g​g​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​d​e​p​o​s​i​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​ ​Q​u​i​c​k​B​o​o​k​s​ ​f​o​r​ ​n​e​w​ ​d​e​p​o​s​i​t​s​ ​o​r​ ​u​p​d​a​t​e​s​ ​t​o​ ​e​x​i​s​t​i​n​g​ ​d​e​p​o​s​i​t​s​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​r​e​s​p​o​n​d​ ​t​o​ ​d​e​p​o​s​i​t​ ​e​v​e​n​t​s​ ​i​n​ ​r​e​a​l​-​t​i​m​e​.
+					 */
+					longDesc: string
+					options: {
+						action: {
+							/**
+							 * T​r​i​g​g​e​r​ ​A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​d​e​p​o​s​i​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​"​C​r​e​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​n​e​w​ ​d​e​p​o​s​i​t​s​ ​a​r​e​ ​a​d​d​e​d​ ​t​o​ ​Q​u​i​c​k​B​o​o​k​s​,​ ​o​r​ ​"​U​p​d​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​d​e​p​o​s​i​t​s​ ​a​r​e​ ​m​o​d​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				estimate_trigger: {
+					/**
+					 * E​s​t​i​m​a​t​e​ ​T​r​i​g​g​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​e​s​t​i​m​a​t​e​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​ ​Q​u​i​c​k​B​o​o​k​s​ ​f​o​r​ ​n​e​w​ ​e​s​t​i​m​a​t​e​s​ ​o​r​ ​u​p​d​a​t​e​s​ ​t​o​ ​e​x​i​s​t​i​n​g​ ​e​s​t​i​m​a​t​e​s​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​r​e​s​p​o​n​d​ ​t​o​ ​e​s​t​i​m​a​t​e​ ​e​v​e​n​t​s​ ​i​n​ ​r​e​a​l​-​t​i​m​e​.
+					 */
+					longDesc: string
+					options: {
+						action: {
+							/**
+							 * T​r​i​g​g​e​r​ ​A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​e​s​t​i​m​a​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​"​C​r​e​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​n​e​w​ ​e​s​t​i​m​a​t​e​s​ ​a​r​e​ ​a​d​d​e​d​ ​t​o​ ​Q​u​i​c​k​B​o​o​k​s​,​ ​o​r​ ​"​U​p​d​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​e​s​t​i​m​a​t​e​s​ ​a​r​e​ ​m​o​d​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				invoice_trigger: {
+					/**
+					 * I​n​v​o​i​c​e​ ​T​r​i​g​g​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​i​n​v​o​i​c​e​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​ ​Q​u​i​c​k​B​o​o​k​s​ ​f​o​r​ ​n​e​w​ ​i​n​v​o​i​c​e​s​ ​o​r​ ​u​p​d​a​t​e​s​ ​t​o​ ​e​x​i​s​t​i​n​g​ ​i​n​v​o​i​c​e​s​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​r​e​s​p​o​n​d​ ​t​o​ ​i​n​v​o​i​c​e​ ​e​v​e​n​t​s​ ​i​n​ ​r​e​a​l​-​t​i​m​e​.
+					 */
+					longDesc: string
+					options: {
+						action: {
+							/**
+							 * T​r​i​g​g​e​r​ ​A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​v​o​i​c​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​"​C​r​e​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​n​e​w​ ​i​n​v​o​i​c​e​s​ ​a​r​e​ ​a​d​d​e​d​ ​t​o​ ​Q​u​i​c​k​B​o​o​k​s​,​ ​o​r​ ​"​U​p​d​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​i​n​v​o​i​c​e​s​ ​a​r​e​ ​m​o​d​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				item_trigger: {
+					/**
+					 * I​t​e​m​ ​T​r​i​g​g​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​i​t​e​m​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​ ​Q​u​i​c​k​B​o​o​k​s​ ​f​o​r​ ​n​e​w​ ​i​t​e​m​s​ ​o​r​ ​u​p​d​a​t​e​s​ ​t​o​ ​e​x​i​s​t​i​n​g​ ​i​t​e​m​s​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​r​e​s​p​o​n​d​ ​t​o​ ​i​t​e​m​ ​e​v​e​n​t​s​ ​i​n​ ​r​e​a​l​-​t​i​m​e​.
+					 */
+					longDesc: string
+					options: {
+						action: {
+							/**
+							 * T​r​i​g​g​e​r​ ​A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​t​e​m​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​"​C​r​e​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​n​e​w​ ​i​t​e​m​s​ ​a​r​e​ ​a​d​d​e​d​ ​t​o​ ​Q​u​i​c​k​B​o​o​k​s​,​ ​o​r​ ​"​U​p​d​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​i​t​e​m​s​ ​a​r​e​ ​m​o​d​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				journal_entry_trigger: {
+					/**
+					 * J​o​u​r​n​a​l​ ​E​n​t​r​y​ ​T​r​i​g​g​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​j​o​u​r​n​a​l​ ​e​n​t​r​y​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​ ​Q​u​i​c​k​B​o​o​k​s​ ​f​o​r​ ​n​e​w​ ​j​o​u​r​n​a​l​ ​e​n​t​r​i​e​s​ ​o​r​ ​u​p​d​a​t​e​s​ ​t​o​ ​e​x​i​s​t​i​n​g​ ​j​o​u​r​n​a​l​ ​e​n​t​r​i​e​s​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​r​e​s​p​o​n​d​ ​t​o​ ​j​o​u​r​n​a​l​ ​e​n​t​r​y​ ​e​v​e​n​t​s​ ​i​n​ ​r​e​a​l​-​t​i​m​e​.
+					 */
+					longDesc: string
+					options: {
+						action: {
+							/**
+							 * T​r​i​g​g​e​r​ ​A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​j​o​u​r​n​a​l​ ​e​n​t​r​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​"​C​r​e​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​n​e​w​ ​j​o​u​r​n​a​l​ ​e​n​t​r​i​e​s​ ​a​r​e​ ​a​d​d​e​d​ ​t​o​ ​Q​u​i​c​k​B​o​o​k​s​,​ ​o​r​ ​"​U​p​d​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​j​o​u​r​n​a​l​ ​e​n​t​r​i​e​s​ ​a​r​e​ ​m​o​d​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				payment_trigger: {
+					/**
+					 * P​a​y​m​e​n​t​ ​T​r​i​g​g​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​p​a​y​m​e​n​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​ ​Q​u​i​c​k​B​o​o​k​s​ ​f​o​r​ ​n​e​w​ ​p​a​y​m​e​n​t​s​ ​o​r​ ​u​p​d​a​t​e​s​ ​t​o​ ​e​x​i​s​t​i​n​g​ ​p​a​y​m​e​n​t​s​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​r​e​s​p​o​n​d​ ​t​o​ ​p​a​y​m​e​n​t​ ​e​v​e​n​t​s​ ​i​n​ ​r​e​a​l​-​t​i​m​e​.
+					 */
+					longDesc: string
+					options: {
+						action: {
+							/**
+							 * T​r​i​g​g​e​r​ ​A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​p​a​y​m​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​"​C​r​e​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​n​e​w​ ​p​a​y​m​e​n​t​s​ ​a​r​e​ ​a​d​d​e​d​ ​t​o​ ​Q​u​i​c​k​B​o​o​k​s​,​ ​o​r​ ​"​U​p​d​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​p​a​y​m​e​n​t​s​ ​a​r​e​ ​m​o​d​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				purchase_order_trigger: {
+					/**
+					 * P​u​r​c​h​a​s​e​ ​O​r​d​e​r​ ​T​r​i​g​g​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​ ​Q​u​i​c​k​B​o​o​k​s​ ​f​o​r​ ​n​e​w​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​s​ ​o​r​ ​u​p​d​a​t​e​s​ ​t​o​ ​e​x​i​s​t​i​n​g​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​s​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​r​e​s​p​o​n​d​ ​t​o​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​ ​e​v​e​n​t​s​ ​i​n​ ​r​e​a​l​-​t​i​m​e​.
+					 */
+					longDesc: string
+					options: {
+						action: {
+							/**
+							 * T​r​i​g​g​e​r​ ​A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​"​C​r​e​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​n​e​w​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​s​ ​a​r​e​ ​a​d​d​e​d​ ​t​o​ ​Q​u​i​c​k​B​o​o​k​s​,​ ​o​r​ ​"​U​p​d​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​s​ ​a​r​e​ ​m​o​d​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				purchase_trigger: {
+					/**
+					 * P​u​r​c​h​a​s​e​ ​T​r​i​g​g​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​p​u​r​c​h​a​s​e​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​ ​Q​u​i​c​k​B​o​o​k​s​ ​f​o​r​ ​n​e​w​ ​p​u​r​c​h​a​s​e​s​ ​o​r​ ​u​p​d​a​t​e​s​ ​t​o​ ​e​x​i​s​t​i​n​g​ ​p​u​r​c​h​a​s​e​s​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​r​e​s​p​o​n​d​ ​t​o​ ​p​u​r​c​h​a​s​e​ ​e​v​e​n​t​s​ ​i​n​ ​r​e​a​l​-​t​i​m​e​.
+					 */
+					longDesc: string
+					options: {
+						action: {
+							/**
+							 * T​r​i​g​g​e​r​ ​A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​p​u​r​c​h​a​s​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​"​C​r​e​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​n​e​w​ ​p​u​r​c​h​a​s​e​s​ ​a​r​e​ ​a​d​d​e​d​ ​t​o​ ​Q​u​i​c​k​B​o​o​k​s​,​ ​o​r​ ​"​U​p​d​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​p​u​r​c​h​a​s​e​s​ ​a​r​e​ ​m​o​d​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				refund_receipt_trigger: {
+					/**
+					 * R​e​f​u​n​d​ ​R​e​c​e​i​p​t​ ​T​r​i​g​g​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​ ​Q​u​i​c​k​B​o​o​k​s​ ​f​o​r​ ​n​e​w​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​s​ ​o​r​ ​u​p​d​a​t​e​s​ ​t​o​ ​e​x​i​s​t​i​n​g​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​s​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​r​e​s​p​o​n​d​ ​t​o​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​ ​e​v​e​n​t​s​ ​i​n​ ​r​e​a​l​-​t​i​m​e​.
+					 */
+					longDesc: string
+					options: {
+						action: {
+							/**
+							 * T​r​i​g​g​e​r​ ​A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​"​C​r​e​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​n​e​w​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​s​ ​a​r​e​ ​a​d​d​e​d​ ​t​o​ ​Q​u​i​c​k​B​o​o​k​s​,​ ​o​r​ ​"​U​p​d​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​s​ ​a​r​e​ ​m​o​d​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				sales_receipt_trigger: {
+					/**
+					 * S​a​l​e​s​ ​R​e​c​e​i​p​t​ ​T​r​i​g​g​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​ ​Q​u​i​c​k​B​o​o​k​s​ ​f​o​r​ ​n​e​w​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t​s​ ​o​r​ ​u​p​d​a​t​e​s​ ​t​o​ ​e​x​i​s​t​i​n​g​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t​s​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​r​e​s​p​o​n​d​ ​t​o​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t​ ​e​v​e​n​t​s​ ​i​n​ ​r​e​a​l​-​t​i​m​e​.
+					 */
+					longDesc: string
+					options: {
+						action: {
+							/**
+							 * T​r​i​g​g​e​r​ ​A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​"​C​r​e​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​n​e​w​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t​s​ ​a​r​e​ ​a​d​d​e​d​ ​t​o​ ​Q​u​i​c​k​B​o​o​k​s​,​ ​o​r​ ​"​U​p​d​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t​s​ ​a​r​e​ ​m​o​d​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				vendor_trigger: {
+					/**
+					 * V​e​n​d​o​r​ ​T​r​i​g​g​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​v​e​n​d​o​r​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​ ​Q​u​i​c​k​B​o​o​k​s​ ​f​o​r​ ​n​e​w​ ​v​e​n​d​o​r​s​ ​o​r​ ​u​p​d​a​t​e​s​ ​t​o​ ​e​x​i​s​t​i​n​g​ ​v​e​n​d​o​r​s​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​r​e​s​p​o​n​d​ ​t​o​ ​v​e​n​d​o​r​ ​e​v​e​n​t​s​ ​i​n​ ​r​e​a​l​-​t​i​m​e​.
+					 */
+					longDesc: string
+					options: {
+						action: {
+							/**
+							 * T​r​i​g​g​e​r​ ​A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​c​r​e​a​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​v​e​n​d​o​r​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​"​C​r​e​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​n​e​w​ ​v​e​n​d​o​r​s​ ​a​r​e​ ​a​d​d​e​d​ ​t​o​ ​Q​u​i​c​k​B​o​o​k​s​,​ ​o​r​ ​"​U​p​d​a​t​e​d​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​e​x​i​s​t​i​n​g​ ​v​e​n​d​o​r​s​ ​a​r​e​ ​m​o​d​i​f​i​e​d​.
+							 */
+							longDesc: string
 						}
 					}
 				}
@@ -26044,6 +33206,2068 @@ type RootTranslation = {
 				}
 			}
 		}
+		Klaviyo: {
+			/**
+			 * K​l​a​v​i​y​o
+			 */
+			displayName: string
+			/**
+			 * E​m​a​i​l​ ​a​n​d​ ​S​M​S​ ​m​a​r​k​e​t​i​n​g​ ​a​u​t​o​m​a​t​i​o​n​ ​p​l​a​t​f​o​r​m
+			 */
+			shortDesc: string
+			/**
+			 * K​l​a​v​i​y​o​ ​i​s​ ​a​ ​u​n​i​f​i​e​d​ ​c​u​s​t​o​m​e​r​ ​p​l​a​t​f​o​r​m​ ​t​h​a​t​ ​g​i​v​e​s​ ​o​n​l​i​n​e​ ​b​r​a​n​d​s​ ​d​i​r​e​c​t​ ​o​w​n​e​r​s​h​i​p​ ​o​f​ ​t​h​e​i​r​ ​c​o​n​s​u​m​e​r​ ​d​a​t​a​ ​a​n​d​ ​i​n​t​e​r​a​c​t​i​o​n​s​,​ ​e​m​p​o​w​e​r​i​n​g​ ​t​h​e​m​ ​t​o​ ​t​u​r​n​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​w​i​t​h​ ​c​u​s​t​o​m​e​r​s​ ​i​n​t​o​ ​p​r​o​d​u​c​t​i​v​e​ ​l​o​n​g​-​t​e​r​m​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​.
+			 */
+			longDesc: string
+			actions: {
+				get_profile: {
+					/**
+					 * G​e​t​ ​P​r​o​f​i​l​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​r​o​f​i​l​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​r​o​f​i​l​e​ ​b​y​ ​i​t​s​ ​I​D
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * P​r​o​f​i​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+						additionalFields: {
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​p​r​o​f​i​l​e​ ​f​i​e​l​d​s​ ​t​o​ ​i​n​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​a​d​d​i​t​i​o​n​a​l​ ​f​i​e​l​d​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​r​e​s​p​o​n​s​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_campaigns: {
+					/**
+					 * L​i​s​t​ ​C​a​m​p​a​i​g​n​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​s​ ​c​a​m​p​a​i​g​n​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​c​a​m​p​a​i​g​n​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g
+					 */
+					longDesc: string
+					options: {
+						cursor: {
+							/**
+							 * C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r
+							 */
+							shortDesc: string
+							/**
+							 * C​u​r​s​o​r​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​t​o​ ​g​e​t​ ​t​h​e​ ​n​e​x​t​ ​s​e​t​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						pageSize: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​i​t​e​m​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​c​a​m​p​a​i​g​n​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e
+							 */
+							longDesc: string
+						}
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * C​a​m​p​a​i​g​n​ ​c​h​a​n​n​e​l​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​h​a​n​n​e​l​ ​t​y​p​e​ ​t​o​ ​f​i​l​t​e​r​ ​c​a​m​p​a​i​g​n​s​ ​b​y​ ​(​e​m​a​i​l​ ​o​r​ ​S​M​S​)
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * C​a​m​p​a​i​g​n​ ​n​a​m​e​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​a​m​p​a​i​g​n​s​ ​b​y​ ​n​a​m​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​i​s​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​o​p​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * S​o​r​t​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​l​i​s​t
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​l​i​s​t
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​l​i​s​t​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				list_lists: {
+					/**
+					 * L​i​s​t​ ​L​i​s​t​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​s​ ​a​l​l​ ​l​i​s​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​l​i​s​t​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g
+					 */
+					longDesc: string
+					options: {
+						cursor: {
+							/**
+							 * C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r
+							 */
+							shortDesc: string
+							/**
+							 * C​u​r​s​o​r​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​t​o​ ​g​e​t​ ​t​h​e​ ​n​e​x​t​ ​s​e​t​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​l​i​s​t​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									name: {
+										/**
+										 * N​a​m​e​ ​F​i​l​t​e​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​b​y​ ​l​i​s​t​ ​n​a​m​e​s
+										 */
+										shortDesc: string
+										/**
+										 * F​i​l​t​e​r​ ​l​i​s​t​s​ ​b​y​ ​n​a​m​e​s​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​s​e​ ​v​a​l​u​e​s
+										 */
+										longDesc: string
+									}
+									id: {
+										/**
+										 * I​D​ ​F​i​l​t​e​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​b​y​ ​l​i​s​t​ ​I​D​s
+										 */
+										shortDesc: string
+										/**
+										 * F​i​l​t​e​r​ ​l​i​s​t​s​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​I​D​s
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​o​p​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * S​o​r​t​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​l​i​s​t​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​l​i​s​t​ ​r​e​s​u​l​t​s
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​l​i​s​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				list_profiles: {
+					/**
+					 * L​i​s​t​ ​P​r​o​f​i​l​e​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​s​ ​p​r​o​f​i​l​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​p​r​o​f​i​l​e​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g
+					 */
+					longDesc: string
+					options: {
+						additionalFields: {
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​p​r​o​f​i​l​e​ ​f​i​e​l​d​s​ ​t​o​ ​i​n​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​a​d​d​i​t​i​o​n​a​l​ ​f​i​e​l​d​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​r​e​s​p​o​n​s​e​s
+							 */
+							longDesc: string
+						}
+						cursor: {
+							/**
+							 * C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r
+							 */
+							shortDesc: string
+							/**
+							 * C​u​r​s​o​r​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​t​o​ ​g​e​t​ ​t​h​e​ ​n​e​x​t​ ​s​e​t​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						pageSize: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​i​t​e​m​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​p​r​o​f​i​l​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									email: {
+										/**
+										 * E​m​a​i​l​ ​F​i​l​t​e​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​b​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s
+										 */
+										shortDesc: string
+										/**
+										 * F​i​l​t​e​r​ ​p​r​o​f​i​l​e​s​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s
+										 */
+										longDesc: string
+									}
+									phone_number: {
+										/**
+										 * P​h​o​n​e​ ​N​u​m​b​e​r​ ​F​i​l​t​e​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​b​y​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s
+										 */
+										shortDesc: string
+										/**
+										 * F​i​l​t​e​r​ ​p​r​o​f​i​l​e​s​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s
+										 */
+										longDesc: string
+									}
+									external_id: {
+										/**
+										 * E​x​t​e​r​n​a​l​ ​I​D​ ​F​i​l​t​e​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​b​y​ ​e​x​t​e​r​n​a​l​ ​I​D​s
+										 */
+										shortDesc: string
+										/**
+										 * F​i​l​t​e​r​ ​p​r​o​f​i​l​e​s​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​e​x​t​e​r​n​a​l​ ​I​D​s
+										 */
+										longDesc: string
+									}
+									id: {
+										/**
+										 * I​D​ ​F​i​l​t​e​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​b​y​ ​p​r​o​f​i​l​e​ ​I​D​s
+										 */
+										shortDesc: string
+										/**
+										 * F​i​l​t​e​r​ ​p​r​o​f​i​l​e​s​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​p​r​o​f​i​l​e​ ​I​D​s
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​o​p​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * S​o​r​t​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​r​e​s​u​l​t​s
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				list_segments: {
+					/**
+					 * L​i​s​t​ ​S​e​g​m​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​s​ ​s​e​g​m​e​n​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​s​e​g​m​e​n​t​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g
+					 */
+					longDesc: string
+					options: {
+						cursor: {
+							/**
+							 * C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r
+							 */
+							shortDesc: string
+							/**
+							 * C​u​r​s​o​r​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​t​o​ ​g​e​t​ ​t​h​e​ ​n​e​x​t​ ​s​e​t​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​s​e​g​m​e​n​t​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									name: {
+										/**
+										 * N​a​m​e​ ​F​i​l​t​e​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​b​y​ ​s​e​g​m​e​n​t​ ​n​a​m​e​s
+										 */
+										shortDesc: string
+										/**
+										 * F​i​l​t​e​r​ ​s​e​g​m​e​n​t​s​ ​b​y​ ​n​a​m​e​s​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​s​e​ ​v​a​l​u​e​s
+										 */
+										longDesc: string
+									}
+									id: {
+										/**
+										 * I​D​ ​F​i​l​t​e​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​b​y​ ​s​e​g​m​e​n​t​ ​I​D​s
+										 */
+										shortDesc: string
+										/**
+										 * F​i​l​t​e​r​ ​s​e​g​m​e​n​t​s​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​I​D​s
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​o​p​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * S​o​r​t​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​s​e​g​m​e​n​t​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​s​e​g​m​e​n​t​ ​r​e​s​u​l​t​s
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​s​e​g​m​e​n​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				list_tags: {
+					/**
+					 * L​i​s​t​ ​T​a​g​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​s​ ​t​a​g​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​t​a​g​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g
+					 */
+					longDesc: string
+					options: {
+						cursor: {
+							/**
+							 * C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r
+							 */
+							shortDesc: string
+							/**
+							 * C​u​r​s​o​r​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​t​o​ ​g​e​t​ ​t​h​e​ ​n​e​x​t​ ​s​e​t​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​t​a​g​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									name: {
+										/**
+										 * N​a​m​e​ ​F​i​l​t​e​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​b​y​ ​t​a​g​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * F​i​l​t​e​r​ ​t​a​g​s​ ​b​y​ ​n​a​m​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​i​s​ ​v​a​l​u​e
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​o​p​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * S​o​r​t​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​t​a​g​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​t​a​g​ ​r​e​s​u​l​t​s
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​t​a​g​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				remove_profile_from_list: {
+					/**
+					 * R​e​m​o​v​e​ ​P​r​o​f​i​l​e​ ​f​r​o​m​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​ ​p​r​o​f​i​l​e​ ​f​r​o​m​ ​a​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​p​r​o​f​i​l​e​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​l​i​s​t​ ​i​n​ ​K​l​a​v​i​y​o
+					 */
+					longDesc: string
+					options: {
+						profile: {
+							/**
+							 * P​r​o​f​i​l​e
+							 */
+							displayName: string
+							/**
+							 * P​r​o​f​i​l​e​ ​t​o​ ​r​e​m​o​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​o​f​i​l​e​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​i​s​t​ ​t​o​ ​r​e​m​o​v​e​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+					}
+				}
+				remove_tag_from_list: {
+					/**
+					 * R​e​m​o​v​e​ ​T​a​g​ ​f​r​o​m​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​ ​t​a​g​ ​f​r​o​m​ ​a​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​t​a​g​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​l​i​s​t​ ​i​n​ ​K​l​a​v​i​y​o
+					 */
+					longDesc: string
+					options: {
+						tag: {
+							/**
+							 * T​a​g
+							 */
+							displayName: string
+							/**
+							 * T​a​g​ ​t​o​ ​r​e​m​o​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​a​g​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​i​s​t​ ​t​o​ ​r​e​m​o​v​e​ ​t​h​e​ ​t​a​g​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+					}
+				}
+				remove_tag_from_segment: {
+					/**
+					 * R​e​m​o​v​e​ ​T​a​g​ ​f​r​o​m​ ​S​e​g​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​ ​t​a​g​ ​f​r​o​m​ ​a​ ​s​e​g​m​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​t​a​g​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​s​e​g​m​e​n​t​ ​i​n​ ​K​l​a​v​i​y​o
+					 */
+					longDesc: string
+					options: {
+						tag: {
+							/**
+							 * T​a​g
+							 */
+							displayName: string
+							/**
+							 * T​a​g​ ​t​o​ ​r​e​m​o​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​a​g​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​s​e​g​m​e​n​t
+							 */
+							longDesc: string
+						}
+						segment: {
+							/**
+							 * S​e​g​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​s​e​g​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​e​g​m​e​n​t​ ​t​o​ ​r​e​m​o​v​e​ ​t​h​e​ ​t​a​g​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+					}
+				}
+				send_campaign: {
+					/**
+					 * S​e​n​d​ ​C​a​m​p​a​i​g​n
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​s​ ​a​ ​c​a​m​p​a​i​g​n
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​s​ ​a​ ​d​r​a​f​t​ ​c​a​m​p​a​i​g​n​ ​i​m​m​e​d​i​a​t​e​l​y​ ​t​o​ ​i​t​s​ ​t​a​r​g​e​t​ ​a​u​d​i​e​n​c​e
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * C​a​m​p​a​i​g​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​s​e​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​s​e​n​d
+							 */
+							longDesc: string
+						}
+					}
+				}
+				subscribe_profile: {
+					/**
+					 * S​u​b​s​c​r​i​b​e​ ​P​r​o​f​i​l​e
+					 */
+					displayName: string
+					/**
+					 * S​u​b​s​c​r​i​b​e​s​ ​a​ ​p​r​o​f​i​l​e​ ​t​o​ ​m​a​r​k​e​t​i​n​g​ ​c​h​a​n​n​e​l​s
+					 */
+					shortDesc: string
+					/**
+					 * S​u​b​s​c​r​i​b​e​s​ ​a​ ​p​r​o​f​i​l​e​ ​t​o​ ​e​m​a​i​l​ ​m​a​r​k​e​t​i​n​g​,​ ​S​M​S​ ​m​a​r​k​e​t​i​n​g​,​ ​o​r​ ​b​o​t​h​ ​c​h​a​n​n​e​l​s
+					 */
+					longDesc: string
+					options: {
+						profileId: {
+							/**
+							 * P​r​o​f​i​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​t​o​ ​s​u​b​s​c​r​i​b​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​t​o​ ​s​u​b​s​c​r​i​b​e
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​t​o​ ​s​u​b​s​c​r​i​b​e
+							 */
+							longDesc: string
+						}
+						phoneNumber: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * P​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​t​o​ ​s​u​b​s​c​r​i​b​e
+							 */
+							longDesc: string
+						}
+						consentToSubscribeToChannel: {
+							/**
+							 * S​u​b​s​c​r​i​p​t​i​o​n​ ​C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * C​h​a​n​n​e​l​ ​t​o​ ​s​u​b​s​c​r​i​b​e​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​r​k​e​t​i​n​g​ ​c​h​a​n​n​e​l​(​s​)​ ​t​o​ ​s​u​b​s​c​r​i​b​e​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​t​o
+							 */
+							longDesc: string
+						}
+						smsSubscriptionType: {
+							/**
+							 * S​M​S​ ​S​u​b​s​c​r​i​p​t​i​o​n​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​S​M​S​ ​s​u​b​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​S​M​S​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​(​m​a​r​k​e​t​i​n​g​,​ ​t​r​a​n​s​a​c​t​i​o​n​a​l​,​ ​o​r​ ​b​o​t​h​)
+							 */
+							longDesc: string
+						}
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​l​i​s​t​ ​t​o​ ​a​d​d​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​t​o​ ​d​u​r​i​n​g​ ​s​u​b​s​c​r​i​p​t​i​o​n
+							 */
+							longDesc: string
+						}
+					}
+				}
+				unsubscribe_profile: {
+					/**
+					 * U​n​s​u​b​s​c​r​i​b​e​ ​P​r​o​f​i​l​e
+					 */
+					displayName: string
+					/**
+					 * U​n​s​u​b​s​c​r​i​b​e​s​ ​a​ ​p​r​o​f​i​l​e​ ​f​r​o​m​ ​m​a​r​k​e​t​i​n​g​ ​c​h​a​n​n​e​l​s
+					 */
+					shortDesc: string
+					/**
+					 * U​n​s​u​b​s​c​r​i​b​e​s​ ​a​ ​p​r​o​f​i​l​e​ ​f​r​o​m​ ​e​m​a​i​l​ ​a​n​d​/​o​r​ ​S​M​S​ ​m​a​r​k​e​t​i​n​g​ ​b​a​s​e​d​ ​o​n​ ​p​r​o​v​i​d​e​d​ ​i​d​e​n​t​i​f​i​e​r​s
+					 */
+					longDesc: string
+					options: {
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​t​o​ ​u​n​s​u​b​s​c​r​i​b​e
+							 */
+							longDesc: string
+						}
+						phoneNumber: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * P​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​t​o​ ​u​n​s​u​b​s​c​r​i​b​e
+							 */
+							longDesc: string
+						}
+						smsSubscriptionType: {
+							/**
+							 * S​M​S​ ​S​u​b​s​c​r​i​p​t​i​o​n​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​S​M​S​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​t​o​ ​c​a​n​c​e​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​S​M​S​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​t​o​ ​c​a​n​c​e​l​ ​(​m​a​r​k​e​t​i​n​g​,​ ​t​r​a​n​s​a​c​t​i​o​n​a​l​,​ ​o​r​ ​b​o​t​h​)
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_profile: {
+					/**
+					 * U​p​d​a​t​e​ ​P​r​o​f​i​l​e
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​r​o​f​i​l​e
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​r​o​f​i​l​e​ ​w​i​t​h​ ​n​e​w​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​n​d​ ​o​p​t​i​o​n​a​l​l​y​ ​a​d​d​s​ ​t​h​e​m​ ​t​o​ ​a​ ​l​i​s​t
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * P​r​o​f​i​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						phoneNumber: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * P​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						firstName: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​r​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						lastName: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * L​a​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * J​o​b​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​j​o​b​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						organization: {
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​o​r​ ​c​o​m​p​a​n​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						city: {
+							/**
+							 * C​i​t​y
+							 */
+							displayName: string
+							/**
+							 * C​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​i​t​y​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							longDesc: string
+						}
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​t​a​t​e​ ​o​r​ ​r​e​g​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							longDesc: string
+						}
+						country: {
+							/**
+							 * C​o​u​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * C​o​u​n​t​r​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​u​n​t​r​y​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							longDesc: string
+						}
+						zip: {
+							/**
+							 * Z​I​P​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​l​o​c​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						imageUrl: {
+							/**
+							 * I​m​a​g​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * P​r​o​f​i​l​e​ ​i​m​a​g​e​ ​U​R​L
+							 */
+							shortDesc: string
+							/**
+							 * U​R​L​ ​t​o​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​i​m​a​g​e
+							 */
+							longDesc: string
+						}
+						externalId: {
+							/**
+							 * E​x​t​e​r​n​a​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​f​r​o​m​ ​y​o​u​r​ ​s​y​s​t​e​m
+							 */
+							longDesc: string
+						}
+						customProperties: {
+							/**
+							 * C​u​s​t​o​m​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​p​r​o​f​i​l​e​ ​p​r​o​p​e​r​t​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​c​u​s​t​o​m​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​s​e​t​ ​o​n​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_tag_to_list: {
+					/**
+					 * A​d​d​ ​T​a​g​ ​t​o​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * A​d​d​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​t​a​g​ ​t​o​ ​a​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * A​s​s​o​c​i​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​t​a​g​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​l​i​s​t​ ​i​n​ ​K​l​a​v​i​y​o
+					 */
+					longDesc: string
+					options: {
+						tag: {
+							/**
+							 * T​a​g
+							 */
+							displayName: string
+							/**
+							 * T​a​g​ ​t​o​ ​a​d​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​a​g​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​i​s​t​ ​t​o​ ​a​d​d​ ​t​h​e​ ​t​a​g​ ​t​o
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_tag_to_segment: {
+					/**
+					 * A​d​d​ ​T​a​g​ ​t​o​ ​S​e​g​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * A​d​d​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​t​a​g​ ​t​o​ ​a​ ​s​e​g​m​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * A​s​s​o​c​i​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​t​a​g​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​s​e​g​m​e​n​t​ ​i​n​ ​K​l​a​v​i​y​o
+					 */
+					longDesc: string
+					options: {
+						tag: {
+							/**
+							 * T​a​g
+							 */
+							displayName: string
+							/**
+							 * T​a​g​ ​t​o​ ​a​d​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​a​g​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​s​e​g​m​e​n​t
+							 */
+							longDesc: string
+						}
+						segment: {
+							/**
+							 * S​e​g​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​s​e​g​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​e​g​m​e​n​t​ ​t​o​ ​a​d​d​ ​t​h​e​ ​t​a​g​ ​t​o
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_event: {
+					/**
+					 * C​r​e​a​t​e​ ​E​v​e​n​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​e​v​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​e​v​e​n​t​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​t​r​i​c​ ​i​n​ ​K​l​a​v​i​y​o
+					 */
+					longDesc: string
+					options: {
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
+							 */
+							longDesc: string
+						}
+						metric: {
+							/**
+							 * M​e​t​r​i​c
+							 */
+							displayName: string
+							/**
+							 * E​v​e​n​t​ ​m​e​t​r​i​c
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​e​t​r​i​c​ ​o​r​ ​e​v​e​n​t​ ​t​y​p​e​ ​t​o​ ​t​r​a​c​k
+							 */
+							longDesc: string
+						}
+						profile: {
+							/**
+							 * P​r​o​f​i​l​e
+							 */
+							displayName: string
+							/**
+							 * P​r​o​f​i​l​e​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​o​f​i​l​e​ ​I​D​ ​t​o​ ​a​s​s​o​c​i​a​t​e​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t
+							 */
+							longDesc: string
+						}
+						time: {
+							/**
+							 * T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * E​v​e​n​t​ ​t​i​m​e​s​t​a​m​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​w​h​e​n​ ​t​h​e​ ​e​v​e​n​t​ ​o​c​c​u​r​r​e​d
+							 */
+							longDesc: string
+						}
+						value: {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * E​v​e​n​t​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​o​n​e​t​a​r​y​ ​v​a​l​u​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​e​v​e​n​t
+							 */
+							longDesc: string
+						}
+						customId: {
+							/**
+							 * C​u​s​t​o​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * U​n​i​q​u​e​ ​e​v​e​n​t​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​c​u​s​t​o​m​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
+							 */
+							longDesc: string
+						}
+						customProperties: {
+							/**
+							 * C​u​s​t​o​m​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * E​v​e​n​t​ ​p​r​o​p​e​r​t​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​c​u​s​t​o​m​ ​p​r​o​p​e​r​t​i​e​s​ ​f​o​r​ ​t​h​e​ ​e​v​e​n​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_list: {
+					/**
+					 * C​r​e​a​t​e​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​l​i​s​t​ ​i​n​ ​K​l​a​v​i​y​o​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n
+					 */
+					longDesc: string
+					options: {
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​n​e​w​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_or_update_profile: {
+					/**
+					 * C​r​e​a​t​e​ ​O​r​ ​U​p​d​a​t​e​ ​P​r​o​f​i​l​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​p​r​o​f​i​l​e​ ​o​r​ ​u​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​o​n​e
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​p​r​o​f​i​l​e​ ​o​r​ ​u​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​r​o​f​i​l​e​ ​a​n​d​ ​o​p​t​i​o​n​a​l​l​y​ ​a​d​d​s​ ​i​t​ ​t​o​ ​a​ ​l​i​s​t
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * P​r​o​f​i​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * P​r​o​f​i​l​e​ ​I​D​ ​(​f​o​r​ ​u​p​d​a​t​e​)
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​r​o​f​i​l​e​ ​t​o​ ​u​p​d​a​t​e​ ​(​l​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​c​r​e​a​t​e​ ​n​e​w​)
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						phoneNumber: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * P​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						firstName: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​r​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						lastName: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * L​a​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * J​o​b​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​j​o​b​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						organization: {
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​o​r​ ​c​o​m​p​a​n​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						city: {
+							/**
+							 * C​i​t​y
+							 */
+							displayName: string
+							/**
+							 * C​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​i​t​y​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							longDesc: string
+						}
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​t​a​t​e​ ​o​r​ ​r​e​g​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							longDesc: string
+						}
+						country: {
+							/**
+							 * C​o​u​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * C​o​u​n​t​r​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​u​n​t​r​y​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							longDesc: string
+						}
+						zip: {
+							/**
+							 * Z​I​P​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​l​o​c​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						imageUrl: {
+							/**
+							 * I​m​a​g​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * P​r​o​f​i​l​e​ ​i​m​a​g​e​ ​U​R​L
+							 */
+							shortDesc: string
+							/**
+							 * U​R​L​ ​t​o​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​i​m​a​g​e
+							 */
+							longDesc: string
+						}
+						externalId: {
+							/**
+							 * E​x​t​e​r​n​a​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​f​r​o​m​ ​y​o​u​r​ ​s​y​s​t​e​m
+							 */
+							longDesc: string
+						}
+						customProperties: {
+							/**
+							 * C​u​s​t​o​m​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​p​r​o​f​i​l​e​ ​p​r​o​p​e​r​t​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​c​u​s​t​o​m​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​s​e​t​ ​o​n​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_profile: {
+					/**
+					 * C​r​e​a​t​e​ ​P​r​o​f​i​l​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​p​r​o​f​i​l​e
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​p​r​o​f​i​l​e​ ​i​n​ ​K​l​a​v​i​y​o​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​i​n​f​o​r​m​a​t​i​o​n
+					 */
+					longDesc: string
+					options: {
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						phoneNumber: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * P​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						firstName: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​r​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						lastName: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * L​a​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * J​o​b​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​j​o​b​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						organization: {
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​o​r​ ​c​o​m​p​a​n​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+						city: {
+							/**
+							 * C​i​t​y
+							 */
+							displayName: string
+							/**
+							 * C​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​i​t​y​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							longDesc: string
+						}
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​t​a​t​e​ ​o​r​ ​r​e​g​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							longDesc: string
+						}
+						country: {
+							/**
+							 * C​o​u​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * C​o​u​n​t​r​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​u​n​t​r​y​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							longDesc: string
+						}
+						zip: {
+							/**
+							 * Z​I​P​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​l​o​c​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						imageUrl: {
+							/**
+							 * I​m​a​g​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * P​r​o​f​i​l​e​ ​i​m​a​g​e​ ​U​R​L
+							 */
+							shortDesc: string
+							/**
+							 * U​R​L​ ​t​o​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​i​m​a​g​e
+							 */
+							longDesc: string
+						}
+						externalId: {
+							/**
+							 * E​x​t​e​r​n​a​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​f​r​o​m​ ​y​o​u​r​ ​s​y​s​t​e​m
+							 */
+							longDesc: string
+						}
+						customProperties: {
+							/**
+							 * C​u​s​t​o​m​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​p​r​o​f​i​l​e​ ​p​r​o​p​e​r​t​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​c​u​s​t​o​m​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​s​e​t​ ​o​n​ ​t​h​e​ ​p​r​o​f​i​l​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_campaign: {
+					/**
+					 * G​e​t​ ​C​a​m​p​a​i​g​n
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​m​p​a​i​g​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​m​p​a​i​g​n​ ​b​y​ ​i​t​s​ ​I​D
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * C​a​m​p​a​i​g​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_profile_to_list: {
+					/**
+					 * A​d​d​ ​P​r​o​f​i​l​e​ ​t​o​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * A​d​d​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​r​o​f​i​l​e​ ​t​o​ ​a​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​r​o​f​i​l​e​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​l​i​s​t​ ​i​n​ ​K​l​a​v​i​y​o
+					 */
+					longDesc: string
+					options: {
+						profile: {
+							/**
+							 * P​r​o​f​i​l​e
+							 */
+							displayName: string
+							/**
+							 * P​r​o​f​i​l​e​ ​t​o​ ​a​d​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​o​f​i​l​e​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​i​s​t​ ​t​o​ ​a​d​d​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​t​o
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_event: {
+					/**
+					 * N​e​w​ ​E​v​e​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​e​v​e​n​t​ ​o​c​c​u​r​s
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​e​v​e​n​t​ ​o​c​c​u​r​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​t​r​i​c​ ​i​n​ ​K​l​a​v​i​y​o
+					 */
+					longDesc: string
+					options: {
+						metric: {
+							/**
+							 * M​e​t​r​i​c
+							 */
+							displayName: string
+							/**
+							 * E​v​e​n​t​ ​m​e​t​r​i​c​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​m​e​t​r​i​c​ ​o​r​ ​e​v​e​n​t​ ​t​y​p​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​e​v​e​n​t​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_profile: {
+					/**
+					 * N​e​w​ ​P​r​o​f​i​l​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​r​o​f​i​l​e​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​r​o​f​i​l​e​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​K​l​a​v​i​y​o
+					 */
+					longDesc: string
+				}
+				new_list_profile: {
+					/**
+					 * P​r​o​f​i​l​e​ ​A​d​d​e​d​ ​t​o​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​p​r​o​f​i​l​e​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​p​r​o​f​i​l​e​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t​ ​i​n​ ​K​l​a​v​i​y​o
+					 */
+					longDesc: string
+					options: {
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​p​r​o​f​i​l​e​ ​a​d​d​i​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_segment_profile: {
+					/**
+					 * P​r​o​f​i​l​e​ ​A​d​d​e​d​ ​t​o​ ​S​e​g​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​p​r​o​f​i​l​e​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​e​g​m​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​p​r​o​f​i​l​e​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​e​g​m​e​n​t​ ​i​n​ ​K​l​a​v​i​y​o
+					 */
+					longDesc: string
+					options: {
+						segment: {
+							/**
+							 * S​e​g​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * S​e​g​m​e​n​t​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​s​e​g​m​e​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​p​r​o​f​i​l​e​ ​a​d​d​i​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Outlook: {
 			/**
 			 * M​i​c​r​o​s​o​f​t​ ​O​u​t​l​o​o​k
@@ -40411,6 +49635,1006 @@ export type TranslationFunctions = {
 				}
 			}
 		}
+		Calendly: {
+			/**
+			 * Calendly
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Schedule meetings and manage appointments with Calendly integration
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Connect to Calendly to automate scheduling workflows, manage event types, and sync calendar data with your automation processes.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				event_canceled: {
+					/**
+					 * Event Canceled
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a Calendly event is canceled
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when any scheduled event in your Calendly account is canceled by either the organizer or invitee.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+					}
+				}
+				invitee_created: {
+					/**
+					 * Invitee Created
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new invitee is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when someone books a meeting and becomes an invitee for a scheduled event.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						scope: {
+							/**
+							 * Scope
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The scope for monitoring invitee creation
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Defines the level at which to monitor for new invitees - organization-wide, specific user, or specific group.
+							 */
+							longDesc: () => LocalizedString
+						}
+						group: {
+							/**
+							 * Group
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The specific group to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the group to monitor for new invitees when scope is set to group.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				invitee_canceled: {
+					/**
+					 * Invitee Canceled
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an invitee cancels their booking
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when an invitee cancels their scheduled meeting or appointment.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						scope: {
+							/**
+							 * Scope
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The scope for monitoring invitee cancellations
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Defines the level at which to monitor for invitee cancellations - organization-wide, specific user, or specific group.
+							 */
+							longDesc: () => LocalizedString
+						}
+						group: {
+							/**
+							 * Group
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The specific group to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the group to monitor for invitee cancellations when scope is set to group.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				invitee_no_show_created: {
+					/**
+					 * Invitee No-Show Created
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an invitee is marked as a no-show
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when an invitee fails to attend their scheduled meeting and is marked as a no-show.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						scope: {
+							/**
+							 * Scope
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The scope for monitoring no-show events
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Defines the level at which to monitor for no-show events - organization-wide, specific user, or specific group.
+							 */
+							longDesc: () => LocalizedString
+						}
+						group: {
+							/**
+							 * Group
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The specific group to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the group to monitor for no-show events when scope is set to group.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_form_submission_created: {
+					/**
+					 * New Form Submission Created
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a routing form submission is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when someone submits a routing form, which helps direct them to the appropriate scheduling option.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+					}
+				}
+			}
+			actions: {
+				cancel_event: {
+					/**
+					 * Cancel Event
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Cancel a scheduled Calendly event
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Cancels a scheduled event in Calendly and notifies all participants about the cancellation.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						event_id: {
+							/**
+							 * Event ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the event to cancel
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific event that you want to cancel from your scheduled events.
+							 */
+							longDesc: () => LocalizedString
+						}
+						reason: {
+							/**
+							 * Cancellation Reason
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Reason for canceling the event
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional reason that will be included in the cancellation notification sent to participants.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_group: {
+					/**
+					 * Get Group
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific group
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches comprehensive information about a specific group within your Calendly organization, including member count and organization details.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						group_id: {
+							/**
+							 * Group ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the group to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific group whose details you want to retrieve from your organization.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_scheduling_link: {
+					/**
+					 * Create Scheduling Link
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a scheduling link for an event type
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Generates a scheduling link that can be shared with others to book meetings for a specific event type.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						max_event_count: {
+							/**
+							 * Maximum Event Count
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of events that can be scheduled
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of events that can be scheduled using this link before it becomes inactive.
+							 */
+							longDesc: () => LocalizedString
+						}
+						event_type: {
+							/**
+							 * Event Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The type of event to create a scheduling link for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the event type that people will be able to book when using this scheduling link.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_event: {
+					/**
+					 * Get Event
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific event
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches comprehensive information about a scheduled event including participants, timing, and meeting details.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						event_id: {
+							/**
+							 * Event ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the event to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific event whose details you want to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_event_invitee: {
+					/**
+					 * Get Event Invitee
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific event invitee
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches detailed information about a specific invitee for an event, including their contact information and responses.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						event_id: {
+							/**
+							 * Event ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the event
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the event for which you want to retrieve invitee information.
+							 */
+							longDesc: () => LocalizedString
+						}
+						invitee: {
+							/**
+							 * Invitee
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The invitee to retrieve details for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific invitee whose information you want to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_event_type: {
+					/**
+					 * Get Event Type
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific event type
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches comprehensive information about an event type including duration, settings, and configuration.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						event_type_id: {
+							/**
+							 * Event Type ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the event type to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific event type whose details you want to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_event_invitees: {
+					/**
+					 * List Event Invitees
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List all invitees for a specific event
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of all invitees for a scheduled event with their status and contact information.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						event_id: {
+							/**
+							 * Event ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the event
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the event for which you want to list all invitees.
+							 */
+							longDesc: () => LocalizedString
+						}
+						count: {
+							/**
+							 * Count
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of invitees to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of invitees to return in the response (default is 20).
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_token: {
+							/**
+							 * Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use this token to retrieve the next page of results when there are more invitees than the count limit.
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter invitees by email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter the results to only include invitees with this specific email address.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort: {
+							/**
+							 * Sort Options
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to sort the invitees list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Configure how the list of invitees should be sorted.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Direction to sort (ascending or descending)
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose whether to sort in ascending or descending order.
+										 */
+										longDesc: () => LocalizedString
+									}
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose which field to use for sorting the invitees.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						status: {
+							/**
+							 * Status Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter invitees by their status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter the results to only include invitees with the specified status (active or canceled).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_events: {
+					/**
+					 * List Events
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List scheduled events
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of scheduled events with optional filtering and sorting capabilities.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						count: {
+							/**
+							 * Count
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of events to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of events to return in the response (default is 20).
+							 */
+							longDesc: () => LocalizedString
+						}
+						group: {
+							/**
+							 * Group Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter events by group
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter the results to only include events associated with a specific group.
+							 */
+							longDesc: () => LocalizedString
+						}
+						invitee_email: {
+							/**
+							 * Invitee Email Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter events by invitee email
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter the results to only include events where the specified email address is an invitee.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_start_time: {
+							/**
+							 * Maximum Start Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Latest start time for events
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter events to only include those that start before this date and time.
+							 */
+							longDesc: () => LocalizedString
+						}
+						min_start_time: {
+							/**
+							 * Minimum Start Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Earliest start time for events
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter events to only include those that start after this date and time.
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_token: {
+							/**
+							 * Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use this token to retrieve the next page of results when there are more events than the count limit.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort: {
+							/**
+							 * Sort Options
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to sort the events list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Configure how the list of events should be sorted.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Direction to sort (ascending or descending)
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose whether to sort in ascending or descending order.
+										 */
+										longDesc: () => LocalizedString
+									}
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose which field to use for sorting the events (start_time or end_time).
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						organization: {
+							/**
+							 * Organization
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Organization to filter by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter events to only include those from a specific organization.
+							 */
+							longDesc: () => LocalizedString
+						}
+						user: {
+							/**
+							 * User Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter events by user
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter the results to only include events associated with a specific user.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_event_types: {
+					/**
+					 * List Event Types
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List available event types
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of event types that can be used for scheduling meetings.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						count: {
+							/**
+							 * Count
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of event types to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of event types to return in the response (default is 20).
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_token: {
+							/**
+							 * Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use this token to retrieve the next page of results when there are more event types than the count limit.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort: {
+							/**
+							 * Sort Options
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to sort the event types list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Configure how the list of event types should be sorted.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Direction to sort (ascending or descending)
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose whether to sort in ascending or descending order.
+										 */
+										longDesc: () => LocalizedString
+									}
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose which field to use for sorting the event types (name, position, created_at, or updated_at).
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						organization: {
+							/**
+							 * Organization
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Organization to filter by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter event types to only include those from a specific organization.
+							 */
+							longDesc: () => LocalizedString
+						}
+						user: {
+							/**
+							 * User Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter event types by user
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter the results to only include event types associated with a specific user.
+							 */
+							longDesc: () => LocalizedString
+						}
+						admin_managed: {
+							/**
+							 * Admin Managed Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by admin-managed status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter event types based on whether they are managed by an administrator.
+							 */
+							longDesc: () => LocalizedString
+						}
+						active: {
+							/**
+							 * Active Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by active status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter event types based on whether they are currently active and available for booking.
+							 */
+							longDesc: () => LocalizedString
+						}
+						user_availability_schedule: {
+							/**
+							 * User Availability Schedule
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by user availability schedule
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter event types based on a specific user availability schedule.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_groups: {
+					/**
+					 * List Groups
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List available groups
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of groups within an organization that can be used for organizing events and users.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						count: {
+							/**
+							 * Count
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of groups to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of groups to return in the response (default is 20).
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_token: {
+							/**
+							 * Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use this token to retrieve the next page of results when there are more groups than the count limit.
+							 */
+							longDesc: () => LocalizedString
+						}
+						organization: {
+							/**
+							 * Organization
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Organization to list groups from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The organization from which to retrieve the list of groups.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_organization_members: {
+					/**
+					 * List Organization Members
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List members of an organization
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of all members within a Calendly organization along with their roles and information.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						count: {
+							/**
+							 * Count
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of members to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of organization members to return in the response (default is 20).
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_token: {
+							/**
+							 * Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use this token to retrieve the next page of results when there are more members than the count limit.
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter members by email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter the results to only include members with this specific email address.
+							 */
+							longDesc: () => LocalizedString
+						}
+						organization: {
+							/**
+							 * Organization
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Organization to list members from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The organization from which to retrieve the list of members.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
 		GoogleDocs: {
 			/**
 			 * Google Docs
@@ -45563,6 +55787,600 @@ export type TranslationFunctions = {
 				}
 			}
 		}
+		GoogleChat: {
+			/**
+			 * Google Chat
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Send messages and manage conversations in Google Chat
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Connect to Google Chat to send direct messages, post to spaces, manage conversations, and interact with your team collaboration platform. Automate notifications, respond to messages, and streamline your Google Workspace communication workflows.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				new_message: {
+					options: {
+						spaceId: {
+							/**
+							 * Space ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Chat space to monitor for new messages
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Chat space where you want to monitor for new messages. The trigger will fire whenever a new message is posted in this space.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			actions: {
+				list_spaces: {
+					options: {
+						pageSize: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of spaces to return per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of spaces to return in a single page. Default is 20.
+							 */
+							longDesc: () => LocalizedString
+						}
+						pageToken: {
+							/**
+							 * Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A page token, received from a previous list spaces call. Provide this to retrieve the subsequent page.
+							 */
+							longDesc: () => LocalizedString
+						}
+						spaceType: {
+							/**
+							 * Space Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter spaces by type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter the list of spaces by their type: Space, Group Chat, or Direct Message.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_space: {
+					options: {
+						id: {
+							/**
+							 * Space ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the space to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Chat space you want to get information about.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_members: {
+					options: {
+						spaceId: {
+							/**
+							 * Space ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the space to list members from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Chat space whose members you want to list.
+							 */
+							longDesc: () => LocalizedString
+						}
+						pageSize: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of members to return per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of members to return in a single page. Default is 20.
+							 */
+							longDesc: () => LocalizedString
+						}
+						pageToken: {
+							/**
+							 * Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A page token, received from a previous list members call. Provide this to retrieve the subsequent page.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter members by field and value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter the list of members by a specific field and value, such as role or member type.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Filter Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose the field to filter members by: role or member type.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Filter Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The value to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The specific value to filter members by, based on the selected field.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						showGroups: {
+							/**
+							 * Show Groups
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include group memberships in results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include group memberships in the results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						showInvited: {
+							/**
+							 * Show Invited
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include invited members in results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include members who have been invited but not yet joined.
+							 */
+							longDesc: () => LocalizedString
+						}
+						useAdminAccess: {
+							/**
+							 * Use Admin Access
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Use admin privileges for the request
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to use admin access privileges when listing members.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_member: {
+					options: {
+						spaceId: {
+							/**
+							 * Space ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the space
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Chat space.
+							 */
+							longDesc: () => LocalizedString
+						}
+						memberId: {
+							/**
+							 * Member ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the member to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the member you want to get information about.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_messages: {
+					options: {
+						spaceId: {
+							/**
+							 * Space ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the space to list messages from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Chat space whose messages you want to list.
+							 */
+							longDesc: () => LocalizedString
+						}
+						pageSize: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of messages to return per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of messages to return in a single page. Default is 25.
+							 */
+							longDesc: () => LocalizedString
+						}
+						pageToken: {
+							/**
+							 * Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A page token, received from a previous list messages call. Provide this to retrieve the subsequent page.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter messages by field and value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter the list of messages by a specific field and value, such as create time or thread.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Filter Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose the field to filter messages by: create time or thread name.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Filter Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The value to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The specific value to filter messages by, based on the selected field.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						showDeleted: {
+							/**
+							 * Show Deleted
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include deleted messages in results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include deleted messages in the results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sortOrder: {
+							/**
+							 * Sort Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Order to sort messages by create time
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The order to sort messages by their creation time: ascending or descending.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_message: {
+					options: {
+						spaceId: {
+							/**
+							 * Space ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the space
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Chat space.
+							 */
+							longDesc: () => LocalizedString
+						}
+						messageId: {
+							/**
+							 * Message ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the message to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the message you want to get information about.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_message: {
+					options: {
+						spaceId: {
+							/**
+							 * Space ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the space
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Chat space.
+							 */
+							longDesc: () => LocalizedString
+						}
+						messageId: {
+							/**
+							 * Message ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the message to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the message you want to delete.
+							 */
+							longDesc: () => LocalizedString
+						}
+						force: {
+							/**
+							 * Force Delete
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Force deletion of the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to force delete the message even if it cannot be normally deleted.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				send_message: {
+					options: {
+						spaceId: {
+							/**
+							 * Space ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the space to send the message to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the Google Chat space where you want to send the message.
+							 */
+							longDesc: () => LocalizedString
+						}
+						text: {
+							/**
+							 * Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Plain text content of the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The plain text content of the message. This is the main text that will be displayed in the chat.
+							 */
+							longDesc: () => LocalizedString
+						}
+						formattedText: {
+							/**
+							 * Formatted Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Formatted text content using markdown
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Rich text content formatted with markdown syntax. This allows for bold, italic, links, and other formatting.
+							 */
+							longDesc: () => LocalizedString
+						}
+						messageId: {
+							/**
+							 * Message ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID for message replies or updates
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of an existing message to reply to or update. Leave empty to send a new message.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cardTitle: {
+							/**
+							 * Card Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Title for the message card
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The title to display in the card header. This creates a visually prominent header for your message.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cardSubtitle: {
+							/**
+							 * Card Subtitle
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Subtitle for the message card
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The subtitle to display below the card title. This provides additional context or description.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cardImageUrl: {
+							/**
+							 * Card Image URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Image URL to display in the card header
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A URL pointing to an image that will be displayed in the card header. The image should be publicly accessible.
+							 */
+							longDesc: () => LocalizedString
+						}
+						buttonText: {
+							/**
+							 * Button Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text to display on the action button
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text that will appear on the clickable button in the message card.
+							 */
+							longDesc: () => LocalizedString
+						}
+						buttonUrl: {
+							/**
+							 * Button URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * URL that the button will open when clicked
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The web address that will be opened when users click the button. Required if button text is provided.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
 		BusinessCentral: {
 			/**
 			 * Microsoft Dynamics 365 Business Central
@@ -45754,6 +56572,5574 @@ export type TranslationFunctions = {
 									}
 								}
 							}
+						}
+					}
+				}
+			}
+		}
+		Quickbooks: {
+			/**
+			 * QuickBooks
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Integrate with QuickBooks Online for accounting and financial management
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Connect to QuickBooks Online to manage customers, vendors, items, invoices, payments, and financial reports. Automate your accounting workflows and keep your financial data synchronized.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				list_accounts: {
+					/**
+					 * List Accounts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of accounts from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch multiple accounts from QuickBooks with optional filtering, sorting, and pagination capabilities
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						fetchAll: {
+							/**
+							 * Fetch All
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Retrieve all accounts without pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, fetches all accounts ignoring limit and offset parameters
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of accounts to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of accounts to return in a single request (default: 50)
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of accounts to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of accounts to skip before starting to return results (default: 0)
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria for accounts
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply filtering to narrow down the list of accounts based on specific field values
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to filter on
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The account field to apply the filter criteria to
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The operator to use for comparing the field value (e.g., =, !=, <, >)
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The value to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to compare against the specified field
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort criteria for accounts
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the returned accounts list
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The account field to use for sorting the results
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Whether to sort in ascending or descending order
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				get_account: {
+					/**
+					 * Get Account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific account from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch detailed information about a specific account using its ID
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Account ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the account
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The QuickBooks account ID to retrieve detailed information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_bill: {
+					/**
+					 * Get Bill
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific bill from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch detailed information about a specific bill using its ID
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Bill ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the bill
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The QuickBooks bill ID to retrieve detailed information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_bills: {
+					/**
+					 * List Bills
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of bills from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch multiple bills from QuickBooks with optional filtering, sorting, and pagination capabilities
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						fetchAll: {
+							/**
+							 * Fetch All
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Retrieve all bills without pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, fetches all bills ignoring limit and offset parameters
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of bills to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of bills to return in a single request (default: 50)
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of bills to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of bills to skip before starting to return results (default: 0)
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria for bills
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply filtering to narrow down the list of bills based on specific field values
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to filter on
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The bill field to apply the filter criteria to
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The operator to use for comparing the field value (e.g., =, !=, <, >)
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The value to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to compare against the specified field
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort criteria for bills
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the returned bills list
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The bill field to use for sorting the results
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Whether to sort in ascending or descending order
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				update_bill: {
+					/**
+					 * Update Bill
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing bill in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Modify an existing bill with new vendor information, line items, and other details
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						bill_id: {
+							/**
+							 * Bill ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the bill to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The QuickBooks bill ID that you want to update
+							 */
+							longDesc: () => LocalizedString
+						}
+						vendor_id: {
+							/**
+							 * Vendor ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The vendor associated with the bill
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the vendor who issued the bill
+							 */
+							longDesc: () => LocalizedString
+						}
+						line_item_type: {
+							/**
+							 * Line Item Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The type of line items for the bill
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose between account-based or item-based expense line details for the bill
+							 */
+							longDesc: () => LocalizedString
+						}
+						line_items: {
+							/**
+							 * Line Items
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of line items for the bill
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The detailed list of expenses or items included in the bill
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											amount: {
+												/**
+												 * Amount
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The amount for this line item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The monetary amount for this specific line item
+												 */
+												longDesc: () => LocalizedString
+											}
+											description: {
+												/**
+												 * Description
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Description of the line item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * A detailed description of what this line item represents
+												 */
+												longDesc: () => LocalizedString
+											}
+											tax_code_id: {
+												/**
+												 * Tax Code ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The tax code for this line item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The unique identifier of the tax code to apply to this line item
+												 */
+												longDesc: () => LocalizedString
+											}
+											class_id: {
+												/**
+												 * Class ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The class for this line item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The unique identifier of the class to categorize this line item
+												 */
+												longDesc: () => LocalizedString
+											}
+											customer_id: {
+												/**
+												 * Customer ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The customer for this line item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The unique identifier of the customer if this expense is billable
+												 */
+												longDesc: () => LocalizedString
+											}
+											billable_status: {
+												/**
+												 * Billable Status
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Whether this line item is billable
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Indicates if this expense can be billed to a customer
+												 */
+												longDesc: () => LocalizedString
+											}
+											account_id: {
+												/**
+												 * Account ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The account for this expense
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The unique identifier of the account to categorize this expense
+												 */
+												longDesc: () => LocalizedString
+											}
+											item_id: {
+												/**
+												 * Item ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The item for this line
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The unique identifier of the item being purchased
+												 */
+												longDesc: () => LocalizedString
+											}
+											quantity: {
+												/**
+												 * Quantity
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The quantity of the item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The number of units of the item being purchased
+												 */
+												longDesc: () => LocalizedString
+											}
+											unit_price: {
+												/**
+												 * Unit Price
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The price per unit
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The cost per individual unit of the item
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				create_bill: {
+					/**
+					 * Create Bill
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new bill in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new bill with vendor information, line items, and other necessary details
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						vendor_id: {
+							/**
+							 * Vendor ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The vendor issuing the bill
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the vendor who is issuing this bill
+							 */
+							longDesc: () => LocalizedString
+						}
+						line_item_type: {
+							/**
+							 * Line Item Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The type of line items for the bill
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose between account-based or item-based expense line details for the bill
+							 */
+							longDesc: () => LocalizedString
+						}
+						line_items: {
+							/**
+							 * Line Items
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of line items for the bill
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The detailed list of expenses or items included in the bill
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											amount: {
+												/**
+												 * Amount
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The amount for this line item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The monetary amount for this specific line item
+												 */
+												longDesc: () => LocalizedString
+											}
+											description: {
+												/**
+												 * Description
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Description of the line item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * A detailed description of what this line item represents
+												 */
+												longDesc: () => LocalizedString
+											}
+											tax_code_id: {
+												/**
+												 * Tax Code ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The tax code for this line item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The unique identifier of the tax code to apply to this line item
+												 */
+												longDesc: () => LocalizedString
+											}
+											class_id: {
+												/**
+												 * Class ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The class for this line item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The unique identifier of the class to categorize this line item
+												 */
+												longDesc: () => LocalizedString
+											}
+											customer_id: {
+												/**
+												 * Customer ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The customer for this line item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The unique identifier of the customer if this expense is billable
+												 */
+												longDesc: () => LocalizedString
+											}
+											billable_status: {
+												/**
+												 * Billable Status
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Whether this line item is billable
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Indicates if this expense can be billed to a customer
+												 */
+												longDesc: () => LocalizedString
+											}
+											account_id: {
+												/**
+												 * Account ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The account for this expense
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The unique identifier of the account to categorize this expense
+												 */
+												longDesc: () => LocalizedString
+											}
+											item_id: {
+												/**
+												 * Item ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The item for this line
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The unique identifier of the item being purchased
+												 */
+												longDesc: () => LocalizedString
+											}
+											quantity: {
+												/**
+												 * Quantity
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The quantity of the item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The number of units of the item being purchased
+												 */
+												longDesc: () => LocalizedString
+											}
+											unit_price: {
+												/**
+												 * Unit Price
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The price per unit
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The cost per individual unit of the item
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				delete_bill: {
+					/**
+					 * Delete Bill
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a bill from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently remove a bill from QuickBooks using its unique identifier
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Bill ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the bill to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The QuickBooks bill ID that you want to permanently remove
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_credit_memo: {
+					/**
+					 * Get Credit Memo
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific credit memo from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch detailed information about a specific credit memo using its ID
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Credit Memo ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the credit memo
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The QuickBooks credit memo ID to retrieve detailed information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_credit_memos: {
+					/**
+					 * List Credit Memos
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of credit memos from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch multiple credit memos from QuickBooks with optional filtering, sorting, and pagination capabilities
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						fetchAll: {
+							/**
+							 * Fetch All
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Retrieve all credit memos without pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, fetches all credit memos ignoring limit and offset parameters
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of credit memos to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of credit memos to return in a single request (default: 50)
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of credit memos to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of credit memos to skip before starting to return results (default: 0)
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria for credit memos
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply filtering to narrow down the list of credit memos based on specific field values
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to filter on
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The credit memo field to apply the filter criteria to
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The operator to use for comparing the field value (e.g., =, !=, <, >)
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The value to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to compare against the specified field
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort criteria for credit memos
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the returned credit memos list
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The credit memo field to use for sorting the results
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Whether to sort in ascending or descending order
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				create_customer: {
+					/**
+					 * Create Customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new customer in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new customer record with personal information, contact details, and addresses
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						display_name: {
+							/**
+							 * Display Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The display name for the customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name that will be displayed for this customer in QuickBooks
+							 */
+							longDesc: () => LocalizedString
+						}
+						given_name: {
+							/**
+							 * Given Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The first name of the customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The customer's first name or given name
+							 */
+							longDesc: () => LocalizedString
+						}
+						middle_name: {
+							/**
+							 * Middle Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The middle name of the customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The customer's middle name or middle initial
+							 */
+							longDesc: () => LocalizedString
+						}
+						family_name: {
+							/**
+							 * Family Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The last name of the customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The customer's last name or family name
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The title of the customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The customer's title (e.g., Mr., Mrs., Dr., etc.)
+							 */
+							longDesc: () => LocalizedString
+						}
+						suffix: {
+							/**
+							 * Suffix
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The suffix of the customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The customer's suffix (e.g., Jr., Sr., III, etc.)
+							 */
+							longDesc: () => LocalizedString
+						}
+						company_name: {
+							/**
+							 * Company Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The company name of the customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the company the customer represents
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The email address of the customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The primary email address for the customer
+							 */
+							longDesc: () => LocalizedString
+						}
+						billing_address: {
+							/**
+							 * Billing Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The billing address of the customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The address where bills should be sent for this customer
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									Line1: {
+										/**
+										 * Address Line 1
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The first line of the billing address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The street address or P.O. box number
+										 */
+										longDesc: () => LocalizedString
+									}
+									Line2: {
+										/**
+										 * Address Line 2
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The second line of the billing address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Additional address information like apartment or suite number
+										 */
+										longDesc: () => LocalizedString
+									}
+									City: {
+										/**
+										 * City
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The city of the billing address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The city where the customer is located
+										 */
+										longDesc: () => LocalizedString
+									}
+									PostalCode: {
+										/**
+										 * Postal Code
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The postal code of the billing address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The ZIP code or postal code for the billing address
+										 */
+										longDesc: () => LocalizedString
+									}
+									CountrySubDivisionCode: {
+										/**
+										 * State/Province
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The state or province code
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The state or province abbreviation (e.g., CA, NY, ON)
+										 */
+										longDesc: () => LocalizedString
+									}
+									Country: {
+										/**
+										 * Country
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The country of the billing address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The country where the customer is located
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						shipping_address: {
+							/**
+							 * Shipping Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The shipping address of the customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The address where products should be shipped for this customer
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									Line1: {
+										/**
+										 * Address Line 1
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The first line of the shipping address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The street address or P.O. box number
+										 */
+										longDesc: () => LocalizedString
+									}
+									Line2: {
+										/**
+										 * Address Line 2
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The second line of the shipping address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Additional address information like apartment or suite number
+										 */
+										longDesc: () => LocalizedString
+									}
+									City: {
+										/**
+										 * City
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The city of the shipping address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The city where products should be shipped
+										 */
+										longDesc: () => LocalizedString
+									}
+									PostalCode: {
+										/**
+										 * Postal Code
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The postal code of the shipping address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The ZIP code or postal code for the shipping address
+										 */
+										longDesc: () => LocalizedString
+									}
+									CountrySubDivisionCode: {
+										/**
+										 * State/Province
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The state or province code
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The state or province abbreviation (e.g., CA, NY, ON)
+										 */
+										longDesc: () => LocalizedString
+									}
+									Country: {
+										/**
+										 * Country
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The country of the shipping address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The country where products should be shipped
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				get_customer: {
+					/**
+					 * Get Customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific customer from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch detailed information about a specific customer using their ID
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Customer ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The QuickBooks customer ID to retrieve detailed information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_customers: {
+					/**
+					 * List Customers
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of customers from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch multiple customers from QuickBooks with optional filtering, sorting, and pagination capabilities
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						fetchAll: {
+							/**
+							 * Fetch All
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Retrieve all customers without pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, fetches all customers ignoring limit and offset parameters
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of customers to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of customers to return in a single request (default: 50)
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of customers to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of customers to skip before starting to return results (default: 0)
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria for customers
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply filtering to narrow down the list of customers based on specific field values
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to filter on
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The customer field to apply the filter criteria to
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The operator to use for comparing the field value (e.g., =, !=, <, >)
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The value to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to compare against the specified field
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort criteria for customers
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the returned customers list
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The customer field to use for sorting the results
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Whether to sort in ascending or descending order
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				update_customer: {
+					/**
+					 * Update Customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing customer in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Modify an existing customer record with updated personal information, contact details, and addresses
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the customer to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The QuickBooks customer ID that you want to update
+							 */
+							longDesc: () => LocalizedString
+						}
+						display_name: {
+							/**
+							 * Display Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The display name for the customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name that will be displayed for this customer in QuickBooks
+							 */
+							longDesc: () => LocalizedString
+						}
+						given_name: {
+							/**
+							 * Given Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The first name of the customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The customer's first name or given name
+							 */
+							longDesc: () => LocalizedString
+						}
+						middle_name: {
+							/**
+							 * Middle Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The middle name of the customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The customer's middle name or middle initial
+							 */
+							longDesc: () => LocalizedString
+						}
+						family_name: {
+							/**
+							 * Family Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The last name of the customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The customer's last name or family name
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The title of the customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The customer's title (e.g., Mr., Mrs., Dr., etc.)
+							 */
+							longDesc: () => LocalizedString
+						}
+						suffix: {
+							/**
+							 * Suffix
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The suffix of the customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The customer's suffix (e.g., Jr., Sr., III, etc.)
+							 */
+							longDesc: () => LocalizedString
+						}
+						company_name: {
+							/**
+							 * Company Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The company name of the customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the company the customer represents
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The email address of the customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The primary email address for the customer
+							 */
+							longDesc: () => LocalizedString
+						}
+						billing_address: {
+							/**
+							 * Billing Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The billing address of the customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The address where bills should be sent for this customer
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									Line1: {
+										/**
+										 * Address Line 1
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The first line of the billing address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The street address or P.O. box number
+										 */
+										longDesc: () => LocalizedString
+									}
+									Line2: {
+										/**
+										 * Address Line 2
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The second line of the billing address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Additional address information like apartment or suite number
+										 */
+										longDesc: () => LocalizedString
+									}
+									City: {
+										/**
+										 * City
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The city of the billing address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The city where the customer is located
+										 */
+										longDesc: () => LocalizedString
+									}
+									PostalCode: {
+										/**
+										 * Postal Code
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The postal code of the billing address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The ZIP code or postal code for the billing address
+										 */
+										longDesc: () => LocalizedString
+									}
+									CountrySubDivisionCode: {
+										/**
+										 * State/Province
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The state or province code
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The state or province abbreviation (e.g., CA, NY, ON)
+										 */
+										longDesc: () => LocalizedString
+									}
+									Country: {
+										/**
+										 * Country
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The country of the billing address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The country where the customer is located
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						shipping_address: {
+							/**
+							 * Shipping Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The shipping address of the customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The address where products should be shipped for this customer
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									Line1: {
+										/**
+										 * Address Line 1
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The first line of the shipping address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The street address or P.O. box number
+										 */
+										longDesc: () => LocalizedString
+									}
+									Line2: {
+										/**
+										 * Address Line 2
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The second line of the shipping address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Additional address information like apartment or suite number
+										 */
+										longDesc: () => LocalizedString
+									}
+									City: {
+										/**
+										 * City
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The city of the shipping address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The city where products should be shipped
+										 */
+										longDesc: () => LocalizedString
+									}
+									PostalCode: {
+										/**
+										 * Postal Code
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The postal code of the shipping address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The ZIP code or postal code for the shipping address
+										 */
+										longDesc: () => LocalizedString
+									}
+									CountrySubDivisionCode: {
+										/**
+										 * State/Province
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The state or province code
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The state or province abbreviation (e.g., CA, NY, ON)
+										 */
+										longDesc: () => LocalizedString
+									}
+									Country: {
+										/**
+										 * Country
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The country of the shipping address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The country where products should be shipped
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				get_deposit: {
+					/**
+					 * Get Deposit
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific deposit from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch detailed information about a specific deposit using its ID
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Deposit ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the deposit
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The QuickBooks deposit ID to retrieve detailed information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_deposits: {
+					/**
+					 * List Deposits
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of deposits from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch multiple deposits from QuickBooks with optional filtering, sorting, and pagination capabilities
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						fetchAll: {
+							/**
+							 * Fetch All
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Retrieve all deposits without pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, fetches all deposits ignoring limit and offset parameters
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of deposits to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of deposits to return in a single request (default: 50)
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of deposits to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of deposits to skip before starting to return results (default: 0)
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria for deposits
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply filtering to narrow down the list of deposits based on specific field values
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to filter on
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The deposit field to apply the filter criteria to
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The operator to use for comparing the field value (e.g., =, !=, <, >)
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The value to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to compare against the specified field
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort criteria for deposits
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the returned deposits list
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The deposit field to use for sorting the results
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Whether to sort in ascending or descending order
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				create_estimate: {
+					/**
+					 * Create Estimate
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new estimate in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new estimate for a customer with line items, quantities, and pricing information
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The customer for this estimate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the customer who will receive this estimate
+							 */
+							longDesc: () => LocalizedString
+						}
+						lines: {
+							/**
+							 * Line Items
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of line items for the estimate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The detailed list of items or services included in the estimate
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											amount: {
+												/**
+												 * Amount
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The amount for this line item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The total monetary amount for this specific line item
+												 */
+												longDesc: () => LocalizedString
+											}
+											description: {
+												/**
+												 * Description
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Description of the line item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * A detailed description of what this line item represents
+												 */
+												longDesc: () => LocalizedString
+											}
+											quantity: {
+												/**
+												 * Quantity
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The quantity of the item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The number of units of the item being estimated
+												 */
+												longDesc: () => LocalizedString
+											}
+											unit_price: {
+												/**
+												 * Unit Price
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The price per unit
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The cost per individual unit of the item
+												 */
+												longDesc: () => LocalizedString
+											}
+											item_id: {
+												/**
+												 * Item ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The item for this line
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The unique identifier of the item being estimated
+												 */
+												longDesc: () => LocalizedString
+											}
+											service_date: {
+												/**
+												 * Service Date
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The date when the service will be provided
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The specific date when the service or item will be delivered
+												 */
+												longDesc: () => LocalizedString
+											}
+											tax_code_id: {
+												/**
+												 * Tax Code ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The tax code for this line item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The unique identifier of the tax code to apply to this line item
+												 */
+												longDesc: () => LocalizedString
+											}
+											class_id: {
+												/**
+												 * Class ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The class for this line item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The unique identifier of the class to categorize this line item
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				delete_estimate: {
+					/**
+					 * Delete Estimate
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete an estimate from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently remove an estimate from QuickBooks using its unique identifier
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Estimate ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the estimate to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The QuickBooks estimate ID that you want to permanently remove
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_estimate: {
+					/**
+					 * Get Estimate
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific estimate from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch detailed information about a specific estimate using its ID
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Estimate ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the estimate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The QuickBooks estimate ID to retrieve detailed information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_estimates: {
+					/**
+					 * List Estimates
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of estimates from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch multiple estimates from QuickBooks with optional filtering, sorting, and pagination capabilities
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						fetchAll: {
+							/**
+							 * Fetch All
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Retrieve all estimates without pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, fetches all estimates ignoring limit and offset parameters
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of estimates to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of estimates to return in a single request (default: 50)
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of estimates to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of estimates to skip before starting to return results (default: 0)
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria for estimates
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply filtering to narrow down the list of estimates based on specific field values
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to filter on
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The estimate field to apply the filter criteria to
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The operator to use for comparing the field value (e.g., =, !=, <, >)
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The value to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to compare against the specified field
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort criteria for estimates
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the returned estimates list
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The estimate field to use for sorting the results
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Whether to sort in ascending or descending order
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				create_invoice: {
+					/**
+					 * Create Invoice
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new invoice in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new invoice for a customer with line items, quantities, and pricing information
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer: {
+							/**
+							 * Customer
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The customer for this invoice
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the customer who will receive this invoice
+							 */
+							longDesc: () => LocalizedString
+						}
+						lines: {
+							/**
+							 * Line Items
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of line items for the invoice
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The detailed list of items or services included in the invoice
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											amount: {
+												/**
+												 * Amount
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The amount for this line item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The total monetary amount for this specific line item
+												 */
+												longDesc: () => LocalizedString
+											}
+											description: {
+												/**
+												 * Description
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Description of the line item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * A detailed description of what this line item represents
+												 */
+												longDesc: () => LocalizedString
+											}
+											quantity: {
+												/**
+												 * Quantity
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The quantity of the item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The number of units of the item being invoiced
+												 */
+												longDesc: () => LocalizedString
+											}
+											unit_price: {
+												/**
+												 * Unit Price
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The price per unit
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The cost per individual unit of the item
+												 */
+												longDesc: () => LocalizedString
+											}
+											item_id: {
+												/**
+												 * Item ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The item for this line
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The unique identifier of the item being invoiced
+												 */
+												longDesc: () => LocalizedString
+											}
+											service_date: {
+												/**
+												 * Service Date
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The date when the service was provided
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The specific date when the service or item was delivered
+												 */
+												longDesc: () => LocalizedString
+											}
+											tax_code_id: {
+												/**
+												 * Tax Code ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The tax code for this line item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The unique identifier of the tax code to apply to this line item
+												 */
+												longDesc: () => LocalizedString
+											}
+											class_id: {
+												/**
+												 * Class ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The class for this line item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The unique identifier of the class to categorize this line item
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				delete_invoice: {
+					/**
+					 * Delete Invoice
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete an invoice from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently remove an invoice from QuickBooks using its unique identifier
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Invoice ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the invoice to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The QuickBooks invoice ID that you want to permanently remove
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_invoice: {
+					/**
+					 * Get Invoice
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific invoice from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch detailed information about a specific invoice using its ID
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Invoice ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the invoice
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The QuickBooks invoice ID to retrieve detailed information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_invoices: {
+					/**
+					 * List Invoices
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of invoices from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch multiple invoices from QuickBooks with optional filtering, sorting, and pagination capabilities
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						fetchAll: {
+							/**
+							 * Fetch All
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Retrieve all invoices without pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, fetches all invoices ignoring limit and offset parameters
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of invoices to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of invoices to return in a single request (default: 50)
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of invoices to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of invoices to skip before starting to return results (default: 0)
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria for invoices
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply filtering to narrow down the list of invoices based on specific field values
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to filter on
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The invoice field to apply the filter criteria to
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The operator to use for comparing the field value (e.g., =, !=, <, >)
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The value to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to compare against the specified field
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort criteria for invoices
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the returned invoices list
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The invoice field to use for sorting the results
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Whether to sort in ascending or descending order
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				update_invoice: {
+					/**
+					 * Update Invoice
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing invoice in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Modify an existing invoice with updated customer information, line items, and other details
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						invoice_id: {
+							/**
+							 * Invoice ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the invoice to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The QuickBooks invoice ID that you want to update
+							 */
+							longDesc: () => LocalizedString
+						}
+						customer: {
+							/**
+							 * Customer
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The customer for this invoice
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the customer who will receive this invoice
+							 */
+							longDesc: () => LocalizedString
+						}
+						lines: {
+							/**
+							 * Line Items
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of line items for the invoice
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The detailed list of items or services included in the invoice
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											amount: {
+												/**
+												 * Amount
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The amount for this line item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The total monetary amount for this specific line item
+												 */
+												longDesc: () => LocalizedString
+											}
+											description: {
+												/**
+												 * Description
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Description of the line item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * A detailed description of what this line item represents
+												 */
+												longDesc: () => LocalizedString
+											}
+											quantity: {
+												/**
+												 * Quantity
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The quantity of the item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The number of units of the item being invoiced
+												 */
+												longDesc: () => LocalizedString
+											}
+											unit_price: {
+												/**
+												 * Unit Price
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The price per unit
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The cost per individual unit of the item
+												 */
+												longDesc: () => LocalizedString
+											}
+											item_id: {
+												/**
+												 * Item ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The item for this line
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The unique identifier of the item being invoiced
+												 */
+												longDesc: () => LocalizedString
+											}
+											service_date: {
+												/**
+												 * Service Date
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The date when the service was provided
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The specific date when the service or item was delivered
+												 */
+												longDesc: () => LocalizedString
+											}
+											tax_code_id: {
+												/**
+												 * Tax Code ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The tax code for this line item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The unique identifier of the tax code to apply to this line item
+												 */
+												longDesc: () => LocalizedString
+											}
+											class_id: {
+												/**
+												 * Class ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The class for this line item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The unique identifier of the class to categorize this line item
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				create_item: {
+					/**
+					 * Create Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new item in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new item for products or services that can be used on invoices, estimates, and other transactions
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						name: {
+							/**
+							 * Item Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The name of the item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The display name for this item as it will appear on transactions
+							 */
+							longDesc: () => LocalizedString
+						}
+						type: {
+							/**
+							 * Item Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The type of item being created
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the type of item: Service (for services), NonInventory (for non-tracked products), or Inventory (for tracked products)
+							 */
+							longDesc: () => LocalizedString
+						}
+						income_account_id: {
+							/**
+							 * Income Account ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The income account for this item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the account that will be credited when this item is sold
+							 */
+							longDesc: () => LocalizedString
+						}
+						expense_account_id: {
+							/**
+							 * Expense Account ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The expense account for this item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the account that will be debited when this item is purchased
+							 */
+							longDesc: () => LocalizedString
+						}
+						account_id: {
+							/**
+							 * Asset Account ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The asset account for inventory items
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the asset account used to track inventory value (required for Inventory items)
+							 */
+							longDesc: () => LocalizedString
+						}
+						quantity_on_hand: {
+							/**
+							 * Quantity On Hand
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The initial quantity in stock
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The starting quantity of this inventory item that you currently have in stock
+							 */
+							longDesc: () => LocalizedString
+						}
+						track_quantity_on_hand: {
+							/**
+							 * Track Quantity On Hand
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to track inventory quantities
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enable this to track the quantity of this inventory item in stock
+							 */
+							longDesc: () => LocalizedString
+						}
+						inventory_start_date: {
+							/**
+							 * Inventory Start Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The date when inventory tracking begins
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date from which inventory tracking for this item should begin
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_item: {
+					/**
+					 * Get Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific item from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch detailed information about a specific item using its ID
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Item ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The QuickBooks item ID to retrieve detailed information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_items: {
+					/**
+					 * List Items
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of items from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch multiple items from QuickBooks with optional filtering, sorting, and pagination capabilities
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						fetchAll: {
+							/**
+							 * Fetch All
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Retrieve all items without pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, fetches all items ignoring limit and offset parameters
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of items to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of items to return in a single request (default: 50)
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of items to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of items to skip before starting to return results (default: 0)
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria for items
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply filtering to narrow down the list of items based on specific field values
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to filter on
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The item field to apply the filter criteria to
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The operator to use for comparing the field value (e.g., =, !=, <, >)
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The value to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to compare against the specified field
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort criteria for items
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the returned items list
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The item field to use for sorting the results
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Whether to sort in ascending or descending order
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				get_journal_entry: {
+					/**
+					 * Get Journal Entry
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific journal entry from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch detailed information about a specific journal entry using its ID
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Journal Entry ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the journal entry
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The QuickBooks journal entry ID to retrieve detailed information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_journal_entries: {
+					/**
+					 * List Journal Entries
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of journal entries from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch multiple journal entries from QuickBooks with optional filtering, sorting, and pagination capabilities
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						fetchAll: {
+							/**
+							 * Fetch All
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Retrieve all journal entries without pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, fetches all journal entries ignoring limit and offset parameters
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of journal entries to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of journal entries to return in a single request (default: 50)
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of journal entries to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of journal entries to skip before starting to return results (default: 0)
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria for journal entries
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply filtering to narrow down the list of journal entries based on specific field values
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to filter on
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The journal entry field to apply the filter criteria to
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The operator to use for comparing the field value (e.g., =, !=, <, >)
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The value to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to compare against the specified field
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort criteria for journal entries
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the returned journal entries list
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The journal entry field to use for sorting the results
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Whether to sort in ascending or descending order
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				delete_payment: {
+					/**
+					 * Delete Payment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a payment from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently remove a payment record from QuickBooks using its unique identifier
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Payment ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the payment to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The QuickBooks payment ID that you want to permanently remove
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_payment: {
+					/**
+					 * Get Payment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific payment from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch detailed information about a specific payment using its ID
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Payment ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the payment
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The QuickBooks payment ID to retrieve detailed information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_payments: {
+					/**
+					 * List Payments
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of payments from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch multiple payments from QuickBooks with optional filtering, sorting, and pagination capabilities
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						fetchAll: {
+							/**
+							 * Fetch All
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Retrieve all payments without pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, fetches all payments ignoring limit and offset parameters
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of payments to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of payments to return in a single request (default: 50)
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of payments to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of payments to skip before starting to return results (default: 0)
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria for payments
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply filtering to narrow down the list of payments based on specific field values
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to filter on
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The payment field to apply the filter criteria to
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The operator to use for comparing the field value (e.g., =, !=, <, >)
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The value to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to compare against the specified field
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort criteria for payments
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the returned payments list
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The payment field to use for sorting the results
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Whether to sort in ascending or descending order
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				get_purchase_order: {
+					/**
+					 * Get Purchase Order
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific purchase order from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch detailed information about a specific purchase order using its ID
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Purchase Order ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the purchase order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The QuickBooks purchase order ID to retrieve detailed information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_purchase: {
+					/**
+					 * Get Purchase
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific purchase from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch detailed information about a specific purchase transaction using its ID
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Purchase ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the purchase
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The QuickBooks purchase ID to retrieve detailed information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_purchases: {
+					/**
+					 * List Purchases
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of purchases from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch multiple purchases from QuickBooks with optional filtering, sorting, and pagination capabilities
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						fetchAll: {
+							/**
+							 * Fetch All
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Retrieve all purchases without pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, fetches all purchases ignoring limit and offset parameters
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of purchases to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of purchases to return in a single request (default: 50)
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of purchases to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of purchases to skip before starting to return results (default: 0)
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria for purchases
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply filtering to narrow down the list of purchases based on specific field values
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to filter on
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The purchase field to apply the filter criteria to
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The operator to use for comparing the field value (e.g., =, !=, <, >)
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The value to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to compare against the specified field
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort criteria for purchases
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the returned purchases list
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The purchase field to use for sorting the results
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Whether to sort in ascending or descending order
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				list_purchase_orders: {
+					/**
+					 * List Purchase Orders
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of purchase orders from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch multiple purchase orders from QuickBooks with optional filtering, sorting, and pagination capabilities
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						fetchAll: {
+							/**
+							 * Fetch All
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Retrieve all purchase orders without pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, fetches all purchase orders ignoring limit and offset parameters
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of purchase orders to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of purchase orders to return in a single request (default: 50)
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of purchase orders to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of purchase orders to skip before starting to return results (default: 0)
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria for purchase orders
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply filtering to narrow down the list of purchase orders based on specific field values
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to filter on
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The purchase order field to apply the filter criteria to
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The operator to use for comparing the field value (e.g., =, !=, <, >)
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The value to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to compare against the specified field
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort criteria for purchase orders
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the returned purchase orders list
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The purchase order field to use for sorting the results
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Whether to sort in ascending or descending order
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				get_refund_receipt: {
+					/**
+					 * Get Refund Receipt
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific refund receipt from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch detailed information about a specific refund receipt using its ID
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Refund Receipt ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the refund receipt
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The QuickBooks refund receipt ID to retrieve detailed information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_refund_receipts: {
+					/**
+					 * List Refund Receipts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of refund receipts from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch multiple refund receipts from QuickBooks with optional filtering, sorting, and pagination capabilities
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						fetchAll: {
+							/**
+							 * Fetch All
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Retrieve all refund receipts without pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, fetches all refund receipts ignoring limit and offset parameters
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of refund receipts to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of refund receipts to return in a single request (default: 50)
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of refund receipts to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of refund receipts to skip before starting to return results (default: 0)
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria for refund receipts
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply filtering to narrow down the list of refund receipts based on specific field values
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to filter on
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The refund receipt field to apply the filter criteria to
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The operator to use for comparing the field value (e.g., =, !=, <, >)
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The value to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to compare against the specified field
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort criteria for refund receipts
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the returned refund receipts list
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The refund receipt field to use for sorting the results
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Whether to sort in ascending or descending order
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				get_sales_receipt: {
+					/**
+					 * Get Sales Receipt
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific sales receipt from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch detailed information about a specific sales receipt using its ID
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Sales Receipt ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the sales receipt
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The QuickBooks sales receipt ID to retrieve detailed information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_sales_receipts: {
+					/**
+					 * List Sales Receipts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of sales receipts from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch multiple sales receipts from QuickBooks with optional filtering, sorting, and pagination capabilities
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						fetchAll: {
+							/**
+							 * Fetch All
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Retrieve all sales receipts without pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, fetches all sales receipts ignoring limit and offset parameters
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of sales receipts to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of sales receipts to return in a single request (default: 50)
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of sales receipts to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of sales receipts to skip before starting to return results (default: 0)
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria for sales receipts
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply filtering to narrow down the list of sales receipts based on specific field values
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to filter on
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The sales receipt field to apply the filter criteria to
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The operator to use for comparing the field value (e.g., =, !=, <, >)
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The value to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to compare against the specified field
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort criteria for sales receipts
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the returned sales receipts list
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The sales receipt field to use for sorting the results
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Whether to sort in ascending or descending order
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				create_vendor: {
+					/**
+					 * Create Vendor
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new vendor in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new vendor record with contact information, address, and other business details
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						display_name: {
+							/**
+							 * Display Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The display name for the vendor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name that will be displayed for this vendor in QuickBooks
+							 */
+							longDesc: () => LocalizedString
+						}
+						phone: {
+							/**
+							 * Phone Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The primary phone number of the vendor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The main contact phone number for the vendor
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The email address of the vendor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The primary email address for contacting the vendor
+							 */
+							longDesc: () => LocalizedString
+						}
+						website: {
+							/**
+							 * Website
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The vendor's website URL
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The web address of the vendor's website
+							 */
+							longDesc: () => LocalizedString
+						}
+						address: {
+							/**
+							 * Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The billing address of the vendor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The address where bills should be sent for this vendor
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									Line1: {
+										/**
+										 * Address Line 1
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The first line of the vendor address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The street address or P.O. box number
+										 */
+										longDesc: () => LocalizedString
+									}
+									Line2: {
+										/**
+										 * Address Line 2
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The second line of the vendor address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Additional address information like apartment or suite number
+										 */
+										longDesc: () => LocalizedString
+									}
+									City: {
+										/**
+										 * City
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The city of the vendor address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The city where the vendor is located
+										 */
+										longDesc: () => LocalizedString
+									}
+									PostalCode: {
+										/**
+										 * Postal Code
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The postal code of the vendor address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The ZIP code or postal code for the vendor address
+										 */
+										longDesc: () => LocalizedString
+									}
+									CountrySubDivisionCode: {
+										/**
+										 * State/Province
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The state or province code
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The state or province abbreviation (e.g., CA, NY, ON)
+										 */
+										longDesc: () => LocalizedString
+									}
+									Country: {
+										/**
+										 * Country
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The country of the vendor address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The country where the vendor is located
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				get_vendor: {
+					/**
+					 * Get Vendor
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific vendor from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch detailed information about a specific vendor using their ID
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Vendor ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the vendor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The QuickBooks vendor ID to retrieve detailed information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_vendors: {
+					/**
+					 * List Vendors
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of vendors from QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch multiple vendors from QuickBooks with optional filtering, sorting, and pagination capabilities
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						fetchAll: {
+							/**
+							 * Fetch All
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Retrieve all vendors without pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, fetches all vendors ignoring limit and offset parameters
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of vendors to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of vendors to return in a single request (default: 50)
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of vendors to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of vendors to skip before starting to return results (default: 0)
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria for vendors
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply filtering to narrow down the list of vendors based on specific field values
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to filter on
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The vendor field to apply the filter criteria to
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The operator to use for comparing the field value (e.g., =, !=, <, >)
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The value to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to compare against the specified field
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort criteria for vendors
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the returned vendors list
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The vendor field to use for sorting the results
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Whether to sort in ascending or descending order
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				update_vendor: {
+					/**
+					 * Update Vendor
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing vendor in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Modify an existing vendor record with updated contact information, address, and other business details
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Vendor ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the vendor to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The QuickBooks vendor ID that you want to update
+							 */
+							longDesc: () => LocalizedString
+						}
+						display_name: {
+							/**
+							 * Display Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The display name for the vendor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name that will be displayed for this vendor in QuickBooks
+							 */
+							longDesc: () => LocalizedString
+						}
+						phone: {
+							/**
+							 * Phone Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The primary phone number of the vendor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The main contact phone number for the vendor
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The email address of the vendor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The primary email address for contacting the vendor
+							 */
+							longDesc: () => LocalizedString
+						}
+						website: {
+							/**
+							 * Website
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The vendor's website URL
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The web address of the vendor's website
+							 */
+							longDesc: () => LocalizedString
+						}
+						address: {
+							/**
+							 * Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The billing address of the vendor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The address where bills should be sent for this vendor
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									Line1: {
+										/**
+										 * Address Line 1
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The first line of the vendor address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The street address or P.O. box number
+										 */
+										longDesc: () => LocalizedString
+									}
+									Line2: {
+										/**
+										 * Address Line 2
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The second line of the vendor address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Additional address information like apartment or suite number
+										 */
+										longDesc: () => LocalizedString
+									}
+									City: {
+										/**
+										 * City
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The city of the vendor address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The city where the vendor is located
+										 */
+										longDesc: () => LocalizedString
+									}
+									PostalCode: {
+										/**
+										 * Postal Code
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The postal code of the vendor address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The ZIP code or postal code for the vendor address
+										 */
+										longDesc: () => LocalizedString
+									}
+									CountrySubDivisionCode: {
+										/**
+										 * State/Province
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The state or province code
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The state or province abbreviation (e.g., CA, NY, ON)
+										 */
+										longDesc: () => LocalizedString
+									}
+									Country: {
+										/**
+										 * Country
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The country of the vendor address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The country where the vendor is located
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			triggers: {
+				bill_trigger: {
+					/**
+					 * Bill Trigger
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a bill is created or updated in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitor QuickBooks for new bills or updates to existing bills. This trigger allows you to respond to bill events in real-time.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						action: {
+							/**
+							 * Trigger Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose whether to trigger on created or updated bills
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select "Created" to trigger when new bills are added to QuickBooks, or "Updated" to trigger when existing bills are modified.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				credit_memo_trigger: {
+					/**
+					 * Credit Memo Trigger
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a credit memo is created or updated in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitor QuickBooks for new credit memos or updates to existing credit memos. This trigger allows you to respond to credit memo events in real-time.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						action: {
+							/**
+							 * Trigger Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose whether to trigger on created or updated credit memos
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select "Created" to trigger when new credit memos are added to QuickBooks, or "Updated" to trigger when existing credit memos are modified.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				customer_trigger: {
+					/**
+					 * Customer Trigger
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a customer is created or updated in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitor QuickBooks for new customers or updates to existing customers. This trigger allows you to respond to customer events in real-time.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						action: {
+							/**
+							 * Trigger Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose whether to trigger on created or updated customers
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select "Created" to trigger when new customers are added to QuickBooks, or "Updated" to trigger when existing customers are modified.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				deposit_trigger: {
+					/**
+					 * Deposit Trigger
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a deposit is created or updated in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitor QuickBooks for new deposits or updates to existing deposits. This trigger allows you to respond to deposit events in real-time.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						action: {
+							/**
+							 * Trigger Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose whether to trigger on created or updated deposits
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select "Created" to trigger when new deposits are added to QuickBooks, or "Updated" to trigger when existing deposits are modified.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				estimate_trigger: {
+					/**
+					 * Estimate Trigger
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an estimate is created or updated in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitor QuickBooks for new estimates or updates to existing estimates. This trigger allows you to respond to estimate events in real-time.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						action: {
+							/**
+							 * Trigger Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose whether to trigger on created or updated estimates
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select "Created" to trigger when new estimates are added to QuickBooks, or "Updated" to trigger when existing estimates are modified.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				invoice_trigger: {
+					/**
+					 * Invoice Trigger
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an invoice is created or updated in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitor QuickBooks for new invoices or updates to existing invoices. This trigger allows you to respond to invoice events in real-time.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						action: {
+							/**
+							 * Trigger Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose whether to trigger on created or updated invoices
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select "Created" to trigger when new invoices are added to QuickBooks, or "Updated" to trigger when existing invoices are modified.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				item_trigger: {
+					/**
+					 * Item Trigger
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an item is created or updated in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitor QuickBooks for new items or updates to existing items. This trigger allows you to respond to item events in real-time.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						action: {
+							/**
+							 * Trigger Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose whether to trigger on created or updated items
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select "Created" to trigger when new items are added to QuickBooks, or "Updated" to trigger when existing items are modified.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				journal_entry_trigger: {
+					/**
+					 * Journal Entry Trigger
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a journal entry is created or updated in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitor QuickBooks for new journal entries or updates to existing journal entries. This trigger allows you to respond to journal entry events in real-time.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						action: {
+							/**
+							 * Trigger Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose whether to trigger on created or updated journal entries
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select "Created" to trigger when new journal entries are added to QuickBooks, or "Updated" to trigger when existing journal entries are modified.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				payment_trigger: {
+					/**
+					 * Payment Trigger
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a payment is created or updated in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitor QuickBooks for new payments or updates to existing payments. This trigger allows you to respond to payment events in real-time.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						action: {
+							/**
+							 * Trigger Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose whether to trigger on created or updated payments
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select "Created" to trigger when new payments are added to QuickBooks, or "Updated" to trigger when existing payments are modified.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				purchase_order_trigger: {
+					/**
+					 * Purchase Order Trigger
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a purchase order is created or updated in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitor QuickBooks for new purchase orders or updates to existing purchase orders. This trigger allows you to respond to purchase order events in real-time.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						action: {
+							/**
+							 * Trigger Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose whether to trigger on created or updated purchase orders
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select "Created" to trigger when new purchase orders are added to QuickBooks, or "Updated" to trigger when existing purchase orders are modified.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				purchase_trigger: {
+					/**
+					 * Purchase Trigger
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a purchase is created or updated in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitor QuickBooks for new purchases or updates to existing purchases. This trigger allows you to respond to purchase events in real-time.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						action: {
+							/**
+							 * Trigger Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose whether to trigger on created or updated purchases
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select "Created" to trigger when new purchases are added to QuickBooks, or "Updated" to trigger when existing purchases are modified.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				refund_receipt_trigger: {
+					/**
+					 * Refund Receipt Trigger
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a refund receipt is created or updated in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitor QuickBooks for new refund receipts or updates to existing refund receipts. This trigger allows you to respond to refund receipt events in real-time.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						action: {
+							/**
+							 * Trigger Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose whether to trigger on created or updated refund receipts
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select "Created" to trigger when new refund receipts are added to QuickBooks, or "Updated" to trigger when existing refund receipts are modified.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				sales_receipt_trigger: {
+					/**
+					 * Sales Receipt Trigger
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a sales receipt is created or updated in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitor QuickBooks for new sales receipts or updates to existing sales receipts. This trigger allows you to respond to sales receipt events in real-time.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						action: {
+							/**
+							 * Trigger Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose whether to trigger on created or updated sales receipts
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select "Created" to trigger when new sales receipts are added to QuickBooks, or "Updated" to trigger when existing sales receipts are modified.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				vendor_trigger: {
+					/**
+					 * Vendor Trigger
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a vendor is created or updated in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitor QuickBooks for new vendors or updates to existing vendors. This trigger allows you to respond to vendor events in real-time.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						action: {
+							/**
+							 * Trigger Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose whether to trigger on created or updated vendors
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select "Created" to trigger when new vendors are added to QuickBooks, or "Updated" to trigger when existing vendors are modified.
+							 */
+							longDesc: () => LocalizedString
 						}
 					}
 				}
@@ -66242,6 +82628,2068 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Specify the Item ID of the list item that you want to update. This ensures that the correct item is modified.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		Klaviyo: {
+			/**
+			 * Klaviyo
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Email and SMS marketing automation platform
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Klaviyo is a unified customer platform that gives online brands direct ownership of their consumer data and interactions, empowering them to turn transactions with customers into productive long-term relationships.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				get_profile: {
+					/**
+					 * Get Profile
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves a specific profile
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves detailed information about a specific profile by its ID
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Profile ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the profile to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the profile you want to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+						additionalFields: {
+							/**
+							 * Additional Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional profile fields to include
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional additional fields to include in the profile response
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_campaigns: {
+					/**
+					 * List Campaigns
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Lists campaigns
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of campaigns with optional filtering and sorting
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						cursor: {
+							/**
+							 * Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Cursor for pagination to get the next set of results
+							 */
+							longDesc: () => LocalizedString
+						}
+						pageSize: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of items per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of campaigns to return per page
+							 */
+							longDesc: () => LocalizedString
+						}
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Campaign channel type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The channel type to filter campaigns by (email or SMS)
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Campaign name filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter campaigns by name containing this value
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort options
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Sort configuration for the campaign list
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The field to use for sorting the campaign list
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The direction to sort the campaign list (ascending or descending)
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				list_lists: {
+					/**
+					 * List Lists
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Lists all lists
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of all lists with optional filtering and sorting
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						cursor: {
+							/**
+							 * Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Cursor for pagination to get the next set of results
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter options
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter configuration for the list results
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									name: {
+										/**
+										 * Name Filter
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter by list names
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Filter lists by names containing these values
+										 */
+										longDesc: () => LocalizedString
+									}
+									id: {
+										/**
+										 * ID Filter
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter by list IDs
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Filter lists by specific IDs
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort options
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Sort configuration for the list results
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The field to use for sorting the list results
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The direction to sort the list results (ascending or descending)
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				list_profiles: {
+					/**
+					 * List Profiles
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Lists profiles
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of profiles with optional filtering and sorting
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						additionalFields: {
+							/**
+							 * Additional Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional profile fields to include
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional additional fields to include in the profile responses
+							 */
+							longDesc: () => LocalizedString
+						}
+						cursor: {
+							/**
+							 * Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Cursor for pagination to get the next set of results
+							 */
+							longDesc: () => LocalizedString
+						}
+						pageSize: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of items per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of profiles to return per page
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter options
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter configuration for the profile results
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									email: {
+										/**
+										 * Email Filter
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter by email addresses
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Filter profiles by specific email addresses
+										 */
+										longDesc: () => LocalizedString
+									}
+									phone_number: {
+										/**
+										 * Phone Number Filter
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter by phone numbers
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Filter profiles by specific phone numbers
+										 */
+										longDesc: () => LocalizedString
+									}
+									external_id: {
+										/**
+										 * External ID Filter
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter by external IDs
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Filter profiles by specific external IDs
+										 */
+										longDesc: () => LocalizedString
+									}
+									id: {
+										/**
+										 * ID Filter
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter by profile IDs
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Filter profiles by specific profile IDs
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort options
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Sort configuration for the profile results
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The field to use for sorting the profile results
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The direction to sort the profile results (ascending or descending)
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				list_segments: {
+					/**
+					 * List Segments
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Lists segments
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of segments with optional filtering and sorting
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						cursor: {
+							/**
+							 * Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Cursor for pagination to get the next set of results
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter options
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter configuration for the segment results
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									name: {
+										/**
+										 * Name Filter
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter by segment names
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Filter segments by names containing these values
+										 */
+										longDesc: () => LocalizedString
+									}
+									id: {
+										/**
+										 * ID Filter
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter by segment IDs
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Filter segments by specific IDs
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort options
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Sort configuration for the segment results
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The field to use for sorting the segment results
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The direction to sort the segment results (ascending or descending)
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				list_tags: {
+					/**
+					 * List Tags
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Lists tags
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of tags with optional filtering and sorting
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						cursor: {
+							/**
+							 * Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Cursor for pagination to get the next set of results
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter options
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter configuration for the tag results
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									name: {
+										/**
+										 * Name Filter
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter by tag name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Filter tags by name containing this value
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort options
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Sort configuration for the tag results
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The field to use for sorting the tag results
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Sort Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The direction to sort the tag results (ascending or descending)
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				remove_profile_from_list: {
+					/**
+					 * Remove Profile from List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Removes a profile from a list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes a specified profile from a specified list in Klaviyo
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						profile: {
+							/**
+							 * Profile
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Profile to remove
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The profile to remove from the list
+							 */
+							longDesc: () => LocalizedString
+						}
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The list to remove the profile from
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				remove_tag_from_list: {
+					/**
+					 * Remove Tag from List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Removes a tag from a list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes a specified tag from a specified list in Klaviyo
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						tag: {
+							/**
+							 * Tag
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Tag to remove
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The tag to remove from the list
+							 */
+							longDesc: () => LocalizedString
+						}
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The list to remove the tag from
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				remove_tag_from_segment: {
+					/**
+					 * Remove Tag from Segment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Removes a tag from a segment
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes a specified tag from a specified segment in Klaviyo
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						tag: {
+							/**
+							 * Tag
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Tag to remove
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The tag to remove from the segment
+							 */
+							longDesc: () => LocalizedString
+						}
+						segment: {
+							/**
+							 * Segment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target segment
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The segment to remove the tag from
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				send_campaign: {
+					/**
+					 * Send Campaign
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Sends a campaign
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Sends a draft campaign immediately to its target audience
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Campaign ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the campaign to send
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the campaign you want to send
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				subscribe_profile: {
+					/**
+					 * Subscribe Profile
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Subscribes a profile to marketing channels
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Subscribes a profile to email marketing, SMS marketing, or both channels
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						profileId: {
+							/**
+							 * Profile ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the profile to subscribe
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the profile to subscribe
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address of the profile to subscribe
+							 */
+							longDesc: () => LocalizedString
+						}
+						phoneNumber: {
+							/**
+							 * Phone Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The phone number of the profile to subscribe
+							 */
+							longDesc: () => LocalizedString
+						}
+						consentToSubscribeToChannel: {
+							/**
+							 * Subscription Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Channel to subscribe to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The marketing channel(s) to subscribe the profile to
+							 */
+							longDesc: () => LocalizedString
+						}
+						smsSubscriptionType: {
+							/**
+							 * SMS Subscription Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of SMS subscription
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The type of SMS subscription (marketing, transactional, or both)
+							 */
+							longDesc: () => LocalizedString
+						}
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional list to add the profile to during subscription
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				unsubscribe_profile: {
+					/**
+					 * Unsubscribe Profile
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Unsubscribes a profile from marketing channels
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Unsubscribes a profile from email and/or SMS marketing based on provided identifiers
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address of the profile to unsubscribe
+							 */
+							longDesc: () => LocalizedString
+						}
+						phoneNumber: {
+							/**
+							 * Phone Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The phone number of the profile to unsubscribe
+							 */
+							longDesc: () => LocalizedString
+						}
+						smsSubscriptionType: {
+							/**
+							 * SMS Subscription Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of SMS subscription to cancel
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The type of SMS subscription to cancel (marketing, transactional, or both)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_profile: {
+					/**
+					 * Update Profile
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates an existing profile
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates an existing profile with new information and optionally adds them to a list
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Profile ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the profile to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the profile you want to update
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new email address for the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						phoneNumber: {
+							/**
+							 * Phone Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new phone number for the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						firstName: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * First name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The first name of the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						lastName: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Last name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The last name of the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Job title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The job title of the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						organization: {
+							/**
+							 * Organization
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Organization name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The organization or company name for the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						city: {
+							/**
+							 * City
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * City
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The city where the profile is located
+							 */
+							longDesc: () => LocalizedString
+						}
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * State or region
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The state or region where the profile is located
+							 */
+							longDesc: () => LocalizedString
+						}
+						country: {
+							/**
+							 * Country
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Country
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The country where the profile is located
+							 */
+							longDesc: () => LocalizedString
+						}
+						zip: {
+							/**
+							 * ZIP Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ZIP or postal code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ZIP or postal code for the profile location
+							 */
+							longDesc: () => LocalizedString
+						}
+						imageUrl: {
+							/**
+							 * Image URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Profile image URL
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * URL to the profile image
+							 */
+							longDesc: () => LocalizedString
+						}
+						externalId: {
+							/**
+							 * External ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * External identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * External identifier for the profile from your system
+							 */
+							longDesc: () => LocalizedString
+						}
+						customProperties: {
+							/**
+							 * Custom Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom profile properties
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Additional custom properties to set on the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_tag_to_list: {
+					/**
+					 * Add Tag to List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Adds an existing tag to a list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Associates an existing tag with a specified list in Klaviyo
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						tag: {
+							/**
+							 * Tag
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Tag to add
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The tag to add to the list
+							 */
+							longDesc: () => LocalizedString
+						}
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The list to add the tag to
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_tag_to_segment: {
+					/**
+					 * Add Tag to Segment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Adds an existing tag to a segment
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Associates an existing tag with a specified segment in Klaviyo
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						tag: {
+							/**
+							 * Tag
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Tag to add
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The tag to add to the segment
+							 */
+							longDesc: () => LocalizedString
+						}
+						segment: {
+							/**
+							 * Segment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target segment
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The segment to add the tag to
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_event: {
+					/**
+					 * Create Event
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new event
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new event for a specific metric in Klaviyo
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address of the profile for the event
+							 */
+							longDesc: () => LocalizedString
+						}
+						metric: {
+							/**
+							 * Metric
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Event metric
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The metric or event type to track
+							 */
+							longDesc: () => LocalizedString
+						}
+						profile: {
+							/**
+							 * Profile
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Profile ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The profile ID to associate with the event
+							 */
+							longDesc: () => LocalizedString
+						}
+						time: {
+							/**
+							 * Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Event timestamp
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The timestamp when the event occurred
+							 */
+							longDesc: () => LocalizedString
+						}
+						value: {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Event value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The monetary value associated with the event
+							 */
+							longDesc: () => LocalizedString
+						}
+						customId: {
+							/**
+							 * Custom ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Unique event identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A custom unique identifier for the event
+							 */
+							longDesc: () => LocalizedString
+						}
+						customProperties: {
+							/**
+							 * Custom Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Event properties
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Additional custom properties for the event
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_list: {
+					/**
+					 * Create List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new list in Klaviyo with the specified configuration
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the new list
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_or_update_profile: {
+					/**
+					 * Create Or Update Profile
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new profile or updates an existing one
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new profile or updates an existing profile and optionally adds it to a list
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Profile ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Profile ID (for update)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of an existing profile to update (leave empty to create new)
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address for the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						phoneNumber: {
+							/**
+							 * Phone Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The phone number for the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						firstName: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * First name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The first name of the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						lastName: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Last name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The last name of the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Job title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The job title of the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						organization: {
+							/**
+							 * Organization
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Organization name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The organization or company name for the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						city: {
+							/**
+							 * City
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * City
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The city where the profile is located
+							 */
+							longDesc: () => LocalizedString
+						}
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * State or region
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The state or region where the profile is located
+							 */
+							longDesc: () => LocalizedString
+						}
+						country: {
+							/**
+							 * Country
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Country
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The country where the profile is located
+							 */
+							longDesc: () => LocalizedString
+						}
+						zip: {
+							/**
+							 * ZIP Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ZIP or postal code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ZIP or postal code for the profile location
+							 */
+							longDesc: () => LocalizedString
+						}
+						imageUrl: {
+							/**
+							 * Image URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Profile image URL
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * URL to the profile image
+							 */
+							longDesc: () => LocalizedString
+						}
+						externalId: {
+							/**
+							 * External ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * External identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * External identifier for the profile from your system
+							 */
+							longDesc: () => LocalizedString
+						}
+						customProperties: {
+							/**
+							 * Custom Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom profile properties
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Additional custom properties to set on the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_profile: {
+					/**
+					 * Create Profile
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new profile
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new profile in Klaviyo with the specified information
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address for the new profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						phoneNumber: {
+							/**
+							 * Phone Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The phone number for the new profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						firstName: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * First name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The first name of the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						lastName: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Last name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The last name of the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Job title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The job title of the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						organization: {
+							/**
+							 * Organization
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Organization name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The organization or company name for the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+						city: {
+							/**
+							 * City
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * City
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The city where the profile is located
+							 */
+							longDesc: () => LocalizedString
+						}
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * State or region
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The state or region where the profile is located
+							 */
+							longDesc: () => LocalizedString
+						}
+						country: {
+							/**
+							 * Country
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Country
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The country where the profile is located
+							 */
+							longDesc: () => LocalizedString
+						}
+						zip: {
+							/**
+							 * ZIP Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ZIP or postal code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ZIP or postal code for the profile location
+							 */
+							longDesc: () => LocalizedString
+						}
+						imageUrl: {
+							/**
+							 * Image URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Profile image URL
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * URL to the profile image
+							 */
+							longDesc: () => LocalizedString
+						}
+						externalId: {
+							/**
+							 * External ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * External identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * External identifier for the profile from your system
+							 */
+							longDesc: () => LocalizedString
+						}
+						customProperties: {
+							/**
+							 * Custom Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom profile properties
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Additional custom properties to set on the profile
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_campaign: {
+					/**
+					 * Get Campaign
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieves a specific campaign
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves detailed information about a specific campaign by its ID
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Campaign ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the campaign to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the campaign you want to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_profile_to_list: {
+					/**
+					 * Add Profile to List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Adds an existing profile to a list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Adds an existing profile to a specified list in Klaviyo
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						profile: {
+							/**
+							 * Profile
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Profile to add
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The profile to add to the list
+							 */
+							longDesc: () => LocalizedString
+						}
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The list to add the profile to
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_event: {
+					/**
+					 * New Event
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new event occurs
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new event occurs for a specific metric in Klaviyo
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						metric: {
+							/**
+							 * Metric
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Event metric to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The specific metric or event type to monitor for new events
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_profile: {
+					/**
+					 * New Profile
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new profile is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new profile is created in Klaviyo
+					 */
+					longDesc: () => LocalizedString
+				}
+				new_list_profile: {
+					/**
+					 * Profile Added to List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a profile is added to a list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a profile is added to a specific list in Klaviyo
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The specific list to monitor for new profile additions
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_segment_profile: {
+					/**
+					 * Profile Added to Segment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a profile is added to a segment
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a profile is added to a specific segment in Klaviyo
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						segment: {
+							/**
+							 * Segment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Segment to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The specific segment to monitor for new profile additions
 							 */
 							longDesc: () => LocalizedString
 						}

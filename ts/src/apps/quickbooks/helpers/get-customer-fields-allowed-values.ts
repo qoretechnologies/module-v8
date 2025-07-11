@@ -1,0 +1,26 @@
+import { IQoreAllowedValue } from '@qoretechnologies/ts-toolkit';
+
+export const QuickBooksCustomerFieldsAllowedValues = [
+  { value: 'Taxable', display_name: 'Taxable' },
+  { value: 'Job', display_name: 'Job' },
+  { value: 'BillWithParent', display_name: 'Bill With Parent' },
+  { value: 'Balance', display_name: 'Balance' },
+  { value: 'BalanceWithJobs', display_name: 'Balance With Jobs' },
+  { value: 'PreferredDeliveryMethod', display_name: 'Preferred Delivery Method' },
+  { value: 'IsProject', display_name: 'Is Project' },
+  { value: 'ClientEntityId', display_name: 'Client Entity ID' },
+  { value: 'domain', display_name: 'Domain' },
+  { value: 'sparse', display_name: 'Sparse' },
+  { value: 'Id', display_name: 'Customer ID' },
+  { value: 'SyncToken', display_name: 'Sync Token' },
+  { value: 'MetaData.CreateTime', display_name: 'Create Time' },
+  { value: 'MetaData.LastUpdatedTime', display_name: 'Last Updated Time' },
+  { value: 'GivenName', display_name: 'Given Name' },
+  { value: 'FamilyName', display_name: 'Family Name' },
+  { value: 'FullyQualifiedName', display_name: 'Fully Qualified Name' },
+  { value: 'CompanyName', display_name: 'Company Name' },
+  { value: 'DisplayName', display_name: 'Display Name' },
+  { value: 'PrintOnCheckName', display_name: 'Print On Check Name' },
+  { value: 'Active', display_name: 'Active' },
+  { value: 'V4IDPseudonym', display_name: 'V4 ID Pseudonym' },
+] satisfies IQoreAllowedValue<string>[];

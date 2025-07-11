@@ -1,0 +1,10 @@
+export class KlaviyoError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'KlaviyoError';
+  }
+}
+
+export const KLAVIYO_APP_NAME = 'Klaviyo';
+export const KLAVIYO_APP_LOGO =
+  'PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDY3LjggNDUuNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNjcuOCA0NS40OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CiA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgogIC5zdDB7ZmlsbDojRkZGRkZGO30KIDwvc3R5bGU+CiA8Zz4KICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNjcuOCw0NS40SDBWMGg2Ny44TDUzLjYsMjIuN0w2Ny44LDQ1LjRMNjcuOCw0NS40eiI+CiAgPC9wYXRoPgogPC9nPgo8L3N2Zz4=';

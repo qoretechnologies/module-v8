@@ -591,3 +591,81 @@ export const getQoreContextRequiredValues = <
 
   return result;
 };
+
+export const formatDateReadable = (
+  dateString: string,
+  options: {
+    includeTime?: boolean;
+    format?: 'short' | 'medium' | 'long';
+    showRelative?: boolean;
+  } = {}
+): string => {
+  const { includeTime = true, format = 'medium', showRelative = false } = options;
+
+  try {
+    const date = new Date(dateString);
+
+    if (isNaN(date.getTime())) {
+      throw new Error('Invalid date string while formatting date');
+    }
+
+    if (showRelative) {
+      const now = new Date();
+      const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      const targetDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+      const yesterday = new Date(today);
+      yesterday.setDate(yesterday.getDate() - 1);
+
+      const timeString = date.toLocaleTimeString([], {
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: true,
+      });
+
+      if (targetDate.getTime() === today.getTime()) {
+        return `Today at ${timeString}`;
+      } else if (targetDate.getTime() === yesterday.getTime()) {
+        return `Yesterday at ${timeString}`;
+      }
+    }
+
+    let dateOptions: Intl.DateTimeFormatOptions;
+
+    switch (format) {
+      case 'short':
+        dateOptions = {
+          month: 'numeric',
+          day: 'numeric',
+          year: 'numeric',
+        };
+        break;
+      case 'long':
+        dateOptions = {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        };
+        break;
+      case 'medium':
+      default:
+        dateOptions = {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric',
+        };
+    }
+
+    if (includeTime) {
+      dateOptions.hour = 'numeric';
+      dateOptions.minute = '2-digit';
+      dateOptions.hour12 = true;
+    }
+
+    return date.toLocaleString('en-US', dateOptions);
+  } catch (error) {
+    console.error('Error formatting date:', error);
+
+    return 'Invalid date';
+  }
+};
