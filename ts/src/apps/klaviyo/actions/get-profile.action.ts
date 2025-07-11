@@ -50,7 +50,7 @@ const getProfile = QoreAppCreator.createLocalizedAction<typeof options>({
 
       return omit(response.body.data, ['relationships', 'links']);
     } catch (error) {
-      throw new KlaviyoError(`Failed to list profiles: ${getKlaviyoErrorMessage(error)}`);
+      throw new KlaviyoError(`Failed to get the profile: ${getKlaviyoErrorMessage(error)}`);
     }
   },
   response_type: {

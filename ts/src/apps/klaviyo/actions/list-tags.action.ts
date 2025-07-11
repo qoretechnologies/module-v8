@@ -71,7 +71,7 @@ const listTags = QoreAppCreator.createLocalizedAction<typeof options>({
     const pageCursor = obj?.cursor;
 
     try {
-      // @ts-expect-error apis.listsApi.getLists has strict type definitions for sort params
+      // @ts-expect-error apis.tagsApi.getTags has strict type definitions for sort params
       const response = await apis.tagsApi.getTags({
         ...(pageCursor && { pageCursor }),
         ...(filterString && { filter: filterString }),
@@ -83,7 +83,7 @@ const listTags = QoreAppCreator.createLocalizedAction<typeof options>({
         next: response.body?.links?.next || null,
       };
     } catch (error) {
-      throw new KlaviyoError(`Failed to list segments: ${getKlaviyoErrorMessage(error)}`);
+      throw new KlaviyoError(`Failed to list tags: ${getKlaviyoErrorMessage(error)}`);
     }
   },
   response_type: {
