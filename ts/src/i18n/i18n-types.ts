@@ -1206,6 +1206,20 @@ type RootTranslation = {
 				}
 			}
 		}
+		ClickUp: {
+			/**
+			 * C​l​i​c​k​U​p
+			 */
+			displayName: string
+			/**
+			 * C​l​i​c​k​U​p​ ​i​s​ ​a​ ​p​r​o​d​u​c​t​i​v​i​t​y​ ​p​l​a​t​f​o​r​m​ ​t​h​a​t​ ​a​l​l​o​w​s​ ​t​e​a​m​s​ ​t​o​ ​m​a​n​a​g​e​ ​t​a​s​k​s​,​ ​p​r​o​j​e​c​t​s​,​ ​a​n​d​ ​w​o​r​k​f​l​o​w​s​ ​i​n​ ​o​n​e​ ​p​l​a​c​e​.
+			 */
+			shortDesc: string
+			/**
+			 * C​l​i​c​k​U​p​ ​i​s​ ​a​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​p​r​o​d​u​c​t​i​v​i​t​y​ ​p​l​a​t​f​o​r​m​ ​d​e​s​i​g​n​e​d​ ​t​o​ ​h​e​l​p​ ​t​e​a​m​s​ ​s​t​r​e​a​m​l​i​n​e​ ​t​h​e​i​r​ ​w​o​r​k​f​l​o​w​s​,​ ​m​a​n​a​g​e​ ​t​a​s​k​s​,​ ​a​n​d​ ​c​o​l​l​a​b​o​r​a​t​e​ ​e​f​f​e​c​t​i​v​e​l​y​.​ ​I​t​ ​o​f​f​e​r​s​ ​a​ ​w​i​d​e​ ​r​a​n​g​e​ ​o​f​ ​f​e​a​t​u​r​e​s​ ​i​n​c​l​u​d​i​n​g​ ​t​a​s​k​ ​m​a​n​a​g​e​m​e​n​t​,​ ​t​i​m​e​ ​t​r​a​c​k​i​n​g​,​ ​g​o​a​l​ ​s​e​t​t​i​n​g​,​ ​a​n​d​ ​d​o​c​u​m​e​n​t​ ​s​h​a​r​i​n​g​,​ ​a​l​l​ ​w​i​t​h​i​n​ ​a​ ​c​u​s​t​o​m​i​z​a​b​l​e​ ​i​n​t​e​r​f​a​c​e​.​ ​C​l​i​c​k​U​p​ ​a​i​m​s​ ​t​o​ ​e​n​h​a​n​c​e​ ​t​e​a​m​ ​p​r​o​d​u​c​t​i​v​i​t​y​ ​b​y​ ​p​r​o​v​i​d​i​n​g​ ​t​o​o​l​s​ ​t​h​a​t​ ​a​d​a​p​t​ ​t​o​ ​v​a​r​i​o​u​s​ ​w​o​r​k​ ​s​t​y​l​e​s​ ​a​n​d​ ​p​r​o​j​e​c​t​ ​r​e​q​u​i​r​e​m​e​n​t​s​.
+			 */
+			longDesc: string
+		}
 		GoogleDocs: {
 			/**
 			 * G​o​o​g​l​e​ ​D​o​c​s
@@ -50634,6 +50648,20 @@ export type TranslationFunctions = {
 					}
 				}
 			}
+		}
+		ClickUp: {
+			/**
+			 * ClickUp
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * ClickUp is a productivity platform that allows teams to manage tasks, projects, and workflows in one place.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * ClickUp is a comprehensive productivity platform designed to help teams streamline their workflows, manage tasks, and collaborate effectively. It offers a wide range of features including task management, time tracking, goal setting, and document sharing, all within a customizable interface. ClickUp aims to enhance team productivity by providing tools that adapt to various work styles and project requirements.
+			 */
+			longDesc: () => LocalizedString
 		}
 		GoogleDocs: {
 			/**
