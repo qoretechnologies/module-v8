@@ -1219,6 +1219,2702 @@ type RootTranslation = {
 			 * C​l​i​c​k​U​p​ ​i​s​ ​a​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​p​r​o​d​u​c​t​i​v​i​t​y​ ​p​l​a​t​f​o​r​m​ ​d​e​s​i​g​n​e​d​ ​t​o​ ​h​e​l​p​ ​t​e​a​m​s​ ​s​t​r​e​a​m​l​i​n​e​ ​t​h​e​i​r​ ​w​o​r​k​f​l​o​w​s​,​ ​m​a​n​a​g​e​ ​t​a​s​k​s​,​ ​a​n​d​ ​c​o​l​l​a​b​o​r​a​t​e​ ​e​f​f​e​c​t​i​v​e​l​y​.​ ​I​t​ ​o​f​f​e​r​s​ ​a​ ​w​i​d​e​ ​r​a​n​g​e​ ​o​f​ ​f​e​a​t​u​r​e​s​ ​i​n​c​l​u​d​i​n​g​ ​t​a​s​k​ ​m​a​n​a​g​e​m​e​n​t​,​ ​t​i​m​e​ ​t​r​a​c​k​i​n​g​,​ ​g​o​a​l​ ​s​e​t​t​i​n​g​,​ ​a​n​d​ ​d​o​c​u​m​e​n​t​ ​s​h​a​r​i​n​g​,​ ​a​l​l​ ​w​i​t​h​i​n​ ​a​ ​c​u​s​t​o​m​i​z​a​b​l​e​ ​i​n​t​e​r​f​a​c​e​.​ ​C​l​i​c​k​U​p​ ​a​i​m​s​ ​t​o​ ​e​n​h​a​n​c​e​ ​t​e​a​m​ ​p​r​o​d​u​c​t​i​v​i​t​y​ ​b​y​ ​p​r​o​v​i​d​i​n​g​ ​t​o​o​l​s​ ​t​h​a​t​ ​a​d​a​p​t​ ​t​o​ ​v​a​r​i​o​u​s​ ​w​o​r​k​ ​s​t​y​l​e​s​ ​a​n​d​ ​p​r​o​j​e​c​t​ ​r​e​q​u​i​r​e​m​e​n​t​s​.
 			 */
 			longDesc: string
+			actions: {
+				list_lists: {
+					/**
+					 * L​i​s​t​ ​L​i​s​t​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​C​l​i​c​k​U​p​ ​l​i​s​t​s​ ​w​i​t​h​i​n​ ​a​ ​f​o​l​d​e​r
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​l​i​s​t​s​ ​c​o​n​t​a​i​n​e​d​ ​w​i​t​h​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​C​l​i​c​k​U​p​ ​f​o​l​d​e​r​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​a​r​c​h​i​v​e​d​ ​f​i​l​t​e​r​i​n​g
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​f​o​l​d​e​r
+							 */
+							longDesc: string
+						}
+						space: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​f​o​l​d​e​r
+							 */
+							longDesc: string
+						}
+						folder: {
+							/**
+							 * F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​f​o​l​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​f​o​l​d​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​l​i​s​t​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+						archived: {
+							/**
+							 * I​n​c​l​u​d​e​ ​A​r​c​h​i​v​e​d
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​a​r​c​h​i​v​e​d​ ​l​i​s​t​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​a​r​c​h​i​v​e​d​ ​l​i​s​t​s​ ​i​n​ ​t​h​e​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_folder: {
+					/**
+					 * G​e​t​ ​F​o​l​d​e​r
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​C​l​i​c​k​U​p​ ​f​o​l​d​e​r​ ​d​e​t​a​i​l​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​C​l​i​c​k​U​p​ ​f​o​l​d​e​r​ ​i​n​c​l​u​d​i​n​g​ ​c​o​n​t​a​i​n​e​d​ ​l​i​s​t​s​ ​a​n​d​ ​s​t​a​t​u​s​e​s
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​f​o​l​d​e​r
+							 */
+							longDesc: string
+						}
+						space: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​f​o​l​d​e​r
+							 */
+							longDesc: string
+						}
+						folder: {
+							/**
+							 * F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​f​o​l​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​f​o​l​d​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_lists: {
+					/**
+					 * G​e​t​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​C​l​i​c​k​U​p​ ​l​i​s​t​ ​d​e​t​a​i​l​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​C​l​i​c​k​U​p​ ​l​i​s​t​ ​i​n​c​l​u​d​i​n​g​ ​s​t​a​t​u​s​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​s​ ​a​n​d​ ​m​e​t​a​d​a​t​a
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+						space: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+						folder: {
+							/**
+							 * F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​f​o​l​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​f​o​l​d​e​r​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​l​i​s​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_folders: {
+					/**
+					 * L​i​s​t​ ​F​o​l​d​e​r​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​C​l​i​c​k​U​p​ ​f​o​l​d​e​r​s​ ​w​i​t​h​i​n​ ​a​ ​s​p​a​c​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​f​o​l​d​e​r​s​ ​c​o​n​t​a​i​n​e​d​ ​w​i​t​h​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​C​l​i​c​k​U​p​ ​s​p​a​c​e​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​a​r​c​h​i​v​e​d​ ​f​i​l​t​e​r​i​n​g
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​s​p​a​c​e
+							 */
+							longDesc: string
+						}
+						space: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​s​p​a​c​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​o​l​d​e​r​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+						archived: {
+							/**
+							 * I​n​c​l​u​d​e​ ​A​r​c​h​i​v​e​d
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​a​r​c​h​i​v​e​d​ ​f​o​l​d​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​a​r​c​h​i​v​e​d​ ​f​o​l​d​e​r​s​ ​i​n​ ​t​h​e​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_task_comment: {
+					/**
+					 * A​d​d​ ​T​a​s​k​ ​C​o​m​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​ ​c​o​m​m​e​n​t​ ​t​o​ ​a​ ​C​l​i​c​k​U​p​ ​t​a​s​k
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​o​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​C​l​i​c​k​U​p​ ​t​a​s​k​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​a​s​s​i​g​n​e​e​ ​a​n​d​ ​g​r​o​u​p​ ​a​s​s​i​g​n​e​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​s
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​s​k​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							longDesc: string
+						}
+						space: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​s​p​a​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​s​k​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							longDesc: string
+						}
+						folder: {
+							/**
+							 * F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​f​o​l​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​f​o​l​d​e​r​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​s​k​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							longDesc: string
+						}
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​l​i​s​t​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​s​k​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							longDesc: string
+						}
+						task: {
+							/**
+							 * T​a​s​k
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​t​a​s​k​ ​t​o​ ​a​d​d​ ​t​h​e​ ​c​o​m​m​e​n​t​ ​t​o
+							 */
+							longDesc: string
+						}
+						comment_text: {
+							/**
+							 * C​o​m​m​e​n​t​ ​T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​c​o​m​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​c​o​m​m​e​n​t​ ​t​o​ ​b​e​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						notify_all: {
+							/**
+							 * N​o​t​i​f​y​ ​A​l​l
+							 */
+							displayName: string
+							/**
+							 * N​o​t​i​f​y​ ​a​l​l​ ​t​a​s​k​ ​m​e​m​b​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​n​o​t​i​f​y​ ​a​l​l​ ​t​a​s​k​ ​m​e​m​b​e​r​s​ ​a​b​o​u​t​ ​t​h​e​ ​n​e​w​ ​c​o​m​m​e​n​t
+							 */
+							longDesc: string
+						}
+						assignee: {
+							/**
+							 * A​s​s​i​g​n​e​e
+							 */
+							displayName: string
+							/**
+							 * C​o​m​m​e​n​t​ ​a​s​s​i​g​n​e​e
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​r​ ​t​o​ ​a​s​s​i​g​n​ ​t​h​e​ ​c​o​m​m​e​n​t​ ​t​o
+							 */
+							longDesc: string
+						}
+						group_assignee: {
+							/**
+							 * G​r​o​u​p​ ​A​s​s​i​g​n​e​e
+							 */
+							displayName: string
+							/**
+							 * G​r​o​u​p​ ​t​o​ ​a​s​s​i​g​n​ ​c​o​m​m​e​n​t​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * G​r​o​u​p​ ​t​o​ ​a​s​s​i​g​n​ ​t​h​e​ ​c​o​m​m​e​n​t​ ​t​o
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_document: {
+					/**
+					 * C​r​e​a​t​e​ ​D​o​c​u​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​C​l​i​c​k​U​p​ ​d​o​c​u​m​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​d​o​c​u​m​e​n​t​ ​i​n​ ​C​l​i​c​k​U​p​ ​w​i​t​h​ ​c​u​s​t​o​m​i​z​a​b​l​e​ ​n​a​m​e​,​ ​p​a​r​e​n​t​ ​l​o​c​a​t​i​o​n​,​ ​a​n​d​ ​v​i​s​i​b​i​l​i​t​y​ ​s​e​t​t​i​n​g​s
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​d​o​c​u​m​e​n​t​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * D​o​c​u​m​e​n​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​f​ ​t​h​e​ ​d​o​c​u​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​/​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​d​o​c​u​m​e​n​t
+							 */
+							longDesc: string
+						}
+						parent: {
+							/**
+							 * P​a​r​e​n​t​ ​L​o​c​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * P​a​r​e​n​t​ ​c​o​n​t​a​i​n​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​a​r​e​n​t​ ​c​o​n​t​a​i​n​e​r​ ​(​s​p​a​c​e​,​ ​f​o​l​d​e​r​,​ ​l​i​s​t​,​ ​e​t​c​.​)​ ​w​h​e​r​e​ ​t​h​e​ ​d​o​c​u​m​e​n​t​ ​w​i​l​l​ ​b​e​ ​p​l​a​c​e​d
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									id: {
+										/**
+										 * P​a​r​e​n​t​ ​I​D
+										 */
+										displayName: string
+										/**
+										 * I​D​ ​o​f​ ​p​a​r​e​n​t​ ​c​o​n​t​a​i​n​e​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​c​o​n​t​a​i​n​e​r
+										 */
+										longDesc: string
+									}
+									type: {
+										/**
+										 * P​a​r​e​n​t​ ​T​y​p​e
+										 */
+										displayName: string
+										/**
+										 * T​y​p​e​ ​o​f​ ​p​a​r​e​n​t​ ​c​o​n​t​a​i​n​e​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​t​y​p​e​ ​o​f​ ​p​a​r​e​n​t​ ​c​o​n​t​a​i​n​e​r​ ​(​4​=​S​p​a​c​e​,​ ​5​=​F​o​l​d​e​r​,​ ​6​=​L​i​s​t​,​ ​7​=​E​v​e​r​y​t​h​i​n​g​,​ ​1​2​=​W​o​r​k​s​p​a​c​e​)
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						visibility: {
+							/**
+							 * V​i​s​i​b​i​l​i​t​y
+							 */
+							displayName: string
+							/**
+							 * D​o​c​u​m​e​n​t​ ​v​i​s​i​b​i​l​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​e​ ​d​o​c​u​m​e​n​t​ ​s​h​o​u​l​d​ ​b​e​ ​p​u​b​l​i​c​ ​o​r​ ​p​r​i​v​a​t​e
+							 */
+							longDesc: string
+						}
+						create_page: {
+							/**
+							 * C​r​e​a​t​e​ ​P​a​g​e
+							 */
+							displayName: string
+							/**
+							 * C​r​e​a​t​e​ ​i​n​i​t​i​a​l​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​c​r​e​a​t​e​ ​a​n​ ​i​n​i​t​i​a​l​ ​p​a​g​e​ ​w​i​t​h​i​n​ ​t​h​e​ ​d​o​c​u​m​e​n​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_document_page: {
+					/**
+					 * C​r​e​a​t​e​ ​D​o​c​u​m​e​n​t​ ​P​a​g​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​p​a​g​e​ ​w​i​t​h​i​n​ ​a​ ​C​l​i​c​k​U​p​ ​d​o​c​u​m​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​ ​a​ ​n​e​w​ ​p​a​g​e​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​C​l​i​c​k​U​p​ ​d​o​c​u​m​e​n​t​ ​w​i​t​h​ ​c​o​n​t​e​n​t​ ​a​n​d​ ​f​o​r​m​a​t​t​i​n​g​ ​o​p​t​i​o​n​s
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​d​o​c​u​m​e​n​t
+							 */
+							longDesc: string
+						}
+						document: {
+							/**
+							 * D​o​c​u​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​d​o​c​u​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​d​o​c​u​m​e​n​t​ ​t​o​ ​a​d​d​ ​t​h​e​ ​p​a​g​e​ ​t​o
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * P​a​g​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​f​ ​t​h​e​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​/​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​p​a​g​e
+							 */
+							longDesc: string
+						}
+						content: {
+							/**
+							 * C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * P​a​g​e​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​n​e​w​ ​p​a​g​e
+							 */
+							longDesc: string
+						}
+						sub_title: {
+							/**
+							 * S​u​b​t​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * P​a​g​e​ ​s​u​b​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​o​p​t​i​o​n​a​l​ ​s​u​b​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​p​a​g​e
+							 */
+							longDesc: string
+						}
+						content_format: {
+							/**
+							 * C​o​n​t​e​n​t​ ​F​o​r​m​a​t
+							 */
+							displayName: string
+							/**
+							 * F​o​r​m​a​t​ ​o​f​ ​t​h​e​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​o​r​m​a​t​ ​o​f​ ​t​h​e​ ​p​a​g​e​ ​c​o​n​t​e​n​t​ ​(​M​a​r​k​d​o​w​n​ ​o​r​ ​P​l​a​i​n​ ​T​e​x​t​)
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_folder: {
+					/**
+					 * C​r​e​a​t​e​ ​F​o​l​d​e​r
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​C​l​i​c​k​U​p​ ​f​o​l​d​e​r
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​f​o​l​d​e​r​ ​w​i​t​h​i​n​ ​a​ ​C​l​i​c​k​U​p​ ​s​p​a​c​e​ ​t​o​ ​o​r​g​a​n​i​z​e​ ​l​i​s​t​s​ ​a​n​d​ ​t​a​s​k​s
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​f​o​l​d​e​r​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d
+							 */
+							longDesc: string
+						}
+						space: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * P​a​r​e​n​t​ ​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​s​p​a​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​f​o​l​d​e​r​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * F​o​l​d​e​r​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​f​ ​t​h​e​ ​f​o​l​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​f​o​l​d​e​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_list: {
+					/**
+					 * C​r​e​a​t​e​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​C​l​i​c​k​U​p​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​l​i​s​t​ ​w​i​t​h​i​n​ ​a​ ​C​l​i​c​k​U​p​ ​f​o​l​d​e​r​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​c​o​n​t​e​n​t​,​ ​a​s​s​i​g​n​e​e​,​ ​a​n​d​ ​d​u​e​ ​d​a​t​e
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​l​i​s​t​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d
+							 */
+							longDesc: string
+						}
+						space: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​f​o​l​d​e​r
+							 */
+							longDesc: string
+						}
+						folder: {
+							/**
+							 * F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * P​a​r​e​n​t​ ​f​o​l​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​f​o​l​d​e​r​ ​w​h​e​r​e​ ​t​h​e​ ​l​i​s​t​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * L​i​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​f​ ​t​h​e​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+						content: {
+							/**
+							 * C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​c​o​n​t​e​n​t​ ​f​o​r​ ​t​h​e​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+						assignee: {
+							/**
+							 * A​s​s​i​g​n​e​e
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​a​s​s​i​g​n​e​e
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​r​ ​t​o​ ​a​s​s​i​g​n​ ​t​h​e​ ​l​i​s​t​ ​t​o
+							 */
+							longDesc: string
+						}
+						priority: {
+							/**
+							 * P​r​i​o​r​i​t​y
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​p​r​i​o​r​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * P​r​i​o​r​i​t​y​ ​l​e​v​e​l​ ​f​o​r​ ​t​h​e​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+						due_date: {
+							/**
+							 * D​u​e​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​d​u​e​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * D​u​e​ ​d​a​t​e​ ​f​o​r​ ​t​h​e​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+						markdown_content: {
+							/**
+							 * M​a​r​k​d​o​w​n​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * M​a​r​k​d​o​w​n​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n​ ​c​o​n​t​e​n​t​ ​i​n​ ​M​a​r​k​d​o​w​n​ ​f​o​r​m​a​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_task: {
+					/**
+					 * C​r​e​a​t​e​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​C​l​i​c​k​U​p​ ​t​a​s​k
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​t​a​s​k​ ​i​n​ ​C​l​i​c​k​U​p​ ​w​i​t​h​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​o​p​t​i​o​n​s​ ​f​o​r​ ​a​s​s​i​g​n​e​e​s​,​ ​d​a​t​e​s​,​ ​p​r​i​o​r​i​t​y​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​s​k​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d
+							 */
+							longDesc: string
+						}
+						space: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+						folder: {
+							/**
+							 * F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​f​o​l​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​f​o​l​d​e​r​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​l​i​s​t​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​s​k​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * T​a​s​k​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​f​ ​t​h​e​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​/​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​a​s​k​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * D​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						assignees: {
+							/**
+							 * A​s​s​i​g​n​e​e​s
+							 */
+							displayName: string
+							/**
+							 * T​a​s​k​ ​a​s​s​i​g​n​e​e​s
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​r​s​ ​t​o​ ​a​s​s​i​g​n​ ​t​h​e​ ​t​a​s​k​ ​t​o
+							 */
+							longDesc: string
+						}
+						archived: {
+							/**
+							 * A​r​c​h​i​v​e​d
+							 */
+							displayName: string
+							/**
+							 * A​r​c​h​i​v​e​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​t​a​s​k​ ​i​n​ ​a​n​ ​a​r​c​h​i​v​e​d​ ​s​t​a​t​e
+							 */
+							longDesc: string
+						}
+						group_assignees: {
+							/**
+							 * G​r​o​u​p​ ​A​s​s​i​g​n​e​e​s
+							 */
+							displayName: string
+							/**
+							 * G​r​o​u​p​ ​a​s​s​i​g​n​e​e​s
+							 */
+							shortDesc: string
+							/**
+							 * G​r​o​u​p​s​ ​t​o​ ​a​s​s​i​g​n​ ​t​h​e​ ​t​a​s​k​ ​t​o
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * T​a​s​k​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * T​a​g​s​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​e​ ​t​a​s​k​ ​f​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						priority: {
+							/**
+							 * P​r​i​o​r​i​t​y
+							 */
+							displayName: string
+							/**
+							 * T​a​s​k​ ​p​r​i​o​r​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * P​r​i​o​r​i​t​y​ ​l​e​v​e​l​ ​f​o​r​ ​t​h​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						due_date: {
+							/**
+							 * D​u​e​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * T​a​s​k​ ​d​u​e​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​t​h​e​ ​t​a​s​k​ ​i​s​ ​d​u​e
+							 */
+							longDesc: string
+						}
+						start_date: {
+							/**
+							 * S​t​a​r​t​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * T​a​s​k​ ​s​t​a​r​t​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​w​o​r​k​ ​o​n​ ​t​h​e​ ​t​a​s​k​ ​s​h​o​u​l​d​ ​b​e​g​i​n
+							 */
+							longDesc: string
+						}
+						time_estimate: {
+							/**
+							 * T​i​m​e​ ​E​s​t​i​m​a​t​e
+							 */
+							displayName: string
+							/**
+							 * E​s​t​i​m​a​t​e​d​ ​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * E​s​t​i​m​a​t​e​d​ ​t​i​m​e​ ​r​e​q​u​i​r​e​d​ ​t​o​ ​c​o​m​p​l​e​t​e​ ​t​h​e​ ​t​a​s​k​ ​(​i​n​ ​m​i​n​u​t​e​s​)
+							 */
+							longDesc: string
+						}
+						points: {
+							/**
+							 * P​o​i​n​t​s
+							 */
+							displayName: string
+							/**
+							 * T​a​s​k​ ​p​o​i​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * P​o​i​n​t​ ​v​a​l​u​e​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						notify_all: {
+							/**
+							 * N​o​t​i​f​y​ ​A​l​l
+							 */
+							displayName: string
+							/**
+							 * N​o​t​i​f​y​ ​t​e​a​m​ ​m​e​m​b​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​n​o​t​i​f​y​ ​a​l​l​ ​r​e​l​e​v​a​n​t​ ​t​e​a​m​ ​m​e​m​b​e​r​s​ ​a​b​o​u​t​ ​t​h​e​ ​n​e​w​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						parent: {
+							/**
+							 * P​a​r​e​n​t​ ​T​a​s​k
+							 */
+							displayName: string
+							/**
+							 * P​a​r​e​n​t​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * P​a​r​e​n​t​ ​t​a​s​k​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​i​s​ ​a​s​ ​a​ ​s​u​b​t​a​s​k
+							 */
+							longDesc: string
+						}
+						markdown_content: {
+							/**
+							 * M​a​r​k​d​o​w​n​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * M​a​r​k​d​o​w​n​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​a​s​k​ ​d​e​s​c​r​i​p​t​i​o​n​ ​i​n​ ​M​a​r​k​d​o​w​n​ ​f​o​r​m​a​t
+							 */
+							longDesc: string
+						}
+						links_to: {
+							/**
+							 * L​i​n​k​s​ ​T​o
+							 */
+							displayName: string
+							/**
+							 * L​i​n​k​e​d​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * T​a​s​k​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​l​i​n​k​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​w​i​t​h
+							 */
+							longDesc: string
+						}
+						check_required_custom_fields: {
+							/**
+							 * C​h​e​c​k​ ​R​e​q​u​i​r​e​d​ ​C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * V​a​l​i​d​a​t​e​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​v​a​l​i​d​a​t​e​ ​t​h​a​t​ ​a​l​l​ ​r​e​q​u​i​r​e​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​ ​a​r​e​ ​p​r​o​v​i​d​e​d
+							 */
+							longDesc: string
+						}
+						custom_fields: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * V​a​l​u​e​s​ ​f​o​r​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​ ​d​e​f​i​n​e​d​ ​i​n​ ​t​h​e​ ​w​o​r​k​s​p​a​c​e
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											id: {
+												/**
+												 * F​i​e​l​d​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​i​d​e​n​t​i​f​i​e​r
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​ ​f​i​e​l​d
+												 */
+												longDesc: string
+											}
+											value: {
+												/**
+												 * F​i​e​l​d​ ​V​a​l​u​e
+												 */
+												displayName: string
+												/**
+												 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​s​e​t​ ​f​o​r​ ​t​h​i​s​ ​c​u​s​t​o​m​ ​f​i​e​l​d
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+						custom_item_id: {
+							/**
+							 * C​u​s​t​o​m​ ​I​t​e​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​a​s​k​ ​t​y​p​e​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​t​a​s​k​ ​t​y​p​e​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_task: {
+					/**
+					 * D​e​l​e​t​e​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​C​l​i​c​k​U​p​ ​t​a​s​k
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​C​l​i​c​k​U​p​ ​t​a​s​k​ ​f​r​o​m​ ​y​o​u​r​ ​w​o​r​k​s​p​a​c​e
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						space: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						folder: {
+							/**
+							 * F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​f​o​l​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​f​o​l​d​e​r​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​l​i​s​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						task: {
+							/**
+							 * T​a​s​k
+							 */
+							displayName: string
+							/**
+							 * T​a​s​k​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​t​a​s​k​ ​t​o​ ​b​e​ ​d​e​l​e​t​e​d
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_document: {
+					/**
+					 * G​e​t​ ​D​o​c​u​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​C​l​i​c​k​U​p​ ​d​o​c​u​m​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​d​e​t​a​i​l​s​ ​a​n​d​ ​c​o​n​t​e​n​t​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​C​l​i​c​k​U​p​ ​d​o​c​u​m​e​n​t
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​d​o​c​u​m​e​n​t
+							 */
+							longDesc: string
+						}
+						document: {
+							/**
+							 * D​o​c​u​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​d​o​c​u​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​d​o​c​u​m​e​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_task: {
+					/**
+					 * G​e​t​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​C​l​i​c​k​U​p​ ​t​a​s​k
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​C​l​i​c​k​U​p​ ​t​a​s​k​ ​i​n​c​l​u​d​i​n​g​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​ ​a​n​d​ ​a​t​t​a​c​h​m​e​n​t​s
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						space: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						folder: {
+							/**
+							 * F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​f​o​l​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​f​o​l​d​e​r​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​l​i​s​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						task: {
+							/**
+							 * T​a​s​k
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​t​a​s​k​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+						include_markdown_description: {
+							/**
+							 * I​n​c​l​u​d​e​ ​M​a​r​k​d​o​w​n​ ​D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​m​a​r​k​d​o​w​n​ ​f​o​r​m​a​t
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​t​h​e​ ​t​a​s​k​ ​d​e​s​c​r​i​p​t​i​o​n​ ​i​n​ ​M​a​r​k​d​o​w​n​ ​f​o​r​m​a​t
+							 */
+							longDesc: string
+						}
+						subtasks: {
+							/**
+							 * I​n​c​l​u​d​e​ ​S​u​b​t​a​s​k​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​s​u​b​t​a​s​k​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​s​u​b​t​a​s​k​s​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_workspace: {
+					/**
+					 * G​e​t​ ​W​o​r​k​s​p​a​c​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​d​e​t​a​i​l​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​i​n​c​l​u​d​i​n​g​ ​m​e​m​b​e​r​s​ ​a​n​d​ ​r​o​l​e​s
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​w​o​r​k​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_channels: {
+					/**
+					 * L​i​s​t​ ​C​h​a​n​n​e​l​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​C​l​i​c​k​U​p​ ​c​h​a​t​ ​c​h​a​n​n​e​l​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​h​a​t​ ​c​h​a​n​n​e​l​s​ ​i​n​ ​a​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​ ​o​p​t​i​o​n​s
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​l​i​s​t​ ​c​h​a​n​n​e​l​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+						description_format: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n​ ​F​o​r​m​a​t
+							 */
+							displayName: string
+							/**
+							 * F​o​r​m​a​t​ ​f​o​r​ ​d​e​s​c​r​i​p​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​o​r​m​a​t​ ​t​o​ ​r​e​t​u​r​n​ ​c​h​a​n​n​e​l​ ​d​e​s​c​r​i​p​t​i​o​n​s​ ​i​n
+							 */
+							longDesc: string
+						}
+						cursor: {
+							/**
+							 * C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r
+							 */
+							shortDesc: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r​ ​f​o​r​ ​f​e​t​c​h​i​n​g​ ​a​d​d​i​t​i​o​n​a​l​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​h​a​n​n​e​l​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							longDesc: string
+						}
+						is_follower: {
+							/**
+							 * I​s​ ​F​o​l​l​o​w​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​f​o​l​l​o​w​e​r​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​f​i​l​t​e​r​ ​c​h​a​n​n​e​l​s​ ​b​y​ ​f​o​l​l​o​w​e​r​ ​s​t​a​t​u​s
+							 */
+							longDesc: string
+						}
+						include_hidden: {
+							/**
+							 * I​n​c​l​u​d​e​ ​H​i​d​d​e​n
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​h​i​d​d​e​n​ ​c​h​a​n​n​e​l​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​h​i​d​d​e​n​ ​c​h​a​n​n​e​l​s​ ​i​n​ ​t​h​e​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						room_types: {
+							/**
+							 * R​o​o​m​ ​T​y​p​e​s
+							 */
+							displayName: string
+							/**
+							 * C​h​a​n​n​e​l​ ​t​y​p​e​s​ ​t​o​ ​i​n​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​y​p​e​s​ ​o​f​ ​c​h​a​n​n​e​l​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_custom_fields: {
+					/**
+					 * L​i​s​t​ ​C​u​s​t​o​m​ ​F​i​e​l​d​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​C​l​i​c​k​U​p​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​ ​d​e​f​i​n​e​d​ ​i​n​ ​a​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​l​i​s​t​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_documents: {
+					/**
+					 * L​i​s​t​ ​D​o​c​u​m​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​C​l​i​c​k​U​p​ ​d​o​c​u​m​e​n​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​d​o​c​u​m​e​n​t​s​ ​i​n​ ​a​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​ ​o​p​t​i​o​n​s
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​l​i​s​t​ ​d​o​c​u​m​e​n​t​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+						creator: {
+							/**
+							 * C​r​e​a​t​o​r
+							 */
+							displayName: string
+							/**
+							 * D​o​c​u​m​e​n​t​ ​c​r​e​a​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​d​o​c​u​m​e​n​t​s​ ​b​y​ ​c​r​e​a​t​o​r
+							 */
+							longDesc: string
+						}
+						deleted: {
+							/**
+							 * D​e​l​e​t​e​d
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​d​e​l​e​t​e​d​ ​d​o​c​u​m​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​d​e​l​e​t​e​d​ ​d​o​c​u​m​e​n​t​s
+							 */
+							longDesc: string
+						}
+						archived: {
+							/**
+							 * A​r​c​h​i​v​e​d
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​a​r​c​h​i​v​e​d​ ​d​o​c​u​m​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​a​r​c​h​i​v​e​d​ ​d​o​c​u​m​e​n​t​s
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​d​o​c​u​m​e​n​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							longDesc: string
+						}
+						next_cursor: {
+							/**
+							 * N​e​x​t​ ​C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r
+							 */
+							shortDesc: string
+							/**
+							 * C​u​r​s​o​r​ ​f​o​r​ ​f​e​t​c​h​i​n​g​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						parent_id: {
+							/**
+							 * P​a​r​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * P​a​r​e​n​t​ ​c​o​n​t​a​i​n​e​r​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​p​a​r​e​n​t​ ​c​o​n​t​a​i​n​e​r​ ​t​o​ ​f​i​l​t​e​r​ ​d​o​c​u​m​e​n​t​s​ ​b​y
+							 */
+							longDesc: string
+						}
+						parent_type: {
+							/**
+							 * P​a​r​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * P​a​r​e​n​t​ ​c​o​n​t​a​i​n​e​r​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​p​a​r​e​n​t​ ​c​o​n​t​a​i​n​e​r​ ​t​o​ ​f​i​l​t​e​r​ ​d​o​c​u​m​e​n​t​s​ ​b​y
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_groups: {
+					/**
+					 * L​i​s​t​ ​G​r​o​u​p​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​C​l​i​c​k​U​p​ ​g​r​o​u​p​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​g​r​o​u​p​s​ ​f​r​o​m​ ​a​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​l​i​s​t​ ​g​r​o​u​p​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+						group_ids: {
+							/**
+							 * G​r​o​u​p​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​g​r​o​u​p​ ​I​D​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​g​r​o​u​p​ ​I​D​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​(​c​o​m​m​a​-​s​e​p​a​r​a​t​e​d​)
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_tasks: {
+					/**
+					 * L​i​s​t​ ​T​a​s​k​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​C​l​i​c​k​U​p​ ​t​a​s​k​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​t​a​s​k​s​ ​f​r​o​m​ ​a​ ​C​l​i​c​k​U​p​ ​l​i​s​t​ ​w​i​t​h​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​o​p​t​i​o​n​s
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+						space: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+						folder: {
+							/**
+							 * F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​f​o​l​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​f​o​l​d​e​r​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​l​i​s​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​a​s​k​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+						archived: {
+							/**
+							 * A​r​c​h​i​v​e​d
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​a​r​c​h​i​v​e​d​ ​t​a​s​k​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​a​r​c​h​i​v​e​d​ ​t​a​s​k​s
+							 */
+							longDesc: string
+						}
+						include_markdown_description: {
+							/**
+							 * I​n​c​l​u​d​e​ ​M​a​r​k​d​o​w​n​ ​D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​m​a​r​k​d​o​w​n​ ​f​o​r​m​a​t
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​t​a​s​k​ ​d​e​s​c​r​i​p​t​i​o​n​s​ ​i​n​ ​M​a​r​k​d​o​w​n​ ​f​o​r​m​a​t
+							 */
+							longDesc: string
+						}
+						page: {
+							/**
+							 * P​a​g​e
+							 */
+							displayName: string
+							/**
+							 * P​a​g​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * P​a​g​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						order_by: {
+							/**
+							 * O​r​d​e​r​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​t​a​s​k​s​ ​b​y
+							 */
+							longDesc: string
+						}
+						reverse: {
+							/**
+							 * R​e​v​e​r​s​e
+							 */
+							displayName: string
+							/**
+							 * R​e​v​e​r​s​e​ ​s​o​r​t​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​r​e​v​e​r​s​e​ ​t​h​e​ ​s​o​r​t​ ​o​r​d​e​r
+							 */
+							longDesc: string
+						}
+						subtasks: {
+							/**
+							 * I​n​c​l​u​d​e​ ​S​u​b​t​a​s​k​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​s​u​b​t​a​s​k​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​s​u​b​t​a​s​k​s​ ​i​n​ ​t​h​e​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						include_closed: {
+							/**
+							 * I​n​c​l​u​d​e​ ​C​l​o​s​e​d
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​c​l​o​s​e​d​ ​t​a​s​k​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​c​l​o​s​e​d​/​c​o​m​p​l​e​t​e​d​ ​t​a​s​k​s
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * T​a​s​k​ ​s​t​a​t​u​s​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​t​a​s​k​ ​s​t​a​t​u​s​e​s​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_workspaces: {
+					/**
+					 * L​i​s​t​ ​W​o​r​k​s​p​a​c​e​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​s​ ​a​c​c​e​s​s​i​b​l​e​ ​t​o​ ​t​h​e​ ​a​u​t​h​e​n​t​i​c​a​t​e​d​ ​u​s​e​r
+					 */
+					longDesc: string
+				}
+				send_channel_message: {
+					/**
+					 * S​e​n​d​ ​C​h​a​n​n​e​l​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​ ​C​l​i​c​k​U​p​ ​c​h​a​n​n​e​l
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​ ​a​ ​m​e​s​s​a​g​e​ ​o​r​ ​p​o​s​t​ ​t​o​ ​a​ ​C​l​i​c​k​U​p​ ​c​h​a​t​ ​c​h​a​n​n​e​l​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​a​s​s​i​g​n​e​e​s​ ​a​n​d​ ​f​o​l​l​o​w​e​r​s
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​c​h​a​n​n​e​l
+							 */
+							longDesc: string
+						}
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​c​h​a​n​n​e​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​c​h​a​n​n​e​l​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o
+							 */
+							longDesc: string
+						}
+						assignee: {
+							/**
+							 * A​s​s​i​g​n​e​e
+							 */
+							displayName: string
+							/**
+							 * M​e​s​s​a​g​e​ ​a​s​s​i​g​n​e​e
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​r​ ​t​o​ ​a​s​s​i​g​n​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o
+							 */
+							longDesc: string
+						}
+						group_assignee: {
+							/**
+							 * G​r​o​u​p​ ​A​s​s​i​g​n​e​e
+							 */
+							displayName: string
+							/**
+							 * G​r​o​u​p​ ​a​s​s​i​g​n​e​e
+							 */
+							shortDesc: string
+							/**
+							 * G​r​o​u​p​ ​t​o​ ​a​s​s​i​g​n​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o
+							 */
+							longDesc: string
+						}
+						type: {
+							/**
+							 * M​e​s​s​a​g​e​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​s​e​n​d​ ​a​s​ ​a​ ​m​e​s​s​a​g​e​ ​o​r​ ​p​o​s​t
+							 */
+							longDesc: string
+						}
+						content: {
+							/**
+							 * C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * M​e​s​s​a​g​e​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​s​e​n​d
+							 */
+							longDesc: string
+						}
+						followers: {
+							/**
+							 * F​o​l​l​o​w​e​r​s
+							 */
+							displayName: string
+							/**
+							 * M​e​s​s​a​g​e​ ​f​o​l​l​o​w​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​r​s​ ​t​o​ ​a​d​d​ ​a​s​ ​f​o​l​l​o​w​e​r​s​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							longDesc: string
+						}
+						content_format: {
+							/**
+							 * C​o​n​t​e​n​t​ ​F​o​r​m​a​t
+							 */
+							displayName: string
+							/**
+							 * M​e​s​s​a​g​e​ ​f​o​r​m​a​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​o​r​m​a​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_task: {
+					/**
+					 * U​p​d​a​t​e​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​ ​C​l​i​c​k​U​p​ ​t​a​s​k
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​C​l​i​c​k​U​p​ ​t​a​s​k​ ​w​i​t​h​ ​n​e​w​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​s​s​i​g​n​e​e​s​,​ ​d​a​t​e​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						space: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						folder: {
+							/**
+							 * F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​f​o​l​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​f​o​l​d​e​r​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​l​i​s​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						task: {
+							/**
+							 * T​a​s​k
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​t​a​s​k​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * T​a​s​k​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​t​a​s​k​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​n​a​m​e​/​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​t​a​s​k​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						assignees: {
+							/**
+							 * A​s​s​i​g​n​e​e​s
+							 */
+							displayName: string
+							/**
+							 * T​a​s​k​ ​a​s​s​i​g​n​e​e​s
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​r​s​ ​t​o​ ​a​s​s​i​g​n​ ​t​h​e​ ​t​a​s​k​ ​t​o​ ​(​w​i​l​l​ ​b​e​ ​a​d​d​e​d​ ​t​o​ ​e​x​i​s​t​i​n​g​ ​a​s​s​i​g​n​e​e​s​)
+							 */
+							longDesc: string
+						}
+						archived: {
+							/**
+							 * A​r​c​h​i​v​e​d
+							 */
+							displayName: string
+							/**
+							 * A​r​c​h​i​v​e​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​a​r​c​h​i​v​e​ ​t​h​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						group_assignees: {
+							/**
+							 * G​r​o​u​p​ ​A​s​s​i​g​n​e​e​s
+							 */
+							displayName: string
+							/**
+							 * G​r​o​u​p​ ​a​s​s​i​g​n​e​e​s
+							 */
+							shortDesc: string
+							/**
+							 * G​r​o​u​p​s​ ​t​o​ ​a​s​s​i​g​n​ ​t​h​e​ ​t​a​s​k​ ​t​o​ ​(​w​i​l​l​ ​b​e​ ​a​d​d​e​d​ ​t​o​ ​e​x​i​s​t​i​n​g​ ​g​r​o​u​p​ ​a​s​s​i​g​n​e​e​s​)
+							 */
+							longDesc: string
+						}
+						priority: {
+							/**
+							 * P​r​i​o​r​i​t​y
+							 */
+							displayName: string
+							/**
+							 * T​a​s​k​ ​p​r​i​o​r​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​p​r​i​o​r​i​t​y​ ​l​e​v​e​l​ ​f​o​r​ ​t​h​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						due_date: {
+							/**
+							 * D​u​e​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​d​u​e​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​d​u​e​ ​d​a​t​e​ ​f​o​r​ ​t​h​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						start_date: {
+							/**
+							 * S​t​a​r​t​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​s​t​a​r​t​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​s​t​a​r​t​ ​d​a​t​e​ ​f​o​r​ ​t​h​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						time_estimate: {
+							/**
+							 * T​i​m​e​ ​E​s​t​i​m​a​t​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​t​i​m​e​ ​e​s​t​i​m​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​e​s​t​i​m​a​t​e​d​ ​t​i​m​e​ ​r​e​q​u​i​r​e​d​ ​t​o​ ​c​o​m​p​l​e​t​e​ ​t​h​e​ ​t​a​s​k​ ​(​i​n​ ​m​i​n​u​t​e​s​)
+							 */
+							longDesc: string
+						}
+						points: {
+							/**
+							 * P​o​i​n​t​s
+							 */
+							displayName: string
+							/**
+							 * T​a​s​k​ ​p​o​i​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​p​o​i​n​t​ ​v​a​l​u​e​ ​f​o​r​ ​t​h​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						notify_all: {
+							/**
+							 * N​o​t​i​f​y​ ​A​l​l
+							 */
+							displayName: string
+							/**
+							 * N​o​t​i​f​y​ ​t​e​a​m​ ​m​e​m​b​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​n​o​t​i​f​y​ ​a​l​l​ ​r​e​l​e​v​a​n​t​ ​t​e​a​m​ ​m​e​m​b​e​r​s​ ​a​b​o​u​t​ ​t​h​e​ ​t​a​s​k​ ​u​p​d​a​t​e
+							 */
+							longDesc: string
+						}
+						parent: {
+							/**
+							 * P​a​r​e​n​t​ ​T​a​s​k
+							 */
+							displayName: string
+							/**
+							 * P​a​r​e​n​t​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​p​a​r​e​n​t​ ​t​a​s​k​ ​t​o​ ​m​a​k​e​ ​t​h​i​s​ ​a​ ​s​u​b​t​a​s​k
+							 */
+							longDesc: string
+						}
+						markdown_content: {
+							/**
+							 * M​a​r​k​d​o​w​n​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * M​a​r​k​d​o​w​n​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​t​a​s​k​ ​d​e​s​c​r​i​p​t​i​o​n​ ​i​n​ ​M​a​r​k​d​o​w​n​ ​f​o​r​m​a​t
+							 */
+							longDesc: string
+						}
+						links_to: {
+							/**
+							 * L​i​n​k​s​ ​T​o
+							 */
+							displayName: string
+							/**
+							 * L​i​n​k​e​d​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * T​a​s​k​ ​t​o​ ​c​r​e​a​t​e​ ​o​r​ ​u​p​d​a​t​e​ ​a​ ​l​i​n​k​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​w​i​t​h
+							 */
+							longDesc: string
+						}
+						check_required_custom_fields: {
+							/**
+							 * C​h​e​c​k​ ​R​e​q​u​i​r​e​d​ ​C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * V​a​l​i​d​a​t​e​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​v​a​l​i​d​a​t​e​ ​t​h​a​t​ ​a​l​l​ ​r​e​q​u​i​r​e​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​ ​a​r​e​ ​p​r​o​v​i​d​e​d
+							 */
+							longDesc: string
+						}
+						custom_fields: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​v​a​l​u​e​s​ ​f​o​r​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											id: {
+												/**
+												 * F​i​e​l​d​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​i​d​e​n​t​i​f​i​e​r
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​ ​f​i​e​l​d
+												 */
+												longDesc: string
+											}
+											value: {
+												/**
+												 * F​i​e​l​d​ ​V​a​l​u​e
+												 */
+												displayName: string
+												/**
+												 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​u​p​d​a​t​e​d​ ​v​a​l​u​e​ ​f​o​r​ ​t​h​i​s​ ​c​u​s​t​o​m​ ​f​i​e​l​d
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+						custom_item_id: {
+							/**
+							 * C​u​s​t​o​m​ ​I​t​e​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​a​s​k​ ​t​y​p​e​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​u​s​t​o​m​ ​t​a​s​k​ ​t​y​p​e​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_folder: {
+					/**
+					 * N​e​w​ ​F​o​l​d​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​f​o​l​d​e​r​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * W​e​b​h​o​o​k​ ​t​r​i​g​g​e​r​ ​t​h​a​t​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​f​o​l​d​e​r​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​f​o​l​d​e​r​ ​c​r​e​a​t​i​o​n​ ​e​v​e​n​t​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_list: {
+					/**
+					 * N​e​w​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​l​i​s​t​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * W​e​b​h​o​o​k​ ​t​r​i​g​g​e​r​ ​t​h​a​t​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​l​i​s​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​l​i​s​t​ ​c​r​e​a​t​i​o​n​ ​e​v​e​n​t​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_task: {
+					/**
+					 * N​e​w​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​a​s​k​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * W​e​b​h​o​o​k​ ​t​r​i​g​g​e​r​ ​t​h​a​t​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​a​s​k​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​t​a​s​k​ ​c​r​e​a​t​i​o​n​ ​e​v​e​n​t​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_task_comment: {
+					/**
+					 * N​e​w​ ​T​a​s​k​ ​C​o​m​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​c​o​m​m​e​n​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​t​a​s​k
+					 */
+					shortDesc: string
+					/**
+					 * W​e​b​h​o​o​k​ ​t​r​i​g​g​e​r​ ​t​h​a​t​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​i​s​ ​p​o​s​t​e​d​ ​t​o​ ​a​ ​t​a​s​k​,​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​s​p​a​c​e​,​ ​f​o​l​d​e​r​,​ ​l​i​s​t​,​ ​o​r​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​t​a​s​k​ ​c​o​m​m​e​n​t​ ​e​v​e​n​t​s
+							 */
+							longDesc: string
+						}
+						space: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​p​a​c​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​:​ ​O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​c​o​m​m​e​n​t​s​ ​i​n​ ​t​a​s​k​s​ ​w​i​t​h​i​n​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​s​p​a​c​e
+							 */
+							longDesc: string
+						}
+						folder: {
+							/**
+							 * F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​f​o​l​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​:​ ​O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​c​o​m​m​e​n​t​s​ ​i​n​ ​t​a​s​k​s​ ​w​i​t​h​i​n​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​f​o​l​d​e​r
+							 */
+							longDesc: string
+						}
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​:​ ​O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​c​o​m​m​e​n​t​s​ ​i​n​ ​t​a​s​k​s​ ​w​i​t​h​i​n​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+						task: {
+							/**
+							 * T​a​s​k
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​:​ ​O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​c​o​m​m​e​n​t​s​ ​o​n​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+					}
+				}
+				task_time_tracked_updated: {
+					/**
+					 * T​a​s​k​ ​T​i​m​e​ ​T​r​a​c​k​e​d​ ​U​p​d​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​t​i​m​e​ ​t​r​a​c​k​i​n​g​ ​i​s​ ​u​p​d​a​t​e​d​ ​o​n​ ​a​ ​t​a​s​k
+					 */
+					shortDesc: string
+					/**
+					 * W​e​b​h​o​o​k​ ​t​r​i​g​g​e​r​ ​t​h​a​t​ ​f​i​r​e​s​ ​w​h​e​n​ ​t​i​m​e​ ​t​r​a​c​k​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​s​ ​a​d​d​e​d​,​ ​u​p​d​a​t​e​d​,​ ​o​r​ ​m​o​d​i​f​i​e​d​ ​o​n​ ​a​n​y​ ​t​a​s​k​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​w​o​r​k​s​p​a​c​e
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​t​i​m​e​ ​t​r​a​c​k​i​n​g​ ​u​p​d​a​t​e​s​ ​o​n​ ​t​a​s​k​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				task_updated: {
+					/**
+					 * T​a​s​k​ ​U​p​d​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​t​a​s​k​ ​i​s​ ​u​p​d​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * W​e​b​h​o​o​k​ ​t​r​i​g​g​e​r​ ​t​h​a​t​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​n​y​ ​t​a​s​k​ ​i​s​ ​m​o​d​i​f​i​e​d​ ​o​r​ ​u​p​d​a​t​e​d​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​,​ ​i​n​c​l​u​d​i​n​g​ ​c​h​a​n​g​e​s​ ​t​o​ ​a​s​s​i​g​n​e​e​s​,​ ​s​t​a​t​u​s​,​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​t​a​s​k​ ​p​r​o​p​e​r​t​i​e​s
+					 */
+					longDesc: string
+					options: {
+						workspace: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​t​a​s​k​ ​u​p​d​a​t​e​ ​e​v​e​n​t​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
 		}
 		GoogleDocs: {
 			/**
@@ -50662,6 +53358,2702 @@ export type TranslationFunctions = {
 			 * ClickUp is a comprehensive productivity platform designed to help teams streamline their workflows, manage tasks, and collaborate effectively. It offers a wide range of features including task management, time tracking, goal setting, and document sharing, all within a customizable interface. ClickUp aims to enhance team productivity by providing tools that adapt to various work styles and project requirements.
 			 */
 			longDesc: () => LocalizedString
+			actions: {
+				list_lists: {
+					/**
+					 * List Lists
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List ClickUp lists within a folder
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve all lists contained within a specific ClickUp folder with optional archived filtering
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp workspace
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace containing the folder
+							 */
+							longDesc: () => LocalizedString
+						}
+						space: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp space
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp space containing the folder
+							 */
+							longDesc: () => LocalizedString
+						}
+						folder: {
+							/**
+							 * Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target folder
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp folder to retrieve lists from
+							 */
+							longDesc: () => LocalizedString
+						}
+						archived: {
+							/**
+							 * Include Archived
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include archived lists
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include archived lists in the results
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_folder: {
+					/**
+					 * Get Folder
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve ClickUp folder details
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch comprehensive information about a specific ClickUp folder including contained lists and statuses
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp workspace
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace containing the folder
+							 */
+							longDesc: () => LocalizedString
+						}
+						space: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp space
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp space containing the folder
+							 */
+							longDesc: () => LocalizedString
+						}
+						folder: {
+							/**
+							 * Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target folder
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp folder to retrieve information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_lists: {
+					/**
+					 * Get List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve ClickUp list details
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch comprehensive information about a specific ClickUp list including status configurations and metadata
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp workspace
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace containing the list
+							 */
+							longDesc: () => LocalizedString
+						}
+						space: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp space
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp space containing the list
+							 */
+							longDesc: () => LocalizedString
+						}
+						folder: {
+							/**
+							 * Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp folder
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp folder containing the list
+							 */
+							longDesc: () => LocalizedString
+						}
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp list to retrieve information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_folders: {
+					/**
+					 * List Folders
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List ClickUp folders within a space
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve all folders contained within a specific ClickUp space with optional archived filtering
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp workspace
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace containing the space
+							 */
+							longDesc: () => LocalizedString
+						}
+						space: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target space
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp space to retrieve folders from
+							 */
+							longDesc: () => LocalizedString
+						}
+						archived: {
+							/**
+							 * Include Archived
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include archived folders
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include archived folders in the results
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_task_comment: {
+					/**
+					 * Add Task Comment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add a comment to a ClickUp task
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new comment on a specific ClickUp task with optional assignee and group assignee notifications
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp workspace
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace where the task is located
+							 */
+							longDesc: () => LocalizedString
+						}
+						space: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp space
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp space where the task is located
+							 */
+							longDesc: () => LocalizedString
+						}
+						folder: {
+							/**
+							 * Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp folder
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp folder where the task is located
+							 */
+							longDesc: () => LocalizedString
+						}
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp list where the task is located
+							 */
+							longDesc: () => LocalizedString
+						}
+						task: {
+							/**
+							 * Task
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp task to add the comment to
+							 */
+							longDesc: () => LocalizedString
+						}
+						comment_text: {
+							/**
+							 * Comment Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Content of the comment
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text content of the comment to be added to the task
+							 */
+							longDesc: () => LocalizedString
+						}
+						notify_all: {
+							/**
+							 * Notify All
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Notify all task members
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to notify all task members about the new comment
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignee: {
+							/**
+							 * Assignee
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Comment assignee
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * User to assign the comment to
+							 */
+							longDesc: () => LocalizedString
+						}
+						group_assignee: {
+							/**
+							 * Group Assignee
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Group to assign comment to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Group to assign the comment to
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_document: {
+					/**
+					 * Create Document
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new ClickUp document
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new document in ClickUp with customizable name, parent location, and visibility settings
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp workspace
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace where the document will be created
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Document Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name of the document
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name/title for the new document
+							 */
+							longDesc: () => LocalizedString
+						}
+						parent: {
+							/**
+							 * Parent Location
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Parent container
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The parent container (space, folder, list, etc.) where the document will be placed
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									id: {
+										/**
+										 * Parent ID
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * ID of parent container
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The unique identifier of the parent container
+										 */
+										longDesc: () => LocalizedString
+									}
+									type: {
+										/**
+										 * Parent Type
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Type of parent container
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The type of parent container (4=Space, 5=Folder, 6=List, 7=Everything, 12=Workspace)
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						visibility: {
+							/**
+							 * Visibility
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Document visibility
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether the document should be public or private
+							 */
+							longDesc: () => LocalizedString
+						}
+						create_page: {
+							/**
+							 * Create Page
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Create initial page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to create an initial page within the document
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_document_page: {
+					/**
+					 * Create Document Page
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a page within a ClickUp document
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Add a new page to an existing ClickUp document with content and formatting options
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp workspace
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace containing the document
+							 */
+							longDesc: () => LocalizedString
+						}
+						document: {
+							/**
+							 * Document
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target document
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp document to add the page to
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Page Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name of the page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The title/name for the new page
+							 */
+							longDesc: () => LocalizedString
+						}
+						content: {
+							/**
+							 * Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Page content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The content to include in the new page
+							 */
+							longDesc: () => LocalizedString
+						}
+						sub_title: {
+							/**
+							 * Subtitle
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Page subtitle
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An optional subtitle for the page
+							 */
+							longDesc: () => LocalizedString
+						}
+						content_format: {
+							/**
+							 * Content Format
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Format of the content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The format of the page content (Markdown or Plain Text)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_folder: {
+					/**
+					 * Create Folder
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new ClickUp folder
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new folder within a ClickUp space to organize lists and tasks
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp workspace
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace where the folder will be created
+							 */
+							longDesc: () => LocalizedString
+						}
+						space: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Parent space
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp space where the folder will be created
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Folder Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name of the folder
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name for the new folder
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_list: {
+					/**
+					 * Create List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new ClickUp list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new list within a ClickUp folder with optional content, assignee, and due date
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp workspace
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace where the list will be created
+							 */
+							longDesc: () => LocalizedString
+						}
+						space: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp space
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp space containing the folder
+							 */
+							longDesc: () => LocalizedString
+						}
+						folder: {
+							/**
+							 * Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Parent folder
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp folder where the list will be created
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * List Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name of the list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name for the new list
+							 */
+							longDesc: () => LocalizedString
+						}
+						content: {
+							/**
+							 * Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional description or content for the list
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignee: {
+							/**
+							 * Assignee
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List assignee
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * User to assign the list to
+							 */
+							longDesc: () => LocalizedString
+						}
+						priority: {
+							/**
+							 * Priority
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List priority
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Priority level for the list
+							 */
+							longDesc: () => LocalizedString
+						}
+						due_date: {
+							/**
+							 * Due Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List due date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Due date for the list
+							 */
+							longDesc: () => LocalizedString
+						}
+						markdown_content: {
+							/**
+							 * Markdown Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Markdown description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Description content in Markdown format
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_task: {
+					/**
+					 * Create Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new ClickUp task
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new task in ClickUp with comprehensive options for assignees, dates, priority, and custom fields
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp workspace
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace where the task will be created
+							 */
+							longDesc: () => LocalizedString
+						}
+						space: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp space
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp space containing the list
+							 */
+							longDesc: () => LocalizedString
+						}
+						folder: {
+							/**
+							 * Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp folder
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp folder containing the list
+							 */
+							longDesc: () => LocalizedString
+						}
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp list where the task will be created
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Task Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name of the task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The title/name for the new task
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Task description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Detailed description of the task
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignees: {
+							/**
+							 * Assignees
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Task assignees
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Users to assign the task to
+							 */
+							longDesc: () => LocalizedString
+						}
+						archived: {
+							/**
+							 * Archived
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Archive task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to create the task in an archived state
+							 */
+							longDesc: () => LocalizedString
+						}
+						group_assignees: {
+							/**
+							 * Group Assignees
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Group assignees
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Groups to assign the task to
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Task tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Tags to apply to the task for organization
+							 */
+							longDesc: () => LocalizedString
+						}
+						priority: {
+							/**
+							 * Priority
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Task priority
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Priority level for the task
+							 */
+							longDesc: () => LocalizedString
+						}
+						due_date: {
+							/**
+							 * Due Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Task due date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When the task is due
+							 */
+							longDesc: () => LocalizedString
+						}
+						start_date: {
+							/**
+							 * Start Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Task start date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When work on the task should begin
+							 */
+							longDesc: () => LocalizedString
+						}
+						time_estimate: {
+							/**
+							 * Time Estimate
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Estimated time
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Estimated time required to complete the task (in minutes)
+							 */
+							longDesc: () => LocalizedString
+						}
+						points: {
+							/**
+							 * Points
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Task points
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Point value assigned to the task
+							 */
+							longDesc: () => LocalizedString
+						}
+						notify_all: {
+							/**
+							 * Notify All
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Notify team members
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to notify all relevant team members about the new task
+							 */
+							longDesc: () => LocalizedString
+						}
+						parent: {
+							/**
+							 * Parent Task
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Parent task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Parent task to create this as a subtask
+							 */
+							longDesc: () => LocalizedString
+						}
+						markdown_content: {
+							/**
+							 * Markdown Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Markdown description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Task description in Markdown format
+							 */
+							longDesc: () => LocalizedString
+						}
+						links_to: {
+							/**
+							 * Links To
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Linked task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Task to create a link relationship with
+							 */
+							longDesc: () => LocalizedString
+						}
+						check_required_custom_fields: {
+							/**
+							 * Check Required Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Validate custom fields
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to validate that all required custom fields are provided
+							 */
+							longDesc: () => LocalizedString
+						}
+						custom_fields: {
+							/**
+							 * Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom field values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Values for custom fields defined in the workspace
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											id: {
+												/**
+												 * Field ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Custom field identifier
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The unique identifier of the custom field
+												 */
+												longDesc: () => LocalizedString
+											}
+											value: {
+												/**
+												 * Field Value
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Custom field value
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The value to set for this custom field
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+						custom_item_id: {
+							/**
+							 * Custom Item ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Task type ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom task type identifier
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_task: {
+					/**
+					 * Delete Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a ClickUp task
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently delete a specific ClickUp task from your workspace
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp workspace
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace containing the task
+							 */
+							longDesc: () => LocalizedString
+						}
+						space: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp space
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp space containing the task
+							 */
+							longDesc: () => LocalizedString
+						}
+						folder: {
+							/**
+							 * Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp folder
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp folder containing the task
+							 */
+							longDesc: () => LocalizedString
+						}
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp list containing the task
+							 */
+							longDesc: () => LocalizedString
+						}
+						task: {
+							/**
+							 * Task
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Task to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp task to be deleted
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_document: {
+					/**
+					 * Get Document
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a ClickUp document
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch details and content of a specific ClickUp document
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp workspace
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace containing the document
+							 */
+							longDesc: () => LocalizedString
+						}
+						document: {
+							/**
+							 * Document
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target document
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp document to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_task: {
+					/**
+					 * Get Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a ClickUp task
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch comprehensive details of a specific ClickUp task including custom fields and attachments
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp workspace
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace containing the task
+							 */
+							longDesc: () => LocalizedString
+						}
+						space: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp space
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp space containing the task
+							 */
+							longDesc: () => LocalizedString
+						}
+						folder: {
+							/**
+							 * Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp folder
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp folder containing the task
+							 */
+							longDesc: () => LocalizedString
+						}
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp list containing the task
+							 */
+							longDesc: () => LocalizedString
+						}
+						task: {
+							/**
+							 * Task
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp task to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_markdown_description: {
+							/**
+							 * Include Markdown Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include markdown format
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include the task description in Markdown format
+							 */
+							longDesc: () => LocalizedString
+						}
+						subtasks: {
+							/**
+							 * Include Subtasks
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include subtasks
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include subtasks in the response
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_workspace: {
+					/**
+					 * Get Workspace
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve ClickUp workspace details
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch comprehensive information about a ClickUp workspace including members and roles
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target workspace
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace to retrieve information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_channels: {
+					/**
+					 * List Channels
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List ClickUp chat channels
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of chat channels in a ClickUp workspace with filtering options
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp workspace
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace to list channels from
+							 */
+							longDesc: () => LocalizedString
+						}
+						description_format: {
+							/**
+							 * Description Format
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Format for descriptions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The format to return channel descriptions in
+							 */
+							longDesc: () => LocalizedString
+						}
+						cursor: {
+							/**
+							 * Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Pagination cursor for fetching additional results
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Maximum number of channels to return
+							 */
+							longDesc: () => LocalizedString
+						}
+						is_follower: {
+							/**
+							 * Is Follower
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by follower status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to filter channels by follower status
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_hidden: {
+							/**
+							 * Include Hidden
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include hidden channels
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include hidden channels in the results
+							 */
+							longDesc: () => LocalizedString
+						}
+						room_types: {
+							/**
+							 * Room Types
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Channel types to include
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Types of channels to include in the results
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_custom_fields: {
+					/**
+					 * List Custom Fields
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List ClickUp custom fields
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve all custom fields defined in a ClickUp workspace
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp workspace
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace to list custom fields from
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_documents: {
+					/**
+					 * List Documents
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List ClickUp documents
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of documents in a ClickUp workspace with filtering and pagination options
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp workspace
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace to list documents from
+							 */
+							longDesc: () => LocalizedString
+						}
+						creator: {
+							/**
+							 * Creator
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Document creator
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter documents by creator
+							 */
+							longDesc: () => LocalizedString
+						}
+						deleted: {
+							/**
+							 * Deleted
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include deleted documents
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include deleted documents
+							 */
+							longDesc: () => LocalizedString
+						}
+						archived: {
+							/**
+							 * Archived
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include archived documents
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include archived documents
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Maximum number of documents to return
+							 */
+							longDesc: () => LocalizedString
+						}
+						next_cursor: {
+							/**
+							 * Next Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Cursor for fetching the next page of results
+							 */
+							longDesc: () => LocalizedString
+						}
+						parent_id: {
+							/**
+							 * Parent ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Parent container ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * ID of the parent container to filter documents by
+							 */
+							longDesc: () => LocalizedString
+						}
+						parent_type: {
+							/**
+							 * Parent Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Parent container type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Type of parent container to filter documents by
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_groups: {
+					/**
+					 * List Groups
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List ClickUp groups
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve groups from a ClickUp workspace with optional filtering
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp workspace
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace to list groups from
+							 */
+							longDesc: () => LocalizedString
+						}
+						group_ids: {
+							/**
+							 * Group IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific group IDs
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specific group IDs to retrieve (comma-separated)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_tasks: {
+					/**
+					 * List Tasks
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List ClickUp tasks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve tasks from a ClickUp list with comprehensive filtering and sorting options
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp workspace
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace containing the list
+							 */
+							longDesc: () => LocalizedString
+						}
+						space: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp space
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp space containing the list
+							 */
+							longDesc: () => LocalizedString
+						}
+						folder: {
+							/**
+							 * Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp folder
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp folder containing the list
+							 */
+							longDesc: () => LocalizedString
+						}
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp list to retrieve tasks from
+							 */
+							longDesc: () => LocalizedString
+						}
+						archived: {
+							/**
+							 * Archived
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include archived tasks
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include archived tasks
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_markdown_description: {
+							/**
+							 * Include Markdown Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include markdown format
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include task descriptions in Markdown format
+							 */
+							longDesc: () => LocalizedString
+						}
+						page: {
+							/**
+							 * Page
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Page number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Page number for pagination
+							 */
+							longDesc: () => LocalizedString
+						}
+						order_by: {
+							/**
+							 * Order By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Field to sort tasks by
+							 */
+							longDesc: () => LocalizedString
+						}
+						reverse: {
+							/**
+							 * Reverse
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Reverse sort order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to reverse the sort order
+							 */
+							longDesc: () => LocalizedString
+						}
+						subtasks: {
+							/**
+							 * Include Subtasks
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include subtasks
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include subtasks in the results
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_closed: {
+							/**
+							 * Include Closed
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include closed tasks
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include closed/completed tasks
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Task statuses
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specific task statuses to filter by
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_workspaces: {
+					/**
+					 * List Workspaces
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List ClickUp workspaces
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve all ClickUp workspaces accessible to the authenticated user
+					 */
+					longDesc: () => LocalizedString
+				}
+				send_channel_message: {
+					/**
+					 * Send Channel Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a message to a ClickUp channel
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Send a message or post to a ClickUp chat channel with optional assignees and followers
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp workspace
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace containing the channel
+							 */
+							longDesc: () => LocalizedString
+						}
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target channel
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp channel to send the message to
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignee: {
+							/**
+							 * Assignee
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Message assignee
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * User to assign the message to
+							 */
+							longDesc: () => LocalizedString
+						}
+						group_assignee: {
+							/**
+							 * Group Assignee
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Group assignee
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Group to assign the message to
+							 */
+							longDesc: () => LocalizedString
+						}
+						type: {
+							/**
+							 * Message Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to send as a message or post
+							 */
+							longDesc: () => LocalizedString
+						}
+						content: {
+							/**
+							 * Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Message content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The content of the message to send
+							 */
+							longDesc: () => LocalizedString
+						}
+						followers: {
+							/**
+							 * Followers
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Message followers
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Users to add as followers of the message
+							 */
+							longDesc: () => LocalizedString
+						}
+						content_format: {
+							/**
+							 * Content Format
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Message format
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The format of the message content
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_task: {
+					/**
+					 * Update Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update a ClickUp task
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update an existing ClickUp task with new information, assignees, dates, and custom fields
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp workspace
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace containing the task
+							 */
+							longDesc: () => LocalizedString
+						}
+						space: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp space
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp space containing the task
+							 */
+							longDesc: () => LocalizedString
+						}
+						folder: {
+							/**
+							 * Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp folder
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp folder containing the task
+							 */
+							longDesc: () => LocalizedString
+						}
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp list containing the task
+							 */
+							longDesc: () => LocalizedString
+						}
+						task: {
+							/**
+							 * Task
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp task to update
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Task Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New task name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated name/title for the task
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New task description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated description for the task
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignees: {
+							/**
+							 * Assignees
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Task assignees
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Users to assign the task to (will be added to existing assignees)
+							 */
+							longDesc: () => LocalizedString
+						}
+						archived: {
+							/**
+							 * Archived
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Archive task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to archive the task
+							 */
+							longDesc: () => LocalizedString
+						}
+						group_assignees: {
+							/**
+							 * Group Assignees
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Group assignees
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Groups to assign the task to (will be added to existing group assignees)
+							 */
+							longDesc: () => LocalizedString
+						}
+						priority: {
+							/**
+							 * Priority
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Task priority
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated priority level for the task
+							 */
+							longDesc: () => LocalizedString
+						}
+						due_date: {
+							/**
+							 * Due Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New due date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated due date for the task
+							 */
+							longDesc: () => LocalizedString
+						}
+						start_date: {
+							/**
+							 * Start Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New start date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated start date for the task
+							 */
+							longDesc: () => LocalizedString
+						}
+						time_estimate: {
+							/**
+							 * Time Estimate
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated time estimate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated estimated time required to complete the task (in minutes)
+							 */
+							longDesc: () => LocalizedString
+						}
+						points: {
+							/**
+							 * Points
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Task points
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated point value for the task
+							 */
+							longDesc: () => LocalizedString
+						}
+						notify_all: {
+							/**
+							 * Notify All
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Notify team members
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to notify all relevant team members about the task update
+							 */
+							longDesc: () => LocalizedString
+						}
+						parent: {
+							/**
+							 * Parent Task
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Parent task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated parent task to make this a subtask
+							 */
+							longDesc: () => LocalizedString
+						}
+						markdown_content: {
+							/**
+							 * Markdown Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Markdown description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated task description in Markdown format
+							 */
+							longDesc: () => LocalizedString
+						}
+						links_to: {
+							/**
+							 * Links To
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Linked task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Task to create or update a link relationship with
+							 */
+							longDesc: () => LocalizedString
+						}
+						check_required_custom_fields: {
+							/**
+							 * Check Required Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Validate custom fields
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to validate that all required custom fields are provided
+							 */
+							longDesc: () => LocalizedString
+						}
+						custom_fields: {
+							/**
+							 * Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom field values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated values for custom fields
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											id: {
+												/**
+												 * Field ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Custom field identifier
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The unique identifier of the custom field
+												 */
+												longDesc: () => LocalizedString
+											}
+											value: {
+												/**
+												 * Field Value
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Custom field value
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The updated value for this custom field
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+						custom_item_id: {
+							/**
+							 * Custom Item ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Task type ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated custom task type identifier
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_folder: {
+					/**
+					 * New Folder
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new folder is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Webhook trigger that fires when a new folder is created in the specified ClickUp workspace
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp workspace to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace to monitor for new folder creation events
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_list: {
+					/**
+					 * New List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new list is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Webhook trigger that fires when a new list is created in the specified ClickUp workspace
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp workspace to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace to monitor for new list creation events
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_task: {
+					/**
+					 * New Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new task is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Webhook trigger that fires when a new task is created in the specified ClickUp workspace
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp workspace to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace to monitor for new task creation events
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_task_comment: {
+					/**
+					 * New Task Comment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a comment is added to a task
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Webhook trigger that fires when a new comment is posted to a task, with optional filtering by space, folder, list, or specific task
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp workspace to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace to monitor for task comment events
+							 */
+							longDesc: () => LocalizedString
+						}
+						space: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by space
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional: Only trigger for comments in tasks within this specific space
+							 */
+							longDesc: () => LocalizedString
+						}
+						folder: {
+							/**
+							 * Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by folder
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional: Only trigger for comments in tasks within this specific folder
+							 */
+							longDesc: () => LocalizedString
+						}
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional: Only trigger for comments in tasks within this specific list
+							 */
+							longDesc: () => LocalizedString
+						}
+						task: {
+							/**
+							 * Task
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by specific task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional: Only trigger for comments on this specific task
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				task_time_tracked_updated: {
+					/**
+					 * Task Time Tracked Updated
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when time tracking is updated on a task
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Webhook trigger that fires when time tracking information is added, updated, or modified on any task in the specified workspace
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp workspace to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace to monitor for time tracking updates on tasks
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				task_updated: {
+					/**
+					 * Task Updated
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a task is updated
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Webhook trigger that fires when any task is modified or updated in the specified ClickUp workspace, including changes to assignees, status, custom fields, and other task properties
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspace: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ClickUp workspace to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ClickUp workspace to monitor for task update events
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
 		}
 		GoogleDocs: {
 			/**
