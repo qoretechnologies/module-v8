@@ -37,6 +37,7 @@ import {
   ClickUpNewList,
   ClickUpNewTask,
   ClickUpNewTaskComment,
+  ClickUpTaskUpdated,
 } from '../apps/clickup/triggers';
 
 Debugger.level = DebugLevels.Verbose;
@@ -559,10 +560,10 @@ describe('ClickUp', () => {
       });
     });
 
-    describe('Should test new list webhook registration', () => {
+    describe('Should test updated task webhook registration', () => {
       let webhook: { id: string } | undefined;
-      it('Should register the new list webhook', async () => {
-        const trigger = ClickUpNewList;
+      it('Should register the new folder webhook', async () => {
+        const trigger = ClickUpTaskUpdated;
 
         if (!('webhook_register' in trigger) || !trigger.webhook_register)
           throw new Error('webhook_register not found in trigger');
@@ -581,7 +582,7 @@ describe('ClickUp', () => {
       });
 
       it('Should deregister the webhook', async () => {
-        const trigger = ClickUpNewFolder;
+        const trigger = ClickUpTaskUpdated;
 
         if (!('webhook_deregister' in trigger) || !trigger.webhook_deregister)
           throw new Error('webhook_deregister not found in trigger');
@@ -616,7 +617,7 @@ describe('ClickUp', () => {
       });
 
       it('Should deregister the webhook', async () => {
-        const trigger = ClickUpNewFolder;
+        const trigger = ClickUpNewList;
 
         if (!('webhook_deregister' in trigger) || !trigger.webhook_deregister)
           throw new Error('webhook_deregister not found in trigger');
