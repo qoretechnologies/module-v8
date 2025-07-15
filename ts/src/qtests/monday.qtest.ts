@@ -49,7 +49,9 @@ describe('Should test Monday app', () => {
       expect(allowedValues.length).toBeGreaterThan(0);
       expect(allowedValues[0].value).not.toBeFalsy();
 
-      boardId = allowedValues[0].value;
+      boardId =
+        allowedValues.find((data) => data.display_name === 'Testing Board')?.value ||
+        allowedValues[0].value;
       baseContext.opts = { board_id: boardId };
     });
     it('Should get group id allowed values', async () => {
