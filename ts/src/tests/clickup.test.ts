@@ -7,11 +7,15 @@ import {
   CreateClickUpList,
   CreateClickUpTask,
   DeleteClickUpTask,
+  GetClickUpFolder,
+  GetClickUpList,
   GetClickUpTask,
   GetClickUpWorkspace,
   ListClickUpChannels,
   ListClickUpCustomFields,
   ListClickUpDocuments,
+  ListClickUpFolders,
+  ListClickUpLists,
   ListClickUpTasks,
   ListClickUpWorkspaces,
   SendClickUpChannelMessage,
@@ -28,6 +32,12 @@ import { getClickUpTaskIdAllowedValues } from '../apps/clickup/helpers/get-task-
 import { getClickUpWorkspaceIdAllowedValues } from '../apps/clickup/helpers/get-workspace-id-allowed-values';
 import { getClickUpWorkspaceMemberIdAllowedValues } from '../apps/clickup/helpers/get-workspace-member-id-allowed-values';
 import { Debugger, DebugLevels } from '../utils/Debugger';
+import {
+  ClickUpNewFolder,
+  ClickUpNewList,
+  ClickUpNewTask,
+  ClickUpNewTaskComment,
+} from '../apps/clickup/triggers';
 
 Debugger.level = DebugLevels.Verbose;
 
@@ -447,6 +457,246 @@ describe('ClickUp', () => {
 
       expect(result).toBeDefined();
       expect(result.id).toBeDefined;
+    });
+
+    it('Should list folders', async () => {
+      const action = ListClickUpFolders;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      const result = await action.api_function(
+        {
+          space,
+        },
+        undefined,
+        base_context
+      );
+
+      expect(result).toBeDefined();
+      expect(result.folders).toBeDefined();
+      expect(result.folders.length).toBeGreaterThan(0);
+    });
+
+    it('Should list lists', async () => {
+      const action = ListClickUpLists;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      const result = await action.api_function(
+        {
+          folder,
+        },
+        undefined,
+        base_context
+      );
+
+      expect(result).toBeDefined();
+      expect(result.lists).toBeDefined();
+      expect(result.lists.length).toBeGreaterThan(0);
+    });
+
+    it('Should get a list', async () => {
+      const action = GetClickUpList;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      if (!list) throw new Error('List ID is not defined');
+
+      const result = await action.api_function({ list }, undefined, base_context);
+
+      expect(result).toBeDefined();
+      expect(result.id).toBeDefined();
+      expect(result.id).toBe(list);
+    });
+    it('Should get a folder', async () => {
+      const action = GetClickUpFolder;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      if (!folder) throw new Error('Folder ID is not defined');
+
+      const result = await action.api_function({ folder }, undefined, base_context);
+
+      expect(result).toBeDefined();
+      expect(result.id).toBeDefined();
+      expect(result.id).toBe(folder);
+    });
+  });
+
+  describe('Should test ClickUp triggers webhook registration', () => {
+    describe('Should test new folder webhook registration', () => {
+      let webhook: { id: string } | undefined;
+      it('Should register the new folder webhook', async () => {
+        const trigger = ClickUpNewFolder;
+
+        if (!('webhook_register' in trigger) || !trigger.webhook_register)
+          throw new Error('webhook_register not found in trigger');
+
+        if (!workspace) throw new Error('Workspace ID is not defined');
+
+        const result = await trigger.webhook_register(
+          { ...base_context, opts: { workspace } },
+          'https://example.com/webhook'
+        );
+
+        expect(result).toBeDefined();
+        expect(result?.webhook.id).toBeDefined();
+
+        webhook = result?.webhook;
+      });
+
+      it('Should deregister the webhook', async () => {
+        const trigger = ClickUpNewFolder;
+
+        if (!('webhook_deregister' in trigger) || !trigger.webhook_deregister)
+          throw new Error('webhook_deregister not found in trigger');
+
+        if (!webhook) throw new Error('webhook is not defined');
+
+        await trigger.webhook_deregister(base_context, 'https://example.com/webhook', {
+          webhook,
+        });
+      });
+    });
+
+    describe('Should test new list webhook registration', () => {
+      let webhook: { id: string } | undefined;
+      it('Should register the new list webhook', async () => {
+        const trigger = ClickUpNewList;
+
+        if (!('webhook_register' in trigger) || !trigger.webhook_register)
+          throw new Error('webhook_register not found in trigger');
+
+        if (!workspace) throw new Error('Workspace ID is not defined');
+
+        const result = await trigger.webhook_register(
+          { ...base_context, opts: { workspace } },
+          'https://example.com/webhook'
+        );
+
+        expect(result).toBeDefined();
+        expect(result?.webhook.id).toBeDefined();
+
+        webhook = result?.webhook;
+      });
+
+      it('Should deregister the webhook', async () => {
+        const trigger = ClickUpNewFolder;
+
+        if (!('webhook_deregister' in trigger) || !trigger.webhook_deregister)
+          throw new Error('webhook_deregister not found in trigger');
+
+        if (!webhook) throw new Error('webhook is not defined');
+
+        await trigger.webhook_deregister(base_context, 'https://example.com/webhook', {
+          webhook,
+        });
+      });
+    });
+
+    describe('Should test new list webhook registration', () => {
+      let webhook: { id: string } | undefined;
+      it('Should register the new list webhook', async () => {
+        const trigger = ClickUpNewList;
+
+        if (!('webhook_register' in trigger) || !trigger.webhook_register)
+          throw new Error('webhook_register not found in trigger');
+
+        if (!workspace) throw new Error('Workspace ID is not defined');
+
+        const result = await trigger.webhook_register(
+          { ...base_context, opts: { workspace } },
+          'https://example.com/webhook'
+        );
+
+        expect(result).toBeDefined();
+        expect(result?.webhook.id).toBeDefined();
+
+        webhook = result?.webhook;
+      });
+
+      it('Should deregister the webhook', async () => {
+        const trigger = ClickUpNewFolder;
+
+        if (!('webhook_deregister' in trigger) || !trigger.webhook_deregister)
+          throw new Error('webhook_deregister not found in trigger');
+
+        if (!webhook) throw new Error('webhook is not defined');
+
+        await trigger.webhook_deregister(base_context, 'https://example.com/webhook', {
+          webhook,
+        });
+      });
+    });
+    describe('Should test new task webhook registration', () => {
+      let webhook: { id: string } | undefined;
+      it('Should register the new task webhook', async () => {
+        const trigger = ClickUpNewTask;
+
+        if (!('webhook_register' in trigger) || !trigger.webhook_register)
+          throw new Error('webhook_register not found in trigger');
+
+        if (!workspace) throw new Error('Workspace ID is not defined');
+        if (!task) throw new Error('Task ID is not defined');
+
+        const result = await trigger.webhook_register(
+          { ...base_context, opts: { workspace } as any },
+          'https://example.com/webhook'
+        );
+
+        expect(result).toBeDefined();
+        expect(result?.webhook.id).toBeDefined();
+
+        webhook = result?.webhook;
+      });
+
+      it('Should deregister the webhook', async () => {
+        const trigger = ClickUpNewTask;
+
+        if (!('webhook_deregister' in trigger) || !trigger.webhook_deregister)
+          throw new Error('webhook_deregister not found in trigger');
+
+        if (!webhook) throw new Error('webhook is not defined');
+
+        await trigger.webhook_deregister(base_context, 'https://example.com/webhook', {
+          webhook,
+        });
+      });
+    });
+    describe('Should test new task comment webhook registration', () => {
+      let webhook: { id: string } | undefined;
+      it('Should register the new task comment webhook', async () => {
+        const trigger = ClickUpNewTaskComment;
+
+        if (!('webhook_register' in trigger) || !trigger.webhook_register)
+          throw new Error('webhook_register not found in trigger');
+
+        if (!workspace) throw new Error('Workspace ID is not defined');
+        if (!task) throw new Error('Task ID is not defined');
+
+        const result = await trigger.webhook_register(
+          { ...base_context, opts: { workspace, task } as any },
+          'https://example.com/webhook'
+        );
+
+        expect(result).toBeDefined();
+        expect(result?.webhook.id).toBeDefined();
+
+        webhook = result?.webhook;
+      });
+
+      it('Should deregister the webhook', async () => {
+        const trigger = ClickUpNewTaskComment;
+
+        if (!('webhook_deregister' in trigger) || !trigger.webhook_deregister)
+          throw new Error('webhook_deregister not found in trigger');
+
+        if (!webhook) throw new Error('webhook is not defined');
+
+        await trigger.webhook_deregister(base_context, 'https://example.com/webhook', {
+          webhook,
+        });
+      });
     });
   });
 

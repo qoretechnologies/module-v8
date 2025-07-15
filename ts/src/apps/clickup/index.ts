@@ -1,7 +1,11 @@
 import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
+import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import { CLICKUP_APP_LOGO, CLICKUP_APP_NAME } from './constants';
+
+import * as CLICKUP_ACTIONS from './actions';
+import * as CLICKUP_TRIGGERS from './triggers';
 
 export default (locale: Locales) =>
   ({
@@ -12,7 +16,10 @@ export default (locale: Locales) =>
     logo: CLICKUP_APP_LOGO,
     logo_file_name: 'clickup-logo.svg',
     logo_mime_type: 'image/svg+xml',
-    actions: [],
+    actions: [
+      ...mapActionsToApp(CLICKUP_APP_NAME, CLICKUP_ACTIONS, locale),
+      ...mapTriggersToApp(CLICKUP_APP_NAME, CLICKUP_TRIGGERS, locale),
+    ],
     rest: {
       url: 'https://api.clickup.com',
       data: 'json',
