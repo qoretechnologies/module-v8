@@ -43,6 +43,7 @@ import Typeform from './apps/Typeform';
 import Xero from './apps/Xero';
 import Zendesk from './apps/Zendesk';
 import Zoom from './apps/Zoom';
+import ClickUp from './apps/ClickUp';
 
 const en = {
   common: {},
@@ -142,6 +143,7 @@ const en = {
       },
     },
     Calendly,
+    ClickUp,
     GoogleDocs,
     GoogleMeet,
     GoogleForms,

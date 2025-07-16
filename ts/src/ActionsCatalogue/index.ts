@@ -55,6 +55,7 @@ import { Debugger, DebugLevels } from '../utils/Debugger';
 import quickbooks from '../apps/quickbooks';
 import calendly from '../apps/calendly';
 import klaviyo from '../apps/klaviyo';
+import clickup from '../apps/clickup';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -75,6 +76,7 @@ const NEW_APPS = {
   bitbucket,
   businessCentral,
   calendly,
+  clickup,
   confluence,
   esignature,
   facebookPages,
