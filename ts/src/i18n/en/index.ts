@@ -44,6 +44,7 @@ import Xero from './apps/Xero';
 import Zendesk from './apps/Zendesk';
 import Zoom from './apps/Zoom';
 import ClickUp from './apps/ClickUp';
+import Sensibo from './apps/Sensibo';
 
 const en = {
   common: {},
@@ -155,6 +156,7 @@ const en = {
     Quickbooks,
     Attio,
     Airtable,
+    Sensibo,
     Odoo,
     Intercom,
     Xero,

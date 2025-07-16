@@ -17226,6 +17226,1108 @@ type RootTranslation = {
 				}
 			}
 		}
+		Sensibo: {
+			/**
+			 * S​e​n​s​i​b​o
+			 */
+			displayName: string
+			/**
+			 * C​o​n​t​r​o​l​ ​y​o​u​r​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e​s
+			 */
+			shortDesc: string
+			/**
+			 * I​n​t​e​g​r​a​t​e​ ​w​i​t​h​ ​S​e​n​s​i​b​o​ ​t​o​ ​c​o​n​t​r​o​l​ ​y​o​u​r​ ​s​m​a​r​t​ ​A​C​ ​u​n​i​t​s​ ​a​n​d​ ​o​p​t​i​m​i​z​e​ ​y​o​u​r​ ​h​o​m​e​ ​c​l​i​m​a​t​e​.
+			 */
+			longDesc: string
+			actions: {
+				change_device_property: {
+					/**
+					 * C​h​a​n​g​e​ ​D​e​v​i​c​e​ ​P​r​o​p​e​r​t​y
+					 */
+					displayName: string
+					/**
+					 * C​h​a​n​g​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​r​o​p​e​r​t​y​ ​o​f​ ​a​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​i​n​d​i​v​i​d​u​a​l​ ​p​r​o​p​e​r​t​i​e​s​ ​l​i​k​e​ ​p​o​w​e​r​ ​s​t​a​t​e​,​ ​m​o​d​e​,​ ​f​a​n​ ​l​e​v​e​l​,​ ​t​e​m​p​e​r​a​t​u​r​e​,​ ​o​r​ ​s​w​i​n​g​ ​s​e​t​t​i​n​g​s​ ​f​o​r​ ​a​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+					 */
+					longDesc: string
+					options: {
+						device: {
+							/**
+							 * D​e​v​i​c​e
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e​ ​w​h​o​s​e​ ​p​r​o​p​e​r​t​y​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​h​a​n​g​e
+							 */
+							longDesc: string
+						}
+						property: {
+							/**
+							 * P​r​o​p​e​r​t​y
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​p​r​o​p​e​r​t​y​ ​t​o​ ​c​h​a​n​g​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​i​c​h​ ​d​e​v​i​c​e​ ​p​r​o​p​e​r​t​y​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​d​i​f​y​ ​(​o​n​/​o​f​f​,​ ​m​o​d​e​,​ ​f​a​n​ ​l​e​v​e​l​,​ ​t​e​m​p​e​r​a​t​u​r​e​,​ ​t​e​m​p​e​r​a​t​u​r​e​ ​u​n​i​t​,​ ​o​r​ ​s​w​i​n​g​)
+							 */
+							longDesc: string
+						}
+						value: {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​v​a​l​u​e​ ​f​o​r​ ​t​h​e​ ​p​r​o​p​e​r​t​y
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​n​e​w​ ​v​a​l​u​e​ ​f​o​r​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​p​r​o​p​e​r​t​y
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_schedule: {
+					/**
+					 * C​r​e​a​t​e​ ​S​c​h​e​d​u​l​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​s​c​h​e​d​u​l​e​ ​f​o​r​ ​a​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+					 */
+					shortDesc: string
+					/**
+					 * S​e​t​ ​u​p​ ​a​u​t​o​m​a​t​e​d​ ​s​c​h​e​d​u​l​i​n​g​ ​t​o​ ​c​o​n​t​r​o​l​ ​y​o​u​r​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e​ ​a​t​ ​s​p​e​c​i​f​i​c​ ​t​i​m​e​s​ ​a​n​d​ ​d​a​y​s
+					 */
+					longDesc: string
+					options: {
+						device: {
+							/**
+							 * D​e​v​i​c​e
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e​ ​f​o​r​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​s​c​h​e​d​u​l​e
+							 */
+							longDesc: string
+						}
+						targetTimeLocale: {
+							/**
+							 * T​a​r​g​e​t​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * T​i​m​e​ ​w​h​e​n​ ​t​h​e​ ​s​c​h​e​d​u​l​e​ ​s​h​o​u​l​d​ ​t​r​i​g​g​e​r
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​t​i​m​e​ ​w​h​e​n​ ​t​h​e​ ​s​c​h​e​d​u​l​e​d​ ​a​c​t​i​o​n​ ​s​h​o​u​l​d​ ​b​e​ ​e​x​e​c​u​t​e​d
+							 */
+							longDesc: string
+						}
+						timezone: {
+							/**
+							 * T​i​m​e​z​o​n​e
+							 */
+							displayName: string
+							/**
+							 * T​i​m​e​z​o​n​e​ ​f​o​r​ ​t​h​e​ ​s​c​h​e​d​u​l​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​t​i​m​e​z​o​n​e​ ​f​o​r​ ​t​h​e​ ​s​c​h​e​d​u​l​e​d​ ​a​c​t​i​o​n
+							 */
+							longDesc: string
+						}
+						acState: {
+							/**
+							 * A​C​ ​S​t​a​t​e
+							 */
+							displayName: string
+							/**
+							 * D​e​s​i​r​e​d​ ​A​C​ ​s​e​t​t​i​n​g​s
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​a​i​r​ ​c​o​n​d​i​t​i​o​n​i​n​g​ ​s​e​t​t​i​n​g​s​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​a​p​p​l​i​e​d​ ​w​h​e​n​ ​t​h​e​ ​s​c​h​e​d​u​l​e​ ​t​r​i​g​g​e​r​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									on: {
+										/**
+										 * P​o​w​e​r​ ​S​t​a​t​e
+										 */
+										displayName: string
+										/**
+										 * T​u​r​n​ ​A​C​ ​o​n​ ​o​r​ ​o​f​f
+										 */
+										shortDesc: string
+										/**
+										 * S​e​t​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​a​i​r​ ​c​o​n​d​i​t​i​o​n​e​r​ ​s​h​o​u​l​d​ ​b​e​ ​t​u​r​n​e​d​ ​o​n​ ​o​r​ ​o​f​f
+										 */
+										longDesc: string
+									}
+									mode: {
+										/**
+										 * M​o​d​e
+										 */
+										displayName: string
+										/**
+										 * A​C​ ​o​p​e​r​a​t​i​n​g​ ​m​o​d​e
+										 */
+										shortDesc: string
+										/**
+										 * S​e​t​ ​t​h​e​ ​a​i​r​ ​c​o​n​d​i​t​i​o​n​e​r​ ​o​p​e​r​a​t​i​n​g​ ​m​o​d​e​ ​(​c​o​o​l​,​ ​h​e​a​t​,​ ​f​a​n​,​ ​e​t​c​.​)
+										 */
+										longDesc: string
+									}
+									fanLevel: {
+										/**
+										 * F​a​n​ ​L​e​v​e​l
+										 */
+										displayName: string
+										/**
+										 * F​a​n​ ​s​p​e​e​d​ ​s​e​t​t​i​n​g
+										 */
+										shortDesc: string
+										/**
+										 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​f​a​n​ ​s​p​e​e​d​ ​l​e​v​e​l
+										 */
+										longDesc: string
+									}
+									targetTemperature: {
+										/**
+										 * T​a​r​g​e​t​ ​T​e​m​p​e​r​a​t​u​r​e
+										 */
+										displayName: string
+										/**
+										 * D​e​s​i​r​e​d​ ​t​e​m​p​e​r​a​t​u​r​e
+										 */
+										shortDesc: string
+										/**
+										 * S​e​t​ ​t​h​e​ ​t​a​r​g​e​t​ ​t​e​m​p​e​r​a​t​u​r​e​ ​f​o​r​ ​t​h​e​ ​a​i​r​ ​c​o​n​d​i​t​i​o​n​e​r
+										 */
+										longDesc: string
+									}
+									temperatureUnit: {
+										/**
+										 * T​e​m​p​e​r​a​t​u​r​e​ ​U​n​i​t
+										 */
+										displayName: string
+										/**
+										 * T​e​m​p​e​r​a​t​u​r​e​ ​m​e​a​s​u​r​e​m​e​n​t​ ​u​n​i​t
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​b​e​t​w​e​e​n​ ​C​e​l​s​i​u​s​ ​o​r​ ​F​a​h​r​e​n​h​e​i​t​ ​f​o​r​ ​t​e​m​p​e​r​a​t​u​r​e​ ​d​i​s​p​l​a​y
+										 */
+										longDesc: string
+									}
+									swing: {
+										/**
+										 * S​w​i​n​g
+										 */
+										displayName: string
+										/**
+										 * A​i​r​ ​f​l​o​w​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​a​i​r​ ​f​l​o​w​ ​s​w​i​n​g​ ​s​e​t​t​i​n​g​s
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						recurOnDaysOfWeek: {
+							/**
+							 * R​e​c​u​r​r​i​n​g​ ​D​a​y​s
+							 */
+							displayName: string
+							/**
+							 * D​a​y​s​ ​w​h​e​n​ ​s​c​h​e​d​u​l​e​ ​r​e​p​e​a​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​i​c​h​ ​d​a​y​s​ ​o​f​ ​t​h​e​ ​w​e​e​k​ ​t​h​e​ ​s​c​h​e​d​u​l​e​ ​s​h​o​u​l​d​ ​r​e​p​e​a​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_device_timer: {
+					/**
+					 * D​e​l​e​t​e​ ​D​e​v​i​c​e​ ​T​i​m​e​r
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​t​h​e​ ​a​c​t​i​v​e​ ​t​i​m​e​r​ ​f​r​o​m​ ​a​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+					 */
+					shortDesc: string
+					/**
+					 * C​a​n​c​e​l​ ​a​n​y​ ​c​u​r​r​e​n​t​l​y​ ​a​c​t​i​v​e​ ​t​i​m​e​r​ ​t​h​a​t​ ​w​a​s​ ​s​e​t​ ​f​o​r​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+					 */
+					longDesc: string
+					options: {
+						device: {
+							/**
+							 * D​e​v​i​c​e
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e​ ​w​h​o​s​e​ ​t​i​m​e​r​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_schedule: {
+					/**
+					 * D​e​l​e​t​e​ ​S​c​h​e​d​u​l​e
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​a​ ​s​c​h​e​d​u​l​e​ ​f​r​o​m​ ​a​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+					 */
+					shortDesc: string
+					/**
+					 * D​e​l​e​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​s​c​h​e​d​u​l​e​ ​t​h​a​t​ ​w​a​s​ ​p​r​e​v​i​o​u​s​l​y​ ​c​r​e​a​t​e​d​ ​f​o​r​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+					 */
+					longDesc: string
+					options: {
+						device: {
+							/**
+							 * D​e​v​i​c​e
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e​ ​w​h​o​s​e​ ​s​c​h​e​d​u​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							longDesc: string
+						}
+						schedule: {
+							/**
+							 * S​c​h​e​d​u​l​e
+							 */
+							displayName: string
+							/**
+							 * S​c​h​e​d​u​l​e​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​s​c​h​e​d​u​l​e​ ​I​D​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				enable_climate_react: {
+					/**
+					 * E​n​a​b​l​e​ ​C​l​i​m​a​t​e​ ​R​e​a​c​t
+					 */
+					displayName: string
+					/**
+					 * E​n​a​b​l​e​ ​o​r​ ​d​i​s​a​b​l​e​ ​C​l​i​m​a​t​e​ ​R​e​a​c​t​ ​f​e​a​t​u​r​e
+					 */
+					shortDesc: string
+					/**
+					 * T​u​r​n​ ​o​n​ ​o​r​ ​o​f​f​ ​t​h​e​ ​C​l​i​m​a​t​e​ ​R​e​a​c​t​ ​s​m​a​r​t​ ​a​u​t​o​m​a​t​i​o​n​ ​f​e​a​t​u​r​e​ ​t​h​a​t​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​a​d​j​u​s​t​s​ ​y​o​u​r​ ​A​C​ ​b​a​s​e​d​ ​o​n​ ​r​o​o​m​ ​c​o​n​d​i​t​i​o​n​s
+					 */
+					longDesc: string
+					options: {
+						device: {
+							/**
+							 * D​e​v​i​c​e
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e​ ​f​o​r​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​e​n​a​b​l​e​ ​o​r​ ​d​i​s​a​b​l​e​ ​C​l​i​m​a​t​e​ ​R​e​a​c​t
+							 */
+							longDesc: string
+						}
+						enable: {
+							/**
+							 * E​n​a​b​l​e
+							 */
+							displayName: string
+							/**
+							 * E​n​a​b​l​e​ ​o​r​ ​d​i​s​a​b​l​e​ ​C​l​i​m​a​t​e​ ​R​e​a​c​t
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​w​h​e​t​h​e​r​ ​C​l​i​m​a​t​e​ ​R​e​a​c​t​ ​s​h​o​u​l​d​ ​b​e​ ​e​n​a​b​l​e​d​ ​(​t​r​u​e​)​ ​o​r​ ​d​i​s​a​b​l​e​d​ ​(​f​a​l​s​e​)
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_ac_states: {
+					/**
+					 * G​e​t​ ​A​C​ ​S​t​a​t​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​A​C​ ​s​t​a​t​e​ ​h​i​s​t​o​r​y
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​t​h​e​ ​h​i​s​t​o​r​y​ ​o​f​ ​a​i​r​ ​c​o​n​d​i​t​i​o​n​e​r​ ​s​t​a​t​e​ ​c​h​a​n​g​e​s​ ​f​o​r​ ​a​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+					 */
+					longDesc: string
+					options: {
+						device: {
+							/**
+							 * D​e​v​i​c​e
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e​ ​w​h​o​s​e​ ​A​C​ ​s​t​a​t​e​ ​h​i​s​t​o​r​y​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​A​C​ ​s​t​a​t​e​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_devices: {
+					/**
+					 * G​e​t​ ​D​e​v​i​c​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​a​v​a​i​l​a​b​l​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e​s
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​y​o​u​r​ ​a​c​c​o​u​n​t
+					 */
+					longDesc: string
+				}
+				get_climate_react_settings: {
+					/**
+					 * G​e​t​ ​C​l​i​m​a​t​e​ ​R​e​a​c​t​ ​S​e​t​t​i​n​g​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​C​l​i​m​a​t​e​ ​R​e​a​c​t​ ​c​o​n​f​i​g​u​r​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​C​l​i​m​a​t​e​ ​R​e​a​c​t​ ​s​m​a​r​t​ ​a​u​t​o​m​a​t​i​o​n​ ​s​e​t​t​i​n​g​s​ ​f​o​r​ ​a​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+					 */
+					longDesc: string
+					options: {
+						device: {
+							/**
+							 * D​e​v​i​c​e
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e​ ​w​h​o​s​e​ ​C​l​i​m​a​t​e​ ​R​e​a​c​t​ ​s​e​t​t​i​n​g​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_current_timer: {
+					/**
+					 * G​e​t​ ​C​u​r​r​e​n​t​ ​T​i​m​e​r
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​c​t​i​v​e​ ​t​i​m​e​r​ ​i​n​f​o​r​m​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​a​n​y​ ​c​u​r​r​e​n​t​l​y​ ​a​c​t​i​v​e​ ​t​i​m​e​r​ ​s​e​t​ ​f​o​r​ ​a​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+					 */
+					longDesc: string
+					options: {
+						device: {
+							/**
+							 * D​e​v​i​c​e
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e​ ​w​h​o​s​e​ ​c​u​r​r​e​n​t​ ​t​i​m​e​r​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_device: {
+					/**
+					 * G​e​t​ ​D​e​v​i​c​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​d​e​v​i​c​e​ ​i​n​f​o​r​m​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e​ ​i​n​c​l​u​d​i​n​g​ ​c​u​r​r​e​n​t​ ​s​t​a​t​u​s​ ​a​n​d​ ​c​a​p​a​b​i​l​i​t​i​e​s
+					 */
+					longDesc: string
+					options: {
+						device: {
+							/**
+							 * D​e​v​i​c​e
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e​ ​w​h​o​s​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_historical_measurements: {
+					/**
+					 * G​e​t​ ​H​i​s​t​o​r​i​c​a​l​ ​M​e​a​s​u​r​e​m​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​s​e​n​s​o​r​ ​m​e​a​s​u​r​e​m​e​n​t​ ​h​i​s​t​o​r​y
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​h​i​s​t​o​r​i​c​a​l​ ​t​e​m​p​e​r​a​t​u​r​e​,​ ​h​u​m​i​d​i​t​y​,​ ​a​n​d​ ​o​t​h​e​r​ ​s​e​n​s​o​r​ ​m​e​a​s​u​r​e​m​e​n​t​s​ ​f​r​o​m​ ​a​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+					 */
+					longDesc: string
+					options: {
+						device: {
+							/**
+							 * D​e​v​i​c​e
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e​ ​w​h​o​s​e​ ​m​e​a​s​u​r​e​m​e​n​t​ ​h​i​s​t​o​r​y​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+						days: {
+							/**
+							 * D​a​y​s
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​d​a​y​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​m​a​n​y​ ​d​a​y​s​ ​o​f​ ​h​i​s​t​o​r​i​c​a​l​ ​m​e​a​s​u​r​e​m​e​n​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_schedule: {
+					/**
+					 * G​e​t​ ​S​c​h​e​d​u​l​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​s​p​e​c​i​f​i​c​ ​s​c​h​e​d​u​l​e​ ​d​e​t​a​i​l​s
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​c​h​e​d​u​l​e​ ​c​o​n​f​i​g​u​r​e​d​ ​f​o​r​ ​a​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+					 */
+					longDesc: string
+					options: {
+						device: {
+							/**
+							 * D​e​v​i​c​e
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e​ ​w​h​o​s​e​ ​s​c​h​e​d​u​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+						schedule: {
+							/**
+							 * S​c​h​e​d​u​l​e
+							 */
+							displayName: string
+							/**
+							 * S​c​h​e​d​u​l​e​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​s​c​h​e​d​u​l​e​ ​I​D​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_schedules: {
+					/**
+					 * G​e​t​ ​S​c​h​e​d​u​l​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​d​e​v​i​c​e​ ​s​c​h​e​d​u​l​e​s
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​s​c​h​e​d​u​l​e​s​ ​c​o​n​f​i​g​u​r​e​d​ ​f​o​r​ ​a​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+					 */
+					longDesc: string
+					options: {
+						device: {
+							/**
+							 * D​e​v​i​c​e
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e​ ​w​h​o​s​e​ ​s​c​h​e​d​u​l​e​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				set_climate_react_configuration: {
+					/**
+					 * S​e​t​ ​C​l​i​m​a​t​e​ ​R​e​a​c​t​ ​C​o​n​f​i​g​u​r​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * C​o​n​f​i​g​u​r​e​ ​C​l​i​m​a​t​e​ ​R​e​a​c​t​ ​a​u​t​o​m​a​t​i​o​n​ ​s​e​t​t​i​n​g​s
+					 */
+					shortDesc: string
+					/**
+					 * S​e​t​ ​u​p​ ​d​e​t​a​i​l​e​d​ ​C​l​i​m​a​t​e​ ​R​e​a​c​t​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​t​e​m​p​e​r​a​t​u​r​e​ ​t​h​r​e​s​h​o​l​d​s​ ​a​n​d​ ​c​o​r​r​e​s​p​o​n​d​i​n​g​ ​A​C​ ​s​t​a​t​e​s
+					 */
+					longDesc: string
+					options: {
+						device: {
+							/**
+							 * D​e​v​i​c​e
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e​ ​f​o​r​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​o​n​f​i​g​u​r​e​ ​C​l​i​m​a​t​e​ ​R​e​a​c​t
+							 */
+							longDesc: string
+						}
+						enabled: {
+							/**
+							 * E​n​a​b​l​e​d
+							 */
+							displayName: string
+							/**
+							 * E​n​a​b​l​e​ ​C​l​i​m​a​t​e​ ​R​e​a​c​t
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​w​h​e​t​h​e​r​ ​C​l​i​m​a​t​e​ ​R​e​a​c​t​ ​s​h​o​u​l​d​ ​b​e​ ​e​n​a​b​l​e​d
+							 */
+							longDesc: string
+						}
+						lowTemperatureThreshold: {
+							/**
+							 * L​o​w​ ​T​e​m​p​e​r​a​t​u​r​e​ ​T​h​r​e​s​h​o​l​d
+							 */
+							displayName: string
+							/**
+							 * T​e​m​p​e​r​a​t​u​r​e​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​o​w​ ​t​h​r​e​s​h​o​l​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​t​e​m​p​e​r​a​t​u​r​e​ ​b​e​l​o​w​ ​w​h​i​c​h​ ​t​h​e​ ​l​o​w​ ​t​e​m​p​e​r​a​t​u​r​e​ ​a​c​t​i​o​n​ ​w​i​l​l​ ​b​e​ ​t​r​i​g​g​e​r​e​d
+							 */
+							longDesc: string
+						}
+						lowTemperatureState: {
+							/**
+							 * L​o​w​ ​T​e​m​p​e​r​a​t​u​r​e​ ​S​t​a​t​e
+							 */
+							displayName: string
+							/**
+							 * A​C​ ​s​e​t​t​i​n​g​s​ ​f​o​r​ ​l​o​w​ ​t​e​m​p​e​r​a​t​u​r​e
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​a​i​r​ ​c​o​n​d​i​t​i​o​n​e​r​ ​s​e​t​t​i​n​g​s​ ​t​o​ ​a​p​p​l​y​ ​w​h​e​n​ ​t​e​m​p​e​r​a​t​u​r​e​ ​g​o​e​s​ ​b​e​l​o​w​ ​t​h​e​ ​l​o​w​ ​t​h​r​e​s​h​o​l​d
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									on: {
+										/**
+										 * P​o​w​e​r​ ​S​t​a​t​e
+										 */
+										displayName: string
+										/**
+										 * T​u​r​n​ ​A​C​ ​o​n​ ​o​r​ ​o​f​f
+										 */
+										shortDesc: string
+										/**
+										 * S​e​t​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​a​i​r​ ​c​o​n​d​i​t​i​o​n​e​r​ ​s​h​o​u​l​d​ ​b​e​ ​t​u​r​n​e​d​ ​o​n​ ​o​r​ ​o​f​f​ ​w​h​e​n​ ​l​o​w​ ​t​e​m​p​e​r​a​t​u​r​e​ ​i​s​ ​r​e​a​c​h​e​d
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						highTemperatureThreshold: {
+							/**
+							 * H​i​g​h​ ​T​e​m​p​e​r​a​t​u​r​e​ ​T​h​r​e​s​h​o​l​d
+							 */
+							displayName: string
+							/**
+							 * T​e​m​p​e​r​a​t​u​r​e​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​h​i​g​h​ ​t​h​r​e​s​h​o​l​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​t​e​m​p​e​r​a​t​u​r​e​ ​a​b​o​v​e​ ​w​h​i​c​h​ ​t​h​e​ ​h​i​g​h​ ​t​e​m​p​e​r​a​t​u​r​e​ ​a​c​t​i​o​n​ ​w​i​l​l​ ​b​e​ ​t​r​i​g​g​e​r​e​d
+							 */
+							longDesc: string
+						}
+						highTemperatureState: {
+							/**
+							 * H​i​g​h​ ​T​e​m​p​e​r​a​t​u​r​e​ ​S​t​a​t​e
+							 */
+							displayName: string
+							/**
+							 * A​C​ ​s​e​t​t​i​n​g​s​ ​f​o​r​ ​h​i​g​h​ ​t​e​m​p​e​r​a​t​u​r​e
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​a​i​r​ ​c​o​n​d​i​t​i​o​n​e​r​ ​s​e​t​t​i​n​g​s​ ​t​o​ ​a​p​p​l​y​ ​w​h​e​n​ ​t​e​m​p​e​r​a​t​u​r​e​ ​g​o​e​s​ ​a​b​o​v​e​ ​t​h​e​ ​h​i​g​h​ ​t​h​r​e​s​h​o​l​d
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									on: {
+										/**
+										 * P​o​w​e​r​ ​S​t​a​t​e
+										 */
+										displayName: string
+										/**
+										 * T​u​r​n​ ​A​C​ ​o​n​ ​o​r​ ​o​f​f
+										 */
+										shortDesc: string
+										/**
+										 * S​e​t​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​a​i​r​ ​c​o​n​d​i​t​i​o​n​e​r​ ​s​h​o​u​l​d​ ​b​e​ ​t​u​r​n​e​d​ ​o​n​ ​o​r​ ​o​f​f​ ​w​h​e​n​ ​h​i​g​h​ ​t​e​m​p​e​r​a​t​u​r​e​ ​i​s​ ​r​e​a​c​h​e​d
+										 */
+										longDesc: string
+									}
+									mode: {
+										/**
+										 * M​o​d​e
+										 */
+										displayName: string
+										/**
+										 * A​C​ ​o​p​e​r​a​t​i​n​g​ ​m​o​d​e
+										 */
+										shortDesc: string
+										/**
+										 * S​e​t​ ​t​h​e​ ​a​i​r​ ​c​o​n​d​i​t​i​o​n​e​r​ ​o​p​e​r​a​t​i​n​g​ ​m​o​d​e​ ​f​o​r​ ​h​i​g​h​ ​t​e​m​p​e​r​a​t​u​r​e​ ​c​o​n​d​i​t​i​o​n​s
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				set_device_state: {
+					/**
+					 * S​e​t​ ​D​e​v​i​c​e​ ​S​t​a​t​e
+					 */
+					displayName: string
+					/**
+					 * C​o​n​f​i​g​u​r​e​ ​c​o​m​p​l​e​t​e​ ​d​e​v​i​c​e​ ​s​t​a​t​e
+					 */
+					shortDesc: string
+					/**
+					 * S​e​t​ ​m​u​l​t​i​p​l​e​ ​a​i​r​ ​c​o​n​d​i​t​i​o​n​e​r​ ​s​e​t​t​i​n​g​s​ ​a​t​ ​o​n​c​e​ ​i​n​c​l​u​d​i​n​g​ ​p​o​w​e​r​,​ ​m​o​d​e​,​ ​t​e​m​p​e​r​a​t​u​r​e​,​ ​a​n​d​ ​f​a​n​ ​s​e​t​t​i​n​g​s
+					 */
+					longDesc: string
+					options: {
+						device: {
+							/**
+							 * D​e​v​i​c​e
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e​ ​w​h​o​s​e​ ​s​t​a​t​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​o​n​f​i​g​u​r​e
+							 */
+							longDesc: string
+						}
+						on: {
+							/**
+							 * P​o​w​e​r​ ​S​t​a​t​e
+							 */
+							displayName: string
+							/**
+							 * T​u​r​n​ ​d​e​v​i​c​e​ ​o​n​ ​o​r​ ​o​f​f
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​a​i​r​ ​c​o​n​d​i​t​i​o​n​e​r​ ​s​h​o​u​l​d​ ​b​e​ ​t​u​r​n​e​d​ ​o​n​ ​o​r​ ​o​f​f
+							 */
+							longDesc: string
+						}
+						mode: {
+							/**
+							 * M​o​d​e
+							 */
+							displayName: string
+							/**
+							 * A​C​ ​o​p​e​r​a​t​i​n​g​ ​m​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​a​i​r​ ​c​o​n​d​i​t​i​o​n​e​r​ ​o​p​e​r​a​t​i​n​g​ ​m​o​d​e​ ​(​c​o​o​l​,​ ​h​e​a​t​,​ ​f​a​n​,​ ​e​t​c​.​)
+							 */
+							longDesc: string
+						}
+						fanLevel: {
+							/**
+							 * F​a​n​ ​L​e​v​e​l
+							 */
+							displayName: string
+							/**
+							 * F​a​n​ ​s​p​e​e​d​ ​s​e​t​t​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​f​a​n​ ​s​p​e​e​d​ ​l​e​v​e​l
+							 */
+							longDesc: string
+						}
+						targetTemperature: {
+							/**
+							 * T​a​r​g​e​t​ ​T​e​m​p​e​r​a​t​u​r​e
+							 */
+							displayName: string
+							/**
+							 * D​e​s​i​r​e​d​ ​t​e​m​p​e​r​a​t​u​r​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​t​a​r​g​e​t​ ​t​e​m​p​e​r​a​t​u​r​e​ ​f​o​r​ ​t​h​e​ ​a​i​r​ ​c​o​n​d​i​t​i​o​n​e​r
+							 */
+							longDesc: string
+						}
+						temperatureUnit: {
+							/**
+							 * T​e​m​p​e​r​a​t​u​r​e​ ​U​n​i​t
+							 */
+							displayName: string
+							/**
+							 * T​e​m​p​e​r​a​t​u​r​e​ ​m​e​a​s​u​r​e​m​e​n​t​ ​u​n​i​t
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​b​e​t​w​e​e​n​ ​C​e​l​s​i​u​s​ ​o​r​ ​F​a​h​r​e​n​h​e​i​t​ ​f​o​r​ ​t​e​m​p​e​r​a​t​u​r​e​ ​d​i​s​p​l​a​y
+							 */
+							longDesc: string
+						}
+						swing: {
+							/**
+							 * S​w​i​n​g
+							 */
+							displayName: string
+							/**
+							 * A​i​r​ ​f​l​o​w​ ​d​i​r​e​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​a​i​r​ ​f​l​o​w​ ​s​w​i​n​g​ ​s​e​t​t​i​n​g​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				set_device_timer: {
+					/**
+					 * S​e​t​ ​D​e​v​i​c​e​ ​T​i​m​e​r
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​t​i​m​e​r​ ​f​o​r​ ​d​e​v​i​c​e​ ​s​t​a​t​e​ ​c​h​a​n​g​e
+					 */
+					shortDesc: string
+					/**
+					 * S​e​t​ ​a​ ​t​i​m​e​r​ ​t​h​a​t​ ​w​i​l​l​ ​c​h​a​n​g​e​ ​t​h​e​ ​d​e​v​i​c​e​ ​s​t​a​t​e​ ​a​f​t​e​r​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​n​u​m​b​e​r​ ​o​f​ ​m​i​n​u​t​e​s
+					 */
+					longDesc: string
+					options: {
+						device: {
+							/**
+							 * D​e​v​i​c​e
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e​ ​f​o​r​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​s​e​t​ ​a​ ​t​i​m​e​r
+							 */
+							longDesc: string
+						}
+						minutesFromNow: {
+							/**
+							 * M​i​n​u​t​e​s​ ​F​r​o​m​ ​N​o​w
+							 */
+							displayName: string
+							/**
+							 * T​i​m​e​r​ ​d​u​r​a​t​i​o​n​ ​i​n​ ​m​i​n​u​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​m​a​n​y​ ​m​i​n​u​t​e​s​ ​f​r​o​m​ ​n​o​w​ ​t​h​e​ ​t​i​m​e​r​ ​s​h​o​u​l​d​ ​t​r​i​g​g​e​r
+							 */
+							longDesc: string
+						}
+						acState: {
+							/**
+							 * A​C​ ​S​t​a​t​e
+							 */
+							displayName: string
+							/**
+							 * A​C​ ​s​e​t​t​i​n​g​s​ ​f​o​r​ ​t​i​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​a​i​r​ ​c​o​n​d​i​t​i​o​n​e​r​ ​s​e​t​t​i​n​g​s​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​a​p​p​l​i​e​d​ ​w​h​e​n​ ​t​h​e​ ​t​i​m​e​r​ ​e​x​p​i​r​e​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									on: {
+										/**
+										 * P​o​w​e​r​ ​S​t​a​t​e
+										 */
+										displayName: string
+										/**
+										 * T​u​r​n​ ​A​C​ ​o​n​ ​o​r​ ​o​f​f
+										 */
+										shortDesc: string
+										/**
+										 * S​e​t​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​a​i​r​ ​c​o​n​d​i​t​i​o​n​e​r​ ​s​h​o​u​l​d​ ​b​e​ ​t​u​r​n​e​d​ ​o​n​ ​o​r​ ​o​f​f​ ​w​h​e​n​ ​t​i​m​e​r​ ​e​x​p​i​r​e​s
+										 */
+										longDesc: string
+									}
+									mode: {
+										/**
+										 * M​o​d​e
+										 */
+										displayName: string
+										/**
+										 * A​C​ ​o​p​e​r​a​t​i​n​g​ ​m​o​d​e
+										 */
+										shortDesc: string
+										/**
+										 * S​e​t​ ​t​h​e​ ​a​i​r​ ​c​o​n​d​i​t​i​o​n​e​r​ ​o​p​e​r​a​t​i​n​g​ ​m​o​d​e​ ​f​o​r​ ​w​h​e​n​ ​t​h​e​ ​t​i​m​e​r​ ​e​x​p​i​r​e​s
+										 */
+										longDesc: string
+									}
+									fanLevel: {
+										/**
+										 * F​a​n​ ​L​e​v​e​l
+										 */
+										displayName: string
+										/**
+										 * F​a​n​ ​s​p​e​e​d​ ​s​e​t​t​i​n​g
+										 */
+										shortDesc: string
+										/**
+										 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​f​a​n​ ​s​p​e​e​d​ ​l​e​v​e​l​ ​f​o​r​ ​w​h​e​n​ ​t​h​e​ ​t​i​m​e​r​ ​e​x​p​i​r​e​s
+										 */
+										longDesc: string
+									}
+									targetTemperature: {
+										/**
+										 * T​a​r​g​e​t​ ​T​e​m​p​e​r​a​t​u​r​e
+										 */
+										displayName: string
+										/**
+										 * D​e​s​i​r​e​d​ ​t​e​m​p​e​r​a​t​u​r​e
+										 */
+										shortDesc: string
+										/**
+										 * S​e​t​ ​t​h​e​ ​t​a​r​g​e​t​ ​t​e​m​p​e​r​a​t​u​r​e​ ​f​o​r​ ​w​h​e​n​ ​t​h​e​ ​t​i​m​e​r​ ​e​x​p​i​r​e​s
+										 */
+										longDesc: string
+									}
+									temperatureUnit: {
+										/**
+										 * T​e​m​p​e​r​a​t​u​r​e​ ​U​n​i​t
+										 */
+										displayName: string
+										/**
+										 * T​e​m​p​e​r​a​t​u​r​e​ ​m​e​a​s​u​r​e​m​e​n​t​ ​u​n​i​t
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​b​e​t​w​e​e​n​ ​C​e​l​s​i​u​s​ ​o​r​ ​F​a​h​r​e​n​h​e​i​t​ ​f​o​r​ ​t​e​m​p​e​r​a​t​u​r​e​ ​d​i​s​p​l​a​y
+										 */
+										longDesc: string
+									}
+									swing: {
+										/**
+										 * S​w​i​n​g
+										 */
+										displayName: string
+										/**
+										 * A​i​r​ ​f​l​o​w​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​a​i​r​ ​f​l​o​w​ ​s​w​i​n​g​ ​s​e​t​t​i​n​g​s​ ​f​o​r​ ​w​h​e​n​ ​t​h​e​ ​t​i​m​e​r​ ​e​x​p​i​r​e​s
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				toggle_schedule: {
+					/**
+					 * T​o​g​g​l​e​ ​S​c​h​e​d​u​l​e
+					 */
+					displayName: string
+					/**
+					 * E​n​a​b​l​e​ ​o​r​ ​d​i​s​a​b​l​e​ ​a​ ​s​c​h​e​d​u​l​e
+					 */
+					shortDesc: string
+					/**
+					 * T​u​r​n​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​s​c​h​e​d​u​l​e​ ​o​n​ ​o​r​ ​o​f​f​ ​w​i​t​h​o​u​t​ ​d​e​l​e​t​i​n​g​ ​i​t
+					 */
+					longDesc: string
+					options: {
+						device: {
+							/**
+							 * D​e​v​i​c​e
+							 */
+							displayName: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​S​e​n​s​i​b​o​ ​d​e​v​i​c​e​ ​w​h​o​s​e​ ​s​c​h​e​d​u​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​t​o​g​g​l​e
+							 */
+							longDesc: string
+						}
+						schedule: {
+							/**
+							 * S​c​h​e​d​u​l​e
+							 */
+							displayName: string
+							/**
+							 * S​c​h​e​d​u​l​e​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​s​c​h​e​d​u​l​e​ ​I​D​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​e​n​a​b​l​e​ ​o​r​ ​d​i​s​a​b​l​e
+							 */
+							longDesc: string
+						}
+						isEnabled: {
+							/**
+							 * I​s​ ​E​n​a​b​l​e​d
+							 */
+							displayName: string
+							/**
+							 * E​n​a​b​l​e​ ​o​r​ ​d​i​s​a​b​l​e​ ​t​h​e​ ​s​c​h​e​d​u​l​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​s​c​h​e​d​u​l​e​ ​s​h​o​u​l​d​ ​b​e​ ​e​n​a​b​l​e​d​ ​(​t​r​u​e​)​ ​o​r​ ​d​i​s​a​b​l​e​d​ ​(​f​a​l​s​e​)
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+			}
+		}
 		Odoo: {
 			/**
 			 * O​d​o​o​ ​C​R​M
@@ -69363,6 +70465,1108 @@ export type TranslationFunctions = {
 						}
 					}
 				}
+			}
+		}
+		Sensibo: {
+			/**
+			 * Sensibo
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Control your Sensibo devices
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Integrate with Sensibo to control your smart AC units and optimize your home climate.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				change_device_property: {
+					/**
+					 * Change Device Property
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Change a specific property of a Sensibo device
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update individual properties like power state, mode, fan level, temperature, or swing settings for a Sensibo device
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						device: {
+							/**
+							 * Device
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the Sensibo device
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the Sensibo device whose property you want to change
+							 */
+							longDesc: () => LocalizedString
+						}
+						property: {
+							/**
+							 * Property
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the property to change
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose which device property you want to modify (on/off, mode, fan level, temperature, temperature unit, or swing)
+							 */
+							longDesc: () => LocalizedString
+						}
+						value: {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New value for the property
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the new value for the selected property
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_schedule: {
+					/**
+					 * Create Schedule
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new schedule for a Sensibo device
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Set up automated scheduling to control your Sensibo device at specific times and days
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						device: {
+							/**
+							 * Device
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the Sensibo device
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the Sensibo device for which you want to create a schedule
+							 */
+							longDesc: () => LocalizedString
+						}
+						targetTimeLocale: {
+							/**
+							 * Target Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Time when the schedule should trigger
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the time when the scheduled action should be executed
+							 */
+							longDesc: () => LocalizedString
+						}
+						timezone: {
+							/**
+							 * Timezone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Timezone for the schedule
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the timezone for the scheduled action
+							 */
+							longDesc: () => LocalizedString
+						}
+						acState: {
+							/**
+							 * AC State
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Desired AC settings
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Configure the air conditioning settings that will be applied when the schedule triggers
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									on: {
+										/**
+										 * Power State
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Turn AC on or off
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Set whether the air conditioner should be turned on or off
+										 */
+										longDesc: () => LocalizedString
+									}
+									mode: {
+										/**
+										 * Mode
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * AC operating mode
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Set the air conditioner operating mode (cool, heat, fan, etc.)
+										 */
+										longDesc: () => LocalizedString
+									}
+									fanLevel: {
+										/**
+										 * Fan Level
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Fan speed setting
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Configure the fan speed level
+										 */
+										longDesc: () => LocalizedString
+									}
+									targetTemperature: {
+										/**
+										 * Target Temperature
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Desired temperature
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Set the target temperature for the air conditioner
+										 */
+										longDesc: () => LocalizedString
+									}
+									temperatureUnit: {
+										/**
+										 * Temperature Unit
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Temperature measurement unit
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose between Celsius or Fahrenheit for temperature display
+										 */
+										longDesc: () => LocalizedString
+									}
+									swing: {
+										/**
+										 * Swing
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Air flow direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Configure the air flow swing settings
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						recurOnDaysOfWeek: {
+							/**
+							 * Recurring Days
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Days when schedule repeats
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select which days of the week the schedule should repeat
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_device_timer: {
+					/**
+					 * Delete Device Timer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove the active timer from a Sensibo device
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Cancel any currently active timer that was set for the Sensibo device
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						device: {
+							/**
+							 * Device
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the Sensibo device
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the Sensibo device whose timer you want to delete
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_schedule: {
+					/**
+					 * Delete Schedule
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove a schedule from a Sensibo device
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Delete an existing schedule that was previously created for the Sensibo device
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						device: {
+							/**
+							 * Device
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the Sensibo device
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the Sensibo device whose schedule you want to delete
+							 */
+							longDesc: () => LocalizedString
+						}
+						schedule: {
+							/**
+							 * Schedule
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Schedule identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the schedule ID that you want to delete
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				enable_climate_react: {
+					/**
+					 * Enable Climate React
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Enable or disable Climate React feature
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Turn on or off the Climate React smart automation feature that automatically adjusts your AC based on room conditions
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						device: {
+							/**
+							 * Device
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the Sensibo device
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the Sensibo device for which you want to enable or disable Climate React
+							 */
+							longDesc: () => LocalizedString
+						}
+						enable: {
+							/**
+							 * Enable
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enable or disable Climate React
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set whether Climate React should be enabled (true) or disabled (false)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_ac_states: {
+					/**
+					 * Get AC States
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve AC state history
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get the history of air conditioner state changes for a Sensibo device
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						device: {
+							/**
+							 * Device
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the Sensibo device
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the Sensibo device whose AC state history you want to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of records
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the maximum number of AC state records to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_devices: {
+					/**
+					 * Get Devices
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve all available Sensibo devices
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get a list of all Sensibo devices associated with your account
+					 */
+					longDesc: () => LocalizedString
+				}
+				get_climate_react_settings: {
+					/**
+					 * Get Climate React Settings
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve Climate React configuration
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get the current Climate React smart automation settings for a Sensibo device
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						device: {
+							/**
+							 * Device
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the Sensibo device
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the Sensibo device whose Climate React settings you want to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_current_timer: {
+					/**
+					 * Get Current Timer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve active timer information
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get details about any currently active timer set for a Sensibo device
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						device: {
+							/**
+							 * Device
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the Sensibo device
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the Sensibo device whose current timer you want to check
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_device: {
+					/**
+					 * Get Device
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve detailed device information
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get comprehensive information about a specific Sensibo device including current status and capabilities
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						device: {
+							/**
+							 * Device
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the Sensibo device
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the Sensibo device whose detailed information you want to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_historical_measurements: {
+					/**
+					 * Get Historical Measurements
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve sensor measurement history
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get historical temperature, humidity, and other sensor measurements from a Sensibo device
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						device: {
+							/**
+							 * Device
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the Sensibo device
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the Sensibo device whose measurement history you want to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+						days: {
+							/**
+							 * Days
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of days to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how many days of historical measurements to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_schedule: {
+					/**
+					 * Get Schedule
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve specific schedule details
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get detailed information about a specific schedule configured for a Sensibo device
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						device: {
+							/**
+							 * Device
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the Sensibo device
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the Sensibo device whose schedule you want to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+						schedule: {
+							/**
+							 * Schedule
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Schedule identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the schedule ID that you want to retrieve details for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_schedules: {
+					/**
+					 * Get Schedules
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve all device schedules
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get a list of all schedules configured for a Sensibo device
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						device: {
+							/**
+							 * Device
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the Sensibo device
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the Sensibo device whose schedules you want to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				set_climate_react_configuration: {
+					/**
+					 * Set Climate React Configuration
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Configure Climate React automation settings
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Set up detailed Climate React configuration including temperature thresholds and corresponding AC states
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						device: {
+							/**
+							 * Device
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the Sensibo device
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the Sensibo device for which you want to configure Climate React
+							 */
+							longDesc: () => LocalizedString
+						}
+						enabled: {
+							/**
+							 * Enabled
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enable Climate React
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set whether Climate React should be enabled
+							 */
+							longDesc: () => LocalizedString
+						}
+						lowTemperatureThreshold: {
+							/**
+							 * Low Temperature Threshold
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Temperature trigger for low threshold
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the temperature below which the low temperature action will be triggered
+							 */
+							longDesc: () => LocalizedString
+						}
+						lowTemperatureState: {
+							/**
+							 * Low Temperature State
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AC settings for low temperature
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Configure the air conditioner settings to apply when temperature goes below the low threshold
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									on: {
+										/**
+										 * Power State
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Turn AC on or off
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Set whether the air conditioner should be turned on or off when low temperature is reached
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						highTemperatureThreshold: {
+							/**
+							 * High Temperature Threshold
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Temperature trigger for high threshold
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the temperature above which the high temperature action will be triggered
+							 */
+							longDesc: () => LocalizedString
+						}
+						highTemperatureState: {
+							/**
+							 * High Temperature State
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AC settings for high temperature
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Configure the air conditioner settings to apply when temperature goes above the high threshold
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									on: {
+										/**
+										 * Power State
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Turn AC on or off
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Set whether the air conditioner should be turned on or off when high temperature is reached
+										 */
+										longDesc: () => LocalizedString
+									}
+									mode: {
+										/**
+										 * Mode
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * AC operating mode
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Set the air conditioner operating mode for high temperature conditions
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				set_device_state: {
+					/**
+					 * Set Device State
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Configure complete device state
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Set multiple air conditioner settings at once including power, mode, temperature, and fan settings
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						device: {
+							/**
+							 * Device
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the Sensibo device
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the Sensibo device whose state you want to configure
+							 */
+							longDesc: () => LocalizedString
+						}
+						on: {
+							/**
+							 * Power State
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Turn device on or off
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set whether the air conditioner should be turned on or off
+							 */
+							longDesc: () => LocalizedString
+						}
+						mode: {
+							/**
+							 * Mode
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AC operating mode
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the air conditioner operating mode (cool, heat, fan, etc.)
+							 */
+							longDesc: () => LocalizedString
+						}
+						fanLevel: {
+							/**
+							 * Fan Level
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Fan speed setting
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Configure the fan speed level
+							 */
+							longDesc: () => LocalizedString
+						}
+						targetTemperature: {
+							/**
+							 * Target Temperature
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Desired temperature
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the target temperature for the air conditioner
+							 */
+							longDesc: () => LocalizedString
+						}
+						temperatureUnit: {
+							/**
+							 * Temperature Unit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Temperature measurement unit
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose between Celsius or Fahrenheit for temperature display
+							 */
+							longDesc: () => LocalizedString
+						}
+						swing: {
+							/**
+							 * Swing
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Air flow direction
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Configure the air flow swing settings
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				set_device_timer: {
+					/**
+					 * Set Device Timer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a timer for device state change
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Set a timer that will change the device state after a specified number of minutes
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						device: {
+							/**
+							 * Device
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the Sensibo device
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the Sensibo device for which you want to set a timer
+							 */
+							longDesc: () => LocalizedString
+						}
+						minutesFromNow: {
+							/**
+							 * Minutes From Now
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Timer duration in minutes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how many minutes from now the timer should trigger
+							 */
+							longDesc: () => LocalizedString
+						}
+						acState: {
+							/**
+							 * AC State
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AC settings for timer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Configure the air conditioner settings that will be applied when the timer expires
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									on: {
+										/**
+										 * Power State
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Turn AC on or off
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Set whether the air conditioner should be turned on or off when timer expires
+										 */
+										longDesc: () => LocalizedString
+									}
+									mode: {
+										/**
+										 * Mode
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * AC operating mode
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Set the air conditioner operating mode for when the timer expires
+										 */
+										longDesc: () => LocalizedString
+									}
+									fanLevel: {
+										/**
+										 * Fan Level
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Fan speed setting
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Configure the fan speed level for when the timer expires
+										 */
+										longDesc: () => LocalizedString
+									}
+									targetTemperature: {
+										/**
+										 * Target Temperature
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Desired temperature
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Set the target temperature for when the timer expires
+										 */
+										longDesc: () => LocalizedString
+									}
+									temperatureUnit: {
+										/**
+										 * Temperature Unit
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Temperature measurement unit
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose between Celsius or Fahrenheit for temperature display
+										 */
+										longDesc: () => LocalizedString
+									}
+									swing: {
+										/**
+										 * Swing
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Air flow direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Configure the air flow swing settings for when the timer expires
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				toggle_schedule: {
+					/**
+					 * Toggle Schedule
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Enable or disable a schedule
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Turn an existing schedule on or off without deleting it
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						device: {
+							/**
+							 * Device
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Select the Sensibo device
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the Sensibo device whose schedule you want to toggle
+							 */
+							longDesc: () => LocalizedString
+						}
+						schedule: {
+							/**
+							 * Schedule
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Schedule identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the schedule ID that you want to enable or disable
+							 */
+							longDesc: () => LocalizedString
+						}
+						isEnabled: {
+							/**
+							 * Is Enabled
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enable or disable the schedule
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set whether the schedule should be enabled (true) or disabled (false)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
 			}
 		}
 		Odoo: {

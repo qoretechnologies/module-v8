@@ -56,6 +56,7 @@ import quickbooks from '../apps/quickbooks';
 import calendly from '../apps/calendly';
 import klaviyo from '../apps/klaviyo';
 import clickup from '../apps/clickup';
+import sensibo from '../apps/sensibo';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -102,6 +103,7 @@ const NEW_APPS = {
   paddle,
   pipedrive,
   quickbooks,
+  sensibo,
   serenity,
   sharepoint,
   shopify,
