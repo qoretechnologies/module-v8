@@ -52148,6 +52148,1114 @@ type RootTranslation = {
 				}
 			}
 		}
+		Webflow: {
+			/**
+			 * W​e​b​f​l​o​w
+			 */
+			displayName: string
+			/**
+			 * W​e​b​f​l​o​w​ ​i​s​ ​a​ ​w​e​b​ ​d​e​s​i​g​n​ ​t​o​o​l​,​ ​C​M​S​,​ ​a​n​d​ ​h​o​s​t​i​n​g​ ​p​l​a​t​f​o​r​m​ ​t​h​a​t​ ​a​l​l​o​w​s​ ​u​s​e​r​s​ ​t​o​ ​b​u​i​l​d​ ​r​e​s​p​o​n​s​i​v​e​ ​w​e​b​s​i​t​e​s​ ​v​i​s​u​a​l​l​y​.
+			 */
+			shortDesc: string
+			/**
+			 * W​e​b​f​l​o​w​ ​i​s​ ​a​ ​p​o​w​e​r​f​u​l​ ​w​e​b​ ​d​e​s​i​g​n​ ​t​o​o​l​ ​t​h​a​t​ ​c​o​m​b​i​n​e​s​ ​t​h​e​ ​f​l​e​x​i​b​i​l​i​t​y​ ​o​f​ ​a​ ​C​M​S​ ​w​i​t​h​ ​t​h​e​ ​e​a​s​e​ ​o​f​ ​u​s​e​ ​o​f​ ​a​ ​v​i​s​u​a​l​ ​e​d​i​t​o​r​.​ ​I​t​ ​a​l​l​o​w​s​ ​u​s​e​r​s​ ​t​o​ ​c​r​e​a​t​e​ ​r​e​s​p​o​n​s​i​v​e​ ​w​e​b​s​i​t​e​s​ ​w​i​t​h​o​u​t​ ​w​r​i​t​i​n​g​ ​c​o​d​e​,​ ​m​a​k​i​n​g​ ​i​t​ ​a​c​c​e​s​s​i​b​l​e​ ​f​o​r​ ​d​e​s​i​g​n​e​r​s​ ​a​n​d​ ​d​e​v​e​l​o​p​e​r​s​ ​a​l​i​k​e​.​ ​W​i​t​h​ ​W​e​b​f​l​o​w​,​ ​y​o​u​ ​c​a​n​ ​d​e​s​i​g​n​,​ ​b​u​i​l​d​,​ ​a​n​d​ ​l​a​u​n​c​h​ ​w​e​b​s​i​t​e​s​ ​a​l​l​ ​i​n​ ​o​n​e​ ​p​l​a​t​f​o​r​m​,​ ​s​t​r​e​a​m​l​i​n​i​n​g​ ​t​h​e​ ​w​e​b​ ​d​e​v​e​l​o​p​m​e​n​t​ ​p​r​o​c​e​s​s​.
+			 */
+			longDesc: string
+			actions: {
+				create_item: {
+					/**
+					 * C​r​e​a​t​e​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​i​t​e​m​ ​i​n​ ​a​ ​W​e​b​f​l​o​w​ ​c​o​l​l​e​c​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​i​t​e​m​ ​w​i​t​h​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​d​a​t​a​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​W​e​b​f​l​o​w​ ​c​o​l​l​e​c​t​i​o​n​.​ ​Y​o​u​ ​c​a​n​ ​s​e​t​ ​t​h​e​ ​i​t​e​m​ ​a​s​ ​a​r​c​h​i​v​e​d​ ​o​r​ ​d​r​a​f​t​ ​a​n​d​ ​s​p​e​c​i​f​y​ ​a​ ​C​M​S​ ​l​o​c​a​l​e​.
+					 */
+					longDesc: string
+					options: {
+						site: {
+							/**
+							 * S​i​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​t​o​ ​f​i​l​t​e​r​ ​c​o​l​l​e​c​t​i​o​n​s​ ​f​r​o​m​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							longDesc: string
+						}
+						collection: {
+							/**
+							 * C​o​l​l​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​i​t​e​m​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​W​e​b​f​l​o​w​ ​c​o​l​l​e​c​t​i​o​n​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​n​e​w​ ​i​t​e​m
+							 */
+							longDesc: string
+						}
+						isArchived: {
+							/**
+							 * I​s​ ​A​r​c​h​i​v​e​d
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​e​ ​i​t​e​m​ ​s​h​o​u​l​d​ ​b​e​ ​a​r​c​h​i​v​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​t​r​u​e​ ​i​f​ ​y​o​u​ ​w​a​n​t​ ​t​h​e​ ​i​t​e​m​ ​t​o​ ​b​e​ ​a​r​c​h​i​v​e​d​ ​u​p​o​n​ ​c​r​e​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						isDraft: {
+							/**
+							 * I​s​ ​D​r​a​f​t
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​e​ ​i​t​e​m​ ​s​h​o​u​l​d​ ​b​e​ ​a​ ​d​r​a​f​t
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​t​r​u​e​ ​i​f​ ​y​o​u​ ​w​a​n​t​ ​t​h​e​ ​i​t​e​m​ ​t​o​ ​b​e​ ​s​a​v​e​d​ ​a​s​ ​a​ ​d​r​a​f​t​ ​(​d​e​f​a​u​l​t​:​ ​t​r​u​e​)
+							 */
+							longDesc: string
+						}
+						cmsLocaleId: {
+							/**
+							 * C​M​S​ ​L​o​c​a​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​l​o​c​a​l​e​ ​I​D​ ​f​o​r​ ​t​h​e​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​C​M​S​ ​l​o​c​a​l​e​ ​I​D​ ​i​f​ ​w​o​r​k​i​n​g​ ​w​i​t​h​ ​a​ ​m​u​l​t​i​-​l​o​c​a​l​e​ ​s​i​t​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_item: {
+					/**
+					 * D​e​l​e​t​e​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​n​ ​i​t​e​m​ ​f​r​o​m​ ​a​ ​W​e​b​f​l​o​w​ ​c​o​l​l​e​c​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​i​t​e​m​ ​f​r​o​m​ ​a​ ​W​e​b​f​l​o​w​ ​c​o​l​l​e​c​t​i​o​n​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.
+					 */
+					longDesc: string
+					options: {
+						item: {
+							/**
+							 * I​t​e​m
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​i​t​e​m​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​i​t​e​m​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​ ​f​r​o​m​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n
+							 */
+							longDesc: string
+						}
+						site: {
+							/**
+							 * S​i​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​t​o​ ​f​i​l​t​e​r​ ​c​o​l​l​e​c​t​i​o​n​s​ ​f​r​o​m​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							longDesc: string
+						}
+						collection: {
+							/**
+							 * C​o​l​l​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​W​e​b​f​l​o​w​ ​c​o​l​l​e​c​t​i​o​n​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​i​t​e​m​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_collection: {
+					/**
+					 * G​e​t​ ​C​o​l​l​e​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​W​e​b​f​l​o​w​ ​c​o​l​l​e​c​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​W​e​b​f​l​o​w​ ​c​o​l​l​e​c​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​f​i​e​l​d​s​,​ ​s​e​t​t​i​n​g​s​,​ ​a​n​d​ ​m​e​t​a​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						site: {
+							/**
+							 * S​i​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​t​o​ ​f​i​l​t​e​r​ ​c​o​l​l​e​c​t​i​o​n​s​ ​f​r​o​m​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							longDesc: string
+						}
+						collection: {
+							/**
+							 * C​o​l​l​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​W​e​b​f​l​o​w​ ​c​o​l​l​e​c​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_item: {
+					/**
+					 * G​e​t​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​i​t​e​m​ ​f​r​o​m​ ​a​ ​W​e​b​f​l​o​w​ ​c​o​l​l​e​c​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​i​t​e​m​ ​f​r​o​m​ ​a​ ​W​e​b​f​l​o​w​ ​c​o​l​l​e​c​t​i​o​n​,​ ​i​n​c​l​u​d​i​n​g​ ​a​l​l​ ​i​t​s​ ​f​i​e​l​d​ ​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						item: {
+							/**
+							 * I​t​e​m
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​i​t​e​m​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​i​t​e​m​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​r​o​m​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n
+							 */
+							longDesc: string
+						}
+						site: {
+							/**
+							 * S​i​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​t​o​ ​f​i​l​t​e​r​ ​c​o​l​l​e​c​t​i​o​n​s​ ​f​r​o​m​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							longDesc: string
+						}
+						collection: {
+							/**
+							 * C​o​l​l​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​W​e​b​f​l​o​w​ ​c​o​l​l​e​c​t​i​o​n​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​i​t​e​m​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+						cmsLocaleId: {
+							/**
+							 * C​M​S​ ​L​o​c​a​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​l​o​c​a​l​e​ ​I​D​ ​f​o​r​ ​t​h​e​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​C​M​S​ ​l​o​c​a​l​e​ ​I​D​ ​i​f​ ​w​o​r​k​i​n​g​ ​w​i​t​h​ ​a​ ​m​u​l​t​i​-​l​o​c​a​l​e​ ​s​i​t​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_order: {
+					/**
+					 * G​e​t​ ​O​r​d​e​r
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​o​r​d​e​r​ ​f​r​o​m​ ​W​e​b​f​l​o​w
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​o​r​d​e​r​ ​f​r​o​m​ ​W​e​b​f​l​o​w​,​ ​i​n​c​l​u​d​i​n​g​ ​c​u​s​t​o​m​e​r​ ​d​e​t​a​i​l​s​,​ ​p​u​r​c​h​a​s​e​d​ ​i​t​e​m​s​,​ ​a​n​d​ ​p​a​y​m​e​n​t​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						site: {
+							/**
+							 * S​i​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​o​r​d​e​r
+							 */
+							longDesc: string
+						}
+						order: {
+							/**
+							 * O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​o​r​d​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​o​r​d​e​r​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_site: {
+					/**
+					 * G​e​t​ ​S​i​t​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​W​e​b​f​l​o​w​ ​s​i​t​e
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​s​e​t​t​i​n​g​s​,​ ​d​o​m​a​i​n​s​,​ ​a​n​d​ ​l​o​c​a​l​e​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						site: {
+							/**
+							 * S​i​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​i​t​e​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_collections: {
+					/**
+					 * L​i​s​t​ ​C​o​l​l​e​c​t​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​l​l​ ​c​o​l​l​e​c​t​i​o​n​s​ ​f​r​o​m​ ​a​ ​W​e​b​f​l​o​w​ ​s​i​t​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​c​o​l​l​e​c​t​i​o​n​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​w​i​t​h​ ​t​h​e​i​r​ ​b​a​s​i​c​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						site: {
+							/**
+							 * S​i​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​t​o​ ​l​i​s​t​ ​c​o​l​l​e​c​t​i​o​n​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_custom_domains: {
+					/**
+					 * L​i​s​t​ ​C​u​s​t​o​m​ ​D​o​m​a​i​n​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​c​u​s​t​o​m​ ​d​o​m​a​i​n​s​ ​f​o​r​ ​a​ ​W​e​b​f​l​o​w​ ​s​i​t​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​c​u​s​t​o​m​ ​d​o​m​a​i​n​s​ ​c​o​n​f​i​g​u​r​e​d​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​W​e​b​f​l​o​w​ ​s​i​t​e​.
+					 */
+					longDesc: string
+					options: {
+						site: {
+							/**
+							 * S​i​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​t​o​ ​l​i​s​t​ ​c​u​s​t​o​m​ ​d​o​m​a​i​n​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_items: {
+					/**
+					 * L​i​s​t​ ​I​t​e​m​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​i​t​e​m​s​ ​f​r​o​m​ ​a​ ​W​e​b​f​l​o​w​ ​c​o​l​l​e​c​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​i​t​e​m​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​W​e​b​f​l​o​w​ ​c​o​l​l​e​c​t​i​o​n​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​o​p​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						site: {
+							/**
+							 * S​i​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​t​o​ ​f​i​l​t​e​r​ ​c​o​l​l​e​c​t​i​o​n​s​ ​f​r​o​m​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							longDesc: string
+						}
+						collection: {
+							/**
+							 * C​o​l​l​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​t​o​ ​l​i​s​t​ ​i​t​e​m​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​W​e​b​f​l​o​w​ ​c​o​l​l​e​c​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​l​i​s​t​ ​i​t​e​m​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+						cmsLocaleId: {
+							/**
+							 * C​M​S​ ​L​o​c​a​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​l​o​c​a​l​e​ ​I​D​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​i​t​e​m​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​C​M​S​ ​l​o​c​a​l​e​ ​I​D​ ​t​o​ ​f​i​l​t​e​r​ ​i​t​e​m​s​ ​b​y​ ​l​o​c​a​l​e
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​i​t​e​m​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​i​t​e​m​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​(​d​e​f​a​u​l​t​:​ ​0​)
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​i​t​e​m​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​i​t​e​m​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​ ​(​d​e​f​a​u​l​t​:​ ​2​0​)
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​i​t​e​m​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​i​t​e​m​s​ ​b​y​ ​t​h​e​i​r​ ​n​a​m​e​ ​f​i​e​l​d
+							 */
+							longDesc: string
+						}
+						slug: {
+							/**
+							 * S​l​u​g
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​i​t​e​m​ ​s​l​u​g
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​i​t​e​m​s​ ​b​y​ ​t​h​e​i​r​ ​s​l​u​g​ ​f​i​e​l​d
+							 */
+							longDesc: string
+						}
+						lastPublished: {
+							/**
+							 * L​a​s​t​ ​P​u​b​l​i​s​h​e​d
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​u​b​l​i​c​a​t​i​o​n​ ​d​a​t​e​ ​r​a​n​g​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​i​t​e​m​s​ ​b​y​ ​t​h​e​i​r​ ​l​a​s​t​ ​p​u​b​l​i​s​h​e​d​ ​d​a​t​e​ ​r​a​n​g​e
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									lte: {
+										/**
+										 * L​e​s​s​ ​T​h​a​n​ ​o​r​ ​E​q​u​a​l​ ​T​o
+										 */
+										displayName: string
+										/**
+										 * I​t​e​m​s​ ​p​u​b​l​i​s​h​e​d​ ​b​e​f​o​r​e​ ​o​r​ ​o​n​ ​t​h​i​s​ ​d​a​t​e
+										 */
+										shortDesc: string
+										/**
+										 * I​n​c​l​u​d​e​ ​i​t​e​m​s​ ​p​u​b​l​i​s​h​e​d​ ​b​e​f​o​r​e​ ​o​r​ ​o​n​ ​t​h​i​s​ ​d​a​t​e
+										 */
+										longDesc: string
+									}
+									gte: {
+										/**
+										 * G​r​e​a​t​e​r​ ​T​h​a​n​ ​o​r​ ​E​q​u​a​l​ ​T​o
+										 */
+										displayName: string
+										/**
+										 * I​t​e​m​s​ ​p​u​b​l​i​s​h​e​d​ ​a​f​t​e​r​ ​o​r​ ​o​n​ ​t​h​i​s​ ​d​a​t​e
+										 */
+										shortDesc: string
+										/**
+										 * I​n​c​l​u​d​e​ ​i​t​e​m​s​ ​p​u​b​l​i​s​h​e​d​ ​a​f​t​e​r​ ​o​r​ ​o​n​ ​t​h​i​s​ ​d​a​t​e
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sortBy: {
+							/**
+							 * S​o​r​t​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​i​t​e​m​s​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​i​t​e​m​s​ ​b​y
+							 */
+							longDesc: string
+						}
+						sortOrder: {
+							/**
+							 * S​o​r​t​ ​O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_orders: {
+					/**
+					 * L​i​s​t​ ​O​r​d​e​r​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​o​r​d​e​r​s​ ​f​r​o​m​ ​a​ ​W​e​b​f​l​o​w​ ​s​i​t​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​o​r​d​e​r​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​ ​o​p​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						site: {
+							/**
+							 * S​i​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​t​o​ ​l​i​s​t​ ​o​r​d​e​r​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​o​r​d​e​r​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​o​r​d​e​r​s​ ​b​y​ ​t​h​e​i​r​ ​c​u​r​r​e​n​t​ ​s​t​a​t​u​s
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​o​r​d​e​r​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​o​r​d​e​r​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​o​r​d​e​r​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​o​r​d​e​r​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​ ​(​d​e​f​a​u​l​t​:​ ​2​0​)
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_sites: {
+					/**
+					 * L​i​s​t​ ​S​i​t​e​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​l​l​ ​W​e​b​f​l​o​w​ ​s​i​t​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​W​e​b​f​l​o​w​ ​s​i​t​e​s​ ​a​c​c​e​s​s​i​b​l​e​ ​w​i​t​h​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​a​u​t​h​e​n​t​i​c​a​t​i​o​n​ ​t​o​k​e​n​.
+					 */
+					longDesc: string
+				}
+				mark_order_status: {
+					/**
+					 * M​a​r​k​ ​O​r​d​e​r​ ​S​t​a​t​u​s
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​s​t​a​t​u​s​ ​o​f​ ​a​ ​W​e​b​f​l​o​w​ ​o​r​d​e​r
+					 */
+					shortDesc: string
+					/**
+					 * C​h​a​n​g​e​ ​t​h​e​ ​s​t​a​t​u​s​ ​o​f​ ​a​ ​W​e​b​f​l​o​w​ ​o​r​d​e​r​ ​t​o​ ​f​u​l​f​i​l​l​e​d​,​ ​u​n​f​u​l​f​i​l​l​e​d​,​ ​o​r​ ​r​e​f​u​n​d​e​d​ ​w​i​t​h​ ​a​d​d​i​t​i​o​n​a​l​ ​o​p​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						site: {
+							/**
+							 * S​i​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​o​r​d​e​r
+							 */
+							longDesc: string
+						}
+						order: {
+							/**
+							 * O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​o​r​d​e​r​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​o​r​d​e​r​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​ ​t​h​e​ ​s​t​a​t​u​s​ ​f​o​r
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​s​t​a​t​u​s​ ​f​o​r​ ​t​h​e​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​n​e​w​ ​s​t​a​t​u​s​ ​t​o​ ​s​e​t​ ​f​o​r​ ​t​h​e​ ​o​r​d​e​r
+							 */
+							longDesc: string
+						}
+						reason: {
+							/**
+							 * R​e​f​u​n​d​ ​R​e​a​s​o​n
+							 */
+							displayName: string
+							/**
+							 * R​e​a​s​o​n​ ​f​o​r​ ​r​e​f​u​n​d​i​n​g​ ​t​h​e​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​r​e​a​s​o​n​ ​f​o​r​ ​r​e​f​u​n​d​i​n​g​ ​t​h​e​ ​o​r​d​e​r​ ​(​r​e​q​u​i​r​e​d​ ​f​o​r​ ​r​e​f​u​n​d​e​d​ ​s​t​a​t​u​s​)
+							 */
+							longDesc: string
+						}
+						sendOrderFulfilledEmail: {
+							/**
+							 * S​e​n​d​ ​O​r​d​e​r​ ​F​u​l​f​i​l​l​e​d​ ​E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * S​e​n​d​ ​f​u​l​f​i​l​l​m​e​n​t​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​e​m​a​i​l
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​s​e​n​d​ ​a​n​ ​o​r​d​e​r​ ​f​u​l​f​i​l​l​e​d​ ​e​m​a​i​l​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				publish_item: {
+					/**
+					 * P​u​b​l​i​s​h​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * P​u​b​l​i​s​h​ ​i​t​e​m​s​ ​f​r​o​m​ ​a​ ​W​e​b​f​l​o​w​ ​c​o​l​l​e​c​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * P​u​b​l​i​s​h​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​i​t​e​m​s​ ​f​r​o​m​ ​a​ ​W​e​b​f​l​o​w​ ​c​o​l​l​e​c​t​i​o​n​ ​t​o​ ​m​a​k​e​ ​t​h​e​m​ ​l​i​v​e​ ​o​n​ ​t​h​e​ ​w​e​b​s​i​t​e​.
+					 */
+					longDesc: string
+					options: {
+						items: {
+							/**
+							 * I​t​e​m​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​i​t​e​m​s​ ​t​o​ ​p​u​b​l​i​s​h
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​i​t​e​m​s​ ​f​r​o​m​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​t​o​ ​p​u​b​l​i​s​h
+							 */
+							longDesc: string
+						}
+						site: {
+							/**
+							 * S​i​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​t​o​ ​f​i​l​t​e​r​ ​c​o​l​l​e​c​t​i​o​n​s​ ​f​r​o​m​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							longDesc: string
+						}
+						collection: {
+							/**
+							 * C​o​l​l​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​i​t​e​m​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​W​e​b​f​l​o​w​ ​c​o​l​l​e​c​t​i​o​n​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​i​t​e​m​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​p​u​b​l​i​s​h
+							 */
+							longDesc: string
+						}
+					}
+				}
+				publish_site: {
+					/**
+					 * P​u​b​l​i​s​h​ ​S​i​t​e
+					 */
+					displayName: string
+					/**
+					 * P​u​b​l​i​s​h​ ​a​ ​W​e​b​f​l​o​w​ ​s​i​t​e
+					 */
+					shortDesc: string
+					/**
+					 * P​u​b​l​i​s​h​ ​a​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​t​o​ ​m​a​k​e​ ​a​l​l​ ​c​h​a​n​g​e​s​ ​l​i​v​e​.​ ​Y​o​u​ ​c​a​n​ ​s​p​e​c​i​f​y​ ​c​u​s​t​o​m​ ​d​o​m​a​i​n​s​ ​a​n​d​ ​w​h​e​t​h​e​r​ ​t​o​ ​p​u​b​l​i​s​h​ ​t​o​ ​t​h​e​ ​W​e​b​f​l​o​w​ ​s​u​b​d​o​m​a​i​n​.
+					 */
+					longDesc: string
+					options: {
+						site: {
+							/**
+							 * S​i​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​i​t​e​ ​t​o​ ​p​u​b​l​i​s​h
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​p​u​b​l​i​s​h
+							 */
+							longDesc: string
+						}
+						customDomains: {
+							/**
+							 * C​u​s​t​o​m​ ​D​o​m​a​i​n​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​d​o​m​a​i​n​s​ ​t​o​ ​p​u​b​l​i​s​h​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​c​u​s​t​o​m​ ​d​o​m​a​i​n​s​ ​t​o​ ​p​u​b​l​i​s​h​ ​t​h​e​ ​s​i​t​e​ ​t​o​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							longDesc: string
+						}
+						publishToWebflowSubdomain: {
+							/**
+							 * P​u​b​l​i​s​h​ ​t​o​ ​W​e​b​f​l​o​w​ ​S​u​b​d​o​m​a​i​n
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​p​u​b​l​i​s​h​ ​t​o​ ​W​e​b​f​l​o​w​ ​s​u​b​d​o​m​a​i​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​p​u​b​l​i​s​h​ ​t​h​e​ ​s​i​t​e​ ​t​o​ ​i​t​s​ ​W​e​b​f​l​o​w​ ​s​u​b​d​o​m​a​i​n
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_item: {
+					/**
+					 * U​p​d​a​t​e​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​i​t​e​m​ ​i​n​ ​a​ ​W​e​b​f​l​o​w​ ​c​o​l​l​e​c​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​f​i​e​l​d​ ​d​a​t​a​ ​a​n​d​ ​s​e​t​t​i​n​g​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​i​t​e​m​ ​i​n​ ​a​ ​W​e​b​f​l​o​w​ ​c​o​l​l​e​c​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						site: {
+							/**
+							 * S​i​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​t​o​ ​f​i​l​t​e​r​ ​c​o​l​l​e​c​t​i​o​n​s​ ​f​r​o​m​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							longDesc: string
+						}
+						item: {
+							/**
+							 * I​t​e​m
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​i​t​e​m​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​i​t​e​m​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							longDesc: string
+						}
+						collection: {
+							/**
+							 * C​o​l​l​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​W​e​b​f​l​o​w​ ​c​o​l​l​e​c​t​i​o​n​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​i​t​e​m​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							longDesc: string
+						}
+						isArchived: {
+							/**
+							 * I​s​ ​A​r​c​h​i​v​e​d
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​e​ ​i​t​e​m​ ​s​h​o​u​l​d​ ​b​e​ ​a​r​c​h​i​v​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​t​r​u​e​ ​t​o​ ​a​r​c​h​i​v​e​ ​t​h​e​ ​i​t​e​m​,​ ​f​a​l​s​e​ ​t​o​ ​u​n​a​r​c​h​i​v​e​ ​i​t
+							 */
+							longDesc: string
+						}
+						isDraft: {
+							/**
+							 * I​s​ ​D​r​a​f​t
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​e​ ​i​t​e​m​ ​s​h​o​u​l​d​ ​b​e​ ​a​ ​d​r​a​f​t
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​t​r​u​e​ ​t​o​ ​s​a​v​e​ ​t​h​e​ ​i​t​e​m​ ​a​s​ ​a​ ​d​r​a​f​t​,​ ​f​a​l​s​e​ ​t​o​ ​m​a​k​e​ ​i​t​ ​l​i​v​e
+							 */
+							longDesc: string
+						}
+						cmsLocaleId: {
+							/**
+							 * C​M​S​ ​L​o​c​a​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​l​o​c​a​l​e​ ​I​D​ ​f​o​r​ ​t​h​e​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​C​M​S​ ​l​o​c​a​l​e​ ​I​D​ ​i​f​ ​w​o​r​k​i​n​g​ ​w​i​t​h​ ​a​ ​m​u​l​t​i​-​l​o​c​a​l​e​ ​s​i​t​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_item: {
+					/**
+					 * N​e​w​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​t​e​m​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​ ​c​o​l​l​e​c​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​i​t​e​m​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​n​y​ ​c​o​l​l​e​c​t​i​o​n​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​W​e​b​f​l​o​w​ ​s​i​t​e​.​ ​I​t​ ​p​r​o​v​i​d​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​i​t​e​m​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​f​i​e​l​d​ ​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						site: {
+							/**
+							 * S​i​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​i​t​e​m​ ​c​r​e​a​t​i​o​n​ ​e​v​e​n​t​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_order: {
+					/**
+					 * N​e​w​ ​O​r​d​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​o​r​d​e​r​ ​i​s​ ​p​l​a​c​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​o​r​d​e​r​ ​i​s​ ​p​l​a​c​e​d​ ​o​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​W​e​b​f​l​o​w​ ​s​i​t​e​.​ ​I​t​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​o​r​d​e​r​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​c​u​s​t​o​m​e​r​ ​d​e​t​a​i​l​s​,​ ​p​u​r​c​h​a​s​e​d​ ​i​t​e​m​s​,​ ​p​a​y​m​e​n​t​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​n​d​ ​s​h​i​p​p​i​n​g​ ​d​e​t​a​i​l​s​.
+					 */
+					longDesc: string
+					options: {
+						site: {
+							/**
+							 * S​i​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​o​r​d​e​r​ ​e​v​e​n​t​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				updated_item: {
+					/**
+					 * U​p​d​a​t​e​d​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​n​ ​i​t​e​m​ ​i​s​ ​u​p​d​a​t​e​d​ ​i​n​ ​a​ ​c​o​l​l​e​c​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​i​t​e​m​ ​i​s​ ​m​o​d​i​f​i​e​d​ ​i​n​ ​a​n​y​ ​c​o​l​l​e​c​t​i​o​n​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​W​e​b​f​l​o​w​ ​s​i​t​e​.​ ​I​t​ ​p​r​o​v​i​d​e​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​u​p​d​a​t​e​d​ ​i​t​e​m​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​c​u​r​r​e​n​t​ ​f​i​e​l​d​ ​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						site: {
+							/**
+							 * S​i​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​i​t​e​m​ ​u​p​d​a​t​e​ ​e​v​e​n​t​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				updated_order: {
+					/**
+					 * U​p​d​a​t​e​d​ ​O​r​d​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​n​ ​o​r​d​e​r​ ​s​t​a​t​u​s​ ​i​s​ ​u​p​d​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​o​r​d​e​r​ ​i​s​ ​m​o​d​i​f​i​e​d​ ​o​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​W​e​b​f​l​o​w​ ​s​i​t​e​.​ ​T​h​i​s​ ​i​n​c​l​u​d​e​s​ ​s​t​a​t​u​s​ ​c​h​a​n​g​e​s​,​ ​f​u​l​f​i​l​l​m​e​n​t​ ​u​p​d​a​t​e​s​,​ ​r​e​f​u​n​d​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​o​r​d​e​r​ ​m​o​d​i​f​i​c​a​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						site: {
+							/**
+							 * S​i​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​o​r​d​e​r​ ​u​p​d​a​t​e​ ​e​v​e​n​t​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -104283,6 +105391,1114 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 					options: {
+					}
+				}
+			}
+		}
+		Webflow: {
+			/**
+			 * Webflow
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Webflow is a web design tool, CMS, and hosting platform that allows users to build responsive websites visually.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Webflow is a powerful web design tool that combines the flexibility of a CMS with the ease of use of a visual editor. It allows users to create responsive websites without writing code, making it accessible for designers and developers alike. With Webflow, you can design, build, and launch websites all in one platform, streamlining the web development process.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				create_item: {
+					/**
+					 * Create Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new item in a Webflow collection
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new item with custom field data in a specified Webflow collection. You can set the item as archived or draft and specify a CMS locale.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						site: {
+							/**
+							 * Site
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Webflow site (optional)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Webflow site to filter collections from (optional)
+							 */
+							longDesc: () => LocalizedString
+						}
+						collection: {
+							/**
+							 * Collection
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The collection to create the item in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Webflow collection where you want to create the new item
+							 */
+							longDesc: () => LocalizedString
+						}
+						isArchived: {
+							/**
+							 * Is Archived
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether the item should be archived
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to true if you want the item to be archived upon creation
+							 */
+							longDesc: () => LocalizedString
+						}
+						isDraft: {
+							/**
+							 * Is Draft
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether the item should be a draft
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to true if you want the item to be saved as a draft (default: true)
+							 */
+							longDesc: () => LocalizedString
+						}
+						cmsLocaleId: {
+							/**
+							 * CMS Locale ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The locale ID for the item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the CMS locale ID if working with a multi-locale site
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_item: {
+					/**
+					 * Delete Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete an item from a Webflow collection
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently delete a specified item from a Webflow collection. This action cannot be undone.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						item: {
+							/**
+							 * Item
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The item to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific item you want to delete from the collection
+							 */
+							longDesc: () => LocalizedString
+						}
+						site: {
+							/**
+							 * Site
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Webflow site (optional)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Webflow site to filter collections from (optional)
+							 */
+							longDesc: () => LocalizedString
+						}
+						collection: {
+							/**
+							 * Collection
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The collection containing the item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Webflow collection that contains the item you want to delete
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_collection: {
+					/**
+					 * Get Collection
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve information about a Webflow collection
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get detailed information about a specific Webflow collection including its fields, settings, and metadata.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						site: {
+							/**
+							 * Site
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Webflow site (optional)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Webflow site to filter collections from (optional)
+							 */
+							longDesc: () => LocalizedString
+						}
+						collection: {
+							/**
+							 * Collection
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The collection to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific Webflow collection you want to get information about
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_item: {
+					/**
+					 * Get Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific item from a Webflow collection
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get detailed information about a specific item from a Webflow collection, including all its field data.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						item: {
+							/**
+							 * Item
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The item to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific item you want to retrieve from the collection
+							 */
+							longDesc: () => LocalizedString
+						}
+						site: {
+							/**
+							 * Site
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Webflow site (optional)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Webflow site to filter collections from (optional)
+							 */
+							longDesc: () => LocalizedString
+						}
+						collection: {
+							/**
+							 * Collection
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The collection containing the item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Webflow collection that contains the item you want to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+						cmsLocaleId: {
+							/**
+							 * CMS Locale ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The locale ID for the item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the CMS locale ID if working with a multi-locale site
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_order: {
+					/**
+					 * Get Order
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific order from Webflow
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get detailed information about a specific order from Webflow, including customer details, purchased items, and payment information.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						site: {
+							/**
+							 * Site
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Webflow site
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Webflow site that contains the order
+							 */
+							longDesc: () => LocalizedString
+						}
+						order: {
+							/**
+							 * Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The order to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific order you want to retrieve information about
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_site: {
+					/**
+					 * Get Site
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve information about a Webflow site
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get detailed information about a specific Webflow site including its settings, domains, and locale configuration.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						site: {
+							/**
+							 * Site
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The site to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific Webflow site you want to get information about
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_collections: {
+					/**
+					 * List Collections
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List all collections from a Webflow site
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all collections from a specified Webflow site with their basic information.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						site: {
+							/**
+							 * Site
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Webflow site
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Webflow site to list collections from
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_custom_domains: {
+					/**
+					 * List Custom Domains
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List custom domains for a Webflow site
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all custom domains configured for a specified Webflow site.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						site: {
+							/**
+							 * Site
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Webflow site
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Webflow site to list custom domains from
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_items: {
+					/**
+					 * List Items
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List items from a Webflow collection
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a paginated list of items from a specified Webflow collection with filtering and sorting options.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						site: {
+							/**
+							 * Site
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Webflow site (optional)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Webflow site to filter collections from (optional)
+							 */
+							longDesc: () => LocalizedString
+						}
+						collection: {
+							/**
+							 * Collection
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The collection to list items from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Webflow collection you want to list items from
+							 */
+							longDesc: () => LocalizedString
+						}
+						cmsLocaleId: {
+							/**
+							 * CMS Locale ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The locale ID for filtering items
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the CMS locale ID to filter items by locale
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of items to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of items to skip for pagination (default: 0)
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of items to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of items to return per page (default: 20)
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by item name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter items by their name field
+							 */
+							longDesc: () => LocalizedString
+						}
+						slug: {
+							/**
+							 * Slug
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by item slug
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter items by their slug field
+							 */
+							longDesc: () => LocalizedString
+						}
+						lastPublished: {
+							/**
+							 * Last Published
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by publication date range
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter items by their last published date range
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									lte: {
+										/**
+										 * Less Than or Equal To
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Items published before or on this date
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Include items published before or on this date
+										 */
+										longDesc: () => LocalizedString
+									}
+									gte: {
+										/**
+										 * Greater Than or Equal To
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Items published after or on this date
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Include items published after or on this date
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sortBy: {
+							/**
+							 * Sort By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to sort items by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the field to sort the items by
+							 */
+							longDesc: () => LocalizedString
+						}
+						sortOrder: {
+							/**
+							 * Sort Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort direction
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose whether to sort in ascending or descending order
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_orders: {
+					/**
+					 * List Orders
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List orders from a Webflow site
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a paginated list of orders from a specified Webflow site with filtering options.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						site: {
+							/**
+							 * Site
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Webflow site
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Webflow site to list orders from
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by order status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter orders by their current status
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of orders to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of orders to skip for pagination
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of orders to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of orders to return per page (default: 20)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_sites: {
+					/**
+					 * List Sites
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List all Webflow sites
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all Webflow sites accessible with the current authentication token.
+					 */
+					longDesc: () => LocalizedString
+				}
+				mark_order_status: {
+					/**
+					 * Mark Order Status
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update the status of a Webflow order
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Change the status of a Webflow order to fulfilled, unfulfilled, or refunded with additional options.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						site: {
+							/**
+							 * Site
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Webflow site
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Webflow site that contains the order
+							 */
+							longDesc: () => LocalizedString
+						}
+						order: {
+							/**
+							 * Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The order to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific order you want to update the status for
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new status for the order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the new status to set for the order
+							 */
+							longDesc: () => LocalizedString
+						}
+						reason: {
+							/**
+							 * Refund Reason
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Reason for refunding the order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the reason for refunding the order (required for refunded status)
+							 */
+							longDesc: () => LocalizedString
+						}
+						sendOrderFulfilledEmail: {
+							/**
+							 * Send Order Fulfilled Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Send fulfillment notification email
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to send an order fulfilled email to the customer
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				publish_item: {
+					/**
+					 * Publish Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Publish items from a Webflow collection
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Publish one or more items from a Webflow collection to make them live on the website.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						items: {
+							/**
+							 * Items
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The items to publish
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select one or more items from the collection to publish
+							 */
+							longDesc: () => LocalizedString
+						}
+						site: {
+							/**
+							 * Site
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Webflow site (optional)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Webflow site to filter collections from (optional)
+							 */
+							longDesc: () => LocalizedString
+						}
+						collection: {
+							/**
+							 * Collection
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The collection containing the items
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Webflow collection that contains the items you want to publish
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				publish_site: {
+					/**
+					 * Publish Site
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Publish a Webflow site
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Publish a Webflow site to make all changes live. You can specify custom domains and whether to publish to the Webflow subdomain.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						site: {
+							/**
+							 * Site
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The site to publish
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Webflow site you want to publish
+							 */
+							longDesc: () => LocalizedString
+						}
+						customDomains: {
+							/**
+							 * Custom Domains
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom domains to publish to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify custom domains to publish the site to (optional)
+							 */
+							longDesc: () => LocalizedString
+						}
+						publishToWebflowSubdomain: {
+							/**
+							 * Publish to Webflow Subdomain
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to publish to Webflow subdomain
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to publish the site to its Webflow subdomain
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_item: {
+					/**
+					 * Update Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing item in a Webflow collection
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the field data and settings of an existing item in a Webflow collection.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						site: {
+							/**
+							 * Site
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Webflow site (optional)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Webflow site to filter collections from (optional)
+							 */
+							longDesc: () => LocalizedString
+						}
+						item: {
+							/**
+							 * Item
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The item to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific item you want to update
+							 */
+							longDesc: () => LocalizedString
+						}
+						collection: {
+							/**
+							 * Collection
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The collection containing the item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Webflow collection that contains the item you want to update
+							 */
+							longDesc: () => LocalizedString
+						}
+						isArchived: {
+							/**
+							 * Is Archived
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether the item should be archived
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to true to archive the item, false to unarchive it
+							 */
+							longDesc: () => LocalizedString
+						}
+						isDraft: {
+							/**
+							 * Is Draft
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether the item should be a draft
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to true to save the item as a draft, false to make it live
+							 */
+							longDesc: () => LocalizedString
+						}
+						cmsLocaleId: {
+							/**
+							 * CMS Locale ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The locale ID for the item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the CMS locale ID if working with a multi-locale site
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_item: {
+					/**
+					 * New Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a new item is created in a collection
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a new item is created in any collection within the specified Webflow site. It provides detailed information about the newly created item including its field data.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						site: {
+							/**
+							 * Site
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Webflow site to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Webflow site where you want to monitor for new item creation events
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_order: {
+					/**
+					 * New Order
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a new order is placed
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a new order is placed on the specified Webflow site. It provides comprehensive order information including customer details, purchased items, payment information, and shipping details.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						site: {
+							/**
+							 * Site
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Webflow site to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Webflow site where you want to monitor for new order events
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				updated_item: {
+					/**
+					 * Updated Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when an item is updated in a collection
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever an existing item is modified in any collection within the specified Webflow site. It provides information about the updated item including its current field data.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						site: {
+							/**
+							 * Site
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Webflow site to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Webflow site where you want to monitor for item update events
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				updated_order: {
+					/**
+					 * Updated Order
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when an order status is updated
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever an existing order is modified on the specified Webflow site. This includes status changes, fulfillment updates, refunds, and other order modifications.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						site: {
+							/**
+							 * Site
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Webflow site to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Webflow site where you want to monitor for order update events
+							 */
+							longDesc: () => LocalizedString
+						}
 					}
 				}
 			}

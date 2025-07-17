@@ -56,6 +56,7 @@ import quickbooks from '../apps/quickbooks';
 import calendly from '../apps/calendly';
 import klaviyo from '../apps/klaviyo';
 import clickup from '../apps/clickup';
+import webflow from '../apps/webflow';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -108,6 +109,7 @@ const NEW_APPS = {
   stripe,
   teams,
   typeform,
+  webflow,
   xero,
   zendesk,
   zoom,
