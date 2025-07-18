@@ -33,7 +33,7 @@ const WebflowNewOrder = QoreAppCreator.createLocalizedTrigger<typeof options>({
 
     const webhook = await client.webhooks.create(site, {
       url,
-      triggerType: 'collection_item_created',
+      triggerType: 'ecomm_new_order',
     });
 
     return { webhook };

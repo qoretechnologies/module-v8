@@ -96,7 +96,7 @@ const WebflowUpdatedItem = QoreAppCreator.createLocalizedTrigger<typeof options>
       fields: {
         id: { type: 'string' },
         workspaceId: { type: 'string' },
-        sideId: { type: 'string' },
+        siteId: { type: 'string' },
         collectionId: { type: 'string' },
         fieldData: {
           type: {
