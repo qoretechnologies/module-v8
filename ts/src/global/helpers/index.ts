@@ -304,6 +304,19 @@ export const normalizeName = (appName: string): string => {
     .replace(/^_/, '');
 };
 
+/**
+ * Converts a normalized name to Title Case human-readable format
+ *
+ * @param normalizedName - The normalized name to be humanized
+ * @returns The human-readable name in Title Case
+ */
+export const humanizeNameTitle = (normalizedName: string): string => {
+  return normalizedName
+    .replace(/_/g, ' ')
+    .toLowerCase()
+    .replace(/\b\w/g, (l) => l.toUpperCase());
+};
+
 export const normalizeAppName = (appName: string): TStringWithFirstUpperCaseCharacter => {
   return capitalize(normalizeName(appName)) as TStringWithFirstUpperCaseCharacter;
 };

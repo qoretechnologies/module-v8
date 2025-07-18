@@ -44,6 +44,7 @@ import Xero from './apps/Xero';
 import Zendesk from './apps/Zendesk';
 import Zoom from './apps/Zoom';
 import ClickUp from './apps/ClickUp';
+import Webflow from './apps/Webflow';
 
 const en = {
   common: {},
@@ -187,6 +188,7 @@ const en = {
     FacebookPages,
     Paddle,
     Messenger360,
+    Webflow,
   },
 } satisfies BaseTranslation;
 
