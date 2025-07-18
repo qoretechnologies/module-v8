@@ -13,7 +13,7 @@ const mapWebflowItemToAllowedValue = (
 ): IQoreAllowedValue<string> => ({
   value: item.cmsLocaleId!,
   display_name: item.displayName,
-  desc: `Enabled: ${item.enabled}]\nTag: ${item.tag}\nPrimary: ${item.primary || false}`,
+  desc: `Enabled: ${item.enabled}\nTag: ${item.tag}\nPrimary: ${item.primary || false}`,
 });
 
 export const getWebflowCmsLocaleIdAllowedValues: TQoreGetAllowedValuesFunction<
