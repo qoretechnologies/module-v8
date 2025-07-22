@@ -45,6 +45,7 @@ import Zendesk from './apps/Zendesk';
 import Zoom from './apps/Zoom';
 import ClickUp from './apps/ClickUp';
 import Webflow from './apps/Webflow';
+import ActiveCampaign from './apps/ActiveCampaign';
 
 const en = {
   common: {},
@@ -189,6 +190,7 @@ const en = {
     Paddle,
     Messenger360,
     Webflow,
+    ActiveCampaign,
   },
 } satisfies BaseTranslation;
 
