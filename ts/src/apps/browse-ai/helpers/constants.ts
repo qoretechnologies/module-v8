@@ -91,7 +91,6 @@ export const browseAiApiClient = async <ResponseType = unknown>(
 
     return response.data;
   } catch (error) {
-    console.dir(error, { depth: null });
     Debugger.log(`Error calling Browse AI API for ${path}`, error);
     throw error;
   }
