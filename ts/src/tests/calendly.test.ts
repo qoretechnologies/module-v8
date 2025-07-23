@@ -3,7 +3,6 @@ import {
   GetCalendlyEvent,
   GetCalendlyEventInvitee,
   GetCalendlyEventType,
-  GetCalendlyGroup,
   ListCalendlyEventInvitees,
   ListCalendlyEvents,
   ListCalendlyEventTypes,
@@ -52,7 +51,7 @@ describe('Calendly', () => {
 
   let organization: string | undefined;
   let event: string | undefined;
-  let group: string | undefined;
+  // let group: string | undefined;
   let event_invitee: string | undefined;
   let event_type: string | undefined;
 
@@ -72,7 +71,7 @@ describe('Calendly', () => {
       expect(allowed_values.length).toBeGreaterThan(0);
       expect(allowed_values[0].value).toBeDefined();
 
-      group = allowed_values[0].value;
+      // group = allowed_values[0].value;
     });
 
     it('Should get organization member allowed values', async () => {
@@ -193,22 +192,23 @@ describe('Calendly', () => {
       expect(result.uri).toBeDefined();
     });
 
-    it('Should get group', async () => {
-      const action = GetCalendlyGroup;
+    // Plan has to be upgraded to standard
+    // it('Should get group', async () => {
+    //   const action = GetCalendlyGroup;
 
-      if (!('api_function' in action)) throw new Error('api_function not found in action');
+    //   if (!('api_function' in action)) throw new Error('api_function not found in action');
 
-      const result = await action.api_function(
-        {
-          group_id: group,
-        },
-        undefined,
-        base_context
-      );
+    //   const result = await action.api_function(
+    //     {
+    //       group_id: group,
+    //     },
+    //     undefined,
+    //     base_context
+    //   );
 
-      expect(result).toBeDefined();
-      expect(result.uri).toBeDefined();
-    });
+    //   expect(result).toBeDefined();
+    //   expect(result.uri).toBeDefined();
+    // });
 
     it('Should get event invitee', async () => {
       const action = GetCalendlyEventInvitee;
@@ -322,35 +322,36 @@ describe('Calendly', () => {
     });
   });
 
-  describe('Should test Calendly triggers webhook registration', () => {
-    describe('Should test new form submission webhook registration', () => {
-      let webhook: { id: string; tag: string } | undefined;
-      it('Should register the new form submission webhook', async () => {
-        const trigger = CalendlyNewFormSubmissionCreated;
+  // Should upgrade plan to standard to test webhooks
+  // describe('Should test Calendly triggers webhook registration', () => {
+  //   describe('Should test new form submission webhook registration', () => {
+  //     let webhook: { id: string; tag: string } | undefined;
+  //     it('Should register the new form submission webhook', async () => {
+  //       const trigger = CalendlyNewFormSubmissionCreated;
 
-        if (!('webhook_register' in trigger) || !trigger.webhook_register)
-          throw new Error('webhook_register not found in trigger');
+  //       if (!('webhook_register' in trigger) || !trigger.webhook_register)
+  //         throw new Error('webhook_register not found in trigger');
 
-        const result = await trigger.webhook_register(base_context, 'https://example.com/webhook');
+  //       const result = await trigger.webhook_register(base_context, 'https://example.com/webhook');
 
-        expect(result).toBeDefined();
-        expect(result?.webhook.uri).toBeDefined();
+  //       expect(result).toBeDefined();
+  //       expect(result?.webhook.uri).toBeDefined();
 
-        webhook = result?.webhook;
-      });
+  //       webhook = result?.webhook;
+  //     });
 
-      it('Should deregister the webhook', async () => {
-        const trigger = CalendlyNewFormSubmissionCreated;
+  //     it('Should deregister the webhook', async () => {
+  //       const trigger = CalendlyNewFormSubmissionCreated;
 
-        if (!('webhook_deregister' in trigger) || !trigger.webhook_deregister)
-          throw new Error('webhook_deregister not found in trigger');
+  //       if (!('webhook_deregister' in trigger) || !trigger.webhook_deregister)
+  //         throw new Error('webhook_deregister not found in trigger');
 
-        if (!webhook) throw new Error('webhook is not defined');
+  //       if (!webhook) throw new Error('webhook is not defined');
 
-        await trigger.webhook_deregister(base_context, 'https://example.com/webhook', {
-          webhook,
-        });
-      });
-    });
-  });
+  //       await trigger.webhook_deregister(base_context, 'https://example.com/webhook', {
+  //         webhook,
+  //       });
+  //     });
+  //   });
+  // });
 });

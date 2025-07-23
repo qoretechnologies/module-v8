@@ -57,6 +57,7 @@ import calendly from '../apps/calendly';
 import klaviyo from '../apps/klaviyo';
 import clickup from '../apps/clickup';
 import webflow from '../apps/webflow';
+import activeCampaign from '../apps/active-campaign';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -71,6 +72,7 @@ export interface IQoreApi {
 }
 
 const NEW_APPS = {
+  activeCampaign,
   airtable,
   asana,
   attio,

@@ -15918,7 +15918,7 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​r​i​e​v​e​ ​N​o​t​e​s​ ​f​r​o​m​ ​y​o​u​r​ ​A​t​t​i​o​ ​w​o​r​k​s​p​a​c​e​.​ 
+					 * R​e​t​r​i​e​v​e​ ​N​o​t​e​s​ ​f​r​o​m​ ​y​o​u​r​ ​A​t​t​i​o​ ​w​o​r​k​s​p​a​c​e​.​
 					 */
 					longDesc: string
 					options: {
@@ -34058,7 +34058,7 @@ type RootTranslation = {
 							 */
 							shortDesc: string
 							/**
-							 * S​p​e​c​i​f​y​ ​t​h​e​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​f​o​l​d​e​r​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​f​i​l​e​s​.​ 
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​f​o​l​d​e​r​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​f​i​l​e​s​.​
 							 */
 							longDesc: string
 						}
@@ -34836,7 +34836,7 @@ type RootTranslation = {
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​v​e​n​d​o​r​ ​f​o​r​ ​t​h​e​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​ 
+							 * T​h​e​ ​v​e​n​d​o​r​ ​f​o​r​ ​t​h​e​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​
 							 */
 							longDesc: string
 						}
@@ -34894,7 +34894,7 @@ type RootTranslation = {
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​v​e​n​d​o​r​ ​f​o​r​ ​t​h​e​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​ 
+							 * T​h​e​ ​v​e​n​d​o​r​ ​f​o​r​ ​t​h​e​ ​p​u​r​c​h​a​s​e​ ​o​r​d​e​r​
 							 */
 							longDesc: string
 						}
@@ -34966,7 +34966,7 @@ type RootTranslation = {
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​f​o​r​ ​t​h​e​ ​s​a​l​e​s​ ​o​r​d​e​r​ 
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​f​o​r​ ​t​h​e​ ​s​a​l​e​s​ ​o​r​d​e​r​
 							 */
 							longDesc: string
 						}
@@ -35172,7 +35172,7 @@ type RootTranslation = {
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​f​o​r​ ​t​h​e​ ​s​a​l​e​s​ ​o​r​d​e​r​ 
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​f​o​r​ ​t​h​e​ ​s​a​l​e​s​ ​o​r​d​e​r​
 							 */
 							longDesc: string
 						}
@@ -40618,7 +40618,7 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * U​s​e​d​ ​t​o​ ​u​n​i​q​u​e​l​y​ ​i​d​e​n​t​i​f​y​ ​a​ ​u​s​e​r​ ​i​n​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n​.​ 
+							 * U​s​e​d​ ​t​o​ ​u​n​i​q​u​e​l​y​ ​i​d​e​n​t​i​f​y​ ​a​ ​u​s​e​r​ ​i​n​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n​.​
 							 */
 							shortDesc: string
 							/**
@@ -40872,7 +40872,7 @@ type RootTranslation = {
 							 */
 							shortDesc: string
 							/**
-							 * U​s​e​ ​t​h​i​s​ ​p​a​r​a​m​ ​t​o​ ​o​v​e​r​r​i​d​e​ ​t​h​e​ ​c​u​l​t​u​r​e​ ​o​f​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.​ 
+							 * U​s​e​ ​t​h​i​s​ ​p​a​r​a​m​ ​t​o​ ​o​v​e​r​r​i​d​e​ ​t​h​e​ ​c​u​l​t​u​r​e​ ​o​f​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.​
 							 */
 							longDesc: string
 						}
@@ -53249,6 +53249,2128 @@ type RootTranslation = {
 							shortDesc: string
 							/**
 							 * S​e​l​e​c​t​ ​t​h​e​ ​W​e​b​f​l​o​w​ ​s​i​t​e​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​o​r​d​e​r​ ​u​p​d​a​t​e​ ​e​v​e​n​t​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
+		ActiveCampaign: {
+			/**
+			 * A​c​t​i​v​e​C​a​m​p​a​i​g​n
+			 */
+			displayName: string
+			/**
+			 * E​m​a​i​l​ ​m​a​r​k​e​t​i​n​g​ ​a​u​t​o​m​a​t​i​o​n​ ​a​n​d​ ​C​R​M​ ​p​l​a​t​f​o​r​m
+			 */
+			shortDesc: string
+			/**
+			 * C​o​n​n​e​c​t​ ​y​o​u​r​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n​ ​a​c​c​o​u​n​t​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​e​m​a​i​l​ ​m​a​r​k​e​t​i​n​g​ ​c​a​m​p​a​i​g​n​s​,​ ​m​a​n​a​g​e​ ​c​o​n​t​a​c​t​s​,​ ​a​n​d​ ​t​r​a​c​k​ ​c​u​s​t​o​m​e​r​ ​i​n​t​e​r​a​c​t​i​o​n​s​.​ ​C​r​e​a​t​e​ ​a​n​d​ ​s​e​n​d​ ​t​a​r​g​e​t​e​d​ ​e​m​a​i​l​ ​c​a​m​p​a​i​g​n​s​,​ ​m​a​n​a​g​e​ ​c​o​n​t​a​c​t​ ​l​i​s​t​s​,​ ​s​e​t​ ​u​p​ ​a​u​t​o​m​a​t​i​o​n​ ​w​o​r​k​f​l​o​w​s​,​ ​a​n​d​ ​a​n​a​l​y​z​e​ ​c​a​m​p​a​i​g​n​ ​p​e​r​f​o​r​m​a​n​c​e​ ​a​l​l​ ​f​r​o​m​ ​w​i​t​h​i​n​ ​Q​o​r​e​.
+			 */
+			longDesc: string
+			triggers: {
+				contact_added_to_list: {
+					/**
+					 * C​o​n​t​a​c​t​ ​A​d​d​e​d​ ​t​o​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​c​o​n​t​a​c​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​c​o​n​t​a​c​t​ ​s​u​b​s​c​r​i​b​e​s​ ​o​r​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n
+					 */
+					longDesc: string
+					options: {
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​l​i​s​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​c​o​n​t​a​c​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​a​d​d​i​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				updated_contact: {
+					/**
+					 * C​o​n​t​a​c​t​ ​U​p​d​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​c​o​n​t​a​c​t​ ​i​s​ ​u​p​d​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​n​y​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​s​ ​u​p​d​a​t​e​d​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n
+					 */
+					longDesc: string
+				}
+				new_campaign_bounce: {
+					/**
+					 * N​e​w​ ​C​a​m​p​a​i​g​n​ ​B​o​u​n​c​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​c​a​m​p​a​i​g​n​ ​e​m​a​i​l​ ​b​o​u​n​c​e​s
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​n​ ​e​m​a​i​l​ ​f​r​o​m​ ​a​ ​c​a​m​p​a​i​g​n​ ​b​o​u​n​c​e​s​,​ ​i​n​d​i​c​a​t​i​n​g​ ​d​e​l​i​v​e​r​y​ ​f​a​i​l​u​r​e
+					 */
+					longDesc: string
+				}
+				new_campaign_link_click: {
+					/**
+					 * N​e​w​ ​C​a​m​p​a​i​g​n​ ​L​i​n​k​ ​C​l​i​c​k
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​l​i​n​k​ ​i​n​ ​a​ ​c​a​m​p​a​i​g​n​ ​i​s​ ​c​l​i​c​k​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​r​e​c​i​p​i​e​n​t​ ​c​l​i​c​k​s​ ​o​n​ ​a​ ​l​i​n​k​ ​w​i​t​h​i​n​ ​a​ ​c​a​m​p​a​i​g​n​ ​e​m​a​i​l
+					 */
+					longDesc: string
+				}
+				new_campaign_reply: {
+					/**
+					 * N​e​w​ ​C​a​m​p​a​i​g​n​ ​R​e​p​l​y
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​s​o​m​e​o​n​e​ ​r​e​p​l​i​e​s​ ​t​o​ ​a​ ​c​a​m​p​a​i​g​n
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​r​e​c​i​p​i​e​n​t​ ​r​e​p​l​i​e​s​ ​t​o​ ​a​ ​c​a​m​p​a​i​g​n​ ​e​m​a​i​l
+					 */
+					longDesc: string
+				}
+				new_contact_note: {
+					/**
+					 * N​e​w​ ​C​o​n​t​a​c​t​ ​N​o​t​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​o​t​e​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​o​t​e​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​c​o​n​t​a​c​t​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t
+					 */
+					longDesc: string
+					options: {
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​l​i​s​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​n​o​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​w​h​e​n​ ​n​o​t​e​s​ ​a​r​e​ ​a​d​d​e​d​ ​t​o​ ​c​o​n​t​a​c​t​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_contact: {
+					/**
+					 * N​e​w​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​s​u​b​s​c​r​i​b​e​s​ ​o​r​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n
+					 */
+					longDesc: string
+				}
+				deal_note_added: {
+					/**
+					 * D​e​a​l​ ​N​o​t​e​ ​A​d​d​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​o​t​e​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​d​e​a​l
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​o​t​e​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​d​e​a​l​ ​f​o​r​ ​c​o​n​t​a​c​t​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t
+					 */
+					longDesc: string
+					options: {
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​l​i​s​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​d​e​a​l​ ​n​o​t​e​ ​a​d​d​i​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​w​h​e​n​ ​n​o​t​e​s​ ​a​r​e​ ​a​d​d​e​d​ ​t​o​ ​d​e​a​l​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_deal: {
+					/**
+					 * N​e​w​ ​D​e​a​l
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​d​e​a​l​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​d​e​a​l​ ​i​s​ ​c​r​e​a​t​e​d​ ​f​o​r​ ​c​o​n​t​a​c​t​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t
+					 */
+					longDesc: string
+					options: {
+						list: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​l​i​s​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​d​e​a​l​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​w​h​e​n​ ​n​e​w​ ​d​e​a​l​s​ ​a​r​e​ ​c​r​e​a​t​e​d
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			actions: {
+				add_contact_note: {
+					/**
+					 * A​d​d​ ​C​o​n​t​a​c​t​ ​N​o​t​e
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​ ​n​o​t​e​ ​t​o​ ​a​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​ ​a​ ​n​e​w​ ​n​o​t​e​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n
+					 */
+					longDesc: string
+					options: {
+						note: {
+							/**
+							 * N​o​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​o​t​e​ ​c​o​n​t​e​n​t​ ​t​o​ ​a​d​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​n​o​t​e​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						contact: {
+							/**
+							 * C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​a​d​d​ ​t​h​e​ ​n​o​t​e​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​t​h​e​ ​n​o​t​e​ ​t​o
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_contact_to_account: {
+					/**
+					 * A​d​d​ ​C​o​n​t​a​c​t​ ​t​o​ ​A​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * A​s​s​o​c​i​a​t​e​ ​a​ ​c​o​n​t​a​c​t​ ​w​i​t​h​ ​a​n​ ​a​c​c​o​u​n​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​n​ ​a​s​s​o​c​i​a​t​i​o​n​ ​b​e​t​w​e​e​n​ ​a​ ​c​o​n​t​a​c​t​ ​a​n​d​ ​a​n​ ​a​c​c​o​u​n​t​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n
+					 */
+					longDesc: string
+					options: {
+						account: {
+							/**
+							 * A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​c​c​o​u​n​t​ ​t​o​ ​a​s​s​o​c​i​a​t​e​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​w​i​t​h
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​s​s​o​c​i​a​t​e​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​w​i​t​h
+							 */
+							longDesc: string
+						}
+						contact: {
+							/**
+							 * C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​a​s​s​o​c​i​a​t​e​ ​w​i​t​h​ ​t​h​e​ ​a​c​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​s​s​o​c​i​a​t​e​ ​w​i​t​h​ ​t​h​e​ ​a​c​c​o​u​n​t
+							 */
+							longDesc: string
+						}
+						jobTitle: {
+							/**
+							 * J​o​b​ ​T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​j​o​b​ ​t​i​t​l​e​ ​a​t​ ​t​h​i​s​ ​a​c​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​j​o​b​ ​t​i​t​l​e​ ​o​r​ ​r​o​l​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​a​c​c​o​u​n​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_deal_note: {
+					/**
+					 * A​d​d​ ​D​e​a​l​ ​N​o​t​e
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​ ​n​o​t​e​ ​t​o​ ​a​ ​d​e​a​l
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​ ​a​ ​n​e​w​ ​n​o​t​e​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​e​a​l​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n
+					 */
+					longDesc: string
+					options: {
+						note: {
+							/**
+							 * N​o​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​o​t​e​ ​c​o​n​t​e​n​t​ ​t​o​ ​a​d​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​n​o​t​e​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​d​e​a​l
+							 */
+							longDesc: string
+						}
+						deal: {
+							/**
+							 * D​e​a​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​e​a​l​ ​t​o​ ​a​d​d​ ​t​h​e​ ​n​o​t​e​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​d​e​a​l​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​t​h​e​ ​n​o​t​e​ ​t​o
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_tag_to_contact: {
+					/**
+					 * A​d​d​ ​T​a​g​ ​t​o​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​ ​t​a​g​ ​t​o​ ​a​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+					/**
+					 * A​p​p​l​y​ ​a​ ​t​a​g​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n​ ​f​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​a​n​d​ ​s​e​g​m​e​n​t​a​t​i​o​n
+					 */
+					longDesc: string
+					options: {
+						tag: {
+							/**
+							 * T​a​g
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​g​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​g​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						contact: {
+							/**
+							 * C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​a​d​d​ ​t​h​e​ ​t​a​g​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​t​h​e​ ​t​a​g​ ​t​o
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_account: {
+					/**
+					 * C​r​e​a​t​e​ ​A​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​a​c​c​o​u​n​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​a​c​c​o​u​n​t​ ​(​c​o​m​p​a​n​y​/​o​r​g​a​n​i​z​a​t​i​o​n​)​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n
+					 */
+					longDesc: string
+					options: {
+						name: {
+							/**
+							 * A​c​c​o​u​n​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​a​c​c​o​u​n​t
+							 */
+							longDesc: string
+						}
+						accountUrl: {
+							/**
+							 * A​c​c​o​u​n​t​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​w​e​b​s​i​t​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​w​e​b​s​i​t​e​ ​U​R​L​ ​o​r​ ​d​o​m​a​i​n​ ​f​o​r​ ​t​h​e​ ​a​c​c​o​u​n​t
+							 */
+							longDesc: string
+						}
+						owner: {
+							/**
+							 * A​c​c​o​u​n​t​ ​O​w​n​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​s​e​r​ ​w​h​o​ ​w​i​l​l​ ​o​w​n​ ​t​h​i​s​ ​a​c​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​ ​w​i​l​l​ ​b​e​ ​r​e​s​p​o​n​s​i​b​l​e​ ​f​o​r​ ​m​a​n​a​g​i​n​g​ ​t​h​i​s​ ​a​c​c​o​u​n​t
+							 */
+							longDesc: string
+						}
+						fieldOptions: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​a​c​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​v​a​l​u​e​s​ ​f​o​r​ ​a​n​y​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​ ​c​o​n​f​i​g​u​r​e​d​ ​f​o​r​ ​a​c​c​o​u​n​t​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_contact: {
+					/**
+					 * C​r​e​a​t​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n​ ​w​i​t​h​ ​b​a​s​i​c​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+					 */
+					longDesc: string
+					options: {
+						email: {
+							/**
+							 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​i​m​a​r​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​(​r​e​q​u​i​r​e​d​)
+							 */
+							longDesc: string
+						}
+						firstName: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​f​i​r​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						lastName: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​l​a​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						phone: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						fieldValues: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​ ​V​a​l​u​e​s
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​s​ ​f​o​r​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​v​a​l​u​e​s​ ​f​o​r​ ​a​n​y​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​ ​c​o​n​f​i​g​u​r​e​d​ ​f​o​r​ ​c​o​n​t​a​c​t​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_deal: {
+					/**
+					 * C​r​e​a​t​e​ ​D​e​a​l
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​d​e​a​l
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​s​a​l​e​s​ ​d​e​a​l​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n​ ​w​i​t​h​ ​a​l​l​ ​r​e​l​e​v​a​n​t​ ​d​e​t​a​i​l​s
+					 */
+					longDesc: string
+					options: {
+						title: {
+							/**
+							 * D​e​a​l​ ​T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​d​e​a​l
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​d​e​a​l
+							 */
+							longDesc: string
+						}
+						account: {
+							/**
+							 * A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​c​c​o​u​n​t​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​d​e​a​l
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​c​c​o​u​n​t​/​c​o​m​p​a​n​y​ ​t​h​a​t​ ​t​h​i​s​ ​d​e​a​l​ ​i​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h
+							 */
+							longDesc: string
+						}
+						contact: {
+							/**
+							 * C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​i​m​a​r​y​ ​c​o​n​t​a​c​t​ ​f​o​r​ ​t​h​i​s​ ​d​e​a​l
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​m​a​i​n​ ​c​o​n​t​a​c​t​ ​p​e​r​s​o​n​ ​f​o​r​ ​t​h​i​s​ ​d​e​a​l
+							 */
+							longDesc: string
+						}
+						value: {
+							/**
+							 * D​e​a​l​ ​V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​m​o​n​e​t​a​r​y​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​d​e​a​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​o​t​a​l​ ​v​a​l​u​e​ ​o​r​ ​a​m​o​u​n​t​ ​o​f​ ​t​h​e​ ​d​e​a​l
+							 */
+							longDesc: string
+						}
+						currency: {
+							/**
+							 * C​u​r​r​e​n​c​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​r​r​e​n​c​y​ ​f​o​r​ ​t​h​e​ ​d​e​a​l​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​u​r​r​e​n​c​y​ ​t​h​a​t​ ​t​h​e​ ​d​e​a​l​ ​v​a​l​u​e​ ​i​s​ ​d​e​n​o​m​i​n​a​t​e​d​ ​i​n
+							 */
+							longDesc: string
+						}
+						stage: {
+							/**
+							 * D​e​a​l​ ​S​t​a​g​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​r​r​e​n​t​ ​s​t​a​g​e​ ​o​f​ ​t​h​e​ ​d​e​a​l
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​p​i​p​e​l​i​n​e​ ​s​t​a​g​e​ ​t​h​a​t​ ​r​e​p​r​e​s​e​n​t​s​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​s​t​a​t​u​s​ ​o​f​ ​t​h​e​ ​d​e​a​l
+							 */
+							longDesc: string
+						}
+						group: {
+							/**
+							 * P​i​p​e​l​i​n​e​ ​G​r​o​u​p
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​i​p​e​l​i​n​e​ ​g​r​o​u​p​ ​f​o​r​ ​t​h​e​ ​d​e​a​l
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​p​i​p​e​l​i​n​e​ ​g​r​o​u​p​ ​t​h​a​t​ ​t​h​i​s​ ​d​e​a​l​ ​b​e​l​o​n​g​s​ ​t​o
+							 */
+							longDesc: string
+						}
+						owner: {
+							/**
+							 * D​e​a​l​ ​O​w​n​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​s​e​r​ ​r​e​s​p​o​n​s​i​b​l​e​ ​f​o​r​ ​t​h​i​s​ ​d​e​a​l
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​ ​w​i​l​l​ ​b​e​ ​r​e​s​p​o​n​s​i​b​l​e​ ​f​o​r​ ​m​a​n​a​g​i​n​g​ ​t​h​i​s​ ​d​e​a​l
+							 */
+							longDesc: string
+						}
+						percent: {
+							/**
+							 * C​o​m​p​l​e​t​i​o​n​ ​P​e​r​c​e​n​t​a​g​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​e​r​c​e​n​t​a​g​e​ ​c​o​m​p​l​e​t​i​o​n​ ​o​f​ ​t​h​e​ ​d​e​a​l
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​p​e​r​c​e​n​t​a​g​e​ ​v​a​l​u​e​ ​r​e​p​r​e​s​e​n​t​i​n​g​ ​h​o​w​ ​c​l​o​s​e​ ​t​h​e​ ​d​e​a​l​ ​i​s​ ​t​o​ ​c​o​m​p​l​e​t​i​o​n
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​a​l​ ​D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​n​o​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​a​d​d​i​t​i​o​n​a​l​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​d​e​a​l
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * D​e​a​l​ ​S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​r​r​e​n​t​ ​s​t​a​t​u​s​ ​o​f​ ​t​h​e​ ​d​e​a​l
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​d​e​a​l​ ​i​s​ ​o​p​e​n​,​ ​w​o​n​,​ ​o​r​ ​l​o​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_account: {
+					/**
+					 * G​e​t​ ​A​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​c​c​o​u​n​t​ ​d​e​t​a​i​l​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​a​c​c​o​u​n​t​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * A​c​c​o​u​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_campaign: {
+					/**
+					 * G​e​t​ ​C​a​m​p​a​i​g​n
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​c​a​m​p​a​i​g​n​ ​d​e​t​a​i​l​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​m​p​a​i​g​n​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * C​a​m​p​a​i​g​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_contact: {
+					/**
+					 * G​e​t​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​c​o​n​t​a​c​t​ ​d​e​t​a​i​l​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n​ ​i​n​c​l​u​d​i​n​g​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​,​ ​a​u​t​o​m​a​t​i​o​n​s​,​ ​a​n​d​ ​r​e​l​a​t​e​d​ ​d​a​t​a
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * C​o​n​t​a​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_deal: {
+					/**
+					 * G​e​t​ ​D​e​a​l
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​a​l​ ​d​e​t​a​i​l​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​e​a​l​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * D​e​a​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​d​e​a​l​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​d​e​a​l​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_form: {
+					/**
+					 * G​e​t​ ​F​o​r​m
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​f​o​r​m​ ​d​e​t​a​i​l​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​o​r​m​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n​ ​i​n​c​l​u​d​i​n​g​ ​s​t​y​l​i​n​g​ ​a​n​d​ ​f​i​e​l​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * F​o​r​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​f​o​r​m​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​f​o​r​m​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_list: {
+					/**
+					 * G​e​t​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​l​i​s​t​ ​d​e​t​a​i​l​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n​ ​i​n​c​l​u​d​i​n​g​ ​s​e​t​t​i​n​g​s​ ​a​n​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * L​i​s​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​l​i​s​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​l​i​s​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_task: {
+					/**
+					 * G​e​t​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​t​a​s​k​ ​d​e​t​a​i​l​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​e​a​l​ ​t​a​s​k​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * T​a​s​k​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​a​s​k​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​s​k​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_user: {
+					/**
+					 * G​e​t​ ​U​s​e​r
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​u​s​e​r​ ​d​e​t​a​i​l​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​u​s​e​r​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * U​s​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​u​s​e​r​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_accounts: {
+					/**
+					 * L​i​s​t​ ​A​c​c​o​u​n​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​c​c​o​u​n​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​a​c​c​o​u​n​t​s​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​s​e​a​r​c​h​ ​a​n​d​ ​f​i​l​t​e​r​i​n​g
+					 */
+					longDesc: string
+					options: {
+						search: {
+							/**
+							 * S​e​a​r​c​h
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​t​e​r​m​ ​t​o​ ​f​i​l​t​e​r​ ​a​c​c​o​u​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​a​r​c​h​ ​f​o​r​ ​a​c​c​o​u​n​t​s​ ​b​y​ ​n​a​m​e​ ​o​r​ ​o​t​h​e​r​ ​s​e​a​r​c​h​a​b​l​e​ ​f​i​e​l​d​s
+							 */
+							longDesc: string
+						}
+						count_deals: {
+							/**
+							 * C​o​u​n​t​ ​D​e​a​l​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​d​e​a​l​ ​c​o​u​n​t​ ​f​o​r​ ​e​a​c​h​ ​a​c​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​d​e​a​l​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​e​a​c​h​ ​a​c​c​o​u​n​t​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​a​c​c​o​u​n​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​a​c​c​o​u​n​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​ ​(​d​e​f​a​u​l​t​:​ ​2​0​)
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​a​c​c​o​u​n​t​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​a​c​c​o​u​n​t​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_campaigns: {
+					/**
+					 * L​i​s​t​ ​C​a​m​p​a​i​g​n​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​a​m​p​a​i​g​n​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​c​a​m​p​a​i​g​n​s​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​a​m​p​a​i​g​n​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​a​m​p​a​i​g​n​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​ ​(​d​e​f​a​u​l​t​:​ ​2​0​)
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​c​a​m​p​a​i​g​n​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​c​a​m​p​a​i​g​n​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_contacts: {
+					/**
+					 * L​i​s​t​ ​C​o​n​t​a​c​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​o​n​t​a​c​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n​ ​w​i​t​h​ ​e​x​t​e​n​s​i​v​e​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​o​p​t​i​o​n​s
+					 */
+					longDesc: string
+					options: {
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * E​x​a​c​t​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​n​t​a​c​t​s​ ​b​y​ ​e​x​a​c​t​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​m​a​t​c​h
+							 */
+							longDesc: string
+						}
+						email_like: {
+							/**
+							 * E​m​a​i​l​ ​L​i​k​e
+							 */
+							displayName: string
+							/**
+							 * P​a​r​t​i​a​l​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​n​t​a​c​t​s​ ​b​y​ ​p​a​r​t​i​a​l​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​m​a​t​c​h
+							 */
+							longDesc: string
+						}
+						phone: {
+							/**
+							 * P​h​o​n​e
+							 */
+							displayName: string
+							/**
+							 * P​h​o​n​e​ ​n​u​m​b​e​r​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​n​t​a​c​t​s​ ​b​y​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							longDesc: string
+						}
+						search: {
+							/**
+							 * S​e​a​r​c​h
+							 */
+							displayName: string
+							/**
+							 * G​e​n​e​r​a​l​ ​s​e​a​r​c​h​ ​t​e​r​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​a​r​c​h​ ​f​o​r​ ​c​o​n​t​a​c​t​s​ ​b​y​ ​n​a​m​e​,​ ​e​m​a​i​l​,​ ​o​r​ ​o​t​h​e​r​ ​s​e​a​r​c​h​a​b​l​e​ ​f​i​e​l​d​s
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​ ​s​t​a​t​u​s​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​n​t​a​c​t​s​ ​b​y​ ​t​h​e​i​r​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​s​t​a​t​u​s
+							 */
+							longDesc: string
+						}
+						formid: {
+							/**
+							 * F​o​r​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​f​o​r​m​ ​s​u​b​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​n​t​a​c​t​s​ ​w​h​o​ ​s​u​b​s​c​r​i​b​e​d​ ​t​h​r​o​u​g​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​o​r​m
+							 */
+							longDesc: string
+						}
+						listid: {
+							/**
+							 * L​i​s​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​l​i​s​t​ ​m​e​m​b​e​r​s​h​i​p
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​n​t​a​c​t​s​ ​w​h​o​ ​a​r​e​ ​m​e​m​b​e​r​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+						sort: {
+							/**
+							 * S​o​r​t​ ​O​p​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​i​n​g​ ​c​o​n​f​i​g​u​r​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​c​o​n​t​a​c​t​s
+										 */
+										longDesc: string
+									}
+									order: {
+										/**
+										 * S​o​r​t​ ​O​r​d​e​r
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * W​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​ ​(​d​e​f​a​u​l​t​:​ ​2​0​)
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_deals: {
+					/**
+					 * L​i​s​t​ ​D​e​a​l​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​d​e​a​l​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​d​e​a​l​s​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​s​e​a​r​c​h​ ​f​u​n​c​t​i​o​n​a​l​i​t​y
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​d​e​a​l​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​d​e​a​l​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​ ​(​d​e​f​a​u​l​t​:​ ​2​0​)
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​d​e​a​l​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​d​e​a​l​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						search: {
+							/**
+							 * S​e​a​r​c​h​ ​O​p​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​d​e​a​l​s
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​h​o​w​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​d​e​a​l​s​ ​b​y​ ​d​i​f​f​e​r​e​n​t​ ​f​i​e​l​d​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​e​a​r​c​h​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h​ ​i​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h​ ​i​n​ ​(​t​i​t​l​e​,​ ​c​o​n​t​a​c​t​,​ ​o​r​g​a​n​i​z​a​t​i​o​n​,​ ​o​r​ ​a​l​l​)
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * S​e​a​r​c​h​ ​V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * V​a​l​u​e​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​e​a​r​c​h​ ​t​e​r​m​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				list_deal_stages: {
+					/**
+					 * L​i​s​t​ ​D​e​a​l​ ​S​t​a​g​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​d​e​a​l​ ​s​t​a​g​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​d​e​a​l​ ​s​t​a​g​e​s​ ​(​p​i​p​e​l​i​n​e​ ​s​t​a​g​e​s​)​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n
+					 */
+					longDesc: string
+					options: {
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​t​a​g​e​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​d​e​a​l​ ​s​t​a​g​e​s​ ​b​y​ ​t​h​e​i​r​ ​t​i​t​l​e
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​s​t​a​g​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​d​e​a​l​ ​s​t​a​g​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​ ​(​d​e​f​a​u​l​t​:​ ​2​0​)
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​s​t​a​g​e​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​d​e​a​l​ ​s​t​a​g​e​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_forms: {
+					/**
+					 * L​i​s​t​ ​F​o​r​m​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​f​o​r​m​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​f​o​r​m​s​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​f​o​r​m​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​f​o​r​m​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​ ​(​d​e​f​a​u​l​t​:​ ​2​0​)
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​f​o​r​m​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​f​o​r​m​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_lists: {
+					/**
+					 * L​i​s​t​ ​L​i​s​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​l​i​s​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​c​o​n​t​a​c​t​ ​l​i​s​t​s​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​n​a​m​e​ ​f​i​l​t​e​r​i​n​g
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​l​i​s​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​l​i​s​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​ ​(​d​e​f​a​u​l​t​:​ ​2​0​)
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​l​i​s​t​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​l​i​s​t​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​l​i​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​l​i​s​t​s​ ​b​y​ ​t​h​e​i​r​ ​n​a​m​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_tags: {
+					/**
+					 * L​i​s​t​ ​T​a​g​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​t​a​g​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​t​a​g​s​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​s​e​a​r​c​h​ ​f​u​n​c​t​i​o​n​a​l​i​t​y
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​a​g​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​a​g​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​ ​(​d​e​f​a​u​l​t​:​ ​2​0​)
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​t​a​g​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​t​a​g​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						search: {
+							/**
+							 * S​e​a​r​c​h
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​t​e​r​m​ ​t​o​ ​f​i​l​t​e​r​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​a​r​c​h​ ​f​o​r​ ​t​a​g​s​ ​b​y​ ​n​a​m​e​ ​o​r​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_tasks: {
+					/**
+					 * L​i​s​t​ ​T​a​s​k​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​t​a​s​k​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​d​e​a​l​ ​t​a​s​k​s​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​ ​o​p​t​i​o​n​s
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​a​s​k​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​a​s​k​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​ ​(​d​e​f​a​u​l​t​:​ ​2​0​)
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​t​a​s​k​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​t​a​s​k​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						assignee: {
+							/**
+							 * A​s​s​i​g​n​e​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​t​a​s​k​ ​a​s​s​i​g​n​e​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​b​y​ ​t​h​e​ ​u​s​e​r​ ​t​h​e​y​ ​a​r​e​ ​a​s​s​i​g​n​e​d​ ​t​o
+							 */
+							longDesc: string
+						}
+						userid: {
+							/**
+							 * U​s​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​t​a​s​k​ ​c​r​e​a​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​b​y​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​ ​c​r​e​a​t​e​d​ ​t​h​e​m
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​t​a​s​k​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​b​y​ ​t​h​e​i​r​ ​t​i​t​l​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_users: {
+					/**
+					 * L​i​s​t​ ​U​s​e​r​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​u​s​e​r​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​u​s​e​r​s​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​u​s​e​r​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​u​s​e​r​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​ ​(​d​e​f​a​u​l​t​:​ ​2​0​)
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​u​s​e​r​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​u​s​e​r​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+					}
+				}
+				remove_tag_from_contact: {
+					/**
+					 * R​e​m​o​v​e​ ​T​a​g​ ​f​r​o​m​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​a​ ​t​a​g​ ​f​r​o​m​ ​a​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​a​g​ ​f​r​o​m​ ​a​ ​c​o​n​t​a​c​t​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n
+					 */
+					longDesc: string
+					options: {
+						tag: {
+							/**
+							 * T​a​g
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​g​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​g​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						contact: {
+							/**
+							 * C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​r​e​m​o​v​e​ ​t​h​e​ ​t​a​g​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​m​o​v​e​ ​t​h​e​ ​t​a​g​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_account: {
+					/**
+					 * U​p​d​a​t​e​ ​A​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​a​c​c​o​u​n​t
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​a​c​c​o​u​n​t​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * A​c​c​o​u​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * A​c​c​o​u​n​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​a​c​c​o​u​n​t
+							 */
+							longDesc: string
+						}
+						accountUrl: {
+							/**
+							 * A​c​c​o​u​n​t​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​w​e​b​s​i​t​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​w​e​b​s​i​t​e​ ​U​R​L​ ​o​r​ ​d​o​m​a​i​n​ ​f​o​r​ ​t​h​e​ ​a​c​c​o​u​n​t
+							 */
+							longDesc: string
+						}
+						owner: {
+							/**
+							 * A​c​c​o​u​n​t​ ​O​w​n​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​o​w​n​e​r​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​ ​w​i​l​l​ ​b​e​ ​r​e​s​p​o​n​s​i​b​l​e​ ​f​o​r​ ​m​a​n​a​g​i​n​g​ ​t​h​i​s​ ​a​c​c​o​u​n​t
+							 */
+							longDesc: string
+						}
+						fieldOptions: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​a​c​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​v​a​l​u​e​s​ ​f​o​r​ ​a​n​y​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​ ​c​o​n​f​i​g​u​r​e​d​ ​f​o​r​ ​a​c​c​o​u​n​t​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_contact: {
+					/**
+					 * U​p​d​a​t​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n​ ​i​n​c​l​u​d​i​n​g​ ​b​a​s​i​c​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * C​o​n​t​a​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						firstName: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​f​i​r​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						lastName: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​l​a​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​l​a​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						phone: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						fieldValues: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​ ​V​a​l​u​e​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​v​a​l​u​e​s​ ​f​o​r​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​v​a​l​u​e​s​ ​f​o​r​ ​a​n​y​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​ ​c​o​n​f​i​g​u​r​e​d​ ​f​o​r​ ​c​o​n​t​a​c​t​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_deal: {
+					/**
+					 * U​p​d​a​t​e​ ​D​e​a​l
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​d​e​a​l
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​s​a​l​e​s​ ​d​e​a​l​ ​i​n​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * D​e​a​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​d​e​a​l​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​d​e​a​l​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * D​e​a​l​ ​T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​d​e​a​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​d​e​s​c​r​i​p​t​i​v​e​ ​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​d​e​a​l
+							 */
+							longDesc: string
+						}
+						account: {
+							/**
+							 * A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​a​c​c​o​u​n​t​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​d​e​a​l
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​n​e​w​ ​a​c​c​o​u​n​t​/​c​o​m​p​a​n​y​ ​t​h​a​t​ ​t​h​i​s​ ​d​e​a​l​ ​i​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h
+							 */
+							longDesc: string
+						}
+						contact: {
+							/**
+							 * C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​p​r​i​m​a​r​y​ ​c​o​n​t​a​c​t​ ​f​o​r​ ​t​h​i​s​ ​d​e​a​l
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​n​e​w​ ​m​a​i​n​ ​c​o​n​t​a​c​t​ ​p​e​r​s​o​n​ ​f​o​r​ ​t​h​i​s​ ​d​e​a​l
+							 */
+							longDesc: string
+						}
+						value: {
+							/**
+							 * D​e​a​l​ ​V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​m​o​n​e​t​a​r​y​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​d​e​a​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​t​o​t​a​l​ ​v​a​l​u​e​ ​o​r​ ​a​m​o​u​n​t​ ​o​f​ ​t​h​e​ ​d​e​a​l
+							 */
+							longDesc: string
+						}
+						currency: {
+							/**
+							 * C​u​r​r​e​n​c​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​c​u​r​r​e​n​c​y​ ​f​o​r​ ​t​h​e​ ​d​e​a​l​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​n​e​w​ ​c​u​r​r​e​n​c​y​ ​t​h​a​t​ ​t​h​e​ ​d​e​a​l​ ​v​a​l​u​e​ ​i​s​ ​d​e​n​o​m​i​n​a​t​e​d​ ​i​n
+							 */
+							longDesc: string
+						}
+						stage: {
+							/**
+							 * D​e​a​l​ ​S​t​a​g​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​s​t​a​g​e​ ​o​f​ ​t​h​e​ ​d​e​a​l
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​n​e​w​ ​p​i​p​e​l​i​n​e​ ​s​t​a​g​e​ ​t​h​a​t​ ​r​e​p​r​e​s​e​n​t​s​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​s​t​a​t​u​s​ ​o​f​ ​t​h​e​ ​d​e​a​l
+							 */
+							longDesc: string
+						}
+						group: {
+							/**
+							 * P​i​p​e​l​i​n​e​ ​G​r​o​u​p
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​p​i​p​e​l​i​n​e​ ​g​r​o​u​p​ ​f​o​r​ ​t​h​e​ ​d​e​a​l
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​n​e​w​ ​p​i​p​e​l​i​n​e​ ​g​r​o​u​p​ ​t​h​a​t​ ​t​h​i​s​ ​d​e​a​l​ ​b​e​l​o​n​g​s​ ​t​o
+							 */
+							longDesc: string
+						}
+						owner: {
+							/**
+							 * D​e​a​l​ ​O​w​n​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​u​s​e​r​ ​r​e​s​p​o​n​s​i​b​l​e​ ​f​o​r​ ​t​h​i​s​ ​d​e​a​l
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​n​e​w​ ​u​s​e​r​ ​w​h​o​ ​w​i​l​l​ ​b​e​ ​r​e​s​p​o​n​s​i​b​l​e​ ​f​o​r​ ​m​a​n​a​g​i​n​g​ ​t​h​i​s​ ​d​e​a​l
+							 */
+							longDesc: string
+						}
+						percent: {
+							/**
+							 * C​o​m​p​l​e​t​i​o​n​ ​P​e​r​c​e​n​t​a​g​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​p​e​r​c​e​n​t​a​g​e​ ​c​o​m​p​l​e​t​i​o​n​ ​o​f​ ​t​h​e​ ​d​e​a​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​p​e​r​c​e​n​t​a​g​e​ ​v​a​l​u​e​ ​r​e​p​r​e​s​e​n​t​i​n​g​ ​h​o​w​ ​c​l​o​s​e​ ​t​h​e​ ​d​e​a​l​ ​i​s​ ​t​o​ ​c​o​m​p​l​e​t​i​o​n
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​a​l​ ​D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​n​o​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * N​e​w​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​a​d​d​i​t​i​o​n​a​l​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​d​e​a​l
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * D​e​a​l​ ​S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​s​t​a​t​u​s​ ​o​f​ ​t​h​e​ ​d​e​a​l
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​d​e​a​l​ ​i​s​ ​o​p​e​n​,​ ​w​o​n​,​ ​o​r​ ​l​o​s​t
 							 */
 							longDesc: string
 						}
@@ -69165,7 +71287,7 @@ export type TranslationFunctions = {
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Retrieve Notes from your Attio workspace. 
+					 * Retrieve Notes from your Attio workspace.
 					 */
 					longDesc: () => LocalizedString
 					options: {
@@ -86858,7 +88980,7 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Select the criteria for the trigger to activate.
-					
+
 						- Created: Triggers when a new object is created
 						- Updated: Triggers when an existing object is updated
 							 */
@@ -86911,7 +89033,7 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Select the criteria for the trigger to activate.
-					
+
 						- Created: Triggers when a new object is created
 						- Updated: Triggers when an existing object is updated
 							 */
@@ -86964,7 +89086,7 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Select the criteria for the trigger to activate.
-					
+
 						- Created: Triggers when a new object is created
 						- Updated: Triggers when an existing object is updated
 							 */
@@ -87031,7 +89153,7 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Select the criteria for the trigger to activate.
-					
+
 						- Created: Triggers when a new object is created
 						- Updated: Triggers when an existing object is updated
 							 */
@@ -87084,7 +89206,7 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Select the criteria for the trigger to activate.
-					
+
 						- Created: Triggers when a new object is created
 						- Updated: Triggers when an existing object is updated
 							 */
@@ -87137,7 +89259,7 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Select the criteria for the trigger to activate.
-					
+
 						- Created: Triggers when a new object is created
 						- Updated: Triggers when an existing object is updated
 							 */
@@ -87190,7 +89312,7 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Select the criteria for the trigger to activate.
-					
+
 						- Created: Triggers when a new object is created
 						- Updated: Triggers when an existing object is updated
 							 */
@@ -87243,7 +89365,7 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Select the criteria for the trigger to activate.
-					
+
 						- Created: Triggers when a new object is created
 						- Updated: Triggers when an existing object is updated
 							 */
@@ -87305,7 +89427,7 @@ export type TranslationFunctions = {
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * Specify the path to the folder you want to monitor for new files. 
+							 * Specify the path to the folder you want to monitor for new files.
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -88083,7 +90205,7 @@ export type TranslationFunctions = {
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The vendor for the purchase order 
+							 * The vendor for the purchase order
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -88141,7 +90263,7 @@ export type TranslationFunctions = {
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The vendor for the purchase order 
+							 * The vendor for the purchase order
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -88213,7 +90335,7 @@ export type TranslationFunctions = {
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The customer for the sales order 
+							 * The customer for the sales order
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -88419,7 +90541,7 @@ export type TranslationFunctions = {
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The customer for the sales order 
+							 * The customer for the sales order
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -93865,7 +95987,7 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * Used to uniquely identify a user in a conversation. 
+							 * Used to uniquely identify a user in a conversation.
 							 */
 							shortDesc: () => LocalizedString
 							/**
@@ -94119,7 +96241,7 @@ export type TranslationFunctions = {
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * Use this param to override the culture of the response. 
+							 * Use this param to override the culture of the response.
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -106496,6 +108618,2128 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Select the Webflow site where you want to monitor for order update events
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		ActiveCampaign: {
+			/**
+			 * ActiveCampaign
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Email marketing automation and CRM platform
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Connect your ActiveCampaign account to automate email marketing campaigns, manage contacts, and track customer interactions. Create and send targeted email campaigns, manage contact lists, set up automation workflows, and analyze campaign performance all from within Qore.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				contact_added_to_list: {
+					/**
+					 * Contact Added to List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a contact is added to a list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when a contact subscribes or is added to a specific list in ActiveCampaign
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The list to monitor for new contacts
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific list that you want to monitor for new contact additions
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				updated_contact: {
+					/**
+					 * Contact Updated
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a contact is updated
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when any contact information is updated in ActiveCampaign
+					 */
+					longDesc: () => LocalizedString
+				}
+				new_campaign_bounce: {
+					/**
+					 * New Campaign Bounce
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a campaign email bounces
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when an email from a campaign bounces, indicating delivery failure
+					 */
+					longDesc: () => LocalizedString
+				}
+				new_campaign_link_click: {
+					/**
+					 * New Campaign Link Click
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a link in a campaign is clicked
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when a recipient clicks on a link within a campaign email
+					 */
+					longDesc: () => LocalizedString
+				}
+				new_campaign_reply: {
+					/**
+					 * New Campaign Reply
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when someone replies to a campaign
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when a recipient replies to a campaign email
+					 */
+					longDesc: () => LocalizedString
+				}
+				new_contact_note: {
+					/**
+					 * New Contact Note
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a note is added to a contact
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when a note is added to a contact in a specific list
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The list to monitor for new contact notes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific list to monitor for when notes are added to contacts
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_contact: {
+					/**
+					 * New Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new contact is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when a new contact subscribes or is created in ActiveCampaign
+					 */
+					longDesc: () => LocalizedString
+				}
+				deal_note_added: {
+					/**
+					 * Deal Note Added
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a note is added to a deal
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when a note is added to a deal for contacts in a specific list
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The list to monitor for deal note additions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific list to monitor for when notes are added to deals
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_deal: {
+					/**
+					 * New Deal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new deal is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when a new deal is created for contacts in a specific list
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						list: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The list to monitor for new deals
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific list to monitor for when new deals are created
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			actions: {
+				add_contact_note: {
+					/**
+					 * Add Contact Note
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add a note to a contact
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Add a new note to a specific contact in ActiveCampaign
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						note: {
+							/**
+							 * Note
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The note content to add
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text content of the note that will be added to the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact: {
+							/**
+							 * Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact to add the note to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the contact that you want to add the note to
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_contact_to_account: {
+					/**
+					 * Add Contact to Account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Associate a contact with an account
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create an association between a contact and an account in ActiveCampaign
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						account: {
+							/**
+							 * Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The account to associate the contact with
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the account that you want to associate the contact with
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact: {
+							/**
+							 * Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact to associate with the account
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the contact that you want to associate with the account
+							 */
+							longDesc: () => LocalizedString
+						}
+						jobTitle: {
+							/**
+							 * Job Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's job title at this account
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional job title or role of the contact within the account
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_deal_note: {
+					/**
+					 * Add Deal Note
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add a note to a deal
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Add a new note to a specific deal in ActiveCampaign
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						note: {
+							/**
+							 * Note
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The note content to add
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text content of the note that will be added to the deal
+							 */
+							longDesc: () => LocalizedString
+						}
+						deal: {
+							/**
+							 * Deal
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The deal to add the note to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the deal that you want to add the note to
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_tag_to_contact: {
+					/**
+					 * Add Tag to Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add a tag to a contact
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Apply a tag to a specific contact in ActiveCampaign for organization and segmentation
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						tag: {
+							/**
+							 * Tag
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The tag to add to the contact
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the tag that you want to apply to the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact: {
+							/**
+							 * Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact to add the tag to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the contact that you want to add the tag to
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_account: {
+					/**
+					 * Create Account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new account
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new account (company/organization) in ActiveCampaign
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						name: {
+							/**
+							 * Account Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The name of the account
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the company or organization account
+							 */
+							longDesc: () => LocalizedString
+						}
+						accountUrl: {
+							/**
+							 * Account URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The website URL of the account
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional website URL or domain for the account
+							 */
+							longDesc: () => LocalizedString
+						}
+						owner: {
+							/**
+							 * Account Owner
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The user who will own this account
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the user who will be responsible for managing this account
+							 */
+							longDesc: () => LocalizedString
+						}
+						fieldOptions: {
+							/**
+							 * Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom field values for the account
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set values for any custom fields configured for accounts
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_contact: {
+					/**
+					 * Create Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new contact
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new contact in ActiveCampaign with basic information and custom field values
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						email: {
+							/**
+							 * Email Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The primary email address for the contact (required)
+							 */
+							longDesc: () => LocalizedString
+						}
+						firstName: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's first name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The first name of the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						lastName: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's last name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The last name of the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						phone: {
+							/**
+							 * Phone Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The phone number for the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						fieldValues: {
+							/**
+							 * Custom Field Values
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Values for custom fields
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set values for any custom fields configured for contacts
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_deal: {
+					/**
+					 * Create Deal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new deal
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new sales deal in ActiveCampaign with all relevant details
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						title: {
+							/**
+							 * Deal Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The title of the deal
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A descriptive title for the deal
+							 */
+							longDesc: () => LocalizedString
+						}
+						account: {
+							/**
+							 * Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The account associated with this deal
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the account/company that this deal is associated with
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact: {
+							/**
+							 * Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The primary contact for this deal
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the main contact person for this deal
+							 */
+							longDesc: () => LocalizedString
+						}
+						value: {
+							/**
+							 * Deal Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The monetary value of the deal
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The total value or amount of the deal
+							 */
+							longDesc: () => LocalizedString
+						}
+						currency: {
+							/**
+							 * Currency
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The currency for the deal value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the currency that the deal value is denominated in
+							 */
+							longDesc: () => LocalizedString
+						}
+						stage: {
+							/**
+							 * Deal Stage
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The current stage of the deal
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the pipeline stage that represents the current status of the deal
+							 */
+							longDesc: () => LocalizedString
+						}
+						group: {
+							/**
+							 * Pipeline Group
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The pipeline group for the deal
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the pipeline group that this deal belongs to
+							 */
+							longDesc: () => LocalizedString
+						}
+						owner: {
+							/**
+							 * Deal Owner
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The user responsible for this deal
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the user who will be responsible for managing this deal
+							 */
+							longDesc: () => LocalizedString
+						}
+						percent: {
+							/**
+							 * Completion Percentage
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The percentage completion of the deal
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A percentage value representing how close the deal is to completion
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Deal Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional description or notes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional description or additional details about the deal
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Deal Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The current status of the deal
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select whether the deal is open, won, or lost
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_account: {
+					/**
+					 * Get Account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve account details
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific account in ActiveCampaign
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Account ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the account to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the account that you want to get detailed information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_campaign: {
+					/**
+					 * Get Campaign
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve campaign details
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific campaign in ActiveCampaign
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Campaign ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the campaign to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the campaign that you want to get detailed information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_contact: {
+					/**
+					 * Get Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve contact details
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific contact in ActiveCampaign including custom fields, automations, and related data
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Contact ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the contact to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the contact that you want to get detailed information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_deal: {
+					/**
+					 * Get Deal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve deal details
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific deal in ActiveCampaign
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Deal ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the deal to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the deal that you want to get detailed information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_form: {
+					/**
+					 * Get Form
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve form details
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific form in ActiveCampaign including styling and field configuration
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Form ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the form to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the form that you want to get detailed information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_list: {
+					/**
+					 * Get List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve list details
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific list in ActiveCampaign including settings and configuration
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * List ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the list to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the list that you want to get detailed information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_task: {
+					/**
+					 * Get Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve task details
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific deal task in ActiveCampaign
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Task ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the task to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the task that you want to get detailed information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_user: {
+					/**
+					 * Get User
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve user details
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific user in ActiveCampaign
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * User ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the user to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the user that you want to get detailed information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_accounts: {
+					/**
+					 * List Accounts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of accounts
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a paginated list of accounts in ActiveCampaign with optional search and filtering
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						search: {
+							/**
+							 * Search
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search term to filter accounts
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Search for accounts by name or other searchable fields
+							 */
+							longDesc: () => LocalizedString
+						}
+						count_deals: {
+							/**
+							 * Count Deals
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include deal count for each account
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include the number of deals associated with each account in the response
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of accounts to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of accounts to return per page (default: 20)
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of accounts to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of accounts to skip for pagination
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_campaigns: {
+					/**
+					 * List Campaigns
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of campaigns
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a paginated list of campaigns in ActiveCampaign
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of campaigns to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of campaigns to return per page (default: 20)
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of campaigns to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of campaigns to skip for pagination
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_contacts: {
+					/**
+					 * List Contacts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of contacts
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a paginated list of contacts in ActiveCampaign with extensive filtering and sorting options
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Exact email address to search for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter contacts by exact email address match
+							 */
+							longDesc: () => LocalizedString
+						}
+						email_like: {
+							/**
+							 * Email Like
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Partial email address to search for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter contacts by partial email address match
+							 */
+							longDesc: () => LocalizedString
+						}
+						phone: {
+							/**
+							 * Phone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Phone number to search for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter contacts by phone number
+							 */
+							longDesc: () => LocalizedString
+						}
+						search: {
+							/**
+							 * Search
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * General search term
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Search for contacts by name, email, or other searchable fields
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact status filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter contacts by their subscription status
+							 */
+							longDesc: () => LocalizedString
+						}
+						formid: {
+							/**
+							 * Form ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by form subscription
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter contacts who subscribed through a specific form
+							 */
+							longDesc: () => LocalizedString
+						}
+						listid: {
+							/**
+							 * List ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by list membership
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter contacts who are members of a specific list
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort: {
+							/**
+							 * Sort Options
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sorting configuration
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Configure how to sort the contact results
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The field to use for sorting the contacts
+										 */
+										longDesc: () => LocalizedString
+									}
+									order: {
+										/**
+										 * Sort Order
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Whether to sort in ascending or descending order
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of contacts to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of contacts to return per page (default: 20)
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of contacts to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of contacts to skip for pagination
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_deals: {
+					/**
+					 * List Deals
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of deals
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a paginated list of deals in ActiveCampaign with optional search functionality
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of deals to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of deals to return per page (default: 20)
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of deals to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of deals to skip for pagination
+							 */
+							longDesc: () => LocalizedString
+						}
+						search: {
+							/**
+							 * Search Options
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search configuration for deals
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Configure how to search for deals by different fields
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Search Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to search in
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The field to search in (title, contact, organization, or all)
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Search Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Value to search for
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The search term to look for in the specified field
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				list_deal_stages: {
+					/**
+					 * List Deal Stages
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of deal stages
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a paginated list of deal stages (pipeline stages) in ActiveCampaign
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by stage title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter deal stages by their title
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of stages to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of deal stages to return per page (default: 20)
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of stages to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of deal stages to skip for pagination
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_forms: {
+					/**
+					 * List Forms
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of forms
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a paginated list of forms in ActiveCampaign
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of forms to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of forms to return per page (default: 20)
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of forms to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of forms to skip for pagination
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_lists: {
+					/**
+					 * List Lists
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of lists
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a paginated list of contact lists in ActiveCampaign with optional name filtering
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of lists to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of lists to return per page (default: 20)
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of lists to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of lists to skip for pagination
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by list name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter lists by their name
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_tags: {
+					/**
+					 * List Tags
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of tags
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a paginated list of tags in ActiveCampaign with optional search functionality
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of tags to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of tags to return per page (default: 20)
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of tags to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of tags to skip for pagination
+							 */
+							longDesc: () => LocalizedString
+						}
+						search: {
+							/**
+							 * Search
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search term to filter tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Search for tags by name or description
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_tasks: {
+					/**
+					 * List Tasks
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of tasks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a paginated list of deal tasks in ActiveCampaign with filtering options
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of tasks to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of tasks to return per page (default: 20)
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of tasks to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of tasks to skip for pagination
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignee: {
+							/**
+							 * Assignee
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by task assignee
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter tasks by the user they are assigned to
+							 */
+							longDesc: () => LocalizedString
+						}
+						userid: {
+							/**
+							 * User ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by task creator
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter tasks by the user who created them
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by task title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter tasks by their title
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_users: {
+					/**
+					 * List Users
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of users
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a paginated list of users in ActiveCampaign
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of users to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of users to return per page (default: 20)
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of users to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of users to skip for pagination
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				remove_tag_from_contact: {
+					/**
+					 * Remove Tag from Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove a tag from a contact
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Remove a specific tag from a contact in ActiveCampaign
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						tag: {
+							/**
+							 * Tag
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The tag to remove from the contact
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the tag that you want to remove from the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact: {
+							/**
+							 * Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact to remove the tag from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the contact that you want to remove the tag from
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_account: {
+					/**
+					 * Update Account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing account
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the information of an existing account in ActiveCampaign
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Account ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the account to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the account that you want to update
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Account Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated name of the account
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new name for the company or organization account
+							 */
+							longDesc: () => LocalizedString
+						}
+						accountUrl: {
+							/**
+							 * Account URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated website URL of the account
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new website URL or domain for the account
+							 */
+							longDesc: () => LocalizedString
+						}
+						owner: {
+							/**
+							 * Account Owner
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated owner of the account
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the user who will be responsible for managing this account
+							 */
+							longDesc: () => LocalizedString
+						}
+						fieldOptions: {
+							/**
+							 * Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated custom field values for the account
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update values for any custom fields configured for accounts
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_contact: {
+					/**
+					 * Update Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing contact
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the information of an existing contact in ActiveCampaign including basic information and custom field values
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Contact ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the contact to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the contact that you want to update
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new email address for the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						firstName: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated first name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new first name of the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						lastName: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated last name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new last name of the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						phone: {
+							/**
+							 * Phone Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new phone number for the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						fieldValues: {
+							/**
+							 * Custom Field Values
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated values for custom fields
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update values for any custom fields configured for contacts
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_deal: {
+					/**
+					 * Update Deal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing deal
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the information of an existing sales deal in ActiveCampaign
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Deal ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the deal to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the deal that you want to update
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Deal Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated title of the deal
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new descriptive title for the deal
+							 */
+							longDesc: () => LocalizedString
+						}
+						account: {
+							/**
+							 * Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated account associated with this deal
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the new account/company that this deal is associated with
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact: {
+							/**
+							 * Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated primary contact for this deal
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the new main contact person for this deal
+							 */
+							longDesc: () => LocalizedString
+						}
+						value: {
+							/**
+							 * Deal Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated monetary value of the deal
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new total value or amount of the deal
+							 */
+							longDesc: () => LocalizedString
+						}
+						currency: {
+							/**
+							 * Currency
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated currency for the deal value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the new currency that the deal value is denominated in
+							 */
+							longDesc: () => LocalizedString
+						}
+						stage: {
+							/**
+							 * Deal Stage
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated stage of the deal
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the new pipeline stage that represents the current status of the deal
+							 */
+							longDesc: () => LocalizedString
+						}
+						group: {
+							/**
+							 * Pipeline Group
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated pipeline group for the deal
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the new pipeline group that this deal belongs to
+							 */
+							longDesc: () => LocalizedString
+						}
+						owner: {
+							/**
+							 * Deal Owner
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated user responsible for this deal
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the new user who will be responsible for managing this deal
+							 */
+							longDesc: () => LocalizedString
+						}
+						percent: {
+							/**
+							 * Completion Percentage
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated percentage completion of the deal
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new percentage value representing how close the deal is to completion
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Deal Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated description or notes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * New description or additional details about the deal
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Deal Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated status of the deal
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select whether the deal is open, won, or lost
 							 */
 							longDesc: () => LocalizedString
 						}
