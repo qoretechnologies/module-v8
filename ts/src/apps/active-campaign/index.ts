@@ -1,4 +1,4 @@
-import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
+import { TQoreAppActionFunctionContext, TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
@@ -25,7 +25,7 @@ export default (locale: Locales) =>
     logo_file_name: 'logo.svg',
     logo_mime_type: 'image/svg+xml',
     rest: {
-      url: '{{instance_url}}',
+      url: 'https://{{instance_url}}',
       data: 'json',
       oauth2_grant_type: 'none',
       ping_method: 'GET',
@@ -33,7 +33,16 @@ export default (locale: Locales) =>
     },
     rest_modifiers: {
       options: ACTIVE_CAMPAIGN_CONN_OPTIONS,
-      required_options: 'instance_url,api_key',
+      required_options: 'instance_url,token',
       url_template_options: ['subdomain'],
+      set_options_post_auth: (
+        context: Omit<TQoreAppActionFunctionContext<typeof ACTIVE_CAMPAIGN_CONN_OPTIONS>, 'opts'>
+      ) => {
+        const instance_url = context.conn_opts?.instance_url;
+
+        return {
+          url: instance_url,
+        };
+      },
     },
   }) satisfies TQoreAppWithActions;

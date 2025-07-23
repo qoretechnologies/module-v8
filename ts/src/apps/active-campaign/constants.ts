@@ -23,7 +23,7 @@ export const ACTIVE_CAMPAIGN_CONN_OPTIONS = {
       `- Copy the url value`,
     type: 'string',
   },
-  api_key: {
+  token: {
     display_name: 'API Key',
     short_desc: 'Your ActiveCampaign account API key',
     desc:
