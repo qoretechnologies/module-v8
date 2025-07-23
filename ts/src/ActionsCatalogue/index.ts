@@ -58,6 +58,7 @@ import klaviyo from '../apps/klaviyo';
 import clickup from '../apps/clickup';
 import webflow from '../apps/webflow';
 import activeCampaign from '../apps/active-campaign';
+import browserAi from '../apps/browse-ai';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -77,6 +78,7 @@ const NEW_APPS = {
   asana,
   attio,
   bitbucket,
+  browserAi,
   businessCentral,
   calendly,
   clickup,
