@@ -17,6 +17,7 @@ const config: Config = {
     '^.+\\.ts$': 'ts-jest',
   },
   testMatch: ['<rootDir>/**/*.(spec|test).ts'],
+  testPathIgnorePatterns: ['/node_modules/', '\\.skip\\.ts$'],
   transformIgnorePatterns: ['<rootDir>/../node_modules/(?!@octokit)'],
 };
 
