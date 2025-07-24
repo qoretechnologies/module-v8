@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { createClient } from '@typeform/api-client';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
-import { TYPEFORM_APP_NAME, TypeformError } from '../constants';
+import { extractTypeformErrorMessage, TYPEFORM_APP_NAME, TypeformError } from '../constants';
 
 const options = {
   url: {
@@ -47,7 +47,7 @@ const createImage = QoreAppCreator.createLocalizedAction<typeof options>({
         url,
       });
     } catch (error) {
-      throw new TypeformError(`Failed to create image: ${error.message || error}`);
+      throw new TypeformError(`Failed to create image: ${extractTypeformErrorMessage(error)}`);
     }
   },
   response_type: {

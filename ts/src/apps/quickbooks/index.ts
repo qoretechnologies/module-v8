@@ -42,5 +42,15 @@ export default (locale: Locales) =>
       options: QUICKBOOKS_CONN_OPTIONS,
       required_options: 'instance_type',
       url_template_options: ['realm_id'],
+      set_options_post_auth: (context) => {
+        const instanceType = context.conn_opts?.instance_type;
+
+        return {
+          url:
+            instanceType === 'sandbox'
+              ? 'https://sandbox-quickbooks.api.intuit.com'
+              : 'https://quickbooks.api.intuit.com',
+        };
+      },
     },
   }) satisfies TQoreAppWithActions;

@@ -145,7 +145,7 @@ const fetchLastUpdatedRecords = async (
         fetchNextPage();
       });
 
-    return records;
+    return JSON.parse(JSON.stringify(records));
   } catch (error) {
     throw new AirtableError(`Failed to fetch latest records: ${error.message || error}`);
   }

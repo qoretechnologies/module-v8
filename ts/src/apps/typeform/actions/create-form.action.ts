@@ -6,7 +6,7 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import { createClient, Typeform } from '@typeform/api-client';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
-import { TYPEFORM_APP_NAME, TypeformError } from '../constants';
+import { extractTypeformErrorMessage, TYPEFORM_APP_NAME, TypeformError } from '../constants';
 import {
   TypeformFieldFormAllowedValues,
   TypeformFieldTypeAllowedValues,
@@ -523,24 +523,24 @@ const createForm = QoreAppCreator.createLocalizedAction<typeof options>({
     try {
       const client = createClient({ token });
 
-      const response = await client.forms.create({
-        data: {
-          title,
-          ...(fields && { fields: fields as Typeform.Field[] }),
-          ...(hidden && { hidden }),
-          ...(variables && { variables: variables as Record<string, any> }),
-          ...(welcome_screens && { welcome_screens: welcome_screens as Typeform.WelcomeScreen[] }),
-          ...(thankyou_screens && {
-            thankyou_screens: thankyou_screens as Typeform.ThankYouScreen[],
-          }),
-          ...(logic && { logic: logic as Typeform.Logic[] }),
-          ...(settings && { settings: settings as Typeform.Settings }),
-        },
-      });
+      const data = {
+        title,
+        ...(fields && { fields: fields as Typeform.Field[] }),
+        ...(hidden && { hidden }),
+        ...(variables && { variables: variables as Record<string, any> }),
+        ...(welcome_screens && { welcome_screens: welcome_screens as Typeform.WelcomeScreen[] }),
+        ...(thankyou_screens && {
+          thankyou_screens: thankyou_screens as Typeform.ThankYouScreen[],
+        }),
+        ...(logic && { logic: logic as Typeform.Logic[] }),
+        ...(settings && { settings: settings as Typeform.Settings }),
+      } satisfies Typeform.Form;
+
+      const response = await client.forms.create({ data });
 
       return response;
     } catch (error) {
-      throw new TypeformError(`Failed to create form: ${error.message || error}`);
+      throw new TypeformError(`Failed to create form: ${extractTypeformErrorMessage(error)}`);
     }
   },
   response_type: {

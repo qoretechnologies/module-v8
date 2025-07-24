@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { createClient } from '@typeform/api-client';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
-import { TYPEFORM_APP_NAME, TypeformError } from '../constants';
+import { extractTypeformErrorMessage, TYPEFORM_APP_NAME, TypeformError } from '../constants';
 import { getTypeformFormIdAllowedValues } from '../helpers/get-form-allowed-values';
 
 const options = {
@@ -155,7 +155,7 @@ const listResponses = QoreAppCreator.createLocalizedAction({
         ...(answeredFields && { answeredFields }),
       });
     } catch (error) {
-      throw new TypeformError(`Failed to list responses: ${error.message || error}`);
+      throw new TypeformError(`Failed to list responses: ${extractTypeformErrorMessage(error)}`);
     }
   },
   response_type: {

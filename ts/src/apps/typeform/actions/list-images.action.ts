@@ -5,7 +5,7 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import { createClient } from '@typeform/api-client';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
-import { TYPEFORM_APP_NAME, TypeformError } from '../constants';
+import { extractTypeformErrorMessage, TYPEFORM_APP_NAME, TypeformError } from '../constants';
 
 const response_type = {
   type: 'list',
@@ -40,7 +40,7 @@ const listImages = QoreAppCreator.createLocalizedAction({
 
       return await client.images.list();
     } catch (error) {
-      throw new TypeformError(`Failed to list images: ${error.message || error}`);
+      throw new TypeformError(`Failed to list images: ${extractTypeformErrorMessage(error)}`);
     }
   },
   response_type,
