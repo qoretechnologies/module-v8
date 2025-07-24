@@ -48,7 +48,7 @@ const listTables = QoreAppCreator.createLocalizedAction<typeof options>({
         }
       );
 
-      return response?.data || { tables: [] };
+      return JSON.parse(JSON.stringify(response?.data || { tables: [] }));
     } catch (error) {
       throw new AirtableError(`Failed to list tables: ${error.message || error}`);
     }

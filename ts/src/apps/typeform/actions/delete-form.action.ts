@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { createClient } from '@typeform/api-client';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
-import { TYPEFORM_APP_NAME, TypeformError } from '../constants';
+import { extractTypeformErrorMessage, TYPEFORM_APP_NAME, TypeformError } from '../constants';
 import { getTypeformFormIdAllowedValues } from '../helpers/get-form-allowed-values';
 
 const options = {
@@ -34,7 +34,7 @@ const deleteForm = QoreAppCreator.createLocalizedAction<typeof options>({
 
       return response;
     } catch (error) {
-      throw new TypeformError(`Failed to delete form: ${error.message || error}`);
+      throw new TypeformError(`Failed to delete form: ${extractTypeformErrorMessage(error)}`);
     }
   },
 });

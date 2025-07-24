@@ -6,7 +6,7 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import { createClient } from '@typeform/api-client';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
-import { TYPEFORM_APP_NAME, TypeformError } from '../constants';
+import { extractTypeformErrorMessage, TYPEFORM_APP_NAME, TypeformError } from '../constants';
 
 const response_type = {
   type: 'hash',
@@ -92,7 +92,7 @@ const listWorkspaces = QoreAppCreator.createLocalizedAction<typeof options>({
 
       return response;
     } catch (error) {
-      throw new TypeformError(`Failed to list workspaces: ${error.message || error}`);
+      throw new TypeformError(`Failed to list workspaces: ${extractTypeformErrorMessage(error)}`);
     }
   },
   response_type,

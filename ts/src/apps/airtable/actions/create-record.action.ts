@@ -61,7 +61,7 @@ const createRecord = QoreAppCreator.createLocalizedAction<typeof options>({
     try {
       const record = await client.create(otherOptions);
 
-      return record;
+      return JSON.parse(JSON.stringify(record));
     } catch (error) {
       throw new AirtableError(`Failed to create record: ${error.message || error}`);
     }

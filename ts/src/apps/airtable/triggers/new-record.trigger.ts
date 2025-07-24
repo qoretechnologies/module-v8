@@ -18,16 +18,20 @@ const AirtableNewRecordTrigger = QoreAppCreator.createLocalizedTrigger({
     base_id: {
       type: 'string',
       required: true,
+      on_change: ['refetch'],
       get_allowed_values: getAirtableBaseIdAllowedValues,
     },
     table_id: {
       type: 'string',
       required: true,
+      depends_on: ['base_id'],
+      on_change: ['refetch'],
       get_allowed_values: getAirtableTableIdAllowedValues,
     },
     view: {
       type: 'string',
       required: false,
+      depends_on: ['table_id'],
       get_allowed_values: getAirtableViewsAllowedValues,
     },
   },
@@ -145,7 +149,7 @@ const fetchLatestRecords = async (
         fetchNextPage();
       });
 
-    return records;
+    return JSON.parse(JSON.stringify(records));
   } catch (error) {
     throw new AirtableError(`Failed to fetch latest records: ${error.message || error}`);
   }

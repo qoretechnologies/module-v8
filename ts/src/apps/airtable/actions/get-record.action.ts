@@ -49,7 +49,7 @@ const getRecord = QoreAppCreator.createLocalizedAction<typeof options>({
     try {
       const record = await client.find(record_id);
 
-      return omit(record, ['_table', '_rawJson']);
+      return JSON.parse(JSON.stringify(omit(record, ['_table', '_rawJson'])));
     } catch (error) {
       throw new AirtableError(`Failed to get record: ${error.message || error}`);
     }

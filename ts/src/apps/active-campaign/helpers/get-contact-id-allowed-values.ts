@@ -13,7 +13,9 @@ type ActiveCampaignItem = {
 const mapActiveCampaignItemToAllowedValue = (
   item: ActiveCampaignItem
 ): IQoreAllowedValue<string> => {
-  const fullName = `${item.first_name} ${item.last_name}`.trim() || item.email;
+  const firstName = item.first_name;
+  const lastName = item.last_name;
+  const fullName = firstName && lastName ? `${firstName} ${lastName}` : item.email;
 
   return {
     value: item.id,

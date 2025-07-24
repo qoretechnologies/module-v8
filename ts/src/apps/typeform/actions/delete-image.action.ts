@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { createClient } from '@typeform/api-client';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
-import { TYPEFORM_APP_NAME, TypeformError } from '../constants';
+import { extractTypeformErrorMessage, TYPEFORM_APP_NAME, TypeformError } from '../constants';
 import { getTypeformImageIdAllowedValues } from '../helpers/get-image-allowed-values';
 
 const options = {
@@ -34,7 +34,7 @@ const deleteImage = QoreAppCreator.createLocalizedAction<typeof options>({
 
       return response;
     } catch (error) {
-      throw new TypeformError(`Failed to delete image: ${error.message || error}`);
+      throw new TypeformError(`Failed to delete image: ${extractTypeformErrorMessage(error)}`);
     }
   },
 });

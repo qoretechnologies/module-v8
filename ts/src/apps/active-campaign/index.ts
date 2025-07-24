@@ -25,7 +25,7 @@ export default (locale: Locales) =>
     logo_file_name: 'logo.svg',
     logo_mime_type: 'image/svg+xml',
     rest: {
-      url: 'https://{{instance_url}}',
+      url: '{{instance_url}}',
       data: 'json',
       oauth2_grant_type: 'none',
       ping_method: 'GET',

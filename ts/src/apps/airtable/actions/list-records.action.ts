@@ -177,7 +177,7 @@ const listRecords = QoreAppCreator.createLocalizedAction<typeof options>({
       throw new AirtableError(`Failed to list records: ${error.message || error}`);
     }
 
-    return records;
+    return JSON.parse(JSON.stringify(records));
   },
   response_type: {
     type: 'list',

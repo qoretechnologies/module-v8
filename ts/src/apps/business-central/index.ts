@@ -2,7 +2,11 @@ import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
 import { mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
-import { BUSINESS_CENTRAL_APP_LOGO, BUSINESS_CENTRAL_APP_NAME } from './constants';
+import {
+  BUSINESS_CENTRAL_APP_LOGO,
+  BUSINESS_CENTRAL_APP_NAME,
+  BUSINESS_CENTRAL_CONN_OPTIONS,
+} from './constants';
 
 import * as BUSINESS_CENTRAL_TRIGGERS from './triggers';
 
@@ -29,5 +33,10 @@ export default (locale: Locales) =>
       ],
       ping_method: 'GET',
       ping_path: 'api/v2.0',
+    },
+    rest_modifiers: {
+      options: BUSINESS_CENTRAL_CONN_OPTIONS,
+      required_options: 'instance_type',
+      url_template_options: ['instance_type'],
     },
   }) satisfies TQoreAppWithActions;
