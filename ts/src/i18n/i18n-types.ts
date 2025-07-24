@@ -206,6 +206,360 @@ type RootTranslation = {
 				}
 			}
 		}
+		BrowseAi: {
+			/**
+			 * B​r​o​w​s​e​ ​A​I
+			 */
+			displayName: string
+			/**
+			 * W​e​b​ ​s​c​r​a​p​i​n​g​ ​a​n​d​ ​d​a​t​a​ ​e​x​t​r​a​c​t​i​o​n​ ​a​u​t​o​m​a​t​i​o​n​ ​p​l​a​t​f​o​r​m
+			 */
+			shortDesc: string
+			/**
+			 * C​o​n​n​e​c​t​ ​y​o​u​r​ ​B​r​o​w​s​e​ ​A​I​ ​a​c​c​o​u​n​t​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​w​e​b​ ​s​c​r​a​p​i​n​g​ ​a​n​d​ ​d​a​t​a​ ​e​x​t​r​a​c​t​i​o​n​ ​w​o​r​k​f​l​o​w​s​.​ ​C​r​e​a​t​e​ ​c​u​s​t​o​m​ ​r​o​b​o​t​s​ ​t​o​ ​m​o​n​i​t​o​r​ ​w​e​b​s​i​t​e​s​,​ ​e​x​t​r​a​c​t​ ​s​t​r​u​c​t​u​r​e​d​ ​d​a​t​a​,​ ​t​r​a​c​k​ ​c​h​a​n​g​e​s​,​ ​a​n​d​ ​c​o​l​l​e​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​r​o​m​ ​a​n​y​ ​w​e​b​s​i​t​e​ ​w​i​t​h​o​u​t​ ​c​o​d​i​n​g​.​ ​S​e​t​ ​u​p​ ​a​u​t​o​m​a​t​e​d​ ​d​a​t​a​ ​c​o​l​l​e​c​t​i​o​n​ ​s​c​h​e​d​u​l​e​s​,​ ​r​e​c​e​i​v​e​ ​a​l​e​r​t​s​ ​o​n​ ​w​e​b​s​i​t​e​ ​c​h​a​n​g​e​s​,​ ​a​n​d​ ​i​n​t​e​g​r​a​t​e​ ​e​x​t​r​a​c​t​e​d​ ​d​a​t​a​ ​d​i​r​e​c​t​l​y​ ​i​n​t​o​ ​y​o​u​r​ ​Q​o​r​e​ ​w​o​r​k​f​l​o​w​s​.
+			 */
+			longDesc: string
+			actions: {
+				get_robot: {
+					/**
+					 * G​e​t​ ​R​o​b​o​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​B​r​o​w​s​e​ ​A​I​ ​r​o​b​o​t
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​B​r​o​w​s​e​ ​A​I​ ​r​o​b​o​t​,​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​,​ ​i​n​p​u​t​ ​p​a​r​a​m​e​t​e​r​s​,​ ​a​n​d​ ​m​e​t​a​d​a​t​a
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * R​o​b​o​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​o​b​o​t
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​r​o​b​o​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_robots: {
+					/**
+					 * L​i​s​t​ ​R​o​b​o​t​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​B​r​o​w​s​e​ ​A​I​ ​r​o​b​o​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​c​o​m​p​l​e​t​e​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​r​o​b​o​t​s​ ​a​v​a​i​l​a​b​l​e​ ​i​n​ ​y​o​u​r​ ​B​r​o​w​s​e​ ​A​I​ ​a​c​c​o​u​n​t​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​i​r​ ​b​a​s​i​c​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​n​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​d​e​t​a​i​l​s
+					 */
+					longDesc: string
+				}
+				list_tasks: {
+					/**
+					 * L​i​s​t​ ​T​a​s​k​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​a​ ​l​i​s​t​ ​o​f​ ​t​a​s​k​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​r​o​b​o​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​f​i​l​t​e​r​e​d​ ​l​i​s​t​ ​o​f​ ​t​a​s​k​s​ ​e​x​e​c​u​t​e​d​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​B​r​o​w​s​e​ ​A​I​ ​r​o​b​o​t​,​ ​w​i​t​h​ ​o​p​t​i​o​n​s​ ​t​o​ ​f​i​l​t​e​r​ ​b​y​ ​s​t​a​t​u​s​,​ ​d​a​t​e​ ​r​a​n​g​e​,​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​p​r​e​f​e​r​e​n​c​e​s
+					 */
+					longDesc: string
+					options: {
+						robot: {
+							/**
+							 * R​o​b​o​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​r​o​b​o​t​ ​t​o​ ​l​i​s​t​ ​t​a​s​k​s​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​r​o​b​o​t​ ​w​h​o​s​e​ ​t​a​s​k​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+						page: {
+							/**
+							 * P​a​g​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​a​g​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​w​h​i​c​h​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​(​s​t​a​r​t​s​ ​f​r​o​m​ ​1​)
+							 */
+							longDesc: string
+						}
+						pageSize: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​t​a​s​k​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​m​a​n​y​ ​t​a​s​k​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​ ​(​d​e​f​a​u​l​t​:​ ​1​0​)
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * T​a​s​k​ ​S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​b​y​ ​t​h​e​i​r​ ​e​x​e​c​u​t​i​o​n​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​t​a​s​k​s​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​t​a​t​u​s​ ​(​f​a​i​l​e​d​,​ ​s​u​c​c​e​s​s​f​u​l​,​ ​o​r​ ​i​n​-​p​r​o​g​r​e​s​s​)
+							 */
+							longDesc: string
+						}
+						sort: {
+							/**
+							 * S​o​r​t​ ​O​p​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​t​a​s​k​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​s​o​r​t​i​n​g​ ​o​r​d​e​r​ ​f​o​r​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​t​a​s​k​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * S​o​r​t​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​i​c​h​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​t​a​s​k​s
+										 */
+										longDesc: string
+									}
+									order: {
+										/**
+										 * S​o​r​t​ ​O​r​d​e​r
+										 */
+										displayName: string
+										/**
+										 * A​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						includeRetried: {
+							/**
+							 * I​n​c​l​u​d​e​ ​R​e​t​r​i​e​d​ ​T​a​s​k​s
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​r​e​t​r​i​e​d​ ​t​a​s​k​s​ ​i​n​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​t​r​u​e​ ​t​o​ ​i​n​c​l​u​d​e​ ​t​a​s​k​s​ ​t​h​a​t​ ​h​a​v​e​ ​b​e​e​n​ ​r​e​t​r​i​e​d​ ​i​n​ ​t​h​e​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						fromDate: {
+							/**
+							 * F​r​o​m​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * S​t​a​r​t​ ​d​a​t​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​t​a​s​k​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​c​r​e​a​t​e​d​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+						toDate: {
+							/**
+							 * T​o​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * E​n​d​ ​d​a​t​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​t​a​s​k​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​c​r​e​a​t​e​d​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				run_task: {
+					/**
+					 * R​u​n​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * E​x​e​c​u​t​e​ ​a​ ​B​r​o​w​s​e​ ​A​I​ ​r​o​b​o​t​ ​t​a​s​k
+					 */
+					shortDesc: string
+					/**
+					 * R​u​n​s​ ​a​ ​s​i​n​g​l​e​ ​t​a​s​k​ ​u​s​i​n​g​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​B​r​o​w​s​e​ ​A​I​ ​r​o​b​o​t​ ​w​i​t​h​ ​t​h​e​ ​p​r​o​v​i​d​e​d​ ​i​n​p​u​t​ ​p​a​r​a​m​e​t​e​r​s
+					 */
+					longDesc: string
+					options: {
+						robot: {
+							/**
+							 * R​o​b​o​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​r​o​b​o​t​ ​t​o​ ​e​x​e​c​u​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​r​o​b​o​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​u​n​ ​a​ ​t​a​s​k​ ​w​i​t​h
+							 */
+							longDesc: string
+						}
+					}
+				}
+				run_bulk_task: {
+					/**
+					 * R​u​n​ ​B​u​l​k​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * E​x​e​c​u​t​e​ ​m​u​l​t​i​p​l​e​ ​t​a​s​k​s​ ​i​n​ ​b​u​l​k
+					 */
+					shortDesc: string
+					/**
+					 * R​u​n​s​ ​m​u​l​t​i​p​l​e​ ​t​a​s​k​s​ ​i​n​ ​b​u​l​k​ ​u​s​i​n​g​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​B​r​o​w​s​e​ ​A​I​ ​r​o​b​o​t​ ​w​i​t​h​ ​d​i​f​f​e​r​e​n​t​ ​s​e​t​s​ ​o​f​ ​i​n​p​u​t​ ​p​a​r​a​m​e​t​e​r​s
+					 */
+					longDesc: string
+					options: {
+						title: {
+							/**
+							 * B​u​l​k​ ​R​u​n​ ​T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​b​u​l​k​ ​r​u​n
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​a​ ​m​e​a​n​i​n​g​f​u​l​ ​t​i​t​l​e​ ​t​o​ ​i​d​e​n​t​i​f​y​ ​t​h​i​s​ ​b​u​l​k​ ​t​a​s​k​ ​e​x​e​c​u​t​i​o​n
+							 */
+							longDesc: string
+						}
+						robot: {
+							/**
+							 * R​o​b​o​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​r​o​b​o​t​ ​t​o​ ​e​x​e​c​u​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​r​o​b​o​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​e​ ​b​u​l​k​ ​t​a​s​k​ ​e​x​e​c​u​t​i​o​n
+							 */
+							longDesc: string
+						}
+						inputParameters: {
+							/**
+							 * I​n​p​u​t​ ​P​a​r​a​m​e​t​e​r​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​p​a​r​a​m​e​t​e​r​ ​s​e​t​s​ ​f​o​r​ ​e​a​c​h​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​a​ ​l​i​s​t​ ​o​f​ ​i​n​p​u​t​ ​p​a​r​a​m​e​t​e​r​ ​s​e​t​s​,​ ​w​h​e​r​e​ ​e​a​c​h​ ​s​e​t​ ​w​i​l​l​ ​b​e​ ​u​s​e​d​ ​t​o​ ​r​u​n​ ​o​n​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_task: {
+					/**
+					 * N​e​w​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​B​r​o​w​s​e​ ​A​I​ ​t​a​s​k​ ​e​v​e​n​t​ ​o​c​c​u​r​s
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​B​r​o​w​s​e​ ​A​I​ ​r​o​b​o​t​ ​t​a​s​k​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​ ​e​v​e​n​t​s​ ​o​c​c​u​r​,​ ​s​u​c​h​ ​a​s​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​,​ ​d​a​t​a​ ​c​a​p​t​u​r​e​ ​c​h​a​n​g​e​s​,​ ​o​r​ ​e​r​r​o​r​s
+					 */
+					longDesc: string
+					options: {
+						robot: {
+							/**
+							 * R​o​b​o​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​r​o​b​o​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​t​a​s​k​ ​e​v​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​B​r​o​w​s​e​ ​A​I​ ​r​o​b​o​t​ ​w​h​o​s​e​ ​t​a​s​k​ ​e​v​e​n​t​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							longDesc: string
+						}
+						eventType: {
+							/**
+							 * E​v​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​t​a​s​k​ ​e​v​e​n​t​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​i​c​h​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​ ​e​v​e​n​t​ ​s​h​o​u​l​d​ ​t​r​i​g​g​e​r​ ​t​h​i​s​ ​w​o​r​k​f​l​o​w
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Calendly: {
 			/**
 			 * C​a​l​e​n​d​l​y
@@ -55570,6 +55924,360 @@ export type TranslationFunctions = {
 							 * Second Option
 							 */
 							displayName: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		BrowseAi: {
+			/**
+			 * Browse AI
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Web scraping and data extraction automation platform
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Connect your Browse AI account to automate web scraping and data extraction workflows. Create custom robots to monitor websites, extract structured data, track changes, and collect information from any website without coding. Set up automated data collection schedules, receive alerts on website changes, and integrate extracted data directly into your Qore workflows.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				get_robot: {
+					/**
+					 * Get Robot
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific Browse AI robot
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches comprehensive information about a Browse AI robot, including its configuration, input parameters, and metadata
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Robot ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the robot
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the robot you want to retrieve information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_robots: {
+					/**
+					 * List Robots
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get a list of all Browse AI robots
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a complete list of all robots available in your Browse AI account, including their basic information and configuration details
+					 */
+					longDesc: () => LocalizedString
+				}
+				list_tasks: {
+					/**
+					 * List Tasks
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get a list of tasks for a specific robot
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a filtered list of tasks executed by a specific Browse AI robot, with options to filter by status, date range, and sorting preferences
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						robot: {
+							/**
+							 * Robot
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The robot to list tasks for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the robot whose tasks you want to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+						page: {
+							/**
+							 * Page Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The page number for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify which page of results to retrieve (starts from 1)
+							 */
+							longDesc: () => LocalizedString
+						}
+						pageSize: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of tasks per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how many tasks to return per page (default: 10)
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Task Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter tasks by their execution status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter the results to only include tasks with a specific status (failed, successful, or in-progress)
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort: {
+							/**
+							 * Sort Options
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to sort the task results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Configure the sorting order for the returned tasks
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Sort Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose which field to use for sorting the tasks
+										 */
+										longDesc: () => LocalizedString
+									}
+									order: {
+										/**
+										 * Sort Order
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Ascending or descending order
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose whether to sort in ascending or descending order
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						includeRetried: {
+							/**
+							 * Include Retried Tasks
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to include retried tasks in results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to true to include tasks that have been retried in the results
+							 */
+							longDesc: () => LocalizedString
+						}
+						fromDate: {
+							/**
+							 * From Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Start date for filtering tasks
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter tasks created on or after this date
+							 */
+							longDesc: () => LocalizedString
+						}
+						toDate: {
+							/**
+							 * To Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * End date for filtering tasks
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter tasks created on or before this date
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				run_task: {
+					/**
+					 * Run Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Execute a Browse AI robot task
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Runs a single task using the specified Browse AI robot with the provided input parameters
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						robot: {
+							/**
+							 * Robot
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The robot to execute
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the robot you want to run a task with
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				run_bulk_task: {
+					/**
+					 * Run Bulk Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Execute multiple tasks in bulk
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Runs multiple tasks in bulk using the specified Browse AI robot with different sets of input parameters
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						title: {
+							/**
+							 * Bulk Run Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * A descriptive title for the bulk run
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide a meaningful title to identify this bulk task execution
+							 */
+							longDesc: () => LocalizedString
+						}
+						robot: {
+							/**
+							 * Robot
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The robot to execute
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the robot you want to use for the bulk task execution
+							 */
+							longDesc: () => LocalizedString
+						}
+						inputParameters: {
+							/**
+							 * Input Parameters
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of parameter sets for each task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide a list of input parameter sets, where each set will be used to run one task
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_task: {
+					/**
+					 * New Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a Browse AI task event occurs
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors Browse AI robot tasks and triggers when specific task events occur, such as task completion, data capture changes, or errors
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						robot: {
+							/**
+							 * Robot
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The robot to monitor for task events
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Browse AI robot whose task events you want to monitor
+							 */
+							longDesc: () => LocalizedString
+						}
+						eventType: {
+							/**
+							 * Event Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The type of task event to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose which specific task event should trigger this workflow
+							 */
+							longDesc: () => LocalizedString
 						}
 					}
 				}

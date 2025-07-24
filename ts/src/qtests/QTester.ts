@@ -37,6 +37,7 @@ async function runJest() {
   const { results } = await runCLI(
     {
       testMatch: ['**/?(*.)+(qtest).[tj]s?(x)'],
+      testPathIgnorePatterns: ['/node_modules/', '\\.skip\\.ts$'],
       config: path.join(process.cwd(), '/jest.config.js'),
       verbose: true,
       runInBand: true,

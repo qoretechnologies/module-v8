@@ -46,6 +46,7 @@ import Zoom from './apps/Zoom';
 import ClickUp from './apps/ClickUp';
 import Webflow from './apps/Webflow';
 import ActiveCampaign from './apps/ActiveCampaign';
+import BrowseAi from './apps/BrowseAi';
 
 const en = {
   common: {},
@@ -144,6 +145,7 @@ const en = {
         },
       },
     },
+    BrowseAi,
     Calendly,
     ClickUp,
     GoogleDocs,
