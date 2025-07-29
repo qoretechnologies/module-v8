@@ -25,7 +25,7 @@ export default (locale: Locales) =>
     logo_file_name: 'logo.svg',
     logo_mime_type: 'image/svg+xml',
     rest: {
-      url: '{{instance_url}}',
+      url: 'auto',
       data: 'json',
       oauth2_grant_type: 'none',
       ping_method: 'GET',
@@ -44,5 +44,6 @@ export default (locale: Locales) =>
           url: instance_url,
         };
       },
+      url_from_option: 'instance_url',
     },
   }) satisfies TQoreAppWithActions;
