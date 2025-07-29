@@ -108,7 +108,10 @@ const options = {
                           type: {
                             type: 'hash',
                             fields: {
-                              type: { type: 'string', default_value: 'image' },
+                              type: {
+                                type: 'string',
+                                allowed_values: [{ value: 'image', display_name: 'Image' }],
+                              },
                               href: { type: 'string' },
                               properties: {
                                 type: {
@@ -133,7 +136,7 @@ const options = {
                 show_labels: { type: 'boolean' },
                 alphabetical_order: { type: 'boolean' },
                 hide_marks: { type: 'boolean' },
-                button_text: { type: 'string', default_value: 'Continue' },
+                button_text: { type: 'string' },
                 start_at_one: { type: 'boolean' },
                 structure: {
                   type: 'string',
@@ -180,11 +183,11 @@ const options = {
                     fields: {
                       type: {
                         type: 'string',
-                        default_value: 'variable',
+                        allowed_values: [{ value: 'variable', display_name: 'Variable' }],
                       },
                       value: {
                         type: 'string',
-                        default_value: 'price',
+                        allowed_values: [{ value: 'price', display_name: 'Price' }],
                       },
                     },
                   },
@@ -192,7 +195,14 @@ const options = {
                 show_button: { type: 'boolean' },
                 default_country_code: {
                   type: 'string',
-                  default_value: 'us',
+                  allowed_values: [
+                    { value: 'us', display_name: 'US' },
+                    { value: 'gb', display_name: 'GB' },
+                    { value: 'ca', display_name: 'CA' },
+                    { value: 'au', display_name: 'AU' },
+                    { value: 'fr', display_name: 'FR' },
+                  ],
+                  allowed_values_creatable: true,
                 },
                 steps: { type: 'number' },
                 shape: { type: 'string', allowed_values: TypeformFieldFormAllowedValues },
@@ -439,7 +449,10 @@ const options = {
                           type: {
                             type: 'hash',
                             fields: {
-                              type: { type: 'string', default_value: 'variable' },
+                              type: {
+                                type: 'string',
+                                allowed_values: [{ value: 'variable', display_name: 'Variable' }],
+                              },
                               value: { type: 'string' },
                             },
                           },

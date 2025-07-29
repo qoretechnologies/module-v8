@@ -17,6 +17,9 @@ type Field = {
       id: string;
       name?: string;
     }[];
+    result?: {
+      type: string;
+    };
   };
 };
 
@@ -57,10 +60,16 @@ export const getAirtableRecordResponseType = async (options: {
     return {
       type: 'hash',
       fields: fromPairs(
-        map(table.fields, (field: Field) => [
-          field.name,
-          AirtableReadTypeToQoreTypeMap[field.type] || 'any',
-        ])
+        map(table.fields, (field: Field) => {
+          const formulaResultType =
+            field.type === 'formula' ? field.options?.result?.type || 'formula' : 'formula';
+          const qoreType =
+            field.type === 'formula'
+              ? AirtableReadTypeToQoreTypeMap[formulaResultType]
+              : AirtableReadTypeToQoreTypeMap[field.type];
+
+          return [field.name, qoreType || 'any'];
+        })
       ) as Record<string, TQoreAppActionOption>,
     };
   } catch (error) {
