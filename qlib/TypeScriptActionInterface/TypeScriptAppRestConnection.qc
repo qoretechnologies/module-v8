@@ -278,23 +278,13 @@ public class TypeScriptAppRestConnection inherits RestConnection {
         @throw CONNECTION-OPTION-ERROR missing or invalid connection option
     */
     private hash<auto> validateOptions(hash<auto> options, bool check_required = True) {
-        setupTs(url);
-        return RestConnection::validateOptions(options, check_required);
+        scheme = "tsrest-" + options.app;
+        setupTs(options.app);
+        return RestConnection::validateOptions(options - "app", check_required);
     }
 
     #! Set up the generic object from the app config
-    private setupTs(string url) {
-        *string scheme = (url =~ x/^(tsrest-[^:]+):/)[0];
-        if (!exists scheme) {
-            throw "TYPESCRIPT-REST-CONNECTION-ERROR", sprintf("Cannot determine TypeScript REST scheme from URL %y",
-                url);
-        }
-        self.scheme = scheme;
-        *string app = (scheme =~ x/^tsrest-(.+)$/)[0];
-        if (!exists app) {
-            throw "TYPESCRIPT-REST-CONNECTION-ERROR", sprintf("Cannot determine TypeScript REST app from scheme %y "
-                "in URL %y", scheme, url);
-        }
+    private setupTs(string app) {
         self.app = app;
         appname = TypeScriptActionInterface::getCamelCaseAppName(app);
         url_template_options = TypeScriptActionInterface::getUrlTemplateOptions(app);
@@ -347,12 +337,12 @@ public class TypeScriptAppRestConnection inherits RestConnection {
         if (!url.val()) {
             throw "TYPESCRIPT-REST-CONNECTION-ERROR", "Cannot determine TypeScript REST app; missing URL";
         }
-        *string app = (url =~ x/^tsrest-(.+):\/\//)[0];
-        if (!exists app) {
+        config.opts.app = (url =~ x/^tsrest-(.+):\/\//)[0];
+        if (!exists config.opts.app) {
             throw "TYPESCRIPT-REST-CONNECTION-ERROR", sprintf("Cannot determine TypeScript REST app from URL %y",
                 url);
         }
-        return config + TypeScriptActionInterface::getRestConfig(app, config);
+        return config + TypeScriptActionInterface::getRestConfig(config.opts.app, config);
     }
 }
 }
