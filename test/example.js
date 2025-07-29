@@ -131,6 +131,8 @@ exports.actionsCatalogue = {
                   - conn_name: string -> the connection name, if any is defined
                   - conn_opts: object -> connection options + processed options from the auth response + the auth
                     response itself
+                - url_from_option?: string -> the name of an option that will provide the URL value; the option must
+                  be required
                 - url_template_options?: string[] -> a list of option names that will be used to substitute values in
                   URLs; the URL should contain strings like '{{option_name}}'
             */

@@ -237,6 +237,9 @@ public class TypeScriptActionInterface {
         #! Maps from app names to connection -> Swagger path option maps
         static hash<string, hash<string, string>> app_conn_opt_map;
 
+        #! Maps from app names to URL option names
+        static hash<string, string> app_url_option_map;
+
         #! Connection map for testing
         static hash<string, TypeScriptAppRestConnection> cmap;
 
@@ -317,6 +320,7 @@ public class TypeScriptActionInterface {
         remove app_post_auth_code_map{appname};
         remove app_conn_update_map{appname};
         remove app_conn_opt_map{appname};
+        remove app_url_option_map{appname};
         remove app_swagger_map{appname};
         remove app_swagger_schema_map{appname};
         remove google_app_map{appname};
@@ -750,6 +754,7 @@ public class TypeScriptActionInterface {
             hash<AsyncCallInfo> post_auth_code;
             hash<auto> conn_update;
             hash<string, string> conn_opt_map;
+            string url_from_option;
             if (*hash<auto> rest_modifiers = remove app0.rest_modifiers) {
                 foreach hash<auto> i in (rest_modifiers.options.pairIterator()) {
                     if (i.value.allowed_values) {
@@ -826,6 +831,9 @@ public class TypeScriptActionInterface {
                 if (rest_modifiers.url_template_options) {
                     url_template_options = map {$1: True}, rest_modifiers.url_template_options;
                 }
+                if (rest_modifiers.url_from_option) {
+                    url_from_option = rest_modifiers.url_from_option;
+                }
             }
             hash<ConnectionSchemeInfo> scheme = <ConnectionSchemeInfo>{
                 "display_name": app.display_name,
@@ -860,6 +868,9 @@ public class TypeScriptActionInterface {
             }
             if (conn_opt_map) {
                 app_conn_opt_map{appname} = conn_opt_map;
+            }
+            if (url_from_option) {
+                app_url_option_map{appname} = url_from_option;
             }
         }
         DataProviderActionCatalog::registerApp(cast<hash<DataProviderAppInfo>>(app0));
@@ -2552,6 +2563,10 @@ public class TypeScriptActionInterface {
         map url = replace(url, "{{" + $1 + "}}", opts{$1}), keys url_template_options,
             opts{$1}.typeCode() == NT_STRING && opts{$1}.val();
         return url;
+    }
+
+    static *string getUrlOptionForApp(string app) {
+        return app_url_option_map{app.lwr()};
     }
 
     static *hash<AsyncCallInfo> getPostAuthCall(string app) {
