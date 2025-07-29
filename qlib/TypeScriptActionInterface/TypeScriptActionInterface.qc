@@ -2198,6 +2198,10 @@ public class TypeScriptActionInterface {
     static HashDataType getHashTypeIntern(string path, HashDataType type, hash<auto> h, *bool required,
             *ActionFunctionContext fctx, *bool ignore_dup, *bool resolve_dynamic) {
         on_error rethrow $1.err, sprintf("%s (fields: %y)", $1.desc, h);
+        if (*hash<auto> err = (map {$1.key: $1.value}, h.pairIterator(), (
+            $1.value.typeCode() != NT_HASH && $1.value.typeCode () != NT_STRING))) {
+            throw "TYPE-ERROR", sprintf("%y: the following fields could not be parsed: %y", path, err);
+        }
         map type.addField(TypeScriptActionInterface::getField(path, $1.key, $1.value, fctx, ignore_dup,
             resolve_dynamic)), h.pairIterator();
         checkFieldDependencies(type);
@@ -2208,6 +2212,21 @@ public class TypeScriptActionInterface {
             *ActionFunctionContext fctx, *bool ignore_dup, *bool resolve_dynamic) {
         throw "TYPE-ERROR", sprintf("Expecting \"string\" or \"hash\" for the option \"type\"; got %y "
             "instead", v.fullType());
+    }
+
+    static TypeScriptDataField getField(string path, string name, string type, *ActionFunctionContext fctx,
+            *bool ignore_dup, *bool resolve_dynamic) {
+        on_error rethrow $1.err, sprintf("%s (field: %y)", $1.desc, type);
+        bool req;
+        if (type =~ /^\*/) {
+            type = type[1..];
+        } else {
+            req = True;
+        }
+        return new TypeScriptDataField({
+            "name": name,
+            "type": TypeScriptActionInterface::getType(path, type, req, NOTHING, fctx, ignore_dup, resolve_dynamic),
+        }, fctx);
     }
 
     static TypeScriptDataField getField(string path, string name, hash<auto> h, *ActionFunctionContext fctx,
