@@ -266,7 +266,6 @@ export default (locale: Locales) =>
       oauth2_token_url: 'https://account-d.docusign.com/oauth/token',
       oauth2_scopes: ['impersonation', 'signature'],
       ping_method: 'GET',
-      ping_path: '',
     },
     rest_modifiers: {
       options: ESIGNATURE_CONN_OPTIONS,
