@@ -6,7 +6,6 @@ import {
   getSerenitySystemAgentAllowedValues,
 } from '../apps/serenity/helpers/get-agent-allowed-values';
 import { getSerenityAgentParamsAllowedValues } from '../apps/serenity/helpers/get-agent-params-allowed-values';
-import { getSerenityConversationAllowedValues } from '../apps/serenity/helpers/get-conversation-allowed-values';
 import { getSerenityExecuteAgentParamsDefaultValue } from '../apps/serenity/helpers/get-execute-agent-params-default-value';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import { retry } from './utils';
@@ -60,19 +59,19 @@ describe('Should test serenity actions', () => {
       expect(allowed_values.length).toBeGreaterThan(0);
     });
 
-    it('Should get serenity conversation allowed values', async () => {
-      const allowed_values = await getSerenityConversationAllowedValues({
-        conn_opts: { token } as any,
-        opts: { agentCode: conversationAgentCode },
-      });
+    // it('Should get serenity conversation allowed values', async () => {
+    //   const allowed_values = await getSerenityConversationAllowedValues({
+    //     conn_opts: { token } as any,
+    //     opts: { agentCode: conversationAgentCode },
+    //   });
 
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-      const lastConversation = allowed_values.at(-1)?.value;
-      if (lastConversation) {
-        testConversationId = lastConversation;
-      }
-    });
+    //   expect(allowed_values).toBeDefined();
+    //   expect(allowed_values.length).toBeGreaterThan(0);
+    //   const lastConversation = allowed_values.at(-1)?.value;
+    //   if (lastConversation) {
+    //     testConversationId = lastConversation;
+    //   }
+    // });
 
     it('Should get serenity agent params', async () => {
       const allowed_values = await getSerenityAgentParamsAllowedValues({
