@@ -56,7 +56,7 @@ export default (locale: Locales) =>
     swagger: 'schemas/github.swagger.json',
     swagger_paths: createSwaggerPaths(GITHUB_ALLOWED_PATHS),
     rest: {
-      url: 'https://api.github.com/',
+      url: 'https://api.github.com',
       data: 'json',
       headers: {
         'X-GitHub-Api-Version': '2022-11-28',
@@ -68,6 +68,6 @@ export default (locale: Locales) =>
       oauth2_token_url: 'https://github.com/login/oauth/access_token',
       oauth2_scopes: ['repo', 'user', 'public_repo'],
       ping_method: 'GET',
-      ping_path: '',
+      ping_path: '/user',
     },
   }) satisfies TQoreAppWithActions;

@@ -4,6 +4,8 @@ export const BUSINESS_CENTRAL_CONN_OPTIONS = {
   instance_type: {
     type: 'string',
     display_name: 'Instance Type',
+    default_value: 'production',
+    desc: 'Type of Business Central instance to connect to.',
     allowed_values: [
       {
         value: 'sandbox',
