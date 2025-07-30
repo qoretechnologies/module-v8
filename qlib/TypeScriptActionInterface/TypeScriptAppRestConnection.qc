@@ -342,15 +342,23 @@ public class TypeScriptAppRestConnection inherits RestConnection {
             throw "TYPESCRIPT-REST-CONNECTION-ERROR", sprintf("Cannot determine TypeScript REST app from URL %y",
                 url);
         }
+        hash<auto> rv = config + TypeScriptActionInterface::getRestConfig(config.opts.app, config);
         if (*string opt = TypeScriptActionInterface::getUrlOptionForApp(config.opts.app)) {
             *string val = config.opts{opt};
             if (!val) {
                 throw "TYPESCRIPT-REST-CONNECTION-ERROR",
                     sprintf("Required option %y missing for app %y", opt, config.opts.app);
             }
-            config.url = val;
+            string scheme = "tsrest-" + config.opts.app.lwr() + "://";
+            if (val =~ /^https?:\/\//) {
+                val = regex_subst(val, "^https?://", scheme);
+            } else if (!regex(val, "^" + scheme)) {
+                throw "TYPESCRIPT-REST-CONNECTION-ERROR", sprintf("URL option %y provides URL with invalid scheme "
+                    "for app: %y; expecting scheme %y", opt, val, scheme);
+            }
+            rv.url = val;
         }
-        return config + TypeScriptActionInterface::getRestConfig(config.opts.app, config);
+        return rv;
     }
 }
 }
