@@ -47,6 +47,7 @@ import ClickUp from './apps/ClickUp';
 import Webflow from './apps/Webflow';
 import ActiveCampaign from './apps/ActiveCampaign';
 import BrowseAi from './apps/BrowseAi';
+import BigMl from './apps/BigMl';
 
 const en = {
   common: {},
@@ -146,6 +147,7 @@ const en = {
       },
     },
     BrowseAi,
+    BigMl,
     Calendly,
     ClickUp,
     GoogleDocs,

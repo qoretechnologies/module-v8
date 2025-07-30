@@ -560,6 +560,1974 @@ type RootTranslation = {
 				}
 			}
 		}
+		BigMl: {
+			/**
+			 * B​i​g​M​L
+			 */
+			displayName: string
+			/**
+			 * M​a​c​h​i​n​e​ ​l​e​a​r​n​i​n​g​ ​p​l​a​t​f​o​r​m​ ​f​o​r​ ​p​r​e​d​i​c​t​i​v​e​ ​a​n​a​l​y​t​i​c​s
+			 */
+			shortDesc: string
+			/**
+			 * C​o​n​n​e​c​t​ ​y​o​u​r​ ​B​i​g​M​L​ ​a​c​c​o​u​n​t​ ​t​o​ ​b​u​i​l​d​,​ ​e​v​a​l​u​a​t​e​,​ ​a​n​d​ ​d​e​p​l​o​y​ ​m​a​c​h​i​n​e​ ​l​e​a​r​n​i​n​g​ ​m​o​d​e​l​s​ ​a​t​ ​s​c​a​l​e​.​ ​C​r​e​a​t​e​ ​d​a​t​a​s​e​t​s​,​ ​b​u​i​l​d​ ​p​r​e​d​i​c​t​i​v​e​ ​m​o​d​e​l​s​,​ ​p​e​r​f​o​r​m​ ​a​n​o​m​a​l​y​ ​d​e​t​e​c​t​i​o​n​,​ ​c​l​u​s​t​e​r​ ​a​n​a​l​y​s​i​s​,​ ​a​n​d​ ​t​i​m​e​ ​s​e​r​i​e​s​ ​f​o​r​e​c​a​s​t​i​n​g​.​ ​A​u​t​o​m​a​t​e​ ​y​o​u​r​ ​m​a​c​h​i​n​e​ ​l​e​a​r​n​i​n​g​ ​w​o​r​k​f​l​o​w​s​ ​a​n​d​ ​i​n​t​e​g​r​a​t​e​ ​p​r​e​d​i​c​t​i​v​e​ ​a​n​a​l​y​t​i​c​s​ ​i​n​t​o​ ​y​o​u​r​ ​a​p​p​l​i​c​a​t​i​o​n​s​ ​w​i​t​h​ ​B​i​g​M​L​'​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​m​a​c​h​i​n​e​ ​l​e​a​r​n​i​n​g​ ​p​l​a​t​f​o​r​m​.
+			 */
+			longDesc: string
+			actions: {
+				create_anomaly_score: {
+					/**
+					 * C​r​e​a​t​e​ ​A​n​o​m​a​l​y​ ​S​c​o​r​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​n​ ​a​n​o​m​a​l​y​ ​s​c​o​r​e​ ​f​o​r​ ​d​e​t​e​c​t​i​n​g​ ​o​u​t​l​i​e​r​s​ ​i​n​ ​d​a​t​a
+					 */
+					shortDesc: string
+					/**
+					 * G​e​n​e​r​a​t​e​ ​a​n​ ​a​n​o​m​a​l​y​ ​s​c​o​r​e​ ​b​y​ ​a​p​p​l​y​i​n​g​ ​a​ ​t​r​a​i​n​e​d​ ​a​n​o​m​a​l​y​ ​d​e​t​e​c​t​o​r​ ​t​o​ ​i​n​p​u​t​ ​d​a​t​a​.​ ​T​h​i​s​ ​h​e​l​p​s​ ​i​d​e​n​t​i​f​y​ ​u​n​u​s​u​a​l​ ​p​a​t​t​e​r​n​s​ ​o​r​ ​o​u​t​l​i​e​r​s​ ​i​n​ ​y​o​u​r​ ​d​a​t​a​s​e​t​.
+					 */
+					longDesc: string
+					options: {
+						anomaly: {
+							/**
+							 * A​n​o​m​a​l​y​ ​D​e​t​e​c​t​o​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​n​o​m​a​l​y​ ​d​e​t​e​c​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​c​o​r​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​r​a​i​n​e​d​ ​a​n​o​m​a​l​y​ ​d​e​t​e​c​t​o​r​ ​m​o​d​e​l​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​u​s​e​d​ ​t​o​ ​g​e​n​e​r​a​t​e​ ​t​h​e​ ​a​n​o​m​a​l​y​ ​s​c​o​r​e​ ​f​o​r​ ​t​h​e​ ​i​n​p​u​t​ ​d​a​t​a​.
+							 */
+							longDesc: string
+						}
+						input_data: {
+							/**
+							 * I​n​p​u​t​ ​D​a​t​a
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​a​t​a​ ​t​o​ ​a​n​a​l​y​z​e​ ​f​o​r​ ​a​n​o​m​a​l​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​t​h​e​ ​i​n​p​u​t​ ​d​a​t​a​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​n​a​l​y​z​e​ ​f​o​r​ ​a​n​o​m​a​l​i​e​s​.​ ​T​h​e​ ​d​a​t​a​ ​s​h​o​u​l​d​ ​m​a​t​c​h​ ​t​h​e​ ​f​o​r​m​a​t​ ​e​x​p​e​c​t​e​d​ ​b​y​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​a​n​o​m​a​l​y​ ​d​e​t​e​c​t​o​r​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​f​o​r​ ​t​h​e​ ​a​n​o​m​a​l​y​ ​s​c​o​r​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​n​a​m​e​ ​t​o​ ​i​d​e​n​t​i​f​y​ ​t​h​i​s​ ​a​n​o​m​a​l​y​ ​s​c​o​r​e​ ​i​n​ ​y​o​u​r​ ​B​i​g​M​L​ ​d​a​s​h​b​o​a​r​d​ ​a​n​d​ ​f​o​r​ ​f​u​t​u​r​e​ ​r​e​f​e​r​e​n​c​e​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​a​n​o​m​a​l​y​ ​s​c​o​r​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​t​o​ ​p​r​o​v​i​d​e​ ​a​d​d​i​t​i​o​n​a​l​ ​c​o​n​t​e​x​t​ ​a​b​o​u​t​ ​t​h​i​s​ ​a​n​o​m​a​l​y​ ​s​c​o​r​e​ ​a​n​d​ ​i​t​s​ ​p​u​r​p​o​s​e​.
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * T​a​g​s​ ​f​o​r​ ​o​r​g​a​n​i​z​i​n​g​ ​a​n​o​m​a​l​y​ ​s​c​o​r​e​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​t​a​g​s​ ​t​o​ ​h​e​l​p​ ​o​r​g​a​n​i​z​e​ ​a​n​d​ ​c​a​t​e​g​o​r​i​z​e​ ​y​o​u​r​ ​a​n​o​m​a​l​y​ ​s​c​o​r​e​s​ ​f​o​r​ ​e​a​s​i​e​r​ ​m​a​n​a​g​e​m​e​n​t​ ​a​n​d​ ​s​e​a​r​c​h​i​n​g​.
+							 */
+							longDesc: string
+						}
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * P​r​o​j​e​c​t​ ​t​o​ ​o​r​g​a​n​i​z​e​ ​t​h​e​ ​a​n​o​m​a​l​y​ ​s​c​o​r​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​p​r​o​j​e​c​t​ ​t​o​ ​o​r​g​a​n​i​z​e​ ​t​h​i​s​ ​a​n​o​m​a​l​y​ ​s​c​o​r​e​ ​w​i​t​h​ ​r​e​l​a​t​e​d​ ​r​e​s​o​u​r​c​e​s​ ​f​o​r​ ​b​e​t​t​e​r​ ​w​o​r​k​f​l​o​w​ ​m​a​n​a​g​e​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_batch_anomaly_score: {
+					/**
+					 * C​r​e​a​t​e​ ​B​a​t​c​h​ ​A​n​o​m​a​l​y​ ​S​c​o​r​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​n​o​m​a​l​y​ ​s​c​o​r​e​s​ ​f​o​r​ ​m​u​l​t​i​p​l​e​ ​d​a​t​a​ ​p​o​i​n​t​s​ ​i​n​ ​b​a​t​c​h
+					 */
+					shortDesc: string
+					/**
+					 * G​e​n​e​r​a​t​e​ ​a​n​o​m​a​l​y​ ​s​c​o​r​e​s​ ​f​o​r​ ​m​u​l​t​i​p​l​e​ ​d​a​t​a​ ​p​o​i​n​t​s​ ​a​t​ ​o​n​c​e​ ​b​y​ ​a​p​p​l​y​i​n​g​ ​a​n​ ​a​n​o​m​a​l​y​ ​d​e​t​e​c​t​o​r​ ​t​o​ ​a​ ​d​a​t​a​s​e​t​.​ ​T​h​i​s​ ​i​s​ ​e​f​f​i​c​i​e​n​t​ ​f​o​r​ ​p​r​o​c​e​s​s​i​n​g​ ​l​a​r​g​e​ ​a​m​o​u​n​t​s​ ​o​f​ ​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						anomaly: {
+							/**
+							 * A​n​o​m​a​l​y​ ​D​e​t​e​c​t​o​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​n​o​m​a​l​y​ ​d​e​t​e​c​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​b​a​t​c​h​ ​s​c​o​r​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​r​a​i​n​e​d​ ​a​n​o​m​a​l​y​ ​d​e​t​e​c​t​o​r​ ​m​o​d​e​l​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​u​s​e​d​ ​t​o​ ​g​e​n​e​r​a​t​e​ ​a​n​o​m​a​l​y​ ​s​c​o​r​e​s​ ​f​o​r​ ​a​l​l​ ​d​a​t​a​ ​p​o​i​n​t​s​ ​i​n​ ​t​h​e​ ​d​a​t​a​s​e​t​.
+							 */
+							longDesc: string
+						}
+						dataset: {
+							/**
+							 * D​a​t​a​s​e​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​a​t​a​s​e​t​ ​t​o​ ​a​n​a​l​y​z​e​ ​f​o​r​ ​a​n​o​m​a​l​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​d​a​t​a​s​e​t​ ​c​o​n​t​a​i​n​i​n​g​ ​m​u​l​t​i​p​l​e​ ​d​a​t​a​ ​p​o​i​n​t​s​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​n​a​l​y​z​e​ ​f​o​r​ ​a​n​o​m​a​l​i​e​s​ ​u​s​i​n​g​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​a​n​o​m​a​l​y​ ​d​e​t​e​c​t​o​r​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​f​o​r​ ​t​h​e​ ​b​a​t​c​h​ ​a​n​o​m​a​l​y​ ​s​c​o​r​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​n​a​m​e​ ​t​o​ ​i​d​e​n​t​i​f​y​ ​t​h​i​s​ ​b​a​t​c​h​ ​a​n​o​m​a​l​y​ ​s​c​o​r​e​ ​i​n​ ​y​o​u​r​ ​B​i​g​M​L​ ​d​a​s​h​b​o​a​r​d​ ​a​n​d​ ​f​o​r​ ​f​u​t​u​r​e​ ​r​e​f​e​r​e​n​c​e​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​b​a​t​c​h​ ​a​n​o​m​a​l​y​ ​s​c​o​r​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​t​o​ ​p​r​o​v​i​d​e​ ​a​d​d​i​t​i​o​n​a​l​ ​c​o​n​t​e​x​t​ ​a​b​o​u​t​ ​t​h​i​s​ ​b​a​t​c​h​ ​a​n​o​m​a​l​y​ ​s​c​o​r​e​ ​a​n​d​ ​i​t​s​ ​p​u​r​p​o​s​e​.
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * T​a​g​s​ ​f​o​r​ ​o​r​g​a​n​i​z​i​n​g​ ​b​a​t​c​h​ ​a​n​o​m​a​l​y​ ​s​c​o​r​e​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​t​a​g​s​ ​t​o​ ​h​e​l​p​ ​o​r​g​a​n​i​z​e​ ​a​n​d​ ​c​a​t​e​g​o​r​i​z​e​ ​y​o​u​r​ ​b​a​t​c​h​ ​a​n​o​m​a​l​y​ ​s​c​o​r​e​s​ ​f​o​r​ ​e​a​s​i​e​r​ ​m​a​n​a​g​e​m​e​n​t​ ​a​n​d​ ​s​e​a​r​c​h​i​n​g​.
+							 */
+							longDesc: string
+						}
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * P​r​o​j​e​c​t​ ​t​o​ ​o​r​g​a​n​i​z​e​ ​t​h​e​ ​b​a​t​c​h​ ​a​n​o​m​a​l​y​ ​s​c​o​r​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​p​r​o​j​e​c​t​ ​t​o​ ​o​r​g​a​n​i​z​e​ ​t​h​i​s​ ​b​a​t​c​h​ ​a​n​o​m​a​l​y​ ​s​c​o​r​e​ ​w​i​t​h​ ​r​e​l​a​t​e​d​ ​r​e​s​o​u​r​c​e​s​ ​f​o​r​ ​b​e​t​t​e​r​ ​w​o​r​k​f​l​o​w​ ​m​a​n​a​g​e​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_centroid: {
+					/**
+					 * C​r​e​a​t​e​ ​C​e​n​t​r​o​i​d
+					 */
+					displayName: string
+					/**
+					 * F​i​n​d​ ​t​h​e​ ​c​l​o​s​e​s​t​ ​c​l​u​s​t​e​r​ ​c​e​n​t​r​o​i​d​ ​f​o​r​ ​i​n​p​u​t​ ​d​a​t​a
+					 */
+					shortDesc: string
+					/**
+					 * D​e​t​e​r​m​i​n​e​ ​w​h​i​c​h​ ​c​l​u​s​t​e​r​ ​c​e​n​t​r​o​i​d​ ​i​s​ ​c​l​o​s​e​s​t​ ​t​o​ ​t​h​e​ ​p​r​o​v​i​d​e​d​ ​i​n​p​u​t​ ​d​a​t​a​ ​u​s​i​n​g​ ​a​ ​t​r​a​i​n​e​d​ ​c​l​u​s​t​e​r​ ​m​o​d​e​l​.​ ​T​h​i​s​ ​h​e​l​p​s​ ​c​l​a​s​s​i​f​y​ ​n​e​w​ ​d​a​t​a​ ​p​o​i​n​t​s​ ​i​n​t​o​ ​e​x​i​s​t​i​n​g​ ​c​l​u​s​t​e​r​s​.
+					 */
+					longDesc: string
+					options: {
+						cluster: {
+							/**
+							 * C​l​u​s​t​e​r​ ​M​o​d​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​l​u​s​t​e​r​ ​m​o​d​e​l​ ​t​o​ ​u​s​e​ ​f​o​r​ ​c​e​n​t​r​o​i​d​ ​c​a​l​c​u​l​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​r​a​i​n​e​d​ ​c​l​u​s​t​e​r​ ​m​o​d​e​l​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​u​s​e​d​ ​t​o​ ​f​i​n​d​ ​t​h​e​ ​c​l​o​s​e​s​t​ ​c​e​n​t​r​o​i​d​ ​f​o​r​ ​t​h​e​ ​i​n​p​u​t​ ​d​a​t​a​.
+							 */
+							longDesc: string
+						}
+						input_data: {
+							/**
+							 * I​n​p​u​t​ ​D​a​t​a
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​a​t​a​ ​t​o​ ​f​i​n​d​ ​t​h​e​ ​c​l​o​s​e​s​t​ ​c​e​n​t​r​o​i​d​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​t​h​e​ ​i​n​p​u​t​ ​d​a​t​a​ ​f​o​r​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​f​i​n​d​ ​t​h​e​ ​c​l​o​s​e​s​t​ ​c​l​u​s​t​e​r​ ​c​e​n​t​r​o​i​d​.​ ​T​h​e​ ​d​a​t​a​ ​s​h​o​u​l​d​ ​m​a​t​c​h​ ​t​h​e​ ​f​o​r​m​a​t​ ​u​s​e​d​ ​t​o​ ​t​r​a​i​n​ ​t​h​e​ ​c​l​u​s​t​e​r​ ​m​o​d​e​l​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​e​n​t​r​o​i​d​ ​r​e​s​u​l​t
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​n​a​m​e​ ​t​o​ ​i​d​e​n​t​i​f​y​ ​t​h​i​s​ ​c​e​n​t​r​o​i​d​ ​c​a​l​c​u​l​a​t​i​o​n​ ​i​n​ ​y​o​u​r​ ​B​i​g​M​L​ ​d​a​s​h​b​o​a​r​d​ ​a​n​d​ ​f​o​r​ ​f​u​t​u​r​e​ ​r​e​f​e​r​e​n​c​e​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​c​e​n​t​r​o​i​d​ ​c​a​l​c​u​l​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​t​o​ ​p​r​o​v​i​d​e​ ​a​d​d​i​t​i​o​n​a​l​ ​c​o​n​t​e​x​t​ ​a​b​o​u​t​ ​t​h​i​s​ ​c​e​n​t​r​o​i​d​ ​c​a​l​c​u​l​a​t​i​o​n​ ​a​n​d​ ​i​t​s​ ​p​u​r​p​o​s​e​.
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * T​a​g​s​ ​f​o​r​ ​o​r​g​a​n​i​z​i​n​g​ ​c​e​n​t​r​o​i​d​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​t​a​g​s​ ​t​o​ ​h​e​l​p​ ​o​r​g​a​n​i​z​e​ ​a​n​d​ ​c​a​t​e​g​o​r​i​z​e​ ​y​o​u​r​ ​c​e​n​t​r​o​i​d​ ​c​a​l​c​u​l​a​t​i​o​n​s​ ​f​o​r​ ​e​a​s​i​e​r​ ​m​a​n​a​g​e​m​e​n​t​ ​a​n​d​ ​s​e​a​r​c​h​i​n​g​.
+							 */
+							longDesc: string
+						}
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * P​r​o​j​e​c​t​ ​t​o​ ​o​r​g​a​n​i​z​e​ ​t​h​e​ ​c​e​n​t​r​o​i​d​ ​r​e​s​u​l​t
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​p​r​o​j​e​c​t​ ​t​o​ ​o​r​g​a​n​i​z​e​ ​t​h​i​s​ ​c​e​n​t​r​o​i​d​ ​c​a​l​c​u​l​a​t​i​o​n​ ​w​i​t​h​ ​r​e​l​a​t​e​d​ ​r​e​s​o​u​r​c​e​s​ ​f​o​r​ ​b​e​t​t​e​r​ ​w​o​r​k​f​l​o​w​ ​m​a​n​a​g​e​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_prediction: {
+					/**
+					 * C​r​e​a​t​e​ ​P​r​e​d​i​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * G​e​n​e​r​a​t​e​ ​p​r​e​d​i​c​t​i​o​n​s​ ​u​s​i​n​g​ ​t​r​a​i​n​e​d​ ​m​o​d​e​l​s
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​p​r​e​d​i​c​t​i​o​n​s​ ​f​o​r​ ​n​e​w​ ​d​a​t​a​ ​u​s​i​n​g​ ​t​r​a​i​n​e​d​ ​m​a​c​h​i​n​e​ ​l​e​a​r​n​i​n​g​ ​m​o​d​e​l​s​,​ ​e​n​s​e​m​b​l​e​s​,​ ​o​r​ ​d​e​e​p​ ​n​e​t​w​o​r​k​s​.​ ​T​h​i​s​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​a​p​p​l​y​ ​y​o​u​r​ ​t​r​a​i​n​e​d​ ​m​o​d​e​l​s​ ​t​o​ ​m​a​k​e​ ​p​r​e​d​i​c​t​i​o​n​s​ ​o​n​ ​n​e​w​ ​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						model: {
+							/**
+							 * M​o​d​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​m​o​d​e​l​ ​t​o​ ​u​s​e​ ​f​o​r​ ​p​r​e​d​i​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​r​a​i​n​e​d​ ​m​o​d​e​l​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​u​s​e​d​ ​t​o​ ​g​e​n​e​r​a​t​e​ ​p​r​e​d​i​c​t​i​o​n​s​ ​f​o​r​ ​t​h​e​ ​i​n​p​u​t​ ​d​a​t​a​.
+							 */
+							longDesc: string
+						}
+						ensemble: {
+							/**
+							 * E​n​s​e​m​b​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​s​e​m​b​l​e​ ​t​o​ ​u​s​e​ ​f​o​r​ ​p​r​e​d​i​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​r​a​i​n​e​d​ ​e​n​s​e​m​b​l​e​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​u​s​e​d​ ​t​o​ ​g​e​n​e​r​a​t​e​ ​p​r​e​d​i​c​t​i​o​n​s​ ​f​o​r​ ​t​h​e​ ​i​n​p​u​t​ ​d​a​t​a​.
+							 */
+							longDesc: string
+						}
+						deepnet: {
+							/**
+							 * D​e​e​p​ ​N​e​t​w​o​r​k
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​e​e​p​ ​n​e​t​w​o​r​k​ ​t​o​ ​u​s​e​ ​f​o​r​ ​p​r​e​d​i​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​r​a​i​n​e​d​ ​d​e​e​p​ ​n​e​t​w​o​r​k​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​u​s​e​d​ ​t​o​ ​g​e​n​e​r​a​t​e​ ​p​r​e​d​i​c​t​i​o​n​s​ ​f​o​r​ ​t​h​e​ ​i​n​p​u​t​ ​d​a​t​a​.
+							 */
+							longDesc: string
+						}
+						input_data: {
+							/**
+							 * I​n​p​u​t​ ​D​a​t​a
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​a​t​a​ ​t​o​ ​m​a​k​e​ ​p​r​e​d​i​c​t​i​o​n​s​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​t​h​e​ ​i​n​p​u​t​ ​d​a​t​a​ ​f​o​r​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​n​e​r​a​t​e​ ​p​r​e​d​i​c​t​i​o​n​s​.​ ​T​h​e​ ​d​a​t​a​ ​s​h​o​u​l​d​ ​m​a​t​c​h​ ​t​h​e​ ​f​o​r​m​a​t​ ​u​s​e​d​ ​t​o​ ​t​r​a​i​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​m​o​d​e​l​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​f​o​r​ ​t​h​e​ ​p​r​e​d​i​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​n​a​m​e​ ​t​o​ ​i​d​e​n​t​i​f​y​ ​t​h​i​s​ ​p​r​e​d​i​c​t​i​o​n​ ​i​n​ ​y​o​u​r​ ​B​i​g​M​L​ ​d​a​s​h​b​o​a​r​d​ ​a​n​d​ ​f​o​r​ ​f​u​t​u​r​e​ ​r​e​f​e​r​e​n​c​e​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​p​r​e​d​i​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​t​o​ ​p​r​o​v​i​d​e​ ​a​d​d​i​t​i​o​n​a​l​ ​c​o​n​t​e​x​t​ ​a​b​o​u​t​ ​t​h​i​s​ ​p​r​e​d​i​c​t​i​o​n​ ​a​n​d​ ​i​t​s​ ​p​u​r​p​o​s​e​.
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * T​a​g​s​ ​f​o​r​ ​o​r​g​a​n​i​z​i​n​g​ ​p​r​e​d​i​c​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​t​a​g​s​ ​t​o​ ​h​e​l​p​ ​o​r​g​a​n​i​z​e​ ​a​n​d​ ​c​a​t​e​g​o​r​i​z​e​ ​y​o​u​r​ ​p​r​e​d​i​c​t​i​o​n​s​ ​f​o​r​ ​e​a​s​i​e​r​ ​m​a​n​a​g​e​m​e​n​t​ ​a​n​d​ ​s​e​a​r​c​h​i​n​g​.
+							 */
+							longDesc: string
+						}
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * P​r​o​j​e​c​t​ ​t​o​ ​o​r​g​a​n​i​z​e​ ​t​h​e​ ​p​r​e​d​i​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​p​r​o​j​e​c​t​ ​t​o​ ​o​r​g​a​n​i​z​e​ ​t​h​i​s​ ​p​r​e​d​i​c​t​i​o​n​ ​w​i​t​h​ ​r​e​l​a​t​e​d​ ​r​e​s​o​u​r​c​e​s​ ​f​o​r​ ​b​e​t​t​e​r​ ​w​o​r​k​f​l​o​w​ ​m​a​n​a​g​e​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_topic_distribution: {
+					/**
+					 * C​r​e​a​t​e​ ​T​o​p​i​c​ ​D​i​s​t​r​i​b​u​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * G​e​n​e​r​a​t​e​ ​t​o​p​i​c​ ​d​i​s​t​r​i​b​u​t​i​o​n​s​ ​f​o​r​ ​t​e​x​t​ ​d​a​t​a
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​t​o​p​i​c​ ​d​i​s​t​r​i​b​u​t​i​o​n​s​ ​f​o​r​ ​t​e​x​t​ ​d​a​t​a​ ​u​s​i​n​g​ ​a​ ​t​r​a​i​n​e​d​ ​t​o​p​i​c​ ​m​o​d​e​l​.​ ​T​h​i​s​ ​h​e​l​p​s​ ​u​n​d​e​r​s​t​a​n​d​ ​t​h​e​ ​m​a​i​n​ ​t​o​p​i​c​s​ ​p​r​e​s​e​n​t​ ​i​n​ ​y​o​u​r​ ​t​e​x​t​ ​a​n​d​ ​t​h​e​i​r​ ​r​e​l​a​t​i​v​e​ ​i​m​p​o​r​t​a​n​c​e​.
+					 */
+					longDesc: string
+					options: {
+						topicmodel: {
+							/**
+							 * T​o​p​i​c​ ​M​o​d​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​o​p​i​c​ ​m​o​d​e​l​ ​t​o​ ​u​s​e​ ​f​o​r​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​a​n​a​l​y​s​i​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​r​a​i​n​e​d​ ​t​o​p​i​c​ ​m​o​d​e​l​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​u​s​e​d​ ​t​o​ ​g​e​n​e​r​a​t​e​ ​t​o​p​i​c​ ​d​i​s​t​r​i​b​u​t​i​o​n​s​ ​f​o​r​ ​t​h​e​ ​i​n​p​u​t​ ​t​e​x​t​ ​d​a​t​a​.
+							 */
+							longDesc: string
+						}
+						input_data: {
+							/**
+							 * I​n​p​u​t​ ​D​a​t​a
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​d​a​t​a​ ​t​o​ ​a​n​a​l​y​z​e​ ​f​o​r​ ​t​o​p​i​c​s
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​t​h​e​ ​t​e​x​t​ ​d​a​t​a​ ​f​o​r​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​n​e​r​a​t​e​ ​t​o​p​i​c​ ​d​i​s​t​r​i​b​u​t​i​o​n​s​.​ ​T​h​e​ ​d​a​t​a​ ​s​h​o​u​l​d​ ​m​a​t​c​h​ ​t​h​e​ ​f​o​r​m​a​t​ ​u​s​e​d​ ​t​o​ ​t​r​a​i​n​ ​t​h​e​ ​t​o​p​i​c​ ​m​o​d​e​l​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​f​o​r​ ​t​h​e​ ​t​o​p​i​c​ ​d​i​s​t​r​i​b​u​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​n​a​m​e​ ​t​o​ ​i​d​e​n​t​i​f​y​ ​t​h​i​s​ ​t​o​p​i​c​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​i​n​ ​y​o​u​r​ ​B​i​g​M​L​ ​d​a​s​h​b​o​a​r​d​ ​a​n​d​ ​f​o​r​ ​f​u​t​u​r​e​ ​r​e​f​e​r​e​n​c​e​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​t​o​p​i​c​ ​d​i​s​t​r​i​b​u​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​t​o​ ​p​r​o​v​i​d​e​ ​a​d​d​i​t​i​o​n​a​l​ ​c​o​n​t​e​x​t​ ​a​b​o​u​t​ ​t​h​i​s​ ​t​o​p​i​c​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​a​n​d​ ​i​t​s​ ​p​u​r​p​o​s​e​.
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * T​a​g​s​ ​f​o​r​ ​o​r​g​a​n​i​z​i​n​g​ ​t​o​p​i​c​ ​d​i​s​t​r​i​b​u​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​t​a​g​s​ ​t​o​ ​h​e​l​p​ ​o​r​g​a​n​i​z​e​ ​a​n​d​ ​c​a​t​e​g​o​r​i​z​e​ ​y​o​u​r​ ​t​o​p​i​c​ ​d​i​s​t​r​i​b​u​t​i​o​n​s​ ​f​o​r​ ​e​a​s​i​e​r​ ​m​a​n​a​g​e​m​e​n​t​ ​a​n​d​ ​s​e​a​r​c​h​i​n​g​.
+							 */
+							longDesc: string
+						}
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * P​r​o​j​e​c​t​ ​t​o​ ​o​r​g​a​n​i​z​e​ ​t​h​e​ ​t​o​p​i​c​ ​d​i​s​t​r​i​b​u​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​p​r​o​j​e​c​t​ ​t​o​ ​o​r​g​a​n​i​z​e​ ​t​h​i​s​ ​t​o​p​i​c​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​w​i​t​h​ ​r​e​l​a​t​e​d​ ​r​e​s​o​u​r​c​e​s​ ​f​o​r​ ​b​e​t​t​e​r​ ​w​o​r​k​f​l​o​w​ ​m​a​n​a​g​e​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_anomaly_detectors: {
+					/**
+					 * L​i​s​t​ ​A​n​o​m​a​l​y​ ​D​e​t​e​c​t​o​r​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​n​o​m​a​l​y​ ​d​e​t​e​c​t​o​r​s
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​a​n​o​m​a​l​y​ ​d​e​t​e​c​t​o​r​s​ ​i​n​ ​y​o​u​r​ ​B​i​g​M​L​ ​a​c​c​o​u​n​t​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​o​p​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​a​n​o​m​a​l​y​ ​d​e​t​e​c​t​o​r​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​a​n​o​m​a​l​y​ ​d​e​t​e​c​t​o​r​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​2​0​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​a​n​o​m​a​l​y​ ​d​e​t​e​c​t​o​r​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​a​n​o​m​a​l​y​ ​d​e​t​e​c​t​o​r​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​p​u​r​p​o​s​e​s​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​a​n​o​m​a​l​y​ ​d​e​t​e​c​t​o​r​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​f​i​l​t​e​r​s​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​a​n​o​m​a​l​y​ ​d​e​t​e​c​t​o​r​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​f​i​e​l​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​s​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​t​h​e​ ​a​n​o​m​a​l​y​ ​d​e​t​e​c​t​o​r​s​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * V​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​f​o​r
+										 */
+										shortDesc: string
+										/**
+										 * S​p​e​c​i​f​y​ ​t​h​e​ ​v​a​l​u​e​ ​t​o​ ​m​a​t​c​h​ ​w​h​e​n​ ​f​i​l​t​e​r​i​n​g​ ​a​n​o​m​a​l​y​ ​d​e​t​e​c​t​o​r​s​.
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​t​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​w​h​e​n​ ​f​i​l​t​e​r​i​n​g​ ​a​n​o​m​a​l​y​ ​d​e​t​e​c​t​o​r​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​i​n​g​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​a​n​o​m​a​l​y​ ​d​e​t​e​c​t​o​r​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​a​n​o​m​a​l​y​ ​d​e​t​e​c​t​o​r​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​f​i​e​l​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​a​n​o​m​a​l​y​ ​d​e​t​e​c​t​o​r​s​.
+										 */
+										longDesc: string
+									}
+									order: {
+										/**
+										 * O​r​d​e​r
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​o​r​d​e​r​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				list_clusters: {
+					/**
+					 * L​i​s​t​ ​C​l​u​s​t​e​r​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​l​u​s​t​e​r​ ​m​o​d​e​l​s
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​c​l​u​s​t​e​r​ ​m​o​d​e​l​s​ ​i​n​ ​y​o​u​r​ ​B​i​g​M​L​ ​a​c​c​o​u​n​t​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​o​p​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​l​u​s​t​e​r​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​l​u​s​t​e​r​ ​m​o​d​e​l​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​2​0​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​c​l​u​s​t​e​r​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​c​l​u​s​t​e​r​ ​m​o​d​e​l​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​p​u​r​p​o​s​e​s​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​c​l​u​s​t​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​f​i​l​t​e​r​s​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​c​l​u​s​t​e​r​ ​m​o​d​e​l​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​f​i​e​l​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​s​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​t​h​e​ ​c​l​u​s​t​e​r​ ​m​o​d​e​l​s​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * V​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​f​o​r
+										 */
+										shortDesc: string
+										/**
+										 * S​p​e​c​i​f​y​ ​t​h​e​ ​v​a​l​u​e​ ​t​o​ ​m​a​t​c​h​ ​w​h​e​n​ ​f​i​l​t​e​r​i​n​g​ ​c​l​u​s​t​e​r​ ​m​o​d​e​l​s​.
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​t​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​w​h​e​n​ ​f​i​l​t​e​r​i​n​g​ ​c​l​u​s​t​e​r​ ​m​o​d​e​l​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​i​n​g​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​c​l​u​s​t​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​c​l​u​s​t​e​r​ ​m​o​d​e​l​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​f​i​e​l​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​c​l​u​s​t​e​r​ ​m​o​d​e​l​s​.
+										 */
+										longDesc: string
+									}
+									order: {
+										/**
+										 * O​r​d​e​r
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​o​r​d​e​r​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				list_datasets: {
+					/**
+					 * L​i​s​t​ ​D​a​t​a​s​e​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​d​a​t​a​s​e​t​s
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​d​a​t​a​s​e​t​s​ ​i​n​ ​y​o​u​r​ ​B​i​g​M​L​ ​a​c​c​o​u​n​t​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​o​p​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​d​a​t​a​s​e​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​d​a​t​a​s​e​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​2​0​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​d​a​t​a​s​e​t​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​d​a​t​a​s​e​t​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​p​u​r​p​o​s​e​s​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​d​a​t​a​s​e​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​f​i​l​t​e​r​s​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​d​a​t​a​s​e​t​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​f​i​e​l​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​s​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​t​h​e​ ​d​a​t​a​s​e​t​s​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * V​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​f​o​r
+										 */
+										shortDesc: string
+										/**
+										 * S​p​e​c​i​f​y​ ​t​h​e​ ​v​a​l​u​e​ ​t​o​ ​m​a​t​c​h​ ​w​h​e​n​ ​f​i​l​t​e​r​i​n​g​ ​d​a​t​a​s​e​t​s​.
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​t​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​w​h​e​n​ ​f​i​l​t​e​r​i​n​g​ ​d​a​t​a​s​e​t​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​i​n​g​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​d​a​t​a​s​e​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​d​a​t​a​s​e​t​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​f​i​e​l​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​d​a​t​a​s​e​t​s​.
+										 */
+										longDesc: string
+									}
+									order: {
+										/**
+										 * O​r​d​e​r
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​o​r​d​e​r​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				list_deepnets: {
+					/**
+					 * L​i​s​t​ ​D​e​e​p​ ​N​e​t​w​o​r​k​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​d​e​e​p​ ​n​e​t​w​o​r​k​s
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​d​e​e​p​ ​n​e​t​w​o​r​k​s​ ​i​n​ ​y​o​u​r​ ​B​i​g​M​L​ ​a​c​c​o​u​n​t​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​o​p​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​d​e​e​p​ ​n​e​t​w​o​r​k​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​d​e​e​p​ ​n​e​t​w​o​r​k​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​2​0​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​d​e​e​p​ ​n​e​t​w​o​r​k​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​d​e​e​p​ ​n​e​t​w​o​r​k​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​p​u​r​p​o​s​e​s​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​d​e​e​p​ ​n​e​t​w​o​r​k​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​f​i​l​t​e​r​s​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​d​e​e​p​ ​n​e​t​w​o​r​k​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​f​i​e​l​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​s​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​t​h​e​ ​d​e​e​p​ ​n​e​t​w​o​r​k​s​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * V​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​f​o​r
+										 */
+										shortDesc: string
+										/**
+										 * S​p​e​c​i​f​y​ ​t​h​e​ ​v​a​l​u​e​ ​t​o​ ​m​a​t​c​h​ ​w​h​e​n​ ​f​i​l​t​e​r​i​n​g​ ​d​e​e​p​ ​n​e​t​w​o​r​k​s​.
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​t​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​w​h​e​n​ ​f​i​l​t​e​r​i​n​g​ ​d​e​e​p​ ​n​e​t​w​o​r​k​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​i​n​g​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​d​e​e​p​ ​n​e​t​w​o​r​k​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​d​e​e​p​ ​n​e​t​w​o​r​k​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​f​i​e​l​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​d​e​e​p​ ​n​e​t​w​o​r​k​s​.
+										 */
+										longDesc: string
+									}
+									order: {
+										/**
+										 * O​r​d​e​r
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​o​r​d​e​r​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				list_ensembles: {
+					/**
+					 * L​i​s​t​ ​E​n​s​e​m​b​l​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​e​n​s​e​m​b​l​e​ ​m​o​d​e​l​s
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​e​n​s​e​m​b​l​e​ ​m​o​d​e​l​s​ ​i​n​ ​y​o​u​r​ ​B​i​g​M​L​ ​a​c​c​o​u​n​t​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​o​p​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​e​n​s​e​m​b​l​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​e​n​s​e​m​b​l​e​ ​m​o​d​e​l​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​2​0​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​e​n​s​e​m​b​l​e​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​e​n​s​e​m​b​l​e​ ​m​o​d​e​l​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​p​u​r​p​o​s​e​s​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​e​n​s​e​m​b​l​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​f​i​l​t​e​r​s​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​e​n​s​e​m​b​l​e​ ​m​o​d​e​l​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​f​i​e​l​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​s​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​t​h​e​ ​e​n​s​e​m​b​l​e​ ​m​o​d​e​l​s​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * V​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​f​o​r
+										 */
+										shortDesc: string
+										/**
+										 * S​p​e​c​i​f​y​ ​t​h​e​ ​v​a​l​u​e​ ​t​o​ ​m​a​t​c​h​ ​w​h​e​n​ ​f​i​l​t​e​r​i​n​g​ ​e​n​s​e​m​b​l​e​ ​m​o​d​e​l​s​.
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​t​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​w​h​e​n​ ​f​i​l​t​e​r​i​n​g​ ​e​n​s​e​m​b​l​e​ ​m​o​d​e​l​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​i​n​g​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​e​n​s​e​m​b​l​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​e​n​s​e​m​b​l​e​ ​m​o​d​e​l​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​f​i​e​l​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​e​n​s​e​m​b​l​e​ ​m​o​d​e​l​s​.
+										 */
+										longDesc: string
+									}
+									order: {
+										/**
+										 * O​r​d​e​r
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​o​r​d​e​r​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				list_models: {
+					/**
+					 * L​i​s​t​ ​M​o​d​e​l​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​m​a​c​h​i​n​e​ ​l​e​a​r​n​i​n​g​ ​m​o​d​e​l​s
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​m​a​c​h​i​n​e​ ​l​e​a​r​n​i​n​g​ ​m​o​d​e​l​s​ ​i​n​ ​y​o​u​r​ ​B​i​g​M​L​ ​a​c​c​o​u​n​t​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​o​p​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​o​d​e​l​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​o​d​e​l​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​2​0​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​m​o​d​e​l​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​m​o​d​e​l​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​p​u​r​p​o​s​e​s​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​m​o​d​e​l​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​f​i​l​t​e​r​s​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​m​o​d​e​l​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​f​i​e​l​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​s​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​t​h​e​ ​m​o​d​e​l​s​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * V​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​f​o​r
+										 */
+										shortDesc: string
+										/**
+										 * S​p​e​c​i​f​y​ ​t​h​e​ ​v​a​l​u​e​ ​t​o​ ​m​a​t​c​h​ ​w​h​e​n​ ​f​i​l​t​e​r​i​n​g​ ​m​o​d​e​l​s​.
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​t​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​w​h​e​n​ ​f​i​l​t​e​r​i​n​g​ ​m​o​d​e​l​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​i​n​g​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​m​o​d​e​l​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​m​o​d​e​l​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​f​i​e​l​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​m​o​d​e​l​s​.
+										 */
+										longDesc: string
+									}
+									order: {
+										/**
+										 * O​r​d​e​r
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​o​r​d​e​r​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				list_projects: {
+					/**
+					 * L​i​s​t​ ​P​r​o​j​e​c​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​p​r​o​j​e​c​t​s
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​p​r​o​j​e​c​t​s​ ​i​n​ ​y​o​u​r​ ​B​i​g​M​L​ ​a​c​c​o​u​n​t​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​o​p​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​p​r​o​j​e​c​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​p​r​o​j​e​c​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​2​0​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​p​r​o​j​e​c​t​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​p​r​o​j​e​c​t​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​p​u​r​p​o​s​e​s​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​p​r​o​j​e​c​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​f​i​l​t​e​r​s​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​p​r​o​j​e​c​t​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​f​i​e​l​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​s​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​t​h​e​ ​p​r​o​j​e​c​t​s​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * V​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​f​o​r
+										 */
+										shortDesc: string
+										/**
+										 * S​p​e​c​i​f​y​ ​t​h​e​ ​v​a​l​u​e​ ​t​o​ ​m​a​t​c​h​ ​w​h​e​n​ ​f​i​l​t​e​r​i​n​g​ ​p​r​o​j​e​c​t​s​.
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​t​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​w​h​e​n​ ​f​i​l​t​e​r​i​n​g​ ​p​r​o​j​e​c​t​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​i​n​g​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​p​r​o​j​e​c​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​p​r​o​j​e​c​t​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​f​i​e​l​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​p​r​o​j​e​c​t​s​.
+										 */
+										longDesc: string
+									}
+									order: {
+										/**
+										 * O​r​d​e​r
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​o​r​d​e​r​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				list_sources: {
+					/**
+					 * L​i​s​t​ ​S​o​u​r​c​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​d​a​t​a​ ​s​o​u​r​c​e​s
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​d​a​t​a​ ​s​o​u​r​c​e​s​ ​i​n​ ​y​o​u​r​ ​B​i​g​M​L​ ​a​c​c​o​u​n​t​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​o​p​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​s​o​u​r​c​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​d​a​t​a​ ​s​o​u​r​c​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​2​0​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​s​o​u​r​c​e​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​d​a​t​a​ ​s​o​u​r​c​e​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​p​u​r​p​o​s​e​s​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​s​o​u​r​c​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​f​i​l​t​e​r​s​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​d​a​t​a​ ​s​o​u​r​c​e​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​f​i​e​l​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​s​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​t​h​e​ ​d​a​t​a​ ​s​o​u​r​c​e​s​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * V​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​f​o​r
+										 */
+										shortDesc: string
+										/**
+										 * S​p​e​c​i​f​y​ ​t​h​e​ ​v​a​l​u​e​ ​t​o​ ​m​a​t​c​h​ ​w​h​e​n​ ​f​i​l​t​e​r​i​n​g​ ​d​a​t​a​ ​s​o​u​r​c​e​s​.
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​t​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​w​h​e​n​ ​f​i​l​t​e​r​i​n​g​ ​d​a​t​a​ ​s​o​u​r​c​e​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​i​n​g​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​s​o​u​r​c​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​d​a​t​a​ ​s​o​u​r​c​e​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​f​i​e​l​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​d​a​t​a​ ​s​o​u​r​c​e​s​.
+										 */
+										longDesc: string
+									}
+									order: {
+										/**
+										 * O​r​d​e​r
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​o​r​d​e​r​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				list_topic_models: {
+					/**
+					 * L​i​s​t​ ​T​o​p​i​c​ ​M​o​d​e​l​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​t​o​p​i​c​ ​m​o​d​e​l​s
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​t​o​p​i​c​ ​m​o​d​e​l​s​ ​i​n​ ​y​o​u​r​ ​B​i​g​M​L​ ​a​c​c​o​u​n​t​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​o​p​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​o​p​i​c​ ​m​o​d​e​l​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​o​p​i​c​ ​m​o​d​e​l​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​2​0​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​t​o​p​i​c​ ​m​o​d​e​l​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​t​o​p​i​c​ ​m​o​d​e​l​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​p​u​r​p​o​s​e​s​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​t​o​p​i​c​ ​m​o​d​e​l​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​f​i​l​t​e​r​s​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​t​o​p​i​c​ ​m​o​d​e​l​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​f​i​e​l​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​s​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​t​h​e​ ​t​o​p​i​c​ ​m​o​d​e​l​s​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * V​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​f​o​r
+										 */
+										shortDesc: string
+										/**
+										 * S​p​e​c​i​f​y​ ​t​h​e​ ​v​a​l​u​e​ ​t​o​ ​m​a​t​c​h​ ​w​h​e​n​ ​f​i​l​t​e​r​i​n​g​ ​t​o​p​i​c​ ​m​o​d​e​l​s​.
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * F​i​l​t​e​r​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​t​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​w​h​e​n​ ​f​i​l​t​e​r​i​n​g​ ​t​o​p​i​c​ ​m​o​d​e​l​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * S​o​r​t
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​i​n​g​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​t​o​p​i​c​ ​m​o​d​e​l​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​t​o​p​i​c​ ​m​o​d​e​l​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​f​i​e​l​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​t​o​p​i​c​ ​m​o​d​e​l​s​.
+										 */
+										longDesc: string
+									}
+									order: {
+										/**
+										 * O​r​d​e​r
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​o​r​d​e​r​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			triggers: {
+				new_resource: {
+					/**
+					 * N​e​w​ ​R​e​s​o​u​r​c​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​B​i​g​M​L​ ​r​e​s​o​u​r​c​e​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​ ​y​o​u​r​ ​B​i​g​M​L​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​r​e​s​o​u​r​c​e​s​ ​s​u​c​h​ ​a​s​ ​m​o​d​e​l​s​,​ ​d​a​t​a​s​e​t​s​,​ ​c​l​u​s​t​e​r​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​m​a​c​h​i​n​e​ ​l​e​a​r​n​i​n​g​ ​r​e​s​o​u​r​c​e​s​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​w​o​r​k​f​l​o​w​s​ ​w​h​e​n​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​s​ ​o​f​ ​r​e​s​o​u​r​c​e​s​ ​a​r​e​ ​c​r​e​a​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						type: {
+							/**
+							 * R​e​s​o​u​r​c​e​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​B​i​g​M​L​ ​r​e​s​o​u​r​c​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​B​i​g​M​L​ ​r​e​s​o​u​r​c​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​c​r​e​a​t​i​o​n​s​.​ ​T​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​o​n​l​y​ ​f​i​r​e​ ​w​h​e​n​ ​r​e​s​o​u​r​c​e​s​ ​o​f​ ​t​h​i​s​ ​t​y​p​e​ ​a​r​e​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​r​e​s​o​u​r​c​e​s​ ​b​y​ ​n​a​m​e​ ​p​a​t​t​e​r​n
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​r​e​s​o​u​r​c​e​s​ ​w​h​o​s​e​ ​n​a​m​e​s​ ​c​o​n​t​a​i​n​ ​t​h​i​s​ ​t​e​x​t​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​r​e​s​o​u​r​c​e​s​ ​o​f​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+						project: {
+							/**
+							 * P​r​o​j​e​c​t​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​r​e​s​o​u​r​c​e​s​ ​b​y​ ​p​r​o​j​e​c​t
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​r​e​s​o​u​r​c​e​s​ ​c​r​e​a​t​e​d​ ​w​i​t​h​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​r​o​j​e​c​t​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​r​e​s​o​u​r​c​e​s​ ​a​c​r​o​s​s​ ​a​l​l​ ​p​r​o​j​e​c​t​s​.
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​r​e​s​o​u​r​c​e​s​ ​b​y​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​r​e​s​o​u​r​c​e​s​ ​t​h​a​t​ ​h​a​v​e​ ​a​n​y​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​a​g​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​r​e​s​o​u​r​c​e​s​ ​r​e​g​a​r​d​l​e​s​s​ ​o​f​ ​t​a​g​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Calendly: {
 			/**
 			 * C​a​l​e​n​d​l​y
@@ -56276,6 +58244,1974 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Choose which specific task event should trigger this workflow
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		BigMl: {
+			/**
+			 * BigML
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Machine learning platform for predictive analytics
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Connect your BigML account to build, evaluate, and deploy machine learning models at scale. Create datasets, build predictive models, perform anomaly detection, cluster analysis, and time series forecasting. Automate your machine learning workflows and integrate predictive analytics into your applications with BigML's comprehensive machine learning platform.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				create_anomaly_score: {
+					/**
+					 * Create Anomaly Score
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create an anomaly score for detecting outliers in data
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Generate an anomaly score by applying a trained anomaly detector to input data. This helps identify unusual patterns or outliers in your dataset.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						anomaly: {
+							/**
+							 * Anomaly Detector
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The anomaly detector to use for scoring
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the trained anomaly detector model that will be used to generate the anomaly score for the input data.
+							 */
+							longDesc: () => LocalizedString
+						}
+						input_data: {
+							/**
+							 * Input Data
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The data to analyze for anomalies
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide the input data that you want to analyze for anomalies. The data should match the format expected by the selected anomaly detector.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name for the anomaly score
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional name to identify this anomaly score in your BigML dashboard and for future reference.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Description of the anomaly score
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional description to provide additional context about this anomaly score and its purpose.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Tags for organizing anomaly scores
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional tags to help organize and categorize your anomaly scores for easier management and searching.
+							 */
+							longDesc: () => LocalizedString
+						}
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Project to organize the anomaly score
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional project to organize this anomaly score with related resources for better workflow management.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_batch_anomaly_score: {
+					/**
+					 * Create Batch Anomaly Score
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create anomaly scores for multiple data points in batch
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Generate anomaly scores for multiple data points at once by applying an anomaly detector to a dataset. This is efficient for processing large amounts of data.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						anomaly: {
+							/**
+							 * Anomaly Detector
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The anomaly detector to use for batch scoring
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the trained anomaly detector model that will be used to generate anomaly scores for all data points in the dataset.
+							 */
+							longDesc: () => LocalizedString
+						}
+						dataset: {
+							/**
+							 * Dataset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The dataset to analyze for anomalies
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the dataset containing multiple data points that you want to analyze for anomalies using the selected anomaly detector.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name for the batch anomaly score
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional name to identify this batch anomaly score in your BigML dashboard and for future reference.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Description of the batch anomaly score
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional description to provide additional context about this batch anomaly score and its purpose.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Tags for organizing batch anomaly scores
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional tags to help organize and categorize your batch anomaly scores for easier management and searching.
+							 */
+							longDesc: () => LocalizedString
+						}
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Project to organize the batch anomaly score
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional project to organize this batch anomaly score with related resources for better workflow management.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_centroid: {
+					/**
+					 * Create Centroid
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Find the closest cluster centroid for input data
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Determine which cluster centroid is closest to the provided input data using a trained cluster model. This helps classify new data points into existing clusters.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						cluster: {
+							/**
+							 * Cluster Model
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The cluster model to use for centroid calculation
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the trained cluster model that will be used to find the closest centroid for the input data.
+							 */
+							longDesc: () => LocalizedString
+						}
+						input_data: {
+							/**
+							 * Input Data
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The data to find the closest centroid for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide the input data for which you want to find the closest cluster centroid. The data should match the format used to train the cluster model.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name for the centroid result
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional name to identify this centroid calculation in your BigML dashboard and for future reference.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Description of the centroid calculation
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional description to provide additional context about this centroid calculation and its purpose.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Tags for organizing centroid results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional tags to help organize and categorize your centroid calculations for easier management and searching.
+							 */
+							longDesc: () => LocalizedString
+						}
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Project to organize the centroid result
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional project to organize this centroid calculation with related resources for better workflow management.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_prediction: {
+					/**
+					 * Create Prediction
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Generate predictions using trained models
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create predictions for new data using trained machine learning models, ensembles, or deep networks. This allows you to apply your trained models to make predictions on new data.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						model: {
+							/**
+							 * Model
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The model to use for prediction
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the trained model that will be used to generate predictions for the input data.
+							 */
+							longDesc: () => LocalizedString
+						}
+						ensemble: {
+							/**
+							 * Ensemble
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ensemble to use for prediction
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the trained ensemble that will be used to generate predictions for the input data.
+							 */
+							longDesc: () => LocalizedString
+						}
+						deepnet: {
+							/**
+							 * Deep Network
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The deep network to use for prediction
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the trained deep network that will be used to generate predictions for the input data.
+							 */
+							longDesc: () => LocalizedString
+						}
+						input_data: {
+							/**
+							 * Input Data
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The data to make predictions for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide the input data for which you want to generate predictions. The data should match the format used to train the selected model.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name for the prediction
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional name to identify this prediction in your BigML dashboard and for future reference.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Description of the prediction
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional description to provide additional context about this prediction and its purpose.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Tags for organizing predictions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional tags to help organize and categorize your predictions for easier management and searching.
+							 */
+							longDesc: () => LocalizedString
+						}
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Project to organize the prediction
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional project to organize this prediction with related resources for better workflow management.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_topic_distribution: {
+					/**
+					 * Create Topic Distribution
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Generate topic distributions for text data
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create topic distributions for text data using a trained topic model. This helps understand the main topics present in your text and their relative importance.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						topicmodel: {
+							/**
+							 * Topic Model
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The topic model to use for distribution analysis
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the trained topic model that will be used to generate topic distributions for the input text data.
+							 */
+							longDesc: () => LocalizedString
+						}
+						input_data: {
+							/**
+							 * Input Data
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The text data to analyze for topics
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide the text data for which you want to generate topic distributions. The data should match the format used to train the topic model.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name for the topic distribution
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional name to identify this topic distribution in your BigML dashboard and for future reference.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Description of the topic distribution
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional description to provide additional context about this topic distribution and its purpose.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Tags for organizing topic distributions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional tags to help organize and categorize your topic distributions for easier management and searching.
+							 */
+							longDesc: () => LocalizedString
+						}
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Project to organize the topic distribution
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional project to organize this topic distribution with related resources for better workflow management.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_anomaly_detectors: {
+					/**
+					 * List Anomaly Detectors
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of anomaly detectors
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get a paginated list of all anomaly detectors in your BigML account with filtering and sorting options.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of anomaly detectors to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the maximum number of anomaly detectors to return in a single request. Default is 20.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of anomaly detectors to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the number of anomaly detectors to skip for pagination purposes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria for anomaly detectors
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply filters to narrow down the list of anomaly detectors based on specific criteria.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the field you want to use for filtering the anomaly detectors.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Value to filter for
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Specify the value to match when filtering anomaly detectors.
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose the comparison operator to use when filtering anomaly detectors.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sorting criteria for anomaly detectors
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the list of anomaly detectors.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the field you want to use for sorting the anomaly detectors.
+										 */
+										longDesc: () => LocalizedString
+									}
+									order: {
+										/**
+										 * Order
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort order (ascending or descending)
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose whether to sort in ascending or descending order.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				list_clusters: {
+					/**
+					 * List Clusters
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of cluster models
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get a paginated list of all cluster models in your BigML account with filtering and sorting options.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of clusters to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the maximum number of cluster models to return in a single request. Default is 20.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of clusters to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the number of cluster models to skip for pagination purposes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria for clusters
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply filters to narrow down the list of cluster models based on specific criteria.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the field you want to use for filtering the cluster models.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Value to filter for
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Specify the value to match when filtering cluster models.
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose the comparison operator to use when filtering cluster models.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sorting criteria for clusters
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the list of cluster models.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the field you want to use for sorting the cluster models.
+										 */
+										longDesc: () => LocalizedString
+									}
+									order: {
+										/**
+										 * Order
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort order (ascending or descending)
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose whether to sort in ascending or descending order.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				list_datasets: {
+					/**
+					 * List Datasets
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of datasets
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get a paginated list of all datasets in your BigML account with filtering and sorting options.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of datasets to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the maximum number of datasets to return in a single request. Default is 20.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of datasets to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the number of datasets to skip for pagination purposes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria for datasets
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply filters to narrow down the list of datasets based on specific criteria.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the field you want to use for filtering the datasets.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Value to filter for
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Specify the value to match when filtering datasets.
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose the comparison operator to use when filtering datasets.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sorting criteria for datasets
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the list of datasets.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the field you want to use for sorting the datasets.
+										 */
+										longDesc: () => LocalizedString
+									}
+									order: {
+										/**
+										 * Order
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort order (ascending or descending)
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose whether to sort in ascending or descending order.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				list_deepnets: {
+					/**
+					 * List Deep Networks
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of deep networks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get a paginated list of all deep networks in your BigML account with filtering and sorting options.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of deep networks to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the maximum number of deep networks to return in a single request. Default is 20.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of deep networks to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the number of deep networks to skip for pagination purposes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria for deep networks
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply filters to narrow down the list of deep networks based on specific criteria.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the field you want to use for filtering the deep networks.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Value to filter for
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Specify the value to match when filtering deep networks.
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose the comparison operator to use when filtering deep networks.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sorting criteria for deep networks
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the list of deep networks.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the field you want to use for sorting the deep networks.
+										 */
+										longDesc: () => LocalizedString
+									}
+									order: {
+										/**
+										 * Order
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort order (ascending or descending)
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose whether to sort in ascending or descending order.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				list_ensembles: {
+					/**
+					 * List Ensembles
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of ensemble models
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get a paginated list of all ensemble models in your BigML account with filtering and sorting options.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of ensembles to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the maximum number of ensemble models to return in a single request. Default is 20.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of ensembles to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the number of ensemble models to skip for pagination purposes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria for ensembles
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply filters to narrow down the list of ensemble models based on specific criteria.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the field you want to use for filtering the ensemble models.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Value to filter for
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Specify the value to match when filtering ensemble models.
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose the comparison operator to use when filtering ensemble models.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sorting criteria for ensembles
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the list of ensemble models.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the field you want to use for sorting the ensemble models.
+										 */
+										longDesc: () => LocalizedString
+									}
+									order: {
+										/**
+										 * Order
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort order (ascending or descending)
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose whether to sort in ascending or descending order.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				list_models: {
+					/**
+					 * List Models
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of machine learning models
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get a paginated list of all machine learning models in your BigML account with filtering and sorting options.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of models to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the maximum number of models to return in a single request. Default is 20.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of models to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the number of models to skip for pagination purposes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria for models
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply filters to narrow down the list of models based on specific criteria.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the field you want to use for filtering the models.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Value to filter for
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Specify the value to match when filtering models.
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose the comparison operator to use when filtering models.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sorting criteria for models
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the list of models.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the field you want to use for sorting the models.
+										 */
+										longDesc: () => LocalizedString
+									}
+									order: {
+										/**
+										 * Order
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort order (ascending or descending)
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose whether to sort in ascending or descending order.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				list_projects: {
+					/**
+					 * List Projects
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of projects
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get a paginated list of all projects in your BigML account with filtering and sorting options.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of projects to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the maximum number of projects to return in a single request. Default is 20.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of projects to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the number of projects to skip for pagination purposes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria for projects
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply filters to narrow down the list of projects based on specific criteria.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the field you want to use for filtering the projects.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Value to filter for
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Specify the value to match when filtering projects.
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose the comparison operator to use when filtering projects.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sorting criteria for projects
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the list of projects.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the field you want to use for sorting the projects.
+										 */
+										longDesc: () => LocalizedString
+									}
+									order: {
+										/**
+										 * Order
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort order (ascending or descending)
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose whether to sort in ascending or descending order.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				list_sources: {
+					/**
+					 * List Sources
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of data sources
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get a paginated list of all data sources in your BigML account with filtering and sorting options.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of sources to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the maximum number of data sources to return in a single request. Default is 20.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of sources to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the number of data sources to skip for pagination purposes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria for sources
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply filters to narrow down the list of data sources based on specific criteria.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the field you want to use for filtering the data sources.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Value to filter for
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Specify the value to match when filtering data sources.
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose the comparison operator to use when filtering data sources.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sorting criteria for sources
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the list of data sources.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the field you want to use for sorting the data sources.
+										 */
+										longDesc: () => LocalizedString
+									}
+									order: {
+										/**
+										 * Order
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort order (ascending or descending)
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose whether to sort in ascending or descending order.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				list_topic_models: {
+					/**
+					 * List Topic Models
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of topic models
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get a paginated list of all topic models in your BigML account with filtering and sorting options.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of topic models to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the maximum number of topic models to return in a single request. Default is 20.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of topic models to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the number of topic models to skip for pagination purposes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria for topic models
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply filters to narrow down the list of topic models based on specific criteria.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the field you want to use for filtering the topic models.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Value to filter for
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Specify the value to match when filtering topic models.
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Filter comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose the comparison operator to use when filtering topic models.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						sort: {
+							/**
+							 * Sort
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sorting criteria for topic models
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the list of topic models.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the field you want to use for sorting the topic models.
+										 */
+										longDesc: () => LocalizedString
+									}
+									order: {
+										/**
+										 * Order
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort order (ascending or descending)
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose whether to sort in ascending or descending order.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			triggers: {
+				new_resource: {
+					/**
+					 * New Resource
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new BigML resource is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitor your BigML account for newly created resources such as models, datasets, clusters, and other machine learning resources. This trigger allows you to automate workflows when specific types of resources are created.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						type: {
+							/**
+							 * Resource Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of BigML resource to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific type of BigML resource you want to monitor for new creations. The trigger will only fire when resources of this type are created.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter resources by name pattern
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional filter to only trigger for resources whose names contain this text. Leave empty to monitor all resources of the selected type.
+							 */
+							longDesc: () => LocalizedString
+						}
+						project: {
+							/**
+							 * Project Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter resources by project
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional filter to only trigger for resources created within a specific project. Leave empty to monitor resources across all projects.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter resources by tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional filter to only trigger for resources that have any of the specified tags. Leave empty to monitor all resources regardless of tags.
 							 */
 							longDesc: () => LocalizedString
 						}
