@@ -10,6 +10,11 @@
     "@jridgewell/gen-mapping" "^0.3.5"
     "@jridgewell/trace-mapping" "^0.3.24"
 
+"@anthropic-ai/sdk@^0.57.0":
+  version "0.57.0"
+  resolved "https://registry.yarnpkg.com/@anthropic-ai/sdk/-/sdk-0.57.0.tgz#d2ef7bd3a80b07e41df79600f0a797db94434060"
+  integrity sha512-z5LMy0MWu0+w2hflUgj4RlJr1R+0BxKXL7ldXTO8FasU8fu599STghO+QKwId2dAD0d464aHtU+ChWuRHw4FNw==
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.24.7":
   version "7.24.7"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.24.7.tgz#882fd9e09e8ee324e496bd040401c6f046ef4465"
@@ -416,6 +421,14 @@
   integrity sha512-zTwEpWOzZ2CiKcB93BLngUX59hQkuZjT2+SAQEscSm52peDW/getsawMcWF1rGRpMCX6D7nSJA3CzJ8gn13N/g==
   dependencies:
     tslib "^2.4.0"
+
+"@google/genai@^1.12.0":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@google/genai/-/genai-1.12.0.tgz#f86081164b172a28d91b1a4e16fbb3c123154012"
+  integrity sha512-JBkQsULVexdM9zY4iXbm3A2dJ7El/hSPGCnxuRWPJNgeqcfYuyUnPTSy+I/v+MvTbz/occVmONSD6wn+17QLkg==
+  dependencies:
+    google-auth-library "^9.14.2"
+    ws "^8.18.0"
 
 "@googleapis/chat@^38.0.1":
   version "38.0.1"
@@ -5421,7 +5434,7 @@ google-auth-library@^10.0.0-rc.1:
     gtoken "^8.0.0"
     jws "^4.0.0"
 
-google-auth-library@^9.15.1, google-auth-library@^9.7.0:
+google-auth-library@^9.14.2, google-auth-library@^9.15.1, google-auth-library@^9.7.0:
   version "9.15.1"
   resolved "https://registry.yarnpkg.com/google-auth-library/-/google-auth-library-9.15.1.tgz#0c5d84ed1890b2375f1cd74f03ac7b806b392928"
   integrity sha512-Jb6Z0+nvECVz+2lzSMt9u98UsoakXxA2HGHMCxh+so3n90XgYWkq5dur19JAJV7ONiJY22yBTyJB1TSkvPq9Ng==
@@ -11057,6 +11070,11 @@ write-file-atomic@^4.0.2:
   dependencies:
     imurmurhash "^0.1.4"
     signal-exit "^3.0.7"
+
+ws@^8.18.0:
+  version "8.18.3"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-8.18.3.tgz#b56b88abffde62791c639170400c93dcb0c95472"
+  integrity sha512-PEIGCY5tSlUt50cqyMXfCzX+oOPqN0vuGqWzbcJ2xvnkzkq46oOpz7dQaTDBdfICb4N14+GARUDw2XV2N4tvzg==
 
 xml2js@^0.4.23:
   version "0.4.23"

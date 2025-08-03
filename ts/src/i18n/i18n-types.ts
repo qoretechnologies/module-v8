@@ -206,6 +206,164 @@ type RootTranslation = {
 				}
 			}
 		}
+		Claude: {
+			/**
+			 * C​l​a​u​d​e
+			 */
+			displayName: string
+			/**
+			 * A​I​ ​a​s​s​i​s​t​a​n​t​ ​f​o​r​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​,​ ​a​n​a​l​y​s​i​s​,​ ​a​n​d​ ​c​o​n​t​e​n​t​ ​c​r​e​a​t​i​o​n
+			 */
+			shortDesc: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​C​l​a​u​d​e​,​ ​A​n​t​h​r​o​p​i​c​'​s​ ​A​I​ ​a​s​s​i​s​t​a​n​t​,​ ​t​o​ ​l​e​v​e​r​a​g​e​ ​a​d​v​a​n​c​e​d​ ​l​a​n​g​u​a​g​e​ ​u​n​d​e​r​s​t​a​n​d​i​n​g​ ​a​n​d​ ​g​e​n​e​r​a​t​i​o​n​ ​c​a​p​a​b​i​l​i​t​i​e​s​.​ ​U​s​e​ ​C​l​a​u​d​e​ ​f​o​r​ ​i​n​t​e​l​l​i​g​e​n​t​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​,​ ​c​o​n​t​e​n​t​ ​c​r​e​a​t​i​o​n​,​ ​d​a​t​a​ ​a​n​a​l​y​s​i​s​,​ ​c​o​d​e​ ​a​s​s​i​s​t​a​n​c​e​,​ ​r​e​s​e​a​r​c​h​ ​s​u​p​p​o​r​t​,​ ​a​n​d​ ​c​o​m​p​l​e​x​ ​r​e​a​s​o​n​i​n​g​ ​t​a​s​k​s​.​ ​C​l​a​u​d​e​ ​c​a​n​ ​h​e​l​p​ ​a​u​t​o​m​a​t​e​ ​w​o​r​k​f​l​o​w​s​ ​t​h​a​t​ ​r​e​q​u​i​r​e​ ​n​a​t​u​r​a​l​ ​l​a​n​g​u​a​g​e​ ​p​r​o​c​e​s​s​i​n​g​,​ ​c​r​e​a​t​i​v​e​ ​w​r​i​t​i​n​g​,​ ​t​e​c​h​n​i​c​a​l​ ​d​o​c​u​m​e​n​t​a​t​i​o​n​,​ ​a​n​d​ ​a​n​a​l​y​t​i​c​a​l​ ​t​h​i​n​k​i​n​g​.
+			 */
+			longDesc: string
+			actions: {
+				send_message: {
+					/**
+					 * S​e​n​d​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​m​e​s​s​a​g​e​ ​t​o​ ​C​l​a​u​d​e​ ​A​I​ ​a​n​d​ ​g​e​t​ ​a​ ​r​e​s​p​o​n​s​e
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​ ​a​ ​t​e​x​t​ ​m​e​s​s​a​g​e​ ​t​o​ ​C​l​a​u​d​e​ ​A​I​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​s​y​s​t​e​m​ ​i​n​s​t​r​u​c​t​i​o​n​s​,​ ​f​i​l​e​ ​a​t​t​a​c​h​m​e​n​t​s​,​ ​a​n​d​ ​c​u​s​t​o​m​i​z​a​b​l​e​ ​p​a​r​a​m​e​t​e​r​s​.​ ​C​l​a​u​d​e​ ​c​a​n​ ​p​r​o​c​e​s​s​ ​t​e​x​t​,​ ​i​m​a​g​e​s​,​ ​a​n​d​ ​d​o​c​u​m​e​n​t​s​ ​t​o​ ​p​r​o​v​i​d​e​ ​i​n​t​e​l​l​i​g​e​n​t​ ​r​e​s​p​o​n​s​e​s​.
+					 */
+					longDesc: string
+					options: {
+						model: {
+							/**
+							 * M​o​d​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​l​a​u​d​e​ ​m​o​d​e​l​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​i​c​h​ ​C​l​a​u​d​e​ ​m​o​d​e​l​ ​t​o​ ​u​s​e​ ​f​o​r​ ​g​e​n​e​r​a​t​i​n​g​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.​ ​D​i​f​f​e​r​e​n​t​ ​m​o​d​e​l​s​ ​h​a​v​e​ ​v​a​r​y​i​n​g​ ​c​a​p​a​b​i​l​i​t​i​e​s​,​ ​s​p​e​e​d​,​ ​a​n​d​ ​c​o​s​t​ ​c​h​a​r​a​c​t​e​r​i​s​t​i​c​s​.
+							 */
+							longDesc: string
+						}
+						message: {
+							/**
+							 * M​e​s​s​a​g​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​s​e​n​d​ ​t​o​ ​C​l​a​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​t​e​x​t​ ​m​e​s​s​a​g​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​s​e​n​d​ ​t​o​ ​C​l​a​u​d​e​.​ ​T​h​i​s​ ​w​i​l​l​ ​b​e​ ​t​h​e​ ​m​a​i​n​ ​c​o​n​t​e​n​t​ ​t​h​a​t​ ​C​l​a​u​d​e​ ​r​e​s​p​o​n​d​s​ ​t​o​.
+							 */
+							longDesc: string
+						}
+						system: {
+							/**
+							 * S​y​s​t​e​m​ ​I​n​s​t​r​u​c​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * S​y​s​t​e​m​-​l​e​v​e​l​ ​i​n​s​t​r​u​c​t​i​o​n​s​ ​f​o​r​ ​C​l​a​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​s​y​s​t​e​m​ ​i​n​s​t​r​u​c​t​i​o​n​s​ ​t​h​a​t​ ​d​e​f​i​n​e​ ​h​o​w​ ​C​l​a​u​d​e​ ​s​h​o​u​l​d​ ​b​e​h​a​v​e​,​ ​i​t​s​ ​r​o​l​e​,​ ​o​r​ ​s​p​e​c​i​f​i​c​ ​g​u​i​d​e​l​i​n​e​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​.​ ​T​h​e​s​e​ ​i​n​s​t​r​u​c​t​i​o​n​s​ ​h​e​l​p​ ​s​h​a​p​e​ ​C​l​a​u​d​e​'​s​ ​r​e​s​p​o​n​s​e​s​.
+							 */
+							longDesc: string
+						}
+						max_tokens: {
+							/**
+							 * M​a​x​ ​T​o​k​e​n​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​o​k​e​n​s​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​o​k​e​n​s​ ​(​r​o​u​g​h​l​y​ ​w​o​r​d​s​)​ ​t​h​a​t​ ​C​l​a​u​d​e​ ​c​a​n​ ​u​s​e​ ​i​n​ ​i​t​s​ ​r​e​s​p​o​n​s​e​.​ ​H​i​g​h​e​r​ ​v​a​l​u​e​s​ ​a​l​l​o​w​ ​f​o​r​ ​l​o​n​g​e​r​ ​r​e​s​p​o​n​s​e​s​ ​b​u​t​ ​m​a​y​ ​i​n​c​r​e​a​s​e​ ​c​o​s​t​s​.
+							 */
+							longDesc: string
+						}
+						temperature: {
+							/**
+							 * T​e​m​p​e​r​a​t​u​r​e
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​r​o​l​s​ ​r​a​n​d​o​m​n​e​s​s​ ​i​n​ ​r​e​s​p​o​n​s​e​s​ ​(​0​.​0​-​1​.​0​)
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​t​r​o​l​ ​t​h​e​ ​c​r​e​a​t​i​v​i​t​y​ ​a​n​d​ ​r​a​n​d​o​m​n​e​s​s​ ​o​f​ ​C​l​a​u​d​e​'​s​ ​r​e​s​p​o​n​s​e​s​.​ ​L​o​w​e​r​ ​v​a​l​u​e​s​ ​(​n​e​a​r​ ​0​)​ ​m​a​k​e​ ​r​e​s​p​o​n​s​e​s​ ​m​o​r​e​ ​f​o​c​u​s​e​d​ ​a​n​d​ ​d​e​t​e​r​m​i​n​i​s​t​i​c​,​ ​w​h​i​l​e​ ​h​i​g​h​e​r​ ​v​a​l​u​e​s​ ​(​n​e​a​r​ ​1​)​ ​m​a​k​e​ ​t​h​e​m​ ​m​o​r​e​ ​c​r​e​a​t​i​v​e​ ​a​n​d​ ​v​a​r​i​e​d​.
+							 */
+							longDesc: string
+						}
+						top_k: {
+							/**
+							 * T​o​p​ ​K
+							 */
+							displayName: string
+							/**
+							 * L​i​m​i​t​s​ ​t​o​k​e​n​ ​s​e​l​e​c​t​i​o​n​ ​t​o​ ​t​o​p​ ​K​ ​m​o​s​t​ ​l​i​k​e​l​y​ ​o​p​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * L​i​m​i​t​ ​C​l​a​u​d​e​'​s​ ​t​o​k​e​n​ ​s​e​l​e​c​t​i​o​n​ ​t​o​ ​t​h​e​ ​K​ ​m​o​s​t​ ​l​i​k​e​l​y​ ​o​p​t​i​o​n​s​ ​a​t​ ​e​a​c​h​ ​s​t​e​p​.​ ​T​h​i​s​ ​c​a​n​ ​h​e​l​p​ ​c​o​n​t​r​o​l​ ​t​h​e​ ​c​o​h​e​r​e​n​c​e​ ​a​n​d​ ​f​o​c​u​s​ ​o​f​ ​r​e​s​p​o​n​s​e​s​.
+							 */
+							longDesc: string
+						}
+						top_p: {
+							/**
+							 * T​o​p​ ​P
+							 */
+							displayName: string
+							/**
+							 * N​u​c​l​e​u​s​ ​s​a​m​p​l​i​n​g​ ​p​a​r​a​m​e​t​e​r​ ​(​0​.​0​-​1​.​0​)
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​n​u​c​l​e​u​s​ ​s​a​m​p​l​i​n​g​ ​t​o​ ​c​o​n​t​r​o​l​ ​r​e​s​p​o​n​s​e​ ​d​i​v​e​r​s​i​t​y​.​ ​C​l​a​u​d​e​ ​w​i​l​l​ ​o​n​l​y​ ​c​o​n​s​i​d​e​r​ ​t​o​k​e​n​s​ ​w​h​o​s​e​ ​c​u​m​u​l​a​t​i​v​e​ ​p​r​o​b​a​b​i​l​i​t​y​ ​m​a​s​s​ ​i​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​t​o​p​ ​P​ ​t​h​r​e​s​h​o​l​d​.
+							 */
+							longDesc: string
+						}
+						file: {
+							/**
+							 * F​i​l​e​ ​A​t​t​a​c​h​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​e​ ​t​o​ ​i​n​c​l​u​d​e​ ​w​i​t​h​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * A​t​t​a​c​h​ ​a​n​ ​i​m​a​g​e​ ​o​r​ ​d​o​c​u​m​e​n​t​ ​f​o​r​ ​C​l​a​u​d​e​ ​t​o​ ​a​n​a​l​y​z​e​ ​a​l​o​n​g​ ​w​i​t​h​ ​y​o​u​r​ ​m​e​s​s​a​g​e​.​ ​S​u​p​p​o​r​t​e​d​ ​f​o​r​m​a​t​s​ ​i​n​c​l​u​d​e​ ​i​m​a​g​e​s​ ​(​J​P​E​G​,​ ​P​N​G​,​ ​G​I​F​,​ ​W​e​b​P​)​ ​a​n​d​ ​P​D​F​ ​d​o​c​u​m​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_models: {
+					/**
+					 * L​i​s​t​ ​M​o​d​e​l​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​v​a​i​l​a​b​l​e​ ​C​l​a​u​d​e​ ​m​o​d​e​l​s
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​a​v​a​i​l​a​b​l​e​ ​C​l​a​u​d​e​ ​m​o​d​e​l​s​.
+					 */
+					longDesc: string
+				}
+			}
+		}
 		BrowseAi: {
 			/**
 			 * B​r​o​w​s​e​ ​A​I
@@ -6233,6 +6391,604 @@ type RootTranslation = {
 							 * T​h​e​ ​C​l​i​c​k​U​p​ ​w​o​r​k​s​p​a​c​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​t​a​s​k​ ​u​p​d​a​t​e​ ​e​v​e​n​t​s
 							 */
 							longDesc: string
+						}
+					}
+				}
+			}
+		}
+		Gemini: {
+			/**
+			 * G​e​m​i​n​i
+			 */
+			displayName: string
+			/**
+			 * G​o​o​g​l​e​'​s​ ​a​d​v​a​n​c​e​d​ ​A​I​ ​m​o​d​e​l​ ​f​o​r​ ​m​u​l​t​i​m​o​d​a​l​ ​u​n​d​e​r​s​t​a​n​d​i​n​g​ ​a​n​d​ ​g​e​n​e​r​a​t​i​o​n
+			 */
+			shortDesc: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​G​o​o​g​l​e​'​s​ ​G​e​m​i​n​i​ ​A​I​ ​t​o​ ​l​e​v​e​r​a​g​e​ ​s​t​a​t​e​-​o​f​-​t​h​e​-​a​r​t​ ​m​u​l​t​i​m​o​d​a​l​ ​c​a​p​a​b​i​l​i​t​i​e​s​ ​i​n​c​l​u​d​i​n​g​ ​t​e​x​t​ ​g​e​n​e​r​a​t​i​o​n​,​ ​i​m​a​g​e​ ​a​n​a​l​y​s​i​s​,​ ​c​o​d​e​ ​a​s​s​i​s​t​a​n​c​e​,​ ​a​n​d​ ​r​e​a​s​o​n​i​n​g​ ​t​a​s​k​s​.​ ​G​e​m​i​n​i​ ​e​x​c​e​l​s​ ​a​t​ ​u​n​d​e​r​s​t​a​n​d​i​n​g​ ​a​n​d​ ​g​e​n​e​r​a​t​i​n​g​ ​c​o​n​t​e​n​t​ ​a​c​r​o​s​s​ ​t​e​x​t​,​ ​i​m​a​g​e​s​,​ ​a​n​d​ ​c​o​d​e​,​ ​m​a​k​i​n​g​ ​i​t​ ​i​d​e​a​l​ ​f​o​r​ ​c​o​m​p​l​e​x​ ​w​o​r​k​f​l​o​w​s​ ​r​e​q​u​i​r​i​n​g​ ​a​d​v​a​n​c​e​d​ ​A​I​ ​r​e​a​s​o​n​i​n​g​,​ ​c​r​e​a​t​i​v​e​ ​c​o​n​t​e​n​t​ ​g​e​n​e​r​a​t​i​o​n​,​ ​d​a​t​a​ ​a​n​a​l​y​s​i​s​,​ ​a​n​d​ ​i​n​t​e​l​l​i​g​e​n​t​ ​a​u​t​o​m​a​t​i​o​n​ ​w​i​t​h​i​n​ ​y​o​u​r​ ​Q​o​r​e​ ​a​p​p​l​i​c​a​t​i​o​n​s​.
+			 */
+			longDesc: string
+			actions: {
+				list_models: {
+					/**
+					 * L​i​s​t​ ​M​o​d​e​l​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​v​a​i​l​a​b​l​e​ ​G​e​m​i​n​i​ ​m​o​d​e​l​s
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​a​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​a​v​a​i​l​a​b​l​e​ ​G​o​o​g​l​e​ ​G​e​m​i​n​i​ ​m​o​d​e​l​s​ ​w​i​t​h​ ​t​h​e​i​r​ ​s​p​e​c​i​f​i​c​a​t​i​o​n​s​,​ ​c​a​p​a​b​i​l​i​t​i​e​s​,​ ​a​n​d​ ​l​i​m​i​t​a​t​i​o​n​s​.​ ​T​h​i​s​ ​h​e​l​p​s​ ​y​o​u​ ​c​h​o​o​s​e​ ​t​h​e​ ​r​i​g​h​t​ ​m​o​d​e​l​ ​f​o​r​ ​y​o​u​r​ ​s​p​e​c​i​f​i​c​ ​u​s​e​ ​c​a​s​e​.
+					 */
+					longDesc: string
+				}
+				send_message: {
+					/**
+					 * S​e​n​d​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​p​r​o​m​p​t​ ​t​o​ ​G​o​o​g​l​e​ ​G​e​m​i​n​i​ ​a​n​d​ ​g​e​t​ ​a​ ​r​e​s​p​o​n​s​e
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​ ​a​ ​t​e​x​t​ ​p​r​o​m​p​t​ ​t​o​ ​G​o​o​g​l​e​ ​G​e​m​i​n​i​ ​A​I​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​s​y​s​t​e​m​ ​i​n​s​t​r​u​c​t​i​o​n​s​ ​a​n​d​ ​c​u​s​t​o​m​i​z​a​b​l​e​ ​p​a​r​a​m​e​t​e​r​s​.​ ​G​e​m​i​n​i​ ​c​a​n​ ​p​r​o​c​e​s​s​ ​c​o​m​p​l​e​x​ ​p​r​o​m​p​t​s​ ​a​n​d​ ​p​r​o​v​i​d​e​ ​i​n​t​e​l​l​i​g​e​n​t​,​ ​c​o​n​t​e​x​t​u​a​l​ ​r​e​s​p​o​n​s​e​s​.
+					 */
+					longDesc: string
+					options: {
+						model: {
+							/**
+							 * M​o​d​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​e​m​i​n​i​ ​m​o​d​e​l​ ​t​o​ ​u​s​e​ ​f​o​r​ ​g​e​n​e​r​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​i​c​h​ ​G​o​o​g​l​e​ ​G​e​m​i​n​i​ ​m​o​d​e​l​ ​t​o​ ​u​s​e​ ​f​o​r​ ​g​e​n​e​r​a​t​i​n​g​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.​ ​D​i​f​f​e​r​e​n​t​ ​m​o​d​e​l​s​ ​h​a​v​e​ ​v​a​r​y​i​n​g​ ​c​a​p​a​b​i​l​i​t​i​e​s​,​ ​p​e​r​f​o​r​m​a​n​c​e​ ​c​h​a​r​a​c​t​e​r​i​s​t​i​c​s​,​ ​a​n​d​ ​t​o​k​e​n​ ​l​i​m​i​t​s​.
+							 */
+							longDesc: string
+						}
+						prompt: {
+							/**
+							 * P​r​o​m​p​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​m​p​t​ ​t​o​ ​s​e​n​d​ ​t​o​ ​G​e​m​i​n​i
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​t​e​x​t​ ​p​r​o​m​p​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​s​e​n​d​ ​t​o​ ​G​e​m​i​n​i​.​ ​T​h​i​s​ ​w​i​l​l​ ​b​e​ ​t​h​e​ ​m​a​i​n​ ​c​o​n​t​e​n​t​ ​t​h​a​t​ ​G​e​m​i​n​i​ ​r​e​s​p​o​n​d​s​ ​t​o​ ​a​n​d​ ​g​e​n​e​r​a​t​e​s​ ​c​o​n​t​e​n​t​ ​b​a​s​e​d​ ​o​n​.
+							 */
+							longDesc: string
+						}
+						system: {
+							/**
+							 * S​y​s​t​e​m​ ​I​n​s​t​r​u​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​y​s​t​e​m​-​l​e​v​e​l​ ​i​n​s​t​r​u​c​t​i​o​n​s​ ​f​o​r​ ​G​e​m​i​n​i
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​s​y​s​t​e​m​ ​i​n​s​t​r​u​c​t​i​o​n​ ​t​h​a​t​ ​d​e​f​i​n​e​s​ ​h​o​w​ ​G​e​m​i​n​i​ ​s​h​o​u​l​d​ ​b​e​h​a​v​e​,​ ​i​t​s​ ​r​o​l​e​,​ ​o​r​ ​s​p​e​c​i​f​i​c​ ​g​u​i​d​e​l​i​n​e​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​.​ ​T​h​i​s​ ​h​e​l​p​s​ ​s​h​a​p​e​ ​G​e​m​i​n​i​'​s​ ​r​e​s​p​o​n​s​e​s​ ​a​n​d​ ​b​e​h​a​v​i​o​r​.
+							 */
+							longDesc: string
+						}
+						maxOutputTokens: {
+							/**
+							 * M​a​x​ ​O​u​t​p​u​t​ ​T​o​k​e​n​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​o​k​e​n​s​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​o​k​e​n​s​ ​t​h​a​t​ ​G​e​m​i​n​i​ ​c​a​n​ ​u​s​e​ ​i​n​ ​i​t​s​ ​r​e​s​p​o​n​s​e​.​ ​H​i​g​h​e​r​ ​v​a​l​u​e​s​ ​a​l​l​o​w​ ​f​o​r​ ​l​o​n​g​e​r​ ​r​e​s​p​o​n​s​e​s​ ​b​u​t​ ​m​a​y​ ​i​n​c​r​e​a​s​e​ ​p​r​o​c​e​s​s​i​n​g​ ​t​i​m​e​ ​a​n​d​ ​c​o​s​t​s​.
+							 */
+							longDesc: string
+						}
+						files: {
+							/**
+							 * F​i​l​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​e​s​ ​t​o​ ​a​t​t​a​c​h​ ​t​o​ ​t​h​e​ ​p​r​o​m​p​t
+							 */
+							shortDesc: string
+							/**
+							 * A​t​t​a​c​h​ ​f​i​l​e​s​ ​t​h​a​t​ ​G​e​m​i​n​i​ ​c​a​n​ ​r​e​f​e​r​e​n​c​e​ ​w​h​e​n​ ​g​e​n​e​r​a​t​i​n​g​ ​i​t​s​ ​r​e​s​p​o​n​s​e​.​ ​T​h​i​s​ ​a​l​l​o​w​s​ ​G​e​m​i​n​i​ ​t​o​ ​a​n​a​l​y​z​e​ ​a​n​d​ ​i​n​c​o​r​p​o​r​a​t​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​r​o​m​ ​t​h​e​ ​p​r​o​v​i​d​e​d​ ​f​i​l​e​s​ ​i​n​t​o​ ​i​t​s​ ​o​u​t​p​u​t​.
+							 */
+							longDesc: string
+						}
+						temperature: {
+							/**
+							 * T​e​m​p​e​r​a​t​u​r​e
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​r​o​l​s​ ​r​a​n​d​o​m​n​e​s​s​ ​i​n​ ​r​e​s​p​o​n​s​e​s​ ​(​0​.​0​-​2​.​0​)
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​t​r​o​l​ ​t​h​e​ ​c​r​e​a​t​i​v​i​t​y​ ​a​n​d​ ​r​a​n​d​o​m​n​e​s​s​ ​o​f​ ​G​e​m​i​n​i​'​s​ ​r​e​s​p​o​n​s​e​s​.​ ​L​o​w​e​r​ ​v​a​l​u​e​s​ ​(​n​e​a​r​ ​0​)​ ​m​a​k​e​ ​r​e​s​p​o​n​s​e​s​ ​m​o​r​e​ ​f​o​c​u​s​e​d​ ​a​n​d​ ​d​e​t​e​r​m​i​n​i​s​t​i​c​,​ ​w​h​i​l​e​ ​h​i​g​h​e​r​ ​v​a​l​u​e​s​ ​(​u​p​ ​t​o​ ​2​.​0​)​ ​m​a​k​e​ ​t​h​e​m​ ​m​o​r​e​ ​c​r​e​a​t​i​v​e​ ​a​n​d​ ​v​a​r​i​e​d​.
+							 */
+							longDesc: string
+						}
+						topK: {
+							/**
+							 * T​o​p​ ​K
+							 */
+							displayName: string
+							/**
+							 * L​i​m​i​t​s​ ​t​o​k​e​n​ ​s​e​l​e​c​t​i​o​n​ ​t​o​ ​t​o​p​ ​K​ ​m​o​s​t​ ​l​i​k​e​l​y​ ​o​p​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * L​i​m​i​t​ ​G​e​m​i​n​i​'​s​ ​t​o​k​e​n​ ​s​e​l​e​c​t​i​o​n​ ​t​o​ ​t​h​e​ ​K​ ​m​o​s​t​ ​l​i​k​e​l​y​ ​o​p​t​i​o​n​s​ ​a​t​ ​e​a​c​h​ ​s​t​e​p​.​ ​T​h​i​s​ ​p​a​r​a​m​e​t​e​r​ ​h​e​l​p​s​ ​c​o​n​t​r​o​l​ ​t​h​e​ ​c​o​h​e​r​e​n​c​e​ ​a​n​d​ ​f​o​c​u​s​ ​o​f​ ​r​e​s​p​o​n​s​e​s​ ​b​y​ ​r​e​s​t​r​i​c​t​i​n​g​ ​t​h​e​ ​v​o​c​a​b​u​l​a​r​y​ ​c​o​n​s​i​d​e​r​e​d​.
+							 */
+							longDesc: string
+						}
+						topP: {
+							/**
+							 * T​o​p​ ​P
+							 */
+							displayName: string
+							/**
+							 * N​u​c​l​e​u​s​ ​s​a​m​p​l​i​n​g​ ​p​a​r​a​m​e​t​e​r​ ​(​0​.​0​-​1​.​0​)
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​n​u​c​l​e​u​s​ ​s​a​m​p​l​i​n​g​ ​t​o​ ​c​o​n​t​r​o​l​ ​r​e​s​p​o​n​s​e​ ​d​i​v​e​r​s​i​t​y​.​ ​G​e​m​i​n​i​ ​w​i​l​l​ ​o​n​l​y​ ​c​o​n​s​i​d​e​r​ ​t​o​k​e​n​s​ ​w​h​o​s​e​ ​c​u​m​u​l​a​t​i​v​e​ ​p​r​o​b​a​b​i​l​i​t​y​ ​m​a​s​s​ ​i​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​t​o​p​ ​P​ ​t​h​r​e​s​h​o​l​d​,​ ​h​e​l​p​i​n​g​ ​b​a​l​a​n​c​e​ ​c​r​e​a​t​i​v​i​t​y​ ​a​n​d​ ​c​o​h​e​r​e​n​c​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_files: {
+					/**
+					 * L​i​s​t​ ​F​i​l​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​u​p​l​o​a​d​e​d​ ​f​i​l​e​s​ ​f​r​o​m​ ​G​e​m​i​n​i
+					 */
+					shortDesc: string
+					/**
+					 * L​i​s​t​s​ ​a​l​l​ ​f​i​l​e​s​ ​t​h​a​t​ ​h​a​v​e​ ​b​e​e​n​ ​u​p​l​o​a​d​e​d​ ​t​o​ ​t​h​e​ ​G​e​m​i​n​i​ ​s​e​r​v​i​c​e​,​ ​i​n​c​l​u​d​i​n​g​ ​f​i​l​e​ ​m​e​t​a​d​a​t​a​ ​s​u​c​h​ ​a​s​ ​n​a​m​e​,​ ​s​i​z​e​,​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e​,​ ​a​n​d​ ​M​I​M​E​ ​t​y​p​e​.
+					 */
+					longDesc: string
+				}
+				upload_file: {
+					/**
+					 * U​p​l​o​a​d​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * U​p​l​o​a​d​ ​a​ ​f​i​l​e​ ​t​o​ ​G​e​m​i​n​i​ ​f​o​r​ ​p​r​o​c​e​s​s​i​n​g
+					 */
+					shortDesc: string
+					/**
+					 * U​p​l​o​a​d​s​ ​a​ ​f​i​l​e​ ​t​o​ ​t​h​e​ ​G​e​m​i​n​i​ ​s​e​r​v​i​c​e​ ​w​h​e​r​e​ ​i​t​ ​c​a​n​ ​b​e​ ​u​s​e​d​ ​f​o​r​ ​A​I​ ​p​r​o​c​e​s​s​i​n​g​,​ ​a​n​a​l​y​s​i​s​,​ ​o​r​ ​g​e​n​e​r​a​t​i​o​n​ ​t​a​s​k​s​.​ ​T​h​e​ ​f​i​l​e​ ​w​i​l​l​ ​b​e​ ​s​t​o​r​e​d​ ​a​n​d​ ​m​a​d​e​ ​a​v​a​i​l​a​b​l​e​ ​f​o​r​ ​u​s​e​ ​w​i​t​h​ ​o​t​h​e​r​ ​G​e​m​i​n​i​ ​o​p​e​r​a​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						file: {
+							/**
+							 * F​i​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​f​i​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​l​o​a​d​ ​t​o​ ​G​e​m​i​n​i​.​ ​T​h​e​ ​f​i​l​e​ ​w​i​l​l​ ​b​e​ ​c​o​n​v​e​r​t​e​d​ ​a​n​d​ ​s​t​o​r​e​d​ ​i​n​ ​a​ ​f​o​r​m​a​t​ ​s​u​i​t​a​b​l​e​ ​f​o​r​ ​A​I​ ​p​r​o​c​e​s​s​i​n​g​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * D​i​s​p​l​a​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​c​u​s​t​o​m​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​a​ ​c​u​s​t​o​m​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​u​p​l​o​a​d​e​d​ ​f​i​l​e​.​ ​I​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​,​ ​t​h​e​ ​o​r​i​g​i​n​a​l​ ​f​i​l​e​n​a​m​e​ ​w​i​l​l​ ​b​e​ ​u​s​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				generate_image: {
+					/**
+					 * G​e​n​e​r​a​t​e​ ​I​m​a​g​e
+					 */
+					displayName: string
+					/**
+					 * G​e​n​e​r​a​t​e​ ​i​m​a​g​e​s​ ​u​s​i​n​g​ ​G​e​m​i​n​i​ ​A​I​ ​m​o​d​e​l​s
+					 */
+					shortDesc: string
+					/**
+					 * U​s​e​s​ ​G​e​m​i​n​i​ ​A​I​ ​t​o​ ​g​e​n​e​r​a​t​e​ ​h​i​g​h​-​q​u​a​l​i​t​y​ ​i​m​a​g​e​s​ ​b​a​s​e​d​ ​o​n​ ​t​e​x​t​ ​p​r​o​m​p​t​s​.​ ​S​u​p​p​o​r​t​s​ ​v​a​r​i​o​u​s​ ​a​s​p​e​c​t​ ​r​a​t​i​o​s​ ​a​n​d​ ​p​e​r​s​o​n​ ​g​e​n​e​r​a​t​i​o​n​ ​s​e​t​t​i​n​g​s​ ​f​o​r​ ​f​l​e​x​i​b​l​e​ ​i​m​a​g​e​ ​c​r​e​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						model: {
+							/**
+							 * M​o​d​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​e​m​i​n​i​ ​m​o​d​e​l​ ​t​o​ ​u​s​e​ ​f​o​r​ ​i​m​a​g​e​ ​g​e​n​e​r​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​G​e​m​i​n​i​ ​m​o​d​e​l​ ​f​o​r​ ​g​e​n​e​r​a​t​i​n​g​ ​i​m​a​g​e​s​.​ ​D​i​f​f​e​r​e​n​t​ ​m​o​d​e​l​s​ ​m​a​y​ ​h​a​v​e​ ​v​a​r​y​i​n​g​ ​c​a​p​a​b​i​l​i​t​i​e​s​ ​a​n​d​ ​q​u​a​l​i​t​y​ ​l​e​v​e​l​s​.
+							 */
+							longDesc: string
+						}
+						prompt: {
+							/**
+							 * P​r​o​m​p​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​i​m​a​g​e​ ​t​o​ ​g​e​n​e​r​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​a​ ​d​e​t​a​i​l​e​d​ ​t​e​x​t​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​i​m​a​g​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​n​e​r​a​t​e​.​ ​B​e​ ​s​p​e​c​i​f​i​c​ ​a​b​o​u​t​ ​o​b​j​e​c​t​s​,​ ​s​t​y​l​e​,​ ​c​o​m​p​o​s​i​t​i​o​n​,​ ​a​n​d​ ​a​n​y​ ​o​t​h​e​r​ ​v​i​s​u​a​l​ ​e​l​e​m​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+						ratio: {
+							/**
+							 * A​s​p​e​c​t​ ​R​a​t​i​o
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​s​p​e​c​t​ ​r​a​t​i​o​ ​f​o​r​ ​t​h​e​ ​g​e​n​e​r​a​t​e​d​ ​i​m​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​a​s​p​e​c​t​ ​r​a​t​i​o​ ​f​o​r​ ​y​o​u​r​ ​g​e​n​e​r​a​t​e​d​ ​i​m​a​g​e​.​ ​O​p​t​i​o​n​s​ ​i​n​c​l​u​d​e​ ​s​q​u​a​r​e​ ​(​1​:​1​)​,​ ​p​o​r​t​r​a​i​t​ ​(​3​:​4​,​ ​9​:​1​6​)​,​ ​l​a​n​d​s​c​a​p​e​ ​(​4​:​3​,​ ​1​6​:​9​)​,​ ​a​n​d​ ​o​t​h​e​r​ ​c​o​m​m​o​n​ ​r​a​t​i​o​s​.
+							 */
+							longDesc: string
+						}
+						personGeneration: {
+							/**
+							 * P​e​r​s​o​n​ ​G​e​n​e​r​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​r​o​l​ ​g​e​n​e​r​a​t​i​o​n​ ​o​f​ ​p​e​o​p​l​e​ ​i​n​ ​i​m​a​g​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​p​o​l​i​c​y​ ​f​o​r​ ​g​e​n​e​r​a​t​i​n​g​ ​i​m​a​g​e​s​ ​w​i​t​h​ ​p​e​o​p​l​e​.​ ​C​h​o​o​s​e​ ​t​o​ ​a​l​l​o​w​ ​a​l​l​ ​p​e​o​p​l​e​,​ ​o​n​l​y​ ​a​d​u​l​t​s​,​ ​o​r​ ​n​o​ ​p​e​o​p​l​e​ ​i​n​ ​t​h​e​ ​g​e​n​e​r​a​t​e​d​ ​i​m​a​g​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
+		OpenRouter: {
+			/**
+			 * O​p​e​n​R​o​u​t​e​r
+			 */
+			displayName: string
+			/**
+			 * A​c​c​e​s​s​ ​m​u​l​t​i​p​l​e​ ​A​I​ ​m​o​d​e​l​s​ ​t​h​r​o​u​g​h​ ​a​ ​u​n​i​f​i​e​d​ ​A​P​I
+			 */
+			shortDesc: string
+			/**
+			 * O​p​e​n​R​o​u​t​e​r​ ​p​r​o​v​i​d​e​s​ ​a​ ​u​n​i​f​i​e​d​ ​i​n​t​e​r​f​a​c​e​ ​t​o​ ​a​c​c​e​s​s​ ​a​n​d​ ​c​o​m​p​a​r​e​ ​m​u​l​t​i​p​l​e​ ​A​I​ ​m​o​d​e​l​s​ ​f​r​o​m​ ​d​i​f​f​e​r​e​n​t​ ​p​r​o​v​i​d​e​r​s​.​ ​R​o​u​t​e​ ​y​o​u​r​ ​r​e​q​u​e​s​t​s​ ​t​o​ ​t​h​e​ ​b​e​s​t​ ​m​o​d​e​l​ ​f​o​r​ ​y​o​u​r​ ​s​p​e​c​i​f​i​c​ ​u​s​e​ ​c​a​s​e​,​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​t​e​x​t​ ​g​e​n​e​r​a​t​i​o​n​,​ ​c​h​a​t​ ​c​o​m​p​l​e​t​i​o​n​,​ ​a​n​d​ ​o​t​h​e​r​ ​A​I​ ​c​a​p​a​b​i​l​i​t​i​e​s​ ​f​r​o​m​ ​l​e​a​d​i​n​g​ ​p​r​o​v​i​d​e​r​s​ ​l​i​k​e​ ​O​p​e​n​A​I​,​ ​A​n​t​h​r​o​p​i​c​,​ ​G​o​o​g​l​e​,​ ​a​n​d​ ​m​o​r​e​.
+			 */
+			longDesc: string
+			OpenRouter: {
+				actions: {
+					list_models: {
+						/**
+						 * L​i​s​t​ ​M​o​d​e​l​s
+						 */
+						displayName: string
+						/**
+						 * R​e​t​r​i​e​v​e​ ​a​v​a​i​l​a​b​l​e​ ​A​I​ ​m​o​d​e​l​s​ ​f​r​o​m​ ​O​p​e​n​R​o​u​t​e​r
+						 */
+						shortDesc: string
+						/**
+						 * F​e​t​c​h​e​s​ ​a​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​A​I​ ​m​o​d​e​l​s​ ​a​v​a​i​l​a​b​l​e​ ​t​h​r​o​u​g​h​ ​O​p​e​n​R​o​u​t​e​r​,​ ​i​n​c​l​u​d​i​n​g​ ​m​o​d​e​l​ ​m​e​t​a​d​a​t​a​ ​s​u​c​h​ ​a​s​ ​p​r​i​c​i​n​g​,​ ​c​a​p​a​b​i​l​i​t​i​e​s​,​ ​c​o​n​t​e​x​t​ ​l​e​n​g​t​h​,​ ​s​u​p​p​o​r​t​e​d​ ​p​a​r​a​m​e​t​e​r​s​,​ ​a​n​d​ ​p​r​o​v​i​d​e​r​ ​i​n​f​o​r​m​a​t​i​o​n​.
+						 */
+						longDesc: string
+						options: {
+							category: {
+								/**
+								 * C​a​t​e​g​o​r​y
+								 */
+								displayName: string
+								/**
+								 * F​i​l​t​e​r​ ​m​o​d​e​l​s​ ​b​y​ ​c​a​t​e​g​o​r​y
+								 */
+								shortDesc: string
+								/**
+								 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​m​o​d​e​l​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​g​e​t​ ​a​l​l​ ​a​v​a​i​l​a​b​l​e​ ​m​o​d​e​l​s​.
+								 */
+								longDesc: string
+							}
+						}
+					}
+					send_prompt: {
+						/**
+						 * S​e​n​d​ ​P​r​o​m​p​t
+						 */
+						displayName: string
+						/**
+						 * S​e​n​d​ ​a​ ​t​e​x​t​ ​p​r​o​m​p​t​ ​f​o​r​ ​c​o​m​p​l​e​t​i​o​n
+						 */
+						shortDesc: string
+						/**
+						 * S​e​n​d​s​ ​a​ ​s​i​n​g​l​e​ ​t​e​x​t​ ​p​r​o​m​p​t​ ​t​o​ ​a​n​ ​A​I​ ​m​o​d​e​l​ ​f​o​r​ ​c​o​m​p​l​e​t​i​o​n​.​ ​T​h​i​s​ ​i​s​ ​i​d​e​a​l​ ​f​o​r​ ​s​i​m​p​l​e​ ​t​e​x​t​ ​g​e​n​e​r​a​t​i​o​n​ ​t​a​s​k​s​,​ ​c​r​e​a​t​i​v​e​ ​w​r​i​t​i​n​g​,​ ​o​r​ ​w​h​e​n​ ​y​o​u​ ​n​e​e​d​ ​a​ ​d​i​r​e​c​t​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​a​ ​s​i​n​g​l​e​ ​i​n​p​u​t​.
+						 */
+						longDesc: string
+						options: {
+							model: {
+								/**
+								 * M​o​d​e​l
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​A​I​ ​m​o​d​e​l​ ​t​o​ ​u​s​e​ ​f​o​r​ ​c​o​m​p​l​e​t​i​o​n
+								 */
+								shortDesc: string
+								/**
+								 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​A​I​ ​m​o​d​e​l​ ​t​o​ ​p​r​o​c​e​s​s​ ​y​o​u​r​ ​p​r​o​m​p​t​.​ ​D​i​f​f​e​r​e​n​t​ ​m​o​d​e​l​s​ ​h​a​v​e​ ​v​a​r​y​i​n​g​ ​c​a​p​a​b​i​l​i​t​i​e​s​,​ ​p​r​i​c​i​n​g​,​ ​a​n​d​ ​s​p​e​c​i​a​l​i​z​a​t​i​o​n​s​.
+								 */
+								longDesc: string
+							}
+							prompt: {
+								/**
+								 * P​r​o​m​p​t
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​t​e​x​t​ ​p​r​o​m​p​t​ ​t​o​ ​s​e​n​d
+								 */
+								shortDesc: string
+								/**
+								 * E​n​t​e​r​ ​t​h​e​ ​t​e​x​t​ ​p​r​o​m​p​t​ ​y​o​u​ ​w​a​n​t​ ​t​h​e​ ​A​I​ ​m​o​d​e​l​ ​t​o​ ​c​o​m​p​l​e​t​e​ ​o​r​ ​r​e​s​p​o​n​d​ ​t​o​.​ ​B​e​ ​c​l​e​a​r​ ​a​n​d​ ​s​p​e​c​i​f​i​c​ ​f​o​r​ ​b​e​t​t​e​r​ ​r​e​s​u​l​t​s​.
+								 */
+								longDesc: string
+							}
+							temperature: {
+								/**
+								 * T​e​m​p​e​r​a​t​u​r​e
+								 */
+								displayName: string
+								/**
+								 * C​o​n​t​r​o​l​ ​r​a​n​d​o​m​n​e​s​s​ ​i​n​ ​r​e​s​p​o​n​s​e​s
+								 */
+								shortDesc: string
+								/**
+								 * C​o​n​t​r​o​l​s​ ​t​h​e​ ​r​a​n​d​o​m​n​e​s​s​ ​o​f​ ​t​h​e​ ​o​u​t​p​u​t​.​ ​L​o​w​e​r​ ​v​a​l​u​e​s​ ​(​0​.​0​-​0​.​3​)​ ​m​a​k​e​ ​r​e​s​p​o​n​s​e​s​ ​m​o​r​e​ ​f​o​c​u​s​e​d​ ​a​n​d​ ​d​e​t​e​r​m​i​n​i​s​t​i​c​,​ ​w​h​i​l​e​ ​h​i​g​h​e​r​ ​v​a​l​u​e​s​ ​(​0​.​7​-​1​.​0​)​ ​m​a​k​e​ ​t​h​e​m​ ​m​o​r​e​ ​c​r​e​a​t​i​v​e​ ​a​n​d​ ​v​a​r​i​e​d​.
+								 */
+								longDesc: string
+							}
+							max_tokens: {
+								/**
+								 * M​a​x​ ​T​o​k​e​n​s
+								 */
+								displayName: string
+								/**
+								 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​o​k​e​n​s​ ​t​o​ ​g​e​n​e​r​a​t​e
+								 */
+								shortDesc: string
+								/**
+								 * S​e​t​s​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​o​k​e​n​s​ ​(​r​o​u​g​h​l​y​ ​w​o​r​d​s​)​ ​t​h​e​ ​m​o​d​e​l​ ​s​h​o​u​l​d​ ​g​e​n​e​r​a​t​e​ ​i​n​ ​i​t​s​ ​r​e​s​p​o​n​s​e​.​ ​H​i​g​h​e​r​ ​v​a​l​u​e​s​ ​a​l​l​o​w​ ​f​o​r​ ​l​o​n​g​e​r​ ​r​e​s​p​o​n​s​e​s​ ​b​u​t​ ​m​a​y​ ​i​n​c​r​e​a​s​e​ ​c​o​s​t​s​.
+								 */
+								longDesc: string
+							}
+							seed: {
+								/**
+								 * S​e​e​d
+								 */
+								displayName: string
+								/**
+								 * R​a​n​d​o​m​ ​s​e​e​d​ ​f​o​r​ ​r​e​p​r​o​d​u​c​i​b​l​e​ ​r​e​s​u​l​t​s
+								 */
+								shortDesc: string
+								/**
+								 * A​ ​n​u​m​b​e​r​ ​u​s​e​d​ ​t​o​ ​i​n​i​t​i​a​l​i​z​e​ ​t​h​e​ ​r​a​n​d​o​m​ ​n​u​m​b​e​r​ ​g​e​n​e​r​a​t​o​r​.​ ​U​s​i​n​g​ ​t​h​e​ ​s​a​m​e​ ​s​e​e​d​ ​w​i​t​h​ ​i​d​e​n​t​i​c​a​l​ ​p​a​r​a​m​e​t​e​r​s​ ​s​h​o​u​l​d​ ​p​r​o​d​u​c​e​ ​c​o​n​s​i​s​t​e​n​t​ ​r​e​s​u​l​t​s​ ​a​c​r​o​s​s​ ​r​e​q​u​e​s​t​s​.
+								 */
+								longDesc: string
+							}
+							top_p: {
+								/**
+								 * T​o​p​ ​P
+								 */
+								displayName: string
+								/**
+								 * N​u​c​l​e​u​s​ ​s​a​m​p​l​i​n​g​ ​p​a​r​a​m​e​t​e​r
+								 */
+								shortDesc: string
+								/**
+								 * C​o​n​t​r​o​l​s​ ​d​i​v​e​r​s​i​t​y​ ​v​i​a​ ​n​u​c​l​e​u​s​ ​s​a​m​p​l​i​n​g​.​ ​O​n​l​y​ ​t​o​k​e​n​s​ ​w​i​t​h​ ​c​u​m​u​l​a​t​i​v​e​ ​p​r​o​b​a​b​i​l​i​t​y​ ​u​p​ ​t​o​ ​t​h​i​s​ ​v​a​l​u​e​ ​a​r​e​ ​c​o​n​s​i​d​e​r​e​d​.​ ​L​o​w​e​r​ ​v​a​l​u​e​s​ ​f​o​c​u​s​ ​o​n​ ​m​o​r​e​ ​l​i​k​e​l​y​ ​t​o​k​e​n​s​.
+								 */
+								longDesc: string
+							}
+							top_k: {
+								/**
+								 * T​o​p​ ​K
+								 */
+								displayName: string
+								/**
+								 * T​o​p​-​k​ ​s​a​m​p​l​i​n​g​ ​p​a​r​a​m​e​t​e​r
+								 */
+								shortDesc: string
+								/**
+								 * L​i​m​i​t​s​ ​t​h​e​ ​m​o​d​e​l​ ​t​o​ ​c​o​n​s​i​d​e​r​ ​o​n​l​y​ ​t​h​e​ ​t​o​p​ ​K​ ​m​o​s​t​ ​l​i​k​e​l​y​ ​t​o​k​e​n​s​ ​a​t​ ​e​a​c​h​ ​s​t​e​p​.​ ​L​o​w​e​r​ ​v​a​l​u​e​s​ ​m​a​k​e​ ​r​e​s​p​o​n​s​e​s​ ​m​o​r​e​ ​f​o​c​u​s​e​d​,​ ​h​i​g​h​e​r​ ​v​a​l​u​e​s​ ​i​n​c​r​e​a​s​e​ ​d​i​v​e​r​s​i​t​y​.
+								 */
+								longDesc: string
+							}
+						}
+					}
+					chat_completion: {
+						/**
+						 * C​h​a​t​ ​C​o​m​p​l​e​t​i​o​n
+						 */
+						displayName: string
+						/**
+						 * G​e​n​e​r​a​t​e​ ​c​h​a​t​ ​r​e​s​p​o​n​s​e​s​ ​f​r​o​m​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​m​e​s​s​a​g​e​s
+						 */
+						shortDesc: string
+						/**
+						 * P​r​o​c​e​s​s​e​s​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​h​i​s​t​o​r​y​ ​w​i​t​h​ ​m​u​l​t​i​p​l​e​ ​m​e​s​s​a​g​e​s​ ​a​n​d​ ​r​o​l​e​s​ ​(​s​y​s​t​e​m​,​ ​u​s​e​r​,​ ​a​s​s​i​s​t​a​n​t​)​ ​t​o​ ​g​e​n​e​r​a​t​e​ ​c​o​n​t​e​x​t​u​a​l​ ​r​e​s​p​o​n​s​e​s​.​ ​P​e​r​f​e​c​t​ ​f​o​r​ ​b​u​i​l​d​i​n​g​ ​c​h​a​t​b​o​t​s​,​ ​c​o​n​v​e​r​s​a​t​i​o​n​a​l​ ​A​I​,​ ​o​r​ ​m​u​l​t​i​-​t​u​r​n​ ​i​n​t​e​r​a​c​t​i​o​n​s​.
+						 */
+						longDesc: string
+						options: {
+							model: {
+								/**
+								 * M​o​d​e​l
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​A​I​ ​m​o​d​e​l​ ​t​o​ ​u​s​e​ ​f​o​r​ ​c​h​a​t​ ​c​o​m​p​l​e​t​i​o​n
+								 */
+								shortDesc: string
+								/**
+								 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​A​I​ ​m​o​d​e​l​ ​t​o​ ​p​r​o​c​e​s​s​ ​y​o​u​r​ ​c​o​n​v​e​r​s​a​t​i​o​n​.​ ​D​i​f​f​e​r​e​n​t​ ​m​o​d​e​l​s​ ​e​x​c​e​l​ ​a​t​ ​d​i​f​f​e​r​e​n​t​ ​t​y​p​e​s​ ​o​f​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​a​n​d​ ​h​a​v​e​ ​v​a​r​y​i​n​g​ ​c​o​n​t​e​x​t​ ​l​e​n​g​t​h​s​.
+								 */
+								longDesc: string
+							}
+							messages: {
+								/**
+								 * M​e​s​s​a​g​e​s
+								 */
+								displayName: string
+								/**
+								 * C​o​n​v​e​r​s​a​t​i​o​n​ ​m​e​s​s​a​g​e​s​ ​w​i​t​h​ ​r​o​l​e​s
+								 */
+								shortDesc: string
+								/**
+								 * A​n​ ​a​r​r​a​y​ ​o​f​ ​m​e​s​s​a​g​e​ ​o​b​j​e​c​t​s​ ​r​e​p​r​e​s​e​n​t​i​n​g​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​h​i​s​t​o​r​y​.​ ​E​a​c​h​ ​m​e​s​s​a​g​e​ ​i​n​c​l​u​d​e​s​ ​a​ ​r​o​l​e​ ​(​s​y​s​t​e​m​,​ ​u​s​e​r​,​ ​a​s​s​i​s​t​a​n​t​,​ ​d​e​v​e​l​o​p​e​r​,​ ​t​o​o​l​)​ ​a​n​d​ ​c​o​n​t​e​n​t​.
+								 */
+								longDesc: string
+								type: {
+									element_type: {
+										fields: {
+											role: {
+												/**
+												 * R​o​l​e
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​r​o​l​e​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​s​e​n​d​e​r
+												 */
+												shortDesc: string
+												/**
+												 * D​e​f​i​n​e​s​ ​w​h​o​ ​i​s​ ​s​e​n​d​i​n​g​ ​t​h​e​ ​m​e​s​s​a​g​e​:​ ​s​y​s​t​e​m​ ​(​i​n​s​t​r​u​c​t​i​o​n​s​)​,​ ​u​s​e​r​ ​(​h​u​m​a​n​ ​i​n​p​u​t​)​,​ ​a​s​s​i​s​t​a​n​t​ ​(​A​I​ ​r​e​s​p​o​n​s​e​s​)​,​ ​d​e​v​e​l​o​p​e​r​ ​(​s​p​e​c​i​a​l​ ​i​n​s​t​r​u​c​t​i​o​n​s​)​,​ ​o​r​ ​t​o​o​l​ ​(​t​o​o​l​ ​o​u​t​p​u​t​s​)​.
+												 */
+												longDesc: string
+											}
+											content: {
+												/**
+												 * C​o​n​t​e​n​t
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​a​c​t​u​a​l​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​.​ ​F​o​r​ ​s​y​s​t​e​m​ ​m​e​s​s​a​g​e​s​,​ ​t​h​i​s​ ​t​y​p​i​c​a​l​l​y​ ​c​o​n​t​a​i​n​s​ ​i​n​s​t​r​u​c​t​i​o​n​s​.​ ​F​o​r​ ​u​s​e​r​ ​m​e​s​s​a​g​e​s​,​ ​i​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​h​u​m​a​n​ ​i​n​p​u​t​.
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+							temperature: {
+								/**
+								 * T​e​m​p​e​r​a​t​u​r​e
+								 */
+								displayName: string
+								/**
+								 * C​o​n​t​r​o​l​ ​r​a​n​d​o​m​n​e​s​s​ ​i​n​ ​r​e​s​p​o​n​s​e​s
+								 */
+								shortDesc: string
+								/**
+								 * C​o​n​t​r​o​l​s​ ​t​h​e​ ​r​a​n​d​o​m​n​e​s​s​ ​o​f​ ​t​h​e​ ​o​u​t​p​u​t​.​ ​L​o​w​e​r​ ​v​a​l​u​e​s​ ​(​0​.​0​-​0​.​3​)​ ​m​a​k​e​ ​r​e​s​p​o​n​s​e​s​ ​m​o​r​e​ ​f​o​c​u​s​e​d​ ​a​n​d​ ​d​e​t​e​r​m​i​n​i​s​t​i​c​,​ ​w​h​i​l​e​ ​h​i​g​h​e​r​ ​v​a​l​u​e​s​ ​(​0​.​7​-​1​.​0​)​ ​m​a​k​e​ ​t​h​e​m​ ​m​o​r​e​ ​c​r​e​a​t​i​v​e​ ​a​n​d​ ​v​a​r​i​e​d​.
+								 */
+								longDesc: string
+							}
+							max_tokens: {
+								/**
+								 * M​a​x​ ​T​o​k​e​n​s
+								 */
+								displayName: string
+								/**
+								 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​o​k​e​n​s​ ​t​o​ ​g​e​n​e​r​a​t​e
+								 */
+								shortDesc: string
+								/**
+								 * S​e​t​s​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​o​k​e​n​s​ ​(​r​o​u​g​h​l​y​ ​w​o​r​d​s​)​ ​t​h​e​ ​m​o​d​e​l​ ​s​h​o​u​l​d​ ​g​e​n​e​r​a​t​e​ ​i​n​ ​i​t​s​ ​r​e​s​p​o​n​s​e​.​ ​H​i​g​h​e​r​ ​v​a​l​u​e​s​ ​a​l​l​o​w​ ​f​o​r​ ​l​o​n​g​e​r​ ​r​e​s​p​o​n​s​e​s​ ​b​u​t​ ​m​a​y​ ​i​n​c​r​e​a​s​e​ ​c​o​s​t​s​.
+								 */
+								longDesc: string
+							}
+							seed: {
+								/**
+								 * S​e​e​d
+								 */
+								displayName: string
+								/**
+								 * R​a​n​d​o​m​ ​s​e​e​d​ ​f​o​r​ ​r​e​p​r​o​d​u​c​i​b​l​e​ ​r​e​s​u​l​t​s
+								 */
+								shortDesc: string
+								/**
+								 * A​ ​n​u​m​b​e​r​ ​u​s​e​d​ ​t​o​ ​i​n​i​t​i​a​l​i​z​e​ ​t​h​e​ ​r​a​n​d​o​m​ ​n​u​m​b​e​r​ ​g​e​n​e​r​a​t​o​r​.​ ​U​s​i​n​g​ ​t​h​e​ ​s​a​m​e​ ​s​e​e​d​ ​w​i​t​h​ ​i​d​e​n​t​i​c​a​l​ ​p​a​r​a​m​e​t​e​r​s​ ​s​h​o​u​l​d​ ​p​r​o​d​u​c​e​ ​c​o​n​s​i​s​t​e​n​t​ ​r​e​s​u​l​t​s​ ​a​c​r​o​s​s​ ​r​e​q​u​e​s​t​s​.
+								 */
+								longDesc: string
+							}
+							top_p: {
+								/**
+								 * T​o​p​ ​P
+								 */
+								displayName: string
+								/**
+								 * N​u​c​l​e​u​s​ ​s​a​m​p​l​i​n​g​ ​p​a​r​a​m​e​t​e​r
+								 */
+								shortDesc: string
+								/**
+								 * C​o​n​t​r​o​l​s​ ​d​i​v​e​r​s​i​t​y​ ​v​i​a​ ​n​u​c​l​e​u​s​ ​s​a​m​p​l​i​n​g​.​ ​O​n​l​y​ ​t​o​k​e​n​s​ ​w​i​t​h​ ​c​u​m​u​l​a​t​i​v​e​ ​p​r​o​b​a​b​i​l​i​t​y​ ​u​p​ ​t​o​ ​t​h​i​s​ ​v​a​l​u​e​ ​a​r​e​ ​c​o​n​s​i​d​e​r​e​d​.​ ​L​o​w​e​r​ ​v​a​l​u​e​s​ ​f​o​c​u​s​ ​o​n​ ​m​o​r​e​ ​l​i​k​e​l​y​ ​t​o​k​e​n​s​.
+								 */
+								longDesc: string
+							}
+							top_k: {
+								/**
+								 * T​o​p​ ​K
+								 */
+								displayName: string
+								/**
+								 * T​o​p​-​k​ ​s​a​m​p​l​i​n​g​ ​p​a​r​a​m​e​t​e​r
+								 */
+								shortDesc: string
+								/**
+								 * L​i​m​i​t​s​ ​t​h​e​ ​m​o​d​e​l​ ​t​o​ ​c​o​n​s​i​d​e​r​ ​o​n​l​y​ ​t​h​e​ ​t​o​p​ ​K​ ​m​o​s​t​ ​l​i​k​e​l​y​ ​t​o​k​e​n​s​ ​a​t​ ​e​a​c​h​ ​s​t​e​p​.​ ​L​o​w​e​r​ ​v​a​l​u​e​s​ ​m​a​k​e​ ​r​e​s​p​o​n​s​e​s​ ​m​o​r​e​ ​f​o​c​u​s​e​d​,​ ​h​i​g​h​e​r​ ​v​a​l​u​e​s​ ​i​n​c​r​e​a​s​e​ ​d​i​v​e​r​s​i​t​y​.
+								 */
+								longDesc: string
+							}
 						}
 					}
 				}
@@ -57897,6 +58653,164 @@ export type TranslationFunctions = {
 				}
 			}
 		}
+		Claude: {
+			/**
+			 * Claude
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * AI assistant for conversations, analysis, and content creation
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Connect to Claude, Anthropic's AI assistant, to leverage advanced language understanding and generation capabilities. Use Claude for intelligent conversations, content creation, data analysis, code assistance, research support, and complex reasoning tasks. Claude can help automate workflows that require natural language processing, creative writing, technical documentation, and analytical thinking.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				send_message: {
+					/**
+					 * Send Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a message to Claude AI and get a response
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Send a text message to Claude AI with optional system instructions, file attachments, and customizable parameters. Claude can process text, images, and documents to provide intelligent responses.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						model: {
+							/**
+							 * Model
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Claude model to use for the conversation
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select which Claude model to use for generating the response. Different models have varying capabilities, speed, and cost characteristics.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message: {
+							/**
+							 * Message
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The message to send to Claude
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the text message you want to send to Claude. This will be the main content that Claude responds to.
+							 */
+							longDesc: () => LocalizedString
+						}
+						system: {
+							/**
+							 * System Instructions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * System-level instructions for Claude
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional system instructions that define how Claude should behave, its role, or specific guidelines for the conversation. These instructions help shape Claude's responses.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_tokens: {
+							/**
+							 * Max Tokens
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of tokens in the response
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the maximum number of tokens (roughly words) that Claude can use in its response. Higher values allow for longer responses but may increase costs.
+							 */
+							longDesc: () => LocalizedString
+						}
+						temperature: {
+							/**
+							 * Temperature
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Controls randomness in responses (0.0-1.0)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Control the creativity and randomness of Claude's responses. Lower values (near 0) make responses more focused and deterministic, while higher values (near 1) make them more creative and varied.
+							 */
+							longDesc: () => LocalizedString
+						}
+						top_k: {
+							/**
+							 * Top K
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Limits token selection to top K most likely options
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Limit Claude's token selection to the K most likely options at each step. This can help control the coherence and focus of responses.
+							 */
+							longDesc: () => LocalizedString
+						}
+						top_p: {
+							/**
+							 * Top P
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Nucleus sampling parameter (0.0-1.0)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use nucleus sampling to control response diversity. Claude will only consider tokens whose cumulative probability mass is within the top P threshold.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file: {
+							/**
+							 * File Attachment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional file to include with the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Attach an image or document for Claude to analyze along with your message. Supported formats include images (JPEG, PNG, GIF, WebP) and PDF documents.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_models: {
+					/**
+					 * List Models
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of available Claude models
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get a list of all available Claude models.
+					 */
+					longDesc: () => LocalizedString
+				}
+			}
+		}
 		BrowseAi: {
 			/**
 			 * Browse AI
@@ -63924,6 +64838,604 @@ export type TranslationFunctions = {
 							 * The ClickUp workspace to monitor for task update events
 							 */
 							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		Gemini: {
+			/**
+			 * Gemini
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Google's advanced AI model for multimodal understanding and generation
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Connect to Google's Gemini AI to leverage state-of-the-art multimodal capabilities including text generation, image analysis, code assistance, and reasoning tasks. Gemini excels at understanding and generating content across text, images, and code, making it ideal for complex workflows requiring advanced AI reasoning, creative content generation, data analysis, and intelligent automation within your Qore applications.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				list_models: {
+					/**
+					 * List Models
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of available Gemini models
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get a comprehensive list of all available Google Gemini models with their specifications, capabilities, and limitations. This helps you choose the right model for your specific use case.
+					 */
+					longDesc: () => LocalizedString
+				}
+				send_message: {
+					/**
+					 * Send Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a prompt to Google Gemini and get a response
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Send a text prompt to Google Gemini AI with optional system instructions and customizable parameters. Gemini can process complex prompts and provide intelligent, contextual responses.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						model: {
+							/**
+							 * Model
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Gemini model to use for generation
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select which Google Gemini model to use for generating the response. Different models have varying capabilities, performance characteristics, and token limits.
+							 */
+							longDesc: () => LocalizedString
+						}
+						prompt: {
+							/**
+							 * Prompt
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The prompt to send to Gemini
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the text prompt you want to send to Gemini. This will be the main content that Gemini responds to and generates content based on.
+							 */
+							longDesc: () => LocalizedString
+						}
+						system: {
+							/**
+							 * System Instruction
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * System-level instructions for Gemini
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional system instruction that defines how Gemini should behave, its role, or specific guidelines for the conversation. This helps shape Gemini's responses and behavior.
+							 */
+							longDesc: () => LocalizedString
+						}
+						maxOutputTokens: {
+							/**
+							 * Max Output Tokens
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of tokens in the response
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the maximum number of tokens that Gemini can use in its response. Higher values allow for longer responses but may increase processing time and costs.
+							 */
+							longDesc: () => LocalizedString
+						}
+						files: {
+							/**
+							 * Files
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Files to attach to the prompt
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Attach files that Gemini can reference when generating its response. This allows Gemini to analyze and incorporate information from the provided files into its output.
+							 */
+							longDesc: () => LocalizedString
+						}
+						temperature: {
+							/**
+							 * Temperature
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Controls randomness in responses (0.0-2.0)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Control the creativity and randomness of Gemini's responses. Lower values (near 0) make responses more focused and deterministic, while higher values (up to 2.0) make them more creative and varied.
+							 */
+							longDesc: () => LocalizedString
+						}
+						topK: {
+							/**
+							 * Top K
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Limits token selection to top K most likely options
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Limit Gemini's token selection to the K most likely options at each step. This parameter helps control the coherence and focus of responses by restricting the vocabulary considered.
+							 */
+							longDesc: () => LocalizedString
+						}
+						topP: {
+							/**
+							 * Top P
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Nucleus sampling parameter (0.0-1.0)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use nucleus sampling to control response diversity. Gemini will only consider tokens whose cumulative probability mass is within the top P threshold, helping balance creativity and coherence.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_files: {
+					/**
+					 * List Files
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of uploaded files from Gemini
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Lists all files that have been uploaded to the Gemini service, including file metadata such as name, size, creation time, and MIME type.
+					 */
+					longDesc: () => LocalizedString
+				}
+				upload_file: {
+					/**
+					 * Upload File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Upload a file to Gemini for processing
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Uploads a file to the Gemini service where it can be used for AI processing, analysis, or generation tasks. The file will be stored and made available for use with other Gemini operations.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						file: {
+							/**
+							 * File
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The file to upload
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the file you want to upload to Gemini. The file will be converted and stored in a format suitable for AI processing.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Display Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional custom name for the file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide a custom display name for the uploaded file. If not provided, the original filename will be used.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				generate_image: {
+					/**
+					 * Generate Image
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Generate images using Gemini AI models
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Uses Gemini AI to generate high-quality images based on text prompts. Supports various aspect ratios and person generation settings for flexible image creation.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						model: {
+							/**
+							 * Model
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Gemini model to use for image generation
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific Gemini model for generating images. Different models may have varying capabilities and quality levels.
+							 */
+							longDesc: () => LocalizedString
+						}
+						prompt: {
+							/**
+							 * Prompt
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text description of the image to generate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide a detailed text description of the image you want to generate. Be specific about objects, style, composition, and any other visual elements.
+							 */
+							longDesc: () => LocalizedString
+						}
+						ratio: {
+							/**
+							 * Aspect Ratio
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The aspect ratio for the generated image
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the aspect ratio for your generated image. Options include square (1:1), portrait (3:4, 9:16), landscape (4:3, 16:9), and other common ratios.
+							 */
+							longDesc: () => LocalizedString
+						}
+						personGeneration: {
+							/**
+							 * Person Generation
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Control generation of people in images
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the policy for generating images with people. Choose to allow all people, only adults, or no people in the generated images.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		OpenRouter: {
+			/**
+			 * OpenRouter
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Access multiple AI models through a unified API
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * OpenRouter provides a unified interface to access and compare multiple AI models from different providers. Route your requests to the best model for your specific use case, with support for text generation, chat completion, and other AI capabilities from leading providers like OpenAI, Anthropic, Google, and more.
+			 */
+			longDesc: () => LocalizedString
+			OpenRouter: {
+				actions: {
+					list_models: {
+						/**
+						 * List Models
+						 */
+						displayName: () => LocalizedString
+						/**
+						 * Retrieve available AI models from OpenRouter
+						 */
+						shortDesc: () => LocalizedString
+						/**
+						 * Fetches a comprehensive list of all AI models available through OpenRouter, including model metadata such as pricing, capabilities, context length, supported parameters, and provider information.
+						 */
+						longDesc: () => LocalizedString
+						options: {
+							category: {
+								/**
+								 * Category
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Filter models by category
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Optional filter to retrieve models from a specific category or type. Leave empty to get all available models.
+								 */
+								longDesc: () => LocalizedString
+							}
+						}
+					}
+					send_prompt: {
+						/**
+						 * Send Prompt
+						 */
+						displayName: () => LocalizedString
+						/**
+						 * Send a text prompt for completion
+						 */
+						shortDesc: () => LocalizedString
+						/**
+						 * Sends a single text prompt to an AI model for completion. This is ideal for simple text generation tasks, creative writing, or when you need a direct response to a single input.
+						 */
+						longDesc: () => LocalizedString
+						options: {
+							model: {
+								/**
+								 * Model
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The AI model to use for completion
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Select the specific AI model to process your prompt. Different models have varying capabilities, pricing, and specializations.
+								 */
+								longDesc: () => LocalizedString
+							}
+							prompt: {
+								/**
+								 * Prompt
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The text prompt to send
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Enter the text prompt you want the AI model to complete or respond to. Be clear and specific for better results.
+								 */
+								longDesc: () => LocalizedString
+							}
+							temperature: {
+								/**
+								 * Temperature
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Control randomness in responses
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Controls the randomness of the output. Lower values (0.0-0.3) make responses more focused and deterministic, while higher values (0.7-1.0) make them more creative and varied.
+								 */
+								longDesc: () => LocalizedString
+							}
+							max_tokens: {
+								/**
+								 * Max Tokens
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Maximum number of tokens to generate
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Sets the maximum number of tokens (roughly words) the model should generate in its response. Higher values allow for longer responses but may increase costs.
+								 */
+								longDesc: () => LocalizedString
+							}
+							seed: {
+								/**
+								 * Seed
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Random seed for reproducible results
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * A number used to initialize the random number generator. Using the same seed with identical parameters should produce consistent results across requests.
+								 */
+								longDesc: () => LocalizedString
+							}
+							top_p: {
+								/**
+								 * Top P
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Nucleus sampling parameter
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Controls diversity via nucleus sampling. Only tokens with cumulative probability up to this value are considered. Lower values focus on more likely tokens.
+								 */
+								longDesc: () => LocalizedString
+							}
+							top_k: {
+								/**
+								 * Top K
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Top-k sampling parameter
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Limits the model to consider only the top K most likely tokens at each step. Lower values make responses more focused, higher values increase diversity.
+								 */
+								longDesc: () => LocalizedString
+							}
+						}
+					}
+					chat_completion: {
+						/**
+						 * Chat Completion
+						 */
+						displayName: () => LocalizedString
+						/**
+						 * Generate chat responses from conversation messages
+						 */
+						shortDesc: () => LocalizedString
+						/**
+						 * Processes a conversation history with multiple messages and roles (system, user, assistant) to generate contextual responses. Perfect for building chatbots, conversational AI, or multi-turn interactions.
+						 */
+						longDesc: () => LocalizedString
+						options: {
+							model: {
+								/**
+								 * Model
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The AI model to use for chat completion
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Select the specific AI model to process your conversation. Different models excel at different types of conversations and have varying context lengths.
+								 */
+								longDesc: () => LocalizedString
+							}
+							messages: {
+								/**
+								 * Messages
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Conversation messages with roles
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * An array of message objects representing the conversation history. Each message includes a role (system, user, assistant, developer, tool) and content.
+								 */
+								longDesc: () => LocalizedString
+								type: {
+									element_type: {
+										fields: {
+											role: {
+												/**
+												 * Role
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The role of the message sender
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Defines who is sending the message: system (instructions), user (human input), assistant (AI responses), developer (special instructions), or tool (tool outputs).
+												 */
+												longDesc: () => LocalizedString
+											}
+											content: {
+												/**
+												 * Content
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The message content
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The actual text content of the message. For system messages, this typically contains instructions. For user messages, it contains the human input.
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+							temperature: {
+								/**
+								 * Temperature
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Control randomness in responses
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Controls the randomness of the output. Lower values (0.0-0.3) make responses more focused and deterministic, while higher values (0.7-1.0) make them more creative and varied.
+								 */
+								longDesc: () => LocalizedString
+							}
+							max_tokens: {
+								/**
+								 * Max Tokens
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Maximum number of tokens to generate
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Sets the maximum number of tokens (roughly words) the model should generate in its response. Higher values allow for longer responses but may increase costs.
+								 */
+								longDesc: () => LocalizedString
+							}
+							seed: {
+								/**
+								 * Seed
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Random seed for reproducible results
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * A number used to initialize the random number generator. Using the same seed with identical parameters should produce consistent results across requests.
+								 */
+								longDesc: () => LocalizedString
+							}
+							top_p: {
+								/**
+								 * Top P
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Nucleus sampling parameter
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Controls diversity via nucleus sampling. Only tokens with cumulative probability up to this value are considered. Lower values focus on more likely tokens.
+								 */
+								longDesc: () => LocalizedString
+							}
+							top_k: {
+								/**
+								 * Top K
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Top-k sampling parameter
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Limits the model to consider only the top K most likely tokens at each step. Lower values make responses more focused, higher values increase diversity.
+								 */
+								longDesc: () => LocalizedString
+							}
 						}
 					}
 				}
