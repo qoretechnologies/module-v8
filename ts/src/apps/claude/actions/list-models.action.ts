@@ -35,12 +35,15 @@ const listModels = QoreAppCreator.createLocalizedAction({
     }
   },
   response_type: {
-    type: 'hash',
-    fields: {
-      type: { type: 'string' },
-      id: { type: 'string' },
-      display_name: { type: 'string' },
-      created_at: { type: 'string' },
+    type: 'list',
+    element_type: {
+      type: 'hash',
+      fields: {
+        type: { type: 'string' },
+        id: { type: 'string' },
+        display_name: { type: 'string' },
+        created_at: { type: 'string' },
+      },
     },
   },
 });

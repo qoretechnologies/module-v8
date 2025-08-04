@@ -80,7 +80,7 @@ export const openRouterApiClient = async <ResponseType = unknown>(
     }
 
     if (!response?.data) {
-      throw new Error(`No data received from Active Campaign API for ${path}`);
+      throw new Error(`No data received from Open Router API for ${path}`);
     }
 
     if (object) {
@@ -89,7 +89,7 @@ export const openRouterApiClient = async <ResponseType = unknown>(
 
     return response.data;
   } catch (error) {
-    Debugger.log(`Error calling Active Campaign API for ${path}`, error);
+    Debugger.log(`Error calling Open Router API for ${path}`, error);
     throw error;
   }
 };
