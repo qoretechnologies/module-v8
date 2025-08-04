@@ -9,16 +9,23 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import fs from 'fs';
 import path from 'path';
+import activeCampaign from '../apps/active-campaign';
 import airtable from '../apps/airtable';
 import asana from '../apps/asana';
 import attio from '../apps/attio';
+import bigml from '../apps/bigml';
 import bitbucket from '../apps/bitbucket';
+import browserAi from '../apps/browse-ai';
 import businessCentral from '../apps/business-central';
+import calendly from '../apps/calendly';
+import claude from '../apps/claude';
+import clickup from '../apps/clickup';
 import confluence from '../apps/confluence';
 import dynamics from '../apps/dynamics';
 import esignature from '../apps/esignature';
 import facebookPages from '../apps/facebook-pages';
 import freshdesk from '../apps/freshdesk';
+import gemini from '../apps/gemini';
 import github from '../apps/github';
 import googleChat from '../apps/google-chat';
 import googleContacts from '../apps/google-contacts';
@@ -30,14 +37,17 @@ import googleSheets from '../apps/google-sheets';
 import hubspot from '../apps/hubspot';
 import intercom from '../apps/intercom';
 import jira from '../apps/jira';
+import klaviyo from '../apps/klaviyo';
 import magento from '../apps/magento';
 import mailchimp from '../apps/mailchimp';
 import messenger360 from '../apps/messenger360';
 import netsuite from '../apps/netsuite';
 import odoo from '../apps/odoo';
+import openrouter from '../apps/openrouter';
 import outlook from '../apps/outlook';
 import paddle from '../apps/paddle';
 import pipedrive from '../apps/pipedrive';
+import quickbooks from '../apps/quickbooks';
 import salesforce from '../apps/salesforce';
 import serenity from '../apps/serenity';
 import sharepoint from '../apps/sharepoint';
@@ -45,6 +55,7 @@ import shopify from '../apps/shopify';
 import stripe from '../apps/stripe';
 import teams from '../apps/teams';
 import typeform from '../apps/typeform';
+import webflow from '../apps/webflow';
 import xero from '../apps/xero';
 import zendesk from '../apps/zendesk';
 import zoom from '../apps/zoom';
@@ -52,14 +63,6 @@ import { Log } from '../decorators/Logger';
 import { Locales } from '../i18n/i18n-types';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
-import quickbooks from '../apps/quickbooks';
-import calendly from '../apps/calendly';
-import klaviyo from '../apps/klaviyo';
-import clickup from '../apps/clickup';
-import webflow from '../apps/webflow';
-import activeCampaign from '../apps/active-campaign';
-import browserAi from '../apps/browse-ai';
-import bigml from '../apps/bigml';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -83,11 +86,13 @@ const NEW_APPS = {
   browserAi,
   businessCentral,
   calendly,
+  claude,
   clickup,
   confluence,
   esignature,
   facebookPages,
   freshdesk,
+  gemini,
   github,
   googleChat,
   googleContacts,
@@ -105,6 +110,7 @@ const NEW_APPS = {
   messenger360,
   netsuite,
   odoo,
+  openrouter,
   outlook,
   paddle,
   pipedrive,

@@ -48,6 +48,9 @@ import Webflow from './apps/Webflow';
 import ActiveCampaign from './apps/ActiveCampaign';
 import BrowseAi from './apps/BrowseAi';
 import BigMl from './apps/BigMl';
+import Claude from './apps/Claude';
+import Gemini from './apps/Gemini';
+import OpenRouter from './apps/Openrouter';
 
 const en = {
   common: {},
@@ -146,10 +149,13 @@ const en = {
         },
       },
     },
+    Claude,
     BrowseAi,
     BigMl,
     Calendly,
     ClickUp,
+    Gemini,
+    OpenRouter,
     GoogleDocs,
     GoogleMeet,
     GoogleForms,
