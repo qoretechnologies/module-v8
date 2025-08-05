@@ -63,6 +63,7 @@ import { Log } from '../decorators/Logger';
 import { Locales } from '../i18n/i18n-types';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
+import huggingFace from '../apps/hugging-face';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -102,6 +103,7 @@ const NEW_APPS = {
   googleMeet,
   googleSheets,
   hubspot,
+  huggingFace,
   intercom,
   jira,
   klaviyo,
