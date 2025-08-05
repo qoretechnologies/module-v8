@@ -58456,6 +58456,446 @@ type RootTranslation = {
 				}
 			}
 		}
+		HuggingFace: {
+			/**
+			 * H​u​g​g​i​n​g​ ​F​a​c​e
+			 */
+			displayName: string
+			/**
+			 * A​I​ ​m​o​d​e​l​s​ ​a​n​d​ ​d​a​t​a​s​e​t​s​ ​p​l​a​t​f​o​r​m
+			 */
+			shortDesc: string
+			/**
+			 * A​c​c​e​s​s​ ​a​n​d​ ​d​e​p​l​o​y​ ​m​a​c​h​i​n​e​ ​l​e​a​r​n​i​n​g​ ​m​o​d​e​l​s​,​ ​d​a​t​a​s​e​t​s​,​ ​a​n​d​ ​s​p​a​c​e​s​ ​f​r​o​m​ ​H​u​g​g​i​n​g​ ​F​a​c​e​ ​H​u​b​ ​f​o​r​ ​n​a​t​u​r​a​l​ ​l​a​n​g​u​a​g​e​ ​p​r​o​c​e​s​s​i​n​g​,​ ​c​o​m​p​u​t​e​r​ ​v​i​s​i​o​n​,​ ​a​n​d​ ​o​t​h​e​r​ ​A​I​ ​t​a​s​k​s
+			 */
+			longDesc: string
+			actions: {
+				list_models: {
+					/**
+					 * L​i​s​t​ ​M​o​d​e​l​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​n​d​ ​s​e​a​r​c​h​ ​H​u​g​g​i​n​g​ ​F​a​c​e​ ​m​o​d​e​l​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​H​u​g​g​i​n​g​ ​F​a​c​e​ ​m​o​d​e​l​s​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​ ​o​p​t​i​o​n​s​ ​b​y​ ​t​a​s​k​,​ ​o​w​n​e​r​,​ ​t​a​g​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​c​r​i​t​e​r​i​a
+					 */
+					longDesc: string
+					options: {
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​m​o​d​e​l​s​ ​b​y​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​t​a​g​s​ ​t​o​ ​f​i​l​t​e​r​ ​m​o​d​e​l​s​ ​b​y
+							 */
+							longDesc: string
+						}
+						inferenceProviders: {
+							/**
+							 * I​n​f​e​r​e​n​c​e​ ​P​r​o​v​i​d​e​r​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​i​n​f​e​r​e​n​c​e​ ​p​r​o​v​i​d​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​i​n​f​e​r​e​n​c​e​ ​p​r​o​v​i​d​e​r​s​ ​t​o​ ​f​i​l​t​e​r​ ​m​o​d​e​l​s​ ​b​y
+							 */
+							longDesc: string
+						}
+						owner: {
+							/**
+							 * O​w​n​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​m​o​d​e​l​ ​o​w​n​e​r
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​r​n​a​m​e​ ​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e​ ​t​o​ ​f​i​l​t​e​r​ ​m​o​d​e​l​s​ ​b​y
+							 */
+							longDesc: string
+						}
+						query: {
+							/**
+							 * S​e​a​r​c​h​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​m​o​d​e​l​s​ ​b​y​ ​q​u​e​r​y
+							 */
+							shortDesc: string
+							/**
+							 * T​e​x​t​ ​q​u​e​r​y​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​i​n​ ​m​o​d​e​l​ ​n​a​m​e​s​ ​a​n​d​ ​d​e​s​c​r​i​p​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+						task: {
+							/**
+							 * T​a​s​k
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​m​o​d​e​l​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * M​a​c​h​i​n​e​ ​l​e​a​r​n​i​n​g​ ​t​a​s​k​ ​t​y​p​e​ ​t​o​ ​f​i​l​t​e​r​ ​m​o​d​e​l​s​ ​b​y
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​o​d​e​l​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​o​d​e​l​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​(​d​e​f​a​u​l​t​:​ ​1​0​)
+							 */
+							longDesc: string
+						}
+						additionalFields: {
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * E​x​t​r​a​ ​m​o​d​e​l​ ​f​i​e​l​d​s​ ​t​o​ ​i​n​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​m​o​d​e​l​ ​m​e​t​a​d​a​t​a​ ​f​i​e​l​d​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_summary: {
+					/**
+					 * C​r​e​a​t​e​ ​S​u​m​m​a​r​y
+					 */
+					displayName: string
+					/**
+					 * G​e​n​e​r​a​t​e​ ​t​e​x​t​ ​s​u​m​m​a​r​y​ ​u​s​i​n​g​ ​A​I
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​c​o​n​c​i​s​e​ ​s​u​m​m​a​r​y​ ​o​f​ ​t​h​e​ ​p​r​o​v​i​d​e​d​ ​t​e​x​t​ ​u​s​i​n​g​ ​H​u​g​g​i​n​g​ ​F​a​c​e​ ​s​u​m​m​a​r​i​z​a​t​i​o​n​ ​m​o​d​e​l​s
+					 */
+					longDesc: string
+					options: {
+						model: {
+							/**
+							 * M​o​d​e​l
+							 */
+							displayName: string
+							/**
+							 * S​u​m​m​a​r​i​z​a​t​i​o​n​ ​m​o​d​e​l​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​H​u​g​g​i​n​g​ ​F​a​c​e​ ​s​u​m​m​a​r​i​z​a​t​i​o​n​ ​m​o​d​e​l​ ​t​o​ ​u​s​e​ ​f​o​r​ ​g​e​n​e​r​a​t​i​n​g​ ​t​h​e​ ​s​u​m​m​a​r​y
+							 */
+							longDesc: string
+						}
+						text: {
+							/**
+							 * T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​t​o​ ​s​u​m​m​a​r​i​z​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​i​n​p​u​t​ ​t​e​x​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​s​u​m​m​a​r​y​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				answer_question_based_on_context: {
+					/**
+					 * A​n​s​w​e​r​ ​Q​u​e​s​t​i​o​n​ ​B​a​s​e​d​ ​o​n​ ​C​o​n​t​e​x​t
+					 */
+					displayName: string
+					/**
+					 * A​n​s​w​e​r​ ​q​u​e​s​t​i​o​n​s​ ​u​s​i​n​g​ ​p​r​o​v​i​d​e​d​ ​c​o​n​t​e​x​t
+					 */
+					shortDesc: string
+					/**
+					 * A​n​s​w​e​r​ ​q​u​e​s​t​i​o​n​s​ ​b​a​s​e​d​ ​o​n​ ​t​e​x​t​,​ ​d​o​c​u​m​e​n​t​,​ ​o​r​ ​i​m​a​g​e​ ​c​o​n​t​e​x​t​ ​u​s​i​n​g​ ​s​p​e​c​i​a​l​i​z​e​d​ ​q​u​e​s​t​i​o​n​-​a​n​s​w​e​r​i​n​g​ ​m​o​d​e​l​s
+					 */
+					longDesc: string
+					options: {
+						type: {
+							/**
+							 * Q​u​e​s​t​i​o​n​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​q​u​e​s​t​i​o​n​ ​a​n​s​w​e​r​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​c​o​n​t​e​x​t​ ​a​n​d​ ​q​u​e​s​t​i​o​n​ ​a​n​s​w​e​r​i​n​g​ ​m​o​d​e​l​ ​t​o​ ​u​s​e
+							 */
+							longDesc: string
+						}
+						model: {
+							/**
+							 * M​o​d​e​l
+							 */
+							displayName: string
+							/**
+							 * Q​u​e​s​t​i​o​n​ ​a​n​s​w​e​r​i​n​g​ ​m​o​d​e​l​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​H​u​g​g​i​n​g​ ​F​a​c​e​ ​m​o​d​e​l​ ​t​o​ ​u​s​e​ ​f​o​r​ ​a​n​s​w​e​r​i​n​g​ ​t​h​e​ ​q​u​e​s​t​i​o​n
+							 */
+							longDesc: string
+						}
+						question: {
+							/**
+							 * Q​u​e​s​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * Q​u​e​s​t​i​o​n​ ​t​o​ ​a​n​s​w​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​q​u​e​s​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​n​s​w​e​r​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​ ​p​r​o​v​i​d​e​d​ ​c​o​n​t​e​x​t
+							 */
+							longDesc: string
+						}
+						context: {
+							/**
+							 * T​e​x​t​ ​C​o​n​t​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​c​o​n​t​e​x​t​ ​f​o​r​ ​t​h​e​ ​q​u​e​s​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​x​t​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​t​o​ ​a​n​s​w​e​r​ ​t​h​e​ ​q​u​e​s​t​i​o​n
+							 */
+							longDesc: string
+						}
+						file: {
+							/**
+							 * D​o​c​u​m​e​n​t​ ​F​i​l​e
+							 */
+							displayName: string
+							/**
+							 * D​o​c​u​m​e​n​t​ ​c​o​n​t​e​x​t​ ​f​o​r​ ​t​h​e​ ​q​u​e​s​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​o​c​u​m​e​n​t​ ​f​i​l​e​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​t​o​ ​a​n​s​w​e​r​ ​t​h​e​ ​q​u​e​s​t​i​o​n
+							 */
+							longDesc: string
+						}
+						image: {
+							/**
+							 * I​m​a​g​e​ ​F​i​l​e
+							 */
+							displayName: string
+							/**
+							 * I​m​a​g​e​ ​c​o​n​t​e​x​t​ ​f​o​r​ ​t​h​e​ ​q​u​e​s​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​i​m​a​g​e​ ​f​i​l​e​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​v​i​s​u​a​l​ ​i​n​f​o​r​m​a​t​i​o​n​ ​t​o​ ​a​n​s​w​e​r​ ​t​h​e​ ​q​u​e​s​t​i​o​n
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_text_classification: {
+					/**
+					 * C​r​e​a​t​e​ ​T​e​x​t​ ​C​l​a​s​s​i​f​i​c​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * C​l​a​s​s​i​f​y​ ​t​e​x​t​ ​i​n​t​o​ ​c​a​t​e​g​o​r​i​e​s
+					 */
+					shortDesc: string
+					/**
+					 * C​l​a​s​s​i​f​y​ ​t​e​x​t​ ​i​n​t​o​ ​p​r​e​d​e​f​i​n​e​d​ ​c​a​t​e​g​o​r​i​e​s​ ​u​s​i​n​g​ ​H​u​g​g​i​n​g​ ​F​a​c​e​ ​t​e​x​t​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​m​o​d​e​l​s
+					 */
+					longDesc: string
+					options: {
+						model: {
+							/**
+							 * M​o​d​e​l
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​m​o​d​e​l​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​H​u​g​g​i​n​g​ ​F​a​c​e​ ​t​e​x​t​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​m​o​d​e​l​ ​t​o​ ​u​s​e​ ​f​o​r​ ​c​a​t​e​g​o​r​i​z​i​n​g​ ​t​h​e​ ​t​e​x​t
+							 */
+							longDesc: string
+						}
+						text: {
+							/**
+							 * T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​t​o​ ​c​l​a​s​s​i​f​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​i​n​p​u​t​ ​t​e​x​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​l​a​s​s​i​f​y​ ​i​n​t​o​ ​c​a​t​e​g​o​r​i​e​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_translation: {
+					/**
+					 * C​r​e​a​t​e​ ​T​r​a​n​s​l​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​a​n​s​l​a​t​e​ ​t​e​x​t​ ​b​e​t​w​e​e​n​ ​l​a​n​g​u​a​g​e​s
+					 */
+					shortDesc: string
+					/**
+					 * T​r​a​n​s​l​a​t​e​ ​t​e​x​t​ ​f​r​o​m​ ​o​n​e​ ​l​a​n​g​u​a​g​e​ ​t​o​ ​a​n​o​t​h​e​r​ ​u​s​i​n​g​ ​H​u​g​g​i​n​g​ ​F​a​c​e​ ​t​r​a​n​s​l​a​t​i​o​n​ ​m​o​d​e​l​s
+					 */
+					longDesc: string
+					options: {
+						model: {
+							/**
+							 * M​o​d​e​l
+							 */
+							displayName: string
+							/**
+							 * T​r​a​n​s​l​a​t​i​o​n​ ​m​o​d​e​l​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​H​u​g​g​i​n​g​ ​F​a​c​e​ ​t​r​a​n​s​l​a​t​i​o​n​ ​m​o​d​e​l​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​r​a​n​s​l​a​t​i​n​g​ ​t​h​e​ ​t​e​x​t
+							 */
+							longDesc: string
+						}
+						text: {
+							/**
+							 * T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​t​o​ ​t​r​a​n​s​l​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​i​n​p​u​t​ ​t​e​x​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​t​r​a​n​s​l​a​t​e​ ​t​o​ ​a​n​o​t​h​e​r​ ​l​a​n​g​u​a​g​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_chat_completion: {
+					/**
+					 * C​r​e​a​t​e​ ​C​h​a​t​ ​C​o​m​p​l​e​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * G​e​n​e​r​a​t​e​ ​A​I​ ​c​h​a​t​ ​r​e​s​p​o​n​s​e​s
+					 */
+					shortDesc: string
+					/**
+					 * G​e​n​e​r​a​t​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​a​l​ ​A​I​ ​r​e​s​p​o​n​s​e​s​ ​u​s​i​n​g​ ​H​u​g​g​i​n​g​ ​F​a​c​e​ ​c​h​a​t​ ​c​o​m​p​l​e​t​i​o​n​ ​m​o​d​e​l​s
+					 */
+					longDesc: string
+					options: {
+						model: {
+							/**
+							 * M​o​d​e​l
+							 */
+							displayName: string
+							/**
+							 * C​h​a​t​ ​c​o​m​p​l​e​t​i​o​n​ ​m​o​d​e​l​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​H​u​g​g​i​n​g​ ​F​a​c​e​ ​c​h​a​t​ ​c​o​m​p​l​e​t​i​o​n​ ​m​o​d​e​l​ ​t​o​ ​u​s​e​ ​f​o​r​ ​g​e​n​e​r​a​t​i​n​g​ ​r​e​s​p​o​n​s​e​s
+							 */
+							longDesc: string
+						}
+						messages: {
+							/**
+							 * M​e​s​s​a​g​e​s
+							 */
+							displayName: string
+							/**
+							 * C​o​n​v​e​r​s​a​t​i​o​n​ ​m​e​s​s​a​g​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​h​i​s​t​o​r​y​ ​i​n​c​l​u​d​i​n​g​ ​u​s​e​r​ ​a​n​d​ ​a​s​s​i​s​t​a​n​t​ ​m​e​s​s​a​g​e​s
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										role: {
+											/**
+											 * R​o​l​e
+											 */
+											displayName: string
+											/**
+											 * M​e​s​s​a​g​e​ ​s​e​n​d​e​r​ ​r​o​l​e
+											 */
+											shortDesc: string
+											/**
+											 * W​h​e​t​h​e​r​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​i​s​ ​f​r​o​m​ ​a​ ​u​s​e​r​ ​o​r​ ​a​s​s​i​s​t​a​n​t
+											 */
+											longDesc: string
+										}
+										content: {
+											/**
+											 * C​o​n​t​e​n​t
+											 */
+											displayName: string
+											/**
+											 * M​e​s​s​a​g​e​ ​c​o​n​t​e​n​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -116898,6 +117338,446 @@ export type TranslationFunctions = {
 							 * Select whether the deal is open, won, or lost
 							 */
 							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		HuggingFace: {
+			/**
+			 * Hugging Face
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * AI models and datasets platform
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Access and deploy machine learning models, datasets, and spaces from Hugging Face Hub for natural language processing, computer vision, and other AI tasks
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				list_models: {
+					/**
+					 * List Models
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List and search Hugging Face models
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of Hugging Face models with filtering options by task, owner, tags, and other criteria
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter models by tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of tags to filter models by
+							 */
+							longDesc: () => LocalizedString
+						}
+						inferenceProviders: {
+							/**
+							 * Inference Providers
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by inference providers
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of inference providers to filter models by
+							 */
+							longDesc: () => LocalizedString
+						}
+						owner: {
+							/**
+							 * Owner
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by model owner
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Username or organization name to filter models by
+							 */
+							longDesc: () => LocalizedString
+						}
+						query: {
+							/**
+							 * Search Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search models by query
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Text query to search for in model names and descriptions
+							 */
+							longDesc: () => LocalizedString
+						}
+						task: {
+							/**
+							 * Task
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by model task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Machine learning task type to filter models by
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of models to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of models to retrieve (default: 10)
+							 */
+							longDesc: () => LocalizedString
+						}
+						additionalFields: {
+							/**
+							 * Additional Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Extra model fields to include
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Additional model metadata fields to include in the response
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_summary: {
+					/**
+					 * Create Summary
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Generate text summary using AI
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a concise summary of the provided text using Hugging Face summarization models
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						model: {
+							/**
+							 * Model
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Summarization model to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Hugging Face summarization model to use for generating the summary
+							 */
+							longDesc: () => LocalizedString
+						}
+						text: {
+							/**
+							 * Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text to summarize
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The input text that you want to create a summary for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				answer_question_based_on_context: {
+					/**
+					 * Answer Question Based on Context
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Answer questions using provided context
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Answer questions based on text, document, or image context using specialized question-answering models
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						type: {
+							/**
+							 * Question Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of question answering
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The type of context and question answering model to use
+							 */
+							longDesc: () => LocalizedString
+						}
+						model: {
+							/**
+							 * Model
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Question answering model to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Hugging Face model to use for answering the question
+							 */
+							longDesc: () => LocalizedString
+						}
+						question: {
+							/**
+							 * Question
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Question to answer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The question you want to answer based on the provided context
+							 */
+							longDesc: () => LocalizedString
+						}
+						context: {
+							/**
+							 * Text Context
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text context for the question
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text context that contains information to answer the question
+							 */
+							longDesc: () => LocalizedString
+						}
+						file: {
+							/**
+							 * Document File
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Document context for the question
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The document file that contains information to answer the question
+							 */
+							longDesc: () => LocalizedString
+						}
+						image: {
+							/**
+							 * Image File
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Image context for the question
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The image file that contains visual information to answer the question
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_text_classification: {
+					/**
+					 * Create Text Classification
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Classify text into categories
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Classify text into predefined categories using Hugging Face text classification models
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						model: {
+							/**
+							 * Model
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text classification model to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Hugging Face text classification model to use for categorizing the text
+							 */
+							longDesc: () => LocalizedString
+						}
+						text: {
+							/**
+							 * Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text to classify
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The input text that you want to classify into categories
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_translation: {
+					/**
+					 * Create Translation
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Translate text between languages
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Translate text from one language to another using Hugging Face translation models
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						model: {
+							/**
+							 * Model
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Translation model to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Hugging Face translation model to use for translating the text
+							 */
+							longDesc: () => LocalizedString
+						}
+						text: {
+							/**
+							 * Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text to translate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The input text that you want to translate to another language
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_chat_completion: {
+					/**
+					 * Create Chat Completion
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Generate AI chat responses
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Generate conversational AI responses using Hugging Face chat completion models
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						model: {
+							/**
+							 * Model
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Chat completion model to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Hugging Face chat completion model to use for generating responses
+							 */
+							longDesc: () => LocalizedString
+						}
+						messages: {
+							/**
+							 * Messages
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Conversation messages
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The conversation history including user and assistant messages
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										role: {
+											/**
+											 * Role
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Message sender role
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Whether the message is from a user or assistant
+											 */
+											longDesc: () => LocalizedString
+										}
+										content: {
+											/**
+											 * Content
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Message content
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The text content of the message
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
 						}
 					}
 				}
