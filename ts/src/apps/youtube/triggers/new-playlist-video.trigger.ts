@@ -31,7 +31,7 @@ const YouTubeNewPlaylistVideoTrigger = QoreAppCreator.createLocalizedTrigger({
     };
 
     await pollCreatedItemsForTrigger({
-      trigger_name: 'youtube_new_channel_video',
+      trigger_name: 'youtube_new_playlist_video',
       uniqueField: 'id',
       getItems,
       update,
