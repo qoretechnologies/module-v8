@@ -51,6 +51,7 @@ import BigMl from './apps/BigMl';
 import Claude from './apps/Claude';
 import Gemini from './apps/Gemini';
 import OpenRouter from './apps/Openrouter';
+import YouTube from './apps/YouTube';
 
 const en = {
   common: {},
@@ -201,6 +202,7 @@ const en = {
     Messenger360,
     Webflow,
     ActiveCampaign,
+    YouTube,
   },
 } satisfies BaseTranslation;
 
