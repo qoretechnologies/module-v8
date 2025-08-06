@@ -58896,6 +58896,1134 @@ type RootTranslation = {
 				}
 			}
 		}
+		YouTube: {
+			/**
+			 * Y​o​u​T​u​b​e
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​a​n​d​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​Y​o​u​T​u​b​e
+			 */
+			shortDesc: string
+			/**
+			 * Y​o​u​T​u​b​e​ ​i​n​t​e​g​r​a​t​i​o​n​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​m​a​n​a​g​e​ ​v​i​d​e​o​s​,​ ​p​l​a​y​l​i​s​t​s​,​ ​c​h​a​n​n​e​l​s​,​ ​a​n​d​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​t​h​e​ ​Y​o​u​T​u​b​e​ ​p​l​a​t​f​o​r​m​ ​p​r​o​g​r​a​m​m​a​t​i​c​a​l​l​y​.
+			 */
+			longDesc: string
+			actions: {
+				get_channel_id_from_url: {
+					/**
+					 * G​e​t​ ​C​h​a​n​n​e​l​ ​I​D​ ​f​r​o​m​ ​U​R​L
+					 */
+					displayName: string
+					/**
+					 * E​x​t​r​a​c​t​ ​Y​o​u​T​u​b​e​ ​c​h​a​n​n​e​l​ ​I​D​ ​f​r​o​m​ ​v​a​r​i​o​u​s​ ​U​R​L​ ​f​o​r​m​a​t​s
+					 */
+					shortDesc: string
+					/**
+					 * E​x​t​r​a​c​t​s​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​I​D​ ​f​r​o​m​ ​d​i​f​f​e​r​e​n​t​ ​Y​o​u​T​u​b​e​ ​U​R​L​ ​f​o​r​m​a​t​s​ ​i​n​c​l​u​d​i​n​g​ ​c​h​a​n​n​e​l​ ​U​R​L​s​,​ ​h​a​n​d​l​e​s​ ​(​@​u​s​e​r​n​a​m​e​)​,​ ​c​u​s​t​o​m​ ​U​R​L​s​ ​(​/​c​/​)​,​ ​u​s​e​r​n​a​m​e​s​ ​(​/​u​s​e​r​/​)​,​ ​a​n​d​ ​v​i​d​e​o​ ​U​R​L​s​.​ ​A​l​s​o​ ​r​e​t​u​r​n​s​ ​b​a​s​i​c​ ​c​h​a​n​n​e​l​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						url: {
+							/**
+							 * Y​o​u​T​u​b​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​Y​o​u​T​u​b​e​ ​U​R​L​ ​t​o​ ​e​x​t​r​a​c​t​ ​c​h​a​n​n​e​l​ ​I​D​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * A​n​y​ ​v​a​l​i​d​ ​Y​o​u​T​u​b​e​ ​U​R​L​ ​f​o​r​m​a​t​ ​i​n​c​l​u​d​i​n​g​ ​c​h​a​n​n​e​l​ ​U​R​L​s​,​ ​h​a​n​d​l​e​s​ ​(​@​u​s​e​r​n​a​m​e​)​,​ ​c​u​s​t​o​m​ ​U​R​L​s​ ​(​/​c​/​)​,​ ​u​s​e​r​n​a​m​e​s​ ​(​/​u​s​e​r​/​)​,​ ​o​r​ ​v​i​d​e​o​ ​U​R​L​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_video_to_playlist: {
+					/**
+					 * A​d​d​ ​V​i​d​e​o​ ​t​o​ ​P​l​a​y​l​i​s​t
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​ ​v​i​d​e​o​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​Y​o​u​T​u​b​e​ ​p​l​a​y​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​s​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​v​i​d​e​o​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​Y​o​u​T​u​b​e​ ​p​l​a​y​l​i​s​t​.​ ​Y​o​u​ ​c​a​n​ ​o​p​t​i​o​n​a​l​l​y​ ​s​p​e​c​i​f​y​ ​t​h​e​ ​p​o​s​i​t​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​v​i​d​e​o​ ​s​h​o​u​l​d​ ​b​e​ ​i​n​s​e​r​t​e​d​ ​i​n​ ​t​h​e​ ​p​l​a​y​l​i​s​t​.
+					 */
+					longDesc: string
+					options: {
+						playlistId: {
+							/**
+							 * P​l​a​y​l​i​s​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​p​l​a​y​l​i​s​t​ ​t​o​ ​a​d​d​ ​t​h​e​ ​v​i​d​e​o​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​Y​o​u​T​u​b​e​ ​p​l​a​y​l​i​s​t​ ​w​h​e​r​e​ ​t​h​e​ ​v​i​d​e​o​ ​w​i​l​l​ ​b​e​ ​a​d​d​e​d
+							 */
+							longDesc: string
+						}
+						videoId: {
+							/**
+							 * V​i​d​e​o​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​v​i​d​e​o​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​p​l​a​y​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​Y​o​u​T​u​b​e​ ​v​i​d​e​o​ ​t​o​ ​b​e​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​p​l​a​y​l​i​s​t
+							 */
+							longDesc: string
+						}
+						position: {
+							/**
+							 * P​o​s​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​o​s​i​t​i​o​n​ ​i​n​ ​t​h​e​ ​p​l​a​y​l​i​s​t​ ​w​h​e​r​e​ ​t​h​e​ ​v​i​d​e​o​ ​s​h​o​u​l​d​ ​b​e​ ​i​n​s​e​r​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​p​o​s​i​t​i​o​n​ ​(​0​-​b​a​s​e​d​ ​i​n​d​e​x​)​ ​w​h​e​r​e​ ​t​h​e​ ​v​i​d​e​o​ ​s​h​o​u​l​d​ ​b​e​ ​i​n​s​e​r​t​e​d​ ​i​n​ ​t​h​e​ ​p​l​a​y​l​i​s​t​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​t​h​e​ ​v​i​d​e​o​ ​w​i​l​l​ ​b​e​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​e​n​d
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_playlist: {
+					/**
+					 * C​r​e​a​t​e​ ​P​l​a​y​l​i​s​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​Y​o​u​T​u​b​e​ ​p​l​a​y​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​Y​o​u​T​u​b​e​ ​p​l​a​y​l​i​s​t​ ​w​i​t​h​ ​s​p​e​c​i​f​i​e​d​ ​t​i​t​l​e​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​p​r​i​v​a​c​y​ ​s​e​t​t​i​n​g​s​,​ ​a​n​d​ ​o​p​t​i​o​n​a​l​ ​t​a​g​s
+					 */
+					longDesc: string
+					options: {
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​p​l​a​y​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​/​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​n​e​w​ ​p​l​a​y​l​i​s​t
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​p​l​a​y​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​t​e​x​t​ ​f​o​r​ ​t​h​e​ ​p​l​a​y​l​i​s​t​ ​e​x​p​l​a​i​n​i​n​g​ ​i​t​s​ ​c​o​n​t​e​n​t​ ​o​r​ ​p​u​r​p​o​s​e
+							 */
+							longDesc: string
+						}
+						privacy: {
+							/**
+							 * P​r​i​v​a​c​y​ ​S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​i​v​a​c​y​ ​s​e​t​t​i​n​g​ ​f​o​r​ ​t​h​e​ ​p​l​a​y​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * P​r​i​v​a​c​y​ ​l​e​v​e​l​ ​f​o​r​ ​t​h​e​ ​p​l​a​y​l​i​s​t​:​ ​p​u​b​l​i​c​ ​(​v​i​s​i​b​l​e​ ​t​o​ ​e​v​e​r​y​o​n​e​)​,​ ​p​r​i​v​a​t​e​ ​(​o​n​l​y​ ​v​i​s​i​b​l​e​ ​t​o​ ​y​o​u​)​,​ ​o​r​ ​u​n​l​i​s​t​e​d​ ​(​v​i​s​i​b​l​e​ ​t​o​ ​a​n​y​o​n​e​ ​w​i​t​h​ ​t​h​e​ ​l​i​n​k​)
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​t​a​g​s​ ​f​o​r​ ​t​h​e​ ​p​l​a​y​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​l​i​s​t​ ​o​f​ ​t​a​g​s​/​k​e​y​w​o​r​d​s​ ​t​o​ ​h​e​l​p​ ​c​a​t​e​g​o​r​i​z​e​ ​a​n​d​ ​m​a​k​e​ ​t​h​e​ ​p​l​a​y​l​i​s​t​ ​d​i​s​c​o​v​e​r​a​b​l​e
+							 */
+							longDesc: string
+						}
+						defaultLanguage: {
+							/**
+							 * D​e​f​a​u​l​t​ ​L​a​n​g​u​a​g​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​e​f​a​u​l​t​ ​l​a​n​g​u​a​g​e​ ​f​o​r​ ​t​h​e​ ​p​l​a​y​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​d​e​f​a​u​l​t​ ​l​a​n​g​u​a​g​e​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​p​l​a​y​l​i​s​t​ ​c​o​n​t​e​n​t​ ​(​e​.​g​.​,​ ​"​e​n​"​ ​f​o​r​ ​E​n​g​l​i​s​h​)
+							 */
+							longDesc: string
+						}
+					}
+				}
+				search_videos: {
+					/**
+					 * S​e​a​r​c​h​ ​V​i​d​e​o​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​Y​o​u​T​u​b​e​ ​v​i​d​e​o​s
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​Y​o​u​T​u​b​e​ ​v​i​d​e​o​s​ ​u​s​i​n​g​ ​v​a​r​i​o​u​s​ ​f​i​l​t​e​r​s​ ​i​n​c​l​u​d​i​n​g​ ​k​e​y​w​o​r​d​s​,​ ​d​u​r​a​t​i​o​n​,​ ​q​u​a​l​i​t​y​,​ ​u​p​l​o​a​d​ ​d​a​t​e​,​ ​a​n​d​ ​m​o​r​e
+					 */
+					longDesc: string
+					options: {
+						q: {
+							/**
+							 * S​e​a​r​c​h​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * K​e​y​w​o​r​d​s​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​a​r​c​h​ ​t​e​r​m​s​ ​o​r​ ​k​e​y​w​o​r​d​s​ ​t​o​ ​f​i​n​d​ ​v​i​d​e​o​s​ ​o​n​ ​Y​o​u​T​u​b​e
+							 */
+							longDesc: string
+						}
+						order: {
+							/**
+							 * S​o​r​t​ ​O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​o​r​d​e​r​ ​i​n​ ​w​h​i​c​h​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​ ​s​h​o​u​l​d​ ​b​e​ ​r​e​t​u​r​n​e​d​ ​(​r​e​l​e​v​a​n​c​e​,​ ​d​a​t​e​,​ ​r​a​t​i​n​g​,​ ​t​i​t​l​e​,​ ​o​r​ ​v​i​e​w​ ​c​o​u​n​t​)
+							 */
+							longDesc: string
+						}
+						publishedAfter: {
+							/**
+							 * P​u​b​l​i​s​h​e​d​ ​A​f​t​e​r
+							 */
+							displayName: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​v​i​d​e​o​s​ ​p​u​b​l​i​s​h​e​d​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​v​i​d​e​o​s​ ​p​u​b​l​i​s​h​e​d​ ​a​f​t​e​r​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e​ ​(​I​S​O​ ​8​6​0​1​ ​f​o​r​m​a​t​)
+							 */
+							longDesc: string
+						}
+						publishedBefore: {
+							/**
+							 * P​u​b​l​i​s​h​e​d​ ​B​e​f​o​r​e
+							 */
+							displayName: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​v​i​d​e​o​s​ ​p​u​b​l​i​s​h​e​d​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​v​i​d​e​o​s​ ​p​u​b​l​i​s​h​e​d​ ​b​e​f​o​r​e​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e​ ​(​I​S​O​ ​8​6​0​1​ ​f​o​r​m​a​t​)
+							 */
+							longDesc: string
+						}
+						videoDuration: {
+							/**
+							 * V​i​d​e​o​ ​D​u​r​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​v​i​d​e​o​ ​l​e​n​g​t​h
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​v​i​d​e​o​s​ ​b​y​ ​t​h​e​i​r​ ​d​u​r​a​t​i​o​n​:​ ​a​n​y​,​ ​s​h​o​r​t​ ​(​<​ ​4​ ​m​i​n​u​t​e​s​)​,​ ​m​e​d​i​u​m​ ​(​4​-​2​0​ ​m​i​n​u​t​e​s​)​,​ ​o​r​ ​l​o​n​g​ ​(​>​ ​2​0​ ​m​i​n​u​t​e​s​)
+							 */
+							longDesc: string
+						}
+						videoDefinition: {
+							/**
+							 * V​i​d​e​o​ ​D​e​f​i​n​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​v​i​d​e​o​ ​q​u​a​l​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​v​i​d​e​o​s​ ​b​y​ ​t​h​e​i​r​ ​d​e​f​i​n​i​t​i​o​n​ ​q​u​a​l​i​t​y​:​ ​a​n​y​,​ ​s​t​a​n​d​a​r​d​ ​d​e​f​i​n​i​t​i​o​n​,​ ​o​r​ ​h​i​g​h​ ​d​e​f​i​n​i​t​i​o​n
+							 */
+							longDesc: string
+						}
+						videoDimension: {
+							/**
+							 * V​i​d​e​o​ ​D​i​m​e​n​s​i​o​n
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​2​D​ ​o​r​ ​3​D​ ​v​i​d​e​o​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​v​i​d​e​o​s​ ​b​y​ ​t​h​e​i​r​ ​d​i​m​e​n​s​i​o​n​a​l​ ​f​o​r​m​a​t​:​ ​a​n​y​,​ ​2​D​ ​o​n​l​y​,​ ​o​r​ ​3​D​ ​o​n​l​y
+							 */
+							longDesc: string
+						}
+						videoCaption: {
+							/**
+							 * V​i​d​e​o​ ​C​a​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​a​p​t​i​o​n​ ​a​v​a​i​l​a​b​i​l​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​v​i​d​e​o​s​ ​b​y​ ​c​a​p​t​i​o​n​ ​a​v​a​i​l​a​b​i​l​i​t​y​:​ ​a​n​y​,​ ​v​i​d​e​o​s​ ​w​i​t​h​ ​c​l​o​s​e​d​ ​c​a​p​t​i​o​n​s​,​ ​o​r​ ​v​i​d​e​o​s​ ​w​i​t​h​o​u​t​ ​c​a​p​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+						videoLicense: {
+							/**
+							 * V​i​d​e​o​ ​L​i​c​e​n​s​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​v​i​d​e​o​ ​l​i​c​e​n​s​e​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​v​i​d​e​o​s​ ​b​y​ ​t​h​e​i​r​ ​l​i​c​e​n​s​e​:​ ​a​n​y​,​ ​s​t​a​n​d​a​r​d​ ​Y​o​u​T​u​b​e​ ​l​i​c​e​n​s​e​,​ ​o​r​ ​C​r​e​a​t​i​v​e​ ​C​o​m​m​o​n​s​ ​l​i​c​e​n​s​e
+							 */
+							longDesc: string
+						}
+						safeSearch: {
+							/**
+							 * S​a​f​e​ ​S​e​a​r​c​h
+							 */
+							displayName: string
+							/**
+							 * S​a​f​e​ ​s​e​a​r​c​h​ ​f​i​l​t​e​r​i​n​g​ ​l​e​v​e​l
+							 */
+							shortDesc: string
+							/**
+							 * L​e​v​e​l​ ​o​f​ ​s​a​f​e​ ​s​e​a​r​c​h​ ​f​i​l​t​e​r​i​n​g​ ​t​o​ ​a​p​p​l​y​:​ ​m​o​d​e​r​a​t​e​ ​(​d​e​f​a​u​l​t​)​,​ ​n​o​n​e​,​ ​o​r​ ​s​t​r​i​c​t
+							 */
+							longDesc: string
+						}
+						regionCode: {
+							/**
+							 * R​e​g​i​o​n​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * C​o​u​n​t​r​y​ ​c​o​d​e​ ​t​o​ ​s​e​a​r​c​h​ ​w​i​t​h​i​n
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​t​w​o​-​l​e​t​t​e​r​ ​c​o​u​n​t​r​y​ ​c​o​d​e​ ​t​o​ ​r​e​s​t​r​i​c​t​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​r​e​g​i​o​n
+							 */
+							longDesc: string
+						}
+						relevanceLanguage: {
+							/**
+							 * R​e​l​e​v​a​n​c​e​ ​L​a​n​g​u​a​g​e
+							 */
+							displayName: string
+							/**
+							 * L​a​n​g​u​a​g​e​ ​f​o​r​ ​r​e​l​e​v​a​n​c​e​ ​r​a​n​k​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * L​a​n​g​u​a​g​e​ ​c​o​d​e​ ​t​o​ ​u​s​e​ ​f​o​r​ ​r​e​l​e​v​a​n​c​e​ ​r​a​n​k​i​n​g​ ​o​f​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						videoCategoryId: {
+							/**
+							 * V​i​d​e​o​ ​C​a​t​e​g​o​r​y
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​v​i​d​e​o​ ​c​a​t​e​g​o​r​y
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​c​a​t​e​g​o​r​y​ ​I​D​ ​t​o​ ​f​i​l​t​e​r​ ​v​i​d​e​o​s​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​Y​o​u​T​u​b​e​ ​c​a​t​e​g​o​r​y
+							 */
+							longDesc: string
+						}
+						maxResults: {
+							/**
+							 * M​a​x​i​m​u​m​ ​R​e​s​u​l​t​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​(​d​e​f​a​u​l​t​ ​i​s​ ​2​5​)
+							 */
+							longDesc: string
+						}
+						pageToken: {
+							/**
+							 * P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​ ​(​u​s​e​d​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​)
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_report: {
+					/**
+					 * G​e​t​ ​A​n​a​l​y​t​i​c​s​ ​R​e​p​o​r​t
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​Y​o​u​T​u​b​e​ ​A​n​a​l​y​t​i​c​s​ ​r​e​p​o​r​t​ ​d​a​t​a
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​Y​o​u​T​u​b​e​ ​A​n​a​l​y​t​i​c​s​ ​d​a​t​a​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​h​a​n​n​e​l​ ​w​i​t​h​i​n​ ​a​ ​d​a​t​e​ ​r​a​n​g​e​,​ ​i​n​c​l​u​d​i​n​g​ ​m​e​t​r​i​c​s​ ​l​i​k​e​ ​v​i​e​w​s​,​ ​w​a​t​c​h​ ​t​i​m​e​,​ ​a​n​d​ ​e​n​g​a​g​e​m​e​n​t
+					 */
+					longDesc: string
+					options: {
+						startDate: {
+							/**
+							 * S​t​a​r​t​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​t​a​r​t​ ​d​a​t​e​ ​f​o​r​ ​t​h​e​ ​r​e​p​o​r​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​a​r​t​ ​d​a​t​e​ ​f​o​r​ ​t​h​e​ ​a​n​a​l​y​t​i​c​s​ ​r​e​p​o​r​t​ ​i​n​ ​Y​Y​Y​Y​-​M​M​-​D​D​ ​f​o​r​m​a​t
+							 */
+							longDesc: string
+						}
+						endDate: {
+							/**
+							 * E​n​d​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​d​ ​d​a​t​e​ ​f​o​r​ ​t​h​e​ ​r​e​p​o​r​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​n​d​ ​d​a​t​e​ ​f​o​r​ ​t​h​e​ ​a​n​a​l​y​t​i​c​s​ ​r​e​p​o​r​t​ ​i​n​ ​Y​Y​Y​Y​-​M​M​-​D​D​ ​f​o​r​m​a​t
+							 */
+							longDesc: string
+						}
+						metrics: {
+							/**
+							 * M​e​t​r​i​c​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​m​e​t​r​i​c​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​r​e​p​o​r​t
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​a​n​a​l​y​t​i​c​s​ ​m​e​t​r​i​c​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​(​e​.​g​.​,​ ​v​i​e​w​s​,​ ​e​s​t​i​m​a​t​e​d​M​i​n​u​t​e​s​W​a​t​c​h​e​d​,​ ​l​i​k​e​s​,​ ​c​o​m​m​e​n​t​s​)
+							 */
+							longDesc: string
+						}
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​g​e​t​ ​a​n​a​l​y​t​i​c​s​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Y​o​u​T​u​b​e​ ​c​h​a​n​n​e​l​ ​I​D​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​a​n​a​l​y​t​i​c​s​ ​d​a​t​a​ ​f​o​r
+							 */
+							longDesc: string
+						}
+						maxResults: {
+							/**
+							 * M​a​x​i​m​u​m​ ​R​e​s​u​l​t​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​d​a​t​a​ ​p​o​i​n​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​t​h​e​ ​r​e​p​o​r​t​ ​(​d​e​f​a​u​l​t​ ​i​s​ ​1​0​)
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_categories: {
+					/**
+					 * L​i​s​t​ ​V​i​d​e​o​ ​C​a​t​e​g​o​r​i​e​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​l​i​s​t​ ​o​f​ ​Y​o​u​T​u​b​e​ ​v​i​d​e​o​ ​c​a​t​e​g​o​r​i​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​a​v​a​i​l​a​b​l​e​ ​Y​o​u​T​u​b​e​ ​v​i​d​e​o​ ​c​a​t​e​g​o​r​i​e​s​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​v​i​d​e​o​s
+					 */
+					longDesc: string
+				}
+				list_user_channels: {
+					/**
+					 * L​i​s​t​ ​U​s​e​r​ ​C​h​a​n​n​e​l​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​l​i​s​t​ ​o​f​ ​a​u​t​h​e​n​t​i​c​a​t​e​d​ ​u​s​e​r​'​s​ ​Y​o​u​T​u​b​e​ ​c​h​a​n​n​e​l​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​a​u​t​h​e​n​t​i​c​a​t​e​d​ ​u​s​e​r​'​s​ ​Y​o​u​T​u​b​e​ ​c​h​a​n​n​e​l​s​ ​i​n​c​l​u​d​i​n​g​ ​s​t​a​t​i​s​t​i​c​s​ ​a​n​d​ ​b​r​a​n​d​i​n​g​ ​s​e​t​t​i​n​g​s
+					 */
+					longDesc: string
+					options: {
+						maxResults: {
+							/**
+							 * M​a​x​i​m​u​m​ ​R​e​s​u​l​t​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​h​a​n​n​e​l​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​h​a​n​n​e​l​s​ ​t​o​ ​r​e​t​u​r​n​ ​(​d​e​f​a​u​l​t​ ​i​s​ ​5​)
+							 */
+							longDesc: string
+						}
+						nextPageToken: {
+							/**
+							 * N​e​x​t​ ​P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_video_comments: {
+					/**
+					 * L​i​s​t​ ​V​i​d​e​o​ ​C​o​m​m​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​c​o​m​m​e​n​t​s​ ​f​o​r​ ​a​ ​Y​o​u​T​u​b​e​ ​v​i​d​e​o
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​c​o​m​m​e​n​t​s​ ​a​n​d​ ​c​o​m​m​e​n​t​ ​t​h​r​e​a​d​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​Y​o​u​T​u​b​e​ ​v​i​d​e​o​ ​w​i​t​h​ ​v​a​r​i​o​u​s​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​o​p​t​i​o​n​s
+					 */
+					longDesc: string
+					options: {
+						videoId: {
+							/**
+							 * V​i​d​e​o​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​v​i​d​e​o​ ​t​o​ ​g​e​t​ ​c​o​m​m​e​n​t​s​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​Y​o​u​T​u​b​e​ ​v​i​d​e​o​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​c​o​m​m​e​n​t​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+						order: {
+							/**
+							 * S​o​r​t​ ​O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​c​o​m​m​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​o​r​d​e​r​ ​i​n​ ​w​h​i​c​h​ ​c​o​m​m​e​n​t​s​ ​s​h​o​u​l​d​ ​b​e​ ​r​e​t​u​r​n​e​d​:​ ​t​i​m​e​ ​(​n​e​w​e​s​t​ ​f​i​r​s​t​)​ ​o​r​ ​r​e​l​e​v​a​n​c​e
+							 */
+							longDesc: string
+						}
+						searchTerms: {
+							/**
+							 * S​e​a​r​c​h​ ​T​e​r​m​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​m​m​e​n​t​s​ ​b​y​ ​s​e​a​r​c​h​ ​t​e​r​m​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​s​e​a​r​c​h​ ​t​e​r​m​s​ ​t​o​ ​f​i​l​t​e​r​ ​c​o​m​m​e​n​t​s​ ​t​h​a​t​ ​c​o​n​t​a​i​n​ ​s​p​e​c​i​f​i​c​ ​k​e​y​w​o​r​d​s
+							 */
+							longDesc: string
+						}
+						textFormat: {
+							/**
+							 * T​e​x​t​ ​F​o​r​m​a​t
+							 */
+							displayName: string
+							/**
+							 * F​o​r​m​a​t​ ​o​f​ ​t​h​e​ ​c​o​m​m​e​n​t​ ​t​e​x​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​o​r​m​a​t​ ​i​n​ ​w​h​i​c​h​ ​c​o​m​m​e​n​t​ ​t​e​x​t​ ​s​h​o​u​l​d​ ​b​e​ ​r​e​t​u​r​n​e​d​:​ ​H​T​M​L​ ​o​r​ ​p​l​a​i​n​ ​t​e​x​t
+							 */
+							longDesc: string
+						}
+						maxResults: {
+							/**
+							 * M​a​x​i​m​u​m​ ​R​e​s​u​l​t​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​m​m​e​n​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​m​m​e​n​t​ ​t​h​r​e​a​d​s​ ​t​o​ ​r​e​t​u​r​n​ ​(​d​e​f​a​u​l​t​ ​i​s​ ​2​0​)
+							 */
+							longDesc: string
+						}
+						pageToken: {
+							/**
+							 * P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​a​g​e​ ​o​f​ ​c​o​m​m​e​n​t​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_user_videos: {
+					/**
+					 * L​i​s​t​ ​U​s​e​r​ ​V​i​d​e​o​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​l​i​s​t​ ​o​f​ ​a​u​t​h​e​n​t​i​c​a​t​e​d​ ​u​s​e​r​'​s​ ​Y​o​u​T​u​b​e​ ​v​i​d​e​o​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​v​i​d​e​o​s​ ​u​p​l​o​a​d​e​d​ ​b​y​ ​t​h​e​ ​a​u​t​h​e​n​t​i​c​a​t​e​d​ ​u​s​e​r​ ​t​o​ ​t​h​e​i​r​ ​Y​o​u​T​u​b​e​ ​c​h​a​n​n​e​l
+					 */
+					longDesc: string
+					options: {
+						maxResults: {
+							/**
+							 * M​a​x​i​m​u​m​ ​R​e​s​u​l​t​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​v​i​d​e​o​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​v​i​d​e​o​s​ ​t​o​ ​r​e​t​u​r​n​ ​(​d​e​f​a​u​l​t​ ​i​s​ ​1​0​)
+							 */
+							longDesc: string
+						}
+						nextPageToken: {
+							/**
+							 * N​e​x​t​ ​P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​v​i​d​e​o​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				reply_to_comment: {
+					/**
+					 * R​e​p​l​y​ ​t​o​ ​C​o​m​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * R​e​p​l​y​ ​t​o​ ​a​ ​Y​o​u​T​u​b​e​ ​c​o​m​m​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * P​o​s​t​ ​a​ ​r​e​p​l​y​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​m​m​e​n​t​ ​o​n​ ​a​ ​Y​o​u​T​u​b​e​ ​v​i​d​e​o
+					 */
+					longDesc: string
+					options: {
+						parentId: {
+							/**
+							 * P​a​r​e​n​t​ ​C​o​m​m​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​m​m​e​n​t​ ​t​o​ ​r​e​p​l​y​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​o​m​m​e​n​t​ ​o​r​ ​c​o​m​m​e​n​t​ ​t​h​r​e​a​d​ ​t​o​ ​r​e​p​l​y​ ​t​o
+							 */
+							longDesc: string
+						}
+						textOriginal: {
+							/**
+							 * R​e​p​l​y​ ​T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​r​e​p​l​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​y​o​u​r​ ​r​e​p​l​y​ ​t​o​ ​t​h​e​ ​c​o​m​m​e​n​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_video_details: {
+					/**
+					 * U​p​d​a​t​e​ ​V​i​d​e​o​ ​D​e​t​a​i​l​s
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​Y​o​u​T​u​b​e​ ​v​i​d​e​o
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​m​e​t​a​d​a​t​a​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​Y​o​u​T​u​b​e​ ​v​i​d​e​o​ ​i​n​c​l​u​d​i​n​g​ ​t​i​t​l​e​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​p​r​i​v​a​c​y​ ​s​e​t​t​i​n​g​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​p​r​o​p​e​r​t​i​e​s
+					 */
+					longDesc: string
+					options: {
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​v​i​d​e​o
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​n​e​w​ ​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​v​i​d​e​o​ ​(​l​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​k​e​e​p​ ​c​u​r​r​e​n​t​ ​t​i​t​l​e​)
+							 */
+							longDesc: string
+						}
+						video: {
+							/**
+							 * V​i​d​e​o
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​v​i​d​e​o​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Y​o​u​T​u​b​e​ ​v​i​d​e​o​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							longDesc: string
+						}
+						category: {
+							/**
+							 * C​a​t​e​g​o​r​y
+							 */
+							displayName: string
+							/**
+							 * V​i​d​e​o​ ​c​a​t​e​g​o​r​y
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​n​e​w​ ​c​a​t​e​g​o​r​y​ ​f​o​r​ ​t​h​e​ ​v​i​d​e​o​ ​(​n​u​m​e​r​i​c​ ​c​a​t​e​g​o​r​y​ ​I​D​)
+							 */
+							longDesc: string
+						}
+						privacy: {
+							/**
+							 * P​r​i​v​a​c​y​ ​S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * P​r​i​v​a​c​y​ ​s​e​t​t​i​n​g​ ​f​o​r​ ​t​h​e​ ​v​i​d​e​o
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​n​e​w​ ​p​r​i​v​a​c​y​ ​s​e​t​t​i​n​g​:​ ​p​u​b​l​i​c​,​ ​p​r​i​v​a​t​e​,​ ​o​r​ ​u​n​l​i​s​t​e​d
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​d​e​s​c​r​i​p​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​v​i​d​e​o
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​n​e​w​ ​d​e​s​c​r​i​p​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​v​i​d​e​o​ ​(​l​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​k​e​e​p​ ​c​u​r​r​e​n​t​ ​d​e​s​c​r​i​p​t​i​o​n​)
+							 */
+							longDesc: string
+						}
+						forKids: {
+							/**
+							 * M​a​d​e​ ​f​o​r​ ​K​i​d​s
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​e​ ​v​i​d​e​o​ ​i​s​ ​m​a​d​e​ ​f​o​r​ ​k​i​d​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​s​e​t​t​i​n​g​ ​t​o​ ​i​n​d​i​c​a​t​e​ ​i​f​ ​t​h​e​ ​v​i​d​e​o​ ​i​s​ ​s​p​e​c​i​f​i​c​a​l​l​y​ ​m​a​d​e​ ​f​o​r​ ​c​h​i​l​d​r​e​n
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​t​a​g​s​ ​f​o​r​ ​t​h​e​ ​v​i​d​e​o
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​l​i​s​t​ ​o​f​ ​t​a​g​s​/​k​e​y​w​o​r​d​s​ ​t​o​ ​h​e​l​p​ ​c​a​t​e​g​o​r​i​z​e​ ​t​h​e​ ​v​i​d​e​o
+							 */
+							longDesc: string
+						}
+					}
+				}
+				upload_video: {
+					/**
+					 * U​p​l​o​a​d​ ​V​i​d​e​o
+					 */
+					displayName: string
+					/**
+					 * U​p​l​o​a​d​ ​a​ ​v​i​d​e​o​ ​t​o​ ​Y​o​u​T​u​b​e
+					 */
+					shortDesc: string
+					/**
+					 * U​p​l​o​a​d​ ​a​ ​n​e​w​ ​v​i​d​e​o​ ​t​o​ ​Y​o​u​T​u​b​e​ ​w​i​t​h​ ​s​p​e​c​i​f​i​e​d​ ​m​e​t​a​d​a​t​a​ ​i​n​c​l​u​d​i​n​g​ ​t​i​t​l​e​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​p​r​i​v​a​c​y​ ​s​e​t​t​i​n​g​s​,​ ​a​n​d​ ​c​a​t​e​g​o​r​y
+					 */
+					longDesc: string
+					options: {
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​v​i​d​e​o
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​/​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​v​i​d​e​o​ ​b​e​i​n​g​ ​u​p​l​o​a​d​e​d
+							 */
+							longDesc: string
+						}
+						video: {
+							/**
+							 * V​i​d​e​o​ ​F​i​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​v​i​d​e​o​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​i​d​e​o​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d​ ​t​o​ ​Y​o​u​T​u​b​e
+							 */
+							longDesc: string
+						}
+						category: {
+							/**
+							 * C​a​t​e​g​o​r​y
+							 */
+							displayName: string
+							/**
+							 * V​i​d​e​o​ ​c​a​t​e​g​o​r​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Y​o​u​T​u​b​e​ ​c​a​t​e​g​o​r​y​ ​f​o​r​ ​t​h​e​ ​v​i​d​e​o​ ​(​n​u​m​e​r​i​c​ ​c​a​t​e​g​o​r​y​ ​I​D​)
+							 */
+							longDesc: string
+						}
+						privacy: {
+							/**
+							 * P​r​i​v​a​c​y​ ​S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * P​r​i​v​a​c​y​ ​s​e​t​t​i​n​g​ ​f​o​r​ ​t​h​e​ ​v​i​d​e​o
+							 */
+							shortDesc: string
+							/**
+							 * P​r​i​v​a​c​y​ ​l​e​v​e​l​ ​f​o​r​ ​t​h​e​ ​v​i​d​e​o​:​ ​p​u​b​l​i​c​ ​(​v​i​s​i​b​l​e​ ​t​o​ ​e​v​e​r​y​o​n​e​)​,​ ​p​r​i​v​a​t​e​ ​(​o​n​l​y​ ​v​i​s​i​b​l​e​ ​t​o​ ​y​o​u​)​,​ ​o​r​ ​u​n​l​i​s​t​e​d​ ​(​v​i​s​i​b​l​e​ ​t​o​ ​a​n​y​o​n​e​ ​w​i​t​h​ ​t​h​e​ ​l​i​n​k​)
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​v​i​d​e​o
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​t​e​x​t​ ​f​o​r​ ​t​h​e​ ​v​i​d​e​o​ ​e​x​p​l​a​i​n​i​n​g​ ​i​t​s​ ​c​o​n​t​e​n​t
+							 */
+							longDesc: string
+						}
+						forKids: {
+							/**
+							 * M​a​d​e​ ​f​o​r​ ​K​i​d​s
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​e​ ​v​i​d​e​o​ ​i​s​ ​m​a​d​e​ ​f​o​r​ ​k​i​d​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​s​e​t​t​i​n​g​ ​t​o​ ​i​n​d​i​c​a​t​e​ ​i​f​ ​t​h​e​ ​v​i​d​e​o​ ​i​s​ ​s​p​e​c​i​f​i​c​a​l​l​y​ ​m​a​d​e​ ​f​o​r​ ​c​h​i​l​d​r​e​n​ ​(​d​e​f​a​u​l​t​ ​i​s​ ​f​a​l​s​e​)
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​t​a​g​s​ ​f​o​r​ ​t​h​e​ ​v​i​d​e​o
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​l​i​s​t​ ​o​f​ ​t​a​g​s​/​k​e​y​w​o​r​d​s​ ​t​o​ ​h​e​l​p​ ​c​a​t​e​g​o​r​i​z​e​ ​a​n​d​ ​m​a​k​e​ ​t​h​e​ ​v​i​d​e​o​ ​d​i​s​c​o​v​e​r​a​b​l​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_channel_video: {
+					/**
+					 * N​e​w​ ​C​h​a​n​n​e​l​ ​V​i​d​e​o
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​v​i​d​e​o​ ​i​s​ ​u​p​l​o​a​d​e​d​ ​t​o​ ​a​ ​c​h​a​n​n​e​l
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​Y​o​u​T​u​b​e​ ​c​h​a​n​n​e​l​ ​f​o​r​ ​n​e​w​ ​v​i​d​e​o​ ​u​p​l​o​a​d​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​v​i​d​e​o​ ​i​s​ ​d​e​t​e​c​t​e​d​ ​i​n​ ​t​h​e​ ​c​h​a​n​n​e​l​'​s​ ​u​p​l​o​a​d​s​ ​p​l​a​y​l​i​s​t​.
+					 */
+					longDesc: string
+					options: {
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​Y​o​u​T​u​b​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​Y​o​u​T​u​b​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​v​i​d​e​o​ ​u​p​l​o​a​d​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_livestream: {
+					/**
+					 * N​e​w​ ​L​i​v​e​s​t​r​e​a​m
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​l​i​v​e​s​t​r​e​a​m​ ​s​t​a​r​t​s
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​f​o​r​ ​n​e​w​ ​l​i​v​e​ ​s​t​r​e​a​m​s​ ​t​h​a​t​ ​a​r​e​ ​c​u​r​r​e​n​t​l​y​ ​b​r​o​a​d​c​a​s​t​i​n​g​.​ ​C​a​n​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​l​i​v​e​ ​s​t​r​e​a​m​s​ ​o​r​ ​f​i​l​t​e​r​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​h​a​n​n​e​l​.
+					 */
+					longDesc: string
+					options: {
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​Y​o​u​T​u​b​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​l​i​v​e​s​t​r​e​a​m​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​l​i​v​e​s​t​r​e​a​m​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​h​a​n​n​e​l​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​l​i​v​e​s​t​r​e​a​m​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_playlist_video: {
+					/**
+					 * N​e​w​ ​P​l​a​y​l​i​s​t​ ​V​i​d​e​o
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​v​i​d​e​o​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​p​l​a​y​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​Y​o​u​T​u​b​e​ ​p​l​a​y​l​i​s​t​ ​f​o​r​ ​n​e​w​ ​v​i​d​e​o​s​ ​b​e​i​n​g​ ​a​d​d​e​d​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​v​i​d​e​o​ ​i​s​ ​d​e​t​e​c​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						playlist: {
+							/**
+							 * P​l​a​y​l​i​s​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​Y​o​u​T​u​b​e​ ​p​l​a​y​l​i​s​t​ ​I​D​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​Y​o​u​T​u​b​e​ ​p​l​a​y​l​i​s​t​ ​I​D​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​v​i​d​e​o​s​ ​b​e​i​n​g​ ​a​d​d​e​d
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_video_by_search: {
+					/**
+					 * N​e​w​ ​V​i​d​e​o​ ​b​y​ ​S​e​a​r​c​h
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​n​e​w​ ​v​i​d​e​o​s​ ​m​a​t​c​h​ ​a​ ​s​e​a​r​c​h​ ​q​u​e​r​y
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​Y​o​u​T​u​b​e​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​q​u​e​r​y​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​n​e​w​ ​v​i​d​e​o​s​ ​m​a​t​c​h​i​n​g​ ​t​h​e​ ​s​e​a​r​c​h​ ​t​e​r​m​s​ ​a​r​e​ ​f​o​u​n​d​.
+					 */
+					longDesc: string
+					options: {
+						query: {
+							/**
+							 * S​e​a​r​c​h​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​e​a​r​c​h​ ​t​e​r​m​s​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​s​e​a​r​c​h​ ​q​u​e​r​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​m​a​t​c​h​i​n​g​ ​v​i​d​e​o​s​ ​o​n​ ​Y​o​u​T​u​b​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_video_comment: {
+					/**
+					 * N​e​w​ ​V​i​d​e​o​ ​C​o​m​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​i​s​ ​p​o​s​t​e​d​ ​o​n​ ​a​ ​v​i​d​e​o
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​Y​o​u​T​u​b​e​ ​v​i​d​e​o​ ​f​o​r​ ​n​e​w​ ​c​o​m​m​e​n​t​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​i​s​ ​d​e​t​e​c​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						video: {
+							/**
+							 * V​i​d​e​o
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​Y​o​u​T​u​b​e​ ​v​i​d​e​o​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​c​o​m​m​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​Y​o​u​T​u​b​e​ ​v​i​d​e​o​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​c​o​m​m​e​n​t​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -117778,6 +118906,1134 @@ export type TranslationFunctions = {
 									}
 								}
 							}
+						}
+					}
+				}
+			}
+		}
+		YouTube: {
+			/**
+			 * YouTube
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect and interact with YouTube
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * YouTube integration allows you to manage videos, playlists, channels, and interact with the YouTube platform programmatically.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				get_channel_id_from_url: {
+					/**
+					 * Get Channel ID from URL
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Extract YouTube channel ID from various URL formats
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Extracts the channel ID from different YouTube URL formats including channel URLs, handles (@username), custom URLs (/c/), usernames (/user/), and video URLs. Also returns basic channel information.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						url: {
+							/**
+							 * YouTube URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The YouTube URL to extract channel ID from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Any valid YouTube URL format including channel URLs, handles (@username), custom URLs (/c/), usernames (/user/), or video URLs
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_video_to_playlist: {
+					/**
+					 * Add Video to Playlist
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add a video to an existing YouTube playlist
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Adds a specified video to an existing YouTube playlist. You can optionally specify the position where the video should be inserted in the playlist.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						playlistId: {
+							/**
+							 * Playlist ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the playlist to add the video to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the YouTube playlist where the video will be added
+							 */
+							longDesc: () => LocalizedString
+						}
+						videoId: {
+							/**
+							 * Video ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the video to add to the playlist
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the YouTube video to be added to the playlist
+							 */
+							longDesc: () => LocalizedString
+						}
+						position: {
+							/**
+							 * Position
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The position in the playlist where the video should be inserted
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional position (0-based index) where the video should be inserted in the playlist. If not specified, the video will be added to the end
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_playlist: {
+					/**
+					 * Create Playlist
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new YouTube playlist
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new YouTube playlist with specified title, description, privacy settings, and optional tags
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The title of the playlist
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name/title of the new playlist
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The description of the playlist
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional description text for the playlist explaining its content or purpose
+							 */
+							longDesc: () => LocalizedString
+						}
+						privacy: {
+							/**
+							 * Privacy Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The privacy setting for the playlist
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Privacy level for the playlist: public (visible to everyone), private (only visible to you), or unlisted (visible to anyone with the link)
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of tags for the playlist
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional list of tags/keywords to help categorize and make the playlist discoverable
+							 */
+							longDesc: () => LocalizedString
+						}
+						defaultLanguage: {
+							/**
+							 * Default Language
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The default language for the playlist
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional default language code for the playlist content (e.g., "en" for English)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				search_videos: {
+					/**
+					 * Search Videos
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for YouTube videos
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search for YouTube videos using various filters including keywords, duration, quality, upload date, and more
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						q: {
+							/**
+							 * Search Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Keywords to search for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Search terms or keywords to find videos on YouTube
+							 */
+							longDesc: () => LocalizedString
+						}
+						order: {
+							/**
+							 * Sort Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to sort the search results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The order in which search results should be returned (relevance, date, rating, title, or view count)
+							 */
+							longDesc: () => LocalizedString
+						}
+						publishedAfter: {
+							/**
+							 * Published After
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Only return videos published after this date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter to only include videos published after the specified date (ISO 8601 format)
+							 */
+							longDesc: () => LocalizedString
+						}
+						publishedBefore: {
+							/**
+							 * Published Before
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Only return videos published before this date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter to only include videos published before the specified date (ISO 8601 format)
+							 */
+							longDesc: () => LocalizedString
+						}
+						videoDuration: {
+							/**
+							 * Video Duration
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by video length
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter videos by their duration: any, short (< 4 minutes), medium (4-20 minutes), or long (> 20 minutes)
+							 */
+							longDesc: () => LocalizedString
+						}
+						videoDefinition: {
+							/**
+							 * Video Definition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by video quality
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter videos by their definition quality: any, standard definition, or high definition
+							 */
+							longDesc: () => LocalizedString
+						}
+						videoDimension: {
+							/**
+							 * Video Dimension
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by 2D or 3D videos
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter videos by their dimensional format: any, 2D only, or 3D only
+							 */
+							longDesc: () => LocalizedString
+						}
+						videoCaption: {
+							/**
+							 * Video Caption
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by caption availability
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter videos by caption availability: any, videos with closed captions, or videos without captions
+							 */
+							longDesc: () => LocalizedString
+						}
+						videoLicense: {
+							/**
+							 * Video License
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by video license type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter videos by their license: any, standard YouTube license, or Creative Commons license
+							 */
+							longDesc: () => LocalizedString
+						}
+						safeSearch: {
+							/**
+							 * Safe Search
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Safe search filtering level
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Level of safe search filtering to apply: moderate (default), none, or strict
+							 */
+							longDesc: () => LocalizedString
+						}
+						regionCode: {
+							/**
+							 * Region Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Country code to search within
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional two-letter country code to restrict search results to a specific region
+							 */
+							longDesc: () => LocalizedString
+						}
+						relevanceLanguage: {
+							/**
+							 * Relevance Language
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Language for relevance ranking
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Language code to use for relevance ranking of search results
+							 */
+							longDesc: () => LocalizedString
+						}
+						videoCategoryId: {
+							/**
+							 * Video Category
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by video category
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional category ID to filter videos by specific YouTube category
+							 */
+							longDesc: () => LocalizedString
+						}
+						maxResults: {
+							/**
+							 * Maximum Results
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of results to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of search results to return (default is 25)
+							 */
+							longDesc: () => LocalizedString
+						}
+						pageToken: {
+							/**
+							 * Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Token for retrieving a specific page of results (used for pagination)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_report: {
+					/**
+					 * Get Analytics Report
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get YouTube Analytics report data
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve YouTube Analytics data for a specific channel within a date range, including metrics like views, watch time, and engagement
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						startDate: {
+							/**
+							 * Start Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The start date for the report
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The start date for the analytics report in YYYY-MM-DD format
+							 */
+							longDesc: () => LocalizedString
+						}
+						endDate: {
+							/**
+							 * End Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The end date for the report
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The end date for the analytics report in YYYY-MM-DD format
+							 */
+							longDesc: () => LocalizedString
+						}
+						metrics: {
+							/**
+							 * Metrics
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of metrics to include in the report
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of analytics metrics to retrieve (e.g., views, estimatedMinutesWatched, likes, comments)
+							 */
+							longDesc: () => LocalizedString
+						}
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The channel to get analytics for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The YouTube channel ID to retrieve analytics data for
+							 */
+							longDesc: () => LocalizedString
+						}
+						maxResults: {
+							/**
+							 * Maximum Results
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of results to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of data points to return in the report (default is 10)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_categories: {
+					/**
+					 * List Video Categories
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get list of YouTube video categories
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve the list of available YouTube video categories that can be assigned to videos
+					 */
+					longDesc: () => LocalizedString
+				}
+				list_user_channels: {
+					/**
+					 * List User Channels
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get list of authenticated user's YouTube channels
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve information about the authenticated user's YouTube channels including statistics and branding settings
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						maxResults: {
+							/**
+							 * Maximum Results
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of channels to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of channels to return (default is 5)
+							 */
+							longDesc: () => LocalizedString
+						}
+						nextPageToken: {
+							/**
+							 * Next Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Token for retrieving the next page of results
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_video_comments: {
+					/**
+					 * List Video Comments
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get comments for a YouTube video
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve comments and comment threads for a specific YouTube video with various filtering and sorting options
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						videoId: {
+							/**
+							 * Video ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the video to get comments for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the YouTube video to retrieve comments from
+							 */
+							longDesc: () => LocalizedString
+						}
+						order: {
+							/**
+							 * Sort Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to sort the comments
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The order in which comments should be returned: time (newest first) or relevance
+							 */
+							longDesc: () => LocalizedString
+						}
+						searchTerms: {
+							/**
+							 * Search Terms
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter comments by search terms
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional search terms to filter comments that contain specific keywords
+							 */
+							longDesc: () => LocalizedString
+						}
+						textFormat: {
+							/**
+							 * Text Format
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Format of the comment text
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The format in which comment text should be returned: HTML or plain text
+							 */
+							longDesc: () => LocalizedString
+						}
+						maxResults: {
+							/**
+							 * Maximum Results
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of comments to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of comment threads to return (default is 20)
+							 */
+							longDesc: () => LocalizedString
+						}
+						pageToken: {
+							/**
+							 * Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Token for retrieving a specific page of comments
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_user_videos: {
+					/**
+					 * List User Videos
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get list of authenticated user's YouTube videos
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of videos uploaded by the authenticated user to their YouTube channel
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						maxResults: {
+							/**
+							 * Maximum Results
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of videos to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of videos to return (default is 10)
+							 */
+							longDesc: () => LocalizedString
+						}
+						nextPageToken: {
+							/**
+							 * Next Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Token for retrieving the next page of videos
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				reply_to_comment: {
+					/**
+					 * Reply to Comment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Reply to a YouTube comment
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Post a reply to an existing comment on a YouTube video
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						parentId: {
+							/**
+							 * Parent Comment ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the comment to reply to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the comment or comment thread to reply to
+							 */
+							longDesc: () => LocalizedString
+						}
+						textOriginal: {
+							/**
+							 * Reply Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The text content of the reply
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text content of your reply to the comment
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_video_details: {
+					/**
+					 * Update Video Details
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update details of a YouTube video
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the metadata of an existing YouTube video including title, description, privacy settings, and other properties
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New title for the video
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional new title for the video (leave empty to keep current title)
+							 */
+							longDesc: () => LocalizedString
+						}
+						video: {
+							/**
+							 * Video
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The video to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The YouTube video to update
+							 */
+							longDesc: () => LocalizedString
+						}
+						category: {
+							/**
+							 * Category
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Video category
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional new category for the video (numeric category ID)
+							 */
+							longDesc: () => LocalizedString
+						}
+						privacy: {
+							/**
+							 * Privacy Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Privacy setting for the video
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional new privacy setting: public, private, or unlisted
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New description for the video
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional new description for the video (leave empty to keep current description)
+							 */
+							longDesc: () => LocalizedString
+						}
+						forKids: {
+							/**
+							 * Made for Kids
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether the video is made for kids
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional setting to indicate if the video is specifically made for children
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of tags for the video
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional list of tags/keywords to help categorize the video
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				upload_video: {
+					/**
+					 * Upload Video
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Upload a video to YouTube
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Upload a new video to YouTube with specified metadata including title, description, privacy settings, and category
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The title of the video
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The title/name for the video being uploaded
+							 */
+							longDesc: () => LocalizedString
+						}
+						video: {
+							/**
+							 * Video File
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The video file to upload
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The video file to upload to YouTube
+							 */
+							longDesc: () => LocalizedString
+						}
+						category: {
+							/**
+							 * Category
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Video category
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The YouTube category for the video (numeric category ID)
+							 */
+							longDesc: () => LocalizedString
+						}
+						privacy: {
+							/**
+							 * Privacy Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Privacy setting for the video
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Privacy level for the video: public (visible to everyone), private (only visible to you), or unlisted (visible to anyone with the link)
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The description of the video
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional description text for the video explaining its content
+							 */
+							longDesc: () => LocalizedString
+						}
+						forKids: {
+							/**
+							 * Made for Kids
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether the video is made for kids
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional setting to indicate if the video is specifically made for children (default is false)
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of tags for the video
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional list of tags/keywords to help categorize and make the video discoverable
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_channel_video: {
+					/**
+					 * New Channel Video
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new video is uploaded to a channel
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors a specific YouTube channel for new video uploads and triggers when a new video is detected in the channel's uploads playlist.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The YouTube channel to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the YouTube channel to monitor for new video uploads
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_livestream: {
+					/**
+					 * New Livestream
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new livestream starts
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors for new live streams that are currently broadcasting. Can monitor all live streams or filter by a specific channel.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The YouTube channel to monitor for livestreams
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter livestreams by a specific channel. Leave empty to monitor all livestreams.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_playlist_video: {
+					/**
+					 * New Playlist Video
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new video is added to a playlist
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors a specific YouTube playlist for new videos being added and triggers when a new video is detected.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						playlist: {
+							/**
+							 * Playlist ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The YouTube playlist ID to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the YouTube playlist ID to monitor for new videos being added
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_video_by_search: {
+					/**
+					 * New Video by Search
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when new videos match a search query
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors YouTube search results for a specific query and triggers when new videos matching the search terms are found.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						query: {
+							/**
+							 * Search Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The search terms to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the search query to monitor for new matching videos on YouTube
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_video_comment: {
+					/**
+					 * New Video Comment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new comment is posted on a video
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors a specific YouTube video for new comments and triggers when a new comment is detected.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						video: {
+							/**
+							 * Video
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The YouTube video to monitor for comments
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the YouTube video to monitor for new comments
+							 */
+							longDesc: () => LocalizedString
 						}
 					}
 				}

@@ -52,6 +52,7 @@ import Claude from './apps/Claude';
 import Gemini from './apps/Gemini';
 import OpenRouter from './apps/Openrouter';
 import HuggingFace from './apps/HuggingFace';
+import YouTube from './apps/YouTube';
 
 const en = {
   common: {},
@@ -203,6 +204,7 @@ const en = {
     Webflow,
     ActiveCampaign,
     HuggingFace,
+    YouTube,
   },
 } satisfies BaseTranslation;
 
