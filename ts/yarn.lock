@@ -479,6 +479,18 @@
   dependencies:
     googleapis-common "^7.0.0"
 
+"@huggingface/hub@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@huggingface/hub/-/hub-2.4.0.tgz#9952a66c6913cc03679db830862f250dea83bb94"
+  integrity sha512-8H9uLOIBJNPw6lUV1g/t+7pAVNOhBW5g7CNAOJ0JVkA1QObEb7u0O7vMVkjmu3311SUU39aSx8l1Fgsw586g4g==
+  dependencies:
+    "@huggingface/tasks" "^0.19.22"
+
+"@huggingface/tasks@^0.19.22":
+  version "0.19.34"
+  resolved "https://registry.yarnpkg.com/@huggingface/tasks/-/tasks-0.19.34.tgz#44243d6531b9236570794324e6f9ae9d7eff6a22"
+  integrity sha512-dIl3jyeddCEFJeogJOcbhfIq1tlo3N9K4EAxG/MfkGL0l7hI2kfs91Ut+1h6i09TQM8A9XM91NV7Jz6PgfWE7Q==
+
 "@googleapis/youtube@^28.0.0":
   version "28.0.0"
   resolved "https://registry.yarnpkg.com/@googleapis/youtube/-/youtube-28.0.0.tgz#0de8fe47c1034cb2cf709a630f0628f6b413cc2d"
