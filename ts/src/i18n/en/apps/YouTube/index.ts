@@ -5,6 +5,20 @@ const YouTubeAppEn = {
   longDesc:
     'YouTube integration allows you to manage videos, playlists, channels, and interact with the YouTube platform programmatically.',
   actions: {
+    get_channel_id_from_url: {
+      displayName: 'Get Channel ID from URL',
+      shortDesc: 'Extract YouTube channel ID from various URL formats',
+      longDesc:
+        'Extracts the channel ID from different YouTube URL formats including channel URLs, handles (@username), custom URLs (/c/), usernames (/user/), and video URLs. Also returns basic channel information.',
+      options: {
+        url: {
+          displayName: 'YouTube URL',
+          shortDesc: 'The YouTube URL to extract channel ID from',
+          longDesc:
+            'Any valid YouTube URL format including channel URLs, handles (@username), custom URLs (/c/), usernames (/user/), or video URLs',
+        },
+      },
+    },
     add_video_to_playlist: {
       displayName: 'Add Video to Playlist',
       shortDesc: 'Add a video to an existing YouTube playlist',
@@ -381,17 +395,69 @@ const YouTubeAppEn = {
   },
 
   triggers: {
+    new_channel_video: {
+      displayName: 'New Channel Video',
+      shortDesc: 'Triggers when a new video is uploaded to a channel',
+      longDesc:
+        "Monitors a specific YouTube channel for new video uploads and triggers when a new video is detected in the channel's uploads playlist.",
+      options: {
+        channel: {
+          displayName: 'Channel',
+          shortDesc: 'The YouTube channel to monitor',
+          longDesc: 'Select the YouTube channel to monitor for new video uploads',
+        },
+      },
+    },
+    new_livestream: {
+      displayName: 'New Livestream',
+      shortDesc: 'Triggers when a new livestream starts',
+      longDesc:
+        'Monitors for new live streams that are currently broadcasting. Can monitor all live streams or filter by a specific channel.',
+      options: {
+        channel: {
+          displayName: 'Channel',
+          shortDesc: 'The YouTube channel to monitor for livestreams',
+          longDesc:
+            'Optionally filter livestreams by a specific channel. Leave empty to monitor all livestreams.',
+        },
+      },
+    },
+    new_playlist_video: {
+      displayName: 'New Playlist Video',
+      shortDesc: 'Triggers when a new video is added to a playlist',
+      longDesc:
+        'Monitors a specific YouTube playlist for new videos being added and triggers when a new video is detected.',
+      options: {
+        playlist: {
+          displayName: 'Playlist ID',
+          shortDesc: 'The YouTube playlist ID to monitor',
+          longDesc: 'Enter the YouTube playlist ID to monitor for new videos being added',
+        },
+      },
+    },
+    new_video_by_search: {
+      displayName: 'New Video by Search',
+      shortDesc: 'Triggers when new videos match a search query',
+      longDesc:
+        'Monitors YouTube search results for a specific query and triggers when new videos matching the search terms are found.',
+      options: {
+        query: {
+          displayName: 'Search Query',
+          shortDesc: 'The search terms to monitor',
+          longDesc: 'Enter the search query to monitor for new matching videos on YouTube',
+        },
+      },
+    },
     new_video_comment: {
       displayName: 'New Video Comment',
-      shortDesc: 'Triggers when a new comment is posted on a YouTube video',
+      shortDesc: 'Triggers when a new comment is posted on a video',
       longDesc:
-        'Monitors a specific YouTube video for new comments and triggers when someone posts a new comment. This trigger will capture both top-level comments and replies to existing comments.',
+        'Monitors a specific YouTube video for new comments and triggers when a new comment is detected.',
       options: {
         video: {
           displayName: 'Video',
-          shortDesc: 'The YouTube video to monitor for new comments',
-          longDesc:
-            'Select the YouTube video that you want to monitor for new comments. The trigger will fire whenever someone posts a new comment on this video.',
+          shortDesc: 'The YouTube video to monitor for comments',
+          longDesc: 'Select the YouTube video to monitor for new comments',
         },
       },
     },

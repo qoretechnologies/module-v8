@@ -59,6 +59,7 @@ import webflow from '../apps/webflow';
 import xero from '../apps/xero';
 import zendesk from '../apps/zendesk';
 import zoom from '../apps/zoom';
+import youtube from '../apps/youtube';
 import { Log } from '../decorators/Logger';
 import { Locales } from '../i18n/i18n-types';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
@@ -123,6 +124,7 @@ const NEW_APPS = {
   typeform,
   webflow,
   xero,
+  youtube,
   zendesk,
   zoom,
 } as const;

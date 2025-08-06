@@ -49,12 +49,12 @@ const YouTubeNewVideoCommentTrigger = QoreAppCreator.createLocalizedTrigger({
       ErrorClass: YouTubeError,
     });
 
-    const resources = await fetchLatestComments({
+    const comments = await fetchLatestComments({
       token,
       video,
     });
 
-    return resources?.length ? resources[0] : null;
+    return comments?.length ? comments[0] : null;
   },
   event_info: {
     desc: 'YouTube New Video Comment Trigger Event Info',

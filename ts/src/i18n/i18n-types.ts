@@ -58470,6 +58470,36 @@ type RootTranslation = {
 			 */
 			longDesc: string
 			actions: {
+				get_channel_id_from_url: {
+					/**
+					 * G​e​t​ ​C​h​a​n​n​e​l​ ​I​D​ ​f​r​o​m​ ​U​R​L
+					 */
+					displayName: string
+					/**
+					 * E​x​t​r​a​c​t​ ​Y​o​u​T​u​b​e​ ​c​h​a​n​n​e​l​ ​I​D​ ​f​r​o​m​ ​v​a​r​i​o​u​s​ ​U​R​L​ ​f​o​r​m​a​t​s
+					 */
+					shortDesc: string
+					/**
+					 * E​x​t​r​a​c​t​s​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​I​D​ ​f​r​o​m​ ​d​i​f​f​e​r​e​n​t​ ​Y​o​u​T​u​b​e​ ​U​R​L​ ​f​o​r​m​a​t​s​ ​i​n​c​l​u​d​i​n​g​ ​c​h​a​n​n​e​l​ ​U​R​L​s​,​ ​h​a​n​d​l​e​s​ ​(​@​u​s​e​r​n​a​m​e​)​,​ ​c​u​s​t​o​m​ ​U​R​L​s​ ​(​/​c​/​)​,​ ​u​s​e​r​n​a​m​e​s​ ​(​/​u​s​e​r​/​)​,​ ​a​n​d​ ​v​i​d​e​o​ ​U​R​L​s​.​ ​A​l​s​o​ ​r​e​t​u​r​n​s​ ​b​a​s​i​c​ ​c​h​a​n​n​e​l​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						url: {
+							/**
+							 * Y​o​u​T​u​b​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​Y​o​u​T​u​b​e​ ​U​R​L​ ​t​o​ ​e​x​t​r​a​c​t​ ​c​h​a​n​n​e​l​ ​I​D​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * A​n​y​ ​v​a​l​i​d​ ​Y​o​u​T​u​b​e​ ​U​R​L​ ​f​o​r​m​a​t​ ​i​n​c​l​u​d​i​n​g​ ​c​h​a​n​n​e​l​ ​U​R​L​s​,​ ​h​a​n​d​l​e​s​ ​(​@​u​s​e​r​n​a​m​e​)​,​ ​c​u​s​t​o​m​ ​U​R​L​s​ ​(​/​c​/​)​,​ ​u​s​e​r​n​a​m​e​s​ ​(​/​u​s​e​r​/​)​,​ ​o​r​ ​v​i​d​e​o​ ​U​R​L​s
+							 */
+							longDesc: string
+						}
+					}
+				}
 				add_video_to_playlist: {
 					/**
 					 * A​d​d​ ​V​i​d​e​o​ ​t​o​ ​P​l​a​y​l​i​s​t
@@ -59402,17 +59432,137 @@ type RootTranslation = {
 				}
 			}
 			triggers: {
+				new_channel_video: {
+					/**
+					 * N​e​w​ ​C​h​a​n​n​e​l​ ​V​i​d​e​o
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​v​i​d​e​o​ ​i​s​ ​u​p​l​o​a​d​e​d​ ​t​o​ ​a​ ​c​h​a​n​n​e​l
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​Y​o​u​T​u​b​e​ ​c​h​a​n​n​e​l​ ​f​o​r​ ​n​e​w​ ​v​i​d​e​o​ ​u​p​l​o​a​d​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​v​i​d​e​o​ ​i​s​ ​d​e​t​e​c​t​e​d​ ​i​n​ ​t​h​e​ ​c​h​a​n​n​e​l​'​s​ ​u​p​l​o​a​d​s​ ​p​l​a​y​l​i​s​t​.
+					 */
+					longDesc: string
+					options: {
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​Y​o​u​T​u​b​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​Y​o​u​T​u​b​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​v​i​d​e​o​ ​u​p​l​o​a​d​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_livestream: {
+					/**
+					 * N​e​w​ ​L​i​v​e​s​t​r​e​a​m
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​l​i​v​e​s​t​r​e​a​m​ ​s​t​a​r​t​s
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​f​o​r​ ​n​e​w​ ​l​i​v​e​ ​s​t​r​e​a​m​s​ ​t​h​a​t​ ​a​r​e​ ​c​u​r​r​e​n​t​l​y​ ​b​r​o​a​d​c​a​s​t​i​n​g​.​ ​C​a​n​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​l​i​v​e​ ​s​t​r​e​a​m​s​ ​o​r​ ​f​i​l​t​e​r​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​h​a​n​n​e​l​.
+					 */
+					longDesc: string
+					options: {
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​Y​o​u​T​u​b​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​l​i​v​e​s​t​r​e​a​m​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​l​i​v​e​s​t​r​e​a​m​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​h​a​n​n​e​l​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​l​i​v​e​s​t​r​e​a​m​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_playlist_video: {
+					/**
+					 * N​e​w​ ​P​l​a​y​l​i​s​t​ ​V​i​d​e​o
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​v​i​d​e​o​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​p​l​a​y​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​Y​o​u​T​u​b​e​ ​p​l​a​y​l​i​s​t​ ​f​o​r​ ​n​e​w​ ​v​i​d​e​o​s​ ​b​e​i​n​g​ ​a​d​d​e​d​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​v​i​d​e​o​ ​i​s​ ​d​e​t​e​c​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						playlist: {
+							/**
+							 * P​l​a​y​l​i​s​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​Y​o​u​T​u​b​e​ ​p​l​a​y​l​i​s​t​ ​I​D​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​Y​o​u​T​u​b​e​ ​p​l​a​y​l​i​s​t​ ​I​D​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​v​i​d​e​o​s​ ​b​e​i​n​g​ ​a​d​d​e​d
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_video_by_search: {
+					/**
+					 * N​e​w​ ​V​i​d​e​o​ ​b​y​ ​S​e​a​r​c​h
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​n​e​w​ ​v​i​d​e​o​s​ ​m​a​t​c​h​ ​a​ ​s​e​a​r​c​h​ ​q​u​e​r​y
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​Y​o​u​T​u​b​e​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​q​u​e​r​y​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​n​e​w​ ​v​i​d​e​o​s​ ​m​a​t​c​h​i​n​g​ ​t​h​e​ ​s​e​a​r​c​h​ ​t​e​r​m​s​ ​a​r​e​ ​f​o​u​n​d​.
+					 */
+					longDesc: string
+					options: {
+						query: {
+							/**
+							 * S​e​a​r​c​h​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​e​a​r​c​h​ ​t​e​r​m​s​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​s​e​a​r​c​h​ ​q​u​e​r​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​m​a​t​c​h​i​n​g​ ​v​i​d​e​o​s​ ​o​n​ ​Y​o​u​T​u​b​e
+							 */
+							longDesc: string
+						}
+					}
+				}
 				new_video_comment: {
 					/**
 					 * N​e​w​ ​V​i​d​e​o​ ​C​o​m​m​e​n​t
 					 */
 					displayName: string
 					/**
-					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​i​s​ ​p​o​s​t​e​d​ ​o​n​ ​a​ ​Y​o​u​T​u​b​e​ ​v​i​d​e​o
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​i​s​ ​p​o​s​t​e​d​ ​o​n​ ​a​ ​v​i​d​e​o
 					 */
 					shortDesc: string
 					/**
-					 * M​o​n​i​t​o​r​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​Y​o​u​T​u​b​e​ ​v​i​d​e​o​ ​f​o​r​ ​n​e​w​ ​c​o​m​m​e​n​t​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​s​o​m​e​o​n​e​ ​p​o​s​t​s​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​c​a​p​t​u​r​e​ ​b​o​t​h​ ​t​o​p​-​l​e​v​e​l​ ​c​o​m​m​e​n​t​s​ ​a​n​d​ ​r​e​p​l​i​e​s​ ​t​o​ ​e​x​i​s​t​i​n​g​ ​c​o​m​m​e​n​t​s​.
+					 * M​o​n​i​t​o​r​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​Y​o​u​T​u​b​e​ ​v​i​d​e​o​ ​f​o​r​ ​n​e​w​ ​c​o​m​m​e​n​t​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​i​s​ ​d​e​t​e​c​t​e​d​.
 					 */
 					longDesc: string
 					options: {
@@ -59422,11 +59572,11 @@ type RootTranslation = {
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​Y​o​u​T​u​b​e​ ​v​i​d​e​o​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​c​o​m​m​e​n​t​s
+							 * T​h​e​ ​Y​o​u​T​u​b​e​ ​v​i​d​e​o​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​c​o​m​m​e​n​t​s
 							 */
 							shortDesc: string
 							/**
-							 * S​e​l​e​c​t​ ​t​h​e​ ​Y​o​u​T​u​b​e​ ​v​i​d​e​o​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​c​o​m​m​e​n​t​s​.​ ​T​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​f​i​r​e​ ​w​h​e​n​e​v​e​r​ ​s​o​m​e​o​n​e​ ​p​o​s​t​s​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​o​n​ ​t​h​i​s​ ​v​i​d​e​o​.
+							 * S​e​l​e​c​t​ ​t​h​e​ ​Y​o​u​T​u​b​e​ ​v​i​d​e​o​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​c​o​m​m​e​n​t​s
 							 */
 							longDesc: string
 						}
@@ -117895,6 +118045,36 @@ export type TranslationFunctions = {
 			 */
 			longDesc: () => LocalizedString
 			actions: {
+				get_channel_id_from_url: {
+					/**
+					 * Get Channel ID from URL
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Extract YouTube channel ID from various URL formats
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Extracts the channel ID from different YouTube URL formats including channel URLs, handles (@username), custom URLs (/c/), usernames (/user/), and video URLs. Also returns basic channel information.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						url: {
+							/**
+							 * YouTube URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The YouTube URL to extract channel ID from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Any valid YouTube URL format including channel URLs, handles (@username), custom URLs (/c/), usernames (/user/), or video URLs
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
 				add_video_to_playlist: {
 					/**
 					 * Add Video to Playlist
@@ -118827,17 +119007,137 @@ export type TranslationFunctions = {
 				}
 			}
 			triggers: {
+				new_channel_video: {
+					/**
+					 * New Channel Video
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new video is uploaded to a channel
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors a specific YouTube channel for new video uploads and triggers when a new video is detected in the channel's uploads playlist.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The YouTube channel to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the YouTube channel to monitor for new video uploads
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_livestream: {
+					/**
+					 * New Livestream
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new livestream starts
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors for new live streams that are currently broadcasting. Can monitor all live streams or filter by a specific channel.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The YouTube channel to monitor for livestreams
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter livestreams by a specific channel. Leave empty to monitor all livestreams.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_playlist_video: {
+					/**
+					 * New Playlist Video
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new video is added to a playlist
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors a specific YouTube playlist for new videos being added and triggers when a new video is detected.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						playlist: {
+							/**
+							 * Playlist ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The YouTube playlist ID to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the YouTube playlist ID to monitor for new videos being added
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_video_by_search: {
+					/**
+					 * New Video by Search
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when new videos match a search query
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors YouTube search results for a specific query and triggers when new videos matching the search terms are found.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						query: {
+							/**
+							 * Search Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The search terms to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the search query to monitor for new matching videos on YouTube
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
 				new_video_comment: {
 					/**
 					 * New Video Comment
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Triggers when a new comment is posted on a YouTube video
+					 * Triggers when a new comment is posted on a video
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Monitors a specific YouTube video for new comments and triggers when someone posts a new comment. This trigger will capture both top-level comments and replies to existing comments.
+					 * Monitors a specific YouTube video for new comments and triggers when a new comment is detected.
 					 */
 					longDesc: () => LocalizedString
 					options: {
@@ -118847,11 +119147,11 @@ export type TranslationFunctions = {
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The YouTube video to monitor for new comments
+							 * The YouTube video to monitor for comments
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * Select the YouTube video that you want to monitor for new comments. The trigger will fire whenever someone posts a new comment on this video.
+							 * Select the YouTube video to monitor for new comments
 							 */
 							longDesc: () => LocalizedString
 						}

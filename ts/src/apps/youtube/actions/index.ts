@@ -9,3 +9,4 @@ export { default as AddYouTubeVideoToPlaylist } from './add-video-to-playlist-ac
 export { default as ListYouTubeVideoComments } from './list-video-comments.action';
 export { default as ReplyToYouTubeComment } from './reply-to-comment.action';
 export { default as FindYouTubeVideo } from './find-video.action';
+export { default as GetYouTubeChannelIdFromUrl } from './get-channel-id-from-url.action';
