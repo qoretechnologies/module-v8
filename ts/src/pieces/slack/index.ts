@@ -170,13 +170,6 @@ export const slack = createPiece({
         'users.profile:write',
       ],
     },
-
-    // TODO: Uncomment when the following fields are added to the td-toolkit types:
-    // oauth2_scope_separator_char: ',',
-    // rest_body_auth_error_check: {
-    //   ok: false,
-    //   error: 'invalid_auth',
-    // },
   },
 });
 

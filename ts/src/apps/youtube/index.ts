@@ -43,30 +43,3 @@ export default (locale: Locales) =>
       ping_path: '/youtube/v3/channels?part=id&mine=true',
     },
   }) satisfies TQoreAppWithActions;
-
-/**
-READY * Upload a Video
-
-READY * Update a Video Details
-
-Search Videos
-
-READY * Create a Playlist
-
-Add a Video to the Playlist
-
-Reply to a Comment
-
-TRIGGERS
-
-New Comment on Video 
-
-New livestream
-
-New Video by Search
-
-New Video in Channel
-
-New Video in Playlist
-
- */
