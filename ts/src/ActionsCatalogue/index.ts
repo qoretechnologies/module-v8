@@ -65,6 +65,7 @@ import { Locales } from '../i18n/i18n-types';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import huggingFace from '../apps/hugging-face';
+import linkedin from '../apps/linkedin';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -108,6 +109,7 @@ const NEW_APPS = {
   intercom,
   jira,
   klaviyo,
+  linkedin,
   magento,
   mailchimp,
   messenger360,

@@ -53,6 +53,7 @@ import Gemini from './apps/Gemini';
 import OpenRouter from './apps/Openrouter';
 import HuggingFace from './apps/HuggingFace';
 import YouTube from './apps/YouTube';
+import LinkedIn from './apps/LinkedIn';
 
 const en = {
   common: {},
@@ -151,7 +152,9 @@ const en = {
         },
       },
     },
+    Asana,
     Claude,
+    LinkedIn,
     BrowseAi,
     BigMl,
     Calendly,
@@ -178,7 +181,6 @@ const en = {
     Jira,
     Stripe,
     Github,
-    Asana,
     Typeform,
     DocusignESignature,
     Zendesk,
