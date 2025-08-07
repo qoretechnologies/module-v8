@@ -13,7 +13,6 @@ export const ASANA_APP_NAME = 'Asana';
 export const ASANA_ALLOWED_PATHS = {
   '/tasks': {
     GET: {
-      group: 'tasks',
       override_options: {
         project: {
           required_groups: ['tasks_group'],
@@ -39,7 +38,6 @@ export const ASANA_ALLOWED_PATHS = {
       },
     },
     POST: {
-      group: 'tasks',
       override_options: {
         name: {
           required: true,
@@ -73,14 +71,9 @@ export const ASANA_ALLOWED_PATHS = {
     },
   },
   '/tasks/{task_gid}': {
-    DELETE: {
-      group: 'tasks',
-    },
-    GET: {
-      group: 'tasks',
-    },
+    DELETE: {},
+    GET: {},
     PUT: {
-      group: 'tasks',
       override_options: {
         workspace: {
           rest_get_allowed_values: getAsanaWorkspaceIdAllowedValuesRest,
@@ -125,11 +118,8 @@ export const ASANA_ALLOWED_PATHS = {
     },
   },
   '/tasks/{task_gid}/subtasks': {
-    GET: {
-      group: 'tasks',
-    },
+    GET: {},
     POST: {
-      group: 'tasks',
       override_options: {
         name: {
           required: true,
@@ -145,21 +135,14 @@ export const ASANA_ALLOWED_PATHS = {
     },
   },
   '/tasks/{task_gid}/dependencies': {
-    GET: {
-      group: 'tasks',
-    },
+    GET: {},
   },
   '/tasks/{task_gid}/dependents': {
-    GET: {
-      group: 'tasks',
-    },
+    GET: {},
   },
   '/tasks/{task_gid}/stories': {
-    GET: {
-      group: 'tasks',
-    },
+    GET: {},
     POST: {
-      group: 'tasks',
       override_options: {
         text: {
           required_groups: ['stories_group'],
@@ -171,13 +154,10 @@ export const ASANA_ALLOWED_PATHS = {
     },
   },
   '/workspaces': {
-    GET: {
-      group: 'workspaces',
-    },
+    GET: {},
   },
   '/workspaces/{workspace_gid}': {
     GET: {
-      group: 'workspaces',
       override_options: {
         workspace_gid: {
           required: true,
@@ -186,7 +166,6 @@ export const ASANA_ALLOWED_PATHS = {
       },
     },
     PUT: {
-      group: 'workspaces',
       override_options: {
         workspace_gid: {
           required: true,
@@ -196,13 +175,10 @@ export const ASANA_ALLOWED_PATHS = {
     },
   },
   '/users': {
-    GET: {
-      group: 'users',
-    },
+    GET: {},
   },
   '/users/{user_gid}': {
     GET: {
-      group: 'users',
       override_options: {
         user_gid: {
           required: true,
@@ -213,7 +189,6 @@ export const ASANA_ALLOWED_PATHS = {
   },
   '/projects': {
     GET: {
-      group: 'projects',
       override_options: {
         workspace: {
           rest_get_allowed_values: getAsanaWorkspaceIdAllowedValuesRest,
@@ -225,7 +200,6 @@ export const ASANA_ALLOWED_PATHS = {
       },
     },
     POST: {
-      group: 'projects',
       override_options: {
         name: {
           required: true,
@@ -264,7 +238,6 @@ export const ASANA_ALLOWED_PATHS = {
   },
   '/projects/{project_gid}': {
     DELETE: {
-      group: 'projects',
       override_options: {
         project_gid: {
           required: true,
@@ -274,7 +247,6 @@ export const ASANA_ALLOWED_PATHS = {
       },
     },
     GET: {
-      group: 'projects',
       override_options: {
         project_gid: {
           required: true,
@@ -284,7 +256,6 @@ export const ASANA_ALLOWED_PATHS = {
       },
     },
     PUT: {
-      group: 'projects',
       override_options: {
         project_gid: {
           required: true,
@@ -321,7 +292,6 @@ export const ASANA_ALLOWED_PATHS = {
   },
   '/projects/{project_gid}/tasks': {
     GET: {
-      group: 'tasks',
       override_options: {
         project_gid: {
           required: true,
@@ -333,7 +303,6 @@ export const ASANA_ALLOWED_PATHS = {
   },
   '/projects/{project_gid}/sections': {
     GET: {
-      group: 'sections',
       override_options: {
         project_gid: {
           required: true,
@@ -343,7 +312,6 @@ export const ASANA_ALLOWED_PATHS = {
       },
     },
     POST: {
-      group: 'sections',
       override_options: {
         name: {
           required: true,
@@ -364,7 +332,6 @@ export const ASANA_ALLOWED_PATHS = {
   },
   '/time_periods': {
     GET: {
-      group: 'periods',
       override_options: {
         workspace: {
           required: true,
@@ -374,14 +341,9 @@ export const ASANA_ALLOWED_PATHS = {
     },
   },
   '/sections/{section_gid}': {
-    DELETE: {
-      group: 'sections',
-    },
-    GET: {
-      group: 'sections',
-    },
+    DELETE: {},
+    GET: {},
     PUT: {
-      group: 'sections',
       override_options: {
         name: {
           required: true,
@@ -396,16 +358,11 @@ export const ASANA_ALLOWED_PATHS = {
     },
   },
   '/sections/{section_gid}/tasks': {
-    GET: {
-      group: 'tasks',
-    },
+    GET: {},
   },
   '/tags': {
-    GET: {
-      group: 'tags',
-    },
+    GET: {},
     POST: {
-      group: 'tags',
       override_options: {
         name: {
           required: true,
@@ -426,7 +383,6 @@ export const ASANA_ALLOWED_PATHS = {
   },
   '/tags/{tag_gid}': {
     DELETE: {
-      group: 'tags',
       override_options: {
         tag_gid: {
           required: true,
@@ -435,7 +391,6 @@ export const ASANA_ALLOWED_PATHS = {
       },
     },
     GET: {
-      group: 'tags',
       override_options: {
         tag_gid: {
           required: true,
@@ -444,7 +399,6 @@ export const ASANA_ALLOWED_PATHS = {
       },
     },
     PUT: {
-      group: 'tags',
       override_options: {
         tag_gid: {
           required: true,
@@ -455,7 +409,6 @@ export const ASANA_ALLOWED_PATHS = {
   },
   '/tags/{tag_gid}/tasks': {
     GET: {
-      group: 'tasks',
       override_options: {
         tag_gid: {
           required: true,
@@ -465,16 +418,11 @@ export const ASANA_ALLOWED_PATHS = {
     },
   },
   '/teams': {
-    GET: {
-      group: 'teams',
-    },
+    GET: {},
   },
   '/teams/{team_gid}/projects': {
-    GET: {
-      group: 'projects',
-    },
+    GET: {},
     POST: {
-      group: 'projects',
       override_options: {
         name: {
           required: true,
@@ -488,7 +436,6 @@ export const ASANA_ALLOWED_PATHS = {
   },
   '/events': {
     GET: {
-      group: 'events',
       override_options: {
         resource: {
           required: true,
@@ -498,7 +445,6 @@ export const ASANA_ALLOWED_PATHS = {
   },
   '/goals': {
     POST: {
-      group: 'goals',
       override_options: {
         workspace: {
           required: true,
@@ -515,7 +461,6 @@ export const ASANA_ALLOWED_PATHS = {
       },
     },
     GET: {
-      group: 'goals',
       override_options: {
         portfolio: {
           required_groups: ['goals_group'],
@@ -538,14 +483,9 @@ export const ASANA_ALLOWED_PATHS = {
     },
   },
   '/goals/{goal_gid}': {
-    DELETE: {
-      group: 'goals',
-    },
-    GET: {
-      group: 'goals',
-    },
+    DELETE: {},
+    GET: {},
     PUT: {
-      group: 'goals',
       override_options: {
         workspace: {
           rest_get_allowed_values: getAsanaWorkspaceIdAllowedValuesRest,

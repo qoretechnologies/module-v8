@@ -1,5 +1,3 @@
-
-
 const NetSuiteAppEn = {
   displayName: 'NetSuite',
   shortDesc: 'A comprehensive suite of cloud-based business management solutions.',
@@ -21,6 +19,7 @@ const NetSuiteAppEn = {
   },
   actions: {
     list_records: {
+      group: 'Data & Search',
       displayName: 'List Records',
       shortDesc: 'Retrieve NetSuite records based on search criteria',
       longDesc:
@@ -75,6 +74,7 @@ const NetSuiteAppEn = {
       },
     },
     suite_ql: {
+      group: 'Data & Search',
       displayName: 'SuiteQL',
       shortDesc: 'Run a SuiteQL query',
       longDesc: 'Run a SuiteQL query',
@@ -121,111 +121,133 @@ const NetSuiteAppEn = {
       },
     },
     account_get: {
+      group: 'Accounting',
       displayName: 'Get List of Accounts',
       shortDesc: 'Retrieve a list of accounts.',
       longDesc: 'Fetches a list of accounts based on specified filters.',
     },
     account_post: {
+      group: 'Accounting',
       displayName: 'Create Account',
       shortDesc: 'Creates a new account.',
       longDesc: 'Allows the user to create a new account record in NetSuite.',
     },
     account_id_get: {
+      group: 'Accounting',
       displayName: 'Get Account',
       shortDesc: 'Retrieve details of a specific account.',
       longDesc: 'Fetches detailed information of a single account by its ID.',
     },
     account_id_patch: {
+      group: 'Accounting',
       displayName: 'Update Account',
       shortDesc: 'Updates an existing account.',
       longDesc: 'Allows the user to update details of a specific account by its ID.',
     },
     account_id_delete: {
+      group: 'Accounting',
       displayName: 'Delete Account',
       shortDesc: 'Deletes a specific account.',
       longDesc: 'Removes an account record from NetSuite based on its ID.',
     },
     customer_get: {
+      group: 'CRM',
       displayName: 'Get List of Customers',
       shortDesc: 'Retrieve a list of customers.',
       longDesc: 'Fetches a list of customers based on specified filters.',
     },
     customer_post: {
+      group: 'CRM',
       displayName: 'Create Customer',
       shortDesc: 'Creates a new customer.',
       longDesc: 'Allows the user to create a new customer record in NetSuite.',
     },
     customer_id_get: {
+      group: 'CRM',
       displayName: 'Get Customer',
       shortDesc: 'Retrieve details of a specific customer.',
       longDesc: 'Fetches detailed information of a single customer by its ID.',
     },
     customer_id_patch: {
+      group: 'CRM',
       displayName: 'Update Customer',
       shortDesc: 'Updates an existing customer.',
       longDesc: 'Allows the user to update details of a specific customer by its ID.',
     },
     customer_id_delete: {
+      group: 'CRM',
       displayName: 'Delete Customer',
       shortDesc: 'Deletes a specific customer.',
       longDesc: 'Removes a customer record from NetSuite based on its ID.',
     },
     contact_get: {
+      group: 'CRM',
       displayName: 'Get List of Contacts',
       shortDesc: 'Retrieve a list of contacts.',
       longDesc: 'Fetches a list of contacts based on specified filters.',
     },
     contact_post: {
+      group: 'CRM',
       displayName: 'Create Contact',
       shortDesc: 'Creates a new contact.',
       longDesc: 'Allows the user to create a new contact record in NetSuite.',
     },
     contact_id_delete: {
+      group: 'CRM',
       displayName: 'Delete Contact',
       shortDesc: 'Deletes a specific contact.',
       longDesc: 'Removes a contact record from NetSuite based on its ID.',
     },
     contact_id_get: {
+      group: 'CRM',
       displayName: 'Get Contact',
       shortDesc: 'Retrieve details of a specific contact.',
       longDesc: 'Fetches detailed information of a single contact by its ID.',
     },
     contact_id_patch: {
+      group: 'CRM',
       displayName: 'Update Contact',
       shortDesc: 'Updates an existing contact.',
       longDesc: 'Allows the user to update details of a specific contact by its ID.',
     },
     opportunity_get: {
+      group: 'CRM',
       displayName: 'Get List of Opportunities',
       shortDesc: 'Retrieve a list of opportunities.',
       longDesc: 'Fetches a list of opportunities based on specified filters.',
     },
     opportunity_id_delete: {
+      group: 'CRM',
       displayName: 'Delete Opportunity',
       shortDesc: 'Deletes a specific opportunity.',
       longDesc: 'Removes an opportunity record from NetSuite based on its ID.',
     },
     opportunity_id_get: {
+      group: 'CRM',
       displayName: 'Get Opportunity',
       shortDesc: 'Retrieve details of a specific opportunity.',
       longDesc: 'Fetches detailed information of a single opportunity by its ID.',
     },
     opportunity_id_patch: {
+      group: 'CRM',
       displayName: 'Update Opportunity',
       shortDesc: 'Updates an existing opportunity.',
       longDesc: 'Allows the user to update details of a specific opportunity by its ID.',
     },
     opportunity_post: {
+      group: 'CRM',
       displayName: 'Create Opportunity',
       shortDesc: 'Creates a new opportunity.',
       longDesc: 'Allows the user to create a new opportunity record in NetSuite.',
     },
     invoice_get: {
+      group: 'Sales & Billing',
       displayName: 'Get List of Invoices',
       shortDesc: 'Retrieve a list of invoices.',
       longDesc: 'Fetches a list of invoices based on specified filters.',
     },
     invoice_post: {
+      group: 'Sales & Billing',
       displayName: 'Create Invoice',
       shortDesc: 'Creates a new invoice.',
       longDesc: 'Allows the user to create a new invoice record in NetSuite.',
@@ -238,51 +260,61 @@ const NetSuiteAppEn = {
       },
     },
     invoice_id_get: {
+      group: 'Sales & Billing',
       displayName: 'Get Invoice',
       shortDesc: 'Retrieve details of a specific invoice.',
       longDesc: 'Fetches detailed information of a single invoice by its ID.',
     },
     invoice_id_patch: {
+      group: 'Sales & Billing',
       displayName: 'Update Invoice',
       shortDesc: 'Updates an existing invoice.',
       longDesc: 'Allows the user to update details of a specific invoice by its ID.',
     },
     invoice_id_delete: {
+      group: 'Sales & Billing',
       displayName: 'Delete Invoice',
       shortDesc: 'Deletes a specific invoice.',
       longDesc: 'Removes an invoice record from NetSuite based on its ID.',
     },
     journalEntry_get: {
+      group: 'Accounting',
       displayName: 'Get List of Journal Entries',
       shortDesc: 'Retrieve a list of journal entries.',
       longDesc: 'Fetches a list of journal entries based on specified filters.',
     },
     journalEntry_post: {
+      group: 'Accounting',
       displayName: 'Create Journal Entry',
       shortDesc: 'Creates a new journal entry.',
       longDesc: 'Allows the user to create a new journal entry record in NetSuite.',
     },
     journalEntry_id_get: {
+      group: 'Accounting',
       displayName: 'Get Journal Entry',
       shortDesc: 'Retrieve details of a specific journal entry.',
       longDesc: 'Fetches detailed information of a single journal entry by its ID.',
     },
     journal_entry_id_patch: {
+      group: 'Accounting',
       displayName: 'Update Journal Entry',
       shortDesc: 'Updates an existing journal entry.',
       longDesc: 'Allows the user to update details of a specific journal entry by its ID.',
     },
     journalEntry_id_delete: {
+      group: 'Accounting',
       displayName: 'Delete Journal Entry',
       shortDesc: 'Deletes a specific journal entry.',
       longDesc: 'Removes a journal entry record from NetSuite based on its ID.',
     },
     purchaseOrder_get: {
+      group: 'Procurement',
       displayName: 'Get List of Purchase Orders',
       shortDesc: 'Retrieve a list of purchase orders.',
       longDesc: 'Fetches a list of purchase orders based on specified filters.',
     },
     purchaseOrder_post: {
+      group: 'Procurement',
       displayName: 'Create Purchase Order',
       shortDesc: 'Creates a new purchase order.',
       longDesc: 'Allows the user to create a new purchase order record in NetSuite.',
@@ -300,11 +332,13 @@ const NetSuiteAppEn = {
       },
     },
     purchaseOrder_id_get: {
+      group: 'Procurement',
       displayName: 'Get Purchase Order',
       shortDesc: 'Retrieve details of a specific purchase order.',
       longDesc: 'Fetches detailed information of a single purchase order by its ID.',
     },
     purchaseOrder_id_patch: {
+      group: 'Procurement',
       displayName: 'Update Purchase Order',
       shortDesc: 'Updates an existing purchase order.',
       longDesc: 'Allows the user to update details of a specific purchase order by its ID.',
@@ -322,16 +356,19 @@ const NetSuiteAppEn = {
       },
     },
     purchaseOrder_id_delete: {
+      group: 'Procurement',
       displayName: 'Delete Purchase Order',
       shortDesc: 'Deletes a specific purchase order.',
       longDesc: 'Removes a purchase order record from NetSuite based on its ID.',
     },
     salesOrder_get: {
+      group: 'Sales & Billing',
       displayName: 'Get List of Sales Orders',
       shortDesc: 'Retrieve a list of sales orders.',
       longDesc: 'Fetches a list of sales orders based on specified filters.',
     },
     salesOrder_post: {
+      group: 'Sales & Billing',
       displayName: 'Create Sales Order',
       shortDesc: 'Creates a new sales order.',
       longDesc: 'Allows the user to create a new sales order record in NetSuite.',
@@ -344,6 +381,7 @@ const NetSuiteAppEn = {
       },
     },
     customer_post_simplified: {
+      group: 'CRM',
       displayName: 'Create Customer (Simplified)',
       shortDesc: 'Creates a new customer with simplified options.',
       longDesc: 'Creates a new customer in NetSuite with simplified fields',
@@ -361,6 +399,7 @@ const NetSuiteAppEn = {
       },
     },
     salesOrder_post_simplified: {
+      group: 'Sales & Billing',
       displayName: 'Create Sales Order (Simplified)',
       shortDesc: 'Creates a new sales order with simplified options.',
       longDesc:
@@ -415,11 +454,13 @@ const NetSuiteAppEn = {
       },
     },
     salesOrder_id_get: {
+      group: 'Sales & Billing',
       displayName: 'Get Sales Order',
       shortDesc: 'Retrieve details of a specific sales order.',
       longDesc: 'Fetches detailed information of a single sales order by its ID.',
     },
     salesOrder_id_patch: {
+      group: 'Sales & Billing',
       displayName: 'Update Sales Order',
       shortDesc: 'Updates an existing sales order.',
       longDesc: 'Allows the user to update details of a specific sales order by its ID.',
@@ -432,31 +473,37 @@ const NetSuiteAppEn = {
       },
     },
     salesOrder_id_delete: {
+      group: 'Sales & Billing',
       displayName: 'Delete Sales Order',
       shortDesc: 'Deletes a specific sales order.',
       longDesc: 'Removes a sales order record from NetSuite based on its ID.',
     },
     vendor_get: {
+      group: 'Procurement',
       displayName: 'Get List of Vendors',
       shortDesc: 'Retrieve a list of vendors.',
       longDesc: 'Fetches a list of vendors based on specified filters.',
     },
     vendor_post: {
+      group: 'Procurement',
       displayName: 'Create Vendor',
       shortDesc: 'Creates a new vendor.',
       longDesc: 'Allows the user to create a new vendor record in NetSuite.',
     },
     vendor_id_get: {
+      group: 'Procurement',
       displayName: 'Get Vendor',
       shortDesc: 'Retrieve details of a specific vendor.',
       longDesc: 'Fetches detailed information of a single vendor by its ID.',
     },
     vendor_id_patch: {
+      group: 'Procurement',
       displayName: 'Update Vendor',
       shortDesc: 'Updates an existing vendor.',
       longDesc: 'Allows the user to update details of a specific vendor by its ID.',
     },
     vendor_id_delete: {
+      group: 'Procurement',
       displayName: 'Delete Vendor',
       shortDesc: 'Deletes a specific vendor.',
       longDesc: 'Removes a vendor record from NetSuite based on its ID.',
