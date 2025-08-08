@@ -7,11 +7,14 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { validateResponseProperties } from './utils';
+import { configDotenv } from 'dotenv';
 const slackCustomConnOpts = {
   authed_user: {
     type: 'hash',
   },
 } satisfies TCustomConnOptions;
+
+configDotenv({ path: '.env' });
 
 describe('slackPieceTest', () => {
   let newMessageTimestamp: string = '';
@@ -122,7 +125,8 @@ describe('slackPieceTest', () => {
     expect(channelIds).toBeDefined();
     expect(channelIds.length).toBeGreaterThan(0);
 
-    const props = { channel: channelIds[0].value };
+    // 10 days ago timestamp
+    const props = { channel: channelIds[0].value, oldest: Date.now() / 1000 - 10 * 24 * 60 * 60 };
 
     if (actionFunction) {
       try {
