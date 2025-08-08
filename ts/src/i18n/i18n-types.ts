@@ -4929,6 +4929,338 @@ type RootTranslation = {
 					}
 				}
 			}
+			actions: {
+				getEvents: {
+					/**
+					 * T​i​m​e​ ​&​ ​E​v​e​n​t​s
+					 */
+					group: string
+				}
+				getGoals: {
+					/**
+					 * G​o​a​l​s
+					 */
+					group: string
+				}
+				createGoal: {
+					/**
+					 * G​o​a​l​s
+					 */
+					group: string
+				}
+				deleteGoal: {
+					/**
+					 * G​o​a​l​s
+					 */
+					group: string
+				}
+				getGoal: {
+					/**
+					 * G​o​a​l​s
+					 */
+					group: string
+				}
+				updateGoal: {
+					/**
+					 * G​o​a​l​s
+					 */
+					group: string
+				}
+				getProjects: {
+					/**
+					 * P​r​o​j​e​c​t​s
+					 */
+					group: string
+				}
+				createProject: {
+					/**
+					 * P​r​o​j​e​c​t​s
+					 */
+					group: string
+				}
+				deleteProject: {
+					/**
+					 * P​r​o​j​e​c​t​s
+					 */
+					group: string
+				}
+				getProject: {
+					/**
+					 * P​r​o​j​e​c​t​s
+					 */
+					group: string
+				}
+				updateProject: {
+					/**
+					 * P​r​o​j​e​c​t​s
+					 */
+					group: string
+				}
+				getSectionsForProject: {
+					/**
+					 * P​r​o​j​e​c​t​s
+					 */
+					group: string
+				}
+				createSectionForProject: {
+					/**
+					 * P​r​o​j​e​c​t​s
+					 */
+					group: string
+				}
+				getTasksForProject: {
+					/**
+					 * P​r​o​j​e​c​t​s
+					 */
+					group: string
+				}
+				project_task_added: {
+					/**
+					 * E​v​e​n​t​ ​T​r​i​g​g​e​r​s
+					 */
+					group: string
+				}
+				project_added: {
+					/**
+					 * E​v​e​n​t​ ​T​r​i​g​g​e​r​s
+					 */
+					group: string
+				}
+				getSection: {
+					/**
+					 * S​e​c​t​i​o​n​s
+					 */
+					group: string
+				}
+				updateSection: {
+					/**
+					 * S​e​c​t​i​o​n​s
+					 */
+					group: string
+				}
+				deleteSection: {
+					/**
+					 * S​e​c​t​i​o​n​s
+					 */
+					group: string
+				}
+				getTasksForSection: {
+					/**
+					 * S​e​c​t​i​o​n​s
+					 */
+					group: string
+				}
+				task_moved_to_section: {
+					/**
+					 * E​v​e​n​t​ ​T​r​i​g​g​e​r​s
+					 */
+					group: string
+				}
+				getTasks: {
+					/**
+					 * T​a​s​k​s
+					 */
+					group: string
+				}
+				createTask: {
+					/**
+					 * T​a​s​k​s
+					 */
+					group: string
+				}
+				deleteTask: {
+					/**
+					 * T​a​s​k​s
+					 */
+					group: string
+				}
+				getTask: {
+					/**
+					 * T​a​s​k​s
+					 */
+					group: string
+				}
+				updateTask: {
+					/**
+					 * T​a​s​k​s
+					 */
+					group: string
+				}
+				getDependenciesForTask: {
+					/**
+					 * T​a​s​k​s
+					 */
+					group: string
+				}
+				getDependentsForTask: {
+					/**
+					 * T​a​s​k​s
+					 */
+					group: string
+				}
+				getStoriesForTask: {
+					/**
+					 * T​a​s​k​s
+					 */
+					group: string
+				}
+				createStoryForTask: {
+					/**
+					 * T​a​s​k​s
+					 */
+					group: string
+				}
+				getSubtasksForTask: {
+					/**
+					 * T​a​s​k​s
+					 */
+					group: string
+				}
+				createSubtaskForTask: {
+					/**
+					 * T​a​s​k​s
+					 */
+					group: string
+				}
+				task_completed: {
+					/**
+					 * E​v​e​n​t​ ​T​r​i​g​g​e​r​s
+					 */
+					group: string
+				}
+				subtask_completed: {
+					/**
+					 * E​v​e​n​t​ ​T​r​i​g​g​e​r​s
+					 */
+					group: string
+				}
+				task_comment_added: {
+					/**
+					 * E​v​e​n​t​ ​T​r​i​g​g​e​r​s
+					 */
+					group: string
+				}
+				task_story_added: {
+					/**
+					 * E​v​e​n​t​ ​T​r​i​g​g​e​r​s
+					 */
+					group: string
+				}
+				task_subtask_added: {
+					/**
+					 * E​v​e​n​t​ ​T​r​i​g​g​e​r​s
+					 */
+					group: string
+				}
+				getTags: {
+					/**
+					 * T​a​g​s
+					 */
+					group: string
+				}
+				createTag: {
+					/**
+					 * T​a​g​s
+					 */
+					group: string
+				}
+				deleteTag: {
+					/**
+					 * T​a​g​s
+					 */
+					group: string
+				}
+				getTag: {
+					/**
+					 * T​a​g​s
+					 */
+					group: string
+				}
+				updateTag: {
+					/**
+					 * T​a​g​s
+					 */
+					group: string
+				}
+				getTasksForTag: {
+					/**
+					 * T​a​g​s
+					 */
+					group: string
+				}
+				task_tag_added: {
+					/**
+					 * E​v​e​n​t​ ​T​r​i​g​g​e​r​s
+					 */
+					group: string
+				}
+				tag_created: {
+					/**
+					 * E​v​e​n​t​ ​T​r​i​g​g​e​r​s
+					 */
+					group: string
+				}
+				getProjectsForTeam: {
+					/**
+					 * T​e​a​m​s​ ​&​ ​U​s​e​r​s
+					 */
+					group: string
+				}
+				createProjectForTeam: {
+					/**
+					 * T​e​a​m​s​ ​&​ ​U​s​e​r​s
+					 */
+					group: string
+				}
+				getUsers: {
+					/**
+					 * T​e​a​m​s​ ​&​ ​U​s​e​r​s
+					 */
+					group: string
+				}
+				getUser: {
+					/**
+					 * T​e​a​m​s​ ​&​ ​U​s​e​r​s
+					 */
+					group: string
+				}
+				user_added: {
+					/**
+					 * E​v​e​n​t​ ​T​r​i​g​g​e​r​s
+					 */
+					group: string
+				}
+				team_added: {
+					/**
+					 * E​v​e​n​t​ ​T​r​i​g​g​e​r​s
+					 */
+					group: string
+				}
+				getWorkspaces: {
+					/**
+					 * W​o​r​k​s​p​a​c​e​s
+					 */
+					group: string
+				}
+				getWorkspace: {
+					/**
+					 * W​o​r​k​s​p​a​c​e​s
+					 */
+					group: string
+				}
+				updateWorkspace: {
+					/**
+					 * W​o​r​k​s​p​a​c​e​s
+					 */
+					group: string
+				}
+				getTimePeriods: {
+					/**
+					 * O​t​h​e​r
+					 */
+					group: string
+				}
+			}
 		}
 		Claude: {
 			/**
@@ -32041,6 +32373,290 @@ type RootTranslation = {
 					}
 				}
 			}
+			actions: {
+				'repos-list-for-org': {
+					/**
+					 * R​e​p​o​s​i​t​o​r​i​e​s
+					 */
+					group: string
+				}
+				'repos-create-in-org': {
+					/**
+					 * R​e​p​o​s​i​t​o​r​i​e​s
+					 */
+					group: string
+				}
+				'repos-delete': {
+					/**
+					 * R​e​p​o​s​i​t​o​r​i​e​s
+					 */
+					group: string
+				}
+				'repos-get': {
+					/**
+					 * R​e​p​o​s​i​t​o​r​i​e​s
+					 */
+					group: string
+				}
+				'repos-update': {
+					/**
+					 * R​e​p​o​s​i​t​o​r​i​e​s
+					 */
+					group: string
+				}
+				'repos-list-for-authenticated-user': {
+					/**
+					 * R​e​p​o​s​i​t​o​r​i​e​s
+					 */
+					group: string
+				}
+				'repos-create-for-authenticated-user': {
+					/**
+					 * R​e​p​o​s​i​t​o​r​i​e​s
+					 */
+					group: string
+				}
+				'repos-list-contributors': {
+					/**
+					 * R​e​p​o​s​i​t​o​r​i​e​s
+					 */
+					group: string
+				}
+				'repos-get-content': {
+					/**
+					 * C​o​n​t​e​n​t​ ​&​ ​F​i​l​e​s
+					 */
+					group: string
+				}
+				'repos-delete-file': {
+					/**
+					 * C​o​n​t​e​n​t​ ​&​ ​F​i​l​e​s
+					 */
+					group: string
+				}
+				'repos-create-or-update-file-contents': {
+					/**
+					 * C​o​n​t​e​n​t​ ​&​ ​F​i​l​e​s
+					 */
+					group: string
+				}
+				'repos-list-branches': {
+					/**
+					 * B​r​a​n​c​h​e​s
+					 */
+					group: string
+				}
+				'repos-get-branch': {
+					/**
+					 * B​r​a​n​c​h​e​s
+					 */
+					group: string
+				}
+				new_repository_branch: {
+					/**
+					 * E​v​e​n​t​ ​T​r​i​g​g​e​r​s
+					 */
+					group: string
+				}
+				'repos-list-collaborators': {
+					/**
+					 * C​o​l​l​a​b​o​r​a​t​o​r​s
+					 */
+					group: string
+				}
+				'repos-list-commits': {
+					/**
+					 * C​o​m​m​i​t​s
+					 */
+					group: string
+				}
+				new_commit: {
+					/**
+					 * E​v​e​n​t​ ​T​r​i​g​g​e​r​s
+					 */
+					group: string
+				}
+				new_commit_comment: {
+					/**
+					 * E​v​e​n​t​ ​T​r​i​g​g​e​r​s
+					 */
+					group: string
+				}
+				'issues-list': {
+					/**
+					 * I​s​s​u​e​s
+					 */
+					group: string
+				}
+				'issues-list-for-repo': {
+					/**
+					 * I​s​s​u​e​s
+					 */
+					group: string
+				}
+				'issues-create': {
+					/**
+					 * I​s​s​u​e​s
+					 */
+					group: string
+				}
+				'issues-get': {
+					/**
+					 * I​s​s​u​e​s
+					 */
+					group: string
+				}
+				'issues-update': {
+					/**
+					 * I​s​s​u​e​s
+					 */
+					group: string
+				}
+				'issues-remove-assignees': {
+					/**
+					 * I​s​s​u​e​s
+					 */
+					group: string
+				}
+				'issues-add-assignees': {
+					/**
+					 * I​s​s​u​e​s
+					 */
+					group: string
+				}
+				new_repository_issue: {
+					/**
+					 * E​v​e​n​t​ ​T​r​i​g​g​e​r​s
+					 */
+					group: string
+				}
+				'pulls-list': {
+					/**
+					 * P​u​l​l​ ​R​e​q​u​e​s​t​s
+					 */
+					group: string
+				}
+				'pulls-create': {
+					/**
+					 * P​u​l​l​ ​R​e​q​u​e​s​t​s
+					 */
+					group: string
+				}
+				'pulls-get': {
+					/**
+					 * P​u​l​l​ ​R​e​q​u​e​s​t​s
+					 */
+					group: string
+				}
+				'pulls-update': {
+					/**
+					 * P​u​l​l​ ​R​e​q​u​e​s​t​s
+					 */
+					group: string
+				}
+				'pulls-remove-requested-reviewers': {
+					/**
+					 * P​u​l​l​ ​R​e​q​u​e​s​t​s
+					 */
+					group: string
+				}
+				'pulls-list-requested-reviewers': {
+					/**
+					 * P​u​l​l​ ​R​e​q​u​e​s​t​s
+					 */
+					group: string
+				}
+				'pulls-request-reviewers': {
+					/**
+					 * P​u​l​l​ ​R​e​q​u​e​s​t​s
+					 */
+					group: string
+				}
+				new_pull_request: {
+					/**
+					 * E​v​e​n​t​ ​T​r​i​g​g​e​r​s
+					 */
+					group: string
+				}
+				new_review_request: {
+					/**
+					 * E​v​e​n​t​ ​T​r​i​g​g​e​r​s
+					 */
+					group: string
+				}
+				'actions-get-repo-public-key': {
+					/**
+					 * A​c​t​i​o​n​s​ ​&​ ​S​e​c​r​e​t​s
+					 */
+					group: string
+				}
+				'actions-delete-repo-secret': {
+					/**
+					 * A​c​t​i​o​n​s​ ​&​ ​S​e​c​r​e​t​s
+					 */
+					group: string
+				}
+				'actions-get-repo-secret': {
+					/**
+					 * A​c​t​i​o​n​s​ ​&​ ​S​e​c​r​e​t​s
+					 */
+					group: string
+				}
+				'actions-create-or-update-repo-secret': {
+					/**
+					 * A​c​t​i​o​n​s​ ​&​ ​S​e​c​r​e​t​s
+					 */
+					group: string
+				}
+				'actions-list-repo-workflows': {
+					/**
+					 * A​c​t​i​o​n​s​ ​&​ ​S​e​c​r​e​t​s
+					 */
+					group: string
+				}
+				'git-create-ref': {
+					/**
+					 * G​i​t
+					 */
+					group: string
+				}
+				'repos-list-releases': {
+					/**
+					 * R​e​l​e​a​s​e​s
+					 */
+					group: string
+				}
+				'repos-create-release': {
+					/**
+					 * R​e​l​e​a​s​e​s
+					 */
+					group: string
+				}
+				new_release: {
+					/**
+					 * E​v​e​n​t​ ​T​r​i​g​g​e​r​s
+					 */
+					group: string
+				}
+				'orgs-list-members': {
+					/**
+					 * O​r​g​a​n​i​z​a​t​i​o​n​s
+					 */
+					group: string
+				}
+				'search-issues-and-pull-requests': {
+					/**
+					 * S​e​a​r​c​h
+					 */
+					group: string
+				}
+				'search-repos': {
+					/**
+					 * S​e​a​r​c​h
+					 */
+					group: string
+				}
+			}
 		}
 		Typeform: {
 			/**
@@ -37692,6 +38308,10 @@ type RootTranslation = {
 			actions: {
 				list_records: {
 					/**
+					 * D​a​t​a​ ​&​ ​S​e​a​r​c​h
+					 */
+					group: string
+					/**
 					 * L​i​s​t​ ​R​e​c​o​r​d​s
 					 */
 					displayName: string
@@ -37824,6 +38444,10 @@ type RootTranslation = {
 				}
 				suite_ql: {
 					/**
+					 * D​a​t​a​ ​&​ ​S​e​a​r​c​h
+					 */
+					group: string
+					/**
 					 * S​u​i​t​e​Q​L
 					 */
 					displayName: string
@@ -37942,6 +38566,10 @@ type RootTranslation = {
 				}
 				account_get: {
 					/**
+					 * A​c​c​o​u​n​t​i​n​g
+					 */
+					group: string
+					/**
 					 * G​e​t​ ​L​i​s​t​ ​o​f​ ​A​c​c​o​u​n​t​s
 					 */
 					displayName: string
@@ -37955,6 +38583,10 @@ type RootTranslation = {
 					longDesc: string
 				}
 				account_post: {
+					/**
+					 * A​c​c​o​u​n​t​i​n​g
+					 */
+					group: string
 					/**
 					 * C​r​e​a​t​e​ ​A​c​c​o​u​n​t
 					 */
@@ -37970,6 +38602,10 @@ type RootTranslation = {
 				}
 				account_id_get: {
 					/**
+					 * A​c​c​o​u​n​t​i​n​g
+					 */
+					group: string
+					/**
 					 * G​e​t​ ​A​c​c​o​u​n​t
 					 */
 					displayName: string
@@ -37983,6 +38619,10 @@ type RootTranslation = {
 					longDesc: string
 				}
 				account_id_patch: {
+					/**
+					 * A​c​c​o​u​n​t​i​n​g
+					 */
+					group: string
 					/**
 					 * U​p​d​a​t​e​ ​A​c​c​o​u​n​t
 					 */
@@ -37998,6 +38638,10 @@ type RootTranslation = {
 				}
 				account_id_delete: {
 					/**
+					 * A​c​c​o​u​n​t​i​n​g
+					 */
+					group: string
+					/**
 					 * D​e​l​e​t​e​ ​A​c​c​o​u​n​t
 					 */
 					displayName: string
@@ -38011,6 +38655,10 @@ type RootTranslation = {
 					longDesc: string
 				}
 				customer_get: {
+					/**
+					 * C​R​M
+					 */
+					group: string
 					/**
 					 * G​e​t​ ​L​i​s​t​ ​o​f​ ​C​u​s​t​o​m​e​r​s
 					 */
@@ -38026,6 +38674,10 @@ type RootTranslation = {
 				}
 				customer_post: {
 					/**
+					 * C​R​M
+					 */
+					group: string
+					/**
 					 * C​r​e​a​t​e​ ​C​u​s​t​o​m​e​r
 					 */
 					displayName: string
@@ -38039,6 +38691,10 @@ type RootTranslation = {
 					longDesc: string
 				}
 				customer_id_get: {
+					/**
+					 * C​R​M
+					 */
+					group: string
 					/**
 					 * G​e​t​ ​C​u​s​t​o​m​e​r
 					 */
@@ -38054,6 +38710,10 @@ type RootTranslation = {
 				}
 				customer_id_patch: {
 					/**
+					 * C​R​M
+					 */
+					group: string
+					/**
 					 * U​p​d​a​t​e​ ​C​u​s​t​o​m​e​r
 					 */
 					displayName: string
@@ -38067,6 +38727,10 @@ type RootTranslation = {
 					longDesc: string
 				}
 				customer_id_delete: {
+					/**
+					 * C​R​M
+					 */
+					group: string
 					/**
 					 * D​e​l​e​t​e​ ​C​u​s​t​o​m​e​r
 					 */
@@ -38082,6 +38746,10 @@ type RootTranslation = {
 				}
 				contact_get: {
 					/**
+					 * C​R​M
+					 */
+					group: string
+					/**
 					 * G​e​t​ ​L​i​s​t​ ​o​f​ ​C​o​n​t​a​c​t​s
 					 */
 					displayName: string
@@ -38095,6 +38763,10 @@ type RootTranslation = {
 					longDesc: string
 				}
 				contact_post: {
+					/**
+					 * C​R​M
+					 */
+					group: string
 					/**
 					 * C​r​e​a​t​e​ ​C​o​n​t​a​c​t
 					 */
@@ -38110,6 +38782,10 @@ type RootTranslation = {
 				}
 				contact_id_delete: {
 					/**
+					 * C​R​M
+					 */
+					group: string
+					/**
 					 * D​e​l​e​t​e​ ​C​o​n​t​a​c​t
 					 */
 					displayName: string
@@ -38123,6 +38799,10 @@ type RootTranslation = {
 					longDesc: string
 				}
 				contact_id_get: {
+					/**
+					 * C​R​M
+					 */
+					group: string
 					/**
 					 * G​e​t​ ​C​o​n​t​a​c​t
 					 */
@@ -38138,6 +38818,10 @@ type RootTranslation = {
 				}
 				contact_id_patch: {
 					/**
+					 * C​R​M
+					 */
+					group: string
+					/**
 					 * U​p​d​a​t​e​ ​C​o​n​t​a​c​t
 					 */
 					displayName: string
@@ -38151,6 +38835,10 @@ type RootTranslation = {
 					longDesc: string
 				}
 				opportunity_get: {
+					/**
+					 * C​R​M
+					 */
+					group: string
 					/**
 					 * G​e​t​ ​L​i​s​t​ ​o​f​ ​O​p​p​o​r​t​u​n​i​t​i​e​s
 					 */
@@ -38166,6 +38854,10 @@ type RootTranslation = {
 				}
 				opportunity_id_delete: {
 					/**
+					 * C​R​M
+					 */
+					group: string
+					/**
 					 * D​e​l​e​t​e​ ​O​p​p​o​r​t​u​n​i​t​y
 					 */
 					displayName: string
@@ -38179,6 +38871,10 @@ type RootTranslation = {
 					longDesc: string
 				}
 				opportunity_id_get: {
+					/**
+					 * C​R​M
+					 */
+					group: string
 					/**
 					 * G​e​t​ ​O​p​p​o​r​t​u​n​i​t​y
 					 */
@@ -38194,6 +38890,10 @@ type RootTranslation = {
 				}
 				opportunity_id_patch: {
 					/**
+					 * C​R​M
+					 */
+					group: string
+					/**
 					 * U​p​d​a​t​e​ ​O​p​p​o​r​t​u​n​i​t​y
 					 */
 					displayName: string
@@ -38207,6 +38907,10 @@ type RootTranslation = {
 					longDesc: string
 				}
 				opportunity_post: {
+					/**
+					 * C​R​M
+					 */
+					group: string
 					/**
 					 * C​r​e​a​t​e​ ​O​p​p​o​r​t​u​n​i​t​y
 					 */
@@ -38222,6 +38926,10 @@ type RootTranslation = {
 				}
 				invoice_get: {
 					/**
+					 * S​a​l​e​s​ ​&​ ​B​i​l​l​i​n​g
+					 */
+					group: string
+					/**
 					 * G​e​t​ ​L​i​s​t​ ​o​f​ ​I​n​v​o​i​c​e​s
 					 */
 					displayName: string
@@ -38235,6 +38943,10 @@ type RootTranslation = {
 					longDesc: string
 				}
 				invoice_post: {
+					/**
+					 * S​a​l​e​s​ ​&​ ​B​i​l​l​i​n​g
+					 */
+					group: string
 					/**
 					 * C​r​e​a​t​e​ ​I​n​v​o​i​c​e
 					 */
@@ -38266,6 +38978,10 @@ type RootTranslation = {
 				}
 				invoice_id_get: {
 					/**
+					 * S​a​l​e​s​ ​&​ ​B​i​l​l​i​n​g
+					 */
+					group: string
+					/**
 					 * G​e​t​ ​I​n​v​o​i​c​e
 					 */
 					displayName: string
@@ -38279,6 +38995,10 @@ type RootTranslation = {
 					longDesc: string
 				}
 				invoice_id_patch: {
+					/**
+					 * S​a​l​e​s​ ​&​ ​B​i​l​l​i​n​g
+					 */
+					group: string
 					/**
 					 * U​p​d​a​t​e​ ​I​n​v​o​i​c​e
 					 */
@@ -38294,6 +39014,10 @@ type RootTranslation = {
 				}
 				invoice_id_delete: {
 					/**
+					 * S​a​l​e​s​ ​&​ ​B​i​l​l​i​n​g
+					 */
+					group: string
+					/**
 					 * D​e​l​e​t​e​ ​I​n​v​o​i​c​e
 					 */
 					displayName: string
@@ -38307,6 +39031,10 @@ type RootTranslation = {
 					longDesc: string
 				}
 				journalEntry_get: {
+					/**
+					 * A​c​c​o​u​n​t​i​n​g
+					 */
+					group: string
 					/**
 					 * G​e​t​ ​L​i​s​t​ ​o​f​ ​J​o​u​r​n​a​l​ ​E​n​t​r​i​e​s
 					 */
@@ -38322,6 +39050,10 @@ type RootTranslation = {
 				}
 				journalEntry_post: {
 					/**
+					 * A​c​c​o​u​n​t​i​n​g
+					 */
+					group: string
+					/**
 					 * C​r​e​a​t​e​ ​J​o​u​r​n​a​l​ ​E​n​t​r​y
 					 */
 					displayName: string
@@ -38335,6 +39067,10 @@ type RootTranslation = {
 					longDesc: string
 				}
 				journalEntry_id_get: {
+					/**
+					 * A​c​c​o​u​n​t​i​n​g
+					 */
+					group: string
 					/**
 					 * G​e​t​ ​J​o​u​r​n​a​l​ ​E​n​t​r​y
 					 */
@@ -38350,6 +39086,10 @@ type RootTranslation = {
 				}
 				journal_entry_id_patch: {
 					/**
+					 * A​c​c​o​u​n​t​i​n​g
+					 */
+					group: string
+					/**
 					 * U​p​d​a​t​e​ ​J​o​u​r​n​a​l​ ​E​n​t​r​y
 					 */
 					displayName: string
@@ -38363,6 +39103,10 @@ type RootTranslation = {
 					longDesc: string
 				}
 				journalEntry_id_delete: {
+					/**
+					 * A​c​c​o​u​n​t​i​n​g
+					 */
+					group: string
 					/**
 					 * D​e​l​e​t​e​ ​J​o​u​r​n​a​l​ ​E​n​t​r​y
 					 */
@@ -38378,6 +39122,10 @@ type RootTranslation = {
 				}
 				purchaseOrder_get: {
 					/**
+					 * P​r​o​c​u​r​e​m​e​n​t
+					 */
+					group: string
+					/**
 					 * G​e​t​ ​L​i​s​t​ ​o​f​ ​P​u​r​c​h​a​s​e​ ​O​r​d​e​r​s
 					 */
 					displayName: string
@@ -38391,6 +39139,10 @@ type RootTranslation = {
 					longDesc: string
 				}
 				purchaseOrder_post: {
+					/**
+					 * P​r​o​c​u​r​e​m​e​n​t
+					 */
+					group: string
 					/**
 					 * C​r​e​a​t​e​ ​P​u​r​c​h​a​s​e​ ​O​r​d​e​r
 					 */
@@ -38436,6 +39188,10 @@ type RootTranslation = {
 				}
 				purchaseOrder_id_get: {
 					/**
+					 * P​r​o​c​u​r​e​m​e​n​t
+					 */
+					group: string
+					/**
 					 * G​e​t​ ​P​u​r​c​h​a​s​e​ ​O​r​d​e​r
 					 */
 					displayName: string
@@ -38449,6 +39205,10 @@ type RootTranslation = {
 					longDesc: string
 				}
 				purchaseOrder_id_patch: {
+					/**
+					 * P​r​o​c​u​r​e​m​e​n​t
+					 */
+					group: string
 					/**
 					 * U​p​d​a​t​e​ ​P​u​r​c​h​a​s​e​ ​O​r​d​e​r
 					 */
@@ -38494,6 +39254,10 @@ type RootTranslation = {
 				}
 				purchaseOrder_id_delete: {
 					/**
+					 * P​r​o​c​u​r​e​m​e​n​t
+					 */
+					group: string
+					/**
 					 * D​e​l​e​t​e​ ​P​u​r​c​h​a​s​e​ ​O​r​d​e​r
 					 */
 					displayName: string
@@ -38508,6 +39272,10 @@ type RootTranslation = {
 				}
 				salesOrder_get: {
 					/**
+					 * S​a​l​e​s​ ​&​ ​B​i​l​l​i​n​g
+					 */
+					group: string
+					/**
 					 * G​e​t​ ​L​i​s​t​ ​o​f​ ​S​a​l​e​s​ ​O​r​d​e​r​s
 					 */
 					displayName: string
@@ -38521,6 +39289,10 @@ type RootTranslation = {
 					longDesc: string
 				}
 				salesOrder_post: {
+					/**
+					 * S​a​l​e​s​ ​&​ ​B​i​l​l​i​n​g
+					 */
+					group: string
 					/**
 					 * C​r​e​a​t​e​ ​S​a​l​e​s​ ​O​r​d​e​r
 					 */
@@ -38551,6 +39323,10 @@ type RootTranslation = {
 					}
 				}
 				customer_post_simplified: {
+					/**
+					 * C​R​M
+					 */
+					group: string
 					/**
 					 * C​r​e​a​t​e​ ​C​u​s​t​o​m​e​r​ ​(​S​i​m​p​l​i​f​i​e​d​)
 					 */
@@ -38595,6 +39371,10 @@ type RootTranslation = {
 					}
 				}
 				salesOrder_post_simplified: {
+					/**
+					 * S​a​l​e​s​ ​&​ ​B​i​l​l​i​n​g
+					 */
+					group: string
 					/**
 					 * C​r​e​a​t​e​ ​S​a​l​e​s​ ​O​r​d​e​r​ ​(​S​i​m​p​l​i​f​i​e​d​)
 					 */
@@ -38714,6 +39494,10 @@ type RootTranslation = {
 				}
 				salesOrder_id_get: {
 					/**
+					 * S​a​l​e​s​ ​&​ ​B​i​l​l​i​n​g
+					 */
+					group: string
+					/**
 					 * G​e​t​ ​S​a​l​e​s​ ​O​r​d​e​r
 					 */
 					displayName: string
@@ -38727,6 +39511,10 @@ type RootTranslation = {
 					longDesc: string
 				}
 				salesOrder_id_patch: {
+					/**
+					 * S​a​l​e​s​ ​&​ ​B​i​l​l​i​n​g
+					 */
+					group: string
 					/**
 					 * U​p​d​a​t​e​ ​S​a​l​e​s​ ​O​r​d​e​r
 					 */
@@ -38758,6 +39546,10 @@ type RootTranslation = {
 				}
 				salesOrder_id_delete: {
 					/**
+					 * S​a​l​e​s​ ​&​ ​B​i​l​l​i​n​g
+					 */
+					group: string
+					/**
 					 * D​e​l​e​t​e​ ​S​a​l​e​s​ ​O​r​d​e​r
 					 */
 					displayName: string
@@ -38771,6 +39563,10 @@ type RootTranslation = {
 					longDesc: string
 				}
 				vendor_get: {
+					/**
+					 * P​r​o​c​u​r​e​m​e​n​t
+					 */
+					group: string
 					/**
 					 * G​e​t​ ​L​i​s​t​ ​o​f​ ​V​e​n​d​o​r​s
 					 */
@@ -38786,6 +39582,10 @@ type RootTranslation = {
 				}
 				vendor_post: {
 					/**
+					 * P​r​o​c​u​r​e​m​e​n​t
+					 */
+					group: string
+					/**
 					 * C​r​e​a​t​e​ ​V​e​n​d​o​r
 					 */
 					displayName: string
@@ -38799,6 +39599,10 @@ type RootTranslation = {
 					longDesc: string
 				}
 				vendor_id_get: {
+					/**
+					 * P​r​o​c​u​r​e​m​e​n​t
+					 */
+					group: string
 					/**
 					 * G​e​t​ ​V​e​n​d​o​r
 					 */
@@ -38814,6 +39618,10 @@ type RootTranslation = {
 				}
 				vendor_id_patch: {
 					/**
+					 * P​r​o​c​u​r​e​m​e​n​t
+					 */
+					group: string
+					/**
 					 * U​p​d​a​t​e​ ​V​e​n​d​o​r
 					 */
 					displayName: string
@@ -38827,6 +39635,10 @@ type RootTranslation = {
 					longDesc: string
 				}
 				vendor_id_delete: {
+					/**
+					 * P​r​o​c​u​r​e​m​e​n​t
+					 */
+					group: string
 					/**
 					 * D​e​l​e​t​e​ ​V​e​n​d​o​r
 					 */
@@ -57042,6 +57854,10 @@ type RootTranslation = {
 			actions: {
 				add_contact_note: {
 					/**
+					 * C​o​n​t​a​c​t​ ​M​a​n​a​g​e​m​e​n​t
+					 */
+					group: string
+					/**
 					 * A​d​d​ ​C​o​n​t​a​c​t​ ​N​o​t​e
 					 */
 					displayName: string
@@ -57085,6 +57901,10 @@ type RootTranslation = {
 					}
 				}
 				add_contact_to_account: {
+					/**
+					 * A​c​c​o​u​n​t​ ​M​a​n​a​g​e​m​e​n​t
+					 */
+					group: string
 					/**
 					 * A​d​d​ ​C​o​n​t​a​c​t​ ​t​o​ ​A​c​c​o​u​n​t
 					 */
@@ -57144,6 +57964,10 @@ type RootTranslation = {
 				}
 				add_deal_note: {
 					/**
+					 * D​e​a​l​ ​M​a​n​a​g​e​m​e​n​t
+					 */
+					group: string
+					/**
 					 * A​d​d​ ​D​e​a​l​ ​N​o​t​e
 					 */
 					displayName: string
@@ -57188,6 +58012,10 @@ type RootTranslation = {
 				}
 				add_tag_to_contact: {
 					/**
+					 * C​o​n​t​a​c​t​ ​M​a​n​a​g​e​m​e​n​t
+					 */
+					group: string
+					/**
 					 * A​d​d​ ​T​a​g​ ​t​o​ ​C​o​n​t​a​c​t
 					 */
 					displayName: string
@@ -57231,6 +58059,10 @@ type RootTranslation = {
 					}
 				}
 				create_account: {
+					/**
+					 * A​c​c​o​u​n​t​ ​M​a​n​a​g​e​m​e​n​t
+					 */
+					group: string
 					/**
 					 * C​r​e​a​t​e​ ​A​c​c​o​u​n​t
 					 */
@@ -57303,6 +58135,10 @@ type RootTranslation = {
 					}
 				}
 				create_contact: {
+					/**
+					 * C​o​n​t​a​c​t​ ​M​a​n​a​g​e​m​e​n​t
+					 */
+					group: string
 					/**
 					 * C​r​e​a​t​e​ ​C​o​n​t​a​c​t
 					 */
@@ -57389,6 +58225,10 @@ type RootTranslation = {
 					}
 				}
 				create_deal: {
+					/**
+					 * D​e​a​l​ ​M​a​n​a​g​e​m​e​n​t
+					 */
+					group: string
 					/**
 					 * C​r​e​a​t​e​ ​D​e​a​l
 					 */
@@ -57560,6 +58400,10 @@ type RootTranslation = {
 				}
 				get_account: {
 					/**
+					 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+					 */
+					group: string
+					/**
 					 * G​e​t​ ​A​c​c​o​u​n​t
 					 */
 					displayName: string
@@ -57589,6 +58433,10 @@ type RootTranslation = {
 					}
 				}
 				get_campaign: {
+					/**
+					 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+					 */
+					group: string
 					/**
 					 * G​e​t​ ​C​a​m​p​a​i​g​n
 					 */
@@ -57620,6 +58468,10 @@ type RootTranslation = {
 				}
 				get_contact: {
 					/**
+					 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+					 */
+					group: string
+					/**
 					 * G​e​t​ ​C​o​n​t​a​c​t
 					 */
 					displayName: string
@@ -57649,6 +58501,10 @@ type RootTranslation = {
 					}
 				}
 				get_deal: {
+					/**
+					 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+					 */
+					group: string
 					/**
 					 * G​e​t​ ​D​e​a​l
 					 */
@@ -57680,6 +58536,10 @@ type RootTranslation = {
 				}
 				get_form: {
 					/**
+					 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+					 */
+					group: string
+					/**
 					 * G​e​t​ ​F​o​r​m
 					 */
 					displayName: string
@@ -57709,6 +58569,10 @@ type RootTranslation = {
 					}
 				}
 				get_list: {
+					/**
+					 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+					 */
+					group: string
 					/**
 					 * G​e​t​ ​L​i​s​t
 					 */
@@ -57740,6 +58604,10 @@ type RootTranslation = {
 				}
 				get_task: {
 					/**
+					 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+					 */
+					group: string
+					/**
 					 * G​e​t​ ​T​a​s​k
 					 */
 					displayName: string
@@ -57770,6 +58638,10 @@ type RootTranslation = {
 				}
 				get_user: {
 					/**
+					 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+					 */
+					group: string
+					/**
 					 * G​e​t​ ​U​s​e​r
 					 */
 					displayName: string
@@ -57799,6 +58671,10 @@ type RootTranslation = {
 					}
 				}
 				list_accounts: {
+					/**
+					 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+					 */
+					group: string
 					/**
 					 * L​i​s​t​ ​A​c​c​o​u​n​t​s
 					 */
@@ -57872,6 +58748,10 @@ type RootTranslation = {
 				}
 				list_campaigns: {
 					/**
+					 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+					 */
+					group: string
+					/**
 					 * L​i​s​t​ ​C​a​m​p​a​i​g​n​s
 					 */
 					displayName: string
@@ -57915,6 +58795,10 @@ type RootTranslation = {
 					}
 				}
 				list_contacts: {
+					/**
+					 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+					 */
+					group: string
 					/**
 					 * L​i​s​t​ ​C​o​n​t​a​c​t​s
 					 */
@@ -58104,6 +58988,10 @@ type RootTranslation = {
 				}
 				list_deals: {
 					/**
+					 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+					 */
+					group: string
+					/**
 					 * L​i​s​t​ ​D​e​a​l​s
 					 */
 					displayName: string
@@ -58194,6 +59082,10 @@ type RootTranslation = {
 				}
 				list_deal_stages: {
 					/**
+					 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+					 */
+					group: string
+					/**
 					 * L​i​s​t​ ​D​e​a​l​ ​S​t​a​g​e​s
 					 */
 					displayName: string
@@ -58252,6 +59144,10 @@ type RootTranslation = {
 				}
 				list_forms: {
 					/**
+					 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+					 */
+					group: string
+					/**
 					 * L​i​s​t​ ​F​o​r​m​s
 					 */
 					displayName: string
@@ -58295,6 +59191,10 @@ type RootTranslation = {
 					}
 				}
 				list_lists: {
+					/**
+					 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+					 */
+					group: string
 					/**
 					 * L​i​s​t​ ​L​i​s​t​s
 					 */
@@ -58354,6 +59254,10 @@ type RootTranslation = {
 				}
 				list_tags: {
 					/**
+					 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+					 */
+					group: string
+					/**
 					 * L​i​s​t​ ​T​a​g​s
 					 */
 					displayName: string
@@ -58411,6 +59315,10 @@ type RootTranslation = {
 					}
 				}
 				list_tasks: {
+					/**
+					 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+					 */
+					group: string
 					/**
 					 * L​i​s​t​ ​T​a​s​k​s
 					 */
@@ -58498,6 +59406,10 @@ type RootTranslation = {
 				}
 				list_users: {
 					/**
+					 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+					 */
+					group: string
+					/**
 					 * L​i​s​t​ ​U​s​e​r​s
 					 */
 					displayName: string
@@ -58542,6 +59454,10 @@ type RootTranslation = {
 				}
 				remove_tag_from_contact: {
 					/**
+					 * C​o​n​t​a​c​t​ ​M​a​n​a​g​e​m​e​n​t
+					 */
+					group: string
+					/**
 					 * R​e​m​o​v​e​ ​T​a​g​ ​f​r​o​m​ ​C​o​n​t​a​c​t
 					 */
 					displayName: string
@@ -58585,6 +59501,10 @@ type RootTranslation = {
 					}
 				}
 				update_account: {
+					/**
+					 * A​c​c​o​u​n​t​ ​M​a​n​a​g​e​m​e​n​t
+					 */
+					group: string
 					/**
 					 * U​p​d​a​t​e​ ​A​c​c​o​u​n​t
 					 */
@@ -58671,6 +59591,10 @@ type RootTranslation = {
 					}
 				}
 				update_contact: {
+					/**
+					 * C​o​n​t​a​c​t​ ​M​a​n​a​g​e​m​e​n​t
+					 */
+					group: string
 					/**
 					 * U​p​d​a​t​e​ ​C​o​n​t​a​c​t
 					 */
@@ -58771,6 +59695,10 @@ type RootTranslation = {
 					}
 				}
 				update_deal: {
+					/**
+					 * D​e​a​l​ ​M​a​n​a​g​e​m​e​n​t
+					 */
+					group: string
 					/**
 					 * U​p​d​a​t​e​ ​D​e​a​l
 					 */
@@ -65442,6 +66370,338 @@ export type TranslationFunctions = {
 							}
 						}
 					}
+				}
+			}
+			actions: {
+				getEvents: {
+					/**
+					 * Time & Events
+					 */
+					group: () => LocalizedString
+				}
+				getGoals: {
+					/**
+					 * Goals
+					 */
+					group: () => LocalizedString
+				}
+				createGoal: {
+					/**
+					 * Goals
+					 */
+					group: () => LocalizedString
+				}
+				deleteGoal: {
+					/**
+					 * Goals
+					 */
+					group: () => LocalizedString
+				}
+				getGoal: {
+					/**
+					 * Goals
+					 */
+					group: () => LocalizedString
+				}
+				updateGoal: {
+					/**
+					 * Goals
+					 */
+					group: () => LocalizedString
+				}
+				getProjects: {
+					/**
+					 * Projects
+					 */
+					group: () => LocalizedString
+				}
+				createProject: {
+					/**
+					 * Projects
+					 */
+					group: () => LocalizedString
+				}
+				deleteProject: {
+					/**
+					 * Projects
+					 */
+					group: () => LocalizedString
+				}
+				getProject: {
+					/**
+					 * Projects
+					 */
+					group: () => LocalizedString
+				}
+				updateProject: {
+					/**
+					 * Projects
+					 */
+					group: () => LocalizedString
+				}
+				getSectionsForProject: {
+					/**
+					 * Projects
+					 */
+					group: () => LocalizedString
+				}
+				createSectionForProject: {
+					/**
+					 * Projects
+					 */
+					group: () => LocalizedString
+				}
+				getTasksForProject: {
+					/**
+					 * Projects
+					 */
+					group: () => LocalizedString
+				}
+				project_task_added: {
+					/**
+					 * Event Triggers
+					 */
+					group: () => LocalizedString
+				}
+				project_added: {
+					/**
+					 * Event Triggers
+					 */
+					group: () => LocalizedString
+				}
+				getSection: {
+					/**
+					 * Sections
+					 */
+					group: () => LocalizedString
+				}
+				updateSection: {
+					/**
+					 * Sections
+					 */
+					group: () => LocalizedString
+				}
+				deleteSection: {
+					/**
+					 * Sections
+					 */
+					group: () => LocalizedString
+				}
+				getTasksForSection: {
+					/**
+					 * Sections
+					 */
+					group: () => LocalizedString
+				}
+				task_moved_to_section: {
+					/**
+					 * Event Triggers
+					 */
+					group: () => LocalizedString
+				}
+				getTasks: {
+					/**
+					 * Tasks
+					 */
+					group: () => LocalizedString
+				}
+				createTask: {
+					/**
+					 * Tasks
+					 */
+					group: () => LocalizedString
+				}
+				deleteTask: {
+					/**
+					 * Tasks
+					 */
+					group: () => LocalizedString
+				}
+				getTask: {
+					/**
+					 * Tasks
+					 */
+					group: () => LocalizedString
+				}
+				updateTask: {
+					/**
+					 * Tasks
+					 */
+					group: () => LocalizedString
+				}
+				getDependenciesForTask: {
+					/**
+					 * Tasks
+					 */
+					group: () => LocalizedString
+				}
+				getDependentsForTask: {
+					/**
+					 * Tasks
+					 */
+					group: () => LocalizedString
+				}
+				getStoriesForTask: {
+					/**
+					 * Tasks
+					 */
+					group: () => LocalizedString
+				}
+				createStoryForTask: {
+					/**
+					 * Tasks
+					 */
+					group: () => LocalizedString
+				}
+				getSubtasksForTask: {
+					/**
+					 * Tasks
+					 */
+					group: () => LocalizedString
+				}
+				createSubtaskForTask: {
+					/**
+					 * Tasks
+					 */
+					group: () => LocalizedString
+				}
+				task_completed: {
+					/**
+					 * Event Triggers
+					 */
+					group: () => LocalizedString
+				}
+				subtask_completed: {
+					/**
+					 * Event Triggers
+					 */
+					group: () => LocalizedString
+				}
+				task_comment_added: {
+					/**
+					 * Event Triggers
+					 */
+					group: () => LocalizedString
+				}
+				task_story_added: {
+					/**
+					 * Event Triggers
+					 */
+					group: () => LocalizedString
+				}
+				task_subtask_added: {
+					/**
+					 * Event Triggers
+					 */
+					group: () => LocalizedString
+				}
+				getTags: {
+					/**
+					 * Tags
+					 */
+					group: () => LocalizedString
+				}
+				createTag: {
+					/**
+					 * Tags
+					 */
+					group: () => LocalizedString
+				}
+				deleteTag: {
+					/**
+					 * Tags
+					 */
+					group: () => LocalizedString
+				}
+				getTag: {
+					/**
+					 * Tags
+					 */
+					group: () => LocalizedString
+				}
+				updateTag: {
+					/**
+					 * Tags
+					 */
+					group: () => LocalizedString
+				}
+				getTasksForTag: {
+					/**
+					 * Tags
+					 */
+					group: () => LocalizedString
+				}
+				task_tag_added: {
+					/**
+					 * Event Triggers
+					 */
+					group: () => LocalizedString
+				}
+				tag_created: {
+					/**
+					 * Event Triggers
+					 */
+					group: () => LocalizedString
+				}
+				getProjectsForTeam: {
+					/**
+					 * Teams & Users
+					 */
+					group: () => LocalizedString
+				}
+				createProjectForTeam: {
+					/**
+					 * Teams & Users
+					 */
+					group: () => LocalizedString
+				}
+				getUsers: {
+					/**
+					 * Teams & Users
+					 */
+					group: () => LocalizedString
+				}
+				getUser: {
+					/**
+					 * Teams & Users
+					 */
+					group: () => LocalizedString
+				}
+				user_added: {
+					/**
+					 * Event Triggers
+					 */
+					group: () => LocalizedString
+				}
+				team_added: {
+					/**
+					 * Event Triggers
+					 */
+					group: () => LocalizedString
+				}
+				getWorkspaces: {
+					/**
+					 * Workspaces
+					 */
+					group: () => LocalizedString
+				}
+				getWorkspace: {
+					/**
+					 * Workspaces
+					 */
+					group: () => LocalizedString
+				}
+				updateWorkspace: {
+					/**
+					 * Workspaces
+					 */
+					group: () => LocalizedString
+				}
+				getTimePeriods: {
+					/**
+					 * Other
+					 */
+					group: () => LocalizedString
 				}
 			}
 		}
@@ -92556,6 +93816,290 @@ export type TranslationFunctions = {
 					}
 				}
 			}
+			actions: {
+				'repos-list-for-org': {
+					/**
+					 * Repositories
+					 */
+					group: () => LocalizedString
+				}
+				'repos-create-in-org': {
+					/**
+					 * Repositories
+					 */
+					group: () => LocalizedString
+				}
+				'repos-delete': {
+					/**
+					 * Repositories
+					 */
+					group: () => LocalizedString
+				}
+				'repos-get': {
+					/**
+					 * Repositories
+					 */
+					group: () => LocalizedString
+				}
+				'repos-update': {
+					/**
+					 * Repositories
+					 */
+					group: () => LocalizedString
+				}
+				'repos-list-for-authenticated-user': {
+					/**
+					 * Repositories
+					 */
+					group: () => LocalizedString
+				}
+				'repos-create-for-authenticated-user': {
+					/**
+					 * Repositories
+					 */
+					group: () => LocalizedString
+				}
+				'repos-list-contributors': {
+					/**
+					 * Repositories
+					 */
+					group: () => LocalizedString
+				}
+				'repos-get-content': {
+					/**
+					 * Content & Files
+					 */
+					group: () => LocalizedString
+				}
+				'repos-delete-file': {
+					/**
+					 * Content & Files
+					 */
+					group: () => LocalizedString
+				}
+				'repos-create-or-update-file-contents': {
+					/**
+					 * Content & Files
+					 */
+					group: () => LocalizedString
+				}
+				'repos-list-branches': {
+					/**
+					 * Branches
+					 */
+					group: () => LocalizedString
+				}
+				'repos-get-branch': {
+					/**
+					 * Branches
+					 */
+					group: () => LocalizedString
+				}
+				new_repository_branch: {
+					/**
+					 * Event Triggers
+					 */
+					group: () => LocalizedString
+				}
+				'repos-list-collaborators': {
+					/**
+					 * Collaborators
+					 */
+					group: () => LocalizedString
+				}
+				'repos-list-commits': {
+					/**
+					 * Commits
+					 */
+					group: () => LocalizedString
+				}
+				new_commit: {
+					/**
+					 * Event Triggers
+					 */
+					group: () => LocalizedString
+				}
+				new_commit_comment: {
+					/**
+					 * Event Triggers
+					 */
+					group: () => LocalizedString
+				}
+				'issues-list': {
+					/**
+					 * Issues
+					 */
+					group: () => LocalizedString
+				}
+				'issues-list-for-repo': {
+					/**
+					 * Issues
+					 */
+					group: () => LocalizedString
+				}
+				'issues-create': {
+					/**
+					 * Issues
+					 */
+					group: () => LocalizedString
+				}
+				'issues-get': {
+					/**
+					 * Issues
+					 */
+					group: () => LocalizedString
+				}
+				'issues-update': {
+					/**
+					 * Issues
+					 */
+					group: () => LocalizedString
+				}
+				'issues-remove-assignees': {
+					/**
+					 * Issues
+					 */
+					group: () => LocalizedString
+				}
+				'issues-add-assignees': {
+					/**
+					 * Issues
+					 */
+					group: () => LocalizedString
+				}
+				new_repository_issue: {
+					/**
+					 * Event Triggers
+					 */
+					group: () => LocalizedString
+				}
+				'pulls-list': {
+					/**
+					 * Pull Requests
+					 */
+					group: () => LocalizedString
+				}
+				'pulls-create': {
+					/**
+					 * Pull Requests
+					 */
+					group: () => LocalizedString
+				}
+				'pulls-get': {
+					/**
+					 * Pull Requests
+					 */
+					group: () => LocalizedString
+				}
+				'pulls-update': {
+					/**
+					 * Pull Requests
+					 */
+					group: () => LocalizedString
+				}
+				'pulls-remove-requested-reviewers': {
+					/**
+					 * Pull Requests
+					 */
+					group: () => LocalizedString
+				}
+				'pulls-list-requested-reviewers': {
+					/**
+					 * Pull Requests
+					 */
+					group: () => LocalizedString
+				}
+				'pulls-request-reviewers': {
+					/**
+					 * Pull Requests
+					 */
+					group: () => LocalizedString
+				}
+				new_pull_request: {
+					/**
+					 * Event Triggers
+					 */
+					group: () => LocalizedString
+				}
+				new_review_request: {
+					/**
+					 * Event Triggers
+					 */
+					group: () => LocalizedString
+				}
+				'actions-get-repo-public-key': {
+					/**
+					 * Actions & Secrets
+					 */
+					group: () => LocalizedString
+				}
+				'actions-delete-repo-secret': {
+					/**
+					 * Actions & Secrets
+					 */
+					group: () => LocalizedString
+				}
+				'actions-get-repo-secret': {
+					/**
+					 * Actions & Secrets
+					 */
+					group: () => LocalizedString
+				}
+				'actions-create-or-update-repo-secret': {
+					/**
+					 * Actions & Secrets
+					 */
+					group: () => LocalizedString
+				}
+				'actions-list-repo-workflows': {
+					/**
+					 * Actions & Secrets
+					 */
+					group: () => LocalizedString
+				}
+				'git-create-ref': {
+					/**
+					 * Git
+					 */
+					group: () => LocalizedString
+				}
+				'repos-list-releases': {
+					/**
+					 * Releases
+					 */
+					group: () => LocalizedString
+				}
+				'repos-create-release': {
+					/**
+					 * Releases
+					 */
+					group: () => LocalizedString
+				}
+				new_release: {
+					/**
+					 * Event Triggers
+					 */
+					group: () => LocalizedString
+				}
+				'orgs-list-members': {
+					/**
+					 * Organizations
+					 */
+					group: () => LocalizedString
+				}
+				'search-issues-and-pull-requests': {
+					/**
+					 * Search
+					 */
+					group: () => LocalizedString
+				}
+				'search-repos': {
+					/**
+					 * Search
+					 */
+					group: () => LocalizedString
+				}
+			}
 		}
 		Typeform: {
 			/**
@@ -98207,6 +99751,10 @@ export type TranslationFunctions = {
 			actions: {
 				list_records: {
 					/**
+					 * Data & Search
+					 */
+					group: () => LocalizedString
+					/**
 					 * List Records
 					 */
 					displayName: () => LocalizedString
@@ -98339,6 +99887,10 @@ export type TranslationFunctions = {
 				}
 				suite_ql: {
 					/**
+					 * Data & Search
+					 */
+					group: () => LocalizedString
+					/**
 					 * SuiteQL
 					 */
 					displayName: () => LocalizedString
@@ -98457,6 +100009,10 @@ export type TranslationFunctions = {
 				}
 				account_get: {
 					/**
+					 * Accounting
+					 */
+					group: () => LocalizedString
+					/**
 					 * Get List of Accounts
 					 */
 					displayName: () => LocalizedString
@@ -98470,6 +100026,10 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 				account_post: {
+					/**
+					 * Accounting
+					 */
+					group: () => LocalizedString
 					/**
 					 * Create Account
 					 */
@@ -98485,6 +100045,10 @@ export type TranslationFunctions = {
 				}
 				account_id_get: {
 					/**
+					 * Accounting
+					 */
+					group: () => LocalizedString
+					/**
 					 * Get Account
 					 */
 					displayName: () => LocalizedString
@@ -98498,6 +100062,10 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 				account_id_patch: {
+					/**
+					 * Accounting
+					 */
+					group: () => LocalizedString
 					/**
 					 * Update Account
 					 */
@@ -98513,6 +100081,10 @@ export type TranslationFunctions = {
 				}
 				account_id_delete: {
 					/**
+					 * Accounting
+					 */
+					group: () => LocalizedString
+					/**
 					 * Delete Account
 					 */
 					displayName: () => LocalizedString
@@ -98526,6 +100098,10 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 				customer_get: {
+					/**
+					 * CRM
+					 */
+					group: () => LocalizedString
 					/**
 					 * Get List of Customers
 					 */
@@ -98541,6 +100117,10 @@ export type TranslationFunctions = {
 				}
 				customer_post: {
 					/**
+					 * CRM
+					 */
+					group: () => LocalizedString
+					/**
 					 * Create Customer
 					 */
 					displayName: () => LocalizedString
@@ -98554,6 +100134,10 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 				customer_id_get: {
+					/**
+					 * CRM
+					 */
+					group: () => LocalizedString
 					/**
 					 * Get Customer
 					 */
@@ -98569,6 +100153,10 @@ export type TranslationFunctions = {
 				}
 				customer_id_patch: {
 					/**
+					 * CRM
+					 */
+					group: () => LocalizedString
+					/**
 					 * Update Customer
 					 */
 					displayName: () => LocalizedString
@@ -98582,6 +100170,10 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 				customer_id_delete: {
+					/**
+					 * CRM
+					 */
+					group: () => LocalizedString
 					/**
 					 * Delete Customer
 					 */
@@ -98597,6 +100189,10 @@ export type TranslationFunctions = {
 				}
 				contact_get: {
 					/**
+					 * CRM
+					 */
+					group: () => LocalizedString
+					/**
 					 * Get List of Contacts
 					 */
 					displayName: () => LocalizedString
@@ -98610,6 +100206,10 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 				contact_post: {
+					/**
+					 * CRM
+					 */
+					group: () => LocalizedString
 					/**
 					 * Create Contact
 					 */
@@ -98625,6 +100225,10 @@ export type TranslationFunctions = {
 				}
 				contact_id_delete: {
 					/**
+					 * CRM
+					 */
+					group: () => LocalizedString
+					/**
 					 * Delete Contact
 					 */
 					displayName: () => LocalizedString
@@ -98638,6 +100242,10 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 				contact_id_get: {
+					/**
+					 * CRM
+					 */
+					group: () => LocalizedString
 					/**
 					 * Get Contact
 					 */
@@ -98653,6 +100261,10 @@ export type TranslationFunctions = {
 				}
 				contact_id_patch: {
 					/**
+					 * CRM
+					 */
+					group: () => LocalizedString
+					/**
 					 * Update Contact
 					 */
 					displayName: () => LocalizedString
@@ -98666,6 +100278,10 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 				opportunity_get: {
+					/**
+					 * CRM
+					 */
+					group: () => LocalizedString
 					/**
 					 * Get List of Opportunities
 					 */
@@ -98681,6 +100297,10 @@ export type TranslationFunctions = {
 				}
 				opportunity_id_delete: {
 					/**
+					 * CRM
+					 */
+					group: () => LocalizedString
+					/**
 					 * Delete Opportunity
 					 */
 					displayName: () => LocalizedString
@@ -98694,6 +100314,10 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 				opportunity_id_get: {
+					/**
+					 * CRM
+					 */
+					group: () => LocalizedString
 					/**
 					 * Get Opportunity
 					 */
@@ -98709,6 +100333,10 @@ export type TranslationFunctions = {
 				}
 				opportunity_id_patch: {
 					/**
+					 * CRM
+					 */
+					group: () => LocalizedString
+					/**
 					 * Update Opportunity
 					 */
 					displayName: () => LocalizedString
@@ -98722,6 +100350,10 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 				opportunity_post: {
+					/**
+					 * CRM
+					 */
+					group: () => LocalizedString
 					/**
 					 * Create Opportunity
 					 */
@@ -98737,6 +100369,10 @@ export type TranslationFunctions = {
 				}
 				invoice_get: {
 					/**
+					 * Sales & Billing
+					 */
+					group: () => LocalizedString
+					/**
 					 * Get List of Invoices
 					 */
 					displayName: () => LocalizedString
@@ -98750,6 +100386,10 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 				invoice_post: {
+					/**
+					 * Sales & Billing
+					 */
+					group: () => LocalizedString
 					/**
 					 * Create Invoice
 					 */
@@ -98781,6 +100421,10 @@ export type TranslationFunctions = {
 				}
 				invoice_id_get: {
 					/**
+					 * Sales & Billing
+					 */
+					group: () => LocalizedString
+					/**
 					 * Get Invoice
 					 */
 					displayName: () => LocalizedString
@@ -98794,6 +100438,10 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 				invoice_id_patch: {
+					/**
+					 * Sales & Billing
+					 */
+					group: () => LocalizedString
 					/**
 					 * Update Invoice
 					 */
@@ -98809,6 +100457,10 @@ export type TranslationFunctions = {
 				}
 				invoice_id_delete: {
 					/**
+					 * Sales & Billing
+					 */
+					group: () => LocalizedString
+					/**
 					 * Delete Invoice
 					 */
 					displayName: () => LocalizedString
@@ -98822,6 +100474,10 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 				journalEntry_get: {
+					/**
+					 * Accounting
+					 */
+					group: () => LocalizedString
 					/**
 					 * Get List of Journal Entries
 					 */
@@ -98837,6 +100493,10 @@ export type TranslationFunctions = {
 				}
 				journalEntry_post: {
 					/**
+					 * Accounting
+					 */
+					group: () => LocalizedString
+					/**
 					 * Create Journal Entry
 					 */
 					displayName: () => LocalizedString
@@ -98850,6 +100510,10 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 				journalEntry_id_get: {
+					/**
+					 * Accounting
+					 */
+					group: () => LocalizedString
 					/**
 					 * Get Journal Entry
 					 */
@@ -98865,6 +100529,10 @@ export type TranslationFunctions = {
 				}
 				journal_entry_id_patch: {
 					/**
+					 * Accounting
+					 */
+					group: () => LocalizedString
+					/**
 					 * Update Journal Entry
 					 */
 					displayName: () => LocalizedString
@@ -98878,6 +100546,10 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 				journalEntry_id_delete: {
+					/**
+					 * Accounting
+					 */
+					group: () => LocalizedString
 					/**
 					 * Delete Journal Entry
 					 */
@@ -98893,6 +100565,10 @@ export type TranslationFunctions = {
 				}
 				purchaseOrder_get: {
 					/**
+					 * Procurement
+					 */
+					group: () => LocalizedString
+					/**
 					 * Get List of Purchase Orders
 					 */
 					displayName: () => LocalizedString
@@ -98906,6 +100582,10 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 				purchaseOrder_post: {
+					/**
+					 * Procurement
+					 */
+					group: () => LocalizedString
 					/**
 					 * Create Purchase Order
 					 */
@@ -98951,6 +100631,10 @@ export type TranslationFunctions = {
 				}
 				purchaseOrder_id_get: {
 					/**
+					 * Procurement
+					 */
+					group: () => LocalizedString
+					/**
 					 * Get Purchase Order
 					 */
 					displayName: () => LocalizedString
@@ -98964,6 +100648,10 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 				purchaseOrder_id_patch: {
+					/**
+					 * Procurement
+					 */
+					group: () => LocalizedString
 					/**
 					 * Update Purchase Order
 					 */
@@ -99009,6 +100697,10 @@ export type TranslationFunctions = {
 				}
 				purchaseOrder_id_delete: {
 					/**
+					 * Procurement
+					 */
+					group: () => LocalizedString
+					/**
 					 * Delete Purchase Order
 					 */
 					displayName: () => LocalizedString
@@ -99023,6 +100715,10 @@ export type TranslationFunctions = {
 				}
 				salesOrder_get: {
 					/**
+					 * Sales & Billing
+					 */
+					group: () => LocalizedString
+					/**
 					 * Get List of Sales Orders
 					 */
 					displayName: () => LocalizedString
@@ -99036,6 +100732,10 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 				salesOrder_post: {
+					/**
+					 * Sales & Billing
+					 */
+					group: () => LocalizedString
 					/**
 					 * Create Sales Order
 					 */
@@ -99066,6 +100766,10 @@ export type TranslationFunctions = {
 					}
 				}
 				customer_post_simplified: {
+					/**
+					 * CRM
+					 */
+					group: () => LocalizedString
 					/**
 					 * Create Customer (Simplified)
 					 */
@@ -99110,6 +100814,10 @@ export type TranslationFunctions = {
 					}
 				}
 				salesOrder_post_simplified: {
+					/**
+					 * Sales & Billing
+					 */
+					group: () => LocalizedString
 					/**
 					 * Create Sales Order (Simplified)
 					 */
@@ -99229,6 +100937,10 @@ export type TranslationFunctions = {
 				}
 				salesOrder_id_get: {
 					/**
+					 * Sales & Billing
+					 */
+					group: () => LocalizedString
+					/**
 					 * Get Sales Order
 					 */
 					displayName: () => LocalizedString
@@ -99242,6 +100954,10 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 				salesOrder_id_patch: {
+					/**
+					 * Sales & Billing
+					 */
+					group: () => LocalizedString
 					/**
 					 * Update Sales Order
 					 */
@@ -99273,6 +100989,10 @@ export type TranslationFunctions = {
 				}
 				salesOrder_id_delete: {
 					/**
+					 * Sales & Billing
+					 */
+					group: () => LocalizedString
+					/**
 					 * Delete Sales Order
 					 */
 					displayName: () => LocalizedString
@@ -99286,6 +101006,10 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 				vendor_get: {
+					/**
+					 * Procurement
+					 */
+					group: () => LocalizedString
 					/**
 					 * Get List of Vendors
 					 */
@@ -99301,6 +101025,10 @@ export type TranslationFunctions = {
 				}
 				vendor_post: {
 					/**
+					 * Procurement
+					 */
+					group: () => LocalizedString
+					/**
 					 * Create Vendor
 					 */
 					displayName: () => LocalizedString
@@ -99314,6 +101042,10 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 				vendor_id_get: {
+					/**
+					 * Procurement
+					 */
+					group: () => LocalizedString
 					/**
 					 * Get Vendor
 					 */
@@ -99329,6 +101061,10 @@ export type TranslationFunctions = {
 				}
 				vendor_id_patch: {
 					/**
+					 * Procurement
+					 */
+					group: () => LocalizedString
+					/**
 					 * Update Vendor
 					 */
 					displayName: () => LocalizedString
@@ -99342,6 +101078,10 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 				vendor_id_delete: {
+					/**
+					 * Procurement
+					 */
+					group: () => LocalizedString
 					/**
 					 * Delete Vendor
 					 */
@@ -117557,6 +119297,10 @@ export type TranslationFunctions = {
 			actions: {
 				add_contact_note: {
 					/**
+					 * Contact Management
+					 */
+					group: () => LocalizedString
+					/**
 					 * Add Contact Note
 					 */
 					displayName: () => LocalizedString
@@ -117600,6 +119344,10 @@ export type TranslationFunctions = {
 					}
 				}
 				add_contact_to_account: {
+					/**
+					 * Account Management
+					 */
+					group: () => LocalizedString
 					/**
 					 * Add Contact to Account
 					 */
@@ -117659,6 +119407,10 @@ export type TranslationFunctions = {
 				}
 				add_deal_note: {
 					/**
+					 * Deal Management
+					 */
+					group: () => LocalizedString
+					/**
 					 * Add Deal Note
 					 */
 					displayName: () => LocalizedString
@@ -117703,6 +119455,10 @@ export type TranslationFunctions = {
 				}
 				add_tag_to_contact: {
 					/**
+					 * Contact Management
+					 */
+					group: () => LocalizedString
+					/**
 					 * Add Tag to Contact
 					 */
 					displayName: () => LocalizedString
@@ -117746,6 +119502,10 @@ export type TranslationFunctions = {
 					}
 				}
 				create_account: {
+					/**
+					 * Account Management
+					 */
+					group: () => LocalizedString
 					/**
 					 * Create Account
 					 */
@@ -117818,6 +119578,10 @@ export type TranslationFunctions = {
 					}
 				}
 				create_contact: {
+					/**
+					 * Contact Management
+					 */
+					group: () => LocalizedString
 					/**
 					 * Create Contact
 					 */
@@ -117904,6 +119668,10 @@ export type TranslationFunctions = {
 					}
 				}
 				create_deal: {
+					/**
+					 * Deal Management
+					 */
+					group: () => LocalizedString
 					/**
 					 * Create Deal
 					 */
@@ -118075,6 +119843,10 @@ export type TranslationFunctions = {
 				}
 				get_account: {
 					/**
+					 * Data Retrieval
+					 */
+					group: () => LocalizedString
+					/**
 					 * Get Account
 					 */
 					displayName: () => LocalizedString
@@ -118104,6 +119876,10 @@ export type TranslationFunctions = {
 					}
 				}
 				get_campaign: {
+					/**
+					 * Data Retrieval
+					 */
+					group: () => LocalizedString
 					/**
 					 * Get Campaign
 					 */
@@ -118135,6 +119911,10 @@ export type TranslationFunctions = {
 				}
 				get_contact: {
 					/**
+					 * Data Retrieval
+					 */
+					group: () => LocalizedString
+					/**
 					 * Get Contact
 					 */
 					displayName: () => LocalizedString
@@ -118164,6 +119944,10 @@ export type TranslationFunctions = {
 					}
 				}
 				get_deal: {
+					/**
+					 * Data Retrieval
+					 */
+					group: () => LocalizedString
 					/**
 					 * Get Deal
 					 */
@@ -118195,6 +119979,10 @@ export type TranslationFunctions = {
 				}
 				get_form: {
 					/**
+					 * Data Retrieval
+					 */
+					group: () => LocalizedString
+					/**
 					 * Get Form
 					 */
 					displayName: () => LocalizedString
@@ -118224,6 +120012,10 @@ export type TranslationFunctions = {
 					}
 				}
 				get_list: {
+					/**
+					 * Data Retrieval
+					 */
+					group: () => LocalizedString
 					/**
 					 * Get List
 					 */
@@ -118255,6 +120047,10 @@ export type TranslationFunctions = {
 				}
 				get_task: {
 					/**
+					 * Data Retrieval
+					 */
+					group: () => LocalizedString
+					/**
 					 * Get Task
 					 */
 					displayName: () => LocalizedString
@@ -118285,6 +120081,10 @@ export type TranslationFunctions = {
 				}
 				get_user: {
 					/**
+					 * Data Retrieval
+					 */
+					group: () => LocalizedString
+					/**
 					 * Get User
 					 */
 					displayName: () => LocalizedString
@@ -118314,6 +120114,10 @@ export type TranslationFunctions = {
 					}
 				}
 				list_accounts: {
+					/**
+					 * Data Retrieval
+					 */
+					group: () => LocalizedString
 					/**
 					 * List Accounts
 					 */
@@ -118387,6 +120191,10 @@ export type TranslationFunctions = {
 				}
 				list_campaigns: {
 					/**
+					 * Data Retrieval
+					 */
+					group: () => LocalizedString
+					/**
 					 * List Campaigns
 					 */
 					displayName: () => LocalizedString
@@ -118430,6 +120238,10 @@ export type TranslationFunctions = {
 					}
 				}
 				list_contacts: {
+					/**
+					 * Data Retrieval
+					 */
+					group: () => LocalizedString
 					/**
 					 * List Contacts
 					 */
@@ -118619,6 +120431,10 @@ export type TranslationFunctions = {
 				}
 				list_deals: {
 					/**
+					 * Data Retrieval
+					 */
+					group: () => LocalizedString
+					/**
 					 * List Deals
 					 */
 					displayName: () => LocalizedString
@@ -118709,6 +120525,10 @@ export type TranslationFunctions = {
 				}
 				list_deal_stages: {
 					/**
+					 * Data Retrieval
+					 */
+					group: () => LocalizedString
+					/**
 					 * List Deal Stages
 					 */
 					displayName: () => LocalizedString
@@ -118767,6 +120587,10 @@ export type TranslationFunctions = {
 				}
 				list_forms: {
 					/**
+					 * Data Retrieval
+					 */
+					group: () => LocalizedString
+					/**
 					 * List Forms
 					 */
 					displayName: () => LocalizedString
@@ -118810,6 +120634,10 @@ export type TranslationFunctions = {
 					}
 				}
 				list_lists: {
+					/**
+					 * Data Retrieval
+					 */
+					group: () => LocalizedString
 					/**
 					 * List Lists
 					 */
@@ -118869,6 +120697,10 @@ export type TranslationFunctions = {
 				}
 				list_tags: {
 					/**
+					 * Data Retrieval
+					 */
+					group: () => LocalizedString
+					/**
 					 * List Tags
 					 */
 					displayName: () => LocalizedString
@@ -118926,6 +120758,10 @@ export type TranslationFunctions = {
 					}
 				}
 				list_tasks: {
+					/**
+					 * Data Retrieval
+					 */
+					group: () => LocalizedString
 					/**
 					 * List Tasks
 					 */
@@ -119013,6 +120849,10 @@ export type TranslationFunctions = {
 				}
 				list_users: {
 					/**
+					 * Data Retrieval
+					 */
+					group: () => LocalizedString
+					/**
 					 * List Users
 					 */
 					displayName: () => LocalizedString
@@ -119057,6 +120897,10 @@ export type TranslationFunctions = {
 				}
 				remove_tag_from_contact: {
 					/**
+					 * Contact Management
+					 */
+					group: () => LocalizedString
+					/**
 					 * Remove Tag from Contact
 					 */
 					displayName: () => LocalizedString
@@ -119100,6 +120944,10 @@ export type TranslationFunctions = {
 					}
 				}
 				update_account: {
+					/**
+					 * Account Management
+					 */
+					group: () => LocalizedString
 					/**
 					 * Update Account
 					 */
@@ -119186,6 +121034,10 @@ export type TranslationFunctions = {
 					}
 				}
 				update_contact: {
+					/**
+					 * Contact Management
+					 */
+					group: () => LocalizedString
 					/**
 					 * Update Contact
 					 */
@@ -119286,6 +121138,10 @@ export type TranslationFunctions = {
 					}
 				}
 				update_deal: {
+					/**
+					 * Deal Management
+					 */
+					group: () => LocalizedString
 					/**
 					 * Update Deal
 					 */

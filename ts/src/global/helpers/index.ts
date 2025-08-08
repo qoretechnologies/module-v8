@@ -222,7 +222,7 @@ export const getLocaleField = (
   app: string,
   locale: Locales,
   action: TQorePartialEventAction | TQorePartialNonEventAction,
-  fieldName: 'display_name' | 'short_desc' | 'desc'
+  fieldName: 'display_name' | 'short_desc' | 'desc' | 'group'
 ) => {
   const fieldValue = action[fieldName];
   if (fieldValue) {
@@ -233,6 +233,7 @@ export const getLocaleField = (
     display_name: 'displayName',
     short_desc: 'shortDesc',
     desc: 'longDesc',
+    group: 'group',
   };
 
   const localeField = get(L[locale], [
@@ -245,6 +246,10 @@ export const getLocaleField = (
 
   if (localeField) {
     return localeField;
+  }
+
+  if (fieldName === 'group' && !localeField) {
+    return undefined;
   }
 
   const fallbackValue = action.action.replace(/_/g, ' ').replace(/([a-z])([A-Z])/g, '$1 $2');
@@ -264,26 +269,31 @@ export const mapActionsToApp = (
   actions: Record<string, TQorePartialNonEventAction> | TQorePartialNonEventAction[],
   locale: Locales
 ): TQoreAppNonEventAction[] => {
-  return Object.entries(actions).map(([_a, action]) => ({
-    ...action,
-    display_name: getLocaleField(app, locale, action, 'display_name'),
-    short_desc: getLocaleField(app, locale, action, 'short_desc'),
-    desc: getLocaleField(app, locale, action, 'desc'),
-    app,
-    options:
-      'options' in action && action.options
-        ? fixOptions(action, action.options, app, locale)
-        : undefined,
-    ...(action?.override_options && {
-      override_options: fixOptions(action, action.override_options, app, locale),
-    }),
-    response_type:
-      'response_type' in action && action.response_type
-        ? typeof action.response_type === 'string'
-          ? action.response_type
-          : fixResponseOrEventInfo(action.response_type, app, locale, action)
-        : undefined,
-  }));
+  return Object.entries(actions).map(([_a, action]) => {
+    const group = getLocaleField(app, locale, action, 'group');
+
+    return {
+      ...action,
+      display_name: getLocaleField(app, locale, action, 'display_name'),
+      short_desc: getLocaleField(app, locale, action, 'short_desc'),
+      desc: getLocaleField(app, locale, action, 'desc'),
+      ...(group && { group }),
+      app,
+      options:
+        'options' in action && action.options
+          ? fixOptions(action, action.options, app, locale)
+          : undefined,
+      ...(action?.override_options && {
+        override_options: fixOptions(action, action.override_options, app, locale),
+      }),
+      response_type:
+        'response_type' in action && action.response_type
+          ? typeof action.response_type === 'string'
+            ? action.response_type
+            : fixResponseOrEventInfo(action.response_type, app, locale, action)
+          : undefined,
+    };
+  });
 };
 
 /*
@@ -339,6 +349,8 @@ export const mapTriggersToApp = (
       : undefined;
 
     // Base trigger with common fields
+    const group = getLocaleField(app, locale, trigger, 'group');
+
     const baseAction = {
       ...omit(trigger, OMMITTED_FIELDS),
       action: trigger.action,
@@ -346,6 +358,7 @@ export const mapTriggersToApp = (
       display_name: getLocaleField(app, locale, trigger, 'display_name'),
       short_desc: getLocaleField(app, locale, trigger, 'short_desc'),
       desc: getLocaleField(app, locale, trigger, 'desc'),
+      ...(group && { group }),
       app,
       options: trigger?.options ? fixOptions(trigger, trigger.options, app, locale) : undefined,
       event_info: eventInfo || { desc: '', type: { type: 'hash' } },
@@ -511,12 +524,14 @@ export const fixOptions = (
           };
         }
 
+        const group = getLocalizedField('group', currentPath);
         const updatedOption = {
           ...option,
           ...(optionType && { type: optionType }),
           display_name: option.display_name || getLocalizedField('displayName', currentPath),
           short_desc: option.short_desc || getLocalizedField('shortDesc', currentPath),
           desc: option.desc || getLocalizedField('longDesc', currentPath),
+          ...(group && { group }),
         } as TQoreAppActionOption;
 
         return {
