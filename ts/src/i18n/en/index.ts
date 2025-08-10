@@ -48,6 +48,12 @@ import Webflow from './apps/Webflow';
 import ActiveCampaign from './apps/ActiveCampaign';
 import BrowseAi from './apps/BrowseAi';
 import BigMl from './apps/BigMl';
+import Claude from './apps/Claude';
+import Gemini from './apps/Gemini';
+import OpenRouter from './apps/Openrouter';
+import HuggingFace from './apps/HuggingFace';
+import YouTube from './apps/YouTube';
+import LinkedIn from './apps/LinkedIn';
 
 const en = {
   common: {},
@@ -146,10 +152,15 @@ const en = {
         },
       },
     },
+    Asana,
+    Claude,
+    LinkedIn,
     BrowseAi,
     BigMl,
     Calendly,
     ClickUp,
+    Gemini,
+    OpenRouter,
     GoogleDocs,
     GoogleMeet,
     GoogleForms,
@@ -170,7 +181,6 @@ const en = {
     Jira,
     Stripe,
     Github,
-    Asana,
     Typeform,
     DocusignESignature,
     Zendesk,
@@ -195,6 +205,8 @@ const en = {
     Messenger360,
     Webflow,
     ActiveCampaign,
+    HuggingFace,
+    YouTube,
   },
 } satisfies BaseTranslation;
 

@@ -82,6 +82,7 @@ const ActiveCampaignAppEn = {
   },
   actions: {
     add_contact_note: {
+      group: 'Contact Management',
       displayName: 'Add Contact Note',
       shortDesc: 'Add a note to a contact',
       longDesc: 'Add a new note to a specific contact in ActiveCampaign',
@@ -99,6 +100,7 @@ const ActiveCampaignAppEn = {
       },
     },
     add_contact_to_account: {
+      group: 'Account Management',
       displayName: 'Add Contact to Account',
       shortDesc: 'Associate a contact with an account',
       longDesc: 'Create an association between a contact and an account in ActiveCampaign',
@@ -121,6 +123,7 @@ const ActiveCampaignAppEn = {
       },
     },
     add_deal_note: {
+      group: 'Deal Management',
       displayName: 'Add Deal Note',
       shortDesc: 'Add a note to a deal',
       longDesc: 'Add a new note to a specific deal in ActiveCampaign',
@@ -138,6 +141,7 @@ const ActiveCampaignAppEn = {
       },
     },
     add_tag_to_contact: {
+      group: 'Contact Management',
       displayName: 'Add Tag to Contact',
       shortDesc: 'Add a tag to a contact',
       longDesc:
@@ -156,6 +160,7 @@ const ActiveCampaignAppEn = {
       },
     },
     create_account: {
+      group: 'Account Management',
       displayName: 'Create Account',
       shortDesc: 'Create a new account',
       longDesc: 'Create a new account (company/organization) in ActiveCampaign',
@@ -183,6 +188,7 @@ const ActiveCampaignAppEn = {
       },
     },
     create_contact: {
+      group: 'Contact Management',
       displayName: 'Create Contact',
       shortDesc: 'Create a new contact',
       longDesc:
@@ -216,6 +222,7 @@ const ActiveCampaignAppEn = {
       },
     },
     create_deal: {
+      group: 'Deal Management',
       displayName: 'Create Deal',
       shortDesc: 'Create a new deal',
       longDesc: 'Create a new sales deal in ActiveCampaign with all relevant details',
@@ -278,6 +285,7 @@ const ActiveCampaignAppEn = {
       },
     },
     get_account: {
+      group: 'Data Retrieval',
       displayName: 'Get Account',
       shortDesc: 'Retrieve account details',
       longDesc: 'Retrieve detailed information about a specific account in ActiveCampaign',
@@ -289,8 +297,8 @@ const ActiveCampaignAppEn = {
         },
       },
     },
-
     get_campaign: {
+      group: 'Data Retrieval',
       displayName: 'Get Campaign',
       shortDesc: 'Retrieve campaign details',
       longDesc: 'Retrieve detailed information about a specific campaign in ActiveCampaign',
@@ -303,6 +311,7 @@ const ActiveCampaignAppEn = {
       },
     },
     get_contact: {
+      group: 'Data Retrieval',
       displayName: 'Get Contact',
       shortDesc: 'Retrieve contact details',
       longDesc:
@@ -316,6 +325,7 @@ const ActiveCampaignAppEn = {
       },
     },
     get_deal: {
+      group: 'Data Retrieval',
       displayName: 'Get Deal',
       shortDesc: 'Retrieve deal details',
       longDesc: 'Retrieve detailed information about a specific deal in ActiveCampaign',
@@ -328,6 +338,7 @@ const ActiveCampaignAppEn = {
       },
     },
     get_form: {
+      group: 'Data Retrieval',
       displayName: 'Get Form',
       shortDesc: 'Retrieve form details',
       longDesc:
@@ -341,6 +352,7 @@ const ActiveCampaignAppEn = {
       },
     },
     get_list: {
+      group: 'Data Retrieval',
       displayName: 'Get List',
       shortDesc: 'Retrieve list details',
       longDesc:
@@ -354,6 +366,7 @@ const ActiveCampaignAppEn = {
       },
     },
     get_task: {
+      group: 'Data Retrieval',
       displayName: 'Get Task',
       shortDesc: 'Retrieve task details',
       longDesc: 'Retrieve detailed information about a specific deal task in ActiveCampaign',
@@ -366,6 +379,7 @@ const ActiveCampaignAppEn = {
       },
     },
     get_user: {
+      group: 'Data Retrieval',
       displayName: 'Get User',
       shortDesc: 'Retrieve user details',
       longDesc: 'Retrieve detailed information about a specific user in ActiveCampaign',
@@ -377,8 +391,8 @@ const ActiveCampaignAppEn = {
         },
       },
     },
-
     list_accounts: {
+      group: 'Data Retrieval',
       displayName: 'List Accounts',
       shortDesc: 'Retrieve a list of accounts',
       longDesc:
@@ -408,6 +422,7 @@ const ActiveCampaignAppEn = {
       },
     },
     list_campaigns: {
+      group: 'Data Retrieval',
       displayName: 'List Campaigns',
       shortDesc: 'Retrieve a list of campaigns',
       longDesc: 'Retrieve a paginated list of campaigns in ActiveCampaign',
@@ -425,6 +440,7 @@ const ActiveCampaignAppEn = {
       },
     },
     list_contacts: {
+      group: 'Data Retrieval',
       displayName: 'List Contacts',
       shortDesc: 'Retrieve a list of contacts',
       longDesc:
@@ -497,6 +513,7 @@ const ActiveCampaignAppEn = {
       },
     },
     list_deals: {
+      group: 'Data Retrieval',
       displayName: 'List Deals',
       shortDesc: 'Retrieve a list of deals',
       longDesc:
@@ -534,6 +551,7 @@ const ActiveCampaignAppEn = {
       },
     },
     list_deal_stages: {
+      group: 'Data Retrieval',
       displayName: 'List Deal Stages',
       shortDesc: 'Retrieve a list of deal stages',
       longDesc: 'Retrieve a paginated list of deal stages (pipeline stages) in ActiveCampaign',
@@ -556,6 +574,7 @@ const ActiveCampaignAppEn = {
       },
     },
     list_forms: {
+      group: 'Data Retrieval',
       displayName: 'List Forms',
       shortDesc: 'Retrieve a list of forms',
       longDesc: 'Retrieve a paginated list of forms in ActiveCampaign',
@@ -573,6 +592,7 @@ const ActiveCampaignAppEn = {
       },
     },
     list_lists: {
+      group: 'Data Retrieval',
       displayName: 'List Lists',
       shortDesc: 'Retrieve a list of lists',
       longDesc:
@@ -596,6 +616,7 @@ const ActiveCampaignAppEn = {
       },
     },
     list_tags: {
+      group: 'Data Retrieval',
       displayName: 'List Tags',
       shortDesc: 'Retrieve a list of tags',
       longDesc:
@@ -619,6 +640,7 @@ const ActiveCampaignAppEn = {
       },
     },
     list_tasks: {
+      group: 'Data Retrieval',
       displayName: 'List Tasks',
       shortDesc: 'Retrieve a list of tasks',
       longDesc: 'Retrieve a paginated list of deal tasks in ActiveCampaign with filtering options',
@@ -651,6 +673,7 @@ const ActiveCampaignAppEn = {
       },
     },
     list_users: {
+      group: 'Data Retrieval',
       displayName: 'List Users',
       shortDesc: 'Retrieve a list of users',
       longDesc: 'Retrieve a paginated list of users in ActiveCampaign',
@@ -668,6 +691,7 @@ const ActiveCampaignAppEn = {
       },
     },
     remove_tag_from_contact: {
+      group: 'Contact Management',
       displayName: 'Remove Tag from Contact',
       shortDesc: 'Remove a tag from a contact',
       longDesc: 'Remove a specific tag from a contact in ActiveCampaign',
@@ -685,6 +709,7 @@ const ActiveCampaignAppEn = {
       },
     },
     update_account: {
+      group: 'Account Management',
       displayName: 'Update Account',
       shortDesc: 'Update an existing account',
       longDesc: 'Update the information of an existing account in ActiveCampaign',
@@ -717,6 +742,7 @@ const ActiveCampaignAppEn = {
       },
     },
     update_contact: {
+      group: 'Contact Management',
       displayName: 'Update Contact',
       shortDesc: 'Update an existing contact',
       longDesc:
@@ -755,6 +781,7 @@ const ActiveCampaignAppEn = {
       },
     },
     update_deal: {
+      group: 'Deal Management',
       displayName: 'Update Deal',
       shortDesc: 'Update an existing deal',
       longDesc: 'Update the information of an existing sales deal in ActiveCampaign',

@@ -10,6 +10,11 @@
     "@jridgewell/gen-mapping" "^0.3.5"
     "@jridgewell/trace-mapping" "^0.3.24"
 
+"@anthropic-ai/sdk@^0.57.0":
+  version "0.57.0"
+  resolved "https://registry.yarnpkg.com/@anthropic-ai/sdk/-/sdk-0.57.0.tgz#d2ef7bd3a80b07e41df79600f0a797db94434060"
+  integrity sha512-z5LMy0MWu0+w2hflUgj4RlJr1R+0BxKXL7ldXTO8FasU8fu599STghO+QKwId2dAD0d464aHtU+ChWuRHw4FNw==
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.24.7":
   version "7.24.7"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.24.7.tgz#882fd9e09e8ee324e496bd040401c6f046ef4465"
@@ -417,6 +422,14 @@
   dependencies:
     tslib "^2.4.0"
 
+"@google/genai@^1.12.0":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@google/genai/-/genai-1.12.0.tgz#f86081164b172a28d91b1a4e16fbb3c123154012"
+  integrity sha512-JBkQsULVexdM9zY4iXbm3A2dJ7El/hSPGCnxuRWPJNgeqcfYuyUnPTSy+I/v+MvTbz/occVmONSD6wn+17QLkg==
+  dependencies:
+    google-auth-library "^9.14.2"
+    ws "^8.18.0"
+
 "@googleapis/chat@^38.0.1":
   version "38.0.1"
   resolved "https://registry.yarnpkg.com/@googleapis/chat/-/chat-38.0.1.tgz#c0ab88fbe3c09c9198ea67d11bb5e8d64c7a5635"
@@ -465,6 +478,25 @@
   integrity sha512-laFp4BBpVzQKZuUsXG7QBZyWNtpV8SGyG+Yupjm2EfDuFuWb197zwvznyjmrIAGeEpsz11ktLpTti7+0a/2Y2Q==
   dependencies:
     googleapis-common "^7.0.0"
+
+"@googleapis/youtube@^28.0.0":
+  version "28.0.0"
+  resolved "https://registry.yarnpkg.com/@googleapis/youtube/-/youtube-28.0.0.tgz#0de8fe47c1034cb2cf709a630f0628f6b413cc2d"
+  integrity sha512-kYv5adzZlXkbYTtVQjOF8BcOnA7UR/injUSoDQj+ZkSM3GMG4I0R8rrpS5F833Nt4BnFMmU99RKzL3IDnfQYXw==
+  dependencies:
+    googleapis-common "^8.0.2-rc.0"
+
+"@huggingface/hub@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@huggingface/hub/-/hub-2.4.0.tgz#9952a66c6913cc03679db830862f250dea83bb94"
+  integrity sha512-8H9uLOIBJNPw6lUV1g/t+7pAVNOhBW5g7CNAOJ0JVkA1QObEb7u0O7vMVkjmu3311SUU39aSx8l1Fgsw586g4g==
+  dependencies:
+    "@huggingface/tasks" "^0.19.22"
+
+"@huggingface/tasks@^0.19.22":
+  version "0.19.34"
+  resolved "https://registry.yarnpkg.com/@huggingface/tasks/-/tasks-0.19.34.tgz#44243d6531b9236570794324e6f9ae9d7eff6a22"
+  integrity sha512-dIl3jyeddCEFJeogJOcbhfIq1tlo3N9K4EAxG/MfkGL0l7hI2kfs91Ut+1h6i09TQM8A9XM91NV7Jz6PgfWE7Q==
 
 "@humanwhocodes/config-array@^0.13.0":
   version "0.13.0"
@@ -1029,10 +1061,10 @@
     thenby "^1.3.4"
     use-context-selector "^1.4.1"
 
-"@qoretechnologies/ts-toolkit@^0.5.37":
-  version "0.5.37"
-  resolved "https://registry.yarnpkg.com/@qoretechnologies/ts-toolkit/-/ts-toolkit-0.5.37.tgz#d9fd31c829e6e8c690dde66ccc7b16eb536a6e9a"
-  integrity sha512-1JMBkR9Grin0PCmREQzwK3lyFl6gnxsX1rabS4dsNHYo0wZ8S8b2ulBaBwKG7i1HMKkXKRAMo7IoWgwePY4oBA==
+"@qoretechnologies/ts-toolkit@^0.5.38":
+  version "0.5.38"
+  resolved "https://registry.yarnpkg.com/@qoretechnologies/ts-toolkit/-/ts-toolkit-0.5.38.tgz#93e0673088e6b4f5c57a78b333bac125af313953"
+  integrity sha512-huyf5CHo4tdV04G2nKQN849fWQWbit1pRitbuSZ8QZACfwg740CH3gVz+J22rGyr1GFPlNdpPPKKOSmi3Cm1CQ==
   dependencies:
     "@qoretechnologies/reqraft" "^0.7.0"
     async "^3.2.4"
@@ -5421,7 +5453,7 @@ google-auth-library@^10.0.0-rc.1:
     gtoken "^8.0.0"
     jws "^4.0.0"
 
-google-auth-library@^9.15.1, google-auth-library@^9.7.0:
+google-auth-library@^9.14.2, google-auth-library@^9.15.1, google-auth-library@^9.7.0:
   version "9.15.1"
   resolved "https://registry.yarnpkg.com/google-auth-library/-/google-auth-library-9.15.1.tgz#0c5d84ed1890b2375f1cd74f03ac7b806b392928"
   integrity sha512-Jb6Z0+nvECVz+2lzSMt9u98UsoakXxA2HGHMCxh+so3n90XgYWkq5dur19JAJV7ONiJY22yBTyJB1TSkvPq9Ng==
@@ -11057,6 +11089,11 @@ write-file-atomic@^4.0.2:
   dependencies:
     imurmurhash "^0.1.4"
     signal-exit "^3.0.7"
+
+ws@^8.18.0:
+  version "8.18.3"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-8.18.3.tgz#b56b88abffde62791c639170400c93dcb0c95472"
+  integrity sha512-PEIGCY5tSlUt50cqyMXfCzX+oOPqN0vuGqWzbcJ2xvnkzkq46oOpz7dQaTDBdfICb4N14+GARUDw2XV2N4tvzg==
 
 xml2js@^0.4.23:
   version "0.4.23"

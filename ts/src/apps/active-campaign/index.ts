@@ -30,6 +30,7 @@ export default (locale: Locales) =>
       oauth2_grant_type: 'none',
       ping_method: 'GET',
       ping_path: '/api/3/users/me',
+      token_api_key_header: 'Api-Token',
     },
     rest_modifiers: {
       options: ACTIVE_CAMPAIGN_CONN_OPTIONS,
