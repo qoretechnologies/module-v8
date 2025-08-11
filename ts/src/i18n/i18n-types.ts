@@ -61452,6 +61452,606 @@ type RootTranslation = {
 				}
 			}
 		}
+		Canva: {
+			/**
+			 * C​a​n​v​a
+			 */
+			displayName: string
+			/**
+			 * D​e​s​i​g​n​ ​p​l​a​t​f​o​r​m​ ​f​o​r​ ​c​r​e​a​t​i​n​g​ ​g​r​a​p​h​i​c​s​,​ ​p​r​e​s​e​n​t​a​t​i​o​n​s​,​ ​a​n​d​ ​v​i​s​u​a​l​ ​c​o​n​t​e​n​t
+			 */
+			shortDesc: string
+			/**
+			 * C​a​n​v​a​ ​i​s​ ​a​ ​g​r​a​p​h​i​c​ ​d​e​s​i​g​n​ ​p​l​a​t​f​o​r​m​ ​t​h​a​t​ ​a​l​l​o​w​s​ ​u​s​e​r​s​ ​t​o​ ​c​r​e​a​t​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​g​r​a​p​h​i​c​s​,​ ​p​r​e​s​e​n​t​a​t​i​o​n​s​,​ ​p​o​s​t​e​r​s​,​ ​d​o​c​u​m​e​n​t​s​ ​a​n​d​ ​o​t​h​e​r​ ​v​i​s​u​a​l​ ​c​o​n​t​e​n​t​.​ ​I​t​ ​p​r​o​v​i​d​e​s​ ​a​ ​d​r​a​g​-​a​n​d​-​d​r​o​p​ ​i​n​t​e​r​f​a​c​e​ ​a​n​d​ ​a​c​c​e​s​s​ ​t​o​ ​m​i​l​l​i​o​n​s​ ​o​f​ ​p​h​o​t​o​g​r​a​p​h​s​,​ ​g​r​a​p​h​i​c​s​ ​a​n​d​ ​f​o​n​t​s​.
+			 */
+			longDesc: string
+			actions: {
+				upload_image: {
+					/**
+					 * U​p​l​o​a​d​ ​I​m​a​g​e
+					 */
+					displayName: string
+					/**
+					 * U​p​l​o​a​d​ ​a​n​ ​i​m​a​g​e​ ​f​i​l​e​ ​t​o​ ​C​a​n​v​a
+					 */
+					shortDesc: string
+					/**
+					 * U​p​l​o​a​d​ ​a​n​ ​i​m​a​g​e​ ​f​i​l​e​ ​t​o​ ​y​o​u​r​ ​C​a​n​v​a​ ​a​c​c​o​u​n​t​ ​a​n​d​ ​o​p​t​i​o​n​a​l​l​y​ ​s​e​t​ ​a​ ​n​a​m​e​ ​a​n​d​ ​t​a​g​s
+					 */
+					longDesc: string
+					options: {
+						image: {
+							/**
+							 * I​m​a​g​e​ ​F​i​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​i​m​a​g​e​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​a​n​ ​i​m​a​g​e​ ​f​i​l​e​ ​f​r​o​m​ ​y​o​u​r​ ​d​e​v​i​c​e​ ​t​o​ ​u​p​l​o​a​d​ ​t​o​ ​C​a​n​v​a
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​i​m​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​a​ ​c​u​s​t​o​m​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​u​p​l​o​a​d​e​d​ ​i​m​a​g​e​.​ ​I​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​,​ ​t​h​e​ ​o​r​i​g​i​n​a​l​ ​f​i​l​e​n​a​m​e​ ​w​i​l​l​ ​b​e​ ​u​s​e​d
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​t​a​g​s​ ​f​o​r​ ​t​h​e​ ​i​m​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​ ​t​a​g​s​ ​t​o​ ​h​e​l​p​ ​o​r​g​a​n​i​z​e​ ​a​n​d​ ​f​i​n​d​ ​y​o​u​r​ ​i​m​a​g​e​ ​l​a​t​e​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_image: {
+					/**
+					 * G​e​t​ ​I​m​a​g​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​i​m​a​g​e​ ​d​e​t​a​i​l​s​ ​f​r​o​m​ ​C​a​n​v​a
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​i​m​a​g​e​ ​a​s​s​e​t​ ​i​n​ ​y​o​u​r​ ​C​a​n​v​a​ ​a​c​c​o​u​n​t
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * I​m​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​m​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​a​n​v​a​ ​a​s​s​e​t​ ​I​D​ ​o​f​ ​t​h​e​ ​i​m​a​g​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_image: {
+					/**
+					 * D​e​l​e​t​e​ ​I​m​a​g​e
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​n​ ​i​m​a​g​e​ ​f​r​o​m​ ​C​a​n​v​a
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​a​n​ ​i​m​a​g​e​ ​a​s​s​e​t​ ​f​r​o​m​ ​y​o​u​r​ ​C​a​n​v​a​ ​a​c​c​o​u​n​t
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * I​m​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​m​a​g​e​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​a​n​v​a​ ​a​s​s​e​t​ ​I​D​ ​o​f​ ​t​h​e​ ​i​m​a​g​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_image: {
+					/**
+					 * U​p​d​a​t​e​ ​I​m​a​g​e
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​i​m​a​g​e​ ​n​a​m​e​ ​a​n​d​ ​t​a​g​s
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​n​a​m​e​ ​a​n​d​ ​t​a​g​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​i​m​a​g​e​ ​i​n​ ​y​o​u​r​ ​C​a​n​v​a​ ​a​c​c​o​u​n​t
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * I​m​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​m​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​a​n​v​a​ ​a​s​s​e​t​ ​I​D​ ​o​f​ ​t​h​e​ ​i​m​a​g​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​i​m​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​i​m​a​g​e​ ​a​s​s​e​t
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​t​a​g​s​ ​f​o​r​ ​t​h​e​ ​i​m​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​t​a​g​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​i​m​a​g​e​ ​f​o​r​ ​b​e​t​t​e​r​ ​o​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+					}
+				}
+				upload_image_by_url: {
+					/**
+					 * U​p​l​o​a​d​ ​I​m​a​g​e​ ​b​y​ ​U​R​L
+					 */
+					displayName: string
+					/**
+					 * U​p​l​o​a​d​ ​a​n​ ​i​m​a​g​e​ ​f​r​o​m​ ​a​ ​U​R​L​ ​t​o​ ​C​a​n​v​a
+					 */
+					shortDesc: string
+					/**
+					 * U​p​l​o​a​d​ ​a​n​ ​i​m​a​g​e​ ​t​o​ ​y​o​u​r​ ​C​a​n​v​a​ ​a​c​c​o​u​n​t​ ​b​y​ ​p​r​o​v​i​d​i​n​g​ ​a​ ​U​R​L​ ​t​o​ ​t​h​e​ ​i​m​a​g​e
+					 */
+					longDesc: string
+					options: {
+						url: {
+							/**
+							 * I​m​a​g​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​i​m​a​g​e​ ​t​o​ ​u​p​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​a​ ​d​i​r​e​c​t​ ​U​R​L​ ​t​o​ ​t​h​e​ ​i​m​a​g​e​ ​f​i​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​l​o​a​d​ ​t​o​ ​C​a​n​v​a
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​i​m​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​a​ ​c​u​s​t​o​m​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​u​p​l​o​a​d​e​d​ ​i​m​a​g​e​.​ ​I​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​,​ ​t​h​e​ ​f​i​l​e​n​a​m​e​ ​f​r​o​m​ ​t​h​e​ ​U​R​L​ ​w​i​l​l​ ​b​e​ ​u​s​e​d
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​t​a​g​s​ ​f​o​r​ ​t​h​e​ ​i​m​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​ ​t​a​g​s​ ​t​o​ ​h​e​l​p​ ​o​r​g​a​n​i​z​e​ ​a​n​d​ ​f​i​n​d​ ​y​o​u​r​ ​i​m​a​g​e​ ​l​a​t​e​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_designs: {
+					/**
+					 * L​i​s​t​ ​D​e​s​i​g​n​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​y​o​u​r​ ​C​a​n​v​a​ ​d​e​s​i​g​n​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​y​o​u​r​ ​C​a​n​v​a​ ​d​e​s​i​g​n​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g
+					 */
+					longDesc: string
+					options: {
+						query: {
+							/**
+							 * S​e​a​r​c​h​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​t​e​r​m​ ​t​o​ ​f​i​l​t​e​r​ ​d​e​s​i​g​n​s
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​a​ ​s​e​a​r​c​h​ ​t​e​r​m​ ​t​o​ ​f​i​n​d​ ​s​p​e​c​i​f​i​c​ ​d​e​s​i​g​n​s​ ​b​y​ ​t​i​t​l​e​ ​o​r​ ​c​o​n​t​e​n​t
+							 */
+							longDesc: string
+						}
+						continuation: {
+							/**
+							 * C​o​n​t​i​n​u​a​t​i​o​n​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​i​s​ ​t​o​k​e​n​ ​t​o​ ​c​o​n​t​i​n​u​e​ ​f​r​o​m​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​e​v​i​o​u​s​ ​r​e​q​u​e​s​t​ ​l​e​f​t​ ​o​f​f
+							 */
+							longDesc: string
+						}
+						ownership: {
+							/**
+							 * O​w​n​e​r​s​h​i​p​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​o​w​n​e​r​s​h​i​p​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​h​o​w​ ​a​l​l​ ​d​e​s​i​g​n​s​,​ ​o​n​l​y​ ​o​w​n​e​d​ ​d​e​s​i​g​n​s​,​ ​o​r​ ​o​n​l​y​ ​s​h​a​r​e​d​ ​d​e​s​i​g​n​s
+							 */
+							longDesc: string
+						}
+						sort_by: {
+							/**
+							 * S​o​r​t​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​d​e​s​i​g​n​s​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_thread: {
+					/**
+					 * C​r​e​a​t​e​ ​C​o​m​m​e​n​t​ ​T​h​r​e​a​d
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​t​h​r​e​a​d​ ​o​n​ ​a​ ​d​e​s​i​g​n
+					 */
+					shortDesc: string
+					/**
+					 * S​t​a​r​t​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​t​h​r​e​a​d​ ​o​n​ ​a​ ​C​a​n​v​a​ ​d​e​s​i​g​n​ ​t​o​ ​c​o​l​l​a​b​o​r​a​t​e​ ​w​i​t​h​ ​t​e​a​m​ ​m​e​m​b​e​r​s
+					 */
+					longDesc: string
+					options: {
+						design: {
+							/**
+							 * D​e​s​i​g​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​e​s​i​g​n​ ​t​o​ ​c​o​m​m​e​n​t​ ​o​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​a​n​v​a​ ​d​e​s​i​g​n​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​c​o​m​m​e​n​t​ ​t​h​r​e​a​d
+							 */
+							longDesc: string
+						}
+						message: {
+							/**
+							 * M​e​s​s​a​g​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​m​m​e​n​t​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​y​o​u​r​ ​c​o​m​m​e​n​t
+							 */
+							longDesc: string
+						}
+						assignee: {
+							/**
+							 * A​s​s​i​g​n​e​e
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​p​e​r​s​o​n​ ​t​o​ ​a​s​s​i​g​n​ ​t​h​e​ ​c​o​m​m​e​n​t​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * A​s​s​i​g​n​ ​t​h​i​s​ ​c​o​m​m​e​n​t​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​e​a​m​ ​m​e​m​b​e​r​ ​f​o​r​ ​a​c​t​i​o​n
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_reply: {
+					/**
+					 * C​r​e​a​t​e​ ​R​e​p​l​y
+					 */
+					displayName: string
+					/**
+					 * R​e​p​l​y​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​m​m​e​n​t​ ​t​h​r​e​a​d
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​ ​a​ ​r​e​p​l​y​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​m​m​e​n​t​ ​t​h​r​e​a​d​ ​o​n​ ​a​ ​C​a​n​v​a​ ​d​e​s​i​g​n
+					 */
+					longDesc: string
+					options: {
+						design: {
+							/**
+							 * D​e​s​i​g​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​e​s​i​g​n​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​h​r​e​a​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​a​n​v​a​ ​d​e​s​i​g​n​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​c​o​m​m​e​n​t​ ​t​h​r​e​a​d
+							 */
+							longDesc: string
+						}
+						thread: {
+							/**
+							 * T​h​r​e​a​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​m​m​e​n​t​ ​t​h​r​e​a​d​ ​t​o​ ​r​e​p​l​y​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​o​m​m​e​n​t​ ​t​h​r​e​a​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​p​l​y​ ​t​o
+							 */
+							longDesc: string
+						}
+						message: {
+							/**
+							 * M​e​s​s​a​g​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​r​e​p​l​y​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​y​o​u​r​ ​r​e​p​l​y
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_replies: {
+					/**
+					 * L​i​s​t​ ​T​h​r​e​a​d​ ​R​e​p​l​i​e​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​r​e​p​l​i​e​s​ ​i​n​ ​a​ ​c​o​m​m​e​n​t​ ​t​h​r​e​a​d
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​r​e​p​l​i​e​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​m​m​e​n​t​ ​t​h​r​e​a​d​ ​o​n​ ​a​ ​C​a​n​v​a​ ​d​e​s​i​g​n
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​p​l​i​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​p​l​i​e​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​(​d​e​f​a​u​l​t​:​ ​5​0​)
+							 */
+							longDesc: string
+						}
+						continuation: {
+							/**
+							 * C​o​n​t​i​n​u​a​t​i​o​n​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​i​s​ ​t​o​k​e​n​ ​t​o​ ​c​o​n​t​i​n​u​e​ ​f​r​o​m​ ​w​h​e​r​e​ ​t​h​e​ ​p​r​e​v​i​o​u​s​ ​r​e​q​u​e​s​t​ ​l​e​f​t​ ​o​f​f
+							 */
+							longDesc: string
+						}
+						design: {
+							/**
+							 * D​e​s​i​g​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​e​s​i​g​n​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​h​r​e​a​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​a​n​v​a​ ​d​e​s​i​g​n​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​c​o​m​m​e​n​t​ ​t​h​r​e​a​d
+							 */
+							longDesc: string
+						}
+						thread: {
+							/**
+							 * T​h​r​e​a​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​m​m​e​n​t​ ​t​h​r​e​a​d​ ​t​o​ ​g​e​t​ ​r​e​p​l​i​e​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​o​m​m​e​n​t​ ​t​h​r​e​a​d​ ​w​h​o​s​e​ ​r​e​p​l​i​e​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_design: {
+					/**
+					 * N​e​w​ ​D​e​s​i​g​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​d​e​s​i​g​n​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​d​e​s​i​g​n​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​y​o​u​r​ ​C​a​n​v​a​ ​a​c​c​o​u​n​t​,​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​o​w​n​e​r​s​h​i​p​ ​a​n​d​ ​s​e​a​r​c​h​ ​q​u​e​r​y
+					 */
+					longDesc: string
+					options: {
+						query: {
+							/**
+							 * S​e​a​r​c​h​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​d​e​s​i​g​n​s​ ​b​y​ ​s​e​a​r​c​h​ ​t​e​r​m
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​s​e​a​r​c​h​ ​t​e​r​m​ ​t​o​ ​f​i​l​t​e​r​ ​w​h​i​c​h​ ​d​e​s​i​g​n​s​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​e​v​e​n​t​.​ ​O​n​l​y​ ​d​e​s​i​g​n​s​ ​m​a​t​c​h​i​n​g​ ​t​h​i​s​ ​q​u​e​r​y​ ​w​i​l​l​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​e​v​e​n​t
+							 */
+							longDesc: string
+						}
+						ownership: {
+							/**
+							 * O​w​n​e​r​s​h​i​p​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​o​w​n​e​r​s​h​i​p​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​d​e​s​i​g​n​s​,​ ​o​n​l​y​ ​y​o​u​r​ ​o​w​n​e​d​ ​d​e​s​i​g​n​s​,​ ​o​r​ ​o​n​l​y​ ​s​h​a​r​e​d​ ​d​e​s​i​g​n​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_thread_reply: {
+					/**
+					 * N​e​w​ ​T​h​r​e​a​d​ ​R​e​p​l​y
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​e​p​l​y​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​c​o​m​m​e​n​t​ ​t​h​r​e​a​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​s​o​m​e​o​n​e​ ​a​d​d​s​ ​a​ ​n​e​w​ ​r​e​p​l​y​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​m​m​e​n​t​ ​t​h​r​e​a​d​ ​o​n​ ​a​ ​C​a​n​v​a​ ​d​e​s​i​g​n
+					 */
+					longDesc: string
+					options: {
+						design: {
+							/**
+							 * D​e​s​i​g​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​e​s​i​g​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​r​e​p​l​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​a​n​v​a​ ​d​e​s​i​g​n​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​c​o​m​m​e​n​t​ ​t​h​r​e​a​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​r​e​p​l​i​e​s
+							 */
+							longDesc: string
+						}
+						thread: {
+							/**
+							 * T​h​r​e​a​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​m​m​e​n​t​ ​t​h​r​e​a​d​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​o​m​m​e​n​t​ ​t​h​r​e​a​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​r​e​p​l​i​e​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -122888,6 +123488,606 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Select the YouTube video to monitor for new comments
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		Canva: {
+			/**
+			 * Canva
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Design platform for creating graphics, presentations, and visual content
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Canva is a graphic design platform that allows users to create social media graphics, presentations, posters, documents and other visual content. It provides a drag-and-drop interface and access to millions of photographs, graphics and fonts.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				upload_image: {
+					/**
+					 * Upload Image
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Upload an image file to Canva
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Upload an image file to your Canva account and optionally set a name and tags
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						image: {
+							/**
+							 * Image File
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The image file to upload
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select an image file from your device to upload to Canva
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional name for the image
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set a custom name for the uploaded image. If not provided, the original filename will be used
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional tags for the image
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Add tags to help organize and find your image later
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_image: {
+					/**
+					 * Get Image
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve image details from Canva
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get detailed information about a specific image asset in your Canva account
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Image ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the image
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Canva asset ID of the image you want to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_image: {
+					/**
+					 * Delete Image
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete an image from Canva
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently delete an image asset from your Canva account
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Image ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the image to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Canva asset ID of the image you want to delete
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_image: {
+					/**
+					 * Update Image
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update image name and tags
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the name and tags of an existing image in your Canva account
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Image ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the image
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Canva asset ID of the image you want to update
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New name for the image
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the name of the image asset
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New tags for the image
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the tags associated with the image for better organization
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				upload_image_by_url: {
+					/**
+					 * Upload Image by URL
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Upload an image from a URL to Canva
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Upload an image to your Canva account by providing a URL to the image
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						url: {
+							/**
+							 * Image URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The URL of the image to upload
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide a direct URL to the image file you want to upload to Canva
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional name for the image
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set a custom name for the uploaded image. If not provided, the filename from the URL will be used
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional tags for the image
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Add tags to help organize and find your image later
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_designs: {
+					/**
+					 * List Designs
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List your Canva designs
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of your Canva designs with optional filtering and sorting
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						query: {
+							/**
+							 * Search Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search term to filter designs
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter a search term to find specific designs by title or content
+							 */
+							longDesc: () => LocalizedString
+						}
+						continuation: {
+							/**
+							 * Continuation Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use this token to continue from where the previous request left off
+							 */
+							longDesc: () => LocalizedString
+						}
+						ownership: {
+							/**
+							 * Ownership Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by ownership type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose whether to show all designs, only owned designs, or only shared designs
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort_by: {
+							/**
+							 * Sort By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to sort the results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose how to sort the returned designs list
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_thread: {
+					/**
+					 * Create Comment Thread
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new comment thread on a design
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Start a new comment thread on a Canva design to collaborate with team members
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						design: {
+							/**
+							 * Design
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The design to comment on
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Canva design where you want to create the comment thread
+							 */
+							longDesc: () => LocalizedString
+						}
+						message: {
+							/**
+							 * Message
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The comment message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the text content of your comment
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignee: {
+							/**
+							 * Assignee
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional person to assign the comment to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Assign this comment to a specific team member for action
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_reply: {
+					/**
+					 * Create Reply
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Reply to an existing comment thread
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Add a reply to an existing comment thread on a Canva design
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						design: {
+							/**
+							 * Design
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The design containing the thread
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Canva design that contains the comment thread
+							 */
+							longDesc: () => LocalizedString
+						}
+						thread: {
+							/**
+							 * Thread ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The comment thread to reply to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the comment thread you want to reply to
+							 */
+							longDesc: () => LocalizedString
+						}
+						message: {
+							/**
+							 * Message
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The reply message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the text content of your reply
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_replies: {
+					/**
+					 * List Thread Replies
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List replies in a comment thread
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve all replies from a specific comment thread on a Canva design
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of replies to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the maximum number of replies to retrieve (default: 50)
+							 */
+							longDesc: () => LocalizedString
+						}
+						continuation: {
+							/**
+							 * Continuation Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use this token to continue from where the previous request left off
+							 */
+							longDesc: () => LocalizedString
+						}
+						design: {
+							/**
+							 * Design
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The design containing the thread
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Canva design that contains the comment thread
+							 */
+							longDesc: () => LocalizedString
+						}
+						thread: {
+							/**
+							 * Thread ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The comment thread to get replies from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the comment thread whose replies you want to list
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_design: {
+					/**
+					 * New Design
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new design is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when a new design is created in your Canva account, with optional filtering by ownership and search query
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						query: {
+							/**
+							 * Search Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter designs by search term
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional search term to filter which designs trigger the event. Only designs matching this query will trigger the event
+							 */
+							longDesc: () => LocalizedString
+						}
+						ownership: {
+							/**
+							 * Ownership Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by ownership type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose whether to monitor all designs, only your owned designs, or only shared designs
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_thread_reply: {
+					/**
+					 * New Thread Reply
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new reply is added to a comment thread
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when someone adds a new reply to a specific comment thread on a Canva design
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						design: {
+							/**
+							 * Design
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The design to monitor for new replies
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Canva design that contains the comment thread you want to monitor for new replies
+							 */
+							longDesc: () => LocalizedString
+						}
+						thread: {
+							/**
+							 * Thread ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The comment thread to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the comment thread you want to monitor for new replies
 							 */
 							longDesc: () => LocalizedString
 						}

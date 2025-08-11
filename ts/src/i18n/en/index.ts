@@ -54,6 +54,7 @@ import OpenRouter from './apps/Openrouter';
 import HuggingFace from './apps/HuggingFace';
 import YouTube from './apps/YouTube';
 import LinkedIn from './apps/LinkedIn';
+import Canva from './apps/Canva';
 
 const en = {
   common: {},
@@ -207,6 +208,7 @@ const en = {
     ActiveCampaign,
     HuggingFace,
     YouTube,
+    Canva,
   },
 } satisfies BaseTranslation;
 
