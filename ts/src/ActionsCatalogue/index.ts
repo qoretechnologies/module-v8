@@ -67,6 +67,7 @@ import { Debugger, DebugLevels } from '../utils/Debugger';
 import huggingFace from '../apps/hugging-face';
 import linkedin from '../apps/linkedin';
 import canva from '../apps/canva';
+import figma from '../apps/figma';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -96,6 +97,7 @@ const NEW_APPS = {
   confluence,
   esignature,
   facebookPages,
+  figma,
   freshdesk,
   gemini,
   github,
