@@ -37,7 +37,7 @@ export default (locale: Locales) =>
         'design:permission:read',
         'profile:read',
         'folder:read',
-        'app:read',
+        'folder:write',
       ],
       ping_method: 'GET',
       ping_path: '/rest/v1/users/me',
