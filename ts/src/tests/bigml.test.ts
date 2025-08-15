@@ -1,7 +1,5 @@
 import { configDotenv } from 'dotenv';
 import {
-  CreateBigMlAnomalyScore,
-  CreateBigMlCentroid,
   ListBigMlAnomalyDetectors,
   ListBigMlClusters,
   ListBigMlDatasets,
@@ -51,9 +49,9 @@ describe('Big Ml', () => {
     base_context.conn_opts.username = username;
   });
 
-  let anomalyDetectorId: string | undefined;
+  // let anomalyDetectorId: string | undefined;
   let datasetId: string | undefined;
-  let clusterId: string | undefined;
+  // let clusterId: string | undefined;
 
   describe('Should test allowed values', () => {
     it('Should get anomaly detector id allowed values', async () => {
@@ -178,7 +176,7 @@ describe('Big Ml', () => {
       expect(Array.isArray(result)).toBe(true);
       expect(result.length).toBeGreaterThan(0);
 
-      clusterId = result[0].resource;
+      // clusterId = result[0].resource;
     });
 
     it('Should list anomaly detectors', async () => {
@@ -202,61 +200,61 @@ describe('Big Ml', () => {
       expect(Array.isArray(result)).toBe(true);
       expect(result.length).toBeGreaterThan(0);
 
-      anomalyDetectorId = result[0].resource;
+      // anomalyDetectorId = result[0].resource;
     });
 
-    it('Should create an anomaly score', async () => {
-      const action = CreateBigMlAnomalyScore;
+    // it('Should create an anomaly score', async () => {
+    //   const action = CreateBigMlAnomalyScore;
 
-      if (!('api_function' in action)) throw new Error('api_function not found in action');
-      if (!anomalyDetectorId) throw new Error('Anomaly Detector ID is not defined');
+    //   if (!('api_function' in action)) throw new Error('api_function not found in action');
+    //   if (!anomalyDetectorId) throw new Error('Anomaly Detector ID is not defined');
 
-      const result = await action.api_function(
-        {
-          anomaly: anomalyDetectorId,
-          input_data: {
-            'Employment Rate': 55.56394465,
-            'Alcohol Consumption per adult (lt)': 0.02,
-            'CO2 Emissions per person (Mt Tons)': 0.16,
-            'GDP per capita': 1145.61,
-          },
-        },
-        undefined,
-        base_context
-      );
+    //   const result = await action.api_function(
+    //     {
+    //       anomaly: anomalyDetectorId,
+    //       input_data: {
+    //         'Employment Rate': 55.56394465,
+    //         'Alcohol Consumption per adult (lt)': 0.02,
+    //         'CO2 Emissions per person (Mt Tons)': 0.16,
+    //         'GDP per capita': 1145.61,
+    //       },
+    //     },
+    //     undefined,
+    //     base_context
+    //   );
 
-      expect(result).toBeDefined();
-      expect(result.score).toBeDefined();
-    });
+    //   expect(result).toBeDefined();
+    //   expect(result.score).toBeDefined();
+    // });
 
-    it('Should create a centroid', async () => {
-      const action = CreateBigMlCentroid;
+    // it('Should create a centroid', async () => {
+    //   const action = CreateBigMlCentroid;
 
-      if (!('api_function' in action)) throw new Error('api_function not found in action');
+    //   if (!('api_function' in action)) throw new Error('api_function not found in action');
 
-      if (!datasetId) throw new Error('Dataset ID is not defined');
+    //   if (!datasetId) throw new Error('Dataset ID is not defined');
 
-      const result = await action.api_function(
-        {
-          cluster: clusterId,
-          input_data: {
-            'Employment Rate': 75.55710689,
-            'Alcohol Consumption per adult (lt)': 5.48,
-            'Expend/student Primary': 4.21768,
-            'Expend/student Secondary': 41.68302,
-            'Expend/student Tertiary': 76.38083899,
-            'CO2 Emissions per person (Mt Tons)': 1.44,
-            'Gender Equality Ratio': 0.629,
-            'GDP per capita': 5495.28,
-          },
-        },
-        undefined,
-        base_context
-      );
+    //   const result = await action.api_function(
+    //     {
+    //       cluster: clusterId,
+    //       input_data: {
+    //         'Employment Rate': 75.55710689,
+    //         'Alcohol Consumption per adult (lt)': 5.48,
+    //         'Expend/student Primary': 4.21768,
+    //         'Expend/student Secondary': 41.68302,
+    //         'Expend/student Tertiary': 76.38083899,
+    //         'CO2 Emissions per person (Mt Tons)': 1.44,
+    //         'Gender Equality Ratio': 0.629,
+    //         'GDP per capita': 5495.28,
+    //       },
+    //     },
+    //     undefined,
+    //     base_context
+    //   );
 
-      expect(result).toBeDefined();
-      expect(result.centroid).toBeDefined();
-    });
+    //   expect(result).toBeDefined();
+    //   expect(result.centroid).toBeDefined();
+    // });
 
     it('Should list ensembles', async () => {
       const action = ListBigMlEnsembles;

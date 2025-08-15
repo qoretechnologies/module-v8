@@ -44,8 +44,10 @@ export default (locale: Locales) =>
       url_template_options: ['realm_id'],
       set_options_post_auth: (context) => {
         const instanceType = context.conn_opts?.instance_type;
+        const realmId = context.conn_opts?.realmId;
 
         return {
+          realm_id: realmId,
           url:
             instanceType === 'sandbox'
               ? 'https://sandbox-quickbooks.api.intuit.com'

@@ -10,33 +10,8 @@ import { GOOGLE_CHAT_APP_NAME, GoogleChatError } from '../constants';
 import { getGoogleChatMessageIdAllowedValues } from '../helpers/get-message-id-allowed-values';
 import { getGoogleChatSpaceIdAllowedValues } from '../helpers/get-space-id-allowed-values';
 
-interface GoogleChatCard {
-  header?: {
-    title?: string;
-    subtitle?: string;
-    imageUrl?: string;
-    imageType?: string;
-  };
-  sections?: Array<{
-    widgets: Array<{
-      buttons?: Array<{
-        textButton: {
-          text: string;
-          onClick: {
-            openLink: {
-              url: string;
-            };
-          };
-        };
-      }>;
-    }>;
-  }>;
-}
-
 interface GoogleChatMessageRequest {
   text?: string;
-  formattedText?: string;
-  cards?: GoogleChatCard[];
 }
 
 const options = {
@@ -49,37 +24,13 @@ const options = {
   },
   text: {
     type: 'string',
-    required: false,
-  },
-  formattedText: {
-    required: false,
-    type: 'string',
+    required: true,
   },
   messageId: {
     required: false,
     type: 'string',
     get_allowed_values: getGoogleChatMessageIdAllowedValues,
     allowed_values_creatable: true,
-  },
-  cardTitle: {
-    required: false,
-    type: 'string',
-  },
-  cardSubtitle: {
-    required: false,
-    type: 'string',
-  },
-  cardImageUrl: {
-    required: false,
-    type: 'string',
-  },
-  buttonText: {
-    required: false,
-    type: 'string',
-  },
-  buttonUrl: {
-    required: false,
-    type: 'string',
   },
 } satisfies TQoreOptions;
 
@@ -96,72 +47,16 @@ const sendMessage = QoreAppCreator.createLocalizedAction<typeof options>({
       ErrorClass: GoogleChatError,
     });
 
-    const {
-      messageId,
-      text,
-      formattedText,
-      cardTitle,
-      cardSubtitle,
-      cardImageUrl,
-      buttonText,
-      buttonUrl,
-    } = obj || {};
+    const { messageId, text } = obj || {};
 
-    if (!text && !formattedText && !cardTitle) {
-      throw new GoogleChatError(
-        'At least one of text, formattedText, or cardTitle must be provided'
-      );
+    if (!text) {
+      throw new GoogleChatError('text must be provided');
     }
 
     try {
-      const requestBody: GoogleChatMessageRequest = {};
-
-      if (text) requestBody.text = text;
-      if (formattedText) requestBody.formattedText = formattedText;
-
-      const hasCardContent = cardTitle || cardSubtitle || cardImageUrl || buttonText;
-      if (hasCardContent) {
-        const card: GoogleChatCard = {};
-
-        if (cardTitle || cardSubtitle || cardImageUrl) {
-          card.header = {};
-          if (cardTitle) card.header.title = cardTitle;
-          if (cardSubtitle) card.header.subtitle = cardSubtitle;
-          if (cardImageUrl) {
-            card.header.imageUrl = cardImageUrl;
-            card.header.imageType = 'IMAGE';
-          }
-        }
-
-        if (buttonText) {
-          if (!buttonUrl) {
-            throw new GoogleChatError('buttonUrl is required when buttonText is provided');
-          }
-
-          card.sections = [
-            {
-              widgets: [
-                {
-                  buttons: [
-                    {
-                      textButton: {
-                        text: buttonText,
-                        onClick: {
-                          openLink: {
-                            url: buttonUrl,
-                          },
-                        },
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-          ];
-        }
-
-        requestBody.cards = [card];
-      }
+      const requestBody: GoogleChatMessageRequest = {
+        text: text,
+      };
 
       const queryParams: Record<string, string> = {};
       if (messageId) queryParams.messageId = messageId;
@@ -204,25 +99,6 @@ const sendMessage = QoreAppCreator.createLocalizedAction<typeof options>({
       lastUpdateTime: { type: 'string' },
       deleteTime: { type: 'string' },
       text: { type: 'string' },
-      formattedText: { type: 'string' },
-      cards: {
-        type: {
-          type: 'list',
-          element_type: 'hash',
-        },
-      },
-      cardsV2: {
-        type: {
-          type: 'list',
-          element_type: 'hash',
-        },
-      },
-      annotations: {
-        type: {
-          type: 'list',
-          element_type: 'hash',
-        },
-      },
       thread: {
         type: {
           type: 'hash',
@@ -240,61 +116,8 @@ const sendMessage = QoreAppCreator.createLocalizedAction<typeof options>({
           },
         },
       },
-      fallbackText: { type: 'string' },
-      actionResponse: {
-        type: 'hash',
-      },
       argumentText: { type: 'string' },
-      slashCommand: {
-        type: 'hash',
-      },
-      attachment: {
-        type: {
-          type: 'list',
-          element_type: 'hash',
-        },
-      },
-      matchedUrl: {
-        type: 'hash',
-      },
-      threadReply: { type: 'boolean' },
       clientAssignedMessageId: { type: 'string' },
-      emojiReactionSummaries: {
-        type: {
-          type: 'list',
-          element_type: 'hash',
-        },
-      },
-      privateMessageViewer: {
-        type: {
-          type: 'hash',
-          fields: {
-            name: { type: 'string' },
-            displayName: { type: 'string' },
-            domainId: { type: 'string' },
-            type: { type: 'string' },
-            isAnonymous: { type: 'boolean' },
-          },
-        },
-      },
-      deletionMetadata: {
-        type: 'hash',
-      },
-      quotedMessageMetadata: {
-        type: 'hash',
-      },
-      attachedGifs: {
-        type: {
-          type: 'list',
-          element_type: 'hash',
-        },
-      },
-      accessoryWidgets: {
-        type: {
-          type: 'list',
-          element_type: 'hash',
-        },
-      },
     },
   },
 });
