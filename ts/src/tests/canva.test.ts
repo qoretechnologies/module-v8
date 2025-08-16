@@ -351,5 +351,3 @@ const updateCanvaRefreshTokenVariable = async (refreshToken: string) => {
     throw new Error(`Failed to update GitHub secret: ${error.message || error}`);
   }
 };
-
-export { updateCanvaRefreshTokenVariable };
