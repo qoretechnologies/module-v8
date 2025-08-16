@@ -109,6 +109,12 @@ const LinkedInOrganizationsAppEn = {
           },
         },
       },
+      list_user_organizations: {
+        displayName: 'List User Organizations',
+        shortDesc: 'Retrieve all LinkedIn organizations accessible to the authenticated user',
+        longDesc:
+          'Fetch a comprehensive list of all LinkedIn organization pages that the authenticated user has access to manage. This includes organizations where the user has admin or content management permissions, along with detailed organization information such as name, description, logo, location, and other metadata.',
+      },
     },
   },
 };

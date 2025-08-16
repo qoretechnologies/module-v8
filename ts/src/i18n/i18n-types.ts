@@ -62715,6 +62715,20 @@ type RootTranslation = {
 							}
 						}
 					}
+					list_user_organizations: {
+						/**
+						 * L​i​s​t​ ​U​s​e​r​ ​O​r​g​a​n​i​z​a​t​i​o​n​s
+						 */
+						displayName: string
+						/**
+						 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​L​i​n​k​e​d​I​n​ ​o​r​g​a​n​i​z​a​t​i​o​n​s​ ​a​c​c​e​s​s​i​b​l​e​ ​t​o​ ​t​h​e​ ​a​u​t​h​e​n​t​i​c​a​t​e​d​ ​u​s​e​r
+						 */
+						shortDesc: string
+						/**
+						 * F​e​t​c​h​ ​a​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​L​i​n​k​e​d​I​n​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​p​a​g​e​s​ ​t​h​a​t​ ​t​h​e​ ​a​u​t​h​e​n​t​i​c​a​t​e​d​ ​u​s​e​r​ ​h​a​s​ ​a​c​c​e​s​s​ ​t​o​ ​m​a​n​a​g​e​.​ ​T​h​i​s​ ​i​n​c​l​u​d​e​s​ ​o​r​g​a​n​i​z​a​t​i​o​n​s​ ​w​h​e​r​e​ ​t​h​e​ ​u​s​e​r​ ​h​a​s​ ​a​d​m​i​n​ ​o​r​ ​c​o​n​t​e​n​t​ ​m​a​n​a​g​e​m​e​n​t​ ​p​e​r​m​i​s​s​i​o​n​s​,​ ​a​l​o​n​g​ ​w​i​t​h​ ​d​e​t​a​i​l​e​d​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​i​n​f​o​r​m​a​t​i​o​n​ ​s​u​c​h​ ​a​s​ ​n​a​m​e​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​l​o​g​o​,​ ​l​o​c​a​t​i​o​n​,​ ​a​n​d​ ​o​t​h​e​r​ ​m​e​t​a​d​a​t​a​.
+						 */
+						longDesc: string
+					}
 				}
 			}
 		}
@@ -125423,6 +125437,20 @@ export type TranslationFunctions = {
 								longDesc: () => LocalizedString
 							}
 						}
+					}
+					list_user_organizations: {
+						/**
+						 * List User Organizations
+						 */
+						displayName: () => LocalizedString
+						/**
+						 * Retrieve all LinkedIn organizations accessible to the authenticated user
+						 */
+						shortDesc: () => LocalizedString
+						/**
+						 * Fetch a comprehensive list of all LinkedIn organization pages that the authenticated user has access to manage. This includes organizations where the user has admin or content management permissions, along with detailed organization information such as name, description, logo, location, and other metadata.
+						 */
+						longDesc: () => LocalizedString
 					}
 				}
 			}
