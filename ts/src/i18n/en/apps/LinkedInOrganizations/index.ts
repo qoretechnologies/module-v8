@@ -7,6 +7,10 @@ const LinkedInOrganizationsAppEn = {
   LinkedInOrganizations: {
     triggers: {
       new_post: {
+        displayName: 'New Post',
+        shortDesc: 'Triggers when a new post is published by the organization',
+        longDesc:
+          'This trigger fires whenever a new post is published by the selected LinkedIn organization page. It monitors the organization for new content and provides details about the post.',
         options: {
           organization: {
             displayName: 'Organization',
@@ -19,6 +23,10 @@ const LinkedInOrganizationsAppEn = {
     },
     actions: {
       list_organization_posts: {
+        displayName: 'List Organization Posts',
+        shortDesc: 'Retrieve a list of posts from a LinkedIn organization page',
+        longDesc:
+          'Fetch a paginated list of posts published by a LinkedIn organization page. This action allows you to browse through historical posts and retrieve metadata about each post.',
         options: {
           organization: {
             displayName: 'Organization',
@@ -41,6 +49,10 @@ const LinkedInOrganizationsAppEn = {
         },
       },
       get_follower_statistics: {
+        displayName: 'Get Follower Statistics',
+        shortDesc: 'Retrieve demographic and engagement statistics for organization followers',
+        longDesc:
+          'Analyze your LinkedIn organization page followers by retrieving detailed demographic breakdowns and engagement statistics. This helps understand your audience composition and reach.',
         options: {
           organization: {
             displayName: 'Organization',
@@ -78,6 +90,10 @@ const LinkedInOrganizationsAppEn = {
         },
       },
       get_post: {
+        displayName: 'Get Post',
+        shortDesc: 'Retrieve detailed information about a specific LinkedIn organization post',
+        longDesc:
+          'Fetch comprehensive details about a specific post published by a LinkedIn organization page, including engagement metrics, content, and metadata.',
         options: {
           organization: {
             displayName: 'Organization',

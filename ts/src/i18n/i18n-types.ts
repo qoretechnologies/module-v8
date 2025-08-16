@@ -62492,6 +62492,18 @@ type RootTranslation = {
 			LinkedInOrganizations: {
 				triggers: {
 					new_post: {
+						/**
+						 * N​e​w​ ​P​o​s​t
+						 */
+						displayName: string
+						/**
+						 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​o​s​t​ ​i​s​ ​p​u​b​l​i​s​h​e​d​ ​b​y​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
+						 */
+						shortDesc: string
+						/**
+						 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​p​o​s​t​ ​i​s​ ​p​u​b​l​i​s​h​e​d​ ​b​y​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​L​i​n​k​e​d​I​n​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​p​a​g​e​.​ ​I​t​ ​m​o​n​i​t​o​r​s​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​f​o​r​ ​n​e​w​ ​c​o​n​t​e​n​t​ ​a​n​d​ ​p​r​o​v​i​d​e​s​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​p​o​s​t​.
+						 */
+						longDesc: string
 						options: {
 							organization: {
 								/**
@@ -62512,6 +62524,18 @@ type RootTranslation = {
 				}
 				actions: {
 					list_organization_posts: {
+						/**
+						 * L​i​s​t​ ​O​r​g​a​n​i​z​a​t​i​o​n​ ​P​o​s​t​s
+						 */
+						displayName: string
+						/**
+						 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​p​o​s​t​s​ ​f​r​o​m​ ​a​ ​L​i​n​k​e​d​I​n​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​p​a​g​e
+						 */
+						shortDesc: string
+						/**
+						 * F​e​t​c​h​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​p​o​s​t​s​ ​p​u​b​l​i​s​h​e​d​ ​b​y​ ​a​ ​L​i​n​k​e​d​I​n​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​p​a​g​e​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​b​r​o​w​s​e​ ​t​h​r​o​u​g​h​ ​h​i​s​t​o​r​i​c​a​l​ ​p​o​s​t​s​ ​a​n​d​ ​r​e​t​r​i​e​v​e​ ​m​e​t​a​d​a​t​a​ ​a​b​o​u​t​ ​e​a​c​h​ ​p​o​s​t​.
+						 */
+						longDesc: string
 						options: {
 							organization: {
 								/**
@@ -62558,6 +62582,18 @@ type RootTranslation = {
 						}
 					}
 					get_follower_statistics: {
+						/**
+						 * G​e​t​ ​F​o​l​l​o​w​e​r​ ​S​t​a​t​i​s​t​i​c​s
+						 */
+						displayName: string
+						/**
+						 * R​e​t​r​i​e​v​e​ ​d​e​m​o​g​r​a​p​h​i​c​ ​a​n​d​ ​e​n​g​a​g​e​m​e​n​t​ ​s​t​a​t​i​s​t​i​c​s​ ​f​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​f​o​l​l​o​w​e​r​s
+						 */
+						shortDesc: string
+						/**
+						 * A​n​a​l​y​z​e​ ​y​o​u​r​ ​L​i​n​k​e​d​I​n​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​p​a​g​e​ ​f​o​l​l​o​w​e​r​s​ ​b​y​ ​r​e​t​r​i​e​v​i​n​g​ ​d​e​t​a​i​l​e​d​ ​d​e​m​o​g​r​a​p​h​i​c​ ​b​r​e​a​k​d​o​w​n​s​ ​a​n​d​ ​e​n​g​a​g​e​m​e​n​t​ ​s​t​a​t​i​s​t​i​c​s​.​ ​T​h​i​s​ ​h​e​l​p​s​ ​u​n​d​e​r​s​t​a​n​d​ ​y​o​u​r​ ​a​u​d​i​e​n​c​e​ ​c​o​m​p​o​s​i​t​i​o​n​ ​a​n​d​ ​r​e​a​c​h​.
+						 */
+						longDesc: string
 						options: {
 							organization: {
 								/**
@@ -62636,6 +62672,18 @@ type RootTranslation = {
 						}
 					}
 					get_post: {
+						/**
+						 * G​e​t​ ​P​o​s​t
+						 */
+						displayName: string
+						/**
+						 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​L​i​n​k​e​d​I​n​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​p​o​s​t
+						 */
+						shortDesc: string
+						/**
+						 * F​e​t​c​h​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​o​s​t​ ​p​u​b​l​i​s​h​e​d​ ​b​y​ ​a​ ​L​i​n​k​e​d​I​n​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​p​a​g​e​,​ ​i​n​c​l​u​d​i​n​g​ ​e​n​g​a​g​e​m​e​n​t​ ​m​e​t​r​i​c​s​,​ ​c​o​n​t​e​n​t​,​ ​a​n​d​ ​m​e​t​a​d​a​t​a​.
+						 */
+						longDesc: string
 						options: {
 							organization: {
 								/**
@@ -125153,6 +125201,18 @@ export type TranslationFunctions = {
 			LinkedInOrganizations: {
 				triggers: {
 					new_post: {
+						/**
+						 * New Post
+						 */
+						displayName: () => LocalizedString
+						/**
+						 * Triggers when a new post is published by the organization
+						 */
+						shortDesc: () => LocalizedString
+						/**
+						 * This trigger fires whenever a new post is published by the selected LinkedIn organization page. It monitors the organization for new content and provides details about the post.
+						 */
+						longDesc: () => LocalizedString
 						options: {
 							organization: {
 								/**
@@ -125173,6 +125233,18 @@ export type TranslationFunctions = {
 				}
 				actions: {
 					list_organization_posts: {
+						/**
+						 * List Organization Posts
+						 */
+						displayName: () => LocalizedString
+						/**
+						 * Retrieve a list of posts from a LinkedIn organization page
+						 */
+						shortDesc: () => LocalizedString
+						/**
+						 * Fetch a paginated list of posts published by a LinkedIn organization page. This action allows you to browse through historical posts and retrieve metadata about each post.
+						 */
+						longDesc: () => LocalizedString
 						options: {
 							organization: {
 								/**
@@ -125219,6 +125291,18 @@ export type TranslationFunctions = {
 						}
 					}
 					get_follower_statistics: {
+						/**
+						 * Get Follower Statistics
+						 */
+						displayName: () => LocalizedString
+						/**
+						 * Retrieve demographic and engagement statistics for organization followers
+						 */
+						shortDesc: () => LocalizedString
+						/**
+						 * Analyze your LinkedIn organization page followers by retrieving detailed demographic breakdowns and engagement statistics. This helps understand your audience composition and reach.
+						 */
+						longDesc: () => LocalizedString
 						options: {
 							organization: {
 								/**
@@ -125297,6 +125381,18 @@ export type TranslationFunctions = {
 						}
 					}
 					get_post: {
+						/**
+						 * Get Post
+						 */
+						displayName: () => LocalizedString
+						/**
+						 * Retrieve detailed information about a specific LinkedIn organization post
+						 */
+						shortDesc: () => LocalizedString
+						/**
+						 * Fetch comprehensive details about a specific post published by a LinkedIn organization page, including engagement metrics, content, and metadata.
+						 */
+						longDesc: () => LocalizedString
 						options: {
 							organization: {
 								/**
