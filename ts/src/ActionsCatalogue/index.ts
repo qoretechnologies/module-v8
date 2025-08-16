@@ -67,6 +67,7 @@ import { Debugger, DebugLevels } from '../utils/Debugger';
 import huggingFace from '../apps/hugging-face';
 import linkedin from '../apps/linkedin';
 import canva from '../apps/canva';
+import figma from '../apps/figma';
 import linkedinOrganizations from '../apps/linkedin-organizations';
 
 if (process.env.TS_DEBUG) {
@@ -97,6 +98,7 @@ const NEW_APPS = {
   confluence,
   esignature,
   facebookPages,
+  figma,
   freshdesk,
   gemini,
   github,

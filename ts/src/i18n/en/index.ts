@@ -55,6 +55,7 @@ import HuggingFace from './apps/HuggingFace';
 import YouTube from './apps/YouTube';
 import LinkedIn from './apps/LinkedIn';
 import Canva from './apps/Canva';
+import Figma from './apps/Figma';
 import LinkedInOrganizations from './apps/LinkedInOrganizations';
 
 const en = {
@@ -210,6 +211,7 @@ const en = {
     HuggingFace,
     YouTube,
     Canva,
+    Figma,
     LinkedInOrganizations,
   },
 } satisfies BaseTranslation;
