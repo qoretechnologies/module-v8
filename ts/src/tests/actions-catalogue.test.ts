@@ -3,6 +3,16 @@ import { forEach } from 'lodash';
 import { join } from 'node:path';
 import { actionsCatalogue } from '../ActionsCatalogue';
 
+const expectWithContext = (run: () => void, ctx: string) => {
+  try {
+    run();
+  } catch (err: any) {
+    const original = err?.message ?? '';
+    err.message = `${ctx}\n${original}`;
+    throw err;
+  }
+};
+
 describe('Qorus Apps Catalogue tests', () => {
   it('Should register the apps', () => {
     actionsCatalogue.initializeCatalogue();
@@ -33,22 +43,33 @@ describe('Qorus Apps Catalogue tests', () => {
         expect(action.desc).not.toBeFalsy();
 
         if ('options' in action) {
-          const checkOption = (option: any) => {
-            expect(option.display_name).not.toBeFalsy();
-            expect(option.short_desc).not.toBeFalsy();
-            expect(option.desc).not.toBeFalsy();
-            expect(option.type).not.toBeFalsy();
-
+          const checkOption = (option: any, context: string) => {
+            expectWithContext(
+              () => expect(option.display_name).not.toBeFalsy(),
+              `${context}: "display_name" is missing/empty`
+            );
+            expectWithContext(
+              () => expect(option.short_desc).not.toBeFalsy(),
+              `${context}: "short_desc" is missing/empty`
+            );
+            expectWithContext(
+              () => expect(option.desc).not.toBeFalsy(),
+              `${context}: "desc" is missing/empty`
+            );
+            expectWithContext(
+              () => expect(option.type).not.toBeFalsy(),
+              `${context}: "type" is missing/empty`
+            );
             if (typeof option.type === 'object' && option.type.fields) {
               forEach(option.type.fields, (field) => {
-                checkOption(field);
+                checkOption(field, `${context} -> ${field.display_name ?? '[no name]'}`);
               });
             }
           };
 
-          forEach(action.options, (option, _key) => {
-            // console.log(`${app.name} -> ${action.action} -> ${_key}`);
-            checkOption(option);
+          forEach(action.options, (option, key) => {
+            const baseCtx = `${app.name} -> ${action.action} -> ${key}`;
+            checkOption(option, baseCtx);
           });
         }
 
