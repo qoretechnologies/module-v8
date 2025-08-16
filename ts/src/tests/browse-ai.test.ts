@@ -140,7 +140,6 @@ describe('Browse AI', () => {
         },
         ...base_context,
       });
-      console.dir(result, { depth: null });
       expect(result).toBeDefined();
       expect(result.task).toBeDefined();
     });
