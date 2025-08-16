@@ -62052,6 +62052,430 @@ type RootTranslation = {
 				}
 			}
 		}
+		Figma: {
+			/**
+			 * F​i​g​m​a
+			 */
+			displayName: string
+			/**
+			 * D​e​s​i​g​n​ ​a​n​d​ ​p​r​o​t​o​t​y​p​i​n​g​ ​p​l​a​t​f​o​r​m​ ​f​o​r​ ​t​e​a​m​s
+			 */
+			shortDesc: string
+			/**
+			 * F​i​g​m​a​ ​i​s​ ​a​ ​c​o​l​l​a​b​o​r​a​t​i​v​e​ ​i​n​t​e​r​f​a​c​e​ ​d​e​s​i​g​n​ ​t​o​o​l​ ​t​h​a​t​ ​a​l​l​o​w​s​ ​t​e​a​m​s​ ​t​o​ ​c​r​e​a​t​e​,​ ​p​r​o​t​o​t​y​p​e​,​ ​a​n​d​ ​c​o​l​l​a​b​o​r​a​t​e​ ​o​n​ ​d​i​g​i​t​a​l​ ​d​e​s​i​g​n​s​ ​i​n​ ​r​e​a​l​-​t​i​m​e​.​ ​C​o​n​n​e​c​t​ ​t​o​ ​a​c​c​e​s​s​ ​f​i​l​e​s​,​ ​c​o​m​m​e​n​t​s​,​ ​p​r​o​j​e​c​t​s​,​ ​a​n​d​ ​t​e​a​m​ ​d​a​t​a​.
+			 */
+			longDesc: string
+			triggers: {
+				new_file_comment: {
+					/**
+					 * N​e​w​ ​F​i​l​e​ ​C​o​m​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​f​i​l​e
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​F​i​g​m​a​ ​d​e​s​i​g​n​ ​f​i​l​e​ ​f​o​r​ ​n​e​w​ ​c​o​m​m​e​n​t​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​t​e​a​m​ ​m​e​m​b​e​r​s​ ​a​d​d​ ​f​e​e​d​b​a​c​k​ ​o​r​ ​d​i​s​c​u​s​s​i​o​n​s
+					 */
+					longDesc: string
+					options: {
+						team: {
+							/**
+							 * T​e​a​m
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​F​i​g​m​a​ ​t​e​a​m​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​F​i​g​m​a​ ​t​e​a​m​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​a​n​d​ ​f​i​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							longDesc: string
+						}
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​p​r​o​j​e​c​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​t​e​a​m​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							longDesc: string
+						}
+						key: {
+							/**
+							 * F​i​l​e​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​f​i​l​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​c​o​m​m​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​F​i​g​m​a​ ​d​e​s​i​g​n​ ​f​i​l​e​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​a​c​t​i​v​i​t​y
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_file_version: {
+					/**
+					 * N​e​w​ ​F​i​l​e​ ​V​e​r​s​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​v​e​r​s​i​o​n​ ​o​f​ ​a​ ​f​i​l​e​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​F​i​g​m​a​ ​d​e​s​i​g​n​ ​f​i​l​e​ ​f​o​r​ ​v​e​r​s​i​o​n​ ​u​p​d​a​t​e​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​n​e​w​ ​v​e​r​s​i​o​n​s​ ​a​r​e​ ​s​a​v​e​d
+					 */
+					longDesc: string
+					options: {
+						team: {
+							/**
+							 * T​e​a​m
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​F​i​g​m​a​ ​t​e​a​m​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​F​i​g​m​a​ ​t​e​a​m​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​a​n​d​ ​f​i​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							longDesc: string
+						}
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​p​r​o​j​e​c​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​t​e​a​m​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							longDesc: string
+						}
+						key: {
+							/**
+							 * F​i​l​e​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​f​i​l​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​v​e​r​s​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​F​i​g​m​a​ ​d​e​s​i​g​n​ ​f​i​l​e​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​v​e​r​s​i​o​n​ ​a​c​t​i​v​i​t​y
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			actions: {
+				create_comment: {
+					/**
+					 * C​r​e​a​t​e​ ​C​o​m​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​t​o​ ​a​ ​F​i​g​m​a​ ​f​i​l​e
+					 */
+					shortDesc: string
+					/**
+					 * P​o​s​t​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​o​r​ ​r​e​p​l​y​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​m​m​e​n​t​ ​o​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​F​i​g​m​a​ ​d​e​s​i​g​n​ ​f​i​l​e
+					 */
+					longDesc: string
+					options: {
+						team: {
+							/**
+							 * T​e​a​m
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​F​i​g​m​a​ ​t​e​a​m​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​F​i​g​m​a​ ​t​e​a​m​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​a​n​d​ ​f​i​l​e
+							 */
+							longDesc: string
+						}
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​p​r​o​j​e​c​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​t​e​a​m​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​f​i​l​e
+							 */
+							longDesc: string
+						}
+						key: {
+							/**
+							 * F​i​l​e​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​c​o​m​m​e​n​t​ ​o​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​F​i​g​m​a​ ​d​e​s​i​g​n​ ​f​i​l​e​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​a​ ​c​o​m​m​e​n​t
+							 */
+							longDesc: string
+						}
+						message: {
+							/**
+							 * M​e​s​s​a​g​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​m​m​e​n​t​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​c​o​m​m​e​n​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​p​o​s​t​ ​o​n​ ​t​h​e​ ​F​i​g​m​a​ ​f​i​l​e
+							 */
+							longDesc: string
+						}
+						comment_id: {
+							/**
+							 * P​a​r​e​n​t​ ​C​o​m​m​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​c​o​m​m​e​n​t​ ​t​o​ ​r​e​p​l​y​ ​t​o​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​I​D​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​m​m​e​n​t​ ​t​o​ ​r​e​p​l​y​ ​t​o​,​ ​l​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​n​e​w​ ​t​o​p​-​l​e​v​e​l​ ​c​o​m​m​e​n​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_comments: {
+					/**
+					 * L​i​s​t​ ​C​o​m​m​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​l​l​ ​c​o​m​m​e​n​t​s​ ​o​n​ ​a​ ​F​i​g​m​a​ ​f​i​l​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​c​o​m​m​e​n​t​s​ ​a​n​d​ ​d​i​s​c​u​s​s​i​o​n​s​ ​o​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​F​i​g​m​a​ ​d​e​s​i​g​n​ ​f​i​l​e​,​ ​i​n​c​l​u​d​i​n​g​ ​u​s​e​r​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​n​d​ ​t​i​m​e​s​t​a​m​p​s
+					 */
+					longDesc: string
+					options: {
+						team: {
+							/**
+							 * T​e​a​m
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​F​i​g​m​a​ ​t​e​a​m​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​F​i​g​m​a​ ​t​e​a​m​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​a​n​d​ ​f​i​l​e
+							 */
+							longDesc: string
+						}
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​p​r​o​j​e​c​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​t​e​a​m​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​f​i​l​e
+							 */
+							longDesc: string
+						}
+						key: {
+							/**
+							 * F​i​l​e​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​l​i​s​t​ ​c​o​m​m​e​n​t​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​F​i​g​m​a​ ​d​e​s​i​g​n​ ​f​i​l​e​ ​w​h​o​s​e​ ​c​o​m​m​e​n​t​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_file_version_history: {
+					/**
+					 * L​i​s​t​ ​F​i​l​e​ ​V​e​r​s​i​o​n​ ​H​i​s​t​o​r​y
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​v​e​r​s​i​o​n​ ​h​i​s​t​o​r​y​ ​f​o​r​ ​a​ ​F​i​g​m​a​ ​f​i​l​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​t​h​e​ ​c​o​m​p​l​e​t​e​ ​v​e​r​s​i​o​n​ ​h​i​s​t​o​r​y​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​F​i​g​m​a​ ​d​e​s​i​g​n​ ​f​i​l​e​,​ ​i​n​c​l​u​d​i​n​g​ ​t​i​m​e​s​t​a​m​p​s​,​ ​l​a​b​e​l​s​,​ ​a​n​d​ ​u​s​e​r​ ​i​n​f​o​r​m​a​t​i​o​n
+					 */
+					longDesc: string
+					options: {
+						team: {
+							/**
+							 * T​e​a​m
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​F​i​g​m​a​ ​t​e​a​m​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​F​i​g​m​a​ ​t​e​a​m​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​a​n​d​ ​f​i​l​e
+							 */
+							longDesc: string
+						}
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​p​r​o​j​e​c​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​t​e​a​m​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​f​i​l​e
+							 */
+							longDesc: string
+						}
+						key: {
+							/**
+							 * F​i​l​e​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​g​e​t​ ​v​e​r​s​i​o​n​ ​h​i​s​t​o​r​y​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​F​i​g​m​a​ ​d​e​s​i​g​n​ ​f​i​l​e​ ​w​h​o​s​e​ ​v​e​r​s​i​o​n​ ​h​i​s​t​o​r​y​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+						next_page_url: {
+							/**
+							 * N​e​x​t​ ​P​a​g​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * U​R​L​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​t​o​ ​g​e​t​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​U​R​L​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​v​e​r​s​i​o​n​ ​h​i​s​t​o​r​y​ ​r​e​s​u​l​t​s​ ​f​o​r​ ​l​a​r​g​e​ ​f​i​l​e​s​ ​w​i​t​h​ ​m​a​n​y​ ​v​e​r​s​i​o​n​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_project_files: {
+					/**
+					 * L​i​s​t​ ​P​r​o​j​e​c​t​ ​F​i​l​e​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​l​l​ ​f​i​l​e​s​ ​i​n​ ​a​ ​F​i​g​m​a​ ​p​r​o​j​e​c​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​d​e​s​i​g​n​ ​f​i​l​e​s​ ​w​i​t​h​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​F​i​g​m​a​ ​p​r​o​j​e​c​t​,​ ​i​n​c​l​u​d​i​n​g​ ​f​i​l​e​ ​k​e​y​s​,​ ​n​a​m​e​s​,​ ​a​n​d​ ​m​e​t​a​d​a​t​a
+					 */
+					longDesc: string
+					options: {
+						team: {
+							/**
+							 * T​e​a​m
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​F​i​g​m​a​ ​t​e​a​m​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​p​r​o​j​e​c​t
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​F​i​g​m​a​ ​t​e​a​m​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​w​h​o​s​e​ ​f​i​l​e​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+						project: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​l​i​s​t​ ​f​i​l​e​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​F​i​g​m​a​ ​p​r​o​j​e​c​t​ ​w​h​o​s​e​ ​f​i​l​e​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_projects: {
+					/**
+					 * L​i​s​t​ ​P​r​o​j​e​c​t​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​l​l​ ​p​r​o​j​e​c​t​s​ ​i​n​ ​a​ ​F​i​g​m​a​ ​t​e​a​m
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​p​r​o​j​e​c​t​s​ ​w​i​t​h​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​F​i​g​m​a​ ​t​e​a​m​,​ ​i​n​c​l​u​d​i​n​g​ ​p​r​o​j​e​c​t​ ​n​a​m​e​s​ ​a​n​d​ ​I​D​s
+					 */
+					longDesc: string
+					options: {
+						team: {
+							/**
+							 * T​e​a​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​F​i​g​m​a​ ​t​e​a​m​ ​t​o​ ​l​i​s​t​ ​p​r​o​j​e​c​t​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​F​i​g​m​a​ ​t​e​a​m​ ​w​h​o​s​e​ ​p​r​o​j​e​c​t​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -124088,6 +124512,430 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * The unique identifier of the comment thread you want to monitor for new replies
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		Figma: {
+			/**
+			 * Figma
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Design and prototyping platform for teams
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Figma is a collaborative interface design tool that allows teams to create, prototype, and collaborate on digital designs in real-time. Connect to access files, comments, projects, and team data.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				new_file_comment: {
+					/**
+					 * New File Comment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new comment is added to a file
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors a specific Figma design file for new comments and triggers when team members add feedback or discussions
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						team: {
+							/**
+							 * Team
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Figma team to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Figma team that contains the project and file you want to monitor
+							 */
+							longDesc: () => LocalizedString
+						}
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project containing the file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the specific project within the team that contains the file to monitor
+							 */
+							longDesc: () => LocalizedString
+						}
+						key: {
+							/**
+							 * File Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The specific file to monitor for comments
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Figma design file that you want to monitor for new comment activity
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_file_version: {
+					/**
+					 * New File Version
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new version of a file is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors a specific Figma design file for version updates and triggers when new versions are saved
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						team: {
+							/**
+							 * Team
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Figma team to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Figma team that contains the project and file you want to monitor
+							 */
+							longDesc: () => LocalizedString
+						}
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project containing the file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the specific project within the team that contains the file to monitor
+							 */
+							longDesc: () => LocalizedString
+						}
+						key: {
+							/**
+							 * File Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The specific file to monitor for versions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Figma design file that you want to monitor for new version activity
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			actions: {
+				create_comment: {
+					/**
+					 * Create Comment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add a new comment to a Figma file
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Post a new comment or reply to an existing comment on a specific Figma design file
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						team: {
+							/**
+							 * Team
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Figma team containing the file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Figma team that contains the project and file
+							 */
+							longDesc: () => LocalizedString
+						}
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project containing the file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the specific project within the team that contains the file
+							 */
+							longDesc: () => LocalizedString
+						}
+						key: {
+							/**
+							 * File Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The file to comment on
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific Figma design file where you want to add a comment
+							 */
+							longDesc: () => LocalizedString
+						}
+						message: {
+							/**
+							 * Message
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The comment message content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the text content of the comment you want to post on the Figma file
+							 */
+							longDesc: () => LocalizedString
+						}
+						comment_id: {
+							/**
+							 * Parent Comment ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of comment to reply to (optional)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional ID of an existing comment to reply to, leave empty to create a new top-level comment
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_comments: {
+					/**
+					 * List Comments
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List all comments on a Figma file
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve all comments and discussions on a specific Figma design file, including user information and timestamps
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						team: {
+							/**
+							 * Team
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Figma team containing the file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Figma team that contains the project and file
+							 */
+							longDesc: () => LocalizedString
+						}
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project containing the file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the specific project within the team that contains the file
+							 */
+							longDesc: () => LocalizedString
+						}
+						key: {
+							/**
+							 * File Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The file to list comments from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific Figma design file whose comments you want to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_file_version_history: {
+					/**
+					 * List File Version History
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get version history for a Figma file
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve the complete version history of a specific Figma design file, including timestamps, labels, and user information
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						team: {
+							/**
+							 * Team
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Figma team containing the file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Figma team that contains the project and file
+							 */
+							longDesc: () => LocalizedString
+						}
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project containing the file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the specific project within the team that contains the file
+							 */
+							longDesc: () => LocalizedString
+						}
+						key: {
+							/**
+							 * File Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The file to get version history for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific Figma design file whose version history you want to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+						next_page_url: {
+							/**
+							 * Next Page URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * URL for pagination to get next page of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional URL to retrieve the next page of version history results for large files with many versions
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_project_files: {
+					/**
+					 * List Project Files
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List all files in a Figma project
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all design files within a specified Figma project, including file keys, names, and metadata
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						team: {
+							/**
+							 * Team
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Figma team containing the project
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Figma team that contains the project whose files you want to list
+							 */
+							longDesc: () => LocalizedString
+						}
+						project: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project to list files from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the specific Figma project whose files you want to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_projects: {
+					/**
+					 * List Projects
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List all projects in a Figma team
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all projects within a specified Figma team, including project names and IDs
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						team: {
+							/**
+							 * Team ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Figma team to list projects from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the ID of the Figma team whose projects you want to retrieve
 							 */
 							longDesc: () => LocalizedString
 						}
