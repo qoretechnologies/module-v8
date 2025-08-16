@@ -3,18 +3,14 @@ import {
   CreateFigmaComment,
   ListFigmaComments,
   ListFigmaFileVersionHistory,
-  ListFigmaProjectFiles,
-  ListFigmaProjects,
 } from '../apps/figma/actions';
-import { getFigmaProjectAllowedValues } from '../apps/figma/helpers/get-project-allowed-values';
-import { getFigmaProjectFilesAllowedValues } from '../apps/figma/helpers/get-project-files-allowed-values';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 
 configDotenv({ path: '.env' });
 Debugger.level = DebugLevels.Verbose;
 
 describe('Figma', () => {
-  const team = '1536880832699212833';
+  // const team = '1536880832699212833';
 
   const base_context = {
     conn_opts: {
@@ -66,69 +62,71 @@ describe('Figma', () => {
     base_context.conn_opts.token = responseData.access_token;
   });
 
-  let project: string | undefined;
-  let file: string | undefined;
-  describe('Should test allowed values', () => {
-    it('Should get project allowed values', async () => {
-      const allowed_values = await getFigmaProjectAllowedValues(base_context);
+  // let project: string | undefined = '432428571';
+  let file: string | undefined = 'HZB1dVi0wBGwJugC3chYL8';
 
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-      expect(allowed_values[0].value).toBeDefined();
+  // TODO: Enable when granted permissions for oauth2 app to access projects endpoints
+  // describe('Should test allowed values', () => {
+  //   it('Should get project allowed values', async () => {
+  //     const allowed_values = await getFigmaProjectAllowedValues(base_context);
 
-      project = allowed_values[0].value;
-    });
+  //     expect(allowed_values).toBeDefined();
+  //     expect(allowed_values.length).toBeGreaterThan(0);
+  //     expect(allowed_values[0].value).toBeDefined();
 
-    it('Should get project files allowed values', async () => {
-      if (!project) throw new Error('Project is not defined');
+  //     project = allowed_values[0].value;
+  //   });
 
-      const allowed_values = await getFigmaProjectFilesAllowedValues({
-        opts: { project },
-        ...base_context,
-      });
+  //   it('Should get project files allowed values', async () => {
+  //     if (!project) throw new Error('Project is not defined');
 
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-      expect(allowed_values[0].value).toBeDefined();
+  //     const allowed_values = await getFigmaProjectFilesAllowedValues({
+  //       opts: { project },
+  //       ...base_context,
+  //     });
 
-      file = allowed_values[0].value;
-    });
-  });
+  //     expect(allowed_values).toBeDefined();
+  //     expect(allowed_values.length).toBeGreaterThan(0);
+  //     expect(allowed_values[0].value).toBeDefined();
+
+  //     file = allowed_values[0].value;
+  //   });
+  // });
 
   describe('Should test actions', () => {
-    it('Should list projects', async () => {
-      const action = ListFigmaProjects;
+    // it('Should list projects', async () => {
+    //   const action = ListFigmaProjects;
 
-      if (!('api_function' in action)) throw new Error('api_function not found in action');
+    //   if (!('api_function' in action)) throw new Error('api_function not found in action');
 
-      const result = await action.api_function(
-        {
-          team,
-        },
-        undefined,
-        base_context
-      );
+    //   const result = await action.api_function(
+    //     {
+    //       team,
+    //     },
+    //     undefined,
+    //     base_context
+    //   );
 
-      expect(result).toBeDefined();
-      expect(result.length).toBeGreaterThan(0);
-    });
+    //   expect(result).toBeDefined();
+    //   expect(result.length).toBeGreaterThan(0);
+    // });
 
-    it('Should list project files', async () => {
-      const action = ListFigmaProjectFiles;
+    // it('Should list project files', async () => {
+    //   const action = ListFigmaProjectFiles;
 
-      if (!('api_function' in action)) throw new Error('api_function not found in action');
+    //   if (!('api_function' in action)) throw new Error('api_function not found in action');
 
-      const result = await action.api_function(
-        {
-          project,
-        },
-        undefined,
-        base_context
-      );
+    //   const result = await action.api_function(
+    //     {
+    //       project,
+    //     },
+    //     undefined,
+    //     base_context
+    //   );
 
-      expect(result).toBeDefined();
-      expect(result.length).toBeGreaterThan(0);
-    });
+    //   expect(result).toBeDefined();
+    //   expect(result.length).toBeGreaterThan(0);
+    // });
 
     it('Should list file version history', async () => {
       const action = ListFigmaFileVersionHistory;
@@ -160,6 +158,8 @@ describe('Figma', () => {
         undefined,
         base_context
       );
+
+      console.dir(result, { depth: null });
 
       expect(result).toBeDefined();
       expect(result.id).toBeDefined();

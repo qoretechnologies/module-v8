@@ -57,7 +57,6 @@ const createComment = QoreAppCreator.createLocalizedAction<typeof options>({
       const response = await figmaApiClient({
         path: `files/${key}/comments`,
         method: 'POST',
-        object: 'comments',
         token,
         body: {
           message,
