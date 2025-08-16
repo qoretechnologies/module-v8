@@ -289,6 +289,22 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     private eventListenerThread(Socket event_socket) {
+        hash<auto> einfo;
+        on_exit {
+            remove es_exit;
+            remove es_tid;
+            remove es_sem_read;
+            remove es_sem_write;
+            remove es_sem_info;
+
+            es_cnt.dec();
+            if (einfo) {
+                info("Stopped event thread for PID %d for @%s/%s %y", proc.id(), einfo.app, einfo.action, einfo.key);
+            } else {
+                info("Stopped event thread for PID %d", proc.id());
+            }
+        }
+
         if (!event) {
             if (es_exit) {
                 # event already released
@@ -299,17 +315,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             return;
         }
         info("Started event thread for PID %d for @%s/%s %y", proc.id(), event.app, event.action, event.key);
-        hash<auto> einfo = event{"app", "action", "key"};
-        on_exit {
-            remove es_exit;
-            remove es_tid;
-            remove es_sem_read;
-            remove es_sem_write;
-            remove es_sem_info;
-
-            es_cnt.dec();
-            info("Stopped event thread for PID %d for @%s/%s %y", proc.id(), einfo.app, einfo.action, einfo.key);
-        }
+        einfo = event{"app", "action", "key"};
 
         on_error error("Error in event listener thread for PID %d: %s", proc.id(), get_exception_string($1));
         softlist<hash<SocketPollInfo>> poll_list = (es_sem_info, <SocketPollInfo>{
