@@ -67,6 +67,7 @@ import { Debugger, DebugLevels } from '../utils/Debugger';
 import huggingFace from '../apps/hugging-face';
 import linkedin from '../apps/linkedin';
 import canva from '../apps/canva';
+import linkedinOrganizations from '../apps/linkedin-organizations';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -112,6 +113,7 @@ const NEW_APPS = {
   jira,
   klaviyo,
   linkedin,
+  linkedinOrganizations,
   magento,
   mailchimp,
   messenger360,

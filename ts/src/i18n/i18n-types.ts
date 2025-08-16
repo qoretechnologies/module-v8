@@ -62052,6 +62052,200 @@ type RootTranslation = {
 				}
 			}
 		}
+		LinkedInOrganizations: {
+			/**
+			 * L​i​n​k​e​d​I​n​ ​O​r​g​a​n​i​z​a​t​i​o​n​s
+			 */
+			displayName: string
+			/**
+			 * M​a​n​a​g​e​ ​a​n​d​ ​a​n​a​l​y​z​e​ ​L​i​n​k​e​d​I​n​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​c​o​n​t​e​n​t​ ​a​n​d​ ​s​t​a​t​i​s​t​i​c​s
+			 */
+			shortDesc: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​L​i​n​k​e​d​I​n​ ​O​r​g​a​n​i​z​a​t​i​o​n​s​ ​t​o​ ​c​r​e​a​t​e​,​ ​m​a​n​a​g​e​,​ ​a​n​d​ ​m​o​n​i​t​o​r​ ​p​o​s​t​s​,​ ​a​n​a​l​y​z​e​ ​f​o​l​l​o​w​e​r​ ​e​n​g​a​g​e​m​e​n​t​,​ ​t​r​a​c​k​ ​p​a​g​e​ ​p​e​r​f​o​r​m​a​n​c​e​,​ ​a​n​d​ ​g​a​t​h​e​r​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​s​t​a​t​i​s​t​i​c​s​ ​a​b​o​u​t​ ​y​o​u​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​'​s​ ​L​i​n​k​e​d​I​n​ ​p​r​e​s​e​n​c​e​.
+			 */
+			longDesc: string
+			LinkedInOrganizations: {
+				triggers: {
+					new_post: {
+						options: {
+							organization: {
+								/**
+								 * O​r​g​a​n​i​z​a​t​i​o​n
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​L​i​n​k​e​d​I​n​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​p​o​s​t​s
+								 */
+								shortDesc: string
+								/**
+								 * S​e​l​e​c​t​ ​t​h​e​ ​L​i​n​k​e​d​I​n​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​p​a​g​e​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​p​o​s​t​s​.​ ​Y​o​u​ ​m​u​s​t​ ​h​a​v​e​ ​a​c​c​e​s​s​ ​t​o​ ​m​a​n​a​g​e​ ​t​h​i​s​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​p​a​g​e​.
+								 */
+								longDesc: string
+							}
+						}
+					}
+				}
+				actions: {
+					list_organization_posts: {
+						options: {
+							organization: {
+								/**
+								 * O​r​g​a​n​i​z​a​t​i​o​n
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​L​i​n​k​e​d​I​n​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​t​o​ ​l​i​s​t​ ​p​o​s​t​s​ ​f​r​o​m
+								 */
+								shortDesc: string
+								/**
+								 * S​e​l​e​c​t​ ​t​h​e​ ​L​i​n​k​e​d​I​n​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​p​a​g​e​ ​f​r​o​m​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​p​o​s​t​s​.​ ​Y​o​u​ ​m​u​s​t​ ​h​a​v​e​ ​a​c​c​e​s​s​ ​t​o​ ​m​a​n​a​g​e​ ​t​h​i​s​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​p​a​g​e​.
+								 */
+								longDesc: string
+							}
+							count: {
+								/**
+								 * P​o​s​t​ ​C​o​u​n​t
+								 */
+								displayName: string
+								/**
+								 * N​u​m​b​e​r​ ​o​f​ ​p​o​s​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+								 */
+								shortDesc: string
+								/**
+								 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​p​o​s​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​r​o​m​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​p​a​g​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​ ​p​o​s​t​s​.
+								 */
+								longDesc: string
+							}
+							cursor: {
+								/**
+								 * P​a​g​i​n​a​t​i​o​n​ ​C​u​r​s​o​r
+								 */
+								displayName: string
+								/**
+								 * C​u​r​s​o​r​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​t​o​ ​g​e​t​ ​t​h​e​ ​n​e​x​t​ ​s​e​t​ ​o​f​ ​p​o​s​t​s
+								 */
+								shortDesc: string
+								/**
+								 * U​s​e​ ​t​h​i​s​ ​c​u​r​s​o​r​ ​v​a​l​u​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​p​o​s​t​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​g​e​t​ ​t​h​e​ ​f​i​r​s​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​.
+								 */
+								longDesc: string
+							}
+						}
+					}
+					get_follower_statistics: {
+						options: {
+							organization: {
+								/**
+								 * O​r​g​a​n​i​z​a​t​i​o​n
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​L​i​n​k​e​d​I​n​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​t​o​ ​g​e​t​ ​f​o​l​l​o​w​e​r​ ​s​t​a​t​i​s​t​i​c​s​ ​f​o​r
+								 */
+								shortDesc: string
+								/**
+								 * S​e​l​e​c​t​ ​t​h​e​ ​L​i​n​k​e​d​I​n​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​p​a​g​e​ ​f​o​r​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​o​l​l​o​w​e​r​ ​d​e​m​o​g​r​a​p​h​i​c​s​ ​a​n​d​ ​s​t​a​t​i​s​t​i​c​s​.
+								 */
+								longDesc: string
+							}
+							dimensionType: {
+								/**
+								 * D​i​m​e​n​s​i​o​n​ ​T​y​p​e
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​t​y​p​e​ ​o​f​ ​d​e​m​o​g​r​a​p​h​i​c​ ​d​i​m​e​n​s​i​o​n​ ​t​o​ ​a​n​a​l​y​z​e
+								 */
+								shortDesc: string
+								/**
+								 * C​h​o​o​s​e​ ​t​h​e​ ​d​e​m​o​g​r​a​p​h​i​c​ ​d​i​m​e​n​s​i​o​n​ ​t​o​ ​a​n​a​l​y​z​e​ ​f​o​l​l​o​w​e​r​ ​s​t​a​t​i​s​t​i​c​s​ ​b​y​,​ ​s​u​c​h​ ​a​s​ ​j​o​b​ ​f​u​n​c​t​i​o​n​,​ ​i​n​d​u​s​t​r​y​,​ ​s​e​n​i​o​r​i​t​y​ ​l​e​v​e​l​,​ ​g​e​o​g​r​a​p​h​i​c​ ​r​e​g​i​o​n​,​ ​c​o​m​p​a​n​y​ ​s​i​z​e​,​ ​o​r​ ​c​o​u​n​t​r​y​.
+								 */
+								longDesc: string
+							}
+							timeRange: {
+								/**
+								 * T​i​m​e​ ​R​a​n​g​e
+								 */
+								displayName: string
+								/**
+								 * D​a​t​e​ ​r​a​n​g​e​ ​f​o​r​ ​t​h​e​ ​f​o​l​l​o​w​e​r​ ​s​t​a​t​i​s​t​i​c​s
+								 */
+								shortDesc: string
+								/**
+								 * S​p​e​c​i​f​y​ ​t​h​e​ ​s​t​a​r​t​ ​a​n​d​ ​e​n​d​ ​d​a​t​e​s​ ​f​o​r​ ​a​n​a​l​y​z​i​n​g​ ​f​o​l​l​o​w​e​r​ ​s​t​a​t​i​s​t​i​c​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​g​e​t​ ​l​i​f​e​t​i​m​e​ ​s​t​a​t​i​s​t​i​c​s​.
+								 */
+								longDesc: string
+								type: {
+									fields: {
+										start: {
+											/**
+											 * S​t​a​r​t​ ​D​a​t​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​s​t​a​r​t​ ​d​a​t​e​ ​f​o​r​ ​t​h​e​ ​s​t​a​t​i​s​t​i​c​s​ ​p​e​r​i​o​d
+											 */
+											shortDesc: string
+											/**
+											 * E​n​t​e​r​ ​t​h​e​ ​s​t​a​r​t​ ​d​a​t​e​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​o​ ​b​e​g​i​n​ ​a​n​a​l​y​z​i​n​g​ ​f​o​l​l​o​w​e​r​ ​s​t​a​t​i​s​t​i​c​s​.
+											 */
+											longDesc: string
+										}
+										end: {
+											/**
+											 * E​n​d​ ​D​a​t​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​e​n​d​ ​d​a​t​e​ ​f​o​r​ ​t​h​e​ ​s​t​a​t​i​s​t​i​c​s​ ​p​e​r​i​o​d
+											 */
+											shortDesc: string
+											/**
+											 * E​n​t​e​r​ ​t​h​e​ ​e​n​d​ ​d​a​t​e​ ​u​n​t​i​l​ ​w​h​i​c​h​ ​t​o​ ​a​n​a​l​y​z​e​ ​f​o​l​l​o​w​e​r​ ​s​t​a​t​i​s​t​i​c​s​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+					}
+					get_post: {
+						options: {
+							organization: {
+								/**
+								 * O​r​g​a​n​i​z​a​t​i​o​n
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​L​i​n​k​e​d​I​n​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​t​h​a​t​ ​o​w​n​s​ ​t​h​e​ ​p​o​s​t
+								 */
+								shortDesc: string
+								/**
+								 * S​e​l​e​c​t​ ​t​h​e​ ​L​i​n​k​e​d​I​n​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​p​a​g​e​ ​t​h​a​t​ ​o​w​n​s​ ​t​h​e​ ​p​o​s​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​T​h​i​s​ ​f​i​e​l​d​ ​i​s​ ​p​r​e​s​e​l​e​c​t​e​d​ ​a​n​d​ ​h​e​l​p​s​ ​f​i​l​t​e​r​ ​a​v​a​i​l​a​b​l​e​ ​p​o​s​t​s​.
+								 */
+								longDesc: string
+							}
+							post: {
+								/**
+								 * P​o​s​t
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​L​i​n​k​e​d​I​n​ ​p​o​s​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+								 */
+								shortDesc: string
+								/**
+								 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​L​i​n​k​e​d​I​n​ ​p​o​s​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​.​ ​T​h​e​ ​l​i​s​t​ ​s​h​o​w​s​ ​p​o​s​t​s​ ​f​r​o​m​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​o​r​g​a​n​i​z​a​t​i​o​n​.
+								 */
+								longDesc: string
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -124090,6 +124284,200 @@ export type TranslationFunctions = {
 							 * The unique identifier of the comment thread you want to monitor for new replies
 							 */
 							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		LinkedInOrganizations: {
+			/**
+			 * LinkedIn Organizations
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Manage and analyze LinkedIn organization content and statistics
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Connect to LinkedIn Organizations to create, manage, and monitor posts, analyze follower engagement, track page performance, and gather comprehensive statistics about your organization's LinkedIn presence.
+			 */
+			longDesc: () => LocalizedString
+			LinkedInOrganizations: {
+				triggers: {
+					new_post: {
+						options: {
+							organization: {
+								/**
+								 * Organization
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The LinkedIn organization to monitor for new posts
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Select the LinkedIn organization page that you want to monitor for new posts. You must have access to manage this organization page.
+								 */
+								longDesc: () => LocalizedString
+							}
+						}
+					}
+				}
+				actions: {
+					list_organization_posts: {
+						options: {
+							organization: {
+								/**
+								 * Organization
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The LinkedIn organization to list posts from
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Select the LinkedIn organization page from which you want to retrieve posts. You must have access to manage this organization page.
+								 */
+								longDesc: () => LocalizedString
+							}
+							count: {
+								/**
+								 * Post Count
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Number of posts to retrieve
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Specify the maximum number of posts to retrieve from the organization page. Default is 10 posts.
+								 */
+								longDesc: () => LocalizedString
+							}
+							cursor: {
+								/**
+								 * Pagination Cursor
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Cursor for pagination to get the next set of posts
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Use this cursor value to retrieve the next page of posts. Leave empty to get the first page of results.
+								 */
+								longDesc: () => LocalizedString
+							}
+						}
+					}
+					get_follower_statistics: {
+						options: {
+							organization: {
+								/**
+								 * Organization
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The LinkedIn organization to get follower statistics for
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Select the LinkedIn organization page for which you want to retrieve follower demographics and statistics.
+								 */
+								longDesc: () => LocalizedString
+							}
+							dimensionType: {
+								/**
+								 * Dimension Type
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The type of demographic dimension to analyze
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Choose the demographic dimension to analyze follower statistics by, such as job function, industry, seniority level, geographic region, company size, or country.
+								 */
+								longDesc: () => LocalizedString
+							}
+							timeRange: {
+								/**
+								 * Time Range
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Date range for the follower statistics
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Specify the start and end dates for analyzing follower statistics. Leave empty to get lifetime statistics.
+								 */
+								longDesc: () => LocalizedString
+								type: {
+									fields: {
+										start: {
+											/**
+											 * Start Date
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The start date for the statistics period
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Enter the start date from which to begin analyzing follower statistics.
+											 */
+											longDesc: () => LocalizedString
+										}
+										end: {
+											/**
+											 * End Date
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The end date for the statistics period
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Enter the end date until which to analyze follower statistics.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+					}
+					get_post: {
+						options: {
+							organization: {
+								/**
+								 * Organization
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The LinkedIn organization that owns the post
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Select the LinkedIn organization page that owns the post you want to retrieve. This field is preselected and helps filter available posts.
+								 */
+								longDesc: () => LocalizedString
+							}
+							post: {
+								/**
+								 * Post
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The specific LinkedIn post to retrieve
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * Select the specific LinkedIn post you want to retrieve detailed information about. The list shows posts from the selected organization.
+								 */
+								longDesc: () => LocalizedString
+							}
 						}
 					}
 				}

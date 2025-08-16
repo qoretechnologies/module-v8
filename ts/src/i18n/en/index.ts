@@ -55,6 +55,7 @@ import HuggingFace from './apps/HuggingFace';
 import YouTube from './apps/YouTube';
 import LinkedIn from './apps/LinkedIn';
 import Canva from './apps/Canva';
+import LinkedInOrganizations from './apps/LinkedInOrganizations';
 
 const en = {
   common: {},
@@ -209,6 +210,7 @@ const en = {
     HuggingFace,
     YouTube,
     Canva,
+    LinkedInOrganizations,
   },
 } satisfies BaseTranslation;
 
