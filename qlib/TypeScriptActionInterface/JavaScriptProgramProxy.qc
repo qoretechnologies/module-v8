@@ -289,6 +289,15 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     private eventListenerThread(Socket event_socket) {
+        if (!event) {
+            if (es_exit) {
+                # event already released
+                info("Cannot start event listener thread: no event source registered");
+            } else {
+                error("Failed to start event listener thread: no event source registered");
+            }
+            return;
+        }
         info("Started event thread for PID %d for @%s/%s %y", proc.id(), event.app, event.action, event.key);
         hash<auto> einfo = event{"app", "action", "key"};
         on_exit {
