@@ -60580,7 +60580,7 @@ type RootTranslation = {
 							 */
 							shortDesc: string
 							/**
-							 * S​e​a​r​c​h​ ​t​e​r​m​s​ ​o​r​ ​k​e​y​w​o​r​d​s​ ​t​o​ ​f​i​n​d​ ​v​i​d​e​o​s​ ​o​n​ ​Y​o​u​T​u​b​e
+							 * Y​o​u​r​ ​r​e​q​u​e​s​t​ ​c​a​n​ ​a​l​s​o​ ​u​s​e​ ​t​h​e​ ​B​o​o​l​e​a​n​ ​N​O​T​ ​(​-​)​ ​a​n​d​ ​O​R​ ​(​|​)​ ​o​p​e​r​a​t​o​r​s​ ​t​o​ ​e​x​c​l​u​d​e​ ​v​i​d​e​o​s​ ​o​r​ ​t​o​ ​f​i​n​d​ ​v​i​d​e​o​s​ ​t​h​a​t​ ​a​r​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​o​n​e​ ​o​f​ ​s​e​v​e​r​a​l​ ​s​e​a​r​c​h​ ​t​e​r​m​s​.​ ​F​o​r​ ​e​x​a​m​p​l​e​,​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​v​i​d​e​o​s​ ​m​a​t​c​h​i​n​g​ ​e​i​t​h​e​r​ ​"​b​o​a​t​i​n​g​"​ ​o​r​ ​"​s​a​i​l​i​n​g​"​,​ ​s​e​t​ ​t​h​e​ ​q​ ​p​a​r​a​m​e​t​e​r​ ​v​a​l​u​e​ ​t​o​ ​b​o​a​t​i​n​g​|​s​a​i​l​i​n​g​.​ ​S​i​m​i​l​a​r​l​y​,​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​v​i​d​e​o​s​ ​m​a​t​c​h​i​n​g​ ​e​i​t​h​e​r​ ​"​b​o​a​t​i​n​g​"​ ​o​r​ ​"​s​a​i​l​i​n​g​"​ ​b​u​t​ ​n​o​t​ ​"​f​i​s​h​i​n​g​"​,​ ​s​e​t​ ​t​h​e​ ​q​ ​p​a​r​a​m​e​t​e​r​ ​v​a​l​u​e​ ​t​o​ ​b​o​a​t​i​n​g​|​s​a​i​l​i​n​g​ ​-​f​i​s​h​i​n​g​.
 							 */
 							longDesc: string
 						}
@@ -61458,7 +61458,7 @@ type RootTranslation = {
 							 */
 							shortDesc: string
 							/**
-							 * E​n​t​e​r​ ​t​h​e​ ​s​e​a​r​c​h​ ​q​u​e​r​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​m​a​t​c​h​i​n​g​ ​v​i​d​e​o​s​ ​o​n​ ​Y​o​u​T​u​b​e
+							 * Y​o​u​r​ ​r​e​q​u​e​s​t​ ​c​a​n​ ​a​l​s​o​ ​u​s​e​ ​t​h​e​ ​B​o​o​l​e​a​n​ ​N​O​T​ ​(​-​)​ ​a​n​d​ ​O​R​ ​(​|​)​ ​o​p​e​r​a​t​o​r​s​ ​t​o​ ​e​x​c​l​u​d​e​ ​v​i​d​e​o​s​ ​o​r​ ​t​o​ ​f​i​n​d​ ​v​i​d​e​o​s​ ​t​h​a​t​ ​a​r​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​o​n​e​ ​o​f​ ​s​e​v​e​r​a​l​ ​s​e​a​r​c​h​ ​t​e​r​m​s​.​ ​F​o​r​ ​e​x​a​m​p​l​e​,​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​v​i​d​e​o​s​ ​m​a​t​c​h​i​n​g​ ​e​i​t​h​e​r​ ​"​b​o​a​t​i​n​g​"​ ​o​r​ ​"​s​a​i​l​i​n​g​"​,​ ​s​e​t​ ​t​h​e​ ​q​ ​p​a​r​a​m​e​t​e​r​ ​v​a​l​u​e​ ​t​o​ ​b​o​a​t​i​n​g​|​s​a​i​l​i​n​g​.​ ​S​i​m​i​l​a​r​l​y​,​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​v​i​d​e​o​s​ ​m​a​t​c​h​i​n​g​ ​e​i​t​h​e​r​ ​"​b​o​a​t​i​n​g​"​ ​o​r​ ​"​s​a​i​l​i​n​g​"​ ​b​u​t​ ​n​o​t​ ​"​f​i​s​h​i​n​g​"​,​ ​s​e​t​ ​t​h​e​ ​q​ ​p​a​r​a​m​e​t​e​r​ ​v​a​l​u​e​ ​t​o​ ​b​o​a​t​i​n​g​|​s​a​i​l​i​n​g​ ​-​f​i​s​h​i​n​g​.
 							 */
 							longDesc: string
 						}
@@ -123345,7 +123345,7 @@ export type TranslationFunctions = {
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * Search terms or keywords to find videos on YouTube
+							 * Your request can also use the Boolean NOT (-) and OR (|) operators to exclude videos or to find videos that are associated with one of several search terms. For example, to search for videos matching either "boating" or "sailing", set the q parameter value to boating|sailing. Similarly, to search for videos matching either "boating" or "sailing" but not "fishing", set the q parameter value to boating|sailing -fishing.
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -124223,7 +124223,7 @@ export type TranslationFunctions = {
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * Enter the search query to monitor for new matching videos on YouTube
+							 * Your request can also use the Boolean NOT (-) and OR (|) operators to exclude videos or to find videos that are associated with one of several search terms. For example, to search for videos matching either "boating" or "sailing", set the q parameter value to boating|sailing. Similarly, to search for videos matching either "boating" or "sailing" but not "fishing", set the q parameter value to boating|sailing -fishing.
 							 */
 							longDesc: () => LocalizedString
 						}

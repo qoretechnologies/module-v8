@@ -108,7 +108,8 @@ const YouTubeAppEn = {
         q: {
           displayName: 'Search Query',
           shortDesc: 'Keywords to search for',
-          longDesc: 'Search terms or keywords to find videos on YouTube',
+          longDesc:
+            'Your request can also use the Boolean NOT (-) and OR (|) operators to exclude videos or to find videos that are associated with one of several search terms. For example, to search for videos matching either "boating" or "sailing", set the q parameter value to boating|sailing. Similarly, to search for videos matching either "boating" or "sailing" but not "fishing", set the q parameter value to boating|sailing -fishing.',
         },
         order: {
           displayName: 'Sort Order',
@@ -464,7 +465,8 @@ const YouTubeAppEn = {
         query: {
           displayName: 'Search Query',
           shortDesc: 'The search terms to monitor',
-          longDesc: 'Enter the search query to monitor for new matching videos on YouTube',
+          longDesc:
+            'Your request can also use the Boolean NOT (-) and OR (|) operators to exclude videos or to find videos that are associated with one of several search terms. For example, to search for videos matching either "boating" or "sailing", set the q parameter value to boating|sailing. Similarly, to search for videos matching either "boating" or "sailing" but not "fishing", set the q parameter value to boating|sailing -fishing.',
         },
       },
     },
