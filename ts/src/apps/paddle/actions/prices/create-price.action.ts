@@ -162,7 +162,7 @@ const createPrice = QoreAppCreator.createLocalizedAction<typeof options>({
     try {
       const client = createPaddleClient(token, instance_type);
 
-      const product = await client.prices.create({
+      const price = await client.prices.create({
         description,
         productId: product_id,
         unitPrice: unit_price,
@@ -176,7 +176,7 @@ const createPrice = QoreAppCreator.createLocalizedAction<typeof options>({
         ...(custom_data && { customData: custom_data }),
       });
 
-      return product;
+      return price;
     } catch (error) {
       throw new PaddleError(`Failed to create a price: ${error.message || error}`);
     }
@@ -184,8 +184,8 @@ const createPrice = QoreAppCreator.createLocalizedAction<typeof options>({
   response_type: {
     type: 'hash',
     fields: {
-      id: { type: 'integer' },
-      productId: { type: 'integer' },
+      id: { type: 'string' },
+      productId: { type: 'string' },
       type: { type: 'string' },
       description: { type: 'string' },
       name: { type: 'string' },
@@ -260,7 +260,7 @@ const createPrice = QoreAppCreator.createLocalizedAction<typeof options>({
         type: {
           type: 'hash',
           fields: {
-            id: { type: 'integer' },
+            id: { type: 'string' },
             name: { type: 'string' },
             taxCategory: { type: 'string' },
             type: { type: 'string' },

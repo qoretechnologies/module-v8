@@ -100,7 +100,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         reginfo = getAsyncValue(webhook_register, getCallContextInfo(event_opts), wf_info.url);
         js_webhook_registered = True;
         debug("Webhook for data provider %y registered with URL %y (opts: %y, reginfo: %y)", name, wf_info.url,
-            event_opts, reginfo);
+            LoggerUtil::getArgSummary(event_opts), LoggerUtil::getArgSummary(reginfo));
     }
 
     #! Called to stop generating events
@@ -115,7 +115,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
             js_webhook_registered = False;
             try {
                 debug("Deregistering webhook for data provider %y on URL %y (opts: %y, reginfo: %y)", name,
-                    wf_info.url, event_opts, reginfo);
+                    wf_info.url, LoggerUtil::getArgSummary(event_opts), LoggerUtil::getArgSummary(reginfo));
                 getAsyncValue(webhook_deregister, getCallContextInfo(event_opts), wf_info.url, reginfo);
             } catch (hash<ExceptionInfo> ex) {
                 error("WEBHOOK-DEREGISTRATION-ERROR", "Error in data provider %y deregistering webhook %y: %s", name,

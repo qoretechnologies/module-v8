@@ -701,18 +701,19 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         }
 
         hash<auto> req0;
-        debug("Action options for action %y: %y reqmap: %y", getName(), req, reqmap{request_key});
+        debug("Action options for action %y: %y reqmap: %y", getName(), LoggerUtil::getArgSummary(req),
+            reqmap{request_key});
         map fixOptimizedValue(\req0, $1.value, $1.key, remove req{$1.key}), reqmap{request_key}.pairIterator(),
             req.hasKey($1.key);
         map req0{$1.key} = $1.value, req.pairIterator(), !req0.hasKey($1.key);
         req = req0;
-        debug("REST request for action %y: %y", getName(), req);
+        debug("REST request for action %y: %y", getName(), LoggerUtil::getArgSummary(req));
 
         *hash<DataContextInfo> ctxinfo;
         if (request_data_converter) {
             ctxinfo = getCallContextInfo();
             req = getAsyncValue(request_data_converter, req, ctxinfo);
-            debug("REST request for action after conversion %y: %y", getName(), req);
+            debug("REST request for action after conversion %y: %y", getName(), LoggerUtil::getArgSummary(req));
         }
 
         auto rv = prov.doRequest(req, request_options +
@@ -726,7 +727,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                 ctxinfo = getCallContextInfo();
             }
             rv = getAsyncValue(response_data_converter, rv, ctxinfo);
-            debug("REST response for action after conversion %y: %y", getName(), rv);
+            debug("REST response for action after conversion %y: %y", getName(), LoggerUtil::getArgSummary(rv));
         }
         return res_only_body ? rv.body : rv;
     }

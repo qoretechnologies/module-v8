@@ -196,8 +196,8 @@ const updatePrice = QoreAppCreator.createLocalizedAction<typeof options>({
   response_type: {
     type: 'hash',
     fields: {
-      id: { type: 'integer' },
-      productId: { type: 'integer' },
+      id: { type: 'string' },
+      productId: { type: 'string' },
       type: { type: 'string' },
       description: { type: 'string' },
       name: { type: 'string' },
@@ -272,7 +272,7 @@ const updatePrice = QoreAppCreator.createLocalizedAction<typeof options>({
         type: {
           type: 'hash',
           fields: {
-            id: { type: 'integer' },
+            id: { type: 'string' },
             name: { type: 'string' },
             taxCategory: { type: 'string' },
             type: { type: 'string' },

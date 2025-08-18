@@ -12,6 +12,7 @@ import {
   UpdateYouTubeVideoDetails,
 } from '../apps/youtube/actions';
 import addVideoToPlaylist from '../apps/youtube/actions/add-video-to-playlist-action';
+import { createYouTubeClient } from '../apps/youtube/helpers/constants';
 import { getYouTubeCategoryAllowedValues } from '../apps/youtube/helpers/get-category-allowed-values';
 import { getYouTubeUserPlaylistsAllowedValues } from '../apps/youtube/helpers/get-playlist-allowed-values';
 import { getYouTubeUserChannelsAllowedValues } from '../apps/youtube/helpers/get-user-channel-allowed-values';
@@ -177,6 +178,7 @@ describe('Google Docs', () => {
       expect(Array.isArray(result)).toBeTruthy();
     });
 
+    let createdPlaylist: string | undefined;
     it('Should update video details', async () => {
       const action = UpdateYouTubeVideoDetails;
 
@@ -193,6 +195,8 @@ describe('Google Docs', () => {
 
       expect(response).toBeDefined();
       expect(response.id).toBeDefined();
+
+      createdPlaylist = response.id;
     });
 
     it('Should create a playlist', async () => {
@@ -393,6 +397,16 @@ describe('Google Docs', () => {
 
         expect(result).toBeDefined();
         expect(result.id).toBeDefined();
+      });
+    });
+
+    describe('Should clean up', () => {
+      it('Should remove created playlist', async () => {
+        const client = createYouTubeClient(base_context.conn_opts.token);
+
+        if (!createdPlaylist) throw new Error('No playlist created');
+
+        await client.playlists.delete({ id: createdPlaylist });
       });
     });
   });
