@@ -422,6 +422,11 @@ const YouTubeAppEn = {
       longDesc:
         "Monitors a specific YouTube channel for new video uploads and triggers when a new video is detected in the channel's uploads playlist.",
       options: {
+        channel_url: {
+          displayName: 'Channel URL',
+          shortDesc: 'The YouTube channel URL to monitor for new videos',
+          longDesc: 'Enter the full URL of the YouTube channel to monitor for new video uploads',
+        },
         channel: {
           displayName: 'Channel',
           shortDesc: 'The YouTube channel to monitor',
@@ -435,6 +440,11 @@ const YouTubeAppEn = {
       longDesc:
         'Monitors for new live streams that are currently broadcasting. Can monitor all live streams or filter by a specific channel.',
       options: {
+        channel_url: {
+          displayName: 'Channel URL',
+          shortDesc: 'The YouTube channel URL to monitor for livestreams',
+          longDesc: 'Enter the full URL of the YouTube channel to monitor for livestreams',
+        },
         channel: {
           displayName: 'Channel',
           shortDesc: 'The YouTube channel to monitor for livestreams',

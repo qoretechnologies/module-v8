@@ -1,12 +1,14 @@
+import { youtube_v3 } from '@googleapis/youtube';
 import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
+import { omit } from 'lodash';
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
 import { YOUTUBE_APP_NAME, YouTubeError } from '../constants';
 import { createYouTubeClient } from '../helpers/constants';
+import { extractYouTubeChannelId } from '../helpers/extract-channel-id-from-url';
 import { getYouTubeUserChannelsAllowedValues } from '../helpers/get-user-channel-allowed-values';
 import { getYouTubeUserSubscriptionsAllowedValues } from '../helpers/get-user-subscriptions-allowed-values';
-import { extractYouTubeChannelId } from '../helpers/extract-channel-id-from-url';
 
 const YouTubeNewChannelVideoTrigger = QoreAppCreator.createLocalizedTrigger({
   app: YOUTUBE_APP_NAME,
@@ -101,15 +103,15 @@ const YouTubeNewChannelVideoTrigger = QoreAppCreator.createLocalizedTrigger({
       uploadsPlaylistId,
     });
 
-    return videos?.length ? videos[0] : null;
+    return videos?.length
+      ? { ...omit(videos[0], ['kind', 'etag', 'id']), id: videos[0].snippet?.resourceId?.videoId }
+      : null;
   },
   event_info: {
     desc: 'YouTube New Channel Video Trigger Event Info',
     type: {
       type: 'hash',
       fields: {
-        kind: { type: 'string' },
-        etag: { type: 'string' },
         id: { type: 'string' },
         snippet: {
           type: {
@@ -218,7 +220,7 @@ const YouTubeNewChannelVideoTrigger = QoreAppCreator.createLocalizedTrigger({
 const fetchLatestVideos = async (options: {
   token: string;
   uploadsPlaylistId: string | undefined;
-}): Promise<Array<Record<string, any>>> => {
+}): Promise<youtube_v3.Schema$PlaylistItem[]> => {
   const maxResults = DEFAULT_TRIGGER_POLL_ITEM_LIMIT;
   const { token, uploadsPlaylistId } = options;
 

@@ -61358,6 +61358,20 @@ type RootTranslation = {
 					 */
 					longDesc: string
 					options: {
+						channel_url: {
+							/**
+							 * C​h​a​n​n​e​l​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​Y​o​u​T​u​b​e​ ​c​h​a​n​n​e​l​ ​U​R​L​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​v​i​d​e​o​s
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​f​u​l​l​ ​U​R​L​ ​o​f​ ​t​h​e​ ​Y​o​u​T​u​b​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​v​i​d​e​o​ ​u​p​l​o​a​d​s
+							 */
+							longDesc: string
+						}
 						channel: {
 							/**
 							 * C​h​a​n​n​e​l
@@ -61388,6 +61402,20 @@ type RootTranslation = {
 					 */
 					longDesc: string
 					options: {
+						channel_url: {
+							/**
+							 * C​h​a​n​n​e​l​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​Y​o​u​T​u​b​e​ ​c​h​a​n​n​e​l​ ​U​R​L​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​l​i​v​e​s​t​r​e​a​m​s
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​f​u​l​l​ ​U​R​L​ ​o​f​ ​t​h​e​ ​Y​o​u​T​u​b​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​l​i​v​e​s​t​r​e​a​m​s
+							 */
+							longDesc: string
+						}
 						channel: {
 							/**
 							 * C​h​a​n​n​e​l
@@ -124123,6 +124151,20 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 					options: {
+						channel_url: {
+							/**
+							 * Channel URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The YouTube channel URL to monitor for new videos
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the full URL of the YouTube channel to monitor for new video uploads
+							 */
+							longDesc: () => LocalizedString
+						}
 						channel: {
 							/**
 							 * Channel
@@ -124153,6 +124195,20 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 					options: {
+						channel_url: {
+							/**
+							 * Channel URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The YouTube channel URL to monitor for livestreams
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the full URL of the YouTube channel to monitor for livestreams
+							 */
+							longDesc: () => LocalizedString
+						}
 						channel: {
 							/**
 							 * Channel
