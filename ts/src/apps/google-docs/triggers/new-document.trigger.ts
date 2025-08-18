@@ -2,9 +2,10 @@ import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
-import { GOOGLE_DOCS_APP_NAME, GoogleDocsError } from '../constants';
-import { getGoogleDriveFolderIdAllowedValues } from '../../google-drive/helpers/get-folder-id-allowed-values';
+import { Debugger } from '../../../utils/Debugger';
 import { createGoogleDriveClient } from '../../google-drive/helpers/constants';
+import { getGoogleDriveFolderIdAllowedValues } from '../../google-drive/helpers/get-folder-id-allowed-values';
+import { GOOGLE_DOCS_APP_NAME, GoogleDocsError } from '../constants';
 
 const GoogleDocsNewDocumentTrigger = QoreAppCreator.createLocalizedTrigger({
   app: GOOGLE_DOCS_APP_NAME,
@@ -100,6 +101,8 @@ const GoogleDocsNewDocumentTrigger = QoreAppCreator.createLocalizedTrigger({
         try {
           return await fetchFileContent(token, file);
         } catch (error) {
+          Debugger.log(`Failed to fetch file content for ${file.name}: ${error.message}`);
+
           return file;
         }
       }
@@ -220,7 +223,14 @@ const fetchFileContent = async (token: string, file: Record<string, any>) => {
     const driveClient = createGoogleDriveClient(token);
     const enrichedFile = { ...file };
 
-    if (!file.is_google_doc && file.web_content_link) {
+    if (file.is_google_doc) {
+      const contentResponse = await driveClient.files.export({
+        fileId: file.id,
+        mimeType: 'text/plain',
+      });
+
+      enrichedFile.content = contentResponse.data;
+    } else if (!file.is_google_doc && file.web_content_link) {
       const contentResponse = await driveClient.files.get(
         {
           fileId: file.id,
@@ -235,13 +245,17 @@ const fetchFileContent = async (token: string, file: Record<string, any>) => {
         file.mime_type?.includes('text/') ||
         file.mime_type?.includes('json') ||
         file.mime_type?.includes('xml') ||
-        file.mime_type?.includes('javascript')
+        file.mime_type?.includes('javascript') ||
+        file.mime_type?.includes('application/vnd.google-apps.document')
       ) {
         try {
           enrichedFile.content_as_text = Buffer.from(contentResponse.data as string).toString(
             'utf-8'
           );
-        } catch (e) {}
+        } catch (e) {
+          Debugger.log(`Failed to convert content to text for ${file.name}: ${e.message}`);
+          enrichedFile.content_as_text = null;
+        }
       }
     }
 

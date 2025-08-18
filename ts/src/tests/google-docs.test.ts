@@ -1,3 +1,4 @@
+import { configDotenv } from 'dotenv';
 import {
   appendTextToGoogleDocsDocument,
   createGoogleDocsDocumentFromTemplate,
@@ -10,8 +11,10 @@ import { getGoogleDocsTemplatePlaceholderAllowedValues } from '../apps/google-do
 import { createGoogleDriveClient } from '../apps/google-drive/helpers/constants';
 import { delay } from '../global/helpers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
+import GoogleDocsNewDocumentTrigger from '../apps/google-docs/triggers/new-document.trigger';
 
 Debugger.level = DebugLevels.Verbose;
+configDotenv({ path: '.env' });
 
 describe('Google Docs', () => {
   const base_context = {
@@ -208,6 +211,25 @@ describe('Google Docs', () => {
       expect(result).toBeDefined();
       expect(result.id).toBeDefined();
       uploaded_document = result.id;
+    });
+
+    describe('Should test triggers event example data', () => {
+      it('Should get example event data for new document trigger', async () => {
+        const trigger = GoogleDocsNewDocumentTrigger;
+
+        if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
+          throw new Error('get_example_event_data not found in trigger');
+
+        const result = await trigger.get_example_event_data({
+          ...base_context,
+          opts: { include_content: true } as any,
+        });
+
+        console.dir(result, { depth: null });
+
+        expect(result).toBeDefined();
+        expect(result.id).toBeDefined();
+      });
     });
   });
 

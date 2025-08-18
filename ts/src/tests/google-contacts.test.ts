@@ -1,3 +1,4 @@
+import { configDotenv } from 'dotenv';
 import {
   GoogleContactsAddContactToGroup,
   GoogleContactsCreateContact,
@@ -12,6 +13,7 @@ import { getGoogleContactsGroupAllowedValues } from '../apps/google-contacts/hel
 import { Debugger, DebugLevels } from '../utils/Debugger';
 
 Debugger.level = DebugLevels.Verbose;
+configDotenv({ path: '.env' });
 
 describe('Google Contacts', () => {
   const base_context = {

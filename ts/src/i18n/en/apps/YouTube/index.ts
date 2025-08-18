@@ -307,9 +307,9 @@ const YouTubeAppEn = {
       },
     },
     reply_to_comment: {
-      displayName: 'Reply to Comment',
-      shortDesc: 'Reply to a YouTube comment',
-      longDesc: 'Post a reply to an existing comment on a YouTube video',
+      displayName: 'Create or Reply to Comment',
+      shortDesc: 'Reply to a YouTube comment or create one',
+      longDesc: 'Post a reply to an existing comment or create a new one on a YouTube video',
       options: {
         parentId: {
           displayName: 'Parent Comment ID',

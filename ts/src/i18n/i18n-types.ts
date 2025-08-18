@@ -61072,15 +61072,15 @@ type RootTranslation = {
 				}
 				reply_to_comment: {
 					/**
-					 * R​e​p​l​y​ ​t​o​ ​C​o​m​m​e​n​t
+					 * C​r​e​a​t​e​ ​o​r​ ​R​e​p​l​y​ ​t​o​ ​C​o​m​m​e​n​t
 					 */
 					displayName: string
 					/**
-					 * R​e​p​l​y​ ​t​o​ ​a​ ​Y​o​u​T​u​b​e​ ​c​o​m​m​e​n​t
+					 * R​e​p​l​y​ ​t​o​ ​a​ ​Y​o​u​T​u​b​e​ ​c​o​m​m​e​n​t​ ​o​r​ ​c​r​e​a​t​e​ ​o​n​e
 					 */
 					shortDesc: string
 					/**
-					 * P​o​s​t​ ​a​ ​r​e​p​l​y​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​m​m​e​n​t​ ​o​n​ ​a​ ​Y​o​u​T​u​b​e​ ​v​i​d​e​o
+					 * P​o​s​t​ ​a​ ​r​e​p​l​y​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​m​m​e​n​t​ ​o​r​ ​c​r​e​a​t​e​ ​a​ ​n​e​w​ ​o​n​e​ ​o​n​ ​a​ ​Y​o​u​T​u​b​e​ ​v​i​d​e​o
 					 */
 					longDesc: string
 					options: {
@@ -123865,15 +123865,15 @@ export type TranslationFunctions = {
 				}
 				reply_to_comment: {
 					/**
-					 * Reply to Comment
+					 * Create or Reply to Comment
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Reply to a YouTube comment
+					 * Reply to a YouTube comment or create one
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Post a reply to an existing comment on a YouTube video
+					 * Post a reply to an existing comment or create a new one on a YouTube video
 					 */
 					longDesc: () => LocalizedString
 					options: {
