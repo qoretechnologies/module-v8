@@ -5,6 +5,26 @@ const YouTubeAppEn = {
   longDesc:
     'YouTube integration allows you to manage videos, playlists, channels, and interact with the YouTube platform programmatically.',
   actions: {
+    list_user_subscriptions: {
+      displayName: 'List User Subscriptions',
+      shortDesc: 'Get a list of YouTube channel subscriptions for the authenticated user',
+      longDesc:
+        'Retrieves a paginated list of YouTube channels that the authenticated user is subscribed to, including channel details and thumbnails',
+      options: {
+        maxResults: {
+          displayName: 'Maximum Results',
+          shortDesc: 'Maximum number of subscriptions to return',
+          longDesc:
+            'The maximum number of subscription items to return in the response (1-50, default is 25)',
+        },
+        nextPageToken: {
+          displayName: 'Next Page Token',
+          shortDesc: 'Token for pagination to get the next page of results',
+          longDesc:
+            'The token that can be used as the value of the pageToken parameter to retrieve the next page in the result set',
+        },
+      },
+    },
     get_channel_id_from_url: {
       displayName: 'Get Channel ID from URL',
       shortDesc: 'Extract YouTube channel ID from various URL formats',

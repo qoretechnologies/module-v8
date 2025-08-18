@@ -60338,6 +60338,50 @@ type RootTranslation = {
 			 */
 			longDesc: string
 			actions: {
+				list_user_subscriptions: {
+					/**
+					 * L​i​s​t​ ​U​s​e​r​ ​S​u​b​s​c​r​i​p​t​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​a​ ​l​i​s​t​ ​o​f​ ​Y​o​u​T​u​b​e​ ​c​h​a​n​n​e​l​ ​s​u​b​s​c​r​i​p​t​i​o​n​s​ ​f​o​r​ ​t​h​e​ ​a​u​t​h​e​n​t​i​c​a​t​e​d​ ​u​s​e​r
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​Y​o​u​T​u​b​e​ ​c​h​a​n​n​e​l​s​ ​t​h​a​t​ ​t​h​e​ ​a​u​t​h​e​n​t​i​c​a​t​e​d​ ​u​s​e​r​ ​i​s​ ​s​u​b​s​c​r​i​b​e​d​ ​t​o​,​ ​i​n​c​l​u​d​i​n​g​ ​c​h​a​n​n​e​l​ ​d​e​t​a​i​l​s​ ​a​n​d​ ​t​h​u​m​b​n​a​i​l​s
+					 */
+					longDesc: string
+					options: {
+						maxResults: {
+							/**
+							 * M​a​x​i​m​u​m​ ​R​e​s​u​l​t​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​s​u​b​s​c​r​i​p​t​i​o​n​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​i​t​e​m​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​ ​(​1​-​5​0​,​ ​d​e​f​a​u​l​t​ ​i​s​ ​2​5​)
+							 */
+							longDesc: string
+						}
+						nextPageToken: {
+							/**
+							 * N​e​x​t​ ​P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​t​o​ ​g​e​t​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​o​k​e​n​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​u​s​e​d​ ​a​s​ ​t​h​e​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​p​a​g​e​T​o​k​e​n​ ​p​a​r​a​m​e​t​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​i​n​ ​t​h​e​ ​r​e​s​u​l​t​ ​s​e​t
+							 */
+							longDesc: string
+						}
+					}
+				}
 				get_channel_id_from_url: {
 					/**
 					 * G​e​t​ ​C​h​a​n​n​e​l​ ​I​D​ ​f​r​o​m​ ​U​R​L
@@ -123059,6 +123103,50 @@ export type TranslationFunctions = {
 			 */
 			longDesc: () => LocalizedString
 			actions: {
+				list_user_subscriptions: {
+					/**
+					 * List User Subscriptions
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get a list of YouTube channel subscriptions for the authenticated user
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a paginated list of YouTube channels that the authenticated user is subscribed to, including channel details and thumbnails
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						maxResults: {
+							/**
+							 * Maximum Results
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of subscriptions to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of subscription items to return in the response (1-50, default is 25)
+							 */
+							longDesc: () => LocalizedString
+						}
+						nextPageToken: {
+							/**
+							 * Next Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination to get the next page of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The token that can be used as the value of the pageToken parameter to retrieve the next page in the result set
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
 				get_channel_id_from_url: {
 					/**
 					 * Get Channel ID from URL
