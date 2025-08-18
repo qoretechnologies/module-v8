@@ -25,12 +25,14 @@ export const getYouTubeCategoryAllowedValues: TQoreGetAllowedValuesFunction<
     });
 
     const allowedValues: IQoreAllowedValue<string>[] =
-      response.data.items?.map((item) => {
-        return {
-          value: item.id!,
-          display_name: item.snippet?.title || 'No title',
-        };
-      }) || [];
+      response.data.items
+        ?.filter((item) => item.snippet?.assignable === true)
+        ?.map((item) => {
+          return {
+            value: item.id!,
+            display_name: item.snippet?.title || 'No title',
+          };
+        }) || [];
 
     return allowedValues;
   } catch (error) {

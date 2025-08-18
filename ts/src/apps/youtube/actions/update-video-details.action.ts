@@ -80,6 +80,10 @@ const updateVideoDetails = QoreAppCreator.createLocalizedAction<typeof options>(
 
     let snippet: Record<string, any> | undefined;
     if (wantsSnippet) {
+      const getRes = await client.videos.list({
+        part: ['snippet'],
+        id: [video],
+      });
       let categoryIdToUse: string | undefined;
 
       if (typeof category === 'string' && /^\d+$/.test(category.trim())) {
@@ -91,10 +95,6 @@ const updateVideoDetails = QoreAppCreator.createLocalizedAction<typeof options>(
       }
 
       if (!categoryIdToUse) {
-        const getRes = await client.videos.list({
-          part: ['snippet'],
-          id: [video],
-        });
         const currentCat = getRes.data.items?.[0]?.snippet?.categoryId;
         if (!currentCat) {
           throw new YouTubeError(
@@ -106,7 +106,7 @@ const updateVideoDetails = QoreAppCreator.createLocalizedAction<typeof options>(
 
       snippet = {
         categoryId: categoryIdToUse,
-        ...(title !== undefined ? { title } : {}),
+        ...(title !== undefined ? { title } : { title: getRes.data.items?.[0]?.snippet?.title }),
         ...(description !== undefined ? { description } : {}),
         ...(Array.isArray(tags) && tags.length > 0 ? { tags } : {}),
       };
