@@ -49,7 +49,7 @@ public class TypeScriptAppRestClient inherits RestClient {
     private *hash<auto> getUpdateOptionsAfterLogin(hash<auto> h, *bool refresh) {
         *hash<auto> rv = RestClient::getUpdateOptionsAfterLogin(h, refresh);
         LoggerWrapper::debug("Connection %y app %y post-auth resp: %y h: %y rv: %y (post_auth: %y) refresh: %y",
-            conn.name, conn.getAppName(), h, rv, post_auth, refresh);
+            conn.name, conn.getAppName(), LoggerUtil::getArgSummary(h), LoggerUtil::getArgSummary(rv), post_auth, refresh);
         # do not call "post_auth" when refreshing
         if (post_auth && !refresh) {
             rv += makePostAuthCall(post_auth, h, rv);
@@ -58,7 +58,8 @@ public class TypeScriptAppRestClient inherits RestClient {
         if (post_auth_code) {
             rv += makePostAuthCall(post_auth_code, h, rv);
         }
-        LoggerWrapper::debug("Connection %y app %y post-auth rv: %y", conn.name, conn.getAppName(), rv);
+        LoggerWrapper::debug("Connection %y app %y post-auth rv: %y", conn.name, conn.getAppName(),
+            LoggerUtil::getArgSummary(rv));
         return rv;
     }
 
@@ -75,7 +76,8 @@ public class TypeScriptAppRestClient inherits RestClient {
             if (rv.url && rv.url =~ /^https?:\/\//) {
                 rv.url = regex_subst(rv.url, "^https?://", conn.getType() + "://");
             }
-            info("Connection %y app %y post-auth adding options: %y", conn.name, conn.getAppName(), rv);
+            info("Connection %y app %y post-auth adding options: %y", conn.name, conn.getAppName(),
+                LoggerUtil::getArgSummary(rv));
         } catch (hash<ExceptionInfo> ex) {
             LoggerWrapper::error("Error executing %s for connection %y: %s: %s (new_opts: %y)", call.label, conn.name,
                 ex.err, ex.desc, new_opts);
@@ -231,8 +233,8 @@ public class TypeScriptAppRestConnection inherits RestConnection {
     #! Processes the OAuth2 token response
     private *hash<auto> processOAuth2TokenResponseImpl(hash<auto> resp) {
         *hash<auto> new_opts = RestConnection::processOAuth2TokenResponseImpl(resp);
-        LoggerWrapper::debug("Connection %y app %y post-auth resp: %y new_opts: %y (post_auth: %y)", name, app, resp,
-            new_opts, post_auth);
+        LoggerWrapper::debug("Connection %y app %y post-auth resp: %y new_opts: %y (post_auth: %y)", name, app,
+            LoggerUtil::getArgSummary(resp), LoggerUtil::getArgSummary(new_opts), post_auth);
         # only execute post_auth when the token changes
         if (new_opts && (new_opts.token != real_opts.token)) {
             if (post_auth) {
@@ -242,7 +244,7 @@ public class TypeScriptAppRestConnection inherits RestConnection {
                 new_opts += makePostAuthCall(post_auth_code, new_opts, resp);
             }
         }
-        LoggerWrapper::debug("Connection %y app %y post-auth rv: %y", name, app, new_opts);
+        LoggerWrapper::debug("Connection %y app %y post-auth rv: %y", name, app, LoggerUtil::getArgSummary(new_opts));
         return new_opts;
     }
 
@@ -259,7 +261,7 @@ public class TypeScriptAppRestConnection inherits RestConnection {
                 rv.url = regex_subst(rv.url, "^https?://", scheme + "://");
             }
             LoggerWrapper::info("Connection %y app %y %s adding options: %y from %y", name, app, call.label,
-                new_opts + rv, resp);
+                LoggerUtil::getArgSummary(new_opts + rv), LoggerUtil::getArgSummary(resp));
             return rv;
         } catch (hash<ExceptionInfo> ex) {
             LoggerWrapper::error("Error executing %s for connection %y: %s: %s (new_opts: %y)", call.label, name,

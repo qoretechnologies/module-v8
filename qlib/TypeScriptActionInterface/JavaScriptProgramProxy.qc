@@ -374,7 +374,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 error("Error in listener thread: %s; continuing to listen for events", get_exception_string(ex));
                 continue;
             }
-            debug("Got event message: %y", v);
+            debug("Got event message: %y", LoggerUtil::getArgSummary(v));
 
             if (v.cmd == CC_EVENT) {
                 if (!event.omap) {
@@ -498,7 +498,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             args += argv;
         }
         auto rv = sendCommandArgs(api.to, PC_CALL, args);
-        debug("getAsyncValue(%y): %y", argv, rv);
+        debug("getAsyncValue(%y): %y", LoggerUtil::getArgSummary(argv), LoggerUtil::getArgSummary(rv));
         return rv;
     }
 
@@ -506,7 +506,8 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             auto req) {
         *binary bin = sendCommandArgs(NOTHING, cmd, (app, action, conn_name, conn_opts, req));
         *HashDataType rv = bin ? Serializable::deserialize(bin) : NOTHING;
-        debug("getDynamicType(app %y action %y req %y): %y", app, action, req, rv);
+        debug("getDynamicType(app %y action %y req %y): %y", app, action, LoggerUtil::getArgSummary(req),
+            LoggerUtil::getArgSummary(rv));
         return rv;
     }
 
@@ -514,7 +515,8 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             *hash<auto> conn_opts, auto req) {
         *binary bin = sendCommandArgs(NOTHING, PC_GET_DYNAMIC_OPTIONS, (app, action, conn_name, conn_opts, req));
         *hash<string, hash<ActionOptionInfo>> rv = bin ? Serializable::deserialize(bin) : NOTHING;
-        debug("getDynamicOptions(app %y action %y req %y): %y", app, action, req, rv);
+        debug("getDynamicOptions(app %y action %y req %y): %y", app, action, LoggerUtil::getArgSummary(req),
+            LoggerUtil::getArgSummary(rv));
         return rv;
     }
 
@@ -570,8 +572,8 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                             v.cmd);
                         continue;
                     }
-                    TSAI::debug("Got message from proxy PID %d: %y for proxy: %y", proxy.proc.id(), v,
-                        proxy.uniqueHash());
+                    TSAI::debug("Got message from proxy PID %d: %y for proxy: %y", proxy.proc.id(),
+                        LoggerUtil::getArgSummary(v), proxy.uniqueHash());
                     hash<auto> msg = {
                         "cmd": CC_OK,
                         "socket": s0,
@@ -754,7 +756,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 if (!yaml.val()) {
                     yaml = makeSend(cmd, {"args": args});
                 }
-                debug("Sending command %y", yaml);
+                debug("Sending command %y", LoggerUtil::getArgSummary(yaml));
                 sendString(yaml);
                 on_exit remove command_in_progress;
                 h = waitForResponse(response_timeout);
