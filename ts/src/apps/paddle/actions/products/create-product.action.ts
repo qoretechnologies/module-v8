@@ -75,7 +75,7 @@ const createProduct = QoreAppCreator.createLocalizedAction<typeof options>({
   response_type: {
     type: 'hash',
     fields: {
-      id: { type: 'integer' },
+      id: { type: 'string' },
       name: { type: 'string' },
       taxCategory: { type: 'string' },
       type: { type: 'string' },

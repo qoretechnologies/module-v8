@@ -43,7 +43,7 @@ const getCustomer = QoreAppCreator.createLocalizedAction<typeof options>({
   response_type: {
     type: 'hash',
     fields: {
-      id: { type: 'integer' },
+      id: { type: 'string' },
       name: { type: 'string' },
       email: { type: 'string' },
       marketingConsent: { type: 'boolean' },

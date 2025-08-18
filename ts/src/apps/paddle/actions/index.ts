@@ -4,10 +4,10 @@ export { default as getPaddleProduct } from './products/get-product.action';
 export { default as listPaddleProducts } from './products/list-products.action';
 export { default as updatePaddleProduct } from './products/update-product.action';
 
-export { default as createPaddlePrice } from './prices.ts/create-price.action';
-export { default as getPaddlePrice } from './prices.ts/get-price.action';
-export { default as listPaddlePrices } from './prices.ts/list-prices.action';
-export { default as updatePaddlePrice } from './prices.ts/update-price.action';
+export { default as createPaddlePrice } from './prices/create-price.action';
+export { default as getPaddlePrice } from './prices/get-price.action';
+export { default as listPaddlePrices } from './prices/list-prices.action';
+export { default as updatePaddlePrice } from './prices/update-price.action';
 
 export { default as getPaddleCustomer } from './customers/get-customer.action';
 export { default as listPaddleCustomerCreditBalances } from './customers/list-customer-credit-balances.action';
