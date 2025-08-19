@@ -57,6 +57,7 @@ import LinkedIn from './apps/LinkedIn';
 import Canva from './apps/Canva';
 import Figma from './apps/Figma';
 import LinkedInOrganizations from './apps/LinkedInOrganizations';
+import Telegram from './apps/Telegram';
 
 const en = {
   common: {},
@@ -213,6 +214,7 @@ const en = {
     Canva,
     Figma,
     LinkedInOrganizations,
+    Telegram,
   },
 } satisfies BaseTranslation;
 
