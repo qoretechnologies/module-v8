@@ -30,5 +30,6 @@ export default (locale: Locales) =>
     rest_modifiers: {
       options: TELEGRAM_CONN_OPTIONS,
       required_options: 'token',
+      url_template_options: ['token'],
     },
   }) satisfies TQoreAppWithActions;
