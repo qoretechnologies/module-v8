@@ -62802,6 +62802,746 @@ type RootTranslation = {
 				}
 			}
 		}
+		Telegram: {
+			/**
+			 * T​e​l​e​g​r​a​m
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​a​n​d​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​T​e​l​e​g​r​a​m​ ​v​i​a​ ​a​ ​b​o​t
+			 */
+			shortDesc: string
+			/**
+			 * C​o​n​n​e​c​t​ ​a​ ​T​e​l​e​g​r​a​m​ ​B​o​t​ ​u​s​i​n​g​ ​i​t​s​ ​B​o​t​ ​T​o​k​e​n​ ​t​o​ ​s​e​n​d​ ​m​e​s​s​a​g​e​s​ ​a​n​d​ ​h​a​n​d​l​e​ ​i​n​c​o​m​i​n​g​ ​u​p​d​a​t​e​s​.​ ​A​u​t​h​e​n​t​i​c​a​t​i​o​n​ ​i​s​ ​d​o​n​e​ ​s​o​l​e​l​y​ ​w​i​t​h​ ​t​h​e​ ​B​o​t​ ​T​o​k​e​n​ ​i​s​s​u​e​d​ ​b​y​ ​@​B​o​t​F​a​t​h​e​r​;​ ​n​o​ ​u​s​e​r​ ​l​o​g​i​n​ ​i​s​ ​r​e​q​u​i​r​e​d​.
+			 */
+			longDesc: string
+			actions: {
+				send_message: {
+					/**
+					 * S​e​n​d​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​t​e​x​t​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​ ​c​h​a​t
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​ ​a​ ​t​e​x​t​ ​m​e​s​s​a​g​e​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​o​r​m​a​t​t​i​n​g​ ​t​o​ ​a​n​y​ ​c​h​a​t​,​ ​g​r​o​u​p​,​ ​o​r​ ​c​h​a​n​n​e​l​ ​a​c​c​e​s​s​i​b​l​e​ ​b​y​ ​y​o​u​r​ ​b​o​t
+					 */
+					longDesc: string
+					/**
+					 * M​e​s​s​a​g​i​n​g
+					 */
+					group: string
+					options: {
+						chat: {
+							/**
+							 * C​h​a​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​h​a​t​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​h​a​t​,​ ​g​r​o​u​p​,​ ​o​r​ ​c​h​a​n​n​e​l​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							longDesc: string
+						}
+						format: {
+							/**
+							 * T​e​x​t​ ​F​o​r​m​a​t
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​f​o​r​m​a​t​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​e​x​t
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​f​o​r​m​a​t​t​i​n​g​ ​m​o​d​e​ ​f​o​r​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​(​p​l​a​i​n​ ​t​e​x​t​,​ ​M​a​r​k​d​o​w​n​,​ ​M​a​r​k​d​o​w​n​ ​V​2​,​ ​o​r​ ​H​T​M​L​)
+							 */
+							longDesc: string
+						}
+						message: {
+							/**
+							 * M​e​s​s​a​g​e​ ​T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t​ ​t​o​ ​s​e​n​d​.​ ​C​a​n​ ​i​n​c​l​u​d​e​ ​f​o​r​m​a​t​t​i​n​g​ ​d​e​p​e​n​d​i​n​g​ ​o​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​f​o​r​m​a​t​ ​m​o​d​e
+							 */
+							longDesc: string
+						}
+						disable_link_preview: {
+							/**
+							 * D​i​s​a​b​l​e​ ​L​i​n​k​ ​P​r​e​v​i​e​w
+							 */
+							displayName: string
+							/**
+							 * D​i​s​a​b​l​e​ ​a​u​t​o​m​a​t​i​c​ ​l​i​n​k​ ​p​r​e​v​i​e​w​s
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​l​i​n​k​s​ ​i​n​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​w​i​l​l​ ​n​o​t​ ​s​h​o​w​ ​a​u​t​o​m​a​t​i​c​ ​p​r​e​v​i​e​w​s
+							 */
+							longDesc: string
+						}
+						disable_notification: {
+							/**
+							 * S​e​n​d​ ​S​i​l​e​n​t​l​y
+							 */
+							displayName: string
+							/**
+							 * S​e​n​d​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​w​i​t​h​o​u​t​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​s​o​u​n​d
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​u​s​e​r​s​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​w​i​t​h​o​u​t​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​s​o​u​n​d
+							 */
+							longDesc: string
+						}
+					}
+				}
+				send_photo: {
+					/**
+					 * S​e​n​d​ ​P​h​o​t​o
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​p​h​o​t​o​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​c​a​p​t​i​o​n​ ​t​o​ ​a​ ​c​h​a​t
+					 */
+					shortDesc: string
+					/**
+					 * U​p​l​o​a​d​ ​a​n​d​ ​s​e​n​d​ ​a​n​ ​i​m​a​g​e​ ​f​i​l​e​ ​t​o​ ​a​n​y​ ​c​h​a​t​,​ ​g​r​o​u​p​,​ ​o​r​ ​c​h​a​n​n​e​l​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​c​a​p​t​i​o​n​ ​a​n​d​ ​f​o​r​m​a​t​t​i​n​g
+					 */
+					longDesc: string
+					/**
+					 * M​e​s​s​a​g​i​n​g
+					 */
+					group: string
+					options: {
+						chat: {
+							/**
+							 * C​h​a​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​h​a​t​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​p​h​o​t​o​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​h​a​t​,​ ​g​r​o​u​p​,​ ​o​r​ ​c​h​a​n​n​e​l​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​p​h​o​t​o
+							 */
+							longDesc: string
+						}
+						photo: {
+							/**
+							 * P​h​o​t​o​ ​F​i​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​i​m​a​g​e​ ​f​i​l​e​ ​t​o​ ​s​e​n​d
+							 */
+							shortDesc: string
+							/**
+							 * U​p​l​o​a​d​ ​t​h​e​ ​i​m​a​g​e​ ​f​i​l​e​ ​(​J​P​G​,​ ​P​N​G​,​ ​G​I​F​,​ ​e​t​c​.​)​ ​t​o​ ​s​e​n​d​ ​t​o​ ​t​h​e​ ​c​h​a​t
+							 */
+							longDesc: string
+						}
+						caption_format: {
+							/**
+							 * C​a​p​t​i​o​n​ ​F​o​r​m​a​t
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​f​o​r​m​a​t​ ​t​h​e​ ​c​a​p​t​i​o​n​ ​t​e​x​t
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​f​o​r​m​a​t​t​i​n​g​ ​m​o​d​e​ ​f​o​r​ ​t​h​e​ ​p​h​o​t​o​ ​c​a​p​t​i​o​n
+							 */
+							longDesc: string
+						}
+						caption: {
+							/**
+							 * P​h​o​t​o​ ​C​a​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​c​a​p​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​p​h​o​t​o
+							 */
+							shortDesc: string
+							/**
+							 * T​e​x​t​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​c​a​p​t​i​o​n​ ​t​o​ ​a​c​c​o​m​p​a​n​y​ ​t​h​e​ ​p​h​o​t​o
+							 */
+							longDesc: string
+						}
+						protect_content: {
+							/**
+							 * P​r​o​t​e​c​t​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * P​r​o​t​e​c​t​ ​c​o​n​t​e​n​t​ ​f​r​o​m​ ​f​o​r​w​a​r​d​i​n​g​ ​a​n​d​ ​s​a​v​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​p​h​o​t​o​ ​c​a​n​n​o​t​ ​b​e​ ​f​o​r​w​a​r​d​e​d​ ​o​r​ ​s​a​v​e​d​ ​b​y​ ​u​s​e​r​s
+							 */
+							longDesc: string
+						}
+						disable_notification: {
+							/**
+							 * S​e​n​d​ ​S​i​l​e​n​t​l​y
+							 */
+							displayName: string
+							/**
+							 * S​e​n​d​ ​t​h​e​ ​p​h​o​t​o​ ​w​i​t​h​o​u​t​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​s​o​u​n​d
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​u​s​e​r​s​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​t​h​e​ ​p​h​o​t​o​ ​w​i​t​h​o​u​t​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​s​o​u​n​d
+							 */
+							longDesc: string
+						}
+					}
+				}
+				send_poll: {
+					/**
+					 * S​e​n​d​ ​P​o​l​l
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​n​d​ ​s​e​n​d​ ​a​ ​p​o​l​l​ ​o​r​ ​q​u​i​z​ ​t​o​ ​a​ ​c​h​a​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​i​n​t​e​r​a​c​t​i​v​e​ ​p​o​l​l​s​ ​o​r​ ​q​u​i​z​z​e​s​ ​w​i​t​h​ ​m​u​l​t​i​p​l​e​ ​a​n​s​w​e​r​ ​o​p​t​i​o​n​s​,​ ​p​e​r​f​e​c​t​ ​f​o​r​ ​g​a​t​h​e​r​i​n​g​ ​f​e​e​d​b​a​c​k​ ​o​r​ ​t​e​s​t​i​n​g​ ​k​n​o​w​l​e​d​g​e
+					 */
+					longDesc: string
+					/**
+					 * M​e​s​s​a​g​i​n​g
+					 */
+					group: string
+					options: {
+						chat: {
+							/**
+							 * C​h​a​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​h​a​t​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​p​o​l​l​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​h​a​t​,​ ​g​r​o​u​p​,​ ​o​r​ ​c​h​a​n​n​e​l​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​p​o​l​l
+							 */
+							longDesc: string
+						}
+						question: {
+							/**
+							 * P​o​l​l​ ​Q​u​e​s​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​m​a​i​n​ ​q​u​e​s​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​p​o​l​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​q​u​e​s​t​i​o​n​ ​t​h​a​t​ ​u​s​e​r​s​ ​w​i​l​l​ ​a​n​s​w​e​r​ ​i​n​ ​t​h​e​ ​p​o​l​l
+							 */
+							longDesc: string
+						}
+						answers: {
+							/**
+							 * A​n​s​w​e​r​ ​O​p​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​p​o​s​s​i​b​l​e​ ​a​n​s​w​e​r​s​ ​(​2​-​1​0​ ​o​p​t​i​o​n​s​)
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​a​n​s​w​e​r​ ​c​h​o​i​c​e​s​ ​t​h​a​t​ ​u​s​e​r​s​ ​c​a​n​ ​s​e​l​e​c​t​ ​f​r​o​m​.​ ​M​u​s​t​ ​h​a​v​e​ ​b​e​t​w​e​e​n​ ​2​ ​a​n​d​ ​1​0​ ​o​p​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+						is_anonymous: {
+							/**
+							 * A​n​o​n​y​m​o​u​s​ ​P​o​l​l
+							 */
+							displayName: string
+							/**
+							 * S​h​o​u​l​d​ ​t​h​e​ ​p​o​l​l​ ​b​e​ ​a​n​o​n​y​m​o​u​s​?
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​u​s​e​r​ ​v​o​t​e​s​ ​w​i​l​l​ ​b​e​ ​a​n​o​n​y​m​o​u​s​.​ ​I​f​ ​d​i​s​a​b​l​e​d​,​ ​v​o​t​e​s​ ​w​i​l​l​ ​b​e​ ​v​i​s​i​b​l​e​ ​t​o​ ​o​t​h​e​r​ ​u​s​e​r​s
+							 */
+							longDesc: string
+						}
+						poll_type: {
+							/**
+							 * P​o​l​l​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * R​e​g​u​l​a​r​ ​p​o​l​l​ ​o​r​ ​q​u​i​z​ ​w​i​t​h​ ​c​o​r​r​e​c​t​ ​a​n​s​w​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​b​e​t​w​e​e​n​ ​a​ ​r​e​g​u​l​a​r​ ​p​o​l​l​ ​o​r​ ​a​ ​q​u​i​z​ ​w​h​e​r​e​ ​y​o​u​ ​c​a​n​ ​s​p​e​c​i​f​y​ ​c​o​r​r​e​c​t​ ​a​n​s​w​e​r​s
+							 */
+							longDesc: string
+						}
+						allows_multiple_answers: {
+							/**
+							 * M​u​l​t​i​p​l​e​ ​A​n​s​w​e​r​s
+							 */
+							displayName: string
+							/**
+							 * A​l​l​o​w​ ​u​s​e​r​s​ ​t​o​ ​s​e​l​e​c​t​ ​m​u​l​t​i​p​l​e​ ​o​p​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​u​s​e​r​s​ ​c​a​n​ ​s​e​l​e​c​t​ ​m​o​r​e​ ​t​h​a​n​ ​o​n​e​ ​a​n​s​w​e​r​ ​o​p​t​i​o​n​ ​(​o​n​l​y​ ​f​o​r​ ​r​e​g​u​l​a​r​ ​p​o​l​l​s​)
+							 */
+							longDesc: string
+						}
+						correct_option_id: {
+							/**
+							 * C​o​r​r​e​c​t​ ​A​n​s​w​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​r​r​e​c​t​ ​a​n​s​w​e​r​ ​f​o​r​ ​q​u​i​z​ ​p​o​l​l​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​i​c​h​ ​a​n​s​w​e​r​ ​o​p​t​i​o​n​ ​i​s​ ​c​o​r​r​e​c​t​ ​(​z​e​r​o​-​b​a​s​e​d​ ​i​n​d​e​x​,​ ​o​n​l​y​ ​f​o​r​ ​q​u​i​z​ ​p​o​l​l​s​)
+							 */
+							longDesc: string
+						}
+						explanation: {
+							/**
+							 * E​x​p​l​a​n​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * E​x​p​l​a​n​a​t​i​o​n​ ​t​e​x​t​ ​f​o​r​ ​t​h​e​ ​c​o​r​r​e​c​t​ ​a​n​s​w​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​e​x​p​l​a​n​a​t​i​o​n​ ​t​h​a​t​ ​a​p​p​e​a​r​s​ ​w​h​e​n​ ​u​s​e​r​s​ ​a​n​s​w​e​r​ ​t​h​e​ ​q​u​i​z
+							 */
+							longDesc: string
+						}
+						explanation_parse_mode: {
+							/**
+							 * E​x​p​l​a​n​a​t​i​o​n​ ​F​o​r​m​a​t
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​f​o​r​m​a​t​ ​t​h​e​ ​e​x​p​l​a​n​a​t​i​o​n​ ​t​e​x​t
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​f​o​r​m​a​t​t​i​n​g​ ​m​o​d​e​ ​f​o​r​ ​t​h​e​ ​e​x​p​l​a​n​a​t​i​o​n​ ​t​e​x​t
+							 */
+							longDesc: string
+						}
+						open_period: {
+							/**
+							 * O​p​e​n​ ​P​e​r​i​o​d
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​l​o​n​g​ ​t​h​e​ ​p​o​l​l​ ​s​t​a​y​s​ ​o​p​e​n​ ​(​i​n​ ​s​e​c​o​n​d​s​)
+							 */
+							shortDesc: string
+							/**
+							 * D​u​r​a​t​i​o​n​ ​i​n​ ​s​e​c​o​n​d​s​ ​t​h​a​t​ ​t​h​e​ ​p​o​l​l​ ​w​i​l​l​ ​a​c​c​e​p​t​ ​v​o​t​e​s​ ​(​5​-​6​0​0​ ​s​e​c​o​n​d​s​)
+							 */
+							longDesc: string
+						}
+						close_date: {
+							/**
+							 * C​l​o​s​e​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​d​a​t​e​/​t​i​m​e​ ​t​o​ ​c​l​o​s​e​ ​t​h​e​ ​p​o​l​l
+							 */
+							shortDesc: string
+							/**
+							 * U​n​i​x​ ​t​i​m​e​s​t​a​m​p​ ​f​o​r​ ​w​h​e​n​ ​t​h​e​ ​p​o​l​l​ ​s​h​o​u​l​d​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​c​l​o​s​e
+							 */
+							longDesc: string
+						}
+						is_closed: {
+							/**
+							 * S​e​n​d​ ​C​l​o​s​e​d​ ​P​o​l​l
+							 */
+							displayName: string
+							/**
+							 * S​e​n​d​ ​t​h​e​ ​p​o​l​l​ ​i​n​ ​a​ ​c​l​o​s​e​d​ ​s​t​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​p​o​l​l​ ​w​i​l​l​ ​b​e​ ​s​e​n​t​ ​a​l​r​e​a​d​y​ ​c​l​o​s​e​d​ ​(​f​o​r​ ​d​e​m​o​n​s​t​r​a​t​i​o​n​ ​p​u​r​p​o​s​e​s​)
+							 */
+							longDesc: string
+						}
+						disable_notification: {
+							/**
+							 * S​e​n​d​ ​S​i​l​e​n​t​l​y
+							 */
+							displayName: string
+							/**
+							 * S​e​n​d​ ​t​h​e​ ​p​o​l​l​ ​w​i​t​h​o​u​t​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​s​o​u​n​d
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​u​s​e​r​s​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​t​h​e​ ​p​o​l​l​ ​w​i​t​h​o​u​t​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​s​o​u​n​d
+							 */
+							longDesc: string
+						}
+						protect_content: {
+							/**
+							 * P​r​o​t​e​c​t​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * P​r​o​t​e​c​t​ ​c​o​n​t​e​n​t​ ​f​r​o​m​ ​f​o​r​w​a​r​d​i​n​g​ ​a​n​d​ ​s​a​v​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​p​o​l​l​ ​c​a​n​n​o​t​ ​b​e​ ​f​o​r​w​a​r​d​e​d​ ​b​y​ ​u​s​e​r​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				edit_message: {
+					/**
+					 * E​d​i​t​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * E​d​i​t​ ​t​h​e​ ​t​e​x​t​ ​o​f​ ​a​ ​p​r​e​v​i​o​u​s​l​y​ ​s​e​n​t​ ​m​e​s​s​a​g​e
+					 */
+					shortDesc: string
+					/**
+					 * M​o​d​i​f​y​ ​t​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​a​ ​m​e​s​s​a​g​e​ ​t​h​a​t​ ​w​a​s​ ​p​r​e​v​i​o​u​s​l​y​ ​s​e​n​t​ ​b​y​ ​t​h​e​ ​b​o​t​.​ ​O​n​l​y​ ​w​o​r​k​s​ ​w​i​t​h​ ​t​e​x​t​ ​m​e​s​s​a​g​e​s​ ​s​e​n​t​ ​b​y​ ​t​h​e​ ​b​o​t​.
+					 */
+					longDesc: string
+					/**
+					 * M​e​s​s​a​g​e​ ​M​a​n​a​g​e​m​e​n​t
+					 */
+					group: string
+					options: {
+						chat: {
+							/**
+							 * C​h​a​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​h​a​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​e​d​i​t
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​h​a​t​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​b​e​ ​e​d​i​t​e​d​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							longDesc: string
+						}
+						message_id: {
+							/**
+							 * M​e​s​s​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​e​d​i​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​b​e​ ​e​d​i​t​e​d
+							 */
+							longDesc: string
+						}
+						text: {
+							/**
+							 * N​e​w​ ​T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​f​o​r​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​t​e​x​t​ ​t​h​a​t​ ​w​i​l​l​ ​r​e​p​l​a​c​e​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t
+							 */
+							longDesc: string
+						}
+						parse_mode: {
+							/**
+							 * T​e​x​t​ ​F​o​r​m​a​t
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​f​o​r​m​a​t​ ​t​h​e​ ​n​e​w​ ​m​e​s​s​a​g​e​ ​t​e​x​t
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​f​o​r​m​a​t​t​i​n​g​ ​m​o​d​e​ ​f​o​r​ ​t​h​e​ ​t​e​x​t​ ​(​p​l​a​i​n​ ​t​e​x​t​,​ ​M​a​r​k​d​o​w​n​,​ ​M​a​r​k​d​o​w​n​ ​V​2​,​ ​o​r​ ​H​T​M​L​)
+							 */
+							longDesc: string
+						}
+						disable_web_page_preview: {
+							/**
+							 * D​i​s​a​b​l​e​ ​W​e​b​ ​P​a​g​e​ ​P​r​e​v​i​e​w
+							 */
+							displayName: string
+							/**
+							 * D​i​s​a​b​l​e​ ​a​u​t​o​m​a​t​i​c​ ​l​i​n​k​ ​p​r​e​v​i​e​w​s
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​l​i​n​k​s​ ​i​n​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​w​i​l​l​ ​n​o​t​ ​s​h​o​w​ ​a​u​t​o​m​a​t​i​c​ ​p​r​e​v​i​e​w​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				pin_chat_message: {
+					/**
+					 * P​i​n​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * P​i​n​ ​a​ ​m​e​s​s​a​g​e​ ​i​n​ ​a​ ​g​r​o​u​p​ ​o​r​ ​c​h​a​n​n​e​l
+					 */
+					shortDesc: string
+					/**
+					 * P​i​n​ ​a​n​ ​i​m​p​o​r​t​a​n​t​ ​m​e​s​s​a​g​e​ ​t​o​ ​t​h​e​ ​t​o​p​ ​o​f​ ​a​ ​g​r​o​u​p​ ​o​r​ ​c​h​a​n​n​e​l​ ​c​h​a​t​ ​f​o​r​ ​a​l​l​ ​m​e​m​b​e​r​s​ ​t​o​ ​s​e​e
+					 */
+					longDesc: string
+					/**
+					 * M​e​s​s​a​g​e​ ​M​a​n​a​g​e​m​e​n​t
+					 */
+					group: string
+					options: {
+						chat: {
+							/**
+							 * C​h​a​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​h​a​t​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​s​h​o​u​l​d​ ​b​e​ ​p​i​n​n​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​g​r​o​u​p​ ​o​r​ ​c​h​a​n​n​e​l​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​p​i​n​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							longDesc: string
+						}
+						message_id: {
+							/**
+							 * M​e​s​s​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​p​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​b​e​ ​p​i​n​n​e​d
+							 */
+							longDesc: string
+						}
+						disable_notification: {
+							/**
+							 * P​i​n​ ​S​i​l​e​n​t​l​y
+							 */
+							displayName: string
+							/**
+							 * P​i​n​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​w​i​t​h​o​u​t​ ​n​o​t​i​f​i​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​w​i​l​l​ ​b​e​ ​p​i​n​n​e​d​ ​w​i​t​h​o​u​t​ ​s​e​n​d​i​n​g​ ​a​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​t​o​ ​g​r​o​u​p​ ​m​e​m​b​e​r​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				unpin_chat_message: {
+					/**
+					 * U​n​p​i​n​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * U​n​p​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​s​s​a​g​e​ ​o​r​ ​a​l​l​ ​p​i​n​n​e​d​ ​m​e​s​s​a​g​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​ ​a​ ​p​i​n​n​e​d​ ​m​e​s​s​a​g​e​ ​f​r​o​m​ ​a​ ​g​r​o​u​p​ ​o​r​ ​c​h​a​n​n​e​l​,​ ​o​r​ ​u​n​p​i​n​ ​a​l​l​ ​c​u​r​r​e​n​t​l​y​ ​p​i​n​n​e​d​ ​m​e​s​s​a​g​e​s
+					 */
+					longDesc: string
+					/**
+					 * M​e​s​s​a​g​e​ ​M​a​n​a​g​e​m​e​n​t
+					 */
+					group: string
+					options: {
+						chat: {
+							/**
+							 * C​h​a​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​h​a​t​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​s​h​o​u​l​d​ ​b​e​ ​u​n​p​i​n​n​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​g​r​o​u​p​ ​o​r​ ​c​h​a​n​n​e​l​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​n​p​i​n​ ​m​e​s​s​a​g​e​s
+							 */
+							longDesc: string
+						}
+						message_id: {
+							/**
+							 * M​e​s​s​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​u​n​p​i​n​ ​(​l​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​u​n​p​i​n​ ​a​l​l​)
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​m​e​s​s​a​g​e​ ​t​o​ ​u​n​p​i​n​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​u​n​p​i​n​ ​a​l​l​ ​p​i​n​n​e​d​ ​m​e​s​s​a​g​e​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_message: {
+					/**
+					 * D​e​l​e​t​e​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​s​s​a​g​e​ ​f​r​o​m​ ​a​ ​c​h​a​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​ ​a​ ​m​e​s​s​a​g​e​ ​f​r​o​m​ ​t​h​e​ ​c​h​a​t​.​ ​T​h​e​ ​b​o​t​ ​c​a​n​ ​d​e​l​e​t​e​ ​i​t​s​ ​o​w​n​ ​m​e​s​s​a​g​e​s​ ​a​n​d​ ​m​e​s​s​a​g​e​s​ ​f​r​o​m​ ​o​t​h​e​r​ ​u​s​e​r​s​ ​i​f​ ​i​t​ ​h​a​s​ ​a​d​m​i​n​ ​p​r​i​v​i​l​e​g​e​s​.
+					 */
+					longDesc: string
+					/**
+					 * M​e​s​s​a​g​e​ ​M​a​n​a​g​e​m​e​n​t
+					 */
+					group: string
+					options: {
+						chat: {
+							/**
+							 * C​h​a​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​h​a​t​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​s​h​o​u​l​d​ ​b​e​ ​d​e​l​e​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​h​a​t​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​b​e​ ​d​e​l​e​t​e​d​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							longDesc: string
+						}
+						message_id: {
+							/**
+							 * M​e​s​s​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​b​e​ ​d​e​l​e​t​e​d​ ​f​r​o​m​ ​t​h​e​ ​c​h​a​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_chats: {
+					/**
+					 * L​i​s​t​ ​R​e​c​e​n​t​ ​C​h​a​t​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​a​ ​l​i​s​t​ ​o​f​ ​r​e​c​e​n​t​ ​c​h​a​t​s​ ​t​h​e​ ​b​o​t​ ​h​a​s​ ​i​n​t​e​r​a​c​t​e​d​ ​w​i​t​h
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​h​a​t​s​,​ ​g​r​o​u​p​s​,​ ​a​n​d​ ​c​h​a​n​n​e​l​s​ ​w​h​e​r​e​ ​t​h​e​ ​b​o​t​ ​h​a​s​ ​r​e​c​e​n​t​l​y​ ​r​e​c​e​i​v​e​d​ ​m​e​s​s​a​g​e​s​ ​o​r​ ​i​n​t​e​r​a​c​t​i​o​n​s
+					 */
+					longDesc: string
+					/**
+					 * C​h​a​t​ ​I​n​f​o​r​m​a​t​i​o​n
+					 */
+					group: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​h​a​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​e​n​t​ ​c​h​a​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​(​d​e​f​a​u​l​t​:​ ​1​0​)
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_message: {
+					/**
+					 * N​e​w​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​m​e​s​s​a​g​e​ ​i​s​ ​r​e​c​e​i​v​e​d​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​h​a​t
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​ ​c​h​a​t​ ​f​o​r​ ​n​e​w​ ​i​n​c​o​m​i​n​g​ ​m​e​s​s​a​g​e​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​a​u​t​o​m​a​t​i​o​n​ ​w​o​r​k​f​l​o​w​s​ ​w​h​e​n​ ​m​e​s​s​a​g​e​s​ ​a​r​e​ ​r​e​c​e​i​v​e​d​ ​f​r​o​m​ ​u​s​e​r​s​ ​o​r​ ​o​t​h​e​r​ ​b​o​t​s
+					 */
+					longDesc: string
+					options: {
+						chat: {
+							/**
+							 * C​h​a​t​ ​t​o​ ​M​o​n​i​t​o​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​h​a​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​m​e​s​s​a​g​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​c​h​a​t​,​ ​g​r​o​u​p​,​ ​o​r​ ​c​h​a​n​n​e​l​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​t​e​c​t​ ​n​e​w​ ​i​n​c​o​m​i​n​g​ ​m​e​s​s​a​g​e​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -125588,6 +126328,746 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Use this cursor value to retrieve the next page of posts. Leave empty to get the first page of results.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		Telegram: {
+			/**
+			 * Telegram
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect and interact with Telegram via a bot
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Connect a Telegram Bot using its Bot Token to send messages and handle incoming updates. Authentication is done solely with the Bot Token issued by @BotFather; no user login is required.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				send_message: {
+					/**
+					 * Send Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a text message to a chat
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Send a text message with optional formatting to any chat, group, or channel accessible by your bot
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Messaging
+					 */
+					group: () => LocalizedString
+					options: {
+						chat: {
+							/**
+							 * Chat
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The chat to send the message to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the chat, group, or channel where you want to send the message
+							 */
+							longDesc: () => LocalizedString
+						}
+						format: {
+							/**
+							 * Text Format
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to format the message text
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the formatting mode for the message (plain text, Markdown, Markdown V2, or HTML)
+							 */
+							longDesc: () => LocalizedString
+						}
+						message: {
+							/**
+							 * Message Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The text content of the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The message content to send. Can include formatting depending on the selected format mode
+							 */
+							longDesc: () => LocalizedString
+						}
+						disable_link_preview: {
+							/**
+							 * Disable Link Preview
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Disable automatic link previews
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, links in the message will not show automatic previews
+							 */
+							longDesc: () => LocalizedString
+						}
+						disable_notification: {
+							/**
+							 * Send Silently
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Send the message without notification sound
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, users will receive the message without notification sound
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				send_photo: {
+					/**
+					 * Send Photo
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a photo with optional caption to a chat
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Upload and send an image file to any chat, group, or channel with optional caption and formatting
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Messaging
+					 */
+					group: () => LocalizedString
+					options: {
+						chat: {
+							/**
+							 * Chat
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The chat to send the photo to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the chat, group, or channel where you want to send the photo
+							 */
+							longDesc: () => LocalizedString
+						}
+						photo: {
+							/**
+							 * Photo File
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The image file to send
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Upload the image file (JPG, PNG, GIF, etc.) to send to the chat
+							 */
+							longDesc: () => LocalizedString
+						}
+						caption_format: {
+							/**
+							 * Caption Format
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to format the caption text
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the formatting mode for the photo caption
+							 */
+							longDesc: () => LocalizedString
+						}
+						caption: {
+							/**
+							 * Photo Caption
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional caption for the photo
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Text description or caption to accompany the photo
+							 */
+							longDesc: () => LocalizedString
+						}
+						protect_content: {
+							/**
+							 * Protect Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Protect content from forwarding and saving
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, the photo cannot be forwarded or saved by users
+							 */
+							longDesc: () => LocalizedString
+						}
+						disable_notification: {
+							/**
+							 * Send Silently
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Send the photo without notification sound
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, users will receive the photo without notification sound
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				send_poll: {
+					/**
+					 * Send Poll
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create and send a poll or quiz to a chat
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create interactive polls or quizzes with multiple answer options, perfect for gathering feedback or testing knowledge
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Messaging
+					 */
+					group: () => LocalizedString
+					options: {
+						chat: {
+							/**
+							 * Chat
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The chat to send the poll to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the chat, group, or channel where you want to send the poll
+							 */
+							longDesc: () => LocalizedString
+						}
+						question: {
+							/**
+							 * Poll Question
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The main question for the poll
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The question that users will answer in the poll
+							 */
+							longDesc: () => LocalizedString
+						}
+						answers: {
+							/**
+							 * Answer Options
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of possible answers (2-10 options)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The answer choices that users can select from. Must have between 2 and 10 options
+							 */
+							longDesc: () => LocalizedString
+						}
+						is_anonymous: {
+							/**
+							 * Anonymous Poll
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Should the poll be anonymous?
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, user votes will be anonymous. If disabled, votes will be visible to other users
+							 */
+							longDesc: () => LocalizedString
+						}
+						poll_type: {
+							/**
+							 * Poll Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Regular poll or quiz with correct answers
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose between a regular poll or a quiz where you can specify correct answers
+							 */
+							longDesc: () => LocalizedString
+						}
+						allows_multiple_answers: {
+							/**
+							 * Multiple Answers
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Allow users to select multiple options
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, users can select more than one answer option (only for regular polls)
+							 */
+							longDesc: () => LocalizedString
+						}
+						correct_option_id: {
+							/**
+							 * Correct Answer
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The correct answer for quiz polls
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select which answer option is correct (zero-based index, only for quiz polls)
+							 */
+							longDesc: () => LocalizedString
+						}
+						explanation: {
+							/**
+							 * Explanation
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Explanation text for the correct answer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional explanation that appears when users answer the quiz
+							 */
+							longDesc: () => LocalizedString
+						}
+						explanation_parse_mode: {
+							/**
+							 * Explanation Format
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to format the explanation text
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the formatting mode for the explanation text
+							 */
+							longDesc: () => LocalizedString
+						}
+						open_period: {
+							/**
+							 * Open Period
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How long the poll stays open (in seconds)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Duration in seconds that the poll will accept votes (5-600 seconds)
+							 */
+							longDesc: () => LocalizedString
+						}
+						close_date: {
+							/**
+							 * Close Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific date/time to close the poll
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Unix timestamp for when the poll should automatically close
+							 */
+							longDesc: () => LocalizedString
+						}
+						is_closed: {
+							/**
+							 * Send Closed Poll
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Send the poll in a closed state
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, the poll will be sent already closed (for demonstration purposes)
+							 */
+							longDesc: () => LocalizedString
+						}
+						disable_notification: {
+							/**
+							 * Send Silently
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Send the poll without notification sound
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, users will receive the poll without notification sound
+							 */
+							longDesc: () => LocalizedString
+						}
+						protect_content: {
+							/**
+							 * Protect Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Protect content from forwarding and saving
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, the poll cannot be forwarded by users
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				edit_message: {
+					/**
+					 * Edit Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Edit the text of a previously sent message
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Modify the text content of a message that was previously sent by the bot. Only works with text messages sent by the bot.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Message Management
+					 */
+					group: () => LocalizedString
+					options: {
+						chat: {
+							/**
+							 * Chat
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The chat containing the message to edit
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the chat where the message to be edited is located
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_id: {
+							/**
+							 * Message ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the message to edit
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the message that should be edited
+							 */
+							longDesc: () => LocalizedString
+						}
+						text: {
+							/**
+							 * New Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new text content for the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated text that will replace the current message content
+							 */
+							longDesc: () => LocalizedString
+						}
+						parse_mode: {
+							/**
+							 * Text Format
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to format the new message text
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the formatting mode for the text (plain text, Markdown, Markdown V2, or HTML)
+							 */
+							longDesc: () => LocalizedString
+						}
+						disable_web_page_preview: {
+							/**
+							 * Disable Web Page Preview
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Disable automatic link previews
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, links in the message will not show automatic previews
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				pin_chat_message: {
+					/**
+					 * Pin Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Pin a message in a group or channel
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Pin an important message to the top of a group or channel chat for all members to see
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Message Management
+					 */
+					group: () => LocalizedString
+					options: {
+						chat: {
+							/**
+							 * Chat
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The chat where the message should be pinned
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the group or channel where you want to pin the message
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_id: {
+							/**
+							 * Message ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the message to pin
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the message that should be pinned
+							 */
+							longDesc: () => LocalizedString
+						}
+						disable_notification: {
+							/**
+							 * Pin Silently
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pin the message without notification
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, the message will be pinned without sending a notification to group members
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				unpin_chat_message: {
+					/**
+					 * Unpin Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Unpin a specific message or all pinned messages
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Remove a pinned message from a group or channel, or unpin all currently pinned messages
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Message Management
+					 */
+					group: () => LocalizedString
+					options: {
+						chat: {
+							/**
+							 * Chat
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The chat where the message should be unpinned
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the group or channel where you want to unpin messages
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_id: {
+							/**
+							 * Message ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the message to unpin (leave empty to unpin all)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the specific message to unpin. Leave empty to unpin all pinned messages
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_message: {
+					/**
+					 * Delete Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a specific message from a chat
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Remove a message from the chat. The bot can delete its own messages and messages from other users if it has admin privileges.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Message Management
+					 */
+					group: () => LocalizedString
+					options: {
+						chat: {
+							/**
+							 * Chat
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The chat where the message should be deleted
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the chat where the message to be deleted is located
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_id: {
+							/**
+							 * Message ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the message to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the message that should be deleted from the chat
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_chats: {
+					/**
+					 * List Recent Chats
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get a list of recent chats the bot has interacted with
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of chats, groups, and channels where the bot has recently received messages or interactions
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Chat Information
+					 */
+					group: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of chats to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of recent chats to retrieve (default: 10)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_message: {
+					/**
+					 * New Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new message is received in a specific chat
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors a chat for new incoming messages and triggers automation workflows when messages are received from users or other bots
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						chat: {
+							/**
+							 * Chat to Monitor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The chat to monitor for new messages
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific chat, group, or channel where you want to detect new incoming messages
 							 */
 							longDesc: () => LocalizedString
 						}

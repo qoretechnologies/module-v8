@@ -118,7 +118,9 @@ describe('Google Docs', () => {
       expect(allowed_values.length).toBeGreaterThan(0);
       expect(allowed_values[0].value).toBeDefined();
 
-      userVideo = allowed_values[0].value;
+      userVideo =
+        allowed_values.find((value) => value.display_name === 'Test Video Update')?.value ||
+        allowed_values[0].value;
     });
 
     it('Should get user playlists allowed values', async () => {
@@ -205,8 +207,6 @@ describe('Google Docs', () => {
 
       expect(response).toBeDefined();
       expect(response.id).toBeDefined();
-
-      createdPlaylist = response.id;
     });
 
     it('Should list user subscriptions', async () => {
@@ -237,6 +237,8 @@ describe('Google Docs', () => {
 
       expect(response).toBeDefined();
       expect(response.id).toBeDefined();
+
+      createdPlaylist = response.id;
     });
 
     it('Should add a video to playlist', async () => {

@@ -21,8 +21,10 @@ import { getGoogleDriveFolderIdAllowedValues } from '../apps/google-drive/helper
 import { getGoogleDriveUserDomainDefaultValue } from '../apps/google-drive/helpers/get-organization-domain-default-value';
 import { delay } from '../global/helpers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
+import { configDotenv } from 'dotenv';
 
 Debugger.level = DebugLevels.Verbose;
+configDotenv({ path: '.env' });
 
 describe('Google Drive', () => {
   const base_context = {
