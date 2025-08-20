@@ -17,7 +17,7 @@ export const GetTelegramRecentChatsAllowedValues: TQoreGetAllowedValuesFunction<
   const client = createTelegramClient(token);
   const maxIterations = 10;
   const limit = 100;
-  let offset = -100;
+  let offset = 0;
   const updates: Update[] = [];
 
   for (let i = 0; i < maxIterations; i++) {
