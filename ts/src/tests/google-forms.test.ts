@@ -13,8 +13,10 @@ import { getGoogleFormQuestionIdAllowedValues } from '../apps/google-forms/helpe
 import { getGoogleFormResponseIdAllowedValues } from '../apps/google-forms/helpers/get-response-id-allowed-values';
 import { delay } from '../global/helpers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
+import { configDotenv } from 'dotenv';
 
 Debugger.level = DebugLevels.Verbose;
+configDotenv({ path: '.env' });
 
 describe('Google Drive', () => {
   const base_context = {
@@ -75,7 +77,10 @@ describe('Google Drive', () => {
       expect(allowed_values).toBeDefined();
       expect(allowed_values.length).toBeGreaterThan(0);
       expect(allowed_values[0].value).toBeDefined();
-      formId = allowed_values[0].value;
+
+      formId =
+        allowed_values.find((value) => value.display_name === 'Event Feedback')?.value ||
+        allowed_values[0].value;
     });
 
     it('Should get Google Form Question IDs', async () => {

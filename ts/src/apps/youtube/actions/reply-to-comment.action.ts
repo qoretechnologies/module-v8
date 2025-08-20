@@ -8,7 +8,8 @@ const action = 'reply_to_comment';
 const options = {
   parentId: {
     type: 'string',
-    required: true,
+    required: false,
+    preselected: true,
   },
   textOriginal: {
     type: 'string',
@@ -22,12 +23,14 @@ const replyToComment = QoreAppCreator.createLocalizedAction<typeof options>({
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const { token, parentId, textOriginal } = getQoreContextRequiredValues({
+    const { token, textOriginal } = getQoreContextRequiredValues({
       context: { ...context, opts: obj },
       connectionFields: ['token'],
       optionFields: ['parentId', 'textOriginal'],
       ErrorClass: YouTubeError,
     });
+
+    const parentId = obj?.parentId;
 
     const client = createYouTubeClient(token);
 
@@ -36,7 +39,7 @@ const replyToComment = QoreAppCreator.createLocalizedAction<typeof options>({
         part: ['snippet'],
         requestBody: {
           snippet: {
-            parentId,
+            ...(parentId && { parentId }),
             textOriginal,
           },
         },

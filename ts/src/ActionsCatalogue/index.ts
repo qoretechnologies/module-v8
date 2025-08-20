@@ -69,6 +69,7 @@ import linkedin from '../apps/linkedin';
 import canva from '../apps/canva';
 import figma from '../apps/figma';
 import linkedinOrganizations from '../apps/linkedin-organizations';
+import telegram from '../apps/telegram';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -131,6 +132,7 @@ const NEW_APPS = {
   shopify,
   stripe,
   teams,
+  telegram,
   typeform,
   webflow,
   xero,

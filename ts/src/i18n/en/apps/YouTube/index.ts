@@ -5,6 +5,26 @@ const YouTubeAppEn = {
   longDesc:
     'YouTube integration allows you to manage videos, playlists, channels, and interact with the YouTube platform programmatically.',
   actions: {
+    list_user_subscriptions: {
+      displayName: 'List User Subscriptions',
+      shortDesc: 'Get a list of YouTube channel subscriptions for the authenticated user',
+      longDesc:
+        'Retrieves a paginated list of YouTube channels that the authenticated user is subscribed to, including channel details and thumbnails',
+      options: {
+        maxResults: {
+          displayName: 'Maximum Results',
+          shortDesc: 'Maximum number of subscriptions to return',
+          longDesc:
+            'The maximum number of subscription items to return in the response (1-50, default is 25)',
+        },
+        nextPageToken: {
+          displayName: 'Next Page Token',
+          shortDesc: 'Token for pagination to get the next page of results',
+          longDesc:
+            'The token that can be used as the value of the pageToken parameter to retrieve the next page in the result set',
+        },
+      },
+    },
     get_channel_id_from_url: {
       displayName: 'Get Channel ID from URL',
       shortDesc: 'Extract YouTube channel ID from various URL formats',
@@ -88,7 +108,8 @@ const YouTubeAppEn = {
         q: {
           displayName: 'Search Query',
           shortDesc: 'Keywords to search for',
-          longDesc: 'Search terms or keywords to find videos on YouTube',
+          longDesc:
+            'Your request can also use the Boolean NOT (-) and OR (|) operators to exclude videos or to find videos that are associated with one of several search terms. For example, to search for videos matching either "boating" or "sailing", set the q parameter value to boating|sailing. Similarly, to search for videos matching either "boating" or "sailing" but not "fishing", set the q parameter value to boating|sailing -fishing.',
         },
         order: {
           displayName: 'Sort Order',
@@ -286,9 +307,9 @@ const YouTubeAppEn = {
       },
     },
     reply_to_comment: {
-      displayName: 'Reply to Comment',
-      shortDesc: 'Reply to a YouTube comment',
-      longDesc: 'Post a reply to an existing comment on a YouTube video',
+      displayName: 'Create or Reply to Comment',
+      shortDesc: 'Reply to a YouTube comment or create one',
+      longDesc: 'Post a reply to an existing comment or create a new one on a YouTube video',
       options: {
         parentId: {
           displayName: 'Parent Comment ID',
@@ -401,6 +422,11 @@ const YouTubeAppEn = {
       longDesc:
         "Monitors a specific YouTube channel for new video uploads and triggers when a new video is detected in the channel's uploads playlist.",
       options: {
+        channel_url: {
+          displayName: 'Channel URL',
+          shortDesc: 'The YouTube channel URL to monitor for new videos',
+          longDesc: 'Enter the full URL of the YouTube channel to monitor for new video uploads',
+        },
         channel: {
           displayName: 'Channel',
           shortDesc: 'The YouTube channel to monitor',
@@ -414,6 +440,11 @@ const YouTubeAppEn = {
       longDesc:
         'Monitors for new live streams that are currently broadcasting. Can monitor all live streams or filter by a specific channel.',
       options: {
+        channel_url: {
+          displayName: 'Channel URL',
+          shortDesc: 'The YouTube channel URL to monitor for livestreams',
+          longDesc: 'Enter the full URL of the YouTube channel to monitor for livestreams',
+        },
         channel: {
           displayName: 'Channel',
           shortDesc: 'The YouTube channel to monitor for livestreams',
@@ -444,7 +475,8 @@ const YouTubeAppEn = {
         query: {
           displayName: 'Search Query',
           shortDesc: 'The search terms to monitor',
-          longDesc: 'Enter the search query to monitor for new matching videos on YouTube',
+          longDesc:
+            'Your request can also use the Boolean NOT (-) and OR (|) operators to exclude videos or to find videos that are associated with one of several search terms. For example, to search for videos matching either "boating" or "sailing", set the q parameter value to boating|sailing. Similarly, to search for videos matching either "boating" or "sailing" but not "fishing", set the q parameter value to boating|sailing -fishing.',
         },
       },
     },

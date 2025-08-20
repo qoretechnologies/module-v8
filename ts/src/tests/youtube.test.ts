@@ -6,6 +6,7 @@ import {
   GetYouTubeReport,
   ListYouTubeCategories,
   ListYouTubeUserChannels,
+  ListYouTubeUserSubscriptions,
   ListYouTubeVideoComments,
   ListYouTubeVideos,
   ReplyToYouTubeComment,
@@ -25,6 +26,7 @@ import {
   YouTubeNewVideoCommentTrigger,
 } from '../apps/youtube/triggers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
+import { getYouTubeUserSubscriptionsAllowedValues } from '../apps/youtube/helpers/get-user-subscriptions-allowed-values';
 
 configDotenv({ path: '.env' });
 Debugger.level = DebugLevels.Verbose;
@@ -91,6 +93,14 @@ describe('Google Docs', () => {
       expect(allowed_values[0].value).toBeDefined();
     });
 
+    it('Should get user subscriptions allowed values', async () => {
+      const allowed_values = await getYouTubeUserSubscriptionsAllowedValues(base_context);
+
+      expect(allowed_values).toBeDefined();
+      expect(allowed_values.length).toBeGreaterThan(0);
+      expect(allowed_values[0].value).toBeDefined();
+    });
+
     it('Should get user channel allowed values', async () => {
       const allowed_values = await getYouTubeUserChannelsAllowedValues(base_context);
 
@@ -108,7 +118,9 @@ describe('Google Docs', () => {
       expect(allowed_values.length).toBeGreaterThan(0);
       expect(allowed_values[0].value).toBeDefined();
 
-      userVideo = allowed_values[0].value;
+      userVideo =
+        allowed_values.find((value) => value.display_name === 'Test Video Update')?.value ||
+        allowed_values[0].value;
     });
 
     it('Should get user playlists allowed values', async () => {
@@ -195,8 +207,17 @@ describe('Google Docs', () => {
 
       expect(response).toBeDefined();
       expect(response.id).toBeDefined();
+    });
 
-      createdPlaylist = response.id;
+    it('Should list user subscriptions', async () => {
+      const action = ListYouTubeUserSubscriptions;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      const response = await action.api_function({}, undefined, base_context);
+
+      expect(response).toBeDefined();
+      expect(Array.isArray(response)).toBeTruthy();
     });
 
     it('Should create a playlist', async () => {
@@ -216,6 +237,8 @@ describe('Google Docs', () => {
 
       expect(response).toBeDefined();
       expect(response.id).toBeDefined();
+
+      createdPlaylist = response.id;
     });
 
     it('Should add a video to playlist', async () => {
