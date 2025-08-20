@@ -19,11 +19,11 @@ export const QUICKBOOKS_CONN_OPTIONS = {
     default_value: 'production',
     allowed_values: [
       {
-        value: 'production',
+        value: 'quickbooks',
         display_name: 'Production',
       },
       {
-        value: 'sandbox',
+        value: 'sandbox-quickbooks',
         display_name: 'Sandbox',
       },
     ],
