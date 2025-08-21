@@ -63542,6 +63542,1760 @@ type RootTranslation = {
 				}
 			}
 		}
+		Brevo: {
+			/**
+			 * B​r​e​v​o
+			 */
+			displayName: string
+			/**
+			 * B​r​e​v​o​ ​i​s​ ​a​ ​m​a​r​k​e​t​i​n​g​ ​p​l​a​t​f​o​r​m​ ​f​o​r​ ​e​m​a​i​l​,​ ​S​M​S​,​ ​a​n​d​ ​a​u​t​o​m​a​t​i​o​n​ ​c​a​m​p​a​i​g​n​s​.
+			 */
+			shortDesc: string
+			/**
+			 * B​r​e​v​o​ ​(​f​o​r​m​e​r​l​y​ ​S​e​n​d​i​n​b​l​u​e​)​ ​i​s​ ​a​ ​m​a​r​k​e​t​i​n​g​ ​a​u​t​o​m​a​t​i​o​n​ ​p​l​a​t​f​o​r​m​ ​t​h​a​t​ ​e​n​a​b​l​e​s​ ​b​u​s​i​n​e​s​s​e​s​ ​t​o​ ​c​o​m​m​u​n​i​c​a​t​e​ ​w​i​t​h​ ​c​u​s​t​o​m​e​r​s​ ​t​h​r​o​u​g​h​ ​e​m​a​i​l​,​ ​S​M​S​,​ ​c​h​a​t​,​ ​a​n​d​ ​m​o​r​e​.​ ​I​t​ ​o​f​f​e​r​s​ ​t​o​o​l​s​ ​f​o​r​ ​c​a​m​p​a​i​g​n​ ​m​a​n​a​g​e​m​e​n​t​,​ ​c​o​n​t​a​c​t​ ​s​e​g​m​e​n​t​a​t​i​o​n​,​ ​t​r​a​n​s​a​c​t​i​o​n​a​l​ ​e​m​a​i​l​s​,​ ​a​n​d​ ​c​u​s​t​o​m​e​r​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​m​a​n​a​g​e​m​e​n​t​.​ ​B​r​e​v​o​ ​h​e​l​p​s​ ​b​u​s​i​n​e​s​s​e​s​ ​b​u​i​l​d​ ​s​t​r​o​n​g​e​r​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​ ​w​i​t​h​ ​t​h​e​i​r​ ​a​u​d​i​e​n​c​e​ ​b​y​ ​p​r​o​v​i​d​i​n​g​ ​s​c​a​l​a​b​l​e​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​ ​a​n​d​ ​a​u​t​o​m​a​t​i​o​n​ ​s​o​l​u​t​i​o​n​s​.
+			 */
+			longDesc: string
+			actions: {
+				get_contact: {
+					/**
+					 * G​e​t​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​c​o​n​t​a​c​t​ ​b​y​ ​i​d​e​n​t​i​f​i​e​r
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​.​ ​Y​o​u​ ​c​a​n​ ​i​d​e​n​t​i​f​y​ ​c​o​n​t​a​c​t​s​ ​u​s​i​n​g​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​,​ ​c​o​n​t​a​c​t​ ​I​D​,​ ​p​h​o​n​e​ ​n​u​m​b​e​r​,​ ​e​x​t​e​r​n​a​l​ ​I​D​,​ ​W​h​a​t​s​A​p​p​ ​I​D​,​ ​o​r​ ​l​a​n​d​l​i​n​e​ ​n​u​m​b​e​r​.
+					 */
+					longDesc: string
+					/**
+					 * C​o​n​t​a​c​t​s
+					 */
+					group: string
+					options: {
+						identifier: {
+							/**
+							 * C​o​n​t​a​c​t​ ​I​d​e​n​t​i​f​i​e​r
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​ ​i​d​e​n​t​i​f​i​e​r​ ​(​e​m​a​i​l​,​ ​I​D​,​ ​p​h​o​n​e​,​ ​e​t​c​.​)
+							 */
+							shortDesc: string
+							/**
+							 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.​ ​C​a​n​ ​b​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​,​ ​c​o​n​t​a​c​t​ ​I​D​,​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​(​S​M​S​)​,​ ​e​x​t​e​r​n​a​l​ ​I​D​,​ ​W​h​a​t​s​A​p​p​ ​I​D​,​ ​o​r​ ​l​a​n​d​l​i​n​e​ ​n​u​m​b​e​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_contact: {
+					/**
+					 * C​r​e​a​t​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​n​ ​B​r​e​v​o​.​ ​C​o​n​t​a​c​t​s​ ​c​a​n​ ​b​e​ ​c​r​e​a​t​e​d​ ​w​i​t​h​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​,​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​(​w​i​t​h​ ​c​o​u​n​t​r​y​ ​c​o​d​e​)​,​ ​o​r​ ​e​x​t​e​r​n​a​l​ ​I​D​.​ ​C​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​s​ ​a​n​d​ ​l​i​s​t​ ​a​s​s​i​g​n​m​e​n​t​s​ ​c​a​n​ ​b​e​ ​i​n​c​l​u​d​e​d​.
+					 */
+					longDesc: string
+					/**
+					 * C​o​n​t​a​c​t​s
+					 */
+					group: string
+					options: {
+						email: {
+							/**
+							 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * P​r​i​m​a​r​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.​ ​R​e​q​u​i​r​e​d​ ​f​o​r​ ​c​r​e​a​t​i​n​g​ ​a​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						extId: {
+							/**
+							 * E​x​t​e​r​n​a​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​e​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​f​r​o​m​ ​y​o​u​r​ ​s​y​s​t​e​m​.
+							 */
+							longDesc: string
+						}
+						listIds: {
+							/**
+							 * L​i​s​t​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​s​ ​t​o​ ​a​d​d​ ​c​o​n​t​a​c​t​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * A​r​r​a​y​ ​o​f​ ​l​i​s​t​ ​I​D​s​ ​t​o​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​a​d​d​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​u​p​o​n​ ​c​r​e​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						emailBlacklisted: {
+							/**
+							 * E​m​a​i​l​ ​B​l​a​c​k​l​i​s​t​e​d
+							 */
+							displayName: string
+							/**
+							 * B​l​a​c​k​l​i​s​t​ ​c​o​n​t​a​c​t​ ​f​r​o​m​ ​e​m​a​i​l​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​t​r​u​e​ ​t​o​ ​b​l​a​c​k​l​i​s​t​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​f​r​o​m​ ​r​e​c​e​i​v​i​n​g​ ​e​m​a​i​l​ ​c​a​m​p​a​i​g​n​s​.
+							 */
+							longDesc: string
+						}
+						smsBlacklisted: {
+							/**
+							 * S​M​S​ ​B​l​a​c​k​l​i​s​t​e​d
+							 */
+							displayName: string
+							/**
+							 * B​l​a​c​k​l​i​s​t​ ​c​o​n​t​a​c​t​ ​f​r​o​m​ ​S​M​S
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​t​r​u​e​ ​t​o​ ​b​l​a​c​k​l​i​s​t​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​f​r​o​m​ ​r​e​c​e​i​v​i​n​g​ ​S​M​S​ ​c​a​m​p​a​i​g​n​s​.
+							 */
+							longDesc: string
+						}
+						attributes: {
+							/**
+							 * C​o​n​t​a​c​t​ ​A​t​t​r​i​b​u​t​e​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​c​o​n​t​a​c​t​ ​a​t​t​r​i​b​u​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​i​n​c​l​u​d​i​n​g​ ​n​a​m​e​,​ ​c​o​m​p​a​n​y​,​ ​p​h​o​n​e​ ​n​u​m​b​e​r​,​ ​a​n​d​ ​a​n​y​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​ ​d​e​f​i​n​e​d​ ​i​n​ ​y​o​u​r​ ​a​c​c​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_contact: {
+					/**
+					 * U​p​d​a​t​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​a​t​t​r​i​b​u​t​e​s​,​ ​e​m​a​i​l​ ​p​r​e​f​e​r​e​n​c​e​s​,​ ​l​i​s​t​ ​m​e​m​b​e​r​s​h​i​p​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​d​a​t​a​.​ ​C​o​n​t​a​c​t​ ​c​a​n​ ​b​e​ ​i​d​e​n​t​i​f​i​e​d​ ​b​y​ ​e​m​a​i​l​,​ ​I​D​,​ ​o​r​ ​o​t​h​e​r​ ​i​d​e​n​t​i​f​i​e​r​s​.
+					 */
+					longDesc: string
+					/**
+					 * C​o​n​t​a​c​t​s
+					 */
+					group: string
+					options: {
+						identifier: {
+							/**
+							 * C​o​n​t​a​c​t​ ​I​d​e​n​t​i​f​i​e​r
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​u​p​d​a​t​e​.​ ​C​a​n​ ​b​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​,​ ​c​o​n​t​a​c​t​ ​I​D​,​ ​p​h​o​n​e​ ​n​u​m​b​e​r​,​ ​e​x​t​e​r​n​a​l​ ​I​D​,​ ​W​h​a​t​s​A​p​p​ ​I​D​,​ ​o​r​ ​l​a​n​d​l​i​n​e​ ​n​u​m​b​e​r​.
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * N​e​w​ ​E​m​a​i​l​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * N​e​w​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						extId: {
+							/**
+							 * E​x​t​e​r​n​a​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * E​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​e​x​t​e​r​n​a​l​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​f​r​o​m​ ​y​o​u​r​ ​s​y​s​t​e​m​.
+							 */
+							longDesc: string
+						}
+						listIds: {
+							/**
+							 * A​d​d​ ​t​o​ ​L​i​s​t​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​s​ ​t​o​ ​a​d​d​ ​c​o​n​t​a​c​t​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * A​r​r​a​y​ ​o​f​ ​l​i​s​t​ ​I​D​s​ ​t​o​ ​a​d​d​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​o​.
+							 */
+							longDesc: string
+						}
+						unlinkListIds: {
+							/**
+							 * R​e​m​o​v​e​ ​f​r​o​m​ ​L​i​s​t​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​s​ ​t​o​ ​r​e​m​o​v​e​ ​c​o​n​t​a​c​t​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * A​r​r​a​y​ ​o​f​ ​l​i​s​t​ ​I​D​s​ ​t​o​ ​r​e​m​o​v​e​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​f​r​o​m​.
+							 */
+							longDesc: string
+						}
+						emailBlacklisted: {
+							/**
+							 * E​m​a​i​l​ ​B​l​a​c​k​l​i​s​t​e​d
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​b​l​a​c​k​l​i​s​t​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​e​m​a​i​l​ ​b​l​a​c​k​l​i​s​t​ ​s​t​a​t​u​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						smsBlacklisted: {
+							/**
+							 * S​M​S​ ​B​l​a​c​k​l​i​s​t​e​d
+							 */
+							displayName: string
+							/**
+							 * S​M​S​ ​b​l​a​c​k​l​i​s​t​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​S​M​S​ ​b​l​a​c​k​l​i​s​t​ ​s​t​a​t​u​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						attributes: {
+							/**
+							 * C​o​n​t​a​c​t​ ​A​t​t​r​i​b​u​t​e​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​ ​c​o​n​t​a​c​t​ ​a​t​t​r​i​b​u​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​c​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​i​n​c​l​u​d​i​n​g​ ​n​a​m​e​,​ ​c​o​m​p​a​n​y​,​ ​p​h​o​n​e​ ​n​u​m​b​e​r​,​ ​a​n​d​ ​a​n​y​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_contacts: {
+					/**
+					 * L​i​s​t​ ​C​o​n​t​a​c​t​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​a​l​l​ ​c​o​n​t​a​c​t​s​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​c​o​n​t​a​c​t​s​ ​i​n​ ​y​o​u​r​ ​a​c​c​o​u​n​t​ ​w​i​t​h​ ​p​a​g​i​n​a​t​i​o​n​,​ ​s​o​r​t​i​n​g​,​ ​a​n​d​ ​f​i​l​t​e​r​i​n​g​ ​o​p​t​i​o​n​s​.​ ​F​i​l​t​e​r​ ​b​y​ ​l​i​s​t​s​,​ ​a​t​t​r​i​b​u​t​e​s​,​ ​o​r​ ​o​t​h​e​r​ ​c​r​i​t​e​r​i​a​.
+					 */
+					longDesc: string
+					/**
+					 * C​o​n​t​a​c​t​s
+					 */
+					group: string
+					options: {
+						limit: {
+							/**
+							 * R​e​s​u​l​t​s​ ​L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​,​ ​m​a​x​i​m​u​m​ ​i​s​ ​1​0​0​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * P​a​g​e​ ​O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.​ ​U​s​e​ ​w​i​t​h​ ​l​i​m​i​t​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						sort: {
+							/**
+							 * S​o​r​t​ ​O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​ ​s​o​r​t​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​r​d​e​r​ ​t​o​ ​s​o​r​t​ ​c​o​n​t​a​c​t​s​ ​b​y​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						listIds: {
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​L​i​s​t​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​n​t​a​c​t​s​ ​b​y​ ​l​i​s​t​ ​m​e​m​b​e​r​s​h​i​p
+							 */
+							shortDesc: string
+							/**
+							 * A​r​r​a​y​ ​o​f​ ​l​i​s​t​ ​I​D​s​ ​t​o​ ​f​i​l​t​e​r​ ​c​o​n​t​a​c​t​s​.​ ​O​n​l​y​ ​c​o​n​t​a​c​t​s​ ​b​e​l​o​n​g​i​n​g​ ​t​o​ ​t​h​e​s​e​ ​l​i​s​t​s​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * A​t​t​r​i​b​u​t​e​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​o​n​t​a​c​t​ ​a​t​t​r​i​b​u​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​n​t​a​c​t​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​a​t​t​r​i​b​u​t​e​ ​v​a​l​u​e​s​ ​u​s​i​n​g​ ​e​q​u​a​l​s​ ​o​p​e​r​a​t​o​r​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * A​t​t​r​i​b​u​t​e​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * A​t​t​r​i​b​u​t​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * C​o​n​t​a​c​t​ ​a​t​t​r​i​b​u​t​e​ ​f​i​e​l​d​ ​n​a​m​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * F​i​l​t​e​r​ ​V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * V​a​l​u​e​ ​t​o​ ​m​a​t​c​h
+										 */
+										shortDesc: string
+										/**
+										 * V​a​l​u​e​ ​t​h​a​t​ ​t​h​e​ ​a​t​t​r​i​b​u​t​e​ ​m​u​s​t​ ​e​q​u​a​l​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				get_list: {
+					/**
+					 * G​e​t​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​l​i​s​t​ ​d​e​t​a​i​l​s
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​i​n​c​l​u​d​i​n​g​ ​s​u​b​s​c​r​i​b​e​r​ ​c​o​u​n​t​s​,​ ​c​a​m​p​a​i​g​n​ ​s​t​a​t​i​s​t​i​c​s​,​ ​a​n​d​ ​f​o​l​d​e​r​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					/**
+					 * L​i​s​t​s
+					 */
+					group: string
+					options: {
+						listId: {
+							/**
+							 * L​i​s​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_list: {
+					/**
+					 * C​r​e​a​t​e​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​f​o​l​d​e​r​.​ ​L​i​s​t​s​ ​a​r​e​ ​u​s​e​d​ ​t​o​ ​o​r​g​a​n​i​z​e​ ​a​n​d​ ​s​e​g​m​e​n​t​ ​y​o​u​r​ ​c​o​n​t​a​c​t​s​ ​f​o​r​ ​t​a​r​g​e​t​e​d​ ​c​a​m​p​a​i​g​n​s​.
+					 */
+					longDesc: string
+					/**
+					 * L​i​s​t​s
+					 */
+					group: string
+					options: {
+						name: {
+							/**
+							 * L​i​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * D​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+						folderId: {
+							/**
+							 * F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * F​o​l​d​e​r​ ​t​o​ ​c​r​e​a​t​e​ ​l​i​s​t​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * F​o​l​d​e​r​ ​w​h​e​r​e​ ​t​h​e​ ​l​i​s​t​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.​ ​R​e​q​u​i​r​e​d​ ​f​o​r​ ​l​i​s​t​ ​o​r​g​a​n​i​z​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_list: {
+					/**
+					 * U​p​d​a​t​e​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​l​i​s​t​ ​d​e​t​a​i​l​s
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​n​a​m​e​ ​o​r​ ​f​o​l​d​e​r​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​ ​l​i​s​t​.
+					 */
+					longDesc: string
+					/**
+					 * L​i​s​t​s
+					 */
+					group: string
+					options: {
+						listId: {
+							/**
+							 * L​i​s​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​e​w​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​l​i​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * N​e​w​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+						folderId: {
+							/**
+							 * N​e​w​ ​F​o​l​d​e​r
+							 */
+							displayName: string
+							/**
+							 * M​o​v​e​ ​t​o​ ​d​i​f​f​e​r​e​n​t​ ​f​o​l​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * N​e​w​ ​f​o​l​d​e​r​ ​I​D​ ​t​o​ ​m​o​v​e​ ​t​h​e​ ​l​i​s​t​ ​t​o​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_list: {
+					/**
+					 * D​e​l​e​t​e​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​c​o​n​t​a​c​t​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​a​ ​c​o​n​t​a​c​t​ ​l​i​s​t​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.​ ​C​o​n​t​a​c​t​s​ ​i​n​ ​t​h​e​ ​l​i​s​t​ ​w​i​l​l​ ​r​e​m​a​i​n​ ​i​n​ ​y​o​u​r​ ​a​c​c​o​u​n​t​.
+					 */
+					longDesc: string
+					/**
+					 * L​i​s​t​s
+					 */
+					group: string
+					options: {
+						listId: {
+							/**
+							 * L​i​s​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​t​o​ ​d​e​l​e​t​e​ ​p​e​r​m​a​n​e​n​t​l​y​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_lists: {
+					/**
+					 * L​i​s​t​ ​A​l​l​ ​L​i​s​t​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​a​l​l​ ​c​o​n​t​a​c​t​ ​l​i​s​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​c​o​n​t​a​c​t​ ​l​i​s​t​s​ ​i​n​ ​y​o​u​r​ ​a​c​c​o​u​n​t​ ​w​i​t​h​ ​p​a​g​i​n​a​t​i​o​n​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​o​p​t​i​o​n​s​.​ ​I​n​c​l​u​d​e​s​ ​s​u​b​s​c​r​i​b​e​r​ ​c​o​u​n​t​s​ ​a​n​d​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e​s​.
+					 */
+					longDesc: string
+					/**
+					 * L​i​s​t​s
+					 */
+					group: string
+					options: {
+						limit: {
+							/**
+							 * R​e​s​u​l​t​s​ ​L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​l​i​s​t​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​l​i​s​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * P​a​g​e​ ​O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​l​i​s​t​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​l​i​s​t​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						sort: {
+							/**
+							 * S​o​r​t​ ​O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​s​o​r​t​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​r​d​e​r​ ​t​o​ ​s​o​r​t​ ​l​i​s​t​s​ ​b​y​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_folders: {
+					/**
+					 * L​i​s​t​ ​F​o​l​d​e​r​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​a​l​l​ ​l​i​s​t​ ​f​o​l​d​e​r​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​f​o​l​d​e​r​s​ ​u​s​e​d​ ​t​o​ ​o​r​g​a​n​i​z​e​ ​c​o​n​t​a​c​t​ ​l​i​s​t​s​ ​w​i​t​h​ ​s​u​b​s​c​r​i​b​e​r​ ​c​o​u​n​t​s​ ​a​n​d​ ​c​r​e​a​t​i​o​n​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					/**
+					 * L​i​s​t​s
+					 */
+					group: string
+					options: {
+						limit: {
+							/**
+							 * R​e​s​u​l​t​s​ ​L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​f​o​l​d​e​r​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​f​o​l​d​e​r​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * P​a​g​e​ ​O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​f​o​l​d​e​r​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​f​o​l​d​e​r​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						sort: {
+							/**
+							 * S​o​r​t​ ​O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * F​o​l​d​e​r​ ​s​o​r​t​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​r​d​e​r​ ​t​o​ ​s​o​r​t​ ​f​o​l​d​e​r​s​ ​b​y​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_contacts_to_list: {
+					/**
+					 * A​d​d​ ​C​o​n​t​a​c​t​s​ ​t​o​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​a​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​a​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​b​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​o​r​ ​c​o​n​t​a​c​t​ ​I​D​s​.​ ​C​o​n​t​a​c​t​s​ ​m​u​s​t​ ​a​l​r​e​a​d​y​ ​e​x​i​s​t​ ​i​n​ ​y​o​u​r​ ​a​c​c​o​u​n​t​.
+					 */
+					longDesc: string
+					/**
+					 * L​i​s​t​s
+					 */
+					group: string
+					options: {
+						listId: {
+							/**
+							 * L​i​s​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​l​i​s​t​ ​t​o​ ​a​d​d​ ​c​o​n​t​a​c​t​s​ ​t​o​.
+							 */
+							longDesc: string
+						}
+						emails: {
+							/**
+							 * E​m​a​i​l​ ​A​d​d​r​e​s​s​e​s
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​ ​e​m​a​i​l​s​ ​t​o​ ​a​d​d
+							 */
+							shortDesc: string
+							/**
+							 * A​r​r​a​y​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+						ids: {
+							/**
+							 * C​o​n​t​a​c​t​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​ ​I​D​s​ ​t​o​ ​a​d​d
+							 */
+							shortDesc: string
+							/**
+							 * A​r​r​a​y​ ​o​f​ ​c​o​n​t​a​c​t​ ​I​D​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				remove_contacts_from_list: {
+					/**
+					 * R​e​m​o​v​e​ ​C​o​n​t​a​c​t​s​ ​f​r​o​m​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m​ ​a​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m​ ​a​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​b​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​,​ ​c​o​n​t​a​c​t​ ​I​D​s​,​ ​o​r​ ​r​e​m​o​v​e​ ​a​l​l​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m​ ​t​h​e​ ​l​i​s​t​.
+					 */
+					longDesc: string
+					/**
+					 * L​i​s​t​s
+					 */
+					group: string
+					options: {
+						listId: {
+							/**
+							 * L​i​s​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * S​o​u​r​c​e​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​l​i​s​t​ ​t​o​ ​r​e​m​o​v​e​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m​.
+							 */
+							longDesc: string
+						}
+						emails: {
+							/**
+							 * E​m​a​i​l​ ​A​d​d​r​e​s​s​e​s
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​ ​e​m​a​i​l​s​ ​t​o​ ​r​e​m​o​v​e
+							 */
+							shortDesc: string
+							/**
+							 * A​r​r​a​y​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+						ids: {
+							/**
+							 * C​o​n​t​a​c​t​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​ ​I​D​s​ ​t​o​ ​r​e​m​o​v​e
+							 */
+							shortDesc: string
+							/**
+							 * A​r​r​a​y​ ​o​f​ ​c​o​n​t​a​c​t​ ​I​D​s​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+						all: {
+							/**
+							 * R​e​m​o​v​e​ ​A​l​l
+							 */
+							displayName: string
+							/**
+							 * R​e​m​o​v​e​ ​a​l​l​ ​c​o​n​t​a​c​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​t​r​u​e​ ​t​o​ ​r​e​m​o​v​e​ ​a​l​l​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m​ ​t​h​e​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_company: {
+					/**
+					 * G​e​t​ ​C​o​m​p​a​n​y
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​c​o​m​p​a​n​y​ ​d​e​t​a​i​l​s
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​m​p​a​n​y​ ​i​n​c​l​u​d​i​n​g​ ​c​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​s​ ​a​n​d​ ​a​s​s​o​c​i​a​t​e​d​ ​c​o​n​t​a​c​t​s​ ​a​n​d​ ​d​e​a​l​s​.
+					 */
+					longDesc: string
+					/**
+					 * C​o​m​p​a​n​i​e​s
+					 */
+					group: string
+					options: {
+						companyId: {
+							/**
+							 * C​o​m​p​a​n​y​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * C​o​m​p​a​n​y​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_company: {
+					/**
+					 * C​r​e​a​t​e​ ​C​o​m​p​a​n​y
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​m​p​a​n​y
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​m​p​a​n​y​ ​r​e​c​o​r​d​ ​w​i​t​h​ ​c​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​s​ ​a​n​d​ ​o​p​t​i​o​n​a​l​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​t​o​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​s​ ​a​n​d​ ​d​e​a​l​s​.
+					 */
+					longDesc: string
+					/**
+					 * C​o​m​p​a​n​i​e​s
+					 */
+					group: string
+					options: {
+						name: {
+							/**
+							 * C​o​m​p​a​n​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * B​u​s​i​n​e​s​s​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​.​ ​R​e​q​u​i​r​e​d​ ​f​i​e​l​d​.
+							 */
+							longDesc: string
+						}
+						attributes: {
+							/**
+							 * C​o​m​p​a​n​y​ ​A​t​t​r​i​b​u​t​e​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​c​o​m​p​a​n​y​ ​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​s​ ​f​o​r​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​i​n​c​l​u​d​i​n​g​ ​i​n​d​u​s​t​r​y​,​ ​s​i​z​e​,​ ​w​e​b​s​i​t​e​,​ ​a​n​d​ ​a​n​y​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​ ​d​e​f​i​n​e​d​ ​i​n​ ​y​o​u​r​ ​a​c​c​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+						linkedContactsIds: {
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​C​o​n​t​a​c​t​s
+							 */
+							displayName: string
+							/**
+							 * L​i​n​k​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * A​r​r​a​y​ ​o​f​ ​c​o​n​t​a​c​t​ ​I​D​s​ ​t​o​ ​a​s​s​o​c​i​a​t​e​ ​w​i​t​h​ ​t​h​i​s​ ​c​o​m​p​a​n​y​.
+							 */
+							longDesc: string
+						}
+						linkedDeals: {
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​D​e​a​l​s
+							 */
+							displayName: string
+							/**
+							 * L​i​n​k​ ​d​e​a​l​s​ ​t​o​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * A​r​r​a​y​ ​o​f​ ​d​e​a​l​ ​I​D​s​ ​t​o​ ​a​s​s​o​c​i​a​t​e​ ​w​i​t​h​ ​t​h​i​s​ ​c​o​m​p​a​n​y​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_company: {
+					/**
+					 * U​p​d​a​t​e​ ​C​o​m​p​a​n​y
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​c​o​m​p​a​n​y​ ​i​n​f​o​r​m​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​c​o​m​p​a​n​y​ ​d​e​t​a​i​l​s​ ​i​n​c​l​u​d​i​n​g​ ​n​a​m​e​,​ ​c​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​s​,​ ​a​n​d​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​w​i​t​h​ ​c​o​n​t​a​c​t​s​ ​a​n​d​ ​d​e​a​l​s​.
+					 */
+					longDesc: string
+					/**
+					 * C​o​m​p​a​n​i​e​s
+					 */
+					group: string
+					options: {
+						companyId: {
+							/**
+							 * C​o​m​p​a​n​y​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * C​o​m​p​a​n​y​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * C​o​m​p​a​n​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​o​m​p​a​n​y​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * N​e​w​ ​b​u​s​i​n​e​s​s​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​o​m​p​a​n​y​.
+							 */
+							longDesc: string
+						}
+						attributes: {
+							/**
+							 * C​o​m​p​a​n​y​ ​A​t​t​r​i​b​u​t​e​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​ ​c​o​m​p​a​n​y​ ​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​c​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​s​ ​f​o​r​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​i​n​c​l​u​d​i​n​g​ ​i​n​d​u​s​t​r​y​,​ ​s​i​z​e​,​ ​w​e​b​s​i​t​e​,​ ​a​n​d​ ​a​n​y​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.
+							 */
+							longDesc: string
+						}
+						linkedContactsIds: {
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​C​o​n​t​a​c​t​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​ ​c​o​n​t​a​c​t​ ​a​s​s​o​c​i​a​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * A​r​r​a​y​ ​o​f​ ​c​o​n​t​a​c​t​ ​I​D​s​ ​t​o​ ​a​s​s​o​c​i​a​t​e​ ​w​i​t​h​ ​t​h​i​s​ ​c​o​m​p​a​n​y​.​ ​R​e​p​l​a​c​e​s​ ​e​x​i​s​t​i​n​g​ ​a​s​s​o​c​i​a​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+						linkedDeals: {
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​D​e​a​l​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​ ​d​e​a​l​ ​a​s​s​o​c​i​a​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * A​r​r​a​y​ ​o​f​ ​d​e​a​l​ ​I​D​s​ ​t​o​ ​a​s​s​o​c​i​a​t​e​ ​w​i​t​h​ ​t​h​i​s​ ​c​o​m​p​a​n​y​.​ ​R​e​p​l​a​c​e​s​ ​e​x​i​s​t​i​n​g​ ​a​s​s​o​c​i​a​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_companies: {
+					/**
+					 * L​i​s​t​ ​C​o​m​p​a​n​i​e​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​a​l​l​ ​c​o​m​p​a​n​i​e​s​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​c​o​m​p​a​n​i​e​s​ ​w​i​t​h​ ​p​a​g​i​n​a​t​i​o​n​,​ ​s​o​r​t​i​n​g​,​ ​a​n​d​ ​f​i​l​t​e​r​i​n​g​ ​o​p​t​i​o​n​s​.​ ​F​i​l​t​e​r​ ​b​y​ ​a​s​s​o​c​i​a​t​e​d​ ​c​o​n​t​a​c​t​s​,​ ​d​e​a​l​s​,​ ​o​r​ ​c​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​s​.
+					 */
+					longDesc: string
+					/**
+					 * C​o​m​p​a​n​i​e​s
+					 */
+					group: string
+					options: {
+						limit: {
+							/**
+							 * R​e​s​u​l​t​s​ ​L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​c​o​m​p​a​n​i​e​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​m​p​a​n​i​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​.
+							 */
+							longDesc: string
+						}
+						page: {
+							/**
+							 * P​a​g​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * P​a​g​e​ ​n​u​m​b​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​(​s​t​a​r​t​s​ ​f​r​o​m​ ​1​)​.
+							 */
+							longDesc: string
+						}
+						sort: {
+							/**
+							 * S​o​r​t​ ​O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * C​o​m​p​a​n​y​ ​s​o​r​t​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​r​d​e​r​ ​t​o​ ​s​o​r​t​ ​c​o​m​p​a​n​i​e​s​.
+							 */
+							longDesc: string
+						}
+						sortBy: {
+							/**
+							 * S​o​r​t​ ​B​y​ ​F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * C​o​m​p​a​n​y​ ​a​t​t​r​i​b​u​t​e​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​.
+							 */
+							longDesc: string
+						}
+						linkedContactsId: {
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * C​o​m​p​a​n​i​e​s​ ​l​i​n​k​e​d​ ​t​o​ ​c​o​n​t​a​c​t
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​m​p​a​n​i​e​s​ ​t​h​a​t​ ​a​r​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						linkedDealsId: {
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​D​e​a​l
+							 */
+							displayName: string
+							/**
+							 * C​o​m​p​a​n​i​e​s​ ​l​i​n​k​e​d​ ​t​o​ ​d​e​a​l
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​m​p​a​n​i​e​s​ ​t​h​a​t​ ​a​r​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​e​a​l​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * A​t​t​r​i​b​u​t​e​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​o​m​p​a​n​y​ ​a​t​t​r​i​b​u​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​m​p​a​n​i​e​s​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​a​t​t​r​i​b​u​t​e​ ​v​a​l​u​e​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * A​t​t​r​i​b​u​t​e​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * A​t​t​r​i​b​u​t​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * C​o​m​p​a​n​y​ ​a​t​t​r​i​b​u​t​e​ ​f​i​e​l​d​ ​n​a​m​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * F​i​l​t​e​r​ ​V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * V​a​l​u​e​ ​t​o​ ​m​a​t​c​h
+										 */
+										shortDesc: string
+										/**
+										 * V​a​l​u​e​ ​t​h​a​t​ ​t​h​e​ ​a​t​t​r​i​b​u​t​e​ ​m​u​s​t​ ​e​q​u​a​l​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				get_deal: {
+					/**
+					 * G​e​t​ ​D​e​a​l
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​a​l​ ​d​e​t​a​i​l​s
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​e​a​l​ ​i​n​c​l​u​d​i​n​g​ ​c​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​s​ ​a​n​d​ ​a​s​s​o​c​i​a​t​e​d​ ​c​o​n​t​a​c​t​s​ ​a​n​d​ ​c​o​m​p​a​n​i​e​s​.
+					 */
+					longDesc: string
+					/**
+					 * D​e​a​l​s
+					 */
+					group: string
+					options: {
+						dealId: {
+							/**
+							 * D​e​a​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * D​e​a​l​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​d​e​a​l​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_deal: {
+					/**
+					 * C​r​e​a​t​e​ ​D​e​a​l
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​d​e​a​l
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​d​e​a​l​ ​i​n​ ​y​o​u​r​ ​s​a​l​e​s​ ​p​i​p​e​l​i​n​e​ ​w​i​t​h​ ​c​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​s​ ​a​n​d​ ​o​p​t​i​o​n​a​l​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​t​o​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​s​ ​a​n​d​ ​c​o​m​p​a​n​i​e​s​.
+					 */
+					longDesc: string
+					/**
+					 * D​e​a​l​s
+					 */
+					group: string
+					options: {
+						name: {
+							/**
+							 * D​e​a​l​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​f​ ​t​h​e​ ​d​e​a​l
+							 */
+							shortDesc: string
+							/**
+							 * D​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​d​e​a​l​ ​o​p​p​o​r​t​u​n​i​t​y​.​ ​R​e​q​u​i​r​e​d​ ​f​i​e​l​d​.
+							 */
+							longDesc: string
+						}
+						attributes: {
+							/**
+							 * D​e​a​l​ ​A​t​t​r​i​b​u​t​e​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​d​e​a​l​ ​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​s​ ​f​o​r​ ​t​h​e​ ​d​e​a​l​ ​i​n​c​l​u​d​i​n​g​ ​v​a​l​u​e​,​ ​s​t​a​g​e​,​ ​c​l​o​s​e​ ​d​a​t​e​,​ ​a​n​d​ ​a​n​y​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​ ​d​e​f​i​n​e​d​ ​i​n​ ​y​o​u​r​ ​a​c​c​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+						linkedContactsIds: {
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​C​o​n​t​a​c​t​s
+							 */
+							displayName: string
+							/**
+							 * L​i​n​k​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​d​e​a​l
+							 */
+							shortDesc: string
+							/**
+							 * A​r​r​a​y​ ​o​f​ ​c​o​n​t​a​c​t​ ​I​D​s​ ​t​o​ ​a​s​s​o​c​i​a​t​e​ ​w​i​t​h​ ​t​h​i​s​ ​d​e​a​l​.
+							 */
+							longDesc: string
+						}
+						linkedCompaniesIds: {
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​C​o​m​p​a​n​i​e​s
+							 */
+							displayName: string
+							/**
+							 * L​i​n​k​ ​c​o​m​p​a​n​i​e​s​ ​t​o​ ​d​e​a​l
+							 */
+							shortDesc: string
+							/**
+							 * A​r​r​a​y​ ​o​f​ ​c​o​m​p​a​n​y​ ​I​D​s​ ​t​o​ ​a​s​s​o​c​i​a​t​e​ ​w​i​t​h​ ​t​h​i​s​ ​d​e​a​l​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_deal: {
+					/**
+					 * U​p​d​a​t​e​ ​D​e​a​l
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​d​e​a​l​ ​i​n​f​o​r​m​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​d​e​a​l​ ​d​e​t​a​i​l​s​ ​i​n​c​l​u​d​i​n​g​ ​n​a​m​e​,​ ​c​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​s​,​ ​a​n​d​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​w​i​t​h​ ​c​o​n​t​a​c​t​s​ ​a​n​d​ ​c​o​m​p​a​n​i​e​s​.
+					 */
+					longDesc: string
+					/**
+					 * D​e​a​l​s
+					 */
+					group: string
+					options: {
+						dealId: {
+							/**
+							 * D​e​a​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * D​e​a​l​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​d​e​a​l​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * D​e​a​l​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​d​e​a​l​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * N​e​w​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​d​e​a​l​.
+							 */
+							longDesc: string
+						}
+						attributes: {
+							/**
+							 * D​e​a​l​ ​A​t​t​r​i​b​u​t​e​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​ ​d​e​a​l​ ​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​c​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​s​ ​f​o​r​ ​t​h​e​ ​d​e​a​l​ ​i​n​c​l​u​d​i​n​g​ ​v​a​l​u​e​,​ ​s​t​a​g​e​,​ ​c​l​o​s​e​ ​d​a​t​e​,​ ​a​n​d​ ​a​n​y​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.
+							 */
+							longDesc: string
+						}
+						linkedContactsIds: {
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​C​o​n​t​a​c​t​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​ ​c​o​n​t​a​c​t​ ​a​s​s​o​c​i​a​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * A​r​r​a​y​ ​o​f​ ​c​o​n​t​a​c​t​ ​I​D​s​ ​t​o​ ​a​s​s​o​c​i​a​t​e​ ​w​i​t​h​ ​t​h​i​s​ ​d​e​a​l​.​ ​R​e​p​l​a​c​e​s​ ​e​x​i​s​t​i​n​g​ ​a​s​s​o​c​i​a​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+						linkedCompaniesIds: {
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​C​o​m​p​a​n​i​e​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​ ​c​o​m​p​a​n​y​ ​a​s​s​o​c​i​a​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * A​r​r​a​y​ ​o​f​ ​c​o​m​p​a​n​y​ ​I​D​s​ ​t​o​ ​a​s​s​o​c​i​a​t​e​ ​w​i​t​h​ ​t​h​i​s​ ​d​e​a​l​.​ ​R​e​p​l​a​c​e​s​ ​e​x​i​s​t​i​n​g​ ​a​s​s​o​c​i​a​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_deals: {
+					/**
+					 * L​i​s​t​ ​D​e​a​l​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​a​l​l​ ​d​e​a​l​s​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​d​e​a​l​s​ ​i​n​ ​y​o​u​r​ ​p​i​p​e​l​i​n​e​ ​w​i​t​h​ ​p​a​g​i​n​a​t​i​o​n​,​ ​s​o​r​t​i​n​g​,​ ​a​n​d​ ​f​i​l​t​e​r​i​n​g​ ​o​p​t​i​o​n​s​.​ ​F​i​l​t​e​r​ ​b​y​ ​a​s​s​o​c​i​a​t​e​d​ ​c​o​n​t​a​c​t​s​,​ ​c​o​m​p​a​n​i​e​s​,​ ​o​r​ ​d​e​a​l​ ​n​a​m​e​.
+					 */
+					longDesc: string
+					/**
+					 * D​e​a​l​s
+					 */
+					group: string
+					options: {
+						limit: {
+							/**
+							 * R​e​s​u​l​t​s​ ​L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​d​e​a​l​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​d​e​a​l​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * P​a​g​e​ ​O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​d​e​a​l​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​d​e​a​l​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						sort: {
+							/**
+							 * S​o​r​t​ ​O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * D​e​a​l​ ​s​o​r​t​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​r​d​e​r​ ​t​o​ ​s​o​r​t​ ​d​e​a​l​s​ ​b​y​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						linkedContactsId: {
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * D​e​a​l​s​ ​l​i​n​k​e​d​ ​t​o​ ​c​o​n​t​a​c​t
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​d​e​a​l​s​ ​t​h​a​t​ ​a​r​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						linkedCompaniesId: {
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​C​o​m​p​a​n​y
+							 */
+							displayName: string
+							/**
+							 * D​e​a​l​s​ ​l​i​n​k​e​d​ ​t​o​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​d​e​a​l​s​ ​t​h​a​t​ ​a​r​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​m​p​a​n​y​.
+							 */
+							longDesc: string
+						}
+						dealName: {
+							/**
+							 * D​e​a​l​ ​N​a​m​e​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​d​e​a​l​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​d​e​a​l​s​ ​b​y​ ​n​a​m​e​ ​c​o​n​t​a​i​n​i​n​g​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_contact: {
+					/**
+					 * D​e​l​e​t​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​a​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​a​ ​c​o​n​t​a​c​t​ ​f​r​o​m​ ​y​o​u​r​ ​B​r​e​v​o​ ​a​c​c​o​u​n​t​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.​ ​T​h​e​ ​c​o​n​t​a​c​t​ ​w​i​l​l​ ​b​e​ ​r​e​m​o​v​e​d​ ​f​r​o​m​ ​a​l​l​ ​l​i​s​t​s​ ​a​n​d​ ​c​a​m​p​a​i​g​n​s​.
+					 */
+					longDesc: string
+					/**
+					 * C​o​n​t​a​c​t​s
+					 */
+					group: string
+					options: {
+						identifier: {
+							/**
+							 * C​o​n​t​a​c​t​ ​I​d​e​n​t​i​f​i​e​r
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​d​e​l​e​t​e​ ​p​e​r​m​a​n​e​n​t​l​y​.​ ​C​a​n​ ​b​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​,​ ​c​o​n​t​a​c​t​ ​I​D​,​ ​p​h​o​n​e​ ​n​u​m​b​e​r​,​ ​e​x​t​e​r​n​a​l​ ​I​D​,​ ​W​h​a​t​s​A​p​p​ ​I​D​,​ ​o​r​ ​l​a​n​d​l​i​n​e​ ​n​u​m​b​e​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_company: {
+					/**
+					 * D​e​l​e​t​e​ ​C​o​m​p​a​n​y
+					 */
+					displayName: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​a​ ​c​o​m​p​a​n​y
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​a​ ​c​o​m​p​a​n​y​ ​f​r​o​m​ ​y​o​u​r​ ​B​r​e​v​o​ ​a​c​c​o​u​n​t​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.​ ​A​l​l​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​w​i​t​h​ ​c​o​n​t​a​c​t​s​ ​a​n​d​ ​d​e​a​l​s​ ​w​i​l​l​ ​b​e​ ​r​e​m​o​v​e​d​.
+					 */
+					longDesc: string
+					/**
+					 * C​o​m​p​a​n​i​e​s
+					 */
+					group: string
+					options: {
+						companyId: {
+							/**
+							 * C​o​m​p​a​n​y​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * C​o​m​p​a​n​y​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​t​o​ ​d​e​l​e​t​e​ ​p​e​r​m​a​n​e​n​t​l​y​ ​f​r​o​m​ ​y​o​u​r​ ​a​c​c​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_deal: {
+					/**
+					 * D​e​l​e​t​e​ ​D​e​a​l
+					 */
+					displayName: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​a​ ​d​e​a​l
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​a​ ​d​e​a​l​ ​f​r​o​m​ ​y​o​u​r​ ​s​a​l​e​s​ ​p​i​p​e​l​i​n​e​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.​ ​A​l​l​ ​a​s​s​o​c​i​a​t​i​o​n​s​ ​w​i​t​h​ ​c​o​n​t​a​c​t​s​ ​a​n​d​ ​c​o​m​p​a​n​i​e​s​ ​w​i​l​l​ ​b​e​ ​r​e​m​o​v​e​d​.
+					 */
+					longDesc: string
+					/**
+					 * D​e​a​l​s
+					 */
+					group: string
+					options: {
+						dealId: {
+							/**
+							 * D​e​a​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * D​e​a​l​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​d​e​a​l​ ​t​o​ ​d​e​l​e​t​e​ ​p​e​r​m​a​n​e​n​t​l​y​ ​f​r​o​m​ ​y​o​u​r​ ​p​i​p​e​l​i​n​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_contact: {
+					/**
+					 * N​e​w​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​B​r​e​v​o​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​c​o​n​t​a​c​t​s​.​ ​O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t​s​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​c​o​n​t​a​c​t​s​ ​a​r​e​ ​a​d​d​e​d​ ​t​o​ ​p​a​r​t​i​c​u​l​a​r​ ​l​i​s​t​s​.
+					 */
+					longDesc: string
+					/**
+					 * c​o​n​t​a​c​t​s
+					 */
+					group: string
+					options: {
+						listIds: {
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​L​i​s​t​s
+							 */
+							displayName: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​c​o​n​t​a​c​t​s​ ​a​r​e​ ​c​r​e​a​t​e​d​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​l​i​s​t​s​.​ ​I​f​ ​e​m​p​t​y​,​ ​t​r​i​g​g​e​r​s​ ​f​o​r​ ​a​l​l​ ​n​e​w​ ​c​o​n​t​a​c​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_company: {
+					/**
+					 * N​e​w​ ​C​o​m​p​a​n​y
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​m​p​a​n​y​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​B​r​e​v​o​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​c​o​m​p​a​n​i​e​s​.​ ​O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​b​y​ ​c​o​m​p​a​n​i​e​s​ ​l​i​n​k​e​d​ ​t​o​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​s​ ​o​r​ ​d​e​a​l​s​.
+					 */
+					longDesc: string
+					/**
+					 * c​o​m​p​a​n​i​e​s
+					 */
+					group: string
+					options: {
+						linkedContactsId: {
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​c​o​m​p​a​n​i​e​s​ ​l​i​n​k​e​d​ ​t​o​ ​c​o​n​t​a​c​t
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​c​o​m​p​a​n​i​e​s​ ​a​r​e​ ​c​r​e​a​t​e​d​ ​t​h​a​t​ ​a​r​e​ ​l​i​n​k​e​d​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						linkedDealsId: {
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​D​e​a​l
+							 */
+							displayName: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​c​o​m​p​a​n​i​e​s​ ​l​i​n​k​e​d​ ​t​o​ ​d​e​a​l
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​c​o​m​p​a​n​i​e​s​ ​a​r​e​ ​c​r​e​a​t​e​d​ ​t​h​a​t​ ​a​r​e​ ​l​i​n​k​e​d​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​e​a​l​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_deal: {
+					/**
+					 * N​e​w​ ​D​e​a​l
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​d​e​a​l​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​B​r​e​v​o​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​d​e​a​l​s​ ​i​n​ ​t​h​e​ ​s​a​l​e​s​ ​p​i​p​e​l​i​n​e​.​ ​O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​b​y​ ​d​e​a​l​s​ ​l​i​n​k​e​d​ ​t​o​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​s​ ​o​r​ ​c​o​m​p​a​n​i​e​s​.
+					 */
+					longDesc: string
+					/**
+					 * d​e​a​l​s
+					 */
+					group: string
+					options: {
+						linkedContactsId: {
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​C​o​n​t​a​c​t​s
+							 */
+							displayName: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​d​e​a​l​s​ ​l​i​n​k​e​d​ ​t​o​ ​c​o​n​t​a​c​t​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​d​e​a​l​s​ ​a​r​e​ ​c​r​e​a​t​e​d​ ​t​h​a​t​ ​a​r​e​ ​l​i​n​k​e​d​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​o​n​t​a​c​t​s​.
+							 */
+							longDesc: string
+						}
+						linkedCompaniesId: {
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​C​o​m​p​a​n​i​e​s
+							 */
+							displayName: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​d​e​a​l​s​ ​l​i​n​k​e​d​ ​t​o​ ​c​o​m​p​a​n​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​d​e​a​l​s​ ​a​r​e​ ​c​r​e​a​t​e​d​ ​t​h​a​t​ ​a​r​e​ ​l​i​n​k​e​d​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​o​m​p​a​n​i​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_list: {
+					/**
+					 * N​e​w​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​B​r​e​v​o​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​c​o​n​t​a​c​t​ ​l​i​s​t​s​.​ ​T​r​i​g​g​e​r​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​l​i​s​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​n​y​ ​f​o​l​d​e​r​.
+					 */
+					longDesc: string
+					/**
+					 * l​i​s​t​s
+					 */
+					group: string
+				}
+			}
+		}
 	}
 }
 
@@ -127072,6 +128826,1760 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 						}
 					}
+				}
+			}
+		}
+		Brevo: {
+			/**
+			 * Brevo
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Brevo is a marketing platform for email, SMS, and automation campaigns.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Brevo (formerly Sendinblue) is a marketing automation platform that enables businesses to communicate with customers through email, SMS, chat, and more. It offers tools for campaign management, contact segmentation, transactional emails, and customer relationship management. Brevo helps businesses build stronger relationships with their audience by providing scalable communication and automation solutions.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				get_contact: {
+					/**
+					 * Get Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a contact by identifier
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get detailed information about a specific contact. You can identify contacts using email address, contact ID, phone number, external ID, WhatsApp ID, or landline number.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Contacts
+					 */
+					group: () => LocalizedString
+					options: {
+						identifier: {
+							/**
+							 * Contact Identifier
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact identifier (email, ID, phone, etc.)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Unique identifier for the contact. Can be email address, contact ID, phone number (SMS), external ID, WhatsApp ID, or landline number.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_contact: {
+					/**
+					 * Create Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new contact
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new contact in Brevo. Contacts can be created with email address, phone number (with country code), or external ID. Custom attributes and list assignments can be included.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Contacts
+					 */
+					group: () => LocalizedString
+					options: {
+						email: {
+							/**
+							 * Email Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Primary email address for the contact. Required for creating a contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						extId: {
+							/**
+							 * External ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * External identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom external identifier for the contact from your system.
+							 */
+							longDesc: () => LocalizedString
+						}
+						listIds: {
+							/**
+							 * List IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lists to add contact to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Array of list IDs to automatically add the contact to upon creation.
+							 */
+							longDesc: () => LocalizedString
+						}
+						emailBlacklisted: {
+							/**
+							 * Email Blacklisted
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Blacklist contact from emails
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to true to blacklist the contact from receiving email campaigns.
+							 */
+							longDesc: () => LocalizedString
+						}
+						smsBlacklisted: {
+							/**
+							 * SMS Blacklisted
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Blacklist contact from SMS
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to true to blacklist the contact from receiving SMS campaigns.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attributes: {
+							/**
+							 * Contact Attributes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom contact attributes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom attributes for the contact including name, company, phone number, and any custom fields defined in your account.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_contact: {
+					/**
+					 * Update Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing contact
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update contact information including attributes, email preferences, list memberships, and custom data. Contact can be identified by email, ID, or other identifiers.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Contacts
+					 */
+					group: () => LocalizedString
+					options: {
+						identifier: {
+							/**
+							 * Contact Identifier
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Unique identifier for the contact to update. Can be email address, contact ID, phone number, external ID, WhatsApp ID, or landline number.
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * New Email Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Update email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * New email address for the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						extId: {
+							/**
+							 * External ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * External identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom external identifier for the contact from your system.
+							 */
+							longDesc: () => LocalizedString
+						}
+						listIds: {
+							/**
+							 * Add to Lists
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lists to add contact to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Array of list IDs to add the contact to.
+							 */
+							longDesc: () => LocalizedString
+						}
+						unlinkListIds: {
+							/**
+							 * Remove from Lists
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lists to remove contact from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Array of list IDs to remove the contact from.
+							 */
+							longDesc: () => LocalizedString
+						}
+						emailBlacklisted: {
+							/**
+							 * Email Blacklisted
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email blacklist status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set email blacklist status for the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						smsBlacklisted: {
+							/**
+							 * SMS Blacklisted
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * SMS blacklist status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set SMS blacklist status for the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attributes: {
+							/**
+							 * Contact Attributes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Update contact attributes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update custom attributes for the contact including name, company, phone number, and any custom fields.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_contacts: {
+					/**
+					 * List Contacts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get all contacts with filtering
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all contacts in your account with pagination, sorting, and filtering options. Filter by lists, attributes, or other criteria.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Contacts
+					 */
+					group: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Results Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of contacts per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Maximum number of contacts to return per page. Default is 10, maximum is 100.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Page Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of contacts to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Number of contacts to skip for pagination. Use with limit for pagination.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort: {
+							/**
+							 * Sort Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact sort order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Order to sort contacts by creation date.
+							 */
+							longDesc: () => LocalizedString
+						}
+						listIds: {
+							/**
+							 * Filter by Lists
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter contacts by list membership
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Array of list IDs to filter contacts. Only contacts belonging to these lists will be returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Attribute Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by contact attributes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter contacts based on specific attribute values using equals operator.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Attribute Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Attribute to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Contact attribute field name to filter by.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Filter Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Value to match
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Value that the attribute must equal.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				get_list: {
+					/**
+					 * Get List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve list details
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get detailed information about a specific contact list including subscriber counts, campaign statistics, and folder information.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Lists
+					 */
+					group: () => LocalizedString
+					options: {
+						listId: {
+							/**
+							 * List ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Unique identifier of the contact list to retrieve details for.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_list: {
+					/**
+					 * Create List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new contact list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new contact list in a specified folder. Lists are used to organize and segment your contacts for targeted campaigns.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Lists
+					 */
+					group: () => LocalizedString
+					options: {
+						name: {
+							/**
+							 * List Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name for the new list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Display name for the contact list.
+							 */
+							longDesc: () => LocalizedString
+						}
+						folderId: {
+							/**
+							 * Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Folder to create list in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Folder where the list will be created. Required for list organization.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_list: {
+					/**
+					 * Update List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update list details
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the name or folder of an existing contact list.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Lists
+					 */
+					group: () => LocalizedString
+					options: {
+						listId: {
+							/**
+							 * List ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Unique identifier of the contact list to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * New Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated list name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * New display name for the contact list.
+							 */
+							longDesc: () => LocalizedString
+						}
+						folderId: {
+							/**
+							 * New Folder
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Move to different folder
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * New folder ID to move the list to.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_list: {
+					/**
+					 * Delete List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a contact list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently delete a contact list. This action cannot be undone. Contacts in the list will remain in your account.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Lists
+					 */
+					group: () => LocalizedString
+					options: {
+						listId: {
+							/**
+							 * List ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Unique identifier of the contact list to delete permanently.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_lists: {
+					/**
+					 * List All Lists
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get all contact lists
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve all contact lists in your account with pagination and sorting options. Includes subscriber counts and creation dates.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Lists
+					 */
+					group: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Results Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of lists per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Maximum number of lists to return per page. Default is 10.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Page Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of lists to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Number of lists to skip for pagination.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort: {
+							/**
+							 * Sort Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List sort order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Order to sort lists by creation date.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_folders: {
+					/**
+					 * List Folders
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get all list folders
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve all folders used to organize contact lists with subscriber counts and creation information.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Lists
+					 */
+					group: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Results Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of folders per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Maximum number of folders to return per page. Default is 10.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Page Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of folders to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Number of folders to skip for pagination.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort: {
+							/**
+							 * Sort Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Folder sort order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Order to sort folders by creation date.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_contacts_to_list: {
+					/**
+					 * Add Contacts to List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add contacts to a list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Add existing contacts to a contact list by email addresses or contact IDs. Contacts must already exist in your account.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Lists
+					 */
+					group: () => LocalizedString
+					options: {
+						listId: {
+							/**
+							 * List ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Unique identifier of the list to add contacts to.
+							 */
+							longDesc: () => LocalizedString
+						}
+						emails: {
+							/**
+							 * Email Addresses
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact emails to add
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Array of email addresses of contacts to add to the list.
+							 */
+							longDesc: () => LocalizedString
+						}
+						ids: {
+							/**
+							 * Contact IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact IDs to add
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Array of contact IDs to add to the list.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				remove_contacts_from_list: {
+					/**
+					 * Remove Contacts from List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove contacts from a list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Remove contacts from a contact list by email addresses, contact IDs, or remove all contacts from the list.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Lists
+					 */
+					group: () => LocalizedString
+					options: {
+						listId: {
+							/**
+							 * List ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Source list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Unique identifier of the list to remove contacts from.
+							 */
+							longDesc: () => LocalizedString
+						}
+						emails: {
+							/**
+							 * Email Addresses
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact emails to remove
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Array of email addresses of contacts to remove from the list.
+							 */
+							longDesc: () => LocalizedString
+						}
+						ids: {
+							/**
+							 * Contact IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact IDs to remove
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Array of contact IDs to remove from the list.
+							 */
+							longDesc: () => LocalizedString
+						}
+						all: {
+							/**
+							 * Remove All
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Remove all contacts
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to true to remove all contacts from the list.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_company: {
+					/**
+					 * Get Company
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve company details
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get detailed information about a specific company including custom attributes and associated contacts and deals.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Companies
+					 */
+					group: () => LocalizedString
+					options: {
+						companyId: {
+							/**
+							 * Company ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Company to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Unique identifier of the company to retrieve details for.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_company: {
+					/**
+					 * Create Company
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new company
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new company record with custom attributes and optional associations to existing contacts and deals.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Companies
+					 */
+					group: () => LocalizedString
+					options: {
+						name: {
+							/**
+							 * Company Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name of the company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Business name of the company. Required field.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attributes: {
+							/**
+							 * Company Attributes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom company data
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom attributes for the company including industry, size, website, and any custom fields defined in your account.
+							 */
+							longDesc: () => LocalizedString
+						}
+						linkedContactsIds: {
+							/**
+							 * Associated Contacts
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Link contacts to company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Array of contact IDs to associate with this company.
+							 */
+							longDesc: () => LocalizedString
+						}
+						linkedDeals: {
+							/**
+							 * Associated Deals
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Link deals to company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Array of deal IDs to associate with this company.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_company: {
+					/**
+					 * Update Company
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update company information
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update company details including name, custom attributes, and associations with contacts and deals.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Companies
+					 */
+					group: () => LocalizedString
+					options: {
+						companyId: {
+							/**
+							 * Company ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Company to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Unique identifier of the company to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Company Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated company name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * New business name for the company.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attributes: {
+							/**
+							 * Company Attributes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Update company data
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update custom attributes for the company including industry, size, website, and any custom fields.
+							 */
+							longDesc: () => LocalizedString
+						}
+						linkedContactsIds: {
+							/**
+							 * Associated Contacts
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Update contact associations
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Array of contact IDs to associate with this company. Replaces existing associations.
+							 */
+							longDesc: () => LocalizedString
+						}
+						linkedDeals: {
+							/**
+							 * Associated Deals
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Update deal associations
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Array of deal IDs to associate with this company. Replaces existing associations.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_companies: {
+					/**
+					 * List Companies
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get all companies with filtering
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all companies with pagination, sorting, and filtering options. Filter by associated contacts, deals, or custom attributes.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Companies
+					 */
+					group: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Results Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of companies per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Maximum number of companies to return per page. Default is 10.
+							 */
+							longDesc: () => LocalizedString
+						}
+						page: {
+							/**
+							 * Page Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Page number for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Page number to retrieve (starts from 1).
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort: {
+							/**
+							 * Sort Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Company sort order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Order to sort companies.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sortBy: {
+							/**
+							 * Sort By Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to sort by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Company attribute to sort results by.
+							 */
+							longDesc: () => LocalizedString
+						}
+						linkedContactsId: {
+							/**
+							 * Filter by Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Companies linked to contact
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter companies that are associated with a specific contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						linkedDealsId: {
+							/**
+							 * Filter by Deal
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Companies linked to deal
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter companies that are associated with a specific deal.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Attribute Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by company attributes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter companies based on specific attribute values.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Attribute Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Attribute to filter by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Company attribute field name to filter by.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Filter Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Value to match
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Value that the attribute must equal.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				get_deal: {
+					/**
+					 * Get Deal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve deal details
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get detailed information about a specific deal including custom attributes and associated contacts and companies.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Deals
+					 */
+					group: () => LocalizedString
+					options: {
+						dealId: {
+							/**
+							 * Deal ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Deal to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Unique identifier of the deal to retrieve details for.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_deal: {
+					/**
+					 * Create Deal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new deal
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new deal in your sales pipeline with custom attributes and optional associations to existing contacts and companies.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Deals
+					 */
+					group: () => LocalizedString
+					options: {
+						name: {
+							/**
+							 * Deal Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name of the deal
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Descriptive name for the deal opportunity. Required field.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attributes: {
+							/**
+							 * Deal Attributes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom deal data
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom attributes for the deal including value, stage, close date, and any custom fields defined in your account.
+							 */
+							longDesc: () => LocalizedString
+						}
+						linkedContactsIds: {
+							/**
+							 * Associated Contacts
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Link contacts to deal
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Array of contact IDs to associate with this deal.
+							 */
+							longDesc: () => LocalizedString
+						}
+						linkedCompaniesIds: {
+							/**
+							 * Associated Companies
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Link companies to deal
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Array of company IDs to associate with this deal.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_deal: {
+					/**
+					 * Update Deal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update deal information
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update deal details including name, custom attributes, and associations with contacts and companies.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Deals
+					 */
+					group: () => LocalizedString
+					options: {
+						dealId: {
+							/**
+							 * Deal ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Deal to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Unique identifier of the deal to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Deal Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated deal name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * New descriptive name for the deal.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attributes: {
+							/**
+							 * Deal Attributes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Update deal data
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update custom attributes for the deal including value, stage, close date, and any custom fields.
+							 */
+							longDesc: () => LocalizedString
+						}
+						linkedContactsIds: {
+							/**
+							 * Associated Contacts
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Update contact associations
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Array of contact IDs to associate with this deal. Replaces existing associations.
+							 */
+							longDesc: () => LocalizedString
+						}
+						linkedCompaniesIds: {
+							/**
+							 * Associated Companies
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Update company associations
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Array of company IDs to associate with this deal. Replaces existing associations.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_deals: {
+					/**
+					 * List Deals
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get all deals with filtering
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all deals in your pipeline with pagination, sorting, and filtering options. Filter by associated contacts, companies, or deal name.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Deals
+					 */
+					group: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Results Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of deals per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Maximum number of deals to return per page. Default is 10.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Page Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of deals to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Number of deals to skip for pagination.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort: {
+							/**
+							 * Sort Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Deal sort order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Order to sort deals by creation date.
+							 */
+							longDesc: () => LocalizedString
+						}
+						linkedContactsId: {
+							/**
+							 * Filter by Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Deals linked to contact
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter deals that are associated with a specific contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						linkedCompaniesId: {
+							/**
+							 * Filter by Company
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Deals linked to company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter deals that are associated with a specific company.
+							 */
+							longDesc: () => LocalizedString
+						}
+						dealName: {
+							/**
+							 * Deal Name Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by deal name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter deals by name containing specified text.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_contact: {
+					/**
+					 * Delete Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Permanently delete a contact
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently delete a contact from your Brevo account. This action cannot be undone. The contact will be removed from all lists and campaigns.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Contacts
+					 */
+					group: () => LocalizedString
+					options: {
+						identifier: {
+							/**
+							 * Contact Identifier
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Unique identifier for the contact to delete permanently. Can be email address, contact ID, phone number, external ID, WhatsApp ID, or landline number.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_company: {
+					/**
+					 * Delete Company
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Permanently delete a company
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently delete a company from your Brevo account. This action cannot be undone. All associations with contacts and deals will be removed.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Companies
+					 */
+					group: () => LocalizedString
+					options: {
+						companyId: {
+							/**
+							 * Company ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Company to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Unique identifier of the company to delete permanently from your account.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_deal: {
+					/**
+					 * Delete Deal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Permanently delete a deal
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently delete a deal from your sales pipeline. This action cannot be undone. All associations with contacts and companies will be removed.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Deals
+					 */
+					group: () => LocalizedString
+					options: {
+						dealId: {
+							/**
+							 * Deal ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Deal to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Unique identifier of the deal to delete permanently from your pipeline.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_contact: {
+					/**
+					 * New Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new contact is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors your Brevo account for newly created contacts. Optionally filter by specific lists to only trigger when contacts are added to particular lists.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * contacts
+					 */
+					group: () => LocalizedString
+					options: {
+						listIds: {
+							/**
+							 * Filter by Lists
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Only trigger for specific lists
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional filter to only trigger when contacts are created in the specified lists. If empty, triggers for all new contacts.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_company: {
+					/**
+					 * New Company
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new company is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors your Brevo account for newly created companies. Optionally filter by companies linked to specific contacts or deals.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * companies
+					 */
+					group: () => LocalizedString
+					options: {
+						linkedContactsId: {
+							/**
+							 * Filter by Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Only trigger for companies linked to contact
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional filter to only trigger when companies are created that are linked to the specified contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						linkedDealsId: {
+							/**
+							 * Filter by Deal
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Only trigger for companies linked to deal
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional filter to only trigger when companies are created that are linked to the specified deal.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_deal: {
+					/**
+					 * New Deal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new deal is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors your Brevo account for newly created deals in the sales pipeline. Optionally filter by deals linked to specific contacts or companies.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * deals
+					 */
+					group: () => LocalizedString
+					options: {
+						linkedContactsId: {
+							/**
+							 * Filter by Contacts
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Only trigger for deals linked to contacts
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional filter to only trigger when deals are created that are linked to the specified contacts.
+							 */
+							longDesc: () => LocalizedString
+						}
+						linkedCompaniesId: {
+							/**
+							 * Filter by Companies
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Only trigger for deals linked to companies
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional filter to only trigger when deals are created that are linked to the specified companies.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_list: {
+					/**
+					 * New List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new contact list is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors your Brevo account for newly created contact lists. Triggers whenever a new list is created in any folder.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * lists
+					 */
+					group: () => LocalizedString
 				}
 			}
 		}

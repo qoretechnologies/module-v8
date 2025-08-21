@@ -121,6 +121,7 @@ env:
   FIGMA_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).FIGMA_CLIENT_ID }}
   FIGMA_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).FIGMA_CLIENT_SECRET }}
   FIGMA_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).FIGMA_REFRESH_TOKEN }}
+  BREVO_API_KEY: ${{ fromJson(secrets.TEST_VARIABLES).BREVO_API_KEY }}
 
 jobs:
   PullRequestTests:
