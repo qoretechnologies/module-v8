@@ -219,6 +219,13 @@ public class TypeScriptAppRestConnection inherits RestConnection {
         return rv;
     }
 
+    #! Returns the ping path from the \c ping_path option
+    private *string getPingPath() {
+        return opts.ping_path.val() && url_template_options
+            ? TypeScriptActionInterface::processUrl(opts.ping_path, opts, url_template_options)
+            : opts.ping_path;
+    }
+
     #! Sets child data provider capabilities
     private setChildCapabilities() {
         children_can_support_apis = True;
