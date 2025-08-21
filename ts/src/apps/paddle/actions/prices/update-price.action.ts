@@ -3,6 +3,7 @@ import {
   IMoney,
   ITimePeriod,
   IUnitPriceOverride,
+  Status,
   TaxMode,
 } from '@paddle/paddle-node-sdk';
 import {
@@ -164,7 +165,7 @@ const updatePrice = QoreAppCreator.createLocalizedAction<typeof options>({
       ErrorClass: PaddleError,
     });
 
-    const { type, name, quantity, custom_data, description } = obj || {};
+    const { type, name, quantity, custom_data, description, status } = obj || {};
 
     const billingCycle = obj?.billing_cycle as ITimePeriod;
     const trialPeriod = obj?.trial_period as ITimePeriod;
@@ -186,6 +187,7 @@ const updatePrice = QoreAppCreator.createLocalizedAction<typeof options>({
         ...(unitPriceOverrides && { unitPriceOverrides }),
         ...(quantity && { quantity }),
         ...(custom_data && { customData: custom_data }),
+        ...(status && { status: status as Status }),
       });
 
       return product;
