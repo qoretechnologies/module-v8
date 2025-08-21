@@ -28,7 +28,7 @@ export const getYouTubeUserSubscriptionsAllowedValues: TQoreGetAllowedValuesFunc
     const allowedValues: IQoreAllowedValue<string>[] =
       subscriptionsResponse.data.items?.map((item) => {
         return {
-          value: item.id!,
+          value: item.snippet!.channelId!,
           display_name: item.snippet?.title || 'No title',
           ...(item.snippet?.thumbnails?.default && {
             image: item.snippet.thumbnails.default.url as string,

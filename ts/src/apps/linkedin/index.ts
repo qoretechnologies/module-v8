@@ -17,7 +17,7 @@ export default (locale: Locales) =>
     logo_mime_type: 'image/svg+xml',
     actions: [...mapActionsToApp(LINKED_IN_APP_NAME, LINKED_IN_ACTIONS, locale)],
     rest: {
-      url: 'https://www.linkedin.com',
+      url: 'https://api.linkedin.com',
       data: 'json',
       oauth2_auto_refresh: false,
       oauth2_grant_type: 'authorization_code',

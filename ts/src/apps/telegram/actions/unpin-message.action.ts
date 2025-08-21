@@ -10,6 +10,7 @@ const options = {
   chat: {
     required: true,
     get_allowed_values: GetTelegramRecentChatsAllowedValues,
+    allowed_values_creatable: true,
     type: 'number',
   },
   message_id: {

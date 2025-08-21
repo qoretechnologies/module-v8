@@ -21,7 +21,7 @@ export default (locale: Locales) =>
     logo_file_name: 'quickbooks-logo.svg',
     logo_mime_type: 'image/svg+xml',
     rest: {
-      url: 'https://quickbooks.api.intuit.com',
+      url: 'https://{{instance_type}}.api.intuit.com',
       data: 'json',
       oauth2_grant_type: 'authorization_code',
       oauth2_auth_url: 'https://appcenter.intuit.com/connect/oauth2',
@@ -41,7 +41,7 @@ export default (locale: Locales) =>
     rest_modifiers: {
       options: QUICKBOOKS_CONN_OPTIONS,
       required_options: 'instance_type',
-      url_template_options: ['realm_id'],
+      url_template_options: ['realm_id', 'instance_type'],
       set_options_post_auth: (context) => {
         const instanceType = context.conn_opts?.instance_type;
         const realmId = context.conn_opts?.realmId;

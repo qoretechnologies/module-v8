@@ -25,7 +25,7 @@ export default (locale: Locales) =>
       ...mapTriggersToApp(LINKED_IN_ORGANIZATIONS_APP_NAME, LINKED_IN_TRIGGERS, locale),
     ],
     rest: {
-      url: 'https://www.linkedin.com',
+      url: 'https://api.linkedin.com',
       data: 'json',
       oauth2_grant_type: 'authorization_code',
       oauth2_scopes: ['r_dma_admin_pages_content'],
