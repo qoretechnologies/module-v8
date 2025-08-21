@@ -36,7 +36,7 @@ const options = {
   linkedDeals: {
     type: {
       type: 'list',
-      element_type: 'number',
+      element_type: 'string',
     },
     get_element_allowed_values: getBrevoDealAllowedValues,
     required: false,
