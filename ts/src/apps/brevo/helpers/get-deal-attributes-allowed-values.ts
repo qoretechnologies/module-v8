@@ -9,7 +9,6 @@ import {
   TQoreOptions,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
-import { humanizeNameTitle } from '../../../global/helpers/index';
 import { BREVO_CONN_OPTIONS, BrevoError, extractBrevoError } from '../constants';
 import { BrevoAttributeTypeToQoreTypeMap, createBrevoClient } from './constants';
 
@@ -59,7 +58,7 @@ const createGetBrevoDealAttributeOptionsTypeFunction =
     Object.entries(attributesMap).forEach(([field, attribute]) => {
       if (!attribute?.attributeTypeName) return;
       options[field] = {
-        display_name: humanizeNameTitle(field),
+        display_name: attribute.label,
         required: false,
         type: BrevoAttributeTypeToQoreTypeMap[attribute.attributeTypeName] as TQoreAnyType,
         ...(includeAllowedValues &&

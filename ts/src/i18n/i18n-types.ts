@@ -65159,10 +65159,6 @@ type RootTranslation = {
 					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​B​r​e​v​o​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​c​o​n​t​a​c​t​s​.​ ​O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t​s​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​c​o​n​t​a​c​t​s​ ​a​r​e​ ​a​d​d​e​d​ ​t​o​ ​p​a​r​t​i​c​u​l​a​r​ ​l​i​s​t​s​.
 					 */
 					longDesc: string
-					/**
-					 * c​o​n​t​a​c​t​s
-					 */
-					group: string
 					options: {
 						listIds: {
 							/**
@@ -65193,10 +65189,6 @@ type RootTranslation = {
 					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​B​r​e​v​o​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​c​o​m​p​a​n​i​e​s​.​ ​O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​b​y​ ​c​o​m​p​a​n​i​e​s​ ​l​i​n​k​e​d​ ​t​o​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​s​ ​o​r​ ​d​e​a​l​s​.
 					 */
 					longDesc: string
-					/**
-					 * c​o​m​p​a​n​i​e​s
-					 */
-					group: string
 					options: {
 						linkedContactsId: {
 							/**
@@ -65241,10 +65233,6 @@ type RootTranslation = {
 					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​B​r​e​v​o​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​d​e​a​l​s​ ​i​n​ ​t​h​e​ ​s​a​l​e​s​ ​p​i​p​e​l​i​n​e​.​ ​O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​b​y​ ​d​e​a​l​s​ ​l​i​n​k​e​d​ ​t​o​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​s​ ​o​r​ ​c​o​m​p​a​n​i​e​s​.
 					 */
 					longDesc: string
-					/**
-					 * d​e​a​l​s
-					 */
-					group: string
 					options: {
 						linkedContactsId: {
 							/**
@@ -65289,10 +65277,6 @@ type RootTranslation = {
 					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​B​r​e​v​o​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​c​o​n​t​a​c​t​ ​l​i​s​t​s​.​ ​T​r​i​g​g​e​r​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​l​i​s​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​n​y​ ​f​o​l​d​e​r​.
 					 */
 					longDesc: string
-					/**
-					 * l​i​s​t​s
-					 */
-					group: string
 				}
 			}
 		}
@@ -130446,10 +130430,6 @@ export type TranslationFunctions = {
 					 * Monitors your Brevo account for newly created contacts. Optionally filter by specific lists to only trigger when contacts are added to particular lists.
 					 */
 					longDesc: () => LocalizedString
-					/**
-					 * contacts
-					 */
-					group: () => LocalizedString
 					options: {
 						listIds: {
 							/**
@@ -130480,10 +130460,6 @@ export type TranslationFunctions = {
 					 * Monitors your Brevo account for newly created companies. Optionally filter by companies linked to specific contacts or deals.
 					 */
 					longDesc: () => LocalizedString
-					/**
-					 * companies
-					 */
-					group: () => LocalizedString
 					options: {
 						linkedContactsId: {
 							/**
@@ -130528,10 +130504,6 @@ export type TranslationFunctions = {
 					 * Monitors your Brevo account for newly created deals in the sales pipeline. Optionally filter by deals linked to specific contacts or companies.
 					 */
 					longDesc: () => LocalizedString
-					/**
-					 * deals
-					 */
-					group: () => LocalizedString
 					options: {
 						linkedContactsId: {
 							/**
@@ -130576,10 +130548,6 @@ export type TranslationFunctions = {
 					 * Monitors your Brevo account for newly created contact lists. Triggers whenever a new list is created in any folder.
 					 */
 					longDesc: () => LocalizedString
-					/**
-					 * lists
-					 */
-					group: () => LocalizedString
 				}
 			}
 		}
