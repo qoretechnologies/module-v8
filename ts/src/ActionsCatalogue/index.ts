@@ -70,6 +70,7 @@ import canva from '../apps/canva';
 import figma from '../apps/figma';
 import linkedinOrganizations from '../apps/linkedin-organizations';
 import telegram from '../apps/telegram';
+import brevo from '../apps/brevo';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -90,6 +91,7 @@ const NEW_APPS = {
   attio,
   bigml,
   bitbucket,
+  brevo,
   browserAi,
   businessCentral,
   calendly,
