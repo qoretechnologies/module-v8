@@ -71,6 +71,7 @@ import figma from '../apps/figma';
 import linkedinOrganizations from '../apps/linkedin-organizations';
 import telegram from '../apps/telegram';
 import brevo from '../apps/brevo';
+import googleTasks from '../apps/google-tasks';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -112,6 +113,7 @@ const NEW_APPS = {
   googleForms,
   googleMeet,
   googleSheets,
+  googleTasks,
   hubspot,
   huggingFace,
   intercom,
