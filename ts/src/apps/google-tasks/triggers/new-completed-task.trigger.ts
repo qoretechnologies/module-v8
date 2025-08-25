@@ -73,7 +73,7 @@ const NewCompletedTask = QoreAppCreator.createLocalizedTrigger({
     return tasks?.length ? tasks[0] : null;
   },
   event_info: {
-    desc: 'Google Tasks New Task Trigger Event Info',
+    desc: 'Google Tasks New Completed Task Trigger Event Info',
     type: {
       type: 'hash',
       fields: {
@@ -111,7 +111,12 @@ const fetchLatestTasks = async (options: {
   const maxResults = DEFAULT_TRIGGER_POLL_ITEM_LIMIT;
   const { token, taskList, includeAssigned } = options;
 
-  const completedMin = new Date(new Date().getTime() - 24 * 60 * 60 * 1000).toISOString();
+  const COMPLETED_TASKS_LOOKBACK_HOURS = 24;
+  const MILLISECONDS_PER_HOUR = 60 * 60 * 1000;
+
+  const completedMin = new Date(
+    new Date().getTime() - COMPLETED_TASKS_LOOKBACK_HOURS * MILLISECONDS_PER_HOUR
+  ).toISOString();
 
   try {
     const client = createGoogleTasksClient(token);

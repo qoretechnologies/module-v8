@@ -64467,6 +64467,24 @@ type RootTranslation = {
 							 * C​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​s​ ​f​o​r​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​i​n​c​l​u​d​i​n​g​ ​i​n​d​u​s​t​r​y​,​ ​s​i​z​e​,​ ​w​e​b​s​i​t​e​,​ ​a​n​d​ ​a​n​y​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​ ​d​e​f​i​n​e​d​ ​i​n​ ​y​o​u​r​ ​a​c​c​o​u​n​t​.
 							 */
 							longDesc: string
+							type: {
+								fields: {
+									domain: {
+										/**
+										 * D​o​m​a​i​n
+										 */
+										displayName: string
+										/**
+										 * C​o​m​p​a​n​y​ ​d​o​m​a​i​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​r​i​m​a​r​y​ ​d​o​m​a​i​n​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​c​o​m​p​a​n​y​.
+										 */
+										longDesc: string
+									}
+								}
+							}
 						}
 						linkedContactsIds: {
 							/**
@@ -130562,6 +130580,24 @@ export type TranslationFunctions = {
 							 * Custom attributes for the company including industry, size, website, and any custom fields defined in your account.
 							 */
 							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									domain: {
+										/**
+										 * Domain
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Company domain
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The primary domain associated with the company.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
 						}
 						linkedContactsIds: {
 							/**
