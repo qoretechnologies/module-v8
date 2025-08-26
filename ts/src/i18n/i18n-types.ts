@@ -64467,6 +64467,24 @@ type RootTranslation = {
 							 * C​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​s​ ​f​o​r​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​i​n​c​l​u​d​i​n​g​ ​i​n​d​u​s​t​r​y​,​ ​s​i​z​e​,​ ​w​e​b​s​i​t​e​,​ ​a​n​d​ ​a​n​y​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​ ​d​e​f​i​n​e​d​ ​i​n​ ​y​o​u​r​ ​a​c​c​o​u​n​t​.
 							 */
 							longDesc: string
+							type: {
+								fields: {
+									domain: {
+										/**
+										 * D​o​m​a​i​n
+										 */
+										displayName: string
+										/**
+										 * C​o​m​p​a​n​y​ ​d​o​m​a​i​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​r​i​m​a​r​y​ ​d​o​m​a​i​n​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​c​o​m​p​a​n​y​.
+										 */
+										longDesc: string
+									}
+								}
+							}
 						}
 						linkedContactsIds: {
 							/**
@@ -65159,10 +65177,6 @@ type RootTranslation = {
 					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​B​r​e​v​o​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​c​o​n​t​a​c​t​s​.​ ​O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t​s​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​c​o​n​t​a​c​t​s​ ​a​r​e​ ​a​d​d​e​d​ ​t​o​ ​p​a​r​t​i​c​u​l​a​r​ ​l​i​s​t​s​.
 					 */
 					longDesc: string
-					/**
-					 * c​o​n​t​a​c​t​s
-					 */
-					group: string
 					options: {
 						listIds: {
 							/**
@@ -65193,10 +65207,6 @@ type RootTranslation = {
 					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​B​r​e​v​o​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​c​o​m​p​a​n​i​e​s​.​ ​O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​b​y​ ​c​o​m​p​a​n​i​e​s​ ​l​i​n​k​e​d​ ​t​o​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​s​ ​o​r​ ​d​e​a​l​s​.
 					 */
 					longDesc: string
-					/**
-					 * c​o​m​p​a​n​i​e​s
-					 */
-					group: string
 					options: {
 						linkedContactsId: {
 							/**
@@ -65241,10 +65251,6 @@ type RootTranslation = {
 					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​B​r​e​v​o​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​d​e​a​l​s​ ​i​n​ ​t​h​e​ ​s​a​l​e​s​ ​p​i​p​e​l​i​n​e​.​ ​O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​b​y​ ​d​e​a​l​s​ ​l​i​n​k​e​d​ ​t​o​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​s​ ​o​r​ ​c​o​m​p​a​n​i​e​s​.
 					 */
 					longDesc: string
-					/**
-					 * d​e​a​l​s
-					 */
-					group: string
 					options: {
 						linkedContactsId: {
 							/**
@@ -65289,10 +65295,830 @@ type RootTranslation = {
 					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​B​r​e​v​o​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​c​o​n​t​a​c​t​ ​l​i​s​t​s​.​ ​T​r​i​g​g​e​r​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​l​i​s​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​n​y​ ​f​o​l​d​e​r​.
 					 */
 					longDesc: string
+				}
+			}
+		}
+		GoogleTasks: {
+			/**
+			 * G​o​o​g​l​e​ ​T​a​s​k​s
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​G​o​o​g​l​e​ ​T​a​s​k​s​ ​A​P​I​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​t​a​s​k​ ​l​i​s​t​s​ ​a​n​d​ ​t​a​s​k​s​ ​e​f​f​i​c​i​e​n​t​l​y​.
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​G​o​o​g​l​e​ ​T​a​s​k​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​t​h​e​ ​G​o​o​g​l​e​ ​T​a​s​k​s​ ​A​P​I​.​ ​M​a​n​a​g​e​ ​t​a​s​k​ ​l​i​s​t​s​,​ ​c​r​e​a​t​e​ ​a​n​d​ ​u​p​d​a​t​e​ ​t​a​s​k​s​,​ ​s​e​t​ ​d​u​e​ ​d​a​t​e​s​,​ ​a​n​d​ ​o​r​g​a​n​i​z​e​ ​y​o​u​r​ ​p​r​o​d​u​c​t​i​v​i​t​y​ ​w​o​r​k​f​l​o​w​ ​w​i​t​h​ ​s​e​a​m​l​e​s​s​ ​a​u​t​o​m​a​t​i​o​n​ ​c​a​p​a​b​i​l​i​t​i​e​s​.
+			 */
+			longDesc: string
+			triggers: {
+				new_task: {
 					/**
-					 * l​i​s​t​s
+					 * N​e​w​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​a​s​k​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​G​o​o​g​l​e​ ​T​a​s​k​s
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​T​a​s​k​s​ ​l​i​s​t​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​a​s​k​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​a​s​k​ ​l​i​s​t​.
+					 */
+					longDesc: string
+					options: {
+						taskList: {
+							/**
+							 * T​a​s​k​ ​L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​l​i​s​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​t​a​s​k​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​T​a​s​k​s​ ​l​i​s​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​t​a​s​k​s​.
+							 */
+							longDesc: string
+						}
+						includeAssigned: {
+							/**
+							 * I​n​c​l​u​d​e​ ​A​s​s​i​g​n​e​d​ ​T​a​s​k​s
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​t​a​s​k​s​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​o​t​h​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * E​n​a​b​l​e​ ​t​h​i​s​ ​o​p​t​i​o​n​ ​t​o​ ​i​n​c​l​u​d​e​ ​t​a​s​k​s​ ​t​h​a​t​ ​h​a​v​e​ ​b​e​e​n​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​o​t​h​e​r​ ​p​e​o​p​l​e​ ​i​n​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_completed_task: {
+					/**
+					 * N​e​w​ ​C​o​m​p​l​e​t​e​d​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​t​a​s​k​ ​i​s​ ​m​a​r​k​e​d​ ​a​s​ ​c​o​m​p​l​e​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​T​a​s​k​s​ ​l​i​s​t​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​y​ ​t​a​s​k​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​l​i​s​t​ ​i​s​ ​m​a​r​k​e​d​ ​a​s​ ​c​o​m​p​l​e​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						taskList: {
+							/**
+							 * T​a​s​k​ ​L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​l​i​s​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​c​o​m​p​l​e​t​e​d​ ​t​a​s​k​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​T​a​s​k​s​ ​l​i​s​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​l​y​ ​c​o​m​p​l​e​t​e​d​ ​t​a​s​k​s​.
+							 */
+							longDesc: string
+						}
+						includeAssigned: {
+							/**
+							 * I​n​c​l​u​d​e​ ​A​s​s​i​g​n​e​d​ ​T​a​s​k​s
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​t​a​s​k​s​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​o​t​h​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * E​n​a​b​l​e​ ​t​h​i​s​ ​o​p​t​i​o​n​ ​t​o​ ​i​n​c​l​u​d​e​ ​t​a​s​k​s​ ​t​h​a​t​ ​h​a​v​e​ ​b​e​e​n​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​o​t​h​e​r​ ​p​e​o​p​l​e​ ​i​n​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			actions: {
+				create_task_list: {
+					/**
+					 * C​r​e​a​t​e​ ​T​a​s​k​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​t​a​s​k​ ​l​i​s​t​ ​i​n​ ​G​o​o​g​l​e​ ​T​a​s​k​s
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​t​a​s​k​ ​l​i​s​t​ ​i​n​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​T​a​s​k​s​ ​a​c​c​o​u​n​t​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​i​t​l​e​.
+					 */
+					longDesc: string
+					/**
+					 * T​a​s​k​ ​L​i​s​t​s
 					 */
 					group: string
+					options: {
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​n​e​w​ ​t​a​s​k​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​n​a​m​e​/​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​t​a​s​k​ ​l​i​s​t​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​ ​i​n​ ​G​o​o​g​l​e​ ​T​a​s​k​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_task_list: {
+					/**
+					 * D​e​l​e​t​e​ ​T​a​s​k​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​t​a​s​k​ ​l​i​s​t​ ​f​r​o​m​ ​G​o​o​g​l​e​ ​T​a​s​k​s
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​a​s​k​ ​l​i​s​t​ ​a​n​d​ ​a​l​l​ ​t​a​s​k​s​ ​w​i​t​h​i​n​ ​i​t​ ​f​r​o​m​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​T​a​s​k​s​ ​a​c​c​o​u​n​t​.
+					 */
+					longDesc: string
+					/**
+					 * T​a​s​k​ ​L​i​s​t​s
+					 */
+					group: string
+					options: {
+						id: {
+							/**
+							 * T​a​s​k​ ​L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​l​i​s​t​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​s​k​ ​l​i​s​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​p​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​f​r​o​m​ ​G​o​o​g​l​e​ ​T​a​s​k​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_tasks_lists: {
+					/**
+					 * L​i​s​t​ ​T​a​s​k​ ​L​i​s​t​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​a​l​l​ ​t​a​s​k​ ​l​i​s​t​s​ ​f​r​o​m​ ​G​o​o​g​l​e​ ​T​a​s​k​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​t​a​s​k​ ​l​i​s​t​s​ ​i​n​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​T​a​s​k​s​ ​a​c​c​o​u​n​t​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​p​a​g​i​n​a​t​i​o​n​.
+					 */
+					longDesc: string
+					/**
+					 * T​a​s​k​ ​L​i​s​t​s
+					 */
+					group: string
+					options: {
+						maxResults: {
+							/**
+							 * M​a​x​ ​R​e​s​u​l​t​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​a​s​k​ ​l​i​s​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​a​s​k​ ​l​i​s​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​.
+							 */
+							longDesc: string
+						}
+						nextPageToken: {
+							/**
+							 * N​e​x​t​ ​P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​t​o​k​e​n​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​q​u​e​s​t​ ​t​o​ ​g​e​t​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_task_list: {
+					/**
+					 * U​p​d​a​t​e​ ​T​a​s​k​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​t​a​s​k​ ​l​i​s​t​ ​i​n​ ​G​o​o​g​l​e​ ​T​a​s​k​s
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​t​i​t​l​e​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​t​a​s​k​ ​l​i​s​t​ ​i​n​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​T​a​s​k​s​ ​a​c​c​o​u​n​t​.
+					 */
+					longDesc: string
+					/**
+					 * T​a​s​k​ ​L​i​s​t​s
+					 */
+					group: string
+					options: {
+						id: {
+							/**
+							 * T​a​s​k​ ​L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​l​i​s​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​s​k​ ​l​i​s​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​ ​i​n​ ​G​o​o​g​l​e​ ​T​a​s​k​s​.
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​t​a​s​k​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​n​e​w​ ​t​i​t​l​e​/​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​t​a​s​k​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				clear_completed_tasks: {
+					/**
+					 * C​l​e​a​r​ ​C​o​m​p​l​e​t​e​d​ ​T​a​s​k​s
+					 */
+					displayName: string
+					/**
+					 * C​l​e​a​r​ ​a​l​l​ ​c​o​m​p​l​e​t​e​d​ ​t​a​s​k​s​ ​f​r​o​m​ ​a​ ​t​a​s​k​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​l​l​ ​c​o​m​p​l​e​t​e​d​ ​t​a​s​k​s​ ​f​r​o​m​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​a​s​k​ ​l​i​s​t​,​ ​h​e​l​p​i​n​g​ ​t​o​ ​k​e​e​p​ ​y​o​u​r​ ​l​i​s​t​s​ ​c​l​e​a​n​ ​a​n​d​ ​o​r​g​a​n​i​z​e​d​.
+					 */
+					longDesc: string
+					/**
+					 * T​a​s​k​s
+					 */
+					group: string
+					options: {
+						taskList: {
+							/**
+							 * T​a​s​k​ ​L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​l​i​s​t​ ​t​o​ ​c​l​e​a​r​ ​c​o​m​p​l​e​t​e​d​ ​t​a​s​k​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​s​k​ ​l​i​s​t​ ​f​r​o​m​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​m​o​v​e​ ​a​l​l​ ​c​o​m​p​l​e​t​e​d​ ​t​a​s​k​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_task: {
+					/**
+					 * C​r​e​a​t​e​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​t​a​s​k​ ​i​n​ ​G​o​o​g​l​e​ ​T​a​s​k​s
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​t​a​s​k​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​a​s​k​ ​l​i​s​t​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​d​e​t​a​i​l​s​ ​l​i​k​e​ ​n​o​t​e​s​,​ ​d​u​e​ ​d​a​t​e​,​ ​a​n​d​ ​h​i​e​r​a​r​c​h​i​c​a​l​ ​p​o​s​i​t​i​o​n​i​n​g​.
+					 */
+					longDesc: string
+					/**
+					 * T​a​s​k​s
+					 */
+					group: string
+					options: {
+						taskList: {
+							/**
+							 * T​a​s​k​ ​L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​l​i​s​t​ ​t​o​ ​a​d​d​ ​t​h​e​ ​t​a​s​k​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​s​k​ ​l​i​s​t​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​n​e​w​ ​t​a​s​k​.
+							 */
+							longDesc: string
+						}
+						parent: {
+							/**
+							 * P​a​r​e​n​t​ ​T​a​s​k
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​a​r​e​n​t​ ​t​a​s​k​ ​(​t​o​ ​c​r​e​a​t​e​ ​a​ ​s​u​b​t​a​s​k​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​a​ ​p​a​r​e​n​t​ ​t​a​s​k​ ​i​f​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​i​s​ ​t​a​s​k​ ​a​s​ ​a​ ​s​u​b​t​a​s​k​ ​u​n​d​e​r​ ​a​n​o​t​h​e​r​ ​t​a​s​k​.
+							 */
+							longDesc: string
+						}
+						previous: {
+							/**
+							 * P​r​e​v​i​o​u​s​ ​T​a​s​k
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​a​f​t​e​r​ ​w​h​i​c​h​ ​t​h​i​s​ ​t​a​s​k​ ​s​h​o​u​l​d​ ​b​e​ ​p​o​s​i​t​i​o​n​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​s​k​ ​a​f​t​e​r​ ​w​h​i​c​h​ ​t​h​i​s​ ​n​e​w​ ​t​a​s​k​ ​s​h​o​u​l​d​ ​b​e​ ​p​o​s​i​t​i​o​n​e​d​ ​i​n​ ​t​h​e​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​t​i​t​l​e​ ​o​r​ ​m​a​i​n​ ​d​e​s​c​r​i​p​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​t​a​s​k​.
+							 */
+							longDesc: string
+						}
+						notes: {
+							/**
+							 * N​o​t​e​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​n​o​t​e​s​ ​o​r​ ​d​e​s​c​r​i​p​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​ ​a​n​y​ ​a​d​d​i​t​i​o​n​a​l​ ​n​o​t​e​s​,​ ​d​e​t​a​i​l​s​,​ ​o​r​ ​d​e​s​c​r​i​p​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​t​a​s​k​.
+							 */
+							longDesc: string
+						}
+						due: {
+							/**
+							 * D​u​e​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​u​e​ ​d​a​t​e​ ​f​o​r​ ​t​h​e​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​a​ ​d​u​e​ ​d​a​t​e​ ​f​o​r​ ​w​h​e​n​ ​t​h​i​s​ ​t​a​s​k​ ​s​h​o​u​l​d​ ​b​e​ ​c​o​m​p​l​e​t​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_task: {
+					/**
+					 * D​e​l​e​t​e​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​t​a​s​k​ ​f​r​o​m​ ​G​o​o​g​l​e​ ​T​a​s​k​s
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​a​s​k​ ​f​r​o​m​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​t​a​s​k​ ​l​i​s​t​.
+					 */
+					longDesc: string
+					/**
+					 * T​a​s​k​s
+					 */
+					group: string
+					options: {
+						taskList: {
+							/**
+							 * T​a​s​k​ ​L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​l​i​s​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​s​k​ ​l​i​s​t​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​t​a​s​k​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​.
+							 */
+							longDesc: string
+						}
+						task: {
+							/**
+							 * T​a​s​k
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​p​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_task: {
+					/**
+					 * G​e​t​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​ ​f​r​o​m​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​t​a​s​k​ ​l​i​s​t​.
+					 */
+					longDesc: string
+					/**
+					 * T​a​s​k​s
+					 */
+					group: string
+					options: {
+						taskList: {
+							/**
+							 * T​a​s​k​ ​L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​l​i​s​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​s​k​ ​l​i​s​t​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​t​a​s​k​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+						task: {
+							/**
+							 * T​a​s​k
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​ ​w​h​o​s​e​ ​d​e​t​a​i​l​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_tasks: {
+					/**
+					 * L​i​s​t​ ​T​a​s​k​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​a​l​l​ ​t​a​s​k​s​ ​f​r​o​m​ ​a​ ​t​a​s​k​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​t​a​s​k​s​ ​f​r​o​m​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​a​s​k​ ​l​i​s​t​ ​w​i​t​h​ ​v​a​r​i​o​u​s​ ​f​i​l​t​e​r​i​n​g​ ​o​p​t​i​o​n​s​ ​l​i​k​e​ ​d​u​e​ ​d​a​t​e​s​,​ ​c​o​m​p​l​e​t​i​o​n​ ​s​t​a​t​u​s​,​ ​a​n​d​ ​m​o​r​e​.
+					 */
+					longDesc: string
+					/**
+					 * T​a​s​k​s
+					 */
+					group: string
+					options: {
+						taskList: {
+							/**
+							 * T​a​s​k​ ​L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​l​i​s​t​ ​t​o​ ​g​e​t​ ​t​a​s​k​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​s​k​ ​l​i​s​t​ ​f​r​o​m​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​a​s​k​s​.
+							 */
+							longDesc: string
+						}
+						completedMax: {
+							/**
+							 * C​o​m​p​l​e​t​e​d​ ​M​a​x​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * U​p​p​e​r​ ​b​o​u​n​d​ ​f​o​r​ ​a​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​t​a​s​k​s​ ​c​o​m​p​l​e​t​e​d​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						completedMin: {
+							/**
+							 * C​o​m​p​l​e​t​e​d​ ​M​i​n​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * L​o​w​e​r​ ​b​o​u​n​d​ ​f​o​r​ ​a​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​t​a​s​k​s​ ​c​o​m​p​l​e​t​e​d​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						dueMax: {
+							/**
+							 * D​u​e​ ​M​a​x​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * U​p​p​e​r​ ​b​o​u​n​d​ ​f​o​r​ ​a​ ​t​a​s​k​ ​d​u​e​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​t​a​s​k​s​ ​w​i​t​h​ ​d​u​e​ ​d​a​t​e​s​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						dueMin: {
+							/**
+							 * D​u​e​ ​M​i​n​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * L​o​w​e​r​ ​b​o​u​n​d​ ​f​o​r​ ​a​ ​t​a​s​k​ ​d​u​e​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​t​a​s​k​s​ ​w​i​t​h​ ​d​u​e​ ​d​a​t​e​s​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						maxResults: {
+							/**
+							 * M​a​x​ ​R​e​s​u​l​t​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​a​s​k​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​a​s​k​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.
+							 */
+							longDesc: string
+						}
+						pageToken: {
+							/**
+							 * P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​t​h​e​ ​p​a​g​e​ ​t​o​k​e​n​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​q​u​e​s​t​ ​t​o​ ​g​e​t​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						showCompleted: {
+							/**
+							 * S​h​o​w​ ​C​o​m​p​l​e​t​e​d
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​c​o​m​p​l​e​t​e​d​ ​t​a​s​k​s
+							 */
+							shortDesc: string
+							/**
+							 * E​n​a​b​l​e​ ​t​h​i​s​ ​o​p​t​i​o​n​ ​t​o​ ​i​n​c​l​u​d​e​ ​c​o​m​p​l​e​t​e​d​ ​t​a​s​k​s​ ​i​n​ ​t​h​e​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						showDeleted: {
+							/**
+							 * S​h​o​w​ ​D​e​l​e​t​e​d
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​d​e​l​e​t​e​d​ ​t​a​s​k​s
+							 */
+							shortDesc: string
+							/**
+							 * E​n​a​b​l​e​ ​t​h​i​s​ ​o​p​t​i​o​n​ ​t​o​ ​i​n​c​l​u​d​e​ ​d​e​l​e​t​e​d​ ​t​a​s​k​s​ ​i​n​ ​t​h​e​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						showHidden: {
+							/**
+							 * S​h​o​w​ ​H​i​d​d​e​n
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​h​i​d​d​e​n​ ​t​a​s​k​s
+							 */
+							shortDesc: string
+							/**
+							 * E​n​a​b​l​e​ ​t​h​i​s​ ​o​p​t​i​o​n​ ​t​o​ ​i​n​c​l​u​d​e​ ​h​i​d​d​e​n​ ​t​a​s​k​s​ ​i​n​ ​t​h​e​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						updateMin: {
+							/**
+							 * U​p​d​a​t​e​d​ ​M​i​n​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * L​o​w​e​r​ ​b​o​u​n​d​ ​f​o​r​ ​a​ ​t​a​s​k​ ​l​a​s​t​ ​m​o​d​i​f​i​c​a​t​i​o​n​ ​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​t​a​s​k​s​ ​t​h​a​t​ ​h​a​v​e​ ​b​e​e​n​ ​u​p​d​a​t​e​d​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						showAssigned: {
+							/**
+							 * S​h​o​w​ ​A​s​s​i​g​n​e​d
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​a​s​s​i​g​n​e​d​ ​t​a​s​k​s
+							 */
+							shortDesc: string
+							/**
+							 * E​n​a​b​l​e​ ​t​h​i​s​ ​o​p​t​i​o​n​ ​t​o​ ​i​n​c​l​u​d​e​ ​t​a​s​k​s​ ​t​h​a​t​ ​h​a​v​e​ ​b​e​e​n​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​o​t​h​e​r​ ​p​e​o​p​l​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_task: {
+					/**
+					 * U​p​d​a​t​e​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​t​a​s​k​ ​i​n​ ​G​o​o​g​l​e​ ​T​a​s​k​s
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​t​a​s​k​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​t​i​t​l​e​,​ ​n​o​t​e​s​,​ ​d​u​e​ ​d​a​t​e​,​ ​c​o​m​p​l​e​t​i​o​n​ ​s​t​a​t​u​s​,​ ​a​n​d​ ​h​i​e​r​a​r​c​h​i​c​a​l​ ​p​o​s​i​t​i​o​n​i​n​g​.
+					 */
+					longDesc: string
+					/**
+					 * T​a​s​k​s
+					 */
+					group: string
+					options: {
+						taskList: {
+							/**
+							 * T​a​s​k​ ​L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​l​i​s​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​s​k​ ​l​i​s​t​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​t​a​s​k​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						task: {
+							/**
+							 * T​a​s​k
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						parent: {
+							/**
+							 * P​a​r​e​n​t​ ​T​a​s​k
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​a​r​e​n​t​ ​t​a​s​k​ ​(​t​o​ ​m​a​k​e​ ​t​h​i​s​ ​a​ ​s​u​b​t​a​s​k​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​a​ ​p​a​r​e​n​t​ ​t​a​s​k​ ​i​f​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​a​k​e​ ​t​h​i​s​ ​t​a​s​k​ ​a​ ​s​u​b​t​a​s​k​ ​u​n​d​e​r​ ​a​n​o​t​h​e​r​ ​t​a​s​k​.
+							 */
+							longDesc: string
+						}
+						previous: {
+							/**
+							 * P​r​e​v​i​o​u​s​ ​T​a​s​k
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​a​f​t​e​r​ ​w​h​i​c​h​ ​t​h​i​s​ ​t​a​s​k​ ​s​h​o​u​l​d​ ​b​e​ ​p​o​s​i​t​i​o​n​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​s​k​ ​a​f​t​e​r​ ​w​h​i​c​h​ ​t​h​i​s​ ​t​a​s​k​ ​s​h​o​u​l​d​ ​b​e​ ​p​o​s​i​t​i​o​n​e​d​ ​i​n​ ​t​h​e​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​n​e​w​ ​t​i​t​l​e​ ​o​r​ ​m​a​i​n​ ​d​e​s​c​r​i​p​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​t​a​s​k​.
+							 */
+							longDesc: string
+						}
+						notes: {
+							/**
+							 * N​o​t​e​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​n​o​t​e​s​ ​o​r​ ​d​e​s​c​r​i​p​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​a​n​y​ ​a​d​d​i​t​i​o​n​a​l​ ​n​o​t​e​s​,​ ​d​e​t​a​i​l​s​,​ ​o​r​ ​d​e​s​c​r​i​p​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​t​a​s​k​.
+							 */
+							longDesc: string
+						}
+						due: {
+							/**
+							 * D​u​e​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​u​e​ ​d​a​t​e​ ​f​o​r​ ​t​h​e​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​o​r​ ​u​p​d​a​t​e​ ​t​h​e​ ​d​u​e​ ​d​a​t​e​ ​f​o​r​ ​w​h​e​n​ ​t​h​i​s​ ​t​a​s​k​ ​s​h​o​u​l​d​ ​b​e​ ​c​o​m​p​l​e​t​e​d​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​m​p​l​e​t​i​o​n​ ​s​t​a​t​u​s​ ​o​f​ ​t​h​e​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​t​a​s​k​ ​i​s​ ​i​n​c​o​m​p​l​e​t​e​ ​(​n​e​e​d​s​ ​a​c​t​i​o​n​)​ ​o​r​ ​c​o​m​p​l​e​t​e​d​.
+							 */
+							longDesc: string
+						}
+					}
 				}
 			}
 		}
@@ -129754,6 +130580,24 @@ export type TranslationFunctions = {
 							 * Custom attributes for the company including industry, size, website, and any custom fields defined in your account.
 							 */
 							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									domain: {
+										/**
+										 * Domain
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Company domain
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The primary domain associated with the company.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
 						}
 						linkedContactsIds: {
 							/**
@@ -130446,10 +131290,6 @@ export type TranslationFunctions = {
 					 * Monitors your Brevo account for newly created contacts. Optionally filter by specific lists to only trigger when contacts are added to particular lists.
 					 */
 					longDesc: () => LocalizedString
-					/**
-					 * contacts
-					 */
-					group: () => LocalizedString
 					options: {
 						listIds: {
 							/**
@@ -130480,10 +131320,6 @@ export type TranslationFunctions = {
 					 * Monitors your Brevo account for newly created companies. Optionally filter by companies linked to specific contacts or deals.
 					 */
 					longDesc: () => LocalizedString
-					/**
-					 * companies
-					 */
-					group: () => LocalizedString
 					options: {
 						linkedContactsId: {
 							/**
@@ -130528,10 +131364,6 @@ export type TranslationFunctions = {
 					 * Monitors your Brevo account for newly created deals in the sales pipeline. Optionally filter by deals linked to specific contacts or companies.
 					 */
 					longDesc: () => LocalizedString
-					/**
-					 * deals
-					 */
-					group: () => LocalizedString
 					options: {
 						linkedContactsId: {
 							/**
@@ -130576,10 +131408,830 @@ export type TranslationFunctions = {
 					 * Monitors your Brevo account for newly created contact lists. Triggers whenever a new list is created in any folder.
 					 */
 					longDesc: () => LocalizedString
+				}
+			}
+		}
+		GoogleTasks: {
+			/**
+			 * Google Tasks
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect to Google Tasks API to manage your task lists and tasks efficiently.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The Google Tasks integration provides comprehensive actions and triggers to interact with the Google Tasks API. Manage task lists, create and update tasks, set due dates, and organize your productivity workflow with seamless automation capabilities.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				new_task: {
 					/**
-					 * lists
+					 * New Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new task is created in Google Tasks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors your Google Tasks lists and triggers when a new task is added to the specified task list.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						taskList: {
+							/**
+							 * Task List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task list to monitor for new tasks
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Tasks list that you want to monitor for newly created tasks.
+							 */
+							longDesc: () => LocalizedString
+						}
+						includeAssigned: {
+							/**
+							 * Include Assigned Tasks
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to include tasks assigned to others
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enable this option to include tasks that have been assigned to other people in the trigger results.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_completed_task: {
+					/**
+					 * New Completed Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a task is marked as completed
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors your Google Tasks lists and triggers when any task in the specified list is marked as completed.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						taskList: {
+							/**
+							 * Task List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task list to monitor for completed tasks
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Tasks list that you want to monitor for newly completed tasks.
+							 */
+							longDesc: () => LocalizedString
+						}
+						includeAssigned: {
+							/**
+							 * Include Assigned Tasks
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to include tasks assigned to others
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enable this option to include tasks that have been assigned to other people in the trigger results.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			actions: {
+				create_task_list: {
+					/**
+					 * Create Task List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new task list in Google Tasks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new task list in your Google Tasks account with the specified title.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Task Lists
 					 */
 					group: () => LocalizedString
+					options: {
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The title of the new task list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the name/title for the new task list that will be created in Google Tasks.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_task_list: {
+					/**
+					 * Delete Task List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a task list from Google Tasks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently deletes the specified task list and all tasks within it from your Google Tasks account.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Task Lists
+					 */
+					group: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Task List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task list to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the task list that you want to permanently delete from Google Tasks.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_tasks_lists: {
+					/**
+					 * List Task Lists
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get all task lists from Google Tasks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of all task lists in your Google Tasks account with optional pagination.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Task Lists
+					 */
+					group: () => LocalizedString
+					options: {
+						maxResults: {
+							/**
+							 * Max Results
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of task lists to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the maximum number of task lists to return in the response. Default is 10.
+							 */
+							longDesc: () => LocalizedString
+						}
+						nextPageToken: {
+							/**
+							 * Next Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide the next page token from a previous request to get the next page of results.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_task_list: {
+					/**
+					 * Update Task List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing task list in Google Tasks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates the title of an existing task list in your Google Tasks account.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Task Lists
+					 */
+					group: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Task List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task list to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the task list that you want to update in Google Tasks.
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new title for the task list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the new title/name for the selected task list.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				clear_completed_tasks: {
+					/**
+					 * Clear Completed Tasks
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Clear all completed tasks from a task list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes all completed tasks from the specified task list, helping to keep your lists clean and organized.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Tasks
+					 */
+					group: () => LocalizedString
+					options: {
+						taskList: {
+							/**
+							 * Task List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task list to clear completed tasks from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the task list from which you want to remove all completed tasks.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_task: {
+					/**
+					 * Create Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new task in Google Tasks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new task in the specified task list with optional details like notes, due date, and hierarchical positioning.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Tasks
+					 */
+					group: () => LocalizedString
+					options: {
+						taskList: {
+							/**
+							 * Task List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task list to add the task to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the task list where you want to create the new task.
+							 */
+							longDesc: () => LocalizedString
+						}
+						parent: {
+							/**
+							 * Parent Task
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The parent task (to create a subtask)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select a parent task if you want to create this task as a subtask under another task.
+							 */
+							longDesc: () => LocalizedString
+						}
+						previous: {
+							/**
+							 * Previous Task
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task after which this task should be positioned
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the task after which this new task should be positioned in the list.
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The title of the task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the title or main description for the new task.
+							 */
+							longDesc: () => LocalizedString
+						}
+						notes: {
+							/**
+							 * Notes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional notes or description for the task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Add any additional notes, details, or description for the task.
+							 */
+							longDesc: () => LocalizedString
+						}
+						due: {
+							/**
+							 * Due Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The due date for the task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set a due date for when this task should be completed.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_task: {
+					/**
+					 * Delete Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a task from Google Tasks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently deletes the specified task from the selected task list.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Tasks
+					 */
+					group: () => LocalizedString
+					options: {
+						taskList: {
+							/**
+							 * Task List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task list containing the task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the task list that contains the task you want to delete.
+							 */
+							longDesc: () => LocalizedString
+						}
+						task: {
+							/**
+							 * Task
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific task that you want to permanently delete.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_task: {
+					/**
+					 * Get Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific task
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves detailed information about a specific task from the selected task list.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Tasks
+					 */
+					group: () => LocalizedString
+					options: {
+						taskList: {
+							/**
+							 * Task List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task list containing the task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the task list that contains the task you want to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+						task: {
+							/**
+							 * Task
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific task whose details you want to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_tasks: {
+					/**
+					 * List Tasks
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get all tasks from a task list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of tasks from the specified task list with various filtering options like due dates, completion status, and more.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Tasks
+					 */
+					group: () => LocalizedString
+					options: {
+						taskList: {
+							/**
+							 * Task List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task list to get tasks from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the task list from which you want to retrieve tasks.
+							 */
+							longDesc: () => LocalizedString
+						}
+						completedMax: {
+							/**
+							 * Completed Max Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Upper bound for a task completion date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return tasks completed before this date.
+							 */
+							longDesc: () => LocalizedString
+						}
+						completedMin: {
+							/**
+							 * Completed Min Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lower bound for a task completion date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return tasks completed after this date.
+							 */
+							longDesc: () => LocalizedString
+						}
+						dueMax: {
+							/**
+							 * Due Max Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Upper bound for a task due date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return tasks with due dates before this date.
+							 */
+							longDesc: () => LocalizedString
+						}
+						dueMin: {
+							/**
+							 * Due Min Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lower bound for a task due date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return tasks with due dates after this date.
+							 */
+							longDesc: () => LocalizedString
+						}
+						maxResults: {
+							/**
+							 * Max Results
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of tasks to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the maximum number of tasks to return in the response.
+							 */
+							longDesc: () => LocalizedString
+						}
+						pageToken: {
+							/**
+							 * Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide the page token from a previous request to get the next page of results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						showCompleted: {
+							/**
+							 * Show Completed
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to include completed tasks
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enable this option to include completed tasks in the results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						showDeleted: {
+							/**
+							 * Show Deleted
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to include deleted tasks
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enable this option to include deleted tasks in the results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						showHidden: {
+							/**
+							 * Show Hidden
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to include hidden tasks
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enable this option to include hidden tasks in the results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						updateMin: {
+							/**
+							 * Updated Min Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lower bound for a task last modification time
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return tasks that have been updated after this date.
+							 */
+							longDesc: () => LocalizedString
+						}
+						showAssigned: {
+							/**
+							 * Show Assigned
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to include assigned tasks
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enable this option to include tasks that have been assigned to other people.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_task: {
+					/**
+					 * Update Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing task in Google Tasks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates the details of an existing task including its title, notes, due date, completion status, and hierarchical positioning.
+					 */
+					longDesc: () => LocalizedString
+					/**
+					 * Tasks
+					 */
+					group: () => LocalizedString
+					options: {
+						taskList: {
+							/**
+							 * Task List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task list containing the task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the task list that contains the task you want to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						task: {
+							/**
+							 * Task
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific task that you want to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						parent: {
+							/**
+							 * Parent Task
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The parent task (to make this a subtask)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select a parent task if you want to make this task a subtask under another task.
+							 */
+							longDesc: () => LocalizedString
+						}
+						previous: {
+							/**
+							 * Previous Task
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task after which this task should be positioned
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the task after which this task should be positioned in the list.
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new title of the task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the new title or main description for the task.
+							 */
+							longDesc: () => LocalizedString
+						}
+						notes: {
+							/**
+							 * Notes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional notes or description for the task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update any additional notes, details, or description for the task.
+							 */
+							longDesc: () => LocalizedString
+						}
+						due: {
+							/**
+							 * Due Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The due date for the task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set or update the due date for when this task should be completed.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The completion status of the task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set whether the task is incomplete (needs action) or completed.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 			}
 		}

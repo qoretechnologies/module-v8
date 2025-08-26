@@ -14,7 +14,15 @@ const options = {
     required: true,
   },
   attributes: {
-    type: 'hash',
+    type: {
+      type: 'hash',
+      fields: {
+        domain: {
+          type: 'string',
+          required: false,
+        },
+      },
+    },
     preselected: true,
     get_dynamic_type: getBrevoCompanyAttributeOptionsTypeWithAllowedValues,
   },

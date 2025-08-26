@@ -43,6 +43,10 @@ describe('Should test Monday app', () => {
 
       const getMondayBoardIdAllowedValues = createRecord.options?.board_id.get_allowed_values;
 
+      if (!getMondayBoardIdAllowedValues) {
+        throw new Error('getMondayBoardIdAllowedValues is not defined');
+      }
+
       const allowedValues = await getMondayBoardIdAllowedValues(baseContext);
 
       expect(allowedValues).toBeDefined();
@@ -99,6 +103,11 @@ describe('Should test Monday app', () => {
         throw new Error('ClearColumnValue action not found or does not have options');
       }
       const getMondayColumnIdAllowedValues = clearColumnValue.options?.column_id.get_allowed_values;
+
+      if (!getMondayColumnIdAllowedValues) {
+        throw new Error('getMondayColumnIdAllowedValues is not defined');
+      }
+
       const allowedValues = await getMondayColumnIdAllowedValues(baseContext);
 
       expect(allowedValues).toBeDefined();
@@ -120,6 +129,10 @@ describe('Should test Monday app', () => {
 
       const getMondaySingleColumnAllowedValues =
         searchRecords.options?.query_text.get_allowed_values;
+
+      if (!getMondaySingleColumnAllowedValues) {
+        throw new Error('getMondaySingleColumnAllowedValues is not defined');
+      }
 
       const allowedValues = await getMondaySingleColumnAllowedValues({
         ...baseContext,
@@ -143,6 +156,11 @@ describe('Should test Monday app', () => {
       }
 
       const getMondayRecordIdAllowedValues = getRecord.options?.record_id.get_allowed_values;
+
+      if (!getMondayRecordIdAllowedValues) {
+        throw new Error('getMondayRecordIdAllowedValues is not defined');
+      }
+
       const allowedValues = await getMondayRecordIdAllowedValues(baseContext);
 
       expect(allowedValues).toBeDefined();
@@ -164,6 +182,11 @@ describe('Should test Monday app', () => {
       }
 
       const getMondayBoardDependentOptions = createRecord.options?.board_id.get_dependent_options;
+
+      if (!getMondayBoardDependentOptions) {
+        throw new Error('getMondayBoardDependentOptions is not defined');
+      }
+
       const options = await getMondayBoardDependentOptions(baseContext);
 
       expect(options).toBeDefined();

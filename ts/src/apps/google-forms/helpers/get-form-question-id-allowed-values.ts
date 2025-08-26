@@ -4,8 +4,8 @@ import {
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
-import { GoogleFormsError } from '../constants';
 import { createGoogleFormsClient } from './constants';
+import { GoogleFormsError } from '../constants';
 
 export const getGoogleFormQuestionIdAllowedValues: TQoreGetAllowedValuesFunction<
   TCustomConnOptions,
@@ -19,45 +19,41 @@ export const getGoogleFormQuestionIdAllowedValues: TQoreGetAllowedValuesFunction
 
   try {
     const formsClient = createGoogleFormsClient(token);
-
     const formResponse = await formsClient.forms.get({
       formId: form_id,
       fields: 'items',
     });
 
-    const questions =
-      formResponse.data.items?.filter(
-        (item) => item.questionItem?.question?.questionId || item.questionGroupItem
-      ) || [];
+    const items = formResponse.data.items ?? [];
 
-    if (!questions.length) {
-      return [];
-    }
-
-    const allowedValues: IQoreAllowedValue<string>[] = questions.flatMap((question) => {
-      if (question.questionGroupItem?.questions) {
-        return question.questionGroupItem.questions.map((item) => ({
-          display_name: `[${question.title}] - ${item.rowQuestion?.title || 'Untitled Question'}`,
-          value: item.questionId!,
-          desc:
-            `Required: ${item.required ? 'Yes' : 'No'}\n` +
-            `Description: ${question.description || 'No Description'}\n`,
-        }));
+    const allowedValues: IQoreAllowedValue<string>[] = items.flatMap((item) => {
+      const group = item.questionGroupItem?.questions ?? [];
+      if (group.length) {
+        return group
+          .filter((q) => !!q.questionId)
+          .map((q) => ({
+            value: q.questionId as string,
+            display_name: `[${item.title ?? 'Untitled Section'}] - ${q.rowQuestion?.title ?? 'Untitled Question'}`,
+            desc:
+              `Required: ${q.required ? 'Yes' : 'No'}\n` +
+              `Description: ${item.description ?? 'No Description'}\n`,
+          }));
       }
 
-      const qItem = question.questionItem?.question;
+      const q = item.questionItem?.question;
+      if (!q?.questionId) return [];
 
       return {
-        value: qItem!.questionId!,
-        display_name: question.title || 'Untitled Question',
+        value: q.questionId,
+        display_name: item.title ?? 'Untitled Question',
         desc:
-          `Required: ${qItem?.required ? 'Yes' : 'No'}\n` +
-          `Description: ${question.description || 'No Description'}\n`,
+          `Required: ${q.required ? 'Yes' : 'No'}\n` +
+          `Description: ${item.description ?? 'No Description'}\n`,
       };
     });
 
     return allowedValues;
   } catch (error: any) {
-    throw new GoogleFormsError(`Failed to get Google Form Question IDs: ${error.message || error}`);
+    throw new GoogleFormsError(`Failed to get Google Form Question IDs: ${error.message ?? error}`);
   }
 };

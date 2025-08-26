@@ -403,10 +403,11 @@ public class TypeScriptActionInterface {
     }
 
     #! Shuts the server down if it's running
-    static shutdownServer() {
+    static shutdownServer(*int signal) {
         sm.lock();
         on_exit sm.unlock();
 
+        *JavaScriptThreadProcessPool server = remove TypeScriptActionInterface::server;
         if (!server) {
             return;
         }

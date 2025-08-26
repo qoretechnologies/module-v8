@@ -363,6 +363,15 @@ const BrevoAppEn = {
           shortDesc: 'Custom company data',
           longDesc:
             'Custom attributes for the company including industry, size, website, and any custom fields defined in your account.',
+          type: {
+            fields: {
+              domain: {
+                displayName: 'Domain',
+                shortDesc: 'Company domain',
+                longDesc: 'The primary domain associated with the company.',
+              },
+            },
+          },
         },
         linkedContactsIds: {
           displayName: 'Associated Contacts',
@@ -644,7 +653,6 @@ const BrevoAppEn = {
       shortDesc: 'Triggers when a new contact is created',
       longDesc:
         'Monitors your Brevo account for newly created contacts. Optionally filter by specific lists to only trigger when contacts are added to particular lists.',
-      group: 'contacts',
       options: {
         listIds: {
           displayName: 'Filter by Lists',
@@ -660,7 +668,6 @@ const BrevoAppEn = {
       shortDesc: 'Triggers when a new company is created',
       longDesc:
         'Monitors your Brevo account for newly created companies. Optionally filter by companies linked to specific contacts or deals.',
-      group: 'companies',
       options: {
         linkedContactsId: {
           displayName: 'Filter by Contact',
@@ -682,7 +689,6 @@ const BrevoAppEn = {
       shortDesc: 'Triggers when a new deal is created',
       longDesc:
         'Monitors your Brevo account for newly created deals in the sales pipeline. Optionally filter by deals linked to specific contacts or companies.',
-      group: 'deals',
       options: {
         linkedContactsId: {
           displayName: 'Filter by Contacts',
@@ -704,7 +710,6 @@ const BrevoAppEn = {
       shortDesc: 'Triggers when a new contact list is created',
       longDesc:
         'Monitors your Brevo account for newly created contact lists. Triggers whenever a new list is created in any folder.',
-      group: 'lists',
     },
   },
 };

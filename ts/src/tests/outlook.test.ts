@@ -11,6 +11,8 @@ import { getOutlookEventIdAllowedValues } from '../apps/outlook/helpers/get-even
 import { getOutlookRecipientsAllowedValues } from '../apps/outlook/helpers/get-recepient-allowed-values';
 import { getOutlookMailFoldersAllowedValues } from '../apps/outlook/helpers/get-email-folder-allowed-values';
 import { getOutlookEmailAllowedValues } from '../apps/outlook/helpers/get-outlook-email-allowed-values';
+import { configDotenv } from 'dotenv';
+configDotenv({ path: '.env' });
 
 describe('Should test Outlook actions', () => {
   const refreshToken = process.env.OUTLOOK_REFRESH_TOKEN;

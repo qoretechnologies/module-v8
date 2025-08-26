@@ -375,6 +375,8 @@ describe('slackPieceTest', () => {
 
     const findUserActionFunction = findUserAction?.api_function;
 
+    expect(findUserActionFunction).toBeDefined();
+
     const action = slackApp.actions.find(
       (action) => action.action === 'slack_update_profile'
     ) as IQoreAppActionWithFunction;
