@@ -1,16 +1,25 @@
 import type { BaseTranslation } from '../i18n-types';
+import ActiveCampaign from './apps/ActiveCampaign';
 import Airtable from './apps/Airtable';
 import Asana from './apps/Asana';
 import Attio from './apps/Attio';
+import BigMl from './apps/BigMl';
 import Bitbucket from './apps/Bitbucket';
+import Brevo from './apps/Brevo';
+import BrowseAi from './apps/BrowseAi';
 import BusinessCentral from './apps/BusinessCentral';
 import Calendly from './apps/Calendly';
+import Canva from './apps/Canva';
+import Claude from './apps/Claude';
+import ClickUp from './apps/ClickUp';
 import Confluence from './apps/Confluence';
 import DocusignESignature from './apps/DocusignESignature';
 import Dropbox from './apps/Dropbox';
 import Dynamics from './apps/Dynamics';
 import FacebookPages from './apps/FacebookPages';
+import Figma from './apps/Figma';
 import Freshdesk from './apps/Freshdesk';
+import Gemini from './apps/Gemini';
 import Github from './apps/Github';
 import GoogleChat from './apps/GoogleChat';
 import GoogleContacts from './apps/GoogleContacts';
@@ -19,16 +28,21 @@ import GoogleDrive from './apps/GoogleDrive';
 import GoogleForms from './apps/GoogleForms';
 import GoogleMeet from './apps/GoogleMeet';
 import GoogleSheets from './apps/GoogleSheets';
+import GoogleTasks from './apps/GoogleTasks';
 import Hubspot from './apps/Hubspot';
+import HuggingFace from './apps/HuggingFace';
 import Intercom from './apps/Intercom';
 import Jira from './apps/Jira';
 import Klaviyo from './apps/Klaviyo';
+import LinkedIn from './apps/LinkedIn';
+import LinkedInOrganizations from './apps/LinkedInOrganizations';
 import Magento from './apps/Magento';
 import Mailchimp from './apps/Mailchimp';
 import Messenger360 from './apps/Messenger360';
 import NetSuite from './apps/NetSuite';
 import Notion from './apps/Notion';
 import Odoo from './apps/Odoo';
+import OpenRouter from './apps/Openrouter';
 import Outlook from './apps/Outlook';
 import Paddle from './apps/Paddle';
 import Pipedrive from './apps/Pipedrive';
@@ -39,26 +53,13 @@ import SharePoint from './apps/SharePoint';
 import Shopify from './apps/Shopify';
 import Stripe from './apps/Stripe';
 import Teams from './apps/Teams';
+import Telegram from './apps/Telegram';
 import Typeform from './apps/Typeform';
+import Webflow from './apps/Webflow';
 import Xero from './apps/Xero';
+import YouTube from './apps/YouTube';
 import Zendesk from './apps/Zendesk';
 import Zoom from './apps/Zoom';
-import ClickUp from './apps/ClickUp';
-import Webflow from './apps/Webflow';
-import ActiveCampaign from './apps/ActiveCampaign';
-import BrowseAi from './apps/BrowseAi';
-import BigMl from './apps/BigMl';
-import Claude from './apps/Claude';
-import Gemini from './apps/Gemini';
-import OpenRouter from './apps/Openrouter';
-import HuggingFace from './apps/HuggingFace';
-import YouTube from './apps/YouTube';
-import LinkedIn from './apps/LinkedIn';
-import Canva from './apps/Canva';
-import Figma from './apps/Figma';
-import LinkedInOrganizations from './apps/LinkedInOrganizations';
-import Telegram from './apps/Telegram';
-import Brevo from './apps/Brevo';
 
 const en = {
   common: {},
@@ -217,6 +218,7 @@ const en = {
     LinkedInOrganizations,
     Telegram,
     Brevo,
+    GoogleTasks,
   },
 } satisfies BaseTranslation;
 

@@ -363,6 +363,15 @@ const BrevoAppEn = {
           shortDesc: 'Custom company data',
           longDesc:
             'Custom attributes for the company including industry, size, website, and any custom fields defined in your account.',
+          type: {
+            fields: {
+              domain: {
+                displayName: 'Domain',
+                shortDesc: 'Company domain',
+                longDesc: 'The primary domain associated with the company.',
+              },
+            },
+          },
         },
         linkedContactsIds: {
           displayName: 'Associated Contacts',
