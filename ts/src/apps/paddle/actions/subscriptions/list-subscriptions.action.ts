@@ -23,6 +23,7 @@ const options = {
       type: 'list',
       element_type: 'string',
     },
+    depends_on: ['customer_id'],
     get_element_allowed_values: getPaddleCustomerAddressIdAllowedValues,
   },
   after: {
