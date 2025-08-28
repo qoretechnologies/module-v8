@@ -45,7 +45,7 @@ export default (locale: Locales) =>
       'NC45djY0LjNMNjAuNyA0M0gxNC42em0xMjAuNiAxMTUuN0g2MC4zVjY3LjJsMjguOCAzNy4xaDQ2LjEiIGZ' +
       'pbGw9IiMxMjU1ODAiLz48L3N2Zz4=',
     logo_file_name: 'netsuite-logo.svg',
-    logo_mime_type: 'image/scg+xml',
+    logo_mime_type: 'image/svg+xml',
     swagger: 'schemas/netsuite.swagger.json',
     swagger_paths: createSwaggerPaths(NETSUITE_ALLOWED_PATHS),
     rest: {

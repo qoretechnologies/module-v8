@@ -26,6 +26,7 @@ import { getPaddleCustomerIdAllowedValues } from '../apps/paddle/helpers/get-cus
 import { getPaddleDiscountIdAllowedValues } from '../apps/paddle/helpers/get-discount-id-allowed-values';
 import { getPaddlePriceIdAllowedValues } from '../apps/paddle/helpers/get-price-id-allowed-values';
 import { getPaddleProductIdAllowedValues } from '../apps/paddle/helpers/get-product-id-allowed-values';
+import { getPaddleSubscriptionIdAllowedValues } from '../apps/paddle/helpers/get-subscription-id-allowed-values';
 import { getPaddleTransactionIdAllowedValues } from '../apps/paddle/helpers/get-transaction-id-allowed-values';
 import {
   PaddleNewCustomerTrigger,
@@ -96,6 +97,13 @@ describe('Test Paddle Actions', () => {
 
     it('Should get paddle discount allowed values', async () => {
       const allowed_values = await getPaddleDiscountIdAllowedValues(base_context);
+
+      expect(allowed_values).toBeDefined();
+      expect(allowed_values.length).toBeGreaterThan(0);
+    });
+
+    it('Should get paddle subscription allowed values', async () => {
+      const allowed_values = await getPaddleSubscriptionIdAllowedValues(base_context);
 
       expect(allowed_values).toBeDefined();
       expect(allowed_values.length).toBeGreaterThan(0);
