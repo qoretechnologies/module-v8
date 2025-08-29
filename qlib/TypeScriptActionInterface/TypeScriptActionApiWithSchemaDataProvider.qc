@@ -325,11 +325,12 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             list<string> l = k.split(".");
             string key = l[0];
 
-            on_error rethrow $1.err, sprintf("%s (while processing option %y in %y)", $1.desc, key, i.key);
-
             *AbstractDataField f = fields{key};
             hash<auto> opt;
             if (!f) {
+                on_error rethrow $1.err, sprintf("%s (while add new field %y in %y for type %y; existing fields: %y)",
+                    $1.desc, key, i.key, type.getName(), keys fields);
+
                 TypeScriptActionInterface::getOptionFunctions(\action_save, self, i.key, \i.value, True);
                 if (l.size() > 1) {
                     overrideOptionType("option", type, l, i.value, k);
@@ -351,6 +352,9 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                     rreqmap{request_key}{"query." + key} = key;
                 }
             } else {
+                on_error rethrow $1.err, sprintf("%s (while overriding existing option %y in %y for type %y)",
+                    $1.desc, key, i.key, type.getName());
+
                 if (!(f instanceof QoreDataField)) {
                     throw "OPTION-OVERRIDE-ERROR", sprintf("App %y action %y option %y: cannot override %s; "
                         "expecting \"QoreDataField\"", action_save.app, action_save.action, key, f.className());
