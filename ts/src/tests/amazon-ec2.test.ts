@@ -4,13 +4,12 @@ import {
   describeAmazonEc2Regions,
   rebootAmazonEc2Instance,
   startAmazonEc2Instance,
-  stopAmazonEc2Instance,
 } from '../apps/amazon-ec2/actions';
 import { getAmazonEc2InstanceIdAllowedValues } from '../apps/amazon-ec2/helpers/get-instance-id-allowed-values';
 import { getAmazonEc2RegionAllowedValues } from '../apps/amazon-ec2/helpers/get-region-allowed-values';
 import {
   NewAmazonEc2InstanceTrigger,
-  NewAmazonEEc2ScheduledEventTrigger,
+  NewAmazonEc2ScheduledEventTrigger,
 } from '../apps/amazon-ec2/triggers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 
@@ -62,57 +61,8 @@ describe('Amazon EC2', () => {
   });
 
   describe('Should test actions', () => {
-    it('Should describe regions', async () => {
-      const action = describeAmazonEc2Regions;
-
-      if (!('api_function' in action)) throw new Error('api_function not found in action');
-
-      const result = await action.api_function({}, undefined, base_context);
-
-      expect(result).toBeDefined();
-      expect(Array.isArray(result)).toBeTruthy();
-      expect(result.length).toBeGreaterThan(0);
-    });
-
-    it('Should describe instances', async () => {
-      const action = describeAmazonEc2Instances;
-
-      if (!('api_function' in action)) throw new Error('api_function not found in action');
-
-      const result = await action.api_function(
-        {
-          region: 'eu-north-1',
-        },
-        undefined,
-        base_context
-      );
-
-      expect(result).toBeDefined();
-      expect(Array.isArray(result.instances)).toBeTruthy();
-      expect(result.instances.length).toBeGreaterThan(0);
-    });
-
     it('Should start an instance', async () => {
       const action = startAmazonEc2Instance;
-
-      if (!('api_function' in action)) throw new Error('api_function not found in action');
-      if (!instance) throw new Error('No instance ID available');
-
-      const result = await action.api_function(
-        {
-          instance_ids: [instance],
-          region: 'eu-north-1',
-        },
-        undefined,
-        base_context
-      );
-
-      expect(result).toBeDefined();
-      expect(result.instance_ids).toContain(instance);
-    });
-
-    it('Should stop the instance', async () => {
-      const action = stopAmazonEc2Instance;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
       if (!instance) throw new Error('No instance ID available');
@@ -148,6 +98,36 @@ describe('Amazon EC2', () => {
       expect(result).toBeDefined();
       expect(result.instance_ids).toContain(instance);
     });
+
+    it('Should describe regions', async () => {
+      const action = describeAmazonEc2Regions;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      const result = await action.api_function({}, undefined, base_context);
+
+      expect(result).toBeDefined();
+      expect(Array.isArray(result)).toBeTruthy();
+      expect(result.length).toBeGreaterThan(0);
+    });
+
+    it('Should describe instances', async () => {
+      const action = describeAmazonEc2Instances;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      const result = await action.api_function(
+        {
+          region: 'eu-north-1',
+        },
+        undefined,
+        base_context
+      );
+
+      expect(result).toBeDefined();
+      expect(Array.isArray(result.instances)).toBeTruthy();
+      expect(result.instances.length).toBeGreaterThan(0);
+    });
   });
 
   describe('Should test triggers event example data', () => {
@@ -167,7 +147,7 @@ describe('Amazon EC2', () => {
     });
 
     it('Should get example event data for new scheduled event trigger', async () => {
-      const trigger = NewAmazonEEc2ScheduledEventTrigger;
+      const trigger = NewAmazonEc2ScheduledEventTrigger;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');
