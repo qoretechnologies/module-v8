@@ -5275,6 +5275,360 @@ type RootTranslation = {
 			 * T​h​e​ ​A​m​a​z​o​n​ ​E​C​2​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​A​m​a​z​o​n​ ​E​l​a​s​t​i​c​ ​C​o​m​p​u​t​e​ ​C​l​o​u​d​ ​s​e​r​v​i​c​e​s​.​ ​M​a​n​a​g​e​ ​i​n​s​t​a​n​c​e​s​,​ ​v​o​l​u​m​e​s​,​ ​s​e​c​u​r​i​t​y​ ​g​r​o​u​p​s​,​ ​s​n​a​p​s​h​o​t​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​E​C​2​ ​r​e​s​o​u​r​c​e​s​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​y​o​u​r​ ​c​l​o​u​d​ ​i​n​f​r​a​s​t​r​u​c​t​u​r​e​ ​w​o​r​k​f​l​o​w​s​ ​a​n​d​ ​m​o​n​i​t​o​r​i​n​g​.
 			 */
 			longDesc: string
+			triggers: {
+				new_instance: {
+					/**
+					 * N​e​w​ ​I​n​s​t​a​n​c​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​E​C​2​ ​i​n​s​t​a​n​c​e​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​r​e​a​c​h​e​s​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​s​t​a​t​e
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​m​o​n​i​t​o​r​s​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​E​C​2​ ​i​n​s​t​a​n​c​e​s​ ​o​r​ ​i​n​s​t​a​n​c​e​s​ ​t​h​a​t​ ​h​a​v​e​ ​t​r​a​n​s​i​t​i​o​n​e​d​ ​t​o​ ​s​p​e​c​i​f​i​c​ ​s​t​a​t​e​s​ ​l​i​k​e​ ​p​e​n​d​i​n​g​ ​o​r​ ​r​u​n​n​i​n​g​.​ ​I​t​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​i​n​s​t​a​n​c​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​n​e​t​w​o​r​k​i​n​g​ ​d​e​t​a​i​l​s​,​ ​t​a​g​s​,​ ​a​n​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​i​n​s​t​a​n​c​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​E​C​2​ ​i​n​s​t​a​n​c​e​s​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						instance_states: {
+							/**
+							 * I​n​s​t​a​n​c​e​ ​S​t​a​t​e​s
+							 */
+							displayName: string
+							/**
+							 * I​n​s​t​a​n​c​e​ ​s​t​a​t​e​s​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​E​C​2​ ​i​n​s​t​a​n​c​e​ ​s​t​a​t​e​s​ ​t​o​ ​m​o​n​i​t​o​r​.​ ​T​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​f​i​r​e​ ​w​h​e​n​ ​i​n​s​t​a​n​c​e​s​ ​a​r​e​ ​i​n​ ​a​n​y​ ​o​f​ ​t​h​e​s​e​ ​s​t​a​t​e​s​.​ ​C​o​m​m​o​n​ ​s​t​a​t​e​s​ ​i​n​c​l​u​d​e​ ​p​e​n​d​i​n​g​,​ ​r​u​n​n​i​n​g​,​ ​s​t​o​p​p​i​n​g​,​ ​s​t​o​p​p​e​d​,​ ​s​h​u​t​t​i​n​g​-​d​o​w​n​,​ ​a​n​d​ ​t​e​r​m​i​n​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_scheduled_event: {
+					/**
+					 * N​e​w​ ​S​c​h​e​d​u​l​e​d​ ​E​v​e​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​s​c​h​e​d​u​l​e​d​ ​m​a​i​n​t​e​n​a​n​c​e​ ​e​v​e​n​t​ ​i​s​ ​d​e​t​e​c​t​e​d​ ​o​n​ ​E​C​2​ ​i​n​s​t​a​n​c​e​s
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​m​o​n​i​t​o​r​s​ ​f​o​r​ ​n​e​w​ ​s​c​h​e​d​u​l​e​d​ ​e​v​e​n​t​s​ ​o​n​ ​E​C​2​ ​i​n​s​t​a​n​c​e​s​ ​s​u​c​h​ ​a​s​ ​s​y​s​t​e​m​ ​r​e​b​o​o​t​s​,​ ​m​a​i​n​t​e​n​a​n​c​e​ ​w​i​n​d​o​w​s​,​ ​o​r​ ​i​n​s​t​a​n​c​e​ ​r​e​t​i​r​e​m​e​n​t​s​.​ ​I​t​ ​h​e​l​p​s​ ​y​o​u​ ​s​t​a​y​ ​i​n​f​o​r​m​e​d​ ​a​b​o​u​t​ ​u​p​c​o​m​i​n​g​ ​A​W​S​-​i​n​i​t​i​a​t​e​d​ ​a​c​t​i​o​n​s​ ​o​n​ ​y​o​u​r​ ​i​n​f​r​a​s​t​r​u​c​t​u​r​e​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​s​c​h​e​d​u​l​e​d​ ​e​v​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​s​c​h​e​d​u​l​e​d​ ​e​v​e​n​t​s​ ​o​n​ ​E​C​2​ ​i​n​s​t​a​n​c​e​s​.
+							 */
+							longDesc: string
+						}
+						instance_ids: {
+							/**
+							 * I​n​s​t​a​n​c​e​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​i​n​s​t​a​n​c​e​s​ ​t​o​ ​m​o​n​i​t​o​r​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​l​i​s​t​ ​o​f​ ​s​p​e​c​i​f​i​c​ ​E​C​2​ ​i​n​s​t​a​n​c​e​ ​I​D​s​ ​t​o​ ​m​o​n​i​t​o​r​.​ ​I​f​ ​l​e​f​t​ ​e​m​p​t​y​,​ ​a​l​l​ ​i​n​s​t​a​n​c​e​s​ ​i​n​ ​t​h​e​ ​r​e​g​i​o​n​ ​w​i​l​l​ ​b​e​ ​m​o​n​i​t​o​r​e​d​ ​f​o​r​ ​s​c​h​e​d​u​l​e​d​ ​e​v​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+						event_types: {
+							/**
+							 * E​v​e​n​t​ ​T​y​p​e​s
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​s​ ​o​f​ ​s​c​h​e​d​u​l​e​d​ ​e​v​e​n​t​s​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​s​c​h​e​d​u​l​e​d​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​t​o​ ​m​o​n​i​t​o​r​,​ ​s​u​c​h​ ​a​s​ ​s​y​s​t​e​m​-​r​e​b​o​o​t​,​ ​s​y​s​t​e​m​-​m​a​i​n​t​e​n​a​n​c​e​,​ ​i​n​s​t​a​n​c​e​-​r​e​t​i​r​e​m​e​n​t​,​ ​o​r​ ​i​n​s​t​a​n​c​e​-​s​t​o​p​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			actions: {
+				start_instance: {
+					/**
+					 * S​t​a​r​t​ ​I​n​s​t​a​n​c​e
+					 */
+					displayName: string
+					/**
+					 * S​t​a​r​t​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​s​t​o​p​p​e​d​ ​E​C​2​ ​i​n​s​t​a​n​c​e​s
+					 */
+					shortDesc: string
+					/**
+					 * S​t​a​r​t​s​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​A​m​a​z​o​n​ ​E​C​2​ ​i​n​s​t​a​n​c​e​s​ ​t​h​a​t​ ​a​r​e​ ​c​u​r​r​e​n​t​l​y​ ​i​n​ ​a​ ​s​t​o​p​p​e​d​ ​s​t​a​t​e​.​ ​T​h​e​ ​i​n​s​t​a​n​c​e​s​ ​w​i​l​l​ ​t​r​a​n​s​i​t​i​o​n​ ​f​r​o​m​ ​s​t​o​p​p​e​d​ ​t​o​ ​p​e​n​d​i​n​g​ ​a​n​d​ ​t​h​e​n​ ​t​o​ ​r​u​n​n​i​n​g​ ​s​t​a​t​e​.
+					 */
+					longDesc: string
+					options: {
+						instance_ids: {
+							/**
+							 * I​n​s​t​a​n​c​e​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​i​n​s​t​a​n​c​e​ ​I​D​s​ ​t​o​ ​s​t​a​r​t
+							 */
+							shortDesc: string
+							/**
+							 * O​n​e​ ​o​r​ ​m​o​r​e​ ​E​C​2​ ​i​n​s​t​a​n​c​e​ ​I​D​s​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​s​t​a​r​t​.​ ​T​h​e​s​e​ ​i​n​s​t​a​n​c​e​s​ ​m​u​s​t​ ​b​e​ ​i​n​ ​a​ ​s​t​o​p​p​e​d​ ​s​t​a​t​e​.
+							 */
+							longDesc: string
+						}
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​i​n​s​t​a​n​c​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​E​C​2​ ​i​n​s​t​a​n​c​e​s​ ​a​r​e​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				stop_instance: {
+					/**
+					 * S​t​o​p​ ​I​n​s​t​a​n​c​e
+					 */
+					displayName: string
+					/**
+					 * S​t​o​p​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​r​u​n​n​i​n​g​ ​E​C​2​ ​i​n​s​t​a​n​c​e​s
+					 */
+					shortDesc: string
+					/**
+					 * S​t​o​p​s​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​A​m​a​z​o​n​ ​E​C​2​ ​i​n​s​t​a​n​c​e​s​.​ ​T​h​e​ ​i​n​s​t​a​n​c​e​s​ ​w​i​l​l​ ​t​r​a​n​s​i​t​i​o​n​ ​f​r​o​m​ ​r​u​n​n​i​n​g​ ​t​o​ ​s​t​o​p​p​i​n​g​ ​a​n​d​ ​t​h​e​n​ ​t​o​ ​s​t​o​p​p​e​d​ ​s​t​a​t​e​.​ ​Y​o​u​ ​c​a​n​ ​o​p​t​i​o​n​a​l​l​y​ ​f​o​r​c​e​ ​s​t​o​p​ ​i​n​s​t​a​n​c​e​s​.
+					 */
+					longDesc: string
+					options: {
+						instance_ids: {
+							/**
+							 * I​n​s​t​a​n​c​e​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​i​n​s​t​a​n​c​e​ ​I​D​s​ ​t​o​ ​s​t​o​p
+							 */
+							shortDesc: string
+							/**
+							 * O​n​e​ ​o​r​ ​m​o​r​e​ ​E​C​2​ ​i​n​s​t​a​n​c​e​ ​I​D​s​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​s​t​o​p​.​ ​T​h​e​s​e​ ​i​n​s​t​a​n​c​e​s​ ​s​h​o​u​l​d​ ​b​e​ ​i​n​ ​a​ ​r​u​n​n​i​n​g​ ​s​t​a​t​e​.
+							 */
+							longDesc: string
+						}
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​i​n​s​t​a​n​c​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​E​C​2​ ​i​n​s​t​a​n​c​e​s​ ​a​r​e​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						force: {
+							/**
+							 * F​o​r​c​e​ ​S​t​o​p
+							 */
+							displayName: string
+							/**
+							 * F​o​r​c​e​ ​s​t​o​p​ ​t​h​e​ ​i​n​s​t​a​n​c​e​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​f​o​r​c​e​s​ ​t​h​e​ ​i​n​s​t​a​n​c​e​s​ ​t​o​ ​s​t​o​p​ ​i​m​m​e​d​i​a​t​e​l​y​.​ ​T​h​i​s​ ​i​s​ ​e​q​u​i​v​a​l​e​n​t​ ​t​o​ ​p​u​l​l​i​n​g​ ​t​h​e​ ​p​o​w​e​r​ ​p​l​u​g​ ​o​n​ ​a​ ​p​h​y​s​i​c​a​l​ ​c​o​m​p​u​t​e​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				reboot_instance: {
+					/**
+					 * R​e​b​o​o​t​ ​I​n​s​t​a​n​c​e
+					 */
+					displayName: string
+					/**
+					 * R​e​b​o​o​t​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​r​u​n​n​i​n​g​ ​E​C​2​ ​i​n​s​t​a​n​c​e​s
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​f​o​r​m​s​ ​a​ ​r​e​b​o​o​t​ ​o​f​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​A​m​a​z​o​n​ ​E​C​2​ ​i​n​s​t​a​n​c​e​s​.​ ​T​h​i​s​ ​i​s​ ​e​q​u​i​v​a​l​e​n​t​ ​t​o​ ​p​e​r​f​o​r​m​i​n​g​ ​a​ ​r​e​s​t​a​r​t​ ​f​r​o​m​ ​w​i​t​h​i​n​ ​t​h​e​ ​o​p​e​r​a​t​i​n​g​ ​s​y​s​t​e​m​.
+					 */
+					longDesc: string
+					options: {
+						instance_ids: {
+							/**
+							 * I​n​s​t​a​n​c​e​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​i​n​s​t​a​n​c​e​ ​I​D​s​ ​t​o​ ​r​e​b​o​o​t
+							 */
+							shortDesc: string
+							/**
+							 * O​n​e​ ​o​r​ ​m​o​r​e​ ​E​C​2​ ​i​n​s​t​a​n​c​e​ ​I​D​s​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​b​o​o​t​.​ ​T​h​e​s​e​ ​i​n​s​t​a​n​c​e​s​ ​s​h​o​u​l​d​ ​b​e​ ​i​n​ ​a​ ​r​u​n​n​i​n​g​ ​s​t​a​t​e​.
+							 */
+							longDesc: string
+						}
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​i​n​s​t​a​n​c​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​E​C​2​ ​i​n​s​t​a​n​c​e​s​ ​a​r​e​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				describe_instances: {
+					/**
+					 * D​e​s​c​r​i​b​e​ ​I​n​s​t​a​n​c​e​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​E​C​2​ ​i​n​s​t​a​n​c​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​E​C​2​ ​i​n​s​t​a​n​c​e​s​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​i​r​ ​s​t​a​t​e​,​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​,​ ​n​e​t​w​o​r​k​i​n​g​ ​d​e​t​a​i​l​s​,​ ​a​n​d​ ​t​a​g​s​.
+					 */
+					longDesc: string
+					options: {
+						instance_ids: {
+							/**
+							 * I​n​s​t​a​n​c​e​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​i​n​s​t​a​n​c​e​ ​I​D​s​ ​t​o​ ​d​e​s​c​r​i​b​e​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​l​i​s​t​ ​o​f​ ​s​p​e​c​i​f​i​c​ ​E​C​2​ ​i​n​s​t​a​n​c​e​ ​I​D​s​ ​t​o​ ​d​e​s​c​r​i​b​e​.​ ​I​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​,​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​l​l​ ​i​n​s​t​a​n​c​e​s​ ​i​n​ ​t​h​e​ ​r​e​g​i​o​n​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​q​u​e​r​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​s​t​a​n​c​e​ ​i​n​f​o​r​m​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						max_results: {
+							/**
+							 * M​a​x​ ​R​e​s​u​l​t​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​i​n​s​t​a​n​c​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​i​n​s​t​a​n​c​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​1​0​0​.
+							 */
+							longDesc: string
+						}
+						next_page_token: {
+							/**
+							 * N​e​x​t​ ​P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​o​k​e​n​ ​u​s​e​d​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​s​e​t​ ​o​f​ ​r​e​s​u​l​t​s​ ​w​h​e​n​ ​t​h​e​r​e​ ​a​r​e​ ​m​o​r​e​ ​i​n​s​t​a​n​c​e​s​ ​t​h​a​n​ ​t​h​e​ ​m​a​x​ ​r​e​s​u​l​t​s​ ​l​i​m​i​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				describe_regions: {
+					/**
+					 * D​e​s​c​r​i​b​e​ ​R​e​g​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​v​a​i​l​a​b​l​e​ ​A​W​S​ ​r​e​g​i​o​n​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​v​a​i​l​a​b​l​e​ ​A​W​S​ ​r​e​g​i​o​n​s​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​i​r​ ​e​n​d​p​o​i​n​t​s​ ​a​n​d​ ​o​p​t​-​i​n​ ​s​t​a​t​u​s​.
+					 */
+					longDesc: string
+					options: {
+						all_regions: {
+							/**
+							 * A​l​l​ ​R​e​g​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​a​l​l​ ​r​e​g​i​o​n​s​ ​i​n​c​l​u​d​i​n​g​ ​o​p​t​-​i​n​ ​r​e​g​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​i​n​c​l​u​d​e​s​ ​a​l​l​ ​A​W​S​ ​r​e​g​i​o​n​s​ ​i​n​c​l​u​d​i​n​g​ ​t​h​o​s​e​ ​t​h​a​t​ ​r​e​q​u​i​r​e​ ​y​o​u​ ​t​o​ ​o​p​t​-​i​n​ ​b​e​f​o​r​e​ ​y​o​u​ ​c​a​n​ ​u​s​e​ ​t​h​e​m​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
 		}
 		Claude: {
 			/**
@@ -71402,6 +71756,360 @@ export type TranslationFunctions = {
 			 * The Amazon EC2 integration provides comprehensive actions and triggers to interact with Amazon Elastic Compute Cloud services. Manage instances, volumes, security groups, snapshots, and other EC2 resources to automate your cloud infrastructure workflows and monitoring.
 			 */
 			longDesc: () => LocalizedString
+			triggers: {
+				new_instance: {
+					/**
+					 * New Instance
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new EC2 instance is created or reaches a specified state
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger monitors for newly created EC2 instances or instances that have transitioned to specific states like pending or running. It provides comprehensive instance information including networking details, tags, and configuration.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region to monitor for new instances
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where you want to monitor for new EC2 instances. Defaults to us-east-1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						instance_states: {
+							/**
+							 * Instance States
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Instance states to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of EC2 instance states to monitor. The trigger will fire when instances are in any of these states. Common states include pending, running, stopping, stopped, shutting-down, and terminated.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_scheduled_event: {
+					/**
+					 * New Scheduled Event
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new scheduled maintenance event is detected on EC2 instances
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger monitors for new scheduled events on EC2 instances such as system reboots, maintenance windows, or instance retirements. It helps you stay informed about upcoming AWS-initiated actions on your infrastructure.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region to monitor for scheduled events
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where you want to monitor for scheduled events on EC2 instances.
+							 */
+							longDesc: () => LocalizedString
+						}
+						instance_ids: {
+							/**
+							 * Instance IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific instances to monitor (optional)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional list of specific EC2 instance IDs to monitor. If left empty, all instances in the region will be monitored for scheduled events.
+							 */
+							longDesc: () => LocalizedString
+						}
+						event_types: {
+							/**
+							 * Event Types
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Types of scheduled events to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of scheduled event types to monitor, such as system-reboot, system-maintenance, instance-retirement, or instance-stop.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			actions: {
+				start_instance: {
+					/**
+					 * Start Instance
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Start one or more stopped EC2 instances
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Starts one or more Amazon EC2 instances that are currently in a stopped state. The instances will transition from stopped to pending and then to running state.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						instance_ids: {
+							/**
+							 * Instance IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of instance IDs to start
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * One or more EC2 instance IDs that you want to start. These instances must be in a stopped state.
+							 */
+							longDesc: () => LocalizedString
+						}
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region containing the instances
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the EC2 instances are located.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				stop_instance: {
+					/**
+					 * Stop Instance
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Stop one or more running EC2 instances
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Stops one or more Amazon EC2 instances. The instances will transition from running to stopping and then to stopped state. You can optionally force stop instances.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						instance_ids: {
+							/**
+							 * Instance IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of instance IDs to stop
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * One or more EC2 instance IDs that you want to stop. These instances should be in a running state.
+							 */
+							longDesc: () => LocalizedString
+						}
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region containing the instances
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the EC2 instances are located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						force: {
+							/**
+							 * Force Stop
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Force stop the instances
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, forces the instances to stop immediately. This is equivalent to pulling the power plug on a physical computer.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				reboot_instance: {
+					/**
+					 * Reboot Instance
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Reboot one or more running EC2 instances
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Performs a reboot of one or more Amazon EC2 instances. This is equivalent to performing a restart from within the operating system.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						instance_ids: {
+							/**
+							 * Instance IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of instance IDs to reboot
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * One or more EC2 instance IDs that you want to reboot. These instances should be in a running state.
+							 */
+							longDesc: () => LocalizedString
+						}
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region containing the instances
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the EC2 instances are located.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				describe_instances: {
+					/**
+					 * Describe Instances
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get detailed information about EC2 instances
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves comprehensive information about one or more EC2 instances including their state, configuration, networking details, and tags.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						instance_ids: {
+							/**
+							 * Instance IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific instance IDs to describe (optional)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional list of specific EC2 instance IDs to describe. If not provided, information about all instances in the region will be returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region to query
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where you want to retrieve instance information.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_results: {
+							/**
+							 * Max Results
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of instances to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of instances to return in a single request. Defaults to 100.
+							 */
+							longDesc: () => LocalizedString
+						}
+						next_page_token: {
+							/**
+							 * Next Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Token used for pagination to retrieve the next set of results when there are more instances than the max results limit.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				describe_regions: {
+					/**
+					 * Describe Regions
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get information about available AWS regions
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves information about available AWS regions including their endpoints and opt-in status.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						all_regions: {
+							/**
+							 * All Regions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include all regions including opt-in regions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, includes all AWS regions including those that require you to opt-in before you can use them.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
 		}
 		Claude: {
 			/**
