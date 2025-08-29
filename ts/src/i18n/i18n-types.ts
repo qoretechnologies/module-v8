@@ -5262,6 +5262,20 @@ type RootTranslation = {
 				}
 			}
 		}
+		AmazonEC2: {
+			/**
+			 * A​m​a​z​o​n​ ​E​C​2
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​A​m​a​z​o​n​ ​E​C​2​ ​t​o​ ​m​a​n​a​g​e​ ​a​n​d​ ​a​u​t​o​m​a​t​e​ ​y​o​u​r​ ​c​l​o​u​d​ ​i​n​f​r​a​s​t​r​u​c​t​u​r​e​ ​o​p​e​r​a​t​i​o​n​s​.
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​A​m​a​z​o​n​ ​E​C​2​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​A​m​a​z​o​n​ ​E​l​a​s​t​i​c​ ​C​o​m​p​u​t​e​ ​C​l​o​u​d​ ​s​e​r​v​i​c​e​s​.​ ​M​a​n​a​g​e​ ​i​n​s​t​a​n​c​e​s​,​ ​v​o​l​u​m​e​s​,​ ​s​e​c​u​r​i​t​y​ ​g​r​o​u​p​s​,​ ​s​n​a​p​s​h​o​t​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​E​C​2​ ​r​e​s​o​u​r​c​e​s​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​y​o​u​r​ ​c​l​o​u​d​ ​i​n​f​r​a​s​t​r​u​c​t​u​r​e​ ​w​o​r​k​f​l​o​w​s​ ​a​n​d​ ​m​o​n​i​t​o​r​i​n​g​.
+			 */
+			longDesc: string
+		}
 		Claude: {
 			/**
 			 * C​l​a​u​d​e
@@ -71374,6 +71388,20 @@ export type TranslationFunctions = {
 					group: () => LocalizedString
 				}
 			}
+		}
+		AmazonEC2: {
+			/**
+			 * Amazon EC2
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect to Amazon EC2 to manage and automate your cloud infrastructure operations.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The Amazon EC2 integration provides comprehensive actions and triggers to interact with Amazon Elastic Compute Cloud services. Manage instances, volumes, security groups, snapshots, and other EC2 resources to automate your cloud infrastructure workflows and monitoring.
+			 */
+			longDesc: () => LocalizedString
 		}
 		Claude: {
 			/**
