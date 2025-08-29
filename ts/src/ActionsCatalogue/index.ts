@@ -72,6 +72,7 @@ import linkedinOrganizations from '../apps/linkedin-organizations';
 import telegram from '../apps/telegram';
 import brevo from '../apps/brevo';
 import googleTasks from '../apps/google-tasks';
+import amazonEc2 from '../apps/amazon-ec2';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -88,6 +89,7 @@ export interface IQoreApi {
 const NEW_APPS = {
   activeCampaign,
   airtable,
+  amazonEc2,
   asana,
   attio,
   bigml,
