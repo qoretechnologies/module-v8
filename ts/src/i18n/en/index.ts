@@ -61,6 +61,7 @@ import YouTube from './apps/YouTube';
 import Zendesk from './apps/Zendesk';
 import Zoom from './apps/Zoom';
 import AmazonEC2 from './apps/AmazonEc2';
+import AmazonS3 from './apps/AmazonS3';
 
 const en = {
   common: {},
@@ -161,6 +162,7 @@ const en = {
     },
     Asana,
     AmazonEC2,
+    AmazonS3,
     Claude,
     LinkedIn,
     BrowseAi,

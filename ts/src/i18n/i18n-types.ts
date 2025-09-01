@@ -5630,6 +5630,928 @@ type RootTranslation = {
 				}
 			}
 		}
+		AmazonS3: {
+			/**
+			 * A​m​a​z​o​n​ ​S​3
+			 */
+			displayName: string
+			/**
+			 * S​e​a​m​l​e​s​s​l​y​ ​c​o​n​n​e​c​t​ ​t​o​ ​A​m​a​z​o​n​ ​S​3​ ​t​o​ ​m​a​n​a​g​e​ ​b​u​c​k​e​t​s​,​ ​u​p​l​o​a​d​ ​f​i​l​e​s​,​ ​a​n​d​ ​a​u​t​o​m​a​t​e​ ​y​o​u​r​ ​c​l​o​u​d​ ​s​t​o​r​a​g​e​ ​w​o​r​k​f​l​o​w​s​.
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​A​m​a​z​o​n​ ​S​3​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​A​m​a​z​o​n​ ​S​i​m​p​l​e​ ​S​t​o​r​a​g​e​ ​S​e​r​v​i​c​e​.​ ​W​h​e​t​h​e​r​ ​y​o​u​ ​n​e​e​d​ ​t​o​ ​m​a​n​a​g​e​ ​b​u​c​k​e​t​s​,​ ​u​p​l​o​a​d​ ​a​n​d​ ​d​o​w​n​l​o​a​d​ ​f​i​l​e​s​,​ ​o​r​ ​m​o​n​i​t​o​r​ ​c​h​a​n​g​e​s​ ​t​o​ ​y​o​u​r​ ​S​3​ ​o​b​j​e​c​t​s​,​ ​t​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​s​i​m​p​l​i​f​i​e​s​ ​y​o​u​r​ ​c​l​o​u​d​ ​s​t​o​r​a​g​e​ ​a​u​t​o​m​a​t​i​o​n​ ​a​n​d​ ​f​i​l​e​ ​m​a​n​a​g​e​m​e​n​t​ ​w​o​r​k​f​l​o​w​s​.
+			 */
+			longDesc: string
+			triggers: {
+				new_bucket: {
+					/**
+					 * N​e​w​ ​B​u​c​k​e​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​S​3​ ​b​u​c​k​e​t​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​S​3​ ​b​u​c​k​e​t​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​b​u​c​k​e​t​ ​i​s​ ​d​e​t​e​c​t​e​d​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​t​r​a​c​k​i​n​g​ ​b​u​c​k​e​t​ ​c​r​e​a​t​i​o​n​ ​e​v​e​n​t​s​ ​a​n​d​ ​i​m​p​l​e​m​e​n​t​i​n​g​ ​a​u​t​o​m​a​t​e​d​ ​g​o​v​e​r​n​a​n​c​e​ ​p​o​l​i​c​i​e​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​b​u​c​k​e​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​S​3​ ​c​l​i​e​n​t​ ​w​i​l​l​ ​b​e​ ​c​o​n​f​i​g​u​r​e​d​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​b​u​c​k​e​t​ ​c​r​e​a​t​i​o​n​ ​e​v​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_or_updated_file: {
+					/**
+					 * N​e​w​ ​o​r​ ​U​p​d​a​t​e​d​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​f​i​l​e​s​ ​a​r​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​m​o​d​i​f​i​e​d​ ​i​n​ ​a​n​ ​S​3​ ​b​u​c​k​e​t
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​n​ ​S​3​ ​b​u​c​k​e​t​ ​f​o​r​ ​n​e​w​ ​o​r​ ​u​p​d​a​t​e​d​ ​f​i​l​e​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​c​h​a​n​g​e​s​ ​a​r​e​ ​d​e​t​e​c​t​e​d​.​ ​S​u​p​p​o​r​t​s​ ​p​r​e​f​i​x​ ​f​i​l​t​e​r​i​n​g​ ​t​o​ ​m​o​n​i​t​o​r​ ​s​p​e​c​i​f​i​c​ ​d​i​r​e​c​t​o​r​i​e​s​ ​o​r​ ​f​i​l​e​ ​p​a​t​t​e​r​n​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​S​3​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d​ ​f​o​r​ ​m​o​n​i​t​o​r​i​n​g​ ​f​i​l​e​ ​c​h​a​n​g​e​s​.
+							 */
+							longDesc: string
+						}
+						bucket_name: {
+							/**
+							 * B​u​c​k​e​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * S​3​ ​b​u​c​k​e​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​f​i​l​e​ ​c​h​a​n​g​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​S​3​ ​b​u​c​k​e​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​o​r​ ​u​p​d​a​t​e​d​ ​f​i​l​e​s​.
+							 */
+							longDesc: string
+						}
+						prefix: {
+							/**
+							 * P​r​e​f​i​x​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​p​r​e​f​i​x​ ​t​o​ ​f​i​l​t​e​r​ ​o​b​j​e​c​t​s​ ​(​e​.​g​.​,​ ​"​u​p​l​o​a​d​s​/​"​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​p​r​e​f​i​x​ ​t​o​ ​l​i​m​i​t​ ​m​o​n​i​t​o​r​i​n​g​ ​t​o​ ​o​b​j​e​c​t​s​ ​w​i​t​h​ ​s​p​e​c​i​f​i​c​ ​k​e​y​ ​p​r​e​f​i​x​e​s​,​ ​u​s​e​f​u​l​ ​f​o​r​ ​m​o​n​i​t​o​r​i​n​g​ ​s​p​e​c​i​f​i​c​ ​d​i​r​e​c​t​o​r​i​e​s​ ​o​r​ ​f​i​l​e​ ​p​a​t​t​e​r​n​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			actions: {
+				create_bucket: {
+					/**
+					 * C​r​e​a​t​e​ ​B​u​c​k​e​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​S​3​ ​b​u​c​k​e​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​S​3​ ​b​u​c​k​e​t​ ​w​i​t​h​ ​c​o​n​f​i​g​u​r​a​b​l​e​ ​a​c​c​e​s​s​ ​c​o​n​t​r​o​l​ ​a​n​d​ ​o​b​j​e​c​t​ ​l​o​c​k​ ​s​e​t​t​i​n​g​s​.​ ​B​u​c​k​e​t​ ​n​a​m​e​s​ ​m​u​s​t​ ​b​e​ ​g​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​a​n​d​ ​f​o​l​l​o​w​ ​A​W​S​ ​n​a​m​i​n​g​ ​c​o​n​v​e​n​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						bucket_name: {
+							/**
+							 * B​u​c​k​e​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​b​u​c​k​e​t​ ​(​m​u​s​t​ ​b​e​ ​g​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​)
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​S​3​ ​b​u​c​k​e​t​.​ ​M​u​s​t​ ​b​e​ ​g​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​a​c​r​o​s​s​ ​a​l​l​ ​A​W​S​ ​a​c​c​o​u​n​t​s​ ​a​n​d​ ​f​o​l​l​o​w​ ​S​3​ ​n​a​m​i​n​g​ ​c​o​n​v​e​n​t​i​o​n​s​ ​(​l​o​w​e​r​c​a​s​e​ ​l​e​t​t​e​r​s​,​ ​n​u​m​b​e​r​s​,​ ​h​y​p​h​e​n​s​ ​o​n​l​y​)​.
+							 */
+							longDesc: string
+						}
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​b​u​c​k​e​t​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​S​3​ ​b​u​c​k​e​t​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.​ ​A​f​f​e​c​t​s​ ​l​a​t​e​n​c​y​ ​a​n​d​ ​d​a​t​a​ ​r​e​s​i​d​e​n​c​y​.
+							 */
+							longDesc: string
+						}
+						acl: {
+							/**
+							 * A​c​c​e​s​s​ ​C​o​n​t​r​o​l​ ​L​i​s​t​ ​(​A​C​L​)
+							 */
+							displayName: string
+							/**
+							 * A​c​c​e​s​s​ ​p​e​r​m​i​s​s​i​o​n​s​ ​f​o​r​ ​t​h​e​ ​b​u​c​k​e​t
+							 */
+							shortDesc: string
+							/**
+							 * P​r​e​d​e​f​i​n​e​d​ ​a​c​c​e​s​s​ ​c​o​n​t​r​o​l​ ​l​i​s​t​ ​t​h​a​t​ ​d​e​f​i​n​e​s​ ​w​h​o​ ​c​a​n​ ​a​c​c​e​s​s​ ​t​h​e​ ​b​u​c​k​e​t​ ​a​n​d​ ​w​h​a​t​ ​p​e​r​m​i​s​s​i​o​n​s​ ​t​h​e​y​ ​h​a​v​e​.
+							 */
+							longDesc: string
+						}
+						object_lock_enabled: {
+							/**
+							 * O​b​j​e​c​t​ ​L​o​c​k​ ​E​n​a​b​l​e​d
+							 */
+							displayName: string
+							/**
+							 * E​n​a​b​l​e​ ​o​b​j​e​c​t​ ​l​o​c​k​ ​f​o​r​ ​c​o​m​p​l​i​a​n​c​e​ ​a​n​d​ ​d​a​t​a​ ​r​e​t​e​n​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * E​n​a​b​l​e​s​ ​S​3​ ​O​b​j​e​c​t​ ​L​o​c​k​ ​t​o​ ​p​r​e​v​e​n​t​ ​o​b​j​e​c​t​ ​d​e​l​e​t​i​o​n​ ​o​r​ ​m​o​d​i​f​i​c​a​t​i​o​n​ ​f​o​r​ ​c​o​m​p​l​i​a​n​c​e​ ​a​n​d​ ​d​a​t​a​ ​r​e​t​e​n​t​i​o​n​ ​r​e​q​u​i​r​e​m​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_text_object: {
+					/**
+					 * C​r​e​a​t​e​ ​T​e​x​t​ ​O​b​j​e​c​t
+					 */
+					displayName: string
+					/**
+					 * U​p​l​o​a​d​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​d​i​r​e​c​t​l​y​ ​t​o​ ​S​3
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​n​ ​S​3​ ​o​b​j​e​c​t​ ​w​i​t​h​ ​t​e​x​t​ ​c​o​n​t​e​n​t​,​ ​s​u​p​p​o​r​t​i​n​g​ ​v​a​r​i​o​u​s​ ​t​e​x​t​ ​f​o​r​m​a​t​s​ ​a​n​d​ ​c​o​n​t​e​n​t​ ​t​y​p​e​s​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​u​p​l​o​a​d​i​n​g​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​i​l​e​s​,​ ​l​o​g​s​,​ ​o​r​ ​d​o​c​u​m​e​n​t​ ​c​o​n​t​e​n​t​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​r​g​e​t​ ​S​3​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						bucket_name: {
+							/**
+							 * B​u​c​k​e​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​S​3​ ​b​u​c​k​e​t​ ​f​o​r​ ​t​h​e​ ​t​e​x​t​ ​o​b​j​e​c​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​S​3​ ​b​u​c​k​e​t​ ​w​h​e​r​e​ ​t​h​e​ ​t​e​x​t​ ​o​b​j​e​c​t​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						object_key: {
+							/**
+							 * O​b​j​e​c​t​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * S​3​ ​o​b​j​e​c​t​ ​k​e​y​ ​(​f​i​l​e​ ​p​a​t​h​)​ ​f​o​r​ ​t​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​S​3​ ​o​b​j​e​c​t​ ​k​e​y​ ​t​h​a​t​ ​s​e​r​v​e​s​ ​a​s​ ​t​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​n​d​ ​p​a​t​h​ ​f​o​r​ ​t​h​e​ ​t​e​x​t​ ​o​b​j​e​c​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​b​u​c​k​e​t​.
+							 */
+							longDesc: string
+						}
+						content: {
+							/**
+							 * C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​c​o​n​t​e​n​t​ ​t​o​ ​u​p​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​u​p​l​o​a​d​e​d​ ​t​o​ ​S​3​ ​a​s​ ​t​h​e​ ​o​b​j​e​c​t​ ​b​o​d​y​.
+							 */
+							longDesc: string
+						}
+						content_type: {
+							/**
+							 * C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * M​I​M​E​ ​t​y​p​e​ ​f​o​r​ ​t​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​M​I​M​E​ ​t​y​p​e​ ​t​h​a​t​ ​d​e​s​c​r​i​b​e​s​ ​t​h​e​ ​f​o​r​m​a​t​ ​o​f​ ​t​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​b​e​i​n​g​ ​u​p​l​o​a​d​e​d​.
+							 */
+							longDesc: string
+						}
+						storage_class: {
+							/**
+							 * S​t​o​r​a​g​e​ ​C​l​a​s​s
+							 */
+							displayName: string
+							/**
+							 * S​3​ ​s​t​o​r​a​g​e​ ​c​l​a​s​s​ ​f​o​r​ ​c​o​s​t​ ​o​p​t​i​m​i​z​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​S​3​ ​s​t​o​r​a​g​e​ ​c​l​a​s​s​ ​t​h​a​t​ ​d​e​t​e​r​m​i​n​e​s​ ​t​h​e​ ​s​t​o​r​a​g​e​ ​c​o​s​t​s​ ​a​n​d​ ​r​e​t​r​i​e​v​a​l​ ​c​h​a​r​a​c​t​e​r​i​s​t​i​c​s​ ​o​f​ ​t​h​e​ ​o​b​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+						metadata: {
+							/**
+							 * M​e​t​a​d​a​t​a
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​m​e​t​a​d​a​t​a​ ​k​e​y​-​v​a​l​u​e​ ​p​a​i​r​s
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​m​e​t​a​d​a​t​a​ ​a​s​ ​k​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​s​t​o​r​e​d​ ​w​i​t​h​ ​t​h​e​ ​o​b​j​e​c​t​ ​f​o​r​ ​a​d​d​i​t​i​o​n​a​l​ ​c​o​n​t​e​x​t​ ​o​r​ ​a​p​p​l​i​c​a​t​i​o​n​ ​u​s​e​.
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * O​b​j​e​c​t​ ​t​a​g​s​ ​f​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​a​n​d​ ​c​o​s​t​ ​t​r​a​c​k​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * K​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​ ​u​s​e​d​ ​f​o​r​ ​o​b​j​e​c​t​ ​o​r​g​a​n​i​z​a​t​i​o​n​,​ ​c​o​s​t​ ​a​l​l​o​c​a​t​i​o​n​,​ ​a​n​d​ ​l​i​f​e​c​y​c​l​e​ ​m​a​n​a​g​e​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				upload_file: {
+					/**
+					 * U​p​l​o​a​d​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * U​p​l​o​a​d​ ​a​ ​f​i​l​e​ ​t​o​ ​S​3
+					 */
+					shortDesc: string
+					/**
+					 * U​p​l​o​a​d​s​ ​a​ ​f​i​l​e​ ​t​o​ ​S​3​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​ ​k​e​y​s​,​ ​s​t​o​r​a​g​e​ ​c​l​a​s​s​e​s​,​ ​m​e​t​a​d​a​t​a​,​ ​a​n​d​ ​t​a​g​g​i​n​g​.​ ​H​a​n​d​l​e​s​ ​b​i​n​a​r​y​ ​f​i​l​e​s​ ​t​h​r​o​u​g​h​ ​b​a​s​e​6​4​ ​e​n​c​o​d​i​n​g​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​r​g​e​t​ ​S​3​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						bucket_name: {
+							/**
+							 * B​u​c​k​e​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​S​3​ ​b​u​c​k​e​t​ ​f​o​r​ ​t​h​e​ ​f​i​l​e​ ​u​p​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​S​3​ ​b​u​c​k​e​t​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​l​e​ ​w​i​l​l​ ​b​e​ ​u​p​l​o​a​d​e​d​.
+							 */
+							longDesc: string
+						}
+						file: {
+							/**
+							 * F​i​l​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​e​ ​t​o​ ​u​p​l​o​a​d​ ​t​o​ ​S​3
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​b​e​ ​u​p​l​o​a​d​e​d​ ​t​o​ ​S​3​,​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​c​o​n​t​e​n​t​,​ ​f​i​l​e​n​a​m​e​,​ ​a​n​d​ ​M​I​M​E​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+						object_key: {
+							/**
+							 * O​b​j​e​c​t​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​S​3​ ​o​b​j​e​c​t​ ​k​e​y​ ​(​o​p​t​i​o​n​a​l​,​ ​u​s​e​s​ ​f​i​l​e​n​a​m​e​ ​i​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​c​u​s​t​o​m​ ​S​3​ ​o​b​j​e​c​t​ ​k​e​y​ ​f​o​r​ ​t​h​e​ ​u​p​l​o​a​d​e​d​ ​f​i​l​e​.​ ​I​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​,​ ​t​h​e​ ​o​r​i​g​i​n​a​l​ ​f​i​l​e​n​a​m​e​ ​w​i​l​l​ ​b​e​ ​u​s​e​d​.
+							 */
+							longDesc: string
+						}
+						storage_class: {
+							/**
+							 * S​t​o​r​a​g​e​ ​C​l​a​s​s
+							 */
+							displayName: string
+							/**
+							 * S​3​ ​s​t​o​r​a​g​e​ ​c​l​a​s​s​ ​f​o​r​ ​c​o​s​t​ ​o​p​t​i​m​i​z​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​S​3​ ​s​t​o​r​a​g​e​ ​c​l​a​s​s​ ​t​h​a​t​ ​d​e​t​e​r​m​i​n​e​s​ ​t​h​e​ ​s​t​o​r​a​g​e​ ​c​o​s​t​s​ ​a​n​d​ ​r​e​t​r​i​e​v​a​l​ ​c​h​a​r​a​c​t​e​r​i​s​t​i​c​s​ ​o​f​ ​t​h​e​ ​u​p​l​o​a​d​e​d​ ​f​i​l​e​.
+							 */
+							longDesc: string
+						}
+						metadata: {
+							/**
+							 * M​e​t​a​d​a​t​a
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​m​e​t​a​d​a​t​a​ ​k​e​y​-​v​a​l​u​e​ ​p​a​i​r​s
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​m​e​t​a​d​a​t​a​ ​a​s​ ​k​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​s​t​o​r​e​d​ ​w​i​t​h​ ​t​h​e​ ​u​p​l​o​a​d​e​d​ ​f​i​l​e​.
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​e​ ​t​a​g​s​ ​f​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​a​n​d​ ​c​o​s​t​ ​t​r​a​c​k​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * K​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​ ​u​s​e​d​ ​f​o​r​ ​f​i​l​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​,​ ​c​o​s​t​ ​a​l​l​o​c​a​t​i​o​n​,​ ​a​n​d​ ​l​i​f​e​c​y​c​l​e​ ​m​a​n​a​g​e​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_object: {
+					/**
+					 * G​e​t​ ​O​b​j​e​c​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​S​3​ ​o​b​j​e​c​t​ ​w​i​t​h​ ​d​e​t​a​i​l​e​d​ ​m​e​t​a​d​a​t​a
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​n​ ​S​3​ ​o​b​j​e​c​t​ ​w​i​t​h​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​m​e​t​a​d​a​t​a​ ​i​n​c​l​u​d​i​n​g​ ​s​i​z​e​,​ ​m​o​d​i​f​i​c​a​t​i​o​n​ ​d​a​t​e​s​,​ ​s​t​o​r​a​g​e​ ​c​l​a​s​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​m​e​t​a​d​a​t​a​.​ ​O​p​t​i​o​n​a​l​l​y​ ​i​n​c​l​u​d​e​s​ ​o​b​j​e​c​t​ ​c​o​n​t​e​n​t​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​s​o​u​r​c​e​ ​S​3​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						bucket_name: {
+							/**
+							 * B​u​c​k​e​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * S​o​u​r​c​e​ ​S​3​ ​b​u​c​k​e​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​o​b​j​e​c​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​S​3​ ​b​u​c​k​e​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​o​b​j​e​c​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+						object_key: {
+							/**
+							 * O​b​j​e​c​t​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * S​3​ ​o​b​j​e​c​t​ ​k​e​y​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​S​3​ ​o​b​j​e​c​t​ ​k​e​y​ ​t​h​a​t​ ​u​n​i​q​u​e​l​y​ ​i​d​e​n​t​i​f​i​e​s​ ​t​h​e​ ​o​b​j​e​c​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​w​i​t​h​i​n​ ​t​h​e​ ​b​u​c​k​e​t​.
+							 */
+							longDesc: string
+						}
+						include_content: {
+							/**
+							 * I​n​c​l​u​d​e​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​t​h​e​ ​o​b​j​e​c​t​ ​c​o​n​t​e​n​t​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​i​n​c​l​u​d​e​s​ ​t​h​e​ ​a​c​t​u​a​l​ ​o​b​j​e​c​t​ ​c​o​n​t​e​n​t​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.​ ​D​i​s​a​b​l​e​ ​f​o​r​ ​m​e​t​a​d​a​t​a​-​o​n​l​y​ ​r​e​t​r​i​e​v​a​l​ ​t​o​ ​i​m​p​r​o​v​e​ ​p​e​r​f​o​r​m​a​n​c​e​.
+							 */
+							longDesc: string
+						}
+						version_id: {
+							/**
+							 * V​e​r​s​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​o​b​j​e​c​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​(​f​o​r​ ​v​e​r​s​i​o​n​e​d​ ​b​u​c​k​e​t​s​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​v​e​r​s​i​o​n​ ​I​D​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​o​b​j​e​c​t​ ​f​r​o​m​ ​a​ ​v​e​r​s​i​o​n​e​d​ ​S​3​ ​b​u​c​k​e​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_file: {
+					/**
+					 * G​e​t​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * D​o​w​n​l​o​a​d​ ​f​i​l​e​ ​f​r​o​m​ ​S​3
+					 */
+					shortDesc: string
+					/**
+					 * D​o​w​n​l​o​a​d​s​ ​a​ ​f​i​l​e​ ​f​r​o​m​ ​S​3​ ​a​n​d​ ​r​e​t​u​r​n​s​ ​i​t​ ​i​n​ ​s​t​a​n​d​a​r​d​ ​f​i​l​e​ ​f​o​r​m​a​t​ ​f​o​r​ ​d​i​r​e​c​t​ ​u​s​e​.​ ​S​i​m​p​l​e​r​ ​a​l​t​e​r​n​a​t​i​v​e​ ​t​o​ ​G​e​t​ ​O​b​j​e​c​t​ ​w​h​e​n​ ​o​n​l​y​ ​t​h​e​ ​f​i​l​e​ ​c​o​n​t​e​n​t​ ​i​s​ ​n​e​e​d​e​d​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​s​o​u​r​c​e​ ​S​3​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						bucket_name: {
+							/**
+							 * B​u​c​k​e​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * S​o​u​r​c​e​ ​S​3​ ​b​u​c​k​e​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​S​3​ ​b​u​c​k​e​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​d​o​w​n​l​o​a​d​.
+							 */
+							longDesc: string
+						}
+						object_key: {
+							/**
+							 * O​b​j​e​c​t​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * S​3​ ​o​b​j​e​c​t​ ​k​e​y​ ​o​f​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​d​o​w​n​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​S​3​ ​o​b​j​e​c​t​ ​k​e​y​ ​t​h​a​t​ ​u​n​i​q​u​e​l​y​ ​i​d​e​n​t​i​f​i​e​s​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​d​o​w​n​l​o​a​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​b​u​c​k​e​t​.
+							 */
+							longDesc: string
+						}
+						version_id: {
+							/**
+							 * V​e​r​s​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​d​o​w​n​l​o​a​d​ ​(​f​o​r​ ​v​e​r​s​i​o​n​e​d​ ​b​u​c​k​e​t​s​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​v​e​r​s​i​o​n​ ​I​D​ ​t​o​ ​d​o​w​n​l​o​a​d​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​f​i​l​e​ ​f​r​o​m​ ​a​ ​v​e​r​s​i​o​n​e​d​ ​S​3​ ​b​u​c​k​e​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_objects: {
+					/**
+					 * L​i​s​t​ ​O​b​j​e​c​t​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​l​l​ ​o​b​j​e​c​t​s​ ​i​n​ ​a​n​ ​S​3​ ​b​u​c​k​e​t
+					 */
+					shortDesc: string
+					/**
+					 * L​i​s​t​s​ ​a​l​l​ ​o​b​j​e​c​t​s​ ​i​n​ ​a​n​ ​S​3​ ​b​u​c​k​e​t​ ​i​n​c​l​u​d​i​n​g​ ​f​i​l​e​s​ ​a​n​d​ ​d​i​r​e​c​t​o​r​i​e​s​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​,​ ​p​r​e​f​i​x​e​s​,​ ​a​n​d​ ​d​e​l​i​m​i​t​e​r​s​ ​f​o​r​ ​h​i​e​r​a​r​c​h​i​c​a​l​ ​n​a​v​i​g​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​r​g​e​t​ ​S​3​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						bucket_name: {
+							/**
+							 * B​u​c​k​e​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * S​3​ ​b​u​c​k​e​t​ ​t​o​ ​l​i​s​t​ ​o​b​j​e​c​t​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​S​3​ ​b​u​c​k​e​t​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​o​ ​l​i​s​t​ ​o​b​j​e​c​t​s​.
+							 */
+							longDesc: string
+						}
+						prefix: {
+							/**
+							 * P​r​e​f​i​x​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​p​r​e​f​i​x​ ​t​o​ ​f​i​l​t​e​r​ ​o​b​j​e​c​t​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​p​r​e​f​i​x​ ​t​o​ ​l​i​m​i​t​ ​r​e​s​u​l​t​s​ ​t​o​ ​o​b​j​e​c​t​s​ ​w​i​t​h​ ​k​e​y​s​ ​t​h​a​t​ ​s​t​a​r​t​ ​w​i​t​h​ ​t​h​i​s​ ​p​r​e​f​i​x​.
+							 */
+							longDesc: string
+						}
+						max_keys: {
+							/**
+							 * M​a​x​ ​K​e​y​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​o​b​j​e​c​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​o​b​j​e​c​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​U​s​e​ ​w​i​t​h​ ​c​o​n​t​i​n​u​a​t​i​o​n​ ​t​o​k​e​n​s​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						continuation_token: {
+							/**
+							 * C​o​n​t​i​n​u​a​t​i​o​n​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​t​i​n​u​a​t​i​o​n​ ​t​o​k​e​n​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​q​u​e​s​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						delimiter: {
+							/**
+							 * D​e​l​i​m​i​t​e​r
+							 */
+							displayName: string
+							/**
+							 * D​e​l​i​m​i​t​e​r​ ​f​o​r​ ​h​i​e​r​a​r​c​h​i​c​a​l​ ​l​i​s​t​i​n​g​ ​(​e​.​g​.​,​ ​"​/​"​)
+							 */
+							shortDesc: string
+							/**
+							 * C​h​a​r​a​c​t​e​r​ ​u​s​e​d​ ​t​o​ ​g​r​o​u​p​ ​o​b​j​e​c​t​s​ ​i​n​t​o​ ​a​ ​h​i​e​r​a​r​c​h​y​.​ ​C​o​m​m​o​n​ ​p​r​e​f​i​x​e​s​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​ ​s​e​p​a​r​a​t​e​l​y​.
+							 */
+							longDesc: string
+						}
+						start_after: {
+							/**
+							 * S​t​a​r​t​ ​A​f​t​e​r
+							 */
+							displayName: string
+							/**
+							 * O​b​j​e​c​t​ ​k​e​y​ ​t​o​ ​s​t​a​r​t​ ​l​i​s​t​i​n​g​ ​a​f​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * S​t​a​r​t​ ​l​i​s​t​i​n​g​ ​o​b​j​e​c​t​s​ ​l​e​x​i​c​o​g​r​a​p​h​i​c​a​l​l​y​ ​a​f​t​e​r​ ​t​h​i​s​ ​k​e​y​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_files: {
+					/**
+					 * L​i​s​t​ ​F​i​l​e​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​f​i​l​e​s​ ​i​n​ ​a​n​ ​S​3​ ​b​u​c​k​e​t​ ​(​e​x​c​l​u​d​e​s​ ​d​i​r​e​c​t​o​r​i​e​s​)
+					 */
+					shortDesc: string
+					/**
+					 * L​i​s​t​s​ ​o​n​l​y​ ​a​c​t​u​a​l​ ​f​i​l​e​s​ ​i​n​ ​a​n​ ​S​3​ ​b​u​c​k​e​t​,​ ​e​x​c​l​u​d​i​n​g​ ​d​i​r​e​c​t​o​r​i​e​s​ ​a​n​d​ ​c​o​m​m​o​n​ ​p​r​e​f​i​x​e​s​.​ ​S​u​p​p​o​r​t​s​ ​f​i​l​e​ ​e​x​t​e​n​s​i​o​n​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​p​r​o​v​i​d​e​s​ ​f​i​l​e​-​s​p​e​c​i​f​i​c​ ​s​t​a​t​i​s​t​i​c​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​r​g​e​t​ ​S​3​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						bucket_name: {
+							/**
+							 * B​u​c​k​e​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * S​3​ ​b​u​c​k​e​t​ ​t​o​ ​l​i​s​t​ ​f​i​l​e​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​S​3​ ​b​u​c​k​e​t​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​o​ ​l​i​s​t​ ​f​i​l​e​s​.
+							 */
+							longDesc: string
+						}
+						prefix: {
+							/**
+							 * P​r​e​f​i​x​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​p​r​e​f​i​x​ ​t​o​ ​f​i​l​t​e​r​ ​f​i​l​e​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​p​r​e​f​i​x​ ​t​o​ ​l​i​m​i​t​ ​r​e​s​u​l​t​s​ ​t​o​ ​f​i​l​e​s​ ​w​i​t​h​ ​k​e​y​s​ ​t​h​a​t​ ​s​t​a​r​t​ ​w​i​t​h​ ​t​h​i​s​ ​p​r​e​f​i​x​.
+							 */
+							longDesc: string
+						}
+						max_keys: {
+							/**
+							 * M​a​x​ ​K​e​y​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​f​i​l​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​f​i​l​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.
+							 */
+							longDesc: string
+						}
+						file_extensions: {
+							/**
+							 * F​i​l​e​ ​E​x​t​e​n​s​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​f​i​l​e​ ​e​x​t​e​n​s​i​o​n​s​ ​(​e​.​g​.​,​ ​[​"​p​d​f​"​,​ ​"​j​p​g​"​]​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​l​i​s​t​ ​o​f​ ​f​i​l​e​ ​e​x​t​e​n​s​i​o​n​s​ ​t​o​ ​f​i​l​t​e​r​ ​r​e​s​u​l​t​s​.​ ​O​n​l​y​ ​f​i​l​e​s​ ​w​i​t​h​ ​m​a​t​c​h​i​n​g​ ​e​x​t​e​n​s​i​o​n​s​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+						continuation_token: {
+							/**
+							 * C​o​n​t​i​n​u​a​t​i​o​n​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​t​i​n​u​a​t​i​o​n​ ​t​o​k​e​n​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​q​u​e​s​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_object: {
+					/**
+					 * D​e​l​e​t​e​ ​O​b​j​e​c​t
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​n​ ​o​b​j​e​c​t​ ​f​r​o​m​ ​S​3
+					 */
+					shortDesc: string
+					/**
+					 * D​e​l​e​t​e​s​ ​a​n​ ​o​b​j​e​c​t​ ​f​r​o​m​ ​S​3​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​v​e​r​s​i​o​n​e​d​ ​o​b​j​e​c​t​s​ ​a​n​d​ ​g​o​v​e​r​n​a​n​c​e​ ​r​e​t​e​n​t​i​o​n​ ​b​y​p​a​s​s​.​ ​U​s​e​ ​w​i​t​h​ ​c​a​u​t​i​o​n​ ​a​s​ ​d​e​l​e​t​i​o​n​s​ ​m​a​y​ ​b​e​ ​p​e​r​m​a​n​e​n​t​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​r​g​e​t​ ​S​3​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						bucket_name: {
+							/**
+							 * B​u​c​k​e​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * S​3​ ​b​u​c​k​e​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​o​b​j​e​c​t​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​S​3​ ​b​u​c​k​e​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​o​b​j​e​c​t​ ​t​o​ ​d​e​l​e​t​e​.
+							 */
+							longDesc: string
+						}
+						object_key: {
+							/**
+							 * O​b​j​e​c​t​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * S​3​ ​o​b​j​e​c​t​ ​k​e​y​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​S​3​ ​o​b​j​e​c​t​ ​k​e​y​ ​t​h​a​t​ ​u​n​i​q​u​e​l​y​ ​i​d​e​n​t​i​f​i​e​s​ ​t​h​e​ ​o​b​j​e​c​t​ ​t​o​ ​d​e​l​e​t​e​ ​w​i​t​h​i​n​ ​t​h​e​ ​b​u​c​k​e​t​.
+							 */
+							longDesc: string
+						}
+						version_id: {
+							/**
+							 * V​e​r​s​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​v​e​r​s​i​o​n​ ​t​o​ ​d​e​l​e​t​e​ ​(​f​o​r​ ​v​e​r​s​i​o​n​e​d​ ​b​u​c​k​e​t​s​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​v​e​r​s​i​o​n​ ​I​D​ ​t​o​ ​d​e​l​e​t​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​o​b​j​e​c​t​ ​f​r​o​m​ ​a​ ​v​e​r​s​i​o​n​e​d​ ​S​3​ ​b​u​c​k​e​t​.
+							 */
+							longDesc: string
+						}
+						bypass_governance_retention: {
+							/**
+							 * B​y​p​a​s​s​ ​G​o​v​e​r​n​a​n​c​e​ ​R​e​t​e​n​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * B​y​p​a​s​s​ ​g​o​v​e​r​n​a​n​c​e​-​m​o​d​e​ ​o​b​j​e​c​t​ ​l​o​c​k​ ​r​e​t​e​n​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​b​y​p​a​s​s​e​s​ ​g​o​v​e​r​n​a​n​c​e​-​m​o​d​e​ ​O​b​j​e​c​t​ ​L​o​c​k​ ​r​e​t​e​n​t​i​o​n​.​ ​R​e​q​u​i​r​e​s​ ​a​p​p​r​o​p​r​i​a​t​e​ ​p​e​r​m​i​s​s​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_buckets: {
+					/**
+					 * L​i​s​t​ ​B​u​c​k​e​t​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​l​l​ ​S​3​ ​b​u​c​k​e​t​s​ ​i​n​ ​t​h​e​ ​a​c​c​o​u​n​t
+					 */
+					shortDesc: string
+					/**
+					 * L​i​s​t​s​ ​a​l​l​ ​S​3​ ​b​u​c​k​e​t​s​ ​i​n​ ​t​h​e​ ​A​W​S​ ​a​c​c​o​u​n​t​ ​w​i​t​h​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e​s​ ​a​n​d​ ​r​e​g​i​o​n​s​.​ ​O​p​t​i​o​n​a​l​l​y​ ​i​n​c​l​u​d​e​s​ ​d​e​t​a​i​l​e​d​ ​l​o​c​a​t​i​o​n​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​ ​e​a​c​h​ ​b​u​c​k​e​t​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​f​o​r​ ​t​h​e​ ​S​3​ ​c​l​i​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​S​3​ ​c​l​i​e​n​t​ ​w​i​l​l​ ​b​e​ ​c​o​n​f​i​g​u​r​e​d​ ​f​o​r​ ​l​i​s​t​i​n​g​ ​b​u​c​k​e​t​s​.
+							 */
+							longDesc: string
+						}
+						include_location: {
+							/**
+							 * I​n​c​l​u​d​e​ ​L​o​c​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​f​e​t​c​h​ ​t​h​e​ ​a​c​t​u​a​l​ ​r​e​g​i​o​n​ ​f​o​r​ ​e​a​c​h​ ​b​u​c​k​e​t
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​f​e​t​c​h​e​s​ ​t​h​e​ ​a​c​t​u​a​l​ ​A​W​S​ ​r​e​g​i​o​n​ ​f​o​r​ ​e​a​c​h​ ​b​u​c​k​e​t​.​ ​D​i​s​a​b​l​e​ ​f​o​r​ ​f​a​s​t​e​r​ ​r​e​s​p​o​n​s​e​s​ ​w​h​e​n​ ​r​e​g​i​o​n​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​s​ ​n​o​t​ ​n​e​e​d​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Claude: {
 			/**
 			 * C​l​a​u​d​e
@@ -72104,6 +73026,928 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * When enabled, includes all AWS regions including those that require you to opt-in before you can use them.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		AmazonS3: {
+			/**
+			 * Amazon S3
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Seamlessly connect to Amazon S3 to manage buckets, upload files, and automate your cloud storage workflows.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The Amazon S3 integration provides comprehensive actions and triggers to interact with Amazon Simple Storage Service. Whether you need to manage buckets, upload and download files, or monitor changes to your S3 objects, this integration simplifies your cloud storage automation and file management workflows.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				new_bucket: {
+					/**
+					 * New Bucket
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new S3 bucket is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors for newly created S3 buckets and triggers when a bucket is detected. Useful for tracking bucket creation events and implementing automated governance policies.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region to monitor for new buckets
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the S3 client will be configured to monitor for new bucket creation events.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_or_updated_file: {
+					/**
+					 * New or Updated File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when files are created or modified in an S3 bucket
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors an S3 bucket for new or updated files and triggers when changes are detected. Supports prefix filtering to monitor specific directories or file patterns.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where the bucket is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the S3 bucket is located for monitoring file changes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bucket_name: {
+							/**
+							 * Bucket Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * S3 bucket to monitor for file changes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the S3 bucket to monitor for new or updated files.
+							 */
+							longDesc: () => LocalizedString
+						}
+						prefix: {
+							/**
+							 * Prefix Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional prefix to filter objects (e.g., "uploads/")
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional prefix to limit monitoring to objects with specific key prefixes, useful for monitoring specific directories or file patterns.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			actions: {
+				create_bucket: {
+					/**
+					 * Create Bucket
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new S3 bucket
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new S3 bucket with configurable access control and object lock settings. Bucket names must be globally unique and follow AWS naming conventions.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						bucket_name: {
+							/**
+							 * Bucket Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name for the new bucket (must be globally unique)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name for the new S3 bucket. Must be globally unique across all AWS accounts and follow S3 naming conventions (lowercase letters, numbers, hyphens only).
+							 */
+							longDesc: () => LocalizedString
+						}
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where the bucket will be created
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the S3 bucket will be created. Affects latency and data residency.
+							 */
+							longDesc: () => LocalizedString
+						}
+						acl: {
+							/**
+							 * Access Control List (ACL)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Access permissions for the bucket
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Predefined access control list that defines who can access the bucket and what permissions they have.
+							 */
+							longDesc: () => LocalizedString
+						}
+						object_lock_enabled: {
+							/**
+							 * Object Lock Enabled
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enable object lock for compliance and data retention
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enables S3 Object Lock to prevent object deletion or modification for compliance and data retention requirements.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_text_object: {
+					/**
+					 * Create Text Object
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Upload text content directly to S3
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates an S3 object with text content, supporting various text formats and content types. Useful for uploading configuration files, logs, or document content.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where the bucket is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the target S3 bucket is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bucket_name: {
+							/**
+							 * Bucket Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target S3 bucket for the text object
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the S3 bucket where the text object will be created.
+							 */
+							longDesc: () => LocalizedString
+						}
+						object_key: {
+							/**
+							 * Object Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * S3 object key (file path) for the text content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The S3 object key that serves as the unique identifier and path for the text object within the bucket.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content: {
+							/**
+							 * Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text content to upload
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text content that will be uploaded to S3 as the object body.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content_type: {
+							/**
+							 * Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * MIME type for the text content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The MIME type that describes the format of the text content being uploaded.
+							 */
+							longDesc: () => LocalizedString
+						}
+						storage_class: {
+							/**
+							 * Storage Class
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * S3 storage class for cost optimization
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The S3 storage class that determines the storage costs and retrieval characteristics of the object.
+							 */
+							longDesc: () => LocalizedString
+						}
+						metadata: {
+							/**
+							 * Metadata
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom metadata key-value pairs
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom metadata as key-value pairs that will be stored with the object for additional context or application use.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Object tags for organization and cost tracking
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Key-value pairs used for object organization, cost allocation, and lifecycle management.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				upload_file: {
+					/**
+					 * Upload File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Upload a file to S3
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Uploads a file to S3 with support for custom object keys, storage classes, metadata, and tagging. Handles binary files through base64 encoding.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where the bucket is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the target S3 bucket is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bucket_name: {
+							/**
+							 * Bucket Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target S3 bucket for the file upload
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the S3 bucket where the file will be uploaded.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file: {
+							/**
+							 * File
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * File to upload to S3
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The file to be uploaded to S3, including its content, filename, and MIME type.
+							 */
+							longDesc: () => LocalizedString
+						}
+						object_key: {
+							/**
+							 * Object Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom S3 object key (optional, uses filename if not provided)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional custom S3 object key for the uploaded file. If not provided, the original filename will be used.
+							 */
+							longDesc: () => LocalizedString
+						}
+						storage_class: {
+							/**
+							 * Storage Class
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * S3 storage class for cost optimization
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The S3 storage class that determines the storage costs and retrieval characteristics of the uploaded file.
+							 */
+							longDesc: () => LocalizedString
+						}
+						metadata: {
+							/**
+							 * Metadata
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom metadata key-value pairs
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom metadata as key-value pairs that will be stored with the uploaded file.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * File tags for organization and cost tracking
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Key-value pairs used for file organization, cost allocation, and lifecycle management.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_object: {
+					/**
+					 * Get Object
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve S3 object with detailed metadata
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves an S3 object with comprehensive metadata including size, modification dates, storage class, and custom metadata. Optionally includes object content.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where the bucket is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the source S3 bucket is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bucket_name: {
+							/**
+							 * Bucket Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Source S3 bucket containing the object
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the S3 bucket containing the object to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+						object_key: {
+							/**
+							 * Object Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * S3 object key to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The S3 object key that uniquely identifies the object to retrieve within the bucket.
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_content: {
+							/**
+							 * Include Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to include the object content in the response
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, includes the actual object content in the response. Disable for metadata-only retrieval to improve performance.
+							 */
+							longDesc: () => LocalizedString
+						}
+						version_id: {
+							/**
+							 * Version ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific version of the object to retrieve (for versioned buckets)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional version ID to retrieve a specific version of the object from a versioned S3 bucket.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_file: {
+					/**
+					 * Get File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Download file from S3
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Downloads a file from S3 and returns it in standard file format for direct use. Simpler alternative to Get Object when only the file content is needed.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where the bucket is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the source S3 bucket is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bucket_name: {
+							/**
+							 * Bucket Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Source S3 bucket containing the file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the S3 bucket containing the file to download.
+							 */
+							longDesc: () => LocalizedString
+						}
+						object_key: {
+							/**
+							 * Object Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * S3 object key of the file to download
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The S3 object key that uniquely identifies the file to download within the bucket.
+							 */
+							longDesc: () => LocalizedString
+						}
+						version_id: {
+							/**
+							 * Version ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific version of the file to download (for versioned buckets)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional version ID to download a specific version of the file from a versioned S3 bucket.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_objects: {
+					/**
+					 * List Objects
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List all objects in an S3 bucket
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Lists all objects in an S3 bucket including files and directories with support for pagination, prefixes, and delimiters for hierarchical navigation.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where the bucket is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the target S3 bucket is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bucket_name: {
+							/**
+							 * Bucket Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * S3 bucket to list objects from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the S3 bucket from which to list objects.
+							 */
+							longDesc: () => LocalizedString
+						}
+						prefix: {
+							/**
+							 * Prefix Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional prefix to filter objects
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional prefix to limit results to objects with keys that start with this prefix.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_keys: {
+							/**
+							 * Max Keys
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of objects to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of objects to return in a single request. Use with continuation tokens for pagination.
+							 */
+							longDesc: () => LocalizedString
+						}
+						continuation_token: {
+							/**
+							 * Continuation Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Continuation token from a previous request to retrieve the next page of results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						delimiter: {
+							/**
+							 * Delimiter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Delimiter for hierarchical listing (e.g., "/")
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Character used to group objects into a hierarchy. Common prefixes will be returned separately.
+							 */
+							longDesc: () => LocalizedString
+						}
+						start_after: {
+							/**
+							 * Start After
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Object key to start listing after
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Start listing objects lexicographically after this key.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_files: {
+					/**
+					 * List Files
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List files in an S3 bucket (excludes directories)
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Lists only actual files in an S3 bucket, excluding directories and common prefixes. Supports file extension filtering and provides file-specific statistics.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where the bucket is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the target S3 bucket is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bucket_name: {
+							/**
+							 * Bucket Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * S3 bucket to list files from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the S3 bucket from which to list files.
+							 */
+							longDesc: () => LocalizedString
+						}
+						prefix: {
+							/**
+							 * Prefix Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional prefix to filter files
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional prefix to limit results to files with keys that start with this prefix.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_keys: {
+							/**
+							 * Max Keys
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of files to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of files to return in a single request.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file_extensions: {
+							/**
+							 * File Extensions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by specific file extensions (e.g., ["pdf", "jpg"])
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional list of file extensions to filter results. Only files with matching extensions will be returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+						continuation_token: {
+							/**
+							 * Continuation Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Continuation token from a previous request to retrieve the next page of results.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_object: {
+					/**
+					 * Delete Object
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete an object from S3
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Deletes an object from S3 with support for versioned objects and governance retention bypass. Use with caution as deletions may be permanent.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where the bucket is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the target S3 bucket is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bucket_name: {
+							/**
+							 * Bucket Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * S3 bucket containing the object to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the S3 bucket containing the object to delete.
+							 */
+							longDesc: () => LocalizedString
+						}
+						object_key: {
+							/**
+							 * Object Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * S3 object key to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The S3 object key that uniquely identifies the object to delete within the bucket.
+							 */
+							longDesc: () => LocalizedString
+						}
+						version_id: {
+							/**
+							 * Version ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific version to delete (for versioned buckets)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional version ID to delete a specific version of the object from a versioned S3 bucket.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bypass_governance_retention: {
+							/**
+							 * Bypass Governance Retention
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Bypass governance-mode object lock retention
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, bypasses governance-mode Object Lock retention. Requires appropriate permissions.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_buckets: {
+					/**
+					 * List Buckets
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List all S3 buckets in the account
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Lists all S3 buckets in the AWS account with creation dates and regions. Optionally includes detailed location information for each bucket.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region for the S3 client
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the S3 client will be configured for listing buckets.
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_location: {
+							/**
+							 * Include Location
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to fetch the actual region for each bucket
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, fetches the actual AWS region for each bucket. Disable for faster responses when region information is not needed.
 							 */
 							longDesc: () => LocalizedString
 						}
