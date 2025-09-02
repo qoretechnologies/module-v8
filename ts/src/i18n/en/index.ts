@@ -60,6 +60,7 @@ import Xero from './apps/Xero';
 import YouTube from './apps/YouTube';
 import Zendesk from './apps/Zendesk';
 import Zoom from './apps/Zoom';
+import AmazonEC2 from './apps/AmazonEc2';
 
 const en = {
   common: {},
@@ -159,6 +160,7 @@ const en = {
       },
     },
     Asana,
+    AmazonEC2,
     Claude,
     LinkedIn,
     BrowseAi,

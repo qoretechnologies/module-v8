@@ -141,6 +141,8 @@ public class TypeScriptActionInterface {
 
         const TypeScriptAppRestConnectionOptions = RestConnection::ConnectionScheme.options;
 
+        const TypeScriptAwsAppRestConnectionOptions = TypeScriptAwsAppRestConnection::ConnectionScheme.options;
+
         #! This provides all supported REST connection option names
         const TypeScriptAppRestOptionKeys = (
             "content_encoding",
@@ -240,6 +242,9 @@ public class TypeScriptActionInterface {
         #! Maps from app names to URL option names
         static hash<string, string> app_url_option_map;
 
+        #! Flag AWS apps
+        static hash<string, bool> aws_app_map;
+
         #! Connection map for testing
         static hash<string, TypeScriptAppRestConnection> cmap;
 
@@ -321,6 +326,7 @@ public class TypeScriptActionInterface {
         remove app_conn_update_map{appname};
         remove app_conn_opt_map{appname};
         remove app_url_option_map{appname};
+        remove aws_app_map{appname};
         remove app_swagger_map{appname};
         remove app_swagger_schema_map{appname};
         remove google_app_map{appname};
@@ -740,16 +746,25 @@ public class TypeScriptActionInterface {
                 url = regex_subst(url, "^https?", sname);
             }
 
-            hash<string, hash<ConnectionOptionInfo>> opts = TypeScriptAppRestConnectionOptions;
+            # check for AWS apps
+            *string aws_service = remove app0.rest_modifiers.aws_service;
+
+            hash<string, hash<ConnectionOptionInfo>> opts = aws_service
+                ? TypeScriptAwsAppRestConnectionOptions
+                : TypeScriptAppRestConnectionOptions;
             foreach hash<auto> i in (rest.pairIterator()) {
                 if (!opts{i.key}) {
-                    throw "TYPESCRIPT-REST-OPTION-ERROR", sprintf("Unknown REST connection option %y; known "
-                        "options: %y", i.key, keys opts);
+                    throw "TYPESCRIPT-REST-OPTION-ERROR", sprintf("Unknown REST connection option %y for app %y; known "
+                        "options: %y", i.key, app.name, keys opts);
                 }
                 if (exists i.value) {
                     opts{i.key}.default_value = i.value;
                 }
             }
+            if (aws_service) {
+                opts.service.default_value = aws_service;
+            }
+
             *string required_options;
             hash<AsyncCallInfo> post_auth;
             hash<AsyncCallInfo> post_auth_code;
@@ -769,6 +784,11 @@ public class TypeScriptActionInterface {
                 }
                 if (rest_modifiers.required_options.val()) {
                     required_options = rest_modifiers.required_options;
+                    if (aws_service && required_options !~ /\bregion\b/) {
+                        required_options += (required_options ? "," : "") + "region";
+                    }
+                } else if (aws_service) {
+                    required_options = "region";
                 }
                 if (rest_modifiers.set_options_post_auth.val()) {
                     if (!rest_modifiers.set_options_post_auth.callp()) {
@@ -840,7 +860,7 @@ public class TypeScriptActionInterface {
                 "display_name": app.display_name,
                 "short_desc": app.short_desc,
                 "desc": app.desc,
-                "cls": Class::forName("TypeScriptAppRestConnection"),
+                "cls": Class::forName(aws_service ? "TypeScriptAwsAppRestConnection" : "TypeScriptAppRestConnection"),
                 "schemes": {
                     sname: True,
                 },
@@ -872,6 +892,9 @@ public class TypeScriptActionInterface {
             }
             if (url_from_option) {
                 app_url_option_map{appname} = url_from_option;
+            }
+            if (aws_service) {
+                aws_app_map{appname} = True;
             }
         }
         DataProviderActionCatalog::registerApp(cast<hash<DataProviderAppInfo>>(app0));
@@ -2512,7 +2535,9 @@ public class TypeScriptActionInterface {
         if (cmap{opts.name}) {
             throw "TYPESCRIPT-CONNECTION-ERROR", sprintf("Duplicate connection name %y", opts.name);
         }
-        TypeScriptAppRestConnection conn(opts);
+        TypeScriptAppRestConnection conn = aws_app_map{app.lwr()}
+            ? new TypeScriptAwsAppRestConnection(opts)
+            : new TypeScriptAppRestConnection(opts);
         cmap{opts.name} = conn;
         return opts.name;
     }
