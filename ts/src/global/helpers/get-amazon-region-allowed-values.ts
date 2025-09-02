@@ -80,7 +80,7 @@ export const getAWSRegionAllowedValues: TQoreGetAllowedValuesFunction<
     }
   } catch (error) {
     Debugger.log(
-      `Failed to fetch regions dynamically, falling back to static list: ${error.message}`
+      `Failed to fetch regions dynamically, falling back to static list: ${error.message || error}`
     );
   }
 
