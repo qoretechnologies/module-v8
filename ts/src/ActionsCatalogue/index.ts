@@ -73,6 +73,7 @@ import telegram from '../apps/telegram';
 import brevo from '../apps/brevo';
 import googleTasks from '../apps/google-tasks';
 import amazonEc2 from '../apps/amazon-ec2';
+import amazonS3 from '../apps/amazon-s3';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -90,6 +91,7 @@ const NEW_APPS = {
   activeCampaign,
   airtable,
   amazonEc2,
+  amazonS3,
   asana,
   attio,
   bigml,

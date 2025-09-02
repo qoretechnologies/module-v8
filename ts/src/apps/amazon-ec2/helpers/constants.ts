@@ -1,5 +1,6 @@
 import { EC2Client } from '@aws-sdk/client-ec2';
-import { AmazonEC2Error, DEFAULT_REGION } from '../constants';
+import { AmazonEC2Error } from '../constants';
+import { DEFAULT_REGION } from '../../../global/helpers/get-amazon-region-allowed-values';
 
 export interface AWSCredentials {
   access_key_id: string;

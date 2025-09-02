@@ -4,7 +4,10 @@ import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { AMAZON_EC2_APP_NAME, AmazonEC2Error } from '../constants';
 import { createEC2Client } from '../helpers/constants';
 import { getAmazonEc2InstanceIdAllowedValues } from '../helpers/get-instance-id-allowed-values';
-import { getAmazonEc2RegionAllowedValues } from '../helpers/get-region-allowed-values';
+import {
+  getAmazonDefaultRegion,
+  getAWSRegionAllowedValues,
+} from '../../../global/helpers/get-amazon-region-allowed-values';
 
 const options = {
   instance_ids: {
@@ -18,12 +21,13 @@ const options = {
     get_element_allowed_values: getAmazonEc2InstanceIdAllowedValues,
   },
   region: {
-    required: true,
+    required: false,
+    preselected: true,
     on_change: ['refetch'],
     type: 'string',
-    default_value: 'us-east-1',
     allowed_values_creatable: true,
-    get_allowed_values: getAmazonEc2RegionAllowedValues,
+    get_default_value: getAmazonDefaultRegion,
+    get_allowed_values: getAWSRegionAllowedValues,
   },
 } satisfies TQoreOptions;
 
@@ -33,14 +37,14 @@ const startInstance = QoreAppCreator.createLocalizedAction<typeof options>({
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const { access_key_id, secret_access_key, region, instance_ids } = getQoreContextRequiredValues(
-      {
-        context: { ...context, opts: obj },
-        optionFields: ['instance_ids', 'region'],
-        connectionFields: ['access_key_id', 'secret_access_key'],
-        ErrorClass: AmazonEC2Error,
-      }
-    );
+    const { access_key_id, secret_access_key, instance_ids } = getQoreContextRequiredValues({
+      context: { ...context, opts: obj },
+      optionFields: ['instance_ids'],
+      connectionFields: ['access_key_id', 'secret_access_key'],
+      ErrorClass: AmazonEC2Error,
+    });
+
+    const region = obj?.region || context?.conn_opts?.region;
 
     if (!instance_ids || instance_ids.length === 0) {
       throw new AmazonEC2Error('At least one instance ID must be provided');

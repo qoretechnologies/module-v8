@@ -2,18 +2,22 @@ import { DescribeInstanceStatusCommand } from '@aws-sdk/client-ec2';
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
+import {
+  getAmazonDefaultRegion,
+  getAWSRegionAllowedValues,
+} from '../../../global/helpers/get-amazon-region-allowed-values';
 import { AMAZON_EC2_APP_NAME, AmazonEC2Error } from '../constants';
 import { createEC2Client, formatEC2Date } from '../helpers/constants';
 import { getAmazonEc2InstanceIdAllowedValues } from '../helpers/get-instance-id-allowed-values';
-import { getAmazonEc2RegionAllowedValues } from '../helpers/get-region-allowed-values';
 
 const options = {
   region: {
-    required: true,
+    required: false,
+    preselected: true,
     type: 'string',
-    default_value: 'us-east-1',
     allowed_values_creatable: true,
-    get_allowed_values: getAmazonEc2RegionAllowedValues,
+    get_default_value: getAmazonDefaultRegion,
+    get_allowed_values: getAWSRegionAllowedValues,
     on_change: ['refetch'],
   },
   instance_ids: {
@@ -48,13 +52,15 @@ const AmazonEC2NewScheduledEventTrigger = QoreAppCreator.createLocalizedTrigger(
   action_code: EQoreAppActionCode.EVENT,
   options,
   event_function: async (context, update, should_stop) => {
-    const { access_key_id, secret_access_key, region, instance_ids, event_types } =
+    const { access_key_id, secret_access_key, instance_ids, event_types } =
       getQoreContextRequiredValues({
         context,
         connectionFields: ['access_key_id', 'secret_access_key'],
-        optionFields: ['region', 'instance_ids', 'event_types'],
+        optionFields: ['instance_ids', 'event_types'],
         ErrorClass: AmazonEC2Error,
       });
+
+    const region = context?.opts?.region || context?.conn_opts?.region;
 
     const getItems = () => {
       return fetchLatestScheduledEvents({
@@ -75,13 +81,15 @@ const AmazonEC2NewScheduledEventTrigger = QoreAppCreator.createLocalizedTrigger(
     });
   },
   get_example_event_data: async (context) => {
-    const { access_key_id, secret_access_key, region, instance_ids, event_types } =
+    const { access_key_id, secret_access_key, instance_ids, event_types } =
       getQoreContextRequiredValues({
         context,
         connectionFields: ['access_key_id', 'secret_access_key'],
-        optionFields: ['region', 'instance_ids', 'event_types'],
+        optionFields: ['instance_ids', 'event_types'],
         ErrorClass: AmazonEC2Error,
       });
+
+    const region = context?.opts?.region || context?.conn_opts?.region;
 
     const events = await fetchLatestScheduledEvents({
       access_key_id,

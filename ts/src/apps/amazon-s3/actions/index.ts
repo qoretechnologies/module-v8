@@ -1,0 +1,9 @@
+export { default as createAmazonS3Bucket } from './create-bucket.action';
+export { default as createAmazonS3TextObject } from './create-text-object.action';
+export { default as uploadAmazonS3File } from './upload-file.action';
+export { default as getAmazonS3Object } from './get-object.action';
+export { default as getAmazonS3File } from './get-file.action';
+export { default as listAmazonS3Objects } from './list-objects.action';
+export { default as listAmazonS3Files } from './list-files.action';
+export { default as deleteAmazonS3Object } from './delete-object.action';
+export { default as listAmazonS3Buckets } from './list-buckets.action';
