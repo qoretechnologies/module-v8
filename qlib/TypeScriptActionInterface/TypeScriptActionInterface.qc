@@ -784,11 +784,19 @@ public class TypeScriptActionInterface {
                 }
                 if (rest_modifiers.required_options.val()) {
                     required_options = rest_modifiers.required_options;
-                    if (aws_service && required_options !~ /\bregion\b/) {
-                        required_options += (required_options ? "," : "") + "region";
+                    if (aws_service) {
+                        if (required_options !~ /\bregion\b/) {
+                            required_options += ",region";
+                        }
+                        if (required_options !~ /\baccess_key_id\b/) {
+                            required_options += ",access_key_id";
+                        }
+                        if (required_options !~ /\bsecret_access_key\b/) {
+                            required_options += ",secret_access_key";
+                        }
                     }
                 } else if (aws_service) {
-                    required_options = "region";
+                    required_options = "region,access_key_id,secret_access_key";
                 }
                 if (rest_modifiers.set_options_post_auth.val()) {
                     if (!rest_modifiers.set_options_post_auth.callp()) {
@@ -855,7 +863,10 @@ public class TypeScriptActionInterface {
                 if (rest_modifiers.url_from_option) {
                     url_from_option = rest_modifiers.url_from_option;
                 }
+            } else if (aws_service) {
+                required_options = "region,access_key_id,secret_access_key";
             }
+
             hash<ConnectionSchemeInfo> scheme = <ConnectionSchemeInfo>{
                 "display_name": app.display_name,
                 "short_desc": app.short_desc,
