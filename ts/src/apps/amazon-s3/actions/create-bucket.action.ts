@@ -1,9 +1,12 @@
 import { CreateBucketCommand } from '@aws-sdk/client-s3';
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
-import { getAmazonEc2RegionAllowedValues } from '../../amazon-ec2/helpers/get-region-allowed-values';
 import { AMAZON_S3_APP_NAME, AmazonS3Error } from '../constants';
-import { createS3Client, getAmazonDefaultRegion } from '../helpers/constants';
+import { createS3Client } from '../helpers/constants';
+import {
+  getAmazonDefaultRegion,
+  getAWSRegionAllowedValues,
+} from '../../../global/helpers/get-amazon-region-allowed-values';
 
 const options = {
   bucket_name: {
@@ -16,7 +19,7 @@ const options = {
     type: 'string',
     allowed_values_creatable: true,
     get_default_value: getAmazonDefaultRegion,
-    get_allowed_values: getAmazonEc2RegionAllowedValues,
+    get_allowed_values: getAWSRegionAllowedValues,
   },
   acl: {
     required: false,

@@ -1,6 +1,6 @@
 import { S3Client } from '@aws-sdk/client-s3';
-import { AmazonS3Error, DEFAULT_REGION } from '../constants';
-import { TCustomConnOptions, TQoreGetDefaultValueFunction } from '@qoretechnologies/ts-toolkit';
+import { DEFAULT_REGION } from '../../../global/helpers/get-amazon-region-allowed-values';
+import { AmazonS3Error } from '../constants';
 
 export interface AWSCredentials {
   access_key_id: string;
@@ -54,12 +54,4 @@ export const extractKeyFromS3Url = (s3Url: string): string => {
 
 export const buildS3Url = (bucket: string, key: string): string => {
   return `s3://${bucket}/${key}`;
-};
-
-export const getAmazonDefaultRegion: TQoreGetDefaultValueFunction<TCustomConnOptions, string> = (
-  context
-) => {
-  const region = context?.conn_opts?.region || DEFAULT_REGION;
-
-  return region;
 };

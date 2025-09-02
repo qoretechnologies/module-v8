@@ -1,14 +1,12 @@
 import { GetObjectCommand, HeadObjectCommand } from '@aws-sdk/client-s3';
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
-import { getAmazonEc2RegionAllowedValues } from '../../amazon-ec2/helpers/get-region-allowed-values';
-import { AMAZON_S3_APP_NAME, AmazonS3Error } from '../constants';
 import {
-  createS3Client,
-  formatFileSize,
-  formatS3Date,
   getAmazonDefaultRegion,
-} from '../helpers/constants';
+  getAWSRegionAllowedValues,
+} from '../../../global/helpers/get-amazon-region-allowed-values';
+import { AMAZON_S3_APP_NAME, AmazonS3Error } from '../constants';
+import { createS3Client, formatFileSize, formatS3Date } from '../helpers/constants';
 import { getAmazonS3BucketAllowedValues } from '../helpers/get-bucket-allowed-values';
 import { getAmazonS3ObjectAllowedValues } from '../helpers/get-object-allowed-values';
 
@@ -19,7 +17,7 @@ const options = {
     type: 'string',
     allowed_values_creatable: true,
     get_default_value: getAmazonDefaultRegion,
-    get_allowed_values: getAmazonEc2RegionAllowedValues,
+    get_allowed_values: getAWSRegionAllowedValues,
     on_change: ['refetch'],
   },
   bucket_name: {

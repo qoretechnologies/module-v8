@@ -2,10 +2,13 @@ import { GetBucketLocationCommand, ListBucketsCommand } from '@aws-sdk/client-s3
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
+import {
+  getAmazonDefaultRegion,
+  getAWSRegionAllowedValues,
+} from '../../../global/helpers/get-amazon-region-allowed-values';
 import { Debugger } from '../../../utils/Debugger';
-import { getAmazonEc2RegionAllowedValues } from '../../amazon-ec2/helpers/get-region-allowed-values';
 import { AMAZON_S3_APP_NAME, AmazonS3Error } from '../constants';
-import { createS3Client, formatS3Date, getAmazonDefaultRegion } from '../helpers/constants';
+import { createS3Client, formatS3Date } from '../helpers/constants';
 
 const options = {
   region: {
@@ -14,7 +17,7 @@ const options = {
     type: 'string',
     allowed_values_creatable: true,
     get_default_value: getAmazonDefaultRegion,
-    get_allowed_values: getAmazonEc2RegionAllowedValues,
+    get_allowed_values: getAWSRegionAllowedValues,
   },
 } satisfies TQoreOptions;
 
