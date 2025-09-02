@@ -27,6 +27,7 @@ export default (locale: Locales) =>
       ping_path: '/?Action=DescribeRegions&Version=2016-11-15',
     },
     rest_modifiers: {
+      aws_service: 'ec2',
       options: AMAZON_EC2_CONN_OPTIONS,
       required_options: 'access_key_id,secret_access_key',
     },
