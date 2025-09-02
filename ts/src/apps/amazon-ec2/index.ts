@@ -4,7 +4,7 @@ import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import * as AMAZON_EC2_ACTIONS from './actions';
 import * as AMAZON_EC2_TRIGGERS from './triggers';
-import { AMAZON_EC2_APP_LOGO, AMAZON_EC2_APP_NAME, AMAZON_EC2_CONN_OPTIONS } from './constants';
+import { AMAZON_EC2_APP_LOGO, AMAZON_EC2_APP_NAME } from './constants';
 
 export default (locale: Locales) =>
   ({
@@ -28,7 +28,5 @@ export default (locale: Locales) =>
     },
     rest_modifiers: {
       aws_service: 'ec2',
-      options: AMAZON_EC2_CONN_OPTIONS,
-      required_options: 'access_key_id,secret_access_key',
     },
   }) satisfies TQoreAppWithActions;

@@ -33,8 +33,8 @@ public class TypeScriptAppRestClient inherits RestClient {
     }
 
     #! calls the base class HTTPClient constructor and optionally connects to the REST server
-    constructor(TypeScriptAppRestConnection conn, *hash<auto> config, *softbool do_not_connect)
-            : RestClient(config, True) {
+    constructor(TypeScriptAppRestConnection conn, hash<auto> opts, *softbool do_not_connect)
+            : RestClient(opts, True) {
         self.conn := conn;
         post_auth = TypeScriptActionInterface::getPostAuthCall(conn.getAppName());
         post_auth_code = TypeScriptActionInterface::getPostAuthCodeCall(conn.getAppName());
@@ -303,7 +303,7 @@ public class TypeScriptAppRestConnection inherits RestConnection {
         @return a @ref TypeScriptAppRestClient object
     */
     private TypeScriptAppRestClient getImpl(bool connect = True, *hash<auto> rtopts) {
-        return new TypeScriptAppRestClient(self, getConnectionConfig(), !connect);
+        return new TypeScriptAppRestClient(self, getConnectionOptions(), !connect);
     }
 
     #! Returns the ConnectionSchemeInfo hash for this object
@@ -315,14 +315,6 @@ public class TypeScriptAppRestConnection inherits RestConnection {
         return getUrlOption("oauth2_auth_url", allow_relative);
     }
 
-    #! Returns config for creating a new connection
-    *hash<auto> getConnectionConfig() {
-        return self{"name", "desc", "display_name", "short_desc", "logger"} + {
-            "url": real_url,
-            "opts": getConnectionOptions(),
-        };
-    }
-
     #! Returns options for creating a new connection
     *hash<auto> getConnectionOptions(*hash<auto> rtopts) {
         *hash<auto> opts = orig_opts + rtopts;
@@ -330,7 +322,9 @@ public class TypeScriptAppRestConnection inherits RestConnection {
             map opts{$1} = TypeScriptActionInterface::processUrl(opts{$1}, opts, url_template_options),
                 ("oauth2_auth_url", "oauth2_token_url"), opts{$1}.val();
         }
-        return opts;
+        return {
+            "url": real_url,
+        } + opts;
     }
 
     #! Returns the value of a URL option or throws an exception if not set
@@ -408,29 +402,29 @@ public class TypeScriptAwsAppRestClient inherits TypeScriptAppRestClient {
     }
 
     #! calls the base class HTTPClient constructor and optionally connects to the REST server
-    constructor(TypeScriptAwsAppRestConnection conn, *hash<auto> config, *softbool do_not_connect)
-            : TypeScriptAppRestClient(conn, config, do_not_connect) {
-        if (!config.opts.service.val()) {
+    constructor(TypeScriptAwsAppRestConnection conn, hash<auto> opts, *softbool do_not_connect)
+            : TypeScriptAppRestClient(conn, opts, do_not_connect) {
+        if (!opts.service.val()) {
             throw "AWS-REST-ARG-ERROR", sprintf("Missing required option \"service\" for AWS app %y",
                 conn.getAppName());
         }
-        aws_service = config.opts.service;
-        aws_s3 = (config.opts.service == "s3");
-        if (!config.opts.region.val()) {
+        aws_service = opts.service;
+        aws_s3 = (opts.service == "s3");
+        if (!opts.region.val()) {
             throw "AWS-REST-ARG-ERROR", sprintf("Missing required option \"region\" for AWS app %y",
                 conn.getAppName());
         }
-        aws_region = config.opts.region;
-        if (!config.opts.access_key_id.val()) {
+        aws_region = opts.region;
+        if (!opts.access_key_id.val()) {
             throw "AWS-REST-ARG-ERROR", sprintf("Missing required option \"access_key_id\" for AWS app %y",
                 conn.getAppName());
         }
-        aws_keyid = config.opts.access_key_id;
-        if (!config.opts.secret_access_key.val()) {
+        aws_keyid = opts.access_key_id;
+        if (!opts.secret_access_key.val()) {
             throw "AWS-REST-ARG-ERROR", sprintf("Missing required option \"secret_access_key\" for AWS app %y",
                 conn.getAppName());
         }
-        aws_secret = config.opts.secret_access_key;
+        aws_secret = opts.secret_access_key;
 
         # get credential scope suffix
         credential_scope_suffix = sprintf("%s/%s/%s", aws_region, aws_service, AwsTermination);
@@ -463,32 +457,6 @@ public class TypeScriptAwsAppRestClient inherits TypeScriptAppRestClient {
 
         debug("sending (signed) %y: path: %y body: %d bytes hdr: %y", method, path, body.size(), hdr);
     }
-
-    /*
-    hash<auto> sendAndDecodeResponse(*data body, string m, string path, hash<auto> hdr, *reference<hash<auto>> info,
-            *softbool decode_errors, *string assume_content_type, *string shdr, *code signer) {
-        # get request time
-        date gmtime = Qore::gmtime();
-        # get credential scope
-        string scope = sprintf("%s/%s", gmtime.format("YYYYMMDD"), credential_scope_suffix);
-
-        # get signature and signed header string
-        string signed_headers;
-
-        # add configured headers without overriding
-        hdr = headers + hdr;
-
-        # get signature
-        string sig = getSignature(m, path, \hdr, body, gmtime, scope, \signed_headers);
-
-        # add authorization header
-        hdr.Authorization = sprintf("%s Credential=%s/%s, SignedHeaders=%s, Signature=%s",
-            AwsSignatureAlgorithm, aws_keyid, scope, signed_headers, sig);
-
-        return RestClient::sendAndDecodeResponse(body, m, path, hdr, \info, decode_errors, assume_content_type, shdr,
-            signer);
-    }
-    */
 
     string getSignature(string http_method, string path, reference<hash<auto>> hdr, *data body, date gmtime,
             string scope, reference<string> signed_headers) {
@@ -666,7 +634,9 @@ public class TypeScriptAwsAppRestConnection inherits TypeScriptAppRestConnection
                     "display_name": "AWS Access Key ID",
                     "short_desc": "The AWS Access Key ID",
                     "type": "string",
-                    "desc": "The AWS Access Key ID",
+                    "desc": "This should be a severely restricted key that only has access to the specific resources "
+                        "you want to use. We recommend you create a new user in the "
+                        "(IAM console)[https://console.aws.amazon.com/iam/home#users]",
                     "sensitive": True,
                 },
                 "secret_access_key": <ConnectionOptionInfo>{
@@ -724,7 +694,7 @@ public class TypeScriptAwsAppRestConnection inherits TypeScriptAppRestConnection
         @return a @ref TypeScriptAwsAppRestClient object
     */
     private TypeScriptAwsAppRestClient getImpl(bool connect = True, *hash<auto> rtopts) {
-        return new TypeScriptAwsAppRestClient(self, getConnectionConfig(), !connect);
+        return new TypeScriptAwsAppRestClient(self, getConnectionOptions(), !connect);
     }
 }
 }
