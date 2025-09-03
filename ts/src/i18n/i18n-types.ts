@@ -5264,7 +5264,7 @@ type RootTranslation = {
 		}
 		AmazonEC2: {
 			/**
-			 * A​m​a​z​o​n​ ​E​C​2
+			 * A​W​S​ ​E​C​2
 			 */
 			displayName: string
 			/**
@@ -5632,7 +5632,7 @@ type RootTranslation = {
 		}
 		AmazonS3: {
 			/**
-			 * A​m​a​z​o​n​ ​S​3
+			 * A​W​S​ ​S​3
 			 */
 			displayName: string
 			/**
@@ -6545,6 +6545,544 @@ type RootTranslation = {
 							shortDesc: string
 							/**
 							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​f​e​t​c​h​e​s​ ​t​h​e​ ​a​c​t​u​a​l​ ​A​W​S​ ​r​e​g​i​o​n​ ​f​o​r​ ​e​a​c​h​ ​b​u​c​k​e​t​.​ ​D​i​s​a​b​l​e​ ​f​o​r​ ​f​a​s​t​e​r​ ​r​e​s​p​o​n​s​e​s​ ​w​h​e​n​ ​r​e​g​i​o​n​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​s​ ​n​o​t​ ​n​e​e​d​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
+		AmazonLambda: {
+			/**
+			 * A​W​S​ ​L​a​m​b​d​a
+			 */
+			displayName: string
+			/**
+			 * S​e​r​v​e​r​l​e​s​s​ ​c​o​m​p​u​t​e​ ​s​e​r​v​i​c​e​ ​t​h​a​t​ ​r​u​n​s​ ​c​o​d​e​ ​w​i​t​h​o​u​t​ ​p​r​o​v​i​s​i​o​n​i​n​g​ ​o​r​ ​m​a​n​a​g​i​n​g​ ​s​e​r​v​e​r​s​.
+			 */
+			shortDesc: string
+			/**
+			 * A​m​a​z​o​n​ ​L​a​m​b​d​a​ ​i​s​ ​a​ ​s​e​r​v​e​r​l​e​s​s​ ​c​o​m​p​u​t​e​ ​s​e​r​v​i​c​e​ ​t​h​a​t​ ​l​e​t​s​ ​y​o​u​ ​r​u​n​ ​c​o​d​e​ ​w​i​t​h​o​u​t​ ​p​r​o​v​i​s​i​o​n​i​n​g​ ​o​r​ ​m​a​n​a​g​i​n​g​ ​s​e​r​v​e​r​s​.​ ​T​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​t​o​ ​m​a​n​a​g​e​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​s​,​ ​l​a​y​e​r​s​,​ ​a​n​d​ ​i​n​v​o​c​a​t​i​o​n​s​.​ ​Y​o​u​ ​c​a​n​ ​l​i​s​t​ ​f​u​n​c​t​i​o​n​s​,​ ​i​n​v​o​k​e​ ​t​h​e​m​,​ ​m​a​n​a​g​e​ ​l​a​y​e​r​s​,​ ​a​n​d​ ​m​o​n​i​t​o​r​ ​n​e​w​ ​f​u​n​c​t​i​o​n​ ​a​n​d​ ​l​a​y​e​r​ ​v​e​r​s​i​o​n​ ​c​r​e​a​t​i​o​n​.
+			 */
+			longDesc: string
+			actions: {
+				list_functions: {
+					/**
+					 * L​i​s​t​ ​F​u​n​c​t​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​s​ ​i​n​ ​y​o​u​r​ ​A​W​S​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​r​e​g​i​o​n​.​ ​Y​o​u​ ​c​a​n​ ​o​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​b​y​ ​f​u​n​c​t​i​o​n​ ​v​e​r​s​i​o​n​,​ ​m​a​s​t​e​r​ ​r​e​g​i​o​n​,​ ​a​n​d​ ​c​o​n​t​r​o​l​ ​p​a​g​i​n​a​t​i​o​n​ ​w​i​t​h​ ​m​a​x​ ​i​t​e​m​s​ ​a​n​d​ ​m​a​r​k​e​r​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​s​ ​a​r​e​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​l​i​s​t​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​s​ ​f​r​o​m​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						function_version: {
+							/**
+							 * F​u​n​c​t​i​o​n​ ​V​e​r​s​i​o​n
+							 */
+							displayName: string
+							/**
+							 * V​e​r​s​i​o​n​ ​o​f​ ​f​u​n​c​t​i​o​n​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​A​L​L​ ​t​o​ ​i​n​c​l​u​d​e​ ​a​l​l​ ​p​u​b​l​i​s​h​e​d​ ​v​e​r​s​i​o​n​s​ ​o​f​ ​e​a​c​h​ ​f​u​n​c​t​i​o​n​,​ ​o​r​ ​l​e​a​v​e​ ​e​m​p​t​y​ ​f​o​r​ ​l​a​t​e​s​t​ ​v​e​r​s​i​o​n​s​ ​o​n​l​y​.
+							 */
+							longDesc: string
+						}
+						master_region: {
+							/**
+							 * M​a​s​t​e​r​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​f​u​n​c​t​i​o​n​s​ ​b​y​ ​m​a​s​t​e​r​ ​r​e​g​i​o​n​ ​f​o​r​ ​L​a​m​b​d​a​@​E​d​g​e
+							 */
+							shortDesc: string
+							/**
+							 * F​o​r​ ​L​a​m​b​d​a​@​E​d​g​e​ ​f​u​n​c​t​i​o​n​s​,​ ​s​p​e​c​i​f​y​ ​t​h​e​ ​m​a​s​t​e​r​ ​r​e​g​i​o​n​ ​t​o​ ​f​i​l​t​e​r​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						max_items: {
+							/**
+							 * M​a​x​i​m​u​m​ ​I​t​e​m​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​f​u​n​c​t​i​o​n​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * L​i​m​i​t​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​f​u​n​c​t​i​o​n​s​ ​r​e​t​u​r​n​e​d​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.
+							 */
+							longDesc: string
+						}
+						next_marker: {
+							/**
+							 * N​e​x​t​ ​M​a​r​k​e​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​m​a​r​k​e​r​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​a​d​d​i​t​i​o​n​a​l​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​e​ ​m​a​r​k​e​r​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_function: {
+					/**
+					 * G​e​t​ ​F​u​n​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​,​ ​c​o​d​e​ ​d​e​t​a​i​l​s​,​ ​t​a​g​s​,​ ​a​n​d​ ​c​o​n​c​u​r​r​e​n​c​y​ ​s​e​t​t​i​n​g​s​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​i​n​s​p​e​c​t​i​n​g​ ​f​u​n​c​t​i​o​n​ ​p​r​o​p​e​r​t​i​e​s​ ​a​n​d​ ​c​u​r​r​e​n​t​ ​s​t​a​t​e​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​f​u​n​c​t​i​o​n​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​ ​r​e​s​i​d​e​s​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						function_name: {
+							/**
+							 * F​u​n​c​t​i​o​n​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​r​ ​A​R​N​ ​o​f​ ​t​h​e​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​,​ ​A​R​N​,​ ​o​r​ ​p​a​r​t​i​a​l​ ​A​R​N​ ​o​f​ ​t​h​e​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+						qualifier: {
+							/**
+							 * Q​u​a​l​i​f​i​e​r
+							 */
+							displayName: string
+							/**
+							 * F​u​n​c​t​i​o​n​ ​v​e​r​s​i​o​n​ ​o​r​ ​a​l​i​a​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​a​ ​v​e​r​s​i​o​n​ ​n​u​m​b​e​r​,​ ​a​l​i​a​s​ ​n​a​m​e​,​ ​o​r​ ​$​L​A​T​E​S​T​ ​t​o​ ​g​e​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​f​u​n​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				invoke_function: {
+					/**
+					 * I​n​v​o​k​e​ ​F​u​n​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * E​x​e​c​u​t​e​ ​a​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​ ​w​i​t​h​ ​c​u​s​t​o​m​ ​p​a​y​l​o​a​d​.
+					 */
+					shortDesc: string
+					/**
+					 * I​n​v​o​k​e​s​ ​a​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​ ​s​y​n​c​h​r​o​n​o​u​s​l​y​ ​o​r​ ​a​s​y​n​c​h​r​o​n​o​u​s​l​y​ ​w​i​t​h​ ​a​ ​c​u​s​t​o​m​ ​J​S​O​N​ ​p​a​y​l​o​a​d​.​ ​Y​o​u​ ​c​a​n​ ​s​p​e​c​i​f​y​ ​i​n​v​o​c​a​t​i​o​n​ ​t​y​p​e​,​ ​l​o​g​g​i​n​g​ ​p​r​e​f​e​r​e​n​c​e​s​,​ ​a​n​d​ ​f​u​n​c​t​i​o​n​ ​v​e​r​s​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​f​u​n​c​t​i​o​n​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​ ​r​e​s​i​d​e​s​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						function_name: {
+							/**
+							 * F​u​n​c​t​i​o​n​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​r​ ​A​R​N​ ​o​f​ ​t​h​e​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​ ​t​o​ ​i​n​v​o​k​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​,​ ​A​R​N​,​ ​o​r​ ​p​a​r​t​i​a​l​ ​A​R​N​ ​o​f​ ​t​h​e​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​ ​t​o​ ​i​n​v​o​k​e​.
+							 */
+							longDesc: string
+						}
+						invocation_type: {
+							/**
+							 * I​n​v​o​c​a​t​i​o​n​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​i​n​v​o​k​e​ ​t​h​e​ ​f​u​n​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * R​e​q​u​e​s​t​R​e​s​p​o​n​s​e​ ​f​o​r​ ​s​y​n​c​h​r​o​n​o​u​s​ ​e​x​e​c​u​t​i​o​n​,​ ​E​v​e​n​t​ ​f​o​r​ ​a​s​y​n​c​h​r​o​n​o​u​s​ ​e​x​e​c​u​t​i​o​n​,​ ​o​r​ ​D​r​y​R​u​n​ ​t​o​ ​v​a​l​i​d​a​t​e​ ​p​a​r​a​m​e​t​e​r​s​ ​w​i​t​h​o​u​t​ ​i​n​v​o​k​i​n​g​.
+							 */
+							longDesc: string
+						}
+						log_type: {
+							/**
+							 * L​o​g​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​e​x​e​c​u​t​i​o​n​ ​l​o​g​s​ ​i​n​ ​r​e​s​p​o​n​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​T​a​i​l​ ​t​o​ ​i​n​c​l​u​d​e​ ​t​h​e​ ​l​a​s​t​ ​4​K​B​ ​o​f​ ​e​x​e​c​u​t​i​o​n​ ​l​o​g​s​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​,​ ​o​r​ ​N​o​n​e​ ​t​o​ ​e​x​c​l​u​d​e​ ​l​o​g​s​.
+							 */
+							longDesc: string
+						}
+						payload: {
+							/**
+							 * P​a​y​l​o​a​d
+							 */
+							displayName: string
+							/**
+							 * J​S​O​N​ ​p​a​y​l​o​a​d​ ​t​o​ ​s​e​n​d​ ​t​o​ ​t​h​e​ ​f​u​n​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * J​S​O​N​ ​s​t​r​i​n​g​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​d​a​t​a​ ​t​o​ ​p​a​s​s​ ​t​o​ ​y​o​u​r​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​.​ ​M​u​s​t​ ​b​e​ ​v​a​l​i​d​ ​J​S​O​N​ ​f​o​r​m​a​t​.
+							 */
+							longDesc: string
+						}
+						qualifier: {
+							/**
+							 * Q​u​a​l​i​f​i​e​r
+							 */
+							displayName: string
+							/**
+							 * F​u​n​c​t​i​o​n​ ​v​e​r​s​i​o​n​ ​o​r​ ​a​l​i​a​s​ ​t​o​ ​i​n​v​o​k​e
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​a​ ​v​e​r​s​i​o​n​ ​n​u​m​b​e​r​,​ ​a​l​i​a​s​ ​n​a​m​e​,​ ​o​r​ ​$​L​A​T​E​S​T​ ​t​o​ ​i​n​v​o​k​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​f​u​n​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_layers: {
+					/**
+					 * L​i​s​t​ ​L​a​y​e​r​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​L​a​m​b​d​a​ ​l​a​y​e​r​s​ ​i​n​ ​y​o​u​r​ ​A​W​S​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​L​a​m​b​d​a​ ​l​a​y​e​r​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​r​e​g​i​o​n​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​c​o​m​p​a​t​i​b​l​e​ ​r​u​n​t​i​m​e​ ​a​n​d​ ​c​o​n​t​r​o​l​ ​p​a​g​i​n​a​t​i​o​n​ ​w​i​t​h​ ​m​a​x​ ​i​t​e​m​s​ ​a​n​d​ ​m​a​r​k​e​r​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​L​a​m​b​d​a​ ​l​a​y​e​r​s​ ​a​r​e​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​l​i​s​t​ ​L​a​m​b​d​a​ ​l​a​y​e​r​s​ ​f​r​o​m​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						compatible_runtime: {
+							/**
+							 * C​o​m​p​a​t​i​b​l​e​ ​R​u​n​t​i​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​l​a​y​e​r​s​ ​b​y​ ​c​o​m​p​a​t​i​b​l​e​ ​r​u​n​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * R​e​t​u​r​n​ ​o​n​l​y​ ​l​a​y​e​r​s​ ​t​h​a​t​ ​a​r​e​ ​c​o​m​p​a​t​i​b​l​e​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​u​n​t​i​m​e​ ​e​n​v​i​r​o​n​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+						max_items: {
+							/**
+							 * M​a​x​i​m​u​m​ ​I​t​e​m​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​l​a​y​e​r​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * L​i​m​i​t​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​l​a​y​e​r​s​ ​r​e​t​u​r​n​e​d​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.
+							 */
+							longDesc: string
+						}
+						next_marker: {
+							/**
+							 * N​e​x​t​ ​M​a​r​k​e​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​m​a​r​k​e​r​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​a​d​d​i​t​i​o​n​a​l​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​e​ ​m​a​r​k​e​r​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_layer_versions: {
+					/**
+					 * L​i​s​t​ ​L​a​y​e​r​ ​V​e​r​s​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​v​e​r​s​i​o​n​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​L​a​m​b​d​a​ ​l​a​y​e​r​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​v​e​r​s​i​o​n​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​L​a​m​b​d​a​ ​l​a​y​e​r​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​c​o​m​p​a​t​i​b​l​e​ ​r​u​n​t​i​m​e​ ​a​n​d​ ​c​o​n​t​r​o​l​ ​p​a​g​i​n​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​l​a​y​e​r​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​L​a​m​b​d​a​ ​l​a​y​e​r​ ​r​e​s​i​d​e​s​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						layer_name: {
+							/**
+							 * L​a​y​e​r​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​r​ ​A​R​N​ ​o​f​ ​t​h​e​ ​L​a​m​b​d​a​ ​l​a​y​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​r​ ​A​R​N​ ​o​f​ ​t​h​e​ ​L​a​m​b​d​a​ ​l​a​y​e​r​ ​t​o​ ​l​i​s​t​ ​v​e​r​s​i​o​n​s​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+						compatible_runtime: {
+							/**
+							 * C​o​m​p​a​t​i​b​l​e​ ​R​u​n​t​i​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​v​e​r​s​i​o​n​s​ ​b​y​ ​c​o​m​p​a​t​i​b​l​e​ ​r​u​n​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * R​e​t​u​r​n​ ​o​n​l​y​ ​l​a​y​e​r​ ​v​e​r​s​i​o​n​s​ ​t​h​a​t​ ​a​r​e​ ​c​o​m​p​a​t​i​b​l​e​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​u​n​t​i​m​e​ ​e​n​v​i​r​o​n​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+						max_items: {
+							/**
+							 * M​a​x​i​m​u​m​ ​I​t​e​m​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​v​e​r​s​i​o​n​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * L​i​m​i​t​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​l​a​y​e​r​ ​v​e​r​s​i​o​n​s​ ​r​e​t​u​r​n​e​d​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.
+							 */
+							longDesc: string
+						}
+						next_marker: {
+							/**
+							 * N​e​x​t​ ​M​a​r​k​e​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​m​a​r​k​e​r​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​a​d​d​i​t​i​o​n​a​l​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​e​ ​m​a​r​k​e​r​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_layer_version: {
+					/**
+					 * G​e​t​ ​L​a​y​e​r​ ​V​e​r​s​i​o​n
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​l​a​y​e​r​ ​v​e​r​s​i​o​n​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​e​r​s​i​o​n​ ​o​f​ ​a​ ​L​a​m​b​d​a​ ​l​a​y​e​r​ ​i​n​c​l​u​d​i​n​g​ ​c​o​n​t​e​n​t​ ​d​e​t​a​i​l​s​,​ ​c​o​m​p​a​t​i​b​l​e​ ​r​u​n​t​i​m​e​s​,​ ​a​n​d​ ​m​e​t​a​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​l​a​y​e​r​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​L​a​m​b​d​a​ ​l​a​y​e​r​ ​r​e​s​i​d​e​s​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						layer_name: {
+							/**
+							 * L​a​y​e​r​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​r​ ​A​R​N​ ​o​f​ ​t​h​e​ ​L​a​m​b​d​a​ ​l​a​y​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​r​ ​A​R​N​ ​o​f​ ​t​h​e​ ​L​a​m​b​d​a​ ​l​a​y​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​v​e​r​s​i​o​n​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+						version_number: {
+							/**
+							 * V​e​r​s​i​o​n​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​v​e​r​s​i​o​n​ ​n​u​m​b​e​r​ ​o​f​ ​t​h​e​ ​l​a​y​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​e​r​s​i​o​n​ ​n​u​m​b​e​r​ ​o​f​ ​t​h​e​ ​l​a​y​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_function: {
+					/**
+					 * N​e​w​ ​F​u​n​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​ ​i​s​ ​c​r​e​a​t​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​A​W​S​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​r​e​g​i​o​n​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​f​u​n​c​t​i​o​n​ ​i​s​ ​d​e​t​e​c​t​e​d​,​ ​p​r​o​v​i​d​i​n​g​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​f​u​n​c​t​i​o​n​ ​d​e​t​a​i​l​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​f​u​n​c​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​ ​c​r​e​a​t​i​o​n​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_layer_version: {
+					/**
+					 * N​e​w​ ​L​a​y​e​r​ ​V​e​r​s​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​L​a​m​b​d​a​ ​l​a​y​e​r​ ​v​e​r​s​i​o​n​ ​i​s​ ​p​u​b​l​i​s​h​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​A​W​S​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​l​y​ ​p​u​b​l​i​s​h​e​d​ ​L​a​m​b​d​a​ ​l​a​y​e​r​ ​v​e​r​s​i​o​n​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​r​e​g​i​o​n​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​l​a​y​e​r​ ​v​e​r​s​i​o​n​ ​i​s​ ​d​e​t​e​c​t​e​d​,​ ​p​r​o​v​i​d​i​n​g​ ​l​a​y​e​r​ ​v​e​r​s​i​o​n​ ​d​e​t​a​i​l​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​l​a​y​e​r​ ​v​e​r​s​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​L​a​m​b​d​a​ ​l​a​y​e​r​ ​v​e​r​s​i​o​n​ ​c​r​e​a​t​i​o​n​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
 							 */
 							longDesc: string
 						}
@@ -72667,7 +73205,7 @@ export type TranslationFunctions = {
 		}
 		AmazonEC2: {
 			/**
-			 * Amazon EC2
+			 * AWS EC2
 			 */
 			displayName: () => LocalizedString
 			/**
@@ -73035,7 +73573,7 @@ export type TranslationFunctions = {
 		}
 		AmazonS3: {
 			/**
-			 * Amazon S3
+			 * AWS S3
 			 */
 			displayName: () => LocalizedString
 			/**
@@ -73948,6 +74486,544 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * When enabled, fetches the actual AWS region for each bucket. Disable for faster responses when region information is not needed.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		AmazonLambda: {
+			/**
+			 * AWS Lambda
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Serverless compute service that runs code without provisioning or managing servers.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Amazon Lambda is a serverless compute service that lets you run code without provisioning or managing servers. This integration provides comprehensive actions and triggers to manage Lambda functions, layers, and invocations. You can list functions, invoke them, manage layers, and monitor new function and layer version creation.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				list_functions: {
+					/**
+					 * List Functions
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of Lambda functions in your AWS account.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns a paginated list of Lambda functions in a specified region. You can optionally filter by function version, master region, and control pagination with max items and markers.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where Lambda functions are located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the AWS region to list Lambda functions from. Defaults to us-east-1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						function_version: {
+							/**
+							 * Function Version
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Version of functions to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to ALL to include all published versions of each function, or leave empty for latest versions only.
+							 */
+							longDesc: () => LocalizedString
+						}
+						master_region: {
+							/**
+							 * Master Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter functions by master region for Lambda@Edge
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * For Lambda@Edge functions, specify the master region to filter results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_items: {
+							/**
+							 * Maximum Items
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of functions to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Limit the number of functions returned in a single request.
+							 */
+							longDesc: () => LocalizedString
+						}
+						next_marker: {
+							/**
+							 * Next Marker
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination marker for retrieving additional results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use the marker from a previous response to retrieve the next page of results.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_function: {
+					/**
+					 * Get Function
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific Lambda function.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns comprehensive information about a Lambda function including configuration, code details, tags, and concurrency settings. Useful for inspecting function properties and current state.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where the function is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the AWS region where the Lambda function resides. Defaults to us-east-1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						function_name: {
+							/**
+							 * Function Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name or ARN of the Lambda function
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name, ARN, or partial ARN of the Lambda function to retrieve information for.
+							 */
+							longDesc: () => LocalizedString
+						}
+						qualifier: {
+							/**
+							 * Qualifier
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Function version or alias
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify a version number, alias name, or $LATEST to get information for a specific version of the function.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				invoke_function: {
+					/**
+					 * Invoke Function
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Execute a Lambda function with custom payload.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Invokes a Lambda function synchronously or asynchronously with a custom JSON payload. You can specify invocation type, logging preferences, and function version.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where the function is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the AWS region where the Lambda function resides. Defaults to us-east-1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						function_name: {
+							/**
+							 * Function Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name or ARN of the Lambda function to invoke
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name, ARN, or partial ARN of the Lambda function to invoke.
+							 */
+							longDesc: () => LocalizedString
+						}
+						invocation_type: {
+							/**
+							 * Invocation Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to invoke the function
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * RequestResponse for synchronous execution, Event for asynchronous execution, or DryRun to validate parameters without invoking.
+							 */
+							longDesc: () => LocalizedString
+						}
+						log_type: {
+							/**
+							 * Log Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include execution logs in response
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to Tail to include the last 4KB of execution logs in the response, or None to exclude logs.
+							 */
+							longDesc: () => LocalizedString
+						}
+						payload: {
+							/**
+							 * Payload
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * JSON payload to send to the function
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * JSON string containing the data to pass to your Lambda function. Must be valid JSON format.
+							 */
+							longDesc: () => LocalizedString
+						}
+						qualifier: {
+							/**
+							 * Qualifier
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Function version or alias to invoke
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify a version number, alias name, or $LATEST to invoke a specific version of the function.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_layers: {
+					/**
+					 * List Layers
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of Lambda layers in your AWS account.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns a paginated list of Lambda layers in a specified region. You can filter by compatible runtime and control pagination with max items and markers.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where Lambda layers are located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the AWS region to list Lambda layers from. Defaults to us-east-1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						compatible_runtime: {
+							/**
+							 * Compatible Runtime
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter layers by compatible runtime
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Return only layers that are compatible with the specified runtime environment.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_items: {
+							/**
+							 * Maximum Items
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of layers to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Limit the number of layers returned in a single request.
+							 */
+							longDesc: () => LocalizedString
+						}
+						next_marker: {
+							/**
+							 * Next Marker
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination marker for retrieving additional results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use the marker from a previous response to retrieve the next page of results.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_layer_versions: {
+					/**
+					 * List Layer Versions
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve versions of a specific Lambda layer.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns a paginated list of versions for a specific Lambda layer. You can filter by compatible runtime and control pagination.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where the layer is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the AWS region where the Lambda layer resides. Defaults to us-east-1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						layer_name: {
+							/**
+							 * Layer Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name or ARN of the Lambda layer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name or ARN of the Lambda layer to list versions for.
+							 */
+							longDesc: () => LocalizedString
+						}
+						compatible_runtime: {
+							/**
+							 * Compatible Runtime
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter versions by compatible runtime
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Return only layer versions that are compatible with the specified runtime environment.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_items: {
+							/**
+							 * Maximum Items
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of versions to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Limit the number of layer versions returned in a single request.
+							 */
+							longDesc: () => LocalizedString
+						}
+						next_marker: {
+							/**
+							 * Next Marker
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination marker for retrieving additional results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use the marker from a previous response to retrieve the next page of results.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_layer_version: {
+					/**
+					 * Get Layer Version
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific layer version.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns comprehensive information about a specific version of a Lambda layer including content details, compatible runtimes, and metadata.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where the layer is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the AWS region where the Lambda layer resides. Defaults to us-east-1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						layer_name: {
+							/**
+							 * Layer Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name or ARN of the Lambda layer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name or ARN of the Lambda layer to retrieve version information for.
+							 */
+							longDesc: () => LocalizedString
+						}
+						version_number: {
+							/**
+							 * Version Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific version number of the layer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The version number of the layer to retrieve detailed information for.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_function: {
+					/**
+					 * New Function
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new Lambda function is created.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors your AWS account for newly created Lambda functions in a specified region. This trigger fires when a new function is detected, providing comprehensive function details.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region to monitor for new functions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the AWS region to monitor for new Lambda function creation. Defaults to us-east-1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_layer_version: {
+					/**
+					 * New Layer Version
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new Lambda layer version is published.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors your AWS account for newly published Lambda layer versions in a specified region. This trigger fires when a new layer version is detected, providing layer version details.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region to monitor for new layer versions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the AWS region to monitor for new Lambda layer version creation. Defaults to us-east-1 if not specified.
 							 */
 							longDesc: () => LocalizedString
 						}

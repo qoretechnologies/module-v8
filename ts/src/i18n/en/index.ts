@@ -62,6 +62,7 @@ import Zendesk from './apps/Zendesk';
 import Zoom from './apps/Zoom';
 import AmazonEC2 from './apps/AmazonEc2';
 import AmazonS3 from './apps/AmazonS3';
+import AmazonLambda from './apps/AmazonLambda';
 
 const en = {
   common: {},
@@ -163,6 +164,7 @@ const en = {
     Asana,
     AmazonEC2,
     AmazonS3,
+    AmazonLambda,
     Claude,
     LinkedIn,
     BrowseAi,
