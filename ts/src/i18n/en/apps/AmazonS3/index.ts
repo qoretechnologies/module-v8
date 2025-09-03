@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 const AmazonS3AppEn = {
-  displayName: 'Amazon S3',
+  displayName: 'AWS S3',
   shortDesc:
     'Seamlessly connect to Amazon S3 to manage buckets, upload files, and automate your cloud storage workflows.',
   longDesc:
