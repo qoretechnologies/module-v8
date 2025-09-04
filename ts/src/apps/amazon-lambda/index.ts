@@ -20,11 +20,11 @@ export default (locale: Locales) =>
       ...mapTriggersToApp(AMAZON_LAMBDA_APP_NAME, AWS_LAMBDA_TRIGGERS, locale),
     ],
     rest: {
-      url: 'https://lambda.{{region}}.amazonaws.com/2015-03-31/functions',
+      url: 'https://lambda.{{region}}.amazonaws.com',
       data: 'json',
       oauth2_grant_type: 'none',
       ping_method: 'GET',
-      ping_path: '/',
+      ping_path: '/2015-03-31/functions',
     },
     rest_modifiers: {
       aws_service: 'lambda',
