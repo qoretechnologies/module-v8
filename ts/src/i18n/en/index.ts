@@ -63,6 +63,7 @@ import Zoom from './apps/Zoom';
 import AmazonEC2 from './apps/AmazonEc2';
 import AmazonS3 from './apps/AmazonS3';
 import AmazonLambda from './apps/AmazonLambda';
+import AmazonCloudFront from './apps/AmazonCloudFront';
 
 const en = {
   common: {},
@@ -165,6 +166,7 @@ const en = {
     AmazonEC2,
     AmazonS3,
     AmazonLambda,
+    AmazonCloudFront,
     Claude,
     LinkedIn,
     BrowseAi,

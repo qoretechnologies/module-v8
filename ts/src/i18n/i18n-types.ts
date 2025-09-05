@@ -7090,6 +7090,346 @@ type RootTranslation = {
 				}
 			}
 		}
+		AmazonCloudFront: {
+			/**
+			 * C​l​o​u​d​F​r​o​n​t
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​A​m​a​z​o​n​ ​C​l​o​u​d​F​r​o​n​t​ ​t​o​ ​m​a​n​a​g​e​ ​C​D​N​ ​d​i​s​t​r​i​b​u​t​i​o​n​s​,​ ​c​a​c​h​e​ ​i​n​v​a​l​i​d​a​t​i​o​n​s​,​ ​a​n​d​ ​c​o​n​t​e​n​t​ ​d​e​l​i​v​e​r​y​.
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​A​m​a​z​o​n​ ​C​l​o​u​d​F​r​o​n​t​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​c​o​n​t​e​n​t​ ​d​e​l​i​v​e​r​y​ ​n​e​t​w​o​r​k​ ​(​C​D​N​)​ ​d​i​s​t​r​i​b​u​t​i​o​n​s​.​ ​M​o​n​i​t​o​r​ ​n​e​w​ ​d​i​s​t​r​i​b​u​t​i​o​n​s​ ​a​n​d​ ​i​n​v​a​l​i​d​a​t​i​o​n​s​,​ ​e​n​a​b​l​e​ ​o​r​ ​d​i​s​a​b​l​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​s​,​ ​c​r​e​a​t​e​ ​c​a​c​h​e​ ​i​n​v​a​l​i​d​a​t​i​o​n​s​,​ ​a​n​d​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​s​.​ ​P​e​r​f​e​c​t​ ​f​o​r​ ​a​u​t​o​m​a​t​i​n​g​ ​C​D​N​ ​m​a​n​a​g​e​m​e​n​t​,​ ​c​a​c​h​e​ ​c​l​e​a​r​i​n​g​ ​w​o​r​k​f​l​o​w​s​,​ ​a​n​d​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​m​o​n​i​t​o​r​i​n​g​ ​i​n​ ​y​o​u​r​ ​A​W​S​ ​i​n​f​r​a​s​t​r​u​c​t​u​r​e​.
+			 */
+			longDesc: string
+			triggers: {
+				new_distribution: {
+					/**
+					 * N​e​w​ ​D​i​s​t​r​i​b​u​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​m​o​n​i​t​o​r​s​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​s​ ​i​n​ ​y​o​u​r​ ​A​W​S​ ​a​c​c​o​u​n​t​.​ ​I​t​ ​w​i​l​l​ ​f​i​r​e​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​i​s​ ​d​e​t​e​c​t​e​d​,​ ​p​r​o​v​i​d​i​n​g​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​a​n​d​ ​s​t​a​t​u​s​.
+					 */
+					longDesc: string
+				}
+				new_invalidation: {
+					/**
+					 * N​e​w​ ​I​n​v​a​l​i​d​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​i​s​ ​c​r​e​a​t​e​d​ ​f​o​r​ ​a​ ​d​i​s​t​r​i​b​u​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​m​o​n​i​t​o​r​s​ ​f​o​r​ ​n​e​w​ ​c​a​c​h​e​ ​i​n​v​a​l​i​d​a​t​i​o​n​s​ ​c​r​e​a​t​e​d​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​.​ ​I​t​ ​w​i​l​l​ ​f​i​r​e​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​ ​i​s​ ​s​u​b​m​i​t​t​e​d​,​ ​p​r​o​v​i​d​i​n​g​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​s​t​a​t​u​s​ ​a​n​d​ ​a​f​f​e​c​t​e​d​ ​p​a​t​h​s​.
+					 */
+					longDesc: string
+					options: {
+						distribution_id: {
+							/**
+							 * D​i​s​t​r​i​b​u​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​i​n​v​a​l​i​d​a​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​s​.​ ​T​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​o​n​l​y​ ​f​i​r​e​ ​f​o​r​ ​i​n​v​a​l​i​d​a​t​i​o​n​s​ ​c​r​e​a​t​e​d​ ​f​o​r​ ​t​h​i​s​ ​d​i​s​t​r​i​b​u​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			actions: {
+				list_distributions: {
+					/**
+					 * L​i​s​t​ ​D​i​s​t​r​i​b​u​t​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​s​ ​i​n​ ​y​o​u​r​ ​A​W​S​ ​a​c​c​o​u​n​t​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​i​r​ ​s​t​a​t​u​s​,​ ​d​o​m​a​i​n​ ​n​a​m​e​s​,​ ​a​n​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​d​e​t​a​i​l​s​.​ ​Y​o​u​ ​c​a​n​ ​c​o​n​t​r​o​l​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​a​n​d​ ​u​s​e​ ​p​a​g​i​n​a​t​i​o​n​ ​f​o​r​ ​l​a​r​g​e​ ​s​e​t​s​ ​o​f​ ​d​i​s​t​r​i​b​u​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						max_items: {
+							/**
+							 * M​a​x​ ​I​t​e​m​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​d​i​s​t​r​i​b​u​t​i​o​n​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​d​i​s​t​r​i​b​u​t​i​o​n​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​c​o​n​t​r​o​l​ ​p​a​g​i​n​a​t​i​o​n​ ​a​n​d​ ​r​e​s​p​o​n​s​e​ ​s​i​z​e​.
+							 */
+							longDesc: string
+						}
+						marker: {
+							/**
+							 * M​a​r​k​e​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​m​a​r​k​e​r​ ​f​o​r​ ​c​o​n​t​i​n​u​i​n​g​ ​f​r​o​m​ ​p​r​e​v​i​o​u​s​ ​r​e​q​u​e​s​t
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​i​s​ ​m​a​r​k​e​r​ ​t​o​ ​c​o​n​t​i​n​u​e​ ​p​a​g​i​n​a​t​i​o​n​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​l​i​s​t​ ​r​e​q​u​e​s​t​.​ ​T​h​i​s​ ​v​a​l​u​e​ ​i​s​ ​r​e​t​u​r​n​e​d​ ​i​n​ ​t​h​e​ ​n​e​x​t​_​m​a​r​k​e​r​ ​f​i​e​l​d​ ​o​f​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​s​ ​w​h​e​n​ ​r​e​s​u​l​t​s​ ​a​r​e​ ​t​r​u​n​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_distribution: {
+					/**
+					 * G​e​t​ ​D​i​s​t​r​i​b​u​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​i​s​t​r​i​b​u​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​,​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​,​ ​o​r​i​g​i​n​s​,​ ​c​a​c​h​e​ ​b​e​h​a​v​i​o​r​s​,​ ​a​n​d​ ​c​u​r​r​e​n​t​ ​s​t​a​t​u​s​.​ ​T​h​i​s​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​l​e​t​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​h​o​w​ ​t​h​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​i​s​ ​c​o​n​f​i​g​u​r​e​d​.
+					 */
+					longDesc: string
+					options: {
+						distribution_id: {
+							/**
+							 * D​i​s​t​r​i​b​u​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​.​ ​T​h​i​s​ ​w​i​l​l​ ​r​e​t​u​r​n​ ​t​h​e​ ​c​o​m​p​l​e​t​e​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​a​n​d​ ​s​t​a​t​u​s​ ​o​f​ ​t​h​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_distribution_status: {
+					/**
+					 * U​p​d​a​t​e​ ​D​i​s​t​r​i​b​u​t​i​o​n​ ​S​t​a​t​u​s
+					 */
+					displayName: string
+					/**
+					 * E​n​a​b​l​e​ ​o​r​ ​d​i​s​a​b​l​e​ ​a​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​e​n​a​b​l​e​d​/​d​i​s​a​b​l​e​d​ ​s​t​a​t​u​s​ ​o​f​ ​a​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​.​ ​W​h​e​n​ ​y​o​u​ ​d​i​s​a​b​l​e​ ​a​ ​d​i​s​t​r​i​b​u​t​i​o​n​,​ ​i​t​ ​s​t​o​p​s​ ​s​e​r​v​i​n​g​ ​c​o​n​t​e​n​t​ ​a​n​d​ ​y​o​u​ ​s​t​o​p​ ​b​e​i​n​g​ ​c​h​a​r​g​e​d​ ​f​o​r​ ​i​t​.​ ​E​n​a​b​l​i​n​g​ ​i​t​ ​a​g​a​i​n​ ​w​i​l​l​ ​r​e​s​u​m​e​ ​c​o​n​t​e​n​t​ ​d​e​l​i​v​e​r​y​.
+					 */
+					longDesc: string
+					options: {
+						distribution_id: {
+							/**
+							 * D​i​s​t​r​i​b​u​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​w​h​o​s​e​ ​s​t​a​t​u​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​h​a​n​g​e​.​ ​T​h​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​m​u​s​t​ ​e​x​i​s​t​ ​a​n​d​ ​b​e​ ​i​n​ ​a​ ​s​t​a​t​e​ ​t​h​a​t​ ​a​l​l​o​w​s​ ​s​t​a​t​u​s​ ​c​h​a​n​g​e​s​.
+							 */
+							longDesc: string
+						}
+						enabled: {
+							/**
+							 * E​n​a​b​l​e​ ​D​i​s​t​r​i​b​u​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​e​t​ ​t​o​ ​t​r​u​e​ ​t​o​ ​e​n​a​b​l​e​ ​t​h​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​,​ ​f​a​l​s​e​ ​t​o​ ​d​i​s​a​b​l​e​ ​i​t
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​e​n​a​b​l​e​ ​o​r​ ​d​i​s​a​b​l​e​ ​t​h​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​.​ ​E​n​a​b​l​i​n​g​ ​a​l​l​o​w​s​ ​t​h​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​t​o​ ​s​e​r​v​e​ ​c​o​n​t​e​n​t​,​ ​w​h​i​l​e​ ​d​i​s​a​b​l​i​n​g​ ​s​t​o​p​s​ ​c​o​n​t​e​n​t​ ​d​e​l​i​v​e​r​y​ ​a​n​d​ ​b​i​l​l​i​n​g​.​ ​S​t​a​t​u​s​ ​c​h​a​n​g​e​s​ ​c​a​n​ ​t​a​k​e​ ​t​i​m​e​ ​t​o​ ​p​r​o​p​a​g​a​t​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				invalidate_item: {
+					/**
+					 * I​n​v​a​l​i​d​a​t​e​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​n​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​ ​t​o​ ​c​l​e​a​r​ ​c​a​c​h​e​d​ ​c​o​n​t​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​n​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​ ​t​o​ ​r​e​m​o​v​e​ ​s​p​e​c​i​f​i​c​ ​f​i​l​e​s​ ​f​r​o​m​ ​C​l​o​u​d​F​r​o​n​t​ ​e​d​g​e​ ​c​a​c​h​e​s​.​ ​T​h​i​s​ ​f​o​r​c​e​s​ ​C​l​o​u​d​F​r​o​n​t​ ​t​o​ ​f​e​t​c​h​ ​f​r​e​s​h​ ​c​o​n​t​e​n​t​ ​f​r​o​m​ ​t​h​e​ ​o​r​i​g​i​n​ ​f​o​r​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​p​a​t​h​s​ ​o​n​ ​t​h​e​ ​n​e​x​t​ ​r​e​q​u​e​s​t​.
+					 */
+					longDesc: string
+					options: {
+						distribution_id: {
+							/**
+							 * D​i​s​t​r​i​b​u​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​t​o​ ​i​n​v​a​l​i​d​a​t​e​ ​c​o​n​t​e​n​t​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​i​n​v​a​l​i​d​a​t​e​ ​c​a​c​h​e​d​ ​c​o​n​t​e​n​t​.​ ​T​h​e​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​w​i​l​l​ ​a​p​p​l​y​ ​t​o​ ​a​l​l​ ​e​d​g​e​ ​l​o​c​a​t​i​o​n​s​ ​f​o​r​ ​t​h​i​s​ ​d​i​s​t​r​i​b​u​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						paths: {
+							/**
+							 * P​a​t​h​s​ ​t​o​ ​I​n​v​a​l​i​d​a​t​e
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​f​i​l​e​ ​p​a​t​h​s​ ​t​o​ ​i​n​v​a​l​i​d​a​t​e​ ​f​r​o​m​ ​t​h​e​ ​c​a​c​h​e
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​p​a​t​h​s​ ​o​f​ ​f​i​l​e​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​i​n​v​a​l​i​d​a​t​e​ ​f​r​o​m​ ​t​h​e​ ​C​l​o​u​d​F​r​o​n​t​ ​c​a​c​h​e​.​ ​U​s​e​ ​/​*​ ​t​o​ ​i​n​v​a​l​i​d​a​t​e​ ​a​l​l​ ​f​i​l​e​s​,​ ​o​r​ ​s​p​e​c​i​f​y​ ​i​n​d​i​v​i​d​u​a​l​ ​f​i​l​e​ ​p​a​t​h​s​ ​l​i​k​e​ ​/​i​m​a​g​e​s​/​l​o​g​o​.​p​n​g​.​ ​P​a​t​h​s​ ​s​h​o​u​l​d​ ​s​t​a​r​t​ ​w​i​t​h​ ​/​.
+							 */
+							longDesc: string
+						}
+						caller_reference: {
+							/**
+							 * C​a​l​l​e​r​ ​R​e​f​e​r​e​n​c​e
+							 */
+							displayName: string
+							/**
+							 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​i​s​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​i​s​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​.​ ​I​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​,​ ​a​ ​u​n​i​q​u​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​g​e​n​e​r​a​t​e​d​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​.​ ​T​h​i​s​ ​h​e​l​p​s​ ​t​r​a​c​k​ ​a​n​d​ ​i​d​e​n​t​i​f​y​ ​s​p​e​c​i​f​i​c​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_invalidations: {
+					/**
+					 * L​i​s​t​ ​I​n​v​a​l​i​d​a​t​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​i​n​v​a​l​i​d​a​t​i​o​n​s​ ​f​o​r​ ​a​ ​d​i​s​t​r​i​b​u​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​c​a​c​h​e​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​,​ ​s​h​o​w​i​n​g​ ​t​h​e​i​r​ ​s​t​a​t​u​s​ ​a​n​d​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e​s​.​ ​T​h​i​s​ ​h​e​l​p​s​ ​y​o​u​ ​t​r​a​c​k​ ​t​h​e​ ​p​r​o​g​r​e​s​s​ ​a​n​d​ ​h​i​s​t​o​r​y​ ​o​f​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​s​.
+					 */
+					longDesc: string
+					options: {
+						distribution_id: {
+							/**
+							 * D​i​s​t​r​i​b​u​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​t​o​ ​l​i​s​t​ ​i​n​v​a​l​i​d​a​t​i​o​n​s​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​w​h​o​s​e​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​h​i​s​t​o​r​y​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​T​h​i​s​ ​w​i​l​l​ ​s​h​o​w​ ​a​l​l​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​s​ ​m​a​d​e​ ​f​o​r​ ​t​h​i​s​ ​d​i​s​t​r​i​b​u​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						max_items: {
+							/**
+							 * M​a​x​ ​I​t​e​m​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​i​n​v​a​l​i​d​a​t​i​o​n​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​c​o​n​t​r​o​l​ ​p​a​g​i​n​a​t​i​o​n​ ​a​n​d​ ​r​e​s​p​o​n​s​e​ ​s​i​z​e​.
+							 */
+							longDesc: string
+						}
+						marker: {
+							/**
+							 * M​a​r​k​e​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​m​a​r​k​e​r​ ​f​o​r​ ​c​o​n​t​i​n​u​i​n​g​ ​f​r​o​m​ ​p​r​e​v​i​o​u​s​ ​r​e​q​u​e​s​t
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​i​s​ ​m​a​r​k​e​r​ ​t​o​ ​c​o​n​t​i​n​u​e​ ​p​a​g​i​n​a​t​i​o​n​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​l​i​s​t​ ​r​e​q​u​e​s​t​.​ ​T​h​i​s​ ​v​a​l​u​e​ ​i​s​ ​r​e​t​u​r​n​e​d​ ​i​n​ ​t​h​e​ ​n​e​x​t​_​m​a​r​k​e​r​ ​f​i​e​l​d​ ​o​f​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​s​ ​w​h​e​n​ ​r​e​s​u​l​t​s​ ​a​r​e​ ​t​r​u​n​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_invalidation: {
+					/**
+					 * G​e​t​ ​I​n​v​a​l​i​d​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​c​h​e​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​,​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​s​t​a​t​u​s​,​ ​t​h​e​ ​p​a​t​h​s​ ​b​e​i​n​g​ ​i​n​v​a​l​i​d​a​t​e​d​,​ ​a​n​d​ ​t​i​m​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​c​h​e​c​k​ ​t​h​e​ ​p​r​o​g​r​e​s​s​ ​o​f​ ​a​n​ ​i​n​v​a​l​i​d​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						distribution_id: {
+							/**
+							 * D​i​s​t​r​i​b​u​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​t​h​e​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​b​e​l​o​n​g​s​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​t​h​a​t​ ​t​h​e​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​ ​w​a​s​ ​c​r​e​a​t​e​d​ ​f​o​r​.​ ​T​h​i​s​ ​i​s​ ​r​e​q​u​i​r​e​d​ ​t​o​ ​l​o​c​a​t​e​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​i​n​v​a​l​i​d​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						invalidation_id: {
+							/**
+							 * I​n​v​a​l​i​d​a​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​.​ ​T​h​i​s​ ​w​i​l​l​ ​s​h​o​w​ ​t​h​e​ ​c​o​m​p​l​e​t​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​c​u​r​r​e​n​t​ ​s​t​a​t​u​s​ ​a​n​d​ ​a​f​f​e​c​t​e​d​ ​p​a​t​h​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Claude: {
 			/**
 			 * C​l​a​u​d​e
@@ -75024,6 +75364,346 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Specify the AWS region to monitor for new Lambda layer version creation. Defaults to us-east-1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		AmazonCloudFront: {
+			/**
+			 * CloudFront
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect to Amazon CloudFront to manage CDN distributions, cache invalidations, and content delivery.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The Amazon CloudFront integration provides comprehensive actions and triggers to manage your content delivery network (CDN) distributions. Monitor new distributions and invalidations, enable or disable distributions, create cache invalidations, and retrieve detailed distribution configurations. Perfect for automating CDN management, cache clearing workflows, and distribution monitoring in your AWS infrastructure.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				new_distribution: {
+					/**
+					 * New Distribution
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new CloudFront distribution is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger monitors for newly created CloudFront distributions in your AWS account. It will fire whenever a new distribution is detected, providing details about the distribution configuration and status.
+					 */
+					longDesc: () => LocalizedString
+				}
+				new_invalidation: {
+					/**
+					 * New Invalidation
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new invalidation is created for a distribution
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger monitors for new cache invalidations created for a specific CloudFront distribution. It will fire whenever a new invalidation request is submitted, providing details about the invalidation status and affected paths.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						distribution_id: {
+							/**
+							 * Distribution ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The CloudFront distribution to monitor for invalidations
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific CloudFront distribution that you want to monitor for new invalidation requests. The trigger will only fire for invalidations created for this distribution.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			actions: {
+				list_distributions: {
+					/**
+					 * List Distributions
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of CloudFront distributions
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a list of all CloudFront distributions in your AWS account, including their status, domain names, and configuration details. You can control the number of results and use pagination for large sets of distributions.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						max_items: {
+							/**
+							 * Max Items
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of distributions to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the maximum number of distributions to return in a single request. Default is 100. Use this to control pagination and response size.
+							 */
+							longDesc: () => LocalizedString
+						}
+						marker: {
+							/**
+							 * Marker
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination marker for continuing from previous request
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use this marker to continue pagination from a previous list request. This value is returned in the next_marker field of previous responses when results are truncated.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_distribution: {
+					/**
+					 * Get Distribution
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific distribution
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches comprehensive details about a specific CloudFront distribution, including its configuration, origins, cache behaviors, and current status. This provides complete information about how the distribution is configured.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						distribution_id: {
+							/**
+							 * Distribution ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the distribution to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific CloudFront distribution you want to get detailed information about. This will return the complete configuration and status of the distribution.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_distribution_status: {
+					/**
+					 * Update Distribution Status
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Enable or disable a CloudFront distribution
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates the enabled/disabled status of a CloudFront distribution. When you disable a distribution, it stops serving content and you stop being charged for it. Enabling it again will resume content delivery.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						distribution_id: {
+							/**
+							 * Distribution ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the distribution to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the CloudFront distribution whose status you want to change. The distribution must exist and be in a state that allows status changes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						enabled: {
+							/**
+							 * Enable Distribution
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Set to true to enable the distribution, false to disable it
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose whether to enable or disable the distribution. Enabling allows the distribution to serve content, while disabling stops content delivery and billing. Status changes can take time to propagate.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				invalidate_item: {
+					/**
+					 * Invalidate Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create an invalidation request to clear cached content
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates an invalidation request to remove specific files from CloudFront edge caches. This forces CloudFront to fetch fresh content from the origin for the specified paths on the next request.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						distribution_id: {
+							/**
+							 * Distribution ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the distribution to invalidate content for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the CloudFront distribution where you want to invalidate cached content. The invalidation will apply to all edge locations for this distribution.
+							 */
+							longDesc: () => LocalizedString
+						}
+						paths: {
+							/**
+							 * Paths to Invalidate
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of file paths to invalidate from the cache
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the paths of files you want to invalidate from the CloudFront cache. Use /* to invalidate all files, or specify individual file paths like /images/logo.png. Paths should start with /.
+							 */
+							longDesc: () => LocalizedString
+						}
+						caller_reference: {
+							/**
+							 * Caller Reference
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Unique identifier for this invalidation request
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional unique identifier for this invalidation request. If not provided, a unique value will be generated automatically. This helps track and identify specific invalidation requests.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_invalidations: {
+					/**
+					 * List Invalidations
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of invalidations for a distribution
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a list of cache invalidation requests for a specific CloudFront distribution, showing their status and creation times. This helps you track the progress and history of invalidation requests.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						distribution_id: {
+							/**
+							 * Distribution ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the distribution to list invalidations for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the CloudFront distribution whose invalidation history you want to retrieve. This will show all invalidation requests made for this distribution.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_items: {
+							/**
+							 * Max Items
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of invalidations to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the maximum number of invalidation records to return in a single request. Default is 100. Use this to control pagination and response size.
+							 */
+							longDesc: () => LocalizedString
+						}
+						marker: {
+							/**
+							 * Marker
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination marker for continuing from previous request
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use this marker to continue pagination from a previous list request. This value is returned in the next_marker field of previous responses when results are truncated.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_invalidation: {
+					/**
+					 * Get Invalidation
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details about a specific invalidation request
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches detailed information about a specific cache invalidation request, including its status, the paths being invalidated, and timing information. Use this to check the progress of an invalidation.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						distribution_id: {
+							/**
+							 * Distribution ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the distribution the invalidation belongs to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the CloudFront distribution that the invalidation request was created for. This is required to locate the specific invalidation.
+							 */
+							longDesc: () => LocalizedString
+						}
+						invalidation_id: {
+							/**
+							 * Invalidation ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the invalidation request to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific invalidation request you want to get details about. This will show the complete information about the invalidation including its current status and affected paths.
 							 */
 							longDesc: () => LocalizedString
 						}

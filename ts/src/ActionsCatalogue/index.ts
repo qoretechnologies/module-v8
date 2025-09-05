@@ -11,19 +11,26 @@ import fs from 'fs';
 import path from 'path';
 import activeCampaign from '../apps/active-campaign';
 import airtable from '../apps/airtable';
+import amazonCloudfront from '../apps/amazon-cloudfront';
+import amazonEc2 from '../apps/amazon-ec2';
+import amazonLambda from '../apps/amazon-lambda';
+import amazonS3 from '../apps/amazon-s3';
 import asana from '../apps/asana';
 import attio from '../apps/attio';
 import bigml from '../apps/bigml';
 import bitbucket from '../apps/bitbucket';
+import brevo from '../apps/brevo';
 import browserAi from '../apps/browse-ai';
 import businessCentral from '../apps/business-central';
 import calendly from '../apps/calendly';
+import canva from '../apps/canva';
 import claude from '../apps/claude';
 import clickup from '../apps/clickup';
 import confluence from '../apps/confluence';
 import dynamics from '../apps/dynamics';
 import esignature from '../apps/esignature';
 import facebookPages from '../apps/facebook-pages';
+import figma from '../apps/figma';
 import freshdesk from '../apps/freshdesk';
 import gemini from '../apps/gemini';
 import github from '../apps/github';
@@ -34,10 +41,14 @@ import googleDrive from '../apps/google-drive';
 import googleForms from '../apps/google-forms';
 import googleMeet from '../apps/google-meet';
 import googleSheets from '../apps/google-sheets';
+import googleTasks from '../apps/google-tasks';
 import hubspot from '../apps/hubspot';
+import huggingFace from '../apps/hugging-face';
 import intercom from '../apps/intercom';
 import jira from '../apps/jira';
 import klaviyo from '../apps/klaviyo';
+import linkedin from '../apps/linkedin';
+import linkedinOrganizations from '../apps/linkedin-organizations';
 import magento from '../apps/magento';
 import mailchimp from '../apps/mailchimp';
 import messenger360 from '../apps/messenger360';
@@ -54,27 +65,17 @@ import sharepoint from '../apps/sharepoint';
 import shopify from '../apps/shopify';
 import stripe from '../apps/stripe';
 import teams from '../apps/teams';
+import telegram from '../apps/telegram';
 import typeform from '../apps/typeform';
 import webflow from '../apps/webflow';
 import xero from '../apps/xero';
+import youtube from '../apps/youtube';
 import zendesk from '../apps/zendesk';
 import zoom from '../apps/zoom';
-import youtube from '../apps/youtube';
 import { Log } from '../decorators/Logger';
 import { Locales } from '../i18n/i18n-types';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
-import huggingFace from '../apps/hugging-face';
-import linkedin from '../apps/linkedin';
-import canva from '../apps/canva';
-import figma from '../apps/figma';
-import linkedinOrganizations from '../apps/linkedin-organizations';
-import telegram from '../apps/telegram';
-import brevo from '../apps/brevo';
-import googleTasks from '../apps/google-tasks';
-import amazonEc2 from '../apps/amazon-ec2';
-import amazonS3 from '../apps/amazon-s3';
-import amazonLambda from '../apps/amazon-lambda';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -94,6 +95,7 @@ const NEW_APPS = {
   amazonEc2,
   amazonS3,
   amazonLambda,
+  amazonCloudfront,
   asana,
   attio,
   bigml,
