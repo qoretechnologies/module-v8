@@ -109,7 +109,6 @@ const listDistributions = QoreAppCreator.createLocalizedAction<typeof options>({
                   element_type: 'string',
                 },
               },
-              default_root_object: { type: 'string' },
               cloudfront_url: { type: 'string' },
               console_url: { type: 'string' },
             },
