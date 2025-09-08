@@ -8,8 +8,8 @@ export interface AWSCredentials {
   region?: string;
 }
 
-export const AMAZON_SNS_MAX_ATRIBUTE_NAME_LENGTH = 256;
-export const AMAZON_SNS_MAX_ATTRIBUTE_NUNBER = 10;
+export const AMAZON_SNS_MAX_ATTRIBUTE_NAME_LENGTH = 256;
+export const AMAZON_SNS_MAX_ATTRIBUTE_NUMBER = 10;
 
 export const createSNSClient = (credentials: AWSCredentials): SNSClient => {
   try {
@@ -48,23 +48,23 @@ export const validateMessageAttributes = (attributes: Record<string, any>): void
   if (!attributes) return;
 
   const attributeCount = Object.keys(attributes).length;
-  if (attributeCount > AMAZON_SNS_MAX_ATTRIBUTE_NUNBER) {
+  if (attributeCount > AMAZON_SNS_MAX_ATTRIBUTE_NUMBER) {
     throw new AmazonSNSError(
       `Message attributes limit exceeded. ` +
-        `Maximum ${AMAZON_SNS_MAX_ATTRIBUTE_NUNBER} attributes allowed, got ${attributeCount}`
+        `Maximum ${AMAZON_SNS_MAX_ATTRIBUTE_NUMBER} attributes allowed, got ${attributeCount}`
     );
   }
 
   for (const [key, value] of Object.entries(attributes)) {
-    if (key.length > AMAZON_SNS_MAX_ATRIBUTE_NAME_LENGTH) {
+    if (key.length > AMAZON_SNS_MAX_ATTRIBUTE_NAME_LENGTH) {
       throw new AmazonSNSError(
-        `Message attribute name '${key}' exceeds ${AMAZON_SNS_MAX_ATRIBUTE_NAME_LENGTH} characters`
+        `Message attribute name '${key}' exceeds ${AMAZON_SNS_MAX_ATTRIBUTE_NAME_LENGTH} characters`
       );
     }
 
-    if (typeof value === 'string' && value.length > AMAZON_SNS_MAX_ATRIBUTE_NAME_LENGTH) {
+    if (typeof value === 'string' && value.length > AMAZON_SNS_MAX_ATTRIBUTE_NAME_LENGTH) {
       throw new AmazonSNSError(
-        `Message attribute value for '${key}' exceeds ${AMAZON_SNS_MAX_ATRIBUTE_NAME_LENGTH} characters`
+        `Message attribute value for '${key}' exceeds ${AMAZON_SNS_MAX_ATTRIBUTE_NAME_LENGTH} characters`
       );
     }
   }
