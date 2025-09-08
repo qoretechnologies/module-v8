@@ -7430,6 +7430,584 @@ type RootTranslation = {
 				}
 			}
 		}
+		AmazonSNS: {
+			/**
+			 * A​W​S​ ​S​N​S
+			 */
+			displayName: string
+			/**
+			 * S​e​n​d​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​a​n​d​ ​m​e​s​s​a​g​e​s​ ​t​h​r​o​u​g​h​ ​A​m​a​z​o​n​ ​S​i​m​p​l​e​ ​N​o​t​i​f​i​c​a​t​i​o​n​ ​S​e​r​v​i​c​e​.
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​A​m​a​z​o​n​ ​S​N​S​ ​i​n​t​e​g​r​a​t​i​o​n​ ​e​n​a​b​l​e​s​ ​y​o​u​ ​t​o​ ​c​r​e​a​t​e​ ​t​o​p​i​c​s​,​ ​s​e​n​d​ ​m​e​s​s​a​g​e​s​,​ ​m​a​n​a​g​e​ ​s​u​b​s​c​r​i​b​e​r​s​,​ ​a​n​d​ ​m​o​n​i​t​o​r​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​t​h​r​o​u​g​h​ ​A​m​a​z​o​n​ ​S​i​m​p​l​e​ ​N​o​t​i​f​i​c​a​t​i​o​n​ ​S​e​r​v​i​c​e​.​ ​P​e​r​f​e​c​t​ ​f​o​r​ ​b​u​i​l​d​i​n​g​ ​s​c​a​l​a​b​l​e​ ​m​e​s​s​a​g​i​n​g​ ​s​y​s​t​e​m​s​,​ ​s​e​n​d​i​n​g​ ​a​l​e​r​t​s​,​ ​a​n​d​ ​c​o​o​r​d​i​n​a​t​i​n​g​ ​d​i​s​t​r​i​b​u​t​e​d​ ​a​p​p​l​i​c​a​t​i​o​n​s​ ​w​i​t​h​ ​r​e​l​i​a​b​l​e​ ​m​e​s​s​a​g​e​ ​d​e​l​i​v​e​r​y​.
+			 */
+			longDesc: string
+			triggers: {
+				new_topic: {
+					/**
+					 * N​e​w​ ​T​o​p​i​c
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​S​N​S​ ​t​o​p​i​c​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​A​m​a​z​o​n​ ​S​N​S​ ​s​e​r​v​i​c​e​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​t​o​p​i​c​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​o​p​i​c​ ​i​s​ ​d​e​t​e​c​t​e​d​ ​i​n​ ​y​o​u​r​ ​s​p​e​c​i​f​i​e​d​ ​r​e​g​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​t​o​p​i​c​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​S​N​S​ ​t​o​p​i​c​s​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​d​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			actions: {
+				create_topic: {
+					/**
+					 * C​r​e​a​t​e​ ​T​o​p​i​c
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​S​N​S​ ​t​o​p​i​c
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​A​m​a​z​o​n​ ​S​N​S​ ​t​o​p​i​c​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​F​I​F​O​ ​t​o​p​i​c​s​,​ ​e​n​c​r​y​p​t​i​o​n​,​ ​a​n​d​ ​d​e​l​i​v​e​r​y​ ​p​o​l​i​c​i​e​s​.
+					 */
+					longDesc: string
+					options: {
+						topic_name: {
+							/**
+							 * T​o​p​i​c​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​t​o​p​i​c
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​S​N​S​ ​t​o​p​i​c​.​ ​F​o​r​ ​F​I​F​O​ ​t​o​p​i​c​s​,​ ​t​h​e​ ​n​a​m​e​ ​m​u​s​t​ ​e​n​d​ ​w​i​t​h​ ​.​f​i​f​o​ ​s​u​f​f​i​x​.
+							 */
+							longDesc: string
+						}
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​f​o​r​ ​t​h​e​ ​t​o​p​i​c
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​t​o​p​i​c​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						display_name: {
+							/**
+							 * D​i​s​p​l​a​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * H​u​m​a​n​-​r​e​a​d​a​b​l​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​t​o​p​i​c
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​h​u​m​a​n​-​r​e​a​d​a​b​l​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​t​o​p​i​c​ ​t​h​a​t​ ​a​p​p​e​a​r​s​ ​i​n​ ​e​m​a​i​l​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​a​n​d​ ​o​t​h​e​r​ ​c​o​n​t​e​x​t​s​.
+							 */
+							longDesc: string
+						}
+						delivery_policy: {
+							/**
+							 * D​e​l​i​v​e​r​y​ ​P​o​l​i​c​y
+							 */
+							displayName: string
+							/**
+							 * J​S​O​N​ ​d​e​l​i​v​e​r​y​ ​p​o​l​i​c​y​ ​f​o​r​ ​t​h​e​ ​t​o​p​i​c
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​J​S​O​N​ ​s​t​r​i​n​g​ ​t​h​a​t​ ​d​e​f​i​n​e​s​ ​t​h​e​ ​d​e​l​i​v​e​r​y​ ​p​o​l​i​c​y​ ​f​o​r​ ​t​h​e​ ​t​o​p​i​c​,​ ​c​o​n​t​r​o​l​l​i​n​g​ ​r​e​t​r​y​ ​b​e​h​a​v​i​o​r​ ​a​n​d​ ​d​e​l​i​v​e​r​y​ ​s​e​t​t​i​n​g​s​.
+							 */
+							longDesc: string
+						}
+						policy: {
+							/**
+							 * P​o​l​i​c​y
+							 */
+							displayName: string
+							/**
+							 * A​c​c​e​s​s​ ​p​o​l​i​c​y​ ​f​o​r​ ​t​h​e​ ​t​o​p​i​c
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​J​S​O​N​ ​s​t​r​i​n​g​ ​t​h​a​t​ ​d​e​f​i​n​e​s​ ​t​h​e​ ​a​c​c​e​s​s​ ​p​o​l​i​c​y​ ​f​o​r​ ​t​h​e​ ​t​o​p​i​c​,​ ​c​o​n​t​r​o​l​l​i​n​g​ ​w​h​o​ ​c​a​n​ ​p​u​b​l​i​s​h​ ​t​o​ ​o​r​ ​s​u​b​s​c​r​i​b​e​ ​t​o​ ​t​h​e​ ​t​o​p​i​c​.
+							 */
+							longDesc: string
+						}
+						kms_master_key_id: {
+							/**
+							 * K​M​S​ ​M​a​s​t​e​r​ ​K​e​y​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * K​M​S​ ​k​e​y​ ​f​o​r​ ​t​o​p​i​c​ ​e​n​c​r​y​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​a​n​ ​A​W​S​ ​K​M​S​ ​k​e​y​ ​t​o​ ​u​s​e​ ​f​o​r​ ​e​n​c​r​y​p​t​i​n​g​ ​m​e​s​s​a​g​e​s​ ​p​u​b​l​i​s​h​e​d​ ​t​o​ ​t​h​i​s​ ​t​o​p​i​c​.
+							 */
+							longDesc: string
+						}
+						fifo_topic: {
+							/**
+							 * F​I​F​O​ ​T​o​p​i​c
+							 */
+							displayName: string
+							/**
+							 * C​r​e​a​t​e​ ​a​s​ ​F​I​F​O​ ​t​o​p​i​c
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​F​I​F​O​ ​(​F​i​r​s​t​-​I​n​-​F​i​r​s​t​-​O​u​t​)​ ​t​o​p​i​c​ ​t​h​a​t​ ​p​r​e​s​e​r​v​e​s​ ​m​e​s​s​a​g​e​ ​o​r​d​e​r​i​n​g​ ​a​n​d​ ​p​r​e​v​e​n​t​s​ ​d​u​p​l​i​c​a​t​e​s​.
+							 */
+							longDesc: string
+						}
+						content_based_deduplication: {
+							/**
+							 * C​o​n​t​e​n​t​-​B​a​s​e​d​ ​D​e​d​u​p​l​i​c​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * E​n​a​b​l​e​ ​c​o​n​t​e​n​t​-​b​a​s​e​d​ ​d​e​d​u​p​l​i​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​e​n​a​b​l​e​ ​c​o​n​t​e​n​t​-​b​a​s​e​d​ ​d​e​d​u​p​l​i​c​a​t​i​o​n​ ​f​o​r​ ​F​I​F​O​ ​t​o​p​i​c​s​,​ ​w​h​i​c​h​ ​p​r​e​v​e​n​t​s​ ​d​u​p​l​i​c​a​t​e​ ​m​e​s​s​a​g​e​s​ ​b​a​s​e​d​ ​o​n​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_message: {
+					/**
+					 * C​r​e​a​t​e​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​n​ ​S​N​S​ ​t​o​p​i​c
+					 */
+					shortDesc: string
+					/**
+					 * P​u​b​l​i​s​h​e​s​ ​a​ ​t​e​x​t​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​n​ ​A​m​a​z​o​n​ ​S​N​S​ ​t​o​p​i​c​,​ ​w​h​i​c​h​ ​w​i​l​l​ ​b​e​ ​d​e​l​i​v​e​r​e​d​ ​t​o​ ​a​l​l​ ​s​u​b​s​c​r​i​b​e​r​s​ ​o​f​ ​t​h​e​ ​t​o​p​i​c​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​o​f​ ​t​h​e​ ​t​o​p​i​c
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​r​g​e​t​ ​t​o​p​i​c​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						topic_arn: {
+							/**
+							 * T​o​p​i​c​ ​A​R​N
+							 */
+							displayName: string
+							/**
+							 * A​R​N​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​t​o​p​i​c
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​m​a​z​o​n​ ​R​e​s​o​u​r​c​e​ ​N​a​m​e​ ​(​A​R​N​)​ ​o​f​ ​t​h​e​ ​S​N​S​ ​t​o​p​i​c​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​w​i​l​l​ ​b​e​ ​p​u​b​l​i​s​h​e​d​.
+							 */
+							longDesc: string
+						}
+						message: {
+							/**
+							 * M​e​s​s​a​g​e
+							 */
+							displayName: string
+							/**
+							 * M​e​s​s​a​g​e​ ​c​o​n​t​e​n​t​ ​t​o​ ​s​e​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​b​e​ ​s​e​n​t​ ​t​o​ ​a​l​l​ ​t​o​p​i​c​ ​s​u​b​s​c​r​i​b​e​r​s​.
+							 */
+							longDesc: string
+						}
+						subject: {
+							/**
+							 * S​u​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * M​e​s​s​a​g​e​ ​s​u​b​j​e​c​t​ ​l​i​n​e
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​o​p​t​i​o​n​a​l​ ​s​u​b​j​e​c​t​ ​l​i​n​e​ ​f​o​r​ ​t​h​e​ ​m​e​s​s​a​g​e​,​ ​u​s​e​d​ ​p​r​i​m​a​r​i​l​y​ ​f​o​r​ ​e​m​a​i​l​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+						message_attributes: {
+							/**
+							 * M​e​s​s​a​g​e​ ​A​t​t​r​i​b​u​t​e​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​m​e​s​s​a​g​e​ ​m​e​t​a​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​h​a​s​h​ ​o​f​ ​a​d​d​i​t​i​o​n​a​l​ ​a​t​t​r​i​b​u​t​e​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​w​i​t​h​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​r​o​u​t​i​n​g​ ​p​u​r​p​o​s​e​s​.
+							 */
+							longDesc: string
+						}
+						message_deduplication_id: {
+							/**
+							 * M​e​s​s​a​g​e​ ​D​e​d​u​p​l​i​c​a​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * D​e​d​u​p​l​i​c​a​t​i​o​n​ ​I​D​ ​f​o​r​ ​F​I​F​O​ ​t​o​p​i​c​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​m​e​s​s​a​g​e​ ​d​e​d​u​p​l​i​c​a​t​i​o​n​ ​i​n​ ​F​I​F​O​ ​t​o​p​i​c​s​.​ ​R​e​q​u​i​r​e​d​ ​f​o​r​ ​F​I​F​O​ ​t​o​p​i​c​s​ ​w​i​t​h​o​u​t​ ​c​o​n​t​e​n​t​-​b​a​s​e​d​ ​d​e​d​u​p​l​i​c​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						message_group_id: {
+							/**
+							 * M​e​s​s​a​g​e​ ​G​r​o​u​p​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * G​r​o​u​p​ ​I​D​ ​f​o​r​ ​F​I​F​O​ ​t​o​p​i​c​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​t​a​g​ ​t​h​a​t​ ​s​p​e​c​i​f​i​e​s​ ​t​h​a​t​ ​m​e​s​s​a​g​e​s​ ​b​e​l​o​n​g​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​s​s​a​g​e​ ​g​r​o​u​p​ ​f​o​r​ ​F​I​F​O​ ​t​o​p​i​c​s​.​ ​R​e​q​u​i​r​e​d​ ​f​o​r​ ​F​I​F​O​ ​t​o​p​i​c​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_json_message: {
+					/**
+					 * C​r​e​a​t​e​ ​J​S​O​N​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​s​t​r​u​c​t​u​r​e​d​ ​J​S​O​N​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​n​ ​S​N​S​ ​t​o​p​i​c
+					 */
+					shortDesc: string
+					/**
+					 * P​u​b​l​i​s​h​e​s​ ​a​ ​J​S​O​N​-​s​t​r​u​c​t​u​r​e​d​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​n​ ​A​m​a​z​o​n​ ​S​N​S​ ​t​o​p​i​c​,​ ​a​l​l​o​w​i​n​g​ ​f​o​r​ ​r​i​c​h​ ​c​o​n​t​e​n​t​ ​a​n​d​ ​s​t​r​u​c​t​u​r​e​d​ ​d​a​t​a​ ​d​e​l​i​v​e​r​y​ ​t​o​ ​s​u​b​s​c​r​i​b​e​r​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​o​f​ ​t​h​e​ ​t​o​p​i​c
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​r​g​e​t​ ​t​o​p​i​c​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						topic_arn: {
+							/**
+							 * T​o​p​i​c​ ​A​R​N
+							 */
+							displayName: string
+							/**
+							 * A​R​N​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​t​o​p​i​c
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​m​a​z​o​n​ ​R​e​s​o​u​r​c​e​ ​N​a​m​e​ ​(​A​R​N​)​ ​o​f​ ​t​h​e​ ​S​N​S​ ​t​o​p​i​c​ ​w​h​e​r​e​ ​t​h​e​ ​J​S​O​N​ ​m​e​s​s​a​g​e​ ​w​i​l​l​ ​b​e​ ​p​u​b​l​i​s​h​e​d​.
+							 */
+							longDesc: string
+						}
+						json_message: {
+							/**
+							 * J​S​O​N​ ​M​e​s​s​a​g​e
+							 */
+							displayName: string
+							/**
+							 * J​S​O​N​ ​o​b​j​e​c​t​ ​t​o​ ​s​e​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​J​S​O​N​ ​o​b​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​s​t​r​u​c​t​u​r​e​d​ ​d​a​t​a​ ​t​o​ ​b​e​ ​s​e​n​t​ ​t​o​ ​a​l​l​ ​t​o​p​i​c​ ​s​u​b​s​c​r​i​b​e​r​s​.
+							 */
+							longDesc: string
+						}
+						subject: {
+							/**
+							 * S​u​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * M​e​s​s​a​g​e​ ​s​u​b​j​e​c​t​ ​l​i​n​e
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​o​p​t​i​o​n​a​l​ ​s​u​b​j​e​c​t​ ​l​i​n​e​ ​f​o​r​ ​t​h​e​ ​m​e​s​s​a​g​e​,​ ​u​s​e​d​ ​p​r​i​m​a​r​i​l​y​ ​f​o​r​ ​e​m​a​i​l​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+						message_attributes: {
+							/**
+							 * M​e​s​s​a​g​e​ ​A​t​t​r​i​b​u​t​e​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​m​e​s​s​a​g​e​ ​m​e​t​a​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​h​a​s​h​ ​o​f​ ​a​d​d​i​t​i​o​n​a​l​ ​a​t​t​r​i​b​u​t​e​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​w​i​t​h​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​r​o​u​t​i​n​g​ ​p​u​r​p​o​s​e​s​.
+							 */
+							longDesc: string
+						}
+						message_deduplication_id: {
+							/**
+							 * M​e​s​s​a​g​e​ ​D​e​d​u​p​l​i​c​a​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * D​e​d​u​p​l​i​c​a​t​i​o​n​ ​I​D​ ​f​o​r​ ​F​I​F​O​ ​t​o​p​i​c​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​m​e​s​s​a​g​e​ ​d​e​d​u​p​l​i​c​a​t​i​o​n​ ​i​n​ ​F​I​F​O​ ​t​o​p​i​c​s​.​ ​R​e​q​u​i​r​e​d​ ​f​o​r​ ​F​I​F​O​ ​t​o​p​i​c​s​ ​w​i​t​h​o​u​t​ ​c​o​n​t​e​n​t​-​b​a​s​e​d​ ​d​e​d​u​p​l​i​c​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						message_group_id: {
+							/**
+							 * M​e​s​s​a​g​e​ ​G​r​o​u​p​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * G​r​o​u​p​ ​I​D​ ​f​o​r​ ​F​I​F​O​ ​t​o​p​i​c​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​t​a​g​ ​t​h​a​t​ ​s​p​e​c​i​f​i​e​s​ ​t​h​a​t​ ​m​e​s​s​a​g​e​s​ ​b​e​l​o​n​g​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​s​s​a​g​e​ ​g​r​o​u​p​ ​f​o​r​ ​F​I​F​O​ ​t​o​p​i​c​s​.​ ​R​e​q​u​i​r​e​d​ ​f​o​r​ ​F​I​F​O​ ​t​o​p​i​c​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_topics: {
+					/**
+					 * L​i​s​t​ ​T​o​p​i​c​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​l​l​ ​S​N​S​ ​t​o​p​i​c​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​A​m​a​z​o​n​ ​S​N​S​ ​t​o​p​i​c​s​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​e​g​i​o​n​,​ ​o​p​t​i​o​n​a​l​l​y​ ​i​n​c​l​u​d​i​n​g​ ​d​e​t​a​i​l​e​d​ ​a​t​t​r​i​b​u​t​e​s​ ​f​o​r​ ​e​a​c​h​ ​t​o​p​i​c​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​l​i​s​t​ ​t​o​p​i​c​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​S​N​S​ ​t​o​p​i​c​s​.
+							 */
+							longDesc: string
+						}
+						include_attributes: {
+							/**
+							 * I​n​c​l​u​d​e​ ​A​t​t​r​i​b​u​t​e​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​d​e​t​a​i​l​e​d​ ​t​o​p​i​c​ ​a​t​t​r​i​b​u​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​d​e​t​a​i​l​e​d​ ​a​t​t​r​i​b​u​t​e​s​ ​f​o​r​ ​e​a​c​h​ ​t​o​p​i​c​,​ ​s​u​c​h​ ​a​s​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​c​o​u​n​t​s​ ​a​n​d​ ​p​o​l​i​c​i​e​s​.
+							 */
+							longDesc: string
+						}
+						next_token: {
+							/**
+							 * N​e​x​t​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​t​o​k​e​n
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​t​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​n​g​ ​t​h​r​o​u​g​h​ ​l​a​r​g​e​ ​l​i​s​t​s​ ​o​f​ ​t​o​p​i​c​s​.​ ​U​s​e​ ​t​h​e​ ​t​o​k​e​n​ ​r​e​t​u​r​n​e​d​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​c​a​l​l​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_topic: {
+					/**
+					 * G​e​t​ ​T​o​p​i​c
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​S​N​S​ ​t​o​p​i​c
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​A​m​a​z​o​n​ ​S​N​S​ ​t​o​p​i​c​,​ ​i​n​c​l​u​d​i​n​g​ ​a​t​t​r​i​b​u​t​e​s​,​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​s​t​a​t​i​s​t​i​c​s​,​ ​a​n​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​d​e​t​a​i​l​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​o​f​ ​t​h​e​ ​t​o​p​i​c
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​t​o​p​i​c​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						topic_arn: {
+							/**
+							 * T​o​p​i​c​ ​A​R​N
+							 */
+							displayName: string
+							/**
+							 * A​R​N​ ​o​f​ ​t​h​e​ ​t​o​p​i​c​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​m​a​z​o​n​ ​R​e​s​o​u​r​c​e​ ​N​a​m​e​ ​(​A​R​N​)​ ​o​f​ ​t​h​e​ ​S​N​S​ ​t​o​p​i​c​ ​t​o​ ​g​e​t​ ​d​e​t​a​i​l​s​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_subscriber: {
+					/**
+					 * A​d​d​ ​S​u​b​s​c​r​i​b​e​r
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​ ​s​u​b​s​c​r​i​b​e​r​ ​t​o​ ​a​n​ ​S​N​S​ ​t​o​p​i​c
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​t​o​ ​a​n​ ​A​m​a​z​o​n​ ​S​N​S​ ​t​o​p​i​c​,​ ​a​l​l​o​w​i​n​g​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​e​n​d​p​o​i​n​t​ ​t​o​ ​r​e​c​e​i​v​e​ ​m​e​s​s​a​g​e​s​ ​p​u​b​l​i​s​h​e​d​ ​t​o​ ​t​h​e​ ​t​o​p​i​c​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​o​f​ ​t​h​e​ ​t​o​p​i​c
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​r​g​e​t​ ​t​o​p​i​c​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						topic_arn: {
+							/**
+							 * T​o​p​i​c​ ​A​R​N
+							 */
+							displayName: string
+							/**
+							 * A​R​N​ ​o​f​ ​t​h​e​ ​t​o​p​i​c​ ​t​o​ ​s​u​b​s​c​r​i​b​e​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​m​a​z​o​n​ ​R​e​s​o​u​r​c​e​ ​N​a​m​e​ ​(​A​R​N​)​ ​o​f​ ​t​h​e​ ​S​N​S​ ​t​o​p​i​c​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+						protocol: {
+							/**
+							 * P​r​o​t​o​c​o​l
+							 */
+							displayName: string
+							/**
+							 * S​u​b​s​c​r​i​p​t​i​o​n​ ​p​r​o​t​o​c​o​l​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​o​t​o​c​o​l​ ​t​o​ ​u​s​e​ ​f​o​r​ ​d​e​l​i​v​e​r​i​n​g​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​t​h​e​ ​s​u​b​s​c​r​i​b​e​r​ ​(​H​T​T​P​,​ ​H​T​T​P​S​,​ ​E​m​a​i​l​,​ ​S​M​S​,​ ​S​Q​S​,​ ​L​a​m​b​d​a​,​ ​o​r​ ​A​p​p​l​i​c​a​t​i​o​n​)​.
+							 */
+							longDesc: string
+						}
+						endpoint: {
+							/**
+							 * E​n​d​p​o​i​n​t
+							 */
+							displayName: string
+							/**
+							 * S​u​b​s​c​r​i​b​e​r​ ​e​n​d​p​o​i​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​n​d​p​o​i​n​t​ ​t​h​a​t​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​t​h​e​ ​m​e​s​s​a​g​e​s​.​ ​F​o​r​m​a​t​ ​d​e​p​e​n​d​s​ ​o​n​ ​t​h​e​ ​p​r​o​t​o​c​o​l​ ​(​U​R​L​ ​f​o​r​ ​H​T​T​P​/​H​T​T​P​S​,​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​e​m​a​i​l​,​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​S​M​S​,​ ​e​t​c​.​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Claude: {
 			/**
 			 * C​l​a​u​d​e
@@ -75704,6 +76282,584 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Select the specific invalidation request you want to get details about. This will show the complete information about the invalidation including its current status and affected paths.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		AmazonSNS: {
+			/**
+			 * AWS SNS
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Send notifications and messages through Amazon Simple Notification Service.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The Amazon SNS integration enables you to create topics, send messages, manage subscribers, and monitor notifications through Amazon Simple Notification Service. Perfect for building scalable messaging systems, sending alerts, and coordinating distributed applications with reliable message delivery.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				new_topic: {
+					/**
+					 * New Topic
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new SNS topic is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors your Amazon SNS service for newly created topics and triggers when a new topic is detected in your specified region.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region to monitor for new topics
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where you want to monitor for new SNS topics. If not specified, defaults to us-east-1.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			actions: {
+				create_topic: {
+					/**
+					 * Create Topic
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new SNS topic
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new Amazon SNS topic with optional configuration for FIFO topics, encryption, and delivery policies.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						topic_name: {
+							/**
+							 * Topic Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name for the new topic
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name for the SNS topic. For FIFO topics, the name must end with .fifo suffix.
+							 */
+							longDesc: () => LocalizedString
+						}
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region for the topic
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the topic will be created. Defaults to us-east-1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						display_name: {
+							/**
+							 * Display Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Human-readable name for the topic
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A human-readable name for the topic that appears in email notifications and other contexts.
+							 */
+							longDesc: () => LocalizedString
+						}
+						delivery_policy: {
+							/**
+							 * Delivery Policy
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * JSON delivery policy for the topic
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A JSON string that defines the delivery policy for the topic, controlling retry behavior and delivery settings.
+							 */
+							longDesc: () => LocalizedString
+						}
+						policy: {
+							/**
+							 * Policy
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Access policy for the topic
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A JSON string that defines the access policy for the topic, controlling who can publish to or subscribe to the topic.
+							 */
+							longDesc: () => LocalizedString
+						}
+						kms_master_key_id: {
+							/**
+							 * KMS Master Key ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * KMS key for topic encryption
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of an AWS KMS key to use for encrypting messages published to this topic.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fifo_topic: {
+							/**
+							 * FIFO Topic
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Create as FIFO topic
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to create a FIFO (First-In-First-Out) topic that preserves message ordering and prevents duplicates.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content_based_deduplication: {
+							/**
+							 * Content-Based Deduplication
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enable content-based deduplication
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to enable content-based deduplication for FIFO topics, which prevents duplicate messages based on message content.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_message: {
+					/**
+					 * Create Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a message to an SNS topic
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Publishes a text message to an Amazon SNS topic, which will be delivered to all subscribers of the topic.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region of the topic
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the target topic is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						topic_arn: {
+							/**
+							 * Topic ARN
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ARN of the target topic
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Amazon Resource Name (ARN) of the SNS topic where the message will be published.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message: {
+							/**
+							 * Message
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Message content to send
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text content of the message to be sent to all topic subscribers.
+							 */
+							longDesc: () => LocalizedString
+						}
+						subject: {
+							/**
+							 * Subject
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Message subject line
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An optional subject line for the message, used primarily for email notifications.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_attributes: {
+							/**
+							 * Message Attributes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional message metadata
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A hash of additional attributes to include with the message for filtering and routing purposes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_deduplication_id: {
+							/**
+							 * Message Deduplication ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Deduplication ID for FIFO topics
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A unique identifier for message deduplication in FIFO topics. Required for FIFO topics without content-based deduplication.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_group_id: {
+							/**
+							 * Message Group ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Group ID for FIFO topics
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A tag that specifies that messages belong to a specific message group for FIFO topics. Required for FIFO topics.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_json_message: {
+					/**
+					 * Create JSON Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a structured JSON message to an SNS topic
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Publishes a JSON-structured message to an Amazon SNS topic, allowing for rich content and structured data delivery to subscribers.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region of the topic
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the target topic is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						topic_arn: {
+							/**
+							 * Topic ARN
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ARN of the target topic
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Amazon Resource Name (ARN) of the SNS topic where the JSON message will be published.
+							 */
+							longDesc: () => LocalizedString
+						}
+						json_message: {
+							/**
+							 * JSON Message
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * JSON object to send
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The JSON object containing the structured data to be sent to all topic subscribers.
+							 */
+							longDesc: () => LocalizedString
+						}
+						subject: {
+							/**
+							 * Subject
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Message subject line
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An optional subject line for the message, used primarily for email notifications.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_attributes: {
+							/**
+							 * Message Attributes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional message metadata
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A hash of additional attributes to include with the message for filtering and routing purposes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_deduplication_id: {
+							/**
+							 * Message Deduplication ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Deduplication ID for FIFO topics
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A unique identifier for message deduplication in FIFO topics. Required for FIFO topics without content-based deduplication.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_group_id: {
+							/**
+							 * Message Group ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Group ID for FIFO topics
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A tag that specifies that messages belong to a specific message group for FIFO topics. Required for FIFO topics.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_topics: {
+					/**
+					 * List Topics
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List all SNS topics
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of all Amazon SNS topics in the specified region, optionally including detailed attributes for each topic.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region to list topics from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region from which to retrieve the list of SNS topics.
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_attributes: {
+							/**
+							 * Include Attributes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include detailed topic attributes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include detailed attributes for each topic, such as subscription counts and policies.
+							 */
+							longDesc: () => LocalizedString
+						}
+						next_token: {
+							/**
+							 * Next Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination token
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A token for paginating through large lists of topics. Use the token returned from a previous call.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_topic: {
+					/**
+					 * Get Topic
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get details of a specific SNS topic
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves detailed information about a specific Amazon SNS topic, including attributes, subscription statistics, and configuration details.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region of the topic
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the topic is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						topic_arn: {
+							/**
+							 * Topic ARN
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ARN of the topic to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Amazon Resource Name (ARN) of the SNS topic to get details for.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_subscriber: {
+					/**
+					 * Add Subscriber
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add a subscriber to an SNS topic
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new subscription to an Amazon SNS topic, allowing the specified endpoint to receive messages published to the topic.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region of the topic
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the target topic is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						topic_arn: {
+							/**
+							 * Topic ARN
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ARN of the topic to subscribe to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Amazon Resource Name (ARN) of the SNS topic to create a subscription for.
+							 */
+							longDesc: () => LocalizedString
+						}
+						protocol: {
+							/**
+							 * Protocol
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Subscription protocol type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The protocol to use for delivering messages to the subscriber (HTTP, HTTPS, Email, SMS, SQS, Lambda, or Application).
+							 */
+							longDesc: () => LocalizedString
+						}
+						endpoint: {
+							/**
+							 * Endpoint
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Subscriber endpoint
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The endpoint that will receive the messages. Format depends on the protocol (URL for HTTP/HTTPS, email address for email, phone number for SMS, etc.).
 							 */
 							longDesc: () => LocalizedString
 						}
