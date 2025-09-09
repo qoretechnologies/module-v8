@@ -77,6 +77,7 @@ import { Locales } from '../i18n/i18n-types';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import amazonSns from '../apps/amazon-sns';
+import amazonSqs from '../apps/amazon-sqs';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -98,6 +99,7 @@ const NEW_APPS = {
   amazonLambda,
   amazonCloudfront,
   amazonSns,
+  amazonSqs,
   asana,
   attio,
   bigml,

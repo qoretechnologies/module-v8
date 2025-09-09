@@ -65,6 +65,7 @@ import AmazonS3 from './apps/AmazonS3';
 import AmazonLambda from './apps/AmazonLambda';
 import AmazonCloudFront from './apps/AmazonCloudFront';
 import AmazonSNS from './apps/AmazonSNS';
+import AmazonSQS from './apps/AmazonSQS';
 
 const en = {
   common: {},
@@ -170,6 +171,7 @@ const en = {
     AmazonCloudFront,
     AmazonSNS,
     Claude,
+    AmazonSQS,
     LinkedIn,
     BrowseAi,
     BigMl,
