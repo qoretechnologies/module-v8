@@ -34,7 +34,7 @@ const AmazonSNSNewMessage = QoreAppCreator.createLocalizedTrigger<typeof options
   action: trigger,
   app: AMAZON_SNS_APP_NAME,
   action_code: EQoreAppActionCode.EVENT,
-  webhook_event_loc: 'payload',
+  webhook_assume_json: 'text/plain',
   webhook_method: 'POST',
   webhook_confirmation_key_loc: 'Type',
   webhook_confirmation_value: 'SubscriptionConfirmation',
