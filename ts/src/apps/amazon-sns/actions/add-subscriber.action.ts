@@ -73,6 +73,7 @@ const addSubscriber = QoreAppCreator.createLocalizedAction<typeof options>({
         TopicArn: topic_arn,
         Protocol: protocol,
         Endpoint: endpoint,
+        ReturnSubscriptionArn: true,
       });
 
       const response = await snsClient.send(command);
