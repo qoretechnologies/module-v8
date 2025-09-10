@@ -13,6 +13,9 @@ import {
   SendTeamsChannelMessage,
   UpdateTeamsMeeting,
 } from '../apps/teams/actions';
+import { configDotenv } from 'dotenv';
+
+configDotenv({ path: '.env' });
 
 describe('Should test Microsoft Teams actions', () => {
   const refreshToken = process.env.TEAMS_REFRESH_TOKEN;

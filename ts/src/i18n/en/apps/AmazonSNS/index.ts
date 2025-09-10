@@ -5,6 +5,26 @@ const AmazonSNSAppEn = {
   longDesc:
     'The Amazon SNS integration enables you to create topics, send messages, manage subscribers, and monitor notifications through Amazon Simple Notification Service. Perfect for building scalable messaging systems, sending alerts, and coordinating distributed applications with reliable message delivery.',
   triggers: {
+    new_message: {
+      displayName: 'New Message',
+      shortDesc: 'Triggers when a new message is published to an SNS topic.',
+      longDesc:
+        'This trigger subscribes to an Amazon SNS topic and fires when a new message is published. It automatically handles subscription management and provides the complete message payload.',
+      options: {
+        region: {
+          displayName: 'AWS Region',
+          shortDesc: 'The AWS region where the SNS topic is located.',
+          longDesc:
+            'Specify the AWS region where your SNS topic is hosted. If not provided, defaults to us-east-1.',
+        },
+        topic_arn: {
+          displayName: 'Topic ARN',
+          shortDesc: 'The Amazon Resource Name (ARN) of the SNS topic to subscribe to.',
+          longDesc:
+            'The full ARN of the SNS topic you want to monitor for new messages. The format should be: arn:aws:sns:region:account-id:topic-name.',
+        },
+      },
+    },
     new_topic: {
       displayName: 'New Topic',
       shortDesc: 'Triggers when a new SNS topic is created',
