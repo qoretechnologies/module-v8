@@ -7444,6 +7444,50 @@ type RootTranslation = {
 			 */
 			longDesc: string
 			triggers: {
+				new_message: {
+					/**
+					 * N​e​w​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​m​e​s​s​a​g​e​ ​i​s​ ​p​u​b​l​i​s​h​e​d​ ​t​o​ ​a​n​ ​S​N​S​ ​t​o​p​i​c​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​s​u​b​s​c​r​i​b​e​s​ ​t​o​ ​a​n​ ​A​m​a​z​o​n​ ​S​N​S​ ​t​o​p​i​c​ ​a​n​d​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​m​e​s​s​a​g​e​ ​i​s​ ​p​u​b​l​i​s​h​e​d​.​ ​I​t​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​h​a​n​d​l​e​s​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​m​a​n​a​g​e​m​e​n​t​ ​a​n​d​ ​p​r​o​v​i​d​e​s​ ​t​h​e​ ​c​o​m​p​l​e​t​e​ ​m​e​s​s​a​g​e​ ​p​a​y​l​o​a​d​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​S​N​S​ ​t​o​p​i​c​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​r​ ​S​N​S​ ​t​o​p​i​c​ ​i​s​ ​h​o​s​t​e​d​.​ ​I​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​,​ ​d​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​.
+							 */
+							longDesc: string
+						}
+						topic_arn: {
+							/**
+							 * T​o​p​i​c​ ​A​R​N
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​m​a​z​o​n​ ​R​e​s​o​u​r​c​e​ ​N​a​m​e​ ​(​A​R​N​)​ ​o​f​ ​t​h​e​ ​S​N​S​ ​t​o​p​i​c​ ​t​o​ ​s​u​b​s​c​r​i​b​e​ ​t​o​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​u​l​l​ ​A​R​N​ ​o​f​ ​t​h​e​ ​S​N​S​ ​t​o​p​i​c​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​m​e​s​s​a​g​e​s​.​ ​T​h​e​ ​f​o​r​m​a​t​ ​s​h​o​u​l​d​ ​b​e​:​ ​a​r​n​:​a​w​s​:​s​n​s​:​r​e​g​i​o​n​:​a​c​c​o​u​n​t​-​i​d​:​t​o​p​i​c​-​n​a​m​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
 				new_topic: {
 					/**
 					 * N​e​w​ ​T​o​p​i​c
@@ -77151,6 +77195,50 @@ export type TranslationFunctions = {
 			 */
 			longDesc: () => LocalizedString
 			triggers: {
+				new_message: {
+					/**
+					 * New Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new message is published to an SNS topic.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger subscribes to an Amazon SNS topic and fires when a new message is published. It automatically handles subscription management and provides the complete message payload.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region where the SNS topic is located.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the AWS region where your SNS topic is hosted. If not provided, defaults to us-east-1.
+							 */
+							longDesc: () => LocalizedString
+						}
+						topic_arn: {
+							/**
+							 * Topic ARN
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Amazon Resource Name (ARN) of the SNS topic to subscribe to.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The full ARN of the SNS topic you want to monitor for new messages. The format should be: arn:aws:sns:region:account-id:topic-name.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
 				new_topic: {
 					/**
 					 * New Topic
