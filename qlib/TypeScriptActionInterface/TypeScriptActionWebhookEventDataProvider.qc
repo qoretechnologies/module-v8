@@ -42,6 +42,10 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         *string webhook_event_loc;
         *string webhook_echo_header;
         *softlist<string> webhook_echo_body_keys;
+        *string webhook_confirmation_key_loc;
+        auto webhook_confirmation_value;
+        *string webhook_confirmation_url_loc;
+        *string webhook_confirmation_method;
 
         #! Event options for the webhook register and deregister calls
         *hash<auto> event_opts;
@@ -62,15 +66,22 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
             ActionFunctionContext fctx, string method, hash<AsyncCallInfo> webhook_register,
             hash<AsyncCallInfo> webhook_deregister, *int webhook_auth,
             *list<auto> webhook_perms, *string webhook_event_loc, *string webhook_echo_header,
-            *softlist<string> webhook_echo_body_keys)
+            *softlist<string> webhook_echo_body_keys, *string webhook_confirmation_key_loc,
+            auto webhook_confirmation_value, *string webhook_confirmation_url_loc,
+            *string webhook_confirmation_method)
             : TypeScriptActionEventDataProviderBase(name, event_id, event, get_example_event_data, get_dynamic_type,
                 fctx) {
         self.method = method;
         self.webhook_register = webhook_register;
         self.webhook_deregister = webhook_deregister;
+        self.webhook_auth = webhook_auth;
         self.webhook_event_loc = webhook_event_loc;
         self.webhook_echo_header = webhook_echo_header;
         self.webhook_echo_body_keys = webhook_echo_body_keys;
+        self.webhook_confirmation_key_loc = webhook_confirmation_key_loc;
+        self.webhook_confirmation_value = webhook_confirmation_value;
+        self.webhook_confirmation_url_loc = webhook_confirmation_url_loc;
+        self.webhook_confirmation_method = webhook_confirmation_method;
     }
 
     destructor() {
@@ -89,6 +100,10 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
             "event_loc": webhook_event_loc,
             "echo_header": webhook_echo_header,
             "echo_body_keys": webhook_echo_body_keys,
+            "confirmation_key_loc": webhook_confirmation_key_loc,
+            "confirmation_value": webhook_confirmation_value,
+            "confirmation_url_loc": webhook_confirmation_url_loc,
+            "confirmation_method": webhook_confirmation_method,
             "callback": \callback(),
         });
         info("Registered webhook with URL %y", wf_info.url);
