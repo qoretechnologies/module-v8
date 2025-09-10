@@ -46,6 +46,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         auto webhook_confirmation_value;
         *string webhook_confirmation_url_loc;
         *string webhook_confirmation_method;
+        *string webhook_assume_json;
 
         #! Event options for the webhook register and deregister calls
         *hash<auto> event_opts;
@@ -68,7 +69,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
             *list<auto> webhook_perms, *string webhook_event_loc, *string webhook_echo_header,
             *softlist<string> webhook_echo_body_keys, *string webhook_confirmation_key_loc,
             auto webhook_confirmation_value, *string webhook_confirmation_url_loc,
-            *string webhook_confirmation_method)
+            *string webhook_confirmation_method, *string webhook_assume_json)
             : TypeScriptActionEventDataProviderBase(name, event_id, event, get_example_event_data, get_dynamic_type,
                 fctx) {
         self.method = method;
@@ -82,6 +83,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         self.webhook_confirmation_value = webhook_confirmation_value;
         self.webhook_confirmation_url_loc = webhook_confirmation_url_loc;
         self.webhook_confirmation_method = webhook_confirmation_method;
+        self.webhook_assume_json = webhook_assume_json;
     }
 
     destructor() {
@@ -104,6 +106,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
             "confirmation_value": webhook_confirmation_value,
             "confirmation_url_loc": webhook_confirmation_url_loc,
             "confirmation_method": webhook_confirmation_method,
+            "assume_json": webhook_assume_json,
             "callback": \callback(),
         });
         info("Registered webhook with URL %y", wf_info.url);

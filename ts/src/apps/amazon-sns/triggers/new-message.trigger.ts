@@ -34,7 +34,7 @@ const AmazonSNSNewMessage = QoreAppCreator.createLocalizedTrigger<typeof options
   action: trigger,
   app: AMAZON_SNS_APP_NAME,
   action_code: EQoreAppActionCode.EVENT,
-  webhook_event_loc: 'payload',
+  webhook_assume_json: 'text/plain',
   webhook_method: 'POST',
   webhook_confirmation_key_loc: 'Type',
   webhook_confirmation_value: 'SubscriptionConfirmation',
@@ -44,7 +44,8 @@ const AmazonSNSNewMessage = QoreAppCreator.createLocalizedTrigger<typeof options
   webhook_register: async (context, url) => {
     const { access_key_id, secret_access_key, topic_arn } = getQoreContextRequiredValues({
       context,
-      connectionFields: ['access_key_id', 'secret_access_key', 'topic_arn'],
+      connectionFields: ['access_key_id', 'secret_access_key'],
+      optionFields: ['topic_arn'],
       ErrorClass: AmazonSNSError,
     });
 
