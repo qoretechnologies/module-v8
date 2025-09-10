@@ -1480,13 +1480,33 @@ public class TypeScriptActionInterface {
                     "attribute; got type %y; expecting \"list<string>\"", action.app, action.action,
                     webhook_echo_body_keys.fullType());
             }
-
+            auto webhook_confirmation_key_loc = remove action.webhook_confirmation_key_loc;
+            if (exists webhook_confirmation_key_loc && webhook_confirmation_key_loc.typeCode() != NT_STRING) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid "
+                    "\"webhook_confirmation_key_loc\" attribute; got type %y; expecting \"string\"", action.app,
+                    action.action, webhook_confirmation_key_loc.fullType());
+            }
+            auto webhook_confirmation_value = remove action.webhook_confirmation_value;
+            auto webhook_confirmation_url_loc = remove action.webhook_confirmation_url_loc;
+            if (exists webhook_confirmation_url_loc && webhook_confirmation_url_loc.typeCode() != NT_STRING) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid "
+                    "\"webhook_confirmation_url_loc\" attribute; got type %y; expecting \"string\"", action.app,
+                    action.action, webhook_confirmation_url_loc.fullType());
+            }
+            auto webhook_confirmation_method = remove action.webhook_confirmation_method;
+            if (exists webhook_confirmation_method && webhook_confirmation_method.typeCode() != NT_STRING) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid "
+                    "\"webhook_confirmation_method\" attribute; got type %y; expecting \"string\"", action.app,
+                    action.action, webhook_confirmation_url_loc.fullType());
+            }
             TypeScriptActionInterface::registerAsyncCall(\webhook_register, "app", app.name, action.action);
             TypeScriptActionInterface::registerAsyncCall(\webhook_deregister, "app", app.name, action.action);
 
             child = new TypeScriptActionWebhookEventDataProvider(action.action, event_id, event_info,
                 get_example_event_data, get_dynamic_type, fctx, method, webhook_register, webhook_deregister,
-                webhook_auth, webhook_perms, webhook_event_loc, webhook_echo_header, webhook_echo_body_keys);
+                webhook_auth, webhook_perms, webhook_event_loc, webhook_echo_header, webhook_echo_body_keys,
+                webhook_confirmation_key_loc, webhook_confirmation_value, webhook_confirmation_url_loc,
+                webhook_confirmation_method);
             rv = AES_WH_EVENT;
         } else {
             auto event_function = remove action.event_function;
